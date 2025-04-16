@@ -25,7 +25,6 @@ public class DataEngineConfigInstanceInfo extends AbstractModel {
 
     /**
     * 引擎ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineId")
     @Expose
@@ -46,10 +45,8 @@ public class DataEngineConfigInstanceInfo extends AbstractModel {
     private SessionResourceTemplate SessionResourceTemplate;
 
     /**
-     * Get 引擎ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎ID 
      * @return DataEngineId 引擎ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineId() {
         return this.DataEngineId;
@@ -57,9 +54,7 @@ public class DataEngineConfigInstanceInfo extends AbstractModel {
 
     /**
      * Set 引擎ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataEngineId 引擎ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineId(String DataEngineId) {
         this.DataEngineId = DataEngineId;

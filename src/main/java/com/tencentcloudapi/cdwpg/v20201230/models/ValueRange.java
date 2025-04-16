@@ -25,7 +25,6 @@ public class ValueRange extends AbstractModel {
 
     /**
     * 参数类型，可以为 enum，string，section; 其中enum表示枚举，类似： utf8,latin1,gbk; string表示返回的参数值是字符串; section表示返回的参数值是一个取值范围，类似：[4-8]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class ValueRange extends AbstractModel {
 
     /**
     * type 取section的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Range")
     @Expose
@@ -56,10 +54,8 @@ public class ValueRange extends AbstractModel {
     private String String;
 
     /**
-     * Get 参数类型，可以为 enum，string，section; 其中enum表示枚举，类似： utf8,latin1,gbk; string表示返回的参数值是字符串; section表示返回的参数值是一个取值范围，类似：[4-8]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数类型，可以为 enum，string，section; 其中enum表示枚举，类似： utf8,latin1,gbk; string表示返回的参数值是字符串; section表示返回的参数值是一个取值范围，类似：[4-8] 
      * @return Type 参数类型，可以为 enum，string，section; 其中enum表示枚举，类似： utf8,latin1,gbk; string表示返回的参数值是字符串; section表示返回的参数值是一个取值范围，类似：[4-8]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -67,19 +63,15 @@ public class ValueRange extends AbstractModel {
 
     /**
      * Set 参数类型，可以为 enum，string，section; 其中enum表示枚举，类似： utf8,latin1,gbk; string表示返回的参数值是字符串; section表示返回的参数值是一个取值范围，类似：[4-8]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 参数类型，可以为 enum，string，section; 其中enum表示枚举，类似： utf8,latin1,gbk; string表示返回的参数值是字符串; section表示返回的参数值是一个取值范围，类似：[4-8]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get type 取section的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get type 取section的时候，返回的参数值 
      * @return Range type 取section的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Range getRange() {
         return this.Range;
@@ -87,9 +79,7 @@ public class ValueRange extends AbstractModel {
 
     /**
      * Set type 取section的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Range type 取section的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRange(Range Range) {
         this.Range = Range;

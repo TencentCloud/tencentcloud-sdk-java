@@ -49,7 +49,6 @@ public class BindRealServer extends AbstractModel {
 0表示正常；
 1表示异常。
 未开启健康检查状态时，该状态始终为正常。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealServerStatus")
     @Expose
@@ -57,7 +56,6 @@ public class BindRealServer extends AbstractModel {
 
     /**
     * 源站的端口号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealServerPort")
     @Expose
@@ -129,13 +127,11 @@ public class BindRealServer extends AbstractModel {
      * Get 源站健康检查状态，其中：
 0表示正常；
 1表示异常。
-未开启健康检查状态时，该状态始终为正常。
-注意：此字段可能返回 null，表示取不到有效值。 
+未开启健康检查状态时，该状态始终为正常。 
      * @return RealServerStatus 源站健康检查状态，其中：
 0表示正常；
 1表示异常。
 未开启健康检查状态时，该状态始终为正常。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealServerStatus() {
         return this.RealServerStatus;
@@ -146,22 +142,18 @@ public class BindRealServer extends AbstractModel {
 0表示正常；
 1表示异常。
 未开启健康检查状态时，该状态始终为正常。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerStatus 源站健康检查状态，其中：
 0表示正常；
 1表示异常。
 未开启健康检查状态时，该状态始终为正常。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealServerStatus(Long RealServerStatus) {
         this.RealServerStatus = RealServerStatus;
     }
 
     /**
-     * Get 源站的端口号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源站的端口号 
      * @return RealServerPort 源站的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealServerPort() {
         return this.RealServerPort;
@@ -169,9 +161,7 @@ public class BindRealServer extends AbstractModel {
 
     /**
      * Set 源站的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerPort 源站的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealServerPort(Long RealServerPort) {
         this.RealServerPort = RealServerPort;

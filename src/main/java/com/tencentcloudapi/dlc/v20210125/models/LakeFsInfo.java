@@ -53,7 +53,6 @@ public class LakeFsInfo extends AbstractModel {
 
     /**
     * 是否是用户默认桶，0：默认桶，1：非默认桶
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultBucket")
     @Expose
@@ -61,7 +60,6 @@ public class LakeFsInfo extends AbstractModel {
 
     /**
     * 托管存储short name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShortName")
     @Expose
@@ -69,7 +67,6 @@ public class LakeFsInfo extends AbstractModel {
 
     /**
     * 桶描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -77,7 +74,6 @@ public class LakeFsInfo extends AbstractModel {
 
     /**
     * 托管桶状态，当前取值为：creating、bind、readOnly、isolate
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -148,10 +144,8 @@ public class LakeFsInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否是用户默认桶，0：默认桶，1：非默认桶
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是用户默认桶，0：默认桶，1：非默认桶 
      * @return DefaultBucket 是否是用户默认桶，0：默认桶，1：非默认桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultBucket() {
         return this.DefaultBucket;
@@ -159,19 +153,15 @@ public class LakeFsInfo extends AbstractModel {
 
     /**
      * Set 是否是用户默认桶，0：默认桶，1：非默认桶
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultBucket 是否是用户默认桶，0：默认桶，1：非默认桶
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultBucket(Long DefaultBucket) {
         this.DefaultBucket = DefaultBucket;
     }
 
     /**
-     * Get 托管存储short name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 托管存储short name 
      * @return ShortName 托管存储short name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getShortName() {
         return this.ShortName;
@@ -179,19 +169,15 @@ public class LakeFsInfo extends AbstractModel {
 
     /**
      * Set 托管存储short name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShortName 托管存储short name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShortName(String ShortName) {
         this.ShortName = ShortName;
     }
 
     /**
-     * Get 桶描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 桶描述信息 
      * @return Description 桶描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -199,19 +185,15 @@ public class LakeFsInfo extends AbstractModel {
 
     /**
      * Set 桶描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 桶描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 托管桶状态，当前取值为：creating、bind、readOnly、isolate
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 托管桶状态，当前取值为：creating、bind、readOnly、isolate 
      * @return Status 托管桶状态，当前取值为：creating、bind、readOnly、isolate
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -219,9 +201,7 @@ public class LakeFsInfo extends AbstractModel {
 
     /**
      * Set 托管桶状态，当前取值为：creating、bind、readOnly、isolate
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 托管桶状态，当前取值为：creating、bind、readOnly、isolate
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

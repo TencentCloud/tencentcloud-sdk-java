@@ -73,6 +73,20 @@ public class RegionInfo extends AbstractModel {
     private String Bucket;
 
     /**
+    * 存算分离集群数
+    */
+    @SerializedName("SSCCount")
+    @Expose
+    private Long SSCCount;
+
+    /**
+    * 是否开通存算分离
+    */
+    @SerializedName("EnableSSC")
+    @Expose
+    private Boolean EnableSSC;
+
+    /**
      * Get 地域名称，例如“ap-guangzhou" 
      * @return Name 地域名称，例如“ap-guangzhou"
      */
@@ -184,6 +198,38 @@ public class RegionInfo extends AbstractModel {
         this.Bucket = Bucket;
     }
 
+    /**
+     * Get 存算分离集群数 
+     * @return SSCCount 存算分离集群数
+     */
+    public Long getSSCCount() {
+        return this.SSCCount;
+    }
+
+    /**
+     * Set 存算分离集群数
+     * @param SSCCount 存算分离集群数
+     */
+    public void setSSCCount(Long SSCCount) {
+        this.SSCCount = SSCCount;
+    }
+
+    /**
+     * Get 是否开通存算分离 
+     * @return EnableSSC 是否开通存算分离
+     */
+    public Boolean getEnableSSC() {
+        return this.EnableSSC;
+    }
+
+    /**
+     * Set 是否开通存算分离
+     * @param EnableSSC 是否开通存算分离
+     */
+    public void setEnableSSC(Boolean EnableSSC) {
+        this.EnableSSC = EnableSSC;
+    }
+
     public RegionInfo() {
     }
 
@@ -216,6 +262,12 @@ public class RegionInfo extends AbstractModel {
         if (source.Bucket != null) {
             this.Bucket = new String(source.Bucket);
         }
+        if (source.SSCCount != null) {
+            this.SSCCount = new Long(source.SSCCount);
+        }
+        if (source.EnableSSC != null) {
+            this.EnableSSC = new Boolean(source.EnableSSC);
+        }
     }
 
 
@@ -230,6 +282,8 @@ public class RegionInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "IsInternationalSite", this.IsInternationalSite);
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);
+        this.setParamSimple(map, prefix + "SSCCount", this.SSCCount);
+        this.setParamSimple(map, prefix + "EnableSSC", this.EnableSSC);
 
     }
 }

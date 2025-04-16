@@ -26,7 +26,6 @@ public class CHDFSProductVpcInfo extends AbstractModel {
     /**
     * vpc id
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -34,7 +33,6 @@ public class CHDFSProductVpcInfo extends AbstractModel {
 
     /**
     * vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcName")
     @Expose
@@ -42,7 +40,6 @@ public class CHDFSProductVpcInfo extends AbstractModel {
 
     /**
     * vpc子网信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcCidrBlock")
     @Expose
@@ -50,7 +47,6 @@ public class CHDFSProductVpcInfo extends AbstractModel {
 
     /**
     * 规则Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -58,7 +54,6 @@ public class CHDFSProductVpcInfo extends AbstractModel {
 
     /**
     * 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessGroupId")
     @Expose
@@ -66,11 +61,9 @@ public class CHDFSProductVpcInfo extends AbstractModel {
 
     /**
      * Get vpc id
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return VpcId vpc id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -79,20 +72,16 @@ public class CHDFSProductVpcInfo extends AbstractModel {
     /**
      * Set vpc id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get vpc名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc名称 
      * @return VpcName vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcName() {
         return this.VpcName;
@@ -100,19 +89,15 @@ public class CHDFSProductVpcInfo extends AbstractModel {
 
     /**
      * Set vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcName vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get vpc子网信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc子网信息列表 
      * @return VpcCidrBlock vpc子网信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcCidrBlock [] getVpcCidrBlock() {
         return this.VpcCidrBlock;
@@ -120,19 +105,15 @@ public class CHDFSProductVpcInfo extends AbstractModel {
 
     /**
      * Set vpc子网信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcCidrBlock vpc子网信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcCidrBlock(VpcCidrBlock [] VpcCidrBlock) {
         this.VpcCidrBlock = VpcCidrBlock;
     }
 
     /**
-     * Get 规则Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则Id 
      * @return RuleId 规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -140,19 +121,15 @@ public class CHDFSProductVpcInfo extends AbstractModel {
 
     /**
      * Set 规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限组Id 
      * @return AccessGroupId 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessGroupId() {
         return this.AccessGroupId;
@@ -160,9 +137,7 @@ public class CHDFSProductVpcInfo extends AbstractModel {
 
     /**
      * Set 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessGroupId 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessGroupId(String AccessGroupId) {
         this.AccessGroupId = AccessGroupId;

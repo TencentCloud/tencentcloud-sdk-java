@@ -32,7 +32,6 @@ public class CreateNotebookSessionResponse extends AbstractModel {
 
     /**
     * Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SparkAppId")
     @Expose
@@ -69,10 +68,8 @@ public class CreateNotebookSessionResponse extends AbstractModel {
     }
 
     /**
-     * Get Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Spark任务返回的AppId 
      * @return SparkAppId Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSparkAppId() {
         return this.SparkAppId;
@@ -80,9 +77,7 @@ public class CreateNotebookSessionResponse extends AbstractModel {
 
     /**
      * Set Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SparkAppId Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSparkAppId(String SparkAppId) {
         this.SparkAppId = SparkAppId;

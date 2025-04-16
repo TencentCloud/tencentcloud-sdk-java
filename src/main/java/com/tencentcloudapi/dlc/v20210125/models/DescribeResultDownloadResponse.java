@@ -40,7 +40,6 @@ public class DescribeResultDownloadResponse extends AbstractModel {
 
     /**
     * 任务异常原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
@@ -48,7 +47,6 @@ public class DescribeResultDownloadResponse extends AbstractModel {
 
     /**
     * 临时SecretId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretId")
     @Expose
@@ -56,7 +54,6 @@ public class DescribeResultDownloadResponse extends AbstractModel {
 
     /**
     * 临时SecretKey
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretKey")
     @Expose
@@ -64,7 +61,6 @@ public class DescribeResultDownloadResponse extends AbstractModel {
 
     /**
     * 临时Token
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Token")
     @Expose
@@ -114,10 +110,8 @@ public class DescribeResultDownloadResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务异常原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务异常原因 
      * @return Reason 任务异常原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -125,19 +119,15 @@ public class DescribeResultDownloadResponse extends AbstractModel {
 
     /**
      * Set 任务异常原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 任务异常原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
     }
 
     /**
-     * Get 临时SecretId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临时SecretId 
      * @return SecretId 临时SecretId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretId() {
         return this.SecretId;
@@ -145,19 +135,15 @@ public class DescribeResultDownloadResponse extends AbstractModel {
 
     /**
      * Set 临时SecretId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretId 临时SecretId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretId(String SecretId) {
         this.SecretId = SecretId;
     }
 
     /**
-     * Get 临时SecretKey
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临时SecretKey 
      * @return SecretKey 临时SecretKey
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretKey() {
         return this.SecretKey;
@@ -165,19 +151,15 @@ public class DescribeResultDownloadResponse extends AbstractModel {
 
     /**
      * Set 临时SecretKey
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretKey 临时SecretKey
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get 临时Token
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临时Token 
      * @return Token 临时Token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getToken() {
         return this.Token;
@@ -185,9 +167,7 @@ public class DescribeResultDownloadResponse extends AbstractModel {
 
     /**
      * Set 临时Token
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Token 临时Token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setToken(String Token) {
         this.Token = Token;

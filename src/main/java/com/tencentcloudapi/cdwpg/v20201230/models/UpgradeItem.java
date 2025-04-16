@@ -25,7 +25,6 @@ public class UpgradeItem extends AbstractModel {
 
     /**
     * 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
     @Expose
@@ -33,7 +32,6 @@ public class UpgradeItem extends AbstractModel {
 
     /**
     * 原有内核版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceVersion")
     @Expose
@@ -41,7 +39,6 @@ public class UpgradeItem extends AbstractModel {
 
     /**
     * 目标内核版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetVersion")
     @Expose
@@ -49,7 +46,6 @@ public class UpgradeItem extends AbstractModel {
 
     /**
     * 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -65,7 +61,6 @@ public class UpgradeItem extends AbstractModel {
 
     /**
     * 任务完成状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -80,10 +75,8 @@ public class UpgradeItem extends AbstractModel {
     private String OperateUin;
 
     /**
-     * Get 任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务名称 
      * @return TaskName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
         return this.TaskName;
@@ -91,19 +84,15 @@ public class UpgradeItem extends AbstractModel {
 
     /**
      * Set 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 原有内核版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原有内核版本 
      * @return SourceVersion 原有内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceVersion() {
         return this.SourceVersion;
@@ -111,19 +100,15 @@ public class UpgradeItem extends AbstractModel {
 
     /**
      * Set 原有内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceVersion 原有内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceVersion(String SourceVersion) {
         this.SourceVersion = SourceVersion;
     }
 
     /**
-     * Get 目标内核版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标内核版本 
      * @return TargetVersion 目标内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetVersion() {
         return this.TargetVersion;
@@ -131,19 +116,15 @@ public class UpgradeItem extends AbstractModel {
 
     /**
      * Set 目标内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetVersion 目标内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetVersion(String TargetVersion) {
         this.TargetVersion = TargetVersion;
     }
 
     /**
-     * Get 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务创建时间 
      * @return CreateTime 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -151,9 +132,7 @@ public class UpgradeItem extends AbstractModel {
 
     /**
      * Set 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -180,10 +159,8 @@ public class UpgradeItem extends AbstractModel {
     }
 
     /**
-     * Get 任务完成状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务完成状态 
      * @return Status 任务完成状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -191,9 +168,7 @@ public class UpgradeItem extends AbstractModel {
 
     /**
      * Set 任务完成状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务完成状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

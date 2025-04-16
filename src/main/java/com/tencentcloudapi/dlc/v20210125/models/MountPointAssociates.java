@@ -25,7 +25,6 @@ public class MountPointAssociates extends AbstractModel {
 
     /**
     * 桶Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketId")
     @Expose
@@ -33,7 +32,6 @@ public class MountPointAssociates extends AbstractModel {
 
     /**
     * vpcId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -41,7 +39,6 @@ public class MountPointAssociates extends AbstractModel {
 
     /**
     * 子网地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcCidrBlock")
     @Expose
@@ -49,7 +46,6 @@ public class MountPointAssociates extends AbstractModel {
 
     /**
     * 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessGroupId")
     @Expose
@@ -57,17 +53,14 @@ public class MountPointAssociates extends AbstractModel {
 
     /**
     * 权限规则Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessRuleId")
     @Expose
     private Long AccessRuleId;
 
     /**
-     * Get 桶Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 桶Id 
      * @return BucketId 桶Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucketId() {
         return this.BucketId;
@@ -75,19 +68,15 @@ public class MountPointAssociates extends AbstractModel {
 
     /**
      * Set 桶Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BucketId 桶Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketId(String BucketId) {
         this.BucketId = BucketId;
     }
 
     /**
-     * Get vpcId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpcId 
      * @return VpcId vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -95,19 +84,15 @@ public class MountPointAssociates extends AbstractModel {
 
     /**
      * Set vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网地址 
      * @return VpcCidrBlock 子网地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcCidrBlock() {
         return this.VpcCidrBlock;
@@ -115,19 +100,15 @@ public class MountPointAssociates extends AbstractModel {
 
     /**
      * Set 子网地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcCidrBlock 子网地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
         this.VpcCidrBlock = VpcCidrBlock;
     }
 
     /**
-     * Get 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限组Id 
      * @return AccessGroupId 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessGroupId() {
         return this.AccessGroupId;
@@ -135,19 +116,15 @@ public class MountPointAssociates extends AbstractModel {
 
     /**
      * Set 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessGroupId 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessGroupId(String AccessGroupId) {
         this.AccessGroupId = AccessGroupId;
     }
 
     /**
-     * Get 权限规则Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限规则Id 
      * @return AccessRuleId 权限规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAccessRuleId() {
         return this.AccessRuleId;
@@ -155,9 +132,7 @@ public class MountPointAssociates extends AbstractModel {
 
     /**
      * Set 权限规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessRuleId 权限规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessRuleId(Long AccessRuleId) {
         this.AccessRuleId = AccessRuleId;

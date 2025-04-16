@@ -25,7 +25,6 @@ public class GroupInfo extends AbstractModel {
 
     /**
     * 用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkGroupId")
     @Expose
@@ -33,17 +32,14 @@ public class GroupInfo extends AbstractModel {
 
     /**
     * 策略类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyType")
     @Expose
     private String StrategyType;
 
     /**
-     * Get 用户组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户组ID 
      * @return WorkGroupId 用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWorkGroupId() {
         return this.WorkGroupId;
@@ -51,19 +47,15 @@ public class GroupInfo extends AbstractModel {
 
     /**
      * Set 用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkGroupId 用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkGroupId(Long WorkGroupId) {
         this.WorkGroupId = WorkGroupId;
     }
 
     /**
-     * Get 策略类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略类型 
      * @return StrategyType 策略类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyType() {
         return this.StrategyType;
@@ -71,9 +63,7 @@ public class GroupInfo extends AbstractModel {
 
     /**
      * Set 策略类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyType 策略类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyType(String StrategyType) {
         this.StrategyType = StrategyType;

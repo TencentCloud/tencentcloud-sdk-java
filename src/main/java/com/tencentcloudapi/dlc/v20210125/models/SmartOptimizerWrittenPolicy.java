@@ -25,17 +25,14 @@ public class SmartOptimizerWrittenPolicy extends AbstractModel {
 
     /**
     * none/enable/disable/default
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WrittenEnable")
     @Expose
     private String WrittenEnable;
 
     /**
-     * Get none/enable/disable/default
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get none/enable/disable/default 
      * @return WrittenEnable none/enable/disable/default
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWrittenEnable() {
         return this.WrittenEnable;
@@ -43,9 +40,7 @@ public class SmartOptimizerWrittenPolicy extends AbstractModel {
 
     /**
      * Set none/enable/disable/default
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WrittenEnable none/enable/disable/default
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWrittenEnable(String WrittenEnable) {
         this.WrittenEnable = WrittenEnable;

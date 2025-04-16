@@ -46,7 +46,6 @@ public class Partition extends AbstractModel {
 
     /**
     * 隐式分区转换策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Transform")
     @Expose
@@ -62,7 +61,6 @@ public class Partition extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -117,10 +115,8 @@ public class Partition extends AbstractModel {
     }
 
     /**
-     * Get 隐式分区转换策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 隐式分区转换策略 
      * @return Transform 隐式分区转换策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransform() {
         return this.Transform;
@@ -128,9 +124,7 @@ public class Partition extends AbstractModel {
 
     /**
      * Set 隐式分区转换策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Transform 隐式分区转换策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransform(String Transform) {
         this.Transform = Transform;
@@ -157,10 +151,8 @@ public class Partition extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -168,9 +160,7 @@ public class Partition extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;

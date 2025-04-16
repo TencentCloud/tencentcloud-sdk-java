@@ -25,17 +25,14 @@ public class SmartOptimizerIndexPolicy extends AbstractModel {
 
     /**
     * 开启索引
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexEnable")
     @Expose
     private String IndexEnable;
 
     /**
-     * Get 开启索引
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开启索引 
      * @return IndexEnable 开启索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexEnable() {
         return this.IndexEnable;
@@ -43,9 +40,7 @@ public class SmartOptimizerIndexPolicy extends AbstractModel {
 
     /**
      * Set 开启索引
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexEnable 开启索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexEnable(String IndexEnable) {
         this.IndexEnable = IndexEnable;

@@ -25,7 +25,6 @@ public class DescribeUserTypeResponse extends AbstractModel {
 
     /**
     * 用户类型。ADMIN：管理员 COMMON：普通用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserType")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeUserTypeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户类型。ADMIN：管理员 COMMON：普通用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户类型。ADMIN：管理员 COMMON：普通用户 
      * @return UserType 用户类型。ADMIN：管理员 COMMON：普通用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserType() {
         return this.UserType;
@@ -50,9 +47,7 @@ public class DescribeUserTypeResponse extends AbstractModel {
 
     /**
      * Set 用户类型。ADMIN：管理员 COMMON：普通用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserType 用户类型。ADMIN：管理员 COMMON：普通用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserType(String UserType) {
         this.UserType = UserType;

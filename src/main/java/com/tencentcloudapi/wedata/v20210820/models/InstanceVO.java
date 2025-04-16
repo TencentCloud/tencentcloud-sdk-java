@@ -121,7 +121,7 @@ public class InstanceVO extends AbstractModel {
     private String TaskCycleType;
 
     /**
-    * 标准数据时间
+    * 实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurRunDate")
@@ -487,9 +487,9 @@ public class InstanceVO extends AbstractModel {
     }
 
     /**
-     * Get 标准数据时间
+     * Get 实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CurRunDate 标准数据时间
+     * @return CurRunDate 实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurRunDate() {
@@ -497,9 +497,9 @@ public class InstanceVO extends AbstractModel {
     }
 
     /**
-     * Set 标准数据时间
+     * Set 实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CurRunDate 标准数据时间
+     * @param CurRunDate 实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurRunDate(String CurRunDate) {

@@ -115,7 +115,6 @@ public class ProxyGroupDetail extends AbstractModel {
 
     /**
     * 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -123,7 +122,6 @@ public class ProxyGroupDetail extends AbstractModel {
 
     /**
     * 安全策略ID，当设置了安全策略时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyId")
     @Expose
@@ -131,7 +129,6 @@ public class ProxyGroupDetail extends AbstractModel {
 
     /**
     * 通道组版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -139,7 +136,6 @@ public class ProxyGroupDetail extends AbstractModel {
 
     /**
     * 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientIPMethod")
     @Expose
@@ -147,7 +143,6 @@ public class ProxyGroupDetail extends AbstractModel {
 
     /**
     * IP版本，可取值：IPv4、IPv6，默认值IPv4
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPAddressVersion")
     @Expose
@@ -155,7 +150,6 @@ public class ProxyGroupDetail extends AbstractModel {
 
     /**
     * 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
     @Expose
@@ -165,7 +159,6 @@ public class ProxyGroupDetail extends AbstractModel {
     * 支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Http3Supported")
     @Expose
@@ -184,7 +177,6 @@ public class ProxyGroupDetail extends AbstractModel {
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeatureBitmap")
     @Expose
@@ -194,7 +186,6 @@ public class ProxyGroupDetail extends AbstractModel {
     * 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportTLSChoice")
     @Expose
@@ -417,10 +408,8 @@ public class ProxyGroupDetail extends AbstractModel {
     }
 
     /**
-     * Get 标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签列表 
      * @return TagSet 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagPair [] getTagSet() {
         return this.TagSet;
@@ -428,19 +417,15 @@ public class ProxyGroupDetail extends AbstractModel {
 
     /**
      * Set 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(TagPair [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get 安全策略ID，当设置了安全策略时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全策略ID，当设置了安全策略时，存在该字段。 
      * @return PolicyId 安全策略ID，当设置了安全策略时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyId() {
         return this.PolicyId;
@@ -448,19 +433,15 @@ public class ProxyGroupDetail extends AbstractModel {
 
     /**
      * Set 安全策略ID，当设置了安全策略时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyId 安全策略ID，当设置了安全策略时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 通道组版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道组版本 
      * @return Version 通道组版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -468,19 +449,15 @@ public class ProxyGroupDetail extends AbstractModel {
 
     /**
      * Set 通道组版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 通道组版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol 
      * @return ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getClientIPMethod() {
         return this.ClientIPMethod;
@@ -488,19 +465,15 @@ public class ProxyGroupDetail extends AbstractModel {
 
     /**
      * Set 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientIPMethod(Long [] ClientIPMethod) {
         this.ClientIPMethod = ClientIPMethod;
     }
 
     /**
-     * Get IP版本，可取值：IPv4、IPv6，默认值IPv4
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP版本，可取值：IPv4、IPv6，默认值IPv4 
      * @return IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIPAddressVersion() {
         return this.IPAddressVersion;
@@ -508,19 +481,15 @@ public class ProxyGroupDetail extends AbstractModel {
 
     /**
      * Set IP版本，可取值：IPv4、IPv6，默认值IPv4
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPAddressVersion(String IPAddressVersion) {
         this.IPAddressVersion = IPAddressVersion;
     }
 
     /**
-     * Get 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。 
      * @return PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
         return this.PackageType;
@@ -528,9 +497,7 @@ public class ProxyGroupDetail extends AbstractModel {
 
     /**
      * Set 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
@@ -539,12 +506,10 @@ public class ProxyGroupDetail extends AbstractModel {
     /**
      * Get 支持Http3特性的标识，其中：
 0表示关闭；
-1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。 
+1表示启用。 
      * @return Http3Supported 支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHttp3Supported() {
         return this.Http3Supported;
@@ -554,11 +519,9 @@ public class ProxyGroupDetail extends AbstractModel {
      * Set 支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Http3Supported 支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttp3Supported(Long Http3Supported) {
         this.Http3Supported = Http3Supported;
@@ -576,7 +539,6 @@ public class ProxyGroupDetail extends AbstractModel {
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
@@ -589,7 +551,6 @@ public class ProxyGroupDetail extends AbstractModel {
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFeatureBitmap() {
@@ -609,7 +570,6 @@ public class ProxyGroupDetail extends AbstractModel {
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
 1，表示支持该特性。
@@ -622,7 +582,6 @@ public class ProxyGroupDetail extends AbstractModel {
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeatureBitmap(Long FeatureBitmap) {
         this.FeatureBitmap = FeatureBitmap;
@@ -631,12 +590,10 @@ public class ProxyGroupDetail extends AbstractModel {
     /**
      * Get 是否支持设置TLS设置
 0表示不支持；
-1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。 
+1表示支持。 
      * @return IsSupportTLSChoice 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSupportTLSChoice() {
         return this.IsSupportTLSChoice;
@@ -646,11 +603,9 @@ public class ProxyGroupDetail extends AbstractModel {
      * Set 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportTLSChoice 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportTLSChoice(Long IsSupportTLSChoice) {
         this.IsSupportTLSChoice = IsSupportTLSChoice;

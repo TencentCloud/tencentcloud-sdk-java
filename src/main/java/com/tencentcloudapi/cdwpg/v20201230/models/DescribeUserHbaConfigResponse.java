@@ -25,7 +25,6 @@ public class DescribeUserHbaConfigResponse extends AbstractModel {
 
     /**
     * 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeUserHbaConfigResponse extends AbstractModel {
 
     /**
     * hba数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HbaConfigs")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeUserHbaConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例总数 
      * @return TotalCount 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeUserHbaConfigResponse extends AbstractModel {
 
     /**
      * Set 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get hba数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get hba数组 
      * @return HbaConfigs hba数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HbaConfig [] getHbaConfigs() {
         return this.HbaConfigs;
@@ -78,9 +70,7 @@ public class DescribeUserHbaConfigResponse extends AbstractModel {
 
     /**
      * Set hba数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HbaConfigs hba数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHbaConfigs(HbaConfig [] HbaConfigs) {
         this.HbaConfigs = HbaConfigs;

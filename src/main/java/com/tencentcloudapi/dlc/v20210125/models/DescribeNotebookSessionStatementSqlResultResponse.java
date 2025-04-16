@@ -46,7 +46,6 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
 
     /**
     * 分页信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextToken")
     @Expose
@@ -54,7 +53,6 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
 
     /**
     * 存储结果地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputPath")
     @Expose
@@ -62,7 +60,6 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
 
     /**
     * 引擎计算耗时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UseTime")
     @Expose
@@ -70,7 +67,6 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
 
     /**
     * 结果条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AffectRows")
     @Expose
@@ -78,7 +74,6 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
 
     /**
     * 数据扫描量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataAmount")
     @Expose
@@ -86,7 +81,6 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
 
     /**
     * spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UiUrl")
     @Expose
@@ -148,10 +142,8 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
     }
 
     /**
-     * Get 分页信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页信息 
      * @return NextToken 分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextToken() {
         return this.NextToken;
@@ -159,19 +151,15 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
 
     /**
      * Set 分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextToken 分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
     }
 
     /**
-     * Get 存储结果地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储结果地址 
      * @return OutputPath 存储结果地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutputPath() {
         return this.OutputPath;
@@ -179,19 +167,15 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
 
     /**
      * Set 存储结果地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputPath 存储结果地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputPath(String OutputPath) {
         this.OutputPath = OutputPath;
     }
 
     /**
-     * Get 引擎计算耗时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎计算耗时 
      * @return UseTime 引擎计算耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUseTime() {
         return this.UseTime;
@@ -199,19 +183,15 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
 
     /**
      * Set 引擎计算耗时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UseTime 引擎计算耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseTime(Long UseTime) {
         this.UseTime = UseTime;
     }
 
     /**
-     * Get 结果条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果条数 
      * @return AffectRows 结果条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAffectRows() {
         return this.AffectRows;
@@ -219,19 +199,15 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
 
     /**
      * Set 结果条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AffectRows 结果条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAffectRows(Long AffectRows) {
         this.AffectRows = AffectRows;
     }
 
     /**
-     * Get 数据扫描量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据扫描量 
      * @return DataAmount 数据扫描量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataAmount() {
         return this.DataAmount;
@@ -239,19 +215,15 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
 
     /**
      * Set 数据扫描量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataAmount 数据扫描量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataAmount(Long DataAmount) {
         this.DataAmount = DataAmount;
     }
 
     /**
-     * Get spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get spark ui地址 
      * @return UiUrl spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUiUrl() {
         return this.UiUrl;
@@ -259,9 +231,7 @@ public class DescribeNotebookSessionStatementSqlResultResponse extends AbstractM
 
     /**
      * Set spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UiUrl spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUiUrl(String UiUrl) {
         this.UiUrl = UiUrl;

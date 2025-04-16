@@ -102,7 +102,7 @@ public class CreateOutputInfo extends AbstractModel {
     private String [] Zones;
 
     /**
-    * 输出类型：Internet/TencentCSS/StreamLive
+    * 输出类型：Internet/TencentCSS
     */
     @SerializedName("OutputType")
     @Expose
@@ -303,16 +303,16 @@ public class CreateOutputInfo extends AbstractModel {
     }
 
     /**
-     * Get 输出类型：Internet/TencentCSS/StreamLive 
-     * @return OutputType 输出类型：Internet/TencentCSS/StreamLive
+     * Get 输出类型：Internet/TencentCSS 
+     * @return OutputType 输出类型：Internet/TencentCSS
      */
     public String getOutputType() {
         return this.OutputType;
     }
 
     /**
-     * Set 输出类型：Internet/TencentCSS/StreamLive
-     * @param OutputType 输出类型：Internet/TencentCSS/StreamLive
+     * Set 输出类型：Internet/TencentCSS
+     * @param OutputType 输出类型：Internet/TencentCSS
      */
     public void setOutputType(String OutputType) {
         this.OutputType = OutputType;

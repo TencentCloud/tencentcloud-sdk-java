@@ -25,7 +25,6 @@ public class ListTaskJobLogDetailResponse extends AbstractModel {
 
     /**
     * 下一次分页参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Context")
     @Expose
@@ -33,7 +32,6 @@ public class ListTaskJobLogDetailResponse extends AbstractModel {
 
     /**
     * 是否获取完结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListOver")
     @Expose
@@ -41,15 +39,13 @@ public class ListTaskJobLogDetailResponse extends AbstractModel {
 
     /**
     * 日志详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
     @Expose
     private JobLogResult [] Results;
 
     /**
-    * 日志url
-注意：此字段可能返回 null，表示取不到有效值。
+    * 日志url(字段已废弃)
     */
     @SerializedName("LogUrl")
     @Expose
@@ -63,10 +59,8 @@ public class ListTaskJobLogDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 下一次分页参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下一次分页参数 
      * @return Context 下一次分页参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContext() {
         return this.Context;
@@ -74,19 +68,15 @@ public class ListTaskJobLogDetailResponse extends AbstractModel {
 
     /**
      * Set 下一次分页参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Context 下一次分页参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get 是否获取完结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否获取完结 
      * @return ListOver 是否获取完结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getListOver() {
         return this.ListOver;
@@ -94,19 +84,15 @@ public class ListTaskJobLogDetailResponse extends AbstractModel {
 
     /**
      * Set 是否获取完结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListOver 是否获取完结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListOver(Boolean ListOver) {
         this.ListOver = ListOver;
     }
 
     /**
-     * Get 日志详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志详情 
      * @return Results 日志详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public JobLogResult [] getResults() {
         return this.Results;
@@ -114,29 +100,23 @@ public class ListTaskJobLogDetailResponse extends AbstractModel {
 
     /**
      * Set 日志详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Results 日志详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(JobLogResult [] Results) {
         this.Results = Results;
     }
 
     /**
-     * Get 日志url
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogUrl 日志url
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 日志url(字段已废弃) 
+     * @return LogUrl 日志url(字段已废弃)
      */
     public String getLogUrl() {
         return this.LogUrl;
     }
 
     /**
-     * Set 日志url
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogUrl 日志url
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 日志url(字段已废弃)
+     * @param LogUrl 日志url(字段已废弃)
      */
     public void setLogUrl(String LogUrl) {
         this.LogUrl = LogUrl;

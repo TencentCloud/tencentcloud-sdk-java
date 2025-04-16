@@ -25,7 +25,6 @@ public class CreateCHDFSBindingProductResponse extends AbstractModel {
 
     /**
     * 绑定信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountPointAssociates")
     @Expose
@@ -39,10 +38,8 @@ public class CreateCHDFSBindingProductResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 绑定信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定信息 
      * @return MountPointAssociates 绑定信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MountPointAssociates [] getMountPointAssociates() {
         return this.MountPointAssociates;
@@ -50,9 +47,7 @@ public class CreateCHDFSBindingProductResponse extends AbstractModel {
 
     /**
      * Set 绑定信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MountPointAssociates 绑定信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountPointAssociates(MountPointAssociates [] MountPointAssociates) {
         this.MountPointAssociates = MountPointAssociates;

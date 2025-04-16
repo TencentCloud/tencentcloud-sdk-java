@@ -25,7 +25,6 @@ public class BatchSQLCostInfo extends AbstractModel {
 
     /**
     * 任务id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchId")
     @Expose
@@ -33,7 +32,6 @@ public class BatchSQLCostInfo extends AbstractModel {
 
     /**
     * 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineName")
     @Expose
@@ -41,7 +39,6 @@ public class BatchSQLCostInfo extends AbstractModel {
 
     /**
     * 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineId")
     @Expose
@@ -49,7 +46,6 @@ public class BatchSQLCostInfo extends AbstractModel {
 
     /**
     * 本次消耗，单位cu
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cost")
     @Expose
@@ -57,7 +53,6 @@ public class BatchSQLCostInfo extends AbstractModel {
 
     /**
     * 时间开销，秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeCost")
     @Expose
@@ -65,17 +60,14 @@ public class BatchSQLCostInfo extends AbstractModel {
 
     /**
     * 操作者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 任务id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务id 
      * @return BatchId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBatchId() {
         return this.BatchId;
@@ -83,19 +75,15 @@ public class BatchSQLCostInfo extends AbstractModel {
 
     /**
      * Set 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchId(String BatchId) {
         this.BatchId = BatchId;
     }
 
     /**
-     * Get 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎名称 
      * @return DataEngineName 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineName() {
         return this.DataEngineName;
@@ -103,19 +91,15 @@ public class BatchSQLCostInfo extends AbstractModel {
 
     /**
      * Set 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataEngineName 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineName(String DataEngineName) {
         this.DataEngineName = DataEngineName;
     }
 
     /**
-     * Get 引擎id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎id 
      * @return DataEngineId 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineId() {
         return this.DataEngineId;
@@ -123,19 +107,15 @@ public class BatchSQLCostInfo extends AbstractModel {
 
     /**
      * Set 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataEngineId 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineId(String DataEngineId) {
         this.DataEngineId = DataEngineId;
     }
 
     /**
-     * Get 本次消耗，单位cu
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本次消耗，单位cu 
      * @return Cost 本次消耗，单位cu
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCost() {
         return this.Cost;
@@ -143,19 +123,15 @@ public class BatchSQLCostInfo extends AbstractModel {
 
     /**
      * Set 本次消耗，单位cu
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cost 本次消耗，单位cu
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCost(Float Cost) {
         this.Cost = Cost;
     }
 
     /**
-     * Get 时间开销，秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间开销，秒 
      * @return TimeCost 时间开销，秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeCost() {
         return this.TimeCost;
@@ -163,19 +139,15 @@ public class BatchSQLCostInfo extends AbstractModel {
 
     /**
      * Set 时间开销，秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeCost 时间开销，秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeCost(Long TimeCost) {
         this.TimeCost = TimeCost;
     }
 
     /**
-     * Get 操作者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作者 
      * @return Operator 操作者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
         return this.Operator;
@@ -183,9 +155,7 @@ public class BatchSQLCostInfo extends AbstractModel {
 
     /**
      * Set 操作者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 操作者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

@@ -32,7 +32,6 @@ public class UserInfo extends AbstractModel {
 
     /**
     * 用户描述信息，方便区分不同用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDescription")
     @Expose
@@ -70,7 +69,6 @@ public class UserInfo extends AbstractModel {
 
     /**
     * 是否是主账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsOwner")
     @Expose
@@ -78,7 +76,6 @@ public class UserInfo extends AbstractModel {
 
     /**
     * 用户类型。ADMIN：管理员 COMMON：普通用户。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserType")
     @Expose
@@ -86,11 +83,17 @@ public class UserInfo extends AbstractModel {
 
     /**
     * 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserAlias")
     @Expose
     private String UserAlias;
+
+    /**
+    * 账号类型
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
 
     /**
      * Get 用户Id，和子用户uin相同 
@@ -109,10 +112,8 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户描述信息，方便区分不同用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户描述信息，方便区分不同用户 
      * @return UserDescription 用户描述信息，方便区分不同用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserDescription() {
         return this.UserDescription;
@@ -120,9 +121,7 @@ public class UserInfo extends AbstractModel {
 
     /**
      * Set 用户描述信息，方便区分不同用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDescription 用户描述信息，方便区分不同用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDescription(String UserDescription) {
         this.UserDescription = UserDescription;
@@ -201,10 +200,8 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否是主账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是主账号 
      * @return IsOwner 是否是主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsOwner() {
         return this.IsOwner;
@@ -212,19 +209,15 @@ public class UserInfo extends AbstractModel {
 
     /**
      * Set 是否是主账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsOwner 是否是主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsOwner(Boolean IsOwner) {
         this.IsOwner = IsOwner;
     }
 
     /**
-     * Get 用户类型。ADMIN：管理员 COMMON：普通用户。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户类型。ADMIN：管理员 COMMON：普通用户。 
      * @return UserType 用户类型。ADMIN：管理员 COMMON：普通用户。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserType() {
         return this.UserType;
@@ -232,19 +225,15 @@ public class UserInfo extends AbstractModel {
 
     /**
      * Set 用户类型。ADMIN：管理员 COMMON：普通用户。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserType 用户类型。ADMIN：管理员 COMMON：普通用户。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserType(String UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get 用户别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户别名 
      * @return UserAlias 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserAlias() {
         return this.UserAlias;
@@ -252,12 +241,26 @@ public class UserInfo extends AbstractModel {
 
     /**
      * Set 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserAlias 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserAlias(String UserAlias) {
         this.UserAlias = UserAlias;
+    }
+
+    /**
+     * Get 账号类型 
+     * @return AccountType 账号类型
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 账号类型
+     * @param AccountType 账号类型
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
     }
 
     public UserInfo() {
@@ -301,6 +304,9 @@ public class UserInfo extends AbstractModel {
         if (source.UserAlias != null) {
             this.UserAlias = new String(source.UserAlias);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -317,6 +323,7 @@ public class UserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsOwner", this.IsOwner);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

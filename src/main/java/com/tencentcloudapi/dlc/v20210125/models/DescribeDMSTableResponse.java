@@ -25,7 +25,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 基础对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Asset")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 视图文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ViewOriginalText")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 视图文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ViewExpandedText")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * hive维护版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Retention")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 存储对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sds")
     @Expose
@@ -81,7 +76,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 表类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -89,7 +83,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbName")
     @Expose
@@ -97,7 +90,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * Schame名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaName")
     @Expose
@@ -105,7 +97,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 存储大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageSize")
     @Expose
@@ -113,7 +104,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 记录数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordCount")
     @Expose
@@ -121,7 +111,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 生命周期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LifeTime")
     @Expose
@@ -129,7 +118,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 最后访问时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastAccessTime")
     @Expose
@@ -137,7 +125,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataUpdateTime")
     @Expose
@@ -145,7 +132,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 结构更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StructUpdateTime")
     @Expose
@@ -161,7 +147,6 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
     * 表名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -175,10 +160,8 @@ public class DescribeDMSTableResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 基础对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基础对象 
      * @return Asset 基础对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Asset getAsset() {
         return this.Asset;
@@ -186,19 +169,15 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 基础对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Asset 基础对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsset(Asset Asset) {
         this.Asset = Asset;
     }
 
     /**
-     * Get 视图文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视图文本 
      * @return ViewOriginalText 视图文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getViewOriginalText() {
         return this.ViewOriginalText;
@@ -206,19 +185,15 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 视图文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ViewOriginalText 视图文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViewOriginalText(String ViewOriginalText) {
         this.ViewOriginalText = ViewOriginalText;
     }
 
     /**
-     * Get 视图文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视图文本 
      * @return ViewExpandedText 视图文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getViewExpandedText() {
         return this.ViewExpandedText;
@@ -226,19 +201,15 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 视图文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ViewExpandedText 视图文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setViewExpandedText(String ViewExpandedText) {
         this.ViewExpandedText = ViewExpandedText;
     }
 
     /**
-     * Get hive维护版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get hive维护版本 
      * @return Retention hive维护版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetention() {
         return this.Retention;
@@ -246,19 +217,15 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set hive维护版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Retention hive维护版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetention(Long Retention) {
         this.Retention = Retention;
     }
 
     /**
-     * Get 存储对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储对象 
      * @return Sds 存储对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DMSSds getSds() {
         return this.Sds;
@@ -266,9 +233,7 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 存储对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sds 存储对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSds(DMSSds Sds) {
         this.Sds = Sds;
@@ -315,10 +280,8 @@ public class DescribeDMSTableResponse extends AbstractModel {
     }
 
     /**
-     * Get 表类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表类型 
      * @return Type 表类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -326,19 +289,15 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 表类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 表类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名称 
      * @return DbName 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbName() {
         return this.DbName;
@@ -346,19 +305,15 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbName 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get Schame名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Schame名称 
      * @return SchemaName Schame名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaName() {
         return this.SchemaName;
@@ -366,19 +321,15 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set Schame名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemaName Schame名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 存储大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储大小 
      * @return StorageSize 存储大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageSize() {
         return this.StorageSize;
@@ -386,19 +337,15 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 存储大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageSize 存储大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageSize(Long StorageSize) {
         this.StorageSize = StorageSize;
     }
 
     /**
-     * Get 记录数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录数量 
      * @return RecordCount 记录数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordCount() {
         return this.RecordCount;
@@ -406,19 +353,15 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 记录数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordCount 记录数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordCount(Long RecordCount) {
         this.RecordCount = RecordCount;
     }
 
     /**
-     * Get 生命周期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生命周期 
      * @return LifeTime 生命周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLifeTime() {
         return this.LifeTime;
@@ -426,19 +369,15 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 生命周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LifeTime 生命周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLifeTime(Long LifeTime) {
         this.LifeTime = LifeTime;
     }
 
     /**
-     * Get 最后访问时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后访问时间 
      * @return LastAccessTime 最后访问时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastAccessTime() {
         return this.LastAccessTime;
@@ -446,19 +385,15 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 最后访问时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastAccessTime 最后访问时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastAccessTime(String LastAccessTime) {
         this.LastAccessTime = LastAccessTime;
     }
 
     /**
-     * Get 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据更新时间 
      * @return DataUpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataUpdateTime() {
         return this.DataUpdateTime;
@@ -466,19 +401,15 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataUpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataUpdateTime(String DataUpdateTime) {
         this.DataUpdateTime = DataUpdateTime;
     }
 
     /**
-     * Get 结构更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结构更新时间 
      * @return StructUpdateTime 结构更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStructUpdateTime() {
         return this.StructUpdateTime;
@@ -486,9 +417,7 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 结构更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StructUpdateTime 结构更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStructUpdateTime(String StructUpdateTime) {
         this.StructUpdateTime = StructUpdateTime;
@@ -515,10 +444,8 @@ public class DescribeDMSTableResponse extends AbstractModel {
     }
 
     /**
-     * Get 表名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表名称 
      * @return Name 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -526,9 +453,7 @@ public class DescribeDMSTableResponse extends AbstractModel {
 
     /**
      * Set 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -25,7 +25,6 @@ public class Range extends AbstractModel {
 
     /**
     * 最小值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Min")
     @Expose
@@ -33,17 +32,14 @@ public class Range extends AbstractModel {
 
     /**
     * 最大值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Max")
     @Expose
     private String Max;
 
     /**
-     * Get 最小值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最小值 
      * @return Min 最小值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMin() {
         return this.Min;
@@ -51,19 +47,15 @@ public class Range extends AbstractModel {
 
     /**
      * Set 最小值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Min 最小值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMin(String Min) {
         this.Min = Min;
     }
 
     /**
-     * Get 最大值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大值 
      * @return Max 最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMax() {
         return this.Max;
@@ -71,9 +63,7 @@ public class Range extends AbstractModel {
 
     /**
      * Set 最大值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Max 最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMax(String Max) {
         this.Max = Max;

@@ -68,7 +68,6 @@ public class RuleCheckParams extends AbstractModel {
 
     /**
     * 源站服务失败统计频率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedCountInter")
     @Expose
@@ -76,7 +75,6 @@ public class RuleCheckParams extends AbstractModel {
 
     /**
     * 源站健康性检查阀值，超过该阀值会屏蔽服务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedThreshold")
     @Expose
@@ -84,7 +82,6 @@ public class RuleCheckParams extends AbstractModel {
 
     /**
     * 源站健康性检测超出阀值后，屏蔽的时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlockInter")
     @Expose
@@ -191,10 +188,8 @@ public class RuleCheckParams extends AbstractModel {
     }
 
     /**
-     * Get 源站服务失败统计频率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源站服务失败统计频率 
      * @return FailedCountInter 源站服务失败统计频率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedCountInter() {
         return this.FailedCountInter;
@@ -202,19 +197,15 @@ public class RuleCheckParams extends AbstractModel {
 
     /**
      * Set 源站服务失败统计频率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedCountInter 源站服务失败统计频率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedCountInter(Long FailedCountInter) {
         this.FailedCountInter = FailedCountInter;
     }
 
     /**
-     * Get 源站健康性检查阀值，超过该阀值会屏蔽服务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源站健康性检查阀值，超过该阀值会屏蔽服务 
      * @return FailedThreshold 源站健康性检查阀值，超过该阀值会屏蔽服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedThreshold() {
         return this.FailedThreshold;
@@ -222,19 +213,15 @@ public class RuleCheckParams extends AbstractModel {
 
     /**
      * Set 源站健康性检查阀值，超过该阀值会屏蔽服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedThreshold 源站健康性检查阀值，超过该阀值会屏蔽服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedThreshold(Long FailedThreshold) {
         this.FailedThreshold = FailedThreshold;
     }
 
     /**
-     * Get 源站健康性检测超出阀值后，屏蔽的时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源站健康性检测超出阀值后，屏蔽的时间 
      * @return BlockInter 源站健康性检测超出阀值后，屏蔽的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBlockInter() {
         return this.BlockInter;
@@ -242,9 +229,7 @@ public class RuleCheckParams extends AbstractModel {
 
     /**
      * Set 源站健康性检测超出阀值后，屏蔽的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInter 源站健康性检测超出阀值后，屏蔽的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlockInter(Long BlockInter) {
         this.BlockInter = BlockInter;

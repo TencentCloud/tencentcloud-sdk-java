@@ -39,7 +39,6 @@ public class TableBaseInfo extends AbstractModel {
 
     /**
     * 该数据表所属数据源名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceConnectionName")
     @Expose
@@ -55,7 +54,6 @@ public class TableBaseInfo extends AbstractModel {
 
     /**
     * 具体类型，表or视图
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -63,7 +61,6 @@ public class TableBaseInfo extends AbstractModel {
 
     /**
     * 数据格式类型，hive，iceberg等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableFormat")
     @Expose
@@ -71,7 +68,6 @@ public class TableBaseInfo extends AbstractModel {
 
     /**
     * 建表用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserAlias")
     @Expose
@@ -79,7 +75,6 @@ public class TableBaseInfo extends AbstractModel {
 
     /**
     * 建表用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserSubUin")
     @Expose
@@ -150,10 +145,8 @@ public class TableBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 该数据表所属数据源名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该数据表所属数据源名字 
      * @return DatasourceConnectionName 该数据表所属数据源名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceConnectionName() {
         return this.DatasourceConnectionName;
@@ -161,9 +154,7 @@ public class TableBaseInfo extends AbstractModel {
 
     /**
      * Set 该数据表所属数据源名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatasourceConnectionName 该数据表所属数据源名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceConnectionName(String DatasourceConnectionName) {
         this.DatasourceConnectionName = DatasourceConnectionName;
@@ -190,10 +181,8 @@ public class TableBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 具体类型，表or视图
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 具体类型，表or视图 
      * @return Type 具体类型，表or视图
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -201,19 +190,15 @@ public class TableBaseInfo extends AbstractModel {
 
     /**
      * Set 具体类型，表or视图
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 具体类型，表or视图
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 数据格式类型，hive，iceberg等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据格式类型，hive，iceberg等 
      * @return TableFormat 数据格式类型，hive，iceberg等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableFormat() {
         return this.TableFormat;
@@ -221,19 +206,15 @@ public class TableBaseInfo extends AbstractModel {
 
     /**
      * Set 数据格式类型，hive，iceberg等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableFormat 数据格式类型，hive，iceberg等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableFormat(String TableFormat) {
         this.TableFormat = TableFormat;
     }
 
     /**
-     * Get 建表用户昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建表用户昵称 
      * @return UserAlias 建表用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserAlias() {
         return this.UserAlias;
@@ -241,19 +222,15 @@ public class TableBaseInfo extends AbstractModel {
 
     /**
      * Set 建表用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserAlias 建表用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserAlias(String UserAlias) {
         this.UserAlias = UserAlias;
     }
 
     /**
-     * Get 建表用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建表用户ID 
      * @return UserSubUin 建表用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserSubUin() {
         return this.UserSubUin;
@@ -261,9 +238,7 @@ public class TableBaseInfo extends AbstractModel {
 
     /**
      * Set 建表用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserSubUin 建表用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserSubUin(String UserSubUin) {
         this.UserSubUin = UserSubUin;

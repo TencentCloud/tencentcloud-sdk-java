@@ -25,7 +25,6 @@ public class ParamItem extends AbstractModel {
 
     /**
     * 节点类型, cn/dn
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeType")
     @Expose
@@ -33,7 +32,6 @@ public class ParamItem extends AbstractModel {
 
     /**
     * 节点名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeName")
     @Expose
@@ -41,7 +39,6 @@ public class ParamItem extends AbstractModel {
 
     /**
     * 参数个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -49,17 +46,14 @@ public class ParamItem extends AbstractModel {
 
     /**
     * 参数信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Details")
     @Expose
     private ParamDetail [] Details;
 
     /**
-     * Get 节点类型, cn/dn
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点类型, cn/dn 
      * @return NodeType 节点类型, cn/dn
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeType() {
         return this.NodeType;
@@ -67,19 +61,15 @@ public class ParamItem extends AbstractModel {
 
     /**
      * Set 节点类型, cn/dn
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeType 节点类型, cn/dn
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get 节点名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点名 
      * @return NodeName 节点名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeName() {
         return this.NodeName;
@@ -87,19 +77,15 @@ public class ParamItem extends AbstractModel {
 
     /**
      * Set 节点名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeName 节点名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 参数个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数个数 
      * @return TotalCount 参数个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -107,19 +93,15 @@ public class ParamItem extends AbstractModel {
 
     /**
      * Set 参数个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 参数个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 参数信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数信息 
      * @return Details 参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParamDetail [] getDetails() {
         return this.Details;
@@ -127,9 +109,7 @@ public class ParamItem extends AbstractModel {
 
     /**
      * Set 参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Details 参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetails(ParamDetail [] Details) {
         this.Details = Details;

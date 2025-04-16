@@ -33,7 +33,6 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
 
     /**
     * 分页号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
@@ -41,7 +40,6 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
 
     /**
     * 分页大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -49,7 +47,6 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
 
     /**
     * 总页数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalPages")
     @Expose
@@ -57,7 +54,6 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
 
     /**
     * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -91,10 +87,8 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
     }
 
     /**
-     * Get 分页号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页号 
      * @return Page 分页号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -102,19 +96,15 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
 
     /**
      * Set 分页号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 分页号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 分页大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页大小 
      * @return Size 分页大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSize() {
         return this.Size;
@@ -122,19 +112,15 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
 
     /**
      * Set 分页大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 分页大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 总页数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总页数 
      * @return TotalPages 总页数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalPages() {
         return this.TotalPages;
@@ -142,19 +128,15 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
 
     /**
      * Set 总页数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalPages 总页数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalPages(Long TotalPages) {
         this.TotalPages = TotalPages;
     }
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总条数 
      * @return TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -162,9 +144,7 @@ public class DescribeDataEngineEventsResponse extends AbstractModel {
 
     /**
      * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

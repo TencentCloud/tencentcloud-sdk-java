@@ -25,7 +25,6 @@ public class SmartPolicyBaseInfo extends AbstractModel {
 
     /**
     * 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -33,7 +32,6 @@ public class SmartPolicyBaseInfo extends AbstractModel {
 
     /**
     * Catalog/Database/Table
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyType")
     @Expose
@@ -41,7 +39,6 @@ public class SmartPolicyBaseInfo extends AbstractModel {
 
     /**
     * Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Catalog")
     @Expose
@@ -49,7 +46,6 @@ public class SmartPolicyBaseInfo extends AbstractModel {
 
     /**
     * 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -57,7 +53,6 @@ public class SmartPolicyBaseInfo extends AbstractModel {
 
     /**
     * 表名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
@@ -65,17 +60,14 @@ public class SmartPolicyBaseInfo extends AbstractModel {
 
     /**
     * 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-     * Get 用户uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户uin 
      * @return Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -83,19 +75,15 @@ public class SmartPolicyBaseInfo extends AbstractModel {
 
     /**
      * Set 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Catalog/Database/Table
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Catalog/Database/Table 
      * @return PolicyType Catalog/Database/Table
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyType() {
         return this.PolicyType;
@@ -103,19 +91,15 @@ public class SmartPolicyBaseInfo extends AbstractModel {
 
     /**
      * Set Catalog/Database/Table
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyType Catalog/Database/Table
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;
     }
 
     /**
-     * Get Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Catalog名称 
      * @return Catalog Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCatalog() {
         return this.Catalog;
@@ -123,19 +107,15 @@ public class SmartPolicyBaseInfo extends AbstractModel {
 
     /**
      * Set Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Catalog Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalog(String Catalog) {
         this.Catalog = Catalog;
     }
 
     /**
-     * Get 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名称 
      * @return Database 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -143,19 +123,15 @@ public class SmartPolicyBaseInfo extends AbstractModel {
 
     /**
      * Set 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Database 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get 表名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表名称 
      * @return Table 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -163,19 +139,15 @@ public class SmartPolicyBaseInfo extends AbstractModel {
 
     /**
      * Set 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Table 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 用户appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户appid 
      * @return AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -183,9 +155,7 @@ public class SmartPolicyBaseInfo extends AbstractModel {
 
     /**
      * Set 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyPrivateZoneVpcResponse extends AbstractModel {
 
     /**
-    * 私有域ID, zone-xxxxxx
+    * 私有域ID, zone-12345ds6
     */
     @SerializedName("ZoneId")
     @Expose
@@ -52,16 +52,16 @@ public class ModifyPrivateZoneVpcResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 私有域ID, zone-xxxxxx 
-     * @return ZoneId 私有域ID, zone-xxxxxx
+     * Get 私有域ID, zone-12345ds6 
+     * @return ZoneId 私有域ID, zone-12345ds6
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 私有域ID, zone-xxxxxx
-     * @param ZoneId 私有域ID, zone-xxxxxx
+     * Set 私有域ID, zone-12345ds6
+     * @param ZoneId 私有域ID, zone-12345ds6
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

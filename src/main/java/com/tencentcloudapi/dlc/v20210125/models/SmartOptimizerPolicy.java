@@ -25,7 +25,6 @@ public class SmartOptimizerPolicy extends AbstractModel {
 
     /**
     * 是否继承
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Inherit")
     @Expose
@@ -72,10 +71,8 @@ public class SmartOptimizerPolicy extends AbstractModel {
     private SmartOptimizerChangeTablePolicy ChangeTable;
 
     /**
-     * Get 是否继承
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否继承 
      * @return Inherit 是否继承
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInherit() {
         return this.Inherit;
@@ -83,9 +80,7 @@ public class SmartOptimizerPolicy extends AbstractModel {
 
     /**
      * Set 是否继承
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Inherit 是否继承
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInherit(String Inherit) {
         this.Inherit = Inherit;

@@ -32,7 +32,6 @@ public class TextFile extends AbstractModel {
 
     /**
     * 处理文本用的正则表达式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Regex")
     @Expose
@@ -55,10 +54,8 @@ public class TextFile extends AbstractModel {
     }
 
     /**
-     * Get 处理文本用的正则表达式。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理文本用的正则表达式。 
      * @return Regex 处理文本用的正则表达式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegex() {
         return this.Regex;
@@ -66,9 +63,7 @@ public class TextFile extends AbstractModel {
 
     /**
      * Set 处理文本用的正则表达式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Regex 处理文本用的正则表达式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegex(String Regex) {
         this.Regex = Regex;

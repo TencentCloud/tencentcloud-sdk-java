@@ -325,6 +325,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建 TWeSee 语义理解任务
+     * @param req CreateTWeSeeRecognitionTaskRequest
+     * @return CreateTWeSeeRecognitionTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTWeSeeRecognitionTaskResponse CreateTWeSeeRecognitionTask(CreateTWeSeeRecognitionTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTWeSeeRecognitionTask", CreateTWeSeeRecognitionTaskResponse.class);
+    }
+
+    /**
      *本接口（CreateTopicPolicy）用于创建一个Topic
      * @param req CreateTopicPolicyRequest
      * @return CreateTopicPolicyResponse
@@ -1356,6 +1367,17 @@ public class IotexplorerClient extends AbstractClient{
     public InvokeExternalSourceAIServiceTaskResponse InvokeExternalSourceAIServiceTask(InvokeExternalSourceAIServiceTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InvokeExternalSourceAIServiceTask", InvokeExternalSourceAIServiceTaskResponse.class);
+    }
+
+    /**
+     *同步执行 TWeSee 语义理解任务
+     * @param req InvokeTWeSeeRecognitionTaskRequest
+     * @return InvokeTWeSeeRecognitionTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public InvokeTWeSeeRecognitionTaskResponse InvokeTWeSeeRecognitionTask(InvokeTWeSeeRecognitionTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InvokeTWeSeeRecognitionTask", InvokeTWeSeeRecognitionTaskResponse.class);
     }
 
     /**

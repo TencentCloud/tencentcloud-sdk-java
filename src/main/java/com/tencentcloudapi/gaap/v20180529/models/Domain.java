@@ -67,7 +67,6 @@ public class Domain extends AbstractModel {
 
     /**
     * 默认入口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultValue")
     @Expose
@@ -97,7 +96,6 @@ public class Domain extends AbstractModel {
 
     /**
     * 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -105,7 +103,6 @@ public class Domain extends AbstractModel {
 
     /**
     * 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BanStatus")
     @Expose
@@ -208,10 +205,8 @@ public class Domain extends AbstractModel {
     }
 
     /**
-     * Get 默认入口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认入口 
      * @return DefaultValue 默认入口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultValue() {
         return this.DefaultValue;
@@ -219,9 +214,7 @@ public class Domain extends AbstractModel {
 
     /**
      * Set 默认入口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultValue 默认入口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
@@ -280,10 +273,8 @@ public class Domain extends AbstractModel {
     }
 
     /**
-     * Get 标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签列表 
      * @return TagSet 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagPair [] getTagSet() {
         return this.TagSet;
@@ -291,19 +282,15 @@ public class Domain extends AbstractModel {
 
     /**
      * Set 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(TagPair [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。 
      * @return BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBanStatus() {
         return this.BanStatus;
@@ -311,9 +298,7 @@ public class Domain extends AbstractModel {
 
     /**
      * Set 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBanStatus(String BanStatus) {
         this.BanStatus = BanStatus;

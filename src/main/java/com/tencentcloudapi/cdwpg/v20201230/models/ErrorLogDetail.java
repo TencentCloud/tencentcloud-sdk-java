@@ -25,7 +25,6 @@ public class ErrorLogDetail extends AbstractModel {
 
     /**
     * 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -33,7 +32,6 @@ public class ErrorLogDetail extends AbstractModel {
 
     /**
     * 数据库
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -41,7 +39,6 @@ public class ErrorLogDetail extends AbstractModel {
 
     /**
     * 报错时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorTime")
     @Expose
@@ -49,17 +46,14 @@ public class ErrorLogDetail extends AbstractModel {
 
     /**
     * 报错信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-     * Get 用户名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名称 
      * @return UserName 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -67,19 +61,15 @@ public class ErrorLogDetail extends AbstractModel {
 
     /**
      * Set 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 数据库
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库 
      * @return Database 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -87,19 +77,15 @@ public class ErrorLogDetail extends AbstractModel {
 
     /**
      * Set 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Database 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get 报错时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报错时间 
      * @return ErrorTime 报错时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorTime() {
         return this.ErrorTime;
@@ -107,19 +93,15 @@ public class ErrorLogDetail extends AbstractModel {
 
     /**
      * Set 报错时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorTime 报错时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorTime(String ErrorTime) {
         this.ErrorTime = ErrorTime;
     }
 
     /**
-     * Get 报错信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报错信息 
      * @return ErrorMessage 报错信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
@@ -127,9 +109,7 @@ public class ErrorLogDetail extends AbstractModel {
 
     /**
      * Set 报错信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMessage 报错信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;

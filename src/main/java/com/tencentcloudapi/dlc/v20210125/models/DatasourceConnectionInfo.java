@@ -118,7 +118,6 @@ public class DatasourceConnectionInfo extends AbstractModel {
 
     /**
     * 创建人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserAlias")
     @Expose
@@ -134,7 +133,6 @@ public class DatasourceConnectionInfo extends AbstractModel {
 
     /**
     * 连通性状态：0（未测试，默认）、1（正常）、2（失败）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectivityState")
     @Expose
@@ -142,7 +140,6 @@ public class DatasourceConnectionInfo extends AbstractModel {
 
     /**
     * 连通性测试提示信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectivityTips")
     @Expose
@@ -365,10 +362,8 @@ public class DatasourceConnectionInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建人 
      * @return UserAlias 创建人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserAlias() {
         return this.UserAlias;
@@ -376,9 +371,7 @@ public class DatasourceConnectionInfo extends AbstractModel {
 
     /**
      * Set 创建人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserAlias 创建人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserAlias(String UserAlias) {
         this.UserAlias = UserAlias;
@@ -405,10 +398,8 @@ public class DatasourceConnectionInfo extends AbstractModel {
     }
 
     /**
-     * Get 连通性状态：0（未测试，默认）、1（正常）、2（失败）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连通性状态：0（未测试，默认）、1（正常）、2（失败） 
      * @return ConnectivityState 连通性状态：0（未测试，默认）、1（正常）、2（失败）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConnectivityState() {
         return this.ConnectivityState;
@@ -416,19 +407,15 @@ public class DatasourceConnectionInfo extends AbstractModel {
 
     /**
      * Set 连通性状态：0（未测试，默认）、1（正常）、2（失败）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectivityState 连通性状态：0（未测试，默认）、1（正常）、2（失败）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectivityState(Long ConnectivityState) {
         this.ConnectivityState = ConnectivityState;
     }
 
     /**
-     * Get 连通性测试提示信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连通性测试提示信息 
      * @return ConnectivityTips 连通性测试提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectivityTips() {
         return this.ConnectivityTips;
@@ -436,9 +423,7 @@ public class DatasourceConnectionInfo extends AbstractModel {
 
     /**
      * Set 连通性测试提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectivityTips 连通性测试提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectivityTips(String ConnectivityTips) {
         this.ConnectivityTips = ConnectivityTips;

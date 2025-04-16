@@ -339,6 +339,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *获取巡检任务结果列表
+     * @param req DescribeInspectionTaskResultRequest
+     * @return DescribeInspectionTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInspectionTaskResultResponse DescribeInspectionTaskResult(DescribeInspectionTaskResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInspectionTaskResult", DescribeInspectionTaskResultResponse.class);
+    }
+
+    /**
      *查询待续费节点信息
      * @param req DescribeInstanceRenewNodesRequest
      * @return DescribeInstanceRenewNodesResponse

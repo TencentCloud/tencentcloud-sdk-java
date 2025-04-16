@@ -104,7 +104,6 @@ public class RuleInfo extends AbstractModel {
 
     /**
     * 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ForwardHost")
     @Expose
@@ -113,7 +112,6 @@ public class RuleInfo extends AbstractModel {
     /**
     * 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerNameIndicationSwitch")
     @Expose
@@ -121,7 +119,6 @@ public class RuleInfo extends AbstractModel {
 
     /**
     * 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerNameIndication")
@@ -321,10 +318,8 @@ public class RuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。 
      * @return ForwardHost 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getForwardHost() {
         return this.ForwardHost;
@@ -332,9 +327,7 @@ public class RuleInfo extends AbstractModel {
 
     /**
      * Set 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ForwardHost 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setForwardHost(String ForwardHost) {
         this.ForwardHost = ForwardHost;
@@ -342,10 +335,8 @@ public class RuleInfo extends AbstractModel {
 
     /**
      * Get 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServerNameIndicationSwitch() {
@@ -355,9 +346,7 @@ public class RuleInfo extends AbstractModel {
     /**
      * Set 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerNameIndicationSwitch(String ServerNameIndicationSwitch) {
@@ -366,10 +355,8 @@ public class RuleInfo extends AbstractModel {
 
     /**
      * Get 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServerNameIndication() {
@@ -379,9 +366,7 @@ public class RuleInfo extends AbstractModel {
     /**
      * Set 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerNameIndication(String ServerNameIndication) {

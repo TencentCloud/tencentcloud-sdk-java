@@ -25,7 +25,6 @@ public class SparkSessionBatchLog extends AbstractModel {
 
     /**
     * 日志步骤：BEG/CS/DS/DSS/DSF/FINF/RTO/CANCEL/CT/DT/DTS/DTF/FINT/EXCE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Step")
     @Expose
@@ -33,7 +32,6 @@ public class SparkSessionBatchLog extends AbstractModel {
 
     /**
     * 时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
@@ -41,7 +39,6 @@ public class SparkSessionBatchLog extends AbstractModel {
 
     /**
     * 日志提示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -56,10 +53,8 @@ public class SparkSessionBatchLog extends AbstractModel {
     private SparkSessionBatchLogOperate [] Operate;
 
     /**
-     * Get 日志步骤：BEG/CS/DS/DSS/DSF/FINF/RTO/CANCEL/CT/DT/DTS/DTF/FINT/EXCE
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志步骤：BEG/CS/DS/DSS/DSF/FINF/RTO/CANCEL/CT/DT/DTS/DTF/FINT/EXCE 
      * @return Step 日志步骤：BEG/CS/DS/DSS/DSF/FINF/RTO/CANCEL/CT/DT/DTS/DTF/FINT/EXCE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStep() {
         return this.Step;
@@ -67,19 +62,15 @@ public class SparkSessionBatchLog extends AbstractModel {
 
     /**
      * Set 日志步骤：BEG/CS/DS/DSS/DSF/FINF/RTO/CANCEL/CT/DT/DTS/DTF/FINT/EXCE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Step 日志步骤：BEG/CS/DS/DSS/DSF/FINF/RTO/CANCEL/CT/DT/DTS/DTF/FINT/EXCE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStep(String Step) {
         this.Step = Step;
     }
 
     /**
-     * Get 时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间 
      * @return Time 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTime() {
         return this.Time;
@@ -87,19 +78,15 @@ public class SparkSessionBatchLog extends AbstractModel {
 
     /**
      * Set 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 日志提示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志提示 
      * @return Message 日志提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -107,9 +94,7 @@ public class SparkSessionBatchLog extends AbstractModel {
 
     /**
      * Set 日志提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 日志提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

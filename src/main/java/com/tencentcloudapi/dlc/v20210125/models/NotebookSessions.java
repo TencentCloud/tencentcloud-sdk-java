@@ -39,7 +39,6 @@ public class NotebookSessions extends AbstractModel {
 
     /**
     * 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyUser")
     @Expose
@@ -54,7 +53,6 @@ public class NotebookSessions extends AbstractModel {
 
     /**
     * Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SparkAppId")
     @Expose
@@ -83,7 +81,6 @@ public class NotebookSessions extends AbstractModel {
 
     /**
     * 最新的运行时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastRunningTime")
     @Expose
@@ -98,7 +95,6 @@ public class NotebookSessions extends AbstractModel {
 
     /**
     * spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SparkUiUrl")
     @Expose
@@ -106,7 +102,6 @@ public class NotebookSessions extends AbstractModel {
 
     /**
     * session类型，group：资源组session independent：独立资源session，不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionType")
     @Expose
@@ -114,7 +109,6 @@ public class NotebookSessions extends AbstractModel {
 
     /**
     * 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineId")
     @Expose
@@ -122,7 +116,6 @@ public class NotebookSessions extends AbstractModel {
 
     /**
     * 资源组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
     @Expose
@@ -130,7 +123,6 @@ public class NotebookSessions extends AbstractModel {
 
     /**
     * 资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
     @Expose
@@ -169,10 +161,8 @@ public class NotebookSessions extends AbstractModel {
     }
 
     /**
-     * Get 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理用户，默认为root 
      * @return ProxyUser 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyUser() {
         return this.ProxyUser;
@@ -180,9 +170,7 @@ public class NotebookSessions extends AbstractModel {
 
     /**
      * Set 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyUser 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyUser(String ProxyUser) {
         this.ProxyUser = ProxyUser;
@@ -205,10 +193,8 @@ public class NotebookSessions extends AbstractModel {
     }
 
     /**
-     * Get Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Spark任务返回的AppId 
      * @return SparkAppId Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSparkAppId() {
         return this.SparkAppId;
@@ -216,9 +202,7 @@ public class NotebookSessions extends AbstractModel {
 
     /**
      * Set Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SparkAppId Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSparkAppId(String SparkAppId) {
         this.SparkAppId = SparkAppId;
@@ -273,10 +257,8 @@ public class NotebookSessions extends AbstractModel {
     }
 
     /**
-     * Get 最新的运行时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最新的运行时间 
      * @return LastRunningTime 最新的运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastRunningTime() {
         return this.LastRunningTime;
@@ -284,9 +266,7 @@ public class NotebookSessions extends AbstractModel {
 
     /**
      * Set 最新的运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastRunningTime 最新的运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastRunningTime(String LastRunningTime) {
         this.LastRunningTime = LastRunningTime;
@@ -309,10 +289,8 @@ public class NotebookSessions extends AbstractModel {
     }
 
     /**
-     * Get spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get spark ui地址 
      * @return SparkUiUrl spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSparkUiUrl() {
         return this.SparkUiUrl;
@@ -320,19 +298,15 @@ public class NotebookSessions extends AbstractModel {
 
     /**
      * Set spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SparkUiUrl spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSparkUiUrl(String SparkUiUrl) {
         this.SparkUiUrl = SparkUiUrl;
     }
 
     /**
-     * Get session类型，group：资源组session independent：独立资源session，不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get session类型，group：资源组session independent：独立资源session，不依赖资源组 
      * @return SessionType session类型，group：资源组session independent：独立资源session，不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionType() {
         return this.SessionType;
@@ -340,19 +314,15 @@ public class NotebookSessions extends AbstractModel {
 
     /**
      * Set session类型，group：资源组session independent：独立资源session，不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionType session类型，group：资源组session independent：独立资源session，不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionType(String SessionType) {
         this.SessionType = SessionType;
     }
 
     /**
-     * Get 引擎id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎id 
      * @return DataEngineId 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineId() {
         return this.DataEngineId;
@@ -360,19 +330,15 @@ public class NotebookSessions extends AbstractModel {
 
     /**
      * Set 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataEngineId 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineId(String DataEngineId) {
         this.DataEngineId = DataEngineId;
     }
 
     /**
-     * Get 资源组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源组id 
      * @return ResourceGroupId 资源组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
         return this.ResourceGroupId;
@@ -380,19 +346,15 @@ public class NotebookSessions extends AbstractModel {
 
     /**
      * Set 资源组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceGroupId 资源组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
         this.ResourceGroupId = ResourceGroupId;
     }
 
     /**
-     * Get 资源组名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源组名字 
      * @return ResourceGroupName 资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
         return this.ResourceGroupName;
@@ -400,9 +362,7 @@ public class NotebookSessions extends AbstractModel {
 
     /**
      * Set 资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceGroupName 资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
         this.ResourceGroupName = ResourceGroupName;

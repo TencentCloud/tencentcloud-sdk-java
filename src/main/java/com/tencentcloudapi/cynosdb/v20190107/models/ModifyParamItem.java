@@ -45,6 +45,13 @@ public class ModifyParamItem extends AbstractModel {
     private String OldValue;
 
     /**
+    * libra组件类型
+    */
+    @SerializedName("Component")
+    @Expose
+    private String Component;
+
+    /**
      * Get 参数名 
      * @return ParamName 参数名
      */
@@ -92,6 +99,22 @@ public class ModifyParamItem extends AbstractModel {
         this.OldValue = OldValue;
     }
 
+    /**
+     * Get libra组件类型 
+     * @return Component libra组件类型
+     */
+    public String getComponent() {
+        return this.Component;
+    }
+
+    /**
+     * Set libra组件类型
+     * @param Component libra组件类型
+     */
+    public void setComponent(String Component) {
+        this.Component = Component;
+    }
+
     public ModifyParamItem() {
     }
 
@@ -109,6 +132,9 @@ public class ModifyParamItem extends AbstractModel {
         if (source.OldValue != null) {
             this.OldValue = new String(source.OldValue);
         }
+        if (source.Component != null) {
+            this.Component = new String(source.Component);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ModifyParamItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ParamName", this.ParamName);
         this.setParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
         this.setParamSimple(map, prefix + "OldValue", this.OldValue);
+        this.setParamSimple(map, prefix + "Component", this.Component);
 
     }
 }

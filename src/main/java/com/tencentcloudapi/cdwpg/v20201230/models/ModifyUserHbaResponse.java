@@ -25,7 +25,6 @@ public class ModifyUserHbaResponse extends AbstractModel {
 
     /**
     * 任务id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -47,10 +46,8 @@ public class ModifyUserHbaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务id 
      * @return TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -58,9 +55,7 @@ public class ModifyUserHbaResponse extends AbstractModel {
 
     /**
      * Set 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

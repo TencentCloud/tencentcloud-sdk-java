@@ -25,7 +25,6 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
     * 工作组Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkGroupId")
     @Expose
@@ -33,7 +32,6 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
     * 工作组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkGroupName")
     @Expose
@@ -41,7 +39,6 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
     * 包含的信息类型。User：用户信息；DataAuth：数据权限；EngineAuth:引擎权限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -49,7 +46,6 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
     * 工作组上绑定的用户集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserInfo")
     @Expose
@@ -57,7 +53,6 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
     * 数据权限集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataPolicyInfo")
     @Expose
@@ -65,7 +60,6 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
     * 引擎权限集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnginePolicyInfo")
     @Expose
@@ -73,7 +67,6 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
     * 工作组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkGroupDescription")
     @Expose
@@ -81,7 +74,6 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
     * 行过滤信息集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RowFilterInfo")
     @Expose
@@ -96,10 +88,8 @@ public class WorkGroupDetailInfo extends AbstractModel {
     private Policy CatalogPolicyInfo;
 
     /**
-     * Get 工作组Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作组Id 
      * @return WorkGroupId 工作组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWorkGroupId() {
         return this.WorkGroupId;
@@ -107,19 +97,15 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
      * Set 工作组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkGroupId 工作组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkGroupId(Long WorkGroupId) {
         this.WorkGroupId = WorkGroupId;
     }
 
     /**
-     * Get 工作组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作组名称 
      * @return WorkGroupName 工作组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkGroupName() {
         return this.WorkGroupName;
@@ -127,19 +113,15 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
      * Set 工作组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkGroupName 工作组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkGroupName(String WorkGroupName) {
         this.WorkGroupName = WorkGroupName;
     }
 
     /**
-     * Get 包含的信息类型。User：用户信息；DataAuth：数据权限；EngineAuth:引擎权限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含的信息类型。User：用户信息；DataAuth：数据权限；EngineAuth:引擎权限 
      * @return Type 包含的信息类型。User：用户信息；DataAuth：数据权限；EngineAuth:引擎权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -147,19 +129,15 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
      * Set 包含的信息类型。User：用户信息；DataAuth：数据权限；EngineAuth:引擎权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 包含的信息类型。User：用户信息；DataAuth：数据权限；EngineAuth:引擎权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 工作组上绑定的用户集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作组上绑定的用户集合 
      * @return UserInfo 工作组上绑定的用户集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Users getUserInfo() {
         return this.UserInfo;
@@ -167,19 +145,15 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
      * Set 工作组上绑定的用户集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserInfo 工作组上绑定的用户集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserInfo(Users UserInfo) {
         this.UserInfo = UserInfo;
     }
 
     /**
-     * Get 数据权限集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据权限集合 
      * @return DataPolicyInfo 数据权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Policys getDataPolicyInfo() {
         return this.DataPolicyInfo;
@@ -187,19 +161,15 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
      * Set 数据权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataPolicyInfo 数据权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataPolicyInfo(Policys DataPolicyInfo) {
         this.DataPolicyInfo = DataPolicyInfo;
     }
 
     /**
-     * Get 引擎权限集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎权限集合 
      * @return EnginePolicyInfo 引擎权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Policys getEnginePolicyInfo() {
         return this.EnginePolicyInfo;
@@ -207,19 +177,15 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
      * Set 引擎权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnginePolicyInfo 引擎权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnginePolicyInfo(Policys EnginePolicyInfo) {
         this.EnginePolicyInfo = EnginePolicyInfo;
     }
 
     /**
-     * Get 工作组描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作组描述信息 
      * @return WorkGroupDescription 工作组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkGroupDescription() {
         return this.WorkGroupDescription;
@@ -227,19 +193,15 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
      * Set 工作组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkGroupDescription 工作组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkGroupDescription(String WorkGroupDescription) {
         this.WorkGroupDescription = WorkGroupDescription;
     }
 
     /**
-     * Get 行过滤信息集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 行过滤信息集合 
      * @return RowFilterInfo 行过滤信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Policys getRowFilterInfo() {
         return this.RowFilterInfo;
@@ -247,9 +209,7 @@ public class WorkGroupDetailInfo extends AbstractModel {
 
     /**
      * Set 行过滤信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RowFilterInfo 行过滤信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRowFilterInfo(Policys RowFilterInfo) {
         this.RowFilterInfo = RowFilterInfo;

@@ -86,7 +86,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DriverSize")
     @Expose
@@ -94,7 +93,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorSize")
     @Expose
@@ -102,7 +100,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * 指定的Executor数量，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorNumbers")
     @Expose
@@ -110,7 +107,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyUser")
     @Expose
@@ -118,7 +114,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * 指定的Session超时时间，单位秒，默认3600秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeoutInSecond")
     @Expose
@@ -126,7 +121,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SparkAppId")
     @Expose
@@ -163,7 +157,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * Spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SparkUiUrl")
     @Expose
@@ -171,7 +164,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorMaxNumbers")
     @Expose
@@ -179,7 +171,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * session类型，group：资源组下session independent：独立资源session， 不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionType")
     @Expose
@@ -187,7 +178,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineId")
     @Expose
@@ -195,7 +185,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * 资源组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
     @Expose
@@ -203,7 +192,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * 资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
     @Expose
@@ -211,7 +199,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * session，pod大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodSize")
     @Expose
@@ -219,7 +206,6 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
     * pod数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodNumbers")
     @Expose
@@ -374,10 +360,8 @@ public class NotebookSessionInfo extends AbstractModel {
     }
 
     /**
-     * Get 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu） 
      * @return DriverSize 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDriverSize() {
         return this.DriverSize;
@@ -385,19 +369,15 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DriverSize 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDriverSize(String DriverSize) {
         this.DriverSize = DriverSize;
     }
 
     /**
-     * Get 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu） 
      * @return ExecutorSize 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorSize() {
         return this.ExecutorSize;
@@ -405,19 +385,15 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutorSize 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorSize(String ExecutorSize) {
         this.ExecutorSize = ExecutorSize;
     }
 
     /**
-     * Get 指定的Executor数量，默认为1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定的Executor数量，默认为1 
      * @return ExecutorNumbers 指定的Executor数量，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExecutorNumbers() {
         return this.ExecutorNumbers;
@@ -425,19 +401,15 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set 指定的Executor数量，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutorNumbers 指定的Executor数量，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorNumbers(Long ExecutorNumbers) {
         this.ExecutorNumbers = ExecutorNumbers;
     }
 
     /**
-     * Get 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理用户，默认为root 
      * @return ProxyUser 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyUser() {
         return this.ProxyUser;
@@ -445,19 +417,15 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyUser 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyUser(String ProxyUser) {
         this.ProxyUser = ProxyUser;
     }
 
     /**
-     * Get 指定的Session超时时间，单位秒，默认3600秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定的Session超时时间，单位秒，默认3600秒 
      * @return TimeoutInSecond 指定的Session超时时间，单位秒，默认3600秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeoutInSecond() {
         return this.TimeoutInSecond;
@@ -465,19 +433,15 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set 指定的Session超时时间，单位秒，默认3600秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeoutInSecond 指定的Session超时时间，单位秒，默认3600秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeoutInSecond(Long TimeoutInSecond) {
         this.TimeoutInSecond = TimeoutInSecond;
     }
 
     /**
-     * Get Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Spark任务返回的AppId 
      * @return SparkAppId Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSparkAppId() {
         return this.SparkAppId;
@@ -485,9 +449,7 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SparkAppId Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSparkAppId(String SparkAppId) {
         this.SparkAppId = SparkAppId;
@@ -562,10 +524,8 @@ public class NotebookSessionInfo extends AbstractModel {
     }
 
     /**
-     * Get Spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Spark ui地址 
      * @return SparkUiUrl Spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSparkUiUrl() {
         return this.SparkUiUrl;
@@ -573,19 +533,15 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set Spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SparkUiUrl Spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSparkUiUrl(String SparkUiUrl) {
         this.SparkUiUrl = SparkUiUrl;
     }
 
     /**
-     * Get 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers 
      * @return ExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExecutorMaxNumbers() {
         return this.ExecutorMaxNumbers;
@@ -593,19 +549,15 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorMaxNumbers(Long ExecutorMaxNumbers) {
         this.ExecutorMaxNumbers = ExecutorMaxNumbers;
     }
 
     /**
-     * Get session类型，group：资源组下session independent：独立资源session， 不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get session类型，group：资源组下session independent：独立资源session， 不依赖资源组 
      * @return SessionType session类型，group：资源组下session independent：独立资源session， 不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionType() {
         return this.SessionType;
@@ -613,19 +565,15 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set session类型，group：资源组下session independent：独立资源session， 不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionType session类型，group：资源组下session independent：独立资源session， 不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionType(String SessionType) {
         this.SessionType = SessionType;
     }
 
     /**
-     * Get 引擎id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎id 
      * @return DataEngineId 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineId() {
         return this.DataEngineId;
@@ -633,19 +581,15 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataEngineId 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineId(String DataEngineId) {
         this.DataEngineId = DataEngineId;
     }
 
     /**
-     * Get 资源组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源组id 
      * @return ResourceGroupId 资源组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
         return this.ResourceGroupId;
@@ -653,19 +597,15 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set 资源组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceGroupId 资源组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
         this.ResourceGroupId = ResourceGroupId;
     }
 
     /**
-     * Get 资源组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源组名称 
      * @return ResourceGroupName 资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
         return this.ResourceGroupName;
@@ -673,19 +613,15 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set 资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceGroupName 资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
         this.ResourceGroupName = ResourceGroupName;
     }
 
     /**
-     * Get session，pod大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get session，pod大小 
      * @return PodSize session，pod大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPodSize() {
         return this.PodSize;
@@ -693,19 +629,15 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set session，pod大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodSize session，pod大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodSize(Long PodSize) {
         this.PodSize = PodSize;
     }
 
     /**
-     * Get pod数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pod数量 
      * @return PodNumbers pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPodNumbers() {
         return this.PodNumbers;
@@ -713,9 +645,7 @@ public class NotebookSessionInfo extends AbstractModel {
 
     /**
      * Set pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodNumbers pod数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodNumbers(Long PodNumbers) {
         this.PodNumbers = PodNumbers;

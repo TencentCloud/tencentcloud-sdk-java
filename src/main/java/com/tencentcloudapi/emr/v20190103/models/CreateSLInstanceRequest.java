@@ -80,6 +80,13 @@ public class CreateSLInstanceRequest extends AbstractModel {
     private PrePaySetting PrePaySetting;
 
     /**
+    * 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
+
+    /**
      * Get 实例名称。 
      * @return InstanceName 实例名称。
      */
@@ -207,6 +214,22 @@ public class CreateSLInstanceRequest extends AbstractModel {
         this.PrePaySetting = PrePaySetting;
     }
 
+    /**
+     * Get 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	 
+     * @return ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * Set 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+     * @param ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
+    }
+
     public CreateSLInstanceRequest() {
     }
 
@@ -245,6 +268,9 @@ public class CreateSLInstanceRequest extends AbstractModel {
         if (source.PrePaySetting != null) {
             this.PrePaySetting = new PrePaySetting(source.PrePaySetting);
         }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
     }
 
 
@@ -260,6 +286,7 @@ public class CreateSLInstanceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ZoneSettings.", this.ZoneSettings);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "PrePaySetting.", this.PrePaySetting);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
 
     }
 }

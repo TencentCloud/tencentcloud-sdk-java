@@ -67,7 +67,6 @@ public class UserRole extends AbstractModel {
 
     /**
     * 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleName")
     @Expose
@@ -75,7 +74,6 @@ public class UserRole extends AbstractModel {
 
     /**
     * 创建者UIN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creator")
     @Expose
@@ -83,7 +81,6 @@ public class UserRole extends AbstractModel {
 
     /**
     * cos授权路径列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosPermissionList")
     @Expose
@@ -91,7 +88,6 @@ public class UserRole extends AbstractModel {
 
     /**
     * cam策略json
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PermissionJson")
     @Expose
@@ -194,10 +190,8 @@ public class UserRole extends AbstractModel {
     }
 
     /**
-     * Get 角色名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 角色名称 
      * @return RoleName 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleName() {
         return this.RoleName;
@@ -205,19 +199,15 @@ public class UserRole extends AbstractModel {
 
     /**
      * Set 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoleName 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get 创建者UIN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者UIN 
      * @return Creator 创建者UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreator() {
         return this.Creator;
@@ -225,19 +215,15 @@ public class UserRole extends AbstractModel {
 
     /**
      * Set 创建者UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Creator 创建者UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get cos授权路径列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos授权路径列表 
      * @return CosPermissionList cos授权路径列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CosPermission [] getCosPermissionList() {
         return this.CosPermissionList;
@@ -245,19 +231,15 @@ public class UserRole extends AbstractModel {
 
     /**
      * Set cos授权路径列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosPermissionList cos授权路径列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosPermissionList(CosPermission [] CosPermissionList) {
         this.CosPermissionList = CosPermissionList;
     }
 
     /**
-     * Get cam策略json
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cam策略json 
      * @return PermissionJson cam策略json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPermissionJson() {
         return this.PermissionJson;
@@ -265,9 +247,7 @@ public class UserRole extends AbstractModel {
 
     /**
      * Set cam策略json
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PermissionJson cam策略json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPermissionJson(String PermissionJson) {
         this.PermissionJson = PermissionJson;

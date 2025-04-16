@@ -25,7 +25,6 @@ public class ParamDetail extends AbstractModel {
 
     /**
     * 参数名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamName")
     @Expose
@@ -33,7 +32,6 @@ public class ParamDetail extends AbstractModel {
 
     /**
     * 默认值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultValue")
     @Expose
@@ -41,7 +39,6 @@ public class ParamDetail extends AbstractModel {
 
     /**
     * 是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NeedRestart")
     @Expose
@@ -49,7 +46,6 @@ public class ParamDetail extends AbstractModel {
 
     /**
     * 当前运行值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningValue")
     @Expose
@@ -87,10 +83,8 @@ public class ParamDetail extends AbstractModel {
     private String ParameterName;
 
     /**
-     * Get 参数名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数名 
      * @return ParamName 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamName() {
         return this.ParamName;
@@ -98,19 +92,15 @@ public class ParamDetail extends AbstractModel {
 
     /**
      * Set 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamName 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get 默认值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认值 
      * @return DefaultValue 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultValue() {
         return this.DefaultValue;
@@ -118,19 +108,15 @@ public class ParamDetail extends AbstractModel {
 
     /**
      * Set 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultValue 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get 是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否需要重启 
      * @return NeedRestart 是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getNeedRestart() {
         return this.NeedRestart;
@@ -138,19 +124,15 @@ public class ParamDetail extends AbstractModel {
 
     /**
      * Set 是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NeedRestart 是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNeedRestart(Boolean NeedRestart) {
         this.NeedRestart = NeedRestart;
     }
 
     /**
-     * Get 当前运行值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前运行值 
      * @return RunningValue 当前运行值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunningValue() {
         return this.RunningValue;
@@ -158,9 +140,7 @@ public class ParamDetail extends AbstractModel {
 
     /**
      * Set 当前运行值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunningValue 当前运行值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningValue(String RunningValue) {
         this.RunningValue = RunningValue;

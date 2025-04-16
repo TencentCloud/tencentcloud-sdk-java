@@ -25,7 +25,6 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
 
     /**
     * 生命周期启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LifecycleEnable")
     @Expose
@@ -33,7 +32,6 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Expiration")
     @Expose
@@ -41,7 +39,6 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
 
     /**
     * 是否删表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropTable")
     @Expose
@@ -49,7 +46,6 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
 
     /**
     * 过期字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiredField")
     @Expose
@@ -57,17 +53,14 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
 
     /**
     * 过期字段格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiredFieldFormat")
     @Expose
     private String ExpiredFieldFormat;
 
     /**
-     * Get 生命周期启用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生命周期启用 
      * @return LifecycleEnable 生命周期启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLifecycleEnable() {
         return this.LifecycleEnable;
@@ -75,19 +68,15 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
 
     /**
      * Set 生命周期启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LifecycleEnable 生命周期启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLifecycleEnable(String LifecycleEnable) {
         this.LifecycleEnable = LifecycleEnable;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return Expiration 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpiration() {
         return this.Expiration;
@@ -95,19 +84,15 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Expiration 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiration(Long Expiration) {
         this.Expiration = Expiration;
     }
 
     /**
-     * Get 是否删表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否删表 
      * @return DropTable 是否删表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDropTable() {
         return this.DropTable;
@@ -115,19 +100,15 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
 
     /**
      * Set 是否删表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DropTable 是否删表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropTable(Boolean DropTable) {
         this.DropTable = DropTable;
     }
 
     /**
-     * Get 过期字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期字段 
      * @return ExpiredField 过期字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpiredField() {
         return this.ExpiredField;
@@ -135,19 +116,15 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
 
     /**
      * Set 过期字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpiredField 过期字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiredField(String ExpiredField) {
         this.ExpiredField = ExpiredField;
     }
 
     /**
-     * Get 过期字段格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期字段格式 
      * @return ExpiredFieldFormat 过期字段格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpiredFieldFormat() {
         return this.ExpiredFieldFormat;
@@ -155,9 +132,7 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
 
     /**
      * Set 过期字段格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpiredFieldFormat 过期字段格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiredFieldFormat(String ExpiredFieldFormat) {
         this.ExpiredFieldFormat = ExpiredFieldFormat;

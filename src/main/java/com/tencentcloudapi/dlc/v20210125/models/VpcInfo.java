@@ -25,7 +25,6 @@ public class VpcInfo extends AbstractModel {
 
     /**
     * vpc Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -33,7 +32,6 @@ public class VpcInfo extends AbstractModel {
 
     /**
     * vpc子网
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcCidrBlock")
     @Expose
@@ -41,7 +39,6 @@ public class VpcInfo extends AbstractModel {
 
     /**
     * 规则Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -49,17 +46,14 @@ public class VpcInfo extends AbstractModel {
 
     /**
     * 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessGroupId")
     @Expose
     private String AccessGroupId;
 
     /**
-     * Get vpc Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc Id 
      * @return VpcId vpc Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -67,19 +61,15 @@ public class VpcInfo extends AbstractModel {
 
     /**
      * Set vpc Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get vpc子网
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc子网 
      * @return VpcCidrBlock vpc子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcCidrBlock() {
         return this.VpcCidrBlock;
@@ -87,19 +77,15 @@ public class VpcInfo extends AbstractModel {
 
     /**
      * Set vpc子网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcCidrBlock vpc子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
         this.VpcCidrBlock = VpcCidrBlock;
     }
 
     /**
-     * Get 规则Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则Id 
      * @return RuleId 规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -107,19 +93,15 @@ public class VpcInfo extends AbstractModel {
 
     /**
      * Set 规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限组Id 
      * @return AccessGroupId 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessGroupId() {
         return this.AccessGroupId;
@@ -127,9 +109,7 @@ public class VpcInfo extends AbstractModel {
 
     /**
      * Set 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessGroupId 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessGroupId(String AccessGroupId) {
         this.AccessGroupId = AccessGroupId;

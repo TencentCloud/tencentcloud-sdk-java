@@ -25,7 +25,6 @@ public class DLCCatalogAccess extends AbstractModel {
 
     /**
     * VPCID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -33,7 +32,6 @@ public class DLCCatalogAccess extends AbstractModel {
 
     /**
     * 产品类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Product")
     @Expose
@@ -41,7 +39,6 @@ public class DLCCatalogAccess extends AbstractModel {
 
     /**
     * 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -49,17 +46,14 @@ public class DLCCatalogAccess extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get VPCID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPCID 
      * @return VpcId VPCID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -67,19 +61,15 @@ public class DLCCatalogAccess extends AbstractModel {
 
     /**
      * Set VPCID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId VPCID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 产品类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品类型 
      * @return Product 产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProduct() {
         return this.Product;
@@ -87,19 +77,15 @@ public class DLCCatalogAccess extends AbstractModel {
 
     /**
      * Set 产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Product 产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述信息 
      * @return Description 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -107,19 +93,15 @@ public class DLCCatalogAccess extends AbstractModel {
 
     /**
      * Set 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -127,9 +109,7 @@ public class DLCCatalogAccess extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

@@ -25,7 +25,6 @@ public class ProxyInfo extends AbstractModel {
 
     /**
     * （旧参数，请使用ProxyId）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -122,7 +121,6 @@ MOVING表示迁移中。
 
     /**
     * （新参数）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyId")
     @Expose
@@ -160,7 +158,6 @@ MOVING表示迁移中。
 
     /**
     * 接入地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessRegionInfo")
     @Expose
@@ -168,7 +165,6 @@ MOVING表示迁移中。
 
     /**
     * 源站地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealServerRegionInfo")
     @Expose
@@ -183,7 +179,6 @@ MOVING表示迁移中。
 
     /**
     * 标签列表，不存在标签时，该字段为空列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -191,7 +186,6 @@ MOVING表示迁移中。
 
     /**
     * 是否支持安全组配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportSecurity")
     @Expose
@@ -199,7 +193,6 @@ MOVING表示迁移中。
 
     /**
     * 计费类型: 0表示按带宽计费  1表示按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingType")
     @Expose
@@ -207,7 +200,6 @@ MOVING表示迁移中。
 
     /**
     * 关联了解析的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelatedGlobalDomains")
     @Expose
@@ -223,7 +215,6 @@ MOVING表示迁移中。
 
     /**
     * 通道类型，100表示THUNDER通道，103表示微软合作通道
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyType")
     @Expose
@@ -231,7 +222,6 @@ MOVING表示迁移中。
 
     /**
     * 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientIPMethod")
     @Expose
@@ -239,7 +229,6 @@ MOVING表示迁移中。
 
     /**
     * IP版本：IPv4、IPv6
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPAddressVersion")
     @Expose
@@ -247,7 +236,6 @@ MOVING表示迁移中。
 
     /**
     * 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkType")
     @Expose
@@ -256,7 +244,6 @@ MOVING表示迁移中。
     /**
     * 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
     @Expose
@@ -264,7 +251,6 @@ CrossBorder表示跨境通道。
 
     /**
     * 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BanStatus")
     @Expose
@@ -272,7 +258,6 @@ CrossBorder表示跨境通道。
 
     /**
     * IP列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPList")
     @Expose
@@ -282,7 +267,6 @@ CrossBorder表示跨境通道。
     * 支持Http3协议的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Http3Supported")
     @Expose
@@ -290,7 +274,6 @@ CrossBorder表示跨境通道。
 
     /**
     * 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InBanBlacklist")
     @Expose
@@ -309,7 +292,6 @@ CrossBorder表示跨境通道。
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeatureBitmap")
     @Expose
@@ -317,7 +299,6 @@ CrossBorder表示跨境通道。
 
     /**
     * 是否是开启了auto scale的通道，0表示否，1表示是。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAutoScaleProxy")
     @Expose
@@ -327,17 +308,14 @@ CrossBorder表示跨境通道。
     * 是否允许设置TLS配置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportTLSChoice")
     @Expose
     private Long IsSupportTLSChoice;
 
     /**
-     * Get （旧参数，请使用ProxyId）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get （旧参数，请使用ProxyId）通道实例ID。 
      * @return InstanceId （旧参数，请使用ProxyId）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -345,9 +323,7 @@ CrossBorder表示跨境通道。
 
     /**
      * Set （旧参数，请使用ProxyId）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId （旧参数，请使用ProxyId）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -578,10 +554,8 @@ MOVING表示迁移中。
     }
 
     /**
-     * Get （新参数）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get （新参数）通道实例ID。 
      * @return ProxyId （新参数）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyId() {
         return this.ProxyId;
@@ -589,9 +563,7 @@ MOVING表示迁移中。
 
     /**
      * Set （新参数）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyId （新参数）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
@@ -670,10 +642,8 @@ MOVING表示迁移中。
     }
 
     /**
-     * Get 接入地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入地域详细信息，包括地域ID和地域名。 
      * @return AccessRegionInfo 接入地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RegionDetail getAccessRegionInfo() {
         return this.AccessRegionInfo;
@@ -681,19 +651,15 @@ MOVING表示迁移中。
 
     /**
      * Set 接入地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessRegionInfo 接入地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessRegionInfo(RegionDetail AccessRegionInfo) {
         this.AccessRegionInfo = AccessRegionInfo;
     }
 
     /**
-     * Get 源站地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源站地域详细信息，包括地域ID和地域名。 
      * @return RealServerRegionInfo 源站地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RegionDetail getRealServerRegionInfo() {
         return this.RealServerRegionInfo;
@@ -701,9 +667,7 @@ MOVING表示迁移中。
 
     /**
      * Set 源站地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerRegionInfo 源站地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealServerRegionInfo(RegionDetail RealServerRegionInfo) {
         this.RealServerRegionInfo = RealServerRegionInfo;
@@ -726,10 +690,8 @@ MOVING表示迁移中。
     }
 
     /**
-     * Get 标签列表，不存在标签时，该字段为空列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签列表，不存在标签时，该字段为空列表。 
      * @return TagSet 标签列表，不存在标签时，该字段为空列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagPair [] getTagSet() {
         return this.TagSet;
@@ -737,19 +699,15 @@ MOVING表示迁移中。
 
     /**
      * Set 标签列表，不存在标签时，该字段为空列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 标签列表，不存在标签时，该字段为空列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(TagPair [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get 是否支持安全组配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持安全组配置 
      * @return SupportSecurity 是否支持安全组配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSupportSecurity() {
         return this.SupportSecurity;
@@ -757,19 +715,15 @@ MOVING表示迁移中。
 
     /**
      * Set 是否支持安全组配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportSecurity 是否支持安全组配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportSecurity(Long SupportSecurity) {
         this.SupportSecurity = SupportSecurity;
     }
 
     /**
-     * Get 计费类型: 0表示按带宽计费  1表示按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费类型: 0表示按带宽计费  1表示按流量计费。 
      * @return BillingType 计费类型: 0表示按带宽计费  1表示按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBillingType() {
         return this.BillingType;
@@ -777,19 +731,15 @@ MOVING表示迁移中。
 
     /**
      * Set 计费类型: 0表示按带宽计费  1表示按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingType 计费类型: 0表示按带宽计费  1表示按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingType(Long BillingType) {
         this.BillingType = BillingType;
     }
 
     /**
-     * Get 关联了解析的域名列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联了解析的域名列表 
      * @return RelatedGlobalDomains 关联了解析的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRelatedGlobalDomains() {
         return this.RelatedGlobalDomains;
@@ -797,9 +747,7 @@ MOVING表示迁移中。
 
     /**
      * Set 关联了解析的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RelatedGlobalDomains 关联了解析的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelatedGlobalDomains(String [] RelatedGlobalDomains) {
         this.RelatedGlobalDomains = RelatedGlobalDomains;
@@ -826,10 +774,8 @@ MOVING表示迁移中。
     }
 
     /**
-     * Get 通道类型，100表示THUNDER通道，103表示微软合作通道
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道类型，100表示THUNDER通道，103表示微软合作通道 
      * @return ProxyType 通道类型，100表示THUNDER通道，103表示微软合作通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProxyType() {
         return this.ProxyType;
@@ -837,19 +783,15 @@ MOVING表示迁移中。
 
     /**
      * Set 通道类型，100表示THUNDER通道，103表示微软合作通道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyType 通道类型，100表示THUNDER通道，103表示微软合作通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyType(Long ProxyType) {
         this.ProxyType = ProxyType;
     }
 
     /**
-     * Get 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol 
      * @return ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getClientIPMethod() {
         return this.ClientIPMethod;
@@ -857,19 +799,15 @@ MOVING表示迁移中。
 
     /**
      * Set 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientIPMethod(Long [] ClientIPMethod) {
         this.ClientIPMethod = ClientIPMethod;
     }
 
     /**
-     * Get IP版本：IPv4、IPv6
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP版本：IPv4、IPv6 
      * @return IPAddressVersion IP版本：IPv4、IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIPAddressVersion() {
         return this.IPAddressVersion;
@@ -877,19 +815,15 @@ MOVING表示迁移中。
 
     /**
      * Set IP版本：IPv4、IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IPAddressVersion IP版本：IPv4、IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPAddressVersion(String IPAddressVersion) {
         this.IPAddressVersion = IPAddressVersion;
     }
 
     /**
-     * Get 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP 
      * @return NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkType() {
         return this.NetworkType;
@@ -897,9 +831,7 @@ MOVING表示迁移中。
 
     /**
      * Set 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
@@ -907,11 +839,9 @@ MOVING表示迁移中。
 
     /**
      * Get 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
-CrossBorder表示跨境通道。
-注意：此字段可能返回 null，表示取不到有效值。 
+CrossBorder表示跨境通道。 
      * @return PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
         return this.PackageType;
@@ -920,20 +850,16 @@ CrossBorder表示跨境通道。
     /**
      * Set 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。 
      * @return BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBanStatus() {
         return this.BanStatus;
@@ -941,19 +867,15 @@ CrossBorder表示跨境通道。
 
     /**
      * Set 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBanStatus(String BanStatus) {
         this.BanStatus = BanStatus;
     }
 
     /**
-     * Get IP列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP列表 
      * @return IPList IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IPDetail [] getIPList() {
         return this.IPList;
@@ -961,9 +883,7 @@ CrossBorder表示跨境通道。
 
     /**
      * Set IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IPList IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPList(IPDetail [] IPList) {
         this.IPList = IPList;
@@ -972,12 +892,10 @@ CrossBorder表示跨境通道。
     /**
      * Get 支持Http3协议的标识，其中：
 0表示关闭；
-1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。 
+1表示启用。 
      * @return Http3Supported 支持Http3协议的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHttp3Supported() {
         return this.Http3Supported;
@@ -987,21 +905,17 @@ CrossBorder表示跨境通道。
      * Set 支持Http3协议的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Http3Supported 支持Http3协议的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttp3Supported(Long Http3Supported) {
         this.Http3Supported = Http3Supported;
     }
 
     /**
-     * Get 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。 
      * @return InBanBlacklist 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInBanBlacklist() {
         return this.InBanBlacklist;
@@ -1009,9 +923,7 @@ CrossBorder表示跨境通道。
 
     /**
      * Set 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InBanBlacklist 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInBanBlacklist(Long InBanBlacklist) {
         this.InBanBlacklist = InBanBlacklist;
@@ -1029,7 +941,6 @@ CrossBorder表示跨境通道。
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
@@ -1042,7 +953,6 @@ CrossBorder表示跨境通道。
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFeatureBitmap() {
@@ -1062,7 +972,6 @@ CrossBorder表示跨境通道。
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
 1，表示支持该特性。
@@ -1075,17 +984,14 @@ CrossBorder表示跨境通道。
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeatureBitmap(Long FeatureBitmap) {
         this.FeatureBitmap = FeatureBitmap;
     }
 
     /**
-     * Get 是否是开启了auto scale的通道，0表示否，1表示是。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是开启了auto scale的通道，0表示否，1表示是。 
      * @return IsAutoScaleProxy 是否是开启了auto scale的通道，0表示否，1表示是。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAutoScaleProxy() {
         return this.IsAutoScaleProxy;
@@ -1093,9 +999,7 @@ CrossBorder表示跨境通道。
 
     /**
      * Set 是否是开启了auto scale的通道，0表示否，1表示是。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAutoScaleProxy 是否是开启了auto scale的通道，0表示否，1表示是。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAutoScaleProxy(Long IsAutoScaleProxy) {
         this.IsAutoScaleProxy = IsAutoScaleProxy;
@@ -1104,12 +1008,10 @@ CrossBorder表示跨境通道。
     /**
      * Get 是否允许设置TLS配置
 0表示不支持；
-1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。 
+1表示支持。 
      * @return IsSupportTLSChoice 是否允许设置TLS配置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSupportTLSChoice() {
         return this.IsSupportTLSChoice;
@@ -1119,11 +1021,9 @@ CrossBorder表示跨境通道。
      * Set 是否允许设置TLS配置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportTLSChoice 是否允许设置TLS配置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportTLSChoice(Long IsSupportTLSChoice) {
         this.IsSupportTLSChoice = IsSupportTLSChoice;

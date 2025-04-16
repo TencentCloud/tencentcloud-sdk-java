@@ -25,7 +25,6 @@ public class FavorInfo extends AbstractModel {
 
     /**
     * 优先事项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Priority")
     @Expose
@@ -33,7 +32,6 @@ public class FavorInfo extends AbstractModel {
 
     /**
     * Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Catalog")
     @Expose
@@ -41,7 +39,6 @@ public class FavorInfo extends AbstractModel {
 
     /**
     * DataBase名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataBase")
     @Expose
@@ -49,17 +46,14 @@ public class FavorInfo extends AbstractModel {
 
     /**
     * Table名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
     private String Table;
 
     /**
-     * Get 优先事项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 优先事项 
      * @return Priority 优先事项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPriority() {
         return this.Priority;
@@ -67,19 +61,15 @@ public class FavorInfo extends AbstractModel {
 
     /**
      * Set 优先事项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 优先事项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Catalog名称 
      * @return Catalog Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCatalog() {
         return this.Catalog;
@@ -87,19 +77,15 @@ public class FavorInfo extends AbstractModel {
 
     /**
      * Set Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Catalog Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalog(String Catalog) {
         this.Catalog = Catalog;
     }
 
     /**
-     * Get DataBase名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DataBase名称 
      * @return DataBase DataBase名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataBase() {
         return this.DataBase;
@@ -107,19 +93,15 @@ public class FavorInfo extends AbstractModel {
 
     /**
      * Set DataBase名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataBase DataBase名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataBase(String DataBase) {
         this.DataBase = DataBase;
     }
 
     /**
-     * Get Table名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Table名称 
      * @return Table Table名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -127,9 +109,7 @@ public class FavorInfo extends AbstractModel {
 
     /**
      * Set Table名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Table Table名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;

@@ -33,7 +33,6 @@ public class WorkGroups extends AbstractModel {
 
     /**
     * 工作组总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -60,10 +59,8 @@ public class WorkGroups extends AbstractModel {
     }
 
     /**
-     * Get 工作组总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作组总数 
      * @return TotalCount 工作组总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -71,9 +68,7 @@ public class WorkGroups extends AbstractModel {
 
     /**
      * Set 工作组总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 工作组总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

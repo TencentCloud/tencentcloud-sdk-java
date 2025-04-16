@@ -25,7 +25,6 @@ public class DataMaskStrategyInfo extends AbstractModel {
 
     /**
     * 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyName")
     @Expose
@@ -33,7 +32,6 @@ public class DataMaskStrategyInfo extends AbstractModel {
 
     /**
     * MASK_SHOW_FIRST_4; MASK_SHOW_LAST_4;MASK_HASH; MASK_DATE_SHOW_YEAR; MASK_NULL; MASK_DEFAULT 等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyType")
     @Expose
@@ -41,7 +39,6 @@ public class DataMaskStrategyInfo extends AbstractModel {
 
     /**
     * 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyDesc")
     @Expose
@@ -57,7 +54,6 @@ public class DataMaskStrategyInfo extends AbstractModel {
 
     /**
     * 用户子账号uin列表，按;拼接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Users")
     @Expose
@@ -65,17 +61,14 @@ public class DataMaskStrategyInfo extends AbstractModel {
 
     /**
     * 策略Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyId")
     @Expose
     private String StrategyId;
 
     /**
-     * Get 策略名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名称 
      * @return StrategyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyName() {
         return this.StrategyName;
@@ -83,19 +76,15 @@ public class DataMaskStrategyInfo extends AbstractModel {
 
     /**
      * Set 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get MASK_SHOW_FIRST_4; MASK_SHOW_LAST_4;MASK_HASH; MASK_DATE_SHOW_YEAR; MASK_NULL; MASK_DEFAULT 等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MASK_SHOW_FIRST_4; MASK_SHOW_LAST_4;MASK_HASH; MASK_DATE_SHOW_YEAR; MASK_NULL; MASK_DEFAULT 等 
      * @return StrategyType MASK_SHOW_FIRST_4; MASK_SHOW_LAST_4;MASK_HASH; MASK_DATE_SHOW_YEAR; MASK_NULL; MASK_DEFAULT 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyType() {
         return this.StrategyType;
@@ -103,19 +92,15 @@ public class DataMaskStrategyInfo extends AbstractModel {
 
     /**
      * Set MASK_SHOW_FIRST_4; MASK_SHOW_LAST_4;MASK_HASH; MASK_DATE_SHOW_YEAR; MASK_NULL; MASK_DEFAULT 等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyType MASK_SHOW_FIRST_4; MASK_SHOW_LAST_4;MASK_HASH; MASK_DATE_SHOW_YEAR; MASK_NULL; MASK_DEFAULT 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyType(String StrategyType) {
         this.StrategyType = StrategyType;
     }
 
     /**
-     * Get 策略描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略描述 
      * @return StrategyDesc 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyDesc() {
         return this.StrategyDesc;
@@ -123,9 +108,7 @@ public class DataMaskStrategyInfo extends AbstractModel {
 
     /**
      * Set 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyDesc 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyDesc(String StrategyDesc) {
         this.StrategyDesc = StrategyDesc;
@@ -152,10 +135,8 @@ public class DataMaskStrategyInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户子账号uin列表，按;拼接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户子账号uin列表，按;拼接 
      * @return Users 用户子账号uin列表，按;拼接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsers() {
         return this.Users;
@@ -163,19 +144,15 @@ public class DataMaskStrategyInfo extends AbstractModel {
 
     /**
      * Set 用户子账号uin列表，按;拼接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Users 用户子账号uin列表，按;拼接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsers(String Users) {
         this.Users = Users;
     }
 
     /**
-     * Get 策略Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略Id 
      * @return StrategyId 策略Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyId() {
         return this.StrategyId;
@@ -183,9 +160,7 @@ public class DataMaskStrategyInfo extends AbstractModel {
 
     /**
      * Set 策略Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyId 策略Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyId(String StrategyId) {
         this.StrategyId = StrategyId;

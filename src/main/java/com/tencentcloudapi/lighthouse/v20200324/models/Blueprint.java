@@ -74,7 +74,7 @@ public class Blueprint extends AbstractModel {
     private String PlatformType;
 
     /**
-    * 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
+    * 镜像类型，如 APP_OS（应用镜像）, PURE_OS（系统镜像）, DOCKER（容器）, PRIVATE（私有镜像）, SHARED（共享镜像）, GAME_PORTAL（游戏专区镜像）。
     */
     @SerializedName("BlueprintType")
     @Expose
@@ -95,7 +95,7 @@ public class Blueprint extends AbstractModel {
     private Long RequiredSystemDiskSize;
 
     /**
-    * 镜像状态。
+    * 镜像状态，镜镜像状态，NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
     */
     @SerializedName("BlueprintState")
     @Expose
@@ -291,16 +291,16 @@ public class Blueprint extends AbstractModel {
     }
 
     /**
-     * Get 镜像类型，如 APP_OS、PURE_OS、PRIVATE。 
-     * @return BlueprintType 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
+     * Get 镜像类型，如 APP_OS（应用镜像）, PURE_OS（系统镜像）, DOCKER（容器）, PRIVATE（私有镜像）, SHARED（共享镜像）, GAME_PORTAL（游戏专区镜像）。 
+     * @return BlueprintType 镜像类型，如 APP_OS（应用镜像）, PURE_OS（系统镜像）, DOCKER（容器）, PRIVATE（私有镜像）, SHARED（共享镜像）, GAME_PORTAL（游戏专区镜像）。
      */
     public String getBlueprintType() {
         return this.BlueprintType;
     }
 
     /**
-     * Set 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
-     * @param BlueprintType 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
+     * Set 镜像类型，如 APP_OS（应用镜像）, PURE_OS（系统镜像）, DOCKER（容器）, PRIVATE（私有镜像）, SHARED（共享镜像）, GAME_PORTAL（游戏专区镜像）。
+     * @param BlueprintType 镜像类型，如 APP_OS（应用镜像）, PURE_OS（系统镜像）, DOCKER（容器）, PRIVATE（私有镜像）, SHARED（共享镜像）, GAME_PORTAL（游戏专区镜像）。
      */
     public void setBlueprintType(String BlueprintType) {
         this.BlueprintType = BlueprintType;
@@ -339,16 +339,16 @@ public class Blueprint extends AbstractModel {
     }
 
     /**
-     * Get 镜像状态。 
-     * @return BlueprintState 镜像状态。
+     * Get 镜像状态，镜镜像状态，NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。 
+     * @return BlueprintState 镜像状态，镜镜像状态，NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
      */
     public String getBlueprintState() {
         return this.BlueprintState;
     }
 
     /**
-     * Set 镜像状态。
-     * @param BlueprintState 镜像状态。
+     * Set 镜像状态，镜镜像状态，NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
+     * @param BlueprintState 镜像状态，镜镜像状态，NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
      */
     public void setBlueprintState(String BlueprintState) {
         this.BlueprintState = BlueprintState;

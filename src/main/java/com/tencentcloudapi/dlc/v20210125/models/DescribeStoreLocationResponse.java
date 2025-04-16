@@ -25,7 +25,6 @@ public class DescribeStoreLocationResponse extends AbstractModel {
 
     /**
     * 返回用户设置的结果存储位置路径，如果未设置则返回空字符串：""
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StoreLocation")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeStoreLocationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回用户设置的结果存储位置路径，如果未设置则返回空字符串：""
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回用户设置的结果存储位置路径，如果未设置则返回空字符串："" 
      * @return StoreLocation 返回用户设置的结果存储位置路径，如果未设置则返回空字符串：""
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStoreLocation() {
         return this.StoreLocation;
@@ -50,9 +47,7 @@ public class DescribeStoreLocationResponse extends AbstractModel {
 
     /**
      * Set 返回用户设置的结果存储位置路径，如果未设置则返回空字符串：""
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StoreLocation 返回用户设置的结果存储位置路径，如果未设置则返回空字符串：""
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStoreLocation(String StoreLocation) {
         this.StoreLocation = StoreLocation;

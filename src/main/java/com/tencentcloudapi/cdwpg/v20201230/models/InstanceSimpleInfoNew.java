@@ -25,7 +25,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -33,7 +32,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 集群Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -41,7 +39,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 集群名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -49,7 +46,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 内核版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -57,7 +53,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -81,7 +76,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 地区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -105,7 +99,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 私有网络
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -113,7 +106,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 子网
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -121,7 +113,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -129,7 +120,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -145,7 +135,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 计费方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -153,17 +142,14 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 自动续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
     private Boolean RenewFlag;
 
     /**
-     * Get ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ID 
      * @return ID ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getID() {
         return this.ID;
@@ -171,19 +157,15 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 集群Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群Id 
      * @return InstanceId 集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -191,19 +173,15 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 集群Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 集群名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群名字 
      * @return InstanceName 集群名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -211,19 +189,15 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 集群名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 集群名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 内核版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内核版本 
      * @return Version 内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -231,19 +205,15 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -251,9 +221,7 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -300,10 +268,8 @@ public class InstanceSimpleInfoNew extends AbstractModel {
     }
 
     /**
-     * Get 地区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地区 
      * @return Zone 地区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -311,9 +277,7 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 地区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 地区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -360,10 +324,8 @@ public class InstanceSimpleInfoNew extends AbstractModel {
     }
 
     /**
-     * Get 私有网络
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络 
      * @return VpcId 私有网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -371,19 +333,15 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 私有网络
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网 
      * @return SubnetId 子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -391,19 +349,15 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 子网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return CreateTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -411,19 +365,15 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -431,9 +381,7 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -460,10 +408,8 @@ public class InstanceSimpleInfoNew extends AbstractModel {
     }
 
     /**
-     * Get 计费方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费方式 
      * @return PayMode 计费方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayMode() {
         return this.PayMode;
@@ -471,19 +417,15 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 计费方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 计费方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续费 
      * @return RenewFlag 自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRenewFlag() {
         return this.RenewFlag;
@@ -491,9 +433,7 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(Boolean RenewFlag) {
         this.RenewFlag = RenewFlag;

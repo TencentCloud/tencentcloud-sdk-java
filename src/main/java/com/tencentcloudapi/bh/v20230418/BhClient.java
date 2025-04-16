@@ -820,6 +820,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *查询运维子任务执行结果
+     * @param req SearchSubtaskResultByIdRequest
+     * @return SearchSubtaskResultByIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchSubtaskResultByIdResponse SearchSubtaskResultById(SearchSubtaskResultByIdRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchSubtaskResultById", SearchSubtaskResultByIdResponse.class);
+    }
+
+    /**
      *搜索运维任务执行结果
      * @param req SearchTaskResultRequest
      * @return SearchTaskResultResponse

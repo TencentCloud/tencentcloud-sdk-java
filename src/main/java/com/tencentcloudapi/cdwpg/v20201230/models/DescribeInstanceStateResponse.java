@@ -80,7 +80,6 @@ public class DescribeInstanceStateResponse extends AbstractModel {
 
     /**
     * 集群备份任务开启状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupStatus")
     @Expose
@@ -230,10 +229,8 @@ public class DescribeInstanceStateResponse extends AbstractModel {
     }
 
     /**
-     * Get 集群备份任务开启状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群备份任务开启状态 
      * @return BackupStatus 集群备份任务开启状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackupStatus() {
         return this.BackupStatus;
@@ -241,9 +238,7 @@ public class DescribeInstanceStateResponse extends AbstractModel {
 
     /**
      * Set 集群备份任务开启状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupStatus 集群备份任务开启状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupStatus(Long BackupStatus) {
         this.BackupStatus = BackupStatus;

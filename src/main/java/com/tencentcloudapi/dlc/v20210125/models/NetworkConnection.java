@@ -25,7 +25,6 @@ public class NetworkConnection extends AbstractModel {
 
     /**
     * 网络配置id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class NetworkConnection extends AbstractModel {
 
     /**
     * 网络配置唯一标志符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssociateId")
     @Expose
@@ -41,7 +39,6 @@ public class NetworkConnection extends AbstractModel {
 
     /**
     * 计算引擎id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HouseId")
     @Expose
@@ -49,7 +46,6 @@ public class NetworkConnection extends AbstractModel {
 
     /**
     * 数据源id(已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceConnectionId")
     @Expose
@@ -65,7 +61,6 @@ public class NetworkConnection extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -89,7 +84,6 @@ public class NetworkConnection extends AbstractModel {
 
     /**
     * 计算引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HouseName")
     @Expose
@@ -97,7 +91,6 @@ public class NetworkConnection extends AbstractModel {
 
     /**
     * 网络配置名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceConnectionName")
     @Expose
@@ -168,10 +161,8 @@ public class NetworkConnection extends AbstractModel {
     private String DatasourceConnectionSubnetCidrBlock;
 
     /**
-     * Get 网络配置id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络配置id 
      * @return Id 网络配置id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -179,19 +170,15 @@ public class NetworkConnection extends AbstractModel {
 
     /**
      * Set 网络配置id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 网络配置id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 网络配置唯一标志符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络配置唯一标志符 
      * @return AssociateId 网络配置唯一标志符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssociateId() {
         return this.AssociateId;
@@ -199,19 +186,15 @@ public class NetworkConnection extends AbstractModel {
 
     /**
      * Set 网络配置唯一标志符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssociateId 网络配置唯一标志符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssociateId(String AssociateId) {
         this.AssociateId = AssociateId;
     }
 
     /**
-     * Get 计算引擎id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计算引擎id 
      * @return HouseId 计算引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHouseId() {
         return this.HouseId;
@@ -219,19 +202,15 @@ public class NetworkConnection extends AbstractModel {
 
     /**
      * Set 计算引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HouseId 计算引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHouseId(String HouseId) {
         this.HouseId = HouseId;
     }
 
     /**
-     * Get 数据源id(已废弃)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源id(已废弃) 
      * @return DatasourceConnectionId 数据源id(已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceConnectionId() {
         return this.DatasourceConnectionId;
@@ -239,9 +218,7 @@ public class NetworkConnection extends AbstractModel {
 
     /**
      * Set 数据源id(已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatasourceConnectionId 数据源id(已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceConnectionId(String DatasourceConnectionId) {
         this.DatasourceConnectionId = DatasourceConnectionId;
@@ -268,10 +245,8 @@ public class NetworkConnection extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -279,9 +254,7 @@ public class NetworkConnection extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
@@ -328,10 +301,8 @@ public class NetworkConnection extends AbstractModel {
     }
 
     /**
-     * Get 计算引擎名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计算引擎名称 
      * @return HouseName 计算引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHouseName() {
         return this.HouseName;
@@ -339,19 +310,15 @@ public class NetworkConnection extends AbstractModel {
 
     /**
      * Set 计算引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HouseName 计算引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHouseName(String HouseName) {
         this.HouseName = HouseName;
     }
 
     /**
-     * Get 网络配置名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络配置名称 
      * @return DatasourceConnectionName 网络配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceConnectionName() {
         return this.DatasourceConnectionName;
@@ -359,9 +326,7 @@ public class NetworkConnection extends AbstractModel {
 
     /**
      * Set 网络配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatasourceConnectionName 网络配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceConnectionName(String DatasourceConnectionName) {
         this.DatasourceConnectionName = DatasourceConnectionName;

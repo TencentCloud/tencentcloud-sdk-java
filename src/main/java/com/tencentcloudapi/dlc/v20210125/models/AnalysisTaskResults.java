@@ -39,7 +39,6 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
     * 任务结束时间，毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceCompleteTime")
     @Expose
@@ -61,7 +60,6 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
     * 计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineName")
     @Expose
@@ -69,15 +67,13 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
     * 单位毫秒，引擎内执行耗时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobTimeSum")
     @Expose
     private Long JobTimeSum;
 
     /**
-    * 单位秒，CU资源消耗
-注意：此字段可能返回 null，表示取不到有效值。
+    * 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
     */
     @SerializedName("TaskTimeSum")
     @Expose
@@ -85,7 +81,6 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
     * 数据扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputRecordsSum")
     @Expose
@@ -93,7 +88,6 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
     * 数据扫描总 bytes
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputBytesSum")
     @Expose
@@ -101,7 +95,6 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
     * 输出总行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputRecordsSum")
     @Expose
@@ -109,7 +102,6 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
     * 输出总 bytes
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputBytesSum")
     @Expose
@@ -117,7 +109,6 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
     * shuffle read 总 bytes
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShuffleReadBytesSum")
     @Expose
@@ -125,7 +116,6 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
     * shuffle read 总行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShuffleReadRecordsSum")
     @Expose
@@ -133,11 +123,24 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
     * 洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalysisStatus")
     @Expose
     private String AnalysisStatus;
+
+    /**
+    * 任务输出文件总数
+    */
+    @SerializedName("OutputFilesNum")
+    @Expose
+    private Long OutputFilesNum;
+
+    /**
+    * 任务输出小文件总数
+    */
+    @SerializedName("OutputSmallFilesNum")
+    @Expose
+    private Long OutputSmallFilesNum;
 
     /**
      * Get 任务Id 
@@ -172,10 +175,8 @@ public class AnalysisTaskResults extends AbstractModel {
     }
 
     /**
-     * Get 任务结束时间，毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务结束时间，毫秒时间戳 
      * @return InstanceCompleteTime 任务结束时间，毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceCompleteTime() {
         return this.InstanceCompleteTime;
@@ -183,9 +184,7 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
      * Set 任务结束时间，毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceCompleteTime 任务结束时间，毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceCompleteTime(Long InstanceCompleteTime) {
         this.InstanceCompleteTime = InstanceCompleteTime;
@@ -224,10 +223,8 @@ public class AnalysisTaskResults extends AbstractModel {
     }
 
     /**
-     * Get 计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计算资源名字 
      * @return DataEngineName 计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineName() {
         return this.DataEngineName;
@@ -235,19 +232,15 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
      * Set 计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataEngineName 计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineName(String DataEngineName) {
         this.DataEngineName = DataEngineName;
     }
 
     /**
-     * Get 单位毫秒，引擎内执行耗时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单位毫秒，引擎内执行耗时 
      * @return JobTimeSum 单位毫秒，引擎内执行耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJobTimeSum() {
         return this.JobTimeSum;
@@ -255,39 +248,31 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
      * Set 单位毫秒，引擎内执行耗时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobTimeSum 单位毫秒，引擎内执行耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobTimeSum(Long JobTimeSum) {
         this.JobTimeSum = JobTimeSum;
     }
 
     /**
-     * Get 单位秒，CU资源消耗
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTimeSum 单位秒，CU资源消耗
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和 
+     * @return TaskTimeSum 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
      */
     public Long getTaskTimeSum() {
         return this.TaskTimeSum;
     }
 
     /**
-     * Set 单位秒，CU资源消耗
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTimeSum 单位秒，CU资源消耗
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
+     * @param TaskTimeSum 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
      */
     public void setTaskTimeSum(Long TaskTimeSum) {
         this.TaskTimeSum = TaskTimeSum;
     }
 
     /**
-     * Get 数据扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据扫描总行数 
      * @return InputRecordsSum 数据扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInputRecordsSum() {
         return this.InputRecordsSum;
@@ -295,19 +280,15 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
      * Set 数据扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputRecordsSum 数据扫描总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputRecordsSum(Long InputRecordsSum) {
         this.InputRecordsSum = InputRecordsSum;
     }
 
     /**
-     * Get 数据扫描总 bytes
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据扫描总 bytes 
      * @return InputBytesSum 数据扫描总 bytes
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInputBytesSum() {
         return this.InputBytesSum;
@@ -315,19 +296,15 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
      * Set 数据扫描总 bytes
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputBytesSum 数据扫描总 bytes
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputBytesSum(Long InputBytesSum) {
         this.InputBytesSum = InputBytesSum;
     }
 
     /**
-     * Get 输出总行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出总行数 
      * @return OutputRecordsSum 输出总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputRecordsSum() {
         return this.OutputRecordsSum;
@@ -335,19 +312,15 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
      * Set 输出总行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputRecordsSum 输出总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputRecordsSum(Long OutputRecordsSum) {
         this.OutputRecordsSum = OutputRecordsSum;
     }
 
     /**
-     * Get 输出总 bytes
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出总 bytes 
      * @return OutputBytesSum 输出总 bytes
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputBytesSum() {
         return this.OutputBytesSum;
@@ -355,19 +328,15 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
      * Set 输出总 bytes
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputBytesSum 输出总 bytes
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputBytesSum(Long OutputBytesSum) {
         this.OutputBytesSum = OutputBytesSum;
     }
 
     /**
-     * Get shuffle read 总 bytes
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get shuffle read 总 bytes 
      * @return ShuffleReadBytesSum shuffle read 总 bytes
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShuffleReadBytesSum() {
         return this.ShuffleReadBytesSum;
@@ -375,19 +344,15 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
      * Set shuffle read 总 bytes
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShuffleReadBytesSum shuffle read 总 bytes
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShuffleReadBytesSum(Long ShuffleReadBytesSum) {
         this.ShuffleReadBytesSum = ShuffleReadBytesSum;
     }
 
     /**
-     * Get shuffle read 总行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get shuffle read 总行数 
      * @return ShuffleReadRecordsSum shuffle read 总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getShuffleReadRecordsSum() {
         return this.ShuffleReadRecordsSum;
@@ -395,19 +360,15 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
      * Set shuffle read 总行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShuffleReadRecordsSum shuffle read 总行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShuffleReadRecordsSum(Long ShuffleReadRecordsSum) {
         this.ShuffleReadRecordsSum = ShuffleReadRecordsSum;
     }
 
     /**
-     * Get 洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足） 
      * @return AnalysisStatus 洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAnalysisStatus() {
         return this.AnalysisStatus;
@@ -415,12 +376,42 @@ public class AnalysisTaskResults extends AbstractModel {
 
     /**
      * Set 洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AnalysisStatus 洞察结果类型分类，一个 json 数组，有如下几种类型：SPARK-StageScheduleDelay（资源抢占）, SPARK-ShuffleFailure（Shuffle异常）, SPARK-SlowTask（慢task）, SPARK-DataSkew（数据倾斜）, SPARK-InsufficientResource（磁盘或内存不足）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalysisStatus(String AnalysisStatus) {
         this.AnalysisStatus = AnalysisStatus;
+    }
+
+    /**
+     * Get 任务输出文件总数 
+     * @return OutputFilesNum 任务输出文件总数
+     */
+    public Long getOutputFilesNum() {
+        return this.OutputFilesNum;
+    }
+
+    /**
+     * Set 任务输出文件总数
+     * @param OutputFilesNum 任务输出文件总数
+     */
+    public void setOutputFilesNum(Long OutputFilesNum) {
+        this.OutputFilesNum = OutputFilesNum;
+    }
+
+    /**
+     * Get 任务输出小文件总数 
+     * @return OutputSmallFilesNum 任务输出小文件总数
+     */
+    public Long getOutputSmallFilesNum() {
+        return this.OutputSmallFilesNum;
+    }
+
+    /**
+     * Set 任务输出小文件总数
+     * @param OutputSmallFilesNum 任务输出小文件总数
+     */
+    public void setOutputSmallFilesNum(Long OutputSmallFilesNum) {
+        this.OutputSmallFilesNum = OutputSmallFilesNum;
     }
 
     public AnalysisTaskResults() {
@@ -476,6 +467,12 @@ public class AnalysisTaskResults extends AbstractModel {
         if (source.AnalysisStatus != null) {
             this.AnalysisStatus = new String(source.AnalysisStatus);
         }
+        if (source.OutputFilesNum != null) {
+            this.OutputFilesNum = new Long(source.OutputFilesNum);
+        }
+        if (source.OutputSmallFilesNum != null) {
+            this.OutputSmallFilesNum = new Long(source.OutputSmallFilesNum);
+        }
     }
 
 
@@ -498,6 +495,8 @@ public class AnalysisTaskResults extends AbstractModel {
         this.setParamSimple(map, prefix + "ShuffleReadBytesSum", this.ShuffleReadBytesSum);
         this.setParamSimple(map, prefix + "ShuffleReadRecordsSum", this.ShuffleReadRecordsSum);
         this.setParamSimple(map, prefix + "AnalysisStatus", this.AnalysisStatus);
+        this.setParamSimple(map, prefix + "OutputFilesNum", this.OutputFilesNum);
+        this.setParamSimple(map, prefix + "OutputSmallFilesNum", this.OutputSmallFilesNum);
 
     }
 }

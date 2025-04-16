@@ -25,7 +25,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecName")
     @Expose
@@ -33,7 +32,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 资源数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -41,7 +39,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSpec")
     @Expose
@@ -49,17 +46,14 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 节点类型，cn 或dn
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 资源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源名称 
      * @return SpecName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecName() {
         return this.SpecName;
@@ -67,19 +61,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get 资源数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源数 
      * @return Count 资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -87,19 +77,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 资源数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘信息 
      * @return DiskSpec 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CBSSpecInfo getDiskSpec() {
         return this.DiskSpec;
@@ -107,19 +93,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSpec 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSpec(CBSSpecInfo DiskSpec) {
         this.DiskSpec = DiskSpec;
     }
 
     /**
-     * Get 节点类型，cn 或dn
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点类型，cn 或dn 
      * @return Type 节点类型，cn 或dn
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -127,9 +109,7 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 节点类型，cn 或dn
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 节点类型，cn 或dn
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

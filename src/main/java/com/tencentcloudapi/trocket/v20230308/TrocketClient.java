@@ -39,6 +39,17 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *修改迁移中的Topic状态进入下一步
+     * @param req ChangeMigratingTopicToNextStageRequest
+     * @return ChangeMigratingTopicToNextStageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeMigratingTopicToNextStageResponse ChangeMigratingTopicToNextStage(ChangeMigratingTopicToNextStageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChangeMigratingTopicToNextStage", ChangeMigratingTopicToNextStageResponse.class);
+    }
+
+    /**
      *创建消费组
      * @param req CreateConsumerGroupRequest
      * @return CreateConsumerGroupResponse
@@ -201,6 +212,17 @@ public class TrocketClient extends AbstractClient{
     public DeleteRoleResponse DeleteRole(DeleteRoleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRole", DeleteRoleResponse.class);
+    }
+
+    /**
+     *删除平滑迁移任务，只有被取消的任务才可删除
+     * @param req DeleteSmoothMigrationTaskRequest
+     * @return DeleteSmoothMigrationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSmoothMigrationTaskResponse DeleteSmoothMigrationTask(DeleteSmoothMigrationTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSmoothMigrationTask", DeleteSmoothMigrationTaskResponse.class);
     }
 
     /**
@@ -482,6 +504,41 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *查看迁移消费组的实时信息
+     * @param req DescribeMigratingGroupStatsRequest
+     * @return DescribeMigratingGroupStatsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMigratingGroupStatsResponse DescribeMigratingGroupStats(DescribeMigratingGroupStatsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMigratingGroupStats", DescribeMigratingGroupStatsResponse.class);
+    }
+
+    /**
+     *查询Topic迁移状态列表
+
+查询过滤器，支持TopicName、MigrationStatus查询
+     * @param req DescribeMigratingTopicListRequest
+     * @return DescribeMigratingTopicListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMigratingTopicListResponse DescribeMigratingTopicList(DescribeMigratingTopicListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMigratingTopicList", DescribeMigratingTopicListResponse.class);
+    }
+
+    /**
+     *用于查询迁移主题的实时数据
+     * @param req DescribeMigratingTopicStatsRequest
+     * @return DescribeMigratingTopicStatsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMigratingTopicStatsResponse DescribeMigratingTopicStats(DescribeMigratingTopicStatsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMigratingTopicStats", DescribeMigratingTopicStatsResponse.class);
+    }
+
+    /**
      *查询产品售卖规格，针对 RocketMQ 5.x 集群。
      * @param req DescribeProductSKUsRequest
      * @return DescribeProductSKUsResponse
@@ -504,6 +561,22 @@ public class TrocketClient extends AbstractClient{
     public DescribeRoleListResponse DescribeRoleList(DescribeRoleListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRoleList", DescribeRoleListResponse.class);
+    }
+
+    /**
+     *平滑迁移过程获取源集群group列表接口
+
+查询过滤器，支持字段
+GroupName，消费组名称模糊搜索
+Imported，是否已导入
+ImportStatus，导入状态
+     * @param req DescribeSourceClusterGroupListRequest
+     * @return DescribeSourceClusterGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSourceClusterGroupListResponse DescribeSourceClusterGroupList(DescribeSourceClusterGroupListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSourceClusterGroupList", DescribeSourceClusterGroupListResponse.class);
     }
 
     /**
@@ -544,6 +617,17 @@ TopicName，主题名称过滤
     public DescribeTopicListByGroupResponse DescribeTopicListByGroup(DescribeTopicListByGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTopicListByGroup", DescribeTopicListByGroupResponse.class);
+    }
+
+    /**
+     *检查迁移中的主题是否处于正常状态，只有处于正常状态的主题，才可以进入下一个迁移阶段
+     * @param req DoHealthCheckOnMigratingTopicRequest
+     * @return DoHealthCheckOnMigratingTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DoHealthCheckOnMigratingTopicResponse DoHealthCheckOnMigratingTopic(DoHealthCheckOnMigratingTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DoHealthCheckOnMigratingTopic", DoHealthCheckOnMigratingTopicResponse.class);
     }
 
     /**
@@ -680,6 +764,17 @@ TopicName，主题名称过滤
     }
 
     /**
+     *从迁移列表中移除主题，仅当主题处于初始状态时有效
+     * @param req RemoveMigratingTopicRequest
+     * @return RemoveMigratingTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveMigratingTopicResponse RemoveMigratingTopic(RemoveMigratingTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveMigratingTopic", RemoveMigratingTopicResponse.class);
+    }
+
+    /**
      *重新发送死信消息
      * @param req ResendDeadLetterMessageRequest
      * @return ResendDeadLetterMessageResponse
@@ -699,6 +794,17 @@ TopicName，主题名称过滤
     public ResetConsumerGroupOffsetResponse ResetConsumerGroupOffset(ResetConsumerGroupOffsetRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetConsumerGroupOffset", ResetConsumerGroupOffsetResponse.class);
+    }
+
+    /**
+     *回滚正在迁移的主题至前一个阶段
+     * @param req RollbackMigratingTopicStageRequest
+     * @return RollbackMigratingTopicStageResponse
+     * @throws TencentCloudSDKException
+     */
+    public RollbackMigratingTopicStageResponse RollbackMigratingTopicStage(RollbackMigratingTopicStageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RollbackMigratingTopicStage", RollbackMigratingTopicStageResponse.class);
     }
 
 }

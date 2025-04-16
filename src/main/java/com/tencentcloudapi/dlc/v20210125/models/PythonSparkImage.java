@@ -46,7 +46,6 @@ public class PythonSparkImage extends AbstractModel {
 
     /**
     * spark镜像描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -115,10 +114,8 @@ public class PythonSparkImage extends AbstractModel {
     }
 
     /**
-     * Get spark镜像描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get spark镜像描述信息 
      * @return Description spark镜像描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -126,9 +123,7 @@ public class PythonSparkImage extends AbstractModel {
 
     /**
      * Set spark镜像描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description spark镜像描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

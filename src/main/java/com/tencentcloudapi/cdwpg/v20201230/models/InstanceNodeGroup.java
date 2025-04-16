@@ -25,7 +25,6 @@ public class InstanceNodeGroup extends AbstractModel {
 
     /**
     * 机型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecName")
     @Expose
@@ -33,7 +32,6 @@ public class InstanceNodeGroup extends AbstractModel {
 
     /**
     * 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataDisk")
     @Expose
@@ -41,17 +39,14 @@ public class InstanceNodeGroup extends AbstractModel {
 
     /**
     * 机器个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CvmCount")
     @Expose
     private Long CvmCount;
 
     /**
-     * Get 机型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机型 
      * @return SpecName 机型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecName() {
         return this.SpecName;
@@ -59,19 +54,15 @@ public class InstanceNodeGroup extends AbstractModel {
 
     /**
      * Set 机型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecName 机型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘信息 
      * @return DataDisk 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiskSpecPlus getDataDisk() {
         return this.DataDisk;
@@ -79,19 +70,15 @@ public class InstanceNodeGroup extends AbstractModel {
 
     /**
      * Set 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataDisk 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataDisk(DiskSpecPlus DataDisk) {
         this.DataDisk = DataDisk;
     }
 
     /**
-     * Get 机器个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器个数 
      * @return CvmCount 机器个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCvmCount() {
         return this.CvmCount;
@@ -99,9 +86,7 @@ public class InstanceNodeGroup extends AbstractModel {
 
     /**
      * Set 机器个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CvmCount 机器个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvmCount(Long CvmCount) {
         this.CvmCount = CvmCount;

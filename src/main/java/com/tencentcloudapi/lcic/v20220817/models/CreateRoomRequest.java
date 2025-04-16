@@ -56,6 +56,7 @@ public class CreateRoomRequest extends AbstractModel {
 1 标清
 2 高清
 3 全高清
+注意：连麦人数（MaxMicNumber）>6时，仅可使用标清
     */
     @SerializedName("Resolution")
     @Expose
@@ -255,6 +256,13 @@ public class CreateRoomRequest extends AbstractModel {
     private Long WhiteBoardSnapshotMode;
 
     /**
+    * 字幕转写功能开关：0关闭，1开启，默认关闭
+    */
+    @SerializedName("SubtitlesTranscription")
+    @Expose
+    private Long SubtitlesTranscription;
+
+    /**
      * Get 课堂名称。 
      * @return Name 课堂名称。
      */
@@ -322,11 +330,13 @@ public class CreateRoomRequest extends AbstractModel {
      * Get 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
-3 全高清 
+3 全高清
+注意：连麦人数（MaxMicNumber）>6时，仅可使用标清 
      * @return Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
+注意：连麦人数（MaxMicNumber）>6时，仅可使用标清
      */
     public Long getResolution() {
         return this.Resolution;
@@ -337,10 +347,12 @@ public class CreateRoomRequest extends AbstractModel {
 1 标清
 2 高清
 3 全高清
+注意：连麦人数（MaxMicNumber）>6时，仅可使用标清
      * @param Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
+注意：连麦人数（MaxMicNumber）>6时，仅可使用标清
      */
     public void setResolution(Long Resolution) {
         this.Resolution = Resolution;
@@ -814,6 +826,22 @@ public class CreateRoomRequest extends AbstractModel {
         this.WhiteBoardSnapshotMode = WhiteBoardSnapshotMode;
     }
 
+    /**
+     * Get 字幕转写功能开关：0关闭，1开启，默认关闭 
+     * @return SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     */
+    public Long getSubtitlesTranscription() {
+        return this.SubtitlesTranscription;
+    }
+
+    /**
+     * Set 字幕转写功能开关：0关闭，1开启，默认关闭
+     * @param SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     */
+    public void setSubtitlesTranscription(Long SubtitlesTranscription) {
+        this.SubtitlesTranscription = SubtitlesTranscription;
+    }
+
     public CreateRoomRequest() {
     }
 
@@ -918,6 +946,9 @@ public class CreateRoomRequest extends AbstractModel {
         if (source.WhiteBoardSnapshotMode != null) {
             this.WhiteBoardSnapshotMode = new Long(source.WhiteBoardSnapshotMode);
         }
+        if (source.SubtitlesTranscription != null) {
+            this.SubtitlesTranscription = new Long(source.SubtitlesTranscription);
+        }
     }
 
 
@@ -956,6 +987,7 @@ public class CreateRoomRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
         this.setParamSimple(map, prefix + "RecordStream", this.RecordStream);
         this.setParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
+        this.setParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
 
     }
 }

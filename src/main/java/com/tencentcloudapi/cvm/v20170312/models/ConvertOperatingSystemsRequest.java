@@ -24,21 +24,25 @@ import java.util.HashMap;
 public class ConvertOperatingSystemsRequest extends AbstractModel {
 
     /**
-    * 执行操作系统转换的实例 ID
+    * 执行操作系统转换的实例 ID。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+仅支持操作系统为 CentOS 7、CentOS 8 的实例执行转换。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 是否最小规模转换
+    * 是否最小规模转换。
+默认值：false
     */
     @SerializedName("MinimalConversion")
     @Expose
     private Boolean MinimalConversion;
 
     /**
-    * 是否只预检
+    * 是否只预检。
+默认值：false
     */
     @SerializedName("DryRun")
     @Expose
@@ -46,62 +50,81 @@ public class ConvertOperatingSystemsRequest extends AbstractModel {
 
     /**
     * 转换的目标操作系统类型。仅支持 TencentOS。
+默认值：TencentOS
     */
     @SerializedName("TargetOSType")
     @Expose
     private String TargetOSType;
 
     /**
-     * Get 执行操作系统转换的实例 ID 
-     * @return InstanceIds 执行操作系统转换的实例 ID
+     * Get 执行操作系统转换的实例 ID。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+仅支持操作系统为 CentOS 7、CentOS 8 的实例执行转换。 
+     * @return InstanceIds 执行操作系统转换的实例 ID。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+仅支持操作系统为 CentOS 7、CentOS 8 的实例执行转换。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 执行操作系统转换的实例 ID
-     * @param InstanceIds 执行操作系统转换的实例 ID
+     * Set 执行操作系统转换的实例 ID。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+仅支持操作系统为 CentOS 7、CentOS 8 的实例执行转换。
+     * @param InstanceIds 执行操作系统转换的实例 ID。
+可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+仅支持操作系统为 CentOS 7、CentOS 8 的实例执行转换。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 是否最小规模转换 
-     * @return MinimalConversion 是否最小规模转换
+     * Get 是否最小规模转换。
+默认值：false 
+     * @return MinimalConversion 是否最小规模转换。
+默认值：false
      */
     public Boolean getMinimalConversion() {
         return this.MinimalConversion;
     }
 
     /**
-     * Set 是否最小规模转换
-     * @param MinimalConversion 是否最小规模转换
+     * Set 是否最小规模转换。
+默认值：false
+     * @param MinimalConversion 是否最小规模转换。
+默认值：false
      */
     public void setMinimalConversion(Boolean MinimalConversion) {
         this.MinimalConversion = MinimalConversion;
     }
 
     /**
-     * Get 是否只预检 
-     * @return DryRun 是否只预检
+     * Get 是否只预检。
+默认值：false 
+     * @return DryRun 是否只预检。
+默认值：false
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 是否只预检
-     * @param DryRun 是否只预检
+     * Set 是否只预检。
+默认值：false
+     * @param DryRun 是否只预检。
+默认值：false
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;
     }
 
     /**
-     * Get 转换的目标操作系统类型。仅支持 TencentOS。 
+     * Get 转换的目标操作系统类型。仅支持 TencentOS。
+默认值：TencentOS 
      * @return TargetOSType 转换的目标操作系统类型。仅支持 TencentOS。
+默认值：TencentOS
      */
     public String getTargetOSType() {
         return this.TargetOSType;
@@ -109,7 +132,9 @@ public class ConvertOperatingSystemsRequest extends AbstractModel {
 
     /**
      * Set 转换的目标操作系统类型。仅支持 TencentOS。
+默认值：TencentOS
      * @param TargetOSType 转换的目标操作系统类型。仅支持 TencentOS。
+默认值：TencentOS
      */
     public void setTargetOSType(String TargetOSType) {
         this.TargetOSType = TargetOSType;

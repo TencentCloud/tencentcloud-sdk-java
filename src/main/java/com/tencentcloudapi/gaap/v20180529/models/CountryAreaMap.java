@@ -67,7 +67,6 @@ public class CountryAreaMap extends AbstractModel {
 
     /**
     * 标注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -170,10 +169,8 @@ public class CountryAreaMap extends AbstractModel {
     }
 
     /**
-     * Get 标注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标注信息 
      * @return Remark 标注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -181,9 +178,7 @@ public class CountryAreaMap extends AbstractModel {
 
     /**
      * Set 标注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 标注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

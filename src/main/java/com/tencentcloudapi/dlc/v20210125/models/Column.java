@@ -47,7 +47,6 @@ public class Column extends AbstractModel {
 
     /**
     * 表示整个 numeric 的长度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Precision")
     @Expose
@@ -55,7 +54,6 @@ public class Column extends AbstractModel {
 
     /**
     * 表示小数部分的长度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scale")
     @Expose
@@ -63,7 +61,6 @@ public class Column extends AbstractModel {
 
     /**
     * 是否为null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nullable")
     @Expose
@@ -71,7 +68,6 @@ public class Column extends AbstractModel {
 
     /**
     * 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Position")
     @Expose
@@ -79,7 +75,6 @@ public class Column extends AbstractModel {
 
     /**
     * 字段创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -87,7 +82,6 @@ public class Column extends AbstractModel {
 
     /**
     * 字段修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifiedTime")
     @Expose
@@ -95,7 +89,6 @@ public class Column extends AbstractModel {
 
     /**
     * 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPartition")
     @Expose
@@ -162,10 +155,8 @@ public class Column extends AbstractModel {
     }
 
     /**
-     * Get 表示整个 numeric 的长度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表示整个 numeric 的长度 
      * @return Precision 表示整个 numeric 的长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPrecision() {
         return this.Precision;
@@ -173,19 +164,15 @@ public class Column extends AbstractModel {
 
     /**
      * Set 表示整个 numeric 的长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Precision 表示整个 numeric 的长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrecision(Long Precision) {
         this.Precision = Precision;
     }
 
     /**
-     * Get 表示小数部分的长度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表示小数部分的长度 
      * @return Scale 表示小数部分的长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScale() {
         return this.Scale;
@@ -193,19 +180,15 @@ public class Column extends AbstractModel {
 
     /**
      * Set 表示小数部分的长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scale 表示小数部分的长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScale(Long Scale) {
         this.Scale = Scale;
     }
 
     /**
-     * Get 是否为null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为null 
      * @return Nullable 是否为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNullable() {
         return this.Nullable;
@@ -213,19 +196,15 @@ public class Column extends AbstractModel {
 
     /**
      * Set 是否为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nullable 是否为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNullable(String Nullable) {
         this.Nullable = Nullable;
     }
 
     /**
-     * Get 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段位置，小的在前 
      * @return Position 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPosition() {
         return this.Position;
@@ -233,19 +212,15 @@ public class Column extends AbstractModel {
 
     /**
      * Set 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Position 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPosition(Long Position) {
         this.Position = Position;
     }
 
     /**
-     * Get 字段创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段创建时间 
      * @return CreateTime 字段创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -253,19 +228,15 @@ public class Column extends AbstractModel {
 
     /**
      * Set 字段创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 字段创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 字段修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段修改时间 
      * @return ModifiedTime 字段修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifiedTime() {
         return this.ModifiedTime;
@@ -273,19 +244,15 @@ public class Column extends AbstractModel {
 
     /**
      * Set 字段修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifiedTime 字段修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifiedTime(String ModifiedTime) {
         this.ModifiedTime = ModifiedTime;
     }
 
     /**
-     * Get 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为分区字段 
      * @return IsPartition 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsPartition() {
         return this.IsPartition;
@@ -293,9 +260,7 @@ public class Column extends AbstractModel {
 
     /**
      * Set 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsPartition 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPartition(Boolean IsPartition) {
         this.IsPartition = IsPartition;

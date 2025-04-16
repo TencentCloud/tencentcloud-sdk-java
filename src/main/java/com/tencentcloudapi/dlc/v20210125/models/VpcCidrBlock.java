@@ -25,7 +25,6 @@ public class VpcCidrBlock extends AbstractModel {
 
     /**
     * 子网Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CidrId")
     @Expose
@@ -33,17 +32,14 @@ public class VpcCidrBlock extends AbstractModel {
 
     /**
     * 子网网段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CidrAddr")
     @Expose
     private String CidrAddr;
 
     /**
-     * Get 子网Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网Id 
      * @return CidrId 子网Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCidrId() {
         return this.CidrId;
@@ -51,19 +47,15 @@ public class VpcCidrBlock extends AbstractModel {
 
     /**
      * Set 子网Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CidrId 子网Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCidrId(String CidrId) {
         this.CidrId = CidrId;
     }
 
     /**
-     * Get 子网网段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网网段 
      * @return CidrAddr 子网网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCidrAddr() {
         return this.CidrAddr;
@@ -71,9 +63,7 @@ public class VpcCidrBlock extends AbstractModel {
 
     /**
      * Set 子网网段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CidrAddr 子网网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCidrAddr(String CidrAddr) {
         this.CidrAddr = CidrAddr;

@@ -25,7 +25,6 @@ public class OptimizerEngineInfo extends AbstractModel {
 
     /**
     * 引擎资源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HouseName")
     @Expose
@@ -33,7 +32,6 @@ public class OptimizerEngineInfo extends AbstractModel {
 
     /**
     * 引擎资源ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HouseId")
     @Expose
@@ -48,10 +46,8 @@ public class OptimizerEngineInfo extends AbstractModel {
     private Long HouseSize;
 
     /**
-     * Get 引擎资源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎资源名称 
      * @return HouseName 引擎资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHouseName() {
         return this.HouseName;
@@ -59,19 +55,15 @@ public class OptimizerEngineInfo extends AbstractModel {
 
     /**
      * Set 引擎资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HouseName 引擎资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHouseName(String HouseName) {
         this.HouseName = HouseName;
     }
 
     /**
-     * Get 引擎资源ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎资源ID 
      * @return HouseId 引擎资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHouseId() {
         return this.HouseId;
@@ -79,9 +71,7 @@ public class OptimizerEngineInfo extends AbstractModel {
 
     /**
      * Set 引擎资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HouseId 引擎资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHouseId(String HouseId) {
         this.HouseId = HouseId;

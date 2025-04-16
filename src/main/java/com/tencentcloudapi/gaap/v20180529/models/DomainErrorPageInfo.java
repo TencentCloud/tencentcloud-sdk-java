@@ -53,7 +53,6 @@ public class DomainErrorPageInfo extends AbstractModel {
 
     /**
     * 新的错误码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewErrorNo")
     @Expose
@@ -61,7 +60,6 @@ public class DomainErrorPageInfo extends AbstractModel {
 
     /**
     * 需要清理的响应头
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClearHeaders")
     @Expose
@@ -69,7 +67,6 @@ public class DomainErrorPageInfo extends AbstractModel {
 
     /**
     * 需要设置的响应头
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetHeaders")
     @Expose
@@ -77,7 +74,6 @@ public class DomainErrorPageInfo extends AbstractModel {
 
     /**
     * 设置的响应体(不包括 HTTP头)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Body")
     @Expose
@@ -85,7 +81,6 @@ public class DomainErrorPageInfo extends AbstractModel {
 
     /**
     * 规则状态,0为成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -156,10 +151,8 @@ public class DomainErrorPageInfo extends AbstractModel {
     }
 
     /**
-     * Get 新的错误码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新的错误码 
      * @return NewErrorNo 新的错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNewErrorNo() {
         return this.NewErrorNo;
@@ -167,19 +160,15 @@ public class DomainErrorPageInfo extends AbstractModel {
 
     /**
      * Set 新的错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewErrorNo 新的错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewErrorNo(Long NewErrorNo) {
         this.NewErrorNo = NewErrorNo;
     }
 
     /**
-     * Get 需要清理的响应头
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要清理的响应头 
      * @return ClearHeaders 需要清理的响应头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getClearHeaders() {
         return this.ClearHeaders;
@@ -187,19 +176,15 @@ public class DomainErrorPageInfo extends AbstractModel {
 
     /**
      * Set 需要清理的响应头
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClearHeaders 需要清理的响应头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClearHeaders(String [] ClearHeaders) {
         this.ClearHeaders = ClearHeaders;
     }
 
     /**
-     * Get 需要设置的响应头
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要设置的响应头 
      * @return SetHeaders 需要设置的响应头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HttpHeaderParam [] getSetHeaders() {
         return this.SetHeaders;
@@ -207,19 +192,15 @@ public class DomainErrorPageInfo extends AbstractModel {
 
     /**
      * Set 需要设置的响应头
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SetHeaders 需要设置的响应头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetHeaders(HttpHeaderParam [] SetHeaders) {
         this.SetHeaders = SetHeaders;
     }
 
     /**
-     * Get 设置的响应体(不包括 HTTP头)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设置的响应体(不包括 HTTP头) 
      * @return Body 设置的响应体(不包括 HTTP头)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBody() {
         return this.Body;
@@ -227,19 +208,15 @@ public class DomainErrorPageInfo extends AbstractModel {
 
     /**
      * Set 设置的响应体(不包括 HTTP头)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Body 设置的响应体(不包括 HTTP头)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBody(String Body) {
         this.Body = Body;
     }
 
     /**
-     * Get 规则状态,0为成功
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则状态,0为成功 
      * @return Status 规则状态,0为成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -247,9 +224,7 @@ public class DomainErrorPageInfo extends AbstractModel {
 
     /**
      * Set 规则状态,0为成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 规则状态,0为成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

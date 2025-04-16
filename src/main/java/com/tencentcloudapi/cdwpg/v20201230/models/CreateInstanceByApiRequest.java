@@ -73,7 +73,7 @@ public class CreateInstanceByApiRequest extends AbstractModel {
     private ResourceSpecNew [] Resources;
 
     /**
-    * 标签列表
+    * 废弃，用TagItems
     */
     @SerializedName("Tags")
     @Expose
@@ -85,6 +85,13 @@ public class CreateInstanceByApiRequest extends AbstractModel {
     @SerializedName("ProductVersion")
     @Expose
     private String ProductVersion;
+
+    /**
+    * 标签列表
+    */
+    @SerializedName("TagItems")
+    @Expose
+    private Tag [] TagItems;
 
     /**
      * Get 实例名称 
@@ -199,16 +206,16 @@ public class CreateInstanceByApiRequest extends AbstractModel {
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get 废弃，用TagItems 
+     * @return Tags 废弃，用TagItems
      */
     public Tag getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set 废弃，用TagItems
+     * @param Tags 废弃，用TagItems
      */
     public void setTags(Tag Tags) {
         this.Tags = Tags;
@@ -228,6 +235,22 @@ public class CreateInstanceByApiRequest extends AbstractModel {
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;
+    }
+
+    /**
+     * Get 标签列表 
+     * @return TagItems 标签列表
+     */
+    public Tag [] getTagItems() {
+        return this.TagItems;
+    }
+
+    /**
+     * Set 标签列表
+     * @param TagItems 标签列表
+     */
+    public void setTagItems(Tag [] TagItems) {
+        this.TagItems = TagItems;
     }
 
     public CreateInstanceByApiRequest() {
@@ -268,6 +291,12 @@ public class CreateInstanceByApiRequest extends AbstractModel {
         if (source.ProductVersion != null) {
             this.ProductVersion = new String(source.ProductVersion);
         }
+        if (source.TagItems != null) {
+            this.TagItems = new Tag[source.TagItems.length];
+            for (int i = 0; i < source.TagItems.length; i++) {
+                this.TagItems[i] = new Tag(source.TagItems[i]);
+            }
+        }
     }
 
 
@@ -284,6 +313,7 @@ public class CreateInstanceByApiRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Resources.", this.Resources);
         this.setParamObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
+        this.setParamArrayObj(map, prefix + "TagItems.", this.TagItems);
 
     }
 }

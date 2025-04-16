@@ -32,7 +32,6 @@ public class InstanceOperation extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -40,7 +39,6 @@ public class InstanceOperation extends AbstractModel {
 
     /**
     * 操作名称描述，例如“创建”，“修改集群名称”等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
     @Expose
@@ -48,7 +46,6 @@ public class InstanceOperation extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -56,7 +53,6 @@ public class InstanceOperation extends AbstractModel {
 
     /**
     * 操作开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -111,10 +107,8 @@ public class InstanceOperation extends AbstractModel {
     }
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return InstanceId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -122,19 +116,15 @@ public class InstanceOperation extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 操作名称描述，例如“创建”，“修改集群名称”等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作名称描述，例如“创建”，“修改集群名称”等 
      * @return Action 操作名称描述，例如“创建”，“修改集群名称”等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
         return this.Action;
@@ -142,19 +132,15 @@ public class InstanceOperation extends AbstractModel {
 
     /**
      * Set 操作名称描述，例如“创建”，“修改集群名称”等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Action 操作名称描述，例如“创建”，“修改集群名称”等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -162,19 +148,15 @@ public class InstanceOperation extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 操作开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作开始时间 
      * @return StartTime 操作开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -182,9 +164,7 @@ public class InstanceOperation extends AbstractModel {
 
     /**
      * Set 操作开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 操作开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;

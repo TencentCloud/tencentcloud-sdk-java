@@ -33,7 +33,6 @@ public class DescribeDMSTablesResponse extends AbstractModel {
 
     /**
     * 统计值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -67,10 +66,8 @@ public class DescribeDMSTablesResponse extends AbstractModel {
     }
 
     /**
-     * Get 统计值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计值 
      * @return TotalCount 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +75,7 @@ public class DescribeDMSTablesResponse extends AbstractModel {
 
     /**
      * Set 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

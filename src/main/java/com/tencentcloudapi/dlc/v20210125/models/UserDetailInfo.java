@@ -25,7 +25,6 @@ public class UserDetailInfo extends AbstractModel {
 
     /**
     * 用户Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -33,7 +32,6 @@ public class UserDetailInfo extends AbstractModel {
 
     /**
     * 返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -41,7 +39,6 @@ public class UserDetailInfo extends AbstractModel {
 
     /**
     * 用户类型：ADMIN：管理员 COMMON：一般用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserType")
     @Expose
@@ -49,7 +46,6 @@ public class UserDetailInfo extends AbstractModel {
 
     /**
     * 用户描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDescription")
     @Expose
@@ -81,7 +77,6 @@ public class UserDetailInfo extends AbstractModel {
 
     /**
     * 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserAlias")
     @Expose
@@ -97,17 +92,22 @@ public class UserDetailInfo extends AbstractModel {
 
     /**
     * 账号类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountType")
     @Expose
     private String AccountType;
 
     /**
-     * Get 用户Id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserId 用户Id
+    * 数据源权限集合
 注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogPolicyInfo")
+    @Expose
+    private Policys CatalogPolicyInfo;
+
+    /**
+     * Get 用户Id 
+     * @return UserId 用户Id
      */
     public String getUserId() {
         return this.UserId;
@@ -115,19 +115,15 @@ public class UserDetailInfo extends AbstractModel {
 
     /**
      * Set 用户Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 用户Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息 
      * @return Type 返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -135,19 +131,15 @@ public class UserDetailInfo extends AbstractModel {
 
     /**
      * Set 返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 用户类型：ADMIN：管理员 COMMON：一般用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户类型：ADMIN：管理员 COMMON：一般用户 
      * @return UserType 用户类型：ADMIN：管理员 COMMON：一般用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserType() {
         return this.UserType;
@@ -155,19 +147,15 @@ public class UserDetailInfo extends AbstractModel {
 
     /**
      * Set 用户类型：ADMIN：管理员 COMMON：一般用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserType 用户类型：ADMIN：管理员 COMMON：一般用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserType(String UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get 用户描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户描述信息 
      * @return UserDescription 用户描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserDescription() {
         return this.UserDescription;
@@ -175,9 +163,7 @@ public class UserDetailInfo extends AbstractModel {
 
     /**
      * Set 用户描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDescription 用户描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDescription(String UserDescription) {
         this.UserDescription = UserDescription;
@@ -244,10 +230,8 @@ public class UserDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户别名 
      * @return UserAlias 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserAlias() {
         return this.UserAlias;
@@ -255,9 +239,7 @@ public class UserDetailInfo extends AbstractModel {
 
     /**
      * Set 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserAlias 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserAlias(String UserAlias) {
         this.UserAlias = UserAlias;
@@ -284,10 +266,8 @@ public class UserDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 账号类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号类型 
      * @return AccountType 账号类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountType() {
         return this.AccountType;
@@ -295,12 +275,30 @@ public class UserDetailInfo extends AbstractModel {
 
     /**
      * Set 账号类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountType 账号类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountType(String AccountType) {
         this.AccountType = AccountType;
+    }
+
+    /**
+     * Get 数据源权限集合
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogPolicyInfo 数据源权限集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Policys getCatalogPolicyInfo() {
+        return this.CatalogPolicyInfo;
+    }
+
+    /**
+     * Set 数据源权限集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogPolicyInfo 数据源权限集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogPolicyInfo(Policys CatalogPolicyInfo) {
+        this.CatalogPolicyInfo = CatalogPolicyInfo;
     }
 
     public UserDetailInfo() {
@@ -341,6 +339,9 @@ public class UserDetailInfo extends AbstractModel {
         if (source.AccountType != null) {
             this.AccountType = new String(source.AccountType);
         }
+        if (source.CatalogPolicyInfo != null) {
+            this.CatalogPolicyInfo = new Policys(source.CatalogPolicyInfo);
+        }
     }
 
 
@@ -358,6 +359,7 @@ public class UserDetailInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
         this.setParamObj(map, prefix + "RowFilterInfo.", this.RowFilterInfo);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
+        this.setParamObj(map, prefix + "CatalogPolicyInfo.", this.CatalogPolicyInfo);
 
     }
 }

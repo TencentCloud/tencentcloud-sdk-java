@@ -31,7 +31,7 @@ public class QueryResultRequest extends AbstractModel {
     private String TaskId;
 
     /**
-    * lastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
+    * objectListMarker={marker}&lastReadFile={filename}&lastReadOffsetlastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
     */
     @SerializedName("NextToken")
     @Expose
@@ -54,16 +54,16 @@ public class QueryResultRequest extends AbstractModel {
     }
 
     /**
-     * Get lastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置 
-     * @return NextToken lastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
+     * Get objectListMarker={marker}&lastReadFile={filename}&lastReadOffsetlastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置 
+     * @return NextToken objectListMarker={marker}&lastReadFile={filename}&lastReadOffsetlastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set lastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
-     * @param NextToken lastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
+     * Set objectListMarker={marker}&lastReadFile={filename}&lastReadOffsetlastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
+     * @param NextToken objectListMarker={marker}&lastReadFile={filename}&lastReadOffsetlastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;

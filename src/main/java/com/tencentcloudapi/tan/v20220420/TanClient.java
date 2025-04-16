@@ -39,7 +39,9 @@ public class TanClient extends AbstractClient{
     }
 
     /**
-     *推送节点数据
+     *产品下线
+
+推送节点数据
      * @param req CreateBlockNodeRecordsRequest
      * @return CreateBlockNodeRecordsResponse
      * @throws TencentCloudSDKException

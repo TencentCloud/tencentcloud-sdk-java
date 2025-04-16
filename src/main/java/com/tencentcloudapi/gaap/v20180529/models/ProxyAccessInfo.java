@@ -25,7 +25,6 @@ public class ProxyAccessInfo extends AbstractModel {
 
     /**
     * 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -33,7 +32,6 @@ public class ProxyAccessInfo extends AbstractModel {
 
     /**
     * 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionName")
     @Expose
@@ -41,7 +39,6 @@ public class ProxyAccessInfo extends AbstractModel {
 
     /**
     * 通道ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyId")
     @Expose
@@ -49,7 +46,6 @@ public class ProxyAccessInfo extends AbstractModel {
 
     /**
     * 通道接入ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -57,7 +53,6 @@ public class ProxyAccessInfo extends AbstractModel {
 
     /**
     * 三网通道VIP列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VipList")
     @Expose
@@ -65,17 +60,14 @@ public class ProxyAccessInfo extends AbstractModel {
 
     /**
     * 接入点IDC类型。ec或dc
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceRegionIdcType")
     @Expose
     private String SourceRegionIdcType;
 
     /**
-     * Get 地域ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域ID 
      * @return RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionId() {
         return this.RegionId;
@@ -83,19 +75,15 @@ public class ProxyAccessInfo extends AbstractModel {
 
     /**
      * Set 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 地域名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域名称 
      * @return RegionName 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionName() {
         return this.RegionName;
@@ -103,19 +91,15 @@ public class ProxyAccessInfo extends AbstractModel {
 
     /**
      * Set 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionName 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 通道ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道ID 
      * @return ProxyId 通道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyId() {
         return this.ProxyId;
@@ -123,19 +107,15 @@ public class ProxyAccessInfo extends AbstractModel {
 
     /**
      * Set 通道ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyId 通道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get 通道接入ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道接入ip 
      * @return Vip 通道接入ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -143,19 +123,15 @@ public class ProxyAccessInfo extends AbstractModel {
 
     /**
      * Set 通道接入ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip 通道接入ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 三网通道VIP列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 三网通道VIP列表 
      * @return VipList 三网通道VIP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IPDetail [] getVipList() {
         return this.VipList;
@@ -163,19 +139,15 @@ public class ProxyAccessInfo extends AbstractModel {
 
     /**
      * Set 三网通道VIP列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VipList 三网通道VIP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVipList(IPDetail [] VipList) {
         this.VipList = VipList;
     }
 
     /**
-     * Get 接入点IDC类型。ec或dc
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入点IDC类型。ec或dc 
      * @return SourceRegionIdcType 接入点IDC类型。ec或dc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceRegionIdcType() {
         return this.SourceRegionIdcType;
@@ -183,9 +155,7 @@ public class ProxyAccessInfo extends AbstractModel {
 
     /**
      * Set 接入点IDC类型。ec或dc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceRegionIdcType 接入点IDC类型。ec或dc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceRegionIdcType(String SourceRegionIdcType) {
         this.SourceRegionIdcType = SourceRegionIdcType;

@@ -25,7 +25,6 @@ public class CreateSparkAppResponse extends AbstractModel {
 
     /**
     * App唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SparkAppId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateSparkAppResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get App唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get App唯一标识 
      * @return SparkAppId App唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSparkAppId() {
         return this.SparkAppId;
@@ -50,9 +47,7 @@ public class CreateSparkAppResponse extends AbstractModel {
 
     /**
      * Set App唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SparkAppId App唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSparkAppId(String SparkAppId) {
         this.SparkAppId = SparkAppId;

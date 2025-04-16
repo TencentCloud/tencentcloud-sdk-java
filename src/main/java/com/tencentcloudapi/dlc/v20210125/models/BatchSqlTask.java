@@ -25,7 +25,6 @@ public class BatchSqlTask extends AbstractModel {
 
     /**
     * SQL子任务唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class BatchSqlTask extends AbstractModel {
 
     /**
     * 运行SQL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecuteSQL")
     @Expose
@@ -41,17 +39,14 @@ public class BatchSqlTask extends AbstractModel {
 
     /**
     * 任务信息，成功则返回：Task Success!，失败则返回异常信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get SQL子任务唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SQL子任务唯一标识 
      * @return TaskId SQL子任务唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -59,19 +54,15 @@ public class BatchSqlTask extends AbstractModel {
 
     /**
      * Set SQL子任务唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId SQL子任务唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 运行SQL
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行SQL 
      * @return ExecuteSQL 运行SQL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecuteSQL() {
         return this.ExecuteSQL;
@@ -79,19 +70,15 @@ public class BatchSqlTask extends AbstractModel {
 
     /**
      * Set 运行SQL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecuteSQL 运行SQL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecuteSQL(String ExecuteSQL) {
         this.ExecuteSQL = ExecuteSQL;
     }
 
     /**
-     * Get 任务信息，成功则返回：Task Success!，失败则返回异常信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务信息，成功则返回：Task Success!，失败则返回异常信息 
      * @return Message 任务信息，成功则返回：Task Success!，失败则返回异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -99,9 +86,7 @@ public class BatchSqlTask extends AbstractModel {
 
     /**
      * Set 任务信息，成功则返回：Task Success!，失败则返回异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 任务信息，成功则返回：Task Success!，失败则返回异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

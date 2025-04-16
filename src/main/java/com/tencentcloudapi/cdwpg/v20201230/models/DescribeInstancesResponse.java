@@ -25,7 +25,6 @@ public class DescribeInstancesResponse extends AbstractModel {
 
     /**
     * 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -55,10 +54,8 @@ public class DescribeInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例总数 
      * @return TotalCount 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -66,9 +63,7 @@ public class DescribeInstancesResponse extends AbstractModel {
 
     /**
      * Set 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -25,7 +25,6 @@ public class QueryTaskCostDetailResponse extends AbstractModel {
 
     /**
     * 下一页的标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SearchAfter")
     @Expose
@@ -33,7 +32,6 @@ public class QueryTaskCostDetailResponse extends AbstractModel {
 
     /**
     * 返回的数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -47,10 +45,8 @@ public class QueryTaskCostDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 下一页的标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下一页的标识 
      * @return SearchAfter 下一页的标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSearchAfter() {
         return this.SearchAfter;
@@ -58,19 +54,15 @@ public class QueryTaskCostDetailResponse extends AbstractModel {
 
     /**
      * Set 下一页的标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SearchAfter 下一页的标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSearchAfter(String SearchAfter) {
         this.SearchAfter = SearchAfter;
     }
 
     /**
-     * Get 返回的数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的数据 
      * @return Data 返回的数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -78,9 +70,7 @@ public class QueryTaskCostDetailResponse extends AbstractModel {
 
     /**
      * Set 返回的数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 返回的数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;

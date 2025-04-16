@@ -25,7 +25,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 归属类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttributionType")
     @Expose
@@ -33,7 +32,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -41,7 +39,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -49,7 +46,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 如资源类型为spark-sql 取值为Name, 如为spark-batch 取值为session app_name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Instance")
     @Expose
@@ -65,7 +61,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -73,17 +68,14 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 标准引擎资源组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
     @Expose
     private String ResourceGroupName;
 
     /**
-     * Get 归属类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 归属类型 
      * @return AttributionType 归属类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttributionType() {
         return this.AttributionType;
@@ -91,19 +83,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 归属类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttributionType 归属类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttributionType(String AttributionType) {
         this.AttributionType = AttributionType;
     }
 
     /**
-     * Get 资源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源类型 
      * @return ResourceType 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -111,19 +99,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎名称 
      * @return Name 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -131,19 +115,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 如资源类型为spark-sql 取值为Name, 如为spark-batch 取值为session app_name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如资源类型为spark-sql 取值为Name, 如为spark-batch 取值为session app_name 
      * @return Instance 如资源类型为spark-sql 取值为Name, 如为spark-batch 取值为session app_name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstance() {
         return this.Instance;
@@ -151,9 +131,7 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 如资源类型为spark-sql 取值为Name, 如为spark-batch 取值为session app_name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Instance 如资源类型为spark-sql 取值为Name, 如为spark-batch 取值为session app_name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstance(String Instance) {
         this.Instance = Instance;
@@ -180,10 +158,8 @@ public class ResourceInfo extends AbstractModel {
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -191,19 +167,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 标准引擎资源组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准引擎资源组信息 
      * @return ResourceGroupName 标准引擎资源组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
         return this.ResourceGroupName;
@@ -211,9 +183,7 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 标准引擎资源组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceGroupName 标准引擎资源组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
         this.ResourceGroupName = ResourceGroupName;

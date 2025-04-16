@@ -25,17 +25,14 @@ public class SmartOptimizerChangeTablePolicy extends AbstractModel {
 
     /**
     * change表的数据保存时间，单位为天
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataRetentionTime")
     @Expose
     private Long DataRetentionTime;
 
     /**
-     * Get change表的数据保存时间，单位为天
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get change表的数据保存时间，单位为天 
      * @return DataRetentionTime change表的数据保存时间，单位为天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataRetentionTime() {
         return this.DataRetentionTime;
@@ -43,9 +40,7 @@ public class SmartOptimizerChangeTablePolicy extends AbstractModel {
 
     /**
      * Set change表的数据保存时间，单位为天
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataRetentionTime change表的数据保存时间，单位为天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataRetentionTime(Long DataRetentionTime) {
         this.DataRetentionTime = DataRetentionTime;

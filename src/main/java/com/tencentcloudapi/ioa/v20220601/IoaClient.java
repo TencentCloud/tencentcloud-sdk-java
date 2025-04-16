@@ -39,6 +39,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *提交送检任务
+     * @param req CreateDLPFileDetectionTaskRequest
+     * @return CreateDLPFileDetectionTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDLPFileDetectionTaskResponse CreateDLPFileDetectionTask(CreateDLPFileDetectionTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDLPFileDetectionTask", CreateDLPFileDetectionTaskResponse.class);
+    }
+
+    /**
      *创建终端自定义分组，私有化调用path为：/capi/Assets/Device/CreateDeviceVirtualGroup
      * @param req CreateDeviceVirtualGroupRequest
      * @return CreateDeviceVirtualGroupResponse
@@ -58,6 +69,17 @@ public class IoaClient extends AbstractClient{
     public DescribeAccountGroupsResponse DescribeAccountGroups(DescribeAccountGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAccountGroups", DescribeAccountGroupsResponse.class);
+    }
+
+    /**
+     *webservice查询文件检测结果
+     * @param req DescribeDLPFileDetectResultRequest
+     * @return DescribeDLPFileDetectResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDLPFileDetectResultResponse DescribeDLPFileDetectResult(DescribeDLPFileDetectResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDLPFileDetectResult", DescribeDLPFileDetectResultResponse.class);
     }
 
     /**

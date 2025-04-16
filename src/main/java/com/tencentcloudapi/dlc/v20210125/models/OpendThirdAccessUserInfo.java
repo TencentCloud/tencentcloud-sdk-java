@@ -25,7 +25,6 @@ public class OpendThirdAccessUserInfo extends AbstractModel {
 
     /**
     * id信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class OpendThirdAccessUserInfo extends AbstractModel {
 
     /**
     * 用户主UIN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -41,7 +39,6 @@ public class OpendThirdAccessUserInfo extends AbstractModel {
 
     /**
     * 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -49,17 +46,14 @@ public class OpendThirdAccessUserInfo extends AbstractModel {
 
     /**
     * 开通时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get id信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get id信息 
      * @return Id id信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -67,19 +61,15 @@ public class OpendThirdAccessUserInfo extends AbstractModel {
 
     /**
      * Set id信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id id信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 用户主UIN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户主UIN 
      * @return Uin 用户主UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -87,19 +77,15 @@ public class OpendThirdAccessUserInfo extends AbstractModel {
 
     /**
      * Set 用户主UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户主UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户AppId 
      * @return AppId 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -107,19 +93,15 @@ public class OpendThirdAccessUserInfo extends AbstractModel {
 
     /**
      * Set 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 开通时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开通时间 
      * @return CreateTime 开通时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -127,9 +109,7 @@ public class OpendThirdAccessUserInfo extends AbstractModel {
 
     /**
      * Set 开通时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 开通时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

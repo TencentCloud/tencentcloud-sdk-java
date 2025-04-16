@@ -64,6 +64,7 @@ public class DescribeBlueprintsRequest extends AbstractModel {
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
+镜像状态，可通过[数据结构Blueprint](https://cloud.tencent.com/document/api/1207/47576#Blueprint)中的BlueprintState来获取。
 <li>scene-id</li>按照【使用场景Id】进行过滤。
 类型：String
 必选：否
@@ -143,6 +144,7 @@ public class DescribeBlueprintsRequest extends AbstractModel {
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
+镜像状态，可通过[数据结构Blueprint](https://cloud.tencent.com/document/api/1207/47576#Blueprint)中的BlueprintState来获取。
 <li>scene-id</li>按照【使用场景Id】进行过滤。
 类型：String
 必选：否
@@ -168,6 +170,7 @@ public class DescribeBlueprintsRequest extends AbstractModel {
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
+镜像状态，可通过[数据结构Blueprint](https://cloud.tencent.com/document/api/1207/47576#Blueprint)中的BlueprintState来获取。
 <li>scene-id</li>按照【使用场景Id】进行过滤。
 类型：String
 必选：否
@@ -199,6 +202,7 @@ public class DescribeBlueprintsRequest extends AbstractModel {
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
+镜像状态，可通过[数据结构Blueprint](https://cloud.tencent.com/document/api/1207/47576#Blueprint)中的BlueprintState来获取。
 <li>scene-id</li>按照【使用场景Id】进行过滤。
 类型：String
 必选：否
@@ -224,6 +228,7 @@ public class DescribeBlueprintsRequest extends AbstractModel {
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
+镜像状态，可通过[数据结构Blueprint](https://cloud.tencent.com/document/api/1207/47576#Blueprint)中的BlueprintState来获取。
 <li>scene-id</li>按照【使用场景Id】进行过滤。
 类型：String
 必选：否

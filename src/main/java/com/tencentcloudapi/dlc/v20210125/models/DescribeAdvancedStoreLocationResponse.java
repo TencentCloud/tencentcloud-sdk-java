@@ -46,11 +46,18 @@ public class DescribeAdvancedStoreLocationResponse extends AbstractModel {
 
     /**
     * 托管存储状态，HasLakeFs等于true时，该值才有意义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LakeFsStatus")
     @Expose
     private String LakeFsStatus;
+
+    /**
+    * 托管存储桶类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BucketType")
+    @Expose
+    private String BucketType;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -108,10 +115,8 @@ public class DescribeAdvancedStoreLocationResponse extends AbstractModel {
     }
 
     /**
-     * Get 托管存储状态，HasLakeFs等于true时，该值才有意义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 托管存储状态，HasLakeFs等于true时，该值才有意义 
      * @return LakeFsStatus 托管存储状态，HasLakeFs等于true时，该值才有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLakeFsStatus() {
         return this.LakeFsStatus;
@@ -119,12 +124,30 @@ public class DescribeAdvancedStoreLocationResponse extends AbstractModel {
 
     /**
      * Set 托管存储状态，HasLakeFs等于true时，该值才有意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LakeFsStatus 托管存储状态，HasLakeFs等于true时，该值才有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLakeFsStatus(String LakeFsStatus) {
         this.LakeFsStatus = LakeFsStatus;
+    }
+
+    /**
+     * Get 托管存储桶类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BucketType 托管存储桶类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBucketType() {
+        return this.BucketType;
+    }
+
+    /**
+     * Set 托管存储桶类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BucketType 托管存储桶类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBucketType(String BucketType) {
+        this.BucketType = BucketType;
     }
 
     /**
@@ -163,6 +186,9 @@ public class DescribeAdvancedStoreLocationResponse extends AbstractModel {
         if (source.LakeFsStatus != null) {
             this.LakeFsStatus = new String(source.LakeFsStatus);
         }
+        if (source.BucketType != null) {
+            this.BucketType = new String(source.BucketType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -177,6 +203,7 @@ public class DescribeAdvancedStoreLocationResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "StoreLocation", this.StoreLocation);
         this.setParamSimple(map, prefix + "HasLakeFs", this.HasLakeFs);
         this.setParamSimple(map, prefix + "LakeFsStatus", this.LakeFsStatus);
+        this.setParamSimple(map, prefix + "BucketType", this.BucketType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

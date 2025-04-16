@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteLaunchTemplateRequest extends AbstractModel {
 
     /**
-    * 启动模板ID。
+    * 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
     */
     @SerializedName("LaunchTemplateId")
     @Expose
     private String LaunchTemplateId;
 
     /**
-     * Get 启动模板ID。 
-     * @return LaunchTemplateId 启动模板ID。
+     * Get 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。 
+     * @return LaunchTemplateId 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
      */
     public String getLaunchTemplateId() {
         return this.LaunchTemplateId;
     }
 
     /**
-     * Set 启动模板ID。
-     * @param LaunchTemplateId 启动模板ID。
+     * Set 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
+     * @param LaunchTemplateId 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
      */
     public void setLaunchTemplateId(String LaunchTemplateId) {
         this.LaunchTemplateId = LaunchTemplateId;

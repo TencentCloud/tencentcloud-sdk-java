@@ -38,6 +38,20 @@ public class DescribeDSPALevelGroupsRequest extends AbstractModel {
     private String Name;
 
     /**
+    * 每页返回的记录数
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 从第几条记录开始返回
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -69,6 +83,38 @@ public class DescribeDSPALevelGroupsRequest extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get 每页返回的记录数 
+     * @return Limit 每页返回的记录数
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 每页返回的记录数
+     * @param Limit 每页返回的记录数
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 从第几条记录开始返回 
+     * @return Offset 从第几条记录开始返回
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 从第几条记录开始返回
+     * @param Offset 从第几条记录开始返回
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeDSPALevelGroupsRequest() {
     }
 
@@ -83,6 +129,12 @@ public class DescribeDSPALevelGroupsRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class DescribeDSPALevelGroupsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeDMSDatabaseResponse extends AbstractModel {
 
     /**
     * 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDMSDatabaseResponse extends AbstractModel {
 
     /**
     * schema名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaName")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDMSDatabaseResponse extends AbstractModel {
 
     /**
     * 存储地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeDMSDatabaseResponse extends AbstractModel {
 
     /**
     * 数据对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Asset")
     @Expose
@@ -63,10 +59,8 @@ public class DescribeDMSDatabaseResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名称 
      * @return Name 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -74,19 +68,15 @@ public class DescribeDMSDatabaseResponse extends AbstractModel {
 
     /**
      * Set 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get schema名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get schema名称 
      * @return SchemaName schema名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaName() {
         return this.SchemaName;
@@ -94,19 +84,15 @@ public class DescribeDMSDatabaseResponse extends AbstractModel {
 
     /**
      * Set schema名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemaName schema名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 存储地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储地址 
      * @return Location 存储地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocation() {
         return this.Location;
@@ -114,19 +100,15 @@ public class DescribeDMSDatabaseResponse extends AbstractModel {
 
     /**
      * Set 存储地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 存储地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get 数据对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据对象 
      * @return Asset 数据对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Asset getAsset() {
         return this.Asset;
@@ -134,9 +116,7 @@ public class DescribeDMSDatabaseResponse extends AbstractModel {
 
     /**
      * Set 数据对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Asset 数据对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsset(Asset Asset) {
         this.Asset = Asset;

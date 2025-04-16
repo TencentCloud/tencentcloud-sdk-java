@@ -84,7 +84,6 @@ public class AccessRegionDetial extends AbstractModel {
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeatureBitmap")
     @Expose
@@ -213,8 +212,7 @@ public class AccessRegionDetial extends AbstractModel {
 第4个bit，支持IPv6；
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
-第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。 
+第7个bit，支持接入段Qos加速。 
      * @return FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
 1，表示支持该特性。
@@ -226,7 +224,6 @@ public class AccessRegionDetial extends AbstractModel {
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFeatureBitmap() {
         return this.FeatureBitmap;
@@ -244,7 +241,6 @@ public class AccessRegionDetial extends AbstractModel {
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
 1，表示支持该特性。
@@ -256,7 +252,6 @@ public class AccessRegionDetial extends AbstractModel {
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeatureBitmap(Long FeatureBitmap) {
         this.FeatureBitmap = FeatureBitmap;

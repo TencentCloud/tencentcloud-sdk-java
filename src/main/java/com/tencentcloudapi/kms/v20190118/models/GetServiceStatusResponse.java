@@ -101,6 +101,13 @@ public class GetServiceStatusResponse extends AbstractModel {
     private Long CmkLimit;
 
     /**
+    * 返回独享集群组
+    */
+    @SerializedName("ExclusiveHSMList")
+    @Expose
+    private ExclusiveHSM [] ExclusiveHSMList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -284,6 +291,22 @@ public class GetServiceStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get 返回独享集群组 
+     * @return ExclusiveHSMList 返回独享集群组
+     */
+    public ExclusiveHSM [] getExclusiveHSMList() {
+        return this.ExclusiveHSMList;
+    }
+
+    /**
+     * Set 返回独享集群组
+     * @param ExclusiveHSMList 返回独享集群组
+     */
+    public void setExclusiveHSMList(ExclusiveHSM [] ExclusiveHSMList) {
+        this.ExclusiveHSMList = ExclusiveHSMList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -340,6 +363,12 @@ public class GetServiceStatusResponse extends AbstractModel {
         if (source.CmkLimit != null) {
             this.CmkLimit = new Long(source.CmkLimit);
         }
+        if (source.ExclusiveHSMList != null) {
+            this.ExclusiveHSMList = new ExclusiveHSM[source.ExclusiveHSMList.length];
+            for (int i = 0; i < source.ExclusiveHSMList.length; i++) {
+                this.ExclusiveHSMList[i] = new ExclusiveHSM(source.ExclusiveHSMList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -361,6 +390,7 @@ public class GetServiceStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SubscriptionInfo", this.SubscriptionInfo);
         this.setParamSimple(map, prefix + "CmkUserCount", this.CmkUserCount);
         this.setParamSimple(map, prefix + "CmkLimit", this.CmkLimit);
+        this.setParamArrayObj(map, prefix + "ExclusiveHSMList.", this.ExclusiveHSMList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

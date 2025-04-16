@@ -25,7 +25,6 @@ public class TColumn extends AbstractModel {
 
     /**
     * 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class TColumn extends AbstractModel {
 
     /**
     * 字段类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -41,7 +39,6 @@ public class TColumn extends AbstractModel {
 
     /**
     * 字段描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
     @Expose
@@ -49,7 +46,6 @@ public class TColumn extends AbstractModel {
 
     /**
     * 字段默认值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Default")
     @Expose
@@ -57,7 +53,6 @@ public class TColumn extends AbstractModel {
 
     /**
     * 字段是否是非空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotNull")
     @Expose
@@ -65,7 +60,6 @@ public class TColumn extends AbstractModel {
 
     /**
     * 表示整个 numeric 的长度,取值1-38
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Precision")
     @Expose
@@ -74,7 +68,6 @@ public class TColumn extends AbstractModel {
     /**
     * 表示小数部分的长度
 Scale小于Precision
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scale")
     @Expose
@@ -82,7 +75,6 @@ Scale小于Precision
 
     /**
     * 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Position")
     @Expose
@@ -90,17 +82,14 @@ Scale小于Precision
 
     /**
     * 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPartition")
     @Expose
     private Boolean IsPartition;
 
     /**
-     * Get 字段名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段名称 
      * @return Name 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -108,19 +97,15 @@ Scale小于Precision
 
     /**
      * Set 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 字段类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段类型 
      * @return Type 字段类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -128,19 +113,15 @@ Scale小于Precision
 
     /**
      * Set 字段类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 字段类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 字段描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段描述 
      * @return Comment 字段描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
         return this.Comment;
@@ -148,19 +129,15 @@ Scale小于Precision
 
     /**
      * Set 字段描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 字段描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 字段默认值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段默认值 
      * @return Default 字段默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefault() {
         return this.Default;
@@ -168,19 +145,15 @@ Scale小于Precision
 
     /**
      * Set 字段默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Default 字段默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefault(String Default) {
         this.Default = Default;
     }
 
     /**
-     * Get 字段是否是非空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段是否是非空 
      * @return NotNull 字段是否是非空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getNotNull() {
         return this.NotNull;
@@ -188,19 +161,15 @@ Scale小于Precision
 
     /**
      * Set 字段是否是非空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotNull 字段是否是非空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotNull(Boolean NotNull) {
         this.NotNull = NotNull;
     }
 
     /**
-     * Get 表示整个 numeric 的长度,取值1-38
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表示整个 numeric 的长度,取值1-38 
      * @return Precision 表示整个 numeric 的长度,取值1-38
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPrecision() {
         return this.Precision;
@@ -208,9 +177,7 @@ Scale小于Precision
 
     /**
      * Set 表示整个 numeric 的长度,取值1-38
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Precision 表示整个 numeric 的长度,取值1-38
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrecision(Long Precision) {
         this.Precision = Precision;
@@ -218,11 +185,9 @@ Scale小于Precision
 
     /**
      * Get 表示小数部分的长度
-Scale小于Precision
-注意：此字段可能返回 null，表示取不到有效值。 
+Scale小于Precision 
      * @return Scale 表示小数部分的长度
 Scale小于Precision
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScale() {
         return this.Scale;
@@ -231,20 +196,16 @@ Scale小于Precision
     /**
      * Set 表示小数部分的长度
 Scale小于Precision
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scale 表示小数部分的长度
 Scale小于Precision
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScale(Long Scale) {
         this.Scale = Scale;
     }
 
     /**
-     * Get 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段位置，小的在前 
      * @return Position 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPosition() {
         return this.Position;
@@ -252,19 +213,15 @@ Scale小于Precision
 
     /**
      * Set 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Position 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPosition(Long Position) {
         this.Position = Position;
     }
 
     /**
-     * Get 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为分区字段 
      * @return IsPartition 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsPartition() {
         return this.IsPartition;
@@ -272,9 +229,7 @@ Scale小于Precision
 
     /**
      * Set 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsPartition 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPartition(Boolean IsPartition) {
         this.IsPartition = IsPartition;

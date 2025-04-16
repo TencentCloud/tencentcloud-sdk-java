@@ -45,6 +45,13 @@ public class ModifySLInstanceRequest extends AbstractModel {
     private Long NodeNum;
 
     /**
+    * 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
+
+    /**
      * Get 实例唯一标识符（字符串表示）。 
      * @return InstanceId 实例唯一标识符（字符串表示）。
      */
@@ -92,6 +99,22 @@ public class ModifySLInstanceRequest extends AbstractModel {
         this.NodeNum = NodeNum;
     }
 
+    /**
+     * Get 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	 
+     * @return ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * Set 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+     * @param ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
+    }
+
     public ModifySLInstanceRequest() {
     }
 
@@ -109,6 +132,9 @@ public class ModifySLInstanceRequest extends AbstractModel {
         if (source.NodeNum != null) {
             this.NodeNum = new Long(source.NodeNum);
         }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ModifySLInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
 
     }
 }

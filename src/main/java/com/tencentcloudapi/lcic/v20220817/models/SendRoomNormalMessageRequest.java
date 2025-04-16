@@ -66,6 +66,14 @@ public class SendRoomNormalMessageRequest extends AbstractModel {
     private String NickName;
 
     /**
+    * 消息的优先级，默认优先级 Normal。
+可以指定3种优先级，从高到低依次为 High、Normal 和 Low，区分大小写。
+    */
+    @SerializedName("Priority")
+    @Expose
+    private String Priority;
+
+    /**
      * Get 低代码互动课堂的SdkAppId。 
      * @return SdkAppId 低代码互动课堂的SdkAppId。
      */
@@ -161,6 +169,26 @@ public class SendRoomNormalMessageRequest extends AbstractModel {
         this.NickName = NickName;
     }
 
+    /**
+     * Get 消息的优先级，默认优先级 Normal。
+可以指定3种优先级，从高到低依次为 High、Normal 和 Low，区分大小写。 
+     * @return Priority 消息的优先级，默认优先级 Normal。
+可以指定3种优先级，从高到低依次为 High、Normal 和 Low，区分大小写。
+     */
+    public String getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set 消息的优先级，默认优先级 Normal。
+可以指定3种优先级，从高到低依次为 High、Normal 和 Low，区分大小写。
+     * @param Priority 消息的优先级，默认优先级 Normal。
+可以指定3种优先级，从高到低依次为 High、Normal 和 Low，区分大小写。
+     */
+    public void setPriority(String Priority) {
+        this.Priority = Priority;
+    }
+
     public SendRoomNormalMessageRequest() {
     }
 
@@ -190,6 +218,9 @@ public class SendRoomNormalMessageRequest extends AbstractModel {
         if (source.NickName != null) {
             this.NickName = new String(source.NickName);
         }
+        if (source.Priority != null) {
+            this.Priority = new String(source.Priority);
+        }
     }
 
 
@@ -203,6 +234,7 @@ public class SendRoomNormalMessageRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "MsgBody.", this.MsgBody);
         this.setParamSimple(map, prefix + "CloudCustomData", this.CloudCustomData);
         this.setParamSimple(map, prefix + "NickName", this.NickName);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
 
     }
 }

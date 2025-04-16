@@ -46,7 +46,6 @@ public class QueryResultResponse extends AbstractModel {
 
     /**
     * 分页信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextToken")
     @Expose
@@ -108,10 +107,8 @@ public class QueryResultResponse extends AbstractModel {
     }
 
     /**
-     * Get 分页信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页信息 
      * @return NextToken 分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextToken() {
         return this.NextToken;
@@ -119,9 +116,7 @@ public class QueryResultResponse extends AbstractModel {
 
     /**
      * Set 分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextToken 分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;

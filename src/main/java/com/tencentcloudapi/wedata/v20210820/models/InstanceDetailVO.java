@@ -137,7 +137,7 @@ public class InstanceDetailVO extends AbstractModel {
     private String ExecutorGroupName;
 
     /**
-    * 标准数据时间
+    * 实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurRunDate")
@@ -145,7 +145,7 @@ public class InstanceDetailVO extends AbstractModel {
     private String CurRunDate;
 
     /**
-    * 下一个标准数据时间
+    * 下一个实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextCurDate")
@@ -585,9 +585,9 @@ public class InstanceDetailVO extends AbstractModel {
     }
 
     /**
-     * Get 标准数据时间
+     * Get 实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CurRunDate 标准数据时间
+     * @return CurRunDate 实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurRunDate() {
@@ -595,9 +595,9 @@ public class InstanceDetailVO extends AbstractModel {
     }
 
     /**
-     * Set 标准数据时间
+     * Set 实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CurRunDate 标准数据时间
+     * @param CurRunDate 实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurRunDate(String CurRunDate) {
@@ -605,9 +605,9 @@ public class InstanceDetailVO extends AbstractModel {
     }
 
     /**
-     * Get 下一个标准数据时间
+     * Get 下一个实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NextCurDate 下一个标准数据时间
+     * @return NextCurDate 下一个实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextCurDate() {
@@ -615,9 +615,9 @@ public class InstanceDetailVO extends AbstractModel {
     }
 
     /**
-     * Set 下一个标准数据时间
+     * Set 下一个实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NextCurDate 下一个标准数据时间
+     * @param NextCurDate 下一个实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextCurDate(String NextCurDate) {

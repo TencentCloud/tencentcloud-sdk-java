@@ -87,6 +87,20 @@ public class ModifyInstanceData extends AbstractModel {
     private String UpgradeType;
 
     /**
+    * libra节点数量
+    */
+    @SerializedName("LibraNodeCount")
+    @Expose
+    private Long LibraNodeCount;
+
+    /**
+    * 原libra节点数量
+    */
+    @SerializedName("OldLibraNodeCount")
+    @Expose
+    private Long OldLibraNodeCount;
+
+    /**
      * Get 变配后CPU 
      * @return Cpu 变配后CPU
      */
@@ -230,6 +244,38 @@ public class ModifyInstanceData extends AbstractModel {
         this.UpgradeType = UpgradeType;
     }
 
+    /**
+     * Get libra节点数量 
+     * @return LibraNodeCount libra节点数量
+     */
+    public Long getLibraNodeCount() {
+        return this.LibraNodeCount;
+    }
+
+    /**
+     * Set libra节点数量
+     * @param LibraNodeCount libra节点数量
+     */
+    public void setLibraNodeCount(Long LibraNodeCount) {
+        this.LibraNodeCount = LibraNodeCount;
+    }
+
+    /**
+     * Get 原libra节点数量 
+     * @return OldLibraNodeCount 原libra节点数量
+     */
+    public Long getOldLibraNodeCount() {
+        return this.OldLibraNodeCount;
+    }
+
+    /**
+     * Set 原libra节点数量
+     * @param OldLibraNodeCount 原libra节点数量
+     */
+    public void setOldLibraNodeCount(Long OldLibraNodeCount) {
+        this.OldLibraNodeCount = OldLibraNodeCount;
+    }
+
     public ModifyInstanceData() {
     }
 
@@ -265,6 +311,12 @@ public class ModifyInstanceData extends AbstractModel {
         if (source.UpgradeType != null) {
             this.UpgradeType = new String(source.UpgradeType);
         }
+        if (source.LibraNodeCount != null) {
+            this.LibraNodeCount = new Long(source.LibraNodeCount);
+        }
+        if (source.OldLibraNodeCount != null) {
+            this.OldLibraNodeCount = new Long(source.OldLibraNodeCount);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class ModifyInstanceData extends AbstractModel {
         this.setParamSimple(map, prefix + "OldDeviceType", this.OldDeviceType);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
+        this.setParamSimple(map, prefix + "LibraNodeCount", this.LibraNodeCount);
+        this.setParamSimple(map, prefix + "OldLibraNodeCount", this.OldLibraNodeCount);
 
     }
 }

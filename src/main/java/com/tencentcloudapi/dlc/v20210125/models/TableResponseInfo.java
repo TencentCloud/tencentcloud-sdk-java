@@ -48,7 +48,6 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
     * 数据存储路径。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
@@ -64,7 +63,6 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
     * 数据表更新时间, 单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifiedTime")
     @Expose
@@ -72,7 +70,6 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
     * 数据表创建时间,单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -80,7 +77,6 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
     * 数据格式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputFormat")
     @Expose
@@ -88,7 +84,6 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
     * 数据表存储大小（单位：Byte）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageSize")
     @Expose
@@ -96,7 +91,6 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
     * 数据表行数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordCount")
     @Expose
@@ -104,7 +98,6 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
     * xxxx
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MapMaterializedViewName")
     @Expose
@@ -112,7 +105,6 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
     * 访问热点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeatValue")
     @Expose
@@ -182,10 +174,8 @@ public class TableResponseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据存储路径。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据存储路径。 
      * @return Location 数据存储路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocation() {
         return this.Location;
@@ -193,9 +183,7 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
      * Set 数据存储路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 数据存储路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(String Location) {
         this.Location = Location;
@@ -222,10 +210,8 @@ public class TableResponseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据表更新时间, 单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据表更新时间, 单位: ms。 
      * @return ModifiedTime 数据表更新时间, 单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifiedTime() {
         return this.ModifiedTime;
@@ -233,19 +219,15 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
      * Set 数据表更新时间, 单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifiedTime 数据表更新时间, 单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifiedTime(String ModifiedTime) {
         this.ModifiedTime = ModifiedTime;
     }
 
     /**
-     * Get 数据表创建时间,单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据表创建时间,单位: ms。 
      * @return CreateTime 数据表创建时间,单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -253,19 +235,15 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
      * Set 数据表创建时间,单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 数据表创建时间,单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 数据格式。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据格式。 
      * @return InputFormat 数据格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInputFormat() {
         return this.InputFormat;
@@ -273,19 +251,15 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
      * Set 数据格式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputFormat 数据格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputFormat(String InputFormat) {
         this.InputFormat = InputFormat;
     }
 
     /**
-     * Get 数据表存储大小（单位：Byte）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据表存储大小（单位：Byte） 
      * @return StorageSize 数据表存储大小（单位：Byte）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageSize() {
         return this.StorageSize;
@@ -293,19 +267,15 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
      * Set 数据表存储大小（单位：Byte）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageSize 数据表存储大小（单位：Byte）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageSize(Long StorageSize) {
         this.StorageSize = StorageSize;
     }
 
     /**
-     * Get 数据表行数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据表行数 
      * @return RecordCount 数据表行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordCount() {
         return this.RecordCount;
@@ -313,19 +283,15 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
      * Set 数据表行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordCount 数据表行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordCount(Long RecordCount) {
         this.RecordCount = RecordCount;
     }
 
     /**
-     * Get xxxx
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get xxxx 
      * @return MapMaterializedViewName xxxx
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMapMaterializedViewName() {
         return this.MapMaterializedViewName;
@@ -333,19 +299,15 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
      * Set xxxx
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MapMaterializedViewName xxxx
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMapMaterializedViewName(String MapMaterializedViewName) {
         this.MapMaterializedViewName = MapMaterializedViewName;
     }
 
     /**
-     * Get 访问热点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问热点 
      * @return HeatValue 访问热点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeatValue() {
         return this.HeatValue;
@@ -353,9 +315,7 @@ public class TableResponseInfo extends AbstractModel {
 
     /**
      * Set 访问热点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeatValue 访问热点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeatValue(Long HeatValue) {
         this.HeatValue = HeatValue;

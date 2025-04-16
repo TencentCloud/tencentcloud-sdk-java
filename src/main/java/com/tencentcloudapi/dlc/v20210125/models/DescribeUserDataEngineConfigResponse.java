@@ -25,7 +25,6 @@ public class DescribeUserDataEngineConfigResponse extends AbstractModel {
 
     /**
     * 用户引擎自定义配置项列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineConfigInstanceInfos")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeUserDataEngineConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户引擎自定义配置项列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户引擎自定义配置项列表。 
      * @return DataEngineConfigInstanceInfos 用户引擎自定义配置项列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataEngineConfigInstanceInfo [] getDataEngineConfigInstanceInfos() {
         return this.DataEngineConfigInstanceInfos;
@@ -57,9 +54,7 @@ public class DescribeUserDataEngineConfigResponse extends AbstractModel {
 
     /**
      * Set 用户引擎自定义配置项列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataEngineConfigInstanceInfos 用户引擎自定义配置项列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineConfigInstanceInfos(DataEngineConfigInstanceInfo [] DataEngineConfigInstanceInfos) {
         this.DataEngineConfigInstanceInfos = DataEngineConfigInstanceInfos;

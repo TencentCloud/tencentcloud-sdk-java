@@ -48,7 +48,6 @@ public class DatabaseInfo extends AbstractModel {
 
     /**
     * 数据库cos路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
@@ -111,10 +110,8 @@ public class DatabaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据库cos路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库cos路径 
      * @return Location 数据库cos路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocation() {
         return this.Location;
@@ -122,9 +119,7 @@ public class DatabaseInfo extends AbstractModel {
 
     /**
      * Set 数据库cos路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 数据库cos路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(String Location) {
         this.Location = Location;

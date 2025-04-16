@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FirewallTemplate extends AbstractModel {
 
     /**
-    * 模板Id。
+    * 模板ID。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -38,14 +38,14 @@ public class FirewallTemplate extends AbstractModel {
     private String TemplateName;
 
     /**
-    * 模板类型。
+    * 模板类型。取值: "PRIVATE"(个人模版)
     */
     @SerializedName("TemplateType")
     @Expose
     private String TemplateType;
 
     /**
-    * 模板状态。
+    * 模板状态。取值: "NORMAL"(正常)
     */
     @SerializedName("TemplateState")
     @Expose
@@ -59,16 +59,16 @@ public class FirewallTemplate extends AbstractModel {
     private String CreatedTime;
 
     /**
-     * Get 模板Id。 
-     * @return TemplateId 模板Id。
+     * Get 模板ID。 
+     * @return TemplateId 模板ID。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板Id。
-     * @param TemplateId 模板Id。
+     * Set 模板ID。
+     * @param TemplateId 模板ID。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
@@ -91,32 +91,32 @@ public class FirewallTemplate extends AbstractModel {
     }
 
     /**
-     * Get 模板类型。 
-     * @return TemplateType 模板类型。
+     * Get 模板类型。取值: "PRIVATE"(个人模版) 
+     * @return TemplateType 模板类型。取值: "PRIVATE"(个人模版)
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set 模板类型。
-     * @param TemplateType 模板类型。
+     * Set 模板类型。取值: "PRIVATE"(个人模版)
+     * @param TemplateType 模板类型。取值: "PRIVATE"(个人模版)
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;
     }
 
     /**
-     * Get 模板状态。 
-     * @return TemplateState 模板状态。
+     * Get 模板状态。取值: "NORMAL"(正常) 
+     * @return TemplateState 模板状态。取值: "NORMAL"(正常)
      */
     public String getTemplateState() {
         return this.TemplateState;
     }
 
     /**
-     * Set 模板状态。
-     * @param TemplateState 模板状态。
+     * Set 模板状态。取值: "NORMAL"(正常)
+     * @param TemplateState 模板状态。取值: "NORMAL"(正常)
      */
     public void setTemplateState(String TemplateState) {
         this.TemplateState = TemplateState;

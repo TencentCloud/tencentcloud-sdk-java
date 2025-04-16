@@ -25,7 +25,6 @@ public class SessionResourceTemplate extends AbstractModel {
 
     /**
     * driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DriverSize")
     @Expose
@@ -33,7 +32,6 @@ public class SessionResourceTemplate extends AbstractModel {
 
     /**
     * executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorSize")
     @Expose
@@ -41,7 +39,6 @@ public class SessionResourceTemplate extends AbstractModel {
 
     /**
     * 指定executor数量，最小值为1，最大值小于集群规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorNums")
     @Expose
@@ -49,17 +46,21 @@ public class SessionResourceTemplate extends AbstractModel {
 
     /**
     * 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutorMaxNumbers")
     @Expose
     private Long ExecutorMaxNumbers;
 
     /**
-     * Get driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 运行时参数
+    */
+    @SerializedName("RunningTimeParameters")
+    @Expose
+    private DataEngineConfigPair [] RunningTimeParameters;
+
+    /**
+     * Get driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge 
      * @return DriverSize driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDriverSize() {
         return this.DriverSize;
@@ -67,19 +68,15 @@ public class SessionResourceTemplate extends AbstractModel {
 
     /**
      * Set driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DriverSize driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDriverSize(String DriverSize) {
         this.DriverSize = DriverSize;
     }
 
     /**
-     * Get executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge 
      * @return ExecutorSize executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutorSize() {
         return this.ExecutorSize;
@@ -87,19 +84,15 @@ public class SessionResourceTemplate extends AbstractModel {
 
     /**
      * Set executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutorSize executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorSize(String ExecutorSize) {
         this.ExecutorSize = ExecutorSize;
     }
 
     /**
-     * Get 指定executor数量，最小值为1，最大值小于集群规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定executor数量，最小值为1，最大值小于集群规格 
      * @return ExecutorNums 指定executor数量，最小值为1，最大值小于集群规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExecutorNums() {
         return this.ExecutorNums;
@@ -107,19 +100,15 @@ public class SessionResourceTemplate extends AbstractModel {
 
     /**
      * Set 指定executor数量，最小值为1，最大值小于集群规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutorNums 指定executor数量，最小值为1，最大值小于集群规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorNums(Long ExecutorNums) {
         this.ExecutorNums = ExecutorNums;
     }
 
     /**
-     * Get 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums） 
      * @return ExecutorMaxNumbers 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExecutorMaxNumbers() {
         return this.ExecutorMaxNumbers;
@@ -127,12 +116,26 @@ public class SessionResourceTemplate extends AbstractModel {
 
     /**
      * Set 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutorMaxNumbers 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutorMaxNumbers(Long ExecutorMaxNumbers) {
         this.ExecutorMaxNumbers = ExecutorMaxNumbers;
+    }
+
+    /**
+     * Get 运行时参数 
+     * @return RunningTimeParameters 运行时参数
+     */
+    public DataEngineConfigPair [] getRunningTimeParameters() {
+        return this.RunningTimeParameters;
+    }
+
+    /**
+     * Set 运行时参数
+     * @param RunningTimeParameters 运行时参数
+     */
+    public void setRunningTimeParameters(DataEngineConfigPair [] RunningTimeParameters) {
+        this.RunningTimeParameters = RunningTimeParameters;
     }
 
     public SessionResourceTemplate() {
@@ -155,6 +158,12 @@ public class SessionResourceTemplate extends AbstractModel {
         if (source.ExecutorMaxNumbers != null) {
             this.ExecutorMaxNumbers = new Long(source.ExecutorMaxNumbers);
         }
+        if (source.RunningTimeParameters != null) {
+            this.RunningTimeParameters = new DataEngineConfigPair[source.RunningTimeParameters.length];
+            for (int i = 0; i < source.RunningTimeParameters.length; i++) {
+                this.RunningTimeParameters[i] = new DataEngineConfigPair(source.RunningTimeParameters[i]);
+            }
+        }
     }
 
 
@@ -166,6 +175,7 @@ public class SessionResourceTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecutorSize", this.ExecutorSize);
         this.setParamSimple(map, prefix + "ExecutorNums", this.ExecutorNums);
         this.setParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
+        this.setParamArrayObj(map, prefix + "RunningTimeParameters.", this.RunningTimeParameters);
 
     }
 }

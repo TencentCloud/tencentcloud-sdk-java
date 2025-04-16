@@ -25,7 +25,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceState")
     @Expose
@@ -104,10 +103,8 @@ public class InstanceStateInfo extends AbstractModel {
     private Long BackupOpenStatus;
 
     /**
-     * Get 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群状态，例如：Serving 
      * @return InstanceState 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceState() {
         return this.InstanceState;
@@ -115,9 +112,7 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceState 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
