@@ -142,4 +142,15 @@ public class EsClient extends AbstractClient{
         return this.internalRequest(req, "RunRerank", RunRerankResponse.class);
     }
 
+    /**
+     *WebSearch API 是一个网页搜索服务，支持多种搜索引擎，可以获取网页的标题、URL、摘要和正文内容。
+     * @param req WebSearchRequest
+     * @return WebSearchResponse
+     * @throws TencentCloudSDKException
+     */
+    public WebSearchResponse WebSearch(WebSearchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "WebSearch", WebSearchResponse.class);
+    }
+
 }

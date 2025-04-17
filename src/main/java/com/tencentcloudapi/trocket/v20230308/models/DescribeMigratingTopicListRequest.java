@@ -24,20 +24,6 @@ import java.util.HashMap;
 public class DescribeMigratingTopicListRequest extends AbstractModel {
 
     /**
-    * 查询起始位置
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
-    * 查询结果限制数量
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
     * 任务ID
     */
     @SerializedName("TaskId")
@@ -52,36 +38,18 @@ public class DescribeMigratingTopicListRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get 查询起始位置 
-     * @return Offset 查询起始位置
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
+    * 查询起始位置
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
-     * Set 查询起始位置
-     * @param Offset 查询起始位置
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
-
-    /**
-     * Get 查询结果限制数量 
-     * @return Limit 查询结果限制数量
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set 查询结果限制数量
-     * @param Limit 查询结果限制数量
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
+    * 查询结果限制数量
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
 
     /**
      * Get 任务ID 
@@ -115,6 +83,38 @@ public class DescribeMigratingTopicListRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get 查询起始位置 
+     * @return Offset 查询起始位置
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 查询起始位置
+     * @param Offset 查询起始位置
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 查询结果限制数量 
+     * @return Limit 查询结果限制数量
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 查询结果限制数量
+     * @param Limit 查询结果限制数量
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
     public DescribeMigratingTopicListRequest() {
     }
 
@@ -123,12 +123,6 @@ public class DescribeMigratingTopicListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeMigratingTopicListRequest(DescribeMigratingTopicListRequest source) {
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
@@ -138,6 +132,12 @@ public class DescribeMigratingTopicListRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -145,10 +145,10 @@ public class DescribeMigratingTopicListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

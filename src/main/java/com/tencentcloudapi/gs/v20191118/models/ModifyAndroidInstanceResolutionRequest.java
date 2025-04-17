@@ -32,8 +32,8 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
 
     /**
     * 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
-实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
-实例类型为 四开（A4） 及以上：建议设置为 720
+实例类型为单开（A1）：建议设置为 1080
+实例类型为双开（A2） 及以上：建议设置为 720
     */
     @SerializedName("Width")
     @Expose
@@ -41,8 +41,8 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
 
     /**
     * 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
-实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
-实例类型为 四开（A4） 及以上：建议设置为 1280
+实例类型为单开（A1）：建议设置为 1920
+实例类型为双开（A2） 及以上：建议设置为 1280
     */
     @SerializedName("Height")
     @Expose
@@ -56,6 +56,22 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
     @SerializedName("DPI")
     @Expose
     private Long DPI;
+
+    /**
+    * 帧率。ResolutionType 为 PHYSICAL 时才会修改帧率。另外建议按照以下数值设置，避免出现性能不足问题： 实例类型为单开（A1）：建议设置为 60 实例类型为双开（A2） 及以上：建议设置为 30
+    */
+    @SerializedName("FPS")
+    @Expose
+    private Long FPS;
+
+    /**
+    * 修改分辨率类型。修改物理分辨率，需要重启才能生效。
+OVERRIDE：默认值，修改覆盖（显示）分辨率
+PHYSICAL：修改物理分辨率
+    */
+    @SerializedName("ResolutionType")
+    @Expose
+    private String ResolutionType;
 
     /**
      * Get 安卓实例 ID 
@@ -75,11 +91,11 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
 
     /**
      * Get 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
-实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
-实例类型为 四开（A4） 及以上：建议设置为 720 
+实例类型为单开（A1）：建议设置为 1080
+实例类型为双开（A2） 及以上：建议设置为 720 
      * @return Width 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
-实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
-实例类型为 四开（A4） 及以上：建议设置为 720
+实例类型为单开（A1）：建议设置为 1080
+实例类型为双开（A2） 及以上：建议设置为 720
      */
     public Long getWidth() {
         return this.Width;
@@ -87,11 +103,11 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
 
     /**
      * Set 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
-实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
-实例类型为 四开（A4） 及以上：建议设置为 720
+实例类型为单开（A1）：建议设置为 1080
+实例类型为双开（A2） 及以上：建议设置为 720
      * @param Width 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
-实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
-实例类型为 四开（A4） 及以上：建议设置为 720
+实例类型为单开（A1）：建议设置为 1080
+实例类型为双开（A2） 及以上：建议设置为 720
      */
     public void setWidth(Long Width) {
         this.Width = Width;
@@ -99,11 +115,11 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
 
     /**
      * Get 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
-实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
-实例类型为 四开（A4） 及以上：建议设置为 1280 
+实例类型为单开（A1）：建议设置为 1920
+实例类型为双开（A2） 及以上：建议设置为 1280 
      * @return Height 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
-实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
-实例类型为 四开（A4） 及以上：建议设置为 1280
+实例类型为单开（A1）：建议设置为 1920
+实例类型为双开（A2） 及以上：建议设置为 1280
      */
     public Long getHeight() {
         return this.Height;
@@ -111,11 +127,11 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
 
     /**
      * Set 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
-实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
-实例类型为 四开（A4） 及以上：建议设置为 1280
+实例类型为单开（A1）：建议设置为 1920
+实例类型为双开（A2） 及以上：建议设置为 1280
      * @param Height 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
-实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
-实例类型为 四开（A4） 及以上：建议设置为 1280
+实例类型为单开（A1）：建议设置为 1920
+实例类型为双开（A2） 及以上：建议设置为 1280
      */
     public void setHeight(Long Height) {
         this.Height = Height;
@@ -145,6 +161,46 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
         this.DPI = DPI;
     }
 
+    /**
+     * Get 帧率。ResolutionType 为 PHYSICAL 时才会修改帧率。另外建议按照以下数值设置，避免出现性能不足问题： 实例类型为单开（A1）：建议设置为 60 实例类型为双开（A2） 及以上：建议设置为 30 
+     * @return FPS 帧率。ResolutionType 为 PHYSICAL 时才会修改帧率。另外建议按照以下数值设置，避免出现性能不足问题： 实例类型为单开（A1）：建议设置为 60 实例类型为双开（A2） 及以上：建议设置为 30
+     */
+    public Long getFPS() {
+        return this.FPS;
+    }
+
+    /**
+     * Set 帧率。ResolutionType 为 PHYSICAL 时才会修改帧率。另外建议按照以下数值设置，避免出现性能不足问题： 实例类型为单开（A1）：建议设置为 60 实例类型为双开（A2） 及以上：建议设置为 30
+     * @param FPS 帧率。ResolutionType 为 PHYSICAL 时才会修改帧率。另外建议按照以下数值设置，避免出现性能不足问题： 实例类型为单开（A1）：建议设置为 60 实例类型为双开（A2） 及以上：建议设置为 30
+     */
+    public void setFPS(Long FPS) {
+        this.FPS = FPS;
+    }
+
+    /**
+     * Get 修改分辨率类型。修改物理分辨率，需要重启才能生效。
+OVERRIDE：默认值，修改覆盖（显示）分辨率
+PHYSICAL：修改物理分辨率 
+     * @return ResolutionType 修改分辨率类型。修改物理分辨率，需要重启才能生效。
+OVERRIDE：默认值，修改覆盖（显示）分辨率
+PHYSICAL：修改物理分辨率
+     */
+    public String getResolutionType() {
+        return this.ResolutionType;
+    }
+
+    /**
+     * Set 修改分辨率类型。修改物理分辨率，需要重启才能生效。
+OVERRIDE：默认值，修改覆盖（显示）分辨率
+PHYSICAL：修改物理分辨率
+     * @param ResolutionType 修改分辨率类型。修改物理分辨率，需要重启才能生效。
+OVERRIDE：默认值，修改覆盖（显示）分辨率
+PHYSICAL：修改物理分辨率
+     */
+    public void setResolutionType(String ResolutionType) {
+        this.ResolutionType = ResolutionType;
+    }
+
     public ModifyAndroidInstanceResolutionRequest() {
     }
 
@@ -165,6 +221,12 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
         if (source.DPI != null) {
             this.DPI = new Long(source.DPI);
         }
+        if (source.FPS != null) {
+            this.FPS = new Long(source.FPS);
+        }
+        if (source.ResolutionType != null) {
+            this.ResolutionType = new String(source.ResolutionType);
+        }
     }
 
 
@@ -176,6 +238,8 @@ public class ModifyAndroidInstanceResolutionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "DPI", this.DPI);
+        this.setParamSimple(map, prefix + "FPS", this.FPS);
+        this.setParamSimple(map, prefix + "ResolutionType", this.ResolutionType);
 
     }
 }

@@ -60,6 +60,13 @@ public class ConsumerClient extends AbstractModel {
     private Long ConsumerLag;
 
     /**
+    * 消费者客户端类型（grpc；remoting；http）
+    */
+    @SerializedName("ChannelProtocol")
+    @Expose
+    private String ChannelProtocol;
+
+    /**
      * Get 客户端ID 
      * @return ClientId 客户端ID
      */
@@ -143,6 +150,22 @@ public class ConsumerClient extends AbstractModel {
         this.ConsumerLag = ConsumerLag;
     }
 
+    /**
+     * Get 消费者客户端类型（grpc；remoting；http） 
+     * @return ChannelProtocol 消费者客户端类型（grpc；remoting；http）
+     */
+    public String getChannelProtocol() {
+        return this.ChannelProtocol;
+    }
+
+    /**
+     * Set 消费者客户端类型（grpc；remoting；http）
+     * @param ChannelProtocol 消费者客户端类型（grpc；remoting；http）
+     */
+    public void setChannelProtocol(String ChannelProtocol) {
+        this.ChannelProtocol = ChannelProtocol;
+    }
+
     public ConsumerClient() {
     }
 
@@ -166,6 +189,9 @@ public class ConsumerClient extends AbstractModel {
         if (source.ConsumerLag != null) {
             this.ConsumerLag = new Long(source.ConsumerLag);
         }
+        if (source.ChannelProtocol != null) {
+            this.ChannelProtocol = new String(source.ChannelProtocol);
+        }
     }
 
 
@@ -178,6 +204,7 @@ public class ConsumerClient extends AbstractModel {
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "ConsumerLag", this.ConsumerLag);
+        this.setParamSimple(map, prefix + "ChannelProtocol", this.ChannelProtocol);
 
     }
 }

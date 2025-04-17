@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeFlowLogRequest extends AbstractModel {
 
     /**
-    * 私用网络ID或者统一ID，建议使用统一ID。
+    * 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 流日志唯一ID。
+    * 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取；
     */
     @SerializedName("FlowLogId")
     @Expose
     private String FlowLogId;
 
     /**
-     * Get 私用网络ID或者统一ID，建议使用统一ID。 
-     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID。
+     * Get 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。 
+     * @return VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私用网络ID或者统一ID，建议使用统一ID。
-     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID。
+     * Set 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
+     * @param VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 流日志唯一ID。 
-     * @return FlowLogId 流日志唯一ID。
+     * Get 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取； 
+     * @return FlowLogId 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取；
      */
     public String getFlowLogId() {
         return this.FlowLogId;
     }
 
     /**
-     * Set 流日志唯一ID。
-     * @param FlowLogId 流日志唯一ID。
+     * Set 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取；
+     * @param FlowLogId 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取；
      */
     public void setFlowLogId(String FlowLogId) {
         this.FlowLogId = FlowLogId;

@@ -60,7 +60,6 @@ public class ParamDetail extends AbstractModel {
 
     /**
     * 单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
@@ -68,7 +67,6 @@ public class ParamDetail extends AbstractModel {
 
     /**
     * 英文简介
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShortDesc")
     @Expose
@@ -76,7 +74,6 @@ public class ParamDetail extends AbstractModel {
 
     /**
     * 参数名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterName")
     @Expose
@@ -163,10 +160,8 @@ public class ParamDetail extends AbstractModel {
     }
 
     /**
-     * Get 单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单位 
      * @return Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
         return this.Unit;
@@ -174,19 +169,15 @@ public class ParamDetail extends AbstractModel {
 
     /**
      * Set 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 英文简介
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 英文简介 
      * @return ShortDesc 英文简介
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getShortDesc() {
         return this.ShortDesc;
@@ -194,19 +185,15 @@ public class ParamDetail extends AbstractModel {
 
     /**
      * Set 英文简介
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShortDesc 英文简介
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShortDesc(String ShortDesc) {
         this.ShortDesc = ShortDesc;
     }
 
     /**
-     * Get 参数名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数名 
      * @return ParameterName 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameterName() {
         return this.ParameterName;
@@ -214,9 +201,7 @@ public class ParamDetail extends AbstractModel {
 
     /**
      * Set 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParameterName 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterName(String ParameterName) {
         this.ParameterName = ParameterName;

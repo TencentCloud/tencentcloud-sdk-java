@@ -38,6 +38,13 @@ public class CreateAndroidAppRequest extends AbstractModel {
     private String UserId;
 
     /**
+    * 应用模式（NORMAL : 普通模式、只支持 apk 文件上传，为默认值；ADVANCED : 高级模式、只支持上传 tgz 文件 和 自定义 shell 命令执行）
+    */
+    @SerializedName("AppMode")
+    @Expose
+    private String AppMode;
+
+    /**
      * Get 安卓应用名字 
      * @return Name 安卓应用名字
      */
@@ -69,6 +76,22 @@ public class CreateAndroidAppRequest extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get 应用模式（NORMAL : 普通模式、只支持 apk 文件上传，为默认值；ADVANCED : 高级模式、只支持上传 tgz 文件 和 自定义 shell 命令执行） 
+     * @return AppMode 应用模式（NORMAL : 普通模式、只支持 apk 文件上传，为默认值；ADVANCED : 高级模式、只支持上传 tgz 文件 和 自定义 shell 命令执行）
+     */
+    public String getAppMode() {
+        return this.AppMode;
+    }
+
+    /**
+     * Set 应用模式（NORMAL : 普通模式、只支持 apk 文件上传，为默认值；ADVANCED : 高级模式、只支持上传 tgz 文件 和 自定义 shell 命令执行）
+     * @param AppMode 应用模式（NORMAL : 普通模式、只支持 apk 文件上传，为默认值；ADVANCED : 高级模式、只支持上传 tgz 文件 和 自定义 shell 命令执行）
+     */
+    public void setAppMode(String AppMode) {
+        this.AppMode = AppMode;
+    }
+
     public CreateAndroidAppRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateAndroidAppRequest extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.AppMode != null) {
+            this.AppMode = new String(source.AppMode);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateAndroidAppRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "AppMode", this.AppMode);
 
     }
 }

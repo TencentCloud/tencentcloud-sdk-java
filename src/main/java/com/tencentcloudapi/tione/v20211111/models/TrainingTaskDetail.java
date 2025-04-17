@@ -329,6 +329,13 @@ public class TrainingTaskDetail extends AbstractModel {
     private String CallbackUrl;
 
     /**
+    * 任务关联的代码仓库配置
+    */
+    @SerializedName("CodeRepos")
+    @Expose
+    private CodeRepoConfig [] CodeRepos;
+
+    /**
      * Get 训练任务ID 
      * @return Id 训练任务ID
      */
@@ -1068,6 +1075,22 @@ public class TrainingTaskDetail extends AbstractModel {
         this.CallbackUrl = CallbackUrl;
     }
 
+    /**
+     * Get 任务关联的代码仓库配置 
+     * @return CodeRepos 任务关联的代码仓库配置
+     */
+    public CodeRepoConfig [] getCodeRepos() {
+        return this.CodeRepos;
+    }
+
+    /**
+     * Set 任务关联的代码仓库配置
+     * @param CodeRepos 任务关联的代码仓库配置
+     */
+    public void setCodeRepos(CodeRepoConfig [] CodeRepos) {
+        this.CodeRepos = CodeRepos;
+    }
+
     public TrainingTaskDetail() {
     }
 
@@ -1205,6 +1228,12 @@ public class TrainingTaskDetail extends AbstractModel {
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.CodeRepos != null) {
+            this.CodeRepos = new CodeRepoConfig[source.CodeRepos.length];
+            for (int i = 0; i < source.CodeRepos.length; i++) {
+                this.CodeRepos[i] = new CodeRepoConfig(source.CodeRepos[i]);
+            }
+        }
     }
 
 
@@ -1252,6 +1281,7 @@ public class TrainingTaskDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamArrayObj(map, prefix + "CodeRepos.", this.CodeRepos);
 
     }
 }

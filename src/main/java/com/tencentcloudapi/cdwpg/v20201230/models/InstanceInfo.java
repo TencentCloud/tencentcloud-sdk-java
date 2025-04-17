@@ -46,7 +46,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 集群状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -54,7 +53,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 集群状态详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusDesc")
     @Expose
@@ -70,7 +68,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 集群id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceID")
     @Expose
@@ -99,7 +96,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 地域详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionDesc")
     @Expose
@@ -107,7 +103,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 地区详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneDesc")
     @Expose
@@ -115,7 +110,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -151,7 +145,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 地域id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -159,7 +152,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 地区id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -263,10 +255,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群状态 
      * @return Status 集群状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -274,19 +264,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 集群状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 集群状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 集群状态详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群状态详情 
      * @return StatusDesc 集群状态详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusDesc() {
         return this.StatusDesc;
@@ -294,9 +280,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 集群状态详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusDesc 集群状态详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
@@ -323,10 +307,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群id 
      * @return InstanceID 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceID() {
         return this.InstanceID;
@@ -334,9 +316,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceID 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
@@ -391,10 +371,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 地域详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域详情 
      * @return RegionDesc 地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionDesc() {
         return this.RegionDesc;
@@ -402,19 +380,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionDesc 地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionDesc(String RegionDesc) {
         this.RegionDesc = RegionDesc;
     }
 
     /**
-     * Get 地区详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地区详情 
      * @return ZoneDesc 地区详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneDesc() {
         return this.ZoneDesc;
@@ -422,19 +396,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 地区详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneDesc 地区详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneDesc(String ZoneDesc) {
         this.ZoneDesc = ZoneDesc;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -442,9 +412,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -515,10 +483,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 地域id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域id 
      * @return RegionId 地域id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -526,19 +492,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 地域id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 地区id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地区id 
      * @return ZoneId 地区id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -546,9 +508,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 地区id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 地区id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;

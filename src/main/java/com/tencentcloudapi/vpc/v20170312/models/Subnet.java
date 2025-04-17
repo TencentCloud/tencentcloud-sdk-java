@@ -130,7 +130,6 @@ public class Subnet extends AbstractModel {
 
     /**
     * CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
     @Expose
@@ -138,7 +137,6 @@ public class Subnet extends AbstractModel {
 
     /**
     * 是否是CDC所属子网。0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCdcSubnet")
     @Expose
@@ -385,10 +383,8 @@ public class Subnet extends AbstractModel {
     }
 
     /**
-     * Get CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CDC实例ID。 
      * @return CdcId CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
         return this.CdcId;
@@ -396,19 +392,15 @@ public class Subnet extends AbstractModel {
 
     /**
      * Set CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get 是否是CDC所属子网。0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是CDC所属子网。0:否 1:是 
      * @return IsCdcSubnet 是否是CDC所属子网。0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsCdcSubnet() {
         return this.IsCdcSubnet;
@@ -416,9 +408,7 @@ public class Subnet extends AbstractModel {
 
     /**
      * Set 是否是CDC所属子网。0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCdcSubnet 是否是CDC所属子网。0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCdcSubnet(Long IsCdcSubnet) {
         this.IsCdcSubnet = IsCdcSubnet;

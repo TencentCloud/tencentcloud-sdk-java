@@ -25,7 +25,6 @@ public class DescribeBlackHeaderResponse extends AbstractModel {
 
     /**
     * 禁用的自定义header列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlackHeaders")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBlackHeaderResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 禁用的自定义header列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 禁用的自定义header列表 
      * @return BlackHeaders 禁用的自定义header列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBlackHeaders() {
         return this.BlackHeaders;
@@ -50,9 +47,7 @@ public class DescribeBlackHeaderResponse extends AbstractModel {
 
     /**
      * Set 禁用的自定义header列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlackHeaders 禁用的自定义header列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlackHeaders(String [] BlackHeaders) {
         this.BlackHeaders = BlackHeaders;

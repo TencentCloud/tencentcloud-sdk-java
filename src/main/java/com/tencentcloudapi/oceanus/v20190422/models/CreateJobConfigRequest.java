@@ -38,7 +38,7 @@ public class CreateJobConfigRequest extends AbstractModel {
     private String EntrypointClass;
 
     /**
-    * 主类入参
+    * 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
     */
     @SerializedName("ProgramArgs")
     @Expose
@@ -287,16 +287,16 @@ public class CreateJobConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 主类入参 
-     * @return ProgramArgs 主类入参
+     * Get 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值 
+     * @return ProgramArgs 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
      */
     public String getProgramArgs() {
         return this.ProgramArgs;
     }
 
     /**
-     * Set 主类入参
-     * @param ProgramArgs 主类入参
+     * Set 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
+     * @param ProgramArgs 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
      */
     public void setProgramArgs(String ProgramArgs) {
         this.ProgramArgs = ProgramArgs;

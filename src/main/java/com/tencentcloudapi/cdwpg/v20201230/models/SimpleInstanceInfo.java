@@ -95,7 +95,6 @@ public class SimpleInstanceInfo extends AbstractModel {
 
     /**
     * 访问地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessInfo")
     @Expose
@@ -124,7 +123,6 @@ public class SimpleInstanceInfo extends AbstractModel {
 
     /**
     * 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -298,10 +296,8 @@ public class SimpleInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 访问地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问地址 
      * @return AccessInfo 访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessInfo() {
         return this.AccessInfo;
@@ -309,9 +305,7 @@ public class SimpleInstanceInfo extends AbstractModel {
 
     /**
      * Set 访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessInfo 访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessInfo(String AccessInfo) {
         this.AccessInfo = AccessInfo;
@@ -366,10 +360,8 @@ public class SimpleInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签列表 
      * @return Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -377,9 +369,7 @@ public class SimpleInstanceInfo extends AbstractModel {
 
     /**
      * Set 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceLoginKeyPairAttributeRequest extends AbstractModel {
+public class CodeRepoConfig extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 代码仓库Id
     */
-    @SerializedName("InstanceId")
+    @SerializedName("Id")
     @Expose
-    private String InstanceId;
+    private String Id;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+    * 代码仓下载目标地址
+    */
+    @SerializedName("TargetPath")
+    @Expose
+    private String TargetPath;
+
+    /**
+     * Get 代码仓库Id 
+     * @return Id 代码仓库Id
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getId() {
+        return this.Id;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 代码仓库Id
+     * @param Id 代码仓库Id
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
-    public DescribeInstanceLoginKeyPairAttributeRequest() {
+    /**
+     * Get 代码仓下载目标地址 
+     * @return TargetPath 代码仓下载目标地址
+     */
+    public String getTargetPath() {
+        return this.TargetPath;
+    }
+
+    /**
+     * Set 代码仓下载目标地址
+     * @param TargetPath 代码仓下载目标地址
+     */
+    public void setTargetPath(String TargetPath) {
+        this.TargetPath = TargetPath;
+    }
+
+    public CodeRepoConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeInstanceLoginKeyPairAttributeRequest(DescribeInstanceLoginKeyPairAttributeRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public CodeRepoConfig(CodeRepoConfig source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.TargetPath != null) {
+            this.TargetPath = new String(source.TargetPath);
         }
     }
 
@@ -64,7 +90,8 @@ public class DescribeInstanceLoginKeyPairAttributeRequest extends AbstractModel 
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "TargetPath", this.TargetPath);
 
     }
 }

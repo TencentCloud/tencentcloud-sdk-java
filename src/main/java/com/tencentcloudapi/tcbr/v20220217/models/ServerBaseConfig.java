@@ -171,6 +171,13 @@ public class ServerBaseConfig extends AbstractModel {
     private String Tag;
 
     /**
+    * 内网访问开关 close | open
+    */
+    @SerializedName("InternalAccess")
+    @Expose
+    private String InternalAccess;
+
+    /**
      * Get 环境 Id 
      * @return EnvId 环境 Id
      */
@@ -506,6 +513,22 @@ public class ServerBaseConfig extends AbstractModel {
         this.Tag = Tag;
     }
 
+    /**
+     * Get 内网访问开关 close | open 
+     * @return InternalAccess 内网访问开关 close | open
+     */
+    public String getInternalAccess() {
+        return this.InternalAccess;
+    }
+
+    /**
+     * Set 内网访问开关 close | open
+     * @param InternalAccess 内网访问开关 close | open
+     */
+    public void setInternalAccess(String InternalAccess) {
+        this.InternalAccess = InternalAccess;
+    }
+
     public ServerBaseConfig() {
     }
 
@@ -583,6 +606,9 @@ public class ServerBaseConfig extends AbstractModel {
         if (source.Tag != null) {
             this.Tag = new String(source.Tag);
         }
+        if (source.InternalAccess != null) {
+            this.InternalAccess = new String(source.InternalAccess);
+        }
     }
 
 
@@ -611,6 +637,7 @@ public class ServerBaseConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
         this.setParamSimple(map, prefix + "LogParseType", this.LogParseType);
         this.setParamSimple(map, prefix + "Tag", this.Tag);
+        this.setParamSimple(map, prefix + "InternalAccess", this.InternalAccess);
 
     }
 }

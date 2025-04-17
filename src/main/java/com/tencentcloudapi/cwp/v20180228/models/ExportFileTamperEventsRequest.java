@@ -49,6 +49,13 @@ public class ExportFileTamperEventsRequest extends AbstractModel {
     private String Fields;
 
     /**
+    * 需要导出的字段
+    */
+    @SerializedName("Where")
+    @Expose
+    private String [] Where;
+
+    /**
      * Get 过滤条件。
 <li>Status - String - 是否必填：否 - 处理状态  0 -- 待处理 1 -- 已加白 2 -- 已删除 3 - 已忽略</li>
 <li>ModifyTime - String - 是否必填：否 - 最近发生时间</li>
@@ -103,7 +110,9 @@ public class ExportFileTamperEventsRequest extends AbstractModel {
     /**
      * Get 需要导出的字段 
      * @return Fields 需要导出的字段
+     * @deprecated
      */
+    @Deprecated
     public String getFields() {
         return this.Fields;
     }
@@ -111,9 +120,27 @@ public class ExportFileTamperEventsRequest extends AbstractModel {
     /**
      * Set 需要导出的字段
      * @param Fields 需要导出的字段
+     * @deprecated
      */
+    @Deprecated
     public void setFields(String Fields) {
         this.Fields = Fields;
+    }
+
+    /**
+     * Get 需要导出的字段 
+     * @return Where 需要导出的字段
+     */
+    public String [] getWhere() {
+        return this.Where;
+    }
+
+    /**
+     * Set 需要导出的字段
+     * @param Where 需要导出的字段
+     */
+    public void setWhere(String [] Where) {
+        this.Where = Where;
     }
 
     public ExportFileTamperEventsRequest() {
@@ -139,6 +166,12 @@ public class ExportFileTamperEventsRequest extends AbstractModel {
         if (source.Fields != null) {
             this.Fields = new String(source.Fields);
         }
+        if (source.Where != null) {
+            this.Where = new String[source.Where.length];
+            for (int i = 0; i < source.Where.length; i++) {
+                this.Where[i] = new String(source.Where[i]);
+            }
+        }
     }
 
 
@@ -149,6 +182,7 @@ public class ExportFileTamperEventsRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "Fileds.", this.Fileds);
         this.setParamSimple(map, prefix + "Fields", this.Fields);
+        this.setParamArraySimple(map, prefix + "Where.", this.Where);
 
     }
 }

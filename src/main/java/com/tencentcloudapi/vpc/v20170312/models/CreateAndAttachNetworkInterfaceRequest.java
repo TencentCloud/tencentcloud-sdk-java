@@ -31,7 +31,7 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * 弹性网卡名称，最大长度不能超过60个字节。
+    * 弹性网卡名称，最大长度不能超过60个字符。
     */
     @SerializedName("NetworkInterfaceName")
     @Expose
@@ -132,16 +132,16 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 弹性网卡名称，最大长度不能超过60个字节。 
-     * @return NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
+     * Get 弹性网卡名称，最大长度不能超过60个字符。 
+     * @return NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字符。
      */
     public String getNetworkInterfaceName() {
         return this.NetworkInterfaceName;
     }
 
     /**
-     * Set 弹性网卡名称，最大长度不能超过60个字节。
-     * @param NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
+     * Set 弹性网卡名称，最大长度不能超过60个字符。
+     * @param NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字符。
      */
     public void setNetworkInterfaceName(String NetworkInterfaceName) {
         this.NetworkInterfaceName = NetworkInterfaceName;

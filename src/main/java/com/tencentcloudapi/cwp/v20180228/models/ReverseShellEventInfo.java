@@ -220,6 +220,13 @@ public class ReverseShellEventInfo extends AbstractModel {
     private String CmdLineQuote;
 
     /**
+    * 风险等级
+    */
+    @SerializedName("RiskLevel")
+    @Expose
+    private Long RiskLevel;
+
+    /**
      * Get ID 主键 
      * @return Id ID 主键
      */
@@ -667,6 +674,22 @@ public class ReverseShellEventInfo extends AbstractModel {
         this.CmdLineQuote = CmdLineQuote;
     }
 
+    /**
+     * Get 风险等级 
+     * @return RiskLevel 风险等级
+     */
+    public Long getRiskLevel() {
+        return this.RiskLevel;
+    }
+
+    /**
+     * Set 风险等级
+     * @param RiskLevel 风险等级
+     */
+    public void setRiskLevel(Long RiskLevel) {
+        this.RiskLevel = RiskLevel;
+    }
+
     public ReverseShellEventInfo() {
     }
 
@@ -765,6 +788,9 @@ public class ReverseShellEventInfo extends AbstractModel {
         if (source.CmdLineQuote != null) {
             this.CmdLineQuote = new String(source.CmdLineQuote);
         }
+        if (source.RiskLevel != null) {
+            this.RiskLevel = new Long(source.RiskLevel);
+        }
     }
 
 
@@ -800,6 +826,7 @@ public class ReverseShellEventInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "CmdLineQuote", this.CmdLineQuote);
+        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
 
     }
 }

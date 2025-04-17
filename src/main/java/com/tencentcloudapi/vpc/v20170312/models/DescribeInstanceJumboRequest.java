@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,70 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstancesLoginKeyPairAttributeRequest extends AbstractModel {
+public class DescribeInstanceJumboRequest extends AbstractModel {
 
     /**
-    * 实例 ID 列表。每次请求批量实例的上限为 100。
+    * CVM实例ID列表。限制每次i最多查询10个实例。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 是否允许使用默认密钥对登录，YES：允许登录；NO：禁止登录
-    */
-    @SerializedName("PermitLogin")
-    @Expose
-    private String PermitLogin;
-
-    /**
-     * Get 实例 ID 列表。每次请求批量实例的上限为 100。 
-     * @return InstanceIds 实例 ID 列表。每次请求批量实例的上限为 100。
+     * Get CVM实例ID列表。限制每次i最多查询10个实例。 
+     * @return InstanceIds CVM实例ID列表。限制每次i最多查询10个实例。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例 ID 列表。每次请求批量实例的上限为 100。
-     * @param InstanceIds 实例 ID 列表。每次请求批量实例的上限为 100。
+     * Set CVM实例ID列表。限制每次i最多查询10个实例。
+     * @param InstanceIds CVM实例ID列表。限制每次i最多查询10个实例。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
-    /**
-     * Get 是否允许使用默认密钥对登录，YES：允许登录；NO：禁止登录 
-     * @return PermitLogin 是否允许使用默认密钥对登录，YES：允许登录；NO：禁止登录
-     */
-    public String getPermitLogin() {
-        return this.PermitLogin;
-    }
-
-    /**
-     * Set 是否允许使用默认密钥对登录，YES：允许登录；NO：禁止登录
-     * @param PermitLogin 是否允许使用默认密钥对登录，YES：允许登录；NO：禁止登录
-     */
-    public void setPermitLogin(String PermitLogin) {
-        this.PermitLogin = PermitLogin;
-    }
-
-    public ModifyInstancesLoginKeyPairAttributeRequest() {
+    public DescribeInstanceJumboRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyInstancesLoginKeyPairAttributeRequest(ModifyInstancesLoginKeyPairAttributeRequest source) {
+    public DescribeInstanceJumboRequest(DescribeInstanceJumboRequest source) {
         if (source.InstanceIds != null) {
             this.InstanceIds = new String[source.InstanceIds.length];
             for (int i = 0; i < source.InstanceIds.length; i++) {
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
-        }
-        if (source.PermitLogin != null) {
-            this.PermitLogin = new String(source.PermitLogin);
         }
     }
 
@@ -94,7 +68,6 @@ public class ModifyInstancesLoginKeyPairAttributeRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-        this.setParamSimple(map, prefix + "PermitLogin", this.PermitLogin);
 
     }
 }

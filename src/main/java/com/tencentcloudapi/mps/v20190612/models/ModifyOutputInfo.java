@@ -52,6 +52,13 @@ public class ModifyOutputInfo extends AbstractModel {
     private String Protocol;
 
     /**
+    * 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+    */
+    @SerializedName("OutputKind")
+    @Expose
+    private String OutputKind;
+
+    /**
     * 转推SRT的配置。
     */
     @SerializedName("SRTSettings")
@@ -184,6 +191,22 @@ public class ModifyOutputInfo extends AbstractModel {
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
+    }
+
+    /**
+     * Get 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。 
+     * @return OutputKind 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+     */
+    public String getOutputKind() {
+        return this.OutputKind;
+    }
+
+    /**
+     * Set 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+     * @param OutputKind 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+     */
+    public void setOutputKind(String OutputKind) {
+        this.OutputKind = OutputKind;
     }
 
     /**
@@ -370,6 +393,9 @@ public class ModifyOutputInfo extends AbstractModel {
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.OutputKind != null) {
+            this.OutputKind = new String(source.OutputKind);
+        }
         if (source.SRTSettings != null) {
             this.SRTSettings = new CreateOutputSRTSettings(source.SRTSettings);
         }
@@ -420,6 +446,7 @@ public class ModifyOutputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "OutputName", this.OutputName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "OutputKind", this.OutputKind);
         this.setParamObj(map, prefix + "SRTSettings.", this.SRTSettings);
         this.setParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
         this.setParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);

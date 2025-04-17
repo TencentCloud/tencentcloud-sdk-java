@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreateInstanceResponse extends AbstractModel {
 
     /**
+    * 实例 ID。
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 实例 ID。 
+     * @return InstanceIds 实例 ID。
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set 实例 ID。
+     * @param InstanceIds 实例 ID。
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,12 @@ public class CreateInstanceResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateInstanceResponse(CreateInstanceResponse source) {
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class CreateInstanceResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -25,7 +25,6 @@ public class TopicStageChangeResult extends AbstractModel {
 
     /**
     * 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
@@ -33,7 +32,6 @@ public class TopicStageChangeResult extends AbstractModel {
 
     /**
     * 是否成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Success")
     @Expose
@@ -41,17 +39,14 @@ public class TopicStageChangeResult extends AbstractModel {
 
     /**
     * 命名空间，仅4.x有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-     * Get 主题名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题名称 
      * @return TopicName 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -59,19 +54,15 @@ public class TopicStageChangeResult extends AbstractModel {
 
     /**
      * Set 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 是否成功
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否成功 
      * @return Success 是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSuccess() {
         return this.Success;
@@ -79,19 +70,15 @@ public class TopicStageChangeResult extends AbstractModel {
 
     /**
      * Set 是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Success 是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccess(Boolean Success) {
         this.Success = Success;
     }
 
     /**
-     * Get 命名空间，仅4.x有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间，仅4.x有效 
      * @return Namespace 命名空间，仅4.x有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -99,9 +86,7 @@ public class TopicStageChangeResult extends AbstractModel {
 
     /**
      * Set 命名空间，仅4.x有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 命名空间，仅4.x有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

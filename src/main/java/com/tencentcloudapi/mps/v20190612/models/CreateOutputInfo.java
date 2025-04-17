@@ -52,6 +52,20 @@ public class CreateOutputInfo extends AbstractModel {
     private String OutputRegion;
 
     /**
+    * 输出类型：Internet/TencentCSS
+    */
+    @SerializedName("OutputType")
+    @Expose
+    private String OutputType;
+
+    /**
+    * 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出
+    */
+    @SerializedName("OutputKind")
+    @Expose
+    private String OutputKind;
+
+    /**
     * 输出的SRT的配置。
     */
     @SerializedName("SRTSettings")
@@ -100,13 +114,6 @@ public class CreateOutputInfo extends AbstractModel {
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
-
-    /**
-    * 输出类型：Internet/TencentCSS
-    */
-    @SerializedName("OutputType")
-    @Expose
-    private String OutputType;
 
     /**
     * 输出的RIST的配置。
@@ -184,6 +191,38 @@ public class CreateOutputInfo extends AbstractModel {
      */
     public void setOutputRegion(String OutputRegion) {
         this.OutputRegion = OutputRegion;
+    }
+
+    /**
+     * Get 输出类型：Internet/TencentCSS 
+     * @return OutputType 输出类型：Internet/TencentCSS
+     */
+    public String getOutputType() {
+        return this.OutputType;
+    }
+
+    /**
+     * Set 输出类型：Internet/TencentCSS
+     * @param OutputType 输出类型：Internet/TencentCSS
+     */
+    public void setOutputType(String OutputType) {
+        this.OutputType = OutputType;
+    }
+
+    /**
+     * Get 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出 
+     * @return OutputKind 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出
+     */
+    public String getOutputKind() {
+        return this.OutputKind;
+    }
+
+    /**
+     * Set 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出
+     * @param OutputKind 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出
+     */
+    public void setOutputKind(String OutputKind) {
+        this.OutputKind = OutputKind;
     }
 
     /**
@@ -303,22 +342,6 @@ public class CreateOutputInfo extends AbstractModel {
     }
 
     /**
-     * Get 输出类型：Internet/TencentCSS 
-     * @return OutputType 输出类型：Internet/TencentCSS
-     */
-    public String getOutputType() {
-        return this.OutputType;
-    }
-
-    /**
-     * Set 输出类型：Internet/TencentCSS
-     * @param OutputType 输出类型：Internet/TencentCSS
-     */
-    public void setOutputType(String OutputType) {
-        this.OutputType = OutputType;
-    }
-
-    /**
      * Get 输出的RIST的配置。 
      * @return RISTSettings 输出的RIST的配置。
      */
@@ -370,6 +393,12 @@ public class CreateOutputInfo extends AbstractModel {
         if (source.OutputRegion != null) {
             this.OutputRegion = new String(source.OutputRegion);
         }
+        if (source.OutputType != null) {
+            this.OutputType = new String(source.OutputType);
+        }
+        if (source.OutputKind != null) {
+            this.OutputKind = new String(source.OutputKind);
+        }
         if (source.SRTSettings != null) {
             this.SRTSettings = new CreateOutputSRTSettings(source.SRTSettings);
         }
@@ -400,9 +429,6 @@ public class CreateOutputInfo extends AbstractModel {
                 this.Zones[i] = new String(source.Zones[i]);
             }
         }
-        if (source.OutputType != null) {
-            this.OutputType = new String(source.OutputType);
-        }
         if (source.RISTSettings != null) {
             this.RISTSettings = new CreateOutputRistSettings(source.RISTSettings);
         }
@@ -420,6 +446,8 @@ public class CreateOutputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "OutputRegion", this.OutputRegion);
+        this.setParamSimple(map, prefix + "OutputType", this.OutputType);
+        this.setParamSimple(map, prefix + "OutputKind", this.OutputKind);
         this.setParamObj(map, prefix + "SRTSettings.", this.SRTSettings);
         this.setParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
         this.setParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
@@ -427,7 +455,6 @@ public class CreateOutputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
-        this.setParamSimple(map, prefix + "OutputType", this.OutputType);
         this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
         this.setParamObj(map, prefix + "PidSelector.", this.PidSelector);
 

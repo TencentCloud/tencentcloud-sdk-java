@@ -551,7 +551,7 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
-     *查询目前定制域名的错误响应
+     *查询指定域名的错误响应
      * @param req DescribeDomainErrorPageInfoRequest
      * @return DescribeDomainErrorPageInfoResponse
      * @throws TencentCloudSDKException

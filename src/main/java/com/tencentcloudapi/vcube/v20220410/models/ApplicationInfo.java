@@ -136,6 +136,13 @@ public class ApplicationInfo extends AbstractModel {
     private String AppId;
 
     /**
+    * 扩展包名数量上限
+    */
+    @SerializedName("NameLimit")
+    @Expose
+    private Long NameLimit;
+
+    /**
      * Get 应用名称 
      * @return AppName 应用名称
      */
@@ -403,6 +410,22 @@ public class ApplicationInfo extends AbstractModel {
         this.AppId = AppId;
     }
 
+    /**
+     * Get 扩展包名数量上限 
+     * @return NameLimit 扩展包名数量上限
+     */
+    public Long getNameLimit() {
+        return this.NameLimit;
+    }
+
+    /**
+     * Set 扩展包名数量上限
+     * @param NameLimit 扩展包名数量上限
+     */
+    public void setNameLimit(Long NameLimit) {
+        this.NameLimit = NameLimit;
+    }
+
     public ApplicationInfo() {
     }
 
@@ -465,6 +488,9 @@ public class ApplicationInfo extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.NameLimit != null) {
+            this.NameLimit = new Long(source.NameLimit);
+        }
     }
 
 
@@ -487,6 +513,7 @@ public class ApplicationInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "WinProcessName", this.WinProcessName);
         this.setParamArraySimple(map, prefix + "DomainList.", this.DomainList);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "NameLimit", this.NameLimit);
 
     }
 }

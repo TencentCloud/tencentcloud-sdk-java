@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DisableFlowLogsRequest extends AbstractModel {
 
     /**
-    * 流日志Id。
+    * 流日志Id。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
     */
     @SerializedName("FlowLogIds")
     @Expose
     private String [] FlowLogIds;
 
     /**
-     * Get 流日志Id。 
-     * @return FlowLogIds 流日志Id。
+     * Get 流日志Id。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。 
+     * @return FlowLogIds 流日志Id。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
      */
     public String [] getFlowLogIds() {
         return this.FlowLogIds;
     }
 
     /**
-     * Set 流日志Id。
-     * @param FlowLogIds 流日志Id。
+     * Set 流日志Id。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
+     * @param FlowLogIds 流日志Id。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
      */
     public void setFlowLogIds(String [] FlowLogIds) {
         this.FlowLogIds = FlowLogIds;

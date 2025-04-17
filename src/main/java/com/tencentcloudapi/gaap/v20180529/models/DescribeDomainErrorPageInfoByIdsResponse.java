@@ -25,7 +25,6 @@ public class DescribeDomainErrorPageInfoByIdsResponse extends AbstractModel {
 
     /**
     * 定制错误响应配置集
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorPageSet")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDomainErrorPageInfoByIdsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 定制错误响应配置集
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定制错误响应配置集 
      * @return ErrorPageSet 定制错误响应配置集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DomainErrorPageInfo [] getErrorPageSet() {
         return this.ErrorPageSet;
@@ -50,9 +47,7 @@ public class DescribeDomainErrorPageInfoByIdsResponse extends AbstractModel {
 
     /**
      * Set 定制错误响应配置集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorPageSet 定制错误响应配置集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorPageSet(DomainErrorPageInfo [] ErrorPageSet) {
         this.ErrorPageSet = ErrorPageSet;

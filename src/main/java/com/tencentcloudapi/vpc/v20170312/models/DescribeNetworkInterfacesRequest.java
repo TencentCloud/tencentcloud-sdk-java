@@ -54,6 +54,7 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel {
 <li>eni-qos - String -是否必填：否- （过滤条件）按照网卡服务质量进行过滤。PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</li>
 <li>address-ipv6 - String - 是否必填：否 -（过滤条件）内网IPv6地址过滤，支持多ipv6地址查询，如果和address-ip一起使用取交集。</li>
 <li>public-address-ip - String - （过滤条件）公网IPv4地址，精确匹配。</li>
+<li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。`GUA`(全球单播地址), `ULA`(唯一本地地址)。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -115,7 +116,8 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel {
 <li>eni-type - String -是否必填：否- （过滤条件）按照网卡类型进行过滤。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡。</li>
 <li>eni-qos - String -是否必填：否- （过滤条件）按照网卡服务质量进行过滤。PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</li>
 <li>address-ipv6 - String - 是否必填：否 -（过滤条件）内网IPv6地址过滤，支持多ipv6地址查询，如果和address-ip一起使用取交集。</li>
-<li>public-address-ip - String - （过滤条件）公网IPv4地址，精确匹配。</li> 
+<li>public-address-ip - String - （过滤条件）公网IPv4地址，精确匹配。</li>
+<li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。`GUA`(全球单播地址), `ULA`(唯一本地地址)。</li> 
      * @return Filters 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
 </li>
@@ -138,6 +140,7 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel {
 <li>eni-qos - String -是否必填：否- （过滤条件）按照网卡服务质量进行过滤。PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</li>
 <li>address-ipv6 - String - 是否必填：否 -（过滤条件）内网IPv6地址过滤，支持多ipv6地址查询，如果和address-ip一起使用取交集。</li>
 <li>public-address-ip - String - （过滤条件）公网IPv4地址，精确匹配。</li>
+<li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。`GUA`(全球单播地址), `ULA`(唯一本地地址)。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -166,6 +169,7 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel {
 <li>eni-qos - String -是否必填：否- （过滤条件）按照网卡服务质量进行过滤。PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</li>
 <li>address-ipv6 - String - 是否必填：否 -（过滤条件）内网IPv6地址过滤，支持多ipv6地址查询，如果和address-ip一起使用取交集。</li>
 <li>public-address-ip - String - （过滤条件）公网IPv4地址，精确匹配。</li>
+<li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。`GUA`(全球单播地址), `ULA`(唯一本地地址)。</li>
      * @param Filters 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
 </li>
@@ -188,6 +192,7 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel {
 <li>eni-qos - String -是否必填：否- （过滤条件）按照网卡服务质量进行过滤。PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。</li>
 <li>address-ipv6 - String - 是否必填：否 -（过滤条件）内网IPv6地址过滤，支持多ipv6地址查询，如果和address-ip一起使用取交集。</li>
 <li>public-address-ip - String - （过滤条件）公网IPv4地址，精确匹配。</li>
+<li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。`GUA`(全球单播地址), `ULA`(唯一本地地址)。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -66,6 +66,13 @@ public class AndroidApp extends AbstractModel {
     private String UserId;
 
     /**
+    * 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+    */
+    @SerializedName("AppMode")
+    @Expose
+    private String AppMode;
+
+    /**
      * Get 安卓应用 Id 
      * @return AndroidAppId 安卓应用 Id
      */
@@ -161,6 +168,22 @@ public class AndroidApp extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式） 
+     * @return AppMode 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+     */
+    public String getAppMode() {
+        return this.AppMode;
+    }
+
+    /**
+     * Set 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+     * @param AppMode 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+     */
+    public void setAppMode(String AppMode) {
+        this.AppMode = AppMode;
+    }
+
     public AndroidApp() {
     }
 
@@ -190,6 +213,9 @@ public class AndroidApp extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.AppMode != null) {
+            this.AppMode = new String(source.AppMode);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class AndroidApp extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AndroidAppVersionInfo.", this.AndroidAppVersionInfo);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "AppMode", this.AppMode);
 
     }
 }

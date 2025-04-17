@@ -31,6 +31,13 @@ public class AndroidAppCosInfo extends AbstractModel {
     private String AndroidAppId;
 
     /**
+    * 应用名称（支持 apk 和 tgz 两种格式文件，当应用 AppMode 为 NORMAL 时，只支持上传 apk 类型文件，当应用 AppMode 为 ADVANCED 高级模式时，只支持上传  tgz 类型文件）
+    */
+    @SerializedName("FileName")
+    @Expose
+    private String FileName;
+
+    /**
      * Get 安卓应用ID 
      * @return AndroidAppId 安卓应用ID
      */
@@ -46,6 +53,22 @@ public class AndroidAppCosInfo extends AbstractModel {
         this.AndroidAppId = AndroidAppId;
     }
 
+    /**
+     * Get 应用名称（支持 apk 和 tgz 两种格式文件，当应用 AppMode 为 NORMAL 时，只支持上传 apk 类型文件，当应用 AppMode 为 ADVANCED 高级模式时，只支持上传  tgz 类型文件） 
+     * @return FileName 应用名称（支持 apk 和 tgz 两种格式文件，当应用 AppMode 为 NORMAL 时，只支持上传 apk 类型文件，当应用 AppMode 为 ADVANCED 高级模式时，只支持上传  tgz 类型文件）
+     */
+    public String getFileName() {
+        return this.FileName;
+    }
+
+    /**
+     * Set 应用名称（支持 apk 和 tgz 两种格式文件，当应用 AppMode 为 NORMAL 时，只支持上传 apk 类型文件，当应用 AppMode 为 ADVANCED 高级模式时，只支持上传  tgz 类型文件）
+     * @param FileName 应用名称（支持 apk 和 tgz 两种格式文件，当应用 AppMode 为 NORMAL 时，只支持上传 apk 类型文件，当应用 AppMode 为 ADVANCED 高级模式时，只支持上传  tgz 类型文件）
+     */
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
+    }
+
     public AndroidAppCosInfo() {
     }
 
@@ -57,6 +80,9 @@ public class AndroidAppCosInfo extends AbstractModel {
         if (source.AndroidAppId != null) {
             this.AndroidAppId = new String(source.AndroidAppId);
         }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class AndroidAppCosInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AndroidAppId", this.AndroidAppId);
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
 
     }
 }

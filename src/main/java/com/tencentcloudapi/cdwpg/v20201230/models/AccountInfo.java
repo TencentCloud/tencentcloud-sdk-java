@@ -39,7 +39,6 @@ public class AccountInfo extends AbstractModel {
 
     /**
     * 账户属性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Perms")
     @Expose
@@ -78,10 +77,8 @@ public class AccountInfo extends AbstractModel {
     }
 
     /**
-     * Get 账户属性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账户属性 
      * @return Perms 账户属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPerms() {
         return this.Perms;
@@ -89,9 +86,7 @@ public class AccountInfo extends AbstractModel {
 
     /**
      * Set 账户属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Perms 账户属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPerms(String [] Perms) {
         this.Perms = Perms;

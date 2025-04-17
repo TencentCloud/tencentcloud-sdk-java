@@ -1450,7 +1450,8 @@ public class VpcClient extends AbstractClient{
 * 弹性网卡上绑定了云服务器时，不能被删除。
 * 删除指定弹性网卡，弹性网卡必须先和子机解绑才能删除。删除之后弹性网卡上所有内网IP都将被退还。
 
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询[DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 
+接口。
      * @param req DeleteNetworkInterfaceRequest
      * @return DeleteNetworkInterfaceResponse
      * @throws TencentCloudSDKException
@@ -2105,7 +2106,8 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeFlowLog）用于查询流日志实例信息。
+     *本接口（DescribeFlowLog）用于查询VPC流日志实例信息。
+该接口只支持VPC流日志（即将下线）。云联网以及VPC流日志，通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
      * @param req DescribeFlowLogRequest
      * @return DescribeFlowLogResponse
      * @throws TencentCloudSDKException
@@ -2195,6 +2197,20 @@ public class VpcClient extends AbstractClient{
     public DescribeIPv6AddressesResponse DescribeIPv6Addresses(DescribeIPv6AddressesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIPv6Addresses", DescribeIPv6AddressesResponse.class);
+    }
+
+    /**
+     *本接口用于检查云服务器是否支持巨帧。
+使用限制：
+1. 需要CAM策略授权该接口的操作权限，并且授权对应实例的读取权限(该接口会访问CVM实例，所以会校验是否有实例的CAM权限)。例如：CAM action放通vpc:DescribeInstanceJumbo；resourc放通qcs::cvm:ap-guangzhou:uin/2126195383:instance/*。
+2. 实例迁移前后，可能会出现该接口返回的巨帧状态前后不一致（需要检查迁移前后实例所在的宿主机是否都支持巨帧，一种可能的原因为实例迁移到了不支持巨帧的宿主机）。
+     * @param req DescribeInstanceJumboRequest
+     * @return DescribeInstanceJumboResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceJumboResponse DescribeInstanceJumbo(DescribeInstanceJumboRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceJumbo", DescribeInstanceJumboResponse.class);
     }
 
     /**
@@ -3506,7 +3522,7 @@ LimitTypes取值范围：
 * 该接口用于将一个内网IP从一个弹性网卡上迁移到另外一个弹性网卡，主IP地址不支持迁移。
 * 迁移前后的弹性网卡必须在同一个子网内。  
 
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询[DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口。
      * @param req MigratePrivateIpAddressRequest
      * @return MigratePrivateIpAddressResponse
      * @throws TencentCloudSDKException

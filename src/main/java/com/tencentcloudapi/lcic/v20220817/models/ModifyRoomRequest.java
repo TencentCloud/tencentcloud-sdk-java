@@ -232,6 +232,13 @@ video 纯视频
     private Long WhiteBoardSnapshotMode;
 
     /**
+    * 字幕转写功能开关：0关闭，1开启，默认关闭
+    */
+    @SerializedName("SubtitlesTranscription")
+    @Expose
+    private Long SubtitlesTranscription;
+
+    /**
      * Get 房间ID。 
      * @return RoomId 房间ID。
      */
@@ -743,6 +750,22 @@ video 纯视频
         this.WhiteBoardSnapshotMode = WhiteBoardSnapshotMode;
     }
 
+    /**
+     * Get 字幕转写功能开关：0关闭，1开启，默认关闭 
+     * @return SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     */
+    public Long getSubtitlesTranscription() {
+        return this.SubtitlesTranscription;
+    }
+
+    /**
+     * Set 字幕转写功能开关：0关闭，1开启，默认关闭
+     * @param SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     */
+    public void setSubtitlesTranscription(Long SubtitlesTranscription) {
+        this.SubtitlesTranscription = SubtitlesTranscription;
+    }
+
     public ModifyRoomRequest() {
     }
 
@@ -835,6 +858,9 @@ video 纯视频
         if (source.WhiteBoardSnapshotMode != null) {
             this.WhiteBoardSnapshotMode = new Long(source.WhiteBoardSnapshotMode);
         }
+        if (source.SubtitlesTranscription != null) {
+            this.SubtitlesTranscription = new Long(source.SubtitlesTranscription);
+        }
     }
 
 
@@ -869,6 +895,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "RecordScene", this.RecordScene);
         this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
         this.setParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
+        this.setParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
 
     }
 }

@@ -32,7 +32,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowCreateTime")
     @Expose
@@ -40,7 +39,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowName")
     @Expose
@@ -48,7 +46,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowProgress")
     @Expose
@@ -56,7 +53,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStateDesc")
     @Expose
@@ -64,7 +60,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowMsg")
     @Expose
@@ -72,7 +67,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessName")
     @Expose
@@ -80,7 +74,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群是否有备份中任务，有为1,无为0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupStatus")
     @Expose
@@ -88,7 +81,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 请求id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestId")
     @Expose
@@ -96,7 +88,6 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
     * 集群是否有备份中任务，有为1,无为0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupOpenStatus")
     @Expose
@@ -119,10 +110,8 @@ public class InstanceStateInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群操作创建时间 
      * @return FlowCreateTime 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowCreateTime() {
         return this.FlowCreateTime;
@@ -130,19 +119,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowCreateTime 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowCreateTime(String FlowCreateTime) {
         this.FlowCreateTime = FlowCreateTime;
     }
 
     /**
-     * Get 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群操作名称 
      * @return FlowName 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowName() {
         return this.FlowName;
@@ -150,19 +135,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowName 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群操作进度 
      * @return FlowProgress 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowProgress() {
         return this.FlowProgress;
@@ -170,19 +151,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowProgress 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowProgress(Long FlowProgress) {
         this.FlowProgress = FlowProgress;
     }
 
     /**
-     * Get 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群状态描述，例如：运行中 
      * @return InstanceStateDesc 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceStateDesc() {
         return this.InstanceStateDesc;
@@ -190,19 +167,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStateDesc 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStateDesc(String InstanceStateDesc) {
         this.InstanceStateDesc = InstanceStateDesc;
     }
 
     /**
-     * Get 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群流程错误信息，例如：“创建失败，资源不足” 
      * @return FlowMsg 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowMsg() {
         return this.FlowMsg;
@@ -210,19 +183,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowMsg 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowMsg(String FlowMsg) {
         this.FlowMsg = FlowMsg;
     }
 
     /**
-     * Get 当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前步骤的名称，例如：”购买资源中“ 
      * @return ProcessName 当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessName() {
         return this.ProcessName;
@@ -230,19 +199,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessName 当前步骤的名称，例如：”购买资源中“
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessName(String ProcessName) {
         this.ProcessName = ProcessName;
     }
 
     /**
-     * Get 集群是否有备份中任务，有为1,无为0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群是否有备份中任务，有为1,无为0 
      * @return BackupStatus 集群是否有备份中任务，有为1,无为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackupStatus() {
         return this.BackupStatus;
@@ -250,19 +215,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群是否有备份中任务，有为1,无为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupStatus 集群是否有备份中任务，有为1,无为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupStatus(Long BackupStatus) {
         this.BackupStatus = BackupStatus;
     }
 
     /**
-     * Get 请求id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求id 
      * @return RequestId 请求id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRequestId() {
         return this.RequestId;
@@ -270,19 +231,15 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 请求id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RequestId 请求id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
     }
 
     /**
-     * Get 集群是否有备份中任务，有为1,无为0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群是否有备份中任务，有为1,无为0 
      * @return BackupOpenStatus 集群是否有备份中任务，有为1,无为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackupOpenStatus() {
         return this.BackupOpenStatus;
@@ -290,9 +247,7 @@ public class InstanceStateInfo extends AbstractModel {
 
     /**
      * Set 集群是否有备份中任务，有为1,无为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupOpenStatus 集群是否有备份中任务，有为1,无为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupOpenStatus(Long BackupOpenStatus) {
         this.BackupOpenStatus = BackupOpenStatus;

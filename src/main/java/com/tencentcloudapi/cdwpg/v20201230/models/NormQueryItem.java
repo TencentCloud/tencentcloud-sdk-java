@@ -25,7 +25,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 调用次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CallTimes")
     @Expose
@@ -33,7 +32,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 读共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SharedReadBlocks")
     @Expose
@@ -41,7 +39,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 写共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SharedWriteBlocks")
     @Expose
@@ -49,7 +46,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 数据库
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
     @Expose
@@ -57,7 +53,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 脱敏后语句
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NormalQuery")
     @Expose
@@ -65,7 +60,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 执行时间最长的语句
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxElapsedQuery")
     @Expose
@@ -73,7 +67,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 花费总时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CostTime")
     @Expose
@@ -81,7 +74,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientIp")
     @Expose
@@ -89,7 +81,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -97,7 +88,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 总次数占比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCallTimesPercent")
     @Expose
@@ -105,7 +95,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 总耗时占比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCostTimePercent")
     @Expose
@@ -113,7 +102,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 花费最小时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinCostTime")
     @Expose
@@ -121,7 +109,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 花费最大时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxCostTime")
     @Expose
@@ -129,7 +116,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 最早一条时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstTime")
     @Expose
@@ -137,7 +123,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 最晚一条时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastTime")
     @Expose
@@ -145,7 +130,6 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 读io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadCostTime")
     @Expose
@@ -153,17 +137,14 @@ public class NormQueryItem extends AbstractModel {
 
     /**
     * 写io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WriteCostTime")
     @Expose
     private Float WriteCostTime;
 
     /**
-     * Get 调用次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 调用次数 
      * @return CallTimes 调用次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCallTimes() {
         return this.CallTimes;
@@ -171,19 +152,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 调用次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CallTimes 调用次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallTimes(Long CallTimes) {
         this.CallTimes = CallTimes;
     }
 
     /**
-     * Get 读共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 读共享内存块数 
      * @return SharedReadBlocks 读共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSharedReadBlocks() {
         return this.SharedReadBlocks;
@@ -191,19 +168,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 读共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SharedReadBlocks 读共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSharedReadBlocks(Long SharedReadBlocks) {
         this.SharedReadBlocks = SharedReadBlocks;
     }
 
     /**
-     * Get 写共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 写共享内存块数 
      * @return SharedWriteBlocks 写共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSharedWriteBlocks() {
         return this.SharedWriteBlocks;
@@ -211,19 +184,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 写共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SharedWriteBlocks 写共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSharedWriteBlocks(Long SharedWriteBlocks) {
         this.SharedWriteBlocks = SharedWriteBlocks;
     }
 
     /**
-     * Get 数据库
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库 
      * @return DatabaseName 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
         return this.DatabaseName;
@@ -231,19 +200,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabaseName 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 脱敏后语句
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脱敏后语句 
      * @return NormalQuery 脱敏后语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNormalQuery() {
         return this.NormalQuery;
@@ -251,19 +216,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 脱敏后语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NormalQuery 脱敏后语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormalQuery(String NormalQuery) {
         this.NormalQuery = NormalQuery;
     }
 
     /**
-     * Get 执行时间最长的语句
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行时间最长的语句 
      * @return MaxElapsedQuery 执行时间最长的语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaxElapsedQuery() {
         return this.MaxElapsedQuery;
@@ -271,19 +232,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 执行时间最长的语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxElapsedQuery 执行时间最长的语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxElapsedQuery(String MaxElapsedQuery) {
         this.MaxElapsedQuery = MaxElapsedQuery;
     }
 
     /**
-     * Get 花费总时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 花费总时间 
      * @return CostTime 花费总时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCostTime() {
         return this.CostTime;
@@ -291,19 +248,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 花费总时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CostTime 花费总时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCostTime(Float CostTime) {
         this.CostTime = CostTime;
     }
 
     /**
-     * Get 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端ip 
      * @return ClientIp 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientIp() {
         return this.ClientIp;
@@ -311,19 +264,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientIp 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -331,19 +280,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 总次数占比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总次数占比 
      * @return TotalCallTimesPercent 总次数占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTotalCallTimesPercent() {
         return this.TotalCallTimesPercent;
@@ -351,19 +296,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 总次数占比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCallTimesPercent 总次数占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCallTimesPercent(Float TotalCallTimesPercent) {
         this.TotalCallTimesPercent = TotalCallTimesPercent;
     }
 
     /**
-     * Get 总耗时占比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总耗时占比 
      * @return TotalCostTimePercent 总耗时占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTotalCostTimePercent() {
         return this.TotalCostTimePercent;
@@ -371,19 +312,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 总耗时占比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCostTimePercent 总耗时占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCostTimePercent(Float TotalCostTimePercent) {
         this.TotalCostTimePercent = TotalCostTimePercent;
     }
 
     /**
-     * Get 花费最小时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 花费最小时间 
      * @return MinCostTime 花费最小时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMinCostTime() {
         return this.MinCostTime;
@@ -391,19 +328,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 花费最小时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinCostTime 花费最小时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinCostTime(Float MinCostTime) {
         this.MinCostTime = MinCostTime;
     }
 
     /**
-     * Get 花费最大时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 花费最大时间 
      * @return MaxCostTime 花费最大时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMaxCostTime() {
         return this.MaxCostTime;
@@ -411,19 +344,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 花费最大时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxCostTime 花费最大时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxCostTime(Float MaxCostTime) {
         this.MaxCostTime = MaxCostTime;
     }
 
     /**
-     * Get 最早一条时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最早一条时间 
      * @return FirstTime 最早一条时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstTime() {
         return this.FirstTime;
@@ -431,19 +360,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 最早一条时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstTime 最早一条时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get 最晚一条时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最晚一条时间 
      * @return LastTime 最晚一条时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastTime() {
         return this.LastTime;
@@ -451,19 +376,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 最晚一条时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastTime 最晚一条时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;
     }
 
     /**
-     * Get 读io总耗时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 读io总耗时 
      * @return ReadCostTime 读io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getReadCostTime() {
         return this.ReadCostTime;
@@ -471,19 +392,15 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 读io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadCostTime 读io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadCostTime(Float ReadCostTime) {
         this.ReadCostTime = ReadCostTime;
     }
 
     /**
-     * Get 写io总耗时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 写io总耗时 
      * @return WriteCostTime 写io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getWriteCostTime() {
         return this.WriteCostTime;
@@ -491,9 +408,7 @@ public class NormQueryItem extends AbstractModel {
 
     /**
      * Set 写io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WriteCostTime 写io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWriteCostTime(Float WriteCostTime) {
         this.WriteCostTime = WriteCostTime;

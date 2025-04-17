@@ -160,6 +160,13 @@ public class DescribeInput extends AbstractModel {
     private DescribeInputRISTSettings RISTSettings;
 
     /**
+    * 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+    */
+    @SerializedName("StreamUrls")
+    @Expose
+    private StreamUrlDetail [] StreamUrls;
+
+    /**
      * Get 输入Id。 
      * @return InputId 输入Id。
      */
@@ -487,6 +494,22 @@ public class DescribeInput extends AbstractModel {
         this.RISTSettings = RISTSettings;
     }
 
+    /**
+     * Get 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址 
+     * @return StreamUrls 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+     */
+    public StreamUrlDetail [] getStreamUrls() {
+        return this.StreamUrls;
+    }
+
+    /**
+     * Set 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+     * @param StreamUrls 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+     */
+    public void setStreamUrls(StreamUrlDetail [] StreamUrls) {
+        this.StreamUrls = StreamUrls;
+    }
+
     public DescribeInput() {
     }
 
@@ -561,6 +584,12 @@ public class DescribeInput extends AbstractModel {
         if (source.RISTSettings != null) {
             this.RISTSettings = new DescribeInputRISTSettings(source.RISTSettings);
         }
+        if (source.StreamUrls != null) {
+            this.StreamUrls = new StreamUrlDetail[source.StreamUrls.length];
+            for (int i = 0; i < source.StreamUrls.length; i++) {
+                this.StreamUrls[i] = new StreamUrlDetail(source.StreamUrls[i]);
+            }
+        }
     }
 
 
@@ -586,6 +615,7 @@ public class DescribeInput extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+        this.setParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
 
     }
 }

@@ -45,6 +45,13 @@ public class DescribeOutput extends AbstractModel {
     private String OutputType;
 
     /**
+    * 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+    */
+    @SerializedName("OutputKind")
+    @Expose
+    private String OutputKind;
+
+    /**
     * 输出描述。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -169,6 +176,13 @@ public class DescribeOutput extends AbstractModel {
     private PidSelector PidSelector;
 
     /**
+    * 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+    */
+    @SerializedName("StreamUrls")
+    @Expose
+    private StreamUrlDetail [] StreamUrls;
+
+    /**
      * Get 输出Id。 
      * @return OutputId 输出Id。
      */
@@ -214,6 +228,22 @@ public class DescribeOutput extends AbstractModel {
      */
     public void setOutputType(String OutputType) {
         this.OutputType = OutputType;
+    }
+
+    /**
+     * Get 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。 
+     * @return OutputKind 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+     */
+    public String getOutputKind() {
+        return this.OutputKind;
+    }
+
+    /**
+     * Set 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+     * @param OutputKind 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+     */
+    public void setOutputKind(String OutputKind) {
+        this.OutputKind = OutputKind;
     }
 
     /**
@@ -520,6 +550,22 @@ public class DescribeOutput extends AbstractModel {
         this.PidSelector = PidSelector;
     }
 
+    /**
+     * Get 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址 
+     * @return StreamUrls 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+     */
+    public StreamUrlDetail [] getStreamUrls() {
+        return this.StreamUrls;
+    }
+
+    /**
+     * Set 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+     * @param StreamUrls 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+     */
+    public void setStreamUrls(StreamUrlDetail [] StreamUrls) {
+        this.StreamUrls = StreamUrls;
+    }
+
     public DescribeOutput() {
     }
 
@@ -536,6 +582,9 @@ public class DescribeOutput extends AbstractModel {
         }
         if (source.OutputType != null) {
             this.OutputType = new String(source.OutputType);
+        }
+        if (source.OutputKind != null) {
+            this.OutputKind = new String(source.OutputKind);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -597,6 +646,12 @@ public class DescribeOutput extends AbstractModel {
         if (source.PidSelector != null) {
             this.PidSelector = new PidSelector(source.PidSelector);
         }
+        if (source.StreamUrls != null) {
+            this.StreamUrls = new StreamUrlDetail[source.StreamUrls.length];
+            for (int i = 0; i < source.StreamUrls.length; i++) {
+                this.StreamUrls[i] = new StreamUrlDetail(source.StreamUrls[i]);
+            }
+        }
     }
 
 
@@ -607,6 +662,7 @@ public class DescribeOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "OutputId", this.OutputId);
         this.setParamSimple(map, prefix + "OutputName", this.OutputName);
         this.setParamSimple(map, prefix + "OutputType", this.OutputType);
+        this.setParamSimple(map, prefix + "OutputKind", this.OutputKind);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamArrayObj(map, prefix + "OutputAddressList.", this.OutputAddressList);
@@ -623,6 +679,7 @@ public class DescribeOutput extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
         this.setParamObj(map, prefix + "PidSelector.", this.PidSelector);
+        this.setParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
 
     }
 }

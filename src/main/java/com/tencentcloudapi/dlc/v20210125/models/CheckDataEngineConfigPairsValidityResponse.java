@@ -32,7 +32,6 @@ public class CheckDataEngineConfigPairsValidityResponse extends AbstractModel {
 
     /**
     * 无效参数集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnavailableConfig")
     @Expose
@@ -62,10 +61,8 @@ public class CheckDataEngineConfigPairsValidityResponse extends AbstractModel {
     }
 
     /**
-     * Get 无效参数集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 无效参数集合 
      * @return UnavailableConfig 无效参数集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUnavailableConfig() {
         return this.UnavailableConfig;
@@ -73,9 +70,7 @@ public class CheckDataEngineConfigPairsValidityResponse extends AbstractModel {
 
     /**
      * Set 无效参数集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnavailableConfig 无效参数集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnavailableConfig(String [] UnavailableConfig) {
         this.UnavailableConfig = UnavailableConfig;

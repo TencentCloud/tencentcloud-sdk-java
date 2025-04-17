@@ -60,7 +60,6 @@ public class HbaConfig extends AbstractModel {
 
     /**
     * 是否遮盖
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mask")
     @Expose
@@ -147,10 +146,8 @@ public class HbaConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否遮盖
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否遮盖 
      * @return Mask 是否遮盖
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMask() {
         return this.Mask;
@@ -158,9 +155,7 @@ public class HbaConfig extends AbstractModel {
 
     /**
      * Set 是否遮盖
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mask 是否遮盖
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMask(String Mask) {
         this.Mask = Mask;

@@ -116,6 +116,14 @@ public class Vpc extends AbstractModel {
     private AssistantCidr [] AssistantCidrSet;
 
     /**
+    * 返回多运营商IPv6 Cidr Block
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6CidrBlockSet")
+    @Expose
+    private ISPIPv6CidrBlock [] Ipv6CidrBlockSet;
+
+    /**
      * Get `VPC`名称。 
      * @return VpcName `VPC`名称。
      */
@@ -327,6 +335,26 @@ public class Vpc extends AbstractModel {
         this.AssistantCidrSet = AssistantCidrSet;
     }
 
+    /**
+     * Get 返回多运营商IPv6 Cidr Block
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6CidrBlockSet 返回多运营商IPv6 Cidr Block
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ISPIPv6CidrBlock [] getIpv6CidrBlockSet() {
+        return this.Ipv6CidrBlockSet;
+    }
+
+    /**
+     * Set 返回多运营商IPv6 Cidr Block
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6CidrBlockSet 返回多运营商IPv6 Cidr Block
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6CidrBlockSet(ISPIPv6CidrBlock [] Ipv6CidrBlockSet) {
+        this.Ipv6CidrBlockSet = Ipv6CidrBlockSet;
+    }
+
     public Vpc() {
     }
 
@@ -383,6 +411,12 @@ public class Vpc extends AbstractModel {
                 this.AssistantCidrSet[i] = new AssistantCidr(source.AssistantCidrSet[i]);
             }
         }
+        if (source.Ipv6CidrBlockSet != null) {
+            this.Ipv6CidrBlockSet = new ISPIPv6CidrBlock[source.Ipv6CidrBlockSet.length];
+            for (int i = 0; i < source.Ipv6CidrBlockSet.length; i++) {
+                this.Ipv6CidrBlockSet[i] = new ISPIPv6CidrBlock(source.Ipv6CidrBlockSet[i]);
+            }
+        }
     }
 
 
@@ -403,6 +437,7 @@ public class Vpc extends AbstractModel {
         this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArrayObj(map, prefix + "AssistantCidrSet.", this.AssistantCidrSet);
+        this.setParamArrayObj(map, prefix + "Ipv6CidrBlockSet.", this.Ipv6CidrBlockSet);
 
     }
 }

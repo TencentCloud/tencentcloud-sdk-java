@@ -94,6 +94,24 @@ public class LicenseBindDetail extends AbstractModel {
     private MachineExtraInfo MachineExtraInfo;
 
     /**
+    * <li> RUNNING 运行中</li>
+<li> STOPPED 已关机</li>
+<li> EXPIRED 待回收</li>
+    */
+    @SerializedName("InstanceState")
+    @Expose
+    private String InstanceState;
+
+    /**
+    * <li>ONLINE 已离线 </li>
+<li>OFFLINE 防护中</li>
+<li>UNINSTALLED 未安装客户端</li>
+    */
+    @SerializedName("AgentState")
+    @Expose
+    private String AgentState;
+
+    /**
      * Get 机器别名 
      * @return MachineName 机器别名
      */
@@ -253,6 +271,54 @@ public class LicenseBindDetail extends AbstractModel {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
+    /**
+     * Get <li> RUNNING 运行中</li>
+<li> STOPPED 已关机</li>
+<li> EXPIRED 待回收</li> 
+     * @return InstanceState <li> RUNNING 运行中</li>
+<li> STOPPED 已关机</li>
+<li> EXPIRED 待回收</li>
+     */
+    public String getInstanceState() {
+        return this.InstanceState;
+    }
+
+    /**
+     * Set <li> RUNNING 运行中</li>
+<li> STOPPED 已关机</li>
+<li> EXPIRED 待回收</li>
+     * @param InstanceState <li> RUNNING 运行中</li>
+<li> STOPPED 已关机</li>
+<li> EXPIRED 待回收</li>
+     */
+    public void setInstanceState(String InstanceState) {
+        this.InstanceState = InstanceState;
+    }
+
+    /**
+     * Get <li>ONLINE 已离线 </li>
+<li>OFFLINE 防护中</li>
+<li>UNINSTALLED 未安装客户端</li> 
+     * @return AgentState <li>ONLINE 已离线 </li>
+<li>OFFLINE 防护中</li>
+<li>UNINSTALLED 未安装客户端</li>
+     */
+    public String getAgentState() {
+        return this.AgentState;
+    }
+
+    /**
+     * Set <li>ONLINE 已离线 </li>
+<li>OFFLINE 防护中</li>
+<li>UNINSTALLED 未安装客户端</li>
+     * @param AgentState <li>ONLINE 已离线 </li>
+<li>OFFLINE 防护中</li>
+<li>UNINSTALLED 未安装客户端</li>
+     */
+    public void setAgentState(String AgentState) {
+        this.AgentState = AgentState;
+    }
+
     public LicenseBindDetail() {
     }
 
@@ -294,6 +360,12 @@ public class LicenseBindDetail extends AbstractModel {
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.InstanceState != null) {
+            this.InstanceState = new String(source.InstanceState);
+        }
+        if (source.AgentState != null) {
+            this.AgentState = new String(source.AgentState);
+        }
     }
 
 
@@ -311,6 +383,8 @@ public class LicenseBindDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "IsUnBind", this.IsUnBind);
         this.setParamSimple(map, prefix + "IsSwitchBind", this.IsSwitchBind);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
+        this.setParamSimple(map, prefix + "AgentState", this.AgentState);
 
     }
 }

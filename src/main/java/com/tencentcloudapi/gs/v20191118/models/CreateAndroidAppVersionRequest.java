@@ -38,6 +38,13 @@ public class CreateAndroidAppVersionRequest extends AbstractModel {
     private String DownloadUrl;
 
     /**
+    * shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+    */
+    @SerializedName("Command")
+    @Expose
+    private String Command;
+
+    /**
      * Get 应用ID 
      * @return AndroidAppId 应用ID
      */
@@ -69,6 +76,22 @@ public class CreateAndroidAppVersionRequest extends AbstractModel {
         this.DownloadUrl = DownloadUrl;
     }
 
+    /**
+     * Get shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效） 
+     * @return Command shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     */
+    public String getCommand() {
+        return this.Command;
+    }
+
+    /**
+     * Set shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @param Command shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     */
+    public void setCommand(String Command) {
+        this.Command = Command;
+    }
+
     public CreateAndroidAppVersionRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateAndroidAppVersionRequest extends AbstractModel {
         if (source.DownloadUrl != null) {
             this.DownloadUrl = new String(source.DownloadUrl);
         }
+        if (source.Command != null) {
+            this.Command = new String(source.Command);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateAndroidAppVersionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AndroidAppId", this.AndroidAppId);
         this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamSimple(map, prefix + "Command", this.Command);
 
     }
 }

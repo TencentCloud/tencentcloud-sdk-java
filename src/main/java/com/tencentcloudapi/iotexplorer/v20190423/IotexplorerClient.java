@@ -1051,6 +1051,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *拉取 TWeSee 配置
+     * @param req DescribeTWeSeeConfigRequest
+     * @return DescribeTWeSeeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTWeSeeConfigResponse DescribeTWeSeeConfig(DescribeTWeSeeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTWeSeeConfig", DescribeTWeSeeConfigResponse.class);
+    }
+
+    /**
      *本接口（DescribeTopicPolicy）用于查看Topic详细信息
      * @param req DescribeTopicPolicyRequest
      * @return DescribeTopicPolicyResponse
@@ -1348,6 +1359,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *视频语义搜索
+     * @param req InvokeAISearchServiceRequest
+     * @return InvokeAISearchServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InvokeAISearchServiceResponse InvokeAISearchService(InvokeAISearchServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InvokeAISearchService", InvokeAISearchServiceResponse.class);
+    }
+
+    /**
      *同步执行设备云存 AI 分析任务
      * @param req InvokeCloudStorageAIServiceTaskRequest
      * @return InvokeCloudStorageAIServiceTaskResponse
@@ -1554,6 +1576,17 @@ public class IotexplorerClient extends AbstractClient{
     public ModifyStudioProductResponse ModifyStudioProduct(ModifyStudioProductRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyStudioProduct", ModifyStudioProductResponse.class);
+    }
+
+    /**
+     *修改 TWeSee 配置
+     * @param req ModifyTWeSeeConfigRequest
+     * @return ModifyTWeSeeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTWeSeeConfigResponse ModifyTWeSeeConfig(ModifyTWeSeeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTWeSeeConfig", ModifyTWeSeeConfigResponse.class);
     }
 
     /**

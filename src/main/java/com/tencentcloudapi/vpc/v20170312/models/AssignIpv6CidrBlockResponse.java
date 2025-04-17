@@ -31,6 +31,13 @@ public class AssignIpv6CidrBlockResponse extends AbstractModel {
     private String Ipv6CidrBlock;
 
     /**
+    * 申请IPv6 Cidr 的类型，`GUA`,  `ULA`
+    */
+    @SerializedName("AddressType")
+    @Expose
+    private String AddressType;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class AssignIpv6CidrBlockResponse extends AbstractModel {
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
         this.Ipv6CidrBlock = Ipv6CidrBlock;
+    }
+
+    /**
+     * Get 申请IPv6 Cidr 的类型，`GUA`,  `ULA` 
+     * @return AddressType 申请IPv6 Cidr 的类型，`GUA`,  `ULA`
+     */
+    public String getAddressType() {
+        return this.AddressType;
+    }
+
+    /**
+     * Set 申请IPv6 Cidr 的类型，`GUA`,  `ULA`
+     * @param AddressType 申请IPv6 Cidr 的类型，`GUA`,  `ULA`
+     */
+    public void setAddressType(String AddressType) {
+        this.AddressType = AddressType;
     }
 
     /**
@@ -80,6 +103,9 @@ public class AssignIpv6CidrBlockResponse extends AbstractModel {
         if (source.Ipv6CidrBlock != null) {
             this.Ipv6CidrBlock = new String(source.Ipv6CidrBlock);
         }
+        if (source.AddressType != null) {
+            this.AddressType = new String(source.AddressType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class AssignIpv6CidrBlockResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
+        this.setParamSimple(map, prefix + "AddressType", this.AddressType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

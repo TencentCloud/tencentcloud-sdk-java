@@ -60,7 +60,6 @@ public class InstanceOperation extends AbstractModel {
 
     /**
     * 操作结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -68,7 +67,6 @@ public class InstanceOperation extends AbstractModel {
 
     /**
     * 操作上下文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Context")
     @Expose
@@ -76,7 +74,6 @@ public class InstanceOperation extends AbstractModel {
 
     /**
     * 操作更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -84,7 +81,6 @@ public class InstanceOperation extends AbstractModel {
 
     /**
     * 操作UIN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -171,10 +167,8 @@ public class InstanceOperation extends AbstractModel {
     }
 
     /**
-     * Get 操作结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作结束时间 
      * @return EndTime 操作结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -182,19 +176,15 @@ public class InstanceOperation extends AbstractModel {
 
     /**
      * Set 操作结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 操作结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 操作上下文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作上下文 
      * @return Context 操作上下文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContext() {
         return this.Context;
@@ -202,19 +192,15 @@ public class InstanceOperation extends AbstractModel {
 
     /**
      * Set 操作上下文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Context 操作上下文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get 操作更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作更新时间 
      * @return UpdateTime 操作更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -222,19 +208,15 @@ public class InstanceOperation extends AbstractModel {
 
     /**
      * Set 操作更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 操作更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 操作UIN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作UIN 
      * @return Uin 操作UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -242,9 +224,7 @@ public class InstanceOperation extends AbstractModel {
 
     /**
      * Set 操作UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 操作UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;

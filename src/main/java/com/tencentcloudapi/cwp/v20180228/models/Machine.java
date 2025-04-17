@@ -38,15 +38,25 @@ public class Machine extends AbstractModel {
     private String MachineOs;
 
     /**
-    * 主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li>
+    * 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
     */
     @SerializedName("MachineStatus")
     @Expose
     private String MachineStatus;
+
+    /**
+    * ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+    */
+    @SerializedName("AgentStatus")
+    @Expose
+    private String AgentStatus;
+
+    /**
+    * RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+    */
+    @SerializedName("InstanceStatus")
+    @Expose
+    private String InstanceStatus;
 
     /**
     * 主机安全Uuid，若客户端长时间不在线将返回空字符。
@@ -284,35 +294,51 @@ public class Machine extends AbstractModel {
     }
 
     /**
-     * Get 主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li> 
-     * @return MachineStatus 主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li>
+     * Get 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	 
+     * @return MachineStatus 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
      */
     public String getMachineStatus() {
         return this.MachineStatus;
     }
 
     /**
-     * Set 主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li>
-     * @param MachineStatus 主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li>
+     * Set 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
+     * @param MachineStatus 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
+    }
+
+    /**
+     * Get ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装 
+     * @return AgentStatus ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+     */
+    public String getAgentStatus() {
+        return this.AgentStatus;
+    }
+
+    /**
+     * Set ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+     * @param AgentStatus ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+     */
+    public void setAgentStatus(String AgentStatus) {
+        this.AgentStatus = AgentStatus;
+    }
+
+    /**
+     * Get RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	 
+     * @return InstanceStatus RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+     */
+    public String getInstanceStatus() {
+        return this.InstanceStatus;
+    }
+
+    /**
+     * Set RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+     * @param InstanceStatus RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+     */
+    public void setInstanceStatus(String InstanceStatus) {
+        this.InstanceStatus = InstanceStatus;
     }
 
     /**
@@ -808,6 +834,12 @@ public class Machine extends AbstractModel {
         if (source.MachineStatus != null) {
             this.MachineStatus = new String(source.MachineStatus);
         }
+        if (source.AgentStatus != null) {
+            this.AgentStatus = new String(source.AgentStatus);
+        }
+        if (source.InstanceStatus != null) {
+            this.InstanceStatus = new String(source.InstanceStatus);
+        }
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
@@ -908,6 +940,8 @@ public class Machine extends AbstractModel {
         this.setParamSimple(map, prefix + "MachineName", this.MachineName);
         this.setParamSimple(map, prefix + "MachineOs", this.MachineOs);
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
+        this.setParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
+        this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "VulNum", this.VulNum);

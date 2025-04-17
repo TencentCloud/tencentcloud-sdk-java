@@ -25,7 +25,6 @@ public class DescribeCustomHeaderResponse extends AbstractModel {
 
     /**
     * 规则id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCustomHeaderResponse extends AbstractModel {
 
     /**
     * 自定义header列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Headers")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeCustomHeaderResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 规则id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则id 
      * @return RuleId 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleId() {
         return this.RuleId;
@@ -58,19 +54,15 @@ public class DescribeCustomHeaderResponse extends AbstractModel {
 
     /**
      * Set 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 自定义header列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义header列表 
      * @return Headers 自定义header列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HttpHeaderParam [] getHeaders() {
         return this.Headers;
@@ -78,9 +70,7 @@ public class DescribeCustomHeaderResponse extends AbstractModel {
 
     /**
      * Set 自定义header列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Headers 自定义header列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeaders(HttpHeaderParam [] Headers) {
         this.Headers = Headers;

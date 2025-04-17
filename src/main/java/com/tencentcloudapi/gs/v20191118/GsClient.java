@@ -351,6 +351,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *修改安卓应用版本
+     * @param req ModifyAndroidAppVersionRequest
+     * @return ModifyAndroidAppVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAndroidAppVersionResponse ModifyAndroidAppVersion(ModifyAndroidAppVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAndroidAppVersion", ModifyAndroidAppVersionResponse.class);
+    }
+
+    /**
      *修改安卓实例的信息
      * @param req ModifyAndroidInstanceInformationRequest
      * @return ModifyAndroidInstanceInformationResponse
@@ -381,6 +392,17 @@ public class GsClient extends AbstractClient{
     public ModifyAndroidInstancesLabelsResponse ModifyAndroidInstancesLabels(ModifyAndroidInstancesLabelsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAndroidInstancesLabels", ModifyAndroidInstancesLabelsResponse.class);
+    }
+
+    /**
+     *修改安卓实例分辨率。需要注意的是该接口需要重启才能生效。
+     * @param req ModifyAndroidInstancesResolutionRequest
+     * @return ModifyAndroidInstancesResolutionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAndroidInstancesResolutionResponse ModifyAndroidInstancesResolution(ModifyAndroidInstancesResolutionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAndroidInstancesResolution", ModifyAndroidInstancesResolutionResponse.class);
     }
 
     /**

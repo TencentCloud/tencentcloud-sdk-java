@@ -32,7 +32,6 @@ public class DescribeProxyGroupListResponse extends AbstractModel {
 
     /**
     * 通道组列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyGroupList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeProxyGroupListResponse extends AbstractModel {
     }
 
     /**
-     * Get 通道组列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道组列表。 
      * @return ProxyGroupList 通道组列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyGroupInfo [] getProxyGroupList() {
         return this.ProxyGroupList;
@@ -73,9 +70,7 @@ public class DescribeProxyGroupListResponse extends AbstractModel {
 
     /**
      * Set 通道组列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyGroupList 通道组列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyGroupList(ProxyGroupInfo [] ProxyGroupList) {
         this.ProxyGroupList = ProxyGroupList;

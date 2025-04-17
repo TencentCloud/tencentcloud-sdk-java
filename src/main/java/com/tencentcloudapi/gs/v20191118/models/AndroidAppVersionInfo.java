@@ -47,6 +47,13 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
     private String CreateTime;
 
     /**
+    * shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+    */
+    @SerializedName("Command")
+    @Expose
+    private String Command;
+
+    /**
      * Get 安卓应用版本 
      * @return AndroidAppVersion 安卓应用版本
      */
@@ -102,6 +109,22 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效） 
+     * @return Command shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     */
+    public String getCommand() {
+        return this.Command;
+    }
+
+    /**
+     * Set shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @param Command shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     */
+    public void setCommand(String Command) {
+        this.Command = Command;
+    }
+
     public AndroidAppVersionInfo() {
     }
 
@@ -119,6 +142,9 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.Command != null) {
+            this.Command = new String(source.Command);
+        }
     }
 
 
@@ -129,6 +155,7 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         this.setParamSimple(map, prefix + "AndroidAppVersion", this.AndroidAppVersion);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Command", this.Command);
 
     }
 }

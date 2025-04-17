@@ -186,6 +186,13 @@ POSTPAID_BY_HOUR 按量计费
     private EncodedStartCmdInfo EncodedStartCmdInfo;
 
     /**
+    * 代码仓库配置
+    */
+    @SerializedName("CodeRepos")
+    @Expose
+    private CodeRepoConfig [] CodeRepos;
+
+    /**
      * Get 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
      * @return Name 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
@@ -557,6 +564,22 @@ POSTPAID_BY_HOUR 按量计费
         this.EncodedStartCmdInfo = EncodedStartCmdInfo;
     }
 
+    /**
+     * Get 代码仓库配置 
+     * @return CodeRepos 代码仓库配置
+     */
+    public CodeRepoConfig [] getCodeRepos() {
+        return this.CodeRepos;
+    }
+
+    /**
+     * Set 代码仓库配置
+     * @param CodeRepos 代码仓库配置
+     */
+    public void setCodeRepos(CodeRepoConfig [] CodeRepos) {
+        this.CodeRepos = CodeRepos;
+    }
+
     public CreateTrainingTaskRequest() {
     }
 
@@ -643,6 +666,12 @@ POSTPAID_BY_HOUR 按量计费
         if (source.EncodedStartCmdInfo != null) {
             this.EncodedStartCmdInfo = new EncodedStartCmdInfo(source.EncodedStartCmdInfo);
         }
+        if (source.CodeRepos != null) {
+            this.CodeRepos = new CodeRepoConfig[source.CodeRepos.length];
+            for (int i = 0; i < source.CodeRepos.length; i++) {
+                this.CodeRepos[i] = new CodeRepoConfig(source.CodeRepos[i]);
+            }
+        }
     }
 
 
@@ -673,6 +702,7 @@ POSTPAID_BY_HOUR 按量计费
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamObj(map, prefix + "EncodedStartCmdInfo.", this.EncodedStartCmdInfo);
+        this.setParamArrayObj(map, prefix + "CodeRepos.", this.CodeRepos);
 
     }
 }

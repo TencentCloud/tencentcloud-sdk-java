@@ -77,7 +77,7 @@ public class Ipv6Address extends AbstractModel {
     private String PublicIpAddress;
 
     /**
-    * `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
+    * `IPv6`地址的类型: `GUA`(全球单播地址), `ULA`(唯一本地地址)
     */
     @SerializedName("AddressType")
     @Expose
@@ -212,16 +212,16 @@ public class Ipv6Address extends AbstractModel {
     }
 
     /**
-     * Get `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址) 
-     * @return AddressType `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
+     * Get `IPv6`地址的类型: `GUA`(全球单播地址), `ULA`(唯一本地地址) 
+     * @return AddressType `IPv6`地址的类型: `GUA`(全球单播地址), `ULA`(唯一本地地址)
      */
     public String getAddressType() {
         return this.AddressType;
     }
 
     /**
-     * Set `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
-     * @param AddressType `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
+     * Set `IPv6`地址的类型: `GUA`(全球单播地址), `ULA`(唯一本地地址)
+     * @param AddressType `IPv6`地址的类型: `GUA`(全球单播地址), `ULA`(唯一本地地址)
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;

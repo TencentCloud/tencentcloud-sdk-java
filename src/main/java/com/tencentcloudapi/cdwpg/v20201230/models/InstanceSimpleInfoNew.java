@@ -60,7 +60,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -68,7 +67,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 地域详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionDesc")
     @Expose
@@ -83,7 +81,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 地区id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -91,7 +88,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 地区详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneDesc")
     @Expose
@@ -127,7 +123,6 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
     * 访问地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessInfo")
     @Expose
@@ -228,10 +223,8 @@ public class InstanceSimpleInfoNew extends AbstractModel {
     }
 
     /**
-     * Get 地域Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域Id 
      * @return RegionId 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -239,19 +232,15 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 地域详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域详情 
      * @return RegionDesc 地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionDesc() {
         return this.RegionDesc;
@@ -259,9 +248,7 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionDesc 地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionDesc(String RegionDesc) {
         this.RegionDesc = RegionDesc;
@@ -284,10 +271,8 @@ public class InstanceSimpleInfoNew extends AbstractModel {
     }
 
     /**
-     * Get 地区id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地区id 
      * @return ZoneId 地区id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -295,19 +280,15 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 地区id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 地区id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 地区详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地区详情 
      * @return ZoneDesc 地区详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneDesc() {
         return this.ZoneDesc;
@@ -315,9 +296,7 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 地区详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneDesc 地区详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneDesc(String ZoneDesc) {
         this.ZoneDesc = ZoneDesc;
@@ -388,10 +367,8 @@ public class InstanceSimpleInfoNew extends AbstractModel {
     }
 
     /**
-     * Get 访问地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问地址 
      * @return AccessInfo 访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessInfo() {
         return this.AccessInfo;
@@ -399,9 +376,7 @@ public class InstanceSimpleInfoNew extends AbstractModel {
 
     /**
      * Set 访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessInfo 访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessInfo(String AccessInfo) {
         this.AccessInfo = AccessInfo;

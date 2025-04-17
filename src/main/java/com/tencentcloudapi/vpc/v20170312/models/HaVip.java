@@ -104,7 +104,6 @@ public class HaVip extends AbstractModel {
 
     /**
     * `HAVIP`的飘移范围。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HaVipAssociationSet")
     @Expose
@@ -112,7 +111,6 @@ public class HaVip extends AbstractModel {
 
     /**
     * 是否开启`HAVIP`的飘移范围校验。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckAssociate")
     @Expose
@@ -120,7 +118,6 @@ public class HaVip extends AbstractModel {
 
     /**
     * CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
     @Expose
@@ -128,7 +125,6 @@ public class HaVip extends AbstractModel {
 
     /**
     * HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlushedTime")
     @Expose
@@ -136,7 +132,6 @@ public class HaVip extends AbstractModel {
 
     /**
     * 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -327,10 +322,8 @@ public class HaVip extends AbstractModel {
     }
 
     /**
-     * Get `HAVIP`的飘移范围。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get `HAVIP`的飘移范围。 
      * @return HaVipAssociationSet `HAVIP`的飘移范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HaVipAssociation [] getHaVipAssociationSet() {
         return this.HaVipAssociationSet;
@@ -338,19 +331,15 @@ public class HaVip extends AbstractModel {
 
     /**
      * Set `HAVIP`的飘移范围。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HaVipAssociationSet `HAVIP`的飘移范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHaVipAssociationSet(HaVipAssociation [] HaVipAssociationSet) {
         this.HaVipAssociationSet = HaVipAssociationSet;
     }
 
     /**
-     * Get 是否开启`HAVIP`的飘移范围校验。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启`HAVIP`的飘移范围校验。 
      * @return CheckAssociate 是否开启`HAVIP`的飘移范围校验。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCheckAssociate() {
         return this.CheckAssociate;
@@ -358,19 +347,15 @@ public class HaVip extends AbstractModel {
 
     /**
      * Set 是否开启`HAVIP`的飘移范围校验。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckAssociate 是否开启`HAVIP`的飘移范围校验。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckAssociate(Boolean CheckAssociate) {
         this.CheckAssociate = CheckAssociate;
     }
 
     /**
-     * Get CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CDC实例ID。 
      * @return CdcId CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
         return this.CdcId;
@@ -378,19 +363,15 @@ public class HaVip extends AbstractModel {
 
     /**
      * Set CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00 
      * @return FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlushedTime() {
         return this.FlushedTime;
@@ -398,19 +379,15 @@ public class HaVip extends AbstractModel {
 
     /**
      * Set HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlushedTime(String FlushedTime) {
         this.FlushedTime = FlushedTime;
     }
 
     /**
-     * Get 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签键值对。	 
      * @return TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagSet() {
         return this.TagSet;
@@ -418,9 +395,7 @@ public class HaVip extends AbstractModel {
 
     /**
      * Set 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;

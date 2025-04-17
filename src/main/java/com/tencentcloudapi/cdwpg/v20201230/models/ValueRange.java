@@ -39,7 +39,6 @@ public class ValueRange extends AbstractModel {
 
     /**
     * type 取enum的时候，返回参数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enum")
     @Expose
@@ -47,7 +46,6 @@ public class ValueRange extends AbstractModel {
 
     /**
     * type 取string的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("String")
     @Expose
@@ -86,10 +84,8 @@ public class ValueRange extends AbstractModel {
     }
 
     /**
-     * Get type 取enum的时候，返回参数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get type 取enum的时候，返回参数值 
      * @return Enum type 取enum的时候，返回参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getEnum() {
         return this.Enum;
@@ -97,19 +93,15 @@ public class ValueRange extends AbstractModel {
 
     /**
      * Set type 取enum的时候，返回参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enum type 取enum的时候，返回参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnum(String [] Enum) {
         this.Enum = Enum;
     }
 
     /**
-     * Get type 取string的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get type 取string的时候，返回的参数值 
      * @return String type 取string的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getString() {
         return this.String;
@@ -117,9 +109,7 @@ public class ValueRange extends AbstractModel {
 
     /**
      * Set type 取string的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param String type 取string的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setString(String String) {
         this.String = String;

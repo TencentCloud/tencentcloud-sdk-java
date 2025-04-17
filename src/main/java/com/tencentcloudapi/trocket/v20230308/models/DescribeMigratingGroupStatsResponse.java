@@ -25,7 +25,6 @@ public class DescribeMigratingGroupStatsResponse extends AbstractModel {
 
     /**
     * 源集群消费组堆积
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceConsumeLag")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeMigratingGroupStatsResponse extends AbstractModel {
 
     /**
     * 目标集群消费组堆积
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetConsumeLag")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeMigratingGroupStatsResponse extends AbstractModel {
 
     /**
     * 源集群连接客户端列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceConsumerClients")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeMigratingGroupStatsResponse extends AbstractModel {
 
     /**
     * 目标集群连接客户端列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetConsumerClients")
     @Expose
@@ -63,10 +59,8 @@ public class DescribeMigratingGroupStatsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 源集群消费组堆积
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源集群消费组堆积 
      * @return SourceConsumeLag 源集群消费组堆积
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSourceConsumeLag() {
         return this.SourceConsumeLag;
@@ -74,19 +68,15 @@ public class DescribeMigratingGroupStatsResponse extends AbstractModel {
 
     /**
      * Set 源集群消费组堆积
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceConsumeLag 源集群消费组堆积
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceConsumeLag(Long SourceConsumeLag) {
         this.SourceConsumeLag = SourceConsumeLag;
     }
 
     /**
-     * Get 目标集群消费组堆积
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标集群消费组堆积 
      * @return TargetConsumeLag 目标集群消费组堆积
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetConsumeLag() {
         return this.TargetConsumeLag;
@@ -94,19 +84,15 @@ public class DescribeMigratingGroupStatsResponse extends AbstractModel {
 
     /**
      * Set 目标集群消费组堆积
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetConsumeLag 目标集群消费组堆积
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetConsumeLag(Long TargetConsumeLag) {
         this.TargetConsumeLag = TargetConsumeLag;
     }
 
     /**
-     * Get 源集群连接客户端列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源集群连接客户端列表 
      * @return SourceConsumerClients 源集群连接客户端列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsumerClient [] getSourceConsumerClients() {
         return this.SourceConsumerClients;
@@ -114,19 +100,15 @@ public class DescribeMigratingGroupStatsResponse extends AbstractModel {
 
     /**
      * Set 源集群连接客户端列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceConsumerClients 源集群连接客户端列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceConsumerClients(ConsumerClient [] SourceConsumerClients) {
         this.SourceConsumerClients = SourceConsumerClients;
     }
 
     /**
-     * Get 目标集群连接客户端列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标集群连接客户端列表 
      * @return TargetConsumerClients 目标集群连接客户端列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsumerClient [] getTargetConsumerClients() {
         return this.TargetConsumerClients;
@@ -134,9 +116,7 @@ public class DescribeMigratingGroupStatsResponse extends AbstractModel {
 
     /**
      * Set 目标集群连接客户端列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetConsumerClients 目标集群连接客户端列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetConsumerClients(ConsumerClient [] TargetConsumerClients) {
         this.TargetConsumerClients = TargetConsumerClients;

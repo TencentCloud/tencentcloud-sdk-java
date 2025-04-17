@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.gs.v20191118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceLoginKeyPairAttributeResponse extends AbstractModel {
-
-    /**
-    * 是否允许使用默认密钥对登录，YES：允许登录 NO：禁止登录。
-    */
-    @SerializedName("PermitLogin")
-    @Expose
-    private String PermitLogin;
+public class ModifyAndroidAppVersionResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class DescribeInstanceLoginKeyPairAttributeResponse extends AbstractModel
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 是否允许使用默认密钥对登录，YES：允许登录 NO：禁止登录。 
-     * @return PermitLogin 是否允许使用默认密钥对登录，YES：允许登录 NO：禁止登录。
-     */
-    public String getPermitLogin() {
-        return this.PermitLogin;
-    }
-
-    /**
-     * Set 是否允许使用默认密钥对登录，YES：允许登录 NO：禁止登录。
-     * @param PermitLogin 是否允许使用默认密钥对登录，YES：允许登录 NO：禁止登录。
-     */
-    public void setPermitLogin(String PermitLogin) {
-        this.PermitLogin = PermitLogin;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,17 +46,14 @@ public class DescribeInstanceLoginKeyPairAttributeResponse extends AbstractModel
         this.RequestId = RequestId;
     }
 
-    public DescribeInstanceLoginKeyPairAttributeResponse() {
+    public ModifyAndroidAppVersionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeInstanceLoginKeyPairAttributeResponse(DescribeInstanceLoginKeyPairAttributeResponse source) {
-        if (source.PermitLogin != null) {
-            this.PermitLogin = new String(source.PermitLogin);
-        }
+    public ModifyAndroidAppVersionResponse(ModifyAndroidAppVersionResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,7 +64,6 @@ public class DescribeInstanceLoginKeyPairAttributeResponse extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PermitLogin", this.PermitLogin);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateFlowLogRequest extends AbstractModel {
 
     /**
-    * 流日志实例名字。
+    * 流日志实例名字。长度为不超过60个字节。
     */
     @SerializedName("FlowLogName")
     @Expose
     private String FlowLogName;
 
     /**
-    * 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+    * 流日志所属资源类型，VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC， SUBNET，CCN，DCG时，请通过工单加入白名单。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -45,14 +45,14 @@ public class CreateFlowLogRequest extends AbstractModel {
     private String ResourceId;
 
     /**
-    * 流日志采集类型，ACCEPT|REJECT|ALL。
+    * 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
     */
     @SerializedName("TrafficType")
     @Expose
     private String TrafficType;
 
     /**
-    * 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
+    * 私用网络唯一ID。当ResourceType为CCN时不填，其他类型必填。
     */
     @SerializedName("VpcId")
     @Expose
@@ -66,7 +66,9 @@ public class CreateFlowLogRequest extends AbstractModel {
     private String FlowLogDescription;
 
     /**
-    * 流日志存储ID。
+    * 流日志存储ID（cls的日志主题ID，
+可通过[DescribeTopics](https://cloud.tencent.com/document/api/1179/46086)接口获取。
+）。当StorageType为cls时，CloudLogId为必选。
     */
     @SerializedName("CloudLogId")
     @Expose
@@ -80,7 +82,7 @@ public class CreateFlowLogRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 消费端类型：cls、ckafka。默认值cls。
+    * 消费端类型：cls、ckafka。默认值cls。当选择kafka时，请通过工单加入白名单。
     */
     @SerializedName("StorageType")
     @Expose
@@ -101,32 +103,32 @@ public class CreateFlowLogRequest extends AbstractModel {
     private String CloudLogRegion;
 
     /**
-     * Get 流日志实例名字。 
-     * @return FlowLogName 流日志实例名字。
+     * Get 流日志实例名字。长度为不超过60个字节。 
+     * @return FlowLogName 流日志实例名字。长度为不超过60个字节。
      */
     public String getFlowLogName() {
         return this.FlowLogName;
     }
 
     /**
-     * Set 流日志实例名字。
-     * @param FlowLogName 流日志实例名字。
+     * Set 流日志实例名字。长度为不超过60个字节。
+     * @param FlowLogName 流日志实例名字。长度为不超过60个字节。
      */
     public void setFlowLogName(String FlowLogName) {
         this.FlowLogName = FlowLogName;
     }
 
     /**
-     * Get 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。 
-     * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+     * Get 流日志所属资源类型，VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC， SUBNET，CCN，DCG时，请通过工单加入白名单。 
+     * @return ResourceType 流日志所属资源类型，VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC， SUBNET，CCN，DCG时，请通过工单加入白名单。
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
-     * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+     * Set 流日志所属资源类型，VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC， SUBNET，CCN，DCG时，请通过工单加入白名单。
+     * @param ResourceType 流日志所属资源类型，VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC， SUBNET，CCN，DCG时，请通过工单加入白名单。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -149,32 +151,32 @@ public class CreateFlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 流日志采集类型，ACCEPT|REJECT|ALL。 
-     * @return TrafficType 流日志采集类型，ACCEPT|REJECT|ALL。
+     * Get 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。 
+     * @return TrafficType 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
      */
     public String getTrafficType() {
         return this.TrafficType;
     }
 
     /**
-     * Set 流日志采集类型，ACCEPT|REJECT|ALL。
-     * @param TrafficType 流日志采集类型，ACCEPT|REJECT|ALL。
+     * Set 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
+     * @param TrafficType 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
      */
     public void setTrafficType(String TrafficType) {
         this.TrafficType = TrafficType;
     }
 
     /**
-     * Get 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。 
-     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
+     * Get 私用网络唯一ID。当ResourceType为CCN时不填，其他类型必填。 
+     * @return VpcId 私用网络唯一ID。当ResourceType为CCN时不填，其他类型必填。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
-     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
+     * Set 私用网络唯一ID。当ResourceType为CCN时不填，其他类型必填。
+     * @param VpcId 私用网络唯一ID。当ResourceType为CCN时不填，其他类型必填。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -197,16 +199,24 @@ public class CreateFlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 流日志存储ID。 
-     * @return CloudLogId 流日志存储ID。
+     * Get 流日志存储ID（cls的日志主题ID，
+可通过[DescribeTopics](https://cloud.tencent.com/document/api/1179/46086)接口获取。
+）。当StorageType为cls时，CloudLogId为必选。 
+     * @return CloudLogId 流日志存储ID（cls的日志主题ID，
+可通过[DescribeTopics](https://cloud.tencent.com/document/api/1179/46086)接口获取。
+）。当StorageType为cls时，CloudLogId为必选。
      */
     public String getCloudLogId() {
         return this.CloudLogId;
     }
 
     /**
-     * Set 流日志存储ID。
-     * @param CloudLogId 流日志存储ID。
+     * Set 流日志存储ID（cls的日志主题ID，
+可通过[DescribeTopics](https://cloud.tencent.com/document/api/1179/46086)接口获取。
+）。当StorageType为cls时，CloudLogId为必选。
+     * @param CloudLogId 流日志存储ID（cls的日志主题ID，
+可通过[DescribeTopics](https://cloud.tencent.com/document/api/1179/46086)接口获取。
+）。当StorageType为cls时，CloudLogId为必选。
      */
     public void setCloudLogId(String CloudLogId) {
         this.CloudLogId = CloudLogId;
@@ -229,16 +239,16 @@ public class CreateFlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 消费端类型：cls、ckafka。默认值cls。 
-     * @return StorageType 消费端类型：cls、ckafka。默认值cls。
+     * Get 消费端类型：cls、ckafka。默认值cls。当选择kafka时，请通过工单加入白名单。 
+     * @return StorageType 消费端类型：cls、ckafka。默认值cls。当选择kafka时，请通过工单加入白名单。
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 消费端类型：cls、ckafka。默认值cls。
-     * @param StorageType 消费端类型：cls、ckafka。默认值cls。
+     * Set 消费端类型：cls、ckafka。默认值cls。当选择kafka时，请通过工单加入白名单。
+     * @param StorageType 消费端类型：cls、ckafka。默认值cls。当选择kafka时，请通过工单加入白名单。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
