@@ -52,6 +52,13 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
     private String [] InstanceTypeLst;
 
     /**
+    * 串行模式开关个数
+    */
+    @SerializedName("SerilCount")
+    @Expose
+    private Long SerilCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +130,22 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
     }
 
     /**
+     * Get 串行模式开关个数 
+     * @return SerilCount 串行模式开关个数
+     */
+    public Long getSerilCount() {
+        return this.SerilCount;
+    }
+
+    /**
+     * Set 串行模式开关个数
+     * @param SerilCount 串行模式开关个数
+     */
+    public void setSerilCount(Long SerilCount) {
+        this.SerilCount = SerilCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -167,6 +190,9 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
                 this.InstanceTypeLst[i] = new String(source.InstanceTypeLst[i]);
             }
         }
+        if (source.SerilCount != null) {
+            this.SerilCount = new Long(source.SerilCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -181,6 +207,7 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamArraySimple(map, prefix + "RegionLst.", this.RegionLst);
         this.setParamArraySimple(map, prefix + "InstanceTypeLst.", this.InstanceTypeLst);
+        this.setParamSimple(map, prefix + "SerilCount", this.SerilCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

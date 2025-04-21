@@ -25,7 +25,6 @@ public class WebPage extends AbstractModel {
 
     /**
     * 标题
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Title")
     @Expose
@@ -33,7 +32,6 @@ public class WebPage extends AbstractModel {
 
     /**
     * url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -64,10 +62,8 @@ public class WebPage extends AbstractModel {
     private String Content;
 
     /**
-     * Get 标题
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标题 
      * @return Title 标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTitle() {
         return this.Title;
@@ -75,19 +71,15 @@ public class WebPage extends AbstractModel {
 
     /**
      * Set 标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Title 标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get url 
      * @return Url url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -95,9 +87,7 @@ public class WebPage extends AbstractModel {
 
     /**
      * Set url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

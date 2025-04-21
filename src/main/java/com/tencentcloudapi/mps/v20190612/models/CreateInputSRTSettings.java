@@ -38,7 +38,7 @@ public class CreateInputSRTSettings extends AbstractModel {
     private String StreamId;
 
     /**
-    * 延迟，默认0，单位ms，范围为[0, 3000]。
+    * 延迟，默认120，单位ms，范围为[0, 3000]。
     */
     @SerializedName("Latency")
     @Expose
@@ -52,7 +52,7 @@ public class CreateInputSRTSettings extends AbstractModel {
     private Long RecvLatency;
 
     /**
-    * 对端延迟，默认0，单位ms，范围为[0, 3000]。
+    * 对端延迟，默认120，单位ms，范围为[0, 3000]。
     */
     @SerializedName("PeerLatency")
     @Expose
@@ -119,16 +119,16 @@ public class CreateInputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get 延迟，默认0，单位ms，范围为[0, 3000]。 
-     * @return Latency 延迟，默认0，单位ms，范围为[0, 3000]。
+     * Get 延迟，默认120，单位ms，范围为[0, 3000]。 
+     * @return Latency 延迟，默认120，单位ms，范围为[0, 3000]。
      */
     public Long getLatency() {
         return this.Latency;
     }
 
     /**
-     * Set 延迟，默认0，单位ms，范围为[0, 3000]。
-     * @param Latency 延迟，默认0，单位ms，范围为[0, 3000]。
+     * Set 延迟，默认120，单位ms，范围为[0, 3000]。
+     * @param Latency 延迟，默认120，单位ms，范围为[0, 3000]。
      */
     public void setLatency(Long Latency) {
         this.Latency = Latency;
@@ -151,16 +151,16 @@ public class CreateInputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get 对端延迟，默认0，单位ms，范围为[0, 3000]。 
-     * @return PeerLatency 对端延迟，默认0，单位ms，范围为[0, 3000]。
+     * Get 对端延迟，默认120，单位ms，范围为[0, 3000]。 
+     * @return PeerLatency 对端延迟，默认120，单位ms，范围为[0, 3000]。
      */
     public Long getPeerLatency() {
         return this.PeerLatency;
     }
 
     /**
-     * Set 对端延迟，默认0，单位ms，范围为[0, 3000]。
-     * @param PeerLatency 对端延迟，默认0，单位ms，范围为[0, 3000]。
+     * Set 对端延迟，默认120，单位ms，范围为[0, 3000]。
+     * @param PeerLatency 对端延迟，默认120，单位ms，范围为[0, 3000]。
      */
     public void setPeerLatency(Long PeerLatency) {
         this.PeerLatency = PeerLatency;

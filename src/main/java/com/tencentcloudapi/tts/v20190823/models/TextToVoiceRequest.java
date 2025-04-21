@@ -75,6 +75,13 @@ public class TextToVoiceRequest extends AbstractModel {
     private Long VoiceType;
 
     /**
+    * 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
+    */
+    @SerializedName("FastVoiceType")
+    @Expose
+    private String FastVoiceType;
+
+    /**
     * 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
     */
     @SerializedName("PrimaryLanguage")
@@ -126,13 +133,6 @@ public class TextToVoiceRequest extends AbstractModel {
     @SerializedName("EmotionIntensity")
     @Expose
     private Long EmotionIntensity;
-
-    /**
-    * 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
-    */
-    @SerializedName("FastVoiceType")
-    @Expose
-    private String FastVoiceType;
 
     /**
      * Get 合成语音的源文本，按UTF-8编码统一计算。
@@ -252,6 +252,22 @@ public class TextToVoiceRequest extends AbstractModel {
      */
     public void setVoiceType(Long VoiceType) {
         this.VoiceType = VoiceType;
+    }
+
+    /**
+     * Get 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】 
+     * @return FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
+     */
+    public String getFastVoiceType() {
+        return this.FastVoiceType;
+    }
+
+    /**
+     * Set 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
+     * @param FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
+     */
+    public void setFastVoiceType(String FastVoiceType) {
+        this.FastVoiceType = FastVoiceType;
     }
 
     /**
@@ -382,22 +398,6 @@ public class TextToVoiceRequest extends AbstractModel {
         this.EmotionIntensity = EmotionIntensity;
     }
 
-    /**
-     * Get 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】 
-     * @return FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
-     */
-    public String getFastVoiceType() {
-        return this.FastVoiceType;
-    }
-
-    /**
-     * Set 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
-     * @param FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
-     */
-    public void setFastVoiceType(String FastVoiceType) {
-        this.FastVoiceType = FastVoiceType;
-    }
-
     public TextToVoiceRequest() {
     }
 
@@ -427,6 +427,9 @@ public class TextToVoiceRequest extends AbstractModel {
         if (source.VoiceType != null) {
             this.VoiceType = new Long(source.VoiceType);
         }
+        if (source.FastVoiceType != null) {
+            this.FastVoiceType = new String(source.FastVoiceType);
+        }
         if (source.PrimaryLanguage != null) {
             this.PrimaryLanguage = new Long(source.PrimaryLanguage);
         }
@@ -448,9 +451,6 @@ public class TextToVoiceRequest extends AbstractModel {
         if (source.EmotionIntensity != null) {
             this.EmotionIntensity = new Long(source.EmotionIntensity);
         }
-        if (source.FastVoiceType != null) {
-            this.FastVoiceType = new String(source.FastVoiceType);
-        }
     }
 
 
@@ -465,6 +465,7 @@ public class TextToVoiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ModelType", this.ModelType);
         this.setParamSimple(map, prefix + "VoiceType", this.VoiceType);
+        this.setParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
         this.setParamSimple(map, prefix + "PrimaryLanguage", this.PrimaryLanguage);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
@@ -472,7 +473,6 @@ public class TextToVoiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SegmentRate", this.SegmentRate);
         this.setParamSimple(map, prefix + "EmotionCategory", this.EmotionCategory);
         this.setParamSimple(map, prefix + "EmotionIntensity", this.EmotionIntensity);
-        this.setParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
 
     }
 }

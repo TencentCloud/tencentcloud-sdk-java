@@ -165,7 +165,6 @@ public class TaskResponseInfo extends AbstractModel {
 
     /**
     * 计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataEngineName")
     @Expose
@@ -649,10 +648,8 @@ public class TaskResponseInfo extends AbstractModel {
     }
 
     /**
-     * Get 计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计算资源名字 
      * @return DataEngineName 计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataEngineName() {
         return this.DataEngineName;
@@ -660,9 +657,7 @@ public class TaskResponseInfo extends AbstractModel {
 
     /**
      * Set 计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataEngineName 计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataEngineName(String DataEngineName) {
         this.DataEngineName = DataEngineName;

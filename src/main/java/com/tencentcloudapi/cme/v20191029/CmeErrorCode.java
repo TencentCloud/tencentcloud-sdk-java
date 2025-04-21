@@ -69,6 +69,9 @@ public enum CmeErrorCode {
      /* 目标分类不存在。 */
      INVALIDPARAMETERVALUE_DSTCLASSPATHNOTEXIST("InvalidParameterValue.DstClassPathNotExist"),
      
+     /* 结束时间参数不合法。 */
+     INVALIDPARAMETERVALUE_ENDTIME("InvalidParameterValue.EndTime"),
+     
      /* 导出目标不合法。 */
      INVALIDPARAMETERVALUE_EXPORTDESTINATION("InvalidParameterValue.ExportDestination"),
      

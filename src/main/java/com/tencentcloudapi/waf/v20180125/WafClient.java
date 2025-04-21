@@ -270,6 +270,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *场景化后删除Bot的UCB自定义规则
+     * @param req DeleteBotSceneUCBRuleRequest
+     * @return DeleteBotSceneUCBRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBotSceneUCBRuleResponse DeleteBotSceneUCBRule(DeleteBotSceneUCBRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBotSceneUCBRule", DeleteBotSceneUCBRuleResponse.class);
+    }
+
+    /**
      *Waf  CC V2 Delete接口
      * @param req DeleteCCRuleRequest
      * @return DeleteCCRuleResponse
@@ -542,6 +553,39 @@ public class WafClient extends AbstractClient{
     public DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControl(DescribeBatchIpAccessControlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBatchIpAccessControl", DescribeBatchIpAccessControlResponse.class);
+    }
+
+    /**
+     *获取BOT场景列表与概览
+     * @param req DescribeBotSceneListRequest
+     * @return DescribeBotSceneListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBotSceneListResponse DescribeBotSceneList(DescribeBotSceneListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBotSceneList", DescribeBotSceneListResponse.class);
+    }
+
+    /**
+     *获取Bot场景全局概览
+     * @param req DescribeBotSceneOverviewRequest
+     * @return DescribeBotSceneOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBotSceneOverviewResponse DescribeBotSceneOverview(DescribeBotSceneOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBotSceneOverview", DescribeBotSceneOverviewResponse.class);
+    }
+
+    /**
+     *场景化后Bot获取UCB自定义规则策略
+     * @param req DescribeBotSceneUCBRuleRequest
+     * @return DescribeBotSceneUCBRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBotSceneUCBRuleResponse DescribeBotSceneUCBRule(DescribeBotSceneUCBRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBotSceneUCBRule", DescribeBotSceneUCBRuleResponse.class);
     }
 
     /**
@@ -1303,6 +1347,28 @@ public class WafClient extends AbstractClient{
     public ModifyAttackWhiteRuleResponse ModifyAttackWhiteRule(ModifyAttackWhiteRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAttackWhiteRule", ModifyAttackWhiteRuleResponse.class);
+    }
+
+    /**
+     *bot子场景开关
+     * @param req ModifyBotSceneStatusRequest
+     * @return ModifyBotSceneStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBotSceneStatusResponse ModifyBotSceneStatus(ModifyBotSceneStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBotSceneStatus", ModifyBotSceneStatusResponse.class);
+    }
+
+    /**
+     *【接口复用】场景化后更新Bot的UCB自定义规则，两个调用位置：1.BOT全局白名单 2.BOT场景配置
+     * @param req ModifyBotSceneUCBRuleRequest
+     * @return ModifyBotSceneUCBRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBotSceneUCBRuleResponse ModifyBotSceneUCBRule(ModifyBotSceneUCBRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBotSceneUCBRule", ModifyBotSceneUCBRuleResponse.class);
     }
 
     /**

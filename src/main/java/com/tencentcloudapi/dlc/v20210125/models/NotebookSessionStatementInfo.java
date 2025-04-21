@@ -68,7 +68,6 @@ public class NotebookSessionStatementInfo extends AbstractModel {
 
     /**
     * 批任务id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchId")
     @Expose
@@ -189,10 +188,8 @@ public class NotebookSessionStatementInfo extends AbstractModel {
     }
 
     /**
-     * Get 批任务id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批任务id 
      * @return BatchId 批任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBatchId() {
         return this.BatchId;
@@ -200,9 +197,7 @@ public class NotebookSessionStatementInfo extends AbstractModel {
 
     /**
      * Set 批任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchId 批任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchId(String BatchId) {
         this.BatchId = BatchId;

@@ -272,6 +272,13 @@ ANY:表示所有
     private Long Id;
 
     /**
+    * 域名解析的IP统计
+    */
+    @SerializedName("DnsParseCount")
+    @Expose
+    private SgDnsParseCount DnsParseCount;
+
+    /**
      * Get 排序 
      * @return OrderIndex 排序
      */
@@ -903,6 +910,22 @@ ANY:表示所有
         this.Id = Id;
     }
 
+    /**
+     * Get 域名解析的IP统计 
+     * @return DnsParseCount 域名解析的IP统计
+     */
+    public SgDnsParseCount getDnsParseCount() {
+        return this.DnsParseCount;
+    }
+
+    /**
+     * Set 域名解析的IP统计
+     * @param DnsParseCount 域名解析的IP统计
+     */
+    public void setDnsParseCount(SgDnsParseCount DnsParseCount) {
+        this.DnsParseCount = DnsParseCount;
+    }
+
     public EnterpriseSecurityGroupRuleRuleInfo() {
     }
 
@@ -1004,6 +1027,9 @@ ANY:表示所有
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
+        if (source.DnsParseCount != null) {
+            this.DnsParseCount = new SgDnsParseCount(source.DnsParseCount);
+        }
     }
 
 
@@ -1041,6 +1067,7 @@ ANY:表示所有
         this.setParamSimple(map, prefix + "ProtocolPortName", this.ProtocolPortName);
         this.setParamArrayObj(map, prefix + "BetaList.", this.BetaList);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamObj(map, prefix + "DnsParseCount.", this.DnsParseCount);
 
     }
 }

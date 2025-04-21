@@ -256,6 +256,20 @@ public class DescAcItem extends AbstractModel {
     private String LastHitTime;
 
     /**
+    * 地区简称
+    */
+    @SerializedName("CountryKey")
+    @Expose
+    private String CountryKey;
+
+    /**
+    * 省份、城市简称
+    */
+    @SerializedName("CityKey")
+    @Expose
+    private String CityKey;
+
+    /**
      * Get 访问源 
      * @return SourceContent 访问源
      */
@@ -787,6 +801,38 @@ public class DescAcItem extends AbstractModel {
         this.LastHitTime = LastHitTime;
     }
 
+    /**
+     * Get 地区简称 
+     * @return CountryKey 地区简称
+     */
+    public String getCountryKey() {
+        return this.CountryKey;
+    }
+
+    /**
+     * Set 地区简称
+     * @param CountryKey 地区简称
+     */
+    public void setCountryKey(String CountryKey) {
+        this.CountryKey = CountryKey;
+    }
+
+    /**
+     * Get 省份、城市简称 
+     * @return CityKey 省份、城市简称
+     */
+    public String getCityKey() {
+        return this.CityKey;
+    }
+
+    /**
+     * Set 省份、城市简称
+     * @param CityKey 省份、城市简称
+     */
+    public void setCityKey(String CityKey) {
+        this.CityKey = CityKey;
+    }
+
     public DescAcItem() {
     }
 
@@ -897,6 +943,12 @@ public class DescAcItem extends AbstractModel {
         if (source.LastHitTime != null) {
             this.LastHitTime = new String(source.LastHitTime);
         }
+        if (source.CountryKey != null) {
+            this.CountryKey = new String(source.CountryKey);
+        }
+        if (source.CityKey != null) {
+            this.CityKey = new String(source.CityKey);
+        }
     }
 
 
@@ -937,6 +989,8 @@ public class DescAcItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
         this.setParamSimple(map, prefix + "TargetName", this.TargetName);
         this.setParamSimple(map, prefix + "LastHitTime", this.LastHitTime);
+        this.setParamSimple(map, prefix + "CountryKey", this.CountryKey);
+        this.setParamSimple(map, prefix + "CityKey", this.CityKey);
 
     }
 }

@@ -57,6 +57,13 @@ public class CreateFlowEvidenceReportRequest extends AbstractModel {
     private Long ReportType;
 
     /**
+    * 混合云模式获取合同文件合并出证，默认：不同意。注：此参数需要联系腾讯电子签运营进行开通后生效
+    */
+    @SerializedName("HybridEvidenceFlowFile")
+    @Expose
+    private Boolean HybridEvidenceFlowFile;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -140,6 +147,22 @@ public class CreateFlowEvidenceReportRequest extends AbstractModel {
         this.ReportType = ReportType;
     }
 
+    /**
+     * Get 混合云模式获取合同文件合并出证，默认：不同意。注：此参数需要联系腾讯电子签运营进行开通后生效 
+     * @return HybridEvidenceFlowFile 混合云模式获取合同文件合并出证，默认：不同意。注：此参数需要联系腾讯电子签运营进行开通后生效
+     */
+    public Boolean getHybridEvidenceFlowFile() {
+        return this.HybridEvidenceFlowFile;
+    }
+
+    /**
+     * Set 混合云模式获取合同文件合并出证，默认：不同意。注：此参数需要联系腾讯电子签运营进行开通后生效
+     * @param HybridEvidenceFlowFile 混合云模式获取合同文件合并出证，默认：不同意。注：此参数需要联系腾讯电子签运营进行开通后生效
+     */
+    public void setHybridEvidenceFlowFile(Boolean HybridEvidenceFlowFile) {
+        this.HybridEvidenceFlowFile = HybridEvidenceFlowFile;
+    }
+
     public CreateFlowEvidenceReportRequest() {
     }
 
@@ -160,6 +183,9 @@ public class CreateFlowEvidenceReportRequest extends AbstractModel {
         if (source.ReportType != null) {
             this.ReportType = new Long(source.ReportType);
         }
+        if (source.HybridEvidenceFlowFile != null) {
+            this.HybridEvidenceFlowFile = new Boolean(source.HybridEvidenceFlowFile);
+        }
     }
 
 
@@ -171,6 +197,7 @@ public class CreateFlowEvidenceReportRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "ReportType", this.ReportType);
+        this.setParamSimple(map, prefix + "HybridEvidenceFlowFile", this.HybridEvidenceFlowFile);
 
     }
 }

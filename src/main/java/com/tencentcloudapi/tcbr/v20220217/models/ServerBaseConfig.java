@@ -178,6 +178,13 @@ public class ServerBaseConfig extends AbstractModel {
     private String InternalAccess;
 
     /**
+    * 内网域名
+    */
+    @SerializedName("InternalDomain")
+    @Expose
+    private String InternalDomain;
+
+    /**
      * Get 环境 Id 
      * @return EnvId 环境 Id
      */
@@ -529,6 +536,22 @@ public class ServerBaseConfig extends AbstractModel {
         this.InternalAccess = InternalAccess;
     }
 
+    /**
+     * Get 内网域名 
+     * @return InternalDomain 内网域名
+     */
+    public String getInternalDomain() {
+        return this.InternalDomain;
+    }
+
+    /**
+     * Set 内网域名
+     * @param InternalDomain 内网域名
+     */
+    public void setInternalDomain(String InternalDomain) {
+        this.InternalDomain = InternalDomain;
+    }
+
     public ServerBaseConfig() {
     }
 
@@ -609,6 +632,9 @@ public class ServerBaseConfig extends AbstractModel {
         if (source.InternalAccess != null) {
             this.InternalAccess = new String(source.InternalAccess);
         }
+        if (source.InternalDomain != null) {
+            this.InternalDomain = new String(source.InternalDomain);
+        }
     }
 
 
@@ -638,6 +664,7 @@ public class ServerBaseConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "LogParseType", this.LogParseType);
         this.setParamSimple(map, prefix + "Tag", this.Tag);
         this.setParamSimple(map, prefix + "InternalAccess", this.InternalAccess);
+        this.setParamSimple(map, prefix + "InternalDomain", this.InternalDomain);
 
     }
 }

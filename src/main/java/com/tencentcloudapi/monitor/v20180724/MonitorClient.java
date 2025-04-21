@@ -930,6 +930,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *查询策略组在每个地域下面绑定的对象数统计
+     * @param req DescribePolicyObjectCountRequest
+     * @return DescribePolicyObjectCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyObjectCountResponse DescribePolicyObjectCount(DescribePolicyObjectCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePolicyObjectCount", DescribePolicyObjectCountResponse.class);
+    }
+
+    /**
      *分页获取产品事件的列表
      * @param req DescribeProductEventListRequest
      * @return DescribeProductEventListResponse

@@ -53,7 +53,6 @@ public class DescribeAdvancedStoreLocationResponse extends AbstractModel {
 
     /**
     * 托管存储桶类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketType")
     @Expose
@@ -131,10 +130,8 @@ public class DescribeAdvancedStoreLocationResponse extends AbstractModel {
     }
 
     /**
-     * Get 托管存储桶类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 托管存储桶类型 
      * @return BucketType 托管存储桶类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucketType() {
         return this.BucketType;
@@ -142,9 +139,7 @@ public class DescribeAdvancedStoreLocationResponse extends AbstractModel {
 
     /**
      * Set 托管存储桶类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BucketType 托管存储桶类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketType(String BucketType) {
         this.BucketType = BucketType;

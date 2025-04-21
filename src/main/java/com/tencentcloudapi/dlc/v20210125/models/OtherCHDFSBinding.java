@@ -25,7 +25,6 @@ public class OtherCHDFSBinding extends AbstractModel {
 
     /**
     * 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -33,7 +32,6 @@ public class OtherCHDFSBinding extends AbstractModel {
 
     /**
     * 用户名称（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuperUser")
     @Expose
@@ -41,7 +39,6 @@ public class OtherCHDFSBinding extends AbstractModel {
 
     /**
     * vpc配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcInfo")
     @Expose
@@ -49,17 +46,14 @@ public class OtherCHDFSBinding extends AbstractModel {
 
     /**
     * 是否与该桶绑定（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsBind")
     @Expose
     private Boolean IsBind;
 
     /**
-     * Get 产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称 
      * @return ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -67,19 +61,15 @@ public class OtherCHDFSBinding extends AbstractModel {
 
     /**
      * Set 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 用户名称（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名称（该字段已废弃） 
      * @return SuperUser 用户名称（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSuperUser() {
         return this.SuperUser;
@@ -87,19 +77,15 @@ public class OtherCHDFSBinding extends AbstractModel {
 
     /**
      * Set 用户名称（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuperUser 用户名称（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuperUser(String [] SuperUser) {
         this.SuperUser = SuperUser;
     }
 
     /**
-     * Get vpc配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc配置信息 
      * @return VpcInfo vpc配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CHDFSProductVpcInfo [] getVpcInfo() {
         return this.VpcInfo;
@@ -107,19 +93,15 @@ public class OtherCHDFSBinding extends AbstractModel {
 
     /**
      * Set vpc配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcInfo vpc配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcInfo(CHDFSProductVpcInfo [] VpcInfo) {
         this.VpcInfo = VpcInfo;
     }
 
     /**
-     * Get 是否与该桶绑定（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否与该桶绑定（该字段已废弃） 
      * @return IsBind 是否与该桶绑定（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsBind() {
         return this.IsBind;
@@ -127,9 +109,7 @@ public class OtherCHDFSBinding extends AbstractModel {
 
     /**
      * Set 是否与该桶绑定（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsBind 是否与该桶绑定（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsBind(Boolean IsBind) {
         this.IsBind = IsBind;

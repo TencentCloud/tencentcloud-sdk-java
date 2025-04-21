@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DataDisk extends AbstractModel {
 
     /**
-    * 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+    * 数据盘大小，单位：GiB。最小调整步长为10GiB，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -76,7 +76,8 @@ public class DataDisk extends AbstractModel {
     private String KmsKeyId;
 
     /**
-    * 云硬盘性能，单位：MB/s
+    * 云硬盘性能，单位：MiB/s。使用此参数可给云硬盘购买额外的性能。
+当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
     */
     @SerializedName("ThroughputPerformance")
     @Expose
@@ -100,24 +101,22 @@ public class DataDisk extends AbstractModel {
 
     /**
     * 磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。
     */
     @SerializedName("DiskName")
     @Expose
     private String DiskName;
 
     /**
-     * Get 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。 
-     * @return DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+     * Get 数据盘大小，单位：GiB。最小调整步长为10GiB，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。 
+     * @return DiskSize 数据盘大小，单位：GiB。最小调整步长为10GiB，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
-     * @param DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+     * Set 数据盘大小，单位：GiB。最小调整步长为10GiB，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+     * @param DiskSize 数据盘大小，单位：GiB。最小调整步长为10GiB，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -232,16 +231,20 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘性能，单位：MB/s 
-     * @return ThroughputPerformance 云硬盘性能，单位：MB/s
+     * Get 云硬盘性能，单位：MiB/s。使用此参数可给云硬盘购买额外的性能。
+当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD） 
+     * @return ThroughputPerformance 云硬盘性能，单位：MiB/s。使用此参数可给云硬盘购买额外的性能。
+当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
      */
     public Long getThroughputPerformance() {
         return this.ThroughputPerformance;
     }
 
     /**
-     * Set 云硬盘性能，单位：MB/s
-     * @param ThroughputPerformance 云硬盘性能，单位：MB/s
+     * Set 云硬盘性能，单位：MiB/s。使用此参数可给云硬盘购买额外的性能。
+当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
+     * @param ThroughputPerformance 云硬盘性能，单位：MiB/s。使用此参数可给云硬盘购买额外的性能。
+当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
      */
     public void setThroughputPerformance(Long ThroughputPerformance) {
         this.ThroughputPerformance = ThroughputPerformance;
@@ -288,12 +291,8 @@ public class DataDisk extends AbstractModel {
     }
 
     /**
-     * Get 磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。 
+     * Get 磁盘名称，长度不超过128 个字符。 
      * @return DiskName 磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。
      */
     public String getDiskName() {
         return this.DiskName;
@@ -301,11 +300,7 @@ public class DataDisk extends AbstractModel {
 
     /**
      * Set 磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。
      * @param DiskName 磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。
      */
     public void setDiskName(String DiskName) {
         this.DiskName = DiskName;

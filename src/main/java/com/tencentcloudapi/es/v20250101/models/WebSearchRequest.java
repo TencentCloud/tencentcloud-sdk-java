@@ -66,7 +66,7 @@ public class WebSearchRequest extends AbstractModel {
     private String [] BlackSites;
 
     /**
-    * 秒级时间冲，搜索网页的开始时间，默认不限制开始时间。
+    * 秒级时间戳，搜索网页的开始时间，默认不限制开始时间。
     */
     @SerializedName("StartTime")
     @Expose
@@ -183,16 +183,16 @@ public class WebSearchRequest extends AbstractModel {
     }
 
     /**
-     * Get 秒级时间冲，搜索网页的开始时间，默认不限制开始时间。 
-     * @return StartTime 秒级时间冲，搜索网页的开始时间，默认不限制开始时间。
+     * Get 秒级时间戳，搜索网页的开始时间，默认不限制开始时间。 
+     * @return StartTime 秒级时间戳，搜索网页的开始时间，默认不限制开始时间。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 秒级时间冲，搜索网页的开始时间，默认不限制开始时间。
-     * @param StartTime 秒级时间冲，搜索网页的开始时间，默认不限制开始时间。
+     * Set 秒级时间戳，搜索网页的开始时间，默认不限制开始时间。
+     * @param StartTime 秒级时间戳，搜索网页的开始时间，默认不限制开始时间。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;

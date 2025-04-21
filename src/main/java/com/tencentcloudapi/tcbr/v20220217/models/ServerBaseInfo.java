@@ -80,6 +80,13 @@ public class ServerBaseInfo extends AbstractModel {
     private String ServerType;
 
     /**
+    * 流量类型，目前只有 FLOW
+    */
+    @SerializedName("TrafficType")
+    @Expose
+    private String TrafficType;
+
+    /**
      * Get 服务名 
      * @return ServerName 服务名
      */
@@ -207,6 +214,22 @@ public class ServerBaseInfo extends AbstractModel {
         this.ServerType = ServerType;
     }
 
+    /**
+     * Get 流量类型，目前只有 FLOW 
+     * @return TrafficType 流量类型，目前只有 FLOW
+     */
+    public String getTrafficType() {
+        return this.TrafficType;
+    }
+
+    /**
+     * Set 流量类型，目前只有 FLOW
+     * @param TrafficType 流量类型，目前只有 FLOW
+     */
+    public void setTrafficType(String TrafficType) {
+        this.TrafficType = TrafficType;
+    }
+
     public ServerBaseInfo() {
     }
 
@@ -245,6 +268,9 @@ public class ServerBaseInfo extends AbstractModel {
         if (source.ServerType != null) {
             this.ServerType = new String(source.ServerType);
         }
+        if (source.TrafficType != null) {
+            this.TrafficType = new String(source.TrafficType);
+        }
     }
 
 
@@ -260,6 +286,7 @@ public class ServerBaseInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AccessTypes.", this.AccessTypes);
         this.setParamArraySimple(map, prefix + "CustomDomainNames.", this.CustomDomainNames);
         this.setParamSimple(map, prefix + "ServerType", this.ServerType);
+        this.setParamSimple(map, prefix + "TrafficType", this.TrafficType);
 
     }
 }

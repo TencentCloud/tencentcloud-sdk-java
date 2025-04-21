@@ -39,7 +39,6 @@ public class CfwInsStatus extends AbstractModel {
 
     /**
     * 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -54,7 +53,6 @@ public class CfwInsStatus extends AbstractModel {
 
     /**
     * 事件时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventTime")
     @Expose
@@ -62,7 +60,6 @@ public class CfwInsStatus extends AbstractModel {
 
     /**
     * 恢复时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecoverTime")
     @Expose
@@ -70,7 +67,6 @@ public class CfwInsStatus extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CfwInsName")
     @Expose
@@ -79,7 +75,6 @@ public class CfwInsStatus extends AbstractModel {
     /**
     * Normal: 正常模式
 OnlyRoute: 透明模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrafficMode")
     @Expose
@@ -118,10 +113,8 @@ OnlyRoute: 透明模式
     }
 
     /**
-     * Get 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例所属地域 
      * @return Region 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -129,9 +122,7 @@ OnlyRoute: 透明模式
 
     /**
      * Set 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -154,10 +145,8 @@ OnlyRoute: 透明模式
     }
 
     /**
-     * Get 事件时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件时间 
      * @return EventTime 事件时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventTime() {
         return this.EventTime;
@@ -165,19 +154,15 @@ OnlyRoute: 透明模式
 
     /**
      * Set 事件时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventTime 事件时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventTime(String EventTime) {
         this.EventTime = EventTime;
     }
 
     /**
-     * Get 恢复时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 恢复时间 
      * @return RecoverTime 恢复时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecoverTime() {
         return this.RecoverTime;
@@ -185,19 +170,15 @@ OnlyRoute: 透明模式
 
     /**
      * Set 恢复时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecoverTime 恢复时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecoverTime(String RecoverTime) {
         this.RecoverTime = RecoverTime;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return CfwInsName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCfwInsName() {
         return this.CfwInsName;
@@ -205,9 +186,7 @@ OnlyRoute: 透明模式
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CfwInsName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCfwInsName(String CfwInsName) {
         this.CfwInsName = CfwInsName;
@@ -215,11 +194,9 @@ OnlyRoute: 透明模式
 
     /**
      * Get Normal: 正常模式
-OnlyRoute: 透明模式
-注意：此字段可能返回 null，表示取不到有效值。 
+OnlyRoute: 透明模式 
      * @return TrafficMode Normal: 正常模式
 OnlyRoute: 透明模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrafficMode() {
         return this.TrafficMode;
@@ -228,10 +205,8 @@ OnlyRoute: 透明模式
     /**
      * Set Normal: 正常模式
 OnlyRoute: 透明模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrafficMode Normal: 正常模式
 OnlyRoute: 透明模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrafficMode(String TrafficMode) {
         this.TrafficMode = TrafficMode;

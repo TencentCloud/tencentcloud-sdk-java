@@ -73,7 +73,7 @@ drop：拒绝
     private String RuleAction;
 
     /**
-    * 描述
+    * 规则描述 用于规则使用或者场景的描述，最多支持50个字符
     */
     @SerializedName("Description")
     @Expose
@@ -268,16 +268,16 @@ drop：拒绝
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get 规则描述 用于规则使用或者场景的描述，最多支持50个字符 
+     * @return Description 规则描述 用于规则使用或者场景的描述，最多支持50个字符
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set 规则描述 用于规则使用或者场景的描述，最多支持50个字符
+     * @param Description 规则描述 用于规则使用或者场景的描述，最多支持50个字符
      */
     public void setDescription(String Description) {
         this.Description = Description;

@@ -217,6 +217,7 @@ public class RuleGroupExecResult extends AbstractModel {
 
     /**
     * 实例运行的开始时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -224,10 +225,27 @@ public class RuleGroupExecResult extends AbstractModel {
 
     /**
     * 实例运行的结束时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
+
+    /**
+    * 监控名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleGroupName")
+    @Expose
+    private String RuleGroupName;
+
+    /**
+    * 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleGroupExist")
+    @Expose
+    private String RuleGroupExist;
 
     /**
      * Get 规则组执行ID
@@ -710,8 +728,10 @@ public class RuleGroupExecResult extends AbstractModel {
     }
 
     /**
-     * Get 实例运行的开始时间 
+     * Get 实例运行的开始时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTime 实例运行的开始时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -719,15 +739,19 @@ public class RuleGroupExecResult extends AbstractModel {
 
     /**
      * Set 实例运行的开始时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 实例运行的开始时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 实例运行的结束时间 
+     * Get 实例运行的结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FinishTime 实例运行的结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishTime() {
         return this.FinishTime;
@@ -735,10 +759,52 @@ public class RuleGroupExecResult extends AbstractModel {
 
     /**
      * Set 实例运行的结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FinishTime 实例运行的结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
+    }
+
+    /**
+     * Get 监控名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleGroupName 监控名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleGroupName() {
+        return this.RuleGroupName;
+    }
+
+    /**
+     * Set 监控名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleGroupName 监控名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleGroupName(String RuleGroupName) {
+        this.RuleGroupName = RuleGroupName;
+    }
+
+    /**
+     * Get 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleGroupExist 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleGroupExist() {
+        return this.RuleGroupExist;
+    }
+
+    /**
+     * Set 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleGroupExist 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleGroupExist(String RuleGroupExist) {
+        this.RuleGroupExist = RuleGroupExist;
     }
 
     public RuleGroupExecResult() {
@@ -830,6 +896,12 @@ public class RuleGroupExecResult extends AbstractModel {
         if (source.FinishTime != null) {
             this.FinishTime = new String(source.FinishTime);
         }
+        if (source.RuleGroupName != null) {
+            this.RuleGroupName = new String(source.RuleGroupName);
+        }
+        if (source.RuleGroupExist != null) {
+            this.RuleGroupExist = new String(source.RuleGroupExist);
+        }
     }
 
 
@@ -863,6 +935,8 @@ public class RuleGroupExecResult extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
+        this.setParamSimple(map, prefix + "RuleGroupName", this.RuleGroupName);
+        this.setParamSimple(map, prefix + "RuleGroupExist", this.RuleGroupExist);
 
     }
 }

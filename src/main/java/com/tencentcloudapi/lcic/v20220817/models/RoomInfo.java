@@ -238,6 +238,13 @@ public class RoomInfo extends AbstractModel {
     private Long WhiteBoardSnapshotMode;
 
     /**
+    * 字幕转写功能开关：0关闭，1开启，默认关闭
+    */
+    @SerializedName("SubtitlesTranscription")
+    @Expose
+    private Long SubtitlesTranscription;
+
+    /**
      * Get 房间名称。 
      * @return Name 房间名称。
      */
@@ -741,6 +748,22 @@ public class RoomInfo extends AbstractModel {
         this.WhiteBoardSnapshotMode = WhiteBoardSnapshotMode;
     }
 
+    /**
+     * Get 字幕转写功能开关：0关闭，1开启，默认关闭 
+     * @return SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     */
+    public Long getSubtitlesTranscription() {
+        return this.SubtitlesTranscription;
+    }
+
+    /**
+     * Set 字幕转写功能开关：0关闭，1开启，默认关闭
+     * @param SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     */
+    public void setSubtitlesTranscription(Long SubtitlesTranscription) {
+        this.SubtitlesTranscription = SubtitlesTranscription;
+    }
+
     public RoomInfo() {
     }
 
@@ -842,6 +865,9 @@ public class RoomInfo extends AbstractModel {
         if (source.WhiteBoardSnapshotMode != null) {
             this.WhiteBoardSnapshotMode = new Long(source.WhiteBoardSnapshotMode);
         }
+        if (source.SubtitlesTranscription != null) {
+            this.SubtitlesTranscription = new Long(source.SubtitlesTranscription);
+        }
     }
 
 
@@ -879,6 +905,7 @@ public class RoomInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
         this.setParamSimple(map, prefix + "RecordStream", this.RecordStream);
         this.setParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
+        this.setParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
 
     }
 }

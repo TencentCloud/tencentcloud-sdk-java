@@ -25,7 +25,6 @@ public class DescribeResultDownloadResponse extends AbstractModel {
 
     /**
     * 下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -74,10 +73,8 @@ public class DescribeResultDownloadResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下载文件路径 
      * @return Path 下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -85,9 +82,7 @@ public class DescribeResultDownloadResponse extends AbstractModel {
 
     /**
      * Set 下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;

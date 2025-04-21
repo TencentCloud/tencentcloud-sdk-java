@@ -52,6 +52,13 @@ public class DescribeModelVersionListRequest extends AbstractModel {
     private Long CampusId;
 
     /**
+    * 型号关键字，可以实现模糊匹配搜索功能
+    */
+    @SerializedName("ModelName")
+    @Expose
+    private String ModelName;
+
+    /**
      * Get 型号类型，只支持传入 netDevice 和 server 
      * @return DeviceType 型号类型，只支持传入 netDevice 和 server
      */
@@ -115,6 +122,22 @@ public class DescribeModelVersionListRequest extends AbstractModel {
         this.CampusId = CampusId;
     }
 
+    /**
+     * Get 型号关键字，可以实现模糊匹配搜索功能 
+     * @return ModelName 型号关键字，可以实现模糊匹配搜索功能
+     */
+    public String getModelName() {
+        return this.ModelName;
+    }
+
+    /**
+     * Set 型号关键字，可以实现模糊匹配搜索功能
+     * @param ModelName 型号关键字，可以实现模糊匹配搜索功能
+     */
+    public void setModelName(String ModelName) {
+        this.ModelName = ModelName;
+    }
+
     public DescribeModelVersionListRequest() {
     }
 
@@ -138,6 +161,9 @@ public class DescribeModelVersionListRequest extends AbstractModel {
         if (source.CampusId != null) {
             this.CampusId = new Long(source.CampusId);
         }
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class DescribeModelVersionListRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Checked", this.Checked);
         this.setParamSimple(map, prefix + "CampusId", this.CampusId);
+        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
 
     }
 }

@@ -80,6 +80,20 @@ public class PostCKafkaFlowInfo extends AbstractModel {
     private String Topic;
 
     /**
+    * 压缩算法，支持gzip 和 lz4
+    */
+    @SerializedName("Compression")
+    @Expose
+    private String Compression;
+
+    /**
+    * 描述信息
+    */
+    @SerializedName("Content")
+    @Expose
+    private String Content;
+
+    /**
      * Get 投递流唯一ID 
      * @return FlowId 投递流唯一ID
      */
@@ -207,6 +221,38 @@ public class PostCKafkaFlowInfo extends AbstractModel {
         this.Topic = Topic;
     }
 
+    /**
+     * Get 压缩算法，支持gzip 和 lz4 
+     * @return Compression 压缩算法，支持gzip 和 lz4
+     */
+    public String getCompression() {
+        return this.Compression;
+    }
+
+    /**
+     * Set 压缩算法，支持gzip 和 lz4
+     * @param Compression 压缩算法，支持gzip 和 lz4
+     */
+    public void setCompression(String Compression) {
+        this.Compression = Compression;
+    }
+
+    /**
+     * Get 描述信息 
+     * @return Content 描述信息
+     */
+    public String getContent() {
+        return this.Content;
+    }
+
+    /**
+     * Set 描述信息
+     * @param Content 描述信息
+     */
+    public void setContent(String Content) {
+        this.Content = Content;
+    }
+
     public PostCKafkaFlowInfo() {
     }
 
@@ -239,6 +285,12 @@ public class PostCKafkaFlowInfo extends AbstractModel {
         if (source.Topic != null) {
             this.Topic = new String(source.Topic);
         }
+        if (source.Compression != null) {
+            this.Compression = new String(source.Compression);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class PostCKafkaFlowInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Brokers", this.Brokers);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
+        this.setParamSimple(map, prefix + "Compression", this.Compression);
+        this.setParamSimple(map, prefix + "Content", this.Content);
 
     }
 }

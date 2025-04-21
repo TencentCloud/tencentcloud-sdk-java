@@ -165,6 +165,9 @@ public enum CccErrorCode {
      /* 资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound"),
      
+     /* 资源不可用。 */
+     RESOURCEUNAVAILABLE("ResourceUnavailable"),
+     
      /* 未知参数错误。 */
      UNKNOWNPARAMETER("UnknownParameter"),
      

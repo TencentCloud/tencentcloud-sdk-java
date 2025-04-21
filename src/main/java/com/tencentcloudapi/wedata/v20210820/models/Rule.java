@@ -424,6 +424,14 @@ public class Rule extends AbstractModel {
     private String ProjectName;
 
     /**
+    * 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 规则ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId 规则ID
@@ -1423,6 +1431,26 @@ public class Rule extends AbstractModel {
         this.ProjectName = ProjectName;
     }
 
+    /**
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public Rule() {
     }
 
@@ -1584,6 +1612,9 @@ public class Rule extends AbstractModel {
         if (source.ProjectName != null) {
             this.ProjectName = new String(source.ProjectName);
         }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -1641,6 +1672,7 @@ public class Rule extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetSchemaName", this.TargetSchemaName);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

@@ -38,7 +38,7 @@ public class CreateOutputSRTSettings extends AbstractModel {
     private String StreamId;
 
     /**
-    * 转推SRT的总延迟，默认0，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认
+    * 转推SRT的延迟，默认120，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认
     */
     @SerializedName("Latency")
     @Expose
@@ -52,7 +52,7 @@ public class CreateOutputSRTSettings extends AbstractModel {
     private Long RecvLatency;
 
     /**
-    * 转推SRT的对端延迟，默认0，单位ms，范围为[0, 3000]。 此参数由发送方设置，用于告知接收方其期望的延迟缓冲时间
+    * 转推SRT的对端延迟，默认120，单位ms，范围为[0, 3000]。 此参数由发送方设置，用于告知接收方其期望的延迟缓冲时间
     */
     @SerializedName("PeerLatency")
     @Expose
@@ -119,16 +119,16 @@ public class CreateOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get 转推SRT的总延迟，默认0，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认 
-     * @return Latency 转推SRT的总延迟，默认0，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认
+     * Get 转推SRT的延迟，默认120，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认 
+     * @return Latency 转推SRT的延迟，默认120，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认
      */
     public Long getLatency() {
         return this.Latency;
     }
 
     /**
-     * Set 转推SRT的总延迟，默认0，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认
-     * @param Latency 转推SRT的总延迟，默认0，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认
+     * Set 转推SRT的延迟，默认120，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认
+     * @param Latency 转推SRT的延迟，默认120，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认
      */
     public void setLatency(Long Latency) {
         this.Latency = Latency;
@@ -151,16 +151,16 @@ public class CreateOutputSRTSettings extends AbstractModel {
     }
 
     /**
-     * Get 转推SRT的对端延迟，默认0，单位ms，范围为[0, 3000]。 此参数由发送方设置，用于告知接收方其期望的延迟缓冲时间 
-     * @return PeerLatency 转推SRT的对端延迟，默认0，单位ms，范围为[0, 3000]。 此参数由发送方设置，用于告知接收方其期望的延迟缓冲时间
+     * Get 转推SRT的对端延迟，默认120，单位ms，范围为[0, 3000]。 此参数由发送方设置，用于告知接收方其期望的延迟缓冲时间 
+     * @return PeerLatency 转推SRT的对端延迟，默认120，单位ms，范围为[0, 3000]。 此参数由发送方设置，用于告知接收方其期望的延迟缓冲时间
      */
     public Long getPeerLatency() {
         return this.PeerLatency;
     }
 
     /**
-     * Set 转推SRT的对端延迟，默认0，单位ms，范围为[0, 3000]。 此参数由发送方设置，用于告知接收方其期望的延迟缓冲时间
-     * @param PeerLatency 转推SRT的对端延迟，默认0，单位ms，范围为[0, 3000]。 此参数由发送方设置，用于告知接收方其期望的延迟缓冲时间
+     * Set 转推SRT的对端延迟，默认120，单位ms，范围为[0, 3000]。 此参数由发送方设置，用于告知接收方其期望的延迟缓冲时间
+     * @param PeerLatency 转推SRT的对端延迟，默认120，单位ms，范围为[0, 3000]。 此参数由发送方设置，用于告知接收方其期望的延迟缓冲时间
      */
     public void setPeerLatency(Long PeerLatency) {
         this.PeerLatency = PeerLatency;

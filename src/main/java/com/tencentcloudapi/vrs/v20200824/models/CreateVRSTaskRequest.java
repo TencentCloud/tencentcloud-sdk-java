@@ -112,6 +112,14 @@ public class CreateVRSTaskRequest extends AbstractModel {
     private String VPRAudioId;
 
     /**
+    * 是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
+语音增强仅适用于一句话复刻场景
+    */
+    @SerializedName("EnableVoiceEnhance")
+    @Expose
+    private Long EnableVoiceEnhance;
+
+    /**
      * Get 唯一请求 ID 
      * @return SessionId 唯一请求 ID
      */
@@ -331,6 +339,26 @@ public class CreateVRSTaskRequest extends AbstractModel {
         this.VPRAudioId = VPRAudioId;
     }
 
+    /**
+     * Get 是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
+语音增强仅适用于一句话复刻场景 
+     * @return EnableVoiceEnhance 是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
+语音增强仅适用于一句话复刻场景
+     */
+    public Long getEnableVoiceEnhance() {
+        return this.EnableVoiceEnhance;
+    }
+
+    /**
+     * Set 是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
+语音增强仅适用于一句话复刻场景
+     * @param EnableVoiceEnhance 是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
+语音增强仅适用于一句话复刻场景
+     */
+    public void setEnableVoiceEnhance(Long EnableVoiceEnhance) {
+        this.EnableVoiceEnhance = EnableVoiceEnhance;
+    }
+
     public CreateVRSTaskRequest() {
     }
 
@@ -375,6 +403,9 @@ public class CreateVRSTaskRequest extends AbstractModel {
         if (source.VPRAudioId != null) {
             this.VPRAudioId = new String(source.VPRAudioId);
         }
+        if (source.EnableVoiceEnhance != null) {
+            this.EnableVoiceEnhance = new Long(source.EnableVoiceEnhance);
+        }
     }
 
 
@@ -393,6 +424,7 @@ public class CreateVRSTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelType", this.ModelType);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "VPRAudioId", this.VPRAudioId);
+        this.setParamSimple(map, prefix + "EnableVoiceEnhance", this.EnableVoiceEnhance);
 
     }
 }

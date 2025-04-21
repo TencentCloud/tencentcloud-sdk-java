@@ -908,6 +908,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *查询实例SSL状态
+     * @param req DescribeSSLStatusRequest
+     * @return DescribeSSLStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSSLStatusResponse DescribeSSLStatus(DescribeSSLStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSSLStatus", DescribeSSLStatusResponse.class);
+    }
+
+    /**
      *查询Serverless实例可选规格
      * @param req DescribeServerlessInstanceSpecsRequest
      * @return DescribeServerlessInstanceSpecsResponse
@@ -927,6 +938,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeServerlessStrategyResponse DescribeServerlessStrategy(DescribeServerlessStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeServerlessStrategy", DescribeServerlessStrategyResponse.class);
+    }
+
+    /**
+     *查询从可用区
+     * @param req DescribeSlaveZonesRequest
+     * @return DescribeSlaveZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlaveZonesResponse DescribeSlaveZones(DescribeSlaveZonesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSlaveZones", DescribeSlaveZonesResponse.class);
     }
 
     /**
@@ -1466,6 +1488,17 @@ public class CynosdbClient extends AbstractClient{
     public OpenReadOnlyInstanceExclusiveAccessResponse OpenReadOnlyInstanceExclusiveAccess(OpenReadOnlyInstanceExclusiveAccessRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OpenReadOnlyInstanceExclusiveAccess", OpenReadOnlyInstanceExclusiveAccessResponse.class);
+    }
+
+    /**
+     *开启SSL加密
+     * @param req OpenSSLRequest
+     * @return OpenSSLResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenSSLResponse OpenSSL(OpenSSLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenSSL", OpenSSLResponse.class);
     }
 
     /**

@@ -32,7 +32,6 @@ public class DescribeBackUpScheduleResponse extends AbstractModel {
 
     /**
     * 元数据备份策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaStrategy")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeBackUpScheduleResponse extends AbstractModel {
 
     /**
     * 表数据备份策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataStrategy")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeBackUpScheduleResponse extends AbstractModel {
 
     /**
     * 备份表列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackUpContents")
     @Expose
@@ -63,7 +60,6 @@ public class DescribeBackUpScheduleResponse extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -93,10 +89,8 @@ public class DescribeBackUpScheduleResponse extends AbstractModel {
     }
 
     /**
-     * Get 元数据备份策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 元数据备份策略 
      * @return MetaStrategy 元数据备份策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScheduleStrategy getMetaStrategy() {
         return this.MetaStrategy;
@@ -104,19 +98,15 @@ public class DescribeBackUpScheduleResponse extends AbstractModel {
 
     /**
      * Set 元数据备份策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaStrategy 元数据备份策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaStrategy(ScheduleStrategy MetaStrategy) {
         this.MetaStrategy = MetaStrategy;
     }
 
     /**
-     * Get 表数据备份策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表数据备份策略 
      * @return DataStrategy 表数据备份策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScheduleStrategy getDataStrategy() {
         return this.DataStrategy;
@@ -124,19 +114,15 @@ public class DescribeBackUpScheduleResponse extends AbstractModel {
 
     /**
      * Set 表数据备份策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataStrategy 表数据备份策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataStrategy(ScheduleStrategy DataStrategy) {
         this.DataStrategy = DataStrategy;
     }
 
     /**
-     * Get 备份表列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份表列表 
      * @return BackUpContents 备份表列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupTableContent [] getBackUpContents() {
         return this.BackUpContents;
@@ -144,9 +130,7 @@ public class DescribeBackUpScheduleResponse extends AbstractModel {
 
     /**
      * Set 备份表列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackUpContents 备份表列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackUpContents(BackupTableContent [] BackUpContents) {
         this.BackUpContents = BackUpContents;
@@ -169,10 +153,8 @@ public class DescribeBackUpScheduleResponse extends AbstractModel {
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -180,9 +162,7 @@ public class DescribeBackUpScheduleResponse extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

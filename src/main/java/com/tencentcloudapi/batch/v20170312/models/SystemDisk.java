@@ -48,7 +48,7 @@ public class SystemDisk extends AbstractModel {
     private String DiskId;
 
     /**
-    * 系统盘大小，单位：GB。默认值为 50
+    * 系统盘大小，单位：GiB。默认值为 50
     */
     @SerializedName("DiskSize")
     @Expose
@@ -63,8 +63,6 @@ public class SystemDisk extends AbstractModel {
 
     /**
     * 磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。
     */
     @SerializedName("DiskName")
     @Expose
@@ -143,16 +141,16 @@ public class SystemDisk extends AbstractModel {
     }
 
     /**
-     * Get 系统盘大小，单位：GB。默认值为 50 
-     * @return DiskSize 系统盘大小，单位：GB。默认值为 50
+     * Get 系统盘大小，单位：GiB。默认值为 50 
+     * @return DiskSize 系统盘大小，单位：GiB。默认值为 50
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 系统盘大小，单位：GB。默认值为 50
-     * @param DiskSize 系统盘大小，单位：GB。默认值为 50
+     * Set 系统盘大小，单位：GiB。默认值为 50
+     * @param DiskSize 系统盘大小，单位：GiB。默认值为 50
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -175,12 +173,8 @@ public class SystemDisk extends AbstractModel {
     }
 
     /**
-     * Get 磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。 
+     * Get 磁盘名称，长度不超过128 个字符。 
      * @return DiskName 磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。
      */
     public String getDiskName() {
         return this.DiskName;
@@ -188,11 +182,7 @@ public class SystemDisk extends AbstractModel {
 
     /**
      * Set 磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。
      * @param DiskName 磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。
      */
     public void setDiskName(String DiskName) {
         this.DiskName = DiskName;

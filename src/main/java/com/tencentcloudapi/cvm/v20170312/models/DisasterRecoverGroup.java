@@ -69,7 +69,7 @@ public class DisasterRecoverGroup extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * 分散置放群组创建时间。
+    * 分散置放群组创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -198,16 +198,16 @@ public class DisasterRecoverGroup extends AbstractModel {
     }
 
     /**
-     * Get 分散置放群组创建时间。 
-     * @return CreateTime 分散置放群组创建时间。
+     * Get 分散置放群组创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。 
+     * @return CreateTime 分散置放群组创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 分散置放群组创建时间。
-     * @param CreateTime 分散置放群组创建时间。
+     * Set 分散置放群组创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * @param CreateTime 分散置放群组创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

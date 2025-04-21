@@ -59,7 +59,7 @@ public class CreateAIAgentCallRequest extends AbstractModel {
     private Variable [] PromptVariables;
 
     /**
-    * 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+    * 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
@@ -136,7 +136,9 @@ public class CreateAIAgentCallRequest extends AbstractModel {
     /**
      * Get 提示词变量 
      * @return PromptVariables 提示词变量
+     * @deprecated
      */
+    @Deprecated
     public Variable [] getPromptVariables() {
         return this.PromptVariables;
     }
@@ -144,18 +146,20 @@ public class CreateAIAgentCallRequest extends AbstractModel {
     /**
      * Set 提示词变量
      * @param PromptVariables 提示词变量
+     * @deprecated
      */
+    @Deprecated
     public void setPromptVariables(Variable [] PromptVariables) {
         this.PromptVariables = PromptVariables;
     }
 
     /**
-     * Get 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+     * Get 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
 3.  dify-inputs-conversation_id 为dify的conversation_id值 
-     * @return Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+     * @return Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
@@ -166,12 +170,12 @@ public class CreateAIAgentCallRequest extends AbstractModel {
     }
 
     /**
-     * Set 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+     * Set 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
 3.  dify-inputs-conversation_id 为dify的conversation_id值
-     * @param Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+     * @param Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值

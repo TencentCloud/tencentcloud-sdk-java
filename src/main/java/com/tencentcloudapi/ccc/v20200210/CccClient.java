@@ -267,6 +267,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *删除技能组
+     * @param req DeleteCCCSkillGroupRequest
+     * @return DeleteCCCSkillGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCCCSkillGroupResponse DeleteCCCSkillGroup(DeleteCCCSkillGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCCCSkillGroup", DeleteCCCSkillGroupResponse.class);
+    }
+
+    /**
      *删除话机账号
      * @param req DeleteExtensionRequest
      * @return DeleteExtensionResponse
