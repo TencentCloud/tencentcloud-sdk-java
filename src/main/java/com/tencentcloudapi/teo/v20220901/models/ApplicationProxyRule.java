@@ -103,7 +103,6 @@ public class ApplicationProxyRule extends AbstractModel {
 
     /**
     * 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionPersistTime")
     @Expose
@@ -120,7 +119,6 @@ public class ApplicationProxyRule extends AbstractModel {
 
     /**
     * 规则标签。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleTag")
     @Expose
@@ -343,10 +341,8 @@ public class ApplicationProxyRule extends AbstractModel {
     }
 
     /**
-     * Get 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 会话保持的时间，只有当SessionPersist为true时，该值才会生效。 
      * @return SessionPersistTime 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSessionPersistTime() {
         return this.SessionPersistTime;
@@ -354,9 +350,7 @@ public class ApplicationProxyRule extends AbstractModel {
 
     /**
      * Set 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionPersistTime 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionPersistTime(Long SessionPersistTime) {
         this.SessionPersistTime = SessionPersistTime;
@@ -387,10 +381,8 @@ public class ApplicationProxyRule extends AbstractModel {
     }
 
     /**
-     * Get 规则标签。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则标签。 
      * @return RuleTag 规则标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleTag() {
         return this.RuleTag;
@@ -398,9 +390,7 @@ public class ApplicationProxyRule extends AbstractModel {
 
     /**
      * Set 规则标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleTag 规则标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleTag(String RuleTag) {
         this.RuleTag = RuleTag;

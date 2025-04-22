@@ -25,7 +25,6 @@ public class DescribeIdleLoadBalancersResponse extends AbstractModel {
 
     /**
     * 闲置实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdleLoadBalancers")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeIdleLoadBalancersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 闲置实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 闲置实例列表 
      * @return IdleLoadBalancers 闲置实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IdleLoadBalancer [] getIdleLoadBalancers() {
         return this.IdleLoadBalancers;
@@ -57,9 +54,7 @@ public class DescribeIdleLoadBalancersResponse extends AbstractModel {
 
     /**
      * Set 闲置实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdleLoadBalancers 闲置实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdleLoadBalancers(IdleLoadBalancer [] IdleLoadBalancers) {
         this.IdleLoadBalancers = IdleLoadBalancers;

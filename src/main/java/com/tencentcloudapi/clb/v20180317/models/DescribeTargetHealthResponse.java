@@ -25,7 +25,6 @@ public class DescribeTargetHealthResponse extends AbstractModel {
 
     /**
     * 负载均衡实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancers")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeTargetHealthResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 负载均衡实例列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡实例列表。 
      * @return LoadBalancers 负载均衡实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LoadBalancerHealth [] getLoadBalancers() {
         return this.LoadBalancers;
@@ -50,9 +47,7 @@ public class DescribeTargetHealthResponse extends AbstractModel {
 
     /**
      * Set 负载均衡实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancers 负载均衡实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancers(LoadBalancerHealth [] LoadBalancers) {
         this.LoadBalancers = LoadBalancers;

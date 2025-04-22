@@ -35,7 +35,6 @@ public class Cache extends AbstractModel {
     /**
     * 缓存过期时间设置。
 单位为秒，最大可设置为 365 天。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CacheTime")
     @Expose
@@ -77,11 +76,9 @@ public class Cache extends AbstractModel {
 
     /**
      * Get 缓存过期时间设置。
-单位为秒，最大可设置为 365 天。
-注意：此字段可能返回 null，表示取不到有效值。 
+单位为秒，最大可设置为 365 天。 
      * @return CacheTime 缓存过期时间设置。
 单位为秒，最大可设置为 365 天。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCacheTime() {
         return this.CacheTime;
@@ -90,10 +87,8 @@ public class Cache extends AbstractModel {
     /**
      * Set 缓存过期时间设置。
 单位为秒，最大可设置为 365 天。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CacheTime 缓存过期时间设置。
 单位为秒，最大可设置为 365 天。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCacheTime(Long CacheTime) {
         this.CacheTime = CacheTime;

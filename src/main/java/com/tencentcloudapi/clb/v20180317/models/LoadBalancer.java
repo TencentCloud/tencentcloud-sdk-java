@@ -39,7 +39,7 @@ public class LoadBalancer extends AbstractModel {
 
     /**
     * 负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
+OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档[绑定弹性公网IP](https://cloud.tencent.com/document/product/215/16700)。
     */
     @SerializedName("LoadBalancerType")
     @Expose
@@ -54,7 +54,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -62,7 +61,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡实例的 VIP 列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerVips")
     @Expose
@@ -71,7 +69,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     /**
     * 负载均衡实例的状态，包括
 0：创建中，1：正常运行。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -79,7 +76,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
@@ -87,7 +84,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡实例的上次状态转换时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("StatusTime")
     @Expose
@@ -102,7 +99,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 私有网络的 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -110,7 +106,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenBgp")
     @Expose
@@ -118,7 +113,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Snat")
     @Expose
@@ -126,7 +120,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Isolation")
     @Expose
@@ -142,7 +135,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -150,7 +142,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -158,7 +149,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡实例的安全组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecureGroups")
     @Expose
@@ -166,7 +156,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡实例绑定的后端设备的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetRegionInfo")
     @Expose
@@ -174,7 +163,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnycastZone")
     @Expose
@@ -182,15 +170,13 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * IP版本，ipv4 | ipv6
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressIPVersion")
     @Expose
     private String AddressIPVersion;
 
     /**
-    * 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * 数值形式的私有网络 ID。
     */
     @SerializedName("NumericalVpcId")
     @Expose
@@ -226,7 +212,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     private ZoneInfo [] BackupZoneSet;
 
     /**
-    * 负载均衡实例被隔离的时间
+    * 负载均衡实例被隔离的时间。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolatedTime")
@@ -234,7 +221,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     private String IsolatedTime;
 
     /**
-    * 负载均衡实例的过期时间，仅对预付费负载均衡生效
+    * 负载均衡实例的过期时间，仅对预付费负载均衡生效。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
@@ -258,7 +246,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     private InternetAccessible NetworkAttributes;
 
     /**
-    * 负载均衡实例的预付费相关属性
+    * 负载均衡实例的预付费相关属性，仅在 ChargeType=PREPAID 时显示。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrepaidAttributes")
@@ -267,7 +255,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡日志服务(CLS)的日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogSetId")
     @Expose
@@ -275,7 +262,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡日志服务(CLS)的日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogTopicId")
     @Expose
@@ -299,7 +285,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 是否可绑定高防包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDDos")
     @Expose
@@ -307,7 +292,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡维度的个性化配置ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigId")
     @Expose
@@ -315,7 +299,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 后端服务是否放通来自LB的流量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerPassToTarget")
     @Expose
@@ -323,14 +306,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 内网独占集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExclusiveCluster")
     @Expose
     private ExclusiveCluster ExclusiveCluster;
 
     /**
-    * IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+    * IP地址版本为ipv6时此字段有意义，IPv6Nat64 | IPv6FullChain。
+IPv6Nat64: 基于 NAT64 IPv6 过渡技术实现的负载均衡器。
+IPv6FullChain：基于 IPv6 单栈技术实现的负载均衡。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPv6Mode")
@@ -339,7 +323,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 是否开启SnatPro。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnatPro")
     @Expose
@@ -347,7 +330,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 开启SnatPro负载均衡后，SnatIp列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnatIps")
     @Expose
@@ -355,7 +337,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaType")
     @Expose
@@ -363,15 +344,14 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * vip是否被封堵
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsBlock")
     @Expose
     private Boolean IsBlock;
 
     /**
-    * 封堵或解封时间
-注意：此字段可能返回 null，表示取不到有效值。
+    * 封堵或解封时间。
+格式：YYYY-MM-DD HH:mm:ss。
     */
     @SerializedName("IsBlockTime")
     @Expose
@@ -379,7 +359,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * IP类型是否是本地BGP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalBgp")
     @Expose
@@ -395,7 +374,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MixIpTarget")
     @Expose
@@ -419,7 +397,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡日志服务(CLS)的健康检查日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthLogSetId")
     @Expose
@@ -427,7 +404,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡日志服务(CLS)的健康检查日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthLogTopicId")
     @Expose
@@ -442,8 +418,29 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     private String [] ClusterIds;
 
     /**
-    * 负载均衡的属性
-注意：此字段可能返回 null，表示取不到有效值。
+    * 负载均衡的属性，按位来决定是否开启
+2^0: 删除保护，开启后防止负载均衡被误删除。 
+2^1: 用户不可见，控制负载均衡对用户的可见性。 
+2^2: 阻塞状态，可能用于限制负载均衡的某些操作或流量。 
+2^3: 禁用负载均衡的NAT功能，可能用于特定场景下的流量直接转发。 
+2^4: 封禁状态，可能用于暂停负载均衡服务或限制访问。 
+2^5: 升配标志，可能用于标识负载均衡需要升级配置或性能。 
+2^6: 停止状态，开启后负载均衡暂停服务。 
+2^7: 不使用VPC网关，可能用于绕过VPC网关直接处理流量。 
+2^8: 安全组在TGW（Transit Gateway）中，涉及网络安全策略配置。 
+2^9: 共享限制标志，可能用于控制负载均衡的共享资源限制。 
+2^10: Web应用防火墙（WAF）标志，开启后启用WAF保护。 
+2^11: 域名型负载均衡，标识负载均衡是否基于域名进行流量分发。 
+2^12: IPv6源地址转换（SNAT），用于IPv6网络的源地址处理。 
+2^13: 隐藏域名，可能用于隐私保护或特定场景下不暴露域名。 
+2^14: 巨型帧支持，开启后支持更大的数据帧以提高网络效率。 
+2^15: 四层IP直连无NAT，可能用于四层负载均衡直接转发IP流量。 
+2^16: VPC网关三层服务，可能涉及三层网络服务的网关功能。 
+2^17: IPv6扩展标志，可能用于特定的IPv6功能支持。 
+2^18: IPv6独占标志，可能用于专属IPv6流量处理。 
+2^19: BGP专业版支持，可能涉及高级BGP路由功能。 
+2^20: TOA（TCP Option Address）清理，清除TCP选项中的地址信息。 
+
     */
     @SerializedName("AttributeFlags")
     @Expose
@@ -451,7 +448,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerDomain")
     @Expose
@@ -459,7 +455,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
     * 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Egress")
     @Expose
@@ -514,9 +509,9 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Get 负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。 
+OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档[绑定弹性公网IP](https://cloud.tencent.com/document/product/215/16700)。 
      * @return LoadBalancerType 负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
+OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档[绑定弹性公网IP](https://cloud.tencent.com/document/product/215/16700)。
      */
     public String getLoadBalancerType() {
         return this.LoadBalancerType;
@@ -524,9 +519,9 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
+OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档[绑定弹性公网IP](https://cloud.tencent.com/document/product/215/16700)。
      * @param LoadBalancerType 负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
+OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档[绑定弹性公网IP](https://cloud.tencent.com/document/product/215/16700)。
      */
     public void setLoadBalancerType(String LoadBalancerType) {
         this.LoadBalancerType = LoadBalancerType;
@@ -549,10 +544,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。 
      * @return Domain 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -560,19 +553,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 负载均衡实例的 VIP 列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡实例的 VIP 列表。 
      * @return LoadBalancerVips 负载均衡实例的 VIP 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLoadBalancerVips() {
         return this.LoadBalancerVips;
@@ -580,9 +569,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡实例的 VIP 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerVips 负载均衡实例的 VIP 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerVips(String [] LoadBalancerVips) {
         this.LoadBalancerVips = LoadBalancerVips;
@@ -590,11 +577,9 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Get 负载均衡实例的状态，包括
-0：创建中，1：正常运行。
-注意：此字段可能返回 null，表示取不到有效值。 
+0：创建中，1：正常运行。 
      * @return Status 负载均衡实例的状态，包括
 0：创建中，1：正常运行。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -603,10 +588,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     /**
      * Set 负载均衡实例的状态，包括
 0：创建中，1：正常运行。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 负载均衡实例的状态，包括
 0：创建中，1：正常运行。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -614,9 +597,9 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Get 负载均衡实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+格式：YYYY-MM-DD HH:mm:ss 
      * @return CreateTime 负载均衡实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -624,9 +607,9 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
      * @param CreateTime 负载均衡实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -634,9 +617,9 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Get 负载均衡实例的上次状态转换时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+格式：YYYY-MM-DD HH:mm:ss 
      * @return StatusTime 负载均衡实例的上次状态转换时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
      */
     public String getStatusTime() {
         return this.StatusTime;
@@ -644,9 +627,9 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡实例的上次状态转换时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
      * @param StatusTime 负载均衡实例的上次状态转换时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
      */
     public void setStatusTime(String StatusTime) {
         this.StatusTime = StatusTime;
@@ -669,10 +652,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 私有网络的 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络的 ID 
      * @return VpcId 私有网络的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -680,19 +661,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 私有网络的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。 
      * @return OpenBgp 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOpenBgp() {
         return this.OpenBgp;
@@ -700,19 +677,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenBgp 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenBgp(Long OpenBgp) {
         this.OpenBgp = OpenBgp;
     }
 
     /**
-     * Get 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。 
      * @return Snat 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSnat() {
         return this.Snat;
@@ -720,19 +693,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Snat 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnat(Boolean Snat) {
         this.Snat = Snat;
     }
 
     /**
-     * Get 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0：表示未被隔离，1：表示被隔离。 
      * @return Isolation 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsolation() {
         return this.Isolation;
@@ -740,9 +709,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Isolation 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolation(Long Isolation) {
         this.Isolation = Isolation;
@@ -773,10 +740,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡实例所在的子网（仅对内网VPC型LB有意义） 
      * @return SubnetId 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -784,19 +749,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 负载均衡实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡实例的标签信息 
      * @return Tags 负载均衡实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInfo [] getTags() {
         return this.Tags;
@@ -804,19 +765,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 负载均衡实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 负载均衡实例的安全组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡实例的安全组 
      * @return SecureGroups 负载均衡实例的安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecureGroups() {
         return this.SecureGroups;
@@ -824,19 +781,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡实例的安全组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecureGroups 负载均衡实例的安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecureGroups(String [] SecureGroups) {
         this.SecureGroups = SecureGroups;
     }
 
     /**
-     * Get 负载均衡实例绑定的后端设备的基本信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡实例绑定的后端设备的基本信息 
      * @return TargetRegionInfo 负载均衡实例绑定的后端设备的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TargetRegionInfo getTargetRegionInfo() {
         return this.TargetRegionInfo;
@@ -844,19 +797,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡实例绑定的后端设备的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetRegionInfo 负载均衡实例绑定的后端设备的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetRegionInfo(TargetRegionInfo TargetRegionInfo) {
         this.TargetRegionInfo = TargetRegionInfo;
     }
 
     /**
-     * Get anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串 
      * @return AnycastZone anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAnycastZone() {
         return this.AnycastZone;
@@ -864,19 +813,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AnycastZone anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnycastZone(String AnycastZone) {
         this.AnycastZone = AnycastZone;
     }
 
     /**
-     * Get IP版本，ipv4 | ipv6
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP版本，ipv4 | ipv6 
      * @return AddressIPVersion IP版本，ipv4 | ipv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddressIPVersion() {
         return this.AddressIPVersion;
@@ -884,29 +829,23 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set IP版本，ipv4 | ipv6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressIPVersion IP版本，ipv4 | ipv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressIPVersion(String AddressIPVersion) {
         this.AddressIPVersion = AddressIPVersion;
     }
 
     /**
-     * Get 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NumericalVpcId 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 数值形式的私有网络 ID。 
+     * @return NumericalVpcId 数值形式的私有网络 ID。
      */
     public Long getNumericalVpcId() {
         return this.NumericalVpcId;
     }
 
     /**
-     * Set 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param NumericalVpcId 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 数值形式的私有网络 ID。
+     * @param NumericalVpcId 数值形式的私有网络 ID。
      */
     public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;
@@ -993,9 +932,11 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 负载均衡实例被隔离的时间
+     * Get 负载均衡实例被隔离的时间。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsolatedTime 负载均衡实例被隔离的时间
+     * @return IsolatedTime 负载均衡实例被隔离的时间。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolatedTime() {
@@ -1003,9 +944,11 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Set 负载均衡实例被隔离的时间
+     * Set 负载均衡实例被隔离的时间。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsolatedTime 负载均衡实例被隔离的时间
+     * @param IsolatedTime 负载均衡实例被隔离的时间。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolatedTime(String IsolatedTime) {
@@ -1013,9 +956,11 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 负载均衡实例的过期时间，仅对预付费负载均衡生效
+     * Get 负载均衡实例的过期时间，仅对预付费负载均衡生效。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpireTime 负载均衡实例的过期时间，仅对预付费负载均衡生效
+     * @return ExpireTime 负载均衡实例的过期时间，仅对预付费负载均衡生效。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
@@ -1023,9 +968,11 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Set 负载均衡实例的过期时间，仅对预付费负载均衡生效
+     * Set 负载均衡实例的过期时间，仅对预付费负载均衡生效。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpireTime 负载均衡实例的过期时间，仅对预付费负载均衡生效
+     * @param ExpireTime 负载均衡实例的过期时间，仅对预付费负载均衡生效。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
@@ -1073,9 +1020,9 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 负载均衡实例的预付费相关属性
+     * Get 负载均衡实例的预付费相关属性，仅在 ChargeType=PREPAID 时显示。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PrepaidAttributes 负载均衡实例的预付费相关属性
+     * @return PrepaidAttributes 负载均衡实例的预付费相关属性，仅在 ChargeType=PREPAID 时显示。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LBChargePrepaid getPrepaidAttributes() {
@@ -1083,9 +1030,9 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Set 负载均衡实例的预付费相关属性
+     * Set 负载均衡实例的预付费相关属性，仅在 ChargeType=PREPAID 时显示。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrepaidAttributes 负载均衡实例的预付费相关属性
+     * @param PrepaidAttributes 负载均衡实例的预付费相关属性，仅在 ChargeType=PREPAID 时显示。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrepaidAttributes(LBChargePrepaid PrepaidAttributes) {
@@ -1093,10 +1040,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 负载均衡日志服务(CLS)的日志集ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡日志服务(CLS)的日志集ID 
      * @return LogSetId 负载均衡日志服务(CLS)的日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogSetId() {
         return this.LogSetId;
@@ -1104,19 +1049,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡日志服务(CLS)的日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogSetId 负载均衡日志服务(CLS)的日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogSetId(String LogSetId) {
         this.LogSetId = LogSetId;
     }
 
     /**
-     * Get 负载均衡日志服务(CLS)的日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡日志服务(CLS)的日志主题ID 
      * @return LogTopicId 负载均衡日志服务(CLS)的日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogTopicId() {
         return this.LogTopicId;
@@ -1124,9 +1065,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡日志服务(CLS)的日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogTopicId 负载均衡日志服务(CLS)的日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogTopicId(String LogTopicId) {
         this.LogTopicId = LogTopicId;
@@ -1173,10 +1112,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 是否可绑定高防包
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可绑定高防包 
      * @return IsDDos 是否可绑定高防包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDDos() {
         return this.IsDDos;
@@ -1184,19 +1121,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 是否可绑定高防包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDDos 是否可绑定高防包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDDos(Boolean IsDDos) {
         this.IsDDos = IsDDos;
     }
 
     /**
-     * Get 负载均衡维度的个性化配置ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡维度的个性化配置ID 
      * @return ConfigId 负载均衡维度的个性化配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -1204,19 +1137,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡维度的个性化配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigId 负载均衡维度的个性化配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get 后端服务是否放通来自LB的流量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端服务是否放通来自LB的流量 
      * @return LoadBalancerPassToTarget 后端服务是否放通来自LB的流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLoadBalancerPassToTarget() {
         return this.LoadBalancerPassToTarget;
@@ -1224,19 +1153,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 后端服务是否放通来自LB的流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerPassToTarget 后端服务是否放通来自LB的流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
     /**
-     * Get 内网独占集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网独占集群 
      * @return ExclusiveCluster 内网独占集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExclusiveCluster getExclusiveCluster() {
         return this.ExclusiveCluster;
@@ -1244,18 +1169,20 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 内网独占集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExclusiveCluster 内网独占集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExclusiveCluster(ExclusiveCluster ExclusiveCluster) {
         this.ExclusiveCluster = ExclusiveCluster;
     }
 
     /**
-     * Get IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+     * Get IP地址版本为ipv6时此字段有意义，IPv6Nat64 | IPv6FullChain。
+IPv6Nat64: 基于 NAT64 IPv6 过渡技术实现的负载均衡器。
+IPv6FullChain：基于 IPv6 单栈技术实现的负载均衡。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IPv6Mode IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+     * @return IPv6Mode IP地址版本为ipv6时此字段有意义，IPv6Nat64 | IPv6FullChain。
+IPv6Nat64: 基于 NAT64 IPv6 过渡技术实现的负载均衡器。
+IPv6FullChain：基于 IPv6 单栈技术实现的负载均衡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIPv6Mode() {
@@ -1263,9 +1190,13 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Set IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+     * Set IP地址版本为ipv6时此字段有意义，IPv6Nat64 | IPv6FullChain。
+IPv6Nat64: 基于 NAT64 IPv6 过渡技术实现的负载均衡器。
+IPv6FullChain：基于 IPv6 单栈技术实现的负载均衡。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IPv6Mode IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+     * @param IPv6Mode IP地址版本为ipv6时此字段有意义，IPv6Nat64 | IPv6FullChain。
+IPv6Nat64: 基于 NAT64 IPv6 过渡技术实现的负载均衡器。
+IPv6FullChain：基于 IPv6 单栈技术实现的负载均衡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPv6Mode(String IPv6Mode) {
@@ -1273,10 +1204,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 是否开启SnatPro。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启SnatPro。 
      * @return SnatPro 是否开启SnatPro。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSnatPro() {
         return this.SnatPro;
@@ -1284,19 +1213,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 是否开启SnatPro。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnatPro 是否开启SnatPro。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnatPro(Boolean SnatPro) {
         this.SnatPro = SnatPro;
     }
 
     /**
-     * Get 开启SnatPro负载均衡后，SnatIp列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开启SnatPro负载均衡后，SnatIp列表。 
      * @return SnatIps 开启SnatPro负载均衡后，SnatIp列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SnatIp [] getSnatIps() {
         return this.SnatIps;
@@ -1304,19 +1229,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 开启SnatPro负载均衡后，SnatIp列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnatIps 开启SnatPro负载均衡后，SnatIp列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnatIps(SnatIp [] SnatIps) {
         this.SnatIps = SnatIps;
     }
 
     /**
-     * Get 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul> 
      * @return SlaType 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSlaType() {
         return this.SlaType;
@@ -1324,19 +1245,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaType 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;
     }
 
     /**
-     * Get vip是否被封堵
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vip是否被封堵 
      * @return IsBlock vip是否被封堵
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsBlock() {
         return this.IsBlock;
@@ -1344,39 +1261,35 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set vip是否被封堵
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsBlock vip是否被封堵
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsBlock(Boolean IsBlock) {
         this.IsBlock = IsBlock;
     }
 
     /**
-     * Get 封堵或解封时间
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsBlockTime 封堵或解封时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 封堵或解封时间。
+格式：YYYY-MM-DD HH:mm:ss。 
+     * @return IsBlockTime 封堵或解封时间。
+格式：YYYY-MM-DD HH:mm:ss。
      */
     public String getIsBlockTime() {
         return this.IsBlockTime;
     }
 
     /**
-     * Set 封堵或解封时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsBlockTime 封堵或解封时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 封堵或解封时间。
+格式：YYYY-MM-DD HH:mm:ss。
+     * @param IsBlockTime 封堵或解封时间。
+格式：YYYY-MM-DD HH:mm:ss。
      */
     public void setIsBlockTime(String IsBlockTime) {
         this.IsBlockTime = IsBlockTime;
     }
 
     /**
-     * Get IP类型是否是本地BGP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP类型是否是本地BGP 
      * @return LocalBgp IP类型是否是本地BGP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLocalBgp() {
         return this.LocalBgp;
@@ -1384,9 +1297,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set IP类型是否是本地BGP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalBgp IP类型是否是本地BGP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalBgp(Boolean LocalBgp) {
         this.LocalBgp = LocalBgp;
@@ -1413,10 +1324,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。 
      * @return MixIpTarget 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getMixIpTarget() {
         return this.MixIpTarget;
@@ -1424,9 +1333,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MixIpTarget 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMixIpTarget(Boolean MixIpTarget) {
         this.MixIpTarget = MixIpTarget;
@@ -1473,10 +1380,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 负载均衡日志服务(CLS)的健康检查日志集ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡日志服务(CLS)的健康检查日志集ID 
      * @return HealthLogSetId 负载均衡日志服务(CLS)的健康检查日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHealthLogSetId() {
         return this.HealthLogSetId;
@@ -1484,19 +1389,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡日志服务(CLS)的健康检查日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthLogSetId 负载均衡日志服务(CLS)的健康检查日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthLogSetId(String HealthLogSetId) {
         this.HealthLogSetId = HealthLogSetId;
     }
 
     /**
-     * Get 负载均衡日志服务(CLS)的健康检查日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡日志服务(CLS)的健康检查日志主题ID 
      * @return HealthLogTopicId 负载均衡日志服务(CLS)的健康检查日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHealthLogTopicId() {
         return this.HealthLogTopicId;
@@ -1504,9 +1405,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡日志服务(CLS)的健康检查日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthLogTopicId 负载均衡日志服务(CLS)的健康检查日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthLogTopicId(String HealthLogTopicId) {
         this.HealthLogTopicId = HealthLogTopicId;
@@ -1533,30 +1432,112 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 负载均衡的属性
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttributeFlags 负载均衡的属性
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 负载均衡的属性，按位来决定是否开启
+2^0: 删除保护，开启后防止负载均衡被误删除。 
+2^1: 用户不可见，控制负载均衡对用户的可见性。 
+2^2: 阻塞状态，可能用于限制负载均衡的某些操作或流量。 
+2^3: 禁用负载均衡的NAT功能，可能用于特定场景下的流量直接转发。 
+2^4: 封禁状态，可能用于暂停负载均衡服务或限制访问。 
+2^5: 升配标志，可能用于标识负载均衡需要升级配置或性能。 
+2^6: 停止状态，开启后负载均衡暂停服务。 
+2^7: 不使用VPC网关，可能用于绕过VPC网关直接处理流量。 
+2^8: 安全组在TGW（Transit Gateway）中，涉及网络安全策略配置。 
+2^9: 共享限制标志，可能用于控制负载均衡的共享资源限制。 
+2^10: Web应用防火墙（WAF）标志，开启后启用WAF保护。 
+2^11: 域名型负载均衡，标识负载均衡是否基于域名进行流量分发。 
+2^12: IPv6源地址转换（SNAT），用于IPv6网络的源地址处理。 
+2^13: 隐藏域名，可能用于隐私保护或特定场景下不暴露域名。 
+2^14: 巨型帧支持，开启后支持更大的数据帧以提高网络效率。 
+2^15: 四层IP直连无NAT，可能用于四层负载均衡直接转发IP流量。 
+2^16: VPC网关三层服务，可能涉及三层网络服务的网关功能。 
+2^17: IPv6扩展标志，可能用于特定的IPv6功能支持。 
+2^18: IPv6独占标志，可能用于专属IPv6流量处理。 
+2^19: BGP专业版支持，可能涉及高级BGP路由功能。 
+2^20: TOA（TCP Option Address）清理，清除TCP选项中的地址信息。 
+ 
+     * @return AttributeFlags 负载均衡的属性，按位来决定是否开启
+2^0: 删除保护，开启后防止负载均衡被误删除。 
+2^1: 用户不可见，控制负载均衡对用户的可见性。 
+2^2: 阻塞状态，可能用于限制负载均衡的某些操作或流量。 
+2^3: 禁用负载均衡的NAT功能，可能用于特定场景下的流量直接转发。 
+2^4: 封禁状态，可能用于暂停负载均衡服务或限制访问。 
+2^5: 升配标志，可能用于标识负载均衡需要升级配置或性能。 
+2^6: 停止状态，开启后负载均衡暂停服务。 
+2^7: 不使用VPC网关，可能用于绕过VPC网关直接处理流量。 
+2^8: 安全组在TGW（Transit Gateway）中，涉及网络安全策略配置。 
+2^9: 共享限制标志，可能用于控制负载均衡的共享资源限制。 
+2^10: Web应用防火墙（WAF）标志，开启后启用WAF保护。 
+2^11: 域名型负载均衡，标识负载均衡是否基于域名进行流量分发。 
+2^12: IPv6源地址转换（SNAT），用于IPv6网络的源地址处理。 
+2^13: 隐藏域名，可能用于隐私保护或特定场景下不暴露域名。 
+2^14: 巨型帧支持，开启后支持更大的数据帧以提高网络效率。 
+2^15: 四层IP直连无NAT，可能用于四层负载均衡直接转发IP流量。 
+2^16: VPC网关三层服务，可能涉及三层网络服务的网关功能。 
+2^17: IPv6扩展标志，可能用于特定的IPv6功能支持。 
+2^18: IPv6独占标志，可能用于专属IPv6流量处理。 
+2^19: BGP专业版支持，可能涉及高级BGP路由功能。 
+2^20: TOA（TCP Option Address）清理，清除TCP选项中的地址信息。 
+
      */
     public String [] getAttributeFlags() {
         return this.AttributeFlags;
     }
 
     /**
-     * Set 负载均衡的属性
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttributeFlags 负载均衡的属性
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 负载均衡的属性，按位来决定是否开启
+2^0: 删除保护，开启后防止负载均衡被误删除。 
+2^1: 用户不可见，控制负载均衡对用户的可见性。 
+2^2: 阻塞状态，可能用于限制负载均衡的某些操作或流量。 
+2^3: 禁用负载均衡的NAT功能，可能用于特定场景下的流量直接转发。 
+2^4: 封禁状态，可能用于暂停负载均衡服务或限制访问。 
+2^5: 升配标志，可能用于标识负载均衡需要升级配置或性能。 
+2^6: 停止状态，开启后负载均衡暂停服务。 
+2^7: 不使用VPC网关，可能用于绕过VPC网关直接处理流量。 
+2^8: 安全组在TGW（Transit Gateway）中，涉及网络安全策略配置。 
+2^9: 共享限制标志，可能用于控制负载均衡的共享资源限制。 
+2^10: Web应用防火墙（WAF）标志，开启后启用WAF保护。 
+2^11: 域名型负载均衡，标识负载均衡是否基于域名进行流量分发。 
+2^12: IPv6源地址转换（SNAT），用于IPv6网络的源地址处理。 
+2^13: 隐藏域名，可能用于隐私保护或特定场景下不暴露域名。 
+2^14: 巨型帧支持，开启后支持更大的数据帧以提高网络效率。 
+2^15: 四层IP直连无NAT，可能用于四层负载均衡直接转发IP流量。 
+2^16: VPC网关三层服务，可能涉及三层网络服务的网关功能。 
+2^17: IPv6扩展标志，可能用于特定的IPv6功能支持。 
+2^18: IPv6独占标志，可能用于专属IPv6流量处理。 
+2^19: BGP专业版支持，可能涉及高级BGP路由功能。 
+2^20: TOA（TCP Option Address）清理，清除TCP选项中的地址信息。 
+
+     * @param AttributeFlags 负载均衡的属性，按位来决定是否开启
+2^0: 删除保护，开启后防止负载均衡被误删除。 
+2^1: 用户不可见，控制负载均衡对用户的可见性。 
+2^2: 阻塞状态，可能用于限制负载均衡的某些操作或流量。 
+2^3: 禁用负载均衡的NAT功能，可能用于特定场景下的流量直接转发。 
+2^4: 封禁状态，可能用于暂停负载均衡服务或限制访问。 
+2^5: 升配标志，可能用于标识负载均衡需要升级配置或性能。 
+2^6: 停止状态，开启后负载均衡暂停服务。 
+2^7: 不使用VPC网关，可能用于绕过VPC网关直接处理流量。 
+2^8: 安全组在TGW（Transit Gateway）中，涉及网络安全策略配置。 
+2^9: 共享限制标志，可能用于控制负载均衡的共享资源限制。 
+2^10: Web应用防火墙（WAF）标志，开启后启用WAF保护。 
+2^11: 域名型负载均衡，标识负载均衡是否基于域名进行流量分发。 
+2^12: IPv6源地址转换（SNAT），用于IPv6网络的源地址处理。 
+2^13: 隐藏域名，可能用于隐私保护或特定场景下不暴露域名。 
+2^14: 巨型帧支持，开启后支持更大的数据帧以提高网络效率。 
+2^15: 四层IP直连无NAT，可能用于四层负载均衡直接转发IP流量。 
+2^16: VPC网关三层服务，可能涉及三层网络服务的网关功能。 
+2^17: IPv6扩展标志，可能用于特定的IPv6功能支持。 
+2^18: IPv6独占标志，可能用于专属IPv6流量处理。 
+2^19: BGP专业版支持，可能涉及高级BGP路由功能。 
+2^20: TOA（TCP Option Address）清理，清除TCP选项中的地址信息。 
+
      */
     public void setAttributeFlags(String [] AttributeFlags) {
         this.AttributeFlags = AttributeFlags;
     }
 
     /**
-     * Get 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡实例的域名。 
      * @return LoadBalancerDomain 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalancerDomain() {
         return this.LoadBalancerDomain;
@@ -1564,19 +1545,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerDomain 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerDomain(String LoadBalancerDomain) {
         this.LoadBalancerDomain = LoadBalancerDomain;
     }
 
     /**
-     * Get 网络出口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络出口 
      * @return Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEgress() {
         return this.Egress;
@@ -1584,9 +1561,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * Set 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;

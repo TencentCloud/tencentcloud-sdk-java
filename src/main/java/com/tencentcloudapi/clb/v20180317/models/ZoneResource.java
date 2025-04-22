@@ -32,7 +32,6 @@ public class ZoneResource extends AbstractModel {
 
     /**
     * 资源列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceSet")
     @Expose
@@ -83,7 +82,6 @@ public class ZoneResource extends AbstractModel {
 
     /**
     * 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Egress")
     @Expose
@@ -106,10 +104,8 @@ public class ZoneResource extends AbstractModel {
     }
 
     /**
-     * Get 资源列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源列表。 
      * @return ResourceSet 资源列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Resource [] getResourceSet() {
         return this.ResourceSet;
@@ -117,9 +113,7 @@ public class ZoneResource extends AbstractModel {
 
     /**
      * Set 资源列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceSet 资源列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceSet(Resource [] ResourceSet) {
         this.ResourceSet = ResourceSet;
@@ -226,10 +220,8 @@ public class ZoneResource extends AbstractModel {
     }
 
     /**
-     * Get 网络出口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络出口 
      * @return Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEgress() {
         return this.Egress;
@@ -237,9 +229,7 @@ public class ZoneResource extends AbstractModel {
 
     /**
      * Set 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;

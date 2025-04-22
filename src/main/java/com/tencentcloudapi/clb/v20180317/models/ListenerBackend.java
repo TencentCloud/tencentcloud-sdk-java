@@ -46,7 +46,6 @@ public class ListenerBackend extends AbstractModel {
 
     /**
     * 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rules")
     @Expose
@@ -54,7 +53,6 @@ public class ListenerBackend extends AbstractModel {
 
     /**
     * 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Targets")
     @Expose
@@ -62,7 +60,6 @@ public class ListenerBackend extends AbstractModel {
 
     /**
     * 若支持端口段，则为端口段结束端口；若不支持端口段，则为0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndPort")
     @Expose
@@ -117,10 +114,8 @@ public class ListenerBackend extends AbstractModel {
     }
 
     /**
-     * Get 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器下的规则信息（仅适用于HTTP/HTTPS监听器） 
      * @return Rules 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleTargets [] getRules() {
         return this.Rules;
@@ -128,19 +123,15 @@ public class ListenerBackend extends AbstractModel {
 
     /**
      * Set 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rules 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRules(RuleTargets [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器） 
      * @return Targets 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Backend [] getTargets() {
         return this.Targets;
@@ -148,19 +139,15 @@ public class ListenerBackend extends AbstractModel {
 
     /**
      * Set 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Targets 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargets(Backend [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get 若支持端口段，则为端口段结束端口；若不支持端口段，则为0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 若支持端口段，则为端口段结束端口；若不支持端口段，则为0 
      * @return EndPort 若支持端口段，则为端口段结束端口；若不支持端口段，则为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndPort() {
         return this.EndPort;
@@ -168,9 +155,7 @@ public class ListenerBackend extends AbstractModel {
 
     /**
      * Set 若支持端口段，则为端口段结束端口；若不支持端口段，则为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndPort 若支持端口段，则为端口段结束端口；若不支持端口段，则为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndPort(Long EndPort) {
         this.EndPort = EndPort;

@@ -25,7 +25,6 @@ public class ZoneInfo extends AbstractModel {
 
     /**
     * 可用区数值形式的唯一ID，如：100001
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -33,7 +32,6 @@ public class ZoneInfo extends AbstractModel {
 
     /**
     * 可用区字符串形式的唯一ID，如：ap-guangzhou-1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -41,7 +39,6 @@ public class ZoneInfo extends AbstractModel {
 
     /**
     * 可用区名称，如：广州一区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneName")
     @Expose
@@ -49,7 +46,6 @@ public class ZoneInfo extends AbstractModel {
 
     /**
     * 可用区所属地域，如：ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneRegion")
     @Expose
@@ -57,7 +53,6 @@ public class ZoneInfo extends AbstractModel {
 
     /**
     * 可用区是否是LocalZone可用区，如：false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalZone")
     @Expose
@@ -65,17 +60,14 @@ public class ZoneInfo extends AbstractModel {
 
     /**
     * 可用区是否是EdgeZone可用区，如：false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EdgeZone")
     @Expose
     private Boolean EdgeZone;
 
     /**
-     * Get 可用区数值形式的唯一ID，如：100001
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区数值形式的唯一ID，如：100001 
      * @return ZoneId 可用区数值形式的唯一ID，如：100001
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -83,19 +75,15 @@ public class ZoneInfo extends AbstractModel {
 
     /**
      * Set 可用区数值形式的唯一ID，如：100001
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 可用区数值形式的唯一ID，如：100001
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 可用区字符串形式的唯一ID，如：ap-guangzhou-1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区字符串形式的唯一ID，如：ap-guangzhou-1 
      * @return Zone 可用区字符串形式的唯一ID，如：ap-guangzhou-1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -103,19 +91,15 @@ public class ZoneInfo extends AbstractModel {
 
     /**
      * Set 可用区字符串形式的唯一ID，如：ap-guangzhou-1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区字符串形式的唯一ID，如：ap-guangzhou-1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 可用区名称，如：广州一区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区名称，如：广州一区 
      * @return ZoneName 可用区名称，如：广州一区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneName() {
         return this.ZoneName;
@@ -123,19 +107,15 @@ public class ZoneInfo extends AbstractModel {
 
     /**
      * Set 可用区名称，如：广州一区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneName 可用区名称，如：广州一区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 可用区所属地域，如：ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区所属地域，如：ap-guangzhou 
      * @return ZoneRegion 可用区所属地域，如：ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneRegion() {
         return this.ZoneRegion;
@@ -143,19 +123,15 @@ public class ZoneInfo extends AbstractModel {
 
     /**
      * Set 可用区所属地域，如：ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneRegion 可用区所属地域，如：ap-guangzhou
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneRegion(String ZoneRegion) {
         this.ZoneRegion = ZoneRegion;
     }
 
     /**
-     * Get 可用区是否是LocalZone可用区，如：false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区是否是LocalZone可用区，如：false 
      * @return LocalZone 可用区是否是LocalZone可用区，如：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLocalZone() {
         return this.LocalZone;
@@ -163,19 +139,15 @@ public class ZoneInfo extends AbstractModel {
 
     /**
      * Set 可用区是否是LocalZone可用区，如：false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalZone 可用区是否是LocalZone可用区，如：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalZone(Boolean LocalZone) {
         this.LocalZone = LocalZone;
     }
 
     /**
-     * Get 可用区是否是EdgeZone可用区，如：false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区是否是EdgeZone可用区，如：false 
      * @return EdgeZone 可用区是否是EdgeZone可用区，如：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEdgeZone() {
         return this.EdgeZone;
@@ -183,9 +155,7 @@ public class ZoneInfo extends AbstractModel {
 
     /**
      * Set 可用区是否是EdgeZone可用区，如：false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EdgeZone 可用区是否是EdgeZone可用区，如：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEdgeZone(Boolean EdgeZone) {
         this.EdgeZone = EdgeZone;

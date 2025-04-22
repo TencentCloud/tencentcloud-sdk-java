@@ -321,7 +321,6 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
 
     /**
     * 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerDomain")
     @Expose
@@ -329,7 +328,6 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
 
     /**
     * 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Egress")
     @Expose
@@ -1101,10 +1099,8 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡实例的域名。 
      * @return LoadBalancerDomain 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalancerDomain() {
         return this.LoadBalancerDomain;
@@ -1112,19 +1108,15 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
 
     /**
      * Set 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerDomain 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerDomain(String LoadBalancerDomain) {
         this.LoadBalancerDomain = LoadBalancerDomain;
     }
 
     /**
-     * Get 网络出口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络出口 
      * @return Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEgress() {
         return this.Egress;
@@ -1132,9 +1124,7 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
 
     /**
      * Set 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;

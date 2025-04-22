@@ -32,7 +32,6 @@ public class BindDetailItem extends AbstractModel {
 
     /**
     * 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListenerId")
     @Expose
@@ -40,7 +39,6 @@ public class BindDetailItem extends AbstractModel {
 
     /**
     * 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -48,7 +46,6 @@ public class BindDetailItem extends AbstractModel {
 
     /**
     * 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocationId")
     @Expose
@@ -64,7 +61,6 @@ public class BindDetailItem extends AbstractModel {
 
     /**
     * 监听器协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -72,7 +68,6 @@ public class BindDetailItem extends AbstractModel {
 
     /**
     * 监听器端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vport")
     @Expose
@@ -88,7 +83,6 @@ public class BindDetailItem extends AbstractModel {
 
     /**
     * 配置ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UconfigId")
     @Expose
@@ -111,10 +105,8 @@ public class BindDetailItem extends AbstractModel {
     }
 
     /**
-     * Get 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置绑定的监听器ID 
      * @return ListenerId 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListenerId() {
         return this.ListenerId;
@@ -122,19 +114,15 @@ public class BindDetailItem extends AbstractModel {
 
     /**
      * Set 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListenerId 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置绑定的域名 
      * @return Domain 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -142,19 +130,15 @@ public class BindDetailItem extends AbstractModel {
 
     /**
      * Set 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置绑定的规则 
      * @return LocationId 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocationId() {
         return this.LocationId;
@@ -162,9 +146,7 @@ public class BindDetailItem extends AbstractModel {
 
     /**
      * Set 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocationId 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
@@ -191,10 +173,8 @@ public class BindDetailItem extends AbstractModel {
     }
 
     /**
-     * Get 监听器协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器协议 
      * @return Protocol 监听器协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -202,19 +182,15 @@ public class BindDetailItem extends AbstractModel {
 
     /**
      * Set 监听器协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 监听器协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 监听器端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器端口 
      * @return Vport 监听器端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVport() {
         return this.Vport;
@@ -222,9 +198,7 @@ public class BindDetailItem extends AbstractModel {
 
     /**
      * Set 监听器端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vport 监听器端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
@@ -251,10 +225,8 @@ public class BindDetailItem extends AbstractModel {
     }
 
     /**
-     * Get 配置ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置ID 
      * @return UconfigId 配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUconfigId() {
         return this.UconfigId;
@@ -262,9 +234,7 @@ public class BindDetailItem extends AbstractModel {
 
     /**
      * Set 配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UconfigId 配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUconfigId(String UconfigId) {
         this.UconfigId = UconfigId;

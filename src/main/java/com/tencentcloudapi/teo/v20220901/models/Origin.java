@@ -25,7 +25,6 @@ public class Origin extends AbstractModel {
 
     /**
     * 主源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Origins")
     @Expose
@@ -33,7 +32,6 @@ public class Origin extends AbstractModel {
 
     /**
     * 备源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupOrigins")
     @Expose
@@ -44,7 +42,6 @@ public class Origin extends AbstractModel {
 <li>http：强制 http 回源；</li>
 <li>follow：协议跟随回源；</li>
 <li>https：强制 https 回源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginPullProtocol")
     @Expose
@@ -54,17 +51,14 @@ public class Origin extends AbstractModel {
     * 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosPrivateAccess")
     @Expose
     private String CosPrivateAccess;
 
     /**
-     * Get 主源站列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主源站列表。 
      * @return Origins 主源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOrigins() {
         return this.Origins;
@@ -72,19 +66,15 @@ public class Origin extends AbstractModel {
 
     /**
      * Set 主源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Origins 主源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrigins(String [] Origins) {
         this.Origins = Origins;
     }
 
     /**
-     * Get 备源站列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备源站列表。 
      * @return BackupOrigins 备源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBackupOrigins() {
         return this.BackupOrigins;
@@ -92,9 +82,7 @@ public class Origin extends AbstractModel {
 
     /**
      * Set 备源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupOrigins 备源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupOrigins(String [] BackupOrigins) {
         this.BackupOrigins = BackupOrigins;
@@ -104,13 +92,11 @@ public class Origin extends AbstractModel {
      * Get 回源协议配置，取值有：
 <li>http：强制 http 回源；</li>
 <li>follow：协议跟随回源；</li>
-<li>https：强制 https 回源。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>https：强制 https 回源。</li> 
      * @return OriginPullProtocol 回源协议配置，取值有：
 <li>http：强制 http 回源；</li>
 <li>follow：协议跟随回源；</li>
 <li>https：强制 https 回源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginPullProtocol() {
         return this.OriginPullProtocol;
@@ -121,12 +107,10 @@ public class Origin extends AbstractModel {
 <li>http：强制 http 回源；</li>
 <li>follow：协议跟随回源；</li>
 <li>https：强制 https 回源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginPullProtocol 回源协议配置，取值有：
 <li>http：强制 http 回源；</li>
 <li>follow：协议跟随回源；</li>
 <li>https：强制 https 回源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginPullProtocol(String OriginPullProtocol) {
         this.OriginPullProtocol = OriginPullProtocol;
@@ -135,12 +119,10 @@ public class Origin extends AbstractModel {
     /**
      * Get 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
-<li>off：公共访问。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>off：公共访问。</li> 
      * @return CosPrivateAccess 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosPrivateAccess() {
         return this.CosPrivateAccess;
@@ -150,11 +132,9 @@ public class Origin extends AbstractModel {
      * Set 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosPrivateAccess 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosPrivateAccess(String CosPrivateAccess) {
         this.CosPrivateAccess = CosPrivateAccess;

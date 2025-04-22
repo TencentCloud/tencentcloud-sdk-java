@@ -32,7 +32,6 @@ public class BindItem extends AbstractModel {
 
     /**
     * 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListenerId")
     @Expose
@@ -40,7 +39,6 @@ public class BindItem extends AbstractModel {
 
     /**
     * 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -48,7 +46,6 @@ public class BindItem extends AbstractModel {
 
     /**
     * 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocationId")
     @Expose
@@ -71,10 +68,8 @@ public class BindItem extends AbstractModel {
     }
 
     /**
-     * Get 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置绑定的监听器ID 
      * @return ListenerId 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListenerId() {
         return this.ListenerId;
@@ -82,19 +77,15 @@ public class BindItem extends AbstractModel {
 
     /**
      * Set 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListenerId 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置绑定的域名 
      * @return Domain 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -102,19 +93,15 @@ public class BindItem extends AbstractModel {
 
     /**
      * Set 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置绑定的规则 
      * @return LocationId 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocationId() {
         return this.LocationId;
@@ -122,9 +109,7 @@ public class BindItem extends AbstractModel {
 
     /**
      * Set 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocationId 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;

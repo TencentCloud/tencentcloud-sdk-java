@@ -25,7 +25,6 @@ public class CustomizedHeader extends AbstractModel {
 
     /**
     * 自定义头部 Key。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class CustomizedHeader extends AbstractModel {
 
     /**
     * 自定义头部 Value。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 自定义头部 Key。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义头部 Key。 
      * @return Key 自定义头部 Key。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class CustomizedHeader extends AbstractModel {
 
     /**
      * Set 自定义头部 Key。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 自定义头部 Key。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 自定义头部 Value。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义头部 Value。 
      * @return Value 自定义头部 Value。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class CustomizedHeader extends AbstractModel {
 
     /**
      * Set 自定义头部 Value。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 自定义头部 Value。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

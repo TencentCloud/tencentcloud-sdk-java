@@ -27,6 +27,9 @@ public enum LkeErrorCode {
      /* 服务未开通。 */
      FAILEDOPERATION_UNOPENERROR("FailedOperation.UnOpenError"),
      
+     /* 参数错误。 */
+     INVALIDPARAMETER("InvalidParameter"),
+     
      /* 参数值错误。 */
      INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUELIMIT("InvalidParameterValue.InvalidParameterValueLimit"),
      

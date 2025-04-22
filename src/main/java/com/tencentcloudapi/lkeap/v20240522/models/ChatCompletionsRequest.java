@@ -57,7 +57,7 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Float Temperature;
 
     /**
-    * 最大生成的token数量
+    * 最大生成的token数量，默认为4096，最大可设置为16384
     */
     @SerializedName("MaxTokens")
     @Expose
@@ -148,16 +148,16 @@ public class ChatCompletionsRequest extends AbstractModel {
     }
 
     /**
-     * Get 最大生成的token数量 
-     * @return MaxTokens 最大生成的token数量
+     * Get 最大生成的token数量，默认为4096，最大可设置为16384 
+     * @return MaxTokens 最大生成的token数量，默认为4096，最大可设置为16384
      */
     public Long getMaxTokens() {
         return this.MaxTokens;
     }
 
     /**
-     * Set 最大生成的token数量
-     * @param MaxTokens 最大生成的token数量
+     * Set 最大生成的token数量，默认为4096，最大可设置为16384
+     * @param MaxTokens 最大生成的token数量，默认为4096，最大可设置为16384
      */
     public void setMaxTokens(Long MaxTokens) {
         this.MaxTokens = MaxTokens;

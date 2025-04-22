@@ -39,7 +39,6 @@ public class ConfigListItem extends AbstractModel {
 
     /**
     * 配置名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigName")
     @Expose
@@ -99,10 +98,8 @@ public class ConfigListItem extends AbstractModel {
     }
 
     /**
-     * Get 配置名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置名字 
      * @return ConfigName 配置名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigName() {
         return this.ConfigName;
@@ -110,9 +107,7 @@ public class ConfigListItem extends AbstractModel {
 
     /**
      * Set 配置名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigName 配置名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigName(String ConfigName) {
         this.ConfigName = ConfigName;

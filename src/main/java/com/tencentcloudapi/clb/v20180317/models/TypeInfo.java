@@ -25,7 +25,6 @@ public class TypeInfo extends AbstractModel {
 
     /**
     * 运营商类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,17 +32,14 @@ public class TypeInfo extends AbstractModel {
 
     /**
     * 规格可用性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecAvailabilitySet")
     @Expose
     private SpecAvailability [] SpecAvailabilitySet;
 
     /**
-     * Get 运营商类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运营商类型 
      * @return Type 运营商类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -51,19 +47,15 @@ public class TypeInfo extends AbstractModel {
 
     /**
      * Set 运营商类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 运营商类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 规格可用性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格可用性 
      * @return SpecAvailabilitySet 规格可用性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpecAvailability [] getSpecAvailabilitySet() {
         return this.SpecAvailabilitySet;
@@ -71,9 +63,7 @@ public class TypeInfo extends AbstractModel {
 
     /**
      * Set 规格可用性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecAvailabilitySet 规格可用性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecAvailabilitySet(SpecAvailability [] SpecAvailabilitySet) {
         this.SpecAvailabilitySet = SpecAvailabilitySet;

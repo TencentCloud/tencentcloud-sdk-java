@@ -55,6 +55,13 @@ long及double类型字段需为空；
     private Boolean ContainZH;
 
     /**
+    * 字段别名
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
      * Get 字段类型，目前支持的类型有：long、text、double 
      * @return Type 字段类型，目前支持的类型有：long、text、double
      */
@@ -130,6 +137,22 @@ long及double类型字段需为空；
         this.ContainZH = ContainZH;
     }
 
+    /**
+     * Get 字段别名 
+     * @return Alias 字段别名
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set 字段别名
+     * @param Alias 字段别名
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
     public ValueInfo() {
     }
 
@@ -150,6 +173,9 @@ long及double类型字段需为空；
         if (source.ContainZH != null) {
             this.ContainZH = new Boolean(source.ContainZH);
         }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
     }
 
 
@@ -161,6 +187,7 @@ long及double类型字段需为空；
         this.setParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
         this.setParamSimple(map, prefix + "SqlFlag", this.SqlFlag);
         this.setParamSimple(map, prefix + "ContainZH", this.ContainZH);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

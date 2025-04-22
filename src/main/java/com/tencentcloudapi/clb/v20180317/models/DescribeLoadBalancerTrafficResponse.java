@@ -25,7 +25,6 @@ public class DescribeLoadBalancerTrafficResponse extends AbstractModel {
 
     /**
     * 按出带宽从高到低排序后的负载均衡信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerTraffic")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeLoadBalancerTrafficResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 按出带宽从高到低排序后的负载均衡信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 按出带宽从高到低排序后的负载均衡信息。 
      * @return LoadBalancerTraffic 按出带宽从高到低排序后的负载均衡信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LoadBalancerTraffic [] getLoadBalancerTraffic() {
         return this.LoadBalancerTraffic;
@@ -50,9 +47,7 @@ public class DescribeLoadBalancerTrafficResponse extends AbstractModel {
 
     /**
      * Set 按出带宽从高到低排序后的负载均衡信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerTraffic 按出带宽从高到低排序后的负载均衡信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerTraffic(LoadBalancerTraffic [] LoadBalancerTraffic) {
         this.LoadBalancerTraffic = LoadBalancerTraffic;

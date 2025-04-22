@@ -32,7 +32,6 @@ public class HealthCheck extends AbstractModel {
 
     /**
     * 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeOut")
     @Expose
@@ -41,7 +40,6 @@ public class HealthCheck extends AbstractModel {
     /**
     * 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
 说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntervalTime")
     @Expose
@@ -49,7 +47,6 @@ public class HealthCheck extends AbstractModel {
 
     /**
     * 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthNum")
     @Expose
@@ -57,7 +54,6 @@ public class HealthCheck extends AbstractModel {
 
     /**
     * 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnHealthNum")
     @Expose
@@ -130,7 +126,6 @@ public class HealthCheck extends AbstractModel {
 
     /**
     * 健康检查使用的协议。取值 TCP | HTTP | HTTPS | GRPC | PING | CUSTOM，UDP监听器支持PING/CUSTOM，TCP监听器支持TCP/HTTP/CUSTOM，TCP_SSL/QUIC监听器支持TCP/HTTP，HTTP规则支持HTTP/GRPC，HTTPS规则支持HTTP/HTTPS/GRPC。HTTP监听器默认值为HTTP;TCP、TCP_SSL、QUIC监听器默认值为TCP;UDP监听器默认为PING;HTTPS监听器的CheckType默认值与后端转发协议一致。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckType")
     @Expose
@@ -146,7 +141,6 @@ public class HealthCheck extends AbstractModel {
 
     /**
     * 健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceIpType")
     @Expose
@@ -177,10 +171,8 @@ public class HealthCheck extends AbstractModel {
     }
 
     /**
-     * Get 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。 
      * @return TimeOut 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeOut() {
         return this.TimeOut;
@@ -188,9 +180,7 @@ public class HealthCheck extends AbstractModel {
 
     /**
      * Set 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeOut 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeOut(Long TimeOut) {
         this.TimeOut = TimeOut;
@@ -198,11 +188,9 @@ public class HealthCheck extends AbstractModel {
 
     /**
      * Get 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
-说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
-注意：此字段可能返回 null，表示取不到有效值。 
+说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。 
      * @return IntervalTime 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
 说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIntervalTime() {
         return this.IntervalTime;
@@ -211,20 +199,16 @@ public class HealthCheck extends AbstractModel {
     /**
      * Set 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
 说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntervalTime 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
 说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
     /**
-     * Get 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。 
      * @return HealthNum 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHealthNum() {
         return this.HealthNum;
@@ -232,19 +216,15 @@ public class HealthCheck extends AbstractModel {
 
     /**
      * Set 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthNum 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthNum(Long HealthNum) {
         this.HealthNum = HealthNum;
     }
 
     /**
-     * Get 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。 
      * @return UnHealthNum 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnHealthNum() {
         return this.UnHealthNum;
@@ -252,9 +232,7 @@ public class HealthCheck extends AbstractModel {
 
     /**
      * Set 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnHealthNum 不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发异常，可选值：2~10，单位：次。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnHealthNum(Long UnHealthNum) {
         this.UnHealthNum = UnHealthNum;
@@ -425,10 +403,8 @@ public class HealthCheck extends AbstractModel {
     }
 
     /**
-     * Get 健康检查使用的协议。取值 TCP | HTTP | HTTPS | GRPC | PING | CUSTOM，UDP监听器支持PING/CUSTOM，TCP监听器支持TCP/HTTP/CUSTOM，TCP_SSL/QUIC监听器支持TCP/HTTP，HTTP规则支持HTTP/GRPC，HTTPS规则支持HTTP/HTTPS/GRPC。HTTP监听器默认值为HTTP;TCP、TCP_SSL、QUIC监听器默认值为TCP;UDP监听器默认为PING;HTTPS监听器的CheckType默认值与后端转发协议一致。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康检查使用的协议。取值 TCP | HTTP | HTTPS | GRPC | PING | CUSTOM，UDP监听器支持PING/CUSTOM，TCP监听器支持TCP/HTTP/CUSTOM，TCP_SSL/QUIC监听器支持TCP/HTTP，HTTP规则支持HTTP/GRPC，HTTPS规则支持HTTP/HTTPS/GRPC。HTTP监听器默认值为HTTP;TCP、TCP_SSL、QUIC监听器默认值为TCP;UDP监听器默认为PING;HTTPS监听器的CheckType默认值与后端转发协议一致。 
      * @return CheckType 健康检查使用的协议。取值 TCP | HTTP | HTTPS | GRPC | PING | CUSTOM，UDP监听器支持PING/CUSTOM，TCP监听器支持TCP/HTTP/CUSTOM，TCP_SSL/QUIC监听器支持TCP/HTTP，HTTP规则支持HTTP/GRPC，HTTPS规则支持HTTP/HTTPS/GRPC。HTTP监听器默认值为HTTP;TCP、TCP_SSL、QUIC监听器默认值为TCP;UDP监听器默认为PING;HTTPS监听器的CheckType默认值与后端转发协议一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckType() {
         return this.CheckType;
@@ -436,9 +412,7 @@ public class HealthCheck extends AbstractModel {
 
     /**
      * Set 健康检查使用的协议。取值 TCP | HTTP | HTTPS | GRPC | PING | CUSTOM，UDP监听器支持PING/CUSTOM，TCP监听器支持TCP/HTTP/CUSTOM，TCP_SSL/QUIC监听器支持TCP/HTTP，HTTP规则支持HTTP/GRPC，HTTPS规则支持HTTP/HTTPS/GRPC。HTTP监听器默认值为HTTP;TCP、TCP_SSL、QUIC监听器默认值为TCP;UDP监听器默认为PING;HTTPS监听器的CheckType默认值与后端转发协议一致。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckType 健康检查使用的协议。取值 TCP | HTTP | HTTPS | GRPC | PING | CUSTOM，UDP监听器支持PING/CUSTOM，TCP监听器支持TCP/HTTP/CUSTOM，TCP_SSL/QUIC监听器支持TCP/HTTP，HTTP规则支持HTTP/GRPC，HTTPS规则支持HTTP/HTTPS/GRPC。HTTP监听器默认值为HTTP;TCP、TCP_SSL、QUIC监听器默认值为TCP;UDP监听器默认为PING;HTTPS监听器的CheckType默认值与后端转发协议一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckType(String CheckType) {
         this.CheckType = CheckType;
@@ -465,10 +439,8 @@ public class HealthCheck extends AbstractModel {
     }
 
     /**
-     * Get 健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP）。 
      * @return SourceIpType 健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSourceIpType() {
         return this.SourceIpType;
@@ -476,9 +448,7 @@ public class HealthCheck extends AbstractModel {
 
     /**
      * Set 健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceIpType 健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceIpType(Long SourceIpType) {
         this.SourceIpType = SourceIpType;

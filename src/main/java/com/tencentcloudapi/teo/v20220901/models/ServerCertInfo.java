@@ -26,7 +26,6 @@ public class ServerCertInfo extends AbstractModel {
     /**
     * 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertId")
     @Expose
@@ -34,7 +33,6 @@ public class ServerCertInfo extends AbstractModel {
 
     /**
     * 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
     @Expose
@@ -45,7 +43,6 @@ public class ServerCertInfo extends AbstractModel {
 <li>default：默认证书；</li>
 <li>upload：用户上传；</li>
 <li>managed：腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -53,7 +50,6 @@ public class ServerCertInfo extends AbstractModel {
 
     /**
     * 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -61,7 +57,6 @@ public class ServerCertInfo extends AbstractModel {
 
     /**
     * 证书部署时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployTime")
     @Expose
@@ -69,7 +64,6 @@ public class ServerCertInfo extends AbstractModel {
 
     /**
     * 签名算法。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignAlgo")
     @Expose
@@ -77,7 +71,6 @@ public class ServerCertInfo extends AbstractModel {
 
     /**
     * 证书归属域名名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CommonName")
     @Expose
@@ -85,11 +78,9 @@ public class ServerCertInfo extends AbstractModel {
 
     /**
      * Get 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return CertId 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertId() {
         return this.CertId;
@@ -98,20 +89,16 @@ public class ServerCertInfo extends AbstractModel {
     /**
      * Set 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertId 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书备注名。 
      * @return Alias 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
         return this.Alias;
@@ -119,9 +106,7 @@ public class ServerCertInfo extends AbstractModel {
 
     /**
      * Set 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Alias 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
@@ -131,13 +116,11 @@ public class ServerCertInfo extends AbstractModel {
      * Get 证书类型，取值有：
 <li>default：默认证书；</li>
 <li>upload：用户上传；</li>
-<li>managed：腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>managed：腾讯云托管。</li> 
      * @return Type 证书类型，取值有：
 <li>default：默认证书；</li>
 <li>upload：用户上传；</li>
 <li>managed：腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -148,22 +131,18 @@ public class ServerCertInfo extends AbstractModel {
 <li>default：默认证书；</li>
 <li>upload：用户上传；</li>
 <li>managed：腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 证书类型，取值有：
 <li>default：默认证书；</li>
 <li>upload：用户上传；</li>
 <li>managed：腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书过期时间。 
      * @return ExpireTime 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -171,19 +150,15 @@ public class ServerCertInfo extends AbstractModel {
 
     /**
      * Set 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 证书部署时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书部署时间。 
      * @return DeployTime 证书部署时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeployTime() {
         return this.DeployTime;
@@ -191,19 +166,15 @@ public class ServerCertInfo extends AbstractModel {
 
     /**
      * Set 证书部署时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployTime 证书部署时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployTime(String DeployTime) {
         this.DeployTime = DeployTime;
     }
 
     /**
-     * Get 签名算法。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签名算法。 
      * @return SignAlgo 签名算法。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignAlgo() {
         return this.SignAlgo;
@@ -211,19 +182,15 @@ public class ServerCertInfo extends AbstractModel {
 
     /**
      * Set 签名算法。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SignAlgo 签名算法。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignAlgo(String SignAlgo) {
         this.SignAlgo = SignAlgo;
     }
 
     /**
-     * Get 证书归属域名名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书归属域名名称。 
      * @return CommonName 证书归属域名名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCommonName() {
         return this.CommonName;
@@ -231,9 +198,7 @@ public class ServerCertInfo extends AbstractModel {
 
     /**
      * Set 证书归属域名名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CommonName 证书归属域名名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommonName(String CommonName) {
         this.CommonName = CommonName;

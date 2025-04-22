@@ -46,7 +46,6 @@ public class LbRsTargets extends AbstractModel {
 
     /**
     * rs的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -54,7 +53,6 @@ public class LbRsTargets extends AbstractModel {
 
     /**
     * rs的权重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
@@ -109,10 +107,8 @@ public class LbRsTargets extends AbstractModel {
     }
 
     /**
-     * Get rs的vpcId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get rs的vpcId 
      * @return VpcId rs的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVpcId() {
         return this.VpcId;
@@ -120,19 +116,15 @@ public class LbRsTargets extends AbstractModel {
 
     /**
      * Set rs的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId rs的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get rs的权重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get rs的权重 
      * @return Weight rs的权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -140,9 +132,7 @@ public class LbRsTargets extends AbstractModel {
 
     /**
      * Set rs的权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight rs的权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

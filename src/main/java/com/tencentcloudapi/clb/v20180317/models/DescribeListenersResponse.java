@@ -32,7 +32,6 @@ public class DescribeListenersResponse extends AbstractModel {
 
     /**
     * 总的监听器个数（根据端口、协议、监听器ID过滤后）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeListenersResponse extends AbstractModel {
     }
 
     /**
-     * Get 总的监听器个数（根据端口、协议、监听器ID过滤后）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总的监听器个数（根据端口、协议、监听器ID过滤后）。 
      * @return TotalCount 总的监听器个数（根据端口、协议、监听器ID过滤后）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -73,9 +70,7 @@ public class DescribeListenersResponse extends AbstractModel {
 
     /**
      * Set 总的监听器个数（根据端口、协议、监听器ID过滤后）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总的监听器个数（根据端口、协议、监听器ID过滤后）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

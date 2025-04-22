@@ -25,7 +25,6 @@ public class LBChargePrepaid extends AbstractModel {
 
     /**
     * 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -33,17 +32,14 @@ public class LBChargePrepaid extends AbstractModel {
 
     /**
     * 购买时长，单位：月
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-     * Get 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费 
      * @return RenewFlag 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRenewFlag() {
         return this.RenewFlag;
@@ -51,19 +47,15 @@ public class LBChargePrepaid extends AbstractModel {
 
     /**
      * Set 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 购买时长，单位：月
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 购买时长，单位：月 
      * @return Period 购买时长，单位：月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeriod() {
         return this.Period;
@@ -71,9 +63,7 @@ public class LBChargePrepaid extends AbstractModel {
 
     /**
      * Set 购买时长，单位：月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Period 购买时长，单位：月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

@@ -87,11 +87,46 @@ public class PostCKafkaFlowInfo extends AbstractModel {
     private String Compression;
 
     /**
+    * 是否支持SASL,0-关闭，1-开启
+    */
+    @SerializedName("SASLEnable")
+    @Expose
+    private Long SASLEnable;
+
+    /**
+    * SASL用户名
+    */
+    @SerializedName("SASLUser")
+    @Expose
+    private String SASLUser;
+
+    /**
+    * SALS密码
+    */
+    @SerializedName("SASLPassword")
+    @Expose
+    private String SASLPassword;
+
+    /**
     * 描述信息
     */
     @SerializedName("Content")
     @Expose
     private String Content;
+
+    /**
+    * 1-外网TGW，2-支撑环境，默认为支撑环境
+    */
+    @SerializedName("VipType")
+    @Expose
+    private Long VipType;
+
+    /**
+    * 配置状态
+    */
+    @SerializedName("WriteConfig")
+    @Expose
+    private FieldWriteConfig WriteConfig;
 
     /**
      * Get 投递流唯一ID 
@@ -238,6 +273,54 @@ public class PostCKafkaFlowInfo extends AbstractModel {
     }
 
     /**
+     * Get 是否支持SASL,0-关闭，1-开启 
+     * @return SASLEnable 是否支持SASL,0-关闭，1-开启
+     */
+    public Long getSASLEnable() {
+        return this.SASLEnable;
+    }
+
+    /**
+     * Set 是否支持SASL,0-关闭，1-开启
+     * @param SASLEnable 是否支持SASL,0-关闭，1-开启
+     */
+    public void setSASLEnable(Long SASLEnable) {
+        this.SASLEnable = SASLEnable;
+    }
+
+    /**
+     * Get SASL用户名 
+     * @return SASLUser SASL用户名
+     */
+    public String getSASLUser() {
+        return this.SASLUser;
+    }
+
+    /**
+     * Set SASL用户名
+     * @param SASLUser SASL用户名
+     */
+    public void setSASLUser(String SASLUser) {
+        this.SASLUser = SASLUser;
+    }
+
+    /**
+     * Get SALS密码 
+     * @return SASLPassword SALS密码
+     */
+    public String getSASLPassword() {
+        return this.SASLPassword;
+    }
+
+    /**
+     * Set SALS密码
+     * @param SASLPassword SALS密码
+     */
+    public void setSASLPassword(String SASLPassword) {
+        this.SASLPassword = SASLPassword;
+    }
+
+    /**
      * Get 描述信息 
      * @return Content 描述信息
      */
@@ -251,6 +334,38 @@ public class PostCKafkaFlowInfo extends AbstractModel {
      */
     public void setContent(String Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get 1-外网TGW，2-支撑环境，默认为支撑环境 
+     * @return VipType 1-外网TGW，2-支撑环境，默认为支撑环境
+     */
+    public Long getVipType() {
+        return this.VipType;
+    }
+
+    /**
+     * Set 1-外网TGW，2-支撑环境，默认为支撑环境
+     * @param VipType 1-外网TGW，2-支撑环境，默认为支撑环境
+     */
+    public void setVipType(Long VipType) {
+        this.VipType = VipType;
+    }
+
+    /**
+     * Get 配置状态 
+     * @return WriteConfig 配置状态
+     */
+    public FieldWriteConfig getWriteConfig() {
+        return this.WriteConfig;
+    }
+
+    /**
+     * Set 配置状态
+     * @param WriteConfig 配置状态
+     */
+    public void setWriteConfig(FieldWriteConfig WriteConfig) {
+        this.WriteConfig = WriteConfig;
     }
 
     public PostCKafkaFlowInfo() {
@@ -288,8 +403,23 @@ public class PostCKafkaFlowInfo extends AbstractModel {
         if (source.Compression != null) {
             this.Compression = new String(source.Compression);
         }
+        if (source.SASLEnable != null) {
+            this.SASLEnable = new Long(source.SASLEnable);
+        }
+        if (source.SASLUser != null) {
+            this.SASLUser = new String(source.SASLUser);
+        }
+        if (source.SASLPassword != null) {
+            this.SASLPassword = new String(source.SASLPassword);
+        }
         if (source.Content != null) {
             this.Content = new String(source.Content);
+        }
+        if (source.VipType != null) {
+            this.VipType = new Long(source.VipType);
+        }
+        if (source.WriteConfig != null) {
+            this.WriteConfig = new FieldWriteConfig(source.WriteConfig);
         }
     }
 
@@ -307,7 +437,12 @@ public class PostCKafkaFlowInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "Compression", this.Compression);
+        this.setParamSimple(map, prefix + "SASLEnable", this.SASLEnable);
+        this.setParamSimple(map, prefix + "SASLUser", this.SASLUser);
+        this.setParamSimple(map, prefix + "SASLPassword", this.SASLPassword);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "VipType", this.VipType);
+        this.setParamObj(map, prefix + "WriteConfig.", this.WriteConfig);
 
     }
 }

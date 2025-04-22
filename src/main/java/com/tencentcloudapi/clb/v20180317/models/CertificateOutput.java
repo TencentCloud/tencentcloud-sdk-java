@@ -46,7 +46,6 @@ public class CertificateOutput extends AbstractModel {
 
     /**
     * 客户端证书的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertCaId")
     @Expose
@@ -54,7 +53,6 @@ public class CertificateOutput extends AbstractModel {
 
     /**
     * 多本服务器证书场景扩展的服务器证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtCertIds")
     @Expose
@@ -109,10 +107,8 @@ public class CertificateOutput extends AbstractModel {
     }
 
     /**
-     * Get 客户端证书的 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端证书的 ID。 
      * @return CertCaId 客户端证书的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertCaId() {
         return this.CertCaId;
@@ -120,19 +116,15 @@ public class CertificateOutput extends AbstractModel {
 
     /**
      * Set 客户端证书的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertCaId 客户端证书的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertCaId(String CertCaId) {
         this.CertCaId = CertCaId;
     }
 
     /**
-     * Get 多本服务器证书场景扩展的服务器证书ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多本服务器证书场景扩展的服务器证书ID。 
      * @return ExtCertIds 多本服务器证书场景扩展的服务器证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getExtCertIds() {
         return this.ExtCertIds;
@@ -140,9 +132,7 @@ public class CertificateOutput extends AbstractModel {
 
     /**
      * Set 多本服务器证书场景扩展的服务器证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtCertIds 多本服务器证书场景扩展的服务器证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtCertIds(String [] ExtCertIds) {
         this.ExtCertIds = ExtCertIds;

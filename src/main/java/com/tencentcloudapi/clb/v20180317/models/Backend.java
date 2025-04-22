@@ -61,7 +61,6 @@ public class Backend extends AbstractModel {
 
     /**
     * 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
@@ -77,7 +76,6 @@ public class Backend extends AbstractModel {
 
     /**
     * 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegisteredTime")
     @Expose
@@ -93,7 +91,6 @@ public class Backend extends AbstractModel {
 
     /**
     * 标签。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -184,10 +181,8 @@ public class Backend extends AbstractModel {
     }
 
     /**
-     * Get 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端服务的内网 IP 
      * @return PrivateIpAddresses 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
@@ -195,9 +190,7 @@ public class Backend extends AbstractModel {
 
     /**
      * Set 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIpAddresses 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;
@@ -224,10 +217,8 @@ public class Backend extends AbstractModel {
     }
 
     /**
-     * Get 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端服务被绑定的时间 
      * @return RegisteredTime 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegisteredTime() {
         return this.RegisteredTime;
@@ -235,9 +226,7 @@ public class Backend extends AbstractModel {
 
     /**
      * Set 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegisteredTime 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegisteredTime(String RegisteredTime) {
         this.RegisteredTime = RegisteredTime;
@@ -264,10 +253,8 @@ public class Backend extends AbstractModel {
     }
 
     /**
-     * Get 标签。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签。 
      * @return Tag 标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTag() {
         return this.Tag;
@@ -275,9 +262,7 @@ public class Backend extends AbstractModel {
 
     /**
      * Set 标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

@@ -36,7 +36,6 @@ public class Compression extends AbstractModel {
     * 支持的压缩算法列表，取值有：
 <li>brotli：brotli算法；</li>
 <li>gzip：gzip算法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Algorithms")
     @Expose
@@ -69,12 +68,10 @@ public class Compression extends AbstractModel {
     /**
      * Get 支持的压缩算法列表，取值有：
 <li>brotli：brotli算法；</li>
-<li>gzip：gzip算法。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>gzip：gzip算法。</li> 
      * @return Algorithms 支持的压缩算法列表，取值有：
 <li>brotli：brotli算法；</li>
 <li>gzip：gzip算法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAlgorithms() {
         return this.Algorithms;
@@ -84,11 +81,9 @@ public class Compression extends AbstractModel {
      * Set 支持的压缩算法列表，取值有：
 <li>brotli：brotli算法；</li>
 <li>gzip：gzip算法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Algorithms 支持的压缩算法列表，取值有：
 <li>brotli：brotli算法；</li>
 <li>gzip：gzip算法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlgorithms(String [] Algorithms) {
         this.Algorithms = Algorithms;

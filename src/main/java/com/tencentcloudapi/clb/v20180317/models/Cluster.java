@@ -195,7 +195,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisasterRecoveryType")
     @Expose
@@ -203,7 +202,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Egress")
     @Expose
@@ -211,7 +209,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * IP版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPVersion")
     @Expose
@@ -219,7 +216,6 @@ public class Cluster extends AbstractModel {
 
     /**
     * 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -642,10 +638,8 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY 
      * @return DisasterRecoveryType 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDisasterRecoveryType() {
         return this.DisasterRecoveryType;
@@ -653,19 +647,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DisasterRecoveryType 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisasterRecoveryType(String DisasterRecoveryType) {
         this.DisasterRecoveryType = DisasterRecoveryType;
     }
 
     /**
-     * Get 网络出口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络出口 
      * @return Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEgress() {
         return this.Egress;
@@ -673,19 +663,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;
     }
 
     /**
-     * Get IP版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP版本 
      * @return IPVersion IP版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIPVersion() {
         return this.IPVersion;
@@ -693,19 +679,15 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set IP版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IPVersion IP版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPVersion(String IPVersion) {
         this.IPVersion = IPVersion;
     }
 
     /**
-     * Get 标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签信息 
      * @return Tag 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInfo [] getTag() {
         return this.Tag;
@@ -713,9 +695,7 @@ public class Cluster extends AbstractModel {
 
     /**
      * Set 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(TagInfo [] Tag) {
         this.Tag = Tag;

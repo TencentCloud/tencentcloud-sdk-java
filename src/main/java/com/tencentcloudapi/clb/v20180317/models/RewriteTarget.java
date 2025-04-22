@@ -41,7 +41,6 @@ public class RewriteTarget extends AbstractModel {
 
     /**
     * 重定向状态码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RewriteCode")
     @Expose
@@ -49,7 +48,6 @@ public class RewriteTarget extends AbstractModel {
 
     /**
     * 重定向是否携带匹配的url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TakeUrl")
     @Expose
@@ -57,7 +55,6 @@ public class RewriteTarget extends AbstractModel {
 
     /**
     * 重定向类型，Manual: 手动重定向，Auto:  自动重定向
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RewriteType")
     @Expose
@@ -104,10 +101,8 @@ public class RewriteTarget extends AbstractModel {
     }
 
     /**
-     * Get 重定向状态码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重定向状态码 
      * @return RewriteCode 重定向状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRewriteCode() {
         return this.RewriteCode;
@@ -115,19 +110,15 @@ public class RewriteTarget extends AbstractModel {
 
     /**
      * Set 重定向状态码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RewriteCode 重定向状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRewriteCode(Long RewriteCode) {
         this.RewriteCode = RewriteCode;
     }
 
     /**
-     * Get 重定向是否携带匹配的url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重定向是否携带匹配的url 
      * @return TakeUrl 重定向是否携带匹配的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTakeUrl() {
         return this.TakeUrl;
@@ -135,19 +126,15 @@ public class RewriteTarget extends AbstractModel {
 
     /**
      * Set 重定向是否携带匹配的url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TakeUrl 重定向是否携带匹配的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTakeUrl(Boolean TakeUrl) {
         this.TakeUrl = TakeUrl;
     }
 
     /**
-     * Get 重定向类型，Manual: 手动重定向，Auto:  自动重定向
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重定向类型，Manual: 手动重定向，Auto:  自动重定向 
      * @return RewriteType 重定向类型，Manual: 手动重定向，Auto:  自动重定向
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRewriteType() {
         return this.RewriteType;
@@ -155,9 +142,7 @@ public class RewriteTarget extends AbstractModel {
 
     /**
      * Set 重定向类型，Manual: 手动重定向，Auto:  自动重定向
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RewriteType 重定向类型，Manual: 手动重定向，Auto:  自动重定向
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRewriteType(String RewriteType) {
         this.RewriteType = RewriteType;

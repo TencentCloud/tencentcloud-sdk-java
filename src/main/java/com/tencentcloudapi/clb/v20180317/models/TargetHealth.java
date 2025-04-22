@@ -67,11 +67,17 @@ public class TargetHealth extends AbstractModel {
 
     /**
     * 目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetGroupId")
     @Expose
     private String TargetGroupId;
+
+    /**
+    * Target的权重。
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
 
     /**
      * Get Target的内网IP 
@@ -174,10 +180,8 @@ public class TargetHealth extends AbstractModel {
     }
 
     /**
-     * Get 目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标组唯一ID。 
      * @return TargetGroupId 目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
@@ -185,12 +189,26 @@ public class TargetHealth extends AbstractModel {
 
     /**
      * Set 目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetGroupId 目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;
+    }
+
+    /**
+     * Get Target的权重。 
+     * @return Weight Target的权重。
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set Target的权重。
+     * @param Weight Target的权重。
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
     }
 
     public TargetHealth() {
@@ -222,6 +240,9 @@ public class TargetHealth extends AbstractModel {
         if (source.TargetGroupId != null) {
             this.TargetGroupId = new String(source.TargetGroupId);
         }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
     }
 
 
@@ -236,6 +257,7 @@ public class TargetHealth extends AbstractModel {
         this.setParamSimple(map, prefix + "HealthStatusDetail", this.HealthStatusDetail);
         this.setParamSimple(map, prefix + "HealthStatusDetial", this.HealthStatusDetial);
         this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

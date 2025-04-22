@@ -164,7 +164,6 @@ public class Zone extends AbstractModel {
 
     /**
     * 站点别名。数字、英文、-和_组合，限制20个字符。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasZoneName")
     @Expose
@@ -547,10 +546,8 @@ public class Zone extends AbstractModel {
     }
 
     /**
-     * Get 站点别名。数字、英文、-和_组合，限制20个字符。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 站点别名。数字、英文、-和_组合，限制20个字符。 
      * @return AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAliasZoneName() {
         return this.AliasZoneName;
@@ -558,9 +555,7 @@ public class Zone extends AbstractModel {
 
     /**
      * Set 站点别名。数字、英文、-和_组合，限制20个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasZoneName(String AliasZoneName) {
         this.AliasZoneName = AliasZoneName;

@@ -32,7 +32,6 @@ public class DescribeLoadBalancersDetailResponse extends AbstractModel {
 
     /**
     * 负载均衡详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerDetailSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeLoadBalancersDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 负载均衡详情列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡详情列表。 
      * @return LoadBalancerDetailSet 负载均衡详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LoadBalancerDetail [] getLoadBalancerDetailSet() {
         return this.LoadBalancerDetailSet;
@@ -73,9 +70,7 @@ public class DescribeLoadBalancersDetailResponse extends AbstractModel {
 
     /**
      * Set 负载均衡详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerDetailSet 负载均衡详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerDetailSet(LoadBalancerDetail [] LoadBalancerDetailSet) {
         this.LoadBalancerDetailSet = LoadBalancerDetailSet;

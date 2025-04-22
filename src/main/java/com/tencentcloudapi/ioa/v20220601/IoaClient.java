@@ -61,6 +61,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *生成特权码，私有化调用path为：capi/Assets/Device/CreatePrivilegeCode，生成的特权码、卸载码，仅对该设备当天有效
+     * @param req CreatePrivilegeCodeRequest
+     * @return CreatePrivilegeCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrivilegeCodeResponse CreatePrivilegeCode(CreatePrivilegeCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePrivilegeCode", CreatePrivilegeCodeResponse.class);
+    }
+
+    /**
      *以分页的方式查询账号分组列表，私有化调用path为：/capi/Assets/DescribeAccountGroups
      * @param req DescribeAccountGroupsRequest
      * @return DescribeAccountGroupsResponse
@@ -113,6 +124,17 @@ public class IoaClient extends AbstractClient{
     public DescribeRootAccountGroupResponse DescribeRootAccountGroup(DescribeRootAccountGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRootAccountGroup", DescribeRootAccountGroupResponse.class);
+    }
+
+    /**
+     *查看终端树下的软件列表,私有化调用path为：capi/Software/DescribeSoftCensusListByDevice
+     * @param req DescribeSoftCensusListByDeviceRequest
+     * @return DescribeSoftCensusListByDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSoftCensusListByDeviceResponse DescribeSoftCensusListByDevice(DescribeSoftCensusListByDeviceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSoftCensusListByDevice", DescribeSoftCensusListByDeviceResponse.class);
     }
 
 }

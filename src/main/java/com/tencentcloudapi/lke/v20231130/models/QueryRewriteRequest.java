@@ -31,7 +31,7 @@ public class QueryRewriteRequest extends AbstractModel {
     private String Question;
 
     /**
-    * 需要改写的多轮历史会话
+    * 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。
     */
     @SerializedName("Messages")
     @Expose
@@ -61,16 +61,16 @@ public class QueryRewriteRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要改写的多轮历史会话 
-     * @return Messages 需要改写的多轮历史会话
+     * Get 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。 
+     * @return Messages 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。
      */
     public Message [] getMessages() {
         return this.Messages;
     }
 
     /**
-     * Set 需要改写的多轮历史会话
-     * @param Messages 需要改写的多轮历史会话
+     * Set 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。
+     * @param Messages 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。
      */
     public void setMessages(Message [] Messages) {
         this.Messages = Messages;

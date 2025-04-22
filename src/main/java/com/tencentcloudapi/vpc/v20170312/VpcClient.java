@@ -654,6 +654,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateGlobalRoutes）用于创建全局路由。
+     * @param req CreateGlobalRoutesRequest
+     * @return CreateGlobalRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGlobalRoutesResponse CreateGlobalRoutes(CreateGlobalRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGlobalRoutes", CreateGlobalRoutesResponse.class);
+    }
+
+    /**
      *本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）。
      * @param req CreateHaVipRequest
      * @return CreateHaVipResponse
@@ -1306,6 +1317,17 @@ public class VpcClient extends AbstractClient{
     public DeleteFlowLogResponse DeleteFlowLog(DeleteFlowLogRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteFlowLog", DeleteFlowLogResponse.class);
+    }
+
+    /**
+     *删除全局路由。
+     * @param req DeleteGlobalRoutesRequest
+     * @return DeleteGlobalRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGlobalRoutesResponse DeleteGlobalRoutes(DeleteGlobalRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGlobalRoutes", DeleteGlobalRoutesResponse.class);
     }
 
     /**
@@ -2150,6 +2172,17 @@ public class VpcClient extends AbstractClient{
     public DescribeGatewayFlowQosResponse DescribeGatewayFlowQos(DescribeGatewayFlowQosRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeGatewayFlowQos", DescribeGatewayFlowQosResponse.class);
+    }
+
+    /**
+     *查询全局路由列表。
+     * @param req DescribeGlobalRoutesRequest
+     * @return DescribeGlobalRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalRoutesResponse DescribeGlobalRoutes(DescribeGlobalRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalRoutes", DescribeGlobalRoutesResponse.class);
     }
 
     /**
@@ -3756,6 +3789,28 @@ LimitTypes取值范围：
     public ModifyGatewayFlowQosResponse ModifyGatewayFlowQos(ModifyGatewayFlowQosRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyGatewayFlowQos", ModifyGatewayFlowQosResponse.class);
+    }
+
+    /**
+     *修改全局路由表ECMP算法 HASH 策略。
+     * @param req ModifyGlobalRouteECMPAlgorithmRequest
+     * @return ModifyGlobalRouteECMPAlgorithmResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGlobalRouteECMPAlgorithmResponse ModifyGlobalRouteECMPAlgorithm(ModifyGlobalRouteECMPAlgorithmRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGlobalRouteECMPAlgorithm", ModifyGlobalRouteECMPAlgorithmResponse.class);
+    }
+
+    /**
+     *修改全局路由。
+     * @param req ModifyGlobalRoutesRequest
+     * @return ModifyGlobalRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGlobalRoutesResponse ModifyGlobalRoutes(ModifyGlobalRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGlobalRoutes", ModifyGlobalRoutesResponse.class);
     }
 
     /**

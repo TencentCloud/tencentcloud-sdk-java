@@ -25,7 +25,6 @@ public class ExtraInfo extends AbstractModel {
 
     /**
     * 是否开通VIP直通
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZhiTong")
     @Expose
@@ -33,17 +32,14 @@ public class ExtraInfo extends AbstractModel {
 
     /**
     * TgwGroup名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TgwGroupName")
     @Expose
     private String TgwGroupName;
 
     /**
-     * Get 是否开通VIP直通
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开通VIP直通 
      * @return ZhiTong 是否开通VIP直通
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getZhiTong() {
         return this.ZhiTong;
@@ -51,19 +47,15 @@ public class ExtraInfo extends AbstractModel {
 
     /**
      * Set 是否开通VIP直通
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZhiTong 是否开通VIP直通
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZhiTong(Boolean ZhiTong) {
         this.ZhiTong = ZhiTong;
     }
 
     /**
-     * Get TgwGroup名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TgwGroup名称 
      * @return TgwGroupName TgwGroup名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTgwGroupName() {
         return this.TgwGroupName;
@@ -71,9 +63,7 @@ public class ExtraInfo extends AbstractModel {
 
     /**
      * Set TgwGroup名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TgwGroupName TgwGroup名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTgwGroupName(String TgwGroupName) {
         this.TgwGroupName = TgwGroupName;

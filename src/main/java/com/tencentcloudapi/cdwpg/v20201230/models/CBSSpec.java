@@ -25,7 +25,6 @@ public class CBSSpec extends AbstractModel {
 
     /**
     * 盘类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -33,7 +32,6 @@ public class CBSSpec extends AbstractModel {
 
     /**
     * 大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -41,17 +39,14 @@ public class CBSSpec extends AbstractModel {
 
     /**
     * 个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskCount")
     @Expose
     private Long DiskCount;
 
     /**
-     * Get 盘类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 盘类型 
      * @return DiskType 盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -59,19 +54,15 @@ public class CBSSpec extends AbstractModel {
 
     /**
      * Set 盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 大小 
      * @return DiskSize 大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
         return this.DiskSize;
@@ -79,19 +70,15 @@ public class CBSSpec extends AbstractModel {
 
     /**
      * Set 大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 个数 
      * @return DiskCount 个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskCount() {
         return this.DiskCount;
@@ -99,9 +86,7 @@ public class CBSSpec extends AbstractModel {
 
     /**
      * Set 个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskCount 个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskCount(Long DiskCount) {
         this.DiskCount = DiskCount;

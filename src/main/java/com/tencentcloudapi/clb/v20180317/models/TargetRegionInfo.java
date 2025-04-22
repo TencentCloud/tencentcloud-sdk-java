@@ -39,7 +39,6 @@ public class TargetRegionInfo extends AbstractModel {
 
     /**
     * Target所属网络，私有网络格式如86323，如果是基础网络，则为0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumericalVpcId")
     @Expose
@@ -78,10 +77,8 @@ public class TargetRegionInfo extends AbstractModel {
     }
 
     /**
-     * Get Target所属网络，私有网络格式如86323，如果是基础网络，则为0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Target所属网络，私有网络格式如86323，如果是基础网络，则为0 
      * @return NumericalVpcId Target所属网络，私有网络格式如86323，如果是基础网络，则为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumericalVpcId() {
         return this.NumericalVpcId;
@@ -89,9 +86,7 @@ public class TargetRegionInfo extends AbstractModel {
 
     /**
      * Set Target所属网络，私有网络格式如86323，如果是基础网络，则为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NumericalVpcId Target所属网络，私有网络格式如86323，如果是基础网络，则为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;

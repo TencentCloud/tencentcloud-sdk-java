@@ -48,7 +48,6 @@ public class RuleHealth extends AbstractModel {
 
     /**
     * 本规则上绑定的后端服务的健康检查状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Targets")
     @Expose
@@ -111,10 +110,8 @@ public class RuleHealth extends AbstractModel {
     }
 
     /**
-     * Get 本规则上绑定的后端服务的健康检查状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本规则上绑定的后端服务的健康检查状态 
      * @return Targets 本规则上绑定的后端服务的健康检查状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TargetHealth [] getTargets() {
         return this.Targets;
@@ -122,9 +119,7 @@ public class RuleHealth extends AbstractModel {
 
     /**
      * Set 本规则上绑定的后端服务的健康检查状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Targets 本规则上绑定的后端服务的健康检查状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargets(TargetHealth [] Targets) {
         this.Targets = Targets;

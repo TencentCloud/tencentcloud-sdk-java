@@ -34,7 +34,6 @@ public class Hsts extends AbstractModel {
 
     /**
     * MaxAge 数值。单位为秒，最大值为1天。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxAge")
     @Expose
@@ -44,7 +43,6 @@ public class Hsts extends AbstractModel {
     * 是否包含子域名，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeSubDomains")
     @Expose
@@ -54,7 +52,6 @@ public class Hsts extends AbstractModel {
     * 是否开启预加载，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Preload")
     @Expose
@@ -85,10 +82,8 @@ public class Hsts extends AbstractModel {
     }
 
     /**
-     * Get MaxAge 数值。单位为秒，最大值为1天。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MaxAge 数值。单位为秒，最大值为1天。 
      * @return MaxAge MaxAge 数值。单位为秒，最大值为1天。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxAge() {
         return this.MaxAge;
@@ -96,9 +91,7 @@ public class Hsts extends AbstractModel {
 
     /**
      * Set MaxAge 数值。单位为秒，最大值为1天。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxAge MaxAge 数值。单位为秒，最大值为1天。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxAge(Long MaxAge) {
         this.MaxAge = MaxAge;
@@ -107,12 +100,10 @@ public class Hsts extends AbstractModel {
     /**
      * Get 是否包含子域名，取值有：
 <li>on：开启；</li>
-<li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>off：关闭。</li> 
      * @return IncludeSubDomains 是否包含子域名，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncludeSubDomains() {
         return this.IncludeSubDomains;
@@ -122,11 +113,9 @@ public class Hsts extends AbstractModel {
      * Set 是否包含子域名，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncludeSubDomains 是否包含子域名，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeSubDomains(String IncludeSubDomains) {
         this.IncludeSubDomains = IncludeSubDomains;
@@ -135,12 +124,10 @@ public class Hsts extends AbstractModel {
     /**
      * Get 是否开启预加载，取值有：
 <li>on：开启；</li>
-<li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>off：关闭。</li> 
      * @return Preload 是否开启预加载，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreload() {
         return this.Preload;
@@ -150,11 +137,9 @@ public class Hsts extends AbstractModel {
      * Set 是否开启预加载，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Preload 是否开启预加载，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreload(String Preload) {
         this.Preload = Preload;

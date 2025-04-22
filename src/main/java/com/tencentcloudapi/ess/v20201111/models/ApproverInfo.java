@@ -64,7 +64,7 @@ public class ApproverInfo extends AbstractModel {
     private String OrganizationName;
 
     /**
-    * 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
+    * 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】合同中的该名签署方的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
@@ -134,7 +134,7 @@ public class ApproverInfo extends AbstractModel {
     private String ApproverRoleName;
 
     /**
-    * 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+    * <font coloe="red">【已废弃】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
 注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
     */
@@ -190,20 +190,22 @@ public class ApproverInfo extends AbstractModel {
     private ApproverOption ApproverOption;
 
     /**
-    * 指定个人签署方查看合同的校验方式,可以传值如下:
+    * 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
 <li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
 <li>此字段可传多个校验方式</li></ul>
+
+
     */
     @SerializedName("ApproverVerifyTypes")
     @Expose
     private Long [] ApproverVerifyTypes;
 
     /**
-    * 您可以指定签署方签署合同的认证校验方式，可传递以下值：
+    * 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】您可以指定签署方签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证，需进行人脸识别成功后才能签署合同；</li>
 <li>**2**：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；</li>
 <li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。（如果是港澳台客户，建议不要选择这个）</li>
@@ -241,7 +243,7 @@ public class ApproverInfo extends AbstractModel {
     private Boolean ApproverNeedSignReview;
 
     /**
-    * [用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID或者印章类型）或签名方式。
+    * 【在用文件发起合同场景下才有效】在调用[用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)创建合同时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID或者印章类型）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
     */
@@ -266,7 +268,7 @@ public class ApproverInfo extends AbstractModel {
     private Long Deadline;
 
     /**
-    * 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+    * 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li>单行文本控件</li>
 <li>多行文本控件</li>
 <li>勾选框控件</li>
@@ -403,11 +405,11 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
+     * Get 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】合同中的该名签署方的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul> 
-     * @return SignComponents 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
+     * @return SignComponents 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】合同中的该名签署方的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
@@ -417,11 +419,11 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Set 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
+     * Set 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】合同中的该名签署方的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
-     * @param SignComponents 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
+     * @param SignComponents 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】合同中的该名签署方的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
@@ -611,10 +613,10 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+     * Get <font coloe="red">【已废弃】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
 注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置 
-     * @return VerifyChannel 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+     * @return VerifyChannel <font coloe="red">【已废弃】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
 注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
      */
@@ -623,10 +625,10 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Set 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+     * Set <font coloe="red">【已废弃】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
 注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
-     * @param VerifyChannel 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+     * @param VerifyChannel <font coloe="red">【已废弃】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
 注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
      */
@@ -763,47 +765,55 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 指定个人签署方查看合同的校验方式,可以传值如下:
-<ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
-<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
-</li></ul>
-注: 
-<ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
-<li>此字段可传多个校验方式</li></ul> 
-     * @return ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:
+     * Get 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
 <li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
 <li>此字段可传多个校验方式</li></ul>
+
+ 
+     * @return ApproverVerifyTypes 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】指定个人签署方查看合同的校验方式,可以传值如下:
+<ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
+注: 
+<ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
+<li>此字段可传多个校验方式</li></ul>
+
+
      */
     public Long [] getApproverVerifyTypes() {
         return this.ApproverVerifyTypes;
     }
 
     /**
-     * Set 指定个人签署方查看合同的校验方式,可以传值如下:
+     * Set 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
 <li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
 <li>此字段可传多个校验方式</li></ul>
-     * @param ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:
+
+
+     * @param ApproverVerifyTypes 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
 <li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
 <li>此字段可传多个校验方式</li></ul>
+
+
      */
     public void setApproverVerifyTypes(Long [] ApproverVerifyTypes) {
         this.ApproverVerifyTypes = ApproverVerifyTypes;
     }
 
     /**
-     * Get 您可以指定签署方签署合同的认证校验方式，可传递以下值：
+     * Get 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】您可以指定签署方签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证，需进行人脸识别成功后才能签署合同；</li>
 <li>**2**：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；</li>
 <li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。（如果是港澳台客户，建议不要选择这个）</li>
@@ -819,7 +829,7 @@ public class ApproverInfo extends AbstractModel {
 2. 运营商三要素认证方式对手机号运营商及前缀有限制,可以参考[运营商支持列表类](https://qian.tencent.com/developers/company/mobile_support)得到具体的支持说明
 3. 校验方式不允许只包含<font color='red'>设备指纹识别</font>和<font color='red'>设备面容识别</font>，至少需要再增加一种其他校验方式。
 4. <font color='red'>设备指纹识别</font>和<font color='red'>设备面容识别</font>只支持小程序使用，其他端暂不支持。 
-     * @return ApproverSignTypes 您可以指定签署方签署合同的认证校验方式，可传递以下值：
+     * @return ApproverSignTypes 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】您可以指定签署方签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证，需进行人脸识别成功后才能签署合同；</li>
 <li>**2**：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；</li>
 <li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。（如果是港澳台客户，建议不要选择这个）</li>
@@ -841,7 +851,7 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Set 您可以指定签署方签署合同的认证校验方式，可传递以下值：
+     * Set 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】您可以指定签署方签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证，需进行人脸识别成功后才能签署合同；</li>
 <li>**2**：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；</li>
 <li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。（如果是港澳台客户，建议不要选择这个）</li>
@@ -857,7 +867,7 @@ public class ApproverInfo extends AbstractModel {
 2. 运营商三要素认证方式对手机号运营商及前缀有限制,可以参考[运营商支持列表类](https://qian.tencent.com/developers/company/mobile_support)得到具体的支持说明
 3. 校验方式不允许只包含<font color='red'>设备指纹识别</font>和<font color='red'>设备面容识别</font>，至少需要再增加一种其他校验方式。
 4. <font color='red'>设备指纹识别</font>和<font color='red'>设备面容识别</font>只支持小程序使用，其他端暂不支持。
-     * @param ApproverSignTypes 您可以指定签署方签署合同的认证校验方式，可传递以下值：
+     * @param ApproverSignTypes 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】您可以指定签署方签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证，需进行人脸识别成功后才能签署合同；</li>
 <li>**2**：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；</li>
 <li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。（如果是港澳台客户，建议不要选择这个）</li>
@@ -931,10 +941,10 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get [用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID或者印章类型）或签名方式。
+     * Get 【在用文件发起合同场景下才有效】在调用[用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)创建合同时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID或者印章类型）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。` 
-     * @return AddSignComponentsLimits [用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID或者印章类型）或签名方式。
+     * @return AddSignComponentsLimits 【在用文件发起合同场景下才有效】在调用[用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)创建合同时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID或者印章类型）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
      */
@@ -943,10 +953,10 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Set [用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID或者印章类型）或签名方式。
+     * Set 【在用文件发起合同场景下才有效】在调用[用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)创建合同时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID或者印章类型）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
-     * @param AddSignComponentsLimits [用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID或者印章类型）或签名方式。
+     * @param AddSignComponentsLimits 【在用文件发起合同场景下才有效】在调用[用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)创建合同时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID或者印章类型）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
      */
@@ -995,7 +1005,7 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+     * Get 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li>单行文本控件</li>
 <li>多行文本控件</li>
 <li>勾选框控件</li>
@@ -1006,7 +1016,7 @@ public class ApproverInfo extends AbstractModel {
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
 注：`此参数仅在通过文件发起合同或者合同组时生效` 
-     * @return Components 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+     * @return Components 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li>单行文本控件</li>
 <li>多行文本控件</li>
 <li>勾选框控件</li>
@@ -1023,7 +1033,7 @@ public class ApproverInfo extends AbstractModel {
     }
 
     /**
-     * Set 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+     * Set 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li>单行文本控件</li>
 <li>多行文本控件</li>
 <li>勾选框控件</li>
@@ -1034,7 +1044,7 @@ public class ApproverInfo extends AbstractModel {
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
 注：`此参数仅在通过文件发起合同或者合同组时生效`
-     * @param Components 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+     * @param Components 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li>单行文本控件</li>
 <li>多行文本控件</li>
 <li>勾选框控件</li>

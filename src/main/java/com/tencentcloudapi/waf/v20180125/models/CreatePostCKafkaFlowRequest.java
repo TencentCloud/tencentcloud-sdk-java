@@ -80,6 +80,34 @@ public class CreatePostCKafkaFlowRequest extends AbstractModel {
     private String KafkaVersion;
 
     /**
+    * 是否开启SASL校验，默认不开启，0-关闭，1-开启
+    */
+    @SerializedName("SASLEnable")
+    @Expose
+    private Long SASLEnable;
+
+    /**
+    * SASL用户名
+    */
+    @SerializedName("SASLUser")
+    @Expose
+    private String SASLUser;
+
+    /**
+    * SASL密码
+    */
+    @SerializedName("SASLPassword")
+    @Expose
+    private String SASLPassword;
+
+    /**
+    * 开启访问日志某些字段是否投递
+    */
+    @SerializedName("WriteConfig")
+    @Expose
+    private FieldWriteConfig WriteConfig;
+
+    /**
      * Get 投递的CKafka所在区域 
      * @return CKafkaRegion 投递的CKafka所在区域
      */
@@ -207,6 +235,70 @@ public class CreatePostCKafkaFlowRequest extends AbstractModel {
         this.KafkaVersion = KafkaVersion;
     }
 
+    /**
+     * Get 是否开启SASL校验，默认不开启，0-关闭，1-开启 
+     * @return SASLEnable 是否开启SASL校验，默认不开启，0-关闭，1-开启
+     */
+    public Long getSASLEnable() {
+        return this.SASLEnable;
+    }
+
+    /**
+     * Set 是否开启SASL校验，默认不开启，0-关闭，1-开启
+     * @param SASLEnable 是否开启SASL校验，默认不开启，0-关闭，1-开启
+     */
+    public void setSASLEnable(Long SASLEnable) {
+        this.SASLEnable = SASLEnable;
+    }
+
+    /**
+     * Get SASL用户名 
+     * @return SASLUser SASL用户名
+     */
+    public String getSASLUser() {
+        return this.SASLUser;
+    }
+
+    /**
+     * Set SASL用户名
+     * @param SASLUser SASL用户名
+     */
+    public void setSASLUser(String SASLUser) {
+        this.SASLUser = SASLUser;
+    }
+
+    /**
+     * Get SASL密码 
+     * @return SASLPassword SASL密码
+     */
+    public String getSASLPassword() {
+        return this.SASLPassword;
+    }
+
+    /**
+     * Set SASL密码
+     * @param SASLPassword SASL密码
+     */
+    public void setSASLPassword(String SASLPassword) {
+        this.SASLPassword = SASLPassword;
+    }
+
+    /**
+     * Get 开启访问日志某些字段是否投递 
+     * @return WriteConfig 开启访问日志某些字段是否投递
+     */
+    public FieldWriteConfig getWriteConfig() {
+        return this.WriteConfig;
+    }
+
+    /**
+     * Set 开启访问日志某些字段是否投递
+     * @param WriteConfig 开启访问日志某些字段是否投递
+     */
+    public void setWriteConfig(FieldWriteConfig WriteConfig) {
+        this.WriteConfig = WriteConfig;
+    }
+
     public CreatePostCKafkaFlowRequest() {
     }
 
@@ -239,6 +331,18 @@ public class CreatePostCKafkaFlowRequest extends AbstractModel {
         if (source.KafkaVersion != null) {
             this.KafkaVersion = new String(source.KafkaVersion);
         }
+        if (source.SASLEnable != null) {
+            this.SASLEnable = new Long(source.SASLEnable);
+        }
+        if (source.SASLUser != null) {
+            this.SASLUser = new String(source.SASLUser);
+        }
+        if (source.SASLPassword != null) {
+            this.SASLPassword = new String(source.SASLPassword);
+        }
+        if (source.WriteConfig != null) {
+            this.WriteConfig = new FieldWriteConfig(source.WriteConfig);
+        }
     }
 
 
@@ -254,6 +358,10 @@ public class CreatePostCKafkaFlowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "KafkaVersion", this.KafkaVersion);
+        this.setParamSimple(map, prefix + "SASLEnable", this.SASLEnable);
+        this.setParamSimple(map, prefix + "SASLUser", this.SASLUser);
+        this.setParamSimple(map, prefix + "SASLPassword", this.SASLPassword);
+        this.setParamObj(map, prefix + "WriteConfig.", this.WriteConfig);
 
     }
 }

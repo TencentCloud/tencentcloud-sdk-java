@@ -29,7 +29,6 @@ public class CustomField extends AbstractModel {
 <li>RspHeader：从 HTTP 响应头中提取指定字段值；</li>
 <li>Cookie: 从 Cookie 中提取指定字段值；</li>
 <li>ReqBody: 从 HTTP 请求正文中通过 Google RE2 正则表达式提取指定内容。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -39,7 +38,6 @@ public class CustomField extends AbstractModel {
     * 根据字段类型（Name）填入字段值的定义。需要区分大小写。
 <li>当字段类型为 ReqHeader、RspHeader、Cookie 时，填入需要提取值的参数名称，例如：Accept-Language。可输入 1-100 个字符，允许的字符开头为字母，中间为字母、数字、-，结尾为字母、数字；</li>
 <li>当字段类型为 ReqBody 时，填入 Google RE2 正则表达式，正则表达式长度上限为 4KB。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -47,7 +45,6 @@ public class CustomField extends AbstractModel {
 
     /**
     * 是否投递该字段，不填表示不投递此字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enabled")
     @Expose
@@ -58,14 +55,12 @@ public class CustomField extends AbstractModel {
 <li>ReqHeader：从 HTTP 请求头中提取指定字段值；</li>
 <li>RspHeader：从 HTTP 响应头中提取指定字段值；</li>
 <li>Cookie: 从 Cookie 中提取指定字段值；</li>
-<li>ReqBody: 从 HTTP 请求正文中通过 Google RE2 正则表达式提取指定内容。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>ReqBody: 从 HTTP 请求正文中通过 Google RE2 正则表达式提取指定内容。</li> 
      * @return Name 自定义日志字段类型。从 HTTP 请求和响应中的指定位置提取数据，取值有：
 <li>ReqHeader：从 HTTP 请求头中提取指定字段值；</li>
 <li>RspHeader：从 HTTP 响应头中提取指定字段值；</li>
 <li>Cookie: 从 Cookie 中提取指定字段值；</li>
 <li>ReqBody: 从 HTTP 请求正文中通过 Google RE2 正则表达式提取指定内容。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -77,13 +72,11 @@ public class CustomField extends AbstractModel {
 <li>RspHeader：从 HTTP 响应头中提取指定字段值；</li>
 <li>Cookie: 从 Cookie 中提取指定字段值；</li>
 <li>ReqBody: 从 HTTP 请求正文中通过 Google RE2 正则表达式提取指定内容。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 自定义日志字段类型。从 HTTP 请求和响应中的指定位置提取数据，取值有：
 <li>ReqHeader：从 HTTP 请求头中提取指定字段值；</li>
 <li>RspHeader：从 HTTP 响应头中提取指定字段值；</li>
 <li>Cookie: 从 Cookie 中提取指定字段值；</li>
 <li>ReqBody: 从 HTTP 请求正文中通过 Google RE2 正则表达式提取指定内容。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -92,12 +85,10 @@ public class CustomField extends AbstractModel {
     /**
      * Get 根据字段类型（Name）填入字段值的定义。需要区分大小写。
 <li>当字段类型为 ReqHeader、RspHeader、Cookie 时，填入需要提取值的参数名称，例如：Accept-Language。可输入 1-100 个字符，允许的字符开头为字母，中间为字母、数字、-，结尾为字母、数字；</li>
-<li>当字段类型为 ReqBody 时，填入 Google RE2 正则表达式，正则表达式长度上限为 4KB。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>当字段类型为 ReqBody 时，填入 Google RE2 正则表达式，正则表达式长度上限为 4KB。</li> 
      * @return Value 根据字段类型（Name）填入字段值的定义。需要区分大小写。
 <li>当字段类型为 ReqHeader、RspHeader、Cookie 时，填入需要提取值的参数名称，例如：Accept-Language。可输入 1-100 个字符，允许的字符开头为字母，中间为字母、数字、-，结尾为字母、数字；</li>
 <li>当字段类型为 ReqBody 时，填入 Google RE2 正则表达式，正则表达式长度上限为 4KB。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -107,21 +98,17 @@ public class CustomField extends AbstractModel {
      * Set 根据字段类型（Name）填入字段值的定义。需要区分大小写。
 <li>当字段类型为 ReqHeader、RspHeader、Cookie 时，填入需要提取值的参数名称，例如：Accept-Language。可输入 1-100 个字符，允许的字符开头为字母，中间为字母、数字、-，结尾为字母、数字；</li>
 <li>当字段类型为 ReqBody 时，填入 Google RE2 正则表达式，正则表达式长度上限为 4KB。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 根据字段类型（Name）填入字段值的定义。需要区分大小写。
 <li>当字段类型为 ReqHeader、RspHeader、Cookie 时，填入需要提取值的参数名称，例如：Accept-Language。可输入 1-100 个字符，允许的字符开头为字母，中间为字母、数字、-，结尾为字母、数字；</li>
 <li>当字段类型为 ReqBody 时，填入 Google RE2 正则表达式，正则表达式长度上限为 4KB。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 是否投递该字段，不填表示不投递此字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否投递该字段，不填表示不投递此字段。 
      * @return Enabled 是否投递该字段，不填表示不投递此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnabled() {
         return this.Enabled;
@@ -129,9 +116,7 @@ public class CustomField extends AbstractModel {
 
     /**
      * Set 是否投递该字段，不填表示不投递此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 是否投递该字段，不填表示不投递此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;

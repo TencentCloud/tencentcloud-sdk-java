@@ -27,7 +27,6 @@ public class OAuth extends AbstractModel {
     * 开启或关闭鉴权。
 True: 开启;
 False: 关闭
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OAuthEnable")
     @Expose
@@ -36,7 +35,6 @@ False: 关闭
     /**
     * IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
 REJECT: 拒绝
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OAuthFailureStatus")
     @Expose
@@ -45,12 +43,10 @@ REJECT: 拒绝
     /**
      * Get 开启或关闭鉴权。
 True: 开启;
-False: 关闭
-注意：此字段可能返回 null，表示取不到有效值。 
+False: 关闭 
      * @return OAuthEnable 开启或关闭鉴权。
 True: 开启;
 False: 关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getOAuthEnable() {
         return this.OAuthEnable;
@@ -60,11 +56,9 @@ False: 关闭
      * Set 开启或关闭鉴权。
 True: 开启;
 False: 关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OAuthEnable 开启或关闭鉴权。
 True: 开启;
 False: 关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOAuthEnable(Boolean OAuthEnable) {
         this.OAuthEnable = OAuthEnable;
@@ -72,11 +66,9 @@ False: 关闭
 
     /**
      * Get IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
-REJECT: 拒绝
-注意：此字段可能返回 null，表示取不到有效值。 
+REJECT: 拒绝 
      * @return OAuthFailureStatus IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
 REJECT: 拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOAuthFailureStatus() {
         return this.OAuthFailureStatus;
@@ -85,10 +77,8 @@ REJECT: 拒绝
     /**
      * Set IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
 REJECT: 拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OAuthFailureStatus IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
 REJECT: 拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOAuthFailureStatus(String OAuthFailureStatus) {
         this.OAuthFailureStatus = OAuthFailureStatus;

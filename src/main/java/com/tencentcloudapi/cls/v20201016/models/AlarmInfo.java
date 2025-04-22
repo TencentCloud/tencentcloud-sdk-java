@@ -137,6 +137,13 @@ public class AlarmInfo extends AbstractModel {
     private String [] GroupTriggerCondition;
 
     /**
+    * 告警策略绑定的标签信息。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
     * 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
     */
     @SerializedName("MonitorObjectType")
@@ -426,6 +433,22 @@ Condition互斥。
     }
 
     /**
+     * Get 告警策略绑定的标签信息。 
+     * @return Tags 告警策略绑定的标签信息。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 告警策略绑定的标签信息。
+     * @param Tags 告警策略绑定的标签信息。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。  
      * @return MonitorObjectType 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
      */
@@ -561,6 +584,12 @@ Condition互斥。
                 this.GroupTriggerCondition[i] = new String(source.GroupTriggerCondition[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
         if (source.MonitorObjectType != null) {
             this.MonitorObjectType = new Long(source.MonitorObjectType);
         }
@@ -602,6 +631,7 @@ Condition互斥。
         this.setParamArrayObj(map, prefix + "Analysis.", this.Analysis);
         this.setParamSimple(map, prefix + "GroupTriggerStatus", this.GroupTriggerStatus);
         this.setParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
         this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
         this.setParamArrayObj(map, prefix + "Classifications.", this.Classifications);

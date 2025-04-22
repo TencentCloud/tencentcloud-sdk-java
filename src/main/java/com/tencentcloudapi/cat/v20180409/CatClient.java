@@ -83,6 +83,17 @@ public class CatClient extends AbstractClient{
     }
 
     /**
+     *获取拨测点组（可用性拨测点组、高级拨测点组、我的拨测点组）
+     * @param req DescribeNodeGroupsRequest
+     * @return DescribeNodeGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodeGroupsResponse DescribeNodeGroups(DescribeNodeGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNodeGroups", DescribeNodeGroupsResponse.class);
+    }
+
+    /**
      *获取拨测节点
      * @param req DescribeNodesRequest
      * @return DescribeNodesResponse

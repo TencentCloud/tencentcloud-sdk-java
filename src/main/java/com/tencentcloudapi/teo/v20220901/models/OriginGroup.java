@@ -76,7 +76,6 @@ public class OriginGroup extends AbstractModel {
 
     /**
     * 回源Host Header。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostHeader")
     @Expose
@@ -203,10 +202,8 @@ public class OriginGroup extends AbstractModel {
     }
 
     /**
-     * Get 回源Host Header。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回源Host Header。 
      * @return HostHeader 回源Host Header。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostHeader() {
         return this.HostHeader;
@@ -214,9 +211,7 @@ public class OriginGroup extends AbstractModel {
 
     /**
      * Set 回源Host Header。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostHeader 回源Host Header。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostHeader(String HostHeader) {
         this.HostHeader = HostHeader;

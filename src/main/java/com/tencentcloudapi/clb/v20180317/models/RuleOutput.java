@@ -32,7 +32,6 @@ public class RuleOutput extends AbstractModel {
 
     /**
     * 转发规则的域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -40,7 +39,6 @@ public class RuleOutput extends AbstractModel {
 
     /**
     * 转发规则的路径。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -55,7 +53,6 @@ public class RuleOutput extends AbstractModel {
 
     /**
     * 健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCheck")
     @Expose
@@ -86,7 +83,6 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
     * 转发规则的重定向目标信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RewriteTarget")
     @Expose
@@ -151,7 +147,6 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
     * WAF实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WafDomainId")
     @Expose
@@ -159,7 +154,6 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
     * TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrpcCallee")
     @Expose
@@ -167,7 +161,6 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
     * TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrpcFunc")
     @Expose
@@ -175,7 +168,6 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
     * QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuicStatus")
     @Expose
@@ -183,7 +175,6 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
     * 转发规则的域名列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domains")
     @Expose
@@ -199,7 +190,6 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
     * OAuth配置状态信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OAuth")
     @Expose
@@ -222,10 +212,8 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
     }
 
     /**
-     * Get 转发规则的域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转发规则的域名。 
      * @return Domain 转发规则的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -233,19 +221,15 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
      * Set 转发规则的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 转发规则的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 转发规则的路径。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转发规则的路径。 
      * @return Url 转发规则的路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -253,9 +237,7 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
      * Set 转发规则的路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 转发规则的路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -278,10 +260,8 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
     }
 
     /**
-     * Get 健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康检查信息 
      * @return HealthCheck 健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
@@ -289,9 +269,7 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
      * Set 健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheck 健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
@@ -354,10 +332,8 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
     }
 
     /**
-     * Get 转发规则的重定向目标信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转发规则的重定向目标信息 
      * @return RewriteTarget 转发规则的重定向目标信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RewriteTarget getRewriteTarget() {
         return this.RewriteTarget;
@@ -365,9 +341,7 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
      * Set 转发规则的重定向目标信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RewriteTarget 转发规则的重定向目标信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRewriteTarget(RewriteTarget RewriteTarget) {
         this.RewriteTarget = RewriteTarget;
@@ -506,10 +480,8 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
     }
 
     /**
-     * Get WAF实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get WAF实例ID 
      * @return WafDomainId WAF实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWafDomainId() {
         return this.WafDomainId;
@@ -517,19 +489,15 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
      * Set WAF实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WafDomainId WAF实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWafDomainId(String WafDomainId) {
         this.WafDomainId = WafDomainId;
     }
 
     /**
-     * Get TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。 
      * @return TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrpcCallee() {
         return this.TrpcCallee;
@@ -537,19 +505,15 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
      * Set TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrpcCallee(String TrpcCallee) {
         this.TrpcCallee = TrpcCallee;
     }
 
     /**
-     * Get TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。 
      * @return TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrpcFunc() {
         return this.TrpcFunc;
@@ -557,19 +521,15 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
      * Set TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrpcFunc(String TrpcFunc) {
         this.TrpcFunc = TrpcFunc;
     }
 
     /**
-     * Get QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。 
      * @return QuicStatus QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuicStatus() {
         return this.QuicStatus;
@@ -577,19 +537,15 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
      * Set QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QuicStatus QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuicStatus(String QuicStatus) {
         this.QuicStatus = QuicStatus;
     }
 
     /**
-     * Get 转发规则的域名列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转发规则的域名列表。 
      * @return Domains 转发规则的域名列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDomains() {
         return this.Domains;
@@ -597,9 +553,7 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
      * Set 转发规则的域名列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domains 转发规则的域名列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
@@ -626,10 +580,8 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
     }
 
     /**
-     * Get OAuth配置状态信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get OAuth配置状态信息。 
      * @return OAuth OAuth配置状态信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OAuth getOAuth() {
         return this.OAuth;
@@ -637,9 +589,7 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
      * Set OAuth配置状态信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OAuth OAuth配置状态信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOAuth(OAuth OAuth) {
         this.OAuth = OAuth;

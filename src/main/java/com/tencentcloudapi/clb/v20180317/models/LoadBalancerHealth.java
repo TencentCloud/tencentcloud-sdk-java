@@ -32,7 +32,6 @@ public class LoadBalancerHealth extends AbstractModel {
 
     /**
     * 负载均衡实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerName")
     @Expose
@@ -40,7 +39,6 @@ public class LoadBalancerHealth extends AbstractModel {
 
     /**
     * 监听器列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Listeners")
     @Expose
@@ -63,10 +61,8 @@ public class LoadBalancerHealth extends AbstractModel {
     }
 
     /**
-     * Get 负载均衡实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡实例名称 
      * @return LoadBalancerName 负载均衡实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
@@ -74,19 +70,15 @@ public class LoadBalancerHealth extends AbstractModel {
 
     /**
      * Set 负载均衡实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerName 负载均衡实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
     }
 
     /**
-     * Get 监听器列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器列表 
      * @return Listeners 监听器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ListenerHealth [] getListeners() {
         return this.Listeners;
@@ -94,9 +86,7 @@ public class LoadBalancerHealth extends AbstractModel {
 
     /**
      * Set 监听器列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Listeners 监听器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListeners(ListenerHealth [] Listeners) {
         this.Listeners = Listeners;

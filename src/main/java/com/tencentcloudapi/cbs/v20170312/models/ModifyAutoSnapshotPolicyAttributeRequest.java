@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel {
 
     /**
-    * 定期快照策略ID。
+    * 定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
@@ -66,16 +66,16 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel {
     private Long RetentionDays;
 
     /**
-     * Get 定期快照策略ID。 
-     * @return AutoSnapshotPolicyId 定期快照策略ID。
+     * Get 定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。 
+     * @return AutoSnapshotPolicyId 定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set 定期快照策略ID。
-     * @param AutoSnapshotPolicyId 定期快照策略ID。
+     * Set 定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。
+     * @param AutoSnapshotPolicyId 定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;

@@ -56,7 +56,6 @@ public class DeployRecord extends AbstractModel {
 
     /**
     * 发布记录 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordId")
     @Expose
@@ -146,10 +145,8 @@ public class DeployRecord extends AbstractModel {
     }
 
     /**
-     * Get 发布记录 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发布记录 ID。 
      * @return RecordId 发布记录 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordId() {
         return this.RecordId;
@@ -157,9 +154,7 @@ public class DeployRecord extends AbstractModel {
 
     /**
      * Set 发布记录 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordId 发布记录 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;

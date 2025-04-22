@@ -27,7 +27,6 @@ public class CacheKey extends AbstractModel {
     * 是否开启全路径缓存，取值有：
 <li>on：开启全路径缓存（即关闭参数忽略）；</li>
 <li>off：关闭全路径缓存（即开启参数忽略）。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FullUrlCache")
     @Expose
@@ -37,7 +36,6 @@ public class CacheKey extends AbstractModel {
     * 是否忽略大小写缓存，取值有：
 <li>on：忽略；</li>
 <li>off：不忽略。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IgnoreCase")
     @Expose
@@ -54,12 +52,10 @@ public class CacheKey extends AbstractModel {
     /**
      * Get 是否开启全路径缓存，取值有：
 <li>on：开启全路径缓存（即关闭参数忽略）；</li>
-<li>off：关闭全路径缓存（即开启参数忽略）。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>off：关闭全路径缓存（即开启参数忽略）。</li> 
      * @return FullUrlCache 是否开启全路径缓存，取值有：
 <li>on：开启全路径缓存（即关闭参数忽略）；</li>
 <li>off：关闭全路径缓存（即开启参数忽略）。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFullUrlCache() {
         return this.FullUrlCache;
@@ -69,11 +65,9 @@ public class CacheKey extends AbstractModel {
      * Set 是否开启全路径缓存，取值有：
 <li>on：开启全路径缓存（即关闭参数忽略）；</li>
 <li>off：关闭全路径缓存（即开启参数忽略）。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FullUrlCache 是否开启全路径缓存，取值有：
 <li>on：开启全路径缓存（即关闭参数忽略）；</li>
 <li>off：关闭全路径缓存（即开启参数忽略）。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFullUrlCache(String FullUrlCache) {
         this.FullUrlCache = FullUrlCache;
@@ -82,12 +76,10 @@ public class CacheKey extends AbstractModel {
     /**
      * Get 是否忽略大小写缓存，取值有：
 <li>on：忽略；</li>
-<li>off：不忽略。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>off：不忽略。</li> 
      * @return IgnoreCase 是否忽略大小写缓存，取值有：
 <li>on：忽略；</li>
 <li>off：不忽略。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIgnoreCase() {
         return this.IgnoreCase;
@@ -97,11 +89,9 @@ public class CacheKey extends AbstractModel {
      * Set 是否忽略大小写缓存，取值有：
 <li>on：忽略；</li>
 <li>off：不忽略。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IgnoreCase 是否忽略大小写缓存，取值有：
 <li>on：忽略；</li>
 <li>off：不忽略。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIgnoreCase(String IgnoreCase) {
         this.IgnoreCase = IgnoreCase;

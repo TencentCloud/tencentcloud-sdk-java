@@ -91,7 +91,6 @@ public class AssociationItem extends AbstractModel {
 
     /**
     * 关联目标组的权重， 该参数只有v2新版目标组生效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
@@ -254,10 +253,8 @@ public class AssociationItem extends AbstractModel {
     }
 
     /**
-     * Get 关联目标组的权重， 该参数只有v2新版目标组生效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联目标组的权重， 该参数只有v2新版目标组生效。 
      * @return Weight 关联目标组的权重， 该参数只有v2新版目标组生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -265,9 +262,7 @@ public class AssociationItem extends AbstractModel {
 
     /**
      * Set 关联目标组的权重， 该参数只有v2新版目标组生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 关联目标组的权重， 该参数只有v2新版目标组生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

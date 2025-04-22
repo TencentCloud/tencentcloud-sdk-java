@@ -34,7 +34,6 @@ public class ClientIpHeader extends AbstractModel {
 
     /**
     * 回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeaderName")
     @Expose
@@ -65,10 +64,8 @@ public class ClientIpHeader extends AbstractModel {
     }
 
     /**
-     * Get 回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。 
      * @return HeaderName 回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHeaderName() {
         return this.HeaderName;
@@ -76,9 +73,7 @@ public class ClientIpHeader extends AbstractModel {
 
     /**
      * Set 回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeaderName 回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeaderName(String HeaderName) {
         this.HeaderName = HeaderName;

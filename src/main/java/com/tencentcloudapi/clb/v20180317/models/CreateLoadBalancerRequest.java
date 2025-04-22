@@ -97,7 +97,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String ZoneId;
 
     /**
-    * 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。
+    * 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
     */
     @SerializedName("InternetAccessible")
     @Expose
@@ -219,14 +219,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String Egress;
 
     /**
-    * 负载均衡实例的预付费相关属性
+    * 负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
     */
     @SerializedName("LBChargePrepaid")
     @Expose
     private LBChargePrepaid LBChargePrepaid;
 
     /**
-    * 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。
+    * 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
     */
     @SerializedName("LBChargeType")
     @Expose
@@ -412,16 +412,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。 
-     * @return InternetAccessible 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。
+     * Get 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category) 
+     * @return InternetAccessible 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。
-     * @param InternetAccessible 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。
+     * Set 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
+     * @param InternetAccessible 网络计费模式，最大出带宽。仅对内网属性的性能容量型实例和公网属性的所有实例生效。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
@@ -696,32 +696,32 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 负载均衡实例的预付费相关属性 
-     * @return LBChargePrepaid 负载均衡实例的预付费相关属性
+     * Get 负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category) 
+     * @return LBChargePrepaid 负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
      */
     public LBChargePrepaid getLBChargePrepaid() {
         return this.LBChargePrepaid;
     }
 
     /**
-     * Set 负载均衡实例的预付费相关属性
-     * @param LBChargePrepaid 负载均衡实例的预付费相关属性
+     * Set 负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
+     * @param LBChargePrepaid 负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
      */
     public void setLBChargePrepaid(LBChargePrepaid LBChargePrepaid) {
         this.LBChargePrepaid = LBChargePrepaid;
     }
 
     /**
-     * Get 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。 
-     * @return LBChargeType 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。
+     * Get 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category) 
+     * @return LBChargeType 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
      */
     public String getLBChargeType() {
         return this.LBChargeType;
     }
 
     /**
-     * Set 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。
-     * @param LBChargeType 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。
+     * Set 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
+     * @param LBChargeType 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
      */
     public void setLBChargeType(String LBChargeType) {
         this.LBChargeType = LBChargeType;

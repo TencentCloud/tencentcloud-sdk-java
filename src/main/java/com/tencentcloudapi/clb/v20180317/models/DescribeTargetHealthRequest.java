@@ -31,6 +31,20 @@ public class DescribeTargetHealthRequest extends AbstractModel {
     private String [] LoadBalancerIds;
 
     /**
+    * 要查询的监听器ID列表。
+    */
+    @SerializedName("ListenerIds")
+    @Expose
+    private String [] ListenerIds;
+
+    /**
+    * 要查询的转发规则ID列表。
+    */
+    @SerializedName("LocationIds")
+    @Expose
+    private String [] LocationIds;
+
+    /**
      * Get 要查询的负载均衡实例ID列表。 
      * @return LoadBalancerIds 要查询的负载均衡实例ID列表。
      */
@@ -44,6 +58,38 @@ public class DescribeTargetHealthRequest extends AbstractModel {
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;
+    }
+
+    /**
+     * Get 要查询的监听器ID列表。 
+     * @return ListenerIds 要查询的监听器ID列表。
+     */
+    public String [] getListenerIds() {
+        return this.ListenerIds;
+    }
+
+    /**
+     * Set 要查询的监听器ID列表。
+     * @param ListenerIds 要查询的监听器ID列表。
+     */
+    public void setListenerIds(String [] ListenerIds) {
+        this.ListenerIds = ListenerIds;
+    }
+
+    /**
+     * Get 要查询的转发规则ID列表。 
+     * @return LocationIds 要查询的转发规则ID列表。
+     */
+    public String [] getLocationIds() {
+        return this.LocationIds;
+    }
+
+    /**
+     * Set 要查询的转发规则ID列表。
+     * @param LocationIds 要查询的转发规则ID列表。
+     */
+    public void setLocationIds(String [] LocationIds) {
+        this.LocationIds = LocationIds;
     }
 
     public DescribeTargetHealthRequest() {
@@ -60,6 +106,18 @@ public class DescribeTargetHealthRequest extends AbstractModel {
                 this.LoadBalancerIds[i] = new String(source.LoadBalancerIds[i]);
             }
         }
+        if (source.ListenerIds != null) {
+            this.ListenerIds = new String[source.ListenerIds.length];
+            for (int i = 0; i < source.ListenerIds.length; i++) {
+                this.ListenerIds[i] = new String(source.ListenerIds[i]);
+            }
+        }
+        if (source.LocationIds != null) {
+            this.LocationIds = new String[source.LocationIds.length];
+            for (int i = 0; i < source.LocationIds.length; i++) {
+                this.LocationIds[i] = new String(source.LocationIds[i]);
+            }
+        }
     }
 
 
@@ -68,6 +126,8 @@ public class DescribeTargetHealthRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
+        this.setParamArraySimple(map, prefix + "ListenerIds.", this.ListenerIds);
+        this.setParamArraySimple(map, prefix + "LocationIds.", this.LocationIds);
 
     }
 }

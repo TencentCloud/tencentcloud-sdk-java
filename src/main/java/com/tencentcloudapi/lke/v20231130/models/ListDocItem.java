@@ -272,6 +272,13 @@ public class ListDocItem extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 文档所属分类ID
+    */
+    @SerializedName("CateBizId")
+    @Expose
+    private String CateBizId;
+
+    /**
      * Get 文档ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocBizId 文档ID
@@ -891,6 +898,22 @@ public class ListDocItem extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 文档所属分类ID 
+     * @return CateBizId 文档所属分类ID
+     */
+    public String getCateBizId() {
+        return this.CateBizId;
+    }
+
+    /**
+     * Set 文档所属分类ID
+     * @param CateBizId 文档所属分类ID
+     */
+    public void setCateBizId(String CateBizId) {
+        this.CateBizId = CateBizId;
+    }
+
     public ListDocItem() {
     }
 
@@ -998,6 +1021,9 @@ public class ListDocItem extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.CateBizId != null) {
+            this.CateBizId = new String(source.CateBizId);
+        }
     }
 
 
@@ -1036,6 +1062,7 @@ public class ListDocItem extends AbstractModel {
         this.setParamSimple(map, prefix + "IsAllowRetry", this.IsAllowRetry);
         this.setParamArraySimple(map, prefix + "Processing.", this.Processing);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
 
     }
 }

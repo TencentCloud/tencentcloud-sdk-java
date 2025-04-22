@@ -25,7 +25,6 @@ public class ClustersZone extends AbstractModel {
 
     /**
     * 集群所在的主可用区。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterZone")
     @Expose
@@ -33,17 +32,14 @@ public class ClustersZone extends AbstractModel {
 
     /**
     * 集群所在的备可用区。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveZone")
     @Expose
     private String [] SlaveZone;
 
     /**
-     * Get 集群所在的主可用区。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群所在的主可用区。 
      * @return MasterZone 集群所在的主可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMasterZone() {
         return this.MasterZone;
@@ -51,19 +47,15 @@ public class ClustersZone extends AbstractModel {
 
     /**
      * Set 集群所在的主可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterZone 集群所在的主可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterZone(String [] MasterZone) {
         this.MasterZone = MasterZone;
     }
 
     /**
-     * Get 集群所在的备可用区。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群所在的备可用区。 
      * @return SlaveZone 集群所在的备可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSlaveZone() {
         return this.SlaveZone;
@@ -71,9 +63,7 @@ public class ClustersZone extends AbstractModel {
 
     /**
      * Set 集群所在的备可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveZone 集群所在的备可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveZone(String [] SlaveZone) {
         this.SlaveZone = SlaveZone;

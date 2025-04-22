@@ -32,7 +32,6 @@ public class CertIdRelatedWithLoadBalancers extends AbstractModel {
 
     /**
     * 与证书关联的负载均衡实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancers")
     @Expose
@@ -55,10 +54,8 @@ public class CertIdRelatedWithLoadBalancers extends AbstractModel {
     }
 
     /**
-     * Get 与证书关联的负载均衡实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 与证书关联的负载均衡实例列表 
      * @return LoadBalancers 与证书关联的负载均衡实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LoadBalancer [] getLoadBalancers() {
         return this.LoadBalancers;
@@ -66,9 +63,7 @@ public class CertIdRelatedWithLoadBalancers extends AbstractModel {
 
     /**
      * Set 与证书关联的负载均衡实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancers 与证书关联的负载均衡实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancers(LoadBalancer [] LoadBalancers) {
         this.LoadBalancers = LoadBalancers;

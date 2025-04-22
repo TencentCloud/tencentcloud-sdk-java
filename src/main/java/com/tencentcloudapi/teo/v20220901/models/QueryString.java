@@ -36,7 +36,6 @@ public class QueryString extends AbstractModel {
     * CacheKey使用QueryString的方式，取值有：
 <li>includeCustom：使用部分url参数；</li>
 <li>excludeCustom：排除部分url参数。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
     @Expose
@@ -44,7 +43,6 @@ public class QueryString extends AbstractModel {
 
     /**
     * 使用/排除的url参数数组。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -77,12 +75,10 @@ public class QueryString extends AbstractModel {
     /**
      * Get CacheKey使用QueryString的方式，取值有：
 <li>includeCustom：使用部分url参数；</li>
-<li>excludeCustom：排除部分url参数。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>excludeCustom：排除部分url参数。</li> 
      * @return Action CacheKey使用QueryString的方式，取值有：
 <li>includeCustom：使用部分url参数；</li>
 <li>excludeCustom：排除部分url参数。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
         return this.Action;
@@ -92,21 +88,17 @@ public class QueryString extends AbstractModel {
      * Set CacheKey使用QueryString的方式，取值有：
 <li>includeCustom：使用部分url参数；</li>
 <li>excludeCustom：排除部分url参数。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Action CacheKey使用QueryString的方式，取值有：
 <li>includeCustom：使用部分url参数；</li>
 <li>excludeCustom：排除部分url参数。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 使用/排除的url参数数组。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用/排除的url参数数组。 
      * @return Value 使用/排除的url参数数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValue() {
         return this.Value;
@@ -114,9 +106,7 @@ public class QueryString extends AbstractModel {
 
     /**
      * Set 使用/排除的url参数数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 使用/排除的url参数数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String [] Value) {
         this.Value = Value;

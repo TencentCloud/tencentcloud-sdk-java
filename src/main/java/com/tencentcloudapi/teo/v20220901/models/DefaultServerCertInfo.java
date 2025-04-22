@@ -25,7 +25,6 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
     * 服务器证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertId")
     @Expose
@@ -33,7 +32,6 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
     * 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
     @Expose
@@ -44,7 +42,6 @@ public class DefaultServerCertInfo extends AbstractModel {
 <li>default: 默认证书;</li>
 <li>upload:用户上传;</li>
 <li>managed:腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -52,7 +49,6 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
     * 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -60,7 +56,6 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
     * 证书生效时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EffectiveTime")
     @Expose
@@ -68,7 +63,6 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
     * 证书公用名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CommonName")
     @Expose
@@ -76,7 +70,6 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
     * 证书SAN域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubjectAltName")
     @Expose
@@ -87,7 +80,6 @@ public class DefaultServerCertInfo extends AbstractModel {
 <li>processing: 部署中；</li>
 <li>deployed: 已部署；</li>
 <li>failed: 部署失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -95,7 +87,6 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
     * Status为失败时,此字段返回失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -103,17 +94,14 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
     * 证书算法。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignAlgo")
     @Expose
     private String SignAlgo;
 
     /**
-     * Get 服务器证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务器证书 ID。 
      * @return CertId 服务器证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertId() {
         return this.CertId;
@@ -121,19 +109,15 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
      * Set 服务器证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertId 服务器证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书备注名。 
      * @return Alias 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
         return this.Alias;
@@ -141,9 +125,7 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
      * Set 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Alias 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
@@ -153,13 +135,11 @@ public class DefaultServerCertInfo extends AbstractModel {
      * Get 证书类型，取值有：
 <li>default: 默认证书;</li>
 <li>upload:用户上传;</li>
-<li>managed:腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>managed:腾讯云托管。</li> 
      * @return Type 证书类型，取值有：
 <li>default: 默认证书;</li>
 <li>upload:用户上传;</li>
 <li>managed:腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -170,22 +150,18 @@ public class DefaultServerCertInfo extends AbstractModel {
 <li>default: 默认证书;</li>
 <li>upload:用户上传;</li>
 <li>managed:腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 证书类型，取值有：
 <li>default: 默认证书;</li>
 <li>upload:用户上传;</li>
 <li>managed:腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书过期时间。 
      * @return ExpireTime 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -193,19 +169,15 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
      * Set 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 证书生效时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书生效时间。 
      * @return EffectiveTime 证书生效时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEffectiveTime() {
         return this.EffectiveTime;
@@ -213,19 +185,15 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
      * Set 证书生效时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EffectiveTime 证书生效时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEffectiveTime(String EffectiveTime) {
         this.EffectiveTime = EffectiveTime;
     }
 
     /**
-     * Get 证书公用名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书公用名。 
      * @return CommonName 证书公用名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCommonName() {
         return this.CommonName;
@@ -233,19 +201,15 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
      * Set 证书公用名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CommonName 证书公用名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommonName(String CommonName) {
         this.CommonName = CommonName;
     }
 
     /**
-     * Get 证书SAN域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书SAN域名。 
      * @return SubjectAltName 证书SAN域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSubjectAltName() {
         return this.SubjectAltName;
@@ -253,9 +217,7 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
      * Set 证书SAN域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubjectAltName 证书SAN域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubjectAltName(String [] SubjectAltName) {
         this.SubjectAltName = SubjectAltName;
@@ -265,13 +227,11 @@ public class DefaultServerCertInfo extends AbstractModel {
      * Get 部署状态，取值有：
 <li>processing: 部署中；</li>
 <li>deployed: 已部署；</li>
-<li>failed: 部署失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>failed: 部署失败。</li> 
      * @return Status 部署状态，取值有：
 <li>processing: 部署中；</li>
 <li>deployed: 已部署；</li>
 <li>failed: 部署失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -282,22 +242,18 @@ public class DefaultServerCertInfo extends AbstractModel {
 <li>processing: 部署中；</li>
 <li>deployed: 已部署；</li>
 <li>failed: 部署失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 部署状态，取值有：
 <li>processing: 部署中；</li>
 <li>deployed: 已部署；</li>
 <li>failed: 部署失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Status为失败时,此字段返回失败原因。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Status为失败时,此字段返回失败原因。 
      * @return Message Status为失败时,此字段返回失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -305,19 +261,15 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
      * Set Status为失败时,此字段返回失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message Status为失败时,此字段返回失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 证书算法。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书算法。 
      * @return SignAlgo 证书算法。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignAlgo() {
         return this.SignAlgo;
@@ -325,9 +277,7 @@ public class DefaultServerCertInfo extends AbstractModel {
 
     /**
      * Set 证书算法。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SignAlgo 证书算法。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignAlgo(String SignAlgo) {
         this.SignAlgo = SignAlgo;

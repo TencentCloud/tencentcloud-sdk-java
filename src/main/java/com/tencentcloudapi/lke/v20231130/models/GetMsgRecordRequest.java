@@ -66,6 +66,13 @@ public class GetMsgRecordRequest extends AbstractModel {
     private Long Scene;
 
     /**
+    * 传该值，代表拉取该记录id的前后总共count条消息记录
+    */
+    @SerializedName("MidRecordId")
+    @Expose
+    private String MidRecordId;
+
+    /**
      * Get 类型 
      * @return Type 类型
      */
@@ -161,6 +168,22 @@ public class GetMsgRecordRequest extends AbstractModel {
         this.Scene = Scene;
     }
 
+    /**
+     * Get 传该值，代表拉取该记录id的前后总共count条消息记录 
+     * @return MidRecordId 传该值，代表拉取该记录id的前后总共count条消息记录
+     */
+    public String getMidRecordId() {
+        return this.MidRecordId;
+    }
+
+    /**
+     * Set 传该值，代表拉取该记录id的前后总共count条消息记录
+     * @param MidRecordId 传该值，代表拉取该记录id的前后总共count条消息记录
+     */
+    public void setMidRecordId(String MidRecordId) {
+        this.MidRecordId = MidRecordId;
+    }
+
     public GetMsgRecordRequest() {
     }
 
@@ -187,6 +210,9 @@ public class GetMsgRecordRequest extends AbstractModel {
         if (source.Scene != null) {
             this.Scene = new Long(source.Scene);
         }
+        if (source.MidRecordId != null) {
+            this.MidRecordId = new String(source.MidRecordId);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class GetMsgRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LastRecordId", this.LastRecordId);
         this.setParamSimple(map, prefix + "BotAppKey", this.BotAppKey);
         this.setParamSimple(map, prefix + "Scene", this.Scene);
+        this.setParamSimple(map, prefix + "MidRecordId", this.MidRecordId);
 
     }
 }

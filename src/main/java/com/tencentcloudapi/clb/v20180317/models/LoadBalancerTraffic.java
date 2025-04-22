@@ -60,7 +60,6 @@ public class LoadBalancerTraffic extends AbstractModel {
 
     /**
     * CLB域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -147,10 +146,8 @@ public class LoadBalancerTraffic extends AbstractModel {
     }
 
     /**
-     * Get CLB域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CLB域名 
      * @return Domain CLB域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -158,9 +155,7 @@ public class LoadBalancerTraffic extends AbstractModel {
 
     /**
      * Set CLB域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain CLB域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

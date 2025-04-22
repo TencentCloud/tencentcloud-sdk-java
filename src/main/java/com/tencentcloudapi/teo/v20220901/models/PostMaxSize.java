@@ -34,7 +34,6 @@ public class PostMaxSize extends AbstractModel {
 
     /**
     * 最大限制，取值在1MB和500MB之间。单位字节。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxSize")
     @Expose
@@ -65,10 +64,8 @@ public class PostMaxSize extends AbstractModel {
     }
 
     /**
-     * Get 最大限制，取值在1MB和500MB之间。单位字节。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大限制，取值在1MB和500MB之间。单位字节。 
      * @return MaxSize 最大限制，取值在1MB和500MB之间。单位字节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxSize() {
         return this.MaxSize;
@@ -76,9 +73,7 @@ public class PostMaxSize extends AbstractModel {
 
     /**
      * Set 最大限制，取值在1MB和500MB之间。单位字节。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxSize 最大限制，取值在1MB和500MB之间。单位字节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

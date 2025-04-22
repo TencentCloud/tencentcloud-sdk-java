@@ -216,6 +216,14 @@ public class MsgRecord extends AbstractModel {
     private AgentThought AgentThought;
 
     /**
+    * 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtraInfo")
+    @Expose
+    private ExtraInfo ExtraInfo;
+
+    /**
      * Get 内容 
      * @return Content 内容
      */
@@ -695,6 +703,26 @@ public class MsgRecord extends AbstractModel {
         this.AgentThought = AgentThought;
     }
 
+    /**
+     * Get 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtraInfo 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExtraInfo getExtraInfo() {
+        return this.ExtraInfo;
+    }
+
+    /**
+     * Set 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtraInfo 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtraInfo(ExtraInfo ExtraInfo) {
+        this.ExtraInfo = ExtraInfo;
+    }
+
     public MsgRecord() {
     }
 
@@ -793,6 +821,9 @@ public class MsgRecord extends AbstractModel {
         if (source.AgentThought != null) {
             this.AgentThought = new AgentThought(source.AgentThought);
         }
+        if (source.ExtraInfo != null) {
+            this.ExtraInfo = new ExtraInfo(source.ExtraInfo);
+        }
     }
 
 
@@ -824,6 +855,7 @@ public class MsgRecord extends AbstractModel {
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamArrayObj(map, prefix + "QuoteInfos.", this.QuoteInfos);
         this.setParamObj(map, prefix + "AgentThought.", this.AgentThought);
+        this.setParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
 
     }
 }

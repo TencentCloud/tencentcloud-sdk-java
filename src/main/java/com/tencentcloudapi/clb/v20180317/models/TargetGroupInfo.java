@@ -85,7 +85,6 @@ public class TargetGroupInfo extends AbstractModel {
 
     /**
     * 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetGroupType")
     @Expose
@@ -93,7 +92,6 @@ public class TargetGroupInfo extends AbstractModel {
 
     /**
     * 目标组已关联的规则数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssociatedRuleCount")
     @Expose
@@ -101,7 +99,6 @@ public class TargetGroupInfo extends AbstractModel {
 
     /**
     * 目标组内的实例数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegisteredInstancesCount")
     @Expose
@@ -116,7 +113,6 @@ public class TargetGroupInfo extends AbstractModel {
 
     /**
     * 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
@@ -274,10 +270,8 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。 
      * @return TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetGroupType() {
         return this.TargetGroupType;
@@ -285,19 +279,15 @@ public class TargetGroupInfo extends AbstractModel {
 
     /**
      * Set 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetGroupType(String TargetGroupType) {
         this.TargetGroupType = TargetGroupType;
     }
 
     /**
-     * Get 目标组已关联的规则数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标组已关联的规则数。 
      * @return AssociatedRuleCount 目标组已关联的规则数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAssociatedRuleCount() {
         return this.AssociatedRuleCount;
@@ -305,19 +295,15 @@ public class TargetGroupInfo extends AbstractModel {
 
     /**
      * Set 目标组已关联的规则数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssociatedRuleCount 目标组已关联的规则数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssociatedRuleCount(Long AssociatedRuleCount) {
         this.AssociatedRuleCount = AssociatedRuleCount;
     }
 
     /**
-     * Get 目标组内的实例数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标组内的实例数量。 
      * @return RegisteredInstancesCount 目标组内的实例数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegisteredInstancesCount() {
         return this.RegisteredInstancesCount;
@@ -325,9 +311,7 @@ public class TargetGroupInfo extends AbstractModel {
 
     /**
      * Set 目标组内的实例数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegisteredInstancesCount 目标组内的实例数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegisteredInstancesCount(Long RegisteredInstancesCount) {
         this.RegisteredInstancesCount = RegisteredInstancesCount;
@@ -350,10 +334,8 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。 
      * @return Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -361,9 +343,7 @@ public class TargetGroupInfo extends AbstractModel {
 
     /**
      * Set 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
