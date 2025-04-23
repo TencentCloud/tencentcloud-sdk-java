@@ -25,7 +25,6 @@ public class CreateEnvironmentResponse extends AbstractModel {
 
     /**
     * 成功时为环境ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateEnvironmentResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成功时为环境ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功时为环境ID，失败为null 
      * @return Result 成功时为环境ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateEnvironmentResponse extends AbstractModel {
 
     /**
      * Set 成功时为环境ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 成功时为环境ID，失败为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
         this.Result = Result;

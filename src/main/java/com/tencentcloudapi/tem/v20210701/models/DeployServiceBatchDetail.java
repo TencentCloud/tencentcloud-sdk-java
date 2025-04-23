@@ -41,7 +41,6 @@ public class DeployServiceBatchDetail extends AbstractModel {
 
     /**
     * 当前批次状态："WaitForTimeExceed", "WaitForResume", "Deploying", "Finish", "NotStart"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchStatus")
     @Expose
@@ -49,7 +48,6 @@ public class DeployServiceBatchDetail extends AbstractModel {
 
     /**
     * 该批次预计旧实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodNum")
     @Expose
@@ -57,7 +55,6 @@ public class DeployServiceBatchDetail extends AbstractModel {
 
     /**
     * 批次id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchIndex")
     @Expose
@@ -65,7 +62,6 @@ public class DeployServiceBatchDetail extends AbstractModel {
 
     /**
     * 旧实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldPods")
     @Expose
@@ -73,7 +69,6 @@ public class DeployServiceBatchDetail extends AbstractModel {
 
     /**
     * 新实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewPods")
     @Expose
@@ -81,7 +76,6 @@ public class DeployServiceBatchDetail extends AbstractModel {
 
     /**
     * =0：手动确认批次；>0：下一批次开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextBatchStartTime")
     @Expose
@@ -128,10 +122,8 @@ public class DeployServiceBatchDetail extends AbstractModel {
     }
 
     /**
-     * Get 当前批次状态："WaitForTimeExceed", "WaitForResume", "Deploying", "Finish", "NotStart"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前批次状态："WaitForTimeExceed", "WaitForResume", "Deploying", "Finish", "NotStart" 
      * @return BatchStatus 当前批次状态："WaitForTimeExceed", "WaitForResume", "Deploying", "Finish", "NotStart"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBatchStatus() {
         return this.BatchStatus;
@@ -139,19 +131,15 @@ public class DeployServiceBatchDetail extends AbstractModel {
 
     /**
      * Set 当前批次状态："WaitForTimeExceed", "WaitForResume", "Deploying", "Finish", "NotStart"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchStatus 当前批次状态："WaitForTimeExceed", "WaitForResume", "Deploying", "Finish", "NotStart"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchStatus(String BatchStatus) {
         this.BatchStatus = BatchStatus;
     }
 
     /**
-     * Get 该批次预计旧实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该批次预计旧实例数量 
      * @return PodNum 该批次预计旧实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPodNum() {
         return this.PodNum;
@@ -159,19 +147,15 @@ public class DeployServiceBatchDetail extends AbstractModel {
 
     /**
      * Set 该批次预计旧实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodNum 该批次预计旧实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodNum(Long PodNum) {
         this.PodNum = PodNum;
     }
 
     /**
-     * Get 批次id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批次id 
      * @return BatchIndex 批次id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBatchIndex() {
         return this.BatchIndex;
@@ -179,19 +163,15 @@ public class DeployServiceBatchDetail extends AbstractModel {
 
     /**
      * Set 批次id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchIndex 批次id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchIndex(Long BatchIndex) {
         this.BatchIndex = BatchIndex;
     }
 
     /**
-     * Get 旧实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 旧实例列表 
      * @return OldPods 旧实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeployServicePodDetail [] getOldPods() {
         return this.OldPods;
@@ -199,19 +179,15 @@ public class DeployServiceBatchDetail extends AbstractModel {
 
     /**
      * Set 旧实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldPods 旧实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldPods(DeployServicePodDetail [] OldPods) {
         this.OldPods = OldPods;
     }
 
     /**
-     * Get 新实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新实例列表 
      * @return NewPods 新实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeployServicePodDetail [] getNewPods() {
         return this.NewPods;
@@ -219,19 +195,15 @@ public class DeployServiceBatchDetail extends AbstractModel {
 
     /**
      * Set 新实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewPods 新实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewPods(DeployServicePodDetail [] NewPods) {
         this.NewPods = NewPods;
     }
 
     /**
-     * Get =0：手动确认批次；>0：下一批次开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get =0：手动确认批次；>0：下一批次开始时间戳 
      * @return NextBatchStartTime =0：手动确认批次；>0：下一批次开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNextBatchStartTime() {
         return this.NextBatchStartTime;
@@ -239,9 +211,7 @@ public class DeployServiceBatchDetail extends AbstractModel {
 
     /**
      * Set =0：手动确认批次；>0：下一批次开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextBatchStartTime =0：手动确认批次；>0：下一批次开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextBatchStartTime(Long NextBatchStartTime) {
         this.NextBatchStartTime = NextBatchStartTime;

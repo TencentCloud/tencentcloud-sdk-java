@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateAlertRuleRequest extends AbstractModel {
 
     /**
-    * Prometheus 高警规则 ID
+    * Prometheus 告警规则 ID
     */
     @SerializedName("RuleId")
     @Expose
@@ -77,14 +77,14 @@ public class UpdateAlertRuleRequest extends AbstractModel {
     private String [] Receivers;
 
     /**
-    * 报警规则标签列表
+    * 告警规则标签列表
     */
     @SerializedName("Labels")
     @Expose
     private PrometheusRuleKV [] Labels;
 
     /**
-    * 报警规则注释列表。
+    * 告警规则注释列表。
 
 告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
     */
@@ -93,23 +93,23 @@ public class UpdateAlertRuleRequest extends AbstractModel {
     private PrometheusRuleKV [] Annotations;
 
     /**
-    * 报警策略模板分类(自定义，可不填)
+    * 告警策略模板分类(自定义，可不填)
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Prometheus 高警规则 ID 
-     * @return RuleId Prometheus 高警规则 ID
+     * Get Prometheus 告警规则 ID 
+     * @return RuleId Prometheus 告警规则 ID
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Prometheus 高警规则 ID
-     * @param RuleId Prometheus 高警规则 ID
+     * Set Prometheus 告警规则 ID
+     * @param RuleId Prometheus 告警规则 ID
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
@@ -228,26 +228,26 @@ public class UpdateAlertRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 报警规则标签列表 
-     * @return Labels 报警规则标签列表
+     * Get 告警规则标签列表 
+     * @return Labels 告警规则标签列表
      */
     public PrometheusRuleKV [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 报警规则标签列表
-     * @param Labels 报警规则标签列表
+     * Set 告警规则标签列表
+     * @param Labels 告警规则标签列表
      */
     public void setLabels(PrometheusRuleKV [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 报警规则注释列表。
+     * Get 告警规则注释列表。
 
 告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。 
-     * @return Annotations 报警规则注释列表。
+     * @return Annotations 告警规则注释列表。
 
 告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
      */
@@ -256,10 +256,10 @@ public class UpdateAlertRuleRequest extends AbstractModel {
     }
 
     /**
-     * Set 报警规则注释列表。
+     * Set 告警规则注释列表。
 
 告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
-     * @param Annotations 报警规则注释列表。
+     * @param Annotations 告警规则注释列表。
 
 告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
      */
@@ -268,16 +268,16 @@ public class UpdateAlertRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 报警策略模板分类(自定义，可不填) 
-     * @return Type 报警策略模板分类(自定义，可不填)
+     * Get 告警策略模板分类(自定义，可不填) 
+     * @return Type 告警策略模板分类(自定义，可不填)
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 报警策略模板分类(自定义，可不填)
-     * @param Type 报警策略模板分类(自定义，可不填)
+     * Set 告警策略模板分类(自定义，可不填)
+     * @param Type 告警策略模板分类(自定义，可不填)
      */
     public void setType(String Type) {
         this.Type = Type;

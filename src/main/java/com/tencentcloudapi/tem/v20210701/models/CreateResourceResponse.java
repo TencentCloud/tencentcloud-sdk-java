@@ -25,7 +25,6 @@ public class CreateResourceResponse extends AbstractModel {
 
     /**
     * 成功与否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class CreateResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成功与否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功与否 
      * @return Result 成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class CreateResourceResponse extends AbstractModel {
 
     /**
      * Set 成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 成功与否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

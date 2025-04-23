@@ -32,7 +32,6 @@ public class DescribeConfigDataListPage extends AbstractModel {
 
     /**
     * 分页游标，用以查询下一页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContinueToken")
     @Expose
@@ -63,10 +62,8 @@ public class DescribeConfigDataListPage extends AbstractModel {
     }
 
     /**
-     * Get 分页游标，用以查询下一页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页游标，用以查询下一页 
      * @return ContinueToken 分页游标，用以查询下一页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContinueToken() {
         return this.ContinueToken;
@@ -74,9 +71,7 @@ public class DescribeConfigDataListPage extends AbstractModel {
 
     /**
      * Set 分页游标，用以查询下一页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContinueToken 分页游标，用以查询下一页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContinueToken(String ContinueToken) {
         this.ContinueToken = ContinueToken;

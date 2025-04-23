@@ -25,7 +25,6 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
     * pod Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodId")
     @Expose
@@ -33,7 +32,6 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
     * pod状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodStatus")
     @Expose
@@ -41,7 +39,6 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
     * pod版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodVersion")
     @Expose
@@ -49,7 +46,6 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
     * pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -57,7 +53,6 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
     * pod所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -65,7 +60,6 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
     * webshell地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Webshell")
     @Expose
@@ -73,17 +67,14 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get pod Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pod Id 
      * @return PodId pod Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodId() {
         return this.PodId;
@@ -91,19 +82,15 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
      * Set pod Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodId pod Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodId(String PodId) {
         this.PodId = PodId;
     }
 
     /**
-     * Get pod状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pod状态 
      * @return PodStatus pod状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPodStatus() {
         return this.PodStatus;
@@ -111,19 +98,15 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
      * Set pod状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodStatus pod状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodStatus(String [] PodStatus) {
         this.PodStatus = PodStatus;
     }
 
     /**
-     * Get pod版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pod版本 
      * @return PodVersion pod版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodVersion() {
         return this.PodVersion;
@@ -131,19 +114,15 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
      * Set pod版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodVersion pod版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodVersion(String PodVersion) {
         this.PodVersion = PodVersion;
     }
 
     /**
-     * Get pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pod创建时间 
      * @return CreateTime pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -151,19 +130,15 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
      * Set pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get pod所在可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pod所在可用区 
      * @return Zone pod所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -171,19 +146,15 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
      * Set pod所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone pod所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get webshell地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get webshell地址 
      * @return Webshell webshell地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWebshell() {
         return this.Webshell;
@@ -191,19 +162,15 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
      * Set webshell地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Webshell webshell地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebshell(String Webshell) {
         this.Webshell = Webshell;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -211,9 +178,7 @@ public class DeployServicePodDetail extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

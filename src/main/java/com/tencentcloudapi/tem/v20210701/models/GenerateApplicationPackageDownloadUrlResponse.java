@@ -25,7 +25,6 @@ public class GenerateApplicationPackageDownloadUrlResponse extends AbstractModel
 
     /**
     * 包下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class GenerateApplicationPackageDownloadUrlResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 包下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包下载临时链接 
      * @return Result 包下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class GenerateApplicationPackageDownloadUrlResponse extends AbstractModel
 
     /**
      * Set 包下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 包下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(String Result) {
         this.Result = Result;

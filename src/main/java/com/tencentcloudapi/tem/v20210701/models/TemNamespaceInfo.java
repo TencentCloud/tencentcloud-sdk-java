@@ -53,7 +53,6 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
     * 环境描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -145,7 +144,6 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
     * 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -153,7 +151,6 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
     * 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -161,7 +158,6 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
     * 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubAccountUin")
     @Expose
@@ -169,7 +165,6 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -177,7 +172,6 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -185,7 +179,6 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
     * 资源是否有权限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasAuthority")
     @Expose
@@ -193,7 +186,6 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
     * 环境类型: test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvType")
     @Expose
@@ -201,7 +193,6 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
     * 地域码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -272,10 +263,8 @@ public class TemNamespaceInfo extends AbstractModel {
     }
 
     /**
-     * Get 环境描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境描述 
      * @return Description 环境描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -283,9 +272,7 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
      * Set 环境描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 环境描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -484,10 +471,8 @@ public class TemNamespaceInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户AppId 
      * @return AppId 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -495,19 +480,15 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
      * Set 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户Uin 
      * @return Uin 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -515,19 +496,15 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
      * Set 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户SubAccountUin 
      * @return SubAccountUin 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubAccountUin() {
         return this.SubAccountUin;
@@ -535,19 +512,15 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
      * Set 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubAccountUin 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubAccountUin(String SubAccountUin) {
         this.SubAccountUin = SubAccountUin;
     }
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -555,19 +528,15 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -575,19 +544,15 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 资源是否有权限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源是否有权限 
      * @return HasAuthority 资源是否有权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHasAuthority() {
         return this.HasAuthority;
@@ -595,19 +560,15 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
      * Set 资源是否有权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasAuthority 资源是否有权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasAuthority(Boolean HasAuthority) {
         this.HasAuthority = HasAuthority;
     }
 
     /**
-     * Get 环境类型: test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境类型: test、pre、prod 
      * @return EnvType 环境类型: test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvType() {
         return this.EnvType;
@@ -615,19 +576,15 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
      * Set 环境类型: test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvType 环境类型: test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvType(String EnvType) {
         this.EnvType = EnvType;
     }
 
     /**
-     * Get 地域码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域码 
      * @return RegionId 地域码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionId() {
         return this.RegionId;
@@ -635,9 +592,7 @@ public class TemNamespaceInfo extends AbstractModel {
 
     /**
      * Set 地域码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;

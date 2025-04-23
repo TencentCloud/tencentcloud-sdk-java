@@ -33,7 +33,6 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -41,7 +40,6 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -49,7 +47,6 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
     * 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -65,7 +62,6 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
     * 其他分批详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OtherBatchDetail")
     @Expose
@@ -89,7 +85,6 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
     * 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
     @Expose
@@ -97,7 +92,6 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
     * 当前批次状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentBatchStatus")
     @Expose
@@ -105,7 +99,6 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
     * 新版本version
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewDeployVersion")
     @Expose
@@ -113,7 +106,6 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
     * 旧版本version
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldDeployVersion")
     @Expose
@@ -121,7 +113,6 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
     * 包名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewVersionPackageInfo")
     @Expose
@@ -156,10 +147,8 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -167,19 +156,15 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -187,19 +172,15 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 当前状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前状态 
      * @return Status 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -207,9 +188,7 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
      * Set 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -236,10 +215,8 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 其他分批详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 其他分批详情 
      * @return OtherBatchDetail 其他分批详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeployServiceBatchDetail [] getOtherBatchDetail() {
         return this.OtherBatchDetail;
@@ -247,9 +224,7 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
      * Set 其他分批详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtherBatchDetail 其他分批详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOtherBatchDetail(DeployServiceBatchDetail [] OtherBatchDetail) {
         this.OtherBatchDetail = OtherBatchDetail;
@@ -296,10 +271,8 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 错误原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误原因 
      * @return ErrorMessage 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
@@ -307,19 +280,15 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
      * Set 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMessage 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 当前批次状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前批次状态 
      * @return CurrentBatchStatus 当前批次状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentBatchStatus() {
         return this.CurrentBatchStatus;
@@ -327,19 +296,15 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
      * Set 当前批次状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentBatchStatus 当前批次状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentBatchStatus(String CurrentBatchStatus) {
         this.CurrentBatchStatus = CurrentBatchStatus;
     }
 
     /**
-     * Get 新版本version
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新版本version 
      * @return NewDeployVersion 新版本version
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewDeployVersion() {
         return this.NewDeployVersion;
@@ -347,19 +312,15 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
      * Set 新版本version
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewDeployVersion 新版本version
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewDeployVersion(String NewDeployVersion) {
         this.NewDeployVersion = NewDeployVersion;
     }
 
     /**
-     * Get 旧版本version
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 旧版本version 
      * @return OldDeployVersion 旧版本version
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldDeployVersion() {
         return this.OldDeployVersion;
@@ -367,19 +328,15 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
      * Set 旧版本version
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldDeployVersion 旧版本version
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldDeployVersion(String OldDeployVersion) {
         this.OldDeployVersion = OldDeployVersion;
     }
 
     /**
-     * Get 包名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包名称 
      * @return NewVersionPackageInfo 包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewVersionPackageInfo() {
         return this.NewVersionPackageInfo;
@@ -387,9 +344,7 @@ public class TemDeployApplicationDetailInfo extends AbstractModel {
 
     /**
      * Set 包名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewVersionPackageInfo 包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewVersionPackageInfo(String NewVersionPackageInfo) {
         this.NewVersionPackageInfo = NewVersionPackageInfo;

@@ -53,7 +53,6 @@ public class BindDetailItem extends AbstractModel {
 
     /**
     * 监听器名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListenerName")
     @Expose
@@ -153,10 +152,8 @@ public class BindDetailItem extends AbstractModel {
     }
 
     /**
-     * Get 监听器名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器名字 
      * @return ListenerName 监听器名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListenerName() {
         return this.ListenerName;
@@ -164,9 +161,7 @@ public class BindDetailItem extends AbstractModel {
 
     /**
      * Set 监听器名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListenerName 监听器名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;

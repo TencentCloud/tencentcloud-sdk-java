@@ -53,7 +53,6 @@ public class ServicePage extends AbstractModel {
 
     /**
     * 当前条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Current")
     @Expose
@@ -124,10 +123,8 @@ public class ServicePage extends AbstractModel {
     }
 
     /**
-     * Get 当前条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前条数 
      * @return Current 当前条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrent() {
         return this.Current;
@@ -135,9 +132,7 @@ public class ServicePage extends AbstractModel {
 
     /**
      * Set 当前条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Current 当前条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrent(Long Current) {
         this.Current = Current;

@@ -25,7 +25,6 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
     * 服务类型：如：EXTERNAL，VPC，CLUSTER
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
     * 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
     @Expose
@@ -41,7 +39,6 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
     * 集群内访问vip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterIp")
     @Expose
@@ -49,7 +46,6 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
     * 集群外方位vip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExternalIp")
     @Expose
@@ -57,7 +53,6 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
     * 子网id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -65,7 +60,6 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
     * vpc id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -73,7 +67,6 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
     * LoadBalance Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalanceId")
     @Expose
@@ -81,7 +74,6 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
     * yaml 内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Yaml")
     @Expose
@@ -89,7 +81,6 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
     * 暴露端口列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ports")
     @Expose
@@ -97,7 +88,6 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
     * 端口映射数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PortMappingItemList")
     @Expose
@@ -105,17 +95,14 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
     * clb domain
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExternalDomain")
     @Expose
     private String ExternalDomain;
 
     /**
-     * Get 服务类型：如：EXTERNAL，VPC，CLUSTER
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务类型：如：EXTERNAL，VPC，CLUSTER 
      * @return Type 服务类型：如：EXTERNAL，VPC，CLUSTER
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -123,19 +110,15 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
      * Set 服务类型：如：EXTERNAL，VPC，CLUSTER
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 服务类型：如：EXTERNAL，VPC，CLUSTER
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 服务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名称 
      * @return ServiceName 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
         return this.ServiceName;
@@ -143,19 +126,15 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
      * Set 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceName 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 集群内访问vip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群内访问vip 
      * @return ClusterIp 集群内访问vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterIp() {
         return this.ClusterIp;
@@ -163,19 +142,15 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
      * Set 集群内访问vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterIp 集群内访问vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterIp(String ClusterIp) {
         this.ClusterIp = ClusterIp;
     }
 
     /**
-     * Get 集群外方位vip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群外方位vip 
      * @return ExternalIp 集群外方位vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExternalIp() {
         return this.ExternalIp;
@@ -183,19 +158,15 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
      * Set 集群外方位vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExternalIp 集群外方位vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExternalIp(String ExternalIp) {
         this.ExternalIp = ExternalIp;
     }
 
     /**
-     * Get 子网id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网id 
      * @return SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -203,19 +174,15 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
      * Set 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get vpc id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc id 
      * @return VpcId vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -223,19 +190,15 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
      * Set vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get LoadBalance Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get LoadBalance Id 
      * @return LoadBalanceId LoadBalance Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalanceId() {
         return this.LoadBalanceId;
@@ -243,19 +206,15 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
      * Set LoadBalance Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalanceId LoadBalance Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalanceId(String LoadBalanceId) {
         this.LoadBalanceId = LoadBalanceId;
     }
 
     /**
-     * Get yaml 内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get yaml 内容 
      * @return Yaml yaml 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getYaml() {
         return this.Yaml;
@@ -263,19 +222,15 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
      * Set yaml 内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Yaml yaml 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setYaml(String Yaml) {
         this.Yaml = Yaml;
     }
 
     /**
-     * Get 暴露端口列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 暴露端口列表 
      * @return Ports 暴露端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getPorts() {
         return this.Ports;
@@ -283,19 +238,15 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
      * Set 暴露端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ports 暴露端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPorts(Long [] Ports) {
         this.Ports = Ports;
     }
 
     /**
-     * Get 端口映射数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口映射数组 
      * @return PortMappingItemList 端口映射数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServicePortMappingItem [] getPortMappingItemList() {
         return this.PortMappingItemList;
@@ -303,19 +254,15 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
      * Set 端口映射数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PortMappingItemList 端口映射数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPortMappingItemList(ServicePortMappingItem [] PortMappingItemList) {
         this.PortMappingItemList = PortMappingItemList;
     }
 
     /**
-     * Get clb domain
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get clb domain 
      * @return ExternalDomain clb domain
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExternalDomain() {
         return this.ExternalDomain;
@@ -323,9 +270,7 @@ public class ServicePortMapping extends AbstractModel {
 
     /**
      * Set clb domain
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExternalDomain clb domain
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExternalDomain(String ExternalDomain) {
         this.ExternalDomain = ExternalDomain;

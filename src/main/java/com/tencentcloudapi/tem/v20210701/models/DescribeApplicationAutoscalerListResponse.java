@@ -25,7 +25,6 @@ public class DescribeApplicationAutoscalerListResponse extends AbstractModel {
 
     /**
     * 弹性伸缩策略组合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeApplicationAutoscalerListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 弹性伸缩策略组合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性伸缩策略组合 
      * @return Result 弹性伸缩策略组合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Autoscaler [] getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeApplicationAutoscalerListResponse extends AbstractModel {
 
     /**
      * Set 弹性伸缩策略组合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 弹性伸缩策略组合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Autoscaler [] Result) {
         this.Result = Result;

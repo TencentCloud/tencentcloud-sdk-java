@@ -380,6 +380,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *健康报告内容。
+     * @param req DescribeDBDiagReportContentRequest
+     * @return DescribeDBDiagReportContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBDiagReportContentResponse DescribeDBDiagReportContent(DescribeDBDiagReportContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBDiagReportContent", DescribeDBDiagReportContentResponse.class);
+    }
+
+    /**
      *查询健康报告生成任务列表。
      * @param req DescribeDBDiagReportTasksRequest
      * @return DescribeDBDiagReportTasksResponse

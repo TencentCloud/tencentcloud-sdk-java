@@ -74,7 +74,6 @@ FS_SIZE_READ(磁盘读大小，MiB/s)
 
     /**
     * 阈值（小数，优先使用）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DoubleThreshold")
     @Expose
@@ -217,10 +216,8 @@ FS_SIZE_READ(磁盘读大小，MiB/s)
     }
 
     /**
-     * Get 阈值（小数，优先使用）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 阈值（小数，优先使用） 
      * @return DoubleThreshold 阈值（小数，优先使用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDoubleThreshold() {
         return this.DoubleThreshold;
@@ -228,9 +225,7 @@ FS_SIZE_READ(磁盘读大小，MiB/s)
 
     /**
      * Set 阈值（小数，优先使用）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DoubleThreshold 阈值（小数，优先使用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDoubleThreshold(Float DoubleThreshold) {
         this.DoubleThreshold = DoubleThreshold;

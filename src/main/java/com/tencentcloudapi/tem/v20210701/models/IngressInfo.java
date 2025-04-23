@@ -25,7 +25,6 @@ public class IngressInfo extends AbstractModel {
 
     /**
     * 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -54,7 +53,6 @@ public class IngressInfo extends AbstractModel {
 
     /**
     * clb ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClbId")
     @Expose
@@ -77,7 +75,6 @@ public class IngressInfo extends AbstractModel {
 
     /**
     * 环境集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -85,7 +82,6 @@ public class IngressInfo extends AbstractModel {
 
     /**
     * clb ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -93,7 +89,6 @@ public class IngressInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -110,7 +105,6 @@ public class IngressInfo extends AbstractModel {
     * 重定向模式，可选值：
 - AUTO（自动重定向http到https）
 - NONE（不使用重定向）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RewriteType")
     @Expose
@@ -118,17 +112,14 @@ public class IngressInfo extends AbstractModel {
 
     /**
     * clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-     * Get 环境ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境ID 
      * @return EnvironmentId 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
@@ -136,9 +127,7 @@ public class IngressInfo extends AbstractModel {
 
     /**
      * Set 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvironmentId 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
@@ -193,10 +182,8 @@ public class IngressInfo extends AbstractModel {
     }
 
     /**
-     * Get clb ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get clb ID 
      * @return ClbId clb ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClbId() {
         return this.ClbId;
@@ -204,9 +191,7 @@ public class IngressInfo extends AbstractModel {
 
     /**
      * Set clb ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClbId clb ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClbId(String ClbId) {
         this.ClbId = ClbId;
@@ -249,10 +234,8 @@ public class IngressInfo extends AbstractModel {
     }
 
     /**
-     * Get 环境集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境集群ID 
      * @return ClusterId 环境集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -260,19 +243,15 @@ public class IngressInfo extends AbstractModel {
 
     /**
      * Set 环境集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 环境集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get clb ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get clb ip 
      * @return Vip clb ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -280,19 +259,15 @@ public class IngressInfo extends AbstractModel {
 
     /**
      * Set clb ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip clb ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -300,9 +275,7 @@ public class IngressInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -327,12 +300,10 @@ public class IngressInfo extends AbstractModel {
     /**
      * Get 重定向模式，可选值：
 - AUTO（自动重定向http到https）
-- NONE（不使用重定向）
-注意：此字段可能返回 null，表示取不到有效值。 
+- NONE（不使用重定向） 
      * @return RewriteType 重定向模式，可选值：
 - AUTO（自动重定向http到https）
 - NONE（不使用重定向）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRewriteType() {
         return this.RewriteType;
@@ -342,21 +313,17 @@ public class IngressInfo extends AbstractModel {
      * Set 重定向模式，可选值：
 - AUTO（自动重定向http到https）
 - NONE（不使用重定向）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RewriteType 重定向模式，可选值：
 - AUTO（自动重定向http到https）
 - NONE（不使用重定向）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRewriteType(String RewriteType) {
         this.RewriteType = RewriteType;
     }
 
     /**
-     * Get clb 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get clb 域名 
      * @return Domain clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -364,9 +331,7 @@ public class IngressInfo extends AbstractModel {
 
     /**
      * Set clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

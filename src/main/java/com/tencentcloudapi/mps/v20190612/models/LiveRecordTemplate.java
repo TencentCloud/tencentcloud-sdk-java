@@ -38,6 +38,13 @@ public class LiveRecordTemplate extends AbstractModel {
     private HLSConfigureInfo HLSConfigure;
 
     /**
+    * MP4配置参数
+    */
+    @SerializedName("MP4Configure")
+    @Expose
+    private MP4ConfigureInfo MP4Configure;
+
+    /**
     * 录制模板名称。
     */
     @SerializedName("Name")
@@ -104,6 +111,22 @@ public class LiveRecordTemplate extends AbstractModel {
      */
     public void setHLSConfigure(HLSConfigureInfo HLSConfigure) {
         this.HLSConfigure = HLSConfigure;
+    }
+
+    /**
+     * Get MP4配置参数 
+     * @return MP4Configure MP4配置参数
+     */
+    public MP4ConfigureInfo getMP4Configure() {
+        return this.MP4Configure;
+    }
+
+    /**
+     * Set MP4配置参数
+     * @param MP4Configure MP4配置参数
+     */
+    public void setMP4Configure(MP4ConfigureInfo MP4Configure) {
+        this.MP4Configure = MP4Configure;
     }
 
     /**
@@ -208,6 +231,9 @@ public class LiveRecordTemplate extends AbstractModel {
         if (source.HLSConfigure != null) {
             this.HLSConfigure = new HLSConfigureInfo(source.HLSConfigure);
         }
+        if (source.MP4Configure != null) {
+            this.MP4Configure = new MP4ConfigureInfo(source.MP4Configure);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -232,6 +258,7 @@ public class LiveRecordTemplate extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamObj(map, prefix + "HLSConfigure.", this.HLSConfigure);
+        this.setParamObj(map, prefix + "MP4Configure.", this.MP4Configure);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "Type", this.Type);

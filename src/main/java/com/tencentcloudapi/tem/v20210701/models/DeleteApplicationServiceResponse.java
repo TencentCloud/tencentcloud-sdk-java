@@ -25,7 +25,6 @@ public class DeleteApplicationServiceResponse extends AbstractModel {
 
     /**
     * 是否成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DeleteApplicationServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否成功
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否成功 
      * @return Result 是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DeleteApplicationServiceResponse extends AbstractModel {
 
     /**
      * Set 是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

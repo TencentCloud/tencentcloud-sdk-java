@@ -32,7 +32,6 @@ public class NodeInfo extends AbstractModel {
 
     /**
     * node可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -40,7 +39,6 @@ public class NodeInfo extends AbstractModel {
 
     /**
     * node子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -48,7 +46,6 @@ public class NodeInfo extends AbstractModel {
 
     /**
     * 可用IP数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvailableIpCount")
     @Expose
@@ -56,7 +53,6 @@ public class NodeInfo extends AbstractModel {
 
     /**
     * cidr块
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cidr")
     @Expose
@@ -79,10 +75,8 @@ public class NodeInfo extends AbstractModel {
     }
 
     /**
-     * Get node可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get node可用区 
      * @return Zone node可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -90,19 +84,15 @@ public class NodeInfo extends AbstractModel {
 
     /**
      * Set node可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone node可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get node子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get node子网ID 
      * @return SubnetId node子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -110,19 +100,15 @@ public class NodeInfo extends AbstractModel {
 
     /**
      * Set node子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId node子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 可用IP数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用IP数 
      * @return AvailableIpCount 可用IP数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAvailableIpCount() {
         return this.AvailableIpCount;
@@ -130,19 +116,15 @@ public class NodeInfo extends AbstractModel {
 
     /**
      * Set 可用IP数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvailableIpCount 可用IP数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailableIpCount(String AvailableIpCount) {
         this.AvailableIpCount = AvailableIpCount;
     }
 
     /**
-     * Get cidr块
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cidr块 
      * @return Cidr cidr块
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCidr() {
         return this.Cidr;
@@ -150,9 +132,7 @@ public class NodeInfo extends AbstractModel {
 
     /**
      * Set cidr块
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cidr cidr块
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCidr(String Cidr) {
         this.Cidr = Cidr;

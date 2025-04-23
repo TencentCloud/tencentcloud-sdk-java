@@ -39,6 +39,17 @@ public class TdsClient extends AbstractClient{
     }
 
     /**
+     *查询设备标识及风险（金融旗舰版）
+     * @param req DescribeFinanceFraudUltimateRequest
+     * @return DescribeFinanceFraudUltimateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFinanceFraudUltimateResponse DescribeFinanceFraudUltimate(DescribeFinanceFraudUltimateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFinanceFraudUltimate", DescribeFinanceFraudUltimateResponse.class);
+    }
+
+    /**
      *查询设备风险
      * @param req DescribeFraudBaseRequest
      * @return DescribeFraudBaseResponse

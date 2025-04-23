@@ -46,6 +46,21 @@ public class InquiryPriceResizeInstanceDisksRequest extends AbstractModel {
     private Boolean ForceStop;
 
     /**
+    * 待扩容的系统盘配置信息。只支持扩容云盘。
+<dx-alert infotype="explain" title="">您必须指定参数DataDisks与SystemDisk的其中一个，但不能同时指定。</dx-alert>
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private SystemDisk SystemDisk;
+
+    /**
+    * 是否在线扩容
+    */
+    @SerializedName("ResizeOnline")
+    @Expose
+    private Boolean ResizeOnline;
+
+    /**
      * Get 待操作的实例ID。可通过[ DescribeInstances ](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。 
      * @return InstanceId 待操作的实例ID。可通过[ DescribeInstances ](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
      */
@@ -97,6 +112,42 @@ public class InquiryPriceResizeInstanceDisksRequest extends AbstractModel {
         this.ForceStop = ForceStop;
     }
 
+    /**
+     * Get 待扩容的系统盘配置信息。只支持扩容云盘。
+<dx-alert infotype="explain" title="">您必须指定参数DataDisks与SystemDisk的其中一个，但不能同时指定。</dx-alert> 
+     * @return SystemDisk 待扩容的系统盘配置信息。只支持扩容云盘。
+<dx-alert infotype="explain" title="">您必须指定参数DataDisks与SystemDisk的其中一个，但不能同时指定。</dx-alert>
+     */
+    public SystemDisk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set 待扩容的系统盘配置信息。只支持扩容云盘。
+<dx-alert infotype="explain" title="">您必须指定参数DataDisks与SystemDisk的其中一个，但不能同时指定。</dx-alert>
+     * @param SystemDisk 待扩容的系统盘配置信息。只支持扩容云盘。
+<dx-alert infotype="explain" title="">您必须指定参数DataDisks与SystemDisk的其中一个，但不能同时指定。</dx-alert>
+     */
+    public void setSystemDisk(SystemDisk SystemDisk) {
+        this.SystemDisk = SystemDisk;
+    }
+
+    /**
+     * Get 是否在线扩容 
+     * @return ResizeOnline 是否在线扩容
+     */
+    public Boolean getResizeOnline() {
+        return this.ResizeOnline;
+    }
+
+    /**
+     * Set 是否在线扩容
+     * @param ResizeOnline 是否在线扩容
+     */
+    public void setResizeOnline(Boolean ResizeOnline) {
+        this.ResizeOnline = ResizeOnline;
+    }
+
     public InquiryPriceResizeInstanceDisksRequest() {
     }
 
@@ -117,6 +168,12 @@ public class InquiryPriceResizeInstanceDisksRequest extends AbstractModel {
         if (source.ForceStop != null) {
             this.ForceStop = new Boolean(source.ForceStop);
         }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new SystemDisk(source.SystemDisk);
+        }
+        if (source.ResizeOnline != null) {
+            this.ResizeOnline = new Boolean(source.ResizeOnline);
+        }
     }
 
 
@@ -127,6 +184,8 @@ public class InquiryPriceResizeInstanceDisksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamSimple(map, prefix + "ForceStop", this.ForceStop);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+        this.setParamSimple(map, prefix + "ResizeOnline", this.ResizeOnline);
 
     }
 }

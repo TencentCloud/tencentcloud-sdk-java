@@ -335,6 +335,13 @@ public class InstanceInfo extends AbstractModel {
     private Long Last3MaxBandwidth;
 
     /**
+    * 重保增强包
+    */
+    @SerializedName("MajorEventsProPkg")
+    @Expose
+    private MajorEventsProPkg MajorEventsProPkg;
+
+    /**
      * Get 实例唯一ID 
      * @return InstanceId 实例唯一ID
      */
@@ -1062,6 +1069,22 @@ public class InstanceInfo extends AbstractModel {
         this.Last3MaxBandwidth = Last3MaxBandwidth;
     }
 
+    /**
+     * Get 重保增强包 
+     * @return MajorEventsProPkg 重保增强包
+     */
+    public MajorEventsProPkg getMajorEventsProPkg() {
+        return this.MajorEventsProPkg;
+    }
+
+    /**
+     * Set 重保增强包
+     * @param MajorEventsProPkg 重保增强包
+     */
+    public void setMajorEventsProPkg(MajorEventsProPkg MajorEventsProPkg) {
+        this.MajorEventsProPkg = MajorEventsProPkg;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1199,6 +1222,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.Last3MaxBandwidth != null) {
             this.Last3MaxBandwidth = new Long(source.Last3MaxBandwidth);
         }
+        if (source.MajorEventsProPkg != null) {
+            this.MajorEventsProPkg = new MajorEventsProPkg(source.MajorEventsProPkg);
+        }
     }
 
 
@@ -1249,6 +1275,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FreeDelayFlag", this.FreeDelayFlag);
         this.setParamSimple(map, prefix + "Last3MaxQPS", this.Last3MaxQPS);
         this.setParamSimple(map, prefix + "Last3MaxBandwidth", this.Last3MaxBandwidth);
+        this.setParamObj(map, prefix + "MajorEventsProPkg.", this.MajorEventsProPkg);
 
     }
 }

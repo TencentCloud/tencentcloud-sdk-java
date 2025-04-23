@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class CreateLiveRecordTemplateRequest extends AbstractModel {
 
     /**
-    * HLS 配置参数
+    * HLS配置参数，和MP4Configure需要二选一必填。
     */
     @SerializedName("HLSConfigure")
     @Expose
     private HLSConfigureInfo HLSConfigure;
+
+    /**
+    * MP4配置参数，和HLSConfigure需要二选一必填。
+    */
+    @SerializedName("MP4Configure")
+    @Expose
+    private MP4ConfigureInfo MP4Configure;
 
     /**
     * 录制模板名称，长度限制：64 个字符。
@@ -45,19 +52,35 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
-     * Get HLS 配置参数 
-     * @return HLSConfigure HLS 配置参数
+     * Get HLS配置参数，和MP4Configure需要二选一必填。 
+     * @return HLSConfigure HLS配置参数，和MP4Configure需要二选一必填。
      */
     public HLSConfigureInfo getHLSConfigure() {
         return this.HLSConfigure;
     }
 
     /**
-     * Set HLS 配置参数
-     * @param HLSConfigure HLS 配置参数
+     * Set HLS配置参数，和MP4Configure需要二选一必填。
+     * @param HLSConfigure HLS配置参数，和MP4Configure需要二选一必填。
      */
     public void setHLSConfigure(HLSConfigureInfo HLSConfigure) {
         this.HLSConfigure = HLSConfigure;
+    }
+
+    /**
+     * Get MP4配置参数，和HLSConfigure需要二选一必填。 
+     * @return MP4Configure MP4配置参数，和HLSConfigure需要二选一必填。
+     */
+    public MP4ConfigureInfo getMP4Configure() {
+        return this.MP4Configure;
+    }
+
+    /**
+     * Set MP4配置参数，和HLSConfigure需要二选一必填。
+     * @param MP4Configure MP4配置参数，和HLSConfigure需要二选一必填。
+     */
+    public void setMP4Configure(MP4ConfigureInfo MP4Configure) {
+        this.MP4Configure = MP4Configure;
     }
 
     /**
@@ -103,6 +126,9 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
         if (source.HLSConfigure != null) {
             this.HLSConfigure = new HLSConfigureInfo(source.HLSConfigure);
         }
+        if (source.MP4Configure != null) {
+            this.MP4Configure = new MP4ConfigureInfo(source.MP4Configure);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -117,6 +143,7 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "HLSConfigure.", this.HLSConfigure);
+        this.setParamObj(map, prefix + "MP4Configure.", this.MP4Configure);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
 

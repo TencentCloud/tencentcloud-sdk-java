@@ -39,7 +39,6 @@ public class LogConfig extends AbstractModel {
 
     /**
     * 日志集 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogsetId")
     @Expose
@@ -47,7 +46,6 @@ public class LogConfig extends AbstractModel {
 
     /**
     * 日志主题 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -62,7 +60,6 @@ public class LogConfig extends AbstractModel {
 
     /**
     * 首行正则表达式，当 LogType 为多行全文、多行正则时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginningRegex")
     @Expose
@@ -70,7 +67,6 @@ public class LogConfig extends AbstractModel {
 
     /**
     * 收集文件目录，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogPath")
     @Expose
@@ -78,7 +74,6 @@ public class LogConfig extends AbstractModel {
 
     /**
     * 收集文件名模式，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilePattern")
     @Expose
@@ -86,7 +81,6 @@ public class LogConfig extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateDate")
     @Expose
@@ -94,7 +88,6 @@ public class LogConfig extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyDate")
     @Expose
@@ -102,7 +95,6 @@ public class LogConfig extends AbstractModel {
 
     /**
     * 应用 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -110,7 +102,6 @@ public class LogConfig extends AbstractModel {
 
     /**
     * 应用名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -118,7 +109,6 @@ public class LogConfig extends AbstractModel {
 
     /**
     * 导出规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtractRule")
     @Expose
@@ -157,10 +147,8 @@ public class LogConfig extends AbstractModel {
     }
 
     /**
-     * Get 日志集 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志集 ID 
      * @return LogsetId 日志集 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogsetId() {
         return this.LogsetId;
@@ -168,19 +156,15 @@ public class LogConfig extends AbstractModel {
 
     /**
      * Set 日志集 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogsetId 日志集 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 日志主题 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题 ID 
      * @return TopicId 日志主题 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -188,9 +172,7 @@ public class LogConfig extends AbstractModel {
 
     /**
      * Set 日志主题 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 日志主题 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -213,10 +195,8 @@ public class LogConfig extends AbstractModel {
     }
 
     /**
-     * Get 首行正则表达式，当 LogType 为多行全文、多行正则时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首行正则表达式，当 LogType 为多行全文、多行正则时生效 
      * @return BeginningRegex 首行正则表达式，当 LogType 为多行全文、多行正则时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginningRegex() {
         return this.BeginningRegex;
@@ -224,19 +204,15 @@ public class LogConfig extends AbstractModel {
 
     /**
      * Set 首行正则表达式，当 LogType 为多行全文、多行正则时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginningRegex 首行正则表达式，当 LogType 为多行全文、多行正则时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginningRegex(String BeginningRegex) {
         this.BeginningRegex = BeginningRegex;
     }
 
     /**
-     * Get 收集文件目录，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 收集文件目录，当 InputType=container_file 时生效 
      * @return LogPath 收集文件目录，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogPath() {
         return this.LogPath;
@@ -244,19 +220,15 @@ public class LogConfig extends AbstractModel {
 
     /**
      * Set 收集文件目录，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogPath 收集文件目录，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogPath(String LogPath) {
         this.LogPath = LogPath;
     }
 
     /**
-     * Get 收集文件名模式，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 收集文件名模式，当 InputType=container_file 时生效 
      * @return FilePattern 收集文件名模式，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFilePattern() {
         return this.FilePattern;
@@ -264,19 +236,15 @@ public class LogConfig extends AbstractModel {
 
     /**
      * Set 收集文件名模式，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilePattern 收集文件名模式，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilePattern(String FilePattern) {
         this.FilePattern = FilePattern;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateDate 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateDate() {
         return this.CreateDate;
@@ -284,19 +252,15 @@ public class LogConfig extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateDate 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateDate(String CreateDate) {
         this.CreateDate = CreateDate;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return ModifyDate 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyDate() {
         return this.ModifyDate;
@@ -304,19 +268,15 @@ public class LogConfig extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyDate 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyDate(String ModifyDate) {
         this.ModifyDate = ModifyDate;
     }
 
     /**
-     * Get 应用 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用 ID 
      * @return ApplicationId 应用 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -324,19 +284,15 @@ public class LogConfig extends AbstractModel {
 
     /**
      * Set 应用 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 应用名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名 
      * @return ApplicationName 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -344,19 +300,15 @@ public class LogConfig extends AbstractModel {
 
     /**
      * Set 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 导出规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导出规则 
      * @return ExtractRule 导出规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogConfigExtractRule getExtractRule() {
         return this.ExtractRule;
@@ -364,9 +316,7 @@ public class LogConfig extends AbstractModel {
 
     /**
      * Set 导出规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtractRule 导出规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtractRule(LogConfigExtractRule ExtractRule) {
         this.ExtractRule = ExtractRule;

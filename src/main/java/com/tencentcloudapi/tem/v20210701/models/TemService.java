@@ -25,7 +25,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 主键
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -33,7 +32,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 服务名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -41,7 +39,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -49,7 +46,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 命名空间id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -57,7 +53,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateDate")
     @Expose
@@ -65,7 +60,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyDate")
     @Expose
@@ -73,7 +67,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 修改人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Modifier")
     @Expose
@@ -81,7 +74,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 创建者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creator")
     @Expose
@@ -89,7 +81,6 @@ public class TemService extends AbstractModel {
 
     /**
     * tcr个人版or企业版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepoType")
     @Expose
@@ -97,7 +88,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 企业版实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -105,7 +95,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 镜像仓库名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepoName")
     @Expose
@@ -113,7 +102,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodingLanguage")
     @Expose
@@ -121,7 +109,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 部署方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployMode")
     @Expose
@@ -129,7 +116,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 环境名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvironmentName")
     @Expose
@@ -137,7 +123,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 服务当前运行环境的实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActiveVersions")
     @Expose
@@ -145,7 +130,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 是否启用链路追踪
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableTracing")
     @Expose
@@ -153,7 +137,6 @@ public class TemService extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -161,17 +144,14 @@ public class TemService extends AbstractModel {
 
     /**
     * 是否有资源权限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HasAuthority")
     @Expose
     private Boolean HasAuthority;
 
     /**
-     * Get 主键
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主键 
      * @return ApplicationId 主键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -179,19 +159,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 主键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 主键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 服务名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名 
      * @return ApplicationName 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -199,19 +175,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -219,19 +191,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 命名空间id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间id 
      * @return EnvironmentId 命名空间id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
@@ -239,19 +207,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 命名空间id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvironmentId 命名空间id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateDate 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateDate() {
         return this.CreateDate;
@@ -259,19 +223,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateDate 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateDate(String CreateDate) {
         this.CreateDate = CreateDate;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyDate 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyDate() {
         return this.ModifyDate;
@@ -279,19 +239,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyDate 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyDate(String ModifyDate) {
         this.ModifyDate = ModifyDate;
     }
 
     /**
-     * Get 修改人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改人 
      * @return Modifier 修改人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifier() {
         return this.Modifier;
@@ -299,19 +255,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 修改人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Modifier 修改人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifier(String Modifier) {
         this.Modifier = Modifier;
     }
 
     /**
-     * Get 创建者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者 
      * @return Creator 创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreator() {
         return this.Creator;
@@ -319,19 +271,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 创建者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Creator 创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get tcr个人版or企业版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tcr个人版or企业版 
      * @return RepoType tcr个人版or企业版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRepoType() {
         return this.RepoType;
@@ -339,19 +287,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set tcr个人版or企业版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepoType tcr个人版or企业版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepoType(Long RepoType) {
         this.RepoType = RepoType;
     }
 
     /**
-     * Get 企业版实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业版实例id 
      * @return InstanceId 企业版实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -359,19 +303,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 企业版实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 企业版实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 镜像仓库名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像仓库名 
      * @return RepoName 镜像仓库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepoName() {
         return this.RepoName;
@@ -379,19 +319,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 镜像仓库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepoName 镜像仓库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepoName(String RepoName) {
         this.RepoName = RepoName;
     }
 
     /**
-     * Get 编程语言
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 编程语言 
      * @return CodingLanguage 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodingLanguage() {
         return this.CodingLanguage;
@@ -399,19 +335,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CodingLanguage 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodingLanguage(String CodingLanguage) {
         this.CodingLanguage = CodingLanguage;
     }
 
     /**
-     * Get 部署方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署方式 
      * @return DeployMode 部署方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeployMode() {
         return this.DeployMode;
@@ -419,19 +351,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 部署方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployMode 部署方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployMode(String DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * Get 环境名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境名称 
      * @return EnvironmentName 环境名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvironmentName() {
         return this.EnvironmentName;
@@ -439,19 +367,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 环境名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvironmentName 环境名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvironmentName(String EnvironmentName) {
         this.EnvironmentName = EnvironmentName;
     }
 
     /**
-     * Get 服务当前运行环境的实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务当前运行环境的实例信息 
      * @return ActiveVersions 服务当前运行环境的实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceVersionBrief [] getActiveVersions() {
         return this.ActiveVersions;
@@ -459,19 +383,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 服务当前运行环境的实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActiveVersions 服务当前运行环境的实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActiveVersions(ServiceVersionBrief [] ActiveVersions) {
         this.ActiveVersions = ActiveVersions;
     }
 
     /**
-     * Get 是否启用链路追踪
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用链路追踪 
      * @return EnableTracing 是否启用链路追踪
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableTracing() {
         return this.EnableTracing;
@@ -479,19 +399,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 是否启用链路追踪
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableTracing 是否启用链路追踪
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableTracing(Long EnableTracing) {
         this.EnableTracing = EnableTracing;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -499,19 +415,15 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 是否有资源权限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否有资源权限 
      * @return HasAuthority 是否有资源权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHasAuthority() {
         return this.HasAuthority;
@@ -519,9 +431,7 @@ public class TemService extends AbstractModel {
 
     /**
      * Set 是否有资源权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HasAuthority 是否有资源权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHasAuthority(Boolean HasAuthority) {
         this.HasAuthority = HasAuthority;

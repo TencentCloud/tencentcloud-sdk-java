@@ -39,7 +39,6 @@ public class StorageConf extends AbstractModel {
 
     /**
     * 存储卷IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageVolIp")
     @Expose
@@ -78,10 +77,8 @@ public class StorageConf extends AbstractModel {
     }
 
     /**
-     * Get 存储卷IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储卷IP 
      * @return StorageVolIp 存储卷IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageVolIp() {
         return this.StorageVolIp;
@@ -89,9 +86,7 @@ public class StorageConf extends AbstractModel {
 
     /**
      * Set 存储卷IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageVolIp 存储卷IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageVolIp(String StorageVolIp) {
         this.StorageVolIp = StorageVolIp;

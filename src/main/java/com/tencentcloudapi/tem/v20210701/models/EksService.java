@@ -46,7 +46,6 @@ public class EksService extends AbstractModel {
 
     /**
     * 服务名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -54,7 +53,6 @@ public class EksService extends AbstractModel {
 
     /**
     * 版本名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionName")
     @Expose
@@ -62,7 +60,6 @@ public class EksService extends AbstractModel {
 
     /**
     * 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterIp")
     @Expose
@@ -70,7 +67,6 @@ public class EksService extends AbstractModel {
 
     /**
     * 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExternalIp")
     @Expose
@@ -81,7 +77,6 @@ public class EksService extends AbstractModel {
 - EXTERNAL（公网访问）
 - VPC（vpc内访问）
 - CLUSTER（集群内访问）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -89,7 +84,6 @@ public class EksService extends AbstractModel {
 
     /**
     * 子网ID，只在类型为vpc访问时才有值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -97,7 +91,6 @@ public class EksService extends AbstractModel {
 
     /**
     * 负载均衡ID，只在外网访问和vpc内访问才有值，默认自动创建
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalanceId")
     @Expose
@@ -105,7 +98,6 @@ public class EksService extends AbstractModel {
 
     /**
     * 端口映射
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PortMappings")
     @Expose
@@ -113,7 +105,6 @@ public class EksService extends AbstractModel {
 
     /**
     * 每种类型访问配置详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServicePortMappingList")
     @Expose
@@ -121,7 +112,6 @@ public class EksService extends AbstractModel {
 
     /**
     * 刷新复写所有类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlushAll")
     @Expose
@@ -137,7 +127,6 @@ public class EksService extends AbstractModel {
 
     /**
     * 返回应用id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -145,7 +134,6 @@ public class EksService extends AbstractModel {
 
     /**
     * 所有服务IP是否已经ready
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllIpDone")
     @Expose
@@ -153,7 +141,6 @@ public class EksService extends AbstractModel {
 
     /**
     * clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExternalDomain")
     @Expose
@@ -208,10 +195,8 @@ public class EksService extends AbstractModel {
     }
 
     /**
-     * Get 服务名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名 
      * @return ApplicationName 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -219,19 +204,15 @@ public class EksService extends AbstractModel {
 
     /**
      * Set 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 版本名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本名 
      * @return VersionName 版本名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionName() {
         return this.VersionName;
@@ -239,19 +220,15 @@ public class EksService extends AbstractModel {
 
     /**
      * Set 版本名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionName 版本名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
     }
 
     /**
-     * Get 内网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网ip 
      * @return ClusterIp 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getClusterIp() {
         return this.ClusterIp;
@@ -259,19 +236,15 @@ public class EksService extends AbstractModel {
 
     /**
      * Set 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterIp 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterIp(String [] ClusterIp) {
         this.ClusterIp = ClusterIp;
     }
 
     /**
-     * Get 外网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网ip 
      * @return ExternalIp 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExternalIp() {
         return this.ExternalIp;
@@ -279,9 +252,7 @@ public class EksService extends AbstractModel {
 
     /**
      * Set 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExternalIp 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExternalIp(String ExternalIp) {
         this.ExternalIp = ExternalIp;
@@ -291,13 +262,11 @@ public class EksService extends AbstractModel {
      * Get 访问类型，可选值：
 - EXTERNAL（公网访问）
 - VPC（vpc内访问）
-- CLUSTER（集群内访问）
-注意：此字段可能返回 null，表示取不到有效值。 
+- CLUSTER（集群内访问） 
      * @return Type 访问类型，可选值：
 - EXTERNAL（公网访问）
 - VPC（vpc内访问）
 - CLUSTER（集群内访问）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -308,22 +277,18 @@ public class EksService extends AbstractModel {
 - EXTERNAL（公网访问）
 - VPC（vpc内访问）
 - CLUSTER（集群内访问）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 访问类型，可选值：
 - EXTERNAL（公网访问）
 - VPC（vpc内访问）
 - CLUSTER（集群内访问）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 子网ID，只在类型为vpc访问时才有值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网ID，只在类型为vpc访问时才有值 
      * @return SubnetId 子网ID，只在类型为vpc访问时才有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -331,19 +296,15 @@ public class EksService extends AbstractModel {
 
     /**
      * Set 子网ID，只在类型为vpc访问时才有值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网ID，只在类型为vpc访问时才有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 负载均衡ID，只在外网访问和vpc内访问才有值，默认自动创建
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡ID，只在外网访问和vpc内访问才有值，默认自动创建 
      * @return LoadBalanceId 负载均衡ID，只在外网访问和vpc内访问才有值，默认自动创建
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalanceId() {
         return this.LoadBalanceId;
@@ -351,19 +312,15 @@ public class EksService extends AbstractModel {
 
     /**
      * Set 负载均衡ID，只在外网访问和vpc内访问才有值，默认自动创建
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalanceId 负载均衡ID，只在外网访问和vpc内访问才有值，默认自动创建
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalanceId(String LoadBalanceId) {
         this.LoadBalanceId = LoadBalanceId;
     }
 
     /**
-     * Get 端口映射
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口映射 
      * @return PortMappings 端口映射
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PortMapping [] getPortMappings() {
         return this.PortMappings;
@@ -371,19 +328,15 @@ public class EksService extends AbstractModel {
 
     /**
      * Set 端口映射
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PortMappings 端口映射
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPortMappings(PortMapping [] PortMappings) {
         this.PortMappings = PortMappings;
     }
 
     /**
-     * Get 每种类型访问配置详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每种类型访问配置详情 
      * @return ServicePortMappingList 每种类型访问配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServicePortMapping [] getServicePortMappingList() {
         return this.ServicePortMappingList;
@@ -391,19 +344,15 @@ public class EksService extends AbstractModel {
 
     /**
      * Set 每种类型访问配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServicePortMappingList 每种类型访问配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServicePortMappingList(ServicePortMapping [] ServicePortMappingList) {
         this.ServicePortMappingList = ServicePortMappingList;
     }
 
     /**
-     * Get 刷新复写所有类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 刷新复写所有类型 
      * @return FlushAll 刷新复写所有类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getFlushAll() {
         return this.FlushAll;
@@ -411,9 +360,7 @@ public class EksService extends AbstractModel {
 
     /**
      * Set 刷新复写所有类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlushAll 刷新复写所有类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlushAll(Boolean FlushAll) {
         this.FlushAll = FlushAll;
@@ -440,10 +387,8 @@ public class EksService extends AbstractModel {
     }
 
     /**
-     * Get 返回应用id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回应用id 
      * @return ApplicationId 返回应用id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -451,19 +396,15 @@ public class EksService extends AbstractModel {
 
     /**
      * Set 返回应用id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 返回应用id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 所有服务IP是否已经ready
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所有服务IP是否已经ready 
      * @return AllIpDone 所有服务IP是否已经ready
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAllIpDone() {
         return this.AllIpDone;
@@ -471,19 +412,15 @@ public class EksService extends AbstractModel {
 
     /**
      * Set 所有服务IP是否已经ready
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllIpDone 所有服务IP是否已经ready
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllIpDone(Boolean AllIpDone) {
         this.AllIpDone = AllIpDone;
     }
 
     /**
-     * Get clb 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get clb 域名 
      * @return ExternalDomain clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExternalDomain() {
         return this.ExternalDomain;
@@ -491,9 +428,7 @@ public class EksService extends AbstractModel {
 
     /**
      * Set clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExternalDomain clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExternalDomain(String ExternalDomain) {
         this.ExternalDomain = ExternalDomain;

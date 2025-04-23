@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tem.v20210701.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Tag extends AbstractModel {
+public class MP4ConfigureInfo extends AbstractModel {
 
     /**
-    * 标签键
+    * 录制周期，单位：秒，取值范围 10 分钟到720分钟。默认值：60分钟（3600秒）。
     */
-    @SerializedName("TagKey")
+    @SerializedName("Interval")
     @Expose
-    private String TagKey;
+    private Long Interval;
 
     /**
-    * 标签值
-    */
-    @SerializedName("TagValue")
-    @Expose
-    private String TagValue;
-
-    /**
-     * Get 标签键 
-     * @return TagKey 标签键
+     * Get 录制周期，单位：秒，取值范围 10 分钟到720分钟。默认值：60分钟（3600秒）。 
+     * @return Interval 录制周期，单位：秒，取值范围 10 分钟到720分钟。默认值：60分钟（3600秒）。
      */
-    public String getTagKey() {
-        return this.TagKey;
+    public Long getInterval() {
+        return this.Interval;
     }
 
     /**
-     * Set 标签键
-     * @param TagKey 标签键
+     * Set 录制周期，单位：秒，取值范围 10 分钟到720分钟。默认值：60分钟（3600秒）。
+     * @param Interval 录制周期，单位：秒，取值范围 10 分钟到720分钟。默认值：60分钟（3600秒）。
      */
-    public void setTagKey(String TagKey) {
-        this.TagKey = TagKey;
+    public void setInterval(Long Interval) {
+        this.Interval = Interval;
     }
 
-    /**
-     * Get 标签值 
-     * @return TagValue 标签值
-     */
-    public String getTagValue() {
-        return this.TagValue;
-    }
-
-    /**
-     * Set 标签值
-     * @param TagValue 标签值
-     */
-    public void setTagValue(String TagValue) {
-        this.TagValue = TagValue;
-    }
-
-    public Tag() {
+    public MP4ConfigureInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Tag(Tag source) {
-        if (source.TagKey != null) {
-            this.TagKey = new String(source.TagKey);
-        }
-        if (source.TagValue != null) {
-            this.TagValue = new String(source.TagValue);
+    public MP4ConfigureInfo(MP4ConfigureInfo source) {
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
         }
     }
 
@@ -90,8 +64,7 @@ public class Tag extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
-        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
+        this.setParamSimple(map, prefix + "Interval", this.Interval);
 
     }
 }

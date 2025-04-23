@@ -50,6 +50,17 @@ public class CdcClient extends AbstractClient{
     }
 
     /**
+     *创建云上镜像缓存到本地专用集群中
+     * @param req CreateDedicatedClusterImageCacheRequest
+     * @return CreateDedicatedClusterImageCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDedicatedClusterImageCacheResponse CreateDedicatedClusterImageCache(CreateDedicatedClusterImageCacheRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDedicatedClusterImageCache", CreateDedicatedClusterImageCacheResponse.class);
+    }
+
+    /**
      *创建专用集群订单
      * @param req CreateDedicatedClusterOrderRequest
      * @return CreateDedicatedClusterOrderResponse
@@ -69,6 +80,17 @@ public class CdcClient extends AbstractClient{
     public CreateSiteResponse CreateSite(CreateSiteRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSite", CreateSiteResponse.class);
+    }
+
+    /**
+     *删除本地专用集群的云上镜像缓存
+     * @param req DeleteDedicatedClusterImageCacheRequest
+     * @return DeleteDedicatedClusterImageCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDedicatedClusterImageCacheResponse DeleteDedicatedClusterImageCache(DeleteDedicatedClusterImageCacheRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDedicatedClusterImageCache", DeleteDedicatedClusterImageCacheResponse.class);
     }
 
     /**

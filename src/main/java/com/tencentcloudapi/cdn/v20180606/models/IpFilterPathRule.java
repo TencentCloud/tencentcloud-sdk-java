@@ -68,6 +68,13 @@ path 时填充绝对路径，如 /xxx/test.html
     private String [] RulePaths;
 
     /**
+    * 备注信息, 最多支持50个字符
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get IP 黑白名单类型
 whitelist：白名单
 blacklist：黑名单
@@ -195,6 +202,22 @@ path 时填充绝对路径，如 /xxx/test.html
         this.RulePaths = RulePaths;
     }
 
+    /**
+     * Get 备注信息, 最多支持50个字符 
+     * @return Remark 备注信息, 最多支持50个字符
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注信息, 最多支持50个字符
+     * @param Remark 备注信息, 最多支持50个字符
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public IpFilterPathRule() {
     }
 
@@ -221,6 +244,9 @@ path 时填充绝对路径，如 /xxx/test.html
                 this.RulePaths[i] = new String(source.RulePaths[i]);
             }
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -232,6 +258,7 @@ path 时填充绝对路径，如 /xxx/test.html
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

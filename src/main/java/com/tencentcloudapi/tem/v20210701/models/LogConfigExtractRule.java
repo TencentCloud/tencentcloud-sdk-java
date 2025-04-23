@@ -25,7 +25,6 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
     * 首行正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginningRegex")
     @Expose
@@ -33,7 +32,6 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
     * 提取结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keys")
     @Expose
@@ -41,7 +39,6 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
     * 过滤键
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterKeys")
     @Expose
@@ -49,7 +46,6 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
     * 过滤值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterRegex")
     @Expose
@@ -57,7 +53,6 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
     * 日志正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogRegex")
     @Expose
@@ -65,7 +60,6 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
     * 时间字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeKey")
     @Expose
@@ -73,7 +67,6 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
     * 时间格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeFormat")
     @Expose
@@ -81,7 +74,6 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
     * 是否上传解析失败日志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnMatchUpload")
     @Expose
@@ -89,7 +81,6 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
     * 解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnMatchedKey")
     @Expose
@@ -97,7 +88,6 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
     * tracking
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Backtracking")
     @Expose
@@ -105,17 +95,14 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
     * 分隔符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Delimiter")
     @Expose
     private String Delimiter;
 
     /**
-     * Get 首行正则表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首行正则表达式 
      * @return BeginningRegex 首行正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginningRegex() {
         return this.BeginningRegex;
@@ -123,19 +110,15 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
      * Set 首行正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginningRegex 首行正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginningRegex(String BeginningRegex) {
         this.BeginningRegex = BeginningRegex;
     }
 
     /**
-     * Get 提取结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提取结果 
      * @return Keys 提取结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeys() {
         return this.Keys;
@@ -143,19 +126,15 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
      * Set 提取结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keys 提取结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeys(String [] Keys) {
         this.Keys = Keys;
     }
 
     /**
-     * Get 过滤键
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过滤键 
      * @return FilterKeys 过滤键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFilterKeys() {
         return this.FilterKeys;
@@ -163,19 +142,15 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
      * Set 过滤键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilterKeys 过滤键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterKeys(String [] FilterKeys) {
         this.FilterKeys = FilterKeys;
     }
 
     /**
-     * Get 过滤值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过滤值 
      * @return FilterRegex 过滤值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFilterRegex() {
         return this.FilterRegex;
@@ -183,19 +158,15 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
      * Set 过滤值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilterRegex 过滤值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterRegex(String [] FilterRegex) {
         this.FilterRegex = FilterRegex;
     }
 
     /**
-     * Get 日志正则表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志正则表达式 
      * @return LogRegex 日志正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogRegex() {
         return this.LogRegex;
@@ -203,19 +174,15 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
      * Set 日志正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogRegex 日志正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogRegex(String LogRegex) {
         this.LogRegex = LogRegex;
     }
 
     /**
-     * Get 时间字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间字段 
      * @return TimeKey 时间字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeKey() {
         return this.TimeKey;
@@ -223,19 +190,15 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
      * Set 时间字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeKey 时间字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeKey(String TimeKey) {
         this.TimeKey = TimeKey;
     }
 
     /**
-     * Get 时间格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间格式 
      * @return TimeFormat 时间格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeFormat() {
         return this.TimeFormat;
@@ -243,19 +206,15 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
      * Set 时间格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeFormat 时间格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeFormat(String TimeFormat) {
         this.TimeFormat = TimeFormat;
     }
 
     /**
-     * Get 是否上传解析失败日志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否上传解析失败日志 
      * @return UnMatchUpload 是否上传解析失败日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnMatchUpload() {
         return this.UnMatchUpload;
@@ -263,19 +222,15 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
      * Set 是否上传解析失败日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnMatchUpload 是否上传解析失败日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnMatchUpload(String UnMatchUpload) {
         this.UnMatchUpload = UnMatchUpload;
     }
 
     /**
-     * Get 解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解析失败日志的键名称 
      * @return UnMatchedKey 解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnMatchedKey() {
         return this.UnMatchedKey;
@@ -283,19 +238,15 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
      * Set 解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnMatchedKey 解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnMatchedKey(String UnMatchedKey) {
         this.UnMatchedKey = UnMatchedKey;
     }
 
     /**
-     * Get tracking
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tracking 
      * @return Backtracking tracking
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBacktracking() {
         return this.Backtracking;
@@ -303,19 +254,15 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
      * Set tracking
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Backtracking tracking
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBacktracking(String Backtracking) {
         this.Backtracking = Backtracking;
     }
 
     /**
-     * Get 分隔符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分隔符 
      * @return Delimiter 分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDelimiter() {
         return this.Delimiter;
@@ -323,9 +270,7 @@ public class LogConfigExtractRule extends AbstractModel {
 
     /**
      * Set 分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Delimiter 分隔符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelimiter(String Delimiter) {
         this.Delimiter = Delimiter;

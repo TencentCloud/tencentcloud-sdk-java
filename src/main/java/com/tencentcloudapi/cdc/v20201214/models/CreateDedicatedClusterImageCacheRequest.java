@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tem.v20210701.models;
+package com.tencentcloudapi.cdc.v20201214.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Tag extends AbstractModel {
+public class CreateDedicatedClusterImageCacheRequest extends AbstractModel {
 
     /**
-    * 标签键
+    * 集群ID
     */
-    @SerializedName("TagKey")
+    @SerializedName("DedicatedClusterId")
     @Expose
-    private String TagKey;
+    private String DedicatedClusterId;
 
     /**
-    * 标签值
+    * 镜像ID
     */
-    @SerializedName("TagValue")
+    @SerializedName("ImageId")
     @Expose
-    private String TagValue;
+    private String ImageId;
 
     /**
-     * Get 标签键 
-     * @return TagKey 标签键
+     * Get 集群ID 
+     * @return DedicatedClusterId 集群ID
      */
-    public String getTagKey() {
-        return this.TagKey;
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
     }
 
     /**
-     * Set 标签键
-     * @param TagKey 标签键
+     * Set 集群ID
+     * @param DedicatedClusterId 集群ID
      */
-    public void setTagKey(String TagKey) {
-        this.TagKey = TagKey;
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get 标签值 
-     * @return TagValue 标签值
+     * Get 镜像ID 
+     * @return ImageId 镜像ID
      */
-    public String getTagValue() {
-        return this.TagValue;
+    public String getImageId() {
+        return this.ImageId;
     }
 
     /**
-     * Set 标签值
-     * @param TagValue 标签值
+     * Set 镜像ID
+     * @param ImageId 镜像ID
      */
-    public void setTagValue(String TagValue) {
-        this.TagValue = TagValue;
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
     }
 
-    public Tag() {
+    public CreateDedicatedClusterImageCacheRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Tag(Tag source) {
-        if (source.TagKey != null) {
-            this.TagKey = new String(source.TagKey);
+    public CreateDedicatedClusterImageCacheRequest(CreateDedicatedClusterImageCacheRequest source) {
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
-        if (source.TagValue != null) {
-            this.TagValue = new String(source.TagValue);
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
         }
     }
 
@@ -90,8 +90,8 @@ public class Tag extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
-        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
 
     }
 }

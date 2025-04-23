@@ -25,7 +25,6 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
     * 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigDataName")
     @Expose
@@ -33,7 +32,6 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
     * 挂载路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountedPath")
     @Expose
@@ -41,7 +39,6 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
     * 配置内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -56,10 +53,8 @@ public class MountedSettingConf extends AbstractModel {
     private String SecretDataName;
 
     /**
-     * Get 配置名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置名称 
      * @return ConfigDataName 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigDataName() {
         return this.ConfigDataName;
@@ -67,19 +62,15 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
      * Set 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigDataName 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigDataName(String ConfigDataName) {
         this.ConfigDataName = ConfigDataName;
     }
 
     /**
-     * Get 挂载路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂载路径 
      * @return MountedPath 挂载路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountedPath() {
         return this.MountedPath;
@@ -87,19 +78,15 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
      * Set 挂载路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MountedPath 挂载路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountedPath(String MountedPath) {
         this.MountedPath = MountedPath;
     }
 
     /**
-     * Get 配置内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置内容 
      * @return Data 配置内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Pair [] getData() {
         return this.Data;
@@ -107,9 +94,7 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
      * Set 配置内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 配置内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(Pair [] Data) {
         this.Data = Data;

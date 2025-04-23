@@ -25,7 +25,6 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
     * 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -33,7 +32,6 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
     * 应用名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -41,7 +39,6 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
     * 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionName")
     @Expose
@@ -49,7 +46,6 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
     * Ready实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadyReplicas")
     @Expose
@@ -57,7 +53,6 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
     * 实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Replicas")
     @Expose
@@ -65,7 +60,6 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
     * Updated实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedReplicas")
     @Expose
@@ -73,7 +67,6 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
     * UpdatedReady实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedReadyReplicas")
     @Expose
@@ -81,7 +74,6 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
     * 更新版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateRevision")
     @Expose
@@ -89,17 +81,14 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
     * 当前版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentRevision")
     @Expose
     private String CurrentRevision;
 
     /**
-     * Get 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源 ID 
      * @return ClusterId 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -107,19 +96,15 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
      * Set 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 应用名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用名 
      * @return ApplicationName 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -127,19 +112,15 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
      * Set 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 版本名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本名称 
      * @return VersionName 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionName() {
         return this.VersionName;
@@ -147,19 +128,15 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
      * Set 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionName 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
     }
 
     /**
-     * Get Ready实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Ready实例数 
      * @return ReadyReplicas Ready实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReadyReplicas() {
         return this.ReadyReplicas;
@@ -167,19 +144,15 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
      * Set Ready实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadyReplicas Ready实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadyReplicas(Long ReadyReplicas) {
         this.ReadyReplicas = ReadyReplicas;
     }
 
     /**
-     * Get 实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例数 
      * @return Replicas 实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReplicas() {
         return this.Replicas;
@@ -187,19 +160,15 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
      * Set 实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Replicas 实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplicas(Long Replicas) {
         this.Replicas = Replicas;
     }
 
     /**
-     * Get Updated实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Updated实例数 
      * @return UpdatedReplicas Updated实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdatedReplicas() {
         return this.UpdatedReplicas;
@@ -207,19 +176,15 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
      * Set Updated实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedReplicas Updated实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedReplicas(Long UpdatedReplicas) {
         this.UpdatedReplicas = UpdatedReplicas;
     }
 
     /**
-     * Get UpdatedReady实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get UpdatedReady实例数 
      * @return UpdatedReadyReplicas UpdatedReady实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdatedReadyReplicas() {
         return this.UpdatedReadyReplicas;
@@ -227,19 +192,15 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
      * Set UpdatedReady实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedReadyReplicas UpdatedReady实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedReadyReplicas(Long UpdatedReadyReplicas) {
         this.UpdatedReadyReplicas = UpdatedReadyReplicas;
     }
 
     /**
-     * Get 更新版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新版本 
      * @return UpdateRevision 更新版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateRevision() {
         return this.UpdateRevision;
@@ -247,19 +208,15 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
      * Set 更新版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateRevision 更新版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateRevision(String UpdateRevision) {
         this.UpdateRevision = UpdateRevision;
     }
 
     /**
-     * Get 当前版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前版本 
      * @return CurrentRevision 当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurrentRevision() {
         return this.CurrentRevision;
@@ -267,9 +224,7 @@ public class WorkloadInfo extends AbstractModel {
 
     /**
      * Set 当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentRevision 当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentRevision(String CurrentRevision) {
         this.CurrentRevision = CurrentRevision;

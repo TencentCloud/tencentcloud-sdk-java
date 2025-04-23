@@ -25,7 +25,6 @@ public class DescribeIngressesResponse extends AbstractModel {
 
     /**
     * ingress 数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeIngressesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get ingress 数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ingress 数组 
      * @return Result ingress 数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IngressInfo [] getResult() {
         return this.Result;
@@ -50,9 +47,7 @@ public class DescribeIngressesResponse extends AbstractModel {
 
     /**
      * Set ingress 数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result ingress 数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(IngressInfo [] Result) {
         this.Result = Result;

@@ -180,7 +180,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageMountConfs")
     @Expose
@@ -188,7 +187,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionName")
     @Expose
@@ -204,7 +202,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -212,7 +209,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 服务描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationDescription")
     @Expose
@@ -220,7 +216,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 环境名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvironmentName")
     @Expose
@@ -228,7 +223,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -236,7 +230,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 公网地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicDomain")
     @Expose
@@ -252,7 +245,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 现有的实例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentInstances")
     @Expose
@@ -268,7 +260,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodingLanguage")
     @Expose
@@ -276,7 +267,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PkgName")
     @Expose
@@ -300,7 +290,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 镜像tag
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageTag")
     @Expose
@@ -316,7 +305,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 最小实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinAliveInstances")
     @Expose
@@ -324,7 +312,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 安全组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -332,7 +319,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 镜像命令
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageCommand")
     @Expose
@@ -348,7 +334,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 是否使用默认注册中心配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UseRegistryDefaultConfig")
     @Expose
@@ -356,7 +341,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * eks 访问设置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Service")
     @Expose
@@ -364,7 +348,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 挂载配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SettingConfs")
     @Expose
@@ -372,7 +355,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * log path数组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogConfs")
     @Expose
@@ -380,7 +362,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 启动后立即执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostStart")
     @Expose
@@ -388,7 +369,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 停止前执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreStop")
     @Expose
@@ -412,7 +392,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HorizontalAutoscaler")
     @Expose
@@ -420,7 +399,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 定时弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CronHorizontalAutoscaler")
     @Expose
@@ -428,7 +406,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 应用实际可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zones")
     @Expose
@@ -436,7 +413,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 最新部署时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastDeployDate")
     @Expose
@@ -444,7 +420,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 最新部署成功时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastDeploySuccessDate")
     @Expose
@@ -452,7 +427,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 应用所在node信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeInfos")
     @Expose
@@ -460,7 +434,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * image类型 -0 为demo -1为正常image
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageType")
     @Expose
@@ -468,7 +441,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 是否启用调用链组件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableTracing")
     @Expose
@@ -476,7 +448,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableTracingReport")
     @Expose
@@ -484,7 +455,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 镜像类型：0-个人镜像、1-企业镜像、2-公有镜像
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepoType")
     @Expose
@@ -492,7 +462,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 分批发布子状态：batch_updating、batch_updating_waiting_confirm
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchDeployStatus")
     @Expose
@@ -500,7 +469,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApmInstanceId")
     @Expose
@@ -508,7 +476,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkloadInfo")
     @Expose
@@ -516,7 +483,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 是否启用应用加速
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpeedUp")
     @Expose
@@ -534,7 +500,6 @@ public class TemServiceVersionInfo extends AbstractModel {
     * 操作系统版本，可选参数：
 - ALPINE
 - CENTOS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OsFlavour")
     @Expose
@@ -542,7 +507,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 镜像仓库server
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepoServer")
     @Expose
@@ -550,7 +514,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 是否正在发布中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnderDeploying")
     @Expose
@@ -566,7 +529,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 是否为手动停止
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StoppedManually")
     @Expose
@@ -574,7 +536,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * tcr实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TcrInstanceId")
     @Expose
@@ -583,7 +544,6 @@ public class TemServiceVersionInfo extends AbstractModel {
     /**
     * 1：开始自动metrics采集（open-telemetry）；
 0：关闭metrics采集；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableMetrics")
     @Expose
@@ -591,7 +551,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -599,7 +558,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubAccountUin")
     @Expose
@@ -607,7 +565,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -615,7 +572,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -623,7 +579,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 应用分组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -631,7 +586,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 是否启用注册中心
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableRegistry")
     @Expose
@@ -639,7 +593,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 弹性伸缩数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoscalerList")
     @Expose
@@ -647,7 +600,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 修改人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Modifier")
     @Expose
@@ -655,7 +607,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 创建人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creator")
     @Expose
@@ -671,7 +622,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodList")
     @Expose
@@ -687,7 +637,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -695,7 +644,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 是否编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreStopEncoded")
     @Expose
@@ -703,7 +651,6 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
     * 是否编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostStartEncoded")
     @Expose
@@ -1066,10 +1013,8 @@ public class TemServiceVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂载配置 
      * @return StorageMountConfs 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StorageMountConf [] getStorageMountConfs() {
         return this.StorageMountConfs;
@@ -1077,19 +1022,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageMountConfs 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageMountConfs(StorageMountConf [] StorageMountConfs) {
         this.StorageMountConfs = StorageMountConfs;
     }
 
     /**
-     * Get 版本名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本名称 
      * @return VersionName 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionName() {
         return this.VersionName;
@@ -1097,9 +1038,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionName 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
@@ -1126,10 +1065,8 @@ public class TemServiceVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 服务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务名称 
      * @return ApplicationName 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -1137,19 +1074,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get 服务描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务描述 
      * @return ApplicationDescription 服务描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationDescription() {
         return this.ApplicationDescription;
@@ -1157,19 +1090,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 服务描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationDescription 服务描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationDescription(String ApplicationDescription) {
         this.ApplicationDescription = ApplicationDescription;
     }
 
     /**
-     * Get 环境名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境名称 
      * @return EnvironmentName 环境名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvironmentName() {
         return this.EnvironmentName;
@@ -1177,19 +1106,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 环境名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvironmentName 环境名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvironmentName(String EnvironmentName) {
         this.EnvironmentName = EnvironmentName;
     }
 
     /**
-     * Get 环境ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境ID 
      * @return EnvironmentId 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
@@ -1197,19 +1122,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvironmentId 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
     }
 
     /**
-     * Get 公网地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网地址 
      * @return PublicDomain 公网地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicDomain() {
         return this.PublicDomain;
@@ -1217,9 +1138,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 公网地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicDomain 公网地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicDomain(String PublicDomain) {
         this.PublicDomain = PublicDomain;
@@ -1246,10 +1165,8 @@ public class TemServiceVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 现有的实例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 现有的实例 
      * @return CurrentInstances 现有的实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCurrentInstances() {
         return this.CurrentInstances;
@@ -1257,9 +1174,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 现有的实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentInstances 现有的实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentInstances(Long CurrentInstances) {
         this.CurrentInstances = CurrentInstances;
@@ -1286,10 +1201,8 @@ public class TemServiceVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 编程语言
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 编程语言 
      * @return CodingLanguage 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodingLanguage() {
         return this.CodingLanguage;
@@ -1297,19 +1210,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CodingLanguage 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodingLanguage(String CodingLanguage) {
         this.CodingLanguage = CodingLanguage;
     }
 
     /**
-     * Get 程序包名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 程序包名 
      * @return PkgName 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPkgName() {
         return this.PkgName;
@@ -1317,9 +1226,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgName 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPkgName(String PkgName) {
         this.PkgName = PkgName;
@@ -1366,10 +1273,8 @@ public class TemServiceVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 镜像tag
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像tag 
      * @return ImageTag 镜像tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageTag() {
         return this.ImageTag;
@@ -1377,9 +1282,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 镜像tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageTag 镜像tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageTag(String ImageTag) {
         this.ImageTag = ImageTag;
@@ -1406,10 +1309,8 @@ public class TemServiceVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 最小实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最小实例数 
      * @return MinAliveInstances 最小实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMinAliveInstances() {
         return this.MinAliveInstances;
@@ -1417,19 +1318,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 最小实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinAliveInstances 最小实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinAliveInstances(String MinAliveInstances) {
         this.MinAliveInstances = MinAliveInstances;
     }
 
     /**
-     * Get 安全组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组 
      * @return SecurityGroupIds 安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
@@ -1437,19 +1334,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 安全组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupIds 安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 镜像命令
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像命令 
      * @return ImageCommand 镜像命令
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageCommand() {
         return this.ImageCommand;
@@ -1457,9 +1350,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 镜像命令
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageCommand 镜像命令
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageCommand(String ImageCommand) {
         this.ImageCommand = ImageCommand;
@@ -1486,10 +1377,8 @@ public class TemServiceVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否使用默认注册中心配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否使用默认注册中心配置 
      * @return UseRegistryDefaultConfig 是否使用默认注册中心配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUseRegistryDefaultConfig() {
         return this.UseRegistryDefaultConfig;
@@ -1497,19 +1386,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 是否使用默认注册中心配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UseRegistryDefaultConfig 是否使用默认注册中心配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseRegistryDefaultConfig(Boolean UseRegistryDefaultConfig) {
         this.UseRegistryDefaultConfig = UseRegistryDefaultConfig;
     }
 
     /**
-     * Get eks 访问设置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get eks 访问设置 
      * @return Service eks 访问设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EksService getService() {
         return this.Service;
@@ -1517,19 +1402,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set eks 访问设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Service eks 访问设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setService(EksService Service) {
         this.Service = Service;
     }
 
     /**
-     * Get 挂载配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂载配置信息 
      * @return SettingConfs 挂载配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MountedSettingConf [] getSettingConfs() {
         return this.SettingConfs;
@@ -1537,19 +1418,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 挂载配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SettingConfs 挂载配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSettingConfs(MountedSettingConf [] SettingConfs) {
         this.SettingConfs = SettingConfs;
     }
 
     /**
-     * Get log path数组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get log path数组信息 
      * @return LogConfs log path数组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLogConfs() {
         return this.LogConfs;
@@ -1557,19 +1434,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set log path数组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogConfs log path数组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogConfs(String [] LogConfs) {
         this.LogConfs = LogConfs;
     }
 
     /**
-     * Get 启动后立即执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启动后立即执行的脚本 
      * @return PostStart 启动后立即执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPostStart() {
         return this.PostStart;
@@ -1577,19 +1450,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 启动后立即执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PostStart 启动后立即执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostStart(String PostStart) {
         this.PostStart = PostStart;
     }
 
     /**
-     * Get 停止前执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 停止前执行的脚本 
      * @return PreStop 停止前执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreStop() {
         return this.PreStop;
@@ -1597,9 +1466,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 停止前执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreStop 停止前执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreStop(String PreStop) {
         this.PreStop = PreStop;
@@ -1646,10 +1513,8 @@ public class TemServiceVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 弹性策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性策略 
      * @return HorizontalAutoscaler 弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HorizontalAutoscaler [] getHorizontalAutoscaler() {
         return this.HorizontalAutoscaler;
@@ -1657,19 +1522,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HorizontalAutoscaler 弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHorizontalAutoscaler(HorizontalAutoscaler [] HorizontalAutoscaler) {
         this.HorizontalAutoscaler = HorizontalAutoscaler;
     }
 
     /**
-     * Get 定时弹性策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时弹性策略 
      * @return CronHorizontalAutoscaler 定时弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CronHorizontalAutoscaler [] getCronHorizontalAutoscaler() {
         return this.CronHorizontalAutoscaler;
@@ -1677,19 +1538,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 定时弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CronHorizontalAutoscaler 定时弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCronHorizontalAutoscaler(CronHorizontalAutoscaler [] CronHorizontalAutoscaler) {
         this.CronHorizontalAutoscaler = CronHorizontalAutoscaler;
     }
 
     /**
-     * Get 应用实际可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用实际可用区 
      * @return Zones 应用实际可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getZones() {
         return this.Zones;
@@ -1697,19 +1554,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 应用实际可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zones 应用实际可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
     }
 
     /**
-     * Get 最新部署时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最新部署时间 
      * @return LastDeployDate 最新部署时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastDeployDate() {
         return this.LastDeployDate;
@@ -1717,19 +1570,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 最新部署时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastDeployDate 最新部署时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastDeployDate(String LastDeployDate) {
         this.LastDeployDate = LastDeployDate;
     }
 
     /**
-     * Get 最新部署成功时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最新部署成功时间 
      * @return LastDeploySuccessDate 最新部署成功时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastDeploySuccessDate() {
         return this.LastDeploySuccessDate;
@@ -1737,19 +1586,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 最新部署成功时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastDeploySuccessDate 最新部署成功时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastDeploySuccessDate(String LastDeploySuccessDate) {
         this.LastDeploySuccessDate = LastDeploySuccessDate;
     }
 
     /**
-     * Get 应用所在node信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用所在node信息 
      * @return NodeInfos 应用所在node信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeInfo [] getNodeInfos() {
         return this.NodeInfos;
@@ -1757,19 +1602,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 应用所在node信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeInfos 应用所在node信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeInfos(NodeInfo [] NodeInfos) {
         this.NodeInfos = NodeInfos;
     }
 
     /**
-     * Get image类型 -0 为demo -1为正常image
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get image类型 -0 为demo -1为正常image 
      * @return ImageType image类型 -0 为demo -1为正常image
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getImageType() {
         return this.ImageType;
@@ -1777,19 +1618,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set image类型 -0 为demo -1为正常image
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageType image类型 -0 为demo -1为正常image
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageType(Long ImageType) {
         this.ImageType = ImageType;
     }
 
     /**
-     * Get 是否启用调用链组件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用调用链组件 
      * @return EnableTracing 是否启用调用链组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableTracing() {
         return this.EnableTracing;
@@ -1797,19 +1634,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 是否启用调用链组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableTracing 是否启用调用链组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableTracing(Long EnableTracing) {
         this.EnableTracing = EnableTracing;
     }
 
     /**
-     * Get 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用） 
      * @return EnableTracingReport 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableTracingReport() {
         return this.EnableTracingReport;
@@ -1817,19 +1650,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableTracingReport 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableTracingReport(Long EnableTracingReport) {
         this.EnableTracingReport = EnableTracingReport;
     }
 
     /**
-     * Get 镜像类型：0-个人镜像、1-企业镜像、2-公有镜像
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像类型：0-个人镜像、1-企业镜像、2-公有镜像 
      * @return RepoType 镜像类型：0-个人镜像、1-企业镜像、2-公有镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRepoType() {
         return this.RepoType;
@@ -1837,19 +1666,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 镜像类型：0-个人镜像、1-企业镜像、2-公有镜像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepoType 镜像类型：0-个人镜像、1-企业镜像、2-公有镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepoType(Long RepoType) {
         this.RepoType = RepoType;
     }
 
     /**
-     * Get 分批发布子状态：batch_updating、batch_updating_waiting_confirm
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分批发布子状态：batch_updating、batch_updating_waiting_confirm 
      * @return BatchDeployStatus 分批发布子状态：batch_updating、batch_updating_waiting_confirm
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBatchDeployStatus() {
         return this.BatchDeployStatus;
@@ -1857,19 +1682,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 分批发布子状态：batch_updating、batch_updating_waiting_confirm
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchDeployStatus 分批发布子状态：batch_updating、batch_updating_waiting_confirm
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchDeployStatus(String BatchDeployStatus) {
         this.BatchDeployStatus = BatchDeployStatus;
     }
 
     /**
-     * Get APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get APM 资源 ID 
      * @return ApmInstanceId APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApmInstanceId() {
         return this.ApmInstanceId;
@@ -1877,19 +1698,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApmInstanceId APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApmInstanceId(String ApmInstanceId) {
         this.ApmInstanceId = ApmInstanceId;
     }
 
     /**
-     * Get 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作负载信息 
      * @return WorkloadInfo 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkloadInfo getWorkloadInfo() {
         return this.WorkloadInfo;
@@ -1897,19 +1714,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkloadInfo 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkloadInfo(WorkloadInfo WorkloadInfo) {
         this.WorkloadInfo = WorkloadInfo;
     }
 
     /**
-     * Get 是否启用应用加速
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用应用加速 
      * @return SpeedUp 是否启用应用加速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSpeedUp() {
         return this.SpeedUp;
@@ -1917,9 +1730,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 是否启用应用加速
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpeedUp 是否启用应用加速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpeedUp(Boolean SpeedUp) {
         this.SpeedUp = SpeedUp;
@@ -1948,12 +1759,10 @@ public class TemServiceVersionInfo extends AbstractModel {
     /**
      * Get 操作系统版本，可选参数：
 - ALPINE
-- CENTOS
-注意：此字段可能返回 null，表示取不到有效值。 
+- CENTOS 
      * @return OsFlavour 操作系统版本，可选参数：
 - ALPINE
 - CENTOS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOsFlavour() {
         return this.OsFlavour;
@@ -1963,21 +1772,17 @@ public class TemServiceVersionInfo extends AbstractModel {
      * Set 操作系统版本，可选参数：
 - ALPINE
 - CENTOS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OsFlavour 操作系统版本，可选参数：
 - ALPINE
 - CENTOS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOsFlavour(String OsFlavour) {
         this.OsFlavour = OsFlavour;
     }
 
     /**
-     * Get 镜像仓库server
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像仓库server 
      * @return RepoServer 镜像仓库server
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepoServer() {
         return this.RepoServer;
@@ -1985,19 +1790,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 镜像仓库server
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepoServer 镜像仓库server
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepoServer(String RepoServer) {
         this.RepoServer = RepoServer;
     }
 
     /**
-     * Get 是否正在发布中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否正在发布中 
      * @return UnderDeploying 是否正在发布中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUnderDeploying() {
         return this.UnderDeploying;
@@ -2005,9 +1806,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 是否正在发布中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnderDeploying 是否正在发布中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnderDeploying(Boolean UnderDeploying) {
         this.UnderDeploying = UnderDeploying;
@@ -2034,10 +1833,8 @@ public class TemServiceVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否为手动停止
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为手动停止 
      * @return StoppedManually 是否为手动停止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getStoppedManually() {
         return this.StoppedManually;
@@ -2045,19 +1842,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 是否为手动停止
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StoppedManually 是否为手动停止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStoppedManually(Boolean StoppedManually) {
         this.StoppedManually = StoppedManually;
     }
 
     /**
-     * Get tcr实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tcr实例ID 
      * @return TcrInstanceId tcr实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTcrInstanceId() {
         return this.TcrInstanceId;
@@ -2065,9 +1858,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set tcr实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TcrInstanceId tcr实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTcrInstanceId(String TcrInstanceId) {
         this.TcrInstanceId = TcrInstanceId;
@@ -2075,11 +1866,9 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Get 1：开始自动metrics采集（open-telemetry）；
-0：关闭metrics采集；
-注意：此字段可能返回 null，表示取不到有效值。 
+0：关闭metrics采集； 
      * @return EnableMetrics 1：开始自动metrics采集（open-telemetry）；
 0：关闭metrics采集；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableMetrics() {
         return this.EnableMetrics;
@@ -2088,20 +1877,16 @@ public class TemServiceVersionInfo extends AbstractModel {
     /**
      * Set 1：开始自动metrics采集（open-telemetry）；
 0：关闭metrics采集；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableMetrics 1：开始自动metrics采集（open-telemetry）；
 0：关闭metrics采集；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableMetrics(Long EnableMetrics) {
         this.EnableMetrics = EnableMetrics;
     }
 
     /**
-     * Get 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户AppId 
      * @return AppId 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -2109,19 +1894,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户SubAccountUin 
      * @return SubAccountUin 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubAccountUin() {
         return this.SubAccountUin;
@@ -2129,19 +1910,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubAccountUin 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubAccountUin(String SubAccountUin) {
         this.SubAccountUin = SubAccountUin;
     }
 
     /**
-     * Get 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户Uin 
      * @return Uin 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -2149,19 +1926,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -2169,19 +1942,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 应用分组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用分组ID 
      * @return GroupId 应用分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -2189,19 +1958,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 应用分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 应用分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 是否启用注册中心
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用注册中心 
      * @return EnableRegistry 是否启用注册中心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableRegistry() {
         return this.EnableRegistry;
@@ -2209,19 +1974,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 是否启用注册中心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableRegistry 是否启用注册中心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableRegistry(Long EnableRegistry) {
         this.EnableRegistry = EnableRegistry;
     }
 
     /**
-     * Get 弹性伸缩数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性伸缩数组 
      * @return AutoscalerList 弹性伸缩数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Autoscaler [] getAutoscalerList() {
         return this.AutoscalerList;
@@ -2229,19 +1990,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 弹性伸缩数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoscalerList 弹性伸缩数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoscalerList(Autoscaler [] AutoscalerList) {
         this.AutoscalerList = AutoscalerList;
     }
 
     /**
-     * Get 修改人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改人 
      * @return Modifier 修改人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifier() {
         return this.Modifier;
@@ -2249,19 +2006,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 修改人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Modifier 修改人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifier(String Modifier) {
         this.Modifier = Modifier;
     }
 
     /**
-     * Get 创建人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建人 
      * @return Creator 创建人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreator() {
         return this.Creator;
@@ -2269,9 +2022,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 创建人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Creator 创建人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
@@ -2298,10 +2049,8 @@ public class TemServiceVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例列表 
      * @return PodList 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeRunPodPage getPodList() {
         return this.PodList;
@@ -2309,9 +2058,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodList 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodList(DescribeRunPodPage PodList) {
         this.PodList = PodList;
@@ -2338,10 +2085,8 @@ public class TemServiceVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -2349,19 +2094,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 是否编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否编码 
      * @return PreStopEncoded 是否编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreStopEncoded() {
         return this.PreStopEncoded;
@@ -2369,19 +2110,15 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 是否编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreStopEncoded 是否编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreStopEncoded(String PreStopEncoded) {
         this.PreStopEncoded = PreStopEncoded;
     }
 
     /**
-     * Get 是否编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否编码 
      * @return PostStartEncoded 是否编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPostStartEncoded() {
         return this.PostStartEncoded;
@@ -2389,9 +2126,7 @@ public class TemServiceVersionInfo extends AbstractModel {
 
     /**
      * Set 是否编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PostStartEncoded 是否编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostStartEncoded(String PostStartEncoded) {
         this.PostStartEncoded = PostStartEncoded;

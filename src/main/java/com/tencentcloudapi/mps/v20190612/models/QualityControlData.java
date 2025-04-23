@@ -40,12 +40,20 @@ public class QualityControlData extends AbstractModel {
     private Boolean NoVideo;
 
     /**
-    * 视频无参考质量打分，百分制。
+    * 视频无参考质量评分，百分制。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityEvaluationScore")
     @Expose
     private Long QualityEvaluationScore;
+
+    /**
+    * 视频无参考质量评分，MOS分数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QualityEvaluationMeanOpinionScore")
+    @Expose
+    private Float QualityEvaluationMeanOpinionScore;
 
     /**
     * 内容质检检出异常项。
@@ -104,9 +112,9 @@ public class QualityControlData extends AbstractModel {
     }
 
     /**
-     * Get 视频无参考质量打分，百分制。
+     * Get 视频无参考质量评分，百分制。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QualityEvaluationScore 视频无参考质量打分，百分制。
+     * @return QualityEvaluationScore 视频无参考质量评分，百分制。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQualityEvaluationScore() {
@@ -114,13 +122,33 @@ public class QualityControlData extends AbstractModel {
     }
 
     /**
-     * Set 视频无参考质量打分，百分制。
+     * Set 视频无参考质量评分，百分制。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityEvaluationScore 视频无参考质量打分，百分制。
+     * @param QualityEvaluationScore 视频无参考质量评分，百分制。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityEvaluationScore(Long QualityEvaluationScore) {
         this.QualityEvaluationScore = QualityEvaluationScore;
+    }
+
+    /**
+     * Get 视频无参考质量评分，MOS分数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QualityEvaluationMeanOpinionScore 视频无参考质量评分，MOS分数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getQualityEvaluationMeanOpinionScore() {
+        return this.QualityEvaluationMeanOpinionScore;
+    }
+
+    /**
+     * Set 视频无参考质量评分，MOS分数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QualityEvaluationMeanOpinionScore 视频无参考质量评分，MOS分数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQualityEvaluationMeanOpinionScore(Float QualityEvaluationMeanOpinionScore) {
+        this.QualityEvaluationMeanOpinionScore = QualityEvaluationMeanOpinionScore;
     }
 
     /**
@@ -180,6 +208,9 @@ public class QualityControlData extends AbstractModel {
         if (source.QualityEvaluationScore != null) {
             this.QualityEvaluationScore = new Long(source.QualityEvaluationScore);
         }
+        if (source.QualityEvaluationMeanOpinionScore != null) {
+            this.QualityEvaluationMeanOpinionScore = new Float(source.QualityEvaluationMeanOpinionScore);
+        }
         if (source.QualityControlResultSet != null) {
             this.QualityControlResultSet = new QualityControlResult[source.QualityControlResultSet.length];
             for (int i = 0; i < source.QualityControlResultSet.length; i++) {
@@ -202,6 +233,7 @@ public class QualityControlData extends AbstractModel {
         this.setParamSimple(map, prefix + "NoAudio", this.NoAudio);
         this.setParamSimple(map, prefix + "NoVideo", this.NoVideo);
         this.setParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
+        this.setParamSimple(map, prefix + "QualityEvaluationMeanOpinionScore", this.QualityEvaluationMeanOpinionScore);
         this.setParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
         this.setParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
 

@@ -25,7 +25,6 @@ public class ServicePortMappingItem extends AbstractModel {
 
     /**
     * 应用访问端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -33,7 +32,6 @@ public class ServicePortMappingItem extends AbstractModel {
 
     /**
     * 应用监听端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetPort")
     @Expose
@@ -41,17 +39,14 @@ public class ServicePortMappingItem extends AbstractModel {
 
     /**
     * 协议类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-     * Get 应用访问端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用访问端口 
      * @return Port 应用访问端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -59,19 +54,15 @@ public class ServicePortMappingItem extends AbstractModel {
 
     /**
      * Set 应用访问端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 应用访问端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 应用监听端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用监听端口 
      * @return TargetPort 应用监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetPort() {
         return this.TargetPort;
@@ -79,19 +70,15 @@ public class ServicePortMappingItem extends AbstractModel {
 
     /**
      * Set 应用监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetPort 应用监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetPort(Long TargetPort) {
         this.TargetPort = TargetPort;
     }
 
     /**
-     * Get 协议类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议类型 
      * @return Protocol 协议类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -99,9 +86,7 @@ public class ServicePortMappingItem extends AbstractModel {
 
     /**
      * Set 协议类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

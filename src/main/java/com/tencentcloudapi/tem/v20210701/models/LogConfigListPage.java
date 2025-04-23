@@ -25,7 +25,6 @@ public class LogConfigListPage extends AbstractModel {
 
     /**
     * 记录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Records")
     @Expose
@@ -33,17 +32,14 @@ public class LogConfigListPage extends AbstractModel {
 
     /**
     * 翻页游标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContinueToken")
     @Expose
     private String ContinueToken;
 
     /**
-     * Get 记录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录 
      * @return Records 记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogConfig [] getRecords() {
         return this.Records;
@@ -51,19 +47,15 @@ public class LogConfigListPage extends AbstractModel {
 
     /**
      * Set 记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Records 记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecords(LogConfig [] Records) {
         this.Records = Records;
     }
 
     /**
-     * Get 翻页游标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 翻页游标 
      * @return ContinueToken 翻页游标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContinueToken() {
         return this.ContinueToken;
@@ -71,9 +63,7 @@ public class LogConfigListPage extends AbstractModel {
 
     /**
      * Set 翻页游标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContinueToken 翻页游标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContinueToken(String ContinueToken) {
         this.ContinueToken = ContinueToken;

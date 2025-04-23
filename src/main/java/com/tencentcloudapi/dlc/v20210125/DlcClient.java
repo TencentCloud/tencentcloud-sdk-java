@@ -622,6 +622,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *查询任务监控指标信息
+     * @param req DescribeClusterMonitorInfosRequest
+     * @return DescribeClusterMonitorInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterMonitorInfosResponse DescribeClusterMonitorInfos(DescribeClusterMonitorInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterMonitorInfos", DescribeClusterMonitorInfosResponse.class);
+    }
+
+    /**
      *查询DLC Catalog授权列表
      * @param req DescribeDLCCatalogAccessRequest
      * @return DescribeDLCCatalogAccessResponse

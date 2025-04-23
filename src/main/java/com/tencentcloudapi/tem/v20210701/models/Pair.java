@@ -39,7 +39,6 @@ public class Pair extends AbstractModel {
 
     /**
     * 类型，default 为自定义，reserved 为系统变量，referenced 为引用配置项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -47,7 +46,6 @@ public class Pair extends AbstractModel {
 
     /**
     * 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Config")
     @Expose
@@ -55,7 +53,6 @@ public class Pair extends AbstractModel {
 
     /**
     * 加密配置名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Secret")
     @Expose
@@ -94,10 +91,8 @@ public class Pair extends AbstractModel {
     }
 
     /**
-     * Get 类型，default 为自定义，reserved 为系统变量，referenced 为引用配置项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型，default 为自定义，reserved 为系统变量，referenced 为引用配置项 
      * @return Type 类型，default 为自定义，reserved 为系统变量，referenced 为引用配置项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -105,19 +100,15 @@ public class Pair extends AbstractModel {
 
     /**
      * Set 类型，default 为自定义，reserved 为系统变量，referenced 为引用配置项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型，default 为自定义，reserved 为系统变量，referenced 为引用配置项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 配置名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置名称 
      * @return Config 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfig() {
         return this.Config;
@@ -125,19 +116,15 @@ public class Pair extends AbstractModel {
 
     /**
      * Set 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Config 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfig(String Config) {
         this.Config = Config;
     }
 
     /**
-     * Get 加密配置名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加密配置名称 
      * @return Secret 加密配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecret() {
         return this.Secret;
@@ -145,9 +132,7 @@ public class Pair extends AbstractModel {
 
     /**
      * Set 加密配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Secret 加密配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecret(String Secret) {
         this.Secret = Secret;

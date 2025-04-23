@@ -25,7 +25,6 @@ public class UseDefaultRepoParameters extends AbstractModel {
 
     /**
     * 企业版实例名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnterpriseInstanceName")
     @Expose
@@ -33,7 +32,6 @@ public class UseDefaultRepoParameters extends AbstractModel {
 
     /**
     * 企业版收费类型  0 按量收费   1 包年包月
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnterpriseInstanceChargeType")
     @Expose
@@ -41,17 +39,14 @@ public class UseDefaultRepoParameters extends AbstractModel {
 
     /**
     * 企业版规格：basic-基础班 ，standard-标准版，premium-高级版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnterpriseInstanceType")
     @Expose
     private String EnterpriseInstanceType;
 
     /**
-     * Get 企业版实例名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业版实例名 
      * @return EnterpriseInstanceName 企业版实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnterpriseInstanceName() {
         return this.EnterpriseInstanceName;
@@ -59,19 +54,15 @@ public class UseDefaultRepoParameters extends AbstractModel {
 
     /**
      * Set 企业版实例名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnterpriseInstanceName 企业版实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnterpriseInstanceName(String EnterpriseInstanceName) {
         this.EnterpriseInstanceName = EnterpriseInstanceName;
     }
 
     /**
-     * Get 企业版收费类型  0 按量收费   1 包年包月
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业版收费类型  0 按量收费   1 包年包月 
      * @return EnterpriseInstanceChargeType 企业版收费类型  0 按量收费   1 包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnterpriseInstanceChargeType() {
         return this.EnterpriseInstanceChargeType;
@@ -79,19 +70,15 @@ public class UseDefaultRepoParameters extends AbstractModel {
 
     /**
      * Set 企业版收费类型  0 按量收费   1 包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnterpriseInstanceChargeType 企业版收费类型  0 按量收费   1 包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnterpriseInstanceChargeType(Long EnterpriseInstanceChargeType) {
         this.EnterpriseInstanceChargeType = EnterpriseInstanceChargeType;
     }
 
     /**
-     * Get 企业版规格：basic-基础班 ，standard-标准版，premium-高级版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业版规格：basic-基础班 ，standard-标准版，premium-高级版 
      * @return EnterpriseInstanceType 企业版规格：basic-基础班 ，standard-标准版，premium-高级版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnterpriseInstanceType() {
         return this.EnterpriseInstanceType;
@@ -99,9 +86,7 @@ public class UseDefaultRepoParameters extends AbstractModel {
 
     /**
      * Set 企业版规格：basic-基础班 ，standard-标准版，premium-高级版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnterpriseInstanceType 企业版规格：basic-基础班 ，standard-标准版，premium-高级版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnterpriseInstanceType(String EnterpriseInstanceType) {
         this.EnterpriseInstanceType = EnterpriseInstanceType;

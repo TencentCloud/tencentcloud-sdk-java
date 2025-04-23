@@ -25,7 +25,6 @@ public class TemEnvironmentStartingStatus extends AbstractModel {
 
     /**
     * 需要启动的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationNumNeedToStart")
     @Expose
@@ -33,7 +32,6 @@ public class TemEnvironmentStartingStatus extends AbstractModel {
 
     /**
     * 已经启动的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartedApplicationNum")
     @Expose
@@ -41,17 +39,14 @@ public class TemEnvironmentStartingStatus extends AbstractModel {
 
     /**
     * 启动失败的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartFailedApplicationNum")
     @Expose
     private Long StartFailedApplicationNum;
 
     /**
-     * Get 需要启动的应用数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要启动的应用数量 
      * @return ApplicationNumNeedToStart 需要启动的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApplicationNumNeedToStart() {
         return this.ApplicationNumNeedToStart;
@@ -59,19 +54,15 @@ public class TemEnvironmentStartingStatus extends AbstractModel {
 
     /**
      * Set 需要启动的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationNumNeedToStart 需要启动的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationNumNeedToStart(Long ApplicationNumNeedToStart) {
         this.ApplicationNumNeedToStart = ApplicationNumNeedToStart;
     }
 
     /**
-     * Get 已经启动的应用数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已经启动的应用数量 
      * @return StartedApplicationNum 已经启动的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartedApplicationNum() {
         return this.StartedApplicationNum;
@@ -79,19 +70,15 @@ public class TemEnvironmentStartingStatus extends AbstractModel {
 
     /**
      * Set 已经启动的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartedApplicationNum 已经启动的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartedApplicationNum(Long StartedApplicationNum) {
         this.StartedApplicationNum = StartedApplicationNum;
     }
 
     /**
-     * Get 启动失败的应用数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启动失败的应用数量 
      * @return StartFailedApplicationNum 启动失败的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartFailedApplicationNum() {
         return this.StartFailedApplicationNum;
@@ -99,9 +86,7 @@ public class TemEnvironmentStartingStatus extends AbstractModel {
 
     /**
      * Set 启动失败的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartFailedApplicationNum 启动失败的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartFailedApplicationNum(Long StartFailedApplicationNum) {
         this.StartFailedApplicationNum = StartFailedApplicationNum;
