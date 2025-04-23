@@ -21,91 +21,96 @@ import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 
+/**
+ * HttpProfile defines the configuration settings for HTTP requests made by the Tencent Cloud client.
+ * It includes settings for the request method, endpoint, timeouts, proxy configurations, SSL settings, etc.
+ */
 public class HttpProfile {
 
+    // Constants for request protocols and methods
     public static final String REQ_HTTPS = "https://";
-
     public static final String REQ_HTTP = "http://";
-
     public static final String REQ_POST = "POST";
-
     public static final String REQ_GET = "GET";
 
     /**
-     * Time unit, 1 minute, equals 60 seconds.
+     * Time unit constant: 1 minute equals 60 seconds.
      */
     public static final int TM_MINUTE = 60;
 
+    // HTTP method for the request (GET/POST)
     private String reqMethod;
 
     /**
-     * Endpoint means the domain which this request is sent to, such as cvm.tencentcloudapi.com.
+     * The endpoint for the API request (e.g., "cvm.tencentcloudapi.com").
      */
     private String endpoint;
 
     /**
-     * root domain means endpoint without service name, such as tencentcloudapi.com.
+     * The root domain of the API (e.g., "tencentcloudapi.com").
      */
     private String rootDomain;
 
     /**
-     * HTTPS or HTTP, currently only HTTPS is valid.
+     * The protocol used for the request. Currently, only HTTPS is valid.
      */
     private String protocol;
 
     /**
-     * Read timeout in seconds.
+     * Read timeout in seconds. Specifies the time to wait for a server response.
      */
     private int readTimeout;
 
     /**
-     * Write timeout in seconds
+     * Write timeout in seconds. Specifies the time to wait for data to be sent to the server.
      */
     private int writeTimeout;
 
     /**
-     * Connect timeout in seconds
+     * Connect timeout in seconds. Specifies the time to wait for a connection to be established.
      */
     private int connTimeout;
 
     /**
-     * http proxy host
+     * HTTP proxy host, if a proxy is being used.
      */
     private String proxyHost;
 
     /**
-     * http proxy port
+     * HTTP proxy port, if a proxy is being used.
      */
     private int proxyPort;
 
     /**
-     * http proxy user name
+     * HTTP proxy username, if authentication is required for the proxy.
      */
     private String proxyUsername;
 
     /**
-     * http proxy password
+     * HTTP proxy password, if authentication is required for the proxy.
      */
     private String proxyPassword;
 
+    // SSL-related fields for secure communication
     private SSLSocketFactory sslSocketFactory;
-
     private X509TrustManager trustManager;
-
     private HostnameVerifier hostnameVerifier;
 
     /**
-     * APIGateway endpoint
+     * The API Gateway endpoint, which can be different from the regular API endpoint.
      */
     private String apigwEndpoint;
 
     /**
-     * For more fine-grained customization of the http client, use Object-type to decouple from okhttp.
-     * If specified, all other configurations(timeout,proxy,...) will have no effect and users should do their setup
-     * separately.
+     * For advanced users, an object for fine-grained control over the HTTP client.
+     * If this is set, other configurations like timeouts and proxy settings will be ignored.
      */
     private Object httpClient;
 
+    /**
+     * Default constructor for HttpProfile.
+     * Initializes default values for the HTTP profile configuration.
+     */
     public HttpProfile() {
         this.reqMethod = HttpProfile.REQ_POST;
         this.endpoint = null;
@@ -117,166 +122,294 @@ public class HttpProfile {
         this.apigwEndpoint = null;
     }
 
+    /**
+     * Get the HTTP request method (e.g., POST or GET).
+     *
+     * @return The request method.
+     */
     public String getReqMethod() {
         return this.reqMethod;
     }
 
     /**
-     * Set request method, GET or POST.
+     * Set the HTTP request method (e.g., POST or GET).
      *
-     * @param reqMethod
+     * @param reqMethod The HTTP method to set.
      */
     public void setReqMethod(String reqMethod) {
         this.reqMethod = reqMethod;
     }
 
+    /**
+     * Get the endpoint to which the request is sent.
+     *
+     * @return The endpoint (e.g., "cvm.tencentcloudapi.com").
+     */
     public String getEndpoint() {
         return this.endpoint;
     }
 
     /**
-     * Set the endpoint.
+     * Set the endpoint for the API request.
      *
-     * <p>Endpoint means the domain which this request is sent to, such as
-     * [productName].tencentcloudapi.com.
+     * <p>Endpoint is the domain where the request is sent, e.g., [productName].tencentcloudapi.com.
+     * If you need to request a specific region (e.g., Guangzhou), set it to [productName].ap-guangzhou
+     * .tencentcloudapi.com.
      *
-     * <p>If you want to request to a specified region, such as Guangzhou, set it to
-     * [productName].ap-guangzhou.tencentcloudapi.com.
-     *
-     * @param endpoint
+     * @param endpoint The endpoint URL.
      */
     public void setEndpoint(String endpoint) {
         this.endpoint = endpoint;
     }
 
+    /**
+     * Get the read timeout value in seconds.
+     *
+     * @return The read timeout in seconds.
+     */
     public int getReadTimeout() {
         return this.readTimeout;
     }
 
     /**
-     * Set read timeout value.
+     * Set the read timeout value in seconds. This specifies how long to wait for a response from the server.
      *
-     * @param readTimeout A integer represents time in seconds.
+     * @param readTimeout The read timeout in seconds.
      */
     public void setReadTimeout(int readTimeout) {
         this.readTimeout = readTimeout;
     }
 
+    /**
+     * Get the write timeout value in seconds.
+     *
+     * @return The write timeout in seconds.
+     */
     public int getWriteTimeout() {
         return this.writeTimeout;
     }
 
     /**
-     * Set write timeout value.
+     * Set the write timeout value in seconds. This specifies how long to wait for the server to accept the data.
      *
-     * @param writeTimeout A integer represents time in seconds.
+     * @param writeTimeout The write timeout in seconds.
      */
     public void setWriteTimeout(int writeTimeout) {
         this.writeTimeout = writeTimeout;
     }
 
+    /**
+     * Get the connect timeout value in seconds.
+     *
+     * @return The connection timeout in seconds.
+     */
     public int getConnTimeout() {
         return this.connTimeout;
     }
 
     /**
-     * Set connect timeout value.
+     * Set the connect timeout value in seconds. This specifies how long to wait for a connection to be established.
      *
-     * @param connTimeout A integer represents time in seconds.
+     * @param connTimeout The connect timeout in seconds.
      */
     public void setConnTimeout(int connTimeout) {
         this.connTimeout = connTimeout;
     }
 
+    /**
+     * Get the protocol used for the request (HTTP or HTTPS).
+     *
+     * @return The protocol (e.g., "https://").
+     */
     public String getProtocol() {
         return this.protocol;
     }
 
     /**
-     * Set request protocol.
+     * Set the protocol for the request. Currently, only HTTPS is supported.
      *
-     * @param protocol https:// or http://
+     * @param protocol The protocol to use (e.g., "https://").
      */
     public void setProtocol(String protocol) {
         this.protocol = protocol;
     }
 
+    /**
+     * Get the proxy host if a proxy is being used.
+     *
+     * @return The proxy host.
+     */
     public String getProxyHost() {
         return proxyHost;
     }
 
+    /**
+     * Set the proxy host for HTTP requests.
+     *
+     * @param proxyHost The proxy host to set.
+     */
     public void setProxyHost(String proxyHost) {
         this.proxyHost = proxyHost;
     }
 
+    /**
+     * Get the proxy port if a proxy is being used.
+     *
+     * @return The proxy port.
+     */
     public int getProxyPort() {
         return proxyPort;
     }
 
+    /**
+     * Set the proxy port for HTTP requests.
+     *
+     * @param proxyPort The proxy port to set.
+     */
     public void setProxyPort(int proxyPort) {
         this.proxyPort = proxyPort;
     }
 
+    /**
+     * Get the proxy username for authentication.
+     *
+     * @return The proxy username.
+     */
     public String getProxyUsername() {
         return proxyUsername;
     }
 
+    /**
+     * Set the proxy username for authentication.
+     *
+     * @param proxyUsername The proxy username to set.
+     */
     public void setProxyUsername(String proxyUsername) {
         this.proxyUsername = proxyUsername;
     }
 
+    /**
+     * Get the proxy password for authentication.
+     *
+     * @return The proxy password.
+     */
     public String getProxyPassword() {
         return proxyPassword;
     }
 
+    /**
+     * Set the proxy password for authentication.
+     *
+     * @param proxyPassword The proxy password to set.
+     */
     public void setProxyPassword(String proxyPassword) {
         this.proxyPassword = proxyPassword;
     }
 
+    /**
+     * Get the root domain (e.g., "tencentcloudapi.com").
+     *
+     * @return The root domain.
+     */
     public String getRootDomain() {
         return rootDomain;
     }
 
+    /**
+     * Set the root domain of the API (e.g., "tencentcloudapi.com").
+     *
+     * @param rootDomain The root domain to set.
+     */
     public void setRootDomain(String rootDomain) {
         this.rootDomain = rootDomain;
     }
 
+    /**
+     * Get the SSLSocketFactory for SSL connections.
+     *
+     * @return The SSL socket factory.
+     */
     public SSLSocketFactory getSslSocketFactory() {
         return sslSocketFactory;
     }
 
+    /**
+     * Set the SSLSocketFactory for SSL connections.
+     *
+     * @param sslSocketFactory The SSL socket factory to set.
+     */
     public void setSslSocketFactory(SSLSocketFactory sslSocketFactory) {
         this.sslSocketFactory = sslSocketFactory;
     }
 
+    /**
+     * Get the trust manager for SSL connections.
+     *
+     * @return The X509 trust manager.
+     */
     public X509TrustManager getX509TrustManager() {
         return trustManager;
     }
 
+    /**
+     * Set the trust manager for SSL connections.
+     *
+     * @param trustManager The X509 trust manager to set.
+     */
     public void setX509TrustManager(X509TrustManager trustManager) {
         this.trustManager = trustManager;
     }
 
+    /**
+     * Get the API Gateway endpoint.
+     *
+     * @return The API Gateway endpoint.
+     */
     public String getApigwEndpoint() {
         return apigwEndpoint;
     }
 
+    /**
+     * Set the API Gateway endpoint.
+     *
+     * @param apigwEndpoint The API Gateway endpoint to set.
+     */
     public void setApigwEndpoint(String apigwEndpoint) {
         this.apigwEndpoint = apigwEndpoint;
     }
 
-    public void setHostnameVerifier(HostnameVerifier hostnameVerifier) {
-        this.hostnameVerifier = hostnameVerifier;
-    }
-
+    /**
+     * Get the HostnameVerifier used for hostname verification.
+     *
+     * @return The hostname verifier.
+     */
     public HostnameVerifier getHostnameVerifier() {
         return hostnameVerifier;
     }
 
+    /**
+     * Set the HostnameVerifier used for hostname verification.
+     *
+     * @param hostnameVerifier The hostname verifier to set.
+     */
+    public void setHostnameVerifier(HostnameVerifier hostnameVerifier) {
+        this.hostnameVerifier = hostnameVerifier;
+    }
+
+    /**
+     * Get the custom HTTP client for advanced configuration.
+     *
+     * @return The custom HTTP client.
+     */
     public Object getHttpClient() {
         return httpClient;
     }
 
+    /**
+     * Set a custom HTTP client for advanced configuration.
+     *
+     * @param client The custom HTTP client to set.
+     */
     public void setHttpClient(Object client) {
         httpClient = client;
     }
