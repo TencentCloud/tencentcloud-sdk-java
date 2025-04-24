@@ -243,6 +243,20 @@ HYBRID_PAID:
     private String [] PreStopCommand;
 
     /**
+    * 是否启动grpc端口
+    */
+    @SerializedName("GrpcEnable")
+    @Expose
+    private Boolean GrpcEnable;
+
+    /**
+    * 健康探针
+    */
+    @SerializedName("HealthProbe")
+    @Expose
+    private HealthProbe HealthProbe;
+
+    /**
      * Get 服务id 
      * @return ServiceId 服务id
      */
@@ -782,6 +796,38 @@ HYBRID_PAID:
         this.PreStopCommand = PreStopCommand;
     }
 
+    /**
+     * Get 是否启动grpc端口 
+     * @return GrpcEnable 是否启动grpc端口
+     */
+    public Boolean getGrpcEnable() {
+        return this.GrpcEnable;
+    }
+
+    /**
+     * Set 是否启动grpc端口
+     * @param GrpcEnable 是否启动grpc端口
+     */
+    public void setGrpcEnable(Boolean GrpcEnable) {
+        this.GrpcEnable = GrpcEnable;
+    }
+
+    /**
+     * Get 健康探针 
+     * @return HealthProbe 健康探针
+     */
+    public HealthProbe getHealthProbe() {
+        return this.HealthProbe;
+    }
+
+    /**
+     * Set 健康探针
+     * @param HealthProbe 健康探针
+     */
+    public void setHealthProbe(HealthProbe HealthProbe) {
+        this.HealthProbe = HealthProbe;
+    }
+
     public ModifyModelServiceRequest() {
     }
 
@@ -883,6 +929,12 @@ HYBRID_PAID:
                 this.PreStopCommand[i] = new String(source.PreStopCommand[i]);
             }
         }
+        if (source.GrpcEnable != null) {
+            this.GrpcEnable = new Boolean(source.GrpcEnable);
+        }
+        if (source.HealthProbe != null) {
+            this.HealthProbe = new HealthProbe(source.HealthProbe);
+        }
     }
 
 
@@ -918,6 +970,8 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
         this.setParamSimple(map, prefix + "TerminationGracePeriodSeconds", this.TerminationGracePeriodSeconds);
         this.setParamArraySimple(map, prefix + "PreStopCommand.", this.PreStopCommand);
+        this.setParamSimple(map, prefix + "GrpcEnable", this.GrpcEnable);
+        this.setParamObj(map, prefix + "HealthProbe.", this.HealthProbe);
 
     }
 }

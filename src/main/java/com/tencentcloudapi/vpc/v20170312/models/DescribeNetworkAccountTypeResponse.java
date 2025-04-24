@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeNetworkAccountTypeResponse extends AbstractModel {
 
     /**
-    * 用户账号的网络类型，STANDARD为标准用户，LEGACY为传统用户
+    * 用户账号的网络类型，STANDARD为标准账户类型，LEGACY为传统账户类型
     */
     @SerializedName("NetworkAccountType")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeNetworkAccountTypeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户账号的网络类型，STANDARD为标准用户，LEGACY为传统用户 
-     * @return NetworkAccountType 用户账号的网络类型，STANDARD为标准用户，LEGACY为传统用户
+     * Get 用户账号的网络类型，STANDARD为标准账户类型，LEGACY为传统账户类型 
+     * @return NetworkAccountType 用户账号的网络类型，STANDARD为标准账户类型，LEGACY为传统账户类型
      */
     public String getNetworkAccountType() {
         return this.NetworkAccountType;
     }
 
     /**
-     * Set 用户账号的网络类型，STANDARD为标准用户，LEGACY为传统用户
-     * @param NetworkAccountType 用户账号的网络类型，STANDARD为标准用户，LEGACY为传统用户
+     * Set 用户账号的网络类型，STANDARD为标准账户类型，LEGACY为传统账户类型
+     * @param NetworkAccountType 用户账号的网络类型，STANDARD为标准账户类型，LEGACY为传统账户类型
      */
     public void setNetworkAccountType(String NetworkAccountType) {
         this.NetworkAccountType = NetworkAccountType;

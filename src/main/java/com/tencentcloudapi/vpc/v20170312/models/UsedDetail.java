@@ -66,7 +66,8 @@ public class UsedDetail extends AbstractModel {
     private String Time;
 
     /**
-    * 资源类型。可能的值: CVM, LB, NAT, HAVIP, EIP
+    * 资源类型。可选值: EIP, BWP, LB
+
     */
     @SerializedName("ResourceType")
     @Expose
@@ -190,16 +191,20 @@ public class UsedDetail extends AbstractModel {
     }
 
     /**
-     * Get 资源类型。可能的值: CVM, LB, NAT, HAVIP, EIP 
-     * @return ResourceType 资源类型。可能的值: CVM, LB, NAT, HAVIP, EIP
+     * Get 资源类型。可选值: EIP, BWP, LB
+ 
+     * @return ResourceType 资源类型。可选值: EIP, BWP, LB
+
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型。可能的值: CVM, LB, NAT, HAVIP, EIP
-     * @param ResourceType 资源类型。可能的值: CVM, LB, NAT, HAVIP, EIP
+     * Set 资源类型。可选值: EIP, BWP, LB
+
+     * @param ResourceType 资源类型。可选值: EIP, BWP, LB
+
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

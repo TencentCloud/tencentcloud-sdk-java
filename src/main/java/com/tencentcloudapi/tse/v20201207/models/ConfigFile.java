@@ -143,6 +143,20 @@ public class ConfigFile extends AbstractModel {
     private ConfigFilePersistent ConfigFilePersistent;
 
     /**
+    * 是否开启加密算法
+    */
+    @SerializedName("Encrypted")
+    @Expose
+    private Boolean Encrypted;
+
+    /**
+    * 加密算法
+    */
+    @SerializedName("EncryptAlgo")
+    @Expose
+    private String EncryptAlgo;
+
+    /**
      * Get 配置文件id 
      * @return Id 配置文件id
      */
@@ -414,6 +428,38 @@ public class ConfigFile extends AbstractModel {
         this.ConfigFilePersistent = ConfigFilePersistent;
     }
 
+    /**
+     * Get 是否开启加密算法 
+     * @return Encrypted 是否开启加密算法
+     */
+    public Boolean getEncrypted() {
+        return this.Encrypted;
+    }
+
+    /**
+     * Set 是否开启加密算法
+     * @param Encrypted 是否开启加密算法
+     */
+    public void setEncrypted(Boolean Encrypted) {
+        this.Encrypted = Encrypted;
+    }
+
+    /**
+     * Get 加密算法 
+     * @return EncryptAlgo 加密算法
+     */
+    public String getEncryptAlgo() {
+        return this.EncryptAlgo;
+    }
+
+    /**
+     * Set 加密算法
+     * @param EncryptAlgo 加密算法
+     */
+    public void setEncryptAlgo(String EncryptAlgo) {
+        this.EncryptAlgo = EncryptAlgo;
+    }
+
     public ConfigFile() {
     }
 
@@ -476,6 +522,12 @@ public class ConfigFile extends AbstractModel {
         if (source.ConfigFilePersistent != null) {
             this.ConfigFilePersistent = new ConfigFilePersistent(source.ConfigFilePersistent);
         }
+        if (source.Encrypted != null) {
+            this.Encrypted = new Boolean(source.Encrypted);
+        }
+        if (source.EncryptAlgo != null) {
+            this.EncryptAlgo = new String(source.EncryptAlgo);
+        }
     }
 
 
@@ -500,6 +552,8 @@ public class ConfigFile extends AbstractModel {
         this.setParamSimple(map, prefix + "ReleaseBy", this.ReleaseBy);
         this.setParamSimple(map, prefix + "ConfigFileSupportedClient", this.ConfigFileSupportedClient);
         this.setParamObj(map, prefix + "ConfigFilePersistent.", this.ConfigFilePersistent);
+        this.setParamSimple(map, prefix + "Encrypted", this.Encrypted);
+        this.setParamSimple(map, prefix + "EncryptAlgo", this.EncryptAlgo);
 
     }
 }

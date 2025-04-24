@@ -329,6 +329,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *批量获取安卓实例日志
+     * @param req FetchAndroidInstancesLogsRequest
+     * @return FetchAndroidInstancesLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchAndroidInstancesLogsResponse FetchAndroidInstancesLogs(FetchAndroidInstancesLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FetchAndroidInstancesLogs", FetchAndroidInstancesLogsResponse.class);
+    }
+
+    /**
      *安装安卓实例应用
      * @param req InstallAndroidInstancesAppRequest
      * @return InstallAndroidInstancesAppResponse
@@ -381,6 +392,17 @@ public class GsClient extends AbstractClient{
     public ModifyAndroidInstanceResolutionResponse ModifyAndroidInstanceResolution(ModifyAndroidInstanceResolutionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAndroidInstanceResolution", ModifyAndroidInstanceResolutionResponse.class);
+    }
+
+    /**
+     *批量修改安卓实例信息
+     * @param req ModifyAndroidInstancesInformationRequest
+     * @return ModifyAndroidInstancesInformationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAndroidInstancesInformationResponse ModifyAndroidInstancesInformation(ModifyAndroidInstancesInformationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAndroidInstancesInformation", ModifyAndroidInstancesInformationResponse.class);
     }
 
     /**

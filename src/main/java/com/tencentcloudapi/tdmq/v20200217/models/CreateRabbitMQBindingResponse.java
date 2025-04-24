@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRabbitMQBindingResponse extends AbstractModel {
 
     /**
-    * 实例名称
+    * 实例 ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,16 +52,16 @@ public class CreateRabbitMQBindingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例名称 
-     * @return InstanceId 实例名称
+     * Get 实例 ID 
+     * @return InstanceId 实例 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceId 实例名称
+     * Set 实例 ID
+     * @param InstanceId 实例 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

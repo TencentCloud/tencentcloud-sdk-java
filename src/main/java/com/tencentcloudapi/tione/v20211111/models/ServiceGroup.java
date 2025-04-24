@@ -193,6 +193,20 @@ UPDATING 更新中
     private Long AppId;
 
     /**
+    * 是否开启鉴权
+    */
+    @SerializedName("AuthorizationEnable")
+    @Expose
+    private Boolean AuthorizationEnable;
+
+    /**
+    * 限流鉴权 token 列表
+    */
+    @SerializedName("AuthTokens")
+    @Expose
+    private AuthToken [] AuthTokens;
+
+    /**
      * Get 服务组id 
      * @return ServiceGroupId 服务组id
      */
@@ -628,6 +642,38 @@ UPDATING 更新中
         this.AppId = AppId;
     }
 
+    /**
+     * Get 是否开启鉴权 
+     * @return AuthorizationEnable 是否开启鉴权
+     */
+    public Boolean getAuthorizationEnable() {
+        return this.AuthorizationEnable;
+    }
+
+    /**
+     * Set 是否开启鉴权
+     * @param AuthorizationEnable 是否开启鉴权
+     */
+    public void setAuthorizationEnable(Boolean AuthorizationEnable) {
+        this.AuthorizationEnable = AuthorizationEnable;
+    }
+
+    /**
+     * Get 限流鉴权 token 列表 
+     * @return AuthTokens 限流鉴权 token 列表
+     */
+    public AuthToken [] getAuthTokens() {
+        return this.AuthTokens;
+    }
+
+    /**
+     * Set 限流鉴权 token 列表
+     * @param AuthTokens 限流鉴权 token 列表
+     */
+    public void setAuthTokens(AuthToken [] AuthTokens) {
+        this.AuthTokens = AuthTokens;
+    }
+
     public ServiceGroup() {
     }
 
@@ -702,6 +748,15 @@ UPDATING 更新中
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
+        if (source.AuthorizationEnable != null) {
+            this.AuthorizationEnable = new Boolean(source.AuthorizationEnable);
+        }
+        if (source.AuthTokens != null) {
+            this.AuthTokens = new AuthToken[source.AuthTokens.length];
+            for (int i = 0; i < source.AuthTokens.length; i++) {
+                this.AuthTokens[i] = new AuthToken(source.AuthTokens[i]);
+            }
+        }
     }
 
 
@@ -729,6 +784,8 @@ UPDATING 更新中
         this.setParamSimple(map, prefix + "AvailableReplicasCount", this.AvailableReplicasCount);
         this.setParamSimple(map, prefix + "SubUin", this.SubUin);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "AuthorizationEnable", this.AuthorizationEnable);
+        this.setParamArrayObj(map, prefix + "AuthTokens.", this.AuthTokens);
 
     }
 }

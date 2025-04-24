@@ -87,6 +87,13 @@ public class ServiceGovernanceInfo extends AbstractModel {
     private PolarisCLSTopicInfo [] CLSTopics;
 
     /**
+    * 子用户密码
+    */
+    @SerializedName("SubPassword")
+    @Expose
+    private String SubPassword;
+
+    /**
      * Get 引擎所在的地域 
      * @return EngineRegion 引擎所在的地域
      */
@@ -230,6 +237,22 @@ public class ServiceGovernanceInfo extends AbstractModel {
         this.CLSTopics = CLSTopics;
     }
 
+    /**
+     * Get 子用户密码 
+     * @return SubPassword 子用户密码
+     */
+    public String getSubPassword() {
+        return this.SubPassword;
+    }
+
+    /**
+     * Set 子用户密码
+     * @param SubPassword 子用户密码
+     */
+    public void setSubPassword(String SubPassword) {
+        this.SubPassword = SubPassword;
+    }
+
     public ServiceGovernanceInfo() {
     }
 
@@ -283,6 +306,9 @@ public class ServiceGovernanceInfo extends AbstractModel {
                 this.CLSTopics[i] = new PolarisCLSTopicInfo(source.CLSTopics[i]);
             }
         }
+        if (source.SubPassword != null) {
+            this.SubPassword = new String(source.SubPassword);
+        }
     }
 
 
@@ -299,6 +325,7 @@ public class ServiceGovernanceInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "PgwVpcInfos.", this.PgwVpcInfos);
         this.setParamArrayObj(map, prefix + "LimiterVpcInfos.", this.LimiterVpcInfos);
         this.setParamArrayObj(map, prefix + "CLSTopics.", this.CLSTopics);
+        this.setParamSimple(map, prefix + "SubPassword", this.SubPassword);
 
     }
 }

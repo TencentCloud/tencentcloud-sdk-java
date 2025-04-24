@@ -25,9 +25,13 @@ public class Quota extends AbstractModel {
 
     /**
     * 配额名称，取值范围：
-- `TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；
-- `DAILY_EIP_APPLY`：用户当前地域下今日申购次数；
+- `TOTAL_EIP_QUOTA`：用户当前地域下，EIP的配额数；
+- `LOCALBGP_EIP_QUOTA`：用户当前地域下，本地BGP IP配额数；
+- `SINGLEISP_EIP_QUOTA`：用户当前地域下，静态单线 IP 配额数；
+- `DAILY_EIP_APPLY`：用户当前地域下，除静态单线 IP外今日申购次数；
+- `DAILY_SINGLEISP_APPLY`：用户当前地域下，静态单线 IP今日申购次数；
 - `DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数；
+- `MONTHLY_RECOVER_QUOTA`：用户当前地域下，每月申请指定 IP次数；
 - `TOTAL_EIP6_QUOTA`：用户当前地域下，传统弹性公网IPv6的配额数；
 - `BGP_EIPv6_QUOTA`：用户当前地域下，可申请的 BGP 弹性公网IPv6 的配额数；
 - `SINGLEISP_EIPv6_QUOTA`：用户当前地域下，可申请的静态单线弹性公网IPv6 的配额数；
@@ -64,9 +68,13 @@ public class Quota extends AbstractModel {
 
     /**
      * Get 配额名称，取值范围：
-- `TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；
-- `DAILY_EIP_APPLY`：用户当前地域下今日申购次数；
+- `TOTAL_EIP_QUOTA`：用户当前地域下，EIP的配额数；
+- `LOCALBGP_EIP_QUOTA`：用户当前地域下，本地BGP IP配额数；
+- `SINGLEISP_EIP_QUOTA`：用户当前地域下，静态单线 IP 配额数；
+- `DAILY_EIP_APPLY`：用户当前地域下，除静态单线 IP外今日申购次数；
+- `DAILY_SINGLEISP_APPLY`：用户当前地域下，静态单线 IP今日申购次数；
 - `DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数；
+- `MONTHLY_RECOVER_QUOTA`：用户当前地域下，每月申请指定 IP次数；
 - `TOTAL_EIP6_QUOTA`：用户当前地域下，传统弹性公网IPv6的配额数；
 - `BGP_EIPv6_QUOTA`：用户当前地域下，可申请的 BGP 弹性公网IPv6 的配额数；
 - `SINGLEISP_EIPv6_QUOTA`：用户当前地域下，可申请的静态单线弹性公网IPv6 的配额数；
@@ -76,9 +84,13 @@ public class Quota extends AbstractModel {
 - `BandwidthGuaranteedRatio`：用户当前地域下，保底带宽包默认保底比例；
 - `TezBandwidthGuaranteedRatio`：用户当前地域下，边缘可用区保底带宽包默认保底比例； 
      * @return QuotaId 配额名称，取值范围：
-- `TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；
-- `DAILY_EIP_APPLY`：用户当前地域下今日申购次数；
+- `TOTAL_EIP_QUOTA`：用户当前地域下，EIP的配额数；
+- `LOCALBGP_EIP_QUOTA`：用户当前地域下，本地BGP IP配额数；
+- `SINGLEISP_EIP_QUOTA`：用户当前地域下，静态单线 IP 配额数；
+- `DAILY_EIP_APPLY`：用户当前地域下，除静态单线 IP外今日申购次数；
+- `DAILY_SINGLEISP_APPLY`：用户当前地域下，静态单线 IP今日申购次数；
 - `DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数；
+- `MONTHLY_RECOVER_QUOTA`：用户当前地域下，每月申请指定 IP次数；
 - `TOTAL_EIP6_QUOTA`：用户当前地域下，传统弹性公网IPv6的配额数；
 - `BGP_EIPv6_QUOTA`：用户当前地域下，可申请的 BGP 弹性公网IPv6 的配额数；
 - `SINGLEISP_EIPv6_QUOTA`：用户当前地域下，可申请的静态单线弹性公网IPv6 的配额数；
@@ -94,9 +106,13 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 配额名称，取值范围：
-- `TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；
-- `DAILY_EIP_APPLY`：用户当前地域下今日申购次数；
+- `TOTAL_EIP_QUOTA`：用户当前地域下，EIP的配额数；
+- `LOCALBGP_EIP_QUOTA`：用户当前地域下，本地BGP IP配额数；
+- `SINGLEISP_EIP_QUOTA`：用户当前地域下，静态单线 IP 配额数；
+- `DAILY_EIP_APPLY`：用户当前地域下，除静态单线 IP外今日申购次数；
+- `DAILY_SINGLEISP_APPLY`：用户当前地域下，静态单线 IP今日申购次数；
 - `DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数；
+- `MONTHLY_RECOVER_QUOTA`：用户当前地域下，每月申请指定 IP次数；
 - `TOTAL_EIP6_QUOTA`：用户当前地域下，传统弹性公网IPv6的配额数；
 - `BGP_EIPv6_QUOTA`：用户当前地域下，可申请的 BGP 弹性公网IPv6 的配额数；
 - `SINGLEISP_EIPv6_QUOTA`：用户当前地域下，可申请的静态单线弹性公网IPv6 的配额数；
@@ -106,9 +122,13 @@ public class Quota extends AbstractModel {
 - `BandwidthGuaranteedRatio`：用户当前地域下，保底带宽包默认保底比例；
 - `TezBandwidthGuaranteedRatio`：用户当前地域下，边缘可用区保底带宽包默认保底比例；
      * @param QuotaId 配额名称，取值范围：
-- `TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；
-- `DAILY_EIP_APPLY`：用户当前地域下今日申购次数；
+- `TOTAL_EIP_QUOTA`：用户当前地域下，EIP的配额数；
+- `LOCALBGP_EIP_QUOTA`：用户当前地域下，本地BGP IP配额数；
+- `SINGLEISP_EIP_QUOTA`：用户当前地域下，静态单线 IP 配额数；
+- `DAILY_EIP_APPLY`：用户当前地域下，除静态单线 IP外今日申购次数；
+- `DAILY_SINGLEISP_APPLY`：用户当前地域下，静态单线 IP今日申购次数；
 - `DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数；
+- `MONTHLY_RECOVER_QUOTA`：用户当前地域下，每月申请指定 IP次数；
 - `TOTAL_EIP6_QUOTA`：用户当前地域下，传统弹性公网IPv6的配额数；
 - `BGP_EIPv6_QUOTA`：用户当前地域下，可申请的 BGP 弹性公网IPv6 的配额数；
 - `SINGLEISP_EIPv6_QUOTA`：用户当前地域下，可申请的静态单线弹性公网IPv6 的配额数；

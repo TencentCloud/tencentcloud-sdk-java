@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRabbitMQNodeListResponse extends AbstractModel {
 
     /**
-    * 集群列表数量
+    * 集群节点数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 集群列表
+    * 集群节点列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeList")
@@ -46,25 +46,25 @@ public class DescribeRabbitMQNodeListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群列表数量 
-     * @return TotalCount 集群列表数量
+     * Get 集群节点数量 
+     * @return TotalCount 集群节点数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 集群列表数量
-     * @param TotalCount 集群列表数量
+     * Set 集群节点数量
+     * @param TotalCount 集群节点数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 集群列表
+     * Get 集群节点列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeList 集群列表
+     * @return NodeList 集群节点列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RabbitMQPrivateNode [] getNodeList() {
@@ -72,9 +72,9 @@ public class DescribeRabbitMQNodeListResponse extends AbstractModel {
     }
 
     /**
-     * Set 集群列表
+     * Set 集群节点列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeList 集群列表
+     * @param NodeList 集群节点列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeList(RabbitMQPrivateNode [] NodeList) {

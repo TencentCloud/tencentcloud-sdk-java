@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmq.v20200217.models;
+package com.tencentcloudapi.gs.v20191118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRabbitMQVipInstanceResponse extends AbstractModel {
-
-    /**
-    * 订单号 ID
-    */
-    @SerializedName("TranId")
-    @Expose
-    private String TranId;
-
-    /**
-    * 实例 ID
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
+public class ModifyAndroidInstancesInformationResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,38 +29,6 @@ public class CreateRabbitMQVipInstanceResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 订单号 ID 
-     * @return TranId 订单号 ID
-     */
-    public String getTranId() {
-        return this.TranId;
-    }
-
-    /**
-     * Set 订单号 ID
-     * @param TranId 订单号 ID
-     */
-    public void setTranId(String TranId) {
-        this.TranId = TranId;
-    }
-
-    /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -92,20 +46,14 @@ public class CreateRabbitMQVipInstanceResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateRabbitMQVipInstanceResponse() {
+    public ModifyAndroidInstancesInformationResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateRabbitMQVipInstanceResponse(CreateRabbitMQVipInstanceResponse source) {
-        if (source.TranId != null) {
-            this.TranId = new String(source.TranId);
-        }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
+    public ModifyAndroidInstancesInformationResponse(ModifyAndroidInstancesInformationResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -116,8 +64,6 @@ public class CreateRabbitMQVipInstanceResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TranId", this.TranId);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRabbitMQVirtualHostRequest extends AbstractModel {
 
     /**
-    * 集群实例Id
+    * 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,16 +59,16 @@ public class CreateRabbitMQVirtualHostRequest extends AbstractModel {
     private Boolean MirrorQueuePolicyFlag;
 
     /**
-     * Get 集群实例Id 
-     * @return InstanceId 集群实例Id
+     * Get 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。 
+     * @return InstanceId 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例Id
-     * @param InstanceId 集群实例Id
+     * Set 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * @param InstanceId 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeRabbitMQNodeListRequest extends AbstractModel {
 
     /**
-    * rabbitmq集群ID
+    * 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 偏移量
+    * 偏移量，默认值 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 一页限制
+    * 一页限制,moren
     */
     @SerializedName("Limit")
     @Expose
@@ -52,10 +52,9 @@ public class DescribeRabbitMQNodeListRequest extends AbstractModel {
     private String NodeName;
 
     /**
-    * 过滤参数的名字和数值
-现在只有一个nodeStatus
-running/down
-数组类型，兼容后续添加过滤参数
+    * 过滤参数的名字和数值，当前仅支持根据节点状态筛选。
+"Name": "nodeStatus"
+"Value": running or down
 
     */
     @SerializedName("Filters")
@@ -64,7 +63,8 @@ running/down
 
     /**
     * 按指定元素排序，现在只有2个
-cpuUsage/diskUsage
+cpuUsage：节点CPU利用率
+diskUsage：节点磁盘利用率
     */
     @SerializedName("SortElement")
     @Expose
@@ -79,48 +79,48 @@ ascend/descend
     private String SortOrder;
 
     /**
-     * Get rabbitmq集群ID 
-     * @return InstanceId rabbitmq集群ID
+     * Get 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。 
+     * @return InstanceId 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set rabbitmq集群ID
-     * @param InstanceId rabbitmq集群ID
+     * Set 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * @param InstanceId 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认值 0 
+     * @return Offset 偏移量，默认值 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认值 0
+     * @param Offset 偏移量，默认值 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 一页限制 
-     * @return Limit 一页限制
+     * Get 一页限制,moren 
+     * @return Limit 一页限制,moren
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 一页限制
-     * @param Limit 一页限制
+     * Set 一页限制,moren
+     * @param Limit 一页限制,moren
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -143,15 +143,13 @@ ascend/descend
     }
 
     /**
-     * Get 过滤参数的名字和数值
-现在只有一个nodeStatus
-running/down
-数组类型，兼容后续添加过滤参数
+     * Get 过滤参数的名字和数值，当前仅支持根据节点状态筛选。
+"Name": "nodeStatus"
+"Value": running or down
  
-     * @return Filters 过滤参数的名字和数值
-现在只有一个nodeStatus
-running/down
-数组类型，兼容后续添加过滤参数
+     * @return Filters 过滤参数的名字和数值，当前仅支持根据节点状态筛选。
+"Name": "nodeStatus"
+"Value": running or down
 
      */
     public Filter [] getFilters() {
@@ -159,15 +157,13 @@ running/down
     }
 
     /**
-     * Set 过滤参数的名字和数值
-现在只有一个nodeStatus
-running/down
-数组类型，兼容后续添加过滤参数
+     * Set 过滤参数的名字和数值，当前仅支持根据节点状态筛选。
+"Name": "nodeStatus"
+"Value": running or down
 
-     * @param Filters 过滤参数的名字和数值
-现在只有一个nodeStatus
-running/down
-数组类型，兼容后续添加过滤参数
+     * @param Filters 过滤参数的名字和数值，当前仅支持根据节点状态筛选。
+"Name": "nodeStatus"
+"Value": running or down
 
      */
     public void setFilters(Filter [] Filters) {
@@ -176,9 +172,11 @@ running/down
 
     /**
      * Get 按指定元素排序，现在只有2个
-cpuUsage/diskUsage 
+cpuUsage：节点CPU利用率
+diskUsage：节点磁盘利用率 
      * @return SortElement 按指定元素排序，现在只有2个
-cpuUsage/diskUsage
+cpuUsage：节点CPU利用率
+diskUsage：节点磁盘利用率
      */
     public String getSortElement() {
         return this.SortElement;
@@ -186,9 +184,11 @@ cpuUsage/diskUsage
 
     /**
      * Set 按指定元素排序，现在只有2个
-cpuUsage/diskUsage
+cpuUsage：节点CPU利用率
+diskUsage：节点磁盘利用率
      * @param SortElement 按指定元素排序，现在只有2个
-cpuUsage/diskUsage
+cpuUsage：节点CPU利用率
+diskUsage：节点磁盘利用率
      */
     public void setSortElement(String SortElement) {
         this.SortElement = SortElement;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetWsTokenRequest extends AbstractModel {
 
     /**
-    * 接入类型，当前请填写5
+    * 接入类型， 5-API 访客
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
+    *   应用AppKey </br>   获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
     */
     @SerializedName("BotAppKey")
     @Expose
@@ -52,32 +52,32 @@ public class GetWsTokenRequest extends AbstractModel {
     private GetWsTokenReq_Label [] VisitorLabels;
 
     /**
-     * Get 接入类型，当前请填写5 
-     * @return Type 接入类型，当前请填写5
+     * Get 接入类型， 5-API 访客 
+     * @return Type 接入类型， 5-API 访客
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 接入类型，当前请填写5
-     * @param Type 接入类型，当前请填写5
+     * Set 接入类型， 5-API 访客
+     * @param Type 接入类型， 5-API 访客
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取） 
-     * @return BotAppKey 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
+     * Get   应用AppKey </br>   获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项 
+     * @return BotAppKey   应用AppKey </br>   获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
      */
     public String getBotAppKey() {
         return this.BotAppKey;
     }
 
     /**
-     * Set 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
-     * @param BotAppKey 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
+     * Set   应用AppKey </br>   获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
+     * @param BotAppKey   应用AppKey </br>   获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
      */
     public void setBotAppKey(String BotAppKey) {
         this.BotAppKey = BotAppKey;

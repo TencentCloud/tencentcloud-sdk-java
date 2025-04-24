@@ -171,7 +171,7 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *创建RabbitMQ专享版实例
+     *创建 RabbitMQ 托管版实例
      * @param req CreateRabbitMQVipInstanceRequest
      * @return CreateRabbitMQVipInstanceResponse
      * @throws TencentCloudSDKException
@@ -413,7 +413,7 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *删除RabbitMQ专享版实例
+     *删除 RabbitMQ 托管版实例
      * @param req DeleteRabbitMQVipInstanceRequest
      * @return DeleteRabbitMQVipInstanceResponse
      * @throws TencentCloudSDKException
@@ -822,7 +822,7 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *RabbitMQ专享版查询节点列表
+     *查询 RabbitMQ 托管版节点列表
      * @param req DescribeRabbitMQNodeListRequest
      * @return DescribeRabbitMQNodeListResponse
      * @throws TencentCloudSDKException

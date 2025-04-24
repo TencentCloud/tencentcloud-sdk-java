@@ -301,6 +301,20 @@ HYBRID_PAID:
     private String [] PreStopCommand;
 
     /**
+    * 是否启用grpc端口
+    */
+    @SerializedName("GrpcEnable")
+    @Expose
+    private Boolean GrpcEnable;
+
+    /**
+    * 健康探针
+    */
+    @SerializedName("HealthProbe")
+    @Expose
+    private HealthProbe HealthProbe;
+
+    /**
      * Get 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -1008,6 +1022,38 @@ HYBRID_PAID:
         this.PreStopCommand = PreStopCommand;
     }
 
+    /**
+     * Get 是否启用grpc端口 
+     * @return GrpcEnable 是否启用grpc端口
+     */
+    public Boolean getGrpcEnable() {
+        return this.GrpcEnable;
+    }
+
+    /**
+     * Set 是否启用grpc端口
+     * @param GrpcEnable 是否启用grpc端口
+     */
+    public void setGrpcEnable(Boolean GrpcEnable) {
+        this.GrpcEnable = GrpcEnable;
+    }
+
+    /**
+     * Get 健康探针 
+     * @return HealthProbe 健康探针
+     */
+    public HealthProbe getHealthProbe() {
+        return this.HealthProbe;
+    }
+
+    /**
+     * Set 健康探针
+     * @param HealthProbe 健康探针
+     */
+    public void setHealthProbe(HealthProbe HealthProbe) {
+        this.HealthProbe = HealthProbe;
+    }
+
     public ServiceInfo() {
     }
 
@@ -1133,6 +1179,12 @@ HYBRID_PAID:
                 this.PreStopCommand[i] = new String(source.PreStopCommand[i]);
             }
         }
+        if (source.GrpcEnable != null) {
+            this.GrpcEnable = new Boolean(source.GrpcEnable);
+        }
+        if (source.HealthProbe != null) {
+            this.HealthProbe = new HealthProbe(source.HealthProbe);
+        }
     }
 
 
@@ -1174,6 +1226,8 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "ServicePort", this.ServicePort);
         this.setParamSimple(map, prefix + "TerminationGracePeriodSeconds", this.TerminationGracePeriodSeconds);
         this.setParamArraySimple(map, prefix + "PreStopCommand.", this.PreStopCommand);
+        this.setParamSimple(map, prefix + "GrpcEnable", this.GrpcEnable);
+        this.setParamObj(map, prefix + "HealthProbe.", this.HealthProbe);
 
     }
 }

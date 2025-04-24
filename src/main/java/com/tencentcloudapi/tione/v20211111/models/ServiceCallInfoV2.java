@@ -56,6 +56,27 @@ public class ServiceCallInfoV2 extends AbstractModel {
     private String AuthToken;
 
     /**
+    * LLM token 列表
+    */
+    @SerializedName("AuthTokens")
+    @Expose
+    private AuthToken [] AuthTokens;
+
+    /**
+    * 是否开启限流
+    */
+    @SerializedName("EnableLimit")
+    @Expose
+    private Boolean EnableLimit;
+
+    /**
+    * 访问grpc时需携带的虚拟Host
+    */
+    @SerializedName("GrpcHost")
+    @Expose
+    private String GrpcHost;
+
+    /**
      * Get 服务组id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceGroupId 服务组id
@@ -135,6 +156,54 @@ public class ServiceCallInfoV2 extends AbstractModel {
         this.AuthToken = AuthToken;
     }
 
+    /**
+     * Get LLM token 列表 
+     * @return AuthTokens LLM token 列表
+     */
+    public AuthToken [] getAuthTokens() {
+        return this.AuthTokens;
+    }
+
+    /**
+     * Set LLM token 列表
+     * @param AuthTokens LLM token 列表
+     */
+    public void setAuthTokens(AuthToken [] AuthTokens) {
+        this.AuthTokens = AuthTokens;
+    }
+
+    /**
+     * Get 是否开启限流 
+     * @return EnableLimit 是否开启限流
+     */
+    public Boolean getEnableLimit() {
+        return this.EnableLimit;
+    }
+
+    /**
+     * Set 是否开启限流
+     * @param EnableLimit 是否开启限流
+     */
+    public void setEnableLimit(Boolean EnableLimit) {
+        this.EnableLimit = EnableLimit;
+    }
+
+    /**
+     * Get 访问grpc时需携带的虚拟Host 
+     * @return GrpcHost 访问grpc时需携带的虚拟Host
+     */
+    public String getGrpcHost() {
+        return this.GrpcHost;
+    }
+
+    /**
+     * Set 访问grpc时需携带的虚拟Host
+     * @param GrpcHost 访问grpc时需携带的虚拟Host
+     */
+    public void setGrpcHost(String GrpcHost) {
+        this.GrpcHost = GrpcHost;
+    }
+
     public ServiceCallInfoV2() {
     }
 
@@ -155,6 +224,18 @@ public class ServiceCallInfoV2 extends AbstractModel {
         if (source.AuthToken != null) {
             this.AuthToken = new String(source.AuthToken);
         }
+        if (source.AuthTokens != null) {
+            this.AuthTokens = new AuthToken[source.AuthTokens.length];
+            for (int i = 0; i < source.AuthTokens.length; i++) {
+                this.AuthTokens[i] = new AuthToken(source.AuthTokens[i]);
+            }
+        }
+        if (source.EnableLimit != null) {
+            this.EnableLimit = new Boolean(source.EnableLimit);
+        }
+        if (source.GrpcHost != null) {
+            this.GrpcHost = new String(source.GrpcHost);
+        }
     }
 
 
@@ -166,6 +247,9 @@ public class ServiceCallInfoV2 extends AbstractModel {
         this.setParamSimple(map, prefix + "InternetEndpoint", this.InternetEndpoint);
         this.setParamSimple(map, prefix + "AuthorizationEnable", this.AuthorizationEnable);
         this.setParamSimple(map, prefix + "AuthToken", this.AuthToken);
+        this.setParamArrayObj(map, prefix + "AuthTokens.", this.AuthTokens);
+        this.setParamSimple(map, prefix + "EnableLimit", this.EnableLimit);
+        this.setParamSimple(map, prefix + "GrpcHost", this.GrpcHost);
 
     }
 }

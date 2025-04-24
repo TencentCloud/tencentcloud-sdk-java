@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRabbitMQUserRequest extends AbstractModel {
 
     /**
-    * 集群实例Id
+    * 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,7 +38,7 @@ public class CreateRabbitMQUserRequest extends AbstractModel {
     private String User;
 
     /**
-    * 密码，登录时使用
+    * 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
     */
     @SerializedName("Password")
     @Expose
@@ -74,16 +74,16 @@ management：普通控制台用户，monitoring：管理型控制台用户，其
     private Long MaxChannels;
 
     /**
-     * Get 集群实例Id 
-     * @return InstanceId 集群实例Id
+     * Get 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。 
+     * @return InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例Id
-     * @param InstanceId 集群实例Id
+     * Set 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * @param InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -106,16 +106,16 @@ management：普通控制台用户，monitoring：管理型控制台用户，其
     }
 
     /**
-     * Get 密码，登录时使用 
-     * @return Password 密码，登录时使用
+     * Get 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项 
+     * @return Password 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 密码，登录时使用
-     * @param Password 密码，登录时使用
+     * Set 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
+     * @param Password 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
      */
     public void setPassword(String Password) {
         this.Password = Password;

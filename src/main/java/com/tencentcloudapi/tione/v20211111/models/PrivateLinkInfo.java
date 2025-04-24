@@ -64,6 +64,13 @@ public class PrivateLinkInfo extends AbstractModel {
     private String State;
 
     /**
+    * grpc内网调用地址
+    */
+    @SerializedName("InnerGrpcAddr")
+    @Expose
+    private String [] InnerGrpcAddr;
+
+    /**
      * Get 私有连接所在的VPCID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId 私有连接所在的VPCID
@@ -163,6 +170,22 @@ public class PrivateLinkInfo extends AbstractModel {
         this.State = State;
     }
 
+    /**
+     * Get grpc内网调用地址 
+     * @return InnerGrpcAddr grpc内网调用地址
+     */
+    public String [] getInnerGrpcAddr() {
+        return this.InnerGrpcAddr;
+    }
+
+    /**
+     * Set grpc内网调用地址
+     * @param InnerGrpcAddr grpc内网调用地址
+     */
+    public void setInnerGrpcAddr(String [] InnerGrpcAddr) {
+        this.InnerGrpcAddr = InnerGrpcAddr;
+    }
+
     public PrivateLinkInfo() {
     }
 
@@ -192,6 +215,12 @@ public class PrivateLinkInfo extends AbstractModel {
         if (source.State != null) {
             this.State = new String(source.State);
         }
+        if (source.InnerGrpcAddr != null) {
+            this.InnerGrpcAddr = new String[source.InnerGrpcAddr.length];
+            for (int i = 0; i < source.InnerGrpcAddr.length; i++) {
+                this.InnerGrpcAddr[i] = new String(source.InnerGrpcAddr[i]);
+            }
+        }
     }
 
 
@@ -204,6 +233,7 @@ public class PrivateLinkInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "InnerHttpAddr.", this.InnerHttpAddr);
         this.setParamArraySimple(map, prefix + "InnerHttpsAddr.", this.InnerHttpsAddr);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamArraySimple(map, prefix + "InnerGrpcAddr.", this.InnerGrpcAddr);
 
     }
 }

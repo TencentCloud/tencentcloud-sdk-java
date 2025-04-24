@@ -31,14 +31,14 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     private Long [] ZoneIds;
 
     /**
-    * 私有网络VpcId
+    * 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络SubnetId
+    * 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -52,7 +52,16 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     private String ClusterName;
 
     /**
-    * 节点规格,基础型rabbit-vip-basic-1,标准型rabbit-vip-basic-2,高阶1型rabbit-vip-basic-3,高阶2型rabbit-vip-basic-4。不传默认为基础型
+    * 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为 4C8G：rabbit-vip-basic-1
     */
     @SerializedName("NodeSpec")
     @Expose
@@ -73,14 +82,14 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     private Long StorageSize;
 
     /**
-    * 镜像队列,不传默认为false
+    * 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
     */
     @SerializedName("EnableCreateDefaultHaMirrorQueue")
     @Expose
     private Boolean EnableCreateDefaultHaMirrorQueue;
 
     /**
-    * 预付费使用。自动续费,不传默认为true
+    * 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -122,7 +131,7 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     private Tag [] ResourceTags;
 
     /**
-    * 公网带宽大小，单位 M
+    * 公网带宽大小，单位 Mbps
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -152,32 +161,32 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 私有网络VpcId 
-     * @return VpcId 私有网络VpcId
+     * Get 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。 
+     * @return VpcId 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络VpcId
-     * @param VpcId 私有网络VpcId
+     * Set 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+     * @param VpcId 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络SubnetId 
-     * @return SubnetId 私有网络SubnetId
+     * Get 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。 
+     * @return SubnetId 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 私有网络SubnetId
-     * @param SubnetId 私有网络SubnetId
+     * Set 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+     * @param SubnetId 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -200,16 +209,52 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 节点规格,基础型rabbit-vip-basic-1,标准型rabbit-vip-basic-2,高阶1型rabbit-vip-basic-3,高阶2型rabbit-vip-basic-4。不传默认为基础型 
-     * @return NodeSpec 节点规格,基础型rabbit-vip-basic-1,标准型rabbit-vip-basic-2,高阶1型rabbit-vip-basic-3,高阶2型rabbit-vip-basic-4。不传默认为基础型
+     * Get 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为 4C8G：rabbit-vip-basic-1 
+     * @return NodeSpec 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为 4C8G：rabbit-vip-basic-1
      */
     public String getNodeSpec() {
         return this.NodeSpec;
     }
 
     /**
-     * Set 节点规格,基础型rabbit-vip-basic-1,标准型rabbit-vip-basic-2,高阶1型rabbit-vip-basic-3,高阶2型rabbit-vip-basic-4。不传默认为基础型
-     * @param NodeSpec 节点规格,基础型rabbit-vip-basic-1,标准型rabbit-vip-basic-2,高阶1型rabbit-vip-basic-3,高阶2型rabbit-vip-basic-4。不传默认为基础型
+     * Set 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为 4C8G：rabbit-vip-basic-1
+     * @param NodeSpec 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为 4C8G：rabbit-vip-basic-1
      */
     public void setNodeSpec(String NodeSpec) {
         this.NodeSpec = NodeSpec;
@@ -248,32 +293,32 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 镜像队列,不传默认为false 
-     * @return EnableCreateDefaultHaMirrorQueue 镜像队列,不传默认为false
+     * Get 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false 
+     * @return EnableCreateDefaultHaMirrorQueue 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
      */
     public Boolean getEnableCreateDefaultHaMirrorQueue() {
         return this.EnableCreateDefaultHaMirrorQueue;
     }
 
     /**
-     * Set 镜像队列,不传默认为false
-     * @param EnableCreateDefaultHaMirrorQueue 镜像队列,不传默认为false
+     * Set 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
+     * @param EnableCreateDefaultHaMirrorQueue 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
      */
     public void setEnableCreateDefaultHaMirrorQueue(Boolean EnableCreateDefaultHaMirrorQueue) {
         this.EnableCreateDefaultHaMirrorQueue = EnableCreateDefaultHaMirrorQueue;
     }
 
     /**
-     * Get 预付费使用。自动续费,不传默认为true 
-     * @return AutoRenewFlag 预付费使用。自动续费,不传默认为true
+     * Get 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true 
+     * @return AutoRenewFlag 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
      */
     public Boolean getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 预付费使用。自动续费,不传默认为true
-     * @param AutoRenewFlag 预付费使用。自动续费,不传默认为true
+     * Set 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
+     * @param AutoRenewFlag 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
      */
     public void setAutoRenewFlag(Boolean AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -360,16 +405,16 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 公网带宽大小，单位 M 
-     * @return Bandwidth 公网带宽大小，单位 M
+     * Get 公网带宽大小，单位 Mbps 
+     * @return Bandwidth 公网带宽大小，单位 Mbps
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 公网带宽大小，单位 M
-     * @param Bandwidth 公网带宽大小，单位 M
+     * Set 公网带宽大小，单位 Mbps
+     * @param Bandwidth 公网带宽大小，单位 Mbps
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
