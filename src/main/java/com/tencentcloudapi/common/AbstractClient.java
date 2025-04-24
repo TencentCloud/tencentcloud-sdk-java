@@ -48,28 +48,70 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+/**
+ * AbstractClient provides the basic functionalities for interacting with Tencent Cloud services.
+ * It handles request signing, sending, and response processing.
+ */
 public abstract class AbstractClient {
 
     public static final int HTTP_RSP_OK = 200;
     public static final String SDK_VERSION = "SDK_JAVA_3.1.1246";
     public Gson gson;
+
+    // User's security credentials (SecretId, SecretKey, Token).
     private Credential credential;
+
+    // Client configuration (e.g., timeout, endpoint).
     private ClientProfile profile;
+
+    // API endpoint URL.
     private String endpoint;
+
+    // Service name (e.g., "cvm").
     private String service;
+
+    // Region (e.g., "ap-guangzhou").
     private String region;
+
+    // API request path (usually "/").
     private String path;
+
+    // SDK version string.
     private String sdkVersion;
+
+    // API version string.
     private String apiVersion;
+
+    // Logger for debugging and information.
     private TCLog log;
+
+    // Handles HTTP connections.
     private HttpConnection httpConnection;
 
+    // Circuit breaker for handling region failures.
     private CircuitBreaker regionBreaker;
 
+    /**
+     * Constructor for AbstractClient with default client profile.
+     *
+     * @param endpoint   API endpoint URL.
+     * @param version    API version.
+     * @param credential User credentials.
+     * @param region     Region.
+     */
     public AbstractClient(String endpoint, String version, Credential credential, String region) {
         this(endpoint, version, credential, region, new ClientProfile());
     }
 
+    /**
+     * Constructor for AbstractClient with a custom client profile.
+     *
+     * @param endpoint   API endpoint URL.
+     * @param version    API version.
+     * @param credential User credentials.
+     * @param region     Region.
+     * @param profile    Client configuration profile.
+     */
     public AbstractClient(
             String endpoint,
             String version,
@@ -100,39 +142,68 @@ public abstract class AbstractClient {
         warmup();
     }
 
+    /**
+     * Gets the region.
+     *
+     * @return The region.
+     */
     public String getRegion() {
         return this.region;
     }
 
+    /**
+     * Sets the region.
+     *
+     * @param region The region to set.
+     */
     public void setRegion(String region) {
         this.region = region;
     }
 
+    /**
+     * Gets the client profile.
+     *
+     * @return The client profile.
+     */
     public ClientProfile getClientProfile() {
         return this.profile;
     }
 
+    /**
+     * Sets the client profile.
+     *
+     * @param profile The client profile to set.
+     */
     public void setClientProfile(ClientProfile profile) {
         this.profile = profile;
     }
 
+    /**
+     * Gets the credential.
+     *
+     * @return The credential.
+     */
     public Credential getCredential() {
         return this.credential;
     }
 
+    /**
+     * Sets the credential.
+     *
+     * @param credential The credential to set.
+     */
     public void setCredential(Credential credential) {
         this.credential = credential;
     }
 
     /**
-     * Use post/json with tc3-hmac-sha256 signature to call any action. Ignore request method and
-     * signature method defined in profile.
+     * Calls an API action with JSON payload using the TC3-HMAC-SHA256 signature.
+     * Ignores the request method and signature method defined in the profile.
      *
-     * @param action      Name of action to be called.
-     * @param jsonPayload Parameters of action serialized in json string format.
-     * @return Raw response from API if request succeeded, otherwise an exception will be raised
-     * instead of raw response
-     * @throws TencentCloudSDKException
+     * @param action      Name of the API action.
+     * @param jsonPayload JSON string containing the request parameters.
+     * @return Raw response from the API.
+     * @throws TencentCloudSDKException If an error occurs during the API call.
      */
     public String call(String action, String jsonPayload) throws TencentCloudSDKException {
         HashMap<String, String> headers = this.getHeaders();
@@ -146,15 +217,14 @@ public abstract class AbstractClient {
     }
 
     /**
-     * Use post application/octet-stream with tc3-hmac-sha256 signature to call specific action.
-     * Ignore request method and signature method defined in profile.
+     * Calls an API action with binary payload using the TC3-HMAC-SHA256 signature.
+     * Ignores the request method and signature method defined in the profile.
      *
-     * @param action  Name of action to be called.
-     * @param headers Parameters of the action, will be put in http header.
-     * @param body    octet-stream binary body.
-     * @return Raw response from API if request succeeded, otherwise an exception will be raised
-     * instead of raw response
-     * @throws TencentCloudSDKException
+     * @param action  Name of the API action.
+     * @param headers HTTP headers to include in the request.
+     * @param body    Binary payload (octet-stream).
+     * @return Raw response from the API.
+     * @throws TencentCloudSDKException If an error occurs during the API call.
      */
     public String callOctetStream(String action, HashMap<String, String> headers, byte[] body)
             throws TencentCloudSDKException {
@@ -167,6 +237,11 @@ public abstract class AbstractClient {
         return this.getResponseBody(url, headers, body);
     }
 
+    /**
+     * Generates common HTTP headers for Tencent Cloud API requests.
+     *
+     * @return A HashMap containing the headers.
+     */
     private HashMap<String, String> getHeaders() {
         HashMap<String, String> headers = new HashMap<String, String>();
         String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
@@ -188,6 +263,14 @@ public abstract class AbstractClient {
         return headers;
     }
 
+    /**
+     * Generates the authorization header for TC3-HMAC-SHA256 signature.
+     *
+     * @param headers HTTP headers.
+     * @param body    Request payload.
+     * @return The authorization header string.
+     * @throws TencentCloudSDKException If an error occurs during signature generation.
+     */
     private String getAuthorization(HashMap<String, String> headers, byte[] body)
             throws TencentCloudSDKException {
         String endpoint = this.getEndpoint();
@@ -251,6 +334,15 @@ public abstract class AbstractClient {
                 + signature;
     }
 
+    /**
+     * Sends the HTTP request and retrieves the response body.
+     *
+     * @param url     The request URL.
+     * @param headers HTTP headers.
+     * @param body    Request payload.
+     * @return The response body as a string.
+     * @throws TencentCloudSDKException If an error occurs during the request or response processing.
+     */
     private String getResponseBody(String url, HashMap<String, String> headers, byte[] body)
             throws TencentCloudSDKException {
         Builder hb = new Headers.Builder();
@@ -273,7 +365,8 @@ public abstract class AbstractClient {
             respbody = resp.body().string();
         } catch (IOException e) {
             String msg =
-                    "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
+                    "Cannot transfer response body to string, because Content-Length is too large, or Content-Length " +
+                            "and stream length disagree.";
             log.info(msg);
             throw new TencentCloudSDKException(msg, e);
         }
@@ -356,10 +449,21 @@ public abstract class AbstractClient {
         }
     }
 
+    /**
+     * Executes an API request and returns the raw string response.
+     * Handles circuit breaking for region failover.
+     *
+     * @param request    The request object containing API parameters.
+     * @param actionName The name of the API action to be called.
+     * @return The raw string response from the API.
+     * @throws TencentCloudSDKException If an error occurs during the API call.
+     */
     protected String internalRequest(AbstractModel request, String actionName)
             throws TencentCloudSDKException {
 
         CircuitBreaker.Token breakerToken = null;
+        // Attempt to acquire a token from the circuit breaker.
+        // If the circuit is open, use the backup endpoint.
         if (regionBreaker != null) {
             breakerToken = regionBreaker.allow();
             if (!breakerToken.allowed) {
@@ -369,9 +473,10 @@ public abstract class AbstractClient {
 
         Response okRsp;
         try {
+            // Execute the raw API request.
             okRsp = internalRequestRaw(request, actionName);
         } catch (IOException e) {
-            // network failure, consider region failure
+            // Network failure: report to circuit breaker and throw exception.
             if (breakerToken != null) {
                 breakerToken.report(false);
             }
@@ -380,27 +485,34 @@ public abstract class AbstractClient {
 
         String strResp;
         try {
+            // Extract the response body as a string.
             strResp = okRsp.body().string();
         } catch (IOException e) {
-            String msg = "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
+            String msg = "Cannot transfer response body to string, because Content-Length is too large, or " +
+                    "Content-Length and stream length disagree.";
             log.info(msg);
             throw new TencentCloudSDKException(msg, e);
         }
 
         JsonResponseModel<JsonResponseErrModel> errResp;
         try {
+            // Deserialize the response to check for errors.
             Type errType = new TypeToken<JsonResponseModel<JsonResponseErrModel>>() {
             }.getType();
             errResp = gson.fromJson(strResp, errType);
         } catch (JsonSyntaxException e) {
+            // Invalid JSON response: log and throw exception.
             String msg = "json is not a valid representation for an object of type";
             log.info(msg);
             throw new TencentCloudSDKException(msg, e);
         }
 
+        // Check for API errors in the response.
         if (errResp.response.error != null) {
             if (breakerToken != null) {
+                // Report the success/failure of the request to the circuit breaker.
                 JsonResponseErrModel error = errResp.response;
+                // Consider a region "OK" if we get a valid requestId and no InternalError.
                 boolean regionOk = error.requestId != null
                         && !error.requestId.isEmpty()
                         && error.error.code != null
@@ -416,9 +528,22 @@ public abstract class AbstractClient {
         return strResp;
     }
 
+    /**
+     * Executes an API request and returns the deserialized response object.
+     * Handles circuit breaking for region failover.
+     *
+     * @param request    The request object containing API parameters.
+     * @param actionName The name of the API action to be called.
+     * @param typeOfT    The class of the response object to deserialize to.
+     * @param <T>        The type of the response object.
+     * @return The deserialized response object.
+     * @throws TencentCloudSDKException If an error occurs during the API call.
+     */
     protected <T> T internalRequest(AbstractModel request, String actionName, Class<T> typeOfT)
             throws TencentCloudSDKException {
         CircuitBreaker.Token breakerToken = null;
+        // Attempt to acquire a token from the circuit breaker.
+        // If the circuit is open, use the backup endpoint.
         if (regionBreaker != null) {
             breakerToken = regionBreaker.allow();
             if (!breakerToken.allowed) {
@@ -433,7 +558,7 @@ public abstract class AbstractClient {
             }
             return processResponseJson(resp, typeOfT, breakerToken);
         } catch (IOException e) {
-            // network failure, consider region failure
+            // Network failure: report to circuit breaker and throw exception.
             if (breakerToken != null) {
                 breakerToken.report(false);
             }
@@ -441,25 +566,48 @@ public abstract class AbstractClient {
         }
     }
 
+    /**
+     * Processes a Server-Sent Events (SSE) response.
+     *
+     * @param resp         The raw HTTP response.
+     * @param typeOfT      The class of the response model.
+     * @param breakerToken The circuit breaker token.
+     * @param <T>          The type of the response model.
+     * @return The SSE response model.
+     * @throws TencentCloudSDKException If an error occurs during processing.
+     */
     protected <T> T processResponseSSE(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken) throws TencentCloudSDKException {
         SSEResponseModel responseModel;
         try {
+            // Create a new instance of the response model.
             responseModel = (SSEResponseModel) typeOfT.newInstance();
         } catch (InstantiationException | IllegalAccessException e) {
             throw new TencentCloudSDKException("", e);
         }
+        // Set request ID and circuit breaker token in the response model.
         responseModel.setRequestId(resp.header("X-TC-RequestId"));
         responseModel.setToken(breakerToken);
         responseModel.setResponse(resp);
         return (T) responseModel;
     }
 
+    /**
+     * Processes a JSON response.
+     *
+     * @param resp         The raw HTTP response.
+     * @param typeOfT      The class of the response object to deserialize to.
+     * @param breakerToken The circuit breaker token.
+     * @param <T>          The type of the response object.
+     * @return The deserialized response object.
+     * @throws TencentCloudSDKException If an error occurs during processing.
+     */
     protected <T> T processResponseJson(Response resp, Class<T> typeOfT, CircuitBreaker.Token breakerToken) throws TencentCloudSDKException {
         String body;
         try {
             body = resp.body().string();
         } catch (IOException e) {
-            String msg = "Cannot transfer response body to string, because Content-Length is too large, or Content-Length and stream length disagree.";
+            String msg = "Cannot transfer response body to string, because Content-Length is too large, or " +
+                    "Content-Length and stream length disagree.";
             log.info(msg);
             throw new TencentCloudSDKException(msg, e);
         }
@@ -475,9 +623,12 @@ public abstract class AbstractClient {
             throw new TencentCloudSDKException(msg, e);
         }
 
+        // Check for API errors in the response.
         if (errResp.response.error != null) {
             if (breakerToken != null) {
+                // Report the success/failure of the request to the circuit breaker.
                 JsonResponseErrModel error = errResp.response;
+                // Consider a region "OK" if we get a valid requestId and no InternalError.
                 boolean regionOk = error.requestId != null
                         && !error.requestId.isEmpty()
                         && error.error.code != null
@@ -490,10 +641,20 @@ public abstract class AbstractClient {
                     errResp.response.error.code);
         }
 
+        // Deserialize the successful response into the desired object type.
         Type type = TypeToken.getParameterized(JsonResponseModel.class, typeOfT).getType();
         return ((JsonResponseModel<T>) gson.fromJson(body, type)).response;
     }
 
+    /**
+     * Executes the raw API request and returns the HTTP Response object.
+     *
+     * @param request    The request object containing API parameters.
+     * @param actionName The name of the API action to be called.
+     * @return The raw HTTP Response object.
+     * @throws TencentCloudSDKException If an error occurs during the API call.
+     * @throws IOException              If an I/O error occurs.
+     */
     protected Response internalRequestRaw(AbstractModel request, String actionName)
             throws TencentCloudSDKException, IOException {
         Response okRsp = null;
@@ -529,6 +690,7 @@ public abstract class AbstractClient {
                     "Signature method " + sm + " is invalid or not supported yet.");
         }
 
+        // Check the HTTP response code.
         if (okRsp.code() != AbstractClient.HTTP_RSP_OK) {
             String msg = "response code is " + okRsp.code() + ", not 200";
             log.info(msg);
@@ -537,6 +699,16 @@ public abstract class AbstractClient {
         return okRsp;
     }
 
+    /**
+     * Executes an API request using the older signature methods (HmacSHA1 or HmacSHA256).
+     *
+     * @param endpoint The API endpoint.
+     * @param request  The request object.
+     * @param action   The API action name.
+     * @return The HTTP Response object.
+     * @throws TencentCloudSDKException If an error occurs.
+     * @throws IOException              If an I/O error occurs.
+     */
     private Response doRequest(String endpoint, AbstractModel request, String action)
             throws TencentCloudSDKException, IOException {
         HashMap<String, String> param = new HashMap<String, String>();
@@ -558,6 +730,16 @@ public abstract class AbstractClient {
         }
     }
 
+    /**
+     * Executes an API request using the TC3-HMAC-SHA256 signature method.
+     *
+     * @param endpoint The API endpoint.
+     * @param request  The request object.
+     * @param action   The API action name.
+     * @return The HTTP Response object.
+     * @throws TencentCloudSDKException If an error occurs.
+     * @throws IOException              If an I/O error occurs.
+     */
     private Response doRequestWithTC3(String endpoint, AbstractModel request, String action)
             throws TencentCloudSDKException, IOException {
         String httpRequestMethod = this.profile.getHttpProfile().getReqMethod();
@@ -587,6 +769,7 @@ public abstract class AbstractClient {
             // to ensure signature be correct, we have to set it here as well.
             contentType = "application/json; charset=utf-8";
         }
+        // Construct the canonical request for signature calculation.
         String canonicalUri = "/";
         String canonicalQueryString = this.getCanonicalQueryString(params, httpRequestMethod);
         String canonicalHeaders = "content-type:" + contentType + "\nhost:" + endpoint + "\n";
@@ -690,9 +873,18 @@ public abstract class AbstractClient {
         }
     }
 
+    /**
+     * Constructs the multipart payload for file uploads.
+     *
+     * @param request  The request object containing file parameters.
+     * @param boundary The boundary string to separate parts of the multipart data.
+     * @return The byte array representing the multipart payload.
+     * @throws Exception If an error occurs during payload construction.
+     */
     private byte[] getMultipartPayload(AbstractModel request, String boundary) throws Exception {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         String[] binaryParams = request.getBinaryParams();
+        // Iterate through each parameter in the multipart request.
         for (Map.Entry<String, byte[]> entry : request.getMultipartRequestParams().entrySet()) {
             baos.write("--".getBytes(StandardCharsets.UTF_8));
             baos.write(boundary.getBytes(StandardCharsets.UTF_8));
@@ -710,6 +902,7 @@ public abstract class AbstractClient {
             baos.write(entry.getValue());
             baos.write("\r\n".getBytes(StandardCharsets.UTF_8));
         }
+        // Write the closing boundary if there's any data.
         if (baos.size() != 0) {
             baos.write("--".getBytes(StandardCharsets.UTF_8));
             baos.write(boundary.getBytes(StandardCharsets.UTF_8));
@@ -720,12 +913,22 @@ public abstract class AbstractClient {
         return bytes;
     }
 
+    /**
+     * Generates the canonical query string for GET requests.
+     *
+     * @param params The map of request parameters.
+     * @param method The HTTP method (should be GET).
+     * @return The canonical query string.
+     * @throws TencentCloudSDKException If UTF-8 encoding is not supported.
+     */
     private String getCanonicalQueryString(HashMap<String, String> params, String method)
             throws TencentCloudSDKException {
+        // POST requests don't have a query string in the signature.
         if (method != null && method.equals(HttpProfile.REQ_POST)) {
             return "";
         }
         StringBuilder queryString = new StringBuilder("");
+        // Iterate through each parameter and build the query string.
         for (Map.Entry<String, String> entry : params.entrySet()) {
             String v;
             try {
@@ -735,6 +938,7 @@ public abstract class AbstractClient {
             }
             queryString.append("&").append(entry.getKey()).append("=").append(v);
         }
+        // Remove the leading '&' if the query string is not empty.
         if (queryString.length() == 0) {
             return "";
         } else {
@@ -742,6 +946,14 @@ public abstract class AbstractClient {
         }
     }
 
+    /**
+     * Formats the request data for signing (older signature methods).
+     *
+     * @param action The API action name.
+     * @param param  The map of request parameters.
+     * @return The formatted string for signing.
+     * @throws TencentCloudSDKException If UTF-8 encoding is not supported.
+     */
     private String formatRequestData(String action, Map<String, String> param)
             throws TencentCloudSDKException {
         param.put("Action", action);
@@ -750,6 +962,7 @@ public abstract class AbstractClient {
         param.put("Timestamp", String.valueOf(System.currentTimeMillis() / 1000));
         param.put("Version", this.apiVersion);
 
+        // Add SecretId, Region, SignatureMethod, and Token if available.
         if (this.credential.getSecretId() != null && (!this.credential.getSecretId().isEmpty())) {
             param.put("SecretId", this.credential.getSecretId());
         }
@@ -772,17 +985,20 @@ public abstract class AbstractClient {
 
         String endpoint = this.getEndpoint();
 
+        // Generate the string to be signed.
         String sigInParam =
                 Sign.makeSignPlainText(
                         new TreeMap<String, String>(param),
                         this.profile.getHttpProfile().getReqMethod(),
                         endpoint,
                         this.path);
+        // Generate the signature.
         String sigOutParam =
                 Sign.sign(this.credential.getSecretKey(), sigInParam, this.profile.getSignMethod());
 
         String strParam = "";
         try {
+            // URL-encode each parameter and construct the query string.
             for (Map.Entry<String, String> entry : param.entrySet()) {
                 strParam +=
                         (URLEncoder.encode(entry.getKey(), "utf-8")
@@ -798,26 +1014,31 @@ public abstract class AbstractClient {
     }
 
     /**
-     * warm up, try to avoid unnecessary cost in the first request
+     * Performs initializations to avoid performance costs in the first request.
      */
     private void warmup() {
         try {
-            // it happens in SDK signature process.
-            // first invoke costs around 250 ms.
+            // Initialize Mac instances (used for signature calculation).
+            // First invoke costs around 250 ms.
             Mac.getInstance("HmacSHA1");
             Mac.getInstance("HmacSHA256");
-            // it happens inside okhttp, but I think any https framework/package will do the same.
-            // first invoke costs around 150 ms.
+            // Initialize SSLContext (used for HTTPS connections).
+            // First invoke costs around 150 ms.
             SSLContext sslContext = SSLContext.getInstance("TLS");
             sslContext.init(null, null, null);
         } catch (Exception e) {
-            // ignore but print message to console
+            // Ignore but print the stack trace to the console for debugging.
             e.printStackTrace();
         }
     }
 
+    /**
+     * Gets the API endpoint.
+     *
+     * @return The API endpoint URL.
+     */
     private String getEndpoint() {
-        // in case user has reset endpoint after init this client
+        // Use the endpoint from the profile if it's set, otherwise construct it from service and domain.
         if (null != this.profile.getHttpProfile().getEndpoint()) {
             return this.profile.getHttpProfile().getEndpoint();
         } else {
