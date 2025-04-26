@@ -38,7 +38,7 @@ public class SmartStructuralProRequest extends AbstractModel {
     private String ImageBase64;
 
     /**
-    * 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+    * 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为前3页。
     */
     @SerializedName("PdfPageNumber")
     @Expose
@@ -50,6 +50,15 @@ public class SmartStructuralProRequest extends AbstractModel {
     @SerializedName("ItemNames")
     @Expose
     private String [] ItemNames;
+
+    /**
+    * true：仅输出自定义字段
+flase：输出默认字段+自定义字段
+默认true
+    */
+    @SerializedName("ItemNamesShowMode")
+    @Expose
+    private Boolean ItemNamesShowMode;
 
     /**
     * 是否开启全文字段识别
@@ -75,6 +84,7 @@ AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
+Table -- 表格模版
     */
     @SerializedName("ConfigId")
     @Expose
@@ -134,16 +144,16 @@ ArticalRecognize -- 手写作文模版
     }
 
     /**
-     * Get 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。 
-     * @return PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     * Get 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为前3页。 
+     * @return PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为前3页。
      */
     public Long getPdfPageNumber() {
         return this.PdfPageNumber;
     }
 
     /**
-     * Set 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
-     * @param PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     * Set 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为前3页。
+     * @param PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为前3页。
      */
     public void setPdfPageNumber(Long PdfPageNumber) {
         this.PdfPageNumber = PdfPageNumber;
@@ -163,6 +173,30 @@ ArticalRecognize -- 手写作文模版
      */
     public void setItemNames(String [] ItemNames) {
         this.ItemNames = ItemNames;
+    }
+
+    /**
+     * Get true：仅输出自定义字段
+flase：输出默认字段+自定义字段
+默认true 
+     * @return ItemNamesShowMode true：仅输出自定义字段
+flase：输出默认字段+自定义字段
+默认true
+     */
+    public Boolean getItemNamesShowMode() {
+        return this.ItemNamesShowMode;
+    }
+
+    /**
+     * Set true：仅输出自定义字段
+flase：输出默认字段+自定义字段
+默认true
+     * @param ItemNamesShowMode true：仅输出自定义字段
+flase：输出默认字段+自定义字段
+默认true
+     */
+    public void setItemNamesShowMode(Boolean ItemNamesShowMode) {
+        this.ItemNamesShowMode = ItemNamesShowMode;
     }
 
     /**
@@ -197,7 +231,8 @@ BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
-ArticalRecognize -- 手写作文模版 
+ArticalRecognize -- 手写作文模版
+Table -- 表格模版 
      * @return ConfigId 配置id支持：
 General -- 通用场景 
 InvoiceEng -- 国际invoice模版 
@@ -214,6 +249,7 @@ AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
+Table -- 表格模版
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -236,6 +272,7 @@ AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
+Table -- 表格模版
      * @param ConfigId 配置id支持：
 General -- 通用场景 
 InvoiceEng -- 国际invoice模版 
@@ -252,6 +289,7 @@ AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
+Table -- 表格模版
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
@@ -328,6 +366,9 @@ ArticalRecognize -- 手写作文模版
                 this.ItemNames[i] = new String(source.ItemNames[i]);
             }
         }
+        if (source.ItemNamesShowMode != null) {
+            this.ItemNamesShowMode = new Boolean(source.ItemNamesShowMode);
+        }
         if (source.ReturnFullText != null) {
             this.ReturnFullText = new Boolean(source.ReturnFullText);
         }
@@ -354,6 +395,7 @@ ArticalRecognize -- 手写作文模版
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         this.setParamArraySimple(map, prefix + "ItemNames.", this.ItemNames);
+        this.setParamSimple(map, prefix + "ItemNamesShowMode", this.ItemNamesShowMode);
         this.setParamSimple(map, prefix + "ReturnFullText", this.ReturnFullText);
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
         this.setParamSimple(map, prefix + "EnableCoord", this.EnableCoord);
