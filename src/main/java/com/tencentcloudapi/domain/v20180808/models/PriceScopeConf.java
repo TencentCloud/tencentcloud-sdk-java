@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class PriceScopeConf extends AbstractModel {
 
     /**
-    * 最高价格
+    * 最高价格 单位元
     */
     @SerializedName("MaxPrice")
     @Expose
     private Float MaxPrice;
 
     /**
-    * 最低价格
+    * 最低价格 单位元
     */
     @SerializedName("MinPrice")
     @Expose
     private Float MinPrice;
 
     /**
-    * 价格幅度
+    * 价格幅度 单位元
     */
     @SerializedName("Price")
     @Expose
     private Float Price;
 
     /**
-    * 保证金
+    * 保证金 单位元
     */
     @SerializedName("DepositPrice")
     @Expose
     private Float DepositPrice;
 
     /**
-     * Get 最高价格 
-     * @return MaxPrice 最高价格
+     * Get 最高价格 单位元 
+     * @return MaxPrice 最高价格 单位元
      */
     public Float getMaxPrice() {
         return this.MaxPrice;
     }
 
     /**
-     * Set 最高价格
-     * @param MaxPrice 最高价格
+     * Set 最高价格 单位元
+     * @param MaxPrice 最高价格 单位元
      */
     public void setMaxPrice(Float MaxPrice) {
         this.MaxPrice = MaxPrice;
     }
 
     /**
-     * Get 最低价格 
-     * @return MinPrice 最低价格
+     * Get 最低价格 单位元 
+     * @return MinPrice 最低价格 单位元
      */
     public Float getMinPrice() {
         return this.MinPrice;
     }
 
     /**
-     * Set 最低价格
-     * @param MinPrice 最低价格
+     * Set 最低价格 单位元
+     * @param MinPrice 最低价格 单位元
      */
     public void setMinPrice(Float MinPrice) {
         this.MinPrice = MinPrice;
     }
 
     /**
-     * Get 价格幅度 
-     * @return Price 价格幅度
+     * Get 价格幅度 单位元 
+     * @return Price 价格幅度 单位元
      */
     public Float getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 价格幅度
-     * @param Price 价格幅度
+     * Set 价格幅度 单位元
+     * @param Price 价格幅度 单位元
      */
     public void setPrice(Float Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 保证金 
-     * @return DepositPrice 保证金
+     * Get 保证金 单位元 
+     * @return DepositPrice 保证金 单位元
      */
     public Float getDepositPrice() {
         return this.DepositPrice;
     }
 
     /**
-     * Set 保证金
-     * @param DepositPrice 保证金
+     * Set 保证金 单位元
+     * @param DepositPrice 保证金 单位元
      */
     public void setDepositPrice(Float DepositPrice) {
         this.DepositPrice = DepositPrice;

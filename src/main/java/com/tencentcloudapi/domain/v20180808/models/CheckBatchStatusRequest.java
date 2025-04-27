@@ -25,14 +25,41 @@ public class CheckBatchStatusRequest extends AbstractModel {
 
     /**
     * 操作日志 ID数组，最多 200 个
+可通过任意批量操作接口获取，例如：
+BatchModifyDomainInfo
+ModifyDomainDNSBatch
+ModifyDomainOwnerBatch
+UpdateProhibitionBatch
+TransferProhibitionBatch
+TransferInDomainBatch
+TransferInDomainBatchBuy
+CancelTransferOutInBatch
     */
     @SerializedName("LogIds")
     @Expose
     private Long [] LogIds;
 
     /**
-     * Get 操作日志 ID数组，最多 200 个 
+     * Get 操作日志 ID数组，最多 200 个
+可通过任意批量操作接口获取，例如：
+BatchModifyDomainInfo
+ModifyDomainDNSBatch
+ModifyDomainOwnerBatch
+UpdateProhibitionBatch
+TransferProhibitionBatch
+TransferInDomainBatch
+TransferInDomainBatchBuy
+CancelTransferOutInBatch 
      * @return LogIds 操作日志 ID数组，最多 200 个
+可通过任意批量操作接口获取，例如：
+BatchModifyDomainInfo
+ModifyDomainDNSBatch
+ModifyDomainOwnerBatch
+UpdateProhibitionBatch
+TransferProhibitionBatch
+TransferInDomainBatch
+TransferInDomainBatchBuy
+CancelTransferOutInBatch
      */
     public Long [] getLogIds() {
         return this.LogIds;
@@ -40,7 +67,25 @@ public class CheckBatchStatusRequest extends AbstractModel {
 
     /**
      * Set 操作日志 ID数组，最多 200 个
+可通过任意批量操作接口获取，例如：
+BatchModifyDomainInfo
+ModifyDomainDNSBatch
+ModifyDomainOwnerBatch
+UpdateProhibitionBatch
+TransferProhibitionBatch
+TransferInDomainBatch
+TransferInDomainBatchBuy
+CancelTransferOutInBatch
      * @param LogIds 操作日志 ID数组，最多 200 个
+可通过任意批量操作接口获取，例如：
+BatchModifyDomainInfo
+ModifyDomainDNSBatch
+ModifyDomainOwnerBatch
+UpdateProhibitionBatch
+TransferProhibitionBatch
+TransferInDomainBatch
+TransferInDomainBatchBuy
+CancelTransferOutInBatch
      */
     public void setLogIds(Long [] LogIds) {
         this.LogIds = LogIds;

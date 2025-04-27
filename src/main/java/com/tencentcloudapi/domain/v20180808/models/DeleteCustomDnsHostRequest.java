@@ -25,6 +25,7 @@ public class DeleteCustomDnsHostRequest extends AbstractModel {
 
     /**
     * 域名实例ID
+可通过DescribeDomainList接口获取
     */
     @SerializedName("DomainId")
     @Expose
@@ -32,14 +33,17 @@ public class DeleteCustomDnsHostRequest extends AbstractModel {
 
     /**
     * DNS名称
+例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式
     */
     @SerializedName("DnsName")
     @Expose
     private String DnsName;
 
     /**
-     * Get 域名实例ID 
+     * Get 域名实例ID
+可通过DescribeDomainList接口获取 
      * @return DomainId 域名实例ID
+可通过DescribeDomainList接口获取
      */
     public String getDomainId() {
         return this.DomainId;
@@ -47,15 +51,19 @@ public class DeleteCustomDnsHostRequest extends AbstractModel {
 
     /**
      * Set 域名实例ID
+可通过DescribeDomainList接口获取
      * @param DomainId 域名实例ID
+可通过DescribeDomainList接口获取
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get DNS名称 
+     * Get DNS名称
+例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式 
      * @return DnsName DNS名称
+例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式
      */
     public String getDnsName() {
         return this.DnsName;
@@ -63,7 +71,9 @@ public class DeleteCustomDnsHostRequest extends AbstractModel {
 
     /**
      * Set DNS名称
+例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式
      * @param DnsName DNS名称
+例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式
      */
     public void setDnsName(String DnsName) {
         this.DnsName = DnsName;

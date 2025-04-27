@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DeleteWarningResponse extends AbstractModel {
 
     /**
+    * 操作个数
+    */
+    @SerializedName("Cnt")
+    @Expose
+    private Long Cnt;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 操作个数 
+     * @return Cnt 操作个数
+     */
+    public Long getCnt() {
+        return this.Cnt;
+    }
+
+    /**
+     * Set 操作个数
+     * @param Cnt 操作个数
+     */
+    public void setCnt(Long Cnt) {
+        this.Cnt = Cnt;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DeleteWarningResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteWarningResponse(DeleteWarningResponse source) {
+        if (source.Cnt != null) {
+            this.Cnt = new Long(source.Cnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DeleteWarningResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Cnt", this.Cnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

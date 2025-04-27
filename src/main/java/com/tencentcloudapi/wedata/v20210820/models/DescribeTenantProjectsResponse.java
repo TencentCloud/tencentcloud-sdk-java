@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfs.v20190719.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetUserQuotaResponse extends AbstractModel {
+public class DescribeTenantProjectsResponse extends AbstractModel {
 
     /**
-    * UID/GID信息
+    * 项目列表
     */
-    @SerializedName("UserId")
+    @SerializedName("Data")
     @Expose
-    private String UserId;
+    private ProjectPage Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class SetUserQuotaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get UID/GID信息 
-     * @return UserId UID/GID信息
+     * Get 项目列表 
+     * @return Data 项目列表
      */
-    public String getUserId() {
-        return this.UserId;
+    public ProjectPage getData() {
+        return this.Data;
     }
 
     /**
-     * Set UID/GID信息
-     * @param UserId UID/GID信息
+     * Set 项目列表
+     * @param Data 项目列表
      */
-    public void setUserId(String UserId) {
-        this.UserId = UserId;
+    public void setData(ProjectPage Data) {
+        this.Data = Data;
     }
 
     /**
@@ -69,16 +69,16 @@ public class SetUserQuotaResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public SetUserQuotaResponse() {
+    public DescribeTenantProjectsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SetUserQuotaResponse(SetUserQuotaResponse source) {
-        if (source.UserId != null) {
-            this.UserId = new String(source.UserId);
+    public DescribeTenantProjectsResponse(DescribeTenantProjectsResponse source) {
+        if (source.Data != null) {
+            this.Data = new ProjectPage(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class SetUserQuotaResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

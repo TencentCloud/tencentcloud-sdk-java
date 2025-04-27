@@ -26,6 +26,8 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
     /**
     * 托管实例 id。
 
+每次请求的上限为 100。
+
 参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
     */
@@ -34,7 +36,7 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+    * 过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
 
 - instance-name
@@ -104,9 +106,13 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
     /**
      * Get 托管实例 id。
 
+每次请求的上限为 100。
+
 参数不支持同时指定 `InstanceIds` 和 `Filters` 。
  
      * @return InstanceIds 托管实例 id。
+
+每次请求的上限为 100。
 
 参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
@@ -118,9 +124,13 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
     /**
      * Set 托管实例 id。
 
+每次请求的上限为 100。
+
 参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
      * @param InstanceIds 托管实例 id。
+
+每次请求的上限为 100。
 
 参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
@@ -130,7 +140,7 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+     * Get 过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
 
 - instance-name
@@ -178,7 +188,7 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 例如 Filter 为 {"Name": "tag:key1", "Values": ["v1", "v2"] } ，即查询所有标签为 key1:v1 或 key1:v2 的资源。
 
  
-     * @return Filters 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+     * @return Filters 过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
 
 - instance-name
@@ -232,7 +242,7 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+     * Set 过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
 
 - instance-name
@@ -280,7 +290,7 @@ public class DescribeRegisterInstancesRequest extends AbstractModel {
 例如 Filter 为 {"Name": "tag:key1", "Values": ["v1", "v2"] } ，即查询所有标签为 key1:v1 或 key1:v2 的资源。
 
 
-     * @param Filters 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+     * @param Filters 过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
 
 - instance-name

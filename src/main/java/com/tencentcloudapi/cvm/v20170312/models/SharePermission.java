@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class SharePermission extends AbstractModel {
 
     /**
-    * 镜像分享时间
+    * 镜像分享时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -38,16 +39,20 @@ public class SharePermission extends AbstractModel {
     private String AccountId;
 
     /**
-     * Get 镜像分享时间 
-     * @return CreatedTime 镜像分享时间
+     * Get 镜像分享时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。 
+     * @return CreatedTime 镜像分享时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 镜像分享时间
-     * @param CreatedTime 镜像分享时间
+     * Set 镜像分享时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param CreatedTime 镜像分享时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

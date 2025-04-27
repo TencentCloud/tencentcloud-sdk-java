@@ -24,32 +24,32 @@ import java.util.HashMap;
 public class ModifyLifecycleHookRequest extends AbstractModel {
 
     /**
-    * 生命周期挂钩ID。
+    * 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
     */
     @SerializedName("LifecycleHookId")
     @Expose
     private String LifecycleHookId;
 
     /**
-    * 生命周期挂钩名称。
+    * 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128。
     */
     @SerializedName("LifecycleHookName")
     @Expose
     private String LifecycleHookName;
 
     /**
-    * 进入生命周期挂钩场景，取值包括：
-<li> INSTANCE_LAUNCHING：实例启动后</li>
-<li> INSTANCE_TERMINATING：实例销毁前</li>
+    * 进入生命周期挂钩场景，取值范围如下:
+* INSTANCE_LAUNCHING: 扩容生命周期挂钩
+* INSTANCE_TERMINATING: 缩容生命周期挂钩
     */
     @SerializedName("LifecycleTransition")
     @Expose
     private String LifecycleTransition;
 
     /**
-    * 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值包括：
-<li> CONTINUE： 超时后继续伸缩活动</li> 
-<li> ABANDON：超时后终止伸缩活动</li> 
+    * 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+* CONTINUE: 默认值，表示继续执行扩缩容活动
+* ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。
     */
     @SerializedName("DefaultResult")
     @Expose
@@ -63,7 +63,7 @@ public class ModifyLifecycleHookRequest extends AbstractModel {
     private Long HeartbeatTimeout;
 
     /**
-    * 弹性伸缩向通知目标发送的附加信息。
+    * 弹性伸缩向通知目标发送的附加信息。NotificationMetadata 与 LifecycleCommand互斥，二者不可同时指定。
     */
     @SerializedName("NotificationMetadata")
     @Expose
@@ -77,94 +77,94 @@ public class ModifyLifecycleHookRequest extends AbstractModel {
     private String LifecycleTransitionType;
 
     /**
-    * 通知目标信息。
+    * 通知目标信息。NotificationTarget 与 LifecycleCommand互斥，二者不可同时指定。
     */
     @SerializedName("NotificationTarget")
     @Expose
     private NotificationTarget NotificationTarget;
 
     /**
-    * 远程命令执行对象。
+    * 远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand互斥，不可同时指定。
     */
     @SerializedName("LifecycleCommand")
     @Expose
     private LifecycleCommand LifecycleCommand;
 
     /**
-     * Get 生命周期挂钩ID。 
-     * @return LifecycleHookId 生命周期挂钩ID。
+     * Get 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。 
+     * @return LifecycleHookId 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
      */
     public String getLifecycleHookId() {
         return this.LifecycleHookId;
     }
 
     /**
-     * Set 生命周期挂钩ID。
-     * @param LifecycleHookId 生命周期挂钩ID。
+     * Set 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
+     * @param LifecycleHookId 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
      */
     public void setLifecycleHookId(String LifecycleHookId) {
         this.LifecycleHookId = LifecycleHookId;
     }
 
     /**
-     * Get 生命周期挂钩名称。 
-     * @return LifecycleHookName 生命周期挂钩名称。
+     * Get 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128。 
+     * @return LifecycleHookName 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128。
      */
     public String getLifecycleHookName() {
         return this.LifecycleHookName;
     }
 
     /**
-     * Set 生命周期挂钩名称。
-     * @param LifecycleHookName 生命周期挂钩名称。
+     * Set 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128。
+     * @param LifecycleHookName 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128。
      */
     public void setLifecycleHookName(String LifecycleHookName) {
         this.LifecycleHookName = LifecycleHookName;
     }
 
     /**
-     * Get 进入生命周期挂钩场景，取值包括：
-<li> INSTANCE_LAUNCHING：实例启动后</li>
-<li> INSTANCE_TERMINATING：实例销毁前</li> 
-     * @return LifecycleTransition 进入生命周期挂钩场景，取值包括：
-<li> INSTANCE_LAUNCHING：实例启动后</li>
-<li> INSTANCE_TERMINATING：实例销毁前</li>
+     * Get 进入生命周期挂钩场景，取值范围如下:
+* INSTANCE_LAUNCHING: 扩容生命周期挂钩
+* INSTANCE_TERMINATING: 缩容生命周期挂钩 
+     * @return LifecycleTransition 进入生命周期挂钩场景，取值范围如下:
+* INSTANCE_LAUNCHING: 扩容生命周期挂钩
+* INSTANCE_TERMINATING: 缩容生命周期挂钩
      */
     public String getLifecycleTransition() {
         return this.LifecycleTransition;
     }
 
     /**
-     * Set 进入生命周期挂钩场景，取值包括：
-<li> INSTANCE_LAUNCHING：实例启动后</li>
-<li> INSTANCE_TERMINATING：实例销毁前</li>
-     * @param LifecycleTransition 进入生命周期挂钩场景，取值包括：
-<li> INSTANCE_LAUNCHING：实例启动后</li>
-<li> INSTANCE_TERMINATING：实例销毁前</li>
+     * Set 进入生命周期挂钩场景，取值范围如下:
+* INSTANCE_LAUNCHING: 扩容生命周期挂钩
+* INSTANCE_TERMINATING: 缩容生命周期挂钩
+     * @param LifecycleTransition 进入生命周期挂钩场景，取值范围如下:
+* INSTANCE_LAUNCHING: 扩容生命周期挂钩
+* INSTANCE_TERMINATING: 缩容生命周期挂钩
      */
     public void setLifecycleTransition(String LifecycleTransition) {
         this.LifecycleTransition = LifecycleTransition;
     }
 
     /**
-     * Get 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值包括：
-<li> CONTINUE： 超时后继续伸缩活动</li> 
-<li> ABANDON：超时后终止伸缩活动</li>  
-     * @return DefaultResult 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值包括：
-<li> CONTINUE： 超时后继续伸缩活动</li> 
-<li> ABANDON：超时后终止伸缩活动</li> 
+     * Get 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+* CONTINUE: 默认值，表示继续执行扩缩容活动
+* ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。 
+     * @return DefaultResult 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+* CONTINUE: 默认值，表示继续执行扩缩容活动
+* ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。
      */
     public String getDefaultResult() {
         return this.DefaultResult;
     }
 
     /**
-     * Set 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值包括：
-<li> CONTINUE： 超时后继续伸缩活动</li> 
-<li> ABANDON：超时后终止伸缩活动</li> 
-     * @param DefaultResult 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值包括：
-<li> CONTINUE： 超时后继续伸缩活动</li> 
-<li> ABANDON：超时后终止伸缩活动</li> 
+     * Set 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+* CONTINUE: 默认值，表示继续执行扩缩容活动
+* ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。
+     * @param DefaultResult 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+* CONTINUE: 默认值，表示继续执行扩缩容活动
+* ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。
      */
     public void setDefaultResult(String DefaultResult) {
         this.DefaultResult = DefaultResult;
@@ -187,16 +187,16 @@ public class ModifyLifecycleHookRequest extends AbstractModel {
     }
 
     /**
-     * Get 弹性伸缩向通知目标发送的附加信息。 
-     * @return NotificationMetadata 弹性伸缩向通知目标发送的附加信息。
+     * Get 弹性伸缩向通知目标发送的附加信息。NotificationMetadata 与 LifecycleCommand互斥，二者不可同时指定。 
+     * @return NotificationMetadata 弹性伸缩向通知目标发送的附加信息。NotificationMetadata 与 LifecycleCommand互斥，二者不可同时指定。
      */
     public String getNotificationMetadata() {
         return this.NotificationMetadata;
     }
 
     /**
-     * Set 弹性伸缩向通知目标发送的附加信息。
-     * @param NotificationMetadata 弹性伸缩向通知目标发送的附加信息。
+     * Set 弹性伸缩向通知目标发送的附加信息。NotificationMetadata 与 LifecycleCommand互斥，二者不可同时指定。
+     * @param NotificationMetadata 弹性伸缩向通知目标发送的附加信息。NotificationMetadata 与 LifecycleCommand互斥，二者不可同时指定。
      */
     public void setNotificationMetadata(String NotificationMetadata) {
         this.NotificationMetadata = NotificationMetadata;
@@ -219,32 +219,32 @@ public class ModifyLifecycleHookRequest extends AbstractModel {
     }
 
     /**
-     * Get 通知目标信息。 
-     * @return NotificationTarget 通知目标信息。
+     * Get 通知目标信息。NotificationTarget 与 LifecycleCommand互斥，二者不可同时指定。 
+     * @return NotificationTarget 通知目标信息。NotificationTarget 与 LifecycleCommand互斥，二者不可同时指定。
      */
     public NotificationTarget getNotificationTarget() {
         return this.NotificationTarget;
     }
 
     /**
-     * Set 通知目标信息。
-     * @param NotificationTarget 通知目标信息。
+     * Set 通知目标信息。NotificationTarget 与 LifecycleCommand互斥，二者不可同时指定。
+     * @param NotificationTarget 通知目标信息。NotificationTarget 与 LifecycleCommand互斥，二者不可同时指定。
      */
     public void setNotificationTarget(NotificationTarget NotificationTarget) {
         this.NotificationTarget = NotificationTarget;
     }
 
     /**
-     * Get 远程命令执行对象。 
-     * @return LifecycleCommand 远程命令执行对象。
+     * Get 远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand互斥，不可同时指定。 
+     * @return LifecycleCommand 远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand互斥，不可同时指定。
      */
     public LifecycleCommand getLifecycleCommand() {
         return this.LifecycleCommand;
     }
 
     /**
-     * Set 远程命令执行对象。
-     * @param LifecycleCommand 远程命令执行对象。
+     * Set 远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand互斥，不可同时指定。
+     * @param LifecycleCommand 远程命令执行对象。通知参数 NotificationMetadata、NotificationTarget 与 LifecycleCommand互斥，不可同时指定。
      */
     public void setLifecycleCommand(LifecycleCommand LifecycleCommand) {
         this.LifecycleCommand = LifecycleCommand;

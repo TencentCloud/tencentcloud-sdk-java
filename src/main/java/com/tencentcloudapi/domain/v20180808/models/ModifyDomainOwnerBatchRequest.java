@@ -25,13 +25,14 @@ public class ModifyDomainOwnerBatchRequest extends AbstractModel {
 
     /**
     * 要过户的域名。
+一次提交不大于4000个
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * 转入账户的uin。
+    * 转入账户的主uin。
     */
     @SerializedName("NewOwnerUin")
     @Expose
@@ -52,8 +53,10 @@ public class ModifyDomainOwnerBatchRequest extends AbstractModel {
     private String NewOwnerAppId;
 
     /**
-     * Get 要过户的域名。 
+     * Get 要过户的域名。
+一次提交不大于4000个 
      * @return Domains 要过户的域名。
+一次提交不大于4000个
      */
     public String [] getDomains() {
         return this.Domains;
@@ -61,23 +64,25 @@ public class ModifyDomainOwnerBatchRequest extends AbstractModel {
 
     /**
      * Set 要过户的域名。
+一次提交不大于4000个
      * @param Domains 要过户的域名。
+一次提交不大于4000个
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get 转入账户的uin。 
-     * @return NewOwnerUin 转入账户的uin。
+     * Get 转入账户的主uin。 
+     * @return NewOwnerUin 转入账户的主uin。
      */
     public String getNewOwnerUin() {
         return this.NewOwnerUin;
     }
 
     /**
-     * Set 转入账户的uin。
-     * @param NewOwnerUin 转入账户的uin。
+     * Set 转入账户的主uin。
+     * @param NewOwnerUin 转入账户的主uin。
      */
     public void setNewOwnerUin(String NewOwnerUin) {
         this.NewOwnerUin = NewOwnerUin;

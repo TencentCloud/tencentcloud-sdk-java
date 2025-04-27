@@ -248,7 +248,7 @@ public class DeviceDetail extends AbstractModel {
     private String NGNStrategyVer;
 
     /**
-    * 最近登录账户的账号
+    * 最近登录账户的账号(账号系统用户账号)
     */
     @SerializedName("IOAUserName")
     @Expose
@@ -311,7 +311,7 @@ public class DeviceDetail extends AbstractModel {
     private String AccountGroupName;
 
     /**
-    * 最近登录账户的姓名
+    * 最近登录账户的姓名(账号系统用户姓名)
     */
     @SerializedName("AccountName")
     @Expose
@@ -323,6 +323,13 @@ public class DeviceDetail extends AbstractModel {
     @SerializedName("AccountGroupId")
     @Expose
     private Long AccountGroupId;
+
+    /**
+    * 终端备注名
+    */
+    @SerializedName("RemarkName")
+    @Expose
+    private String RemarkName;
 
     /**
      * Get 设备ID 
@@ -837,16 +844,16 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 最近登录账户的账号 
-     * @return IOAUserName 最近登录账户的账号
+     * Get 最近登录账户的账号(账号系统用户账号) 
+     * @return IOAUserName 最近登录账户的账号(账号系统用户账号)
      */
     public String getIOAUserName() {
         return this.IOAUserName;
     }
 
     /**
-     * Set 最近登录账户的账号
-     * @param IOAUserName 最近登录账户的账号
+     * Set 最近登录账户的账号(账号系统用户账号)
+     * @param IOAUserName 最近登录账户的账号(账号系统用户账号)
      */
     public void setIOAUserName(String IOAUserName) {
         this.IOAUserName = IOAUserName;
@@ -981,16 +988,16 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 最近登录账户的姓名 
-     * @return AccountName 最近登录账户的姓名
+     * Get 最近登录账户的姓名(账号系统用户姓名) 
+     * @return AccountName 最近登录账户的姓名(账号系统用户姓名)
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 最近登录账户的姓名
-     * @param AccountName 最近登录账户的姓名
+     * Set 最近登录账户的姓名(账号系统用户姓名)
+     * @param AccountName 最近登录账户的姓名(账号系统用户姓名)
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
@@ -1010,6 +1017,22 @@ public class DeviceDetail extends AbstractModel {
      */
     public void setAccountGroupId(Long AccountGroupId) {
         this.AccountGroupId = AccountGroupId;
+    }
+
+    /**
+     * Get 终端备注名 
+     * @return RemarkName 终端备注名
+     */
+    public String getRemarkName() {
+        return this.RemarkName;
+    }
+
+    /**
+     * Set 终端备注名
+     * @param RemarkName 终端备注名
+     */
+    public void setRemarkName(String RemarkName) {
+        this.RemarkName = RemarkName;
     }
 
     public DeviceDetail() {
@@ -1152,6 +1175,9 @@ public class DeviceDetail extends AbstractModel {
         if (source.AccountGroupId != null) {
             this.AccountGroupId = new Long(source.AccountGroupId);
         }
+        if (source.RemarkName != null) {
+            this.RemarkName = new String(source.RemarkName);
+        }
     }
 
 
@@ -1202,6 +1228,7 @@ public class DeviceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "AccountGroupName", this.AccountGroupName);
         this.setParamSimple(map, prefix + "AccountName", this.AccountName);
         this.setParamSimple(map, prefix + "AccountGroupId", this.AccountGroupId);
+        this.setParamSimple(map, prefix + "RemarkName", this.RemarkName);
 
     }
 }

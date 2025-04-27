@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DescribeBiddingSuccessfulDetailRequest extends AbstractModel {
 
     /**
-    * business_id
+    * 预约ID
+可通过DescribeBiddingSuccessfulList接口获取
     */
     @SerializedName("BusinessID")
     @Expose
     private String BusinessID;
 
     /**
-     * Get business_id 
-     * @return BusinessID business_id
+     * Get 预约ID
+可通过DescribeBiddingSuccessfulList接口获取 
+     * @return BusinessID 预约ID
+可通过DescribeBiddingSuccessfulList接口获取
      */
     public String getBusinessID() {
         return this.BusinessID;
     }
 
     /**
-     * Set business_id
-     * @param BusinessID business_id
+     * Set 预约ID
+可通过DescribeBiddingSuccessfulList接口获取
+     * @param BusinessID 预约ID
+可通过DescribeBiddingSuccessfulList接口获取
      */
     public void setBusinessID(String BusinessID) {
         this.BusinessID = BusinessID;

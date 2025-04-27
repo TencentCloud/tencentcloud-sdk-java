@@ -38,21 +38,23 @@ public class PreAuctionInfo extends AbstractModel {
     private String BiddingTime;
 
     /**
-    * 出价次数
+    * 出价次数 单位元
     */
     @SerializedName("BidCount")
     @Expose
     private Long BidCount;
 
     /**
-    * 当前价格
+    * 当前价格 单位元
     */
     @SerializedName("Price")
     @Expose
     private Float Price;
 
     /**
-    * 用户操作 bid：出价 "noAction"：无法操作
+    * 用户操作 
+bid：出价 
+noAction：无法操作
     */
     @SerializedName("Op")
     @Expose
@@ -98,48 +100,56 @@ public class PreAuctionInfo extends AbstractModel {
     }
 
     /**
-     * Get 出价次数 
-     * @return BidCount 出价次数
+     * Get 出价次数 单位元 
+     * @return BidCount 出价次数 单位元
      */
     public Long getBidCount() {
         return this.BidCount;
     }
 
     /**
-     * Set 出价次数
-     * @param BidCount 出价次数
+     * Set 出价次数 单位元
+     * @param BidCount 出价次数 单位元
      */
     public void setBidCount(Long BidCount) {
         this.BidCount = BidCount;
     }
 
     /**
-     * Get 当前价格 
-     * @return Price 当前价格
+     * Get 当前价格 单位元 
+     * @return Price 当前价格 单位元
      */
     public Float getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 当前价格
-     * @param Price 当前价格
+     * Set 当前价格 单位元
+     * @param Price 当前价格 单位元
      */
     public void setPrice(Float Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 用户操作 bid：出价 "noAction"：无法操作 
-     * @return Op 用户操作 bid：出价 "noAction"：无法操作
+     * Get 用户操作 
+bid：出价 
+noAction：无法操作 
+     * @return Op 用户操作 
+bid：出价 
+noAction：无法操作
      */
     public String getOp() {
         return this.Op;
     }
 
     /**
-     * Set 用户操作 bid：出价 "noAction"：无法操作
-     * @param Op 用户操作 bid：出价 "noAction"：无法操作
+     * Set 用户操作 
+bid：出价 
+noAction：无法操作
+     * @param Op 用户操作 
+bid：出价 
+noAction：无法操作
      */
     public void setOp(String Op) {
         this.Op = Op;

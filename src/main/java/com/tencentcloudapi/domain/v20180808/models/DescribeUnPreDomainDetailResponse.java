@@ -60,20 +60,22 @@ public class DescribeUnPreDomainDetailResponse extends AbstractModel {
 
     /**
     * 域名状态
+ bid：出价
+noAction：无法操作
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 域名价格
+    * 域名价格 单位元
     */
     @SerializedName("CurrentPrice")
     @Expose
     private Float CurrentPrice;
 
     /**
-    * 域名保证金
+    * 域名保证金 单位元
     */
     @SerializedName("AppointBondPrice")
     @Expose
@@ -188,8 +190,12 @@ public class DescribeUnPreDomainDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 域名状态 
+     * Get 域名状态
+ bid：出价
+noAction：无法操作 
      * @return Status 域名状态
+ bid：出价
+noAction：无法操作
      */
     public String getStatus() {
         return this.Status;
@@ -197,39 +203,43 @@ public class DescribeUnPreDomainDetailResponse extends AbstractModel {
 
     /**
      * Set 域名状态
+ bid：出价
+noAction：无法操作
      * @param Status 域名状态
+ bid：出价
+noAction：无法操作
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 域名价格 
-     * @return CurrentPrice 域名价格
+     * Get 域名价格 单位元 
+     * @return CurrentPrice 域名价格 单位元
      */
     public Float getCurrentPrice() {
         return this.CurrentPrice;
     }
 
     /**
-     * Set 域名价格
-     * @param CurrentPrice 域名价格
+     * Set 域名价格 单位元
+     * @param CurrentPrice 域名价格 单位元
      */
     public void setCurrentPrice(Float CurrentPrice) {
         this.CurrentPrice = CurrentPrice;
     }
 
     /**
-     * Get 域名保证金 
-     * @return AppointBondPrice 域名保证金
+     * Get 域名保证金 单位元 
+     * @return AppointBondPrice 域名保证金 单位元
      */
     public Float getAppointBondPrice() {
         return this.AppointBondPrice;
     }
 
     /**
-     * Set 域名保证金
-     * @param AppointBondPrice 域名保证金
+     * Set 域名保证金 单位元
+     * @param AppointBondPrice 域名保证金 单位元
      */
     public void setAppointBondPrice(Float AppointBondPrice) {
         this.AppointBondPrice = AppointBondPrice;

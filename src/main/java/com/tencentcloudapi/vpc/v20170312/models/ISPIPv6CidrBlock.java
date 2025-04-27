@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class ISPIPv6CidrBlock extends AbstractModel {
 
     /**
+    * IPv6 CIdr Block
+    */
+    @SerializedName("IPv6CidrBlock")
+    @Expose
+    private String IPv6CidrBlock;
+
+    /**
+    * 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
+    */
+    @SerializedName("ISPType")
+    @Expose
+    private String ISPType;
+
+    /**
     * IPv6 Cidr 的类型：`GUA`(全球单播地址), `ULA`(唯一本地地址)
     */
     @SerializedName("AddressType")
     @Expose
     private String AddressType;
+
+    /**
+     * Get IPv6 CIdr Block 
+     * @return IPv6CidrBlock IPv6 CIdr Block
+     */
+    public String getIPv6CidrBlock() {
+        return this.IPv6CidrBlock;
+    }
+
+    /**
+     * Set IPv6 CIdr Block
+     * @param IPv6CidrBlock IPv6 CIdr Block
+     */
+    public void setIPv6CidrBlock(String IPv6CidrBlock) {
+        this.IPv6CidrBlock = IPv6CidrBlock;
+    }
+
+    /**
+     * Get 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调 
+     * @return ISPType 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
+     */
+    public String getISPType() {
+        return this.ISPType;
+    }
+
+    /**
+     * Set 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
+     * @param ISPType 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
+     */
+    public void setISPType(String ISPType) {
+        this.ISPType = ISPType;
+    }
 
     /**
      * Get IPv6 Cidr 的类型：`GUA`(全球单播地址), `ULA`(唯一本地地址) 
@@ -54,6 +100,12 @@ public class ISPIPv6CidrBlock extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ISPIPv6CidrBlock(ISPIPv6CidrBlock source) {
+        if (source.IPv6CidrBlock != null) {
+            this.IPv6CidrBlock = new String(source.IPv6CidrBlock);
+        }
+        if (source.ISPType != null) {
+            this.ISPType = new String(source.ISPType);
+        }
         if (source.AddressType != null) {
             this.AddressType = new String(source.AddressType);
         }
@@ -64,6 +116,8 @@ public class ISPIPv6CidrBlock extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "IPv6CidrBlock", this.IPv6CidrBlock);
+        this.setParamSimple(map, prefix + "ISPType", this.ISPType);
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
 
     }

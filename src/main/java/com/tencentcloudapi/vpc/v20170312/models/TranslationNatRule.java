@@ -46,7 +46,6 @@ public class TranslationNatRule extends AbstractModel {
 
     /**
     * 转换规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -54,7 +53,6 @@ public class TranslationNatRule extends AbstractModel {
 
     /**
     * 源`IP`,当转换规则类型为三层时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalIp")
     @Expose
@@ -123,10 +121,8 @@ public class TranslationNatRule extends AbstractModel {
     }
 
     /**
-     * Get 转换规则描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转换规则描述。 
      * @return Description 转换规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -134,19 +130,15 @@ public class TranslationNatRule extends AbstractModel {
 
     /**
      * Set 转换规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 转换规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 源`IP`,当转换规则类型为三层时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源`IP`,当转换规则类型为三层时有效。 
      * @return OriginalIp 源`IP`,当转换规则类型为三层时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalIp() {
         return this.OriginalIp;
@@ -154,9 +146,7 @@ public class TranslationNatRule extends AbstractModel {
 
     /**
      * Set 源`IP`,当转换规则类型为三层时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalIp 源`IP`,当转换规则类型为三层时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalIp(String OriginalIp) {
         this.OriginalIp = OriginalIp;

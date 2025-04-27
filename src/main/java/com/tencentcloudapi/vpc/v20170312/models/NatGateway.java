@@ -104,7 +104,6 @@ public class NatGateway extends AbstractModel {
 
     /**
     * 绑定的专线网关ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DirectConnectGatewayIds")
     @Expose
@@ -112,7 +111,6 @@ public class NatGateway extends AbstractModel {
 
     /**
     * 所属子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -127,7 +125,6 @@ public class NatGateway extends AbstractModel {
 
     /**
     * NAT网关绑定的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupSet")
     @Expose
@@ -135,7 +132,6 @@ public class NatGateway extends AbstractModel {
 
     /**
     * NAT网关的SNAT转发规则。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceIpTranslationNatRuleSet")
     @Expose
@@ -143,7 +139,6 @@ public class NatGateway extends AbstractModel {
 
     /**
     * 是否独享型NAT。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsExclusive")
     @Expose
@@ -151,7 +146,6 @@ public class NatGateway extends AbstractModel {
 
     /**
     * 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExclusiveGatewayBandwidth")
     @Expose
@@ -159,7 +153,6 @@ public class NatGateway extends AbstractModel {
 
     /**
     * NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RestrictState")
     @Expose
@@ -167,7 +160,6 @@ public class NatGateway extends AbstractModel {
 
     /**
     * NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NatProductVersion")
     @Expose
@@ -175,7 +167,6 @@ public class NatGateway extends AbstractModel {
 
     /**
     * 是否启用根据目的网段选择SNAT使用的EIP功能	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SmartScheduleMode")
     @Expose
@@ -183,7 +174,6 @@ public class NatGateway extends AbstractModel {
 
     /**
     * NAT实例归属的专属集群id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DedicatedClusterId")
     @Expose
@@ -374,10 +364,8 @@ public class NatGateway extends AbstractModel {
     }
 
     /**
-     * Get 绑定的专线网关ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定的专线网关ID。 
      * @return DirectConnectGatewayIds 绑定的专线网关ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDirectConnectGatewayIds() {
         return this.DirectConnectGatewayIds;
@@ -385,19 +373,15 @@ public class NatGateway extends AbstractModel {
 
     /**
      * Set 绑定的专线网关ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DirectConnectGatewayIds 绑定的专线网关ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDirectConnectGatewayIds(String [] DirectConnectGatewayIds) {
         this.DirectConnectGatewayIds = DirectConnectGatewayIds;
     }
 
     /**
-     * Get 所属子网ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属子网ID。 
      * @return SubnetId 所属子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -405,9 +389,7 @@ public class NatGateway extends AbstractModel {
 
     /**
      * Set 所属子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 所属子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -430,10 +412,8 @@ public class NatGateway extends AbstractModel {
     }
 
     /**
-     * Get NAT网关绑定的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NAT网关绑定的安全组列表 
      * @return SecurityGroupSet NAT网关绑定的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecurityGroupSet() {
         return this.SecurityGroupSet;
@@ -441,19 +421,15 @@ public class NatGateway extends AbstractModel {
 
     /**
      * Set NAT网关绑定的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupSet NAT网关绑定的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupSet(String [] SecurityGroupSet) {
         this.SecurityGroupSet = SecurityGroupSet;
     }
 
     /**
-     * Get NAT网关的SNAT转发规则。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NAT网关的SNAT转发规则。 
      * @return SourceIpTranslationNatRuleSet NAT网关的SNAT转发规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SourceIpTranslationNatRule [] getSourceIpTranslationNatRuleSet() {
         return this.SourceIpTranslationNatRuleSet;
@@ -461,19 +437,15 @@ public class NatGateway extends AbstractModel {
 
     /**
      * Set NAT网关的SNAT转发规则。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceIpTranslationNatRuleSet NAT网关的SNAT转发规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceIpTranslationNatRuleSet(SourceIpTranslationNatRule [] SourceIpTranslationNatRuleSet) {
         this.SourceIpTranslationNatRuleSet = SourceIpTranslationNatRuleSet;
     }
 
     /**
-     * Get 是否独享型NAT。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否独享型NAT。 
      * @return IsExclusive 是否独享型NAT。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsExclusive() {
         return this.IsExclusive;
@@ -481,19 +453,15 @@ public class NatGateway extends AbstractModel {
 
     /**
      * Set 是否独享型NAT。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsExclusive 是否独享型NAT。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsExclusive(Boolean IsExclusive) {
         this.IsExclusive = IsExclusive;
     }
 
     /**
-     * Get 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。 
      * @return ExclusiveGatewayBandwidth 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExclusiveGatewayBandwidth() {
         return this.ExclusiveGatewayBandwidth;
@@ -501,19 +469,15 @@ public class NatGateway extends AbstractModel {
 
     /**
      * Set 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExclusiveGatewayBandwidth 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExclusiveGatewayBandwidth(Long ExclusiveGatewayBandwidth) {
         this.ExclusiveGatewayBandwidth = ExclusiveGatewayBandwidth;
     }
 
     /**
-     * Get NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。 
      * @return RestrictState NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRestrictState() {
         return this.RestrictState;
@@ -521,19 +485,15 @@ public class NatGateway extends AbstractModel {
 
     /**
      * Set NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RestrictState NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRestrictState(String RestrictState) {
         this.RestrictState = RestrictState;
     }
 
     /**
-     * Get NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关 
      * @return NatProductVersion NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNatProductVersion() {
         return this.NatProductVersion;
@@ -541,19 +501,15 @@ public class NatGateway extends AbstractModel {
 
     /**
      * Set NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NatProductVersion NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNatProductVersion(Long NatProductVersion) {
         this.NatProductVersion = NatProductVersion;
     }
 
     /**
-     * Get 是否启用根据目的网段选择SNAT使用的EIP功能	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用根据目的网段选择SNAT使用的EIP功能	 
      * @return SmartScheduleMode 是否启用根据目的网段选择SNAT使用的EIP功能	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSmartScheduleMode() {
         return this.SmartScheduleMode;
@@ -561,19 +517,15 @@ public class NatGateway extends AbstractModel {
 
     /**
      * Set 是否启用根据目的网段选择SNAT使用的EIP功能	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SmartScheduleMode 是否启用根据目的网段选择SNAT使用的EIP功能	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSmartScheduleMode(Boolean SmartScheduleMode) {
         this.SmartScheduleMode = SmartScheduleMode;
     }
 
     /**
-     * Get NAT实例归属的专属集群id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NAT实例归属的专属集群id 
      * @return DedicatedClusterId NAT实例归属的专属集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
@@ -581,9 +533,7 @@ public class NatGateway extends AbstractModel {
 
     /**
      * Set NAT实例归属的专属集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DedicatedClusterId NAT实例归属的专属集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;

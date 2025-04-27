@@ -25,7 +25,6 @@ public class PrivateNatCrossDomainInfo extends AbstractModel {
 
     /**
     * 跨域私网NAT关联的云联网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnId")
     @Expose
@@ -33,7 +32,6 @@ public class PrivateNatCrossDomainInfo extends AbstractModel {
 
     /**
     * 跨域私网NAT本端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalVpcId")
     @Expose
@@ -41,17 +39,14 @@ public class PrivateNatCrossDomainInfo extends AbstractModel {
 
     /**
     * 跨域私网NAT对端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeerVpcId")
     @Expose
     private String PeerVpcId;
 
     /**
-     * Get 跨域私网NAT关联的云联网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跨域私网NAT关联的云联网ID 
      * @return CcnId 跨域私网NAT关联的云联网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCcnId() {
         return this.CcnId;
@@ -59,19 +54,15 @@ public class PrivateNatCrossDomainInfo extends AbstractModel {
 
     /**
      * Set 跨域私网NAT关联的云联网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnId 跨域私网NAT关联的云联网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 跨域私网NAT本端Vpc
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跨域私网NAT本端Vpc 
      * @return LocalVpcId 跨域私网NAT本端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalVpcId() {
         return this.LocalVpcId;
@@ -79,19 +70,15 @@ public class PrivateNatCrossDomainInfo extends AbstractModel {
 
     /**
      * Set 跨域私网NAT本端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalVpcId 跨域私网NAT本端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalVpcId(String LocalVpcId) {
         this.LocalVpcId = LocalVpcId;
     }
 
     /**
-     * Get 跨域私网NAT对端Vpc
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跨域私网NAT对端Vpc 
      * @return PeerVpcId 跨域私网NAT对端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPeerVpcId() {
         return this.PeerVpcId;
@@ -99,9 +86,7 @@ public class PrivateNatCrossDomainInfo extends AbstractModel {
 
     /**
      * Set 跨域私网NAT对端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PeerVpcId 跨域私网NAT对端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeerVpcId(String PeerVpcId) {
         this.PeerVpcId = PeerVpcId;

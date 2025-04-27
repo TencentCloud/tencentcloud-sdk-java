@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ModifyDiskAttributesRequest extends AbstractModel {
 
     /**
-    * 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
+    * 一个或多个待操作的云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查询。如果传入多个云盘ID，仅支持将所有云盘修改为同一属性。
+
     */
     @SerializedName("DiskIds")
     @Expose
@@ -60,29 +61,36 @@ public class ModifyDiskAttributesRequest extends AbstractModel {
 
     /**
     * 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘。</li>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
+具体说明请参考[调整云硬盘类型](https://cloud.tencent.com/document/product/362/32540)
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * 开启/关闭云盘性能突发功能
+    * 开启/关闭云盘性能突发功能，取值范围： 
+CREATE：开启
+CANCEL：关闭
     */
     @SerializedName("BurstPerformanceOperation")
     @Expose
     private String BurstPerformanceOperation;
 
     /**
-     * Get 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。 
-     * @return DiskIds 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
+     * Get 一个或多个待操作的云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查询。如果传入多个云盘ID，仅支持将所有云盘修改为同一属性。
+ 
+     * @return DiskIds 一个或多个待操作的云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查询。如果传入多个云盘ID，仅支持将所有云盘修改为同一属性。
+
      */
     public String [] getDiskIds() {
         return this.DiskIds;
     }
 
     /**
-     * Set 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
-     * @param DiskIds 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
+     * Set 一个或多个待操作的云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查询。如果传入多个云盘ID，仅支持将所有云盘修改为同一属性。
+
+     * @param DiskIds 一个或多个待操作的云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查询。如果传入多个云盘ID，仅支持将所有云盘修改为同一属性。
+
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;
@@ -153,8 +161,10 @@ public class ModifyDiskAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘。</li>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。 
+     * Get 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘。</li>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
+具体说明请参考[调整云硬盘类型](https://cloud.tencent.com/document/product/362/32540) 
      * @return DiskType 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘。</li>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
+具体说明请参考[调整云硬盘类型](https://cloud.tencent.com/document/product/362/32540)
      */
     public String getDiskType() {
         return this.DiskType;
@@ -162,23 +172,33 @@ public class ModifyDiskAttributesRequest extends AbstractModel {
 
     /**
      * Set 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘。</li>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
+具体说明请参考[调整云硬盘类型](https://cloud.tencent.com/document/product/362/32540)
      * @param DiskType 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘。</li>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
+具体说明请参考[调整云硬盘类型](https://cloud.tencent.com/document/product/362/32540)
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 开启/关闭云盘性能突发功能 
-     * @return BurstPerformanceOperation 开启/关闭云盘性能突发功能
+     * Get 开启/关闭云盘性能突发功能，取值范围： 
+CREATE：开启
+CANCEL：关闭 
+     * @return BurstPerformanceOperation 开启/关闭云盘性能突发功能，取值范围： 
+CREATE：开启
+CANCEL：关闭
      */
     public String getBurstPerformanceOperation() {
         return this.BurstPerformanceOperation;
     }
 
     /**
-     * Set 开启/关闭云盘性能突发功能
-     * @param BurstPerformanceOperation 开启/关闭云盘性能突发功能
+     * Set 开启/关闭云盘性能突发功能，取值范围： 
+CREATE：开启
+CANCEL：关闭
+     * @param BurstPerformanceOperation 开启/关闭云盘性能突发功能，取值范围： 
+CREATE：开启
+CANCEL：关闭
      */
     public void setBurstPerformanceOperation(String BurstPerformanceOperation) {
         this.BurstPerformanceOperation = BurstPerformanceOperation;

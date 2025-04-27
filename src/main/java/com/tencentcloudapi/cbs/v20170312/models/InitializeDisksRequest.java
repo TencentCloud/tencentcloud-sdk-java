@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class InitializeDisksRequest extends AbstractModel {
 
     /**
-    * 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
+    * 待重新初始化的云硬盘ID列表，可以通过[DescribeDisks](/document/product/362/16315)接口查询， 单次初始化限制20块以内
     */
     @SerializedName("DiskIds")
     @Expose
     private String [] DiskIds;
 
     /**
-     * Get 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内 
-     * @return DiskIds 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
+     * Get 待重新初始化的云硬盘ID列表，可以通过[DescribeDisks](/document/product/362/16315)接口查询， 单次初始化限制20块以内 
+     * @return DiskIds 待重新初始化的云硬盘ID列表，可以通过[DescribeDisks](/document/product/362/16315)接口查询， 单次初始化限制20块以内
      */
     public String [] getDiskIds() {
         return this.DiskIds;
     }
 
     /**
-     * Set 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
-     * @param DiskIds 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
+     * Set 待重新初始化的云硬盘ID列表，可以通过[DescribeDisks](/document/product/362/16315)接口查询， 单次初始化限制20块以内
+     * @param DiskIds 待重新初始化的云硬盘ID列表，可以通过[DescribeDisks](/document/product/362/16315)接口查询， 单次初始化限制20块以内
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;

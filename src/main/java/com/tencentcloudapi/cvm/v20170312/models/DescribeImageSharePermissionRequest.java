@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeImageSharePermissionRequest extends AbstractModel {
 
     /**
-    * 需要共享的镜像Id
+    * 需要共享的镜像 ID，可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回的`ImageId`获取。
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-     * Get 需要共享的镜像Id 
-     * @return ImageId 需要共享的镜像Id
+     * Get 需要共享的镜像 ID，可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回的`ImageId`获取。 
+     * @return ImageId 需要共享的镜像 ID，可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回的`ImageId`获取。
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 需要共享的镜像Id
-     * @param ImageId 需要共享的镜像Id
+     * Set 需要共享的镜像 ID，可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回的`ImageId`获取。
+     * @param ImageId 需要共享的镜像 ID，可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回的`ImageId`获取。
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;

@@ -38,7 +38,7 @@ public class AuctionInfo extends AbstractModel {
     private String AuctionTime;
 
     /**
-    * 竞拍价格
+    * 竞拍价格 单位元
     */
     @SerializedName("AuctionPrice")
     @Expose
@@ -84,16 +84,16 @@ public class AuctionInfo extends AbstractModel {
     }
 
     /**
-     * Get 竞拍价格 
-     * @return AuctionPrice 竞拍价格
+     * Get 竞拍价格 单位元 
+     * @return AuctionPrice 竞拍价格 单位元
      */
     public Float getAuctionPrice() {
         return this.AuctionPrice;
     }
 
     /**
-     * Set 竞拍价格
-     * @param AuctionPrice 竞拍价格
+     * Set 竞拍价格 单位元
+     * @param AuctionPrice 竞拍价格 单位元
      */
     public void setAuctionPrice(Float AuctionPrice) {
         this.AuctionPrice = AuctionPrice;

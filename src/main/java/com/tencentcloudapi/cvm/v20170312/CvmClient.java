@@ -699,7 +699,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
-     *进入救援模式
+     *本接口（EnterRescueMode）用于进入救援模式。
      * @param req EnterRescueModeRequest
      * @return EnterRescueModeResponse
      * @throws TencentCloudSDKException

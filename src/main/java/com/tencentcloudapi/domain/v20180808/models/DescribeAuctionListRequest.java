@@ -31,14 +31,14 @@ public class DescribeAuctionListRequest extends AbstractModel {
     private String BusinessId;
 
     /**
-    * 条数，默认10条
+    * 条数，默认10，最大100
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * 偏移量 默认0
     */
     @SerializedName("OffSet")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeAuctionListRequest extends AbstractModel {
     }
 
     /**
-     * Get 条数，默认10条 
-     * @return Limit 条数，默认10条
+     * Get 条数，默认10，最大100 
+     * @return Limit 条数，默认10，最大100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 条数，默认10条
-     * @param Limit 条数，默认10条
+     * Set 条数，默认10，最大100
+     * @param Limit 条数，默认10，最大100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return OffSet 偏移量
+     * Get 偏移量 默认0 
+     * @return OffSet 偏移量 默认0
      */
     public Long getOffSet() {
         return this.OffSet;
     }
 
     /**
-     * Set 偏移量
-     * @param OffSet 偏移量
+     * Set 偏移量 默认0
+     * @param OffSet 偏移量 默认0
      */
     public void setOffSet(Long OffSet) {
         this.OffSet = OffSet;

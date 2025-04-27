@@ -25,6 +25,7 @@ public class CreateCustomDnsHostRequest extends AbstractModel {
 
     /**
     * 域名实例ID
+可通过DescribeDomainLIst接口获取
     */
     @SerializedName("DomainId")
     @Expose
@@ -32,6 +33,7 @@ public class CreateCustomDnsHostRequest extends AbstractModel {
 
     /**
     * Dns名称
+例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式
     */
     @SerializedName("DnsName")
     @Expose
@@ -39,14 +41,17 @@ public class CreateCustomDnsHostRequest extends AbstractModel {
 
     /**
     * IP地址列表
+可选择：正常IP地址范围
     */
     @SerializedName("IpSet")
     @Expose
     private String [] IpSet;
 
     /**
-     * Get 域名实例ID 
+     * Get 域名实例ID
+可通过DescribeDomainLIst接口获取 
      * @return DomainId 域名实例ID
+可通过DescribeDomainLIst接口获取
      */
     public String getDomainId() {
         return this.DomainId;
@@ -54,15 +59,19 @@ public class CreateCustomDnsHostRequest extends AbstractModel {
 
     /**
      * Set 域名实例ID
+可通过DescribeDomainLIst接口获取
      * @param DomainId 域名实例ID
+可通过DescribeDomainLIst接口获取
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get Dns名称 
+     * Get Dns名称
+例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式 
      * @return DnsName Dns名称
+例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式
      */
     public String getDnsName() {
         return this.DnsName;
@@ -70,15 +79,19 @@ public class CreateCustomDnsHostRequest extends AbstractModel {
 
     /**
      * Set Dns名称
+例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式
      * @param DnsName Dns名称
+例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式
      */
     public void setDnsName(String DnsName) {
         this.DnsName = DnsName;
     }
 
     /**
-     * Get IP地址列表 
+     * Get IP地址列表
+可选择：正常IP地址范围 
      * @return IpSet IP地址列表
+可选择：正常IP地址范围
      */
     public String [] getIpSet() {
         return this.IpSet;
@@ -86,7 +99,9 @@ public class CreateCustomDnsHostRequest extends AbstractModel {
 
     /**
      * Set IP地址列表
+可选择：正常IP地址范围
      * @param IpSet IP地址列表
+可选择：正常IP地址范围
      */
     public void setIpSet(String [] IpSet) {
         this.IpSet = IpSet;

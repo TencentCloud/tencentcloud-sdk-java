@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BiddingResult extends AbstractModel {
 
     /**
-    * business_id
+    * 预约ID
     */
     @SerializedName("BusinessID")
     @Expose
@@ -38,7 +38,7 @@ public class BiddingResult extends AbstractModel {
     private String Domain;
 
     /**
-    * 当前价格
+    * 当前价格 单位元
     */
     @SerializedName("CurrentPrice")
     @Expose
@@ -52,14 +52,14 @@ public class BiddingResult extends AbstractModel {
     private String CurrentNickname;
 
     /**
-    * 我的出价
+    * 我的出价 单位元
     */
     @SerializedName("BiddingPrice")
     @Expose
     private Long BiddingPrice;
 
     /**
-    * 竞价保证金
+    * 竞价保证金 单位元
     */
     @SerializedName("BiddingBondPrice")
     @Expose
@@ -94,16 +94,16 @@ public class BiddingResult extends AbstractModel {
     private Long Status;
 
     /**
-     * Get business_id 
-     * @return BusinessID business_id
+     * Get 预约ID 
+     * @return BusinessID 预约ID
      */
     public String getBusinessID() {
         return this.BusinessID;
     }
 
     /**
-     * Set business_id
-     * @param BusinessID business_id
+     * Set 预约ID
+     * @param BusinessID 预约ID
      */
     public void setBusinessID(String BusinessID) {
         this.BusinessID = BusinessID;
@@ -126,16 +126,16 @@ public class BiddingResult extends AbstractModel {
     }
 
     /**
-     * Get 当前价格 
-     * @return CurrentPrice 当前价格
+     * Get 当前价格 单位元 
+     * @return CurrentPrice 当前价格 单位元
      */
     public Long getCurrentPrice() {
         return this.CurrentPrice;
     }
 
     /**
-     * Set 当前价格
-     * @param CurrentPrice 当前价格
+     * Set 当前价格 单位元
+     * @param CurrentPrice 当前价格 单位元
      */
     public void setCurrentPrice(Long CurrentPrice) {
         this.CurrentPrice = CurrentPrice;
@@ -158,32 +158,32 @@ public class BiddingResult extends AbstractModel {
     }
 
     /**
-     * Get 我的出价 
-     * @return BiddingPrice 我的出价
+     * Get 我的出价 单位元 
+     * @return BiddingPrice 我的出价 单位元
      */
     public Long getBiddingPrice() {
         return this.BiddingPrice;
     }
 
     /**
-     * Set 我的出价
-     * @param BiddingPrice 我的出价
+     * Set 我的出价 单位元
+     * @param BiddingPrice 我的出价 单位元
      */
     public void setBiddingPrice(Long BiddingPrice) {
         this.BiddingPrice = BiddingPrice;
     }
 
     /**
-     * Get 竞价保证金 
-     * @return BiddingBondPrice 竞价保证金
+     * Get 竞价保证金 单位元 
+     * @return BiddingBondPrice 竞价保证金 单位元
      */
     public Long getBiddingBondPrice() {
         return this.BiddingBondPrice;
     }
 
     /**
-     * Set 竞价保证金
-     * @param BiddingBondPrice 竞价保证金
+     * Set 竞价保证金 单位元
+     * @param BiddingBondPrice 竞价保证金 单位元
      */
     public void setBiddingBondPrice(Long BiddingBondPrice) {
         this.BiddingBondPrice = BiddingBondPrice;

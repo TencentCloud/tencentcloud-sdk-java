@@ -73,6 +73,20 @@ public class TargetInfo extends AbstractModel {
     private String Summary;
 
     /**
+    * 通道ID
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
+    * 缩略图路径
+    */
+    @SerializedName("Thumbnail")
+    @Expose
+    private String Thumbnail;
+
+    /**
      * Get 视频唯一ID 
      * @return Id 视频唯一ID
      */
@@ -184,6 +198,38 @@ public class TargetInfo extends AbstractModel {
         this.Summary = Summary;
     }
 
+    /**
+     * Get 通道ID 
+     * @return ChannelId 通道ID
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道ID
+     * @param ChannelId 通道ID
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
+    /**
+     * Get 缩略图路径 
+     * @return Thumbnail 缩略图路径
+     */
+    public String getThumbnail() {
+        return this.Thumbnail;
+    }
+
+    /**
+     * Set 缩略图路径
+     * @param Thumbnail 缩略图路径
+     */
+    public void setThumbnail(String Thumbnail) {
+        this.Thumbnail = Thumbnail;
+    }
+
     public TargetInfo() {
     }
 
@@ -213,6 +259,12 @@ public class TargetInfo extends AbstractModel {
         if (source.Summary != null) {
             this.Summary = new String(source.Summary);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
+        if (source.Thumbnail != null) {
+            this.Thumbnail = new String(source.Thumbnail);
+        }
     }
 
 
@@ -227,6 +279,8 @@ public class TargetInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamSimple(map, prefix + "Summary", this.Summary);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "Thumbnail", this.Thumbnail);
 
     }
 }

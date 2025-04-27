@@ -32,7 +32,6 @@ public class DescribePreAuctionListResponse extends AbstractModel {
 
     /**
     * 预释放竞价列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreAuctionList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribePreAuctionListResponse extends AbstractModel {
     }
 
     /**
-     * Get 预释放竞价列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预释放竞价列表 
      * @return PreAuctionList 预释放竞价列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PreAuctionInfo [] getPreAuctionList() {
         return this.PreAuctionList;
@@ -73,9 +70,7 @@ public class DescribePreAuctionListResponse extends AbstractModel {
 
     /**
      * Set 预释放竞价列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreAuctionList 预释放竞价列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreAuctionList(PreAuctionInfo [] PreAuctionList) {
         this.PreAuctionList = PreAuctionList;

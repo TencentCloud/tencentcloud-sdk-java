@@ -31,21 +31,21 @@ public class ReservedPreDomainsRequest extends AbstractModel {
     private String [] DomainList;
 
     /**
-    * 模板ID
+    * 模板ID 可通过DescribeTemplates接口获取
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 结束后是否自动支付尾款，默认开启 传入1关闭
+    * 结束后是否自动支付尾款，默认1 开启 传入0关闭
     */
     @SerializedName("IsAutoPay")
     @Expose
     private Long IsAutoPay;
 
     /**
-    * 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
+    * 结束后是否自动进行梯度保证金扣除，默认1开启 传入0关闭
     */
     @SerializedName("IsBidAutoPay")
     @Expose
@@ -68,48 +68,48 @@ public class ReservedPreDomainsRequest extends AbstractModel {
     }
 
     /**
-     * Get 模板ID 
-     * @return TemplateId 模板ID
+     * Get 模板ID 可通过DescribeTemplates接口获取 
+     * @return TemplateId 模板ID 可通过DescribeTemplates接口获取
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板ID
-     * @param TemplateId 模板ID
+     * Set 模板ID 可通过DescribeTemplates接口获取
+     * @param TemplateId 模板ID 可通过DescribeTemplates接口获取
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 结束后是否自动支付尾款，默认开启 传入1关闭 
-     * @return IsAutoPay 结束后是否自动支付尾款，默认开启 传入1关闭
+     * Get 结束后是否自动支付尾款，默认1 开启 传入0关闭 
+     * @return IsAutoPay 结束后是否自动支付尾款，默认1 开启 传入0关闭
      */
     public Long getIsAutoPay() {
         return this.IsAutoPay;
     }
 
     /**
-     * Set 结束后是否自动支付尾款，默认开启 传入1关闭
-     * @param IsAutoPay 结束后是否自动支付尾款，默认开启 传入1关闭
+     * Set 结束后是否自动支付尾款，默认1 开启 传入0关闭
+     * @param IsAutoPay 结束后是否自动支付尾款，默认1 开启 传入0关闭
      */
     public void setIsAutoPay(Long IsAutoPay) {
         this.IsAutoPay = IsAutoPay;
     }
 
     /**
-     * Get 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭 
-     * @return IsBidAutoPay 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
+     * Get 结束后是否自动进行梯度保证金扣除，默认1开启 传入0关闭 
+     * @return IsBidAutoPay 结束后是否自动进行梯度保证金扣除，默认1开启 传入0关闭
      */
     public Long getIsBidAutoPay() {
         return this.IsBidAutoPay;
     }
 
     /**
-     * Set 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
-     * @param IsBidAutoPay 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
+     * Set 结束后是否自动进行梯度保证金扣除，默认1开启 传入0关闭
+     * @param IsBidAutoPay 结束后是否自动进行梯度保证金扣除，默认1开启 传入0关闭
      */
     public void setIsBidAutoPay(Long IsBidAutoPay) {
         this.IsBidAutoPay = IsBidAutoPay;

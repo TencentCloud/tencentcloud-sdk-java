@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RenewDomainBatchRequest extends AbstractModel {
 
     /**
-    * 域名续费的年限。
+    * 域名续费的年限。取值范围[1,9]
     */
     @SerializedName("Period")
     @Expose
@@ -32,6 +32,7 @@ public class RenewDomainBatchRequest extends AbstractModel {
 
     /**
     * 批量续费的域名。
+一次提交不大于4000个
     */
     @SerializedName("Domains")
     @Expose
@@ -83,24 +84,26 @@ public class RenewDomainBatchRequest extends AbstractModel {
     private String ActivityId;
 
     /**
-     * Get 域名续费的年限。 
-     * @return Period 域名续费的年限。
+     * Get 域名续费的年限。取值范围[1,9] 
+     * @return Period 域名续费的年限。取值范围[1,9]
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 域名续费的年限。
-     * @param Period 域名续费的年限。
+     * Set 域名续费的年限。取值范围[1,9]
+     * @param Period 域名续费的年限。取值范围[1,9]
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 批量续费的域名。 
+     * Get 批量续费的域名。
+一次提交不大于4000个 
      * @return Domains 批量续费的域名。
+一次提交不大于4000个
      */
     public String [] getDomains() {
         return this.Domains;
@@ -108,7 +111,9 @@ public class RenewDomainBatchRequest extends AbstractModel {
 
     /**
      * Set 批量续费的域名。
+一次提交不大于4000个
      * @param Domains 批量续费的域名。
+一次提交不大于4000个
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;

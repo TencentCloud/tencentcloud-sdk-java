@@ -52,6 +52,13 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
     private String SummaryLang;
 
     /**
+    * 通道ID
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -115,6 +122,22 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         this.SummaryLang = SummaryLang;
     }
 
+    /**
+     * Get 通道ID 
+     * @return ChannelId 通道ID
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道ID
+     * @param ChannelId 通道ID
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
     public InvokeAISearchServiceRequest() {
     }
 
@@ -135,6 +158,9 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         if (source.SummaryLang != null) {
             this.SummaryLang = new String(source.SummaryLang);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "SummaryLang", this.SummaryLang);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
 
     }
 }

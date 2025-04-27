@@ -32,6 +32,10 @@ public class DescribePayWaitDetailResponse extends AbstractModel {
 
     /**
     * 域名类型
+pay：等待支持
+sub：已经预订
+wait：等待出价
+finish：完成出价
     */
     @SerializedName("Status")
     @Expose
@@ -52,14 +56,14 @@ public class DescribePayWaitDetailResponse extends AbstractModel {
     private String RegTime;
 
     /**
-    * 域名成交价格
+    * 域名成交价格 单位元
     */
     @SerializedName("Price")
     @Expose
     private Float Price;
 
     /**
-    * 待退还保证金
+    * 待退还保证金 单位元
     */
     @SerializedName("RetDeposit")
     @Expose
@@ -89,8 +93,16 @@ public class DescribePayWaitDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 域名类型 
+     * Get 域名类型
+pay：等待支持
+sub：已经预订
+wait：等待出价
+finish：完成出价 
      * @return Status 域名类型
+pay：等待支持
+sub：已经预订
+wait：等待出价
+finish：完成出价
      */
     public String getStatus() {
         return this.Status;
@@ -98,7 +110,15 @@ public class DescribePayWaitDetailResponse extends AbstractModel {
 
     /**
      * Set 域名类型
+pay：等待支持
+sub：已经预订
+wait：等待出价
+finish：完成出价
      * @param Status 域名类型
+pay：等待支持
+sub：已经预订
+wait：等待出价
+finish：完成出价
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -137,32 +157,32 @@ public class DescribePayWaitDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 域名成交价格 
-     * @return Price 域名成交价格
+     * Get 域名成交价格 单位元 
+     * @return Price 域名成交价格 单位元
      */
     public Float getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 域名成交价格
-     * @param Price 域名成交价格
+     * Set 域名成交价格 单位元
+     * @param Price 域名成交价格 单位元
      */
     public void setPrice(Float Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 待退还保证金 
-     * @return RetDeposit 待退还保证金
+     * Get 待退还保证金 单位元 
+     * @return RetDeposit 待退还保证金 单位元
      */
     public Float getRetDeposit() {
         return this.RetDeposit;
     }
 
     /**
-     * Set 待退还保证金
-     * @param RetDeposit 待退还保证金
+     * Set 待退还保证金 单位元
+     * @param RetDeposit 待退还保证金 单位元
      */
     public void setRetDeposit(Float RetDeposit) {
         this.RetDeposit = RetDeposit;

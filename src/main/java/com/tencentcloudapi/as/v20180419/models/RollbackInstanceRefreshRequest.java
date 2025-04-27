@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class RollbackInstanceRefreshRequest extends AbstractModel {
 
     /**
-    * 伸缩组ID。
+    * 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
@@ -38,7 +40,7 @@ public class RollbackInstanceRefreshRequest extends AbstractModel {
     private RefreshSettings RefreshSettings;
 
     /**
-    * 原始刷新活动 ID。
+    * 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
     */
     @SerializedName("OriginRefreshActivityId")
     @Expose
@@ -52,16 +54,24 @@ public class RollbackInstanceRefreshRequest extends AbstractModel {
     private String RefreshMode;
 
     /**
-     * Get 伸缩组ID。 
-     * @return AutoScalingGroupId 伸缩组ID。
+     * Get 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li> 
+     * @return AutoScalingGroupId 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set 伸缩组ID。
-     * @param AutoScalingGroupId 伸缩组ID。
+     * Set 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+     * @param AutoScalingGroupId 伸缩组ID。可以通过以下方式获取可用的伸缩组ID： 
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
@@ -84,16 +94,16 @@ public class RollbackInstanceRefreshRequest extends AbstractModel {
     }
 
     /**
-     * Get 原始刷新活动 ID。 
-     * @return OriginRefreshActivityId 原始刷新活动 ID。
+     * Get 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。 
+     * @return OriginRefreshActivityId 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
      */
     public String getOriginRefreshActivityId() {
         return this.OriginRefreshActivityId;
     }
 
     /**
-     * Set 原始刷新活动 ID。
-     * @param OriginRefreshActivityId 原始刷新活动 ID。
+     * Set 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
+     * @param OriginRefreshActivityId 原始刷新活动 ID。可以通过调用接口 [DescribeRefreshActivities](https://cloud.tencent.com/document/api/377/99175) ，取返回信息中的 OriginRefreshActivityId 获取原始刷新活动ID。
      */
     public void setOriginRefreshActivityId(String OriginRefreshActivityId) {
         this.OriginRefreshActivityId = OriginRefreshActivityId;

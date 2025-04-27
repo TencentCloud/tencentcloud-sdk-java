@@ -38,7 +38,7 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
     private String SuccessfulTime;
 
     /**
-    * 得标价格
+    * 得标价格 单位元
     */
     @SerializedName("SuccessfulPrice")
     @Expose
@@ -80,7 +80,7 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
     private String BiddingBondRefund;
 
     /**
-    * 保证金
+    * 保证金 单位元
     */
     @SerializedName("BiddingBondPrice")
     @Expose
@@ -133,16 +133,16 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 得标价格 
-     * @return SuccessfulPrice 得标价格
+     * Get 得标价格 单位元 
+     * @return SuccessfulPrice 得标价格 单位元
      */
     public Float getSuccessfulPrice() {
         return this.SuccessfulPrice;
     }
 
     /**
-     * Set 得标价格
-     * @param SuccessfulPrice 得标价格
+     * Set 得标价格 单位元
+     * @param SuccessfulPrice 得标价格 单位元
      */
     public void setSuccessfulPrice(Float SuccessfulPrice) {
         this.SuccessfulPrice = SuccessfulPrice;
@@ -229,16 +229,16 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 保证金 
-     * @return BiddingBondPrice 保证金
+     * Get 保证金 单位元 
+     * @return BiddingBondPrice 保证金 单位元
      */
     public Float getBiddingBondPrice() {
         return this.BiddingBondPrice;
     }
 
     /**
-     * Set 保证金
-     * @param BiddingBondPrice 保证金
+     * Set 保证金 单位元
+     * @param BiddingBondPrice 保证金 单位元
      */
     public void setBiddingBondPrice(Float BiddingBondPrice) {
         this.BiddingBondPrice = BiddingBondPrice;

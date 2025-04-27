@@ -25,10 +25,9 @@ public class ScheduleSettings extends AbstractModel {
 
     /**
     * 执行策略：
+
 - ONCE：单次执行
 - RECURRENCE：周期执行
-
-只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
     */
     @SerializedName("Policy")
     @Expose
@@ -52,15 +51,13 @@ public class ScheduleSettings extends AbstractModel {
 
     /**
      * Get 执行策略：
-- ONCE：单次执行
-- RECURRENCE：周期执行
 
-只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填 
+- ONCE：单次执行
+- RECURRENCE：周期执行 
      * @return Policy 执行策略：
+
 - ONCE：单次执行
 - RECURRENCE：周期执行
-
-只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
      */
     public String getPolicy() {
         return this.Policy;
@@ -68,15 +65,13 @@ public class ScheduleSettings extends AbstractModel {
 
     /**
      * Set 执行策略：
+
 - ONCE：单次执行
 - RECURRENCE：周期执行
-
-只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
      * @param Policy 执行策略：
+
 - ONCE：单次执行
 - RECURRENCE：周期执行
-
-只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
      */
     public void setPolicy(String Policy) {
         this.Policy = Policy;

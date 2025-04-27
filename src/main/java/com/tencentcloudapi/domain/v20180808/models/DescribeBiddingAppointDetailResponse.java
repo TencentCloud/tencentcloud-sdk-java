@@ -73,14 +73,14 @@ public class DescribeBiddingAppointDetailResponse extends AbstractModel {
     private String DeleteTime;
 
     /**
-    * 当前价格
+    * 当前价格 单位元
     */
     @SerializedName("AppointPrice")
     @Expose
     private Long AppointPrice;
 
     /**
-    * 预约保证金
+    * 预约保证金 单位元
     */
     @SerializedName("AppointBondPrice")
     @Expose
@@ -221,32 +221,32 @@ yes：退回 no: 未退回
     }
 
     /**
-     * Get 当前价格 
-     * @return AppointPrice 当前价格
+     * Get 当前价格 单位元 
+     * @return AppointPrice 当前价格 单位元
      */
     public Long getAppointPrice() {
         return this.AppointPrice;
     }
 
     /**
-     * Set 当前价格
-     * @param AppointPrice 当前价格
+     * Set 当前价格 单位元
+     * @param AppointPrice 当前价格 单位元
      */
     public void setAppointPrice(Long AppointPrice) {
         this.AppointPrice = AppointPrice;
     }
 
     /**
-     * Get 预约保证金 
-     * @return AppointBondPrice 预约保证金
+     * Get 预约保证金 单位元 
+     * @return AppointBondPrice 预约保证金 单位元
      */
     public Long getAppointBondPrice() {
         return this.AppointBondPrice;
     }
 
     /**
-     * Set 预约保证金
-     * @param AppointBondPrice 预约保证金
+     * Set 预约保证金 单位元
+     * @param AppointBondPrice 预约保证金 单位元
      */
     public void setAppointBondPrice(Long AppointBondPrice) {
         this.AppointBondPrice = AppointBondPrice;

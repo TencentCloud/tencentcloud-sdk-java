@@ -24,14 +24,18 @@ import java.util.HashMap;
 public class CreateInvokerRequest extends AbstractModel {
 
     /**
-    * 执行器名称。
+    * 执行器名称。长度不超过 120 字符。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
+    * 执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。
     */
     @SerializedName("Type")
     @Expose
@@ -58,14 +62,14 @@ public class CreateInvokerRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * 命令执行用户。
+    * 命令执行用户。长度不超过 256 字符。
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 命令自定义参数。
+    * 命令自定义参数。字段类型为 JSON encode string。
 
 仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
     */
@@ -74,39 +78,57 @@ public class CreateInvokerRequest extends AbstractModel {
     private String Parameters;
 
     /**
-    * 周期执行器设置。当创建周期执行器时，必须指定此参数。
+    * 周期执行器设置。
+
+当执行器类型为 `SCHEDULE` 时，必须指定此参数。
     */
     @SerializedName("ScheduleSettings")
     @Expose
     private ScheduleSettings ScheduleSettings;
 
     /**
-     * Get 执行器名称。 
-     * @return Name 执行器名称。
+     * Get 执行器名称。长度不超过 120 字符。 
+     * @return Name 执行器名称。长度不超过 120 字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 执行器名称。
-     * @param Name 执行器名称。
+     * Set 执行器名称。长度不超过 120 字符。
+     * @param Name 执行器名称。长度不超过 120 字符。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。 
-     * @return Type 执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
+     * Get 执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。 
+     * @return Type 执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
-     * @param Type 执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
+     * Set 执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。
+     * @param Type 执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -169,26 +191,26 @@ public class CreateInvokerRequest extends AbstractModel {
     }
 
     /**
-     * Get 命令执行用户。 
-     * @return Username 命令执行用户。
+     * Get 命令执行用户。长度不超过 256 字符。 
+     * @return Username 命令执行用户。长度不超过 256 字符。
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 命令执行用户。
-     * @param Username 命令执行用户。
+     * Set 命令执行用户。长度不超过 256 字符。
+     * @param Username 命令执行用户。长度不超过 256 字符。
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 命令自定义参数。
+     * Get 命令自定义参数。字段类型为 JSON encode string。
 
 仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。 
-     * @return Parameters 命令自定义参数。
+     * @return Parameters 命令自定义参数。字段类型为 JSON encode string。
 
 仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
      */
@@ -197,10 +219,10 @@ public class CreateInvokerRequest extends AbstractModel {
     }
 
     /**
-     * Set 命令自定义参数。
+     * Set 命令自定义参数。字段类型为 JSON encode string。
 
 仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-     * @param Parameters 命令自定义参数。
+     * @param Parameters 命令自定义参数。字段类型为 JSON encode string。
 
 仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
      */
@@ -209,16 +231,24 @@ public class CreateInvokerRequest extends AbstractModel {
     }
 
     /**
-     * Get 周期执行器设置。当创建周期执行器时，必须指定此参数。 
-     * @return ScheduleSettings 周期执行器设置。当创建周期执行器时，必须指定此参数。
+     * Get 周期执行器设置。
+
+当执行器类型为 `SCHEDULE` 时，必须指定此参数。 
+     * @return ScheduleSettings 周期执行器设置。
+
+当执行器类型为 `SCHEDULE` 时，必须指定此参数。
      */
     public ScheduleSettings getScheduleSettings() {
         return this.ScheduleSettings;
     }
 
     /**
-     * Set 周期执行器设置。当创建周期执行器时，必须指定此参数。
-     * @param ScheduleSettings 周期执行器设置。当创建周期执行器时，必须指定此参数。
+     * Set 周期执行器设置。
+
+当执行器类型为 `SCHEDULE` 时，必须指定此参数。
+     * @param ScheduleSettings 周期执行器设置。
+
+当执行器类型为 `SCHEDULE` 时，必须指定此参数。
      */
     public void setScheduleSettings(ScheduleSettings ScheduleSettings) {
         this.ScheduleSettings = ScheduleSettings;

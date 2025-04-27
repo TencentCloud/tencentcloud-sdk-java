@@ -129,7 +129,7 @@ public enum CvmErrorCode {
      /* 无效的过滤器。 */
      INVALIDFILTER("InvalidFilter"),
      
-     /* [`Filter`](/document/api/213/15753#Filter)传值传递超出限制。 */
+     /* [`Filter`](/document/api/213/15753#Filter)传值超出限制。 */
      INVALIDFILTERVALUE_LIMITEXCEEDED("InvalidFilterValue.LimitExceeded"),
      
      /* 不支持该宿主机实例执行指定的操作。 */

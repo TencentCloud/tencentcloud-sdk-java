@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribePreAuctionListRequest extends AbstractModel {
 
     /**
-    * 页码
+    * 页码 默认1
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 条数
+    * 条数 默认20 最大100
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get 页码 默认1 
+     * @return PageNumber 页码 默认1
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set 页码 默认1
+     * @param PageNumber 页码 默认1
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 条数 
-     * @return PageSize 条数
+     * Get 条数 默认20 最大100 
+     * @return PageSize 条数 默认20 最大100
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 条数
-     * @param PageSize 条数
+     * Set 条数 默认20 最大100
+     * @param PageSize 条数 默认20 最大100
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class BidDetailPageRequest extends AbstractModel {
 
     /**
-    * 业务ID
+    * 预约ID
+可通过DescribeBiddingList接口获取
     */
     @SerializedName("BusinessId")
     @Expose
     private String BusinessId;
 
     /**
-     * Get 业务ID 
-     * @return BusinessId 业务ID
+     * Get 预约ID
+可通过DescribeBiddingList接口获取 
+     * @return BusinessId 预约ID
+可通过DescribeBiddingList接口获取
      */
     public String getBusinessId() {
         return this.BusinessId;
     }
 
     /**
-     * Set 业务ID
-     * @param BusinessId 业务ID
+     * Set 预约ID
+可通过DescribeBiddingList接口获取
+     * @param BusinessId 预约ID
+可通过DescribeBiddingList接口获取
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;

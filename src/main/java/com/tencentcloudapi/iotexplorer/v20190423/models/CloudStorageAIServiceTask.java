@@ -63,18 +63,32 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     private String ServiceType;
 
     /**
-    * 对应云存视频的起始时间
+    * 对应云存视频的起始时间（秒级 UNIX 时间戳）
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 对应云存视频的结束时间
+    * 对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+    */
+    @SerializedName("StartTimeMs")
+    @Expose
+    private Long StartTimeMs;
+
+    /**
+    * 对应云存视频的结束时间（秒级 UNIX 时间戳）
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
+
+    /**
+    * 对应云存视频的结束时间（毫秒级 UNIX 时间戳）
+    */
+    @SerializedName("EndTimeMs")
+    @Expose
+    private Long EndTimeMs;
 
     /**
     * 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
@@ -222,35 +236,67 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     }
 
     /**
-     * Get 对应云存视频的起始时间 
-     * @return StartTime 对应云存视频的起始时间
+     * Get 对应云存视频的起始时间（秒级 UNIX 时间戳） 
+     * @return StartTime 对应云存视频的起始时间（秒级 UNIX 时间戳）
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 对应云存视频的起始时间
-     * @param StartTime 对应云存视频的起始时间
+     * Set 对应云存视频的起始时间（秒级 UNIX 时间戳）
+     * @param StartTime 对应云存视频的起始时间（秒级 UNIX 时间戳）
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 对应云存视频的结束时间 
-     * @return EndTime 对应云存视频的结束时间
+     * Get 对应云存视频的起始时间（毫秒级 UNIX 时间戳） 
+     * @return StartTimeMs 对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+     */
+    public Long getStartTimeMs() {
+        return this.StartTimeMs;
+    }
+
+    /**
+     * Set 对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+     * @param StartTimeMs 对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+     */
+    public void setStartTimeMs(Long StartTimeMs) {
+        this.StartTimeMs = StartTimeMs;
+    }
+
+    /**
+     * Get 对应云存视频的结束时间（秒级 UNIX 时间戳） 
+     * @return EndTime 对应云存视频的结束时间（秒级 UNIX 时间戳）
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 对应云存视频的结束时间
-     * @param EndTime 对应云存视频的结束时间
+     * Set 对应云存视频的结束时间（秒级 UNIX 时间戳）
+     * @param EndTime 对应云存视频的结束时间（秒级 UNIX 时间戳）
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 对应云存视频的结束时间（毫秒级 UNIX 时间戳） 
+     * @return EndTimeMs 对应云存视频的结束时间（毫秒级 UNIX 时间戳）
+     */
+    public Long getEndTimeMs() {
+        return this.EndTimeMs;
+    }
+
+    /**
+     * Set 对应云存视频的结束时间（毫秒级 UNIX 时间戳）
+     * @param EndTimeMs 对应云存视频的结束时间（毫秒级 UNIX 时间戳）
+     */
+    public void setEndTimeMs(Long EndTimeMs) {
+        this.EndTimeMs = EndTimeMs;
     }
 
     /**
@@ -391,8 +437,14 @@ public class CloudStorageAIServiceTask extends AbstractModel {
         if (source.StartTime != null) {
             this.StartTime = new Long(source.StartTime);
         }
+        if (source.StartTimeMs != null) {
+            this.StartTimeMs = new Long(source.StartTimeMs);
+        }
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
+        }
+        if (source.EndTimeMs != null) {
+            this.EndTimeMs = new Long(source.EndTimeMs);
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
@@ -434,7 +486,9 @@ public class CloudStorageAIServiceTask extends AbstractModel {
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "StartTimeMs", this.StartTimeMs);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamArraySimple(map, prefix + "Files.", this.Files);

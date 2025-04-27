@@ -38,14 +38,18 @@ public class Image extends AbstractModel {
     private String OsName;
 
     /**
-    * 镜像类型
+    * 镜像类型。镜像类型返回值包括：
+* `PUBLIC_IMAGE` 公共镜像
+* `PRIVATE_IMAGE` 自定义镜像
+* `SHARED_IMAGE` 共享镜像
     */
     @SerializedName("ImageType")
     @Expose
     private String ImageType;
 
     /**
-    * 镜像创建时间
+    * 镜像创建时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -66,14 +70,17 @@ public class Image extends AbstractModel {
     private String ImageDescription;
 
     /**
-    * 镜像大小
+    * 镜像大小，单位 GiB。
     */
     @SerializedName("ImageSize")
     @Expose
     private Long ImageSize;
 
     /**
-    * 镜像架构
+    * 镜像架构。镜像架构返回值包括：
+* `x86_64`
+* `arm`
+* `i386`
     */
     @SerializedName("Architecture")
     @Expose
@@ -108,7 +115,10 @@ IMPORTFAILED-导入失败
     private String ImageCreator;
 
     /**
-    * 镜像来源
+    * 镜像来源。镜像来源返回值包括：
+* `OFFICIAL` 官方镜像
+* `CREATE_IMAGE` 用户自建镜像
+* `EXTERNAL_IMPORT` 用户外部导入镜像
     */
     @SerializedName("ImageSource")
     @Expose
@@ -144,7 +154,9 @@ IMPORTFAILED-导入失败
     private Tag [] Tags;
 
     /**
-    * 镜像许可类型
+    * 镜像许可类型。镜像许可类型返回值包括：
+* `TencentCloud` 腾讯云官方许可
+* `BYOL` 用户自带许可
     */
     @SerializedName("LicenseType")
     @Expose
@@ -163,6 +175,13 @@ IMPORTFAILED-导入失败
     @SerializedName("ImageDeprecated")
     @Expose
     private Boolean ImageDeprecated;
+
+    /**
+    * CDC镜像缓存状态
+    */
+    @SerializedName("CdcCacheStatus")
+    @Expose
+    private String CdcCacheStatus;
 
     /**
      * Get 镜像ID 
@@ -197,32 +216,48 @@ IMPORTFAILED-导入失败
     }
 
     /**
-     * Get 镜像类型 
-     * @return ImageType 镜像类型
+     * Get 镜像类型。镜像类型返回值包括：
+* `PUBLIC_IMAGE` 公共镜像
+* `PRIVATE_IMAGE` 自定义镜像
+* `SHARED_IMAGE` 共享镜像 
+     * @return ImageType 镜像类型。镜像类型返回值包括：
+* `PUBLIC_IMAGE` 公共镜像
+* `PRIVATE_IMAGE` 自定义镜像
+* `SHARED_IMAGE` 共享镜像
      */
     public String getImageType() {
         return this.ImageType;
     }
 
     /**
-     * Set 镜像类型
-     * @param ImageType 镜像类型
+     * Set 镜像类型。镜像类型返回值包括：
+* `PUBLIC_IMAGE` 公共镜像
+* `PRIVATE_IMAGE` 自定义镜像
+* `SHARED_IMAGE` 共享镜像
+     * @param ImageType 镜像类型。镜像类型返回值包括：
+* `PUBLIC_IMAGE` 公共镜像
+* `PRIVATE_IMAGE` 自定义镜像
+* `SHARED_IMAGE` 共享镜像
      */
     public void setImageType(String ImageType) {
         this.ImageType = ImageType;
     }
 
     /**
-     * Get 镜像创建时间 
-     * @return CreatedTime 镜像创建时间
+     * Get 镜像创建时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。 
+     * @return CreatedTime 镜像创建时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 镜像创建时间
-     * @param CreatedTime 镜像创建时间
+     * Set 镜像创建时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param CreatedTime 镜像创建时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
@@ -261,32 +296,44 @@ IMPORTFAILED-导入失败
     }
 
     /**
-     * Get 镜像大小 
-     * @return ImageSize 镜像大小
+     * Get 镜像大小，单位 GiB。 
+     * @return ImageSize 镜像大小，单位 GiB。
      */
     public Long getImageSize() {
         return this.ImageSize;
     }
 
     /**
-     * Set 镜像大小
-     * @param ImageSize 镜像大小
+     * Set 镜像大小，单位 GiB。
+     * @param ImageSize 镜像大小，单位 GiB。
      */
     public void setImageSize(Long ImageSize) {
         this.ImageSize = ImageSize;
     }
 
     /**
-     * Get 镜像架构 
-     * @return Architecture 镜像架构
+     * Get 镜像架构。镜像架构返回值包括：
+* `x86_64`
+* `arm`
+* `i386` 
+     * @return Architecture 镜像架构。镜像架构返回值包括：
+* `x86_64`
+* `arm`
+* `i386`
      */
     public String getArchitecture() {
         return this.Architecture;
     }
 
     /**
-     * Set 镜像架构
-     * @param Architecture 镜像架构
+     * Set 镜像架构。镜像架构返回值包括：
+* `x86_64`
+* `arm`
+* `i386`
+     * @param Architecture 镜像架构。镜像架构返回值包括：
+* `x86_64`
+* `arm`
+* `i386`
      */
     public void setArchitecture(String Architecture) {
         this.Architecture = Architecture;
@@ -369,16 +416,28 @@ IMPORTFAILED-导入失败
     }
 
     /**
-     * Get 镜像来源 
-     * @return ImageSource 镜像来源
+     * Get 镜像来源。镜像来源返回值包括：
+* `OFFICIAL` 官方镜像
+* `CREATE_IMAGE` 用户自建镜像
+* `EXTERNAL_IMPORT` 用户外部导入镜像 
+     * @return ImageSource 镜像来源。镜像来源返回值包括：
+* `OFFICIAL` 官方镜像
+* `CREATE_IMAGE` 用户自建镜像
+* `EXTERNAL_IMPORT` 用户外部导入镜像
      */
     public String getImageSource() {
         return this.ImageSource;
     }
 
     /**
-     * Set 镜像来源
-     * @param ImageSource 镜像来源
+     * Set 镜像来源。镜像来源返回值包括：
+* `OFFICIAL` 官方镜像
+* `CREATE_IMAGE` 用户自建镜像
+* `EXTERNAL_IMPORT` 用户外部导入镜像
+     * @param ImageSource 镜像来源。镜像来源返回值包括：
+* `OFFICIAL` 官方镜像
+* `CREATE_IMAGE` 用户自建镜像
+* `EXTERNAL_IMPORT` 用户外部导入镜像
      */
     public void setImageSource(String ImageSource) {
         this.ImageSource = ImageSource;
@@ -453,16 +512,24 @@ IMPORTFAILED-导入失败
     }
 
     /**
-     * Get 镜像许可类型 
-     * @return LicenseType 镜像许可类型
+     * Get 镜像许可类型。镜像许可类型返回值包括：
+* `TencentCloud` 腾讯云官方许可
+* `BYOL` 用户自带许可 
+     * @return LicenseType 镜像许可类型。镜像许可类型返回值包括：
+* `TencentCloud` 腾讯云官方许可
+* `BYOL` 用户自带许可
      */
     public String getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set 镜像许可类型
-     * @param LicenseType 镜像许可类型
+     * Set 镜像许可类型。镜像许可类型返回值包括：
+* `TencentCloud` 腾讯云官方许可
+* `BYOL` 用户自带许可
+     * @param LicenseType 镜像许可类型。镜像许可类型返回值包括：
+* `TencentCloud` 腾讯云官方许可
+* `BYOL` 用户自带许可
      */
     public void setLicenseType(String LicenseType) {
         this.LicenseType = LicenseType;
@@ -498,6 +565,22 @@ IMPORTFAILED-导入失败
      */
     public void setImageDeprecated(Boolean ImageDeprecated) {
         this.ImageDeprecated = ImageDeprecated;
+    }
+
+    /**
+     * Get CDC镜像缓存状态 
+     * @return CdcCacheStatus CDC镜像缓存状态
+     */
+    public String getCdcCacheStatus() {
+        return this.CdcCacheStatus;
+    }
+
+    /**
+     * Set CDC镜像缓存状态
+     * @param CdcCacheStatus CDC镜像缓存状态
+     */
+    public void setCdcCacheStatus(String CdcCacheStatus) {
+        this.CdcCacheStatus = CdcCacheStatus;
     }
 
     public Image() {
@@ -571,6 +654,9 @@ IMPORTFAILED-导入失败
         if (source.ImageDeprecated != null) {
             this.ImageDeprecated = new Boolean(source.ImageDeprecated);
         }
+        if (source.CdcCacheStatus != null) {
+            this.CdcCacheStatus = new String(source.CdcCacheStatus);
+        }
     }
 
 
@@ -597,6 +683,7 @@ IMPORTFAILED-导入失败
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
         this.setParamSimple(map, prefix + "ImageDeprecated", this.ImageDeprecated);
+        this.setParamSimple(map, prefix + "CdcCacheStatus", this.CdcCacheStatus);
 
     }
 }

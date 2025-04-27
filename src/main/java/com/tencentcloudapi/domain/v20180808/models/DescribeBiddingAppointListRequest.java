@@ -45,7 +45,8 @@ public class DescribeBiddingAppointListRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 状态： 1 已预约 9 预约持有者索回
+    * 状态：
+1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
     */
     @SerializedName("Status")
     @Expose
@@ -114,16 +115,20 @@ public class DescribeBiddingAppointListRequest extends AbstractModel {
     }
 
     /**
-     * Get 状态： 1 已预约 9 预约持有者索回 
-     * @return Status 状态： 1 已预约 9 预约持有者索回
+     * Get 状态：
+1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约 
+     * @return Status 状态：
+1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态： 1 已预约 9 预约持有者索回
-     * @param Status 状态： 1 已预约 9 预约持有者索回
+     * Set 状态：
+1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
+     * @param Status 状态：
+1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;

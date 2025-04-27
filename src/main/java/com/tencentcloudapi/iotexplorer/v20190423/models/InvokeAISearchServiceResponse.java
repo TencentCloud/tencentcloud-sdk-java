@@ -38,6 +38,13 @@ public class InvokeAISearchServiceResponse extends AbstractModel {
     private TargetInfo [] Targets;
 
     /**
+    * 视频回放URL
+    */
+    @SerializedName("VideoURL")
+    @Expose
+    private String VideoURL;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class InvokeAISearchServiceResponse extends AbstractModel {
     }
 
     /**
+     * Get 视频回放URL 
+     * @return VideoURL 视频回放URL
+     */
+    public String getVideoURL() {
+        return this.VideoURL;
+    }
+
+    /**
+     * Set 视频回放URL
+     * @param VideoURL 视频回放URL
+     */
+    public void setVideoURL(String VideoURL) {
+        this.VideoURL = VideoURL;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,9 @@ public class InvokeAISearchServiceResponse extends AbstractModel {
                 this.Targets[i] = new TargetInfo(source.Targets[i]);
             }
         }
+        if (source.VideoURL != null) {
+            this.VideoURL = new String(source.VideoURL);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class InvokeAISearchServiceResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Summary", this.Summary);
         this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
+        this.setParamSimple(map, prefix + "VideoURL", this.VideoURL);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

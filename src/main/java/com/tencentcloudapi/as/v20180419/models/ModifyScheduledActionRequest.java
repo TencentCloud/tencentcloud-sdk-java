@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyScheduledActionRequest extends AbstractModel {
 
     /**
-    * 待修改的定时任务ID
+    * 待修改的定时任务ID。可以通过调用接口 [DescribeScheduledActions](https://cloud.tencent.com/document/api/377/20450) ，取返回信息中的 ScheduledActionId 获取定时任务ID。
     */
     @SerializedName("ScheduledActionId")
     @Expose
@@ -73,23 +73,23 @@ public class ModifyScheduledActionRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 定时任务的重复方式。为标准 Cron 格式<br>此参数与`EndTime`需要同时指定。
+    * 定时任务的重复方式。为标准 Cron 格式，[Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119)为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。此参数与`EndTime`需要同时指定。
     */
     @SerializedName("Recurrence")
     @Expose
     private String Recurrence;
 
     /**
-     * Get 待修改的定时任务ID 
-     * @return ScheduledActionId 待修改的定时任务ID
+     * Get 待修改的定时任务ID。可以通过调用接口 [DescribeScheduledActions](https://cloud.tencent.com/document/api/377/20450) ，取返回信息中的 ScheduledActionId 获取定时任务ID。 
+     * @return ScheduledActionId 待修改的定时任务ID。可以通过调用接口 [DescribeScheduledActions](https://cloud.tencent.com/document/api/377/20450) ，取返回信息中的 ScheduledActionId 获取定时任务ID。
      */
     public String getScheduledActionId() {
         return this.ScheduledActionId;
     }
 
     /**
-     * Set 待修改的定时任务ID
-     * @param ScheduledActionId 待修改的定时任务ID
+     * Set 待修改的定时任务ID。可以通过调用接口 [DescribeScheduledActions](https://cloud.tencent.com/document/api/377/20450) ，取返回信息中的 ScheduledActionId 获取定时任务ID。
+     * @param ScheduledActionId 待修改的定时任务ID。可以通过调用接口 [DescribeScheduledActions](https://cloud.tencent.com/document/api/377/20450) ，取返回信息中的 ScheduledActionId 获取定时任务ID。
      */
     public void setScheduledActionId(String ScheduledActionId) {
         this.ScheduledActionId = ScheduledActionId;
@@ -192,16 +192,16 @@ public class ModifyScheduledActionRequest extends AbstractModel {
     }
 
     /**
-     * Get 定时任务的重复方式。为标准 Cron 格式<br>此参数与`EndTime`需要同时指定。 
-     * @return Recurrence 定时任务的重复方式。为标准 Cron 格式<br>此参数与`EndTime`需要同时指定。
+     * Get 定时任务的重复方式。为标准 Cron 格式，[Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119)为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。此参数与`EndTime`需要同时指定。 
+     * @return Recurrence 定时任务的重复方式。为标准 Cron 格式，[Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119)为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。此参数与`EndTime`需要同时指定。
      */
     public String getRecurrence() {
         return this.Recurrence;
     }
 
     /**
-     * Set 定时任务的重复方式。为标准 Cron 格式<br>此参数与`EndTime`需要同时指定。
-     * @param Recurrence 定时任务的重复方式。为标准 Cron 格式<br>此参数与`EndTime`需要同时指定。
+     * Set 定时任务的重复方式。为标准 Cron 格式，[Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119)为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。此参数与`EndTime`需要同时指定。
+     * @param Recurrence 定时任务的重复方式。为标准 Cron 格式，[Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119)为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。此参数与`EndTime`需要同时指定。
      */
     public void setRecurrence(String Recurrence) {
         this.Recurrence = Recurrence;

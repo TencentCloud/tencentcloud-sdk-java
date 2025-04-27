@@ -25,6 +25,10 @@ public class DescribeRegisterCodesRequest extends AbstractModel {
 
     /**
     * 注册码ID。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `RegisterCodeIds ` 和 `Filters ` 。
     */
     @SerializedName("RegisterCodeIds")
     @Expose
@@ -45,8 +49,16 @@ public class DescribeRegisterCodesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 注册码ID。 
+     * Get 注册码ID。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `RegisterCodeIds ` 和 `Filters ` 。 
      * @return RegisterCodeIds 注册码ID。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `RegisterCodeIds ` 和 `Filters ` 。
      */
     public String [] getRegisterCodeIds() {
         return this.RegisterCodeIds;
@@ -54,7 +66,15 @@ public class DescribeRegisterCodesRequest extends AbstractModel {
 
     /**
      * Set 注册码ID。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `RegisterCodeIds ` 和 `Filters ` 。
      * @param RegisterCodeIds 注册码ID。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `RegisterCodeIds ` 和 `Filters ` 。
      */
     public void setRegisterCodeIds(String [] RegisterCodeIds) {
         this.RegisterCodeIds = RegisterCodeIds;

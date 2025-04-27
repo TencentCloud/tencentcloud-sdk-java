@@ -31,21 +31,21 @@ public class BidDetailPageResponse extends AbstractModel {
     private String Domain;
 
     /**
-    * 当前域名价格
+    * 当前域名价格 单位元
     */
     @SerializedName("CurrentPrice")
     @Expose
     private Float CurrentPrice;
 
     /**
-    * 用户上次出价
+    * 用户上次出价 单位元
     */
     @SerializedName("BidPrice")
     @Expose
     private Float BidPrice;
 
     /**
-    * 当前加价幅度
+    * 当前加价幅度 单位元
     */
     @SerializedName("CurrentPriceScope")
     @Expose
@@ -60,7 +60,7 @@ public class BidDetailPageResponse extends AbstractModel {
     private PriceScopeConf [] PriceScope;
 
     /**
-    * 用户当前已经支付了的保证金
+    * 用户当前已经支付了的保证金 单位元
     */
     @SerializedName("DepositPrice")
     @Expose
@@ -90,48 +90,48 @@ public class BidDetailPageResponse extends AbstractModel {
     }
 
     /**
-     * Get 当前域名价格 
-     * @return CurrentPrice 当前域名价格
+     * Get 当前域名价格 单位元 
+     * @return CurrentPrice 当前域名价格 单位元
      */
     public Float getCurrentPrice() {
         return this.CurrentPrice;
     }
 
     /**
-     * Set 当前域名价格
-     * @param CurrentPrice 当前域名价格
+     * Set 当前域名价格 单位元
+     * @param CurrentPrice 当前域名价格 单位元
      */
     public void setCurrentPrice(Float CurrentPrice) {
         this.CurrentPrice = CurrentPrice;
     }
 
     /**
-     * Get 用户上次出价 
-     * @return BidPrice 用户上次出价
+     * Get 用户上次出价 单位元 
+     * @return BidPrice 用户上次出价 单位元
      */
     public Float getBidPrice() {
         return this.BidPrice;
     }
 
     /**
-     * Set 用户上次出价
-     * @param BidPrice 用户上次出价
+     * Set 用户上次出价 单位元
+     * @param BidPrice 用户上次出价 单位元
      */
     public void setBidPrice(Float BidPrice) {
         this.BidPrice = BidPrice;
     }
 
     /**
-     * Get 当前加价幅度 
-     * @return CurrentPriceScope 当前加价幅度
+     * Get 当前加价幅度 单位元 
+     * @return CurrentPriceScope 当前加价幅度 单位元
      */
     public Float getCurrentPriceScope() {
         return this.CurrentPriceScope;
     }
 
     /**
-     * Set 当前加价幅度
-     * @param CurrentPriceScope 当前加价幅度
+     * Set 当前加价幅度 单位元
+     * @param CurrentPriceScope 当前加价幅度 单位元
      */
     public void setCurrentPriceScope(Float CurrentPriceScope) {
         this.CurrentPriceScope = CurrentPriceScope;
@@ -158,16 +158,16 @@ public class BidDetailPageResponse extends AbstractModel {
     }
 
     /**
-     * Get 用户当前已经支付了的保证金 
-     * @return DepositPrice 用户当前已经支付了的保证金
+     * Get 用户当前已经支付了的保证金 单位元 
+     * @return DepositPrice 用户当前已经支付了的保证金 单位元
      */
     public Float getDepositPrice() {
         return this.DepositPrice;
     }
 
     /**
-     * Set 用户当前已经支付了的保证金
-     * @param DepositPrice 用户当前已经支付了的保证金
+     * Set 用户当前已经支付了的保证金 单位元
+     * @param DepositPrice 用户当前已经支付了的保证金 单位元
      */
     public void setDepositPrice(Float DepositPrice) {
         this.DepositPrice = DepositPrice;

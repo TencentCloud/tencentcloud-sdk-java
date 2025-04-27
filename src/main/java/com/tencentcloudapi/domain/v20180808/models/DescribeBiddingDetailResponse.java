@@ -73,7 +73,7 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
     private String DeleteTime;
 
     /**
-    * 当前价格
+    * 当前价格 单位元
     */
     @SerializedName("CurrentPrice")
     @Expose
@@ -87,7 +87,7 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
     private String CurrentNickname;
 
     /**
-    * 竞价保证金
+    * 竞价保证金 单位元
     */
     @SerializedName("BiddingBondPrice")
     @Expose
@@ -115,7 +115,7 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
     private String BiddingBondRefund;
 
     /**
-    * 我的出价
+    * 我的出价 单位元
     */
     @SerializedName("BiddingPrice")
     @Expose
@@ -241,16 +241,16 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 当前价格 
-     * @return CurrentPrice 当前价格
+     * Get 当前价格 单位元 
+     * @return CurrentPrice 当前价格 单位元
      */
     public Long getCurrentPrice() {
         return this.CurrentPrice;
     }
 
     /**
-     * Set 当前价格
-     * @param CurrentPrice 当前价格
+     * Set 当前价格 单位元
+     * @param CurrentPrice 当前价格 单位元
      */
     public void setCurrentPrice(Long CurrentPrice) {
         this.CurrentPrice = CurrentPrice;
@@ -273,16 +273,16 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 竞价保证金 
-     * @return BiddingBondPrice 竞价保证金
+     * Get 竞价保证金 单位元 
+     * @return BiddingBondPrice 竞价保证金 单位元
      */
     public Long getBiddingBondPrice() {
         return this.BiddingBondPrice;
     }
 
     /**
-     * Set 竞价保证金
-     * @param BiddingBondPrice 竞价保证金
+     * Set 竞价保证金 单位元
+     * @param BiddingBondPrice 竞价保证金 单位元
      */
     public void setBiddingBondPrice(Long BiddingBondPrice) {
         this.BiddingBondPrice = BiddingBondPrice;
@@ -337,16 +337,16 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 我的出价 
-     * @return BiddingPrice 我的出价
+     * Get 我的出价 单位元 
+     * @return BiddingPrice 我的出价 单位元
      */
     public Long getBiddingPrice() {
         return this.BiddingPrice;
     }
 
     /**
-     * Set 我的出价
-     * @param BiddingPrice 我的出价
+     * Set 我的出价 单位元
+     * @param BiddingPrice 我的出价 单位元
      */
     public void setBiddingPrice(Long BiddingPrice) {
         this.BiddingPrice = BiddingPrice;

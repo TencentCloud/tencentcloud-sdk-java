@@ -66,6 +66,27 @@ public class CreateVulScanTaskRequest extends AbstractModel {
     private Long RegistryTaskID;
 
     /**
+    * 本地镜像容器运行中
+    */
+    @SerializedName("LocalImageContainerRunning")
+    @Expose
+    private Boolean LocalImageContainerRunning;
+
+    /**
+    * 仓库镜像容器运行中
+    */
+    @SerializedName("RegistryImageContainerRunning")
+    @Expose
+    private Boolean RegistryImageContainerRunning;
+
+    /**
+    * 仓库镜像是否是最新
+    */
+    @SerializedName("IsLatest")
+    @Expose
+    private Boolean IsLatest;
+
+    /**
      * Get 本地镜像扫描范围类型。ALL:全部本地镜像，NOT_SCAN：全部已授权未扫描本地镜像，IMAGEIDS:自选本地镜像ID 
      * @return LocalImageScanType 本地镜像扫描范围类型。ALL:全部本地镜像，NOT_SCAN：全部已授权未扫描本地镜像，IMAGEIDS:自选本地镜像ID
      */
@@ -161,6 +182,54 @@ public class CreateVulScanTaskRequest extends AbstractModel {
         this.RegistryTaskID = RegistryTaskID;
     }
 
+    /**
+     * Get 本地镜像容器运行中 
+     * @return LocalImageContainerRunning 本地镜像容器运行中
+     */
+    public Boolean getLocalImageContainerRunning() {
+        return this.LocalImageContainerRunning;
+    }
+
+    /**
+     * Set 本地镜像容器运行中
+     * @param LocalImageContainerRunning 本地镜像容器运行中
+     */
+    public void setLocalImageContainerRunning(Boolean LocalImageContainerRunning) {
+        this.LocalImageContainerRunning = LocalImageContainerRunning;
+    }
+
+    /**
+     * Get 仓库镜像容器运行中 
+     * @return RegistryImageContainerRunning 仓库镜像容器运行中
+     */
+    public Boolean getRegistryImageContainerRunning() {
+        return this.RegistryImageContainerRunning;
+    }
+
+    /**
+     * Set 仓库镜像容器运行中
+     * @param RegistryImageContainerRunning 仓库镜像容器运行中
+     */
+    public void setRegistryImageContainerRunning(Boolean RegistryImageContainerRunning) {
+        this.RegistryImageContainerRunning = RegistryImageContainerRunning;
+    }
+
+    /**
+     * Get 仓库镜像是否是最新 
+     * @return IsLatest 仓库镜像是否是最新
+     */
+    public Boolean getIsLatest() {
+        return this.IsLatest;
+    }
+
+    /**
+     * Set 仓库镜像是否是最新
+     * @param IsLatest 仓库镜像是否是最新
+     */
+    public void setIsLatest(Boolean IsLatest) {
+        this.IsLatest = IsLatest;
+    }
+
     public CreateVulScanTaskRequest() {
     }
 
@@ -193,6 +262,15 @@ public class CreateVulScanTaskRequest extends AbstractModel {
         if (source.RegistryTaskID != null) {
             this.RegistryTaskID = new Long(source.RegistryTaskID);
         }
+        if (source.LocalImageContainerRunning != null) {
+            this.LocalImageContainerRunning = new Boolean(source.LocalImageContainerRunning);
+        }
+        if (source.RegistryImageContainerRunning != null) {
+            this.RegistryImageContainerRunning = new Boolean(source.RegistryImageContainerRunning);
+        }
+        if (source.IsLatest != null) {
+            this.IsLatest = new Boolean(source.IsLatest);
+        }
     }
 
 
@@ -206,6 +284,9 @@ public class CreateVulScanTaskRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RegistryImageIDs.", this.RegistryImageIDs);
         this.setParamSimple(map, prefix + "LocalTaskID", this.LocalTaskID);
         this.setParamSimple(map, prefix + "RegistryTaskID", this.RegistryTaskID);
+        this.setParamSimple(map, prefix + "LocalImageContainerRunning", this.LocalImageContainerRunning);
+        this.setParamSimple(map, prefix + "RegistryImageContainerRunning", this.RegistryImageContainerRunning);
+        this.setParamSimple(map, prefix + "IsLatest", this.IsLatest);
 
     }
 }

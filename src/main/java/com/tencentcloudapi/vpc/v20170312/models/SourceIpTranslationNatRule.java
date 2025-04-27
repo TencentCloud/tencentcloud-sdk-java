@@ -32,7 +32,6 @@ public class SourceIpTranslationNatRule extends AbstractModel {
 
     /**
     * 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -68,7 +67,6 @@ public class SourceIpTranslationNatRule extends AbstractModel {
 
     /**
     * NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NatGatewayId")
     @Expose
@@ -76,7 +74,6 @@ public class SourceIpTranslationNatRule extends AbstractModel {
 
     /**
     * 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -84,7 +81,6 @@ public class SourceIpTranslationNatRule extends AbstractModel {
 
     /**
     * NAT网关SNAT规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -107,10 +103,8 @@ public class SourceIpTranslationNatRule extends AbstractModel {
     }
 
     /**
-     * Get 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED 
      * @return ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -118,9 +112,7 @@ public class SourceIpTranslationNatRule extends AbstractModel {
 
     /**
      * Set 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -191,10 +183,8 @@ public class SourceIpTranslationNatRule extends AbstractModel {
     }
 
     /**
-     * Get NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NAT网关的ID。 
      * @return NatGatewayId NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
@@ -202,19 +192,15 @@ public class SourceIpTranslationNatRule extends AbstractModel {
 
     /**
      * Set NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NatGatewayId NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
     }
 
     /**
-     * Get 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络VPC的ID。 
      * @return VpcId 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -222,19 +208,15 @@ public class SourceIpTranslationNatRule extends AbstractModel {
 
     /**
      * Set 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get NAT网关SNAT规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NAT网关SNAT规则创建时间。 
      * @return CreatedTime NAT网关SNAT规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -242,9 +224,7 @@ public class SourceIpTranslationNatRule extends AbstractModel {
 
     /**
      * Set NAT网关SNAT规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime NAT网关SNAT规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

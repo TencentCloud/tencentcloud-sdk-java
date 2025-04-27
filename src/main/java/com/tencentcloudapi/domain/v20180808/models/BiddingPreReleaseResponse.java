@@ -31,7 +31,7 @@ public class BiddingPreReleaseResponse extends AbstractModel {
     private Boolean IsNeedPay;
 
     /**
-    * 计费请求参数，以Json字符串的形式进行返回。
+    * 计费请求参数，以类Json字符串的形式进行返回。用于计费下单
     */
     @SerializedName("BillingParam")
     @Expose
@@ -61,16 +61,16 @@ public class BiddingPreReleaseResponse extends AbstractModel {
     }
 
     /**
-     * Get 计费请求参数，以Json字符串的形式进行返回。 
-     * @return BillingParam 计费请求参数，以Json字符串的形式进行返回。
+     * Get 计费请求参数，以类Json字符串的形式进行返回。用于计费下单 
+     * @return BillingParam 计费请求参数，以类Json字符串的形式进行返回。用于计费下单
      */
     public String getBillingParam() {
         return this.BillingParam;
     }
 
     /**
-     * Set 计费请求参数，以Json字符串的形式进行返回。
-     * @param BillingParam 计费请求参数，以Json字符串的形式进行返回。
+     * Set 计费请求参数，以类Json字符串的形式进行返回。用于计费下单
+     * @param BillingParam 计费请求参数，以类Json字符串的形式进行返回。用于计费下单
      */
     public void setBillingParam(String BillingParam) {
         this.BillingParam = BillingParam;

@@ -25,7 +25,6 @@ public class Disk extends AbstractModel {
 
     /**
     * 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。</li><li>false：销毁实例时不销毁云盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteWithInstance")
     @Expose
@@ -33,7 +32,6 @@ public class Disk extends AbstractModel {
 
     /**
     * 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -62,7 +60,6 @@ public class Disk extends AbstractModel {
 
     /**
     * 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置</li><li>false：云盘自动续费标识正常。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlagError")
     @Expose
@@ -105,7 +102,6 @@ public class Disk extends AbstractModel {
 
     /**
     * 与云盘绑定的标签，云盘未绑定标签则取值为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -120,14 +116,13 @@ public class Disk extends AbstractModel {
 
     /**
     * 云盘的挂载类型。取值范围：<br><li>PF: PF挂载</li><li>VF: VF挂载</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttachMode")
     @Expose
     private String AttachMode;
 
     /**
-    * 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+    * 云盘关联的定期快照ID。只有在调用[DescribeDisks](/document/product/362/16315)接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoSnapshotPolicyIds")
@@ -135,8 +130,7 @@ public class Disk extends AbstractModel {
     private String [] AutoSnapshotPolicyIds;
 
     /**
-    * 云硬盘额外性能值，单位MB/s。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 云硬盘额外性能值，单位MiB/s。
     */
     @SerializedName("ThroughputPerformance")
     @Expose
@@ -144,7 +138,6 @@ public class Disk extends AbstractModel {
 
     /**
     * 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中</li><li>true:表示云盘已发起类型变更，正处于迁移中。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Migrating")
     @Expose
@@ -158,7 +151,7 @@ public class Disk extends AbstractModel {
     private String DiskId;
 
     /**
-    * 云盘拥有的快照总容量，单位为MB。
+    * 云盘拥有的快照总容量，单位为MiB。
     */
     @SerializedName("SnapshotSize")
     @Expose
@@ -202,7 +195,6 @@ public class Disk extends AbstractModel {
 
     /**
     * 云盘类型变更的迁移进度，取值0到100。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MigratePercent")
     @Expose
@@ -238,7 +230,6 @@ public class Disk extends AbstractModel {
 
     /**
     * 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。</li><li>false：云盘到期时间晚于实例。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadlineError")
     @Expose
@@ -252,7 +243,7 @@ public class Disk extends AbstractModel {
     private Long RollbackPercent;
 
     /**
-    * 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+    * 当前时间距离云硬盘到期的天数（仅对预付费云硬盘有意义）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DifferDaysOfDeadline")
@@ -260,8 +251,7 @@ public class Disk extends AbstractModel {
     private Long DifferDaysOfDeadline;
 
     /**
-    * 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+    * 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li><li>10：非弹性云硬盘、系统盘、后付费云硬盘等不支持退还</li>
     */
     @SerializedName("ReturnFailCode")
     @Expose
@@ -319,7 +309,6 @@ public class Disk extends AbstractModel {
 
     /**
     * 云硬盘最后一次操作错误提示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorPrompt")
     @Expose
@@ -327,7 +316,6 @@ public class Disk extends AbstractModel {
 
     /**
     * 云盘是否开启性能突发
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BurstPerformance")
     @Expose
@@ -335,17 +323,21 @@ public class Disk extends AbstractModel {
 
     /**
     * 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptType")
     @Expose
     private String EncryptType;
 
     /**
-     * Get 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。</li><li>false：销毁实例时不销毁云盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 加密盘密钥ID
+    */
+    @SerializedName("KmsKeyId")
+    @Expose
+    private String KmsKeyId;
+
+    /**
+     * Get 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。</li><li>false：销毁实例时不销毁云盘。</li> 
      * @return DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。</li><li>false：销毁实例时不销毁云盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeleteWithInstance() {
         return this.DeleteWithInstance;
@@ -353,19 +345,15 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。</li><li>false：销毁实例时不销毁云盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。</li><li>false：销毁实例时不销毁云盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteWithInstance(Boolean DeleteWithInstance) {
         this.DeleteWithInstance = DeleteWithInstance;
     }
 
     /**
-     * Get 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。</li> 
      * @return RenewFlag 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRenewFlag() {
         return this.RenewFlag;
@@ -373,9 +361,7 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -430,10 +416,8 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置</li><li>false：云盘自动续费标识正常。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置</li><li>false：云盘自动续费标识正常。</li> 
      * @return AutoRenewFlagError 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置</li><li>false：云盘自动续费标识正常。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoRenewFlagError() {
         return this.AutoRenewFlagError;
@@ -441,9 +425,7 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置</li><li>false：云盘自动续费标识正常。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlagError 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置</li><li>false：云盘自动续费标识正常。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlagError(Boolean AutoRenewFlagError) {
         this.AutoRenewFlagError = AutoRenewFlagError;
@@ -530,10 +512,8 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 与云盘绑定的标签，云盘未绑定标签则取值为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 与云盘绑定的标签，云盘未绑定标签则取值为空。 
      * @return Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -541,9 +521,7 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 与云盘绑定的标签，云盘未绑定标签则取值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -566,10 +544,8 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 云盘的挂载类型。取值范围：<br><li>PF: PF挂载</li><li>VF: VF挂载</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘的挂载类型。取值范围：<br><li>PF: PF挂载</li><li>VF: VF挂载</li> 
      * @return AttachMode 云盘的挂载类型。取值范围：<br><li>PF: PF挂载</li><li>VF: VF挂载</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttachMode() {
         return this.AttachMode;
@@ -577,18 +553,16 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 云盘的挂载类型。取值范围：<br><li>PF: PF挂载</li><li>VF: VF挂载</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttachMode 云盘的挂载类型。取值范围：<br><li>PF: PF挂载</li><li>VF: VF挂载</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachMode(String AttachMode) {
         this.AttachMode = AttachMode;
     }
 
     /**
-     * Get 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+     * Get 云盘关联的定期快照ID。只有在调用[DescribeDisks](/document/product/362/16315)接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+     * @return AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用[DescribeDisks](/document/product/362/16315)接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAutoSnapshotPolicyIds() {
@@ -596,9 +570,9 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Set 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+     * Set 云盘关联的定期快照ID。只有在调用[DescribeDisks](/document/product/362/16315)接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+     * @param AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用[DescribeDisks](/document/product/362/16315)接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoSnapshotPolicyIds(String [] AutoSnapshotPolicyIds) {
@@ -606,30 +580,24 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘额外性能值，单位MB/s。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ThroughputPerformance 云硬盘额外性能值，单位MB/s。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 云硬盘额外性能值，单位MiB/s。 
+     * @return ThroughputPerformance 云硬盘额外性能值，单位MiB/s。
      */
     public Long getThroughputPerformance() {
         return this.ThroughputPerformance;
     }
 
     /**
-     * Set 云硬盘额外性能值，单位MB/s。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ThroughputPerformance 云硬盘额外性能值，单位MB/s。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 云硬盘额外性能值，单位MiB/s。
+     * @param ThroughputPerformance 云硬盘额外性能值，单位MiB/s。
      */
     public void setThroughputPerformance(Long ThroughputPerformance) {
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
     /**
-     * Get 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中</li><li>true:表示云盘已发起类型变更，正处于迁移中。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中</li><li>true:表示云盘已发起类型变更，正处于迁移中。</li> 
      * @return Migrating 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中</li><li>true:表示云盘已发起类型变更，正处于迁移中。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getMigrating() {
         return this.Migrating;
@@ -637,9 +605,7 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中</li><li>true:表示云盘已发起类型变更，正处于迁移中。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Migrating 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中</li><li>true:表示云盘已发起类型变更，正处于迁移中。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMigrating(Boolean Migrating) {
         this.Migrating = Migrating;
@@ -662,16 +628,16 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 云盘拥有的快照总容量，单位为MB。 
-     * @return SnapshotSize 云盘拥有的快照总容量，单位为MB。
+     * Get 云盘拥有的快照总容量，单位为MiB。 
+     * @return SnapshotSize 云盘拥有的快照总容量，单位为MiB。
      */
     public Long getSnapshotSize() {
         return this.SnapshotSize;
     }
 
     /**
-     * Set 云盘拥有的快照总容量，单位为MB。
-     * @param SnapshotSize 云盘拥有的快照总容量，单位为MB。
+     * Set 云盘拥有的快照总容量，单位为MiB。
+     * @param SnapshotSize 云盘拥有的快照总容量，单位为MiB。
      */
     public void setSnapshotSize(Long SnapshotSize) {
         this.SnapshotSize = SnapshotSize;
@@ -762,10 +728,8 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 云盘类型变更的迁移进度，取值0到100。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘类型变更的迁移进度，取值0到100。 
      * @return MigratePercent 云盘类型变更的迁移进度，取值0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMigratePercent() {
         return this.MigratePercent;
@@ -773,9 +737,7 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 云盘类型变更的迁移进度，取值0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MigratePercent 云盘类型变更的迁移进度，取值0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMigratePercent(Long MigratePercent) {
         this.MigratePercent = MigratePercent;
@@ -846,10 +808,8 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。</li><li>false：云盘到期时间晚于实例。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。</li><li>false：云盘到期时间晚于实例。</li> 
      * @return DeadlineError 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。</li><li>false：云盘到期时间晚于实例。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeadlineError() {
         return this.DeadlineError;
@@ -857,9 +817,7 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。</li><li>false：云盘到期时间晚于实例。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeadlineError 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。</li><li>false：云盘到期时间晚于实例。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadlineError(Boolean DeadlineError) {
         this.DeadlineError = DeadlineError;
@@ -882,9 +840,9 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+     * Get 当前时间距离云硬盘到期的天数（仅对预付费云硬盘有意义）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DifferDaysOfDeadline 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+     * @return DifferDaysOfDeadline 当前时间距离云硬盘到期的天数（仅对预付费云硬盘有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDifferDaysOfDeadline() {
@@ -892,9 +850,9 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Set 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+     * Set 当前时间距离云硬盘到期的天数（仅对预付费云硬盘有意义）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DifferDaysOfDeadline 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+     * @param DifferDaysOfDeadline 当前时间距离云硬盘到期的天数（仅对预付费云硬盘有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDifferDaysOfDeadline(Long DifferDaysOfDeadline) {
@@ -902,20 +860,16 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li><li>10：非弹性云硬盘、系统盘、后付费云硬盘等不支持退还</li> 
+     * @return ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li><li>10：非弹性云硬盘、系统盘、后付费云硬盘等不支持退还</li>
      */
     public Long getReturnFailCode() {
         return this.ReturnFailCode;
     }
 
     /**
-     * Set 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li><li>10：非弹性云硬盘、系统盘、后付费云硬盘等不支持退还</li>
+     * @param ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li><li>10：非弹性云硬盘、系统盘、后付费云硬盘等不支持退还</li>
      */
     public void setReturnFailCode(Long ReturnFailCode) {
         this.ReturnFailCode = ReturnFailCode;
@@ -1038,10 +992,8 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘最后一次操作错误提示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘最后一次操作错误提示 
      * @return ErrorPrompt 云硬盘最后一次操作错误提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorPrompt() {
         return this.ErrorPrompt;
@@ -1049,19 +1001,15 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 云硬盘最后一次操作错误提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorPrompt 云硬盘最后一次操作错误提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorPrompt(String ErrorPrompt) {
         this.ErrorPrompt = ErrorPrompt;
     }
 
     /**
-     * Get 云盘是否开启性能突发
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云盘是否开启性能突发 
      * @return BurstPerformance 云盘是否开启性能突发
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getBurstPerformance() {
         return this.BurstPerformance;
@@ -1069,19 +1017,15 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 云盘是否开启性能突发
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BurstPerformance 云盘是否开启性能突发
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBurstPerformance(Boolean BurstPerformance) {
         this.BurstPerformance = BurstPerformance;
     }
 
     /**
-     * Get 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容 
      * @return EncryptType 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncryptType() {
         return this.EncryptType;
@@ -1089,12 +1033,26 @@ public class Disk extends AbstractModel {
 
     /**
      * Set 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptType 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptType(String EncryptType) {
         this.EncryptType = EncryptType;
+    }
+
+    /**
+     * Get 加密盘密钥ID 
+     * @return KmsKeyId 加密盘密钥ID
+     */
+    public String getKmsKeyId() {
+        return this.KmsKeyId;
+    }
+
+    /**
+     * Set 加密盘密钥ID
+     * @param KmsKeyId 加密盘密钥ID
+     */
+    public void setKmsKeyId(String KmsKeyId) {
+        this.KmsKeyId = KmsKeyId;
     }
 
     public Disk() {
@@ -1243,6 +1201,9 @@ public class Disk extends AbstractModel {
         if (source.EncryptType != null) {
             this.EncryptType = new String(source.EncryptType);
         }
+        if (source.KmsKeyId != null) {
+            this.KmsKeyId = new String(source.KmsKeyId);
+        }
     }
 
 
@@ -1293,6 +1254,7 @@ public class Disk extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
         this.setParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
         this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
+        this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
 
     }
 }

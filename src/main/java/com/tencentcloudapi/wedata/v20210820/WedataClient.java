@@ -1973,6 +1973,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *租户全局范围的项目列表，与用户查看范围无关.
+     * @param req DescribeTenantProjectsRequest
+     * @return DescribeTenantProjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTenantProjectsResponse DescribeTenantProjects(DescribeTenantProjectsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTenantProjects", DescribeTenantProjectsResponse.class);
+    }
+
+    /**
      *获取第三方运行日志
      * @param req DescribeThirdTaskRunLogRequest
      * @return DescribeThirdTaskRunLogResponse

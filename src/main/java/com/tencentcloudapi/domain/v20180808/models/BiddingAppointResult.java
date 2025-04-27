@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BiddingAppointResult extends AbstractModel {
 
     /**
-    * business_id
+    * 预约ID
     */
     @SerializedName("BusinessID")
     @Expose
@@ -38,14 +38,14 @@ public class BiddingAppointResult extends AbstractModel {
     private String Domain;
 
     /**
-    * 预定价格
+    * 预定价格 单位元
     */
     @SerializedName("AppointPrice")
     @Expose
     private Long AppointPrice;
 
     /**
-    * 预约保证金
+    * 预约保证金 单位元
     */
     @SerializedName("AppointBondPrice")
     @Expose
@@ -73,16 +73,16 @@ public class BiddingAppointResult extends AbstractModel {
     private Long Status;
 
     /**
-     * Get business_id 
-     * @return BusinessID business_id
+     * Get 预约ID 
+     * @return BusinessID 预约ID
      */
     public String getBusinessID() {
         return this.BusinessID;
     }
 
     /**
-     * Set business_id
-     * @param BusinessID business_id
+     * Set 预约ID
+     * @param BusinessID 预约ID
      */
     public void setBusinessID(String BusinessID) {
         this.BusinessID = BusinessID;
@@ -105,32 +105,32 @@ public class BiddingAppointResult extends AbstractModel {
     }
 
     /**
-     * Get 预定价格 
-     * @return AppointPrice 预定价格
+     * Get 预定价格 单位元 
+     * @return AppointPrice 预定价格 单位元
      */
     public Long getAppointPrice() {
         return this.AppointPrice;
     }
 
     /**
-     * Set 预定价格
-     * @param AppointPrice 预定价格
+     * Set 预定价格 单位元
+     * @param AppointPrice 预定价格 单位元
      */
     public void setAppointPrice(Long AppointPrice) {
         this.AppointPrice = AppointPrice;
     }
 
     /**
-     * Get 预约保证金 
-     * @return AppointBondPrice 预约保证金
+     * Get 预约保证金 单位元 
+     * @return AppointBondPrice 预约保证金 单位元
      */
     public Long getAppointBondPrice() {
         return this.AppointBondPrice;
     }
 
     /**
-     * Set 预约保证金
-     * @param AppointBondPrice 预约保证金
+     * Set 预约保证金 单位元
+     * @param AppointBondPrice 预约保证金 单位元
      */
     public void setAppointBondPrice(Long AppointBondPrice) {
         this.AppointBondPrice = AppointBondPrice;

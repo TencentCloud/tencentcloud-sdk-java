@@ -25,21 +25,24 @@ public class BiddingPreReleaseRequest extends AbstractModel {
 
     /**
     * 业务ID
+可通过DescribeBiddingList接口获取
     */
     @SerializedName("BusinessId")
     @Expose
     private String BusinessId;
 
     /**
-    * 价格
+    * 价格 单位元
     */
     @SerializedName("Price")
     @Expose
     private Float Price;
 
     /**
-     * Get 业务ID 
+     * Get 业务ID
+可通过DescribeBiddingList接口获取 
      * @return BusinessId 业务ID
+可通过DescribeBiddingList接口获取
      */
     public String getBusinessId() {
         return this.BusinessId;
@@ -47,23 +50,25 @@ public class BiddingPreReleaseRequest extends AbstractModel {
 
     /**
      * Set 业务ID
+可通过DescribeBiddingList接口获取
      * @param BusinessId 业务ID
+可通过DescribeBiddingList接口获取
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;
     }
 
     /**
-     * Get 价格 
-     * @return Price 价格
+     * Get 价格 单位元 
+     * @return Price 价格 单位元
      */
     public Float getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 价格
-     * @param Price 价格
+     * Set 价格 单位元
+     * @param Price 价格 单位元
      */
     public void setPrice(Float Price) {
         this.Price = Price;
