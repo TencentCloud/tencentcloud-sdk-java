@@ -38,6 +38,13 @@ public class OrderStep extends AbstractModel {
     private String OwnerName;
 
     /**
+    * 处理人手机号
+    */
+    @SerializedName("OwnerPhone")
+    @Expose
+    private String OwnerPhone;
+
+    /**
     * 完成时间
     */
     @SerializedName("FinishTime")
@@ -81,6 +88,22 @@ public class OrderStep extends AbstractModel {
      */
     public void setOwnerName(String OwnerName) {
         this.OwnerName = OwnerName;
+    }
+
+    /**
+     * Get 处理人手机号 
+     * @return OwnerPhone 处理人手机号
+     */
+    public String getOwnerPhone() {
+        return this.OwnerPhone;
+    }
+
+    /**
+     * Set 处理人手机号
+     * @param OwnerPhone 处理人手机号
+     */
+    public void setOwnerPhone(String OwnerPhone) {
+        this.OwnerPhone = OwnerPhone;
     }
 
     /**
@@ -129,6 +152,9 @@ public class OrderStep extends AbstractModel {
         if (source.OwnerName != null) {
             this.OwnerName = new String(source.OwnerName);
         }
+        if (source.OwnerPhone != null) {
+            this.OwnerPhone = new String(source.OwnerPhone);
+        }
         if (source.FinishTime != null) {
             this.FinishTime = new String(source.FinishTime);
         }
@@ -144,6 +170,7 @@ public class OrderStep extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StepName", this.StepName);
         this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
+        this.setParamSimple(map, prefix + "OwnerPhone", this.OwnerPhone);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamSimple(map, prefix + "StepStatus", this.StepStatus);
 

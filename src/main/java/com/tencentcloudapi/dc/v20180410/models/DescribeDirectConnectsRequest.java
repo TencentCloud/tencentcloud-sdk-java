@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDirectConnectsRequest extends AbstractModel {
 
     /**
-    * 过滤条件。
+    * 过滤条件。direct-connect-id：物理专线ID，states：物理专线状态（AVAILABLE-就绪，PENDING-申请中，REJECTED-申请被拒绝，PENDINGPAY-待付款，PAID-付款完成，BUILDING-建设中，STOPED-建设终止，DELETED-删除完成）。
     */
     @SerializedName("Filters")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeDirectConnectsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 过滤条件。 
-     * @return Filters 过滤条件。
+     * Get 过滤条件。direct-connect-id：物理专线ID，states：物理专线状态（AVAILABLE-就绪，PENDING-申请中，REJECTED-申请被拒绝，PENDINGPAY-待付款，PAID-付款完成，BUILDING-建设中，STOPED-建设终止，DELETED-删除完成）。 
+     * @return Filters 过滤条件。direct-connect-id：物理专线ID，states：物理专线状态（AVAILABLE-就绪，PENDING-申请中，REJECTED-申请被拒绝，PENDINGPAY-待付款，PAID-付款完成，BUILDING-建设中，STOPED-建设终止，DELETED-删除完成）。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件。
-     * @param Filters 过滤条件。
+     * Set 过滤条件。direct-connect-id：物理专线ID，states：物理专线状态（AVAILABLE-就绪，PENDING-申请中，REJECTED-申请被拒绝，PENDINGPAY-待付款，PAID-付款完成，BUILDING-建设中，STOPED-建设终止，DELETED-删除完成）。
+     * @param Filters 过滤条件。direct-connect-id：物理专线ID，states：物理专线状态（AVAILABLE-就绪，PENDING-申请中，REJECTED-申请被拒绝，PENDINGPAY-待付款，PAID-付款完成，BUILDING-建设中，STOPED-建设终止，DELETED-删除完成）。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

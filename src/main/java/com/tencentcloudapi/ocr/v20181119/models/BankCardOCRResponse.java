@@ -97,6 +97,13 @@ public class BankCardOCRResponse extends AbstractModel {
     private Long QualityValue;
 
     /**
+    * 卡类别， 如： 标准实体银行卡、电子银行卡信息截图
+    */
+    @SerializedName("CardCategory")
+    @Expose
+    private String CardCategory;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -288,6 +295,22 @@ public class BankCardOCRResponse extends AbstractModel {
     }
 
     /**
+     * Get 卡类别， 如： 标准实体银行卡、电子银行卡信息截图 
+     * @return CardCategory 卡类别， 如： 标准实体银行卡、电子银行卡信息截图
+     */
+    public String getCardCategory() {
+        return this.CardCategory;
+    }
+
+    /**
+     * Set 卡类别， 如： 标准实体银行卡、电子银行卡信息截图
+     * @param CardCategory 卡类别， 如： 标准实体银行卡、电子银行卡信息截图
+     */
+    public void setCardCategory(String CardCategory) {
+        this.CardCategory = CardCategory;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -341,6 +364,9 @@ public class BankCardOCRResponse extends AbstractModel {
         if (source.QualityValue != null) {
             this.QualityValue = new Long(source.QualityValue);
         }
+        if (source.CardCategory != null) {
+            this.CardCategory = new String(source.CardCategory);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -360,6 +386,7 @@ public class BankCardOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CardNoImage", this.CardNoImage);
         this.setParamArraySimple(map, prefix + "WarningCode.", this.WarningCode);
         this.setParamSimple(map, prefix + "QualityValue", this.QualityValue);
+        this.setParamSimple(map, prefix + "CardCategory", this.CardCategory);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

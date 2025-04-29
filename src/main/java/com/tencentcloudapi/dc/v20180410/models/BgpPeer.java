@@ -28,7 +28,7 @@ public class BgpPeer extends AbstractModel {
     */
     @SerializedName("CloudAsn")
     @Expose
-    private String CloudAsn;
+    private Long CloudAsn;
 
     /**
     * 用户侧BGP ASN
@@ -48,7 +48,7 @@ public class BgpPeer extends AbstractModel {
      * Get 腾讯侧BGP ASN 
      * @return CloudAsn 腾讯侧BGP ASN
      */
-    public String getCloudAsn() {
+    public Long getCloudAsn() {
         return this.CloudAsn;
     }
 
@@ -56,7 +56,7 @@ public class BgpPeer extends AbstractModel {
      * Set 腾讯侧BGP ASN
      * @param CloudAsn 腾讯侧BGP ASN
      */
-    public void setCloudAsn(String CloudAsn) {
+    public void setCloudAsn(Long CloudAsn) {
         this.CloudAsn = CloudAsn;
     }
 
@@ -101,7 +101,7 @@ public class BgpPeer extends AbstractModel {
      */
     public BgpPeer(BgpPeer source) {
         if (source.CloudAsn != null) {
-            this.CloudAsn = new String(source.CloudAsn);
+            this.CloudAsn = new Long(source.CloudAsn);
         }
         if (source.Asn != null) {
             this.Asn = new Long(source.Asn);

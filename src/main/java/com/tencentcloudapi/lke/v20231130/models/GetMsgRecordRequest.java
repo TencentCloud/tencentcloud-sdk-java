@@ -31,7 +31,7 @@ public class GetMsgRecordRequest extends AbstractModel {
     private Long Type;
 
     /**
-    * 数量
+    * 数量,  数量需大于2
     */
     @SerializedName("Count")
     @Expose
@@ -52,7 +52,7 @@ public class GetMsgRecordRequest extends AbstractModel {
     private String LastRecordId;
 
     /**
-    * 应用AppKey, 当Type=5[API访客]时, 该字段必填
+    * 应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
     */
     @SerializedName("BotAppKey")
     @Expose
@@ -89,16 +89,16 @@ public class GetMsgRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 数量 
-     * @return Count 数量
+     * Get 数量,  数量需大于2 
+     * @return Count 数量,  数量需大于2
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 数量
-     * @param Count 数量
+     * Set 数量,  数量需大于2
+     * @param Count 数量,  数量需大于2
      */
     public void setCount(Long Count) {
         this.Count = Count;
@@ -137,16 +137,16 @@ public class GetMsgRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用AppKey, 当Type=5[API访客]时, 该字段必填 
-     * @return BotAppKey 应用AppKey, 当Type=5[API访客]时, 该字段必填
+     * Get 应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项 
+     * @return BotAppKey 应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
      */
     public String getBotAppKey() {
         return this.BotAppKey;
     }
 
     /**
-     * Set 应用AppKey, 当Type=5[API访客]时, 该字段必填
-     * @param BotAppKey 应用AppKey, 当Type=5[API访客]时, 该字段必填
+     * Set 应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
+     * @param BotAppKey 应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
      */
     public void setBotAppKey(String BotAppKey) {
         this.BotAppKey = BotAppKey;

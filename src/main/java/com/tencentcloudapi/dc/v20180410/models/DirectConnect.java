@@ -270,6 +270,13 @@ public class DirectConnect extends AbstractModel {
     private String AccessPointName;
 
     /**
+    * 是否三层架构
+    */
+    @SerializedName("IsThreeArch")
+    @Expose
+    private Boolean IsThreeArch;
+
+    /**
      * Get 物理专线ID。 
      * @return DirectConnectId 物理专线ID。
      */
@@ -845,6 +852,22 @@ public class DirectConnect extends AbstractModel {
         this.AccessPointName = AccessPointName;
     }
 
+    /**
+     * Get 是否三层架构 
+     * @return IsThreeArch 是否三层架构
+     */
+    public Boolean getIsThreeArch() {
+        return this.IsThreeArch;
+    }
+
+    /**
+     * Set 是否三层架构
+     * @param IsThreeArch 是否三层架构
+     */
+    public void setIsThreeArch(Boolean IsThreeArch) {
+        this.IsThreeArch = IsThreeArch;
+    }
+
     public DirectConnect() {
     }
 
@@ -958,6 +981,9 @@ public class DirectConnect extends AbstractModel {
         if (source.AccessPointName != null) {
             this.AccessPointName = new String(source.AccessPointName);
         }
+        if (source.IsThreeArch != null) {
+            this.IsThreeArch = new Boolean(source.IsThreeArch);
+        }
     }
 
 
@@ -999,6 +1025,7 @@ public class DirectConnect extends AbstractModel {
         this.setParamSimple(map, prefix + "MinBandwidth", this.MinBandwidth);
         this.setParamSimple(map, prefix + "Construct", this.Construct);
         this.setParamSimple(map, prefix + "AccessPointName", this.AccessPointName);
+        this.setParamSimple(map, prefix + "IsThreeArch", this.IsThreeArch);
 
     }
 }

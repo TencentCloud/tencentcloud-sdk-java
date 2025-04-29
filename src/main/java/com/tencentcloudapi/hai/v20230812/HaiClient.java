@@ -39,6 +39,17 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateApplicaiton）用于对HAI实例制作自定义应用。
+     * @param req CreateApplicationRequest
+     * @return CreateApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApplicationResponse CreateApplication(CreateApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApplication", CreateApplicationResponse.class);
+    }
+
+    /**
      *创建musk prompt 任务
      * @param req CreateMuskPromptRequest
      * @return CreateMuskPromptResponse

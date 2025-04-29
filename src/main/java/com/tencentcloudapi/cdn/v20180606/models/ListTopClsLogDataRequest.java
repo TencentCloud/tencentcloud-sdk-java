@@ -76,7 +76,7 @@ public class ListTopClsLogDataRequest extends AbstractModel {
     private String Channel;
 
     /**
-    * 要查询的Top条数，最大值为100，默认为10
+    * 要查询的Top条数，建议最大值100，默认为10
     */
     @SerializedName("Limit")
     @Expose
@@ -214,16 +214,16 @@ public class ListTopClsLogDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 要查询的Top条数，最大值为100，默认为10 
-     * @return Limit 要查询的Top条数，最大值为100，默认为10
+     * Get 要查询的Top条数，建议最大值100，默认为10 
+     * @return Limit 要查询的Top条数，建议最大值100，默认为10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 要查询的Top条数，最大值为100，默认为10
-     * @param Limit 要查询的Top条数，最大值为100，默认为10
+     * Set 要查询的Top条数，建议最大值100，默认为10
+     * @param Limit 要查询的Top条数，建议最大值100，默认为10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

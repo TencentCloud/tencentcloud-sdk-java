@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNatGatewaySourceIpTranslationNatRulesResponse extends AbstractModel {
-
-    /**
-    * NAT网关SNAT规则对象数组。
-    */
-    @SerializedName("SourceIpTranslationNatRuleSet")
-    @Expose
-    private SourceIpTranslationNatRule [] SourceIpTranslationNatRuleSet;
-
-    /**
-    * 符合条件的NAT网关端口转发规则对象数目。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+public class DeleteTaskResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,38 +29,6 @@ public class DescribeNatGatewaySourceIpTranslationNatRulesResponse extends Abstr
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get NAT网关SNAT规则对象数组。 
-     * @return SourceIpTranslationNatRuleSet NAT网关SNAT规则对象数组。
-     */
-    public SourceIpTranslationNatRule [] getSourceIpTranslationNatRuleSet() {
-        return this.SourceIpTranslationNatRuleSet;
-    }
-
-    /**
-     * Set NAT网关SNAT规则对象数组。
-     * @param SourceIpTranslationNatRuleSet NAT网关SNAT规则对象数组。
-     */
-    public void setSourceIpTranslationNatRuleSet(SourceIpTranslationNatRule [] SourceIpTranslationNatRuleSet) {
-        this.SourceIpTranslationNatRuleSet = SourceIpTranslationNatRuleSet;
-    }
-
-    /**
-     * Get 符合条件的NAT网关端口转发规则对象数目。 
-     * @return TotalCount 符合条件的NAT网关端口转发规则对象数目。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 符合条件的NAT网关端口转发规则对象数目。
-     * @param TotalCount 符合条件的NAT网关端口转发规则对象数目。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -92,23 +46,14 @@ public class DescribeNatGatewaySourceIpTranslationNatRulesResponse extends Abstr
         this.RequestId = RequestId;
     }
 
-    public DescribeNatGatewaySourceIpTranslationNatRulesResponse() {
+    public DeleteTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeNatGatewaySourceIpTranslationNatRulesResponse(DescribeNatGatewaySourceIpTranslationNatRulesResponse source) {
-        if (source.SourceIpTranslationNatRuleSet != null) {
-            this.SourceIpTranslationNatRuleSet = new SourceIpTranslationNatRule[source.SourceIpTranslationNatRuleSet.length];
-            for (int i = 0; i < source.SourceIpTranslationNatRuleSet.length; i++) {
-                this.SourceIpTranslationNatRuleSet[i] = new SourceIpTranslationNatRule(source.SourceIpTranslationNatRuleSet[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
+    public DeleteTaskResponse(DeleteTaskResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -119,8 +64,6 @@ public class DescribeNatGatewaySourceIpTranslationNatRulesResponse extends Abstr
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "SourceIpTranslationNatRuleSet.", this.SourceIpTranslationNatRuleSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

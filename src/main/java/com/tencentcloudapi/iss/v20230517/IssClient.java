@@ -141,6 +141,17 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *用于批量删除本地录像下载失败的任务
+     * @param req BatchDeleteVideoDownloadTaskRequest
+     * @return BatchDeleteVideoDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteVideoDownloadTaskResponse BatchDeleteVideoDownloadTask(BatchDeleteVideoDownloadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchDeleteVideoDownloadTask", BatchDeleteVideoDownloadTaskResponse.class);
+    }
+
+    /**
      *用于批量操作（启用，禁用，删除）设备
      * @param req BatchOperateDeviceRequest
      * @return BatchOperateDeviceResponse
@@ -226,6 +237,17 @@ public class IssClient extends AbstractClient{
     public ControlRecordTimelineResponse ControlRecordTimeline(ControlRecordTimelineRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ControlRecordTimeline", ControlRecordTimelineResponse.class);
+    }
+
+    /**
+     *创建本地录像下载任务
+     * @param req CreateVideoDownloadTaskRequest
+     * @return CreateVideoDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVideoDownloadTaskResponse CreateVideoDownloadTask(CreateVideoDownloadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVideoDownloadTask", CreateVideoDownloadTaskResponse.class);
     }
 
     /**
@@ -328,6 +350,17 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *用于删除执行完成的任务
+     * @param req DeleteTaskRequest
+     * @return DeleteTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTaskResponse DeleteTask(DeleteTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTask", DeleteTaskResponse.class);
+    }
+
+    /**
      *用于删除已添加的设备。
      * @param req DeleteUserDeviceRequest
      * @return DeleteUserDeviceResponse
@@ -424,6 +457,17 @@ public class IssClient extends AbstractClient{
     public DescribeDomainRegionResponse DescribeDomainRegion(DescribeDomainRegionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDomainRegion", DescribeDomainRegionResponse.class);
+    }
+
+    /**
+     *用于获取国标设备的公网地址
+     * @param req DescribeGBDeviceAddrRequest
+     * @return DescribeGBDeviceAddrResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGBDeviceAddrResponse DescribeGBDeviceAddr(DescribeGBDeviceAddrRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGBDeviceAddr", DescribeGBDeviceAddrResponse.class);
     }
 
     /**
@@ -810,6 +854,17 @@ public class IssClient extends AbstractClient{
     public ListTasksResponse ListTasks(ListTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListTasks", ListTasksResponse.class);
+    }
+
+    /**
+     *查询本店里录像下载任务列表
+     * @param req ListVideoDownloadTaskRequest
+     * @return ListVideoDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListVideoDownloadTaskResponse ListVideoDownloadTask(ListVideoDownloadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListVideoDownloadTask", ListVideoDownloadTaskResponse.class);
     }
 
     /**

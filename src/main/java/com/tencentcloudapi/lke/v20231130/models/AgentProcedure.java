@@ -112,6 +112,22 @@ public class AgentProcedure extends AbstractModel {
     private Long ReplyIndex;
 
     /**
+    * 主agent
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceAgentName")
+    @Expose
+    private String SourceAgentName;
+
+    /**
+    * 挂号agent
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetAgentName")
+    @Expose
+    private String TargetAgentName;
+
+    /**
      * Get 索引
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Index 索引
@@ -331,6 +347,46 @@ public class AgentProcedure extends AbstractModel {
         this.ReplyIndex = ReplyIndex;
     }
 
+    /**
+     * Get 主agent
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceAgentName 主agent
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSourceAgentName() {
+        return this.SourceAgentName;
+    }
+
+    /**
+     * Set 主agent
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceAgentName 主agent
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceAgentName(String SourceAgentName) {
+        this.SourceAgentName = SourceAgentName;
+    }
+
+    /**
+     * Get 挂号agent
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetAgentName 挂号agent
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetAgentName() {
+        return this.TargetAgentName;
+    }
+
+    /**
+     * Set 挂号agent
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetAgentName 挂号agent
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetAgentName(String TargetAgentName) {
+        this.TargetAgentName = TargetAgentName;
+    }
+
     public AgentProcedure() {
     }
 
@@ -372,6 +428,12 @@ public class AgentProcedure extends AbstractModel {
         if (source.ReplyIndex != null) {
             this.ReplyIndex = new Long(source.ReplyIndex);
         }
+        if (source.SourceAgentName != null) {
+            this.SourceAgentName = new String(source.SourceAgentName);
+        }
+        if (source.TargetAgentName != null) {
+            this.TargetAgentName = new String(source.TargetAgentName);
+        }
     }
 
 
@@ -390,6 +452,8 @@ public class AgentProcedure extends AbstractModel {
         this.setParamSimple(map, prefix + "Elapsed", this.Elapsed);
         this.setParamSimple(map, prefix + "NodeName", this.NodeName);
         this.setParamSimple(map, prefix + "ReplyIndex", this.ReplyIndex);
+        this.setParamSimple(map, prefix + "SourceAgentName", this.SourceAgentName);
+        this.setParamSimple(map, prefix + "TargetAgentName", this.TargetAgentName);
 
     }
 }

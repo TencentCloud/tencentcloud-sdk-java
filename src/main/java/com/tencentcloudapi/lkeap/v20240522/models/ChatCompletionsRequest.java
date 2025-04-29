@@ -64,6 +64,13 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Long MaxTokens;
 
     /**
+    * 是否启用联网搜索
+    */
+    @SerializedName("EnableSearch")
+    @Expose
+    private Boolean EnableSearch;
+
+    /**
      * Get 模型名称 
      * @return Model 模型名称
      */
@@ -163,6 +170,22 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.MaxTokens = MaxTokens;
     }
 
+    /**
+     * Get 是否启用联网搜索 
+     * @return EnableSearch 是否启用联网搜索
+     */
+    public Boolean getEnableSearch() {
+        return this.EnableSearch;
+    }
+
+    /**
+     * Set 是否启用联网搜索
+     * @param EnableSearch 是否启用联网搜索
+     */
+    public void setEnableSearch(Boolean EnableSearch) {
+        this.EnableSearch = EnableSearch;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -189,6 +212,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.MaxTokens != null) {
             this.MaxTokens = new Long(source.MaxTokens);
         }
+        if (source.EnableSearch != null) {
+            this.EnableSearch = new Boolean(source.EnableSearch);
+        }
     }
 
 
@@ -201,6 +227,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Stream", this.Stream);
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);
         this.setParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
+        this.setParamSimple(map, prefix + "EnableSearch", this.EnableSearch);
 
     }
 }

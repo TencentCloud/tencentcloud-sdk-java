@@ -32,7 +32,7 @@ public class CreateDirectConnectRequest extends AbstractModel {
 
     /**
     * 物理专线所在的接入点。
-您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
+您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
     */
     @SerializedName("AccessPointId")
     @Expose
@@ -179,9 +179,9 @@ ChinaOther：中国其他；
 
     /**
      * Get 物理专线所在的接入点。
-您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。 
+您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。 
      * @return AccessPointId 物理专线所在的接入点。
-您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
+您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
      */
     public String getAccessPointId() {
         return this.AccessPointId;
@@ -189,9 +189,9 @@ ChinaOther：中国其他；
 
     /**
      * Set 物理专线所在的接入点。
-您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
+您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
      * @param AccessPointId 物理专线所在的接入点。
-您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
+您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
      */
     public void setAccessPointId(String AccessPointId) {
         this.AccessPointId = AccessPointId;

@@ -459,6 +459,17 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *修改Notebook标签
+     * @param req ModifyNotebookTagsRequest
+     * @return ModifyNotebookTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNotebookTagsResponse ModifyNotebookTags(ModifyNotebookTagsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNotebookTags", ModifyNotebookTagsResponse.class);
+    }
+
+    /**
      *上报训练自定义指标
      * @param req PushTrainingMetricsRequest
      * @return PushTrainingMetricsResponse

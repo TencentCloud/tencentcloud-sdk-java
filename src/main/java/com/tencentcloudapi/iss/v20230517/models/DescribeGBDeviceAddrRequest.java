@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.domain.v20180808.models;
+package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,46 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTemplateRequest extends AbstractModel {
+public class DescribeGBDeviceAddrRequest extends AbstractModel {
 
     /**
-    * 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+    * 设备ID列表
     */
-    @SerializedName("TemplateId")
+    @SerializedName("DeviceIds")
     @Expose
-    private String TemplateId;
+    private String [] DeviceIds;
 
     /**
-     * Get 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940 
-     * @return TemplateId 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * Get 设备ID列表 
+     * @return DeviceIds 设备ID列表
      */
-    public String getTemplateId() {
-        return this.TemplateId;
+    public String [] getDeviceIds() {
+        return this.DeviceIds;
     }
 
     /**
-     * Set 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
-     * @param TemplateId 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * Set 设备ID列表
+     * @param DeviceIds 设备ID列表
      */
-    public void setTemplateId(String TemplateId) {
-        this.TemplateId = TemplateId;
+    public void setDeviceIds(String [] DeviceIds) {
+        this.DeviceIds = DeviceIds;
     }
 
-    public DescribeTemplateRequest() {
+    public DescribeGBDeviceAddrRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTemplateRequest(DescribeTemplateRequest source) {
-        if (source.TemplateId != null) {
-            this.TemplateId = new String(source.TemplateId);
+    public DescribeGBDeviceAddrRequest(DescribeGBDeviceAddrRequest source) {
+        if (source.DeviceIds != null) {
+            this.DeviceIds = new String[source.DeviceIds.length];
+            for (int i = 0; i < source.DeviceIds.length; i++) {
+                this.DeviceIds[i] = new String(source.DeviceIds[i]);
+            }
         }
     }
 
@@ -69,7 +67,7 @@ public class DescribeTemplateRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamArraySimple(map, prefix + "DeviceIds.", this.DeviceIds);
 
     }
 }

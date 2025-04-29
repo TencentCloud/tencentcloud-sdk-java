@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeAccessPointsRequest extends AbstractModel {
 
     /**
-    * 接入点所在的地域。使用DescribeRegions查询。
-您可以通过调用 DescribeRegions接口获取地域ID。
+    * 接入点所在的地域。你可以通过调用[DescribeRegions](https://cloud.tencent.com/document/product/1596/77930)接口获取地域ID。
     */
     @SerializedName("RegionId")
     @Expose
@@ -53,20 +52,16 @@ public class DescribeAccessPointsRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get 接入点所在的地域。使用DescribeRegions查询。
-您可以通过调用 DescribeRegions接口获取地域ID。 
-     * @return RegionId 接入点所在的地域。使用DescribeRegions查询。
-您可以通过调用 DescribeRegions接口获取地域ID。
+     * Get 接入点所在的地域。你可以通过调用[DescribeRegions](https://cloud.tencent.com/document/product/1596/77930)接口获取地域ID。 
+     * @return RegionId 接入点所在的地域。你可以通过调用[DescribeRegions](https://cloud.tencent.com/document/product/1596/77930)接口获取地域ID。
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 接入点所在的地域。使用DescribeRegions查询。
-您可以通过调用 DescribeRegions接口获取地域ID。
-     * @param RegionId 接入点所在的地域。使用DescribeRegions查询。
-您可以通过调用 DescribeRegions接口获取地域ID。
+     * Set 接入点所在的地域。你可以通过调用[DescribeRegions](https://cloud.tencent.com/document/product/1596/77930)接口获取地域ID。
+     * @param RegionId 接入点所在的地域。你可以通过调用[DescribeRegions](https://cloud.tencent.com/document/product/1596/77930)接口获取地域ID。
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;

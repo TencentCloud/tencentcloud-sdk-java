@@ -80,6 +80,13 @@ public class ImageModerationRequest extends AbstractModel {
     private Device Device;
 
     /**
+    * 该字段表示送审的数据类型，默认为通用图片，可以选择。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 该字段表示策略的具体编号，用于接口调度，在内容安全控制台中可配置。若不传入Biztype参数（留空），则代表采用默认的识别策略；传入则会在审核时根据业务场景采取不同的审核策略。<br>备注：Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。 
      * @return BizType 该字段表示策略的具体编号，用于接口调度，在内容安全控制台中可配置。若不传入Biztype参数（留空），则代表采用默认的识别策略；传入则会在审核时根据业务场景采取不同的审核策略。<br>备注：Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
      */
@@ -207,6 +214,22 @@ public class ImageModerationRequest extends AbstractModel {
         this.Device = Device;
     }
 
+    /**
+     * Get 该字段表示送审的数据类型，默认为通用图片，可以选择。 
+     * @return Type 该字段表示送审的数据类型，默认为通用图片，可以选择。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 该字段表示送审的数据类型，默认为通用图片，可以选择。
+     * @param Type 该字段表示送审的数据类型，默认为通用图片，可以选择。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public ImageModerationRequest() {
     }
 
@@ -239,6 +262,9 @@ public class ImageModerationRequest extends AbstractModel {
         if (source.Device != null) {
             this.Device = new Device(source.Device);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class ImageModerationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxFrames", this.MaxFrames);
         this.setParamObj(map, prefix + "User.", this.User);
         this.setParamObj(map, prefix + "Device.", this.Device);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

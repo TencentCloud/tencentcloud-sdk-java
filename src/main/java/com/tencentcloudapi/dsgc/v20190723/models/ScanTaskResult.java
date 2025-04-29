@@ -66,6 +66,13 @@ public class ScanTaskResult extends AbstractModel {
     private String Suggestion;
 
     /**
+    * 扫描进度
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Float Progress;
+
+    /**
      * Get 任务最新一次运行结果ID 
      * @return Id 任务最新一次运行结果ID
      */
@@ -161,6 +168,22 @@ public class ScanTaskResult extends AbstractModel {
         this.Suggestion = Suggestion;
     }
 
+    /**
+     * Get 扫描进度 
+     * @return Progress 扫描进度
+     */
+    public Float getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 扫描进度
+     * @param Progress 扫描进度
+     */
+    public void setProgress(Float Progress) {
+        this.Progress = Progress;
+    }
+
     public ScanTaskResult() {
     }
 
@@ -187,6 +210,9 @@ public class ScanTaskResult extends AbstractModel {
         if (source.Suggestion != null) {
             this.Suggestion = new String(source.Suggestion);
         }
+        if (source.Progress != null) {
+            this.Progress = new Float(source.Progress);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ScanTaskResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "ResultDescription", this.ResultDescription);
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

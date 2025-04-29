@@ -194,7 +194,9 @@ CreateScdnLogTask 用于创建事件日志任务
     }
 
     /**
-     *CC统计数据查询
+     *SCDN平台下线，接口开始预下线处理
+
+CC统计数据查询
      * @param req DescribeCcDataRequest
      * @return DescribeCcDataResponse
      * @throws TencentCloudSDKException
@@ -274,7 +276,9 @@ CreateScdnLogTask 用于创建事件日志任务
     }
 
     /**
-     *DDoS统计数据查询
+     *SCDN平台下线，接口开始预下线处理
+
+DDoS统计数据查询
      * @param req DescribeDDoSDataRequest
      * @return DescribeDDoSDataResponse
      * @throws TencentCloudSDKException
@@ -342,7 +346,9 @@ DescribeDiagnoseReport 用于获取指定报告id的内容。
     }
 
     /**
-     *DescribeEventLogData 用于查询事件日志统计曲线
+     *SCDN平台下线，接口开始预下线处理
+
+DescribeEventLogData 用于查询事件日志统计曲线
      * @param req DescribeEventLogDataRequest
      * @return DescribeEventLogDataResponse
      * @throws TencentCloudSDKException
@@ -597,7 +603,7 @@ DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
 
     /**
      *DescribeUrlViolations 用于查询被 CDN 系统扫描到的域名违规 URL 列表及当前状态。
-对应内容分发网络控制台【图片鉴黄】页面。
+对应内容分发网络控制台【内容合规】页面。
      * @param req DescribeUrlViolationsRequest
      * @return DescribeUrlViolationsResponse
      * @throws TencentCloudSDKException
@@ -608,7 +614,9 @@ DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
     }
 
     /**
-     *Waf统计数据查询
+     *SCDN平台下线，接口开始预下线处理
+
+Waf统计数据查询
      * @param req DescribeWafDataRequest
      * @return DescribeWafDataResponse
      * @throws TencentCloudSDKException
@@ -762,7 +770,9 @@ ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任�
     }
 
     /**
-     *获取Bot攻击的Top信息
+     *SCDN平台下线，接口开始预下线处理
+
+获取Bot攻击的Top信息
      * @param req ListTopBotDataRequest
      * @return ListTopBotDataResponse
      * @throws TencentCloudSDKException
@@ -773,7 +783,9 @@ ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任�
     }
 
     /**
-     *获取CC攻击Top数据
+     *SCDN平台下线，接口开始预下线处理
+
+获取CC攻击Top数据
      * @param req ListTopCcDataRequest
      * @return ListTopCcDataResponse
      * @throws TencentCloudSDKException
@@ -795,7 +807,9 @@ ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任�
     }
 
     /**
-     *获取DDoS攻击Top数据
+     *SCDN平台下线，接口开始预下线处理
+
+获取DDoS攻击Top数据
      * @param req ListTopDDoSDataRequest
      * @return ListTopDDoSDataResponse
      * @throws TencentCloudSDKException
@@ -825,7 +839,9 @@ ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任�
     }
 
     /**
-     *获取Waf攻击Top数据
+     *SCDN平台下线，接口开始预下线处理
+
+获取Waf攻击Top数据
      * @param req ListTopWafDataRequest
      * @return ListTopWafDataResponse
      * @throws TencentCloudSDKException

@@ -27,7 +27,6 @@ public class EmulateMobileParams extends AbstractModel {
     * 移动设备类型，
 0: 手机
 1: 平板
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MobileDeviceType")
     @Expose
@@ -37,7 +36,6 @@ public class EmulateMobileParams extends AbstractModel {
     * 屏幕方向，
 0: 竖屏，
 1: 横屏
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScreenOrientation")
     @Expose
@@ -46,12 +44,10 @@ public class EmulateMobileParams extends AbstractModel {
     /**
      * Get 移动设备类型，
 0: 手机
-1: 平板
-注意：此字段可能返回 null，表示取不到有效值。 
+1: 平板 
      * @return MobileDeviceType 移动设备类型，
 0: 手机
 1: 平板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMobileDeviceType() {
         return this.MobileDeviceType;
@@ -61,11 +57,9 @@ public class EmulateMobileParams extends AbstractModel {
      * Set 移动设备类型，
 0: 手机
 1: 平板
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MobileDeviceType 移动设备类型，
 0: 手机
 1: 平板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMobileDeviceType(Long MobileDeviceType) {
         this.MobileDeviceType = MobileDeviceType;
@@ -74,12 +68,10 @@ public class EmulateMobileParams extends AbstractModel {
     /**
      * Get 屏幕方向，
 0: 竖屏，
-1: 横屏
-注意：此字段可能返回 null，表示取不到有效值。 
+1: 横屏 
      * @return ScreenOrientation 屏幕方向，
 0: 竖屏，
 1: 横屏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScreenOrientation() {
         return this.ScreenOrientation;
@@ -89,11 +81,9 @@ public class EmulateMobileParams extends AbstractModel {
      * Set 屏幕方向，
 0: 竖屏，
 1: 横屏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScreenOrientation 屏幕方向，
 0: 竖屏，
 1: 横屏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScreenOrientation(Long ScreenOrientation) {
         this.ScreenOrientation = ScreenOrientation;

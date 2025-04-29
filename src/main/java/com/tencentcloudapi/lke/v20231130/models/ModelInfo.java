@@ -132,6 +132,20 @@ public class ModelInfo extends AbstractModel {
     private String ModelCategory;
 
     /**
+    * 是否默认模型
+    */
+    @SerializedName("IsDefault")
+    @Expose
+    private Boolean IsDefault;
+
+    /**
+    * 角色提示词输入长度限制
+    */
+    @SerializedName("RoleLenLimit")
+    @Expose
+    private Long RoleLenLimit;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelName 模型名称
@@ -395,6 +409,38 @@ public class ModelInfo extends AbstractModel {
         this.ModelCategory = ModelCategory;
     }
 
+    /**
+     * Get 是否默认模型 
+     * @return IsDefault 是否默认模型
+     */
+    public Boolean getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set 是否默认模型
+     * @param IsDefault 是否默认模型
+     */
+    public void setIsDefault(Boolean IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
+    /**
+     * Get 角色提示词输入长度限制 
+     * @return RoleLenLimit 角色提示词输入长度限制
+     */
+    public Long getRoleLenLimit() {
+        return this.RoleLenLimit;
+    }
+
+    /**
+     * Set 角色提示词输入长度限制
+     * @param RoleLenLimit 角色提示词输入长度限制
+     */
+    public void setRoleLenLimit(Long RoleLenLimit) {
+        this.RoleLenLimit = RoleLenLimit;
+    }
+
     public ModelInfo() {
     }
 
@@ -445,6 +491,12 @@ public class ModelInfo extends AbstractModel {
         if (source.ModelCategory != null) {
             this.ModelCategory = new String(source.ModelCategory);
         }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Boolean(source.IsDefault);
+        }
+        if (source.RoleLenLimit != null) {
+            this.RoleLenLimit = new Long(source.RoleLenLimit);
+        }
     }
 
 
@@ -466,6 +518,8 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InputLenLimit", this.InputLenLimit);
         this.setParamSimple(map, prefix + "SupportWorkflowStatus", this.SupportWorkflowStatus);
         this.setParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
+        this.setParamSimple(map, prefix + "RoleLenLimit", this.RoleLenLimit);
 
     }
 }

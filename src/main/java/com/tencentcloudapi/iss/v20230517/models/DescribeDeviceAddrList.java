@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.domain.v20180808.models;
+package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,46 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTemplateRequest extends AbstractModel {
+public class DescribeDeviceAddrList extends AbstractModel {
 
     /**
-    * 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+    * 设备地址列表
     */
-    @SerializedName("TemplateId")
+    @SerializedName("RemoteAddrs")
     @Expose
-    private String TemplateId;
+    private RemoteAddrInfo [] RemoteAddrs;
 
     /**
-     * Get 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940 
-     * @return TemplateId 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * Get 设备地址列表 
+     * @return RemoteAddrs 设备地址列表
      */
-    public String getTemplateId() {
-        return this.TemplateId;
+    public RemoteAddrInfo [] getRemoteAddrs() {
+        return this.RemoteAddrs;
     }
 
     /**
-     * Set 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
-     * @param TemplateId 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * Set 设备地址列表
+     * @param RemoteAddrs 设备地址列表
      */
-    public void setTemplateId(String TemplateId) {
-        this.TemplateId = TemplateId;
+    public void setRemoteAddrs(RemoteAddrInfo [] RemoteAddrs) {
+        this.RemoteAddrs = RemoteAddrs;
     }
 
-    public DescribeTemplateRequest() {
+    public DescribeDeviceAddrList() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTemplateRequest(DescribeTemplateRequest source) {
-        if (source.TemplateId != null) {
-            this.TemplateId = new String(source.TemplateId);
+    public DescribeDeviceAddrList(DescribeDeviceAddrList source) {
+        if (source.RemoteAddrs != null) {
+            this.RemoteAddrs = new RemoteAddrInfo[source.RemoteAddrs.length];
+            for (int i = 0; i < source.RemoteAddrs.length; i++) {
+                this.RemoteAddrs[i] = new RemoteAddrInfo(source.RemoteAddrs[i]);
+            }
         }
     }
 
@@ -69,7 +67,7 @@ public class DescribeTemplateRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamArrayObj(map, prefix + "RemoteAddrs.", this.RemoteAddrs);
 
     }
 }

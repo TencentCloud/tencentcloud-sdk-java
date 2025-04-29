@@ -46,6 +46,13 @@ ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
     private String ReasoningContent;
 
     /**
+    * 搜索结果
+    */
+    @SerializedName("SearchResults")
+    @Expose
+    private SearchResult [] SearchResults;
+
+    /**
      * Get 角色 
      * @return Role 角色
      */
@@ -97,6 +104,22 @@ ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
         this.ReasoningContent = ReasoningContent;
     }
 
+    /**
+     * Get 搜索结果 
+     * @return SearchResults 搜索结果
+     */
+    public SearchResult [] getSearchResults() {
+        return this.SearchResults;
+    }
+
+    /**
+     * Set 搜索结果
+     * @param SearchResults 搜索结果
+     */
+    public void setSearchResults(SearchResult [] SearchResults) {
+        this.SearchResults = SearchResults;
+    }
+
     public Message() {
     }
 
@@ -114,6 +137,12 @@ ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
         if (source.ReasoningContent != null) {
             this.ReasoningContent = new String(source.ReasoningContent);
         }
+        if (source.SearchResults != null) {
+            this.SearchResults = new SearchResult[source.SearchResults.length];
+            for (int i = 0; i < source.SearchResults.length; i++) {
+                this.SearchResults[i] = new SearchResult(source.SearchResults[i]);
+            }
+        }
     }
 
 
@@ -124,6 +153,7 @@ ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "ReasoningContent", this.ReasoningContent);
+        this.setParamArrayObj(map, prefix + "SearchResults.", this.SearchResults);
 
     }
 }

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AcceptDirectConnectTunnelRequest extends AbstractModel {
 
     /**
-    * 专用通道ID。可以通过[DescribeDirectConnectTunnel](https://cloud.tencent.com/document/product/216/19819)接口获取。
+    * 专用通道ID。可以通过[DescribeDirectConnectTunnels](https://cloud.tencent.com/document/product/216/19819)接口获取。
     */
     @SerializedName("DirectConnectTunnelId")
     @Expose
     private String DirectConnectTunnelId;
 
     /**
-     * Get 专用通道ID。可以通过[DescribeDirectConnectTunnel](https://cloud.tencent.com/document/product/216/19819)接口获取。 
-     * @return DirectConnectTunnelId 专用通道ID。可以通过[DescribeDirectConnectTunnel](https://cloud.tencent.com/document/product/216/19819)接口获取。
+     * Get 专用通道ID。可以通过[DescribeDirectConnectTunnels](https://cloud.tencent.com/document/product/216/19819)接口获取。 
+     * @return DirectConnectTunnelId 专用通道ID。可以通过[DescribeDirectConnectTunnels](https://cloud.tencent.com/document/product/216/19819)接口获取。
      */
     public String getDirectConnectTunnelId() {
         return this.DirectConnectTunnelId;
     }
 
     /**
-     * Set 专用通道ID。可以通过[DescribeDirectConnectTunnel](https://cloud.tencent.com/document/product/216/19819)接口获取。
-     * @param DirectConnectTunnelId 专用通道ID。可以通过[DescribeDirectConnectTunnel](https://cloud.tencent.com/document/product/216/19819)接口获取。
+     * Set 专用通道ID。可以通过[DescribeDirectConnectTunnels](https://cloud.tencent.com/document/product/216/19819)接口获取。
+     * @param DirectConnectTunnelId 专用通道ID。可以通过[DescribeDirectConnectTunnels](https://cloud.tencent.com/document/product/216/19819)接口获取。
      */
     public void setDirectConnectTunnelId(String DirectConnectTunnelId) {
         this.DirectConnectTunnelId = DirectConnectTunnelId;

@@ -117,6 +117,13 @@ public class SendEmailRequest extends AbstractModel {
     private String SmtpHeaders;
 
     /**
+    * smtp头中的from字段，建议域名与FromEmailAddress保持一致
+    */
+    @SerializedName("HeaderFrom")
+    @Expose
+    private String HeaderFrom;
+
+    /**
      * Get 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。 
      * @return FromEmailAddress 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
      */
@@ -332,6 +339,22 @@ public class SendEmailRequest extends AbstractModel {
         this.SmtpHeaders = SmtpHeaders;
     }
 
+    /**
+     * Get smtp头中的from字段，建议域名与FromEmailAddress保持一致 
+     * @return HeaderFrom smtp头中的from字段，建议域名与FromEmailAddress保持一致
+     */
+    public String getHeaderFrom() {
+        return this.HeaderFrom;
+    }
+
+    /**
+     * Set smtp头中的from字段，建议域名与FromEmailAddress保持一致
+     * @param HeaderFrom smtp头中的from字段，建议域名与FromEmailAddress保持一致
+     */
+    public void setHeaderFrom(String HeaderFrom) {
+        this.HeaderFrom = HeaderFrom;
+    }
+
     public SendEmailRequest() {
     }
 
@@ -391,6 +414,9 @@ public class SendEmailRequest extends AbstractModel {
         if (source.SmtpHeaders != null) {
             this.SmtpHeaders = new String(source.SmtpHeaders);
         }
+        if (source.HeaderFrom != null) {
+            this.HeaderFrom = new String(source.HeaderFrom);
+        }
     }
 
 
@@ -411,6 +437,7 @@ public class SendEmailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
         this.setParamSimple(map, prefix + "SmtpMessageId", this.SmtpMessageId);
         this.setParamSimple(map, prefix + "SmtpHeaders", this.SmtpHeaders);
+        this.setParamSimple(map, prefix + "HeaderFrom", this.HeaderFrom);
 
     }
 }

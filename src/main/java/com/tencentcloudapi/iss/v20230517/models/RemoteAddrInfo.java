@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.domain.v20180808.models;
+package com.tencentcloudapi.iss.v20230517.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,46 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTemplateRequest extends AbstractModel {
+public class RemoteAddrInfo extends AbstractModel {
 
     /**
-    * 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+    * 设备Id
     */
-    @SerializedName("TemplateId")
+    @SerializedName("DeviceId")
     @Expose
-    private String TemplateId;
+    private String DeviceId;
 
     /**
-     * Get 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940 
-     * @return TemplateId 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+    * IP地址
+    */
+    @SerializedName("Addr")
+    @Expose
+    private String Addr;
+
+    /**
+     * Get 设备Id 
+     * @return DeviceId 设备Id
      */
-    public String getTemplateId() {
-        return this.TemplateId;
+    public String getDeviceId() {
+        return this.DeviceId;
     }
 
     /**
-     * Set 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
-     * @param TemplateId 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * Set 设备Id
+     * @param DeviceId 设备Id
      */
-    public void setTemplateId(String TemplateId) {
-        this.TemplateId = TemplateId;
+    public void setDeviceId(String DeviceId) {
+        this.DeviceId = DeviceId;
     }
 
-    public DescribeTemplateRequest() {
+    /**
+     * Get IP地址 
+     * @return Addr IP地址
+     */
+    public String getAddr() {
+        return this.Addr;
+    }
+
+    /**
+     * Set IP地址
+     * @param Addr IP地址
+     */
+    public void setAddr(String Addr) {
+        this.Addr = Addr;
+    }
+
+    public RemoteAddrInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTemplateRequest(DescribeTemplateRequest source) {
-        if (source.TemplateId != null) {
-            this.TemplateId = new String(source.TemplateId);
+    public RemoteAddrInfo(RemoteAddrInfo source) {
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+        if (source.Addr != null) {
+            this.Addr = new String(source.Addr);
         }
     }
 
@@ -69,7 +90,8 @@ public class DescribeTemplateRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "Addr", this.Addr);
 
     }
 }

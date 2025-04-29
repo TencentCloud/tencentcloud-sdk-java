@@ -31,21 +31,21 @@ public class PreReleaseInfo extends AbstractModel {
     private String Domain;
 
     /**
-    * 预订倒计时
+    * 预订倒计时(YYYY-MM-DD hh:mm:ss)
     */
     @SerializedName("ReservationTime")
     @Expose
     private String ReservationTime;
 
     /**
-    * 域名注册时间
+    * 域名注册时间(YYYY-MM-DD hh:mm:ss)
     */
     @SerializedName("RegTime")
     @Expose
     private String RegTime;
 
     /**
-    * 域名删除时间
+    * 域名删除时间(YYYY-MM-DD hh:mm:ss)
     */
     @SerializedName("DelTime")
     @Expose
@@ -67,6 +67,8 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 是否收藏
+true：收藏
+false：未收藏
     */
     @SerializedName("IsFollow")
     @Expose
@@ -74,6 +76,8 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 是否已经预约
+true：预约
+false：未预约
     */
     @SerializedName("IsAppoint")
     @Expose
@@ -88,6 +92,8 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
     * 是否为原持有者
+true：是原持有人
+false：非原持有人
     */
     @SerializedName("IsDomainUser")
     @Expose
@@ -110,48 +116,48 @@ public class PreReleaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 预订倒计时 
-     * @return ReservationTime 预订倒计时
+     * Get 预订倒计时(YYYY-MM-DD hh:mm:ss) 
+     * @return ReservationTime 预订倒计时(YYYY-MM-DD hh:mm:ss)
      */
     public String getReservationTime() {
         return this.ReservationTime;
     }
 
     /**
-     * Set 预订倒计时
-     * @param ReservationTime 预订倒计时
+     * Set 预订倒计时(YYYY-MM-DD hh:mm:ss)
+     * @param ReservationTime 预订倒计时(YYYY-MM-DD hh:mm:ss)
      */
     public void setReservationTime(String ReservationTime) {
         this.ReservationTime = ReservationTime;
     }
 
     /**
-     * Get 域名注册时间 
-     * @return RegTime 域名注册时间
+     * Get 域名注册时间(YYYY-MM-DD hh:mm:ss) 
+     * @return RegTime 域名注册时间(YYYY-MM-DD hh:mm:ss)
      */
     public String getRegTime() {
         return this.RegTime;
     }
 
     /**
-     * Set 域名注册时间
-     * @param RegTime 域名注册时间
+     * Set 域名注册时间(YYYY-MM-DD hh:mm:ss)
+     * @param RegTime 域名注册时间(YYYY-MM-DD hh:mm:ss)
      */
     public void setRegTime(String RegTime) {
         this.RegTime = RegTime;
     }
 
     /**
-     * Get 域名删除时间 
-     * @return DelTime 域名删除时间
+     * Get 域名删除时间(YYYY-MM-DD hh:mm:ss) 
+     * @return DelTime 域名删除时间(YYYY-MM-DD hh:mm:ss)
      */
     public String getDelTime() {
         return this.DelTime;
     }
 
     /**
-     * Set 域名删除时间
-     * @param DelTime 域名删除时间
+     * Set 域名删除时间(YYYY-MM-DD hh:mm:ss)
+     * @param DelTime 域名删除时间(YYYY-MM-DD hh:mm:ss)
      */
     public void setDelTime(String DelTime) {
         this.DelTime = DelTime;
@@ -190,8 +196,12 @@ public class PreReleaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否收藏 
+     * Get 是否收藏
+true：收藏
+false：未收藏 
      * @return IsFollow 是否收藏
+true：收藏
+false：未收藏
      */
     public Boolean getIsFollow() {
         return this.IsFollow;
@@ -199,15 +209,23 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 是否收藏
+true：收藏
+false：未收藏
      * @param IsFollow 是否收藏
+true：收藏
+false：未收藏
      */
     public void setIsFollow(Boolean IsFollow) {
         this.IsFollow = IsFollow;
     }
 
     /**
-     * Get 是否已经预约 
+     * Get 是否已经预约
+true：预约
+false：未预约 
      * @return IsAppoint 是否已经预约
+true：预约
+false：未预约
      */
     public Boolean getIsAppoint() {
         return this.IsAppoint;
@@ -215,7 +233,11 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 是否已经预约
+true：预约
+false：未预约
      * @param IsAppoint 是否已经预约
+true：预约
+false：未预约
      */
     public void setIsAppoint(Boolean IsAppoint) {
         this.IsAppoint = IsAppoint;
@@ -238,8 +260,12 @@ public class PreReleaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否为原持有者 
+     * Get 是否为原持有者
+true：是原持有人
+false：非原持有人 
      * @return IsDomainUser 是否为原持有者
+true：是原持有人
+false：非原持有人
      */
     public Boolean getIsDomainUser() {
         return this.IsDomainUser;
@@ -247,7 +273,11 @@ public class PreReleaseInfo extends AbstractModel {
 
     /**
      * Set 是否为原持有者
+true：是原持有人
+false：非原持有人
      * @param IsDomainUser 是否为原持有者
+true：是原持有人
+false：非原持有人
      */
     public void setIsDomainUser(Boolean IsDomainUser) {
         this.IsDomainUser = IsDomainUser;

@@ -45,6 +45,20 @@ public class DocumentUsage extends AbstractModel {
     private Long TotalTokens;
 
     /**
+    * 拆分消耗的token数
+    */
+    @SerializedName("SplitTokens")
+    @Expose
+    private Long SplitTokens;
+
+    /**
+    * mllm消耗的token数
+    */
+    @SerializedName("MllmTokens")
+    @Expose
+    private Long MllmTokens;
+
+    /**
      * Get 文档拆分任务的页数 
      * @return PageNumber 文档拆分任务的页数
      */
@@ -96,6 +110,38 @@ public class DocumentUsage extends AbstractModel {
         this.TotalTokens = TotalTokens;
     }
 
+    /**
+     * Get 拆分消耗的token数 
+     * @return SplitTokens 拆分消耗的token数
+     */
+    public Long getSplitTokens() {
+        return this.SplitTokens;
+    }
+
+    /**
+     * Set 拆分消耗的token数
+     * @param SplitTokens 拆分消耗的token数
+     */
+    public void setSplitTokens(Long SplitTokens) {
+        this.SplitTokens = SplitTokens;
+    }
+
+    /**
+     * Get mllm消耗的token数 
+     * @return MllmTokens mllm消耗的token数
+     */
+    public Long getMllmTokens() {
+        return this.MllmTokens;
+    }
+
+    /**
+     * Set mllm消耗的token数
+     * @param MllmTokens mllm消耗的token数
+     */
+    public void setMllmTokens(Long MllmTokens) {
+        this.MllmTokens = MllmTokens;
+    }
+
     public DocumentUsage() {
     }
 
@@ -113,6 +159,12 @@ public class DocumentUsage extends AbstractModel {
         if (source.TotalTokens != null) {
             this.TotalTokens = new Long(source.TotalTokens);
         }
+        if (source.SplitTokens != null) {
+            this.SplitTokens = new Long(source.SplitTokens);
+        }
+        if (source.MllmTokens != null) {
+            this.MllmTokens = new Long(source.MllmTokens);
+        }
     }
 
 
@@ -123,6 +175,8 @@ public class DocumentUsage extends AbstractModel {
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "TotalToken", this.TotalToken);
         this.setParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
+        this.setParamSimple(map, prefix + "SplitTokens", this.SplitTokens);
+        this.setParamSimple(map, prefix + "MllmTokens", this.MllmTokens);
 
     }
 }
