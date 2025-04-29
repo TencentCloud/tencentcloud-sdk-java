@@ -142,7 +142,10 @@ public class InstanceLogVO extends AbstractModel {
     private Long LineCount;
 
     /**
-    * 执行平台日志分页查询参数, 每次请求透明传入。第一页查询时值为空字符串
+    * **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtInfo")
@@ -486,9 +489,15 @@ public class InstanceLogVO extends AbstractModel {
     }
 
     /**
-     * Get 执行平台日志分页查询参数, 每次请求透明传入。第一页查询时值为空字符串
+     * Get **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtInfo 执行平台日志分页查询参数, 每次请求透明传入。第一页查询时值为空字符串
+     * @return ExtInfo **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtInfo() {
@@ -496,9 +505,15 @@ public class InstanceLogVO extends AbstractModel {
     }
 
     /**
-     * Set 执行平台日志分页查询参数, 每次请求透明传入。第一页查询时值为空字符串
+     * Set **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtInfo 执行平台日志分页查询参数, 每次请求透明传入。第一页查询时值为空字符串
+     * @param ExtInfo **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtInfo(String ExtInfo) {

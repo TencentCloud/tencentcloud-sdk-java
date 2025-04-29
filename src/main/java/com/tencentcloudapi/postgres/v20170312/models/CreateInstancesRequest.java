@@ -241,6 +241,13 @@ KMSRegion相关介绍参考[开启透明数据加密](https://cloud.tencent.com/
     private String KMSRegion;
 
     /**
+    * 指定KMS服务的集群，KMSClusterId为空使用默认集群的KMS，若选择指定KMS集群，则需要传入KMSClusterId。 KMSClusterId相关介绍参考开启透明数据加密
+    */
+    @SerializedName("KMSClusterId")
+    @Expose
+    private String KMSClusterId;
+
+    /**
     * 数据库引擎，支持：
 <li>postgresql：云数据库PostgreSQL</li>
 <li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>
@@ -842,6 +849,22 @@ KMSRegion相关介绍参考[开启透明数据加密](https://cloud.tencent.com/
     }
 
     /**
+     * Get 指定KMS服务的集群，KMSClusterId为空使用默认集群的KMS，若选择指定KMS集群，则需要传入KMSClusterId。 KMSClusterId相关介绍参考开启透明数据加密 
+     * @return KMSClusterId 指定KMS服务的集群，KMSClusterId为空使用默认集群的KMS，若选择指定KMS集群，则需要传入KMSClusterId。 KMSClusterId相关介绍参考开启透明数据加密
+     */
+    public String getKMSClusterId() {
+        return this.KMSClusterId;
+    }
+
+    /**
+     * Set 指定KMS服务的集群，KMSClusterId为空使用默认集群的KMS，若选择指定KMS集群，则需要传入KMSClusterId。 KMSClusterId相关介绍参考开启透明数据加密
+     * @param KMSClusterId 指定KMS服务的集群，KMSClusterId为空使用默认集群的KMS，若选择指定KMS集群，则需要传入KMSClusterId。 KMSClusterId相关介绍参考开启透明数据加密
+     */
+    public void setKMSClusterId(String KMSClusterId) {
+        this.KMSClusterId = KMSClusterId;
+    }
+
+    /**
      * Get 数据库引擎，支持：
 <li>postgresql：云数据库PostgreSQL</li>
 <li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>
@@ -1071,6 +1094,9 @@ mssql_compatible引擎：
         if (source.KMSRegion != null) {
             this.KMSRegion = new String(source.KMSRegion);
         }
+        if (source.KMSClusterId != null) {
+            this.KMSClusterId = new String(source.KMSClusterId);
+        }
         if (source.DBEngine != null) {
             this.DBEngine = new String(source.DBEngine);
         }
@@ -1116,6 +1142,7 @@ mssql_compatible引擎：
         this.setParamSimple(map, prefix + "NeedSupportTDE", this.NeedSupportTDE);
         this.setParamSimple(map, prefix + "KMSKeyId", this.KMSKeyId);
         this.setParamSimple(map, prefix + "KMSRegion", this.KMSRegion);
+        this.setParamSimple(map, prefix + "KMSClusterId", this.KMSClusterId);
         this.setParamSimple(map, prefix + "DBEngine", this.DBEngine);
         this.setParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
         this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);

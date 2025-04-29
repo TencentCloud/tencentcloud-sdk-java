@@ -124,6 +124,20 @@ public class NativeGatewayServerGroup extends AbstractModel {
     private Long ElasticNumber;
 
     /**
+    * 是否支持TOA
+    */
+    @SerializedName("SupportTOA")
+    @Expose
+    private Boolean SupportTOA;
+
+    /**
+    * 是否支持IPV6
+    */
+    @SerializedName("SupportIPV6")
+    @Expose
+    private Boolean SupportIPV6;
+
+    /**
      * Get 云原生网关分组唯一id 
      * @return GroupId 云原生网关分组唯一id
      */
@@ -355,6 +369,38 @@ public class NativeGatewayServerGroup extends AbstractModel {
         this.ElasticNumber = ElasticNumber;
     }
 
+    /**
+     * Get 是否支持TOA 
+     * @return SupportTOA 是否支持TOA
+     */
+    public Boolean getSupportTOA() {
+        return this.SupportTOA;
+    }
+
+    /**
+     * Set 是否支持TOA
+     * @param SupportTOA 是否支持TOA
+     */
+    public void setSupportTOA(Boolean SupportTOA) {
+        this.SupportTOA = SupportTOA;
+    }
+
+    /**
+     * Get 是否支持IPV6 
+     * @return SupportIPV6 是否支持IPV6
+     */
+    public Boolean getSupportIPV6() {
+        return this.SupportIPV6;
+    }
+
+    /**
+     * Set 是否支持IPV6
+     * @param SupportIPV6 是否支持IPV6
+     */
+    public void setSupportIPV6(Boolean SupportIPV6) {
+        this.SupportIPV6 = SupportIPV6;
+    }
+
     public NativeGatewayServerGroup() {
     }
 
@@ -405,6 +451,12 @@ public class NativeGatewayServerGroup extends AbstractModel {
         if (source.ElasticNumber != null) {
             this.ElasticNumber = new Long(source.ElasticNumber);
         }
+        if (source.SupportTOA != null) {
+            this.SupportTOA = new Boolean(source.SupportTOA);
+        }
+        if (source.SupportIPV6 != null) {
+            this.SupportIPV6 = new Boolean(source.SupportIPV6);
+        }
     }
 
 
@@ -426,6 +478,8 @@ public class NativeGatewayServerGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetIds", this.SubnetIds);
         this.setParamSimple(map, prefix + "DefaultWeight", this.DefaultWeight);
         this.setParamSimple(map, prefix + "ElasticNumber", this.ElasticNumber);
+        this.setParamSimple(map, prefix + "SupportTOA", this.SupportTOA);
+        this.setParamSimple(map, prefix + "SupportIPV6", this.SupportIPV6);
 
     }
 }

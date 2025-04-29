@@ -33,7 +33,6 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
 
     /**
     * 查询对象总数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -67,10 +66,8 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
     }
 
     /**
-     * Get 查询对象总数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询对象总数量 
      * @return TotalCount 查询对象总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +75,7 @@ public class DescribeDatabaseObjectsResponse extends AbstractModel {
 
     /**
      * Set 查询对象总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 查询对象总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

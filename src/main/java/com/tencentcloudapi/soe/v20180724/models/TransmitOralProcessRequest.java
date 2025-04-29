@@ -67,7 +67,8 @@ public class TransmitOralProcessRequest extends AbstractModel {
     private String UserVoiceData;
 
     /**
-    * 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
+    * 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。
+一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
     */
     @SerializedName("SessionId")
     @Expose
@@ -207,16 +208,20 @@ public class TransmitOralProcessRequest extends AbstractModel {
     }
 
     /**
-     * Get 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。 
-     * @return SessionId 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
+     * Get 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。
+一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。 
+     * @return SessionId 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。
+一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
-     * @param SessionId 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
+     * Set 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。
+一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
+     * @param SessionId 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。
+一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

@@ -66,6 +66,13 @@ public class EncryptionKey extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 密钥所在的KMS服务集群Id，为空表示密钥在默认的KMS集群中，不为空表示在指定的KMS服务集群中
+    */
+    @SerializedName("KMSClusterId")
+    @Expose
+    private String KMSClusterId;
+
+    /**
      * Get KMS实例加密的KeyId。 
      * @return KeyId KMS实例加密的KeyId。
      */
@@ -161,6 +168,22 @@ public class EncryptionKey extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 密钥所在的KMS服务集群Id，为空表示密钥在默认的KMS集群中，不为空表示在指定的KMS服务集群中 
+     * @return KMSClusterId 密钥所在的KMS服务集群Id，为空表示密钥在默认的KMS集群中，不为空表示在指定的KMS服务集群中
+     */
+    public String getKMSClusterId() {
+        return this.KMSClusterId;
+    }
+
+    /**
+     * Set 密钥所在的KMS服务集群Id，为空表示密钥在默认的KMS集群中，不为空表示在指定的KMS服务集群中
+     * @param KMSClusterId 密钥所在的KMS服务集群Id，为空表示密钥在默认的KMS集群中，不为空表示在指定的KMS服务集群中
+     */
+    public void setKMSClusterId(String KMSClusterId) {
+        this.KMSClusterId = KMSClusterId;
+    }
+
     public EncryptionKey() {
     }
 
@@ -187,6 +210,9 @@ public class EncryptionKey extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.KMSClusterId != null) {
+            this.KMSClusterId = new String(source.KMSClusterId);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class EncryptionKey extends AbstractModel {
         this.setParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
         this.setParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "KMSClusterId", this.KMSClusterId);
 
     }
 }

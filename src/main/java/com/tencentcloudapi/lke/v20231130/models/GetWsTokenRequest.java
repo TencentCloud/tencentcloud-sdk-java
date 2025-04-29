@@ -39,6 +39,7 @@ public class GetWsTokenRequest extends AbstractModel {
 
     /**
     * 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
+长度限制： string(64)
     */
     @SerializedName("VisitorBizId")
     @Expose
@@ -84,8 +85,10 @@ public class GetWsTokenRequest extends AbstractModel {
     }
 
     /**
-     * Get 访客ID（外部输入，建议唯一，标识当前接入会话的用户） 
+     * Get 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
+长度限制： string(64) 
      * @return VisitorBizId 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
+长度限制： string(64)
      */
     public String getVisitorBizId() {
         return this.VisitorBizId;
@@ -93,7 +96,9 @@ public class GetWsTokenRequest extends AbstractModel {
 
     /**
      * Set 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
+长度限制： string(64)
      * @param VisitorBizId 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
+长度限制： string(64)
      */
     public void setVisitorBizId(String VisitorBizId) {
         this.VisitorBizId = VisitorBizId;

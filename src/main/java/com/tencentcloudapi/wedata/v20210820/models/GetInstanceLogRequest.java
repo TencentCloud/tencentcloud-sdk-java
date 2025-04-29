@@ -38,7 +38,9 @@ public class GetInstanceLogRequest extends AbstractModel {
     private String InstanceKey;
 
     /**
-    * 生命周期编号
+    * **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
     */
     @SerializedName("LifeRoundNum")
     @Expose
@@ -108,6 +110,16 @@ timeZone, 默认UTC+8
     private Long EndLineCount;
 
     /**
+    * **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
      * Get **项目ID** 
      * @return ProjectId **项目ID**
      */
@@ -140,16 +152,24 @@ timeZone, 默认UTC+8
     }
 
     /**
-     * Get 生命周期编号 
-     * @return LifeRoundNum 生命周期编号
+     * Get **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1 
+     * @return LifeRoundNum **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
      */
     public Long getLifeRoundNum() {
         return this.LifeRoundNum;
     }
 
     /**
-     * Set 生命周期编号
-     * @param LifeRoundNum 生命周期编号
+     * Set **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
+     * @param LifeRoundNum **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
      */
     public void setLifeRoundNum(Long LifeRoundNum) {
         this.LifeRoundNum = LifeRoundNum;
@@ -323,6 +343,34 @@ timeZone, 默认UTC+8
         this.EndLineCount = EndLineCount;
     }
 
+    /**
+     * Get **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可 
+     * @return ExtInfo **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
+     * @param ExtInfo **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
     public GetInstanceLogRequest() {
     }
 
@@ -361,6 +409,9 @@ timeZone, 默认UTC+8
         if (source.EndLineCount != null) {
             this.EndLineCount = new Long(source.EndLineCount);
         }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
     }
 
 
@@ -378,6 +429,7 @@ timeZone, 默认UTC+8
         this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
         this.setParamSimple(map, prefix + "StartLineNum", this.StartLineNum);
         this.setParamSimple(map, prefix + "EndLineCount", this.EndLineCount);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }
 }

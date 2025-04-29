@@ -25,7 +25,6 @@ public class ParamSpecRelation extends AbstractModel {
 
     /**
     * 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ParamSpecRelation extends AbstractModel {
 
     /**
     * 参数信息所属规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Memory")
     @Expose
@@ -41,7 +39,6 @@ public class ParamSpecRelation extends AbstractModel {
 
     /**
     * 参数在该规格下的默认值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -49,7 +46,6 @@ public class ParamSpecRelation extends AbstractModel {
 
     /**
     * 参数值单位。参数没有单位时，该字段返回空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
@@ -57,7 +53,6 @@ public class ParamSpecRelation extends AbstractModel {
 
     /**
     * 数值类型（integer、real）参数，取值上界
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Max")
     @Expose
@@ -65,7 +60,6 @@ public class ParamSpecRelation extends AbstractModel {
 
     /**
     * 数值类型（integer、real）参数，取值下界
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Min")
     @Expose
@@ -80,10 +74,8 @@ public class ParamSpecRelation extends AbstractModel {
     private String [] EnumValue;
 
     /**
-     * Get 参数名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数名称 
      * @return Name 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -91,19 +83,15 @@ public class ParamSpecRelation extends AbstractModel {
 
     /**
      * Set 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 参数信息所属规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数信息所属规格 
      * @return Memory 参数信息所属规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemory() {
         return this.Memory;
@@ -111,19 +99,15 @@ public class ParamSpecRelation extends AbstractModel {
 
     /**
      * Set 参数信息所属规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Memory 参数信息所属规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemory(String Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 参数在该规格下的默认值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数在该规格下的默认值 
      * @return Value 参数在该规格下的默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -131,19 +115,15 @@ public class ParamSpecRelation extends AbstractModel {
 
     /**
      * Set 参数在该规格下的默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 参数在该规格下的默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 参数值单位。参数没有单位时，该字段返回空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数值单位。参数没有单位时，该字段返回空 
      * @return Unit 参数值单位。参数没有单位时，该字段返回空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
         return this.Unit;
@@ -151,19 +131,15 @@ public class ParamSpecRelation extends AbstractModel {
 
     /**
      * Set 参数值单位。参数没有单位时，该字段返回空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 参数值单位。参数没有单位时，该字段返回空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 数值类型（integer、real）参数，取值上界
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数值类型（integer、real）参数，取值上界 
      * @return Max 数值类型（integer、real）参数，取值上界
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMax() {
         return this.Max;
@@ -171,19 +147,15 @@ public class ParamSpecRelation extends AbstractModel {
 
     /**
      * Set 数值类型（integer、real）参数，取值上界
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Max 数值类型（integer、real）参数，取值上界
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMax(Float Max) {
         this.Max = Max;
     }
 
     /**
-     * Get 数值类型（integer、real）参数，取值下界
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数值类型（integer、real）参数，取值下界 
      * @return Min 数值类型（integer、real）参数，取值下界
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMin() {
         return this.Min;
@@ -191,9 +163,7 @@ public class ParamSpecRelation extends AbstractModel {
 
     /**
      * Set 数值类型（integer、real）参数，取值下界
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Min 数值类型（integer、real）参数，取值下界
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMin(Float Min) {
         this.Min = Min;

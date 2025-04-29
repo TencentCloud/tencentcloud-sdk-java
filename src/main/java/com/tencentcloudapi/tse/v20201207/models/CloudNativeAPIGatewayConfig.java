@@ -172,6 +172,13 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
     private String NetworkId;
 
     /**
+    * 是否为新 ipv6 CLB
+    */
+    @SerializedName("IPV6FullChain")
+    @Expose
+    private Boolean IPV6FullChain;
+
+    /**
      * Get 控制台类型。 
      * @return ConsoleType 控制台类型。
      */
@@ -511,6 +518,22 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
         this.NetworkId = NetworkId;
     }
 
+    /**
+     * Get 是否为新 ipv6 CLB 
+     * @return IPV6FullChain 是否为新 ipv6 CLB
+     */
+    public Boolean getIPV6FullChain() {
+        return this.IPV6FullChain;
+    }
+
+    /**
+     * Set 是否为新 ipv6 CLB
+     * @param IPV6FullChain 是否为新 ipv6 CLB
+     */
+    public void setIPV6FullChain(Boolean IPV6FullChain) {
+        this.IPV6FullChain = IPV6FullChain;
+    }
+
     public CloudNativeAPIGatewayConfig() {
     }
 
@@ -582,6 +605,9 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
         if (source.NetworkId != null) {
             this.NetworkId = new String(source.NetworkId);
         }
+        if (source.IPV6FullChain != null) {
+            this.IPV6FullChain = new Boolean(source.IPV6FullChain);
+        }
     }
 
 
@@ -610,6 +636,7 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "MasterZoneName", this.MasterZoneName);
         this.setParamSimple(map, prefix + "SlaveZoneName", this.SlaveZoneName);
         this.setParamSimple(map, prefix + "NetworkId", this.NetworkId);
+        this.setParamSimple(map, prefix + "IPV6FullChain", this.IPV6FullChain);
 
     }
 }

@@ -31,21 +31,21 @@ public class DescribeClusterInfoResponse extends AbstractModel {
     private String ClusterName;
 
     /**
-    * 集群读写地址信息。
+    * 云盘版实例的读写地址信息。
     */
     @SerializedName("ReadWriteAddress")
     @Expose
     private AddressInfo ReadWriteAddress;
 
     /**
-    * 集群只读地址信息。
+    * 云盘版实例的只读地址信息。
     */
     @SerializedName("ReadOnlyAddress")
     @Expose
     private AddressInfo [] ReadOnlyAddress;
 
     /**
-    * 集群节点列表信息。
+    * 云盘版实例的节点列表信息。
     */
     @SerializedName("NodeList")
     @Expose
@@ -89,48 +89,48 @@ public class DescribeClusterInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 集群读写地址信息。 
-     * @return ReadWriteAddress 集群读写地址信息。
+     * Get 云盘版实例的读写地址信息。 
+     * @return ReadWriteAddress 云盘版实例的读写地址信息。
      */
     public AddressInfo getReadWriteAddress() {
         return this.ReadWriteAddress;
     }
 
     /**
-     * Set 集群读写地址信息。
-     * @param ReadWriteAddress 集群读写地址信息。
+     * Set 云盘版实例的读写地址信息。
+     * @param ReadWriteAddress 云盘版实例的读写地址信息。
      */
     public void setReadWriteAddress(AddressInfo ReadWriteAddress) {
         this.ReadWriteAddress = ReadWriteAddress;
     }
 
     /**
-     * Get 集群只读地址信息。 
-     * @return ReadOnlyAddress 集群只读地址信息。
+     * Get 云盘版实例的只读地址信息。 
+     * @return ReadOnlyAddress 云盘版实例的只读地址信息。
      */
     public AddressInfo [] getReadOnlyAddress() {
         return this.ReadOnlyAddress;
     }
 
     /**
-     * Set 集群只读地址信息。
-     * @param ReadOnlyAddress 集群只读地址信息。
+     * Set 云盘版实例的只读地址信息。
+     * @param ReadOnlyAddress 云盘版实例的只读地址信息。
      */
     public void setReadOnlyAddress(AddressInfo [] ReadOnlyAddress) {
         this.ReadOnlyAddress = ReadOnlyAddress;
     }
 
     /**
-     * Get 集群节点列表信息。 
-     * @return NodeList 集群节点列表信息。
+     * Get 云盘版实例的节点列表信息。 
+     * @return NodeList 云盘版实例的节点列表信息。
      */
     public ClusterNodeInfo [] getNodeList() {
         return this.NodeList;
     }
 
     /**
-     * Set 集群节点列表信息。
-     * @param NodeList 集群节点列表信息。
+     * Set 云盘版实例的节点列表信息。
+     * @param NodeList 云盘版实例的节点列表信息。
      */
     public void setNodeList(ClusterNodeInfo [] NodeList) {
         this.NodeList = NodeList;

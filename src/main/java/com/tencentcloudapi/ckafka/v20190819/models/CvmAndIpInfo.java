@@ -25,7 +25,6 @@ public class CvmAndIpInfo extends AbstractModel {
 
     /**
     * ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CkafkaInstanceId")
     @Expose
@@ -40,17 +39,14 @@ public class CvmAndIpInfo extends AbstractModel {
 
     /**
     * IP地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-     * Get ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ckafka集群实例Id 
      * @return CkafkaInstanceId ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCkafkaInstanceId() {
         return this.CkafkaInstanceId;
@@ -58,9 +54,7 @@ public class CvmAndIpInfo extends AbstractModel {
 
     /**
      * Set ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CkafkaInstanceId ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCkafkaInstanceId(String CkafkaInstanceId) {
         this.CkafkaInstanceId = CkafkaInstanceId;
@@ -83,10 +77,8 @@ public class CvmAndIpInfo extends AbstractModel {
     }
 
     /**
-     * Get IP地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP地址 
      * @return Ip IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -94,9 +86,7 @@ public class CvmAndIpInfo extends AbstractModel {
 
     /**
      * Set IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

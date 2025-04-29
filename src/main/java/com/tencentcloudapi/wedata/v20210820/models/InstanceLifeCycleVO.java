@@ -49,7 +49,9 @@ public class InstanceLifeCycleVO extends AbstractModel {
     private Long InstanceState;
 
     /**
-    * 生命周期编号
+    * **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LifeRoundNum")
@@ -102,6 +104,8 @@ public class InstanceLifeCycleVO extends AbstractModel {
 
     /**
     * **下发执行ID**
+统一执行平台下发执行到新版执行机标识某次执行的唯一ID，存量老执行机下发执行没有此ID。
+如果不知道执行机版本是否支持此ID，可以联系腾讯云运维同学
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionJobId")
@@ -220,9 +224,13 @@ public class InstanceLifeCycleVO extends AbstractModel {
     }
 
     /**
-     * Get 生命周期编号
+     * Get **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LifeRoundNum 生命周期编号
+     * @return LifeRoundNum **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLifeRoundNum() {
@@ -230,9 +238,13 @@ public class InstanceLifeCycleVO extends AbstractModel {
     }
 
     /**
-     * Set 生命周期编号
+     * Set **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LifeRoundNum 生命周期编号
+     * @param LifeRoundNum **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLifeRoundNum(Long LifeRoundNum) {
@@ -369,8 +381,12 @@ public class InstanceLifeCycleVO extends AbstractModel {
 
     /**
      * Get **下发执行ID**
+统一执行平台下发执行到新版执行机标识某次执行的唯一ID，存量老执行机下发执行没有此ID。
+如果不知道执行机版本是否支持此ID，可以联系腾讯云运维同学
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExecutionJobId **下发执行ID**
+统一执行平台下发执行到新版执行机标识某次执行的唯一ID，存量老执行机下发执行没有此ID。
+如果不知道执行机版本是否支持此ID，可以联系腾讯云运维同学
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionJobId() {
@@ -379,8 +395,12 @@ public class InstanceLifeCycleVO extends AbstractModel {
 
     /**
      * Set **下发执行ID**
+统一执行平台下发执行到新版执行机标识某次执行的唯一ID，存量老执行机下发执行没有此ID。
+如果不知道执行机版本是否支持此ID，可以联系腾讯云运维同学
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutionJobId **下发执行ID**
+统一执行平台下发执行到新版执行机标识某次执行的唯一ID，存量老执行机下发执行没有此ID。
+如果不知道执行机版本是否支持此ID，可以联系腾讯云运维同学
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionJobId(String ExecutionJobId) {

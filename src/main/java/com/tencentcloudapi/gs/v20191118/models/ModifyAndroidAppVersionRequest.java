@@ -45,11 +45,18 @@ public class ModifyAndroidAppVersionRequest extends AbstractModel {
     private String AndroidAppVersionName;
 
     /**
-    * shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+    * 应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
     */
     @SerializedName("Command")
     @Expose
     private String Command;
+
+    /**
+    * 应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+    */
+    @SerializedName("UninstallCommand")
+    @Expose
+    private String UninstallCommand;
 
     /**
      * Get 安卓应用 Id 
@@ -100,19 +107,35 @@ public class ModifyAndroidAppVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效） 
-     * @return Command shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * Get 应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效） 
+     * @return Command 应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
-     * @param Command shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * Set 应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @param Command 应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      */
     public void setCommand(String Command) {
         this.Command = Command;
+    }
+
+    /**
+     * Get 应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效） 
+     * @return UninstallCommand 应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     */
+    public String getUninstallCommand() {
+        return this.UninstallCommand;
+    }
+
+    /**
+     * Set 应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @param UninstallCommand 应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     */
+    public void setUninstallCommand(String UninstallCommand) {
+        this.UninstallCommand = UninstallCommand;
     }
 
     public ModifyAndroidAppVersionRequest() {
@@ -135,6 +158,9 @@ public class ModifyAndroidAppVersionRequest extends AbstractModel {
         if (source.Command != null) {
             this.Command = new String(source.Command);
         }
+        if (source.UninstallCommand != null) {
+            this.UninstallCommand = new String(source.UninstallCommand);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ModifyAndroidAppVersionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AndroidAppVersion", this.AndroidAppVersion);
         this.setParamSimple(map, prefix + "AndroidAppVersionName", this.AndroidAppVersionName);
         this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamSimple(map, prefix + "UninstallCommand", this.UninstallCommand);
 
     }
 }

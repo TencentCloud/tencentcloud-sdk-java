@@ -177,7 +177,9 @@ public class InstanceDetailVO extends AbstractModel {
     private Long TotalRunNum;
 
     /**
-    * 生命周期编号
+    * **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次的执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LifeRoundNum")
@@ -685,9 +687,13 @@ public class InstanceDetailVO extends AbstractModel {
     }
 
     /**
-     * Get 生命周期编号
+     * Get **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次的执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LifeRoundNum 生命周期编号
+     * @return LifeRoundNum **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次的执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLifeRoundNum() {
@@ -695,9 +701,13 @@ public class InstanceDetailVO extends AbstractModel {
     }
 
     /**
-     * Set 生命周期编号
+     * Set **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次的执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LifeRoundNum 生命周期编号
+     * @param LifeRoundNum **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次的执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLifeRoundNum(Long LifeRoundNum) {

@@ -60,7 +60,6 @@ public class TargetGroupBackend extends AbstractModel {
 
     /**
     * 后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -68,7 +67,6 @@ public class TargetGroupBackend extends AbstractModel {
 
     /**
     * 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
@@ -76,7 +74,6 @@ public class TargetGroupBackend extends AbstractModel {
 
     /**
     * 后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -84,7 +81,6 @@ public class TargetGroupBackend extends AbstractModel {
 
     /**
     * 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegisteredTime")
     @Expose
@@ -187,10 +183,8 @@ public class TargetGroupBackend extends AbstractModel {
     }
 
     /**
-     * Get 后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端服务的外网 IP 
      * @return PublicIpAddresses 后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
@@ -198,19 +192,15 @@ public class TargetGroupBackend extends AbstractModel {
 
     /**
      * Set 后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddresses 后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;
     }
 
     /**
-     * Get 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端服务的内网 IP 
      * @return PrivateIpAddresses 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
@@ -218,19 +208,15 @@ public class TargetGroupBackend extends AbstractModel {
 
     /**
      * Set 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIpAddresses 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;
     }
 
     /**
-     * Get 后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端服务的实例名称 
      * @return InstanceName 后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -238,19 +224,15 @@ public class TargetGroupBackend extends AbstractModel {
 
     /**
      * Set 后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端服务被绑定的时间 
      * @return RegisteredTime 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegisteredTime() {
         return this.RegisteredTime;
@@ -258,9 +240,7 @@ public class TargetGroupBackend extends AbstractModel {
 
     /**
      * Set 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegisteredTime 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegisteredTime(String RegisteredTime) {
         this.RegisteredTime = RegisteredTime;

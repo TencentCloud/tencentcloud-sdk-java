@@ -25,7 +25,6 @@ public class ItemPrice extends AbstractModel {
 
     /**
     * 后付费单价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnitPrice")
     @Expose
@@ -33,7 +32,6 @@ public class ItemPrice extends AbstractModel {
 
     /**
     * 后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeUnit")
     @Expose
@@ -57,7 +55,6 @@ public class ItemPrice extends AbstractModel {
 
     /**
     * 后付费的折扣单价，单位:元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnitPriceDiscount")
     @Expose
@@ -65,17 +62,14 @@ public class ItemPrice extends AbstractModel {
 
     /**
     * 折扣，如20.0代表2折。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Discount")
     @Expose
     private Float Discount;
 
     /**
-     * Get 后付费单价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后付费单价，单位：元。 
      * @return UnitPrice 后付费单价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
@@ -83,19 +77,15 @@ public class ItemPrice extends AbstractModel {
 
     /**
      * Set 后付费单价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnitPrice 后付费单价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get 后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）。 
      * @return ChargeUnit 后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeUnit() {
         return this.ChargeUnit;
@@ -103,9 +93,7 @@ public class ItemPrice extends AbstractModel {
 
     /**
      * Set 后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeUnit 后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeUnit(String ChargeUnit) {
         this.ChargeUnit = ChargeUnit;
@@ -152,10 +140,8 @@ public class ItemPrice extends AbstractModel {
     }
 
     /**
-     * Get 后付费的折扣单价，单位:元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后付费的折扣单价，单位:元。 
      * @return UnitPriceDiscount 后付费的折扣单价，单位:元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getUnitPriceDiscount() {
         return this.UnitPriceDiscount;
@@ -163,19 +149,15 @@ public class ItemPrice extends AbstractModel {
 
     /**
      * Set 后付费的折扣单价，单位:元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnitPriceDiscount 后付费的折扣单价，单位:元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnitPriceDiscount(Float UnitPriceDiscount) {
         this.UnitPriceDiscount = UnitPriceDiscount;
     }
 
     /**
-     * Get 折扣，如20.0代表2折。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 折扣，如20.0代表2折。 
      * @return Discount 折扣，如20.0代表2折。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDiscount() {
         return this.Discount;
@@ -183,9 +165,7 @@ public class ItemPrice extends AbstractModel {
 
     /**
      * Set 折扣，如20.0代表2折。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Discount 折扣，如20.0代表2折。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;

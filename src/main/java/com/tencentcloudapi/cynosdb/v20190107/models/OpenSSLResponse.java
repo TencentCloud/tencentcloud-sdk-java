@@ -25,7 +25,6 @@ public class OpenSSLResponse extends AbstractModel {
 
     /**
     * 任务流ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -33,7 +32,6 @@ public class OpenSSLResponse extends AbstractModel {
 
     /**
     * 任务id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -47,10 +45,8 @@ public class OpenSSLResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务流ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务流ID 
      * @return FlowId 任务流ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowId() {
         return this.FlowId;
@@ -58,19 +54,15 @@ public class OpenSSLResponse extends AbstractModel {
 
     /**
      * Set 任务流ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 任务流ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 任务id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务id 
      * @return TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -78,9 +70,7 @@ public class OpenSSLResponse extends AbstractModel {
 
     /**
      * Set 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

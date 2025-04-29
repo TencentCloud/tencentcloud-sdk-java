@@ -25,7 +25,6 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
     * 参数模板ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
     * 参数模板包含的参数个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -49,7 +47,6 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
     * 参数模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateName")
     @Expose
@@ -57,7 +54,6 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
     * 参数模板适用的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBMajorVersion")
     @Expose
@@ -65,7 +61,6 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
     * 参数模板适用的数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBEngine")
     @Expose
@@ -73,7 +68,6 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
     * 参数模板描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateDescription")
     @Expose
@@ -87,10 +81,8 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 参数模板ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数模板ID 
      * @return TemplateId 参数模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateId() {
         return this.TemplateId;
@@ -98,19 +90,15 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
      * Set 参数模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateId 参数模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 参数模板包含的参数个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数模板包含的参数个数 
      * @return TotalCount 参数模板包含的参数个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -118,9 +106,7 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
      * Set 参数模板包含的参数个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 参数模板包含的参数个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -147,10 +133,8 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get 参数模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数模板名称 
      * @return TemplateName 参数模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateName() {
         return this.TemplateName;
@@ -158,19 +142,15 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
      * Set 参数模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateName 参数模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 参数模板适用的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数模板适用的数据库版本 
      * @return DBMajorVersion 参数模板适用的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
@@ -178,19 +158,15 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
      * Set 参数模板适用的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBMajorVersion 参数模板适用的数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;
     }
 
     /**
-     * Get 参数模板适用的数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数模板适用的数据库引擎 
      * @return DBEngine 参数模板适用的数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDBEngine() {
         return this.DBEngine;
@@ -198,19 +174,15 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
      * Set 参数模板适用的数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBEngine 参数模板适用的数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBEngine(String DBEngine) {
         this.DBEngine = DBEngine;
     }
 
     /**
-     * Get 参数模板描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数模板描述 
      * @return TemplateDescription 参数模板描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateDescription() {
         return this.TemplateDescription;
@@ -218,9 +190,7 @@ public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
      * Set 参数模板描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateDescription 参数模板描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateDescription(String TemplateDescription) {
         this.TemplateDescription = TemplateDescription;

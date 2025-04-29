@@ -25,7 +25,6 @@ public class Price extends AbstractModel {
 
     /**
     * 描述了实例价格。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstancePrice")
     @Expose
@@ -33,17 +32,14 @@ public class Price extends AbstractModel {
 
     /**
     * 描述了GLCU的价格。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LcuPrice")
     @Expose
     private ItemPrice LcuPrice;
 
     /**
-     * Get 描述了实例价格。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述了实例价格。 
      * @return InstancePrice 描述了实例价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ItemPrice getInstancePrice() {
         return this.InstancePrice;
@@ -51,19 +47,15 @@ public class Price extends AbstractModel {
 
     /**
      * Set 描述了实例价格。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstancePrice 描述了实例价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstancePrice(ItemPrice InstancePrice) {
         this.InstancePrice = InstancePrice;
     }
 
     /**
-     * Get 描述了GLCU的价格。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述了GLCU的价格。 
      * @return LcuPrice 描述了GLCU的价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ItemPrice getLcuPrice() {
         return this.LcuPrice;
@@ -71,9 +63,7 @@ public class Price extends AbstractModel {
 
     /**
      * Set 描述了GLCU的价格。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LcuPrice 描述了GLCU的价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLcuPrice(ItemPrice LcuPrice) {
         this.LcuPrice = LcuPrice;

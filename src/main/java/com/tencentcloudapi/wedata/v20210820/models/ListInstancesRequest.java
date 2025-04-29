@@ -31,7 +31,7 @@ public class ListInstancesRequest extends AbstractModel {
     private String ProjectId;
 
     /**
-    * **实例计划调度时间**
+    * **实例计划调度时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("ScheduleTimeFrom")
@@ -39,7 +39,7 @@ public class ListInstancesRequest extends AbstractModel {
     private String ScheduleTimeFrom;
 
     /**
-    * **实例计划调度时间**
+    * **实例计划调度时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("ScheduleTimeTo")
@@ -65,10 +65,10 @@ public class ListInstancesRequest extends AbstractModel {
     /**
     * **查询结果排序字段**
 
-- SCHEDULE_DATE 表示 计划调度时间
-- START_TIME 表示 实例开始执行时间
-- END_TIME 表示 实例结束执行时间
-- COST_TIME 表示 实例执行时长
+- SCHEDULE_DATE 表示 根据计划调度时间排序
+- START_TIME 表示 根据实例开始执行时间排序
+- END_TIME 表示 根据实例结束执行时间排序
+- COST_TIME 表示 根据实例执行时长排序
     */
     @SerializedName("SortColumn")
     @Expose
@@ -183,7 +183,7 @@ public class ListInstancesRequest extends AbstractModel {
     private String [] ExecutorGroupIdList;
 
     /**
-    * **开始时间**
+    * **实例执行开始时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("StartTimeFrom")
@@ -191,7 +191,7 @@ public class ListInstancesRequest extends AbstractModel {
     private String StartTimeFrom;
 
     /**
-    * **开始时间**
+    * **实例执行开始时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("StartTimeTo")
@@ -223,9 +223,9 @@ timeZone, 默认UTC+8
     }
 
     /**
-     * Get **实例计划调度时间**
+     * Get **实例计划调度时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss 
-     * @return ScheduleTimeFrom **实例计划调度时间**
+     * @return ScheduleTimeFrom **实例计划调度时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     public String getScheduleTimeFrom() {
@@ -233,9 +233,9 @@ timeZone, 默认UTC+8
     }
 
     /**
-     * Set **实例计划调度时间**
+     * Set **实例计划调度时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
-     * @param ScheduleTimeFrom **实例计划调度时间**
+     * @param ScheduleTimeFrom **实例计划调度时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     public void setScheduleTimeFrom(String ScheduleTimeFrom) {
@@ -243,9 +243,9 @@ timeZone, 默认UTC+8
     }
 
     /**
-     * Get **实例计划调度时间**
+     * Get **实例计划调度时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss 
-     * @return ScheduleTimeTo **实例计划调度时间**
+     * @return ScheduleTimeTo **实例计划调度时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     public String getScheduleTimeTo() {
@@ -253,9 +253,9 @@ timeZone, 默认UTC+8
     }
 
     /**
-     * Set **实例计划调度时间**
+     * Set **实例计划调度时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
-     * @param ScheduleTimeTo **实例计划调度时间**
+     * @param ScheduleTimeTo **实例计划调度时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     public void setScheduleTimeTo(String ScheduleTimeTo) {
@@ -305,16 +305,16 @@ timeZone, 默认UTC+8
     /**
      * Get **查询结果排序字段**
 
-- SCHEDULE_DATE 表示 计划调度时间
-- START_TIME 表示 实例开始执行时间
-- END_TIME 表示 实例结束执行时间
-- COST_TIME 表示 实例执行时长 
+- SCHEDULE_DATE 表示 根据计划调度时间排序
+- START_TIME 表示 根据实例开始执行时间排序
+- END_TIME 表示 根据实例结束执行时间排序
+- COST_TIME 表示 根据实例执行时长排序 
      * @return SortColumn **查询结果排序字段**
 
-- SCHEDULE_DATE 表示 计划调度时间
-- START_TIME 表示 实例开始执行时间
-- END_TIME 表示 实例结束执行时间
-- COST_TIME 表示 实例执行时长
+- SCHEDULE_DATE 表示 根据计划调度时间排序
+- START_TIME 表示 根据实例开始执行时间排序
+- END_TIME 表示 根据实例结束执行时间排序
+- COST_TIME 表示 根据实例执行时长排序
      */
     public String getSortColumn() {
         return this.SortColumn;
@@ -323,16 +323,16 @@ timeZone, 默认UTC+8
     /**
      * Set **查询结果排序字段**
 
-- SCHEDULE_DATE 表示 计划调度时间
-- START_TIME 表示 实例开始执行时间
-- END_TIME 表示 实例结束执行时间
-- COST_TIME 表示 实例执行时长
+- SCHEDULE_DATE 表示 根据计划调度时间排序
+- START_TIME 表示 根据实例开始执行时间排序
+- END_TIME 表示 根据实例结束执行时间排序
+- COST_TIME 表示 根据实例执行时长排序
      * @param SortColumn **查询结果排序字段**
 
-- SCHEDULE_DATE 表示 计划调度时间
-- START_TIME 表示 实例开始执行时间
-- END_TIME 表示 实例结束执行时间
-- COST_TIME 表示 实例执行时长
+- SCHEDULE_DATE 表示 根据计划调度时间排序
+- START_TIME 表示 根据实例开始执行时间排序
+- END_TIME 表示 根据实例结束执行时间排序
+- COST_TIME 表示 根据实例执行时长排序
      */
     public void setSortColumn(String SortColumn) {
         this.SortColumn = SortColumn;
@@ -651,9 +651,9 @@ timeZone, 默认UTC+8
     }
 
     /**
-     * Get **开始时间**
+     * Get **实例执行开始时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss 
-     * @return StartTimeFrom **开始时间**
+     * @return StartTimeFrom **实例执行开始时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     public String getStartTimeFrom() {
@@ -661,9 +661,9 @@ timeZone, 默认UTC+8
     }
 
     /**
-     * Set **开始时间**
+     * Set **实例执行开始时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
-     * @param StartTimeFrom **开始时间**
+     * @param StartTimeFrom **实例执行开始时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     public void setStartTimeFrom(String StartTimeFrom) {
@@ -671,9 +671,9 @@ timeZone, 默认UTC+8
     }
 
     /**
-     * Get **开始时间**
+     * Get **实例执行开始时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss 
-     * @return StartTimeTo **开始时间**
+     * @return StartTimeTo **实例执行开始时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     public String getStartTimeTo() {
@@ -681,9 +681,9 @@ timeZone, 默认UTC+8
     }
 
     /**
-     * Set **开始时间**
+     * Set **实例执行开始时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
-     * @param StartTimeTo **开始时间**
+     * @param StartTimeTo **实例执行开始时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     public void setStartTimeTo(String StartTimeTo) {

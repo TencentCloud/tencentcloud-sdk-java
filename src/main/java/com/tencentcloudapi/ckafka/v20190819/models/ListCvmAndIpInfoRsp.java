@@ -25,7 +25,6 @@ public class ListCvmAndIpInfoRsp extends AbstractModel {
 
     /**
     * cvm和IP 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CvmList")
     @Expose
@@ -33,17 +32,14 @@ public class ListCvmAndIpInfoRsp extends AbstractModel {
 
     /**
     * 实例数据量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get cvm和IP 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cvm和IP 列表 
      * @return CvmList cvm和IP 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CvmAndIpInfo [] getCvmList() {
         return this.CvmList;
@@ -51,19 +47,15 @@ public class ListCvmAndIpInfoRsp extends AbstractModel {
 
     /**
      * Set cvm和IP 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CvmList cvm和IP 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvmList(CvmAndIpInfo [] CvmList) {
         this.CvmList = CvmList;
     }
 
     /**
-     * Get 实例数据量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例数据量 
      * @return TotalCount 实例数据量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -71,9 +63,7 @@ public class ListCvmAndIpInfoRsp extends AbstractModel {
 
     /**
      * Set 实例数据量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 实例数据量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

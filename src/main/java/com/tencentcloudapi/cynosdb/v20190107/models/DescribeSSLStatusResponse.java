@@ -25,7 +25,6 @@ public class DescribeSSLStatusResponse extends AbstractModel {
 
     /**
     * yes-开启，no-关闭
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsOpenSSL")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeSSLStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get yes-开启，no-关闭
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get yes-开启，no-关闭 
      * @return IsOpenSSL yes-开启，no-关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsOpenSSL() {
         return this.IsOpenSSL;
@@ -57,9 +54,7 @@ public class DescribeSSLStatusResponse extends AbstractModel {
 
     /**
      * Set yes-开启，no-关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsOpenSSL yes-开启，no-关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsOpenSSL(String IsOpenSSL) {
         this.IsOpenSSL = IsOpenSSL;

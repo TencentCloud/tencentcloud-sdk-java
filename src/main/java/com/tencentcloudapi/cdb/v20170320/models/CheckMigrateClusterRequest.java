@@ -59,14 +59,14 @@ public class CheckMigrateClusterRequest extends AbstractModel {
     private String DiskType;
 
     /**
-    * 集群版节点拓扑配置。
+    * 云盘版节点拓扑配置。
     */
     @SerializedName("ClusterTopology")
     @Expose
     private ClusterTopology ClusterTopology;
 
     /**
-    * 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
+    * 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型云盘版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型云盘版实例。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -160,32 +160,32 @@ public class CheckMigrateClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群版节点拓扑配置。 
-     * @return ClusterTopology 集群版节点拓扑配置。
+     * Get 云盘版节点拓扑配置。 
+     * @return ClusterTopology 云盘版节点拓扑配置。
      */
     public ClusterTopology getClusterTopology() {
         return this.ClusterTopology;
     }
 
     /**
-     * Set 集群版节点拓扑配置。
-     * @param ClusterTopology 集群版节点拓扑配置。
+     * Set 云盘版节点拓扑配置。
+     * @param ClusterTopology 云盘版节点拓扑配置。
      */
     public void setClusterTopology(ClusterTopology ClusterTopology) {
         this.ClusterTopology = ClusterTopology;
     }
 
     /**
-     * Get 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。 
-     * @return DeviceType 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
+     * Get 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型云盘版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型云盘版实例。 
+     * @return DeviceType 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型云盘版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型云盘版实例。
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
-     * @param DeviceType 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
+     * Set 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型云盘版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型云盘版实例。
+     * @param DeviceType 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型云盘版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型云盘版实例。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

@@ -47,11 +47,18 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
     private String CreateTime;
 
     /**
-    * shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+    * shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
     */
     @SerializedName("Command")
     @Expose
     private String Command;
+
+    /**
+    * shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+    */
+    @SerializedName("UninstallCommand")
+    @Expose
+    private String UninstallCommand;
 
     /**
      * Get 安卓应用版本 
@@ -110,19 +117,35 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
     }
 
     /**
-     * Get shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效） 
-     * @return Command shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * Get shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效） 
+     * @return Command shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
-     * @param Command shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * Set shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @param Command shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      */
     public void setCommand(String Command) {
         this.Command = Command;
+    }
+
+    /**
+     * Get shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效） 
+     * @return UninstallCommand shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     */
+    public String getUninstallCommand() {
+        return this.UninstallCommand;
+    }
+
+    /**
+     * Set shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @param UninstallCommand shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     */
+    public void setUninstallCommand(String UninstallCommand) {
+        this.UninstallCommand = UninstallCommand;
     }
 
     public AndroidAppVersionInfo() {
@@ -145,6 +168,9 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         if (source.Command != null) {
             this.Command = new String(source.Command);
         }
+        if (source.UninstallCommand != null) {
+            this.UninstallCommand = new String(source.UninstallCommand);
+        }
     }
 
 
@@ -156,6 +182,7 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamSimple(map, prefix + "UninstallCommand", this.UninstallCommand);
 
     }
 }

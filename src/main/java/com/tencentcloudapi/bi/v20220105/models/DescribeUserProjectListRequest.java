@@ -66,6 +66,13 @@ public class DescribeUserProjectListRequest extends AbstractModel {
     private Boolean IsFilterCurrentUser;
 
     /**
+    * 关键字
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -161,6 +168,22 @@ public class DescribeUserProjectListRequest extends AbstractModel {
         this.IsFilterCurrentUser = IsFilterCurrentUser;
     }
 
+    /**
+     * Get 关键字 
+     * @return Keyword 关键字
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set 关键字
+     * @param Keyword 关键字
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
     public DescribeUserProjectListRequest() {
     }
 
@@ -187,6 +210,9 @@ public class DescribeUserProjectListRequest extends AbstractModel {
         if (source.IsFilterCurrentUser != null) {
             this.IsFilterCurrentUser = new Boolean(source.IsFilterCurrentUser);
         }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DescribeUserProjectListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "IsFilterPerAuthUser", this.IsFilterPerAuthUser);
         this.setParamSimple(map, prefix + "IsFilterCurrentUser", this.IsFilterCurrentUser);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
 
     }
 }

@@ -25,7 +25,6 @@ public class ReadOnlyGroup extends AbstractModel {
 
     /**
     * 只读组标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadOnlyGroupId")
     @Expose
@@ -33,7 +32,6 @@ public class ReadOnlyGroup extends AbstractModel {
 
     /**
     * 只读组名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadOnlyGroupName")
     @Expose
@@ -41,7 +39,6 @@ public class ReadOnlyGroup extends AbstractModel {
 
     /**
     * 项目id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -49,7 +46,6 @@ public class ReadOnlyGroup extends AbstractModel {
 
     /**
     * 主实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterDBInstanceId")
     @Expose
@@ -57,7 +53,6 @@ public class ReadOnlyGroup extends AbstractModel {
 
     /**
     * 最小保留实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinDelayEliminateReserve")
     @Expose
@@ -100,7 +95,6 @@ public class ReadOnlyGroup extends AbstractModel {
 
     /**
     * 子网id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -157,10 +151,8 @@ public class ReadOnlyGroup extends AbstractModel {
     private NetworkAccess [] NetworkAccessList;
 
     /**
-     * Get 只读组标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读组标识 
      * @return ReadOnlyGroupId 只读组标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReadOnlyGroupId() {
         return this.ReadOnlyGroupId;
@@ -168,19 +160,15 @@ public class ReadOnlyGroup extends AbstractModel {
 
     /**
      * Set 只读组标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadOnlyGroupId 只读组标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadOnlyGroupId(String ReadOnlyGroupId) {
         this.ReadOnlyGroupId = ReadOnlyGroupId;
     }
 
     /**
-     * Get 只读组名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读组名字 
      * @return ReadOnlyGroupName 只读组名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReadOnlyGroupName() {
         return this.ReadOnlyGroupName;
@@ -188,19 +176,15 @@ public class ReadOnlyGroup extends AbstractModel {
 
     /**
      * Set 只读组名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadOnlyGroupName 只读组名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadOnlyGroupName(String ReadOnlyGroupName) {
         this.ReadOnlyGroupName = ReadOnlyGroupName;
     }
 
     /**
-     * Get 项目id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目id 
      * @return ProjectId 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -208,19 +192,15 @@ public class ReadOnlyGroup extends AbstractModel {
 
     /**
      * Set 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 主实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主实例id 
      * @return MasterDBInstanceId 主实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMasterDBInstanceId() {
         return this.MasterDBInstanceId;
@@ -228,19 +208,15 @@ public class ReadOnlyGroup extends AbstractModel {
 
     /**
      * Set 主实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterDBInstanceId 主实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterDBInstanceId(String MasterDBInstanceId) {
         this.MasterDBInstanceId = MasterDBInstanceId;
     }
 
     /**
-     * Get 最小保留实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最小保留实例数 
      * @return MinDelayEliminateReserve 最小保留实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinDelayEliminateReserve() {
         return this.MinDelayEliminateReserve;
@@ -248,9 +224,7 @@ public class ReadOnlyGroup extends AbstractModel {
 
     /**
      * Set 最小保留实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinDelayEliminateReserve 最小保留实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinDelayEliminateReserve(Long MinDelayEliminateReserve) {
         this.MinDelayEliminateReserve = MinDelayEliminateReserve;
@@ -337,10 +311,8 @@ public class ReadOnlyGroup extends AbstractModel {
     }
 
     /**
-     * Get 子网id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网id 
      * @return SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -348,9 +320,7 @@ public class ReadOnlyGroup extends AbstractModel {
 
     /**
      * Set 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

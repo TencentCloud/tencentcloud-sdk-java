@@ -40,6 +40,7 @@ public class TaskStatData extends AbstractModel {
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
 <li>JITTranscoding: 即时转码</li>
+<li>VideoSnapshot: 视频截图</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -113,6 +114,10 @@ public class TaskStatData extends AbstractModel {
 <li>JITTranscoding.H264.2K: H.264编码方式2K即时转码</li>
 <li>JITTranscoding.Audio: 音频即时转码</li>
 <li>JITTranscoding.Copy: 转封装即时转码</li>
+视频截图规格：
+<li>SnapshotByTimeOffset: 时间点截图</li>
+<li>SampleSnapshot: 采样截图</li>
+<li>ImageSprite: 雪碧图</li>
     */
     @SerializedName("Details")
     @Expose
@@ -134,7 +139,8 @@ public class TaskStatData extends AbstractModel {
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
-<li>JITTranscoding: 即时转码</li> 
+<li>JITTranscoding: 即时转码</li>
+<li>VideoSnapshot: 视频截图</li> 
      * @return TaskType 任务类型。
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -151,6 +157,7 @@ public class TaskStatData extends AbstractModel {
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
 <li>JITTranscoding: 即时转码</li>
+<li>VideoSnapshot: 视频截图</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -173,6 +180,7 @@ public class TaskStatData extends AbstractModel {
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
 <li>JITTranscoding: 即时转码</li>
+<li>VideoSnapshot: 视频截图</li>
      * @param TaskType 任务类型。
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -189,6 +197,7 @@ public class TaskStatData extends AbstractModel {
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
 <li>JITTranscoding: 即时转码</li>
+<li>VideoSnapshot: 视频截图</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -270,7 +279,11 @@ public class TaskStatData extends AbstractModel {
 <li>JITTranscoding.H264.FHD: H.264编码方式全高清即时转码</li>
 <li>JITTranscoding.H264.2K: H.264编码方式2K即时转码</li>
 <li>JITTranscoding.Audio: 音频即时转码</li>
-<li>JITTranscoding.Copy: 转封装即时转码</li> 
+<li>JITTranscoding.Copy: 转封装即时转码</li>
+视频截图规格：
+<li>SnapshotByTimeOffset: 时间点截图</li>
+<li>SampleSnapshot: 采样截图</li>
+<li>ImageSprite: 雪碧图</li> 
      * @return Details 不同规格任务统计数据详情。
 转码规格：
 <li>Remuxing: 转封装</li>
@@ -331,6 +344,10 @@ public class TaskStatData extends AbstractModel {
 <li>JITTranscoding.H264.2K: H.264编码方式2K即时转码</li>
 <li>JITTranscoding.Audio: 音频即时转码</li>
 <li>JITTranscoding.Copy: 转封装即时转码</li>
+视频截图规格：
+<li>SnapshotByTimeOffset: 时间点截图</li>
+<li>SampleSnapshot: 采样截图</li>
+<li>ImageSprite: 雪碧图</li>
      */
     public SpecificationDataItem [] getDetails() {
         return this.Details;
@@ -397,6 +414,10 @@ public class TaskStatData extends AbstractModel {
 <li>JITTranscoding.H264.2K: H.264编码方式2K即时转码</li>
 <li>JITTranscoding.Audio: 音频即时转码</li>
 <li>JITTranscoding.Copy: 转封装即时转码</li>
+视频截图规格：
+<li>SnapshotByTimeOffset: 时间点截图</li>
+<li>SampleSnapshot: 采样截图</li>
+<li>ImageSprite: 雪碧图</li>
      * @param Details 不同规格任务统计数据详情。
 转码规格：
 <li>Remuxing: 转封装</li>
@@ -457,6 +478,10 @@ public class TaskStatData extends AbstractModel {
 <li>JITTranscoding.H264.2K: H.264编码方式2K即时转码</li>
 <li>JITTranscoding.Audio: 音频即时转码</li>
 <li>JITTranscoding.Copy: 转封装即时转码</li>
+视频截图规格：
+<li>SnapshotByTimeOffset: 时间点截图</li>
+<li>SampleSnapshot: 采样截图</li>
+<li>ImageSprite: 雪碧图</li>
      */
     public void setDetails(SpecificationDataItem [] Details) {
         this.Details = Details;
