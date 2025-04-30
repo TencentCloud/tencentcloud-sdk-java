@@ -225,6 +225,25 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
     private TagSpecification [] LaunchTemplateTagSpecification;
 
     /**
+    * 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private Metadata Metadata;
+
+    /**
+    * 只允许传递 Update 和 Replace 参数，在模板使用自定义 Metadata 且在 RunInstances 也传递 Metadata 时生效。默认采用 Replace。
+
+- Update：设模板 t含本参数值为Update、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k1:v1, k2:v3] 
+- Replace：模板 t含本参数值为Replace、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k2:v3] 
+**注：内测中**。
+    */
+    @SerializedName("TemplateDataModifyAction")
+    @Expose
+    private String TemplateDataModifyAction;
+
+    /**
      * Get 实例启动模板名称。长度为2~128个英文或中文字符。 
      * @return LaunchTemplateName 实例启动模板名称。长度为2~128个英文或中文字符。
      */
@@ -692,6 +711,58 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
         this.LaunchTemplateTagSpecification = LaunchTemplateTagSpecification;
     }
 
+    /**
+     * Get 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。 
+     * @return Metadata 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。
+     */
+    public Metadata getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。
+     * @param Metadata 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。
+     */
+    public void setMetadata(Metadata Metadata) {
+        this.Metadata = Metadata;
+    }
+
+    /**
+     * Get 只允许传递 Update 和 Replace 参数，在模板使用自定义 Metadata 且在 RunInstances 也传递 Metadata 时生效。默认采用 Replace。
+
+- Update：设模板 t含本参数值为Update、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k1:v1, k2:v3] 
+- Replace：模板 t含本参数值为Replace、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k2:v3] 
+**注：内测中**。 
+     * @return TemplateDataModifyAction 只允许传递 Update 和 Replace 参数，在模板使用自定义 Metadata 且在 RunInstances 也传递 Metadata 时生效。默认采用 Replace。
+
+- Update：设模板 t含本参数值为Update、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k1:v1, k2:v3] 
+- Replace：模板 t含本参数值为Replace、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k2:v3] 
+**注：内测中**。
+     */
+    public String getTemplateDataModifyAction() {
+        return this.TemplateDataModifyAction;
+    }
+
+    /**
+     * Set 只允许传递 Update 和 Replace 参数，在模板使用自定义 Metadata 且在 RunInstances 也传递 Metadata 时生效。默认采用 Replace。
+
+- Update：设模板 t含本参数值为Update、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k1:v1, k2:v3] 
+- Replace：模板 t含本参数值为Replace、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k2:v3] 
+**注：内测中**。
+     * @param TemplateDataModifyAction 只允许传递 Update 和 Replace 参数，在模板使用自定义 Metadata 且在 RunInstances 也传递 Metadata 时生效。默认采用 Replace。
+
+- Update：设模板 t含本参数值为Update、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k1:v1, k2:v3] 
+- Replace：模板 t含本参数值为Replace、 metadata=[k1:v1, k2:v2] ，则RunInstances（给metadata=[k2:v3]）+ t 创建的 cvm 使用metadata=[k2:v3] 
+**注：内测中**。
+     */
+    public void setTemplateDataModifyAction(String TemplateDataModifyAction) {
+        this.TemplateDataModifyAction = TemplateDataModifyAction;
+    }
+
     public CreateLaunchTemplateRequest() {
     }
 
@@ -799,6 +870,12 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
                 this.LaunchTemplateTagSpecification[i] = new TagSpecification(source.LaunchTemplateTagSpecification[i]);
             }
         }
+        if (source.Metadata != null) {
+            this.Metadata = new Metadata(source.Metadata);
+        }
+        if (source.TemplateDataModifyAction != null) {
+            this.TemplateDataModifyAction = new String(source.TemplateDataModifyAction);
+        }
     }
 
 
@@ -834,6 +911,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         this.setParamArrayObj(map, prefix + "LaunchTemplateTagSpecification.", this.LaunchTemplateTagSpecification);
+        this.setParamObj(map, prefix + "Metadata.", this.Metadata);
+        this.setParamSimple(map, prefix + "TemplateDataModifyAction", this.TemplateDataModifyAction);
 
     }
 }

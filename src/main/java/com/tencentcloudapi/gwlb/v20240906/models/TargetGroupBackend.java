@@ -88,7 +88,6 @@ public class TargetGroupBackend extends AbstractModel {
 
     /**
     * 弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EniId")
     @Expose
@@ -96,7 +95,6 @@ public class TargetGroupBackend extends AbstractModel {
 
     /**
     * 后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -247,10 +245,8 @@ public class TargetGroupBackend extends AbstractModel {
     }
 
     /**
-     * Get 弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性网卡唯一ID 
      * @return EniId 弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEniId() {
         return this.EniId;
@@ -258,19 +254,15 @@ public class TargetGroupBackend extends AbstractModel {
 
     /**
      * Set 弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EniId 弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEniId(String EniId) {
         this.EniId = EniId;
     }
 
     /**
-     * Get 后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端服务的可用区ID 
      * @return ZoneId 后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -278,9 +270,7 @@ public class TargetGroupBackend extends AbstractModel {
 
     /**
      * Set 后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;

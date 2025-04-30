@@ -423,6 +423,13 @@ public class NodeHardwareInfo extends AbstractModel {
     private String TkeClusterId;
 
     /**
+    * 新挂磁盘时可支持配置的服务名称列表
+    */
+    @SerializedName("ConfigurableServices")
+    @Expose
+    private String [] ConfigurableServices;
+
+    /**
      * Get 用户APPID 
      * @return AppId 用户APPID
      */
@@ -1346,6 +1353,22 @@ public class NodeHardwareInfo extends AbstractModel {
         this.TkeClusterId = TkeClusterId;
     }
 
+    /**
+     * Get 新挂磁盘时可支持配置的服务名称列表 
+     * @return ConfigurableServices 新挂磁盘时可支持配置的服务名称列表
+     */
+    public String [] getConfigurableServices() {
+        return this.ConfigurableServices;
+    }
+
+    /**
+     * Set 新挂磁盘时可支持配置的服务名称列表
+     * @param ConfigurableServices 新挂磁盘时可支持配置的服务名称列表
+     */
+    public void setConfigurableServices(String [] ConfigurableServices) {
+        this.ConfigurableServices = ConfigurableServices;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1528,6 +1551,12 @@ public class NodeHardwareInfo extends AbstractModel {
         if (source.TkeClusterId != null) {
             this.TkeClusterId = new String(source.TkeClusterId);
         }
+        if (source.ConfigurableServices != null) {
+            this.ConfigurableServices = new String[source.ConfigurableServices.length];
+            for (int i = 0; i < source.ConfigurableServices.length; i++) {
+                this.ConfigurableServices[i] = new String(source.ConfigurableServices[i]);
+            }
+        }
     }
 
 
@@ -1591,6 +1620,7 @@ public class NodeHardwareInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SharedClusterIdDesc", this.SharedClusterIdDesc);
         this.setParamSimple(map, prefix + "TimingResource", this.TimingResource);
         this.setParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
+        this.setParamArraySimple(map, prefix + "ConfigurableServices.", this.ConfigurableServices);
 
     }
 }

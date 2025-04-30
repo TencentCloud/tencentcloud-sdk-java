@@ -77,7 +77,7 @@ public class HealthCheck extends AbstractModel {
     private String HttpCheckPath;
 
     /**
-    * 健康检查域名（仅适用于HTTP/HTTPS监听器和TCP监听器的HTTP健康检查方式。针对TCP监听器，当使用HTTP健康检查方式时，该参数为必填项）。
+    * 健康检查域名，将在HTTP协议 Host 头字段中携带。（仅适用于HTTP/HTTPS监听器和TCP监听器的HTTP健康检查方式。针对TCP监听器，当使用HTTP健康检查方式时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpCheckDomain")
@@ -283,9 +283,9 @@ public class HealthCheck extends AbstractModel {
     }
 
     /**
-     * Get 健康检查域名（仅适用于HTTP/HTTPS监听器和TCP监听器的HTTP健康检查方式。针对TCP监听器，当使用HTTP健康检查方式时，该参数为必填项）。
+     * Get 健康检查域名，将在HTTP协议 Host 头字段中携带。（仅适用于HTTP/HTTPS监听器和TCP监听器的HTTP健康检查方式。针对TCP监听器，当使用HTTP健康检查方式时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS监听器和TCP监听器的HTTP健康检查方式。针对TCP监听器，当使用HTTP健康检查方式时，该参数为必填项）。
+     * @return HttpCheckDomain 健康检查域名，将在HTTP协议 Host 头字段中携带。（仅适用于HTTP/HTTPS监听器和TCP监听器的HTTP健康检查方式。针对TCP监听器，当使用HTTP健康检查方式时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpCheckDomain() {
@@ -293,9 +293,9 @@ public class HealthCheck extends AbstractModel {
     }
 
     /**
-     * Set 健康检查域名（仅适用于HTTP/HTTPS监听器和TCP监听器的HTTP健康检查方式。针对TCP监听器，当使用HTTP健康检查方式时，该参数为必填项）。
+     * Set 健康检查域名，将在HTTP协议 Host 头字段中携带。（仅适用于HTTP/HTTPS监听器和TCP监听器的HTTP健康检查方式。针对TCP监听器，当使用HTTP健康检查方式时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS监听器和TCP监听器的HTTP健康检查方式。针对TCP监听器，当使用HTTP健康检查方式时，该参数为必填项）。
+     * @param HttpCheckDomain 健康检查域名，将在HTTP协议 Host 头字段中携带。（仅适用于HTTP/HTTPS监听器和TCP监听器的HTTP健康检查方式。针对TCP监听器，当使用HTTP健康检查方式时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {

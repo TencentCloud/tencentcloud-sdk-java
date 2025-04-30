@@ -175,6 +175,14 @@ public class RunInstancesRequest extends AbstractModel {
     private String UserData;
 
     /**
+    * 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private Metadata Metadata;
+
+    /**
     * 是否只预检此次请求。
 true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
 如果检查不通过，则返回对应错误码；
@@ -587,6 +595,26 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
+     * Get 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。 
+     * @return Metadata 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。
+     */
+    public Metadata getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。
+     * @param Metadata 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。
+     */
+    public void setMetadata(Metadata Metadata) {
+        this.Metadata = Metadata;
+    }
+
+    /**
      * Get 是否只预检此次请求。
 true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
 如果检查不通过，则返回对应错误码；
@@ -813,6 +841,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
+        if (source.Metadata != null) {
+            this.Metadata = new Metadata(source.Metadata);
+        }
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
@@ -868,6 +899,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);

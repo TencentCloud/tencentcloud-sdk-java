@@ -153,6 +153,15 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
     private InstanceMarketOptionsRequest InstanceMarketOptions;
 
     /**
+    * 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+
+**注：内测中**。
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private Metadata Metadata;
+
+    /**
     * 高性能计算集群ID。
     */
     @SerializedName("HpcClusterId")
@@ -474,6 +483,30 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
     }
 
     /**
+     * Get 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+
+**注：内测中**。 
+     * @return Metadata 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+
+**注：内测中**。
+     */
+    public Metadata getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+
+**注：内测中**。
+     * @param Metadata 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+
+**注：内测中**。
+     */
+    public void setMetadata(Metadata Metadata) {
+        this.Metadata = Metadata;
+    }
+
+    /**
      * Get 高性能计算集群ID。 
      * @return HpcClusterId 高性能计算集群ID。
      */
@@ -592,6 +625,9 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
         if (source.InstanceMarketOptions != null) {
             this.InstanceMarketOptions = new InstanceMarketOptionsRequest(source.InstanceMarketOptions);
         }
+        if (source.Metadata != null) {
+            this.Metadata = new Metadata(source.Metadata);
+        }
         if (source.HpcClusterId != null) {
             this.HpcClusterId = new String(source.HpcClusterId);
         }
@@ -626,6 +662,7 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
+        this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
         this.setParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
