@@ -123,7 +123,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String SearchKey;
 
     /**
-    * 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取，不传默认所有项目。
+    * 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)接口获取，不传默认所有项目。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -137,7 +137,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Long WithRs;
 
     /**
-    * 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+    * 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，可以通过[DescribeVpcs](https://cloud.tencent.com/document/api/215/15778)接口获取。
 查找基础网络类型的负载均衡可传入'0'。
     */
     @SerializedName("VpcId")
@@ -145,7 +145,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String VpcId;
 
     /**
-    * 安全组ID，如 sg-m1cc****。
+    * 安全组ID，如 sg-m1cc****，可以通过接口[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)获取。
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -179,10 +179,12 @@ OPEN：公网属性， INTERNAL：内网属性。
 按照【CLB 标签的键】进行过滤，例如：tag-key。
 类型：String
 必选：否
+获取方式：[DescribeTags](https://cloud.tencent.com/document/api/651/35316)
 - tag:tag-key
 按照【CLB标签键值】进行过滤，例如：tag-test。
 类型：String
 必选：否
+获取方式：[DescribeTagKeys](https://cloud.tencent.com/document/api/651/35318)
 - function-name
 按照【后端绑定SCF云函数的函数名称】进行过滤，例如：helloworld-1744958255。
 类型：String
@@ -459,16 +461,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取，不传默认所有项目。 
-     * @return ProjectId 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取，不传默认所有项目。
+     * Get 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)接口获取，不传默认所有项目。 
+     * @return ProjectId 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)接口获取，不传默认所有项目。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取，不传默认所有项目。
-     * @param ProjectId 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取，不传默认所有项目。
+     * Set 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)接口获取，不传默认所有项目。
+     * @param ProjectId 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)接口获取，不传默认所有项目。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -491,9 +493,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+     * Get 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，可以通过[DescribeVpcs](https://cloud.tencent.com/document/api/215/15778)接口获取。
 查找基础网络类型的负载均衡可传入'0'。 
-     * @return VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+     * @return VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，可以通过[DescribeVpcs](https://cloud.tencent.com/document/api/215/15778)接口获取。
 查找基础网络类型的负载均衡可传入'0'。
      */
     public String getVpcId() {
@@ -501,9 +503,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Set 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+     * Set 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，可以通过[DescribeVpcs](https://cloud.tencent.com/document/api/215/15778)接口获取。
 查找基础网络类型的负载均衡可传入'0'。
-     * @param VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+     * @param VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，可以通过[DescribeVpcs](https://cloud.tencent.com/document/api/215/15778)接口获取。
 查找基础网络类型的负载均衡可传入'0'。
      */
     public void setVpcId(String VpcId) {
@@ -511,16 +513,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 安全组ID，如 sg-m1cc****。 
-     * @return SecurityGroup 安全组ID，如 sg-m1cc****。
+     * Get 安全组ID，如 sg-m1cc****，可以通过接口[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)获取。 
+     * @return SecurityGroup 安全组ID，如 sg-m1cc****，可以通过接口[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)获取。
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set 安全组ID，如 sg-m1cc****。
-     * @param SecurityGroup 安全组ID，如 sg-m1cc****。
+     * Set 安全组ID，如 sg-m1cc****，可以通过接口[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)获取。
+     * @param SecurityGroup 安全组ID，如 sg-m1cc****，可以通过接口[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)获取。
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
@@ -563,10 +565,12 @@ OPEN：公网属性， INTERNAL：内网属性。
 按照【CLB 标签的键】进行过滤，例如：tag-key。
 类型：String
 必选：否
+获取方式：[DescribeTags](https://cloud.tencent.com/document/api/651/35316)
 - tag:tag-key
 按照【CLB标签键值】进行过滤，例如：tag-test。
 类型：String
 必选：否
+获取方式：[DescribeTagKeys](https://cloud.tencent.com/document/api/651/35318)
 - function-name
 按照【后端绑定SCF云函数的函数名称】进行过滤，例如：helloworld-1744958255。
 类型：String
@@ -609,10 +613,12 @@ OPEN：公网属性， INTERNAL：内网属性。
 按照【CLB 标签的键】进行过滤，例如：tag-key。
 类型：String
 必选：否
+获取方式：[DescribeTags](https://cloud.tencent.com/document/api/651/35316)
 - tag:tag-key
 按照【CLB标签键值】进行过滤，例如：tag-test。
 类型：String
 必选：否
+获取方式：[DescribeTagKeys](https://cloud.tencent.com/document/api/651/35318)
 - function-name
 按照【后端绑定SCF云函数的函数名称】进行过滤，例如：helloworld-1744958255。
 类型：String
@@ -661,10 +667,12 @@ OPEN：公网属性， INTERNAL：内网属性。
 按照【CLB 标签的键】进行过滤，例如：tag-key。
 类型：String
 必选：否
+获取方式：[DescribeTags](https://cloud.tencent.com/document/api/651/35316)
 - tag:tag-key
 按照【CLB标签键值】进行过滤，例如：tag-test。
 类型：String
 必选：否
+获取方式：[DescribeTagKeys](https://cloud.tencent.com/document/api/651/35318)
 - function-name
 按照【后端绑定SCF云函数的函数名称】进行过滤，例如：helloworld-1744958255。
 类型：String
@@ -707,10 +715,12 @@ OPEN：公网属性， INTERNAL：内网属性。
 按照【CLB 标签的键】进行过滤，例如：tag-key。
 类型：String
 必选：否
+获取方式：[DescribeTags](https://cloud.tencent.com/document/api/651/35316)
 - tag:tag-key
 按照【CLB标签键值】进行过滤，例如：tag-test。
 类型：String
 必选：否
+获取方式：[DescribeTagKeys](https://cloud.tencent.com/document/api/651/35318)
 - function-name
 按照【后端绑定SCF云函数的函数名称】进行过滤，例如：helloworld-1744958255。
 类型：String

@@ -439,6 +439,20 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *重启安卓实例宿主机。请注意：
+
+- 当前每 15 分钟只能重启一次
+- 一个宿主机可能有多个云手机实例，重启宿主机会影响运行在上面的所有实例，请确保该宿主机上的所有云手机实例未投入业务使用
+     * @param req RebootAndroidInstanceHostsRequest
+     * @return RebootAndroidInstanceHostsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RebootAndroidInstanceHostsResponse RebootAndroidInstanceHosts(RebootAndroidInstanceHostsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RebootAndroidInstanceHosts", RebootAndroidInstanceHostsResponse.class);
+    }
+
+    /**
      *重启安卓实例
      * @param req RebootAndroidInstancesRequest
      * @return RebootAndroidInstancesResponse

@@ -677,6 +677,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *获取安全组路由信息列表
+     * @param req DescribeSecurityGroupRoutesRequest
+     * @return DescribeSecurityGroupRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityGroupRoutesResponse DescribeSecurityGroupRoutes(DescribeSecurityGroupRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityGroupRoutes", DescribeSecurityGroupRoutesResponse.class);
+    }
+
+    /**
      *查询任务状态
      * @param req DescribeTaskStatusRequest
      * @return DescribeTaskStatusResponse

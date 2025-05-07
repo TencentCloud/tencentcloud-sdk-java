@@ -176,7 +176,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     private String AddressIPVersion;
 
     /**
-    * 数值形式的私有网络 ID。
+    * 数值形式的私有网络 ID，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
     */
     @SerializedName("NumericalVpcId")
     @Expose
@@ -836,16 +836,16 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 数值形式的私有网络 ID。 
-     * @return NumericalVpcId 数值形式的私有网络 ID。
+     * Get 数值形式的私有网络 ID，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。 
+     * @return NumericalVpcId 数值形式的私有网络 ID，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      */
     public Long getNumericalVpcId() {
         return this.NumericalVpcId;
     }
 
     /**
-     * Set 数值形式的私有网络 ID。
-     * @param NumericalVpcId 数值形式的私有网络 ID。
+     * Set 数值形式的私有网络 ID，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+     * @param NumericalVpcId 数值形式的私有网络 ID，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      */
     public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;

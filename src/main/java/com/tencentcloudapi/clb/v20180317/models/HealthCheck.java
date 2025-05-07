@@ -25,6 +25,7 @@ public class HealthCheck extends AbstractModel {
 
     /**
     * 是否开启健康检查：1（开启）、0（关闭）。
+默认为开启。
     */
     @SerializedName("HealthSwitch")
     @Expose
@@ -155,8 +156,10 @@ public class HealthCheck extends AbstractModel {
     private String ExtendedCode;
 
     /**
-     * Get 是否开启健康检查：1（开启）、0（关闭）。 
+     * Get 是否开启健康检查：1（开启）、0（关闭）。
+默认为开启。 
      * @return HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
+默认为开启。
      */
     public Long getHealthSwitch() {
         return this.HealthSwitch;
@@ -164,7 +167,9 @@ public class HealthCheck extends AbstractModel {
 
     /**
      * Set 是否开启健康检查：1（开启）、0（关闭）。
+默认为开启。
      * @param HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
+默认为开启。
      */
     public void setHealthSwitch(Long HealthSwitch) {
         this.HealthSwitch = HealthSwitch;

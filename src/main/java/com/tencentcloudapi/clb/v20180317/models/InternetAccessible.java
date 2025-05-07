@@ -41,7 +41,14 @@ public class InternetAccessible extends AbstractModel {
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 带宽包的类型，如SINGLEISP（单线）、BGP（多线）。
+    * 带宽包的类型，如 BGP（多线）。
+类型如下：
+SINGLEISP: 单线
+BGP: 多线
+HIGH_QUALITY_BGP: 精品BGP共享带宽包
+SINGLEISP_CMCC: 中国移动共享带宽包
+SINGLEISP_CTCC: 中国电信共享带宽包
+SINGLEISP_CUCC: 中国联通共享带宽包
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BandwidthpkgSubType")
@@ -93,9 +100,23 @@ public class InternetAccessible extends AbstractModel {
     }
 
     /**
-     * Get 带宽包的类型，如SINGLEISP（单线）、BGP（多线）。
+     * Get 带宽包的类型，如 BGP（多线）。
+类型如下：
+SINGLEISP: 单线
+BGP: 多线
+HIGH_QUALITY_BGP: 精品BGP共享带宽包
+SINGLEISP_CMCC: 中国移动共享带宽包
+SINGLEISP_CTCC: 中国电信共享带宽包
+SINGLEISP_CUCC: 中国联通共享带宽包
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BandwidthpkgSubType 带宽包的类型，如SINGLEISP（单线）、BGP（多线）。
+     * @return BandwidthpkgSubType 带宽包的类型，如 BGP（多线）。
+类型如下：
+SINGLEISP: 单线
+BGP: 多线
+HIGH_QUALITY_BGP: 精品BGP共享带宽包
+SINGLEISP_CMCC: 中国移动共享带宽包
+SINGLEISP_CTCC: 中国电信共享带宽包
+SINGLEISP_CUCC: 中国联通共享带宽包
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBandwidthpkgSubType() {
@@ -103,9 +124,23 @@ public class InternetAccessible extends AbstractModel {
     }
 
     /**
-     * Set 带宽包的类型，如SINGLEISP（单线）、BGP（多线）。
+     * Set 带宽包的类型，如 BGP（多线）。
+类型如下：
+SINGLEISP: 单线
+BGP: 多线
+HIGH_QUALITY_BGP: 精品BGP共享带宽包
+SINGLEISP_CMCC: 中国移动共享带宽包
+SINGLEISP_CTCC: 中国电信共享带宽包
+SINGLEISP_CUCC: 中国联通共享带宽包
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BandwidthpkgSubType 带宽包的类型，如SINGLEISP（单线）、BGP（多线）。
+     * @param BandwidthpkgSubType 带宽包的类型，如 BGP（多线）。
+类型如下：
+SINGLEISP: 单线
+BGP: 多线
+HIGH_QUALITY_BGP: 精品BGP共享带宽包
+SINGLEISP_CMCC: 中国移动共享带宽包
+SINGLEISP_CTCC: 中国电信共享带宽包
+SINGLEISP_CUCC: 中国联通共享带宽包
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidthpkgSubType(String BandwidthpkgSubType) {
