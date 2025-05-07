@@ -206,6 +206,20 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel {
     private String WriteMode;
 
     /**
+    * 任务类型 201（实时）， 202（离线） 
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
+
+    /**
+    * 目标端table名称
+    */
+    @SerializedName("SinkTableName")
+    @Expose
+    private String SinkTableName;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -621,6 +635,38 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel {
         this.WriteMode = WriteMode;
     }
 
+    /**
+     * Get 任务类型 201（实时）， 202（离线）  
+     * @return TaskType 任务类型 201（实时）， 202（离线） 
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 任务类型 201（实时）， 202（离线） 
+     * @param TaskType 任务类型 201（实时）， 202（离线） 
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
+    }
+
+    /**
+     * Get 目标端table名称 
+     * @return SinkTableName 目标端table名称
+     */
+    public String getSinkTableName() {
+        return this.SinkTableName;
+    }
+
+    /**
+     * Set 目标端table名称
+     * @param SinkTableName 目标端table名称
+     */
+    public void setSinkTableName(String SinkTableName) {
+        this.SinkTableName = SinkTableName;
+    }
+
     public GenHiveTableDDLSqlRequest() {
     }
 
@@ -719,6 +765,12 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel {
         if (source.WriteMode != null) {
             this.WriteMode = new String(source.WriteMode);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
+        if (source.SinkTableName != null) {
+            this.SinkTableName = new String(source.SinkTableName);
+        }
     }
 
 
@@ -752,6 +804,8 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SinkSchemaName", this.SinkSchemaName);
         this.setParamSimple(map, prefix + "Env", this.Env);
         this.setParamSimple(map, prefix + "WriteMode", this.WriteMode);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "SinkTableName", this.SinkTableName);
 
     }
 }

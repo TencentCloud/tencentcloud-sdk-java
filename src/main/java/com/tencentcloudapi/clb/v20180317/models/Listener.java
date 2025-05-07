@@ -31,14 +31,14 @@ public class Listener extends AbstractModel {
     private String ListenerId;
 
     /**
-    * 监听器协议
+    * 监听器协议，可选值：TCP、UDP、HTTP、HTTPS、TCP_SSL、QUIC
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 监听器端口
+    * 监听器端口，端口范围：1-65535
     */
     @SerializedName("Port")
     @Expose
@@ -69,7 +69,7 @@ public class Listener extends AbstractModel {
     private String Scheduler;
 
     /**
-    * 会话保持时间
+    * 会话保持时间，单位：秒。可选值：30~3600，默认 0，默认不开启。此参数仅适用于TCP/UDP监听器。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionExpireTime")
@@ -106,14 +106,14 @@ public class Listener extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 端口段结束端口
+    * 端口段结束端口，端口范围：2-65535
     */
     @SerializedName("EndPort")
     @Expose
     private Long EndPort;
 
     /**
-    * 后端服务器类型
+    * 后端服务器类型，可选值：NODE、POLARIS、TARGETGROUP、TARGETGROUP-V2
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetType")
@@ -225,32 +225,32 @@ public class Listener extends AbstractModel {
     }
 
     /**
-     * Get 监听器协议 
-     * @return Protocol 监听器协议
+     * Get 监听器协议，可选值：TCP、UDP、HTTP、HTTPS、TCP_SSL、QUIC 
+     * @return Protocol 监听器协议，可选值：TCP、UDP、HTTP、HTTPS、TCP_SSL、QUIC
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 监听器协议
-     * @param Protocol 监听器协议
+     * Set 监听器协议，可选值：TCP、UDP、HTTP、HTTPS、TCP_SSL、QUIC
+     * @param Protocol 监听器协议，可选值：TCP、UDP、HTTP、HTTPS、TCP_SSL、QUIC
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 监听器端口 
-     * @return Port 监听器端口
+     * Get 监听器端口，端口范围：1-65535 
+     * @return Port 监听器端口，端口范围：1-65535
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 监听器端口
-     * @param Port 监听器端口
+     * Set 监听器端口，端口范围：1-65535
+     * @param Port 监听器端口，端口范围：1-65535
      */
     public void setPort(Long Port) {
         this.Port = Port;
@@ -317,9 +317,9 @@ public class Listener extends AbstractModel {
     }
 
     /**
-     * Get 会话保持时间
+     * Get 会话保持时间，单位：秒。可选值：30~3600，默认 0，默认不开启。此参数仅适用于TCP/UDP监听器。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SessionExpireTime 会话保持时间
+     * @return SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，默认不开启。此参数仅适用于TCP/UDP监听器。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSessionExpireTime() {
@@ -327,9 +327,9 @@ public class Listener extends AbstractModel {
     }
 
     /**
-     * Set 会话保持时间
+     * Set 会话保持时间，单位：秒。可选值：30~3600，默认 0，默认不开启。此参数仅适用于TCP/UDP监听器。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SessionExpireTime 会话保持时间
+     * @param SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，默认不开启。此参数仅适用于TCP/UDP监听器。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
@@ -405,25 +405,25 @@ public class Listener extends AbstractModel {
     }
 
     /**
-     * Get 端口段结束端口 
-     * @return EndPort 端口段结束端口
+     * Get 端口段结束端口，端口范围：2-65535 
+     * @return EndPort 端口段结束端口，端口范围：2-65535
      */
     public Long getEndPort() {
         return this.EndPort;
     }
 
     /**
-     * Set 端口段结束端口
-     * @param EndPort 端口段结束端口
+     * Set 端口段结束端口，端口范围：2-65535
+     * @param EndPort 端口段结束端口，端口范围：2-65535
      */
     public void setEndPort(Long EndPort) {
         this.EndPort = EndPort;
     }
 
     /**
-     * Get 后端服务器类型
+     * Get 后端服务器类型，可选值：NODE、POLARIS、TARGETGROUP、TARGETGROUP-V2
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetType 后端服务器类型
+     * @return TargetType 后端服务器类型，可选值：NODE、POLARIS、TARGETGROUP、TARGETGROUP-V2
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetType() {
@@ -431,9 +431,9 @@ public class Listener extends AbstractModel {
     }
 
     /**
-     * Set 后端服务器类型
+     * Set 后端服务器类型，可选值：NODE、POLARIS、TARGETGROUP、TARGETGROUP-V2
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetType 后端服务器类型
+     * @param TargetType 后端服务器类型，可选值：NODE、POLARIS、TARGETGROUP、TARGETGROUP-V2
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetType(String TargetType) {

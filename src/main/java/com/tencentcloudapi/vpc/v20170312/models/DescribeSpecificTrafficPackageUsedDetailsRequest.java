@@ -24,14 +24,17 @@ import java.util.HashMap;
 public class DescribeSpecificTrafficPackageUsedDetailsRequest extends AbstractModel {
 
     /**
-    * 共享流量包唯一ID
+    * 共享流量包唯一ID。可以使用[DescribeTrafficPackages](https://cloud.tencent.com/document/product/215/80090?locationSource=from%3Ddoc-search%26scope%3Dcurrent%26keyword%3D%E6%B5%81%E9%87%8F%E5%8C%85)接口获取TrafficPackageId。
     */
     @SerializedName("TrafficPackageId")
     @Expose
     private String TrafficPackageId;
 
     /**
-    * 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。详细的过滤条件如下：<li> resource-id - String - 是否必填：否 - （过滤条件）按照抵扣流量资源的唯一 ID 过滤。</li><li> resource-type - String - 是否必填：否 - （过滤条件）按照资源类型过滤，资源类型包括 CVM 和 EIP </li>
+    * 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。详细的过滤条件如下：<ul style="margin:0"><li> resource-type - String - 是否必填：否 - （过滤条件）按照资源类型过滤，资源类型包括 EIP、BWP、LB。 </li>
+<li> resource-id - String - 是否必填：否 - （过滤条件）按照抵扣流量资源的唯一 ID 过滤。以下补充资源ID获取方式：<ul><li>EIP：可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取资源ID。</li>
+<li>BWP：可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口获取资源ID。</li>
+<li>LB：可以使用[DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685)接口获取资源ID。</li></ul></li></ul>
     */
     @SerializedName("Filters")
     @Expose
@@ -52,14 +55,16 @@ public class DescribeSpecificTrafficPackageUsedDetailsRequest extends AbstractMo
     private Long OrderType;
 
     /**
-    * 开始时间。不传默认为当前时间往前推30天
+    * 开始时间。待查询的共享流量包用量开始时间。不传默认为当前时间往前推30天。
+时间格式：YYYY-MM-DD hh:mm:ss
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间。不传默认为当前时间
+    * 结束时间。待查询的共享流量包用量结束时间。不传默认为当前时间。
+时间格式：YYYY-MM-DD hh:mm:ss
     */
     @SerializedName("EndTime")
     @Expose
@@ -80,32 +85,44 @@ public class DescribeSpecificTrafficPackageUsedDetailsRequest extends AbstractMo
     private Long Limit;
 
     /**
-     * Get 共享流量包唯一ID 
-     * @return TrafficPackageId 共享流量包唯一ID
+     * Get 共享流量包唯一ID。可以使用[DescribeTrafficPackages](https://cloud.tencent.com/document/product/215/80090?locationSource=from%3Ddoc-search%26scope%3Dcurrent%26keyword%3D%E6%B5%81%E9%87%8F%E5%8C%85)接口获取TrafficPackageId。 
+     * @return TrafficPackageId 共享流量包唯一ID。可以使用[DescribeTrafficPackages](https://cloud.tencent.com/document/product/215/80090?locationSource=from%3Ddoc-search%26scope%3Dcurrent%26keyword%3D%E6%B5%81%E9%87%8F%E5%8C%85)接口获取TrafficPackageId。
      */
     public String getTrafficPackageId() {
         return this.TrafficPackageId;
     }
 
     /**
-     * Set 共享流量包唯一ID
-     * @param TrafficPackageId 共享流量包唯一ID
+     * Set 共享流量包唯一ID。可以使用[DescribeTrafficPackages](https://cloud.tencent.com/document/product/215/80090?locationSource=from%3Ddoc-search%26scope%3Dcurrent%26keyword%3D%E6%B5%81%E9%87%8F%E5%8C%85)接口获取TrafficPackageId。
+     * @param TrafficPackageId 共享流量包唯一ID。可以使用[DescribeTrafficPackages](https://cloud.tencent.com/document/product/215/80090?locationSource=from%3Ddoc-search%26scope%3Dcurrent%26keyword%3D%E6%B5%81%E9%87%8F%E5%8C%85)接口获取TrafficPackageId。
      */
     public void setTrafficPackageId(String TrafficPackageId) {
         this.TrafficPackageId = TrafficPackageId;
     }
 
     /**
-     * Get 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。详细的过滤条件如下：<li> resource-id - String - 是否必填：否 - （过滤条件）按照抵扣流量资源的唯一 ID 过滤。</li><li> resource-type - String - 是否必填：否 - （过滤条件）按照资源类型过滤，资源类型包括 CVM 和 EIP </li> 
-     * @return Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。详细的过滤条件如下：<li> resource-id - String - 是否必填：否 - （过滤条件）按照抵扣流量资源的唯一 ID 过滤。</li><li> resource-type - String - 是否必填：否 - （过滤条件）按照资源类型过滤，资源类型包括 CVM 和 EIP </li>
+     * Get 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。详细的过滤条件如下：<ul style="margin:0"><li> resource-type - String - 是否必填：否 - （过滤条件）按照资源类型过滤，资源类型包括 EIP、BWP、LB。 </li>
+<li> resource-id - String - 是否必填：否 - （过滤条件）按照抵扣流量资源的唯一 ID 过滤。以下补充资源ID获取方式：<ul><li>EIP：可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取资源ID。</li>
+<li>BWP：可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口获取资源ID。</li>
+<li>LB：可以使用[DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685)接口获取资源ID。</li></ul></li></ul> 
+     * @return Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。详细的过滤条件如下：<ul style="margin:0"><li> resource-type - String - 是否必填：否 - （过滤条件）按照资源类型过滤，资源类型包括 EIP、BWP、LB。 </li>
+<li> resource-id - String - 是否必填：否 - （过滤条件）按照抵扣流量资源的唯一 ID 过滤。以下补充资源ID获取方式：<ul><li>EIP：可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取资源ID。</li>
+<li>BWP：可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口获取资源ID。</li>
+<li>LB：可以使用[DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685)接口获取资源ID。</li></ul></li></ul>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。详细的过滤条件如下：<li> resource-id - String - 是否必填：否 - （过滤条件）按照抵扣流量资源的唯一 ID 过滤。</li><li> resource-type - String - 是否必填：否 - （过滤条件）按照资源类型过滤，资源类型包括 CVM 和 EIP </li>
-     * @param Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。详细的过滤条件如下：<li> resource-id - String - 是否必填：否 - （过滤条件）按照抵扣流量资源的唯一 ID 过滤。</li><li> resource-type - String - 是否必填：否 - （过滤条件）按照资源类型过滤，资源类型包括 CVM 和 EIP </li>
+     * Set 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。详细的过滤条件如下：<ul style="margin:0"><li> resource-type - String - 是否必填：否 - （过滤条件）按照资源类型过滤，资源类型包括 EIP、BWP、LB。 </li>
+<li> resource-id - String - 是否必填：否 - （过滤条件）按照抵扣流量资源的唯一 ID 过滤。以下补充资源ID获取方式：<ul><li>EIP：可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取资源ID。</li>
+<li>BWP：可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口获取资源ID。</li>
+<li>LB：可以使用[DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685)接口获取资源ID。</li></ul></li></ul>
+     * @param Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。详细的过滤条件如下：<ul style="margin:0"><li> resource-type - String - 是否必填：否 - （过滤条件）按照资源类型过滤，资源类型包括 EIP、BWP、LB。 </li>
+<li> resource-id - String - 是否必填：否 - （过滤条件）按照抵扣流量资源的唯一 ID 过滤。以下补充资源ID获取方式：<ul><li>EIP：可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取资源ID。</li>
+<li>BWP：可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口获取资源ID。</li>
+<li>LB：可以使用[DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685)接口获取资源ID。</li></ul></li></ul>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -144,32 +161,40 @@ public class DescribeSpecificTrafficPackageUsedDetailsRequest extends AbstractMo
     }
 
     /**
-     * Get 开始时间。不传默认为当前时间往前推30天 
-     * @return StartTime 开始时间。不传默认为当前时间往前推30天
+     * Get 开始时间。待查询的共享流量包用量开始时间。不传默认为当前时间往前推30天。
+时间格式：YYYY-MM-DD hh:mm:ss 
+     * @return StartTime 开始时间。待查询的共享流量包用量开始时间。不传默认为当前时间往前推30天。
+时间格式：YYYY-MM-DD hh:mm:ss
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间。不传默认为当前时间往前推30天
-     * @param StartTime 开始时间。不传默认为当前时间往前推30天
+     * Set 开始时间。待查询的共享流量包用量开始时间。不传默认为当前时间往前推30天。
+时间格式：YYYY-MM-DD hh:mm:ss
+     * @param StartTime 开始时间。待查询的共享流量包用量开始时间。不传默认为当前时间往前推30天。
+时间格式：YYYY-MM-DD hh:mm:ss
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间。不传默认为当前时间 
-     * @return EndTime 结束时间。不传默认为当前时间
+     * Get 结束时间。待查询的共享流量包用量结束时间。不传默认为当前时间。
+时间格式：YYYY-MM-DD hh:mm:ss 
+     * @return EndTime 结束时间。待查询的共享流量包用量结束时间。不传默认为当前时间。
+时间格式：YYYY-MM-DD hh:mm:ss
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。不传默认为当前时间
-     * @param EndTime 结束时间。不传默认为当前时间
+     * Set 结束时间。待查询的共享流量包用量结束时间。不传默认为当前时间。
+时间格式：YYYY-MM-DD hh:mm:ss
+     * @param EndTime 结束时间。待查询的共享流量包用量结束时间。不传默认为当前时间。
+时间格式：YYYY-MM-DD hh:mm:ss
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

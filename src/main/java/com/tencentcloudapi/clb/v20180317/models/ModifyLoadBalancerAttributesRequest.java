@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
 
     /**
-    * 负载均衡的唯一ID
+    * 负载均衡的唯一ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 负载均衡实例名称
+    * 负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。
     */
     @SerializedName("LoadBalancerName")
     @Expose
@@ -52,60 +52,63 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
     private InternetAccessible InternetChargeInfo;
 
     /**
-    * Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+    * Target是否放通来自CLB的流量。
+开启放通（true）：只验证CLB上的安全组；
+不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+不填则不修改。
     */
     @SerializedName("LoadBalancerPassToTarget")
     @Expose
     private Boolean LoadBalancerPassToTarget;
 
     /**
-    * 是否开启跨地域绑定2.0功能
+    * 是否开启跨地域绑定2.0功能。不填则不修改。
     */
     @SerializedName("SnatPro")
     @Expose
     private Boolean SnatPro;
 
     /**
-    * 是否开启删除保护
+    * 是否开启删除保护，不填则不修改。
     */
     @SerializedName("DeleteProtect")
     @Expose
     private Boolean DeleteProtect;
 
     /**
-    * 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
+    * 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换，修改后mycloud.com域名将失效。不填则不修改。
     */
     @SerializedName("ModifyClassicDomain")
     @Expose
     private Boolean ModifyClassicDomain;
 
     /**
-     * Get 负载均衡的唯一ID 
-     * @return LoadBalancerId 负载均衡的唯一ID
+     * Get 负载均衡的唯一ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。 
+     * @return LoadBalancerId 负载均衡的唯一ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡的唯一ID
-     * @param LoadBalancerId 负载均衡的唯一ID
+     * Set 负载均衡的唯一ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+     * @param LoadBalancerId 负载均衡的唯一ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 负载均衡实例名称 
-     * @return LoadBalancerName 负载均衡实例名称
+     * Get 负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。 
+     * @return LoadBalancerName 负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set 负载均衡实例名称
-     * @param LoadBalancerName 负载均衡实例名称
+     * Set 负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。
+     * @param LoadBalancerName 负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
@@ -144,64 +147,76 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。 
-     * @return LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     * Get Target是否放通来自CLB的流量。
+开启放通（true）：只验证CLB上的安全组；
+不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+不填则不修改。 
+     * @return LoadBalancerPassToTarget Target是否放通来自CLB的流量。
+开启放通（true）：只验证CLB上的安全组；
+不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+不填则不修改。
      */
     public Boolean getLoadBalancerPassToTarget() {
         return this.LoadBalancerPassToTarget;
     }
 
     /**
-     * Set Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
-     * @param LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     * Set Target是否放通来自CLB的流量。
+开启放通（true）：只验证CLB上的安全组；
+不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+不填则不修改。
+     * @param LoadBalancerPassToTarget Target是否放通来自CLB的流量。
+开启放通（true）：只验证CLB上的安全组；
+不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+不填则不修改。
      */
     public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
     /**
-     * Get 是否开启跨地域绑定2.0功能 
-     * @return SnatPro 是否开启跨地域绑定2.0功能
+     * Get 是否开启跨地域绑定2.0功能。不填则不修改。 
+     * @return SnatPro 是否开启跨地域绑定2.0功能。不填则不修改。
      */
     public Boolean getSnatPro() {
         return this.SnatPro;
     }
 
     /**
-     * Set 是否开启跨地域绑定2.0功能
-     * @param SnatPro 是否开启跨地域绑定2.0功能
+     * Set 是否开启跨地域绑定2.0功能。不填则不修改。
+     * @param SnatPro 是否开启跨地域绑定2.0功能。不填则不修改。
      */
     public void setSnatPro(Boolean SnatPro) {
         this.SnatPro = SnatPro;
     }
 
     /**
-     * Get 是否开启删除保护 
-     * @return DeleteProtect 是否开启删除保护
+     * Get 是否开启删除保护，不填则不修改。 
+     * @return DeleteProtect 是否开启删除保护，不填则不修改。
      */
     public Boolean getDeleteProtect() {
         return this.DeleteProtect;
     }
 
     /**
-     * Set 是否开启删除保护
-     * @param DeleteProtect 是否开启删除保护
+     * Set 是否开启删除保护，不填则不修改。
+     * @param DeleteProtect 是否开启删除保护，不填则不修改。
      */
     public void setDeleteProtect(Boolean DeleteProtect) {
         this.DeleteProtect = DeleteProtect;
     }
 
     /**
-     * Get 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。 
-     * @return ModifyClassicDomain 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
+     * Get 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换，修改后mycloud.com域名将失效。不填则不修改。 
+     * @return ModifyClassicDomain 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换，修改后mycloud.com域名将失效。不填则不修改。
      */
     public Boolean getModifyClassicDomain() {
         return this.ModifyClassicDomain;
     }
 
     /**
-     * Set 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
-     * @param ModifyClassicDomain 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
+     * Set 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换，修改后mycloud.com域名将失效。不填则不修改。
+     * @param ModifyClassicDomain 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换，修改后mycloud.com域名将失效。不填则不修改。
      */
     public void setModifyClassicDomain(Boolean ModifyClassicDomain) {
         this.ModifyClassicDomain = ModifyClassicDomain;

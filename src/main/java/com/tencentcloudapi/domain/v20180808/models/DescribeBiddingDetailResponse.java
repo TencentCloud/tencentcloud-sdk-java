@@ -39,6 +39,7 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
 
     /**
     * 竞价开始时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("BiddingStartTime")
     @Expose
@@ -46,6 +47,7 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
 
     /**
     * 竞价结束时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("BiddingEndTime")
     @Expose
@@ -53,6 +55,7 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
 
     /**
     *  注册时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("RegTime")
     @Expose
@@ -60,6 +63,7 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
 
     /**
     * 过期时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -67,6 +71,7 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
 
     /**
     * 删除时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("DeleteTime")
     @Expose
@@ -161,8 +166,10 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 竞价开始时间 
+     * Get 竞价开始时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return BiddingStartTime 竞价开始时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getBiddingStartTime() {
         return this.BiddingStartTime;
@@ -170,15 +177,19 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
 
     /**
      * Set 竞价开始时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param BiddingStartTime 竞价开始时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setBiddingStartTime(String BiddingStartTime) {
         this.BiddingStartTime = BiddingStartTime;
     }
 
     /**
-     * Get 竞价结束时间 
+     * Get 竞价结束时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return BiddingEndTime 竞价结束时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getBiddingEndTime() {
         return this.BiddingEndTime;
@@ -186,15 +197,19 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
 
     /**
      * Set 竞价结束时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param BiddingEndTime 竞价结束时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setBiddingEndTime(String BiddingEndTime) {
         this.BiddingEndTime = BiddingEndTime;
     }
 
     /**
-     * Get  注册时间 
+     * Get  注册时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return RegTime  注册时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getRegTime() {
         return this.RegTime;
@@ -202,15 +217,19 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
 
     /**
      * Set  注册时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param RegTime  注册时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setRegTime(String RegTime) {
         this.RegTime = RegTime;
     }
 
     /**
-     * Get 过期时间 
+     * Get 过期时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return ExpireTime 过期时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -218,15 +237,19 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
 
     /**
      * Set 过期时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param ExpireTime 过期时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 删除时间 
+     * Get 删除时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return DeleteTime 删除时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getDeleteTime() {
         return this.DeleteTime;
@@ -234,7 +257,9 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
 
     /**
      * Set 删除时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param DeleteTime 删除时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setDeleteTime(String DeleteTime) {
         this.DeleteTime = DeleteTime;

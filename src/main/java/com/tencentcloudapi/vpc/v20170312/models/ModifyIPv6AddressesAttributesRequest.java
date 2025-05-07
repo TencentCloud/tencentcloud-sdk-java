@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyIPv6AddressesAttributesRequest extends AbstractModel {
 
     /**
-    * 弹性公网IPv6唯一ID列表。
+    * 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
     */
     @SerializedName("IPv6AddressIds")
     @Expose
     private String [] IPv6AddressIds;
 
     /**
-    * 弹性公网IPv6地址名称
+    * 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
     */
     @SerializedName("IPv6AddressName")
     @Expose
     private String IPv6AddressName;
 
     /**
-     * Get 弹性公网IPv6唯一ID列表。 
-     * @return IPv6AddressIds 弹性公网IPv6唯一ID列表。
+     * Get 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。 
+     * @return IPv6AddressIds 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
      */
     public String [] getIPv6AddressIds() {
         return this.IPv6AddressIds;
     }
 
     /**
-     * Set 弹性公网IPv6唯一ID列表。
-     * @param IPv6AddressIds 弹性公网IPv6唯一ID列表。
+     * Set 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
+     * @param IPv6AddressIds 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
      */
     public void setIPv6AddressIds(String [] IPv6AddressIds) {
         this.IPv6AddressIds = IPv6AddressIds;
     }
 
     /**
-     * Get 弹性公网IPv6地址名称 
-     * @return IPv6AddressName 弹性公网IPv6地址名称
+     * Get 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。 
+     * @return IPv6AddressName 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
      */
     public String getIPv6AddressName() {
         return this.IPv6AddressName;
     }
 
     /**
-     * Set 弹性公网IPv6地址名称
-     * @param IPv6AddressName 弹性公网IPv6地址名称
+     * Set 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+     * @param IPv6AddressName 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
      */
     public void setIPv6AddressName(String IPv6AddressName) {
         this.IPv6AddressName = IPv6AddressName;

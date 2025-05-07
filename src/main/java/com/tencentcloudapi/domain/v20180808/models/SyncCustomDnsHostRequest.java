@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class SyncCustomDnsHostRequest extends AbstractModel {
 
     /**
-    * 域名实例ID，可以通过DescribeDomainList接口获取
+    * 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
     */
     @SerializedName("DomainId")
     @Expose
     private String DomainId;
 
     /**
-     * Get 域名实例ID，可以通过DescribeDomainList接口获取 
-     * @return DomainId 域名实例ID，可以通过DescribeDomainList接口获取
+     * Get 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941) 
+     * @return DomainId 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名实例ID，可以通过DescribeDomainList接口获取
-     * @param DomainId 域名实例ID，可以通过DescribeDomainList接口获取
+     * Set 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
+     * @param DomainId 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;

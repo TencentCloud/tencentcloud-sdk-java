@@ -27,14 +27,17 @@ public class OAuth extends AbstractModel {
     * 开启或关闭鉴权。
 True: 开启;
 False: 关闭
+默认为关闭。
     */
     @SerializedName("OAuthEnable")
     @Expose
     private Boolean OAuthEnable;
 
     /**
-    * IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
+    * IAP全部故障后，拒绝请求还是放行。
+BYPASS: 通过
 REJECT: 拒绝
+默认为 BYPASS
     */
     @SerializedName("OAuthFailureStatus")
     @Expose
@@ -43,10 +46,12 @@ REJECT: 拒绝
     /**
      * Get 开启或关闭鉴权。
 True: 开启;
-False: 关闭 
+False: 关闭
+默认为关闭。 
      * @return OAuthEnable 开启或关闭鉴权。
 True: 开启;
 False: 关闭
+默认为关闭。
      */
     public Boolean getOAuthEnable() {
         return this.OAuthEnable;
@@ -56,29 +61,39 @@ False: 关闭
      * Set 开启或关闭鉴权。
 True: 开启;
 False: 关闭
+默认为关闭。
      * @param OAuthEnable 开启或关闭鉴权。
 True: 开启;
 False: 关闭
+默认为关闭。
      */
     public void setOAuthEnable(Boolean OAuthEnable) {
         this.OAuthEnable = OAuthEnable;
     }
 
     /**
-     * Get IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
-REJECT: 拒绝 
-     * @return OAuthFailureStatus IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
+     * Get IAP全部故障后，拒绝请求还是放行。
+BYPASS: 通过
 REJECT: 拒绝
+默认为 BYPASS 
+     * @return OAuthFailureStatus IAP全部故障后，拒绝请求还是放行。
+BYPASS: 通过
+REJECT: 拒绝
+默认为 BYPASS
      */
     public String getOAuthFailureStatus() {
         return this.OAuthFailureStatus;
     }
 
     /**
-     * Set IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
+     * Set IAP全部故障后，拒绝请求还是放行。
+BYPASS: 通过
 REJECT: 拒绝
-     * @param OAuthFailureStatus IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
+默认为 BYPASS
+     * @param OAuthFailureStatus IAP全部故障后，拒绝请求还是放行。
+BYPASS: 通过
 REJECT: 拒绝
+默认为 BYPASS
      */
     public void setOAuthFailureStatus(String OAuthFailureStatus) {
         this.OAuthFailureStatus = OAuthFailureStatus;

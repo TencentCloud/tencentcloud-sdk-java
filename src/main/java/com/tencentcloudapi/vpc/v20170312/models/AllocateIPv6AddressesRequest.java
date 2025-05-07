@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class AllocateIPv6AddressesRequest extends AbstractModel {
 
     /**
-    * EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名。
+    * EIP名称，用于申请EIP时用户自定义该EIP的个性化名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+默认值：未命名
     */
     @SerializedName("AddressName")
     @Expose
@@ -33,18 +34,20 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
     /**
     * 弹性公网IPv6类型，可选值：
 
-- EIPv6：普通IPv6
-- HighQualityEIPv6：精品IPv6
-注意：需联系产品开通精品IPv6白名单，且仅部分地域支持精品IPv6
+- EIPv6：弹性公网IPv6
+- HighQualityEIPv6：精品BGP线路弹性公网IPv6
+注意：弹性公网IPv6产品需开白才能使用，其中精品BGP线路仅在中国香港支持。
 
-默认值：EIPv6。
+默认值：EIPv6
     */
     @SerializedName("AddressType")
     @Expose
     private String AddressType;
 
     /**
-    * 申请的弹性公网IPv6数量，默认值：1。
+    * 申请的弹性公网IPv6数量。单次最多可以申请20个弹性公网IPv6实例，总配额请参见[弹性公网 IPv6 配额说明](https://cloud.tencent.com/document/product/1142/38369)。
+
+默认值：1
     */
     @SerializedName("AddressCount")
     @Expose
@@ -56,7 +59,7 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
 - BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费
 - TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费
 
-默认值：TRAFFIC_POSTPAID_BY_HOUR。
+默认值：TRAFFIC_POSTPAID_BY_HOUR
     */
     @SerializedName("InternetChargeType")
     @Expose
@@ -69,7 +72,7 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
 - CMCC：中国移动
 - CTCC：中国电信
 - CUCC：中国联通
-注意：仅部分地域支持静态单线IP。
+注意：仅部分地域支持静态单线IP。具体请以控制台购买页展示为准。
     */
     @SerializedName("InternetServiceProvider")
     @Expose
@@ -80,17 +83,17 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
 
 可选值范围取决于EIP计费方式：
 
-- BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps
-- TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps
+- BANDWIDTH_PACKAGE（共享带宽包付费）：1 Mbps 至 2000 Mbps
+- TRAFFIC_POSTPAID_BY_HOUR（流量按小时后付费）：1 Mbps 至 100 Mbps
 
-默认值：1 Mbps。
+默认值：1
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 带宽包唯一ID参数。
+    * 带宽包唯一ID参数。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
 设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费。
     */
     @SerializedName("BandwidthPackageId")
@@ -109,26 +112,29 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
 
 - CENTER_EGRESS_1：中心出口一
 - CENTER_EGRESS_2：中心出口二
-- CENTER_EGRESS_3：中心出口三
-注意：不同运营商或资源类型对应的网络出口需要联系产品开白
+注意：不同地域支持的线路类型、网络出口略有差异，请以控制台展示为准。
 
-默认值：CENTER_EGRESS_1。
+默认值：CENTER_EGRESS_1
     */
     @SerializedName("Egress")
     @Expose
     private String Egress;
 
     /**
-     * Get EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名。 
-     * @return AddressName EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名。
+     * Get EIP名称，用于申请EIP时用户自定义该EIP的个性化名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+默认值：未命名 
+     * @return AddressName EIP名称，用于申请EIP时用户自定义该EIP的个性化名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+默认值：未命名
      */
     public String getAddressName() {
         return this.AddressName;
     }
 
     /**
-     * Set EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名。
-     * @param AddressName EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名。
+     * Set EIP名称，用于申请EIP时用户自定义该EIP的个性化名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+默认值：未命名
+     * @param AddressName EIP名称，用于申请EIP时用户自定义该EIP的个性化名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+默认值：未命名
      */
     public void setAddressName(String AddressName) {
         this.AddressName = AddressName;
@@ -137,18 +143,18 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
     /**
      * Get 弹性公网IPv6类型，可选值：
 
-- EIPv6：普通IPv6
-- HighQualityEIPv6：精品IPv6
-注意：需联系产品开通精品IPv6白名单，且仅部分地域支持精品IPv6
+- EIPv6：弹性公网IPv6
+- HighQualityEIPv6：精品BGP线路弹性公网IPv6
+注意：弹性公网IPv6产品需开白才能使用，其中精品BGP线路仅在中国香港支持。
 
-默认值：EIPv6。 
+默认值：EIPv6 
      * @return AddressType 弹性公网IPv6类型，可选值：
 
-- EIPv6：普通IPv6
-- HighQualityEIPv6：精品IPv6
-注意：需联系产品开通精品IPv6白名单，且仅部分地域支持精品IPv6
+- EIPv6：弹性公网IPv6
+- HighQualityEIPv6：精品BGP线路弹性公网IPv6
+注意：弹性公网IPv6产品需开白才能使用，其中精品BGP线路仅在中国香港支持。
 
-默认值：EIPv6。
+默认值：EIPv6
      */
     public String getAddressType() {
         return this.AddressType;
@@ -157,34 +163,42 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
     /**
      * Set 弹性公网IPv6类型，可选值：
 
-- EIPv6：普通IPv6
-- HighQualityEIPv6：精品IPv6
-注意：需联系产品开通精品IPv6白名单，且仅部分地域支持精品IPv6
+- EIPv6：弹性公网IPv6
+- HighQualityEIPv6：精品BGP线路弹性公网IPv6
+注意：弹性公网IPv6产品需开白才能使用，其中精品BGP线路仅在中国香港支持。
 
-默认值：EIPv6。
+默认值：EIPv6
      * @param AddressType 弹性公网IPv6类型，可选值：
 
-- EIPv6：普通IPv6
-- HighQualityEIPv6：精品IPv6
-注意：需联系产品开通精品IPv6白名单，且仅部分地域支持精品IPv6
+- EIPv6：弹性公网IPv6
+- HighQualityEIPv6：精品BGP线路弹性公网IPv6
+注意：弹性公网IPv6产品需开白才能使用，其中精品BGP线路仅在中国香港支持。
 
-默认值：EIPv6。
+默认值：EIPv6
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;
     }
 
     /**
-     * Get 申请的弹性公网IPv6数量，默认值：1。 
-     * @return AddressCount 申请的弹性公网IPv6数量，默认值：1。
+     * Get 申请的弹性公网IPv6数量。单次最多可以申请20个弹性公网IPv6实例，总配额请参见[弹性公网 IPv6 配额说明](https://cloud.tencent.com/document/product/1142/38369)。
+
+默认值：1 
+     * @return AddressCount 申请的弹性公网IPv6数量。单次最多可以申请20个弹性公网IPv6实例，总配额请参见[弹性公网 IPv6 配额说明](https://cloud.tencent.com/document/product/1142/38369)。
+
+默认值：1
      */
     public Long getAddressCount() {
         return this.AddressCount;
     }
 
     /**
-     * Set 申请的弹性公网IPv6数量，默认值：1。
-     * @param AddressCount 申请的弹性公网IPv6数量，默认值：1。
+     * Set 申请的弹性公网IPv6数量。单次最多可以申请20个弹性公网IPv6实例，总配额请参见[弹性公网 IPv6 配额说明](https://cloud.tencent.com/document/product/1142/38369)。
+
+默认值：1
+     * @param AddressCount 申请的弹性公网IPv6数量。单次最多可以申请20个弹性公网IPv6实例，总配额请参见[弹性公网 IPv6 配额说明](https://cloud.tencent.com/document/product/1142/38369)。
+
+默认值：1
      */
     public void setAddressCount(Long AddressCount) {
         this.AddressCount = AddressCount;
@@ -196,13 +210,13 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
 - BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费
 - TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费
 
-默认值：TRAFFIC_POSTPAID_BY_HOUR。 
+默认值：TRAFFIC_POSTPAID_BY_HOUR 
      * @return InternetChargeType 弹性公网IPv6计费方式，可选值：
 
 - BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费
 - TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费
 
-默认值：TRAFFIC_POSTPAID_BY_HOUR。
+默认值：TRAFFIC_POSTPAID_BY_HOUR
      */
     public String getInternetChargeType() {
         return this.InternetChargeType;
@@ -214,13 +228,13 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
 - BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费
 - TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费
 
-默认值：TRAFFIC_POSTPAID_BY_HOUR。
+默认值：TRAFFIC_POSTPAID_BY_HOUR
      * @param InternetChargeType 弹性公网IPv6计费方式，可选值：
 
 - BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费
 - TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费
 
-默认值：TRAFFIC_POSTPAID_BY_HOUR。
+默认值：TRAFFIC_POSTPAID_BY_HOUR
      */
     public void setInternetChargeType(String InternetChargeType) {
         this.InternetChargeType = InternetChargeType;
@@ -233,14 +247,14 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
 - CMCC：中国移动
 - CTCC：中国电信
 - CUCC：中国联通
-注意：仅部分地域支持静态单线IP。 
+注意：仅部分地域支持静态单线IP。具体请以控制台购买页展示为准。 
      * @return InternetServiceProvider 弹性公网IPv6线路类型，默认值：BGP。
 
 已开通静态单线IP白名单的用户，可选值：
 - CMCC：中国移动
 - CTCC：中国电信
 - CUCC：中国联通
-注意：仅部分地域支持静态单线IP。
+注意：仅部分地域支持静态单线IP。具体请以控制台购买页展示为准。
      */
     public String getInternetServiceProvider() {
         return this.InternetServiceProvider;
@@ -253,14 +267,14 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
 - CMCC：中国移动
 - CTCC：中国电信
 - CUCC：中国联通
-注意：仅部分地域支持静态单线IP。
+注意：仅部分地域支持静态单线IP。具体请以控制台购买页展示为准。
      * @param InternetServiceProvider 弹性公网IPv6线路类型，默认值：BGP。
 
 已开通静态单线IP白名单的用户，可选值：
 - CMCC：中国移动
 - CTCC：中国电信
 - CUCC：中国联通
-注意：仅部分地域支持静态单线IP。
+注意：仅部分地域支持静态单线IP。具体请以控制台购买页展示为准。
      */
     public void setInternetServiceProvider(String InternetServiceProvider) {
         this.InternetServiceProvider = InternetServiceProvider;
@@ -271,18 +285,18 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
 
 可选值范围取决于EIP计费方式：
 
-- BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps
-- TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps
+- BANDWIDTH_PACKAGE（共享带宽包付费）：1 Mbps 至 2000 Mbps
+- TRAFFIC_POSTPAID_BY_HOUR（流量按小时后付费）：1 Mbps 至 100 Mbps
 
-默认值：1 Mbps。 
+默认值：1 
      * @return InternetMaxBandwidthOut 弹性公网IPv6带宽上限，单位：Mbps。
 
 可选值范围取决于EIP计费方式：
 
-- BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps
-- TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps
+- BANDWIDTH_PACKAGE（共享带宽包付费）：1 Mbps 至 2000 Mbps
+- TRAFFIC_POSTPAID_BY_HOUR（流量按小时后付费）：1 Mbps 至 100 Mbps
 
-默认值：1 Mbps。
+默认值：1
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
@@ -293,27 +307,27 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
 
 可选值范围取决于EIP计费方式：
 
-- BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps
-- TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps
+- BANDWIDTH_PACKAGE（共享带宽包付费）：1 Mbps 至 2000 Mbps
+- TRAFFIC_POSTPAID_BY_HOUR（流量按小时后付费）：1 Mbps 至 100 Mbps
 
-默认值：1 Mbps。
+默认值：1
      * @param InternetMaxBandwidthOut 弹性公网IPv6带宽上限，单位：Mbps。
 
 可选值范围取决于EIP计费方式：
 
-- BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps
-- TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps
+- BANDWIDTH_PACKAGE（共享带宽包付费）：1 Mbps 至 2000 Mbps
+- TRAFFIC_POSTPAID_BY_HOUR（流量按小时后付费）：1 Mbps 至 100 Mbps
 
-默认值：1 Mbps。
+默认值：1
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get 带宽包唯一ID参数。
+     * Get 带宽包唯一ID参数。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
 设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费。 
-     * @return BandwidthPackageId 带宽包唯一ID参数。
+     * @return BandwidthPackageId 带宽包唯一ID参数。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
 设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费。
      */
     public String getBandwidthPackageId() {
@@ -321,9 +335,9 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
     }
 
     /**
-     * Set 带宽包唯一ID参数。
+     * Set 带宽包唯一ID参数。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
 设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费。
-     * @param BandwidthPackageId 带宽包唯一ID参数。
+     * @param BandwidthPackageId 带宽包唯一ID参数。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
 设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费。
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
@@ -351,18 +365,16 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
 
 - CENTER_EGRESS_1：中心出口一
 - CENTER_EGRESS_2：中心出口二
-- CENTER_EGRESS_3：中心出口三
-注意：不同运营商或资源类型对应的网络出口需要联系产品开白
+注意：不同地域支持的线路类型、网络出口略有差异，请以控制台展示为准。
 
-默认值：CENTER_EGRESS_1。 
+默认值：CENTER_EGRESS_1 
      * @return Egress 弹性公网IPv6网络出口，可选值：
 
 - CENTER_EGRESS_1：中心出口一
 - CENTER_EGRESS_2：中心出口二
-- CENTER_EGRESS_3：中心出口三
-注意：不同运营商或资源类型对应的网络出口需要联系产品开白
+注意：不同地域支持的线路类型、网络出口略有差异，请以控制台展示为准。
 
-默认值：CENTER_EGRESS_1。
+默认值：CENTER_EGRESS_1
      */
     public String getEgress() {
         return this.Egress;
@@ -373,18 +385,16 @@ public class AllocateIPv6AddressesRequest extends AbstractModel {
 
 - CENTER_EGRESS_1：中心出口一
 - CENTER_EGRESS_2：中心出口二
-- CENTER_EGRESS_3：中心出口三
-注意：不同运营商或资源类型对应的网络出口需要联系产品开白
+注意：不同地域支持的线路类型、网络出口略有差异，请以控制台展示为准。
 
-默认值：CENTER_EGRESS_1。
+默认值：CENTER_EGRESS_1
      * @param Egress 弹性公网IPv6网络出口，可选值：
 
 - CENTER_EGRESS_1：中心出口一
 - CENTER_EGRESS_2：中心出口二
-- CENTER_EGRESS_3：中心出口三
-注意：不同运营商或资源类型对应的网络出口需要联系产品开白
+注意：不同地域支持的线路类型、网络出口略有差异，请以控制台展示为准。
 
-默认值：CENTER_EGRESS_1。
+默认值：CENTER_EGRESS_1
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;

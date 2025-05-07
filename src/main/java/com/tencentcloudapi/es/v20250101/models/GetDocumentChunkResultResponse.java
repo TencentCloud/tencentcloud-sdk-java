@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class GetDocumentChunkResultResponse extends AbstractModel {
 
     /**
-    * 任务状态
+    * 任务状态，-1：失败，0：运行中，1：成功。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 切片结果
+    * 切片结果文件。
     */
     @SerializedName("DocumentChunkResultUrl")
     @Expose
     private String DocumentChunkResultUrl;
 
     /**
-    * 用量
+    * Token用量。
     */
     @SerializedName("Usage")
     @Expose
@@ -52,48 +52,48 @@ public class GetDocumentChunkResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务状态 
-     * @return Status 任务状态
+     * Get 任务状态，-1：失败，0：运行中，1：成功。 
+     * @return Status 任务状态，-1：失败，0：运行中，1：成功。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态
-     * @param Status 任务状态
+     * Set 任务状态，-1：失败，0：运行中，1：成功。
+     * @param Status 任务状态，-1：失败，0：运行中，1：成功。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 切片结果 
-     * @return DocumentChunkResultUrl 切片结果
+     * Get 切片结果文件。 
+     * @return DocumentChunkResultUrl 切片结果文件。
      */
     public String getDocumentChunkResultUrl() {
         return this.DocumentChunkResultUrl;
     }
 
     /**
-     * Set 切片结果
-     * @param DocumentChunkResultUrl 切片结果
+     * Set 切片结果文件。
+     * @param DocumentChunkResultUrl 切片结果文件。
      */
     public void setDocumentChunkResultUrl(String DocumentChunkResultUrl) {
         this.DocumentChunkResultUrl = DocumentChunkResultUrl;
     }
 
     /**
-     * Get 用量 
-     * @return Usage 用量
+     * Get Token用量。 
+     * @return Usage Token用量。
      */
     public DocumentChunkUsage getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set 用量
-     * @param Usage 用量
+     * Set Token用量。
+     * @param Usage Token用量。
      */
     public void setUsage(DocumentChunkUsage Usage) {
         this.Usage = Usage;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteListenerRequest extends AbstractModel {
 
     /**
-    * 负载均衡实例ID。
+    * 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 要删除的监听器ID。
+    * 要删除的监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-     * Get 负载均衡实例ID。 
-     * @return LoadBalancerId 负载均衡实例ID。
+     * Get 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。 
+     * @return LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例ID。
-     * @param LoadBalancerId 负载均衡实例ID。
+     * Set 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+     * @param LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 要删除的监听器ID。 
-     * @return ListenerId 要删除的监听器ID。
+     * Get 要删除的监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。 
+     * @return ListenerId 要删除的监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 要删除的监听器ID。
-     * @param ListenerId 要删除的监听器ID。
+     * Set 要删除的监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+     * @param ListenerId 要删除的监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;

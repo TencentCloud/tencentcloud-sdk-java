@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AssociateAddressRequest extends AbstractModel {
 
     /**
-    * 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+    * 标识 EIP 的唯一 ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
     */
     @SerializedName("AddressId")
     @Expose
@@ -66,16 +66,16 @@ public class AssociateAddressRequest extends AbstractModel {
     private String InstanceRegion;
 
     /**
-     * Get 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。 
-     * @return AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+     * Get 标识 EIP 的唯一 ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。 
+     * @return AddressId 标识 EIP 的唯一 ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
-     * @param AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+     * Set 标识 EIP 的唯一 ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
+     * @param AddressId 标识 EIP 的唯一 ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;

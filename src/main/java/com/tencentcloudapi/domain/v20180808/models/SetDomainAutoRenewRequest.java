@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class SetDomainAutoRenewRequest extends AbstractModel {
 
     /**
-    * 域名ID 例如：domain-dwerewwq可通过DescribreDomainList接口获取
+    * 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
     */
     @SerializedName("DomainId")
     @Expose
@@ -41,16 +42,20 @@ public class SetDomainAutoRenewRequest extends AbstractModel {
     private Long AutoRenew;
 
     /**
-     * Get 域名ID 例如：domain-dwerewwq可通过DescribreDomainList接口获取 
-     * @return DomainId 域名ID 例如：domain-dwerewwq可通过DescribreDomainList接口获取
+     * Get 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941) 
+     * @return DomainId 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名ID 例如：domain-dwerewwq可通过DescribreDomainList接口获取
-     * @param DomainId 域名ID 例如：domain-dwerewwq可通过DescribreDomainList接口获取
+     * Set 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
+     * @param DomainId 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;

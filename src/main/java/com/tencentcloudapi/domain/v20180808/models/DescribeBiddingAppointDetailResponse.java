@@ -39,6 +39,7 @@ public class DescribeBiddingAppointDetailResponse extends AbstractModel {
 
     /**
     * 预约开始时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("AppointStartTime")
     @Expose
@@ -46,6 +47,7 @@ public class DescribeBiddingAppointDetailResponse extends AbstractModel {
 
     /**
     * 预约结束时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("AppointEndTime")
     @Expose
@@ -53,6 +55,7 @@ public class DescribeBiddingAppointDetailResponse extends AbstractModel {
 
     /**
     *  注册时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("RegTime")
     @Expose
@@ -60,6 +63,7 @@ public class DescribeBiddingAppointDetailResponse extends AbstractModel {
 
     /**
     * 过期时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -67,6 +71,7 @@ public class DescribeBiddingAppointDetailResponse extends AbstractModel {
 
     /**
     * 删除时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("DeleteTime")
     @Expose
@@ -141,8 +146,10 @@ yes：退回 no: 未退回
     }
 
     /**
-     * Get 预约开始时间 
+     * Get 预约开始时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return AppointStartTime 预约开始时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getAppointStartTime() {
         return this.AppointStartTime;
@@ -150,15 +157,19 @@ yes：退回 no: 未退回
 
     /**
      * Set 预约开始时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param AppointStartTime 预约开始时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setAppointStartTime(String AppointStartTime) {
         this.AppointStartTime = AppointStartTime;
     }
 
     /**
-     * Get 预约结束时间 
+     * Get 预约结束时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return AppointEndTime 预约结束时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getAppointEndTime() {
         return this.AppointEndTime;
@@ -166,15 +177,19 @@ yes：退回 no: 未退回
 
     /**
      * Set 预约结束时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param AppointEndTime 预约结束时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setAppointEndTime(String AppointEndTime) {
         this.AppointEndTime = AppointEndTime;
     }
 
     /**
-     * Get  注册时间 
+     * Get  注册时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return RegTime  注册时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getRegTime() {
         return this.RegTime;
@@ -182,15 +197,19 @@ yes：退回 no: 未退回
 
     /**
      * Set  注册时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param RegTime  注册时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setRegTime(String RegTime) {
         this.RegTime = RegTime;
     }
 
     /**
-     * Get 过期时间 
+     * Get 过期时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return ExpireTime 过期时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -198,15 +217,19 @@ yes：退回 no: 未退回
 
     /**
      * Set 过期时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param ExpireTime 过期时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 删除时间 
+     * Get 删除时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return DeleteTime 删除时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getDeleteTime() {
         return this.DeleteTime;
@@ -214,7 +237,9 @@ yes：退回 no: 未退回
 
     /**
      * Set 删除时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param DeleteTime 删除时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setDeleteTime(String DeleteTime) {
         this.DeleteTime = DeleteTime;

@@ -31,7 +31,7 @@ public class ParseDocumentRequest extends AbstractModel {
     private ParseDocument Document;
 
     /**
-    * 模型名称
+    * 模型名称，doc-llm。
     */
     @SerializedName("ModelName")
     @Expose
@@ -54,16 +54,16 @@ public class ParseDocumentRequest extends AbstractModel {
     }
 
     /**
-     * Get 模型名称 
-     * @return ModelName 模型名称
+     * Get 模型名称，doc-llm。 
+     * @return ModelName 模型名称，doc-llm。
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 模型名称
-     * @param ModelName 模型名称
+     * Set 模型名称，doc-llm。
+     * @param ModelName 模型名称，doc-llm。
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ChunkDocumentAsyncRequest extends AbstractModel {
 
     /**
-    * 文件信息
+    * 文件信息。
     */
     @SerializedName("Document")
     @Expose
     private Document Document;
 
     /**
-    * 模型名称
+    * 模型名称，可选模型列表：doc-tree-chunk。
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * 文件切片配置
+    * 文件切片配置。
     */
     @SerializedName("Config")
     @Expose
     private ChunkConfigAsync Config;
 
     /**
-     * Get 文件信息 
-     * @return Document 文件信息
+     * Get 文件信息。 
+     * @return Document 文件信息。
      */
     public Document getDocument() {
         return this.Document;
     }
 
     /**
-     * Set 文件信息
-     * @param Document 文件信息
+     * Set 文件信息。
+     * @param Document 文件信息。
      */
     public void setDocument(Document Document) {
         this.Document = Document;
     }
 
     /**
-     * Get 模型名称 
-     * @return ModelName 模型名称
+     * Get 模型名称，可选模型列表：doc-tree-chunk。 
+     * @return ModelName 模型名称，可选模型列表：doc-tree-chunk。
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 模型名称
-     * @param ModelName 模型名称
+     * Set 模型名称，可选模型列表：doc-tree-chunk。
+     * @param ModelName 模型名称，可选模型列表：doc-tree-chunk。
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 文件切片配置 
-     * @return Config 文件切片配置
+     * Get 文件切片配置。 
+     * @return Config 文件切片配置。
      */
     public ChunkConfigAsync getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 文件切片配置
-     * @param Config 文件切片配置
+     * Set 文件切片配置。
+     * @param Config 文件切片配置。
      */
     public void setConfig(ChunkConfigAsync Config) {
         this.Config = Config;

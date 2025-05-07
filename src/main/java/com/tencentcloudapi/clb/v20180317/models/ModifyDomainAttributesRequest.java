@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyDomainAttributesRequest extends AbstractModel {
 
     /**
-    * 负载均衡实例ID。
+    * 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 负载均衡监听器ID。
+    * 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
+    * 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个，可以通过[DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
     */
     @SerializedName("Domain")
     @Expose
@@ -59,7 +59,8 @@ public class ModifyDomainAttributesRequest extends AbstractModel {
     private CertificateInput Certificate;
 
     /**
-    * 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+    * 是否开启HTTP2，注意，只有HTTPS域名才能开启HTTP2。
+True: 开启HTTP2，Fasle: 不开启HTTP2。
     */
     @SerializedName("Http2")
     @Expose
@@ -67,13 +68,15 @@ public class ModifyDomainAttributesRequest extends AbstractModel {
 
     /**
     * 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+True: 设为默认域名，Fasle: 不设置为默认域名。
     */
     @SerializedName("DefaultServer")
     @Expose
     private Boolean DefaultServer;
 
     /**
-    * 是否开启Quic，注意，只有HTTPS域名才能开启Quic
+    * 是否开启 QUIC，注意，只有 HTTPS 域名才能开启 QUIC。
+True: 开启 QUIC，False: 不开启QUIC。
     */
     @SerializedName("Quic")
     @Expose
@@ -101,48 +104,48 @@ public class ModifyDomainAttributesRequest extends AbstractModel {
     private MultiCertInfo MultiCertInfo;
 
     /**
-     * Get 负载均衡实例ID。 
-     * @return LoadBalancerId 负载均衡实例ID。
+     * Get 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。 
+     * @return LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例ID。
-     * @param LoadBalancerId 负载均衡实例ID。
+     * Set 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+     * @param LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 负载均衡监听器ID。 
-     * @return ListenerId 负载均衡监听器ID。
+     * Get 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。 
+     * @return ListenerId 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 负载均衡监听器ID。
-     * @param ListenerId 负载均衡监听器ID。
+     * Set 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+     * @param ListenerId 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。 
-     * @return Domain 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
+     * Get 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个，可以通过[DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。 
+     * @return Domain 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个，可以通过[DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
-     * @param Domain 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
+     * Set 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个，可以通过[DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+     * @param Domain 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个，可以通过[DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -181,24 +184,30 @@ public class ModifyDomainAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启Http2，注意，只有HTTPS域名才能开启Http2。 
-     * @return Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+     * Get 是否开启HTTP2，注意，只有HTTPS域名才能开启HTTP2。
+True: 开启HTTP2，Fasle: 不开启HTTP2。 
+     * @return Http2 是否开启HTTP2，注意，只有HTTPS域名才能开启HTTP2。
+True: 开启HTTP2，Fasle: 不开启HTTP2。
      */
     public Boolean getHttp2() {
         return this.Http2;
     }
 
     /**
-     * Set 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
-     * @param Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+     * Set 是否开启HTTP2，注意，只有HTTPS域名才能开启HTTP2。
+True: 开启HTTP2，Fasle: 不开启HTTP2。
+     * @param Http2 是否开启HTTP2，注意，只有HTTPS域名才能开启HTTP2。
+True: 开启HTTP2，Fasle: 不开启HTTP2。
      */
     public void setHttp2(Boolean Http2) {
         this.Http2 = Http2;
     }
 
     /**
-     * Get 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。 
+     * Get 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+True: 设为默认域名，Fasle: 不设置为默认域名。 
      * @return DefaultServer 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+True: 设为默认域名，Fasle: 不设置为默认域名。
      */
     public Boolean getDefaultServer() {
         return this.DefaultServer;
@@ -206,23 +215,29 @@ public class ModifyDomainAttributesRequest extends AbstractModel {
 
     /**
      * Set 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+True: 设为默认域名，Fasle: 不设置为默认域名。
      * @param DefaultServer 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+True: 设为默认域名，Fasle: 不设置为默认域名。
      */
     public void setDefaultServer(Boolean DefaultServer) {
         this.DefaultServer = DefaultServer;
     }
 
     /**
-     * Get 是否开启Quic，注意，只有HTTPS域名才能开启Quic 
-     * @return Quic 是否开启Quic，注意，只有HTTPS域名才能开启Quic
+     * Get 是否开启 QUIC，注意，只有 HTTPS 域名才能开启 QUIC。
+True: 开启 QUIC，False: 不开启QUIC。 
+     * @return Quic 是否开启 QUIC，注意，只有 HTTPS 域名才能开启 QUIC。
+True: 开启 QUIC，False: 不开启QUIC。
      */
     public Boolean getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set 是否开启Quic，注意，只有HTTPS域名才能开启Quic
-     * @param Quic 是否开启Quic，注意，只有HTTPS域名才能开启Quic
+     * Set 是否开启 QUIC，注意，只有 HTTPS 域名才能开启 QUIC。
+True: 开启 QUIC，False: 不开启QUIC。
+     * @param Quic 是否开启 QUIC，注意，只有 HTTPS 域名才能开启 QUIC。
+True: 开启 QUIC，False: 不开启QUIC。
      */
     public void setQuic(Boolean Quic) {
         this.Quic = Quic;

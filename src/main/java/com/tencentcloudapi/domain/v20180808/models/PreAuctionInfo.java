@@ -32,13 +32,14 @@ public class PreAuctionInfo extends AbstractModel {
 
     /**
     * 竞价倒计时
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("BiddingTime")
     @Expose
     private String BiddingTime;
 
     /**
-    * 出价次数 单位元
+    * 出价次数
     */
     @SerializedName("BidCount")
     @Expose
@@ -84,8 +85,10 @@ noAction：无法操作
     }
 
     /**
-     * Get 竞价倒计时 
+     * Get 竞价倒计时
+格式:YYYY-MM-DD HH:mm:ss 
      * @return BiddingTime 竞价倒计时
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getBiddingTime() {
         return this.BiddingTime;
@@ -93,23 +96,25 @@ noAction：无法操作
 
     /**
      * Set 竞价倒计时
+格式:YYYY-MM-DD HH:mm:ss
      * @param BiddingTime 竞价倒计时
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setBiddingTime(String BiddingTime) {
         this.BiddingTime = BiddingTime;
     }
 
     /**
-     * Get 出价次数 单位元 
-     * @return BidCount 出价次数 单位元
+     * Get 出价次数 
+     * @return BidCount 出价次数
      */
     public Long getBidCount() {
         return this.BidCount;
     }
 
     /**
-     * Set 出价次数 单位元
-     * @param BidCount 出价次数 单位元
+     * Set 出价次数
+     * @param BidCount 出价次数
      */
     public void setBidCount(Long BidCount) {
         this.BidCount = BidCount;

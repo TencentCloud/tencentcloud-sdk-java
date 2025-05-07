@@ -32,6 +32,7 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
 
     /**
     * 得标时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("SuccessfulTime")
     @Expose
@@ -46,6 +47,7 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
 
     /**
     *  注册时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("RegTime")
     @Expose
@@ -53,6 +55,7 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
 
     /**
     * 过期时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -60,6 +63,7 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
 
     /**
     * 删除时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("DeleteTime")
     @Expose
@@ -67,6 +71,7 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
 
     /**
     * 付款结束时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("PayEndTime")
     @Expose
@@ -117,8 +122,10 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 得标时间 
+     * Get 得标时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return SuccessfulTime 得标时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getSuccessfulTime() {
         return this.SuccessfulTime;
@@ -126,7 +133,9 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
 
     /**
      * Set 得标时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param SuccessfulTime 得标时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setSuccessfulTime(String SuccessfulTime) {
         this.SuccessfulTime = SuccessfulTime;
@@ -149,8 +158,10 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get  注册时间 
+     * Get  注册时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return RegTime  注册时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getRegTime() {
         return this.RegTime;
@@ -158,15 +169,19 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
 
     /**
      * Set  注册时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param RegTime  注册时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setRegTime(String RegTime) {
         this.RegTime = RegTime;
     }
 
     /**
-     * Get 过期时间 
+     * Get 过期时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return ExpireTime 过期时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -174,15 +189,19 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
 
     /**
      * Set 过期时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param ExpireTime 过期时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 删除时间 
+     * Get 删除时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return DeleteTime 删除时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getDeleteTime() {
         return this.DeleteTime;
@@ -190,15 +209,19 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
 
     /**
      * Set 删除时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param DeleteTime 删除时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setDeleteTime(String DeleteTime) {
         this.DeleteTime = DeleteTime;
     }
 
     /**
-     * Get 付款结束时间 
+     * Get 付款结束时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return PayEndTime 付款结束时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getPayEndTime() {
         return this.PayEndTime;
@@ -206,7 +229,9 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
 
     /**
      * Set 付款结束时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param PayEndTime 付款结束时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setPayEndTime(String PayEndTime) {
         this.PayEndTime = PayEndTime;

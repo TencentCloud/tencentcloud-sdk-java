@@ -25,14 +25,17 @@ public class BiddingSuccessfulResult extends AbstractModel {
 
     /**
     * 支付结束时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("PayEndTime")
     @Expose
     private String PayEndTime;
 
     /**
-     * Get 支付结束时间 
+     * Get 支付结束时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return PayEndTime 支付结束时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getPayEndTime() {
         return this.PayEndTime;
@@ -40,7 +43,9 @@ public class BiddingSuccessfulResult extends AbstractModel {
 
     /**
      * Set 支付结束时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param PayEndTime 支付结束时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setPayEndTime(String PayEndTime) {
         this.PayEndTime = PayEndTime;

@@ -91,6 +91,13 @@ public class PullUploadRequest extends AbstractModel {
     private Long ClassId;
 
     /**
+    * 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+    */
+    @SerializedName("TasksPriority")
+    @Expose
+    private Long TasksPriority;
+
+    /**
     * 来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
     */
     @SerializedName("SessionContext")
@@ -279,6 +286,22 @@ public class PullUploadRequest extends AbstractModel {
     }
 
     /**
+     * Get 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。 
+     * @return TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     */
+    public Long getTasksPriority() {
+        return this.TasksPriority;
+    }
+
+    /**
+     * Set 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * @param TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     */
+    public void setTasksPriority(Long TasksPriority) {
+        this.TasksPriority = TasksPriority;
+    }
+
+    /**
      * Get 来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
      * @return SessionContext 来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
@@ -377,6 +400,9 @@ public class PullUploadRequest extends AbstractModel {
         if (source.ClassId != null) {
             this.ClassId = new Long(source.ClassId);
         }
+        if (source.TasksPriority != null) {
+            this.TasksPriority = new Long(source.TasksPriority);
+        }
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
         }
@@ -405,6 +431,7 @@ public class PullUploadRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
+        this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);

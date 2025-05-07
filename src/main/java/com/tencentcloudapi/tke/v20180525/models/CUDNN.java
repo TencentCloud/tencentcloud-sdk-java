@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class CUDNN extends AbstractModel {
 
     /**
-    * cuDNN的版本
-    */
-    @SerializedName("Version")
-    @Expose
-    private String Version;
-
-    /**
     * cuDNN的名字
     */
     @SerializedName("Name")
@@ -38,11 +31,11 @@ public class CUDNN extends AbstractModel {
     private String Name;
 
     /**
-    * cuDNN的Doc名字
+    * cuDNN的版本
     */
-    @SerializedName("DocName")
+    @SerializedName("Version")
     @Expose
-    private String DocName;
+    private String Version;
 
     /**
     * cuDNN的Dev名字
@@ -52,20 +45,11 @@ public class CUDNN extends AbstractModel {
     private String DevName;
 
     /**
-     * Get cuDNN的版本 
-     * @return Version cuDNN的版本
-     */
-    public String getVersion() {
-        return this.Version;
-    }
-
-    /**
-     * Set cuDNN的版本
-     * @param Version cuDNN的版本
-     */
-    public void setVersion(String Version) {
-        this.Version = Version;
-    }
+    * cuDNN的Doc名字
+    */
+    @SerializedName("DocName")
+    @Expose
+    private String DocName;
 
     /**
      * Get cuDNN的名字 
@@ -84,19 +68,19 @@ public class CUDNN extends AbstractModel {
     }
 
     /**
-     * Get cuDNN的Doc名字 
-     * @return DocName cuDNN的Doc名字
+     * Get cuDNN的版本 
+     * @return Version cuDNN的版本
      */
-    public String getDocName() {
-        return this.DocName;
+    public String getVersion() {
+        return this.Version;
     }
 
     /**
-     * Set cuDNN的Doc名字
-     * @param DocName cuDNN的Doc名字
+     * Set cuDNN的版本
+     * @param Version cuDNN的版本
      */
-    public void setDocName(String DocName) {
-        this.DocName = DocName;
+    public void setVersion(String Version) {
+        this.Version = Version;
     }
 
     /**
@@ -115,6 +99,22 @@ public class CUDNN extends AbstractModel {
         this.DevName = DevName;
     }
 
+    /**
+     * Get cuDNN的Doc名字 
+     * @return DocName cuDNN的Doc名字
+     */
+    public String getDocName() {
+        return this.DocName;
+    }
+
+    /**
+     * Set cuDNN的Doc名字
+     * @param DocName cuDNN的Doc名字
+     */
+    public void setDocName(String DocName) {
+        this.DocName = DocName;
+    }
+
     public CUDNN() {
     }
 
@@ -123,17 +123,17 @@ public class CUDNN extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CUDNN(CUDNN source) {
-        if (source.Version != null) {
-            this.Version = new String(source.Version);
-        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.DocName != null) {
-            this.DocName = new String(source.DocName);
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
         }
         if (source.DevName != null) {
             this.DevName = new String(source.DevName);
+        }
+        if (source.DocName != null) {
+            this.DocName = new String(source.DocName);
         }
     }
 
@@ -142,10 +142,10 @@ public class CUDNN extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "DocName", this.DocName);
+        this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "DevName", this.DevName);
+        this.setParamSimple(map, prefix + "DocName", this.DocName);
 
     }
 }

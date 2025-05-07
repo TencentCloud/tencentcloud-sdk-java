@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class GetTextEmbeddingRequest extends AbstractModel {
 
     /**
-    * 模型名称
+    * 模型名称，可选模型列表：bge-base-zh-v1.5,conan-embedding-v1,bge-m3,KaLM-embedding-multilingual-mini-v1。
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * 需进行向量化的文本集
+    * 需进行向量化的文本集。
     */
     @SerializedName("Texts")
     @Expose
     private String [] Texts;
 
     /**
-     * Get 模型名称 
-     * @return ModelName 模型名称
+     * Get 模型名称，可选模型列表：bge-base-zh-v1.5,conan-embedding-v1,bge-m3,KaLM-embedding-multilingual-mini-v1。 
+     * @return ModelName 模型名称，可选模型列表：bge-base-zh-v1.5,conan-embedding-v1,bge-m3,KaLM-embedding-multilingual-mini-v1。
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 模型名称
-     * @param ModelName 模型名称
+     * Set 模型名称，可选模型列表：bge-base-zh-v1.5,conan-embedding-v1,bge-m3,KaLM-embedding-multilingual-mini-v1。
+     * @param ModelName 模型名称，可选模型列表：bge-base-zh-v1.5,conan-embedding-v1,bge-m3,KaLM-embedding-multilingual-mini-v1。
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 需进行向量化的文本集 
-     * @return Texts 需进行向量化的文本集
+     * Get 需进行向量化的文本集。 
+     * @return Texts 需进行向量化的文本集。
      */
     public String [] getTexts() {
         return this.Texts;
     }
 
     /**
-     * Set 需进行向量化的文本集
-     * @param Texts 需进行向量化的文本集
+     * Set 需进行向量化的文本集。
+     * @param Texts 需进行向量化的文本集。
      */
     public void setTexts(String [] Texts) {
         this.Texts = Texts;

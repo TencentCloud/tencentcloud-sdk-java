@@ -25,7 +25,6 @@ public class SecurityGroupRouteResp extends AbstractModel {
 
     /**
     * 符合条件的安全组路由信息总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ public class SecurityGroupRouteResp extends AbstractModel {
 
     /**
     * 符合条件的安全组路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupRoutes")
     @Expose
     private SecurityGroupRoute [] SecurityGroupRoutes;
 
     /**
-     * Get 符合条件的安全组路由信息总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的安全组路由信息总数 
      * @return TotalCount 符合条件的安全组路由信息总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ public class SecurityGroupRouteResp extends AbstractModel {
 
     /**
      * Set 符合条件的安全组路由信息总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的安全组路由信息总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 符合条件的安全组路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的安全组路由信息列表 
      * @return SecurityGroupRoutes 符合条件的安全组路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecurityGroupRoute [] getSecurityGroupRoutes() {
         return this.SecurityGroupRoutes;
@@ -71,9 +63,7 @@ public class SecurityGroupRouteResp extends AbstractModel {
 
     /**
      * Set 符合条件的安全组路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupRoutes 符合条件的安全组路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupRoutes(SecurityGroupRoute [] SecurityGroupRoutes) {
         this.SecurityGroupRoutes = SecurityGroupRoutes;

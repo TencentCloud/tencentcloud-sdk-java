@@ -93,7 +93,6 @@ public class BandwidthPackage extends AbstractModel {
 
     /**
     * 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Egress")
     @Expose
@@ -284,10 +283,8 @@ public class BandwidthPackage extends AbstractModel {
     }
 
     /**
-     * Get 网络出口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络出口 
      * @return Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEgress() {
         return this.Egress;
@@ -295,9 +292,7 @@ public class BandwidthPackage extends AbstractModel {
 
     /**
      * Set 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;

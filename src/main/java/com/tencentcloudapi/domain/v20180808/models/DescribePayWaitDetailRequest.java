@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribePayWaitDetailRequest extends AbstractModel {
 
     /**
-    * 业务ID
-可通过DescribeBiddingList接口获取
+    * 业务ID(竞价域名的预约ID) 
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取
     */
     @SerializedName("BusinessId")
     @Expose
     private String BusinessId;
 
     /**
-     * Get 业务ID
-可通过DescribeBiddingList接口获取 
-     * @return BusinessId 业务ID
-可通过DescribeBiddingList接口获取
+     * Get 业务ID(竞价域名的预约ID) 
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取 
+     * @return BusinessId 业务ID(竞价域名的预约ID) 
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取
      */
     public String getBusinessId() {
         return this.BusinessId;
     }
 
     /**
-     * Set 业务ID
-可通过DescribeBiddingList接口获取
-     * @param BusinessId 业务ID
-可通过DescribeBiddingList接口获取
+     * Set 业务ID(竞价域名的预约ID) 
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取
+     * @param BusinessId 业务ID(竞价域名的预约ID) 
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;

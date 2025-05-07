@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyListenerRequest extends AbstractModel {
 
     /**
-    * 负载均衡实例ID。
+    * 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 负载均衡监听器ID。
+    * 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 新的监听器名称。
+    * 新的监听器名称，最大长度255。
     */
     @SerializedName("ListenerName")
     @Expose
@@ -66,7 +66,7 @@ public class ModifyListenerRequest extends AbstractModel {
     private CertificateInput Certificate;
 
     /**
-    * 监听器转发的方式。可选值：WRR、LEAST_CONN
+    * 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
 分别表示按权重轮询、最小连接数， 默认为 WRR。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。七层监听器的均衡方式应在转发规则中修改。
     */
@@ -91,6 +91,7 @@ public class ModifyListenerRequest extends AbstractModel {
     /**
     * 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
 默认值0表示不开启，1表示开启。
+若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
     */
     @SerializedName("KeepaliveEnable")
     @Expose
@@ -98,6 +99,7 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
     * 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
     */
     @SerializedName("DeregisterTargetRst")
     @Expose
@@ -106,6 +108,7 @@ public class ModifyListenerRequest extends AbstractModel {
     /**
     * 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
+默认为 NORMAL。
     */
     @SerializedName("SessionType")
     @Expose
@@ -120,6 +123,7 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
     * 监听器粒度并发连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格并发连接上限，其中-1表示关闭监听器粒度并发连接数限速。基础网络实例不支持该参数。
+默认为 -1，表示不限速。
     */
     @SerializedName("MaxConn")
     @Expose
@@ -127,68 +131,76 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
     * 监听器粒度新建连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格新建连接上限，其中-1表示关闭监听器粒度新建连接数限速。基础网络实例不支持该参数。
+默认为 -1 表示不限速。
     */
     @SerializedName("MaxCps")
     @Expose
     private Long MaxCps;
 
     /**
-    * 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+    * 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~1980。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
     */
     @SerializedName("IdleConnectTimeout")
     @Expose
     private Long IdleConnectTimeout;
 
     /**
-    * 是否开启SNAT。
+    * 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
     */
     @SerializedName("SnatEnable")
     @Expose
     private Boolean SnatEnable;
 
     /**
-     * Get 负载均衡实例ID。 
-     * @return LoadBalancerId 负载均衡实例ID。
+    * 数据压缩模式
+    */
+    @SerializedName("DataCompressMode")
+    @Expose
+    private String DataCompressMode;
+
+    /**
+     * Get 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。 
+     * @return LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例ID。
-     * @param LoadBalancerId 负载均衡实例ID。
+     * Set 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+     * @param LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 负载均衡监听器ID。 
-     * @return ListenerId 负载均衡监听器ID。
+     * Get 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。 
+     * @return ListenerId 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 负载均衡监听器ID。
-     * @param ListenerId 负载均衡监听器ID。
+     * Set 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+     * @param ListenerId 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 新的监听器名称。 
-     * @return ListenerName 新的监听器名称。
+     * Get 新的监听器名称，最大长度255。 
+     * @return ListenerName 新的监听器名称，最大长度255。
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set 新的监听器名称。
-     * @param ListenerName 新的监听器名称。
+     * Set 新的监听器名称，最大长度255。
+     * @param ListenerName 新的监听器名称，最大长度255。
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
@@ -243,10 +255,10 @@ public class ModifyListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get 监听器转发的方式。可选值：WRR、LEAST_CONN
+     * Get 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
 分别表示按权重轮询、最小连接数， 默认为 WRR。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。七层监听器的均衡方式应在转发规则中修改。 
-     * @return Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
+     * @return Scheduler 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
 分别表示按权重轮询、最小连接数， 默认为 WRR。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。七层监听器的均衡方式应在转发规则中修改。
      */
@@ -255,10 +267,10 @@ public class ModifyListenerRequest extends AbstractModel {
     }
 
     /**
-     * Set 监听器转发的方式。可选值：WRR、LEAST_CONN
+     * Set 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
 分别表示按权重轮询、最小连接数， 默认为 WRR。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。七层监听器的均衡方式应在转发规则中修改。
-     * @param Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
+     * @param Scheduler 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
 分别表示按权重轮询、最小连接数， 默认为 WRR。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。七层监听器的均衡方式应在转发规则中修改。
      */
@@ -300,9 +312,11 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
      * Get 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
-默认值0表示不开启，1表示开启。 
+默认值0表示不开启，1表示开启。
+若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。 
      * @return KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
 默认值0表示不开启，1表示开启。
+若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
      */
     public Long getKeepaliveEnable() {
         return this.KeepaliveEnable;
@@ -311,16 +325,20 @@ public class ModifyListenerRequest extends AbstractModel {
     /**
      * Set 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
 默认值0表示不开启，1表示开启。
+若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
      * @param KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
 默认值0表示不开启，1表示开启。
+若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
      */
     public void setKeepaliveEnable(Long KeepaliveEnable) {
         this.KeepaliveEnable = KeepaliveEnable;
     }
 
     /**
-     * Get 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。 
+     * Get 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+True表示发送 RST 给客户端，False表示不发送 RST 给客户端。 
      * @return DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
      */
     public Boolean getDeregisterTargetRst() {
         return this.DeregisterTargetRst;
@@ -328,7 +346,9 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
      * Set 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
      * @param DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
      */
     public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
         this.DeregisterTargetRst = DeregisterTargetRst;
@@ -336,9 +356,11 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
      * Get 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
-使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。 
+使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
+默认为 NORMAL。 
      * @return SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
+默认为 NORMAL。
      */
     public String getSessionType() {
         return this.SessionType;
@@ -347,8 +369,10 @@ public class ModifyListenerRequest extends AbstractModel {
     /**
      * Set 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
+默认为 NORMAL。
      * @param SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
+默认为 NORMAL。
      */
     public void setSessionType(String SessionType) {
         this.SessionType = SessionType;
@@ -371,8 +395,10 @@ public class ModifyListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get 监听器粒度并发连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格并发连接上限，其中-1表示关闭监听器粒度并发连接数限速。基础网络实例不支持该参数。 
+     * Get 监听器粒度并发连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格并发连接上限，其中-1表示关闭监听器粒度并发连接数限速。基础网络实例不支持该参数。
+默认为 -1，表示不限速。 
      * @return MaxConn 监听器粒度并发连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格并发连接上限，其中-1表示关闭监听器粒度并发连接数限速。基础网络实例不支持该参数。
+默认为 -1，表示不限速。
      */
     public Long getMaxConn() {
         return this.MaxConn;
@@ -380,15 +406,19 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
      * Set 监听器粒度并发连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格并发连接上限，其中-1表示关闭监听器粒度并发连接数限速。基础网络实例不支持该参数。
+默认为 -1，表示不限速。
      * @param MaxConn 监听器粒度并发连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格并发连接上限，其中-1表示关闭监听器粒度并发连接数限速。基础网络实例不支持该参数。
+默认为 -1，表示不限速。
      */
     public void setMaxConn(Long MaxConn) {
         this.MaxConn = MaxConn;
     }
 
     /**
-     * Get 监听器粒度新建连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格新建连接上限，其中-1表示关闭监听器粒度新建连接数限速。基础网络实例不支持该参数。 
+     * Get 监听器粒度新建连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格新建连接上限，其中-1表示关闭监听器粒度新建连接数限速。基础网络实例不支持该参数。
+默认为 -1 表示不限速。 
      * @return MaxCps 监听器粒度新建连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格新建连接上限，其中-1表示关闭监听器粒度新建连接数限速。基础网络实例不支持该参数。
+默认为 -1 表示不限速。
      */
     public Long getMaxCps() {
         return this.MaxCps;
@@ -396,42 +426,60 @@ public class ModifyListenerRequest extends AbstractModel {
 
     /**
      * Set 监听器粒度新建连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格新建连接上限，其中-1表示关闭监听器粒度新建连接数限速。基础网络实例不支持该参数。
+默认为 -1 表示不限速。
      * @param MaxCps 监听器粒度新建连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格新建连接上限，其中-1表示关闭监听器粒度新建连接数限速。基础网络实例不支持该参数。
+默认为 -1 表示不限速。
      */
     public void setMaxCps(Long MaxCps) {
         this.MaxCps = MaxCps;
     }
 
     /**
-     * Get 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。 
-     * @return IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+     * Get 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~1980。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。 
+     * @return IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~1980。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
      */
     public Long getIdleConnectTimeout() {
         return this.IdleConnectTimeout;
     }
 
     /**
-     * Set 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
-     * @param IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+     * Set 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~1980。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+     * @param IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~1980。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
      */
     public void setIdleConnectTimeout(Long IdleConnectTimeout) {
         this.IdleConnectTimeout = IdleConnectTimeout;
     }
 
     /**
-     * Get 是否开启SNAT。 
-     * @return SnatEnable 是否开启SNAT。
+     * Get 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。 
+     * @return SnatEnable 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
      */
     public Boolean getSnatEnable() {
         return this.SnatEnable;
     }
 
     /**
-     * Set 是否开启SNAT。
-     * @param SnatEnable 是否开启SNAT。
+     * Set 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
+     * @param SnatEnable 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
      */
     public void setSnatEnable(Boolean SnatEnable) {
         this.SnatEnable = SnatEnable;
+    }
+
+    /**
+     * Get 数据压缩模式 
+     * @return DataCompressMode 数据压缩模式
+     */
+    public String getDataCompressMode() {
+        return this.DataCompressMode;
+    }
+
+    /**
+     * Set 数据压缩模式
+     * @param DataCompressMode 数据压缩模式
+     */
+    public void setDataCompressMode(String DataCompressMode) {
+        this.DataCompressMode = DataCompressMode;
     }
 
     public ModifyListenerRequest() {
@@ -493,6 +541,9 @@ public class ModifyListenerRequest extends AbstractModel {
         if (source.SnatEnable != null) {
             this.SnatEnable = new Boolean(source.SnatEnable);
         }
+        if (source.DataCompressMode != null) {
+            this.DataCompressMode = new String(source.DataCompressMode);
+        }
     }
 
 
@@ -517,6 +568,7 @@ public class ModifyListenerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
         this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
         this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
+        this.setParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
 
     }
 }

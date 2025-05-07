@@ -73,7 +73,7 @@ public class CreateReceivingWorkOrderRequest extends AbstractModel {
     private String Remark;
 
     /**
-    * 服务器收货列表
+    * 服务器收货列表。最大值：200
     */
     @SerializedName("ServerDeviceList")
     @Expose
@@ -99,6 +99,41 @@ public class CreateReceivingWorkOrderRequest extends AbstractModel {
     @SerializedName("OtherDeviceList")
     @Expose
     private OtherDevReceivingInfo [] OtherDeviceList;
+
+    /**
+    * 收货后自动上架。此参数为true时，后台会自动提设备上架单
+    */
+    @SerializedName("WithRackOn")
+    @Expose
+    private Boolean WithRackOn;
+
+    /**
+    * 设备上架信息。当WithRackOn为true此参数必传，且sn需要和收货的列表一致
+    */
+    @SerializedName("DeviceRackOnList")
+    @Expose
+    private DeviceRackOn [] DeviceRackOnList;
+
+    /**
+    * 上架人员 1.自行解决 2.由腾讯IDC负责
+    */
+    @SerializedName("StuffOption")
+    @Expose
+    private String StuffOption;
+
+    /**
+    * 自行解决信息。当StuffOption为1时，此参数必填
+    */
+    @SerializedName("SelfOperationInfo")
+    @Expose
+    private SelfOperation SelfOperationInfo;
+
+    /**
+    * 上架后自动开电。此参数为true时，后台会自动提设备开电单
+    */
+    @SerializedName("WithPowerOn")
+    @Expose
+    private Boolean WithPowerOn;
 
     /**
      * Get 机房id 
@@ -213,16 +248,16 @@ public class CreateReceivingWorkOrderRequest extends AbstractModel {
     }
 
     /**
-     * Get 服务器收货列表 
-     * @return ServerDeviceList 服务器收货列表
+     * Get 服务器收货列表。最大值：200 
+     * @return ServerDeviceList 服务器收货列表。最大值：200
      */
     public ServerReceivingInfo [] getServerDeviceList() {
         return this.ServerDeviceList;
     }
 
     /**
-     * Set 服务器收货列表
-     * @param ServerDeviceList 服务器收货列表
+     * Set 服务器收货列表。最大值：200
+     * @param ServerDeviceList 服务器收货列表。最大值：200
      */
     public void setServerDeviceList(ServerReceivingInfo [] ServerDeviceList) {
         this.ServerDeviceList = ServerDeviceList;
@@ -274,6 +309,86 @@ public class CreateReceivingWorkOrderRequest extends AbstractModel {
      */
     public void setOtherDeviceList(OtherDevReceivingInfo [] OtherDeviceList) {
         this.OtherDeviceList = OtherDeviceList;
+    }
+
+    /**
+     * Get 收货后自动上架。此参数为true时，后台会自动提设备上架单 
+     * @return WithRackOn 收货后自动上架。此参数为true时，后台会自动提设备上架单
+     */
+    public Boolean getWithRackOn() {
+        return this.WithRackOn;
+    }
+
+    /**
+     * Set 收货后自动上架。此参数为true时，后台会自动提设备上架单
+     * @param WithRackOn 收货后自动上架。此参数为true时，后台会自动提设备上架单
+     */
+    public void setWithRackOn(Boolean WithRackOn) {
+        this.WithRackOn = WithRackOn;
+    }
+
+    /**
+     * Get 设备上架信息。当WithRackOn为true此参数必传，且sn需要和收货的列表一致 
+     * @return DeviceRackOnList 设备上架信息。当WithRackOn为true此参数必传，且sn需要和收货的列表一致
+     */
+    public DeviceRackOn [] getDeviceRackOnList() {
+        return this.DeviceRackOnList;
+    }
+
+    /**
+     * Set 设备上架信息。当WithRackOn为true此参数必传，且sn需要和收货的列表一致
+     * @param DeviceRackOnList 设备上架信息。当WithRackOn为true此参数必传，且sn需要和收货的列表一致
+     */
+    public void setDeviceRackOnList(DeviceRackOn [] DeviceRackOnList) {
+        this.DeviceRackOnList = DeviceRackOnList;
+    }
+
+    /**
+     * Get 上架人员 1.自行解决 2.由腾讯IDC负责 
+     * @return StuffOption 上架人员 1.自行解决 2.由腾讯IDC负责
+     */
+    public String getStuffOption() {
+        return this.StuffOption;
+    }
+
+    /**
+     * Set 上架人员 1.自行解决 2.由腾讯IDC负责
+     * @param StuffOption 上架人员 1.自行解决 2.由腾讯IDC负责
+     */
+    public void setStuffOption(String StuffOption) {
+        this.StuffOption = StuffOption;
+    }
+
+    /**
+     * Get 自行解决信息。当StuffOption为1时，此参数必填 
+     * @return SelfOperationInfo 自行解决信息。当StuffOption为1时，此参数必填
+     */
+    public SelfOperation getSelfOperationInfo() {
+        return this.SelfOperationInfo;
+    }
+
+    /**
+     * Set 自行解决信息。当StuffOption为1时，此参数必填
+     * @param SelfOperationInfo 自行解决信息。当StuffOption为1时，此参数必填
+     */
+    public void setSelfOperationInfo(SelfOperation SelfOperationInfo) {
+        this.SelfOperationInfo = SelfOperationInfo;
+    }
+
+    /**
+     * Get 上架后自动开电。此参数为true时，后台会自动提设备开电单 
+     * @return WithPowerOn 上架后自动开电。此参数为true时，后台会自动提设备开电单
+     */
+    public Boolean getWithPowerOn() {
+        return this.WithPowerOn;
+    }
+
+    /**
+     * Set 上架后自动开电。此参数为true时，后台会自动提设备开电单
+     * @param WithPowerOn 上架后自动开电。此参数为true时，后台会自动提设备开电单
+     */
+    public void setWithPowerOn(Boolean WithPowerOn) {
+        this.WithPowerOn = WithPowerOn;
     }
 
     public CreateReceivingWorkOrderRequest() {
@@ -329,6 +444,24 @@ public class CreateReceivingWorkOrderRequest extends AbstractModel {
                 this.OtherDeviceList[i] = new OtherDevReceivingInfo(source.OtherDeviceList[i]);
             }
         }
+        if (source.WithRackOn != null) {
+            this.WithRackOn = new Boolean(source.WithRackOn);
+        }
+        if (source.DeviceRackOnList != null) {
+            this.DeviceRackOnList = new DeviceRackOn[source.DeviceRackOnList.length];
+            for (int i = 0; i < source.DeviceRackOnList.length; i++) {
+                this.DeviceRackOnList[i] = new DeviceRackOn(source.DeviceRackOnList[i]);
+            }
+        }
+        if (source.StuffOption != null) {
+            this.StuffOption = new String(source.StuffOption);
+        }
+        if (source.SelfOperationInfo != null) {
+            this.SelfOperationInfo = new SelfOperation(source.SelfOperationInfo);
+        }
+        if (source.WithPowerOn != null) {
+            this.WithPowerOn = new Boolean(source.WithPowerOn);
+        }
     }
 
 
@@ -347,6 +480,11 @@ public class CreateReceivingWorkOrderRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "NetDeviceList.", this.NetDeviceList);
         this.setParamArrayObj(map, prefix + "WireDeviceList.", this.WireDeviceList);
         this.setParamArrayObj(map, prefix + "OtherDeviceList.", this.OtherDeviceList);
+        this.setParamSimple(map, prefix + "WithRackOn", this.WithRackOn);
+        this.setParamArrayObj(map, prefix + "DeviceRackOnList.", this.DeviceRackOnList);
+        this.setParamSimple(map, prefix + "StuffOption", this.StuffOption);
+        this.setParamObj(map, prefix + "SelfOperationInfo.", this.SelfOperationInfo);
+        this.setParamSimple(map, prefix + "WithPowerOn", this.WithPowerOn);
 
     }
 }

@@ -106,6 +106,8 @@ public class DomainClient extends AbstractClient{
 
     /**
      *创建自定义DNS Host
+域名在“正常状态”下可创建，域名如果“未实名”则无法创建，账户如果未实名则无法创建。
+默认每个域名 自定义DNS Host 数量不超过10个
      * @param req CreateCustomDnsHostRequest
      * @return CreateCustomDnsHostResponse
      * @throws TencentCloudSDKException
@@ -172,6 +174,7 @@ public class DomainClient extends AbstractClient{
 
     /**
      *删除自定义DNS Host
+仅能删除域名在“正常状态”下，已经创建过的自定义Host，域名如果“未实名”或账户未实名，则无法操作
      * @param req DeleteCustomDnsHostRequest
      * @return DeleteCustomDnsHostResponse
      * @throws TencentCloudSDKException
@@ -492,6 +495,7 @@ public class DomainClient extends AbstractClient{
 
     /**
      *修改自定义DNS Host
+域名在“正常状态”下可修改已经存在的自定义DNS Host，域名如果“未实名”则无法修改，账户如果未实名则无法修改。 默认每个域名 自定义DNS Host 数量不超过10个
      * @param req ModifyCustomDnsHostRequest
      * @return ModifyCustomDnsHostResponse
      * @throws TencentCloudSDKException

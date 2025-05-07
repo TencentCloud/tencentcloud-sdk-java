@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class ChatCompletionsRequest extends AbstractModel {
 
     /**
-    * 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制
+    * 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
     */
     @SerializedName("Messages")
     @Expose
     private Message [] Messages;
 
     /**
-    * 模型名称
+    * 模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * 是否以流式接口的形式返回数据，默认true
+    * 是否以流式接口的形式返回数据，默认true。
     */
     @SerializedName("Stream")
     @Expose
     private Boolean Stream;
 
     /**
-    * 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 
+    * 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 。
     */
     @SerializedName("TopP")
     @Expose
     private Float TopP;
 
     /**
-    * 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 
+    * 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。
     */
     @SerializedName("Temperature")
     @Expose
@@ -73,80 +73,80 @@ public class ChatCompletionsRequest extends AbstractModel {
     private OnlineSearchOptions OnlineSearchOptions;
 
     /**
-     * Get 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制 
-     * @return Messages 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制
+     * Get 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。 
+     * @return Messages 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
      */
     public Message [] getMessages() {
         return this.Messages;
     }
 
     /**
-     * Set 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制
-     * @param Messages 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制
+     * Set 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
+     * @param Messages 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
      */
     public void setMessages(Message [] Messages) {
         this.Messages = Messages;
     }
 
     /**
-     * Get 模型名称 
-     * @return ModelName 模型名称
+     * Get 模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。 
+     * @return ModelName 模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 模型名称
-     * @param ModelName 模型名称
+     * Set 模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。
+     * @param ModelName 模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 是否以流式接口的形式返回数据，默认true 
-     * @return Stream 是否以流式接口的形式返回数据，默认true
+     * Get 是否以流式接口的形式返回数据，默认true。 
+     * @return Stream 是否以流式接口的形式返回数据，默认true。
      */
     public Boolean getStream() {
         return this.Stream;
     }
 
     /**
-     * Set 是否以流式接口的形式返回数据，默认true
-     * @param Stream 是否以流式接口的形式返回数据，默认true
+     * Set 是否以流式接口的形式返回数据，默认true。
+     * @param Stream 是否以流式接口的形式返回数据，默认true。
      */
     public void setStream(Boolean Stream) {
         this.Stream = Stream;
     }
 
     /**
-     * Get 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果  
-     * @return TopP 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 
+     * Get 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 。 
+     * @return TopP 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 。
      */
     public Float getTopP() {
         return this.TopP;
     }
 
     /**
-     * Set 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 
-     * @param TopP 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 
+     * Set 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 。
+     * @param TopP 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 。
      */
     public void setTopP(Float TopP) {
         this.TopP = TopP;
     }
 
     /**
-     * Get 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果  
-     * @return Temperature 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 
+     * Get 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。 
+     * @return Temperature 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。
      */
     public Float getTemperature() {
         return this.Temperature;
     }
 
     /**
-     * Set 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 
-     * @param Temperature 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 
+     * Set 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。
+     * @param Temperature 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。
      */
     public void setTemperature(Float Temperature) {
         this.Temperature = Temperature;

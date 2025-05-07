@@ -52,7 +52,11 @@ public class SnapshotGroup extends AbstractModel {
     private String [] SnapshotIdSet;
 
     /**
-    * 快照组状态。<br><li>NORMAL: 正常<br><li>CREATING:创建中<br><li>ROLLBACKING:回滚中
+    * <ul>
+    <li>NORMAL: 正常</li>
+    <li>CREATING: 创建中</li>
+    <li>ROLLBACKING: 回滚中</li>
+</ul>
     */
     @SerializedName("SnapshotGroupState")
     @Expose
@@ -114,6 +118,14 @@ public class SnapshotGroup extends AbstractModel {
     @SerializedName("DeadlineTime")
     @Expose
     private String DeadlineTime;
+
+    /**
+    * 来源自动快照策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoSnapshotPolicyId")
+    @Expose
+    private String AutoSnapshotPolicyId;
 
     /**
      * Get 快照组ID。 
@@ -180,16 +192,32 @@ public class SnapshotGroup extends AbstractModel {
     }
 
     /**
-     * Get 快照组状态。<br><li>NORMAL: 正常<br><li>CREATING:创建中<br><li>ROLLBACKING:回滚中 
-     * @return SnapshotGroupState 快照组状态。<br><li>NORMAL: 正常<br><li>CREATING:创建中<br><li>ROLLBACKING:回滚中
+     * Get <ul>
+    <li>NORMAL: 正常</li>
+    <li>CREATING: 创建中</li>
+    <li>ROLLBACKING: 回滚中</li>
+</ul> 
+     * @return SnapshotGroupState <ul>
+    <li>NORMAL: 正常</li>
+    <li>CREATING: 创建中</li>
+    <li>ROLLBACKING: 回滚中</li>
+</ul>
      */
     public String getSnapshotGroupState() {
         return this.SnapshotGroupState;
     }
 
     /**
-     * Set 快照组状态。<br><li>NORMAL: 正常<br><li>CREATING:创建中<br><li>ROLLBACKING:回滚中
-     * @param SnapshotGroupState 快照组状态。<br><li>NORMAL: 正常<br><li>CREATING:创建中<br><li>ROLLBACKING:回滚中
+     * Set <ul>
+    <li>NORMAL: 正常</li>
+    <li>CREATING: 创建中</li>
+    <li>ROLLBACKING: 回滚中</li>
+</ul>
+     * @param SnapshotGroupState <ul>
+    <li>NORMAL: 正常</li>
+    <li>CREATING: 创建中</li>
+    <li>ROLLBACKING: 回滚中</li>
+</ul>
      */
     public void setSnapshotGroupState(String SnapshotGroupState) {
         this.SnapshotGroupState = SnapshotGroupState;
@@ -327,6 +355,26 @@ public class SnapshotGroup extends AbstractModel {
         this.DeadlineTime = DeadlineTime;
     }
 
+    /**
+     * Get 来源自动快照策略ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoSnapshotPolicyId 来源自动快照策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAutoSnapshotPolicyId() {
+        return this.AutoSnapshotPolicyId;
+    }
+
+    /**
+     * Set 来源自动快照策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoSnapshotPolicyId 来源自动快照策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
+        this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
+    }
+
     public SnapshotGroup() {
     }
 
@@ -380,6 +428,9 @@ public class SnapshotGroup extends AbstractModel {
         if (source.DeadlineTime != null) {
             this.DeadlineTime = new String(source.DeadlineTime);
         }
+        if (source.AutoSnapshotPolicyId != null) {
+            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
+        }
     }
 
 
@@ -400,6 +451,7 @@ public class SnapshotGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageCount", this.ImageCount);
         this.setParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
         this.setParamSimple(map, prefix + "DeadlineTime", this.DeadlineTime);
+        this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
 
     }
 }

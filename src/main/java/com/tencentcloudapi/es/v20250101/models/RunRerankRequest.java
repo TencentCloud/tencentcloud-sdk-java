@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class RunRerankRequest extends AbstractModel {
 
     /**
-    * 模型名称
+    * 模型名称，可选模型列表：bge-reranker-large，bge-reranker-v2-m3。
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * 查询文本
+    * 查询文本。
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 待排序的候选doc列表
+    * 待排序的候选doc列表。
     */
     @SerializedName("Documents")
     @Expose
     private String [] Documents;
 
     /**
-    * 排序返回的top文档数量, 如果没有指定则返回全部候选doc，如果指定的top_n值大于输入的候选doc数量，返回全部doc
+    * 排序返回的top文档数量, 如果没有指定则返回全部候选doc，如果指定的top_n值大于输入的候选doc数量，返回全部doc。
     */
     @SerializedName("TopN")
     @Expose
     private Long TopN;
 
     /**
-    * 返回的排序结果列表里面是否返回每一条document原文，默认值False
+    * 返回的排序结果列表里面是否返回每一条document原文，默认值False。
     */
     @SerializedName("ReturnDocuments")
     @Expose
     private Boolean ReturnDocuments;
 
     /**
-     * Get 模型名称 
-     * @return ModelName 模型名称
+     * Get 模型名称，可选模型列表：bge-reranker-large，bge-reranker-v2-m3。 
+     * @return ModelName 模型名称，可选模型列表：bge-reranker-large，bge-reranker-v2-m3。
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 模型名称
-     * @param ModelName 模型名称
+     * Set 模型名称，可选模型列表：bge-reranker-large，bge-reranker-v2-m3。
+     * @param ModelName 模型名称，可选模型列表：bge-reranker-large，bge-reranker-v2-m3。
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 查询文本 
-     * @return Query 查询文本
+     * Get 查询文本。 
+     * @return Query 查询文本。
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询文本
-     * @param Query 查询文本
+     * Set 查询文本。
+     * @param Query 查询文本。
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 待排序的候选doc列表 
-     * @return Documents 待排序的候选doc列表
+     * Get 待排序的候选doc列表。 
+     * @return Documents 待排序的候选doc列表。
      */
     public String [] getDocuments() {
         return this.Documents;
     }
 
     /**
-     * Set 待排序的候选doc列表
-     * @param Documents 待排序的候选doc列表
+     * Set 待排序的候选doc列表。
+     * @param Documents 待排序的候选doc列表。
      */
     public void setDocuments(String [] Documents) {
         this.Documents = Documents;
     }
 
     /**
-     * Get 排序返回的top文档数量, 如果没有指定则返回全部候选doc，如果指定的top_n值大于输入的候选doc数量，返回全部doc 
-     * @return TopN 排序返回的top文档数量, 如果没有指定则返回全部候选doc，如果指定的top_n值大于输入的候选doc数量，返回全部doc
+     * Get 排序返回的top文档数量, 如果没有指定则返回全部候选doc，如果指定的top_n值大于输入的候选doc数量，返回全部doc。 
+     * @return TopN 排序返回的top文档数量, 如果没有指定则返回全部候选doc，如果指定的top_n值大于输入的候选doc数量，返回全部doc。
      */
     public Long getTopN() {
         return this.TopN;
     }
 
     /**
-     * Set 排序返回的top文档数量, 如果没有指定则返回全部候选doc，如果指定的top_n值大于输入的候选doc数量，返回全部doc
-     * @param TopN 排序返回的top文档数量, 如果没有指定则返回全部候选doc，如果指定的top_n值大于输入的候选doc数量，返回全部doc
+     * Set 排序返回的top文档数量, 如果没有指定则返回全部候选doc，如果指定的top_n值大于输入的候选doc数量，返回全部doc。
+     * @param TopN 排序返回的top文档数量, 如果没有指定则返回全部候选doc，如果指定的top_n值大于输入的候选doc数量，返回全部doc。
      */
     public void setTopN(Long TopN) {
         this.TopN = TopN;
     }
 
     /**
-     * Get 返回的排序结果列表里面是否返回每一条document原文，默认值False 
-     * @return ReturnDocuments 返回的排序结果列表里面是否返回每一条document原文，默认值False
+     * Get 返回的排序结果列表里面是否返回每一条document原文，默认值False。 
+     * @return ReturnDocuments 返回的排序结果列表里面是否返回每一条document原文，默认值False。
      */
     public Boolean getReturnDocuments() {
         return this.ReturnDocuments;
     }
 
     /**
-     * Set 返回的排序结果列表里面是否返回每一条document原文，默认值False
-     * @param ReturnDocuments 返回的排序结果列表里面是否返回每一条document原文，默认值False
+     * Set 返回的排序结果列表里面是否返回每一条document原文，默认值False。
+     * @param ReturnDocuments 返回的排序结果列表里面是否返回每一条document原文，默认值False。
      */
     public void setReturnDocuments(Boolean ReturnDocuments) {
         this.ReturnDocuments = ReturnDocuments;

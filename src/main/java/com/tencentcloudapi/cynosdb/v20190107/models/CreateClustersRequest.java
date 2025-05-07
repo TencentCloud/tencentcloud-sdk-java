@@ -84,6 +84,13 @@ public class CreateClustersRequest extends AbstractModel {
     private Long Memory;
 
     /**
+    * 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
+    */
+    @SerializedName("InstanceCount")
+    @Expose
+    private Long InstanceCount;
+
+    /**
     * 该参数无实际意义，已废弃。
 存储大小，单位GB。
     */
@@ -172,13 +179,6 @@ timeRollback，时间点回档
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
-
-    /**
-    * 实例数量，数量范围为(0,16]
-    */
-    @SerializedName("InstanceCount")
-    @Expose
-    private Long InstanceCount;
 
     /**
     * 包年包月购买时长
@@ -477,6 +477,22 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
+     * Get 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos 
+     * @return InstanceCount 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
+     */
+    public Long getInstanceCount() {
+        return this.InstanceCount;
+    }
+
+    /**
+     * Set 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
+     * @param InstanceCount 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
+     */
+    public void setInstanceCount(Long InstanceCount) {
+        this.InstanceCount = InstanceCount;
+    }
+
+    /**
      * Get 该参数无实际意义，已废弃。
 存储大小，单位GB。 
      * @return Storage 该参数无实际意义，已废弃。
@@ -690,22 +706,6 @@ timeRollback，时间点回档
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
-    }
-
-    /**
-     * Get 实例数量，数量范围为(0,16] 
-     * @return InstanceCount 实例数量，数量范围为(0,16]
-     */
-    public Long getInstanceCount() {
-        return this.InstanceCount;
-    }
-
-    /**
-     * Set 实例数量，数量范围为(0,16]
-     * @param InstanceCount 实例数量，数量范围为(0,16]
-     */
-    public void setInstanceCount(Long InstanceCount) {
-        this.InstanceCount = InstanceCount;
     }
 
     /**
@@ -1108,6 +1108,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         if (source.Memory != null) {
             this.Memory = new Long(source.Memory);
         }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
+        }
         if (source.Storage != null) {
             this.Storage = new Long(source.Storage);
         }
@@ -1143,9 +1146,6 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         }
         if (source.StorageLimit != null) {
             this.StorageLimit = new Long(source.StorageLimit);
-        }
-        if (source.InstanceCount != null) {
-            this.InstanceCount = new Long(source.InstanceCount);
         }
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
@@ -1237,6 +1237,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
@@ -1249,7 +1250,6 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamSimple(map, prefix + "ExpectTime", this.ExpectTime);
         this.setParamSimple(map, prefix + "ExpectTimeThresh", this.ExpectTimeThresh);
         this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
-        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);

@@ -25,7 +25,7 @@ public class CreateCustomDnsHostRequest extends AbstractModel {
 
     /**
     * 域名实例ID
-可通过DescribeDomainLIst接口获取
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
     */
     @SerializedName("DomainId")
     @Expose
@@ -49,9 +49,9 @@ public class CreateCustomDnsHostRequest extends AbstractModel {
 
     /**
      * Get 域名实例ID
-可通过DescribeDomainLIst接口获取 
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941) 
      * @return DomainId 域名实例ID
-可通过DescribeDomainLIst接口获取
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      */
     public String getDomainId() {
         return this.DomainId;
@@ -59,9 +59,9 @@ public class CreateCustomDnsHostRequest extends AbstractModel {
 
     /**
      * Set 域名实例ID
-可通过DescribeDomainLIst接口获取
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      * @param DomainId 域名实例ID
-可通过DescribeDomainLIst接口获取
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;

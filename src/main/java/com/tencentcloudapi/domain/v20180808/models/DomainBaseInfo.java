@@ -50,7 +50,7 @@ NoAudit: 无需实名认证
     private String RealNameAuditStatus;
 
     /**
-    * 域名实名认证不通过原因。
+    * 域名实名认证不通过原因。<具体内容以实名审核机构返回为准>
     */
     @SerializedName("RealNameAuditUnpassReason")
     @Expose
@@ -69,7 +69,7 @@ Rejected：域名命名审核拒绝
     private String DomainNameAuditStatus;
 
     /**
-    * 域名命名审核不通过原因。
+    * 域名命名审核不通过原因。<具体内容以实名审核机构返回为准>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainNameAuditUnpassReason")
@@ -78,6 +78,7 @@ Rejected：域名命名审核拒绝
 
     /**
     * 注册时间。
+格式:YYYY-MM-DD
     */
     @SerializedName("CreationDate")
     @Expose
@@ -85,6 +86,7 @@ Rejected：域名命名审核拒绝
 
     /**
     * 到期时间
+格式:YYYY-MM-DD
     */
     @SerializedName("ExpirationDate")
     @Expose
@@ -159,6 +161,7 @@ false：关闭锁定
 
     /**
     * 锁定结束时间
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("LockEndTime")
     @Expose
@@ -233,16 +236,16 @@ NoAudit: 无需实名认证
     }
 
     /**
-     * Get 域名实名认证不通过原因。 
-     * @return RealNameAuditUnpassReason 域名实名认证不通过原因。
+     * Get 域名实名认证不通过原因。<具体内容以实名审核机构返回为准> 
+     * @return RealNameAuditUnpassReason 域名实名认证不通过原因。<具体内容以实名审核机构返回为准>
      */
     public String getRealNameAuditUnpassReason() {
         return this.RealNameAuditUnpassReason;
     }
 
     /**
-     * Set 域名实名认证不通过原因。
-     * @param RealNameAuditUnpassReason 域名实名认证不通过原因。
+     * Set 域名实名认证不通过原因。<具体内容以实名审核机构返回为准>
+     * @param RealNameAuditUnpassReason 域名实名认证不通过原因。<具体内容以实名审核机构返回为准>
      */
     public void setRealNameAuditUnpassReason(String RealNameAuditUnpassReason) {
         this.RealNameAuditUnpassReason = RealNameAuditUnpassReason;
@@ -285,9 +288,9 @@ Rejected：域名命名审核拒绝
     }
 
     /**
-     * Get 域名命名审核不通过原因。
+     * Get 域名命名审核不通过原因。<具体内容以实名审核机构返回为准>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DomainNameAuditUnpassReason 域名命名审核不通过原因。
+     * @return DomainNameAuditUnpassReason 域名命名审核不通过原因。<具体内容以实名审核机构返回为准>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainNameAuditUnpassReason() {
@@ -295,9 +298,9 @@ Rejected：域名命名审核拒绝
     }
 
     /**
-     * Set 域名命名审核不通过原因。
+     * Set 域名命名审核不通过原因。<具体内容以实名审核机构返回为准>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DomainNameAuditUnpassReason 域名命名审核不通过原因。
+     * @param DomainNameAuditUnpassReason 域名命名审核不通过原因。<具体内容以实名审核机构返回为准>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainNameAuditUnpassReason(String DomainNameAuditUnpassReason) {
@@ -305,8 +308,10 @@ Rejected：域名命名审核拒绝
     }
 
     /**
-     * Get 注册时间。 
+     * Get 注册时间。
+格式:YYYY-MM-DD 
      * @return CreationDate 注册时间。
+格式:YYYY-MM-DD
      */
     public String getCreationDate() {
         return this.CreationDate;
@@ -314,15 +319,19 @@ Rejected：域名命名审核拒绝
 
     /**
      * Set 注册时间。
+格式:YYYY-MM-DD
      * @param CreationDate 注册时间。
+格式:YYYY-MM-DD
      */
     public void setCreationDate(String CreationDate) {
         this.CreationDate = CreationDate;
     }
 
     /**
-     * Get 到期时间 
+     * Get 到期时间
+格式:YYYY-MM-DD 
      * @return ExpirationDate 到期时间
+格式:YYYY-MM-DD
      */
     public String getExpirationDate() {
         return this.ExpirationDate;
@@ -330,7 +339,9 @@ Rejected：域名命名审核拒绝
 
     /**
      * Set 到期时间
+格式:YYYY-MM-DD
      * @param ExpirationDate 到期时间
+格式:YYYY-MM-DD
      */
     public void setExpirationDate(String ExpirationDate) {
         this.ExpirationDate = ExpirationDate;
@@ -545,8 +556,10 @@ false：关闭锁定
     }
 
     /**
-     * Get 锁定结束时间 
+     * Get 锁定结束时间
+格式:YYYY-MM-DD HH:mm:ss 
      * @return LockEndTime 锁定结束时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getLockEndTime() {
         return this.LockEndTime;
@@ -554,7 +567,9 @@ false：关闭锁定
 
     /**
      * Set 锁定结束时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param LockEndTime 锁定结束时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setLockEndTime(String LockEndTime) {
         this.LockEndTime = LockEndTime;

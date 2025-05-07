@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ParseDocumentResponse extends SSEResponseModel {
 
     /**
-    * 进度
+    * 进度：0-100。
     */
     @SerializedName("Progress")
     @Expose
     private String Progress;
 
     /**
-    *  解析文件结果
+    *  解析文件结果。
     */
     @SerializedName("DocumentParseResultUrl")
     @Expose
     private String DocumentParseResultUrl;
 
     /**
-    * 失败页码
+    * 失败页码。
     */
     @SerializedName("FailedPages")
     @Expose
@@ -52,48 +52,48 @@ public class ParseDocumentResponse extends SSEResponseModel {
     private String RequestId;
 
     /**
-     * Get 进度 
-     * @return Progress 进度
+     * Get 进度：0-100。 
+     * @return Progress 进度：0-100。
      */
     public String getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 进度
-     * @param Progress 进度
+     * Set 进度：0-100。
+     * @param Progress 进度：0-100。
      */
     public void setProgress(String Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get  解析文件结果 
-     * @return DocumentParseResultUrl  解析文件结果
+     * Get  解析文件结果。 
+     * @return DocumentParseResultUrl  解析文件结果。
      */
     public String getDocumentParseResultUrl() {
         return this.DocumentParseResultUrl;
     }
 
     /**
-     * Set  解析文件结果
-     * @param DocumentParseResultUrl  解析文件结果
+     * Set  解析文件结果。
+     * @param DocumentParseResultUrl  解析文件结果。
      */
     public void setDocumentParseResultUrl(String DocumentParseResultUrl) {
         this.DocumentParseResultUrl = DocumentParseResultUrl;
     }
 
     /**
-     * Get 失败页码 
-     * @return FailedPages 失败页码
+     * Get 失败页码。 
+     * @return FailedPages 失败页码。
      */
     public Long [] getFailedPages() {
         return this.FailedPages;
     }
 
     /**
-     * Set 失败页码
-     * @param FailedPages 失败页码
+     * Set 失败页码。
+     * @param FailedPages 失败页码。
      */
     public void setFailedPages(Long [] FailedPages) {
         this.FailedPages = FailedPages;

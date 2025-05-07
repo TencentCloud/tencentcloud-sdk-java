@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class ModifyAddressAttributeRequest extends AbstractModel {
 
     /**
-    * 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+    * 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
     */
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
 
     /**
-    * 修改后的 EIP 名称。长度上限为128个字符。
+    * 修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"\_"，不能包含空格。
     */
     @SerializedName("AddressName")
     @Expose
     private String AddressName;
 
     /**
-    * 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
+    * 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。
+注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。
     */
     @SerializedName("EipDirectConnection")
     @Expose
     private String EipDirectConnection;
 
     /**
-     * Get 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。 
-     * @return AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+     * Get 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。 
+     * @return AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
-     * @param AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+     * Set 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+     * @param AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;
     }
 
     /**
-     * Get 修改后的 EIP 名称。长度上限为128个字符。 
-     * @return AddressName 修改后的 EIP 名称。长度上限为128个字符。
+     * Get 修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"\_"，不能包含空格。 
+     * @return AddressName 修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"\_"，不能包含空格。
      */
     public String getAddressName() {
         return this.AddressName;
     }
 
     /**
-     * Set 修改后的 EIP 名称。长度上限为128个字符。
-     * @param AddressName 修改后的 EIP 名称。长度上限为128个字符。
+     * Set 修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"\_"，不能包含空格。
+     * @param AddressName 修改后的 EIP 名称。长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"\_"，不能包含空格。
      */
     public void setAddressName(String AddressName) {
         this.AddressName = AddressName;
     }
 
     /**
-     * Get 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。 
-     * @return EipDirectConnection 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
+     * Get 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。
+注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。 
+     * @return EipDirectConnection 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。
+注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。
      */
     public String getEipDirectConnection() {
         return this.EipDirectConnection;
     }
 
     /**
-     * Set 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
-     * @param EipDirectConnection 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
+     * Set 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。
+注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。
+     * @param EipDirectConnection 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。
+注意：该参数仅对 EIP 直通功能可见的用户可以设定，EIP 必须为绑定状态，绑定的对象为 CVM 。
      */
     public void setEipDirectConnection(String EipDirectConnection) {
         this.EipDirectConnection = EipDirectConnection;

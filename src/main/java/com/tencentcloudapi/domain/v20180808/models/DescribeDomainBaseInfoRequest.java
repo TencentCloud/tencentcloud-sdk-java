@@ -25,14 +25,17 @@ public class DescribeDomainBaseInfoRequest extends AbstractModel {
 
     /**
     * 域名
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-     * Get 域名 
+     * Get 域名
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941) 
      * @return Domain 域名
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      */
     public String getDomain() {
         return this.Domain;
@@ -40,7 +43,9 @@ public class DescribeDomainBaseInfoRequest extends AbstractModel {
 
     /**
      * Set 域名
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      * @param Domain 域名
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

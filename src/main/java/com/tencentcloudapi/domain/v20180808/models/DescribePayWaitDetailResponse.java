@@ -42,14 +42,16 @@ finish：完成出价
     private String Status;
 
     /**
-    * 支付结束时间
+    * 支付结束时间 
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 域名注册时间
+    * 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("RegTime")
     @Expose
@@ -126,15 +128,19 @@ finish：完成出价
 
     /**
      * Get 支付结束时间 
-     * @return EndTime 支付结束时间
+格式:YYYY-MM-DD HH:mm:ss 
+     * @return EndTime 支付结束时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 支付结束时间
-     * @param EndTime 支付结束时间
+     * Set 支付结束时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param EndTime 支付结束时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -142,15 +148,19 @@ finish：完成出价
 
     /**
      * Get 域名注册时间 
-     * @return RegTime 域名注册时间
+格式:YYYY-MM-DD HH:mm:ss 
+     * @return RegTime 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getRegTime() {
         return this.RegTime;
     }
 
     /**
-     * Set 域名注册时间
-     * @param RegTime 域名注册时间
+     * Set 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param RegTime 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setRegTime(String RegTime) {
         this.RegTime = RegTime;

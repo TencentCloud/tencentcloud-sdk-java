@@ -25,7 +25,6 @@ public class RouteFilter extends AbstractModel {
 
     /**
     * 过滤名称,目前支持security-group-id,按安全组关联过滤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class RouteFilter extends AbstractModel {
 
     /**
     * 过滤值,当过滤名称为security-group-id时仅支持传单个value
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
     @Expose
@@ -41,17 +39,14 @@ public class RouteFilter extends AbstractModel {
 
     /**
     * 过滤关系,支持IN和NOT_IN,默认为IN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Relation")
     @Expose
     private String Relation;
 
     /**
-     * Get 过滤名称,目前支持security-group-id,按安全组关联过滤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过滤名称,目前支持security-group-id,按安全组关联过滤 
      * @return Name 过滤名称,目前支持security-group-id,按安全组关联过滤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -59,19 +54,15 @@ public class RouteFilter extends AbstractModel {
 
     /**
      * Set 过滤名称,目前支持security-group-id,按安全组关联过滤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 过滤名称,目前支持security-group-id,按安全组关联过滤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 过滤值,当过滤名称为security-group-id时仅支持传单个value
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过滤值,当过滤名称为security-group-id时仅支持传单个value 
      * @return Values 过滤值,当过滤名称为security-group-id时仅支持传单个value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValues() {
         return this.Values;
@@ -79,19 +70,15 @@ public class RouteFilter extends AbstractModel {
 
     /**
      * Set 过滤值,当过滤名称为security-group-id时仅支持传单个value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 过滤值,当过滤名称为security-group-id时仅支持传单个value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get 过滤关系,支持IN和NOT_IN,默认为IN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过滤关系,支持IN和NOT_IN,默认为IN 
      * @return Relation 过滤关系,支持IN和NOT_IN,默认为IN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelation() {
         return this.Relation;
@@ -99,9 +86,7 @@ public class RouteFilter extends AbstractModel {
 
     /**
      * Set 过滤关系,支持IN和NOT_IN,默认为IN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Relation 过滤关系,支持IN和NOT_IN,默认为IN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelation(String Relation) {
         this.Relation = Relation;

@@ -25,7 +25,7 @@ public class BidDetailPageRequest extends AbstractModel {
 
     /**
     * 预约ID
-可通过DescribeBiddingList接口获取
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取
     */
     @SerializedName("BusinessId")
     @Expose
@@ -33,9 +33,9 @@ public class BidDetailPageRequest extends AbstractModel {
 
     /**
      * Get 预约ID
-可通过DescribeBiddingList接口获取 
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取 
      * @return BusinessId 预约ID
-可通过DescribeBiddingList接口获取
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取
      */
     public String getBusinessId() {
         return this.BusinessId;
@@ -43,9 +43,9 @@ public class BidDetailPageRequest extends AbstractModel {
 
     /**
      * Set 预约ID
-可通过DescribeBiddingList接口获取
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取
      * @param BusinessId 预约ID
-可通过DescribeBiddingList接口获取
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;

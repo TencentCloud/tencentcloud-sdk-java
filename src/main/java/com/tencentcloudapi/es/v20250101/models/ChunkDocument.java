@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ChunkDocument extends AbstractModel {
 
     /**
-    * 文件类型
+    * 文件类型，支持 MD，TXT 格式。
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * 文件的 base64值
+    * 文本原文，使用字符串格式输入。
     */
     @SerializedName("FileContent")
     @Expose
     private String FileContent;
 
     /**
-     * Get 文件类型 
-     * @return FileType 文件类型
+     * Get 文件类型，支持 MD，TXT 格式。 
+     * @return FileType 文件类型，支持 MD，TXT 格式。
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 文件类型
-     * @param FileType 文件类型
+     * Set 文件类型，支持 MD，TXT 格式。
+     * @param FileType 文件类型，支持 MD，TXT 格式。
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 文件的 base64值 
-     * @return FileContent 文件的 base64值
+     * Get 文本原文，使用字符串格式输入。 
+     * @return FileContent 文本原文，使用字符串格式输入。
      */
     public String getFileContent() {
         return this.FileContent;
     }
 
     /**
-     * Set 文件的 base64值
-     * @param FileContent 文件的 base64值
+     * Set 文本原文，使用字符串格式输入。
+     * @param FileContent 文本原文，使用字符串格式输入。
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;

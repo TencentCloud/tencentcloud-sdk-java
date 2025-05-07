@@ -25,17 +25,14 @@ public class VideoDownloadTaskData extends AbstractModel {
 
     /**
     * 下载任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadTaskId")
     @Expose
     private String DownloadTaskId;
 
     /**
-     * Get 下载任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下载任务ID 
      * @return DownloadTaskId 下载任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadTaskId() {
         return this.DownloadTaskId;
@@ -43,9 +40,7 @@ public class VideoDownloadTaskData extends AbstractModel {
 
     /**
      * Set 下载任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadTaskId 下载任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadTaskId(String DownloadTaskId) {
         this.DownloadTaskId = DownloadTaskId;

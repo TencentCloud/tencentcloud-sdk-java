@@ -94,6 +94,13 @@ public class UserRole extends AbstractModel {
     private String PermissionJson;
 
     /**
+    * 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+    */
+    @SerializedName("IsDefault")
+    @Expose
+    private Long IsDefault;
+
+    /**
      * Get 角色ID 
      * @return RoleId 角色ID
      */
@@ -253,6 +260,22 @@ public class UserRole extends AbstractModel {
         this.PermissionJson = PermissionJson;
     }
 
+    /**
+     * Get 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻） 
+     * @return IsDefault 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+     */
+    public Long getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+     * @param IsDefault 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+     */
+    public void setIsDefault(Long IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
     public UserRole() {
     }
 
@@ -294,6 +317,9 @@ public class UserRole extends AbstractModel {
         if (source.PermissionJson != null) {
             this.PermissionJson = new String(source.PermissionJson);
         }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Long(source.IsDefault);
+        }
     }
 
 
@@ -311,6 +337,7 @@ public class UserRole extends AbstractModel {
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamArrayObj(map, prefix + "CosPermissionList.", this.CosPermissionList);
         this.setParamSimple(map, prefix + "PermissionJson", this.PermissionJson);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
 
     }
 }

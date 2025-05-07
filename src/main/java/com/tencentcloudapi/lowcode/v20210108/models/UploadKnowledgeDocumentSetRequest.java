@@ -73,7 +73,7 @@ public class UploadKnowledgeDocumentSetRequest extends AbstractModel {
     private String FileTitle;
 
     /**
-    * 	文件元信息，为jsonstring
+    * 文件元信息，为jsonstring
     */
     @SerializedName("FileMetaData")
     @Expose
@@ -85,6 +85,13 @@ public class UploadKnowledgeDocumentSetRequest extends AbstractModel {
     @SerializedName("DocumentSetId")
     @Expose
     private String DocumentSetId;
+
+    /**
+    * 使用 regex 分割文档
+    */
+    @SerializedName("Delimiter")
+    @Expose
+    private String Delimiter;
 
     /**
      * Get 环境ID 
@@ -199,16 +206,16 @@ public class UploadKnowledgeDocumentSetRequest extends AbstractModel {
     }
 
     /**
-     * Get 	文件元信息，为jsonstring 
-     * @return FileMetaData 	文件元信息，为jsonstring
+     * Get 文件元信息，为jsonstring 
+     * @return FileMetaData 文件元信息，为jsonstring
      */
     public String getFileMetaData() {
         return this.FileMetaData;
     }
 
     /**
-     * Set 	文件元信息，为jsonstring
-     * @param FileMetaData 	文件元信息，为jsonstring
+     * Set 文件元信息，为jsonstring
+     * @param FileMetaData 文件元信息，为jsonstring
      */
     public void setFileMetaData(String FileMetaData) {
         this.FileMetaData = FileMetaData;
@@ -228,6 +235,22 @@ public class UploadKnowledgeDocumentSetRequest extends AbstractModel {
      */
     public void setDocumentSetId(String DocumentSetId) {
         this.DocumentSetId = DocumentSetId;
+    }
+
+    /**
+     * Get 使用 regex 分割文档 
+     * @return Delimiter 使用 regex 分割文档
+     */
+    public String getDelimiter() {
+        return this.Delimiter;
+    }
+
+    /**
+     * Set 使用 regex 分割文档
+     * @param Delimiter 使用 regex 分割文档
+     */
+    public void setDelimiter(String Delimiter) {
+        this.Delimiter = Delimiter;
     }
 
     public UploadKnowledgeDocumentSetRequest() {
@@ -265,6 +288,9 @@ public class UploadKnowledgeDocumentSetRequest extends AbstractModel {
         if (source.DocumentSetId != null) {
             this.DocumentSetId = new String(source.DocumentSetId);
         }
+        if (source.Delimiter != null) {
+            this.Delimiter = new String(source.Delimiter);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class UploadKnowledgeDocumentSetRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileTitle", this.FileTitle);
         this.setParamSimple(map, prefix + "FileMetaData", this.FileMetaData);
         this.setParamSimple(map, prefix + "DocumentSetId", this.DocumentSetId);
+        this.setParamSimple(map, prefix + "Delimiter", this.Delimiter);
 
     }
 }

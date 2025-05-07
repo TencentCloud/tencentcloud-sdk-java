@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateListenerRequest extends AbstractModel {
 
     /**
-    * 负载均衡实例 ID。
+    * 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
     */
     @SerializedName("LoadBalancerId")
     @Expose
@@ -32,6 +32,7 @@ public class CreateListenerRequest extends AbstractModel {
 
     /**
     * 要将监听器创建到哪些端口，每个端口对应一个新的监听器。
+端口范围：1~65535
     */
     @SerializedName("Ports")
     @Expose
@@ -68,15 +69,15 @@ public class CreateListenerRequest extends AbstractModel {
     private CertificateInput Certificate;
 
     /**
-    * 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
+    * 会话保持时间，单位：秒。可选值：30~3600，默认为0，默认不开启。此参数仅适用于TCP/UDP监听器。
     */
     @SerializedName("SessionExpireTime")
     @Expose
     private Long SessionExpireTime;
 
     /**
-    * 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
+    * 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
     */
     @SerializedName("Scheduler")
     @Expose
@@ -149,66 +150,68 @@ public class CreateListenerRequest extends AbstractModel {
     private Long MaxCps;
 
     /**
-    * 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-2000。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
+    * 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-1980。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
     */
     @SerializedName("IdleConnectTimeout")
     @Expose
     private Long IdleConnectTimeout;
 
     /**
-    * 是否开启SNAT。
+    * 是否开启SNAT，True（开启）、False（关闭）
     */
     @SerializedName("SnatEnable")
     @Expose
     private Boolean SnatEnable;
 
     /**
-    * 全端口段监听器的结束端口
+    * 全端口段监听器的结束端口，端口范围：2 - 65535
     */
     @SerializedName("FullEndPorts")
     @Expose
     private Long [] FullEndPorts;
 
     /**
-    * 内网http监听器开启h2c开关
+    * 内网http监听器开启h2c开关，True（开启）、False（关闭）
     */
     @SerializedName("H2cSwitch")
     @Expose
     private Boolean H2cSwitch;
 
     /**
-    * TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+    * TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
     */
     @SerializedName("SslCloseSwitch")
     @Expose
     private Boolean SslCloseSwitch;
 
     /**
-    * 数据压缩模式
+    * 数据压缩模式。可选值：transparent（透传模式）、compatibility（兼容模式）
     */
     @SerializedName("DataCompressMode")
     @Expose
     private String DataCompressMode;
 
     /**
-     * Get 负载均衡实例 ID。 
-     * @return LoadBalancerId 负载均衡实例 ID。
+     * Get 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。 
+     * @return LoadBalancerId 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID。
-     * @param LoadBalancerId 负载均衡实例 ID。
+     * Set 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+     * @param LoadBalancerId 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 要将监听器创建到哪些端口，每个端口对应一个新的监听器。 
+     * Get 要将监听器创建到哪些端口，每个端口对应一个新的监听器。
+端口范围：1~65535 
      * @return Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器。
+端口范围：1~65535
      */
     public Long [] getPorts() {
         return this.Ports;
@@ -216,7 +219,9 @@ public class CreateListenerRequest extends AbstractModel {
 
     /**
      * Set 要将监听器创建到哪些端口，每个端口对应一个新的监听器。
+端口范围：1~65535
      * @param Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器。
+端口范围：1~65535
      */
     public void setPorts(Long [] Ports) {
         this.Ports = Ports;
@@ -295,36 +300,36 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。 
-     * @return SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
+     * Get 会话保持时间，单位：秒。可选值：30~3600，默认为0，默认不开启。此参数仅适用于TCP/UDP监听器。 
+     * @return SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认为0，默认不开启。此参数仅适用于TCP/UDP监听器。
      */
     public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
     /**
-     * Set 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
-     * @param SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
+     * Set 会话保持时间，单位：秒。可选值：30~3600，默认为0，默认不开启。此参数仅适用于TCP/UDP监听器。
+     * @param SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认为0，默认不开启。此参数仅适用于TCP/UDP监听器。
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 
     /**
-     * Get 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。 
-     * @return Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
+     * Get 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。 
+     * @return Scheduler 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
-     * @param Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
+     * Set 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
+     * @param Scheduler 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -487,96 +492,96 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-2000。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。 
-     * @return IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-2000。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
+     * Get 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-1980。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。 
+     * @return IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-1980。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
      */
     public Long getIdleConnectTimeout() {
         return this.IdleConnectTimeout;
     }
 
     /**
-     * Set 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-2000。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
-     * @param IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-2000。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
+     * Set 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-1980。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
+     * @param IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-1980。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
      */
     public void setIdleConnectTimeout(Long IdleConnectTimeout) {
         this.IdleConnectTimeout = IdleConnectTimeout;
     }
 
     /**
-     * Get 是否开启SNAT。 
-     * @return SnatEnable 是否开启SNAT。
+     * Get 是否开启SNAT，True（开启）、False（关闭） 
+     * @return SnatEnable 是否开启SNAT，True（开启）、False（关闭）
      */
     public Boolean getSnatEnable() {
         return this.SnatEnable;
     }
 
     /**
-     * Set 是否开启SNAT。
-     * @param SnatEnable 是否开启SNAT。
+     * Set 是否开启SNAT，True（开启）、False（关闭）
+     * @param SnatEnable 是否开启SNAT，True（开启）、False（关闭）
      */
     public void setSnatEnable(Boolean SnatEnable) {
         this.SnatEnable = SnatEnable;
     }
 
     /**
-     * Get 全端口段监听器的结束端口 
-     * @return FullEndPorts 全端口段监听器的结束端口
+     * Get 全端口段监听器的结束端口，端口范围：2 - 65535 
+     * @return FullEndPorts 全端口段监听器的结束端口，端口范围：2 - 65535
      */
     public Long [] getFullEndPorts() {
         return this.FullEndPorts;
     }
 
     /**
-     * Set 全端口段监听器的结束端口
-     * @param FullEndPorts 全端口段监听器的结束端口
+     * Set 全端口段监听器的结束端口，端口范围：2 - 65535
+     * @param FullEndPorts 全端口段监听器的结束端口，端口范围：2 - 65535
      */
     public void setFullEndPorts(Long [] FullEndPorts) {
         this.FullEndPorts = FullEndPorts;
     }
 
     /**
-     * Get 内网http监听器开启h2c开关 
-     * @return H2cSwitch 内网http监听器开启h2c开关
+     * Get 内网http监听器开启h2c开关，True（开启）、False（关闭） 
+     * @return H2cSwitch 内网http监听器开启h2c开关，True（开启）、False（关闭）
      */
     public Boolean getH2cSwitch() {
         return this.H2cSwitch;
     }
 
     /**
-     * Set 内网http监听器开启h2c开关
-     * @param H2cSwitch 内网http监听器开启h2c开关
+     * Set 内网http监听器开启h2c开关，True（开启）、False（关闭）
+     * @param H2cSwitch 内网http监听器开启h2c开关，True（开启）、False（关闭）
      */
     public void setH2cSwitch(Boolean H2cSwitch) {
         this.H2cSwitch = H2cSwitch;
     }
 
     /**
-     * Get TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关 
-     * @return SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+     * Get TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启） 
+     * @return SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
      */
     public Boolean getSslCloseSwitch() {
         return this.SslCloseSwitch;
     }
 
     /**
-     * Set TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
-     * @param SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+     * Set TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
+     * @param SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
      */
     public void setSslCloseSwitch(Boolean SslCloseSwitch) {
         this.SslCloseSwitch = SslCloseSwitch;
     }
 
     /**
-     * Get 数据压缩模式 
-     * @return DataCompressMode 数据压缩模式
+     * Get 数据压缩模式。可选值：transparent（透传模式）、compatibility（兼容模式） 
+     * @return DataCompressMode 数据压缩模式。可选值：transparent（透传模式）、compatibility（兼容模式）
      */
     public String getDataCompressMode() {
         return this.DataCompressMode;
     }
 
     /**
-     * Set 数据压缩模式
-     * @param DataCompressMode 数据压缩模式
+     * Set 数据压缩模式。可选值：transparent（透传模式）、compatibility（兼容模式）
+     * @param DataCompressMode 数据压缩模式。可选值：transparent（透传模式）、compatibility（兼容模式）
      */
     public void setDataCompressMode(String DataCompressMode) {
         this.DataCompressMode = DataCompressMode;

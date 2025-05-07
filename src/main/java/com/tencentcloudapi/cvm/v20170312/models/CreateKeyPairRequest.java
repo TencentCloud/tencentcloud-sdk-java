@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateKeyPairRequest extends AbstractModel {
 
     /**
-    * 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
+    * 密钥对名称，可由数字、字母和下划线组成，长度不超过25个字符。密钥对名称不能和已经存在的密钥对名称重复。
     */
     @SerializedName("KeyName")
     @Expose
@@ -48,16 +48,16 @@ public class CreateKeyPairRequest extends AbstractModel {
     private TagSpecification [] TagSpecification;
 
     /**
-     * Get 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。 
-     * @return KeyName 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
+     * Get 密钥对名称，可由数字、字母和下划线组成，长度不超过25个字符。密钥对名称不能和已经存在的密钥对名称重复。 
+     * @return KeyName 密钥对名称，可由数字、字母和下划线组成，长度不超过25个字符。密钥对名称不能和已经存在的密钥对名称重复。
      */
     public String getKeyName() {
         return this.KeyName;
     }
 
     /**
-     * Set 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
-     * @param KeyName 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
+     * Set 密钥对名称，可由数字、字母和下划线组成，长度不超过25个字符。密钥对名称不能和已经存在的密钥对名称重复。
+     * @param KeyName 密钥对名称，可由数字、字母和下划线组成，长度不超过25个字符。密钥对名称不能和已经存在的密钥对名称重复。
      */
     public void setKeyName(String KeyName) {
         this.KeyName = KeyName;

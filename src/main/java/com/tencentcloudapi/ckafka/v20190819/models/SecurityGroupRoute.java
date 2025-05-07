@@ -25,7 +25,6 @@ public class SecurityGroupRoute extends AbstractModel {
 
     /**
     * 路由信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceRoute")
     @Expose
@@ -33,7 +32,6 @@ public class SecurityGroupRoute extends AbstractModel {
 
     /**
     * 关联的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -41,7 +39,6 @@ public class SecurityGroupRoute extends AbstractModel {
 
     /**
     * ckafka集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -49,7 +46,6 @@ public class SecurityGroupRoute extends AbstractModel {
 
     /**
     * 路由vpcId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -57,17 +53,14 @@ public class SecurityGroupRoute extends AbstractModel {
 
     /**
     * 路由vip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-     * Get 路由信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由信息 
      * @return InstanceRoute 路由信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceRoute getInstanceRoute() {
         return this.InstanceRoute;
@@ -75,19 +68,15 @@ public class SecurityGroupRoute extends AbstractModel {
 
     /**
      * Set 路由信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceRoute 路由信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceRoute(InstanceRoute InstanceRoute) {
         this.InstanceRoute = InstanceRoute;
     }
 
     /**
-     * Get 关联的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的安全组列表 
      * @return SecurityGroupIds 关联的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
@@ -95,19 +84,15 @@ public class SecurityGroupRoute extends AbstractModel {
 
     /**
      * Set 关联的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupIds 关联的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get ckafka集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ckafka集群实例名称 
      * @return InstanceName ckafka集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -115,19 +100,15 @@ public class SecurityGroupRoute extends AbstractModel {
 
     /**
      * Set ckafka集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName ckafka集群实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 路由vpcId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由vpcId 
      * @return VpcId 路由vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -135,19 +116,15 @@ public class SecurityGroupRoute extends AbstractModel {
 
     /**
      * Set 路由vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 路由vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 路由vip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由vip 
      * @return Vip 路由vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -155,9 +132,7 @@ public class SecurityGroupRoute extends AbstractModel {
 
     /**
      * Set 路由vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip 路由vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;

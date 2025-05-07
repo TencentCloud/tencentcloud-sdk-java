@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class DescribeAuctionListRequest extends AbstractModel {
 
     /**
-    * 业务ID，通过接口DescribeBiddingList返回结果中获取
+    * 业务ID 
+通过接口[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)返回结果中获取
     */
     @SerializedName("BusinessId")
     @Expose
@@ -45,16 +46,20 @@ public class DescribeAuctionListRequest extends AbstractModel {
     private Long OffSet;
 
     /**
-     * Get 业务ID，通过接口DescribeBiddingList返回结果中获取 
-     * @return BusinessId 业务ID，通过接口DescribeBiddingList返回结果中获取
+     * Get 业务ID 
+通过接口[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)返回结果中获取 
+     * @return BusinessId 业务ID 
+通过接口[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)返回结果中获取
      */
     public String getBusinessId() {
         return this.BusinessId;
     }
 
     /**
-     * Set 业务ID，通过接口DescribeBiddingList返回结果中获取
-     * @param BusinessId 业务ID，通过接口DescribeBiddingList返回结果中获取
+     * Set 业务ID 
+通过接口[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)返回结果中获取
+     * @param BusinessId 业务ID 
+通过接口[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)返回结果中获取
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;

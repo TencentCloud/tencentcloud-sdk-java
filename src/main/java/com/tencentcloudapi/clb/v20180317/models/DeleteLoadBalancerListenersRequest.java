@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteLoadBalancerListenersRequest extends AbstractModel {
 
     /**
-    * 负载均衡实例ID。
+    * 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
+    * 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
     */
     @SerializedName("ListenerIds")
     @Expose
     private String [] ListenerIds;
 
     /**
-     * Get 负载均衡实例ID。 
-     * @return LoadBalancerId 负载均衡实例ID。
+     * Get 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。 
+     * @return LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例ID。
-     * @param LoadBalancerId 负载均衡实例ID。
+     * Set 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+     * @param LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。 
-     * @return ListenerIds 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
+     * Get 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。 
+     * @return ListenerIds 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
-     * @param ListenerIds 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
+     * Set 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+     * @param ListenerIds 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

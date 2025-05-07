@@ -38,21 +38,24 @@ public class DescribeUnPreDomainDetailResponse extends AbstractModel {
     private Long PreCount;
 
     /**
-    * 域名注册时间
+    * 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("RegTime")
     @Expose
     private String RegTime;
 
     /**
-    * 域名删除时间
+    * 域名删除时间 
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("DeleteTime")
     @Expose
     private String DeleteTime;
 
     /**
-    * 到期时间
+    * 到期时间 
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -143,15 +146,19 @@ noAction：无法操作
 
     /**
      * Get 域名注册时间 
-     * @return RegTime 域名注册时间
+格式:YYYY-MM-DD HH:mm:ss 
+     * @return RegTime 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getRegTime() {
         return this.RegTime;
     }
 
     /**
-     * Set 域名注册时间
-     * @param RegTime 域名注册时间
+     * Set 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param RegTime 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setRegTime(String RegTime) {
         this.RegTime = RegTime;
@@ -159,15 +166,19 @@ noAction：无法操作
 
     /**
      * Get 域名删除时间 
-     * @return DeleteTime 域名删除时间
+格式:YYYY-MM-DD HH:mm:ss 
+     * @return DeleteTime 域名删除时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getDeleteTime() {
         return this.DeleteTime;
     }
 
     /**
-     * Set 域名删除时间
-     * @param DeleteTime 域名删除时间
+     * Set 域名删除时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param DeleteTime 域名删除时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setDeleteTime(String DeleteTime) {
         this.DeleteTime = DeleteTime;
@@ -175,15 +186,19 @@ noAction：无法操作
 
     /**
      * Get 到期时间 
-     * @return ExpireTime 到期时间
+格式:YYYY-MM-DD HH:mm:ss 
+     * @return ExpireTime 到期时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 到期时间
-     * @param ExpireTime 到期时间
+     * Set 到期时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param ExpireTime 到期时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

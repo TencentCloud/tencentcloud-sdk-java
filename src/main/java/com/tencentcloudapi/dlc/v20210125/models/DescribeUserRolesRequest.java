@@ -59,6 +59,13 @@ public class DescribeUserRolesRequest extends AbstractModel {
     private String Sorting;
 
     /**
+    * 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+    */
+    @SerializedName("IsDefault")
+    @Expose
+    private Long IsDefault;
+
+    /**
      * Get 列举的数量限制 
      * @return Limit 列举的数量限制
      */
@@ -138,6 +145,22 @@ public class DescribeUserRolesRequest extends AbstractModel {
         this.Sorting = Sorting;
     }
 
+    /**
+     * Get 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻） 
+     * @return IsDefault 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+     */
+    public Long getIsDefault() {
+        return this.IsDefault;
+    }
+
+    /**
+     * Set 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+     * @param IsDefault 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+     */
+    public void setIsDefault(Long IsDefault) {
+        this.IsDefault = IsDefault;
+    }
+
     public DescribeUserRolesRequest() {
     }
 
@@ -161,6 +184,9 @@ public class DescribeUserRolesRequest extends AbstractModel {
         if (source.Sorting != null) {
             this.Sorting = new String(source.Sorting);
         }
+        if (source.IsDefault != null) {
+            this.IsDefault = new Long(source.IsDefault);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeUserRolesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Fuzzy", this.Fuzzy);
         this.setParamSimple(map, prefix + "SortBy", this.SortBy);
         this.setParamSimple(map, prefix + "Sorting", this.Sorting);
+        this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
 
     }
 }

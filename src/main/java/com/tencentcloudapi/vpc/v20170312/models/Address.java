@@ -163,7 +163,6 @@ public class Address extends AbstractModel {
 
     /**
     * 弹性公网IP关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -219,7 +218,6 @@ public class Address extends AbstractModel {
 
     /**
     * 传统弹性公网IPv6所属vpc唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnVpcId")
     @Expose
@@ -227,7 +225,6 @@ public class Address extends AbstractModel {
 
     /**
     * CDC唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DedicatedClusterId")
     @Expose
@@ -570,10 +567,8 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get 弹性公网IP关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性公网IP关联的标签列表。 
      * @return TagSet 弹性公网IP关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagSet() {
         return this.TagSet;
@@ -581,9 +576,7 @@ public class Address extends AbstractModel {
 
     /**
      * Set 弹性公网IP关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 弹性公网IP关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
@@ -710,10 +703,8 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get 传统弹性公网IPv6所属vpc唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 传统弹性公网IPv6所属vpc唯一ID 
      * @return UnVpcId 传统弹性公网IPv6所属vpc唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnVpcId() {
         return this.UnVpcId;
@@ -721,19 +712,15 @@ public class Address extends AbstractModel {
 
     /**
      * Set 传统弹性公网IPv6所属vpc唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnVpcId 传统弹性公网IPv6所属vpc唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnVpcId(String UnVpcId) {
         this.UnVpcId = UnVpcId;
     }
 
     /**
-     * Get CDC唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CDC唯一ID 
      * @return DedicatedClusterId CDC唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
@@ -741,9 +728,7 @@ public class Address extends AbstractModel {
 
     /**
      * Set CDC唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DedicatedClusterId CDC唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;

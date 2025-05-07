@@ -31,7 +31,7 @@ public class GetTextEmbeddingResponse extends AbstractModel {
     private EmbeddingData [] Data;
 
     /**
-    * 消耗token数量
+    * 向量化消耗的token数量。
     */
     @SerializedName("Usage")
     @Expose
@@ -61,16 +61,16 @@ public class GetTextEmbeddingResponse extends AbstractModel {
     }
 
     /**
-     * Get 消耗token数量 
-     * @return Usage 消耗token数量
+     * Get 向量化消耗的token数量。 
+     * @return Usage 向量化消耗的token数量。
      */
     public Usage getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set 消耗token数量
-     * @param Usage 消耗token数量
+     * Set 向量化消耗的token数量。
+     * @param Usage 向量化消耗的token数量。
      */
     public void setUsage(Usage Usage) {
         this.Usage = Usage;

@@ -24,20 +24,6 @@ import java.util.HashMap;
 public class GPUArgs extends AbstractModel {
 
     /**
-    * 是否启用MIG特性
-    */
-    @SerializedName("MIGEnable")
-    @Expose
-    private Boolean MIGEnable;
-
-    /**
-    * GPU驱动版本信息
-    */
-    @SerializedName("Driver")
-    @Expose
-    private DriverVersion Driver;
-
-    /**
     * CUDA版本信息
     */
     @SerializedName("CUDA")
@@ -59,36 +45,18 @@ public class GPUArgs extends AbstractModel {
     private CustomDriver CustomDriver;
 
     /**
-     * Get 是否启用MIG特性 
-     * @return MIGEnable 是否启用MIG特性
-     */
-    public Boolean getMIGEnable() {
-        return this.MIGEnable;
-    }
+    * GPU驱动版本信息
+    */
+    @SerializedName("Driver")
+    @Expose
+    private DriverVersion Driver;
 
     /**
-     * Set 是否启用MIG特性
-     * @param MIGEnable 是否启用MIG特性
-     */
-    public void setMIGEnable(Boolean MIGEnable) {
-        this.MIGEnable = MIGEnable;
-    }
-
-    /**
-     * Get GPU驱动版本信息 
-     * @return Driver GPU驱动版本信息
-     */
-    public DriverVersion getDriver() {
-        return this.Driver;
-    }
-
-    /**
-     * Set GPU驱动版本信息
-     * @param Driver GPU驱动版本信息
-     */
-    public void setDriver(DriverVersion Driver) {
-        this.Driver = Driver;
-    }
+    * 是否启用MIG特性
+    */
+    @SerializedName("MIGEnable")
+    @Expose
+    private Boolean MIGEnable;
 
     /**
      * Get CUDA版本信息 
@@ -138,6 +106,38 @@ public class GPUArgs extends AbstractModel {
         this.CustomDriver = CustomDriver;
     }
 
+    /**
+     * Get GPU驱动版本信息 
+     * @return Driver GPU驱动版本信息
+     */
+    public DriverVersion getDriver() {
+        return this.Driver;
+    }
+
+    /**
+     * Set GPU驱动版本信息
+     * @param Driver GPU驱动版本信息
+     */
+    public void setDriver(DriverVersion Driver) {
+        this.Driver = Driver;
+    }
+
+    /**
+     * Get 是否启用MIG特性 
+     * @return MIGEnable 是否启用MIG特性
+     */
+    public Boolean getMIGEnable() {
+        return this.MIGEnable;
+    }
+
+    /**
+     * Set 是否启用MIG特性
+     * @param MIGEnable 是否启用MIG特性
+     */
+    public void setMIGEnable(Boolean MIGEnable) {
+        this.MIGEnable = MIGEnable;
+    }
+
     public GPUArgs() {
     }
 
@@ -146,12 +146,6 @@ public class GPUArgs extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GPUArgs(GPUArgs source) {
-        if (source.MIGEnable != null) {
-            this.MIGEnable = new Boolean(source.MIGEnable);
-        }
-        if (source.Driver != null) {
-            this.Driver = new DriverVersion(source.Driver);
-        }
         if (source.CUDA != null) {
             this.CUDA = new DriverVersion(source.CUDA);
         }
@@ -161,6 +155,12 @@ public class GPUArgs extends AbstractModel {
         if (source.CustomDriver != null) {
             this.CustomDriver = new CustomDriver(source.CustomDriver);
         }
+        if (source.Driver != null) {
+            this.Driver = new DriverVersion(source.Driver);
+        }
+        if (source.MIGEnable != null) {
+            this.MIGEnable = new Boolean(source.MIGEnable);
+        }
     }
 
 
@@ -168,11 +168,11 @@ public class GPUArgs extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MIGEnable", this.MIGEnable);
-        this.setParamObj(map, prefix + "Driver.", this.Driver);
         this.setParamObj(map, prefix + "CUDA.", this.CUDA);
         this.setParamObj(map, prefix + "CUDNN.", this.CUDNN);
         this.setParamObj(map, prefix + "CustomDriver.", this.CustomDriver);
+        this.setParamObj(map, prefix + "Driver.", this.Driver);
+        this.setParamSimple(map, prefix + "MIGEnable", this.MIGEnable);
 
     }
 }

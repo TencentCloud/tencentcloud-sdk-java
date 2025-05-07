@@ -38,7 +38,7 @@ public class BasicTargetGroupInfo extends AbstractModel {
     private String TargetGroupName;
 
     /**
-    * 权重
+    * 目标组权重
     */
     @SerializedName("Weight")
     @Expose
@@ -77,16 +77,16 @@ public class BasicTargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 权重 
-     * @return Weight 权重
+     * Get 目标组权重 
+     * @return Weight 目标组权重
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 权重
-     * @param Weight 权重
+     * Set 目标组权重
+     * @param Weight 目标组权重
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

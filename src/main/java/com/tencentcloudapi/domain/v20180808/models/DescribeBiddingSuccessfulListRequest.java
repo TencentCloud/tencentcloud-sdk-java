@@ -25,6 +25,7 @@ public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
 
     /**
     * 页码
+默认：1
     */
     @SerializedName("PageNumber")
     @Expose
@@ -32,6 +33,7 @@ public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
 
     /**
     * 每页数量
+默认：20 取值范围【1，200】
     */
     @SerializedName("PageSize")
     @Expose
@@ -52,7 +54,9 @@ public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
     private Long [] Status;
 
     /**
-    * 排序字段：SuccessfulTime 预约结束时间
+    * 排序字段：
+默认<空>，不排序
+SuccessfulTime 预约结束时间
     */
     @SerializedName("SortField")
     @Expose
@@ -66,8 +70,10 @@ public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
     private String SortOrder;
 
     /**
-     * Get 页码 
+     * Get 页码
+默认：1 
      * @return PageNumber 页码
+默认：1
      */
     public Long getPageNumber() {
         return this.PageNumber;
@@ -75,15 +81,19 @@ public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
 
     /**
      * Set 页码
+默认：1
      * @param PageNumber 页码
+默认：1
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页数量 
+     * Get 每页数量
+默认：20 取值范围【1，200】 
      * @return PageSize 每页数量
+默认：20 取值范围【1，200】
      */
     public Long getPageSize() {
         return this.PageSize;
@@ -91,7 +101,9 @@ public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
 
     /**
      * Set 每页数量
+默认：20 取值范围【1，200】
      * @param PageSize 每页数量
+默认：20 取值范围【1，200】
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -130,16 +142,24 @@ public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段：SuccessfulTime 预约结束时间 
-     * @return SortField 排序字段：SuccessfulTime 预约结束时间
+     * Get 排序字段：
+默认<空>，不排序
+SuccessfulTime 预约结束时间 
+     * @return SortField 排序字段：
+默认<空>，不排序
+SuccessfulTime 预约结束时间
      */
     public String getSortField() {
         return this.SortField;
     }
 
     /**
-     * Set 排序字段：SuccessfulTime 预约结束时间
-     * @param SortField 排序字段：SuccessfulTime 预约结束时间
+     * Set 排序字段：
+默认<空>，不排序
+SuccessfulTime 预约结束时间
+     * @param SortField 排序字段：
+默认<空>，不排序
+SuccessfulTime 预约结束时间
      */
     public void setSortField(String SortField) {
         this.SortField = SortField;

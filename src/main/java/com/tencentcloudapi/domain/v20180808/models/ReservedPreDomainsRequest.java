@@ -31,7 +31,8 @@ public class ReservedPreDomainsRequest extends AbstractModel {
     private String [] DomainList;
 
     /**
-    * 模板ID 可通过DescribeTemplates接口获取
+    * 模板ID 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
     */
     @SerializedName("TemplateId")
     @Expose
@@ -68,16 +69,20 @@ public class ReservedPreDomainsRequest extends AbstractModel {
     }
 
     /**
-     * Get 模板ID 可通过DescribeTemplates接口获取 
-     * @return TemplateId 模板ID 可通过DescribeTemplates接口获取
+     * Get 模板ID 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取 
+     * @return TemplateId 模板ID 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板ID 可通过DescribeTemplates接口获取
-     * @param TemplateId 模板ID 可通过DescribeTemplates接口获取
+     * Set 模板ID 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
+     * @param TemplateId 模板ID 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

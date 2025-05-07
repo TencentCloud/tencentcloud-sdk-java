@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeBiddingSuccessfulDetailRequest extends AbstractModel {
 
     /**
-    * 预约ID
-可通过DescribeBiddingSuccessfulList接口获取
+    * 预约ID 
+可通过[DescribeBiddingSuccessfulList](https://cloud.tencent.com/document/api/242/106596)接口获取
     */
     @SerializedName("BusinessID")
     @Expose
     private String BusinessID;
 
     /**
-     * Get 预约ID
-可通过DescribeBiddingSuccessfulList接口获取 
-     * @return BusinessID 预约ID
-可通过DescribeBiddingSuccessfulList接口获取
+     * Get 预约ID 
+可通过[DescribeBiddingSuccessfulList](https://cloud.tencent.com/document/api/242/106596)接口获取 
+     * @return BusinessID 预约ID 
+可通过[DescribeBiddingSuccessfulList](https://cloud.tencent.com/document/api/242/106596)接口获取
      */
     public String getBusinessID() {
         return this.BusinessID;
     }
 
     /**
-     * Set 预约ID
-可通过DescribeBiddingSuccessfulList接口获取
-     * @param BusinessID 预约ID
-可通过DescribeBiddingSuccessfulList接口获取
+     * Set 预约ID 
+可通过[DescribeBiddingSuccessfulList](https://cloud.tencent.com/document/api/242/106596)接口获取
+     * @param BusinessID 预约ID 
+可通过[DescribeBiddingSuccessfulList](https://cloud.tencent.com/document/api/242/106596)接口获取
      */
     public void setBusinessID(String BusinessID) {
         this.BusinessID = BusinessID;

@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class DeleteLoadBalancerRequest extends AbstractModel {
 
     /**
-    * 要删除的负载均衡实例 ID数组，数组大小最大支持20。
+    * 要删除的负载均衡实例 ID 数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取数组大小最大支持20。
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-    * 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+    * 是否强制删除clb。True表示强制删除，False表示不是强制删除，需要做拦截校验。
+默认为 False
     */
     @SerializedName("ForceDelete")
     @Expose
     private Boolean ForceDelete;
 
     /**
-     * Get 要删除的负载均衡实例 ID数组，数组大小最大支持20。 
-     * @return LoadBalancerIds 要删除的负载均衡实例 ID数组，数组大小最大支持20。
+     * Get 要删除的负载均衡实例 ID 数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取数组大小最大支持20。 
+     * @return LoadBalancerIds 要删除的负载均衡实例 ID 数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取数组大小最大支持20。
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set 要删除的负载均衡实例 ID数组，数组大小最大支持20。
-     * @param LoadBalancerIds 要删除的负载均衡实例 ID数组，数组大小最大支持20。
+     * Set 要删除的负载均衡实例 ID 数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取数组大小最大支持20。
+     * @param LoadBalancerIds 要删除的负载均衡实例 ID 数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取数组大小最大支持20。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;
     }
 
     /**
-     * Get 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。 
-     * @return ForceDelete 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+     * Get 是否强制删除clb。True表示强制删除，False表示不是强制删除，需要做拦截校验。
+默认为 False 
+     * @return ForceDelete 是否强制删除clb。True表示强制删除，False表示不是强制删除，需要做拦截校验。
+默认为 False
      */
     public Boolean getForceDelete() {
         return this.ForceDelete;
     }
 
     /**
-     * Set 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
-     * @param ForceDelete 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+     * Set 是否强制删除clb。True表示强制删除，False表示不是强制删除，需要做拦截校验。
+默认为 False
+     * @param ForceDelete 是否强制删除clb。True表示强制删除，False表示不是强制删除，需要做拦截校验。
+默认为 False
      */
     public void setForceDelete(Boolean ForceDelete) {
         this.ForceDelete = ForceDelete;

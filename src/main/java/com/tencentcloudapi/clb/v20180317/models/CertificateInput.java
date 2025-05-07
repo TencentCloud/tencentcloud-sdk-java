@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class CertificateInput extends AbstractModel {
 
     /**
-    * 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+    * 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
+默认为 UNIDIRECTIONAL。
     */
     @SerializedName("SSLMode")
     @Expose
@@ -38,7 +39,7 @@ public class CertificateInput extends AbstractModel {
     private String SSLVerifyClient;
 
     /**
-    * 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
+    * 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
     */
     @SerializedName("CertId")
     @Expose
@@ -87,16 +88,20 @@ public class CertificateInput extends AbstractModel {
     private String CertCaContent;
 
     /**
-     * Get 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证 
-     * @return SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+     * Get 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
+默认为 UNIDIRECTIONAL。 
+     * @return SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
+默认为 UNIDIRECTIONAL。
      */
     public String getSSLMode() {
         return this.SSLMode;
     }
 
     /**
-     * Set 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
-     * @param SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+     * Set 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
+默认为 UNIDIRECTIONAL。
+     * @param SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
+默认为 UNIDIRECTIONAL。
      */
     public void setSSLMode(String SSLMode) {
         this.SSLMode = SSLMode;
@@ -119,16 +124,16 @@ public class CertificateInput extends AbstractModel {
     }
 
     /**
-     * Get 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。 
-     * @return CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
+     * Get 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。 
+     * @return CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
-     * @param CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
+     * Set 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
+     * @param CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeListenersRequest extends AbstractModel {
 
     /**
-    * 负载均衡实例 ID。
+    * 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685) 接口获取。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 要查询的负载均衡监听器 ID 数组，最大为100个。
+    * 要查询的负载均衡监听器 ID 数组，最大为100个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/api/214/30686) 接口获取。
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -45,39 +45,39 @@ public class DescribeListenersRequest extends AbstractModel {
     private String Protocol;
 
     /**
-    * 要查询的监听器的端口。
+    * 要查询的监听器的端口，端口范围：1-65535
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get 负载均衡实例 ID。 
-     * @return LoadBalancerId 负载均衡实例 ID。
+     * Get 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685) 接口获取。 
+     * @return LoadBalancerId 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685) 接口获取。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID。
-     * @param LoadBalancerId 负载均衡实例 ID。
+     * Set 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685) 接口获取。
+     * @param LoadBalancerId 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685) 接口获取。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 要查询的负载均衡监听器 ID 数组，最大为100个。 
-     * @return ListenerIds 要查询的负载均衡监听器 ID 数组，最大为100个。
+     * Get 要查询的负载均衡监听器 ID 数组，最大为100个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/api/214/30686) 接口获取。 
+     * @return ListenerIds 要查询的负载均衡监听器 ID 数组，最大为100个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/api/214/30686) 接口获取。
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set 要查询的负载均衡监听器 ID 数组，最大为100个。
-     * @param ListenerIds 要查询的负载均衡监听器 ID 数组，最大为100个。
+     * Set 要查询的负载均衡监听器 ID 数组，最大为100个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/api/214/30686) 接口获取。
+     * @param ListenerIds 要查询的负载均衡监听器 ID 数组，最大为100个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/api/214/30686) 接口获取。
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;
@@ -100,16 +100,16 @@ public class DescribeListenersRequest extends AbstractModel {
     }
 
     /**
-     * Get 要查询的监听器的端口。 
-     * @return Port 要查询的监听器的端口。
+     * Get 要查询的监听器的端口，端口范围：1-65535 
+     * @return Port 要查询的监听器的端口，端口范围：1-65535
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 要查询的监听器的端口。
-     * @param Port 要查询的监听器的端口。
+     * Set 要查询的监听器的端口，端口范围：1-65535
+     * @param Port 要查询的监听器的端口，端口范围：1-65535
      */
     public void setPort(Long Port) {
         this.Port = Port;

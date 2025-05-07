@@ -25,6 +25,7 @@ public class DescribeBiddingAppointListRequest extends AbstractModel {
 
     /**
     * 页码
+默认值1
     */
     @SerializedName("PageNumber")
     @Expose
@@ -32,6 +33,7 @@ public class DescribeBiddingAppointListRequest extends AbstractModel {
 
     /**
     * 每页数量
+默认：20 取值范围【1，200】
     */
     @SerializedName("PageSize")
     @Expose
@@ -53,7 +55,12 @@ public class DescribeBiddingAppointListRequest extends AbstractModel {
     private Long [] Status;
 
     /**
-    * 排序字段：AppointEndTime 预约结束时间
+    * 排序字段：
+默认<空>，不排序
+可选值：
+AppointEndTime 预约结束时间
+BiddingPrice 竞价保证金
+BiddingEndTime 竞价结束时间
     */
     @SerializedName("SortField")
     @Expose
@@ -67,8 +74,10 @@ public class DescribeBiddingAppointListRequest extends AbstractModel {
     private String SortOrder;
 
     /**
-     * Get 页码 
+     * Get 页码
+默认值1 
      * @return PageNumber 页码
+默认值1
      */
     public Long getPageNumber() {
         return this.PageNumber;
@@ -76,15 +85,19 @@ public class DescribeBiddingAppointListRequest extends AbstractModel {
 
     /**
      * Set 页码
+默认值1
      * @param PageNumber 页码
+默认值1
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页数量 
+     * Get 每页数量
+默认：20 取值范围【1，200】 
      * @return PageSize 每页数量
+默认：20 取值范围【1，200】
      */
     public Long getPageSize() {
         return this.PageSize;
@@ -92,7 +105,9 @@ public class DescribeBiddingAppointListRequest extends AbstractModel {
 
     /**
      * Set 每页数量
+默认：20 取值范围【1，200】
      * @param PageSize 每页数量
+默认：20 取值范围【1，200】
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -135,16 +150,36 @@ public class DescribeBiddingAppointListRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段：AppointEndTime 预约结束时间 
-     * @return SortField 排序字段：AppointEndTime 预约结束时间
+     * Get 排序字段：
+默认<空>，不排序
+可选值：
+AppointEndTime 预约结束时间
+BiddingPrice 竞价保证金
+BiddingEndTime 竞价结束时间 
+     * @return SortField 排序字段：
+默认<空>，不排序
+可选值：
+AppointEndTime 预约结束时间
+BiddingPrice 竞价保证金
+BiddingEndTime 竞价结束时间
      */
     public String getSortField() {
         return this.SortField;
     }
 
     /**
-     * Set 排序字段：AppointEndTime 预约结束时间
-     * @param SortField 排序字段：AppointEndTime 预约结束时间
+     * Set 排序字段：
+默认<空>，不排序
+可选值：
+AppointEndTime 预约结束时间
+BiddingPrice 竞价保证金
+BiddingEndTime 竞价结束时间
+     * @param SortField 排序字段：
+默认<空>，不排序
+可选值：
+AppointEndTime 预约结束时间
+BiddingPrice 竞价保证金
+BiddingEndTime 竞价结束时间
      */
     public void setSortField(String SortField) {
         this.SortField = SortField;

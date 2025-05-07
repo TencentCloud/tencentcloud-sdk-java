@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RunRerankResponse extends AbstractModel {
 
     /**
-    * 输出结果集
+    * 输出结果集。
     */
     @SerializedName("Data")
     @Expose
     private RerankResult [] Data;
 
     /**
-    * 消耗token数量
+    * 消耗token数量。
     */
     @SerializedName("Usage")
     @Expose
@@ -45,32 +45,32 @@ public class RunRerankResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 输出结果集 
-     * @return Data 输出结果集
+     * Get 输出结果集。 
+     * @return Data 输出结果集。
      */
     public RerankResult [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 输出结果集
-     * @param Data 输出结果集
+     * Set 输出结果集。
+     * @param Data 输出结果集。
      */
     public void setData(RerankResult [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 消耗token数量 
-     * @return Usage 消耗token数量
+     * Get 消耗token数量。 
+     * @return Usage 消耗token数量。
      */
     public Usage getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set 消耗token数量
-     * @param Usage 消耗token数量
+     * Set 消耗token数量。
+     * @param Usage 消耗token数量。
      */
     public void setUsage(Usage Usage) {
         this.Usage = Usage;

@@ -25,7 +25,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 下载任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadTaskId")
     @Expose
@@ -33,7 +32,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 通道 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelId")
     @Expose
@@ -41,7 +39,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 通道名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelName")
     @Expose
@@ -49,7 +46,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 通道编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelCode")
     @Expose
@@ -57,7 +53,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceName")
     @Expose
@@ -65,7 +60,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceCode")
     @Expose
@@ -74,7 +68,6 @@ public class VideoDownloadTask extends AbstractModel {
     /**
     * 任务状态（0：未执行；1：执行中；2 任务完成；
 3：任务失败）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -82,7 +75,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 下载录像时间段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoTimeSection")
     @Expose
@@ -90,7 +82,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 倍速
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scale")
     @Expose
@@ -98,7 +89,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 下载时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadTime")
     @Expose
@@ -106,7 +96,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 录像大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoSize")
     @Expose
@@ -114,7 +103,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -122,7 +110,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -130,7 +117,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 文件下载地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileDownloadUrl")
     @Expose
@@ -138,7 +124,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedReason")
     @Expose
@@ -146,7 +131,6 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * 生命周期规则，热存天数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Expire")
     @Expose
@@ -154,17 +138,14 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
     * mp4预览地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewUrl")
     @Expose
     private String PreviewUrl;
 
     /**
-     * Get 下载任务 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下载任务 ID 
      * @return DownloadTaskId 下载任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadTaskId() {
         return this.DownloadTaskId;
@@ -172,19 +153,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 下载任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadTaskId 下载任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadTaskId(String DownloadTaskId) {
         this.DownloadTaskId = DownloadTaskId;
     }
 
     /**
-     * Get 通道 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道 ID 
      * @return ChannelId 通道 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelId() {
         return this.ChannelId;
@@ -192,19 +169,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 通道 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelId 通道 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get 通道名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道名称 
      * @return ChannelName 通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelName() {
         return this.ChannelName;
@@ -212,19 +185,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelName 通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;
     }
 
     /**
-     * Get 通道编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通道编码 
      * @return ChannelCode 通道编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelCode() {
         return this.ChannelCode;
@@ -232,19 +201,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 通道编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChannelCode 通道编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelCode(String ChannelCode) {
         this.ChannelCode = ChannelCode;
     }
 
     /**
-     * Get 设备名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备名称 
      * @return DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceName() {
         return this.DeviceName;
@@ -252,19 +217,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 设备编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备编码 
      * @return DeviceCode 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceCode() {
         return this.DeviceCode;
@@ -272,9 +233,7 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceCode 设备编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceCode(String DeviceCode) {
         this.DeviceCode = DeviceCode;
@@ -282,11 +241,9 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Get 任务状态（0：未执行；1：执行中；2 任务完成；
-3：任务失败）
-注意：此字段可能返回 null，表示取不到有效值。 
+3：任务失败） 
      * @return Status 任务状态（0：未执行；1：执行中；2 任务完成；
 3：任务失败）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -295,20 +252,16 @@ public class VideoDownloadTask extends AbstractModel {
     /**
      * Set 任务状态（0：未执行；1：执行中；2 任务完成；
 3：任务失败）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务状态（0：未执行；1：执行中；2 任务完成；
 3：任务失败）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 下载录像时间段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下载录像时间段 
      * @return VideoTimeSection 下载录像时间段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVideoTimeSection() {
         return this.VideoTimeSection;
@@ -316,19 +269,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 下载录像时间段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoTimeSection 下载录像时间段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoTimeSection(String VideoTimeSection) {
         this.VideoTimeSection = VideoTimeSection;
     }
 
     /**
-     * Get 倍速
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 倍速 
      * @return Scale 倍速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScale() {
         return this.Scale;
@@ -336,19 +285,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 倍速
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scale 倍速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScale(Long Scale) {
         this.Scale = Scale;
     }
 
     /**
-     * Get 下载时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下载时长 
      * @return DownloadTime 下载时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDownloadTime() {
         return this.DownloadTime;
@@ -356,19 +301,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 下载时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadTime 下载时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadTime(Long DownloadTime) {
         this.DownloadTime = DownloadTime;
     }
 
     /**
-     * Get 录像大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录像大小 
      * @return VideoSize 录像大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVideoSize() {
         return this.VideoSize;
@@ -376,19 +317,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 录像大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoSize 录像大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoSize(Long VideoSize) {
         this.VideoSize = VideoSize;
     }
 
     /**
-     * Get 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务开始时间 
      * @return StartTime 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -396,19 +333,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务结束时间 
      * @return EndTime 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -416,19 +349,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 文件下载地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件下载地址 
      * @return FileDownloadUrl 文件下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileDownloadUrl() {
         return this.FileDownloadUrl;
@@ -436,19 +365,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 文件下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileDownloadUrl 文件下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileDownloadUrl(String FileDownloadUrl) {
         this.FileDownloadUrl = FileDownloadUrl;
     }
 
     /**
-     * Get 失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败原因 
      * @return FailedReason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailedReason() {
         return this.FailedReason;
@@ -456,19 +381,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedReason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedReason(String FailedReason) {
         this.FailedReason = FailedReason;
     }
 
     /**
-     * Get 生命周期规则，热存天数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生命周期规则，热存天数 
      * @return Expire 生命周期规则，热存天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpire() {
         return this.Expire;
@@ -476,19 +397,15 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set 生命周期规则，热存天数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Expire 生命周期规则，热存天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpire(Long Expire) {
         this.Expire = Expire;
     }
 
     /**
-     * Get mp4预览地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mp4预览地址 
      * @return PreviewUrl mp4预览地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewUrl() {
         return this.PreviewUrl;
@@ -496,9 +413,7 @@ public class VideoDownloadTask extends AbstractModel {
 
     /**
      * Set mp4预览地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreviewUrl mp4预览地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewUrl(String PreviewUrl) {
         this.PreviewUrl = PreviewUrl;

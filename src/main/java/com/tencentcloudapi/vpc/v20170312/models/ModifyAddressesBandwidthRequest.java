@@ -24,14 +24,15 @@ import java.util.HashMap;
 public class ModifyAddressesBandwidthRequest extends AbstractModel {
 
     /**
-    * EIP唯一标识ID列表，形如'eip-xxxx'
+    * EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+
     */
     @SerializedName("AddressIds")
     @Expose
     private String [] AddressIds;
 
     /**
-    * 调整带宽目标值
+    * 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -52,32 +53,36 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel {
     private String EndTime;
 
     /**
-     * Get EIP唯一标识ID列表，形如'eip-xxxx' 
-     * @return AddressIds EIP唯一标识ID列表，形如'eip-xxxx'
+     * Get EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+ 
+     * @return AddressIds EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+
      */
     public String [] getAddressIds() {
         return this.AddressIds;
     }
 
     /**
-     * Set EIP唯一标识ID列表，形如'eip-xxxx'
-     * @param AddressIds EIP唯一标识ID列表，形如'eip-xxxx'
+     * Set EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+
+     * @param AddressIds EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+
      */
     public void setAddressIds(String [] AddressIds) {
         this.AddressIds = AddressIds;
     }
 
     /**
-     * Get 调整带宽目标值 
-     * @return InternetMaxBandwidthOut 调整带宽目标值
+     * Get 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。 
+     * @return InternetMaxBandwidthOut 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 调整带宽目标值
-     * @param InternetMaxBandwidthOut 调整带宽目标值
+     * Set 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
+     * @param InternetMaxBandwidthOut 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;

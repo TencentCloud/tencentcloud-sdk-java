@@ -25,6 +25,7 @@ public class ModifyDomainDNSBatchRequest extends AbstractModel {
 
     /**
     * 批量操作的域名。
+一次提交不超过4000个
     */
     @SerializedName("Domains")
     @Expose
@@ -32,14 +33,17 @@ public class ModifyDomainDNSBatchRequest extends AbstractModel {
 
     /**
     * 域名DNS 数组。
+不少于2个，一般建议2-6个
     */
     @SerializedName("Dns")
     @Expose
     private String [] Dns;
 
     /**
-     * Get 批量操作的域名。 
+     * Get 批量操作的域名。
+一次提交不超过4000个 
      * @return Domains 批量操作的域名。
+一次提交不超过4000个
      */
     public String [] getDomains() {
         return this.Domains;
@@ -47,15 +51,19 @@ public class ModifyDomainDNSBatchRequest extends AbstractModel {
 
     /**
      * Set 批量操作的域名。
+一次提交不超过4000个
      * @param Domains 批量操作的域名。
+一次提交不超过4000个
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get 域名DNS 数组。 
+     * Get 域名DNS 数组。
+不少于2个，一般建议2-6个 
      * @return Dns 域名DNS 数组。
+不少于2个，一般建议2-6个
      */
     public String [] getDns() {
         return this.Dns;
@@ -63,7 +71,9 @@ public class ModifyDomainDNSBatchRequest extends AbstractModel {
 
     /**
      * Set 域名DNS 数组。
+不少于2个，一般建议2-6个
      * @param Dns 域名DNS 数组。
+不少于2个，一般建议2-6个
      */
     public void setDns(String [] Dns) {
         this.Dns = Dns;

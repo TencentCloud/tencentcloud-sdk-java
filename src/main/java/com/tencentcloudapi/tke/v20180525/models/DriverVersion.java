@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class DriverVersion extends AbstractModel {
 
     /**
-    * GPU驱动或者CUDA的版本
-    */
-    @SerializedName("Version")
-    @Expose
-    private String Version;
-
-    /**
     * GPU驱动或者CUDA的名字
     */
     @SerializedName("Name")
@@ -38,20 +31,11 @@ public class DriverVersion extends AbstractModel {
     private String Name;
 
     /**
-     * Get GPU驱动或者CUDA的版本 
-     * @return Version GPU驱动或者CUDA的版本
-     */
-    public String getVersion() {
-        return this.Version;
-    }
-
-    /**
-     * Set GPU驱动或者CUDA的版本
-     * @param Version GPU驱动或者CUDA的版本
-     */
-    public void setVersion(String Version) {
-        this.Version = Version;
-    }
+    * GPU驱动或者CUDA的版本
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
 
     /**
      * Get GPU驱动或者CUDA的名字 
@@ -69,6 +53,22 @@ public class DriverVersion extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get GPU驱动或者CUDA的版本 
+     * @return Version GPU驱动或者CUDA的版本
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set GPU驱动或者CUDA的版本
+     * @param Version GPU驱动或者CUDA的版本
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
     public DriverVersion() {
     }
 
@@ -77,11 +77,11 @@ public class DriverVersion extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DriverVersion(DriverVersion source) {
-        if (source.Version != null) {
-            this.Version = new String(source.Version);
-        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
         }
     }
 
@@ -90,8 +90,8 @@ public class DriverVersion extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

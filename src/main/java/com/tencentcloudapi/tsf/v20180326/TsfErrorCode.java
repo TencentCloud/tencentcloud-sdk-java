@@ -99,6 +99,9 @@ public enum TsfErrorCode {
      /* 寻找独占配置中心相关指标异常 */
      FAILEDOPERATION_FINDMETRICSEXCLUSIVEERROR("FailedOperation.FindMetricsExclusiveError"),
      
+     /* 网关通用异常:%s。 */
+     FAILEDOPERATION_GATEWAYCOMMONERROR("FailedOperation.GatewayCommonError"),
+     
      /* 远端访问错误: %s。 */
      FAILEDOPERATION_GATEWAYREMOTECALLERROR("FailedOperation.GatewayRemoteCallError"),
      

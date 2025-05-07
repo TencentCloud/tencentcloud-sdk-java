@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class GetDocumentParseResultResponse extends AbstractModel {
 
     /**
-    * 任务状态
+    * 任务状态，-1：失败，0：运行中，1：成功。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 结果文件
+    * 结果文件。
     */
     @SerializedName("DocumentParseResultUrl")
     @Expose
     private String DocumentParseResultUrl;
 
     /**
-    * 失败的页码
+    * 失败的页码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedPages")
@@ -53,41 +53,41 @@ public class GetDocumentParseResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务状态 
-     * @return Status 任务状态
+     * Get 任务状态，-1：失败，0：运行中，1：成功。 
+     * @return Status 任务状态，-1：失败，0：运行中，1：成功。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态
-     * @param Status 任务状态
+     * Set 任务状态，-1：失败，0：运行中，1：成功。
+     * @param Status 任务状态，-1：失败，0：运行中，1：成功。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 结果文件 
-     * @return DocumentParseResultUrl 结果文件
+     * Get 结果文件。 
+     * @return DocumentParseResultUrl 结果文件。
      */
     public String getDocumentParseResultUrl() {
         return this.DocumentParseResultUrl;
     }
 
     /**
-     * Set 结果文件
-     * @param DocumentParseResultUrl 结果文件
+     * Set 结果文件。
+     * @param DocumentParseResultUrl 结果文件。
      */
     public void setDocumentParseResultUrl(String DocumentParseResultUrl) {
         this.DocumentParseResultUrl = DocumentParseResultUrl;
     }
 
     /**
-     * Get 失败的页码
+     * Get 失败的页码。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailedPages 失败的页码
+     * @return FailedPages 失败的页码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getFailedPages() {
@@ -95,9 +95,9 @@ public class GetDocumentParseResultResponse extends AbstractModel {
     }
 
     /**
-     * Set 失败的页码
+     * Set 失败的页码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailedPages 失败的页码
+     * @param FailedPages 失败的页码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedPages(Long [] FailedPages) {

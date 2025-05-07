@@ -31,7 +31,7 @@ public class DescribeTaskResultResponse extends AbstractModel {
     private Long TaskId;
 
     /**
-    * 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+    * 执行结果，包括"SUCCESS"：异步任务执行成功, "FAILED"：异步任务执行失败, "RUNNING"：异步任务执行中
     */
     @SerializedName("Result")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeTaskResultResponse extends AbstractModel {
     }
 
     /**
-     * Get 执行结果，包括"SUCCESS", "FAILED", "RUNNING" 
-     * @return Result 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+     * Get 执行结果，包括"SUCCESS"：异步任务执行成功, "FAILED"：异步任务执行失败, "RUNNING"：异步任务执行中 
+     * @return Result 执行结果，包括"SUCCESS"：异步任务执行成功, "FAILED"：异步任务执行失败, "RUNNING"：异步任务执行中
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
-     * @param Result 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+     * Set 执行结果，包括"SUCCESS"：异步任务执行成功, "FAILED"：异步任务执行失败, "RUNNING"：异步任务执行中
+     * @param Result 执行结果，包括"SUCCESS"：异步任务执行成功, "FAILED"：异步任务执行失败, "RUNNING"：异步任务执行中
      */
     public void setResult(String Result) {
         this.Result = Result;
