@@ -28,7 +28,8 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
 <ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
 <li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li>
+</ul></li>
 </ul>
     */
     @SerializedName("InternetChargeType")
@@ -42,6 +43,7 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
 <li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
 <li>账号为传统账户类型的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -56,13 +58,9 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
 
     /**
     * EIP类型。默认值：EIP。
-
-<ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul><ul style="margin:0">
-        <li>高防IP，可选值：<ul>
-                <li>AntiDDoSEIP：高防IP</li>
-            </ul>
-        </li>
-    </ul>
+<ul style="margin:0"><li>弹性公网IP，可选值：<ul><li>EIP：弹性公网IP</li></ul></li></ul>
+<ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅新加坡和中国香港支持精品IP。</li></ul>
+<ul style="margin:0"><li>高防IP，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li></ul>
     */
     @SerializedName("AddressType")
     @Expose
@@ -73,13 +71,15 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
 <ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
 <li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li>
+</ul></li>
 </ul> 
      * @return InternetChargeType EIP计费方式。
 <ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
 <li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li>
+</ul></li>
 </ul>
      */
     public String getInternetChargeType() {
@@ -91,13 +91,15 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
 <ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
 <li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li>
+</ul></li>
 </ul>
      * @param InternetChargeType EIP计费方式。
 <ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
 <li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
+<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li>
+</ul></li>
 </ul>
      */
     public void setInternetChargeType(String InternetChargeType) {
@@ -110,13 +112,15 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
 <li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
 <li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
-<li>账号为传统账户类型的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul> 
+<li>账号为传统账户类型的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+ 
      * @return InternetMaxBandwidthOut EIP出带宽上限，单位：Mbps。
 <ul style="margin:0"><li>账号为标准账户类型的用户，可选值范围取决于EIP计费方式：<ul>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
 <li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
 <li>账号为传统账户类型的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
@@ -129,12 +133,14 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
 <li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
 <li>账号为传统账户类型的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+
      * @param InternetMaxBandwidthOut EIP出带宽上限，单位：Mbps。
 <ul style="margin:0"><li>账号为标准账户类型的用户，可选值范围取决于EIP计费方式：<ul>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
 <li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
 <li>账号为传统账户类型的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
@@ -158,21 +164,13 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
 
     /**
      * Get EIP类型。默认值：EIP。
-
-<ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul><ul style="margin:0">
-        <li>高防IP，可选值：<ul>
-                <li>AntiDDoSEIP：高防IP</li>
-            </ul>
-        </li>
-    </ul> 
+<ul style="margin:0"><li>弹性公网IP，可选值：<ul><li>EIP：弹性公网IP</li></ul></li></ul>
+<ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅新加坡和中国香港支持精品IP。</li></ul>
+<ul style="margin:0"><li>高防IP，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li></ul> 
      * @return AddressType EIP类型。默认值：EIP。
-
-<ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul><ul style="margin:0">
-        <li>高防IP，可选值：<ul>
-                <li>AntiDDoSEIP：高防IP</li>
-            </ul>
-        </li>
-    </ul>
+<ul style="margin:0"><li>弹性公网IP，可选值：<ul><li>EIP：弹性公网IP</li></ul></li></ul>
+<ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅新加坡和中国香港支持精品IP。</li></ul>
+<ul style="margin:0"><li>高防IP，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li></ul>
      */
     public String getAddressType() {
         return this.AddressType;
@@ -180,21 +178,13 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
 
     /**
      * Set EIP类型。默认值：EIP。
-
-<ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul><ul style="margin:0">
-        <li>高防IP，可选值：<ul>
-                <li>AntiDDoSEIP：高防IP</li>
-            </ul>
-        </li>
-    </ul>
+<ul style="margin:0"><li>弹性公网IP，可选值：<ul><li>EIP：弹性公网IP</li></ul></li></ul>
+<ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅新加坡和中国香港支持精品IP。</li></ul>
+<ul style="margin:0"><li>高防IP，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li></ul>
      * @param AddressType EIP类型。默认值：EIP。
-
-<ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul><ul style="margin:0">
-        <li>高防IP，可选值：<ul>
-                <li>AntiDDoSEIP：高防IP</li>
-            </ul>
-        </li>
-    </ul>
+<ul style="margin:0"><li>弹性公网IP，可选值：<ul><li>EIP：弹性公网IP</li></ul></li></ul>
+<ul style="margin:0"><li>精品IP，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅新加坡和中国香港支持精品IP。</li></ul>
+<ul style="margin:0"><li>高防IP，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li></ul>
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;

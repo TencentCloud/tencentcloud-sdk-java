@@ -1527,6 +1527,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *修改实例攻击日志投递开关，企业版及以上版本可以开通，否则返回错误
+     * @param req ModifyInstanceAttackLogPostRequest
+     * @return ModifyInstanceAttackLogPostResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceAttackLogPostResponse ModifyInstanceAttackLogPost(ModifyInstanceAttackLogPostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceAttackLogPost", ModifyInstanceAttackLogPostResponse.class);
+    }
+
+    /**
      *修改实例的QPS弹性计费开关
      * @param req ModifyInstanceElasticModeRequest
      * @return ModifyInstanceElasticModeResponse

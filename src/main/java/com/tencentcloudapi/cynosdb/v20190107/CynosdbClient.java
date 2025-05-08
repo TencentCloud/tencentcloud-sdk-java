@@ -138,6 +138,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *关闭SSL加密
+     * @param req CloseSSLRequest
+     * @return CloseSSLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseSSLResponse CloseSSL(CloseSSLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseSSL", CloseSSLResponse.class);
+    }
+
+    /**
      *本接口（CloseWan）用于关闭外网。
      * @param req CloseWanRequest
      * @return CloseWanResponse

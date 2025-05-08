@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class VpcEndPointServiceUser extends AbstractModel {
 
     /**
-    * AppId。
+    * AppId。可通过登录 腾讯云账号中心控制台 获取。
     */
     @SerializedName("Owner")
     @Expose
     private Long Owner;
 
     /**
-    * Uin。
+    * 用户Uin。可通过登录 腾讯云账号中心控制台 获取。
     */
     @SerializedName("UserUin")
     @Expose
@@ -45,46 +45,47 @@ public class VpcEndPointServiceUser extends AbstractModel {
     private String Description;
 
     /**
-    * 创建时间。
+    * 创建时间。格式为字符串YYYY-MM-DD HH:MM:SS。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 终端节点服务ID。
+    * 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+
     */
     @SerializedName("EndPointServiceId")
     @Expose
     private String EndPointServiceId;
 
     /**
-     * Get AppId。 
-     * @return Owner AppId。
+     * Get AppId。可通过登录 腾讯云账号中心控制台 获取。 
+     * @return Owner AppId。可通过登录 腾讯云账号中心控制台 获取。
      */
     public Long getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set AppId。
-     * @param Owner AppId。
+     * Set AppId。可通过登录 腾讯云账号中心控制台 获取。
+     * @param Owner AppId。可通过登录 腾讯云账号中心控制台 获取。
      */
     public void setOwner(Long Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get Uin。 
-     * @return UserUin Uin。
+     * Get 用户Uin。可通过登录 腾讯云账号中心控制台 获取。 
+     * @return UserUin 用户Uin。可通过登录 腾讯云账号中心控制台 获取。
      */
     public String getUserUin() {
         return this.UserUin;
     }
 
     /**
-     * Set Uin。
-     * @param UserUin Uin。
+     * Set 用户Uin。可通过登录 腾讯云账号中心控制台 获取。
+     * @param UserUin 用户Uin。可通过登录 腾讯云账号中心控制台 获取。
      */
     public void setUserUin(String UserUin) {
         this.UserUin = UserUin;
@@ -107,32 +108,36 @@ public class VpcEndPointServiceUser extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreateTime 创建时间。
+     * Get 创建时间。格式为字符串YYYY-MM-DD HH:MM:SS。 
+     * @return CreateTime 创建时间。格式为字符串YYYY-MM-DD HH:MM:SS。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreateTime 创建时间。
+     * Set 创建时间。格式为字符串YYYY-MM-DD HH:MM:SS。
+     * @param CreateTime 创建时间。格式为字符串YYYY-MM-DD HH:MM:SS。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 终端节点服务ID。 
-     * @return EndPointServiceId 终端节点服务ID。
+     * Get 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+ 
+     * @return EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+
      */
     public String getEndPointServiceId() {
         return this.EndPointServiceId;
     }
 
     /**
-     * Set 终端节点服务ID。
-     * @param EndPointServiceId 终端节点服务ID。
+     * Set 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+
+     * @param EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+
      */
     public void setEndPointServiceId(String EndPointServiceId) {
         this.EndPointServiceId = EndPointServiceId;

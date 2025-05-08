@@ -32,7 +32,6 @@ public class PolicyDetail extends AbstractModel {
 
     /**
     * 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyName")
     @Expose
@@ -55,10 +54,8 @@ public class PolicyDetail extends AbstractModel {
     }
 
     /**
-     * Get 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名称。 
      * @return PolicyName 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -66,9 +63,7 @@ public class PolicyDetail extends AbstractModel {
 
     /**
      * Set 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyName 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class InquiryPriceRenewAddressesRequest extends AbstractModel {
 
     /**
-    * 续费资源实例ID。
+    * 续费资源实例ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
     */
     @SerializedName("AddressIds")
     @Expose
     private String [] AddressIds;
 
     /**
-    * 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递。
+    * 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，不支持其他计费模式。
     */
     @SerializedName("AddressChargePrepaid")
     @Expose
     private AddressChargePrepaid AddressChargePrepaid;
 
     /**
-     * Get 续费资源实例ID。 
-     * @return AddressIds 续费资源实例ID。
+     * Get 续费资源实例ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。 
+     * @return AddressIds 续费资源实例ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     public String [] getAddressIds() {
         return this.AddressIds;
     }
 
     /**
-     * Set 续费资源实例ID。
-     * @param AddressIds 续费资源实例ID。
+     * Set 续费资源实例ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+     * @param AddressIds 续费资源实例ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     public void setAddressIds(String [] AddressIds) {
         this.AddressIds = AddressIds;
     }
 
     /**
-     * Get 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递。 
-     * @return AddressChargePrepaid 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递。
+     * Get 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，不支持其他计费模式。 
+     * @return AddressChargePrepaid 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，不支持其他计费模式。
      */
     public AddressChargePrepaid getAddressChargePrepaid() {
         return this.AddressChargePrepaid;
     }
 
     /**
-     * Set 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递。
-     * @param AddressChargePrepaid 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递。
+     * Set 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，不支持其他计费模式。
+     * @param AddressChargePrepaid 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，不支持其他计费模式。
      */
     public void setAddressChargePrepaid(AddressChargePrepaid AddressChargePrepaid) {
         this.AddressChargePrepaid = AddressChargePrepaid;

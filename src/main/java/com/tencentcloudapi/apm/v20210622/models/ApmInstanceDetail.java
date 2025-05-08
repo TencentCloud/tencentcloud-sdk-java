@@ -289,6 +289,20 @@ public class ApmInstanceDetail extends AbstractModel {
     private Long StopReason;
 
     /**
+    * 是否开远程命令执行检测（0=关， 1=开）
+    */
+    @SerializedName("IsRemoteCommandExecutionAnalysis")
+    @Expose
+    private Long IsRemoteCommandExecutionAnalysis;
+
+    /**
+    * 是否开内存马执行检测（0=关， 1=开）
+    */
+    @SerializedName("IsMemoryHijackingAnalysis")
+    @Expose
+    private Long IsMemoryHijackingAnalysis;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceId 业务系统 ID
      */
@@ -904,6 +918,38 @@ public class ApmInstanceDetail extends AbstractModel {
         this.StopReason = StopReason;
     }
 
+    /**
+     * Get 是否开远程命令执行检测（0=关， 1=开） 
+     * @return IsRemoteCommandExecutionAnalysis 是否开远程命令执行检测（0=关， 1=开）
+     */
+    public Long getIsRemoteCommandExecutionAnalysis() {
+        return this.IsRemoteCommandExecutionAnalysis;
+    }
+
+    /**
+     * Set 是否开远程命令执行检测（0=关， 1=开）
+     * @param IsRemoteCommandExecutionAnalysis 是否开远程命令执行检测（0=关， 1=开）
+     */
+    public void setIsRemoteCommandExecutionAnalysis(Long IsRemoteCommandExecutionAnalysis) {
+        this.IsRemoteCommandExecutionAnalysis = IsRemoteCommandExecutionAnalysis;
+    }
+
+    /**
+     * Get 是否开内存马执行检测（0=关， 1=开） 
+     * @return IsMemoryHijackingAnalysis 是否开内存马执行检测（0=关， 1=开）
+     */
+    public Long getIsMemoryHijackingAnalysis() {
+        return this.IsMemoryHijackingAnalysis;
+    }
+
+    /**
+     * Set 是否开内存马执行检测（0=关， 1=开）
+     * @param IsMemoryHijackingAnalysis 是否开内存马执行检测（0=关， 1=开）
+     */
+    public void setIsMemoryHijackingAnalysis(Long IsMemoryHijackingAnalysis) {
+        this.IsMemoryHijackingAnalysis = IsMemoryHijackingAnalysis;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -1029,6 +1075,12 @@ public class ApmInstanceDetail extends AbstractModel {
         if (source.StopReason != null) {
             this.StopReason = new Long(source.StopReason);
         }
+        if (source.IsRemoteCommandExecutionAnalysis != null) {
+            this.IsRemoteCommandExecutionAnalysis = new Long(source.IsRemoteCommandExecutionAnalysis);
+        }
+        if (source.IsMemoryHijackingAnalysis != null) {
+            this.IsMemoryHijackingAnalysis = new Long(source.IsMemoryHijackingAnalysis);
+        }
     }
 
 
@@ -1073,6 +1125,8 @@ public class ApmInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
         this.setParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
         this.setParamSimple(map, prefix + "StopReason", this.StopReason);
+        this.setParamSimple(map, prefix + "IsRemoteCommandExecutionAnalysis", this.IsRemoteCommandExecutionAnalysis);
+        this.setParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
 
     }
 }

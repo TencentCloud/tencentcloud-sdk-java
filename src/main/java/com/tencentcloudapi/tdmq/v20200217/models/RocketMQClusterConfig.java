@@ -103,6 +103,20 @@ public class RocketMQClusterConfig extends AbstractModel {
     private RocketMQTopicDistribution [] TopicDistribution;
 
     /**
+    * 最大角色数量
+    */
+    @SerializedName("MaxRoleNum")
+    @Expose
+    private Long MaxRoleNum;
+
+    /**
+    * TPS限额
+    */
+    @SerializedName("MaxTpsLimit")
+    @Expose
+    private Long MaxTpsLimit;
+
+    /**
      * Get 单命名空间TPS上限 
      * @return MaxTpsPerNamespace 单命名空间TPS上限
      * @deprecated
@@ -290,6 +304,38 @@ public class RocketMQClusterConfig extends AbstractModel {
         this.TopicDistribution = TopicDistribution;
     }
 
+    /**
+     * Get 最大角色数量 
+     * @return MaxRoleNum 最大角色数量
+     */
+    public Long getMaxRoleNum() {
+        return this.MaxRoleNum;
+    }
+
+    /**
+     * Set 最大角色数量
+     * @param MaxRoleNum 最大角色数量
+     */
+    public void setMaxRoleNum(Long MaxRoleNum) {
+        this.MaxRoleNum = MaxRoleNum;
+    }
+
+    /**
+     * Get TPS限额 
+     * @return MaxTpsLimit TPS限额
+     */
+    public Long getMaxTpsLimit() {
+        return this.MaxTpsLimit;
+    }
+
+    /**
+     * Set TPS限额
+     * @param MaxTpsLimit TPS限额
+     */
+    public void setMaxTpsLimit(Long MaxTpsLimit) {
+        this.MaxTpsLimit = MaxTpsLimit;
+    }
+
     public RocketMQClusterConfig() {
     }
 
@@ -334,6 +380,12 @@ public class RocketMQClusterConfig extends AbstractModel {
                 this.TopicDistribution[i] = new RocketMQTopicDistribution(source.TopicDistribution[i]);
             }
         }
+        if (source.MaxRoleNum != null) {
+            this.MaxRoleNum = new Long(source.MaxRoleNum);
+        }
+        if (source.MaxTpsLimit != null) {
+            this.MaxTpsLimit = new Long(source.MaxTpsLimit);
+        }
     }
 
 
@@ -352,6 +404,8 @@ public class RocketMQClusterConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxLatencyTime", this.MaxLatencyTime);
         this.setParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
         this.setParamArrayObj(map, prefix + "TopicDistribution.", this.TopicDistribution);
+        this.setParamSimple(map, prefix + "MaxRoleNum", this.MaxRoleNum);
+        this.setParamSimple(map, prefix + "MaxTpsLimit", this.MaxTpsLimit);
 
     }
 }

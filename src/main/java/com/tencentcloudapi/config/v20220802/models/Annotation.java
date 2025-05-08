@@ -25,7 +25,6 @@ public class Annotation extends AbstractModel {
 
     /**
     * 资源当前实际配置。长度为0~256位字符，即资源不合规配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Configuration")
     @Expose
@@ -33,7 +32,6 @@ public class Annotation extends AbstractModel {
 
     /**
     * 资源期望配置。长度为0~256位字符，即资源合规配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DesiredValue")
     @Expose
@@ -54,10 +52,8 @@ public class Annotation extends AbstractModel {
     private String Property;
 
     /**
-     * Get 资源当前实际配置。长度为0~256位字符，即资源不合规配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源当前实际配置。长度为0~256位字符，即资源不合规配置 
      * @return Configuration 资源当前实际配置。长度为0~256位字符，即资源不合规配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfiguration() {
         return this.Configuration;
@@ -65,19 +61,15 @@ public class Annotation extends AbstractModel {
 
     /**
      * Set 资源当前实际配置。长度为0~256位字符，即资源不合规配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Configuration 资源当前实际配置。长度为0~256位字符，即资源不合规配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfiguration(String Configuration) {
         this.Configuration = Configuration;
     }
 
     /**
-     * Get 资源期望配置。长度为0~256位字符，即资源合规配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源期望配置。长度为0~256位字符，即资源合规配置 
      * @return DesiredValue 资源期望配置。长度为0~256位字符，即资源合规配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesiredValue() {
         return this.DesiredValue;
@@ -85,9 +77,7 @@ public class Annotation extends AbstractModel {
 
     /**
      * Set 资源期望配置。长度为0~256位字符，即资源合规配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DesiredValue 资源期望配置。长度为0~256位字符，即资源合规配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesiredValue(String DesiredValue) {
         this.DesiredValue = DesiredValue;

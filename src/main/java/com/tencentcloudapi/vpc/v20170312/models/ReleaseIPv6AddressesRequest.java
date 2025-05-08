@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ReleaseIPv6AddressesRequest extends AbstractModel {
 
     /**
-    * IPv6地址唯一ID。
+    * IPv6地址唯一ID。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
     */
     @SerializedName("IPv6AddressIds")
     @Expose
     private String [] IPv6AddressIds;
 
     /**
-     * Get IPv6地址唯一ID。 
-     * @return IPv6AddressIds IPv6地址唯一ID。
+     * Get IPv6地址唯一ID。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。 
+     * @return IPv6AddressIds IPv6地址唯一ID。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
      */
     public String [] getIPv6AddressIds() {
         return this.IPv6AddressIds;
     }
 
     /**
-     * Set IPv6地址唯一ID。
-     * @param IPv6AddressIds IPv6地址唯一ID。
+     * Set IPv6地址唯一ID。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
+     * @param IPv6AddressIds IPv6地址唯一ID。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
      */
     public void setIPv6AddressIds(String [] IPv6AddressIds) {
         this.IPv6AddressIds = IPv6AddressIds;

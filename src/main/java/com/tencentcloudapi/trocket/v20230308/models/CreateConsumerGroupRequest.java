@@ -67,6 +67,13 @@ public class CreateConsumerGroupRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * 标签列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get 集群ID 
      * @return InstanceId 集群ID
      */
@@ -166,6 +173,22 @@ public class CreateConsumerGroupRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 标签列表 
+     * @return TagList 标签列表
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 标签列表
+     * @param TagList 标签列表
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public CreateConsumerGroupRequest() {
     }
 
@@ -192,6 +215,12 @@ public class CreateConsumerGroupRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -205,6 +234,7 @@ public class CreateConsumerGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ConsumeMessageOrderly", this.ConsumeMessageOrderly);
         this.setParamSimple(map, prefix + "ConsumerGroup", this.ConsumerGroup);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

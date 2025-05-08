@@ -101,7 +101,6 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
     * 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DestinationIpv6CidrBlock")
     @Expose
@@ -116,7 +115,6 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
     * 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublishedToVbc")
     @Expose
@@ -131,7 +129,6 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
     * CDC 集群唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
     @Expose
@@ -346,10 +343,8 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * Get 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。 
      * @return DestinationIpv6CidrBlock 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDestinationIpv6CidrBlock() {
         return this.DestinationIpv6CidrBlock;
@@ -357,9 +352,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
      * Set 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DestinationIpv6CidrBlock 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestinationIpv6CidrBlock(String DestinationIpv6CidrBlock) {
         this.DestinationIpv6CidrBlock = DestinationIpv6CidrBlock;
@@ -382,10 +375,8 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * Get 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。 
      * @return PublishedToVbc 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPublishedToVbc() {
         return this.PublishedToVbc;
@@ -393,9 +384,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
      * Set 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublishedToVbc 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublishedToVbc(Boolean PublishedToVbc) {
         this.PublishedToVbc = PublishedToVbc;
@@ -418,10 +407,8 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * Get CDC 集群唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CDC 集群唯一 ID。 
      * @return CdcId CDC 集群唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
         return this.CdcId;
@@ -429,9 +416,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
      * Set CDC 集群唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId CDC 集群唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;

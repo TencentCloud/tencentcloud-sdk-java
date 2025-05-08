@@ -38,7 +38,7 @@ public class ModifyFunctionTargetsRequest extends AbstractModel {
     private String ListenerId;
 
     /**
-    * 要修改的后端云函数服务列表。
+    * 要修改的后端云函数服务列表，仅支持 Event 函数类型。
     */
     @SerializedName("FunctionTargets")
     @Expose
@@ -98,16 +98,16 @@ public class ModifyFunctionTargetsRequest extends AbstractModel {
     }
 
     /**
-     * Get 要修改的后端云函数服务列表。 
-     * @return FunctionTargets 要修改的后端云函数服务列表。
+     * Get 要修改的后端云函数服务列表，仅支持 Event 函数类型。 
+     * @return FunctionTargets 要修改的后端云函数服务列表，仅支持 Event 函数类型。
      */
     public FunctionTarget [] getFunctionTargets() {
         return this.FunctionTargets;
     }
 
     /**
-     * Set 要修改的后端云函数服务列表。
-     * @param FunctionTargets 要修改的后端云函数服务列表。
+     * Set 要修改的后端云函数服务列表，仅支持 Event 函数类型。
+     * @param FunctionTargets 要修改的后端云函数服务列表，仅支持 Event 函数类型。
      */
     public void setFunctionTargets(FunctionTarget [] FunctionTargets) {
         this.FunctionTargets = FunctionTargets;

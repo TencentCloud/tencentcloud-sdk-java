@@ -233,6 +233,20 @@ public class Topic extends AbstractModel {
     private String Tenant;
 
     /**
+    * 是否开启异常消费者隔离
+    */
+    @SerializedName("IsolateConsumerEnable")
+    @Expose
+    private Boolean IsolateConsumerEnable;
+
+    /**
+    * 消费者 Ack 超时时间，单位：秒
+    */
+    @SerializedName("AckTimeOut")
+    @Expose
+    private Long AckTimeOut;
+
+    /**
      * Get 最后一次间隔内发布消息的平均byte大小。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AverageMsgSize 最后一次间隔内发布消息的平均byte大小。
@@ -768,6 +782,38 @@ public class Topic extends AbstractModel {
         this.Tenant = Tenant;
     }
 
+    /**
+     * Get 是否开启异常消费者隔离 
+     * @return IsolateConsumerEnable 是否开启异常消费者隔离
+     */
+    public Boolean getIsolateConsumerEnable() {
+        return this.IsolateConsumerEnable;
+    }
+
+    /**
+     * Set 是否开启异常消费者隔离
+     * @param IsolateConsumerEnable 是否开启异常消费者隔离
+     */
+    public void setIsolateConsumerEnable(Boolean IsolateConsumerEnable) {
+        this.IsolateConsumerEnable = IsolateConsumerEnable;
+    }
+
+    /**
+     * Get 消费者 Ack 超时时间，单位：秒 
+     * @return AckTimeOut 消费者 Ack 超时时间，单位：秒
+     */
+    public Long getAckTimeOut() {
+        return this.AckTimeOut;
+    }
+
+    /**
+     * Set 消费者 Ack 超时时间，单位：秒
+     * @param AckTimeOut 消费者 Ack 超时时间，单位：秒
+     */
+    public void setAckTimeOut(Long AckTimeOut) {
+        this.AckTimeOut = AckTimeOut;
+    }
+
     public Topic() {
     }
 
@@ -854,6 +900,12 @@ public class Topic extends AbstractModel {
         if (source.Tenant != null) {
             this.Tenant = new String(source.Tenant);
         }
+        if (source.IsolateConsumerEnable != null) {
+            this.IsolateConsumerEnable = new Boolean(source.IsolateConsumerEnable);
+        }
+        if (source.AckTimeOut != null) {
+            this.AckTimeOut = new Long(source.AckTimeOut);
+        }
     }
 
 
@@ -886,6 +938,8 @@ public class Topic extends AbstractModel {
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Tenant", this.Tenant);
+        this.setParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
+        this.setParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
 
     }
 }

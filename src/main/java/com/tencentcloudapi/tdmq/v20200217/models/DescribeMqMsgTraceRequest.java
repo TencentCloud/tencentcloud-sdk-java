@@ -80,6 +80,13 @@ public class DescribeMqMsgTraceRequest extends AbstractModel {
     private Boolean QueryDlqMsg;
 
     /**
+    * 生产时间
+    */
+    @SerializedName("ProduceTime")
+    @Expose
+    private String ProduceTime;
+
+    /**
      * Get pulsar、rocketmq、rabbitmq、cmq 
      * @return Protocol pulsar、rocketmq、rabbitmq、cmq
      */
@@ -207,6 +214,22 @@ public class DescribeMqMsgTraceRequest extends AbstractModel {
         this.QueryDlqMsg = QueryDlqMsg;
     }
 
+    /**
+     * Get 生产时间 
+     * @return ProduceTime 生产时间
+     */
+    public String getProduceTime() {
+        return this.ProduceTime;
+    }
+
+    /**
+     * Set 生产时间
+     * @param ProduceTime 生产时间
+     */
+    public void setProduceTime(String ProduceTime) {
+        this.ProduceTime = ProduceTime;
+    }
+
     public DescribeMqMsgTraceRequest() {
     }
 
@@ -239,6 +262,9 @@ public class DescribeMqMsgTraceRequest extends AbstractModel {
         if (source.QueryDlqMsg != null) {
             this.QueryDlqMsg = new Boolean(source.QueryDlqMsg);
         }
+        if (source.ProduceTime != null) {
+            this.ProduceTime = new String(source.ProduceTime);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class DescribeMqMsgTraceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "QueryDlqMsg", this.QueryDlqMsg);
+        this.setParamSimple(map, prefix + "ProduceTime", this.ProduceTime);
 
     }
 }

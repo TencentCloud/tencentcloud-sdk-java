@@ -64,6 +64,13 @@ public class ResultList extends AbstractModel {
     private Element [] Answer;
 
     /**
+    * 解析
+    */
+    @SerializedName("Parse")
+    @Expose
+    private Element [] Parse;
+
+    /**
     * 整题的坐标
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -172,6 +179,22 @@ public class ResultList extends AbstractModel {
     }
 
     /**
+     * Get 解析 
+     * @return Parse 解析
+     */
+    public Element [] getParse() {
+        return this.Parse;
+    }
+
+    /**
+     * Set 解析
+     * @param Parse 解析
+     */
+    public void setParse(Element [] Parse) {
+        this.Parse = Parse;
+    }
+
+    /**
      * Get 整题的坐标
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Coord 整题的坐标
@@ -229,6 +252,12 @@ public class ResultList extends AbstractModel {
                 this.Answer[i] = new Element(source.Answer[i]);
             }
         }
+        if (source.Parse != null) {
+            this.Parse = new Element[source.Parse.length];
+            for (int i = 0; i < source.Parse.length; i++) {
+                this.Parse[i] = new Element(source.Parse[i]);
+            }
+        }
         if (source.Coord != null) {
             this.Coord = new Polygon[source.Coord.length];
             for (int i = 0; i < source.Coord.length; i++) {
@@ -247,6 +276,7 @@ public class ResultList extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Figure.", this.Figure);
         this.setParamArrayObj(map, prefix + "Table.", this.Table);
         this.setParamArrayObj(map, prefix + "Answer.", this.Answer);
+        this.setParamArrayObj(map, prefix + "Parse.", this.Parse);
         this.setParamArrayObj(map, prefix + "Coord.", this.Coord);
 
     }

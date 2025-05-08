@@ -25,6 +25,7 @@ public class ModifyLoadBalancerMixIpTargetRequest extends AbstractModel {
 
     /**
     * 负载均衡实例ID数组，默认支持20个负载均衡实例ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -38,8 +39,10 @@ public class ModifyLoadBalancerMixIpTargetRequest extends AbstractModel {
     private Boolean MixIpTarget;
 
     /**
-     * Get 负载均衡实例ID数组，默认支持20个负载均衡实例ID。 
+     * Get 负载均衡实例ID数组，默认支持20个负载均衡实例ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。 
      * @return LoadBalancerIds 负载均衡实例ID数组，默认支持20个负载均衡实例ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
@@ -47,7 +50,9 @@ public class ModifyLoadBalancerMixIpTargetRequest extends AbstractModel {
 
     /**
      * Set 负载均衡实例ID数组，默认支持20个负载均衡实例ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      * @param LoadBalancerIds 负载均衡实例ID数组，默认支持20个负载均衡实例ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

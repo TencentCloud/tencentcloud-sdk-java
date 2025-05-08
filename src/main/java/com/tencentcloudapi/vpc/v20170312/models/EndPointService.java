@@ -59,7 +59,7 @@ public class EndPointService extends AbstractModel {
     private String ServiceVip;
 
     /**
-    * 后端服务的ID，比如lb-xxx。
+    * 后端服务的ID，比如lb-lip4e6bp。
     */
     @SerializedName("ServiceInstanceId")
     @Expose
@@ -74,7 +74,6 @@ public class EndPointService extends AbstractModel {
 
     /**
     * 关联的终端节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndPointCount")
     @Expose
@@ -82,21 +81,20 @@ public class EndPointService extends AbstractModel {
 
     /**
     * 终端节点对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndPointSet")
     @Expose
     private EndPoint [] EndPointSet;
 
     /**
-    * 创建时间。
+    * 创建时间。格式为YYYY-MM-DD HH:MM:SS字符串。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 挂载的PAAS服务类型，CLB,CDB,CRS
+    * 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。
     */
     @SerializedName("ServiceType")
     @Expose
@@ -104,15 +102,13 @@ public class EndPointService extends AbstractModel {
 
     /**
     * CDC 集群唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-    * Uin
-注意：此字段可能返回 null，表示取不到有效值。
+    * 终端节点服务Uin。
     */
     @SerializedName("ServiceUin")
     @Expose
@@ -120,7 +116,6 @@ public class EndPointService extends AbstractModel {
 
     /**
     * 服务IP类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessIpType")
     @Expose
@@ -128,7 +123,6 @@ public class EndPointService extends AbstractModel {
 
     /**
     * 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -215,16 +209,16 @@ public class EndPointService extends AbstractModel {
     }
 
     /**
-     * Get 后端服务的ID，比如lb-xxx。 
-     * @return ServiceInstanceId 后端服务的ID，比如lb-xxx。
+     * Get 后端服务的ID，比如lb-lip4e6bp。 
+     * @return ServiceInstanceId 后端服务的ID，比如lb-lip4e6bp。
      */
     public String getServiceInstanceId() {
         return this.ServiceInstanceId;
     }
 
     /**
-     * Set 后端服务的ID，比如lb-xxx。
-     * @param ServiceInstanceId 后端服务的ID，比如lb-xxx。
+     * Set 后端服务的ID，比如lb-lip4e6bp。
+     * @param ServiceInstanceId 后端服务的ID，比如lb-lip4e6bp。
      */
     public void setServiceInstanceId(String ServiceInstanceId) {
         this.ServiceInstanceId = ServiceInstanceId;
@@ -247,10 +241,8 @@ public class EndPointService extends AbstractModel {
     }
 
     /**
-     * Get 关联的终端节点个数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的终端节点个数。 
      * @return EndPointCount 关联的终端节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndPointCount() {
         return this.EndPointCount;
@@ -258,19 +250,15 @@ public class EndPointService extends AbstractModel {
 
     /**
      * Set 关联的终端节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndPointCount 关联的终端节点个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndPointCount(Long EndPointCount) {
         this.EndPointCount = EndPointCount;
     }
 
     /**
-     * Get 终端节点对象数组。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 终端节点对象数组。 
      * @return EndPointSet 终端节点对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EndPoint [] getEndPointSet() {
         return this.EndPointSet;
@@ -278,51 +266,47 @@ public class EndPointService extends AbstractModel {
 
     /**
      * Set 终端节点对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndPointSet 终端节点对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndPointSet(EndPoint [] EndPointSet) {
         this.EndPointSet = EndPointSet;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreateTime 创建时间。
+     * Get 创建时间。格式为YYYY-MM-DD HH:MM:SS字符串。 
+     * @return CreateTime 创建时间。格式为YYYY-MM-DD HH:MM:SS字符串。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreateTime 创建时间。
+     * Set 创建时间。格式为YYYY-MM-DD HH:MM:SS字符串。
+     * @param CreateTime 创建时间。格式为YYYY-MM-DD HH:MM:SS字符串。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 挂载的PAAS服务类型，CLB,CDB,CRS 
-     * @return ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS
+     * Get 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。 
+     * @return ServiceType 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 挂载的PAAS服务类型，CLB,CDB,CRS
-     * @param ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS
+     * Set 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。
+     * @param ServiceType 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get CDC 集群唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CDC 集群唯一 ID 
      * @return CdcId CDC 集群唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
         return this.CdcId;
@@ -330,39 +314,31 @@ public class EndPointService extends AbstractModel {
 
     /**
      * Set CDC 集群唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId CDC 集群唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get Uin
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceUin Uin
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 终端节点服务Uin。 
+     * @return ServiceUin 终端节点服务Uin。
      */
     public String getServiceUin() {
         return this.ServiceUin;
     }
 
     /**
-     * Set Uin
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceUin Uin
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 终端节点服务Uin。
+     * @param ServiceUin 终端节点服务Uin。
      */
     public void setServiceUin(String ServiceUin) {
         this.ServiceUin = ServiceUin;
     }
 
     /**
-     * Get 服务IP类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务IP类型 
      * @return BusinessIpType 服务IP类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBusinessIpType() {
         return this.BusinessIpType;
@@ -370,19 +346,15 @@ public class EndPointService extends AbstractModel {
 
     /**
      * Set 服务IP类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessIpType 服务IP类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessIpType(Long BusinessIpType) {
         this.BusinessIpType = BusinessIpType;
     }
 
     /**
-     * Get 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签键值对。	 
      * @return TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagSet() {
         return this.TagSet;
@@ -390,9 +362,7 @@ public class EndPointService extends AbstractModel {
 
     /**
      * Set 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;

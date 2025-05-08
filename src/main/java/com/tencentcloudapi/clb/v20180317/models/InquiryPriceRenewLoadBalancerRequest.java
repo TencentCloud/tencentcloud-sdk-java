@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquiryPriceRenewLoadBalancerRequest extends AbstractModel {
 
     /**
-    * 负载均衡实例ID
+    * 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
     */
     @SerializedName("LoadBalancerId")
     @Expose
@@ -38,16 +38,16 @@ public class InquiryPriceRenewLoadBalancerRequest extends AbstractModel {
     private LBChargePrepaid LoadBalancerChargePrepaid;
 
     /**
-     * Get 负载均衡实例ID 
-     * @return LoadBalancerId 负载均衡实例ID
+     * Get 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。 
+     * @return LoadBalancerId 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例ID
-     * @param LoadBalancerId 负载均衡实例ID
+     * Set 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+     * @param LoadBalancerId 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeIPv6AddressesRequest extends AbstractModel {
 
     /**
-    * 标识 IPv6 的唯一 ID 列。
+    * 标识 IPv6 的唯一 ID 列。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
 
 - 传统弹性公网 IPv6 唯一 ID 形如：`eip-11112222`
 - 弹性公网 IPv6 唯一 ID 形如：`eipv6-11112222`
@@ -45,9 +45,9 @@ public class DescribeIPv6AddressesRequest extends AbstractModel {
 - charge-type - String - 是否必填：否 - （过滤条件）按照计费类型过滤。
 - private-ipv6-address - String - 是否必填：否 - （过滤条件）按照绑定的内网 IPv6 地址过滤。
 - egress - String - 是否必填：否 - （过滤条件）按照出口过滤。
-- address-type - String - 是否必填：否 - （过滤条件）按照IPv6类型 进行过滤。可选值：'EIP6'，'EIPv6'，'WanIPv6'，'HighQualityEIPv6'。默认值是'EIPv6'。
-- address-isp - String - 是否必填：否 - （过滤条件）按照 运营商类型 进行过滤。可选值：'BGP'，'CMCC'，'CUCC', 'CTCC'。
-- address-status - String - 是否必填：否 - （过滤条件）按照 EIP 的状态过滤。状态包含：'CREATING'，'BINDING'，'BIND'，'UNBINDING'，'UNBIND'，'OFFLINING'，'BIND_ENI'，'PRIVATE'。
+- address-type - String - 是否必填：否 - （过滤条件）按照IPv6类型 进行过滤。可选值：'EIP6'：传统弹性公网 IPv6，'EIPv6'：弹性公网 IPv6，'WanIPv6'：普通公网 IPv6，'HighQualityEIPv6'：精品弹性公网 IPv6。默认值是'EIPv6'。
+- address-isp - String - 是否必填：否 - （过滤条件）按照 运营商类型 进行过滤。可选值：'BGP'：常规BGP，'CMCC'：移动，'CUCC'：联通, 'CTCC'：电信。
+- address-status - String - 是否必填：否 - （过滤条件）按照 EIP 的状态过滤。状态包含：'CREATING'：创建中，'BINDING'：绑定中，'BIND'：已绑，'UNBINDING'：解绑中，'UNBIND'：未绑定，'OFFLINING'：下线中，'BIND_ENI'：绑定了ENI，'PRIVATE'：仅开通内网的IPv6。
 - address-name - String - 是否必填：否 - （过滤条件）按照 EIP 名称过滤。不支持模糊过滤。
 - tag-key - String - 是否必填：否 - （过滤条件）按照标签键进行过滤。
 - tag-value - String - 是否必填：否 - （过滤条件）按照标签值进行过滤。
@@ -58,7 +58,10 @@ public class DescribeIPv6AddressesRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 是否查询传统型IPv6地址信息。
+    * 是否查询传统型IPv6地址信息。可选值：
+<li>True：查询传统型IPv6地址信息</li>
+<li>False：不查询传统型IPv6地址信息</li>
+默认值：False
     */
     @SerializedName("Traditional")
     @Expose
@@ -79,13 +82,13 @@ public class DescribeIPv6AddressesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 标识 IPv6 的唯一 ID 列。
+     * Get 标识 IPv6 的唯一 ID 列。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
 
 - 传统弹性公网 IPv6 唯一 ID 形如：`eip-11112222`
 - 弹性公网 IPv6 唯一 ID 形如：`eipv6-11112222`
 
 注意：参数不支持同时指定`IPv6AddressIds`和`Filters`。 
-     * @return IPv6AddressIds 标识 IPv6 的唯一 ID 列。
+     * @return IPv6AddressIds 标识 IPv6 的唯一 ID 列。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
 
 - 传统弹性公网 IPv6 唯一 ID 形如：`eip-11112222`
 - 弹性公网 IPv6 唯一 ID 形如：`eipv6-11112222`
@@ -97,13 +100,13 @@ public class DescribeIPv6AddressesRequest extends AbstractModel {
     }
 
     /**
-     * Set 标识 IPv6 的唯一 ID 列。
+     * Set 标识 IPv6 的唯一 ID 列。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
 
 - 传统弹性公网 IPv6 唯一 ID 形如：`eip-11112222`
 - 弹性公网 IPv6 唯一 ID 形如：`eipv6-11112222`
 
 注意：参数不支持同时指定`IPv6AddressIds`和`Filters`。
-     * @param IPv6AddressIds 标识 IPv6 的唯一 ID 列。
+     * @param IPv6AddressIds 标识 IPv6 的唯一 ID 列。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
 
 - 传统弹性公网 IPv6 唯一 ID 形如：`eip-11112222`
 - 弹性公网 IPv6 唯一 ID 形如：`eipv6-11112222`
@@ -124,9 +127,9 @@ public class DescribeIPv6AddressesRequest extends AbstractModel {
 - charge-type - String - 是否必填：否 - （过滤条件）按照计费类型过滤。
 - private-ipv6-address - String - 是否必填：否 - （过滤条件）按照绑定的内网 IPv6 地址过滤。
 - egress - String - 是否必填：否 - （过滤条件）按照出口过滤。
-- address-type - String - 是否必填：否 - （过滤条件）按照IPv6类型 进行过滤。可选值：'EIP6'，'EIPv6'，'WanIPv6'，'HighQualityEIPv6'。默认值是'EIPv6'。
-- address-isp - String - 是否必填：否 - （过滤条件）按照 运营商类型 进行过滤。可选值：'BGP'，'CMCC'，'CUCC', 'CTCC'。
-- address-status - String - 是否必填：否 - （过滤条件）按照 EIP 的状态过滤。状态包含：'CREATING'，'BINDING'，'BIND'，'UNBINDING'，'UNBIND'，'OFFLINING'，'BIND_ENI'，'PRIVATE'。
+- address-type - String - 是否必填：否 - （过滤条件）按照IPv6类型 进行过滤。可选值：'EIP6'：传统弹性公网 IPv6，'EIPv6'：弹性公网 IPv6，'WanIPv6'：普通公网 IPv6，'HighQualityEIPv6'：精品弹性公网 IPv6。默认值是'EIPv6'。
+- address-isp - String - 是否必填：否 - （过滤条件）按照 运营商类型 进行过滤。可选值：'BGP'：常规BGP，'CMCC'：移动，'CUCC'：联通, 'CTCC'：电信。
+- address-status - String - 是否必填：否 - （过滤条件）按照 EIP 的状态过滤。状态包含：'CREATING'：创建中，'BINDING'：绑定中，'BIND'：已绑，'UNBINDING'：解绑中，'UNBIND'：未绑定，'OFFLINING'：下线中，'BIND_ENI'：绑定了ENI，'PRIVATE'：仅开通内网的IPv6。
 - address-name - String - 是否必填：否 - （过滤条件）按照 EIP 名称过滤。不支持模糊过滤。
 - tag-key - String - 是否必填：否 - （过滤条件）按照标签键进行过滤。
 - tag-value - String - 是否必填：否 - （过滤条件）按照标签值进行过滤。
@@ -140,9 +143,9 @@ public class DescribeIPv6AddressesRequest extends AbstractModel {
 - charge-type - String - 是否必填：否 - （过滤条件）按照计费类型过滤。
 - private-ipv6-address - String - 是否必填：否 - （过滤条件）按照绑定的内网 IPv6 地址过滤。
 - egress - String - 是否必填：否 - （过滤条件）按照出口过滤。
-- address-type - String - 是否必填：否 - （过滤条件）按照IPv6类型 进行过滤。可选值：'EIP6'，'EIPv6'，'WanIPv6'，'HighQualityEIPv6'。默认值是'EIPv6'。
-- address-isp - String - 是否必填：否 - （过滤条件）按照 运营商类型 进行过滤。可选值：'BGP'，'CMCC'，'CUCC', 'CTCC'。
-- address-status - String - 是否必填：否 - （过滤条件）按照 EIP 的状态过滤。状态包含：'CREATING'，'BINDING'，'BIND'，'UNBINDING'，'UNBIND'，'OFFLINING'，'BIND_ENI'，'PRIVATE'。
+- address-type - String - 是否必填：否 - （过滤条件）按照IPv6类型 进行过滤。可选值：'EIP6'：传统弹性公网 IPv6，'EIPv6'：弹性公网 IPv6，'WanIPv6'：普通公网 IPv6，'HighQualityEIPv6'：精品弹性公网 IPv6。默认值是'EIPv6'。
+- address-isp - String - 是否必填：否 - （过滤条件）按照 运营商类型 进行过滤。可选值：'BGP'：常规BGP，'CMCC'：移动，'CUCC'：联通, 'CTCC'：电信。
+- address-status - String - 是否必填：否 - （过滤条件）按照 EIP 的状态过滤。状态包含：'CREATING'：创建中，'BINDING'：绑定中，'BIND'：已绑，'UNBINDING'：解绑中，'UNBIND'：未绑定，'OFFLINING'：下线中，'BIND_ENI'：绑定了ENI，'PRIVATE'：仅开通内网的IPv6。
 - address-name - String - 是否必填：否 - （过滤条件）按照 EIP 名称过滤。不支持模糊过滤。
 - tag-key - String - 是否必填：否 - （过滤条件）按照标签键进行过滤。
 - tag-value - String - 是否必填：否 - （过滤条件）按照标签值进行过滤。
@@ -162,9 +165,9 @@ public class DescribeIPv6AddressesRequest extends AbstractModel {
 - charge-type - String - 是否必填：否 - （过滤条件）按照计费类型过滤。
 - private-ipv6-address - String - 是否必填：否 - （过滤条件）按照绑定的内网 IPv6 地址过滤。
 - egress - String - 是否必填：否 - （过滤条件）按照出口过滤。
-- address-type - String - 是否必填：否 - （过滤条件）按照IPv6类型 进行过滤。可选值：'EIP6'，'EIPv6'，'WanIPv6'，'HighQualityEIPv6'。默认值是'EIPv6'。
-- address-isp - String - 是否必填：否 - （过滤条件）按照 运营商类型 进行过滤。可选值：'BGP'，'CMCC'，'CUCC', 'CTCC'。
-- address-status - String - 是否必填：否 - （过滤条件）按照 EIP 的状态过滤。状态包含：'CREATING'，'BINDING'，'BIND'，'UNBINDING'，'UNBIND'，'OFFLINING'，'BIND_ENI'，'PRIVATE'。
+- address-type - String - 是否必填：否 - （过滤条件）按照IPv6类型 进行过滤。可选值：'EIP6'：传统弹性公网 IPv6，'EIPv6'：弹性公网 IPv6，'WanIPv6'：普通公网 IPv6，'HighQualityEIPv6'：精品弹性公网 IPv6。默认值是'EIPv6'。
+- address-isp - String - 是否必填：否 - （过滤条件）按照 运营商类型 进行过滤。可选值：'BGP'：常规BGP，'CMCC'：移动，'CUCC'：联通, 'CTCC'：电信。
+- address-status - String - 是否必填：否 - （过滤条件）按照 EIP 的状态过滤。状态包含：'CREATING'：创建中，'BINDING'：绑定中，'BIND'：已绑，'UNBINDING'：解绑中，'UNBIND'：未绑定，'OFFLINING'：下线中，'BIND_ENI'：绑定了ENI，'PRIVATE'：仅开通内网的IPv6。
 - address-name - String - 是否必填：否 - （过滤条件）按照 EIP 名称过滤。不支持模糊过滤。
 - tag-key - String - 是否必填：否 - （过滤条件）按照标签键进行过滤。
 - tag-value - String - 是否必填：否 - （过滤条件）按照标签值进行过滤。
@@ -178,9 +181,9 @@ public class DescribeIPv6AddressesRequest extends AbstractModel {
 - charge-type - String - 是否必填：否 - （过滤条件）按照计费类型过滤。
 - private-ipv6-address - String - 是否必填：否 - （过滤条件）按照绑定的内网 IPv6 地址过滤。
 - egress - String - 是否必填：否 - （过滤条件）按照出口过滤。
-- address-type - String - 是否必填：否 - （过滤条件）按照IPv6类型 进行过滤。可选值：'EIP6'，'EIPv6'，'WanIPv6'，'HighQualityEIPv6'。默认值是'EIPv6'。
-- address-isp - String - 是否必填：否 - （过滤条件）按照 运营商类型 进行过滤。可选值：'BGP'，'CMCC'，'CUCC', 'CTCC'。
-- address-status - String - 是否必填：否 - （过滤条件）按照 EIP 的状态过滤。状态包含：'CREATING'，'BINDING'，'BIND'，'UNBINDING'，'UNBIND'，'OFFLINING'，'BIND_ENI'，'PRIVATE'。
+- address-type - String - 是否必填：否 - （过滤条件）按照IPv6类型 进行过滤。可选值：'EIP6'：传统弹性公网 IPv6，'EIPv6'：弹性公网 IPv6，'WanIPv6'：普通公网 IPv6，'HighQualityEIPv6'：精品弹性公网 IPv6。默认值是'EIPv6'。
+- address-isp - String - 是否必填：否 - （过滤条件）按照 运营商类型 进行过滤。可选值：'BGP'：常规BGP，'CMCC'：移动，'CUCC'：联通, 'CTCC'：电信。
+- address-status - String - 是否必填：否 - （过滤条件）按照 EIP 的状态过滤。状态包含：'CREATING'：创建中，'BINDING'：绑定中，'BIND'：已绑，'UNBINDING'：解绑中，'UNBIND'：未绑定，'OFFLINING'：下线中，'BIND_ENI'：绑定了ENI，'PRIVATE'：仅开通内网的IPv6。
 - address-name - String - 是否必填：否 - （过滤条件）按照 EIP 名称过滤。不支持模糊过滤。
 - tag-key - String - 是否必填：否 - （过滤条件）按照标签键进行过滤。
 - tag-value - String - 是否必填：否 - （过滤条件）按照标签值进行过滤。
@@ -191,16 +194,28 @@ public class DescribeIPv6AddressesRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否查询传统型IPv6地址信息。 
-     * @return Traditional 是否查询传统型IPv6地址信息。
+     * Get 是否查询传统型IPv6地址信息。可选值：
+<li>True：查询传统型IPv6地址信息</li>
+<li>False：不查询传统型IPv6地址信息</li>
+默认值：False 
+     * @return Traditional 是否查询传统型IPv6地址信息。可选值：
+<li>True：查询传统型IPv6地址信息</li>
+<li>False：不查询传统型IPv6地址信息</li>
+默认值：False
      */
     public Boolean getTraditional() {
         return this.Traditional;
     }
 
     /**
-     * Set 是否查询传统型IPv6地址信息。
-     * @param Traditional 是否查询传统型IPv6地址信息。
+     * Set 是否查询传统型IPv6地址信息。可选值：
+<li>True：查询传统型IPv6地址信息</li>
+<li>False：不查询传统型IPv6地址信息</li>
+默认值：False
+     * @param Traditional 是否查询传统型IPv6地址信息。可选值：
+<li>True：查询传统型IPv6地址信息</li>
+<li>False：不查询传统型IPv6地址信息</li>
+默认值：False
      */
     public void setTraditional(Boolean Traditional) {
         this.Traditional = Traditional;

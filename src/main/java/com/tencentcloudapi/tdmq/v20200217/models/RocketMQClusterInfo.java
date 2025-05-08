@@ -218,6 +218,13 @@ public class RocketMQClusterInfo extends AbstractModel {
     private Long [] ZoneIds;
 
     /**
+    * 是否已冻结
+    */
+    @SerializedName("IsFrozen")
+    @Expose
+    private Boolean IsFrozen;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -693,6 +700,22 @@ public class RocketMQClusterInfo extends AbstractModel {
         this.ZoneIds = ZoneIds;
     }
 
+    /**
+     * Get 是否已冻结 
+     * @return IsFrozen 是否已冻结
+     */
+    public Boolean getIsFrozen() {
+        return this.IsFrozen;
+    }
+
+    /**
+     * Set 是否已冻结
+     * @param IsFrozen 是否已冻结
+     */
+    public void setIsFrozen(Boolean IsFrozen) {
+        this.IsFrozen = IsFrozen;
+    }
+
     public RocketMQClusterInfo() {
     }
 
@@ -782,6 +805,9 @@ public class RocketMQClusterInfo extends AbstractModel {
                 this.ZoneIds[i] = new Long(source.ZoneIds[i]);
             }
         }
+        if (source.IsFrozen != null) {
+            this.IsFrozen = new Boolean(source.IsFrozen);
+        }
     }
 
 
@@ -814,6 +840,7 @@ public class RocketMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+        this.setParamSimple(map, prefix + "IsFrozen", this.IsFrozen);
 
     }
 }

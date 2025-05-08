@@ -71,6 +71,13 @@ TRANSACTION:事务消息
     private Long MsgTTL;
 
     /**
+    * 标签列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get 集群ID 
      * @return InstanceId 集群ID
      */
@@ -186,6 +193,22 @@ TRANSACTION:事务消息
         this.MsgTTL = MsgTTL;
     }
 
+    /**
+     * Get 标签列表 
+     * @return TagList 标签列表
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 标签列表
+     * @param TagList 标签列表
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -212,6 +235,12 @@ TRANSACTION:事务消息
         if (source.MsgTTL != null) {
             this.MsgTTL = new Long(source.MsgTTL);
         }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -225,6 +254,7 @@ TRANSACTION:事务消息
         this.setParamSimple(map, prefix + "QueueNum", this.QueueNum);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

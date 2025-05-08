@@ -96,6 +96,13 @@ public class InstanceItemExtraInfo extends AbstractModel {
     private Long InstanceStatus;
 
     /**
+    * 是否已冻结
+    */
+    @SerializedName("IsFrozen")
+    @Expose
+    private Boolean IsFrozen;
+
+    /**
      * Get 是否vip
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsVip 是否vip
@@ -275,6 +282,22 @@ public class InstanceItemExtraInfo extends AbstractModel {
         this.InstanceStatus = InstanceStatus;
     }
 
+    /**
+     * Get 是否已冻结 
+     * @return IsFrozen 是否已冻结
+     */
+    public Boolean getIsFrozen() {
+        return this.IsFrozen;
+    }
+
+    /**
+     * Set 是否已冻结
+     * @param IsFrozen 是否已冻结
+     */
+    public void setIsFrozen(Boolean IsFrozen) {
+        this.IsFrozen = IsFrozen;
+    }
+
     public InstanceItemExtraInfo() {
     }
 
@@ -310,6 +333,9 @@ public class InstanceItemExtraInfo extends AbstractModel {
         if (source.InstanceStatus != null) {
             this.InstanceStatus = new Long(source.InstanceStatus);
         }
+        if (source.IsFrozen != null) {
+            this.IsFrozen = new Boolean(source.IsFrozen);
+        }
     }
 
 
@@ -326,6 +352,7 @@ public class InstanceItemExtraInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxRetention", this.MaxRetention);
         this.setParamSimple(map, prefix + "MinRetention", this.MinRetention);
         this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+        this.setParamSimple(map, prefix + "IsFrozen", this.IsFrozen);
 
     }
 }

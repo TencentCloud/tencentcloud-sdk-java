@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class DisassociateIPv6AddressRequest extends AbstractModel {
 
     /**
-    * 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。
+    * 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
     */
     @SerializedName("IPv6AddressId")
     @Expose
     private String IPv6AddressId;
 
     /**
-    * 解绑时是否保持绑定弹性网卡。
+    * 解绑时是否保持绑定弹性网卡。可选值：true、false。
+默认值：false
     */
     @SerializedName("KeepBindWithEni")
     @Expose
     private Boolean KeepBindWithEni;
 
     /**
-     * Get 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。 
-     * @return IPv6AddressId 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。
+     * Get 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。 
+     * @return IPv6AddressId 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
      */
     public String getIPv6AddressId() {
         return this.IPv6AddressId;
     }
 
     /**
-     * Set 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。
-     * @param IPv6AddressId 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。
+     * Set 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
+     * @param IPv6AddressId 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
      */
     public void setIPv6AddressId(String IPv6AddressId) {
         this.IPv6AddressId = IPv6AddressId;
     }
 
     /**
-     * Get 解绑时是否保持绑定弹性网卡。 
-     * @return KeepBindWithEni 解绑时是否保持绑定弹性网卡。
+     * Get 解绑时是否保持绑定弹性网卡。可选值：true、false。
+默认值：false 
+     * @return KeepBindWithEni 解绑时是否保持绑定弹性网卡。可选值：true、false。
+默认值：false
      */
     public Boolean getKeepBindWithEni() {
         return this.KeepBindWithEni;
     }
 
     /**
-     * Set 解绑时是否保持绑定弹性网卡。
-     * @param KeepBindWithEni 解绑时是否保持绑定弹性网卡。
+     * Set 解绑时是否保持绑定弹性网卡。可选值：true、false。
+默认值：false
+     * @param KeepBindWithEni 解绑时是否保持绑定弹性网卡。可选值：true、false。
+默认值：false
      */
     public void setKeepBindWithEni(Boolean KeepBindWithEni) {
         this.KeepBindWithEni = KeepBindWithEni;

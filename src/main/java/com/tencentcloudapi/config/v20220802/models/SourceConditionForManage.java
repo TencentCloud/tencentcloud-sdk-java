@@ -25,7 +25,6 @@ public class SourceConditionForManage extends AbstractModel {
 
     /**
     * 条件为空，合规：COMPLIANT，不合规：NON_COMPLIANT，无法应用：NOT_APPLICABLE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmptyAs")
     @Expose
@@ -33,7 +32,6 @@ public class SourceConditionForManage extends AbstractModel {
 
     /**
     * 配置路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelectPath")
     @Expose
@@ -41,7 +39,6 @@ public class SourceConditionForManage extends AbstractModel {
 
     /**
     * 操作运算符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
     @Expose
@@ -49,7 +46,6 @@ public class SourceConditionForManage extends AbstractModel {
 
     /**
     * 是否必须
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Required")
     @Expose
@@ -57,17 +53,14 @@ public class SourceConditionForManage extends AbstractModel {
 
     /**
     * 期望值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DesiredValue")
     @Expose
     private String DesiredValue;
 
     /**
-     * Get 条件为空，合规：COMPLIANT，不合规：NON_COMPLIANT，无法应用：NOT_APPLICABLE
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 条件为空，合规：COMPLIANT，不合规：NON_COMPLIANT，无法应用：NOT_APPLICABLE 
      * @return EmptyAs 条件为空，合规：COMPLIANT，不合规：NON_COMPLIANT，无法应用：NOT_APPLICABLE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmptyAs() {
         return this.EmptyAs;
@@ -75,19 +68,15 @@ public class SourceConditionForManage extends AbstractModel {
 
     /**
      * Set 条件为空，合规：COMPLIANT，不合规：NON_COMPLIANT，无法应用：NOT_APPLICABLE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EmptyAs 条件为空，合规：COMPLIANT，不合规：NON_COMPLIANT，无法应用：NOT_APPLICABLE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmptyAs(String EmptyAs) {
         this.EmptyAs = EmptyAs;
     }
 
     /**
-     * Get 配置路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置路径 
      * @return SelectPath 配置路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelectPath() {
         return this.SelectPath;
@@ -95,19 +84,15 @@ public class SourceConditionForManage extends AbstractModel {
 
     /**
      * Set 配置路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SelectPath 配置路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelectPath(String SelectPath) {
         this.SelectPath = SelectPath;
     }
 
     /**
-     * Get 操作运算符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作运算符 
      * @return Operator 操作运算符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
         return this.Operator;
@@ -115,19 +100,15 @@ public class SourceConditionForManage extends AbstractModel {
 
     /**
      * Set 操作运算符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 操作运算符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 是否必须
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否必须 
      * @return Required 是否必须
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRequired() {
         return this.Required;
@@ -135,19 +116,15 @@ public class SourceConditionForManage extends AbstractModel {
 
     /**
      * Set 是否必须
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Required 是否必须
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequired(Boolean Required) {
         this.Required = Required;
     }
 
     /**
-     * Get 期望值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 期望值 
      * @return DesiredValue 期望值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesiredValue() {
         return this.DesiredValue;
@@ -155,9 +132,7 @@ public class SourceConditionForManage extends AbstractModel {
 
     /**
      * Set 期望值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DesiredValue 期望值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesiredValue(String DesiredValue) {
         this.DesiredValue = DesiredValue;

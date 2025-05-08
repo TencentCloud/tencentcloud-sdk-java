@@ -74,7 +74,6 @@ public class Event extends AbstractModel {
 
     /**
     * 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretId")
     @Expose
@@ -110,7 +109,6 @@ public class Event extends AbstractModel {
 
     /**
     * 源IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceIPAddress")
     @Expose
@@ -257,10 +255,8 @@ public class Event extends AbstractModel {
     }
 
     /**
-     * Get 证书ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证书ID 
      * @return SecretId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretId() {
         return this.SecretId;
@@ -268,9 +264,7 @@ public class Event extends AbstractModel {
 
     /**
      * Set 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretId(String SecretId) {
         this.SecretId = SecretId;
@@ -341,10 +335,8 @@ public class Event extends AbstractModel {
     }
 
     /**
-     * Get 源IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源IP 
      * @return SourceIPAddress 源IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceIPAddress() {
         return this.SourceIPAddress;
@@ -352,9 +344,7 @@ public class Event extends AbstractModel {
 
     /**
      * Set 源IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceIPAddress 源IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceIPAddress(String SourceIPAddress) {
         this.SourceIPAddress = SourceIPAddress;

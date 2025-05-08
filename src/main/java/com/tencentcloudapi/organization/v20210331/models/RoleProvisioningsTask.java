@@ -53,7 +53,6 @@ public class RoleProvisioningsTask extends AbstractModel {
 
     /**
     * 同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetType")
     @Expose
@@ -61,7 +60,6 @@ public class RoleProvisioningsTask extends AbstractModel {
 
     /**
     * 任务类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
     @Expose
@@ -69,7 +67,6 @@ public class RoleProvisioningsTask extends AbstractModel {
 
     /**
     * 任务状态：InProgress: 进行中，Failed: 失败 3:Success: 成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -140,10 +137,8 @@ public class RoleProvisioningsTask extends AbstractModel {
     }
 
     /**
-     * Get 同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号 
      * @return TargetType 同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetType() {
         return this.TargetType;
@@ -151,19 +146,15 @@ public class RoleProvisioningsTask extends AbstractModel {
 
     /**
      * Set 同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetType 同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get 任务类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务类型。 
      * @return TaskType 任务类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskType() {
         return this.TaskType;
@@ -171,19 +162,15 @@ public class RoleProvisioningsTask extends AbstractModel {
 
     /**
      * Set 任务类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskType 任务类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 任务状态：InProgress: 进行中，Failed: 失败 3:Success: 成功
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态：InProgress: 进行中，Failed: 失败 3:Success: 成功 
      * @return TaskStatus 任务状态：InProgress: 进行中，Failed: 失败 3:Success: 成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskStatus() {
         return this.TaskStatus;
@@ -191,9 +178,7 @@ public class RoleProvisioningsTask extends AbstractModel {
 
     /**
      * Set 任务状态：InProgress: 进行中，Failed: 失败 3:Success: 成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskStatus 任务状态：InProgress: 进行中，Failed: 失败 3:Success: 成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;

@@ -192,6 +192,20 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Long IsInstrumentationVulnerabilityScan;
 
     /**
+    * 是否开启远程命令攻击检测
+    */
+    @SerializedName("IsRemoteCommandExecutionAnalysis")
+    @Expose
+    private Long IsRemoteCommandExecutionAnalysis;
+
+    /**
+    * 是否开启内存马检测
+    */
+    @SerializedName("IsMemoryHijackingAnalysis")
+    @Expose
+    private Long IsMemoryHijackingAnalysis;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceId 业务系统 ID
      */
@@ -575,6 +589,38 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.IsInstrumentationVulnerabilityScan = IsInstrumentationVulnerabilityScan;
     }
 
+    /**
+     * Get 是否开启远程命令攻击检测 
+     * @return IsRemoteCommandExecutionAnalysis 是否开启远程命令攻击检测
+     */
+    public Long getIsRemoteCommandExecutionAnalysis() {
+        return this.IsRemoteCommandExecutionAnalysis;
+    }
+
+    /**
+     * Set 是否开启远程命令攻击检测
+     * @param IsRemoteCommandExecutionAnalysis 是否开启远程命令攻击检测
+     */
+    public void setIsRemoteCommandExecutionAnalysis(Long IsRemoteCommandExecutionAnalysis) {
+        this.IsRemoteCommandExecutionAnalysis = IsRemoteCommandExecutionAnalysis;
+    }
+
+    /**
+     * Get 是否开启内存马检测 
+     * @return IsMemoryHijackingAnalysis 是否开启内存马检测
+     */
+    public Long getIsMemoryHijackingAnalysis() {
+        return this.IsMemoryHijackingAnalysis;
+    }
+
+    /**
+     * Set 是否开启内存马检测
+     * @param IsMemoryHijackingAnalysis 是否开启内存马检测
+     */
+    public void setIsMemoryHijackingAnalysis(Long IsMemoryHijackingAnalysis) {
+        this.IsMemoryHijackingAnalysis = IsMemoryHijackingAnalysis;
+    }
+
     public ModifyApmInstanceRequest() {
     }
 
@@ -661,6 +707,12 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         if (source.IsInstrumentationVulnerabilityScan != null) {
             this.IsInstrumentationVulnerabilityScan = new Long(source.IsInstrumentationVulnerabilityScan);
         }
+        if (source.IsRemoteCommandExecutionAnalysis != null) {
+            this.IsRemoteCommandExecutionAnalysis = new Long(source.IsRemoteCommandExecutionAnalysis);
+        }
+        if (source.IsMemoryHijackingAnalysis != null) {
+            this.IsMemoryHijackingAnalysis = new Long(source.IsMemoryHijackingAnalysis);
+        }
     }
 
 
@@ -692,6 +744,8 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
         this.setParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
         this.setParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
+        this.setParamSimple(map, prefix + "IsRemoteCommandExecutionAnalysis", this.IsRemoteCommandExecutionAnalysis);
+        this.setParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
 
     }
 }

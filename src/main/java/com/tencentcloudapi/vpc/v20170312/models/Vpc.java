@@ -109,7 +109,6 @@ public class Vpc extends AbstractModel {
 
     /**
     * 辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssistantCidrSet")
     @Expose
@@ -117,7 +116,6 @@ public class Vpc extends AbstractModel {
 
     /**
     * 返回多运营商IPv6 Cidr Block
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv6CidrBlockSet")
     @Expose
@@ -316,10 +314,8 @@ public class Vpc extends AbstractModel {
     }
 
     /**
-     * Get 辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 辅助CIDR 
      * @return AssistantCidrSet 辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssistantCidr [] getAssistantCidrSet() {
         return this.AssistantCidrSet;
@@ -327,19 +323,15 @@ public class Vpc extends AbstractModel {
 
     /**
      * Set 辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssistantCidrSet 辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssistantCidrSet(AssistantCidr [] AssistantCidrSet) {
         this.AssistantCidrSet = AssistantCidrSet;
     }
 
     /**
-     * Get 返回多运营商IPv6 Cidr Block
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回多运营商IPv6 Cidr Block 
      * @return Ipv6CidrBlockSet 返回多运营商IPv6 Cidr Block
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ISPIPv6CidrBlock [] getIpv6CidrBlockSet() {
         return this.Ipv6CidrBlockSet;
@@ -347,9 +339,7 @@ public class Vpc extends AbstractModel {
 
     /**
      * Set 返回多运营商IPv6 Cidr Block
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv6CidrBlockSet 返回多运营商IPv6 Cidr Block
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv6CidrBlockSet(ISPIPv6CidrBlock [] Ipv6CidrBlockSet) {
         this.Ipv6CidrBlockSet = Ipv6CidrBlockSet;

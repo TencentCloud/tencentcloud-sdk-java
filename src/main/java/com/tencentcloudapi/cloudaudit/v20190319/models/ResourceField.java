@@ -25,7 +25,6 @@ public class ResourceField extends AbstractModel {
 
     /**
     * 跟踪事件所属产品（支持全部产品或单个产品，如：cam，全部：*）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -33,7 +32,6 @@ public class ResourceField extends AbstractModel {
 
     /**
     * 跟踪事件类型（读：Read；写：Write；全部：*）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
     @Expose
@@ -41,17 +39,14 @@ public class ResourceField extends AbstractModel {
 
     /**
     * 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[""]；指定ResourceType时，支持全部接口：[""]；支持部分接口：["cos", "cls"]，接口列表上限10个）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventNames")
     @Expose
     private String [] EventNames;
 
     /**
-     * Get 跟踪事件所属产品（支持全部产品或单个产品，如：cam，全部：*）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跟踪事件所属产品（支持全部产品或单个产品，如：cam，全部：*） 
      * @return ResourceType 跟踪事件所属产品（支持全部产品或单个产品，如：cam，全部：*）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -59,19 +54,15 @@ public class ResourceField extends AbstractModel {
 
     /**
      * Set 跟踪事件所属产品（支持全部产品或单个产品，如：cam，全部：*）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 跟踪事件所属产品（支持全部产品或单个产品，如：cam，全部：*）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 跟踪事件类型（读：Read；写：Write；全部：*）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跟踪事件类型（读：Read；写：Write；全部：*） 
      * @return ActionType 跟踪事件类型（读：Read；写：Write；全部：*）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionType() {
         return this.ActionType;
@@ -79,19 +70,15 @@ public class ResourceField extends AbstractModel {
 
     /**
      * Set 跟踪事件类型（读：Read；写：Write；全部：*）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionType 跟踪事件类型（读：Read；写：Write；全部：*）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[""]；指定ResourceType时，支持全部接口：[""]；支持部分接口：["cos", "cls"]，接口列表上限10个）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[""]；指定ResourceType时，支持全部接口：[""]；支持部分接口：["cos", "cls"]，接口列表上限10个） 
      * @return EventNames 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[""]；指定ResourceType时，支持全部接口：[""]；支持部分接口：["cos", "cls"]，接口列表上限10个）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getEventNames() {
         return this.EventNames;
@@ -99,9 +86,7 @@ public class ResourceField extends AbstractModel {
 
     /**
      * Set 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[""]；指定ResourceType时，支持全部接口：[""]；支持部分接口：["cos", "cls"]，接口列表上限10个）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventNames 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[""]；指定ResourceType时，支持全部接口：[""]；支持部分接口：["cos", "cls"]，接口列表上限10个）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventNames(String [] EventNames) {
         this.EventNames = EventNames;

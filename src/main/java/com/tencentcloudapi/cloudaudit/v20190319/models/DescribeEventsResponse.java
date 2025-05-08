@@ -39,7 +39,6 @@ public class DescribeEventsResponse extends AbstractModel {
 
     /**
     * 日志集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Events")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeEventsResponse extends AbstractModel {
 
     /**
     * 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -93,10 +91,8 @@ public class DescribeEventsResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志集合 
      * @return Events 日志集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Event [] getEvents() {
         return this.Events;
@@ -104,19 +100,15 @@ public class DescribeEventsResponse extends AbstractModel {
 
     /**
      * Set 日志集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Events 日志集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvents(Event [] Events) {
         this.Events = Events;
     }
 
     /**
-     * Get 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。 
      * @return TotalCount 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -124,9 +116,7 @@ public class DescribeEventsResponse extends AbstractModel {
 
     /**
      * Set 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -25,7 +25,7 @@ public class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel {
 
     /**
     * 操作类型。
-- ADD：添加
+- ADD：创建
 - DELETE：删除
 - UPDATE：修改
 - BIND：绑定
@@ -43,21 +43,23 @@ public class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel {
     private String UconfigId;
 
     /**
-    * 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段
+    * 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段。
+具体限制查看 [七层个性化配置](https://cloud.tencent.com/document/product/214/15171)
     */
     @SerializedName("ConfigContent")
     @Expose
     private String ConfigContent;
 
     /**
-    * 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段
+    * 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段。
     */
     @SerializedName("ConfigName")
     @Expose
     private String ConfigName;
 
     /**
-    * 负载均衡实例ID。绑定解绑时，必传此字段
+    * 负载均衡实例ID。绑定解绑时，必传此字段。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -65,13 +67,13 @@ public class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel {
 
     /**
      * Get 操作类型。
-- ADD：添加
+- ADD：创建
 - DELETE：删除
 - UPDATE：修改
 - BIND：绑定
 - UNBIND：解绑 
      * @return OperationType 操作类型。
-- ADD：添加
+- ADD：创建
 - DELETE：删除
 - UPDATE：修改
 - BIND：绑定
@@ -83,13 +85,13 @@ public class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel {
 
     /**
      * Set 操作类型。
-- ADD：添加
+- ADD：创建
 - DELETE：删除
 - UPDATE：修改
 - BIND：绑定
 - UNBIND：解绑
      * @param OperationType 操作类型。
-- ADD：添加
+- ADD：创建
 - DELETE：删除
 - UPDATE：修改
 - BIND：绑定
@@ -116,48 +118,56 @@ public class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel {
     }
 
     /**
-     * Get 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段 
-     * @return ConfigContent 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段
+     * Get 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段。
+具体限制查看 [七层个性化配置](https://cloud.tencent.com/document/product/214/15171) 
+     * @return ConfigContent 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段。
+具体限制查看 [七层个性化配置](https://cloud.tencent.com/document/product/214/15171)
      */
     public String getConfigContent() {
         return this.ConfigContent;
     }
 
     /**
-     * Set 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段
-     * @param ConfigContent 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段
+     * Set 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段。
+具体限制查看 [七层个性化配置](https://cloud.tencent.com/document/product/214/15171)
+     * @param ConfigContent 个性化配置内容。创建个性化配置或修改个性化配置的内容时，必传此字段。
+具体限制查看 [七层个性化配置](https://cloud.tencent.com/document/product/214/15171)
      */
     public void setConfigContent(String ConfigContent) {
         this.ConfigContent = ConfigContent;
     }
 
     /**
-     * Get 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段 
-     * @return ConfigName 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段
+     * Get 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段。 
+     * @return ConfigName 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段。
      */
     public String getConfigName() {
         return this.ConfigName;
     }
 
     /**
-     * Set 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段
-     * @param ConfigName 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段
+     * Set 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段。
+     * @param ConfigName 个性化配置名称。创建个性化配置或修改个性化配置的名字时，必传此字段。
      */
     public void setConfigName(String ConfigName) {
         this.ConfigName = ConfigName;
     }
 
     /**
-     * Get 负载均衡实例ID。绑定解绑时，必传此字段 
-     * @return LoadBalancerIds 负载均衡实例ID。绑定解绑时，必传此字段
+     * Get 负载均衡实例ID。绑定解绑时，必传此字段。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。 
+     * @return LoadBalancerIds 负载均衡实例ID。绑定解绑时，必传此字段。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set 负载均衡实例ID。绑定解绑时，必传此字段
-     * @param LoadBalancerIds 负载均衡实例ID。绑定解绑时，必传此字段
+     * Set 负载均衡实例ID。绑定解绑时，必传此字段。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+     * @param LoadBalancerIds 负载均衡实例ID。绑定解绑时，必传此字段。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

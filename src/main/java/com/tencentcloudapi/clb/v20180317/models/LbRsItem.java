@@ -25,21 +25,25 @@ public class LbRsItem extends AbstractModel {
 
     /**
     * vpc的字符串id，只支持字符串id。
+可以通过 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) 接口查询。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 需要查询后端的内网ip，可以是cvm和弹性网卡。
+    * 需要查询后端的内网 IP，可以是 CVM 和弹性网卡。
+可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。
     */
     @SerializedName("PrivateIp")
     @Expose
     private String PrivateIp;
 
     /**
-     * Get vpc的字符串id，只支持字符串id。 
+     * Get vpc的字符串id，只支持字符串id。
+可以通过 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) 接口查询。 
      * @return VpcId vpc的字符串id，只支持字符串id。
+可以通过 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) 接口查询。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -47,23 +51,29 @@ public class LbRsItem extends AbstractModel {
 
     /**
      * Set vpc的字符串id，只支持字符串id。
+可以通过 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) 接口查询。
      * @param VpcId vpc的字符串id，只支持字符串id。
+可以通过 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) 接口查询。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 需要查询后端的内网ip，可以是cvm和弹性网卡。 
-     * @return PrivateIp 需要查询后端的内网ip，可以是cvm和弹性网卡。
+     * Get 需要查询后端的内网 IP，可以是 CVM 和弹性网卡。
+可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。 
+     * @return PrivateIp 需要查询后端的内网 IP，可以是 CVM 和弹性网卡。
+可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set 需要查询后端的内网ip，可以是cvm和弹性网卡。
-     * @param PrivateIp 需要查询后端的内网ip，可以是cvm和弹性网卡。
+     * Set 需要查询后端的内网 IP，可以是 CVM 和弹性网卡。
+可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。
+     * @param PrivateIp 需要查询后端的内网 IP，可以是 CVM 和弹性网卡。
+可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;

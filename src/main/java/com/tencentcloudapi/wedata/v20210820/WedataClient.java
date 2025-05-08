@@ -446,7 +446,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *创建任务
+     *创建任务。本接口已废弃，请使用接口CreateTaskNew。
      * @param req CreateTaskRequest
      * @return CreateTaskResponse
      * @throws TencentCloudSDKException
@@ -476,6 +476,17 @@ public class WedataClient extends AbstractClient{
     public CreateTaskFolderResponse CreateTaskFolder(CreateTaskFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateTaskFolder", CreateTaskFolderResponse.class);
+    }
+
+    /**
+     *聚合创建任务
+     * @param req CreateTaskNewRequest
+     * @return CreateTaskNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTaskNewResponse CreateTaskNew(CreateTaskNewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTaskNew", CreateTaskNewResponse.class);
     }
 
     /**
@@ -2426,7 +2437,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
 
     /**
      *<p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-添加父任务依赖
+添加父任务依赖。本接口已废弃，请使用接口ModifyTaskLinksDs。
      * @param req ModifyTaskLinksRequest
      * @return ModifyTaskLinksResponse
      * @throws TencentCloudSDKException
@@ -2434,6 +2445,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public ModifyTaskLinksResponse ModifyTaskLinks(ModifyTaskLinksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTaskLinks", ModifyTaskLinksResponse.class);
+    }
+
+    /**
+     *添加父任务依赖
+     * @param req ModifyTaskLinksDsRequest
+     * @return ModifyTaskLinksDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTaskLinksDsResponse ModifyTaskLinksDs(ModifyTaskLinksDsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTaskLinksDs", ModifyTaskLinksDsResponse.class);
     }
 
     /**
@@ -2460,7 +2482,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
-     *更新工作流信息
+     *更新工作流信息。本接口已废弃，请使用接口UpdateWorkflowInfo。
      * @param req ModifyWorkflowInfoRequest
      * @return ModifyWorkflowInfoResponse
      * @throws TencentCloudSDKException
@@ -2493,8 +2515,19 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *注册事件
+     * @param req RegisterDsEventRequest
+     * @return RegisterDsEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterDsEventResponse RegisterDsEvent(RegisterDsEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RegisterDsEvent", RegisterDsEventResponse.class);
+    }
+
+    /**
      *<p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-注册事件
+注册事件。本接口已废弃，请使用接口RegisterDsEvent。
      * @param req RegisterEventRequest
      * @return RegisterEventResponse
      * @throws TencentCloudSDKException
@@ -2525,6 +2558,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public RemoveWorkflowDsResponse RemoveWorkflowDs(RemoveWorkflowDsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RemoveWorkflowDs", RemoveWorkflowDsResponse.class);
+    }
+
+    /**
+     *批量更新工作流下任务责任人
+     * @param req RenewWorkflowOwnerDsRequest
+     * @return RenewWorkflowOwnerDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewWorkflowOwnerDsResponse RenewWorkflowOwnerDs(RenewWorkflowOwnerDsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewWorkflowOwnerDs", RenewWorkflowOwnerDsResponse.class);
     }
 
     /**
@@ -2784,7 +2828,19 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
-     *修改工作流责任人
+     *<p style="color:red;">[该接口为 ds 中开发]</p>
+更新工作流（包括工作流基本信息与工作流参数）
+     * @param req UpdateWorkflowInfoRequest
+     * @return UpdateWorkflowInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateWorkflowInfoResponse UpdateWorkflowInfo(UpdateWorkflowInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateWorkflowInfo", UpdateWorkflowInfoResponse.class);
+    }
+
+    /**
+     *修改工作流责任人。本接口已废弃，请使用接口RenewWorkflowOwnerDs。
      * @param req UpdateWorkflowOwnerRequest
      * @return UpdateWorkflowOwnerResponse
      * @throws TencentCloudSDKException

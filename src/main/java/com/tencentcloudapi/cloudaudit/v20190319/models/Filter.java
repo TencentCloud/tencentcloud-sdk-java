@@ -25,17 +25,14 @@ public class Filter extends AbstractModel {
 
     /**
     * 资源筛选条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceFields")
     @Expose
     private ResourceField [] ResourceFields;
 
     /**
-     * Get 资源筛选条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源筛选条件 
      * @return ResourceFields 资源筛选条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceField [] getResourceFields() {
         return this.ResourceFields;
@@ -43,9 +40,7 @@ public class Filter extends AbstractModel {
 
     /**
      * Set 资源筛选条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceFields 资源筛选条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceFields(ResourceField [] ResourceFields) {
         this.ResourceFields = ResourceFields;

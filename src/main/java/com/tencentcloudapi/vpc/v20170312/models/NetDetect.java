@@ -109,7 +109,6 @@ NONEXTHOP：无下一跳；
 
     /**
     * 下一跳网关名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextHopName")
     @Expose
@@ -117,7 +116,6 @@ NONEXTHOP：无下一跳；
 
     /**
     * 网络探测描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetDetectDescription")
     @Expose
@@ -354,10 +352,8 @@ NONEXTHOP：无下一跳；
     }
 
     /**
-     * Get 下一跳网关名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下一跳网关名称。 
      * @return NextHopName 下一跳网关名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextHopName() {
         return this.NextHopName;
@@ -365,19 +361,15 @@ NONEXTHOP：无下一跳；
 
     /**
      * Set 下一跳网关名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextHopName 下一跳网关名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextHopName(String NextHopName) {
         this.NextHopName = NextHopName;
     }
 
     /**
-     * Get 网络探测描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络探测描述。 
      * @return NetDetectDescription 网络探测描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetDetectDescription() {
         return this.NetDetectDescription;
@@ -385,9 +377,7 @@ NONEXTHOP：无下一跳；
 
     /**
      * Set 网络探测描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetDetectDescription 网络探测描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetDetectDescription(String NetDetectDescription) {
         this.NetDetectDescription = NetDetectDescription;

@@ -112,14 +112,14 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     private Long OpenBgp;
 
     /**
-    * 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+    * 是否开启 SNAT，在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 SNAT 的。
     */
     @SerializedName("Snat")
     @Expose
     private Boolean Snat;
 
     /**
-    * 0：表示未被隔离，1：表示被隔离。
+    * 是否被隔离，0：表示未被隔离，1：表示被隔离。
     */
     @SerializedName("Isolation")
     @Expose
@@ -684,32 +684,32 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     }
 
     /**
-     * Get 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。 
-     * @return Snat 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+     * Get 是否开启 SNAT，在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 SNAT 的。 
+     * @return Snat 是否开启 SNAT，在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 SNAT 的。
      */
     public Boolean getSnat() {
         return this.Snat;
     }
 
     /**
-     * Set 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-     * @param Snat 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+     * Set 是否开启 SNAT，在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 SNAT 的。
+     * @param Snat 是否开启 SNAT，在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 SNAT 的。
      */
     public void setSnat(Boolean Snat) {
         this.Snat = Snat;
     }
 
     /**
-     * Get 0：表示未被隔离，1：表示被隔离。 
-     * @return Isolation 0：表示未被隔离，1：表示被隔离。
+     * Get 是否被隔离，0：表示未被隔离，1：表示被隔离。 
+     * @return Isolation 是否被隔离，0：表示未被隔离，1：表示被隔离。
      */
     public Long getIsolation() {
         return this.Isolation;
     }
 
     /**
-     * Set 0：表示未被隔离，1：表示被隔离。
-     * @param Isolation 0：表示未被隔离，1：表示被隔离。
+     * Set 是否被隔离，0：表示未被隔离，1：表示被隔离。
+     * @param Isolation 是否被隔离，0：表示未被隔离，1：表示被隔离。
      */
     public void setIsolation(Long Isolation) {
         this.Isolation = Isolation;

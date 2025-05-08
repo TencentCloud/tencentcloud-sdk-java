@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DescribeLoadBalancerListByCertIdRequest extends AbstractModel {
 
     /**
-    * 服务端证书的ID，或客户端证书的ID
+    * 服务端证书的ID，或客户端证书的ID。可以通过 [DescribeCertificate](https://cloud.tencent.com/document/api/400/41674) 接口查询。
+数组最大长度为20。
     */
     @SerializedName("CertIds")
     @Expose
     private String [] CertIds;
 
     /**
-     * Get 服务端证书的ID，或客户端证书的ID 
-     * @return CertIds 服务端证书的ID，或客户端证书的ID
+     * Get 服务端证书的ID，或客户端证书的ID。可以通过 [DescribeCertificate](https://cloud.tencent.com/document/api/400/41674) 接口查询。
+数组最大长度为20。 
+     * @return CertIds 服务端证书的ID，或客户端证书的ID。可以通过 [DescribeCertificate](https://cloud.tencent.com/document/api/400/41674) 接口查询。
+数组最大长度为20。
      */
     public String [] getCertIds() {
         return this.CertIds;
     }
 
     /**
-     * Set 服务端证书的ID，或客户端证书的ID
-     * @param CertIds 服务端证书的ID，或客户端证书的ID
+     * Set 服务端证书的ID，或客户端证书的ID。可以通过 [DescribeCertificate](https://cloud.tencent.com/document/api/400/41674) 接口查询。
+数组最大长度为20。
+     * @param CertIds 服务端证书的ID，或客户端证书的ID。可以通过 [DescribeCertificate](https://cloud.tencent.com/document/api/400/41674) 接口查询。
+数组最大长度为20。
      */
     public void setCertIds(String [] CertIds) {
         this.CertIds = CertIds;

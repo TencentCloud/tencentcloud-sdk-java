@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class AssociateTargetGroupsRequest extends AbstractModel {
 
     /**
-    * 绑定的关系数组。一次请求最多支持20个。
+    * 绑定的关系数组，目标组类型需要一致。
+一次请求最多支持20个。
+
     */
     @SerializedName("Associations")
     @Expose
     private TargetGroupAssociation [] Associations;
 
     /**
-     * Get 绑定的关系数组。一次请求最多支持20个。 
-     * @return Associations 绑定的关系数组。一次请求最多支持20个。
+     * Get 绑定的关系数组，目标组类型需要一致。
+一次请求最多支持20个。
+ 
+     * @return Associations 绑定的关系数组，目标组类型需要一致。
+一次请求最多支持20个。
+
      */
     public TargetGroupAssociation [] getAssociations() {
         return this.Associations;
     }
 
     /**
-     * Set 绑定的关系数组。一次请求最多支持20个。
-     * @param Associations 绑定的关系数组。一次请求最多支持20个。
+     * Set 绑定的关系数组，目标组类型需要一致。
+一次请求最多支持20个。
+
+     * @param Associations 绑定的关系数组，目标组类型需要一致。
+一次请求最多支持20个。
+
      */
     public void setAssociations(TargetGroupAssociation [] Associations) {
         this.Associations = Associations;

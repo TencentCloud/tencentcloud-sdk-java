@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class SlaUpdateParam extends AbstractModel {
 
     /**
-    * lb的字符串ID
+    * 负载均衡实例 ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
     */
     @SerializedName("LoadBalancerId")
     @Expose
@@ -45,16 +46,20 @@ public class SlaUpdateParam extends AbstractModel {
     private String SlaType;
 
     /**
-     * Get lb的字符串ID 
-     * @return LoadBalancerId lb的字符串ID
+     * Get 负载均衡实例 ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。 
+     * @return LoadBalancerId 负载均衡实例 ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set lb的字符串ID
-     * @param LoadBalancerId lb的字符串ID
+     * Set 负载均衡实例 ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+     * @param LoadBalancerId 负载均衡实例 ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;

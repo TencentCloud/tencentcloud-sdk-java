@@ -197,6 +197,14 @@ PREPAID，包年包月
     private Long DestroyTime;
 
     /**
+    * 所属可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private Long [] ZoneIds;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -636,6 +644,26 @@ PREPAID，包年包月
         this.DestroyTime = DestroyTime;
     }
 
+    /**
+     * Get 所属可用区列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneIds 所属可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set 所属可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneIds 所属可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneIds(Long [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
+    }
+
     public FusionInstanceItem() {
     }
 
@@ -710,6 +738,12 @@ PREPAID，包年包月
         if (source.DestroyTime != null) {
             this.DestroyTime = new Long(source.DestroyTime);
         }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new Long[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new Long(source.ZoneIds[i]);
+            }
+        }
     }
 
 
@@ -738,6 +772,7 @@ PREPAID，包年包月
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamObj(map, prefix + "InstanceItemExtraInfo.", this.InstanceItemExtraInfo);
         this.setParamSimple(map, prefix + "DestroyTime", this.DestroyTime);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
 
     }
 }

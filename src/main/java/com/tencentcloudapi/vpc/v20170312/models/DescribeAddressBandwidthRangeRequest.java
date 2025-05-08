@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAddressBandwidthRangeRequest extends AbstractModel {
 
     /**
-    * EIP资源ID列表，单次查询上限20。
+    * EIP资源ID列表，单次查询上限20，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
     */
     @SerializedName("AddressIds")
     @Expose
     private String [] AddressIds;
 
     /**
-     * Get EIP资源ID列表，单次查询上限20。 
-     * @return AddressIds EIP资源ID列表，单次查询上限20。
+     * Get EIP资源ID列表，单次查询上限20，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。 
+     * @return AddressIds EIP资源ID列表，单次查询上限20，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     public String [] getAddressIds() {
         return this.AddressIds;
     }
 
     /**
-     * Set EIP资源ID列表，单次查询上限20。
-     * @param AddressIds EIP资源ID列表，单次查询上限20。
+     * Set EIP资源ID列表，单次查询上限20，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+     * @param AddressIds EIP资源ID列表，单次查询上限20，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     public void setAddressIds(String [] AddressIds) {
         this.AddressIds = AddressIds;

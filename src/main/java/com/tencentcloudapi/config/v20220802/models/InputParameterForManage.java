@@ -25,7 +25,6 @@ public class InputParameterForManage extends AbstractModel {
 
     /**
     * 值类型。数值：Integer， 字符串：String
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValueType")
     @Expose
@@ -33,7 +32,6 @@ public class InputParameterForManage extends AbstractModel {
 
     /**
     * 参数Key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterKey")
     @Expose
@@ -41,7 +39,6 @@ public class InputParameterForManage extends AbstractModel {
 
     /**
     * 参数类型。必填类型：Require，可选类型：Optional。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -49,7 +46,6 @@ public class InputParameterForManage extends AbstractModel {
 
     /**
     * 默认值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultValue")
     @Expose
@@ -57,17 +53,14 @@ public class InputParameterForManage extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 值类型。数值：Integer， 字符串：String
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 值类型。数值：Integer， 字符串：String 
      * @return ValueType 值类型。数值：Integer， 字符串：String
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValueType() {
         return this.ValueType;
@@ -75,19 +68,15 @@ public class InputParameterForManage extends AbstractModel {
 
     /**
      * Set 值类型。数值：Integer， 字符串：String
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueType 值类型。数值：Integer， 字符串：String
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValueType(String ValueType) {
         this.ValueType = ValueType;
     }
 
     /**
-     * Get 参数Key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数Key 
      * @return ParameterKey 参数Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameterKey() {
         return this.ParameterKey;
@@ -95,19 +84,15 @@ public class InputParameterForManage extends AbstractModel {
 
     /**
      * Set 参数Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParameterKey 参数Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterKey(String ParameterKey) {
         this.ParameterKey = ParameterKey;
     }
 
     /**
-     * Get 参数类型。必填类型：Require，可选类型：Optional。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数类型。必填类型：Require，可选类型：Optional。 
      * @return Type 参数类型。必填类型：Require，可选类型：Optional。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -115,19 +100,15 @@ public class InputParameterForManage extends AbstractModel {
 
     /**
      * Set 参数类型。必填类型：Require，可选类型：Optional。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 参数类型。必填类型：Require，可选类型：Optional。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 默认值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认值 
      * @return DefaultValue 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultValue() {
         return this.DefaultValue;
@@ -135,19 +116,15 @@ public class InputParameterForManage extends AbstractModel {
 
     /**
      * Set 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultValue 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -155,9 +132,7 @@ public class InputParameterForManage extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

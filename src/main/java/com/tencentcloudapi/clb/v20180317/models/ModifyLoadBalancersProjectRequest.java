@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ModifyLoadBalancersProjectRequest extends AbstractModel {
 
     /**
-    * 一个或多个待操作的负载均衡实例ID。
+    * 一个或多个待操作的负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持最大长度为20。
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -38,16 +39,20 @@ public class ModifyLoadBalancersProjectRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-     * Get 一个或多个待操作的负载均衡实例ID。 
-     * @return LoadBalancerIds 一个或多个待操作的负载均衡实例ID。
+     * Get 一个或多个待操作的负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持最大长度为20。 
+     * @return LoadBalancerIds 一个或多个待操作的负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持最大长度为20。
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set 一个或多个待操作的负载均衡实例ID。
-     * @param LoadBalancerIds 一个或多个待操作的负载均衡实例ID。
+     * Set 一个或多个待操作的负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持最大长度为20。
+     * @param LoadBalancerIds 一个或多个待操作的负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持最大长度为20。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

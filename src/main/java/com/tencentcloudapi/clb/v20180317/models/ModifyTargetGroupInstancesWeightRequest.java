@@ -31,7 +31,7 @@ public class ModifyTargetGroupInstancesWeightRequest extends AbstractModel {
     private String TargetGroupId;
 
     /**
-    * 待修改权重的服务器数组。
+    * 待修改权重的服务器数组，在这个接口 Port 为必填项。
     */
     @SerializedName("TargetGroupInstances")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyTargetGroupInstancesWeightRequest extends AbstractModel {
     }
 
     /**
-     * Get 待修改权重的服务器数组。 
-     * @return TargetGroupInstances 待修改权重的服务器数组。
+     * Get 待修改权重的服务器数组，在这个接口 Port 为必填项。 
+     * @return TargetGroupInstances 待修改权重的服务器数组，在这个接口 Port 为必填项。
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
     }
 
     /**
-     * Set 待修改权重的服务器数组。
-     * @param TargetGroupInstances 待修改权重的服务器数组。
+     * Set 待修改权重的服务器数组，在这个接口 Port 为必填项。
+     * @param TargetGroupInstances 待修改权重的服务器数组，在这个接口 Port 为必填项。
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;

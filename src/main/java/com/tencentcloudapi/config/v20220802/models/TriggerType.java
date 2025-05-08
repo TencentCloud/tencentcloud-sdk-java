@@ -32,7 +32,6 @@ public class TriggerType extends AbstractModel {
 
     /**
     * 触发时间周期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaximumExecutionFrequency")
     @Expose
@@ -55,10 +54,8 @@ public class TriggerType extends AbstractModel {
     }
 
     /**
-     * Get 触发时间周期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 触发时间周期 
      * @return MaximumExecutionFrequency 触发时间周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaximumExecutionFrequency() {
         return this.MaximumExecutionFrequency;
@@ -66,9 +63,7 @@ public class TriggerType extends AbstractModel {
 
     /**
      * Set 触发时间周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaximumExecutionFrequency 触发时间周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaximumExecutionFrequency(String MaximumExecutionFrequency) {
         this.MaximumExecutionFrequency = MaximumExecutionFrequency;

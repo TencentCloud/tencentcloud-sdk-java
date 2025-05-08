@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SetSecurityGroupForLoadbalancersRequest extends AbstractModel {
 
     /**
-    * 安全组ID，如 sg-12345678
+    * 安全组ID，如 sg-12345678。可以通过 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808) 接口获取。
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -39,23 +39,24 @@ DEL 解绑安全组
     private String OperationType;
 
     /**
-    * 负载均衡实例ID数组
+    * 负载均衡实例ID数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持的最大长度为20。
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-     * Get 安全组ID，如 sg-12345678 
-     * @return SecurityGroup 安全组ID，如 sg-12345678
+     * Get 安全组ID，如 sg-12345678。可以通过 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808) 接口获取。 
+     * @return SecurityGroup 安全组ID，如 sg-12345678。可以通过 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808) 接口获取。
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set 安全组ID，如 sg-12345678
-     * @param SecurityGroup 安全组ID，如 sg-12345678
+     * Set 安全组ID，如 sg-12345678。可以通过 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808) 接口获取。
+     * @param SecurityGroup 安全组ID，如 sg-12345678。可以通过 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808) 接口获取。
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
@@ -82,16 +83,20 @@ DEL 解绑安全组
     }
 
     /**
-     * Get 负载均衡实例ID数组 
-     * @return LoadBalancerIds 负载均衡实例ID数组
+     * Get 负载均衡实例ID数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持的最大长度为20。 
+     * @return LoadBalancerIds 负载均衡实例ID数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持的最大长度为20。
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set 负载均衡实例ID数组
-     * @param LoadBalancerIds 负载均衡实例ID数组
+     * Set 负载均衡实例ID数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持的最大长度为20。
+     * @param LoadBalancerIds 负载均衡实例ID数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持的最大长度为20。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

@@ -122,7 +122,7 @@ public class SearchCommandResult extends AbstractModel {
     private String SessionTime;
 
     /**
-    * 该命令所属会话的会话开始时间（废弃，使用SessionTime）
+    * 该命令所属会话的会话开始时间（使用SessionTime）
     */
     @SerializedName("SessTime")
     @Expose
@@ -402,16 +402,16 @@ public class SearchCommandResult extends AbstractModel {
     }
 
     /**
-     * Get 该命令所属会话的会话开始时间（废弃，使用SessionTime） 
-     * @return SessTime 该命令所属会话的会话开始时间（废弃，使用SessionTime）
+     * Get 该命令所属会话的会话开始时间（使用SessionTime） 
+     * @return SessTime 该命令所属会话的会话开始时间（使用SessionTime）
      */
     public String getSessTime() {
         return this.SessTime;
     }
 
     /**
-     * Set 该命令所属会话的会话开始时间（废弃，使用SessionTime）
-     * @param SessTime 该命令所属会话的会话开始时间（废弃，使用SessionTime）
+     * Set 该命令所属会话的会话开始时间（使用SessionTime）
+     * @param SessTime 该命令所属会话的会话开始时间（使用SessionTime）
      */
     public void setSessTime(String SessTime) {
         this.SessTime = SessTime;

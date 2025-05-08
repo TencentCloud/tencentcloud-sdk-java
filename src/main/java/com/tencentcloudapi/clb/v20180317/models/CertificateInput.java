@@ -74,14 +74,14 @@ public class CertificateInput extends AbstractModel {
     private String CertContent;
 
     /**
-    * 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+    * 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
     */
     @SerializedName("CertCaName")
     @Expose
     private String CertCaName;
 
     /**
-    * 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+    * 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
     */
     @SerializedName("CertCaContent")
     @Expose
@@ -204,32 +204,32 @@ public class CertificateInput extends AbstractModel {
     }
 
     /**
-     * Get 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。 
-     * @return CertCaName 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * Get 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。 
+     * @return CertCaName 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
      */
     public String getCertCaName() {
         return this.CertCaName;
     }
 
     /**
-     * Set 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
-     * @param CertCaName 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * Set 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+     * @param CertCaName 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
      */
     public void setCertCaName(String CertCaName) {
         this.CertCaName = CertCaName;
     }
 
     /**
-     * Get 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。 
-     * @return CertCaContent 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * Get 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。 
+     * @return CertCaContent 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
      */
     public String getCertCaContent() {
         return this.CertCaContent;
     }
 
     /**
-     * Set 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
-     * @param CertCaContent 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * Set 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+     * @param CertCaContent 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
      */
     public void setCertCaContent(String CertCaContent) {
         this.CertCaContent = CertCaContent;

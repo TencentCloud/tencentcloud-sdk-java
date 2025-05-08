@@ -38,6 +38,13 @@ public class CreateRocketMQClusterRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * 标签列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get 集群名称，3-64个字符，只能包含字母、数字、“-”及“_” 
      * @return Name 集群名称，3-64个字符，只能包含字母、数字、“-”及“_”
      */
@@ -69,6 +76,22 @@ public class CreateRocketMQClusterRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 标签列表 
+     * @return TagList 标签列表
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 标签列表
+     * @param TagList 标签列表
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public CreateRocketMQClusterRequest() {
     }
 
@@ -83,6 +106,12 @@ public class CreateRocketMQClusterRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class CreateRocketMQClusterRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

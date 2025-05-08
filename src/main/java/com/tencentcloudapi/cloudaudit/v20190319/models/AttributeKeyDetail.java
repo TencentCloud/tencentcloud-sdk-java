@@ -25,7 +25,6 @@ public class AttributeKeyDetail extends AbstractModel {
 
     /**
     * 输入框类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelType")
     @Expose
@@ -33,7 +32,6 @@ public class AttributeKeyDetail extends AbstractModel {
 
     /**
     * 初始化展示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Starter")
     @Expose
@@ -41,7 +39,6 @@ public class AttributeKeyDetail extends AbstractModel {
 
     /**
     * 展示排序
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Order")
     @Expose
@@ -49,7 +46,6 @@ public class AttributeKeyDetail extends AbstractModel {
 
     /**
     * AttributeKey值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -57,17 +53,14 @@ public class AttributeKeyDetail extends AbstractModel {
 
     /**
     * 中文标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-     * Get 输入框类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入框类型 
      * @return LabelType 输入框类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabelType() {
         return this.LabelType;
@@ -75,19 +68,15 @@ public class AttributeKeyDetail extends AbstractModel {
 
     /**
      * Set 输入框类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LabelType 输入框类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelType(String LabelType) {
         this.LabelType = LabelType;
     }
 
     /**
-     * Get 初始化展示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 初始化展示 
      * @return Starter 初始化展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStarter() {
         return this.Starter;
@@ -95,19 +84,15 @@ public class AttributeKeyDetail extends AbstractModel {
 
     /**
      * Set 初始化展示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Starter 初始化展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStarter(String Starter) {
         this.Starter = Starter;
     }
 
     /**
-     * Get 展示排序
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 展示排序 
      * @return Order 展示排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOrder() {
         return this.Order;
@@ -115,19 +100,15 @@ public class AttributeKeyDetail extends AbstractModel {
 
     /**
      * Set 展示排序
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Order 展示排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrder(Long Order) {
         this.Order = Order;
     }
 
     /**
-     * Get AttributeKey值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AttributeKey值 
      * @return Value AttributeKey值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -135,19 +116,15 @@ public class AttributeKeyDetail extends AbstractModel {
 
     /**
      * Set AttributeKey值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value AttributeKey值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 中文标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 中文标签 
      * @return Label 中文标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -155,9 +132,7 @@ public class AttributeKeyDetail extends AbstractModel {
 
     /**
      * Set 中文标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 中文标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;

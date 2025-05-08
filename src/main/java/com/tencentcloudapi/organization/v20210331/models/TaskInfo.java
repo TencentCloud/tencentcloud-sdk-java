@@ -88,7 +88,6 @@ public class TaskInfo extends AbstractModel {
 
     /**
     * 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailureReason")
     @Expose
@@ -239,10 +238,8 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败原因 
      * @return FailureReason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailureReason() {
         return this.FailureReason;
@@ -250,9 +247,7 @@ public class TaskInfo extends AbstractModel {
 
     /**
      * Set 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailureReason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailureReason(String FailureReason) {
         this.FailureReason = FailureReason;

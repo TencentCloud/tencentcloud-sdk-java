@@ -25,7 +25,6 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
     * 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
     * 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
     * 资源名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceName")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
     * 资源地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
     * 资源可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceZone")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
     * 资源配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Configuration")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
     * 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceCreateTime")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
     * 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
     * 资源更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -103,10 +94,8 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源Id 
      * @return ResourceId 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -114,19 +103,15 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
      * Set 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源类型 
      * @return ResourceType 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -134,19 +119,15 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
      * Set 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 资源名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源名 
      * @return ResourceName 资源名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceName() {
         return this.ResourceName;
@@ -154,19 +135,15 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
      * Set 资源名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceName 资源名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 资源地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源地域 
      * @return ResourceRegion 资源地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -174,19 +151,15 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
      * Set 资源地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 资源地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get 资源可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源可用区 
      * @return ResourceZone 资源可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceZone() {
         return this.ResourceZone;
@@ -194,19 +167,15 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
      * Set 资源可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceZone 资源可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceZone(String ResourceZone) {
         this.ResourceZone = ResourceZone;
     }
 
     /**
-     * Get 资源配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源配置 
      * @return Configuration 资源配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfiguration() {
         return this.Configuration;
@@ -214,19 +183,15 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
      * Set 资源配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Configuration 资源配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfiguration(String Configuration) {
         this.Configuration = Configuration;
     }
 
     /**
-     * Get 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源创建时间 
      * @return ResourceCreateTime 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceCreateTime() {
         return this.ResourceCreateTime;
@@ -234,19 +199,15 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
      * Set 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceCreateTime 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceCreateTime(String ResourceCreateTime) {
         this.ResourceCreateTime = ResourceCreateTime;
     }
 
     /**
-     * Get 资源标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源标签 
      * @return Tags 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -254,19 +215,15 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
      * Set 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 资源更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源更新时间 
      * @return UpdateTime 资源更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -274,9 +231,7 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
      * Set 资源更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 资源更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

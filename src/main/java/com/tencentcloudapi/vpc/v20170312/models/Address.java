@@ -66,14 +66,14 @@ public class Address extends AbstractModel {
     private String CreatedTime;
 
     /**
-    * 绑定的弹性网卡ID
+    * 绑定的弹性网卡ID，null表示没有绑定弹性网卡。
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 绑定的资源内网ip
+    * 绑定的资源内网ip，null表示没有绑定资源内网ip。
     */
     @SerializedName("PrivateAddressIp")
     @Expose
@@ -122,14 +122,16 @@ public class Address extends AbstractModel {
     private AlgType EipAlgType;
 
     /**
-    * 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
+    * 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
     */
     @SerializedName("InternetServiceProvider")
     @Expose
     private String InternetServiceProvider;
 
     /**
-    * 是否本地带宽EIP
+    * 是否本地带宽EIP，可选值：
+<li>true：本地带宽EIP</li>
+<li>false：非本地带宽EIP</li>
     */
     @SerializedName("LocalBgp")
     @Expose
@@ -169,7 +171,8 @@ public class Address extends AbstractModel {
     private Tag [] TagSet;
 
     /**
-    * 到期时间。
+    * 预付费包月带宽IP到期时间。
+时间格式：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadlineDate")
@@ -177,7 +180,15 @@ public class Address extends AbstractModel {
     private String DeadlineDate;
 
     /**
-    * EIP绑定的实例类型。
+    * EIP绑定的实例类型。可选值：
+<li>CVM：云服务器</li>
+<li>NAT：NAT 网关</li>
+<li>HAVIP：高可用虚拟IP</li>
+<li>ENI：弹性网卡</li>
+<li>CLB：内网CLB</li>
+<li>DHCPIP：弹性内网IP</li>
+
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
@@ -327,32 +338,32 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get 绑定的弹性网卡ID 
-     * @return NetworkInterfaceId 绑定的弹性网卡ID
+     * Get 绑定的弹性网卡ID，null表示没有绑定弹性网卡。 
+     * @return NetworkInterfaceId 绑定的弹性网卡ID，null表示没有绑定弹性网卡。
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 绑定的弹性网卡ID
-     * @param NetworkInterfaceId 绑定的弹性网卡ID
+     * Set 绑定的弹性网卡ID，null表示没有绑定弹性网卡。
+     * @param NetworkInterfaceId 绑定的弹性网卡ID，null表示没有绑定弹性网卡。
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 绑定的资源内网ip 
-     * @return PrivateAddressIp 绑定的资源内网ip
+     * Get 绑定的资源内网ip，null表示没有绑定资源内网ip。 
+     * @return PrivateAddressIp 绑定的资源内网ip，null表示没有绑定资源内网ip。
      */
     public String getPrivateAddressIp() {
         return this.PrivateAddressIp;
     }
 
     /**
-     * Set 绑定的资源内网ip
-     * @param PrivateAddressIp 绑定的资源内网ip
+     * Set 绑定的资源内网ip，null表示没有绑定资源内网ip。
+     * @param PrivateAddressIp 绑定的资源内网ip，null表示没有绑定资源内网ip。
      */
     public void setPrivateAddressIp(String PrivateAddressIp) {
         this.PrivateAddressIp = PrivateAddressIp;
@@ -455,32 +466,40 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP" 
-     * @return InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
+     * Get 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。 
+     * @return InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
      */
     public String getInternetServiceProvider() {
         return this.InternetServiceProvider;
     }
 
     /**
-     * Set 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
-     * @param InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
+     * Set 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
+     * @param InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
      */
     public void setInternetServiceProvider(String InternetServiceProvider) {
         this.InternetServiceProvider = InternetServiceProvider;
     }
 
     /**
-     * Get 是否本地带宽EIP 
-     * @return LocalBgp 是否本地带宽EIP
+     * Get 是否本地带宽EIP，可选值：
+<li>true：本地带宽EIP</li>
+<li>false：非本地带宽EIP</li> 
+     * @return LocalBgp 是否本地带宽EIP，可选值：
+<li>true：本地带宽EIP</li>
+<li>false：非本地带宽EIP</li>
      */
     public Boolean getLocalBgp() {
         return this.LocalBgp;
     }
 
     /**
-     * Set 是否本地带宽EIP
-     * @param LocalBgp 是否本地带宽EIP
+     * Set 是否本地带宽EIP，可选值：
+<li>true：本地带宽EIP</li>
+<li>false：非本地带宽EIP</li>
+     * @param LocalBgp 是否本地带宽EIP，可选值：
+<li>true：本地带宽EIP</li>
+<li>false：非本地带宽EIP</li>
      */
     public void setLocalBgp(Boolean LocalBgp) {
         this.LocalBgp = LocalBgp;
@@ -583,9 +602,11 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get 到期时间。
+     * Get 预付费包月带宽IP到期时间。
+时间格式：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeadlineDate 到期时间。
+     * @return DeadlineDate 预付费包月带宽IP到期时间。
+时间格式：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeadlineDate() {
@@ -593,9 +614,11 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Set 到期时间。
+     * Set 预付费包月带宽IP到期时间。
+时间格式：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeadlineDate 到期时间。
+     * @param DeadlineDate 预付费包月带宽IP到期时间。
+时间格式：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadlineDate(String DeadlineDate) {
@@ -603,9 +626,25 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get EIP绑定的实例类型。
+     * Get EIP绑定的实例类型。可选值：
+<li>CVM：云服务器</li>
+<li>NAT：NAT 网关</li>
+<li>HAVIP：高可用虚拟IP</li>
+<li>ENI：弹性网卡</li>
+<li>CLB：内网CLB</li>
+<li>DHCPIP：弹性内网IP</li>
+
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceType EIP绑定的实例类型。
+     * @return InstanceType EIP绑定的实例类型。可选值：
+<li>CVM：云服务器</li>
+<li>NAT：NAT 网关</li>
+<li>HAVIP：高可用虚拟IP</li>
+<li>ENI：弹性网卡</li>
+<li>CLB：内网CLB</li>
+<li>DHCPIP：弹性内网IP</li>
+
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
@@ -613,9 +652,25 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Set EIP绑定的实例类型。
+     * Set EIP绑定的实例类型。可选值：
+<li>CVM：云服务器</li>
+<li>NAT：NAT 网关</li>
+<li>HAVIP：高可用虚拟IP</li>
+<li>ENI：弹性网卡</li>
+<li>CLB：内网CLB</li>
+<li>DHCPIP：弹性内网IP</li>
+
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceType EIP绑定的实例类型。
+     * @param InstanceType EIP绑定的实例类型。可选值：
+<li>CVM：云服务器</li>
+<li>NAT：NAT 网关</li>
+<li>HAVIP：高可用虚拟IP</li>
+<li>ENI：弹性网卡</li>
+<li>CLB：内网CLB</li>
+<li>DHCPIP：弹性内网IP</li>
+
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {

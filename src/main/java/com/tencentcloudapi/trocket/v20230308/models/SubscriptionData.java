@@ -146,6 +146,14 @@ CLUSTERING 集群模式;
     private String MessageModel;
 
     /**
+    * 订阅不一致的客户端列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientSubscriptionInfos")
+    @Expose
+    private ClientSubscriptionInfo [] ClientSubscriptionInfos;
+
+    /**
      * Get 实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例ID
@@ -453,6 +461,26 @@ CLUSTERING 集群模式;
         this.MessageModel = MessageModel;
     }
 
+    /**
+     * Get 订阅不一致的客户端列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientSubscriptionInfos 订阅不一致的客户端列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClientSubscriptionInfo [] getClientSubscriptionInfos() {
+        return this.ClientSubscriptionInfos;
+    }
+
+    /**
+     * Set 订阅不一致的客户端列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientSubscriptionInfos 订阅不一致的客户端列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientSubscriptionInfos(ClientSubscriptionInfo [] ClientSubscriptionInfos) {
+        this.ClientSubscriptionInfos = ClientSubscriptionInfos;
+    }
+
     public SubscriptionData() {
     }
 
@@ -506,6 +534,12 @@ CLUSTERING 集群模式;
         if (source.MessageModel != null) {
             this.MessageModel = new String(source.MessageModel);
         }
+        if (source.ClientSubscriptionInfos != null) {
+            this.ClientSubscriptionInfos = new ClientSubscriptionInfo[source.ClientSubscriptionInfos.length];
+            for (int i = 0; i < source.ClientSubscriptionInfos.length; i++) {
+                this.ClientSubscriptionInfos[i] = new ClientSubscriptionInfo(source.ClientSubscriptionInfos[i]);
+            }
+        }
     }
 
 
@@ -528,6 +562,7 @@ CLUSTERING 集群模式;
         this.setParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
         this.setParamSimple(map, prefix + "ConsumeMessageOrderly", this.ConsumeMessageOrderly);
         this.setParamSimple(map, prefix + "MessageModel", this.MessageModel);
+        this.setParamArrayObj(map, prefix + "ClientSubscriptionInfos.", this.ClientSubscriptionInfos);
 
     }
 }

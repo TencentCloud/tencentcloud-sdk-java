@@ -227,7 +227,9 @@ public class Model extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TagInfos 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String [] getTagInfos() {
         return this.TagInfos;
     }
@@ -237,7 +239,9 @@ public class Model extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TagInfos 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setTagInfos(String [] TagInfos) {
         this.TagInfos = TagInfos;
     }

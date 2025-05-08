@@ -46,7 +46,6 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -54,7 +53,6 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
     * 资源状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceStatus")
     @Expose
@@ -62,7 +60,6 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
     * 1 :已删除 2：未删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceDelete")
     @Expose
@@ -70,7 +67,6 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
     * 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceCreateTime")
     @Expose
@@ -78,7 +74,6 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
     * 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -86,7 +81,6 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceZone")
     @Expose
@@ -94,7 +88,6 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
     * 合规状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceResult")
     @Expose
@@ -149,10 +142,8 @@ public class ResourceListInfo extends AbstractModel {
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return ResourceRegion 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -160,19 +151,15 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get 资源状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源状态 
      * @return ResourceStatus 资源状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceStatus() {
         return this.ResourceStatus;
@@ -180,19 +167,15 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
      * Set 资源状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceStatus 资源状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceStatus(String ResourceStatus) {
         this.ResourceStatus = ResourceStatus;
     }
 
     /**
-     * Get 1 :已删除 2：未删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1 :已删除 2：未删除 
      * @return ResourceDelete 1 :已删除 2：未删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceDelete() {
         return this.ResourceDelete;
@@ -200,19 +183,15 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
      * Set 1 :已删除 2：未删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceDelete 1 :已删除 2：未删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceDelete(Long ResourceDelete) {
         this.ResourceDelete = ResourceDelete;
     }
 
     /**
-     * Get 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源创建时间 
      * @return ResourceCreateTime 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceCreateTime() {
         return this.ResourceCreateTime;
@@ -220,19 +199,15 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
      * Set 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceCreateTime 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceCreateTime(String ResourceCreateTime) {
         this.ResourceCreateTime = ResourceCreateTime;
     }
 
     /**
-     * Get 标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签信息 
      * @return Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -240,19 +215,15 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
      * Set 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return ResourceZone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceZone() {
         return this.ResourceZone;
@@ -260,19 +231,15 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceZone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceZone(String ResourceZone) {
         this.ResourceZone = ResourceZone;
     }
 
     /**
-     * Get 合规状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规状态 
      * @return ComplianceResult 合规状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComplianceResult() {
         return this.ComplianceResult;
@@ -280,9 +247,7 @@ public class ResourceListInfo extends AbstractModel {
 
     /**
      * Set 合规状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceResult 合规状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceResult(String ComplianceResult) {
         this.ComplianceResult = ComplianceResult;

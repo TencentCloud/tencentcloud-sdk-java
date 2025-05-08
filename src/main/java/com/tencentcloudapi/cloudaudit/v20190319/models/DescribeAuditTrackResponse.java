@@ -74,7 +74,6 @@ public class DescribeAuditTrackResponse extends AbstractModel {
 
     /**
     * 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrackForAllMembers")
     @Expose
@@ -82,7 +81,6 @@ public class DescribeAuditTrackResponse extends AbstractModel {
 
     /**
     * 数据投递过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Filters")
     @Expose
@@ -208,10 +206,8 @@ public class DescribeAuditTrackResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号 
      * @return TrackForAllMembers 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTrackForAllMembers() {
         return this.TrackForAllMembers;
@@ -219,19 +215,15 @@ public class DescribeAuditTrackResponse extends AbstractModel {
 
     /**
      * Set 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrackForAllMembers 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrackForAllMembers(Long TrackForAllMembers) {
         this.TrackForAllMembers = TrackForAllMembers;
     }
 
     /**
-     * Get 数据投递过滤条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据投递过滤条件 
      * @return Filters 数据投递过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Filter getFilters() {
         return this.Filters;
@@ -239,9 +231,7 @@ public class DescribeAuditTrackResponse extends AbstractModel {
 
     /**
      * Set 数据投递过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Filters 数据投递过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilters(Filter Filters) {
         this.Filters = Filters;

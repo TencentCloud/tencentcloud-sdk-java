@@ -38,9 +38,7 @@ public class CreateCmdTemplateRequest extends AbstractModel {
     private String CmdList;
 
     /**
-    * 标识cmdlist字段前端是否为base64加密传值.
-0:表示非base64加密
-1:表示是base64加密
+    * 标识CmdList字段前端是否为base64加密传值.0:表示非base64加密1:表示是base64加密
     */
     @SerializedName("Encoding")
     @Expose
@@ -79,24 +77,16 @@ public class CreateCmdTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 标识cmdlist字段前端是否为base64加密传值.
-0:表示非base64加密
-1:表示是base64加密 
-     * @return Encoding 标识cmdlist字段前端是否为base64加密传值.
-0:表示非base64加密
-1:表示是base64加密
+     * Get 标识CmdList字段前端是否为base64加密传值.0:表示非base64加密1:表示是base64加密 
+     * @return Encoding 标识CmdList字段前端是否为base64加密传值.0:表示非base64加密1:表示是base64加密
      */
     public Long getEncoding() {
         return this.Encoding;
     }
 
     /**
-     * Set 标识cmdlist字段前端是否为base64加密传值.
-0:表示非base64加密
-1:表示是base64加密
-     * @param Encoding 标识cmdlist字段前端是否为base64加密传值.
-0:表示非base64加密
-1:表示是base64加密
+     * Set 标识CmdList字段前端是否为base64加密传值.0:表示非base64加密1:表示是base64加密
+     * @param Encoding 标识CmdList字段前端是否为base64加密传值.0:表示非base64加密1:表示是base64加密
      */
     public void setEncoding(Long Encoding) {
         this.Encoding = Encoding;

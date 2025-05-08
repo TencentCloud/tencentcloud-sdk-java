@@ -53,7 +53,6 @@ public class Storage extends AbstractModel {
 
     /**
     * 被指定存储用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageAccountId")
     @Expose
@@ -61,7 +60,6 @@ public class Storage extends AbstractModel {
 
     /**
     * 被指定存储用户appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageAppId")
     @Expose
@@ -132,10 +130,8 @@ public class Storage extends AbstractModel {
     }
 
     /**
-     * Get 被指定存储用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被指定存储用户ID 
      * @return StorageAccountId 被指定存储用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageAccountId() {
         return this.StorageAccountId;
@@ -143,19 +139,15 @@ public class Storage extends AbstractModel {
 
     /**
      * Set 被指定存储用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageAccountId 被指定存储用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageAccountId(String StorageAccountId) {
         this.StorageAccountId = StorageAccountId;
     }
 
     /**
-     * Get 被指定存储用户appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被指定存储用户appid 
      * @return StorageAppId 被指定存储用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageAppId() {
         return this.StorageAppId;
@@ -163,9 +155,7 @@ public class Storage extends AbstractModel {
 
     /**
      * Set 被指定存储用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageAppId 被指定存储用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageAppId(String StorageAppId) {
         this.StorageAppId = StorageAppId;

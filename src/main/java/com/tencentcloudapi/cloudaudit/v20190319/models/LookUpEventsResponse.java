@@ -25,7 +25,6 @@ public class LookUpEventsResponse extends AbstractModel {
 
     /**
     * 查看更多日志的凭证
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextToken")
     @Expose
@@ -33,7 +32,6 @@ public class LookUpEventsResponse extends AbstractModel {
 
     /**
     * 日志集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Events")
     @Expose
@@ -41,7 +39,6 @@ public class LookUpEventsResponse extends AbstractModel {
 
     /**
     * 日志集合是否结束
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListOver")
     @Expose
@@ -49,7 +46,6 @@ public class LookUpEventsResponse extends AbstractModel {
 
     /**
     * 数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -63,10 +59,8 @@ public class LookUpEventsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查看更多日志的凭证
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查看更多日志的凭证 
      * @return NextToken 查看更多日志的凭证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextToken() {
         return this.NextToken;
@@ -74,19 +68,15 @@ public class LookUpEventsResponse extends AbstractModel {
 
     /**
      * Set 查看更多日志的凭证
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextToken 查看更多日志的凭证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
     }
 
     /**
-     * Get 日志集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志集合 
      * @return Events 日志集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Event [] getEvents() {
         return this.Events;
@@ -94,19 +84,15 @@ public class LookUpEventsResponse extends AbstractModel {
 
     /**
      * Set 日志集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Events 日志集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvents(Event [] Events) {
         this.Events = Events;
     }
 
     /**
-     * Get 日志集合是否结束
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志集合是否结束 
      * @return ListOver 日志集合是否结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getListOver() {
         return this.ListOver;
@@ -114,19 +100,15 @@ public class LookUpEventsResponse extends AbstractModel {
 
     /**
      * Set 日志集合是否结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListOver 日志集合是否结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListOver(Boolean ListOver) {
         this.ListOver = ListOver;
     }
 
     /**
-     * Get 数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数量 
      * @return TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -134,9 +116,7 @@ public class LookUpEventsResponse extends AbstractModel {
 
     /**
      * Set 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

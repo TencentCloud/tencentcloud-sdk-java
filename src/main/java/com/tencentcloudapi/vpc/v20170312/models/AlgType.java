@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class AlgType extends AbstractModel {
 
     /**
-    * Ftp协议Alg功能是否开启
+    * Ftp协议Alg功能是否开启，可选值：
+<li>true：开启Ftp协议Alg功能</li>
+<li>false：不开启Ftp协议Alg功能</li>
     */
     @SerializedName("Ftp")
     @Expose
     private Boolean Ftp;
 
     /**
-    * Sip协议Alg功能是否开启
+    * Sip协议Alg功能是否开启，可选值：
+<li>true：开启Sip协议Alg功能</li>
+<li>false：不开启Sip协议Alg功能</li>
     */
     @SerializedName("Sip")
     @Expose
     private Boolean Sip;
 
     /**
-     * Get Ftp协议Alg功能是否开启 
-     * @return Ftp Ftp协议Alg功能是否开启
+     * Get Ftp协议Alg功能是否开启，可选值：
+<li>true：开启Ftp协议Alg功能</li>
+<li>false：不开启Ftp协议Alg功能</li> 
+     * @return Ftp Ftp协议Alg功能是否开启，可选值：
+<li>true：开启Ftp协议Alg功能</li>
+<li>false：不开启Ftp协议Alg功能</li>
      */
     public Boolean getFtp() {
         return this.Ftp;
     }
 
     /**
-     * Set Ftp协议Alg功能是否开启
-     * @param Ftp Ftp协议Alg功能是否开启
+     * Set Ftp协议Alg功能是否开启，可选值：
+<li>true：开启Ftp协议Alg功能</li>
+<li>false：不开启Ftp协议Alg功能</li>
+     * @param Ftp Ftp协议Alg功能是否开启，可选值：
+<li>true：开启Ftp协议Alg功能</li>
+<li>false：不开启Ftp协议Alg功能</li>
      */
     public void setFtp(Boolean Ftp) {
         this.Ftp = Ftp;
     }
 
     /**
-     * Get Sip协议Alg功能是否开启 
-     * @return Sip Sip协议Alg功能是否开启
+     * Get Sip协议Alg功能是否开启，可选值：
+<li>true：开启Sip协议Alg功能</li>
+<li>false：不开启Sip协议Alg功能</li> 
+     * @return Sip Sip协议Alg功能是否开启，可选值：
+<li>true：开启Sip协议Alg功能</li>
+<li>false：不开启Sip协议Alg功能</li>
      */
     public Boolean getSip() {
         return this.Sip;
     }
 
     /**
-     * Set Sip协议Alg功能是否开启
-     * @param Sip Sip协议Alg功能是否开启
+     * Set Sip协议Alg功能是否开启，可选值：
+<li>true：开启Sip协议Alg功能</li>
+<li>false：不开启Sip协议Alg功能</li>
+     * @param Sip Sip协议Alg功能是否开启，可选值：
+<li>true：开启Sip协议Alg功能</li>
+<li>false：不开启Sip协议Alg功能</li>
      */
     public void setSip(Boolean Sip) {
         this.Sip = Sip;

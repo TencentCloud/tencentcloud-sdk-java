@@ -39,7 +39,6 @@ public class InputParameter extends AbstractModel {
 
     /**
     * 参数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -78,10 +77,8 @@ public class InputParameter extends AbstractModel {
     }
 
     /**
-     * Get 参数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数值 
      * @return Value 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -89,9 +86,7 @@ public class InputParameter extends AbstractModel {
 
     /**
      * Set 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

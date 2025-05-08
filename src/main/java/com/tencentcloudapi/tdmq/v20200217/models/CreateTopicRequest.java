@@ -96,6 +96,20 @@ public class CreateTopicRequest extends AbstractModel {
     private String UnackPolicy;
 
     /**
+    * 是否开启异常消费者隔离
+    */
+    @SerializedName("IsolateConsumerEnable")
+    @Expose
+    private Boolean IsolateConsumerEnable;
+
+    /**
+    * 消费者 Ack 超时时间，单位：秒，范围60-（3600*24）
+    */
+    @SerializedName("AckTimeOut")
+    @Expose
+    private Long AckTimeOut;
+
+    /**
      * Get 环境（命名空间）名称。 
      * @return EnvironmentId 环境（命名空间）名称。
      */
@@ -275,6 +289,38 @@ public class CreateTopicRequest extends AbstractModel {
         this.UnackPolicy = UnackPolicy;
     }
 
+    /**
+     * Get 是否开启异常消费者隔离 
+     * @return IsolateConsumerEnable 是否开启异常消费者隔离
+     */
+    public Boolean getIsolateConsumerEnable() {
+        return this.IsolateConsumerEnable;
+    }
+
+    /**
+     * Set 是否开启异常消费者隔离
+     * @param IsolateConsumerEnable 是否开启异常消费者隔离
+     */
+    public void setIsolateConsumerEnable(Boolean IsolateConsumerEnable) {
+        this.IsolateConsumerEnable = IsolateConsumerEnable;
+    }
+
+    /**
+     * Get 消费者 Ack 超时时间，单位：秒，范围60-（3600*24） 
+     * @return AckTimeOut 消费者 Ack 超时时间，单位：秒，范围60-（3600*24）
+     */
+    public Long getAckTimeOut() {
+        return this.AckTimeOut;
+    }
+
+    /**
+     * Set 消费者 Ack 超时时间，单位：秒，范围60-（3600*24）
+     * @param AckTimeOut 消费者 Ack 超时时间，单位：秒，范围60-（3600*24）
+     */
+    public void setAckTimeOut(Long AckTimeOut) {
+        this.AckTimeOut = AckTimeOut;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -310,6 +356,12 @@ public class CreateTopicRequest extends AbstractModel {
         if (source.UnackPolicy != null) {
             this.UnackPolicy = new String(source.UnackPolicy);
         }
+        if (source.IsolateConsumerEnable != null) {
+            this.IsolateConsumerEnable = new Boolean(source.IsolateConsumerEnable);
+        }
+        if (source.AckTimeOut != null) {
+            this.AckTimeOut = new Long(source.AckTimeOut);
+        }
     }
 
 
@@ -326,6 +378,8 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         this.setParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
+        this.setParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
+        this.setParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
 
     }
 }

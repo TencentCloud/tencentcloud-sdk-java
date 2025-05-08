@@ -25,7 +25,6 @@ public class RolePolicie extends AbstractModel {
 
     /**
     * 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RolePolicyId")
     @Expose
@@ -60,10 +59,8 @@ public class RolePolicie extends AbstractModel {
     private String AddTime;
 
     /**
-     * Get 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略ID。 
      * @return RolePolicyId 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRolePolicyId() {
         return this.RolePolicyId;
@@ -71,9 +68,7 @@ public class RolePolicie extends AbstractModel {
 
     /**
      * Set 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RolePolicyId 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRolePolicyId(Long RolePolicyId) {
         this.RolePolicyId = RolePolicyId;

@@ -156,7 +156,6 @@ public class NetworkInterface extends AbstractModel {
 
     /**
     * 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Business")
     @Expose
@@ -164,7 +163,6 @@ public class NetworkInterface extends AbstractModel {
 
     /**
     * 网卡所关联的CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
     @Expose
@@ -172,7 +170,6 @@ public class NetworkInterface extends AbstractModel {
 
     /**
     * 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttachType")
     @Expose
@@ -180,7 +177,6 @@ public class NetworkInterface extends AbstractModel {
 
     /**
     * 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -192,7 +188,6 @@ PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
 可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QosLevel")
     @Expose
@@ -519,10 +514,8 @@ PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
     }
 
     /**
-     * Get 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。 
      * @return Business 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusiness() {
         return this.Business;
@@ -530,19 +523,15 @@ PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
     /**
      * Set 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Business 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusiness(String Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 网卡所关联的CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网卡所关联的CDC实例ID。 
      * @return CdcId 网卡所关联的CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
         return this.CdcId;
@@ -550,19 +539,15 @@ PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
     /**
      * Set 网卡所关联的CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId 网卡所关联的CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性网卡类型：0:标准型/1:扩展型。默认值为0。 
      * @return AttachType 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttachType() {
         return this.AttachType;
@@ -570,19 +555,15 @@ PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
     /**
      * Set 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttachType 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachType(Long AttachType) {
         this.AttachType = AttachType;
     }
 
     /**
-     * Get 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。 
      * @return ResourceId 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -590,9 +571,7 @@ PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
     /**
      * Set 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
@@ -603,14 +582,12 @@ PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
 可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return QosLevel 服务质量级别：
 PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
 可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQosLevel() {
         return this.QosLevel;
@@ -622,13 +599,11 @@ PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
 可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QosLevel 服务质量级别：
 PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
 可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;

@@ -25,7 +25,6 @@ public class CmqRegionInfo extends AbstractModel {
 
     /**
     * 地域描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CmqRegionName")
     @Expose
@@ -33,17 +32,14 @@ public class CmqRegionInfo extends AbstractModel {
 
     /**
     * cmq地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CmqRegion")
     @Expose
     private String CmqRegion;
 
     /**
-     * Get 地域描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域描述 
      * @return CmqRegionName 地域描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCmqRegionName() {
         return this.CmqRegionName;
@@ -51,19 +47,15 @@ public class CmqRegionInfo extends AbstractModel {
 
     /**
      * Set 地域描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CmqRegionName 地域描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCmqRegionName(String CmqRegionName) {
         this.CmqRegionName = CmqRegionName;
     }
 
     /**
-     * Get cmq地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cmq地域 
      * @return CmqRegion cmq地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCmqRegion() {
         return this.CmqRegion;
@@ -71,9 +63,7 @@ public class CmqRegionInfo extends AbstractModel {
 
     /**
      * Set cmq地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CmqRegion cmq地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCmqRegion(String CmqRegion) {
         this.CmqRegion = CmqRegion;

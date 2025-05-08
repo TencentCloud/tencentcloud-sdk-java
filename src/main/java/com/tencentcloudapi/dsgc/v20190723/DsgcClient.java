@@ -1011,6 +1011,17 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
+     *获取分类分级任务列表
+     * @param req DescribeDSPADiscoveryTasksRequest
+     * @return DescribeDSPADiscoveryTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDSPADiscoveryTasksResponse DescribeDSPADiscoveryTasks(DescribeDSPADiscoveryTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDSPADiscoveryTasks", DescribeDSPADiscoveryTasksResponse.class);
+    }
+
+    /**
      *根据合规组id，去查询ES的概览页统计数据
      * @param req DescribeDSPAESDataAssetByComplianceIdRequest
      * @return DescribeDSPAESDataAssetByComplianceIdResponse

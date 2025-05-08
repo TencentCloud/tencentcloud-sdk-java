@@ -25,7 +25,6 @@ public class ConfigRule extends AbstractModel {
 
     /**
     * 规则标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Identifier")
     @Expose
@@ -33,7 +32,6 @@ public class ConfigRule extends AbstractModel {
 
     /**
     * 规则名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -41,7 +39,6 @@ public class ConfigRule extends AbstractModel {
 
     /**
     * 规则参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputParameter")
     @Expose
@@ -49,7 +46,6 @@ public class ConfigRule extends AbstractModel {
 
     /**
     * 规则触发条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceCondition")
     @Expose
@@ -57,7 +53,6 @@ public class ConfigRule extends AbstractModel {
 
     /**
     * 规则支持的资源类型，规则仅对指定资源类型的资源生效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -65,7 +60,6 @@ public class ConfigRule extends AbstractModel {
 
     /**
     * 规则所属标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -76,7 +70,6 @@ public class ConfigRule extends AbstractModel {
 1:低风险
 2:中风险
 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -84,7 +77,6 @@ public class ConfigRule extends AbstractModel {
 
     /**
     * 规则对应的函数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceFunction")
     @Expose
@@ -93,7 +85,6 @@ public class ConfigRule extends AbstractModel {
     /**
     * 创建时间
 格式：YYYY-MM-DD h:i:s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -101,7 +92,6 @@ public class ConfigRule extends AbstractModel {
 
     /**
     * 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -110,7 +100,6 @@ public class ConfigRule extends AbstractModel {
     /**
     * ACTIVE：启用
 NO_ACTIVE：停止
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -120,7 +109,6 @@ NO_ACTIVE：停止
     * 合规： 'COMPLIANT'
 不合规： 'NON_COMPLIANT'
 无法应用规则： 'NOT_APPLICABLE'
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceResult")
     @Expose
@@ -128,7 +116,6 @@ NO_ACTIVE：停止
 
     /**
     * ["",""]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Annotation")
     @Expose
@@ -138,7 +125,6 @@ NO_ACTIVE：停止
     * 规则评估时间
 格式：YYYY-MM-DD h:i:s
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigRuleInvokedTime")
     @Expose
@@ -146,7 +132,6 @@ NO_ACTIVE：停止
 
     /**
     * 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigRuleId")
     @Expose
@@ -155,7 +140,6 @@ NO_ACTIVE：停止
     /**
     * CUSTOMIZE：自定义规则、
 SYSTEM：托管规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentifierType")
     @Expose
@@ -163,7 +147,6 @@ SYSTEM：托管规则
 
     /**
     * 合规包ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompliancePackId")
     @Expose
@@ -173,7 +156,6 @@ SYSTEM：托管规则
     * 触发类型
 ScheduledNotification：周期触发、
 ConfigurationItemChangeNotification：变更触发
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerType")
     @Expose
@@ -181,7 +163,6 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
     * 参数详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ManageInputParameter")
     @Expose
@@ -189,7 +170,6 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
     * 合规包名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompliancePackName")
     @Expose
@@ -197,7 +177,6 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
     * 关联地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionsScope")
     @Expose
@@ -205,7 +184,6 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
     * 关联标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagsScope")
     @Expose
@@ -213,7 +191,6 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
     *  规则对指定资源ID无效，即不对该资源执行评估。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExcludeResourceIdsScope")
     @Expose
@@ -221,7 +198,6 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
     * 账号组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountGroupId")
     @Expose
@@ -229,7 +205,6 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
     * 账号组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountGroupName")
     @Expose
@@ -237,7 +212,6 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
     * 规则所属用户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleOwnerId")
     @Expose
@@ -253,10 +227,8 @@ ConfigurationItemChangeNotification：变更触发
     private String [] ManageTriggerType;
 
     /**
-     * Get 规则标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则标识 
      * @return Identifier 规则标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentifier() {
         return this.Identifier;
@@ -264,19 +236,15 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 规则标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Identifier 规则标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifier(String Identifier) {
         this.Identifier = Identifier;
     }
 
     /**
-     * Get 规则名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名 
      * @return RuleName 规则名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -284,19 +252,15 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 规则名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 规则名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 规则参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则参数 
      * @return InputParameter 规则参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InputParameter [] getInputParameter() {
         return this.InputParameter;
@@ -304,19 +268,15 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 规则参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputParameter 规则参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputParameter(InputParameter [] InputParameter) {
         this.InputParameter = InputParameter;
     }
 
     /**
-     * Get 规则触发条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则触发条件 
      * @return SourceCondition 规则触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SourceConditionForManage [] getSourceCondition() {
         return this.SourceCondition;
@@ -324,19 +284,15 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 规则触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceCondition 规则触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceCondition(SourceConditionForManage [] SourceCondition) {
         this.SourceCondition = SourceCondition;
     }
 
     /**
-     * Get 规则支持的资源类型，规则仅对指定资源类型的资源生效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则支持的资源类型，规则仅对指定资源类型的资源生效。 
      * @return ResourceType 规则支持的资源类型，规则仅对指定资源类型的资源生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getResourceType() {
         return this.ResourceType;
@@ -344,19 +300,15 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 规则支持的资源类型，规则仅对指定资源类型的资源生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 规则支持的资源类型，规则仅对指定资源类型的资源生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String [] ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 规则所属标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则所属标签 
      * @return Labels 规则所属标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabels() {
         return this.Labels;
@@ -364,9 +316,7 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 规则所属标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 规则所属标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;
@@ -376,13 +326,11 @@ ConfigurationItemChangeNotification：变更触发
      * Get 规则风险等级
 1:低风险
 2:中风险
-3:高风险
-注意：此字段可能返回 null，表示取不到有效值。 
+3:高风险 
      * @return RiskLevel 规则风险等级
 1:低风险
 2:中风险
 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
@@ -393,22 +341,18 @@ ConfigurationItemChangeNotification：变更触发
 1:低风险
 2:中风险
 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 规则风险等级
 1:低风险
 2:中风险
 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 规则对应的函数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则对应的函数 
      * @return ServiceFunction 规则对应的函数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceFunction() {
         return this.ServiceFunction;
@@ -416,9 +360,7 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 规则对应的函数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceFunction 规则对应的函数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceFunction(String ServiceFunction) {
         this.ServiceFunction = ServiceFunction;
@@ -426,11 +368,9 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Get 创建时间
-格式：YYYY-MM-DD h:i:s
-注意：此字段可能返回 null，表示取不到有效值。 
+格式：YYYY-MM-DD h:i:s 
      * @return CreateTime 创建时间
 格式：YYYY-MM-DD h:i:s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -439,20 +379,16 @@ ConfigurationItemChangeNotification：变更触发
     /**
      * Set 创建时间
 格式：YYYY-MM-DD h:i:s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
 格式：YYYY-MM-DD h:i:s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 规则描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则描述 
      * @return Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -460,9 +396,7 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -470,11 +404,9 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Get ACTIVE：启用
-NO_ACTIVE：停止
-注意：此字段可能返回 null，表示取不到有效值。 
+NO_ACTIVE：停止 
      * @return Status ACTIVE：启用
 NO_ACTIVE：停止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -483,10 +415,8 @@ NO_ACTIVE：停止
     /**
      * Set ACTIVE：启用
 NO_ACTIVE：停止
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status ACTIVE：启用
 NO_ACTIVE：停止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -495,12 +425,10 @@ NO_ACTIVE：停止
     /**
      * Get 合规： 'COMPLIANT'
 不合规： 'NON_COMPLIANT'
-无法应用规则： 'NOT_APPLICABLE'
-注意：此字段可能返回 null，表示取不到有效值。 
+无法应用规则： 'NOT_APPLICABLE' 
      * @return ComplianceResult 合规： 'COMPLIANT'
 不合规： 'NON_COMPLIANT'
 无法应用规则： 'NOT_APPLICABLE'
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComplianceResult() {
         return this.ComplianceResult;
@@ -510,21 +438,17 @@ NO_ACTIVE：停止
      * Set 合规： 'COMPLIANT'
 不合规： 'NON_COMPLIANT'
 无法应用规则： 'NOT_APPLICABLE'
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceResult 合规： 'COMPLIANT'
 不合规： 'NON_COMPLIANT'
 无法应用规则： 'NOT_APPLICABLE'
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceResult(String ComplianceResult) {
         this.ComplianceResult = ComplianceResult;
     }
 
     /**
-     * Get ["",""]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ["",""] 
      * @return Annotation ["",""]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Annotation getAnnotation() {
         return this.Annotation;
@@ -532,9 +456,7 @@ NO_ACTIVE：停止
 
     /**
      * Set ["",""]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Annotation ["",""]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnnotation(Annotation Annotation) {
         this.Annotation = Annotation;
@@ -543,12 +465,10 @@ NO_ACTIVE：停止
     /**
      * Get 规则评估时间
 格式：YYYY-MM-DD h:i:s
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return ConfigRuleInvokedTime 规则评估时间
 格式：YYYY-MM-DD h:i:s
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigRuleInvokedTime() {
         return this.ConfigRuleInvokedTime;
@@ -558,21 +478,17 @@ NO_ACTIVE：停止
      * Set 规则评估时间
 格式：YYYY-MM-DD h:i:s
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigRuleInvokedTime 规则评估时间
 格式：YYYY-MM-DD h:i:s
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigRuleInvokedTime(String ConfigRuleInvokedTime) {
         this.ConfigRuleInvokedTime = ConfigRuleInvokedTime;
     }
 
     /**
-     * Get 规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则ID 
      * @return ConfigRuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigRuleId() {
         return this.ConfigRuleId;
@@ -580,9 +496,7 @@ NO_ACTIVE：停止
 
     /**
      * Set 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigRuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigRuleId(String ConfigRuleId) {
         this.ConfigRuleId = ConfigRuleId;
@@ -590,11 +504,9 @@ NO_ACTIVE：停止
 
     /**
      * Get CUSTOMIZE：自定义规则、
-SYSTEM：托管规则
-注意：此字段可能返回 null，表示取不到有效值。 
+SYSTEM：托管规则 
      * @return IdentifierType CUSTOMIZE：自定义规则、
 SYSTEM：托管规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentifierType() {
         return this.IdentifierType;
@@ -603,20 +515,16 @@ SYSTEM：托管规则
     /**
      * Set CUSTOMIZE：自定义规则、
 SYSTEM：托管规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentifierType CUSTOMIZE：自定义规则、
 SYSTEM：托管规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifierType(String IdentifierType) {
         this.IdentifierType = IdentifierType;
     }
 
     /**
-     * Get 合规包ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规包ID 
      * @return CompliancePackId 合规包ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompliancePackId() {
         return this.CompliancePackId;
@@ -624,9 +532,7 @@ SYSTEM：托管规则
 
     /**
      * Set 合规包ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompliancePackId 合规包ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompliancePackId(String CompliancePackId) {
         this.CompliancePackId = CompliancePackId;
@@ -635,12 +541,10 @@ SYSTEM：托管规则
     /**
      * Get 触发类型
 ScheduledNotification：周期触发、
-ConfigurationItemChangeNotification：变更触发
-注意：此字段可能返回 null，表示取不到有效值。 
+ConfigurationItemChangeNotification：变更触发 
      * @return TriggerType 触发类型
 ScheduledNotification：周期触发、
 ConfigurationItemChangeNotification：变更触发
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TriggerType [] getTriggerType() {
         return this.TriggerType;
@@ -650,21 +554,17 @@ ConfigurationItemChangeNotification：变更触发
      * Set 触发类型
 ScheduledNotification：周期触发、
 ConfigurationItemChangeNotification：变更触发
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TriggerType 触发类型
 ScheduledNotification：周期触发、
 ConfigurationItemChangeNotification：变更触发
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerType(TriggerType [] TriggerType) {
         this.TriggerType = TriggerType;
     }
 
     /**
-     * Get 参数详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数详情 
      * @return ManageInputParameter 参数详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InputParameterForManage [] getManageInputParameter() {
         return this.ManageInputParameter;
@@ -672,19 +572,15 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 参数详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ManageInputParameter 参数详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManageInputParameter(InputParameterForManage [] ManageInputParameter) {
         this.ManageInputParameter = ManageInputParameter;
     }
 
     /**
-     * Get 合规包名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规包名称 
      * @return CompliancePackName 合规包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompliancePackName() {
         return this.CompliancePackName;
@@ -692,19 +588,15 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 合规包名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompliancePackName 合规包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompliancePackName(String CompliancePackName) {
         this.CompliancePackName = CompliancePackName;
     }
 
     /**
-     * Get 关联地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联地域 
      * @return RegionsScope 关联地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRegionsScope() {
         return this.RegionsScope;
@@ -712,19 +604,15 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 关联地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionsScope 关联地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionsScope(String [] RegionsScope) {
         this.RegionsScope = RegionsScope;
     }
 
     /**
-     * Get 关联标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联标签 
      * @return TagsScope 关联标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagsScope() {
         return this.TagsScope;
@@ -732,19 +620,15 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 关联标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagsScope 关联标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagsScope(Tag [] TagsScope) {
         this.TagsScope = TagsScope;
     }
 
     /**
-     * Get  规则对指定资源ID无效，即不对该资源执行评估。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  规则对指定资源ID无效，即不对该资源执行评估。 
      * @return ExcludeResourceIdsScope  规则对指定资源ID无效，即不对该资源执行评估。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getExcludeResourceIdsScope() {
         return this.ExcludeResourceIdsScope;
@@ -752,19 +636,15 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set  规则对指定资源ID无效，即不对该资源执行评估。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExcludeResourceIdsScope  规则对指定资源ID无效，即不对该资源执行评估。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExcludeResourceIdsScope(String [] ExcludeResourceIdsScope) {
         this.ExcludeResourceIdsScope = ExcludeResourceIdsScope;
     }
 
     /**
-     * Get 账号组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号组ID 
      * @return AccountGroupId 账号组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountGroupId() {
         return this.AccountGroupId;
@@ -772,19 +652,15 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 账号组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountGroupId 账号组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountGroupId(String AccountGroupId) {
         this.AccountGroupId = AccountGroupId;
     }
 
     /**
-     * Get 账号组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号组名称 
      * @return AccountGroupName 账号组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountGroupName() {
         return this.AccountGroupName;
@@ -792,19 +668,15 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 账号组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountGroupName 账号组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountGroupName(String AccountGroupName) {
         this.AccountGroupName = AccountGroupName;
     }
 
     /**
-     * Get 规则所属用户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则所属用户ID 
      * @return RuleOwnerId 规则所属用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleOwnerId() {
         return this.RuleOwnerId;
@@ -812,9 +684,7 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * Set 规则所属用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleOwnerId 规则所属用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleOwnerId(Long RuleOwnerId) {
         this.RuleOwnerId = RuleOwnerId;

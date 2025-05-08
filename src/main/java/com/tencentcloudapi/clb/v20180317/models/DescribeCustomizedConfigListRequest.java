@@ -31,14 +31,14 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
     private String ConfigType;
 
     /**
-    * 拉取页偏移，默认值0
+    * 拉取页偏移，默认值0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 拉取数目，默认值20
+    * 拉取数目，默认值20。
     */
     @SerializedName("Limit")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
     private String ConfigName;
 
     /**
-    * 配置ID
+    * 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/api/214/60009) 接口查询。
     */
     @SerializedName("UconfigIds")
     @Expose
@@ -60,8 +60,16 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
 
     /**
     * 过滤条件如下：
-<li> loadbalancer-id - String - 是否必填：否 - （过滤条件）按照 负载均衡ID 过滤，如："lb-12345678"。</li>
-<li> vip - String - 是否必填：否 - （过滤条件）按照 负载均衡Vip 过滤，如："1.1.1.1","2204::22:3"。</li>
+- loadbalancer-id
+按照【负载均衡 ID】进行过滤。实例计费模式例如：lb-9vxezxza。
+类型：String
+必选：否
+获取方式：[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)
+- vip
+按照【负载均衡VIP】进行过滤。网络计费模式例如："1.1.1.1","2204::22:3"。
+类型：String
+必选：否
+获取方式：[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)
     */
     @SerializedName("Filters")
     @Expose
@@ -84,32 +92,32 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
     }
 
     /**
-     * Get 拉取页偏移，默认值0 
-     * @return Offset 拉取页偏移，默认值0
+     * Get 拉取页偏移，默认值0。 
+     * @return Offset 拉取页偏移，默认值0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 拉取页偏移，默认值0
-     * @param Offset 拉取页偏移，默认值0
+     * Set 拉取页偏移，默认值0。
+     * @param Offset 拉取页偏移，默认值0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 拉取数目，默认值20 
-     * @return Limit 拉取数目，默认值20
+     * Get 拉取数目，默认值20。 
+     * @return Limit 拉取数目，默认值20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 拉取数目，默认值20
-     * @param Limit 拉取数目，默认值20
+     * Set 拉取数目，默认值20。
+     * @param Limit 拉取数目，默认值20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -132,16 +140,16 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
     }
 
     /**
-     * Get 配置ID 
-     * @return UconfigIds 配置ID
+     * Get 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/api/214/60009) 接口查询。 
+     * @return UconfigIds 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/api/214/60009) 接口查询。
      */
     public String [] getUconfigIds() {
         return this.UconfigIds;
     }
 
     /**
-     * Set 配置ID
-     * @param UconfigIds 配置ID
+     * Set 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/api/214/60009) 接口查询。
+     * @param UconfigIds 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/api/214/60009) 接口查询。
      */
     public void setUconfigIds(String [] UconfigIds) {
         this.UconfigIds = UconfigIds;
@@ -149,11 +157,27 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
 
     /**
      * Get 过滤条件如下：
-<li> loadbalancer-id - String - 是否必填：否 - （过滤条件）按照 负载均衡ID 过滤，如："lb-12345678"。</li>
-<li> vip - String - 是否必填：否 - （过滤条件）按照 负载均衡Vip 过滤，如："1.1.1.1","2204::22:3"。</li> 
+- loadbalancer-id
+按照【负载均衡 ID】进行过滤。实例计费模式例如：lb-9vxezxza。
+类型：String
+必选：否
+获取方式：[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)
+- vip
+按照【负载均衡VIP】进行过滤。网络计费模式例如："1.1.1.1","2204::22:3"。
+类型：String
+必选：否
+获取方式：[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 
      * @return Filters 过滤条件如下：
-<li> loadbalancer-id - String - 是否必填：否 - （过滤条件）按照 负载均衡ID 过滤，如："lb-12345678"。</li>
-<li> vip - String - 是否必填：否 - （过滤条件）按照 负载均衡Vip 过滤，如："1.1.1.1","2204::22:3"。</li>
+- loadbalancer-id
+按照【负载均衡 ID】进行过滤。实例计费模式例如：lb-9vxezxza。
+类型：String
+必选：否
+获取方式：[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)
+- vip
+按照【负载均衡VIP】进行过滤。网络计费模式例如："1.1.1.1","2204::22:3"。
+类型：String
+必选：否
+获取方式：[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -161,11 +185,27 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
 
     /**
      * Set 过滤条件如下：
-<li> loadbalancer-id - String - 是否必填：否 - （过滤条件）按照 负载均衡ID 过滤，如："lb-12345678"。</li>
-<li> vip - String - 是否必填：否 - （过滤条件）按照 负载均衡Vip 过滤，如："1.1.1.1","2204::22:3"。</li>
+- loadbalancer-id
+按照【负载均衡 ID】进行过滤。实例计费模式例如：lb-9vxezxza。
+类型：String
+必选：否
+获取方式：[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)
+- vip
+按照【负载均衡VIP】进行过滤。网络计费模式例如："1.1.1.1","2204::22:3"。
+类型：String
+必选：否
+获取方式：[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)
      * @param Filters 过滤条件如下：
-<li> loadbalancer-id - String - 是否必填：否 - （过滤条件）按照 负载均衡ID 过滤，如："lb-12345678"。</li>
-<li> vip - String - 是否必填：否 - （过滤条件）按照 负载均衡Vip 过滤，如："1.1.1.1","2204::22:3"。</li>
+- loadbalancer-id
+按照【负载均衡 ID】进行过滤。实例计费模式例如：lb-9vxezxza。
+类型：String
+必选：否
+获取方式：[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)
+- vip
+按照【负载均衡VIP】进行过滤。网络计费模式例如："1.1.1.1","2204::22:3"。
+类型：String
+必选：否
+获取方式：[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

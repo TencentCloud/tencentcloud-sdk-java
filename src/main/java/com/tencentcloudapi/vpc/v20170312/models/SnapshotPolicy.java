@@ -46,7 +46,6 @@ public class SnapshotPolicy extends AbstractModel {
 
     /**
     * 是否创建新的cos桶，默认为False。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateNewCos")
     @Expose
@@ -75,7 +74,6 @@ public class SnapshotPolicy extends AbstractModel {
 
     /**
     * 时间备份策略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupPolicies")
     @Expose
@@ -90,7 +88,6 @@ public class SnapshotPolicy extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -98,7 +95,6 @@ public class SnapshotPolicy extends AbstractModel {
 
     /**
     * 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
@@ -153,10 +149,8 @@ public class SnapshotPolicy extends AbstractModel {
     }
 
     /**
-     * Get 是否创建新的cos桶，默认为False。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否创建新的cos桶，默认为False。 
      * @return CreateNewCos 是否创建新的cos桶，默认为False。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCreateNewCos() {
         return this.CreateNewCos;
@@ -164,9 +158,7 @@ public class SnapshotPolicy extends AbstractModel {
 
     /**
      * Set 是否创建新的cos桶，默认为False。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateNewCos 是否创建新的cos桶，默认为False。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateNewCos(Boolean CreateNewCos) {
         this.CreateNewCos = CreateNewCos;
@@ -221,10 +213,8 @@ public class SnapshotPolicy extends AbstractModel {
     }
 
     /**
-     * Get 时间备份策略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间备份策略。 
      * @return BackupPolicies 时间备份策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupPolicy [] getBackupPolicies() {
         return this.BackupPolicies;
@@ -232,9 +222,7 @@ public class SnapshotPolicy extends AbstractModel {
 
     /**
      * Set 时间备份策略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupPolicies 时间备份策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupPolicies(BackupPolicy [] BackupPolicies) {
         this.BackupPolicies = BackupPolicies;
@@ -257,10 +245,8 @@ public class SnapshotPolicy extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -268,19 +254,15 @@ public class SnapshotPolicy extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签键值对。	 
      * @return TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagSet() {
         return this.TagSet;
@@ -288,9 +270,7 @@ public class SnapshotPolicy extends AbstractModel {
 
     /**
      * Set 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
