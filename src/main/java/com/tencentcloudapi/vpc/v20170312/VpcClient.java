@@ -3456,7 +3456,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *EIP修改带宽询价
+     *本接口（InquiryPriceModifyAddressesBandwidth）用于EIP修改带宽询价。
      * @param req InquiryPriceModifyAddressesBandwidthRequest
      * @return InquiryPriceModifyAddressesBandwidthResponse
      * @throws TencentCloudSDKException

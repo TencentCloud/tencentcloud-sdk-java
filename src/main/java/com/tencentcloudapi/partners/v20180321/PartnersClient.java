@@ -152,6 +152,17 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *供代理商使用名下有效普通代客的预付费子订单号查询订单费用详情
+     * @param req DescribeAgentDealsPriceDetailByDealNameRequest
+     * @return DescribeAgentDealsPriceDetailByDealNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentDealsPriceDetailByDealNameResponse DescribeAgentDealsPriceDetailByDealName(DescribeAgentDealsPriceDetailByDealNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAgentDealsPriceDetailByDealName", DescribeAgentDealsPriceDetailByDealNameResponse.class);
+    }
+
+    /**
      *可以查询代理商代付的预付费订单
      * @param req DescribeAgentPayDealsV2Request
      * @return DescribeAgentPayDealsV2Response

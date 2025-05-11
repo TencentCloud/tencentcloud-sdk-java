@@ -787,6 +787,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *数据地图-信息配置 数据类目列表
+     * @param req DescribeBaseBizCatalogsRequest
+     * @return DescribeBaseBizCatalogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaseBizCatalogsResponse DescribeBaseBizCatalogs(DescribeBaseBizCatalogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaseBizCatalogs", DescribeBaseBizCatalogsResponse.class);
+    }
+
+    /**
      *批量操作页面获取任务列表
      * @param req DescribeBatchOperateTaskRequest
      * @return DescribeBatchOperateTaskResponse

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ReturnNormalAddressesRequest extends AbstractModel {
 
     /**
-    * 普通公网IP 的 IP 地址,示例：101.35.139.183
+    * 普通公网IP 的 IP 地址，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressIps。
     */
     @SerializedName("AddressIps")
     @Expose
     private String [] AddressIps;
 
     /**
-     * Get 普通公网IP 的 IP 地址,示例：101.35.139.183 
-     * @return AddressIps 普通公网IP 的 IP 地址,示例：101.35.139.183
+     * Get 普通公网IP 的 IP 地址，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressIps。 
+     * @return AddressIps 普通公网IP 的 IP 地址，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressIps。
      */
     public String [] getAddressIps() {
         return this.AddressIps;
     }
 
     /**
-     * Set 普通公网IP 的 IP 地址,示例：101.35.139.183
-     * @param AddressIps 普通公网IP 的 IP 地址,示例：101.35.139.183
+     * Set 普通公网IP 的 IP 地址，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressIps。
+     * @param AddressIps 普通公网IP 的 IP 地址，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressIps。
      */
     public void setAddressIps(String [] AddressIps) {
         this.AddressIps = AddressIps;

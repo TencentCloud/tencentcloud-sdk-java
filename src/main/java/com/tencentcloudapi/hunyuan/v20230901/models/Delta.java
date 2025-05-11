@@ -49,6 +49,13 @@ public class Delta extends AbstractModel {
     private ToolCall [] ToolCalls;
 
     /**
+    * 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请不要将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+    */
+    @SerializedName("ReasoningContent")
+    @Expose
+    private String ReasoningContent;
+
+    /**
      * Get 角色名称。 
      * @return Role 角色名称。
      */
@@ -112,6 +119,22 @@ public class Delta extends AbstractModel {
         this.ToolCalls = ToolCalls;
     }
 
+    /**
+     * Get 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请不要将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。 
+     * @return ReasoningContent 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请不要将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+     */
+    public String getReasoningContent() {
+        return this.ReasoningContent;
+    }
+
+    /**
+     * Set 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请不要将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+     * @param ReasoningContent 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请不要将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+     */
+    public void setReasoningContent(String ReasoningContent) {
+        this.ReasoningContent = ReasoningContent;
+    }
+
     public Delta() {
     }
 
@@ -132,6 +155,9 @@ public class Delta extends AbstractModel {
                 this.ToolCalls[i] = new ToolCall(source.ToolCalls[i]);
             }
         }
+        if (source.ReasoningContent != null) {
+            this.ReasoningContent = new String(source.ReasoningContent);
+        }
     }
 
 
@@ -142,6 +168,7 @@ public class Delta extends AbstractModel {
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
+        this.setParamSimple(map, prefix + "ReasoningContent", this.ReasoningContent);
 
     }
 }

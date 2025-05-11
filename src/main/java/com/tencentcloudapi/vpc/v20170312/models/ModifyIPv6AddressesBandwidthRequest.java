@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyIPv6AddressesBandwidthRequest extends AbstractModel {
 
     /**
-    * 弹性公网IPv6地址唯一ID
+    * 弹性公网IPv6地址唯一ID，可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
     */
     @SerializedName("IPv6AddressIds")
     @Expose
     private String [] IPv6AddressIds;
 
     /**
-    * 弹性公网IPv6地址网络带宽
+    * 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-     * Get 弹性公网IPv6地址唯一ID 
-     * @return IPv6AddressIds 弹性公网IPv6地址唯一ID
+     * Get 弹性公网IPv6地址唯一ID，可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。 
+     * @return IPv6AddressIds 弹性公网IPv6地址唯一ID，可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
      */
     public String [] getIPv6AddressIds() {
         return this.IPv6AddressIds;
     }
 
     /**
-     * Set 弹性公网IPv6地址唯一ID
-     * @param IPv6AddressIds 弹性公网IPv6地址唯一ID
+     * Set 弹性公网IPv6地址唯一ID，可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
+     * @param IPv6AddressIds 弹性公网IPv6地址唯一ID，可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
      */
     public void setIPv6AddressIds(String [] IPv6AddressIds) {
         this.IPv6AddressIds = IPv6AddressIds;
     }
 
     /**
-     * Get 弹性公网IPv6地址网络带宽 
-     * @return InternetMaxBandwidthOut 弹性公网IPv6地址网络带宽
+     * Get 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。 
+     * @return InternetMaxBandwidthOut 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 弹性公网IPv6地址网络带宽
-     * @param InternetMaxBandwidthOut 弹性公网IPv6地址网络带宽
+     * Set 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+     * @param InternetMaxBandwidthOut 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;

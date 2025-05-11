@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DatabasePrivilege extends AbstractModel {
 
     /**
-    * 数据库对象，当ObjectType为database时，DataseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+    * 数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Object")
@@ -40,9 +40,9 @@ public class DatabasePrivilege extends AbstractModel {
     private String [] PrivilegeSet;
 
     /**
-     * Get 数据库对象，当ObjectType为database时，DataseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+     * Get 数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Object 数据库对象，当ObjectType为database时，DataseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+     * @return Object 数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatabaseObject getObject() {
@@ -50,9 +50,9 @@ public class DatabasePrivilege extends AbstractModel {
     }
 
     /**
-     * Set 数据库对象，当ObjectType为database时，DataseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+     * Set 数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Object 数据库对象，当ObjectType为database时，DataseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+     * @param Object 数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObject(DatabaseObject Object) {

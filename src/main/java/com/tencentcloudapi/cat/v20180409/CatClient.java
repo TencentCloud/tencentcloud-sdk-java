@@ -117,6 +117,17 @@ public class CatClient extends AbstractClient{
     }
 
     /**
+     *查询同个任务类型下的维度标签值，包括查询用户任务信息，具体任务下的多个维度标签信息。（通过为DescribeProbeMetricData接口的Filters参数添加维度筛选条件，可实现多维数据分析）
+     * @param req DescribeProbeMetricTagValuesRequest
+     * @return DescribeProbeMetricTagValuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProbeMetricTagValuesResponse DescribeProbeMetricTagValues(DescribeProbeMetricTagValuesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProbeMetricTagValues", DescribeProbeMetricTagValuesResponse.class);
+    }
+
+    /**
      *查询拨测节点
      * @param req DescribeProbeNodesRequest
      * @return DescribeProbeNodesResponse

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,42 +21,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyOwnershipRequest extends AbstractModel {
+public class DescribeBaseBizCatalogsRequest extends AbstractModel {
 
-    /**
-    * 站点域名或者站点下的加速域名。
-    */
-    @SerializedName("Domain")
-    @Expose
-    private String Domain;
-
-    /**
-     * Get 站点域名或者站点下的加速域名。 
-     * @return Domain 站点域名或者站点下的加速域名。
-     */
-    public String getDomain() {
-        return this.Domain;
-    }
-
-    /**
-     * Set 站点域名或者站点下的加速域名。
-     * @param Domain 站点域名或者站点下的加速域名。
-     */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
-    }
-
-    public VerifyOwnershipRequest() {
+    public DescribeBaseBizCatalogsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public VerifyOwnershipRequest(VerifyOwnershipRequest source) {
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
-        }
+    public DescribeBaseBizCatalogsRequest(DescribeBaseBizCatalogsRequest source) {
     }
 
 
@@ -64,7 +38,6 @@ public class VerifyOwnershipRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

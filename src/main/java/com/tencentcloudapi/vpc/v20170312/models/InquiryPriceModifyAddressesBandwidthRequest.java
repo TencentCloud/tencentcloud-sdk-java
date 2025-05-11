@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class InquiryPriceModifyAddressesBandwidthRequest extends AbstractModel {
 
     /**
-    * EIP唯一ID
+    * EIP唯一ID，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
     */
     @SerializedName("AddressIds")
     @Expose
     private String [] AddressIds;
 
     /**
-    * 新带宽值
+    * 新带宽值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-     * Get EIP唯一ID 
-     * @return AddressIds EIP唯一ID
+     * Get EIP唯一ID，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。 
+     * @return AddressIds EIP唯一ID，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     public String [] getAddressIds() {
         return this.AddressIds;
     }
 
     /**
-     * Set EIP唯一ID
-     * @param AddressIds EIP唯一ID
+     * Set EIP唯一ID，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+     * @param AddressIds EIP唯一ID，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     public void setAddressIds(String [] AddressIds) {
         this.AddressIds = AddressIds;
     }
 
     /**
-     * Get 新带宽值 
-     * @return InternetMaxBandwidthOut 新带宽值
+     * Get 新带宽值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。 
+     * @return InternetMaxBandwidthOut 新带宽值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 新带宽值
-     * @param InternetMaxBandwidthOut 新带宽值
+     * Set 新带宽值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
+     * @param InternetMaxBandwidthOut 新带宽值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;

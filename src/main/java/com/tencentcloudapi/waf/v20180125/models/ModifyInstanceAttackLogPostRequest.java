@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class ModifyInstanceAttackLogPostRequest extends AbstractModel {
 
+    /**
+    * 实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 攻击日志投递开关
+    */
+    @SerializedName("AttackLogPost")
+    @Expose
+    private Long AttackLogPost;
+
+    /**
+     * Get 实例ID 
+     * @return InstanceId 实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+     * @param InstanceId 实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 攻击日志投递开关 
+     * @return AttackLogPost 攻击日志投递开关
+     */
+    public Long getAttackLogPost() {
+        return this.AttackLogPost;
+    }
+
+    /**
+     * Set 攻击日志投递开关
+     * @param AttackLogPost 攻击日志投递开关
+     */
+    public void setAttackLogPost(Long AttackLogPost) {
+        this.AttackLogPost = AttackLogPost;
+    }
+
     public ModifyInstanceAttackLogPostRequest() {
     }
 
@@ -31,6 +77,12 @@ public class ModifyInstanceAttackLogPostRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyInstanceAttackLogPostRequest(ModifyInstanceAttackLogPostRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AttackLogPost != null) {
+            this.AttackLogPost = new Long(source.AttackLogPost);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class ModifyInstanceAttackLogPostRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "AttackLogPost", this.AttackLogPost);
 
     }
 }
