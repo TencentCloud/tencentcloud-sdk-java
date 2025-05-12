@@ -67,6 +67,13 @@ public class ChannelCreateOrganizationBatchSignUrlRequest extends AbstractModel 
     private String Mobile;
 
     /**
+    * 合同组Id，传入此参数则可以不传FlowIds
+    */
+    @SerializedName("FlowGroupId")
+    @Expose
+    private String FlowGroupId;
+
+    /**
      * Get 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。 
      * @return Agent 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
@@ -178,6 +185,22 @@ public class ChannelCreateOrganizationBatchSignUrlRequest extends AbstractModel 
         this.Mobile = Mobile;
     }
 
+    /**
+     * Get 合同组Id，传入此参数则可以不传FlowIds 
+     * @return FlowGroupId 合同组Id，传入此参数则可以不传FlowIds
+     */
+    public String getFlowGroupId() {
+        return this.FlowGroupId;
+    }
+
+    /**
+     * Set 合同组Id，传入此参数则可以不传FlowIds
+     * @param FlowGroupId 合同组Id，传入此参数则可以不传FlowIds
+     */
+    public void setFlowGroupId(String FlowGroupId) {
+        this.FlowGroupId = FlowGroupId;
+    }
+
     public ChannelCreateOrganizationBatchSignUrlRequest() {
     }
 
@@ -204,6 +227,9 @@ public class ChannelCreateOrganizationBatchSignUrlRequest extends AbstractModel 
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
+        if (source.FlowGroupId != null) {
+            this.FlowGroupId = new String(source.FlowGroupId);
+        }
     }
 
 
@@ -216,6 +242,7 @@ public class ChannelCreateOrganizationBatchSignUrlRequest extends AbstractModel 
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
+        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
 
     }
 }

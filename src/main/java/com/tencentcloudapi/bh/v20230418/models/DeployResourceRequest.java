@@ -94,6 +94,41 @@ public class DeployResourceRequest extends AbstractModel {
     private String CdcClusterId;
 
     /**
+    * 开通堡垒机指定共享的clbId
+    */
+    @SerializedName("ShareClbId")
+    @Expose
+    private String ShareClbId;
+
+    /**
+    * 0-关闭web访问堡垒机，1-开启web访问堡垒机
+    */
+    @SerializedName("WebAccess")
+    @Expose
+    private Long WebAccess;
+
+    /**
+    * 0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
+    */
+    @SerializedName("ClientAccess")
+    @Expose
+    private Long ClientAccess;
+
+    /**
+    * 0-关闭内网访问堡垒机，1-开启内网访问堡垒机
+    */
+    @SerializedName("IntranetAccess")
+    @Expose
+    private Long IntranetAccess;
+
+    /**
+    * 0-关闭公网访问堡垒机，1-开启公网访问堡垒机
+    */
+    @SerializedName("ExternalAccess")
+    @Expose
+    private Long ExternalAccess;
+
+    /**
      * Get 需要开通服务的资源ID 
      * @return ResourceId 需要开通服务的资源ID
      */
@@ -253,6 +288,86 @@ public class DeployResourceRequest extends AbstractModel {
         this.CdcClusterId = CdcClusterId;
     }
 
+    /**
+     * Get 开通堡垒机指定共享的clbId 
+     * @return ShareClbId 开通堡垒机指定共享的clbId
+     */
+    public String getShareClbId() {
+        return this.ShareClbId;
+    }
+
+    /**
+     * Set 开通堡垒机指定共享的clbId
+     * @param ShareClbId 开通堡垒机指定共享的clbId
+     */
+    public void setShareClbId(String ShareClbId) {
+        this.ShareClbId = ShareClbId;
+    }
+
+    /**
+     * Get 0-关闭web访问堡垒机，1-开启web访问堡垒机 
+     * @return WebAccess 0-关闭web访问堡垒机，1-开启web访问堡垒机
+     */
+    public Long getWebAccess() {
+        return this.WebAccess;
+    }
+
+    /**
+     * Set 0-关闭web访问堡垒机，1-开启web访问堡垒机
+     * @param WebAccess 0-关闭web访问堡垒机，1-开启web访问堡垒机
+     */
+    public void setWebAccess(Long WebAccess) {
+        this.WebAccess = WebAccess;
+    }
+
+    /**
+     * Get 0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机 
+     * @return ClientAccess 0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
+     */
+    public Long getClientAccess() {
+        return this.ClientAccess;
+    }
+
+    /**
+     * Set 0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
+     * @param ClientAccess 0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
+     */
+    public void setClientAccess(Long ClientAccess) {
+        this.ClientAccess = ClientAccess;
+    }
+
+    /**
+     * Get 0-关闭内网访问堡垒机，1-开启内网访问堡垒机 
+     * @return IntranetAccess 0-关闭内网访问堡垒机，1-开启内网访问堡垒机
+     */
+    public Long getIntranetAccess() {
+        return this.IntranetAccess;
+    }
+
+    /**
+     * Set 0-关闭内网访问堡垒机，1-开启内网访问堡垒机
+     * @param IntranetAccess 0-关闭内网访问堡垒机，1-开启内网访问堡垒机
+     */
+    public void setIntranetAccess(Long IntranetAccess) {
+        this.IntranetAccess = IntranetAccess;
+    }
+
+    /**
+     * Get 0-关闭公网访问堡垒机，1-开启公网访问堡垒机 
+     * @return ExternalAccess 0-关闭公网访问堡垒机，1-开启公网访问堡垒机
+     */
+    public Long getExternalAccess() {
+        return this.ExternalAccess;
+    }
+
+    /**
+     * Set 0-关闭公网访问堡垒机，1-开启公网访问堡垒机
+     * @param ExternalAccess 0-关闭公网访问堡垒机，1-开启公网访问堡垒机
+     */
+    public void setExternalAccess(Long ExternalAccess) {
+        this.ExternalAccess = ExternalAccess;
+    }
+
     public DeployResourceRequest() {
     }
 
@@ -291,6 +406,21 @@ public class DeployResourceRequest extends AbstractModel {
         if (source.CdcClusterId != null) {
             this.CdcClusterId = new String(source.CdcClusterId);
         }
+        if (source.ShareClbId != null) {
+            this.ShareClbId = new String(source.ShareClbId);
+        }
+        if (source.WebAccess != null) {
+            this.WebAccess = new Long(source.WebAccess);
+        }
+        if (source.ClientAccess != null) {
+            this.ClientAccess = new Long(source.ClientAccess);
+        }
+        if (source.IntranetAccess != null) {
+            this.IntranetAccess = new Long(source.IntranetAccess);
+        }
+        if (source.ExternalAccess != null) {
+            this.ExternalAccess = new Long(source.ExternalAccess);
+        }
     }
 
 
@@ -308,6 +438,11 @@ public class DeployResourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
         this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
         this.setParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
+        this.setParamSimple(map, prefix + "ShareClbId", this.ShareClbId);
+        this.setParamSimple(map, prefix + "WebAccess", this.WebAccess);
+        this.setParamSimple(map, prefix + "ClientAccess", this.ClientAccess);
+        this.setParamSimple(map, prefix + "IntranetAccess", this.IntranetAccess);
+        this.setParamSimple(map, prefix + "ExternalAccess", this.ExternalAccess);
 
     }
 }

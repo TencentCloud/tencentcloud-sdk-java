@@ -668,6 +668,21 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *接口（ChannelCreatePrepareFlowGroup）用于创建嵌入式合同组签署流程。
+
+- 该接口当前仅支持文件发起
+- 该接口能力和ChannelCreateFlowGroupByFiles，~~ChannelCreateFlowGroupByTemplates~~保持一致。
+- 返回的FlowGroupId 为临时id，只有在页面内成功发起后FlowGroupId才会有效。
+     * @param req ChannelCreatePrepareFlowGroupRequest
+     * @return ChannelCreatePrepareFlowGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreatePrepareFlowGroupResponse ChannelCreatePrepareFlowGroup(ChannelCreatePrepareFlowGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChannelCreatePrepareFlowGroup", ChannelCreatePrepareFlowGroupResponse.class);
+    }
+
+    /**
      *本接口（ChannelCreatePreparedPersonalEsign）用于创建导入个人印章（处方单场景专用，使用此接口请与客户经理确认）。
      * @param req ChannelCreatePreparedPersonalEsignRequest
      * @return ChannelCreatePreparedPersonalEsignResponse

@@ -206,6 +206,20 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Long IsMemoryHijackingAnalysis;
 
     /**
+    * 0=全文索引，1=键值索引
+    */
+    @SerializedName("LogIndexType")
+    @Expose
+    private Long LogIndexType;
+
+    /**
+    * traceId的索引key
+    */
+    @SerializedName("LogTraceIdKey")
+    @Expose
+    private String LogTraceIdKey;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceId 业务系统 ID
      */
@@ -621,6 +635,38 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.IsMemoryHijackingAnalysis = IsMemoryHijackingAnalysis;
     }
 
+    /**
+     * Get 0=全文索引，1=键值索引 
+     * @return LogIndexType 0=全文索引，1=键值索引
+     */
+    public Long getLogIndexType() {
+        return this.LogIndexType;
+    }
+
+    /**
+     * Set 0=全文索引，1=键值索引
+     * @param LogIndexType 0=全文索引，1=键值索引
+     */
+    public void setLogIndexType(Long LogIndexType) {
+        this.LogIndexType = LogIndexType;
+    }
+
+    /**
+     * Get traceId的索引key 
+     * @return LogTraceIdKey traceId的索引key
+     */
+    public String getLogTraceIdKey() {
+        return this.LogTraceIdKey;
+    }
+
+    /**
+     * Set traceId的索引key
+     * @param LogTraceIdKey traceId的索引key
+     */
+    public void setLogTraceIdKey(String LogTraceIdKey) {
+        this.LogTraceIdKey = LogTraceIdKey;
+    }
+
     public ModifyApmInstanceRequest() {
     }
 
@@ -713,6 +759,12 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         if (source.IsMemoryHijackingAnalysis != null) {
             this.IsMemoryHijackingAnalysis = new Long(source.IsMemoryHijackingAnalysis);
         }
+        if (source.LogIndexType != null) {
+            this.LogIndexType = new Long(source.LogIndexType);
+        }
+        if (source.LogTraceIdKey != null) {
+            this.LogTraceIdKey = new String(source.LogTraceIdKey);
+        }
     }
 
 
@@ -746,6 +798,8 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
         this.setParamSimple(map, prefix + "IsRemoteCommandExecutionAnalysis", this.IsRemoteCommandExecutionAnalysis);
         this.setParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
+        this.setParamSimple(map, prefix + "LogIndexType", this.LogIndexType);
+        this.setParamSimple(map, prefix + "LogTraceIdKey", this.LogTraceIdKey);
 
     }
 }

@@ -25,7 +25,6 @@ public class ModifyPrivilege extends AbstractModel {
 
     /**
     * 要修改的数据库对象及权限列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabasePrivilege")
     @Expose
@@ -33,7 +32,6 @@ public class ModifyPrivilege extends AbstractModel {
 
     /**
     * 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyType")
     @Expose
@@ -41,17 +39,14 @@ public class ModifyPrivilege extends AbstractModel {
 
     /**
     * 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCascade")
     @Expose
     private Boolean IsCascade;
 
     /**
-     * Get 要修改的数据库对象及权限列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 要修改的数据库对象及权限列表 
      * @return DatabasePrivilege 要修改的数据库对象及权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatabasePrivilege getDatabasePrivilege() {
         return this.DatabasePrivilege;
@@ -59,19 +54,15 @@ public class ModifyPrivilege extends AbstractModel {
 
     /**
      * Set 要修改的数据库对象及权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabasePrivilege 要修改的数据库对象及权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabasePrivilege(DatabasePrivilege DatabasePrivilege) {
         this.DatabasePrivilege = DatabasePrivilege;
     }
 
     /**
-     * Get 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。 
      * @return ModifyType 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyType() {
         return this.ModifyType;
@@ -79,19 +70,15 @@ public class ModifyPrivilege extends AbstractModel {
 
     /**
      * Set 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyType 修改的方式，当前仅支持grantObject、revokeObject、alterRole。grantObject代表授权、revokeObject代表收回权、alterRole代表修改账号类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyType(String ModifyType) {
         this.ModifyType = ModifyType;
     }
 
     /**
-     * Get 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。 
      * @return IsCascade 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsCascade() {
         return this.IsCascade;
@@ -99,9 +86,7 @@ public class ModifyPrivilege extends AbstractModel {
 
     /**
      * Set 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCascade 当ModifyType为revokeObject才需要此参数，参数为true时，撤销权限会级联撤销。默认为false。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCascade(Boolean IsCascade) {
         this.IsCascade = IsCascade;

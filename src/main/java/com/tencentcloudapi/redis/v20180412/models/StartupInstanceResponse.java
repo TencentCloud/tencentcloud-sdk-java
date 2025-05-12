@@ -40,7 +40,9 @@ public class StartupInstanceResponse extends AbstractModel {
     /**
      * Get 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离 
      * @return TaskId 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
+     * @deprecated
      */
+    @Deprecated
     public Long getTaskId() {
         return this.TaskId;
     }
@@ -48,7 +50,9 @@ public class StartupInstanceResponse extends AbstractModel {
     /**
      * Set 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
      * @param TaskId 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
+     * @deprecated
      */
+    @Deprecated
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }

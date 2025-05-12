@@ -62,7 +62,9 @@ public class DescribeBackupUrlResponse extends AbstractModel {
     /**
      * Get 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。 
      * @return DownloadUrl 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+     * @deprecated
      */
+    @Deprecated
     public String [] getDownloadUrl() {
         return this.DownloadUrl;
     }
@@ -70,7 +72,9 @@ public class DescribeBackupUrlResponse extends AbstractModel {
     /**
      * Set 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
      * @param DownloadUrl 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+     * @deprecated
      */
+    @Deprecated
     public void setDownloadUrl(String [] DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
@@ -78,7 +82,9 @@ public class DescribeBackupUrlResponse extends AbstractModel {
     /**
      * Get 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。 
      * @return InnerDownloadUrl 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+     * @deprecated
      */
+    @Deprecated
     public String [] getInnerDownloadUrl() {
         return this.InnerDownloadUrl;
     }
@@ -86,7 +92,9 @@ public class DescribeBackupUrlResponse extends AbstractModel {
     /**
      * Set 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
      * @param InnerDownloadUrl 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+     * @deprecated
      */
+    @Deprecated
     public void setInnerDownloadUrl(String [] InnerDownloadUrl) {
         this.InnerDownloadUrl = InnerDownloadUrl;
     }
@@ -96,7 +104,9 @@ public class DescribeBackupUrlResponse extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Filenames 文件名称，该字段正在逐步废弃中。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String [] getFilenames() {
         return this.Filenames;
     }
@@ -106,7 +116,9 @@ public class DescribeBackupUrlResponse extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Filenames 文件名称，该字段正在逐步废弃中。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setFilenames(String [] Filenames) {
         this.Filenames = Filenames;
     }

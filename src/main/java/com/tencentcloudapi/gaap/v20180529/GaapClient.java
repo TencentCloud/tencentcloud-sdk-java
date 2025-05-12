@@ -173,19 +173,6 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
-     *产品功能已下线，对应的api接口下线
-
-本接口（CreateFirstLinkSession）用于创建接入段加速会话，创建有可能成功，也可能失败，需要通过返回码来进行判断。
-     * @param req CreateFirstLinkSessionRequest
-     * @return CreateFirstLinkSessionResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateFirstLinkSessionResponse CreateFirstLinkSession(CreateFirstLinkSessionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateFirstLinkSession", CreateFirstLinkSessionResponse.class);
-    }
-
-    /**
      *用来创建统一域名
      * @param req CreateGlobalDomainRequest
      * @return CreateGlobalDomainResponse
@@ -348,19 +335,6 @@ public class GaapClient extends AbstractClient{
     public DeleteDomainErrorPageInfoResponse DeleteDomainErrorPageInfo(DeleteDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDomainErrorPageInfo", DeleteDomainErrorPageInfoResponse.class);
-    }
-
-    /**
-     *产品功能已下线，下线对应的api接口
-
-本接口（DeleteFirstLinkSession）用于删除接入段加速会话，删除加速会话后会停止加速。
-     * @param req DeleteFirstLinkSessionRequest
-     * @return DeleteFirstLinkSessionResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteFirstLinkSessionResponse DeleteFirstLinkSession(DeleteFirstLinkSessionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteFirstLinkSession", DeleteFirstLinkSessionResponse.class);
     }
 
     /**
@@ -570,19 +544,6 @@ public class GaapClient extends AbstractClient{
     public DescribeDomainErrorPageInfoByIdsResponse DescribeDomainErrorPageInfoByIds(DescribeDomainErrorPageInfoByIdsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDomainErrorPageInfoByIds", DescribeDomainErrorPageInfoByIdsResponse.class);
-    }
-
-    /**
-     *产品功能已下线，下线对应的api接口
-
-本接口（DescribeFirstLinkSession）用于查询接入段加速会话状态，包括会话状态，生效时长，加速套餐等信息。
-     * @param req DescribeFirstLinkSessionRequest
-     * @return DescribeFirstLinkSessionResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeFirstLinkSessionResponse DescribeFirstLinkSession(DescribeFirstLinkSessionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeFirstLinkSession", DescribeFirstLinkSessionResponse.class);
     }
 
     /**

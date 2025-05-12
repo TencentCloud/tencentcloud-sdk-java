@@ -90,6 +90,13 @@ UserId必须是传入合同（FlowId）中的签署人。
     private String [] RecipientIds;
 
     /**
+    * 合同组Id，传入此参数则可以不传FlowIds
+    */
+    @SerializedName("FlowGroupId")
+    @Expose
+    private String FlowGroupId;
+
+    /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -269,6 +276,22 @@ UserId必须是传入合同（FlowId）中的签署人。
         this.RecipientIds = RecipientIds;
     }
 
+    /**
+     * Get 合同组Id，传入此参数则可以不传FlowIds 
+     * @return FlowGroupId 合同组Id，传入此参数则可以不传FlowIds
+     */
+    public String getFlowGroupId() {
+        return this.FlowGroupId;
+    }
+
+    /**
+     * Set 合同组Id，传入此参数则可以不传FlowIds
+     * @param FlowGroupId 合同组Id，传入此参数则可以不传FlowIds
+     */
+    public void setFlowGroupId(String FlowGroupId) {
+        this.FlowGroupId = FlowGroupId;
+    }
+
     public CreateOrganizationBatchSignUrlRequest() {
     }
 
@@ -304,6 +327,9 @@ UserId必须是传入合同（FlowId）中的签署人。
                 this.RecipientIds[i] = new String(source.RecipientIds[i]);
             }
         }
+        if (source.FlowGroupId != null) {
+            this.FlowGroupId = new String(source.FlowGroupId);
+        }
     }
 
 
@@ -318,6 +344,7 @@ UserId必须是传入合同（FlowId）中的签署人。
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamArraySimple(map, prefix + "RecipientIds.", this.RecipientIds);
+        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
 
     }
 }

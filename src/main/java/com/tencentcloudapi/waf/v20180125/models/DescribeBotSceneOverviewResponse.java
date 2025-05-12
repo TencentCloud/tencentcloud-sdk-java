@@ -46,7 +46,6 @@ public class DescribeBotSceneOverviewResponse extends AbstractModel {
 
     /**
     * 当前开启的、匹配范围为全局、优先级最高的场景
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentGlobalScene")
     @Expose
@@ -115,10 +114,8 @@ public class DescribeBotSceneOverviewResponse extends AbstractModel {
     }
 
     /**
-     * Get 当前开启的、匹配范围为全局、优先级最高的场景
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前开启的、匹配范围为全局、优先级最高的场景 
      * @return CurrentGlobalScene 当前开启的、匹配范围为全局、优先级最高的场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GlobalSceneInfo getCurrentGlobalScene() {
         return this.CurrentGlobalScene;
@@ -126,9 +123,7 @@ public class DescribeBotSceneOverviewResponse extends AbstractModel {
 
     /**
      * Set 当前开启的、匹配范围为全局、优先级最高的场景
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentGlobalScene 当前开启的、匹配范围为全局、优先级最高的场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentGlobalScene(GlobalSceneInfo CurrentGlobalScene) {
         this.CurrentGlobalScene = CurrentGlobalScene;

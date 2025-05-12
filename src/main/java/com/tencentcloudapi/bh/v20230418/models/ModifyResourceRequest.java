@@ -31,7 +31,7 @@ public class ModifyResourceRequest extends AbstractModel {
     private String ResourceId;
 
     /**
-    * 已废弃
+    * 状态
     */
     @SerializedName("Status")
     @Expose
@@ -96,17 +96,21 @@ public class ModifyResourceRequest extends AbstractModel {
     }
 
     /**
-     * Get 已废弃 
-     * @return Status 已废弃
+     * Get 状态 
+     * @return Status 状态
+     * @deprecated
      */
+    @Deprecated
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 已废弃
-     * @param Status 已废弃
+     * Set 状态
+     * @param Status 状态
+     * @deprecated
      */
+    @Deprecated
     public void setStatus(String Status) {
         this.Status = Status;
     }

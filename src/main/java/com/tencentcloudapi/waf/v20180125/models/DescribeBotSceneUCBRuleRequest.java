@@ -94,6 +94,13 @@ public class DescribeBotSceneUCBRuleRequest extends AbstractModel {
     private Long ValidStatus;
 
     /**
+    * 规则id
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -253,6 +260,22 @@ public class DescribeBotSceneUCBRuleRequest extends AbstractModel {
         this.ValidStatus = ValidStatus;
     }
 
+    /**
+     * Get 规则id 
+     * @return RuleId 规则id
+     */
+    public String getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 规则id
+     * @param RuleId 规则id
+     */
+    public void setRuleId(String RuleId) {
+        this.RuleId = RuleId;
+    }
+
     public DescribeBotSceneUCBRuleRequest() {
     }
 
@@ -291,6 +314,9 @@ public class DescribeBotSceneUCBRuleRequest extends AbstractModel {
         if (source.ValidStatus != null) {
             this.ValidStatus = new Long(source.ValidStatus);
         }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class DescribeBotSceneUCBRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VersionFlag", this.VersionFlag);
         this.setParamSimple(map, prefix + "TimerType", this.TimerType);
         this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
 
     }
 }

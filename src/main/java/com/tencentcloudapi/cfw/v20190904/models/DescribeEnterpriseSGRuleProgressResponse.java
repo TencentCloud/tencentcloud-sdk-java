@@ -31,6 +31,13 @@ public class DescribeEnterpriseSGRuleProgressResponse extends AbstractModel {
     private Long Progress;
 
     /**
+    * 是否用户中止 用户中止返回true
+    */
+    @SerializedName("UserStopped")
+    @Expose
+    private Boolean UserStopped;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeEnterpriseSGRuleProgressResponse extends AbstractModel {
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
+    }
+
+    /**
+     * Get 是否用户中止 用户中止返回true 
+     * @return UserStopped 是否用户中止 用户中止返回true
+     */
+    public Boolean getUserStopped() {
+        return this.UserStopped;
+    }
+
+    /**
+     * Set 是否用户中止 用户中止返回true
+     * @param UserStopped 是否用户中止 用户中止返回true
+     */
+    public void setUserStopped(Boolean UserStopped) {
+        this.UserStopped = UserStopped;
     }
 
     /**
@@ -80,6 +103,9 @@ public class DescribeEnterpriseSGRuleProgressResponse extends AbstractModel {
         if (source.Progress != null) {
             this.Progress = new Long(source.Progress);
         }
+        if (source.UserStopped != null) {
+            this.UserStopped = new Boolean(source.UserStopped);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class DescribeEnterpriseSGRuleProgressResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "UserStopped", this.UserStopped);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

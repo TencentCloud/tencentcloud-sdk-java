@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,28 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCpuExpandStrategyResponse extends AbstractModel {
+public class DeleteCodeTemplateResponse extends AbstractModel {
 
     /**
-    * 策略类型。可选值 auto、manual。
+    * 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Type")
+    @SerializedName("Data")
     @Expose
-    private String Type;
-
-    /**
-    * 手动扩容的 CPU 。Type为 manual 时有效。
-    */
-    @SerializedName("ExpandCpu")
-    @Expose
-    private String ExpandCpu;
-
-    /**
-    * 自动扩容策略。Type 为 auto 时有效
-    */
-    @SerializedName("AutoStrategy")
-    @Expose
-    private String AutoStrategy;
+    private Boolean Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,55 +39,23 @@ public class DescribeCpuExpandStrategyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略类型。可选值 auto、manual。 
-     * @return Type 策略类型。可选值 auto、manual。
+     * Get 是否成功
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getType() {
-        return this.Type;
+    public Boolean getData() {
+        return this.Data;
     }
 
     /**
-     * Set 策略类型。可选值 auto、manual。
-     * @param Type 策略类型。可选值 auto、manual。
+     * Set 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setType(String Type) {
-        this.Type = Type;
-    }
-
-    /**
-     * Get 手动扩容的 CPU 。Type为 manual 时有效。 
-     * @return ExpandCpu 手动扩容的 CPU 。Type为 manual 时有效。
-     */
-    public String getExpandCpu() {
-        return this.ExpandCpu;
-    }
-
-    /**
-     * Set 手动扩容的 CPU 。Type为 manual 时有效。
-     * @param ExpandCpu 手动扩容的 CPU 。Type为 manual 时有效。
-     */
-    public void setExpandCpu(String ExpandCpu) {
-        this.ExpandCpu = ExpandCpu;
-    }
-
-    /**
-     * Get 自动扩容策略。Type 为 auto 时有效 
-     * @return AutoStrategy 自动扩容策略。Type 为 auto 时有效
-     * @deprecated
-     */
-    @Deprecated
-    public String getAutoStrategy() {
-        return this.AutoStrategy;
-    }
-
-    /**
-     * Set 自动扩容策略。Type 为 auto 时有效
-     * @param AutoStrategy 自动扩容策略。Type 为 auto 时有效
-     * @deprecated
-     */
-    @Deprecated
-    public void setAutoStrategy(String AutoStrategy) {
-        this.AutoStrategy = AutoStrategy;
+    public void setData(Boolean Data) {
+        this.Data = Data;
     }
 
     /**
@@ -119,22 +74,16 @@ public class DescribeCpuExpandStrategyResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeCpuExpandStrategyResponse() {
+    public DeleteCodeTemplateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCpuExpandStrategyResponse(DescribeCpuExpandStrategyResponse source) {
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
-        }
-        if (source.ExpandCpu != null) {
-            this.ExpandCpu = new String(source.ExpandCpu);
-        }
-        if (source.AutoStrategy != null) {
-            this.AutoStrategy = new String(source.AutoStrategy);
+    public DeleteCodeTemplateResponse(DeleteCodeTemplateResponse source) {
+        if (source.Data != null) {
+            this.Data = new Boolean(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -146,9 +95,7 @@ public class DescribeCpuExpandStrategyResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
-        this.setParamSimple(map, prefix + "AutoStrategy", this.AutoStrategy);
+        this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -38,7 +38,7 @@ public class FirewallTemplate extends AbstractModel {
     private String TemplateName;
 
     /**
-    * 模板类型。取值: "PRIVATE"(个人模版)
+    * 模板类型。取值: "PRIVATE"(个人模板)
     */
     @SerializedName("TemplateType")
     @Expose
@@ -91,16 +91,16 @@ public class FirewallTemplate extends AbstractModel {
     }
 
     /**
-     * Get 模板类型。取值: "PRIVATE"(个人模版) 
-     * @return TemplateType 模板类型。取值: "PRIVATE"(个人模版)
+     * Get 模板类型。取值: "PRIVATE"(个人模板) 
+     * @return TemplateType 模板类型。取值: "PRIVATE"(个人模板)
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set 模板类型。取值: "PRIVATE"(个人模版)
-     * @param TemplateType 模板类型。取值: "PRIVATE"(个人模版)
+     * Set 模板类型。取值: "PRIVATE"(个人模板)
+     * @param TemplateType 模板类型。取值: "PRIVATE"(个人模板)
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;

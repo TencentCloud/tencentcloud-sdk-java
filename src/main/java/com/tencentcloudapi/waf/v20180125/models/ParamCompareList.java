@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gaap.v20180529.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SrcAddressInfo extends AbstractModel {
+public class ParamCompareList extends AbstractModel {
 
     /**
-    * 内网Ip4地址
+    * 请求参数比对的匹配参数
     */
-    @SerializedName("SrcIpv4")
+    @SerializedName("Key")
     @Expose
-    private String SrcIpv4;
+    private String Key;
 
     /**
-    * 公网Ip4地址
+    * 请求参数比对的匹配值
     */
-    @SerializedName("SrcPublicIpv4")
+    @SerializedName("Value")
     @Expose
-    private String SrcPublicIpv4;
+    private String Value;
 
     /**
-     * Get 内网Ip4地址 
-     * @return SrcIpv4 内网Ip4地址
+     * Get 请求参数比对的匹配参数 
+     * @return Key 请求参数比对的匹配参数
      */
-    public String getSrcIpv4() {
-        return this.SrcIpv4;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 内网Ip4地址
-     * @param SrcIpv4 内网Ip4地址
+     * Set 请求参数比对的匹配参数
+     * @param Key 请求参数比对的匹配参数
      */
-    public void setSrcIpv4(String SrcIpv4) {
-        this.SrcIpv4 = SrcIpv4;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
     /**
-     * Get 公网Ip4地址 
-     * @return SrcPublicIpv4 公网Ip4地址
+     * Get 请求参数比对的匹配值 
+     * @return Value 请求参数比对的匹配值
      */
-    public String getSrcPublicIpv4() {
-        return this.SrcPublicIpv4;
+    public String getValue() {
+        return this.Value;
     }
 
     /**
-     * Set 公网Ip4地址
-     * @param SrcPublicIpv4 公网Ip4地址
+     * Set 请求参数比对的匹配值
+     * @param Value 请求参数比对的匹配值
      */
-    public void setSrcPublicIpv4(String SrcPublicIpv4) {
-        this.SrcPublicIpv4 = SrcPublicIpv4;
+    public void setValue(String Value) {
+        this.Value = Value;
     }
 
-    public SrcAddressInfo() {
+    public ParamCompareList() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SrcAddressInfo(SrcAddressInfo source) {
-        if (source.SrcIpv4 != null) {
-            this.SrcIpv4 = new String(source.SrcIpv4);
+    public ParamCompareList(ParamCompareList source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
         }
-        if (source.SrcPublicIpv4 != null) {
-            this.SrcPublicIpv4 = new String(source.SrcPublicIpv4);
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -90,8 +90,8 @@ public class SrcAddressInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SrcIpv4", this.SrcIpv4);
-        this.setParamSimple(map, prefix + "SrcPublicIpv4", this.SrcPublicIpv4);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

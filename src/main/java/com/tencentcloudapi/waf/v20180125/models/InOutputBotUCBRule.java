@@ -185,6 +185,13 @@ public class InOutputBotUCBRule extends AbstractModel {
     private UCBActionProportion [] ActionList;
 
     /**
+    * 惩罚时间
+    */
+    @SerializedName("DelayTime")
+    @Expose
+    private Long DelayTime;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -552,6 +559,22 @@ public class InOutputBotUCBRule extends AbstractModel {
         this.ActionList = ActionList;
     }
 
+    /**
+     * Get 惩罚时间 
+     * @return DelayTime 惩罚时间
+     */
+    public Long getDelayTime() {
+        return this.DelayTime;
+    }
+
+    /**
+     * Set 惩罚时间
+     * @param DelayTime 惩罚时间
+     */
+    public void setDelayTime(Long DelayTime) {
+        this.DelayTime = DelayTime;
+    }
+
     public InOutputBotUCBRule() {
     }
 
@@ -635,6 +658,9 @@ public class InOutputBotUCBRule extends AbstractModel {
                 this.ActionList[i] = new UCBActionProportion(source.ActionList[i]);
             }
         }
+        if (source.DelayTime != null) {
+            this.DelayTime = new Long(source.DelayTime);
+        }
     }
 
 
@@ -665,6 +691,7 @@ public class InOutputBotUCBRule extends AbstractModel {
         this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
         this.setParamSimple(map, prefix + "BlockPageId", this.BlockPageId);
         this.setParamArrayObj(map, prefix + "ActionList.", this.ActionList);
+        this.setParamSimple(map, prefix + "DelayTime", this.DelayTime);
 
     }
 }

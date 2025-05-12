@@ -31,6 +31,13 @@ public class DescribeDeviceAccountsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 账号信息列表
+    */
+    @SerializedName("DeviceAccountSet")
+    @Expose
+    private DeviceAccount [] DeviceAccountSet;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeDeviceAccountsResponse extends AbstractModel {
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 账号信息列表 
+     * @return DeviceAccountSet 账号信息列表
+     */
+    public DeviceAccount [] getDeviceAccountSet() {
+        return this.DeviceAccountSet;
+    }
+
+    /**
+     * Set 账号信息列表
+     * @param DeviceAccountSet 账号信息列表
+     */
+    public void setDeviceAccountSet(DeviceAccount [] DeviceAccountSet) {
+        this.DeviceAccountSet = DeviceAccountSet;
     }
 
     /**
@@ -80,6 +103,12 @@ public class DescribeDeviceAccountsResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.DeviceAccountSet != null) {
+            this.DeviceAccountSet = new DeviceAccount[source.DeviceAccountSet.length];
+            for (int i = 0; i < source.DeviceAccountSet.length; i++) {
+                this.DeviceAccountSet[i] = new DeviceAccount(source.DeviceAccountSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +120,7 @@ public class DescribeDeviceAccountsResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "DeviceAccountSet.", this.DeviceAccountSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

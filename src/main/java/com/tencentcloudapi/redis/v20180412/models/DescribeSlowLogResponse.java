@@ -70,7 +70,9 @@ public class DescribeSlowLogResponse extends AbstractModel {
     /**
      * Get 已废弃，该参数存在命名不规范问题，后续用参数InstanceSlowLogDetail取代。慢查询详情。 
      * @return InstanceSlowlogDetail 已废弃，该参数存在命名不规范问题，后续用参数InstanceSlowLogDetail取代。慢查询详情。
+     * @deprecated
      */
+    @Deprecated
     public InstanceSlowlogDetail [] getInstanceSlowlogDetail() {
         return this.InstanceSlowlogDetail;
     }
@@ -78,7 +80,9 @@ public class DescribeSlowLogResponse extends AbstractModel {
     /**
      * Set 已废弃，该参数存在命名不规范问题，后续用参数InstanceSlowLogDetail取代。慢查询详情。
      * @param InstanceSlowlogDetail 已废弃，该参数存在命名不规范问题，后续用参数InstanceSlowLogDetail取代。慢查询详情。
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceSlowlogDetail(InstanceSlowlogDetail [] InstanceSlowlogDetail) {
         this.InstanceSlowlogDetail = InstanceSlowlogDetail;
     }

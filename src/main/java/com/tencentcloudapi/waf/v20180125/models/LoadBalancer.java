@@ -52,13 +52,6 @@ public class LoadBalancer extends AbstractModel {
     private String ListenerName;
 
     /**
-    * 负载均衡实例的IP
-    */
-    @SerializedName("Vip")
-    @Expose
-    private String Vip;
-
-    /**
     * 负载均衡实例的端口
     */
     @SerializedName("Vport")
@@ -85,6 +78,13 @@ public class LoadBalancer extends AbstractModel {
     @SerializedName("Zone")
     @Expose
     private String Zone;
+
+    /**
+    * 负载均衡实例的IP。域名化CLB VIP可填空。
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
 
     /**
     * 负载均衡的VPCID，公网为-1，内网按实际填写
@@ -172,22 +172,6 @@ public class LoadBalancer extends AbstractModel {
     }
 
     /**
-     * Get 负载均衡实例的IP 
-     * @return Vip 负载均衡实例的IP
-     */
-    public String getVip() {
-        return this.Vip;
-    }
-
-    /**
-     * Set 负载均衡实例的IP
-     * @param Vip 负载均衡实例的IP
-     */
-    public void setVip(String Vip) {
-        this.Vip = Vip;
-    }
-
-    /**
      * Get 负载均衡实例的端口 
      * @return Vport 负载均衡实例的端口
      */
@@ -249,6 +233,22 @@ public class LoadBalancer extends AbstractModel {
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
+    }
+
+    /**
+     * Get 负载均衡实例的IP。域名化CLB VIP可填空。 
+     * @return Vip 负载均衡实例的IP。域名化CLB VIP可填空。
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set 负载均衡实例的IP。域名化CLB VIP可填空。
+     * @param Vip 负载均衡实例的IP。域名化CLB VIP可填空。
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
     }
 
     /**
@@ -319,9 +319,6 @@ public class LoadBalancer extends AbstractModel {
         if (source.ListenerName != null) {
             this.ListenerName = new String(source.ListenerName);
         }
-        if (source.Vip != null) {
-            this.Vip = new String(source.Vip);
-        }
         if (source.Vport != null) {
             this.Vport = new Long(source.Vport);
         }
@@ -333,6 +330,9 @@ public class LoadBalancer extends AbstractModel {
         }
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
         }
         if (source.NumericalVpcId != null) {
             this.NumericalVpcId = new Long(source.NumericalVpcId);
@@ -354,11 +354,11 @@ public class LoadBalancer extends AbstractModel {
         this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);
-        this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "Vport", this.Vport);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
         this.setParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
         this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);

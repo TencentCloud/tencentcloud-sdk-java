@@ -185,6 +185,22 @@ public class ServerBaseConfig extends AbstractModel {
     private String InternalDomain;
 
     /**
+    * 运行模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperationMode")
+    @Expose
+    private String OperationMode;
+
+    /**
+    * 定时扩缩容配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TimerScale")
+    @Expose
+    private TimerScale [] TimerScale;
+
+    /**
      * Get 环境 Id 
      * @return EnvId 环境 Id
      */
@@ -552,6 +568,46 @@ public class ServerBaseConfig extends AbstractModel {
         this.InternalDomain = InternalDomain;
     }
 
+    /**
+     * Get 运行模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperationMode 运行模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperationMode() {
+        return this.OperationMode;
+    }
+
+    /**
+     * Set 运行模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationMode 运行模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperationMode(String OperationMode) {
+        this.OperationMode = OperationMode;
+    }
+
+    /**
+     * Get 定时扩缩容配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TimerScale 定时扩缩容配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TimerScale [] getTimerScale() {
+        return this.TimerScale;
+    }
+
+    /**
+     * Set 定时扩缩容配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimerScale 定时扩缩容配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimerScale(TimerScale [] TimerScale) {
+        this.TimerScale = TimerScale;
+    }
+
     public ServerBaseConfig() {
     }
 
@@ -635,6 +691,15 @@ public class ServerBaseConfig extends AbstractModel {
         if (source.InternalDomain != null) {
             this.InternalDomain = new String(source.InternalDomain);
         }
+        if (source.OperationMode != null) {
+            this.OperationMode = new String(source.OperationMode);
+        }
+        if (source.TimerScale != null) {
+            this.TimerScale = new TimerScale[source.TimerScale.length];
+            for (int i = 0; i < source.TimerScale.length; i++) {
+                this.TimerScale[i] = new TimerScale(source.TimerScale[i]);
+            }
+        }
     }
 
 
@@ -665,6 +730,8 @@ public class ServerBaseConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Tag", this.Tag);
         this.setParamSimple(map, prefix + "InternalAccess", this.InternalAccess);
         this.setParamSimple(map, prefix + "InternalDomain", this.InternalDomain);
+        this.setParamSimple(map, prefix + "OperationMode", this.OperationMode);
+        this.setParamArrayObj(map, prefix + "TimerScale.", this.TimerScale);
 
     }
 }

@@ -31,6 +31,20 @@ public class DescribeObjectsRequest extends AbstractModel {
     private FiltersItemNew [] Filters;
 
     /**
+    * 排序方式，支持asc或者desc
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * 根据哪个字段排序
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
      * Get 支持的过滤器:	ObjectId: clb实例ID	VIP: clb实例的公网IP	InstanceId: waf实例ID	Domain: 精准域名	Status: waf防护开关状态: 0关闭，1开启	ClsStatus: waf日志开关: 0关闭，1开启    
      * @return Filters 支持的过滤器:	ObjectId: clb实例ID	VIP: clb实例的公网IP	InstanceId: waf实例ID	Domain: 精准域名	Status: waf防护开关状态: 0关闭，1开启	ClsStatus: waf日志开关: 0关闭，1开启   
      */
@@ -44,6 +58,38 @@ public class DescribeObjectsRequest extends AbstractModel {
      */
     public void setFilters(FiltersItemNew [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get 排序方式，支持asc或者desc 
+     * @return Order 排序方式，支持asc或者desc
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 排序方式，支持asc或者desc
+     * @param Order 排序方式，支持asc或者desc
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 根据哪个字段排序 
+     * @return By 根据哪个字段排序
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set 根据哪个字段排序
+     * @param By 根据哪个字段排序
+     */
+    public void setBy(String By) {
+        this.By = By;
     }
 
     public DescribeObjectsRequest() {
@@ -60,6 +106,12 @@ public class DescribeObjectsRequest extends AbstractModel {
                 this.Filters[i] = new FiltersItemNew(source.Filters[i]);
             }
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.By != null) {
+            this.By = new String(source.By);
+        }
     }
 
 
@@ -68,6 +120,8 @@ public class DescribeObjectsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

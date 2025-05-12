@@ -570,7 +570,9 @@ public class DescribeTaskListRequest extends AbstractModel {
     /**
      * Get 该字段已废弃，使用OperateUin代替，请忽略。 
      * @return OperatorUin 该字段已废弃，使用OperateUin代替，请忽略。
+     * @deprecated
      */
+    @Deprecated
     public Long [] getOperatorUin() {
         return this.OperatorUin;
     }
@@ -578,7 +580,9 @@ public class DescribeTaskListRequest extends AbstractModel {
     /**
      * Set 该字段已废弃，使用OperateUin代替，请忽略。
      * @param OperatorUin 该字段已废弃，使用OperateUin代替，请忽略。
+     * @deprecated
      */
+    @Deprecated
     public void setOperatorUin(Long [] OperatorUin) {
         this.OperatorUin = OperatorUin;
     }

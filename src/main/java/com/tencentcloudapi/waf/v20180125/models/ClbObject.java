@@ -185,6 +185,20 @@ public class ClbObject extends AbstractModel {
     private Long NumericalVpcId;
 
     /**
+    * 修改时间
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+
+    /**
+    * 创建时间
+    */
+    @SerializedName("AddTime")
+    @Expose
+    private String AddTime;
+
+    /**
      * Get 对象ID 
      * @return ObjectId 对象ID
      */
@@ -552,6 +566,38 @@ public class ClbObject extends AbstractModel {
         this.NumericalVpcId = NumericalVpcId;
     }
 
+    /**
+     * Get 修改时间 
+     * @return ModifyTime 修改时间
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set 修改时间
+     * @param ModifyTime 修改时间
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
+    /**
+     * Get 创建时间 
+     * @return AddTime 创建时间
+     */
+    public String getAddTime() {
+        return this.AddTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param AddTime 创建时间
+     */
+    public void setAddTime(String AddTime) {
+        this.AddTime = AddTime;
+    }
+
     public ClbObject() {
     }
 
@@ -641,6 +687,12 @@ public class ClbObject extends AbstractModel {
         if (source.NumericalVpcId != null) {
             this.NumericalVpcId = new Long(source.NumericalVpcId);
         }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+        if (source.AddTime != null) {
+            this.AddTime = new String(source.AddTime);
+        }
     }
 
 
@@ -671,6 +723,8 @@ public class ClbObject extends AbstractModel {
         this.setParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
         this.setParamSimple(map, prefix + "ObjectFlowMode", this.ObjectFlowMode);
         this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "AddTime", this.AddTime);
 
     }
 }

@@ -192,7 +192,9 @@ public class ModifyInstanceRequest extends AbstractModel {
     /**
      * Get 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。 
      * @return InstanceId 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceId() {
         return this.InstanceId;
     }
@@ -200,7 +202,9 @@ public class ModifyInstanceRequest extends AbstractModel {
     /**
      * Set 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
      * @param InstanceId 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
@@ -208,7 +212,9 @@ public class ModifyInstanceRequest extends AbstractModel {
     /**
      * Get 已经废弃 
      * @return InstanceName 已经废弃
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceName() {
         return this.InstanceName;
     }
@@ -216,7 +222,9 @@ public class ModifyInstanceRequest extends AbstractModel {
     /**
      * Set 已经废弃
      * @param InstanceName 已经废弃
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
@@ -224,7 +232,9 @@ public class ModifyInstanceRequest extends AbstractModel {
     /**
      * Get 已经废弃。 
      * @return AutoRenew 已经废弃。
+     * @deprecated
      */
+    @Deprecated
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
@@ -232,7 +242,9 @@ public class ModifyInstanceRequest extends AbstractModel {
     /**
      * Set 已经废弃。
      * @param AutoRenew 已经废弃。
+     * @deprecated
      */
+    @Deprecated
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }

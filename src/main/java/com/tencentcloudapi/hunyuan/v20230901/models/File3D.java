@@ -31,7 +31,7 @@ public class File3D extends AbstractModel {
     private String Type;
 
     /**
-    * 文件的Url
+    * 文件的Url（有效期24小时）
     */
     @SerializedName("Url")
     @Expose
@@ -54,16 +54,16 @@ public class File3D extends AbstractModel {
     }
 
     /**
-     * Get 文件的Url 
-     * @return Url 文件的Url
+     * Get 文件的Url（有效期24小时） 
+     * @return Url 文件的Url（有效期24小时）
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 文件的Url
-     * @param Url 文件的Url
+     * Set 文件的Url（有效期24小时）
+     * @param Url 文件的Url（有效期24小时）
      */
     public void setUrl(String Url) {
         this.Url = Url;

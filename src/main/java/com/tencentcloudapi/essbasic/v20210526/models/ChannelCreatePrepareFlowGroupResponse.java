@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gaap.v20180529.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,23 +21,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFirstLinkSessionResponse extends AbstractModel {
+public class ChannelCreatePrepareFlowGroupResponse extends AbstractModel {
 
     /**
-    * 加速成功时返回，单次加速唯一会话Id。。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
     */
-    @SerializedName("SessionId")
+    @SerializedName("FlowGroupId")
     @Expose
-    private String SessionId;
+    private String FlowGroupId;
 
     /**
-    * 剩余的加速时间，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 嵌入式发起链接
     */
-    @SerializedName("Duration")
+    @SerializedName("PrepareUrl")
     @Expose
-    private Long Duration;
+    private String PrepareUrl;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -47,43 +46,39 @@ public class CreateFirstLinkSessionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 加速成功时返回，单次加速唯一会话Id。。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SessionId 加速成功时返回，单次加速唯一会话Id。。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。 
+     * @return FlowGroupId 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
      */
-    public String getSessionId() {
-        return this.SessionId;
+    public String getFlowGroupId() {
+        return this.FlowGroupId;
     }
 
     /**
-     * Set 加速成功时返回，单次加速唯一会话Id。。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SessionId 加速成功时返回，单次加速唯一会话Id。。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+     * @param FlowGroupId 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
      */
-    public void setSessionId(String SessionId) {
-        this.SessionId = SessionId;
+    public void setFlowGroupId(String FlowGroupId) {
+        this.FlowGroupId = FlowGroupId;
     }
 
     /**
-     * Get 剩余的加速时间，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Duration 剩余的加速时间，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 嵌入式发起链接 
+     * @return PrepareUrl 嵌入式发起链接
      */
-    public Long getDuration() {
-        return this.Duration;
+    public String getPrepareUrl() {
+        return this.PrepareUrl;
     }
 
     /**
-     * Set 剩余的加速时间，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Duration 剩余的加速时间，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 嵌入式发起链接
+     * @param PrepareUrl 嵌入式发起链接
      */
-    public void setDuration(Long Duration) {
-        this.Duration = Duration;
+    public void setPrepareUrl(String PrepareUrl) {
+        this.PrepareUrl = PrepareUrl;
     }
 
     /**
@@ -102,19 +97,19 @@ public class CreateFirstLinkSessionResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateFirstLinkSessionResponse() {
+    public ChannelCreatePrepareFlowGroupResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateFirstLinkSessionResponse(CreateFirstLinkSessionResponse source) {
-        if (source.SessionId != null) {
-            this.SessionId = new String(source.SessionId);
+    public ChannelCreatePrepareFlowGroupResponse(ChannelCreatePrepareFlowGroupResponse source) {
+        if (source.FlowGroupId != null) {
+            this.FlowGroupId = new String(source.FlowGroupId);
         }
-        if (source.Duration != null) {
-            this.Duration = new Long(source.Duration);
+        if (source.PrepareUrl != null) {
+            this.PrepareUrl = new String(source.PrepareUrl);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -126,8 +121,8 @@ public class CreateFirstLinkSessionResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
-        this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
+        this.setParamSimple(map, prefix + "PrepareUrl", this.PrepareUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

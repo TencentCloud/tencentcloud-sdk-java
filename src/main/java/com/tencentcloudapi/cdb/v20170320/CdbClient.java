@@ -776,19 +776,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *DescribeCpuExpandStrategy
-
-通过该 API 可以查询实例的 CPU 弹性扩容策略
-     * @param req DescribeCpuExpandStrategyRequest
-     * @return DescribeCpuExpandStrategyResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCpuExpandStrategyResponse DescribeCpuExpandStrategy(DescribeCpuExpandStrategyRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCpuExpandStrategy", DescribeCpuExpandStrategyResponse.class);
-    }
-
-    /**
      *本接口（DescribeDBFeatures）用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
      * @param req DescribeDBFeaturesRequest
      * @return DescribeDBFeaturesResponse

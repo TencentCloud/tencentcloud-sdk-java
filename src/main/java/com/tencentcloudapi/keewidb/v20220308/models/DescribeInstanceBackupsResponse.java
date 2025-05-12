@@ -70,7 +70,9 @@ public class DescribeInstanceBackupsResponse extends AbstractModel {
     /**
      * Get 废弃字段。 
      * @return BackupSet 废弃字段。
+     * @deprecated
      */
+    @Deprecated
     public BinlogInfo [] getBackupSet() {
         return this.BackupSet;
     }
@@ -78,7 +80,9 @@ public class DescribeInstanceBackupsResponse extends AbstractModel {
     /**
      * Set 废弃字段。
      * @param BackupSet 废弃字段。
+     * @deprecated
      */
+    @Deprecated
     public void setBackupSet(BinlogInfo [] BackupSet) {
         this.BackupSet = BackupSet;
     }

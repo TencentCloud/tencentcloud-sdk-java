@@ -31,7 +31,7 @@ public class DescribeCertificateVerifyResultRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 证书类型。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
+    * 证书类型，此参数和GmCertType不可同时为0。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
     */
     @SerializedName("CertType")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeCertificateVerifyResultRequest extends AbstractModel {
     private String PrivateKey;
 
     /**
-    * 国密证书类型。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+    * 国密证书类型，此参数和CertType不可同时为0。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
     */
     @SerializedName("GmCertType")
     @Expose
@@ -117,16 +117,16 @@ public class DescribeCertificateVerifyResultRequest extends AbstractModel {
     }
 
     /**
-     * Get 证书类型。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书 
-     * @return CertType 证书类型。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
+     * Get 证书类型，此参数和GmCertType不可同时为0。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书 
+     * @return CertType 证书类型，此参数和GmCertType不可同时为0。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
      */
     public Long getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set 证书类型。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
-     * @param CertType 证书类型。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
+     * Set 证书类型，此参数和GmCertType不可同时为0。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
+     * @param CertType 证书类型，此参数和GmCertType不可同时为0。 0：不检测国际标准证书 1：证书来源为自有证书 2：证书来源为托管证书
      */
     public void setCertType(Long CertType) {
         this.CertType = CertType;
@@ -181,16 +181,16 @@ public class DescribeCertificateVerifyResultRequest extends AbstractModel {
     }
 
     /**
-     * Get 国密证书类型。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书 
-     * @return GmCertType 国密证书类型。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     * Get 国密证书类型，此参数和CertType不可同时为0。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书 
+     * @return GmCertType 国密证书类型，此参数和CertType不可同时为0。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
      */
     public Long getGmCertType() {
         return this.GmCertType;
     }
 
     /**
-     * Set 国密证书类型。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
-     * @param GmCertType 国密证书类型。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     * Set 国密证书类型，此参数和CertType不可同时为0。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     * @param GmCertType 国密证书类型，此参数和CertType不可同时为0。0：不检测国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
      */
     public void setGmCertType(Long GmCertType) {
         this.GmCertType = GmCertType;

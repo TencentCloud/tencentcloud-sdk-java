@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DspaDiscoveryTask extends AbstractModel {
 
     /**
+    * 任务ID
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
+
+    /**
     * 任务名称
     */
     @SerializedName("Name")
@@ -95,6 +102,22 @@ public class DspaDiscoveryTask extends AbstractModel {
     @SerializedName("ComplianceUpdate")
     @Expose
     private Boolean ComplianceUpdate;
+
+    /**
+     * Get 任务ID 
+     * @return TaskId 任务ID
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务ID
+     * @param TaskId 任务ID
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
+    }
 
     /**
      * Get 任务名称 
@@ -276,6 +299,9 @@ public class DspaDiscoveryTask extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DspaDiscoveryTask(DspaDiscoveryTask source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -313,6 +339,7 @@ public class DspaDiscoveryTask extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Period", this.Period);

@@ -326,6 +326,13 @@ public class CreateRecTaskRequest extends AbstractModel {
     private String [] KeyWordLibIdList;
 
     /**
+    * 替换词汇表id,  适用于热词和自学习场景也无法解决的极端case词组,  会对识别结果强制替换。具体可参考[配置控制台](https://console.cloud.tencent.com/asr/replaceword);强制替换功能可能会影响正常识别结果，请谨慎使用
+    */
+    @SerializedName("ReplaceTextId")
+    @Expose
+    private String ReplaceTextId;
+
+    /**
      * Get 引擎模型类型
 识别引擎采用分级计费方案，标记为“大模型版”的引擎适用大模型计费方案，[点击这里](https://cloud.tencent.com/document/product/1093/35686) 查看产品计费说明
 
@@ -1261,6 +1268,22 @@ public class CreateRecTaskRequest extends AbstractModel {
         this.KeyWordLibIdList = KeyWordLibIdList;
     }
 
+    /**
+     * Get 替换词汇表id,  适用于热词和自学习场景也无法解决的极端case词组,  会对识别结果强制替换。具体可参考[配置控制台](https://console.cloud.tencent.com/asr/replaceword);强制替换功能可能会影响正常识别结果，请谨慎使用 
+     * @return ReplaceTextId 替换词汇表id,  适用于热词和自学习场景也无法解决的极端case词组,  会对识别结果强制替换。具体可参考[配置控制台](https://console.cloud.tencent.com/asr/replaceword);强制替换功能可能会影响正常识别结果，请谨慎使用
+     */
+    public String getReplaceTextId() {
+        return this.ReplaceTextId;
+    }
+
+    /**
+     * Set 替换词汇表id,  适用于热词和自学习场景也无法解决的极端case词组,  会对识别结果强制替换。具体可参考[配置控制台](https://console.cloud.tencent.com/asr/replaceword);强制替换功能可能会影响正常识别结果，请谨慎使用
+     * @param ReplaceTextId 替换词汇表id,  适用于热词和自学习场景也无法解决的极端case词组,  会对识别结果强制替换。具体可参考[配置控制台](https://console.cloud.tencent.com/asr/replaceword);强制替换功能可能会影响正常识别结果，请谨慎使用
+     */
+    public void setReplaceTextId(String ReplaceTextId) {
+        this.ReplaceTextId = ReplaceTextId;
+    }
+
     public CreateRecTaskRequest() {
     }
 
@@ -1341,6 +1364,9 @@ public class CreateRecTaskRequest extends AbstractModel {
                 this.KeyWordLibIdList[i] = new String(source.KeyWordLibIdList[i]);
             }
         }
+        if (source.ReplaceTextId != null) {
+            this.ReplaceTextId = new String(source.ReplaceTextId);
+        }
     }
 
 
@@ -1371,6 +1397,7 @@ public class CreateRecTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "HotwordList", this.HotwordList);
         this.setParamArraySimple(map, prefix + "KeyWordLibIdList.", this.KeyWordLibIdList);
+        this.setParamSimple(map, prefix + "ReplaceTextId", this.ReplaceTextId);
 
     }
 }

@@ -314,6 +314,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *创建代码模版
+     * @param req CreateCodeTemplateRequest
+     * @return CreateCodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCodeTemplateResponse CreateCodeTemplate(CreateCodeTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCodeTemplate", CreateCodeTemplateResponse.class);
+    }
+
+    /**
+     *提交代码模版
+     * @param req CreateCodeTemplateVersionRequest
+     * @return CreateCodeTemplateVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCodeTemplateVersionResponse CreateCodeTemplateVersion(CreateCodeTemplateVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCodeTemplateVersion", CreateCodeTemplateVersionResponse.class);
+    }
+
+    /**
      *创建用户自定义函数
      * @param req CreateCustomFunctionRequest
      * @return CreateCustomFunctionResponse
@@ -520,6 +542,17 @@ public class WedataClient extends AbstractClient{
     public DagInstancesResponse DagInstances(DagInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DagInstances", DagInstancesResponse.class);
+    }
+
+    /**
+     *删除代码模版
+     * @param req DeleteCodeTemplateRequest
+     * @return DeleteCodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCodeTemplateResponse DeleteCodeTemplate(DeleteCodeTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCodeTemplate", DeleteCodeTemplateResponse.class);
     }
 
     /**
@@ -1072,6 +1105,17 @@ public class WedataClient extends AbstractClient{
     public DescribeFolderWorkflowListResponse DescribeFolderWorkflowList(DescribeFolderWorkflowListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeFolderWorkflowList", DescribeFolderWorkflowListResponse.class);
+    }
+
+    /**
+     *查询模版关联的任务和可填充参数，为下一步代码模版提交做准备
+     * @param req DescribeFormVersionParamRequest
+     * @return DescribeFormVersionParamResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFormVersionParamResponse DescribeFormVersionParam(DescribeFormVersionParamRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFormVersionParam", DescribeFormVersionParamResponse.class);
     }
 
     /**
@@ -1984,6 +2028,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *分页查询引用模板的任务列表
+     * @param req DescribeTasksForCodeTemplateRequest
+     * @return DescribeTasksForCodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTasksForCodeTemplateResponse DescribeTasksForCodeTemplate(DescribeTasksForCodeTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTasksForCodeTemplate", DescribeTasksForCodeTemplateResponse.class);
+    }
+
+    /**
      *查询规则模板维度分布情况
      * @param req DescribeTemplateDimCountRequest
      * @return DescribeTemplateDimCountResponse
@@ -2594,6 +2649,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *血缘上报接口
+     * @param req ReportTaskLineageRequest
+     * @return ReportTaskLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportTaskLineageResponse ReportTaskLineage(ReportTaskLineageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReportTaskLineage", ReportTaskLineageResponse.class);
+    }
+
+    /**
      *继续集成任务
      * @param req ResumeIntegrationTaskRequest
      * @return ResumeIntegrationTaskResponse
@@ -2814,6 +2880,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public UnlockIntegrationTaskResponse UnlockIntegrationTask(UnlockIntegrationTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnlockIntegrationTask", UnlockIntegrationTaskResponse.class);
+    }
+
+    /**
+     *更新模版
+     * @param req UpdateCodeTemplateRequest
+     * @return UpdateCodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCodeTemplateResponse UpdateCodeTemplate(UpdateCodeTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCodeTemplate", UpdateCodeTemplateResponse.class);
     }
 
     /**

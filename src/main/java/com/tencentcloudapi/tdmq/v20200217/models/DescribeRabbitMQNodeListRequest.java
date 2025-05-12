@@ -38,7 +38,7 @@ public class DescribeRabbitMQNodeListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 一页限制,moren
+    * 一页限制，默认值 20
     */
     @SerializedName("Limit")
     @Expose
@@ -111,16 +111,16 @@ ascend/descend
     }
 
     /**
-     * Get 一页限制,moren 
-     * @return Limit 一页限制,moren
+     * Get 一页限制，默认值 20 
+     * @return Limit 一页限制，默认值 20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 一页限制,moren
-     * @param Limit 一页限制,moren
+     * Set 一页限制，默认值 20
+     * @param Limit 一页限制，默认值 20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

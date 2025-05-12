@@ -25,7 +25,6 @@ public class DescribeBotSceneUCBRuleResponse extends AbstractModel {
 
     /**
     * 返回数据包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBotSceneUCBRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回数据包
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回数据包 
      * @return Data 返回数据包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeBotUCBRuleRsp getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeBotSceneUCBRuleResponse extends AbstractModel {
 
     /**
      * Set 返回数据包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 返回数据包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DescribeBotUCBRuleRsp Data) {
         this.Data = Data;

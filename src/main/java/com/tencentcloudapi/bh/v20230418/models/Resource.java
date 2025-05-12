@@ -304,6 +304,62 @@ public class Resource extends AbstractModel {
     private String IntranetVpcCidr;
 
     /**
+    * 是否共享clb，true-共享clb，false-独享clb
+    */
+    @SerializedName("ShareClb")
+    @Expose
+    private Boolean ShareClb;
+
+    /**
+    * 共享clb id
+    */
+    @SerializedName("OpenClbId")
+    @Expose
+    private String OpenClbId;
+
+    /**
+    * 运营商信息
+    */
+    @SerializedName("LbVipIsp")
+    @Expose
+    private String LbVipIsp;
+
+    /**
+    * linux资产命令行运维端口
+    */
+    @SerializedName("TUICmdPort")
+    @Expose
+    private Long TUICmdPort;
+
+    /**
+    * linux资产直连端口
+    */
+    @SerializedName("TUIDirectPort")
+    @Expose
+    private Long TUIDirectPort;
+
+    /**
+    * 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+    */
+    @SerializedName("WebAccess")
+    @Expose
+    private Long WebAccess;
+
+    /**
+    * 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+    */
+    @SerializedName("ClientAccess")
+    @Expose
+    private Long ClientAccess;
+
+    /**
+    * 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+    */
+    @SerializedName("ExternalAccess")
+    @Expose
+    private Long ExternalAccess;
+
+    /**
      * Get 服务实例ID，如bh-saas-s3ed4r5e 
      * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
@@ -943,6 +999,134 @@ public class Resource extends AbstractModel {
         this.IntranetVpcCidr = IntranetVpcCidr;
     }
 
+    /**
+     * Get 是否共享clb，true-共享clb，false-独享clb 
+     * @return ShareClb 是否共享clb，true-共享clb，false-独享clb
+     */
+    public Boolean getShareClb() {
+        return this.ShareClb;
+    }
+
+    /**
+     * Set 是否共享clb，true-共享clb，false-独享clb
+     * @param ShareClb 是否共享clb，true-共享clb，false-独享clb
+     */
+    public void setShareClb(Boolean ShareClb) {
+        this.ShareClb = ShareClb;
+    }
+
+    /**
+     * Get 共享clb id 
+     * @return OpenClbId 共享clb id
+     */
+    public String getOpenClbId() {
+        return this.OpenClbId;
+    }
+
+    /**
+     * Set 共享clb id
+     * @param OpenClbId 共享clb id
+     */
+    public void setOpenClbId(String OpenClbId) {
+        this.OpenClbId = OpenClbId;
+    }
+
+    /**
+     * Get 运营商信息 
+     * @return LbVipIsp 运营商信息
+     */
+    public String getLbVipIsp() {
+        return this.LbVipIsp;
+    }
+
+    /**
+     * Set 运营商信息
+     * @param LbVipIsp 运营商信息
+     */
+    public void setLbVipIsp(String LbVipIsp) {
+        this.LbVipIsp = LbVipIsp;
+    }
+
+    /**
+     * Get linux资产命令行运维端口 
+     * @return TUICmdPort linux资产命令行运维端口
+     */
+    public Long getTUICmdPort() {
+        return this.TUICmdPort;
+    }
+
+    /**
+     * Set linux资产命令行运维端口
+     * @param TUICmdPort linux资产命令行运维端口
+     */
+    public void setTUICmdPort(Long TUICmdPort) {
+        this.TUICmdPort = TUICmdPort;
+    }
+
+    /**
+     * Get linux资产直连端口 
+     * @return TUIDirectPort linux资产直连端口
+     */
+    public Long getTUIDirectPort() {
+        return this.TUIDirectPort;
+    }
+
+    /**
+     * Set linux资产直连端口
+     * @param TUIDirectPort linux资产直连端口
+     */
+    public void setTUIDirectPort(Long TUIDirectPort) {
+        this.TUIDirectPort = TUIDirectPort;
+    }
+
+    /**
+     * Get 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中 
+     * @return WebAccess 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+     */
+    public Long getWebAccess() {
+        return this.WebAccess;
+    }
+
+    /**
+     * Set 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+     * @param WebAccess 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+     */
+    public void setWebAccess(Long WebAccess) {
+        this.WebAccess = WebAccess;
+    }
+
+    /**
+     * Get 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中 
+     * @return ClientAccess 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+     */
+    public Long getClientAccess() {
+        return this.ClientAccess;
+    }
+
+    /**
+     * Set 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+     * @param ClientAccess 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+     */
+    public void setClientAccess(Long ClientAccess) {
+        this.ClientAccess = ClientAccess;
+    }
+
+    /**
+     * Get 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中 
+     * @return ExternalAccess 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+     */
+    public Long getExternalAccess() {
+        return this.ExternalAccess;
+    }
+
+    /**
+     * Set 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+     * @param ExternalAccess 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+     */
+    public void setExternalAccess(Long ExternalAccess) {
+        this.ExternalAccess = ExternalAccess;
+    }
+
     public Resource() {
     }
 
@@ -1086,6 +1270,30 @@ public class Resource extends AbstractModel {
         if (source.IntranetVpcCidr != null) {
             this.IntranetVpcCidr = new String(source.IntranetVpcCidr);
         }
+        if (source.ShareClb != null) {
+            this.ShareClb = new Boolean(source.ShareClb);
+        }
+        if (source.OpenClbId != null) {
+            this.OpenClbId = new String(source.OpenClbId);
+        }
+        if (source.LbVipIsp != null) {
+            this.LbVipIsp = new String(source.LbVipIsp);
+        }
+        if (source.TUICmdPort != null) {
+            this.TUICmdPort = new Long(source.TUICmdPort);
+        }
+        if (source.TUIDirectPort != null) {
+            this.TUIDirectPort = new Long(source.TUIDirectPort);
+        }
+        if (source.WebAccess != null) {
+            this.WebAccess = new Long(source.WebAccess);
+        }
+        if (source.ClientAccess != null) {
+            this.ClientAccess = new Long(source.ClientAccess);
+        }
+        if (source.ExternalAccess != null) {
+            this.ExternalAccess = new Long(source.ExternalAccess);
+        }
     }
 
 
@@ -1133,6 +1341,14 @@ public class Resource extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IntranetPrivateIpSet.", this.IntranetPrivateIpSet);
         this.setParamSimple(map, prefix + "IntranetVpcId", this.IntranetVpcId);
         this.setParamSimple(map, prefix + "IntranetVpcCidr", this.IntranetVpcCidr);
+        this.setParamSimple(map, prefix + "ShareClb", this.ShareClb);
+        this.setParamSimple(map, prefix + "OpenClbId", this.OpenClbId);
+        this.setParamSimple(map, prefix + "LbVipIsp", this.LbVipIsp);
+        this.setParamSimple(map, prefix + "TUICmdPort", this.TUICmdPort);
+        this.setParamSimple(map, prefix + "TUIDirectPort", this.TUIDirectPort);
+        this.setParamSimple(map, prefix + "WebAccess", this.WebAccess);
+        this.setParamSimple(map, prefix + "ClientAccess", this.ClientAccess);
+        this.setParamSimple(map, prefix + "ExternalAccess", this.ExternalAccess);
 
     }
 }

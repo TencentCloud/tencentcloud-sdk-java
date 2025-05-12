@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateHostRequest extends AbstractModel {
 
     /**
-    * 防护域名配置信息
+    * 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
     */
     @SerializedName("Host")
     @Expose
@@ -38,16 +38,16 @@ public class CreateHostRequest extends AbstractModel {
     private String InstanceID;
 
     /**
-     * Get 防护域名配置信息 
-     * @return Host 防护域名配置信息
+     * Get 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。 
+     * @return Host 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
      */
     public HostRecord getHost() {
         return this.Host;
     }
 
     /**
-     * Set 防护域名配置信息
-     * @param Host 防护域名配置信息
+     * Set 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
+     * @param Host 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
      */
     public void setHost(HostRecord Host) {
         this.Host = Host;

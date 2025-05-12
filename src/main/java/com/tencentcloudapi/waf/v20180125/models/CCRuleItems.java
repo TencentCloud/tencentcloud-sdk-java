@@ -136,6 +136,13 @@ public class CCRuleItems extends AbstractModel {
     private Long CreateTime;
 
     /**
+    * 限频方式
+    */
+    @SerializedName("LimitMethod")
+    @Expose
+    private String LimitMethod;
+
+    /**
      * Get 名字 
      * @return Name 名字
      */
@@ -391,6 +398,22 @@ public class CCRuleItems extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 限频方式 
+     * @return LimitMethod 限频方式
+     */
+    public String getLimitMethod() {
+        return this.LimitMethod;
+    }
+
+    /**
+     * Set 限频方式
+     * @param LimitMethod 限频方式
+     */
+    public void setLimitMethod(String LimitMethod) {
+        this.LimitMethod = LimitMethod;
+    }
+
     public CCRuleItems() {
     }
 
@@ -450,6 +473,9 @@ public class CCRuleItems extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.LimitMethod != null) {
+            this.LimitMethod = new String(source.LimitMethod);
+        }
     }
 
 
@@ -473,6 +499,7 @@ public class CCRuleItems extends AbstractModel {
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamArraySimple(map, prefix + "SessionApplied.", this.SessionApplied);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "LimitMethod", this.LimitMethod);
 
     }
 }

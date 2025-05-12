@@ -394,7 +394,9 @@ public class ProductConf extends AbstractModel {
      * @return EnableRepicaReadOnly 该参数名因存在拼写不规范的问题，建议使用**EnableReplicaReadOnly**参数取代。其含义为是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getEnableRepicaReadOnly() {
         return this.EnableRepicaReadOnly;
     }
@@ -406,7 +408,9 @@ public class ProductConf extends AbstractModel {
      * @param EnableRepicaReadOnly 该参数名因存在拼写不规范的问题，建议使用**EnableReplicaReadOnly**参数取代。其含义为是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
+     * @deprecated
      */
+    @Deprecated
     public void setEnableRepicaReadOnly(Boolean EnableRepicaReadOnly) {
         this.EnableRepicaReadOnly = EnableRepicaReadOnly;
     }

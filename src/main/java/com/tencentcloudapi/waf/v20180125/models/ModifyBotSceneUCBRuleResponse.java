@@ -31,6 +31,13 @@ public class ModifyBotSceneUCBRuleResponse extends AbstractModel {
     private String Data;
 
     /**
+    * ["1231"]
+    */
+    @SerializedName("RuleIdList")
+    @Expose
+    private String [] RuleIdList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class ModifyBotSceneUCBRuleResponse extends AbstractModel {
      */
     public void setData(String Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get ["1231"] 
+     * @return RuleIdList ["1231"]
+     */
+    public String [] getRuleIdList() {
+        return this.RuleIdList;
+    }
+
+    /**
+     * Set ["1231"]
+     * @param RuleIdList ["1231"]
+     */
+    public void setRuleIdList(String [] RuleIdList) {
+        this.RuleIdList = RuleIdList;
     }
 
     /**
@@ -80,6 +103,12 @@ public class ModifyBotSceneUCBRuleResponse extends AbstractModel {
         if (source.Data != null) {
             this.Data = new String(source.Data);
         }
+        if (source.RuleIdList != null) {
+            this.RuleIdList = new String[source.RuleIdList.length];
+            for (int i = 0; i < source.RuleIdList.length; i++) {
+                this.RuleIdList[i] = new String(source.RuleIdList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +120,7 @@ public class ModifyBotSceneUCBRuleResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamArraySimple(map, prefix + "RuleIdList.", this.RuleIdList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

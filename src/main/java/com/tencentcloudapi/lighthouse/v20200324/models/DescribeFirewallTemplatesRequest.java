@@ -41,7 +41,7 @@ public class DescribeFirewallTemplatesRequest extends AbstractModel {
 <li>template-type</li>按照【防火墙模板的类型】进行过滤。
 类型：String
 必选：否
-取值: "PRIVATE"(个人模版)
+取值: "PRIVATE"(个人模板)
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 TemplateIds 和 Filters。
     */
     @SerializedName("Filters")
@@ -89,7 +89,7 @@ public class DescribeFirewallTemplatesRequest extends AbstractModel {
 <li>template-type</li>按照【防火墙模板的类型】进行过滤。
 类型：String
 必选：否
-取值: "PRIVATE"(个人模版)
+取值: "PRIVATE"(个人模板)
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 TemplateIds 和 Filters。 
      * @return Filters 过滤器列表。
 <li>template-id</li>按照【防火墙模板所属的ID】进行过滤。
@@ -101,7 +101,7 @@ public class DescribeFirewallTemplatesRequest extends AbstractModel {
 <li>template-type</li>按照【防火墙模板的类型】进行过滤。
 类型：String
 必选：否
-取值: "PRIVATE"(个人模版)
+取值: "PRIVATE"(个人模板)
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 TemplateIds 和 Filters。
      */
     public Filter [] getFilters() {
@@ -119,7 +119,7 @@ public class DescribeFirewallTemplatesRequest extends AbstractModel {
 <li>template-type</li>按照【防火墙模板的类型】进行过滤。
 类型：String
 必选：否
-取值: "PRIVATE"(个人模版)
+取值: "PRIVATE"(个人模板)
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 TemplateIds 和 Filters。
      * @param Filters 过滤器列表。
 <li>template-id</li>按照【防火墙模板所属的ID】进行过滤。
@@ -131,7 +131,7 @@ public class DescribeFirewallTemplatesRequest extends AbstractModel {
 <li>template-type</li>按照【防火墙模板的类型】进行过滤。
 类型：String
 必选：否
-取值: "PRIVATE"(个人模版)
+取值: "PRIVATE"(个人模板)
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 TemplateIds 和 Filters。
      */
     public void setFilters(Filter [] Filters) {

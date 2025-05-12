@@ -134,6 +134,20 @@ public class BaseFlowInfo extends AbstractModel {
     private Long FlowDisplayType;
 
     /**
+    * 签署文件资源Id列表，目前仅支持单个文件
+    */
+    @SerializedName("FileIds")
+    @Expose
+    private String [] FileIds;
+
+    /**
+    * 合同签署人信息
+    */
+    @SerializedName("Approvers")
+    @Expose
+    private CommonFlowApprover [] Approvers;
+
+    /**
      * Get 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。 
      * @return FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
      */
@@ -417,6 +431,38 @@ public class BaseFlowInfo extends AbstractModel {
         this.FlowDisplayType = FlowDisplayType;
     }
 
+    /**
+     * Get 签署文件资源Id列表，目前仅支持单个文件 
+     * @return FileIds 签署文件资源Id列表，目前仅支持单个文件
+     */
+    public String [] getFileIds() {
+        return this.FileIds;
+    }
+
+    /**
+     * Set 签署文件资源Id列表，目前仅支持单个文件
+     * @param FileIds 签署文件资源Id列表，目前仅支持单个文件
+     */
+    public void setFileIds(String [] FileIds) {
+        this.FileIds = FileIds;
+    }
+
+    /**
+     * Get 合同签署人信息 
+     * @return Approvers 合同签署人信息
+     */
+    public CommonFlowApprover [] getApprovers() {
+        return this.Approvers;
+    }
+
+    /**
+     * Set 合同签署人信息
+     * @param Approvers 合同签署人信息
+     */
+    public void setApprovers(CommonFlowApprover [] Approvers) {
+        this.Approvers = Approvers;
+    }
+
     public BaseFlowInfo() {
     }
 
@@ -473,6 +519,18 @@ public class BaseFlowInfo extends AbstractModel {
         if (source.FlowDisplayType != null) {
             this.FlowDisplayType = new Long(source.FlowDisplayType);
         }
+        if (source.FileIds != null) {
+            this.FileIds = new String[source.FileIds.length];
+            for (int i = 0; i < source.FileIds.length; i++) {
+                this.FileIds[i] = new String(source.FileIds[i]);
+            }
+        }
+        if (source.Approvers != null) {
+            this.Approvers = new CommonFlowApprover[source.Approvers.length];
+            for (int i = 0; i < source.Approvers.length; i++) {
+                this.Approvers[i] = new CommonFlowApprover(source.Approvers[i]);
+            }
+        }
     }
 
 
@@ -493,6 +551,8 @@ public class BaseFlowInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
         this.setParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
+        this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+        this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
 
     }
 }

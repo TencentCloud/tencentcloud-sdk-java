@@ -162,14 +162,14 @@ public class Component extends AbstractModel {
     private Long ComponentPage;
 
     /**
-    * **在绝对定位方式和关键字定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
+    * **在绝对定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
     */
     @SerializedName("ComponentPosX")
     @Expose
     private Float ComponentPosX;
 
     /**
-    * **在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
+    * **在绝对定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
     */
     @SerializedName("ComponentPosY")
     @Expose
@@ -864,32 +864,32 @@ ChildrenComponent结构体定义:
     }
 
     /**
-     * Get **在绝对定位方式和关键字定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。 
-     * @return ComponentPosX **在绝对定位方式和关键字定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
+     * Get **在绝对定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。 
+     * @return ComponentPosX **在绝对定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
      */
     public Float getComponentPosX() {
         return this.ComponentPosX;
     }
 
     /**
-     * Set **在绝对定位方式和关键字定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
-     * @param ComponentPosX **在绝对定位方式和关键字定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
+     * Set **在绝对定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
+     * @param ComponentPosX **在绝对定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
      */
     public void setComponentPosX(Float ComponentPosX) {
         this.ComponentPosX = ComponentPosX;
     }
 
     /**
-     * Get **在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。 
-     * @return ComponentPosY **在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
+     * Get **在绝对定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。 
+     * @return ComponentPosY **在绝对定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
      */
     public Float getComponentPosY() {
         return this.ComponentPosY;
     }
 
     /**
-     * Set **在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
-     * @param ComponentPosY **在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
+     * Set **在绝对定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
+     * @param ComponentPosY **在绝对定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
      */
     public void setComponentPosY(Float ComponentPosY) {
         this.ComponentPosY = ComponentPosY;

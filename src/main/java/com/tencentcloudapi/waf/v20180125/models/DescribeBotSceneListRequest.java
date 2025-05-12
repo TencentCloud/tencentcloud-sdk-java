@@ -73,6 +73,13 @@ public class DescribeBotSceneListRequest extends AbstractModel {
     private Boolean IsValid;
 
     /**
+    * 要查询的场景id
+    */
+    @SerializedName("SceneId")
+    @Expose
+    private String SceneId;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -184,6 +191,22 @@ public class DescribeBotSceneListRequest extends AbstractModel {
         this.IsValid = IsValid;
     }
 
+    /**
+     * Get 要查询的场景id 
+     * @return SceneId 要查询的场景id
+     */
+    public String getSceneId() {
+        return this.SceneId;
+    }
+
+    /**
+     * Set 要查询的场景id
+     * @param SceneId 要查询的场景id
+     */
+    public void setSceneId(String SceneId) {
+        this.SceneId = SceneId;
+    }
+
     public DescribeBotSceneListRequest() {
     }
 
@@ -216,6 +239,9 @@ public class DescribeBotSceneListRequest extends AbstractModel {
         if (source.IsValid != null) {
             this.IsValid = new Boolean(source.IsValid);
         }
+        if (source.SceneId != null) {
+            this.SceneId = new String(source.SceneId);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class DescribeBotSceneListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SceneName", this.SceneName);
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "IsValid", this.IsValid);
+        this.setParamSimple(map, prefix + "SceneId", this.SceneId);
 
     }
 }

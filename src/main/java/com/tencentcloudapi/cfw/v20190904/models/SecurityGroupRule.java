@@ -87,7 +87,7 @@ drop：拒绝
     private String OrderIndex;
 
     /**
-    * 协议；TCP/UDP/ICMP/ANY
+    * 协议；TCP/UDP/ICMP/ICMPv6/ANY
     */
     @SerializedName("Protocol")
     @Expose
@@ -300,16 +300,16 @@ drop：拒绝
     }
 
     /**
-     * Get 协议；TCP/UDP/ICMP/ANY 
-     * @return Protocol 协议；TCP/UDP/ICMP/ANY
+     * Get 协议；TCP/UDP/ICMP/ICMPv6/ANY 
+     * @return Protocol 协议；TCP/UDP/ICMP/ICMPv6/ANY
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议；TCP/UDP/ICMP/ANY
-     * @param Protocol 协议；TCP/UDP/ICMP/ANY
+     * Set 协议；TCP/UDP/ICMP/ICMPv6/ANY
+     * @param Protocol 协议；TCP/UDP/ICMP/ICMPv6/ANY
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

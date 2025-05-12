@@ -673,7 +673,9 @@ public class InstanceSet extends AbstractModel {
     /**
      * Get 该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。 
      * @return SizeUsed 该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
+     * @deprecated
      */
+    @Deprecated
     public Float getSizeUsed() {
         return this.SizeUsed;
     }
@@ -681,7 +683,9 @@ public class InstanceSet extends AbstractModel {
     /**
      * Set 该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
      * @param SizeUsed 该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
+     * @deprecated
      */
+    @Deprecated
     public void setSizeUsed(Float SizeUsed) {
         this.SizeUsed = SizeUsed;
     }

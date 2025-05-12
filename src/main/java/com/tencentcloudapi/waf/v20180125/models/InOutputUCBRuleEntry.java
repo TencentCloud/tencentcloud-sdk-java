@@ -87,6 +87,13 @@ public class InOutputUCBRuleEntry extends AbstractModel {
     private String Lang;
 
     /**
+    * 参数匹配
+    */
+    @SerializedName("ParamCompareList")
+    @Expose
+    private ParamCompareList [] ParamCompareList;
+
+    /**
      * Get 键 
      * @return Key 键
      */
@@ -230,6 +237,22 @@ public class InOutputUCBRuleEntry extends AbstractModel {
         this.Lang = Lang;
     }
 
+    /**
+     * Get 参数匹配 
+     * @return ParamCompareList 参数匹配
+     */
+    public ParamCompareList [] getParamCompareList() {
+        return this.ParamCompareList;
+    }
+
+    /**
+     * Set 参数匹配
+     * @param ParamCompareList 参数匹配
+     */
+    public void setParamCompareList(ParamCompareList [] ParamCompareList) {
+        this.ParamCompareList = ParamCompareList;
+    }
+
     public InOutputUCBRuleEntry() {
     }
 
@@ -271,6 +294,12 @@ public class InOutputUCBRuleEntry extends AbstractModel {
         if (source.Lang != null) {
             this.Lang = new String(source.Lang);
         }
+        if (source.ParamCompareList != null) {
+            this.ParamCompareList = new ParamCompareList[source.ParamCompareList.length];
+            for (int i = 0; i < source.ParamCompareList.length; i++) {
+                this.ParamCompareList[i] = new ParamCompareList(source.ParamCompareList[i]);
+            }
+        }
     }
 
 
@@ -287,6 +316,7 @@ public class InOutputUCBRuleEntry extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "Areas.", this.Areas);
         this.setParamSimple(map, prefix + "Lang", this.Lang);
+        this.setParamArrayObj(map, prefix + "ParamCompareList.", this.ParamCompareList);
 
     }
 }

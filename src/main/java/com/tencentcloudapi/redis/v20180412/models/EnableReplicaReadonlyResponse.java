@@ -47,7 +47,9 @@ public class EnableReplicaReadonlyResponse extends AbstractModel {
     /**
      * Get 错误：ERROR，正确OK（已废弃） 
      * @return Status 错误：ERROR，正确OK（已废弃）
+     * @deprecated
      */
+    @Deprecated
     public String getStatus() {
         return this.Status;
     }
@@ -55,7 +57,9 @@ public class EnableReplicaReadonlyResponse extends AbstractModel {
     /**
      * Set 错误：ERROR，正确OK（已废弃）
      * @param Status 错误：ERROR，正确OK（已废弃）
+     * @deprecated
      */
+    @Deprecated
     public void setStatus(String Status) {
         this.Status = Status;
     }
