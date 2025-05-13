@@ -73,6 +73,13 @@ public class DescribeAttributeLabelRequest extends AbstractModel {
     private String LastLabelBizId;
 
     /**
+    * 查询范围 all(或者传空):标准词和相似词 standard:标准词 similar:相似词
+    */
+    @SerializedName("QueryScope")
+    @Expose
+    private String QueryScope;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -184,6 +191,22 @@ public class DescribeAttributeLabelRequest extends AbstractModel {
         this.LastLabelBizId = LastLabelBizId;
     }
 
+    /**
+     * Get 查询范围 all(或者传空):标准词和相似词 standard:标准词 similar:相似词 
+     * @return QueryScope 查询范围 all(或者传空):标准词和相似词 standard:标准词 similar:相似词
+     */
+    public String getQueryScope() {
+        return this.QueryScope;
+    }
+
+    /**
+     * Set 查询范围 all(或者传空):标准词和相似词 standard:标准词 similar:相似词
+     * @param QueryScope 查询范围 all(或者传空):标准词和相似词 standard:标准词 similar:相似词
+     */
+    public void setQueryScope(String QueryScope) {
+        this.QueryScope = QueryScope;
+    }
+
     public DescribeAttributeLabelRequest() {
     }
 
@@ -213,6 +236,9 @@ public class DescribeAttributeLabelRequest extends AbstractModel {
         if (source.LastLabelBizId != null) {
             this.LastLabelBizId = new String(source.LastLabelBizId);
         }
+        if (source.QueryScope != null) {
+            this.QueryScope = new String(source.QueryScope);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class DescribeAttributeLabelRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "LastLabelBizId", this.LastLabelBizId);
+        this.setParamSimple(map, prefix + "QueryScope", this.QueryScope);
 
     }
 }

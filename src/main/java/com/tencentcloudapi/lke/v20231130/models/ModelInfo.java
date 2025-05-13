@@ -146,6 +146,13 @@ public class ModelInfo extends AbstractModel {
     private Long RoleLenLimit;
 
     /**
+    * 是否专属并发模型
+    */
+    @SerializedName("IsExclusive")
+    @Expose
+    private Boolean IsExclusive;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelName 模型名称
@@ -441,6 +448,22 @@ public class ModelInfo extends AbstractModel {
         this.RoleLenLimit = RoleLenLimit;
     }
 
+    /**
+     * Get 是否专属并发模型 
+     * @return IsExclusive 是否专属并发模型
+     */
+    public Boolean getIsExclusive() {
+        return this.IsExclusive;
+    }
+
+    /**
+     * Set 是否专属并发模型
+     * @param IsExclusive 是否专属并发模型
+     */
+    public void setIsExclusive(Boolean IsExclusive) {
+        this.IsExclusive = IsExclusive;
+    }
+
     public ModelInfo() {
     }
 
@@ -497,6 +520,9 @@ public class ModelInfo extends AbstractModel {
         if (source.RoleLenLimit != null) {
             this.RoleLenLimit = new Long(source.RoleLenLimit);
         }
+        if (source.IsExclusive != null) {
+            this.IsExclusive = new Boolean(source.IsExclusive);
+        }
     }
 
 
@@ -520,6 +546,7 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "RoleLenLimit", this.RoleLenLimit);
+        this.setParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
 
     }
 }

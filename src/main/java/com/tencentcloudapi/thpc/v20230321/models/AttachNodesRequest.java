@@ -40,7 +40,7 @@ public class AttachNodesRequest extends AbstractModel {
     /**
     * 队列名称。不指定则为默认队列：
 SLURM默认队列为：compute。 
-SGE默认队列为：all.q。
+
     */
     @SerializedName("QueueName")
     @Expose
@@ -95,10 +95,10 @@ SGE默认队列为：all.q。
     /**
      * Get 队列名称。不指定则为默认队列：
 SLURM默认队列为：compute。 
-SGE默认队列为：all.q。 
+ 
      * @return QueueName 队列名称。不指定则为默认队列：
 SLURM默认队列为：compute。 
-SGE默认队列为：all.q。
+
      */
     public String getQueueName() {
         return this.QueueName;
@@ -107,10 +107,10 @@ SGE默认队列为：all.q。
     /**
      * Set 队列名称。不指定则为默认队列：
 SLURM默认队列为：compute。 
-SGE默认队列为：all.q。
+
      * @param QueueName 队列名称。不指定则为默认队列：
 SLURM默认队列为：compute。 
-SGE默认队列为：all.q。
+
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;

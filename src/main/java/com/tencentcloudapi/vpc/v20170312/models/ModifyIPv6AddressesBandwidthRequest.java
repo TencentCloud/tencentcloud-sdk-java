@@ -31,7 +31,7 @@ public class ModifyIPv6AddressesBandwidthRequest extends AbstractModel {
     private String [] IPv6AddressIds;
 
     /**
-    * 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+    * 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyIPv6AddressesBandwidthRequest extends AbstractModel {
     }
 
     /**
-     * Get 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。 
-     * @return InternetMaxBandwidthOut 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+     * Get 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。 
+     * @return InternetMaxBandwidthOut 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
-     * @param InternetMaxBandwidthOut 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+     * Set 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
+     * @param InternetMaxBandwidthOut 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;

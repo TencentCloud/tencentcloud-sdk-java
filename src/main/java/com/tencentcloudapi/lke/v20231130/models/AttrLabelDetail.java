@@ -80,6 +80,13 @@ public class AttrLabelDetail extends AbstractModel {
     private String StatusDesc;
 
     /**
+    * 标签值总数
+    */
+    @SerializedName("LabelTotalCount")
+    @Expose
+    private String LabelTotalCount;
+
+    /**
      * Get 标签ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AttrBizId 标签ID
@@ -219,6 +226,22 @@ public class AttrLabelDetail extends AbstractModel {
         this.StatusDesc = StatusDesc;
     }
 
+    /**
+     * Get 标签值总数 
+     * @return LabelTotalCount 标签值总数
+     */
+    public String getLabelTotalCount() {
+        return this.LabelTotalCount;
+    }
+
+    /**
+     * Set 标签值总数
+     * @param LabelTotalCount 标签值总数
+     */
+    public void setLabelTotalCount(String LabelTotalCount) {
+        this.LabelTotalCount = LabelTotalCount;
+    }
+
     public AttrLabelDetail() {
     }
 
@@ -251,6 +274,9 @@ public class AttrLabelDetail extends AbstractModel {
         if (source.StatusDesc != null) {
             this.StatusDesc = new String(source.StatusDesc);
         }
+        if (source.LabelTotalCount != null) {
+            this.LabelTotalCount = new String(source.LabelTotalCount);
+        }
     }
 
 
@@ -265,6 +291,7 @@ public class AttrLabelDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "IsUpdating", this.IsUpdating);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+        this.setParamSimple(map, prefix + "LabelTotalCount", this.LabelTotalCount);
 
     }
 }

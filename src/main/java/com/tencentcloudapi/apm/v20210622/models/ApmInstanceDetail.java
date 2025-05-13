@@ -303,6 +303,20 @@ public class ApmInstanceDetail extends AbstractModel {
     private Long IsMemoryHijackingAnalysis;
 
     /**
+    * CLS索引类型(0=全文索引，1=键值索引)
+    */
+    @SerializedName("LogIndexType")
+    @Expose
+    private Long LogIndexType;
+
+    /**
+    * traceId的索引key: 当CLS索引类型为键值索引时生效
+    */
+    @SerializedName("LogTraceIdKey")
+    @Expose
+    private String LogTraceIdKey;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceId 业务系统 ID
      */
@@ -950,6 +964,38 @@ public class ApmInstanceDetail extends AbstractModel {
         this.IsMemoryHijackingAnalysis = IsMemoryHijackingAnalysis;
     }
 
+    /**
+     * Get CLS索引类型(0=全文索引，1=键值索引) 
+     * @return LogIndexType CLS索引类型(0=全文索引，1=键值索引)
+     */
+    public Long getLogIndexType() {
+        return this.LogIndexType;
+    }
+
+    /**
+     * Set CLS索引类型(0=全文索引，1=键值索引)
+     * @param LogIndexType CLS索引类型(0=全文索引，1=键值索引)
+     */
+    public void setLogIndexType(Long LogIndexType) {
+        this.LogIndexType = LogIndexType;
+    }
+
+    /**
+     * Get traceId的索引key: 当CLS索引类型为键值索引时生效 
+     * @return LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
+     */
+    public String getLogTraceIdKey() {
+        return this.LogTraceIdKey;
+    }
+
+    /**
+     * Set traceId的索引key: 当CLS索引类型为键值索引时生效
+     * @param LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
+     */
+    public void setLogTraceIdKey(String LogTraceIdKey) {
+        this.LogTraceIdKey = LogTraceIdKey;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -1081,6 +1127,12 @@ public class ApmInstanceDetail extends AbstractModel {
         if (source.IsMemoryHijackingAnalysis != null) {
             this.IsMemoryHijackingAnalysis = new Long(source.IsMemoryHijackingAnalysis);
         }
+        if (source.LogIndexType != null) {
+            this.LogIndexType = new Long(source.LogIndexType);
+        }
+        if (source.LogTraceIdKey != null) {
+            this.LogTraceIdKey = new String(source.LogTraceIdKey);
+        }
     }
 
 
@@ -1127,6 +1179,8 @@ public class ApmInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "StopReason", this.StopReason);
         this.setParamSimple(map, prefix + "IsRemoteCommandExecutionAnalysis", this.IsRemoteCommandExecutionAnalysis);
         this.setParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
+        this.setParamSimple(map, prefix + "LogIndexType", this.LogIndexType);
+        this.setParamSimple(map, prefix + "LogTraceIdKey", this.LogTraceIdKey);
 
     }
 }

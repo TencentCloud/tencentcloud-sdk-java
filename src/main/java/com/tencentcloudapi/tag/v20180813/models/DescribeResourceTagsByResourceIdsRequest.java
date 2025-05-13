@@ -45,7 +45,7 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel {
     private String [] ResourceIds;
 
     /**
-    * 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+    * 资源所在地域，示例：ap-guangzhou，不区分地域的资源该字段传空字符串，区分地域的资源必填
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -121,16 +121,16 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel {
     }
 
     /**
-     * Get 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填 
-     * @return ResourceRegion 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * Get 资源所在地域，示例：ap-guangzhou，不区分地域的资源该字段传空字符串，区分地域的资源必填 
+     * @return ResourceRegion 资源所在地域，示例：ap-guangzhou，不区分地域的资源该字段传空字符串，区分地域的资源必填
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
 
     /**
-     * Set 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
-     * @param ResourceRegion 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * Set 资源所在地域，示例：ap-guangzhou，不区分地域的资源该字段传空字符串，区分地域的资源必填
+     * @param ResourceRegion 资源所在地域，示例：ap-guangzhou，不区分地域的资源该字段传空字符串，区分地域的资源必填
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;

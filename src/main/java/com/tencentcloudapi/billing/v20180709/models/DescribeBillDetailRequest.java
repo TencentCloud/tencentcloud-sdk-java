@@ -281,7 +281,9 @@ public class DescribeBillDetailRequest extends AbstractModel {
     /**
      * Get 已废弃参数，未开放 
      * @return ProductCode 已废弃参数，未开放
+     * @deprecated
      */
+    @Deprecated
     public String getProductCode() {
         return this.ProductCode;
     }
@@ -289,7 +291,9 @@ public class DescribeBillDetailRequest extends AbstractModel {
     /**
      * Set 已废弃参数，未开放
      * @param ProductCode 已废弃参数，未开放
+     * @deprecated
      */
+    @Deprecated
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }

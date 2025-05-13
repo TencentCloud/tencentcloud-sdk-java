@@ -206,14 +206,14 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Long IsMemoryHijackingAnalysis;
 
     /**
-    * 0=全文索引，1=键值索引
+    * CLS索引类型(0=全文索引，1=键值索引)
     */
     @SerializedName("LogIndexType")
     @Expose
     private Long LogIndexType;
 
     /**
-    * traceId的索引key
+    * traceId的索引key: 当CLS索引类型为键值索引时生效
     */
     @SerializedName("LogTraceIdKey")
     @Expose
@@ -636,32 +636,32 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 0=全文索引，1=键值索引 
-     * @return LogIndexType 0=全文索引，1=键值索引
+     * Get CLS索引类型(0=全文索引，1=键值索引) 
+     * @return LogIndexType CLS索引类型(0=全文索引，1=键值索引)
      */
     public Long getLogIndexType() {
         return this.LogIndexType;
     }
 
     /**
-     * Set 0=全文索引，1=键值索引
-     * @param LogIndexType 0=全文索引，1=键值索引
+     * Set CLS索引类型(0=全文索引，1=键值索引)
+     * @param LogIndexType CLS索引类型(0=全文索引，1=键值索引)
      */
     public void setLogIndexType(Long LogIndexType) {
         this.LogIndexType = LogIndexType;
     }
 
     /**
-     * Get traceId的索引key 
-     * @return LogTraceIdKey traceId的索引key
+     * Get traceId的索引key: 当CLS索引类型为键值索引时生效 
+     * @return LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
      */
     public String getLogTraceIdKey() {
         return this.LogTraceIdKey;
     }
 
     /**
-     * Set traceId的索引key
-     * @param LogTraceIdKey traceId的索引key
+     * Set traceId的索引key: 当CLS索引类型为键值索引时生效
+     * @param LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
      */
     public void setLogTraceIdKey(String LogTraceIdKey) {
         this.LogTraceIdKey = LogTraceIdKey;

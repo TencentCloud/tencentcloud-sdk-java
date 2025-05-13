@@ -45,21 +45,25 @@ public class LifecycleHook extends AbstractModel {
     private String AutoScalingGroupId;
 
     /**
-    * 生命周期挂钩默认结果
+    * 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+- CONTINUE: 默认值，表示继续执行扩缩容活动
+- ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动
     */
     @SerializedName("DefaultResult")
     @Expose
     private String DefaultResult;
 
     /**
-    * 生命周期挂钩等待超时时间
+    * 生命周期挂钩超时等待时间（以秒为单位），范围从 30 到 7200 秒。
     */
     @SerializedName("HeartbeatTimeout")
     @Expose
     private Long HeartbeatTimeout;
 
     /**
-    * 生命周期挂钩适用场景
+    * 生命周期挂钩场景，取值范围如下:
+- INSTANCE_LAUNCHING: 扩容生命周期挂钩
+- INSTANCE_TERMINATING: 缩容生命周期挂钩
     */
     @SerializedName("LifecycleTransition")
     @Expose
@@ -73,7 +77,7 @@ public class LifecycleHook extends AbstractModel {
     private String NotificationMetadata;
 
     /**
-    * 创建时间
+    * 创建时间，采用 UTC 标准计时
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -87,7 +91,8 @@ public class LifecycleHook extends AbstractModel {
     private NotificationTarget NotificationTarget;
 
     /**
-    * 生命周期挂钩适用场景
+    * 进行生命周期挂钩的场景类型，取值范围包括 NORMAL 和 EXTENSION，默认值为 NORMAL。
+说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstances 接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
     */
     @SerializedName("LifecycleTransitionType")
     @Expose
@@ -149,48 +154,64 @@ public class LifecycleHook extends AbstractModel {
     }
 
     /**
-     * Get 生命周期挂钩默认结果 
-     * @return DefaultResult 生命周期挂钩默认结果
+     * Get 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+- CONTINUE: 默认值，表示继续执行扩缩容活动
+- ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动 
+     * @return DefaultResult 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+- CONTINUE: 默认值，表示继续执行扩缩容活动
+- ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动
      */
     public String getDefaultResult() {
         return this.DefaultResult;
     }
 
     /**
-     * Set 生命周期挂钩默认结果
-     * @param DefaultResult 生命周期挂钩默认结果
+     * Set 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+- CONTINUE: 默认值，表示继续执行扩缩容活动
+- ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动
+     * @param DefaultResult 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+- CONTINUE: 默认值，表示继续执行扩缩容活动
+- ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动
      */
     public void setDefaultResult(String DefaultResult) {
         this.DefaultResult = DefaultResult;
     }
 
     /**
-     * Get 生命周期挂钩等待超时时间 
-     * @return HeartbeatTimeout 生命周期挂钩等待超时时间
+     * Get 生命周期挂钩超时等待时间（以秒为单位），范围从 30 到 7200 秒。 
+     * @return HeartbeatTimeout 生命周期挂钩超时等待时间（以秒为单位），范围从 30 到 7200 秒。
      */
     public Long getHeartbeatTimeout() {
         return this.HeartbeatTimeout;
     }
 
     /**
-     * Set 生命周期挂钩等待超时时间
-     * @param HeartbeatTimeout 生命周期挂钩等待超时时间
+     * Set 生命周期挂钩超时等待时间（以秒为单位），范围从 30 到 7200 秒。
+     * @param HeartbeatTimeout 生命周期挂钩超时等待时间（以秒为单位），范围从 30 到 7200 秒。
      */
     public void setHeartbeatTimeout(Long HeartbeatTimeout) {
         this.HeartbeatTimeout = HeartbeatTimeout;
     }
 
     /**
-     * Get 生命周期挂钩适用场景 
-     * @return LifecycleTransition 生命周期挂钩适用场景
+     * Get 生命周期挂钩场景，取值范围如下:
+- INSTANCE_LAUNCHING: 扩容生命周期挂钩
+- INSTANCE_TERMINATING: 缩容生命周期挂钩 
+     * @return LifecycleTransition 生命周期挂钩场景，取值范围如下:
+- INSTANCE_LAUNCHING: 扩容生命周期挂钩
+- INSTANCE_TERMINATING: 缩容生命周期挂钩
      */
     public String getLifecycleTransition() {
         return this.LifecycleTransition;
     }
 
     /**
-     * Set 生命周期挂钩适用场景
-     * @param LifecycleTransition 生命周期挂钩适用场景
+     * Set 生命周期挂钩场景，取值范围如下:
+- INSTANCE_LAUNCHING: 扩容生命周期挂钩
+- INSTANCE_TERMINATING: 缩容生命周期挂钩
+     * @param LifecycleTransition 生命周期挂钩场景，取值范围如下:
+- INSTANCE_LAUNCHING: 扩容生命周期挂钩
+- INSTANCE_TERMINATING: 缩容生命周期挂钩
      */
     public void setLifecycleTransition(String LifecycleTransition) {
         this.LifecycleTransition = LifecycleTransition;
@@ -213,16 +234,16 @@ public class LifecycleHook extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get 创建时间，采用 UTC 标准计时 
+     * @return CreatedTime 创建时间，采用 UTC 标准计时
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set 创建时间，采用 UTC 标准计时
+     * @param CreatedTime 创建时间，采用 UTC 标准计时
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
@@ -245,16 +266,20 @@ public class LifecycleHook extends AbstractModel {
     }
 
     /**
-     * Get 生命周期挂钩适用场景 
-     * @return LifecycleTransitionType 生命周期挂钩适用场景
+     * Get 进行生命周期挂钩的场景类型，取值范围包括 NORMAL 和 EXTENSION，默认值为 NORMAL。
+说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstances 接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。 
+     * @return LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括 NORMAL 和 EXTENSION，默认值为 NORMAL。
+说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstances 接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
      */
     public String getLifecycleTransitionType() {
         return this.LifecycleTransitionType;
     }
 
     /**
-     * Set 生命周期挂钩适用场景
-     * @param LifecycleTransitionType 生命周期挂钩适用场景
+     * Set 进行生命周期挂钩的场景类型，取值范围包括 NORMAL 和 EXTENSION，默认值为 NORMAL。
+说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstances 接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+     * @param LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括 NORMAL 和 EXTENSION，默认值为 NORMAL。
+说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstances 接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
      */
     public void setLifecycleTransitionType(String LifecycleTransitionType) {
         this.LifecycleTransitionType = LifecycleTransitionType;

@@ -31,6 +31,27 @@ public class ProbeAction extends AbstractModel {
     private HTTPGetAction HTTPGet;
 
     /**
+    * 执行命令检查 行为
+    */
+    @SerializedName("Exec")
+    @Expose
+    private ExecAction Exec;
+
+    /**
+    * tcp socket 检查行为
+    */
+    @SerializedName("TCPSocket")
+    @Expose
+    private TCPSocketAction TCPSocket;
+
+    /**
+    * 探针类型，默认 HTTPGet，可选值：HTTPGet、Exec、TCPSocket
+    */
+    @SerializedName("ActionType")
+    @Expose
+    private String ActionType;
+
+    /**
      * Get http get 行为 
      * @return HTTPGet http get 行为
      */
@@ -46,6 +67,54 @@ public class ProbeAction extends AbstractModel {
         this.HTTPGet = HTTPGet;
     }
 
+    /**
+     * Get 执行命令检查 行为 
+     * @return Exec 执行命令检查 行为
+     */
+    public ExecAction getExec() {
+        return this.Exec;
+    }
+
+    /**
+     * Set 执行命令检查 行为
+     * @param Exec 执行命令检查 行为
+     */
+    public void setExec(ExecAction Exec) {
+        this.Exec = Exec;
+    }
+
+    /**
+     * Get tcp socket 检查行为 
+     * @return TCPSocket tcp socket 检查行为
+     */
+    public TCPSocketAction getTCPSocket() {
+        return this.TCPSocket;
+    }
+
+    /**
+     * Set tcp socket 检查行为
+     * @param TCPSocket tcp socket 检查行为
+     */
+    public void setTCPSocket(TCPSocketAction TCPSocket) {
+        this.TCPSocket = TCPSocket;
+    }
+
+    /**
+     * Get 探针类型，默认 HTTPGet，可选值：HTTPGet、Exec、TCPSocket 
+     * @return ActionType 探针类型，默认 HTTPGet，可选值：HTTPGet、Exec、TCPSocket
+     */
+    public String getActionType() {
+        return this.ActionType;
+    }
+
+    /**
+     * Set 探针类型，默认 HTTPGet，可选值：HTTPGet、Exec、TCPSocket
+     * @param ActionType 探针类型，默认 HTTPGet，可选值：HTTPGet、Exec、TCPSocket
+     */
+    public void setActionType(String ActionType) {
+        this.ActionType = ActionType;
+    }
+
     public ProbeAction() {
     }
 
@@ -57,6 +126,15 @@ public class ProbeAction extends AbstractModel {
         if (source.HTTPGet != null) {
             this.HTTPGet = new HTTPGetAction(source.HTTPGet);
         }
+        if (source.Exec != null) {
+            this.Exec = new ExecAction(source.Exec);
+        }
+        if (source.TCPSocket != null) {
+            this.TCPSocket = new TCPSocketAction(source.TCPSocket);
+        }
+        if (source.ActionType != null) {
+            this.ActionType = new String(source.ActionType);
+        }
     }
 
 
@@ -65,6 +143,9 @@ public class ProbeAction extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "HTTPGet.", this.HTTPGet);
+        this.setParamObj(map, prefix + "Exec.", this.Exec);
+        this.setParamObj(map, prefix + "TCPSocket.", this.TCPSocket);
+        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
 
     }
 }

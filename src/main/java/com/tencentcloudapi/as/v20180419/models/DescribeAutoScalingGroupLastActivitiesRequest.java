@@ -31,6 +31,13 @@ public class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
     private String [] AutoScalingGroupIds;
 
     /**
+    * 查询时排除取消类型活动。默认值为 false，表示不排除取消类型活动。
+    */
+    @SerializedName("ExcludeCancelledActivity")
+    @Expose
+    private Boolean ExcludeCancelledActivity;
+
+    /**
      * Get 伸缩组ID列表 
      * @return AutoScalingGroupIds 伸缩组ID列表
      */
@@ -44,6 +51,22 @@ public class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
      */
     public void setAutoScalingGroupIds(String [] AutoScalingGroupIds) {
         this.AutoScalingGroupIds = AutoScalingGroupIds;
+    }
+
+    /**
+     * Get 查询时排除取消类型活动。默认值为 false，表示不排除取消类型活动。 
+     * @return ExcludeCancelledActivity 查询时排除取消类型活动。默认值为 false，表示不排除取消类型活动。
+     */
+    public Boolean getExcludeCancelledActivity() {
+        return this.ExcludeCancelledActivity;
+    }
+
+    /**
+     * Set 查询时排除取消类型活动。默认值为 false，表示不排除取消类型活动。
+     * @param ExcludeCancelledActivity 查询时排除取消类型活动。默认值为 false，表示不排除取消类型活动。
+     */
+    public void setExcludeCancelledActivity(Boolean ExcludeCancelledActivity) {
+        this.ExcludeCancelledActivity = ExcludeCancelledActivity;
     }
 
     public DescribeAutoScalingGroupLastActivitiesRequest() {
@@ -60,6 +83,9 @@ public class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
                 this.AutoScalingGroupIds[i] = new String(source.AutoScalingGroupIds[i]);
             }
         }
+        if (source.ExcludeCancelledActivity != null) {
+            this.ExcludeCancelledActivity = new Boolean(source.ExcludeCancelledActivity);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AutoScalingGroupIds.", this.AutoScalingGroupIds);
+        this.setParamSimple(map, prefix + "ExcludeCancelledActivity", this.ExcludeCancelledActivity);
 
     }
 }

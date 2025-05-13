@@ -46,6 +46,20 @@ public class DescribeEnvsRequest extends AbstractModel {
     private String [] Channels;
 
     /**
+    * 分页参数，单页限制个数
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 分页参数，偏移量
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
      * Get 环境ID，如果传了这个参数则只返回该环境的相关信息 
      * @return EnvId 环境ID，如果传了这个参数则只返回该环境的相关信息
      */
@@ -97,6 +111,38 @@ public class DescribeEnvsRequest extends AbstractModel {
         this.Channels = Channels;
     }
 
+    /**
+     * Get 分页参数，单页限制个数 
+     * @return Limit 分页参数，单页限制个数
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 分页参数，单页限制个数
+     * @param Limit 分页参数，单页限制个数
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 分页参数，偏移量 
+     * @return Offset 分页参数，偏移量
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页参数，偏移量
+     * @param Offset 分页参数，偏移量
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeEnvsRequest() {
     }
 
@@ -117,6 +163,12 @@ public class DescribeEnvsRequest extends AbstractModel {
                 this.Channels[i] = new String(source.Channels[i]);
             }
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -127,6 +179,8 @@ public class DescribeEnvsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "IsVisible", this.IsVisible);
         this.setParamArraySimple(map, prefix + "Channels.", this.Channels);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

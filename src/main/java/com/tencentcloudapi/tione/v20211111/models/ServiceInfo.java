@@ -315,6 +315,13 @@ HYBRID_PAID:
     private HealthProbe HealthProbe;
 
     /**
+    * 滚动更新配置
+    */
+    @SerializedName("RollingUpdate")
+    @Expose
+    private RollingUpdate RollingUpdate;
+
+    /**
      * Get 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -1054,6 +1061,22 @@ HYBRID_PAID:
         this.HealthProbe = HealthProbe;
     }
 
+    /**
+     * Get 滚动更新配置 
+     * @return RollingUpdate 滚动更新配置
+     */
+    public RollingUpdate getRollingUpdate() {
+        return this.RollingUpdate;
+    }
+
+    /**
+     * Set 滚动更新配置
+     * @param RollingUpdate 滚动更新配置
+     */
+    public void setRollingUpdate(RollingUpdate RollingUpdate) {
+        this.RollingUpdate = RollingUpdate;
+    }
+
     public ServiceInfo() {
     }
 
@@ -1185,6 +1208,9 @@ HYBRID_PAID:
         if (source.HealthProbe != null) {
             this.HealthProbe = new HealthProbe(source.HealthProbe);
         }
+        if (source.RollingUpdate != null) {
+            this.RollingUpdate = new RollingUpdate(source.RollingUpdate);
+        }
     }
 
 
@@ -1228,6 +1254,7 @@ HYBRID_PAID:
         this.setParamArraySimple(map, prefix + "PreStopCommand.", this.PreStopCommand);
         this.setParamSimple(map, prefix + "GrpcEnable", this.GrpcEnable);
         this.setParamObj(map, prefix + "HealthProbe.", this.HealthProbe);
+        this.setParamObj(map, prefix + "RollingUpdate.", this.RollingUpdate);
 
     }
 }

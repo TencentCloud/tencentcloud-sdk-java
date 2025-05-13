@@ -41,7 +41,6 @@ public class AclConfig extends AbstractModel {
 
     /**
     * 托管定制规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Customizes")
     @Expose
@@ -88,10 +87,8 @@ public class AclConfig extends AbstractModel {
     }
 
     /**
-     * Get 托管定制规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 托管定制规则 
      * @return Customizes 托管定制规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AclUserRule [] getCustomizes() {
         return this.Customizes;
@@ -99,9 +96,7 @@ public class AclConfig extends AbstractModel {
 
     /**
      * Set 托管定制规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Customizes 托管定制规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomizes(AclUserRule [] Customizes) {
         this.Customizes = Customizes;

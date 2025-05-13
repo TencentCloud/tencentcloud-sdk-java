@@ -39,6 +39,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *创建公摊规则
+     * @param req CreateAllocationRuleRequest
+     * @return CreateAllocationRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAllocationRuleResponse CreateAllocationRule(CreateAllocationRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAllocationRule", CreateAllocationRuleResponse.class);
+    }
+
+    /**
      *批量设置分账标签
      * @param req CreateAllocationTagRequest
      * @return CreateAllocationTagResponse
@@ -50,6 +61,39 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *创建分账单元
+     * @param req CreateAllocationUnitRequest
+     * @return CreateAllocationUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAllocationUnitResponse CreateAllocationUnit(CreateAllocationUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAllocationUnit", CreateAllocationUnitResponse.class);
+    }
+
+    /**
+     *创建归集规则
+     * @param req CreateGatherRuleRequest
+     * @return CreateGatherRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGatherRuleResponse CreateGatherRule(CreateGatherRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGatherRule", CreateGatherRuleResponse.class);
+    }
+
+    /**
+     *公摊规则删除接口
+     * @param req DeleteAllocationRuleRequest
+     * @return DeleteAllocationRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAllocationRuleResponse DeleteAllocationRule(DeleteAllocationRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAllocationRule", DeleteAllocationRuleResponse.class);
+    }
+
+    /**
      *批量取消设置分账标签
      * @param req DeleteAllocationTagRequest
      * @return DeleteAllocationTagResponse
@@ -58,6 +102,28 @@ public class BillingClient extends AbstractClient{
     public DeleteAllocationTagResponse DeleteAllocationTag(DeleteAllocationTagRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAllocationTag", DeleteAllocationTagResponse.class);
+    }
+
+    /**
+     *删除分账单元
+     * @param req DeleteAllocationUnitRequest
+     * @return DeleteAllocationUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAllocationUnitResponse DeleteAllocationUnit(DeleteAllocationUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAllocationUnit", DeleteAllocationUnitResponse.class);
+    }
+
+    /**
+     *删除归集规则
+     * @param req DeleteGatherRuleRequest
+     * @return DeleteGatherRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGatherRuleResponse DeleteGatherRule(DeleteGatherRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGatherRule", DeleteGatherRuleResponse.class);
     }
 
     /**
@@ -127,6 +193,28 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *查询公摊规则详情
+     * @param req DescribeAllocationRuleDetailRequest
+     * @return DescribeAllocationRuleDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationRuleDetailResponse DescribeAllocationRuleDetail(DescribeAllocationRuleDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationRuleDetail", DescribeAllocationRuleDetailResponse.class);
+    }
+
+    /**
+     *查询所有公摊规则概览
+     * @param req DescribeAllocationRuleSummaryRequest
+     * @return DescribeAllocationRuleSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationRuleSummaryResponse DescribeAllocationRuleSummary(DescribeAllocationRuleSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationRuleSummary", DescribeAllocationRuleSummaryResponse.class);
+    }
+
+    /**
      *查询分账账单按产品汇总
      * @param req DescribeAllocationSummaryByBusinessRequest
      * @return DescribeAllocationSummaryByBusinessResponse
@@ -160,6 +248,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *查询分账目录树
+     * @param req DescribeAllocationTreeRequest
+     * @return DescribeAllocationTreeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationTreeResponse DescribeAllocationTree(DescribeAllocationTreeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationTree", DescribeAllocationTreeResponse.class);
+    }
+
+    /**
      *查询分账账单费用趋势
      * @param req DescribeAllocationTrendByMonthRequest
      * @return DescribeAllocationTrendByMonthResponse
@@ -168,6 +267,17 @@ public class BillingClient extends AbstractClient{
     public DescribeAllocationTrendByMonthResponse DescribeAllocationTrendByMonth(DescribeAllocationTrendByMonthRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAllocationTrendByMonth", DescribeAllocationTrendByMonthResponse.class);
+    }
+
+    /**
+     *查询分账单元详情
+     * @param req DescribeAllocationUnitDetailRequest
+     * @return DescribeAllocationUnitDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationUnitDetailResponse DescribeAllocationUnitDetail(DescribeAllocationUnitDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationUnitDetail", DescribeAllocationUnitDetailResponse.class);
     }
 
     /**
@@ -453,6 +563,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *查询归集规则详情
+     * @param req DescribeGatherRuleDetailRequest
+     * @return DescribeGatherRuleDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatherRuleDetailResponse DescribeGatherRuleDetail(DescribeGatherRuleDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGatherRuleDetail", DescribeGatherRuleDetailResponse.class);
+    }
+
+    /**
      *查询节省计划详情
      * @param req DescribeSavingPlanResourceInfoRequest
      * @return DescribeSavingPlanResourceInfoResponse
@@ -494,6 +615,39 @@ public class BillingClient extends AbstractClient{
     public DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(DescribeVoucherUsageDetailsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVoucherUsageDetails", DescribeVoucherUsageDetailsResponse.class);
+    }
+
+    /**
+     *编辑公摊规则
+     * @param req ModifyAllocationRuleRequest
+     * @return ModifyAllocationRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAllocationRuleResponse ModifyAllocationRule(ModifyAllocationRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAllocationRule", ModifyAllocationRuleResponse.class);
+    }
+
+    /**
+     *修改分账单元信息
+     * @param req ModifyAllocationUnitRequest
+     * @return ModifyAllocationUnitResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAllocationUnitResponse ModifyAllocationUnit(ModifyAllocationUnitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAllocationUnit", ModifyAllocationUnitResponse.class);
+    }
+
+    /**
+     *编辑归集规则
+     * @param req ModifyGatherRuleRequest
+     * @return ModifyGatherRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGatherRuleResponse ModifyGatherRule(ModifyGatherRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGatherRule", ModifyGatherRuleResponse.class);
     }
 
     /**

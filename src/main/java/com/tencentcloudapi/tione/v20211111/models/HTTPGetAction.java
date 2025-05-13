@@ -31,6 +31,13 @@ public class HTTPGetAction extends AbstractModel {
     private String Path;
 
     /**
+    * 调用端口
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
+
+    /**
      * Get http 路径 
      * @return Path http 路径
      */
@@ -46,6 +53,22 @@ public class HTTPGetAction extends AbstractModel {
         this.Path = Path;
     }
 
+    /**
+     * Get 调用端口 
+     * @return Port 调用端口
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set 调用端口
+     * @param Port 调用端口
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
+    }
+
     public HTTPGetAction() {
     }
 
@@ -57,6 +80,9 @@ public class HTTPGetAction extends AbstractModel {
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class HTTPGetAction extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }

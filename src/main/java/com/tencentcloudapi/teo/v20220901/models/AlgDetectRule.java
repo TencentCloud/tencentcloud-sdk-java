@@ -53,7 +53,6 @@ public class AlgDetectRule extends AbstractModel {
 
     /**
     * Cookie校验和会话行为分析。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlgDetectSession")
     @Expose
@@ -138,10 +137,8 @@ public class AlgDetectRule extends AbstractModel {
     }
 
     /**
-     * Get Cookie校验和会话行为分析。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Cookie校验和会话行为分析。 
      * @return AlgDetectSession Cookie校验和会话行为分析。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlgDetectSession getAlgDetectSession() {
         return this.AlgDetectSession;
@@ -149,9 +146,7 @@ public class AlgDetectRule extends AbstractModel {
 
     /**
      * Set Cookie校验和会话行为分析。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlgDetectSession Cookie校验和会话行为分析。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlgDetectSession(AlgDetectSession AlgDetectSession) {
         this.AlgDetectSession = AlgDetectSession;

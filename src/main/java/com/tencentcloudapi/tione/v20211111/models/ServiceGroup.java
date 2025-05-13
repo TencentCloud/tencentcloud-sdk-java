@@ -207,6 +207,13 @@ UPDATING 更新中
     private AuthToken [] AuthTokens;
 
     /**
+    * 用于监控的创建来源字段
+    */
+    @SerializedName("MonitorSource")
+    @Expose
+    private String MonitorSource;
+
+    /**
      * Get 服务组id 
      * @return ServiceGroupId 服务组id
      */
@@ -674,6 +681,22 @@ UPDATING 更新中
         this.AuthTokens = AuthTokens;
     }
 
+    /**
+     * Get 用于监控的创建来源字段 
+     * @return MonitorSource 用于监控的创建来源字段
+     */
+    public String getMonitorSource() {
+        return this.MonitorSource;
+    }
+
+    /**
+     * Set 用于监控的创建来源字段
+     * @param MonitorSource 用于监控的创建来源字段
+     */
+    public void setMonitorSource(String MonitorSource) {
+        this.MonitorSource = MonitorSource;
+    }
+
     public ServiceGroup() {
     }
 
@@ -757,6 +780,9 @@ UPDATING 更新中
                 this.AuthTokens[i] = new AuthToken(source.AuthTokens[i]);
             }
         }
+        if (source.MonitorSource != null) {
+            this.MonitorSource = new String(source.MonitorSource);
+        }
     }
 
 
@@ -786,6 +812,7 @@ UPDATING 更新中
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "AuthorizationEnable", this.AuthorizationEnable);
         this.setParamArrayObj(map, prefix + "AuthTokens.", this.AuthTokens);
+        this.setParamSimple(map, prefix + "MonitorSource", this.MonitorSource);
 
     }
 }

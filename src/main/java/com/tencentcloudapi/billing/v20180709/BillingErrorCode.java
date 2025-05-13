@@ -30,6 +30,9 @@ public enum BillingErrorCode {
      /* 套餐订单需一起购买。 */
      FAILEDOPERATION_NEEDPAYTOGETHER("FailedOperation.NeedPayTogether"),
      
+     /* 数量超过最大限制。 */
+     FAILEDOPERATION_NUMLIMITERROR("FailedOperation.NumLimitError"),
+     
      /* 支付失败，请联系腾讯云工作人员处理。 */
      FAILEDOPERATION_PAYPRICEERROR("FailedOperation.PayPriceError"),
      
@@ -50,6 +53,9 @@ public enum BillingErrorCode {
      
      /* 内部错误。 */
      INTERNALERROR("InternalError"),
+     
+     /* 数据库操作失败。 */
+     INTERNALERROR_DBOPERATERROR("InternalError.DbOperatError"),
      
      /* 网关错误。 */
      INTERNALERROR_GATEWAYERROR("InternalError.GatewayError"),
@@ -74,6 +80,9 @@ public enum BillingErrorCode {
      
      /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),
+     
+     /* 操作被拒绝。 */
+     OPERATIONDENIED("OperationDenied"),
      
      /* 账号没有cam授权。 */
      UNAUTHORIZEDOPERATION_CAMNOAUTH("UnauthorizedOperation.CamNoAuth"),

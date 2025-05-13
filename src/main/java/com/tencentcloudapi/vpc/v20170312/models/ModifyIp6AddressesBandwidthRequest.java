@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyIp6AddressesBandwidthRequest extends AbstractModel {
 
     /**
-    * 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+    * 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyIp6AddressesBandwidthRequest extends AbstractModel {
     private String [] Ip6AddressIds;
 
     /**
-     * Get 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。 
-     * @return InternetMaxBandwidthOut 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+     * Get 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。 
+     * @return InternetMaxBandwidthOut 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
-     * @param InternetMaxBandwidthOut 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+     * Set 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
+     * @param InternetMaxBandwidthOut 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;

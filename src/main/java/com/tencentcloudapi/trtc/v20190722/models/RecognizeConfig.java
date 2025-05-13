@@ -117,6 +117,13 @@ public class RecognizeConfig extends AbstractModel {
     private String TranslationLanguage;
 
     /**
+    * 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持300个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+    */
+    @SerializedName("HotWordList")
+    @Expose
+    private String HotWordList;
+
+    /**
      * Get 
 语音转文字支持识别的语言，默认是"zh" 中文
 
@@ -448,6 +455,22 @@ public class RecognizeConfig extends AbstractModel {
         this.TranslationLanguage = TranslationLanguage;
     }
 
+    /**
+     * Get 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持300个热词，如：“腾讯云|10,语音识别|5,ASR|11”； 
+     * @return HotWordList 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持300个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+     */
+    public String getHotWordList() {
+        return this.HotWordList;
+    }
+
+    /**
+     * Set 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持300个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+     * @param HotWordList 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持300个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+     */
+    public void setHotWordList(String HotWordList) {
+        this.HotWordList = HotWordList;
+    }
+
     public RecognizeConfig() {
     }
 
@@ -471,6 +494,9 @@ public class RecognizeConfig extends AbstractModel {
         if (source.TranslationLanguage != null) {
             this.TranslationLanguage = new String(source.TranslationLanguage);
         }
+        if (source.HotWordList != null) {
+            this.HotWordList = new String(source.HotWordList);
+        }
     }
 
 
@@ -482,6 +508,7 @@ public class RecognizeConfig extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AlternativeLanguage.", this.AlternativeLanguage);
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "TranslationLanguage", this.TranslationLanguage);
+        this.setParamSimple(map, prefix + "HotWordList", this.HotWordList);
 
     }
 }

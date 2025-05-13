@@ -59,7 +59,7 @@ public class CreateClusterRequest extends AbstractModel {
     private Long ComputeNodeCount;
 
     /**
-    * 调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
+    * 调度器类型。默认取值：SLURM。<li>SLURM：SLURM调度器。</li>
     */
     @SerializedName("SchedulerType")
     @Expose
@@ -69,7 +69,6 @@ public class CreateClusterRequest extends AbstractModel {
     * 创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
 各调度器支持的集群版本：
 <li>SLURM：21.08.8、23.11.7</li>
-<li>SGE：     8.1.9</li>
     */
     @SerializedName("SchedulerVersion")
     @Expose
@@ -266,16 +265,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li> 
-     * @return SchedulerType 调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
+     * Get 调度器类型。默认取值：SLURM。<li>SLURM：SLURM调度器。</li> 
+     * @return SchedulerType 调度器类型。默认取值：SLURM。<li>SLURM：SLURM调度器。</li>
      */
     public String getSchedulerType() {
         return this.SchedulerType;
     }
 
     /**
-     * Set 调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
-     * @param SchedulerType 调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
+     * Set 调度器类型。默认取值：SLURM。<li>SLURM：SLURM调度器。</li>
+     * @param SchedulerType 调度器类型。默认取值：SLURM。<li>SLURM：SLURM调度器。</li>
      */
     public void setSchedulerType(String SchedulerType) {
         this.SchedulerType = SchedulerType;
@@ -284,12 +283,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     /**
      * Get 创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
 各调度器支持的集群版本：
-<li>SLURM：21.08.8、23.11.7</li>
-<li>SGE：     8.1.9</li> 
+<li>SLURM：21.08.8、23.11.7</li> 
      * @return SchedulerVersion 创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
 各调度器支持的集群版本：
 <li>SLURM：21.08.8、23.11.7</li>
-<li>SGE：     8.1.9</li>
      */
     public String getSchedulerVersion() {
         return this.SchedulerVersion;
@@ -299,11 +296,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * Set 创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
 各调度器支持的集群版本：
 <li>SLURM：21.08.8、23.11.7</li>
-<li>SGE：     8.1.9</li>
      * @param SchedulerVersion 创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
 各调度器支持的集群版本：
 <li>SLURM：21.08.8、23.11.7</li>
-<li>SGE：     8.1.9</li>
      */
     public void setSchedulerVersion(String SchedulerVersion) {
         this.SchedulerVersion = SchedulerVersion;

@@ -34,7 +34,6 @@ public class SlowRateConfig extends AbstractModel {
 
     /**
     * 统计的间隔，单位是秒，即在首段包传输结束后，将数据传输轴按照本参数切分，每个分片独立计算慢速攻击。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Interval")
     @Expose
@@ -42,7 +41,6 @@ public class SlowRateConfig extends AbstractModel {
 
     /**
     * 统计时应用的速率阈值，单位是bps，即如果本分片中的传输速率没达到本参数的值，则判定为慢速攻击，应用慢速攻击的处置方式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Threshold")
     @Expose
@@ -73,10 +71,8 @@ public class SlowRateConfig extends AbstractModel {
     }
 
     /**
-     * Get 统计的间隔，单位是秒，即在首段包传输结束后，将数据传输轴按照本参数切分，每个分片独立计算慢速攻击。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计的间隔，单位是秒，即在首段包传输结束后，将数据传输轴按照本参数切分，每个分片独立计算慢速攻击。 
      * @return Interval 统计的间隔，单位是秒，即在首段包传输结束后，将数据传输轴按照本参数切分，每个分片独立计算慢速攻击。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInterval() {
         return this.Interval;
@@ -84,19 +80,15 @@ public class SlowRateConfig extends AbstractModel {
 
     /**
      * Set 统计的间隔，单位是秒，即在首段包传输结束后，将数据传输轴按照本参数切分，每个分片独立计算慢速攻击。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Interval 统计的间隔，单位是秒，即在首段包传输结束后，将数据传输轴按照本参数切分，每个分片独立计算慢速攻击。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 统计时应用的速率阈值，单位是bps，即如果本分片中的传输速率没达到本参数的值，则判定为慢速攻击，应用慢速攻击的处置方式。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计时应用的速率阈值，单位是bps，即如果本分片中的传输速率没达到本参数的值，则判定为慢速攻击，应用慢速攻击的处置方式。 
      * @return Threshold 统计时应用的速率阈值，单位是bps，即如果本分片中的传输速率没达到本参数的值，则判定为慢速攻击，应用慢速攻击的处置方式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getThreshold() {
         return this.Threshold;
@@ -104,9 +96,7 @@ public class SlowRateConfig extends AbstractModel {
 
     /**
      * Set 统计时应用的速率阈值，单位是bps，即如果本分片中的传输速率没达到本参数的值，则判定为慢速攻击，应用慢速攻击的处置方式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Threshold 统计时应用的速率阈值，单位是bps，即如果本分片中的传输速率没达到本参数的值，则判定为慢速攻击，应用慢速攻击的处置方式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThreshold(Long Threshold) {
         this.Threshold = Threshold;

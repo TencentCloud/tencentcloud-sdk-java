@@ -34,7 +34,6 @@ public class DropPageConfig extends AbstractModel {
 
     /**
     * Waf(托管规则)模块的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WafDropPageDetail")
     @Expose
@@ -42,7 +41,6 @@ public class DropPageConfig extends AbstractModel {
 
     /**
     * 自定义页面的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AclDropPageDetail")
     @Expose
@@ -73,10 +71,8 @@ public class DropPageConfig extends AbstractModel {
     }
 
     /**
-     * Get Waf(托管规则)模块的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Waf(托管规则)模块的拦截页面配置。如果为null，默认使用历史配置。 
      * @return WafDropPageDetail Waf(托管规则)模块的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DropPageDetail getWafDropPageDetail() {
         return this.WafDropPageDetail;
@@ -84,19 +80,15 @@ public class DropPageConfig extends AbstractModel {
 
     /**
      * Set Waf(托管规则)模块的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WafDropPageDetail Waf(托管规则)模块的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWafDropPageDetail(DropPageDetail WafDropPageDetail) {
         this.WafDropPageDetail = WafDropPageDetail;
     }
 
     /**
-     * Get 自定义页面的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义页面的拦截页面配置。如果为null，默认使用历史配置。 
      * @return AclDropPageDetail 自定义页面的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DropPageDetail getAclDropPageDetail() {
         return this.AclDropPageDetail;
@@ -104,9 +96,7 @@ public class DropPageConfig extends AbstractModel {
 
     /**
      * Set 自定义页面的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AclDropPageDetail 自定义页面的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAclDropPageDetail(DropPageDetail AclDropPageDetail) {
         this.AclDropPageDetail = AclDropPageDetail;

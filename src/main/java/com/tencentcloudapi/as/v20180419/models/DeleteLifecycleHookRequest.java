@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteLifecycleHookRequest extends AbstractModel {
 
     /**
-    * 生命周期挂钩ID
+    * 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
     */
     @SerializedName("LifecycleHookId")
     @Expose
     private String LifecycleHookId;
 
     /**
-     * Get 生命周期挂钩ID 
-     * @return LifecycleHookId 生命周期挂钩ID
+     * Get 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。 
+     * @return LifecycleHookId 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
      */
     public String getLifecycleHookId() {
         return this.LifecycleHookId;
     }
 
     /**
-     * Set 生命周期挂钩ID
-     * @param LifecycleHookId 生命周期挂钩ID
+     * Set 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
+     * @param LifecycleHookId 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
      */
     public void setLifecycleHookId(String LifecycleHookId) {
         this.LifecycleHookId = LifecycleHookId;

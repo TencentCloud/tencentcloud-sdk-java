@@ -66,6 +66,13 @@ public class ListAttributeLabelRequest extends AbstractModel {
     private String Query;
 
     /**
+    * 每个属性同步拉取的标签值数量
+    */
+    @SerializedName("LabelSize")
+    @Expose
+    private Long LabelSize;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -161,6 +168,22 @@ public class ListAttributeLabelRequest extends AbstractModel {
         this.Query = Query;
     }
 
+    /**
+     * Get 每个属性同步拉取的标签值数量 
+     * @return LabelSize 每个属性同步拉取的标签值数量
+     */
+    public Long getLabelSize() {
+        return this.LabelSize;
+    }
+
+    /**
+     * Set 每个属性同步拉取的标签值数量
+     * @param LabelSize 每个属性同步拉取的标签值数量
+     */
+    public void setLabelSize(Long LabelSize) {
+        this.LabelSize = LabelSize;
+    }
+
     public ListAttributeLabelRequest() {
     }
 
@@ -187,6 +210,9 @@ public class ListAttributeLabelRequest extends AbstractModel {
         if (source.Query != null) {
             this.Query = new String(source.Query);
         }
+        if (source.LabelSize != null) {
+            this.LabelSize = new Long(source.LabelSize);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ListAttributeLabelRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LoginUin", this.LoginUin);
         this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
         this.setParamSimple(map, prefix + "Query", this.Query);
+        this.setParamSimple(map, prefix + "LabelSize", this.LabelSize);
 
     }
 }

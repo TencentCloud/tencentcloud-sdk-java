@@ -61,7 +61,6 @@ public class SkipCondition extends AbstractModel {
 
     /**
     * 匹配Key的值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchFrom")
     @Expose
@@ -78,7 +77,6 @@ public class SkipCondition extends AbstractModel {
 
     /**
     * 匹配Value的值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchContent")
     @Expose
@@ -193,10 +191,8 @@ public class SkipCondition extends AbstractModel {
     }
 
     /**
-     * Get 匹配Key的值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配Key的值。 
      * @return MatchFrom 匹配Key的值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMatchFrom() {
         return this.MatchFrom;
@@ -204,9 +200,7 @@ public class SkipCondition extends AbstractModel {
 
     /**
      * Set 匹配Key的值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchFrom 匹配Key的值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchFrom(String [] MatchFrom) {
         this.MatchFrom = MatchFrom;
@@ -237,10 +231,8 @@ public class SkipCondition extends AbstractModel {
     }
 
     /**
-     * Get 匹配Value的值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配Value的值。 
      * @return MatchContent 匹配Value的值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMatchContent() {
         return this.MatchContent;
@@ -248,9 +240,7 @@ public class SkipCondition extends AbstractModel {
 
     /**
      * Set 匹配Value的值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchContent 匹配Value的值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchContent(String [] MatchContent) {
         this.MatchContent = MatchContent;

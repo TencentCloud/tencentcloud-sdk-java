@@ -192,6 +192,20 @@ public class DescribeDocResponse extends AbstractModel {
     private String CateBizId;
 
     /**
+    * 文档的用户自定义ID
+    */
+    @SerializedName("CustomerKnowledgeId")
+    @Expose
+    private String CustomerKnowledgeId;
+
+    /**
+    * 文档的属性标记，0: 不做用户外部权限校验
+    */
+    @SerializedName("AttributeFlags")
+    @Expose
+    private Long [] AttributeFlags;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -583,6 +597,38 @@ public class DescribeDocResponse extends AbstractModel {
     }
 
     /**
+     * Get 文档的用户自定义ID 
+     * @return CustomerKnowledgeId 文档的用户自定义ID
+     */
+    public String getCustomerKnowledgeId() {
+        return this.CustomerKnowledgeId;
+    }
+
+    /**
+     * Set 文档的用户自定义ID
+     * @param CustomerKnowledgeId 文档的用户自定义ID
+     */
+    public void setCustomerKnowledgeId(String CustomerKnowledgeId) {
+        this.CustomerKnowledgeId = CustomerKnowledgeId;
+    }
+
+    /**
+     * Get 文档的属性标记，0: 不做用户外部权限校验 
+     * @return AttributeFlags 文档的属性标记，0: 不做用户外部权限校验
+     */
+    public Long [] getAttributeFlags() {
+        return this.AttributeFlags;
+    }
+
+    /**
+     * Set 文档的属性标记，0: 不做用户外部权限校验
+     * @param AttributeFlags 文档的属性标记，0: 不做用户外部权限校验
+     */
+    public void setAttributeFlags(Long [] AttributeFlags) {
+        this.AttributeFlags = AttributeFlags;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -681,6 +727,15 @@ public class DescribeDocResponse extends AbstractModel {
         if (source.CateBizId != null) {
             this.CateBizId = new String(source.CateBizId);
         }
+        if (source.CustomerKnowledgeId != null) {
+            this.CustomerKnowledgeId = new String(source.CustomerKnowledgeId);
+        }
+        if (source.AttributeFlags != null) {
+            this.AttributeFlags = new Long[source.AttributeFlags.length];
+            for (int i = 0; i < source.AttributeFlags.length; i++) {
+                this.AttributeFlags[i] = new Long(source.AttributeFlags[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -715,6 +770,8 @@ public class DescribeDocResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AttrRange", this.AttrRange);
         this.setParamArrayObj(map, prefix + "AttrLabels.", this.AttrLabels);
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
+        this.setParamSimple(map, prefix + "CustomerKnowledgeId", this.CustomerKnowledgeId);
+        this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

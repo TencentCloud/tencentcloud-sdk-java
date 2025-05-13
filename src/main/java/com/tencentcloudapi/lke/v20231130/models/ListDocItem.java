@@ -279,6 +279,20 @@ public class ListDocItem extends AbstractModel {
     private String CateBizId;
 
     /**
+    * 文档的用户自定义ID
+    */
+    @SerializedName("CustomerKnowledgeId")
+    @Expose
+    private String CustomerKnowledgeId;
+
+    /**
+    * 文档的属性标记，0: 不做用户外部权限校验
+    */
+    @SerializedName("AttributeFlags")
+    @Expose
+    private Long [] AttributeFlags;
+
+    /**
      * Get 文档ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocBizId 文档ID
@@ -914,6 +928,38 @@ public class ListDocItem extends AbstractModel {
         this.CateBizId = CateBizId;
     }
 
+    /**
+     * Get 文档的用户自定义ID 
+     * @return CustomerKnowledgeId 文档的用户自定义ID
+     */
+    public String getCustomerKnowledgeId() {
+        return this.CustomerKnowledgeId;
+    }
+
+    /**
+     * Set 文档的用户自定义ID
+     * @param CustomerKnowledgeId 文档的用户自定义ID
+     */
+    public void setCustomerKnowledgeId(String CustomerKnowledgeId) {
+        this.CustomerKnowledgeId = CustomerKnowledgeId;
+    }
+
+    /**
+     * Get 文档的属性标记，0: 不做用户外部权限校验 
+     * @return AttributeFlags 文档的属性标记，0: 不做用户外部权限校验
+     */
+    public Long [] getAttributeFlags() {
+        return this.AttributeFlags;
+    }
+
+    /**
+     * Set 文档的属性标记，0: 不做用户外部权限校验
+     * @param AttributeFlags 文档的属性标记，0: 不做用户外部权限校验
+     */
+    public void setAttributeFlags(Long [] AttributeFlags) {
+        this.AttributeFlags = AttributeFlags;
+    }
+
     public ListDocItem() {
     }
 
@@ -1024,6 +1070,15 @@ public class ListDocItem extends AbstractModel {
         if (source.CateBizId != null) {
             this.CateBizId = new String(source.CateBizId);
         }
+        if (source.CustomerKnowledgeId != null) {
+            this.CustomerKnowledgeId = new String(source.CustomerKnowledgeId);
+        }
+        if (source.AttributeFlags != null) {
+            this.AttributeFlags = new Long[source.AttributeFlags.length];
+            for (int i = 0; i < source.AttributeFlags.length; i++) {
+                this.AttributeFlags[i] = new Long(source.AttributeFlags[i]);
+            }
+        }
     }
 
 
@@ -1063,6 +1118,8 @@ public class ListDocItem extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Processing.", this.Processing);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
+        this.setParamSimple(map, prefix + "CustomerKnowledgeId", this.CustomerKnowledgeId);
+        this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
 
     }
 }
