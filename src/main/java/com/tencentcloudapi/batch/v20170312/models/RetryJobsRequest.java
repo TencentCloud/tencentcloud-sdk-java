@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RetryJobsRequest extends AbstractModel {
 
     /**
-    * 作业ID列表。
+    * 作业ID列表。最大重试作业数100；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
     */
     @SerializedName("JobIds")
     @Expose
     private String [] JobIds;
 
     /**
-     * Get 作业ID列表。 
-     * @return JobIds 作业ID列表。
+     * Get 作业ID列表。最大重试作业数100；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。 
+     * @return JobIds 作业ID列表。最大重试作业数100；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
      */
     public String [] getJobIds() {
         return this.JobIds;
     }
 
     /**
-     * Set 作业ID列表。
-     * @param JobIds 作业ID列表。
+     * Set 作业ID列表。最大重试作业数100；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
+     * @param JobIds 作业ID列表。最大重试作业数100；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
      */
     public void setJobIds(String [] JobIds) {
         this.JobIds = JobIds;

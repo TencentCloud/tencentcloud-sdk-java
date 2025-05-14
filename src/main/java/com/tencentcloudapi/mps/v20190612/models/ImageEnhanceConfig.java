@@ -32,6 +32,14 @@ public class ImageEnhanceConfig extends AbstractModel {
     private SuperResolutionConfig SuperResolution;
 
     /**
+    * 综合增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageQualityEnhance")
+    @Expose
+    private ImageQualityEnhanceConfig ImageQualityEnhance;
+
+    /**
     * 色彩增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -73,6 +81,26 @@ public class ImageEnhanceConfig extends AbstractModel {
      */
     public void setSuperResolution(SuperResolutionConfig SuperResolution) {
         this.SuperResolution = SuperResolution;
+    }
+
+    /**
+     * Get 综合增强配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageQualityEnhance 综合增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageQualityEnhanceConfig getImageQualityEnhance() {
+        return this.ImageQualityEnhance;
+    }
+
+    /**
+     * Set 综合增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageQualityEnhance 综合增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageQualityEnhance(ImageQualityEnhanceConfig ImageQualityEnhance) {
+        this.ImageQualityEnhance = ImageQualityEnhance;
     }
 
     /**
@@ -146,6 +174,9 @@ public class ImageEnhanceConfig extends AbstractModel {
         if (source.SuperResolution != null) {
             this.SuperResolution = new SuperResolutionConfig(source.SuperResolution);
         }
+        if (source.ImageQualityEnhance != null) {
+            this.ImageQualityEnhance = new ImageQualityEnhanceConfig(source.ImageQualityEnhance);
+        }
         if (source.ColorEnhance != null) {
             this.ColorEnhance = new ColorEnhanceConfig(source.ColorEnhance);
         }
@@ -163,6 +194,7 @@ public class ImageEnhanceConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "SuperResolution.", this.SuperResolution);
+        this.setParamObj(map, prefix + "ImageQualityEnhance.", this.ImageQualityEnhance);
         this.setParamObj(map, prefix + "ColorEnhance.", this.ColorEnhance);
         this.setParamObj(map, prefix + "SharpEnhance.", this.SharpEnhance);
         this.setParamObj(map, prefix + "FaceEnhance.", this.FaceEnhance);

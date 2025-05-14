@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AttachInstancesRequest extends AbstractModel {
 
     /**
-    * 计算环境ID
+    * 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * 加入计算环境实例列表
+    * 加入计算环境实例列表，每次请求的实例的上限为100。
     */
     @SerializedName("Instances")
     @Expose
     private Instance [] Instances;
 
     /**
-     * Get 计算环境ID 
-     * @return EnvId 计算环境ID
+     * Get 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。 
+     * @return EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 计算环境ID
-     * @param EnvId 计算环境ID
+     * Set 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * @param EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 加入计算环境实例列表 
-     * @return Instances 加入计算环境实例列表
+     * Get 加入计算环境实例列表，每次请求的实例的上限为100。 
+     * @return Instances 加入计算环境实例列表，每次请求的实例的上限为100。
      */
     public Instance [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set 加入计算环境实例列表
-     * @param Instances 加入计算环境实例列表
+     * Set 加入计算环境实例列表，每次请求的实例的上限为100。
+     * @param Instances 加入计算环境实例列表，每次请求的实例的上限为100。
      */
     public void setInstances(Instance [] Instances) {
         this.Instances = Instances;

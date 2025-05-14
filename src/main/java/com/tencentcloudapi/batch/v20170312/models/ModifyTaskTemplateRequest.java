@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyTaskTemplateRequest extends AbstractModel {
 
     /**
-    * 任务模板ID
+    * 任务模板ID; 详见[任务模版](https://cloud.tencent.com/document/product/599/15902)。
     */
     @SerializedName("TaskTemplateId")
     @Expose
     private String TaskTemplateId;
 
     /**
-    * 任务模板名称
+    * 任务模板名称；字节长度限制60。
     */
     @SerializedName("TaskTemplateName")
     @Expose
     private String TaskTemplateName;
 
     /**
-    * 任务模板描述
+    * 任务模板描述；字节长度限制200。
     */
     @SerializedName("TaskTemplateDescription")
     @Expose
@@ -52,48 +52,48 @@ public class ModifyTaskTemplateRequest extends AbstractModel {
     private Task TaskTemplateInfo;
 
     /**
-     * Get 任务模板ID 
-     * @return TaskTemplateId 任务模板ID
+     * Get 任务模板ID; 详见[任务模版](https://cloud.tencent.com/document/product/599/15902)。 
+     * @return TaskTemplateId 任务模板ID; 详见[任务模版](https://cloud.tencent.com/document/product/599/15902)。
      */
     public String getTaskTemplateId() {
         return this.TaskTemplateId;
     }
 
     /**
-     * Set 任务模板ID
-     * @param TaskTemplateId 任务模板ID
+     * Set 任务模板ID; 详见[任务模版](https://cloud.tencent.com/document/product/599/15902)。
+     * @param TaskTemplateId 任务模板ID; 详见[任务模版](https://cloud.tencent.com/document/product/599/15902)。
      */
     public void setTaskTemplateId(String TaskTemplateId) {
         this.TaskTemplateId = TaskTemplateId;
     }
 
     /**
-     * Get 任务模板名称 
-     * @return TaskTemplateName 任务模板名称
+     * Get 任务模板名称；字节长度限制60。 
+     * @return TaskTemplateName 任务模板名称；字节长度限制60。
      */
     public String getTaskTemplateName() {
         return this.TaskTemplateName;
     }
 
     /**
-     * Set 任务模板名称
-     * @param TaskTemplateName 任务模板名称
+     * Set 任务模板名称；字节长度限制60。
+     * @param TaskTemplateName 任务模板名称；字节长度限制60。
      */
     public void setTaskTemplateName(String TaskTemplateName) {
         this.TaskTemplateName = TaskTemplateName;
     }
 
     /**
-     * Get 任务模板描述 
-     * @return TaskTemplateDescription 任务模板描述
+     * Get 任务模板描述；字节长度限制200。 
+     * @return TaskTemplateDescription 任务模板描述；字节长度限制200。
      */
     public String getTaskTemplateDescription() {
         return this.TaskTemplateDescription;
     }
 
     /**
-     * Set 任务模板描述
-     * @param TaskTemplateDescription 任务模板描述
+     * Set 任务模板描述；字节长度限制200。
+     * @param TaskTemplateDescription 任务模板描述；字节长度限制200。
      */
     public void setTaskTemplateDescription(String TaskTemplateDescription) {
         this.TaskTemplateDescription = TaskTemplateDescription;

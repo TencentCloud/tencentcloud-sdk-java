@@ -173,7 +173,7 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 【废弃】不再需要指定，内核版本号与主实例保持一致
+    * 不再需要指定，内核版本号与主实例保持一致
     */
     @SerializedName("DBVersion")
     @Expose
@@ -555,17 +555,21 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 【废弃】不再需要指定，内核版本号与主实例保持一致 
-     * @return DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
+     * Get 不再需要指定，内核版本号与主实例保持一致 
+     * @return DBVersion 不再需要指定，内核版本号与主实例保持一致
+     * @deprecated
      */
+    @Deprecated
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set 【废弃】不再需要指定，内核版本号与主实例保持一致
-     * @param DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
+     * Set 不再需要指定，内核版本号与主实例保持一致
+     * @param DBVersion 不再需要指定，内核版本号与主实例保持一致
+     * @deprecated
      */
+    @Deprecated
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
     }

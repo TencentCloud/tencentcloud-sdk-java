@@ -40,6 +40,14 @@ public class ImageTaskInput extends AbstractModel {
     private ImageEnhanceConfig EnhanceConfig;
 
     /**
+    * 图片擦除配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EraseConfig")
+    @Expose
+    private ImageEraseConfig EraseConfig;
+
+    /**
      * Get 图片编码配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EncodeConfig 图片编码配置。
@@ -79,6 +87,26 @@ public class ImageTaskInput extends AbstractModel {
         this.EnhanceConfig = EnhanceConfig;
     }
 
+    /**
+     * Get 图片擦除配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EraseConfig 图片擦除配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageEraseConfig getEraseConfig() {
+        return this.EraseConfig;
+    }
+
+    /**
+     * Set 图片擦除配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EraseConfig 图片擦除配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEraseConfig(ImageEraseConfig EraseConfig) {
+        this.EraseConfig = EraseConfig;
+    }
+
     public ImageTaskInput() {
     }
 
@@ -93,6 +121,9 @@ public class ImageTaskInput extends AbstractModel {
         if (source.EnhanceConfig != null) {
             this.EnhanceConfig = new ImageEnhanceConfig(source.EnhanceConfig);
         }
+        if (source.EraseConfig != null) {
+            this.EraseConfig = new ImageEraseConfig(source.EraseConfig);
+        }
     }
 
 
@@ -102,6 +133,7 @@ public class ImageTaskInput extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+        this.setParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
 
     }
 }

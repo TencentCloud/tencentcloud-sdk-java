@@ -31,21 +31,21 @@ public class Job extends AbstractModel {
     private Task [] Tasks;
 
     /**
-    * 作业名称
+    * 作业名称; 字符串长度限制60.
     */
     @SerializedName("JobName")
     @Expose
     private String JobName;
 
     /**
-    * 作业描述
+    * 作业描述；字符串长度限制200.
     */
     @SerializedName("JobDescription")
     @Expose
     private String JobDescription;
 
     /**
-    * 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+    * 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级；范围0～100，数值越大，优先级越高。
     */
     @SerializedName("Priority")
     @Expose
@@ -113,48 +113,48 @@ TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>
     }
 
     /**
-     * Get 作业名称 
-     * @return JobName 作业名称
+     * Get 作业名称; 字符串长度限制60. 
+     * @return JobName 作业名称; 字符串长度限制60.
      */
     public String getJobName() {
         return this.JobName;
     }
 
     /**
-     * Set 作业名称
-     * @param JobName 作业名称
+     * Set 作业名称; 字符串长度限制60.
+     * @param JobName 作业名称; 字符串长度限制60.
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
     }
 
     /**
-     * Get 作业描述 
-     * @return JobDescription 作业描述
+     * Get 作业描述；字符串长度限制200. 
+     * @return JobDescription 作业描述；字符串长度限制200.
      */
     public String getJobDescription() {
         return this.JobDescription;
     }
 
     /**
-     * Set 作业描述
-     * @param JobDescription 作业描述
+     * Set 作业描述；字符串长度限制200.
+     * @param JobDescription 作业描述；字符串长度限制200.
      */
     public void setJobDescription(String JobDescription) {
         this.JobDescription = JobDescription;
     }
 
     /**
-     * Get 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级 
-     * @return Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     * Get 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级；范围0～100，数值越大，优先级越高。 
+     * @return Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级；范围0～100，数值越大，优先级越高。
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
-     * @param Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     * Set 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级；范围0～100，数值越大，优先级越高。
+     * @param Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级；范围0～100，数值越大，优先级越高。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;

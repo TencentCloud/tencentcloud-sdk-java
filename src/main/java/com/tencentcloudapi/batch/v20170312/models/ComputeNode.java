@@ -38,7 +38,7 @@ public class ComputeNode extends AbstractModel {
     private String ComputeNodeInstanceId;
 
     /**
-    * 计算节点状态
+    * 计算节点状态。取值范围：<br><li>PENDING：表示创建中</li><li>SUBMITTED：表示已提交创建</li><li>CREATING：表示创建中</li><li>CREATED：表示创建完成</li><li>CREATION_FAILED：表示创建失败。</li><li>RUNNING：表示运行中。</li><li>ABNORMAL：表示节点异常。</li><li>DELETING：表示删除中。</li>
     */
     @SerializedName("ComputeNodeState")
     @Expose
@@ -141,16 +141,16 @@ USER_ATTACHED：用户添加到计算环境中的实例资源。
     }
 
     /**
-     * Get 计算节点状态 
-     * @return ComputeNodeState 计算节点状态
+     * Get 计算节点状态。取值范围：<br><li>PENDING：表示创建中</li><li>SUBMITTED：表示已提交创建</li><li>CREATING：表示创建中</li><li>CREATED：表示创建完成</li><li>CREATION_FAILED：表示创建失败。</li><li>RUNNING：表示运行中。</li><li>ABNORMAL：表示节点异常。</li><li>DELETING：表示删除中。</li> 
+     * @return ComputeNodeState 计算节点状态。取值范围：<br><li>PENDING：表示创建中</li><li>SUBMITTED：表示已提交创建</li><li>CREATING：表示创建中</li><li>CREATED：表示创建完成</li><li>CREATION_FAILED：表示创建失败。</li><li>RUNNING：表示运行中。</li><li>ABNORMAL：表示节点异常。</li><li>DELETING：表示删除中。</li>
      */
     public String getComputeNodeState() {
         return this.ComputeNodeState;
     }
 
     /**
-     * Set 计算节点状态
-     * @param ComputeNodeState 计算节点状态
+     * Set 计算节点状态。取值范围：<br><li>PENDING：表示创建中</li><li>SUBMITTED：表示已提交创建</li><li>CREATING：表示创建中</li><li>CREATED：表示创建完成</li><li>CREATION_FAILED：表示创建失败。</li><li>RUNNING：表示运行中。</li><li>ABNORMAL：表示节点异常。</li><li>DELETING：表示删除中。</li>
+     * @param ComputeNodeState 计算节点状态。取值范围：<br><li>PENDING：表示创建中</li><li>SUBMITTED：表示已提交创建</li><li>CREATING：表示创建中</li><li>CREATED：表示创建完成</li><li>CREATION_FAILED：表示创建失败。</li><li>RUNNING：表示运行中。</li><li>ABNORMAL：表示节点异常。</li><li>DELETING：表示删除中。</li>
      */
     public void setComputeNodeState(String ComputeNodeState) {
         this.ComputeNodeState = ComputeNodeState;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTaskTemplateRequest extends AbstractModel {
 
     /**
-    * 任务模板名称
+    * 任务模板名称，最大长度限制60个字符。
     */
     @SerializedName("TaskTemplateName")
     @Expose
@@ -38,7 +38,7 @@ public class CreateTaskTemplateRequest extends AbstractModel {
     private Task TaskTemplateInfo;
 
     /**
-    * 任务模板描述
+    * 任务模板描述，最大长度限制200个字符。
     */
     @SerializedName("TaskTemplateDescription")
     @Expose
@@ -52,16 +52,16 @@ public class CreateTaskTemplateRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 任务模板名称 
-     * @return TaskTemplateName 任务模板名称
+     * Get 任务模板名称，最大长度限制60个字符。 
+     * @return TaskTemplateName 任务模板名称，最大长度限制60个字符。
      */
     public String getTaskTemplateName() {
         return this.TaskTemplateName;
     }
 
     /**
-     * Set 任务模板名称
-     * @param TaskTemplateName 任务模板名称
+     * Set 任务模板名称，最大长度限制60个字符。
+     * @param TaskTemplateName 任务模板名称，最大长度限制60个字符。
      */
     public void setTaskTemplateName(String TaskTemplateName) {
         this.TaskTemplateName = TaskTemplateName;
@@ -84,16 +84,16 @@ public class CreateTaskTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务模板描述 
-     * @return TaskTemplateDescription 任务模板描述
+     * Get 任务模板描述，最大长度限制200个字符。 
+     * @return TaskTemplateDescription 任务模板描述，最大长度限制200个字符。
      */
     public String getTaskTemplateDescription() {
         return this.TaskTemplateDescription;
     }
 
     /**
-     * Set 任务模板描述
-     * @param TaskTemplateDescription 任务模板描述
+     * Set 任务模板描述，最大长度限制200个字符。
+     * @param TaskTemplateDescription 任务模板描述，最大长度限制200个字符。
      */
     public void setTaskTemplateDescription(String TaskTemplateDescription) {
         this.TaskTemplateDescription = TaskTemplateDescription;

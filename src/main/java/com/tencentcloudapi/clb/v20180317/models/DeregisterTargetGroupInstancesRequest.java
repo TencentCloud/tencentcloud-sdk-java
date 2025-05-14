@@ -32,7 +32,7 @@ public class DeregisterTargetGroupInstancesRequest extends AbstractModel {
 
     /**
     * 待解绑的服务器信息，支持批量解除绑定，单次批量解除数量最多为20个。
-
+在这个接口 Port 参数为必填项。
     */
     @SerializedName("TargetGroupInstances")
     @Expose
@@ -56,9 +56,9 @@ public class DeregisterTargetGroupInstancesRequest extends AbstractModel {
 
     /**
      * Get 待解绑的服务器信息，支持批量解除绑定，单次批量解除数量最多为20个。
- 
+在这个接口 Port 参数为必填项。 
      * @return TargetGroupInstances 待解绑的服务器信息，支持批量解除绑定，单次批量解除数量最多为20个。
-
+在这个接口 Port 参数为必填项。
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
@@ -66,9 +66,9 @@ public class DeregisterTargetGroupInstancesRequest extends AbstractModel {
 
     /**
      * Set 待解绑的服务器信息，支持批量解除绑定，单次批量解除数量最多为20个。
-
+在这个接口 Port 参数为必填项。
      * @param TargetGroupInstances 待解绑的服务器信息，支持批量解除绑定，单次批量解除数量最多为20个。
-
+在这个接口 Port 参数为必填项。
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteTargetGroupsRequest extends AbstractModel {
 
     /**
-    * 目标组的ID数组。
+    * 目标组的ID数组，单次最多支持删除20个。
     */
     @SerializedName("TargetGroupIds")
     @Expose
     private String [] TargetGroupIds;
 
     /**
-     * Get 目标组的ID数组。 
-     * @return TargetGroupIds 目标组的ID数组。
+     * Get 目标组的ID数组，单次最多支持删除20个。 
+     * @return TargetGroupIds 目标组的ID数组，单次最多支持删除20个。
      */
     public String [] getTargetGroupIds() {
         return this.TargetGroupIds;
     }
 
     /**
-     * Set 目标组的ID数组。
-     * @param TargetGroupIds 目标组的ID数组。
+     * Set 目标组的ID数组，单次最多支持删除20个。
+     * @param TargetGroupIds 目标组的ID数组，单次最多支持删除20个。
      */
     public void setTargetGroupIds(String [] TargetGroupIds) {
         this.TargetGroupIds = TargetGroupIds;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageEncodeConfig extends AbstractModel {
 
     /**
-    * 图片格式，取值范围：JPG、BMP、GIF、PNG、WebP，缺省为原图格式。
+    * 图片格式，取值范围：JPEG、PNG、BMP、WebP，缺省为原图格式。不支持动画。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Format")
@@ -40,9 +40,9 @@ public class ImageEncodeConfig extends AbstractModel {
     private Long Quality;
 
     /**
-     * Get 图片格式，取值范围：JPG、BMP、GIF、PNG、WebP，缺省为原图格式。
+     * Get 图片格式，取值范围：JPEG、PNG、BMP、WebP，缺省为原图格式。不支持动画。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Format 图片格式，取值范围：JPG、BMP、GIF、PNG、WebP，缺省为原图格式。
+     * @return Format 图片格式，取值范围：JPEG、PNG、BMP、WebP，缺省为原图格式。不支持动画。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormat() {
@@ -50,9 +50,9 @@ public class ImageEncodeConfig extends AbstractModel {
     }
 
     /**
-     * Set 图片格式，取值范围：JPG、BMP、GIF、PNG、WebP，缺省为原图格式。
+     * Set 图片格式，取值范围：JPEG、PNG、BMP、WebP，缺省为原图格式。不支持动画。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Format 图片格式，取值范围：JPG、BMP、GIF、PNG、WebP，缺省为原图格式。
+     * @param Format 图片格式，取值范围：JPEG、PNG、BMP、WebP，缺省为原图格式。不支持动画。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormat(String Format) {

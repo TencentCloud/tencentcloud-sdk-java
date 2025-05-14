@@ -31,7 +31,14 @@ public class TaskInstanceView extends AbstractModel {
     private Long TaskInstanceIndex;
 
     /**
-    * 任务实例状态
+    * 任务实例状态: 
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
     */
     @SerializedName("TaskInstanceState")
     @Expose
@@ -59,28 +66,28 @@ public class TaskInstanceView extends AbstractModel {
     private String ComputeNodeInstanceId;
 
     /**
-    * 创建时间
+    * 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 启动时间
+    * 启动时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
     */
     @SerializedName("LaunchTime")
     @Expose
     private String LaunchTime;
 
     /**
-    * 开始运行时间
+    * 开始运行时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
     */
     @SerializedName("RunningTime")
     @Expose
     private String RunningTime;
 
     /**
-    * 结束时间
+    * 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
     */
     @SerializedName("EndTime")
     @Expose
@@ -117,16 +124,44 @@ public class TaskInstanceView extends AbstractModel {
     }
 
     /**
-     * Get 任务实例状态 
-     * @return TaskInstanceState 任务实例状态
+     * Get 任务实例状态: 
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。 
+     * @return TaskInstanceState 任务实例状态: 
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
      */
     public String getTaskInstanceState() {
         return this.TaskInstanceState;
     }
 
     /**
-     * Set 任务实例状态
-     * @param TaskInstanceState 任务实例状态
+     * Set 任务实例状态: 
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
+     * @param TaskInstanceState 任务实例状态: 
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
      */
     public void setTaskInstanceState(String TaskInstanceState) {
         this.TaskInstanceState = TaskInstanceState;
@@ -181,64 +216,64 @@ public class TaskInstanceView extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。 
+     * @return CreateTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param CreateTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 启动时间 
-     * @return LaunchTime 启动时间
+     * Get 启动时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。 
+     * @return LaunchTime 启动时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public String getLaunchTime() {
         return this.LaunchTime;
     }
 
     /**
-     * Set 启动时间
-     * @param LaunchTime 启动时间
+     * Set 启动时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param LaunchTime 启动时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public void setLaunchTime(String LaunchTime) {
         this.LaunchTime = LaunchTime;
     }
 
     /**
-     * Get 开始运行时间 
-     * @return RunningTime 开始运行时间
+     * Get 开始运行时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。 
+     * @return RunningTime 开始运行时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public String getRunningTime() {
         return this.RunningTime;
     }
 
     /**
-     * Set 开始运行时间
-     * @param RunningTime 开始运行时间
+     * Set 开始运行时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param RunningTime 开始运行时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public void setRunningTime(String RunningTime) {
         this.RunningTime = RunningTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。 
+     * @return EndTime 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param EndTime 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

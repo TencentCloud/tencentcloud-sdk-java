@@ -38,7 +38,7 @@ public class DescribeIdleLoadBalancersRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 负载均衡所在地域。
+    * 负载均衡所在地域，可以通过 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询获取。
     */
     @SerializedName("LoadBalancerRegion")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeIdleLoadBalancersRequest extends AbstractModel {
     }
 
     /**
-     * Get 负载均衡所在地域。 
-     * @return LoadBalancerRegion 负载均衡所在地域。
+     * Get 负载均衡所在地域，可以通过 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询获取。 
+     * @return LoadBalancerRegion 负载均衡所在地域，可以通过 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询获取。
      */
     public String getLoadBalancerRegion() {
         return this.LoadBalancerRegion;
     }
 
     /**
-     * Set 负载均衡所在地域。
-     * @param LoadBalancerRegion 负载均衡所在地域。
+     * Set 负载均衡所在地域，可以通过 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询获取。
+     * @param LoadBalancerRegion 负载均衡所在地域，可以通过 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询获取。
      */
     public void setLoadBalancerRegion(String LoadBalancerRegion) {
         this.LoadBalancerRegion = LoadBalancerRegion;

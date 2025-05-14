@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyDiskExtraPerformanceRequest extends AbstractModel {
 
     /**
-    * 额外购买的云硬盘性能值，单位MB/s。
+    * 额外购买的云硬盘性能值，单位MiB/s。
     */
     @SerializedName("ThroughputPerformance")
     @Expose
     private Long ThroughputPerformance;
 
     /**
-    * 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+    * 需要购买额外性能值的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-     * Get 额外购买的云硬盘性能值，单位MB/s。 
-     * @return ThroughputPerformance 额外购买的云硬盘性能值，单位MB/s。
+     * Get 额外购买的云硬盘性能值，单位MiB/s。 
+     * @return ThroughputPerformance 额外购买的云硬盘性能值，单位MiB/s。
      */
     public Long getThroughputPerformance() {
         return this.ThroughputPerformance;
     }
 
     /**
-     * Set 额外购买的云硬盘性能值，单位MB/s。
-     * @param ThroughputPerformance 额外购买的云硬盘性能值，单位MB/s。
+     * Set 额外购买的云硬盘性能值，单位MiB/s。
+     * @param ThroughputPerformance 额外购买的云硬盘性能值，单位MiB/s。
      */
     public void setThroughputPerformance(Long ThroughputPerformance) {
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
     /**
-     * Get 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。 
-     * @return DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Get 需要购买额外性能值的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。 
+     * @return DiskId 需要购买额外性能值的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
-     * @param DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Set 需要购买额外性能值的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。
+     * @param DiskId 需要购买额外性能值的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;

@@ -38,14 +38,14 @@ public class ApplySnapshotRequest extends AbstractModel {
     private String DiskId;
 
     /**
-    * 回滚前是否执行自动关机
+    * 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
     */
     @SerializedName("AutoStopInstance")
     @Expose
     private Boolean AutoStopInstance;
 
     /**
-    * 回滚完成后是否自动开机
+    * 回滚完成后是否自动开机，仅支持回滚快照至已挂载的云硬盘时传入。该参数传入时，需要同时传入AutoStopInstance参数。
     */
     @SerializedName("AutoStartInstance")
     @Expose
@@ -84,32 +84,32 @@ public class ApplySnapshotRequest extends AbstractModel {
     }
 
     /**
-     * Get 回滚前是否执行自动关机 
-     * @return AutoStopInstance 回滚前是否执行自动关机
+     * Get 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。 
+     * @return AutoStopInstance 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
      */
     public Boolean getAutoStopInstance() {
         return this.AutoStopInstance;
     }
 
     /**
-     * Set 回滚前是否执行自动关机
-     * @param AutoStopInstance 回滚前是否执行自动关机
+     * Set 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
+     * @param AutoStopInstance 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
      */
     public void setAutoStopInstance(Boolean AutoStopInstance) {
         this.AutoStopInstance = AutoStopInstance;
     }
 
     /**
-     * Get 回滚完成后是否自动开机 
-     * @return AutoStartInstance 回滚完成后是否自动开机
+     * Get 回滚完成后是否自动开机，仅支持回滚快照至已挂载的云硬盘时传入。该参数传入时，需要同时传入AutoStopInstance参数。 
+     * @return AutoStartInstance 回滚完成后是否自动开机，仅支持回滚快照至已挂载的云硬盘时传入。该参数传入时，需要同时传入AutoStopInstance参数。
      */
     public Boolean getAutoStartInstance() {
         return this.AutoStartInstance;
     }
 
     /**
-     * Set 回滚完成后是否自动开机
-     * @param AutoStartInstance 回滚完成后是否自动开机
+     * Set 回滚完成后是否自动开机，仅支持回滚快照至已挂载的云硬盘时传入。该参数传入时，需要同时传入AutoStopInstance参数。
+     * @param AutoStartInstance 回滚完成后是否自动开机，仅支持回滚快照至已挂载的云硬盘时传入。该参数传入时，需要同时传入AutoStopInstance参数。
      */
     public void setAutoStartInstance(Boolean AutoStartInstance) {
         this.AutoStartInstance = AutoStartInstance;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskLogsRequest extends AbstractModel {
 
     /**
-    * 作业ID
+    * 作业ID。JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
     */
     @SerializedName("JobId")
     @Expose
@@ -38,37 +38,37 @@ public class DescribeTaskLogsRequest extends AbstractModel {
     private String TaskName;
 
     /**
-    * 任务实例集合
+    * 任务实例集合；与Offset不能同时指定。
     */
     @SerializedName("TaskInstanceIndexes")
     @Expose
     private Long [] TaskInstanceIndexes;
 
     /**
-    * 起始任务实例
+    * 起始任务实例。与TaskInstanceIndexes参数不能同时指定。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 最大任务实例数
+    * 最大任务实例数, 最大值为10.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 作业ID 
-     * @return JobId 作业ID
+     * Get 作业ID。JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。 
+     * @return JobId 作业ID。JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业ID
-     * @param JobId 作业ID
+     * Set 作业ID。JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
+     * @param JobId 作业ID。JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
@@ -91,48 +91,48 @@ public class DescribeTaskLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务实例集合 
-     * @return TaskInstanceIndexes 任务实例集合
+     * Get 任务实例集合；与Offset不能同时指定。 
+     * @return TaskInstanceIndexes 任务实例集合；与Offset不能同时指定。
      */
     public Long [] getTaskInstanceIndexes() {
         return this.TaskInstanceIndexes;
     }
 
     /**
-     * Set 任务实例集合
-     * @param TaskInstanceIndexes 任务实例集合
+     * Set 任务实例集合；与Offset不能同时指定。
+     * @param TaskInstanceIndexes 任务实例集合；与Offset不能同时指定。
      */
     public void setTaskInstanceIndexes(Long [] TaskInstanceIndexes) {
         this.TaskInstanceIndexes = TaskInstanceIndexes;
     }
 
     /**
-     * Get 起始任务实例 
-     * @return Offset 起始任务实例
+     * Get 起始任务实例。与TaskInstanceIndexes参数不能同时指定。 
+     * @return Offset 起始任务实例。与TaskInstanceIndexes参数不能同时指定。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 起始任务实例
-     * @param Offset 起始任务实例
+     * Set 起始任务实例。与TaskInstanceIndexes参数不能同时指定。
+     * @param Offset 起始任务实例。与TaskInstanceIndexes参数不能同时指定。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 最大任务实例数 
-     * @return Limit 最大任务实例数
+     * Get 最大任务实例数, 最大值为10. 
+     * @return Limit 最大任务实例数, 最大值为10.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 最大任务实例数
-     * @param Limit 最大任务实例数
+     * Set 最大任务实例数, 最大值为10.
+     * @param Limit 最大任务实例数, 最大值为10.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

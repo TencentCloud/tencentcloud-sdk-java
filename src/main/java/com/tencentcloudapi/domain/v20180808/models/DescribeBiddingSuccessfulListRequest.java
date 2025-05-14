@@ -33,7 +33,7 @@ public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
 
     /**
     * 每页数量
-默认：20 取值范围【1，200】
+默认：20 取值范围[1，200]
     */
     @SerializedName("PageSize")
     @Expose
@@ -63,7 +63,10 @@ SuccessfulTime 预约结束时间
     private String SortField;
 
     /**
-    * 排序规则：asc升序，desc降序
+    * 排序规则：
+asc：升序
+desc：降序
+默认：asc
     */
     @SerializedName("SortOrder")
     @Expose
@@ -91,9 +94,9 @@ SuccessfulTime 预约结束时间
 
     /**
      * Get 每页数量
-默认：20 取值范围【1，200】 
+默认：20 取值范围[1，200] 
      * @return PageSize 每页数量
-默认：20 取值范围【1，200】
+默认：20 取值范围[1，200]
      */
     public Long getPageSize() {
         return this.PageSize;
@@ -101,9 +104,9 @@ SuccessfulTime 预约结束时间
 
     /**
      * Set 每页数量
-默认：20 取值范围【1，200】
+默认：20 取值范围[1，200]
      * @param PageSize 每页数量
-默认：20 取值范围【1，200】
+默认：20 取值范围[1，200]
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -166,16 +169,28 @@ SuccessfulTime 预约结束时间
     }
 
     /**
-     * Get 排序规则：asc升序，desc降序 
-     * @return SortOrder 排序规则：asc升序，desc降序
+     * Get 排序规则：
+asc：升序
+desc：降序
+默认：asc 
+     * @return SortOrder 排序规则：
+asc：升序
+desc：降序
+默认：asc
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set 排序规则：asc升序，desc降序
-     * @param SortOrder 排序规则：asc升序，desc降序
+     * Set 排序规则：
+asc：升序
+desc：降序
+默认：asc
+     * @param SortOrder 排序规则：
+asc：升序
+desc：降序
+默认：asc
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;

@@ -101,6 +101,13 @@ public class UpdateCodeTemplateRequest extends AbstractModel {
     private Boolean ScriptChange;
 
     /**
+    * 转Base64的代码内容
+    */
+    @SerializedName("Content")
+    @Expose
+    private String Content;
+
+    /**
      * Get 项目Id 
      * @return ProjectId 项目Id
      */
@@ -276,6 +283,22 @@ public class UpdateCodeTemplateRequest extends AbstractModel {
         this.ScriptChange = ScriptChange;
     }
 
+    /**
+     * Get 转Base64的代码内容 
+     * @return Content 转Base64的代码内容
+     */
+    public String getContent() {
+        return this.Content;
+    }
+
+    /**
+     * Set 转Base64的代码内容
+     * @param Content 转Base64的代码内容
+     */
+    public void setContent(String Content) {
+        this.Content = Content;
+    }
+
     public UpdateCodeTemplateRequest() {
     }
 
@@ -317,6 +340,9 @@ public class UpdateCodeTemplateRequest extends AbstractModel {
         if (source.ScriptChange != null) {
             this.ScriptChange = new Boolean(source.ScriptChange);
         }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class UpdateCodeTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CodeTemplateDesc", this.CodeTemplateDesc);
         this.setParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
         this.setParamSimple(map, prefix + "ScriptChange", this.ScriptChange);
+        this.setParamSimple(map, prefix + "Content", this.Content);
 
     }
 }

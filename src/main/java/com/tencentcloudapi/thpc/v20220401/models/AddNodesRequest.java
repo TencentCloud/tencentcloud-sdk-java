@@ -131,7 +131,7 @@ public class AddNodesRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-    * 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li><li>SGE默认队列为：all.q。</li>
+    * 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li>
     */
     @SerializedName("QueueName")
     @Expose
@@ -411,16 +411,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li><li>SGE默认队列为：all.q。</li> 
-     * @return QueueName 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li><li>SGE默认队列为：all.q。</li>
+     * Get 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li> 
+     * @return QueueName 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li>
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li><li>SGE默认队列为：all.q。</li>
-     * @param QueueName 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li><li>SGE默认队列为：all.q。</li>
+     * Set 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li>
+     * @param QueueName 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li>
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;

@@ -342,6 +342,13 @@ public class InstanceInfo extends AbstractModel {
     private MajorEventsProPkg MajorEventsProPkg;
 
     /**
+    * 1是基础2025版本；0不是
+    */
+    @SerializedName("BasicFlag")
+    @Expose
+    private Long BasicFlag;
+
+    /**
      * Get 实例唯一ID 
      * @return InstanceId 实例唯一ID
      */
@@ -1085,6 +1092,22 @@ public class InstanceInfo extends AbstractModel {
         this.MajorEventsProPkg = MajorEventsProPkg;
     }
 
+    /**
+     * Get 1是基础2025版本；0不是 
+     * @return BasicFlag 1是基础2025版本；0不是
+     */
+    public Long getBasicFlag() {
+        return this.BasicFlag;
+    }
+
+    /**
+     * Set 1是基础2025版本；0不是
+     * @param BasicFlag 1是基础2025版本；0不是
+     */
+    public void setBasicFlag(Long BasicFlag) {
+        this.BasicFlag = BasicFlag;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1225,6 +1248,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.MajorEventsProPkg != null) {
             this.MajorEventsProPkg = new MajorEventsProPkg(source.MajorEventsProPkg);
         }
+        if (source.BasicFlag != null) {
+            this.BasicFlag = new Long(source.BasicFlag);
+        }
     }
 
 
@@ -1276,6 +1302,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Last3MaxQPS", this.Last3MaxQPS);
         this.setParamSimple(map, prefix + "Last3MaxBandwidth", this.Last3MaxBandwidth);
         this.setParamObj(map, prefix + "MajorEventsProPkg.", this.MajorEventsProPkg);
+        this.setParamSimple(map, prefix + "BasicFlag", this.BasicFlag);
 
     }
 }

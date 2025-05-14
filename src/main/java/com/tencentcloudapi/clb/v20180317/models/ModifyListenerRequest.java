@@ -100,6 +100,7 @@ public class ModifyListenerRequest extends AbstractModel {
     /**
     * 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
 True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
+不传则表示不修改。
     */
     @SerializedName("DeregisterTargetRst")
     @Expose
@@ -146,6 +147,7 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
 
     /**
     * 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
+不传则表示不修改。
     */
     @SerializedName("SnatEnable")
     @Expose
@@ -336,9 +338,11 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
 
     /**
      * Get 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
-True表示发送 RST 给客户端，False表示不发送 RST 给客户端。 
+True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
+不传则表示不修改。 
      * @return DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
 True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
+不传则表示不修改。
      */
     public Boolean getDeregisterTargetRst() {
         return this.DeregisterTargetRst;
@@ -347,8 +351,10 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
     /**
      * Set 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
 True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
+不传则表示不修改。
      * @param DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
 True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
+不传则表示不修改。
      */
     public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
         this.DeregisterTargetRst = DeregisterTargetRst;
@@ -451,8 +457,10 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
     }
 
     /**
-     * Get 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。 
+     * Get 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
+不传则表示不修改。 
      * @return SnatEnable 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
+不传则表示不修改。
      */
     public Boolean getSnatEnable() {
         return this.SnatEnable;
@@ -460,7 +468,9 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
 
     /**
      * Set 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
+不传则表示不修改。
      * @param SnatEnable 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
+不传则表示不修改。
      */
     public void setSnatEnable(Boolean SnatEnable) {
         this.SnatEnable = SnatEnable;

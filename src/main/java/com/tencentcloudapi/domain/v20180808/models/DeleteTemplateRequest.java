@@ -25,7 +25,7 @@ public class DeleteTemplateRequest extends AbstractModel {
 
     /**
     * 模板ID
-可通过DescribeTemplates接口获取
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
     */
     @SerializedName("TemplateId")
     @Expose
@@ -33,9 +33,9 @@ public class DeleteTemplateRequest extends AbstractModel {
 
     /**
      * Get 模板ID
-可通过DescribeTemplates接口获取 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取 
      * @return TemplateId 模板ID
-可通过DescribeTemplates接口获取
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
      */
     public String getTemplateId() {
         return this.TemplateId;
@@ -43,9 +43,9 @@ public class DeleteTemplateRequest extends AbstractModel {
 
     /**
      * Set 模板ID
-可通过DescribeTemplates接口获取
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
      * @param TemplateId 模板ID
-可通过DescribeTemplates接口获取
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

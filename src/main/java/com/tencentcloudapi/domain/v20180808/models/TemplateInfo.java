@@ -43,14 +43,16 @@ NotVerified: 实名信息待修改
     private String AuditStatus;
 
     /**
-    * 创建时间
+    * 创建时间 
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("CreatedOn")
     @Expose
     private String CreatedOn;
 
     /**
-    * 更新时间
+    * 更新时间 
+格式:YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("UpdatedOn")
     @Expose
@@ -166,15 +168,19 @@ NotVerified: 实名信息待修改
 
     /**
      * Get 创建时间 
-     * @return CreatedOn 创建时间
+格式:YYYY-MM-DD HH:mm:ss 
+     * @return CreatedOn 创建时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedOn 创建时间
+     * Set 创建时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param CreatedOn 创建时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
@@ -182,15 +188,19 @@ NotVerified: 实名信息待修改
 
     /**
      * Get 更新时间 
-     * @return UpdatedOn 更新时间
+格式:YYYY-MM-DD HH:mm:ss 
+     * @return UpdatedOn 更新时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public String getUpdatedOn() {
         return this.UpdatedOn;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdatedOn 更新时间
+     * Set 更新时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param UpdatedOn 更新时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public void setUpdatedOn(String UpdatedOn) {
         this.UpdatedOn = UpdatedOn;

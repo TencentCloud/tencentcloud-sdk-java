@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteTaskTemplatesRequest extends AbstractModel {
 
     /**
-    * 用于删除任务模板信息
+    * 用于删除任务模板信息，最大数量上限100，环境模版ID通过调用接口 [DescribeTaskTemplates](https://cloud.tencent.com/document/api/599/15902)获取。
     */
     @SerializedName("TaskTemplateIds")
     @Expose
     private String [] TaskTemplateIds;
 
     /**
-     * Get 用于删除任务模板信息 
-     * @return TaskTemplateIds 用于删除任务模板信息
+     * Get 用于删除任务模板信息，最大数量上限100，环境模版ID通过调用接口 [DescribeTaskTemplates](https://cloud.tencent.com/document/api/599/15902)获取。 
+     * @return TaskTemplateIds 用于删除任务模板信息，最大数量上限100，环境模版ID通过调用接口 [DescribeTaskTemplates](https://cloud.tencent.com/document/api/599/15902)获取。
      */
     public String [] getTaskTemplateIds() {
         return this.TaskTemplateIds;
     }
 
     /**
-     * Set 用于删除任务模板信息
-     * @param TaskTemplateIds 用于删除任务模板信息
+     * Set 用于删除任务模板信息，最大数量上限100，环境模版ID通过调用接口 [DescribeTaskTemplates](https://cloud.tencent.com/document/api/599/15902)获取。
+     * @param TaskTemplateIds 用于删除任务模板信息，最大数量上限100，环境模版ID通过调用接口 [DescribeTaskTemplates](https://cloud.tencent.com/document/api/599/15902)获取。
      */
     public void setTaskTemplateIds(String [] TaskTemplateIds) {
         this.TaskTemplateIds = TaskTemplateIds;

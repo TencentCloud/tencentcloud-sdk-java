@@ -24,15 +24,16 @@ import java.util.HashMap;
 public class BatchModifyDomainInfoRequest extends AbstractModel {
 
     /**
-    * 批量修改的域名。
+    * 批量修改的域名数组
+个数最大不超过4000
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * 模板ID
-可从DescribeTemplates接口获取
+    * 模板ID 
+可从[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
     */
     @SerializedName("TemplateId")
     @Expose
@@ -48,36 +49,40 @@ false：关闭60天内禁止转移注册商锁定
     private Boolean LockTransfer;
 
     /**
-     * Get 批量修改的域名。 
-     * @return Domains 批量修改的域名。
+     * Get 批量修改的域名数组
+个数最大不超过4000 
+     * @return Domains 批量修改的域名数组
+个数最大不超过4000
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 批量修改的域名。
-     * @param Domains 批量修改的域名。
+     * Set 批量修改的域名数组
+个数最大不超过4000
+     * @param Domains 批量修改的域名数组
+个数最大不超过4000
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get 模板ID
-可从DescribeTemplates接口获取 
-     * @return TemplateId 模板ID
-可从DescribeTemplates接口获取
+     * Get 模板ID 
+可从[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取 
+     * @return TemplateId 模板ID 
+可从[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板ID
-可从DescribeTemplates接口获取
-     * @param TemplateId 模板ID
-可从DescribeTemplates接口获取
+     * Set 模板ID 
+可从[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
+     * @param TemplateId 模板ID 
+可从[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

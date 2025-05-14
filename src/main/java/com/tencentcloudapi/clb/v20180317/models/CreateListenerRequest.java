@@ -157,7 +157,8 @@ public class CreateListenerRequest extends AbstractModel {
     private Long IdleConnectTimeout;
 
     /**
-    * 是否开启SNAT，True（开启）、False（关闭）
+    * 是否开启SNAT，True（开启）、False（关闭）。
+默认为关闭。
     */
     @SerializedName("SnatEnable")
     @Expose
@@ -171,14 +172,16 @@ public class CreateListenerRequest extends AbstractModel {
     private Long [] FullEndPorts;
 
     /**
-    * 内网http监听器开启h2c开关，True（开启）、False（关闭）
+    * 内网http监听器开启h2c开关，True（开启）、False（关闭）。
+默认为关闭。
     */
     @SerializedName("H2cSwitch")
     @Expose
     private Boolean H2cSwitch;
 
     /**
-    * TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
+    * TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）.
+默认为关闭。
     */
     @SerializedName("SslCloseSwitch")
     @Expose
@@ -508,16 +511,20 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启SNAT，True（开启）、False（关闭） 
-     * @return SnatEnable 是否开启SNAT，True（开启）、False（关闭）
+     * Get 是否开启SNAT，True（开启）、False（关闭）。
+默认为关闭。 
+     * @return SnatEnable 是否开启SNAT，True（开启）、False（关闭）。
+默认为关闭。
      */
     public Boolean getSnatEnable() {
         return this.SnatEnable;
     }
 
     /**
-     * Set 是否开启SNAT，True（开启）、False（关闭）
-     * @param SnatEnable 是否开启SNAT，True（开启）、False（关闭）
+     * Set 是否开启SNAT，True（开启）、False（关闭）。
+默认为关闭。
+     * @param SnatEnable 是否开启SNAT，True（开启）、False（关闭）。
+默认为关闭。
      */
     public void setSnatEnable(Boolean SnatEnable) {
         this.SnatEnable = SnatEnable;
@@ -540,32 +547,40 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get 内网http监听器开启h2c开关，True（开启）、False（关闭） 
-     * @return H2cSwitch 内网http监听器开启h2c开关，True（开启）、False（关闭）
+     * Get 内网http监听器开启h2c开关，True（开启）、False（关闭）。
+默认为关闭。 
+     * @return H2cSwitch 内网http监听器开启h2c开关，True（开启）、False（关闭）。
+默认为关闭。
      */
     public Boolean getH2cSwitch() {
         return this.H2cSwitch;
     }
 
     /**
-     * Set 内网http监听器开启h2c开关，True（开启）、False（关闭）
-     * @param H2cSwitch 内网http监听器开启h2c开关，True（开启）、False（关闭）
+     * Set 内网http监听器开启h2c开关，True（开启）、False（关闭）。
+默认为关闭。
+     * @param H2cSwitch 内网http监听器开启h2c开关，True（开启）、False（关闭）。
+默认为关闭。
      */
     public void setH2cSwitch(Boolean H2cSwitch) {
         this.H2cSwitch = H2cSwitch;
     }
 
     /**
-     * Get TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启） 
-     * @return SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
+     * Get TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）.
+默认为关闭。 
+     * @return SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）.
+默认为关闭。
      */
     public Boolean getSslCloseSwitch() {
         return this.SslCloseSwitch;
     }
 
     /**
-     * Set TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
-     * @param SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
+     * Set TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）.
+默认为关闭。
+     * @param SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）.
+默认为关闭。
      */
     public void setSslCloseSwitch(Boolean SslCloseSwitch) {
         this.SslCloseSwitch = SslCloseSwitch;

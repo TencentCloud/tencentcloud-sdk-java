@@ -277,6 +277,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
+     * @param req ModifyWorkspacesRenewFlagRequest
+     * @return ModifyWorkspacesRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWorkspacesRenewFlagResponse ModifyWorkspacesRenewFlag(ModifyWorkspacesRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyWorkspacesRenewFlag", ModifyWorkspacesRenewFlagResponse.class);
+    }
+
+    /**
      *本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
      * @param req SetAutoScalingConfigurationRequest
      * @return SetAutoScalingConfigurationResponse

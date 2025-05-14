@@ -59,7 +59,7 @@ public class Activity extends AbstractModel {
     private String Cause;
 
     /**
-    * 活动状态
+    * 活动状态。取值范围：<br><li>SUBMITTED：已提交</li><li>PROCESSING：处理中</li><li>SUCCEED：成功</li><li>FAILED：失败</li>
     */
     @SerializedName("ActivityState")
     @Expose
@@ -174,16 +174,16 @@ public class Activity extends AbstractModel {
     }
 
     /**
-     * Get 活动状态 
-     * @return ActivityState 活动状态
+     * Get 活动状态。取值范围：<br><li>SUBMITTED：已提交</li><li>PROCESSING：处理中</li><li>SUCCEED：成功</li><li>FAILED：失败</li> 
+     * @return ActivityState 活动状态。取值范围：<br><li>SUBMITTED：已提交</li><li>PROCESSING：处理中</li><li>SUCCEED：成功</li><li>FAILED：失败</li>
      */
     public String getActivityState() {
         return this.ActivityState;
     }
 
     /**
-     * Set 活动状态
-     * @param ActivityState 活动状态
+     * Set 活动状态。取值范围：<br><li>SUBMITTED：已提交</li><li>PROCESSING：处理中</li><li>SUCCEED：成功</li><li>FAILED：失败</li>
+     * @param ActivityState 活动状态。取值范围：<br><li>SUBMITTED：已提交</li><li>PROCESSING：处理中</li><li>SUCCEED：成功</li><li>FAILED：失败</li>
      */
     public void setActivityState(String ActivityState) {
         this.ActivityState = ActivityState;

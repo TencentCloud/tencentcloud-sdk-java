@@ -38,6 +38,13 @@ public class ModifyTargetWeightRequest extends AbstractModel {
     private String ListenerId;
 
     /**
+    * 要修改权重的后端服务列表。
+    */
+    @SerializedName("Targets")
+    @Expose
+    private Target [] Targets;
+
+    /**
     * 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一。
     */
     @SerializedName("LocationId")
@@ -57,13 +64,6 @@ public class ModifyTargetWeightRequest extends AbstractModel {
     @SerializedName("Url")
     @Expose
     private String Url;
-
-    /**
-    * 要修改权重的后端服务列表。
-    */
-    @SerializedName("Targets")
-    @Expose
-    private Target [] Targets;
 
     /**
     * 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
@@ -102,6 +102,22 @@ public class ModifyTargetWeightRequest extends AbstractModel {
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
+    }
+
+    /**
+     * Get 要修改权重的后端服务列表。 
+     * @return Targets 要修改权重的后端服务列表。
+     */
+    public Target [] getTargets() {
+        return this.Targets;
+    }
+
+    /**
+     * Set 要修改权重的后端服务列表。
+     * @param Targets 要修改权重的后端服务列表。
+     */
+    public void setTargets(Target [] Targets) {
+        this.Targets = Targets;
     }
 
     /**
@@ -153,22 +169,6 @@ public class ModifyTargetWeightRequest extends AbstractModel {
     }
 
     /**
-     * Get 要修改权重的后端服务列表。 
-     * @return Targets 要修改权重的后端服务列表。
-     */
-    public Target [] getTargets() {
-        return this.Targets;
-    }
-
-    /**
-     * Set 要修改权重的后端服务列表。
-     * @param Targets 要修改权重的后端服务列表。
-     */
-    public void setTargets(Target [] Targets) {
-        this.Targets = Targets;
-    }
-
-    /**
      * Get 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。 
      * @return Weight 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      */
@@ -198,6 +198,12 @@ public class ModifyTargetWeightRequest extends AbstractModel {
         if (source.ListenerId != null) {
             this.ListenerId = new String(source.ListenerId);
         }
+        if (source.Targets != null) {
+            this.Targets = new Target[source.Targets.length];
+            for (int i = 0; i < source.Targets.length; i++) {
+                this.Targets[i] = new Target(source.Targets[i]);
+            }
+        }
         if (source.LocationId != null) {
             this.LocationId = new String(source.LocationId);
         }
@@ -206,12 +212,6 @@ public class ModifyTargetWeightRequest extends AbstractModel {
         }
         if (source.Url != null) {
             this.Url = new String(source.Url);
-        }
-        if (source.Targets != null) {
-            this.Targets = new Target[source.Targets.length];
-            for (int i = 0; i < source.Targets.length; i++) {
-                this.Targets[i] = new Target(source.Targets[i]);
-            }
         }
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
@@ -225,10 +225,10 @@ public class ModifyTargetWeightRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
+        this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Url", this.Url);
-        this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }

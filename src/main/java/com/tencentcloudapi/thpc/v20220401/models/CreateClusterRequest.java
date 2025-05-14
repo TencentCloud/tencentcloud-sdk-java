@@ -59,7 +59,7 @@ public class CreateClusterRequest extends AbstractModel {
     private Long ComputeNodeCount;
 
     /**
-    * 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。</li><br><li>SLURM：SLURM调度器。</li>
+    * 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
     */
     @SerializedName("SchedulerType")
     @Expose
@@ -241,16 +241,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。</li><br><li>SLURM：SLURM调度器。</li> 
-     * @return SchedulerType 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。</li><br><li>SLURM：SLURM调度器。</li>
+     * Get 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li> 
+     * @return SchedulerType 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
      */
     public String getSchedulerType() {
         return this.SchedulerType;
     }
 
     /**
-     * Set 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。</li><br><li>SLURM：SLURM调度器。</li>
-     * @param SchedulerType 调度器类型。默认取值：SLURM。<br><li>SGE：SGE调度器。</li><br><li>SLURM：SLURM调度器。</li>
+     * Set 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
+     * @param SchedulerType 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
      */
     public void setSchedulerType(String SchedulerType) {
         this.SchedulerType = SchedulerType;

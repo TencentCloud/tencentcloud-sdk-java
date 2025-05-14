@@ -396,6 +396,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *批量操作中搜索域名
+     * @param req DescribeDomainAndRecordListRequest
+     * @return DescribeDomainAndRecordListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainAndRecordListResponse DescribeDomainAndRecordList(DescribeDomainAndRecordListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDomainAndRecordList", DescribeDomainAndRecordListResponse.class);
+    }
+
+    /**
      *获取域名的自定义线路列表
      * @param req DescribeDomainCustomLineListRequest
      * @return DescribeDomainCustomLineListResponse

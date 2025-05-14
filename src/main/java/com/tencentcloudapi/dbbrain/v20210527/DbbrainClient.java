@@ -61,6 +61,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *自治中心-终止自治事件
+     * @param req CancelDBAutonomyEventRequest
+     * @return CancelDBAutonomyEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelDBAutonomyEventResponse CancelDBAutonomyEvent(CancelDBAutonomyEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelDBAutonomyEvent", CancelDBAutonomyEventResponse.class);
+    }
+
+    /**
      *终止中断会话任务。
      * @param req CancelKillTaskRequest
      * @return CancelKillTaskResponse
@@ -322,6 +333,17 @@ public class DbbrainClient extends AbstractClient{
     public DescribeAuditLogFilesResponse DescribeAuditLogFiles(DescribeAuditLogFilesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAuditLogFiles", DescribeAuditLogFilesResponse.class);
+    }
+
+    /**
+     *自治中心-查询自治事件任务详情。
+     * @param req DescribeDBAutonomyActionRequest
+     * @return DescribeDBAutonomyActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBAutonomyActionResponse DescribeDBAutonomyAction(DescribeDBAutonomyActionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBAutonomyAction", DescribeDBAutonomyActionResponse.class);
     }
 
     /**

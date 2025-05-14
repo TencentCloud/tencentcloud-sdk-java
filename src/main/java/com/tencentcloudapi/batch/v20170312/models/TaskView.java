@@ -31,21 +31,28 @@ public class TaskView extends AbstractModel {
     private String TaskName;
 
     /**
-    * 任务状态
+    * 任务状态:
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
     */
     @SerializedName("TaskState")
     @Expose
     private String TaskState;
 
     /**
-    * 开始时间
+    * 开始时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 结束时间
+    * 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -69,41 +76,69 @@ public class TaskView extends AbstractModel {
     }
 
     /**
-     * Get 任务状态 
-     * @return TaskState 任务状态
+     * Get 任务状态:
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。 
+     * @return TaskState 任务状态:
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
      */
     public String getTaskState() {
         return this.TaskState;
     }
 
     /**
-     * Set 任务状态
-     * @param TaskState 任务状态
+     * Set 任务状态:
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
+     * @param TaskState 任务状态:
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
      */
     public void setTaskState(String TaskState) {
         this.TaskState = TaskState;
     }
 
     /**
-     * Get 开始时间 
-     * @return CreateTime 开始时间
+     * Get 开始时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。 
+     * @return CreateTime 开始时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 开始时间
-     * @param CreateTime 开始时间
+     * Set 开始时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param CreateTime 开始时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 结束时间
+     * Get 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 结束时间
+     * @return EndTime 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -111,9 +146,9 @@ public class TaskView extends AbstractModel {
     }
 
     /**
-     * Set 结束时间
+     * Set 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 结束时间
+     * @param EndTime 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {

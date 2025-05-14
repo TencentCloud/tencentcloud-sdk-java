@@ -45,7 +45,7 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     private String DBInstanceId;
 
     /**
-    * 【废弃参数，不再生效】，实例计费类型。
+    * 实例计费类型。
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -107,17 +107,21 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 【废弃参数，不再生效】，实例计费类型。 
-     * @return InstanceChargeType 【废弃参数，不再生效】，实例计费类型。
+     * Get 实例计费类型。 
+     * @return InstanceChargeType 实例计费类型。
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 【废弃参数，不再生效】，实例计费类型。
-     * @param InstanceChargeType 【废弃参数，不再生效】，实例计费类型。
+     * Set 实例计费类型。
+     * @param InstanceChargeType 实例计费类型。
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }

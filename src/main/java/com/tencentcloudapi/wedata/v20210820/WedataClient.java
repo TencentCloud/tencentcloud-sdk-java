@@ -2028,6 +2028,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *查询项目下所有任务列表,包括虚拟任务
+     * @param req DescribeTaskTemplatesRequest
+     * @return DescribeTaskTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskTemplatesResponse DescribeTaskTemplates(DescribeTaskTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskTemplates", DescribeTaskTemplatesResponse.class);
+    }
+
+    /**
      *分页查询引用模板的任务列表
      * @param req DescribeTasksForCodeTemplateRequest
      * @return DescribeTasksForCodeTemplateResponse
@@ -2168,6 +2179,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public DiagnoseProResponse DiagnosePro(DiagnoseProRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DiagnosePro", DiagnoseProResponse.class);
+    }
+
+    /**
+     *按行下载日志信息
+     * @param req DownloadLogByLineRequest
+     * @return DownloadLogByLineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadLogByLineResponse DownloadLogByLine(DownloadLogByLineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DownloadLogByLine", DownloadLogByLineResponse.class);
     }
 
     /**

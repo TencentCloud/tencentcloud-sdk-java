@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyDiskBackupQuotaRequest extends AbstractModel {
 
     /**
-    * 云硬盘ID。
+    * 云硬盘ID。可通过[DescribeDisks](/document/product/362/16315)接口查询。
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * 调整之后的云硬盘备份点配额。
+    * 调整之后的云硬盘备份点配额。取值范围为1 ~ 1024。
     */
     @SerializedName("DiskBackupQuota")
     @Expose
     private Long DiskBackupQuota;
 
     /**
-     * Get 云硬盘ID。 
-     * @return DiskId 云硬盘ID。
+     * Get 云硬盘ID。可通过[DescribeDisks](/document/product/362/16315)接口查询。 
+     * @return DiskId 云硬盘ID。可通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 云硬盘ID。
-     * @param DiskId 云硬盘ID。
+     * Set 云硬盘ID。可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * @param DiskId 云硬盘ID。可通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get 调整之后的云硬盘备份点配额。 
-     * @return DiskBackupQuota 调整之后的云硬盘备份点配额。
+     * Get 调整之后的云硬盘备份点配额。取值范围为1 ~ 1024。 
+     * @return DiskBackupQuota 调整之后的云硬盘备份点配额。取值范围为1 ~ 1024。
      */
     public Long getDiskBackupQuota() {
         return this.DiskBackupQuota;
     }
 
     /**
-     * Set 调整之后的云硬盘备份点配额。
-     * @param DiskBackupQuota 调整之后的云硬盘备份点配额。
+     * Set 调整之后的云硬盘备份点配额。取值范围为1 ~ 1024。
+     * @param DiskBackupQuota 调整之后的云硬盘备份点配额。取值范围为1 ~ 1024。
      */
     public void setDiskBackupQuota(Long DiskBackupQuota) {
         this.DiskBackupQuota = DiskBackupQuota;

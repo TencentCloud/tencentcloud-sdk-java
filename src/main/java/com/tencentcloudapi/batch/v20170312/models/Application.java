@@ -31,7 +31,7 @@ public class Application extends AbstractModel {
     private String DeliveryForm;
 
     /**
-    * 任务执行命令。与Commands不能同时指定。
+    * 松耦合任务执行命令。与Commands不能同时指定，一般使用Command字段提交任务。
     */
     @SerializedName("Command")
     @Expose
@@ -52,7 +52,7 @@ public class Application extends AbstractModel {
     private Docker Docker;
 
     /**
-    * 任务执行命令信息。与Command不能同时指定。
+    * 紧耦合任务执行命令信息。与Command不能同时指定。Command和Commands必须指定一个。
     */
     @SerializedName("Commands")
     @Expose
@@ -75,16 +75,16 @@ public class Application extends AbstractModel {
     }
 
     /**
-     * Get 任务执行命令。与Commands不能同时指定。 
-     * @return Command 任务执行命令。与Commands不能同时指定。
+     * Get 松耦合任务执行命令。与Commands不能同时指定，一般使用Command字段提交任务。 
+     * @return Command 松耦合任务执行命令。与Commands不能同时指定，一般使用Command字段提交任务。
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set 任务执行命令。与Commands不能同时指定。
-     * @param Command 任务执行命令。与Commands不能同时指定。
+     * Set 松耦合任务执行命令。与Commands不能同时指定，一般使用Command字段提交任务。
+     * @param Command 松耦合任务执行命令。与Commands不能同时指定，一般使用Command字段提交任务。
      */
     public void setCommand(String Command) {
         this.Command = Command;
@@ -123,16 +123,16 @@ public class Application extends AbstractModel {
     }
 
     /**
-     * Get 任务执行命令信息。与Command不能同时指定。 
-     * @return Commands 任务执行命令信息。与Command不能同时指定。
+     * Get 紧耦合任务执行命令信息。与Command不能同时指定。Command和Commands必须指定一个。 
+     * @return Commands 紧耦合任务执行命令信息。与Command不能同时指定。Command和Commands必须指定一个。
      */
     public CommandLine [] getCommands() {
         return this.Commands;
     }
 
     /**
-     * Set 任务执行命令信息。与Command不能同时指定。
-     * @param Commands 任务执行命令信息。与Command不能同时指定。
+     * Set 紧耦合任务执行命令信息。与Command不能同时指定。Command和Commands必须指定一个。
+     * @param Commands 紧耦合任务执行命令信息。与Command不能同时指定。Command和Commands必须指定一个。
      */
     public void setCommands(CommandLine [] Commands) {
         this.Commands = Commands;

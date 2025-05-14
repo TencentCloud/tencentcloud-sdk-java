@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeComputeEnvActivitiesRequest extends AbstractModel {
 
     /**
-    * 计算环境ID
+    * 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * 偏移量
+    * 偏移量，默认为0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量
+    * 返回数量，默认值20，最大值100.
     */
     @SerializedName("Limit")
     @Expose
@@ -53,48 +53,48 @@ public class DescribeComputeEnvActivitiesRequest extends AbstractModel {
     private Filter Filters;
 
     /**
-     * Get 计算环境ID 
-     * @return EnvId 计算环境ID
+     * Get 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。 
+     * @return EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 计算环境ID
-     * @param EnvId 计算环境ID
+     * Set 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * @param EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认为0. 
+     * @return Offset 偏移量，默认为0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认为0.
+     * @param Offset 偏移量，默认为0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get 返回数量，默认值20，最大值100. 
+     * @return Limit 返回数量，默认值20，最大值100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set 返回数量，默认值20，最大值100.
+     * @param Limit 返回数量，默认值20，最大值100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

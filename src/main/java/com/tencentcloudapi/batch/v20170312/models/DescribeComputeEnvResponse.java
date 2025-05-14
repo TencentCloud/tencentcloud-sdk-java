@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeComputeEnvResponse extends AbstractModel {
 
     /**
-    * 计算环境ID
+    * 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
     */
     @SerializedName("EnvId")
     @Expose
@@ -73,7 +73,7 @@ public class DescribeComputeEnvResponse extends AbstractModel {
     private Long DesiredComputeNodeCount;
 
     /**
-    * 计算环境类型
+    * 计算环境管理类型，枚举如下： MANAGED: 由客户在Batch平台主动创建； THPC_QUEUE: 由thpc平台创建，关联thpc平台集群队列。
     */
     @SerializedName("EnvType")
     @Expose
@@ -87,7 +87,7 @@ public class DescribeComputeEnvResponse extends AbstractModel {
     private String ResourceType;
 
     /**
-    * 下一步动作
+    * 下一步的动作，枚举如下： DELETING: 删除中
     */
     @SerializedName("NextAction")
     @Expose
@@ -116,16 +116,16 @@ public class DescribeComputeEnvResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 计算环境ID 
-     * @return EnvId 计算环境ID
+     * Get 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。 
+     * @return EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 计算环境ID
-     * @param EnvId 计算环境ID
+     * Set 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * @param EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
@@ -228,16 +228,16 @@ public class DescribeComputeEnvResponse extends AbstractModel {
     }
 
     /**
-     * Get 计算环境类型 
-     * @return EnvType 计算环境类型
+     * Get 计算环境管理类型，枚举如下： MANAGED: 由客户在Batch平台主动创建； THPC_QUEUE: 由thpc平台创建，关联thpc平台集群队列。 
+     * @return EnvType 计算环境管理类型，枚举如下： MANAGED: 由客户在Batch平台主动创建； THPC_QUEUE: 由thpc平台创建，关联thpc平台集群队列。
      */
     public String getEnvType() {
         return this.EnvType;
     }
 
     /**
-     * Set 计算环境类型
-     * @param EnvType 计算环境类型
+     * Set 计算环境管理类型，枚举如下： MANAGED: 由客户在Batch平台主动创建； THPC_QUEUE: 由thpc平台创建，关联thpc平台集群队列。
+     * @param EnvType 计算环境管理类型，枚举如下： MANAGED: 由客户在Batch平台主动创建； THPC_QUEUE: 由thpc平台创建，关联thpc平台集群队列。
      */
     public void setEnvType(String EnvType) {
         this.EnvType = EnvType;
@@ -260,16 +260,16 @@ public class DescribeComputeEnvResponse extends AbstractModel {
     }
 
     /**
-     * Get 下一步动作 
-     * @return NextAction 下一步动作
+     * Get 下一步的动作，枚举如下： DELETING: 删除中 
+     * @return NextAction 下一步的动作，枚举如下： DELETING: 删除中
      */
     public String getNextAction() {
         return this.NextAction;
     }
 
     /**
-     * Set 下一步动作
-     * @param NextAction 下一步动作
+     * Set 下一步的动作，枚举如下： DELETING: 删除中
+     * @param NextAction 下一步的动作，枚举如下： DELETING: 删除中
      */
     public void setNextAction(String NextAction) {
         this.NextAction = NextAction;

@@ -39,7 +39,7 @@ public class CreatePhoneEmailRequest extends AbstractModel {
 
     /**
     * 验证码
-通过调用SendPhoneEmailCode接口发送到手机或邮箱的验证码：https://cloud.tencent.com/document/api/242/62666
+通过调用[SendPhoneEmailCode](https://cloud.tencent.com/document/api/242/62666)接口发送到手机或邮箱的验证码
     */
     @SerializedName("VerifyCode")
     @Expose
@@ -79,9 +79,9 @@ public class CreatePhoneEmailRequest extends AbstractModel {
 
     /**
      * Get 验证码
-通过调用SendPhoneEmailCode接口发送到手机或邮箱的验证码：https://cloud.tencent.com/document/api/242/62666 
+通过调用[SendPhoneEmailCode](https://cloud.tencent.com/document/api/242/62666)接口发送到手机或邮箱的验证码 
      * @return VerifyCode 验证码
-通过调用SendPhoneEmailCode接口发送到手机或邮箱的验证码：https://cloud.tencent.com/document/api/242/62666
+通过调用[SendPhoneEmailCode](https://cloud.tencent.com/document/api/242/62666)接口发送到手机或邮箱的验证码
      */
     public String getVerifyCode() {
         return this.VerifyCode;
@@ -89,9 +89,9 @@ public class CreatePhoneEmailRequest extends AbstractModel {
 
     /**
      * Set 验证码
-通过调用SendPhoneEmailCode接口发送到手机或邮箱的验证码：https://cloud.tencent.com/document/api/242/62666
+通过调用[SendPhoneEmailCode](https://cloud.tencent.com/document/api/242/62666)接口发送到手机或邮箱的验证码
      * @param VerifyCode 验证码
-通过调用SendPhoneEmailCode接口发送到手机或邮箱的验证码：https://cloud.tencent.com/document/api/242/62666
+通过调用[SendPhoneEmailCode](https://cloud.tencent.com/document/api/242/62666)接口发送到手机或邮箱的验证码
      */
     public void setVerifyCode(String VerifyCode) {
         this.VerifyCode = VerifyCode;

@@ -24,18 +24,14 @@ import java.util.HashMap;
 public class DescribeComputeEnvCreateInfosRequest extends AbstractModel {
 
     /**
-    * 计算环境ID列表，与Filters参数不能同时指定。
+    * 计算环境ID列表，与Filters参数不能同时指定，最大限制100。环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
     */
     @SerializedName("EnvIds")
     @Expose
     private String [] EnvIds;
 
     /**
-    * 过滤条件
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
-<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
-<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
-与EnvIds参数不能同时指定。
+    * 过滤条件<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤，可用区通过调用接口 [DescribeZones](https://cloud.tencent.com/document/api/213/15707)获取。</li><li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li><li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>与EnvIds参数不能同时指定。
     */
     @SerializedName("Filters")
     @Expose
@@ -49,55 +45,39 @@ public class DescribeComputeEnvCreateInfosRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 返回数量
+    * 返回数量，默认值20，最大值100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 计算环境ID列表，与Filters参数不能同时指定。 
-     * @return EnvIds 计算环境ID列表，与Filters参数不能同时指定。
+     * Get 计算环境ID列表，与Filters参数不能同时指定，最大限制100。环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。 
+     * @return EnvIds 计算环境ID列表，与Filters参数不能同时指定，最大限制100。环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      */
     public String [] getEnvIds() {
         return this.EnvIds;
     }
 
     /**
-     * Set 计算环境ID列表，与Filters参数不能同时指定。
-     * @param EnvIds 计算环境ID列表，与Filters参数不能同时指定。
+     * Set 计算环境ID列表，与Filters参数不能同时指定，最大限制100。环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * @param EnvIds 计算环境ID列表，与Filters参数不能同时指定，最大限制100。环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      */
     public void setEnvIds(String [] EnvIds) {
         this.EnvIds = EnvIds;
     }
 
     /**
-     * Get 过滤条件
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
-<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
-<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
-与EnvIds参数不能同时指定。 
-     * @return Filters 过滤条件
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
-<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
-<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
-与EnvIds参数不能同时指定。
+     * Get 过滤条件<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤，可用区通过调用接口 [DescribeZones](https://cloud.tencent.com/document/api/213/15707)获取。</li><li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li><li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>与EnvIds参数不能同时指定。 
+     * @return Filters 过滤条件<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤，可用区通过调用接口 [DescribeZones](https://cloud.tencent.com/document/api/213/15707)获取。</li><li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li><li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>与EnvIds参数不能同时指定。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
-<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
-<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
-与EnvIds参数不能同时指定。
-     * @param Filters 过滤条件
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
-<li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
-<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
-与EnvIds参数不能同时指定。
+     * Set 过滤条件<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤，可用区通过调用接口 [DescribeZones](https://cloud.tencent.com/document/api/213/15707)获取。</li><li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li><li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>与EnvIds参数不能同时指定。
+     * @param Filters 过滤条件<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤，可用区通过调用接口 [DescribeZones](https://cloud.tencent.com/document/api/213/15707)获取。</li><li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li><li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>与EnvIds参数不能同时指定。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -120,16 +100,16 @@ public class DescribeComputeEnvCreateInfosRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get 返回数量，默认值20，最大值100。 
+     * @return Limit 返回数量，默认值20，最大值100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set 返回数量，默认值20，最大值100。
+     * @param Limit 返回数量，默认值20，最大值100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

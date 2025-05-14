@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class JobView extends AbstractModel {
 
     /**
-    * 作业ID
+    * 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
     */
     @SerializedName("JobId")
     @Expose
@@ -38,7 +38,15 @@ public class JobView extends AbstractModel {
     private String JobName;
 
     /**
-    * 作业状态
+    * 作业状态:
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
     */
     @SerializedName("JobState")
     @Expose
@@ -59,14 +67,14 @@ public class JobView extends AbstractModel {
     private Placement Placement;
 
     /**
-    * 创建时间
+    * 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 结束时间
+    * 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
     */
     @SerializedName("EndTime")
     @Expose
@@ -87,16 +95,16 @@ public class JobView extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 作业ID 
-     * @return JobId 作业ID
+     * Get 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909) 
+     * @return JobId 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业ID
-     * @param JobId 作业ID
+     * Set 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
+     * @param JobId 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
@@ -119,16 +127,48 @@ public class JobView extends AbstractModel {
     }
 
     /**
-     * Get 作业状态 
-     * @return JobState 作业状态
+     * Get 作业状态:
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。 
+     * @return JobState 作业状态:
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
      */
     public String getJobState() {
         return this.JobState;
     }
 
     /**
-     * Set 作业状态
-     * @param JobState 作业状态
+     * Set 作业状态:
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
+     * @param JobState 作业状态:
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
      */
     public void setJobState(String JobState) {
         this.JobState = JobState;
@@ -167,32 +207,32 @@ public class JobView extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ 
+     * @return CreateTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param CreateTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ 
+     * @return EndTime 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param EndTime 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

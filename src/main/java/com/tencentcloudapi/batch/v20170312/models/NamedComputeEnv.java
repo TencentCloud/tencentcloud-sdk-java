@@ -31,7 +31,7 @@ public class NamedComputeEnv extends AbstractModel {
     private String EnvName;
 
     /**
-    * 计算节点期望个数
+    * 计算节点期望个数，最大上限2000.
     */
     @SerializedName("DesiredComputeNodeCount")
     @Expose
@@ -45,7 +45,9 @@ public class NamedComputeEnv extends AbstractModel {
     private String EnvDescription;
 
     /**
-    * 计算环境管理类型
+    * 计算环境管理类型，枚举如下：
+MANAGED: 由客户在Batch平台主动创建；
+THPC_QUEUE: 由THPC平台创建，关联THPC平台的集群队列。
     */
     @SerializedName("EnvType")
     @Expose
@@ -141,16 +143,16 @@ TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>
     }
 
     /**
-     * Get 计算节点期望个数 
-     * @return DesiredComputeNodeCount 计算节点期望个数
+     * Get 计算节点期望个数，最大上限2000. 
+     * @return DesiredComputeNodeCount 计算节点期望个数，最大上限2000.
      */
     public Long getDesiredComputeNodeCount() {
         return this.DesiredComputeNodeCount;
     }
 
     /**
-     * Set 计算节点期望个数
-     * @param DesiredComputeNodeCount 计算节点期望个数
+     * Set 计算节点期望个数，最大上限2000.
+     * @param DesiredComputeNodeCount 计算节点期望个数，最大上限2000.
      */
     public void setDesiredComputeNodeCount(Long DesiredComputeNodeCount) {
         this.DesiredComputeNodeCount = DesiredComputeNodeCount;
@@ -173,16 +175,24 @@ TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>
     }
 
     /**
-     * Get 计算环境管理类型 
-     * @return EnvType 计算环境管理类型
+     * Get 计算环境管理类型，枚举如下：
+MANAGED: 由客户在Batch平台主动创建；
+THPC_QUEUE: 由THPC平台创建，关联THPC平台的集群队列。 
+     * @return EnvType 计算环境管理类型，枚举如下：
+MANAGED: 由客户在Batch平台主动创建；
+THPC_QUEUE: 由THPC平台创建，关联THPC平台的集群队列。
      */
     public String getEnvType() {
         return this.EnvType;
     }
 
     /**
-     * Set 计算环境管理类型
-     * @param EnvType 计算环境管理类型
+     * Set 计算环境管理类型，枚举如下：
+MANAGED: 由客户在Batch平台主动创建；
+THPC_QUEUE: 由THPC平台创建，关联THPC平台的集群队列。
+     * @param EnvType 计算环境管理类型，枚举如下：
+MANAGED: 由客户在Batch平台主动创建；
+THPC_QUEUE: 由THPC平台创建，关联THPC平台的集群队列。
      */
     public void setEnvType(String EnvType) {
         this.EnvType = EnvType;

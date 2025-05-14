@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeJobRequest extends AbstractModel {
 
     /**
-    * 作业标识
+    * 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-     * Get 作业标识 
-     * @return JobId 作业标识
+     * Get 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909) 
+     * @return JobId 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业标识
-     * @param JobId 作业标识
+     * Set 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
+     * @param JobId 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

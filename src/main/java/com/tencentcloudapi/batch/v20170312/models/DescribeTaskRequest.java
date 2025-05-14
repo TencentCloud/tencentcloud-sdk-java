@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskRequest extends AbstractModel {
 
     /**
-    * 作业ID
+    * 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
     */
     @SerializedName("JobId")
     @Expose
@@ -53,23 +53,32 @@ public class DescribeTaskRequest extends AbstractModel {
 
     /**
     * 过滤条件，详情如下：
-<li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
+task-instance-state     - String - 是否必填： 否 - 按照任务实例状态进行过滤（
+
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例）。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 作业ID 
-     * @return JobId 作业ID
+     * Get 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909) 
+     * @return JobId 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业ID
-     * @param JobId 作业ID
+     * Set 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
+     * @param JobId 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
@@ -125,9 +134,27 @@ public class DescribeTaskRequest extends AbstractModel {
 
     /**
      * Get 过滤条件，详情如下：
-<li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li> 
+task-instance-state     - String - 是否必填： 否 - 按照任务实例状态进行过滤（
+
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例）。 
      * @return Filters 过滤条件，详情如下：
-<li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
+task-instance-state     - String - 是否必填： 否 - 按照任务实例状态进行过滤（
+
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例）。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -135,9 +162,27 @@ public class DescribeTaskRequest extends AbstractModel {
 
     /**
      * Set 过滤条件，详情如下：
-<li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
+task-instance-state     - String - 是否必填： 否 - 按照任务实例状态进行过滤（
+
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例）。
      * @param Filters 过滤条件，详情如下：
-<li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
+task-instance-state     - String - 是否必填： 否 - 按照任务实例状态进行过滤（
+
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例）。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

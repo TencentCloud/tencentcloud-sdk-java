@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class TerminateTaskInstanceRequest extends AbstractModel {
 
     /**
-    * 作业ID
+    * 作业ID；详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 任务名称
+    * 任务名称；详见[作业提交信息](https://cloud.tencent.com/document/product/599/15910)
     */
     @SerializedName("TaskName")
     @Expose
@@ -45,32 +45,32 @@ public class TerminateTaskInstanceRequest extends AbstractModel {
     private Long TaskInstanceIndex;
 
     /**
-     * Get 作业ID 
-     * @return JobId 作业ID
+     * Get 作业ID；详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。 
+     * @return JobId 作业ID；详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业ID
-     * @param JobId 作业ID
+     * Set 作业ID；详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
+     * @param JobId 作业ID；详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 任务名称 
-     * @return TaskName 任务名称
+     * Get 任务名称；详见[作业提交信息](https://cloud.tencent.com/document/product/599/15910) 
+     * @return TaskName 任务名称；详见[作业提交信息](https://cloud.tencent.com/document/product/599/15910)
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名称
-     * @param TaskName 任务名称
+     * Set 任务名称；详见[作业提交信息](https://cloud.tencent.com/document/product/599/15910)
+     * @param TaskName 任务名称；详见[作业提交信息](https://cloud.tencent.com/document/product/599/15910)
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;

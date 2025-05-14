@@ -25,13 +25,16 @@ public class BiddingPreReleaseResponse extends AbstractModel {
 
     /**
     * 是否需要额外支付
+true: 需要额外支付
+false: 不需要额外支付
     */
     @SerializedName("IsNeedPay")
     @Expose
     private Boolean IsNeedPay;
 
     /**
-    * 计费请求参数，以类Json字符串的形式进行返回。用于计费下单
+    * 计费请求参数，以类Json字符串的形式进行返回。json字符串前有一个">"特定标识符号，去掉标识符的字符串可用于计费下单
+
     */
     @SerializedName("BillingParam")
     @Expose
@@ -45,8 +48,12 @@ public class BiddingPreReleaseResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否需要额外支付 
+     * Get 是否需要额外支付
+true: 需要额外支付
+false: 不需要额外支付 
      * @return IsNeedPay 是否需要额外支付
+true: 需要额外支付
+false: 不需要额外支付
      */
     public Boolean getIsNeedPay() {
         return this.IsNeedPay;
@@ -54,23 +61,31 @@ public class BiddingPreReleaseResponse extends AbstractModel {
 
     /**
      * Set 是否需要额外支付
+true: 需要额外支付
+false: 不需要额外支付
      * @param IsNeedPay 是否需要额外支付
+true: 需要额外支付
+false: 不需要额外支付
      */
     public void setIsNeedPay(Boolean IsNeedPay) {
         this.IsNeedPay = IsNeedPay;
     }
 
     /**
-     * Get 计费请求参数，以类Json字符串的形式进行返回。用于计费下单 
-     * @return BillingParam 计费请求参数，以类Json字符串的形式进行返回。用于计费下单
+     * Get 计费请求参数，以类Json字符串的形式进行返回。json字符串前有一个">"特定标识符号，去掉标识符的字符串可用于计费下单
+ 
+     * @return BillingParam 计费请求参数，以类Json字符串的形式进行返回。json字符串前有一个">"特定标识符号，去掉标识符的字符串可用于计费下单
+
      */
     public String getBillingParam() {
         return this.BillingParam;
     }
 
     /**
-     * Set 计费请求参数，以类Json字符串的形式进行返回。用于计费下单
-     * @param BillingParam 计费请求参数，以类Json字符串的形式进行返回。用于计费下单
+     * Set 计费请求参数，以类Json字符串的形式进行返回。json字符串前有一个">"特定标识符号，去掉标识符的字符串可用于计费下单
+
+     * @param BillingParam 计费请求参数，以类Json字符串的形式进行返回。json字符串前有一个">"特定标识符号，去掉标识符的字符串可用于计费下单
+
      */
     public void setBillingParam(String BillingParam) {
         this.BillingParam = BillingParam;
