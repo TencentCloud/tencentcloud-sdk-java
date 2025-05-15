@@ -34,7 +34,6 @@ public class ExceptConfig extends AbstractModel {
 
     /**
     * 例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExceptUserRules")
     @Expose
@@ -65,10 +64,8 @@ public class ExceptConfig extends AbstractModel {
     }
 
     /**
-     * Get 例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 例外规则详情。如果为null，默认使用历史配置。 
      * @return ExceptUserRules 例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExceptUserRule [] getExceptUserRules() {
         return this.ExceptUserRules;
@@ -76,9 +73,7 @@ public class ExceptConfig extends AbstractModel {
 
     /**
      * Set 例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExceptUserRules 例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExceptUserRules(ExceptUserRule [] ExceptUserRules) {
         this.ExceptUserRules = ExceptUserRules;

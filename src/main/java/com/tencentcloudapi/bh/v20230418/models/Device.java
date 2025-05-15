@@ -164,6 +164,13 @@ public class Device extends AbstractModel {
     private String SSLCertName;
 
     /**
+    * IOA侧的资源ID
+    */
+    @SerializedName("IOAId")
+    @Expose
+    private Long IOAId;
+
+    /**
      * Get 资产ID 
      * @return Id 资产ID
      */
@@ -483,6 +490,22 @@ public class Device extends AbstractModel {
         this.SSLCertName = SSLCertName;
     }
 
+    /**
+     * Get IOA侧的资源ID 
+     * @return IOAId IOA侧的资源ID
+     */
+    public Long getIOAId() {
+        return this.IOAId;
+    }
+
+    /**
+     * Set IOA侧的资源ID
+     * @param IOAId IOA侧的资源ID
+     */
+    public void setIOAId(Long IOAId) {
+        this.IOAId = IOAId;
+    }
+
     public Device() {
     }
 
@@ -557,6 +580,9 @@ public class Device extends AbstractModel {
         if (source.SSLCertName != null) {
             this.SSLCertName = new String(source.SSLCertName);
         }
+        if (source.IOAId != null) {
+            this.IOAId = new Long(source.IOAId);
+        }
     }
 
 
@@ -584,6 +610,7 @@ public class Device extends AbstractModel {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
         this.setParamSimple(map, prefix + "SSLCertName", this.SSLCertName);
+        this.setParamSimple(map, prefix + "IOAId", this.IOAId);
 
     }
 }

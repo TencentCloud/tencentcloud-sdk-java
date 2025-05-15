@@ -69,6 +69,13 @@ public class AuditLogFile extends AbstractModel {
     private String ErrMsg;
 
     /**
+    * 日志下载进度。
+    */
+    @SerializedName("ProgressRate")
+    @Expose
+    private Long ProgressRate;
+
+    /**
      * Get 审计日志文件名称 
      * @return FileName 审计日志文件名称
      */
@@ -176,6 +183,22 @@ public class AuditLogFile extends AbstractModel {
         this.ErrMsg = ErrMsg;
     }
 
+    /**
+     * Get 日志下载进度。 
+     * @return ProgressRate 日志下载进度。
+     */
+    public Long getProgressRate() {
+        return this.ProgressRate;
+    }
+
+    /**
+     * Set 日志下载进度。
+     * @param ProgressRate 日志下载进度。
+     */
+    public void setProgressRate(Long ProgressRate) {
+        this.ProgressRate = ProgressRate;
+    }
+
     public AuditLogFile() {
     }
 
@@ -202,6 +225,9 @@ public class AuditLogFile extends AbstractModel {
         if (source.ErrMsg != null) {
             this.ErrMsg = new String(source.ErrMsg);
         }
+        if (source.ProgressRate != null) {
+            this.ProgressRate = new Long(source.ProgressRate);
+        }
     }
 
 
@@ -215,6 +241,7 @@ public class AuditLogFile extends AbstractModel {
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
         this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
         this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamSimple(map, prefix + "ProgressRate", this.ProgressRate);
 
     }
 }

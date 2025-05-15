@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateVpcEndPointServiceRequest extends AbstractModel {
 
     /**
-    * VPC实例ID。
+    * VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
     */
     @SerializedName("VpcId")
     @Expose
@@ -45,7 +45,8 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel {
     private Boolean AutoAcceptFlag;
 
     /**
-    * 后端服务ID，比如lb-xxx。
+    * 后端服务ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；CDB可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+
     */
     @SerializedName("ServiceInstanceId")
     @Expose
@@ -59,7 +60,7 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel {
     private Boolean IsPassService;
 
     /**
-    * 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+    * 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。不填默认挂载为CLB。
     */
     @SerializedName("ServiceType")
     @Expose
@@ -80,16 +81,16 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel {
     private String IpAddressType;
 
     /**
-     * Get VPC实例ID。 
-     * @return VpcId VPC实例ID。
+     * Get VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。 
+     * @return VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。
-     * @param VpcId VPC实例ID。
+     * Set VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+     * @param VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -128,16 +129,20 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 后端服务ID，比如lb-xxx。 
-     * @return ServiceInstanceId 后端服务ID，比如lb-xxx。
+     * Get 后端服务ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；CDB可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+ 
+     * @return ServiceInstanceId 后端服务ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；CDB可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+
      */
     public String getServiceInstanceId() {
         return this.ServiceInstanceId;
     }
 
     /**
-     * Set 后端服务ID，比如lb-xxx。
-     * @param ServiceInstanceId 后端服务ID，比如lb-xxx。
+     * Set 后端服务ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；CDB可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+
+     * @param ServiceInstanceId 后端服务ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；CDB可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+
      */
     public void setServiceInstanceId(String ServiceInstanceId) {
         this.ServiceInstanceId = ServiceInstanceId;
@@ -160,16 +165,16 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。 
-     * @return ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+     * Get 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。不填默认挂载为CLB。 
+     * @return ServiceType 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。不填默认挂载为CLB。
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
-     * @param ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+     * Set 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。不填默认挂载为CLB。
+     * @param ServiceType 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。不填默认挂载为CLB。
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;

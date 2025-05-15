@@ -41,7 +41,6 @@ public class RateLimitConfig extends AbstractModel {
 
     /**
     * 速率限制模板功能。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RateLimitTemplate")
     @Expose
@@ -49,7 +48,6 @@ public class RateLimitConfig extends AbstractModel {
 
     /**
     * 智能客户端过滤。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RateLimitIntelligence")
     @Expose
@@ -57,7 +55,6 @@ public class RateLimitConfig extends AbstractModel {
 
     /**
     * 速率限制-托管定制规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RateLimitCustomizes")
     @Expose
@@ -104,10 +101,8 @@ public class RateLimitConfig extends AbstractModel {
     }
 
     /**
-     * Get 速率限制模板功能。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 速率限制模板功能。如果为null，默认使用历史配置。 
      * @return RateLimitTemplate 速率限制模板功能。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RateLimitTemplate getRateLimitTemplate() {
         return this.RateLimitTemplate;
@@ -115,19 +110,15 @@ public class RateLimitConfig extends AbstractModel {
 
     /**
      * Set 速率限制模板功能。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitTemplate 速率限制模板功能。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRateLimitTemplate(RateLimitTemplate RateLimitTemplate) {
         this.RateLimitTemplate = RateLimitTemplate;
     }
 
     /**
-     * Get 智能客户端过滤。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 智能客户端过滤。如果为null，默认使用历史配置。 
      * @return RateLimitIntelligence 智能客户端过滤。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RateLimitIntelligence getRateLimitIntelligence() {
         return this.RateLimitIntelligence;
@@ -135,19 +126,15 @@ public class RateLimitConfig extends AbstractModel {
 
     /**
      * Set 智能客户端过滤。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitIntelligence 智能客户端过滤。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRateLimitIntelligence(RateLimitIntelligence RateLimitIntelligence) {
         this.RateLimitIntelligence = RateLimitIntelligence;
     }
 
     /**
-     * Get 速率限制-托管定制规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 速率限制-托管定制规则。如果为null，默认使用历史配置。 
      * @return RateLimitCustomizes 速率限制-托管定制规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RateLimitUserRule [] getRateLimitCustomizes() {
         return this.RateLimitCustomizes;
@@ -155,9 +142,7 @@ public class RateLimitConfig extends AbstractModel {
 
     /**
      * Set 速率限制-托管定制规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitCustomizes 速率限制-托管定制规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRateLimitCustomizes(RateLimitUserRule [] RateLimitCustomizes) {
         this.RateLimitCustomizes = RateLimitCustomizes;

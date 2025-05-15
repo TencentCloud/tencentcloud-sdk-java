@@ -360,6 +360,27 @@ public class Resource extends AbstractModel {
     private Long ExternalAccess;
 
     /**
+    * 0默认值。0-免费版（试用版）ioa，1-付费版ioa
+    */
+    @SerializedName("IOAResource")
+    @Expose
+    private Long IOAResource;
+
+    /**
+    * 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+    */
+    @SerializedName("PackageIOAUserCount")
+    @Expose
+    private Long PackageIOAUserCount;
+
+    /**
+    *  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+    */
+    @SerializedName("PackageIOABandwidth")
+    @Expose
+    private Long PackageIOABandwidth;
+
+    /**
      * Get 服务实例ID，如bh-saas-s3ed4r5e 
      * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
@@ -1127,6 +1148,54 @@ public class Resource extends AbstractModel {
         this.ExternalAccess = ExternalAccess;
     }
 
+    /**
+     * Get 0默认值。0-免费版（试用版）ioa，1-付费版ioa 
+     * @return IOAResource 0默认值。0-免费版（试用版）ioa，1-付费版ioa
+     */
+    public Long getIOAResource() {
+        return this.IOAResource;
+    }
+
+    /**
+     * Set 0默认值。0-免费版（试用版）ioa，1-付费版ioa
+     * @param IOAResource 0默认值。0-免费版（试用版）ioa，1-付费版ioa
+     */
+    public void setIOAResource(Long IOAResource) {
+        this.IOAResource = IOAResource;
+    }
+
+    /**
+     * Get 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数 
+     * @return PackageIOAUserCount 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+     */
+    public Long getPackageIOAUserCount() {
+        return this.PackageIOAUserCount;
+    }
+
+    /**
+     * Set 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+     * @param PackageIOAUserCount 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+     */
+    public void setPackageIOAUserCount(Long PackageIOAUserCount) {
+        this.PackageIOAUserCount = PackageIOAUserCount;
+    }
+
+    /**
+     * Get  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽 
+     * @return PackageIOABandwidth  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+     */
+    public Long getPackageIOABandwidth() {
+        return this.PackageIOABandwidth;
+    }
+
+    /**
+     * Set  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+     * @param PackageIOABandwidth  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+     */
+    public void setPackageIOABandwidth(Long PackageIOABandwidth) {
+        this.PackageIOABandwidth = PackageIOABandwidth;
+    }
+
     public Resource() {
     }
 
@@ -1294,6 +1363,15 @@ public class Resource extends AbstractModel {
         if (source.ExternalAccess != null) {
             this.ExternalAccess = new Long(source.ExternalAccess);
         }
+        if (source.IOAResource != null) {
+            this.IOAResource = new Long(source.IOAResource);
+        }
+        if (source.PackageIOAUserCount != null) {
+            this.PackageIOAUserCount = new Long(source.PackageIOAUserCount);
+        }
+        if (source.PackageIOABandwidth != null) {
+            this.PackageIOABandwidth = new Long(source.PackageIOABandwidth);
+        }
     }
 
 
@@ -1349,6 +1427,9 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "WebAccess", this.WebAccess);
         this.setParamSimple(map, prefix + "ClientAccess", this.ClientAccess);
         this.setParamSimple(map, prefix + "ExternalAccess", this.ExternalAccess);
+        this.setParamSimple(map, prefix + "IOAResource", this.IOAResource);
+        this.setParamSimple(map, prefix + "PackageIOAUserCount", this.PackageIOAUserCount);
+        this.setParamSimple(map, prefix + "PackageIOABandwidth", this.PackageIOABandwidth);
 
     }
 }

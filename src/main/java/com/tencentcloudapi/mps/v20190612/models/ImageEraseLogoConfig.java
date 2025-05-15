@@ -35,7 +35,7 @@ public class ImageEraseLogoConfig extends AbstractModel {
     private String Switch;
 
     /**
-    * 需要擦除的多个框选区域，注意：参数数组长度最大为2。
+    * 需要擦除的多个框选区域，最多开启16个区域。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -76,10 +76,10 @@ public class ImageEraseLogoConfig extends AbstractModel {
     }
 
     /**
-     * Get 需要擦除的多个框选区域，注意：参数数组长度最大为2。
+     * Get 需要擦除的多个框选区域，最多开启16个区域。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageAreaBoxes 需要擦除的多个框选区域，注意：参数数组长度最大为2。
+     * @return ImageAreaBoxes 需要擦除的多个框选区域，最多开启16个区域。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -88,10 +88,10 @@ public class ImageEraseLogoConfig extends AbstractModel {
     }
 
     /**
-     * Set 需要擦除的多个框选区域，注意：参数数组长度最大为2。
+     * Set 需要擦除的多个框选区域，最多开启16个区域。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageAreaBoxes 需要擦除的多个框选区域，注意：参数数组长度最大为2。
+     * @param ImageAreaBoxes 需要擦除的多个框选区域，最多开启16个区域。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */

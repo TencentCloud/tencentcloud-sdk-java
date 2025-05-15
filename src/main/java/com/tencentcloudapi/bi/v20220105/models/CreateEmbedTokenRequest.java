@@ -149,6 +149,13 @@ Operator 目前支持
     private Long TokenNum;
 
     /**
+    * 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+    */
+    @SerializedName("ConfigParam")
+    @Expose
+    private String ConfigParam;
+
+    /**
      * Get 分享项目id 
      * @return ProjectId 分享项目id
      */
@@ -504,6 +511,22 @@ Operator 目前支持
         this.TokenNum = TokenNum;
     }
 
+    /**
+     * Get 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能 
+     * @return ConfigParam 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+     */
+    public String getConfigParam() {
+        return this.ConfigParam;
+    }
+
+    /**
+     * Set 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+     * @param ConfigParam 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+     */
+    public void setConfigParam(String ConfigParam) {
+        this.ConfigParam = ConfigParam;
+    }
+
     public CreateEmbedTokenRequest() {
     }
 
@@ -548,6 +571,9 @@ Operator 目前支持
         if (source.TokenNum != null) {
             this.TokenNum = new Long(source.TokenNum);
         }
+        if (source.ConfigParam != null) {
+            this.ConfigParam = new String(source.ConfigParam);
+        }
     }
 
 
@@ -567,6 +593,7 @@ Operator 目前支持
         this.setParamSimple(map, prefix + "GlobalParam", this.GlobalParam);
         this.setParamSimple(map, prefix + "TokenType", this.TokenType);
         this.setParamSimple(map, prefix + "TokenNum", this.TokenNum);
+        this.setParamSimple(map, prefix + "ConfigParam", this.ConfigParam);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCustomizedConfigAssociateListRequest extends AbstractModel {
 
     /**
-    * 配置ID
+    * 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/product/214/60009) 接口获取。
     */
     @SerializedName("UconfigId")
     @Expose
@@ -45,23 +45,23 @@ public class DescribeCustomizedConfigAssociateListRequest extends AbstractModel 
     private Long Limit;
 
     /**
-    * 搜索域名
+    * 搜索域名，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/product/214/46916) 接口返回值的 `Domain` 字段查询。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-     * Get 配置ID 
-     * @return UconfigId 配置ID
+     * Get 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/product/214/60009) 接口获取。 
+     * @return UconfigId 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/product/214/60009) 接口获取。
      */
     public String getUconfigId() {
         return this.UconfigId;
     }
 
     /**
-     * Set 配置ID
-     * @param UconfigId 配置ID
+     * Set 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/product/214/60009) 接口获取。
+     * @param UconfigId 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/product/214/60009) 接口获取。
      */
     public void setUconfigId(String UconfigId) {
         this.UconfigId = UconfigId;
@@ -100,16 +100,16 @@ public class DescribeCustomizedConfigAssociateListRequest extends AbstractModel 
     }
 
     /**
-     * Get 搜索域名 
-     * @return Domain 搜索域名
+     * Get 搜索域名，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/product/214/46916) 接口返回值的 `Domain` 字段查询。 
+     * @return Domain 搜索域名，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/product/214/46916) 接口返回值的 `Domain` 字段查询。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 搜索域名
-     * @param Domain 搜索域名
+     * Set 搜索域名，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/product/214/46916) 接口返回值的 `Domain` 字段查询。
+     * @param Domain 搜索域名，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/product/214/46916) 接口返回值的 `Domain` 字段查询。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

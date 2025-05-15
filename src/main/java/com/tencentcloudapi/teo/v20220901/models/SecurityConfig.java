@@ -25,7 +25,6 @@ public class SecurityConfig extends AbstractModel {
 
     /**
     * 托管规则。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WafConfig")
     @Expose
@@ -33,7 +32,6 @@ public class SecurityConfig extends AbstractModel {
 
     /**
     * 速率限制。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RateLimitConfig")
     @Expose
@@ -41,7 +39,6 @@ public class SecurityConfig extends AbstractModel {
 
     /**
     * 自定义规则。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AclConfig")
     @Expose
@@ -49,7 +46,6 @@ public class SecurityConfig extends AbstractModel {
 
     /**
     * Bot配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BotConfig")
     @Expose
@@ -57,7 +53,6 @@ public class SecurityConfig extends AbstractModel {
 
     /**
     * 七层防护总开关。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchConfig")
     @Expose
@@ -65,7 +60,6 @@ public class SecurityConfig extends AbstractModel {
 
     /**
     * 基础访问管控。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpTableConfig")
     @Expose
@@ -73,7 +67,6 @@ public class SecurityConfig extends AbstractModel {
 
     /**
     * 例外规则配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExceptConfig")
     @Expose
@@ -81,7 +74,6 @@ public class SecurityConfig extends AbstractModel {
 
     /**
     * 自定义拦截页面配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropPageConfig")
     @Expose
@@ -89,7 +81,6 @@ public class SecurityConfig extends AbstractModel {
 
     /**
     * 模板配置。此处仅出参数使用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateConfig")
     @Expose
@@ -97,7 +88,6 @@ public class SecurityConfig extends AbstractModel {
 
     /**
     * 慢速攻击配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlowPostConfig")
     @Expose
@@ -105,17 +95,14 @@ public class SecurityConfig extends AbstractModel {
 
     /**
     * 检测长度限制配置。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectLengthLimitConfig")
     @Expose
     private DetectLengthLimitConfig DetectLengthLimitConfig;
 
     /**
-     * Get 托管规则。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 托管规则。如果入参为空或不填，默认使用历史配置。 
      * @return WafConfig 托管规则。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WafConfig getWafConfig() {
         return this.WafConfig;
@@ -123,19 +110,15 @@ public class SecurityConfig extends AbstractModel {
 
     /**
      * Set 托管规则。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WafConfig 托管规则。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWafConfig(WafConfig WafConfig) {
         this.WafConfig = WafConfig;
     }
 
     /**
-     * Get 速率限制。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 速率限制。如果入参为空或不填，默认使用历史配置。 
      * @return RateLimitConfig 速率限制。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RateLimitConfig getRateLimitConfig() {
         return this.RateLimitConfig;
@@ -143,19 +126,15 @@ public class SecurityConfig extends AbstractModel {
 
     /**
      * Set 速率限制。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitConfig 速率限制。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRateLimitConfig(RateLimitConfig RateLimitConfig) {
         this.RateLimitConfig = RateLimitConfig;
     }
 
     /**
-     * Get 自定义规则。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义规则。如果入参为空或不填，默认使用历史配置。 
      * @return AclConfig 自定义规则。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AclConfig getAclConfig() {
         return this.AclConfig;
@@ -163,19 +142,15 @@ public class SecurityConfig extends AbstractModel {
 
     /**
      * Set 自定义规则。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AclConfig 自定义规则。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAclConfig(AclConfig AclConfig) {
         this.AclConfig = AclConfig;
     }
 
     /**
-     * Get Bot配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Bot配置。如果入参为空或不填，默认使用历史配置。 
      * @return BotConfig Bot配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BotConfig getBotConfig() {
         return this.BotConfig;
@@ -183,19 +158,15 @@ public class SecurityConfig extends AbstractModel {
 
     /**
      * Set Bot配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BotConfig Bot配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBotConfig(BotConfig BotConfig) {
         this.BotConfig = BotConfig;
     }
 
     /**
-     * Get 七层防护总开关。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 七层防护总开关。如果入参为空或不填，默认使用历史配置。 
      * @return SwitchConfig 七层防护总开关。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SwitchConfig getSwitchConfig() {
         return this.SwitchConfig;
@@ -203,19 +174,15 @@ public class SecurityConfig extends AbstractModel {
 
     /**
      * Set 七层防护总开关。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchConfig 七层防护总开关。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchConfig(SwitchConfig SwitchConfig) {
         this.SwitchConfig = SwitchConfig;
     }
 
     /**
-     * Get 基础访问管控。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基础访问管控。如果入参为空或不填，默认使用历史配置。 
      * @return IpTableConfig 基础访问管控。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpTableConfig getIpTableConfig() {
         return this.IpTableConfig;
@@ -223,19 +190,15 @@ public class SecurityConfig extends AbstractModel {
 
     /**
      * Set 基础访问管控。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpTableConfig 基础访问管控。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpTableConfig(IpTableConfig IpTableConfig) {
         this.IpTableConfig = IpTableConfig;
     }
 
     /**
-     * Get 例外规则配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 例外规则配置。如果入参为空或不填，默认使用历史配置。 
      * @return ExceptConfig 例外规则配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExceptConfig getExceptConfig() {
         return this.ExceptConfig;
@@ -243,19 +206,15 @@ public class SecurityConfig extends AbstractModel {
 
     /**
      * Set 例外规则配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExceptConfig 例外规则配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExceptConfig(ExceptConfig ExceptConfig) {
         this.ExceptConfig = ExceptConfig;
     }
 
     /**
-     * Get 自定义拦截页面配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义拦截页面配置。如果入参为空或不填，默认使用历史配置。 
      * @return DropPageConfig 自定义拦截页面配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DropPageConfig getDropPageConfig() {
         return this.DropPageConfig;
@@ -263,19 +222,15 @@ public class SecurityConfig extends AbstractModel {
 
     /**
      * Set 自定义拦截页面配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DropPageConfig 自定义拦截页面配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropPageConfig(DropPageConfig DropPageConfig) {
         this.DropPageConfig = DropPageConfig;
     }
 
     /**
-     * Get 模板配置。此处仅出参数使用。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板配置。此处仅出参数使用。 
      * @return TemplateConfig 模板配置。此处仅出参数使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TemplateConfig getTemplateConfig() {
         return this.TemplateConfig;
@@ -283,19 +238,15 @@ public class SecurityConfig extends AbstractModel {
 
     /**
      * Set 模板配置。此处仅出参数使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateConfig 模板配置。此处仅出参数使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateConfig(TemplateConfig TemplateConfig) {
         this.TemplateConfig = TemplateConfig;
     }
 
     /**
-     * Get 慢速攻击配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 慢速攻击配置。如果入参为空或不填，默认使用历史配置。 
      * @return SlowPostConfig 慢速攻击配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlowPostConfig getSlowPostConfig() {
         return this.SlowPostConfig;
@@ -303,19 +254,15 @@ public class SecurityConfig extends AbstractModel {
 
     /**
      * Set 慢速攻击配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlowPostConfig 慢速攻击配置。如果入参为空或不填，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlowPostConfig(SlowPostConfig SlowPostConfig) {
         this.SlowPostConfig = SlowPostConfig;
     }
 
     /**
-     * Get 检测长度限制配置。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测长度限制配置。仅出参使用。 
      * @return DetectLengthLimitConfig 检测长度限制配置。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetectLengthLimitConfig getDetectLengthLimitConfig() {
         return this.DetectLengthLimitConfig;
@@ -323,9 +270,7 @@ public class SecurityConfig extends AbstractModel {
 
     /**
      * Set 检测长度限制配置。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectLengthLimitConfig 检测长度限制配置。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectLengthLimitConfig(DetectLengthLimitConfig DetectLengthLimitConfig) {
         this.DetectLengthLimitConfig = DetectLengthLimitConfig;

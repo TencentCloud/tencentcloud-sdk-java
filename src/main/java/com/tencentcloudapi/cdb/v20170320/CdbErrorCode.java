@@ -231,6 +231,9 @@ public enum CdbErrorCode {
      /* 请求执行异常。 */
      INTERNALERROR_INTERNALHTTPSERVERERROR("InternalError.InternalHttpServerError"),
      
+     /* 内部服务异常，请稍后重试 */
+     INTERNALERROR_INTERNALINNERSERVICEERROR("InternalError.InternalInnerServiceError"),
+     
      /* 后台请求服务失败，请稍后重试。 */
      INTERNALERROR_INTERNALREQUESTERROR("InternalError.InternalRequestError"),
      
@@ -284,6 +287,9 @@ public enum CdbErrorCode {
      
      /* 交易系统错误。 */
      INTERNALERROR_TRADEERROR("InternalError.TradeError"),
+     
+     /* 开启事务失败 */
+     INTERNALERROR_TRANSACTIOBEGINERROR("InternalError.TransactioBeginError"),
      
      /* 操作失败。 */
      INTERNALERROR_TRANSACTIONBEGINERROR("InternalError.TransactionBeginError"),

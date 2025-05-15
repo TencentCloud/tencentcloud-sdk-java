@@ -38,7 +38,7 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
     private String ImageId;
 
     /**
-    * 启动配置所属项目ID。不填为默认项目。
+    * 启动配置所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
 注意：伸缩组内实例所属项目ID取伸缩组项目ID，与这里取值无关。
     */
     @SerializedName("ProjectId")
@@ -122,21 +122,21 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
 
     /**
     * 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-`InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
+`InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
     */
     @SerializedName("InstanceTypes")
     @Expose
     private String [] InstanceTypes;
 
     /**
-    * CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+    * CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
     */
     @SerializedName("CamRoleName")
     @Expose
     private String CamRoleName;
 
     /**
-    * 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+    * 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。该参数仅在 InstanceTypes 入参包含多个机型时生效。
 <li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li>
 <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li>
 
@@ -193,7 +193,7 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
     private String DiskTypePolicy;
 
     /**
-    * 高性能计算集群ID。<br>
+    * 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。
     */
     @SerializedName("HpcClusterId")
@@ -215,14 +215,14 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
     private String [] DisasterRecoverGroupIds;
 
     /**
-    * 镜像族名称。镜像Id与镜像族名称，二者必填一个且只能填写一个。
+    * 镜像族名称。镜像Id与镜像族名称，二者必填一个且只能填写一个。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
     */
     @SerializedName("ImageFamily")
     @Expose
     private String ImageFamily;
 
     /**
-    * 本地专用集群ID。
+    * 本地专用集群ID。可通过 [DescribeDedicatedClusters](https://cloud.tencent.com/document/product/1346/73758) 接口获取该参数。
     */
     @SerializedName("DedicatedClusterId")
     @Expose
@@ -268,9 +268,9 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Get 启动配置所属项目ID。不填为默认项目。
+     * Get 启动配置所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
 注意：伸缩组内实例所属项目ID取伸缩组项目ID，与这里取值无关。 
-     * @return ProjectId 启动配置所属项目ID。不填为默认项目。
+     * @return ProjectId 启动配置所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
 注意：伸缩组内实例所属项目ID取伸缩组项目ID，与这里取值无关。
      */
     public Long getProjectId() {
@@ -278,9 +278,9 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Set 启动配置所属项目ID。不填为默认项目。
+     * Set 启动配置所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
 注意：伸缩组内实例所属项目ID取伸缩组项目ID，与这里取值无关。
-     * @param ProjectId 启动配置所属项目ID。不填为默认项目。
+     * @param ProjectId 启动配置所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
 注意：伸缩组内实例所属项目ID取伸缩组项目ID，与这里取值无关。
      */
     public void setProjectId(Long ProjectId) {
@@ -469,9 +469,9 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
 
     /**
      * Get 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-`InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。 
+`InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。 
      * @return InstanceTypes 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-`InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
+`InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
@@ -479,38 +479,38 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
 
     /**
      * Set 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-`InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
+`InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
      * @param InstanceTypes 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-`InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
+`InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
     }
 
     /**
-     * Get CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。 
-     * @return CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * Get CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。 
+     * @return CamRoleName CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
      */
     public String getCamRoleName() {
         return this.CamRoleName;
     }
 
     /**
-     * Set CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
-     * @param CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * Set CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+     * @param CamRoleName CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
      */
     public void setCamRoleName(String CamRoleName) {
         this.CamRoleName = CamRoleName;
     }
 
     /**
-     * Get 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+     * Get 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。该参数仅在 InstanceTypes 入参包含多个机型时生效。
 <li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li>
 <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li>
 
 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。 
-     * @return InstanceTypesCheckPolicy 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+     * @return InstanceTypesCheckPolicy 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。该参数仅在 InstanceTypes 入参包含多个机型时生效。
 <li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li>
 <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li>
 
@@ -522,13 +522,13 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Set 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+     * Set 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。该参数仅在 InstanceTypes 入参包含多个机型时生效。
 <li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li>
 <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li>
 
 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
-     * @param InstanceTypesCheckPolicy 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+     * @param InstanceTypesCheckPolicy 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。该参数仅在 InstanceTypes 入参包含多个机型时生效。
 <li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li>
 <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li>
 
@@ -648,9 +648,9 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Get 高性能计算集群ID。<br>
+     * Get 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。 
-     * @return HpcClusterId 高性能计算集群ID。<br>
+     * @return HpcClusterId 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。
      */
     public String getHpcClusterId() {
@@ -658,9 +658,9 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Set 高性能计算集群ID。<br>
+     * Set 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。
-     * @param HpcClusterId 高性能计算集群ID。<br>
+     * @param HpcClusterId 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。
      */
     public void setHpcClusterId(String HpcClusterId) {
@@ -700,32 +700,32 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Get 镜像族名称。镜像Id与镜像族名称，二者必填一个且只能填写一个。 
-     * @return ImageFamily 镜像族名称。镜像Id与镜像族名称，二者必填一个且只能填写一个。
+     * Get 镜像族名称。镜像Id与镜像族名称，二者必填一个且只能填写一个。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。 
+     * @return ImageFamily 镜像族名称。镜像Id与镜像族名称，二者必填一个且只能填写一个。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
      */
     public String getImageFamily() {
         return this.ImageFamily;
     }
 
     /**
-     * Set 镜像族名称。镜像Id与镜像族名称，二者必填一个且只能填写一个。
-     * @param ImageFamily 镜像族名称。镜像Id与镜像族名称，二者必填一个且只能填写一个。
+     * Set 镜像族名称。镜像Id与镜像族名称，二者必填一个且只能填写一个。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
+     * @param ImageFamily 镜像族名称。镜像Id与镜像族名称，二者必填一个且只能填写一个。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
      */
     public void setImageFamily(String ImageFamily) {
         this.ImageFamily = ImageFamily;
     }
 
     /**
-     * Get 本地专用集群ID。 
-     * @return DedicatedClusterId 本地专用集群ID。
+     * Get 本地专用集群ID。可通过 [DescribeDedicatedClusters](https://cloud.tencent.com/document/product/1346/73758) 接口获取该参数。 
+     * @return DedicatedClusterId 本地专用集群ID。可通过 [DescribeDedicatedClusters](https://cloud.tencent.com/document/product/1346/73758) 接口获取该参数。
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set 本地专用集群ID。
-     * @param DedicatedClusterId 本地专用集群ID。
+     * Set 本地专用集群ID。可通过 [DescribeDedicatedClusters](https://cloud.tencent.com/document/product/1346/73758) 接口获取该参数。
+     * @param DedicatedClusterId 本地专用集群ID。可通过 [DescribeDedicatedClusters](https://cloud.tencent.com/document/product/1346/73758) 接口获取该参数。
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;

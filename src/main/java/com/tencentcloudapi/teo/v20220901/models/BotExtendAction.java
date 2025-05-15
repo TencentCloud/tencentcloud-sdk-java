@@ -39,7 +39,6 @@ public class BotExtendAction extends AbstractModel {
 
     /**
     * 处置方式的触发概率，范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Percent")
     @Expose
@@ -90,10 +89,8 @@ public class BotExtendAction extends AbstractModel {
     }
 
     /**
-     * Get 处置方式的触发概率，范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处置方式的触发概率，范围0-100。 
      * @return Percent 处置方式的触发概率，范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPercent() {
         return this.Percent;
@@ -101,9 +98,7 @@ public class BotExtendAction extends AbstractModel {
 
     /**
      * Set 处置方式的触发概率，范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Percent 处置方式的触发概率，范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;

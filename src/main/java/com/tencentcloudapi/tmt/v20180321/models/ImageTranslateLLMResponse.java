@@ -24,6 +24,42 @@ import java.util.HashMap;
 public class ImageTranslateLLMResponse extends AbstractModel {
 
     /**
+    * 图片数据的Base64字符串，输出格式为JPG。
+
+    */
+    @SerializedName("Data")
+    @Expose
+    private String Data;
+
+    /**
+    * 原文本主要源语言。
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
+    * 目标翻译语言。
+    */
+    @SerializedName("Target")
+    @Expose
+    private String Target;
+
+    /**
+    * 图片中的全部原文本。
+    */
+    @SerializedName("SourceText")
+    @Expose
+    private String SourceText;
+
+    /**
+    * 图片中全部译文。
+    */
+    @SerializedName("TargetText")
+    @Expose
+    private String TargetText;
+
+    /**
     * 逆时针图片角度，取值范围为0-359
     */
     @SerializedName("Angle")
@@ -43,6 +79,90 @@ public class ImageTranslateLLMResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 图片数据的Base64字符串，输出格式为JPG。
+ 
+     * @return Data 图片数据的Base64字符串，输出格式为JPG。
+
+     */
+    public String getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 图片数据的Base64字符串，输出格式为JPG。
+
+     * @param Data 图片数据的Base64字符串，输出格式为JPG。
+
+     */
+    public void setData(String Data) {
+        this.Data = Data;
+    }
+
+    /**
+     * Get 原文本主要源语言。 
+     * @return Source 原文本主要源语言。
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 原文本主要源语言。
+     * @param Source 原文本主要源语言。
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
+    /**
+     * Get 目标翻译语言。 
+     * @return Target 目标翻译语言。
+     */
+    public String getTarget() {
+        return this.Target;
+    }
+
+    /**
+     * Set 目标翻译语言。
+     * @param Target 目标翻译语言。
+     */
+    public void setTarget(String Target) {
+        this.Target = Target;
+    }
+
+    /**
+     * Get 图片中的全部原文本。 
+     * @return SourceText 图片中的全部原文本。
+     */
+    public String getSourceText() {
+        return this.SourceText;
+    }
+
+    /**
+     * Set 图片中的全部原文本。
+     * @param SourceText 图片中的全部原文本。
+     */
+    public void setSourceText(String SourceText) {
+        this.SourceText = SourceText;
+    }
+
+    /**
+     * Get 图片中全部译文。 
+     * @return TargetText 图片中全部译文。
+     */
+    public String getTargetText() {
+        return this.TargetText;
+    }
+
+    /**
+     * Set 图片中全部译文。
+     * @param TargetText 图片中全部译文。
+     */
+    public void setTargetText(String TargetText) {
+        this.TargetText = TargetText;
+    }
 
     /**
      * Get 逆时针图片角度，取值范围为0-359 
@@ -100,6 +220,21 @@ public class ImageTranslateLLMResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ImageTranslateLLMResponse(ImageTranslateLLMResponse source) {
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Target != null) {
+            this.Target = new String(source.Target);
+        }
+        if (source.SourceText != null) {
+            this.SourceText = new String(source.SourceText);
+        }
+        if (source.TargetText != null) {
+            this.TargetText = new String(source.TargetText);
+        }
         if (source.Angle != null) {
             this.Angle = new Float(source.Angle);
         }
@@ -119,6 +254,11 @@ public class ImageTranslateLLMResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "Target", this.Target);
+        this.setParamSimple(map, prefix + "SourceText", this.SourceText);
+        this.setParamSimple(map, prefix + "TargetText", this.TargetText);
         this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamArrayObj(map, prefix + "TransDetails.", this.TransDetails);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

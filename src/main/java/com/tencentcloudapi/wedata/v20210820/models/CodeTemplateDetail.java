@@ -152,12 +152,20 @@ public class CodeTemplateDetail extends AbstractModel {
     private Boolean Submit;
 
     /**
-    * 任务脚本是否发生变化
+    * 模版脚本是否发生变化
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScriptChange")
     @Expose
     private Boolean ScriptChange;
+
+    /**
+    * 代码模版脚本，base64编码返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Content")
+    @Expose
+    private String Content;
 
     /**
      * Get 项目id
@@ -480,9 +488,9 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get 任务脚本是否发生变化
+     * Get 模版脚本是否发生变化
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScriptChange 任务脚本是否发生变化
+     * @return ScriptChange 模版脚本是否发生变化
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getScriptChange() {
@@ -490,13 +498,33 @@ public class CodeTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Set 任务脚本是否发生变化
+     * Set 模版脚本是否发生变化
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScriptChange 任务脚本是否发生变化
+     * @param ScriptChange 模版脚本是否发生变化
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScriptChange(Boolean ScriptChange) {
         this.ScriptChange = ScriptChange;
+    }
+
+    /**
+     * Get 代码模版脚本，base64编码返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Content 代码模版脚本，base64编码返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContent() {
+        return this.Content;
+    }
+
+    /**
+     * Set 代码模版脚本，base64编码返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Content 代码模版脚本，base64编码返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContent(String Content) {
+        this.Content = Content;
     }
 
     public CodeTemplateDetail() {
@@ -558,6 +586,9 @@ public class CodeTemplateDetail extends AbstractModel {
         if (source.ScriptChange != null) {
             this.ScriptChange = new Boolean(source.ScriptChange);
         }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
     }
 
 
@@ -582,6 +613,7 @@ public class CodeTemplateDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceGroup", this.ResourceGroup);
         this.setParamSimple(map, prefix + "Submit", this.Submit);
         this.setParamSimple(map, prefix + "ScriptChange", this.ScriptChange);
+        this.setParamSimple(map, prefix + "Content", this.Content);
 
     }
 }

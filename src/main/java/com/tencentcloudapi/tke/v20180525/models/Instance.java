@@ -74,6 +74,7 @@ public class Instance extends AbstractModel {
 
     /**
     * 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LanIP")
     @Expose
@@ -206,8 +207,10 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 节点内网IP 
+     * Get 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LanIP 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLanIP() {
         return this.LanIP;
@@ -215,7 +218,9 @@ public class Instance extends AbstractModel {
 
     /**
      * Set 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LanIP 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLanIP(String LanIP) {
         this.LanIP = LanIP;

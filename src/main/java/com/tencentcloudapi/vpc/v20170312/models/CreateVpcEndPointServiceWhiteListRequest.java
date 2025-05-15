@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateVpcEndPointServiceWhiteListRequest extends AbstractModel {
 
     /**
-    * UIN。
+    * UIN。腾讯云账号中心控制台获取。
     */
     @SerializedName("UserUin")
     @Expose
     private String UserUin;
 
     /**
-    * 终端节点服务ID。
+    * 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
     */
     @SerializedName("EndPointServiceId")
     @Expose
     private String EndPointServiceId;
 
     /**
-    * 白名单描述。
+    * 白名单描述。长度不超过60个字符。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get UIN。 
-     * @return UserUin UIN。
+     * Get UIN。腾讯云账号中心控制台获取。 
+     * @return UserUin UIN。腾讯云账号中心控制台获取。
      */
     public String getUserUin() {
         return this.UserUin;
     }
 
     /**
-     * Set UIN。
-     * @param UserUin UIN。
+     * Set UIN。腾讯云账号中心控制台获取。
+     * @param UserUin UIN。腾讯云账号中心控制台获取。
      */
     public void setUserUin(String UserUin) {
         this.UserUin = UserUin;
     }
 
     /**
-     * Get 终端节点服务ID。 
-     * @return EndPointServiceId 终端节点服务ID。
+     * Get 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。 
+     * @return EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public String getEndPointServiceId() {
         return this.EndPointServiceId;
     }
 
     /**
-     * Set 终端节点服务ID。
-     * @param EndPointServiceId 终端节点服务ID。
+     * Set 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+     * @param EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public void setEndPointServiceId(String EndPointServiceId) {
         this.EndPointServiceId = EndPointServiceId;
     }
 
     /**
-     * Get 白名单描述。 
-     * @return Description 白名单描述。
+     * Get 白名单描述。长度不超过60个字符。 
+     * @return Description 白名单描述。长度不超过60个字符。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 白名单描述。
-     * @param Description 白名单描述。
+     * Set 白名单描述。长度不超过60个字符。
+     * @param Description 白名单描述。长度不超过60个字符。
      */
     public void setDescription(String Description) {
         this.Description = Description;

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class ModifyAutoScalingGroupRequest extends AbstractModel {
 
     /**
-    * 伸缩组ID
+    * 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
@@ -38,49 +40,51 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     private String AutoScalingGroupName;
 
     /**
-    * 默认冷却时间，单位秒，默认值为300
+    * 默认冷却时间，单位秒，取值范围 [0,3600]，默认值为300。
     */
     @SerializedName("DefaultCooldown")
     @Expose
     private Long DefaultCooldown;
 
     /**
-    * 期望实例数，大小介于最小实例数和最大实例数之间
+    * 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
     */
     @SerializedName("DesiredCapacity")
     @Expose
     private Long DesiredCapacity;
 
     /**
-    * 启动配置ID
+    * 启动配置ID。可以通过如下方式获取可用的启动配置ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
     */
     @SerializedName("LaunchConfigurationId")
     @Expose
     private String LaunchConfigurationId;
 
     /**
-    * 最大实例数，取值范围为0-2000。
+    * 最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-    * 最小实例数，取值范围为0-2000。
+    * 最小实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * 项目ID
+    * 项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 ProjectId 字段来获取。默认值为 0，表示使用默认项目。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 子网ID列表
+    * 子网ID列表。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -96,7 +100,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     private String [] TerminationPolicies;
 
     /**
-    * VPC ID，基础网络则填空字符串。修改为具体VPC ID时，需指定相应的SubnetIds；修改为基础网络时，需指定相应的Zones。
+    * 私有网络ID。修改私有网络时，需将 SubnetIds 参数同步修改为该私有网络的子网。有效的 VpcId 可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的 VpcId 字段获取。
     */
     @SerializedName("VpcId")
     @Expose
@@ -139,7 +143,7 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     private ServiceSettings ServiceSettings;
 
     /**
-    * 实例具有IPv6地址数量的配置，取值包括0、1。
+    * 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
     */
     @SerializedName("Ipv6AddressCount")
     @Expose
@@ -209,16 +213,24 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     private InstanceNameIndexSettings InstanceNameIndexSettings;
 
     /**
-     * Get 伸缩组ID 
-     * @return AutoScalingGroupId 伸缩组ID
+     * Get 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li> 
+     * @return AutoScalingGroupId 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set 伸缩组ID
-     * @param AutoScalingGroupId 伸缩组ID
+     * Set 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+     * @param AutoScalingGroupId 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
@@ -241,112 +253,120 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 默认冷却时间，单位秒，默认值为300 
-     * @return DefaultCooldown 默认冷却时间，单位秒，默认值为300
+     * Get 默认冷却时间，单位秒，取值范围 [0,3600]，默认值为300。 
+     * @return DefaultCooldown 默认冷却时间，单位秒，取值范围 [0,3600]，默认值为300。
      */
     public Long getDefaultCooldown() {
         return this.DefaultCooldown;
     }
 
     /**
-     * Set 默认冷却时间，单位秒，默认值为300
-     * @param DefaultCooldown 默认冷却时间，单位秒，默认值为300
+     * Set 默认冷却时间，单位秒，取值范围 [0,3600]，默认值为300。
+     * @param DefaultCooldown 默认冷却时间，单位秒，取值范围 [0,3600]，默认值为300。
      */
     public void setDefaultCooldown(Long DefaultCooldown) {
         this.DefaultCooldown = DefaultCooldown;
     }
 
     /**
-     * Get 期望实例数，大小介于最小实例数和最大实例数之间 
-     * @return DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间
+     * Get 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。 
+     * @return DesiredCapacity 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public Long getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
     /**
-     * Set 期望实例数，大小介于最小实例数和最大实例数之间
-     * @param DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间
+     * Set 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param DesiredCapacity 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public void setDesiredCapacity(Long DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;
     }
 
     /**
-     * Get 启动配置ID 
-     * @return LaunchConfigurationId 启动配置ID
+     * Get 启动配置ID。可以通过如下方式获取可用的启动配置ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li> 
+     * @return LaunchConfigurationId 启动配置ID。可以通过如下方式获取可用的启动配置ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
      */
     public String getLaunchConfigurationId() {
         return this.LaunchConfigurationId;
     }
 
     /**
-     * Set 启动配置ID
-     * @param LaunchConfigurationId 启动配置ID
+     * Set 启动配置ID。可以通过如下方式获取可用的启动配置ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
+     * @param LaunchConfigurationId 启动配置ID。可以通过如下方式获取可用的启动配置ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
         this.LaunchConfigurationId = LaunchConfigurationId;
     }
 
     /**
-     * Get 最大实例数，取值范围为0-2000。 
-     * @return MaxSize 最大实例数，取值范围为0-2000。
+     * Get 最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。 
+     * @return MaxSize 最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 最大实例数，取值范围为0-2000。
-     * @param MaxSize 最大实例数，取值范围为0-2000。
+     * Set 最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param MaxSize 最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
     /**
-     * Get 最小实例数，取值范围为0-2000。 
-     * @return MinSize 最小实例数，取值范围为0-2000。
+     * Get 最小实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。 
+     * @return MinSize 最小实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set 最小实例数，取值范围为0-2000。
-     * @param MinSize 最小实例数，取值范围为0-2000。
+     * Set 最小实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param MinSize 最小实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get 项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 ProjectId 字段来获取。默认值为 0，表示使用默认项目。 
+     * @return ProjectId 项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 ProjectId 字段来获取。默认值为 0，表示使用默认项目。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set 项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 ProjectId 字段来获取。默认值为 0，表示使用默认项目。
+     * @param ProjectId 项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 ProjectId 字段来获取。默认值为 0，表示使用默认项目。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 子网ID列表 
-     * @return SubnetIds 子网ID列表
+     * Get 子网ID列表。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。 
+     * @return SubnetIds 子网ID列表。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网ID列表
-     * @param SubnetIds 子网ID列表
+     * Set 子网ID列表。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
+     * @param SubnetIds 子网ID列表。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
@@ -377,16 +397,16 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get VPC ID，基础网络则填空字符串。修改为具体VPC ID时，需指定相应的SubnetIds；修改为基础网络时，需指定相应的Zones。 
-     * @return VpcId VPC ID，基础网络则填空字符串。修改为具体VPC ID时，需指定相应的SubnetIds；修改为基础网络时，需指定相应的Zones。
+     * Get 私有网络ID。修改私有网络时，需将 SubnetIds 参数同步修改为该私有网络的子网。有效的 VpcId 可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的 VpcId 字段获取。 
+     * @return VpcId 私有网络ID。修改私有网络时，需将 SubnetIds 参数同步修改为该私有网络的子网。有效的 VpcId 可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的 VpcId 字段获取。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID，基础网络则填空字符串。修改为具体VPC ID时，需指定相应的SubnetIds；修改为基础网络时，需指定相应的Zones。
-     * @param VpcId VPC ID，基础网络则填空字符串。修改为具体VPC ID时，需指定相应的SubnetIds；修改为基础网络时，需指定相应的Zones。
+     * Set 私有网络ID。修改私有网络时，需将 SubnetIds 参数同步修改为该私有网络的子网。有效的 VpcId 可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的 VpcId 字段获取。
+     * @param VpcId 私有网络ID。修改私有网络时，需将 SubnetIds 参数同步修改为该私有网络的子网。有效的 VpcId 可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的 VpcId 字段获取。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -489,16 +509,16 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例具有IPv6地址数量的配置，取值包括0、1。 
-     * @return Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。
+     * Get 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。 
+     * @return Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
      */
     public Long getIpv6AddressCount() {
         return this.Ipv6AddressCount;
     }
 
     /**
-     * Set 实例具有IPv6地址数量的配置，取值包括0、1。
-     * @param Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。
+     * Set 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
+     * @param Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
      */
     public void setIpv6AddressCount(Long Ipv6AddressCount) {
         this.Ipv6AddressCount = Ipv6AddressCount;

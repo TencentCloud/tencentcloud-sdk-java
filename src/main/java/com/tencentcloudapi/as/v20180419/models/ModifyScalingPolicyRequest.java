@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyScalingPolicyRequest extends AbstractModel {
 
     /**
-    * 告警策略ID。
+    * 告警策略ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。
     */
     @SerializedName("AutoScalingPolicyId")
     @Expose
     private String AutoScalingPolicyId;
 
     /**
-    * 告警策略名称。
+    * 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
     */
     @SerializedName("ScalingPolicyName")
     @Expose
@@ -102,32 +102,32 @@ public class ModifyScalingPolicyRequest extends AbstractModel {
     private String [] NotificationUserGroupIds;
 
     /**
-     * Get 告警策略ID。 
-     * @return AutoScalingPolicyId 告警策略ID。
+     * Get 告警策略ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。 
+     * @return AutoScalingPolicyId 告警策略ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。
      */
     public String getAutoScalingPolicyId() {
         return this.AutoScalingPolicyId;
     }
 
     /**
-     * Set 告警策略ID。
-     * @param AutoScalingPolicyId 告警策略ID。
+     * Set 告警策略ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。
+     * @param AutoScalingPolicyId 告警策略ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) ，取返回信息中的 AutoScalingPolicyId 获取告警策略ID。
      */
     public void setAutoScalingPolicyId(String AutoScalingPolicyId) {
         this.AutoScalingPolicyId = AutoScalingPolicyId;
     }
 
     /**
-     * Get 告警策略名称。 
-     * @return ScalingPolicyName 告警策略名称。
+     * Get 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。 
+     * @return ScalingPolicyName 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
      */
     public String getScalingPolicyName() {
         return this.ScalingPolicyName;
     }
 
     /**
-     * Set 告警策略名称。
-     * @param ScalingPolicyName 告警策略名称。
+     * Set 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
+     * @param ScalingPolicyName 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
      */
     public void setScalingPolicyName(String ScalingPolicyName) {
         this.ScalingPolicyName = ScalingPolicyName;

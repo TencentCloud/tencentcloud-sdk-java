@@ -24,21 +24,22 @@ import java.util.HashMap;
 public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel {
 
     /**
-    * 终端节点服务ID。
+    * 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+
     */
     @SerializedName("EndPointServiceId")
     @Expose
     private String EndPointServiceId;
 
     /**
-    * VPCID。
+    * VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 终端节点服务名称。
+    * 终端节点服务名称。长度不超过60个字符。
     */
     @SerializedName("EndPointServiceName")
     @Expose
@@ -52,7 +53,11 @@ public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel {
     private Boolean AutoAcceptFlag;
 
     /**
-    * 后端服务的ID，比如lb-xxx。
+    * 后端服务的ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；
+MYSQL可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；
+CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；
+GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取
+
     */
     @SerializedName("ServiceInstanceId")
     @Expose
@@ -66,48 +71,52 @@ public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel {
     private String IpAddressType;
 
     /**
-     * Get 终端节点服务ID。 
-     * @return EndPointServiceId 终端节点服务ID。
+     * Get 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+ 
+     * @return EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+
      */
     public String getEndPointServiceId() {
         return this.EndPointServiceId;
     }
 
     /**
-     * Set 终端节点服务ID。
-     * @param EndPointServiceId 终端节点服务ID。
+     * Set 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+
+     * @param EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+
      */
     public void setEndPointServiceId(String EndPointServiceId) {
         this.EndPointServiceId = EndPointServiceId;
     }
 
     /**
-     * Get VPCID。 
-     * @return VpcId VPCID。
+     * Get VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。 
+     * @return VpcId VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPCID。
-     * @param VpcId VPCID。
+     * Set VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+     * @param VpcId VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 终端节点服务名称。 
-     * @return EndPointServiceName 终端节点服务名称。
+     * Get 终端节点服务名称。长度不超过60个字符。 
+     * @return EndPointServiceName 终端节点服务名称。长度不超过60个字符。
      */
     public String getEndPointServiceName() {
         return this.EndPointServiceName;
     }
 
     /**
-     * Set 终端节点服务名称。
-     * @param EndPointServiceName 终端节点服务名称。
+     * Set 终端节点服务名称。长度不超过60个字符。
+     * @param EndPointServiceName 终端节点服务名称。长度不超过60个字符。
      */
     public void setEndPointServiceName(String EndPointServiceName) {
         this.EndPointServiceName = EndPointServiceName;
@@ -130,16 +139,32 @@ public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 后端服务的ID，比如lb-xxx。 
-     * @return ServiceInstanceId 后端服务的ID，比如lb-xxx。
+     * Get 后端服务的ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；
+MYSQL可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；
+CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；
+GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取
+ 
+     * @return ServiceInstanceId 后端服务的ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；
+MYSQL可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；
+CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；
+GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取
+
      */
     public String getServiceInstanceId() {
         return this.ServiceInstanceId;
     }
 
     /**
-     * Set 后端服务的ID，比如lb-xxx。
-     * @param ServiceInstanceId 后端服务的ID，比如lb-xxx。
+     * Set 后端服务的ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；
+MYSQL可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；
+CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；
+GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取
+
+     * @param ServiceInstanceId 后端服务的ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；
+MYSQL可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；
+CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；
+GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取
+
      */
     public void setServiceInstanceId(String ServiceInstanceId) {
         this.ServiceInstanceId = ServiceInstanceId;

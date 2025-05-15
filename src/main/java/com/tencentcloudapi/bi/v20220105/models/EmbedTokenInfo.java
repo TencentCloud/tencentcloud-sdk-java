@@ -178,6 +178,14 @@ public class EmbedTokenInfo extends AbstractModel {
     private Boolean SingleUserMultiToken;
 
     /**
+    * 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigParam")
+    @Expose
+    private String ConfigParam;
+
+    /**
      * Get 信息标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 信息标识
@@ -565,6 +573,26 @@ public class EmbedTokenInfo extends AbstractModel {
         this.SingleUserMultiToken = SingleUserMultiToken;
     }
 
+    /**
+     * Get 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigParam 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConfigParam() {
+        return this.ConfigParam;
+    }
+
+    /**
+     * Set 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigParam 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigParam(String ConfigParam) {
+        this.ConfigParam = ConfigParam;
+    }
+
     public EmbedTokenInfo() {
     }
 
@@ -630,6 +658,9 @@ public class EmbedTokenInfo extends AbstractModel {
         if (source.SingleUserMultiToken != null) {
             this.SingleUserMultiToken = new Boolean(source.SingleUserMultiToken);
         }
+        if (source.ConfigParam != null) {
+            this.ConfigParam = new String(source.ConfigParam);
+        }
     }
 
 
@@ -656,6 +687,7 @@ public class EmbedTokenInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TokenType", this.TokenType);
         this.setParamSimple(map, prefix + "TokenNum", this.TokenNum);
         this.setParamSimple(map, prefix + "SingleUserMultiToken", this.SingleUserMultiToken);
+        this.setParamSimple(map, prefix + "ConfigParam", this.ConfigParam);
 
     }
 }

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class CreateLifecycleHookRequest extends AbstractModel {
 
     /**
-    * 伸缩组ID
+    * 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
@@ -38,14 +40,18 @@ public class CreateLifecycleHookRequest extends AbstractModel {
     private String LifecycleHookName;
 
     /**
-    * 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
+    * 进行生命周期挂钩的场景，取值范围如下:
+<li> INSTANCE_LAUNCHING: 扩容生命周期挂钩</li>
+<li>INSTANCE_TERMINATING: 缩容生命周期挂钩</li>
     */
     @SerializedName("LifecycleTransition")
     @Expose
     private String LifecycleTransition;
 
     /**
-    * 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
+    * 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li>
     */
     @SerializedName("DefaultResult")
     @Expose
@@ -59,7 +65,7 @@ public class CreateLifecycleHookRequest extends AbstractModel {
     private Long HeartbeatTimeout;
 
     /**
-    * 弹性伸缩向通知目标发送的附加信息，配置通知时使用,默认值为空字符串""。最大长度不能超过1024个字节。
+    * 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串，最长不超过 1024 字符。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。
     */
     @SerializedName("NotificationMetadata")
     @Expose
@@ -73,30 +79,39 @@ public class CreateLifecycleHookRequest extends AbstractModel {
     private NotificationTarget NotificationTarget;
 
     /**
-    * 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+    * 进行生命周期挂钩的场景类型，取值范围包括 NORMAL 和 EXTENSION，默认值为 NORMAL。
+说明：设置为EXTENSION值，在 [AttachInstances](https://cloud.tencent.com/document/api/377/20441)、[DetachInstances](https://cloud.tencent.com/document/api/377/20436)、[RemoveInstaces](https://cloud.tencent.com/document/api/377/20431)、[StopAutoScalingInstances](https://cloud.tencent.com/document/api/377/40286)、[StartAutoScalingInstances](https://cloud.tencent.com/document/api/377/40287)、[StartInstanceRefresh](https://cloud.tencent.com/document/api/377/99172) 接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
     */
     @SerializedName("LifecycleTransitionType")
     @Expose
     private String LifecycleTransitionType;
 
     /**
-    * 远程命令执行对象。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
+    * 远程命令执行对象。通知相关参数（NotificationTarget、NotificationMetadata）与该参数互斥，二者不可同时指定。
     */
     @SerializedName("LifecycleCommand")
     @Expose
     private LifecycleCommand LifecycleCommand;
 
     /**
-     * Get 伸缩组ID 
-     * @return AutoScalingGroupId 伸缩组ID
+     * Get 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li> 
+     * @return AutoScalingGroupId 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set 伸缩组ID
-     * @param AutoScalingGroupId 伸缩组ID
+     * Set 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+     * @param AutoScalingGroupId 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
@@ -119,32 +134,48 @@ public class CreateLifecycleHookRequest extends AbstractModel {
     }
 
     /**
-     * Get 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING 
-     * @return LifecycleTransition 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
+     * Get 进行生命周期挂钩的场景，取值范围如下:
+<li> INSTANCE_LAUNCHING: 扩容生命周期挂钩</li>
+<li>INSTANCE_TERMINATING: 缩容生命周期挂钩</li> 
+     * @return LifecycleTransition 进行生命周期挂钩的场景，取值范围如下:
+<li> INSTANCE_LAUNCHING: 扩容生命周期挂钩</li>
+<li>INSTANCE_TERMINATING: 缩容生命周期挂钩</li>
      */
     public String getLifecycleTransition() {
         return this.LifecycleTransition;
     }
 
     /**
-     * Set 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
-     * @param LifecycleTransition 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
+     * Set 进行生命周期挂钩的场景，取值范围如下:
+<li> INSTANCE_LAUNCHING: 扩容生命周期挂钩</li>
+<li>INSTANCE_TERMINATING: 缩容生命周期挂钩</li>
+     * @param LifecycleTransition 进行生命周期挂钩的场景，取值范围如下:
+<li> INSTANCE_LAUNCHING: 扩容生命周期挂钩</li>
+<li>INSTANCE_TERMINATING: 缩容生命周期挂钩</li>
      */
     public void setLifecycleTransition(String LifecycleTransition) {
         this.LifecycleTransition = LifecycleTransition;
     }
 
     /**
-     * Get 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE 
-     * @return DefaultResult 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
+     * Get 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li> 
+     * @return DefaultResult 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li>
      */
     public String getDefaultResult() {
         return this.DefaultResult;
     }
 
     /**
-     * Set 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
-     * @param DefaultResult 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
+     * Set 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li>
+     * @param DefaultResult 定义伸缩组在生命周期挂钩超时或 LifecycleCommand 执行失败时应采取的操作，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li>
      */
     public void setDefaultResult(String DefaultResult) {
         this.DefaultResult = DefaultResult;
@@ -167,16 +198,16 @@ public class CreateLifecycleHookRequest extends AbstractModel {
     }
 
     /**
-     * Get 弹性伸缩向通知目标发送的附加信息，配置通知时使用,默认值为空字符串""。最大长度不能超过1024个字节。 
-     * @return NotificationMetadata 弹性伸缩向通知目标发送的附加信息，配置通知时使用,默认值为空字符串""。最大长度不能超过1024个字节。
+     * Get 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串，最长不超过 1024 字符。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。 
+     * @return NotificationMetadata 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串，最长不超过 1024 字符。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。
      */
     public String getNotificationMetadata() {
         return this.NotificationMetadata;
     }
 
     /**
-     * Set 弹性伸缩向通知目标发送的附加信息，配置通知时使用,默认值为空字符串""。最大长度不能超过1024个字节。
-     * @param NotificationMetadata 弹性伸缩向通知目标发送的附加信息，配置通知时使用,默认值为空字符串""。最大长度不能超过1024个字节。
+     * Set 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串，最长不超过 1024 字符。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。
+     * @param NotificationMetadata 弹性伸缩向通知目标发送的附加信息，配置通知时使用，默认值为空字符串，最长不超过 1024 字符。NotificationMetadata 和 LifecycleCommand参数互斥，二者不可同时指定。
      */
     public void setNotificationMetadata(String NotificationMetadata) {
         this.NotificationMetadata = NotificationMetadata;
@@ -199,32 +230,36 @@ public class CreateLifecycleHookRequest extends AbstractModel {
     }
 
     /**
-     * Get 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。 
-     * @return LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+     * Get 进行生命周期挂钩的场景类型，取值范围包括 NORMAL 和 EXTENSION，默认值为 NORMAL。
+说明：设置为EXTENSION值，在 [AttachInstances](https://cloud.tencent.com/document/api/377/20441)、[DetachInstances](https://cloud.tencent.com/document/api/377/20436)、[RemoveInstaces](https://cloud.tencent.com/document/api/377/20431)、[StopAutoScalingInstances](https://cloud.tencent.com/document/api/377/40286)、[StartAutoScalingInstances](https://cloud.tencent.com/document/api/377/40287)、[StartInstanceRefresh](https://cloud.tencent.com/document/api/377/99172) 接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。 
+     * @return LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括 NORMAL 和 EXTENSION，默认值为 NORMAL。
+说明：设置为EXTENSION值，在 [AttachInstances](https://cloud.tencent.com/document/api/377/20441)、[DetachInstances](https://cloud.tencent.com/document/api/377/20436)、[RemoveInstaces](https://cloud.tencent.com/document/api/377/20431)、[StopAutoScalingInstances](https://cloud.tencent.com/document/api/377/40286)、[StartAutoScalingInstances](https://cloud.tencent.com/document/api/377/40287)、[StartInstanceRefresh](https://cloud.tencent.com/document/api/377/99172) 接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
      */
     public String getLifecycleTransitionType() {
         return this.LifecycleTransitionType;
     }
 
     /**
-     * Set 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
-     * @param LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+     * Set 进行生命周期挂钩的场景类型，取值范围包括 NORMAL 和 EXTENSION，默认值为 NORMAL。
+说明：设置为EXTENSION值，在 [AttachInstances](https://cloud.tencent.com/document/api/377/20441)、[DetachInstances](https://cloud.tencent.com/document/api/377/20436)、[RemoveInstaces](https://cloud.tencent.com/document/api/377/20431)、[StopAutoScalingInstances](https://cloud.tencent.com/document/api/377/40286)、[StartAutoScalingInstances](https://cloud.tencent.com/document/api/377/40287)、[StartInstanceRefresh](https://cloud.tencent.com/document/api/377/99172) 接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+     * @param LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括 NORMAL 和 EXTENSION，默认值为 NORMAL。
+说明：设置为EXTENSION值，在 [AttachInstances](https://cloud.tencent.com/document/api/377/20441)、[DetachInstances](https://cloud.tencent.com/document/api/377/20436)、[RemoveInstaces](https://cloud.tencent.com/document/api/377/20431)、[StopAutoScalingInstances](https://cloud.tencent.com/document/api/377/40286)、[StartAutoScalingInstances](https://cloud.tencent.com/document/api/377/40287)、[StartInstanceRefresh](https://cloud.tencent.com/document/api/377/99172) 接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
      */
     public void setLifecycleTransitionType(String LifecycleTransitionType) {
         this.LifecycleTransitionType = LifecycleTransitionType;
     }
 
     /**
-     * Get 远程命令执行对象。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。 
-     * @return LifecycleCommand 远程命令执行对象。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
+     * Get 远程命令执行对象。通知相关参数（NotificationTarget、NotificationMetadata）与该参数互斥，二者不可同时指定。 
+     * @return LifecycleCommand 远程命令执行对象。通知相关参数（NotificationTarget、NotificationMetadata）与该参数互斥，二者不可同时指定。
      */
     public LifecycleCommand getLifecycleCommand() {
         return this.LifecycleCommand;
     }
 
     /**
-     * Set 远程命令执行对象。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
-     * @param LifecycleCommand 远程命令执行对象。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
+     * Set 远程命令执行对象。通知相关参数（NotificationTarget、NotificationMetadata）与该参数互斥，二者不可同时指定。
+     * @param LifecycleCommand 远程命令执行对象。通知相关参数（NotificationTarget、NotificationMetadata）与该参数互斥，二者不可同时指定。
      */
     public void setLifecycleCommand(LifecycleCommand LifecycleCommand) {
         this.LifecycleCommand = LifecycleCommand;

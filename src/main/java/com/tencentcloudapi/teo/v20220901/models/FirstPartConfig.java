@@ -27,7 +27,6 @@ public class FirstPartConfig extends AbstractModel {
     * 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
     @Expose
@@ -35,7 +34,6 @@ public class FirstPartConfig extends AbstractModel {
 
     /**
     * 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatTime")
     @Expose
@@ -44,12 +42,10 @@ public class FirstPartConfig extends AbstractModel {
     /**
      * Get 开关，取值有：
 <li>on：开启；</li>
-<li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>off：关闭。</li> 
      * @return Switch 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
         return this.Switch;
@@ -59,21 +55,17 @@ public class FirstPartConfig extends AbstractModel {
      * Set 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Switch 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。 
      * @return StatTime 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatTime() {
         return this.StatTime;
@@ -81,9 +73,7 @@ public class FirstPartConfig extends AbstractModel {
 
     /**
      * Set 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatTime 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatTime(Long StatTime) {
         this.StatTime = StatTime;

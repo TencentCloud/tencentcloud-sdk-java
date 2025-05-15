@@ -66,6 +66,13 @@ public class Inbound extends AbstractModel {
     private String AddressModule;
 
     /**
+    * 规则ID，嵌套安全组的规则ID
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * 规则描述
     */
     @SerializedName("Desc")
@@ -169,6 +176,22 @@ public class Inbound extends AbstractModel {
     }
 
     /**
+     * Get 规则ID，嵌套安全组的规则ID 
+     * @return Id 规则ID，嵌套安全组的规则ID
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 规则ID，嵌套安全组的规则ID
+     * @param Id 规则ID，嵌套安全组的规则ID
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
      * Get 规则描述 
      * @return Desc 规则描述
      */
@@ -210,6 +233,9 @@ public class Inbound extends AbstractModel {
         if (source.AddressModule != null) {
             this.AddressModule = new String(source.AddressModule);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
@@ -226,6 +252,7 @@ public class Inbound extends AbstractModel {
         this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
         this.setParamSimple(map, prefix + "Dir", this.Dir);
         this.setParamSimple(map, prefix + "AddressModule", this.AddressModule);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
 
     }

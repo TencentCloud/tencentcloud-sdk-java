@@ -52,6 +52,13 @@ public class UserInfoForUserManager extends AbstractModel {
     private String ReMark;
 
     /**
+    * 用户副组
+    */
+    @SerializedName("Groups")
+    @Expose
+    private String [] Groups;
+
+    /**
      * Get 用户名 
      * @return UserName 用户名
      */
@@ -115,6 +122,22 @@ public class UserInfoForUserManager extends AbstractModel {
         this.ReMark = ReMark;
     }
 
+    /**
+     * Get 用户副组 
+     * @return Groups 用户副组
+     */
+    public String [] getGroups() {
+        return this.Groups;
+    }
+
+    /**
+     * Set 用户副组
+     * @param Groups 用户副组
+     */
+    public void setGroups(String [] Groups) {
+        this.Groups = Groups;
+    }
+
     public UserInfoForUserManager() {
     }
 
@@ -135,6 +158,12 @@ public class UserInfoForUserManager extends AbstractModel {
         if (source.ReMark != null) {
             this.ReMark = new String(source.ReMark);
         }
+        if (source.Groups != null) {
+            this.Groups = new String[source.Groups.length];
+            for (int i = 0; i < source.Groups.length; i++) {
+                this.Groups[i] = new String(source.Groups[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class UserInfoForUserManager extends AbstractModel {
         this.setParamSimple(map, prefix + "UserGroup", this.UserGroup);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
         this.setParamSimple(map, prefix + "ReMark", this.ReMark);
+        this.setParamArraySimple(map, prefix + "Groups.", this.Groups);
 
     }
 }

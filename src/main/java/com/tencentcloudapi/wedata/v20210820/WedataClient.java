@@ -842,6 +842,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询代码模版具体详情
+     * @param req DescribeCodeTemplateDetailRequest
+     * @return DescribeCodeTemplateDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCodeTemplateDetailResponse DescribeCodeTemplateDetail(DescribeCodeTemplateDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCodeTemplateDetail", DescribeCodeTemplateDetailResponse.class);
+    }
+
+    /**
      *列出字段血缘信息
      * @param req DescribeColumnLineageRequest
      * @return DescribeColumnLineageResponse
@@ -2248,6 +2259,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *获取批量操作错误日志
+     * @param req GetBatchDetailErrorLogRequest
+     * @return GetBatchDetailErrorLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetBatchDetailErrorLogResponse GetBatchDetailErrorLog(GetBatchDetailErrorLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetBatchDetailErrorLog", GetBatchDetailErrorLogResponse.class);
+    }
+
+    /**
      *获取cos token
      * @param req GetCosTokenRequest
      * @return GetCosTokenResponse
@@ -2355,6 +2377,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public KillScheduleInstancesResponse KillScheduleInstances(KillScheduleInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "KillScheduleInstances", KillScheduleInstancesResponse.class);
+    }
+
+    /**
+     *获取批量操作详情列表
+     * @param req ListBatchDetailRequest
+     * @return ListBatchDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListBatchDetailResponse ListBatchDetail(ListBatchDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListBatchDetail", ListBatchDetailResponse.class);
     }
 
     /**

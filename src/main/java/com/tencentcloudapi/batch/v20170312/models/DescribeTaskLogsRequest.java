@@ -52,7 +52,7 @@ public class DescribeTaskLogsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 最大任务实例数, 最大值为10.
+    * 最大任务实例数；默认值为5， 最大值为10。
     */
     @SerializedName("Limit")
     @Expose
@@ -123,16 +123,16 @@ public class DescribeTaskLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 最大任务实例数, 最大值为10. 
-     * @return Limit 最大任务实例数, 最大值为10.
+     * Get 最大任务实例数；默认值为5， 最大值为10。 
+     * @return Limit 最大任务实例数；默认值为5， 最大值为10。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 最大任务实例数, 最大值为10.
-     * @param Limit 最大任务实例数, 最大值为10.
+     * Set 最大任务实例数；默认值为5， 最大值为10。
+     * @param Limit 最大任务实例数；默认值为5， 最大值为10。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

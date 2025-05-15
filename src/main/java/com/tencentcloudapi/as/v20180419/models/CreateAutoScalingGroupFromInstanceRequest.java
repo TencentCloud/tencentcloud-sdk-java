@@ -31,28 +31,28 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel {
     private String AutoScalingGroupName;
 
     /**
-    * 实例ID
+    * 实例ID。可通过登录[控制台](https://console.cloud.tencent.com/cvm/index)或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 最小实例数，取值范围为0-2000。
+    * 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * 最大实例数，取值范围为0-2000。
+    * 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-    * 期望实例数，大小介于最小实例数和最大实例数之间。
+    * 期望实例数，大小介于最小实例数和最大实例数之间。不传入时默认值等于最小值。
     */
     @SerializedName("DesiredCapacity")
     @Expose
@@ -82,64 +82,64 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例ID。可通过登录[控制台](https://console.cloud.tencent.com/cvm/index)或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。 
+     * @return InstanceId 实例ID。可通过登录[控制台](https://console.cloud.tencent.com/cvm/index)或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID。可通过登录[控制台](https://console.cloud.tencent.com/cvm/index)或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
+     * @param InstanceId 实例ID。可通过登录[控制台](https://console.cloud.tencent.com/cvm/index)或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 最小实例数，取值范围为0-2000。 
-     * @return MinSize 最小实例数，取值范围为0-2000。
+     * Get 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。 
+     * @return MinSize 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set 最小实例数，取值范围为0-2000。
-     * @param MinSize 最小实例数，取值范围为0-2000。
+     * Set 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param MinSize 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get 最大实例数，取值范围为0-2000。 
-     * @return MaxSize 最大实例数，取值范围为0-2000。
+     * Get 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。 
+     * @return MaxSize 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 最大实例数，取值范围为0-2000。
-     * @param MaxSize 最大实例数，取值范围为0-2000。
+     * Set 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param MaxSize 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
     /**
-     * Get 期望实例数，大小介于最小实例数和最大实例数之间。 
-     * @return DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间。
+     * Get 期望实例数，大小介于最小实例数和最大实例数之间。不传入时默认值等于最小值。 
+     * @return DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间。不传入时默认值等于最小值。
      */
     public Long getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
     /**
-     * Set 期望实例数，大小介于最小实例数和最大实例数之间。
-     * @param DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间。
+     * Set 期望实例数，大小介于最小实例数和最大实例数之间。不传入时默认值等于最小值。
+     * @param DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间。不传入时默认值等于最小值。
      */
     public void setDesiredCapacity(Long DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;

@@ -32,7 +32,9 @@ public class DescribeAssistantCidrRequest extends AbstractModel {
 
     /**
     * 过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+
+当前支持的过滤条件如下：
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。（当前仅支持该过滤条件）</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -70,9 +72,13 @@ public class DescribeAssistantCidrRequest extends AbstractModel {
 
     /**
      * Get 过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li> 
+
+当前支持的过滤条件如下：
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。（当前仅支持该过滤条件）</li> 
      * @return Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+
+当前支持的过滤条件如下：
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。（当前仅支持该过滤条件）</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -80,9 +86,13 @@ public class DescribeAssistantCidrRequest extends AbstractModel {
 
     /**
      * Set 过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+
+当前支持的过滤条件如下：
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。（当前仅支持该过滤条件）</li>
      * @param Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+
+当前支持的过滤条件如下：
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。（当前仅支持该过滤条件）</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

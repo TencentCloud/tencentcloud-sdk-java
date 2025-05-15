@@ -38,7 +38,7 @@ public class Tag extends AbstractModel {
     private String Value;
 
     /**
-    * 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
+    * 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"。分别表示：伸缩组资源，启动配置资源。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -77,16 +77,16 @@ public class Tag extends AbstractModel {
     }
 
     /**
-     * Get 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration" 
-     * @return ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
+     * Get 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"。分别表示：伸缩组资源，启动配置资源。 
+     * @return ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"。分别表示：伸缩组资源，启动配置资源。
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
-     * @param ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
+     * Set 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"。分别表示：伸缩组资源，启动配置资源。
+     * @param ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"。分别表示：伸缩组资源，启动配置资源。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

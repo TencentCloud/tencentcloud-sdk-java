@@ -24,92 +24,107 @@ import java.util.HashMap;
 public class CompleteLifecycleActionRequest extends AbstractModel {
 
     /**
-    * 生命周期挂钩ID
+    * 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
     */
     @SerializedName("LifecycleHookId")
     @Expose
     private String LifecycleHookId;
 
     /**
-    * 生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
+    * 生命周期动作的结果，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li>
     */
     @SerializedName("LifecycleActionResult")
     @Expose
     private String LifecycleActionResult;
 
     /**
-    * 实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
+    * 实例ID，`InstanceId` 和 `LifecycleActionToken` 参数必须填写其中一个。可通过登录 [控制台](https://console.cloud.tencent.com/cvm/index) 或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * “InstanceId”和“LifecycleActionToken”必须填充其中一个
+    * 生命周期动作令牌，`InstanceId` 和 `LifecycleActionToken` 必须填充其中一个。
+该参数获取方式如下：配置 `NotificationTarget ` 参数的挂钩被触发时，向  `NotificationTarget `  参数中指定的消息队列投递包含令牌的消息，消息队列的消费者可从消息中获取令牌。
     */
     @SerializedName("LifecycleActionToken")
     @Expose
     private String LifecycleActionToken;
 
     /**
-     * Get 生命周期挂钩ID 
-     * @return LifecycleHookId 生命周期挂钩ID
+     * Get 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。 
+     * @return LifecycleHookId 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
      */
     public String getLifecycleHookId() {
         return this.LifecycleHookId;
     }
 
     /**
-     * Set 生命周期挂钩ID
-     * @param LifecycleHookId 生命周期挂钩ID
+     * Set 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
+     * @param LifecycleHookId 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
      */
     public void setLifecycleHookId(String LifecycleHookId) {
         this.LifecycleHookId = LifecycleHookId;
     }
 
     /**
-     * Get 生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON” 
-     * @return LifecycleActionResult 生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
+     * Get 生命周期动作的结果，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li> 
+     * @return LifecycleActionResult 生命周期动作的结果，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li>
      */
     public String getLifecycleActionResult() {
         return this.LifecycleActionResult;
     }
 
     /**
-     * Set 生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
-     * @param LifecycleActionResult 生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
+     * Set 生命周期动作的结果，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li>
+     * @param LifecycleActionResult 生命周期动作的结果，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li>
      */
     public void setLifecycleActionResult(String LifecycleActionResult) {
         this.LifecycleActionResult = LifecycleActionResult;
     }
 
     /**
-     * Get 实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个 
-     * @return InstanceId 实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
+     * Get 实例ID，`InstanceId` 和 `LifecycleActionToken` 参数必须填写其中一个。可通过登录 [控制台](https://console.cloud.tencent.com/cvm/index) 或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。 
+     * @return InstanceId 实例ID，`InstanceId` 和 `LifecycleActionToken` 参数必须填写其中一个。可通过登录 [控制台](https://console.cloud.tencent.com/cvm/index) 或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
-     * @param InstanceId 实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
+     * Set 实例ID，`InstanceId` 和 `LifecycleActionToken` 参数必须填写其中一个。可通过登录 [控制台](https://console.cloud.tencent.com/cvm/index) 或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
+     * @param InstanceId 实例ID，`InstanceId` 和 `LifecycleActionToken` 参数必须填写其中一个。可通过登录 [控制台](https://console.cloud.tencent.com/cvm/index) 或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get “InstanceId”和“LifecycleActionToken”必须填充其中一个 
-     * @return LifecycleActionToken “InstanceId”和“LifecycleActionToken”必须填充其中一个
+     * Get 生命周期动作令牌，`InstanceId` 和 `LifecycleActionToken` 必须填充其中一个。
+该参数获取方式如下：配置 `NotificationTarget ` 参数的挂钩被触发时，向  `NotificationTarget `  参数中指定的消息队列投递包含令牌的消息，消息队列的消费者可从消息中获取令牌。 
+     * @return LifecycleActionToken 生命周期动作令牌，`InstanceId` 和 `LifecycleActionToken` 必须填充其中一个。
+该参数获取方式如下：配置 `NotificationTarget ` 参数的挂钩被触发时，向  `NotificationTarget `  参数中指定的消息队列投递包含令牌的消息，消息队列的消费者可从消息中获取令牌。
      */
     public String getLifecycleActionToken() {
         return this.LifecycleActionToken;
     }
 
     /**
-     * Set “InstanceId”和“LifecycleActionToken”必须填充其中一个
-     * @param LifecycleActionToken “InstanceId”和“LifecycleActionToken”必须填充其中一个
+     * Set 生命周期动作令牌，`InstanceId` 和 `LifecycleActionToken` 必须填充其中一个。
+该参数获取方式如下：配置 `NotificationTarget ` 参数的挂钩被触发时，向  `NotificationTarget `  参数中指定的消息队列投递包含令牌的消息，消息队列的消费者可从消息中获取令牌。
+     * @param LifecycleActionToken 生命周期动作令牌，`InstanceId` 和 `LifecycleActionToken` 必须填充其中一个。
+该参数获取方式如下：配置 `NotificationTarget ` 参数的挂钩被触发时，向  `NotificationTarget `  参数中指定的消息队列投递包含令牌的消息，消息队列的消费者可从消息中获取令牌。
      */
     public void setLifecycleActionToken(String LifecycleActionToken) {
         this.LifecycleActionToken = LifecycleActionToken;

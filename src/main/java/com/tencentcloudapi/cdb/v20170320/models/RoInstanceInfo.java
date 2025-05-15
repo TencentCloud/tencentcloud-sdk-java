@@ -185,6 +185,13 @@ public class RoInstanceInfo extends AbstractModel {
     private Long PayType;
 
     /**
+    * RO延迟复制状态。
+    */
+    @SerializedName("ReplicationStatus")
+    @Expose
+    private String ReplicationStatus;
+
+    /**
      * Get RO组对应的主实例的ID 
      * @return MasterInstanceId RO组对应的主实例的ID
      */
@@ -552,6 +559,22 @@ public class RoInstanceInfo extends AbstractModel {
         this.PayType = PayType;
     }
 
+    /**
+     * Get RO延迟复制状态。 
+     * @return ReplicationStatus RO延迟复制状态。
+     */
+    public String getReplicationStatus() {
+        return this.ReplicationStatus;
+    }
+
+    /**
+     * Set RO延迟复制状态。
+     * @param ReplicationStatus RO延迟复制状态。
+     */
+    public void setReplicationStatus(String ReplicationStatus) {
+        this.ReplicationStatus = ReplicationStatus;
+    }
+
     public RoInstanceInfo() {
     }
 
@@ -629,6 +652,9 @@ public class RoInstanceInfo extends AbstractModel {
         if (source.PayType != null) {
             this.PayType = new Long(source.PayType);
         }
+        if (source.ReplicationStatus != null) {
+            this.ReplicationStatus = new String(source.ReplicationStatus);
+        }
     }
 
 
@@ -659,6 +685,7 @@ public class RoInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "DeadlineTime", this.DeadlineTime);
         this.setParamSimple(map, prefix + "PayType", this.PayType);
+        this.setParamSimple(map, prefix + "ReplicationStatus", this.ReplicationStatus);
 
     }
 }

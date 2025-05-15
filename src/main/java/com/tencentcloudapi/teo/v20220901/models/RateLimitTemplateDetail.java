@@ -31,7 +31,6 @@ public class RateLimitTemplateDetail extends AbstractModel {
 <li>normal：适中；</li>
 <li>strict：严格；</li>
 <li>close：关闭，仅精准速率限制生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
     @Expose
@@ -48,7 +47,6 @@ public class RateLimitTemplateDetail extends AbstractModel {
     * 模板处置方式，取值有：
 <li>alg：JavaScript挑战；</li>
 <li>monitor：观察。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
     @Expose
@@ -56,7 +54,6 @@ public class RateLimitTemplateDetail extends AbstractModel {
 
     /**
     * 惩罚时间，取值范围0-2天，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PunishTime")
     @Expose
@@ -83,8 +80,7 @@ public class RateLimitTemplateDetail extends AbstractModel {
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭，仅精准速率限制生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>close：关闭，仅精准速率限制生效。</li> 
      * @return Mode 模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
@@ -92,7 +88,6 @@ public class RateLimitTemplateDetail extends AbstractModel {
 <li>normal：适中；</li>
 <li>strict：严格；</li>
 <li>close：关闭，仅精准速率限制生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMode() {
         return this.Mode;
@@ -106,7 +101,6 @@ public class RateLimitTemplateDetail extends AbstractModel {
 <li>normal：适中；</li>
 <li>strict：严格；</li>
 <li>close：关闭，仅精准速率限制生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mode 模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
@@ -114,7 +108,6 @@ public class RateLimitTemplateDetail extends AbstractModel {
 <li>normal：适中；</li>
 <li>strict：严格；</li>
 <li>close：关闭，仅精准速率限制生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
@@ -139,12 +132,10 @@ public class RateLimitTemplateDetail extends AbstractModel {
     /**
      * Get 模板处置方式，取值有：
 <li>alg：JavaScript挑战；</li>
-<li>monitor：观察。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>monitor：观察。</li> 
      * @return Action 模板处置方式，取值有：
 <li>alg：JavaScript挑战；</li>
 <li>monitor：观察。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
         return this.Action;
@@ -154,21 +145,17 @@ public class RateLimitTemplateDetail extends AbstractModel {
      * Set 模板处置方式，取值有：
 <li>alg：JavaScript挑战；</li>
 <li>monitor：观察。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Action 模板处置方式，取值有：
 <li>alg：JavaScript挑战；</li>
 <li>monitor：观察。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 惩罚时间，取值范围0-2天，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 惩罚时间，取值范围0-2天，单位秒。 
      * @return PunishTime 惩罚时间，取值范围0-2天，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPunishTime() {
         return this.PunishTime;
@@ -176,9 +163,7 @@ public class RateLimitTemplateDetail extends AbstractModel {
 
     /**
      * Set 惩罚时间，取值范围0-2天，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PunishTime 惩罚时间，取值范围0-2天，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPunishTime(Long PunishTime) {
         this.PunishTime = PunishTime;

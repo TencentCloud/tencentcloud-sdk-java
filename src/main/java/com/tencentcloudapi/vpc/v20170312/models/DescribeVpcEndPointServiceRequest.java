@@ -25,10 +25,15 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel {
 
     /**
     * 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
-<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
-<li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
-<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
+<li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-dehd3e33。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；
+MYSQL可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；
+CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；
+GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡），不填默认查询类型为CLB。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -49,7 +54,7 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
+    * 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。不支持同时传入参数 EndPointServiceIds and Filters。
     */
     @SerializedName("EndPointServiceIds")
     @Expose
@@ -71,15 +76,25 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel {
 
     /**
      * Get 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
-<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
-<li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
-<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li> 
+<li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-dehd3e33。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；
+MYSQL可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；
+CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；
+GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡），不填默认查询类型为CLB。</li> 
      * @return Filters 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
-<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
-<li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
-<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
+<li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-dehd3e33。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；
+MYSQL可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；
+CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；
+GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡），不填默认查询类型为CLB。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -87,15 +102,25 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel {
 
     /**
      * Set 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
-<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
-<li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
-<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
+<li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-dehd3e33。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；
+MYSQL可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；
+CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；
+GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡），不填默认查询类型为CLB。</li>
      * @param Filters 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
-<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
-<li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
-<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
+<li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-dehd3e33。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；
+MYSQL可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；
+CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；
+GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡），不填默认查询类型为CLB。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -134,16 +159,16 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。 
-     * @return EndPointServiceIds 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
+     * Get 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。不支持同时传入参数 EndPointServiceIds and Filters。 
+     * @return EndPointServiceIds 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。不支持同时传入参数 EndPointServiceIds and Filters。
      */
     public String [] getEndPointServiceIds() {
         return this.EndPointServiceIds;
     }
 
     /**
-     * Set 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
-     * @param EndPointServiceIds 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
+     * Set 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。不支持同时传入参数 EndPointServiceIds and Filters。
+     * @param EndPointServiceIds 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。不支持同时传入参数 EndPointServiceIds and Filters。
      */
     public void setEndPointServiceIds(String [] EndPointServiceIds) {
         this.EndPointServiceIds = EndPointServiceIds;

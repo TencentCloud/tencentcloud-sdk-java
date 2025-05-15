@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeFlowLogRequest extends AbstractModel {
 
     /**
-    * 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
+    * 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
     */
     @SerializedName("VpcId")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeFlowLogRequest extends AbstractModel {
     private String FlowLogId;
 
     /**
-     * Get 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。 
-     * @return VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
+     * Get 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。 
+     * @return VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
-     * @param VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
+     * Set 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
+     * @param VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

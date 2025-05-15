@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tbaas.v20180416.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetLatesdTransactionListResponse extends AbstractModel {
+public class DescribePlansResponse extends AbstractModel {
 
     /**
-    * 交易总数量
+    * 符合条件的套餐个数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 交易列表
+    * 套餐信息列表。
     */
-    @SerializedName("TransactionList")
+    @SerializedName("Plans")
     @Expose
-    private TransactionItem [] TransactionList;
+    private Plan [] Plans;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +45,35 @@ public class GetLatesdTransactionListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 交易总数量 
-     * @return TotalCount 交易总数量
+     * Get 符合条件的套餐个数。 
+     * @return TotalCount 符合条件的套餐个数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 交易总数量
-     * @param TotalCount 交易总数量
+     * Set 符合条件的套餐个数。
+     * @param TotalCount 符合条件的套餐个数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 交易列表 
-     * @return TransactionList 交易列表
+     * Get 套餐信息列表。 
+     * @return Plans 套餐信息列表。
      */
-    public TransactionItem [] getTransactionList() {
-        return this.TransactionList;
+    public Plan [] getPlans() {
+        return this.Plans;
     }
 
     /**
-     * Set 交易列表
-     * @param TransactionList 交易列表
+     * Set 套餐信息列表。
+     * @param Plans 套餐信息列表。
      */
-    public void setTransactionList(TransactionItem [] TransactionList) {
-        this.TransactionList = TransactionList;
+    public void setPlans(Plan [] Plans) {
+        this.Plans = Plans;
     }
 
     /**
@@ -92,21 +92,21 @@ public class GetLatesdTransactionListResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public GetLatesdTransactionListResponse() {
+    public DescribePlansResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetLatesdTransactionListResponse(GetLatesdTransactionListResponse source) {
+    public DescribePlansResponse(DescribePlansResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.TransactionList != null) {
-            this.TransactionList = new TransactionItem[source.TransactionList.length];
-            for (int i = 0; i < source.TransactionList.length; i++) {
-                this.TransactionList[i] = new TransactionItem(source.TransactionList[i]);
+        if (source.Plans != null) {
+            this.Plans = new Plan[source.Plans.length];
+            for (int i = 0; i < source.Plans.length; i++) {
+                this.Plans[i] = new Plan(source.Plans[i]);
             }
         }
         if (source.RequestId != null) {
@@ -120,7 +120,7 @@ public class GetLatesdTransactionListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "TransactionList.", this.TransactionList);
+        this.setParamArrayObj(map, prefix + "Plans.", this.Plans);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

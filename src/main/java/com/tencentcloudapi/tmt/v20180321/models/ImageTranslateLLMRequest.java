@@ -24,12 +24,158 @@ import java.util.HashMap;
 public class ImageTranslateLLMRequest extends AbstractModel {
 
     /**
+    * 图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。
+    */
+    @SerializedName("Data")
+    @Expose
+    private String Data;
+
+    /**
+    * 目标语言，支持语言列表：
+
+- 中文：zh
+- 繁体（台湾）：zh-TW
+- 繁体（香港）：zh-HK
+- 英文：en
+- 日语：ja
+- 韩语：ko
+- 泰语：th
+- 越南语：vi
+- 俄语：ru
+- 德语：de
+- 法语：fr
+- 阿拉伯语：ar
+- 西班牙语：es
+- 意大利语：it
+- 印度尼西亚语：id
+- 马来西亚语：ms
+- 葡萄牙语：pt
+- 土耳其语：tr
+- 
+    */
+    @SerializedName("Target")
+    @Expose
+    private String Target;
+
+    /**
     * 输入图 Url。 使用Url的时候，Data参数需要传入""。 图片限制：小于 10MB，分辨率建议600*800以上，格式支持 jpg、jpeg、png。
 
     */
     @SerializedName("Url")
     @Expose
     private String Url;
+
+    /**
+     * Get 图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。 
+     * @return Data 图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。
+     */
+    public String getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。
+     * @param Data 图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。
+     */
+    public void setData(String Data) {
+        this.Data = Data;
+    }
+
+    /**
+     * Get 目标语言，支持语言列表：
+
+- 中文：zh
+- 繁体（台湾）：zh-TW
+- 繁体（香港）：zh-HK
+- 英文：en
+- 日语：ja
+- 韩语：ko
+- 泰语：th
+- 越南语：vi
+- 俄语：ru
+- 德语：de
+- 法语：fr
+- 阿拉伯语：ar
+- 西班牙语：es
+- 意大利语：it
+- 印度尼西亚语：id
+- 马来西亚语：ms
+- 葡萄牙语：pt
+- 土耳其语：tr
+-  
+     * @return Target 目标语言，支持语言列表：
+
+- 中文：zh
+- 繁体（台湾）：zh-TW
+- 繁体（香港）：zh-HK
+- 英文：en
+- 日语：ja
+- 韩语：ko
+- 泰语：th
+- 越南语：vi
+- 俄语：ru
+- 德语：de
+- 法语：fr
+- 阿拉伯语：ar
+- 西班牙语：es
+- 意大利语：it
+- 印度尼西亚语：id
+- 马来西亚语：ms
+- 葡萄牙语：pt
+- 土耳其语：tr
+- 
+     */
+    public String getTarget() {
+        return this.Target;
+    }
+
+    /**
+     * Set 目标语言，支持语言列表：
+
+- 中文：zh
+- 繁体（台湾）：zh-TW
+- 繁体（香港）：zh-HK
+- 英文：en
+- 日语：ja
+- 韩语：ko
+- 泰语：th
+- 越南语：vi
+- 俄语：ru
+- 德语：de
+- 法语：fr
+- 阿拉伯语：ar
+- 西班牙语：es
+- 意大利语：it
+- 印度尼西亚语：id
+- 马来西亚语：ms
+- 葡萄牙语：pt
+- 土耳其语：tr
+- 
+     * @param Target 目标语言，支持语言列表：
+
+- 中文：zh
+- 繁体（台湾）：zh-TW
+- 繁体（香港）：zh-HK
+- 英文：en
+- 日语：ja
+- 韩语：ko
+- 泰语：th
+- 越南语：vi
+- 俄语：ru
+- 德语：de
+- 法语：fr
+- 阿拉伯语：ar
+- 西班牙语：es
+- 意大利语：it
+- 印度尼西亚语：id
+- 马来西亚语：ms
+- 葡萄牙语：pt
+- 土耳其语：tr
+- 
+     */
+    public void setTarget(String Target) {
+        this.Target = Target;
+    }
 
     /**
      * Get 输入图 Url。 使用Url的时候，Data参数需要传入""。 图片限制：小于 10MB，分辨率建议600*800以上，格式支持 jpg、jpeg、png。
@@ -59,6 +205,12 @@ public class ImageTranslateLLMRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ImageTranslateLLMRequest(ImageTranslateLLMRequest source) {
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
+        if (source.Target != null) {
+            this.Target = new String(source.Target);
+        }
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
@@ -69,6 +221,8 @@ public class ImageTranslateLLMRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "Url", this.Url);
 
     }

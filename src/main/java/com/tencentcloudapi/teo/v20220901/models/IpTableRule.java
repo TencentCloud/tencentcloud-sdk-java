@@ -91,7 +91,6 @@ public class IpTableRule extends AbstractModel {
 
     /**
     * 规则名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -300,10 +299,8 @@ public class IpTableRule extends AbstractModel {
     }
 
     /**
-     * Get 规则名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名。 
      * @return RuleName 规则名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -311,9 +308,7 @@ public class IpTableRule extends AbstractModel {
 
     /**
      * Set 规则名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 规则名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

@@ -39,8 +39,9 @@ public class DescribeVpcEndPointServiceWhiteListRequest extends AbstractModel {
 
     /**
     * 过滤条件。
-<li> user-uin String - （过滤条件）用户UIN。</li>
-<li> end-point-service-id String - （过滤条件）终端节点服务ID。</li>
+<li> user-uin String - （过滤条件）用户UIN。登录 腾讯云账号中心控制台 获取。</li>
+<li> end-point-service-id String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -80,11 +81,13 @@ public class DescribeVpcEndPointServiceWhiteListRequest extends AbstractModel {
 
     /**
      * Get 过滤条件。
-<li> user-uin String - （过滤条件）用户UIN。</li>
-<li> end-point-service-id String - （过滤条件）终端节点服务ID。</li> 
+<li> user-uin String - （过滤条件）用户UIN。登录 腾讯云账号中心控制台 获取。</li>
+<li> end-point-service-id String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li> 
      * @return Filters 过滤条件。
-<li> user-uin String - （过滤条件）用户UIN。</li>
-<li> end-point-service-id String - （过滤条件）终端节点服务ID。</li>
+<li> user-uin String - （过滤条件）用户UIN。登录 腾讯云账号中心控制台 获取。</li>
+<li> end-point-service-id String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -92,11 +95,13 @@ public class DescribeVpcEndPointServiceWhiteListRequest extends AbstractModel {
 
     /**
      * Set 过滤条件。
-<li> user-uin String - （过滤条件）用户UIN。</li>
-<li> end-point-service-id String - （过滤条件）终端节点服务ID。</li>
+<li> user-uin String - （过滤条件）用户UIN。登录 腾讯云账号中心控制台 获取。</li>
+<li> end-point-service-id String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
      * @param Filters 过滤条件。
-<li> user-uin String - （过滤条件）用户UIN。</li>
-<li> end-point-service-id String - （过滤条件）终端节点服务ID。</li>
+<li> user-uin String - （过滤条件）用户UIN。登录 腾讯云账号中心控制台 获取。</li>
+<li> end-point-service-id String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -88,7 +88,7 @@ public class DescribeUsersRequest extends AbstractModel {
     private Long [] AuthorizedAppAssetIdSet;
 
     /**
-    * 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
+    * 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 3-ioa 不传为全部
     */
     @SerializedName("AuthTypeSet")
     @Expose
@@ -108,6 +108,20 @@ public class DescribeUsersRequest extends AbstractModel {
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * 是否获取cam用户, 0-否，1-是
+    */
+    @SerializedName("IsCamUser")
+    @Expose
+    private Long IsCamUser;
+
+    /**
+    * 用户来源，0-bh，1-ioa,不传为全部
+    */
+    @SerializedName("UserFromSet")
+    @Expose
+    private Long [] UserFromSet;
 
     /**
      * Get 如果IdSet不为空，则忽略其他参数 
@@ -258,16 +272,16 @@ public class DescribeUsersRequest extends AbstractModel {
     }
 
     /**
-     * Get 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部 
-     * @return AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
+     * Get 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 3-ioa 不传为全部 
+     * @return AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 3-ioa 不传为全部
      */
     public Long [] getAuthTypeSet() {
         return this.AuthTypeSet;
     }
 
     /**
-     * Set 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
-     * @param AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
+     * Set 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 3-ioa 不传为全部
+     * @param AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 3-ioa 不传为全部
      */
     public void setAuthTypeSet(Long [] AuthTypeSet) {
         this.AuthTypeSet = AuthTypeSet;
@@ -307,6 +321,38 @@ public class DescribeUsersRequest extends AbstractModel {
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get 是否获取cam用户, 0-否，1-是 
+     * @return IsCamUser 是否获取cam用户, 0-否，1-是
+     */
+    public Long getIsCamUser() {
+        return this.IsCamUser;
+    }
+
+    /**
+     * Set 是否获取cam用户, 0-否，1-是
+     * @param IsCamUser 是否获取cam用户, 0-否，1-是
+     */
+    public void setIsCamUser(Long IsCamUser) {
+        this.IsCamUser = IsCamUser;
+    }
+
+    /**
+     * Get 用户来源，0-bh，1-ioa,不传为全部 
+     * @return UserFromSet 用户来源，0-bh，1-ioa,不传为全部
+     */
+    public Long [] getUserFromSet() {
+        return this.UserFromSet;
+    }
+
+    /**
+     * Set 用户来源，0-bh，1-ioa,不传为全部
+     * @param UserFromSet 用户来源，0-bh，1-ioa,不传为全部
+     */
+    public void setUserFromSet(Long [] UserFromSet) {
+        this.UserFromSet = UserFromSet;
     }
 
     public DescribeUsersRequest() {
@@ -368,6 +414,15 @@ public class DescribeUsersRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.IsCamUser != null) {
+            this.IsCamUser = new Long(source.IsCamUser);
+        }
+        if (source.UserFromSet != null) {
+            this.UserFromSet = new Long[source.UserFromSet.length];
+            for (int i = 0; i < source.UserFromSet.length; i++) {
+                this.UserFromSet[i] = new Long(source.UserFromSet[i]);
+            }
+        }
     }
 
 
@@ -387,6 +442,8 @@ public class DescribeUsersRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AuthTypeSet.", this.AuthTypeSet);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "IsCamUser", this.IsCamUser);
+        this.setParamArraySimple(map, prefix + "UserFromSet.", this.UserFromSet);
 
     }
 }

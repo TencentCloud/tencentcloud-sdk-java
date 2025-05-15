@@ -68,7 +68,7 @@ public class ScalingPolicy extends AbstractModel {
     private Long AdjustmentValue;
 
     /**
-    * 冷却时间，仅适用于简单策略。
+    * 冷却时间，单位为秒，仅适用于简单策略。取值范围 [0,3600]，默认冷却时间300秒。
     */
     @SerializedName("Cooldown")
     @Expose
@@ -233,16 +233,16 @@ public class ScalingPolicy extends AbstractModel {
     }
 
     /**
-     * Get 冷却时间，仅适用于简单策略。 
-     * @return Cooldown 冷却时间，仅适用于简单策略。
+     * Get 冷却时间，单位为秒，仅适用于简单策略。取值范围 [0,3600]，默认冷却时间300秒。 
+     * @return Cooldown 冷却时间，单位为秒，仅适用于简单策略。取值范围 [0,3600]，默认冷却时间300秒。
      */
     public Long getCooldown() {
         return this.Cooldown;
     }
 
     /**
-     * Set 冷却时间，仅适用于简单策略。
-     * @param Cooldown 冷却时间，仅适用于简单策略。
+     * Set 冷却时间，单位为秒，仅适用于简单策略。取值范围 [0,3600]，默认冷却时间300秒。
+     * @param Cooldown 冷却时间，单位为秒，仅适用于简单策略。取值范围 [0,3600]，默认冷却时间300秒。
      */
     public void setCooldown(Long Cooldown) {
         this.Cooldown = Cooldown;

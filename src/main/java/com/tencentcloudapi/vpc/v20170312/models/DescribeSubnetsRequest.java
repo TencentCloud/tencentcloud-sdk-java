@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSubnetsRequest extends AbstractModel {
 
     /**
-    * 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
+    * 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100（该参数指定的子网是否返回，需要结合分页拉取参数Limit和Offset）。参数不支持同时指定SubnetIds和Filters。
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeSubnetsRequest extends AbstractModel {
     private String Limit;
 
     /**
-     * Get 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。 
-     * @return SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
+     * Get 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100（该参数指定的子网是否返回，需要结合分页拉取参数Limit和Offset）。参数不支持同时指定SubnetIds和Filters。 
+     * @return SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100（该参数指定的子网是否返回，需要结合分页拉取参数Limit和Offset）。参数不支持同时指定SubnetIds和Filters。
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
-     * @param SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
+     * Set 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100（该参数指定的子网是否返回，需要结合分页拉取参数Limit和Offset）。参数不支持同时指定SubnetIds和Filters。
+     * @param SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100（该参数指定的子网是否返回，需要结合分页拉取参数Limit和Offset）。参数不支持同时指定SubnetIds和Filters。
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;

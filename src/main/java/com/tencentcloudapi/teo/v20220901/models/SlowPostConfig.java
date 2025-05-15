@@ -34,7 +34,6 @@ public class SlowPostConfig extends AbstractModel {
 
     /**
     * 首包配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstPartConfig")
     @Expose
@@ -42,7 +41,6 @@ public class SlowPostConfig extends AbstractModel {
 
     /**
     * 基础配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlowRateConfig")
     @Expose
@@ -52,7 +50,6 @@ public class SlowPostConfig extends AbstractModel {
     * 慢速攻击的处置动作，取值有：
 <li>monitor：观察；</li>
 <li>drop：拦截。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
     @Expose
@@ -60,7 +57,6 @@ public class SlowPostConfig extends AbstractModel {
 
     /**
     * 本规则的Id。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -91,10 +87,8 @@ public class SlowPostConfig extends AbstractModel {
     }
 
     /**
-     * Get 首包配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首包配置。 
      * @return FirstPartConfig 首包配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FirstPartConfig getFirstPartConfig() {
         return this.FirstPartConfig;
@@ -102,19 +96,15 @@ public class SlowPostConfig extends AbstractModel {
 
     /**
      * Set 首包配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstPartConfig 首包配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstPartConfig(FirstPartConfig FirstPartConfig) {
         this.FirstPartConfig = FirstPartConfig;
     }
 
     /**
-     * Get 基础配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基础配置。 
      * @return SlowRateConfig 基础配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlowRateConfig getSlowRateConfig() {
         return this.SlowRateConfig;
@@ -122,9 +112,7 @@ public class SlowPostConfig extends AbstractModel {
 
     /**
      * Set 基础配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlowRateConfig 基础配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlowRateConfig(SlowRateConfig SlowRateConfig) {
         this.SlowRateConfig = SlowRateConfig;
@@ -133,12 +121,10 @@ public class SlowPostConfig extends AbstractModel {
     /**
      * Get 慢速攻击的处置动作，取值有：
 <li>monitor：观察；</li>
-<li>drop：拦截。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>drop：拦截。</li> 
      * @return Action 慢速攻击的处置动作，取值有：
 <li>monitor：观察；</li>
 <li>drop：拦截。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
         return this.Action;
@@ -148,21 +134,17 @@ public class SlowPostConfig extends AbstractModel {
      * Set 慢速攻击的处置动作，取值有：
 <li>monitor：观察；</li>
 <li>drop：拦截。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Action 慢速攻击的处置动作，取值有：
 <li>monitor：观察；</li>
 <li>drop：拦截。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 本规则的Id。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本规则的Id。 
      * @return RuleId 本规则的Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -170,9 +152,7 @@ public class SlowPostConfig extends AbstractModel {
 
     /**
      * Set 本规则的Id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 本规则的Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

@@ -145,6 +145,20 @@ public class User extends AbstractModel {
     private Long AclVersion;
 
     /**
+    * 用户来源，0-bh,1-ioa
+    */
+    @SerializedName("UserFrom")
+    @Expose
+    private Long UserFrom;
+
+    /**
+    * ioa同步过来的用户相关信息
+    */
+    @SerializedName("IOAUserGroup")
+    @Expose
+    private IOAUserGroup IOAUserGroup;
+
+    /**
      * Get 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符 
      * @return UserName 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
      */
@@ -424,6 +438,38 @@ public class User extends AbstractModel {
         this.AclVersion = AclVersion;
     }
 
+    /**
+     * Get 用户来源，0-bh,1-ioa 
+     * @return UserFrom 用户来源，0-bh,1-ioa
+     */
+    public Long getUserFrom() {
+        return this.UserFrom;
+    }
+
+    /**
+     * Set 用户来源，0-bh,1-ioa
+     * @param UserFrom 用户来源，0-bh,1-ioa
+     */
+    public void setUserFrom(Long UserFrom) {
+        this.UserFrom = UserFrom;
+    }
+
+    /**
+     * Get ioa同步过来的用户相关信息 
+     * @return IOAUserGroup ioa同步过来的用户相关信息
+     */
+    public IOAUserGroup getIOAUserGroup() {
+        return this.IOAUserGroup;
+    }
+
+    /**
+     * Set ioa同步过来的用户相关信息
+     * @param IOAUserGroup ioa同步过来的用户相关信息
+     */
+    public void setIOAUserGroup(IOAUserGroup IOAUserGroup) {
+        this.IOAUserGroup = IOAUserGroup;
+    }
+
     public User() {
     }
 
@@ -486,6 +532,12 @@ public class User extends AbstractModel {
         if (source.AclVersion != null) {
             this.AclVersion = new Long(source.AclVersion);
         }
+        if (source.UserFrom != null) {
+            this.UserFrom = new Long(source.UserFrom);
+        }
+        if (source.IOAUserGroup != null) {
+            this.IOAUserGroup = new IOAUserGroup(source.IOAUserGroup);
+        }
     }
 
 
@@ -510,6 +562,8 @@ public class User extends AbstractModel {
         this.setParamSimple(map, prefix + "UKeyStatus", this.UKeyStatus);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "AclVersion", this.AclVersion);
+        this.setParamSimple(map, prefix + "UserFrom", this.UserFrom);
+        this.setParamObj(map, prefix + "IOAUserGroup.", this.IOAUserGroup);
 
     }
 }

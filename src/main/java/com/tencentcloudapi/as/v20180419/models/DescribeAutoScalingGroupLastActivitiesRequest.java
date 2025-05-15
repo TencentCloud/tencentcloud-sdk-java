@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel {
 
     /**
-    * 伸缩组ID列表
+    * 伸缩组ID列表。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
     */
     @SerializedName("AutoScalingGroupIds")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
     private Boolean ExcludeCancelledActivity;
 
     /**
-     * Get 伸缩组ID列表 
-     * @return AutoScalingGroupIds 伸缩组ID列表
+     * Get 伸缩组ID列表。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。 
+     * @return AutoScalingGroupIds 伸缩组ID列表。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public String [] getAutoScalingGroupIds() {
         return this.AutoScalingGroupIds;
     }
 
     /**
-     * Set 伸缩组ID列表
-     * @param AutoScalingGroupIds 伸缩组ID列表
+     * Set 伸缩组ID列表。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
+     * @param AutoScalingGroupIds 伸缩组ID列表。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public void setAutoScalingGroupIds(String [] AutoScalingGroupIds) {
         this.AutoScalingGroupIds = AutoScalingGroupIds;

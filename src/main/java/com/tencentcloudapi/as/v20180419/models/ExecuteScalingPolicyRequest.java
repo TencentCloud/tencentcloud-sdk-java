@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExecuteScalingPolicyRequest extends AbstractModel {
 
     /**
-    * 告警伸缩策略ID，不支持目标追踪策略。
+    * 告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
     */
     @SerializedName("AutoScalingPolicyId")
     @Expose
@@ -45,16 +45,16 @@ public class ExecuteScalingPolicyRequest extends AbstractModel {
     private String TriggerSource;
 
     /**
-     * Get 告警伸缩策略ID，不支持目标追踪策略。 
-     * @return AutoScalingPolicyId 告警伸缩策略ID，不支持目标追踪策略。
+     * Get 告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。 
+     * @return AutoScalingPolicyId 告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
      */
     public String getAutoScalingPolicyId() {
         return this.AutoScalingPolicyId;
     }
 
     /**
-     * Set 告警伸缩策略ID，不支持目标追踪策略。
-     * @param AutoScalingPolicyId 告警伸缩策略ID，不支持目标追踪策略。
+     * Set 告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
+     * @param AutoScalingPolicyId 告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
      */
     public void setAutoScalingPolicyId(String AutoScalingPolicyId) {
         this.AutoScalingPolicyId = AutoScalingPolicyId;

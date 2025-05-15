@@ -45,6 +45,13 @@ public class AssetSyncStatus extends AbstractModel {
     private Boolean InProcess;
 
     /**
+    * 任务错误消息
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
+
+    /**
      * Get 上一次同步完成的时间 
      * @return LastTime 上一次同步完成的时间
      */
@@ -92,6 +99,22 @@ public class AssetSyncStatus extends AbstractModel {
         this.InProcess = InProcess;
     }
 
+    /**
+     * Get 任务错误消息 
+     * @return ErrMsg 任务错误消息
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set 任务错误消息
+     * @param ErrMsg 任务错误消息
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
+    }
+
     public AssetSyncStatus() {
     }
 
@@ -109,6 +132,9 @@ public class AssetSyncStatus extends AbstractModel {
         if (source.InProcess != null) {
             this.InProcess = new Boolean(source.InProcess);
         }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class AssetSyncStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "LastTime", this.LastTime);
         this.setParamSimple(map, prefix + "LastStatus", this.LastStatus);
         this.setParamSimple(map, prefix + "InProcess", this.InProcess);
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
 
     }
 }

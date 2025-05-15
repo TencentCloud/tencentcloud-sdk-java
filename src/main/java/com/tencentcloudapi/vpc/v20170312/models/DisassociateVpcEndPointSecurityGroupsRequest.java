@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DisassociateVpcEndPointSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * 安全组ID数组。
+    * 安全组ID数组。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 终端节点ID。
+    * 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
     */
     @SerializedName("EndPointId")
     @Expose
     private String EndPointId;
 
     /**
-     * Get 安全组ID数组。 
-     * @return SecurityGroupIds 安全组ID数组。
+     * Get 安全组ID数组。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。 
+     * @return SecurityGroupIds 安全组ID数组。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组ID数组。
-     * @param SecurityGroupIds 安全组ID数组。
+     * Set 安全组ID数组。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
+     * @param SecurityGroupIds 安全组ID数组。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 终端节点ID。 
-     * @return EndPointId 终端节点ID。
+     * Get 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。 
+     * @return EndPointId 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
      */
     public String getEndPointId() {
         return this.EndPointId;
     }
 
     /**
-     * Set 终端节点ID。
-     * @param EndPointId 终端节点ID。
+     * Set 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
+     * @param EndPointId 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
      */
     public void setEndPointId(String EndPointId) {
         this.EndPointId = EndPointId;

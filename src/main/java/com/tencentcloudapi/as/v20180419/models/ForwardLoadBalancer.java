@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ForwardLoadBalancer extends AbstractModel {
 
     /**
-    * 负载均衡器ID
+    * 负载均衡器ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 应用型负载均衡监听器 ID
+    * 负载均衡监听器 ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 目标规则属性列表
+    * 目标规则属性列表。作为入参时，该参数必填。
     */
     @SerializedName("TargetAttributes")
     @Expose
     private TargetAttribute [] TargetAttributes;
 
     /**
-    * 转发规则ID，注意：针对七层监听器此参数必填
+    * 转发规则ID，注意：针对七层监听器此参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
     */
     @SerializedName("LocationId")
     @Expose
@@ -59,64 +59,64 @@ public class ForwardLoadBalancer extends AbstractModel {
     private String Region;
 
     /**
-     * Get 负载均衡器ID 
-     * @return LoadBalancerId 负载均衡器ID
+     * Get 负载均衡器ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。 
+     * @return LoadBalancerId 负载均衡器ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡器ID
-     * @param LoadBalancerId 负载均衡器ID
+     * Set 负载均衡器ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+     * @param LoadBalancerId 负载均衡器ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 应用型负载均衡监听器 ID 
-     * @return ListenerId 应用型负载均衡监听器 ID
+     * Get 负载均衡监听器 ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。 
+     * @return ListenerId 负载均衡监听器 ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 应用型负载均衡监听器 ID
-     * @param ListenerId 应用型负载均衡监听器 ID
+     * Set 负载均衡监听器 ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+     * @param ListenerId 负载均衡监听器 ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 目标规则属性列表 
-     * @return TargetAttributes 目标规则属性列表
+     * Get 目标规则属性列表。作为入参时，该参数必填。 
+     * @return TargetAttributes 目标规则属性列表。作为入参时，该参数必填。
      */
     public TargetAttribute [] getTargetAttributes() {
         return this.TargetAttributes;
     }
 
     /**
-     * Set 目标规则属性列表
-     * @param TargetAttributes 目标规则属性列表
+     * Set 目标规则属性列表。作为入参时，该参数必填。
+     * @param TargetAttributes 目标规则属性列表。作为入参时，该参数必填。
      */
     public void setTargetAttributes(TargetAttribute [] TargetAttributes) {
         this.TargetAttributes = TargetAttributes;
     }
 
     /**
-     * Get 转发规则ID，注意：针对七层监听器此参数必填 
-     * @return LocationId 转发规则ID，注意：针对七层监听器此参数必填
+     * Get 转发规则ID，注意：针对七层监听器此参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。 
+     * @return LocationId 转发规则ID，注意：针对七层监听器此参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set 转发规则ID，注意：针对七层监听器此参数必填
-     * @param LocationId 转发规则ID，注意：针对七层监听器此参数必填
+     * Set 转发规则ID，注意：针对七层监听器此参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+     * @param LocationId 转发规则ID，注意：针对七层监听器此参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;

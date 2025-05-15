@@ -24,11 +24,14 @@ import java.util.HashMap;
 public class DescribeVpcEndPointRequest extends AbstractModel {
 
     /**
-    * 过滤条件。
-<li> end-point-service-id- String - （过滤条件）终端节点服务ID。</li>
+    * 过滤条件。当前支持如下过滤条件：
+<li> end-point-service-id- String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
 <li>end-point-name - String - （过滤条件）终端节点实例名称。</li>
-<li> end-point-id- String - （过滤条件）终端节点实例ID。</li>
-<li> vpc-id- String - （过滤条件）VPC实例ID。</li>
+<li> end-point-id- String - （过滤条件）终端节点实例ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
+接口获取。</li>
+<li> vpc-id- String - （过滤条件）VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -49,7 +52,8 @@ public class DescribeVpcEndPointRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 终端节点ID列表。
+    * 终端节点ID列表。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
+获取。
     */
     @SerializedName("EndPointId")
     @Expose
@@ -63,32 +67,44 @@ public class DescribeVpcEndPointRequest extends AbstractModel {
     private String IpAddressType;
 
     /**
-     * Get 过滤条件。
-<li> end-point-service-id- String - （过滤条件）终端节点服务ID。</li>
+     * Get 过滤条件。当前支持如下过滤条件：
+<li> end-point-service-id- String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
 <li>end-point-name - String - （过滤条件）终端节点实例名称。</li>
-<li> end-point-id- String - （过滤条件）终端节点实例ID。</li>
-<li> vpc-id- String - （过滤条件）VPC实例ID。</li> 
-     * @return Filters 过滤条件。
-<li> end-point-service-id- String - （过滤条件）终端节点服务ID。</li>
+<li> end-point-id- String - （过滤条件）终端节点实例ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
+接口获取。</li>
+<li> vpc-id- String - （过滤条件）VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+</li> 
+     * @return Filters 过滤条件。当前支持如下过滤条件：
+<li> end-point-service-id- String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
 <li>end-point-name - String - （过滤条件）终端节点实例名称。</li>
-<li> end-point-id- String - （过滤条件）终端节点实例ID。</li>
-<li> vpc-id- String - （过滤条件）VPC实例ID。</li>
+<li> end-point-id- String - （过滤条件）终端节点实例ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
+接口获取。</li>
+<li> vpc-id- String - （过滤条件）VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件。
-<li> end-point-service-id- String - （过滤条件）终端节点服务ID。</li>
+     * Set 过滤条件。当前支持如下过滤条件：
+<li> end-point-service-id- String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
 <li>end-point-name - String - （过滤条件）终端节点实例名称。</li>
-<li> end-point-id- String - （过滤条件）终端节点实例ID。</li>
-<li> vpc-id- String - （过滤条件）VPC实例ID。</li>
-     * @param Filters 过滤条件。
-<li> end-point-service-id- String - （过滤条件）终端节点服务ID。</li>
+<li> end-point-id- String - （过滤条件）终端节点实例ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
+接口获取。</li>
+<li> vpc-id- String - （过滤条件）VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+</li>
+     * @param Filters 过滤条件。当前支持如下过滤条件：
+<li> end-point-service-id- String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
 <li>end-point-name - String - （过滤条件）终端节点实例名称。</li>
-<li> end-point-id- String - （过滤条件）终端节点实例ID。</li>
-<li> vpc-id- String - （过滤条件）VPC实例ID。</li>
+<li> end-point-id- String - （过滤条件）终端节点实例ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
+接口获取。</li>
+<li> vpc-id- String - （过滤条件）VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -127,16 +143,20 @@ public class DescribeVpcEndPointRequest extends AbstractModel {
     }
 
     /**
-     * Get 终端节点ID列表。 
-     * @return EndPointId 终端节点ID列表。
+     * Get 终端节点ID列表。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
+获取。 
+     * @return EndPointId 终端节点ID列表。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
+获取。
      */
     public String [] getEndPointId() {
         return this.EndPointId;
     }
 
     /**
-     * Set 终端节点ID列表。
-     * @param EndPointId 终端节点ID列表。
+     * Set 终端节点ID列表。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
+获取。
+     * @param EndPointId 终端节点ID列表。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 
+获取。
      */
     public void setEndPointId(String [] EndPointId) {
         this.EndPointId = EndPointId;

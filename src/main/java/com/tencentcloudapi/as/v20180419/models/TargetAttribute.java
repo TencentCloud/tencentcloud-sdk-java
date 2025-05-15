@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TargetAttribute extends AbstractModel {
 
     /**
-    * 端口
+    * 端口。取值范围为 [1,65535]。作为入参时，该参数必填。
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 权重
+    * 权重。取值范围为 [0,100]。作为入参时，该参数必填。
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-     * Get 端口 
-     * @return Port 端口
+     * Get 端口。取值范围为 [1,65535]。作为入参时，该参数必填。 
+     * @return Port 端口。取值范围为 [1,65535]。作为入参时，该参数必填。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口
-     * @param Port 端口
+     * Set 端口。取值范围为 [1,65535]。作为入参时，该参数必填。
+     * @param Port 端口。取值范围为 [1,65535]。作为入参时，该参数必填。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 权重 
-     * @return Weight 权重
+     * Get 权重。取值范围为 [0,100]。作为入参时，该参数必填。 
+     * @return Weight 权重。取值范围为 [0,100]。作为入参时，该参数必填。
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 权重
-     * @param Weight 权重
+     * Set 权重。取值范围为 [0,100]。作为入参时，该参数必填。
+     * @param Weight 权重。取值范围为 [0,100]。作为入参时，该参数必填。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

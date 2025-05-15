@@ -39,7 +39,6 @@ public class ExceptUserRuleScope extends AbstractModel {
 <li>acl：自定义规则；</li>
 <li>cc：cc攻击防护；</li>
 <li>bot：Bot防护。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Modules")
     @Expose
@@ -47,7 +46,6 @@ public class ExceptUserRuleScope extends AbstractModel {
 
     /**
     * 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PartialModules")
     @Expose
@@ -55,7 +53,6 @@ public class ExceptUserRuleScope extends AbstractModel {
 
     /**
     * 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkipConditions")
     @Expose
@@ -91,15 +88,13 @@ public class ExceptUserRuleScope extends AbstractModel {
 <li>rate：速率限制；</li>
 <li>acl：自定义规则；</li>
 <li>cc：cc攻击防护；</li>
-<li>bot：Bot防护。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>bot：Bot防护。</li> 
      * @return Modules 生效的模块，该字段取值有：
 <li>waf：托管规则；</li>
 <li>rate：速率限制；</li>
 <li>acl：自定义规则；</li>
 <li>cc：cc攻击防护；</li>
 <li>bot：Bot防护。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getModules() {
         return this.Modules;
@@ -112,24 +107,20 @@ public class ExceptUserRuleScope extends AbstractModel {
 <li>acl：自定义规则；</li>
 <li>cc：cc攻击防护；</li>
 <li>bot：Bot防护。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Modules 生效的模块，该字段取值有：
 <li>waf：托管规则；</li>
 <li>rate：速率限制；</li>
 <li>acl：自定义规则；</li>
 <li>cc：cc攻击防护；</li>
 <li>bot：Bot防护。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModules(String [] Modules) {
         this.Modules = Modules;
     }
 
     /**
-     * Get 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。 
      * @return PartialModules 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PartialModule [] getPartialModules() {
         return this.PartialModules;
@@ -137,19 +128,15 @@ public class ExceptUserRuleScope extends AbstractModel {
 
     /**
      * Set 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PartialModules 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartialModules(PartialModule [] PartialModules) {
         this.PartialModules = PartialModules;
     }
 
     /**
-     * Get 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。 
      * @return SkipConditions 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SkipCondition [] getSkipConditions() {
         return this.SkipConditions;
@@ -157,9 +144,7 @@ public class ExceptUserRuleScope extends AbstractModel {
 
     /**
      * Set 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkipConditions 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkipConditions(SkipCondition [] SkipConditions) {
         this.SkipConditions = SkipConditions;

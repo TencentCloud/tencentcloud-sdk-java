@@ -78,7 +78,10 @@ public class Instance extends AbstractModel {
     private String LifeCycleState;
 
     /**
-    * 健康状态，取值包括HEALTHY和UNHEALTHY
+    * 健康状态，取值范围如下：
+<li>HEALTHY：实例处于健康状态</li>
+<li>UNHEALTHY：实例 ping 不可达</li>
+<li>CLB_UNHEALTHY：CLB 监听的实例端口不健康</li>
     */
     @SerializedName("HealthStatus")
     @Expose
@@ -106,7 +109,7 @@ public class Instance extends AbstractModel {
     private String CreationType;
 
     /**
-    * 实例加入时间
+    * 实例加入时间，按照ISO8601标准表示，并且使用UTC时间。
     */
     @SerializedName("AddTime")
     @Expose
@@ -308,16 +311,28 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 健康状态，取值包括HEALTHY和UNHEALTHY 
-     * @return HealthStatus 健康状态，取值包括HEALTHY和UNHEALTHY
+     * Get 健康状态，取值范围如下：
+<li>HEALTHY：实例处于健康状态</li>
+<li>UNHEALTHY：实例 ping 不可达</li>
+<li>CLB_UNHEALTHY：CLB 监听的实例端口不健康</li> 
+     * @return HealthStatus 健康状态，取值范围如下：
+<li>HEALTHY：实例处于健康状态</li>
+<li>UNHEALTHY：实例 ping 不可达</li>
+<li>CLB_UNHEALTHY：CLB 监听的实例端口不健康</li>
      */
     public String getHealthStatus() {
         return this.HealthStatus;
     }
 
     /**
-     * Set 健康状态，取值包括HEALTHY和UNHEALTHY
-     * @param HealthStatus 健康状态，取值包括HEALTHY和UNHEALTHY
+     * Set 健康状态，取值范围如下：
+<li>HEALTHY：实例处于健康状态</li>
+<li>UNHEALTHY：实例 ping 不可达</li>
+<li>CLB_UNHEALTHY：CLB 监听的实例端口不健康</li>
+     * @param HealthStatus 健康状态，取值范围如下：
+<li>HEALTHY：实例处于健康状态</li>
+<li>UNHEALTHY：实例 ping 不可达</li>
+<li>CLB_UNHEALTHY：CLB 监听的实例端口不健康</li>
      */
     public void setHealthStatus(String HealthStatus) {
         this.HealthStatus = HealthStatus;
@@ -372,16 +387,16 @@ public class Instance extends AbstractModel {
     }
 
     /**
-     * Get 实例加入时间 
-     * @return AddTime 实例加入时间
+     * Get 实例加入时间，按照ISO8601标准表示，并且使用UTC时间。 
+     * @return AddTime 实例加入时间，按照ISO8601标准表示，并且使用UTC时间。
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set 实例加入时间
-     * @param AddTime 实例加入时间
+     * Set 实例加入时间，按照ISO8601标准表示，并且使用UTC时间。
+     * @param AddTime 实例加入时间，按照ISO8601标准表示，并且使用UTC时间。
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;

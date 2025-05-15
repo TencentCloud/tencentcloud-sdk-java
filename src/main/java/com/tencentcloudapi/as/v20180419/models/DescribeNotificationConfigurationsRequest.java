@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeNotificationConfigurationsRequest extends AbstractModel {
 
     /**
-    * 按照一个或者多个通知ID查询。实例ID形如：asn-2sestqbr。每次请求的实例的上限为100。参数不支持同时指定`AutoScalingNotificationIds`和`Filters`。
+    * 按照一个或者多个通知ID查询，列表长度上限为100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 获取通知ID。参数不支持同时指定`AutoScalingNotificationIds`和`Filters`。
     */
     @SerializedName("AutoScalingNotificationIds")
     @Expose
@@ -55,16 +55,16 @@ public class DescribeNotificationConfigurationsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get 按照一个或者多个通知ID查询。实例ID形如：asn-2sestqbr。每次请求的实例的上限为100。参数不支持同时指定`AutoScalingNotificationIds`和`Filters`。 
-     * @return AutoScalingNotificationIds 按照一个或者多个通知ID查询。实例ID形如：asn-2sestqbr。每次请求的实例的上限为100。参数不支持同时指定`AutoScalingNotificationIds`和`Filters`。
+     * Get 按照一个或者多个通知ID查询，列表长度上限为100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 获取通知ID。参数不支持同时指定`AutoScalingNotificationIds`和`Filters`。 
+     * @return AutoScalingNotificationIds 按照一个或者多个通知ID查询，列表长度上限为100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 获取通知ID。参数不支持同时指定`AutoScalingNotificationIds`和`Filters`。
      */
     public String [] getAutoScalingNotificationIds() {
         return this.AutoScalingNotificationIds;
     }
 
     /**
-     * Set 按照一个或者多个通知ID查询。实例ID形如：asn-2sestqbr。每次请求的实例的上限为100。参数不支持同时指定`AutoScalingNotificationIds`和`Filters`。
-     * @param AutoScalingNotificationIds 按照一个或者多个通知ID查询。实例ID形如：asn-2sestqbr。每次请求的实例的上限为100。参数不支持同时指定`AutoScalingNotificationIds`和`Filters`。
+     * Set 按照一个或者多个通知ID查询，列表长度上限为100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 获取通知ID。参数不支持同时指定`AutoScalingNotificationIds`和`Filters`。
+     * @param AutoScalingNotificationIds 按照一个或者多个通知ID查询，列表长度上限为100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 获取通知ID。参数不支持同时指定`AutoScalingNotificationIds`和`Filters`。
      */
     public void setAutoScalingNotificationIds(String [] AutoScalingNotificationIds) {
         this.AutoScalingNotificationIds = AutoScalingNotificationIds;

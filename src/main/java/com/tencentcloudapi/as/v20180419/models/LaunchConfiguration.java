@@ -102,7 +102,7 @@ public class LaunchConfiguration extends AbstractModel {
     private String UserData;
 
     /**
-    * 启动配置创建时间。
+    * 启动配置创建时间，为标准`UTC`时间。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -130,7 +130,11 @@ public class LaunchConfiguration extends AbstractModel {
     private String LaunchConfigurationStatus;
 
     /**
-    * 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。<li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li>
+    * 实例计费类型，取值范围如下：
+<li>POSTPAID_BY_HOUR：按小时后付费</li>
+<li>SPOTPAID：竞价付费</li>
+<li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li>
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -159,7 +163,7 @@ public class LaunchConfiguration extends AbstractModel {
     private InstanceTag [] InstanceTags;
 
     /**
-    * 标签列表。
+    * 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
     */
     @SerializedName("Tags")
     @Expose
@@ -173,14 +177,14 @@ public class LaunchConfiguration extends AbstractModel {
     private Long VersionNumber;
 
     /**
-    * 更新时间。
+    * 更新时间，为标准`UTC`时间。
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-    * CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+    * CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
     */
     @SerializedName("CamRoleName")
     @Expose
@@ -438,16 +442,16 @@ public class LaunchConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 启动配置创建时间。 
-     * @return CreatedTime 启动配置创建时间。
+     * Get 启动配置创建时间，为标准`UTC`时间。 
+     * @return CreatedTime 启动配置创建时间，为标准`UTC`时间。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 启动配置创建时间。
-     * @param CreatedTime 启动配置创建时间。
+     * Set 启动配置创建时间，为标准`UTC`时间。
+     * @param CreatedTime 启动配置创建时间，为标准`UTC`时间。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
@@ -502,16 +506,32 @@ public class LaunchConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。<li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li> 
-     * @return InstanceChargeType 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。<li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li>
+     * Get 实例计费类型，取值范围如下：
+<li>POSTPAID_BY_HOUR：按小时后付费</li>
+<li>SPOTPAID：竞价付费</li>
+<li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li> 
+     * @return InstanceChargeType 实例计费类型，取值范围如下：
+<li>POSTPAID_BY_HOUR：按小时后付费</li>
+<li>SPOTPAID：竞价付费</li>
+<li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。<li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li>
-     * @param InstanceChargeType 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。<li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li>
+     * Set 实例计费类型，取值范围如下：
+<li>POSTPAID_BY_HOUR：按小时后付费</li>
+<li>SPOTPAID：竞价付费</li>
+<li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li>
+     * @param InstanceChargeType 实例计费类型，取值范围如下：
+<li>POSTPAID_BY_HOUR：按小时后付费</li>
+<li>SPOTPAID：竞价付费</li>
+<li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -570,16 +590,16 @@ public class LaunchConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 标签列表。 
-     * @return Tags 标签列表。
+     * Get 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。 
+     * @return Tags 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表。
-     * @param Tags 标签列表。
+     * Set 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
+     * @param Tags 标签列表，该参数内的标签仅用于绑定启动配置，不会传递给基于该启动配置扩容的 CVM 实例。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -602,32 +622,32 @@ public class LaunchConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 更新时间。 
-     * @return UpdatedTime 更新时间。
+     * Get 更新时间，为标准`UTC`时间。 
+     * @return UpdatedTime 更新时间，为标准`UTC`时间。
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set 更新时间。
-     * @param UpdatedTime 更新时间。
+     * Set 更新时间，为标准`UTC`时间。
+     * @param UpdatedTime 更新时间，为标准`UTC`时间。
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。 
-     * @return CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * Get CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。 
+     * @return CamRoleName CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
      */
     public String getCamRoleName() {
         return this.CamRoleName;
     }
 
     /**
-     * Set CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
-     * @param CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * Set CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+     * @param CamRoleName CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
      */
     public void setCamRoleName(String CamRoleName) {
         this.CamRoleName = CamRoleName;

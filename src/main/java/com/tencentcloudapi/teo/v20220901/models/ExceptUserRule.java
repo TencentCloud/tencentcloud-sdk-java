@@ -55,7 +55,6 @@ public class ExceptUserRule extends AbstractModel {
 
     /**
     * 更新时间，如果为null，默认由底层按当前时间生成。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -63,7 +62,6 @@ public class ExceptUserRule extends AbstractModel {
 
     /**
     * 匹配条件。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExceptUserRuleConditions")
     @Expose
@@ -71,7 +69,6 @@ public class ExceptUserRule extends AbstractModel {
 
     /**
     * 规则生效的范围。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExceptUserRuleScope")
     @Expose
@@ -157,10 +154,8 @@ public class ExceptUserRule extends AbstractModel {
     }
 
     /**
-     * Get 更新时间，如果为null，默认由底层按当前时间生成。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间，如果为null，默认由底层按当前时间生成。 
      * @return UpdateTime 更新时间，如果为null，默认由底层按当前时间生成。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -168,19 +163,15 @@ public class ExceptUserRule extends AbstractModel {
 
     /**
      * Set 更新时间，如果为null，默认由底层按当前时间生成。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间，如果为null，默认由底层按当前时间生成。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 匹配条件。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配条件。 
      * @return ExceptUserRuleConditions 匹配条件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExceptUserRuleCondition [] getExceptUserRuleConditions() {
         return this.ExceptUserRuleConditions;
@@ -188,19 +179,15 @@ public class ExceptUserRule extends AbstractModel {
 
     /**
      * Set 匹配条件。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExceptUserRuleConditions 匹配条件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExceptUserRuleConditions(ExceptUserRuleCondition [] ExceptUserRuleConditions) {
         this.ExceptUserRuleConditions = ExceptUserRuleConditions;
     }
 
     /**
-     * Get 规则生效的范围。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则生效的范围。 
      * @return ExceptUserRuleScope 规则生效的范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExceptUserRuleScope getExceptUserRuleScope() {
         return this.ExceptUserRuleScope;
@@ -208,9 +195,7 @@ public class ExceptUserRule extends AbstractModel {
 
     /**
      * Set 规则生效的范围。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExceptUserRuleScope 规则生效的范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExceptUserRuleScope(ExceptUserRuleScope ExceptUserRuleScope) {
         this.ExceptUserRuleScope = ExceptUserRuleScope;

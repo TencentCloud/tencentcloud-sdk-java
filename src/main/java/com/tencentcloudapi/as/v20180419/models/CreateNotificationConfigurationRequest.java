@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateNotificationConfigurationRequest extends AbstractModel {
 
     /**
-    * 伸缩组ID。
+    * 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
@@ -44,19 +44,19 @@ public class CreateNotificationConfigurationRequest extends AbstractModel {
     private String [] NotificationTypes;
 
     /**
-    * 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+    * 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。该参数仅在 TargetType 为 USER_GROUP 时生效。
     */
     @SerializedName("NotificationUserGroupIds")
     @Expose
     private String [] NotificationUserGroupIds;
 
     /**
-    * 通知接收端类型，取值如下
-<br><li>USER_GROUP：用户组
-<br><li>CMQ_QUEUE：CMQ 队列
-<br><li>CMQ_TOPIC：CMQ 主题
-<br><li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
-<br><li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+    * 通知接收端类型，取值如下：
+<li>USER_GROUP：用户组</li>
+<li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题</li>
+<li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列</li>
+<li>CMQ_QUEUE：CMQ 队列，[CMQ已下线](https://cloud.tencent.com/document/product/1496/83970)，目前仅推荐使用  TDMQ CMQ。</li>
+<li>CMQ_TOPIC：CMQ 主题，[CMQ已下线](https://cloud.tencent.com/document/product/1496/83970)，目前仅推荐使用  TDMQ CMQ。</li>
 
 默认值为：`USER_GROUP`。
     */
@@ -65,30 +65,30 @@ public class CreateNotificationConfigurationRequest extends AbstractModel {
     private String TargetType;
 
     /**
-    * CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE` 时，该字段必填。
+    * TDMQ CMQ 队列名，如 TargetType 取值为 `TDMQ_CMQ_QUEUE` ，该字段必填。
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC` 时，该字段必填。
+    * TDMQ CMQ 主题名，如 TargetType 取值为 `TDMQ_CMQ_TOPIC` ，该字段必填。
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-     * Get 伸缩组ID。 
-     * @return AutoScalingGroupId 伸缩组ID。
+     * Get 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。 
+     * @return AutoScalingGroupId 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set 伸缩组ID。
-     * @param AutoScalingGroupId 伸缩组ID。
+     * Set 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
+     * @param AutoScalingGroupId 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
@@ -135,36 +135,36 @@ public class CreateNotificationConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Get 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。 
-     * @return NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+     * Get 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。该参数仅在 TargetType 为 USER_GROUP 时生效。 
+     * @return NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。该参数仅在 TargetType 为 USER_GROUP 时生效。
      */
     public String [] getNotificationUserGroupIds() {
         return this.NotificationUserGroupIds;
     }
 
     /**
-     * Set 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-     * @param NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+     * Set 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。该参数仅在 TargetType 为 USER_GROUP 时生效。
+     * @param NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。该参数仅在 TargetType 为 USER_GROUP 时生效。
      */
     public void setNotificationUserGroupIds(String [] NotificationUserGroupIds) {
         this.NotificationUserGroupIds = NotificationUserGroupIds;
     }
 
     /**
-     * Get 通知接收端类型，取值如下
-<br><li>USER_GROUP：用户组
-<br><li>CMQ_QUEUE：CMQ 队列
-<br><li>CMQ_TOPIC：CMQ 主题
-<br><li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
-<br><li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+     * Get 通知接收端类型，取值如下：
+<li>USER_GROUP：用户组</li>
+<li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题</li>
+<li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列</li>
+<li>CMQ_QUEUE：CMQ 队列，[CMQ已下线](https://cloud.tencent.com/document/product/1496/83970)，目前仅推荐使用  TDMQ CMQ。</li>
+<li>CMQ_TOPIC：CMQ 主题，[CMQ已下线](https://cloud.tencent.com/document/product/1496/83970)，目前仅推荐使用  TDMQ CMQ。</li>
 
 默认值为：`USER_GROUP`。 
-     * @return TargetType 通知接收端类型，取值如下
-<br><li>USER_GROUP：用户组
-<br><li>CMQ_QUEUE：CMQ 队列
-<br><li>CMQ_TOPIC：CMQ 主题
-<br><li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
-<br><li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+     * @return TargetType 通知接收端类型，取值如下：
+<li>USER_GROUP：用户组</li>
+<li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题</li>
+<li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列</li>
+<li>CMQ_QUEUE：CMQ 队列，[CMQ已下线](https://cloud.tencent.com/document/product/1496/83970)，目前仅推荐使用  TDMQ CMQ。</li>
+<li>CMQ_TOPIC：CMQ 主题，[CMQ已下线](https://cloud.tencent.com/document/product/1496/83970)，目前仅推荐使用  TDMQ CMQ。</li>
 
 默认值为：`USER_GROUP`。
      */
@@ -173,20 +173,20 @@ public class CreateNotificationConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Set 通知接收端类型，取值如下
-<br><li>USER_GROUP：用户组
-<br><li>CMQ_QUEUE：CMQ 队列
-<br><li>CMQ_TOPIC：CMQ 主题
-<br><li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
-<br><li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+     * Set 通知接收端类型，取值如下：
+<li>USER_GROUP：用户组</li>
+<li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题</li>
+<li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列</li>
+<li>CMQ_QUEUE：CMQ 队列，[CMQ已下线](https://cloud.tencent.com/document/product/1496/83970)，目前仅推荐使用  TDMQ CMQ。</li>
+<li>CMQ_TOPIC：CMQ 主题，[CMQ已下线](https://cloud.tencent.com/document/product/1496/83970)，目前仅推荐使用  TDMQ CMQ。</li>
 
 默认值为：`USER_GROUP`。
-     * @param TargetType 通知接收端类型，取值如下
-<br><li>USER_GROUP：用户组
-<br><li>CMQ_QUEUE：CMQ 队列
-<br><li>CMQ_TOPIC：CMQ 主题
-<br><li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
-<br><li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+     * @param TargetType 通知接收端类型，取值如下：
+<li>USER_GROUP：用户组</li>
+<li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题</li>
+<li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列</li>
+<li>CMQ_QUEUE：CMQ 队列，[CMQ已下线](https://cloud.tencent.com/document/product/1496/83970)，目前仅推荐使用  TDMQ CMQ。</li>
+<li>CMQ_TOPIC：CMQ 主题，[CMQ已下线](https://cloud.tencent.com/document/product/1496/83970)，目前仅推荐使用  TDMQ CMQ。</li>
 
 默认值为：`USER_GROUP`。
      */
@@ -195,32 +195,32 @@ public class CreateNotificationConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Get CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE` 时，该字段必填。 
-     * @return QueueName CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE` 时，该字段必填。
+     * Get TDMQ CMQ 队列名，如 TargetType 取值为 `TDMQ_CMQ_QUEUE` ，该字段必填。 
+     * @return QueueName TDMQ CMQ 队列名，如 TargetType 取值为 `TDMQ_CMQ_QUEUE` ，该字段必填。
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE` 时，该字段必填。
-     * @param QueueName CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE` 时，该字段必填。
+     * Set TDMQ CMQ 队列名，如 TargetType 取值为 `TDMQ_CMQ_QUEUE` ，该字段必填。
+     * @param QueueName TDMQ CMQ 队列名，如 TargetType 取值为 `TDMQ_CMQ_QUEUE` ，该字段必填。
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC` 时，该字段必填。 
-     * @return TopicName CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC` 时，该字段必填。
+     * Get TDMQ CMQ 主题名，如 TargetType 取值为 `TDMQ_CMQ_TOPIC` ，该字段必填。 
+     * @return TopicName TDMQ CMQ 主题名，如 TargetType 取值为 `TDMQ_CMQ_TOPIC` ，该字段必填。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC` 时，该字段必填。
-     * @param TopicName CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC` 时，该字段必填。
+     * Set TDMQ CMQ 主题名，如 TargetType 取值为 `TDMQ_CMQ_TOPIC` ，该字段必填。
+     * @param TopicName TDMQ CMQ 主题名，如 TargetType 取值为 `TDMQ_CMQ_TOPIC` ，该字段必填。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

@@ -24,35 +24,40 @@ import java.util.HashMap;
 public class CreateScalingPolicyRequest extends AbstractModel {
 
     /**
-    * 伸缩组ID。
+    * 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
     private String AutoScalingGroupId;
 
     /**
-    * 告警触发策略名称。
+    * 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
     */
     @SerializedName("ScalingPolicyName")
     @Expose
     private String ScalingPolicyName;
 
     /**
-    * 告警触发策略类型，默认类型为SIMPLE。取值范围：<br><li>SIMPLE：简单策略</li><li>TARGET_TRACKING：目标追踪策略</li>
+    * 告警触发策略类型，默认类型为SIMPLE。取值范围：
+<li>SIMPLE：简单策略</li>
+<li>TARGET_TRACKING：目标追踪策略</li>
     */
     @SerializedName("ScalingPolicyType")
     @Expose
     private String ScalingPolicyType;
 
     /**
-    * 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
+    * 告警触发后，期望实例数修改方式，仅适用于简单策略，在简单策略场景下必填。取值范围：
+<li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li>
+<li>EXACT_CAPACITY：调整至指定期望实例数</li>
+<li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
     */
     @SerializedName("AdjustmentType")
     @Expose
     private String AdjustmentType;
 
     /**
-    * 告警触发后，期望实例数的调整值，仅适用于简单策略。
+    * 告警触发后，期望实例数的调整值，仅适用于简单策略，在简单策略场景下必填。
 <li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> 
 <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> 
 <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
@@ -69,14 +74,14 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     private Long Cooldown;
 
     /**
-    * 告警监控指标，仅适用于简单策略。
+    * 告警监控指标，仅适用于简单策略，在简单策略场景下必填。
     */
     @SerializedName("MetricAlarm")
     @Expose
     private MetricAlarm MetricAlarm;
 
     /**
-    * 预定义监控项，仅适用于目标追踪策略。取值范围：
+    * 预定义监控项，仅适用于目标追踪策略，在目标追踪策略场景下必填。取值范围：
 <li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
@@ -88,7 +93,7 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     private String PredefinedMetricType;
 
     /**
-    * 目标值，仅适用于目标追踪策略。
+    * 目标值，仅适用于目标追踪策略，在目标追踪策略场景下必填。
 <li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li>
@@ -124,75 +129,95 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     private String [] NotificationUserGroupIds;
 
     /**
-     * Get 伸缩组ID。 
-     * @return AutoScalingGroupId 伸缩组ID。
+     * Get 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。 
+     * @return AutoScalingGroupId 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set 伸缩组ID。
-     * @param AutoScalingGroupId 伸缩组ID。
+     * Set 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
+     * @param AutoScalingGroupId 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
     }
 
     /**
-     * Get 告警触发策略名称。 
-     * @return ScalingPolicyName 告警触发策略名称。
+     * Get 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。 
+     * @return ScalingPolicyName 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
      */
     public String getScalingPolicyName() {
         return this.ScalingPolicyName;
     }
 
     /**
-     * Set 告警触发策略名称。
-     * @param ScalingPolicyName 告警触发策略名称。
+     * Set 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
+     * @param ScalingPolicyName 告警策略名称，在您账号中必须唯一。名称长度不能超过60，名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点。
      */
     public void setScalingPolicyName(String ScalingPolicyName) {
         this.ScalingPolicyName = ScalingPolicyName;
     }
 
     /**
-     * Get 告警触发策略类型，默认类型为SIMPLE。取值范围：<br><li>SIMPLE：简单策略</li><li>TARGET_TRACKING：目标追踪策略</li> 
-     * @return ScalingPolicyType 告警触发策略类型，默认类型为SIMPLE。取值范围：<br><li>SIMPLE：简单策略</li><li>TARGET_TRACKING：目标追踪策略</li>
+     * Get 告警触发策略类型，默认类型为SIMPLE。取值范围：
+<li>SIMPLE：简单策略</li>
+<li>TARGET_TRACKING：目标追踪策略</li> 
+     * @return ScalingPolicyType 告警触发策略类型，默认类型为SIMPLE。取值范围：
+<li>SIMPLE：简单策略</li>
+<li>TARGET_TRACKING：目标追踪策略</li>
      */
     public String getScalingPolicyType() {
         return this.ScalingPolicyType;
     }
 
     /**
-     * Set 告警触发策略类型，默认类型为SIMPLE。取值范围：<br><li>SIMPLE：简单策略</li><li>TARGET_TRACKING：目标追踪策略</li>
-     * @param ScalingPolicyType 告警触发策略类型，默认类型为SIMPLE。取值范围：<br><li>SIMPLE：简单策略</li><li>TARGET_TRACKING：目标追踪策略</li>
+     * Set 告警触发策略类型，默认类型为SIMPLE。取值范围：
+<li>SIMPLE：简单策略</li>
+<li>TARGET_TRACKING：目标追踪策略</li>
+     * @param ScalingPolicyType 告警触发策略类型，默认类型为SIMPLE。取值范围：
+<li>SIMPLE：简单策略</li>
+<li>TARGET_TRACKING：目标追踪策略</li>
      */
     public void setScalingPolicyType(String ScalingPolicyType) {
         this.ScalingPolicyType = ScalingPolicyType;
     }
 
     /**
-     * Get 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li> 
-     * @return AdjustmentType 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
+     * Get 告警触发后，期望实例数修改方式，仅适用于简单策略，在简单策略场景下必填。取值范围：
+<li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li>
+<li>EXACT_CAPACITY：调整至指定期望实例数</li>
+<li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li> 
+     * @return AdjustmentType 告警触发后，期望实例数修改方式，仅适用于简单策略，在简单策略场景下必填。取值范围：
+<li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li>
+<li>EXACT_CAPACITY：调整至指定期望实例数</li>
+<li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
      */
     public String getAdjustmentType() {
         return this.AdjustmentType;
     }
 
     /**
-     * Set 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
-     * @param AdjustmentType 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
+     * Set 告警触发后，期望实例数修改方式，仅适用于简单策略，在简单策略场景下必填。取值范围：
+<li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li>
+<li>EXACT_CAPACITY：调整至指定期望实例数</li>
+<li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
+     * @param AdjustmentType 告警触发后，期望实例数修改方式，仅适用于简单策略，在简单策略场景下必填。取值范围：
+<li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li>
+<li>EXACT_CAPACITY：调整至指定期望实例数</li>
+<li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
      */
     public void setAdjustmentType(String AdjustmentType) {
         this.AdjustmentType = AdjustmentType;
     }
 
     /**
-     * Get 告警触发后，期望实例数的调整值，仅适用于简单策略。
+     * Get 告警触发后，期望实例数的调整值，仅适用于简单策略，在简单策略场景下必填。
 <li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> 
 <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> 
 <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li> 
-     * @return AdjustmentValue 告警触发后，期望实例数的调整值，仅适用于简单策略。
+     * @return AdjustmentValue 告警触发后，期望实例数的调整值，仅适用于简单策略，在简单策略场景下必填。
 <li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> 
 <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> 
 <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
@@ -202,11 +227,11 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Set 告警触发后，期望实例数的调整值，仅适用于简单策略。
+     * Set 告警触发后，期望实例数的调整值，仅适用于简单策略，在简单策略场景下必填。
 <li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> 
 <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> 
 <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
-     * @param AdjustmentValue 告警触发后，期望实例数的调整值，仅适用于简单策略。
+     * @param AdjustmentValue 告警触发后，期望实例数的调整值，仅适用于简单策略，在简单策略场景下必填。
 <li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> 
 <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> 
 <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
@@ -232,29 +257,29 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 告警监控指标，仅适用于简单策略。 
-     * @return MetricAlarm 告警监控指标，仅适用于简单策略。
+     * Get 告警监控指标，仅适用于简单策略，在简单策略场景下必填。 
+     * @return MetricAlarm 告警监控指标，仅适用于简单策略，在简单策略场景下必填。
      */
     public MetricAlarm getMetricAlarm() {
         return this.MetricAlarm;
     }
 
     /**
-     * Set 告警监控指标，仅适用于简单策略。
-     * @param MetricAlarm 告警监控指标，仅适用于简单策略。
+     * Set 告警监控指标，仅适用于简单策略，在简单策略场景下必填。
+     * @param MetricAlarm 告警监控指标，仅适用于简单策略，在简单策略场景下必填。
      */
     public void setMetricAlarm(MetricAlarm MetricAlarm) {
         this.MetricAlarm = MetricAlarm;
     }
 
     /**
-     * Get 预定义监控项，仅适用于目标追踪策略。取值范围：
+     * Get 预定义监控项，仅适用于目标追踪策略，在目标追踪策略场景下必填。取值范围：
 <li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
 <li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
 <li>ASG_AVG_WAN_TRAFFIC_IN：平均外网入带宽</li> 
-     * @return PredefinedMetricType 预定义监控项，仅适用于目标追踪策略。取值范围：
+     * @return PredefinedMetricType 预定义监控项，仅适用于目标追踪策略，在目标追踪策略场景下必填。取值范围：
 <li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
@@ -266,13 +291,13 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Set 预定义监控项，仅适用于目标追踪策略。取值范围：
+     * Set 预定义监控项，仅适用于目标追踪策略，在目标追踪策略场景下必填。取值范围：
 <li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
 <li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
 <li>ASG_AVG_WAN_TRAFFIC_IN：平均外网入带宽</li>
-     * @param PredefinedMetricType 预定义监控项，仅适用于目标追踪策略。取值范围：
+     * @param PredefinedMetricType 预定义监控项，仅适用于目标追踪策略，在目标追踪策略场景下必填。取值范围：
 <li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
@@ -284,13 +309,13 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标值，仅适用于目标追踪策略。
+     * Get 目标值，仅适用于目标追踪策略，在目标追踪策略场景下必填。
 <li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li>
 <li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li>
 <li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li> 
-     * @return TargetValue 目标值，仅适用于目标追踪策略。
+     * @return TargetValue 目标值，仅适用于目标追踪策略，在目标追踪策略场景下必填。
 <li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li>
@@ -302,13 +327,13 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Set 目标值，仅适用于目标追踪策略。
+     * Set 目标值，仅适用于目标追踪策略，在目标追踪策略场景下必填。
 <li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li>
 <li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li>
 <li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
-     * @param TargetValue 目标值，仅适用于目标追踪策略。
+     * @param TargetValue 目标值，仅适用于目标追踪策略，在目标追踪策略场景下必填。
 <li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
 <li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
 <li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li>

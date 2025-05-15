@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class EnableVpcEndPointConnectRequest extends AbstractModel {
 
     /**
-    * 终端节点服务ID。
+    * 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
     */
     @SerializedName("EndPointServiceId")
     @Expose
     private String EndPointServiceId;
 
     /**
-    * 终端节点ID。
+    * 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
     */
     @SerializedName("EndPointId")
     @Expose
@@ -53,32 +53,32 @@ public class EnableVpcEndPointConnectRequest extends AbstractModel {
     private String IpAddressType;
 
     /**
-     * Get 终端节点服务ID。 
-     * @return EndPointServiceId 终端节点服务ID。
+     * Get 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。 
+     * @return EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public String getEndPointServiceId() {
         return this.EndPointServiceId;
     }
 
     /**
-     * Set 终端节点服务ID。
-     * @param EndPointServiceId 终端节点服务ID。
+     * Set 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+     * @param EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public void setEndPointServiceId(String EndPointServiceId) {
         this.EndPointServiceId = EndPointServiceId;
     }
 
     /**
-     * Get 终端节点ID。 
-     * @return EndPointId 终端节点ID。
+     * Get 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。 
+     * @return EndPointId 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
      */
     public String [] getEndPointId() {
         return this.EndPointId;
     }
 
     /**
-     * Set 终端节点ID。
-     * @param EndPointId 终端节点ID。
+     * Set 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
+     * @param EndPointId 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
      */
     public void setEndPointId(String [] EndPointId) {
         this.EndPointId = EndPointId;

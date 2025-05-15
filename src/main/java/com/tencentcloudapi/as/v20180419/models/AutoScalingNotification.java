@@ -38,7 +38,13 @@ public class AutoScalingNotification extends AbstractModel {
     private String [] NotificationUserGroupIds;
 
     /**
-    * 通知事件列表。
+    * 通知事件列表。取值范围如下:
+<li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
+<li>SCALE_OUT_FAILED：扩容失败</li>
+<li>SCALE_IN_SUCCESSFUL：缩容成功</li>
+<li>SCALE_IN_FAILED：缩容失败</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
     */
     @SerializedName("NotificationTypes")
     @Expose
@@ -52,21 +58,26 @@ public class AutoScalingNotification extends AbstractModel {
     private String AutoScalingNotificationId;
 
     /**
-    * 通知接收端类型。
+    * 通知接收端类型。取值范围如下：
+USER_GROUP：用户组
+TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+CMQ_QUEUE：CMQ 队列，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+CMQ_TOPIC：CMQ 主题，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * CMQ 队列名。
+    * TDMQ CMQ 队列名。
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * CMQ 主题名。
+    * TDMQ CMQ 主题名。
     */
     @SerializedName("TopicName")
     @Expose
@@ -105,16 +116,40 @@ public class AutoScalingNotification extends AbstractModel {
     }
 
     /**
-     * Get 通知事件列表。 
-     * @return NotificationTypes 通知事件列表。
+     * Get 通知事件列表。取值范围如下:
+<li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
+<li>SCALE_OUT_FAILED：扩容失败</li>
+<li>SCALE_IN_SUCCESSFUL：缩容成功</li>
+<li>SCALE_IN_FAILED：缩容失败</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li> 
+     * @return NotificationTypes 通知事件列表。取值范围如下:
+<li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
+<li>SCALE_OUT_FAILED：扩容失败</li>
+<li>SCALE_IN_SUCCESSFUL：缩容成功</li>
+<li>SCALE_IN_FAILED：缩容失败</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
      */
     public String [] getNotificationTypes() {
         return this.NotificationTypes;
     }
 
     /**
-     * Set 通知事件列表。
-     * @param NotificationTypes 通知事件列表。
+     * Set 通知事件列表。取值范围如下:
+<li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
+<li>SCALE_OUT_FAILED：扩容失败</li>
+<li>SCALE_IN_SUCCESSFUL：缩容成功</li>
+<li>SCALE_IN_FAILED：缩容失败</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
+     * @param NotificationTypes 通知事件列表。取值范围如下:
+<li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
+<li>SCALE_OUT_FAILED：扩容失败</li>
+<li>SCALE_IN_SUCCESSFUL：缩容成功</li>
+<li>SCALE_IN_FAILED：缩容失败</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
      */
     public void setNotificationTypes(String [] NotificationTypes) {
         this.NotificationTypes = NotificationTypes;
@@ -137,48 +172,68 @@ public class AutoScalingNotification extends AbstractModel {
     }
 
     /**
-     * Get 通知接收端类型。 
-     * @return TargetType 通知接收端类型。
+     * Get 通知接收端类型。取值范围如下：
+USER_GROUP：用户组
+TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+CMQ_QUEUE：CMQ 队列，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+CMQ_TOPIC：CMQ 主题，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用 
+     * @return TargetType 通知接收端类型。取值范围如下：
+USER_GROUP：用户组
+TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+CMQ_QUEUE：CMQ 队列，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+CMQ_TOPIC：CMQ 主题，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 通知接收端类型。
-     * @param TargetType 通知接收端类型。
+     * Set 通知接收端类型。取值范围如下：
+USER_GROUP：用户组
+TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+CMQ_QUEUE：CMQ 队列，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+CMQ_TOPIC：CMQ 主题，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+     * @param TargetType 通知接收端类型。取值范围如下：
+USER_GROUP：用户组
+TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+CMQ_QUEUE：CMQ 队列，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+CMQ_TOPIC：CMQ 主题，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get CMQ 队列名。 
-     * @return QueueName CMQ 队列名。
+     * Get TDMQ CMQ 队列名。 
+     * @return QueueName TDMQ CMQ 队列名。
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set CMQ 队列名。
-     * @param QueueName CMQ 队列名。
+     * Set TDMQ CMQ 队列名。
+     * @param QueueName TDMQ CMQ 队列名。
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get CMQ 主题名。 
-     * @return TopicName CMQ 主题名。
+     * Get TDMQ CMQ 主题名。 
+     * @return TopicName TDMQ CMQ 主题名。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set CMQ 主题名。
-     * @param TopicName CMQ 主题名。
+     * Set TDMQ CMQ 主题名。
+     * @param TopicName TDMQ CMQ 主题名。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

@@ -942,6 +942,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *查询套餐信息列表，支持分页。
+     * @param req DescribePlansRequest
+     * @return DescribePlansResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlansResponse DescribePlans(DescribePlansRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePlans", DescribePlansResponse.class);
+    }
+
+    /**
      *DescribePrefetchTasks 用于查询预热任务提交历史记录及执行进度，通过 CreatePrefetchTasks 接口提交的任务可通过此接口进行查询。
      * @param req DescribePrefetchTasksRequest
      * @return DescribePrefetchTasksResponse

@@ -138,17 +138,6 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *获取最新交易列表（已废弃）
-     * @param req GetLatesdTransactionListRequest
-     * @return GetLatesdTransactionListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetLatesdTransactionListResponse GetLatesdTransactionList(GetLatesdTransactionListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetLatesdTransactionList", GetLatesdTransactionListResponse.class);
-    }
-
-    /**
      *获取fabric最新交易列表
      * @param req GetLatestTransactionListRequest
      * @return GetLatestTransactionListResponse

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateVpcEndPointRequest extends AbstractModel {
 
     /**
-    * VPC实例ID。
+    * VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网实例ID。
+    * 子网实例ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 终端节点名称。
+    * 终端节点名称。限制为60个字符。
     */
     @SerializedName("EndPointName")
     @Expose
     private String EndPointName;
 
     /**
-    * 终端节点服务ID。
+    * 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
     */
     @SerializedName("EndPointServiceId")
     @Expose
@@ -59,7 +59,7 @@ public class CreateVpcEndPointRequest extends AbstractModel {
     private String EndPointVip;
 
     /**
-    * 安全组ID。
+    * 安全组ID。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
     */
     @SerializedName("SecurityGroupId")
     @Expose
@@ -80,64 +80,64 @@ public class CreateVpcEndPointRequest extends AbstractModel {
     private String IpAddressType;
 
     /**
-     * Get VPC实例ID。 
-     * @return VpcId VPC实例ID。
+     * Get VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。 
+     * @return VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。
-     * @param VpcId VPC实例ID。
+     * Set VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+     * @param VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网实例ID。 
-     * @return SubnetId 子网实例ID。
+     * Get 子网实例ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。 
+     * @return SubnetId 子网实例ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网实例ID。
-     * @param SubnetId 子网实例ID。
+     * Set 子网实例ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
+     * @param SubnetId 子网实例ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 终端节点名称。 
-     * @return EndPointName 终端节点名称。
+     * Get 终端节点名称。限制为60个字符。 
+     * @return EndPointName 终端节点名称。限制为60个字符。
      */
     public String getEndPointName() {
         return this.EndPointName;
     }
 
     /**
-     * Set 终端节点名称。
-     * @param EndPointName 终端节点名称。
+     * Set 终端节点名称。限制为60个字符。
+     * @param EndPointName 终端节点名称。限制为60个字符。
      */
     public void setEndPointName(String EndPointName) {
         this.EndPointName = EndPointName;
     }
 
     /**
-     * Get 终端节点服务ID。 
-     * @return EndPointServiceId 终端节点服务ID。
+     * Get 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。 
+     * @return EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public String getEndPointServiceId() {
         return this.EndPointServiceId;
     }
 
     /**
-     * Set 终端节点服务ID。
-     * @param EndPointServiceId 终端节点服务ID。
+     * Set 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+     * @param EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public void setEndPointServiceId(String EndPointServiceId) {
         this.EndPointServiceId = EndPointServiceId;
@@ -160,16 +160,16 @@ public class CreateVpcEndPointRequest extends AbstractModel {
     }
 
     /**
-     * Get 安全组ID。 
-     * @return SecurityGroupId 安全组ID。
+     * Get 安全组ID。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。 
+     * @return SecurityGroupId 安全组ID。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组ID。
-     * @param SecurityGroupId 安全组ID。
+     * Set 安全组ID。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
+     * @param SecurityGroupId 安全组ID。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;

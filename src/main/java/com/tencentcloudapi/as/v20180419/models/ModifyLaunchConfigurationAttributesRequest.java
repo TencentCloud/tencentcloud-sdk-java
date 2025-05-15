@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel {
 
     /**
-    * 启动配置ID
+    * 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
     */
     @SerializedName("LaunchConfigurationId")
     @Expose
@@ -39,7 +39,7 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel {
 
     /**
     * 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。
+InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
     */
     @SerializedName("InstanceTypes")
     @Expose
@@ -168,14 +168,14 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     private EnhancedService EnhancedService;
 
     /**
-    * CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+    * CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
     */
     @SerializedName("CamRoleName")
     @Expose
     private String CamRoleName;
 
     /**
-    * 高性能计算集群ID。<br>
+    * 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。
     */
     @SerializedName("HpcClusterId")
@@ -190,7 +190,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     private IPv6InternetAccessible IPv6InternetAccessible;
 
     /**
-    * 置放群组id，仅支持指定一个。
+    * 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
@@ -212,7 +212,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     private InstanceTag [] InstanceTags;
 
     /**
-    * 镜像族名称。
+    * 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
     */
     @SerializedName("ImageFamily")
     @Expose
@@ -233,16 +233,16 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     private Metadata Metadata;
 
     /**
-     * Get 启动配置ID 
-     * @return LaunchConfigurationId 启动配置ID
+     * Get 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。 
+     * @return LaunchConfigurationId 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
      */
     public String getLaunchConfigurationId() {
         return this.LaunchConfigurationId;
     }
 
     /**
-     * Set 启动配置ID
-     * @param LaunchConfigurationId 启动配置ID
+     * Set 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
+     * @param LaunchConfigurationId 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
         this.LaunchConfigurationId = LaunchConfigurationId;
@@ -266,9 +266,9 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 
     /**
      * Get 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。 
+InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。 
      * @return InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。
+InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
@@ -276,9 +276,9 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 
     /**
      * Set 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。
+InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
      * @param InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。
+InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
@@ -605,25 +605,25 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     }
 
     /**
-     * Get CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。 
-     * @return CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * Get CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。 
+     * @return CamRoleName CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
      */
     public String getCamRoleName() {
         return this.CamRoleName;
     }
 
     /**
-     * Set CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
-     * @param CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * Set CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+     * @param CamRoleName CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
      */
     public void setCamRoleName(String CamRoleName) {
         this.CamRoleName = CamRoleName;
     }
 
     /**
-     * Get 高性能计算集群ID。<br>
+     * Get 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。 
-     * @return HpcClusterId 高性能计算集群ID。<br>
+     * @return HpcClusterId 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。
      */
     public String getHpcClusterId() {
@@ -631,9 +631,9 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     }
 
     /**
-     * Set 高性能计算集群ID。<br>
+     * Set 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。
-     * @param HpcClusterId 高性能计算集群ID。<br>
+     * @param HpcClusterId 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。
      */
     public void setHpcClusterId(String HpcClusterId) {
@@ -657,16 +657,16 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     }
 
     /**
-     * Get 置放群组id，仅支持指定一个。 
-     * @return DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     * Get 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。 
+     * @return DisasterRecoverGroupIds 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set 置放群组id，仅支持指定一个。
-     * @param DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     * Set 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
+     * @param DisasterRecoverGroupIds 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
@@ -709,16 +709,16 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     }
 
     /**
-     * Get 镜像族名称。 
-     * @return ImageFamily 镜像族名称。
+     * Get 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。 
+     * @return ImageFamily 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
      */
     public String getImageFamily() {
         return this.ImageFamily;
     }
 
     /**
-     * Set 镜像族名称。
-     * @param ImageFamily 镜像族名称。
+     * Set 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
+     * @param ImageFamily 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
      */
     public void setImageFamily(String ImageFamily) {
         this.ImageFamily = ImageFamily;

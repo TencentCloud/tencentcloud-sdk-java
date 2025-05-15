@@ -48,7 +48,6 @@ public class BotConfig extends AbstractModel {
 
     /**
     * Bot智能分析。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntelligenceRule")
     @Expose
@@ -70,7 +69,6 @@ public class BotConfig extends AbstractModel {
 
     /**
     * Bot托管定制策略，入参可不填，仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Customizes")
     @Expose
@@ -133,10 +131,8 @@ public class BotConfig extends AbstractModel {
     }
 
     /**
-     * Get Bot智能分析。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Bot智能分析。如果为null，默认使用历史配置。 
      * @return IntelligenceRule Bot智能分析。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntelligenceRule getIntelligenceRule() {
         return this.IntelligenceRule;
@@ -144,9 +140,7 @@ public class BotConfig extends AbstractModel {
 
     /**
      * Set Bot智能分析。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntelligenceRule Bot智能分析。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntelligenceRule(IntelligenceRule IntelligenceRule) {
         this.IntelligenceRule = IntelligenceRule;
@@ -185,10 +179,8 @@ public class BotConfig extends AbstractModel {
     }
 
     /**
-     * Get Bot托管定制策略，入参可不填，仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Bot托管定制策略，入参可不填，仅出参使用。 
      * @return Customizes Bot托管定制策略，入参可不填，仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BotUserRule [] getCustomizes() {
         return this.Customizes;
@@ -196,9 +188,7 @@ public class BotConfig extends AbstractModel {
 
     /**
      * Set Bot托管定制策略，入参可不填，仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Customizes Bot托管定制策略，入参可不填，仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomizes(BotUserRule [] Customizes) {
         this.Customizes = Customizes;

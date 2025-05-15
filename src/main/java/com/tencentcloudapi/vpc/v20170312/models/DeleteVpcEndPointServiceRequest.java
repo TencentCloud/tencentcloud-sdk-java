@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteVpcEndPointServiceRequest extends AbstractModel {
 
     /**
-    * 终端节点ID。
+    * 终端节点ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
     */
     @SerializedName("EndPointServiceId")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteVpcEndPointServiceRequest extends AbstractModel {
     private String IpAddressType;
 
     /**
-     * Get 终端节点ID。 
-     * @return EndPointServiceId 终端节点ID。
+     * Get 终端节点ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。 
+     * @return EndPointServiceId 终端节点ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public String getEndPointServiceId() {
         return this.EndPointServiceId;
     }
 
     /**
-     * Set 终端节点ID。
-     * @param EndPointServiceId 终端节点ID。
+     * Set 终端节点ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+     * @param EndPointServiceId 终端节点ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public void setEndPointServiceId(String EndPointServiceId) {
         this.EndPointServiceId = EndPointServiceId;

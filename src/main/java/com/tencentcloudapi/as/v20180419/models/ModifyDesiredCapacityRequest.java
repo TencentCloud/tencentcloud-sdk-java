@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyDesiredCapacityRequest extends AbstractModel {
 
     /**
-    * 伸缩组ID
+    * 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
     private String AutoScalingGroupId;
 
     /**
-    * 期望实例数
+    * 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
     */
     @SerializedName("DesiredCapacity")
     @Expose
     private Long DesiredCapacity;
 
     /**
-    * 最小实例数，取值范围为0-2000。
+    * 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * 最大实例数，取值范围为0-2000。
+    * 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-     * Get 伸缩组ID 
-     * @return AutoScalingGroupId 伸缩组ID
+     * Get 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。 
+     * @return AutoScalingGroupId 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set 伸缩组ID
-     * @param AutoScalingGroupId 伸缩组ID
+     * Set 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
+     * @param AutoScalingGroupId 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
     }
 
     /**
-     * Get 期望实例数 
-     * @return DesiredCapacity 期望实例数
+     * Get 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。 
+     * @return DesiredCapacity 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public Long getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
     /**
-     * Set 期望实例数
-     * @param DesiredCapacity 期望实例数
+     * Set 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param DesiredCapacity 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public void setDesiredCapacity(Long DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;
     }
 
     /**
-     * Get 最小实例数，取值范围为0-2000。 
-     * @return MinSize 最小实例数，取值范围为0-2000。
+     * Get 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。 
+     * @return MinSize 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set 最小实例数，取值范围为0-2000。
-     * @param MinSize 最小实例数，取值范围为0-2000。
+     * Set 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param MinSize 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get 最大实例数，取值范围为0-2000。 
-     * @return MaxSize 最大实例数，取值范围为0-2000。
+     * Get 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。 
+     * @return MaxSize 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 最大实例数，取值范围为0-2000。
-     * @param MaxSize 最大实例数，取值范围为0-2000。
+     * Set 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param MaxSize 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

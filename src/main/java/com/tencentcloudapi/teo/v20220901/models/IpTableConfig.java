@@ -27,7 +27,6 @@ public class IpTableConfig extends AbstractModel {
     * 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭；</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
     @Expose
@@ -35,7 +34,6 @@ public class IpTableConfig extends AbstractModel {
 
     /**
     * 基础管控规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpTableRules")
     @Expose
@@ -44,12 +42,10 @@ public class IpTableConfig extends AbstractModel {
     /**
      * Get 开关，取值有：
 <li>on：开启；</li>
-<li>off：关闭；</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>off：关闭；</li> 
      * @return Switch 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭；</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
         return this.Switch;
@@ -59,21 +55,17 @@ public class IpTableConfig extends AbstractModel {
      * Set 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭；</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Switch 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭；</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 基础管控规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基础管控规则。如果为null，默认使用历史配置。 
      * @return IpTableRules 基础管控规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpTableRule [] getIpTableRules() {
         return this.IpTableRules;
@@ -81,9 +73,7 @@ public class IpTableConfig extends AbstractModel {
 
     /**
      * Set 基础管控规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpTableRules 基础管控规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpTableRules(IpTableRule [] IpTableRules) {
         this.IpTableRules = IpTableRules;

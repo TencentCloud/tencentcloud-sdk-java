@@ -43,7 +43,6 @@ public class BotManagedRule extends AbstractModel {
 
     /**
     * 放行的规则ID。默认所有规则不配置放行。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransManagedIds")
     @Expose
@@ -51,7 +50,6 @@ public class BotManagedRule extends AbstractModel {
 
     /**
     * JS挑战的规则ID。默认所有规则不配置JS挑战。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlgManagedIds")
     @Expose
@@ -59,7 +57,6 @@ public class BotManagedRule extends AbstractModel {
 
     /**
     * 数字验证码的规则ID。默认所有规则不配置数字验证码。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CapManagedIds")
     @Expose
@@ -67,7 +64,6 @@ public class BotManagedRule extends AbstractModel {
 
     /**
     * 观察的规则ID。默认所有规则不配置观察。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonManagedIds")
     @Expose
@@ -75,7 +71,6 @@ public class BotManagedRule extends AbstractModel {
 
     /**
     * 拦截的规则ID。默认所有规则不配置拦截。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DropManagedIds")
     @Expose
@@ -130,10 +125,8 @@ public class BotManagedRule extends AbstractModel {
     }
 
     /**
-     * Get 放行的规则ID。默认所有规则不配置放行。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 放行的规则ID。默认所有规则不配置放行。 
      * @return TransManagedIds 放行的规则ID。默认所有规则不配置放行。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getTransManagedIds() {
         return this.TransManagedIds;
@@ -141,19 +134,15 @@ public class BotManagedRule extends AbstractModel {
 
     /**
      * Set 放行的规则ID。默认所有规则不配置放行。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransManagedIds 放行的规则ID。默认所有规则不配置放行。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransManagedIds(Long [] TransManagedIds) {
         this.TransManagedIds = TransManagedIds;
     }
 
     /**
-     * Get JS挑战的规则ID。默认所有规则不配置JS挑战。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get JS挑战的规则ID。默认所有规则不配置JS挑战。 
      * @return AlgManagedIds JS挑战的规则ID。默认所有规则不配置JS挑战。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getAlgManagedIds() {
         return this.AlgManagedIds;
@@ -161,19 +150,15 @@ public class BotManagedRule extends AbstractModel {
 
     /**
      * Set JS挑战的规则ID。默认所有规则不配置JS挑战。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlgManagedIds JS挑战的规则ID。默认所有规则不配置JS挑战。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlgManagedIds(Long [] AlgManagedIds) {
         this.AlgManagedIds = AlgManagedIds;
     }
 
     /**
-     * Get 数字验证码的规则ID。默认所有规则不配置数字验证码。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数字验证码的规则ID。默认所有规则不配置数字验证码。 
      * @return CapManagedIds 数字验证码的规则ID。默认所有规则不配置数字验证码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getCapManagedIds() {
         return this.CapManagedIds;
@@ -181,19 +166,15 @@ public class BotManagedRule extends AbstractModel {
 
     /**
      * Set 数字验证码的规则ID。默认所有规则不配置数字验证码。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CapManagedIds 数字验证码的规则ID。默认所有规则不配置数字验证码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapManagedIds(Long [] CapManagedIds) {
         this.CapManagedIds = CapManagedIds;
     }
 
     /**
-     * Get 观察的规则ID。默认所有规则不配置观察。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 观察的规则ID。默认所有规则不配置观察。 
      * @return MonManagedIds 观察的规则ID。默认所有规则不配置观察。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getMonManagedIds() {
         return this.MonManagedIds;
@@ -201,19 +182,15 @@ public class BotManagedRule extends AbstractModel {
 
     /**
      * Set 观察的规则ID。默认所有规则不配置观察。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonManagedIds 观察的规则ID。默认所有规则不配置观察。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonManagedIds(Long [] MonManagedIds) {
         this.MonManagedIds = MonManagedIds;
     }
 
     /**
-     * Get 拦截的规则ID。默认所有规则不配置拦截。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 拦截的规则ID。默认所有规则不配置拦截。 
      * @return DropManagedIds 拦截的规则ID。默认所有规则不配置拦截。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getDropManagedIds() {
         return this.DropManagedIds;
@@ -221,9 +198,7 @@ public class BotManagedRule extends AbstractModel {
 
     /**
      * Set 拦截的规则ID。默认所有规则不配置拦截。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DropManagedIds 拦截的规则ID。默认所有规则不配置拦截。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDropManagedIds(Long [] DropManagedIds) {
         this.DropManagedIds = DropManagedIds;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAutoScalingAdvicesRequest extends AbstractModel {
 
     /**
-    * 待查询的伸缩组列表，上限100。
+    * 待查询的伸缩组列表，上限100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
     */
     @SerializedName("AutoScalingGroupIds")
     @Expose
     private String [] AutoScalingGroupIds;
 
     /**
-     * Get 待查询的伸缩组列表，上限100。 
-     * @return AutoScalingGroupIds 待查询的伸缩组列表，上限100。
+     * Get 待查询的伸缩组列表，上限100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。 
+     * @return AutoScalingGroupIds 待查询的伸缩组列表，上限100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public String [] getAutoScalingGroupIds() {
         return this.AutoScalingGroupIds;
     }
 
     /**
-     * Set 待查询的伸缩组列表，上限100。
-     * @param AutoScalingGroupIds 待查询的伸缩组列表，上限100。
+     * Set 待查询的伸缩组列表，上限100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
+     * @param AutoScalingGroupIds 待查询的伸缩组列表，上限100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public void setAutoScalingGroupIds(String [] AutoScalingGroupIds) {
         this.AutoScalingGroupIds = AutoScalingGroupIds;

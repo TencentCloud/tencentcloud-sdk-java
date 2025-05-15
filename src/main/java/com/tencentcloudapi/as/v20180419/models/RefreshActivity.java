@@ -52,7 +52,9 @@ public class RefreshActivity extends AbstractModel {
     private RefreshBatch [] RefreshBatchSet;
 
     /**
-    * 刷新模式。
+    * 刷新模式。取值范围如下：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
     */
     @SerializedName("RefreshMode")
     @Expose
@@ -97,7 +99,7 @@ public class RefreshActivity extends AbstractModel {
     private Long CurrentRefreshBatchNum;
 
     /**
-    * 刷新活动开始时间。
+    * 刷新活动开始时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -105,7 +107,7 @@ public class RefreshActivity extends AbstractModel {
     private String StartTime;
 
     /**
-    * 刷新活动结束时间。
+    * 刷新活动结束时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -113,7 +115,7 @@ public class RefreshActivity extends AbstractModel {
     private String EndTime;
 
     /**
-    * 刷新活动创建时间。
+    * 刷新活动创建时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -184,16 +186,24 @@ public class RefreshActivity extends AbstractModel {
     }
 
     /**
-     * Get 刷新模式。 
-     * @return RefreshMode 刷新模式。
+     * Get 刷新模式。取值范围如下：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li> 
+     * @return RefreshMode 刷新模式。取值范围如下：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
      */
     public String getRefreshMode() {
         return this.RefreshMode;
     }
 
     /**
-     * Set 刷新模式。
-     * @param RefreshMode 刷新模式。
+     * Set 刷新模式。取值范围如下：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
+     * @param RefreshMode 刷新模式。取值范围如下：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
      */
     public void setRefreshMode(String RefreshMode) {
         this.RefreshMode = RefreshMode;
@@ -304,9 +314,9 @@ public class RefreshActivity extends AbstractModel {
     }
 
     /**
-     * Get 刷新活动开始时间。
+     * Get 刷新活动开始时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 刷新活动开始时间。
+     * @return StartTime 刷新活动开始时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -314,9 +324,9 @@ public class RefreshActivity extends AbstractModel {
     }
 
     /**
-     * Set 刷新活动开始时间。
+     * Set 刷新活动开始时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 刷新活动开始时间。
+     * @param StartTime 刷新活动开始时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -324,9 +334,9 @@ public class RefreshActivity extends AbstractModel {
     }
 
     /**
-     * Get 刷新活动结束时间。
+     * Get 刷新活动结束时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 刷新活动结束时间。
+     * @return EndTime 刷新活动结束时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -334,9 +344,9 @@ public class RefreshActivity extends AbstractModel {
     }
 
     /**
-     * Set 刷新活动结束时间。
+     * Set 刷新活动结束时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 刷新活动结束时间。
+     * @param EndTime 刷新活动结束时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -344,16 +354,16 @@ public class RefreshActivity extends AbstractModel {
     }
 
     /**
-     * Get 刷新活动创建时间。 
-     * @return CreatedTime 刷新活动创建时间。
+     * Get 刷新活动创建时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。 
+     * @return CreatedTime 刷新活动创建时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 刷新活动创建时间。
-     * @param CreatedTime 刷新活动创建时间。
+     * Set 刷新活动创建时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
+     * @param CreatedTime 刷新活动创建时间，为标准 `UTC` 时间，格式形如 `YYYY-MM-DDTHH:mm:ssZ`。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

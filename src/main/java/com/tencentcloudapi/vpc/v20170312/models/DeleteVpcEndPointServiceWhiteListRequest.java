@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteVpcEndPointServiceWhiteListRequest extends AbstractModel {
 
     /**
-    * 用户UIN数组。
+    * 用户UIN数组。登录 腾讯云账号中心控制台
     */
     @SerializedName("UserUin")
     @Expose
     private String [] UserUin;
 
     /**
-    * 终端节点服务ID。
+    * 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
     */
     @SerializedName("EndPointServiceId")
     @Expose
     private String EndPointServiceId;
 
     /**
-     * Get 用户UIN数组。 
-     * @return UserUin 用户UIN数组。
+     * Get 用户UIN数组。登录 腾讯云账号中心控制台 
+     * @return UserUin 用户UIN数组。登录 腾讯云账号中心控制台
      */
     public String [] getUserUin() {
         return this.UserUin;
     }
 
     /**
-     * Set 用户UIN数组。
-     * @param UserUin 用户UIN数组。
+     * Set 用户UIN数组。登录 腾讯云账号中心控制台
+     * @param UserUin 用户UIN数组。登录 腾讯云账号中心控制台
      */
     public void setUserUin(String [] UserUin) {
         this.UserUin = UserUin;
     }
 
     /**
-     * Get 终端节点服务ID。 
-     * @return EndPointServiceId 终端节点服务ID。
+     * Get 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。 
+     * @return EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public String getEndPointServiceId() {
         return this.EndPointServiceId;
     }
 
     /**
-     * Set 终端节点服务ID。
-     * @param EndPointServiceId 终端节点服务ID。
+     * Set 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+     * @param EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public void setEndPointServiceId(String EndPointServiceId) {
         this.EndPointServiceId = EndPointServiceId;

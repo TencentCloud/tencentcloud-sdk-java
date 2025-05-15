@@ -33,7 +33,6 @@ public class PartialModule extends AbstractModel {
 
     /**
     * 模块下的需要例外的具体规则ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Include")
     @Expose
@@ -60,10 +59,8 @@ public class PartialModule extends AbstractModel {
     }
 
     /**
-     * Get 模块下的需要例外的具体规则ID列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模块下的需要例外的具体规则ID列表。 
      * @return Include 模块下的需要例外的具体规则ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getInclude() {
         return this.Include;
@@ -71,9 +68,7 @@ public class PartialModule extends AbstractModel {
 
     /**
      * Set 模块下的需要例外的具体规则ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Include 模块下的需要例外的具体规则ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInclude(Long [] Include) {
         this.Include = Include;

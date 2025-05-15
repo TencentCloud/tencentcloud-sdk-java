@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteNotificationConfigurationRequest extends AbstractModel {
 
     /**
-    * 待删除的通知ID。
+    * 待删除的通知ID，目前为必填参数。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeNotificationConfigurations](https://cloud.tencent.com/document/api/377/33183) ，取返回信息中的 AutoScalingNotificationId 获取通知ID。
     */
     @SerializedName("AutoScalingNotificationId")
     @Expose
     private String AutoScalingNotificationId;
 
     /**
-     * Get 待删除的通知ID。 
-     * @return AutoScalingNotificationId 待删除的通知ID。
+     * Get 待删除的通知ID，目前为必填参数。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeNotificationConfigurations](https://cloud.tencent.com/document/api/377/33183) ，取返回信息中的 AutoScalingNotificationId 获取通知ID。 
+     * @return AutoScalingNotificationId 待删除的通知ID，目前为必填参数。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeNotificationConfigurations](https://cloud.tencent.com/document/api/377/33183) ，取返回信息中的 AutoScalingNotificationId 获取通知ID。
      */
     public String getAutoScalingNotificationId() {
         return this.AutoScalingNotificationId;
     }
 
     /**
-     * Set 待删除的通知ID。
-     * @param AutoScalingNotificationId 待删除的通知ID。
+     * Set 待删除的通知ID，目前为必填参数。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeNotificationConfigurations](https://cloud.tencent.com/document/api/377/33183) ，取返回信息中的 AutoScalingNotificationId 获取通知ID。
+     * @param AutoScalingNotificationId 待删除的通知ID，目前为必填参数。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeNotificationConfigurations](https://cloud.tencent.com/document/api/377/33183) ，取返回信息中的 AutoScalingNotificationId 获取通知ID。
      */
     public void setAutoScalingNotificationId(String AutoScalingNotificationId) {
         this.AutoScalingNotificationId = AutoScalingNotificationId;

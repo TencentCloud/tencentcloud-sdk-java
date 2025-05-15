@@ -108,6 +108,9 @@ public enum CynosdbErrorCode {
      /* 安全组查询实例失败。 */
      INTERNALERROR_LISTINSTANCEFAILED("InternalError.ListInstanceFailed"),
      
+     /* 查询实例错误 */
+     INTERNALERROR_LISTINSTANCESERROR("InternalError.ListInstancesError"),
+     
      /* 操作外网失败。 */
      INTERNALERROR_OPERATEWANFAIL("InternalError.OperateWanFail"),
      
@@ -243,8 +246,14 @@ public enum CynosdbErrorCode {
      /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),
      
+     /* 审计日志文件数超过最大限制数 */
+     OPERATIONDENIED_AUDITFILEOVERQUOTAERROR("OperationDenied.AuditFileOverQuotaError"),
+     
      /* 审计规则不存在 */
      OPERATIONDENIED_AUDITPOLICYNOTEXISTERROR("OperationDenied.AuditPolicyNotExistError"),
+     
+     /* 审计状态异常 */
+     OPERATIONDENIED_AUDITSTATUSERROR("OperationDenied.AuditStatusError"),
      
      /* 权限校验失败。 */
      OPERATIONDENIED_CAMDENIEDERROR("OperationDenied.CamDeniedError"),

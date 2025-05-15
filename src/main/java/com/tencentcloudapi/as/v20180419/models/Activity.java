@@ -89,21 +89,21 @@ public class Activity extends AbstractModel {
     private String Description;
 
     /**
-    * 伸缩活动开始时间。
+    * 伸缩活动开始时间，为 `UTC` 标准时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 伸缩活动结束时间。
+    * 伸缩活动结束时间，为 `UTC` 标准时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 伸缩活动创建时间。
+    * 伸缩活动创建时间，为 `UTC` 标准时间。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -328,48 +328,48 @@ public class Activity extends AbstractModel {
     }
 
     /**
-     * Get 伸缩活动开始时间。 
-     * @return StartTime 伸缩活动开始时间。
+     * Get 伸缩活动开始时间，为 `UTC` 标准时间。 
+     * @return StartTime 伸缩活动开始时间，为 `UTC` 标准时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 伸缩活动开始时间。
-     * @param StartTime 伸缩活动开始时间。
+     * Set 伸缩活动开始时间，为 `UTC` 标准时间。
+     * @param StartTime 伸缩活动开始时间，为 `UTC` 标准时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 伸缩活动结束时间。 
-     * @return EndTime 伸缩活动结束时间。
+     * Get 伸缩活动结束时间，为 `UTC` 标准时间。 
+     * @return EndTime 伸缩活动结束时间，为 `UTC` 标准时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 伸缩活动结束时间。
-     * @param EndTime 伸缩活动结束时间。
+     * Set 伸缩活动结束时间，为 `UTC` 标准时间。
+     * @param EndTime 伸缩活动结束时间，为 `UTC` 标准时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 伸缩活动创建时间。 
-     * @return CreatedTime 伸缩活动创建时间。
+     * Get 伸缩活动创建时间，为 `UTC` 标准时间。 
+     * @return CreatedTime 伸缩活动创建时间，为 `UTC` 标准时间。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 伸缩活动创建时间。
-     * @param CreatedTime 伸缩活动创建时间。
+     * Set 伸缩活动创建时间，为 `UTC` 标准时间。
+     * @param CreatedTime 伸缩活动创建时间，为 `UTC` 标准时间。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

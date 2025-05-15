@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class DescribeAutoScalingInstancesRequest extends AbstractModel {
 
     /**
-    * 待查询云服务器（CVM）的实例ID。每次请求的上限为100。参数不支持同时指定InstanceIds和Filters。
+    * 待查询云服务器（CVM）的实例ID列表，列表长度上限为100，不支持同时指定 InstanceIds 和 Filters。
+可以通过以下方式获取可用的实例ID：
+<li>通过登录[控制台](https://console.cloud.tencent.com/cvm/index)查询实例ID。</li>
+<li>通过调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。</li>
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -32,8 +35,8 @@ public class DescribeAutoScalingInstancesRequest extends AbstractModel {
 
     /**
     * 过滤条件。
-<li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li>
-<li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。</li>
+<li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。可通过登录[控制台](https://console.cloud.tencent.com/cvm/index)或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`InstanceIds`和`Filters`。
     */
     @SerializedName("Filters")
@@ -55,16 +58,28 @@ public class DescribeAutoScalingInstancesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 待查询云服务器（CVM）的实例ID。每次请求的上限为100。参数不支持同时指定InstanceIds和Filters。 
-     * @return InstanceIds 待查询云服务器（CVM）的实例ID。每次请求的上限为100。参数不支持同时指定InstanceIds和Filters。
+     * Get 待查询云服务器（CVM）的实例ID列表，列表长度上限为100，不支持同时指定 InstanceIds 和 Filters。
+可以通过以下方式获取可用的实例ID：
+<li>通过登录[控制台](https://console.cloud.tencent.com/cvm/index)查询实例ID。</li>
+<li>通过调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。</li> 
+     * @return InstanceIds 待查询云服务器（CVM）的实例ID列表，列表长度上限为100，不支持同时指定 InstanceIds 和 Filters。
+可以通过以下方式获取可用的实例ID：
+<li>通过登录[控制台](https://console.cloud.tencent.com/cvm/index)查询实例ID。</li>
+<li>通过调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。</li>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 待查询云服务器（CVM）的实例ID。每次请求的上限为100。参数不支持同时指定InstanceIds和Filters。
-     * @param InstanceIds 待查询云服务器（CVM）的实例ID。每次请求的上限为100。参数不支持同时指定InstanceIds和Filters。
+     * Set 待查询云服务器（CVM）的实例ID列表，列表长度上限为100，不支持同时指定 InstanceIds 和 Filters。
+可以通过以下方式获取可用的实例ID：
+<li>通过登录[控制台](https://console.cloud.tencent.com/cvm/index)查询实例ID。</li>
+<li>通过调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。</li>
+     * @param InstanceIds 待查询云服务器（CVM）的实例ID列表，列表长度上限为100，不支持同时指定 InstanceIds 和 Filters。
+可以通过以下方式获取可用的实例ID：
+<li>通过登录[控制台](https://console.cloud.tencent.com/cvm/index)查询实例ID。</li>
+<li>通过调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。</li>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -72,12 +87,12 @@ public class DescribeAutoScalingInstancesRequest extends AbstractModel {
 
     /**
      * Get 过滤条件。
-<li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li>
-<li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。</li>
+<li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。可通过登录[控制台](https://console.cloud.tencent.com/cvm/index)或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`InstanceIds`和`Filters`。 
      * @return Filters 过滤条件。
-<li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li>
-<li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。</li>
+<li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。可通过登录[控制台](https://console.cloud.tencent.com/cvm/index)或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`InstanceIds`和`Filters`。
      */
     public Filter [] getFilters() {
@@ -86,12 +101,12 @@ public class DescribeAutoScalingInstancesRequest extends AbstractModel {
 
     /**
      * Set 过滤条件。
-<li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li>
-<li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。</li>
+<li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。可通过登录[控制台](https://console.cloud.tencent.com/cvm/index)或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`InstanceIds`和`Filters`。
      * @param Filters 过滤条件。
-<li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。</li>
-<li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。</li>
+<li> instance-id - String - 是否必填：否 -（过滤条件）按照实例ID过滤。可通过登录[控制台](https://console.cloud.tencent.com/cvm/index)或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。</li>
+<li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`InstanceIds`和`Filters`。
      */
     public void setFilters(Filter [] Filters) {

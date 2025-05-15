@@ -38,6 +38,13 @@ public class UserManagerFilter extends AbstractModel {
     private String UserType;
 
     /**
+    * 组名
+    */
+    @SerializedName("Groups")
+    @Expose
+    private String Groups;
+
+    /**
      * Get 用户名 
      * @return UserName 用户名
      */
@@ -69,6 +76,22 @@ public class UserManagerFilter extends AbstractModel {
         this.UserType = UserType;
     }
 
+    /**
+     * Get 组名 
+     * @return Groups 组名
+     */
+    public String getGroups() {
+        return this.Groups;
+    }
+
+    /**
+     * Set 组名
+     * @param Groups 组名
+     */
+    public void setGroups(String Groups) {
+        this.Groups = Groups;
+    }
+
     public UserManagerFilter() {
     }
 
@@ -83,6 +106,9 @@ public class UserManagerFilter extends AbstractModel {
         if (source.UserType != null) {
             this.UserType = new String(source.UserType);
         }
+        if (source.Groups != null) {
+            this.Groups = new String(source.Groups);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class UserManagerFilter extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "Groups", this.Groups);
 
     }
 }

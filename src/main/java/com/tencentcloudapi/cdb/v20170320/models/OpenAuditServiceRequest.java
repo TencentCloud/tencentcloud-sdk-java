@@ -54,7 +54,7 @@ public class OpenAuditServiceRequest extends AbstractModel {
     private Long HighLogExpireDay;
 
     /**
-    * 审计规则。同RuleTemplateIds都不填是全审计。
+    * 审计规则（该参数已废弃，不再生效）。
     */
     @SerializedName("AuditRuleFilters")
     @Expose
@@ -159,16 +159,16 @@ public class OpenAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 审计规则。同RuleTemplateIds都不填是全审计。 
-     * @return AuditRuleFilters 审计规则。同RuleTemplateIds都不填是全审计。
+     * Get 审计规则（该参数已废弃，不再生效）。 
+     * @return AuditRuleFilters 审计规则（该参数已废弃，不再生效）。
      */
     public AuditRuleFilters [] getAuditRuleFilters() {
         return this.AuditRuleFilters;
     }
 
     /**
-     * Set 审计规则。同RuleTemplateIds都不填是全审计。
-     * @param AuditRuleFilters 审计规则。同RuleTemplateIds都不填是全审计。
+     * Set 审计规则（该参数已废弃，不再生效）。
+     * @param AuditRuleFilters 审计规则（该参数已废弃，不再生效）。
      */
     public void setAuditRuleFilters(AuditRuleFilters [] AuditRuleFilters) {
         this.AuditRuleFilters = AuditRuleFilters;
