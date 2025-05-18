@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListAppRequest extends AbstractModel {
 
     /**
-    * 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+    * 应用类型；knowledge_qa - 知识问答管理 
     */
     @SerializedName("AppType")
     @Expose
@@ -59,16 +59,16 @@ public class ListAppRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
-     * Get 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取 
-     * @return AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+     * Get 应用类型；knowledge_qa - 知识问答管理  
+     * @return AppType 应用类型；knowledge_qa - 知识问答管理 
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
-     * @param AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+     * Set 应用类型；knowledge_qa - 知识问答管理 
+     * @param AppType 应用类型；knowledge_qa - 知识问答管理 
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;

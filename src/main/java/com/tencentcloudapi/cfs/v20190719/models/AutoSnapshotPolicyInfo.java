@@ -31,7 +31,7 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
     private String AutoSnapshotPolicyId;
 
     /**
-    * 快照策略ID
+    * 快照策略名称
     */
     @SerializedName("PolicyName")
     @Expose
@@ -80,7 +80,7 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
     private String NextActiveTime;
 
     /**
-    * 快照策略状态，1代表快照策略状态正常。这里只有一种状态
+    * 快照策略状态，available代表快照策略状态正常。这里只有一种状态
     */
     @SerializedName("Status")
     @Expose
@@ -154,16 +154,16 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Get 快照策略ID 
-     * @return PolicyName 快照策略ID
+     * Get 快照策略名称 
+     * @return PolicyName 快照策略名称
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 快照策略ID
-     * @param PolicyName 快照策略ID
+     * Set 快照策略名称
+     * @param PolicyName 快照策略名称
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
@@ -266,16 +266,16 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Get 快照策略状态，1代表快照策略状态正常。这里只有一种状态 
-     * @return Status 快照策略状态，1代表快照策略状态正常。这里只有一种状态
+     * Get 快照策略状态，available代表快照策略状态正常。这里只有一种状态 
+     * @return Status 快照策略状态，available代表快照策略状态正常。这里只有一种状态
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 快照策略状态，1代表快照策略状态正常。这里只有一种状态
-     * @param Status 快照策略状态，1代表快照策略状态正常。这里只有一种状态
+     * Set 快照策略状态，available代表快照策略状态正常。这里只有一种状态
+     * @param Status 快照策略状态，available代表快照策略状态正常。这里只有一种状态
      */
     public void setStatus(String Status) {
         this.Status = Status;

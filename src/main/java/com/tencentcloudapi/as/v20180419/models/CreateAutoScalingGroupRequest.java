@@ -38,14 +38,14 @@ public class CreateAutoScalingGroupRequest extends AbstractModel {
     private String LaunchConfigurationId;
 
     /**
-    * 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+    * 最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-    * 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+    * 最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
     */
     @SerializedName("MinSize")
     @Expose
@@ -66,7 +66,7 @@ public class CreateAutoScalingGroupRequest extends AbstractModel {
     private Long DefaultCooldown;
 
     /**
-    * 期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
+    * 期望实例数，取值范围 [0,2000]，默认值等于当前 MinSize，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
     */
     @SerializedName("DesiredCapacity")
     @Expose
@@ -257,32 +257,32 @@ public class CreateAutoScalingGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。 
-     * @return MaxSize 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * Get 最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。 
+     * @return MaxSize 最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
-     * @param MaxSize 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * Set 最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+     * @param MaxSize 最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
     /**
-     * Get 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。 
-     * @return MinSize 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * Get 最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。 
+     * @return MinSize 最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
-     * @param MinSize 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * Set 最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+     * @param MinSize 最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
@@ -321,16 +321,16 @@ public class CreateAutoScalingGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。 
-     * @return DesiredCapacity 期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * Get 期望实例数，取值范围 [0,2000]，默认值等于当前 MinSize，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。 
+     * @return DesiredCapacity 期望实例数，取值范围 [0,2000]，默认值等于当前 MinSize，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     public Long getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
     /**
-     * Set 期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
-     * @param DesiredCapacity 期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * Set 期望实例数，取值范围 [0,2000]，默认值等于当前 MinSize，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+     * @param DesiredCapacity 期望实例数，取值范围 [0,2000]，默认值等于当前 MinSize，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     public void setDesiredCapacity(Long DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;

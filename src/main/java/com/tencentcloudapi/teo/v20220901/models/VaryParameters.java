@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfs.v20190719.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,51 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMountTargetsRequest extends AbstractModel {
+public class VaryParameters extends AbstractModel {
 
     /**
-    * 文件系统 ID，查询文件系统列表可以获得id
+    * Vary 特性配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
     */
-    @SerializedName("FileSystemId")
+    @SerializedName("Switch")
     @Expose
-    private String FileSystemId;
+    private String Switch;
 
     /**
-     * Get 文件系统 ID，查询文件系统列表可以获得id 
-     * @return FileSystemId 文件系统 ID，查询文件系统列表可以获得id
+     * Get Vary 特性配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li> 
+     * @return Switch Vary 特性配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
-    public String getFileSystemId() {
-        return this.FileSystemId;
+    public String getSwitch() {
+        return this.Switch;
     }
 
     /**
-     * Set 文件系统 ID，查询文件系统列表可以获得id
-     * @param FileSystemId 文件系统 ID，查询文件系统列表可以获得id
+     * Set Vary 特性配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+     * @param Switch Vary 特性配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
-    public void setFileSystemId(String FileSystemId) {
-        this.FileSystemId = FileSystemId;
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
     }
 
-    public DescribeMountTargetsRequest() {
+    public VaryParameters() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMountTargetsRequest(DescribeMountTargetsRequest source) {
-        if (source.FileSystemId != null) {
-            this.FileSystemId = new String(source.FileSystemId);
+    public VaryParameters(VaryParameters source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
         }
     }
 
@@ -64,7 +74,7 @@ public class DescribeMountTargetsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
 
     }
 }

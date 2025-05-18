@@ -74,14 +74,14 @@ public class EksCi extends AbstractModel {
     private String EipAddress;
 
     /**
-    * EKS Cotainer Instance Id
+    * EKS Container Instance Id
     */
     @SerializedName("EksCiId")
     @Expose
     private String EksCiId;
 
     /**
-    * EKS Cotainer Instance Name
+    * EKS Container Instance Name
     */
     @SerializedName("EksCiName")
     @Expose
@@ -309,32 +309,32 @@ Pending是创建中，Running是 运行中。
     }
 
     /**
-     * Get EKS Cotainer Instance Id 
-     * @return EksCiId EKS Cotainer Instance Id
+     * Get EKS Container Instance Id 
+     * @return EksCiId EKS Container Instance Id
      */
     public String getEksCiId() {
         return this.EksCiId;
     }
 
     /**
-     * Set EKS Cotainer Instance Id
-     * @param EksCiId EKS Cotainer Instance Id
+     * Set EKS Container Instance Id
+     * @param EksCiId EKS Container Instance Id
      */
     public void setEksCiId(String EksCiId) {
         this.EksCiId = EksCiId;
     }
 
     /**
-     * Get EKS Cotainer Instance Name 
-     * @return EksCiName EKS Cotainer Instance Name
+     * Get EKS Container Instance Name 
+     * @return EksCiName EKS Container Instance Name
      */
     public String getEksCiName() {
         return this.EksCiName;
     }
 
     /**
-     * Set EKS Cotainer Instance Name
-     * @param EksCiName EKS Cotainer Instance Name
+     * Set EKS Container Instance Name
+     * @param EksCiName EKS Container Instance Name
      */
     public void setEksCiName(String EksCiName) {
         this.EksCiName = EksCiName;

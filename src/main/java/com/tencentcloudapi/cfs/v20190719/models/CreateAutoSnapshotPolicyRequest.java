@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * 快照重复时间点,0-23
+    * 快照重复时间点,0-23，小时
     */
     @SerializedName("Hour")
     @Expose
@@ -38,44 +38,44 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel {
     private String PolicyName;
 
     /**
-    * 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
+    * 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天，与DayOfMonth，IntervalDays 三者选一
     */
     @SerializedName("DayOfWeek")
     @Expose
     private String DayOfWeek;
 
     /**
-    * 快照保留时长，单位天
+    * 快照保留时长，单位天，默认永久0
     */
     @SerializedName("AliveDays")
     @Expose
     private Long AliveDays;
 
     /**
-    * 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
+    * 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
     */
     @SerializedName("DayOfMonth")
     @Expose
     private String DayOfMonth;
 
     /**
-    * 间隔天数
+    * 间隔天数，与DayOfWeek，DayOfMonth 三者选一
     */
     @SerializedName("IntervalDays")
     @Expose
     private Long IntervalDays;
 
     /**
-     * Get 快照重复时间点,0-23 
-     * @return Hour 快照重复时间点,0-23
+     * Get 快照重复时间点,0-23，小时 
+     * @return Hour 快照重复时间点,0-23，小时
      */
     public String getHour() {
         return this.Hour;
     }
 
     /**
-     * Set 快照重复时间点,0-23
-     * @param Hour 快照重复时间点,0-23
+     * Set 快照重复时间点,0-23，小时
+     * @param Hour 快照重复时间点,0-23，小时
      */
     public void setHour(String Hour) {
         this.Hour = Hour;
@@ -98,64 +98,64 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天 
-     * @return DayOfWeek 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
+     * Get 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天，与DayOfMonth，IntervalDays 三者选一 
+     * @return DayOfWeek 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天，与DayOfMonth，IntervalDays 三者选一
      */
     public String getDayOfWeek() {
         return this.DayOfWeek;
     }
 
     /**
-     * Set 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
-     * @param DayOfWeek 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
+     * Set 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天，与DayOfMonth，IntervalDays 三者选一
+     * @param DayOfWeek 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天，与DayOfMonth，IntervalDays 三者选一
      */
     public void setDayOfWeek(String DayOfWeek) {
         this.DayOfWeek = DayOfWeek;
     }
 
     /**
-     * Get 快照保留时长，单位天 
-     * @return AliveDays 快照保留时长，单位天
+     * Get 快照保留时长，单位天，默认永久0 
+     * @return AliveDays 快照保留时长，单位天，默认永久0
      */
     public Long getAliveDays() {
         return this.AliveDays;
     }
 
     /**
-     * Set 快照保留时长，单位天
-     * @param AliveDays 快照保留时长，单位天
+     * Set 快照保留时长，单位天，默认永久0
+     * @param AliveDays 快照保留时长，单位天，默认永久0
      */
     public void setAliveDays(Long AliveDays) {
         this.AliveDays = AliveDays;
     }
 
     /**
-     * Get 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。 
-     * @return DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
+     * Get 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一 
+     * @return DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
      */
     public String getDayOfMonth() {
         return this.DayOfMonth;
     }
 
     /**
-     * Set 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
-     * @param DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
+     * Set 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
+     * @param DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
      */
     public void setDayOfMonth(String DayOfMonth) {
         this.DayOfMonth = DayOfMonth;
     }
 
     /**
-     * Get 间隔天数 
-     * @return IntervalDays 间隔天数
+     * Get 间隔天数，与DayOfWeek，DayOfMonth 三者选一 
+     * @return IntervalDays 间隔天数，与DayOfWeek，DayOfMonth 三者选一
      */
     public Long getIntervalDays() {
         return this.IntervalDays;
     }
 
     /**
-     * Set 间隔天数
-     * @param IntervalDays 间隔天数
+     * Set 间隔天数，与DayOfWeek，DayOfMonth 三者选一
+     * @param IntervalDays 间隔天数，与DayOfWeek，DayOfMonth 三者选一
      */
     public void setIntervalDays(Long IntervalDays) {
         this.IntervalDays = IntervalDays;

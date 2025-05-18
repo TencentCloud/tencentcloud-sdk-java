@@ -163,7 +163,7 @@ public class FileSystemInfo extends AbstractModel {
     private String AutoSnapshotPolicyId;
 
     /**
-    * 文件系统处理快照状态
+    * 文件系统处理快照状态,snapping：快照中，normal：正常状态
     */
     @SerializedName("SnapStatus")
     @Expose
@@ -543,16 +543,16 @@ Available:可用
     }
 
     /**
-     * Get 文件系统处理快照状态 
-     * @return SnapStatus 文件系统处理快照状态
+     * Get 文件系统处理快照状态,snapping：快照中，normal：正常状态 
+     * @return SnapStatus 文件系统处理快照状态,snapping：快照中，normal：正常状态
      */
     public String getSnapStatus() {
         return this.SnapStatus;
     }
 
     /**
-     * Set 文件系统处理快照状态
-     * @param SnapStatus 文件系统处理快照状态
+     * Set 文件系统处理快照状态,snapping：快照中，normal：正常状态
+     * @param SnapStatus 文件系统处理快照状态,snapping：快照中，normal：正常状态
      */
     public void setSnapStatus(String SnapStatus) {
         this.SnapStatus = SnapStatus;

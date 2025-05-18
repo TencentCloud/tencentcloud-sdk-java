@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeCfsFileSystemClientsRequest extends AbstractModel {
 
     /**
-    * 文件系统 ID。
+    * 文件系统 ID，通过查询文件系统接口获取
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * Offset 分页码
+    * Offset 分页码，默认为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit 页面大小
+    * Limit 页面大小，默认为10，最大值为100
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 文件系统 ID。 
-     * @return FileSystemId 文件系统 ID。
+     * Get 文件系统 ID，通过查询文件系统接口获取 
+     * @return FileSystemId 文件系统 ID，通过查询文件系统接口获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID。
-     * @param FileSystemId 文件系统 ID。
+     * Set 文件系统 ID，通过查询文件系统接口获取
+     * @param FileSystemId 文件系统 ID，通过查询文件系统接口获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get Offset 分页码 
-     * @return Offset Offset 分页码
+     * Get Offset 分页码，默认为0 
+     * @return Offset Offset 分页码，默认为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset 分页码
-     * @param Offset Offset 分页码
+     * Set Offset 分页码，默认为0
+     * @param Offset Offset 分页码，默认为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit 页面大小 
-     * @return Limit Limit 页面大小
+     * Get Limit 页面大小，默认为10，最大值为100 
+     * @return Limit Limit 页面大小，默认为10，最大值为100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit 页面大小
-     * @param Limit Limit 页面大小
+     * Set Limit 页面大小，默认为10，最大值为100
+     * @param Limit Limit 页面大小，默认为10，最大值为100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

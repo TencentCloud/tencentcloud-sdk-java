@@ -38,7 +38,7 @@ public class SnapshotStatistics extends AbstractModel {
     private Long SnapshotNumber;
 
     /**
-    * 快照总容量
+    * 快照总容量，单位是MiB
     */
     @SerializedName("SnapshotSize")
     @Expose
@@ -77,16 +77,16 @@ public class SnapshotStatistics extends AbstractModel {
     }
 
     /**
-     * Get 快照总容量 
-     * @return SnapshotSize 快照总容量
+     * Get 快照总容量，单位是MiB 
+     * @return SnapshotSize 快照总容量，单位是MiB
      */
     public Long getSnapshotSize() {
         return this.SnapshotSize;
     }
 
     /**
-     * Set 快照总容量
-     * @param SnapshotSize 快照总容量
+     * Set 快照总容量，单位是MiB
+     * @param SnapshotSize 快照总容量，单位是MiB
      */
     public void setSnapshotSize(Long SnapshotSize) {
         this.SnapshotSize = SnapshotSize;

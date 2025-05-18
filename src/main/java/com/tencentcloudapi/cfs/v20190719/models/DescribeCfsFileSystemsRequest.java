@@ -45,14 +45,14 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
     private String SubnetId;
 
     /**
-    * Offset 分页码
+    * Offset 分页码,默认0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit 页面大小
+    * Limit 页面大小，默认10
     */
     @SerializedName("Limit")
     @Expose
@@ -114,32 +114,32 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
     }
 
     /**
-     * Get Offset 分页码 
-     * @return Offset Offset 分页码
+     * Get Offset 分页码,默认0 
+     * @return Offset Offset 分页码,默认0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset 分页码
-     * @param Offset Offset 分页码
+     * Set Offset 分页码,默认0
+     * @param Offset Offset 分页码,默认0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit 页面大小 
-     * @return Limit Limit 页面大小
+     * Get Limit 页面大小，默认10 
+     * @return Limit Limit 页面大小，默认10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit 页面大小
-     * @param Limit Limit 页面大小
+     * Set Limit 页面大小，默认10
+     * @param Limit Limit 页面大小，默认10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

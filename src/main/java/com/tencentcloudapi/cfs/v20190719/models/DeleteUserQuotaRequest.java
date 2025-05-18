@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DeleteUserQuotaRequest extends AbstractModel {
 
     /**
-    * 文件系统 ID
+    * 文件系统 ID，通过查询文件系统接口获取
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 指定配额类型，包括Uid、Gid、Dir
+    * 指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
     */
     @SerializedName("UserType")
     @Expose
     private String UserType;
 
     /**
-    * UID/GID信息
+    * UID/GID信息，和DirectoryPath参数，两者必须填写一个
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 设置目录配额的目录的绝对路径
+    * 设置目录配额的目录的绝对路径，和UserId参数，两者必须填写一个
     */
     @SerializedName("DirectoryPath")
     @Expose
     private String DirectoryPath;
 
     /**
-     * Get 文件系统 ID 
-     * @return FileSystemId 文件系统 ID
+     * Get 文件系统 ID，通过查询文件系统接口获取 
+     * @return FileSystemId 文件系统 ID，通过查询文件系统接口获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID
-     * @param FileSystemId 文件系统 ID
+     * Set 文件系统 ID，通过查询文件系统接口获取
+     * @param FileSystemId 文件系统 ID，通过查询文件系统接口获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 指定配额类型，包括Uid、Gid、Dir 
-     * @return UserType 指定配额类型，包括Uid、Gid、Dir
+     * Get 指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制） 
+     * @return UserType 指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
      */
     public String getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 指定配额类型，包括Uid、Gid、Dir
-     * @param UserType 指定配额类型，包括Uid、Gid、Dir
+     * Set 指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
+     * @param UserType 指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
      */
     public void setUserType(String UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get UID/GID信息 
-     * @return UserId UID/GID信息
+     * Get UID/GID信息，和DirectoryPath参数，两者必须填写一个 
+     * @return UserId UID/GID信息，和DirectoryPath参数，两者必须填写一个
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set UID/GID信息
-     * @param UserId UID/GID信息
+     * Set UID/GID信息，和DirectoryPath参数，两者必须填写一个
+     * @param UserId UID/GID信息，和DirectoryPath参数，两者必须填写一个
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 设置目录配额的目录的绝对路径 
-     * @return DirectoryPath 设置目录配额的目录的绝对路径
+     * Get 设置目录配额的目录的绝对路径，和UserId参数，两者必须填写一个 
+     * @return DirectoryPath 设置目录配额的目录的绝对路径，和UserId参数，两者必须填写一个
      */
     public String getDirectoryPath() {
         return this.DirectoryPath;
     }
 
     /**
-     * Set 设置目录配额的目录的绝对路径
-     * @param DirectoryPath 设置目录配额的目录的绝对路径
+     * Set 设置目录配额的目录的绝对路径，和UserId参数，两者必须填写一个
+     * @param DirectoryPath 设置目录配额的目录的绝对路径，和UserId参数，两者必须填写一个
      */
     public void setDirectoryPath(String DirectoryPath) {
         this.DirectoryPath = DirectoryPath;

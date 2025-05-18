@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSnapshotOperationLogsRequest extends AbstractModel {
 
     /**
-    * 文件系统快照ID
+    * 文件系统快照ID，通过快照创建接口获得
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeSnapshotOperationLogsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-     * Get 文件系统快照ID 
-     * @return SnapshotId 文件系统快照ID
+     * Get 文件系统快照ID，通过快照创建接口获得 
+     * @return SnapshotId 文件系统快照ID，通过快照创建接口获得
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 文件系统快照ID
-     * @param SnapshotId 文件系统快照ID
+     * Set 文件系统快照ID，通过快照创建接口获得
+     * @param SnapshotId 文件系统快照ID，通过快照创建接口获得
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;

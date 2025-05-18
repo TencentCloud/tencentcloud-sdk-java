@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class UpdateCfsSnapshotAttributeRequest extends AbstractModel {
 
     /**
-    * 文件系统快照ID
+    * 文件系统快照ID,查询文件系统快照列表获取
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * 文件系统快照名称
+    * 文件系统快照名称，与AliveDays 必须填一个
     */
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
 
     /**
-    * 文件系统快照保留天数
+    * 文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期
     */
     @SerializedName("AliveDays")
     @Expose
     private Long AliveDays;
 
     /**
-     * Get 文件系统快照ID 
-     * @return SnapshotId 文件系统快照ID
+     * Get 文件系统快照ID,查询文件系统快照列表获取 
+     * @return SnapshotId 文件系统快照ID,查询文件系统快照列表获取
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 文件系统快照ID
-     * @param SnapshotId 文件系统快照ID
+     * Set 文件系统快照ID,查询文件系统快照列表获取
+     * @param SnapshotId 文件系统快照ID,查询文件系统快照列表获取
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get 文件系统快照名称 
-     * @return SnapshotName 文件系统快照名称
+     * Get 文件系统快照名称，与AliveDays 必须填一个 
+     * @return SnapshotName 文件系统快照名称，与AliveDays 必须填一个
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set 文件系统快照名称
-     * @param SnapshotName 文件系统快照名称
+     * Set 文件系统快照名称，与AliveDays 必须填一个
+     * @param SnapshotName 文件系统快照名称，与AliveDays 必须填一个
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get 文件系统快照保留天数 
-     * @return AliveDays 文件系统快照保留天数
+     * Get 文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期 
+     * @return AliveDays 文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期
      */
     public Long getAliveDays() {
         return this.AliveDays;
     }
 
     /**
-     * Set 文件系统快照保留天数
-     * @param AliveDays 文件系统快照保留天数
+     * Set 文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期
+     * @param AliveDays 文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期
      */
     public void setAliveDays(Long AliveDays) {
         this.AliveDays = AliveDays;

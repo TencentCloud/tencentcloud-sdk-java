@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CreateAccessCertRequest extends AbstractModel {
 
     /**
-    * 证书描述
+    * 证书描述，不超过64字符
     */
     @SerializedName("CertDesc")
     @Expose
     private String CertDesc;
 
     /**
-     * Get 证书描述 
-     * @return CertDesc 证书描述
+     * Get 证书描述，不超过64字符 
+     * @return CertDesc 证书描述，不超过64字符
      */
     public String getCertDesc() {
         return this.CertDesc;
     }
 
     /**
-     * Set 证书描述
-     * @param CertDesc 证书描述
+     * Set 证书描述，不超过64字符
+     * @param CertDesc 证书描述，不超过64字符
      */
     public void setCertDesc(String CertDesc) {
         this.CertDesc = CertDesc;

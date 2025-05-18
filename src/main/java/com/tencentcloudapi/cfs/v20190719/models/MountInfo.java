@@ -52,14 +52,16 @@ public class MountInfo extends AbstractModel {
     private String FSID;
 
     /**
-    * 挂载点状态
+    * 挂载点状态，包括creating：创建中；available：运行中；
+deleting：删除中；
+create_failed： 创建失败
     */
     @SerializedName("LifeCycleState")
     @Expose
     private String LifeCycleState;
 
     /**
-    * 网络类型
+    * 网络类型，包括VPC,CCN
     */
     @SerializedName("NetworkInterface")
     @Expose
@@ -172,32 +174,40 @@ public class MountInfo extends AbstractModel {
     }
 
     /**
-     * Get 挂载点状态 
-     * @return LifeCycleState 挂载点状态
+     * Get 挂载点状态，包括creating：创建中；available：运行中；
+deleting：删除中；
+create_failed： 创建失败 
+     * @return LifeCycleState 挂载点状态，包括creating：创建中；available：运行中；
+deleting：删除中；
+create_failed： 创建失败
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set 挂载点状态
-     * @param LifeCycleState 挂载点状态
+     * Set 挂载点状态，包括creating：创建中；available：运行中；
+deleting：删除中；
+create_failed： 创建失败
+     * @param LifeCycleState 挂载点状态，包括creating：创建中；available：运行中；
+deleting：删除中；
+create_failed： 创建失败
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;
     }
 
     /**
-     * Get 网络类型 
-     * @return NetworkInterface 网络类型
+     * Get 网络类型，包括VPC,CCN 
+     * @return NetworkInterface 网络类型，包括VPC,CCN
      */
     public String getNetworkInterface() {
         return this.NetworkInterface;
     }
 
     /**
-     * Set 网络类型
-     * @param NetworkInterface 网络类型
+     * Set 网络类型，包括VPC,CCN
+     * @param NetworkInterface 网络类型，包括VPC,CCN
      */
     public void setNetworkInterface(String NetworkInterface) {
         this.NetworkInterface = NetworkInterface;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BindAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * 快照策略ID
+    * 快照策略ID，通过快照策略列表获取
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-    * 文件系统列表
+    * 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
     */
     @SerializedName("FileSystemIds")
     @Expose
     private String FileSystemIds;
 
     /**
-     * Get 快照策略ID 
-     * @return AutoSnapshotPolicyId 快照策略ID
+     * Get 快照策略ID，通过快照策略列表获取 
+     * @return AutoSnapshotPolicyId 快照策略ID，通过快照策略列表获取
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set 快照策略ID
-     * @param AutoSnapshotPolicyId 快照策略ID
+     * Set 快照策略ID，通过快照策略列表获取
+     * @param AutoSnapshotPolicyId 快照策略ID，通过快照策略列表获取
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
     /**
-     * Get 文件系统列表 
-     * @return FileSystemIds 文件系统列表
+     * Get 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得 
+     * @return FileSystemIds 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
      */
     public String getFileSystemIds() {
         return this.FileSystemIds;
     }
 
     /**
-     * Set 文件系统列表
-     * @param FileSystemIds 文件系统列表
+     * Set 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
+     * @param FileSystemIds 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
      */
     public void setFileSystemIds(String FileSystemIds) {
         this.FileSystemIds = FileSystemIds;

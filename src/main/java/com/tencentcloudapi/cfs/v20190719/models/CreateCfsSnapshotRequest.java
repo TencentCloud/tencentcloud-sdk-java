@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateCfsSnapshotRequest extends AbstractModel {
 
     /**
-    * 文件系统id
+    * 文件系统 ID，通过查询文件系统接口获取
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 快照名称
+    * 快照名称，不超过64字符
     */
     @SerializedName("SnapshotName")
     @Expose
@@ -45,32 +45,32 @@ public class CreateCfsSnapshotRequest extends AbstractModel {
     private TagInfo [] ResourceTags;
 
     /**
-     * Get 文件系统id 
-     * @return FileSystemId 文件系统id
+     * Get 文件系统 ID，通过查询文件系统接口获取 
+     * @return FileSystemId 文件系统 ID，通过查询文件系统接口获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统id
-     * @param FileSystemId 文件系统id
+     * Set 文件系统 ID，通过查询文件系统接口获取
+     * @param FileSystemId 文件系统 ID，通过查询文件系统接口获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 快照名称 
-     * @return SnapshotName 快照名称
+     * Get 快照名称，不超过64字符 
+     * @return SnapshotName 快照名称，不超过64字符
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set 快照名称
-     * @param SnapshotName 快照名称
+     * Set 快照名称，不超过64字符
+     * @param SnapshotName 快照名称，不超过64字符
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;

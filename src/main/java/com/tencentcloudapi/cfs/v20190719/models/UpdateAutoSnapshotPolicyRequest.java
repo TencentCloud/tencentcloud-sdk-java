@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class UpdateAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * 快照策略ID
+    * 快照策略ID,查询快照策略列表获取
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-    * 快照策略名称
+    * 快照策略名称，不超过64个字符
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-    * 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
+    * 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日，与DayOfMonth，IntervalDays 三者选一个
     */
     @SerializedName("DayOfWeek")
     @Expose
@@ -52,7 +52,7 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel {
     private String Hour;
 
     /**
-    * 快照保留日期
+    * 快照保留天数
     */
     @SerializedName("AliveDays")
     @Expose
@@ -66,62 +66,62 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel {
     private Long IsActivated;
 
     /**
-    * 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
+    * 定期快照在每月的第几天创建快照，该参数与DayOfWeek,IntervalDays 三者选一
     */
     @SerializedName("DayOfMonth")
     @Expose
     private String DayOfMonth;
 
     /**
-    * 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+    * 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 三者选一
     */
     @SerializedName("IntervalDays")
     @Expose
     private Long IntervalDays;
 
     /**
-     * Get 快照策略ID 
-     * @return AutoSnapshotPolicyId 快照策略ID
+     * Get 快照策略ID,查询快照策略列表获取 
+     * @return AutoSnapshotPolicyId 快照策略ID,查询快照策略列表获取
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set 快照策略ID
-     * @param AutoSnapshotPolicyId 快照策略ID
+     * Set 快照策略ID,查询快照策略列表获取
+     * @param AutoSnapshotPolicyId 快照策略ID,查询快照策略列表获取
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
     /**
-     * Get 快照策略名称 
-     * @return PolicyName 快照策略名称
+     * Get 快照策略名称，不超过64个字符 
+     * @return PolicyName 快照策略名称，不超过64个字符
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 快照策略名称
-     * @param PolicyName 快照策略名称
+     * Set 快照策略名称，不超过64个字符
+     * @param PolicyName 快照策略名称，不超过64个字符
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日 
-     * @return DayOfWeek 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
+     * Get 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日，与DayOfMonth，IntervalDays 三者选一个 
+     * @return DayOfWeek 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日，与DayOfMonth，IntervalDays 三者选一个
      */
     public String getDayOfWeek() {
         return this.DayOfWeek;
     }
 
     /**
-     * Set 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
-     * @param DayOfWeek 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
+     * Set 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日，与DayOfMonth，IntervalDays 三者选一个
+     * @param DayOfWeek 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日，与DayOfMonth，IntervalDays 三者选一个
      */
     public void setDayOfWeek(String DayOfWeek) {
         this.DayOfWeek = DayOfWeek;
@@ -144,16 +144,16 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 快照保留日期 
-     * @return AliveDays 快照保留日期
+     * Get 快照保留天数 
+     * @return AliveDays 快照保留天数
      */
     public Long getAliveDays() {
         return this.AliveDays;
     }
 
     /**
-     * Set 快照保留日期
-     * @param AliveDays 快照保留日期
+     * Set 快照保留天数
+     * @param AliveDays 快照保留天数
      */
     public void setAliveDays(Long AliveDays) {
         this.AliveDays = AliveDays;
@@ -176,32 +176,32 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥 
-     * @return DayOfMonth 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
+     * Get 定期快照在每月的第几天创建快照，该参数与DayOfWeek,IntervalDays 三者选一 
+     * @return DayOfMonth 定期快照在每月的第几天创建快照，该参数与DayOfWeek,IntervalDays 三者选一
      */
     public String getDayOfMonth() {
         return this.DayOfMonth;
     }
 
     /**
-     * Set 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
-     * @param DayOfMonth 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
+     * Set 定期快照在每月的第几天创建快照，该参数与DayOfWeek,IntervalDays 三者选一
+     * @param DayOfMonth 定期快照在每月的第几天创建快照，该参数与DayOfWeek,IntervalDays 三者选一
      */
     public void setDayOfMonth(String DayOfMonth) {
         this.DayOfMonth = DayOfMonth;
     }
 
     /**
-     * Get 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥 
-     * @return IntervalDays 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+     * Get 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 三者选一 
+     * @return IntervalDays 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 三者选一
      */
     public Long getIntervalDays() {
         return this.IntervalDays;
     }
 
     /**
-     * Set 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
-     * @param IntervalDays 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+     * Set 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 三者选一
+     * @param IntervalDays 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 三者选一
      */
     public void setIntervalDays(Long IntervalDays) {
         this.IntervalDays = IntervalDays;

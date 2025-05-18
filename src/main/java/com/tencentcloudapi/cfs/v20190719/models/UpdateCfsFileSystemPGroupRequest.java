@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UpdateCfsFileSystemPGroupRequest extends AbstractModel {
 
     /**
-    * 权限组 ID
+    * 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
     */
     @SerializedName("PGroupId")
     @Expose
     private String PGroupId;
 
     /**
-    * 文件系统 ID
+    * 文件系统 ID，通过查询文件系统接口获取
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-     * Get 权限组 ID 
-     * @return PGroupId 权限组 ID
+     * Get 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取 
+     * @return PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set 权限组 ID
-     * @param PGroupId 权限组 ID
+     * Set 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * @param PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
     }
 
     /**
-     * Get 文件系统 ID 
-     * @return FileSystemId 文件系统 ID
+     * Get 文件系统 ID，通过查询文件系统接口获取 
+     * @return FileSystemId 文件系统 ID，通过查询文件系统接口获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID
-     * @param FileSystemId 文件系统 ID
+     * Set 文件系统 ID，通过查询文件系统接口获取
+     * @param FileSystemId 文件系统 ID，通过查询文件系统接口获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;

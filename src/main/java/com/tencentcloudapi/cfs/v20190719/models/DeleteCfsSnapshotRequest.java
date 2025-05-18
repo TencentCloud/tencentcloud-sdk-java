@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteCfsSnapshotRequest extends AbstractModel {
 
     /**
-    * 文件系统快照id
+    * 文件系统快照id，可通过查询快照列表接口获取
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+    * 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
     */
     @SerializedName("SnapshotIds")
     @Expose
     private String [] SnapshotIds;
 
     /**
-     * Get 文件系统快照id 
-     * @return SnapshotId 文件系统快照id
+     * Get 文件系统快照id，可通过查询快照列表接口获取 
+     * @return SnapshotId 文件系统快照id，可通过查询快照列表接口获取
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 文件系统快照id
-     * @param SnapshotId 文件系统快照id
+     * Set 文件系统快照id，可通过查询快照列表接口获取
+     * @param SnapshotId 文件系统快照id，可通过查询快照列表接口获取
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项 
-     * @return SnapshotIds 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+     * Get 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项 
+     * @return SnapshotIds 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
      */
     public String [] getSnapshotIds() {
         return this.SnapshotIds;
     }
 
     /**
-     * Set 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
-     * @param SnapshotIds 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+     * Set 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+     * @param SnapshotIds 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
      */
     public void setSnapshotIds(String [] SnapshotIds) {
         this.SnapshotIds = SnapshotIds;

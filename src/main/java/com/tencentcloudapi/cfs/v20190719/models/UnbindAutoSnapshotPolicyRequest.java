@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UnbindAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * 需要解绑的文件系统ID列表，用"," 分割
+    * 需要解绑的文件系统ID列表，用"," 分割，文件系统id 通创建文件系统接口获得
     */
     @SerializedName("FileSystemIds")
     @Expose
     private String FileSystemIds;
 
     /**
-    * 解绑的快照ID
+    * 解绑的快照ID，通过创建快照策略接口获得
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-     * Get 需要解绑的文件系统ID列表，用"," 分割 
-     * @return FileSystemIds 需要解绑的文件系统ID列表，用"," 分割
+     * Get 需要解绑的文件系统ID列表，用"," 分割，文件系统id 通创建文件系统接口获得 
+     * @return FileSystemIds 需要解绑的文件系统ID列表，用"," 分割，文件系统id 通创建文件系统接口获得
      */
     public String getFileSystemIds() {
         return this.FileSystemIds;
     }
 
     /**
-     * Set 需要解绑的文件系统ID列表，用"," 分割
-     * @param FileSystemIds 需要解绑的文件系统ID列表，用"," 分割
+     * Set 需要解绑的文件系统ID列表，用"," 分割，文件系统id 通创建文件系统接口获得
+     * @param FileSystemIds 需要解绑的文件系统ID列表，用"," 分割，文件系统id 通创建文件系统接口获得
      */
     public void setFileSystemIds(String FileSystemIds) {
         this.FileSystemIds = FileSystemIds;
     }
 
     /**
-     * Get 解绑的快照ID 
-     * @return AutoSnapshotPolicyId 解绑的快照ID
+     * Get 解绑的快照ID，通过创建快照策略接口获得 
+     * @return AutoSnapshotPolicyId 解绑的快照ID，通过创建快照策略接口获得
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set 解绑的快照ID
-     * @param AutoSnapshotPolicyId 解绑的快照ID
+     * Set 解绑的快照ID，通过创建快照策略接口获得
+     * @param AutoSnapshotPolicyId 解绑的快照ID，通过创建快照策略接口获得
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;

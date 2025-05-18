@@ -58,9 +58,9 @@ public class RuleEngineAction extends AbstractModel {
 <li>ErrorPage：自定义错误页面；</li>
 <li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速。</li>
-<li>SetContentIdentifierParameters：设置内容标识符。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>ResponseSpeedLimit：单连接下载限速；</li>
+<li>SetContentIdentifier：设置内容标识符；</li>
+<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
     */
     @SerializedName("Name")
     @Expose
@@ -331,13 +331,21 @@ public class RuleEngineAction extends AbstractModel {
     private ResponseSpeedLimitParameters ResponseSpeedLimitParameters;
 
     /**
-    * 内容标识配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+    * 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
 
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetContentIdentifierParameters")
     @Expose
     private SetContentIdentifierParameters SetContentIdentifierParameters;
+
+    /**
+    * Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+该功能灰度中，如需使用，请联系腾讯云客服。
+    */
+    @SerializedName("VaryParameters")
+    @Expose
+    private VaryParameters VaryParameters;
 
     /**
      * Get 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
@@ -374,9 +382,9 @@ public class RuleEngineAction extends AbstractModel {
 <li>ErrorPage：自定义错误页面；</li>
 <li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速。</li>
-<li>SetContentIdentifierParameters：设置内容标识符。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>ResponseSpeedLimit：单连接下载限速；</li>
+<li>SetContentIdentifier：设置内容标识符；</li>
+<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li> 
      * @return Name 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
 <li>Cache：节点缓存 TTL；</li>
 <li>CacheKey：自定义 Cache Key；</li>
@@ -411,9 +419,9 @@ public class RuleEngineAction extends AbstractModel {
 <li>ErrorPage：自定义错误页面；</li>
 <li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速。</li>
-<li>SetContentIdentifierParameters：设置内容标识符。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>ResponseSpeedLimit：单连接下载限速；</li>
+<li>SetContentIdentifier：设置内容标识符；</li>
+<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
      */
     public String getName() {
         return this.Name;
@@ -454,9 +462,9 @@ public class RuleEngineAction extends AbstractModel {
 <li>ErrorPage：自定义错误页面；</li>
 <li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速。</li>
-<li>SetContentIdentifierParameters：设置内容标识符。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>ResponseSpeedLimit：单连接下载限速；</li>
+<li>SetContentIdentifier：设置内容标识符；</li>
+<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
      * @param Name 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
 <li>Cache：节点缓存 TTL；</li>
 <li>CacheKey：自定义 Cache Key；</li>
@@ -491,9 +499,9 @@ public class RuleEngineAction extends AbstractModel {
 <li>ErrorPage：自定义错误页面；</li>
 <li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速。</li>
-<li>SetContentIdentifierParameters：设置内容标识符。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>ResponseSpeedLimit：单连接下载限速；</li>
+<li>SetContentIdentifier：设置内容标识符；</li>
+<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -1160,10 +1168,10 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Get 内容标识配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+     * Get 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
 
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SetContentIdentifierParameters 内容标识配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+     * @return SetContentIdentifierParameters 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -1172,15 +1180,35 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
-     * Set 内容标识配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+     * Set 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
 
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SetContentIdentifierParameters 内容标识配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+     * @param SetContentIdentifierParameters 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetContentIdentifierParameters(SetContentIdentifierParameters SetContentIdentifierParameters) {
         this.SetContentIdentifierParameters = SetContentIdentifierParameters;
+    }
+
+    /**
+     * Get Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+该功能灰度中，如需使用，请联系腾讯云客服。 
+     * @return VaryParameters Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+该功能灰度中，如需使用，请联系腾讯云客服。
+     */
+    public VaryParameters getVaryParameters() {
+        return this.VaryParameters;
+    }
+
+    /**
+     * Set Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+该功能灰度中，如需使用，请联系腾讯云客服。
+     * @param VaryParameters Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+该功能灰度中，如需使用，请联系腾讯云客服。
+     */
+    public void setVaryParameters(VaryParameters VaryParameters) {
+        this.VaryParameters = VaryParameters;
     }
 
     public RuleEngineAction() {
@@ -1296,6 +1324,9 @@ public class RuleEngineAction extends AbstractModel {
         if (source.SetContentIdentifierParameters != null) {
             this.SetContentIdentifierParameters = new SetContentIdentifierParameters(source.SetContentIdentifierParameters);
         }
+        if (source.VaryParameters != null) {
+            this.VaryParameters = new VaryParameters(source.VaryParameters);
+        }
     }
 
 
@@ -1338,6 +1369,7 @@ public class RuleEngineAction extends AbstractModel {
         this.setParamObj(map, prefix + "ModifyRequestHeaderParameters.", this.ModifyRequestHeaderParameters);
         this.setParamObj(map, prefix + "ResponseSpeedLimitParameters.", this.ResponseSpeedLimitParameters);
         this.setParamObj(map, prefix + "SetContentIdentifierParameters.", this.SetContentIdentifierParameters);
+        this.setParamObj(map, prefix + "VaryParameters.", this.VaryParameters);
 
     }
 }

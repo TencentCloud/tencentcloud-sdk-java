@@ -117,6 +117,13 @@ public class CreateProbeTasksRequest extends AbstractModel {
     private Long SubSyncFlag;
 
     /**
+    * 创建者名称
+    */
+    @SerializedName("RtxName")
+    @Expose
+    private String RtxName;
+
+    /**
      * Get 批量任务名-地址 
      * @return BatchTasks 批量任务名-地址
      */
@@ -332,6 +339,22 @@ public class CreateProbeTasksRequest extends AbstractModel {
         this.SubSyncFlag = SubSyncFlag;
     }
 
+    /**
+     * Get 创建者名称 
+     * @return RtxName 创建者名称
+     */
+    public String getRtxName() {
+        return this.RtxName;
+    }
+
+    /**
+     * Set 创建者名称
+     * @param RtxName 创建者名称
+     */
+    public void setRtxName(String RtxName) {
+        this.RtxName = RtxName;
+    }
+
     public CreateProbeTasksRequest() {
     }
 
@@ -388,6 +411,9 @@ public class CreateProbeTasksRequest extends AbstractModel {
         if (source.SubSyncFlag != null) {
             this.SubSyncFlag = new Long(source.SubSyncFlag);
         }
+        if (source.RtxName != null) {
+            this.RtxName = new String(source.RtxName);
+        }
     }
 
 
@@ -408,6 +434,7 @@ public class CreateProbeTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClientNum", this.ClientNum);
         this.setParamSimple(map, prefix + "NodeIpType", this.NodeIpType);
         this.setParamSimple(map, prefix + "SubSyncFlag", this.SubSyncFlag);
+        this.setParamSimple(map, prefix + "RtxName", this.RtxName);
 
     }
 }

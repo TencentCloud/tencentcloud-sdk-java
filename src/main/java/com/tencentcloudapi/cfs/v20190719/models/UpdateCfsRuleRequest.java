@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpdateCfsRuleRequest extends AbstractModel {
 
     /**
-    * 权限组 ID
+    * 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
     */
     @SerializedName("PGroupId")
     @Expose
     private String PGroupId;
 
     /**
-    * 规则 ID
+    * 规则 ID，通过查询权限组规则接口获取
     */
     @SerializedName("RuleId")
     @Expose
@@ -52,7 +52,7 @@ public class UpdateCfsRuleRequest extends AbstractModel {
     private String RWPermission;
 
     /**
-    * 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。
+    * 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash，默认值为root_squash
 all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
 no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
 root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
@@ -64,39 +64,39 @@ no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 
     private String UserPermission;
 
     /**
-    * 规则优先级，参数范围1-100。 其中 1 为最高，100为最低
+    * 规则优先级，参数范围1-100。 其中 1 为最高，100为最低，默认值为100
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-     * Get 权限组 ID 
-     * @return PGroupId 权限组 ID
+     * Get 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取 
+     * @return PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set 权限组 ID
-     * @param PGroupId 权限组 ID
+     * Set 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * @param PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
     }
 
     /**
-     * Get 规则 ID 
-     * @return RuleId 规则 ID
+     * Get 规则 ID，通过查询权限组规则接口获取 
+     * @return RuleId 规则 ID，通过查询权限组规则接口获取
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则 ID
-     * @param RuleId 规则 ID
+     * Set 规则 ID，通过查询权限组规则接口获取
+     * @param RuleId 规则 ID，通过查询权限组规则接口获取
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
@@ -135,13 +135,13 @@ no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 
     }
 
     /**
-     * Get 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。
+     * Get 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash，默认值为root_squash
 all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
 no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
 root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
 no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 用户）均保持原有的 UID/GID 信息
  
-     * @return UserPermission 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。
+     * @return UserPermission 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash，默认值为root_squash
 all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
 no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
 root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
@@ -153,13 +153,13 @@ no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 
     }
 
     /**
-     * Set 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。
+     * Set 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash，默认值为root_squash
 all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
 no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
 root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
 no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 用户）均保持原有的 UID/GID 信息
 
-     * @param UserPermission 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。
+     * @param UserPermission 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash，默认值为root_squash
 all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
 no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
 root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
@@ -171,16 +171,16 @@ no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 
     }
 
     /**
-     * Get 规则优先级，参数范围1-100。 其中 1 为最高，100为最低 
-     * @return Priority 规则优先级，参数范围1-100。 其中 1 为最高，100为最低
+     * Get 规则优先级，参数范围1-100。 其中 1 为最高，100为最低，默认值为100 
+     * @return Priority 规则优先级，参数范围1-100。 其中 1 为最高，100为最低，默认值为100
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 规则优先级，参数范围1-100。 其中 1 为最高，100为最低
-     * @param Priority 规则优先级，参数范围1-100。 其中 1 为最高，100为最低
+     * Set 规则优先级，参数范围1-100。 其中 1 为最高，100为最低，默认值为100
+     * @param Priority 规则优先级，参数范围1-100。 其中 1 为最高，100为最低，默认值为100
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
