@@ -435,6 +435,13 @@ pause
     private String [] NodeList;
 
     /**
+    * 全球数据库唯一标识
+    */
+    @SerializedName("GdnId")
+    @Expose
+    private String GdnId;
+
+    /**
      * Get 用户Uin 
      * @return Uin 用户Uin
      */
@@ -1382,6 +1389,22 @@ pause
         this.NodeList = NodeList;
     }
 
+    /**
+     * Get 全球数据库唯一标识 
+     * @return GdnId 全球数据库唯一标识
+     */
+    public String getGdnId() {
+        return this.GdnId;
+    }
+
+    /**
+     * Set 全球数据库唯一标识
+     * @param GdnId 全球数据库唯一标识
+     */
+    public void setGdnId(String GdnId) {
+        this.GdnId = GdnId;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1582,6 +1605,9 @@ pause
                 this.NodeList[i] = new String(source.NodeList[i]);
             }
         }
+        if (source.GdnId != null) {
+            this.GdnId = new String(source.GdnId);
+        }
     }
 
 
@@ -1647,6 +1673,7 @@ pause
         this.setParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
         this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
         this.setParamArraySimple(map, prefix + "NodeList.", this.NodeList);
+        this.setParamSimple(map, prefix + "GdnId", this.GdnId);
 
     }
 }

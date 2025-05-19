@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * 实例元组
+    * 实例元组，数量上限100
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
+    * 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有： instance-id，实例id； instance-state，实例状态：RUNNING，PENDING，STOPPED，ARREARS，STOPPED_NO_CHARGE； charge-type，付费方式：PREPAID_BY_MONTH，POSTPAID_BY_HOUR； public-ip-address，公网IP过滤
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量，默认为0
-
+    * 偏移量，默认为0，不得大于100
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回量，默认为20
+    * 返回量，默认为20，不能小于0
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 实例元组 
-     * @return InstanceIds 实例元组
+     * Get 实例元组，数量上限100 
+     * @return InstanceIds 实例元组，数量上限100
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例元组
-     * @param InstanceIds 实例元组
+     * Set 实例元组，数量上限100
+     * @param InstanceIds 实例元组，数量上限100
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤 
-     * @return Filters 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
+     * Get 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有： instance-id，实例id； instance-state，实例状态：RUNNING，PENDING，STOPPED，ARREARS，STOPPED_NO_CHARGE； charge-type，付费方式：PREPAID_BY_MONTH，POSTPAID_BY_HOUR； public-ip-address，公网IP过滤 
+     * @return Filters 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有： instance-id，实例id； instance-state，实例状态：RUNNING，PENDING，STOPPED，ARREARS，STOPPED_NO_CHARGE； charge-type，付费方式：PREPAID_BY_MONTH，POSTPAID_BY_HOUR； public-ip-address，公网IP过滤
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
-     * @param Filters 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
+     * Set 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有： instance-id，实例id； instance-state，实例状态：RUNNING，PENDING，STOPPED，ARREARS，STOPPED_NO_CHARGE； charge-type，付费方式：PREPAID_BY_MONTH，POSTPAID_BY_HOUR； public-ip-address，公网IP过滤
+     * @param Filters 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有： instance-id，实例id； instance-state，实例状态：RUNNING，PENDING，STOPPED，ARREARS，STOPPED_NO_CHARGE； charge-type，付费方式：PREPAID_BY_MONTH，POSTPAID_BY_HOUR； public-ip-address，公网IP过滤
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量，默认为0
- 
-     * @return Offset 偏移量，默认为0
-
+     * Get 偏移量，默认为0，不得大于100 
+     * @return Offset 偏移量，默认为0，不得大于100
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-
-     * @param Offset 偏移量，默认为0
-
+     * Set 偏移量，默认为0，不得大于100
+     * @param Offset 偏移量，默认为0，不得大于100
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回量，默认为20 
-     * @return Limit 返回量，默认为20
+     * Get 返回量，默认为20，不能小于0 
+     * @return Limit 返回量，默认为20，不能小于0
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回量，默认为20
-     * @param Limit 返回量，默认为20
+     * Set 返回量，默认为20，不能小于0
+     * @param Limit 返回量，默认为20，不能小于0
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -64,6 +64,30 @@ public class AgentProcedureDebugging extends AbstractModel {
     private AgentReference [] References;
 
     /**
+    * 展示正在执行的状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisplayStatus")
+    @Expose
+    private String DisplayStatus;
+
+    /**
+    * 云桌面的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SandboxUrl")
+    @Expose
+    private String SandboxUrl;
+
+    /**
+    * 云桌面里面通过浏览器打开的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisplayUrl")
+    @Expose
+    private String DisplayUrl;
+
+    /**
      * Get 模型思考内容
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 模型思考内容
@@ -163,6 +187,66 @@ public class AgentProcedureDebugging extends AbstractModel {
         this.References = References;
     }
 
+    /**
+     * Get 展示正在执行的状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisplayStatus 展示正在执行的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDisplayStatus() {
+        return this.DisplayStatus;
+    }
+
+    /**
+     * Set 展示正在执行的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisplayStatus 展示正在执行的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisplayStatus(String DisplayStatus) {
+        this.DisplayStatus = DisplayStatus;
+    }
+
+    /**
+     * Get 云桌面的URL地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SandboxUrl 云桌面的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSandboxUrl() {
+        return this.SandboxUrl;
+    }
+
+    /**
+     * Set 云桌面的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SandboxUrl 云桌面的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSandboxUrl(String SandboxUrl) {
+        this.SandboxUrl = SandboxUrl;
+    }
+
+    /**
+     * Get 云桌面里面通过浏览器打开的URL地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisplayUrl 云桌面里面通过浏览器打开的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDisplayUrl() {
+        return this.DisplayUrl;
+    }
+
+    /**
+     * Set 云桌面里面通过浏览器打开的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisplayUrl 云桌面里面通过浏览器打开的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisplayUrl(String DisplayUrl) {
+        this.DisplayUrl = DisplayUrl;
+    }
+
     public AgentProcedureDebugging() {
     }
 
@@ -192,6 +276,15 @@ public class AgentProcedureDebugging extends AbstractModel {
                 this.References[i] = new AgentReference(source.References[i]);
             }
         }
+        if (source.DisplayStatus != null) {
+            this.DisplayStatus = new String(source.DisplayStatus);
+        }
+        if (source.SandboxUrl != null) {
+            this.SandboxUrl = new String(source.SandboxUrl);
+        }
+        if (source.DisplayUrl != null) {
+            this.DisplayUrl = new String(source.DisplayUrl);
+        }
     }
 
 
@@ -204,6 +297,9 @@ public class AgentProcedureDebugging extends AbstractModel {
         this.setParamSimple(map, prefix + "DisplayType", this.DisplayType);
         this.setParamArrayObj(map, prefix + "QuoteInfos.", this.QuoteInfos);
         this.setParamArrayObj(map, prefix + "References.", this.References);
+        this.setParamSimple(map, prefix + "DisplayStatus", this.DisplayStatus);
+        this.setParamSimple(map, prefix + "SandboxUrl", this.SandboxUrl);
+        this.setParamSimple(map, prefix + "DisplayUrl", this.DisplayUrl);
 
     }
 }

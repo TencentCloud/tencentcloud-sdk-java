@@ -336,6 +336,13 @@ pause
     private ResourcePackage [] ResourcePackages;
 
     /**
+    * 全球数据库唯一标识
+    */
+    @SerializedName("GdnId")
+    @Expose
+    private String GdnId;
+
+    /**
      * Get 集群状态， 可选值如下:
 creating: 创建中
 running:运行中
@@ -1067,6 +1074,22 @@ pause
         this.ResourcePackages = ResourcePackages;
     }
 
+    /**
+     * Get 全球数据库唯一标识 
+     * @return GdnId 全球数据库唯一标识
+     */
+    public String getGdnId() {
+        return this.GdnId;
+    }
+
+    /**
+     * Set 全球数据库唯一标识
+     * @param GdnId 全球数据库唯一标识
+     */
+    public void setGdnId(String GdnId) {
+        this.GdnId = GdnId;
+    }
+
     public CynosdbCluster() {
     }
 
@@ -1219,6 +1242,9 @@ pause
                 this.ResourcePackages[i] = new ResourcePackage(source.ResourcePackages[i]);
             }
         }
+        if (source.GdnId != null) {
+            this.GdnId = new String(source.GdnId);
+        }
     }
 
 
@@ -1269,6 +1295,7 @@ pause
         this.setParamSimple(map, prefix + "OrderSource", this.OrderSource);
         this.setParamObj(map, prefix + "Ability.", this.Ability);
         this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
+        this.setParamSimple(map, prefix + "GdnId", this.GdnId);
 
     }
 }

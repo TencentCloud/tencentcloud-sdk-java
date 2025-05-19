@@ -48,6 +48,14 @@ public class Credentials extends AbstractModel {
     private String TmpSecretKey;
 
     /**
+    * 临时证书appid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
      * Get token
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Token token
@@ -107,6 +115,26 @@ public class Credentials extends AbstractModel {
         this.TmpSecretKey = TmpSecretKey;
     }
 
+    /**
+     * Get 临时证书appid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppId 临时证书appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 临时证书appid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppId 临时证书appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
     public Credentials() {
     }
 
@@ -124,6 +152,9 @@ public class Credentials extends AbstractModel {
         if (source.TmpSecretKey != null) {
             this.TmpSecretKey = new String(source.TmpSecretKey);
         }
+        if (source.AppId != null) {
+            this.AppId = new Long(source.AppId);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class Credentials extends AbstractModel {
         this.setParamSimple(map, prefix + "Token", this.Token);
         this.setParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
         this.setParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
 
     }
 }

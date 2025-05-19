@@ -64,6 +64,14 @@ public class FileInfo extends AbstractModel {
     private String DocId;
 
     /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private String CreatedAt;
+
+    /**
      * Get 文件名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileName 文件名称
@@ -163,6 +171,26 @@ public class FileInfo extends AbstractModel {
         this.DocId = DocId;
     }
 
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedAt 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedAt 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedAt(String CreatedAt) {
+        this.CreatedAt = CreatedAt;
+    }
+
     public FileInfo() {
     }
 
@@ -186,6 +214,9 @@ public class FileInfo extends AbstractModel {
         if (source.DocId != null) {
             this.DocId = new String(source.DocId);
         }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
     }
 
 
@@ -198,6 +229,7 @@ public class FileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "DocId", this.DocId);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
 
     }
 }

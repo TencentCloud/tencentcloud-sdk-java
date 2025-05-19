@@ -83,21 +83,21 @@ TERMINATED：表示已销毁
     private String GPUPerformance;
 
     /**
-    * 显存
+    * 显存，单位：GB
     */
     @SerializedName("GPUMemory")
     @Expose
     private String GPUMemory;
 
     /**
-    * CPU核数
+    * CPU核数，单位：核
     */
     @SerializedName("CPU")
     @Expose
     private String CPU;
 
     /**
-    * 内存
+    * 内存，单位：GB
 
     */
     @SerializedName("Memory")
@@ -152,21 +152,21 @@ FAILED：表示操作失败
     private String LatestOperationState;
 
     /**
-    * 实例创建时间
+    * 实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 公网出带宽上限，默认10Mbps
+    * 公网出带宽上限，默认10Mbps，单位：Mbps
     */
     @SerializedName("MaxOutBandwidth")
     @Expose
     private String MaxOutBandwidth;
 
     /**
-    * 每月免费流量，默认500G
+    * 每月免费流量，默认500G，单位：GB
     */
     @SerializedName("MaxFreeTraffic")
     @Expose
@@ -187,7 +187,7 @@ FAILED：表示操作失败
     private LoginService [] LoginServices;
 
     /**
-    * 应用服务的操作系统类型
+    * 应用服务的操作系统类型；参数：linux、windows
     */
     @SerializedName("OSType")
     @Expose
@@ -346,41 +346,41 @@ TERMINATED：表示已销毁
     }
 
     /**
-     * Get 显存 
-     * @return GPUMemory 显存
+     * Get 显存，单位：GB 
+     * @return GPUMemory 显存，单位：GB
      */
     public String getGPUMemory() {
         return this.GPUMemory;
     }
 
     /**
-     * Set 显存
-     * @param GPUMemory 显存
+     * Set 显存，单位：GB
+     * @param GPUMemory 显存，单位：GB
      */
     public void setGPUMemory(String GPUMemory) {
         this.GPUMemory = GPUMemory;
     }
 
     /**
-     * Get CPU核数 
-     * @return CPU CPU核数
+     * Get CPU核数，单位：核 
+     * @return CPU CPU核数，单位：核
      */
     public String getCPU() {
         return this.CPU;
     }
 
     /**
-     * Set CPU核数
-     * @param CPU CPU核数
+     * Set CPU核数，单位：核
+     * @param CPU CPU核数，单位：核
      */
     public void setCPU(String CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * Get 内存
+     * Get 内存，单位：GB
  
-     * @return Memory 内存
+     * @return Memory 内存，单位：GB
 
      */
     public String getMemory() {
@@ -388,9 +388,9 @@ TERMINATED：表示已销毁
     }
 
     /**
-     * Set 内存
+     * Set 内存，单位：GB
 
-     * @param Memory 内存
+     * @param Memory 内存，单位：GB
 
      */
     public void setMemory(String Memory) {
@@ -514,48 +514,48 @@ FAILED：表示操作失败
     }
 
     /**
-     * Get 实例创建时间 
-     * @return CreateTime 实例创建时间
+     * Get 实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS" 
+     * @return CreateTime 实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 实例创建时间
-     * @param CreateTime 实例创建时间
+     * Set 实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
+     * @param CreateTime 实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 公网出带宽上限，默认10Mbps 
-     * @return MaxOutBandwidth 公网出带宽上限，默认10Mbps
+     * Get 公网出带宽上限，默认10Mbps，单位：Mbps 
+     * @return MaxOutBandwidth 公网出带宽上限，默认10Mbps，单位：Mbps
      */
     public String getMaxOutBandwidth() {
         return this.MaxOutBandwidth;
     }
 
     /**
-     * Set 公网出带宽上限，默认10Mbps
-     * @param MaxOutBandwidth 公网出带宽上限，默认10Mbps
+     * Set 公网出带宽上限，默认10Mbps，单位：Mbps
+     * @param MaxOutBandwidth 公网出带宽上限，默认10Mbps，单位：Mbps
      */
     public void setMaxOutBandwidth(String MaxOutBandwidth) {
         this.MaxOutBandwidth = MaxOutBandwidth;
     }
 
     /**
-     * Get 每月免费流量，默认500G 
-     * @return MaxFreeTraffic 每月免费流量，默认500G
+     * Get 每月免费流量，默认500G，单位：GB 
+     * @return MaxFreeTraffic 每月免费流量，默认500G，单位：GB
      */
     public String getMaxFreeTraffic() {
         return this.MaxFreeTraffic;
     }
 
     /**
-     * Set 每月免费流量，默认500G
-     * @param MaxFreeTraffic 每月免费流量，默认500G
+     * Set 每月免费流量，默认500G，单位：GB
+     * @param MaxFreeTraffic 每月免费流量，默认500G，单位：GB
      */
     public void setMaxFreeTraffic(String MaxFreeTraffic) {
         this.MaxFreeTraffic = MaxFreeTraffic;
@@ -594,16 +594,16 @@ FAILED：表示操作失败
     }
 
     /**
-     * Get 应用服务的操作系统类型 
-     * @return OSType 应用服务的操作系统类型
+     * Get 应用服务的操作系统类型；参数：linux、windows 
+     * @return OSType 应用服务的操作系统类型；参数：linux、windows
      */
     public String getOSType() {
         return this.OSType;
     }
 
     /**
-     * Set 应用服务的操作系统类型
-     * @param OSType 应用服务的操作系统类型
+     * Set 应用服务的操作系统类型；参数：linux、windows
+     * @param OSType 应用服务的操作系统类型；参数：linux、windows
      */
     public void setOSType(String OSType) {
         this.OSType = OSType;

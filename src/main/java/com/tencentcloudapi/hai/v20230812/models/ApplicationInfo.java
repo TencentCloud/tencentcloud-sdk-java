@@ -54,14 +54,14 @@ public class ApplicationInfo extends AbstractModel {
     private String ConfigEnvironment;
 
     /**
-    * 系统盘大小下限
+    * 系统盘大小下限，单位GB
     */
     @SerializedName("MinSystemDiskSize")
     @Expose
     private Long MinSystemDiskSize;
 
     /**
-    * 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+    * 应用类型，目前该项取值可以为PUBLIC_APPLICATION（公共应用）；PRIVATE_APPLICATION（自定义应用）；COMMUNITY_APPLICATION（社区应用）
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -76,14 +76,14 @@ public class ApplicationInfo extends AbstractModel {
     private String ApplicationState;
 
     /**
-    * 应用创建时间
+    * 应用创建时间，格式：%Y-%m-%d %H:%M:%S
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 应用大小
+    * 应用大小，单位GB
     */
     @SerializedName("ApplicationSize")
     @Expose
@@ -162,32 +162,32 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Get 系统盘大小下限 
-     * @return MinSystemDiskSize 系统盘大小下限
+     * Get 系统盘大小下限，单位GB 
+     * @return MinSystemDiskSize 系统盘大小下限，单位GB
      */
     public Long getMinSystemDiskSize() {
         return this.MinSystemDiskSize;
     }
 
     /**
-     * Set 系统盘大小下限
-     * @param MinSystemDiskSize 系统盘大小下限
+     * Set 系统盘大小下限，单位GB
+     * @param MinSystemDiskSize 系统盘大小下限，单位GB
      */
     public void setMinSystemDiskSize(Long MinSystemDiskSize) {
         this.MinSystemDiskSize = MinSystemDiskSize;
     }
 
     /**
-     * Get 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION 
-     * @return ApplicationType 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+     * Get 应用类型，目前该项取值可以为PUBLIC_APPLICATION（公共应用）；PRIVATE_APPLICATION（自定义应用）；COMMUNITY_APPLICATION（社区应用） 
+     * @return ApplicationType 应用类型，目前该项取值可以为PUBLIC_APPLICATION（公共应用）；PRIVATE_APPLICATION（自定义应用）；COMMUNITY_APPLICATION（社区应用）
      */
     public String getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
-     * @param ApplicationType 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+     * Set 应用类型，目前该项取值可以为PUBLIC_APPLICATION（公共应用）；PRIVATE_APPLICATION（自定义应用）；COMMUNITY_APPLICATION（社区应用）
+     * @param ApplicationType 应用类型，目前该项取值可以为PUBLIC_APPLICATION（公共应用）；PRIVATE_APPLICATION（自定义应用）；COMMUNITY_APPLICATION（社区应用）
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
@@ -214,32 +214,32 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Get 应用创建时间 
-     * @return CreateTime 应用创建时间
+     * Get 应用创建时间，格式：%Y-%m-%d %H:%M:%S 
+     * @return CreateTime 应用创建时间，格式：%Y-%m-%d %H:%M:%S
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 应用创建时间
-     * @param CreateTime 应用创建时间
+     * Set 应用创建时间，格式：%Y-%m-%d %H:%M:%S
+     * @param CreateTime 应用创建时间，格式：%Y-%m-%d %H:%M:%S
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 应用大小 
-     * @return ApplicationSize 应用大小
+     * Get 应用大小，单位GB 
+     * @return ApplicationSize 应用大小，单位GB
      */
     public Long getApplicationSize() {
         return this.ApplicationSize;
     }
 
     /**
-     * Set 应用大小
-     * @param ApplicationSize 应用大小
+     * Set 应用大小，单位GB
+     * @param ApplicationSize 应用大小，单位GB
      */
     public void setApplicationSize(Long ApplicationSize) {
         this.ApplicationSize = ApplicationSize;

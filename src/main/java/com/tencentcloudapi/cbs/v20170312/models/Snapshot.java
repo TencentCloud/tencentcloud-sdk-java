@@ -103,14 +103,14 @@ public class Snapshot extends AbstractModel {
     private Long ShareReference;
 
     /**
-    * 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+    * 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
     */
     @SerializedName("SnapshotType")
     @Expose
     private String SnapshotType;
 
     /**
-    * 创建此快照的云硬盘大小，单位GB。
+    * 创建此快照的云硬盘大小，单位GiB。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -124,7 +124,7 @@ public class Snapshot extends AbstractModel {
     private String DiskId;
 
     /**
-    * 快照正在跨地域复制的目的地域，默认取值为[]。
+    * 快照正在跨地域复制的目的地域，若没有则返回`[]`。
     */
     @SerializedName("CopyingToRegions")
     @Expose
@@ -397,32 +397,32 @@ public class Snapshot extends AbstractModel {
     }
 
     /**
-     * Get 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT 
-     * @return SnapshotType 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+     * Get 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照） 
+     * @return SnapshotType 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
      */
     public String getSnapshotType() {
         return this.SnapshotType;
     }
 
     /**
-     * Set 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
-     * @param SnapshotType 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+     * Set 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
+     * @param SnapshotType 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
      */
     public void setSnapshotType(String SnapshotType) {
         this.SnapshotType = SnapshotType;
     }
 
     /**
-     * Get 创建此快照的云硬盘大小，单位GB。 
-     * @return DiskSize 创建此快照的云硬盘大小，单位GB。
+     * Get 创建此快照的云硬盘大小，单位GiB。 
+     * @return DiskSize 创建此快照的云硬盘大小，单位GiB。
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 创建此快照的云硬盘大小，单位GB。
-     * @param DiskSize 创建此快照的云硬盘大小，单位GB。
+     * Set 创建此快照的云硬盘大小，单位GiB。
+     * @param DiskSize 创建此快照的云硬盘大小，单位GiB。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -445,16 +445,16 @@ public class Snapshot extends AbstractModel {
     }
 
     /**
-     * Get 快照正在跨地域复制的目的地域，默认取值为[]。 
-     * @return CopyingToRegions 快照正在跨地域复制的目的地域，默认取值为[]。
+     * Get 快照正在跨地域复制的目的地域，若没有则返回`[]`。 
+     * @return CopyingToRegions 快照正在跨地域复制的目的地域，若没有则返回`[]`。
      */
     public String [] getCopyingToRegions() {
         return this.CopyingToRegions;
     }
 
     /**
-     * Set 快照正在跨地域复制的目的地域，默认取值为[]。
-     * @param CopyingToRegions 快照正在跨地域复制的目的地域，默认取值为[]。
+     * Set 快照正在跨地域复制的目的地域，若没有则返回`[]`。
+     * @param CopyingToRegions 快照正在跨地域复制的目的地域，若没有则返回`[]`。
      */
     public void setCopyingToRegions(String [] CopyingToRegions) {
         this.CopyingToRegions = CopyingToRegions;

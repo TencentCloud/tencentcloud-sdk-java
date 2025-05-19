@@ -224,6 +224,14 @@ public class MsgRecord extends AbstractModel {
     private ExtraInfo ExtraInfo;
 
     /**
+    * 工作流信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkFlow")
+    @Expose
+    private WorkflowInfo WorkFlow;
+
+    /**
      * Get 内容 
      * @return Content 内容
      */
@@ -723,6 +731,26 @@ public class MsgRecord extends AbstractModel {
         this.ExtraInfo = ExtraInfo;
     }
 
+    /**
+     * Get 工作流信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkFlow 工作流信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WorkflowInfo getWorkFlow() {
+        return this.WorkFlow;
+    }
+
+    /**
+     * Set 工作流信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkFlow 工作流信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkFlow(WorkflowInfo WorkFlow) {
+        this.WorkFlow = WorkFlow;
+    }
+
     public MsgRecord() {
     }
 
@@ -824,6 +852,9 @@ public class MsgRecord extends AbstractModel {
         if (source.ExtraInfo != null) {
             this.ExtraInfo = new ExtraInfo(source.ExtraInfo);
         }
+        if (source.WorkFlow != null) {
+            this.WorkFlow = new WorkflowInfo(source.WorkFlow);
+        }
     }
 
 
@@ -856,6 +887,7 @@ public class MsgRecord extends AbstractModel {
         this.setParamArrayObj(map, prefix + "QuoteInfos.", this.QuoteInfos);
         this.setParamObj(map, prefix + "AgentThought.", this.AgentThought);
         this.setParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
+        this.setParamObj(map, prefix + "WorkFlow.", this.WorkFlow);
 
     }
 }

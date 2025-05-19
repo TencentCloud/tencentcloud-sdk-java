@@ -122,6 +122,20 @@ public class AndroidInstance extends AbstractModel {
     private String PrivateIP;
 
     /**
+    * 创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 机箱 ID
+    */
+    @SerializedName("HostServerSerialNumber")
+    @Expose
+    private String HostServerSerialNumber;
+
+    /**
      * Get 实例 ID 
      * @return AndroidInstanceId 实例 ID
      */
@@ -345,6 +359,38 @@ public class AndroidInstance extends AbstractModel {
         this.PrivateIP = PrivateIP;
     }
 
+    /**
+     * Get 创建时间 
+     * @return CreateTime 创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreateTime 创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 机箱 ID 
+     * @return HostServerSerialNumber 机箱 ID
+     */
+    public String getHostServerSerialNumber() {
+        return this.HostServerSerialNumber;
+    }
+
+    /**
+     * Set 机箱 ID
+     * @param HostServerSerialNumber 机箱 ID
+     */
+    public void setHostServerSerialNumber(String HostServerSerialNumber) {
+        this.HostServerSerialNumber = HostServerSerialNumber;
+    }
+
     public AndroidInstance() {
     }
 
@@ -398,6 +444,12 @@ public class AndroidInstance extends AbstractModel {
         if (source.PrivateIP != null) {
             this.PrivateIP = new String(source.PrivateIP);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.HostServerSerialNumber != null) {
+            this.HostServerSerialNumber = new String(source.HostServerSerialNumber);
+        }
     }
 
 
@@ -419,6 +471,8 @@ public class AndroidInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "PrivateIP", this.PrivateIP);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "HostServerSerialNumber", this.HostServerSerialNumber);
 
     }
 }

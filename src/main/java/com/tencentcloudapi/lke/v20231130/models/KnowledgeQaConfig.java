@@ -148,6 +148,14 @@ public class KnowledgeQaConfig extends AbstractModel {
     private Boolean ImageTextRetrieval;
 
     /**
+    * 配置语音通话参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AiCall")
+    @Expose
+    private AICallConfig AiCall;
+
+    /**
      * Get 欢迎语，200字符以内
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Greeting 欢迎语，200字符以内
@@ -475,6 +483,26 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.ImageTextRetrieval = ImageTextRetrieval;
     }
 
+    /**
+     * Get 配置语音通话参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AiCall 配置语音通话参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AICallConfig getAiCall() {
+        return this.AiCall;
+    }
+
+    /**
+     * Set 配置语音通话参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiCall 配置语音通话参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAiCall(AICallConfig AiCall) {
+        this.AiCall = AiCall;
+    }
+
     public KnowledgeQaConfig() {
     }
 
@@ -534,6 +562,9 @@ public class KnowledgeQaConfig extends AbstractModel {
         if (source.ImageTextRetrieval != null) {
             this.ImageTextRetrieval = new Boolean(source.ImageTextRetrieval);
         }
+        if (source.AiCall != null) {
+            this.AiCall = new AICallConfig(source.AiCall);
+        }
     }
 
 
@@ -555,6 +586,7 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.setParamObj(map, prefix + "ThoughtModel.", this.ThoughtModel);
         this.setParamArrayObj(map, prefix + "IntentAchievements.", this.IntentAchievements);
         this.setParamSimple(map, prefix + "ImageTextRetrieval", this.ImageTextRetrieval);
+        this.setParamObj(map, prefix + "AiCall.", this.AiCall);
 
     }
 }

@@ -88,6 +88,14 @@ public class AgentThought extends AbstractModel {
     private String TraceId;
 
     /**
+    * 文件信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Files")
+    @Expose
+    private FileInfo [] Files;
+
+    /**
      * Get 会话 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SessionId 会话 ID
@@ -247,6 +255,26 @@ public class AgentThought extends AbstractModel {
         this.TraceId = TraceId;
     }
 
+    /**
+     * Get 文件信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Files 文件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FileInfo [] getFiles() {
+        return this.Files;
+    }
+
+    /**
+     * Set 文件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Files 文件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFiles(FileInfo [] Files) {
+        this.Files = Files;
+    }
+
     public AgentThought() {
     }
 
@@ -282,6 +310,12 @@ public class AgentThought extends AbstractModel {
         if (source.TraceId != null) {
             this.TraceId = new String(source.TraceId);
         }
+        if (source.Files != null) {
+            this.Files = new FileInfo[source.Files.length];
+            for (int i = 0; i < source.Files.length; i++) {
+                this.Files[i] = new FileInfo(source.Files[i]);
+            }
+        }
     }
 
 
@@ -297,6 +331,7 @@ public class AgentThought extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowName", this.WorkflowName);
         this.setParamArrayObj(map, prefix + "Procedures.", this.Procedures);
         this.setParamSimple(map, prefix + "TraceId", this.TraceId);
+        this.setParamArrayObj(map, prefix + "Files.", this.Files);
 
     }
 }

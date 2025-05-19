@@ -80,7 +80,7 @@ public class SnapshotInfo extends AbstractModel {
     private Long AliveDay;
 
     /**
-    * 快照进度百分比，1表示1%
+    * 快照进度百分比，1表示1% 范围1-100
     */
     @SerializedName("Percent")
     @Expose
@@ -259,16 +259,16 @@ public class SnapshotInfo extends AbstractModel {
     }
 
     /**
-     * Get 快照进度百分比，1表示1% 
-     * @return Percent 快照进度百分比，1表示1%
+     * Get 快照进度百分比，1表示1% 范围1-100 
+     * @return Percent 快照进度百分比，1表示1% 范围1-100
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set 快照进度百分比，1表示1%
-     * @param Percent 快照进度百分比，1表示1%
+     * Set 快照进度百分比，1表示1% 范围1-100
+     * @param Percent 快照进度百分比，1表示1% 范围1-100
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;

@@ -77,6 +77,13 @@ NeedExtraDetail为true时返回
     private FlowExtraDetail [] FlowExtraDetail;
 
     /**
+    * 流程描述
+    */
+    @SerializedName("FlowInfo")
+    @Expose
+    private String FlowInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -224,6 +231,22 @@ NeedExtraDetail为true时返回
     }
 
     /**
+     * Get 流程描述 
+     * @return FlowInfo 流程描述
+     */
+    public String getFlowInfo() {
+        return this.FlowInfo;
+    }
+
+    /**
+     * Set 流程描述
+     * @param FlowInfo 流程描述
+     */
+    public void setFlowInfo(String FlowInfo) {
+        this.FlowInfo = FlowInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -274,6 +297,9 @@ NeedExtraDetail为true时返回
                 this.FlowExtraDetail[i] = new FlowExtraDetail(source.FlowExtraDetail[i]);
             }
         }
+        if (source.FlowInfo != null) {
+            this.FlowInfo = new String(source.FlowInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -290,6 +316,7 @@ NeedExtraDetail为true时返回
         this.setParamSimple(map, prefix + "FlowTotalProgress", this.FlowTotalProgress);
         this.setParamSimple(map, prefix + "FlowTotalStatus", this.FlowTotalStatus);
         this.setParamArrayObj(map, prefix + "FlowExtraDetail.", this.FlowExtraDetail);
+        this.setParamSimple(map, prefix + "FlowInfo", this.FlowInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

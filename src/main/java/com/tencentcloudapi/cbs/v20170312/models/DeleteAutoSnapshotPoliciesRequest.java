@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteAutoSnapshotPoliciesRequest extends AbstractModel {
 
     /**
-    * 要删除的定期快照策略ID列表。
+    * 要删除的定期快照策略ID列表，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
     */
     @SerializedName("AutoSnapshotPolicyIds")
     @Expose
     private String [] AutoSnapshotPolicyIds;
 
     /**
-     * Get 要删除的定期快照策略ID列表。 
-     * @return AutoSnapshotPolicyIds 要删除的定期快照策略ID列表。
+     * Get 要删除的定期快照策略ID列表，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。 
+     * @return AutoSnapshotPolicyIds 要删除的定期快照策略ID列表，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
      */
     public String [] getAutoSnapshotPolicyIds() {
         return this.AutoSnapshotPolicyIds;
     }
 
     /**
-     * Set 要删除的定期快照策略ID列表。
-     * @param AutoSnapshotPolicyIds 要删除的定期快照策略ID列表。
+     * Set 要删除的定期快照策略ID列表，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
+     * @param AutoSnapshotPolicyIds 要删除的定期快照策略ID列表，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
      */
     public void setAutoSnapshotPolicyIds(String [] AutoSnapshotPolicyIds) {
         this.AutoSnapshotPolicyIds = AutoSnapshotPolicyIds;

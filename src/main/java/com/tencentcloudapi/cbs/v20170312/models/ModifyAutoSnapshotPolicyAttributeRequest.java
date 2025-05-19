@@ -31,14 +31,14 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel {
     private String AutoSnapshotPolicyId;
 
     /**
-    * 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
+    * 是否激活定期快照策略，`false`表示未激活，`true`表示激活；默认为`true`。
     */
     @SerializedName("IsActivated")
     @Expose
     private Boolean IsActivated;
 
     /**
-    * 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
+    * 通过该定期快照策略创建的快照是否永久保留。`false`表示非永久保留，`true`表示永久保留，默认为`false`。
     */
     @SerializedName("IsPermanent")
     @Expose
@@ -82,32 +82,32 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。 
-     * @return IsActivated 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
+     * Get 是否激活定期快照策略，`false`表示未激活，`true`表示激活；默认为`true`。 
+     * @return IsActivated 是否激活定期快照策略，`false`表示未激活，`true`表示激活；默认为`true`。
      */
     public Boolean getIsActivated() {
         return this.IsActivated;
     }
 
     /**
-     * Set 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
-     * @param IsActivated 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
+     * Set 是否激活定期快照策略，`false`表示未激活，`true`表示激活；默认为`true`。
+     * @param IsActivated 是否激活定期快照策略，`false`表示未激活，`true`表示激活；默认为`true`。
      */
     public void setIsActivated(Boolean IsActivated) {
         this.IsActivated = IsActivated;
     }
 
     /**
-     * Get 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。 
-     * @return IsPermanent 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
+     * Get 通过该定期快照策略创建的快照是否永久保留。`false`表示非永久保留，`true`表示永久保留，默认为`false`。 
+     * @return IsPermanent 通过该定期快照策略创建的快照是否永久保留。`false`表示非永久保留，`true`表示永久保留，默认为`false`。
      */
     public Boolean getIsPermanent() {
         return this.IsPermanent;
     }
 
     /**
-     * Set 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
-     * @param IsPermanent 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
+     * Set 通过该定期快照策略创建的快照是否永久保留。`false`表示非永久保留，`true`表示永久保留，默认为`false`。
+     * @param IsPermanent 通过该定期快照策略创建的快照是否永久保留。`false`表示非永久保留，`true`表示永久保留，默认为`false`。
      */
     public void setIsPermanent(Boolean IsPermanent) {
         this.IsPermanent = IsPermanent;

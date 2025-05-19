@@ -24,21 +24,24 @@ import java.util.HashMap;
 public class ImportImageRequest extends AbstractModel {
 
     /**
-    * 导入镜像的操作系统架构，`x86_64` 或 `i386`
+    * 导入镜像的操作系统架构。
+取值范围包括：`x86_64` 、`i386`、`arm_64`
     */
     @SerializedName("Architecture")
     @Expose
     private String Architecture;
 
     /**
-    * 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+    * 导入镜像的操作系统类型 。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsListSupported`获取。
     */
     @SerializedName("OsType")
     @Expose
     private String OsType;
 
     /**
-    * 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+    * 导入镜像的操作系统版本。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsVersionSet`获取。
     */
     @SerializedName("OsVersion")
     @Expose
@@ -52,21 +55,24 @@ public class ImportImageRequest extends AbstractModel {
     private String ImageUrl;
 
     /**
-    * 镜像名称
+    * 镜像名称。
+最多支持 60 个字符。
     */
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
 
     /**
-    * 镜像描述
+    * 镜像描述。
+最多支持 256 个字符。
     */
     @SerializedName("ImageDescription")
     @Expose
     private String ImageDescription;
 
     /**
-    * 只检查参数，不执行任务
+    * 只检查参数，不执行任务。
+默认值：false
     */
     @SerializedName("DryRun")
     @Expose
@@ -74,6 +80,7 @@ public class ImportImageRequest extends AbstractModel {
 
     /**
     * 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+默认值：false
     */
     @SerializedName("Force")
     @Expose
@@ -88,7 +95,8 @@ public class ImportImageRequest extends AbstractModel {
 
     /**
     * 导入镜像后，激活操作系统采用的许可证类型。
-可选项：
+默认值：TencentCloud
+取值范围：
 TencentCloud: 腾讯云官方许可
 BYOL: 自带许可（Bring Your Own License）
     */
@@ -97,7 +105,9 @@ BYOL: 自带许可（Bring Your Own License）
     private String LicenseType;
 
     /**
-    * 启动模式
+    * 启动模式。
+取值范围：`Legacy BIOS`、`UEFI`
+默认值：Legacy BIOS
     */
     @SerializedName("BootMode")
     @Expose
@@ -118,48 +128,60 @@ BYOL: 自带许可（Bring Your Own License）
     private ImportImageDataDisk [] ImportImageDataDiskList;
 
     /**
-     * Get 导入镜像的操作系统架构，`x86_64` 或 `i386` 
-     * @return Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
+     * Get 导入镜像的操作系统架构。
+取值范围包括：`x86_64` 、`i386`、`arm_64` 
+     * @return Architecture 导入镜像的操作系统架构。
+取值范围包括：`x86_64` 、`i386`、`arm_64`
      */
     public String getArchitecture() {
         return this.Architecture;
     }
 
     /**
-     * Set 导入镜像的操作系统架构，`x86_64` 或 `i386`
-     * @param Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
+     * Set 导入镜像的操作系统架构。
+取值范围包括：`x86_64` 、`i386`、`arm_64`
+     * @param Architecture 导入镜像的操作系统架构。
+取值范围包括：`x86_64` 、`i386`、`arm_64`
      */
     public void setArchitecture(String Architecture) {
         this.Architecture = Architecture;
     }
 
     /**
-     * Get 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取 
-     * @return OsType 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+     * Get 导入镜像的操作系统类型 。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsListSupported`获取。 
+     * @return OsType 导入镜像的操作系统类型 。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsListSupported`获取。
      */
     public String getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
-     * @param OsType 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+     * Set 导入镜像的操作系统类型 。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsListSupported`获取。
+     * @param OsType 导入镜像的操作系统类型 。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsListSupported`获取。
      */
     public void setOsType(String OsType) {
         this.OsType = OsType;
     }
 
     /**
-     * Get 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取 
-     * @return OsVersion 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+     * Get 导入镜像的操作系统版本。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsVersionSet`获取。 
+     * @return OsVersion 导入镜像的操作系统版本。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsVersionSet`获取。
      */
     public String getOsVersion() {
         return this.OsVersion;
     }
 
     /**
-     * Set 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
-     * @param OsVersion 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+     * Set 导入镜像的操作系统版本。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsVersionSet`获取。
+     * @param OsVersion 导入镜像的操作系统版本。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsVersionSet`获取。
      */
     public void setOsVersion(String OsVersion) {
         this.OsVersion = OsVersion;
@@ -182,56 +204,70 @@ BYOL: 自带许可（Bring Your Own License）
     }
 
     /**
-     * Get 镜像名称 
-     * @return ImageName 镜像名称
+     * Get 镜像名称。
+最多支持 60 个字符。 
+     * @return ImageName 镜像名称。
+最多支持 60 个字符。
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set 镜像名称
-     * @param ImageName 镜像名称
+     * Set 镜像名称。
+最多支持 60 个字符。
+     * @param ImageName 镜像名称。
+最多支持 60 个字符。
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get 镜像描述 
-     * @return ImageDescription 镜像描述
+     * Get 镜像描述。
+最多支持 256 个字符。 
+     * @return ImageDescription 镜像描述。
+最多支持 256 个字符。
      */
     public String getImageDescription() {
         return this.ImageDescription;
     }
 
     /**
-     * Set 镜像描述
-     * @param ImageDescription 镜像描述
+     * Set 镜像描述。
+最多支持 256 个字符。
+     * @param ImageDescription 镜像描述。
+最多支持 256 个字符。
      */
     public void setImageDescription(String ImageDescription) {
         this.ImageDescription = ImageDescription;
     }
 
     /**
-     * Get 只检查参数，不执行任务 
-     * @return DryRun 只检查参数，不执行任务
+     * Get 只检查参数，不执行任务。
+默认值：false 
+     * @return DryRun 只检查参数，不执行任务。
+默认值：false
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 只检查参数，不执行任务
-     * @param DryRun 只检查参数，不执行任务
+     * Set 只检查参数，不执行任务。
+默认值：false
+     * @param DryRun 只检查参数，不执行任务。
+默认值：false
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;
     }
 
     /**
-     * Get 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849) 
+     * Get 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+默认值：false 
      * @return Force 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+默认值：false
      */
     public Boolean getForce() {
         return this.Force;
@@ -239,7 +275,9 @@ BYOL: 自带许可（Bring Your Own License）
 
     /**
      * Set 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+默认值：false
      * @param Force 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+默认值：false
      */
     public void setForce(Boolean Force) {
         this.Force = Force;
@@ -263,11 +301,13 @@ BYOL: 自带许可（Bring Your Own License）
 
     /**
      * Get 导入镜像后，激活操作系统采用的许可证类型。
-可选项：
+默认值：TencentCloud
+取值范围：
 TencentCloud: 腾讯云官方许可
 BYOL: 自带许可（Bring Your Own License） 
      * @return LicenseType 导入镜像后，激活操作系统采用的许可证类型。
-可选项：
+默认值：TencentCloud
+取值范围：
 TencentCloud: 腾讯云官方许可
 BYOL: 自带许可（Bring Your Own License）
      */
@@ -277,11 +317,13 @@ BYOL: 自带许可（Bring Your Own License）
 
     /**
      * Set 导入镜像后，激活操作系统采用的许可证类型。
-可选项：
+默认值：TencentCloud
+取值范围：
 TencentCloud: 腾讯云官方许可
 BYOL: 自带许可（Bring Your Own License）
      * @param LicenseType 导入镜像后，激活操作系统采用的许可证类型。
-可选项：
+默认值：TencentCloud
+取值范围：
 TencentCloud: 腾讯云官方许可
 BYOL: 自带许可（Bring Your Own License）
      */
@@ -290,16 +332,24 @@ BYOL: 自带许可（Bring Your Own License）
     }
 
     /**
-     * Get 启动模式 
-     * @return BootMode 启动模式
+     * Get 启动模式。
+取值范围：`Legacy BIOS`、`UEFI`
+默认值：Legacy BIOS 
+     * @return BootMode 启动模式。
+取值范围：`Legacy BIOS`、`UEFI`
+默认值：Legacy BIOS
      */
     public String getBootMode() {
         return this.BootMode;
     }
 
     /**
-     * Set 启动模式
-     * @param BootMode 启动模式
+     * Set 启动模式。
+取值范围：`Legacy BIOS`、`UEFI`
+默认值：Legacy BIOS
+     * @param BootMode 启动模式。
+取值范围：`Legacy BIOS`、`UEFI`
+默认值：Legacy BIOS
      */
     public void setBootMode(String BootMode) {
         this.BootMode = BootMode;

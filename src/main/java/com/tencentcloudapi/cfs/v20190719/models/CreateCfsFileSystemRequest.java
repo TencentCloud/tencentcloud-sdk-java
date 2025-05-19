@@ -38,14 +38,14 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private String NetInterface;
 
     /**
-    * 权限组 ID
+    * 权限组 ID,pgroupbasic 是默认权限组
     */
     @SerializedName("PGroupId")
     @Expose
     private String PGroupId;
 
     /**
-    * 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择turbo，不支持NFS、CIFS
+    * 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS
     */
     @SerializedName("Protocol")
     @Expose
@@ -59,14 +59,14 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private String StorageType;
 
     /**
-    * 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
+    * 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网 ID，若网络类型选择的是VPC，该字段为必填。
+    * 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取
     */
     @SerializedName("SubnetId")
     @Expose
@@ -101,7 +101,7 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-    * 云联网ID， 若网络类型选择的是CCN，该字段为必填
+    * 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取
     */
     @SerializedName("CcnId")
     @Expose
@@ -122,21 +122,21 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private Long Capacity;
 
     /**
-    * 文件系统快照ID
+    * 文件系统快照ID，通过查询快照列表获取该参数
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * 定期快照策略ID
+    * 定期快照策略ID，通过查询快照策略信息获取
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-    * 是否开启默认扩容，仅Turbo类型文件存储支持
+    * 是否开启默认扩容，仅turbo类型文件存储支持
     */
     @SerializedName("EnableAutoScaleUp")
     @Expose
@@ -184,32 +184,32 @@ v3.1：创建增强版的通用文件系统
     }
 
     /**
-     * Get 权限组 ID 
-     * @return PGroupId 权限组 ID
+     * Get 权限组 ID,pgroupbasic 是默认权限组 
+     * @return PGroupId 权限组 ID,pgroupbasic 是默认权限组
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set 权限组 ID
-     * @param PGroupId 权限组 ID
+     * Set 权限组 ID,pgroupbasic 是默认权限组
+     * @param PGroupId 权限组 ID,pgroupbasic 是默认权限组
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
     }
 
     /**
-     * Get 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择turbo，不支持NFS、CIFS 
-     * @return Protocol 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择turbo，不支持NFS、CIFS
+     * Get 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS 
+     * @return Protocol 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择turbo，不支持NFS、CIFS
-     * @param Protocol 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择turbo，不支持NFS、CIFS
+     * Set 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS
+     * @param Protocol 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择TURBO，不支持NFS、CIFS
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -232,32 +232,32 @@ v3.1：创建增强版的通用文件系统
     }
 
     /**
-     * Get 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。 
-     * @return VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
+     * Get 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取 
+     * @return VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
-     * @param VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
+     * Set 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取
+     * @param VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网 ID，若网络类型选择的是VPC，该字段为必填。 
-     * @return SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。
+     * Get 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取 
+     * @return SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网 ID，若网络类型选择的是VPC，该字段为必填。
-     * @param SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。
+     * Set 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取
+     * @param SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -328,16 +328,16 @@ v3.1：创建增强版的通用文件系统
     }
 
     /**
-     * Get 云联网ID， 若网络类型选择的是CCN，该字段为必填 
-     * @return CcnId 云联网ID， 若网络类型选择的是CCN，该字段为必填
+     * Get 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取 
+     * @return CcnId 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网ID， 若网络类型选择的是CCN，该字段为必填
-     * @param CcnId 云联网ID， 若网络类型选择的是CCN，该字段为必填
+     * Set 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取
+     * @param CcnId 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
@@ -376,48 +376,48 @@ v3.1：创建增强版的通用文件系统
     }
 
     /**
-     * Get 文件系统快照ID 
-     * @return SnapshotId 文件系统快照ID
+     * Get 文件系统快照ID，通过查询快照列表获取该参数 
+     * @return SnapshotId 文件系统快照ID，通过查询快照列表获取该参数
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 文件系统快照ID
-     * @param SnapshotId 文件系统快照ID
+     * Set 文件系统快照ID，通过查询快照列表获取该参数
+     * @param SnapshotId 文件系统快照ID，通过查询快照列表获取该参数
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get 定期快照策略ID 
-     * @return AutoSnapshotPolicyId 定期快照策略ID
+     * Get 定期快照策略ID，通过查询快照策略信息获取 
+     * @return AutoSnapshotPolicyId 定期快照策略ID，通过查询快照策略信息获取
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set 定期快照策略ID
-     * @param AutoSnapshotPolicyId 定期快照策略ID
+     * Set 定期快照策略ID，通过查询快照策略信息获取
+     * @param AutoSnapshotPolicyId 定期快照策略ID，通过查询快照策略信息获取
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
     /**
-     * Get 是否开启默认扩容，仅Turbo类型文件存储支持 
-     * @return EnableAutoScaleUp 是否开启默认扩容，仅Turbo类型文件存储支持
+     * Get 是否开启默认扩容，仅turbo类型文件存储支持 
+     * @return EnableAutoScaleUp 是否开启默认扩容，仅turbo类型文件存储支持
      */
     public Boolean getEnableAutoScaleUp() {
         return this.EnableAutoScaleUp;
     }
 
     /**
-     * Set 是否开启默认扩容，仅Turbo类型文件存储支持
-     * @param EnableAutoScaleUp 是否开启默认扩容，仅Turbo类型文件存储支持
+     * Set 是否开启默认扩容，仅turbo类型文件存储支持
+     * @param EnableAutoScaleUp 是否开启默认扩容，仅turbo类型文件存储支持
      */
     public void setEnableAutoScaleUp(Boolean EnableAutoScaleUp) {
         this.EnableAutoScaleUp = EnableAutoScaleUp;

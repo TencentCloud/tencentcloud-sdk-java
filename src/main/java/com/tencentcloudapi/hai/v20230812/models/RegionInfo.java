@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class RegionInfo extends AbstractModel {
 
     /**
-    * ap-guangzhou
-
+    * 地域
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 华南地区(广州)
+    * 地域名称
     */
     @SerializedName("RegionName")
     @Expose
@@ -49,43 +48,39 @@ AVAILABLE：可用
 
     /**
     * 学术加速是否支持：
-NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。对于ALREADY_SUPPORT的地域才需进一步调用DescribeScholarRocketStatus查看学术加速是开启还是关闭
+NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。
     */
     @SerializedName("ScholarRocketSupportState")
     @Expose
     private String ScholarRocketSupportState;
 
     /**
-     * Get ap-guangzhou
- 
-     * @return Region ap-guangzhou
-
+     * Get 地域 
+     * @return Region 地域
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set ap-guangzhou
-
-     * @param Region ap-guangzhou
-
+     * Set 地域
+     * @param Region 地域
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 华南地区(广州) 
-     * @return RegionName 华南地区(广州)
+     * Get 地域名称 
+     * @return RegionName 地域名称
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 华南地区(广州)
-     * @param RegionName 华南地区(广州)
+     * Set 地域名称
+     * @param RegionName 地域名称
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
@@ -117,9 +112,9 @@ AVAILABLE：可用
 
     /**
      * Get 学术加速是否支持：
-NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。对于ALREADY_SUPPORT的地域才需进一步调用DescribeScholarRocketStatus查看学术加速是开启还是关闭 
+NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。 
      * @return ScholarRocketSupportState 学术加速是否支持：
-NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。对于ALREADY_SUPPORT的地域才需进一步调用DescribeScholarRocketStatus查看学术加速是开启还是关闭
+NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。
      */
     public String getScholarRocketSupportState() {
         return this.ScholarRocketSupportState;
@@ -127,9 +122,9 @@ NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_
 
     /**
      * Set 学术加速是否支持：
-NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。对于ALREADY_SUPPORT的地域才需进一步调用DescribeScholarRocketStatus查看学术加速是开启还是关闭
+NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。
      * @param ScholarRocketSupportState 学术加速是否支持：
-NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。对于ALREADY_SUPPORT的地域才需进一步调用DescribeScholarRocketStatus查看学术加速是开启还是关闭
+NO_NEED_SUPPORT表示不需支持；NOT_SUPPORT_YET表示暂未支持；ALREADY_SUPPORT表示已经支持。
      */
     public void setScholarRocketSupportState(String ScholarRocketSupportState) {
         this.ScholarRocketSupportState = ScholarRocketSupportState;

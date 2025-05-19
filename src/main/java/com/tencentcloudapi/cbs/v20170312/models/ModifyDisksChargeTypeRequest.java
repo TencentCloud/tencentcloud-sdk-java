@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDisksChargeTypeRequest extends AbstractModel {
 
     /**
-    * 一个或多个待操作的云硬盘ID。每次请求批量云硬盘上限为100。
+    * 一个或多个待操作的云硬盘ID,可以通过[DescribeDisks](/document/product/362/16315)接口查询。每次请求批量云硬盘上限为100。
     */
     @SerializedName("DiskIds")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyDisksChargeTypeRequest extends AbstractModel {
     private Boolean DiskChargePostpaid;
 
     /**
-     * Get 一个或多个待操作的云硬盘ID。每次请求批量云硬盘上限为100。 
-     * @return DiskIds 一个或多个待操作的云硬盘ID。每次请求批量云硬盘上限为100。
+     * Get 一个或多个待操作的云硬盘ID,可以通过[DescribeDisks](/document/product/362/16315)接口查询。每次请求批量云硬盘上限为100。 
+     * @return DiskIds 一个或多个待操作的云硬盘ID,可以通过[DescribeDisks](/document/product/362/16315)接口查询。每次请求批量云硬盘上限为100。
      */
     public String [] getDiskIds() {
         return this.DiskIds;
     }
 
     /**
-     * Set 一个或多个待操作的云硬盘ID。每次请求批量云硬盘上限为100。
-     * @param DiskIds 一个或多个待操作的云硬盘ID。每次请求批量云硬盘上限为100。
+     * Set 一个或多个待操作的云硬盘ID,可以通过[DescribeDisks](/document/product/362/16315)接口查询。每次请求批量云硬盘上限为100。
+     * @param DiskIds 一个或多个待操作的云硬盘ID,可以通过[DescribeDisks](/document/product/362/16315)接口查询。每次请求批量云硬盘上限为100。
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;

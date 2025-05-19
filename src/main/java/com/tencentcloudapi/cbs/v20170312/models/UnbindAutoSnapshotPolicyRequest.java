@@ -31,11 +31,18 @@ public class UnbindAutoSnapshotPolicyRequest extends AbstractModel {
     private String AutoSnapshotPolicyId;
 
     /**
-    * 要解绑定期快照策略的云盘ID列表。
+    * 要解绑定期快照策略的云盘ID列表。此参数与 InstanceIds 参数至少需要传入一个。
     */
     @SerializedName("DiskIds")
     @Expose
     private String [] DiskIds;
+
+    /**
+    * 要解绑定期快照策略的实例ID列表。此参数与 DiskIds 参数至少需要传入一个。
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
 
     /**
      * Get 要解绑的定期快照策略ID。 
@@ -54,19 +61,35 @@ public class UnbindAutoSnapshotPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 要解绑定期快照策略的云盘ID列表。 
-     * @return DiskIds 要解绑定期快照策略的云盘ID列表。
+     * Get 要解绑定期快照策略的云盘ID列表。此参数与 InstanceIds 参数至少需要传入一个。 
+     * @return DiskIds 要解绑定期快照策略的云盘ID列表。此参数与 InstanceIds 参数至少需要传入一个。
      */
     public String [] getDiskIds() {
         return this.DiskIds;
     }
 
     /**
-     * Set 要解绑定期快照策略的云盘ID列表。
-     * @param DiskIds 要解绑定期快照策略的云盘ID列表。
+     * Set 要解绑定期快照策略的云盘ID列表。此参数与 InstanceIds 参数至少需要传入一个。
+     * @param DiskIds 要解绑定期快照策略的云盘ID列表。此参数与 InstanceIds 参数至少需要传入一个。
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;
+    }
+
+    /**
+     * Get 要解绑定期快照策略的实例ID列表。此参数与 DiskIds 参数至少需要传入一个。 
+     * @return InstanceIds 要解绑定期快照策略的实例ID列表。此参数与 DiskIds 参数至少需要传入一个。
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set 要解绑定期快照策略的实例ID列表。此参数与 DiskIds 参数至少需要传入一个。
+     * @param InstanceIds 要解绑定期快照策略的实例ID列表。此参数与 DiskIds 参数至少需要传入一个。
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
     }
 
     public UnbindAutoSnapshotPolicyRequest() {
@@ -86,6 +109,12 @@ public class UnbindAutoSnapshotPolicyRequest extends AbstractModel {
                 this.DiskIds[i] = new String(source.DiskIds[i]);
             }
         }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
     }
 
 
@@ -95,6 +124,7 @@ public class UnbindAutoSnapshotPolicyRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }
 }

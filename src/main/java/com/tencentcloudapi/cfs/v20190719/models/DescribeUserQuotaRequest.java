@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUserQuotaRequest extends AbstractModel {
 
     /**
-    * 文件系统 ID
+    * 文件系统 ID,通过查询文件系统列表获取
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -32,38 +32,38 @@ public class DescribeUserQuotaRequest extends AbstractModel {
 
     /**
     * 过滤条件。
-UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir )
-UserId- Array of String - 是否必填：否 -（过滤条件）按id过滤。
+UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir，分别对应用户，用户组，目录 )
+UserId- Array of String - 是否必填：否 -（过滤条件）按用户id过滤。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Offset 分页码
+    * Offset 分页码，默认值0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit 页面大小，可填范围为大于0的整数
+    * Limit 页面大小，可填范围为大于0的整数，默认值是10
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 文件系统 ID 
-     * @return FileSystemId 文件系统 ID
+     * Get 文件系统 ID,通过查询文件系统列表获取 
+     * @return FileSystemId 文件系统 ID,通过查询文件系统列表获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID
-     * @param FileSystemId 文件系统 ID
+     * Set 文件系统 ID,通过查询文件系统列表获取
+     * @param FileSystemId 文件系统 ID,通过查询文件系统列表获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
@@ -71,11 +71,11 @@ UserId- Array of String - 是否必填：否 -（过滤条件）按id过滤。
 
     /**
      * Get 过滤条件。
-UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir )
-UserId- Array of String - 是否必填：否 -（过滤条件）按id过滤。 
+UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir，分别对应用户，用户组，目录 )
+UserId- Array of String - 是否必填：否 -（过滤条件）按用户id过滤。 
      * @return Filters 过滤条件。
-UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir )
-UserId- Array of String - 是否必填：否 -（过滤条件）按id过滤。
+UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir，分别对应用户，用户组，目录 )
+UserId- Array of String - 是否必填：否 -（过滤条件）按用户id过滤。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -83,43 +83,43 @@ UserId- Array of String - 是否必填：否 -（过滤条件）按id过滤。
 
     /**
      * Set 过滤条件。
-UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir )
-UserId- Array of String - 是否必填：否 -（过滤条件）按id过滤。
+UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir，分别对应用户，用户组，目录 )
+UserId- Array of String - 是否必填：否 -（过滤条件）按用户id过滤。
      * @param Filters 过滤条件。
-UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir )
-UserId- Array of String - 是否必填：否 -（过滤条件）按id过滤。
+UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir，分别对应用户，用户组，目录 )
+UserId- Array of String - 是否必填：否 -（过滤条件）按用户id过滤。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Offset 分页码 
-     * @return Offset Offset 分页码
+     * Get Offset 分页码，默认值0 
+     * @return Offset Offset 分页码，默认值0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset 分页码
-     * @param Offset Offset 分页码
+     * Set Offset 分页码，默认值0
+     * @param Offset Offset 分页码，默认值0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit 页面大小，可填范围为大于0的整数 
-     * @return Limit Limit 页面大小，可填范围为大于0的整数
+     * Get Limit 页面大小，可填范围为大于0的整数，默认值是10 
+     * @return Limit Limit 页面大小，可填范围为大于0的整数，默认值是10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit 页面大小，可填范围为大于0的整数
-     * @param Limit Limit 页面大小，可填范围为大于0的整数
+     * Set Limit 页面大小，可填范围为大于0的整数，默认值是10
+     * @param Limit Limit 页面大小，可填范围为大于0的整数，默认值是10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tke.v20180525.models;
+package com.tencentcloudapi.lke.v20231130.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,93 +21,93 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpenConstraintInfo extends AbstractModel {
+public class DigitalHumanConfig extends AbstractModel {
 
     /**
-    * 策略实例关联事件数
+    * 数智人资产key
     */
-    @SerializedName("EventNums")
+    @SerializedName("AssetKey")
     @Expose
-    private Long EventNums;
+    private String AssetKey;
 
     /**
-    * 策略实例名称
+    * 数智人名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 实例yaml详情base64编码
+    * 图像
     */
-    @SerializedName("YamlDetail")
+    @SerializedName("Avatar")
     @Expose
-    private String YamlDetail;
+    private String Avatar;
 
     /**
-     * Get 策略实例关联事件数 
-     * @return EventNums 策略实例关联事件数
+     * Get 数智人资产key 
+     * @return AssetKey 数智人资产key
      */
-    public Long getEventNums() {
-        return this.EventNums;
+    public String getAssetKey() {
+        return this.AssetKey;
     }
 
     /**
-     * Set 策略实例关联事件数
-     * @param EventNums 策略实例关联事件数
+     * Set 数智人资产key
+     * @param AssetKey 数智人资产key
      */
-    public void setEventNums(Long EventNums) {
-        this.EventNums = EventNums;
+    public void setAssetKey(String AssetKey) {
+        this.AssetKey = AssetKey;
     }
 
     /**
-     * Get 策略实例名称 
-     * @return Name 策略实例名称
+     * Get 数智人名称 
+     * @return Name 数智人名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 策略实例名称
-     * @param Name 策略实例名称
+     * Set 数智人名称
+     * @param Name 数智人名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 实例yaml详情base64编码 
-     * @return YamlDetail 实例yaml详情base64编码
+     * Get 图像 
+     * @return Avatar 图像
      */
-    public String getYamlDetail() {
-        return this.YamlDetail;
+    public String getAvatar() {
+        return this.Avatar;
     }
 
     /**
-     * Set 实例yaml详情base64编码
-     * @param YamlDetail 实例yaml详情base64编码
+     * Set 图像
+     * @param Avatar 图像
      */
-    public void setYamlDetail(String YamlDetail) {
-        this.YamlDetail = YamlDetail;
+    public void setAvatar(String Avatar) {
+        this.Avatar = Avatar;
     }
 
-    public OpenConstraintInfo() {
+    public DigitalHumanConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OpenConstraintInfo(OpenConstraintInfo source) {
-        if (source.EventNums != null) {
-            this.EventNums = new Long(source.EventNums);
+    public DigitalHumanConfig(DigitalHumanConfig source) {
+        if (source.AssetKey != null) {
+            this.AssetKey = new String(source.AssetKey);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.YamlDetail != null) {
-            this.YamlDetail = new String(source.YamlDetail);
+        if (source.Avatar != null) {
+            this.Avatar = new String(source.Avatar);
         }
     }
 
@@ -116,9 +116,9 @@ public class OpenConstraintInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EventNums", this.EventNums);
+        this.setParamSimple(map, prefix + "AssetKey", this.AssetKey);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "YamlDetail", this.YamlDetail);
+        this.setParamSimple(map, prefix + "Avatar", this.Avatar);
 
     }
 }

@@ -80,9 +80,7 @@ public class UploadFilesRequest extends AbstractModel {
     private Boolean CoverRect;
 
     /**
-    * 用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值`
+    * 该字段已不再使用
     */
     @SerializedName("CustomIds")
     @Expose
@@ -268,24 +266,16 @@ public class UploadFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值` 
-     * @return CustomIds 用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值`
+     * Get 该字段已不再使用 
+     * @return CustomIds 该字段已不再使用
      */
     public String [] getCustomIds() {
         return this.CustomIds;
     }
 
     /**
-     * Set 用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值`
-     * @param CustomIds 用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值`
+     * Set 该字段已不再使用
+     * @param CustomIds 该字段已不再使用
      */
     public void setCustomIds(String [] CustomIds) {
         this.CustomIds = CustomIds;

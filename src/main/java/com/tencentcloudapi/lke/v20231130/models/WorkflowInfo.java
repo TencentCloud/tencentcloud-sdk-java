@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WorkFlowSummary extends AbstractModel {
+public class WorkflowInfo extends AbstractModel {
 
     /**
     * 工作流ID
@@ -46,14 +46,6 @@ public class WorkFlowSummary extends AbstractModel {
     @SerializedName("WorkflowRunId")
     @Expose
     private String WorkflowRunId;
-
-    /**
-    * 节点信息
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("RunNodes")
-    @Expose
-    private WorkflowRunNodeInfo [] RunNodes;
 
     /**
     * 选项卡
@@ -140,26 +132,6 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Get 节点信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunNodes 节点信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public WorkflowRunNodeInfo [] getRunNodes() {
-        return this.RunNodes;
-    }
-
-    /**
-     * Set 节点信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunNodes 节点信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRunNodes(WorkflowRunNodeInfo [] RunNodes) {
-        this.RunNodes = RunNodes;
-    }
-
-    /**
      * Get 选项卡
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OptionCards 选项卡
@@ -219,14 +191,14 @@ public class WorkFlowSummary extends AbstractModel {
         this.WorkflowReleaseTime = WorkflowReleaseTime;
     }
 
-    public WorkFlowSummary() {
+    public WorkflowInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public WorkFlowSummary(WorkFlowSummary source) {
+    public WorkflowInfo(WorkflowInfo source) {
         if (source.WorkflowId != null) {
             this.WorkflowId = new String(source.WorkflowId);
         }
@@ -235,12 +207,6 @@ public class WorkFlowSummary extends AbstractModel {
         }
         if (source.WorkflowRunId != null) {
             this.WorkflowRunId = new String(source.WorkflowRunId);
-        }
-        if (source.RunNodes != null) {
-            this.RunNodes = new WorkflowRunNodeInfo[source.RunNodes.length];
-            for (int i = 0; i < source.RunNodes.length; i++) {
-                this.RunNodes[i] = new WorkflowRunNodeInfo(source.RunNodes[i]);
-            }
         }
         if (source.OptionCards != null) {
             this.OptionCards = new String[source.OptionCards.length];
@@ -267,7 +233,6 @@ public class WorkFlowSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "WorkflowName", this.WorkflowName);
         this.setParamSimple(map, prefix + "WorkflowRunId", this.WorkflowRunId);
-        this.setParamArrayObj(map, prefix + "RunNodes.", this.RunNodes);
         this.setParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
         this.setParamArraySimple(map, prefix + "Outputs.", this.Outputs);
         this.setParamSimple(map, prefix + "WorkflowReleaseTime", this.WorkflowReleaseTime);

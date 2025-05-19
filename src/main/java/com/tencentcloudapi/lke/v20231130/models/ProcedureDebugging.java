@@ -80,6 +80,13 @@ public class ProcedureDebugging extends AbstractModel {
     private AgentDebugInfo Agent;
 
     /**
+    * 自定义参数
+    */
+    @SerializedName("CustomVariables")
+    @Expose
+    private String [] CustomVariables;
+
+    /**
      * Get 检索query
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 检索query
@@ -219,6 +226,22 @@ public class ProcedureDebugging extends AbstractModel {
         this.Agent = Agent;
     }
 
+    /**
+     * Get 自定义参数 
+     * @return CustomVariables 自定义参数
+     */
+    public String [] getCustomVariables() {
+        return this.CustomVariables;
+    }
+
+    /**
+     * Set 自定义参数
+     * @param CustomVariables 自定义参数
+     */
+    public void setCustomVariables(String [] CustomVariables) {
+        this.CustomVariables = CustomVariables;
+    }
+
     public ProcedureDebugging() {
     }
 
@@ -254,6 +277,12 @@ public class ProcedureDebugging extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new AgentDebugInfo(source.Agent);
         }
+        if (source.CustomVariables != null) {
+            this.CustomVariables = new String[source.CustomVariables.length];
+            for (int i = 0; i < source.CustomVariables.length; i++) {
+                this.CustomVariables[i] = new String(source.CustomVariables[i]);
+            }
+        }
     }
 
 
@@ -268,6 +297,7 @@ public class ProcedureDebugging extends AbstractModel {
         this.setParamObj(map, prefix + "TaskFlow.", this.TaskFlow);
         this.setParamObj(map, prefix + "WorkFlow.", this.WorkFlow);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamArraySimple(map, prefix + "CustomVariables.", this.CustomVariables);
 
     }
 }

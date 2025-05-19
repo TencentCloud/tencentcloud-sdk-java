@@ -38,14 +38,14 @@ public class DescribeFlowLogsRequest extends AbstractModel {
     private String FlowLogId;
 
     /**
-    * 流日志实例名字。
+    * 流日志实例名称。长度不超过60个字符。
     */
     @SerializedName("FlowLogName")
     @Expose
     private String FlowLogName;
 
     /**
-    * 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+    * 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
 
     */
     @SerializedName("ResourceType")
@@ -157,25 +157,25 @@ public class DescribeFlowLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 流日志实例名字。 
-     * @return FlowLogName 流日志实例名字。
+     * Get 流日志实例名称。长度不超过60个字符。 
+     * @return FlowLogName 流日志实例名称。长度不超过60个字符。
      */
     public String getFlowLogName() {
         return this.FlowLogName;
     }
 
     /**
-     * Set 流日志实例名字。
-     * @param FlowLogName 流日志实例名字。
+     * Set 流日志实例名称。长度不超过60个字符。
+     * @param FlowLogName 流日志实例名称。长度不超过60个字符。
      */
     public void setFlowLogName(String FlowLogName) {
         this.FlowLogName = FlowLogName;
     }
 
     /**
-     * Get 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+     * Get 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
  
-     * @return ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+     * @return ResourceType 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
 
      */
     public String getResourceType() {
@@ -183,9 +183,9 @@ public class DescribeFlowLogsRequest extends AbstractModel {
     }
 
     /**
-     * Set 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+     * Set 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
 
-     * @param ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+     * @param ResourceType 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
 
      */
     public void setResourceType(String ResourceType) {

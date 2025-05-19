@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AccountVpcInfo extends AbstractModel {
 
     /**
-    * VpcId： vpc-xadsafsdasd
+    * VpcId
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * Vpc所属地区: ap-guangzhou, ap-shanghai
+    * Vpc所属地区
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Vpc所属账号: 123456789
+    * Vpc所属账号
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * vpc资源名称：testname
+    * vpc资源名称
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-     * Get VpcId： vpc-xadsafsdasd 
-     * @return UniqVpcId VpcId： vpc-xadsafsdasd
+     * Get VpcId 
+     * @return UniqVpcId VpcId
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VpcId： vpc-xadsafsdasd
-     * @param UniqVpcId VpcId： vpc-xadsafsdasd
+     * Set VpcId
+     * @param UniqVpcId VpcId
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get Vpc所属地区: ap-guangzhou, ap-shanghai 
-     * @return Region Vpc所属地区: ap-guangzhou, ap-shanghai
+     * Get Vpc所属地区 
+     * @return Region Vpc所属地区
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Vpc所属地区: ap-guangzhou, ap-shanghai
-     * @param Region Vpc所属地区: ap-guangzhou, ap-shanghai
+     * Set Vpc所属地区
+     * @param Region Vpc所属地区
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Vpc所属账号: 123456789 
-     * @return Uin Vpc所属账号: 123456789
+     * Get Vpc所属账号 
+     * @return Uin Vpc所属账号
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set Vpc所属账号: 123456789
-     * @param Uin Vpc所属账号: 123456789
+     * Set Vpc所属账号
+     * @param Uin Vpc所属账号
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get vpc资源名称：testname 
-     * @return VpcName vpc资源名称：testname
+     * Get vpc资源名称 
+     * @return VpcName vpc资源名称
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set vpc资源名称：testname
-     * @param VpcName vpc资源名称：testname
+     * Set vpc资源名称
+     * @param VpcName vpc资源名称
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;

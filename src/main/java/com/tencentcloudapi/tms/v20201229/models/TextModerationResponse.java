@@ -116,6 +116,13 @@ public class TextModerationResponse extends AbstractModel {
     private SentimentAnalysis SentimentAnalysis;
 
     /**
+    * 该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库
+    */
+    @SerializedName("HitType")
+    @Expose
+    private String HitType;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -347,6 +354,22 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
+     * Get 该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库 
+     * @return HitType 该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库
+     */
+    public String getHitType() {
+        return this.HitType;
+    }
+
+    /**
+     * Set 该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库
+     * @param HitType 该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库
+     */
+    public void setHitType(String HitType) {
+        this.HitType = HitType;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -415,6 +438,9 @@ public class TextModerationResponse extends AbstractModel {
         if (source.SentimentAnalysis != null) {
             this.SentimentAnalysis = new SentimentAnalysis(source.SentimentAnalysis);
         }
+        if (source.HitType != null) {
+            this.HitType = new String(source.HitType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -437,6 +463,7 @@ public class TextModerationResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
         this.setParamSimple(map, prefix + "ContextText", this.ContextText);
         this.setParamObj(map, prefix + "SentimentAnalysis.", this.SentimentAnalysis);
+        this.setParamSimple(map, prefix + "HitType", this.HitType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

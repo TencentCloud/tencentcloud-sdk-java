@@ -59,6 +59,13 @@ public class KnowledgeQaSingleWorkflow extends AbstractModel {
     private Boolean IsEnable;
 
     /**
+    * 是否开启异步调用工作流
+    */
+    @SerializedName("AsyncWorkflow")
+    @Expose
+    private Boolean AsyncWorkflow;
+
+    /**
      * Get 工作流ID 
      * @return WorkflowId 工作流ID
      */
@@ -138,6 +145,22 @@ public class KnowledgeQaSingleWorkflow extends AbstractModel {
         this.IsEnable = IsEnable;
     }
 
+    /**
+     * Get 是否开启异步调用工作流 
+     * @return AsyncWorkflow 是否开启异步调用工作流
+     */
+    public Boolean getAsyncWorkflow() {
+        return this.AsyncWorkflow;
+    }
+
+    /**
+     * Set 是否开启异步调用工作流
+     * @param AsyncWorkflow 是否开启异步调用工作流
+     */
+    public void setAsyncWorkflow(Boolean AsyncWorkflow) {
+        this.AsyncWorkflow = AsyncWorkflow;
+    }
+
     public KnowledgeQaSingleWorkflow() {
     }
 
@@ -161,6 +184,9 @@ public class KnowledgeQaSingleWorkflow extends AbstractModel {
         if (source.IsEnable != null) {
             this.IsEnable = new Boolean(source.IsEnable);
         }
+        if (source.AsyncWorkflow != null) {
+            this.AsyncWorkflow = new Boolean(source.AsyncWorkflow);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class KnowledgeQaSingleWorkflow extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowDesc", this.WorkflowDesc);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
+        this.setParamSimple(map, prefix + "AsyncWorkflow", this.AsyncWorkflow);
 
     }
 }

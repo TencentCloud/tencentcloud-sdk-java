@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ApplyDiskBackupRequest extends AbstractModel {
 
     /**
-    * 云硬盘备份点ID，可通过 DescribeDiskBackups 查询。
+    * 云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
     */
     @SerializedName("DiskBackupId")
     @Expose
     private String DiskBackupId;
 
     /**
-    * 云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。
+    * 云硬盘备份点原云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查。
     */
     @SerializedName("DiskId")
     @Expose
@@ -45,39 +45,39 @@ public class ApplyDiskBackupRequest extends AbstractModel {
     private Boolean AutoStopInstance;
 
     /**
-    * 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
+    * 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机; AutoStartInstance参数需要在AutoStopInstance为true时才能为true。
     */
     @SerializedName("AutoStartInstance")
     @Expose
     private Boolean AutoStartInstance;
 
     /**
-     * Get 云硬盘备份点ID，可通过 DescribeDiskBackups 查询。 
-     * @return DiskBackupId 云硬盘备份点ID，可通过 DescribeDiskBackups 查询。
+     * Get 云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。 
+     * @return DiskBackupId 云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
      */
     public String getDiskBackupId() {
         return this.DiskBackupId;
     }
 
     /**
-     * Set 云硬盘备份点ID，可通过 DescribeDiskBackups 查询。
-     * @param DiskBackupId 云硬盘备份点ID，可通过 DescribeDiskBackups 查询。
+     * Set 云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
+     * @param DiskBackupId 云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
      */
     public void setDiskBackupId(String DiskBackupId) {
         this.DiskBackupId = DiskBackupId;
     }
 
     /**
-     * Get 云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。 
-     * @return DiskId 云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。
+     * Get 云硬盘备份点原云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查。 
+     * @return DiskId 云硬盘备份点原云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查。
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。
-     * @param DiskId 云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。
+     * Set 云硬盘备份点原云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查。
+     * @param DiskId 云硬盘备份点原云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查。
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
@@ -100,16 +100,16 @@ public class ApplyDiskBackupRequest extends AbstractModel {
     }
 
     /**
-     * Get 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机 
-     * @return AutoStartInstance 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
+     * Get 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机; AutoStartInstance参数需要在AutoStopInstance为true时才能为true。 
+     * @return AutoStartInstance 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机; AutoStartInstance参数需要在AutoStopInstance为true时才能为true。
      */
     public Boolean getAutoStartInstance() {
         return this.AutoStartInstance;
     }
 
     /**
-     * Set 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
-     * @param AutoStartInstance 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
+     * Set 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机; AutoStartInstance参数需要在AutoStopInstance为true时才能为true。
+     * @param AutoStartInstance 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机; AutoStartInstance参数需要在AutoStopInstance为true时才能为true。
      */
     public void setAutoStartInstance(Boolean AutoStartInstance) {
         this.AutoStartInstance = AutoStartInstance;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeServiceLoginSettingsRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * 实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeServiceLoginSettingsRequest extends AbstractModel {
     private String ServiceName;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。 
+     * @return InstanceId 实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
+     * @param InstanceId 实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -166,7 +166,9 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     /**
      * Get 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段） 
      * @return StartTimeMin 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * @deprecated
      */
+    @Deprecated
     public Long getStartTimeMin() {
         return this.StartTimeMin;
     }
@@ -174,7 +176,9 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     /**
      * Set 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      * @param StartTimeMin 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * @deprecated
      */
+    @Deprecated
     public void setStartTimeMin(Long StartTimeMin) {
         this.StartTimeMin = StartTimeMin;
     }
@@ -182,7 +186,9 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     /**
      * Get 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段） 
      * @return StartTimeMax 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * @deprecated
      */
+    @Deprecated
     public Long getStartTimeMax() {
         return this.StartTimeMax;
     }
@@ -190,7 +196,9 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     /**
      * Set 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
      * @param StartTimeMax 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * @deprecated
      */
+    @Deprecated
     public void setStartTimeMax(Long StartTimeMax) {
         this.StartTimeMax = StartTimeMax;
     }

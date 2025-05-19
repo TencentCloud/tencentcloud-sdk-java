@@ -38,7 +38,7 @@ public class CreateDisksRequest extends AbstractModel {
     private String DiskChargeType;
 
     /**
-    * 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><br><li>CLOUD_SSD：表示SSD云硬盘</li><br><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><br><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
+    * 硬盘介质类型。取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><br><li>CLOUD_SSD：表示SSD云硬盘</li><br><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><br><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>极速型SSD云硬盘（CLOUD_TSSD）仅支持随部分实例类型一同购买，暂不支持单独创建。
     */
     @SerializedName("DiskType")
     @Expose
@@ -73,14 +73,14 @@ public class CreateDisksRequest extends AbstractModel {
     private Long DiskCount;
 
     /**
-    * 可选参数。使用此参数可给云硬盘购买额外的性能。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
+    * 使用此参数可给云硬盘购买额外的性能，单位MB/s。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）。
     */
     @SerializedName("ThroughputPerformance")
     @Expose
     private Long ThroughputPerformance;
 
     /**
-    * 可选参数。购买加密盘时自定义密钥， 当传入该参数时, Encrypt入参不为空
+    * 购买加密盘时自定义密钥，当传入该参数时，Encrypt参数不得为空。
     */
     @SerializedName("KmsKeyId")
     @Expose
@@ -94,7 +94,7 @@ public class CreateDisksRequest extends AbstractModel {
     private Long DiskSize;
 
     /**
-    * 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
+    * 传入True时，云盘将创建为共享型云盘，默认为False。因共享型云盘不支持加密，此参数与Encrypt参数不可同时传入。
     */
     @SerializedName("Shareable")
     @Expose
@@ -108,7 +108,7 @@ public class CreateDisksRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-    * 传入该参数用于创建加密云盘，取值固定为ENCRYPT。
+    * 传入该参数用于创建加密云盘，取值固定为ENCRYPT。因共享型云盘不支持加密，此参数与Shareable参数不可同时传入。
     */
     @SerializedName("Encrypt")
     @Expose
@@ -122,14 +122,14 @@ public class CreateDisksRequest extends AbstractModel {
     private DiskChargePrepaid DiskChargePrepaid;
 
     /**
-    * 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+    * 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过[DescribeSnapshots](document/api/362/15647)接口返回的快照详情的IsPermanent字段来判断，True表示永久快照，False表示非永久快照。
     */
     @SerializedName("DeleteSnapshot")
     @Expose
     private Long DeleteSnapshot;
 
     /**
-    * 创建云盘时指定自动挂载并初始化该数据盘。
+    * 创建云盘时指定自动挂载并初始化该数据盘。因加密盘不支持自动挂载及初始化，此参数与Encrypt参数不可同时传入。
     */
     @SerializedName("AutoMountConfiguration")
     @Expose
@@ -143,7 +143,7 @@ public class CreateDisksRequest extends AbstractModel {
     private Long DiskBackupQuota;
 
     /**
-    * 创建云盘时是否开启性能突发
+    * 创建云盘时是否开启性能突发。
     */
     @SerializedName("BurstPerformance")
     @Expose
@@ -189,16 +189,16 @@ public class CreateDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><br><li>CLOUD_SSD：表示SSD云硬盘</li><br><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><br><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li> 
-     * @return DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><br><li>CLOUD_SSD：表示SSD云硬盘</li><br><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><br><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
+     * Get 硬盘介质类型。取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><br><li>CLOUD_SSD：表示SSD云硬盘</li><br><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><br><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>极速型SSD云硬盘（CLOUD_TSSD）仅支持随部分实例类型一同购买，暂不支持单独创建。 
+     * @return DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><br><li>CLOUD_SSD：表示SSD云硬盘</li><br><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><br><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>极速型SSD云硬盘（CLOUD_TSSD）仅支持随部分实例类型一同购买，暂不支持单独创建。
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><br><li>CLOUD_SSD：表示SSD云硬盘</li><br><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><br><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
-     * @param DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><br><li>CLOUD_SSD：表示SSD云硬盘</li><br><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><br><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
+     * Set 硬盘介质类型。取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><br><li>CLOUD_SSD：表示SSD云硬盘</li><br><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><br><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>极速型SSD云硬盘（CLOUD_TSSD）仅支持随部分实例类型一同购买，暂不支持单独创建。
+     * @param DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><br><li>CLOUD_SSD：表示SSD云硬盘</li><br><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><br><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>极速型SSD云硬盘（CLOUD_TSSD）仅支持随部分实例类型一同购买，暂不支持单独创建。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -269,32 +269,32 @@ public class CreateDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get 可选参数。使用此参数可给云硬盘购买额外的性能。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD） 
-     * @return ThroughputPerformance 可选参数。使用此参数可给云硬盘购买额外的性能。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
+     * Get 使用此参数可给云硬盘购买额外的性能，单位MB/s。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）。 
+     * @return ThroughputPerformance 使用此参数可给云硬盘购买额外的性能，单位MB/s。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）。
      */
     public Long getThroughputPerformance() {
         return this.ThroughputPerformance;
     }
 
     /**
-     * Set 可选参数。使用此参数可给云硬盘购买额外的性能。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
-     * @param ThroughputPerformance 可选参数。使用此参数可给云硬盘购买额外的性能。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
+     * Set 使用此参数可给云硬盘购买额外的性能，单位MB/s。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）。
+     * @param ThroughputPerformance 使用此参数可给云硬盘购买额外的性能，单位MB/s。<br>当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）。
      */
     public void setThroughputPerformance(Long ThroughputPerformance) {
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
     /**
-     * Get 可选参数。购买加密盘时自定义密钥， 当传入该参数时, Encrypt入参不为空 
-     * @return KmsKeyId 可选参数。购买加密盘时自定义密钥， 当传入该参数时, Encrypt入参不为空
+     * Get 购买加密盘时自定义密钥，当传入该参数时，Encrypt参数不得为空。 
+     * @return KmsKeyId 购买加密盘时自定义密钥，当传入该参数时，Encrypt参数不得为空。
      */
     public String getKmsKeyId() {
         return this.KmsKeyId;
     }
 
     /**
-     * Set 可选参数。购买加密盘时自定义密钥， 当传入该参数时, Encrypt入参不为空
-     * @param KmsKeyId 可选参数。购买加密盘时自定义密钥， 当传入该参数时, Encrypt入参不为空
+     * Set 购买加密盘时自定义密钥，当传入该参数时，Encrypt参数不得为空。
+     * @param KmsKeyId 购买加密盘时自定义密钥，当传入该参数时，Encrypt参数不得为空。
      */
     public void setKmsKeyId(String KmsKeyId) {
         this.KmsKeyId = KmsKeyId;
@@ -317,16 +317,16 @@ public class CreateDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。 
-     * @return Shareable 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
+     * Get 传入True时，云盘将创建为共享型云盘，默认为False。因共享型云盘不支持加密，此参数与Encrypt参数不可同时传入。 
+     * @return Shareable 传入True时，云盘将创建为共享型云盘，默认为False。因共享型云盘不支持加密，此参数与Encrypt参数不可同时传入。
      */
     public Boolean getShareable() {
         return this.Shareable;
     }
 
     /**
-     * Set 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
-     * @param Shareable 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
+     * Set 传入True时，云盘将创建为共享型云盘，默认为False。因共享型云盘不支持加密，此参数与Encrypt参数不可同时传入。
+     * @param Shareable 传入True时，云盘将创建为共享型云盘，默认为False。因共享型云盘不支持加密，此参数与Encrypt参数不可同时传入。
      */
     public void setShareable(Boolean Shareable) {
         this.Shareable = Shareable;
@@ -349,16 +349,16 @@ public class CreateDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get 传入该参数用于创建加密云盘，取值固定为ENCRYPT。 
-     * @return Encrypt 传入该参数用于创建加密云盘，取值固定为ENCRYPT。
+     * Get 传入该参数用于创建加密云盘，取值固定为ENCRYPT。因共享型云盘不支持加密，此参数与Shareable参数不可同时传入。 
+     * @return Encrypt 传入该参数用于创建加密云盘，取值固定为ENCRYPT。因共享型云盘不支持加密，此参数与Shareable参数不可同时传入。
      */
     public String getEncrypt() {
         return this.Encrypt;
     }
 
     /**
-     * Set 传入该参数用于创建加密云盘，取值固定为ENCRYPT。
-     * @param Encrypt 传入该参数用于创建加密云盘，取值固定为ENCRYPT。
+     * Set 传入该参数用于创建加密云盘，取值固定为ENCRYPT。因共享型云盘不支持加密，此参数与Shareable参数不可同时传入。
+     * @param Encrypt 传入该参数用于创建加密云盘，取值固定为ENCRYPT。因共享型云盘不支持加密，此参数与Shareable参数不可同时传入。
      */
     public void setEncrypt(String Encrypt) {
         this.Encrypt = Encrypt;
@@ -381,32 +381,32 @@ public class CreateDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。 
-     * @return DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+     * Get 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过[DescribeSnapshots](document/api/362/15647)接口返回的快照详情的IsPermanent字段来判断，True表示永久快照，False表示非永久快照。 
+     * @return DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过[DescribeSnapshots](document/api/362/15647)接口返回的快照详情的IsPermanent字段来判断，True表示永久快照，False表示非永久快照。
      */
     public Long getDeleteSnapshot() {
         return this.DeleteSnapshot;
     }
 
     /**
-     * Set 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
-     * @param DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+     * Set 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过[DescribeSnapshots](document/api/362/15647)接口返回的快照详情的IsPermanent字段来判断，True表示永久快照，False表示非永久快照。
+     * @param DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过[DescribeSnapshots](document/api/362/15647)接口返回的快照详情的IsPermanent字段来判断，True表示永久快照，False表示非永久快照。
      */
     public void setDeleteSnapshot(Long DeleteSnapshot) {
         this.DeleteSnapshot = DeleteSnapshot;
     }
 
     /**
-     * Get 创建云盘时指定自动挂载并初始化该数据盘。 
-     * @return AutoMountConfiguration 创建云盘时指定自动挂载并初始化该数据盘。
+     * Get 创建云盘时指定自动挂载并初始化该数据盘。因加密盘不支持自动挂载及初始化，此参数与Encrypt参数不可同时传入。 
+     * @return AutoMountConfiguration 创建云盘时指定自动挂载并初始化该数据盘。因加密盘不支持自动挂载及初始化，此参数与Encrypt参数不可同时传入。
      */
     public AutoMountConfiguration getAutoMountConfiguration() {
         return this.AutoMountConfiguration;
     }
 
     /**
-     * Set 创建云盘时指定自动挂载并初始化该数据盘。
-     * @param AutoMountConfiguration 创建云盘时指定自动挂载并初始化该数据盘。
+     * Set 创建云盘时指定自动挂载并初始化该数据盘。因加密盘不支持自动挂载及初始化，此参数与Encrypt参数不可同时传入。
+     * @param AutoMountConfiguration 创建云盘时指定自动挂载并初始化该数据盘。因加密盘不支持自动挂载及初始化，此参数与Encrypt参数不可同时传入。
      */
     public void setAutoMountConfiguration(AutoMountConfiguration AutoMountConfiguration) {
         this.AutoMountConfiguration = AutoMountConfiguration;
@@ -429,16 +429,16 @@ public class CreateDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get 创建云盘时是否开启性能突发 
-     * @return BurstPerformance 创建云盘时是否开启性能突发
+     * Get 创建云盘时是否开启性能突发。 
+     * @return BurstPerformance 创建云盘时是否开启性能突发。
      */
     public Boolean getBurstPerformance() {
         return this.BurstPerformance;
     }
 
     /**
-     * Set 创建云盘时是否开启性能突发
-     * @param BurstPerformance 创建云盘时是否开启性能突发
+     * Set 创建云盘时是否开启性能突发。
+     * @param BurstPerformance 创建云盘时是否开启性能突发。
      */
     public void setBurstPerformance(Boolean BurstPerformance) {
         this.BurstPerformance = BurstPerformance;

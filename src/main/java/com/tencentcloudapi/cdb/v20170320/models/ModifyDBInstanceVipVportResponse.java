@@ -40,7 +40,9 @@ public class ModifyDBInstanceVipVportResponse extends AbstractModel {
     /**
      * Get 异步任务ID。(该返回字段目前已废弃) 
      * @return AsyncRequestId 异步任务ID。(该返回字段目前已废弃)
+     * @deprecated
      */
+    @Deprecated
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
@@ -48,7 +50,9 @@ public class ModifyDBInstanceVipVportResponse extends AbstractModel {
     /**
      * Set 异步任务ID。(该返回字段目前已废弃)
      * @param AsyncRequestId 异步任务ID。(该返回字段目前已废弃)
+     * @deprecated
      */
+    @Deprecated
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;
     }

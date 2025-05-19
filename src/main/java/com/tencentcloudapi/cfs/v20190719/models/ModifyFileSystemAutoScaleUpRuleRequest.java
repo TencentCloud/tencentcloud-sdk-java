@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel {
 
     /**
-    * 文件系统id
+    * 文件系统id,通过查询文件系统列表获取该参数
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -45,24 +45,23 @@ public class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel {
     private Long TargetThreshold;
 
     /**
-    * 规则状态0:关闭，1 开启
-
+    * 规则状态0:关闭，1 开启；不传保留原状态
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 文件系统id 
-     * @return FileSystemId 文件系统id
+     * Get 文件系统id,通过查询文件系统列表获取该参数 
+     * @return FileSystemId 文件系统id,通过查询文件系统列表获取该参数
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统id
-     * @param FileSystemId 文件系统id
+     * Set 文件系统id,通过查询文件系统列表获取该参数
+     * @param FileSystemId 文件系统id,通过查询文件系统列表获取该参数
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
@@ -101,20 +100,16 @@ public class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则状态0:关闭，1 开启
- 
-     * @return Status 规则状态0:关闭，1 开启
-
+     * Get 规则状态0:关闭，1 开启；不传保留原状态 
+     * @return Status 规则状态0:关闭，1 开启；不传保留原状态
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 规则状态0:关闭，1 开启
-
-     * @param Status 规则状态0:关闭，1 开启
-
+     * Set 规则状态0:关闭，1 开启；不传保留原状态
+     * @param Status 规则状态0:关闭，1 开启；不传保留原状态
      */
     public void setStatus(Long Status) {
         this.Status = Status;

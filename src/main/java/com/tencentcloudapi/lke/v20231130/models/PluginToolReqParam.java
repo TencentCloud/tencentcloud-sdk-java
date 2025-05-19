@@ -38,7 +38,7 @@ public class PluginToolReqParam extends AbstractModel {
     private String Desc;
 
     /**
-    * 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object
+    * 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object, 99:null, 100:upspecified
     */
     @SerializedName("Type")
     @Expose
@@ -73,6 +73,20 @@ public class PluginToolReqParam extends AbstractModel {
     private Boolean GlobalHidden;
 
     /**
+    * OneOf类型参数
+    */
+    @SerializedName("OneOf")
+    @Expose
+    private PluginToolReqParam [] OneOf;
+
+    /**
+    * AnyOf类型参数
+    */
+    @SerializedName("AnyOf")
+    @Expose
+    private PluginToolReqParam [] AnyOf;
+
+    /**
      * Get 参数名称 
      * @return Name 参数名称
      */
@@ -105,16 +119,16 @@ public class PluginToolReqParam extends AbstractModel {
     }
 
     /**
-     * Get 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object 
-     * @return Type 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object
+     * Get 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object, 99:null, 100:upspecified 
+     * @return Type 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object, 99:null, 100:upspecified
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object
-     * @param Type 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object
+     * Set 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object, 99:null, 100:upspecified
+     * @param Type 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object, 99:null, 100:upspecified
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -184,6 +198,38 @@ public class PluginToolReqParam extends AbstractModel {
         this.GlobalHidden = GlobalHidden;
     }
 
+    /**
+     * Get OneOf类型参数 
+     * @return OneOf OneOf类型参数
+     */
+    public PluginToolReqParam [] getOneOf() {
+        return this.OneOf;
+    }
+
+    /**
+     * Set OneOf类型参数
+     * @param OneOf OneOf类型参数
+     */
+    public void setOneOf(PluginToolReqParam [] OneOf) {
+        this.OneOf = OneOf;
+    }
+
+    /**
+     * Get AnyOf类型参数 
+     * @return AnyOf AnyOf类型参数
+     */
+    public PluginToolReqParam [] getAnyOf() {
+        return this.AnyOf;
+    }
+
+    /**
+     * Set AnyOf类型参数
+     * @param AnyOf AnyOf类型参数
+     */
+    public void setAnyOf(PluginToolReqParam [] AnyOf) {
+        this.AnyOf = AnyOf;
+    }
+
     public PluginToolReqParam() {
     }
 
@@ -216,6 +262,18 @@ public class PluginToolReqParam extends AbstractModel {
         if (source.GlobalHidden != null) {
             this.GlobalHidden = new Boolean(source.GlobalHidden);
         }
+        if (source.OneOf != null) {
+            this.OneOf = new PluginToolReqParam[source.OneOf.length];
+            for (int i = 0; i < source.OneOf.length; i++) {
+                this.OneOf[i] = new PluginToolReqParam(source.OneOf[i]);
+            }
+        }
+        if (source.AnyOf != null) {
+            this.AnyOf = new PluginToolReqParam[source.AnyOf.length];
+            for (int i = 0; i < source.AnyOf.length; i++) {
+                this.AnyOf[i] = new PluginToolReqParam(source.AnyOf[i]);
+            }
+        }
     }
 
 
@@ -230,6 +288,8 @@ public class PluginToolReqParam extends AbstractModel {
         this.setParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
         this.setParamArrayObj(map, prefix + "SubParams.", this.SubParams);
         this.setParamSimple(map, prefix + "GlobalHidden", this.GlobalHidden);
+        this.setParamArrayObj(map, prefix + "OneOf.", this.OneOf);
+        this.setParamArrayObj(map, prefix + "AnyOf.", this.AnyOf);
 
     }
 }

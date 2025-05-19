@@ -25,6 +25,7 @@ public class TerminateInstancesRequest extends AbstractModel {
 
     /**
     * 实例ID列表
+可通过DescribeInstances接口获取ID列表.单次能查询100个InstanceId
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -38,8 +39,10 @@ public class TerminateInstancesRequest extends AbstractModel {
     private Boolean DryRun;
 
     /**
-     * Get 实例ID列表 
+     * Get 实例ID列表
+可通过DescribeInstances接口获取ID列表.单次能查询100个InstanceId 
      * @return InstanceIds 实例ID列表
+可通过DescribeInstances接口获取ID列表.单次能查询100个InstanceId
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -47,7 +50,9 @@ public class TerminateInstancesRequest extends AbstractModel {
 
     /**
      * Set 实例ID列表
+可通过DescribeInstances接口获取ID列表.单次能查询100个InstanceId
      * @param InstanceIds 实例ID列表
+可通过DescribeInstances接口获取ID列表.单次能查询100个InstanceId
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

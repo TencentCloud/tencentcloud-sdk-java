@@ -153,6 +153,13 @@ public class ModelInfo extends AbstractModel {
     private Boolean IsExclusive;
 
     /**
+    * 模型支持智能通话效果
+    */
+    @SerializedName("SupportAiCallStatus")
+    @Expose
+    private Long SupportAiCallStatus;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelName 模型名称
@@ -464,6 +471,22 @@ public class ModelInfo extends AbstractModel {
         this.IsExclusive = IsExclusive;
     }
 
+    /**
+     * Get 模型支持智能通话效果 
+     * @return SupportAiCallStatus 模型支持智能通话效果
+     */
+    public Long getSupportAiCallStatus() {
+        return this.SupportAiCallStatus;
+    }
+
+    /**
+     * Set 模型支持智能通话效果
+     * @param SupportAiCallStatus 模型支持智能通话效果
+     */
+    public void setSupportAiCallStatus(Long SupportAiCallStatus) {
+        this.SupportAiCallStatus = SupportAiCallStatus;
+    }
+
     public ModelInfo() {
     }
 
@@ -523,6 +546,9 @@ public class ModelInfo extends AbstractModel {
         if (source.IsExclusive != null) {
             this.IsExclusive = new Boolean(source.IsExclusive);
         }
+        if (source.SupportAiCallStatus != null) {
+            this.SupportAiCallStatus = new Long(source.SupportAiCallStatus);
+        }
     }
 
 
@@ -547,6 +573,7 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "RoleLenLimit", this.RoleLenLimit);
         this.setParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
+        this.setParamSimple(map, prefix + "SupportAiCallStatus", this.SupportAiCallStatus);
 
     }
 }

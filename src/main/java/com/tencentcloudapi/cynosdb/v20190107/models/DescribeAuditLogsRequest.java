@@ -185,7 +185,9 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     /**
      * Get 已废弃。 
      * @return Filter 已废弃。
+     * @deprecated
      */
+    @Deprecated
     public AuditLogFilter getFilter() {
         return this.Filter;
     }
@@ -193,7 +195,9 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     /**
      * Set 已废弃。
      * @param Filter 已废弃。
+     * @deprecated
      */
+    @Deprecated
     public void setFilter(AuditLogFilter Filter) {
         this.Filter = Filter;
     }

@@ -53,6 +53,13 @@ public class CustomSampleMatrix extends AbstractModel {
     private SampleStream [] Streams;
 
     /**
+    * 两个时间点的时间间隔，单位纳秒
+    */
+    @SerializedName("Step")
+    @Expose
+    private Long Step;
+
+    /**
      * Get 指标名字 
      * @return Metric 指标名字
      */
@@ -120,6 +127,22 @@ public class CustomSampleMatrix extends AbstractModel {
         this.Streams = Streams;
     }
 
+    /**
+     * Get 两个时间点的时间间隔，单位纳秒 
+     * @return Step 两个时间点的时间间隔，单位纳秒
+     */
+    public Long getStep() {
+        return this.Step;
+    }
+
+    /**
+     * Set 两个时间点的时间间隔，单位纳秒
+     * @param Step 两个时间点的时间间隔，单位纳秒
+     */
+    public void setStep(Long Step) {
+        this.Step = Step;
+    }
+
     public CustomSampleMatrix() {
     }
 
@@ -143,6 +166,9 @@ public class CustomSampleMatrix extends AbstractModel {
                 this.Streams[i] = new SampleStream(source.Streams[i]);
             }
         }
+        if (source.Step != null) {
+            this.Step = new Long(source.Step);
+        }
     }
 
 
@@ -154,6 +180,7 @@ public class CustomSampleMatrix extends AbstractModel {
         this.setParamSimple(map, prefix + "Aggregation", this.Aggregation);
         this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamArrayObj(map, prefix + "Streams.", this.Streams);
+        this.setParamSimple(map, prefix + "Step", this.Step);
 
     }
 }

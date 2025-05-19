@@ -31,28 +31,21 @@ public class DescribeApplicationsRequest extends AbstractModel {
     private String [] ApplicationIds;
 
     /**
-    * 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id: 精确匹配;
-scene-id: 精确匹配;
-application-name: 模糊匹配;
-application-type: 精确匹配;
+    * 过滤器，跟ApplicationIds不能共用，支持的filter主要有：application-id: 精确匹配;scene-id: 精确匹配，通过调用接口 [DescribeScenes](https://cloud.tencent.com/document/api/1721/101608)获取;application-name: 模糊匹配;application-type: 精确匹配，枚举类型如下：PUBLIC_APPLICATION（公共应用）/ PRIVATE_APPLICATION（自定义应用）/ COMMUNITY_APPLICATION（社区应用）;
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量，默认为0
+    * 偏移量，不得小于0，默认为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回量，默认为20
-MC：1000
-用户：100
-
+    * 返回量，不得大于100，默认为20
     */
     @SerializedName("Limit")
     @Expose
@@ -89,76 +82,48 @@ MC：1000
     }
 
     /**
-     * Get 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id: 精确匹配;
-scene-id: 精确匹配;
-application-name: 模糊匹配;
-application-type: 精确匹配; 
-     * @return Filters 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id: 精确匹配;
-scene-id: 精确匹配;
-application-name: 模糊匹配;
-application-type: 精确匹配;
+     * Get 过滤器，跟ApplicationIds不能共用，支持的filter主要有：application-id: 精确匹配;scene-id: 精确匹配，通过调用接口 [DescribeScenes](https://cloud.tencent.com/document/api/1721/101608)获取;application-name: 模糊匹配;application-type: 精确匹配，枚举类型如下：PUBLIC_APPLICATION（公共应用）/ PRIVATE_APPLICATION（自定义应用）/ COMMUNITY_APPLICATION（社区应用）; 
+     * @return Filters 过滤器，跟ApplicationIds不能共用，支持的filter主要有：application-id: 精确匹配;scene-id: 精确匹配，通过调用接口 [DescribeScenes](https://cloud.tencent.com/document/api/1721/101608)获取;application-name: 模糊匹配;application-type: 精确匹配，枚举类型如下：PUBLIC_APPLICATION（公共应用）/ PRIVATE_APPLICATION（自定义应用）/ COMMUNITY_APPLICATION（社区应用）;
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id: 精确匹配;
-scene-id: 精确匹配;
-application-name: 模糊匹配;
-application-type: 精确匹配;
-     * @param Filters 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id: 精确匹配;
-scene-id: 精确匹配;
-application-name: 模糊匹配;
-application-type: 精确匹配;
+     * Set 过滤器，跟ApplicationIds不能共用，支持的filter主要有：application-id: 精确匹配;scene-id: 精确匹配，通过调用接口 [DescribeScenes](https://cloud.tencent.com/document/api/1721/101608)获取;application-name: 模糊匹配;application-type: 精确匹配，枚举类型如下：PUBLIC_APPLICATION（公共应用）/ PRIVATE_APPLICATION（自定义应用）/ COMMUNITY_APPLICATION（社区应用）;
+     * @param Filters 过滤器，跟ApplicationIds不能共用，支持的filter主要有：application-id: 精确匹配;scene-id: 精确匹配，通过调用接口 [DescribeScenes](https://cloud.tencent.com/document/api/1721/101608)获取;application-name: 模糊匹配;application-type: 精确匹配，枚举类型如下：PUBLIC_APPLICATION（公共应用）/ PRIVATE_APPLICATION（自定义应用）/ COMMUNITY_APPLICATION（社区应用）;
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get 偏移量，不得小于0，默认为0 
+     * @return Offset 偏移量，不得小于0，默认为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set 偏移量，不得小于0，默认为0
+     * @param Offset 偏移量，不得小于0，默认为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回量，默认为20
-MC：1000
-用户：100
- 
-     * @return Limit 返回量，默认为20
-MC：1000
-用户：100
-
+     * Get 返回量，不得大于100，默认为20 
+     * @return Limit 返回量，不得大于100，默认为20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回量，默认为20
-MC：1000
-用户：100
-
-     * @param Limit 返回量，默认为20
-MC：1000
-用户：100
-
+     * Set 返回量，不得大于100，默认为20
+     * @param Limit 返回量，不得大于100，默认为20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

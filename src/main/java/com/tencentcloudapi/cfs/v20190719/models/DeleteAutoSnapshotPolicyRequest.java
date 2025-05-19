@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * 快照策略ID
+    * 快照策略ID，查询快照策略接口获取
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-     * Get 快照策略ID 
-     * @return AutoSnapshotPolicyId 快照策略ID
+     * Get 快照策略ID，查询快照策略接口获取 
+     * @return AutoSnapshotPolicyId 快照策略ID，查询快照策略接口获取
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set 快照策略ID
-     * @param AutoSnapshotPolicyId 快照策略ID
+     * Set 快照策略ID，查询快照策略接口获取
+     * @param AutoSnapshotPolicyId 快照策略ID，查询快照策略接口获取
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;

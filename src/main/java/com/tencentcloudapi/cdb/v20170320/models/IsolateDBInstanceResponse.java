@@ -40,7 +40,9 @@ public class IsolateDBInstanceResponse extends AbstractModel {
     /**
      * Get 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态) 
      * @return AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态)
+     * @deprecated
      */
+    @Deprecated
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
@@ -48,7 +50,9 @@ public class IsolateDBInstanceResponse extends AbstractModel {
     /**
      * Set 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态)
      * @param AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。(该返回字段目前已废弃，可以通过 DescribeDBInstances 接口查询实例的隔离状态)
+     * @deprecated
      */
+    @Deprecated
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;
     }

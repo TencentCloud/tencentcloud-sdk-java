@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifySnapshotAttributeRequest extends AbstractModel {
 
     /**
-    * 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
+    * 快照ID, 可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询。
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -52,16 +52,16 @@ public class ModifySnapshotAttributeRequest extends AbstractModel {
     private String Deadline;
 
     /**
-     * Get 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。 
-     * @return SnapshotId 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
+     * Get 快照ID, 可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询。 
+     * @return SnapshotId 快照ID, 可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询。
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
-     * @param SnapshotId 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
+     * Set 快照ID, 可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询。
+     * @param SnapshotId 快照ID, 可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询。
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;

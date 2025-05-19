@@ -333,6 +333,20 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private InstanceInitInfo [] InstanceInitInfos;
 
     /**
+    * 全球数据库唯一标识
+    */
+    @SerializedName("GdnId")
+    @Expose
+    private String GdnId;
+
+    /**
+    * 数据库代理配置
+    */
+    @SerializedName("ProxyConfig")
+    @Expose
+    private ProxyConfig ProxyConfig;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -1076,6 +1090,38 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.InstanceInitInfos = InstanceInitInfos;
     }
 
+    /**
+     * Get 全球数据库唯一标识 
+     * @return GdnId 全球数据库唯一标识
+     */
+    public String getGdnId() {
+        return this.GdnId;
+    }
+
+    /**
+     * Set 全球数据库唯一标识
+     * @param GdnId 全球数据库唯一标识
+     */
+    public void setGdnId(String GdnId) {
+        this.GdnId = GdnId;
+    }
+
+    /**
+     * Get 数据库代理配置 
+     * @return ProxyConfig 数据库代理配置
+     */
+    public ProxyConfig getProxyConfig() {
+        return this.ProxyConfig;
+    }
+
+    /**
+     * Set 数据库代理配置
+     * @param ProxyConfig 数据库代理配置
+     */
+    public void setProxyConfig(ProxyConfig ProxyConfig) {
+        this.ProxyConfig = ProxyConfig;
+    }
+
     public CreateClustersRequest() {
     }
 
@@ -1222,6 +1268,12 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
                 this.InstanceInitInfos[i] = new InstanceInitInfo(source.InstanceInitInfos[i]);
             }
         }
+        if (source.GdnId != null) {
+            this.GdnId = new String(source.GdnId);
+        }
+        if (source.ProxyConfig != null) {
+            this.ProxyConfig = new ProxyConfig(source.ProxyConfig);
+        }
     }
 
 
@@ -1270,6 +1322,8 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         this.setParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
         this.setParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
+        this.setParamSimple(map, prefix + "GdnId", this.GdnId);
+        this.setParamObj(map, prefix + "ProxyConfig.", this.ProxyConfig);
 
     }
 }

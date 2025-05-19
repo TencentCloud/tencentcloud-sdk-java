@@ -50,7 +50,7 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel {
     /**
     * 流程签署人列表，其中结构体的ApproverType必传。
 若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
-若为子客企业签署方则需传OpenId、OrganizationOpenId，OrganizationName 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
+若为子客企业签署方则需传OpenId、OrganizationOpenId、OrganizationName， 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
 
 此结构体和发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
 1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。
@@ -175,7 +175,7 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel {
     /**
      * Get 流程签署人列表，其中结构体的ApproverType必传。
 若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
-若为子客企业签署方则需传OpenId、OrganizationOpenId，OrganizationName 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
+若为子客企业签署方则需传OpenId、OrganizationOpenId、OrganizationName， 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
 
 此结构体和发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
 1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。
@@ -188,7 +188,7 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel {
 `2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传` 
      * @return FlowApproverInfos 流程签署人列表，其中结构体的ApproverType必传。
 若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
-若为子客企业签署方则需传OpenId、OrganizationOpenId，OrganizationName 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
+若为子客企业签署方则需传OpenId、OrganizationOpenId、OrganizationName， 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
 
 此结构体和发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
 1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。
@@ -207,7 +207,7 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel {
     /**
      * Set 流程签署人列表，其中结构体的ApproverType必传。
 若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
-若为子客企业签署方则需传OpenId、OrganizationOpenId，OrganizationName 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
+若为子客企业签署方则需传OpenId、OrganizationOpenId、OrganizationName， 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
 
 此结构体和发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
 1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。
@@ -220,7 +220,7 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel {
 `2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
      * @param FlowApproverInfos 流程签署人列表，其中结构体的ApproverType必传。
 若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
-若为子客企业签署方则需传OpenId、OrganizationOpenId，OrganizationName 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
+若为子客企业签署方则需传OpenId、OrganizationOpenId、OrganizationName， 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
 
 此结构体和发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
 1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。

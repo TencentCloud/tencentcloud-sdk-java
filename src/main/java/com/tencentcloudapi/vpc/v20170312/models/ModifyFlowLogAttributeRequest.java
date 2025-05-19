@@ -38,14 +38,14 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * 流日志实例名字。长度为不超过60字节。
+    * 流日志实例名称。长度为不超过60字符。
     */
     @SerializedName("FlowLogName")
     @Expose
     private String FlowLogName;
 
     /**
-    * 流日志实例描述。长度为不超过512字节。
+    * 流日志实例描述。长度为不超过512个字符。
     */
     @SerializedName("FlowLogDescription")
     @Expose
@@ -84,32 +84,32 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 流日志实例名字。长度为不超过60字节。 
-     * @return FlowLogName 流日志实例名字。长度为不超过60字节。
+     * Get 流日志实例名称。长度为不超过60字符。 
+     * @return FlowLogName 流日志实例名称。长度为不超过60字符。
      */
     public String getFlowLogName() {
         return this.FlowLogName;
     }
 
     /**
-     * Set 流日志实例名字。长度为不超过60字节。
-     * @param FlowLogName 流日志实例名字。长度为不超过60字节。
+     * Set 流日志实例名称。长度为不超过60字符。
+     * @param FlowLogName 流日志实例名称。长度为不超过60字符。
      */
     public void setFlowLogName(String FlowLogName) {
         this.FlowLogName = FlowLogName;
     }
 
     /**
-     * Get 流日志实例描述。长度为不超过512字节。 
-     * @return FlowLogDescription 流日志实例描述。长度为不超过512字节。
+     * Get 流日志实例描述。长度为不超过512个字符。 
+     * @return FlowLogDescription 流日志实例描述。长度为不超过512个字符。
      */
     public String getFlowLogDescription() {
         return this.FlowLogDescription;
     }
 
     /**
-     * Set 流日志实例描述。长度为不超过512字节。
-     * @param FlowLogDescription 流日志实例描述。长度为不超过512字节。
+     * Set 流日志实例描述。长度为不超过512个字符。
+     * @param FlowLogDescription 流日志实例描述。长度为不超过512个字符。
      */
     public void setFlowLogDescription(String FlowLogDescription) {
         this.FlowLogDescription = FlowLogDescription;

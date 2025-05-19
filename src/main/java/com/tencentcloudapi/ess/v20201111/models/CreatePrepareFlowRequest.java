@@ -116,7 +116,7 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     private String IntelligentStatus;
 
     /**
-    * 该字段已废弃，请使用InitiatorComponents
+    * 该字段已不再使用，请使用InitiatorComponents
     */
     @SerializedName("Components")
     @Expose
@@ -204,7 +204,7 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     private Long FlowDisplayType;
 
     /**
-    * <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+    * <font color="red">此字段已不再使用，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
 签署控件的配置信息，用在嵌入式发起的页面配置，
 包括  
 
@@ -463,16 +463,16 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 该字段已废弃，请使用InitiatorComponents 
-     * @return Components 该字段已废弃，请使用InitiatorComponents
+     * Get 该字段已不再使用，请使用InitiatorComponents 
+     * @return Components 该字段已不再使用，请使用InitiatorComponents
      */
     public Component getComponents() {
         return this.Components;
     }
 
     /**
-     * Set 该字段已废弃，请使用InitiatorComponents
-     * @param Components 该字段已废弃，请使用InitiatorComponents
+     * Set 该字段已不再使用，请使用InitiatorComponents
+     * @param Components 该字段已不再使用，请使用InitiatorComponents
      */
     public void setComponents(Component Components) {
         this.Components = Components;
@@ -695,12 +695,12 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+     * Get <font color="red">此字段已不再使用，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
 签署控件的配置信息，用在嵌入式发起的页面配置，
 包括  
 
 - 签署控件 是否默认展示日期. 
-     * @return SignComponentConfig <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+     * @return SignComponentConfig <font color="red">此字段已不再使用，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
 签署控件的配置信息，用在嵌入式发起的页面配置，
 包括  
 
@@ -713,12 +713,12 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Set <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+     * Set <font color="red">此字段已不再使用，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
 签署控件的配置信息，用在嵌入式发起的页面配置，
 包括  
 
 - 签署控件 是否默认展示日期.
-     * @param SignComponentConfig <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+     * @param SignComponentConfig <font color="red">此字段已不再使用，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
 签署控件的配置信息，用在嵌入式发起的页面配置，
 包括  
 

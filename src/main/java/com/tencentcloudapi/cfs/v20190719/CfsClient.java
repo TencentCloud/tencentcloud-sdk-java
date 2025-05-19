@@ -374,7 +374,7 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
-     *用来设置文件系统扩容策略
+     *用来设置文件系统扩容策略，，该接口只支持turbo文件系统
      * @param req ModifyFileSystemAutoScaleUpRuleRequest
      * @return ModifyFileSystemAutoScaleUpRuleResponse
      * @throws TencentCloudSDKException
@@ -385,7 +385,7 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
-     *该接口用于对turbo 文件系统扩容使用
+     *该接口用于对turbo 文件系统扩容使用,该接口只支持扩容不支持缩容。turbo标准型扩容步长是10240GIB，turbo性能型扩容步长是5120GIB
      * @param req ScaleUpFileSystemRequest
      * @return ScaleUpFileSystemResponse
      * @throws TencentCloudSDKException

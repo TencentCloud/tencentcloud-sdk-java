@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteDiskBackupsRequest extends AbstractModel {
 
     /**
-    * 待删除的云硬盘备份点ID。
+    * 待删除的云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
     */
     @SerializedName("DiskBackupIds")
     @Expose
     private String [] DiskBackupIds;
 
     /**
-     * Get 待删除的云硬盘备份点ID。 
-     * @return DiskBackupIds 待删除的云硬盘备份点ID。
+     * Get 待删除的云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。 
+     * @return DiskBackupIds 待删除的云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
      */
     public String [] getDiskBackupIds() {
         return this.DiskBackupIds;
     }
 
     /**
-     * Set 待删除的云硬盘备份点ID。
-     * @param DiskBackupIds 待删除的云硬盘备份点ID。
+     * Set 待删除的云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
+     * @param DiskBackupIds 待删除的云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
      */
     public void setDiskBackupIds(String [] DiskBackupIds) {
         this.DiskBackupIds = DiskBackupIds;

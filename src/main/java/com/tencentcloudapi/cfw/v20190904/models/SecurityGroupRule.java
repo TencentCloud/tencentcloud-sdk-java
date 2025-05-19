@@ -117,7 +117,7 @@ drop：拒绝
     private String Id;
 
     /**
-    * （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+    * （入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
     */
     @SerializedName("Enable")
@@ -372,9 +372,9 @@ drop：拒绝
     }
 
     /**
-     * Get （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+     * Get （入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用 
-     * @return Enable （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+     * @return Enable （入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
      */
     public String getEnable() {
@@ -382,9 +382,9 @@ drop：拒绝
     }
 
     /**
-     * Set （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+     * Set （入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
-     * @param Enable （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+     * @param Enable （入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
      */
     public void setEnable(String Enable) {

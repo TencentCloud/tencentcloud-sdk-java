@@ -66,9 +66,7 @@ public class CreatePreparedPersonalEsignRequest extends AbstractModel {
     private String IdCardType;
 
     /**
-    * 印章图片的base64
-注：已废弃
-请先通过UploadFiles接口上传文件，获取 FileId
+    * 该字段已不再使用
     */
     @SerializedName("SealImage")
     @Expose
@@ -89,7 +87,7 @@ public class CreatePreparedPersonalEsignRequest extends AbstractModel {
     private String Mobile;
 
     /**
-    * 此字段已废弃，请勿继续使用。
+    * 该字段已不再使用
     */
     @SerializedName("EnableAutoSign")
     @Expose
@@ -262,12 +260,8 @@ BLUE 蓝色。
     }
 
     /**
-     * Get 印章图片的base64
-注：已废弃
-请先通过UploadFiles接口上传文件，获取 FileId 
-     * @return SealImage 印章图片的base64
-注：已废弃
-请先通过UploadFiles接口上传文件，获取 FileId
+     * Get 该字段已不再使用 
+     * @return SealImage 该字段已不再使用
      * @deprecated
      */
     @Deprecated
@@ -276,12 +270,8 @@ BLUE 蓝色。
     }
 
     /**
-     * Set 印章图片的base64
-注：已废弃
-请先通过UploadFiles接口上传文件，获取 FileId
-     * @param SealImage 印章图片的base64
-注：已废弃
-请先通过UploadFiles接口上传文件，获取 FileId
+     * Set 该字段已不再使用
+     * @param SealImage 该字段已不再使用
      * @deprecated
      */
     @Deprecated
@@ -322,16 +312,16 @@ BLUE 蓝色。
     }
 
     /**
-     * Get 此字段已废弃，请勿继续使用。 
-     * @return EnableAutoSign 此字段已废弃，请勿继续使用。
+     * Get 该字段已不再使用 
+     * @return EnableAutoSign 该字段已不再使用
      */
     public Boolean getEnableAutoSign() {
         return this.EnableAutoSign;
     }
 
     /**
-     * Set 此字段已废弃，请勿继续使用。
-     * @param EnableAutoSign 此字段已废弃，请勿继续使用。
+     * Set 该字段已不再使用
+     * @param EnableAutoSign 该字段已不再使用
      */
     public void setEnableAutoSign(Boolean EnableAutoSign) {
         this.EnableAutoSign = EnableAutoSign;

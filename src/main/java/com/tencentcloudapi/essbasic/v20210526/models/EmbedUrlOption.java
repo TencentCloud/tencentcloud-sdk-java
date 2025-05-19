@@ -56,6 +56,14 @@ public class EmbedUrlOption extends AbstractModel {
     private String SkipUploadFile;
 
     /**
+    * 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+    */
+    @SerializedName("ForbidEditWatermark")
+    @Expose
+    private Boolean ForbidEditWatermark;
+
+    /**
      * Get 合同详情预览，允许展示控件信息
 <ul>
 <li><b>true</b>：允许在合同详情页展示控件</li>
@@ -147,6 +155,26 @@ public class EmbedUrlOption extends AbstractModel {
         this.SkipUploadFile = SkipUploadFile;
     }
 
+    /**
+     * Get 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul> 
+     * @return ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     */
+    public Boolean getForbidEditWatermark() {
+        return this.ForbidEditWatermark;
+    }
+
+    /**
+     * Set 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     * @param ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     */
+    public void setForbidEditWatermark(Boolean ForbidEditWatermark) {
+        this.ForbidEditWatermark = ForbidEditWatermark;
+    }
+
     public EmbedUrlOption() {
     }
 
@@ -164,6 +192,9 @@ public class EmbedUrlOption extends AbstractModel {
         if (source.SkipUploadFile != null) {
             this.SkipUploadFile = new String(source.SkipUploadFile);
         }
+        if (source.ForbidEditWatermark != null) {
+            this.ForbidEditWatermark = new Boolean(source.ForbidEditWatermark);
+        }
     }
 
 
@@ -174,6 +205,7 @@ public class EmbedUrlOption extends AbstractModel {
         this.setParamSimple(map, prefix + "ShowFlowDetailComponent", this.ShowFlowDetailComponent);
         this.setParamSimple(map, prefix + "ShowTemplateComponent", this.ShowTemplateComponent);
         this.setParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
+        this.setParamSimple(map, prefix + "ForbidEditWatermark", this.ForbidEditWatermark);
 
     }
 }

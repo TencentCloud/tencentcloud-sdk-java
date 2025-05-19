@@ -100,7 +100,7 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     private String Mobile;
 
     /**
-    * 此字段已废弃，请勿继续使用。
+    * 该字段已不再使用
     */
     @SerializedName("EnableAutoSign")
     @Expose
@@ -317,16 +317,16 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     }
 
     /**
-     * Get 此字段已废弃，请勿继续使用。 
-     * @return EnableAutoSign 此字段已废弃，请勿继续使用。
+     * Get 该字段已不再使用 
+     * @return EnableAutoSign 该字段已不再使用
      */
     public Boolean getEnableAutoSign() {
         return this.EnableAutoSign;
     }
 
     /**
-     * Set 此字段已废弃，请勿继续使用。
-     * @param EnableAutoSign 此字段已废弃，请勿继续使用。
+     * Set 该字段已不再使用
+     * @param EnableAutoSign 该字段已不再使用
      */
     public void setEnableAutoSign(Boolean EnableAutoSign) {
         this.EnableAutoSign = EnableAutoSign;

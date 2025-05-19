@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeInstanceNetworkStatusRequest extends AbstractModel {
 
     /**
-    * 实例ID数组，单次请求最多不超过100个实例
+    * 实例ID数组，单次请求最多不超过100个实例；实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get 实例ID数组，单次请求最多不超过100个实例 
-     * @return InstanceIds 实例ID数组，单次请求最多不超过100个实例
+     * Get 实例ID数组，单次请求最多不超过100个实例；实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。 
+     * @return InstanceIds 实例ID数组，单次请求最多不超过100个实例；实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID数组，单次请求最多不超过100个实例
-     * @param InstanceIds 实例ID数组，单次请求最多不超过100个实例
+     * Set 实例ID数组，单次请求最多不超过100个实例；实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
+     * @param InstanceIds 实例ID数组，单次请求最多不超过100个实例；实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

@@ -125,7 +125,9 @@ public class ModifyRoGroupInfoRequest extends AbstractModel {
     /**
      * Get 废弃参数，无意义。 
      * @return ReplicationDelayTime 废弃参数，无意义。
+     * @deprecated
      */
+    @Deprecated
     public Long getReplicationDelayTime() {
         return this.ReplicationDelayTime;
     }
@@ -133,7 +135,9 @@ public class ModifyRoGroupInfoRequest extends AbstractModel {
     /**
      * Set 废弃参数，无意义。
      * @param ReplicationDelayTime 废弃参数，无意义。
+     * @deprecated
      */
+    @Deprecated
     public void setReplicationDelayTime(Long ReplicationDelayTime) {
         this.ReplicationDelayTime = ReplicationDelayTime;
     }

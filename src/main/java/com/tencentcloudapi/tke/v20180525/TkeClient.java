@@ -1942,17 +1942,6 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *操作TKE集群的addon
-     * @param req ForwardApplicationRequestV3Request
-     * @return ForwardApplicationRequestV3Response
-     * @throws TencentCloudSDKException
-     */
-    public ForwardApplicationRequestV3Response ForwardApplicationRequestV3(ForwardApplicationRequestV3Request req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ForwardApplicationRequestV3", ForwardApplicationRequestV3Response.class);
-    }
-
-    /**
      *操作TKEEdge集群的addon
      * @param req ForwardTKEEdgeApplicationRequestV3Request
      * @return ForwardTKEEdgeApplicationRequestV3Response

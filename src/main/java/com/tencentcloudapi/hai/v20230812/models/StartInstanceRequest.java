@@ -25,6 +25,7 @@ public class StartInstanceRequest extends AbstractModel {
 
     /**
     * 实例ID
+可通过DescribeInstances获取实例ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,8 +39,10 @@ public class StartInstanceRequest extends AbstractModel {
     private Boolean DryRun;
 
     /**
-     * Get 实例ID 
+     * Get 实例ID
+可通过DescribeInstances获取实例ID 
      * @return InstanceId 实例ID
+可通过DescribeInstances获取实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -47,7 +50,9 @@ public class StartInstanceRequest extends AbstractModel {
 
     /**
      * Set 实例ID
+可通过DescribeInstances获取实例ID
      * @param InstanceId 实例ID
+可通过DescribeInstances获取实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

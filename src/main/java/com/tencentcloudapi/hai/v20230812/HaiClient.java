@@ -61,7 +61,7 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
-     *查询应用
+     *本接口（DescribeApplications）用于查询应用
      * @param req DescribeApplicationsRequest
      * @return DescribeApplicationsResponse
      * @throws TencentCloudSDKException
@@ -72,7 +72,7 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
-     *查询实例的网络配置及消耗情况
+     *本接口（DescribeInstanceNetworkStatus）用于查询实例的网络配置及消耗情况
      * @param req DescribeInstanceNetworkStatusRequest
      * @return DescribeInstanceNetworkStatusResponse
      * @throws TencentCloudSDKException
@@ -83,7 +83,7 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
-     *查询实例
+     *本接口（DescribeInstances）用户查询实例
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
      * @throws TencentCloudSDKException
@@ -105,7 +105,7 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
-     *查询地域列表
+     *本接口（DescribeRegions）用于查询地域列表
      * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse
      * @throws TencentCloudSDKException
@@ -116,7 +116,7 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
-     *查询场景
+     *本接口（DescribeScenes）用于查询场景
      * @param req DescribeScenesRequest
      * @return DescribeScenesResponse
      * @throws TencentCloudSDKException
@@ -127,7 +127,7 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
-     *查询服务登录配置
+     *本接口（DescribeServiceLoginSettings）用于查询服务登录配置
      * @param req DescribeServiceLoginSettingsRequest
      * @return DescribeServiceLoginSettingsResponse
      * @throws TencentCloudSDKException
@@ -161,6 +161,7 @@ public class HaiClient extends AbstractClient{
 
     /**
      *本接口 (StartInstance) 用于主动启动实例。
+‘运行中’、‘预付费’的实例不支持启动实例
      * @param req StartInstanceRequest
      * @return StartInstanceResponse
      * @throws TencentCloudSDKException
@@ -172,6 +173,7 @@ public class HaiClient extends AbstractClient{
 
     /**
      *本接口 (StopInstance) 用于主动关闭实例。
+‘已关机’、‘预付费’的实例不支持关机
      * @param req StopInstanceRequest
      * @return StopInstanceResponse
      * @throws TencentCloudSDKException

@@ -727,7 +727,7 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *防火墙开关列表，已废弃，请使用DescribeFwEdgeIps
+     *防火墙开关列表，请换用DescribeFwEdgeIps
      * @param req DescribeSwitchListsRequest
      * @return DescribeSwitchListsResponse
      * @throws TencentCloudSDKException

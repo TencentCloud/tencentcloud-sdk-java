@@ -39,7 +39,6 @@ public class BatchSearchRecordInfo extends AbstractModel {
 
     /**
     * 记录备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -136,10 +135,8 @@ public class BatchSearchRecordInfo extends AbstractModel {
     }
 
     /**
-     * Get 记录备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录备注 
      * @return Remark 记录备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -147,9 +144,7 @@ public class BatchSearchRecordInfo extends AbstractModel {
 
     /**
      * Set 记录备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 记录备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

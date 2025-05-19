@@ -114,6 +114,14 @@ public class CreateFlowOption extends AbstractModel {
     private SignComponentConfig SignComponentConfig;
 
     /**
+    * 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+    */
+    @SerializedName("ForbidEditWatermark")
+    @Expose
+    private Boolean ForbidEditWatermark;
+
+    /**
      * Get 是否允许修改合同信息，
 **true**：可以
 **false**：（默认）不可以 
@@ -353,6 +361,26 @@ public class CreateFlowOption extends AbstractModel {
         this.SignComponentConfig = SignComponentConfig;
     }
 
+    /**
+     * Get 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul> 
+     * @return ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     */
+    public Boolean getForbidEditWatermark() {
+        return this.ForbidEditWatermark;
+    }
+
+    /**
+     * Set 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     * @param ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     */
+    public void setForbidEditWatermark(Boolean ForbidEditWatermark) {
+        this.ForbidEditWatermark = ForbidEditWatermark;
+    }
+
     public CreateFlowOption() {
     }
 
@@ -391,6 +419,9 @@ public class CreateFlowOption extends AbstractModel {
         if (source.SignComponentConfig != null) {
             this.SignComponentConfig = new SignComponentConfig(source.SignComponentConfig);
         }
+        if (source.ForbidEditWatermark != null) {
+            this.ForbidEditWatermark = new Boolean(source.ForbidEditWatermark);
+        }
     }
 
 
@@ -408,6 +439,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamSimple(map, prefix + "ForbidEditFillComponent", this.ForbidEditFillComponent);
         this.setParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
         this.setParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
+        this.setParamSimple(map, prefix + "ForbidEditWatermark", this.ForbidEditWatermark);
 
     }
 }

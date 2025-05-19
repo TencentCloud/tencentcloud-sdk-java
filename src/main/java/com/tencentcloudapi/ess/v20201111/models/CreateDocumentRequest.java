@@ -99,7 +99,7 @@ public class CreateDocumentRequest extends AbstractModel {
     private Agent Agent;
 
     /**
-    * 已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+    * 该字段已不再使用
     */
     @SerializedName("ClientToken")
     @Expose
@@ -310,16 +310,16 @@ public class CreateDocumentRequest extends AbstractModel {
     }
 
     /**
-     * Get 已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符 
-     * @return ClientToken 已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+     * Get 该字段已不再使用 
+     * @return ClientToken 该字段已不再使用
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
-     * @param ClientToken 已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+     * Set 该字段已不再使用
+     * @param ClientToken 该字段已不再使用
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;

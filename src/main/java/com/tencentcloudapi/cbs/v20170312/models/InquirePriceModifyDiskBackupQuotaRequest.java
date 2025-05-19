@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquirePriceModifyDiskBackupQuotaRequest extends AbstractModel {
 
     /**
-    * 云硬盘ID， 通过DescribeDisks（查询云硬盘信息）接口查询。
+    * 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
     */
     @SerializedName("DiskId")
     @Expose
@@ -38,16 +38,16 @@ public class InquirePriceModifyDiskBackupQuotaRequest extends AbstractModel {
     private Long DiskBackupQuota;
 
     /**
-     * Get 云硬盘ID， 通过DescribeDisks（查询云硬盘信息）接口查询。 
-     * @return DiskId 云硬盘ID， 通过DescribeDisks（查询云硬盘信息）接口查询。
+     * Get 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。 
+     * @return DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 云硬盘ID， 通过DescribeDisks（查询云硬盘信息）接口查询。
-     * @param DiskId 云硬盘ID， 通过DescribeDisks（查询云硬盘信息）接口查询。
+     * Set 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * @param DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;

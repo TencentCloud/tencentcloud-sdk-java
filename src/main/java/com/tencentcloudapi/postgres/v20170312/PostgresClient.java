@@ -72,19 +72,6 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-
-【接口下线中，请勿使用】本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
-     * @param req CloseServerlessDBExtranetAccessRequest
-     * @return CloseServerlessDBExtranetAccessResponse
-     * @throws TencentCloudSDKException
-     */
-    public CloseServerlessDBExtranetAccessResponse CloseServerlessDBExtranetAccess(CloseServerlessDBExtranetAccessRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CloseServerlessDBExtranetAccess", CloseServerlessDBExtranetAccessResponse.class);
-    }
-
-    /**
      *此接口用于创建数据账号，返回的Oid为账号唯一标识。与数据库系统表pg_roles中记录的oid一致。
      * @param req CreateAccountRequest
      * @return CreateAccountResponse
@@ -308,19 +295,6 @@ public class PostgresClient extends AbstractClient{
     public DeleteReadOnlyGroupNetworkAccessResponse DeleteReadOnlyGroupNetworkAccess(DeleteReadOnlyGroupNetworkAccessRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteReadOnlyGroupNetworkAccess", DeleteReadOnlyGroupNetworkAccessResponse.class);
-    }
-
-    /**
-     *该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-
-【接口下线中，请勿使用】本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
-     * @param req DeleteServerlessDBInstanceRequest
-     * @return DeleteServerlessDBInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteServerlessDBInstanceResponse DeleteServerlessDBInstance(DeleteServerlessDBInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteServerlessDBInstance", DeleteServerlessDBInstanceResponse.class);
     }
 
     /**

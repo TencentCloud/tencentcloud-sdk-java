@@ -66,6 +66,20 @@ public class DescribeInstanceStateResponse extends AbstractModel {
     private String FlowMsg;
 
     /**
+    * 流程ProcessId
+    */
+    @SerializedName("ProcessId")
+    @Expose
+    private String ProcessId;
+
+    /**
+    * Job名称
+    */
+    @SerializedName("JobName")
+    @Expose
+    private String JobName;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -169,6 +183,38 @@ public class DescribeInstanceStateResponse extends AbstractModel {
     }
 
     /**
+     * Get 流程ProcessId 
+     * @return ProcessId 流程ProcessId
+     */
+    public String getProcessId() {
+        return this.ProcessId;
+    }
+
+    /**
+     * Set 流程ProcessId
+     * @param ProcessId 流程ProcessId
+     */
+    public void setProcessId(String ProcessId) {
+        this.ProcessId = ProcessId;
+    }
+
+    /**
+     * Get Job名称 
+     * @return JobName Job名称
+     */
+    public String getJobName() {
+        return this.JobName;
+    }
+
+    /**
+     * Set Job名称
+     * @param JobName Job名称
+     */
+    public void setJobName(String JobName) {
+        this.JobName = JobName;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -210,6 +256,12 @@ public class DescribeInstanceStateResponse extends AbstractModel {
         if (source.FlowMsg != null) {
             this.FlowMsg = new String(source.FlowMsg);
         }
+        if (source.ProcessId != null) {
+            this.ProcessId = new String(source.ProcessId);
+        }
+        if (source.JobName != null) {
+            this.JobName = new String(source.JobName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -226,6 +278,8 @@ public class DescribeInstanceStateResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "FlowProgress", this.FlowProgress);
         this.setParamSimple(map, prefix + "InstanceStateDesc", this.InstanceStateDesc);
         this.setParamSimple(map, prefix + "FlowMsg", this.FlowMsg);
+        this.setParamSimple(map, prefix + "ProcessId", this.ProcessId);
+        this.setParamSimple(map, prefix + "JobName", this.JobName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

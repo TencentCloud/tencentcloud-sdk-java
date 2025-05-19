@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * 要查询的云硬盘ID，通过[DescribeDisks](https://tcloud4api.woa.com/document/product/362/15601?!preview&!document=1)接口查询。
+    * 要查询的云硬盘ID，通过[DescribeDisks](https://cloud.tencent.com/document/api/362/16315)接口查询。
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-     * Get 要查询的云硬盘ID，通过[DescribeDisks](https://tcloud4api.woa.com/document/product/362/15601?!preview&!document=1)接口查询。 
-     * @return DiskId 要查询的云硬盘ID，通过[DescribeDisks](https://tcloud4api.woa.com/document/product/362/15601?!preview&!document=1)接口查询。
+     * Get 要查询的云硬盘ID，通过[DescribeDisks](https://cloud.tencent.com/document/api/362/16315)接口查询。 
+     * @return DiskId 要查询的云硬盘ID，通过[DescribeDisks](https://cloud.tencent.com/document/api/362/16315)接口查询。
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 要查询的云硬盘ID，通过[DescribeDisks](https://tcloud4api.woa.com/document/product/362/15601?!preview&!document=1)接口查询。
-     * @param DiskId 要查询的云硬盘ID，通过[DescribeDisks](https://tcloud4api.woa.com/document/product/362/15601?!preview&!document=1)接口查询。
+     * Set 要查询的云硬盘ID，通过[DescribeDisks](https://cloud.tencent.com/document/api/362/16315)接口查询。
+     * @param DiskId 要查询的云硬盘ID，通过[DescribeDisks](https://cloud.tencent.com/document/api/362/16315)接口查询。
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;

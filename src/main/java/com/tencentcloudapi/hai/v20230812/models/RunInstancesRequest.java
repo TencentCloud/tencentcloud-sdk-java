@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RunInstancesRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID通过调用接口[DescribeApplications](https://cloud.tencent.com/document/api/1721/101609)获取。
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * 算力套餐类型
+    * 算力套餐类型, 枚举：XL,XL_2X, 3XL, 3XL_2X, 4XL, 24GB_A
     */
     @SerializedName("BundleType")
     @Expose
@@ -45,14 +45,14 @@ public class RunInstancesRequest extends AbstractModel {
     private SystemDisk SystemDisk;
 
     /**
-    * 购买实例数量。
+    * 购买实例数量，单次请求实例数量上限为10.
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * 实例显示名称
+    * 实例显示名称，名称长度限制为128个字符.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -73,32 +73,32 @@ public class RunInstancesRequest extends AbstractModel {
     private Boolean DryRun;
 
     /**
-     * Get 应用ID 
-     * @return ApplicationId 应用ID
+     * Get 应用ID通过调用接口[DescribeApplications](https://cloud.tencent.com/document/api/1721/101609)获取。 
+     * @return ApplicationId 应用ID通过调用接口[DescribeApplications](https://cloud.tencent.com/document/api/1721/101609)获取。
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 应用ID
-     * @param ApplicationId 应用ID
+     * Set 应用ID通过调用接口[DescribeApplications](https://cloud.tencent.com/document/api/1721/101609)获取。
+     * @param ApplicationId 应用ID通过调用接口[DescribeApplications](https://cloud.tencent.com/document/api/1721/101609)获取。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 算力套餐类型 
-     * @return BundleType 算力套餐类型
+     * Get 算力套餐类型, 枚举：XL,XL_2X, 3XL, 3XL_2X, 4XL, 24GB_A 
+     * @return BundleType 算力套餐类型, 枚举：XL,XL_2X, 3XL, 3XL_2X, 4XL, 24GB_A
      */
     public String getBundleType() {
         return this.BundleType;
     }
 
     /**
-     * Set 算力套餐类型
-     * @param BundleType 算力套餐类型
+     * Set 算力套餐类型, 枚举：XL,XL_2X, 3XL, 3XL_2X, 4XL, 24GB_A
+     * @param BundleType 算力套餐类型, 枚举：XL,XL_2X, 3XL, 3XL_2X, 4XL, 24GB_A
      */
     public void setBundleType(String BundleType) {
         this.BundleType = BundleType;
@@ -121,32 +121,32 @@ public class RunInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 购买实例数量。 
-     * @return InstanceCount 购买实例数量。
+     * Get 购买实例数量，单次请求实例数量上限为10. 
+     * @return InstanceCount 购买实例数量，单次请求实例数量上限为10.
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 购买实例数量。
-     * @param InstanceCount 购买实例数量。
+     * Set 购买实例数量，单次请求实例数量上限为10.
+     * @param InstanceCount 购买实例数量，单次请求实例数量上限为10.
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 实例显示名称 
-     * @return InstanceName 实例显示名称
+     * Get 实例显示名称，名称长度限制为128个字符. 
+     * @return InstanceName 实例显示名称，名称长度限制为128个字符.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例显示名称
-     * @param InstanceName 实例显示名称
+     * Set 实例显示名称，名称长度限制为128个字符.
+     * @param InstanceName 实例显示名称，名称长度限制为128个字符.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

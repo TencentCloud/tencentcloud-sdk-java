@@ -31,7 +31,8 @@ public class TextModerationRequest extends AbstractModel {
     private String Content;
 
     /**
-    * 该字段表示策略的具体编号，用于接口调度，在内容安全控制台中可配置。若不传入Biztype参数（留空），则代表采用默认的识别策略；传入则会在审核时根据业务场景采取不同的审核策略。<br>备注：Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype
+    * 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置，控制台访问地址：。
+备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
     */
     @SerializedName("BizType")
     @Expose
@@ -59,11 +60,18 @@ public class TextModerationRequest extends AbstractModel {
     private Device Device;
 
     /**
-    * Content的原始语种，比如en,zh
+    * 表示Content的原始语种，枚举值（"en","zh",""）en表示英文，zh表示中文，空字符表示默认语种中文，非中文场景耗时会更高，具体由送审文本内容决定，非中文场景需要联系客服确认
     */
     @SerializedName("SourceLanguage")
     @Expose
     private String SourceLanguage;
+
+    /**
+    * 审核的业务类型，枚举值有{"","TEXT","TEXT_AIGC"},缺省值""和"TEXT"标识传统文本审核，"TEXT_AIGC"标识文本AIGC审核
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
 
     /**
      * Get 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密 
@@ -82,16 +90,20 @@ public class TextModerationRequest extends AbstractModel {
     }
 
     /**
-     * Get 该字段表示策略的具体编号，用于接口调度，在内容安全控制台中可配置。若不传入Biztype参数（留空），则代表采用默认的识别策略；传入则会在审核时根据业务场景采取不同的审核策略。<br>备注：Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype 
-     * @return BizType 该字段表示策略的具体编号，用于接口调度，在内容安全控制台中可配置。若不传入Biztype参数（留空），则代表采用默认的识别策略；传入则会在审核时根据业务场景采取不同的审核策略。<br>备注：Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype
+     * Get 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置，控制台访问地址：。
+备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。 
+     * @return BizType 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置，控制台访问地址：。
+备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
      */
     public String getBizType() {
         return this.BizType;
     }
 
     /**
-     * Set 该字段表示策略的具体编号，用于接口调度，在内容安全控制台中可配置。若不传入Biztype参数（留空），则代表采用默认的识别策略；传入则会在审核时根据业务场景采取不同的审核策略。<br>备注：Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype
-     * @param BizType 该字段表示策略的具体编号，用于接口调度，在内容安全控制台中可配置。若不传入Biztype参数（留空），则代表采用默认的识别策略；传入则会在审核时根据业务场景采取不同的审核策略。<br>备注：Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype
+     * Set 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置，控制台访问地址：。
+备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
+     * @param BizType 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置，控制台访问地址：。
+备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
@@ -146,19 +158,35 @@ public class TextModerationRequest extends AbstractModel {
     }
 
     /**
-     * Get Content的原始语种，比如en,zh 
-     * @return SourceLanguage Content的原始语种，比如en,zh
+     * Get 表示Content的原始语种，枚举值（"en","zh",""）en表示英文，zh表示中文，空字符表示默认语种中文，非中文场景耗时会更高，具体由送审文本内容决定，非中文场景需要联系客服确认 
+     * @return SourceLanguage 表示Content的原始语种，枚举值（"en","zh",""）en表示英文，zh表示中文，空字符表示默认语种中文，非中文场景耗时会更高，具体由送审文本内容决定，非中文场景需要联系客服确认
      */
     public String getSourceLanguage() {
         return this.SourceLanguage;
     }
 
     /**
-     * Set Content的原始语种，比如en,zh
-     * @param SourceLanguage Content的原始语种，比如en,zh
+     * Set 表示Content的原始语种，枚举值（"en","zh",""）en表示英文，zh表示中文，空字符表示默认语种中文，非中文场景耗时会更高，具体由送审文本内容决定，非中文场景需要联系客服确认
+     * @param SourceLanguage 表示Content的原始语种，枚举值（"en","zh",""）en表示英文，zh表示中文，空字符表示默认语种中文，非中文场景耗时会更高，具体由送审文本内容决定，非中文场景需要联系客服确认
      */
     public void setSourceLanguage(String SourceLanguage) {
         this.SourceLanguage = SourceLanguage;
+    }
+
+    /**
+     * Get 审核的业务类型，枚举值有{"","TEXT","TEXT_AIGC"},缺省值""和"TEXT"标识传统文本审核，"TEXT_AIGC"标识文本AIGC审核 
+     * @return Type 审核的业务类型，枚举值有{"","TEXT","TEXT_AIGC"},缺省值""和"TEXT"标识传统文本审核，"TEXT_AIGC"标识文本AIGC审核
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 审核的业务类型，枚举值有{"","TEXT","TEXT_AIGC"},缺省值""和"TEXT"标识传统文本审核，"TEXT_AIGC"标识文本AIGC审核
+     * @param Type 审核的业务类型，枚举值有{"","TEXT","TEXT_AIGC"},缺省值""和"TEXT"标识传统文本审核，"TEXT_AIGC"标识文本AIGC审核
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     public TextModerationRequest() {
@@ -187,6 +215,9 @@ public class TextModerationRequest extends AbstractModel {
         if (source.SourceLanguage != null) {
             this.SourceLanguage = new String(source.SourceLanguage);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -200,6 +231,7 @@ public class TextModerationRequest extends AbstractModel {
         this.setParamObj(map, prefix + "User.", this.User);
         this.setParamObj(map, prefix + "Device.", this.Device);
         this.setParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

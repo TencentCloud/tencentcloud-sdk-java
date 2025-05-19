@@ -31,7 +31,7 @@ public class SystemDisk extends AbstractModel {
     private String DiskType;
 
     /**
-    * 系统盘大小，单位：GB。默认值为 80
+    * 系统盘大小，单位：GB。默认值为 80，取值范围：80-1000
     */
     @SerializedName("DiskSize")
     @Expose
@@ -61,16 +61,16 @@ public class SystemDisk extends AbstractModel {
     }
 
     /**
-     * Get 系统盘大小，单位：GB。默认值为 80 
-     * @return DiskSize 系统盘大小，单位：GB。默认值为 80
+     * Get 系统盘大小，单位：GB。默认值为 80，取值范围：80-1000 
+     * @return DiskSize 系统盘大小，单位：GB。默认值为 80，取值范围：80-1000
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 系统盘大小，单位：GB。默认值为 80
-     * @param DiskSize 系统盘大小，单位：GB。默认值为 80
+     * Set 系统盘大小，单位：GB。默认值为 80，取值范围：80-1000
+     * @param DiskSize 系统盘大小，单位：GB。默认值为 80，取值范围：80-1000
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;

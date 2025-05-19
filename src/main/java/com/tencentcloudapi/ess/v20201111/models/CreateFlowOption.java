@@ -219,6 +219,14 @@ public class CreateFlowOption extends AbstractModel {
     private SignComponentConfig SignComponentConfig;
 
     /**
+    * 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+    */
+    @SerializedName("ForbidEditWatermark")
+    @Expose
+    private Boolean ForbidEditWatermark;
+
+    /**
      * Get 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
 <br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/> 
      * @return CanEditFlow 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
@@ -806,6 +814,26 @@ public class CreateFlowOption extends AbstractModel {
         this.SignComponentConfig = SignComponentConfig;
     }
 
+    /**
+     * Get 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul> 
+     * @return ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     */
+    public Boolean getForbidEditWatermark() {
+        return this.ForbidEditWatermark;
+    }
+
+    /**
+     * Set 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     * @param ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     */
+    public void setForbidEditWatermark(Boolean ForbidEditWatermark) {
+        this.ForbidEditWatermark = ForbidEditWatermark;
+    }
+
     public CreateFlowOption() {
     }
 
@@ -871,6 +899,9 @@ public class CreateFlowOption extends AbstractModel {
         if (source.SignComponentConfig != null) {
             this.SignComponentConfig = new SignComponentConfig(source.SignComponentConfig);
         }
+        if (source.ForbidEditWatermark != null) {
+            this.ForbidEditWatermark = new Boolean(source.ForbidEditWatermark);
+        }
     }
 
 
@@ -894,6 +925,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ShowComponentTypes.", this.ShowComponentTypes);
         this.setParamArrayObj(map, prefix + "ResultPageConfig.", this.ResultPageConfig);
         this.setParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
+        this.setParamSimple(map, prefix + "ForbidEditWatermark", this.ForbidEditWatermark);
 
     }
 }

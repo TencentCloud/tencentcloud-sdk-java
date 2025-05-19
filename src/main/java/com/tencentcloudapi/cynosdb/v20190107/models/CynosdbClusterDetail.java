@@ -385,6 +385,23 @@ pausing
     private String CynosVersionTag;
 
     /**
+    * 全球数据库网络唯一标识
+    */
+    @SerializedName("GdnId")
+    @Expose
+    private String GdnId;
+
+    /**
+    * 集群在全球数据网络中的角色。
+主集群- primary
+从集群 - standby
+如为空，该字段无效
+    */
+    @SerializedName("GdnRole")
+    @Expose
+    private String GdnRole;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -1216,6 +1233,50 @@ pausing
         this.CynosVersionTag = CynosVersionTag;
     }
 
+    /**
+     * Get 全球数据库网络唯一标识 
+     * @return GdnId 全球数据库网络唯一标识
+     */
+    public String getGdnId() {
+        return this.GdnId;
+    }
+
+    /**
+     * Set 全球数据库网络唯一标识
+     * @param GdnId 全球数据库网络唯一标识
+     */
+    public void setGdnId(String GdnId) {
+        this.GdnId = GdnId;
+    }
+
+    /**
+     * Get 集群在全球数据网络中的角色。
+主集群- primary
+从集群 - standby
+如为空，该字段无效 
+     * @return GdnRole 集群在全球数据网络中的角色。
+主集群- primary
+从集群 - standby
+如为空，该字段无效
+     */
+    public String getGdnRole() {
+        return this.GdnRole;
+    }
+
+    /**
+     * Set 集群在全球数据网络中的角色。
+主集群- primary
+从集群 - standby
+如为空，该字段无效
+     * @param GdnRole 集群在全球数据网络中的角色。
+主集群- primary
+从集群 - standby
+如为空，该字段无效
+     */
+    public void setGdnRole(String GdnRole) {
+        this.GdnRole = GdnRole;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1398,6 +1459,12 @@ pausing
         if (source.CynosVersionTag != null) {
             this.CynosVersionTag = new String(source.CynosVersionTag);
         }
+        if (source.GdnId != null) {
+            this.GdnId = new String(source.GdnId);
+        }
+        if (source.GdnRole != null) {
+            this.GdnRole = new String(source.GdnRole);
+        }
     }
 
 
@@ -1456,6 +1523,8 @@ pausing
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamArrayObj(map, prefix + "SlaveZoneAttr.", this.SlaveZoneAttr);
         this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
+        this.setParamSimple(map, prefix + "GdnId", this.GdnId);
+        this.setParamSimple(map, prefix + "GdnRole", this.GdnRole);
 
     }
 }

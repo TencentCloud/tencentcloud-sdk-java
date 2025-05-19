@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ScaleUpFileSystemRequest extends AbstractModel {
 
     /**
-    * 文件系统Id
+    * 文件系统Id,该参数通过查询文件系统列表接口获取
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -38,16 +38,16 @@ public class ScaleUpFileSystemRequest extends AbstractModel {
     private Long TargetCapacity;
 
     /**
-     * Get 文件系统Id 
-     * @return FileSystemId 文件系统Id
+     * Get 文件系统Id,该参数通过查询文件系统列表接口获取 
+     * @return FileSystemId 文件系统Id,该参数通过查询文件系统列表接口获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统Id
-     * @param FileSystemId 文件系统Id
+     * Set 文件系统Id,该参数通过查询文件系统列表接口获取
+     * @param FileSystemId 文件系统Id,该参数通过查询文件系统列表接口获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;

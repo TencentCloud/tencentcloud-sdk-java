@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BindAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * 要绑定的定期快照策略ID。
+    * 要绑定的定期快照策略ID，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
@@ -38,16 +38,16 @@ public class BindAutoSnapshotPolicyRequest extends AbstractModel {
     private String [] DiskIds;
 
     /**
-     * Get 要绑定的定期快照策略ID。 
-     * @return AutoSnapshotPolicyId 要绑定的定期快照策略ID。
+     * Get 要绑定的定期快照策略ID，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。 
+     * @return AutoSnapshotPolicyId 要绑定的定期快照策略ID，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set 要绑定的定期快照策略ID。
-     * @param AutoSnapshotPolicyId 要绑定的定期快照策略ID。
+     * Set 要绑定的定期快照策略ID，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
+     * @param AutoSnapshotPolicyId 要绑定的定期快照策略ID，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;

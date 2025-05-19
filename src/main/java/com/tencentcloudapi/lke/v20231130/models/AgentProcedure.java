@@ -128,6 +128,14 @@ public class AgentProcedure extends AbstractModel {
     private String TargetAgentName;
 
     /**
+    * Agent的图标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentIcon")
+    @Expose
+    private String AgentIcon;
+
+    /**
      * Get 索引
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Index 索引
@@ -387,6 +395,26 @@ public class AgentProcedure extends AbstractModel {
         this.TargetAgentName = TargetAgentName;
     }
 
+    /**
+     * Get Agent的图标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentIcon Agent的图标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAgentIcon() {
+        return this.AgentIcon;
+    }
+
+    /**
+     * Set Agent的图标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentIcon Agent的图标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentIcon(String AgentIcon) {
+        this.AgentIcon = AgentIcon;
+    }
+
     public AgentProcedure() {
     }
 
@@ -434,6 +462,9 @@ public class AgentProcedure extends AbstractModel {
         if (source.TargetAgentName != null) {
             this.TargetAgentName = new String(source.TargetAgentName);
         }
+        if (source.AgentIcon != null) {
+            this.AgentIcon = new String(source.AgentIcon);
+        }
     }
 
 
@@ -454,6 +485,7 @@ public class AgentProcedure extends AbstractModel {
         this.setParamSimple(map, prefix + "ReplyIndex", this.ReplyIndex);
         this.setParamSimple(map, prefix + "SourceAgentName", this.SourceAgentName);
         this.setParamSimple(map, prefix + "TargetAgentName", this.TargetAgentName);
+        this.setParamSimple(map, prefix + "AgentIcon", this.AgentIcon);
 
     }
 }
