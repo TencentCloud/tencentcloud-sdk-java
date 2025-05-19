@@ -50,6 +50,18 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *对 URL视频链接批量发起处理任务，功能包括：
+智能字幕（语音全文、语音热词、语音翻译）
+     * @param req BatchProcessMediaRequest
+     * @return BatchProcessMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchProcessMediaResponse BatchProcessMedia(BatchProcessMediaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchProcessMedia", BatchProcessMediaResponse.class);
+    }
+
+    /**
      *批量启动媒体传输流。
      * @param req BatchStartStreamLinkFlowRequest
      * @return BatchStartStreamLinkFlowResponse
@@ -680,6 +692,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
+     * @param req DescribeBatchTaskDetailRequest
+     * @return DescribeBatchTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchTaskDetailResponse DescribeBatchTaskDetail(DescribeBatchTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBatchTaskDetail", DescribeBatchTaskDetailResponse.class);
+    }
+
+    /**
      *根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
@@ -710,6 +733,17 @@ public class MpsClient extends AbstractClient{
     public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(DescribeImageSpriteTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeImageSpriteTemplates", DescribeImageSpriteTemplatesResponse.class);
+    }
+
+    /**
+     *通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
+     * @param req DescribeImageTaskDetailRequest
+     * @return DescribeImageTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageTaskDetailResponse DescribeImageTaskDetail(DescribeImageTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageTaskDetail", DescribeImageTaskDetailResponse.class);
     }
 
     /**
