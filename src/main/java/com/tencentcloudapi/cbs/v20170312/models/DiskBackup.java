@@ -38,14 +38,16 @@ public class DiskBackup extends AbstractModel {
     private String DiskId;
 
     /**
-    * 云硬盘大小，单位GB。
+    * 云硬盘大小，单位GiB。
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+    * 云硬盘类型。取值范围：<br>
+<li>SYSTEM_DISK：系统盘</li>
+<li>DATA_DISK：数据盘。</li>
     */
     @SerializedName("DiskUsage")
     @Expose
@@ -59,14 +61,19 @@ public class DiskBackup extends AbstractModel {
     private String DiskBackupName;
 
     /**
-    * 云硬盘备份点状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中
+    * <p>云硬盘备份点状态。取值范围：</p>
+<ul>
+  <li>NORMAL：正常</li>
+  <li>CREATING：创建中</li>
+  <li>ROLLBACKING：回滚中</li>
+</ul>
     */
     @SerializedName("DiskBackupState")
     @Expose
     private String DiskBackupState;
 
     /**
-    * 云硬盘创建进度百分比。
+    * 云硬盘备份点创建百分比。
     */
     @SerializedName("Percent")
     @Expose
@@ -80,7 +87,7 @@ public class DiskBackup extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
+    * 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br></li>true:表示加密盘。
     */
     @SerializedName("Encrypt")
     @Expose
@@ -119,32 +126,40 @@ public class DiskBackup extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘大小，单位GB。 
-     * @return DiskSize 云硬盘大小，单位GB。
+     * Get 云硬盘大小，单位GiB。 
+     * @return DiskSize 云硬盘大小，单位GiB。
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 云硬盘大小，单位GB。
-     * @param DiskSize 云硬盘大小，单位GB。
+     * Set 云硬盘大小，单位GiB。
+     * @param DiskSize 云硬盘大小，单位GiB。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。 
-     * @return DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+     * Get 云硬盘类型。取值范围：<br>
+<li>SYSTEM_DISK：系统盘</li>
+<li>DATA_DISK：数据盘。</li> 
+     * @return DiskUsage 云硬盘类型。取值范围：<br>
+<li>SYSTEM_DISK：系统盘</li>
+<li>DATA_DISK：数据盘。</li>
      */
     public String getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
-     * @param DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+     * Set 云硬盘类型。取值范围：<br>
+<li>SYSTEM_DISK：系统盘</li>
+<li>DATA_DISK：数据盘。</li>
+     * @param DiskUsage 云硬盘类型。取值范围：<br>
+<li>SYSTEM_DISK：系统盘</li>
+<li>DATA_DISK：数据盘。</li>
      */
     public void setDiskUsage(String DiskUsage) {
         this.DiskUsage = DiskUsage;
@@ -167,32 +182,52 @@ public class DiskBackup extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘备份点状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中 
-     * @return DiskBackupState 云硬盘备份点状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中
+     * Get <p>云硬盘备份点状态。取值范围：</p>
+<ul>
+  <li>NORMAL：正常</li>
+  <li>CREATING：创建中</li>
+  <li>ROLLBACKING：回滚中</li>
+</ul> 
+     * @return DiskBackupState <p>云硬盘备份点状态。取值范围：</p>
+<ul>
+  <li>NORMAL：正常</li>
+  <li>CREATING：创建中</li>
+  <li>ROLLBACKING：回滚中</li>
+</ul>
      */
     public String getDiskBackupState() {
         return this.DiskBackupState;
     }
 
     /**
-     * Set 云硬盘备份点状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中
-     * @param DiskBackupState 云硬盘备份点状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中
+     * Set <p>云硬盘备份点状态。取值范围：</p>
+<ul>
+  <li>NORMAL：正常</li>
+  <li>CREATING：创建中</li>
+  <li>ROLLBACKING：回滚中</li>
+</ul>
+     * @param DiskBackupState <p>云硬盘备份点状态。取值范围：</p>
+<ul>
+  <li>NORMAL：正常</li>
+  <li>CREATING：创建中</li>
+  <li>ROLLBACKING：回滚中</li>
+</ul>
      */
     public void setDiskBackupState(String DiskBackupState) {
         this.DiskBackupState = DiskBackupState;
     }
 
     /**
-     * Get 云硬盘创建进度百分比。 
-     * @return Percent 云硬盘创建进度百分比。
+     * Get 云硬盘备份点创建百分比。 
+     * @return Percent 云硬盘备份点创建百分比。
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set 云硬盘创建进度百分比。
-     * @param Percent 云硬盘创建进度百分比。
+     * Set 云硬盘备份点创建百分比。
+     * @param Percent 云硬盘备份点创建百分比。
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
@@ -215,16 +250,16 @@ public class DiskBackup extends AbstractModel {
     }
 
     /**
-     * Get 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。 
-     * @return Encrypt 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
+     * Get 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br></li>true:表示加密盘。 
+     * @return Encrypt 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br></li>true:表示加密盘。
      */
     public Boolean getEncrypt() {
         return this.Encrypt;
     }
 
     /**
-     * Set 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
-     * @param Encrypt 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
+     * Set 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br></li>true:表示加密盘。
+     * @param Encrypt 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br></li>true:表示加密盘。
      */
     public void setEncrypt(Boolean Encrypt) {
         this.Encrypt = Encrypt;

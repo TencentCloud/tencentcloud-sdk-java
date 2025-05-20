@@ -121,6 +121,8 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
     * 二维码，在生成动态签署人跳转封面页链接时返回
+
+注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
     */
     @SerializedName("SignQrcodeUrl")
     @Expose
@@ -359,8 +361,12 @@ public class SignUrlInfo extends AbstractModel {
     }
 
     /**
-     * Get 二维码，在生成动态签署人跳转封面页链接时返回 
+     * Get 二维码，在生成动态签署人跳转封面页链接时返回
+
+注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。` 
      * @return SignQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
+
+注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
      */
     public String getSignQrcodeUrl() {
         return this.SignQrcodeUrl;
@@ -368,7 +374,11 @@ public class SignUrlInfo extends AbstractModel {
 
     /**
      * Set 二维码，在生成动态签署人跳转封面页链接时返回
+
+注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
      * @param SignQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
+
+注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
      */
     public void setSignQrcodeUrl(String SignQrcodeUrl) {
         this.SignQrcodeUrl = SignQrcodeUrl;

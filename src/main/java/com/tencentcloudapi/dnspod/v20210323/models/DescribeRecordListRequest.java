@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRecordListRequest extends AbstractModel {
 
     /**
-    * 要获取的解析记录所属的域名
+    * 域名
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
     */
     @SerializedName("DomainId")
     @Expose
@@ -66,7 +66,7 @@ public class DescribeRecordListRequest extends AbstractModel {
     private String RecordLineId;
 
     /**
-    * 获取某个分组下的解析记录时，传这个分组Id。
+    * 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
     */
     @SerializedName("GroupId")
     @Expose
@@ -108,32 +108,32 @@ public class DescribeRecordListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 要获取的解析记录所属的域名 
-     * @return Domain 要获取的解析记录所属的域名
+     * Get 域名 
+     * @return Domain 域名
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 要获取的解析记录所属的域名
-     * @param Domain 要获取的解析记录所属的域名
+     * Set 域名
+     * @param Domain 域名
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId 
-     * @return DomainId 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId 
+     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
-     * @param DomainId 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
@@ -204,16 +204,16 @@ public class DescribeRecordListRequest extends AbstractModel {
     }
 
     /**
-     * Get 获取某个分组下的解析记录时，传这个分组Id。 
-     * @return GroupId 获取某个分组下的解析记录时，传这个分组Id。
+     * Get 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组 
+     * @return GroupId 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 获取某个分组下的解析记录时，传这个分组Id。
-     * @param GroupId 获取某个分组下的解析记录时，传这个分组Id。
+     * Set 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
+     * @param GroupId 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

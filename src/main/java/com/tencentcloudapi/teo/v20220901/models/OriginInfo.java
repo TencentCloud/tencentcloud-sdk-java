@@ -76,6 +76,16 @@ public class OriginInfo extends AbstractModel {
     private PrivateParameter [] PrivateParameters;
 
     /**
+    * 自定义回源 HOST 头，该参数仅当 OriginType=IP_DOMAIN 时生效。
+如果 OriginType=COS 或 AWS_S3 时，回源 HOST 头将与源站域名保持一致。
+如果OriginType=ORIGIN_GROUP 或 LB 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
+如果 OriginType=VOD 或 SPACE 时，无需配置该头部，按对应的回源域名生效。
+    */
+    @SerializedName("HostHeader")
+    @Expose
+    private String HostHeader;
+
+    /**
     * VODEO 子应用 ID。该参数当 OriginType = VODEO 时必填。
     */
     @SerializedName("VodeoSubAppId")
@@ -262,6 +272,34 @@ public class OriginInfo extends AbstractModel {
     }
 
     /**
+     * Get 自定义回源 HOST 头，该参数仅当 OriginType=IP_DOMAIN 时生效。
+如果 OriginType=COS 或 AWS_S3 时，回源 HOST 头将与源站域名保持一致。
+如果OriginType=ORIGIN_GROUP 或 LB 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
+如果 OriginType=VOD 或 SPACE 时，无需配置该头部，按对应的回源域名生效。 
+     * @return HostHeader 自定义回源 HOST 头，该参数仅当 OriginType=IP_DOMAIN 时生效。
+如果 OriginType=COS 或 AWS_S3 时，回源 HOST 头将与源站域名保持一致。
+如果OriginType=ORIGIN_GROUP 或 LB 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
+如果 OriginType=VOD 或 SPACE 时，无需配置该头部，按对应的回源域名生效。
+     */
+    public String getHostHeader() {
+        return this.HostHeader;
+    }
+
+    /**
+     * Set 自定义回源 HOST 头，该参数仅当 OriginType=IP_DOMAIN 时生效。
+如果 OriginType=COS 或 AWS_S3 时，回源 HOST 头将与源站域名保持一致。
+如果OriginType=ORIGIN_GROUP 或 LB 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
+如果 OriginType=VOD 或 SPACE 时，无需配置该头部，按对应的回源域名生效。
+     * @param HostHeader 自定义回源 HOST 头，该参数仅当 OriginType=IP_DOMAIN 时生效。
+如果 OriginType=COS 或 AWS_S3 时，回源 HOST 头将与源站域名保持一致。
+如果OriginType=ORIGIN_GROUP 或 LB 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
+如果 OriginType=VOD 或 SPACE 时，无需配置该头部，按对应的回源域名生效。
+     */
+    public void setHostHeader(String HostHeader) {
+        this.HostHeader = HostHeader;
+    }
+
+    /**
      * Get VODEO 子应用 ID。该参数当 OriginType = VODEO 时必填。 
      * @return VodeoSubAppId VODEO 子应用 ID。该参数当 OriginType = VODEO 时必填。
      * @deprecated
@@ -391,6 +429,9 @@ public class OriginInfo extends AbstractModel {
                 this.PrivateParameters[i] = new PrivateParameter(source.PrivateParameters[i]);
             }
         }
+        if (source.HostHeader != null) {
+            this.HostHeader = new String(source.HostHeader);
+        }
         if (source.VodeoSubAppId != null) {
             this.VodeoSubAppId = new Long(source.VodeoSubAppId);
         }
@@ -418,6 +459,7 @@ public class OriginInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupOrigin", this.BackupOrigin);
         this.setParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
         this.setParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
+        this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
         this.setParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
         this.setParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
         this.setParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);

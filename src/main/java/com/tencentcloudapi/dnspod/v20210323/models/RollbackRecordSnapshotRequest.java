@@ -31,7 +31,7 @@ public class RollbackRecordSnapshotRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 快照 ID
+    * 快照 ID。可以通过接口DescribeSnapshotList查询快照 ID
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -45,14 +45,14 @@ public class RollbackRecordSnapshotRequest extends AbstractModel {
     private SnapshotRecord [] RecordList;
 
     /**
-    * 之前的快照回滚任务 ID
+    * 之前的快照回滚任务 ID。可从RollbackSnapshot接口获取
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
     */
     @SerializedName("DomainId")
     @Expose
@@ -75,16 +75,16 @@ public class RollbackRecordSnapshotRequest extends AbstractModel {
     }
 
     /**
-     * Get 快照 ID 
-     * @return SnapshotId 快照 ID
+     * Get 快照 ID。可以通过接口DescribeSnapshotList查询快照 ID 
+     * @return SnapshotId 快照 ID。可以通过接口DescribeSnapshotList查询快照 ID
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 快照 ID
-     * @param SnapshotId 快照 ID
+     * Set 快照 ID。可以通过接口DescribeSnapshotList查询快照 ID
+     * @param SnapshotId 快照 ID。可以通过接口DescribeSnapshotList查询快照 ID
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
@@ -107,32 +107,32 @@ public class RollbackRecordSnapshotRequest extends AbstractModel {
     }
 
     /**
-     * Get 之前的快照回滚任务 ID 
-     * @return TaskId 之前的快照回滚任务 ID
+     * Get 之前的快照回滚任务 ID。可从RollbackSnapshot接口获取 
+     * @return TaskId 之前的快照回滚任务 ID。可从RollbackSnapshot接口获取
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 之前的快照回滚任务 ID
-     * @param TaskId 之前的快照回滚任务 ID
+     * Set 之前的快照回滚任务 ID。可从RollbackSnapshot接口获取
+     * @param TaskId 之前的快照回滚任务 ID。可从RollbackSnapshot接口获取
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。 
-     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId 
+     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
-     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;

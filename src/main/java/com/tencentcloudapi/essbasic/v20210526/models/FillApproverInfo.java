@@ -33,6 +33,8 @@ public class FillApproverInfo extends AbstractModel {
 
     /**
     * 指定企业经办签署人OpenId
+
+注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
     */
     @SerializedName("OpenId")
     @Expose
@@ -129,8 +131,12 @@ public class FillApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 指定企业经办签署人OpenId 
+     * Get 指定企业经办签署人OpenId
+
+注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。` 
      * @return OpenId 指定企业经办签署人OpenId
+
+注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
      */
     public String getOpenId() {
         return this.OpenId;
@@ -138,7 +144,11 @@ public class FillApproverInfo extends AbstractModel {
 
     /**
      * Set 指定企业经办签署人OpenId
+
+注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
      * @param OpenId 指定企业经办签署人OpenId
+
+注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;

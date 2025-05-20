@@ -115,6 +115,13 @@ public class IndicatorItem extends AbstractModel {
     private String InferNormal;
 
     /**
+    * 标本
+    */
+    @SerializedName("Sample")
+    @Expose
+    private String Sample;
+
+    /**
      * Get 英文缩写 
      * @return Code 英文缩写
      */
@@ -322,6 +329,22 @@ public class IndicatorItem extends AbstractModel {
         this.InferNormal = InferNormal;
     }
 
+    /**
+     * Get 标本 
+     * @return Sample 标本
+     */
+    public String getSample() {
+        return this.Sample;
+    }
+
+    /**
+     * Set 标本
+     * @param Sample 标本
+     */
+    public void setSample(String Sample) {
+        this.Sample = Sample;
+    }
+
     public IndicatorItem() {
     }
 
@@ -369,6 +392,9 @@ public class IndicatorItem extends AbstractModel {
         if (source.InferNormal != null) {
             this.InferNormal = new String(source.InferNormal);
         }
+        if (source.Sample != null) {
+            this.Sample = new String(source.Sample);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class IndicatorItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamObj(map, prefix + "Coords.", this.Coords);
         this.setParamSimple(map, prefix + "InferNormal", this.InferNormal);
+        this.setParamSimple(map, prefix + "Sample", this.Sample);
 
     }
 }

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyHpcClusterAttributeRequest extends AbstractModel {
 
     /**
-    * 高性能计算集群ID。
+    * 高性能计算集群ID。集群ID可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
     */
     @SerializedName("HpcClusterId")
     @Expose
     private String HpcClusterId;
 
     /**
-    * 高性能计算集群新名称。
+    * 高性能计算集群新名称，长度限制[1-60]。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 高性能计算集群新备注。
+    * 高性能计算集群新备注，长度[1-256]。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 高性能计算集群ID。 
-     * @return HpcClusterId 高性能计算集群ID。
+     * Get 高性能计算集群ID。集群ID可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。 
+     * @return HpcClusterId 高性能计算集群ID。集群ID可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
      */
     public String getHpcClusterId() {
         return this.HpcClusterId;
     }
 
     /**
-     * Set 高性能计算集群ID。
-     * @param HpcClusterId 高性能计算集群ID。
+     * Set 高性能计算集群ID。集群ID可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
+     * @param HpcClusterId 高性能计算集群ID。集群ID可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
      */
     public void setHpcClusterId(String HpcClusterId) {
         this.HpcClusterId = HpcClusterId;
     }
 
     /**
-     * Get 高性能计算集群新名称。 
-     * @return Name 高性能计算集群新名称。
+     * Get 高性能计算集群新名称，长度限制[1-60]。 
+     * @return Name 高性能计算集群新名称，长度限制[1-60]。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 高性能计算集群新名称。
-     * @param Name 高性能计算集群新名称。
+     * Set 高性能计算集群新名称，长度限制[1-60]。
+     * @param Name 高性能计算集群新名称，长度限制[1-60]。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 高性能计算集群新备注。 
-     * @return Remark 高性能计算集群新备注。
+     * Get 高性能计算集群新备注，长度[1-256]。 
+     * @return Remark 高性能计算集群新备注，长度[1-256]。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 高性能计算集群新备注。
-     * @param Remark 高性能计算集群新备注。
+     * Set 高性能计算集群新备注，长度[1-256]。
+     * @param Remark 高性能计算集群新备注，长度[1-256]。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

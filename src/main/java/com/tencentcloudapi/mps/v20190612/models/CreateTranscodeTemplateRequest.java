@@ -93,6 +93,13 @@ public class CreateTranscodeTemplateRequest extends AbstractModel {
     private EnhanceConfig EnhanceConfig;
 
     /**
+    * 扩展参数，序列化的 json 字符串。
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
      * Get 封装格式，可选值：mp4、flv、hls、ts、webm、mkv、mxf、mov、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。 
      * @return Container 封装格式，可选值：mp4、flv、hls、ts、webm、mkv、mxf、mov、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
@@ -260,6 +267,22 @@ public class CreateTranscodeTemplateRequest extends AbstractModel {
         this.EnhanceConfig = EnhanceConfig;
     }
 
+    /**
+     * Get 扩展参数，序列化的 json 字符串。 
+     * @return StdExtInfo 扩展参数，序列化的 json 字符串。
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set 扩展参数，序列化的 json 字符串。
+     * @param StdExtInfo 扩展参数，序列化的 json 字符串。
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
+    }
+
     public CreateTranscodeTemplateRequest() {
     }
 
@@ -295,6 +318,9 @@ public class CreateTranscodeTemplateRequest extends AbstractModel {
         if (source.EnhanceConfig != null) {
             this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -311,6 +337,7 @@ public class CreateTranscodeTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

@@ -45,7 +45,7 @@ public class DescribeDomainListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 分组ID, 获取指定分组的域名
+    * 分组ID, 获取指定分组的域名，可以通过接口DescribeDomainGroupList查看当前域名分组信息
     */
     @SerializedName("GroupId")
     @Expose
@@ -114,16 +114,16 @@ public class DescribeDomainListRequest extends AbstractModel {
     }
 
     /**
-     * Get 分组ID, 获取指定分组的域名 
-     * @return GroupId 分组ID, 获取指定分组的域名
+     * Get 分组ID, 获取指定分组的域名，可以通过接口DescribeDomainGroupList查看当前域名分组信息 
+     * @return GroupId 分组ID, 获取指定分组的域名，可以通过接口DescribeDomainGroupList查看当前域名分组信息
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 分组ID, 获取指定分组的域名
-     * @param GroupId 分组ID, 获取指定分组的域名
+     * Set 分组ID, 获取指定分组的域名，可以通过接口DescribeDomainGroupList查看当前域名分组信息
+     * @param GroupId 分组ID, 获取指定分组的域名，可以通过接口DescribeDomainGroupList查看当前域名分组信息
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.lkeap.v20240522.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InitDBInstancesResponse extends AbstractModel {
+public class RetrieveKnowledgeRealtimeResponse extends AbstractModel {
 
     /**
-    * 实例ID集合。
+    * 检索结果
     */
-    @SerializedName("DBInstanceIdSet")
+    @SerializedName("Records")
     @Expose
-    private String [] DBInstanceIdSet;
+    private RetrievalRecord [] Records;
+
+    /**
+    * 检索结果数量
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class InitDBInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例ID集合。 
-     * @return DBInstanceIdSet 实例ID集合。
+     * Get 检索结果 
+     * @return Records 检索结果
      */
-    public String [] getDBInstanceIdSet() {
-        return this.DBInstanceIdSet;
+    public RetrievalRecord [] getRecords() {
+        return this.Records;
     }
 
     /**
-     * Set 实例ID集合。
-     * @param DBInstanceIdSet 实例ID集合。
+     * Set 检索结果
+     * @param Records 检索结果
      */
-    public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
-        this.DBInstanceIdSet = DBInstanceIdSet;
+    public void setRecords(RetrievalRecord [] Records) {
+        this.Records = Records;
+    }
+
+    /**
+     * Get 检索结果数量 
+     * @return TotalCount 检索结果数量
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 检索结果数量
+     * @param TotalCount 检索结果数量
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -69,19 +92,22 @@ public class InitDBInstancesResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public InitDBInstancesResponse() {
+    public RetrieveKnowledgeRealtimeResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InitDBInstancesResponse(InitDBInstancesResponse source) {
-        if (source.DBInstanceIdSet != null) {
-            this.DBInstanceIdSet = new String[source.DBInstanceIdSet.length];
-            for (int i = 0; i < source.DBInstanceIdSet.length; i++) {
-                this.DBInstanceIdSet[i] = new String(source.DBInstanceIdSet[i]);
+    public RetrieveKnowledgeRealtimeResponse(RetrieveKnowledgeRealtimeResponse source) {
+        if (source.Records != null) {
+            this.Records = new RetrievalRecord[source.Records.length];
+            for (int i = 0; i < source.Records.length; i++) {
+                this.Records[i] = new RetrievalRecord(source.Records[i]);
             }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -93,7 +119,8 @@ public class InitDBInstancesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);
+        this.setParamArrayObj(map, prefix + "Records.", this.Records);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

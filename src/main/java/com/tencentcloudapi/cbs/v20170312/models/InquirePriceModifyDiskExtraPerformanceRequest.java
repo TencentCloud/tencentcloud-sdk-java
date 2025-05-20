@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquirePriceModifyDiskExtraPerformanceRequest extends AbstractModel {
 
     /**
-    * 额外购买的云硬盘性能值，单位MB/s。
+    * 额外购买的云硬盘性能值，单位MiB/s。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。
     */
     @SerializedName("ThroughputPerformance")
     @Expose
@@ -38,16 +38,16 @@ public class InquirePriceModifyDiskExtraPerformanceRequest extends AbstractModel
     private String DiskId;
 
     /**
-     * Get 额外购买的云硬盘性能值，单位MB/s。 
-     * @return ThroughputPerformance 额外购买的云硬盘性能值，单位MB/s。
+     * Get 额外购买的云硬盘性能值，单位MiB/s。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。 
+     * @return ThroughputPerformance 额外购买的云硬盘性能值，单位MiB/s。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。
      */
     public Long getThroughputPerformance() {
         return this.ThroughputPerformance;
     }
 
     /**
-     * Set 额外购买的云硬盘性能值，单位MB/s。
-     * @param ThroughputPerformance 额外购买的云硬盘性能值，单位MB/s。
+     * Set 额外购买的云硬盘性能值，单位MiB/s。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。
+     * @param ThroughputPerformance 额外购买的云硬盘性能值，单位MiB/s。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。
      */
     public void setThroughputPerformance(Long ThroughputPerformance) {
         this.ThroughputPerformance = ThroughputPerformance;

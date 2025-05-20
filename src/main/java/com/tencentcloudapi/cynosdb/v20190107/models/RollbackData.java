@@ -73,14 +73,14 @@ public class RollbackData extends AbstractModel {
     private String SnapshotTime;
 
     /**
-    * 回档到serverlessls集群时最小CPU
+    * 回档到 Serverless 集群时最小 CPU
     */
     @SerializedName("MinCpu")
     @Expose
     private Long MinCpu;
 
     /**
-    * 回档到serverlessls集群时最大CPU
+    * 回档到 Serverless 集群时最大 CPU
     */
     @SerializedName("MaxCpu")
     @Expose
@@ -236,32 +236,32 @@ public class RollbackData extends AbstractModel {
     }
 
     /**
-     * Get 回档到serverlessls集群时最小CPU 
-     * @return MinCpu 回档到serverlessls集群时最小CPU
+     * Get 回档到 Serverless 集群时最小 CPU 
+     * @return MinCpu 回档到 Serverless 集群时最小 CPU
      */
     public Long getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set 回档到serverlessls集群时最小CPU
-     * @param MinCpu 回档到serverlessls集群时最小CPU
+     * Set 回档到 Serverless 集群时最小 CPU
+     * @param MinCpu 回档到 Serverless 集群时最小 CPU
      */
     public void setMinCpu(Long MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get 回档到serverlessls集群时最大CPU 
-     * @return MaxCpu 回档到serverlessls集群时最大CPU
+     * Get 回档到 Serverless 集群时最大 CPU 
+     * @return MaxCpu 回档到 Serverless 集群时最大 CPU
      */
     public Long getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set 回档到serverlessls集群时最大CPU
-     * @param MaxCpu 回档到serverlessls集群时最大CPU
+     * Set 回档到 Serverless 集群时最大 CPU
+     * @param MaxCpu 回档到 Serverless 集群时最大 CPU
      */
     public void setMaxCpu(Long MaxCpu) {
         this.MaxCpu = MaxCpu;

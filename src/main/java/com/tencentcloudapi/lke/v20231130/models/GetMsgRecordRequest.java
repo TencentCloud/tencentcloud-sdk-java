@@ -31,7 +31,7 @@ public class GetMsgRecordRequest extends AbstractModel {
     private Long Type;
 
     /**
-    * 数量,  数量需大于2
+    * 数量,  数量需大于2, 最大1000
     */
     @SerializedName("Count")
     @Expose
@@ -43,13 +43,6 @@ public class GetMsgRecordRequest extends AbstractModel {
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
-
-    /**
-    * 最后一条记录ID
-    */
-    @SerializedName("LastRecordId")
-    @Expose
-    private String LastRecordId;
 
     /**
     * 应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
@@ -66,7 +59,20 @@ public class GetMsgRecordRequest extends AbstractModel {
     private Long Scene;
 
     /**
+    * 最后一条记录ID， 消息从后往前获取
+
+MidRecordId与LastRecordId只能选择一个
+
+    */
+    @SerializedName("LastRecordId")
+    @Expose
+    private String LastRecordId;
+
+    /**
     * 传该值，代表拉取该记录id的前后总共count条消息记录
+
+MidRecordId与LastRecordId只能选择一个
+
     */
     @SerializedName("MidRecordId")
     @Expose
@@ -89,16 +95,16 @@ public class GetMsgRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 数量,  数量需大于2 
-     * @return Count 数量,  数量需大于2
+     * Get 数量,  数量需大于2, 最大1000 
+     * @return Count 数量,  数量需大于2, 最大1000
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 数量,  数量需大于2
-     * @param Count 数量,  数量需大于2
+     * Set 数量,  数量需大于2, 最大1000
+     * @param Count 数量,  数量需大于2, 最大1000
      */
     public void setCount(Long Count) {
         this.Count = Count;
@@ -118,22 +124,6 @@ public class GetMsgRecordRequest extends AbstractModel {
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
-    }
-
-    /**
-     * Get 最后一条记录ID 
-     * @return LastRecordId 最后一条记录ID
-     */
-    public String getLastRecordId() {
-        return this.LastRecordId;
-    }
-
-    /**
-     * Set 最后一条记录ID
-     * @param LastRecordId 最后一条记录ID
-     */
-    public void setLastRecordId(String LastRecordId) {
-        this.LastRecordId = LastRecordId;
     }
 
     /**
@@ -169,8 +159,42 @@ public class GetMsgRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 传该值，代表拉取该记录id的前后总共count条消息记录 
+     * Get 最后一条记录ID， 消息从后往前获取
+
+MidRecordId与LastRecordId只能选择一个
+ 
+     * @return LastRecordId 最后一条记录ID， 消息从后往前获取
+
+MidRecordId与LastRecordId只能选择一个
+
+     */
+    public String getLastRecordId() {
+        return this.LastRecordId;
+    }
+
+    /**
+     * Set 最后一条记录ID， 消息从后往前获取
+
+MidRecordId与LastRecordId只能选择一个
+
+     * @param LastRecordId 最后一条记录ID， 消息从后往前获取
+
+MidRecordId与LastRecordId只能选择一个
+
+     */
+    public void setLastRecordId(String LastRecordId) {
+        this.LastRecordId = LastRecordId;
+    }
+
+    /**
+     * Get 传该值，代表拉取该记录id的前后总共count条消息记录
+
+MidRecordId与LastRecordId只能选择一个
+ 
      * @return MidRecordId 传该值，代表拉取该记录id的前后总共count条消息记录
+
+MidRecordId与LastRecordId只能选择一个
+
      */
     public String getMidRecordId() {
         return this.MidRecordId;
@@ -178,7 +202,13 @@ public class GetMsgRecordRequest extends AbstractModel {
 
     /**
      * Set 传该值，代表拉取该记录id的前后总共count条消息记录
+
+MidRecordId与LastRecordId只能选择一个
+
      * @param MidRecordId 传该值，代表拉取该记录id的前后总共count条消息记录
+
+MidRecordId与LastRecordId只能选择一个
+
      */
     public void setMidRecordId(String MidRecordId) {
         this.MidRecordId = MidRecordId;
@@ -201,14 +231,14 @@ public class GetMsgRecordRequest extends AbstractModel {
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
-        if (source.LastRecordId != null) {
-            this.LastRecordId = new String(source.LastRecordId);
-        }
         if (source.BotAppKey != null) {
             this.BotAppKey = new String(source.BotAppKey);
         }
         if (source.Scene != null) {
             this.Scene = new Long(source.Scene);
+        }
+        if (source.LastRecordId != null) {
+            this.LastRecordId = new String(source.LastRecordId);
         }
         if (source.MidRecordId != null) {
             this.MidRecordId = new String(source.MidRecordId);
@@ -223,9 +253,9 @@ public class GetMsgRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
-        this.setParamSimple(map, prefix + "LastRecordId", this.LastRecordId);
         this.setParamSimple(map, prefix + "BotAppKey", this.BotAppKey);
         this.setParamSimple(map, prefix + "Scene", this.Scene);
+        this.setParamSimple(map, prefix + "LastRecordId", this.LastRecordId);
         this.setParamSimple(map, prefix + "MidRecordId", this.MidRecordId);
 
     }

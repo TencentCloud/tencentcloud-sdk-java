@@ -55,6 +55,23 @@ http://www.example.com/example.txt。参数值当前必填。
     private Header [] Headers;
 
     /**
+    * 媒体分片预热控制，取值有：
+<li>on：开启分片预热，预热描述文件，并递归解析描述文件分片进行预热；</li>
+<li>off：仅预热提交的描述文件；</li>不填写时，默认值为 off。
+
+注意事项：
+1. 支持的描述文件为 M3U8，对应分片为 TS；
+2. 要求描述文件能正常请求，并按行业标准描述分片路径；
+3. 递归解析深度不超过 3 层；
+4. 解析获取的分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热。
+
+该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+    */
+    @SerializedName("PrefetchMediaSegments")
+    @Expose
+    private String PrefetchMediaSegments;
+
+    /**
      * Get 站点 ID。
 若您希望快速提交不同站点下的 Targets Url，可以将其填写为 *，但前提是调用该 API 的账号必须具备主账号下全部站点资源的权限。 
      * @return ZoneId 站点 ID。
@@ -134,6 +151,62 @@ http://www.example.com/example.txt。参数值当前必填。
         this.Headers = Headers;
     }
 
+    /**
+     * Get 媒体分片预热控制，取值有：
+<li>on：开启分片预热，预热描述文件，并递归解析描述文件分片进行预热；</li>
+<li>off：仅预热提交的描述文件；</li>不填写时，默认值为 off。
+
+注意事项：
+1. 支持的描述文件为 M3U8，对应分片为 TS；
+2. 要求描述文件能正常请求，并按行业标准描述分片路径；
+3. 递归解析深度不超过 3 层；
+4. 解析获取的分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热。
+
+该参数为白名单功能，如有需要，请联系腾讯云工程师处理。 
+     * @return PrefetchMediaSegments 媒体分片预热控制，取值有：
+<li>on：开启分片预热，预热描述文件，并递归解析描述文件分片进行预热；</li>
+<li>off：仅预热提交的描述文件；</li>不填写时，默认值为 off。
+
+注意事项：
+1. 支持的描述文件为 M3U8，对应分片为 TS；
+2. 要求描述文件能正常请求，并按行业标准描述分片路径；
+3. 递归解析深度不超过 3 层；
+4. 解析获取的分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热。
+
+该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     */
+    public String getPrefetchMediaSegments() {
+        return this.PrefetchMediaSegments;
+    }
+
+    /**
+     * Set 媒体分片预热控制，取值有：
+<li>on：开启分片预热，预热描述文件，并递归解析描述文件分片进行预热；</li>
+<li>off：仅预热提交的描述文件；</li>不填写时，默认值为 off。
+
+注意事项：
+1. 支持的描述文件为 M3U8，对应分片为 TS；
+2. 要求描述文件能正常请求，并按行业标准描述分片路径；
+3. 递归解析深度不超过 3 层；
+4. 解析获取的分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热。
+
+该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     * @param PrefetchMediaSegments 媒体分片预热控制，取值有：
+<li>on：开启分片预热，预热描述文件，并递归解析描述文件分片进行预热；</li>
+<li>off：仅预热提交的描述文件；</li>不填写时，默认值为 off。
+
+注意事项：
+1. 支持的描述文件为 M3U8，对应分片为 TS；
+2. 要求描述文件能正常请求，并按行业标准描述分片路径；
+3. 递归解析深度不超过 3 层；
+4. 解析获取的分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热。
+
+该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     */
+    public void setPrefetchMediaSegments(String PrefetchMediaSegments) {
+        this.PrefetchMediaSegments = PrefetchMediaSegments;
+    }
+
     public CreatePrefetchTaskRequest() {
     }
 
@@ -160,6 +233,9 @@ http://www.example.com/example.txt。参数值当前必填。
                 this.Headers[i] = new Header(source.Headers[i]);
             }
         }
+        if (source.PrefetchMediaSegments != null) {
+            this.PrefetchMediaSegments = new String(source.PrefetchMediaSegments);
+        }
     }
 
 
@@ -171,6 +247,7 @@ http://www.example.com/example.txt。参数值当前必填。
         this.setParamArraySimple(map, prefix + "Targets.", this.Targets);
         this.setParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
         this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
+        this.setParamSimple(map, prefix + "PrefetchMediaSegments", this.PrefetchMediaSegments);
 
     }
 }

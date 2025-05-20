@@ -254,7 +254,6 @@ false：否
     /**
     * 四级分类
 1:"仅含2种数字"
-1:"仅含2种数字"
 2:"仅含3种数字"
 4:"仅含1种字母"
 8:"仅含1种数字"
@@ -298,7 +297,7 @@ FilterWords+FilterStart（true）+FilterEnd（true）：使用域名开头或结
     private Long TransType;
 
     /**
-    * 是否搜索白金域名
+    * 是否搜索白金域名（默认值为false）
     */
     @SerializedName("IsTop")
     @Expose
@@ -1065,13 +1064,11 @@ false：否
     /**
      * Get 四级分类
 1:"仅含2种数字"
-1:"仅含2种数字"
 2:"仅含3种数字"
 4:"仅含1种字母"
 8:"仅含1种数字"
  
      * @return ClassFour 四级分类
-1:"仅含2种数字"
 1:"仅含2种数字"
 2:"仅含3种数字"
 4:"仅含1种字母"
@@ -1085,13 +1082,11 @@ false：否
     /**
      * Set 四级分类
 1:"仅含2种数字"
-1:"仅含2种数字"
 2:"仅含3种数字"
 4:"仅含1种字母"
 8:"仅含1种数字"
 
      * @param ClassFour 四级分类
-1:"仅含2种数字"
 1:"仅含2种数字"
 2:"仅含3种数字"
 4:"仅含1种字母"
@@ -1187,16 +1182,16 @@ FilterWords+FilterStart（true）+FilterEnd（true）：使用域名开头或结
     }
 
     /**
-     * Get 是否搜索白金域名 
-     * @return IsTop 是否搜索白金域名
+     * Get 是否搜索白金域名（默认值为false） 
+     * @return IsTop 是否搜索白金域名（默认值为false）
      */
     public Boolean getIsTop() {
         return this.IsTop;
     }
 
     /**
-     * Set 是否搜索白金域名
-     * @param IsTop 是否搜索白金域名
+     * Set 是否搜索白金域名（默认值为false）
+     * @param IsTop 是否搜索白金域名（默认值为false）
      */
     public void setIsTop(Boolean IsTop) {
         this.IsTop = IsTop;

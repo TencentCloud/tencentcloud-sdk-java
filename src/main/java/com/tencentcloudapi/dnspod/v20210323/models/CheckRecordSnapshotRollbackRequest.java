@@ -31,7 +31,7 @@ public class CheckRecordSnapshotRollbackRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 快照 ID
+    * 快照记录 ID
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -68,16 +68,16 @@ public class CheckRecordSnapshotRollbackRequest extends AbstractModel {
     }
 
     /**
-     * Get 快照 ID 
-     * @return SnapshotId 快照 ID
+     * Get 快照记录 ID 
+     * @return SnapshotId 快照记录 ID
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 快照 ID
-     * @param SnapshotId 快照 ID
+     * Set 快照记录 ID
+     * @param SnapshotId 快照记录 ID
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;

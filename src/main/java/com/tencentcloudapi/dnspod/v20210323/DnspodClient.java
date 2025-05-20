@@ -352,7 +352,7 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
-     *获取任务详情
+     *获取批量操作任务执行详情
      * @param req DescribeBatchTaskRequest
      * @return DescribeBatchTaskResponse
      * @throws TencentCloudSDKException

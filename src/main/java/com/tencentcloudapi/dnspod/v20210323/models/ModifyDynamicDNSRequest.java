@@ -38,14 +38,14 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
     private Long RecordId;
 
     /**
-    * 记录线路，通过 API 记录线路获得，中文，比如：默认。
+    * 记录线路，中文，比如：默认。
     */
     @SerializedName("RecordLine")
     @Expose
     private String RecordLine;
 
     /**
-    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
     */
     @SerializedName("DomainId")
     @Expose
@@ -59,7 +59,7 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
     private String SubDomain;
 
     /**
-    * 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+    * 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
     */
     @SerializedName("RecordLineId")
     @Expose
@@ -112,32 +112,32 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
     }
 
     /**
-     * Get 记录线路，通过 API 记录线路获得，中文，比如：默认。 
-     * @return RecordLine 记录线路，通过 API 记录线路获得，中文，比如：默认。
+     * Get 记录线路，中文，比如：默认。 
+     * @return RecordLine 记录线路，中文，比如：默认。
      */
     public String getRecordLine() {
         return this.RecordLine;
     }
 
     /**
-     * Set 记录线路，通过 API 记录线路获得，中文，比如：默认。
-     * @param RecordLine 记录线路，通过 API 记录线路获得，中文，比如：默认。
+     * Set 记录线路，中文，比如：默认。
+     * @param RecordLine 记录线路，中文，比如：默认。
      */
     public void setRecordLine(String RecordLine) {
         this.RecordLine = RecordLine;
     }
 
     /**
-     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId 
-     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。 
+     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
-     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
@@ -160,16 +160,16 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
     }
 
     /**
-     * Get 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。 
-     * @return RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * Get 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。 
+     * @return RecordLineId 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      */
     public String getRecordLineId() {
         return this.RecordLineId;
     }
 
     /**
-     * Set 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
-     * @param RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * Set 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @param RecordLineId 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      */
     public void setRecordLineId(String RecordLineId) {
         this.RecordLineId = RecordLineId;

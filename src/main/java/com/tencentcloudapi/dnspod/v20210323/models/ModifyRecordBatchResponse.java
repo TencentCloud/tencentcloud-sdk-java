@@ -31,7 +31,7 @@ public class ModifyRecordBatchResponse extends AbstractModel {
     private Long JobId;
 
     /**
-    * 见modifyRecordBatchDetail
+    * 见ModifyRecordBatchDetail
     */
     @SerializedName("DetailList")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyRecordBatchResponse extends AbstractModel {
     }
 
     /**
-     * Get 见modifyRecordBatchDetail 
-     * @return DetailList 见modifyRecordBatchDetail
+     * Get 见ModifyRecordBatchDetail 
+     * @return DetailList 见ModifyRecordBatchDetail
      */
     public ModifyRecordBatchDetail [] getDetailList() {
         return this.DetailList;
     }
 
     /**
-     * Set 见modifyRecordBatchDetail
-     * @param DetailList 见modifyRecordBatchDetail
+     * Set 见ModifyRecordBatchDetail
+     * @param DetailList 见ModifyRecordBatchDetail
      */
     public void setDetailList(ModifyRecordBatchDetail [] DetailList) {
         this.DetailList = DetailList;

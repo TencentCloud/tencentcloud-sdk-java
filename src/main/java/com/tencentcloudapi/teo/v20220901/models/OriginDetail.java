@@ -89,6 +89,13 @@ public class OriginDetail extends AbstractModel {
     private PrivateParameter [] PrivateParameters;
 
     /**
+    * 当前配置的回源 HOST 头。
+    */
+    @SerializedName("HostHeader")
+    @Expose
+    private String HostHeader;
+
+    /**
     * MO 子应用 ID
     */
     @SerializedName("VodeoSubAppId")
@@ -301,6 +308,22 @@ public class OriginDetail extends AbstractModel {
     }
 
     /**
+     * Get 当前配置的回源 HOST 头。 
+     * @return HostHeader 当前配置的回源 HOST 头。
+     */
+    public String getHostHeader() {
+        return this.HostHeader;
+    }
+
+    /**
+     * Set 当前配置的回源 HOST 头。
+     * @param HostHeader 当前配置的回源 HOST 头。
+     */
+    public void setHostHeader(String HostHeader) {
+        this.HostHeader = HostHeader;
+    }
+
+    /**
      * Get MO 子应用 ID 
      * @return VodeoSubAppId MO 子应用 ID
      * @deprecated
@@ -428,6 +451,9 @@ public class OriginDetail extends AbstractModel {
                 this.PrivateParameters[i] = new PrivateParameter(source.PrivateParameters[i]);
             }
         }
+        if (source.HostHeader != null) {
+            this.HostHeader = new String(source.HostHeader);
+        }
         if (source.VodeoSubAppId != null) {
             this.VodeoSubAppId = new Long(source.VodeoSubAppId);
         }
@@ -457,6 +483,7 @@ public class OriginDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "BackOriginGroupName", this.BackOriginGroupName);
         this.setParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
         this.setParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
+        this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
         this.setParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
         this.setParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
         this.setParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);

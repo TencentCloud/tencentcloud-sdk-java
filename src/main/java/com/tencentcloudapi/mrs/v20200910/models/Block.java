@@ -199,6 +199,13 @@ public class Block extends AbstractModel {
     private PhysicalExaminationV1 PhysicalExamination;
 
     /**
+    * 内窥镜报告V2
+    */
+    @SerializedName("EndoscopyV2")
+    @Expose
+    private Check [] EndoscopyV2;
+
+    /**
      * Get 诊断信息 
      * @return Check 诊断信息
      */
@@ -598,6 +605,22 @@ public class Block extends AbstractModel {
         this.PhysicalExamination = PhysicalExamination;
     }
 
+    /**
+     * Get 内窥镜报告V2 
+     * @return EndoscopyV2 内窥镜报告V2
+     */
+    public Check [] getEndoscopyV2() {
+        return this.EndoscopyV2;
+    }
+
+    /**
+     * Set 内窥镜报告V2
+     * @param EndoscopyV2 内窥镜报告V2
+     */
+    public void setEndoscopyV2(Check [] EndoscopyV2) {
+        this.EndoscopyV2 = EndoscopyV2;
+    }
+
     public Block() {
     }
 
@@ -753,6 +776,12 @@ public class Block extends AbstractModel {
         if (source.PhysicalExamination != null) {
             this.PhysicalExamination = new PhysicalExaminationV1(source.PhysicalExamination);
         }
+        if (source.EndoscopyV2 != null) {
+            this.EndoscopyV2 = new Check[source.EndoscopyV2.length];
+            for (int i = 0; i < source.EndoscopyV2.length; i++) {
+                this.EndoscopyV2[i] = new Check(source.EndoscopyV2[i]);
+            }
+        }
     }
 
 
@@ -785,6 +814,7 @@ public class Block extends AbstractModel {
         this.setParamArrayObj(map, prefix + "BirthCert.", this.BirthCert);
         this.setParamArrayObj(map, prefix + "TextTypeListBlocks.", this.TextTypeListBlocks);
         this.setParamObj(map, prefix + "PhysicalExamination.", this.PhysicalExamination);
+        this.setParamArrayObj(map, prefix + "EndoscopyV2.", this.EndoscopyV2);
 
     }
 }

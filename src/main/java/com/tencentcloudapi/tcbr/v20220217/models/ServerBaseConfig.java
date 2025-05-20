@@ -186,7 +186,6 @@ public class ServerBaseConfig extends AbstractModel {
 
     /**
     * 运行模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperationMode")
     @Expose
@@ -194,7 +193,6 @@ public class ServerBaseConfig extends AbstractModel {
 
     /**
     * 定时扩缩容配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimerScale")
     @Expose
@@ -569,10 +567,8 @@ public class ServerBaseConfig extends AbstractModel {
     }
 
     /**
-     * Get 运行模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行模式 
      * @return OperationMode 运行模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperationMode() {
         return this.OperationMode;
@@ -580,19 +576,15 @@ public class ServerBaseConfig extends AbstractModel {
 
     /**
      * Set 运行模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationMode 运行模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperationMode(String OperationMode) {
         this.OperationMode = OperationMode;
     }
 
     /**
-     * Get 定时扩缩容配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时扩缩容配置 
      * @return TimerScale 定时扩缩容配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TimerScale [] getTimerScale() {
         return this.TimerScale;
@@ -600,9 +592,7 @@ public class ServerBaseConfig extends AbstractModel {
 
     /**
      * Set 定时扩缩容配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimerScale 定时扩缩容配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimerScale(TimerScale [] TimerScale) {
         this.TimerScale = TimerScale;

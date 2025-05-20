@@ -31,7 +31,7 @@ public class ModifyDomainLockRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 域名要锁定的天数，最多可锁定的天数可以通过获取域名权限接口获取。
+    * 域名要锁定的天数，最多可锁定的天数可以通过DescribeDomainPurview接口获取。
     */
     @SerializedName("LockDays")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyDomainLockRequest extends AbstractModel {
     }
 
     /**
-     * Get 域名要锁定的天数，最多可锁定的天数可以通过获取域名权限接口获取。 
-     * @return LockDays 域名要锁定的天数，最多可锁定的天数可以通过获取域名权限接口获取。
+     * Get 域名要锁定的天数，最多可锁定的天数可以通过DescribeDomainPurview接口获取。 
+     * @return LockDays 域名要锁定的天数，最多可锁定的天数可以通过DescribeDomainPurview接口获取。
      */
     public Long getLockDays() {
         return this.LockDays;
     }
 
     /**
-     * Set 域名要锁定的天数，最多可锁定的天数可以通过获取域名权限接口获取。
-     * @param LockDays 域名要锁定的天数，最多可锁定的天数可以通过获取域名权限接口获取。
+     * Set 域名要锁定的天数，最多可锁定的天数可以通过DescribeDomainPurview接口获取。
+     * @param LockDays 域名要锁定的天数，最多可锁定的天数可以通过DescribeDomainPurview接口获取。
      */
     public void setLockDays(Long LockDays) {
         this.LockDays = LockDays;

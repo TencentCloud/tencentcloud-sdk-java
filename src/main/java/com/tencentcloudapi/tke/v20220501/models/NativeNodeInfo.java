@@ -105,7 +105,7 @@ public class NativeNodeInfo extends AbstractModel {
     private String RenewFlag;
 
     /**
-    * 节点计费模式（已弃用）
+    * 节点计费模式
     */
     @SerializedName("PayMode")
     @Expose
@@ -117,6 +117,13 @@ public class NativeNodeInfo extends AbstractModel {
     @SerializedName("Memory")
     @Expose
     private Long Memory;
+
+    /**
+    * 节点系统盘配置信息
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private Disk SystemDisk;
 
     /**
     * 公网带宽相关信息设置
@@ -155,6 +162,38 @@ public class NativeNodeInfo extends AbstractModel {
     private String ExpiredTime;
 
     /**
+    * 节点外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WanIp")
+    @Expose
+    private String WanIp;
+
+    /**
+    * 节点密钥 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeyIds")
+    @Expose
+    private String [] KeyIds;
+
+    /**
+    * 节点GPU相关配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GPUParams")
+    @Expose
+    private GPUParams GPUParams;
+
+    /**
+    * 数据盘列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataDisks")
+    @Expose
+    private DataDisk [] DataDisks;
+
+    /**
     * 安全组列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -183,6 +222,16 @@ public class NativeNodeInfo extends AbstractModel {
     @SerializedName("OsImage")
     @Expose
     private String OsImage;
+
+    /**
+    * **原生节点的 Machine 类型**
+
+- Native 表示 CXM 类型的原生节点
+- NativeCVM 表示 CVM 类型的原生节点
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
 
     /**
     * **原生节点对应的实例 ID**
@@ -388,16 +437,16 @@ public class NativeNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 节点计费模式（已弃用） 
-     * @return PayMode 节点计费模式（已弃用）
+     * Get 节点计费模式 
+     * @return PayMode 节点计费模式
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 节点计费模式（已弃用）
-     * @param PayMode 节点计费模式（已弃用）
+     * Set 节点计费模式
+     * @param PayMode 节点计费模式
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
@@ -417,6 +466,22 @@ public class NativeNodeInfo extends AbstractModel {
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
+    }
+
+    /**
+     * Get 节点系统盘配置信息 
+     * @return SystemDisk 节点系统盘配置信息
+     */
+    public Disk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set 节点系统盘配置信息
+     * @param SystemDisk 节点系统盘配置信息
+     */
+    public void setSystemDisk(Disk SystemDisk) {
+        this.SystemDisk = SystemDisk;
     }
 
     /**
@@ -504,6 +569,86 @@ public class NativeNodeInfo extends AbstractModel {
     }
 
     /**
+     * Get 节点外网 IP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WanIp 节点外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWanIp() {
+        return this.WanIp;
+    }
+
+    /**
+     * Set 节点外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WanIp 节点外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWanIp(String WanIp) {
+        this.WanIp = WanIp;
+    }
+
+    /**
+     * Get 节点密钥 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeyIds 节点密钥 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getKeyIds() {
+        return this.KeyIds;
+    }
+
+    /**
+     * Set 节点密钥 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeyIds 节点密钥 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeyIds(String [] KeyIds) {
+        this.KeyIds = KeyIds;
+    }
+
+    /**
+     * Get 节点GPU相关配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GPUParams 节点GPU相关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GPUParams getGPUParams() {
+        return this.GPUParams;
+    }
+
+    /**
+     * Set 节点GPU相关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GPUParams 节点GPU相关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGPUParams(GPUParams GPUParams) {
+        this.GPUParams = GPUParams;
+    }
+
+    /**
+     * Get 数据盘列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataDisks 数据盘列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DataDisk [] getDataDisks() {
+        return this.DataDisks;
+    }
+
+    /**
+     * Set 数据盘列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataDisks 数据盘列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataDisks(DataDisk [] DataDisks) {
+        this.DataDisks = DataDisks;
+    }
+
+    /**
      * Get 安全组列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecurityGroupIDs 安全组列表
@@ -573,6 +718,34 @@ public class NativeNodeInfo extends AbstractModel {
      */
     public void setOsImage(String OsImage) {
         this.OsImage = OsImage;
+    }
+
+    /**
+     * Get **原生节点的 Machine 类型**
+
+- Native 表示 CXM 类型的原生节点
+- NativeCVM 表示 CVM 类型的原生节点 
+     * @return MachineType **原生节点的 Machine 类型**
+
+- Native 表示 CXM 类型的原生节点
+- NativeCVM 表示 CVM 类型的原生节点
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set **原生节点的 Machine 类型**
+
+- Native 表示 CXM 类型的原生节点
+- NativeCVM 表示 CVM 类型的原生节点
+     * @param MachineType **原生节点的 Machine 类型**
+
+- Native 表示 CXM 类型的原生节点
+- NativeCVM 表示 CVM 类型的原生节点
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
     }
 
     /**
@@ -654,6 +827,9 @@ public class NativeNodeInfo extends AbstractModel {
         if (source.Memory != null) {
             this.Memory = new Long(source.Memory);
         }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new Disk(source.SystemDisk);
+        }
         if (source.InternetAccessible != null) {
             this.InternetAccessible = new InternetAccessible(source.InternetAccessible);
         }
@@ -669,6 +845,24 @@ public class NativeNodeInfo extends AbstractModel {
         if (source.ExpiredTime != null) {
             this.ExpiredTime = new String(source.ExpiredTime);
         }
+        if (source.WanIp != null) {
+            this.WanIp = new String(source.WanIp);
+        }
+        if (source.KeyIds != null) {
+            this.KeyIds = new String[source.KeyIds.length];
+            for (int i = 0; i < source.KeyIds.length; i++) {
+                this.KeyIds[i] = new String(source.KeyIds[i]);
+            }
+        }
+        if (source.GPUParams != null) {
+            this.GPUParams = new GPUParams(source.GPUParams);
+        }
+        if (source.DataDisks != null) {
+            this.DataDisks = new DataDisk[source.DataDisks.length];
+            for (int i = 0; i < source.DataDisks.length; i++) {
+                this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
+            }
+        }
         if (source.SecurityGroupIDs != null) {
             this.SecurityGroupIDs = new String[source.SecurityGroupIDs.length];
             for (int i = 0; i < source.SecurityGroupIDs.length; i++) {
@@ -683,6 +877,9 @@ public class NativeNodeInfo extends AbstractModel {
         }
         if (source.OsImage != null) {
             this.OsImage = new String(source.OsImage);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
         }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
@@ -707,15 +904,21 @@ public class NativeNodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
         this.setParamSimple(map, prefix + "LanIp", this.LanIp);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+        this.setParamSimple(map, prefix + "WanIp", this.WanIp);
+        this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+        this.setParamObj(map, prefix + "GPUParams.", this.GPUParams);
+        this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamArraySimple(map, prefix + "SecurityGroupIDs.", this.SecurityGroupIDs);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "OsImage", this.OsImage);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }

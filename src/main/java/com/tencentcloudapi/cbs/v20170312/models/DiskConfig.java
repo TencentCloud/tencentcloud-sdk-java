@@ -53,14 +53,20 @@ public class DiskConfig extends AbstractModel {
     private String InstanceFamily;
 
     /**
-    * 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
+    * 云盘介质类型。取值范围：<br>
+CLOUD_BASIC：表示普通云硬盘<br>
+CLOUD_PREMIUM：表示高性能云硬盘<br>
+CLOUD_BSSD：表示通用型SSD云硬盘<br>
+CLOUD_SSD：表示SSD云硬盘<br>
+CLOUD_HSSD：表示增强型SSD云硬盘<br>
+CLOUD_TSSD：表示极速型SSD云硬盘。
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * 云盘大小变化的最小步长，单位GB。
+    * 云盘大小变化的最小步长，单位GiB。
     */
     @SerializedName("StepSize")
     @Expose
@@ -90,14 +96,14 @@ public class DiskConfig extends AbstractModel {
     private String DiskUsage;
 
     /**
-    * 最小可配置云盘大小，单位GB。
+    * 最小可配置云盘大小，单位GiB。
     */
     @SerializedName("MinDiskSize")
     @Expose
     private Long MinDiskSize;
 
     /**
-    * 最大可配置云盘大小，单位GB。
+    * 最大可配置云盘大小，单位GiB。
     */
     @SerializedName("MaxDiskSize")
     @Expose
@@ -179,32 +185,56 @@ public class DiskConfig extends AbstractModel {
     }
 
     /**
-     * Get 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li> 
-     * @return DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
+     * Get 云盘介质类型。取值范围：<br>
+CLOUD_BASIC：表示普通云硬盘<br>
+CLOUD_PREMIUM：表示高性能云硬盘<br>
+CLOUD_BSSD：表示通用型SSD云硬盘<br>
+CLOUD_SSD：表示SSD云硬盘<br>
+CLOUD_HSSD：表示增强型SSD云硬盘<br>
+CLOUD_TSSD：表示极速型SSD云硬盘。 
+     * @return DiskType 云盘介质类型。取值范围：<br>
+CLOUD_BASIC：表示普通云硬盘<br>
+CLOUD_PREMIUM：表示高性能云硬盘<br>
+CLOUD_BSSD：表示通用型SSD云硬盘<br>
+CLOUD_SSD：表示SSD云硬盘<br>
+CLOUD_HSSD：表示增强型SSD云硬盘<br>
+CLOUD_TSSD：表示极速型SSD云硬盘。
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
-     * @param DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
+     * Set 云盘介质类型。取值范围：<br>
+CLOUD_BASIC：表示普通云硬盘<br>
+CLOUD_PREMIUM：表示高性能云硬盘<br>
+CLOUD_BSSD：表示通用型SSD云硬盘<br>
+CLOUD_SSD：表示SSD云硬盘<br>
+CLOUD_HSSD：表示增强型SSD云硬盘<br>
+CLOUD_TSSD：表示极速型SSD云硬盘。
+     * @param DiskType 云盘介质类型。取值范围：<br>
+CLOUD_BASIC：表示普通云硬盘<br>
+CLOUD_PREMIUM：表示高性能云硬盘<br>
+CLOUD_BSSD：表示通用型SSD云硬盘<br>
+CLOUD_SSD：表示SSD云硬盘<br>
+CLOUD_HSSD：表示增强型SSD云硬盘<br>
+CLOUD_TSSD：表示极速型SSD云硬盘。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 云盘大小变化的最小步长，单位GB。 
-     * @return StepSize 云盘大小变化的最小步长，单位GB。
+     * Get 云盘大小变化的最小步长，单位GiB。 
+     * @return StepSize 云盘大小变化的最小步长，单位GiB。
      */
     public Long getStepSize() {
         return this.StepSize;
     }
 
     /**
-     * Set 云盘大小变化的最小步长，单位GB。
-     * @param StepSize 云盘大小变化的最小步长，单位GB。
+     * Set 云盘大小变化的最小步长，单位GiB。
+     * @param StepSize 云盘大小变化的最小步长，单位GiB。
      */
     public void setStepSize(Long StepSize) {
         this.StepSize = StepSize;
@@ -267,32 +297,32 @@ public class DiskConfig extends AbstractModel {
     }
 
     /**
-     * Get 最小可配置云盘大小，单位GB。 
-     * @return MinDiskSize 最小可配置云盘大小，单位GB。
+     * Get 最小可配置云盘大小，单位GiB。 
+     * @return MinDiskSize 最小可配置云盘大小，单位GiB。
      */
     public Long getMinDiskSize() {
         return this.MinDiskSize;
     }
 
     /**
-     * Set 最小可配置云盘大小，单位GB。
-     * @param MinDiskSize 最小可配置云盘大小，单位GB。
+     * Set 最小可配置云盘大小，单位GiB。
+     * @param MinDiskSize 最小可配置云盘大小，单位GiB。
      */
     public void setMinDiskSize(Long MinDiskSize) {
         this.MinDiskSize = MinDiskSize;
     }
 
     /**
-     * Get 最大可配置云盘大小，单位GB。 
-     * @return MaxDiskSize 最大可配置云盘大小，单位GB。
+     * Get 最大可配置云盘大小，单位GiB。 
+     * @return MaxDiskSize 最大可配置云盘大小，单位GiB。
      */
     public Long getMaxDiskSize() {
         return this.MaxDiskSize;
     }
 
     /**
-     * Set 最大可配置云盘大小，单位GB。
-     * @param MaxDiskSize 最大可配置云盘大小，单位GB。
+     * Set 最大可配置云盘大小，单位GiB。
+     * @param MaxDiskSize 最大可配置云盘大小，单位GiB。
      */
     public void setMaxDiskSize(Long MaxDiskSize) {
         this.MaxDiskSize = MaxDiskSize;

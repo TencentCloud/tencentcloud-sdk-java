@@ -150,6 +150,20 @@ public class CreateLogstashInstanceRequest extends AbstractModel {
     private OperationDuration OperationDuration;
 
     /**
+    * 多可用区部署时可用区的详细信息
+    */
+    @SerializedName("MultiZoneInfo")
+    @Expose
+    private ZoneDetail [] MultiZoneInfo;
+
+    /**
+    * 部署模式，0：单可用区、1：多可用区
+    */
+    @SerializedName("DeployMode")
+    @Expose
+    private Long DeployMode;
+
+    /**
      * Get 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_） 
      * @return InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      */
@@ -437,6 +451,38 @@ public class CreateLogstashInstanceRequest extends AbstractModel {
         this.OperationDuration = OperationDuration;
     }
 
+    /**
+     * Get 多可用区部署时可用区的详细信息 
+     * @return MultiZoneInfo 多可用区部署时可用区的详细信息
+     */
+    public ZoneDetail [] getMultiZoneInfo() {
+        return this.MultiZoneInfo;
+    }
+
+    /**
+     * Set 多可用区部署时可用区的详细信息
+     * @param MultiZoneInfo 多可用区部署时可用区的详细信息
+     */
+    public void setMultiZoneInfo(ZoneDetail [] MultiZoneInfo) {
+        this.MultiZoneInfo = MultiZoneInfo;
+    }
+
+    /**
+     * Get 部署模式，0：单可用区、1：多可用区 
+     * @return DeployMode 部署模式，0：单可用区、1：多可用区
+     */
+    public Long getDeployMode() {
+        return this.DeployMode;
+    }
+
+    /**
+     * Set 部署模式，0：单可用区、1：多可用区
+     * @param DeployMode 部署模式，0：单可用区、1：多可用区
+     */
+    public void setDeployMode(Long DeployMode) {
+        this.DeployMode = DeployMode;
+    }
+
     public CreateLogstashInstanceRequest() {
     }
 
@@ -505,6 +551,15 @@ public class CreateLogstashInstanceRequest extends AbstractModel {
         if (source.OperationDuration != null) {
             this.OperationDuration = new OperationDuration(source.OperationDuration);
         }
+        if (source.MultiZoneInfo != null) {
+            this.MultiZoneInfo = new ZoneDetail[source.MultiZoneInfo.length];
+            for (int i = 0; i < source.MultiZoneInfo.length; i++) {
+                this.MultiZoneInfo[i] = new ZoneDetail(source.MultiZoneInfo[i]);
+            }
+        }
+        if (source.DeployMode != null) {
+            this.DeployMode = new Long(source.DeployMode);
+        }
     }
 
 
@@ -530,6 +585,8 @@ public class CreateLogstashInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+        this.setParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
+        this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
 
     }
 }

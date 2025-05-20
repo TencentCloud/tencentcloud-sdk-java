@@ -66,20 +66,6 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private String Interval;
 
     /**
-    * 检测Url
-    */
-    @SerializedName("Url")
-    @Expose
-    private String Url;
-
-    /**
-    * 匹配方法，0表示等于，1表示前缀匹配，2表示包含，3表示不等于，6表示后缀匹配，7表示不包含
-    */
-    @SerializedName("MatchFunc")
-    @Expose
-    private Long MatchFunc;
-
-    /**
     * 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
     */
     @SerializedName("ActionType")
@@ -99,6 +85,20 @@ public class UpsertCCRuleRequest extends AbstractModel {
     @SerializedName("ValidTime")
     @Expose
     private Long ValidTime;
+
+    /**
+    * 检测Url
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+    * 匹配方法，0表示等于，1表示前缀匹配，2表示包含，3表示不等于，6表示后缀匹配，7表示不包含
+    */
+    @SerializedName("MatchFunc")
+    @Expose
+    private Long MatchFunc;
 
     /**
     * CC的匹配条件JSON序列化的字符串，示例：[{\"key\":\"Method\",\"args\":[\"=R0VU\"],\"match\":\"0\",\"encodeflag\":true}] Key可选值为 Method、Post、Referer、Cookie、User-Agent、CustomHeader match可选值为，当Key为Method的时候可选值为0（等于）、3（不等于）。 Key为Post的时候可选值为0（等于）、3（不等于），Key为Cookie的时候可选值为0（等于）、2（包含），3（不等于）、7（不包含）、 当Key为Referer的时候可选值为0（等于）、3（不等于）、1（前缀匹配）、6（后缀匹配）、2（包含）、7（不包含）、12（存在）、5（不存在）、4（内容为空）， 当Key为Cookie的时候可选值为0（等于）、3（不等于）、2（包含）、7（不包含）、12（存在）、5（不存在）、4（内容为空）， 当Key为User-Agent的时候可选值为0（等于）、3（不等于）、1（前缀匹配）、6（后缀匹配）、2（包含）、7（不包含）、12（存在）、5（不存在）、4（内容为空）， 当Key为CustomHeader的时候可选值为0（等于）、3（不等于）、2（包含）、7（不包含）、12（存在）、5（不存在）、4（内容为空）。 Key为IPLocation时，可选值为13（属于）、14（不属于）。args用来表示匹配内容，需要设置encodeflag为true，当Key为Post、Cookie、CustomHeader时，用等号=来分别串接Key和Value，并分别用Base64编码，类似YWJj=YWJj。当Key为Referer、User-Agent时，用等号=来串接Value，类似=YWJj。
@@ -162,6 +162,20 @@ public class UpsertCCRuleRequest extends AbstractModel {
     @SerializedName("LimitMethod")
     @Expose
     private String LimitMethod;
+
+    /**
+    * cel表达式
+    */
+    @SerializedName("CelRule")
+    @Expose
+    private String CelRule;
+
+    /**
+    * 配置方式的逻辑操作符，and或者or
+    */
+    @SerializedName("LogicalOp")
+    @Expose
+    private String LogicalOp;
 
     /**
      * Get 域名 
@@ -260,38 +274,6 @@ public class UpsertCCRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 检测Url 
-     * @return Url 检测Url
-     */
-    public String getUrl() {
-        return this.Url;
-    }
-
-    /**
-     * Set 检测Url
-     * @param Url 检测Url
-     */
-    public void setUrl(String Url) {
-        this.Url = Url;
-    }
-
-    /**
-     * Get 匹配方法，0表示等于，1表示前缀匹配，2表示包含，3表示不等于，6表示后缀匹配，7表示不包含 
-     * @return MatchFunc 匹配方法，0表示等于，1表示前缀匹配，2表示包含，3表示不等于，6表示后缀匹配，7表示不包含
-     */
-    public Long getMatchFunc() {
-        return this.MatchFunc;
-    }
-
-    /**
-     * Set 匹配方法，0表示等于，1表示前缀匹配，2表示包含，3表示不等于，6表示后缀匹配，7表示不包含
-     * @param MatchFunc 匹配方法，0表示等于，1表示前缀匹配，2表示包含，3表示不等于，6表示后缀匹配，7表示不包含
-     */
-    public void setMatchFunc(Long MatchFunc) {
-        this.MatchFunc = MatchFunc;
-    }
-
-    /**
      * Get 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验 
      * @return ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
      */
@@ -337,6 +319,38 @@ public class UpsertCCRuleRequest extends AbstractModel {
      */
     public void setValidTime(Long ValidTime) {
         this.ValidTime = ValidTime;
+    }
+
+    /**
+     * Get 检测Url 
+     * @return Url 检测Url
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 检测Url
+     * @param Url 检测Url
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * Get 匹配方法，0表示等于，1表示前缀匹配，2表示包含，3表示不等于，6表示后缀匹配，7表示不包含 
+     * @return MatchFunc 匹配方法，0表示等于，1表示前缀匹配，2表示包含，3表示不等于，6表示后缀匹配，7表示不包含
+     */
+    public Long getMatchFunc() {
+        return this.MatchFunc;
+    }
+
+    /**
+     * Set 匹配方法，0表示等于，1表示前缀匹配，2表示包含，3表示不等于，6表示后缀匹配，7表示不包含
+     * @param MatchFunc 匹配方法，0表示等于，1表示前缀匹配，2表示包含，3表示不等于，6表示后缀匹配，7表示不包含
+     */
+    public void setMatchFunc(Long MatchFunc) {
+        this.MatchFunc = MatchFunc;
     }
 
     /**
@@ -483,6 +497,38 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.LimitMethod = LimitMethod;
     }
 
+    /**
+     * Get cel表达式 
+     * @return CelRule cel表达式
+     */
+    public String getCelRule() {
+        return this.CelRule;
+    }
+
+    /**
+     * Set cel表达式
+     * @param CelRule cel表达式
+     */
+    public void setCelRule(String CelRule) {
+        this.CelRule = CelRule;
+    }
+
+    /**
+     * Get 配置方式的逻辑操作符，and或者or 
+     * @return LogicalOp 配置方式的逻辑操作符，and或者or
+     */
+    public String getLogicalOp() {
+        return this.LogicalOp;
+    }
+
+    /**
+     * Set 配置方式的逻辑操作符，and或者or
+     * @param LogicalOp 配置方式的逻辑操作符，and或者or
+     */
+    public void setLogicalOp(String LogicalOp) {
+        this.LogicalOp = LogicalOp;
+    }
+
     public UpsertCCRuleRequest() {
     }
 
@@ -509,12 +555,6 @@ public class UpsertCCRuleRequest extends AbstractModel {
         if (source.Interval != null) {
             this.Interval = new String(source.Interval);
         }
-        if (source.Url != null) {
-            this.Url = new String(source.Url);
-        }
-        if (source.MatchFunc != null) {
-            this.MatchFunc = new Long(source.MatchFunc);
-        }
         if (source.ActionType != null) {
             this.ActionType = new String(source.ActionType);
         }
@@ -523,6 +563,12 @@ public class UpsertCCRuleRequest extends AbstractModel {
         }
         if (source.ValidTime != null) {
             this.ValidTime = new Long(source.ValidTime);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.MatchFunc != null) {
+            this.MatchFunc = new Long(source.MatchFunc);
         }
         if (source.OptionsArr != null) {
             this.OptionsArr = new String(source.OptionsArr);
@@ -554,6 +600,12 @@ public class UpsertCCRuleRequest extends AbstractModel {
         if (source.LimitMethod != null) {
             this.LimitMethod = new String(source.LimitMethod);
         }
+        if (source.CelRule != null) {
+            this.CelRule = new String(source.CelRule);
+        }
+        if (source.LogicalOp != null) {
+            this.LogicalOp = new String(source.LogicalOp);
+        }
     }
 
 
@@ -567,11 +619,11 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Advance", this.Advance);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
-        this.setParamSimple(map, prefix + "Url", this.Url);
-        this.setParamSimple(map, prefix + "MatchFunc", this.MatchFunc);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "ValidTime", this.ValidTime);
+        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "MatchFunc", this.MatchFunc);
         this.setParamSimple(map, prefix + "OptionsArr", this.OptionsArr);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "Type", this.Type);
@@ -581,6 +633,8 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Length", this.Length);
         this.setParamSimple(map, prefix + "LimitMethod", this.LimitMethod);
+        this.setParamSimple(map, prefix + "CelRule", this.CelRule);
+        this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
 
     }
 }

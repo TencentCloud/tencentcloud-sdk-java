@@ -180,6 +180,13 @@ deleted:已删除
     private String CynosVersion;
 
     /**
+    * cynos版本标签
+    */
+    @SerializedName("CynosVersionTag")
+    @Expose
+    private String CynosVersionTag;
+
+    /**
     * 存储容量
     */
     @SerializedName("StorageLimit")
@@ -341,6 +348,13 @@ pause
     @SerializedName("GdnId")
     @Expose
     private String GdnId;
+
+    /**
+    * 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
+    */
+    @SerializedName("GdnRole")
+    @Expose
+    private String GdnRole;
 
     /**
      * Get 集群状态， 可选值如下:
@@ -712,6 +726,22 @@ deleted:已删除
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
+    }
+
+    /**
+     * Get cynos版本标签 
+     * @return CynosVersionTag cynos版本标签
+     */
+    public String getCynosVersionTag() {
+        return this.CynosVersionTag;
+    }
+
+    /**
+     * Set cynos版本标签
+     * @param CynosVersionTag cynos版本标签
+     */
+    public void setCynosVersionTag(String CynosVersionTag) {
+        this.CynosVersionTag = CynosVersionTag;
     }
 
     /**
@@ -1090,6 +1120,22 @@ pause
         this.GdnId = GdnId;
     }
 
+    /**
+     * Get 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。 
+     * @return GdnRole 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
+     */
+    public String getGdnRole() {
+        return this.GdnRole;
+    }
+
+    /**
+     * Set 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
+     * @param GdnRole 集群角色。主集群- primary，从集群 - standby，如果 GdnId为空，该字段无效。
+     */
+    public void setGdnRole(String GdnRole) {
+        this.GdnRole = GdnRole;
+    }
+
     public CynosdbCluster() {
     }
 
@@ -1160,6 +1206,9 @@ pause
         }
         if (source.CynosVersion != null) {
             this.CynosVersion = new String(source.CynosVersion);
+        }
+        if (source.CynosVersionTag != null) {
+            this.CynosVersionTag = new String(source.CynosVersionTag);
         }
         if (source.StorageLimit != null) {
             this.StorageLimit = new Long(source.StorageLimit);
@@ -1245,6 +1294,9 @@ pause
         if (source.GdnId != null) {
             this.GdnId = new String(source.GdnId);
         }
+        if (source.GdnRole != null) {
+            this.GdnRole = new String(source.GdnRole);
+        }
     }
 
 
@@ -1273,6 +1325,7 @@ pause
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
+        this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
         this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "ProcessingTask", this.ProcessingTask);
@@ -1296,6 +1349,7 @@ pause
         this.setParamObj(map, prefix + "Ability.", this.Ability);
         this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
         this.setParamSimple(map, prefix + "GdnId", this.GdnId);
+        this.setParamSimple(map, prefix + "GdnRole", this.GdnRole);
 
     }
 }

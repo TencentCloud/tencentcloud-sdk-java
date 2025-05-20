@@ -143,6 +143,20 @@ public class CCRuleItems extends AbstractModel {
     private String LimitMethod;
 
     /**
+    * cel表达式
+    */
+    @SerializedName("CelRule")
+    @Expose
+    private String CelRule;
+
+    /**
+    * 逻辑操作符
+    */
+    @SerializedName("LogicalOp")
+    @Expose
+    private String LogicalOp;
+
+    /**
      * Get 名字 
      * @return Name 名字
      */
@@ -414,6 +428,38 @@ public class CCRuleItems extends AbstractModel {
         this.LimitMethod = LimitMethod;
     }
 
+    /**
+     * Get cel表达式 
+     * @return CelRule cel表达式
+     */
+    public String getCelRule() {
+        return this.CelRule;
+    }
+
+    /**
+     * Set cel表达式
+     * @param CelRule cel表达式
+     */
+    public void setCelRule(String CelRule) {
+        this.CelRule = CelRule;
+    }
+
+    /**
+     * Get 逻辑操作符 
+     * @return LogicalOp 逻辑操作符
+     */
+    public String getLogicalOp() {
+        return this.LogicalOp;
+    }
+
+    /**
+     * Set 逻辑操作符
+     * @param LogicalOp 逻辑操作符
+     */
+    public void setLogicalOp(String LogicalOp) {
+        this.LogicalOp = LogicalOp;
+    }
+
     public CCRuleItems() {
     }
 
@@ -476,6 +522,12 @@ public class CCRuleItems extends AbstractModel {
         if (source.LimitMethod != null) {
             this.LimitMethod = new String(source.LimitMethod);
         }
+        if (source.CelRule != null) {
+            this.CelRule = new String(source.CelRule);
+        }
+        if (source.LogicalOp != null) {
+            this.LogicalOp = new String(source.LogicalOp);
+        }
     }
 
 
@@ -500,6 +552,8 @@ public class CCRuleItems extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SessionApplied.", this.SessionApplied);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "LimitMethod", this.LimitMethod);
+        this.setParamSimple(map, prefix + "CelRule", this.CelRule);
+        this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
 
     }
 }

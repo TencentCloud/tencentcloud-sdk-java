@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeHpcClustersRequest extends AbstractModel {
 
     /**
-    * 高性能计算集群ID数组。
+    * 一个或多个待操作的高性能计算集群ID。集群ID信息可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。每次请求高性能计算集群信息的批量上限为100，默认配合Limit传参数，不能超过Limit值，Limit默认20。
     */
     @SerializedName("HpcClusterIds")
     @Expose
     private String [] HpcClusterIds;
 
     /**
-    * 高性能计算集群名称。
+    * 高性能计算集群名称，长度限制[1-60]。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 可用区。
+    * 可用区信息。可用区信息可通过 [查询可用区信息](https://cloud.tencent.com/document/api/213/15707) 接口获取。
     */
     @SerializedName("Zone")
     @Expose
@@ -52,21 +52,21 @@ public class DescribeHpcClustersRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 本次请求量, 默认值20。
+    * 本次请求量, 默认值20，范围限制为[1-100]。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 高性能计算集群类型。
+    * 高性能计算集群类型，当前有三个取值：分别是CDC/CHC/STANDARD，其中STANDARD是默认的标准模式。
     */
     @SerializedName("HpcClusterType")
     @Expose
     private String HpcClusterType;
 
     /**
-    * 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+    * 高性能计算集群对应的业务场景标识，当前只支持CDC场景类型。	
     */
     @SerializedName("HpcClusterBusinessId")
     @Expose
@@ -87,48 +87,48 @@ public class DescribeHpcClustersRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get 高性能计算集群ID数组。 
-     * @return HpcClusterIds 高性能计算集群ID数组。
+     * Get 一个或多个待操作的高性能计算集群ID。集群ID信息可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。每次请求高性能计算集群信息的批量上限为100，默认配合Limit传参数，不能超过Limit值，Limit默认20。 
+     * @return HpcClusterIds 一个或多个待操作的高性能计算集群ID。集群ID信息可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。每次请求高性能计算集群信息的批量上限为100，默认配合Limit传参数，不能超过Limit值，Limit默认20。
      */
     public String [] getHpcClusterIds() {
         return this.HpcClusterIds;
     }
 
     /**
-     * Set 高性能计算集群ID数组。
-     * @param HpcClusterIds 高性能计算集群ID数组。
+     * Set 一个或多个待操作的高性能计算集群ID。集群ID信息可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。每次请求高性能计算集群信息的批量上限为100，默认配合Limit传参数，不能超过Limit值，Limit默认20。
+     * @param HpcClusterIds 一个或多个待操作的高性能计算集群ID。集群ID信息可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。每次请求高性能计算集群信息的批量上限为100，默认配合Limit传参数，不能超过Limit值，Limit默认20。
      */
     public void setHpcClusterIds(String [] HpcClusterIds) {
         this.HpcClusterIds = HpcClusterIds;
     }
 
     /**
-     * Get 高性能计算集群名称。 
-     * @return Name 高性能计算集群名称。
+     * Get 高性能计算集群名称，长度限制[1-60]。 
+     * @return Name 高性能计算集群名称，长度限制[1-60]。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 高性能计算集群名称。
-     * @param Name 高性能计算集群名称。
+     * Set 高性能计算集群名称，长度限制[1-60]。
+     * @param Name 高性能计算集群名称，长度限制[1-60]。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 可用区。 
-     * @return Zone 可用区。
+     * Get 可用区信息。可用区信息可通过 [查询可用区信息](https://cloud.tencent.com/document/api/213/15707) 接口获取。 
+     * @return Zone 可用区信息。可用区信息可通过 [查询可用区信息](https://cloud.tencent.com/document/api/213/15707) 接口获取。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区。
-     * @param Zone 可用区。
+     * Set 可用区信息。可用区信息可通过 [查询可用区信息](https://cloud.tencent.com/document/api/213/15707) 接口获取。
+     * @param Zone 可用区信息。可用区信息可通过 [查询可用区信息](https://cloud.tencent.com/document/api/213/15707) 接口获取。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -151,48 +151,48 @@ public class DescribeHpcClustersRequest extends AbstractModel {
     }
 
     /**
-     * Get 本次请求量, 默认值20。 
-     * @return Limit 本次请求量, 默认值20。
+     * Get 本次请求量, 默认值20，范围限制为[1-100]。 
+     * @return Limit 本次请求量, 默认值20，范围限制为[1-100]。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 本次请求量, 默认值20。
-     * @param Limit 本次请求量, 默认值20。
+     * Set 本次请求量, 默认值20，范围限制为[1-100]。
+     * @param Limit 本次请求量, 默认值20，范围限制为[1-100]。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 高性能计算集群类型。 
-     * @return HpcClusterType 高性能计算集群类型。
+     * Get 高性能计算集群类型，当前有三个取值：分别是CDC/CHC/STANDARD，其中STANDARD是默认的标准模式。 
+     * @return HpcClusterType 高性能计算集群类型，当前有三个取值：分别是CDC/CHC/STANDARD，其中STANDARD是默认的标准模式。
      */
     public String getHpcClusterType() {
         return this.HpcClusterType;
     }
 
     /**
-     * Set 高性能计算集群类型。
-     * @param HpcClusterType 高性能计算集群类型。
+     * Set 高性能计算集群类型，当前有三个取值：分别是CDC/CHC/STANDARD，其中STANDARD是默认的标准模式。
+     * @param HpcClusterType 高性能计算集群类型，当前有三个取值：分别是CDC/CHC/STANDARD，其中STANDARD是默认的标准模式。
      */
     public void setHpcClusterType(String HpcClusterType) {
         this.HpcClusterType = HpcClusterType;
     }
 
     /**
-     * Get 高性能计算集群对应的业务场景标识，当前只支持CDC。	 
-     * @return HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+     * Get 高性能计算集群对应的业务场景标识，当前只支持CDC场景类型。	 
+     * @return HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC场景类型。	
      */
     public String getHpcClusterBusinessId() {
         return this.HpcClusterBusinessId;
     }
 
     /**
-     * Set 高性能计算集群对应的业务场景标识，当前只支持CDC。	
-     * @param HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+     * Set 高性能计算集群对应的业务场景标识，当前只支持CDC场景类型。	
+     * @param HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC场景类型。	
      */
     public void setHpcClusterBusinessId(String HpcClusterBusinessId) {
         this.HpcClusterBusinessId = HpcClusterBusinessId;

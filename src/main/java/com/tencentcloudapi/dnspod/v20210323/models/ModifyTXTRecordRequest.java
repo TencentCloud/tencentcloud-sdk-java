@@ -45,14 +45,14 @@ public class ModifyTXTRecordRequest extends AbstractModel {
     private String Value;
 
     /**
-    * 记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+    * 记录 ID 。
     */
     @SerializedName("RecordId")
     @Expose
     private Long RecordId;
 
     /**
-    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
     */
     @SerializedName("DomainId")
     @Expose
@@ -142,32 +142,32 @@ public class ModifyTXTRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId 
-     * @return RecordId 记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+     * Get 记录 ID 。 
+     * @return RecordId 记录 ID 。
      */
     public Long getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set 记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
-     * @param RecordId 记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+     * Set 记录 ID 。
+     * @param RecordId 记录 ID 。
      */
     public void setRecordId(Long RecordId) {
         this.RecordId = RecordId;
     }
 
     /**
-     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId 
-     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。 
+     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
-     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;

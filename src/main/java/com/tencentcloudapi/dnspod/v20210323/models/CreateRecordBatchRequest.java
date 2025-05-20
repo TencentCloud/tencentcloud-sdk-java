@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRecordBatchRequest extends AbstractModel {
 
     /**
-    * 域名ID，多个 domain_id 用英文逗号进行分割。
+    * 域名ID，多个域名ID用英文逗号进行分割。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
     */
     @SerializedName("DomainIdList")
     @Expose
@@ -38,16 +38,16 @@ public class CreateRecordBatchRequest extends AbstractModel {
     private AddRecordBatch [] RecordList;
 
     /**
-     * Get 域名ID，多个 domain_id 用英文逗号进行分割。 
-     * @return DomainIdList 域名ID，多个 domain_id 用英文逗号进行分割。
+     * Get 域名ID，多个域名ID用英文逗号进行分割。可以通过接口DescribeDomainList查到所有的Domain以及DomainId 
+     * @return DomainIdList 域名ID，多个域名ID用英文逗号进行分割。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public String [] getDomainIdList() {
         return this.DomainIdList;
     }
 
     /**
-     * Set 域名ID，多个 domain_id 用英文逗号进行分割。
-     * @param DomainIdList 域名ID，多个 domain_id 用英文逗号进行分割。
+     * Set 域名ID，多个域名ID用英文逗号进行分割。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @param DomainIdList 域名ID，多个域名ID用英文逗号进行分割。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public void setDomainIdList(String [] DomainIdList) {
         this.DomainIdList = DomainIdList;

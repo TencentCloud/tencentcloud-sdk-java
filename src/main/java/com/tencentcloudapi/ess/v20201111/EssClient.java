@@ -1297,6 +1297,19 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *生成个人用户实名更名链接，个人用户点击此链接进入更名流程（若用户未完成实名认证，则直接进入实名页面实名后再进行更名）。此链接为通用链接，任何点击生成链接的用户将会被引导至小程序个人更名页面完成更名。
+
+注： 调用此接口需要购买<font color="red"><b>单独的实名套餐包</b></font>。使用前请联系对接的客户经理沟通。
+     * @param req CreateUserNameChangeUrlRequest
+     * @return CreateUserNameChangeUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserNameChangeUrlResponse CreateUserNameChangeUrl(CreateUserNameChangeUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserNameChangeUrl", CreateUserNameChangeUrlResponse.class);
+    }
+
+    /**
      *生成个人用户实名认证链接，个人用户点击此链接进入实名流程（若用户已完成实名认证，则直接进入成功页面）。
 
 注： 调用此接口需要购买<font color="red"><b>单独的实名套餐包</b></font>。使用前请联系对接的客户经理沟通。

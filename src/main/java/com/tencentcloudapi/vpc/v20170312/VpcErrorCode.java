@@ -696,6 +696,9 @@ public enum VpcErrorCode {
      /* 指定IP地址已经在使用中。 */
      RESOURCEINUSE_ADDRESS("ResourceInUse.Address"),
      
+     /* 当前NAT实例已关联云防火墙，不可删除。 */
+     RESOURCEINUSE_NATUSEDBYCFW("ResourceInUse.NatUsedByCFW"),
+     
      /* 资源不足。 */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
@@ -842,6 +845,9 @@ public enum VpcErrorCode {
      
      /* 流量计量类型云联网暂不支持跨境 */
      UNSUPPORTEDOPERATION_CCNTRAFFICMETERINGUNABLECROSSBORDER("UnsupportedOperation.CcnTrafficMeteringUnableCrossBorder"),
+     
+     /* 配置Cdc子网发布前需要先设置VPC属性CdcId。 */
+     UNSUPPORTEDOPERATION_CDCPUBLISHNEEDCDCID("UnsupportedOperation.CdcPublishNeedCdcId"),
      
      /* CDC子网不支持创建非本地网关类型的路由。 */
      UNSUPPORTEDOPERATION_CDCSUBNETNOTSUPPORTUNLOCALGATEWAY("UnsupportedOperation.CdcSubnetNotSupportUnLocalGateway"),
@@ -1184,6 +1190,9 @@ public enum VpcErrorCode {
      
      /* SSL客户端状态不可用，不支持下载 */
      UNSUPPORTEDOPERATION_SSLCLIENTCERTDISABLEUNSUPPORTEDDOWNLOADSSLCLIENTCERT("UnsupportedOperation.SSLClientCertDisableUnsupportedDownloadSSLClientCert"),
+     
+     /* 安全组展开后的规则已达到上限。 */
+     UNSUPPORTEDOPERATION_SGNUMEXCEEDLIMIT("UnsupportedOperation.SgNumExceedLimit"),
      
      /* 实例已关联快照策略。 */
      UNSUPPORTEDOPERATION_SNAPSHOTATTACHED("UnsupportedOperation.SnapshotAttached"),

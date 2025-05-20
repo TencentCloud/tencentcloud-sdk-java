@@ -87,6 +87,13 @@ public class ModifyCustomWhiteRuleRequest extends AbstractModel {
     private JobDateTime JobDateTime;
 
     /**
+    * 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+    */
+    @SerializedName("LogicalOp")
+    @Expose
+    private String LogicalOp;
+
+    /**
      * Get 编辑的域名 
      * @return Domain 编辑的域名
      */
@@ -230,6 +237,22 @@ public class ModifyCustomWhiteRuleRequest extends AbstractModel {
         this.JobDateTime = JobDateTime;
     }
 
+    /**
+     * Get 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系 
+     * @return LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public String getLogicalOp() {
+        return this.LogicalOp;
+    }
+
+    /**
+     * Set 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     * @param LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public void setLogicalOp(String LogicalOp) {
+        this.LogicalOp = LogicalOp;
+    }
+
     public ModifyCustomWhiteRuleRequest() {
     }
 
@@ -268,6 +291,9 @@ public class ModifyCustomWhiteRuleRequest extends AbstractModel {
         if (source.JobDateTime != null) {
             this.JobDateTime = new JobDateTime(source.JobDateTime);
         }
+        if (source.LogicalOp != null) {
+            this.LogicalOp = new String(source.LogicalOp);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class ModifyCustomWhiteRuleRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Strategies.", this.Strategies);
         this.setParamSimple(map, prefix + "JobType", this.JobType);
         this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+        this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
 
     }
 }

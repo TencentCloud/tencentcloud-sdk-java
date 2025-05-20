@@ -108,7 +108,11 @@ public class Task extends AbstractModel {
     private Authentication [] Authentications;
 
     /**
-    * TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+    * TaskInstance失败后处理方式，取值包括
+
+- TERMINATE：销毁计算实例（默认）、
+- INTERRUPT：中断任务，保留计算实例、
+- FAST_INTERRUPT： 快速中断任务， 保留计算实例。
     */
     @SerializedName("FailedAction")
     @Expose
@@ -349,16 +353,32 @@ public class Task extends AbstractModel {
     }
 
     /**
-     * Get TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。 
-     * @return FailedAction TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+     * Get TaskInstance失败后处理方式，取值包括
+
+- TERMINATE：销毁计算实例（默认）、
+- INTERRUPT：中断任务，保留计算实例、
+- FAST_INTERRUPT： 快速中断任务， 保留计算实例。 
+     * @return FailedAction TaskInstance失败后处理方式，取值包括
+
+- TERMINATE：销毁计算实例（默认）、
+- INTERRUPT：中断任务，保留计算实例、
+- FAST_INTERRUPT： 快速中断任务， 保留计算实例。
      */
     public String getFailedAction() {
         return this.FailedAction;
     }
 
     /**
-     * Set TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
-     * @param FailedAction TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+     * Set TaskInstance失败后处理方式，取值包括
+
+- TERMINATE：销毁计算实例（默认）、
+- INTERRUPT：中断任务，保留计算实例、
+- FAST_INTERRUPT： 快速中断任务， 保留计算实例。
+     * @param FailedAction TaskInstance失败后处理方式，取值包括
+
+- TERMINATE：销毁计算实例（默认）、
+- INTERRUPT：中断任务，保留计算实例、
+- FAST_INTERRUPT： 快速中断任务， 保留计算实例。
      */
     public void setFailedAction(String FailedAction) {
         this.FailedAction = FailedAction;

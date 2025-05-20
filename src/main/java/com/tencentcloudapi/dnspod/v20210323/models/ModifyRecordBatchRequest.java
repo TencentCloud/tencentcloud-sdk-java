@@ -52,7 +52,7 @@ public class ModifyRecordBatchRequest extends AbstractModel {
     private String Value;
 
     /**
-    * MX记录优先级，仅当修改为 MX 记录时为必填参数。
+    * MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
     */
     @SerializedName("MX")
     @Expose
@@ -123,16 +123,16 @@ public class ModifyRecordBatchRequest extends AbstractModel {
     }
 
     /**
-     * Get MX记录优先级，仅当修改为 MX 记录时为必填参数。 
-     * @return MX MX记录优先级，仅当修改为 MX 记录时为必填参数。
+     * Get MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。 
+     * @return MX MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
      */
     public String getMX() {
         return this.MX;
     }
 
     /**
-     * Set MX记录优先级，仅当修改为 MX 记录时为必填参数。
-     * @param MX MX记录优先级，仅当修改为 MX 记录时为必填参数。
+     * Set MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
+     * @param MX MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
      */
     public void setMX(String MX) {
         this.MX = MX;

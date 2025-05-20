@@ -52,7 +52,7 @@ public class ModifyAuditServiceRequest extends AbstractModel {
     private Boolean AuditAll;
 
     /**
-    * 审计规则。
+    * 废弃。
     */
     @SerializedName("AuditRuleFilters")
     @Expose
@@ -130,17 +130,21 @@ public class ModifyAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 审计规则。 
-     * @return AuditRuleFilters 审计规则。
+     * Get 废弃。 
+     * @return AuditRuleFilters 废弃。
+     * @deprecated
      */
+    @Deprecated
     public AuditRuleFilters [] getAuditRuleFilters() {
         return this.AuditRuleFilters;
     }
 
     /**
-     * Set 审计规则。
-     * @param AuditRuleFilters 审计规则。
+     * Set 废弃。
+     * @param AuditRuleFilters 废弃。
+     * @deprecated
      */
+    @Deprecated
     public void setAuditRuleFilters(AuditRuleFilters [] AuditRuleFilters) {
         this.AuditRuleFilters = AuditRuleFilters;
     }

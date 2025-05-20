@@ -25,7 +25,6 @@ public class DeleteBotSceneUCBRuleResponse extends AbstractModel {
 
     /**
     * 正常情况下为null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DeleteBotSceneUCBRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 正常情况下为null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 正常情况下为null 
      * @return Data 正常情况下为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DeleteBotSceneUCBRuleResponse extends AbstractModel {
 
     /**
      * Set 正常情况下为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 正常情况下为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;

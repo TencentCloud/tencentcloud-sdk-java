@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AccountVpcInfoOut extends AbstractModel {
 
     /**
-    * VpcId： vpc-xadsafsdasd
+    * VpcId
     */
     @SerializedName("VpcId")
     @Expose
@@ -52,16 +52,16 @@ public class AccountVpcInfoOut extends AbstractModel {
     private String VpcName;
 
     /**
-     * Get VpcId： vpc-xadsafsdasd 
-     * @return VpcId VpcId： vpc-xadsafsdasd
+     * Get VpcId 
+     * @return VpcId VpcId
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VpcId： vpc-xadsafsdasd
-     * @param VpcId VpcId： vpc-xadsafsdasd
+     * Set VpcId
+     * @param VpcId VpcId
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

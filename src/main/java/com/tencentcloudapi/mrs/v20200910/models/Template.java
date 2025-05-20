@@ -227,6 +227,13 @@ public class Template extends AbstractModel {
     private TimelineInformation Timeline;
 
     /**
+    * 内窥镜报告V2
+    */
+    @SerializedName("EndoscopyV2")
+    @Expose
+    private Check EndoscopyV2;
+
+    /**
      * Get 患者信息 
      * @return PatientInfo 患者信息
      */
@@ -690,6 +697,22 @@ public class Template extends AbstractModel {
         this.Timeline = Timeline;
     }
 
+    /**
+     * Get 内窥镜报告V2 
+     * @return EndoscopyV2 内窥镜报告V2
+     */
+    public Check getEndoscopyV2() {
+        return this.EndoscopyV2;
+    }
+
+    /**
+     * Set 内窥镜报告V2
+     * @param EndoscopyV2 内窥镜报告V2
+     */
+    public void setEndoscopyV2(Check EndoscopyV2) {
+        this.EndoscopyV2 = EndoscopyV2;
+    }
+
     public Template() {
     }
 
@@ -785,6 +808,9 @@ public class Template extends AbstractModel {
         if (source.Timeline != null) {
             this.Timeline = new TimelineInformation(source.Timeline);
         }
+        if (source.EndoscopyV2 != null) {
+            this.EndoscopyV2 = new Check(source.EndoscopyV2);
+        }
     }
 
 
@@ -821,6 +847,7 @@ public class Template extends AbstractModel {
         this.setParamObj(map, prefix + "Eye.", this.Eye);
         this.setParamObj(map, prefix + "BirthCert.", this.BirthCert);
         this.setParamObj(map, prefix + "Timeline.", this.Timeline);
+        this.setParamObj(map, prefix + "EndoscopyV2.", this.EndoscopyV2);
 
     }
 }

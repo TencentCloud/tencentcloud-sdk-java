@@ -38,6 +38,14 @@ public class ZoneDetail extends AbstractModel {
     private String SubnetId;
 
     /**
+    * 是否为隐藏可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Hidden")
+    @Expose
+    private Boolean Hidden;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -69,6 +77,26 @@ public class ZoneDetail extends AbstractModel {
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 是否为隐藏可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Hidden 是否为隐藏可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getHidden() {
+        return this.Hidden;
+    }
+
+    /**
+     * Set 是否为隐藏可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Hidden 是否为隐藏可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHidden(Boolean Hidden) {
+        this.Hidden = Hidden;
+    }
+
     public ZoneDetail() {
     }
 
@@ -83,6 +111,9 @@ public class ZoneDetail extends AbstractModel {
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.Hidden != null) {
+            this.Hidden = new Boolean(source.Hidden);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class ZoneDetail extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "Hidden", this.Hidden);
 
     }
 }

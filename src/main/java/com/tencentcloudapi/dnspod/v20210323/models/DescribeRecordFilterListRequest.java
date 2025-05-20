@@ -31,7 +31,7 @@ public class DescribeRecordFilterListRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
+    * 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 
     */
     @SerializedName("DomainId")
     @Expose
@@ -52,14 +52,14 @@ public class DescribeRecordFilterListRequest extends AbstractModel {
     private String [] RecordType;
 
     /**
-    * 获取某些线路ID的解析记录。可以通过接口 DescribeRecordLineList 查看当前域名允许的线路信息。
+    * 获取某些线路ID的解析记录。
     */
     @SerializedName("RecordLine")
     @Expose
     private String [] RecordLine;
 
     /**
-    * 获取某些分组下的解析记录时，传这个分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+    * 获取某些分组下的解析记录时，传这个分组 Id。
     */
     @SerializedName("GroupId")
     @Expose
@@ -96,7 +96,7 @@ UPDATED_ON：解析记录更新时间
     private String SortType;
 
     /**
-    * 偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
+    * 偏移量，默认值为0。如果入参携带"Domain","offset","Limit" 这3个以外的参数，记录结果限制最大3000条
     */
     @SerializedName("Offset")
     @Expose
@@ -219,16 +219,16 @@ DISABLE：暂停
     }
 
     /**
-     * Get 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。 
-     * @return DomainId 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
+     * Get 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。  
+     * @return DomainId 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
-     * @param DomainId 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
+     * Set 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 
+     * @param DomainId 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
@@ -267,32 +267,32 @@ DISABLE：暂停
     }
 
     /**
-     * Get 获取某些线路ID的解析记录。可以通过接口 DescribeRecordLineList 查看当前域名允许的线路信息。 
-     * @return RecordLine 获取某些线路ID的解析记录。可以通过接口 DescribeRecordLineList 查看当前域名允许的线路信息。
+     * Get 获取某些线路ID的解析记录。 
+     * @return RecordLine 获取某些线路ID的解析记录。
      */
     public String [] getRecordLine() {
         return this.RecordLine;
     }
 
     /**
-     * Set 获取某些线路ID的解析记录。可以通过接口 DescribeRecordLineList 查看当前域名允许的线路信息。
-     * @param RecordLine 获取某些线路ID的解析记录。可以通过接口 DescribeRecordLineList 查看当前域名允许的线路信息。
+     * Set 获取某些线路ID的解析记录。
+     * @param RecordLine 获取某些线路ID的解析记录。
      */
     public void setRecordLine(String [] RecordLine) {
         this.RecordLine = RecordLine;
     }
 
     /**
-     * Get 获取某些分组下的解析记录时，传这个分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。 
-     * @return GroupId 获取某些分组下的解析记录时，传这个分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+     * Get 获取某些分组下的解析记录时，传这个分组 Id。 
+     * @return GroupId 获取某些分组下的解析记录时，传这个分组 Id。
      */
     public Long [] getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 获取某些分组下的解析记录时，传这个分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
-     * @param GroupId 获取某些分组下的解析记录时，传这个分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+     * Set 获取某些分组下的解析记录时，传这个分组 Id。
+     * @param GroupId 获取某些分组下的解析记录时，传这个分组 Id。
      */
     public void setGroupId(Long [] GroupId) {
         this.GroupId = GroupId;
@@ -383,16 +383,16 @@ UPDATED_ON：解析记录更新时间
     }
 
     /**
-     * Get 偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条 
-     * @return Offset 偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
+     * Get 偏移量，默认值为0。如果入参携带"Domain","offset","Limit" 这3个以外的参数，记录结果限制最大3000条 
+     * @return Offset 偏移量，默认值为0。如果入参携带"Domain","offset","Limit" 这3个以外的参数，记录结果限制最大3000条
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
-     * @param Offset 偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
+     * Set 偏移量，默认值为0。如果入参携带"Domain","offset","Limit" 这3个以外的参数，记录结果限制最大3000条
+     * @param Offset 偏移量，默认值为0。如果入参携带"Domain","offset","Limit" 这3个以外的参数，记录结果限制最大3000条
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

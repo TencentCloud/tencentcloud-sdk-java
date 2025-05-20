@@ -31,7 +31,7 @@ public class CreateTXTRecordRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 记录线路，通过 API 记录线路获得，中文，比如：默认。
+    * 记录线路
     */
     @SerializedName("RecordLine")
     @Expose
@@ -59,7 +59,7 @@ public class CreateTXTRecordRequest extends AbstractModel {
     private String SubDomain;
 
     /**
-    * 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+    * 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
     */
     @SerializedName("RecordLineId")
     @Expose
@@ -87,7 +87,7 @@ public class CreateTXTRecordRequest extends AbstractModel {
     private String Remark;
 
     /**
-    * 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+    * 记录分组 Id。
     */
     @SerializedName("GroupId")
     @Expose
@@ -110,16 +110,16 @@ public class CreateTXTRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 记录线路，通过 API 记录线路获得，中文，比如：默认。 
-     * @return RecordLine 记录线路，通过 API 记录线路获得，中文，比如：默认。
+     * Get 记录线路 
+     * @return RecordLine 记录线路
      */
     public String getRecordLine() {
         return this.RecordLine;
     }
 
     /**
-     * Set 记录线路，通过 API 记录线路获得，中文，比如：默认。
-     * @param RecordLine 记录线路，通过 API 记录线路获得，中文，比如：默认。
+     * Set 记录线路
+     * @param RecordLine 记录线路
      */
     public void setRecordLine(String RecordLine) {
         this.RecordLine = RecordLine;
@@ -174,16 +174,16 @@ public class CreateTXTRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。 
-     * @return RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * Get 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。 
+     * @return RecordLineId 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      */
     public String getRecordLineId() {
         return this.RecordLineId;
     }
 
     /**
-     * Set 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
-     * @param RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * Set 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @param RecordLineId 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      */
     public void setRecordLineId(String RecordLineId) {
         this.RecordLineId = RecordLineId;
@@ -238,16 +238,16 @@ public class CreateTXTRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。 
-     * @return GroupId 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+     * Get 记录分组 Id。 
+     * @return GroupId 记录分组 Id。
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
-     * @param GroupId 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+     * Set 记录分组 Id。
+     * @param GroupId 记录分组 Id。
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

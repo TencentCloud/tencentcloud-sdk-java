@@ -31,14 +31,14 @@ public class DeleteRecordGroupRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 分组 ID
+    * 分组 ID，可通过DescribeRecordGroupList接口获取所有记录分组
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
     */
     @SerializedName("DomainId")
     @Expose
@@ -61,32 +61,32 @@ public class DeleteRecordGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 分组 ID 
-     * @return GroupId 分组 ID
+     * Get 分组 ID，可通过DescribeRecordGroupList接口获取所有记录分组 
+     * @return GroupId 分组 ID，可通过DescribeRecordGroupList接口获取所有记录分组
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 分组 ID
-     * @param GroupId 分组 ID
+     * Set 分组 ID，可通过DescribeRecordGroupList接口获取所有记录分组
+     * @param GroupId 分组 ID，可通过DescribeRecordGroupList接口获取所有记录分组
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。 
-     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId 
+     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
-     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;

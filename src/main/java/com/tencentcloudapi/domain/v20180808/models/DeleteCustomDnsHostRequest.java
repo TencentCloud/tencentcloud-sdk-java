@@ -25,7 +25,7 @@ public class DeleteCustomDnsHostRequest extends AbstractModel {
 
     /**
     * 域名实例ID
-可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
     */
     @SerializedName("DomainId")
     @Expose
@@ -41,9 +41,9 @@ public class DeleteCustomDnsHostRequest extends AbstractModel {
 
     /**
      * Get 域名实例ID
-可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941) 
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取 
      * @return DomainId 域名实例ID
-可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
      */
     public String getDomainId() {
         return this.DomainId;
@@ -51,9 +51,9 @@ public class DeleteCustomDnsHostRequest extends AbstractModel {
 
     /**
      * Set 域名实例ID
-可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
      * @param DomainId 域名实例ID
-可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;

@@ -39,7 +39,7 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateApplicaiton）用于对HAI实例制作自定义应用。
+     *本接口（CreateApplication）用于对HAI实例制作自定义应用。
      * @param req CreateApplicationRequest
      * @return CreateApplicationResponse
      * @throws TencentCloudSDKException

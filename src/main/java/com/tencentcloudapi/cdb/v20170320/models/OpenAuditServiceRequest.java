@@ -161,7 +161,9 @@ public class OpenAuditServiceRequest extends AbstractModel {
     /**
      * Get 审计规则（该参数已废弃，不再生效）。 
      * @return AuditRuleFilters 审计规则（该参数已废弃，不再生效）。
+     * @deprecated
      */
+    @Deprecated
     public AuditRuleFilters [] getAuditRuleFilters() {
         return this.AuditRuleFilters;
     }
@@ -169,7 +171,9 @@ public class OpenAuditServiceRequest extends AbstractModel {
     /**
      * Set 审计规则（该参数已废弃，不再生效）。
      * @param AuditRuleFilters 审计规则（该参数已废弃，不再生效）。
+     * @deprecated
      */
+    @Deprecated
     public void setAuditRuleFilters(AuditRuleFilters [] AuditRuleFilters) {
         this.AuditRuleFilters = AuditRuleFilters;
     }

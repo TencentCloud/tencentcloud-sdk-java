@@ -45,6 +45,14 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     private String Status;
 
     /**
+    * 图片处理任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageProcessTaskResultSet")
+    @Expose
+    private ImageProcessTaskResult [] ImageProcessTaskResultSet;
+
+    /**
     * 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -128,6 +136,26 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 图片处理任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageProcessTaskResultSet 图片处理任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageProcessTaskResult [] getImageProcessTaskResultSet() {
+        return this.ImageProcessTaskResultSet;
+    }
+
+    /**
+     * Set 图片处理任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageProcessTaskResultSet 图片处理任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageProcessTaskResultSet(ImageProcessTaskResult [] ImageProcessTaskResultSet) {
+        this.ImageProcessTaskResultSet = ImageProcessTaskResultSet;
+    }
+
+    /**
      * Get 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
@@ -197,6 +225,12 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.ImageProcessTaskResultSet != null) {
+            this.ImageProcessTaskResultSet = new ImageProcessTaskResult[source.ImageProcessTaskResultSet.length];
+            for (int i = 0; i < source.ImageProcessTaskResultSet.length; i++) {
+                this.ImageProcessTaskResultSet[i] = new ImageProcessTaskResult(source.ImageProcessTaskResultSet[i]);
+            }
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -215,6 +249,7 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "ImageProcessTaskResultSet.", this.ImageProcessTaskResultSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

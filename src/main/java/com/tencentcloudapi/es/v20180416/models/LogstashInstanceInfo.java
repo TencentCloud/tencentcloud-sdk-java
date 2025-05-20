@@ -233,6 +233,20 @@ public class LogstashInstanceInfo extends AbstractModel {
     private Long MemSize;
 
     /**
+    * 部署模式，0：单可用区、1：多可用区
+    */
+    @SerializedName("DeployMode")
+    @Expose
+    private Long DeployMode;
+
+    /**
+    * 多可用区部署时可用区的详细信息
+    */
+    @SerializedName("MultiZoneInfo")
+    @Expose
+    private ZoneDetail [] MultiZoneInfo;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -720,6 +734,38 @@ public class LogstashInstanceInfo extends AbstractModel {
         this.MemSize = MemSize;
     }
 
+    /**
+     * Get 部署模式，0：单可用区、1：多可用区 
+     * @return DeployMode 部署模式，0：单可用区、1：多可用区
+     */
+    public Long getDeployMode() {
+        return this.DeployMode;
+    }
+
+    /**
+     * Set 部署模式，0：单可用区、1：多可用区
+     * @param DeployMode 部署模式，0：单可用区、1：多可用区
+     */
+    public void setDeployMode(Long DeployMode) {
+        this.DeployMode = DeployMode;
+    }
+
+    /**
+     * Get 多可用区部署时可用区的详细信息 
+     * @return MultiZoneInfo 多可用区部署时可用区的详细信息
+     */
+    public ZoneDetail [] getMultiZoneInfo() {
+        return this.MultiZoneInfo;
+    }
+
+    /**
+     * Set 多可用区部署时可用区的详细信息
+     * @param MultiZoneInfo 多可用区部署时可用区的详细信息
+     */
+    public void setMultiZoneInfo(ZoneDetail [] MultiZoneInfo) {
+        this.MultiZoneInfo = MultiZoneInfo;
+    }
+
     public LogstashInstanceInfo() {
     }
 
@@ -824,6 +870,15 @@ public class LogstashInstanceInfo extends AbstractModel {
         if (source.MemSize != null) {
             this.MemSize = new Long(source.MemSize);
         }
+        if (source.DeployMode != null) {
+            this.DeployMode = new Long(source.DeployMode);
+        }
+        if (source.MultiZoneInfo != null) {
+            this.MultiZoneInfo = new ZoneDetail[source.MultiZoneInfo.length];
+            for (int i = 0; i < source.MultiZoneInfo.length; i++) {
+                this.MultiZoneInfo[i] = new ZoneDetail(source.MultiZoneInfo[i]);
+            }
+        }
     }
 
 
@@ -860,6 +915,8 @@ public class LogstashInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CpuNum", this.CpuNum);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
+        this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
+        this.setParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
 
     }
 }

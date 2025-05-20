@@ -32,6 +32,14 @@ public class ImageEnhanceConfig extends AbstractModel {
     private SuperResolutionConfig SuperResolution;
 
     /**
+    * 降噪配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Denoise")
+    @Expose
+    private ImageDenoiseConfig Denoise;
+
+    /**
     * 综合增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -64,6 +72,14 @@ public class ImageEnhanceConfig extends AbstractModel {
     private FaceEnhanceConfig FaceEnhance;
 
     /**
+    * 低光照增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LowLightEnhance")
+    @Expose
+    private LowLightEnhanceConfig LowLightEnhance;
+
+    /**
      * Get 超分配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SuperResolution 超分配置。
@@ -81,6 +97,26 @@ public class ImageEnhanceConfig extends AbstractModel {
      */
     public void setSuperResolution(SuperResolutionConfig SuperResolution) {
         this.SuperResolution = SuperResolution;
+    }
+
+    /**
+     * Get 降噪配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Denoise 降噪配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageDenoiseConfig getDenoise() {
+        return this.Denoise;
+    }
+
+    /**
+     * Set 降噪配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Denoise 降噪配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDenoise(ImageDenoiseConfig Denoise) {
+        this.Denoise = Denoise;
     }
 
     /**
@@ -163,6 +199,26 @@ public class ImageEnhanceConfig extends AbstractModel {
         this.FaceEnhance = FaceEnhance;
     }
 
+    /**
+     * Get 低光照增强配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LowLightEnhance 低光照增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LowLightEnhanceConfig getLowLightEnhance() {
+        return this.LowLightEnhance;
+    }
+
+    /**
+     * Set 低光照增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LowLightEnhance 低光照增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLowLightEnhance(LowLightEnhanceConfig LowLightEnhance) {
+        this.LowLightEnhance = LowLightEnhance;
+    }
+
     public ImageEnhanceConfig() {
     }
 
@@ -173,6 +229,9 @@ public class ImageEnhanceConfig extends AbstractModel {
     public ImageEnhanceConfig(ImageEnhanceConfig source) {
         if (source.SuperResolution != null) {
             this.SuperResolution = new SuperResolutionConfig(source.SuperResolution);
+        }
+        if (source.Denoise != null) {
+            this.Denoise = new ImageDenoiseConfig(source.Denoise);
         }
         if (source.ImageQualityEnhance != null) {
             this.ImageQualityEnhance = new ImageQualityEnhanceConfig(source.ImageQualityEnhance);
@@ -186,6 +245,9 @@ public class ImageEnhanceConfig extends AbstractModel {
         if (source.FaceEnhance != null) {
             this.FaceEnhance = new FaceEnhanceConfig(source.FaceEnhance);
         }
+        if (source.LowLightEnhance != null) {
+            this.LowLightEnhance = new LowLightEnhanceConfig(source.LowLightEnhance);
+        }
     }
 
 
@@ -194,10 +256,12 @@ public class ImageEnhanceConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "SuperResolution.", this.SuperResolution);
+        this.setParamObj(map, prefix + "Denoise.", this.Denoise);
         this.setParamObj(map, prefix + "ImageQualityEnhance.", this.ImageQualityEnhance);
         this.setParamObj(map, prefix + "ColorEnhance.", this.ColorEnhance);
         this.setParamObj(map, prefix + "SharpEnhance.", this.SharpEnhance);
         this.setParamObj(map, prefix + "FaceEnhance.", this.FaceEnhance);
+        this.setParamObj(map, prefix + "LowLightEnhance.", this.LowLightEnhance);
 
     }
 }

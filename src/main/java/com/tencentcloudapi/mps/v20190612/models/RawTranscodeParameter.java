@@ -72,6 +72,22 @@ public class RawTranscodeParameter extends AbstractModel {
     private TEHDConfig TEHDConfig;
 
     /**
+    * 扩展参数，序列化的 json 字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
+    * 音视频增强配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnhanceConfig")
+    @Expose
+    private EnhanceConfig EnhanceConfig;
+
+    /**
      * Get 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。 
      * @return Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
@@ -191,6 +207,46 @@ public class RawTranscodeParameter extends AbstractModel {
         this.TEHDConfig = TEHDConfig;
     }
 
+    /**
+     * Get 扩展参数，序列化的 json 字符串。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StdExtInfo 扩展参数，序列化的 json 字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set 扩展参数，序列化的 json 字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StdExtInfo 扩展参数，序列化的 json 字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
+    }
+
+    /**
+     * Get 音视频增强配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnhanceConfig 音视频增强配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EnhanceConfig getEnhanceConfig() {
+        return this.EnhanceConfig;
+    }
+
+    /**
+     * Set 音视频增强配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnhanceConfig 音视频增强配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
+        this.EnhanceConfig = EnhanceConfig;
+    }
+
     public RawTranscodeParameter() {
     }
 
@@ -217,6 +273,12 @@ public class RawTranscodeParameter extends AbstractModel {
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
+        if (source.EnhanceConfig != null) {
+            this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
+        }
     }
 
 
@@ -230,6 +292,8 @@ public class RawTranscodeParameter extends AbstractModel {
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
+        this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
 
     }
 }

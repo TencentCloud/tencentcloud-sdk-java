@@ -49,7 +49,7 @@ RECENT：最近操作过的域名
     private Long Limit;
 
     /**
-    * 根据域名分组 id 获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 GroupId 字段获取。
+    * 根据域名分组 id 获取域名
     */
     @SerializedName("GroupId")
     @Expose
@@ -213,16 +213,16 @@ RECENT：最近操作过的域名
     }
 
     /**
-     * Get 根据域名分组 id 获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 GroupId 字段获取。 
-     * @return GroupId 根据域名分组 id 获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 GroupId 字段获取。
+     * Get 根据域名分组 id 获取域名 
+     * @return GroupId 根据域名分组 id 获取域名
      */
     public Long [] getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 根据域名分组 id 获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 GroupId 字段获取。
-     * @param GroupId 根据域名分组 id 获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 GroupId 字段获取。
+     * Set 根据域名分组 id 获取域名
+     * @param GroupId 根据域名分组 id 获取域名
      */
     public void setGroupId(Long [] GroupId) {
         this.GroupId = GroupId;

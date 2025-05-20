@@ -52,7 +52,7 @@ public class AnalyzeAuditLogsRequest extends AbstractModel {
     private AggregationCondition [] AggregationConditions;
 
     /**
-    * 已废弃。该过滤条件下的审计日志结果集作为分析日志。
+    * 已废弃。
     */
     @SerializedName("AuditLogFilter")
     @Expose
@@ -130,17 +130,21 @@ public class AnalyzeAuditLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 已废弃。该过滤条件下的审计日志结果集作为分析日志。 
-     * @return AuditLogFilter 已废弃。该过滤条件下的审计日志结果集作为分析日志。
+     * Get 已废弃。 
+     * @return AuditLogFilter 已废弃。
+     * @deprecated
      */
+    @Deprecated
     public AuditLogFilter getAuditLogFilter() {
         return this.AuditLogFilter;
     }
 
     /**
-     * Set 已废弃。该过滤条件下的审计日志结果集作为分析日志。
-     * @param AuditLogFilter 已废弃。该过滤条件下的审计日志结果集作为分析日志。
+     * Set 已废弃。
+     * @param AuditLogFilter 已废弃。
+     * @deprecated
      */
+    @Deprecated
     public void setAuditLogFilter(AuditLogFilter AuditLogFilter) {
         this.AuditLogFilter = AuditLogFilter;
     }

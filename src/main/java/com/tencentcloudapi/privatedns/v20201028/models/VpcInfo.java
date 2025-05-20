@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VpcInfo extends AbstractModel {
 
     /**
-    * VpcId： vpc-xadsafsdasd
+    * VpcId
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -38,16 +38,16 @@ public class VpcInfo extends AbstractModel {
     private String Region;
 
     /**
-     * Get VpcId： vpc-xadsafsdasd 
-     * @return UniqVpcId VpcId： vpc-xadsafsdasd
+     * Get VpcId 
+     * @return UniqVpcId VpcId
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VpcId： vpc-xadsafsdasd
-     * @param UniqVpcId VpcId： vpc-xadsafsdasd
+     * Set VpcId
+     * @param UniqVpcId VpcId
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;

@@ -25,7 +25,6 @@ public class TimerScale extends AbstractModel {
 
     /**
     * 循环类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
     @Expose
@@ -33,7 +32,6 @@ public class TimerScale extends AbstractModel {
 
     /**
     * 循环起始
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartDate")
     @Expose
@@ -41,7 +39,6 @@ public class TimerScale extends AbstractModel {
 
     /**
     * 循环结束
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndDate")
     @Expose
@@ -49,7 +46,6 @@ public class TimerScale extends AbstractModel {
 
     /**
     * 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -57,7 +53,6 @@ public class TimerScale extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -65,17 +60,14 @@ public class TimerScale extends AbstractModel {
 
     /**
     * 副本个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplicaNum")
     @Expose
     private Long ReplicaNum;
 
     /**
-     * Get 循环类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 循环类型 
      * @return CycleType 循环类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
         return this.CycleType;
@@ -83,19 +75,15 @@ public class TimerScale extends AbstractModel {
 
     /**
      * Set 循环类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CycleType 循环类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
         this.CycleType = CycleType;
     }
 
     /**
-     * Get 循环起始
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 循环起始 
      * @return StartDate 循环起始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartDate() {
         return this.StartDate;
@@ -103,19 +91,15 @@ public class TimerScale extends AbstractModel {
 
     /**
      * Set 循环起始
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartDate 循环起始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get 循环结束
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 循环结束 
      * @return EndDate 循环结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndDate() {
         return this.EndDate;
@@ -123,19 +107,15 @@ public class TimerScale extends AbstractModel {
 
     /**
      * Set 循环结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndDate 循环结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
     }
 
     /**
-     * Get 起始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 起始时间 
      * @return StartTime 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -143,19 +123,15 @@ public class TimerScale extends AbstractModel {
 
     /**
      * Set 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -163,19 +139,15 @@ public class TimerScale extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 副本个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 副本个数 
      * @return ReplicaNum 副本个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
@@ -183,9 +155,7 @@ public class TimerScale extends AbstractModel {
 
     /**
      * Set 副本个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReplicaNum 副本个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;

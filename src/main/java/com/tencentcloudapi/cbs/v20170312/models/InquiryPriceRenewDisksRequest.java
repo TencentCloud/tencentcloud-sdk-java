@@ -38,14 +38,14 @@ public class InquiryPriceRenewDisksRequest extends AbstractModel {
     private DiskChargePrepaid [] DiskChargePrepaids;
 
     /**
-    * 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
+    * 指定云硬盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
     */
     @SerializedName("NewDeadline")
     @Expose
     private String NewDeadline;
 
     /**
-    * 云盘所属项目ID。 如传入则仅用于鉴权。
+    * 云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -84,32 +84,32 @@ public class InquiryPriceRenewDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。 
-     * @return NewDeadline 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
+     * Get 指定云硬盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。 
+     * @return NewDeadline 指定云硬盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
      */
     public String getNewDeadline() {
         return this.NewDeadline;
     }
 
     /**
-     * Set 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
-     * @param NewDeadline 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
+     * Set 指定云硬盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
+     * @param NewDeadline 指定云硬盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
      */
     public void setNewDeadline(String NewDeadline) {
         this.NewDeadline = NewDeadline;
     }
 
     /**
-     * Get 云盘所属项目ID。 如传入则仅用于鉴权。 
-     * @return ProjectId 云盘所属项目ID。 如传入则仅用于鉴权。
+     * Get 云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。 
+     * @return ProjectId 云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 云盘所属项目ID。 如传入则仅用于鉴权。
-     * @param ProjectId 云盘所属项目ID。 如传入则仅用于鉴权。
+     * Set 云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
+     * @param ProjectId 云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
