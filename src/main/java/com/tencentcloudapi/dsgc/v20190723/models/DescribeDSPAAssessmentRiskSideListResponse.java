@@ -31,6 +31,13 @@ public class DescribeDSPAAssessmentRiskSideListResponse extends AbstractModel {
     private Note [] RiskSideItmeList;
 
     /**
+    * 风险面列表
+    */
+    @SerializedName("RiskSideItemList")
+    @Expose
+    private Note [] RiskSideItemList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -40,7 +47,9 @@ public class DescribeDSPAAssessmentRiskSideListResponse extends AbstractModel {
     /**
      * Get 风险面列表 
      * @return RiskSideItmeList 风险面列表
+     * @deprecated
      */
+    @Deprecated
     public Note [] getRiskSideItmeList() {
         return this.RiskSideItmeList;
     }
@@ -48,9 +57,27 @@ public class DescribeDSPAAssessmentRiskSideListResponse extends AbstractModel {
     /**
      * Set 风险面列表
      * @param RiskSideItmeList 风险面列表
+     * @deprecated
      */
+    @Deprecated
     public void setRiskSideItmeList(Note [] RiskSideItmeList) {
         this.RiskSideItmeList = RiskSideItmeList;
+    }
+
+    /**
+     * Get 风险面列表 
+     * @return RiskSideItemList 风险面列表
+     */
+    public Note [] getRiskSideItemList() {
+        return this.RiskSideItemList;
+    }
+
+    /**
+     * Set 风险面列表
+     * @param RiskSideItemList 风险面列表
+     */
+    public void setRiskSideItemList(Note [] RiskSideItemList) {
+        this.RiskSideItemList = RiskSideItemList;
     }
 
     /**
@@ -83,6 +110,12 @@ public class DescribeDSPAAssessmentRiskSideListResponse extends AbstractModel {
                 this.RiskSideItmeList[i] = new Note(source.RiskSideItmeList[i]);
             }
         }
+        if (source.RiskSideItemList != null) {
+            this.RiskSideItemList = new Note[source.RiskSideItemList.length];
+            for (int i = 0; i < source.RiskSideItemList.length; i++) {
+                this.RiskSideItemList[i] = new Note(source.RiskSideItemList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +127,7 @@ public class DescribeDSPAAssessmentRiskSideListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "RiskSideItmeList.", this.RiskSideItmeList);
+        this.setParamArrayObj(map, prefix + "RiskSideItemList.", this.RiskSideItemList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

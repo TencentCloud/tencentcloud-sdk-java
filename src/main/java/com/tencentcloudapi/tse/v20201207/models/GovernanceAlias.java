@@ -87,6 +87,14 @@ public class GovernanceAlias extends AbstractModel {
     private Boolean Editable;
 
     /**
+    * 元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Metadatas")
+    @Expose
+    private Metadata [] Metadatas;
+
+    /**
      * Get 服务别名 
      * @return Alias 服务别名
      */
@@ -230,6 +238,26 @@ public class GovernanceAlias extends AbstractModel {
         this.Editable = Editable;
     }
 
+    /**
+     * Get 元数据信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Metadatas 元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Metadata [] getMetadatas() {
+        return this.Metadatas;
+    }
+
+    /**
+     * Set 元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Metadatas 元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetadatas(Metadata [] Metadatas) {
+        this.Metadatas = Metadatas;
+    }
+
     public GovernanceAlias() {
     }
 
@@ -265,6 +293,12 @@ public class GovernanceAlias extends AbstractModel {
         if (source.Editable != null) {
             this.Editable = new Boolean(source.Editable);
         }
+        if (source.Metadatas != null) {
+            this.Metadatas = new Metadata[source.Metadatas.length];
+            for (int i = 0; i < source.Metadatas.length; i++) {
+                this.Metadatas[i] = new Metadata(source.Metadatas[i]);
+            }
+        }
     }
 
 
@@ -281,6 +315,7 @@ public class GovernanceAlias extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Editable", this.Editable);
+        this.setParamArrayObj(map, prefix + "Metadatas.", this.Metadatas);
 
     }
 }

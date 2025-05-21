@@ -38,7 +38,9 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     private String GroupName;
 
     /**
-    * 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
+    * 机器组类型。 
+Type：ip，Values中为ip字符串列表机器组；
+Type：label，Values中为标签字符串列表机器组。
     */
     @SerializedName("MachineGroupType")
     @Expose
@@ -126,16 +128,24 @@ public class ModifyMachineGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。 
-     * @return MachineGroupType 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
+     * Get 机器组类型。 
+Type：ip，Values中为ip字符串列表机器组；
+Type：label，Values中为标签字符串列表机器组。 
+     * @return MachineGroupType 机器组类型。 
+Type：ip，Values中为ip字符串列表机器组；
+Type：label，Values中为标签字符串列表机器组。
      */
     public MachineGroupTypeInfo getMachineGroupType() {
         return this.MachineGroupType;
     }
 
     /**
-     * Set 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
-     * @param MachineGroupType 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
+     * Set 机器组类型。 
+Type：ip，Values中为ip字符串列表机器组；
+Type：label，Values中为标签字符串列表机器组。
+     * @param MachineGroupType 机器组类型。 
+Type：ip，Values中为ip字符串列表机器组；
+Type：label，Values中为标签字符串列表机器组。
      */
     public void setMachineGroupType(MachineGroupTypeInfo MachineGroupType) {
         this.MachineGroupType = MachineGroupType;

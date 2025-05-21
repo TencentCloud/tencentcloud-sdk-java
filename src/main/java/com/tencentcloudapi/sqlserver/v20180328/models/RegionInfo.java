@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RegionInfo extends AbstractModel {
 
     /**
-    * 地域英文ID，类似ap-guanghou
+    * 地域英文ID，类似ap-guangzhou
     */
     @SerializedName("Region")
     @Expose
@@ -52,16 +52,16 @@ public class RegionInfo extends AbstractModel {
     private String RegionState;
 
     /**
-     * Get 地域英文ID，类似ap-guanghou 
-     * @return Region 地域英文ID，类似ap-guanghou
+     * Get 地域英文ID，类似ap-guangzhou 
+     * @return Region 地域英文ID，类似ap-guangzhou
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域英文ID，类似ap-guanghou
-     * @param Region 地域英文ID，类似ap-guanghou
+     * Set 地域英文ID，类似ap-guangzhou
+     * @param Region 地域英文ID，类似ap-guangzhou
      */
     public void setRegion(String Region) {
         this.Region = Region;

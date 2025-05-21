@@ -159,6 +159,13 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     private Long HasServicesLog;
 
     /**
+    * 全文检索标记。1：关闭，2：打开。
+    */
+    @SerializedName("FullQuery")
+    @Expose
+    private Long FullQuery;
+
+    /**
      * Get ScheduledSql任务id 
      * @return TaskId ScheduledSql任务id
      */
@@ -470,6 +477,22 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
         this.HasServicesLog = HasServicesLog;
     }
 
+    /**
+     * Get 全文检索标记。1：关闭，2：打开。 
+     * @return FullQuery 全文检索标记。1：关闭，2：打开。
+     */
+    public Long getFullQuery() {
+        return this.FullQuery;
+    }
+
+    /**
+     * Set 全文检索标记。1：关闭，2：打开。
+     * @param FullQuery 全文检索标记。1：关闭，2：打开。
+     */
+    public void setFullQuery(Long FullQuery) {
+        this.FullQuery = FullQuery;
+    }
+
     public ScheduledSqlTaskInfo() {
     }
 
@@ -535,6 +558,9 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
         if (source.HasServicesLog != null) {
             this.HasServicesLog = new Long(source.HasServicesLog);
         }
+        if (source.FullQuery != null) {
+            this.FullQuery = new Long(source.FullQuery);
+        }
     }
 
 
@@ -561,6 +587,7 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "FullQuery", this.FullQuery);
 
     }
 }

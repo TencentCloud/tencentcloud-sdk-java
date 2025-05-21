@@ -129,6 +129,14 @@ public class GovernanceNamespace extends AbstractModel {
     private Boolean SyncToGlobalRegistry;
 
     /**
+    * 元数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Metadatas")
+    @Expose
+    private Metadata [] Metadatas;
+
+    /**
      * Get 命名空间名称。 
      * @return Name 命名空间名称。
      */
@@ -368,6 +376,26 @@ public class GovernanceNamespace extends AbstractModel {
         this.SyncToGlobalRegistry = SyncToGlobalRegistry;
     }
 
+    /**
+     * Get 元数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Metadatas 元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Metadata [] getMetadatas() {
+        return this.Metadatas;
+    }
+
+    /**
+     * Set 元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Metadatas 元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetadatas(Metadata [] Metadatas) {
+        this.Metadatas = Metadatas;
+    }
+
     public GovernanceNamespace() {
     }
 
@@ -436,6 +464,12 @@ public class GovernanceNamespace extends AbstractModel {
         if (source.SyncToGlobalRegistry != null) {
             this.SyncToGlobalRegistry = new Boolean(source.SyncToGlobalRegistry);
         }
+        if (source.Metadatas != null) {
+            this.Metadatas = new Metadata[source.Metadatas.length];
+            for (int i = 0; i < source.Metadatas.length; i++) {
+                this.Metadatas[i] = new Metadata(source.Metadatas[i]);
+            }
+        }
     }
 
 
@@ -458,6 +492,7 @@ public class GovernanceNamespace extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RemoveGroupIds.", this.RemoveGroupIds);
         this.setParamArraySimple(map, prefix + "ServiceExportTo.", this.ServiceExportTo);
         this.setParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
+        this.setParamArrayObj(map, prefix + "Metadatas.", this.Metadatas);
 
     }
 }

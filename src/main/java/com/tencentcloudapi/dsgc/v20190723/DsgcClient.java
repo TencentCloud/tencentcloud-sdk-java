@@ -105,7 +105,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *创建识别规则
+     *旧版本DSGC接口下线
+
+创建识别规则
      * @param req CreateClassificationRuleRequest
      * @return CreateClassificationRuleResponse
      * @throws TencentCloudSDKException
@@ -292,7 +294,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *创建新分类
+     *旧版本DSGC接口下线
+
+创建新分类
      * @param req CreateNewClassificationRequest
      * @return CreateNewClassificationResponse
      * @throws TencentCloudSDKException
@@ -303,7 +307,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *创建或复制分级分类模板
+     *旧版本DSGC接口下线
+
+创建或复制分级分类模板
      * @param req CreateOrCopyStandardRequest
      * @return CreateOrCopyStandardResponse
      * @throws TencentCloudSDKException
@@ -454,7 +460,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *查询分类信息
+     *旧版本DSGC接口下线
+
+查询分类信息
 
      * @param req DescribeClassificationInfoRequest
      * @return DescribeClassificationInfoResponse
@@ -466,7 +474,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *查询标准下所有分类的识别规则数量(不算子分类下的识别规则)
+     *旧版本DSGC接口下线
+
+查询标准下所有分类的识别规则数量(不算子分类下的识别规则)
      * @param req DescribeClassificationRuleCountRequest
      * @return DescribeClassificationRuleCountResponse
      * @throws TencentCloudSDKException
@@ -1155,7 +1165,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *查询标准下所有叶子节点分类
+     *旧版本DSGC接口下线
+
+查询标准下所有叶子节点分类
      * @param req DescribeLeafClassificationRequest
      * @return DescribeLeafClassificationResponse
      * @throws TencentCloudSDKException
@@ -1210,7 +1222,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *查询分类下规则列表
+     *旧版本DSGC接口下线
+
+查询分类下规则列表
 
      * @param req DescribeRuleListRequest
      * @return DescribeRuleListResponse
@@ -1355,7 +1369,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *编辑识别规则
+     *旧版本DSGC接口下线
+
+编辑识别规则
      * @param req ModifyClassificationRuleRequest
      * @return ModifyClassificationRuleResponse
      * @throws TencentCloudSDKException
@@ -1366,7 +1382,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *修改识别规则状态
+     *旧版本DSGC接口下线
+
+修改识别规则状态
      * @param req ModifyClassificationRuleStateRequest
      * @return ModifyClassificationRuleStateResponse
      * @throws TencentCloudSDKException
@@ -1540,7 +1558,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *修改敏感级别信息
+     *旧版本DSGC接口下线
+
+修改敏感级别信息
      * @param req ModifyLevelInfoRequest
      * @return ModifyLevelInfoResponse
      * @throws TencentCloudSDKException
@@ -1551,7 +1571,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *修改级别名称
+     *旧版本DSGC接口下线
+
+修改级别名称
      * @param req ModifyLevelNameRequest
      * @return ModifyLevelNameResponse
      * @throws TencentCloudSDKException
@@ -1562,7 +1584,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *开启级别或关闭级别
+     *旧版本DSGC接口下线
+
+开启级别或关闭级别
      * @param req ModifyLevelStateRequest
      * @return ModifyLevelStateResponse
      * @throws TencentCloudSDKException
@@ -1573,7 +1597,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *一个分类合并到另一个分类中（分类拖拽功能）
+     *旧版本DSGC接口下线
+
+一个分类合并到另一个分类中（分类拖拽功能）
      * @param req ModifyMergeClassificationRequest
      * @return ModifyMergeClassificationResponse
      * @throws TencentCloudSDKException
@@ -1584,7 +1610,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *修改分类信息
+     *旧版本DSGC接口下线
+
+修改分类信息
      * @param req ModifyNewClassificationRequest
      * @return ModifyNewClassificationResponse
      * @throws TencentCloudSDKException
@@ -1595,7 +1623,9 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *修改分级分类模板信息
+     *旧版本DSGC接口下线
+
+修改分级分类模板信息
      * @param req ModifyStandardInfoRequest
      * @return ModifyStandardInfoResponse
      * @throws TencentCloudSDKException

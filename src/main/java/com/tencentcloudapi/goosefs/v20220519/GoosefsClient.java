@@ -105,6 +105,17 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *创建Fileset
+     * @param req CreateFilesetRequest
+     * @return CreateFilesetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFilesetResponse CreateFileset(CreateFilesetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFileset", CreateFilesetResponse.class);
+    }
+
+    /**
      *为客户端节点删除跨vpc子网访问能力
      * @param req DeleteCrossVpcSubnetSupportForClientNodeRequest
      * @return DeleteCrossVpcSubnetSupportForClientNodeResponse
@@ -124,6 +135,17 @@ public class GoosefsClient extends AbstractClient{
     public DeleteFileSystemResponse DeleteFileSystem(DeleteFileSystemRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteFileSystem", DeleteFileSystemResponse.class);
+    }
+
+    /**
+     *删除Fileset
+     * @param req DeleteFilesetRequest
+     * @return DeleteFilesetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFilesetResponse DeleteFileset(DeleteFilesetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteFileset", DeleteFilesetResponse.class);
     }
 
     /**
@@ -204,6 +226,28 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *查询Fileset通用配置
+     * @param req DescribeFilesetGeneralConfigRequest
+     * @return DescribeFilesetGeneralConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFilesetGeneralConfigResponse DescribeFilesetGeneralConfig(DescribeFilesetGeneralConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFilesetGeneralConfig", DescribeFilesetGeneralConfigResponse.class);
+    }
+
+    /**
+     *查询Fileset列表
+     * @param req DescribeFilesetsRequest
+     * @return DescribeFilesetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFilesetsResponse DescribeFilesets(DescribeFilesetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFilesets", DescribeFilesetsResponse.class);
+    }
+
+    /**
      *解绑文件系统与Bucket的映射
      * @param req DetachFileSystemBucketRequest
      * @return DetachFileSystemBucketResponse
@@ -256,6 +300,28 @@ public class GoosefsClient extends AbstractClient{
     public QueryDataRepositoryBandwidthResponse QueryDataRepositoryBandwidth(QueryDataRepositoryBandwidthRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryDataRepositoryBandwidth", QueryDataRepositoryBandwidthResponse.class);
+    }
+
+    /**
+     *修改FIleset
+     * @param req UpdateFilesetRequest
+     * @return UpdateFilesetResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateFilesetResponse UpdateFileset(UpdateFilesetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateFileset", UpdateFilesetResponse.class);
+    }
+
+    /**
+     *修改Fileset通用配置
+     * @param req UpdateFilesetGeneralConfigRequest
+     * @return UpdateFilesetGeneralConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateFilesetGeneralConfigResponse UpdateFilesetGeneralConfig(UpdateFilesetGeneralConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateFilesetGeneralConfig", UpdateFilesetGeneralConfigResponse.class);
     }
 
 }

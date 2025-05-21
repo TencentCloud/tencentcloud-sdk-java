@@ -1179,19 +1179,6 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *早期接口，不规范，已提供新接口 ModifyDBInstanceSpec 替换
-
-本接口（UpgradeDBInstance）用于升级实例配置。本接口已废弃，推荐使用接口[ModifyDBInstanceSpec](https://cloud.tencent.com/document/api/409/63689)替代。
-     * @param req UpgradeDBInstanceRequest
-     * @return UpgradeDBInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpgradeDBInstance", UpgradeDBInstanceResponse.class);
-    }
-
-    /**
      *本接口（UpgradeDBInstanceKernelVersion）用于升级实例的内核版本号。
      * @param req UpgradeDBInstanceKernelVersionRequest
      * @return UpgradeDBInstanceKernelVersionResponse

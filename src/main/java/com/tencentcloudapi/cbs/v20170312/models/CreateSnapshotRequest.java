@@ -45,7 +45,7 @@ public class CreateSnapshotRequest extends AbstractModel {
     private String Deadline;
 
     /**
-    * 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。
+    * 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过[DescribeDiskBackups](document/product/362/80278)接口查询。
     */
     @SerializedName("DiskBackupId")
     @Expose
@@ -107,16 +107,16 @@ public class CreateSnapshotRequest extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。 
-     * @return DiskBackupId 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。
+     * Get 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过[DescribeDiskBackups](document/product/362/80278)接口查询。 
+     * @return DiskBackupId 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过[DescribeDiskBackups](document/product/362/80278)接口查询。
      */
     public String getDiskBackupId() {
         return this.DiskBackupId;
     }
 
     /**
-     * Set 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。
-     * @param DiskBackupId 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。
+     * Set 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过[DescribeDiskBackups](document/product/362/80278)接口查询。
+     * @param DiskBackupId 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。备份点 ID 可以通过[DescribeDiskBackups](document/product/362/80278)接口查询。
      */
     public void setDiskBackupId(String DiskBackupId) {
         this.DiskBackupId = DiskBackupId;

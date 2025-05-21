@@ -52,6 +52,13 @@ public class ScaleOutInstanceRequest extends AbstractModel {
     private Long HaType;
 
     /**
+    * 前端鉴权使用
+    */
+    @SerializedName("CheckAuth")
+    @Expose
+    private Boolean CheckAuth;
+
+    /**
      * Get 集群ID 
      * @return InstanceId 集群ID
      */
@@ -115,6 +122,22 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         this.HaType = HaType;
     }
 
+    /**
+     * Get 前端鉴权使用 
+     * @return CheckAuth 前端鉴权使用
+     */
+    public Boolean getCheckAuth() {
+        return this.CheckAuth;
+    }
+
+    /**
+     * Set 前端鉴权使用
+     * @param CheckAuth 前端鉴权使用
+     */
+    public void setCheckAuth(Boolean CheckAuth) {
+        this.CheckAuth = CheckAuth;
+    }
+
     public ScaleOutInstanceRequest() {
     }
 
@@ -135,6 +158,9 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         if (source.HaType != null) {
             this.HaType = new Long(source.HaType);
         }
+        if (source.CheckAuth != null) {
+            this.CheckAuth = new Boolean(source.CheckAuth);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "HaType", this.HaType);
+        this.setParamSimple(map, prefix + "CheckAuth", this.CheckAuth);
 
     }
 }

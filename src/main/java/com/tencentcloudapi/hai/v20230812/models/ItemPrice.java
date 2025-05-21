@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ItemPrice extends AbstractModel {
 
     /**
-    * 原单价
+    * 原单价，元
     */
     @SerializedName("UnitPrice")
     @Expose
     private Float UnitPrice;
 
     /**
-    * 折扣后单价
+    * 折扣后单价，元
     */
     @SerializedName("DiscountUnitPrice")
     @Expose
@@ -60,32 +60,32 @@ public class ItemPrice extends AbstractModel {
     private Long Amount;
 
     /**
-     * Get 原单价 
-     * @return UnitPrice 原单价
+     * Get 原单价，元 
+     * @return UnitPrice 原单价，元
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set 原单价
-     * @param UnitPrice 原单价
+     * Set 原单价，元
+     * @param UnitPrice 原单价，元
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get 折扣后单价 
-     * @return DiscountUnitPrice 折扣后单价
+     * Get 折扣后单价，元 
+     * @return DiscountUnitPrice 折扣后单价，元
      */
     public Float getDiscountUnitPrice() {
         return this.DiscountUnitPrice;
     }
 
     /**
-     * Set 折扣后单价
-     * @param DiscountUnitPrice 折扣后单价
+     * Set 折扣后单价，元
+     * @param DiscountUnitPrice 折扣后单价，元
      */
     public void setDiscountUnitPrice(Float DiscountUnitPrice) {
         this.DiscountUnitPrice = DiscountUnitPrice;

@@ -316,6 +316,20 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
     private String TechTitle;
 
     /**
+    * 证书类型
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * 只针对Dnspod系列证书有效，ca机构类型可为sectigo和digicert
+    */
+    @SerializedName("CaType")
+    @Expose
+    private String CaType;
+
+    /**
      * Get 待提交资料的付费证书 ID。	 
      * @return CertId 待提交资料的付费证书 ID。	
      */
@@ -1027,6 +1041,38 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
         this.TechTitle = TechTitle;
     }
 
+    /**
+     * Get 证书类型 
+     * @return Type 证书类型
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 证书类型
+     * @param Type 证书类型
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 只针对Dnspod系列证书有效，ca机构类型可为sectigo和digicert 
+     * @return CaType 只针对Dnspod系列证书有效，ca机构类型可为sectigo和digicert
+     */
+    public String getCaType() {
+        return this.CaType;
+    }
+
+    /**
+     * Set 只针对Dnspod系列证书有效，ca机构类型可为sectigo和digicert
+     * @param CaType 只针对Dnspod系列证书有效，ca机构类型可为sectigo和digicert
+     */
+    public void setCaType(String CaType) {
+        this.CaType = CaType;
+    }
+
     public CertificateInfoSubmitRequest() {
     }
 
@@ -1152,6 +1198,12 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
         if (source.TechTitle != null) {
             this.TechTitle = new String(source.TechTitle);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.CaType != null) {
+            this.CaType = new String(source.CaType);
+        }
     }
 
 
@@ -1197,6 +1249,8 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
         this.setParamSimple(map, prefix + "TechPhone", this.TechPhone);
         this.setParamSimple(map, prefix + "TechEmail", this.TechEmail);
         this.setParamSimple(map, prefix + "TechTitle", this.TechTitle);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "CaType", this.CaType);
 
     }
 }

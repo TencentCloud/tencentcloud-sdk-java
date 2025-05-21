@@ -276,6 +276,34 @@ public class SREInstance extends AbstractModel {
     private String DeployMode;
 
     /**
+    * 全局属性
+    */
+    @SerializedName("GlobalType")
+    @Expose
+    private String GlobalType;
+
+    /**
+    * 所属组类型
+    */
+    @SerializedName("GroupType")
+    @Expose
+    private String GroupType;
+
+    /**
+    * 组id
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String [] GroupId;
+
+    /**
+    * 是否为主地域
+    */
+    @SerializedName("IsMainRegion")
+    @Expose
+    private Boolean IsMainRegion;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -851,6 +879,70 @@ public class SREInstance extends AbstractModel {
         this.DeployMode = DeployMode;
     }
 
+    /**
+     * Get 全局属性 
+     * @return GlobalType 全局属性
+     */
+    public String getGlobalType() {
+        return this.GlobalType;
+    }
+
+    /**
+     * Set 全局属性
+     * @param GlobalType 全局属性
+     */
+    public void setGlobalType(String GlobalType) {
+        this.GlobalType = GlobalType;
+    }
+
+    /**
+     * Get 所属组类型 
+     * @return GroupType 所属组类型
+     */
+    public String getGroupType() {
+        return this.GroupType;
+    }
+
+    /**
+     * Set 所属组类型
+     * @param GroupType 所属组类型
+     */
+    public void setGroupType(String GroupType) {
+        this.GroupType = GroupType;
+    }
+
+    /**
+     * Get 组id 
+     * @return GroupId 组id
+     */
+    public String [] getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 组id
+     * @param GroupId 组id
+     */
+    public void setGroupId(String [] GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 是否为主地域 
+     * @return IsMainRegion 是否为主地域
+     */
+    public Boolean getIsMainRegion() {
+        return this.IsMainRegion;
+    }
+
+    /**
+     * Set 是否为主地域
+     * @param IsMainRegion 是否为主地域
+     */
+    public void setIsMainRegion(Boolean IsMainRegion) {
+        this.IsMainRegion = IsMainRegion;
+    }
+
     public SREInstance() {
     }
 
@@ -988,6 +1080,21 @@ public class SREInstance extends AbstractModel {
         if (source.DeployMode != null) {
             this.DeployMode = new String(source.DeployMode);
         }
+        if (source.GlobalType != null) {
+            this.GlobalType = new String(source.GlobalType);
+        }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String[source.GroupId.length];
+            for (int i = 0; i < source.GroupId.length; i++) {
+                this.GroupId[i] = new String(source.GroupId[i]);
+            }
+        }
+        if (source.IsMainRegion != null) {
+            this.IsMainRegion = new Boolean(source.IsMainRegion);
+        }
     }
 
 
@@ -1031,6 +1138,10 @@ public class SREInstance extends AbstractModel {
         this.setParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
         this.setParamObj(map, prefix + "ZookeeperRegionInfo.", this.ZookeeperRegionInfo);
         this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
+        this.setParamSimple(map, prefix + "GlobalType", this.GlobalType);
+        this.setParamSimple(map, prefix + "GroupType", this.GroupType);
+        this.setParamArraySimple(map, prefix + "GroupId.", this.GroupId);
+        this.setParamSimple(map, prefix + "IsMainRegion", this.IsMainRegion);
 
     }
 }

@@ -81,7 +81,6 @@ public class DspaDiscoveryTask extends AbstractModel {
 
     /**
     * 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -97,7 +96,6 @@ public class DspaDiscoveryTask extends AbstractModel {
 
     /**
     * 关联模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceUpdate")
     @Expose
@@ -232,10 +230,8 @@ public class DspaDiscoveryTask extends AbstractModel {
     }
 
     /**
-     * Get 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务最新的一次执行结果信息，该字段用于查询任务列表接口 
      * @return Result 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScanTaskResult getResult() {
         return this.Result;
@@ -243,9 +239,7 @@ public class DspaDiscoveryTask extends AbstractModel {
 
     /**
      * Set 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(ScanTaskResult Result) {
         this.Result = Result;
@@ -272,10 +266,8 @@ public class DspaDiscoveryTask extends AbstractModel {
     }
 
     /**
-     * Get 关联模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联模板是否更新 
      * @return ComplianceUpdate 关联模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getComplianceUpdate() {
         return this.ComplianceUpdate;
@@ -283,9 +275,7 @@ public class DspaDiscoveryTask extends AbstractModel {
 
     /**
      * Set 关联模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceUpdate 关联模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceUpdate(Boolean ComplianceUpdate) {
         this.ComplianceUpdate = ComplianceUpdate;

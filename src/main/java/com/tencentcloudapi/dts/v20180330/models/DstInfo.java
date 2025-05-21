@@ -107,7 +107,9 @@ public class DstInfo extends AbstractModel {
     /**
      * Get 目标实例vip。已废弃，无需填写 
      * @return Ip 目标实例vip。已废弃，无需填写
+     * @deprecated
      */
+    @Deprecated
     public String getIp() {
         return this.Ip;
     }
@@ -115,7 +117,9 @@ public class DstInfo extends AbstractModel {
     /**
      * Set 目标实例vip。已废弃，无需填写
      * @param Ip 目标实例vip。已废弃，无需填写
+     * @deprecated
      */
+    @Deprecated
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
@@ -123,7 +127,9 @@ public class DstInfo extends AbstractModel {
     /**
      * Get 目标实例vport。已废弃，无需填写 
      * @return Port 目标实例vport。已废弃，无需填写
+     * @deprecated
      */
+    @Deprecated
     public Long getPort() {
         return this.Port;
     }
@@ -131,7 +137,9 @@ public class DstInfo extends AbstractModel {
     /**
      * Set 目标实例vport。已废弃，无需填写
      * @param Port 目标实例vport。已废弃，无需填写
+     * @deprecated
      */
+    @Deprecated
     public void setPort(Long Port) {
         this.Port = Port;
     }

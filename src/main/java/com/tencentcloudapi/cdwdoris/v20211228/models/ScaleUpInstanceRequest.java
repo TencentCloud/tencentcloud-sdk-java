@@ -38,11 +38,25 @@ public class ScaleUpInstanceRequest extends AbstractModel {
     private String SpecName;
 
     /**
-    * 角色（MATER/CORE），MASTER 对应 FE，CORE对应BE
+    * 角色（MASTER/CORE），MASTER 对应 FE，CORE对应BE
     */
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+    * 前端鉴权使用，后端API调用传false，传true不会执行变配
+    */
+    @SerializedName("CheckAuth")
+    @Expose
+    private Boolean CheckAuth;
+
+    /**
+    * 是否滚动重启
+    */
+    @SerializedName("RollingRestart")
+    @Expose
+    private Boolean RollingRestart;
 
     /**
      * Get 集群ID 
@@ -77,19 +91,51 @@ public class ScaleUpInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 角色（MATER/CORE），MASTER 对应 FE，CORE对应BE 
-     * @return Type 角色（MATER/CORE），MASTER 对应 FE，CORE对应BE
+     * Get 角色（MASTER/CORE），MASTER 对应 FE，CORE对应BE 
+     * @return Type 角色（MASTER/CORE），MASTER 对应 FE，CORE对应BE
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 角色（MATER/CORE），MASTER 对应 FE，CORE对应BE
-     * @param Type 角色（MATER/CORE），MASTER 对应 FE，CORE对应BE
+     * Set 角色（MASTER/CORE），MASTER 对应 FE，CORE对应BE
+     * @param Type 角色（MASTER/CORE），MASTER 对应 FE，CORE对应BE
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get 前端鉴权使用，后端API调用传false，传true不会执行变配 
+     * @return CheckAuth 前端鉴权使用，后端API调用传false，传true不会执行变配
+     */
+    public Boolean getCheckAuth() {
+        return this.CheckAuth;
+    }
+
+    /**
+     * Set 前端鉴权使用，后端API调用传false，传true不会执行变配
+     * @param CheckAuth 前端鉴权使用，后端API调用传false，传true不会执行变配
+     */
+    public void setCheckAuth(Boolean CheckAuth) {
+        this.CheckAuth = CheckAuth;
+    }
+
+    /**
+     * Get 是否滚动重启 
+     * @return RollingRestart 是否滚动重启
+     */
+    public Boolean getRollingRestart() {
+        return this.RollingRestart;
+    }
+
+    /**
+     * Set 是否滚动重启
+     * @param RollingRestart 是否滚动重启
+     */
+    public void setRollingRestart(Boolean RollingRestart) {
+        this.RollingRestart = RollingRestart;
     }
 
     public ScaleUpInstanceRequest() {
@@ -109,6 +155,12 @@ public class ScaleUpInstanceRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.CheckAuth != null) {
+            this.CheckAuth = new Boolean(source.CheckAuth);
+        }
+        if (source.RollingRestart != null) {
+            this.RollingRestart = new Boolean(source.RollingRestart);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class ScaleUpInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "CheckAuth", this.CheckAuth);
+        this.setParamSimple(map, prefix + "RollingRestart", this.RollingRestart);
 
     }
 }

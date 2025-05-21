@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VisionRecognitionResult extends AbstractModel {
 
     /**
-    * 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+    * 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
     */
     @SerializedName("Status")
     @Expose
@@ -48,23 +48,30 @@ public class VisionRecognitionResult extends AbstractModel {
     private String [] DetectedClassifications;
 
     /**
-    * 视频摘要文本
+    * 摘要文本
     */
     @SerializedName("Summary")
     @Expose
     private String Summary;
 
     /**
-     * Get 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空） 
-     * @return Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+    * 摘要文本（次选语言）
+    */
+    @SerializedName("AlternativeSummary")
+    @Expose
+    private String AlternativeSummary;
+
+    /**
+     * Get 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功） 
+     * @return Status 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
-     * @param Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+     * Set 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
+     * @param Status 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -127,19 +134,35 @@ public class VisionRecognitionResult extends AbstractModel {
     }
 
     /**
-     * Get 视频摘要文本 
-     * @return Summary 视频摘要文本
+     * Get 摘要文本 
+     * @return Summary 摘要文本
      */
     public String getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set 视频摘要文本
-     * @param Summary 视频摘要文本
+     * Set 摘要文本
+     * @param Summary 摘要文本
      */
     public void setSummary(String Summary) {
         this.Summary = Summary;
+    }
+
+    /**
+     * Get 摘要文本（次选语言） 
+     * @return AlternativeSummary 摘要文本（次选语言）
+     */
+    public String getAlternativeSummary() {
+        return this.AlternativeSummary;
+    }
+
+    /**
+     * Set 摘要文本（次选语言）
+     * @param AlternativeSummary 摘要文本（次选语言）
+     */
+    public void setAlternativeSummary(String AlternativeSummary) {
+        this.AlternativeSummary = AlternativeSummary;
     }
 
     public VisionRecognitionResult() {
@@ -162,6 +185,9 @@ public class VisionRecognitionResult extends AbstractModel {
         if (source.Summary != null) {
             this.Summary = new String(source.Summary);
         }
+        if (source.AlternativeSummary != null) {
+            this.AlternativeSummary = new String(source.AlternativeSummary);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class VisionRecognitionResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "DetectedClassifications.", this.DetectedClassifications);
         this.setParamSimple(map, prefix + "Summary", this.Summary);
+        this.setParamSimple(map, prefix + "AlternativeSummary", this.AlternativeSummary);
 
     }
 }

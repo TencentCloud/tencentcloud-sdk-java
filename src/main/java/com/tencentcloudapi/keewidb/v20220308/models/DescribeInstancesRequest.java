@@ -158,7 +158,7 @@ public class DescribeInstancesRequest extends AbstractModel {
     private String MonitorVersion;
 
     /**
-    * 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+    * 废弃字段。请使用TagList传参。
     */
     @SerializedName("InstanceTags")
     @Expose
@@ -170,6 +170,13 @@ public class DescribeInstancesRequest extends AbstractModel {
     @SerializedName("TagKeys")
     @Expose
     private String [] TagKeys;
+
+    /**
+    * 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+    */
+    @SerializedName("TagList")
+    @Expose
+    private InstanceTagInfo [] TagList;
 
     /**
      * Get 每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。 
@@ -480,17 +487,21 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。 
-     * @return InstanceTags 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     * Get 废弃字段。请使用TagList传参。 
+     * @return InstanceTags 废弃字段。请使用TagList传参。
+     * @deprecated
      */
+    @Deprecated
     public InstanceTagInfo getInstanceTags() {
         return this.InstanceTags;
     }
 
     /**
-     * Set 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
-     * @param InstanceTags 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     * Set 废弃字段。请使用TagList传参。
+     * @param InstanceTags 废弃字段。请使用TagList传参。
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceTags(InstanceTagInfo InstanceTags) {
         this.InstanceTags = InstanceTags;
     }
@@ -509,6 +520,22 @@ public class DescribeInstancesRequest extends AbstractModel {
      */
     public void setTagKeys(String [] TagKeys) {
         this.TagKeys = TagKeys;
+    }
+
+    /**
+     * Get 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。 
+     * @return TagList 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     */
+    public InstanceTagInfo [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     * @param TagList 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     */
+    public void setTagList(InstanceTagInfo [] TagList) {
+        this.TagList = TagList;
     }
 
     public DescribeInstancesRequest() {
@@ -612,6 +639,12 @@ public class DescribeInstancesRequest extends AbstractModel {
                 this.TagKeys[i] = new String(source.TagKeys[i]);
             }
         }
+        if (source.TagList != null) {
+            this.TagList = new InstanceTagInfo[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new InstanceTagInfo(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -640,6 +673,7 @@ public class DescribeInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
         this.setParamObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

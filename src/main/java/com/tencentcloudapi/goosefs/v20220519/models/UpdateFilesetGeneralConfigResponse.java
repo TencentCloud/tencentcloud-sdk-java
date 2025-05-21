@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.goosefs.v20220519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeDBInstanceResponse extends AbstractModel {
-
-    /**
-    * 交易名字。
-    */
-    @SerializedName("DealName")
-    @Expose
-    private String DealName;
-
-    /**
-    * 冻结流水号
-    */
-    @SerializedName("BillId")
-    @Expose
-    private String BillId;
+public class UpdateFilesetGeneralConfigResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,38 +29,6 @@ public class UpgradeDBInstanceResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 交易名字。 
-     * @return DealName 交易名字。
-     */
-    public String getDealName() {
-        return this.DealName;
-    }
-
-    /**
-     * Set 交易名字。
-     * @param DealName 交易名字。
-     */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
-    }
-
-    /**
-     * Get 冻结流水号 
-     * @return BillId 冻结流水号
-     */
-    public String getBillId() {
-        return this.BillId;
-    }
-
-    /**
-     * Set 冻结流水号
-     * @param BillId 冻结流水号
-     */
-    public void setBillId(String BillId) {
-        this.BillId = BillId;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -92,20 +46,14 @@ public class UpgradeDBInstanceResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public UpgradeDBInstanceResponse() {
+    public UpdateFilesetGeneralConfigResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpgradeDBInstanceResponse(UpgradeDBInstanceResponse source) {
-        if (source.DealName != null) {
-            this.DealName = new String(source.DealName);
-        }
-        if (source.BillId != null) {
-            this.BillId = new String(source.BillId);
-        }
+    public UpdateFilesetGeneralConfigResponse(UpdateFilesetGeneralConfigResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -116,8 +64,6 @@ public class UpgradeDBInstanceResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
-        this.setParamSimple(map, prefix + "BillId", this.BillId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

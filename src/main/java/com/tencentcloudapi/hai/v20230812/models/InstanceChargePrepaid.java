@@ -43,7 +43,7 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：表示明确不自动续费(用户设置)
     private String RenewFlag;
 
     /**
-    * 时长单位，默认值MONTH
+    * 时长单位，枚举： MONTH, DAY, HOUR；释义：月，日，小时
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -102,16 +102,16 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：表示明确不自动续费(用户设置)
     }
 
     /**
-     * Get 时长单位，默认值MONTH 
-     * @return TimeUnit 时长单位，默认值MONTH
+     * Get 时长单位，枚举： MONTH, DAY, HOUR；释义：月，日，小时 
+     * @return TimeUnit 时长单位，枚举： MONTH, DAY, HOUR；释义：月，日，小时
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 时长单位，默认值MONTH
-     * @param TimeUnit 时长单位，默认值MONTH
+     * Set 时长单位，枚举： MONTH, DAY, HOUR；释义：月，日，小时
+     * @param TimeUnit 时长单位，枚举： MONTH, DAY, HOUR；释义：月，日，小时
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;

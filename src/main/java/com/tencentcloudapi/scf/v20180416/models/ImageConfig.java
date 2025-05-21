@@ -46,7 +46,7 @@ public class ImageConfig extends AbstractModel {
     private String RegistryId;
 
     /**
-    * 参数已废弃
+    * 该参数即将下线，不推荐用户使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EntryPoint")
@@ -143,9 +143,9 @@ Job 镜像：-1
     }
 
     /**
-     * Get 参数已废弃
+     * Get 该参数即将下线，不推荐用户使用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EntryPoint 参数已废弃
+     * @return EntryPoint 该参数即将下线，不推荐用户使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEntryPoint() {
@@ -153,9 +153,9 @@ Job 镜像：-1
     }
 
     /**
-     * Set 参数已废弃
+     * Set 该参数即将下线，不推荐用户使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EntryPoint 参数已废弃
+     * @param EntryPoint 该参数即将下线，不推荐用户使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEntryPoint(String EntryPoint) {

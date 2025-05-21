@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.goosefs.v20220519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloseSSLResponse extends AbstractModel {
+public class DescribeFilesetsResponse extends AbstractModel {
 
     /**
-    * 流程ID
+    * Fileset列表
     */
-    @SerializedName("FlowId")
+    @SerializedName("FilesetList")
     @Expose
-    private Long FlowId;
-
-    /**
-    * 任务id
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private Long TaskId;
+    private FilesetInfo [] FilesetList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class CloseSSLResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 流程ID 
-     * @return FlowId 流程ID
+     * Get Fileset列表 
+     * @return FilesetList Fileset列表
      */
-    public Long getFlowId() {
-        return this.FlowId;
+    public FilesetInfo [] getFilesetList() {
+        return this.FilesetList;
     }
 
     /**
-     * Set 流程ID
-     * @param FlowId 流程ID
+     * Set Fileset列表
+     * @param FilesetList Fileset列表
      */
-    public void setFlowId(Long FlowId) {
-        this.FlowId = FlowId;
-    }
-
-    /**
-     * Get 任务id 
-     * @return TaskId 任务id
-     */
-    public Long getTaskId() {
-        return this.TaskId;
-    }
-
-    /**
-     * Set 任务id
-     * @param TaskId 任务id
-     */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
+    public void setFilesetList(FilesetInfo [] FilesetList) {
+        this.FilesetList = FilesetList;
     }
 
     /**
@@ -92,19 +69,19 @@ public class CloseSSLResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CloseSSLResponse() {
+    public DescribeFilesetsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CloseSSLResponse(CloseSSLResponse source) {
-        if (source.FlowId != null) {
-            this.FlowId = new Long(source.FlowId);
-        }
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
+    public DescribeFilesetsResponse(DescribeFilesetsResponse source) {
+        if (source.FilesetList != null) {
+            this.FilesetList = new FilesetInfo[source.FilesetList.length];
+            for (int i = 0; i < source.FilesetList.length; i++) {
+                this.FilesetList[i] = new FilesetInfo(source.FilesetList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +93,7 @@ public class CloseSSLResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "FilesetList.", this.FilesetList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -38,7 +38,7 @@ public class CreateSchemeUrlResponse extends AbstractModel {
     private String SchemeUrl;
 
     /**
-    * 二维码，在生成动态签署人跳转封面页链接时返回
+    * 二维码，在生成动态签署人跳转封面页链接时返回  注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
     */
     @SerializedName("SchemeQrcodeUrl")
     @Expose
@@ -96,16 +96,16 @@ public class CreateSchemeUrlResponse extends AbstractModel {
     }
 
     /**
-     * Get 二维码，在生成动态签署人跳转封面页链接时返回 
-     * @return SchemeQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
+     * Get 二维码，在生成动态签署人跳转封面页链接时返回  注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。` 
+     * @return SchemeQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回  注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
      */
     public String getSchemeQrcodeUrl() {
         return this.SchemeQrcodeUrl;
     }
 
     /**
-     * Set 二维码，在生成动态签署人跳转封面页链接时返回
-     * @param SchemeQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
+     * Set 二维码，在生成动态签署人跳转封面页链接时返回  注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
+     * @param SchemeQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回  注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
      */
     public void setSchemeQrcodeUrl(String SchemeQrcodeUrl) {
         this.SchemeQrcodeUrl = SchemeQrcodeUrl;

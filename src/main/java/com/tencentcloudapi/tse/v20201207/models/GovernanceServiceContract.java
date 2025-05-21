@@ -101,6 +101,14 @@ public class GovernanceServiceContract extends AbstractModel {
     private GovernanceInterfaceDescription [] Interfaces;
 
     /**
+    * 元数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Metadatas")
+    @Expose
+    private Metadata [] Metadatas;
+
+    /**
      * Get 契约名称 
      * @return Name 契约名称
      */
@@ -276,6 +284,26 @@ public class GovernanceServiceContract extends AbstractModel {
         this.Interfaces = Interfaces;
     }
 
+    /**
+     * Get 元数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Metadatas 元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Metadata [] getMetadatas() {
+        return this.Metadatas;
+    }
+
+    /**
+     * Set 元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Metadatas 元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetadatas(Metadata [] Metadatas) {
+        this.Metadatas = Metadatas;
+    }
+
     public GovernanceServiceContract() {
     }
 
@@ -320,6 +348,12 @@ public class GovernanceServiceContract extends AbstractModel {
                 this.Interfaces[i] = new GovernanceInterfaceDescription(source.Interfaces[i]);
             }
         }
+        if (source.Metadatas != null) {
+            this.Metadatas = new Metadata[source.Metadatas.length];
+            for (int i = 0; i < source.Metadatas.length; i++) {
+                this.Metadatas[i] = new Metadata(source.Metadatas[i]);
+            }
+        }
     }
 
 
@@ -338,6 +372,7 @@ public class GovernanceServiceContract extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamArrayObj(map, prefix + "Interfaces.", this.Interfaces);
+        this.setParamArrayObj(map, prefix + "Metadatas.", this.Metadatas);
 
     }
 }

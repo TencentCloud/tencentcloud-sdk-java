@@ -25,6 +25,8 @@ public class RenewDiskChargePrepaid extends AbstractModel {
 
     /**
     * 续费周期。
+单位：月。
+取值范围: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36]
     */
     @SerializedName("Period")
     @Expose
@@ -59,8 +61,12 @@ public class RenewDiskChargePrepaid extends AbstractModel {
     private String CurInstanceDeadline;
 
     /**
-     * Get 续费周期。 
+     * Get 续费周期。
+单位：月。
+取值范围: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36] 
      * @return Period 续费周期。
+单位：月。
+取值范围: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36]
      */
     public Long getPeriod() {
         return this.Period;
@@ -68,7 +74,11 @@ public class RenewDiskChargePrepaid extends AbstractModel {
 
     /**
      * Set 续费周期。
+单位：月。
+取值范围: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36]
      * @param Period 续费周期。
+单位：月。
+取值范围: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36]
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
