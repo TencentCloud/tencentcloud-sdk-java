@@ -72,6 +72,9 @@ public enum CbsErrorCode {
      /* 云硬盘大小与快照大小不匹配。 */
      INVALIDPARAMETER_DISKSIZENOTMATCH("InvalidParameter.DiskSizeNotMatch"),
      
+     /* ClientToken不可用。 */
+     INVALIDPARAMETER_INVALIDCLIENTTOKEN("InvalidParameter.InvalidClientToken"),
+     
      /* 项目ID不存在。 */
      INVALIDPARAMETER_PROJECTIDNOTEXIST("InvalidParameter.ProjectIdNotExist"),
      

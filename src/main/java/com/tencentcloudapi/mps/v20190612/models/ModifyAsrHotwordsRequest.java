@@ -25,8 +25,8 @@ public class ModifyAsrHotwordsRequest extends AbstractModel {
 
     /**
     * 热词库 id 
-如果热词库是文本热词：Name 和 Content 至少填一个 
-如果热词库是：Name、FileContent 和 FileName 至少填一个 
+如果热词库是临时热词：Name 和 Content 至少填一个 
+如果热词库是文件热词：Name、FileContent 和 FileName 至少填一个 
 
     */
     @SerializedName("HotwordsId")
@@ -66,12 +66,12 @@ public class ModifyAsrHotwordsRequest extends AbstractModel {
 
     /**
      * Get 热词库 id 
-如果热词库是文本热词：Name 和 Content 至少填一个 
-如果热词库是：Name、FileContent 和 FileName 至少填一个 
+如果热词库是临时热词：Name 和 Content 至少填一个 
+如果热词库是文件热词：Name、FileContent 和 FileName 至少填一个 
  
      * @return HotwordsId 热词库 id 
-如果热词库是文本热词：Name 和 Content 至少填一个 
-如果热词库是：Name、FileContent 和 FileName 至少填一个 
+如果热词库是临时热词：Name 和 Content 至少填一个 
+如果热词库是文件热词：Name、FileContent 和 FileName 至少填一个 
 
      */
     public String getHotwordsId() {
@@ -80,12 +80,12 @@ public class ModifyAsrHotwordsRequest extends AbstractModel {
 
     /**
      * Set 热词库 id 
-如果热词库是文本热词：Name 和 Content 至少填一个 
-如果热词库是：Name、FileContent 和 FileName 至少填一个 
+如果热词库是临时热词：Name 和 Content 至少填一个 
+如果热词库是文件热词：Name、FileContent 和 FileName 至少填一个 
 
      * @param HotwordsId 热词库 id 
-如果热词库是文本热词：Name 和 Content 至少填一个 
-如果热词库是：Name、FileContent 和 FileName 至少填一个 
+如果热词库是临时热词：Name 和 Content 至少填一个 
+如果热词库是文件热词：Name、FileContent 和 FileName 至少填一个 
 
      */
     public void setHotwordsId(String HotwordsId) {

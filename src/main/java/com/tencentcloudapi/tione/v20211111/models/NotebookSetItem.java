@@ -236,6 +236,14 @@ public class NotebookSetItem extends AbstractModel {
     private GooseFS VolumeSourceGooseFS;
 
     /**
+    * 子用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubUin")
+    @Expose
+    private String SubUin;
+
+    /**
     * 子用户名称
     */
     @SerializedName("SubUinName")
@@ -775,6 +783,26 @@ public class NotebookSetItem extends AbstractModel {
     }
 
     /**
+     * Get 子用户ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubUin 子用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubUin() {
+        return this.SubUin;
+    }
+
+    /**
+     * Set 子用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubUin 子用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubUin(String SubUin) {
+        this.SubUin = SubUin;
+    }
+
+    /**
      * Get 子用户名称 
      * @return SubUinName 子用户名称
      */
@@ -908,6 +936,9 @@ public class NotebookSetItem extends AbstractModel {
         if (source.VolumeSourceGooseFS != null) {
             this.VolumeSourceGooseFS = new GooseFS(source.VolumeSourceGooseFS);
         }
+        if (source.SubUin != null) {
+            this.SubUin = new String(source.SubUin);
+        }
         if (source.SubUinName != null) {
             this.SubUinName = new String(source.SubUinName);
         }
@@ -948,6 +979,7 @@ public class NotebookSetItem extends AbstractModel {
         this.setParamArraySimple(map, prefix + "UserTypes.", this.UserTypes);
         this.setParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
         this.setParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
+        this.setParamSimple(map, prefix + "SubUin", this.SubUin);
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
 

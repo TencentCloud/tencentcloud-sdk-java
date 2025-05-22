@@ -39,6 +39,7 @@ public class ModifyTemplateRequest extends AbstractModel {
 
     /**
     * 模板ID
+可通过接口: [DescribeTemplateList](https://cloud.tencent.com/document/product/242/48940)
     */
     @SerializedName("TemplateId")
     @Expose
@@ -77,8 +78,10 @@ public class ModifyTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 模板ID 
+     * Get 模板ID
+可通过接口: [DescribeTemplateList](https://cloud.tencent.com/document/product/242/48940) 
      * @return TemplateId 模板ID
+可通过接口: [DescribeTemplateList](https://cloud.tencent.com/document/product/242/48940)
      */
     public String getTemplateId() {
         return this.TemplateId;
@@ -86,7 +89,9 @@ public class ModifyTemplateRequest extends AbstractModel {
 
     /**
      * Set 模板ID
+可通过接口: [DescribeTemplateList](https://cloud.tencent.com/document/product/242/48940)
      * @param TemplateId 模板ID
+可通过接口: [DescribeTemplateList](https://cloud.tencent.com/document/product/242/48940)
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

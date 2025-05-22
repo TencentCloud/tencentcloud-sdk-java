@@ -78,10 +78,8 @@ public class TextResult extends AbstractModel {
 
     /**
     * 自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库；
+2：公库；
     */
     @SerializedName("LibType")
     @Expose
@@ -245,15 +243,11 @@ public class TextResult extends AbstractModel {
 
     /**
      * Get 自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库； 
+2：公库； 
      * @return LibType 自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库；
+2：公库；
      */
     public Long getLibType() {
         return this.LibType;
@@ -261,15 +255,11 @@ public class TextResult extends AbstractModel {
 
     /**
      * Set 自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库；
+2：公库；
      * @param LibType 自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库；
+2：公库；
      */
     public void setLibType(Long LibType) {
         this.LibType = LibType;

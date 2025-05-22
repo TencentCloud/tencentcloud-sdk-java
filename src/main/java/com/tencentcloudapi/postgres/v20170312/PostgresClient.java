@@ -419,7 +419,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeDBBackups）用于查询实例备份列表。本接口已废弃，推荐使用接口[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)替代。
+     *本接口（DescribeDBBackups）用于查询实例备份列表。**本接口属于早期接口，已停止功能迭代，推荐使用接口**[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)**替代**。
      * @param req DescribeDBBackupsRequest
      * @return DescribeDBBackupsResponse
      * @throws TencentCloudSDKException
@@ -533,7 +533,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeDBXlogs）用于获取实例Xlog列表。本接口已废弃，推荐使用接口[DescribeLogBackups](https://cloud.tencent.com/document/api/409/89021)替代。
+     *本接口（DescribeDBXlogs）用于获取实例Xlog列表。 **本接口属于早期接口，已停止功能迭代，推荐使用接口**[DescribeLogBackups](https://cloud.tencent.com/document/api/409/89021)**替代**。
      * @param req DescribeDBXlogsRequest
      * @return DescribeDBXlogsResponse
      * @throws TencentCloudSDKException
@@ -665,7 +665,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeProductConfig）用于查询售卖规格配置。本接口已废弃，推荐使用新接口[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)。
+     *本接口（DescribeProductConfig）用于查询售卖规格配置。**本接口属于早期接口，已停止功能迭代，推荐使用新接口**[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)**替代**。
      * @param req DescribeProductConfigRequest
      * @return DescribeProductConfigResponse
      * @throws TencentCloudSDKException

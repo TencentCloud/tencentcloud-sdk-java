@@ -26,7 +26,7 @@ public class ImageAreaBoxInfo extends AbstractModel {
     /**
     * 图片框选区域类型，可选值：
 <li>logo：图标；</li>
-<li>text：文字。</li>
+<li>text：文字；</li>
 默认值：logo。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -44,14 +44,24 @@ public class ImageAreaBoxInfo extends AbstractModel {
     private Long [] AreaCoordSet;
 
     /**
+    * 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。
+- [0.1, 0.1, 0.3, 0.3] :  表示比例 （数值小于1）
+- [50, 50, 350, 280] : 表示像素 （数值大于等于1）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BoundingBox")
+    @Expose
+    private Float [] BoundingBox;
+
+    /**
      * Get 图片框选区域类型，可选值：
 <li>logo：图标；</li>
-<li>text：文字。</li>
+<li>text：文字；</li>
 默认值：logo。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 图片框选区域类型，可选值：
 <li>logo：图标；</li>
-<li>text：文字。</li>
+<li>text：文字；</li>
 默认值：logo。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -62,12 +72,12 @@ public class ImageAreaBoxInfo extends AbstractModel {
     /**
      * Set 图片框选区域类型，可选值：
 <li>logo：图标；</li>
-<li>text：文字。</li>
+<li>text：文字；</li>
 默认值：logo。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 图片框选区域类型，可选值：
 <li>logo：图标；</li>
-<li>text：文字。</li>
+<li>text：文字；</li>
 默认值：logo。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -99,6 +109,34 @@ public class ImageAreaBoxInfo extends AbstractModel {
         this.AreaCoordSet = AreaCoordSet;
     }
 
+    /**
+     * Get 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。
+- [0.1, 0.1, 0.3, 0.3] :  表示比例 （数值小于1）
+- [50, 50, 350, 280] : 表示像素 （数值大于等于1）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BoundingBox 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。
+- [0.1, 0.1, 0.3, 0.3] :  表示比例 （数值小于1）
+- [50, 50, 350, 280] : 表示像素 （数值大于等于1）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float [] getBoundingBox() {
+        return this.BoundingBox;
+    }
+
+    /**
+     * Set 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。
+- [0.1, 0.1, 0.3, 0.3] :  表示比例 （数值小于1）
+- [50, 50, 350, 280] : 表示像素 （数值大于等于1）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BoundingBox 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。
+- [0.1, 0.1, 0.3, 0.3] :  表示比例 （数值小于1）
+- [50, 50, 350, 280] : 表示像素 （数值大于等于1）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBoundingBox(Float [] BoundingBox) {
+        this.BoundingBox = BoundingBox;
+    }
+
     public ImageAreaBoxInfo() {
     }
 
@@ -116,6 +154,12 @@ public class ImageAreaBoxInfo extends AbstractModel {
                 this.AreaCoordSet[i] = new Long(source.AreaCoordSet[i]);
             }
         }
+        if (source.BoundingBox != null) {
+            this.BoundingBox = new Float[source.BoundingBox.length];
+            for (int i = 0; i < source.BoundingBox.length; i++) {
+                this.BoundingBox[i] = new Float(source.BoundingBox[i]);
+            }
+        }
     }
 
 
@@ -125,6 +169,7 @@ public class ImageAreaBoxInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
+        this.setParamArraySimple(map, prefix + "BoundingBox.", this.BoundingBox);
 
     }
 }

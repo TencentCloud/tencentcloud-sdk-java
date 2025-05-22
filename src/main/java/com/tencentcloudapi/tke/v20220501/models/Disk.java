@@ -59,6 +59,14 @@ public class Disk extends AbstractModel {
     private String MountTarget;
 
     /**
+    * 云盘ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiskId")
+    @Expose
+    private String DiskId;
+
+    /**
      * Get 云盘类型 
      * @return DiskType 云盘类型
      */
@@ -138,6 +146,26 @@ public class Disk extends AbstractModel {
         this.MountTarget = MountTarget;
     }
 
+    /**
+     * Get 云盘ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiskId 云盘ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiskId() {
+        return this.DiskId;
+    }
+
+    /**
+     * Set 云盘ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskId 云盘ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiskId(String DiskId) {
+        this.DiskId = DiskId;
+    }
+
     public Disk() {
     }
 
@@ -161,6 +189,9 @@ public class Disk extends AbstractModel {
         if (source.MountTarget != null) {
             this.MountTarget = new String(source.MountTarget);
         }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
     }
 
 
@@ -173,6 +204,7 @@ public class Disk extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoFormatAndMount", this.AutoFormatAndMount);
         this.setParamSimple(map, prefix + "FileSystem", this.FileSystem);
         this.setParamSimple(map, prefix + "MountTarget", this.MountTarget);
+        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
 
     }
 }

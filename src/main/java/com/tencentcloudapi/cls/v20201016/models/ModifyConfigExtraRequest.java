@@ -81,7 +81,7 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     private String LogType;
 
     /**
-    * 日志格式化方式，用于容器采集场景。目前已经废弃
+    * 日志格式化方式，用于容器采集场景。
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
     */
@@ -311,25 +311,29 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志格式化方式，用于容器采集场景。目前已经废弃
+     * Get 日志格式化方式，用于容器采集场景。
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景 
-     * @return LogFormat 日志格式化方式，用于容器采集场景。目前已经废弃
+     * @return LogFormat 日志格式化方式，用于容器采集场景。
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
+     * @deprecated
      */
+    @Deprecated
     public String getLogFormat() {
         return this.LogFormat;
     }
 
     /**
-     * Set 日志格式化方式，用于容器采集场景。目前已经废弃
+     * Set 日志格式化方式，用于容器采集场景。
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
-     * @param LogFormat 日志格式化方式，用于容器采集场景。目前已经废弃
+     * @param LogFormat 日志格式化方式，用于容器采集场景。
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
+     * @deprecated
      */
+    @Deprecated
     public void setLogFormat(String LogFormat) {
         this.LogFormat = LogFormat;
     }

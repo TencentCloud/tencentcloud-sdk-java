@@ -45,6 +45,13 @@ public class LogstashNodeInfo extends AbstractModel {
     private Long Port;
 
     /**
+    * 节点所在zone
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get 节点ID 
      * @return NodeId 节点ID
      */
@@ -92,6 +99,22 @@ public class LogstashNodeInfo extends AbstractModel {
         this.Port = Port;
     }
 
+    /**
+     * Get 节点所在zone 
+     * @return Zone 节点所在zone
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 节点所在zone
+     * @param Zone 节点所在zone
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public LogstashNodeInfo() {
     }
 
@@ -109,6 +132,9 @@ public class LogstashNodeInfo extends AbstractModel {
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class LogstashNodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

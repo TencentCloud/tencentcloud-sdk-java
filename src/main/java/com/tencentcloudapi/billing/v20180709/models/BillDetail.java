@@ -87,7 +87,8 @@ public class BillDetail extends AbstractModel {
     private String ActionTypeName;
 
     /**
-    * 订单ID：包年包月计费模式下订购的订单号
+    * 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+
     */
     @SerializedName("OrderId")
     @Expose
@@ -427,16 +428,20 @@ public class BillDetail extends AbstractModel {
     }
 
     /**
-     * Get 订单ID：包年包月计费模式下订购的订单号 
-     * @return OrderId 订单ID：包年包月计费模式下订购的订单号
+     * Get 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+ 
+     * @return OrderId 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 订单ID：包年包月计费模式下订购的订单号
-     * @param OrderId 订单ID：包年包月计费模式下订购的订单号
+     * Set 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+
+     * @param OrderId 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;

@@ -72,6 +72,14 @@ public class PodInfo extends AbstractModel {
     private ResourceConfigInfo ResourceConfigInfo;
 
     /**
+    * Pod所属任务的SubUin信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubUin")
+    @Expose
+    private String SubUin;
+
+    /**
      * Get pod名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name pod名
@@ -191,6 +199,26 @@ public class PodInfo extends AbstractModel {
         this.ResourceConfigInfo = ResourceConfigInfo;
     }
 
+    /**
+     * Get Pod所属任务的SubUin信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubUin Pod所属任务的SubUin信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubUin() {
+        return this.SubUin;
+    }
+
+    /**
+     * Set Pod所属任务的SubUin信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubUin Pod所属任务的SubUin信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubUin(String SubUin) {
+        this.SubUin = SubUin;
+    }
+
     public PodInfo() {
     }
 
@@ -217,6 +245,9 @@ public class PodInfo extends AbstractModel {
         if (source.ResourceConfigInfo != null) {
             this.ResourceConfigInfo = new ResourceConfigInfo(source.ResourceConfigInfo);
         }
+        if (source.SubUin != null) {
+            this.SubUin = new String(source.SubUin);
+        }
     }
 
 
@@ -230,6 +261,7 @@ public class PodInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamObj(map, prefix + "ResourceConfigInfo.", this.ResourceConfigInfo);
+        this.setParamSimple(map, prefix + "SubUin", this.SubUin);
 
     }
 }

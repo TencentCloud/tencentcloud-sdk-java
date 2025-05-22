@@ -187,6 +187,13 @@ public class PushQualityData extends AbstractModel {
     private String ServerIp;
 
     /**
+    * 关键帧间隔 GOP ，单位：ms。
+    */
+    @SerializedName("GopSize")
+    @Expose
+    private Long GopSize;
+
+    /**
      * Get 数据时间，使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
@@ -562,6 +569,22 @@ public class PushQualityData extends AbstractModel {
         this.ServerIp = ServerIp;
     }
 
+    /**
+     * Get 关键帧间隔 GOP ，单位：ms。 
+     * @return GopSize 关键帧间隔 GOP ，单位：ms。
+     */
+    public Long getGopSize() {
+        return this.GopSize;
+    }
+
+    /**
+     * Set 关键帧间隔 GOP ，单位：ms。
+     * @param GopSize 关键帧间隔 GOP ，单位：ms。
+     */
+    public void setGopSize(Long GopSize) {
+        this.GopSize = GopSize;
+    }
+
     public PushQualityData() {
     }
 
@@ -639,6 +662,9 @@ public class PushQualityData extends AbstractModel {
         if (source.ServerIp != null) {
             this.ServerIp = new String(source.ServerIp);
         }
+        if (source.GopSize != null) {
+            this.GopSize = new Long(source.GopSize);
+        }
     }
 
 
@@ -669,6 +695,7 @@ public class PushQualityData extends AbstractModel {
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "Flux", this.Flux);
         this.setParamSimple(map, prefix + "ServerIp", this.ServerIp);
+        this.setParamSimple(map, prefix + "GopSize", this.GopSize);
 
     }
 }

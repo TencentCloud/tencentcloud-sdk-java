@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dsgc.v20190723.models;
+package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,16 +21,42 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLevelNameRequest extends AbstractModel {
+public class SidecarSpec extends AbstractModel {
 
-    public ModifyLevelNameRequest() {
+    /**
+    * 镜像配置
+    */
+    @SerializedName("ImageInfo")
+    @Expose
+    private ImageInfo ImageInfo;
+
+    /**
+     * Get 镜像配置 
+     * @return ImageInfo 镜像配置
+     */
+    public ImageInfo getImageInfo() {
+        return this.ImageInfo;
+    }
+
+    /**
+     * Set 镜像配置
+     * @param ImageInfo 镜像配置
+     */
+    public void setImageInfo(ImageInfo ImageInfo) {
+        this.ImageInfo = ImageInfo;
+    }
+
+    public SidecarSpec() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyLevelNameRequest(ModifyLevelNameRequest source) {
+    public SidecarSpec(SidecarSpec source) {
+        if (source.ImageInfo != null) {
+            this.ImageInfo = new ImageInfo(source.ImageInfo);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class ModifyLevelNameRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
 
     }
 }

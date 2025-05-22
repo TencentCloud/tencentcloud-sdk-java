@@ -31,6 +31,13 @@ public class CreateEmailIdentityRequest extends AbstractModel {
     private String EmailIdentity;
 
     /**
+    * 生成的dkim密钥长度。0:1024，1:2048
+    */
+    @SerializedName("DKIMOption")
+    @Expose
+    private Long DKIMOption;
+
+    /**
      * Get 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。 
      * @return EmailIdentity 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
      */
@@ -46,6 +53,22 @@ public class CreateEmailIdentityRequest extends AbstractModel {
         this.EmailIdentity = EmailIdentity;
     }
 
+    /**
+     * Get 生成的dkim密钥长度。0:1024，1:2048 
+     * @return DKIMOption 生成的dkim密钥长度。0:1024，1:2048
+     */
+    public Long getDKIMOption() {
+        return this.DKIMOption;
+    }
+
+    /**
+     * Set 生成的dkim密钥长度。0:1024，1:2048
+     * @param DKIMOption 生成的dkim密钥长度。0:1024，1:2048
+     */
+    public void setDKIMOption(Long DKIMOption) {
+        this.DKIMOption = DKIMOption;
+    }
+
     public CreateEmailIdentityRequest() {
     }
 
@@ -57,6 +80,9 @@ public class CreateEmailIdentityRequest extends AbstractModel {
         if (source.EmailIdentity != null) {
             this.EmailIdentity = new String(source.EmailIdentity);
         }
+        if (source.DKIMOption != null) {
+            this.DKIMOption = new Long(source.DKIMOption);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class CreateEmailIdentityRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
+        this.setParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
 
     }
 }

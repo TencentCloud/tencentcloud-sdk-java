@@ -31,14 +31,14 @@ public class MidQueryCondition extends AbstractModel {
     private String Key;
 
     /**
-    * 操作符，支持等于(eq)、不等于(ne)，以及in
+    * 操作符，支持=、in
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * 维度值，当Op是eq、ne时，只使用第一个元素
+    * 维度值，当Op是=时，只使用第一个元素
     */
     @SerializedName("Value")
     @Expose
@@ -61,32 +61,32 @@ public class MidQueryCondition extends AbstractModel {
     }
 
     /**
-     * Get 操作符，支持等于(eq)、不等于(ne)，以及in 
-     * @return Operator 操作符，支持等于(eq)、不等于(ne)，以及in
+     * Get 操作符，支持=、in 
+     * @return Operator 操作符，支持=、in
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作符，支持等于(eq)、不等于(ne)，以及in
-     * @param Operator 操作符，支持等于(eq)、不等于(ne)，以及in
+     * Set 操作符，支持=、in
+     * @param Operator 操作符，支持=、in
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 维度值，当Op是eq、ne时，只使用第一个元素 
-     * @return Value 维度值，当Op是eq、ne时，只使用第一个元素
+     * Get 维度值，当Op是=时，只使用第一个元素 
+     * @return Value 维度值，当Op是=时，只使用第一个元素
      */
     public String [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set 维度值，当Op是eq、ne时，只使用第一个元素
-     * @param Value 维度值，当Op是eq、ne时，只使用第一个元素
+     * Set 维度值，当Op是=时，只使用第一个元素
+     * @param Value 维度值，当Op是=时，只使用第一个元素
      */
     public void setValue(String [] Value) {
         this.Value = Value;

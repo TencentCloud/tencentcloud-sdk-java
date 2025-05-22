@@ -107,7 +107,7 @@ public class CreateAlarmRequest extends AbstractModel {
     private Boolean Status;
 
     /**
-    * 该参数已废弃，请使用Status参数控制是否开启告警策略。
+    * 请使用Status参数控制是否开启告警策略。
     */
     @SerializedName("Enable")
     @Expose
@@ -391,17 +391,21 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Get 该参数已废弃，请使用Status参数控制是否开启告警策略。 
-     * @return Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。
+     * Get 请使用Status参数控制是否开启告警策略。 
+     * @return Enable 请使用Status参数控制是否开启告警策略。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 该参数已废弃，请使用Status参数控制是否开启告警策略。
-     * @param Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。
+     * Set 请使用Status参数控制是否开启告警策略。
+     * @param Enable 请使用Status参数控制是否开启告警策略。
+     * @deprecated
      */
+    @Deprecated
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }

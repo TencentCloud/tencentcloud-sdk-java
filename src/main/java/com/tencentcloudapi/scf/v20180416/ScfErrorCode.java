@@ -21,6 +21,9 @@ public enum ScfErrorCode {
      /* 登录信息验证失败，token 验证失败。 */
      FAILEDOPERATION_AUTHFAILURE("FailedOperation.AuthFailure"),
      
+     /* 绑定插件失败，请检查参数。 */
+     FAILEDOPERATION_BINDPLUGIN("FailedOperation.BindPlugin"),
+     
      /* 调用 NetDeploy 失败。 */
      FAILEDOPERATION_CALLNETDEPLOYFAILED("FailedOperation.CallNetDeployFailed"),
      
@@ -77,6 +80,12 @@ public enum ScfErrorCode {
      
      /* 删除触发器失败。 */
      FAILEDOPERATION_DELETETRIGGER("FailedOperation.DeleteTrigger"),
+     
+     /* Url被占用，无法删除。 */
+     FAILEDOPERATION_DELETETRIGGER_URLUSED("FailedOperation.DeleteTrigger.UrlUsed"),
+     
+     /* 自定义域名不存在 */
+     FAILEDOPERATION_DOMAIN_UNEXIST("FailedOperation.Domain.UnExist"),
      
      /* 当前函数状态无法更新代码，请在状态为正常时更新。 */
      FAILEDOPERATION_FUNCTIONNAMESTATUSERROR("FailedOperation.FunctionNameStatusError"),
@@ -150,6 +159,9 @@ public enum ScfErrorCode {
      /* ServiceClosed 请确认后再操作。 */
      FAILEDOPERATION_SERVICECLOSED("FailedOperation.ServiceClosed"),
      
+     /* 更新自定义域名失败，SSL异常。 */
+     FAILEDOPERATION_SSL("FailedOperation.Ssl"),
+     
      /* Topic不存在。 */
      FAILEDOPERATION_TOPICNOTEXIST("FailedOperation.TopicNotExist"),
      
@@ -216,6 +228,9 @@ public enum ScfErrorCode {
      /* FunctionName取值与规范不符，请修正后再试。 */
      INVALIDPARAMETER_FUNCTIONNAME("InvalidParameter.FunctionName"),
      
+     /* 资源ID和函数名参数不能同时为空。 */
+     INVALIDPARAMETER_FUNCTIONNAMEORRESOURCEIDREQUIRED("InvalidParameter.FunctionNameOrResourceIdRequired"),
+     
      /* 创建函数传参异常。 */
      INVALIDPARAMETER_PARAMERROR("InvalidParameter.ParamError"),
      
@@ -270,6 +285,9 @@ public enum ScfErrorCode {
      /* Cdn传入错误。 */
      INVALIDPARAMETERVALUE_CDN("InvalidParameterValue.Cdn"),
      
+     /* CertConfig配置为空。 */
+     INVALIDPARAMETERVALUE_CERTCONFIG_EMPTY("InvalidParameterValue.CertConfig.empty"),
+     
      /* cfs配置项重复。 */
      INVALIDPARAMETERVALUE_CFSPARAMETERDUPLICATE("InvalidParameterValue.CfsParameterDuplicate"),
      
@@ -315,6 +333,9 @@ public enum ScfErrorCode {
      /* Content参数传入错误。 */
      INVALIDPARAMETERVALUE_CONTENT("InvalidParameterValue.Content"),
      
+     /* Cors 字段传值异常。 */
+     INVALIDPARAMETERVALUE_CORS("InvalidParameterValue.Cors"),
+     
      /* Cos传入错误。 */
      INVALIDPARAMETERVALUE_COS("InvalidParameterValue.Cos"),
      
@@ -359,6 +380,9 @@ public enum ScfErrorCode {
      
      /* DynamicEnabled 参数传入错误。 */
      INVALIDPARAMETERVALUE_DYNAMICENABLED("InvalidParameterValue.DynamicEnabled"),
+     
+     /* EASConfig参数异常。 */
+     INVALIDPARAMETERVALUE_EASCONFIG("InvalidParameterValue.EASConfig"),
      
      /* EipConfig参数错误。 */
      INVALIDPARAMETERVALUE_EIPCONFIG("InvalidParameterValue.EipConfig"),

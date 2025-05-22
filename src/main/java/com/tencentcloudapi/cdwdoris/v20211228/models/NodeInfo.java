@@ -80,6 +80,27 @@ public class NodeInfo extends AbstractModel {
     private String Id;
 
     /**
+    * RIP
+    */
+    @SerializedName("RIp")
+    @Expose
+    private String RIp;
+
+    /**
+    * 计算组ID
+    */
+    @SerializedName("ComputeGroupId")
+    @Expose
+    private String ComputeGroupId;
+
+    /**
+    * 创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 用户IP 
      * @return Ip 用户IP
      */
@@ -207,6 +228,54 @@ public class NodeInfo extends AbstractModel {
         this.Id = Id;
     }
 
+    /**
+     * Get RIP 
+     * @return RIp RIP
+     */
+    public String getRIp() {
+        return this.RIp;
+    }
+
+    /**
+     * Set RIP
+     * @param RIp RIP
+     */
+    public void setRIp(String RIp) {
+        this.RIp = RIp;
+    }
+
+    /**
+     * Get 计算组ID 
+     * @return ComputeGroupId 计算组ID
+     */
+    public String getComputeGroupId() {
+        return this.ComputeGroupId;
+    }
+
+    /**
+     * Set 计算组ID
+     * @param ComputeGroupId 计算组ID
+     */
+    public void setComputeGroupId(String ComputeGroupId) {
+        this.ComputeGroupId = ComputeGroupId;
+    }
+
+    /**
+     * Get 创建时间 
+     * @return CreateTime 创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreateTime 创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public NodeInfo() {
     }
 
@@ -239,6 +308,15 @@ public class NodeInfo extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.RIp != null) {
+            this.RIp = new String(source.RIp);
+        }
+        if (source.ComputeGroupId != null) {
+            this.ComputeGroupId = new String(source.ComputeGroupId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -254,6 +332,9 @@ public class NodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LastRestartTime", this.LastRestartTime);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "RIp", this.RIp);
+        this.setParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

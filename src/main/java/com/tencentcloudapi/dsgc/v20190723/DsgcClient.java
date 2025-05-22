@@ -105,19 +105,6 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *旧版本DSGC接口下线
-
-创建识别规则
-     * @param req CreateClassificationRuleRequest
-     * @return CreateClassificationRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateClassificationRuleResponse CreateClassificationRule(CreateClassificationRuleRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateClassificationRule", CreateClassificationRuleResponse.class);
-    }
-
-    /**
      *风险项页面---创建风险等级
      * @param req CreateDSPAAssessmentRiskLevelRequest
      * @return CreateDSPAAssessmentRiskLevelResponse
@@ -294,32 +281,6 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *旧版本DSGC接口下线
-
-创建新分类
-     * @param req CreateNewClassificationRequest
-     * @return CreateNewClassificationResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateNewClassificationResponse CreateNewClassification(CreateNewClassificationRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateNewClassification", CreateNewClassificationResponse.class);
-    }
-
-    /**
-     *旧版本DSGC接口下线
-
-创建或复制分级分类模板
-     * @param req CreateOrCopyStandardRequest
-     * @return CreateOrCopyStandardResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateOrCopyStandardResponse CreateOrCopyStandard(CreateOrCopyStandardRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateOrCopyStandard", CreateOrCopyStandardResponse.class);
-    }
-
-    /**
      *风险等级的定义页面-创建风险等级的时候生成的一个默认的矩阵
      * @param req DecribeSuggestRiskLevelMatrixRequest
      * @return DecribeSuggestRiskLevelMatrixResponse
@@ -457,33 +418,6 @@ public class DsgcClient extends AbstractClient{
     public DescribeCOSAssetSensitiveDistributionResponse DescribeCOSAssetSensitiveDistribution(DescribeCOSAssetSensitiveDistributionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCOSAssetSensitiveDistribution", DescribeCOSAssetSensitiveDistributionResponse.class);
-    }
-
-    /**
-     *旧版本DSGC接口下线
-
-查询分类信息
-
-     * @param req DescribeClassificationInfoRequest
-     * @return DescribeClassificationInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeClassificationInfoResponse DescribeClassificationInfo(DescribeClassificationInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeClassificationInfo", DescribeClassificationInfoResponse.class);
-    }
-
-    /**
-     *旧版本DSGC接口下线
-
-查询标准下所有分类的识别规则数量(不算子分类下的识别规则)
-     * @param req DescribeClassificationRuleCountRequest
-     * @return DescribeClassificationRuleCountResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeClassificationRuleCountResponse DescribeClassificationRuleCount(DescribeClassificationRuleCountRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeClassificationRuleCount", DescribeClassificationRuleCountResponse.class);
     }
 
     /**
@@ -1165,19 +1099,6 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *旧版本DSGC接口下线
-
-查询标准下所有叶子节点分类
-     * @param req DescribeLeafClassificationRequest
-     * @return DescribeLeafClassificationResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLeafClassificationResponse DescribeLeafClassification(DescribeLeafClassificationRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeLeafClassification", DescribeLeafClassificationResponse.class);
-    }
-
-    /**
      *数据资产报告-查询mongo 的敏感资产报告，包含（数据库资产，设敏级别数据库top10，资产详情）
      * @param req DescribeMongoAssetSensitiveDistributionRequest
      * @return DescribeMongoAssetSensitiveDistributionResponse
@@ -1219,20 +1140,6 @@ public class DsgcClient extends AbstractClient{
     public DescribeReportTasksResponse DescribeReportTasks(DescribeReportTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeReportTasks", DescribeReportTasksResponse.class);
-    }
-
-    /**
-     *旧版本DSGC接口下线
-
-查询分类下规则列表
-
-     * @param req DescribeRuleListRequest
-     * @return DescribeRuleListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRuleListResponse DescribeRuleList(DescribeRuleListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRuleList", DescribeRuleListResponse.class);
     }
 
     /**
@@ -1366,32 +1273,6 @@ public class DsgcClient extends AbstractClient{
     public ListDSPAMetaResourcesResponse ListDSPAMetaResources(ListDSPAMetaResourcesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListDSPAMetaResources", ListDSPAMetaResourcesResponse.class);
-    }
-
-    /**
-     *旧版本DSGC接口下线
-
-编辑识别规则
-     * @param req ModifyClassificationRuleRequest
-     * @return ModifyClassificationRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyClassificationRuleResponse ModifyClassificationRule(ModifyClassificationRuleRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyClassificationRule", ModifyClassificationRuleResponse.class);
-    }
-
-    /**
-     *旧版本DSGC接口下线
-
-修改识别规则状态
-     * @param req ModifyClassificationRuleStateRequest
-     * @return ModifyClassificationRuleStateResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyClassificationRuleStateResponse ModifyClassificationRuleState(ModifyClassificationRuleStateRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyClassificationRuleState", ModifyClassificationRuleStateResponse.class);
     }
 
     /**
@@ -1555,84 +1436,6 @@ public class DsgcClient extends AbstractClient{
     public ModifyDSPATaskResultResponse ModifyDSPATaskResult(ModifyDSPATaskResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDSPATaskResult", ModifyDSPATaskResultResponse.class);
-    }
-
-    /**
-     *旧版本DSGC接口下线
-
-修改敏感级别信息
-     * @param req ModifyLevelInfoRequest
-     * @return ModifyLevelInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyLevelInfoResponse ModifyLevelInfo(ModifyLevelInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyLevelInfo", ModifyLevelInfoResponse.class);
-    }
-
-    /**
-     *旧版本DSGC接口下线
-
-修改级别名称
-     * @param req ModifyLevelNameRequest
-     * @return ModifyLevelNameResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyLevelNameResponse ModifyLevelName(ModifyLevelNameRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyLevelName", ModifyLevelNameResponse.class);
-    }
-
-    /**
-     *旧版本DSGC接口下线
-
-开启级别或关闭级别
-     * @param req ModifyLevelStateRequest
-     * @return ModifyLevelStateResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyLevelStateResponse ModifyLevelState(ModifyLevelStateRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyLevelState", ModifyLevelStateResponse.class);
-    }
-
-    /**
-     *旧版本DSGC接口下线
-
-一个分类合并到另一个分类中（分类拖拽功能）
-     * @param req ModifyMergeClassificationRequest
-     * @return ModifyMergeClassificationResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyMergeClassificationResponse ModifyMergeClassification(ModifyMergeClassificationRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyMergeClassification", ModifyMergeClassificationResponse.class);
-    }
-
-    /**
-     *旧版本DSGC接口下线
-
-修改分类信息
-     * @param req ModifyNewClassificationRequest
-     * @return ModifyNewClassificationResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyNewClassificationResponse ModifyNewClassification(ModifyNewClassificationRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyNewClassification", ModifyNewClassificationResponse.class);
-    }
-
-    /**
-     *旧版本DSGC接口下线
-
-修改分级分类模板信息
-     * @param req ModifyStandardInfoRequest
-     * @return ModifyStandardInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyStandardInfoResponse ModifyStandardInfo(ModifyStandardInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyStandardInfo", ModifyStandardInfoResponse.class);
     }
 
     /**

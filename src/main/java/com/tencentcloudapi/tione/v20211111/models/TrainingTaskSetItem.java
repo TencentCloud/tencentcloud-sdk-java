@@ -206,6 +206,22 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     private String CallbackUrl;
 
     /**
+    * 任务subUin信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubUin")
+    @Expose
+    private String SubUin;
+
+    /**
+    * 任务创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubUinName")
+    @Expose
+    private String SubUinName;
+
+    /**
      * Get 训练任务ID 
      * @return Id 训练任务ID
      */
@@ -645,6 +661,46 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
         this.CallbackUrl = CallbackUrl;
     }
 
+    /**
+     * Get 任务subUin信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubUin 任务subUin信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubUin() {
+        return this.SubUin;
+    }
+
+    /**
+     * Set 任务subUin信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubUin 任务subUin信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubUin(String SubUin) {
+        this.SubUin = SubUin;
+    }
+
+    /**
+     * Get 任务创建者名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubUinName 任务创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubUinName() {
+        return this.SubUinName;
+    }
+
+    /**
+     * Set 任务创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubUinName 任务创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubUinName(String SubUinName) {
+        this.SubUinName = SubUinName;
+    }
+
     public TrainingTaskSetItem() {
     }
 
@@ -731,6 +787,12 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.SubUin != null) {
+            this.SubUin = new String(source.SubUin);
+        }
+        if (source.SubUinName != null) {
+            this.SubUinName = new String(source.SubUinName);
+        }
     }
 
 
@@ -762,6 +824,8 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "SubUin", this.SubUin);
+        this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
 
     }
 }

@@ -40,7 +40,7 @@ public class AudioSegments extends AbstractModel {
     private AudioResult Result;
 
     /**
-    * 创建时间
+    * 入库时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
@@ -88,9 +88,9 @@ public class AudioSegments extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get 入库时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedAt 创建时间
+     * @return CreatedAt 入库时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
@@ -98,9 +98,9 @@ public class AudioSegments extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set 入库时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedAt 创建时间
+     * @param CreatedAt 入库时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {

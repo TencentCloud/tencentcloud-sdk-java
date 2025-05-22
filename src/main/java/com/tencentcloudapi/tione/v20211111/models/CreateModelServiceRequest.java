@@ -320,6 +320,20 @@ HYBRID_PAID:
     private HealthProbe HealthProbe;
 
     /**
+    * 滚动更新策略
+    */
+    @SerializedName("RollingUpdate")
+    @Expose
+    private RollingUpdate RollingUpdate;
+
+    /**
+    * sidecar配置
+    */
+    @SerializedName("Sidecar")
+    @Expose
+    private SidecarSpec Sidecar;
+
+    /**
      * Get 新增版本时需要填写 
      * @return ServiceGroupId 新增版本时需要填写
      */
@@ -1035,6 +1049,38 @@ HYBRID_PAID:
         this.HealthProbe = HealthProbe;
     }
 
+    /**
+     * Get 滚动更新策略 
+     * @return RollingUpdate 滚动更新策略
+     */
+    public RollingUpdate getRollingUpdate() {
+        return this.RollingUpdate;
+    }
+
+    /**
+     * Set 滚动更新策略
+     * @param RollingUpdate 滚动更新策略
+     */
+    public void setRollingUpdate(RollingUpdate RollingUpdate) {
+        this.RollingUpdate = RollingUpdate;
+    }
+
+    /**
+     * Get sidecar配置 
+     * @return Sidecar sidecar配置
+     */
+    public SidecarSpec getSidecar() {
+        return this.Sidecar;
+    }
+
+    /**
+     * Set sidecar配置
+     * @param Sidecar sidecar配置
+     */
+    public void setSidecar(SidecarSpec Sidecar) {
+        this.Sidecar = Sidecar;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -1172,6 +1218,12 @@ HYBRID_PAID:
         if (source.HealthProbe != null) {
             this.HealthProbe = new HealthProbe(source.HealthProbe);
         }
+        if (source.RollingUpdate != null) {
+            this.RollingUpdate = new RollingUpdate(source.RollingUpdate);
+        }
+        if (source.Sidecar != null) {
+            this.Sidecar = new SidecarSpec(source.Sidecar);
+        }
     }
 
 
@@ -1218,6 +1270,8 @@ HYBRID_PAID:
         this.setParamArraySimple(map, prefix + "PreStopCommand.", this.PreStopCommand);
         this.setParamSimple(map, prefix + "GrpcEnable", this.GrpcEnable);
         this.setParamObj(map, prefix + "HealthProbe.", this.HealthProbe);
+        this.setParamObj(map, prefix + "RollingUpdate.", this.RollingUpdate);
+        this.setParamObj(map, prefix + "Sidecar.", this.Sidecar);
 
     }
 }

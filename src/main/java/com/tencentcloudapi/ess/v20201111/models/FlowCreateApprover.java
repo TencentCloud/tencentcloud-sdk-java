@@ -103,7 +103,7 @@ public class FlowCreateApprover extends AbstractModel {
     /**
     * 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: <font color="red">将要废弃</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
+注: <font color="red">不再使用</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
     */
     @SerializedName("VerifyChannel")
     @Expose
@@ -152,7 +152,7 @@ public class FlowCreateApprover extends AbstractModel {
     private String UserId;
 
     /**
-    * <font color="red">字段已经废弃</font>，当前只支持true，默认为true
+    * <font color="red">字段不再使用</font>，当前只支持true，默认为true
     */
     @SerializedName("Required")
     @Expose
@@ -176,7 +176,7 @@ public class FlowCreateApprover extends AbstractModel {
     private String CustomApproverTag;
 
     /**
-    * 已经废弃, 快速注册相关信息
+    * <font color="red">不再使用</font >, 快速注册相关信息
     */
     @SerializedName("RegisterInfo")
     @Expose
@@ -579,10 +579,10 @@ public class FlowCreateApprover extends AbstractModel {
     /**
      * Get 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: <font color="red">将要废弃</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置` 
+注: <font color="red">不再使用</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置` 
      * @return VerifyChannel 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: <font color="red">将要废弃</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
+注: <font color="red">不再使用</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
      */
     public String [] getVerifyChannel() {
         return this.VerifyChannel;
@@ -591,10 +591,10 @@ public class FlowCreateApprover extends AbstractModel {
     /**
      * Set 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: <font color="red">将要废弃</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
+注: <font color="red">不再使用</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
      * @param VerifyChannel 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: <font color="red">将要废弃</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
+注: <font color="red">不再使用</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
      */
     public void setVerifyChannel(String [] VerifyChannel) {
         this.VerifyChannel = VerifyChannel;
@@ -721,16 +721,16 @@ public class FlowCreateApprover extends AbstractModel {
     }
 
     /**
-     * Get <font color="red">字段已经废弃</font>，当前只支持true，默认为true 
-     * @return Required <font color="red">字段已经废弃</font>，当前只支持true，默认为true
+     * Get <font color="red">字段不再使用</font>，当前只支持true，默认为true 
+     * @return Required <font color="red">字段不再使用</font>，当前只支持true，默认为true
      */
     public Boolean getRequired() {
         return this.Required;
     }
 
     /**
-     * Set <font color="red">字段已经废弃</font>，当前只支持true，默认为true
-     * @param Required <font color="red">字段已经废弃</font>，当前只支持true，默认为true
+     * Set <font color="red">字段不再使用</font>，当前只支持true，默认为true
+     * @param Required <font color="red">字段不再使用</font>，当前只支持true，默认为true
      */
     public void setRequired(Boolean Required) {
         this.Required = Required;
@@ -781,16 +781,16 @@ public class FlowCreateApprover extends AbstractModel {
     }
 
     /**
-     * Get 已经废弃, 快速注册相关信息 
-     * @return RegisterInfo 已经废弃, 快速注册相关信息
+     * Get <font color="red">不再使用</font >, 快速注册相关信息 
+     * @return RegisterInfo <font color="red">不再使用</font >, 快速注册相关信息
      */
     public RegisterInfo getRegisterInfo() {
         return this.RegisterInfo;
     }
 
     /**
-     * Set 已经废弃, 快速注册相关信息
-     * @param RegisterInfo 已经废弃, 快速注册相关信息
+     * Set <font color="red">不再使用</font >, 快速注册相关信息
+     * @param RegisterInfo <font color="red">不再使用</font >, 快速注册相关信息
      */
     public void setRegisterInfo(RegisterInfo RegisterInfo) {
         this.RegisterInfo = RegisterInfo;

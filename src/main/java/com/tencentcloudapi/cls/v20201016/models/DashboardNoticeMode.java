@@ -36,7 +36,7 @@ public class DashboardNoticeMode extends AbstractModel {
 
     /**
     * 知方式对应的值。
-<br> <li/> 当ReceiverType不是 Wecom 时，Values必填。
+<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
     */
     @SerializedName("Values")
     @Expose
@@ -45,7 +45,7 @@ public class DashboardNoticeMode extends AbstractModel {
     /**
     * 仪表盘通知渠道。
 <br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 Wecom 时，ReceiverChannels不能赋值。
+<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiverChannels")
@@ -54,8 +54,8 @@ public class DashboardNoticeMode extends AbstractModel {
 
     /**
     * 回调Url。
-<br><li/> 当ReceiverType是 Wecom 时，Url必填。
-<br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
+<br><li/> 当ReceiverType是 WeCom 时，Url必填。
+<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
     */
     @SerializedName("Url")
     @Expose
@@ -95,9 +95,9 @@ public class DashboardNoticeMode extends AbstractModel {
 
     /**
      * Get 知方式对应的值。
-<br> <li/> 当ReceiverType不是 Wecom 时，Values必填。 
+<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。 
      * @return Values 知方式对应的值。
-<br> <li/> 当ReceiverType不是 Wecom 时，Values必填。
+<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
      */
     public String [] getValues() {
         return this.Values;
@@ -105,9 +105,9 @@ public class DashboardNoticeMode extends AbstractModel {
 
     /**
      * Set 知方式对应的值。
-<br> <li/> 当ReceiverType不是 Wecom 时，Values必填。
+<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
      * @param Values 知方式对应的值。
-<br> <li/> 当ReceiverType不是 Wecom 时，Values必填。
+<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
      */
     public void setValues(String [] Values) {
         this.Values = Values;
@@ -116,11 +116,11 @@ public class DashboardNoticeMode extends AbstractModel {
     /**
      * Get 仪表盘通知渠道。
 <br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 Wecom 时，ReceiverChannels不能赋值。
+<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReceiverChannels 仪表盘通知渠道。
 <br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 Wecom 时，ReceiverChannels不能赋值。
+<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getReceiverChannels() {
@@ -130,11 +130,11 @@ public class DashboardNoticeMode extends AbstractModel {
     /**
      * Set 仪表盘通知渠道。
 <br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 Wecom 时，ReceiverChannels不能赋值。
+<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReceiverChannels 仪表盘通知渠道。
 <br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 Wecom 时，ReceiverChannels不能赋值。
+<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiverChannels(String [] ReceiverChannels) {
@@ -143,11 +143,11 @@ public class DashboardNoticeMode extends AbstractModel {
 
     /**
      * Get 回调Url。
-<br><li/> 当ReceiverType是 Wecom 时，Url必填。
-<br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。 
+<br><li/> 当ReceiverType是 WeCom 时，Url必填。
+<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。 
      * @return Url 回调Url。
-<br><li/> 当ReceiverType是 Wecom 时，Url必填。
-<br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
+<br><li/> 当ReceiverType是 WeCom 时，Url必填。
+<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
      */
     public String getUrl() {
         return this.Url;
@@ -155,11 +155,11 @@ public class DashboardNoticeMode extends AbstractModel {
 
     /**
      * Set 回调Url。
-<br><li/> 当ReceiverType是 Wecom 时，Url必填。
-<br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
+<br><li/> 当ReceiverType是 WeCom 时，Url必填。
+<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
      * @param Url 回调Url。
-<br><li/> 当ReceiverType是 Wecom 时，Url必填。
-<br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
+<br><li/> 当ReceiverType是 WeCom 时，Url必填。
+<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
      */
     public void setUrl(String Url) {
         this.Url = Url;

@@ -294,7 +294,9 @@ public class WebCallback extends AbstractModel {
     /**
      * Get 该参数已废弃，请使用NoticeContentId。 
      * @return Headers 该参数已废弃，请使用NoticeContentId。
+     * @deprecated
      */
+    @Deprecated
     public String [] getHeaders() {
         return this.Headers;
     }
@@ -302,7 +304,9 @@ public class WebCallback extends AbstractModel {
     /**
      * Set 该参数已废弃，请使用NoticeContentId。
      * @param Headers 该参数已废弃，请使用NoticeContentId。
+     * @deprecated
      */
+    @Deprecated
     public void setHeaders(String [] Headers) {
         this.Headers = Headers;
     }
@@ -312,7 +316,9 @@ public class WebCallback extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Body 该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getBody() {
         return this.Body;
     }
@@ -322,7 +328,9 @@ public class WebCallback extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Body 该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setBody(String Body) {
         this.Body = Body;
     }

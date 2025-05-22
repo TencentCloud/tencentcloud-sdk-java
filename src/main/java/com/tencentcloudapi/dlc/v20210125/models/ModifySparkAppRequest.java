@@ -234,6 +234,13 @@ public class ModifySparkAppRequest extends AbstractModel {
     private Boolean IsSessionStarted;
 
     /**
+    * 标准引擎依赖包
+    */
+    @SerializedName("DependencyPackages")
+    @Expose
+    private DependencyPackage [] DependencyPackages;
+
+    /**
      * Get spark作业名 
      * @return AppName spark作业名
      */
@@ -713,6 +720,22 @@ public class ModifySparkAppRequest extends AbstractModel {
         this.IsSessionStarted = IsSessionStarted;
     }
 
+    /**
+     * Get 标准引擎依赖包 
+     * @return DependencyPackages 标准引擎依赖包
+     */
+    public DependencyPackage [] getDependencyPackages() {
+        return this.DependencyPackages;
+    }
+
+    /**
+     * Set 标准引擎依赖包
+     * @param DependencyPackages 标准引擎依赖包
+     */
+    public void setDependencyPackages(DependencyPackage [] DependencyPackages) {
+        this.DependencyPackages = DependencyPackages;
+    }
+
     public ModifySparkAppRequest() {
     }
 
@@ -811,6 +834,12 @@ public class ModifySparkAppRequest extends AbstractModel {
         if (source.IsSessionStarted != null) {
             this.IsSessionStarted = new Boolean(source.IsSessionStarted);
         }
+        if (source.DependencyPackages != null) {
+            this.DependencyPackages = new DependencyPackage[source.DependencyPackages.length];
+            for (int i = 0; i < source.DependencyPackages.length; i++) {
+                this.DependencyPackages[i] = new DependencyPackage(source.DependencyPackages[i]);
+            }
+        }
     }
 
 
@@ -848,6 +877,7 @@ public class ModifySparkAppRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
         this.setParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
+        this.setParamArrayObj(map, prefix + "DependencyPackages.", this.DependencyPackages);
 
     }
 }

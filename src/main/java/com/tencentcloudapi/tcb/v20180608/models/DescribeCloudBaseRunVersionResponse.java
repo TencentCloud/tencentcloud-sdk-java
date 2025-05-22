@@ -38,7 +38,7 @@ public class DescribeCloudBaseRunVersionResponse extends AbstractModel {
     private String Remark;
 
     /**
-    * Dockefile的路径
+    * Dockerfile的路径
     */
     @SerializedName("DockerfilePath")
     @Expose
@@ -294,16 +294,16 @@ public class DescribeCloudBaseRunVersionResponse extends AbstractModel {
     }
 
     /**
-     * Get Dockefile的路径 
-     * @return DockerfilePath Dockefile的路径
+     * Get Dockerfile的路径 
+     * @return DockerfilePath Dockerfile的路径
      */
     public String getDockerfilePath() {
         return this.DockerfilePath;
     }
 
     /**
-     * Set Dockefile的路径
-     * @param DockerfilePath Dockefile的路径
+     * Set Dockerfile的路径
+     * @param DockerfilePath Dockerfile的路径
      */
     public void setDockerfilePath(String DockerfilePath) {
         this.DockerfilePath = DockerfilePath;
