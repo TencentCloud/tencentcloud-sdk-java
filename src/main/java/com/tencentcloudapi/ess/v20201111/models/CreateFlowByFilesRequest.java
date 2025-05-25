@@ -85,6 +85,8 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 <li> 图片控件          </li>
 <li> 水印控件等          </li>
 </ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
     */
     @SerializedName("Components")
     @Expose
@@ -404,7 +406,9 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 <li> 数字控件          </li>
 <li> 图片控件          </li>
 <li> 水印控件等          </li>
-</ul> 
+</ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png) 
      * @return Components 发起的时候合成到PDF上的填写控件（需要提供填写控件的内容）
 <ul><li> 单行文本控件      </li>
 <li> 多行文本控件      </li>
@@ -413,6 +417,8 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 <li> 图片控件          </li>
 <li> 水印控件等          </li>
 </ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      */
     public Component [] getComponents() {
         return this.Components;
@@ -427,6 +433,8 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 <li> 图片控件          </li>
 <li> 水印控件等          </li>
 </ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      * @param Components 发起的时候合成到PDF上的填写控件（需要提供填写控件的内容）
 <ul><li> 单行文本控件      </li>
 <li> 多行文本控件      </li>
@@ -435,6 +443,8 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 <li> 图片控件          </li>
 <li> 水印控件等          </li>
 </ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      */
     public void setComponents(Component [] Components) {
         this.Components = Components;

@@ -59,13 +59,6 @@ public class AddRecordBatch extends AbstractModel {
     private String RecordLineId;
 
     /**
-    * 记录权重值(暂未支持)。
-    */
-    @SerializedName("Weight")
-    @Expose
-    private Long Weight;
-
-    /**
     * 记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
     */
     @SerializedName("MX")
@@ -78,20 +71,6 @@ public class AddRecordBatch extends AbstractModel {
     @SerializedName("TTL")
     @Expose
     private Long TTL;
-
-    /**
-    * 记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
-    */
-    @SerializedName("Enabled")
-    @Expose
-    private Long Enabled;
-
-    /**
-    * 记录备注(暂未支持)。
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
 
     /**
      * Get 记录类型, 详见 DescribeRecordType 接口。 
@@ -174,22 +153,6 @@ public class AddRecordBatch extends AbstractModel {
     }
 
     /**
-     * Get 记录权重值(暂未支持)。 
-     * @return Weight 记录权重值(暂未支持)。
-     */
-    public Long getWeight() {
-        return this.Weight;
-    }
-
-    /**
-     * Set 记录权重值(暂未支持)。
-     * @param Weight 记录权重值(暂未支持)。
-     */
-    public void setWeight(Long Weight) {
-        this.Weight = Weight;
-    }
-
-    /**
      * Get 记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。 
      * @return MX 记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
      */
@@ -221,38 +184,6 @@ public class AddRecordBatch extends AbstractModel {
         this.TTL = TTL;
     }
 
-    /**
-     * Get 记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。 
-     * @return Enabled 记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
-     */
-    public Long getEnabled() {
-        return this.Enabled;
-    }
-
-    /**
-     * Set 记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
-     * @param Enabled 记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
-     */
-    public void setEnabled(Long Enabled) {
-        this.Enabled = Enabled;
-    }
-
-    /**
-     * Get 记录备注(暂未支持)。 
-     * @return Remark 记录备注(暂未支持)。
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set 记录备注(暂未支持)。
-     * @param Remark 记录备注(暂未支持)。
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
-    }
-
     public AddRecordBatch() {
     }
 
@@ -276,20 +207,11 @@ public class AddRecordBatch extends AbstractModel {
         if (source.RecordLineId != null) {
             this.RecordLineId = new String(source.RecordLineId);
         }
-        if (source.Weight != null) {
-            this.Weight = new Long(source.Weight);
-        }
         if (source.MX != null) {
             this.MX = new Long(source.MX);
         }
         if (source.TTL != null) {
             this.TTL = new Long(source.TTL);
-        }
-        if (source.Enabled != null) {
-            this.Enabled = new Long(source.Enabled);
-        }
-        if (source.Remark != null) {
-            this.Remark = new String(source.Remark);
         }
     }
 
@@ -303,11 +225,8 @@ public class AddRecordBatch extends AbstractModel {
         this.setParamSimple(map, prefix + "SubDomain", this.SubDomain);
         this.setParamSimple(map, prefix + "RecordLine", this.RecordLine);
         this.setParamSimple(map, prefix + "RecordLineId", this.RecordLineId);
-        this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "MX", this.MX);
         this.setParamSimple(map, prefix + "TTL", this.TTL);
-        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

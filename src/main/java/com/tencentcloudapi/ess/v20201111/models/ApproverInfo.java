@@ -68,6 +68,8 @@ public class ApproverInfo extends AbstractModel {
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
     */
     @SerializedName("SignComponents")
     @Expose
@@ -279,6 +281,8 @@ public class ApproverInfo extends AbstractModel {
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
     */
     @SerializedName("Components")
     @Expose
@@ -408,11 +412,15 @@ public class ApproverInfo extends AbstractModel {
      * Get 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】合同中的该名签署方的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
-<li> 骑缝章等签署控件</li></ul> 
+<li> 骑缝章等签署控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png) 
      * @return SignComponents 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】合同中的该名签署方的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
      */
     public Component [] getSignComponents() {
         return this.SignComponents;
@@ -423,10 +431,14 @@ public class ApproverInfo extends AbstractModel {
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
      * @param SignComponents 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】合同中的该名签署方的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
      */
     public void setSignComponents(Component [] SignComponents) {
         this.SignComponents = SignComponents;
@@ -1015,7 +1027,9 @@ public class ApproverInfo extends AbstractModel {
 
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
-注：`此参数仅在通过文件发起合同或者合同组时生效` 
+注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png) 
      * @return Components 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li>单行文本控件</li>
 <li>多行文本控件</li>
@@ -1027,6 +1041,8 @@ public class ApproverInfo extends AbstractModel {
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      */
     public Component [] getComponents() {
         return this.Components;
@@ -1044,6 +1060,8 @@ public class ApproverInfo extends AbstractModel {
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      * @param Components 【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li>单行文本控件</li>
 <li>多行文本控件</li>
@@ -1055,6 +1073,8 @@ public class ApproverInfo extends AbstractModel {
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      */
     public void setComponents(Component [] Components) {
         this.Components = Components;

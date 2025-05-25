@@ -87,6 +87,9 @@ public enum TcbErrorCode {
      /* 资源被占用。 */
      RESOURCEINUSE("ResourceInUse"),
      
+     /* 云存储目前后后台任务正在执行，请稍后再重试。 */
+     RESOURCEINUSE_FSACLJOBUNDONE("ResourceInUse.FsACLJobUnDone"),
+     
      /* 资源不足。 */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      

@@ -124,6 +124,13 @@ public class RecognizeConfig extends AbstractModel {
     private String HotWordList;
 
     /**
+    * 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+    */
+    @SerializedName("VadSilenceTime")
+    @Expose
+    private Long VadSilenceTime;
+
+    /**
      * Get 
 语音转文字支持识别的语言，默认是"zh" 中文
 
@@ -471,6 +478,22 @@ public class RecognizeConfig extends AbstractModel {
         this.HotWordList = HotWordList;
     }
 
+    /**
+     * Get 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。 
+     * @return VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+     */
+    public Long getVadSilenceTime() {
+        return this.VadSilenceTime;
+    }
+
+    /**
+     * Set 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+     * @param VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+     */
+    public void setVadSilenceTime(Long VadSilenceTime) {
+        this.VadSilenceTime = VadSilenceTime;
+    }
+
     public RecognizeConfig() {
     }
 
@@ -497,6 +520,9 @@ public class RecognizeConfig extends AbstractModel {
         if (source.HotWordList != null) {
             this.HotWordList = new String(source.HotWordList);
         }
+        if (source.VadSilenceTime != null) {
+            this.VadSilenceTime = new Long(source.VadSilenceTime);
+        }
     }
 
 
@@ -509,6 +535,7 @@ public class RecognizeConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "TranslationLanguage", this.TranslationLanguage);
         this.setParamSimple(map, prefix + "HotWordList", this.HotWordList);
+        this.setParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
 
     }
 }

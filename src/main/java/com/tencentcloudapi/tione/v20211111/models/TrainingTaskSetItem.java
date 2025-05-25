@@ -222,6 +222,13 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     private String SubUinName;
 
     /**
+    * 任务AppId
+    */
+    @SerializedName("AppId")
+    @Expose
+    private String AppId;
+
+    /**
      * Get 训练任务ID 
      * @return Id 训练任务ID
      */
@@ -701,6 +708,22 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
         this.SubUinName = SubUinName;
     }
 
+    /**
+     * Get 任务AppId 
+     * @return AppId 任务AppId
+     */
+    public String getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 任务AppId
+     * @param AppId 任务AppId
+     */
+    public void setAppId(String AppId) {
+        this.AppId = AppId;
+    }
+
     public TrainingTaskSetItem() {
     }
 
@@ -793,6 +816,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
         if (source.SubUinName != null) {
             this.SubUinName = new String(source.SubUinName);
         }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
     }
 
 
@@ -826,6 +852,7 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "SubUin", this.SubUin);
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
 
     }
 }

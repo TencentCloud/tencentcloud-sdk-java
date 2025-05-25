@@ -77,6 +77,8 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel {
 <li>数字控件</li>
 <li>图片控件</li>
 <li>数据表格等填写控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
     */
     @SerializedName("Components")
     @Expose
@@ -389,7 +391,9 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
 <li>勾选框控件</li>
 <li>数字控件</li>
 <li>图片控件</li>
-<li>数据表格等填写控件</li></ul> 
+<li>数据表格等填写控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png) 
      * @return Components 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li>单行文本控件</li>
 <li>多行文本控件</li>
@@ -397,6 +401,8 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
 <li>数字控件</li>
 <li>图片控件</li>
 <li>数据表格等填写控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      */
     public Component [] getComponents() {
         return this.Components;
@@ -410,6 +416,8 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
 <li>数字控件</li>
 <li>图片控件</li>
 <li>数据表格等填写控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      * @param Components 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li>单行文本控件</li>
 <li>多行文本控件</li>
@@ -417,6 +425,8 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
 <li>数字控件</li>
 <li>图片控件</li>
 <li>数据表格等填写控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      */
     public void setComponents(Component [] Components) {
         this.Components = Components;

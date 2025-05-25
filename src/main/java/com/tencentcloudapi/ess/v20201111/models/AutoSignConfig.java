@@ -34,6 +34,8 @@ public class AutoSignConfig extends AbstractModel {
     * 是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**:需要</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
     */
     @SerializedName("CertInfoCallback")
     @Expose
@@ -69,7 +71,7 @@ public class AutoSignConfig extends AbstractModel {
     /**
     * 开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
@@ -83,6 +85,8 @@ public class AutoSignConfig extends AbstractModel {
     * 设置用户自动签合同的扣费方式。
 
 <ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
     */
     @SerializedName("LicenseType")
     @Expose
@@ -123,10 +127,14 @@ public class AutoSignConfig extends AbstractModel {
     /**
      * Get 是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
-<li>**true**:需要</li></ul> 
+<li>**true**:需要</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。` 
      * @return CertInfoCallback 是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**:需要</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
      */
     public Boolean getCertInfoCallback() {
         return this.CertInfoCallback;
@@ -136,9 +144,13 @@ public class AutoSignConfig extends AbstractModel {
      * Set 是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**:需要</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
      * @param CertInfoCallback 是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**:需要</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
      */
     public void setCertInfoCallback(Boolean CertInfoCallback) {
         this.CertInfoCallback = CertInfoCallback;
@@ -223,14 +235,14 @@ public class AutoSignConfig extends AbstractModel {
     /**
      * Get 开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
 <li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul> 
      * @return VerifyChannels 开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
@@ -243,14 +255,14 @@ public class AutoSignConfig extends AbstractModel {
     /**
      * Set 开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
 <li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
      * @param VerifyChannels 开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
@@ -263,10 +275,14 @@ public class AutoSignConfig extends AbstractModel {
     /**
      * Get 设置用户自动签合同的扣费方式。
 
-<ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul> 
+<ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。` 
      * @return LicenseType 设置用户自动签合同的扣费方式。
 
 <ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
      */
     public Long getLicenseType() {
         return this.LicenseType;
@@ -276,9 +292,13 @@ public class AutoSignConfig extends AbstractModel {
      * Set 设置用户自动签合同的扣费方式。
 
 <ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
      * @param LicenseType 设置用户自动签合同的扣费方式。
 
 <ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;
