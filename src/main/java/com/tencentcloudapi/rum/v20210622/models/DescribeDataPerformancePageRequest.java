@@ -185,6 +185,13 @@ public class DescribeDataPerformancePageRequest extends AbstractModel {
     private String NetStatus;
 
     /**
+    * 是否返回webvitals数据
+    */
+    @SerializedName("WebVitals")
+    @Expose
+    private Boolean WebVitals;
+
+    /**
      * Get 项目ID 
      * @return ID 项目ID
      */
@@ -552,6 +559,22 @@ public class DescribeDataPerformancePageRequest extends AbstractModel {
         this.NetStatus = NetStatus;
     }
 
+    /**
+     * Get 是否返回webvitals数据 
+     * @return WebVitals 是否返回webvitals数据
+     */
+    public Boolean getWebVitals() {
+        return this.WebVitals;
+    }
+
+    /**
+     * Set 是否返回webvitals数据
+     * @param WebVitals 是否返回webvitals数据
+     */
+    public void setWebVitals(Boolean WebVitals) {
+        this.WebVitals = WebVitals;
+    }
+
     public DescribeDataPerformancePageRequest() {
     }
 
@@ -629,6 +652,9 @@ public class DescribeDataPerformancePageRequest extends AbstractModel {
         if (source.NetStatus != null) {
             this.NetStatus = new String(source.NetStatus);
         }
+        if (source.WebVitals != null) {
+            this.WebVitals = new Boolean(source.WebVitals);
+        }
     }
 
 
@@ -659,6 +685,7 @@ public class DescribeDataPerformancePageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CostType", this.CostType);
         this.setParamSimple(map, prefix + "Env", this.Env);
         this.setParamSimple(map, prefix + "NetStatus", this.NetStatus);
+        this.setParamSimple(map, prefix + "WebVitals", this.WebVitals);
 
     }
 }

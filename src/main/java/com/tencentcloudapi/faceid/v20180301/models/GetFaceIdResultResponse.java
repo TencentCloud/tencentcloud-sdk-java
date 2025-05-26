@@ -90,11 +90,6 @@ public class GetFaceIdResultResponse extends AbstractModel {
     /**
     * plus版：描述当前请求所在设备的风险标签。
 - 详情如下：
-01-设备疑似被Root/设备疑似越狱。
-02-设备疑似被注入。
-03-设备疑似为模拟器。
-04-设备疑似存在风险操作。
-05-摄像头疑似被劫持。
 06-疑似黑产设备。
 null-无设备风险。
 - 增强版：此字段不生效，默认为null。
@@ -153,6 +148,22 @@ null - 未获取到风险等级。
     @SerializedName("DeviceInfoLevel")
     @Expose
     private String DeviceInfoLevel;
+
+    /**
+    * 敏感数据加密信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private Encryption Encryption;
+
+    /**
+    * 加密后的数据。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EncryptedBody")
+    @Expose
+    private String EncryptedBody;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -324,22 +335,12 @@ null - 未获取到风险等级。
     /**
      * Get plus版：描述当前请求所在设备的风险标签。
 - 详情如下：
-01-设备疑似被Root/设备疑似越狱。
-02-设备疑似被注入。
-03-设备疑似为模拟器。
-04-设备疑似存在风险操作。
-05-摄像头疑似被劫持。
 06-疑似黑产设备。
 null-无设备风险。
 - 增强版：此字段不生效，默认为null。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceInfoTag plus版：描述当前请求所在设备的风险标签。
 - 详情如下：
-01-设备疑似被Root/设备疑似越狱。
-02-设备疑似被注入。
-03-设备疑似为模拟器。
-04-设备疑似存在风险操作。
-05-摄像头疑似被劫持。
 06-疑似黑产设备。
 null-无设备风险。
 - 增强版：此字段不生效，默认为null。
@@ -352,22 +353,12 @@ null-无设备风险。
     /**
      * Set plus版：描述当前请求所在设备的风险标签。
 - 详情如下：
-01-设备疑似被Root/设备疑似越狱。
-02-设备疑似被注入。
-03-设备疑似为模拟器。
-04-设备疑似存在风险操作。
-05-摄像头疑似被劫持。
 06-疑似黑产设备。
 null-无设备风险。
 - 增强版：此字段不生效，默认为null。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceInfoTag plus版：描述当前请求所在设备的风险标签。
 - 详情如下：
-01-设备疑似被Root/设备疑似越狱。
-02-设备疑似被注入。
-03-设备疑似为模拟器。
-04-设备疑似存在风险操作。
-05-摄像头疑似被劫持。
 06-疑似黑产设备。
 null-无设备风险。
 - 增强版：此字段不生效，默认为null。
@@ -542,6 +533,46 @@ null - 未获取到风险等级。
     }
 
     /**
+     * Get 敏感数据加密信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Encryption 敏感数据加密信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Encryption getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 敏感数据加密信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Encryption 敏感数据加密信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncryption(Encryption Encryption) {
+        this.Encryption = Encryption;
+    }
+
+    /**
+     * Get 加密后的数据。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EncryptedBody 加密后的数据。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEncryptedBody() {
+        return this.EncryptedBody;
+    }
+
+    /**
+     * Set 加密后的数据。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EncryptedBody 加密后的数据。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncryptedBody(String EncryptedBody) {
+        this.EncryptedBody = EncryptedBody;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -601,6 +632,12 @@ null - 未获取到风险等级。
         if (source.DeviceInfoLevel != null) {
             this.DeviceInfoLevel = new String(source.DeviceInfoLevel);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new Encryption(source.Encryption);
+        }
+        if (source.EncryptedBody != null) {
+            this.EncryptedBody = new String(source.EncryptedBody);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -623,6 +660,8 @@ null - 未获取到风险等级。
         this.setParamSimple(map, prefix + "RiskInfoTag", this.RiskInfoTag);
         this.setParamSimple(map, prefix + "LivenessInfoTag", this.LivenessInfoTag);
         this.setParamSimple(map, prefix + "DeviceInfoLevel", this.DeviceInfoLevel);
+        this.setParamObj(map, prefix + "Encryption.", this.Encryption);
+        this.setParamSimple(map, prefix + "EncryptedBody", this.EncryptedBody);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

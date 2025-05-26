@@ -234,7 +234,7 @@ public class DomainAssetVO extends AbstractModel {
     private String SourceType;
 
     /**
-    * memberiD
+    * memberId信息
     */
     @SerializedName("MemberId")
     @Expose
@@ -777,16 +777,16 @@ public class DomainAssetVO extends AbstractModel {
     }
 
     /**
-     * Get memberiD 
-     * @return MemberId memberiD
+     * Get memberId信息 
+     * @return MemberId memberId信息
      */
     public String getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set memberiD
-     * @param MemberId memberiD
+     * Set memberId信息
+     * @param MemberId memberId信息
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;

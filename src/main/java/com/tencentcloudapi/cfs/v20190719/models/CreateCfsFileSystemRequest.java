@@ -38,7 +38,7 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private String NetInterface;
 
     /**
-    * 权限组 ID,pgroupbasic 是默认权限组
+    * 权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取[DescribeCfsPGroups](https://cloud.tencent.com/document/product/582/38157)
     */
     @SerializedName("PGroupId")
     @Expose
@@ -59,14 +59,16 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private String StorageType;
 
     /**
-    * 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取
+    * 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，
+[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取
+    * 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，
+[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)
     */
     @SerializedName("SubnetId")
     @Expose
@@ -101,7 +103,9 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-    * 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取
+    * 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口
+[DescribeCcns](https://cloud.tencent.com/document/product/215/19199)
+
     */
     @SerializedName("CcnId")
     @Expose
@@ -122,14 +126,16 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private Long Capacity;
 
     /**
-    * 文件系统快照ID，通过查询快照列表获取该参数
+    * 文件系统快照ID，通过查询快照列表获取该参数，
+[DescribeCfsSnapshots](https://cloud.tencent.com/document/product/582/80206)
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * 定期快照策略ID，通过查询快照策略信息获取
+    * 定期快照策略ID，通过查询快照策略信息获取,
+[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/product/582/38157)
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
@@ -184,16 +190,16 @@ v3.1：创建增强版的通用文件系统
     }
 
     /**
-     * Get 权限组 ID,pgroupbasic 是默认权限组 
-     * @return PGroupId 权限组 ID,pgroupbasic 是默认权限组
+     * Get 权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取[DescribeCfsPGroups](https://cloud.tencent.com/document/product/582/38157) 
+     * @return PGroupId 权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取[DescribeCfsPGroups](https://cloud.tencent.com/document/product/582/38157)
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set 权限组 ID,pgroupbasic 是默认权限组
-     * @param PGroupId 权限组 ID,pgroupbasic 是默认权限组
+     * Set 权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取[DescribeCfsPGroups](https://cloud.tencent.com/document/product/582/38157)
+     * @param PGroupId 权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取[DescribeCfsPGroups](https://cloud.tencent.com/document/product/582/38157)
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
@@ -232,32 +238,40 @@ v3.1：创建增强版的通用文件系统
     }
 
     /**
-     * Get 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取 
-     * @return VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取
+     * Get 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，
+[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778) 
+     * @return VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，
+[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取
-     * @param VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取
+     * Set 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，
+[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)
+     * @param VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填.通过查询私有网络接口获取，
+[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取 
-     * @return SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取
+     * Get 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，
+[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) 
+     * @return SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，
+[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取
-     * @param SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取
+     * Set 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，
+[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)
+     * @param SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。通过查询子网接口获取，
+[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -328,16 +342,24 @@ v3.1：创建增强版的通用文件系统
     }
 
     /**
-     * Get 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取 
-     * @return CcnId 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取
+     * Get 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口
+[DescribeCcns](https://cloud.tencent.com/document/product/215/19199)
+ 
+     * @return CcnId 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口
+[DescribeCcns](https://cloud.tencent.com/document/product/215/19199)
+
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取
-     * @param CcnId 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取
+     * Set 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口
+[DescribeCcns](https://cloud.tencent.com/document/product/215/19199)
+
+     * @param CcnId 云联网ID， 若网络类型选择的是CCN，该字段为必填;通过查询云联网列表接口获取，通过接口
+[DescribeCcns](https://cloud.tencent.com/document/product/215/19199)
+
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
@@ -376,32 +398,40 @@ v3.1：创建增强版的通用文件系统
     }
 
     /**
-     * Get 文件系统快照ID，通过查询快照列表获取该参数 
-     * @return SnapshotId 文件系统快照ID，通过查询快照列表获取该参数
+     * Get 文件系统快照ID，通过查询快照列表获取该参数，
+[DescribeCfsSnapshots](https://cloud.tencent.com/document/product/582/80206) 
+     * @return SnapshotId 文件系统快照ID，通过查询快照列表获取该参数，
+[DescribeCfsSnapshots](https://cloud.tencent.com/document/product/582/80206)
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 文件系统快照ID，通过查询快照列表获取该参数
-     * @param SnapshotId 文件系统快照ID，通过查询快照列表获取该参数
+     * Set 文件系统快照ID，通过查询快照列表获取该参数，
+[DescribeCfsSnapshots](https://cloud.tencent.com/document/product/582/80206)
+     * @param SnapshotId 文件系统快照ID，通过查询快照列表获取该参数，
+[DescribeCfsSnapshots](https://cloud.tencent.com/document/product/582/80206)
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get 定期快照策略ID，通过查询快照策略信息获取 
-     * @return AutoSnapshotPolicyId 定期快照策略ID，通过查询快照策略信息获取
+     * Get 定期快照策略ID，通过查询快照策略信息获取,
+[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/product/582/38157) 
+     * @return AutoSnapshotPolicyId 定期快照策略ID，通过查询快照策略信息获取,
+[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/product/582/38157)
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set 定期快照策略ID，通过查询快照策略信息获取
-     * @param AutoSnapshotPolicyId 定期快照策略ID，通过查询快照策略信息获取
+     * Set 定期快照策略ID，通过查询快照策略信息获取,
+[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/product/582/38157)
+     * @param AutoSnapshotPolicyId 定期快照策略ID，通过查询快照策略信息获取,
+[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/product/582/38157)
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;

@@ -84,6 +84,13 @@ hosting-type
     private String DstService;
 
     /**
+    * 机架名称关键字实现模糊搜索
+    */
+    @SerializedName("RackName")
+    @Expose
+    private String RackName;
+
+    /**
      * Get 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。 
      * @return Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      */
@@ -275,6 +282,22 @@ hosting-type
         this.DstService = DstService;
     }
 
+    /**
+     * Get 机架名称关键字实现模糊搜索 
+     * @return RackName 机架名称关键字实现模糊搜索
+     */
+    public String getRackName() {
+        return this.RackName;
+    }
+
+    /**
+     * Set 机架名称关键字实现模糊搜索
+     * @param RackName 机架名称关键字实现模糊搜索
+     */
+    public void setRackName(String RackName) {
+        this.RackName = RackName;
+    }
+
     public DescribeRacksRequest() {
     }
 
@@ -298,6 +321,9 @@ hosting-type
         if (source.DstService != null) {
             this.DstService = new String(source.DstService);
         }
+        if (source.RackName != null) {
+            this.RackName = new String(source.RackName);
+        }
     }
 
 
@@ -309,6 +335,7 @@ hosting-type
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "DstService", this.DstService);
+        this.setParamSimple(map, prefix + "RackName", this.RackName);
 
     }
 }

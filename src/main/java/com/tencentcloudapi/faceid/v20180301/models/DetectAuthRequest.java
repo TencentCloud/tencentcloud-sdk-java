@@ -68,6 +68,7 @@ public class DetectAuthRequest extends AbstractModel {
 
     /**
     * 透传字段，在获取验证结果时返回。
+- 最长长度1024位。
     */
     @SerializedName("Extra")
     @Expose
@@ -237,8 +238,10 @@ public class DetectAuthRequest extends AbstractModel {
     }
 
     /**
-     * Get 透传字段，在获取验证结果时返回。 
+     * Get 透传字段，在获取验证结果时返回。
+- 最长长度1024位。 
      * @return Extra 透传字段，在获取验证结果时返回。
+- 最长长度1024位。
      */
     public String getExtra() {
         return this.Extra;
@@ -246,7 +249,9 @@ public class DetectAuthRequest extends AbstractModel {
 
     /**
      * Set 透传字段，在获取验证结果时返回。
+- 最长长度1024位。
      * @param Extra 透传字段，在获取验证结果时返回。
+- 最长长度1024位。
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;

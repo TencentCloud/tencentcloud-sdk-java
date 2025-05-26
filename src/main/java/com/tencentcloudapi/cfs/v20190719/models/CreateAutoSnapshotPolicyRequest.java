@@ -31,7 +31,7 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel {
     private String Hour;
 
     /**
-    * 策略名称
+    * 策略名称,限制64个字符数量仅支持输入中文、字母、数字、_或-
     */
     @SerializedName("PolicyName")
     @Expose
@@ -52,7 +52,7 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel {
     private Long AliveDays;
 
     /**
-    * 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
+    * 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照；例如1 代表1号；与DayOfWeek，IntervalDays 三者选一
     */
     @SerializedName("DayOfMonth")
     @Expose
@@ -82,16 +82,16 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 策略名称 
-     * @return PolicyName 策略名称
+     * Get 策略名称,限制64个字符数量仅支持输入中文、字母、数字、_或- 
+     * @return PolicyName 策略名称,限制64个字符数量仅支持输入中文、字母、数字、_或-
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 策略名称
-     * @param PolicyName 策略名称
+     * Set 策略名称,限制64个字符数量仅支持输入中文、字母、数字、_或-
+     * @param PolicyName 策略名称,限制64个字符数量仅支持输入中文、字母、数字、_或-
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
@@ -130,16 +130,16 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一 
-     * @return DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
+     * Get 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照；例如1 代表1号；与DayOfWeek，IntervalDays 三者选一 
+     * @return DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照；例如1 代表1号；与DayOfWeek，IntervalDays 三者选一
      */
     public String getDayOfMonth() {
         return this.DayOfMonth;
     }
 
     /**
-     * Set 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
-     * @param DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
+     * Set 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照；例如1 代表1号；与DayOfWeek，IntervalDays 三者选一
+     * @param DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照；例如1 代表1号；与DayOfWeek，IntervalDays 三者选一
      */
     public void setDayOfMonth(String DayOfMonth) {
         this.DayOfMonth = DayOfMonth;

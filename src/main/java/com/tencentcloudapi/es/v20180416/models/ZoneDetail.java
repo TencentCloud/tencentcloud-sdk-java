@@ -39,7 +39,6 @@ public class ZoneDetail extends AbstractModel {
 
     /**
     * 是否为隐藏可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hidden")
     @Expose
@@ -78,10 +77,8 @@ public class ZoneDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否为隐藏可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为隐藏可用区 
      * @return Hidden 是否为隐藏可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getHidden() {
         return this.Hidden;
@@ -89,9 +86,7 @@ public class ZoneDetail extends AbstractModel {
 
     /**
      * Set 是否为隐藏可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hidden 是否为隐藏可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHidden(Boolean Hidden) {
         this.Hidden = Hidden;

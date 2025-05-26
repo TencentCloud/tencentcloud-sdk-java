@@ -268,6 +268,7 @@ public class DetectInfoText extends AbstractModel {
     2：动作活体
     3：静默活体
     4：一闪活体（动作+光线）
+    5：远近活体
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LivenessMode")
@@ -962,6 +963,7 @@ public class DetectInfoText extends AbstractModel {
     2：动作活体
     3：静默活体
     4：一闪活体（动作+光线）
+    5：远近活体
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LivenessMode 本次流程最终活体类型。
 - 取值范围：
@@ -970,6 +972,7 @@ public class DetectInfoText extends AbstractModel {
     2：动作活体
     3：静默活体
     4：一闪活体（动作+光线）
+    5：远近活体
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLivenessMode() {
@@ -984,6 +987,7 @@ public class DetectInfoText extends AbstractModel {
     2：动作活体
     3：静默活体
     4：一闪活体（动作+光线）
+    5：远近活体
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LivenessMode 本次流程最终活体类型。
 - 取值范围：
@@ -992,6 +996,7 @@ public class DetectInfoText extends AbstractModel {
     2：动作活体
     3：静默活体
     4：一闪活体（动作+光线）
+    5：远近活体
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLivenessMode(Long LivenessMode) {

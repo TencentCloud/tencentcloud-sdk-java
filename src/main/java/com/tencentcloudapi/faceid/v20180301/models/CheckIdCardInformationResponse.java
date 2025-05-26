@@ -33,9 +33,7 @@ public class CheckIdCardInformationResponse extends AbstractModel {
     private Float Sim;
 
     /**
-    * 业务错误码。
-- 成功情况返回Success,。
-- 错误情况请参考下方错误码 列表中FailedOperation部分
+    * 业务错误码。- 成功情况返回Success。- 错误情况请参考下方错误码 列表中FailedOperation部分
     */
     @SerializedName("Result")
     @Expose
@@ -171,24 +169,16 @@ public class CheckIdCardInformationResponse extends AbstractModel {
     }
 
     /**
-     * Get 业务错误码。
-- 成功情况返回Success,。
-- 错误情况请参考下方错误码 列表中FailedOperation部分 
-     * @return Result 业务错误码。
-- 成功情况返回Success,。
-- 错误情况请参考下方错误码 列表中FailedOperation部分
+     * Get 业务错误码。- 成功情况返回Success。- 错误情况请参考下方错误码 列表中FailedOperation部分 
+     * @return Result 业务错误码。- 成功情况返回Success。- 错误情况请参考下方错误码 列表中FailedOperation部分
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 业务错误码。
-- 成功情况返回Success,。
-- 错误情况请参考下方错误码 列表中FailedOperation部分
-     * @param Result 业务错误码。
-- 成功情况返回Success,。
-- 错误情况请参考下方错误码 列表中FailedOperation部分
+     * Set 业务错误码。- 成功情况返回Success。- 错误情况请参考下方错误码 列表中FailedOperation部分
+     * @param Result 业务错误码。- 成功情况返回Success。- 错误情况请参考下方错误码 列表中FailedOperation部分
      */
     public void setResult(String Result) {
         this.Result = Result;

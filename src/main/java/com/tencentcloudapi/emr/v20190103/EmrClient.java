@@ -106,6 +106,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *用户管理-批量创建用户组
+     * @param req CreateGroupsSTDRequest
+     * @return CreateGroupsSTDResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGroupsSTDResponse CreateGroupsSTD(CreateGroupsSTDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGroupsSTD", CreateGroupsSTDResponse.class);
+    }
+
+    /**
      *创建EMR集群实例
      * @param req CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -138,6 +149,17 @@ public class EmrClient extends AbstractClient{
     public DeleteAutoScaleStrategyResponse DeleteAutoScaleStrategy(DeleteAutoScaleStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAutoScaleStrategy", DeleteAutoScaleStrategyResponse.class);
+    }
+
+    /**
+     *批量删除用户组
+     * @param req DeleteGroupsSTDRequest
+     * @return DeleteGroupsSTDResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGroupsSTDResponse DeleteGroupsSTD(DeleteGroupsSTDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGroupsSTD", DeleteGroupsSTDResponse.class);
     }
 
     /**
@@ -761,6 +783,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *用户管理-修改用户组
+     * @param req ModifyUserGroupRequest
+     * @return ModifyUserGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserGroupResponse ModifyUserGroup(ModifyUserGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserGroup", ModifyUserGroupResponse.class);
+    }
+
+    /**
      *修改用户密码（用户管理）
      * @param req ModifyUserManagerPwdRequest
      * @return ModifyUserManagerPwdResponse
@@ -769,6 +802,17 @@ public class EmrClient extends AbstractClient{
     public ModifyUserManagerPwdResponse ModifyUserManagerPwd(ModifyUserManagerPwdRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserManagerPwd", ModifyUserManagerPwdResponse.class);
+    }
+
+    /**
+     *变更用户组用户信息
+     * @param req ModifyUsersOfGroupSTDRequest
+     * @return ModifyUsersOfGroupSTDResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUsersOfGroupSTDResponse ModifyUsersOfGroupSTD(ModifyUsersOfGroupSTDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUsersOfGroupSTD", ModifyUsersOfGroupSTDResponse.class);
     }
 
     /**

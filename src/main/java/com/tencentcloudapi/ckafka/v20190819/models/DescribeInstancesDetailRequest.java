@@ -208,7 +208,9 @@ public class DescribeInstancesDetailRequest extends AbstractModel {
     /**
      * Get 已经废弃， 使用InstanceIdList 
      * @return InstanceIds 已经废弃， 使用InstanceIdList
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceIds() {
         return this.InstanceIds;
     }
@@ -216,7 +218,9 @@ public class DescribeInstancesDetailRequest extends AbstractModel {
     /**
      * Set 已经废弃， 使用InstanceIdList
      * @param InstanceIds 已经废弃， 使用InstanceIdList
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceIds(String InstanceIds) {
         this.InstanceIds = InstanceIds;
     }

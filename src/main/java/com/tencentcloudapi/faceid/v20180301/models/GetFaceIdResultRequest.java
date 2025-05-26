@@ -48,6 +48,21 @@ public class GetFaceIdResultRequest extends AbstractModel {
     private Boolean IsNeedBestFrame;
 
     /**
+    * 是否对回包整体进行加密。
+    */
+    @SerializedName("IsEncryptResponse")
+    @Expose
+    private Boolean IsEncryptResponse;
+
+    /**
+    * 是否需要对返回中的敏感信息进行加密。  
+只需指定加密算法Algorithm即可，其余字段传入默认值。
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private Encryption Encryption;
+
+    /**
      * Get SDK人脸核身流程的标识。
 - 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。 
      * @return FaceIdToken SDK人脸核身流程的标识。
@@ -107,6 +122,42 @@ public class GetFaceIdResultRequest extends AbstractModel {
         this.IsNeedBestFrame = IsNeedBestFrame;
     }
 
+    /**
+     * Get 是否对回包整体进行加密。 
+     * @return IsEncryptResponse 是否对回包整体进行加密。
+     */
+    public Boolean getIsEncryptResponse() {
+        return this.IsEncryptResponse;
+    }
+
+    /**
+     * Set 是否对回包整体进行加密。
+     * @param IsEncryptResponse 是否对回包整体进行加密。
+     */
+    public void setIsEncryptResponse(Boolean IsEncryptResponse) {
+        this.IsEncryptResponse = IsEncryptResponse;
+    }
+
+    /**
+     * Get 是否需要对返回中的敏感信息进行加密。  
+只需指定加密算法Algorithm即可，其余字段传入默认值。 
+     * @return Encryption 是否需要对返回中的敏感信息进行加密。  
+只需指定加密算法Algorithm即可，其余字段传入默认值。
+     */
+    public Encryption getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 是否需要对返回中的敏感信息进行加密。  
+只需指定加密算法Algorithm即可，其余字段传入默认值。
+     * @param Encryption 是否需要对返回中的敏感信息进行加密。  
+只需指定加密算法Algorithm即可，其余字段传入默认值。
+     */
+    public void setEncryption(Encryption Encryption) {
+        this.Encryption = Encryption;
+    }
+
     public GetFaceIdResultRequest() {
     }
 
@@ -124,6 +175,12 @@ public class GetFaceIdResultRequest extends AbstractModel {
         if (source.IsNeedBestFrame != null) {
             this.IsNeedBestFrame = new Boolean(source.IsNeedBestFrame);
         }
+        if (source.IsEncryptResponse != null) {
+            this.IsEncryptResponse = new Boolean(source.IsEncryptResponse);
+        }
+        if (source.Encryption != null) {
+            this.Encryption = new Encryption(source.Encryption);
+        }
     }
 
 
@@ -134,6 +191,8 @@ public class GetFaceIdResultRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FaceIdToken", this.FaceIdToken);
         this.setParamSimple(map, prefix + "IsNeedVideo", this.IsNeedVideo);
         this.setParamSimple(map, prefix + "IsNeedBestFrame", this.IsNeedBestFrame);
+        this.setParamSimple(map, prefix + "IsEncryptResponse", this.IsEncryptResponse);
+        this.setParamObj(map, prefix + "Encryption.", this.Encryption);
 
     }
 }

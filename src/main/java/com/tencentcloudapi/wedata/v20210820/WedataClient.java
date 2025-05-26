@@ -1515,6 +1515,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *数据集成分页获取数据库SCHEMA信息
+     * @param req DescribeRealViewSchemaPageRequest
+     * @return DescribeRealViewSchemaPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRealViewSchemaPageResponse DescribeRealViewSchemaPage(DescribeRealViewSchemaPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRealViewSchemaPage", DescribeRealViewSchemaPageResponse.class);
+    }
+
+    /**
      *查询上报任务详情
      * @param req DescribeReportTaskDetailRequest
      * @return DescribeReportTaskDetailResponse

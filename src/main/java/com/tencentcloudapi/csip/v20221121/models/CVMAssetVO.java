@@ -66,14 +66,14 @@ public class CVMAssetVO extends AbstractModel {
     private String AssetCreateTime;
 
     /**
-    * 公网ip
+    * 公网IP
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * 私网ip
+    * 私网IP
     */
     @SerializedName("PrivateIp")
     @Expose
@@ -143,14 +143,14 @@ public class CVMAssetVO extends AbstractModel {
     private String SubnetName;
 
     /**
-    * uuid
+    * 主机安全Agent UUID
     */
     @SerializedName("InstanceUuid")
     @Expose
     private String InstanceUuid;
 
     /**
-    * qquid
+    * 云主机 CVM UUID
     */
     @SerializedName("InstanceQUuid")
     @Expose
@@ -596,32 +596,32 @@ public class CVMAssetVO extends AbstractModel {
     }
 
     /**
-     * Get 公网ip 
-     * @return PublicIp 公网ip
+     * Get 公网IP 
+     * @return PublicIp 公网IP
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set 公网ip
-     * @param PublicIp 公网ip
+     * Set 公网IP
+     * @param PublicIp 公网IP
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 私网ip 
-     * @return PrivateIp 私网ip
+     * Get 私网IP 
+     * @return PrivateIp 私网IP
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set 私网ip
-     * @param PrivateIp 私网ip
+     * Set 私网IP
+     * @param PrivateIp 私网IP
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
@@ -772,32 +772,32 @@ public class CVMAssetVO extends AbstractModel {
     }
 
     /**
-     * Get uuid 
-     * @return InstanceUuid uuid
+     * Get 主机安全Agent UUID 
+     * @return InstanceUuid 主机安全Agent UUID
      */
     public String getInstanceUuid() {
         return this.InstanceUuid;
     }
 
     /**
-     * Set uuid
-     * @param InstanceUuid uuid
+     * Set 主机安全Agent UUID
+     * @param InstanceUuid 主机安全Agent UUID
      */
     public void setInstanceUuid(String InstanceUuid) {
         this.InstanceUuid = InstanceUuid;
     }
 
     /**
-     * Get qquid 
-     * @return InstanceQUuid qquid
+     * Get 云主机 CVM UUID 
+     * @return InstanceQUuid 云主机 CVM UUID
      */
     public String getInstanceQUuid() {
         return this.InstanceQUuid;
     }
 
     /**
-     * Set qquid
-     * @param InstanceQUuid qquid
+     * Set 云主机 CVM UUID
+     * @param InstanceQUuid 云主机 CVM UUID
      */
     public void setInstanceQUuid(String InstanceQUuid) {
         this.InstanceQUuid = InstanceQUuid;

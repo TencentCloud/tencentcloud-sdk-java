@@ -66,7 +66,7 @@ public class IpAssetListVO extends AbstractModel {
     private String AssetCreateTime;
 
     /**
-    * 公网ip
+    * 公网IP
     */
     @SerializedName("PublicIp")
     @Expose
@@ -241,7 +241,7 @@ public class IpAssetListVO extends AbstractModel {
     private String AddressId;
 
     /**
-    * memberid信息
+    * MemberId信息
     */
     @SerializedName("MemberId")
     @Expose
@@ -365,16 +365,16 @@ public class IpAssetListVO extends AbstractModel {
     }
 
     /**
-     * Get 公网ip 
-     * @return PublicIp 公网ip
+     * Get 公网IP 
+     * @return PublicIp 公网IP
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set 公网ip
-     * @param PublicIp 公网ip
+     * Set 公网IP
+     * @param PublicIp 公网IP
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
@@ -765,16 +765,16 @@ public class IpAssetListVO extends AbstractModel {
     }
 
     /**
-     * Get memberid信息 
-     * @return MemberId memberid信息
+     * Get MemberId信息 
+     * @return MemberId MemberId信息
      */
     public String getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set memberid信息
-     * @param MemberId memberid信息
+     * Set MemberId信息
+     * @param MemberId MemberId信息
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;

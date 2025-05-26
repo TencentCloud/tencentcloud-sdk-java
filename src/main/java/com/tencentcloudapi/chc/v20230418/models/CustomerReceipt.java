@@ -38,7 +38,7 @@ public class CustomerReceipt extends AbstractModel {
     private String PickUpStuffContact;
 
     /**
-    * 自提人身份证号
+    * 自提人证件号码
     */
     @SerializedName("PickUpStuffIDCard")
     @Expose
@@ -50,6 +50,18 @@ public class CustomerReceipt extends AbstractModel {
     @SerializedName("PickUpTime")
     @Expose
     private String PickUpTime;
+
+    /**
+    * 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
+    */
+    @SerializedName("IDCardType")
+    @Expose
+    private String IDCardType;
 
     /**
      * Get 自提人员姓名 
@@ -84,16 +96,16 @@ public class CustomerReceipt extends AbstractModel {
     }
 
     /**
-     * Get 自提人身份证号 
-     * @return PickUpStuffIDCard 自提人身份证号
+     * Get 自提人证件号码 
+     * @return PickUpStuffIDCard 自提人证件号码
      */
     public String getPickUpStuffIDCard() {
         return this.PickUpStuffIDCard;
     }
 
     /**
-     * Set 自提人身份证号
-     * @param PickUpStuffIDCard 自提人身份证号
+     * Set 自提人证件号码
+     * @param PickUpStuffIDCard 自提人证件号码
      */
     public void setPickUpStuffIDCard(String PickUpStuffIDCard) {
         this.PickUpStuffIDCard = PickUpStuffIDCard;
@@ -113,6 +125,42 @@ public class CustomerReceipt extends AbstractModel {
      */
     public void setPickUpTime(String PickUpTime) {
         this.PickUpTime = PickUpTime;
+    }
+
+    /**
+     * Get 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他 
+     * @return IDCardType 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
+     */
+    public String getIDCardType() {
+        return this.IDCardType;
+    }
+
+    /**
+     * Set 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
+     * @param IDCardType 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
+     */
+    public void setIDCardType(String IDCardType) {
+        this.IDCardType = IDCardType;
     }
 
     public CustomerReceipt() {
@@ -135,6 +183,9 @@ public class CustomerReceipt extends AbstractModel {
         if (source.PickUpTime != null) {
             this.PickUpTime = new String(source.PickUpTime);
         }
+        if (source.IDCardType != null) {
+            this.IDCardType = new String(source.IDCardType);
+        }
     }
 
 
@@ -146,6 +197,7 @@ public class CustomerReceipt extends AbstractModel {
         this.setParamSimple(map, prefix + "PickUpStuffContact", this.PickUpStuffContact);
         this.setParamSimple(map, prefix + "PickUpStuffIDCard", this.PickUpStuffIDCard);
         this.setParamSimple(map, prefix + "PickUpTime", this.PickUpTime);
+        this.setParamSimple(map, prefix + "IDCardType", this.IDCardType);
 
     }
 }

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class SubUserInfo extends AbstractModel {
 
     /**
-    * 主键ID，无业务意义
-仅作为唯一键
+    * 主键ID，无业务意义仅作为唯一键
     */
     @SerializedName("ID")
     @Expose
@@ -74,7 +73,7 @@ public class SubUserInfo extends AbstractModel {
     private String OwnerNickName;
 
     /**
-    * 所属主账号memberid
+    * 所属主账号memberId信息
     */
     @SerializedName("OwnerMemberID")
     @Expose
@@ -151,20 +150,16 @@ public class SubUserInfo extends AbstractModel {
     private Boolean IsAccessUeba;
 
     /**
-     * Get 主键ID，无业务意义
-仅作为唯一键 
-     * @return ID 主键ID，无业务意义
-仅作为唯一键
+     * Get 主键ID，无业务意义仅作为唯一键 
+     * @return ID 主键ID，无业务意义仅作为唯一键
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 主键ID，无业务意义
-仅作为唯一键
-     * @param ID 主键ID，无业务意义
-仅作为唯一键
+     * Set 主键ID，无业务意义仅作为唯一键
+     * @param ID 主键ID，无业务意义仅作为唯一键
      */
     public void setID(Long ID) {
         this.ID = ID;
@@ -267,16 +262,16 @@ public class SubUserInfo extends AbstractModel {
     }
 
     /**
-     * Get 所属主账号memberid 
-     * @return OwnerMemberID 所属主账号memberid
+     * Get 所属主账号memberId信息 
+     * @return OwnerMemberID 所属主账号memberId信息
      */
     public String getOwnerMemberID() {
         return this.OwnerMemberID;
     }
 
     /**
-     * Set 所属主账号memberid
-     * @param OwnerMemberID 所属主账号memberid
+     * Set 所属主账号memberId信息
+     * @param OwnerMemberID 所属主账号memberId信息
      */
     public void setOwnerMemberID(String OwnerMemberID) {
         this.OwnerMemberID = OwnerMemberID;

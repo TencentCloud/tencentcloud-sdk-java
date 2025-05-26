@@ -135,6 +135,13 @@ public class TextVehicleBack extends AbstractModel {
     private String IssueAuthorityElectronic;
 
     /**
+    * 车身颜色
+    */
+    @SerializedName("CarBodyColor")
+    @Expose
+    private String CarBodyColor;
+
+    /**
      * Get 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlateNo 号牌号码
@@ -410,6 +417,22 @@ public class TextVehicleBack extends AbstractModel {
         this.IssueAuthorityElectronic = IssueAuthorityElectronic;
     }
 
+    /**
+     * Get 车身颜色 
+     * @return CarBodyColor 车身颜色
+     */
+    public String getCarBodyColor() {
+        return this.CarBodyColor;
+    }
+
+    /**
+     * Set 车身颜色
+     * @param CarBodyColor 车身颜色
+     */
+    public void setCarBodyColor(String CarBodyColor) {
+        this.CarBodyColor = CarBodyColor;
+    }
+
     public TextVehicleBack() {
     }
 
@@ -460,6 +483,9 @@ public class TextVehicleBack extends AbstractModel {
         if (source.IssueAuthorityElectronic != null) {
             this.IssueAuthorityElectronic = new String(source.IssueAuthorityElectronic);
         }
+        if (source.CarBodyColor != null) {
+            this.CarBodyColor = new String(source.CarBodyColor);
+        }
     }
 
 
@@ -481,6 +507,7 @@ public class TextVehicleBack extends AbstractModel {
         this.setParamSimple(map, prefix + "FuelType", this.FuelType);
         this.setParamSimple(map, prefix + "AddressElectronic", this.AddressElectronic);
         this.setParamSimple(map, prefix + "IssueAuthorityElectronic", this.IssueAuthorityElectronic);
+        this.setParamSimple(map, prefix + "CarBodyColor", this.CarBodyColor);
 
     }
 }

@@ -155,7 +155,9 @@ public class DescribeInstancesRequest extends AbstractModel {
     /**
      * Get 已废弃。匹配标签key值。 
      * @return TagKey 已废弃。匹配标签key值。
+     * @deprecated
      */
+    @Deprecated
     public String getTagKey() {
         return this.TagKey;
     }
@@ -163,7 +165,9 @@ public class DescribeInstancesRequest extends AbstractModel {
     /**
      * Set 已废弃。匹配标签key值。
      * @param TagKey 已废弃。匹配标签key值。
+     * @deprecated
      */
+    @Deprecated
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }

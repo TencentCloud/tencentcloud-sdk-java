@@ -31,7 +31,7 @@ public class SelfOperation extends AbstractModel {
     private String StuffContact;
 
     /**
-    * 身份证号
+    * 证件号码
     */
     @SerializedName("StuffIDCard")
     @Expose
@@ -52,6 +52,18 @@ public class SelfOperation extends AbstractModel {
     private String OperationTime;
 
     /**
+    * 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
+    */
+    @SerializedName("IDCardType")
+    @Expose
+    private String IDCardType;
+
+    /**
      * Get 联系人员电话 
      * @return StuffContact 联系人员电话
      */
@@ -68,16 +80,16 @@ public class SelfOperation extends AbstractModel {
     }
 
     /**
-     * Get 身份证号 
-     * @return StuffIDCard 身份证号
+     * Get 证件号码 
+     * @return StuffIDCard 证件号码
      */
     public String getStuffIDCard() {
         return this.StuffIDCard;
     }
 
     /**
-     * Set 身份证号
-     * @param StuffIDCard 身份证号
+     * Set 证件号码
+     * @param StuffIDCard 证件号码
      */
     public void setStuffIDCard(String StuffIDCard) {
         this.StuffIDCard = StuffIDCard;
@@ -115,6 +127,42 @@ public class SelfOperation extends AbstractModel {
         this.OperationTime = OperationTime;
     }
 
+    /**
+     * Get 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他 
+     * @return IDCardType 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
+     */
+    public String getIDCardType() {
+        return this.IDCardType;
+    }
+
+    /**
+     * Set 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
+     * @param IDCardType 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
+     */
+    public void setIDCardType(String IDCardType) {
+        this.IDCardType = IDCardType;
+    }
+
     public SelfOperation() {
     }
 
@@ -135,6 +183,9 @@ public class SelfOperation extends AbstractModel {
         if (source.OperationTime != null) {
             this.OperationTime = new String(source.OperationTime);
         }
+        if (source.IDCardType != null) {
+            this.IDCardType = new String(source.IDCardType);
+        }
     }
 
 
@@ -146,6 +197,7 @@ public class SelfOperation extends AbstractModel {
         this.setParamSimple(map, prefix + "StuffIDCard", this.StuffIDCard);
         this.setParamSimple(map, prefix + "StuffName", this.StuffName);
         this.setParamSimple(map, prefix + "OperationTime", this.OperationTime);
+        this.setParamSimple(map, prefix + "IDCardType", this.IDCardType);
 
     }
 }

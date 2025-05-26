@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FailureParam extends AbstractModel {
 
     /**
-    * 类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
+    * 类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
     */
     @SerializedName("Type")
     @Expose
@@ -66,16 +66,16 @@ public class FailureParam extends AbstractModel {
     private String DlqType;
 
     /**
-     * Get 类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃 
-     * @return Type 类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
+     * Get 类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃 
+     * @return Type 类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
-     * @param Type 类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
+     * Set 类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
+     * @param Type 类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
      */
     public void setType(String Type) {
         this.Type = Type;

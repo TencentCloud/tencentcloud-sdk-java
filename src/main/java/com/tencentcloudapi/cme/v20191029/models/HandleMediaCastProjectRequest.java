@@ -62,7 +62,7 @@ public class HandleMediaCastProjectRequest extends AbstractModel {
 
     /**
     * 输出媒体配置。具体操作方式详见 [操作类型](#Operation) 及下文示例。
-当 Operation 为 ModfiyOutputSetting 时必填。
+当 Operation 为 ModifyOutputSetting 时必填。
     */
     @SerializedName("OutputMediaSetting")
     @Expose
@@ -181,9 +181,9 @@ public class HandleMediaCastProjectRequest extends AbstractModel {
 
     /**
      * Get 输出媒体配置。具体操作方式详见 [操作类型](#Operation) 及下文示例。
-当 Operation 为 ModfiyOutputSetting 时必填。 
+当 Operation 为 ModifyOutputSetting 时必填。 
      * @return OutputMediaSetting 输出媒体配置。具体操作方式详见 [操作类型](#Operation) 及下文示例。
-当 Operation 为 ModfiyOutputSetting 时必填。
+当 Operation 为 ModifyOutputSetting 时必填。
      */
     public MediaCastOutputMediaSetting getOutputMediaSetting() {
         return this.OutputMediaSetting;
@@ -191,9 +191,9 @@ public class HandleMediaCastProjectRequest extends AbstractModel {
 
     /**
      * Set 输出媒体配置。具体操作方式详见 [操作类型](#Operation) 及下文示例。
-当 Operation 为 ModfiyOutputSetting 时必填。
+当 Operation 为 ModifyOutputSetting 时必填。
      * @param OutputMediaSetting 输出媒体配置。具体操作方式详见 [操作类型](#Operation) 及下文示例。
-当 Operation 为 ModfiyOutputSetting 时必填。
+当 Operation 为 ModifyOutputSetting 时必填。
      */
     public void setOutputMediaSetting(MediaCastOutputMediaSetting OutputMediaSetting) {
         this.OutputMediaSetting = OutputMediaSetting;

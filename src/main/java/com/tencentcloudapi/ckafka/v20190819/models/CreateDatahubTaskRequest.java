@@ -94,6 +94,13 @@ public class CreateDatahubTaskRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 任务描述信息
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 任务名称 
      * @return TaskName 任务名称
      */
@@ -176,7 +183,9 @@ public class CreateDatahubTaskRequest extends AbstractModel {
     /**
      * Get 实例连接参数【已废弃】 
      * @return PrivateLinkParam 实例连接参数【已废弃】
+     * @deprecated
      */
+    @Deprecated
     public PrivateLinkParam getPrivateLinkParam() {
         return this.PrivateLinkParam;
     }
@@ -184,7 +193,9 @@ public class CreateDatahubTaskRequest extends AbstractModel {
     /**
      * Set 实例连接参数【已废弃】
      * @param PrivateLinkParam 实例连接参数【已废弃】
+     * @deprecated
      */
+    @Deprecated
     public void setPrivateLinkParam(PrivateLinkParam PrivateLinkParam) {
         this.PrivateLinkParam = PrivateLinkParam;
     }
@@ -253,6 +264,22 @@ public class CreateDatahubTaskRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 任务描述信息 
+     * @return Description 任务描述信息
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 任务描述信息
+     * @param Description 任务描述信息
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public CreateDatahubTaskRequest() {
     }
 
@@ -294,6 +321,9 @@ public class CreateDatahubTaskRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -311,6 +341,7 @@ public class CreateDatahubTaskRequest extends AbstractModel {
         this.setParamObj(map, prefix + "TransformsParam.", this.TransformsParam);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

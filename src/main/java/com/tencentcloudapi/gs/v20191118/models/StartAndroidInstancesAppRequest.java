@@ -38,6 +38,13 @@ public class StartAndroidInstancesAppRequest extends AbstractModel {
     private String PackageName;
 
     /**
+    * 启动页。建议指定启动页来启动应用，避免启动失败。如果启动页为空，系统尝试根据 PackageName 启动，但不保证成功。
+    */
+    @SerializedName("Activity")
+    @Expose
+    private String Activity;
+
+    /**
      * Get 实例 ID 列表 
      * @return AndroidInstanceIds 实例 ID 列表
      */
@@ -69,6 +76,22 @@ public class StartAndroidInstancesAppRequest extends AbstractModel {
         this.PackageName = PackageName;
     }
 
+    /**
+     * Get 启动页。建议指定启动页来启动应用，避免启动失败。如果启动页为空，系统尝试根据 PackageName 启动，但不保证成功。 
+     * @return Activity 启动页。建议指定启动页来启动应用，避免启动失败。如果启动页为空，系统尝试根据 PackageName 启动，但不保证成功。
+     */
+    public String getActivity() {
+        return this.Activity;
+    }
+
+    /**
+     * Set 启动页。建议指定启动页来启动应用，避免启动失败。如果启动页为空，系统尝试根据 PackageName 启动，但不保证成功。
+     * @param Activity 启动页。建议指定启动页来启动应用，避免启动失败。如果启动页为空，系统尝试根据 PackageName 启动，但不保证成功。
+     */
+    public void setActivity(String Activity) {
+        this.Activity = Activity;
+    }
+
     public StartAndroidInstancesAppRequest() {
     }
 
@@ -86,6 +109,9 @@ public class StartAndroidInstancesAppRequest extends AbstractModel {
         if (source.PackageName != null) {
             this.PackageName = new String(source.PackageName);
         }
+        if (source.Activity != null) {
+            this.Activity = new String(source.Activity);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class StartAndroidInstancesAppRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
         this.setParamSimple(map, prefix + "PackageName", this.PackageName);
+        this.setParamSimple(map, prefix + "Activity", this.Activity);
 
     }
 }
