@@ -214,6 +214,13 @@ UPDATING 更新中
     private String MonitorSource;
 
     /**
+    * 子用户的 nickname
+    */
+    @SerializedName("SubUinName")
+    @Expose
+    private String SubUinName;
+
+    /**
      * Get 服务组id 
      * @return ServiceGroupId 服务组id
      */
@@ -697,6 +704,22 @@ UPDATING 更新中
         this.MonitorSource = MonitorSource;
     }
 
+    /**
+     * Get 子用户的 nickname 
+     * @return SubUinName 子用户的 nickname
+     */
+    public String getSubUinName() {
+        return this.SubUinName;
+    }
+
+    /**
+     * Set 子用户的 nickname
+     * @param SubUinName 子用户的 nickname
+     */
+    public void setSubUinName(String SubUinName) {
+        this.SubUinName = SubUinName;
+    }
+
     public ServiceGroup() {
     }
 
@@ -783,6 +806,9 @@ UPDATING 更新中
         if (source.MonitorSource != null) {
             this.MonitorSource = new String(source.MonitorSource);
         }
+        if (source.SubUinName != null) {
+            this.SubUinName = new String(source.SubUinName);
+        }
     }
 
 
@@ -813,6 +839,7 @@ UPDATING 更新中
         this.setParamSimple(map, prefix + "AuthorizationEnable", this.AuthorizationEnable);
         this.setParamArrayObj(map, prefix + "AuthTokens.", this.AuthTokens);
         this.setParamSimple(map, prefix + "MonitorSource", this.MonitorSource);
+        this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
 
     }
 }

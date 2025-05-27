@@ -160,6 +160,13 @@ public class CreateInstanceNewRequest extends AbstractModel {
     private String CacheDiskSize;
 
     /**
+    * 缓存盘大小
+    */
+    @SerializedName("CacheDataDiskSize")
+    @Expose
+    private Long CacheDataDiskSize;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -466,7 +473,9 @@ public class CreateInstanceNewRequest extends AbstractModel {
     /**
      * Get 缓存盘大小 
      * @return CacheDiskSize 缓存盘大小
+     * @deprecated
      */
+    @Deprecated
     public String getCacheDiskSize() {
         return this.CacheDiskSize;
     }
@@ -474,9 +483,27 @@ public class CreateInstanceNewRequest extends AbstractModel {
     /**
      * Set 缓存盘大小
      * @param CacheDiskSize 缓存盘大小
+     * @deprecated
      */
+    @Deprecated
     public void setCacheDiskSize(String CacheDiskSize) {
         this.CacheDiskSize = CacheDiskSize;
+    }
+
+    /**
+     * Get 缓存盘大小 
+     * @return CacheDataDiskSize 缓存盘大小
+     */
+    public Long getCacheDataDiskSize() {
+        return this.CacheDataDiskSize;
+    }
+
+    /**
+     * Set 缓存盘大小
+     * @param CacheDataDiskSize 缓存盘大小
+     */
+    public void setCacheDataDiskSize(Long CacheDataDiskSize) {
+        this.CacheDataDiskSize = CacheDataDiskSize;
     }
 
     public CreateInstanceNewRequest() {
@@ -550,6 +577,9 @@ public class CreateInstanceNewRequest extends AbstractModel {
         if (source.CacheDiskSize != null) {
             this.CacheDiskSize = new String(source.CacheDiskSize);
         }
+        if (source.CacheDataDiskSize != null) {
+            this.CacheDataDiskSize = new Long(source.CacheDataDiskSize);
+        }
     }
 
 
@@ -576,6 +606,7 @@ public class CreateInstanceNewRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsSSC", this.IsSSC);
         this.setParamSimple(map, prefix + "SSCCU", this.SSCCU);
         this.setParamSimple(map, prefix + "CacheDiskSize", this.CacheDiskSize);
+        this.setParamSimple(map, prefix + "CacheDataDiskSize", this.CacheDataDiskSize);
 
     }
 }

@@ -381,6 +381,13 @@ public class Resource extends AbstractModel {
     private Long PackageIOABandwidth;
 
     /**
+    * 堡垒机实例对应的零信任实例id
+    */
+    @SerializedName("IOAResourceId")
+    @Expose
+    private String IOAResourceId;
+
+    /**
      * Get 服务实例ID，如bh-saas-s3ed4r5e 
      * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
@@ -1196,6 +1203,22 @@ public class Resource extends AbstractModel {
         this.PackageIOABandwidth = PackageIOABandwidth;
     }
 
+    /**
+     * Get 堡垒机实例对应的零信任实例id 
+     * @return IOAResourceId 堡垒机实例对应的零信任实例id
+     */
+    public String getIOAResourceId() {
+        return this.IOAResourceId;
+    }
+
+    /**
+     * Set 堡垒机实例对应的零信任实例id
+     * @param IOAResourceId 堡垒机实例对应的零信任实例id
+     */
+    public void setIOAResourceId(String IOAResourceId) {
+        this.IOAResourceId = IOAResourceId;
+    }
+
     public Resource() {
     }
 
@@ -1372,6 +1395,9 @@ public class Resource extends AbstractModel {
         if (source.PackageIOABandwidth != null) {
             this.PackageIOABandwidth = new Long(source.PackageIOABandwidth);
         }
+        if (source.IOAResourceId != null) {
+            this.IOAResourceId = new String(source.IOAResourceId);
+        }
     }
 
 
@@ -1430,6 +1456,7 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "IOAResource", this.IOAResource);
         this.setParamSimple(map, prefix + "PackageIOAUserCount", this.PackageIOAUserCount);
         this.setParamSimple(map, prefix + "PackageIOABandwidth", this.PackageIOABandwidth);
+        this.setParamSimple(map, prefix + "IOAResourceId", this.IOAResourceId);
 
     }
 }

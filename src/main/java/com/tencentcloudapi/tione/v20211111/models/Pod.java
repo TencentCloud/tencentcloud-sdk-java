@@ -103,6 +103,20 @@ public class Pod extends AbstractModel {
     private String Status;
 
     /**
+    * 实例的开始调度时间
+    */
+    @SerializedName("StartScheduleTime")
+    @Expose
+    private String StartScheduleTime;
+
+    /**
+    * 实例状态的补充信息
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
      * Get pod名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name pod名
@@ -302,6 +316,38 @@ public class Pod extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 实例的开始调度时间 
+     * @return StartScheduleTime 实例的开始调度时间
+     */
+    public String getStartScheduleTime() {
+        return this.StartScheduleTime;
+    }
+
+    /**
+     * Set 实例的开始调度时间
+     * @param StartScheduleTime 实例的开始调度时间
+     */
+    public void setStartScheduleTime(String StartScheduleTime) {
+        this.StartScheduleTime = StartScheduleTime;
+    }
+
+    /**
+     * Get 实例状态的补充信息 
+     * @return Message 实例状态的补充信息
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 实例状态的补充信息
+     * @param Message 实例状态的补充信息
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
     public Pod() {
     }
 
@@ -343,6 +389,12 @@ public class Pod extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.StartScheduleTime != null) {
+            this.StartScheduleTime = new String(source.StartScheduleTime);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
     }
 
 
@@ -360,6 +412,8 @@ public class Pod extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ContainerInfos.", this.ContainerInfos);
         this.setParamObj(map, prefix + "CrossTenantENIInfo.", this.CrossTenantENIInfo);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "StartScheduleTime", this.StartScheduleTime);
+        this.setParamSimple(map, prefix + "Message", this.Message);
 
     }
 }

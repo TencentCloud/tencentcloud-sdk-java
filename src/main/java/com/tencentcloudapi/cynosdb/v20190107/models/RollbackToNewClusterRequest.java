@@ -222,6 +222,13 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private Long ProjectId;
 
     /**
+    * 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+    */
+    @SerializedName("AutoArchive")
+    @Expose
+    private String AutoArchive;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -689,6 +696,22 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes 
+     * @return AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     */
+    public String getAutoArchive() {
+        return this.AutoArchive;
+    }
+
+    /**
+     * Set 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     * @param AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     */
+    public void setAutoArchive(String AutoArchive) {
+        this.AutoArchive = AutoArchive;
+    }
+
     public RollbackToNewClusterRequest() {
     }
 
@@ -802,6 +825,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.AutoArchive != null) {
+            this.AutoArchive = new String(source.AutoArchive);
+        }
     }
 
 
@@ -836,6 +862,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamArrayObj(map, prefix + "RollbackTables.", this.RollbackTables);
         this.setParamArraySimple(map, prefix + "OriginalROInstanceList.", this.OriginalROInstanceList);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
 
     }
 }

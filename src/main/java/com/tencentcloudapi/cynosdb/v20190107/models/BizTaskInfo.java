@@ -288,6 +288,13 @@ public class BizTaskInfo extends AbstractModel {
     private TaskProgressInfo TaskProgressInfo;
 
     /**
+    * 全球数据库网络任务
+    */
+    @SerializedName("GdnTaskInfo")
+    @Expose
+    private GdnTaskInfo GdnTaskInfo;
+
+    /**
      * Get 任务id 
      * @return ID 任务id
      */
@@ -907,6 +914,22 @@ public class BizTaskInfo extends AbstractModel {
         this.TaskProgressInfo = TaskProgressInfo;
     }
 
+    /**
+     * Get 全球数据库网络任务 
+     * @return GdnTaskInfo 全球数据库网络任务
+     */
+    public GdnTaskInfo getGdnTaskInfo() {
+        return this.GdnTaskInfo;
+    }
+
+    /**
+     * Set 全球数据库网络任务
+     * @param GdnTaskInfo 全球数据库网络任务
+     */
+    public void setGdnTaskInfo(GdnTaskInfo GdnTaskInfo) {
+        this.GdnTaskInfo = GdnTaskInfo;
+    }
+
     public BizTaskInfo() {
     }
 
@@ -1032,6 +1055,9 @@ public class BizTaskInfo extends AbstractModel {
         if (source.TaskProgressInfo != null) {
             this.TaskProgressInfo = new TaskProgressInfo(source.TaskProgressInfo);
         }
+        if (source.GdnTaskInfo != null) {
+            this.GdnTaskInfo = new GdnTaskInfo(source.GdnTaskInfo);
+        }
     }
 
 
@@ -1076,6 +1102,7 @@ public class BizTaskInfo extends AbstractModel {
         this.setParamObj(map, prefix + "TaskMaintainInfo.", this.TaskMaintainInfo);
         this.setParamArrayObj(map, prefix + "InstanceCLSDeliveryInfos.", this.InstanceCLSDeliveryInfos);
         this.setParamObj(map, prefix + "TaskProgressInfo.", this.TaskProgressInfo);
+        this.setParamObj(map, prefix + "GdnTaskInfo.", this.GdnTaskInfo);
 
     }
 }

@@ -25,7 +25,6 @@ public class ResourceTag extends AbstractModel {
 
     /**
     * 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -33,7 +32,6 @@ public class ResourceTag extends AbstractModel {
 
     /**
     * 业务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceType")
     @Expose
@@ -41,7 +39,6 @@ public class ResourceTag extends AbstractModel {
 
     /**
     * 资源前缀
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourcePrefix")
     @Expose
@@ -49,7 +46,6 @@ public class ResourceTag extends AbstractModel {
 
     /**
     * 资源唯一标记
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -57,17 +53,14 @@ public class ResourceTag extends AbstractModel {
 
     /**
     * 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所在地域 
      * @return ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -75,19 +68,15 @@ public class ResourceTag extends AbstractModel {
 
     /**
      * Set 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get 业务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务类型 
      * @return ServiceType 业务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceType() {
         return this.ServiceType;
@@ -95,19 +84,15 @@ public class ResourceTag extends AbstractModel {
 
     /**
      * Set 业务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceType 业务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 资源前缀
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源前缀 
      * @return ResourcePrefix 资源前缀
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourcePrefix() {
         return this.ResourcePrefix;
@@ -115,19 +100,15 @@ public class ResourceTag extends AbstractModel {
 
     /**
      * Set 资源前缀
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourcePrefix 资源前缀
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourcePrefix(String ResourcePrefix) {
         this.ResourcePrefix = ResourcePrefix;
     }
 
     /**
-     * Get 资源唯一标记
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源唯一标记 
      * @return ResourceId 资源唯一标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -135,19 +116,15 @@ public class ResourceTag extends AbstractModel {
 
     /**
      * Set 资源唯一标记
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源唯一标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源标签 
      * @return Tags 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -155,9 +132,7 @@ public class ResourceTag extends AbstractModel {
 
     /**
      * Set 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

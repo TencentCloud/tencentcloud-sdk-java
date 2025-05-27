@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProxyConfig extends AbstractModel {
 
     /**
-    * 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
+    * 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
     */
     @SerializedName("ProxyCount")
     @Expose
@@ -45,7 +45,7 @@ public class ProxyConfig extends AbstractModel {
     private Long Mem;
 
     /**
-    * 连接池类型：SessionConnectionPool(会话级别连接池 )
+    * 连接池类型:SessionConnectionPool(会话级别连接池 )
     */
     @SerializedName("ConnectionPoolType")
     @Expose
@@ -59,7 +59,7 @@ public class ProxyConfig extends AbstractModel {
     private String OpenConnectionPool;
 
     /**
-    * 连接池阈值：单位（秒）
+    * 连接池阈值:单位（秒）
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
@@ -80,16 +80,16 @@ public class ProxyConfig extends AbstractModel {
     private ProxyZone [] ProxyZones;
 
     /**
-     * Get 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones) 
-     * @return ProxyCount 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
+     * Get 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones 
+     * @return ProxyCount 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
      */
     public Long getProxyCount() {
         return this.ProxyCount;
     }
 
     /**
-     * Set 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
-     * @param ProxyCount 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
+     * Set 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
+     * @param ProxyCount 数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones
      */
     public void setProxyCount(Long ProxyCount) {
         this.ProxyCount = ProxyCount;
@@ -128,16 +128,16 @@ public class ProxyConfig extends AbstractModel {
     }
 
     /**
-     * Get 连接池类型：SessionConnectionPool(会话级别连接池 ) 
-     * @return ConnectionPoolType 连接池类型：SessionConnectionPool(会话级别连接池 )
+     * Get 连接池类型:SessionConnectionPool(会话级别连接池 ) 
+     * @return ConnectionPoolType 连接池类型:SessionConnectionPool(会话级别连接池 )
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set 连接池类型：SessionConnectionPool(会话级别连接池 )
-     * @param ConnectionPoolType 连接池类型：SessionConnectionPool(会话级别连接池 )
+     * Set 连接池类型:SessionConnectionPool(会话级别连接池 )
+     * @param ConnectionPoolType 连接池类型:SessionConnectionPool(会话级别连接池 )
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;
@@ -160,16 +160,16 @@ public class ProxyConfig extends AbstractModel {
     }
 
     /**
-     * Get 连接池阈值：单位（秒） 
-     * @return ConnectionPoolTimeOut 连接池阈值：单位（秒）
+     * Get 连接池阈值:单位（秒） 
+     * @return ConnectionPoolTimeOut 连接池阈值:单位（秒）
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set 连接池阈值：单位（秒）
-     * @param ConnectionPoolTimeOut 连接池阈值：单位（秒）
+     * Set 连接池阈值:单位（秒）
+     * @param ConnectionPoolTimeOut 连接池阈值:单位（秒）
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;

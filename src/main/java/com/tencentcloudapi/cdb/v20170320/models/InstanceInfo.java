@@ -360,6 +360,20 @@ public class InstanceInfo extends AbstractModel {
     private ClusterInfo [] ClusterInfo;
 
     /**
+    * 分析引擎节点列表
+    */
+    @SerializedName("AnalysisNodeInfos")
+    @Expose
+    private AnalysisNodeInfo [] AnalysisNodeInfos;
+
+    /**
+    * 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+    */
+    @SerializedName("DeviceBandwidth")
+    @Expose
+    private Long DeviceBandwidth;
+
+    /**
      * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
@@ -1127,6 +1141,38 @@ public class InstanceInfo extends AbstractModel {
         this.ClusterInfo = ClusterInfo;
     }
 
+    /**
+     * Get 分析引擎节点列表 
+     * @return AnalysisNodeInfos 分析引擎节点列表
+     */
+    public AnalysisNodeInfo [] getAnalysisNodeInfos() {
+        return this.AnalysisNodeInfos;
+    }
+
+    /**
+     * Set 分析引擎节点列表
+     * @param AnalysisNodeInfos 分析引擎节点列表
+     */
+    public void setAnalysisNodeInfos(AnalysisNodeInfo [] AnalysisNodeInfos) {
+        this.AnalysisNodeInfos = AnalysisNodeInfos;
+    }
+
+    /**
+     * Get 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。 
+     * @return DeviceBandwidth 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+     */
+    public Long getDeviceBandwidth() {
+        return this.DeviceBandwidth;
+    }
+
+    /**
+     * Set 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+     * @param DeviceBandwidth 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+     */
+    public void setDeviceBandwidth(Long DeviceBandwidth) {
+        this.DeviceBandwidth = DeviceBandwidth;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1291,6 +1337,15 @@ public class InstanceInfo extends AbstractModel {
                 this.ClusterInfo[i] = new ClusterInfo(source.ClusterInfo[i]);
             }
         }
+        if (source.AnalysisNodeInfos != null) {
+            this.AnalysisNodeInfos = new AnalysisNodeInfo[source.AnalysisNodeInfos.length];
+            for (int i = 0; i < source.AnalysisNodeInfos.length; i++) {
+                this.AnalysisNodeInfos[i] = new AnalysisNodeInfo(source.AnalysisNodeInfos[i]);
+            }
+        }
+        if (source.DeviceBandwidth != null) {
+            this.DeviceBandwidth = new Long(source.DeviceBandwidth);
+        }
     }
 
 
@@ -1346,6 +1401,8 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
         this.setParamArrayObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
+        this.setParamArrayObj(map, prefix + "AnalysisNodeInfos.", this.AnalysisNodeInfos);
+        this.setParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
 
     }
 }

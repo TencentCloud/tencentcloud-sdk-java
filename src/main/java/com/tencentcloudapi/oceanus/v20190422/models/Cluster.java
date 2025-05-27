@@ -66,7 +66,7 @@ public class Cluster extends AbstractModel {
     private String CreatorUin;
 
     /**
-    * 集群状态, 1 未初始化,，3 初始化中，2 运行中
+    * 集群状态, 1 未初始化,3 初始化中，2 运行中
     */
     @SerializedName("Status")
     @Expose
@@ -418,6 +418,14 @@ public class Cluster extends AbstractModel {
     private Float RunningMem;
 
     /**
+    * setats集群
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Setats")
+    @Expose
+    private Setats Setats;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -514,16 +522,16 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群状态, 1 未初始化,，3 初始化中，2 运行中 
-     * @return Status 集群状态, 1 未初始化,，3 初始化中，2 运行中
+     * Get 集群状态, 1 未初始化,3 初始化中，2 运行中 
+     * @return Status 集群状态, 1 未初始化,3 初始化中，2 运行中
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 集群状态, 1 未初始化,，3 初始化中，2 运行中
-     * @param Status 集群状态, 1 未初始化,，3 初始化中，2 运行中
+     * Set 集群状态, 1 未初始化,3 初始化中，2 运行中
+     * @param Status 集群状态, 1 未初始化,3 初始化中，2 运行中
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -1369,6 +1377,26 @@ public class Cluster extends AbstractModel {
         this.RunningMem = RunningMem;
     }
 
+    /**
+     * Get setats集群
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Setats setats集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Setats getSetats() {
+        return this.Setats;
+    }
+
+    /**
+     * Set setats集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Setats setats集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSetats(Setats Setats) {
+        this.Setats = Setats;
+    }
+
     public Cluster() {
     }
 
@@ -1551,6 +1579,9 @@ public class Cluster extends AbstractModel {
         if (source.RunningMem != null) {
             this.RunningMem = new Float(source.RunningMem);
         }
+        if (source.Setats != null) {
+            this.Setats = new Setats(source.Setats);
+        }
     }
 
 
@@ -1610,6 +1641,7 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalMem", this.TotalMem);
         this.setParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
         this.setParamSimple(map, prefix + "RunningMem", this.RunningMem);
+        this.setParamObj(map, prefix + "Setats.", this.Setats);
 
     }
 }

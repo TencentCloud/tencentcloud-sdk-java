@@ -66,6 +66,13 @@ public class DescribeJobsRequest extends AbstractModel {
     private String [] ExtraResult;
 
     /**
+    * 查询引用connector
+    */
+    @SerializedName("ConnectorOptions")
+    @Expose
+    private String ConnectorOptions;
+
+    /**
      * Get 按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。 
      * @return JobIds 按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。
      */
@@ -161,6 +168,22 @@ public class DescribeJobsRequest extends AbstractModel {
         this.ExtraResult = ExtraResult;
     }
 
+    /**
+     * Get 查询引用connector 
+     * @return ConnectorOptions 查询引用connector
+     */
+    public String getConnectorOptions() {
+        return this.ConnectorOptions;
+    }
+
+    /**
+     * Set 查询引用connector
+     * @param ConnectorOptions 查询引用connector
+     */
+    public void setConnectorOptions(String ConnectorOptions) {
+        this.ConnectorOptions = ConnectorOptions;
+    }
+
     public DescribeJobsRequest() {
     }
 
@@ -196,6 +219,9 @@ public class DescribeJobsRequest extends AbstractModel {
                 this.ExtraResult[i] = new String(source.ExtraResult[i]);
             }
         }
+        if (source.ConnectorOptions != null) {
+            this.ConnectorOptions = new String(source.ConnectorOptions);
+        }
     }
 
 
@@ -209,6 +235,7 @@ public class DescribeJobsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         this.setParamArraySimple(map, prefix + "ExtraResult.", this.ExtraResult);
+        this.setParamSimple(map, prefix + "ConnectorOptions", this.ConnectorOptions);
 
     }
 }

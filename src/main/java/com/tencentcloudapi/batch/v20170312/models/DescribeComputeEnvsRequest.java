@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeComputeEnvsRequest extends AbstractModel {
 
     /**
-    * 计算环境ID列表，与Filters参数不能同时指定。最大数量上限100，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+    * 计算环境ID列表，与Filters参数不能同时指定。最大数量上限100。
     */
     @SerializedName("EnvIds")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeComputeEnvsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 计算环境ID列表，与Filters参数不能同时指定。最大数量上限100，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。 
-     * @return EnvIds 计算环境ID列表，与Filters参数不能同时指定。最大数量上限100，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * Get 计算环境ID列表，与Filters参数不能同时指定。最大数量上限100。 
+     * @return EnvIds 计算环境ID列表，与Filters参数不能同时指定。最大数量上限100。
      */
     public String [] getEnvIds() {
         return this.EnvIds;
     }
 
     /**
-     * Set 计算环境ID列表，与Filters参数不能同时指定。最大数量上限100，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
-     * @param EnvIds 计算环境ID列表，与Filters参数不能同时指定。最大数量上限100，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * Set 计算环境ID列表，与Filters参数不能同时指定。最大数量上限100。
+     * @param EnvIds 计算环境ID列表，与Filters参数不能同时指定。最大数量上限100。
      */
     public void setEnvIds(String [] EnvIds) {
         this.EnvIds = EnvIds;

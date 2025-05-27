@@ -402,6 +402,27 @@ pausing
     private String GdnRole;
 
     /**
+    * 二级存储使用量，单位：G
+    */
+    @SerializedName("UsedArchiveStorage")
+    @Expose
+    private Long UsedArchiveStorage;
+
+    /**
+    * 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
+    */
+    @SerializedName("ArchiveStatus")
+    @Expose
+    private String ArchiveStatus;
+
+    /**
+    * 归档进度，百分比。
+    */
+    @SerializedName("ArchiveProgress")
+    @Expose
+    private Long ArchiveProgress;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -1277,6 +1298,54 @@ pausing
         this.GdnRole = GdnRole;
     }
 
+    /**
+     * Get 二级存储使用量，单位：G 
+     * @return UsedArchiveStorage 二级存储使用量，单位：G
+     */
+    public Long getUsedArchiveStorage() {
+        return this.UsedArchiveStorage;
+    }
+
+    /**
+     * Set 二级存储使用量，单位：G
+     * @param UsedArchiveStorage 二级存储使用量，单位：G
+     */
+    public void setUsedArchiveStorage(Long UsedArchiveStorage) {
+        this.UsedArchiveStorage = UsedArchiveStorage;
+    }
+
+    /**
+     * Get 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li> 
+     * @return ArchiveStatus 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
+     */
+    public String getArchiveStatus() {
+        return this.ArchiveStatus;
+    }
+
+    /**
+     * Set 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
+     * @param ArchiveStatus 归档状态，枚举值<li>normal:正常</li><li>archiving:归档中</li><li>resuming:恢复中</li><li>archived :已归档</li>
+     */
+    public void setArchiveStatus(String ArchiveStatus) {
+        this.ArchiveStatus = ArchiveStatus;
+    }
+
+    /**
+     * Get 归档进度，百分比。 
+     * @return ArchiveProgress 归档进度，百分比。
+     */
+    public Long getArchiveProgress() {
+        return this.ArchiveProgress;
+    }
+
+    /**
+     * Set 归档进度，百分比。
+     * @param ArchiveProgress 归档进度，百分比。
+     */
+    public void setArchiveProgress(Long ArchiveProgress) {
+        this.ArchiveProgress = ArchiveProgress;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1465,6 +1534,15 @@ pausing
         if (source.GdnRole != null) {
             this.GdnRole = new String(source.GdnRole);
         }
+        if (source.UsedArchiveStorage != null) {
+            this.UsedArchiveStorage = new Long(source.UsedArchiveStorage);
+        }
+        if (source.ArchiveStatus != null) {
+            this.ArchiveStatus = new String(source.ArchiveStatus);
+        }
+        if (source.ArchiveProgress != null) {
+            this.ArchiveProgress = new Long(source.ArchiveProgress);
+        }
     }
 
 
@@ -1525,6 +1603,9 @@ pausing
         this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
         this.setParamSimple(map, prefix + "GdnId", this.GdnId);
         this.setParamSimple(map, prefix + "GdnRole", this.GdnRole);
+        this.setParamSimple(map, prefix + "UsedArchiveStorage", this.UsedArchiveStorage);
+        this.setParamSimple(map, prefix + "ArchiveStatus", this.ArchiveStatus);
+        this.setParamSimple(map, prefix + "ArchiveProgress", this.ArchiveProgress);
 
     }
 }

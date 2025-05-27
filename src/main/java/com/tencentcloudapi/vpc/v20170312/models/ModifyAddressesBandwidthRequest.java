@@ -91,7 +91,9 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel {
     /**
      * Get 包月带宽起始时间(已废弃，输入无效) 
      * @return StartTime 包月带宽起始时间(已废弃，输入无效)
+     * @deprecated
      */
+    @Deprecated
     public String getStartTime() {
         return this.StartTime;
     }
@@ -99,7 +101,9 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel {
     /**
      * Set 包月带宽起始时间(已废弃，输入无效)
      * @param StartTime 包月带宽起始时间(已废弃，输入无效)
+     * @deprecated
      */
+    @Deprecated
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
@@ -107,7 +111,9 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel {
     /**
      * Get 包月带宽结束时间(已废弃，输入无效) 
      * @return EndTime 包月带宽结束时间(已废弃，输入无效)
+     * @deprecated
      */
+    @Deprecated
     public String getEndTime() {
         return this.EndTime;
     }
@@ -115,7 +121,9 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel {
     /**
      * Set 包月带宽结束时间(已废弃，输入无效)
      * @param EndTime 包月带宽结束时间(已废弃，输入无效)
+     * @deprecated
      */
+    @Deprecated
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }

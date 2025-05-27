@@ -162,7 +162,9 @@ public class AccountInfo extends AbstractModel {
     /**
      * Get 该值已废弃 
      * @return CreateTime 该值已废弃
+     * @deprecated
      */
+    @Deprecated
     public String getCreateTime() {
         return this.CreateTime;
     }
@@ -170,7 +172,9 @@ public class AccountInfo extends AbstractModel {
     /**
      * Set 该值已废弃
      * @param CreateTime 该值已废弃
+     * @deprecated
      */
+    @Deprecated
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }

@@ -25,7 +25,6 @@ public class ResourceIdTag extends AbstractModel {
 
     /**
     * 资源唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -33,17 +32,14 @@ public class ResourceIdTag extends AbstractModel {
 
     /**
     * 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagKeyValues")
     @Expose
     private Tag [] TagKeyValues;
 
     /**
-     * Get 资源唯一标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源唯一标识 
      * @return ResourceId 资源唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -51,19 +47,15 @@ public class ResourceIdTag extends AbstractModel {
 
     /**
      * Set 资源唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签键值对 
      * @return TagKeyValues 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagKeyValues() {
         return this.TagKeyValues;
@@ -71,9 +63,7 @@ public class ResourceIdTag extends AbstractModel {
 
     /**
      * Set 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagKeyValues 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagKeyValues(Tag [] TagKeyValues) {
         this.TagKeyValues = TagKeyValues;

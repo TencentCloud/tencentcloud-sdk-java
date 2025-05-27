@@ -103,6 +103,13 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
     private Long MaxRoCount;
 
     /**
+    * 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+    */
+    @SerializedName("AutoArchive")
+    @Expose
+    private String AutoArchive;
+
+    /**
      * Get serverless集群id 
      * @return ClusterId serverless集群id
      */
@@ -286,6 +293,22 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
         this.MaxRoCount = MaxRoCount;
     }
 
+    /**
+     * Get 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes 
+     * @return AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     */
+    public String getAutoArchive() {
+        return this.AutoArchive;
+    }
+
+    /**
+     * Set 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     * @param AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     */
+    public void setAutoArchive(String AutoArchive) {
+        this.AutoArchive = AutoArchive;
+    }
+
     public ModifyServerlessStrategyRequest() {
     }
 
@@ -327,6 +350,9 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
         if (source.MaxRoCount != null) {
             this.MaxRoCount = new Long(source.MaxRoCount);
         }
+        if (source.AutoArchive != null) {
+            this.AutoArchive = new String(source.AutoArchive);
+        }
     }
 
 
@@ -345,6 +371,7 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxRoCpu", this.MaxRoCpu);
         this.setParamSimple(map, prefix + "MinRoCount", this.MinRoCount);
         this.setParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
+        this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
 
     }
 }

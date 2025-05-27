@@ -59,6 +59,20 @@ public class DeviceAccount extends AbstractModel {
     private Boolean BoundPrivateKey;
 
     /**
+    * 是否托管凭证, true-托管，false-未托管
+    */
+    @SerializedName("BoundKubeconfig")
+    @Expose
+    private Boolean BoundKubeconfig;
+
+    /**
+    * 是否为k8s资产管理账号	
+    */
+    @SerializedName("IsK8SManageAccount")
+    @Expose
+    private Boolean IsK8SManageAccount;
+
+    /**
      * Get 账号ID 
      * @return Id 账号ID
      */
@@ -138,6 +152,38 @@ public class DeviceAccount extends AbstractModel {
         this.BoundPrivateKey = BoundPrivateKey;
     }
 
+    /**
+     * Get 是否托管凭证, true-托管，false-未托管 
+     * @return BoundKubeconfig 是否托管凭证, true-托管，false-未托管
+     */
+    public Boolean getBoundKubeconfig() {
+        return this.BoundKubeconfig;
+    }
+
+    /**
+     * Set 是否托管凭证, true-托管，false-未托管
+     * @param BoundKubeconfig 是否托管凭证, true-托管，false-未托管
+     */
+    public void setBoundKubeconfig(Boolean BoundKubeconfig) {
+        this.BoundKubeconfig = BoundKubeconfig;
+    }
+
+    /**
+     * Get 是否为k8s资产管理账号	 
+     * @return IsK8SManageAccount 是否为k8s资产管理账号	
+     */
+    public Boolean getIsK8SManageAccount() {
+        return this.IsK8SManageAccount;
+    }
+
+    /**
+     * Set 是否为k8s资产管理账号	
+     * @param IsK8SManageAccount 是否为k8s资产管理账号	
+     */
+    public void setIsK8SManageAccount(Boolean IsK8SManageAccount) {
+        this.IsK8SManageAccount = IsK8SManageAccount;
+    }
+
     public DeviceAccount() {
     }
 
@@ -161,6 +207,12 @@ public class DeviceAccount extends AbstractModel {
         if (source.BoundPrivateKey != null) {
             this.BoundPrivateKey = new Boolean(source.BoundPrivateKey);
         }
+        if (source.BoundKubeconfig != null) {
+            this.BoundKubeconfig = new Boolean(source.BoundKubeconfig);
+        }
+        if (source.IsK8SManageAccount != null) {
+            this.IsK8SManageAccount = new Boolean(source.IsK8SManageAccount);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class DeviceAccount extends AbstractModel {
         this.setParamSimple(map, prefix + "Account", this.Account);
         this.setParamSimple(map, prefix + "BoundPassword", this.BoundPassword);
         this.setParamSimple(map, prefix + "BoundPrivateKey", this.BoundPrivateKey);
+        this.setParamSimple(map, prefix + "BoundKubeconfig", this.BoundKubeconfig);
+        this.setParamSimple(map, prefix + "IsK8SManageAccount", this.IsK8SManageAccount);
 
     }
 }

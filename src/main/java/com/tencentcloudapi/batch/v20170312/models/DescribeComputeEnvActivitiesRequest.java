@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeComputeEnvActivitiesRequest extends AbstractModel {
 
     /**
-    * 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+    * 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
     */
     @SerializedName("EnvId")
     @Expose
@@ -45,24 +45,23 @@ public class DescribeComputeEnvActivitiesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 过滤条件
-<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
+    * 过滤条件<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter Filters;
 
     /**
-     * Get 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。 
-     * @return EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * Get 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。 
+     * @return EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
-     * @param EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * Set 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
+     * @param EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
@@ -101,20 +100,16 @@ public class DescribeComputeEnvActivitiesRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件
-<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li> 
-     * @return Filters 过滤条件
-<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
+     * Get 过滤条件<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。</li> 
+     * @return Filters 过滤条件<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。</li>
      */
     public Filter getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
-     * @param Filters 过滤条件
-<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
+     * Set 过滤条件<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。</li>
+     * @param Filters 过滤条件<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。</li>
      */
     public void setFilters(Filter Filters) {
         this.Filters = Filters;

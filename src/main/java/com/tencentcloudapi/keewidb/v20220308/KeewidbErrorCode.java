@@ -96,6 +96,9 @@ public enum KeewidbErrorCode {
      /* 实例类型不支持。 */
      INVALIDPARAMETERVALUE_UNSUPPORTEDTYPE("InvalidParameterValue.UnSupportedType"),
      
+     /* 私有网络id不存在。 */
+     INVALIDPARAMETERVALUE_UNVPCIDNOTEXISTS("InvalidParameterValue.UnVpcIdNotExists"),
+     
      /* weekday输入无效数据。 */
      INVALIDPARAMETERVALUE_WEEKDAYSISINVALID("InvalidParameterValue.WeekDaysIsInvalid"),
      

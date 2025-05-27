@@ -68,6 +68,13 @@ no
     private String AutoScaleDown;
 
     /**
+    * 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+    */
+    @SerializedName("AutoArchive")
+    @Expose
+    private String AutoArchive;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -179,6 +186,22 @@ no
     }
 
     /**
+     * Get 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes 
+     * @return AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     */
+    public String getAutoArchive() {
+        return this.AutoArchive;
+    }
+
+    /**
+     * Set 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     * @param AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     */
+    public void setAutoArchive(String AutoArchive) {
+        this.AutoArchive = AutoArchive;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -220,6 +243,9 @@ no
         if (source.AutoScaleDown != null) {
             this.AutoScaleDown = new String(source.AutoScaleDown);
         }
+        if (source.AutoArchive != null) {
+            this.AutoArchive = new String(source.AutoArchive);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -236,6 +262,7 @@ no
         this.setParamSimple(map, prefix + "AutoPause", this.AutoPause);
         this.setParamSimple(map, prefix + "AutoScaleUp", this.AutoScaleUp);
         this.setParamSimple(map, prefix + "AutoScaleDown", this.AutoScaleDown);
+        this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

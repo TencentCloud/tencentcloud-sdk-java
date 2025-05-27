@@ -75,6 +75,13 @@ UTC时间，如'2020-01-01T12:00:00Z'。
     private String EndTime;
 
     /**
+    * 对端客户端或者服务端的IP地址
+    */
+    @SerializedName("RemoteIp")
+    @Expose
+    private String RemoteIp;
+
+    /**
      * Get 传输流ID。 
      * @return FlowId 传输流ID。
      */
@@ -194,6 +201,22 @@ UTC时间，如'2020-01-01T12:00:00Z'。
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 对端客户端或者服务端的IP地址 
+     * @return RemoteIp 对端客户端或者服务端的IP地址
+     */
+    public String getRemoteIp() {
+        return this.RemoteIp;
+    }
+
+    /**
+     * Set 对端客户端或者服务端的IP地址
+     * @param RemoteIp 对端客户端或者服务端的IP地址
+     */
+    public void setRemoteIp(String RemoteIp) {
+        this.RemoteIp = RemoteIp;
+    }
+
     public DescribeStreamLinkFlowStatisticsRequest() {
     }
 
@@ -223,6 +246,9 @@ UTC时间，如'2020-01-01T12:00:00Z'。
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.RemoteIp != null) {
+            this.RemoteIp = new String(source.RemoteIp);
+        }
     }
 
 
@@ -237,6 +263,7 @@ UTC时间，如'2020-01-01T12:00:00Z'。
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "RemoteIp", this.RemoteIp);
 
     }
 }

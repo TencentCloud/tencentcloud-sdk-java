@@ -209,6 +209,27 @@ public class CreateOpsMakePlanRequest extends AbstractModel {
     private String SelfWorkflowDependency;
 
     /**
+    * 任务 TASK； 项目： PROJECT
+    */
+    @SerializedName("MakeType")
+    @Expose
+    private String MakeType;
+
+    /**
+    * 任务状态
+    */
+    @SerializedName("StatusList")
+    @Expose
+    private String StatusList;
+
+    /**
+    * 补录是否跳过事件检查
+    */
+    @SerializedName("MakeCheckEventType")
+    @Expose
+    private String MakeCheckEventType;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -636,6 +657,54 @@ public class CreateOpsMakePlanRequest extends AbstractModel {
         this.SelfWorkflowDependency = SelfWorkflowDependency;
     }
 
+    /**
+     * Get 任务 TASK； 项目： PROJECT 
+     * @return MakeType 任务 TASK； 项目： PROJECT
+     */
+    public String getMakeType() {
+        return this.MakeType;
+    }
+
+    /**
+     * Set 任务 TASK； 项目： PROJECT
+     * @param MakeType 任务 TASK； 项目： PROJECT
+     */
+    public void setMakeType(String MakeType) {
+        this.MakeType = MakeType;
+    }
+
+    /**
+     * Get 任务状态 
+     * @return StatusList 任务状态
+     */
+    public String getStatusList() {
+        return this.StatusList;
+    }
+
+    /**
+     * Set 任务状态
+     * @param StatusList 任务状态
+     */
+    public void setStatusList(String StatusList) {
+        this.StatusList = StatusList;
+    }
+
+    /**
+     * Get 补录是否跳过事件检查 
+     * @return MakeCheckEventType 补录是否跳过事件检查
+     */
+    public String getMakeCheckEventType() {
+        return this.MakeCheckEventType;
+    }
+
+    /**
+     * Set 补录是否跳过事件检查
+     * @param MakeCheckEventType 补录是否跳过事件检查
+     */
+    public void setMakeCheckEventType(String MakeCheckEventType) {
+        this.MakeCheckEventType = MakeCheckEventType;
+    }
+
     public CreateOpsMakePlanRequest() {
     }
 
@@ -734,6 +803,15 @@ public class CreateOpsMakePlanRequest extends AbstractModel {
         if (source.SelfWorkflowDependency != null) {
             this.SelfWorkflowDependency = new String(source.SelfWorkflowDependency);
         }
+        if (source.MakeType != null) {
+            this.MakeType = new String(source.MakeType);
+        }
+        if (source.StatusList != null) {
+            this.StatusList = new String(source.StatusList);
+        }
+        if (source.MakeCheckEventType != null) {
+            this.MakeCheckEventType = new String(source.MakeCheckEventType);
+        }
     }
 
 
@@ -767,6 +845,9 @@ public class CreateOpsMakePlanRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "MakeExtList.", this.MakeExtList);
         this.setParamSimple(map, prefix + "SameSelfWorkflowDependType", this.SameSelfWorkflowDependType);
         this.setParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
+        this.setParamSimple(map, prefix + "MakeType", this.MakeType);
+        this.setParamSimple(map, prefix + "StatusList", this.StatusList);
+        this.setParamSimple(map, prefix + "MakeCheckEventType", this.MakeCheckEventType);
 
     }
 }

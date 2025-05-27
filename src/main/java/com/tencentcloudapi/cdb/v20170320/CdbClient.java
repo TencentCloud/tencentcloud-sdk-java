@@ -776,6 +776,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeCpuExpandHistory）用于查询扩容历史。
+     * @param req DescribeCpuExpandHistoryRequest
+     * @return DescribeCpuExpandHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCpuExpandHistoryResponse DescribeCpuExpandHistory(DescribeCpuExpandHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCpuExpandHistory", DescribeCpuExpandHistoryResponse.class);
+    }
+
+    /**
      *本接口（DescribeDBFeatures）用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
      * @param req DescribeDBFeaturesRequest
      * @return DescribeDBFeaturesResponse

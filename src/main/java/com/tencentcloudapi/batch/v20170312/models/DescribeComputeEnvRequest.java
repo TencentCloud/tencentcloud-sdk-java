@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeComputeEnvRequest extends AbstractModel {
 
     /**
-    * 计算环境ID
+    * 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-     * Get 计算环境ID 
-     * @return EnvId 计算环境ID
+     * Get 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。 
+     * @return EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 计算环境ID
-     * @param EnvId 计算环境ID
+     * Set 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
+     * @param EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;

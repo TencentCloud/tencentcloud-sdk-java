@@ -108,6 +108,20 @@ public class DownloadLogByLineRequest extends AbstractModel {
     private Long FileType;
 
     /**
+    * 查询文件标志：0: 从执行机获取，1: 从cos获取，获取不到会再从执行机获取
+    */
+    @SerializedName("QueryFileFlag")
+    @Expose
+    private Long QueryFileFlag;
+
+    /**
+    * 透传字段，如果queryFileFlag为1，则ext回作为上一页的分页标识offset
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
      * Get 开始行 
      * @return StartLine 开始行
      */
@@ -299,6 +313,38 @@ public class DownloadLogByLineRequest extends AbstractModel {
         this.FileType = FileType;
     }
 
+    /**
+     * Get 查询文件标志：0: 从执行机获取，1: 从cos获取，获取不到会再从执行机获取 
+     * @return QueryFileFlag 查询文件标志：0: 从执行机获取，1: 从cos获取，获取不到会再从执行机获取
+     */
+    public Long getQueryFileFlag() {
+        return this.QueryFileFlag;
+    }
+
+    /**
+     * Set 查询文件标志：0: 从执行机获取，1: 从cos获取，获取不到会再从执行机获取
+     * @param QueryFileFlag 查询文件标志：0: 从执行机获取，1: 从cos获取，获取不到会再从执行机获取
+     */
+    public void setQueryFileFlag(Long QueryFileFlag) {
+        this.QueryFileFlag = QueryFileFlag;
+    }
+
+    /**
+     * Get 透传字段，如果queryFileFlag为1，则ext回作为上一页的分页标识offset 
+     * @return ExtInfo 透传字段，如果queryFileFlag为1，则ext回作为上一页的分页标识offset
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set 透传字段，如果queryFileFlag为1，则ext回作为上一页的分页标识offset
+     * @param ExtInfo 透传字段，如果queryFileFlag为1，则ext回作为上一页的分页标识offset
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
     public DownloadLogByLineRequest() {
     }
 
@@ -343,6 +389,12 @@ public class DownloadLogByLineRequest extends AbstractModel {
         if (source.FileType != null) {
             this.FileType = new Long(source.FileType);
         }
+        if (source.QueryFileFlag != null) {
+            this.QueryFileFlag = new Long(source.QueryFileFlag);
+        }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
     }
 
 
@@ -362,6 +414,8 @@ public class DownloadLogByLineRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "JobType", this.JobType);
         this.setParamSimple(map, prefix + "ParseErrorTip", this.ParseErrorTip);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
+        this.setParamSimple(map, prefix + "QueryFileFlag", this.QueryFileFlag);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }
 }

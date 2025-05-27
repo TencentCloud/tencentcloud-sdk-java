@@ -88,6 +88,22 @@ public class InstanceLogByLine extends AbstractModel {
     private JobLogErrorTip JobLogErrorTip;
 
     /**
+    * 执行实例的扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutionExtendedProps")
+    @Expose
+    private ExtensionInfoVO [] ExecutionExtendedProps;
+
+    /**
+    * 如果queryFileFlag为1，则ext返回当前页数据的结束行信息，下一页把这个extInfo透传过来
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
      * Get 返回行数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Count 返回行数
@@ -247,6 +263,46 @@ public class InstanceLogByLine extends AbstractModel {
         this.JobLogErrorTip = JobLogErrorTip;
     }
 
+    /**
+     * Get 执行实例的扩展属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutionExtendedProps 执行实例的扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExtensionInfoVO [] getExecutionExtendedProps() {
+        return this.ExecutionExtendedProps;
+    }
+
+    /**
+     * Set 执行实例的扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutionExtendedProps 执行实例的扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutionExtendedProps(ExtensionInfoVO [] ExecutionExtendedProps) {
+        this.ExecutionExtendedProps = ExecutionExtendedProps;
+    }
+
+    /**
+     * Get 如果queryFileFlag为1，则ext返回当前页数据的结束行信息，下一页把这个extInfo透传过来
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtInfo 如果queryFileFlag为1，则ext返回当前页数据的结束行信息，下一页把这个extInfo透传过来
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set 如果queryFileFlag为1，则ext返回当前页数据的结束行信息，下一页把这个extInfo透传过来
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtInfo 如果queryFileFlag为1，则ext返回当前页数据的结束行信息，下一页把这个extInfo透传过来
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
     public InstanceLogByLine() {
     }
 
@@ -282,6 +338,15 @@ public class InstanceLogByLine extends AbstractModel {
         if (source.JobLogErrorTip != null) {
             this.JobLogErrorTip = new JobLogErrorTip(source.JobLogErrorTip);
         }
+        if (source.ExecutionExtendedProps != null) {
+            this.ExecutionExtendedProps = new ExtensionInfoVO[source.ExecutionExtendedProps.length];
+            for (int i = 0; i < source.ExecutionExtendedProps.length; i++) {
+                this.ExecutionExtendedProps[i] = new ExtensionInfoVO(source.ExecutionExtendedProps[i]);
+            }
+        }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
     }
 
 
@@ -297,6 +362,8 @@ public class InstanceLogByLine extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "WorkerType", this.WorkerType);
         this.setParamObj(map, prefix + "JobLogErrorTip.", this.JobLogErrorTip);
+        this.setParamArrayObj(map, prefix + "ExecutionExtendedProps.", this.ExecutionExtendedProps);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }
 }

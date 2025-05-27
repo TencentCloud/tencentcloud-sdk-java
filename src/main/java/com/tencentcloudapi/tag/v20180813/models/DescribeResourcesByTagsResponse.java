@@ -39,7 +39,6 @@ public class DescribeResourcesByTagsResponse extends AbstractModel {
 
     /**
     * 每页大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Limit")
     @Expose
@@ -92,10 +91,8 @@ public class DescribeResourcesByTagsResponse extends AbstractModel {
     }
 
     /**
-     * Get 每页大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每页大小 
      * @return Limit 每页大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLimit() {
         return this.Limit;
@@ -103,9 +100,7 @@ public class DescribeResourcesByTagsResponse extends AbstractModel {
 
     /**
      * Set 每页大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Limit 每页大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

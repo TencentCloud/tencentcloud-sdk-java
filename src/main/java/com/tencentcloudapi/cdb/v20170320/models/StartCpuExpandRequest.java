@@ -53,6 +53,20 @@ public class StartCpuExpandRequest extends AbstractModel {
     private AutoStrategy AutoStrategy;
 
     /**
+    * 按时间段扩容策略
+    */
+    @SerializedName("TimeIntervalStrategy")
+    @Expose
+    private TimeIntervalStrategy TimeIntervalStrategy;
+
+    /**
+    * 按周期扩容策略
+    */
+    @SerializedName("PeriodStrategy")
+    @Expose
+    private PeriodStrategy PeriodStrategy;
+
+    /**
      * Get 实例 ID 。 
      * @return InstanceId 实例 ID 。
      */
@@ -120,6 +134,38 @@ public class StartCpuExpandRequest extends AbstractModel {
         this.AutoStrategy = AutoStrategy;
     }
 
+    /**
+     * Get 按时间段扩容策略 
+     * @return TimeIntervalStrategy 按时间段扩容策略
+     */
+    public TimeIntervalStrategy getTimeIntervalStrategy() {
+        return this.TimeIntervalStrategy;
+    }
+
+    /**
+     * Set 按时间段扩容策略
+     * @param TimeIntervalStrategy 按时间段扩容策略
+     */
+    public void setTimeIntervalStrategy(TimeIntervalStrategy TimeIntervalStrategy) {
+        this.TimeIntervalStrategy = TimeIntervalStrategy;
+    }
+
+    /**
+     * Get 按周期扩容策略 
+     * @return PeriodStrategy 按周期扩容策略
+     */
+    public PeriodStrategy getPeriodStrategy() {
+        return this.PeriodStrategy;
+    }
+
+    /**
+     * Set 按周期扩容策略
+     * @param PeriodStrategy 按周期扩容策略
+     */
+    public void setPeriodStrategy(PeriodStrategy PeriodStrategy) {
+        this.PeriodStrategy = PeriodStrategy;
+    }
+
     public StartCpuExpandRequest() {
     }
 
@@ -140,6 +186,12 @@ public class StartCpuExpandRequest extends AbstractModel {
         if (source.AutoStrategy != null) {
             this.AutoStrategy = new AutoStrategy(source.AutoStrategy);
         }
+        if (source.TimeIntervalStrategy != null) {
+            this.TimeIntervalStrategy = new TimeIntervalStrategy(source.TimeIntervalStrategy);
+        }
+        if (source.PeriodStrategy != null) {
+            this.PeriodStrategy = new PeriodStrategy(source.PeriodStrategy);
+        }
     }
 
 
@@ -151,6 +203,8 @@ public class StartCpuExpandRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
         this.setParamObj(map, prefix + "AutoStrategy.", this.AutoStrategy);
+        this.setParamObj(map, prefix + "TimeIntervalStrategy.", this.TimeIntervalStrategy);
+        this.setParamObj(map, prefix + "PeriodStrategy.", this.PeriodStrategy);
 
     }
 }

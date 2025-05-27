@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class KafkaInfo extends AbstractModel {
 
     /**
-    * kakfa实例Id
+    * kafka实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * kakfa数据源的网络信息
+    * kafka数据源的网络信息
     */
     @SerializedName("Location")
     @Expose
     private DatasourceConnectionLocation Location;
 
     /**
-     * Get kakfa实例Id 
-     * @return InstanceId kakfa实例Id
+     * Get kafka实例Id 
+     * @return InstanceId kafka实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set kakfa实例Id
-     * @param InstanceId kakfa实例Id
+     * Set kafka实例Id
+     * @param InstanceId kafka实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get kakfa数据源的网络信息 
-     * @return Location kakfa数据源的网络信息
+     * Get kafka数据源的网络信息 
+     * @return Location kafka数据源的网络信息
      */
     public DatasourceConnectionLocation getLocation() {
         return this.Location;
     }
 
     /**
-     * Set kakfa数据源的网络信息
-     * @param Location kakfa数据源的网络信息
+     * Set kafka数据源的网络信息
+     * @param Location kafka数据源的网络信息
      */
     public void setLocation(DatasourceConnectionLocation Location) {
         this.Location = Location;

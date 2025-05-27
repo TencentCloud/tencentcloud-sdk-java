@@ -81,7 +81,6 @@ public class SubAccountInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -89,7 +88,6 @@ public class SubAccountInfo extends AbstractModel {
 
     /**
     * 昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NickName")
     @Expose
@@ -224,10 +222,8 @@ public class SubAccountInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -235,19 +231,15 @@ public class SubAccountInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 昵称 
      * @return NickName 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickName() {
         return this.NickName;
@@ -255,9 +247,7 @@ public class SubAccountInfo extends AbstractModel {
 
     /**
      * Set 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NickName 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;

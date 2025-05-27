@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class Instance extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例ID，可通过调用接口[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 镜像ID
+    * 镜像ID，可通过调用接口[DescribeImages](https://cloud.tencent.com/document/product/213/15715)获取。
     */
     @SerializedName("ImageId")
     @Expose
@@ -45,32 +45,32 @@ public class Instance extends AbstractModel {
     private LoginSettings LoginSettings;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例ID，可通过调用接口[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)获取。 
+     * @return InstanceId 实例ID，可通过调用接口[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID，可通过调用接口[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)获取。
+     * @param InstanceId 实例ID，可通过调用接口[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 镜像ID 
-     * @return ImageId 镜像ID
+     * Get 镜像ID，可通过调用接口[DescribeImages](https://cloud.tencent.com/document/product/213/15715)获取。 
+     * @return ImageId 镜像ID，可通过调用接口[DescribeImages](https://cloud.tencent.com/document/product/213/15715)获取。
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 镜像ID
-     * @param ImageId 镜像ID
+     * Set 镜像ID，可通过调用接口[DescribeImages](https://cloud.tencent.com/document/product/213/15715)获取。
+     * @param ImageId 镜像ID，可通过调用接口[DescribeImages](https://cloud.tencent.com/document/product/213/15715)获取。
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;

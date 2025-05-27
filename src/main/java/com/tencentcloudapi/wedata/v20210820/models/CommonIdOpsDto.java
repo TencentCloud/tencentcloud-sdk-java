@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CommonIdOpsDto extends AbstractModel {
 
     /**
-    * 返回补录计划id
+    * 返回补录计划名称_ok
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -32,9 +32,9 @@ public class CommonIdOpsDto extends AbstractModel {
     private String Id;
 
     /**
-     * Get 返回补录计划id
+     * Get 返回补录计划名称_ok
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 返回补录计划id
+     * @return Id 返回补录计划名称_ok
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -42,9 +42,9 @@ public class CommonIdOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 返回补录计划id
+     * Set 返回补录计划名称_ok
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 返回补录计划id
+     * @param Id 返回补录计划名称_ok
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {

@@ -101,6 +101,13 @@ public class CreateResourceRequest extends AbstractModel {
     private Long Trial;
 
     /**
+    * 是否共享clb，0：不共享，1：共享
+    */
+    @SerializedName("ShareClb")
+    @Expose
+    private Long ShareClb;
+
+    /**
      * Get 部署region 
      * @return DeployRegion 部署region
      */
@@ -276,6 +283,22 @@ public class CreateResourceRequest extends AbstractModel {
         this.Trial = Trial;
     }
 
+    /**
+     * Get 是否共享clb，0：不共享，1：共享 
+     * @return ShareClb 是否共享clb，0：不共享，1：共享
+     */
+    public Long getShareClb() {
+        return this.ShareClb;
+    }
+
+    /**
+     * Set 是否共享clb，0：不共享，1：共享
+     * @param ShareClb 是否共享clb，0：不共享，1：共享
+     */
+    public void setShareClb(Long ShareClb) {
+        this.ShareClb = ShareClb;
+    }
+
     public CreateResourceRequest() {
     }
 
@@ -317,6 +340,9 @@ public class CreateResourceRequest extends AbstractModel {
         if (source.Trial != null) {
             this.Trial = new Long(source.Trial);
         }
+        if (source.ShareClb != null) {
+            this.ShareClb = new Long(source.ShareClb);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class CreateResourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "DeployZone", this.DeployZone);
         this.setParamSimple(map, prefix + "Trial", this.Trial);
+        this.setParamSimple(map, prefix + "ShareClb", this.ShareClb);
 
     }
 }

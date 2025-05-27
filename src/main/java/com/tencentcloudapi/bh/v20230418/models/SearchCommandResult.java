@@ -178,6 +178,13 @@ public class SearchCommandResult extends AbstractModel {
     private String SignValue;
 
     /**
+    * 资产类型
+    */
+    @SerializedName("DeviceKind")
+    @Expose
+    private String DeviceKind;
+
+    /**
      * Get 命令输入的时间 
      * @return Time 命令输入的时间
      */
@@ -529,6 +536,22 @@ public class SearchCommandResult extends AbstractModel {
         this.SignValue = SignValue;
     }
 
+    /**
+     * Get 资产类型 
+     * @return DeviceKind 资产类型
+     */
+    public String getDeviceKind() {
+        return this.DeviceKind;
+    }
+
+    /**
+     * Set 资产类型
+     * @param DeviceKind 资产类型
+     */
+    public void setDeviceKind(String DeviceKind) {
+        this.DeviceKind = DeviceKind;
+    }
+
     public SearchCommandResult() {
     }
 
@@ -603,6 +626,9 @@ public class SearchCommandResult extends AbstractModel {
         if (source.SignValue != null) {
             this.SignValue = new String(source.SignValue);
         }
+        if (source.DeviceKind != null) {
+            this.DeviceKind = new String(source.DeviceKind);
+        }
     }
 
 
@@ -632,6 +658,7 @@ public class SearchCommandResult extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceDepartmentName", this.DeviceDepartmentName);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "SignValue", this.SignValue);
+        this.setParamSimple(map, prefix + "DeviceKind", this.DeviceKind);
 
     }
 }

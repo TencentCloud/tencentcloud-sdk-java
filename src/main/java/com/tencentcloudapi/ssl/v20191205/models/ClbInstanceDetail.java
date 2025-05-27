@@ -45,6 +45,13 @@ public class ClbInstanceDetail extends AbstractModel {
     private ClbListener [] Listeners;
 
     /**
+    * 负载均衡类型，0 传统型负载均衡； 1 应用型负载均衡
+    */
+    @SerializedName("Forward")
+    @Expose
+    private Long Forward;
+
+    /**
      * Get CLB实例ID 
      * @return LoadBalancerId CLB实例ID
      */
@@ -92,6 +99,22 @@ public class ClbInstanceDetail extends AbstractModel {
         this.Listeners = Listeners;
     }
 
+    /**
+     * Get 负载均衡类型，0 传统型负载均衡； 1 应用型负载均衡 
+     * @return Forward 负载均衡类型，0 传统型负载均衡； 1 应用型负载均衡
+     */
+    public Long getForward() {
+        return this.Forward;
+    }
+
+    /**
+     * Set 负载均衡类型，0 传统型负载均衡； 1 应用型负载均衡
+     * @param Forward 负载均衡类型，0 传统型负载均衡； 1 应用型负载均衡
+     */
+    public void setForward(Long Forward) {
+        this.Forward = Forward;
+    }
+
     public ClbInstanceDetail() {
     }
 
@@ -112,6 +135,9 @@ public class ClbInstanceDetail extends AbstractModel {
                 this.Listeners[i] = new ClbListener(source.Listeners[i]);
             }
         }
+        if (source.Forward != null) {
+            this.Forward = new Long(source.Forward);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class ClbInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
         this.setParamArrayObj(map, prefix + "Listeners.", this.Listeners);
+        this.setParamSimple(map, prefix + "Forward", this.Forward);
 
     }
 }

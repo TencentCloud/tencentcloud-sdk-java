@@ -46,7 +46,6 @@ public class TagWithDelete extends AbstractModel {
 
     /**
     * 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Category")
     @Expose
@@ -101,10 +100,8 @@ public class TagWithDelete extends AbstractModel {
     }
 
     /**
-     * Get 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。 
      * @return Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategory() {
         return this.Category;
@@ -112,9 +109,7 @@ public class TagWithDelete extends AbstractModel {
 
     /**
      * Set 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategory(String Category) {
         this.Category = Category;

@@ -67,7 +67,6 @@ public class LoginActionFlag extends AbstractModel {
 
     /**
     * 0: 非u2f硬件token 1: u2f硬件token
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("U2FToken")
     @Expose
@@ -170,10 +169,8 @@ public class LoginActionFlag extends AbstractModel {
     }
 
     /**
-     * Get 0: 非u2f硬件token 1: u2f硬件token
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0: 非u2f硬件token 1: u2f硬件token 
      * @return U2FToken 0: 非u2f硬件token 1: u2f硬件token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getU2FToken() {
         return this.U2FToken;
@@ -181,9 +178,7 @@ public class LoginActionFlag extends AbstractModel {
 
     /**
      * Set 0: 非u2f硬件token 1: u2f硬件token
-注意：此字段可能返回 null，表示取不到有效值。
      * @param U2FToken 0: 非u2f硬件token 1: u2f硬件token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setU2FToken(Long U2FToken) {
         this.U2FToken = U2FToken;

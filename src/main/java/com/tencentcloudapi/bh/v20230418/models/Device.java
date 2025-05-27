@@ -171,6 +171,48 @@ public class Device extends AbstractModel {
     private Long IOAId;
 
     /**
+    * K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+    */
+    @SerializedName("ManageDimension")
+    @Expose
+    private Long ManageDimension;
+
+    /**
+    * K8S集群托管账号id	
+    */
+    @SerializedName("ManageAccountId")
+    @Expose
+    private Long ManageAccountId;
+
+    /**
+    * K8S集群命名空间	
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * K8S集群工作负载	
+    */
+    @SerializedName("Workload")
+    @Expose
+    private String Workload;
+
+    /**
+    * K8S集群pod已同步数量
+    */
+    @SerializedName("SyncPodCount")
+    @Expose
+    private Long SyncPodCount;
+
+    /**
+    * K8S集群pod总数量	
+    */
+    @SerializedName("TotalPodCount")
+    @Expose
+    private Long TotalPodCount;
+
+    /**
      * Get 资产ID 
      * @return Id 资产ID
      */
@@ -506,6 +548,102 @@ public class Device extends AbstractModel {
         this.IOAId = IOAId;
     }
 
+    /**
+     * Get K8S集群托管维度。1-集群，2-命名空间，3-工作负载 
+     * @return ManageDimension K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+     */
+    public Long getManageDimension() {
+        return this.ManageDimension;
+    }
+
+    /**
+     * Set K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+     * @param ManageDimension K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+     */
+    public void setManageDimension(Long ManageDimension) {
+        this.ManageDimension = ManageDimension;
+    }
+
+    /**
+     * Get K8S集群托管账号id	 
+     * @return ManageAccountId K8S集群托管账号id	
+     */
+    public Long getManageAccountId() {
+        return this.ManageAccountId;
+    }
+
+    /**
+     * Set K8S集群托管账号id	
+     * @param ManageAccountId K8S集群托管账号id	
+     */
+    public void setManageAccountId(Long ManageAccountId) {
+        this.ManageAccountId = ManageAccountId;
+    }
+
+    /**
+     * Get K8S集群命名空间	 
+     * @return Namespace K8S集群命名空间	
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set K8S集群命名空间	
+     * @param Namespace K8S集群命名空间	
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get K8S集群工作负载	 
+     * @return Workload K8S集群工作负载	
+     */
+    public String getWorkload() {
+        return this.Workload;
+    }
+
+    /**
+     * Set K8S集群工作负载	
+     * @param Workload K8S集群工作负载	
+     */
+    public void setWorkload(String Workload) {
+        this.Workload = Workload;
+    }
+
+    /**
+     * Get K8S集群pod已同步数量 
+     * @return SyncPodCount K8S集群pod已同步数量
+     */
+    public Long getSyncPodCount() {
+        return this.SyncPodCount;
+    }
+
+    /**
+     * Set K8S集群pod已同步数量
+     * @param SyncPodCount K8S集群pod已同步数量
+     */
+    public void setSyncPodCount(Long SyncPodCount) {
+        this.SyncPodCount = SyncPodCount;
+    }
+
+    /**
+     * Get K8S集群pod总数量	 
+     * @return TotalPodCount K8S集群pod总数量	
+     */
+    public Long getTotalPodCount() {
+        return this.TotalPodCount;
+    }
+
+    /**
+     * Set K8S集群pod总数量	
+     * @param TotalPodCount K8S集群pod总数量	
+     */
+    public void setTotalPodCount(Long TotalPodCount) {
+        this.TotalPodCount = TotalPodCount;
+    }
+
     public Device() {
     }
 
@@ -583,6 +721,24 @@ public class Device extends AbstractModel {
         if (source.IOAId != null) {
             this.IOAId = new Long(source.IOAId);
         }
+        if (source.ManageDimension != null) {
+            this.ManageDimension = new Long(source.ManageDimension);
+        }
+        if (source.ManageAccountId != null) {
+            this.ManageAccountId = new Long(source.ManageAccountId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.Workload != null) {
+            this.Workload = new String(source.Workload);
+        }
+        if (source.SyncPodCount != null) {
+            this.SyncPodCount = new Long(source.SyncPodCount);
+        }
+        if (source.TotalPodCount != null) {
+            this.TotalPodCount = new Long(source.TotalPodCount);
+        }
     }
 
 
@@ -611,6 +767,12 @@ public class Device extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
         this.setParamSimple(map, prefix + "SSLCertName", this.SSLCertName);
         this.setParamSimple(map, prefix + "IOAId", this.IOAId);
+        this.setParamSimple(map, prefix + "ManageDimension", this.ManageDimension);
+        this.setParamSimple(map, prefix + "ManageAccountId", this.ManageAccountId);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "Workload", this.Workload);
+        this.setParamSimple(map, prefix + "SyncPodCount", this.SyncPodCount);
+        this.setParamSimple(map, prefix + "TotalPodCount", this.TotalPodCount);
 
     }
 }

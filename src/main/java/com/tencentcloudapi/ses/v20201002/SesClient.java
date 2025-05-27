@@ -238,6 +238,17 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *获取地址级退订配置列表
+     * @param req ListAddressUnsubscribeConfigRequest
+     * @return ListAddressUnsubscribeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAddressUnsubscribeConfigResponse ListAddressUnsubscribeConfig(ListAddressUnsubscribeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAddressUnsubscribeConfig", ListAddressUnsubscribeConfigResponse.class);
+    }
+
+    /**
      *腾讯云发送的邮件一旦被收件方判断为硬退(Hard Bounce)，腾讯云会拉黑该地址，并不允许所有用户向该地址发送邮件。成为邮箱黑名单。如果业务方确认是误判，可以从黑名单中删除。
      * @param req ListBlackEmailAddressRequest
      * @return ListBlackEmailAddressResponse

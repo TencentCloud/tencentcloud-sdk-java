@@ -60,7 +60,6 @@ public class TagResource extends AbstractModel {
 
     /**
     * 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceType")
     @Expose
@@ -68,7 +67,6 @@ public class TagResource extends AbstractModel {
 
     /**
     * 标签类型。取值： Custom：自定义标签。 System：系统标签。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Category")
     @Expose
@@ -155,10 +153,8 @@ public class TagResource extends AbstractModel {
     }
 
     /**
-     * Get 资源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源类型 
      * @return ServiceType 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceType() {
         return this.ServiceType;
@@ -166,19 +162,15 @@ public class TagResource extends AbstractModel {
 
     /**
      * Set 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceType 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 标签类型。取值： Custom：自定义标签。 System：系统标签。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签类型。取值： Custom：自定义标签。 System：系统标签。 
      * @return Category 标签类型。取值： Custom：自定义标签。 System：系统标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategory() {
         return this.Category;
@@ -186,9 +178,7 @@ public class TagResource extends AbstractModel {
 
     /**
      * Set 标签类型。取值： Custom：自定义标签。 System：系统标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Category 标签类型。取值： Custom：自定义标签。 System：系统标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategory(String Category) {
         this.Category = Category;

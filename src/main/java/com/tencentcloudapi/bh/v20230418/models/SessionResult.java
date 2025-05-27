@@ -171,6 +171,34 @@ public class SessionResult extends AbstractModel {
     private Long ReplayType;
 
     /**
+    * 会话资产类型
+    */
+    @SerializedName("DeviceKind")
+    @Expose
+    private String DeviceKind;
+
+    /**
+    * K8S集群命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * K8S集群工作负载
+    */
+    @SerializedName("Workload")
+    @Expose
+    private String Workload;
+
+    /**
+    * K8S集群容器名称
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
      * Get 用户名 
      * @return UserName 用户名
      */
@@ -506,6 +534,70 @@ public class SessionResult extends AbstractModel {
         this.ReplayType = ReplayType;
     }
 
+    /**
+     * Get 会话资产类型 
+     * @return DeviceKind 会话资产类型
+     */
+    public String getDeviceKind() {
+        return this.DeviceKind;
+    }
+
+    /**
+     * Set 会话资产类型
+     * @param DeviceKind 会话资产类型
+     */
+    public void setDeviceKind(String DeviceKind) {
+        this.DeviceKind = DeviceKind;
+    }
+
+    /**
+     * Get K8S集群命名空间 
+     * @return Namespace K8S集群命名空间
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set K8S集群命名空间
+     * @param Namespace K8S集群命名空间
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get K8S集群工作负载 
+     * @return Workload K8S集群工作负载
+     */
+    public String getWorkload() {
+        return this.Workload;
+    }
+
+    /**
+     * Set K8S集群工作负载
+     * @param Workload K8S集群工作负载
+     */
+    public void setWorkload(String Workload) {
+        this.Workload = Workload;
+    }
+
+    /**
+     * Get K8S集群容器名称 
+     * @return PodName K8S集群容器名称
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set K8S集群容器名称
+     * @param PodName K8S集群容器名称
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
     public SessionResult() {
     }
 
@@ -577,6 +669,18 @@ public class SessionResult extends AbstractModel {
         if (source.ReplayType != null) {
             this.ReplayType = new Long(source.ReplayType);
         }
+        if (source.DeviceKind != null) {
+            this.DeviceKind = new String(source.DeviceKind);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.Workload != null) {
+            this.Workload = new String(source.Workload);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
     }
 
 
@@ -605,6 +709,10 @@ public class SessionResult extends AbstractModel {
         this.setParamSimple(map, prefix + "AppAssetKind", this.AppAssetKind);
         this.setParamSimple(map, prefix + "AppAssetUrl", this.AppAssetUrl);
         this.setParamSimple(map, prefix + "ReplayType", this.ReplayType);
+        this.setParamSimple(map, prefix + "DeviceKind", this.DeviceKind);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "Workload", this.Workload);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
 
     }
 }
