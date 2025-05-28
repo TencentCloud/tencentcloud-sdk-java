@@ -109,6 +109,7 @@ cold：低频存储。
 
     /**
     * 存储至 cos 的 bucket 桶名称。
+注：CosBucketName参数值不能包含-[appid] 部分。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosBucketName")
@@ -373,8 +374,10 @@ cold：低频存储。
 
     /**
      * Get 存储至 cos 的 bucket 桶名称。
+注：CosBucketName参数值不能包含-[appid] 部分。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CosBucketName 存储至 cos 的 bucket 桶名称。
+注：CosBucketName参数值不能包含-[appid] 部分。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosBucketName() {
@@ -383,8 +386,10 @@ cold：低频存储。
 
     /**
      * Set 存储至 cos 的 bucket 桶名称。
+注：CosBucketName参数值不能包含-[appid] 部分。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CosBucketName 存储至 cos 的 bucket 桶名称。
+注：CosBucketName参数值不能包含-[appid] 部分。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosBucketName(String CosBucketName) {

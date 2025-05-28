@@ -215,6 +215,38 @@ public class Project extends AbstractModel {
     private String OwnerName;
 
     /**
+    * 仪表盘页面数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NormalCount")
+    @Expose
+    private Long NormalCount;
+
+    /**
+    * 自由画布页面数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FreeCount")
+    @Expose
+    private Long FreeCount;
+
+    /**
+    * 即席分析页面数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdhocCount")
+    @Expose
+    private Long AdhocCount;
+
+    /**
+    * 简报页面数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BriefingCount")
+    @Expose
+    private Long BriefingCount;
+
+    /**
      * Get 项目ID 
      * @return Id 项目ID
      */
@@ -690,6 +722,86 @@ public class Project extends AbstractModel {
         this.OwnerName = OwnerName;
     }
 
+    /**
+     * Get 仪表盘页面数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NormalCount 仪表盘页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNormalCount() {
+        return this.NormalCount;
+    }
+
+    /**
+     * Set 仪表盘页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NormalCount 仪表盘页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNormalCount(Long NormalCount) {
+        this.NormalCount = NormalCount;
+    }
+
+    /**
+     * Get 自由画布页面数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FreeCount 自由画布页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFreeCount() {
+        return this.FreeCount;
+    }
+
+    /**
+     * Set 自由画布页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FreeCount 自由画布页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFreeCount(Long FreeCount) {
+        this.FreeCount = FreeCount;
+    }
+
+    /**
+     * Get 即席分析页面数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdhocCount 即席分析页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAdhocCount() {
+        return this.AdhocCount;
+    }
+
+    /**
+     * Set 即席分析页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdhocCount 即席分析页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdhocCount(Long AdhocCount) {
+        this.AdhocCount = AdhocCount;
+    }
+
+    /**
+     * Get 简报页面数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BriefingCount 简报页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBriefingCount() {
+        return this.BriefingCount;
+    }
+
+    /**
+     * Set 简报页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BriefingCount 简报页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBriefingCount(Long BriefingCount) {
+        this.BriefingCount = BriefingCount;
+    }
+
     public Project() {
     }
 
@@ -776,6 +888,18 @@ public class Project extends AbstractModel {
         if (source.OwnerName != null) {
             this.OwnerName = new String(source.OwnerName);
         }
+        if (source.NormalCount != null) {
+            this.NormalCount = new Long(source.NormalCount);
+        }
+        if (source.FreeCount != null) {
+            this.FreeCount = new Long(source.FreeCount);
+        }
+        if (source.AdhocCount != null) {
+            this.AdhocCount = new Long(source.AdhocCount);
+        }
+        if (source.BriefingCount != null) {
+            this.BriefingCount = new Long(source.BriefingCount);
+        }
     }
 
 
@@ -807,6 +931,10 @@ public class Project extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatedUserName", this.CreatedUserName);
         this.setParamSimple(map, prefix + "Owner", this.Owner);
         this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
+        this.setParamSimple(map, prefix + "NormalCount", this.NormalCount);
+        this.setParamSimple(map, prefix + "FreeCount", this.FreeCount);
+        this.setParamSimple(map, prefix + "AdhocCount", this.AdhocCount);
+        this.setParamSimple(map, prefix + "BriefingCount", this.BriefingCount);
 
     }
 }

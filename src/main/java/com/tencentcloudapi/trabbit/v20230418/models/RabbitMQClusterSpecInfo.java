@@ -87,6 +87,13 @@ public class RabbitMQClusterSpecInfo extends AbstractModel {
     private Long PublicNetworkTps;
 
     /**
+    * 实例对应的功能列表，true表示支持，false 表示不支持
+    */
+    @SerializedName("Features")
+    @Expose
+    private String Features;
+
+    /**
      * Get 集群规格名称 
      * @return SpecName 集群规格名称
      */
@@ -230,6 +237,22 @@ public class RabbitMQClusterSpecInfo extends AbstractModel {
         this.PublicNetworkTps = PublicNetworkTps;
     }
 
+    /**
+     * Get 实例对应的功能列表，true表示支持，false 表示不支持 
+     * @return Features 实例对应的功能列表，true表示支持，false 表示不支持
+     */
+    public String getFeatures() {
+        return this.Features;
+    }
+
+    /**
+     * Set 实例对应的功能列表，true表示支持，false 表示不支持
+     * @param Features 实例对应的功能列表，true表示支持，false 表示不支持
+     */
+    public void setFeatures(String Features) {
+        this.Features = Features;
+    }
+
     public RabbitMQClusterSpecInfo() {
     }
 
@@ -265,6 +288,9 @@ public class RabbitMQClusterSpecInfo extends AbstractModel {
         if (source.PublicNetworkTps != null) {
             this.PublicNetworkTps = new Long(source.PublicNetworkTps);
         }
+        if (source.Features != null) {
+            this.Features = new String(source.Features);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class RabbitMQClusterSpecInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxUserNum", this.MaxUserNum);
         this.setParamSimple(map, prefix + "MaxBandWidth", this.MaxBandWidth);
         this.setParamSimple(map, prefix + "PublicNetworkTps", this.PublicNetworkTps);
+        this.setParamSimple(map, prefix + "Features", this.Features);
 
     }
 }

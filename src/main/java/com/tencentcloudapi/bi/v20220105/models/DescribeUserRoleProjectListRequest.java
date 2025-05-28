@@ -66,6 +66,20 @@ public class DescribeUserRoleProjectListRequest extends AbstractModel {
     private String RoleCode;
 
     /**
+    * 用户id列表
+    */
+    @SerializedName("UserIdList")
+    @Expose
+    private String [] UserIdList;
+
+    /**
+    * 搜索关键词
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
      * Get 页码 
      * @return PageNo 页码
      */
@@ -161,6 +175,38 @@ public class DescribeUserRoleProjectListRequest extends AbstractModel {
         this.RoleCode = RoleCode;
     }
 
+    /**
+     * Get 用户id列表 
+     * @return UserIdList 用户id列表
+     */
+    public String [] getUserIdList() {
+        return this.UserIdList;
+    }
+
+    /**
+     * Set 用户id列表
+     * @param UserIdList 用户id列表
+     */
+    public void setUserIdList(String [] UserIdList) {
+        this.UserIdList = UserIdList;
+    }
+
+    /**
+     * Get 搜索关键词 
+     * @return Keyword 搜索关键词
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set 搜索关键词
+     * @param Keyword 搜索关键词
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
     public DescribeUserRoleProjectListRequest() {
     }
 
@@ -187,6 +233,15 @@ public class DescribeUserRoleProjectListRequest extends AbstractModel {
         if (source.RoleCode != null) {
             this.RoleCode = new String(source.RoleCode);
         }
+        if (source.UserIdList != null) {
+            this.UserIdList = new String[source.UserIdList.length];
+            for (int i = 0; i < source.UserIdList.length; i++) {
+                this.UserIdList[i] = new String(source.UserIdList[i]);
+            }
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
     }
 
 
@@ -200,6 +255,8 @@ public class DescribeUserRoleProjectListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsOnlyBindAppUser", this.IsOnlyBindAppUser);
         this.setParamSimple(map, prefix + "AllPage", this.AllPage);
         this.setParamSimple(map, prefix + "RoleCode", this.RoleCode);
+        this.setParamArraySimple(map, prefix + "UserIdList.", this.UserIdList);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
 
     }
 }

@@ -31,7 +31,7 @@ public class DescribeDomainsConfigRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 分页查询限制数目，默认为 100，最大可设置为 1000
+    * 分页查询限制数目，默认为 100，最大可设置为 100
     */
     @SerializedName("Limit")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeDomainsConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页查询限制数目，默认为 100，最大可设置为 1000 
-     * @return Limit 分页查询限制数目，默认为 100，最大可设置为 1000
+     * Get 分页查询限制数目，默认为 100，最大可设置为 100 
+     * @return Limit 分页查询限制数目，默认为 100，最大可设置为 100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页查询限制数目，默认为 100，最大可设置为 1000
-     * @param Limit 分页查询限制数目，默认为 100，最大可设置为 1000
+     * Set 分页查询限制数目，默认为 100，最大可设置为 100
+     * @param Limit 分页查询限制数目，默认为 100，最大可设置为 100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

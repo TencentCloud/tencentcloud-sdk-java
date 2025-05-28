@@ -250,6 +250,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（AssociateHaVipInstance）用于HAVIP绑定子机或网卡（限制HaVip的飘移范围）。
+     * @param req AssociateHaVipInstanceRequest
+     * @return AssociateHaVipInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateHaVipInstanceResponse AssociateHaVipInstance(AssociateHaVipInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateHaVipInstance", AssociateHaVipInstanceResponse.class);
+    }
+
+    /**
      *本接口（AssociateIPv6Address）用于将弹性公网IPv6（简称EIPv6）实例绑定到 CVM 或弹性网卡配置的内网 IPv6 地址上。
 
 - 将 EIPv6 绑定到 CVM 上，其本质是将 EIPv6 绑定到 CVM 弹性网卡所配置的内网 IPv6 地址上。
@@ -3215,6 +3226,17 @@ LimitTypes取值范围：
     public DisassociateDirectConnectGatewayNatGatewayResponse DisassociateDirectConnectGatewayNatGateway(DisassociateDirectConnectGatewayNatGatewayRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DisassociateDirectConnectGatewayNatGateway", DisassociateDirectConnectGatewayNatGatewayResponse.class);
+    }
+
+    /**
+     *本接口（DisassociateHaVipInstance）用于HAVIP解绑子机或网卡（去掉HaVip飘移范围）。
+     * @param req DisassociateHaVipInstanceRequest
+     * @return DisassociateHaVipInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateHaVipInstanceResponse DisassociateHaVipInstance(DisassociateHaVipInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisassociateHaVipInstance", DisassociateHaVipInstanceResponse.class);
     }
 
     /**

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.bi.v20220105.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,72 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Data extends AbstractModel {
+public class Order extends AbstractModel {
 
     /**
-    * 项目Id
+    * 排序字段。
     */
-    @SerializedName("Id")
+    @SerializedName("Name")
     @Expose
-    private Long Id;
+    private String Name;
 
     /**
-    * url
-注意：此字段可能返回 null，表示取不到有效值。
+    * Desc or Asc。
     */
-    @SerializedName("EditUrl")
+    @SerializedName("Direction")
     @Expose
-    private String EditUrl;
+    private String Direction;
 
     /**
-     * Get 项目Id 
-     * @return Id 项目Id
+     * Get 排序字段。 
+     * @return Name 排序字段。
      */
-    public Long getId() {
-        return this.Id;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 项目Id
-     * @param Id 项目Id
+     * Set 排序字段。
+     * @param Name 排序字段。
      */
-    public void setId(Long Id) {
-        this.Id = Id;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get url
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EditUrl url
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Desc or Asc。 
+     * @return Direction Desc or Asc。
      */
-    public String getEditUrl() {
-        return this.EditUrl;
+    public String getDirection() {
+        return this.Direction;
     }
 
     /**
-     * Set url
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param EditUrl url
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Desc or Asc。
+     * @param Direction Desc or Asc。
      */
-    public void setEditUrl(String EditUrl) {
-        this.EditUrl = EditUrl;
+    public void setDirection(String Direction) {
+        this.Direction = Direction;
     }
 
-    public Data() {
+    public Order() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Data(Data source) {
-        if (source.Id != null) {
-            this.Id = new Long(source.Id);
+    public Order(Order source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.EditUrl != null) {
-            this.EditUrl = new String(source.EditUrl);
+        if (source.Direction != null) {
+            this.Direction = new String(source.Direction);
         }
     }
 
@@ -95,8 +90,8 @@ public class Data extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
-        this.setParamSimple(map, prefix + "EditUrl", this.EditUrl);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Direction", this.Direction);
 
     }
 }

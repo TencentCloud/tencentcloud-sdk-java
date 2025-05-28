@@ -165,6 +165,13 @@ public class RabbitMQServerlessInstance extends AbstractModel {
     private Long IsolatedTime;
 
     /**
+    * Serverless 扩展字段
+    */
+    @SerializedName("ServerlessExt")
+    @Expose
+    private String ServerlessExt;
+
+    /**
      * Get 实例Id 
      * @return InstanceId 实例Id
      */
@@ -488,6 +495,22 @@ public class RabbitMQServerlessInstance extends AbstractModel {
         this.IsolatedTime = IsolatedTime;
     }
 
+    /**
+     * Get Serverless 扩展字段 
+     * @return ServerlessExt Serverless 扩展字段
+     */
+    public String getServerlessExt() {
+        return this.ServerlessExt;
+    }
+
+    /**
+     * Set Serverless 扩展字段
+     * @param ServerlessExt Serverless 扩展字段
+     */
+    public void setServerlessExt(String ServerlessExt) {
+        this.ServerlessExt = ServerlessExt;
+    }
+
     public RabbitMQServerlessInstance() {
     }
 
@@ -559,6 +582,9 @@ public class RabbitMQServerlessInstance extends AbstractModel {
         if (source.IsolatedTime != null) {
             this.IsolatedTime = new Long(source.IsolatedTime);
         }
+        if (source.ServerlessExt != null) {
+            this.ServerlessExt = new String(source.ServerlessExt);
+        }
     }
 
 
@@ -586,6 +612,7 @@ public class RabbitMQServerlessInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
         this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+        this.setParamSimple(map, prefix + "ServerlessExt", this.ServerlessExt);
 
     }
 }

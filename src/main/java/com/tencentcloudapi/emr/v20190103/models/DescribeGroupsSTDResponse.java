@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gs.v20191118.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,35 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAndroidInstanceWebShellResponse extends AbstractModel {
+public class DescribeGroupsSTDResponse extends AbstractModel {
 
     /**
-    * 鉴权密钥
+    * 用户组信息
     */
-    @SerializedName("Key")
+    @SerializedName("Data")
     @Expose
-    private String Key;
+    private GroupInfos [] Data;
 
     /**
-    * 连接地址
+    * 符合条件的用户组数量
     */
-    @SerializedName("Address")
+    @SerializedName("TotalCount")
     @Expose
-    private String Address;
-
-    /**
-    * 连接区域
-    */
-    @SerializedName("Zone")
-    @Expose
-    private String Zone;
-
-    /**
-    * 访问链接，可以直接使用此链接访问 WebShell
-    */
-    @SerializedName("ConnectUrl")
-    @Expose
-    private String ConnectUrl;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,67 +45,35 @@ public class CreateAndroidInstanceWebShellResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 鉴权密钥 
-     * @return Key 鉴权密钥
+     * Get 用户组信息 
+     * @return Data 用户组信息
      */
-    public String getKey() {
-        return this.Key;
+    public GroupInfos [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 鉴权密钥
-     * @param Key 鉴权密钥
+     * Set 用户组信息
+     * @param Data 用户组信息
      */
-    public void setKey(String Key) {
-        this.Key = Key;
+    public void setData(GroupInfos [] Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 连接地址 
-     * @return Address 连接地址
+     * Get 符合条件的用户组数量 
+     * @return TotalCount 符合条件的用户组数量
      */
-    public String getAddress() {
-        return this.Address;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 连接地址
-     * @param Address 连接地址
+     * Set 符合条件的用户组数量
+     * @param TotalCount 符合条件的用户组数量
      */
-    public void setAddress(String Address) {
-        this.Address = Address;
-    }
-
-    /**
-     * Get 连接区域 
-     * @return Zone 连接区域
-     */
-    public String getZone() {
-        return this.Zone;
-    }
-
-    /**
-     * Set 连接区域
-     * @param Zone 连接区域
-     */
-    public void setZone(String Zone) {
-        this.Zone = Zone;
-    }
-
-    /**
-     * Get 访问链接，可以直接使用此链接访问 WebShell 
-     * @return ConnectUrl 访问链接，可以直接使用此链接访问 WebShell
-     */
-    public String getConnectUrl() {
-        return this.ConnectUrl;
-    }
-
-    /**
-     * Set 访问链接，可以直接使用此链接访问 WebShell
-     * @param ConnectUrl 访问链接，可以直接使用此链接访问 WebShell
-     */
-    public void setConnectUrl(String ConnectUrl) {
-        this.ConnectUrl = ConnectUrl;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -138,25 +92,22 @@ public class CreateAndroidInstanceWebShellResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateAndroidInstanceWebShellResponse() {
+    public DescribeGroupsSTDResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateAndroidInstanceWebShellResponse(CreateAndroidInstanceWebShellResponse source) {
-        if (source.Key != null) {
-            this.Key = new String(source.Key);
+    public DescribeGroupsSTDResponse(DescribeGroupsSTDResponse source) {
+        if (source.Data != null) {
+            this.Data = new GroupInfos[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new GroupInfos(source.Data[i]);
+            }
         }
-        if (source.Address != null) {
-            this.Address = new String(source.Address);
-        }
-        if (source.Zone != null) {
-            this.Zone = new String(source.Zone);
-        }
-        if (source.ConnectUrl != null) {
-            this.ConnectUrl = new String(source.ConnectUrl);
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -168,10 +119,8 @@ public class CreateAndroidInstanceWebShellResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamSimple(map, prefix + "Address", this.Address);
-        this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamSimple(map, prefix + "ConnectUrl", this.ConnectUrl);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

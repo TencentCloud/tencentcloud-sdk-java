@@ -45,6 +45,13 @@ public class AvailableZoneScatterScheduleRule extends AbstractModel {
     private Boolean IsForceSchedule;
 
     /**
+    * -
+    */
+    @SerializedName("Paths")
+    @Expose
+    private CommonOption [] Paths;
+
+    /**
      * Get - 
      * @return ScatterDimension -
      */
@@ -92,6 +99,22 @@ public class AvailableZoneScatterScheduleRule extends AbstractModel {
         this.IsForceSchedule = IsForceSchedule;
     }
 
+    /**
+     * Get - 
+     * @return Paths -
+     */
+    public CommonOption [] getPaths() {
+        return this.Paths;
+    }
+
+    /**
+     * Set -
+     * @param Paths -
+     */
+    public void setPaths(CommonOption [] Paths) {
+        this.Paths = Paths;
+    }
+
     public AvailableZoneScatterScheduleRule() {
     }
 
@@ -109,6 +132,12 @@ public class AvailableZoneScatterScheduleRule extends AbstractModel {
         if (source.IsForceSchedule != null) {
             this.IsForceSchedule = new Boolean(source.IsForceSchedule);
         }
+        if (source.Paths != null) {
+            this.Paths = new CommonOption[source.Paths.length];
+            for (int i = 0; i < source.Paths.length; i++) {
+                this.Paths[i] = new CommonOption(source.Paths[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class AvailableZoneScatterScheduleRule extends AbstractModel {
         this.setParamSimple(map, prefix + "ScatterDimension", this.ScatterDimension);
         this.setParamSimple(map, prefix + "MaxUnbalanceQuantity", this.MaxUnbalanceQuantity);
         this.setParamSimple(map, prefix + "IsForceSchedule", this.IsForceSchedule);
+        this.setParamArrayObj(map, prefix + "Paths.", this.Paths);
 
     }
 }

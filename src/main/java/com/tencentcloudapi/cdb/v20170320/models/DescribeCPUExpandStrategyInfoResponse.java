@@ -48,6 +48,20 @@ public class DescribeCPUExpandStrategyInfoResponse extends AbstractModel {
     private AutoStrategy AutoStrategy;
 
     /**
+    * 按周期扩容策略。
+    */
+    @SerializedName("PeriodStrategy")
+    @Expose
+    private PeriodStrategy PeriodStrategy;
+
+    /**
+    * 按时间段扩容策略
+    */
+    @SerializedName("TimeIntervalStrategy")
+    @Expose
+    private TimeIntervalStrategy TimeIntervalStrategy;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -115,6 +129,38 @@ public class DescribeCPUExpandStrategyInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get 按周期扩容策略。 
+     * @return PeriodStrategy 按周期扩容策略。
+     */
+    public PeriodStrategy getPeriodStrategy() {
+        return this.PeriodStrategy;
+    }
+
+    /**
+     * Set 按周期扩容策略。
+     * @param PeriodStrategy 按周期扩容策略。
+     */
+    public void setPeriodStrategy(PeriodStrategy PeriodStrategy) {
+        this.PeriodStrategy = PeriodStrategy;
+    }
+
+    /**
+     * Get 按时间段扩容策略 
+     * @return TimeIntervalStrategy 按时间段扩容策略
+     */
+    public TimeIntervalStrategy getTimeIntervalStrategy() {
+        return this.TimeIntervalStrategy;
+    }
+
+    /**
+     * Set 按时间段扩容策略
+     * @param TimeIntervalStrategy 按时间段扩容策略
+     */
+    public void setTimeIntervalStrategy(TimeIntervalStrategy TimeIntervalStrategy) {
+        this.TimeIntervalStrategy = TimeIntervalStrategy;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -147,6 +193,12 @@ public class DescribeCPUExpandStrategyInfoResponse extends AbstractModel {
         if (source.AutoStrategy != null) {
             this.AutoStrategy = new AutoStrategy(source.AutoStrategy);
         }
+        if (source.PeriodStrategy != null) {
+            this.PeriodStrategy = new PeriodStrategy(source.PeriodStrategy);
+        }
+        if (source.TimeIntervalStrategy != null) {
+            this.TimeIntervalStrategy = new TimeIntervalStrategy(source.TimeIntervalStrategy);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -160,6 +212,8 @@ public class DescribeCPUExpandStrategyInfoResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
         this.setParamObj(map, prefix + "AutoStrategy.", this.AutoStrategy);
+        this.setParamObj(map, prefix + "PeriodStrategy.", this.PeriodStrategy);
+        this.setParamObj(map, prefix + "TimeIntervalStrategy.", this.TimeIntervalStrategy);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

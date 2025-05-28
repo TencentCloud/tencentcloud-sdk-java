@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.bi.v20220105.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,72 +21,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Data extends AbstractModel {
+public class Filter extends AbstractModel {
 
     /**
-    * 项目Id
+    * 需要过滤的字段。
     */
-    @SerializedName("Id")
+    @SerializedName("Name")
     @Expose
-    private Long Id;
+    private String Name;
 
     /**
-    * url
-注意：此字段可能返回 null，表示取不到有效值。
+    * 字段的过滤值。
     */
-    @SerializedName("EditUrl")
+    @SerializedName("Values")
     @Expose
-    private String EditUrl;
+    private String [] Values;
 
     /**
-     * Get 项目Id 
-     * @return Id 项目Id
+     * Get 需要过滤的字段。 
+     * @return Name 需要过滤的字段。
      */
-    public Long getId() {
-        return this.Id;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 项目Id
-     * @param Id 项目Id
+     * Set 需要过滤的字段。
+     * @param Name 需要过滤的字段。
      */
-    public void setId(Long Id) {
-        this.Id = Id;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get url
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EditUrl url
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 字段的过滤值。 
+     * @return Values 字段的过滤值。
      */
-    public String getEditUrl() {
-        return this.EditUrl;
+    public String [] getValues() {
+        return this.Values;
     }
 
     /**
-     * Set url
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param EditUrl url
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 字段的过滤值。
+     * @param Values 字段的过滤值。
      */
-    public void setEditUrl(String EditUrl) {
-        this.EditUrl = EditUrl;
+    public void setValues(String [] Values) {
+        this.Values = Values;
     }
 
-    public Data() {
+    public Filter() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Data(Data source) {
-        if (source.Id != null) {
-            this.Id = new Long(source.Id);
+    public Filter(Filter source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.EditUrl != null) {
-            this.EditUrl = new String(source.EditUrl);
+        if (source.Values != null) {
+            this.Values = new String[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new String(source.Values[i]);
+            }
         }
     }
 
@@ -95,8 +93,8 @@ public class Data extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
-        this.setParamSimple(map, prefix + "EditUrl", this.EditUrl);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

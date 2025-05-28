@@ -89,14 +89,14 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     private Long AttrRange;
 
     /**
-    * 来源(0 源文件导入 1 网页导入)
+    * 来源（0 从本地文档导入），默认值为0
     */
     @SerializedName("Source")
     @Expose
     private Long Source;
 
     /**
-    * 网页(或自定义链接)地址
+    * 自定义链接地址, IsRefer为true的时候，该值才有意义
     */
     @SerializedName("WebUrl")
     @Expose
@@ -317,32 +317,32 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     }
 
     /**
-     * Get 来源(0 源文件导入 1 网页导入) 
-     * @return Source 来源(0 源文件导入 1 网页导入)
+     * Get 来源（0 从本地文档导入），默认值为0 
+     * @return Source 来源（0 从本地文档导入），默认值为0
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 来源(0 源文件导入 1 网页导入)
-     * @param Source 来源(0 源文件导入 1 网页导入)
+     * Set 来源（0 从本地文档导入），默认值为0
+     * @param Source 来源（0 从本地文档导入），默认值为0
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 网页(或自定义链接)地址 
-     * @return WebUrl 网页(或自定义链接)地址
+     * Get 自定义链接地址, IsRefer为true的时候，该值才有意义 
+     * @return WebUrl 自定义链接地址, IsRefer为true的时候，该值才有意义
      */
     public String getWebUrl() {
         return this.WebUrl;
     }
 
     /**
-     * Set 网页(或自定义链接)地址
-     * @param WebUrl 网页(或自定义链接)地址
+     * Set 自定义链接地址, IsRefer为true的时候，该值才有意义
+     * @param WebUrl 自定义链接地址, IsRefer为true的时候，该值才有意义
      */
     public void setWebUrl(String WebUrl) {
         this.WebUrl = WebUrl;

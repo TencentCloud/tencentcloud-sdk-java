@@ -145,6 +145,13 @@ public class License extends AbstractModel {
     private String LicenseType;
 
     /**
+    * 授权的层级：Master 主授权；Child 子授权/增强型授权
+    */
+    @SerializedName("LicenseLevel")
+    @Expose
+    private String LicenseLevel;
+
+    /**
      * Get License ID 
      * @return LicenseId License ID
      */
@@ -424,6 +431,22 @@ public class License extends AbstractModel {
         this.LicenseType = LicenseType;
     }
 
+    /**
+     * Get 授权的层级：Master 主授权；Child 子授权/增强型授权 
+     * @return LicenseLevel 授权的层级：Master 主授权；Child 子授权/增强型授权
+     */
+    public String getLicenseLevel() {
+        return this.LicenseLevel;
+    }
+
+    /**
+     * Set 授权的层级：Master 主授权；Child 子授权/增强型授权
+     * @param LicenseLevel 授权的层级：Master 主授权；Child 子授权/增强型授权
+     */
+    public void setLicenseLevel(String LicenseLevel) {
+        this.LicenseLevel = LicenseLevel;
+    }
+
     public License() {
     }
 
@@ -486,6 +509,9 @@ public class License extends AbstractModel {
         if (source.LicenseType != null) {
             this.LicenseType = new String(source.LicenseType);
         }
+        if (source.LicenseLevel != null) {
+            this.LicenseLevel = new String(source.LicenseLevel);
+        }
     }
 
 
@@ -510,6 +536,7 @@ public class License extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpirationDate", this.ExpirationDate);
         this.setParamSimple(map, prefix + "LifeSpanUnit", this.LifeSpanUnit);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "LicenseLevel", this.LicenseLevel);
 
     }
 }

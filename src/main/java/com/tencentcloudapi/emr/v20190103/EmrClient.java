@@ -306,6 +306,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询用户组
+     * @param req DescribeGroupsSTDRequest
+     * @return DescribeGroupsSTDResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupsSTDResponse DescribeGroupsSTD(DescribeGroupsSTDRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGroupsSTD", DescribeGroupsSTDResponse.class);
+    }
+
+    /**
      *获取Hbase表级监控数据概览接口
      * @param req DescribeHBaseTableOverviewRequest
      * @return DescribeHBaseTableOverviewResponse
