@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.batch.v20170312.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComputeEnvCreateInfoRequest extends AbstractModel {
+public class DescribeClusterReadOnlyRequest extends AbstractModel {
 
     /**
-    * 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
+    * 集群ID列表
     */
-    @SerializedName("EnvId")
+    @SerializedName("ClusterIds")
     @Expose
-    private String EnvId;
+    private String [] ClusterIds;
 
     /**
-     * Get 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。 
-     * @return EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
+     * Get 集群ID列表 
+     * @return ClusterIds 集群ID列表
      */
-    public String getEnvId() {
-        return this.EnvId;
+    public String [] getClusterIds() {
+        return this.ClusterIds;
     }
 
     /**
-     * Set 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
-     * @param EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
+     * Set 集群ID列表
+     * @param ClusterIds 集群ID列表
      */
-    public void setEnvId(String EnvId) {
-        this.EnvId = EnvId;
+    public void setClusterIds(String [] ClusterIds) {
+        this.ClusterIds = ClusterIds;
     }
 
-    public DescribeComputeEnvCreateInfoRequest() {
+    public DescribeClusterReadOnlyRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeComputeEnvCreateInfoRequest(DescribeComputeEnvCreateInfoRequest source) {
-        if (source.EnvId != null) {
-            this.EnvId = new String(source.EnvId);
+    public DescribeClusterReadOnlyRequest(DescribeClusterReadOnlyRequest source) {
+        if (source.ClusterIds != null) {
+            this.ClusterIds = new String[source.ClusterIds.length];
+            for (int i = 0; i < source.ClusterIds.length; i++) {
+                this.ClusterIds[i] = new String(source.ClusterIds[i]);
+            }
         }
     }
 
@@ -64,7 +67,7 @@ public class DescribeComputeEnvCreateInfoRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
 
     }
 }

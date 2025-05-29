@@ -283,7 +283,7 @@ public class AssetViewVULRiskData extends AbstractModel {
     private String EngineSource;
 
     /**
-    * 新的漏洞风险id(同全网漏洞表的riskid)
+    * 新的漏洞风险id(同全网漏洞表的RiskId)
     */
     @SerializedName("VulRiskId")
     @Expose
@@ -903,16 +903,16 @@ public class AssetViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get 新的漏洞风险id(同全网漏洞表的riskid) 
-     * @return VulRiskId 新的漏洞风险id(同全网漏洞表的riskid)
+     * Get 新的漏洞风险id(同全网漏洞表的RiskId) 
+     * @return VulRiskId 新的漏洞风险id(同全网漏洞表的RiskId)
      */
     public String getVulRiskId() {
         return this.VulRiskId;
     }
 
     /**
-     * Set 新的漏洞风险id(同全网漏洞表的riskid)
-     * @param VulRiskId 新的漏洞风险id(同全网漏洞表的riskid)
+     * Set 新的漏洞风险id(同全网漏洞表的RiskId)
+     * @param VulRiskId 新的漏洞风险id(同全网漏洞表的RiskId)
      */
     public void setVulRiskId(String VulRiskId) {
         this.VulRiskId = VulRiskId;

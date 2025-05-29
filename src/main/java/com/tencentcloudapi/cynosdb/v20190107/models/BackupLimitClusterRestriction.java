@@ -21,93 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
+public class BackupLimitClusterRestriction extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群id
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Binlog文件ID
+    * 下载限制配置
     */
-    @SerializedName("BinlogId")
+    @SerializedName("BackupLimitRestriction")
     @Expose
-    private Long BinlogId;
+    private BackupLimitRestriction BackupLimitRestriction;
 
     /**
-    * 备份下载来源限制条件
-    */
-    @SerializedName("DownloadRestriction")
-    @Expose
-    private BackupLimitRestriction DownloadRestriction;
-
-    /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群id 
+     * @return ClusterId 集群id
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群id
+     * @param ClusterId 集群id
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Binlog文件ID 
-     * @return BinlogId Binlog文件ID
+     * Get 下载限制配置 
+     * @return BackupLimitRestriction 下载限制配置
      */
-    public Long getBinlogId() {
-        return this.BinlogId;
+    public BackupLimitRestriction getBackupLimitRestriction() {
+        return this.BackupLimitRestriction;
     }
 
     /**
-     * Set Binlog文件ID
-     * @param BinlogId Binlog文件ID
+     * Set 下载限制配置
+     * @param BackupLimitRestriction 下载限制配置
      */
-    public void setBinlogId(Long BinlogId) {
-        this.BinlogId = BinlogId;
+    public void setBackupLimitRestriction(BackupLimitRestriction BackupLimitRestriction) {
+        this.BackupLimitRestriction = BackupLimitRestriction;
     }
 
-    /**
-     * Get 备份下载来源限制条件 
-     * @return DownloadRestriction 备份下载来源限制条件
-     */
-    public BackupLimitRestriction getDownloadRestriction() {
-        return this.DownloadRestriction;
-    }
-
-    /**
-     * Set 备份下载来源限制条件
-     * @param DownloadRestriction 备份下载来源限制条件
-     */
-    public void setDownloadRestriction(BackupLimitRestriction DownloadRestriction) {
-        this.DownloadRestriction = DownloadRestriction;
-    }
-
-    public DescribeBinlogDownloadUrlRequest() {
+    public BackupLimitClusterRestriction() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBinlogDownloadUrlRequest(DescribeBinlogDownloadUrlRequest source) {
+    public BackupLimitClusterRestriction(BackupLimitClusterRestriction source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
-        if (source.BinlogId != null) {
-            this.BinlogId = new Long(source.BinlogId);
-        }
-        if (source.DownloadRestriction != null) {
-            this.DownloadRestriction = new BackupLimitRestriction(source.DownloadRestriction);
+        if (source.BackupLimitRestriction != null) {
+            this.BackupLimitRestriction = new BackupLimitRestriction(source.BackupLimitRestriction);
         }
     }
 
@@ -117,8 +91,7 @@ public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "BinlogId", this.BinlogId);
-        this.setParamObj(map, prefix + "DownloadRestriction.", this.DownloadRestriction);
+        this.setParamObj(map, prefix + "BackupLimitRestriction.", this.BackupLimitRestriction);
 
     }
 }

@@ -25,7 +25,6 @@ public class CosRegionInfo extends AbstractModel {
 
     /**
     * cos地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosRegion")
     @Expose
@@ -33,17 +32,14 @@ public class CosRegionInfo extends AbstractModel {
 
     /**
     * 地域描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosRegionName")
     @Expose
     private String CosRegionName;
 
     /**
-     * Get cos地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos地域 
      * @return CosRegion cos地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosRegion() {
         return this.CosRegion;
@@ -51,19 +47,15 @@ public class CosRegionInfo extends AbstractModel {
 
     /**
      * Set cos地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosRegion cos地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosRegion(String CosRegion) {
         this.CosRegion = CosRegion;
     }
 
     /**
-     * Get 地域描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域描述 
      * @return CosRegionName 地域描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosRegionName() {
         return this.CosRegionName;
@@ -71,9 +63,7 @@ public class CosRegionInfo extends AbstractModel {
 
     /**
      * Set 地域描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosRegionName 地域描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosRegionName(String CosRegionName) {
         this.CosRegionName = CosRegionName;

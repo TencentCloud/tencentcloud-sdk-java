@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartPublishCdnStreamResponse extends AbstractModel {
-
-    /**
-    * 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private String TaskId;
+public class CreateAddressUnsubscribeConfigResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class StartPublishCdnStreamResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。 
-     * @return TaskId 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。
-     */
-    public String getTaskId() {
-        return this.TaskId;
-    }
-
-    /**
-     * Set 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。
-     * @param TaskId 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。
-     */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,17 +46,14 @@ public class StartPublishCdnStreamResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public StartPublishCdnStreamResponse() {
+    public CreateAddressUnsubscribeConfigResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StartPublishCdnStreamResponse(StartPublishCdnStreamResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
-        }
+    public CreateAddressUnsubscribeConfigResponse(CreateAddressUnsubscribeConfigResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,7 +64,6 @@ public class StartPublishCdnStreamResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

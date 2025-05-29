@@ -48,6 +48,7 @@ public class FirewallTemplateApplyRecord extends AbstractModel {
     * 应用模板的执行状态。
 
 - SUCCESS：成功
+- RUNNING：运行中
 - FAILED：失败
     */
     @SerializedName("ApplyState")
@@ -134,10 +135,12 @@ public class FirewallTemplateApplyRecord extends AbstractModel {
      * Get 应用模板的执行状态。
 
 - SUCCESS：成功
+- RUNNING：运行中
 - FAILED：失败 
      * @return ApplyState 应用模板的执行状态。
 
 - SUCCESS：成功
+- RUNNING：运行中
 - FAILED：失败
      */
     public String getApplyState() {
@@ -148,10 +151,12 @@ public class FirewallTemplateApplyRecord extends AbstractModel {
      * Set 应用模板的执行状态。
 
 - SUCCESS：成功
+- RUNNING：运行中
 - FAILED：失败
      * @param ApplyState 应用模板的执行状态。
 
 - SUCCESS：成功
+- RUNNING：运行中
 - FAILED：失败
      */
     public void setApplyState(String ApplyState) {

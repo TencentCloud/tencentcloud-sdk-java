@@ -57,6 +57,11 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
 18：完税凭证
 19：海关缴款书
 20：银行回单
+21：网约车行程单
+22：海关进/出口货物报关单
+23：海外发票
+24：购物小票
+25：销货清单
 -1：其他发票
     */
     @SerializedName("Types")
@@ -104,6 +109,13 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
     @SerializedName("EnableItemPolygon")
     @Expose
     private Boolean EnableItemPolygon;
+
+    /**
+    * 是否开启二维码识别。
+    */
+    @SerializedName("EnableQRCode")
+    @Expose
+    private Boolean EnableQRCode;
 
     /**
      * Get 图片的 Base64 值。支持的图片格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。支持的图片大小：所下载图片经Base64编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：单边介于20-10000px之间。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
@@ -157,6 +169,11 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
 18：完税凭证
 19：海关缴款书
 20：银行回单
+21：网约车行程单
+22：海关进/出口货物报关单
+23：海外发票
+24：购物小票
+25：销货清单
 -1：其他发票 
      * @return Types 需要识别的票据类型列表，为空或不填表示识别全部类型。当传入单个类型时，图片均采用该票类型进行处理。
 暂不支持多个参数进行局部控制。
@@ -177,6 +194,11 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
 18：完税凭证
 19：海关缴款书
 20：银行回单
+21：网约车行程单
+22：海关进/出口货物报关单
+23：海外发票
+24：购物小票
+25：销货清单
 -1：其他发票
      */
     public Long [] getTypes() {
@@ -203,6 +225,11 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
 18：完税凭证
 19：海关缴款书
 20：银行回单
+21：网约车行程单
+22：海关进/出口货物报关单
+23：海外发票
+24：购物小票
+25：销货清单
 -1：其他发票
      * @param Types 需要识别的票据类型列表，为空或不填表示识别全部类型。当传入单个类型时，图片均采用该票类型进行处理。
 暂不支持多个参数进行局部控制。
@@ -223,6 +250,11 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
 18：完税凭证
 19：海关缴款书
 20：银行回单
+21：网约车行程单
+22：海关进/出口货物报关单
+23：海外发票
+24：购物小票
+25：销货清单
 -1：其他发票
      */
     public void setTypes(Long [] Types) {
@@ -325,6 +357,22 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
         this.EnableItemPolygon = EnableItemPolygon;
     }
 
+    /**
+     * Get 是否开启二维码识别。 
+     * @return EnableQRCode 是否开启二维码识别。
+     */
+    public Boolean getEnableQRCode() {
+        return this.EnableQRCode;
+    }
+
+    /**
+     * Set 是否开启二维码识别。
+     * @param EnableQRCode 是否开启二维码识别。
+     */
+    public void setEnableQRCode(Boolean EnableQRCode) {
+        this.EnableQRCode = EnableQRCode;
+    }
+
     public RecognizeGeneralInvoiceRequest() {
     }
 
@@ -363,6 +411,9 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
         if (source.EnableItemPolygon != null) {
             this.EnableItemPolygon = new Boolean(source.EnableItemPolygon);
         }
+        if (source.EnableQRCode != null) {
+            this.EnableQRCode = new Boolean(source.EnableQRCode);
+        }
     }
 
 
@@ -379,6 +430,7 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableMultiplePage", this.EnableMultiplePage);
         this.setParamSimple(map, prefix + "EnableCutImage", this.EnableCutImage);
         this.setParamSimple(map, prefix + "EnableItemPolygon", this.EnableItemPolygon);
+        this.setParamSimple(map, prefix + "EnableQRCode", this.EnableQRCode);
 
     }
 }

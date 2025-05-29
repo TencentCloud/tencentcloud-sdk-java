@@ -50,6 +50,17 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *创建地址级退订配置
+     * @param req CreateAddressUnsubscribeConfigRequest
+     * @return CreateAddressUnsubscribeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAddressUnsubscribeConfigResponse CreateAddressUnsubscribeConfig(CreateAddressUnsubscribeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAddressUnsubscribeConfig", CreateAddressUnsubscribeConfigResponse.class);
+    }
+
+    /**
      *添加自定义黑名单
      * @param req CreateCustomBlacklistRequest
      * @return CreateCustomBlacklistResponse
@@ -125,6 +136,17 @@ public class SesClient extends AbstractClient{
     public CreateReceiverDetailWithDataResponse CreateReceiverDetailWithData(CreateReceiverDetailWithDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateReceiverDetailWithData", CreateReceiverDetailWithDataResponse.class);
+    }
+
+    /**
+     *删除地址级退订配置
+     * @param req DeleteAddressUnsubscribeConfigRequest
+     * @return DeleteAddressUnsubscribeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAddressUnsubscribeConfigResponse DeleteAddressUnsubscribeConfig(DeleteAddressUnsubscribeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAddressUnsubscribeConfig", DeleteAddressUnsubscribeConfigResponse.class);
     }
 
     /**
@@ -345,6 +367,17 @@ public class SesClient extends AbstractClient{
     public SendEmailResponse SendEmail(SendEmailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SendEmail", SendEmailResponse.class);
+    }
+
+    /**
+     *用于更新地址级退订配置
+     * @param req UpdateAddressUnsubscribeConfigRequest
+     * @return UpdateAddressUnsubscribeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAddressUnsubscribeConfigResponse UpdateAddressUnsubscribeConfig(UpdateAddressUnsubscribeConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAddressUnsubscribeConfig", UpdateAddressUnsubscribeConfigResponse.class);
     }
 
     /**

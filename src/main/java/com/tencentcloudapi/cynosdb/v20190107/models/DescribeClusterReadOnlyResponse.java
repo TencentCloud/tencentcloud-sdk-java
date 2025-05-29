@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartPublishCdnStreamResponse extends AbstractModel {
+public class DescribeClusterReadOnlyResponse extends AbstractModel {
 
     /**
-    * 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。
+    * 集群只读开关列表
     */
-    @SerializedName("TaskId")
+    @SerializedName("ClusterReadOnlyValues")
     @Expose
-    private String TaskId;
+    private ClusterReadOnlyValue [] ClusterReadOnlyValues;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class StartPublishCdnStreamResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。 
-     * @return TaskId 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。
+     * Get 集群只读开关列表 
+     * @return ClusterReadOnlyValues 集群只读开关列表
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public ClusterReadOnlyValue [] getClusterReadOnlyValues() {
+        return this.ClusterReadOnlyValues;
     }
 
     /**
-     * Set 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。
-     * @param TaskId 用于唯一标识转推任务，由腾讯云服务端生成，后续更新和停止请求都需要携带TaskID参数。
+     * Set 集群只读开关列表
+     * @param ClusterReadOnlyValues 集群只读开关列表
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setClusterReadOnlyValues(ClusterReadOnlyValue [] ClusterReadOnlyValues) {
+        this.ClusterReadOnlyValues = ClusterReadOnlyValues;
     }
 
     /**
@@ -69,16 +69,19 @@ public class StartPublishCdnStreamResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public StartPublishCdnStreamResponse() {
+    public DescribeClusterReadOnlyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StartPublishCdnStreamResponse(StartPublishCdnStreamResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public DescribeClusterReadOnlyResponse(DescribeClusterReadOnlyResponse source) {
+        if (source.ClusterReadOnlyValues != null) {
+            this.ClusterReadOnlyValues = new ClusterReadOnlyValue[source.ClusterReadOnlyValues.length];
+            for (int i = 0; i < source.ClusterReadOnlyValues.length; i++) {
+                this.ClusterReadOnlyValues[i] = new ClusterReadOnlyValue(source.ClusterReadOnlyValues[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +93,7 @@ public class StartPublishCdnStreamResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "ClusterReadOnlyValues.", this.ClusterReadOnlyValues);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.batch.v20170312.models;
+package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComputeEnvCreateInfoRequest extends AbstractModel {
+public class DeleteAddressUnsubscribeConfigRequest extends AbstractModel {
 
     /**
-    * 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
+    * 需要操作的发信地址
     */
-    @SerializedName("EnvId")
+    @SerializedName("Address")
     @Expose
-    private String EnvId;
+    private String Address;
 
     /**
-     * Get 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。 
-     * @return EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
+     * Get 需要操作的发信地址 
+     * @return Address 需要操作的发信地址
      */
-    public String getEnvId() {
-        return this.EnvId;
+    public String getAddress() {
+        return this.Address;
     }
 
     /**
-     * Set 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
-     * @param EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
+     * Set 需要操作的发信地址
+     * @param Address 需要操作的发信地址
      */
-    public void setEnvId(String EnvId) {
-        this.EnvId = EnvId;
+    public void setAddress(String Address) {
+        this.Address = Address;
     }
 
-    public DescribeComputeEnvCreateInfoRequest() {
+    public DeleteAddressUnsubscribeConfigRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeComputeEnvCreateInfoRequest(DescribeComputeEnvCreateInfoRequest source) {
-        if (source.EnvId != null) {
-            this.EnvId = new String(source.EnvId);
+    public DeleteAddressUnsubscribeConfigRequest(DeleteAddressUnsubscribeConfigRequest source) {
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
         }
     }
 
@@ -64,7 +64,7 @@ public class DescribeComputeEnvCreateInfoRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamSimple(map, prefix + "Address", this.Address);
 
     }
 }

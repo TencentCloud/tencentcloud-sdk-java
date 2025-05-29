@@ -31,7 +31,7 @@ public class CreateLaunchTemplateVersionRequest extends AbstractModel {
     private Placement Placement;
 
     /**
-    * 启动模板ID，新版本将基于该实例启动模板ID创建。
+    * 启动模板ID，新版本将基于该实例启动模板ID创建。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
     */
     @SerializedName("LaunchTemplateId")
     @Expose
@@ -151,7 +151,7 @@ public class CreateLaunchTemplateVersionRequest extends AbstractModel {
     private ActionTimer ActionTimer;
 
     /**
-    * 置放群组id，仅支持指定一个。
+    * 置放群组id，仅支持指定一个。可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
@@ -197,7 +197,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
     private String CamRoleName;
 
     /**
-    * 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
+    * 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。该参数可以通过调用 [DescribeHpcClusters](https://cloud.tencent.com/document/api/213/83220) 的返回值中的 `HpcClusterId` 字段来获取。
     */
     @SerializedName("HpcClusterId")
     @Expose
@@ -260,16 +260,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
     }
 
     /**
-     * Get 启动模板ID，新版本将基于该实例启动模板ID创建。 
-     * @return LaunchTemplateId 启动模板ID，新版本将基于该实例启动模板ID创建。
+     * Get 启动模板ID，新版本将基于该实例启动模板ID创建。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。 
+     * @return LaunchTemplateId 启动模板ID，新版本将基于该实例启动模板ID创建。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
      */
     public String getLaunchTemplateId() {
         return this.LaunchTemplateId;
     }
 
     /**
-     * Set 启动模板ID，新版本将基于该实例启动模板ID创建。
-     * @param LaunchTemplateId 启动模板ID，新版本将基于该实例启动模板ID创建。
+     * Set 启动模板ID，新版本将基于该实例启动模板ID创建。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
+     * @param LaunchTemplateId 启动模板ID，新版本将基于该实例启动模板ID创建。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
      */
     public void setLaunchTemplateId(String LaunchTemplateId) {
         this.LaunchTemplateId = LaunchTemplateId;
@@ -536,16 +536,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
     }
 
     /**
-     * Get 置放群组id，仅支持指定一个。 
-     * @return DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     * Get 置放群组id，仅支持指定一个。可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。 
+     * @return DisasterRecoverGroupIds 置放群组id，仅支持指定一个。可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set 置放群组id，仅支持指定一个。
-     * @param DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     * Set 置放群组id，仅支持指定一个。可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
+     * @param DisasterRecoverGroupIds 置放群组id，仅支持指定一个。可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
@@ -648,16 +648,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
     }
 
     /**
-     * Get 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。 
-     * @return HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
+     * Get 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。该参数可以通过调用 [DescribeHpcClusters](https://cloud.tencent.com/document/api/213/83220) 的返回值中的 `HpcClusterId` 字段来获取。 
+     * @return HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。该参数可以通过调用 [DescribeHpcClusters](https://cloud.tencent.com/document/api/213/83220) 的返回值中的 `HpcClusterId` 字段来获取。
      */
     public String getHpcClusterId() {
         return this.HpcClusterId;
     }
 
     /**
-     * Set 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
-     * @param HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
+     * Set 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。该参数可以通过调用 [DescribeHpcClusters](https://cloud.tencent.com/document/api/213/83220) 的返回值中的 `HpcClusterId` 字段来获取。
+     * @param HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。该参数可以通过调用 [DescribeHpcClusters](https://cloud.tencent.com/document/api/213/83220) 的返回值中的 `HpcClusterId` 字段来获取。
      */
     public void setHpcClusterId(String HpcClusterId) {
         this.HpcClusterId = HpcClusterId;

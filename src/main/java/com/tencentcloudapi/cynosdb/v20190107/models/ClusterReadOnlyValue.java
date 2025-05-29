@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
+public class ClusterReadOnlyValue extends AbstractModel {
 
     /**
     * 集群ID
@@ -31,18 +31,11 @@ public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Binlog文件ID
+    * 只读开关值
     */
-    @SerializedName("BinlogId")
+    @SerializedName("ReadOnlyValue")
     @Expose
-    private Long BinlogId;
-
-    /**
-    * 备份下载来源限制条件
-    */
-    @SerializedName("DownloadRestriction")
-    @Expose
-    private BackupLimitRestriction DownloadRestriction;
+    private String ReadOnlyValue;
 
     /**
      * Get 集群ID 
@@ -61,53 +54,34 @@ public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get Binlog文件ID 
-     * @return BinlogId Binlog文件ID
+     * Get 只读开关值 
+     * @return ReadOnlyValue 只读开关值
      */
-    public Long getBinlogId() {
-        return this.BinlogId;
+    public String getReadOnlyValue() {
+        return this.ReadOnlyValue;
     }
 
     /**
-     * Set Binlog文件ID
-     * @param BinlogId Binlog文件ID
+     * Set 只读开关值
+     * @param ReadOnlyValue 只读开关值
      */
-    public void setBinlogId(Long BinlogId) {
-        this.BinlogId = BinlogId;
+    public void setReadOnlyValue(String ReadOnlyValue) {
+        this.ReadOnlyValue = ReadOnlyValue;
     }
 
-    /**
-     * Get 备份下载来源限制条件 
-     * @return DownloadRestriction 备份下载来源限制条件
-     */
-    public BackupLimitRestriction getDownloadRestriction() {
-        return this.DownloadRestriction;
-    }
-
-    /**
-     * Set 备份下载来源限制条件
-     * @param DownloadRestriction 备份下载来源限制条件
-     */
-    public void setDownloadRestriction(BackupLimitRestriction DownloadRestriction) {
-        this.DownloadRestriction = DownloadRestriction;
-    }
-
-    public DescribeBinlogDownloadUrlRequest() {
+    public ClusterReadOnlyValue() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBinlogDownloadUrlRequest(DescribeBinlogDownloadUrlRequest source) {
+    public ClusterReadOnlyValue(ClusterReadOnlyValue source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
-        if (source.BinlogId != null) {
-            this.BinlogId = new Long(source.BinlogId);
-        }
-        if (source.DownloadRestriction != null) {
-            this.DownloadRestriction = new BackupLimitRestriction(source.DownloadRestriction);
+        if (source.ReadOnlyValue != null) {
+            this.ReadOnlyValue = new String(source.ReadOnlyValue);
         }
     }
 
@@ -117,8 +91,7 @@ public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "BinlogId", this.BinlogId);
-        this.setParamObj(map, prefix + "DownloadRestriction.", this.DownloadRestriction);
+        this.setParamSimple(map, prefix + "ReadOnlyValue", this.ReadOnlyValue);
 
     }
 }

@@ -38,6 +38,13 @@ public class DescribeBackupDownloadUrlRequest extends AbstractModel {
     private Long BackupId;
 
     /**
+    * 备份下载来源限制条件
+    */
+    @SerializedName("DownloadRestriction")
+    @Expose
+    private BackupLimitRestriction DownloadRestriction;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -69,6 +76,22 @@ public class DescribeBackupDownloadUrlRequest extends AbstractModel {
         this.BackupId = BackupId;
     }
 
+    /**
+     * Get 备份下载来源限制条件 
+     * @return DownloadRestriction 备份下载来源限制条件
+     */
+    public BackupLimitRestriction getDownloadRestriction() {
+        return this.DownloadRestriction;
+    }
+
+    /**
+     * Set 备份下载来源限制条件
+     * @param DownloadRestriction 备份下载来源限制条件
+     */
+    public void setDownloadRestriction(BackupLimitRestriction DownloadRestriction) {
+        this.DownloadRestriction = DownloadRestriction;
+    }
+
     public DescribeBackupDownloadUrlRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeBackupDownloadUrlRequest extends AbstractModel {
         if (source.BackupId != null) {
             this.BackupId = new Long(source.BackupId);
         }
+        if (source.DownloadRestriction != null) {
+            this.DownloadRestriction = new BackupLimitRestriction(source.DownloadRestriction);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeBackupDownloadUrlRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
+        this.setParamObj(map, prefix + "DownloadRestriction.", this.DownloadRestriction);
 
     }
 }

@@ -122,6 +122,13 @@ FailedOperation.UnKnowError：表示识别失败；
     private ItemPolygonInfo [] ItemPolygon;
 
     /**
+    * 二维码数据。
+    */
+    @SerializedName("QRCode")
+    @Expose
+    private String QRCode;
+
+    /**
      * Get 识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvoice：表示不支持识别；
 FailedOperation.UnKnowError：表示识别失败；
@@ -381,6 +388,22 @@ FailedOperation.UnKnowError：表示识别失败；
         this.ItemPolygon = ItemPolygon;
     }
 
+    /**
+     * Get 二维码数据。 
+     * @return QRCode 二维码数据。
+     */
+    public String getQRCode() {
+        return this.QRCode;
+    }
+
+    /**
+     * Set 二维码数据。
+     * @param QRCode 二维码数据。
+     */
+    public void setQRCode(String QRCode) {
+        this.QRCode = QRCode;
+    }
+
     public InvoiceItem() {
     }
 
@@ -425,6 +448,9 @@ FailedOperation.UnKnowError：表示识别失败；
                 this.ItemPolygon[i] = new ItemPolygonInfo(source.ItemPolygon[i]);
             }
         }
+        if (source.QRCode != null) {
+            this.QRCode = new String(source.QRCode);
+        }
     }
 
 
@@ -443,6 +469,7 @@ FailedOperation.UnKnowError：表示识别失败；
         this.setParamSimple(map, prefix + "CutImage", this.CutImage);
         this.setParamSimple(map, prefix + "SubTypeDescription", this.SubTypeDescription);
         this.setParamArrayObj(map, prefix + "ItemPolygon.", this.ItemPolygon);
+        this.setParamSimple(map, prefix + "QRCode", this.QRCode);
 
     }
 }

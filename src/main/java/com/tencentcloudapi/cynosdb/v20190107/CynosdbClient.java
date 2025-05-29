@@ -468,6 +468,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *该接口用户查询当前地域用户设置的默认备份下载来源限制
+     * @param req DescribeBackupDownloadRestrictionRequest
+     * @return DescribeBackupDownloadRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupDownloadRestriction", DescribeBackupDownloadRestrictionResponse.class);
+    }
+
+    /**
      *本接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
      * @param req DescribeBackupDownloadUrlRequest
      * @return DescribeBackupDownloadUrlResponse
@@ -476,6 +487,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeBackupDownloadUrlResponse DescribeBackupDownloadUrl(DescribeBackupDownloadUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBackupDownloadUrl", DescribeBackupDownloadUrlResponse.class);
+    }
+
+    /**
+     *该接口用户查询当前地域用户级别设置的默认备份下载来源限制
+     * @param req DescribeBackupDownloadUserRestrictionRequest
+     * @return DescribeBackupDownloadUserRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDownloadUserRestrictionResponse DescribeBackupDownloadUserRestriction(DescribeBackupDownloadUserRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupDownloadUserRestriction", DescribeBackupDownloadUserRestrictionResponse.class);
     }
 
     /**
@@ -641,6 +663,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeClusterPasswordComplexityResponse DescribeClusterPasswordComplexity(DescribeClusterPasswordComplexityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterPasswordComplexity", DescribeClusterPasswordComplexityResponse.class);
+    }
+
+    /**
+     *本接口（DescribeClusterReadOnly）用于查询集群只读开关。
+     * @param req DescribeClusterReadOnlyRequest
+     * @return DescribeClusterReadOnlyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterReadOnlyResponse DescribeClusterReadOnly(DescribeClusterReadOnlyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterReadOnly", DescribeClusterReadOnlyResponse.class);
     }
 
     /**
@@ -1183,6 +1216,28 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *该接口用于修改用户当前地域的备份文件限制下载来源，可以设置内外网均可下载、仅内网可下载，或内网指定的vpc、ip可以下载。
+     * @param req ModifyBackupDownloadRestrictionRequest
+     * @return ModifyBackupDownloadRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBackupDownloadRestriction", ModifyBackupDownloadRestrictionResponse.class);
+    }
+
+    /**
+     *该接口用于修改用户当前地域的备份文件限制下载来源，可以设置内外网均可下载、仅内网可下载，或内网指定的vpc、ip可以下载。
+     * @param req ModifyBackupDownloadUserRestrictionRequest
+     * @return ModifyBackupDownloadUserRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupDownloadUserRestrictionResponse ModifyBackupDownloadUserRestriction(ModifyBackupDownloadUserRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBackupDownloadUserRestriction", ModifyBackupDownloadUserRestrictionResponse.class);
+    }
+
+    /**
      *此接口（ModifyBackupName）用于修改备份文件备注名。
      * @param req ModifyBackupNameRequest
      * @return ModifyBackupNameResponse
@@ -1257,6 +1312,17 @@ public class CynosdbClient extends AbstractClient{
     public ModifyClusterPasswordComplexityResponse ModifyClusterPasswordComplexity(ModifyClusterPasswordComplexityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterPasswordComplexity", ModifyClusterPasswordComplexityResponse.class);
+    }
+
+    /**
+     *本接口（ModifyClusterReadOnly）用于修改集群只读开关。
+     * @param req ModifyClusterReadOnlyRequest
+     * @return ModifyClusterReadOnlyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterReadOnlyResponse ModifyClusterReadOnly(ModifyClusterReadOnlyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterReadOnly", ModifyClusterReadOnlyResponse.class);
     }
 
     /**

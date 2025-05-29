@@ -264,6 +264,46 @@ public class SingleInvoiceItem extends AbstractModel {
     private BankSlip BankSlip;
 
     /**
+    * 网约车行程单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OnlineTaxiItinerary")
+    @Expose
+    private OnlineTaxiItinerary OnlineTaxiItinerary;
+
+    /**
+    * 海关进/出口货物报关单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomsDeclaration")
+    @Expose
+    private CustomsDeclaration CustomsDeclaration;
+
+    /**
+    * 海外发票
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OverseasInvoice")
+    @Expose
+    private OverseasInvoice OverseasInvoice;
+
+    /**
+    * 购物小票
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShoppingReceipt")
+    @Expose
+    private ShoppingReceipt ShoppingReceipt;
+
+    /**
+    * 销货清单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SaleInventory")
+    @Expose
+    private SaleInventory SaleInventory;
+
+    /**
      * Get 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VatSpecialInvoice 增值税专用发票
@@ -863,6 +903,106 @@ public class SingleInvoiceItem extends AbstractModel {
         this.BankSlip = BankSlip;
     }
 
+    /**
+     * Get 网约车行程单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OnlineTaxiItinerary 网约车行程单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OnlineTaxiItinerary getOnlineTaxiItinerary() {
+        return this.OnlineTaxiItinerary;
+    }
+
+    /**
+     * Set 网约车行程单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OnlineTaxiItinerary 网约车行程单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOnlineTaxiItinerary(OnlineTaxiItinerary OnlineTaxiItinerary) {
+        this.OnlineTaxiItinerary = OnlineTaxiItinerary;
+    }
+
+    /**
+     * Get 海关进/出口货物报关单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomsDeclaration 海关进/出口货物报关单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CustomsDeclaration getCustomsDeclaration() {
+        return this.CustomsDeclaration;
+    }
+
+    /**
+     * Set 海关进/出口货物报关单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomsDeclaration 海关进/出口货物报关单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomsDeclaration(CustomsDeclaration CustomsDeclaration) {
+        this.CustomsDeclaration = CustomsDeclaration;
+    }
+
+    /**
+     * Get 海外发票
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OverseasInvoice 海外发票
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OverseasInvoice getOverseasInvoice() {
+        return this.OverseasInvoice;
+    }
+
+    /**
+     * Set 海外发票
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OverseasInvoice 海外发票
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOverseasInvoice(OverseasInvoice OverseasInvoice) {
+        this.OverseasInvoice = OverseasInvoice;
+    }
+
+    /**
+     * Get 购物小票
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShoppingReceipt 购物小票
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ShoppingReceipt getShoppingReceipt() {
+        return this.ShoppingReceipt;
+    }
+
+    /**
+     * Set 购物小票
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShoppingReceipt 购物小票
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShoppingReceipt(ShoppingReceipt ShoppingReceipt) {
+        this.ShoppingReceipt = ShoppingReceipt;
+    }
+
+    /**
+     * Get 销货清单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SaleInventory 销货清单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SaleInventory getSaleInventory() {
+        return this.SaleInventory;
+    }
+
+    /**
+     * Set 销货清单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SaleInventory 销货清单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSaleInventory(SaleInventory SaleInventory) {
+        this.SaleInventory = SaleInventory;
+    }
+
     public SingleInvoiceItem() {
     }
 
@@ -961,6 +1101,21 @@ public class SingleInvoiceItem extends AbstractModel {
         if (source.BankSlip != null) {
             this.BankSlip = new BankSlip(source.BankSlip);
         }
+        if (source.OnlineTaxiItinerary != null) {
+            this.OnlineTaxiItinerary = new OnlineTaxiItinerary(source.OnlineTaxiItinerary);
+        }
+        if (source.CustomsDeclaration != null) {
+            this.CustomsDeclaration = new CustomsDeclaration(source.CustomsDeclaration);
+        }
+        if (source.OverseasInvoice != null) {
+            this.OverseasInvoice = new OverseasInvoice(source.OverseasInvoice);
+        }
+        if (source.ShoppingReceipt != null) {
+            this.ShoppingReceipt = new ShoppingReceipt(source.ShoppingReceipt);
+        }
+        if (source.SaleInventory != null) {
+            this.SaleInventory = new SaleInventory(source.SaleInventory);
+        }
     }
 
 
@@ -998,6 +1153,11 @@ public class SingleInvoiceItem extends AbstractModel {
         this.setParamObj(map, prefix + "TaxPayment.", this.TaxPayment);
         this.setParamObj(map, prefix + "CustomsPaymentReceipt.", this.CustomsPaymentReceipt);
         this.setParamObj(map, prefix + "BankSlip.", this.BankSlip);
+        this.setParamObj(map, prefix + "OnlineTaxiItinerary.", this.OnlineTaxiItinerary);
+        this.setParamObj(map, prefix + "CustomsDeclaration.", this.CustomsDeclaration);
+        this.setParamObj(map, prefix + "OverseasInvoice.", this.OverseasInvoice);
+        this.setParamObj(map, prefix + "ShoppingReceipt.", this.ShoppingReceipt);
+        this.setParamObj(map, prefix + "SaleInventory.", this.SaleInventory);
 
     }
 }

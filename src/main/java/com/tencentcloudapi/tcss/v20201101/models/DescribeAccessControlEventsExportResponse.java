@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAccessControlEventsExportResponse extends AbstractModel {
 
     /**
-    * execle下载地址
+    * excel下载地址
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeAccessControlEventsExportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get execle下载地址 
-     * @return DownloadUrl execle下载地址
+     * Get excel下载地址 
+     * @return DownloadUrl excel下载地址
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set execle下载地址
-     * @param DownloadUrl execle下载地址
+     * Set excel下载地址
+     * @param DownloadUrl excel下载地址
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
