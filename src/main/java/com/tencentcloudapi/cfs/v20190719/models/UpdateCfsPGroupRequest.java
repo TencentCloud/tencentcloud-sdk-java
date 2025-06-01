@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateCfsPGroupRequest extends AbstractModel {
 
     /**
-    * 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+    * 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
     */
     @SerializedName("PGroupId")
     @Expose
@@ -45,16 +45,16 @@ public class UpdateCfsPGroupRequest extends AbstractModel {
     private String DescInfo;
 
     /**
-     * Get 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取 
-     * @return PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * Get 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取 
+     * @return PGroupId 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
-     * @param PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * Set 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
+     * @param PGroupId 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;

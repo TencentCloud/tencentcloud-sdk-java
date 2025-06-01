@@ -94,7 +94,7 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
-     *为MQTT实例创建公网接入点
+     *为MQTT实例创建公网接入点，未开启公网的集群可调用。
      * @param req CreateInsPublicEndpointRequest
      * @return CreateInsPublicEndpointResponse
      * @throws TencentCloudSDKException
@@ -396,6 +396,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *根据订阅查询消息
+     * @param req DescribeMessageByTopicRequest
+     * @return DescribeMessageByTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMessageByTopicResponse DescribeMessageByTopic(DescribeMessageByTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMessageByTopic", DescribeMessageByTopicResponse.class);
+    }
+
+    /**
      *根据一级Topic查询消息列表
      * @param req DescribeMessageListRequest
      * @return DescribeMessageListResponse
@@ -467,7 +478,7 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
-     *修改策略规则
+     *修改策略规则，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)
      * @param req ModifyAuthorizationPolicyRequest
      * @return ModifyAuthorizationPolicyResponse
      * @throws TencentCloudSDKException
@@ -523,7 +534,7 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
-     *修改MQTT JWKS 认证器
+     *修改MQTT JWKS 认证器，全量配置修改，需要提交完整的修改后配置。
      * @param req ModifyJWKSAuthenticatorRequest
      * @return ModifyJWKSAuthenticatorResponse
      * @throws TencentCloudSDKException

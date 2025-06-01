@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeMountTargetsRequest extends AbstractModel {
 
     /**
-    * 文件系统 ID，查询文件系统列表可以获得id
+    * 文件系统 ID，[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)可以获得id
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-     * Get 文件系统 ID，查询文件系统列表可以获得id 
-     * @return FileSystemId 文件系统 ID，查询文件系统列表可以获得id
+     * Get 文件系统 ID，[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)可以获得id 
+     * @return FileSystemId 文件系统 ID，[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)可以获得id
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID，查询文件系统列表可以获得id
-     * @param FileSystemId 文件系统 ID，查询文件系统列表可以获得id
+     * Set 文件系统 ID，[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)可以获得id
+     * @param FileSystemId 文件系统 ID，[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)可以获得id
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;

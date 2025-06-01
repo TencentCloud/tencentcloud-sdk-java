@@ -31,14 +31,14 @@ public class PublicAccessRule extends AbstractModel {
     private String IpRule;
 
     /**
-    * 允许或者拒绝
+    * 当前仅支持允许，默认允许（allow）
     */
     @SerializedName("Allow")
     @Expose
     private Boolean Allow;
 
     /**
-    * 备注信息
+    * 备注信息，最多64个字符。
     */
     @SerializedName("Remark")
     @Expose
@@ -61,32 +61,32 @@ public class PublicAccessRule extends AbstractModel {
     }
 
     /**
-     * Get 允许或者拒绝 
-     * @return Allow 允许或者拒绝
+     * Get 当前仅支持允许，默认允许（allow） 
+     * @return Allow 当前仅支持允许，默认允许（allow）
      */
     public Boolean getAllow() {
         return this.Allow;
     }
 
     /**
-     * Set 允许或者拒绝
-     * @param Allow 允许或者拒绝
+     * Set 当前仅支持允许，默认允许（allow）
+     * @param Allow 当前仅支持允许，默认允许（allow）
      */
     public void setAllow(Boolean Allow) {
         this.Allow = Allow;
     }
 
     /**
-     * Get 备注信息 
-     * @return Remark 备注信息
+     * Get 备注信息，最多64个字符。 
+     * @return Remark 备注信息，最多64个字符。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息
-     * @param Remark 备注信息
+     * Set 备注信息，最多64个字符。
+     * @param Remark 备注信息，最多64个字符。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

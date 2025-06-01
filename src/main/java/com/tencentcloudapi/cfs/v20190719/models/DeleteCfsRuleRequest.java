@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteCfsRuleRequest extends AbstractModel {
 
     /**
-    * 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+    * 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
     */
     @SerializedName("PGroupId")
     @Expose
     private String PGroupId;
 
     /**
-    * 规则 ID，通过查询权限组规则接口获取
+    * 规则 ID，可通过[DescribeCfsRules](https://cloud.tencent.com/document/api/582/38156)接口获取
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-     * Get 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取 
-     * @return PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * Get 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取 
+     * @return PGroupId 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
-     * @param PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * Set 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
+     * @param PGroupId 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
     }
 
     /**
-     * Get 规则 ID，通过查询权限组规则接口获取 
-     * @return RuleId 规则 ID，通过查询权限组规则接口获取
+     * Get 规则 ID，可通过[DescribeCfsRules](https://cloud.tencent.com/document/api/582/38156)接口获取 
+     * @return RuleId 规则 ID，可通过[DescribeCfsRules](https://cloud.tencent.com/document/api/582/38156)接口获取
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则 ID，通过查询权限组规则接口获取
-     * @param RuleId 规则 ID，通过查询权限组规则接口获取
+     * Set 规则 ID，可通过[DescribeCfsRules](https://cloud.tencent.com/document/api/582/38156)接口获取
+     * @param RuleId 规则 ID，可通过[DescribeCfsRules](https://cloud.tencent.com/document/api/582/38156)接口获取
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

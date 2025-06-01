@@ -45,7 +45,7 @@ public class CreateAuthorizationPolicyRequest extends AbstractModel {
     private Long PolicyVersion;
 
     /**
-    * 策略优先级，越小越优先，不能重复
+    * 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
     */
     @SerializedName("Priority")
     @Expose
@@ -53,15 +53,16 @@ public class CreateAuthorizationPolicyRequest extends AbstractModel {
 
     /**
     * 决策：
-allow 允许
-deny 拒绝
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
     */
     @SerializedName("Effect")
     @Expose
     private String Effect;
 
     /**
-    * 操作
+    * 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 connect：连接
 pub：发布
 sub：订阅
@@ -71,7 +72,7 @@ sub：订阅
     private String Actions;
 
     /**
-    * 条件-保留消息
+    * 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 1,匹配保留消息；
 2,匹配非保留消息，
 3.匹配保留和非保留消息
@@ -85,13 +86,15 @@ sub：订阅
 0：最多一次
 1：最少一次
 2：精确一次
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
     */
     @SerializedName("Qos")
     @Expose
     private String Qos;
 
     /**
-    * 资源，需要匹配的订阅
+    * 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
     */
     @SerializedName("Resources")
     @Expose
@@ -112,7 +115,7 @@ sub：订阅
     private String ClientId;
 
     /**
-    * 条件：客户端IP地址，支持IP或者CIDR
+    * 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
     */
     @SerializedName("Ip")
     @Expose
@@ -174,16 +177,16 @@ sub：订阅
     }
 
     /**
-     * Get 策略优先级，越小越优先，不能重复 
-     * @return Priority 策略优先级，越小越优先，不能重复
+     * Get 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
+     * @return Priority 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 策略优先级，越小越优先，不能重复
-     * @param Priority 策略优先级，越小越优先，不能重复
+     * Set 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @param Priority 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
@@ -191,11 +194,13 @@ sub：订阅
 
     /**
      * Get 决策：
-allow 允许
-deny 拒绝 
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
      * @return Effect 决策：
-allow 允许
-deny 拒绝
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public String getEffect() {
         return this.Effect;
@@ -203,22 +208,24 @@ deny 拒绝
 
     /**
      * Set 决策：
-allow 允许
-deny 拒绝
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      * @param Effect 决策：
-allow 允许
-deny 拒绝
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public void setEffect(String Effect) {
         this.Effect = Effect;
     }
 
     /**
-     * Get 操作
+     * Get 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 connect：连接
 pub：发布
 sub：订阅 
-     * @return Actions 操作
+     * @return Actions 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 connect：连接
 pub：发布
 sub：订阅
@@ -228,11 +235,11 @@ sub：订阅
     }
 
     /**
-     * Set 操作
+     * Set 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 connect：连接
 pub：发布
 sub：订阅
-     * @param Actions 操作
+     * @param Actions 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 connect：连接
 pub：发布
 sub：订阅
@@ -242,11 +249,11 @@ sub：订阅
     }
 
     /**
-     * Get 条件-保留消息
+     * Get 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 1,匹配保留消息；
 2,匹配非保留消息，
 3.匹配保留和非保留消息 
-     * @return Retain 条件-保留消息
+     * @return Retain 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 1,匹配保留消息；
 2,匹配非保留消息，
 3.匹配保留和非保留消息
@@ -256,11 +263,11 @@ sub：订阅
     }
 
     /**
-     * Set 条件-保留消息
+     * Set 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 1,匹配保留消息；
 2,匹配非保留消息，
 3.匹配保留和非保留消息
-     * @param Retain 条件-保留消息
+     * @param Retain 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 1,匹配保留消息；
 2,匹配非保留消息，
 3.匹配保留和非保留消息
@@ -273,11 +280,13 @@ sub：订阅
      * Get 条件：服务质量
 0：最多一次
 1：最少一次
-2：精确一次 
+2：精确一次
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
      * @return Qos 条件：服务质量
 0：最多一次
 1：最少一次
 2：精确一次
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public String getQos() {
         return this.Qos;
@@ -288,26 +297,32 @@ sub：订阅
 0：最多一次
 1：最少一次
 2：精确一次
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      * @param Qos 条件：服务质量
 0：最多一次
 1：最少一次
 2：精确一次
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public void setQos(String Qos) {
         this.Qos = Qos;
     }
 
     /**
-     * Get 资源，需要匹配的订阅 
-     * @return Resources 资源，需要匹配的订阅
+     * Get 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+ 
+     * @return Resources 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
      */
     public String getResources() {
         return this.Resources;
     }
 
     /**
-     * Set 资源，需要匹配的订阅
-     * @param Resources 资源，需要匹配的订阅
+     * Set 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
+     * @param Resources 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
      */
     public void setResources(String Resources) {
         this.Resources = Resources;
@@ -346,16 +361,16 @@ sub：订阅
     }
 
     /**
-     * Get 条件：客户端IP地址，支持IP或者CIDR 
-     * @return Ip 条件：客户端IP地址，支持IP或者CIDR
+     * Get 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
+     * @return Ip 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 条件：客户端IP地址，支持IP或者CIDR
-     * @param Ip 条件：客户端IP地址，支持IP或者CIDR
+     * Set 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @param Ip 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

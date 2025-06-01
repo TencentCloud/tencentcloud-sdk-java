@@ -38,21 +38,7 @@ public class DescribeMigrationTasksRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * <br><li> taskId
-
-按照【迁移任务id】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> taskName
-
-按照【迁移任务名字】进行模糊搜索过滤。
-类型：String
-
-必选：否
-
-每次请求的Filters的上限为10，Filter.Values的上限为100。
+    * <br><li> taskId按照【迁移任务id】进行过滤。类型：String必选：否<br></li><br><li>  taskName按照【迁移任务名字】进行模糊搜索过滤。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -91,72 +77,16 @@ public class DescribeMigrationTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get <br><li> taskId
-
-按照【迁移任务id】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> taskName
-
-按照【迁移任务名字】进行模糊搜索过滤。
-类型：String
-
-必选：否
-
-每次请求的Filters的上限为10，Filter.Values的上限为100。 
-     * @return Filters <br><li> taskId
-
-按照【迁移任务id】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> taskName
-
-按照【迁移任务名字】进行模糊搜索过滤。
-类型：String
-
-必选：否
-
-每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * Get <br><li> taskId按照【迁移任务id】进行过滤。类型：String必选：否<br></li><br><li>  taskName按照【迁移任务名字】进行模糊搜索过滤。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。</li> 
+     * @return Filters <br><li> taskId按照【迁移任务id】进行过滤。类型：String必选：否<br></li><br><li>  taskName按照【迁移任务名字】进行模糊搜索过滤。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <br><li> taskId
-
-按照【迁移任务id】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> taskName
-
-按照【迁移任务名字】进行模糊搜索过滤。
-类型：String
-
-必选：否
-
-每次请求的Filters的上限为10，Filter.Values的上限为100。
-     * @param Filters <br><li> taskId
-
-按照【迁移任务id】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> taskName
-
-按照【迁移任务名字】进行模糊搜索过滤。
-类型：String
-
-必选：否
-
-每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * Set <br><li> taskId按照【迁移任务id】进行过滤。类型：String必选：否<br></li><br><li>  taskName按照【迁移任务名字】进行模糊搜索过滤。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。</li>
+     * @param Filters <br><li> taskId按照【迁移任务id】进行过滤。类型：String必选：否<br></li><br><li>  taskName按照【迁移任务名字】进行模糊搜索过滤。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

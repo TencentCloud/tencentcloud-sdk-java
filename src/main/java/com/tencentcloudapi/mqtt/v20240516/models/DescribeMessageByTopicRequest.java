@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInsPublicEndpointRequest extends AbstractModel {
+public class DescribeMessageByTopicRequest extends AbstractModel {
 
     /**
     * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
@@ -31,18 +31,25 @@ public class ModifyInsPublicEndpointRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 带宽，单位：Mbps
+    * home/room
     */
-    @SerializedName("Bandwidth")
+    @SerializedName("Topic")
     @Expose
-    private Long Bandwidth;
+    private String Topic;
 
     /**
-    * 公网访问规则
+    * 开始时间，毫秒级时间戳 。
     */
-    @SerializedName("Rules")
+    @SerializedName("StartTime")
     @Expose
-    private PublicAccessRule [] Rules;
+    private Long StartTime;
+
+    /**
+    * 查询消息条数，最大1024，默认100.
+    */
+    @SerializedName("MaxNumber")
+    @Expose
+    private Long MaxNumber;
 
     /**
      * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
@@ -61,56 +68,72 @@ public class ModifyInsPublicEndpointRequest extends AbstractModel {
     }
 
     /**
-     * Get 带宽，单位：Mbps 
-     * @return Bandwidth 带宽，单位：Mbps
+     * Get home/room 
+     * @return Topic home/room
      */
-    public Long getBandwidth() {
-        return this.Bandwidth;
+    public String getTopic() {
+        return this.Topic;
     }
 
     /**
-     * Set 带宽，单位：Mbps
-     * @param Bandwidth 带宽，单位：Mbps
+     * Set home/room
+     * @param Topic home/room
      */
-    public void setBandwidth(Long Bandwidth) {
-        this.Bandwidth = Bandwidth;
+    public void setTopic(String Topic) {
+        this.Topic = Topic;
     }
 
     /**
-     * Get 公网访问规则 
-     * @return Rules 公网访问规则
+     * Get 开始时间，毫秒级时间戳 。 
+     * @return StartTime 开始时间，毫秒级时间戳 。
      */
-    public PublicAccessRule [] getRules() {
-        return this.Rules;
+    public Long getStartTime() {
+        return this.StartTime;
     }
 
     /**
-     * Set 公网访问规则
-     * @param Rules 公网访问规则
+     * Set 开始时间，毫秒级时间戳 。
+     * @param StartTime 开始时间，毫秒级时间戳 。
      */
-    public void setRules(PublicAccessRule [] Rules) {
-        this.Rules = Rules;
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
     }
 
-    public ModifyInsPublicEndpointRequest() {
+    /**
+     * Get 查询消息条数，最大1024，默认100. 
+     * @return MaxNumber 查询消息条数，最大1024，默认100.
+     */
+    public Long getMaxNumber() {
+        return this.MaxNumber;
+    }
+
+    /**
+     * Set 查询消息条数，最大1024，默认100.
+     * @param MaxNumber 查询消息条数，最大1024，默认100.
+     */
+    public void setMaxNumber(Long MaxNumber) {
+        this.MaxNumber = MaxNumber;
+    }
+
+    public DescribeMessageByTopicRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyInsPublicEndpointRequest(ModifyInsPublicEndpointRequest source) {
+    public DescribeMessageByTopicRequest(DescribeMessageByTopicRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.Bandwidth != null) {
-            this.Bandwidth = new Long(source.Bandwidth);
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
         }
-        if (source.Rules != null) {
-            this.Rules = new PublicAccessRule[source.Rules.length];
-            for (int i = 0; i < source.Rules.length; i++) {
-                this.Rules[i] = new PublicAccessRule(source.Rules[i]);
-            }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.MaxNumber != null) {
+            this.MaxNumber = new Long(source.MaxNumber);
         }
     }
 
@@ -120,8 +143,9 @@ public class ModifyInsPublicEndpointRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
-        this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "Topic", this.Topic);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "MaxNumber", this.MaxNumber);
 
     }
 }

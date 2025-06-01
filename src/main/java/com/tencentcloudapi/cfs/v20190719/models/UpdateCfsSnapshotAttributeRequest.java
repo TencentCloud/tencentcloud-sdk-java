@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpdateCfsSnapshotAttributeRequest extends AbstractModel {
 
     /**
-    * 文件系统快照ID,查询文件系统快照列表获取
+    * 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * 文件系统快照名称，与AliveDays 必须填一个
+    * 文件系统快照名称，与AliveDays 必须填一个，快照名称，支持不超过64字符长度，支持中文、数字、_、-
     */
     @SerializedName("SnapshotName")
     @Expose
@@ -45,32 +45,32 @@ public class UpdateCfsSnapshotAttributeRequest extends AbstractModel {
     private Long AliveDays;
 
     /**
-     * Get 文件系统快照ID,查询文件系统快照列表获取 
-     * @return SnapshotId 文件系统快照ID,查询文件系统快照列表获取
+     * Get 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取 
+     * @return SnapshotId 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 文件系统快照ID,查询文件系统快照列表获取
-     * @param SnapshotId 文件系统快照ID,查询文件系统快照列表获取
+     * Set 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
+     * @param SnapshotId 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get 文件系统快照名称，与AliveDays 必须填一个 
-     * @return SnapshotName 文件系统快照名称，与AliveDays 必须填一个
+     * Get 文件系统快照名称，与AliveDays 必须填一个，快照名称，支持不超过64字符长度，支持中文、数字、_、- 
+     * @return SnapshotName 文件系统快照名称，与AliveDays 必须填一个，快照名称，支持不超过64字符长度，支持中文、数字、_、-
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set 文件系统快照名称，与AliveDays 必须填一个
-     * @param SnapshotName 文件系统快照名称，与AliveDays 必须填一个
+     * Set 文件系统快照名称，与AliveDays 必须填一个，快照名称，支持不超过64字符长度，支持中文、数字、_、-
+     * @param SnapshotName 文件系统快照名称，与AliveDays 必须填一个，快照名称，支持不超过64字符长度，支持中文、数字、_、-
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;

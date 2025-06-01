@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeSnapshotOperationLogsRequest extends AbstractModel {
 
     /**
-    * 文件系统快照ID，通过快照创建接口获得
+    * 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * 起始时间
+    * 起始时间，格式“YYYY-MM-DD hh:mm:ss”
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间，格式“YYYY-MM-DD hh:mm:ss”
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 文件系统快照ID，通过快照创建接口获得 
-     * @return SnapshotId 文件系统快照ID，通过快照创建接口获得
+     * Get 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取 
+     * @return SnapshotId 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 文件系统快照ID，通过快照创建接口获得
-     * @param SnapshotId 文件系统快照ID，通过快照创建接口获得
+     * Set 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
+     * @param SnapshotId 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get 起始时间 
-     * @return StartTime 起始时间
+     * Get 起始时间，格式“YYYY-MM-DD hh:mm:ss” 
+     * @return StartTime 起始时间，格式“YYYY-MM-DD hh:mm:ss”
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间
-     * @param StartTime 起始时间
+     * Set 起始时间，格式“YYYY-MM-DD hh:mm:ss”
+     * @param StartTime 起始时间，格式“YYYY-MM-DD hh:mm:ss”
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间，格式“YYYY-MM-DD hh:mm:ss” 
+     * @return EndTime 结束时间，格式“YYYY-MM-DD hh:mm:ss”
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间，格式“YYYY-MM-DD hh:mm:ss”
+     * @param EndTime 结束时间，格式“YYYY-MM-DD hh:mm:ss”
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -24,41 +24,55 @@ import java.util.HashMap;
 public class ModifyJWTAuthenticatorRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 算法：hmac-based，public-key
+    * 签名方式：hmac-based，public-key
     */
     @SerializedName("Algorithm")
     @Expose
     private String Algorithm;
 
     /**
-    * 设备连接时传递jwt的key；
-username-使用用户名字段传递；
-password-使用密码字段传递
+    * 认证字段
+password：对应 MQTT CONNECT Packet 中 password 字段，
+username：对应 MQTT CONNECT Packet 中 username 字段
     */
     @SerializedName("From")
     @Expose
     private String From;
 
     /**
-    * 密码
+    * 密钥，Algorithm为hmac-based需要传递该字段。
     */
     @SerializedName("Secret")
     @Expose
     private String Secret;
 
     /**
-    * 公钥
+    * 公钥，Algorithm为public-key时需要传递该字段。
     */
     @SerializedName("PublicKey")
     @Expose
     private String PublicKey;
+
+    /**
+    * 认证器是否开启：open-启用；close-关闭
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 说明，不能超过 128 个字符
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
 
     /**
     * JSKS文本
@@ -68,104 +82,131 @@ password-使用密码字段传递
     private String Text;
 
     /**
-    * 说明
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
-
-    /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 算法：hmac-based，public-key 
-     * @return Algorithm 算法：hmac-based，public-key
+     * Get 签名方式：hmac-based，public-key 
+     * @return Algorithm 签名方式：hmac-based，public-key
      */
     public String getAlgorithm() {
         return this.Algorithm;
     }
 
     /**
-     * Set 算法：hmac-based，public-key
-     * @param Algorithm 算法：hmac-based，public-key
+     * Set 签名方式：hmac-based，public-key
+     * @param Algorithm 签名方式：hmac-based，public-key
      */
     public void setAlgorithm(String Algorithm) {
         this.Algorithm = Algorithm;
     }
 
     /**
-     * Get 设备连接时传递jwt的key；
-username-使用用户名字段传递；
-password-使用密码字段传递 
-     * @return From 设备连接时传递jwt的key；
-username-使用用户名字段传递；
-password-使用密码字段传递
+     * Get 认证字段
+password：对应 MQTT CONNECT Packet 中 password 字段，
+username：对应 MQTT CONNECT Packet 中 username 字段 
+     * @return From 认证字段
+password：对应 MQTT CONNECT Packet 中 password 字段，
+username：对应 MQTT CONNECT Packet 中 username 字段
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 设备连接时传递jwt的key；
-username-使用用户名字段传递；
-password-使用密码字段传递
-     * @param From 设备连接时传递jwt的key；
-username-使用用户名字段传递；
-password-使用密码字段传递
+     * Set 认证字段
+password：对应 MQTT CONNECT Packet 中 password 字段，
+username：对应 MQTT CONNECT Packet 中 username 字段
+     * @param From 认证字段
+password：对应 MQTT CONNECT Packet 中 password 字段，
+username：对应 MQTT CONNECT Packet 中 username 字段
      */
     public void setFrom(String From) {
         this.From = From;
     }
 
     /**
-     * Get 密码 
-     * @return Secret 密码
+     * Get 密钥，Algorithm为hmac-based需要传递该字段。 
+     * @return Secret 密钥，Algorithm为hmac-based需要传递该字段。
      */
     public String getSecret() {
         return this.Secret;
     }
 
     /**
-     * Set 密码
-     * @param Secret 密码
+     * Set 密钥，Algorithm为hmac-based需要传递该字段。
+     * @param Secret 密钥，Algorithm为hmac-based需要传递该字段。
      */
     public void setSecret(String Secret) {
         this.Secret = Secret;
     }
 
     /**
-     * Get 公钥 
-     * @return PublicKey 公钥
+     * Get 公钥，Algorithm为public-key时需要传递该字段。 
+     * @return PublicKey 公钥，Algorithm为public-key时需要传递该字段。
      */
     public String getPublicKey() {
         return this.PublicKey;
     }
 
     /**
-     * Set 公钥
-     * @param PublicKey 公钥
+     * Set 公钥，Algorithm为public-key时需要传递该字段。
+     * @param PublicKey 公钥，Algorithm为public-key时需要传递该字段。
      */
     public void setPublicKey(String PublicKey) {
         this.PublicKey = PublicKey;
     }
 
     /**
+     * Get 认证器是否开启：open-启用；close-关闭 
+     * @return Status 认证器是否开启：open-启用；close-关闭
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 认证器是否开启：open-启用；close-关闭
+     * @param Status 认证器是否开启：open-启用；close-关闭
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 说明，不能超过 128 个字符 
+     * @return Remark 说明，不能超过 128 个字符
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 说明，不能超过 128 个字符
+     * @param Remark 说明，不能超过 128 个字符
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
      * Get JSKS文本 
      * @return Text JSKS文本
+     * @deprecated
      */
+    @Deprecated
     public String getText() {
         return this.Text;
     }
@@ -173,25 +214,11 @@ password-使用密码字段传递
     /**
      * Set JSKS文本
      * @param Text JSKS文本
+     * @deprecated
      */
+    @Deprecated
     public void setText(String Text) {
         this.Text = Text;
-    }
-
-    /**
-     * Get 说明 
-     * @return Remark 说明
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set 说明
-     * @param Remark 说明
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
     }
 
     public ModifyJWTAuthenticatorRequest() {
@@ -217,11 +244,14 @@ password-使用密码字段传递
         if (source.PublicKey != null) {
             this.PublicKey = new String(source.PublicKey);
         }
-        if (source.Text != null) {
-            this.Text = new String(source.Text);
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
         }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
         }
     }
 
@@ -235,8 +265,9 @@ password-使用密码字段传递
         this.setParamSimple(map, prefix + "From", this.From);
         this.setParamSimple(map, prefix + "Secret", this.Secret);
         this.setParamSimple(map, prefix + "PublicKey", this.PublicKey);
-        this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "Text", this.Text);
 
     }
 }

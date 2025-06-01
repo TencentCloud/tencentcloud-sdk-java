@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyHttpAuthenticatorRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 端点
+    * 服务地址
     */
     @SerializedName("Endpoint")
     @Expose
@@ -45,7 +45,7 @@ public class ModifyHttpAuthenticatorRequest extends AbstractModel {
     private String Status;
 
     /**
-    * 最大并发连接数，默认8，范围：1-20
+    * 最大并发连接数，默认8，范围：1-10
     */
     @SerializedName("Concurrency")
     @Expose
@@ -66,7 +66,7 @@ public class ModifyHttpAuthenticatorRequest extends AbstractModel {
     private Long ReadTimeout;
 
     /**
-    * 说明
+    * 说明，最多支持128个字符。
     */
     @SerializedName("Remark")
     @Expose
@@ -94,32 +94,32 @@ public class ModifyHttpAuthenticatorRequest extends AbstractModel {
     private BodyItem [] Body;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 端点 
-     * @return Endpoint 端点
+     * Get 服务地址 
+     * @return Endpoint 服务地址
      */
     public String getEndpoint() {
         return this.Endpoint;
     }
 
     /**
-     * Set 端点
-     * @param Endpoint 端点
+     * Set 服务地址
+     * @param Endpoint 服务地址
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;
@@ -142,16 +142,16 @@ public class ModifyHttpAuthenticatorRequest extends AbstractModel {
     }
 
     /**
-     * Get 最大并发连接数，默认8，范围：1-20 
-     * @return Concurrency 最大并发连接数，默认8，范围：1-20
+     * Get 最大并发连接数，默认8，范围：1-10 
+     * @return Concurrency 最大并发连接数，默认8，范围：1-10
      */
     public Long getConcurrency() {
         return this.Concurrency;
     }
 
     /**
-     * Set 最大并发连接数，默认8，范围：1-20
-     * @param Concurrency 最大并发连接数，默认8，范围：1-20
+     * Set 最大并发连接数，默认8，范围：1-10
+     * @param Concurrency 最大并发连接数，默认8，范围：1-10
      */
     public void setConcurrency(Long Concurrency) {
         this.Concurrency = Concurrency;
@@ -190,16 +190,16 @@ public class ModifyHttpAuthenticatorRequest extends AbstractModel {
     }
 
     /**
-     * Get 说明 
-     * @return Remark 说明
+     * Get 说明，最多支持128个字符。 
+     * @return Remark 说明，最多支持128个字符。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 说明
-     * @param Remark 说明
+     * Set 说明，最多支持128个字符。
+     * @param Remark 说明，最多支持128个字符。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

@@ -38,7 +38,7 @@ public class DescribeTasksRequest extends AbstractModel {
     private String StartTimeEnd;
 
     /**
-    * 过滤条件
+    * 过滤条件，支持的搜索字段："ClusterId"、"ClusterName"、"InstanceId"、"InstanceName"、"Status"、"TaskId"、"TaskType"
     */
     @SerializedName("Filters")
     @Expose
@@ -91,16 +91,16 @@ public class DescribeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
+     * Get 过滤条件，支持的搜索字段："ClusterId"、"ClusterName"、"InstanceId"、"InstanceName"、"Status"、"TaskId"、"TaskType" 
+     * @return Filters 过滤条件，支持的搜索字段："ClusterId"、"ClusterName"、"InstanceId"、"InstanceName"、"Status"、"TaskId"、"TaskType"
      */
     public QueryFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
+     * Set 过滤条件，支持的搜索字段："ClusterId"、"ClusterName"、"InstanceId"、"InstanceName"、"Status"、"TaskId"、"TaskType"
+     * @param Filters 过滤条件，支持的搜索字段："ClusterId"、"ClusterName"、"InstanceId"、"InstanceName"、"Status"、"TaskId"、"TaskType"
      */
     public void setFilters(QueryFilter [] Filters) {
         this.Filters = Filters;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteUserQuotaRequest extends AbstractModel {
 
     /**
-    * 文件系统 ID，通过查询文件系统接口获取
+    * 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -52,16 +52,16 @@ public class DeleteUserQuotaRequest extends AbstractModel {
     private String DirectoryPath;
 
     /**
-     * Get 文件系统 ID，通过查询文件系统接口获取 
-     * @return FileSystemId 文件系统 ID，通过查询文件系统接口获取
+     * Get 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 
+     * @return FileSystemId 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID，通过查询文件系统接口获取
-     * @param FileSystemId 文件系统 ID，通过查询文件系统接口获取
+     * Set 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+     * @param FileSystemId 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;

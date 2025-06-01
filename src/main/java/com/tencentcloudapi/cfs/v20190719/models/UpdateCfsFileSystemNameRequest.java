@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UpdateCfsFileSystemNameRequest extends AbstractModel {
 
     /**
-    * 文件系统 ID
+    * 文件系统 ID,通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 用户自定义文件系统名称
+    * 用户自定义文件系统名称，64字节内的中文字母数字或者 _,-,与CreationToken 至少填一个
     */
     @SerializedName("FsName")
     @Expose
     private String FsName;
 
     /**
-     * Get 文件系统 ID 
-     * @return FileSystemId 文件系统 ID
+     * Get 文件系统 ID,通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取 
+     * @return FileSystemId 文件系统 ID,通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID
-     * @param FileSystemId 文件系统 ID
+     * Set 文件系统 ID,通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
+     * @param FileSystemId 文件系统 ID,通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 用户自定义文件系统名称 
-     * @return FsName 用户自定义文件系统名称
+     * Get 用户自定义文件系统名称，64字节内的中文字母数字或者 _,-,与CreationToken 至少填一个 
+     * @return FsName 用户自定义文件系统名称，64字节内的中文字母数字或者 _,-,与CreationToken 至少填一个
      */
     public String getFsName() {
         return this.FsName;
     }
 
     /**
-     * Set 用户自定义文件系统名称
-     * @param FsName 用户自定义文件系统名称
+     * Set 用户自定义文件系统名称，64字节内的中文字母数字或者 _,-,与CreationToken 至少填一个
+     * @param FsName 用户自定义文件系统名称，64字节内的中文字母数字或者 _,-,与CreationToken 至少填一个
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;

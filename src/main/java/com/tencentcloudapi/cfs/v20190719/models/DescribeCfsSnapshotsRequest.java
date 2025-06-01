@@ -67,7 +67,7 @@ public class DescribeCfsSnapshotsRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 按创建时间排序取值CreationTime
+    * 按创建时间排序取值
     */
     @SerializedName("OrderField")
     @Expose
@@ -193,16 +193,16 @@ public class DescribeCfsSnapshotsRequest extends AbstractModel {
     }
 
     /**
-     * Get 按创建时间排序取值CreationTime 
-     * @return OrderField 按创建时间排序取值CreationTime
+     * Get 按创建时间排序取值 
+     * @return OrderField 按创建时间排序取值
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 按创建时间排序取值CreationTime
-     * @param OrderField 按创建时间排序取值CreationTime
+     * Set 按创建时间排序取值
+     * @param OrderField 按创建时间排序取值
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;

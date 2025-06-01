@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UpdateCfsFileSystemPGroupRequest extends AbstractModel {
 
     /**
-    * 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+    * 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
     */
     @SerializedName("PGroupId")
     @Expose
     private String PGroupId;
 
     /**
-    * 文件系统 ID，通过查询文件系统接口获取
+    * 文件系统 ID，通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-     * Get 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取 
-     * @return PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * Get 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取 
+     * @return PGroupId 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
-     * @param PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * Set 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
+     * @param PGroupId 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
     }
 
     /**
-     * Get 文件系统 ID，通过查询文件系统接口获取 
-     * @return FileSystemId 文件系统 ID，通过查询文件系统接口获取
+     * Get 文件系统 ID，通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取 
+     * @return FileSystemId 文件系统 ID，通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID，通过查询文件系统接口获取
-     * @param FileSystemId 文件系统 ID，通过查询文件系统接口获取
+     * Set 文件系统 ID，通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
+     * @param FileSystemId 文件系统 ID，通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;

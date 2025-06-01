@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteCfsSnapshotRequest extends AbstractModel {
 
     /**
-    * 文件系统快照id，可通过查询快照列表接口获取
+    * 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -32,30 +32,33 @@ public class DeleteCfsSnapshotRequest extends AbstractModel {
 
     /**
     * 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
     */
     @SerializedName("SnapshotIds")
     @Expose
     private String [] SnapshotIds;
 
     /**
-     * Get 文件系统快照id，可通过查询快照列表接口获取 
-     * @return SnapshotId 文件系统快照id，可通过查询快照列表接口获取
+     * Get 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取 
+     * @return SnapshotId 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 文件系统快照id，可通过查询快照列表接口获取
-     * @param SnapshotId 文件系统快照id，可通过查询快照列表接口获取
+     * Set 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
+     * @param SnapshotId 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项 
+     * Get 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取 
      * @return SnapshotIds 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      */
     public String [] getSnapshotIds() {
         return this.SnapshotIds;
@@ -63,7 +66,9 @@ public class DeleteCfsSnapshotRequest extends AbstractModel {
 
     /**
      * Set 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      * @param SnapshotIds 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      */
     public void setSnapshotIds(String [] SnapshotIds) {
         this.SnapshotIds = SnapshotIds;

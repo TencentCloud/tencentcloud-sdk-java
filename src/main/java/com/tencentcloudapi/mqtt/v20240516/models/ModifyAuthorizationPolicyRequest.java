@@ -24,322 +24,387 @@ import java.util.HashMap;
 public class ModifyAuthorizationPolicyRequest extends AbstractModel {
 
     /**
-    * 策略
+    * 授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 实例ID
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 策略名称
+    * 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-    * 策略版本
+    * 策略版本,默认为1，当前仅支持1
     */
     @SerializedName("PolicyVersion")
     @Expose
     private Long PolicyVersion;
 
     /**
-    * 策略优先级，越小越优先
+    * 策略优先级，越小越优先，不能重复
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * allow、deny
+    * 决策：
+allow 允许
+deny 拒绝
     */
     @SerializedName("Effect")
     @Expose
     private String Effect;
 
     /**
-    * connect、pub、sub
+    * 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+connect：连接
+pub：发布
+sub：订阅
     */
     @SerializedName("Actions")
     @Expose
     private String Actions;
 
     /**
-    * 资源
+    * 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
     */
     @SerializedName("Resources")
     @Expose
     private String Resources;
 
     /**
-    * 用户名
+    * 条件-用户名
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 1.匹配保留消息；2.匹配非保留消息；3.匹配所有消息
+    * 条件-保留消息
+1,匹配保留消息；
+2,匹配非保留消息，
+3.匹配保留和非保留消息
     */
     @SerializedName("Retain")
     @Expose
     private Long Retain;
 
     /**
-    * 客户端
+    * 条件：客户端ID，支持正则
     */
     @SerializedName("ClientId")
     @Expose
     private String ClientId;
 
     /**
-    * IP
+    * 条件：客户端IP地址，支持IP或者CIDR
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 0、1、2
+    * 条件：服务质量
+0：最多一次
+1：最少一次
+2：精确一次
     */
     @SerializedName("Qos")
     @Expose
     private String Qos;
 
     /**
-    * 备注信息
+    * 备注信息，最长 128 字符
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 策略 
-     * @return Id 策略
+     * Get 授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取 
+     * @return Id 授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 策略
-     * @param Id 策略
+     * Set 授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
+     * @param Id 授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 策略名称 
-     * @return PolicyName 策略名称
+     * Get 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。 
+     * @return PolicyName 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 策略名称
-     * @param PolicyName 策略名称
+     * Set 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
+     * @param PolicyName 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 策略版本 
-     * @return PolicyVersion 策略版本
+     * Get 策略版本,默认为1，当前仅支持1 
+     * @return PolicyVersion 策略版本,默认为1，当前仅支持1
      */
     public Long getPolicyVersion() {
         return this.PolicyVersion;
     }
 
     /**
-     * Set 策略版本
-     * @param PolicyVersion 策略版本
+     * Set 策略版本,默认为1，当前仅支持1
+     * @param PolicyVersion 策略版本,默认为1，当前仅支持1
      */
     public void setPolicyVersion(Long PolicyVersion) {
         this.PolicyVersion = PolicyVersion;
     }
 
     /**
-     * Get 策略优先级，越小越优先 
-     * @return Priority 策略优先级，越小越优先
+     * Get 策略优先级，越小越优先，不能重复 
+     * @return Priority 策略优先级，越小越优先，不能重复
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 策略优先级，越小越优先
-     * @param Priority 策略优先级，越小越优先
+     * Set 策略优先级，越小越优先，不能重复
+     * @param Priority 策略优先级，越小越优先，不能重复
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get allow、deny 
-     * @return Effect allow、deny
+     * Get 决策：
+allow 允许
+deny 拒绝 
+     * @return Effect 决策：
+allow 允许
+deny 拒绝
      */
     public String getEffect() {
         return this.Effect;
     }
 
     /**
-     * Set allow、deny
-     * @param Effect allow、deny
+     * Set 决策：
+allow 允许
+deny 拒绝
+     * @param Effect 决策：
+allow 允许
+deny 拒绝
      */
     public void setEffect(String Effect) {
         this.Effect = Effect;
     }
 
     /**
-     * Get connect、pub、sub 
-     * @return Actions connect、pub、sub
+     * Get 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+connect：连接
+pub：发布
+sub：订阅 
+     * @return Actions 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+connect：连接
+pub：发布
+sub：订阅
      */
     public String getActions() {
         return this.Actions;
     }
 
     /**
-     * Set connect、pub、sub
-     * @param Actions connect、pub、sub
+     * Set 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+connect：连接
+pub：发布
+sub：订阅
+     * @param Actions 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+connect：连接
+pub：发布
+sub：订阅
      */
     public void setActions(String Actions) {
         this.Actions = Actions;
     }
 
     /**
-     * Get 资源 
-     * @return Resources 资源
+     * Get 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+ 
+     * @return Resources 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
      */
     public String getResources() {
         return this.Resources;
     }
 
     /**
-     * Set 资源
-     * @param Resources 资源
+     * Set 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
+     * @param Resources 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
      */
     public void setResources(String Resources) {
         this.Resources = Resources;
     }
 
     /**
-     * Get 用户名 
-     * @return Username 用户名
+     * Get 条件-用户名 
+     * @return Username 条件-用户名
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 用户名
-     * @param Username 用户名
+     * Set 条件-用户名
+     * @param Username 条件-用户名
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 1.匹配保留消息；2.匹配非保留消息；3.匹配所有消息 
-     * @return Retain 1.匹配保留消息；2.匹配非保留消息；3.匹配所有消息
+     * Get 条件-保留消息
+1,匹配保留消息；
+2,匹配非保留消息，
+3.匹配保留和非保留消息 
+     * @return Retain 条件-保留消息
+1,匹配保留消息；
+2,匹配非保留消息，
+3.匹配保留和非保留消息
      */
     public Long getRetain() {
         return this.Retain;
     }
 
     /**
-     * Set 1.匹配保留消息；2.匹配非保留消息；3.匹配所有消息
-     * @param Retain 1.匹配保留消息；2.匹配非保留消息；3.匹配所有消息
+     * Set 条件-保留消息
+1,匹配保留消息；
+2,匹配非保留消息，
+3.匹配保留和非保留消息
+     * @param Retain 条件-保留消息
+1,匹配保留消息；
+2,匹配非保留消息，
+3.匹配保留和非保留消息
      */
     public void setRetain(Long Retain) {
         this.Retain = Retain;
     }
 
     /**
-     * Get 客户端 
-     * @return ClientId 客户端
+     * Get 条件：客户端ID，支持正则 
+     * @return ClientId 条件：客户端ID，支持正则
      */
     public String getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set 客户端
-     * @param ClientId 客户端
+     * Set 条件：客户端ID，支持正则
+     * @param ClientId 条件：客户端ID，支持正则
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
     }
 
     /**
-     * Get IP 
-     * @return Ip IP
+     * Get 条件：客户端IP地址，支持IP或者CIDR 
+     * @return Ip 条件：客户端IP地址，支持IP或者CIDR
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP
-     * @param Ip IP
+     * Set 条件：客户端IP地址，支持IP或者CIDR
+     * @param Ip 条件：客户端IP地址，支持IP或者CIDR
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 0、1、2 
-     * @return Qos 0、1、2
+     * Get 条件：服务质量
+0：最多一次
+1：最少一次
+2：精确一次 
+     * @return Qos 条件：服务质量
+0：最多一次
+1：最少一次
+2：精确一次
      */
     public String getQos() {
         return this.Qos;
     }
 
     /**
-     * Set 0、1、2
-     * @param Qos 0、1、2
+     * Set 条件：服务质量
+0：最多一次
+1：最少一次
+2：精确一次
+     * @param Qos 条件：服务质量
+0：最多一次
+1：最少一次
+2：精确一次
      */
     public void setQos(String Qos) {
         this.Qos = Qos;
     }
 
     /**
-     * Get 备注信息 
-     * @return Remark 备注信息
+     * Get 备注信息，最长 128 字符 
+     * @return Remark 备注信息，最长 128 字符
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息
-     * @param Remark 备注信息
+     * Set 备注信息，最长 128 字符
+     * @param Remark 备注信息，最长 128 字符
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

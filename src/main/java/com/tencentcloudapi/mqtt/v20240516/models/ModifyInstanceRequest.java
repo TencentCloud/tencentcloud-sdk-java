@@ -38,7 +38,7 @@ public class ModifyInstanceRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 要修改的备注信息，最多64个字符。
+    * 要修改的备注信息，最多128个字符。
     */
     @SerializedName("Remark")
     @Expose
@@ -108,16 +108,16 @@ API：手动通过API注册
     }
 
     /**
-     * Get 要修改的备注信息，最多64个字符。 
-     * @return Remark 要修改的备注信息，最多64个字符。
+     * Get 要修改的备注信息，最多128个字符。 
+     * @return Remark 要修改的备注信息，最多128个字符。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 要修改的备注信息，最多64个字符。
-     * @param Remark 要修改的备注信息，最多64个字符。
+     * Set 要修改的备注信息，最多128个字符。
+     * @param Remark 要修改的备注信息，最多128个字符。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -150,7 +150,9 @@ API：手动通过API注册
      * @return DeviceCertificateProvisionType 客户端证书注册方式：
 JITP：自动注册
 API：手动通过API注册
+     * @deprecated
      */
+    @Deprecated
     public String getDeviceCertificateProvisionType() {
         return this.DeviceCertificateProvisionType;
     }
@@ -162,7 +164,9 @@ API：手动通过API注册
      * @param DeviceCertificateProvisionType 客户端证书注册方式：
 JITP：自动注册
 API：手动通过API注册
+     * @deprecated
      */
+    @Deprecated
     public void setDeviceCertificateProvisionType(String DeviceCertificateProvisionType) {
         this.DeviceCertificateProvisionType = DeviceCertificateProvisionType;
     }
@@ -170,7 +174,9 @@ API：手动通过API注册
     /**
      * Get 自动注册证书是否自动激活 
      * @return AutomaticActivation 自动注册证书是否自动激活
+     * @deprecated
      */
+    @Deprecated
     public Boolean getAutomaticActivation() {
         return this.AutomaticActivation;
     }
@@ -178,7 +184,9 @@ API：手动通过API注册
     /**
      * Set 自动注册证书是否自动激活
      * @param AutomaticActivation 自动注册证书是否自动激活
+     * @deprecated
      */
+    @Deprecated
     public void setAutomaticActivation(Boolean AutomaticActivation) {
         this.AutomaticActivation = AutomaticActivation;
     }

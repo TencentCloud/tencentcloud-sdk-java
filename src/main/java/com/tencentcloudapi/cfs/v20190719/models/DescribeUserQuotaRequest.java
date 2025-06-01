@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUserQuotaRequest extends AbstractModel {
 
     /**
-    * 文件系统 ID,通过查询文件系统列表获取
+    * 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -54,16 +54,16 @@ UserId- Array of String - 是否必填：否 -（过滤条件）按用户id过�
     private Long Limit;
 
     /**
-     * Get 文件系统 ID,通过查询文件系统列表获取 
-     * @return FileSystemId 文件系统 ID,通过查询文件系统列表获取
+     * Get 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取 
+     * @return FileSystemId 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID,通过查询文件系统列表获取
-     * @param FileSystemId 文件系统 ID,通过查询文件系统列表获取
+     * Set 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
+     * @param FileSystemId 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;

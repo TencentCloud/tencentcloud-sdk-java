@@ -24,25 +24,11 @@ import java.util.HashMap;
 public class ModifyInstanceCertBindingRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-
-    /**
-    * 服务端证书id
-    */
-    @SerializedName("SSLServerCertId")
-    @Expose
-    private String SSLServerCertId;
-
-    /**
-    * CA证书id
-    */
-    @SerializedName("SSLCaCertId")
-    @Expose
-    private String SSLCaCertId;
 
     /**
     * 加密通信方式
@@ -55,9 +41,24 @@ BYOC：一设备一证书认证
     private String X509Mode;
 
     /**
+    * 服务端证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS或BYOC时为必填。
+    */
+    @SerializedName("SSLServerCertId")
+    @Expose
+    private String SSLServerCertId;
+
+    /**
+    * CA证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS时为必填
+    */
+    @SerializedName("SSLCaCertId")
+    @Expose
+    private String SSLCaCertId;
+
+    /**
     * 设备证书注册类型：
-JITP，自动注册；
-MANUAL 手动注册
+JITP：自动注册；
+API：手动注册
+默认值：API
     */
     @SerializedName("DeviceCertificateProvisionType")
     @Expose
@@ -71,51 +72,19 @@ MANUAL 手动注册
     private Boolean AutomaticActivation;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get 服务端证书id 
-     * @return SSLServerCertId 服务端证书id
-     */
-    public String getSSLServerCertId() {
-        return this.SSLServerCertId;
-    }
-
-    /**
-     * Set 服务端证书id
-     * @param SSLServerCertId 服务端证书id
-     */
-    public void setSSLServerCertId(String SSLServerCertId) {
-        this.SSLServerCertId = SSLServerCertId;
-    }
-
-    /**
-     * Get CA证书id 
-     * @return SSLCaCertId CA证书id
-     */
-    public String getSSLCaCertId() {
-        return this.SSLCaCertId;
-    }
-
-    /**
-     * Set CA证书id
-     * @param SSLCaCertId CA证书id
-     */
-    public void setSSLCaCertId(String SSLCaCertId) {
-        this.SSLCaCertId = SSLCaCertId;
     }
 
     /**
@@ -147,12 +116,46 @@ BYOC：一设备一证书认证
     }
 
     /**
+     * Get 服务端证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS或BYOC时为必填。 
+     * @return SSLServerCertId 服务端证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS或BYOC时为必填。
+     */
+    public String getSSLServerCertId() {
+        return this.SSLServerCertId;
+    }
+
+    /**
+     * Set 服务端证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS或BYOC时为必填。
+     * @param SSLServerCertId 服务端证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS或BYOC时为必填。
+     */
+    public void setSSLServerCertId(String SSLServerCertId) {
+        this.SSLServerCertId = SSLServerCertId;
+    }
+
+    /**
+     * Get CA证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS时为必填 
+     * @return SSLCaCertId CA证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS时为必填
+     */
+    public String getSSLCaCertId() {
+        return this.SSLCaCertId;
+    }
+
+    /**
+     * Set CA证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS时为必填
+     * @param SSLCaCertId CA证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS时为必填
+     */
+    public void setSSLCaCertId(String SSLCaCertId) {
+        this.SSLCaCertId = SSLCaCertId;
+    }
+
+    /**
      * Get 设备证书注册类型：
-JITP，自动注册；
-MANUAL 手动注册 
+JITP：自动注册；
+API：手动注册
+默认值：API 
      * @return DeviceCertificateProvisionType 设备证书注册类型：
-JITP，自动注册；
-MANUAL 手动注册
+JITP：自动注册；
+API：手动注册
+默认值：API
      */
     public String getDeviceCertificateProvisionType() {
         return this.DeviceCertificateProvisionType;
@@ -160,11 +163,13 @@ MANUAL 手动注册
 
     /**
      * Set 设备证书注册类型：
-JITP，自动注册；
-MANUAL 手动注册
+JITP：自动注册；
+API：手动注册
+默认值：API
      * @param DeviceCertificateProvisionType 设备证书注册类型：
-JITP，自动注册；
-MANUAL 手动注册
+JITP：自动注册；
+API：手动注册
+默认值：API
      */
     public void setDeviceCertificateProvisionType(String DeviceCertificateProvisionType) {
         this.DeviceCertificateProvisionType = DeviceCertificateProvisionType;
@@ -197,14 +202,14 @@ MANUAL 手动注册
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.X509Mode != null) {
+            this.X509Mode = new String(source.X509Mode);
+        }
         if (source.SSLServerCertId != null) {
             this.SSLServerCertId = new String(source.SSLServerCertId);
         }
         if (source.SSLCaCertId != null) {
             this.SSLCaCertId = new String(source.SSLCaCertId);
-        }
-        if (source.X509Mode != null) {
-            this.X509Mode = new String(source.X509Mode);
         }
         if (source.DeviceCertificateProvisionType != null) {
             this.DeviceCertificateProvisionType = new String(source.DeviceCertificateProvisionType);
@@ -220,9 +225,9 @@ MANUAL 手动注册
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "X509Mode", this.X509Mode);
         this.setParamSimple(map, prefix + "SSLServerCertId", this.SSLServerCertId);
         this.setParamSimple(map, prefix + "SSLCaCertId", this.SSLCaCertId);
-        this.setParamSimple(map, prefix + "X509Mode", this.X509Mode);
         this.setParamSimple(map, prefix + "DeviceCertificateProvisionType", this.DeviceCertificateProvisionType);
         this.setParamSimple(map, prefix + "AutomaticActivation", this.AutomaticActivation);
 

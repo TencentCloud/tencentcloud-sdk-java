@@ -28,6 +28,7 @@ public class DescribeInstanceListRequest extends AbstractModel {
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
 InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+注意：配置TagFilters时该查询条件不生效。
     */
     @SerializedName("Filters")
     @Expose
@@ -58,11 +59,13 @@ InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，M
      * Get 查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
-InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中） 
+InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+注意：配置TagFilters时该查询条件不生效。 
      * @return Filters 查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
 InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+注意：配置TagFilters时该查询条件不生效。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -73,10 +76,12 @@ InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，M
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
 InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+注意：配置TagFilters时该查询条件不生效。
      * @param Filters 查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
 InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+注意：配置TagFilters时该查询条件不生效。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

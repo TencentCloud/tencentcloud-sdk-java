@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class CreateHttpAuthenticatorRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * jwks端点
+    * jwks服务地址
     */
     @SerializedName("Endpoint")
     @Expose
     private String Endpoint;
 
     /**
-    * 最大并发连接数，默认8，范围：1-20
+    * 最大并发连接数，默认8，范围：1-10
     */
     @SerializedName("Concurrency")
     @Expose
     private Long Concurrency;
 
     /**
-    * 网络请求方法 Get 或 Post，默认post
+    * 网络请求方法 GET 或 POST，默认POST
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-    * 认证器是否开启：open-启用；close-关闭
+    * 认证器是否开启：open-启用；close-关闭，默认open-启用
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 说明
+    * 说明，最多支持128个字符。
     */
     @SerializedName("Remark")
     @Expose
@@ -94,96 +94,96 @@ public class CreateHttpAuthenticatorRequest extends AbstractModel {
     private BodyItem [] Body;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
+     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get jwks端点 
-     * @return Endpoint jwks端点
+     * Get jwks服务地址 
+     * @return Endpoint jwks服务地址
      */
     public String getEndpoint() {
         return this.Endpoint;
     }
 
     /**
-     * Set jwks端点
-     * @param Endpoint jwks端点
+     * Set jwks服务地址
+     * @param Endpoint jwks服务地址
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;
     }
 
     /**
-     * Get 最大并发连接数，默认8，范围：1-20 
-     * @return Concurrency 最大并发连接数，默认8，范围：1-20
+     * Get 最大并发连接数，默认8，范围：1-10 
+     * @return Concurrency 最大并发连接数，默认8，范围：1-10
      */
     public Long getConcurrency() {
         return this.Concurrency;
     }
 
     /**
-     * Set 最大并发连接数，默认8，范围：1-20
-     * @param Concurrency 最大并发连接数，默认8，范围：1-20
+     * Set 最大并发连接数，默认8，范围：1-10
+     * @param Concurrency 最大并发连接数，默认8，范围：1-10
      */
     public void setConcurrency(Long Concurrency) {
         this.Concurrency = Concurrency;
     }
 
     /**
-     * Get 网络请求方法 Get 或 Post，默认post 
-     * @return Method 网络请求方法 Get 或 Post，默认post
+     * Get 网络请求方法 GET 或 POST，默认POST 
+     * @return Method 网络请求方法 GET 或 POST，默认POST
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 网络请求方法 Get 或 Post，默认post
-     * @param Method 网络请求方法 Get 或 Post，默认post
+     * Set 网络请求方法 GET 或 POST，默认POST
+     * @param Method 网络请求方法 GET 或 POST，默认POST
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 认证器是否开启：open-启用；close-关闭 
-     * @return Status 认证器是否开启：open-启用；close-关闭
+     * Get 认证器是否开启：open-启用；close-关闭，默认open-启用 
+     * @return Status 认证器是否开启：open-启用；close-关闭，默认open-启用
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 认证器是否开启：open-启用；close-关闭
-     * @param Status 认证器是否开启：open-启用；close-关闭
+     * Set 认证器是否开启：open-启用；close-关闭，默认open-启用
+     * @param Status 认证器是否开启：open-启用；close-关闭，默认open-启用
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 说明 
-     * @return Remark 说明
+     * Get 说明，最多支持128个字符。 
+     * @return Remark 说明，最多支持128个字符。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 说明
-     * @param Remark 说明
+     * Set 说明，最多支持128个字符。
+     * @param Remark 说明，最多支持128个字符。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

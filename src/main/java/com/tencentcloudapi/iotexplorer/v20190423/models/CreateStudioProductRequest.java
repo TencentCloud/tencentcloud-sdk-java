@@ -45,7 +45,7 @@ public class CreateStudioProductRequest extends AbstractModel {
     private Long ProductType;
 
     /**
-    * 加密类型 ，1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+    * 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
     */
     @SerializedName("EncryptionType")
     @Expose
@@ -142,16 +142,16 @@ public class CreateStudioProductRequest extends AbstractModel {
     }
 
     /**
-     * Get 加密类型 ，1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式 
-     * @return EncryptionType 加密类型 ，1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+     * Get 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式 
+     * @return EncryptionType 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
      */
     public String getEncryptionType() {
         return this.EncryptionType;
     }
 
     /**
-     * Set 加密类型 ，1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
-     * @param EncryptionType 加密类型 ，1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+     * Set 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+     * @param EncryptionType 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
      */
     public void setEncryptionType(String EncryptionType) {
         this.EncryptionType = EncryptionType;

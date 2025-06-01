@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class QueryFilter extends AbstractModel {
 
     /**
-    * 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
-    */
-    @SerializedName("Names")
-    @Expose
-    private String [] Names;
-
-    /**
     * 搜索字符串
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
+
+    /**
+    * 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
+    */
+    @SerializedName("Names")
+    @Expose
+    private String [] Names;
 
     /**
     * 是否精确匹配
@@ -59,22 +59,6 @@ public class QueryFilter extends AbstractModel {
     private String Operator;
 
     /**
-     * Get 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip" 
-     * @return Names 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
-     */
-    public String [] getNames() {
-        return this.Names;
-    }
-
-    /**
-     * Set 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
-     * @param Names 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
-     */
-    public void setNames(String [] Names) {
-        this.Names = Names;
-    }
-
-    /**
      * Get 搜索字符串 
      * @return Values 搜索字符串
      */
@@ -88,6 +72,22 @@ public class QueryFilter extends AbstractModel {
      */
     public void setValues(String [] Values) {
         this.Values = Values;
+    }
+
+    /**
+     * Get 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip" 
+     * @return Names 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
+     */
+    public String [] getNames() {
+        return this.Names;
+    }
+
+    /**
+     * Set 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
+     * @param Names 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
+     */
+    public void setNames(String [] Names) {
+        this.Names = Names;
     }
 
     /**
@@ -146,16 +146,16 @@ public class QueryFilter extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public QueryFilter(QueryFilter source) {
-        if (source.Names != null) {
-            this.Names = new String[source.Names.length];
-            for (int i = 0; i < source.Names.length; i++) {
-                this.Names[i] = new String(source.Names[i]);
-            }
-        }
         if (source.Values != null) {
             this.Values = new String[source.Values.length];
             for (int i = 0; i < source.Values.length; i++) {
                 this.Values[i] = new String(source.Values[i]);
+            }
+        }
+        if (source.Names != null) {
+            this.Names = new String[source.Names.length];
+            for (int i = 0; i < source.Names.length; i++) {
+                this.Names[i] = new String(source.Names[i]);
             }
         }
         if (source.ExactMatch != null) {
@@ -174,8 +174,8 @@ public class QueryFilter extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Names.", this.Names);
         this.setParamArraySimple(map, prefix + "Values.", this.Values);
+        this.setParamArraySimple(map, prefix + "Names.", this.Names);
         this.setParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Operator", this.Operator);

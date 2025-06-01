@@ -172,7 +172,9 @@ public class MQTTMessageItem extends AbstractModel {
     /**
      * Get 死信重发次数	 
      * @return DeadLetterResendTimes 死信重发次数	
+     * @deprecated
      */
+    @Deprecated
     public Long getDeadLetterResendTimes() {
         return this.DeadLetterResendTimes;
     }
@@ -180,7 +182,9 @@ public class MQTTMessageItem extends AbstractModel {
     /**
      * Set 死信重发次数	
      * @param DeadLetterResendTimes 死信重发次数	
+     * @deprecated
      */
+    @Deprecated
     public void setDeadLetterResendTimes(Long DeadLetterResendTimes) {
         this.DeadLetterResendTimes = DeadLetterResendTimes;
     }
@@ -188,7 +192,9 @@ public class MQTTMessageItem extends AbstractModel {
     /**
      * Get 死信重发成功次数 
      * @return DeadLetterResendSuccessTimes 死信重发成功次数
+     * @deprecated
      */
+    @Deprecated
     public Long getDeadLetterResendSuccessTimes() {
         return this.DeadLetterResendSuccessTimes;
     }
@@ -196,7 +202,9 @@ public class MQTTMessageItem extends AbstractModel {
     /**
      * Set 死信重发成功次数
      * @param DeadLetterResendSuccessTimes 死信重发成功次数
+     * @deprecated
      */
+    @Deprecated
     public void setDeadLetterResendSuccessTimes(Long DeadLetterResendSuccessTimes) {
         this.DeadLetterResendSuccessTimes = DeadLetterResendSuccessTimes;
     }
@@ -204,7 +212,9 @@ public class MQTTMessageItem extends AbstractModel {
     /**
      * Get 子topic 
      * @return SubTopic 子topic
+     * @deprecated
      */
+    @Deprecated
     public String getSubTopic() {
         return this.SubTopic;
     }
@@ -212,7 +222,9 @@ public class MQTTMessageItem extends AbstractModel {
     /**
      * Set 子topic
      * @param SubTopic 子topic
+     * @deprecated
      */
+    @Deprecated
     public void setSubTopic(String SubTopic) {
         this.SubTopic = SubTopic;
     }

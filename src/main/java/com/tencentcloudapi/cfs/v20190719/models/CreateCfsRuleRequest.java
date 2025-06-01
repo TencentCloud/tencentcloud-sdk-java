@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCfsRuleRequest extends AbstractModel {
 
     /**
-    * 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+    * 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
     */
     @SerializedName("PGroupId")
     @Expose
@@ -52,7 +52,7 @@ public class CreateCfsRuleRequest extends AbstractModel {
     private String RWPermission;
 
     /**
-    * 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。
+    * 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。默认值为root_squash
 all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
 no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
 root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
@@ -64,16 +64,16 @@ no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 
     private String UserPermission;
 
     /**
-     * Get 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取 
-     * @return PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * Get 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取 
+     * @return PGroupId 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
-     * @param PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * Set 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
+     * @param PGroupId 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
@@ -128,13 +128,13 @@ no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 
     }
 
     /**
-     * Get 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。
+     * Get 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。默认值为root_squash
 all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
 no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
 root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
 no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 用户）均保持原有的 UID/GID 信息
  
-     * @return UserPermission 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。
+     * @return UserPermission 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。默认值为root_squash
 all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
 no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
 root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
@@ -146,13 +146,13 @@ no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 
     }
 
     /**
-     * Set 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。
+     * Set 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。默认值为root_squash
 all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
 no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
 root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。
 no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 用户）均保持原有的 UID/GID 信息
 
-     * @param UserPermission 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。
+     * @param UserPermission 用户权限，值为 all_squash、no_all_squash、root_squash、no_root_squash。默认值为root_squash
 all_squash：所有访问用户（含 root 用户）都会被映射为匿名用户或用户组。
 no_all_squash：所有访问用户（含 root 用户）均保持原有的 UID/GID 信息。
 root_squash：将来访的 root 用户映射为匿名用户或用户组，非 root 用户保持原有的 UID/GID 信息。

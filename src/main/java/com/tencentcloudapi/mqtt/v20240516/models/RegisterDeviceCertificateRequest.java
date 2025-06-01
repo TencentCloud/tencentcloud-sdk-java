@@ -62,8 +62,6 @@ public class RegisterDeviceCertificateRequest extends AbstractModel {
     *  客户端证书状态，默认激活状态（ACTIVE）
 ACTIVE：激活     
 INACTIVE：未激活     
-REVOKED：吊销 
-PENDING_ACTIVATION：注册待激活
     */
     @SerializedName("Status")
     @Expose
@@ -152,14 +150,10 @@ PENDING_ACTIVATION：注册待激活
     /**
      * Get  客户端证书状态，默认激活状态（ACTIVE）
 ACTIVE：激活     
-INACTIVE：未激活     
-REVOKED：吊销 
-PENDING_ACTIVATION：注册待激活 
+INACTIVE：未激活      
      * @return Status  客户端证书状态，默认激活状态（ACTIVE）
 ACTIVE：激活     
 INACTIVE：未激活     
-REVOKED：吊销 
-PENDING_ACTIVATION：注册待激活
      */
     public String getStatus() {
         return this.Status;
@@ -169,13 +163,9 @@ PENDING_ACTIVATION：注册待激活
      * Set  客户端证书状态，默认激活状态（ACTIVE）
 ACTIVE：激活     
 INACTIVE：未激活     
-REVOKED：吊销 
-PENDING_ACTIVATION：注册待激活
      * @param Status  客户端证书状态，默认激活状态（ACTIVE）
 ACTIVE：激活     
 INACTIVE：未激活     
-REVOKED：吊销 
-PENDING_ACTIVATION：注册待激活
      */
     public void setStatus(String Status) {
         this.Status = Status;

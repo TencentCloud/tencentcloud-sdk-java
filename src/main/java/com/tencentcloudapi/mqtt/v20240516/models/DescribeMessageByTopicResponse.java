@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfs.v20190719.models;
+package com.tencentcloudapi.mqtt.v20240516.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMigrationTasksResponse extends AbstractModel {
+public class DescribeMessageByTopicResponse extends AbstractModel {
 
     /**
-    * 迁移任务的总数量
+    * 消息列表
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Data")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 迁移任务详情
-    */
-    @SerializedName("MigrationTasks")
-    @Expose
-    private MigrationTaskInfo [] MigrationTasks;
+    private MQTTMessage [] Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class DescribeMigrationTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 迁移任务的总数量 
-     * @return TotalCount 迁移任务的总数量
+     * Get 消息列表 
+     * @return Data 消息列表
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public MQTTMessage [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 迁移任务的总数量
-     * @param TotalCount 迁移任务的总数量
+     * Set 消息列表
+     * @param Data 消息列表
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 迁移任务详情 
-     * @return MigrationTasks 迁移任务详情
-     */
-    public MigrationTaskInfo [] getMigrationTasks() {
-        return this.MigrationTasks;
-    }
-
-    /**
-     * Set 迁移任务详情
-     * @param MigrationTasks 迁移任务详情
-     */
-    public void setMigrationTasks(MigrationTaskInfo [] MigrationTasks) {
-        this.MigrationTasks = MigrationTasks;
+    public void setData(MQTTMessage [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -92,21 +69,18 @@ public class DescribeMigrationTasksResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeMigrationTasksResponse() {
+    public DescribeMessageByTopicResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMigrationTasksResponse(DescribeMigrationTasksResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.MigrationTasks != null) {
-            this.MigrationTasks = new MigrationTaskInfo[source.MigrationTasks.length];
-            for (int i = 0; i < source.MigrationTasks.length; i++) {
-                this.MigrationTasks[i] = new MigrationTaskInfo(source.MigrationTasks[i]);
+    public DescribeMessageByTopicResponse(DescribeMessageByTopicResponse source) {
+        if (source.Data != null) {
+            this.Data = new MQTTMessage[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new MQTTMessage(source.Data[i]);
             }
         }
         if (source.RequestId != null) {
@@ -119,8 +93,7 @@ public class DescribeMigrationTasksResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "MigrationTasks.", this.MigrationTasks);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

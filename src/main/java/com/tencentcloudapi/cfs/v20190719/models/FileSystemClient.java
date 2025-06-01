@@ -45,7 +45,7 @@ public class FileSystemClient extends AbstractModel {
     private String VpcId;
 
     /**
-    * 可用区名称，例如ap-beijing-1，请参考 概览文档中的地域与可用区列表
+    * 可用区名称，例如ap-beijing-1，参考[简介](https://cloud.tencent.com/document/api/582/38144)文档中的地域与可用区列表
     */
     @SerializedName("Zone")
     @Expose
@@ -114,16 +114,16 @@ public class FileSystemClient extends AbstractModel {
     }
 
     /**
-     * Get 可用区名称，例如ap-beijing-1，请参考 概览文档中的地域与可用区列表 
-     * @return Zone 可用区名称，例如ap-beijing-1，请参考 概览文档中的地域与可用区列表
+     * Get 可用区名称，例如ap-beijing-1，参考[简介](https://cloud.tencent.com/document/api/582/38144)文档中的地域与可用区列表 
+     * @return Zone 可用区名称，例如ap-beijing-1，参考[简介](https://cloud.tencent.com/document/api/582/38144)文档中的地域与可用区列表
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区名称，例如ap-beijing-1，请参考 概览文档中的地域与可用区列表
-     * @param Zone 可用区名称，例如ap-beijing-1，请参考 概览文档中的地域与可用区列表
+     * Set 可用区名称，例如ap-beijing-1，参考[简介](https://cloud.tencent.com/document/api/582/38144)文档中的地域与可用区列表
+     * @param Zone 可用区名称，例如ap-beijing-1，参考[简介](https://cloud.tencent.com/document/api/582/38144)文档中的地域与可用区列表
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

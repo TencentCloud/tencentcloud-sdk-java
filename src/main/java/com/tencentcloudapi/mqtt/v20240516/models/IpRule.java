@@ -31,7 +31,7 @@ public class IpRule extends AbstractModel {
     private String Ip;
 
     /**
-    * 是否允许放行
+    * 当前仅支持允许，默认允许。
     */
     @SerializedName("Allow")
     @Expose
@@ -61,16 +61,16 @@ public class IpRule extends AbstractModel {
     }
 
     /**
-     * Get 是否允许放行 
-     * @return Allow 是否允许放行
+     * Get 当前仅支持允许，默认允许。 
+     * @return Allow 当前仅支持允许，默认允许。
      */
     public Boolean getAllow() {
         return this.Allow;
     }
 
     /**
-     * Set 是否允许放行
-     * @param Allow 是否允许放行
+     * Set 当前仅支持允许，默认允许。
+     * @param Allow 当前仅支持允许，默认允许。
      */
     public void setAllow(Boolean Allow) {
         this.Allow = Allow;

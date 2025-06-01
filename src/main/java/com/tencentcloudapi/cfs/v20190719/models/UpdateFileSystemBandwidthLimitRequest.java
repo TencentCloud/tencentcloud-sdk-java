@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateFileSystemBandwidthLimitRequest extends AbstractModel {
 
     /**
-    * 文件系统 ID,通过查询文件系统列表获取
+    * 文件系统 ID,可通过[DescribeCfsFileSystems](https://cloud.tencent.com/document/api/582/38170)接口获取
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -38,16 +38,16 @@ public class UpdateFileSystemBandwidthLimitRequest extends AbstractModel {
     private Long BandwidthLimit;
 
     /**
-     * Get 文件系统 ID,通过查询文件系统列表获取 
-     * @return FileSystemId 文件系统 ID,通过查询文件系统列表获取
+     * Get 文件系统 ID,可通过[DescribeCfsFileSystems](https://cloud.tencent.com/document/api/582/38170)接口获取 
+     * @return FileSystemId 文件系统 ID,可通过[DescribeCfsFileSystems](https://cloud.tencent.com/document/api/582/38170)接口获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID,通过查询文件系统列表获取
-     * @param FileSystemId 文件系统 ID,通过查询文件系统列表获取
+     * Set 文件系统 ID,可通过[DescribeCfsFileSystems](https://cloud.tencent.com/document/api/582/38170)接口获取
+     * @param FileSystemId 文件系统 ID,可通过[DescribeCfsFileSystems](https://cloud.tencent.com/document/api/582/38170)接口获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;

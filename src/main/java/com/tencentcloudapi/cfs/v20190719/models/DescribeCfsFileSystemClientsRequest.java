@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCfsFileSystemClientsRequest extends AbstractModel {
 
     /**
-    * 文件系统 ID，通过查询文件系统接口获取
+    * 文件系统 ID，通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeCfsFileSystemClientsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 文件系统 ID，通过查询文件系统接口获取 
-     * @return FileSystemId 文件系统 ID，通过查询文件系统接口获取
+     * Get 文件系统 ID，通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取 
+     * @return FileSystemId 文件系统 ID，通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID，通过查询文件系统接口获取
-     * @param FileSystemId 文件系统 ID，通过查询文件系统接口获取
+     * Set 文件系统 ID，通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
+     * @param FileSystemId 文件系统 ID，通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
