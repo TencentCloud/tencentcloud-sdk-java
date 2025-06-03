@@ -294,7 +294,9 @@ public class MaterialBasicInfo extends AbstractModel {
      * @return TagInfoSet 媒体绑定的标签信息列表 。
 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public MaterialTagInfo [] getTagInfoSet() {
         return this.TagInfoSet;
     }
@@ -306,7 +308,9 @@ public class MaterialBasicInfo extends AbstractModel {
      * @param TagInfoSet 媒体绑定的标签信息列表 。
 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setTagInfoSet(MaterialTagInfo [] TagInfoSet) {
         this.TagInfoSet = TagInfoSet;
     }

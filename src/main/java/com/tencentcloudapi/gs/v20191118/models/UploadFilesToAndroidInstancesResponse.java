@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.gs.v20191118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,28 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstancesResponse extends AbstractModel {
+public class UploadFilesToAndroidInstancesResponse extends AbstractModel {
 
     /**
-    * 订单号列表。每个实例对应一个订单号。
+    * 实例任务集合
     */
-    @SerializedName("DealNames")
+    @SerializedName("TaskSet")
     @Expose
-    private String [] DealNames;
-
-    /**
-    * 冻结流水号
-    */
-    @SerializedName("BillId")
-    @Expose
-    private String BillId;
-
-    /**
-    * 创建成功的实例ID集合，只在后付费情景下有返回值
-    */
-    @SerializedName("DBInstanceIdSet")
-    @Expose
-    private String [] DBInstanceIdSet;
+    private AndroidInstanceTask [] TaskSet;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,51 +38,19 @@ public class CreateDBInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单号列表。每个实例对应一个订单号。 
-     * @return DealNames 订单号列表。每个实例对应一个订单号。
+     * Get 实例任务集合 
+     * @return TaskSet 实例任务集合
      */
-    public String [] getDealNames() {
-        return this.DealNames;
+    public AndroidInstanceTask [] getTaskSet() {
+        return this.TaskSet;
     }
 
     /**
-     * Set 订单号列表。每个实例对应一个订单号。
-     * @param DealNames 订单号列表。每个实例对应一个订单号。
+     * Set 实例任务集合
+     * @param TaskSet 实例任务集合
      */
-    public void setDealNames(String [] DealNames) {
-        this.DealNames = DealNames;
-    }
-
-    /**
-     * Get 冻结流水号 
-     * @return BillId 冻结流水号
-     */
-    public String getBillId() {
-        return this.BillId;
-    }
-
-    /**
-     * Set 冻结流水号
-     * @param BillId 冻结流水号
-     */
-    public void setBillId(String BillId) {
-        this.BillId = BillId;
-    }
-
-    /**
-     * Get 创建成功的实例ID集合，只在后付费情景下有返回值 
-     * @return DBInstanceIdSet 创建成功的实例ID集合，只在后付费情景下有返回值
-     */
-    public String [] getDBInstanceIdSet() {
-        return this.DBInstanceIdSet;
-    }
-
-    /**
-     * Set 创建成功的实例ID集合，只在后付费情景下有返回值
-     * @param DBInstanceIdSet 创建成功的实例ID集合，只在后付费情景下有返回值
-     */
-    public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
-        this.DBInstanceIdSet = DBInstanceIdSet;
+    public void setTaskSet(AndroidInstanceTask [] TaskSet) {
+        this.TaskSet = TaskSet;
     }
 
     /**
@@ -115,27 +69,18 @@ public class CreateDBInstancesResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateDBInstancesResponse() {
+    public UploadFilesToAndroidInstancesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDBInstancesResponse(CreateDBInstancesResponse source) {
-        if (source.DealNames != null) {
-            this.DealNames = new String[source.DealNames.length];
-            for (int i = 0; i < source.DealNames.length; i++) {
-                this.DealNames[i] = new String(source.DealNames[i]);
-            }
-        }
-        if (source.BillId != null) {
-            this.BillId = new String(source.BillId);
-        }
-        if (source.DBInstanceIdSet != null) {
-            this.DBInstanceIdSet = new String[source.DBInstanceIdSet.length];
-            for (int i = 0; i < source.DBInstanceIdSet.length; i++) {
-                this.DBInstanceIdSet[i] = new String(source.DBInstanceIdSet[i]);
+    public UploadFilesToAndroidInstancesResponse(UploadFilesToAndroidInstancesResponse source) {
+        if (source.TaskSet != null) {
+            this.TaskSet = new AndroidInstanceTask[source.TaskSet.length];
+            for (int i = 0; i < source.TaskSet.length; i++) {
+                this.TaskSet[i] = new AndroidInstanceTask(source.TaskSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -148,9 +93,7 @@ public class CreateDBInstancesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
-        this.setParamSimple(map, prefix + "BillId", this.BillId);
-        this.setParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);
+        this.setParamArrayObj(map, prefix + "TaskSet.", this.TaskSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

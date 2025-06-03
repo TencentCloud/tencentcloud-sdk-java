@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class StopInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID
-可通过DescribeInstances获取实例ID
+    * 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -48,20 +47,16 @@ STOP_CHARGE -- 关闭hai实例，释放计算资源，停止收取计算资源�
     private Boolean DryRun;
 
     /**
-     * Get 实例ID
-可通过DescribeInstances获取实例ID 
-     * @return InstanceId 实例ID
-可通过DescribeInstances获取实例ID
+     * Get 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID。 
+     * @return InstanceId 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-可通过DescribeInstances获取实例ID
-     * @param InstanceId 实例ID
-可通过DescribeInstances获取实例ID
+     * Set 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID。
+     * @param InstanceId 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

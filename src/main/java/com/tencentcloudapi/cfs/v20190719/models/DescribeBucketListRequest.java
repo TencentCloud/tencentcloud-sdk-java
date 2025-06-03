@@ -32,7 +32,6 @@ public class DescribeBucketListRequest extends AbstractModel {
 
     /**
     * 数据源账号的SecretId
-
     */
     @SerializedName("SrcSecretId")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeBucketListRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据源账号的SecretId
- 
+     * Get 数据源账号的SecretId 
      * @return SrcSecretId 数据源账号的SecretId
-
      */
     public String getSrcSecretId() {
         return this.SrcSecretId;
@@ -73,9 +70,7 @@ public class DescribeBucketListRequest extends AbstractModel {
 
     /**
      * Set 数据源账号的SecretId
-
      * @param SrcSecretId 数据源账号的SecretId
-
      */
     public void setSrcSecretId(String SrcSecretId) {
         this.SrcSecretId = SrcSecretId;

@@ -103,6 +103,14 @@ table-id - String - （过滤条件）table id形如：12342。
     private String TableFormat;
 
     /**
+    * 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+    */
+    @SerializedName("DescribeType")
+    @Expose
+    private String DescribeType;
+
+    /**
      * Get 列出该数据库下所属数据表。 
      * @return DatabaseName 列出该数据库下所属数据表。
      */
@@ -286,6 +294,26 @@ table-id - String - （过滤条件）table id形如：12342。
         this.TableFormat = TableFormat;
     }
 
+    /**
+     * Get 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。 
+     * @return DescribeType 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+     */
+    public String getDescribeType() {
+        return this.DescribeType;
+    }
+
+    /**
+     * Set 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+     * @param DescribeType 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+     */
+    public void setDescribeType(String DescribeType) {
+        this.DescribeType = DescribeType;
+    }
+
     public DescribeTablesRequest() {
     }
 
@@ -330,6 +358,9 @@ table-id - String - （过滤条件）table id形如：12342。
         if (source.TableFormat != null) {
             this.TableFormat = new String(source.TableFormat);
         }
+        if (source.DescribeType != null) {
+            this.DescribeType = new String(source.DescribeType);
+        }
     }
 
 
@@ -348,6 +379,7 @@ table-id - String - （过滤条件）table id形如：12342。
         this.setParamSimple(map, prefix + "Asc", this.Asc);
         this.setParamSimple(map, prefix + "TableType", this.TableType);
         this.setParamSimple(map, prefix + "TableFormat", this.TableFormat);
+        this.setParamSimple(map, prefix + "DescribeType", this.DescribeType);
 
     }
 }

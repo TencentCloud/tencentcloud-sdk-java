@@ -214,10 +214,10 @@ public class CreateInstancesRequest extends AbstractModel {
     private Boolean DryRun;
 
     /**
-    * 指定实例的产品版本。
-- local：本地盘版。
-- cloud：云盘版，
-- cdc：独享集群版。如果不传默认发货为本地盘版本。
+    * 指实例部署模式。
+- local：传统架构，默认为 local。
+- cdc：独享集群。
+- cloud：云原生，当前已暂停售卖。
     */
     @SerializedName("ProductVersion")
     @Expose
@@ -725,28 +725,28 @@ public class CreateInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定实例的产品版本。
-- local：本地盘版。
-- cloud：云盘版，
-- cdc：独享集群版。如果不传默认发货为本地盘版本。 
-     * @return ProductVersion 指定实例的产品版本。
-- local：本地盘版。
-- cloud：云盘版，
-- cdc：独享集群版。如果不传默认发货为本地盘版本。
+     * Get 指实例部署模式。
+- local：传统架构，默认为 local。
+- cdc：独享集群。
+- cloud：云原生，当前已暂停售卖。 
+     * @return ProductVersion 指实例部署模式。
+- local：传统架构，默认为 local。
+- cdc：独享集群。
+- cloud：云原生，当前已暂停售卖。
      */
     public String getProductVersion() {
         return this.ProductVersion;
     }
 
     /**
-     * Set 指定实例的产品版本。
-- local：本地盘版。
-- cloud：云盘版，
-- cdc：独享集群版。如果不传默认发货为本地盘版本。
-     * @param ProductVersion 指定实例的产品版本。
-- local：本地盘版。
-- cloud：云盘版，
-- cdc：独享集群版。如果不传默认发货为本地盘版本。
+     * Set 指实例部署模式。
+- local：传统架构，默认为 local。
+- cdc：独享集群。
+- cloud：云原生，当前已暂停售卖。
+     * @param ProductVersion 指实例部署模式。
+- local：传统架构，默认为 local。
+- cdc：独享集群。
+- cloud：云原生，当前已暂停售卖。
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;

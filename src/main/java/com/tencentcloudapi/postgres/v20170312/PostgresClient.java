@@ -116,19 +116,6 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *早期接口，不规范，已提供新接口 CreateInstances 替换
-
-本接口（CreateDBInstances）用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。本接口已废弃，推荐使用接口[CreateInstances](https://cloud.tencent.com/document/api/409/56107)替代。
-     * @param req CreateDBInstancesRequest
-     * @return CreateDBInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateDBInstancesResponse CreateDBInstances(CreateDBInstancesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateDBInstances", CreateDBInstancesResponse.class);
-    }
-
-    /**
      *此接口用于创建数据库，需指定数据库名及所有者。
      * @param req CreateDatabaseRequest
      * @return CreateDatabaseResponse

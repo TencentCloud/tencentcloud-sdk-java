@@ -25,6 +25,8 @@ public class ImageMaskAsyncResponse extends AbstractModel {
 
     /**
     * 加密任务ID
+1.因此TaskID 仅 24 小时内有效，请于提交任务获取TaskID后24小时内调用ImageMaskAsyncGetResult接口获取结果.
+2.建议在获取到TaskID 后，5-10分钟后再调用 ImageMaskAsyncGetResult 接口获取脱敏结果。
     */
     @SerializedName("TaskID")
     @Expose
@@ -38,8 +40,12 @@ public class ImageMaskAsyncResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 加密任务ID 
+     * Get 加密任务ID
+1.因此TaskID 仅 24 小时内有效，请于提交任务获取TaskID后24小时内调用ImageMaskAsyncGetResult接口获取结果.
+2.建议在获取到TaskID 后，5-10分钟后再调用 ImageMaskAsyncGetResult 接口获取脱敏结果。 
      * @return TaskID 加密任务ID
+1.因此TaskID 仅 24 小时内有效，请于提交任务获取TaskID后24小时内调用ImageMaskAsyncGetResult接口获取结果.
+2.建议在获取到TaskID 后，5-10分钟后再调用 ImageMaskAsyncGetResult 接口获取脱敏结果。
      */
     public String getTaskID() {
         return this.TaskID;
@@ -47,7 +53,11 @@ public class ImageMaskAsyncResponse extends AbstractModel {
 
     /**
      * Set 加密任务ID
+1.因此TaskID 仅 24 小时内有效，请于提交任务获取TaskID后24小时内调用ImageMaskAsyncGetResult接口获取结果.
+2.建议在获取到TaskID 后，5-10分钟后再调用 ImageMaskAsyncGetResult 接口获取脱敏结果。
      * @param TaskID 加密任务ID
+1.因此TaskID 仅 24 小时内有效，请于提交任务获取TaskID后24小时内调用ImageMaskAsyncGetResult接口获取结果.
+2.建议在获取到TaskID 后，5-10分钟后再调用 ImageMaskAsyncGetResult 接口获取脱敏结果。
      */
     public void setTaskID(String TaskID) {
         this.TaskID = TaskID;

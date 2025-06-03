@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lke.v20231130.models;
+package com.tencentcloudapi.gs.v20191118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateReconstructDocumentFlowResponse extends AbstractModel {
+public class DistributeFileToAndroidInstancesResponse extends AbstractModel {
 
     /**
-    * 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
+    * 实例任务集合
     */
-    @SerializedName("TaskId")
+    @SerializedName("TaskSet")
     @Expose
-    private String TaskId;
+    private AndroidInstanceTask [] TaskSet;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class CreateReconstructDocumentFlowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。 
-     * @return TaskId 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
+     * Get 实例任务集合 
+     * @return TaskSet 实例任务集合
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public AndroidInstanceTask [] getTaskSet() {
+        return this.TaskSet;
     }
 
     /**
-     * Set 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
-     * @param TaskId 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
+     * Set 实例任务集合
+     * @param TaskSet 实例任务集合
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setTaskSet(AndroidInstanceTask [] TaskSet) {
+        this.TaskSet = TaskSet;
     }
 
     /**
@@ -69,16 +69,19 @@ public class CreateReconstructDocumentFlowResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateReconstructDocumentFlowResponse() {
+    public DistributeFileToAndroidInstancesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateReconstructDocumentFlowResponse(CreateReconstructDocumentFlowResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public DistributeFileToAndroidInstancesResponse(DistributeFileToAndroidInstancesResponse source) {
+        if (source.TaskSet != null) {
+            this.TaskSet = new AndroidInstanceTask[source.TaskSet.length];
+            for (int i = 0; i < source.TaskSet.length; i++) {
+                this.TaskSet[i] = new AndroidInstanceTask(source.TaskSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +93,7 @@ public class CreateReconstructDocumentFlowResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "TaskSet.", this.TaskSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

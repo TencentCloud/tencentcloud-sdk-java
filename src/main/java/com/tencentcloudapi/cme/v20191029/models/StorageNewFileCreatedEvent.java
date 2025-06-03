@@ -119,7 +119,9 @@ public class StorageNewFileCreatedEvent extends AbstractModel {
     /**
      * Get 操作者 Id。（废弃，请勿使用） 
      * @return Operator 操作者 Id。（废弃，请勿使用）
+     * @deprecated
      */
+    @Deprecated
     public String getOperator() {
         return this.Operator;
     }
@@ -127,7 +129,9 @@ public class StorageNewFileCreatedEvent extends AbstractModel {
     /**
      * Set 操作者 Id。（废弃，请勿使用）
      * @param Operator 操作者 Id。（废弃，请勿使用）
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }

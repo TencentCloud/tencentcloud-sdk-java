@@ -318,6 +318,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *分发文件到安卓实例
+     * @param req DistributeFileToAndroidInstancesRequest
+     * @return DistributeFileToAndroidInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DistributeFileToAndroidInstancesResponse DistributeFileToAndroidInstances(DistributeFileToAndroidInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DistributeFileToAndroidInstances", DistributeFileToAndroidInstancesResponse.class);
+    }
+
+    /**
      *在安卓实例上异步执行命令，命令输出结果如果内容过长会被截断
      * @param req ExecuteCommandOnAndroidInstancesRequest
      * @return ExecuteCommandOnAndroidInstancesResponse
@@ -659,6 +670,17 @@ public class GsClient extends AbstractClient{
     public UploadFileToAndroidInstancesResponse UploadFileToAndroidInstances(UploadFileToAndroidInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UploadFileToAndroidInstances", UploadFileToAndroidInstancesResponse.class);
+    }
+
+    /**
+     *批量上传文件到安卓实例
+     * @param req UploadFilesToAndroidInstancesRequest
+     * @return UploadFilesToAndroidInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadFilesToAndroidInstancesResponse UploadFilesToAndroidInstances(UploadFilesToAndroidInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadFilesToAndroidInstances", UploadFilesToAndroidInstancesResponse.class);
     }
 
 }

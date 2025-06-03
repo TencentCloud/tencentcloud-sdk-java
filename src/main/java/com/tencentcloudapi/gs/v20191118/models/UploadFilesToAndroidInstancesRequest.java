@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.domain.v20180808.models;
+package com.tencentcloudapi.gs.v20191118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,46 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDomainRedemptionRequest extends AbstractModel {
+public class UploadFilesToAndroidInstancesRequest extends AbstractModel {
 
     /**
-    * 域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
+    * 上传文件信息列表
     */
-    @SerializedName("DomainId")
+    @SerializedName("Files")
     @Expose
-    private String DomainId;
+    private AndroidInstanceUploadFile [] Files;
 
     /**
-     * Get 域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取 
-     * @return DomainId 域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
+     * Get 上传文件信息列表 
+     * @return Files 上传文件信息列表
      */
-    public String getDomainId() {
-        return this.DomainId;
+    public AndroidInstanceUploadFile [] getFiles() {
+        return this.Files;
     }
 
     /**
-     * Set 域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
-     * @param DomainId 域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
+     * Set 上传文件信息列表
+     * @param Files 上传文件信息列表
      */
-    public void setDomainId(String DomainId) {
-        this.DomainId = DomainId;
+    public void setFiles(AndroidInstanceUploadFile [] Files) {
+        this.Files = Files;
     }
 
-    public CreateDomainRedemptionRequest() {
+    public UploadFilesToAndroidInstancesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDomainRedemptionRequest(CreateDomainRedemptionRequest source) {
-        if (source.DomainId != null) {
-            this.DomainId = new String(source.DomainId);
+    public UploadFilesToAndroidInstancesRequest(UploadFilesToAndroidInstancesRequest source) {
+        if (source.Files != null) {
+            this.Files = new AndroidInstanceUploadFile[source.Files.length];
+            for (int i = 0; i < source.Files.length; i++) {
+                this.Files[i] = new AndroidInstanceUploadFile(source.Files[i]);
+            }
         }
     }
 
@@ -69,7 +67,7 @@ public class CreateDomainRedemptionRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DomainId", this.DomainId);
+        this.setParamArrayObj(map, prefix + "Files.", this.Files);
 
     }
 }

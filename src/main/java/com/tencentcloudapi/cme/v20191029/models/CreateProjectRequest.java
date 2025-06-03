@@ -272,7 +272,9 @@ public class CreateProjectRequest extends AbstractModel {
 该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。 
      * @return AspectRatio 画布宽高比。
 该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
+     * @deprecated
      */
+    @Deprecated
     public String getAspectRatio() {
         return this.AspectRatio;
     }
@@ -282,7 +284,9 @@ public class CreateProjectRequest extends AbstractModel {
 该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
      * @param AspectRatio 画布宽高比。
 该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
+     * @deprecated
      */
+    @Deprecated
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
     }

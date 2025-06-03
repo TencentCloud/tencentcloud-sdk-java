@@ -765,6 +765,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *查看外部集群注册命令
+     * @param req DescribeExternalClusterRegisterCommandRequest
+     * @return DescribeExternalClusterRegisterCommandResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExternalClusterRegisterCommandResponse DescribeExternalClusterRegisterCommand(DescribeExternalClusterRegisterCommandRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExternalClusterRegisterCommand", DescribeExternalClusterRegisterCommandResponse.class);
+    }
+
+    /**
      *列出 Grafana 所有告警通道
      * @param req DescribeGrafanaChannelsRequest
      * @return DescribeGrafanaChannelsResponse

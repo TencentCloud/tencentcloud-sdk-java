@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.hai.v20230812.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartInstanceRequest extends AbstractModel {
+public class DescribeExternalClusterRegisterCommandRequest extends AbstractModel {
 
     /**
-    * 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID。
+    * 实例 ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 默认为False，True代表只验证接口连通性
+    * 集群 ID
     */
-    @SerializedName("DryRun")
+    @SerializedName("ClusterId")
     @Expose
-    private Boolean DryRun;
+    private String ClusterId;
 
     /**
-     * Get 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID。 
-     * @return InstanceId 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID。
+     * Get 实例 ID 
+     * @return InstanceId 实例 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID。
-     * @param InstanceId 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID。
+     * Set 实例 ID
+     * @param InstanceId 实例 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 默认为False，True代表只验证接口连通性 
-     * @return DryRun 默认为False，True代表只验证接口连通性
+     * Get 集群 ID 
+     * @return ClusterId 集群 ID
      */
-    public Boolean getDryRun() {
-        return this.DryRun;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set 默认为False，True代表只验证接口连通性
-     * @param DryRun 默认为False，True代表只验证接口连通性
+     * Set 集群 ID
+     * @param ClusterId 集群 ID
      */
-    public void setDryRun(Boolean DryRun) {
-        this.DryRun = DryRun;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
-    public StartInstanceRequest() {
+    public DescribeExternalClusterRegisterCommandRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StartInstanceRequest(StartInstanceRequest source) {
+    public DescribeExternalClusterRegisterCommandRequest(DescribeExternalClusterRegisterCommandRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.DryRun != null) {
-            this.DryRun = new Boolean(source.DryRun);
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
         }
     }
 
@@ -91,7 +91,7 @@ public class StartInstanceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

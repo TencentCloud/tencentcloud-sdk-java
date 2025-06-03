@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeApplicationsRequest extends AbstractModel {
 
     /**
-    * 应用id列表
+    * 应用id列表。单次请求数量上限为100个。
     */
     @SerializedName("ApplicationIds")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeApplicationsRequest extends AbstractModel {
     private String Order;
 
     /**
-     * Get 应用id列表 
-     * @return ApplicationIds 应用id列表
+     * Get 应用id列表。单次请求数量上限为100个。 
+     * @return ApplicationIds 应用id列表。单次请求数量上限为100个。
      */
     public String [] getApplicationIds() {
         return this.ApplicationIds;
     }
 
     /**
-     * Set 应用id列表
-     * @param ApplicationIds 应用id列表
+     * Set 应用id列表。单次请求数量上限为100个。
+     * @param ApplicationIds 应用id列表。单次请求数量上限为100个。
      */
     public void setApplicationIds(String [] ApplicationIds) {
         this.ApplicationIds = ApplicationIds;

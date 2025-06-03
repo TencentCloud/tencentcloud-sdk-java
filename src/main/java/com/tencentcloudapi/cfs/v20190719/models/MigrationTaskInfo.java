@@ -122,7 +122,7 @@ public class MigrationTaskInfo extends AbstractModel {
     private Long EndTime;
 
     /**
-    * 迁移状态。0: 已完成；1: 进行中；2: 已终止
+    * 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
     */
     @SerializedName("Status")
     @Expose
@@ -430,16 +430,16 @@ public class MigrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 迁移状态。0: 已完成；1: 进行中；2: 已终止 
-     * @return Status 迁移状态。0: 已完成；1: 进行中；2: 已终止
+     * Get 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中 
+     * @return Status 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 迁移状态。0: 已完成；1: 进行中；2: 已终止
-     * @param Status 迁移状态。0: 已完成；1: 进行中；2: 已终止
+     * Set 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
+     * @param Status 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
      */
     public void setStatus(Long Status) {
         this.Status = Status;

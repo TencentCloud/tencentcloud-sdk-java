@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class TerminateInstancesRequest extends AbstractModel {
 
     /**
-    * 实例ID列表
-可通过DescribeInstances接口获取ID列表.单次能查询100个InstanceId
+    * 实例ID列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID列表。单次能查询100个InstanceId。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -39,20 +38,16 @@ public class TerminateInstancesRequest extends AbstractModel {
     private Boolean DryRun;
 
     /**
-     * Get 实例ID列表
-可通过DescribeInstances接口获取ID列表.单次能查询100个InstanceId 
-     * @return InstanceIds 实例ID列表
-可通过DescribeInstances接口获取ID列表.单次能查询100个InstanceId
+     * Get 实例ID列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID列表。单次能查询100个InstanceId。 
+     * @return InstanceIds 实例ID列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID列表。单次能查询100个InstanceId。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID列表
-可通过DescribeInstances接口获取ID列表.单次能查询100个InstanceId
-     * @param InstanceIds 实例ID列表
-可通过DescribeInstances接口获取ID列表.单次能查询100个InstanceId
+     * Set 实例ID列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID列表。单次能查询100个InstanceId。
+     * @param InstanceIds 实例ID列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID列表。单次能查询100个InstanceId。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

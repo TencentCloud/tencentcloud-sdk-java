@@ -1029,6 +1029,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeTablePartitions）用于查询数据表分区信息
+     * @param req DescribeTablePartitionsRequest
+     * @return DescribeTablePartitionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTablePartitionsResponse DescribeTablePartitions(DescribeTablePartitionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTablePartitions", DescribeTablePartitionsResponse.class);
+    }
+
+    /**
      *本接口（DescribeTables）用于查询数据表列表。
      * @param req DescribeTablesRequest
      * @return DescribeTablesResponse

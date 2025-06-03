@@ -38,6 +38,20 @@ public class AdjustJobSpeedRequest extends AbstractModel {
     private Long TargetRequestsPerSecond;
 
     /**
+    * 压测项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
+    * 测试场景ID
+    */
+    @SerializedName("ScenarioId")
+    @Expose
+    private String ScenarioId;
+
+    /**
      * Get 任务ID 
      * @return JobId 任务ID
      */
@@ -69,6 +83,38 @@ public class AdjustJobSpeedRequest extends AbstractModel {
         this.TargetRequestsPerSecond = TargetRequestsPerSecond;
     }
 
+    /**
+     * Get 压测项目ID 
+     * @return ProjectId 压测项目ID
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 压测项目ID
+     * @param ProjectId 压测项目ID
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 测试场景ID 
+     * @return ScenarioId 测试场景ID
+     */
+    public String getScenarioId() {
+        return this.ScenarioId;
+    }
+
+    /**
+     * Set 测试场景ID
+     * @param ScenarioId 测试场景ID
+     */
+    public void setScenarioId(String ScenarioId) {
+        this.ScenarioId = ScenarioId;
+    }
+
     public AdjustJobSpeedRequest() {
     }
 
@@ -83,6 +129,12 @@ public class AdjustJobSpeedRequest extends AbstractModel {
         if (source.TargetRequestsPerSecond != null) {
             this.TargetRequestsPerSecond = new Long(source.TargetRequestsPerSecond);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ScenarioId != null) {
+            this.ScenarioId = new String(source.ScenarioId);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class AdjustJobSpeedRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "TargetRequestsPerSecond", this.TargetRequestsPerSecond);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ScenarioId", this.ScenarioId);
 
     }
 }

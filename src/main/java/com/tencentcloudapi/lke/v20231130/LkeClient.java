@@ -140,20 +140,6 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *本接口为异步接口的发起请求接口，用于发起文档解析任务。
-文档解析支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
-
-体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
-     * @param req CreateReconstructDocumentFlowRequest
-     * @return CreateReconstructDocumentFlowResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlow(CreateReconstructDocumentFlowRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateReconstructDocumentFlow", CreateReconstructDocumentFlowResponse.class);
-    }
-
-    /**
      *创建拒答问题
      * @param req CreateRejectedQuestionRequest
      * @return CreateRejectedQuestionResponse

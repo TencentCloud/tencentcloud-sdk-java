@@ -62,6 +62,7 @@ public class MrsClient extends AbstractClient{
 
     /**
      *图片脱敏-异步接口
+短时间大批量调用（例如>100上传/10分钟），如果遇到错误码“FalledOperation.AsyncQueueFullError”，请于数分钟后再次尝试提交。
      * @param req ImageMaskAsyncRequest
      * @return ImageMaskAsyncResponse
      * @throws TencentCloudSDKException
@@ -73,6 +74,7 @@ public class MrsClient extends AbstractClient{
 
     /**
      *图片脱敏-异步获取结果接口
+请于上传请求后24小时内获取结果。
      * @param req ImageMaskAsyncGetResultRequest
      * @return ImageMaskAsyncGetResultResponse
      * @throws TencentCloudSDKException

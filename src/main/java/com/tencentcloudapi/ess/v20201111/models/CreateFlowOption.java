@@ -138,13 +138,16 @@ public class CreateFlowOption extends AbstractModel {
     private Boolean ForbidEditFlowProperties;
 
     /**
-    * 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用，具体的控件类型如下
+    * 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+
 <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
 <li>SIGN_SEAL : 企业印章</li>
 <li>SIGN_PAGING_SEAL : 骑缝章</li>
 <li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
 <li>SIGN_APPROVE : 签批</li>
 <li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
 <li>BUSI-FULL-NAME  : 企业全称</li>
 <li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
 <li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
@@ -171,13 +174,15 @@ public class CreateFlowOption extends AbstractModel {
     private String [] HideComponentTypes;
 
     /**
-    * 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用，具体的控件类型如下
+    * 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
 <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
 <li>SIGN_SEAL : 企业印章</li>
 <li>SIGN_PAGING_SEAL : 骑缝章</li>
 <li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
 <li>SIGN_APPROVE : 签批</li>
 <li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
 <li>BUSI-FULL-NAME  : 企业全称</li>
 <li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
 <li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
@@ -539,13 +544,16 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
-     * Get 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用，具体的控件类型如下
+     * Get 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+
 <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
 <li>SIGN_SEAL : 企业印章</li>
 <li>SIGN_PAGING_SEAL : 骑缝章</li>
 <li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
 <li>SIGN_APPROVE : 签批</li>
 <li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
 <li>BUSI-FULL-NAME  : 企业全称</li>
 <li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
 <li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
@@ -566,13 +574,16 @@ public class CreateFlowOption extends AbstractModel {
 <li>EDUCATION : 学历</li>
 <li>GENDER : 性别</li>
 <li>DISTRICT : 省市区</li></ul> 
-     * @return HideComponentTypes 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用，具体的控件类型如下
+     * @return HideComponentTypes 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+
 <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
 <li>SIGN_SEAL : 企业印章</li>
 <li>SIGN_PAGING_SEAL : 骑缝章</li>
 <li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
 <li>SIGN_APPROVE : 签批</li>
 <li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
 <li>BUSI-FULL-NAME  : 企业全称</li>
 <li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
 <li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
@@ -599,13 +610,16 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
-     * Set 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用，具体的控件类型如下
+     * Set 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+
 <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
 <li>SIGN_SEAL : 企业印章</li>
 <li>SIGN_PAGING_SEAL : 骑缝章</li>
 <li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
 <li>SIGN_APPROVE : 签批</li>
 <li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
 <li>BUSI-FULL-NAME  : 企业全称</li>
 <li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
 <li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
@@ -626,13 +640,16 @@ public class CreateFlowOption extends AbstractModel {
 <li>EDUCATION : 学历</li>
 <li>GENDER : 性别</li>
 <li>DISTRICT : 省市区</li></ul>
-     * @param HideComponentTypes 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用，具体的控件类型如下
+     * @param HideComponentTypes 在发起流程的可嵌入页面要隐藏的控件列表，和 ShowComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
+
 <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
 <li>SIGN_SEAL : 企业印章</li>
 <li>SIGN_PAGING_SEAL : 骑缝章</li>
 <li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
 <li>SIGN_APPROVE : 签批</li>
 <li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
 <li>BUSI-FULL-NAME  : 企业全称</li>
 <li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
 <li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
@@ -659,13 +676,15 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
-     * Get 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用，具体的控件类型如下
+     * Get 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
 <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
 <li>SIGN_SEAL : 企业印章</li>
 <li>SIGN_PAGING_SEAL : 骑缝章</li>
 <li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
 <li>SIGN_APPROVE : 签批</li>
 <li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
 <li>BUSI-FULL-NAME  : 企业全称</li>
 <li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
 <li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
@@ -686,13 +705,15 @@ public class CreateFlowOption extends AbstractModel {
 <li>EDUCATION : 学历</li>
 <li>GENDER : 性别</li>
 <li>DISTRICT : 省市区</li></ul> 
-     * @return ShowComponentTypes 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用，具体的控件类型如下
+     * @return ShowComponentTypes 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
 <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
 <li>SIGN_SEAL : 企业印章</li>
 <li>SIGN_PAGING_SEAL : 骑缝章</li>
 <li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
 <li>SIGN_APPROVE : 签批</li>
 <li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
 <li>BUSI-FULL-NAME  : 企业全称</li>
 <li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
 <li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
@@ -719,13 +740,15 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
-     * Set 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用，具体的控件类型如下
+     * Set 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
 <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
 <li>SIGN_SEAL : 企业印章</li>
 <li>SIGN_PAGING_SEAL : 骑缝章</li>
 <li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
 <li>SIGN_APPROVE : 签批</li>
 <li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
 <li>BUSI-FULL-NAME  : 企业全称</li>
 <li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
 <li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>
@@ -746,13 +769,15 @@ public class CreateFlowOption extends AbstractModel {
 <li>EDUCATION : 学历</li>
 <li>GENDER : 性别</li>
 <li>DISTRICT : 省市区</li></ul>
-     * @param ShowComponentTypes 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用，具体的控件类型如下
+     * @param ShowComponentTypes 在发起流程的可嵌入页面要显示的控件列表，和 HideComponentTypes 参数 只能二选一使用（注: 
+<font color='red'>空数组代表未指定</font>），具体的控件类型如下
 <ul><li>SIGN_SIGNATURE : 个人签名/印章</li>
 <li>SIGN_SEAL : 企业印章</li>
 <li>SIGN_PAGING_SEAL : 骑缝章</li>
 <li>SIGN_LEGAL_PERSON_SEAL : 法定代表人章</li>
 <li>SIGN_APPROVE : 签批</li>
 <li>SIGN_OPINION : 签署意见</li>
+<li>SIGN_PAGING_SIGNATURE : 手写签名骑缝控件</li>
 <li>BUSI-FULL-NAME  : 企业全称</li>
 <li>BUSI-CREDIT-CODE : 统一社会信用代码</li>
 <li>BUSI-LEGAL-NAME : 法人/经营者姓名</li>

@@ -66,6 +66,14 @@ public class DescribeDatabasesRequest extends AbstractModel {
     private Boolean Asc;
 
     /**
+    * 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+    */
+    @SerializedName("DescribeType")
+    @Expose
+    private String DescribeType;
+
+    /**
      * Get 返回数量，默认为10，最大值为100。 
      * @return Limit 返回数量，默认为10，最大值为100。
      */
@@ -161,6 +169,26 @@ public class DescribeDatabasesRequest extends AbstractModel {
         this.Asc = Asc;
     }
 
+    /**
+     * Get 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。 
+     * @return DescribeType 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+     */
+    public String getDescribeType() {
+        return this.DescribeType;
+    }
+
+    /**
+     * Set 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+     * @param DescribeType 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+     */
+    public void setDescribeType(String DescribeType) {
+        this.DescribeType = DescribeType;
+    }
+
     public DescribeDatabasesRequest() {
     }
 
@@ -187,6 +215,9 @@ public class DescribeDatabasesRequest extends AbstractModel {
         if (source.Asc != null) {
             this.Asc = new Boolean(source.Asc);
         }
+        if (source.DescribeType != null) {
+            this.DescribeType = new String(source.DescribeType);
+        }
     }
 
 
@@ -200,6 +231,7 @@ public class DescribeDatabasesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "Asc", this.Asc);
+        this.setParamSimple(map, prefix + "DescribeType", this.DescribeType);
 
     }
 }
