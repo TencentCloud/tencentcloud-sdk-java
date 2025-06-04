@@ -94,6 +94,27 @@ public class KnowledgeDocumentSet extends AbstractModel {
     private String Author;
 
     /**
+    * 上传文件状态
+    */
+    @SerializedName("DocStatus")
+    @Expose
+    private String DocStatus;
+
+    /**
+    * 文件上传失败的具体原因
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
+
+    /**
+    * Cos存储文件ID
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
      * Get 文档id 
      * @return DocumentSetId 文档id
      */
@@ -253,6 +274,54 @@ public class KnowledgeDocumentSet extends AbstractModel {
         this.Author = Author;
     }
 
+    /**
+     * Get 上传文件状态 
+     * @return DocStatus 上传文件状态
+     */
+    public String getDocStatus() {
+        return this.DocStatus;
+    }
+
+    /**
+     * Set 上传文件状态
+     * @param DocStatus 上传文件状态
+     */
+    public void setDocStatus(String DocStatus) {
+        this.DocStatus = DocStatus;
+    }
+
+    /**
+     * Get 文件上传失败的具体原因 
+     * @return ErrMsg 文件上传失败的具体原因
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set 文件上传失败的具体原因
+     * @param ErrMsg 文件上传失败的具体原因
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
+    }
+
+    /**
+     * Get Cos存储文件ID 
+     * @return FileId Cos存储文件ID
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set Cos存储文件ID
+     * @param FileId Cos存储文件ID
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
     public KnowledgeDocumentSet() {
     }
 
@@ -291,6 +360,15 @@ public class KnowledgeDocumentSet extends AbstractModel {
         if (source.Author != null) {
             this.Author = new String(source.Author);
         }
+        if (source.DocStatus != null) {
+            this.DocStatus = new String(source.DocStatus);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -308,6 +386,9 @@ public class KnowledgeDocumentSet extends AbstractModel {
         this.setParamSimple(map, prefix + "FileTitle", this.FileTitle);
         this.setParamSimple(map, prefix + "FileMetaData", this.FileMetaData);
         this.setParamSimple(map, prefix + "Author", this.Author);
+        this.setParamSimple(map, prefix + "DocStatus", this.DocStatus);
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

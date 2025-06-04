@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfs.v20190719.models;
+package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopMigrationTaskRequest extends AbstractModel {
+public class DescribeLBOperateProtectRequest extends AbstractModel {
 
     /**
-    * 迁移任务Id
+    * 负载均衡实例ID。
     */
-    @SerializedName("TaskId")
+    @SerializedName("LoadBalancerIds")
     @Expose
-    private String TaskId;
+    private String [] LoadBalancerIds;
 
     /**
-     * Get 迁移任务Id 
-     * @return TaskId 迁移任务Id
+     * Get 负载均衡实例ID。 
+     * @return LoadBalancerIds 负载均衡实例ID。
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String [] getLoadBalancerIds() {
+        return this.LoadBalancerIds;
     }
 
     /**
-     * Set 迁移任务Id
-     * @param TaskId 迁移任务Id
+     * Set 负载均衡实例ID。
+     * @param LoadBalancerIds 负载均衡实例ID。
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setLoadBalancerIds(String [] LoadBalancerIds) {
+        this.LoadBalancerIds = LoadBalancerIds;
     }
 
-    public StopMigrationTaskRequest() {
+    public DescribeLBOperateProtectRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StopMigrationTaskRequest(StopMigrationTaskRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public DescribeLBOperateProtectRequest(DescribeLBOperateProtectRequest source) {
+        if (source.LoadBalancerIds != null) {
+            this.LoadBalancerIds = new String[source.LoadBalancerIds.length];
+            for (int i = 0; i < source.LoadBalancerIds.length; i++) {
+                this.LoadBalancerIds[i] = new String(source.LoadBalancerIds[i]);
+            }
         }
     }
 
@@ -64,7 +67,7 @@ public class StopMigrationTaskRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
 
     }
 }

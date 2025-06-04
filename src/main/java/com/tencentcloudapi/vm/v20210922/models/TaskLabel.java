@@ -24,14 +24,8 @@ import java.util.HashMap;
 public class TaskLabel extends AbstractModel {
 
     /**
-    * 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+    * 该字段用于返回检测结果所对应的恶意标签。
+返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -66,23 +60,11 @@ Block 确认违规
     private String SubLabel;
 
     /**
-     * Get 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * Get 该字段用于返回检测结果所对应的恶意标签。
+返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * @return Label 该字段用于返回检测结果所对应的恶意标签。
+返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
@@ -90,23 +72,11 @@ Ad 广告
     }
 
     /**
-     * Set 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * Set 该字段用于返回检测结果所对应的恶意标签。
+返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * @param Label 该字段用于返回检测结果所对应的恶意标签。
+返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {

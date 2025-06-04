@@ -52,6 +52,13 @@ public class CreateAndroidAppVersionRequest extends AbstractModel {
     private String UninstallCommand;
 
     /**
+    * 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+    */
+    @SerializedName("CleanupMode")
+    @Expose
+    private String CleanupMode;
+
+    /**
      * Get 应用ID 
      * @return AndroidAppId 应用ID
      */
@@ -115,6 +122,22 @@ public class CreateAndroidAppVersionRequest extends AbstractModel {
         this.UninstallCommand = UninstallCommand;
     }
 
+    /**
+     * Get 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。 
+     * @return CleanupMode 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+     */
+    public String getCleanupMode() {
+        return this.CleanupMode;
+    }
+
+    /**
+     * Set 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+     * @param CleanupMode 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+     */
+    public void setCleanupMode(String CleanupMode) {
+        this.CleanupMode = CleanupMode;
+    }
+
     public CreateAndroidAppVersionRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateAndroidAppVersionRequest extends AbstractModel {
         if (source.UninstallCommand != null) {
             this.UninstallCommand = new String(source.UninstallCommand);
         }
+        if (source.CleanupMode != null) {
+            this.CleanupMode = new String(source.CleanupMode);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateAndroidAppVersionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "UninstallCommand", this.UninstallCommand);
+        this.setParamSimple(map, prefix + "CleanupMode", this.CleanupMode);
 
     }
 }

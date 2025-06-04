@@ -270,6 +270,13 @@ MountNamespace逃逸、
     private String WorkloadType;
 
     /**
+    * 容器运行状态
+    */
+    @SerializedName("ContainerStatus")
+    @Expose
+    private String ContainerStatus;
+
+    /**
      * Get 事件唯一ID 
      * @return EventId 事件唯一ID
      */
@@ -881,6 +888,22 @@ MountNamespace逃逸、
         this.WorkloadType = WorkloadType;
     }
 
+    /**
+     * Get 容器运行状态 
+     * @return ContainerStatus 容器运行状态
+     */
+    public String getContainerStatus() {
+        return this.ContainerStatus;
+    }
+
+    /**
+     * Set 容器运行状态
+     * @param ContainerStatus 容器运行状态
+     */
+    public void setContainerStatus(String ContainerStatus) {
+        this.ContainerStatus = ContainerStatus;
+    }
+
     public RunTimeEventBaseInfo() {
     }
 
@@ -982,6 +1005,9 @@ MountNamespace逃逸、
         if (source.WorkloadType != null) {
             this.WorkloadType = new String(source.WorkloadType);
         }
+        if (source.ContainerStatus != null) {
+            this.ContainerStatus = new String(source.ContainerStatus);
+        }
     }
 
 
@@ -1020,6 +1046,7 @@ MountNamespace逃逸、
         this.setParamSimple(map, prefix + "HostID", this.HostID);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
+        this.setParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
 
     }
 }

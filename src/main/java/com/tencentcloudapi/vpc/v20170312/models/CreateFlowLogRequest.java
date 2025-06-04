@@ -67,8 +67,7 @@ public class CreateFlowLogRequest extends AbstractModel {
 
     /**
     * 流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
-）。当StorageType为cls时，CloudLogId为必选。
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取）。当StorageType为cls时，CloudLogId为必选。
     */
     @SerializedName("CloudLogId")
     @Expose
@@ -200,11 +199,9 @@ public class CreateFlowLogRequest extends AbstractModel {
 
     /**
      * Get 流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
-）。当StorageType为cls时，CloudLogId为必选。 
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取）。当StorageType为cls时，CloudLogId为必选。 
      * @return CloudLogId 流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
-）。当StorageType为cls时，CloudLogId为必选。
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取）。当StorageType为cls时，CloudLogId为必选。
      */
     public String getCloudLogId() {
         return this.CloudLogId;
@@ -212,11 +209,9 @@ public class CreateFlowLogRequest extends AbstractModel {
 
     /**
      * Set 流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
-）。当StorageType为cls时，CloudLogId为必选。
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取）。当StorageType为cls时，CloudLogId为必选。
      * @param CloudLogId 流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
-）。当StorageType为cls时，CloudLogId为必选。
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取）。当StorageType为cls时，CloudLogId为必选。
      */
     public void setCloudLogId(String CloudLogId) {
         this.CloudLogId = CloudLogId;

@@ -66,6 +66,13 @@ public class OverviewRow extends AbstractModel {
     private String Operation;
 
     /**
+    * StoreFile数量
+    */
+    @SerializedName("StoreFileNum")
+    @Expose
+    private Float StoreFileNum;
+
+    /**
      * Get 表名字 
      * @return Table 表名字
      */
@@ -161,6 +168,22 @@ public class OverviewRow extends AbstractModel {
         this.Operation = Operation;
     }
 
+    /**
+     * Get StoreFile数量 
+     * @return StoreFileNum StoreFile数量
+     */
+    public Float getStoreFileNum() {
+        return this.StoreFileNum;
+    }
+
+    /**
+     * Set StoreFile数量
+     * @param StoreFileNum StoreFile数量
+     */
+    public void setStoreFileNum(Float StoreFileNum) {
+        this.StoreFileNum = StoreFileNum;
+    }
+
     public OverviewRow() {
     }
 
@@ -187,6 +210,9 @@ public class OverviewRow extends AbstractModel {
         if (source.Operation != null) {
             this.Operation = new String(source.Operation);
         }
+        if (source.StoreFileNum != null) {
+            this.StoreFileNum = new Float(source.StoreFileNum);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class OverviewRow extends AbstractModel {
         this.setParamSimple(map, prefix + "MemstoreSize", this.MemstoreSize);
         this.setParamSimple(map, prefix + "StoreFileSize", this.StoreFileSize);
         this.setParamSimple(map, prefix + "Operation", this.Operation);
+        this.setParamSimple(map, prefix + "StoreFileNum", this.StoreFileNum);
 
     }
 }

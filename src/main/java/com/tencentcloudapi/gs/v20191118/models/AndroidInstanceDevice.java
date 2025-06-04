@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfs.v20190719.models;
+package com.tencentcloudapi.gs.v20191118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopMigrationTaskRequest extends AbstractModel {
+public class AndroidInstanceDevice extends AbstractModel {
 
     /**
-    * 迁移任务Id
+    * 品牌
     */
-    @SerializedName("TaskId")
+    @SerializedName("Brand")
     @Expose
-    private String TaskId;
+    private String Brand;
 
     /**
-     * Get 迁移任务Id 
-     * @return TaskId 迁移任务Id
+    * 型号
+    */
+    @SerializedName("Model")
+    @Expose
+    private String Model;
+
+    /**
+     * Get 品牌 
+     * @return Brand 品牌
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String getBrand() {
+        return this.Brand;
     }
 
     /**
-     * Set 迁移任务Id
-     * @param TaskId 迁移任务Id
+     * Set 品牌
+     * @param Brand 品牌
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setBrand(String Brand) {
+        this.Brand = Brand;
     }
 
-    public StopMigrationTaskRequest() {
+    /**
+     * Get 型号 
+     * @return Model 型号
+     */
+    public String getModel() {
+        return this.Model;
+    }
+
+    /**
+     * Set 型号
+     * @param Model 型号
+     */
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
+
+    public AndroidInstanceDevice() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StopMigrationTaskRequest(StopMigrationTaskRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public AndroidInstanceDevice(AndroidInstanceDevice source) {
+        if (source.Brand != null) {
+            this.Brand = new String(source.Brand);
+        }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
         }
     }
 
@@ -64,7 +90,8 @@ public class StopMigrationTaskRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Brand", this.Brand);
+        this.setParamSimple(map, prefix + "Model", this.Model);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfs.v20190719.models;
+package com.tencentcloudapi.gs.v20191118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopMigrationTaskRequest extends AbstractModel {
+public class CreateAndroidInstanceADBRequest extends AbstractModel {
 
     /**
-    * 迁移任务Id
+    * 安卓实例 ID
     */
-    @SerializedName("TaskId")
+    @SerializedName("AndroidInstanceId")
     @Expose
-    private String TaskId;
+    private String AndroidInstanceId;
 
     /**
-     * Get 迁移任务Id 
-     * @return TaskId 迁移任务Id
+     * Get 安卓实例 ID 
+     * @return AndroidInstanceId 安卓实例 ID
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String getAndroidInstanceId() {
+        return this.AndroidInstanceId;
     }
 
     /**
-     * Set 迁移任务Id
-     * @param TaskId 迁移任务Id
+     * Set 安卓实例 ID
+     * @param AndroidInstanceId 安卓实例 ID
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setAndroidInstanceId(String AndroidInstanceId) {
+        this.AndroidInstanceId = AndroidInstanceId;
     }
 
-    public StopMigrationTaskRequest() {
+    public CreateAndroidInstanceADBRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StopMigrationTaskRequest(StopMigrationTaskRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public CreateAndroidInstanceADBRequest(CreateAndroidInstanceADBRequest source) {
+        if (source.AndroidInstanceId != null) {
+            this.AndroidInstanceId = new String(source.AndroidInstanceId);
         }
     }
 
@@ -64,7 +64,7 @@ public class StopMigrationTaskRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "AndroidInstanceId", this.AndroidInstanceId);
 
     }
 }

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BindAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * 快照策略ID，通过快照策略列表获取
+    * 需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-    * 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
+    * 解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
     */
     @SerializedName("FileSystemIds")
     @Expose
     private String FileSystemIds;
 
     /**
-     * Get 快照策略ID，通过快照策略列表获取 
-     * @return AutoSnapshotPolicyId 快照策略ID，通过快照策略列表获取
+     * Get 需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 
+     * @return AutoSnapshotPolicyId 需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set 快照策略ID，通过快照策略列表获取
-     * @param AutoSnapshotPolicyId 快照策略ID，通过快照策略列表获取
+     * Set 需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+     * @param AutoSnapshotPolicyId 需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
     /**
-     * Get 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得 
-     * @return FileSystemIds 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
+     * Get 解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取 
+     * @return FileSystemIds 解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
      */
     public String getFileSystemIds() {
         return this.FileSystemIds;
     }
 
     /**
-     * Set 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
-     * @param FileSystemIds 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
+     * Set 解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
+     * @param FileSystemIds 解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
      */
     public void setFileSystemIds(String FileSystemIds) {
         this.FileSystemIds = FileSystemIds;

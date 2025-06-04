@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcss.v20201101.models;
+package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAssetImageRegistryListExportResponse extends AbstractModel {
+public class DescribeLBOperateProtectResponse extends AbstractModel {
 
     /**
-    * excel文件下载地址
+    * 返回的负载均衡操作保护信息数组。
     */
-    @SerializedName("DownloadUrl")
+    @SerializedName("LoadBalancerSet")
     @Expose
-    private String DownloadUrl;
-
-    /**
-    * 导出任务id
-    */
-    @SerializedName("JobId")
-    @Expose
-    private String JobId;
+    private LBOperateProtectInfo [] LoadBalancerSet;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class DescribeAssetImageRegistryListExportResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get excel文件下载地址 
-     * @return DownloadUrl excel文件下载地址
+     * Get 返回的负载均衡操作保护信息数组。 
+     * @return LoadBalancerSet 返回的负载均衡操作保护信息数组。
      */
-    public String getDownloadUrl() {
-        return this.DownloadUrl;
+    public LBOperateProtectInfo [] getLoadBalancerSet() {
+        return this.LoadBalancerSet;
     }
 
     /**
-     * Set excel文件下载地址
-     * @param DownloadUrl excel文件下载地址
+     * Set 返回的负载均衡操作保护信息数组。
+     * @param LoadBalancerSet 返回的负载均衡操作保护信息数组。
      */
-    public void setDownloadUrl(String DownloadUrl) {
-        this.DownloadUrl = DownloadUrl;
-    }
-
-    /**
-     * Get 导出任务id 
-     * @return JobId 导出任务id
-     */
-    public String getJobId() {
-        return this.JobId;
-    }
-
-    /**
-     * Set 导出任务id
-     * @param JobId 导出任务id
-     */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setLoadBalancerSet(LBOperateProtectInfo [] LoadBalancerSet) {
+        this.LoadBalancerSet = LoadBalancerSet;
     }
 
     /**
@@ -92,19 +69,19 @@ public class DescribeAssetImageRegistryListExportResponse extends AbstractModel 
         this.RequestId = RequestId;
     }
 
-    public DescribeAssetImageRegistryListExportResponse() {
+    public DescribeLBOperateProtectResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAssetImageRegistryListExportResponse(DescribeAssetImageRegistryListExportResponse source) {
-        if (source.DownloadUrl != null) {
-            this.DownloadUrl = new String(source.DownloadUrl);
-        }
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
+    public DescribeLBOperateProtectResponse(DescribeLBOperateProtectResponse source) {
+        if (source.LoadBalancerSet != null) {
+            this.LoadBalancerSet = new LBOperateProtectInfo[source.LoadBalancerSet.length];
+            for (int i = 0; i < source.LoadBalancerSet.length; i++) {
+                this.LoadBalancerSet[i] = new LBOperateProtectInfo(source.LoadBalancerSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +93,7 @@ public class DescribeAssetImageRegistryListExportResponse extends AbstractModel 
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamArrayObj(map, prefix + "LoadBalancerSet.", this.LoadBalancerSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

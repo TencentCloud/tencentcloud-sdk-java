@@ -103,7 +103,9 @@ public class HostInfo extends AbstractModel {
     /**
      * Get 宿主机IP（废弃） 
      * @return HostIp 宿主机IP（废弃）
+     * @deprecated
      */
+    @Deprecated
     public String getHostIp() {
         return this.HostIp;
     }
@@ -111,7 +113,9 @@ public class HostInfo extends AbstractModel {
     /**
      * Set 宿主机IP（废弃）
      * @param HostIp 宿主机IP（废弃）
+     * @deprecated
      */
+    @Deprecated
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }

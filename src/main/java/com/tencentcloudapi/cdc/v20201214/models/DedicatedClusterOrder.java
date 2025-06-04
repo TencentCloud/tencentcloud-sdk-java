@@ -238,7 +238,9 @@ public class DedicatedClusterOrder extends AbstractModel {
     /**
      * Get 专用集群类型id（移到下一层级，已经废弃，后续将删除） 
      * @return DedicatedClusterTypeId 专用集群类型id（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
+    @Deprecated
     public String getDedicatedClusterTypeId() {
         return this.DedicatedClusterTypeId;
     }
@@ -246,7 +248,9 @@ public class DedicatedClusterOrder extends AbstractModel {
     /**
      * Set 专用集群类型id（移到下一层级，已经废弃，后续将删除）
      * @param DedicatedClusterTypeId 专用集群类型id（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
+    @Deprecated
     public void setDedicatedClusterTypeId(String DedicatedClusterTypeId) {
         this.DedicatedClusterTypeId = DedicatedClusterTypeId;
     }
@@ -254,7 +258,9 @@ public class DedicatedClusterOrder extends AbstractModel {
     /**
      * Get 支持的存储类型列表（移到下一层级，已经废弃，后续将删除） 
      * @return SupportedStorageType 支持的存储类型列表（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
+    @Deprecated
     public String [] getSupportedStorageType() {
         return this.SupportedStorageType;
     }
@@ -262,7 +268,9 @@ public class DedicatedClusterOrder extends AbstractModel {
     /**
      * Set 支持的存储类型列表（移到下一层级，已经废弃，后续将删除）
      * @param SupportedStorageType 支持的存储类型列表（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
+    @Deprecated
     public void setSupportedStorageType(String [] SupportedStorageType) {
         this.SupportedStorageType = SupportedStorageType;
     }
@@ -270,7 +278,9 @@ public class DedicatedClusterOrder extends AbstractModel {
     /**
      * Get 支持的上连交换机的链路传输速率(GiB)（移到下一层级，已经废弃，后续将删除） 
      * @return SupportedUplinkSpeed 支持的上连交换机的链路传输速率(GiB)（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
+    @Deprecated
     public Long [] getSupportedUplinkSpeed() {
         return this.SupportedUplinkSpeed;
     }
@@ -278,7 +288,9 @@ public class DedicatedClusterOrder extends AbstractModel {
     /**
      * Set 支持的上连交换机的链路传输速率(GiB)（移到下一层级，已经废弃，后续将删除）
      * @param SupportedUplinkSpeed 支持的上连交换机的链路传输速率(GiB)（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
+    @Deprecated
     public void setSupportedUplinkSpeed(Long [] SupportedUplinkSpeed) {
         this.SupportedUplinkSpeed = SupportedUplinkSpeed;
     }
@@ -286,7 +298,9 @@ public class DedicatedClusterOrder extends AbstractModel {
     /**
      * Get 支持的实例族列表（移到下一层级，已经废弃，后续将删除） 
      * @return SupportedInstanceFamily 支持的实例族列表（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
+    @Deprecated
     public String [] getSupportedInstanceFamily() {
         return this.SupportedInstanceFamily;
     }
@@ -294,7 +308,9 @@ public class DedicatedClusterOrder extends AbstractModel {
     /**
      * Set 支持的实例族列表（移到下一层级，已经废弃，后续将删除）
      * @param SupportedInstanceFamily 支持的实例族列表（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
+    @Deprecated
     public void setSupportedInstanceFamily(String [] SupportedInstanceFamily) {
         this.SupportedInstanceFamily = SupportedInstanceFamily;
     }

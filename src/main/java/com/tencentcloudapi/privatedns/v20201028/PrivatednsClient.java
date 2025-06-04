@@ -226,6 +226,17 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *获取私有域记录
+     * @param req DescribeRecordRequest
+     * @return DescribeRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordResponse DescribeRecord(DescribeRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRecord", DescribeRecordResponse.class);
+    }
+
+    /**
      *获取私有域解析请求量
      * @param req DescribeRequestDataRequest
      * @return DescribeRequestDataResponse

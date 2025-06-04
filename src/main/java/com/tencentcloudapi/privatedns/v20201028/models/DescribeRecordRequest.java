@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfs.v20190719.models;
+package com.tencentcloudapi.privatedns.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopMigrationTaskRequest extends AbstractModel {
+public class DescribeRecordRequest extends AbstractModel {
 
     /**
-    * 迁移任务Id
+    * 私有域ID
     */
-    @SerializedName("TaskId")
+    @SerializedName("ZoneId")
     @Expose
-    private String TaskId;
+    private String ZoneId;
 
     /**
-     * Get 迁移任务Id 
-     * @return TaskId 迁移任务Id
+    * 记录ID
+    */
+    @SerializedName("RecordId")
+    @Expose
+    private String RecordId;
+
+    /**
+     * Get 私有域ID 
+     * @return ZoneId 私有域ID
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String getZoneId() {
+        return this.ZoneId;
     }
 
     /**
-     * Set 迁移任务Id
-     * @param TaskId 迁移任务Id
+     * Set 私有域ID
+     * @param ZoneId 私有域ID
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
     }
 
-    public StopMigrationTaskRequest() {
+    /**
+     * Get 记录ID 
+     * @return RecordId 记录ID
+     */
+    public String getRecordId() {
+        return this.RecordId;
+    }
+
+    /**
+     * Set 记录ID
+     * @param RecordId 记录ID
+     */
+    public void setRecordId(String RecordId) {
+        this.RecordId = RecordId;
+    }
+
+    public DescribeRecordRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StopMigrationTaskRequest(StopMigrationTaskRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public DescribeRecordRequest(DescribeRecordRequest source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.RecordId != null) {
+            this.RecordId = new String(source.RecordId);
         }
     }
 
@@ -64,7 +90,8 @@ public class StopMigrationTaskRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "RecordId", this.RecordId);
 
     }
 }

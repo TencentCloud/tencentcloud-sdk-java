@@ -470,6 +470,13 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     private String WorkloadType;
 
     /**
+    * 容器状态
+    */
+    @SerializedName("ContainerStatus")
+    @Expose
+    private String ContainerStatus;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1529,6 +1536,22 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     }
 
     /**
+     * Get 容器状态 
+     * @return ContainerStatus 容器状态
+     */
+    public String getContainerStatus() {
+        return this.ContainerStatus;
+    }
+
+    /**
+     * Set 容器状态
+     * @param ContainerStatus 容器状态
+     */
+    public void setContainerStatus(String ContainerStatus) {
+        this.ContainerStatus = ContainerStatus;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1741,6 +1764,9 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         if (source.WorkloadType != null) {
             this.WorkloadType = new String(source.WorkloadType);
         }
+        if (source.ContainerStatus != null) {
+            this.ContainerStatus = new String(source.ContainerStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1812,6 +1838,7 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
+        this.setParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

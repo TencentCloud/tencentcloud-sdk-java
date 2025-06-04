@@ -31,6 +31,20 @@ public class DeleteMachineRequest extends AbstractModel {
     private String Uuid;
 
     /**
+    * 超级节点唯一id
+    */
+    @SerializedName("NodeUniqueIds")
+    @Expose
+    private String [] NodeUniqueIds;
+
+    /**
+    * uuid列表
+    */
+    @SerializedName("UUIDs")
+    @Expose
+    private String [] UUIDs;
+
+    /**
      * Get 客户端Uuid 
      * @return Uuid 客户端Uuid
      */
@@ -46,6 +60,38 @@ public class DeleteMachineRequest extends AbstractModel {
         this.Uuid = Uuid;
     }
 
+    /**
+     * Get 超级节点唯一id 
+     * @return NodeUniqueIds 超级节点唯一id
+     */
+    public String [] getNodeUniqueIds() {
+        return this.NodeUniqueIds;
+    }
+
+    /**
+     * Set 超级节点唯一id
+     * @param NodeUniqueIds 超级节点唯一id
+     */
+    public void setNodeUniqueIds(String [] NodeUniqueIds) {
+        this.NodeUniqueIds = NodeUniqueIds;
+    }
+
+    /**
+     * Get uuid列表 
+     * @return UUIDs uuid列表
+     */
+    public String [] getUUIDs() {
+        return this.UUIDs;
+    }
+
+    /**
+     * Set uuid列表
+     * @param UUIDs uuid列表
+     */
+    public void setUUIDs(String [] UUIDs) {
+        this.UUIDs = UUIDs;
+    }
+
     public DeleteMachineRequest() {
     }
 
@@ -57,6 +103,18 @@ public class DeleteMachineRequest extends AbstractModel {
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.NodeUniqueIds != null) {
+            this.NodeUniqueIds = new String[source.NodeUniqueIds.length];
+            for (int i = 0; i < source.NodeUniqueIds.length; i++) {
+                this.NodeUniqueIds[i] = new String(source.NodeUniqueIds[i]);
+            }
+        }
+        if (source.UUIDs != null) {
+            this.UUIDs = new String[source.UUIDs.length];
+            for (int i = 0; i < source.UUIDs.length; i++) {
+                this.UUIDs[i] = new String(source.UUIDs[i]);
+            }
+        }
     }
 
 
@@ -65,6 +123,8 @@ public class DeleteMachineRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamArraySimple(map, prefix + "NodeUniqueIds.", this.NodeUniqueIds);
+        this.setParamArraySimple(map, prefix + "UUIDs.", this.UUIDs);
 
     }
 }

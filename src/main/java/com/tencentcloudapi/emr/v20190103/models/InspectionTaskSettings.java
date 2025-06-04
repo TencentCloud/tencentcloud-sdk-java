@@ -66,6 +66,13 @@ public class InspectionTaskSettings extends AbstractModel {
     private String Enable;
 
     /**
+    * 事件Json模板
+    */
+    @SerializedName("SettingsJson")
+    @Expose
+    private String SettingsJson;
+
+    /**
      * Get 巡检任务的唯一标记 
      * @return TaskType 巡检任务的唯一标记
      */
@@ -161,6 +168,22 @@ public class InspectionTaskSettings extends AbstractModel {
         this.Enable = Enable;
     }
 
+    /**
+     * Get 事件Json模板 
+     * @return SettingsJson 事件Json模板
+     */
+    public String getSettingsJson() {
+        return this.SettingsJson;
+    }
+
+    /**
+     * Set 事件Json模板
+     * @param SettingsJson 事件Json模板
+     */
+    public void setSettingsJson(String SettingsJson) {
+        this.SettingsJson = SettingsJson;
+    }
+
     public InspectionTaskSettings() {
     }
 
@@ -190,6 +213,9 @@ public class InspectionTaskSettings extends AbstractModel {
         if (source.Enable != null) {
             this.Enable = new String(source.Enable);
         }
+        if (source.SettingsJson != null) {
+            this.SettingsJson = new String(source.SettingsJson);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class InspectionTaskSettings extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TaskSettings.", this.TaskSettings);
         this.setParamSimple(map, prefix + "Selected", this.Selected);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "SettingsJson", this.SettingsJson);
 
     }
 }

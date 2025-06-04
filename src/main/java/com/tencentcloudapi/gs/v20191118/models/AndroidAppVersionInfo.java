@@ -61,6 +61,13 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
     private String UninstallCommand;
 
     /**
+    * 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+    */
+    @SerializedName("CleanupMode")
+    @Expose
+    private String CleanupMode;
+
+    /**
      * Get 安卓应用版本 
      * @return AndroidAppVersion 安卓应用版本
      */
@@ -148,6 +155,22 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         this.UninstallCommand = UninstallCommand;
     }
 
+    /**
+     * Get 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。 
+     * @return CleanupMode 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+     */
+    public String getCleanupMode() {
+        return this.CleanupMode;
+    }
+
+    /**
+     * Set 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+     * @param CleanupMode 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+     */
+    public void setCleanupMode(String CleanupMode) {
+        this.CleanupMode = CleanupMode;
+    }
+
     public AndroidAppVersionInfo() {
     }
 
@@ -171,6 +194,9 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         if (source.UninstallCommand != null) {
             this.UninstallCommand = new String(source.UninstallCommand);
         }
+        if (source.CleanupMode != null) {
+            this.CleanupMode = new String(source.CleanupMode);
+        }
     }
 
 
@@ -183,6 +209,7 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "UninstallCommand", this.UninstallCommand);
+        this.setParamSimple(map, prefix + "CleanupMode", this.CleanupMode);
 
     }
 }

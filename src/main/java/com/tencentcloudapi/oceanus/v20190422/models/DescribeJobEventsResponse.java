@@ -48,6 +48,14 @@ public class DescribeJobEventsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 实例对应的版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Versions")
+    @Expose
+    private Long [] Versions;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -115,6 +123,26 @@ public class DescribeJobEventsResponse extends AbstractModel {
     }
 
     /**
+     * Get 实例对应的版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Versions 实例对应的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getVersions() {
+        return this.Versions;
+    }
+
+    /**
+     * Set 实例对应的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Versions 实例对应的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersions(Long [] Versions) {
+        this.Versions = Versions;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -153,6 +181,12 @@ public class DescribeJobEventsResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.Versions != null) {
+            this.Versions = new Long[source.Versions.length];
+            for (int i = 0; i < source.Versions.length; i++) {
+                this.Versions[i] = new Long(source.Versions[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -166,6 +200,7 @@ public class DescribeJobEventsResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Events.", this.Events);
         this.setParamArraySimple(map, prefix + "RunningOrderIds.", this.RunningOrderIds);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArraySimple(map, prefix + "Versions.", this.Versions);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

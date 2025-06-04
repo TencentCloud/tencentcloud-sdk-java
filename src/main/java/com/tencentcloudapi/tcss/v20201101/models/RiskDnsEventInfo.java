@@ -258,6 +258,20 @@ EVENT_ADD_WHITE：已加白
     private String ClusterName;
 
     /**
+    * 镜像ID
+    */
+    @SerializedName("ImageId")
+    @Expose
+    private String ImageId;
+
+    /**
+    * 容器ID
+    */
+    @SerializedName("ContainerId")
+    @Expose
+    private String ContainerId;
+
+    /**
      * Get 事件ID 
      * @return EventID 事件ID
      */
@@ -833,6 +847,38 @@ EVENT_ADD_WHITE：已加白
         this.ClusterName = ClusterName;
     }
 
+    /**
+     * Get 镜像ID 
+     * @return ImageId 镜像ID
+     */
+    public String getImageId() {
+        return this.ImageId;
+    }
+
+    /**
+     * Set 镜像ID
+     * @param ImageId 镜像ID
+     */
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
+    /**
+     * Get 容器ID 
+     * @return ContainerId 容器ID
+     */
+    public String getContainerId() {
+        return this.ContainerId;
+    }
+
+    /**
+     * Set 容器ID
+     * @param ContainerId 容器ID
+     */
+    public void setContainerId(String ContainerId) {
+        this.ContainerId = ContainerId;
+    }
+
     public RiskDnsEventInfo() {
     }
 
@@ -931,6 +977,12 @@ EVENT_ADD_WHITE：已加白
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
+        if (source.ContainerId != null) {
+            this.ContainerId = new String(source.ContainerId);
+        }
     }
 
 
@@ -968,6 +1020,8 @@ EVENT_ADD_WHITE：已加白
         this.setParamSimple(map, prefix + "NodeID", this.NodeID);
         this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "ContainerId", this.ContainerId);
 
     }
 }

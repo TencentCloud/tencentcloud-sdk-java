@@ -253,6 +253,13 @@ public class ClusterInfoItem extends AbstractModel {
     private String ClusterAuditFailedInfo;
 
     /**
+    * 所有者名称
+    */
+    @SerializedName("OwnerName")
+    @Expose
+    private String OwnerName;
+
+    /**
      * Get 集群id 
      * @return ClusterId 集群id
      */
@@ -796,6 +803,22 @@ public class ClusterInfoItem extends AbstractModel {
         this.ClusterAuditFailedInfo = ClusterAuditFailedInfo;
     }
 
+    /**
+     * Get 所有者名称 
+     * @return OwnerName 所有者名称
+     */
+    public String getOwnerName() {
+        return this.OwnerName;
+    }
+
+    /**
+     * Set 所有者名称
+     * @param OwnerName 所有者名称
+     */
+    public void setOwnerName(String OwnerName) {
+        this.OwnerName = OwnerName;
+    }
+
     public ClusterInfoItem() {
     }
 
@@ -900,6 +923,9 @@ public class ClusterInfoItem extends AbstractModel {
         if (source.ClusterAuditFailedInfo != null) {
             this.ClusterAuditFailedInfo = new String(source.ClusterAuditFailedInfo);
         }
+        if (source.OwnerName != null) {
+            this.OwnerName = new String(source.OwnerName);
+        }
     }
 
 
@@ -938,6 +964,7 @@ public class ClusterInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
         this.setParamSimple(map, prefix + "ClusterAuditStatus", this.ClusterAuditStatus);
         this.setParamSimple(map, prefix + "ClusterAuditFailedInfo", this.ClusterAuditFailedInfo);
+        this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
 
     }
 }

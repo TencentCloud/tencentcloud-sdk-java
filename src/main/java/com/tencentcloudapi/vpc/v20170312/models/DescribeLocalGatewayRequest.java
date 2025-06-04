@@ -24,7 +24,11 @@ import java.util.HashMap;
 public class DescribeLocalGatewayRequest extends AbstractModel {
 
     /**
-    * 支持的过滤条件如下:\n<li>vpc-id:按照VPCID过滤。</li>\n<li>local-gateway-name:本地网关名称,支持模糊查询。</li>\n<li>local-gateway-id:本地网关实例ID。</li>\n<li>cdc-id:cdc实例ID。</li>
+    * 支持的过滤条件如下:
+<li>vpc-id:按照VPCID过滤。</li>
+<li>local-gateway-name:本地网关名称,支持模糊查询。</li>
+<li>local-gateway-id:本地网关实例ID。</li>
+<li>cdc-id:cdc实例ID。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -45,16 +49,32 @@ public class DescribeLocalGatewayRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 支持的过滤条件如下:\n<li>vpc-id:按照VPCID过滤。</li>\n<li>local-gateway-name:本地网关名称,支持模糊查询。</li>\n<li>local-gateway-id:本地网关实例ID。</li>\n<li>cdc-id:cdc实例ID。</li> 
-     * @return Filters 支持的过滤条件如下:\n<li>vpc-id:按照VPCID过滤。</li>\n<li>local-gateway-name:本地网关名称,支持模糊查询。</li>\n<li>local-gateway-id:本地网关实例ID。</li>\n<li>cdc-id:cdc实例ID。</li>
+     * Get 支持的过滤条件如下:
+<li>vpc-id:按照VPCID过滤。</li>
+<li>local-gateway-name:本地网关名称,支持模糊查询。</li>
+<li>local-gateway-id:本地网关实例ID。</li>
+<li>cdc-id:cdc实例ID。</li> 
+     * @return Filters 支持的过滤条件如下:
+<li>vpc-id:按照VPCID过滤。</li>
+<li>local-gateway-name:本地网关名称,支持模糊查询。</li>
+<li>local-gateway-id:本地网关实例ID。</li>
+<li>cdc-id:cdc实例ID。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 支持的过滤条件如下:\n<li>vpc-id:按照VPCID过滤。</li>\n<li>local-gateway-name:本地网关名称,支持模糊查询。</li>\n<li>local-gateway-id:本地网关实例ID。</li>\n<li>cdc-id:cdc实例ID。</li>
-     * @param Filters 支持的过滤条件如下:\n<li>vpc-id:按照VPCID过滤。</li>\n<li>local-gateway-name:本地网关名称,支持模糊查询。</li>\n<li>local-gateway-id:本地网关实例ID。</li>\n<li>cdc-id:cdc实例ID。</li>
+     * Set 支持的过滤条件如下:
+<li>vpc-id:按照VPCID过滤。</li>
+<li>local-gateway-name:本地网关名称,支持模糊查询。</li>
+<li>local-gateway-id:本地网关实例ID。</li>
+<li>cdc-id:cdc实例ID。</li>
+     * @param Filters 支持的过滤条件如下:
+<li>vpc-id:按照VPCID过滤。</li>
+<li>local-gateway-name:本地网关名称,支持模糊查询。</li>
+<li>local-gateway-id:本地网关实例ID。</li>
+<li>cdc-id:cdc实例ID。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

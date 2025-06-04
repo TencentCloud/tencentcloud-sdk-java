@@ -39,6 +39,7 @@ public class HistoryJob extends AbstractModel {
 
     /**
     * 扩容开始时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
     */
     @SerializedName("StartTime")
     @Expose
@@ -46,6 +47,7 @@ public class HistoryJob extends AbstractModel {
 
     /**
     * 扩容结束时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
     */
     @SerializedName("EndTime")
     @Expose
@@ -112,8 +114,10 @@ public class HistoryJob extends AbstractModel {
     }
 
     /**
-     * Get 扩容开始时间 
+     * Get 扩容开始时间
+说明：此项显示的格式是 int 类型的 unix 时间戳 
      * @return StartTime 扩容开始时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
      */
     public Long getStartTime() {
         return this.StartTime;
@@ -121,15 +125,19 @@ public class HistoryJob extends AbstractModel {
 
     /**
      * Set 扩容开始时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
      * @param StartTime 扩容开始时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 扩容结束时间 
+     * Get 扩容结束时间
+说明：此项显示的格式是 int 类型的 unix 时间戳 
      * @return EndTime 扩容结束时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -137,7 +145,9 @@ public class HistoryJob extends AbstractModel {
 
     /**
      * Set 扩容结束时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
      * @param EndTime 扩容结束时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

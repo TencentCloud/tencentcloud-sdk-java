@@ -206,6 +206,13 @@ public class DescribeClusterDetailResponse extends AbstractModel {
     private String MasterIps;
 
     /**
+    * 所有者名称
+    */
+    @SerializedName("OwnerName")
+    @Expose
+    private String OwnerName;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -629,6 +636,22 @@ public class DescribeClusterDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 所有者名称 
+     * @return OwnerName 所有者名称
+     */
+    public String getOwnerName() {
+        return this.OwnerName;
+    }
+
+    /**
+     * Set 所有者名称
+     * @param OwnerName 所有者名称
+     */
+    public void setOwnerName(String OwnerName) {
+        this.OwnerName = OwnerName;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -730,6 +753,9 @@ public class DescribeClusterDetailResponse extends AbstractModel {
         if (source.MasterIps != null) {
             this.MasterIps = new String(source.MasterIps);
         }
+        if (source.OwnerName != null) {
+            this.OwnerName = new String(source.OwnerName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -766,6 +792,7 @@ public class DescribeClusterDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceCount", this.ServiceCount);
         this.setParamSimple(map, prefix + "IngressCount", this.IngressCount);
         this.setParamSimple(map, prefix + "MasterIps", this.MasterIps);
+        this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

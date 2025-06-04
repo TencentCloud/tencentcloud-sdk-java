@@ -38,6 +38,20 @@ public class DescribeAccessControlEventsResponse extends AbstractModel {
     private AccessControlEventInfo [] EventSet;
 
     /**
+    * 支持的内核版本
+    */
+    @SerializedName("SupportCoreVersion")
+    @Expose
+    private String SupportCoreVersion;
+
+    /**
+    * 拦截失败可能的原因
+    */
+    @SerializedName("InterceptionFailureTip")
+    @Expose
+    private String InterceptionFailureTip;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +91,38 @@ public class DescribeAccessControlEventsResponse extends AbstractModel {
     }
 
     /**
+     * Get 支持的内核版本 
+     * @return SupportCoreVersion 支持的内核版本
+     */
+    public String getSupportCoreVersion() {
+        return this.SupportCoreVersion;
+    }
+
+    /**
+     * Set 支持的内核版本
+     * @param SupportCoreVersion 支持的内核版本
+     */
+    public void setSupportCoreVersion(String SupportCoreVersion) {
+        this.SupportCoreVersion = SupportCoreVersion;
+    }
+
+    /**
+     * Get 拦截失败可能的原因 
+     * @return InterceptionFailureTip 拦截失败可能的原因
+     */
+    public String getInterceptionFailureTip() {
+        return this.InterceptionFailureTip;
+    }
+
+    /**
+     * Set 拦截失败可能的原因
+     * @param InterceptionFailureTip 拦截失败可能的原因
+     */
+    public void setInterceptionFailureTip(String InterceptionFailureTip) {
+        this.InterceptionFailureTip = InterceptionFailureTip;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +155,12 @@ public class DescribeAccessControlEventsResponse extends AbstractModel {
                 this.EventSet[i] = new AccessControlEventInfo(source.EventSet[i]);
             }
         }
+        if (source.SupportCoreVersion != null) {
+            this.SupportCoreVersion = new String(source.SupportCoreVersion);
+        }
+        if (source.InterceptionFailureTip != null) {
+            this.InterceptionFailureTip = new String(source.InterceptionFailureTip);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +173,8 @@ public class DescribeAccessControlEventsResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "EventSet.", this.EventSet);
+        this.setParamSimple(map, prefix + "SupportCoreVersion", this.SupportCoreVersion);
+        this.setParamSimple(map, prefix + "InterceptionFailureTip", this.InterceptionFailureTip);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

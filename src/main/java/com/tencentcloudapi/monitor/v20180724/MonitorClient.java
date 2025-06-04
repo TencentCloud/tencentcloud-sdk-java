@@ -151,6 +151,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *注册外部集群到云上 TMP 实例
+     * @param req CreateExternalClusterRequest
+     * @return CreateExternalClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExternalClusterResponse CreateExternalCluster(CreateExternalClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateExternalCluster", CreateExternalClusterResponse.class);
+    }
+
+    /**
      *本接口（CreateGrafanaInstance）用于创建 Grafana 包年包月实例，默认基础版、到期自动续费、不可使用代金券。
      * @param req CreateGrafanaInstanceRequest
      * @return CreateGrafanaInstanceResponse
@@ -773,6 +784,17 @@ public class MonitorClient extends AbstractClient{
     public DescribeExternalClusterRegisterCommandResponse DescribeExternalClusterRegisterCommand(DescribeExternalClusterRegisterCommandRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeExternalClusterRegisterCommand", DescribeExternalClusterRegisterCommandResponse.class);
+    }
+
+    /**
+     *查看外部集群 Agent 卸载命令
+     * @param req DescribeExternalClusterUninstallCommandRequest
+     * @return DescribeExternalClusterUninstallCommandResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExternalClusterUninstallCommandResponse DescribeExternalClusterUninstallCommand(DescribeExternalClusterUninstallCommandRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExternalClusterUninstallCommand", DescribeExternalClusterUninstallCommandResponse.class);
     }
 
     /**

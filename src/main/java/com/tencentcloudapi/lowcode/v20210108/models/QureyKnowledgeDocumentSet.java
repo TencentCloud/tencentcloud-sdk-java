@@ -87,6 +87,27 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
     private String Author;
 
     /**
+    * 文档上传状态
+    */
+    @SerializedName("DocStatus")
+    @Expose
+    private String DocStatus;
+
+    /**
+    * 上传文件失败时具体的错误消息
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
+
+    /**
+    * Cos存储文件ID
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
      * Get 文件id 
      * @return DocumentSetId 文件id
      */
@@ -230,6 +251,54 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
         this.Author = Author;
     }
 
+    /**
+     * Get 文档上传状态 
+     * @return DocStatus 文档上传状态
+     */
+    public String getDocStatus() {
+        return this.DocStatus;
+    }
+
+    /**
+     * Set 文档上传状态
+     * @param DocStatus 文档上传状态
+     */
+    public void setDocStatus(String DocStatus) {
+        this.DocStatus = DocStatus;
+    }
+
+    /**
+     * Get 上传文件失败时具体的错误消息 
+     * @return ErrMsg 上传文件失败时具体的错误消息
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set 上传文件失败时具体的错误消息
+     * @param ErrMsg 上传文件失败时具体的错误消息
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
+    }
+
+    /**
+     * Get Cos存储文件ID 
+     * @return FileId Cos存储文件ID
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set Cos存储文件ID
+     * @param FileId Cos存储文件ID
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
     public QureyKnowledgeDocumentSet() {
     }
 
@@ -265,6 +334,15 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
         if (source.Author != null) {
             this.Author = new String(source.Author);
         }
+        if (source.DocStatus != null) {
+            this.DocStatus = new String(source.DocStatus);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -281,6 +359,9 @@ public class QureyKnowledgeDocumentSet extends AbstractModel {
         this.setParamSimple(map, prefix + "FileMetaData", this.FileMetaData);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Author", this.Author);
+        this.setParamSimple(map, prefix + "DocStatus", this.DocStatus);
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

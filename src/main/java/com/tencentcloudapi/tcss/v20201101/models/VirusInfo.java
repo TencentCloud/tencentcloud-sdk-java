@@ -292,6 +292,13 @@ VALIDATION: 参数非法
     private String ClusterName;
 
     /**
+    * 节点内网IP，同innerIP
+    */
+    @SerializedName("HostIP")
+    @Expose
+    private String HostIP;
+
+    /**
      * Get 文件名称 
      * @return FileName 文件名称
      */
@@ -979,6 +986,22 @@ VALIDATION: 参数非法
         this.ClusterName = ClusterName;
     }
 
+    /**
+     * Get 节点内网IP，同innerIP 
+     * @return HostIP 节点内网IP，同innerIP
+     */
+    public String getHostIP() {
+        return this.HostIP;
+    }
+
+    /**
+     * Set 节点内网IP，同innerIP
+     * @param HostIP 节点内网IP，同innerIP
+     */
+    public void setHostIP(String HostIP) {
+        this.HostIP = HostIP;
+    }
+
     public VirusInfo() {
     }
 
@@ -1086,6 +1109,9 @@ VALIDATION: 参数非法
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.HostIP != null) {
+            this.HostIP = new String(source.HostIP);
+        }
     }
 
 
@@ -1125,6 +1151,7 @@ VALIDATION: 参数非法
         this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
         this.setParamSimple(map, prefix + "HostID", this.HostID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "HostIP", this.HostIP);
 
     }
 }

@@ -48,6 +48,20 @@ PROCESSED:已完成
     private Long TaskProcess;
 
     /**
+    * 失败主机数
+    */
+    @SerializedName("FailedHostCount")
+    @Expose
+    private Long FailedHostCount;
+
+    /**
+    * 任务id
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -115,6 +129,38 @@ PROCESSED:已完成
     }
 
     /**
+     * Get 失败主机数 
+     * @return FailedHostCount 失败主机数
+     */
+    public Long getFailedHostCount() {
+        return this.FailedHostCount;
+    }
+
+    /**
+     * Set 失败主机数
+     * @param FailedHostCount 失败主机数
+     */
+    public void setFailedHostCount(Long FailedHostCount) {
+        this.FailedHostCount = FailedHostCount;
+    }
+
+    /**
+     * Get 任务id 
+     * @return TaskId 任务id
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务id
+     * @param TaskId 任务id
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -147,6 +193,12 @@ PROCESSED:已完成
         if (source.TaskProcess != null) {
             this.TaskProcess = new Long(source.TaskProcess);
         }
+        if (source.FailedHostCount != null) {
+            this.FailedHostCount = new Long(source.FailedHostCount);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -160,6 +212,8 @@ PROCESSED:已完成
         this.setParamSimple(map, prefix + "AssetSyncLastTime", this.AssetSyncLastTime);
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         this.setParamSimple(map, prefix + "TaskProcess", this.TaskProcess);
+        this.setParamSimple(map, prefix + "FailedHostCount", this.FailedHostCount);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
