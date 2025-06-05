@@ -178,7 +178,9 @@ public class DescribeRoundPlaysRequest extends AbstractModel {
     /**
      * Get 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。 
      * @return Offset 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
+     * @deprecated
      */
+    @Deprecated
     public Long getOffset() {
         return this.Offset;
     }
@@ -186,7 +188,9 @@ public class DescribeRoundPlaysRequest extends AbstractModel {
     /**
      * Set 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
      * @param Offset 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
+     * @deprecated
      */
+    @Deprecated
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }

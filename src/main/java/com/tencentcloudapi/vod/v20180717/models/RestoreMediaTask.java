@@ -170,7 +170,9 @@ public class RestoreMediaTask extends AbstractModel {
     /**
      * Get 该字段已废弃。 
      * @return Status 该字段已废弃。
+     * @deprecated
      */
+    @Deprecated
     public Long getStatus() {
         return this.Status;
     }
@@ -178,7 +180,9 @@ public class RestoreMediaTask extends AbstractModel {
     /**
      * Set 该字段已废弃。
      * @param Status 该字段已废弃。
+     * @deprecated
      */
+    @Deprecated
     public void setStatus(Long Status) {
         this.Status = Status;
     }
@@ -186,7 +190,9 @@ public class RestoreMediaTask extends AbstractModel {
     /**
      * Get 该字段已废弃。 
      * @return Message 该字段已废弃。
+     * @deprecated
      */
+    @Deprecated
     public String getMessage() {
         return this.Message;
     }
@@ -194,7 +200,9 @@ public class RestoreMediaTask extends AbstractModel {
     /**
      * Set 该字段已废弃。
      * @param Message 该字段已废弃。
+     * @deprecated
      */
+    @Deprecated
     public void setMessage(String Message) {
         this.Message = Message;
     }

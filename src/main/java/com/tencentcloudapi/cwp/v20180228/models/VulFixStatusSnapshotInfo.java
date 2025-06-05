@@ -73,7 +73,7 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
     private Long Id;
 
     /**
-    * 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；
+    * 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；10-不支持，11-无需创建
     */
     @SerializedName("Status")
     @Expose
@@ -85,6 +85,13 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
     @SerializedName("FailReason")
     @Expose
     private String FailReason;
+
+    /**
+    * 主机类型
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
 
     /**
      * Get cvm id 
@@ -199,16 +206,16 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
     }
 
     /**
-     * Get 快照状态 0-初始状态1-快照创建成功；2-快照创建失败； 
-     * @return Status 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；
+     * Get 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；10-不支持，11-无需创建 
+     * @return Status 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；10-不支持，11-无需创建
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；
-     * @param Status 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；
+     * Set 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；10-不支持，11-无需创建
+     * @param Status 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；10-不支持，11-无需创建
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -228,6 +235,22 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;
+    }
+
+    /**
+     * Get 主机类型 
+     * @return MachineType 主机类型
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 主机类型
+     * @param MachineType 主机类型
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
     }
 
     public VulFixStatusSnapshotInfo() {
@@ -265,6 +288,9 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
         if (source.FailReason != null) {
             this.FailReason = new String(source.FailReason);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "FailReason", this.FailReason);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

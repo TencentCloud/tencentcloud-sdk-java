@@ -38,7 +38,7 @@ public class CompareOptions extends AbstractModel {
     private Long SampleRate;
 
     /**
-    * 线程数，取值1-5，默认为1
+    * 线程数，取值1-8，默认为1
     */
     @SerializedName("ThreadCount")
     @Expose
@@ -77,16 +77,16 @@ public class CompareOptions extends AbstractModel {
     }
 
     /**
-     * Get 线程数，取值1-5，默认为1 
-     * @return ThreadCount 线程数，取值1-5，默认为1
+     * Get 线程数，取值1-8，默认为1 
+     * @return ThreadCount 线程数，取值1-8，默认为1
      */
     public Long getThreadCount() {
         return this.ThreadCount;
     }
 
     /**
-     * Set 线程数，取值1-5，默认为1
-     * @param ThreadCount 线程数，取值1-5，默认为1
+     * Set 线程数，取值1-8，默认为1
+     * @param ThreadCount 线程数，取值1-8，默认为1
      */
     public void setThreadCount(Long ThreadCount) {
         this.ThreadCount = ThreadCount;

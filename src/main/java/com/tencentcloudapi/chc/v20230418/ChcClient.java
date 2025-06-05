@@ -435,6 +435,17 @@ public class ChcClient extends AbstractClient{
     }
 
     /**
+     *导出工单详情
+     * @param req ExportCustomerWorkOrderDetailRequest
+     * @return ExportCustomerWorkOrderDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportCustomerWorkOrderDetailResponse ExportCustomerWorkOrderDetail(ExportCustomerWorkOrderDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportCustomerWorkOrderDetail", ExportCustomerWorkOrderDetailResponse.class);
+    }
+
+    /**
      *如果当前该工单类型是收藏状态，调用接口后变成未收藏状态，如果是未收藏状态，调用该接口变为收藏状态
      * @param req ModifyWorkOrderTypeCollectFlagRequest
      * @return ModifyWorkOrderTypeCollectFlagResponse

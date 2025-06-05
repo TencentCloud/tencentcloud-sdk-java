@@ -63,7 +63,9 @@ public class RebootInstancesRequest extends AbstractModel {
     /**
      * Get 本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。表示是否在正常重启失败后选择强制重启实例。取值范围：<br><li>true：表示在正常重启失败后进行强制重启</li><li>false：表示在正常重启失败后不进行强制重启</li><br>默认取值：false。 
      * @return ForceReboot 本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。表示是否在正常重启失败后选择强制重启实例。取值范围：<br><li>true：表示在正常重启失败后进行强制重启</li><li>false：表示在正常重启失败后不进行强制重启</li><br>默认取值：false。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getForceReboot() {
         return this.ForceReboot;
     }
@@ -71,7 +73,9 @@ public class RebootInstancesRequest extends AbstractModel {
     /**
      * Set 本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。表示是否在正常重启失败后选择强制重启实例。取值范围：<br><li>true：表示在正常重启失败后进行强制重启</li><li>false：表示在正常重启失败后不进行强制重启</li><br>默认取值：false。
      * @param ForceReboot 本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。表示是否在正常重启失败后选择强制重启实例。取值范围：<br><li>true：表示在正常重启失败后进行强制重启</li><li>false：表示在正常重启失败后不进行强制重启</li><br>默认取值：false。
+     * @deprecated
      */
+    @Deprecated
     public void setForceReboot(Boolean ForceReboot) {
         this.ForceReboot = ForceReboot;
     }

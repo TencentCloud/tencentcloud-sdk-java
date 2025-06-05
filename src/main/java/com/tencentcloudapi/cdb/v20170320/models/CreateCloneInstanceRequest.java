@@ -194,6 +194,20 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private ClusterTopology ClusterTopology;
 
     /**
+    * 原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou
+    */
+    @SerializedName("SrcRegion")
+    @Expose
+    private String SrcRegion;
+
+    /**
+    * 异地数据备份id
+    */
+    @SerializedName("SpecifiedSubBackupId")
+    @Expose
+    private Long SpecifiedSubBackupId;
+
+    /**
      * Get 克隆源实例Id。 
      * @return InstanceId 克隆源实例Id。
      */
@@ -585,6 +599,38 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.ClusterTopology = ClusterTopology;
     }
 
+    /**
+     * Get 原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou 
+     * @return SrcRegion 原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou
+     */
+    public String getSrcRegion() {
+        return this.SrcRegion;
+    }
+
+    /**
+     * Set 原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou
+     * @param SrcRegion 原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou
+     */
+    public void setSrcRegion(String SrcRegion) {
+        this.SrcRegion = SrcRegion;
+    }
+
+    /**
+     * Get 异地数据备份id 
+     * @return SpecifiedSubBackupId 异地数据备份id
+     */
+    public Long getSpecifiedSubBackupId() {
+        return this.SpecifiedSubBackupId;
+    }
+
+    /**
+     * Set 异地数据备份id
+     * @param SpecifiedSubBackupId 异地数据备份id
+     */
+    public void setSpecifiedSubBackupId(Long SpecifiedSubBackupId) {
+        this.SpecifiedSubBackupId = SpecifiedSubBackupId;
+    }
+
     public CreateCloneInstanceRequest() {
     }
 
@@ -671,6 +717,12 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         if (source.ClusterTopology != null) {
             this.ClusterTopology = new ClusterTopology(source.ClusterTopology);
         }
+        if (source.SrcRegion != null) {
+            this.SrcRegion = new String(source.SrcRegion);
+        }
+        if (source.SpecifiedSubBackupId != null) {
+            this.SpecifiedSubBackupId = new Long(source.SpecifiedSubBackupId);
+        }
     }
 
 
@@ -702,6 +754,8 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PayType", this.PayType);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
+        this.setParamSimple(map, prefix + "SrcRegion", this.SrcRegion);
+        this.setParamSimple(map, prefix + "SpecifiedSubBackupId", this.SpecifiedSubBackupId);
 
     }
 }

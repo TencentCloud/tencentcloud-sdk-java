@@ -55,6 +55,13 @@ public class FileTamperRule extends AbstractModel {
     private String FileAction;
 
     /**
+    * 命令行参数 没有填*
+    */
+    @SerializedName("Args")
+    @Expose
+    private String Args;
+
+    /**
      * Get 进程路径 
      * @return ProcessPath 进程路径
      */
@@ -130,6 +137,22 @@ public class FileTamperRule extends AbstractModel {
         this.FileAction = FileAction;
     }
 
+    /**
+     * Get 命令行参数 没有填* 
+     * @return Args 命令行参数 没有填*
+     */
+    public String getArgs() {
+        return this.Args;
+    }
+
+    /**
+     * Set 命令行参数 没有填*
+     * @param Args 命令行参数 没有填*
+     */
+    public void setArgs(String Args) {
+        this.Args = Args;
+    }
+
     public FileTamperRule() {
     }
 
@@ -150,6 +173,9 @@ public class FileTamperRule extends AbstractModel {
         if (source.FileAction != null) {
             this.FileAction = new String(source.FileAction);
         }
+        if (source.Args != null) {
+            this.Args = new String(source.Args);
+        }
     }
 
 
@@ -161,6 +187,7 @@ public class FileTamperRule extends AbstractModel {
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "FileAction", this.FileAction);
+        this.setParamSimple(map, prefix + "Args", this.Args);
 
     }
 }

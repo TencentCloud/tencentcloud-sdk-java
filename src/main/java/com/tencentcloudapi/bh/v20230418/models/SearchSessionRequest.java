@@ -136,6 +136,13 @@ public class SearchSessionRequest extends AbstractModel {
     private String AppAssetUrl;
 
     /**
+    * 资产类型
+    */
+    @SerializedName("DeviceKind")
+    @Expose
+    private String DeviceKind;
+
+    /**
      * Get 内部Ip 
      * @return PrivateIp 内部Ip
      */
@@ -391,6 +398,22 @@ public class SearchSessionRequest extends AbstractModel {
         this.AppAssetUrl = AppAssetUrl;
     }
 
+    /**
+     * Get 资产类型 
+     * @return DeviceKind 资产类型
+     */
+    public String getDeviceKind() {
+        return this.DeviceKind;
+    }
+
+    /**
+     * Set 资产类型
+     * @param DeviceKind 资产类型
+     */
+    public void setDeviceKind(String DeviceKind) {
+        this.DeviceKind = DeviceKind;
+    }
+
     public SearchSessionRequest() {
     }
 
@@ -450,6 +473,9 @@ public class SearchSessionRequest extends AbstractModel {
         if (source.AppAssetUrl != null) {
             this.AppAssetUrl = new String(source.AppAssetUrl);
         }
+        if (source.DeviceKind != null) {
+            this.DeviceKind = new String(source.DeviceKind);
+        }
     }
 
 
@@ -473,6 +499,7 @@ public class SearchSessionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamArraySimple(map, prefix + "AppAssetKindSet.", this.AppAssetKindSet);
         this.setParamSimple(map, prefix + "AppAssetUrl", this.AppAssetUrl);
+        this.setParamSimple(map, prefix + "DeviceKind", this.DeviceKind);
 
     }
 }

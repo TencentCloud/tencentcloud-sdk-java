@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.vclm.v20240523.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,23 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReviewImageResponse extends AbstractModel {
+public class SubmitTemplateToVideoJobResponse extends AbstractModel {
 
     /**
-    * 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 MediaReviewResult。</font> 
+    * 任务ID。
     */
-    @SerializedName("ReviewResultSet")
+    @SerializedName("JobId")
     @Expose
-    private ContentReviewResult [] ReviewResultSet;
-
-    /**
-    * 图片审核任务结果。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MediaReviewResult")
-    @Expose
-    private ReviewImageResult MediaReviewResult;
+    private String JobId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -47,47 +38,19 @@ public class ReviewImageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 MediaReviewResult。</font>  
-     * @return ReviewResultSet 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 MediaReviewResult。</font> 
-     * @deprecated
+     * Get 任务ID。 
+     * @return JobId 任务ID。
      */
-    @Deprecated
-    public ContentReviewResult [] getReviewResultSet() {
-        return this.ReviewResultSet;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 MediaReviewResult。</font> 
-     * @param ReviewResultSet 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 MediaReviewResult。</font> 
-     * @deprecated
+     * Set 任务ID。
+     * @param JobId 任务ID。
      */
-    @Deprecated
-    public void setReviewResultSet(ContentReviewResult [] ReviewResultSet) {
-        this.ReviewResultSet = ReviewResultSet;
-    }
-
-    /**
-     * Get 图片审核任务结果。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MediaReviewResult 图片审核任务结果。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public ReviewImageResult getMediaReviewResult() {
-        return this.MediaReviewResult;
-    }
-
-    /**
-     * Set 图片审核任务结果。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaReviewResult 图片审核任务结果。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMediaReviewResult(ReviewImageResult MediaReviewResult) {
-        this.MediaReviewResult = MediaReviewResult;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
     /**
@@ -106,22 +69,16 @@ public class ReviewImageResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ReviewImageResponse() {
+    public SubmitTemplateToVideoJobResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReviewImageResponse(ReviewImageResponse source) {
-        if (source.ReviewResultSet != null) {
-            this.ReviewResultSet = new ContentReviewResult[source.ReviewResultSet.length];
-            for (int i = 0; i < source.ReviewResultSet.length; i++) {
-                this.ReviewResultSet[i] = new ContentReviewResult(source.ReviewResultSet[i]);
-            }
-        }
-        if (source.MediaReviewResult != null) {
-            this.MediaReviewResult = new ReviewImageResult(source.MediaReviewResult);
+    public SubmitTemplateToVideoJobResponse(SubmitTemplateToVideoJobResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -133,8 +90,7 @@ public class ReviewImageResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ReviewResultSet.", this.ReviewResultSet);
-        this.setParamObj(map, prefix + "MediaReviewResult.", this.MediaReviewResult);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -33,7 +33,6 @@ public class CreateTrafficPackagesRequest extends AbstractModel {
 <li>51200: 50TB流量，有效期一个月</li>
 <li>60: 60GB流量，有效期半年</li>
 <li>300: 300GB流量，有效期半年</li>
-<li>600: 600GB流量，有效期半年</li>
 <li>3072: 3TB流量，有效期半年</li>
 <li>6144: 6TB流量，有效期半年</li>
 <li>30720: 30TB流量，有效期半年</li>
@@ -52,6 +51,15 @@ public class CreateTrafficPackagesRequest extends AbstractModel {
     private Long TrafficPackageCount;
 
     /**
+    * 抵扣类型，默认为 FULL_TIME，可选值: 
+<li>FULL_TIME: 全时流量包</li>
+<li>IDLE_TIME: 闲时流量包</li>
+    */
+    @SerializedName("DeductType")
+    @Expose
+    private String DeductType;
+
+    /**
      * Get 流量包规格。可选值:
 <li>10: 10GB流量，有效期一个月</li>
 <li>50: 50GB流量，有效期一个月</li>
@@ -61,7 +69,6 @@ public class CreateTrafficPackagesRequest extends AbstractModel {
 <li>51200: 50TB流量，有效期一个月</li>
 <li>60: 60GB流量，有效期半年</li>
 <li>300: 300GB流量，有效期半年</li>
-<li>600: 600GB流量，有效期半年</li>
 <li>3072: 3TB流量，有效期半年</li>
 <li>6144: 6TB流量，有效期半年</li>
 <li>30720: 30TB流量，有效期半年</li>
@@ -76,7 +83,6 @@ public class CreateTrafficPackagesRequest extends AbstractModel {
 <li>51200: 50TB流量，有效期一个月</li>
 <li>60: 60GB流量，有效期半年</li>
 <li>300: 300GB流量，有效期半年</li>
-<li>600: 600GB流量，有效期半年</li>
 <li>3072: 3TB流量，有效期半年</li>
 <li>6144: 6TB流量，有效期半年</li>
 <li>30720: 30TB流量，有效期半年</li>
@@ -97,7 +103,6 @@ public class CreateTrafficPackagesRequest extends AbstractModel {
 <li>51200: 50TB流量，有效期一个月</li>
 <li>60: 60GB流量，有效期半年</li>
 <li>300: 300GB流量，有效期半年</li>
-<li>600: 600GB流量，有效期半年</li>
 <li>3072: 3TB流量，有效期半年</li>
 <li>6144: 6TB流量，有效期半年</li>
 <li>30720: 30TB流量，有效期半年</li>
@@ -112,7 +117,6 @@ public class CreateTrafficPackagesRequest extends AbstractModel {
 <li>51200: 50TB流量，有效期一个月</li>
 <li>60: 60GB流量，有效期半年</li>
 <li>300: 300GB流量，有效期半年</li>
-<li>600: 600GB流量，有效期半年</li>
 <li>3072: 3TB流量，有效期半年</li>
 <li>6144: 6TB流量，有效期半年</li>
 <li>30720: 30TB流量，有效期半年</li>
@@ -139,6 +143,30 @@ public class CreateTrafficPackagesRequest extends AbstractModel {
         this.TrafficPackageCount = TrafficPackageCount;
     }
 
+    /**
+     * Get 抵扣类型，默认为 FULL_TIME，可选值: 
+<li>FULL_TIME: 全时流量包</li>
+<li>IDLE_TIME: 闲时流量包</li> 
+     * @return DeductType 抵扣类型，默认为 FULL_TIME，可选值: 
+<li>FULL_TIME: 全时流量包</li>
+<li>IDLE_TIME: 闲时流量包</li>
+     */
+    public String getDeductType() {
+        return this.DeductType;
+    }
+
+    /**
+     * Set 抵扣类型，默认为 FULL_TIME，可选值: 
+<li>FULL_TIME: 全时流量包</li>
+<li>IDLE_TIME: 闲时流量包</li>
+     * @param DeductType 抵扣类型，默认为 FULL_TIME，可选值: 
+<li>FULL_TIME: 全时流量包</li>
+<li>IDLE_TIME: 闲时流量包</li>
+     */
+    public void setDeductType(String DeductType) {
+        this.DeductType = DeductType;
+    }
+
     public CreateTrafficPackagesRequest() {
     }
 
@@ -153,6 +181,9 @@ public class CreateTrafficPackagesRequest extends AbstractModel {
         if (source.TrafficPackageCount != null) {
             this.TrafficPackageCount = new Long(source.TrafficPackageCount);
         }
+        if (source.DeductType != null) {
+            this.DeductType = new String(source.DeductType);
+        }
     }
 
 
@@ -162,6 +193,7 @@ public class CreateTrafficPackagesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrafficAmount", this.TrafficAmount);
         this.setParamSimple(map, prefix + "TrafficPackageCount", this.TrafficPackageCount);
+        this.setParamSimple(map, prefix + "DeductType", this.DeductType);
 
     }
 }

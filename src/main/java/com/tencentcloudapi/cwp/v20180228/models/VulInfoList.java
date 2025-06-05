@@ -221,6 +221,13 @@ public class VulInfoList extends AbstractModel {
     private Long VulFixSwitch;
 
     /**
+    * 最近修复时间
+    */
+    @SerializedName("LatestFixTime")
+    @Expose
+    private String LatestFixTime;
+
+    /**
      * Get 漏洞包含的事件id串，多个用“,”分割 
      * @return Ids 漏洞包含的事件id串，多个用“,”分割
      */
@@ -684,6 +691,22 @@ public class VulInfoList extends AbstractModel {
         this.VulFixSwitch = VulFixSwitch;
     }
 
+    /**
+     * Get 最近修复时间 
+     * @return LatestFixTime 最近修复时间
+     */
+    public String getLatestFixTime() {
+        return this.LatestFixTime;
+    }
+
+    /**
+     * Set 最近修复时间
+     * @param LatestFixTime 最近修复时间
+     */
+    public void setLatestFixTime(String LatestFixTime) {
+        this.LatestFixTime = LatestFixTime;
+    }
+
     public VulInfoList() {
     }
 
@@ -773,6 +796,9 @@ public class VulInfoList extends AbstractModel {
         if (source.VulFixSwitch != null) {
             this.VulFixSwitch = new Long(source.VulFixSwitch);
         }
+        if (source.LatestFixTime != null) {
+            this.LatestFixTime = new String(source.LatestFixTime);
+        }
     }
 
 
@@ -807,6 +833,7 @@ public class VulInfoList extends AbstractModel {
         this.setParamSimple(map, prefix + "FixNoNeedRestart", this.FixNoNeedRestart);
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "VulFixSwitch", this.VulFixSwitch);
+        this.setParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
 
     }
 }

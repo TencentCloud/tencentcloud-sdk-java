@@ -31,7 +31,7 @@ public class DynamicOptions extends AbstractModel {
     private String [] OpTypes;
 
     /**
-    * DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
+    * DDL同步选项，具体描述要同步哪些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
     */
     @SerializedName("DdlOptions")
     @Expose
@@ -103,16 +103,16 @@ public class DynamicOptions extends AbstractModel {
     }
 
     /**
-     * Get DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值 
-     * @return DdlOptions DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
+     * Get DDL同步选项，具体描述要同步哪些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值 
+     * @return DdlOptions DDL同步选项，具体描述要同步哪些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
      */
     public DdlOption [] getDdlOptions() {
         return this.DdlOptions;
     }
 
     /**
-     * Set DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
-     * @param DdlOptions DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
+     * Set DDL同步选项，具体描述要同步哪些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
+     * @param DdlOptions DDL同步选项，具体描述要同步哪些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
      */
     public void setDdlOptions(DdlOption [] DdlOptions) {
         this.DdlOptions = DdlOptions;

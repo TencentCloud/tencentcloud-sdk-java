@@ -73,6 +73,17 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *用于查询视频特效任务。
+     * @param req DescribeTemplateToVideoJobRequest
+     * @return DescribeTemplateToVideoJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTemplateToVideoJobResponse DescribeTemplateToVideoJob(DescribeTemplateToVideoJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTemplateToVideoJob", DescribeTemplateToVideoJobResponse.class);
+    }
+
+    /**
      *用于查询视频风格化任务。视频风格化支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
      * @param req DescribeVideoStylizationJobRequest
      * @return DescribeVideoStylizationJobResponse
@@ -104,6 +115,17 @@ public class VclmClient extends AbstractClient{
     public SubmitPortraitSingJobResponse SubmitPortraitSingJob(SubmitPortraitSingJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitPortraitSingJob", SubmitPortraitSingJobResponse.class);
+    }
+
+    /**
+     *提交视频特效任务接口
+     * @param req SubmitTemplateToVideoJobRequest
+     * @return SubmitTemplateToVideoJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitTemplateToVideoJobResponse SubmitTemplateToVideoJob(SubmitTemplateToVideoJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitTemplateToVideoJob", SubmitTemplateToVideoJobResponse.class);
     }
 
     /**

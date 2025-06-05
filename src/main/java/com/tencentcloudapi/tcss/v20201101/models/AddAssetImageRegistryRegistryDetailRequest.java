@@ -129,6 +129,13 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
     private String WebhookToken;
 
     /**
+    * tcr实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 仓库名 
      * @return Name 仓库名
      */
@@ -368,6 +375,22 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
         this.WebhookToken = WebhookToken;
     }
 
+    /**
+     * Get tcr实例ID 
+     * @return InstanceId tcr实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set tcr实例ID
+     * @param InstanceId tcr实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public AddAssetImageRegistryRegistryDetailRequest() {
     }
 
@@ -424,6 +447,9 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
         if (source.WebhookToken != null) {
             this.WebhookToken = new String(source.WebhookToken);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -446,6 +472,7 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
         this.setParamSimple(map, prefix + "WebhookUrl", this.WebhookUrl);
         this.setParamSimple(map, prefix + "WebhookToken", this.WebhookToken);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

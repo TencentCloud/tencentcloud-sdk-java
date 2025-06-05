@@ -122,6 +122,13 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
     private Boolean NeedScan;
 
     /**
+    * tcr实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 仓库名 
      * @return Name 仓库名
      */
@@ -345,6 +352,22 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         this.NeedScan = NeedScan;
     }
 
+    /**
+     * Get tcr实例ID 
+     * @return InstanceId tcr实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set tcr实例ID
+     * @param InstanceId tcr实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public UpdateAssetImageRegistryRegistryDetailRequest() {
     }
 
@@ -398,6 +421,9 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         if (source.NeedScan != null) {
             this.NeedScan = new Boolean(source.NeedScan);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -419,6 +445,7 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
         this.setParamSimple(map, prefix + "NeedScan", this.NeedScan);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

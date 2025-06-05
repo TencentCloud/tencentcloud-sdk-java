@@ -73,6 +73,13 @@ public class VulInfoHostInfo extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 主机类型
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
      * Get 主机名 
      * @return HostName 主机名
      */
@@ -184,6 +191,22 @@ public class VulInfoHostInfo extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 主机类型 
+     * @return MachineType 主机类型
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 主机类型
+     * @param MachineType 主机类型
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
     public VulInfoHostInfo() {
     }
 
@@ -216,6 +239,9 @@ public class VulInfoHostInfo extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class VulInfoHostInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsSupportAutoFix", this.IsSupportAutoFix);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

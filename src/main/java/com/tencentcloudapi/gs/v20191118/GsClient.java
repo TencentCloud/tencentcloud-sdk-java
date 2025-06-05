@@ -50,6 +50,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *批量清理安卓实例应用数据
+     * @param req CleanAndroidInstancesAppDataRequest
+     * @return CleanAndroidInstancesAppDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public CleanAndroidInstancesAppDataResponse CleanAndroidInstancesAppData(CleanAndroidInstancesAppDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CleanAndroidInstancesAppData", CleanAndroidInstancesAppDataResponse.class);
+    }
+
+    /**
      *连接安卓实例
      * @param req ConnectAndroidInstanceRequest
      * @return ConnectAndroidInstanceResponse
@@ -109,7 +120,7 @@ public class GsClient extends AbstractClient{
     }
 
     /**
-     *创建安卓实例镜像
+     *使用指定的安卓实例创建镜像，创建镜像时指定的实例会关机，镜像创建完成后实例会自动开机。当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像创建完成处于可用状态。
      * @param req CreateAndroidInstanceImageRequest
      * @return CreateAndroidInstanceImageResponse
      * @throws TencentCloudSDKException
@@ -263,7 +274,7 @@ public class GsClient extends AbstractClient{
     }
 
     /**
-     *查询安卓实例镜像
+     *查询安卓实例镜像信息，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像处于可用状态。
      * @param req DescribeAndroidInstanceImagesRequest
      * @return DescribeAndroidInstanceImagesResponse
      * @throws TencentCloudSDKException
@@ -329,6 +340,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *批量禁用安卓实例应用
+     * @param req DisableAndroidInstancesAppRequest
+     * @return DisableAndroidInstancesAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableAndroidInstancesAppResponse DisableAndroidInstancesApp(DisableAndroidInstancesAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableAndroidInstancesApp", DisableAndroidInstancesAppResponse.class);
+    }
+
+    /**
      *将一个文件批量分发到多个实例，一次接口调用触发一次文件分发，一次文件分发只会从公网下载一次，然后文件会走内网分发到实例列表中的实例。
      * @param req DistributeFileToAndroidInstancesRequest
      * @return DistributeFileToAndroidInstancesResponse
@@ -337,6 +359,17 @@ public class GsClient extends AbstractClient{
     public DistributeFileToAndroidInstancesResponse DistributeFileToAndroidInstances(DistributeFileToAndroidInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DistributeFileToAndroidInstances", DistributeFileToAndroidInstancesResponse.class);
+    }
+
+    /**
+     *批量启用安卓实例应用
+     * @param req EnableAndroidInstancesAppRequest
+     * @return EnableAndroidInstancesAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableAndroidInstancesAppResponse EnableAndroidInstancesApp(EnableAndroidInstancesAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableAndroidInstancesApp", EnableAndroidInstancesAppResponse.class);
     }
 
     /**
@@ -651,7 +684,7 @@ public class GsClient extends AbstractClient{
     }
 
     /**
-     *同步安卓实例镜像
+     *同步安卓实例镜像到其他区域，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像已经同步完成处于可用状态。
      * @param req SyncAndroidInstanceImageRequest
      * @return SyncAndroidInstanceImageResponse
      * @throws TencentCloudSDKException

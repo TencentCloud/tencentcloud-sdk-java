@@ -150,6 +150,41 @@ public class VulEffectHostList extends AbstractModel {
     private MachineExtraInfo MachineExtraInfo;
 
     /**
+    * 主机类型
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
+    * 可用区ID
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private Long RegionId;
+
+    /**
+    * 修复任务是否创建了快照： 0-未创建，其他-已创建
+    */
+    @SerializedName("HasSnapshot")
+    @Expose
+    private Long HasSnapshot;
+
+    /**
+    * 最后修复时间
+    */
+    @SerializedName("LatestFixTime")
+    @Expose
+    private String LatestFixTime;
+
+    /**
+    * 说明
+    */
+    @SerializedName("DescriptionEn")
+    @Expose
+    private String DescriptionEn;
+
+    /**
      * Get 事件id 
      * @return EventId 事件id
      */
@@ -437,6 +472,86 @@ public class VulEffectHostList extends AbstractModel {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
+    /**
+     * Get 主机类型 
+     * @return MachineType 主机类型
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 主机类型
+     * @param MachineType 主机类型
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
+    /**
+     * Get 可用区ID 
+     * @return RegionId 可用区ID
+     */
+    public Long getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 可用区ID
+     * @param RegionId 可用区ID
+     */
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
+    }
+
+    /**
+     * Get 修复任务是否创建了快照： 0-未创建，其他-已创建 
+     * @return HasSnapshot 修复任务是否创建了快照： 0-未创建，其他-已创建
+     */
+    public Long getHasSnapshot() {
+        return this.HasSnapshot;
+    }
+
+    /**
+     * Set 修复任务是否创建了快照： 0-未创建，其他-已创建
+     * @param HasSnapshot 修复任务是否创建了快照： 0-未创建，其他-已创建
+     */
+    public void setHasSnapshot(Long HasSnapshot) {
+        this.HasSnapshot = HasSnapshot;
+    }
+
+    /**
+     * Get 最后修复时间 
+     * @return LatestFixTime 最后修复时间
+     */
+    public String getLatestFixTime() {
+        return this.LatestFixTime;
+    }
+
+    /**
+     * Set 最后修复时间
+     * @param LatestFixTime 最后修复时间
+     */
+    public void setLatestFixTime(String LatestFixTime) {
+        this.LatestFixTime = LatestFixTime;
+    }
+
+    /**
+     * Get 说明 
+     * @return DescriptionEn 说明
+     */
+    public String getDescriptionEn() {
+        return this.DescriptionEn;
+    }
+
+    /**
+     * Set 说明
+     * @param DescriptionEn 说明
+     */
+    public void setDescriptionEn(String DescriptionEn) {
+        this.DescriptionEn = DescriptionEn;
+    }
+
     public VulEffectHostList() {
     }
 
@@ -505,6 +620,21 @@ public class VulEffectHostList extends AbstractModel {
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.HasSnapshot != null) {
+            this.HasSnapshot = new Long(source.HasSnapshot);
+        }
+        if (source.LatestFixTime != null) {
+            this.LatestFixTime = new String(source.LatestFixTime);
+        }
+        if (source.DescriptionEn != null) {
+            this.DescriptionEn = new String(source.DescriptionEn);
+        }
     }
 
 
@@ -530,6 +660,11 @@ public class VulEffectHostList extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicIpAddresses", this.PublicIpAddresses);
         this.setParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "HasSnapshot", this.HasSnapshot);
+        this.setParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
+        this.setParamSimple(map, prefix + "DescriptionEn", this.DescriptionEn);
 
     }
 }

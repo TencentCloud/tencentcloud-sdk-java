@@ -52,7 +52,7 @@ public class CreateDedicatedClusterDBInstanceRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * （废弃）可用区
+    * 可用区
     */
     @SerializedName("Zone")
     @Expose
@@ -66,14 +66,14 @@ public class CreateDedicatedClusterDBInstanceRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * （废弃）Pid，可通过获取独享集群售卖配置接口得到
+    * Pid，可通过获取独享集群售卖配置接口得到
     */
     @SerializedName("Pid")
     @Expose
     private Long Pid;
 
     /**
-    * （废弃）机型
+    * 机型
     */
     @SerializedName("Machine")
     @Expose
@@ -101,14 +101,14 @@ public class CreateDedicatedClusterDBInstanceRequest extends AbstractModel {
     private String DbVersionId;
 
     /**
-    * （废弃）是否手动指定一组服务器分配, 运维使用
+    * 是否手动指定一组服务器分配, 运维使用
     */
     @SerializedName("Manual")
     @Expose
     private Long Manual;
 
     /**
-    * （废弃）DeviceNo参数
+    * DeviceNo参数
     */
     @SerializedName("DeviceNo")
     @Expose
@@ -270,17 +270,21 @@ public class CreateDedicatedClusterDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get （废弃）可用区 
-     * @return Zone （废弃）可用区
+     * Get 可用区 
+     * @return Zone 可用区
+     * @deprecated
      */
+    @Deprecated
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set （废弃）可用区
-     * @param Zone （废弃）可用区
+     * Set 可用区
+     * @param Zone 可用区
+     * @deprecated
      */
+    @Deprecated
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
@@ -302,33 +306,41 @@ public class CreateDedicatedClusterDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get （废弃）Pid，可通过获取独享集群售卖配置接口得到 
-     * @return Pid （废弃）Pid，可通过获取独享集群售卖配置接口得到
+     * Get Pid，可通过获取独享集群售卖配置接口得到 
+     * @return Pid Pid，可通过获取独享集群售卖配置接口得到
+     * @deprecated
      */
+    @Deprecated
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set （废弃）Pid，可通过获取独享集群售卖配置接口得到
-     * @param Pid （废弃）Pid，可通过获取独享集群售卖配置接口得到
+     * Set Pid，可通过获取独享集群售卖配置接口得到
+     * @param Pid Pid，可通过获取独享集群售卖配置接口得到
+     * @deprecated
      */
+    @Deprecated
     public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get （废弃）机型 
-     * @return Machine （废弃）机型
+     * Get 机型 
+     * @return Machine 机型
+     * @deprecated
      */
+    @Deprecated
     public String getMachine() {
         return this.Machine;
     }
 
     /**
-     * Set （废弃）机型
-     * @param Machine （废弃）机型
+     * Set 机型
+     * @param Machine 机型
+     * @deprecated
      */
+    @Deprecated
     public void setMachine(String Machine) {
         this.Machine = Machine;
     }
@@ -382,33 +394,41 @@ public class CreateDedicatedClusterDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get （废弃）是否手动指定一组服务器分配, 运维使用 
-     * @return Manual （废弃）是否手动指定一组服务器分配, 运维使用
+     * Get 是否手动指定一组服务器分配, 运维使用 
+     * @return Manual 是否手动指定一组服务器分配, 运维使用
+     * @deprecated
      */
+    @Deprecated
     public Long getManual() {
         return this.Manual;
     }
 
     /**
-     * Set （废弃）是否手动指定一组服务器分配, 运维使用
-     * @param Manual （废弃）是否手动指定一组服务器分配, 运维使用
+     * Set 是否手动指定一组服务器分配, 运维使用
+     * @param Manual 是否手动指定一组服务器分配, 运维使用
+     * @deprecated
      */
+    @Deprecated
     public void setManual(Long Manual) {
         this.Manual = Manual;
     }
 
     /**
-     * Get （废弃）DeviceNo参数 
-     * @return DeviceNo （废弃）DeviceNo参数
+     * Get DeviceNo参数 
+     * @return DeviceNo DeviceNo参数
+     * @deprecated
      */
+    @Deprecated
     public String getDeviceNo() {
         return this.DeviceNo;
     }
 
     /**
-     * Set （废弃）DeviceNo参数
-     * @param DeviceNo （废弃）DeviceNo参数
+     * Set DeviceNo参数
+     * @param DeviceNo DeviceNo参数
+     * @deprecated
      */
+    @Deprecated
     public void setDeviceNo(String DeviceNo) {
         this.DeviceNo = DeviceNo;
     }

@@ -54,7 +54,9 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     /**
      * Get 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。 
      * @return TotalCount 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
+     * @deprecated
      */
+    @Deprecated
     public Long getTotalCount() {
         return this.TotalCount;
     }
@@ -62,7 +64,9 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     /**
      * Set 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
      * @param TotalCount 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
+     * @deprecated
      */
+    @Deprecated
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }

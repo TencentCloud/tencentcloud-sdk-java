@@ -67,7 +67,7 @@ public class Options extends AbstractModel {
     private ConflictHandleOption ConflictHandleOption;
 
     /**
-    * DDL同步选项，具体描述要同步那些DDL
+    * DDL同步选项，具体描述要同步哪些DDL
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdlOptions")
@@ -217,9 +217,9 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Get DDL同步选项，具体描述要同步那些DDL
+     * Get DDL同步选项，具体描述要同步哪些DDL
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DdlOptions DDL同步选项，具体描述要同步那些DDL
+     * @return DdlOptions DDL同步选项，具体描述要同步哪些DDL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DdlOption [] getDdlOptions() {
@@ -227,9 +227,9 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Set DDL同步选项，具体描述要同步那些DDL
+     * Set DDL同步选项，具体描述要同步哪些DDL
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdlOptions DDL同步选项，具体描述要同步那些DDL
+     * @param DdlOptions DDL同步选项，具体描述要同步哪些DDL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdlOptions(DdlOption [] DdlOptions) {
