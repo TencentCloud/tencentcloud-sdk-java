@@ -172,6 +172,13 @@ public class TimeAutoScaleStrategy extends AbstractModel {
     private Long GroupId;
 
     /**
+    * 优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点
+    */
+    @SerializedName("GraceDownLabel")
+    @Expose
+    private TkeLabel [] GraceDownLabel;
+
+    /**
      * Get 策略名字，集群内唯一。 
      * @return StrategyName 策略名字，集群内唯一。
      */
@@ -523,6 +530,22 @@ public class TimeAutoScaleStrategy extends AbstractModel {
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get 优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点 
+     * @return GraceDownLabel 优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点
+     */
+    public TkeLabel [] getGraceDownLabel() {
+        return this.GraceDownLabel;
+    }
+
+    /**
+     * Set 优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点
+     * @param GraceDownLabel 优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点
+     */
+    public void setGraceDownLabel(TkeLabel [] GraceDownLabel) {
+        this.GraceDownLabel = GraceDownLabel;
+    }
+
     public TimeAutoScaleStrategy() {
     }
 
@@ -600,6 +623,12 @@ public class TimeAutoScaleStrategy extends AbstractModel {
         if (source.GroupId != null) {
             this.GroupId = new Long(source.GroupId);
         }
+        if (source.GraceDownLabel != null) {
+            this.GraceDownLabel = new TkeLabel[source.GraceDownLabel.length];
+            for (int i = 0; i < source.GraceDownLabel.length; i++) {
+                this.GraceDownLabel[i] = new TkeLabel(source.GraceDownLabel[i]);
+            }
+        }
     }
 
 
@@ -627,6 +656,7 @@ public class TimeAutoScaleStrategy extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ServiceNodeInfo.", this.ServiceNodeInfo);
         this.setParamSimple(map, prefix + "CompensateFlag", this.CompensateFlag);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamArrayObj(map, prefix + "GraceDownLabel.", this.GraceDownLabel);
 
     }
 }

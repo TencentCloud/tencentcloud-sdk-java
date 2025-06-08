@@ -85,6 +85,8 @@ DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
 Table -- 表格模版
+SteelLabel -- 实物标签识别模板
+CarInsurance -- 车辆保险单识别模板
     */
     @SerializedName("ConfigId")
     @Expose
@@ -232,7 +234,9 @@ AirWayBill -- 航空运单识别模板
 DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
-Table -- 表格模版 
+Table -- 表格模版
+SteelLabel -- 实物标签识别模板
+CarInsurance -- 车辆保险单识别模板 
      * @return ConfigId 配置id支持：
 General -- 通用场景 
 InvoiceEng -- 国际invoice模版 
@@ -250,6 +254,8 @@ DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
 Table -- 表格模版
+SteelLabel -- 实物标签识别模板
+CarInsurance -- 车辆保险单识别模板
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -273,6 +279,8 @@ DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
 Table -- 表格模版
+SteelLabel -- 实物标签识别模板
+CarInsurance -- 车辆保险单识别模板
      * @param ConfigId 配置id支持：
 General -- 通用场景 
 InvoiceEng -- 国际invoice模版 
@@ -290,6 +298,8 @@ DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
 Table -- 表格模版
+SteelLabel -- 实物标签识别模板
+CarInsurance -- 车辆保险单识别模板
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;

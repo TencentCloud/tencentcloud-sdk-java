@@ -80,7 +80,7 @@ FailedOperation.UnKnowError：表示识别失败；
     private SingleInvoiceItem SingleInvoiceInfos;
 
     /**
-    * 发票处于识别图片或PDF文件中的页教，默认从1开始。
+    * 发票处于识别图片或PDF文件中的页码，默认从1开始。
     */
     @SerializedName("Page")
     @Expose
@@ -127,6 +127,13 @@ FailedOperation.UnKnowError：表示识别失败；
     @SerializedName("QRCode")
     @Expose
     private String QRCode;
+
+    /**
+    * 印章信息
+    */
+    @SerializedName("InvoiceSealInfo")
+    @Expose
+    private InvoiceSealInfo InvoiceSealInfo;
 
     /**
      * Get 识别结果。
@@ -293,16 +300,16 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * Get 发票处于识别图片或PDF文件中的页教，默认从1开始。 
-     * @return Page 发票处于识别图片或PDF文件中的页教，默认从1开始。
+     * Get 发票处于识别图片或PDF文件中的页码，默认从1开始。 
+     * @return Page 发票处于识别图片或PDF文件中的页码，默认从1开始。
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 发票处于识别图片或PDF文件中的页教，默认从1开始。
-     * @param Page 发票处于识别图片或PDF文件中的页教，默认从1开始。
+     * Set 发票处于识别图片或PDF文件中的页码，默认从1开始。
+     * @param Page 发票处于识别图片或PDF文件中的页码，默认从1开始。
      */
     public void setPage(Long Page) {
         this.Page = Page;
@@ -404,6 +411,22 @@ FailedOperation.UnKnowError：表示识别失败；
         this.QRCode = QRCode;
     }
 
+    /**
+     * Get 印章信息 
+     * @return InvoiceSealInfo 印章信息
+     */
+    public InvoiceSealInfo getInvoiceSealInfo() {
+        return this.InvoiceSealInfo;
+    }
+
+    /**
+     * Set 印章信息
+     * @param InvoiceSealInfo 印章信息
+     */
+    public void setInvoiceSealInfo(InvoiceSealInfo InvoiceSealInfo) {
+        this.InvoiceSealInfo = InvoiceSealInfo;
+    }
+
     public InvoiceItem() {
     }
 
@@ -451,6 +474,9 @@ FailedOperation.UnKnowError：表示识别失败；
         if (source.QRCode != null) {
             this.QRCode = new String(source.QRCode);
         }
+        if (source.InvoiceSealInfo != null) {
+            this.InvoiceSealInfo = new InvoiceSealInfo(source.InvoiceSealInfo);
+        }
     }
 
 
@@ -470,6 +496,7 @@ FailedOperation.UnKnowError：表示识别失败；
         this.setParamSimple(map, prefix + "SubTypeDescription", this.SubTypeDescription);
         this.setParamArrayObj(map, prefix + "ItemPolygon.", this.ItemPolygon);
         this.setParamSimple(map, prefix + "QRCode", this.QRCode);
+        this.setParamObj(map, prefix + "InvoiceSealInfo.", this.InvoiceSealInfo);
 
     }
 }

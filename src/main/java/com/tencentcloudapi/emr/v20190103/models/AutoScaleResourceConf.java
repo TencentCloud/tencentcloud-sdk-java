@@ -59,7 +59,7 @@ public class AutoScaleResourceConf extends AbstractModel {
     private Long StrategyType;
 
     /**
-    * 下次能可扩容时间。
+    * 下次可扩容时间。
     */
     @SerializedName("NextTimeCanScale")
     @Expose
@@ -94,7 +94,7 @@ public class AutoScaleResourceConf extends AbstractModel {
     private Long PostPayPercentMin;
 
     /**
-    * 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+    * 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
     */
     @SerializedName("ChangeToPod")
     @Expose
@@ -134,6 +134,13 @@ public class AutoScaleResourceConf extends AbstractModel {
     @SerializedName("EnableMNode")
     @Expose
     private Long EnableMNode;
+
+    /**
+    * 伸缩组更多设置
+    */
+    @SerializedName("ExtraAdvanceAttrs")
+    @Expose
+    private AutoScaleGroupAdvanceAttrs ExtraAdvanceAttrs;
 
     /**
      * Get 配置ID。 
@@ -216,16 +223,16 @@ public class AutoScaleResourceConf extends AbstractModel {
     }
 
     /**
-     * Get 下次能可扩容时间。 
-     * @return NextTimeCanScale 下次能可扩容时间。
+     * Get 下次可扩容时间。 
+     * @return NextTimeCanScale 下次可扩容时间。
      */
     public Long getNextTimeCanScale() {
         return this.NextTimeCanScale;
     }
 
     /**
-     * Set 下次能可扩容时间。
-     * @param NextTimeCanScale 下次能可扩容时间。
+     * Set 下次可扩容时间。
+     * @param NextTimeCanScale 下次可扩容时间。
      */
     public void setNextTimeCanScale(Long NextTimeCanScale) {
         this.NextTimeCanScale = NextTimeCanScale;
@@ -296,16 +303,16 @@ public class AutoScaleResourceConf extends AbstractModel {
     }
 
     /**
-     * Get 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1) 
-     * @return ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+     * Get 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选 
+     * @return ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
      */
     public Long getChangeToPod() {
         return this.ChangeToPod;
     }
 
     /**
-     * Set 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
-     * @param ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+     * Set 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
+     * @param ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
      */
     public void setChangeToPod(Long ChangeToPod) {
         this.ChangeToPod = ChangeToPod;
@@ -391,6 +398,22 @@ public class AutoScaleResourceConf extends AbstractModel {
         this.EnableMNode = EnableMNode;
     }
 
+    /**
+     * Get 伸缩组更多设置 
+     * @return ExtraAdvanceAttrs 伸缩组更多设置
+     */
+    public AutoScaleGroupAdvanceAttrs getExtraAdvanceAttrs() {
+        return this.ExtraAdvanceAttrs;
+    }
+
+    /**
+     * Set 伸缩组更多设置
+     * @param ExtraAdvanceAttrs 伸缩组更多设置
+     */
+    public void setExtraAdvanceAttrs(AutoScaleGroupAdvanceAttrs ExtraAdvanceAttrs) {
+        this.ExtraAdvanceAttrs = ExtraAdvanceAttrs;
+    }
+
     public AutoScaleResourceConf() {
     }
 
@@ -447,6 +470,9 @@ public class AutoScaleResourceConf extends AbstractModel {
         if (source.EnableMNode != null) {
             this.EnableMNode = new Long(source.EnableMNode);
         }
+        if (source.ExtraAdvanceAttrs != null) {
+            this.ExtraAdvanceAttrs = new AutoScaleGroupAdvanceAttrs(source.ExtraAdvanceAttrs);
+        }
     }
 
 
@@ -470,6 +496,7 @@ public class AutoScaleResourceConf extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
         this.setParamSimple(map, prefix + "Parallel", this.Parallel);
         this.setParamSimple(map, prefix + "EnableMNode", this.EnableMNode);
+        this.setParamObj(map, prefix + "ExtraAdvanceAttrs.", this.ExtraAdvanceAttrs);
 
     }
 }

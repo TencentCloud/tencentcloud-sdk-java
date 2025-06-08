@@ -87,7 +87,7 @@ public class MainlandPermitOCRResponse extends AbstractModel {
     private String IssueNumber;
 
     /**
-    * 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
+    * 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
     */
     @SerializedName("Type")
     @Expose
@@ -266,16 +266,16 @@ public class MainlandPermitOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。 
-     * @return Type 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
+     * Get 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。 
+     * @return Type 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
-     * @param Type 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
+     * Set 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
+     * @param Type 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
      */
     public void setType(String Type) {
         this.Type = Type;

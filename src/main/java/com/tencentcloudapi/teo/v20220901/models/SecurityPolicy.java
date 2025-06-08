@@ -38,6 +38,27 @@ public class SecurityPolicy extends AbstractModel {
     private ManagedRules ManagedRules;
 
     /**
+    * HTTP DDOS防护配置。
+    */
+    @SerializedName("HttpDDoSProtection")
+    @Expose
+    private HttpDDoSProtection HttpDDoSProtection;
+
+    /**
+    * 速率限制规则配置。
+    */
+    @SerializedName("RateLimitingRules")
+    @Expose
+    private RateLimitingRules RateLimitingRules;
+
+    /**
+    * 例外规则配置。
+    */
+    @SerializedName("ExceptionRules")
+    @Expose
+    private ExceptionRules ExceptionRules;
+
+    /**
      * Get 自定义规则配置。 
      * @return CustomRules 自定义规则配置。
      */
@@ -69,6 +90,54 @@ public class SecurityPolicy extends AbstractModel {
         this.ManagedRules = ManagedRules;
     }
 
+    /**
+     * Get HTTP DDOS防护配置。 
+     * @return HttpDDoSProtection HTTP DDOS防护配置。
+     */
+    public HttpDDoSProtection getHttpDDoSProtection() {
+        return this.HttpDDoSProtection;
+    }
+
+    /**
+     * Set HTTP DDOS防护配置。
+     * @param HttpDDoSProtection HTTP DDOS防护配置。
+     */
+    public void setHttpDDoSProtection(HttpDDoSProtection HttpDDoSProtection) {
+        this.HttpDDoSProtection = HttpDDoSProtection;
+    }
+
+    /**
+     * Get 速率限制规则配置。 
+     * @return RateLimitingRules 速率限制规则配置。
+     */
+    public RateLimitingRules getRateLimitingRules() {
+        return this.RateLimitingRules;
+    }
+
+    /**
+     * Set 速率限制规则配置。
+     * @param RateLimitingRules 速率限制规则配置。
+     */
+    public void setRateLimitingRules(RateLimitingRules RateLimitingRules) {
+        this.RateLimitingRules = RateLimitingRules;
+    }
+
+    /**
+     * Get 例外规则配置。 
+     * @return ExceptionRules 例外规则配置。
+     */
+    public ExceptionRules getExceptionRules() {
+        return this.ExceptionRules;
+    }
+
+    /**
+     * Set 例外规则配置。
+     * @param ExceptionRules 例外规则配置。
+     */
+    public void setExceptionRules(ExceptionRules ExceptionRules) {
+        this.ExceptionRules = ExceptionRules;
+    }
+
     public SecurityPolicy() {
     }
 
@@ -83,6 +152,15 @@ public class SecurityPolicy extends AbstractModel {
         if (source.ManagedRules != null) {
             this.ManagedRules = new ManagedRules(source.ManagedRules);
         }
+        if (source.HttpDDoSProtection != null) {
+            this.HttpDDoSProtection = new HttpDDoSProtection(source.HttpDDoSProtection);
+        }
+        if (source.RateLimitingRules != null) {
+            this.RateLimitingRules = new RateLimitingRules(source.RateLimitingRules);
+        }
+        if (source.ExceptionRules != null) {
+            this.ExceptionRules = new ExceptionRules(source.ExceptionRules);
+        }
     }
 
 
@@ -92,6 +170,9 @@ public class SecurityPolicy extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "CustomRules.", this.CustomRules);
         this.setParamObj(map, prefix + "ManagedRules.", this.ManagedRules);
+        this.setParamObj(map, prefix + "HttpDDoSProtection.", this.HttpDDoSProtection);
+        this.setParamObj(map, prefix + "RateLimitingRules.", this.RateLimitingRules);
+        this.setParamObj(map, prefix + "ExceptionRules.", this.ExceptionRules);
 
     }
 }

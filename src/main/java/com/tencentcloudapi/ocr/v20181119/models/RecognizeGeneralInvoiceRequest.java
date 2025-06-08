@@ -118,6 +118,13 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
     private Boolean EnableQRCode;
 
     /**
+    * 是否开启印章识别，默认为false
+    */
+    @SerializedName("EnableSeal")
+    @Expose
+    private Boolean EnableSeal;
+
+    /**
      * Get 图片的 Base64 值。支持的图片格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。支持的图片大小：所下载图片经Base64编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：单边介于20-10000px之间。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。支持的图片格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。支持的图片大小：所下载图片经Base64编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：单边介于20-10000px之间。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
@@ -373,6 +380,22 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
         this.EnableQRCode = EnableQRCode;
     }
 
+    /**
+     * Get 是否开启印章识别，默认为false 
+     * @return EnableSeal 是否开启印章识别，默认为false
+     */
+    public Boolean getEnableSeal() {
+        return this.EnableSeal;
+    }
+
+    /**
+     * Set 是否开启印章识别，默认为false
+     * @param EnableSeal 是否开启印章识别，默认为false
+     */
+    public void setEnableSeal(Boolean EnableSeal) {
+        this.EnableSeal = EnableSeal;
+    }
+
     public RecognizeGeneralInvoiceRequest() {
     }
 
@@ -414,6 +437,9 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
         if (source.EnableQRCode != null) {
             this.EnableQRCode = new Boolean(source.EnableQRCode);
         }
+        if (source.EnableSeal != null) {
+            this.EnableSeal = new Boolean(source.EnableSeal);
+        }
     }
 
 
@@ -431,6 +457,7 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableCutImage", this.EnableCutImage);
         this.setParamSimple(map, prefix + "EnableItemPolygon", this.EnableItemPolygon);
         this.setParamSimple(map, prefix + "EnableQRCode", this.EnableQRCode);
+        this.setParamSimple(map, prefix + "EnableSeal", this.EnableSeal);
 
     }
 }

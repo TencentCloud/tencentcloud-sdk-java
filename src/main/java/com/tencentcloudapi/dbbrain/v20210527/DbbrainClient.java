@@ -468,7 +468,7 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
-     *查询某张表的慢查模板概览
+     *查询某张表的慢查模板概览，这个接口是对用户点击对应的推荐索引后，展示慢日志用的
      * @param req DescribeIndexRecommendAggregationSlowLogsRequest
      * @return DescribeIndexRecommendAggregationSlowLogsResponse
      * @throws TencentCloudSDKException

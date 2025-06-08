@@ -231,6 +231,13 @@ public class ScaleOutInstanceRequest extends AbstractModel {
     private String ComputeResourceId;
 
     /**
+    * 计算资源高级设置
+    */
+    @SerializedName("ComputeResourceAdvanceParams")
+    @Expose
+    private ComputeResourceAdvanceParams ComputeResourceAdvanceParams;
+
+    /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -722,6 +729,22 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         this.ComputeResourceId = ComputeResourceId;
     }
 
+    /**
+     * Get 计算资源高级设置 
+     * @return ComputeResourceAdvanceParams 计算资源高级设置
+     */
+    public ComputeResourceAdvanceParams getComputeResourceAdvanceParams() {
+        return this.ComputeResourceAdvanceParams;
+    }
+
+    /**
+     * Set 计算资源高级设置
+     * @param ComputeResourceAdvanceParams 计算资源高级设置
+     */
+    public void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams ComputeResourceAdvanceParams) {
+        this.ComputeResourceAdvanceParams = ComputeResourceAdvanceParams;
+    }
+
     public ScaleOutInstanceRequest() {
     }
 
@@ -832,6 +855,9 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         if (source.ComputeResourceId != null) {
             this.ComputeResourceId = new String(source.ComputeResourceId);
         }
+        if (source.ComputeResourceAdvanceParams != null) {
+            this.ComputeResourceAdvanceParams = new ComputeResourceAdvanceParams(source.ComputeResourceAdvanceParams);
+        }
     }
 
 
@@ -867,6 +893,7 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
         this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+        this.setParamObj(map, prefix + "ComputeResourceAdvanceParams.", this.ComputeResourceAdvanceParams);
 
     }
 }

@@ -446,7 +446,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *提供删除某个项目的能力
+     *提供删除某个项目的能力。
      * @param req DeleteProjectRequest
      * @return DeleteProjectResponse
      * @throws TencentCloudSDKException
@@ -1548,7 +1548,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *修改项目
+     *修改项目。
      * @param req ModifyProjectRequest
      * @return ModifyProjectResponse
      * @throws TencentCloudSDKException

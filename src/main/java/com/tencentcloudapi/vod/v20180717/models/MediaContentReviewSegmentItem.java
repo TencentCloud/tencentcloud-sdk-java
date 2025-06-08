@@ -198,7 +198,9 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     /**
      * Get 该字段已废弃，请使用 PicUrlExpireTime。 
      * @return PicUrlExpireTimeStamp 该字段已废弃，请使用 PicUrlExpireTime。
+     * @deprecated
      */
+    @Deprecated
     public Long getPicUrlExpireTimeStamp() {
         return this.PicUrlExpireTimeStamp;
     }
@@ -206,7 +208,9 @@ public class MediaContentReviewSegmentItem extends AbstractModel {
     /**
      * Set 该字段已废弃，请使用 PicUrlExpireTime。
      * @param PicUrlExpireTimeStamp 该字段已废弃，请使用 PicUrlExpireTime。
+     * @deprecated
      */
+    @Deprecated
     public void setPicUrlExpireTimeStamp(Long PicUrlExpireTimeStamp) {
         this.PicUrlExpireTimeStamp = PicUrlExpireTimeStamp;
     }

@@ -60,7 +60,7 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private String Zone;
 
     /**
-    * 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778)。
+    * 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
     */
     @SerializedName("UniqVpcId")
@@ -407,9 +407,9 @@ public class CreateDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778)。
+     * Get 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。 
-     * @return UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778)。
+     * @return UniqVpcId 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
      */
     public String getUniqVpcId() {
@@ -417,9 +417,9 @@ public class CreateDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Set 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778)。
+     * Set 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
-     * @param UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778)。
+     * @param UniqVpcId 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
      */
     public void setUniqVpcId(String UniqVpcId) {

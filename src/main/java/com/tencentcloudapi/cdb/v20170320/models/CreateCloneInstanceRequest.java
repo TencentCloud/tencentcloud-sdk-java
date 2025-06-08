@@ -47,7 +47,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private Long SpecifiedBackupId;
 
     /**
-    * 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+    * 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -264,16 +264,16 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。 
-     * @return UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+     * Get 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。 
+     * @return UniqVpcId 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
-     * @param UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+     * Set 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
+     * @param UniqVpcId 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;

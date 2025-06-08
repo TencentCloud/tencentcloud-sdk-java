@@ -1097,6 +1097,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *商业化版本：根据id查询执行资源组指标
+     * @param req DescribeExecutorGroupMetricRequest
+     * @return DescribeExecutorGroupMetricResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExecutorGroupMetricResponse DescribeExecutorGroupMetric(DescribeExecutorGroupMetricRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExecutorGroupMetric", DescribeExecutorGroupMetricResponse.class);
+    }
+
+    /**
      *元数据模型-字段基础信息查询接口
      * @param req DescribeFieldBasicInfoRequest
      * @return DescribeFieldBasicInfoResponse

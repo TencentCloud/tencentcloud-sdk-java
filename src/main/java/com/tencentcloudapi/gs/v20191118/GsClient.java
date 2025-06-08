@@ -318,6 +318,28 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *查询安卓实例黑名单
+     * @param req DescribeAndroidInstancesAppBlacklistRequest
+     * @return DescribeAndroidInstancesAppBlacklistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAndroidInstancesAppBlacklistResponse DescribeAndroidInstancesAppBlacklist(DescribeAndroidInstancesAppBlacklistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAndroidInstancesAppBlacklist", DescribeAndroidInstancesAppBlacklistResponse.class);
+    }
+
+    /**
+     *查询安装指定应用的安卓实例
+     * @param req DescribeAndroidInstancesByAppsRequest
+     * @return DescribeAndroidInstancesByAppsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAndroidInstancesByAppsResponse DescribeAndroidInstancesByApps(DescribeAndroidInstancesByAppsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAndroidInstancesByApps", DescribeAndroidInstancesByAppsResponse.class);
+    }
+
+    /**
      *获取并发总数和运行数
      * @param req DescribeInstancesCountRequest
      * @return DescribeInstancesCountResponse
@@ -395,6 +417,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *导入安卓实例镜像，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像导入完成处于可用状态。
+     * @param req ImportAndroidInstanceImageRequest
+     * @return ImportAndroidInstanceImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportAndroidInstanceImageResponse ImportAndroidInstanceImage(ImportAndroidInstanceImageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportAndroidInstanceImage", ImportAndroidInstanceImageResponse.class);
+    }
+
+    /**
      *安装安卓实例应用
      * @param req InstallAndroidInstancesAppRequest
      * @return InstallAndroidInstancesAppResponse
@@ -461,6 +494,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *修改安卓实例应用黑名单
+     * @param req ModifyAndroidInstancesAppBlacklistRequest
+     * @return ModifyAndroidInstancesAppBlacklistResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAndroidInstancesAppBlacklistResponse ModifyAndroidInstancesAppBlacklist(ModifyAndroidInstancesAppBlacklistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAndroidInstancesAppBlacklist", ModifyAndroidInstancesAppBlacklistResponse.class);
+    }
+
+    /**
      *批量修改安卓实例信息
      * @param req ModifyAndroidInstancesInformationRequest
      * @return ModifyAndroidInstancesInformationResponse
@@ -502,6 +546,17 @@ public class GsClient extends AbstractClient{
     public ModifyAndroidInstancesResolutionResponse ModifyAndroidInstancesResolution(ModifyAndroidInstancesResolutionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAndroidInstancesResolution", ModifyAndroidInstancesResolutionResponse.class);
+    }
+
+    /**
+     *批量修改安卓实例资源限制
+     * @param req ModifyAndroidInstancesResourcesRequest
+     * @return ModifyAndroidInstancesResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAndroidInstancesResourcesResponse ModifyAndroidInstancesResources(ModifyAndroidInstancesResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAndroidInstancesResources", ModifyAndroidInstancesResourcesResponse.class);
     }
 
     /**
@@ -582,6 +637,28 @@ public class GsClient extends AbstractClient{
     public SaveGameArchiveResponse SaveGameArchive(SaveGameArchiveRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SaveGameArchive", SaveGameArchiveResponse.class);
+    }
+
+    /**
+     *批量设置安卓实例应用后台保活，开启应用保活，只是降低应用被杀死或回收的优先级，并不能保证应用不会被杀死或回收（如出现内存不足等资源限制时，应用也有概率被杀死或回收）
+     * @param req SetAndroidInstancesBGAppKeepAliveRequest
+     * @return SetAndroidInstancesBGAppKeepAliveResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetAndroidInstancesBGAppKeepAliveResponse SetAndroidInstancesBGAppKeepAlive(SetAndroidInstancesBGAppKeepAliveRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetAndroidInstancesBGAppKeepAlive", SetAndroidInstancesBGAppKeepAliveResponse.class);
+    }
+
+    /**
+     *批量设置安卓实例应用前台保活，开启应用保活，只是降低应用被杀死或回收的优先级，并不能保证应用不会被杀死或回收（如出现内存不足等资源限制时，应用也有概率被杀死或回收）
+     * @param req SetAndroidInstancesFGAppKeepAliveRequest
+     * @return SetAndroidInstancesFGAppKeepAliveResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetAndroidInstancesFGAppKeepAliveResponse SetAndroidInstancesFGAppKeepAlive(SetAndroidInstancesFGAppKeepAliveRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetAndroidInstancesFGAppKeepAlive", SetAndroidInstancesFGAppKeepAliveResponse.class);
     }
 
     /**

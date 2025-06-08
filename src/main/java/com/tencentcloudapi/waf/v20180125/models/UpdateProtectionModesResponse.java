@@ -25,7 +25,6 @@ public class UpdateProtectionModesResponse extends AbstractModel {
 
     /**
     * 操作结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CommonRsp")
     @Expose
@@ -39,10 +38,8 @@ public class UpdateProtectionModesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作结果 
      * @return CommonRsp 操作结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonRspData getCommonRsp() {
         return this.CommonRsp;
@@ -50,9 +47,7 @@ public class UpdateProtectionModesResponse extends AbstractModel {
 
     /**
      * Set 操作结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CommonRsp 操作结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommonRsp(CommonRspData CommonRsp) {
         this.CommonRsp = CommonRsp;

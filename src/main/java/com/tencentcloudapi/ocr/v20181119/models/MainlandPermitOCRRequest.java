@@ -53,7 +53,9 @@ public class MainlandPermitOCRRequest extends AbstractModel {
 
     /**
     * 图片正反面
-FRONT：正面、BACK：反面，默认为FRONT
+FRONT：正面
+BACK：反面
+默认为FRONT
     */
     @SerializedName("CardSide")
     @Expose
@@ -137,9 +139,13 @@ FRONT：正面、BACK：反面，默认为FRONT
 
     /**
      * Get 图片正反面
-FRONT：正面、BACK：反面，默认为FRONT 
+FRONT：正面
+BACK：反面
+默认为FRONT 
      * @return CardSide 图片正反面
-FRONT：正面、BACK：反面，默认为FRONT
+FRONT：正面
+BACK：反面
+默认为FRONT
      */
     public String getCardSide() {
         return this.CardSide;
@@ -147,9 +153,13 @@ FRONT：正面、BACK：反面，默认为FRONT
 
     /**
      * Set 图片正反面
-FRONT：正面、BACK：反面，默认为FRONT
+FRONT：正面
+BACK：反面
+默认为FRONT
      * @param CardSide 图片正反面
-FRONT：正面、BACK：反面，默认为FRONT
+FRONT：正面
+BACK：反面
+默认为FRONT
      */
     public void setCardSide(String CardSide) {
         this.CardSide = CardSide;

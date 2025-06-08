@@ -504,6 +504,17 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *修改网关的转发配置
+     * @param req ModifyGatewayIngressRequest
+     * @return ModifyGatewayIngressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGatewayIngressResponse ModifyGatewayIngress(ModifyGatewayIngressRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGatewayIngress", ModifyGatewayIngressResponse.class);
+    }
+
+    /**
      *此接口没有被使用了
 
 创建或者更新 Ingress 规则

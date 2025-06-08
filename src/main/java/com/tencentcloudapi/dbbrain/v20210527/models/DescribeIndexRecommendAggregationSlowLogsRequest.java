@@ -45,14 +45,14 @@ public class DescribeIndexRecommendAggregationSlowLogsRequest extends AbstractMo
     private String Db;
 
     /**
-    * 表明。
+    * 表名。
     */
     @SerializedName("Collection")
     @Expose
     private String Collection;
 
     /**
-    * 签名。
+    * 签名。这个值是DescribelndexRecommendInfo接口返回
     */
     @SerializedName("Signs")
     @Expose
@@ -107,32 +107,32 @@ public class DescribeIndexRecommendAggregationSlowLogsRequest extends AbstractMo
     }
 
     /**
-     * Get 表明。 
-     * @return Collection 表明。
+     * Get 表名。 
+     * @return Collection 表名。
      */
     public String getCollection() {
         return this.Collection;
     }
 
     /**
-     * Set 表明。
-     * @param Collection 表明。
+     * Set 表名。
+     * @param Collection 表名。
      */
     public void setCollection(String Collection) {
         this.Collection = Collection;
     }
 
     /**
-     * Get 签名。 
-     * @return Signs 签名。
+     * Get 签名。这个值是DescribelndexRecommendInfo接口返回 
+     * @return Signs 签名。这个值是DescribelndexRecommendInfo接口返回
      */
     public String [] getSigns() {
         return this.Signs;
     }
 
     /**
-     * Set 签名。
-     * @param Signs 签名。
+     * Set 签名。这个值是DescribelndexRecommendInfo接口返回
+     * @param Signs 签名。这个值是DescribelndexRecommendInfo接口返回
      */
     public void setSigns(String [] Signs) {
         this.Signs = Signs;

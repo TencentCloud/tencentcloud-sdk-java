@@ -31,11 +31,18 @@ public class DescribeApmInstancesRequest extends AbstractModel {
     private ApmTag [] Tags;
 
     /**
-    * 按业务系统名过滤
+    * 按业务系统名过滤，支持模糊检索
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
+
+    /**
+    * 按业务系统 ID 过滤，支持模糊检索
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
 
     /**
     * 按业务系统 ID 过滤
@@ -75,19 +82,35 @@ public class DescribeApmInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 按业务系统名过滤 
-     * @return InstanceName 按业务系统名过滤
+     * Get 按业务系统名过滤，支持模糊检索 
+     * @return InstanceName 按业务系统名过滤，支持模糊检索
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 按业务系统名过滤
-     * @param InstanceName 按业务系统名过滤
+     * Set 按业务系统名过滤，支持模糊检索
+     * @param InstanceName 按业务系统名过滤，支持模糊检索
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get 按业务系统 ID 过滤，支持模糊检索 
+     * @return InstanceId 按业务系统 ID 过滤，支持模糊检索
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 按业务系统 ID 过滤，支持模糊检索
+     * @param InstanceId 按业务系统 ID 过滤，支持模糊检索
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -155,6 +178,9 @@ public class DescribeApmInstancesRequest extends AbstractModel {
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.InstanceIds != null) {
             this.InstanceIds = new String[source.InstanceIds.length];
             for (int i = 0; i < source.InstanceIds.length; i++) {
@@ -176,6 +202,7 @@ public class DescribeApmInstancesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "DemoInstanceFlag", this.DemoInstanceFlag);
         this.setParamSimple(map, prefix + "AllRegionsFlag", this.AllRegionsFlag);
