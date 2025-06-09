@@ -87,6 +87,13 @@ public class DescribeTokenUsageRequest extends AbstractModel {
     private String [] SubScenes;
 
     /**
+    * 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+    */
+    @SerializedName("AppType")
+    @Expose
+    private String AppType;
+
+    /**
      * Get 腾讯云主账号 
      * @return UinAccount 腾讯云主账号
      */
@@ -230,6 +237,22 @@ public class DescribeTokenUsageRequest extends AbstractModel {
         this.SubScenes = SubScenes;
     }
 
+    /**
+     * Get 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库) 
+     * @return AppType 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+     */
+    public String getAppType() {
+        return this.AppType;
+    }
+
+    /**
+     * Set 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+     * @param AppType 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+     */
+    public void setAppType(String AppType) {
+        this.AppType = AppType;
+    }
+
     public DescribeTokenUsageRequest() {
     }
 
@@ -274,6 +297,9 @@ public class DescribeTokenUsageRequest extends AbstractModel {
                 this.SubScenes[i] = new String(source.SubScenes[i]);
             }
         }
+        if (source.AppType != null) {
+            this.AppType = new String(source.AppType);
+        }
     }
 
 
@@ -290,6 +316,7 @@ public class DescribeTokenUsageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
         this.setParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
+        this.setParamSimple(map, prefix + "AppType", this.AppType);
 
     }
 }

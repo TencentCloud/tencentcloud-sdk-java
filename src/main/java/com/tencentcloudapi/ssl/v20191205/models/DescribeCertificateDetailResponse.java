@@ -436,6 +436,20 @@ null：用户上传证书（没有套餐类型），
     private CertBasicInfo [] CertChainInfo;
 
     /**
+    * 证书域名类型， 1（单域名）；2（多域名）；3（泛域名）；4（多泛域名）
+    */
+    @SerializedName("DomainType")
+    @Expose
+    private Long DomainType;
+
+    /**
+    * 证书类型，DV（域名型）；OV（企业型）；EV（增强型）
+    */
+    @SerializedName("CertType")
+    @Expose
+    private String CertType;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1587,6 +1601,38 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
+     * Get 证书域名类型， 1（单域名）；2（多域名）；3（泛域名）；4（多泛域名） 
+     * @return DomainType 证书域名类型， 1（单域名）；2（多域名）；3（泛域名）；4（多泛域名）
+     */
+    public Long getDomainType() {
+        return this.DomainType;
+    }
+
+    /**
+     * Set 证书域名类型， 1（单域名）；2（多域名）；3（泛域名）；4（多泛域名）
+     * @param DomainType 证书域名类型， 1（单域名）；2（多域名）；3（泛域名）；4（多泛域名）
+     */
+    public void setDomainType(Long DomainType) {
+        this.DomainType = DomainType;
+    }
+
+    /**
+     * Get 证书类型，DV（域名型）；OV（企业型）；EV（增强型） 
+     * @return CertType 证书类型，DV（域名型）；OV（企业型）；EV（增强型）
+     */
+    public String getCertType() {
+        return this.CertType;
+    }
+
+    /**
+     * Set 证书类型，DV（域名型）；OV（企业型）；EV（增强型）
+     * @param CertType 证书类型，DV（域名型）；OV（企业型）；EV（增强型）
+     */
+    public void setCertType(String CertType) {
+        this.CertType = CertType;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1748,6 +1794,12 @@ null：用户上传证书（没有套餐类型），
                 this.CertChainInfo[i] = new CertBasicInfo(source.CertChainInfo[i]);
             }
         }
+        if (source.DomainType != null) {
+            this.DomainType = new Long(source.DomainType);
+        }
+        if (source.CertType != null) {
+            this.CertType = new String(source.CertType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1800,6 +1852,8 @@ null：用户上传证书（没有套餐类型），
         this.setParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
         this.setParamArrayObj(map, prefix + "DvRevokeAuthDetail.", this.DvRevokeAuthDetail);
         this.setParamArrayObj(map, prefix + "CertChainInfo.", this.CertChainInfo);
+        this.setParamSimple(map, prefix + "DomainType", this.DomainType);
+        this.setParamSimple(map, prefix + "CertType", this.CertType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

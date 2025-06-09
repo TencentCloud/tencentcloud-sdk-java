@@ -38,6 +38,13 @@ public class CreateAppRequest extends AbstractModel {
     private BaseConfig BaseConfig;
 
     /**
+    * 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+    */
+    @SerializedName("Pattern")
+    @Expose
+    private String Pattern;
+
+    /**
      * Get 应用类型；knowledge_qa-知识问答管理 
      * @return AppType 应用类型；knowledge_qa-知识问答管理
      */
@@ -69,6 +76,22 @@ public class CreateAppRequest extends AbstractModel {
         this.BaseConfig = BaseConfig;
     }
 
+    /**
+     * Get 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式 
+     * @return Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     */
+    public String getPattern() {
+        return this.Pattern;
+    }
+
+    /**
+     * Set 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     * @param Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     */
+    public void setPattern(String Pattern) {
+        this.Pattern = Pattern;
+    }
+
     public CreateAppRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateAppRequest extends AbstractModel {
         if (source.BaseConfig != null) {
             this.BaseConfig = new BaseConfig(source.BaseConfig);
         }
+        if (source.Pattern != null) {
+            this.Pattern = new String(source.Pattern);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateAppRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppType", this.AppType);
         this.setParamObj(map, prefix + "BaseConfig.", this.BaseConfig);
+        this.setParamSimple(map, prefix + "Pattern", this.Pattern);
 
     }
 }

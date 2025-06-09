@@ -55,6 +55,20 @@ public class TaskFLowVar extends AbstractModel {
     private String VarType;
 
     /**
+    * 自定义变量默认值
+    */
+    @SerializedName("VarDefaultValue")
+    @Expose
+    private String VarDefaultValue;
+
+    /**
+    * 自定义变量文件默认名称
+    */
+    @SerializedName("VarDefaultFileName")
+    @Expose
+    private String VarDefaultFileName;
+
+    /**
      * Get 变量ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VarId 变量ID
@@ -130,6 +144,38 @@ public class TaskFLowVar extends AbstractModel {
         this.VarType = VarType;
     }
 
+    /**
+     * Get 自定义变量默认值 
+     * @return VarDefaultValue 自定义变量默认值
+     */
+    public String getVarDefaultValue() {
+        return this.VarDefaultValue;
+    }
+
+    /**
+     * Set 自定义变量默认值
+     * @param VarDefaultValue 自定义变量默认值
+     */
+    public void setVarDefaultValue(String VarDefaultValue) {
+        this.VarDefaultValue = VarDefaultValue;
+    }
+
+    /**
+     * Get 自定义变量文件默认名称 
+     * @return VarDefaultFileName 自定义变量文件默认名称
+     */
+    public String getVarDefaultFileName() {
+        return this.VarDefaultFileName;
+    }
+
+    /**
+     * Set 自定义变量文件默认名称
+     * @param VarDefaultFileName 自定义变量文件默认名称
+     */
+    public void setVarDefaultFileName(String VarDefaultFileName) {
+        this.VarDefaultFileName = VarDefaultFileName;
+    }
+
     public TaskFLowVar() {
     }
 
@@ -150,6 +196,12 @@ public class TaskFLowVar extends AbstractModel {
         if (source.VarType != null) {
             this.VarType = new String(source.VarType);
         }
+        if (source.VarDefaultValue != null) {
+            this.VarDefaultValue = new String(source.VarDefaultValue);
+        }
+        if (source.VarDefaultFileName != null) {
+            this.VarDefaultFileName = new String(source.VarDefaultFileName);
+        }
     }
 
 
@@ -161,6 +213,8 @@ public class TaskFLowVar extends AbstractModel {
         this.setParamSimple(map, prefix + "VarName", this.VarName);
         this.setParamSimple(map, prefix + "VarDesc", this.VarDesc);
         this.setParamSimple(map, prefix + "VarType", this.VarType);
+        this.setParamSimple(map, prefix + "VarDefaultValue", this.VarDefaultValue);
+        this.setParamSimple(map, prefix + "VarDefaultFileName", this.VarDefaultFileName);
 
     }
 }

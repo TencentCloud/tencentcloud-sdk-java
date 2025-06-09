@@ -242,6 +242,13 @@ public class DescribeQAResponse extends AbstractModel {
     private String QuestionDesc;
 
     /**
+    * 问答是否停用，false:未停用，true已停用
+    */
+    @SerializedName("IsDisabled")
+    @Expose
+    private Boolean IsDisabled;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -773,6 +780,22 @@ public class DescribeQAResponse extends AbstractModel {
     }
 
     /**
+     * Get 问答是否停用，false:未停用，true已停用 
+     * @return IsDisabled 问答是否停用，false:未停用，true已停用
+     */
+    public Boolean getIsDisabled() {
+        return this.IsDisabled;
+    }
+
+    /**
+     * Set 问答是否停用，false:未停用，true已停用
+     * @param IsDisabled 问答是否停用，false:未停用，true已停用
+     */
+    public void setIsDisabled(Boolean IsDisabled) {
+        this.IsDisabled = IsDisabled;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -892,6 +915,9 @@ public class DescribeQAResponse extends AbstractModel {
         if (source.QuestionDesc != null) {
             this.QuestionDesc = new String(source.QuestionDesc);
         }
+        if (source.IsDisabled != null) {
+            this.IsDisabled = new Boolean(source.IsDisabled);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -931,6 +957,7 @@ public class DescribeQAResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "PicAuditStatus", this.PicAuditStatus);
         this.setParamSimple(map, prefix + "VideoAuditStatus", this.VideoAuditStatus);
         this.setParamSimple(map, prefix + "QuestionDesc", this.QuestionDesc);
+        this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -128,6 +128,13 @@ public class ReferDetail extends AbstractModel {
     private String DocBizId;
 
     /**
+    * 知识库ID
+    */
+    @SerializedName("KnowledgeBizId")
+    @Expose
+    private String KnowledgeBizId;
+
+    /**
      * Get 引用ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReferBizId 引用ID
@@ -387,6 +394,22 @@ public class ReferDetail extends AbstractModel {
         this.DocBizId = DocBizId;
     }
 
+    /**
+     * Get 知识库ID 
+     * @return KnowledgeBizId 知识库ID
+     */
+    public String getKnowledgeBizId() {
+        return this.KnowledgeBizId;
+    }
+
+    /**
+     * Set 知识库ID
+     * @param KnowledgeBizId 知识库ID
+     */
+    public void setKnowledgeBizId(String KnowledgeBizId) {
+        this.KnowledgeBizId = KnowledgeBizId;
+    }
+
     public ReferDetail() {
     }
 
@@ -443,6 +466,9 @@ public class ReferDetail extends AbstractModel {
         if (source.DocBizId != null) {
             this.DocBizId = new String(source.DocBizId);
         }
+        if (source.KnowledgeBizId != null) {
+            this.KnowledgeBizId = new String(source.KnowledgeBizId);
+        }
     }
 
 
@@ -463,6 +489,7 @@ public class ReferDetail extends AbstractModel {
         this.setParamArraySimple(map, prefix + "PageInfos.", this.PageInfos);
         this.setParamArraySimple(map, prefix + "SheetInfos.", this.SheetInfos);
         this.setParamSimple(map, prefix + "DocBizId", this.DocBizId);
+        this.setParamSimple(map, prefix + "KnowledgeBizId", this.KnowledgeBizId);
 
     }
 }

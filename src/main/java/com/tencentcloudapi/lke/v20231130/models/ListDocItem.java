@@ -293,6 +293,13 @@ public class ListDocItem extends AbstractModel {
     private Long [] AttributeFlags;
 
     /**
+    * false:未停用，ture:已停用
+    */
+    @SerializedName("IsDisabled")
+    @Expose
+    private Boolean IsDisabled;
+
+    /**
      * Get 文档ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocBizId 文档ID
@@ -960,6 +967,22 @@ public class ListDocItem extends AbstractModel {
         this.AttributeFlags = AttributeFlags;
     }
 
+    /**
+     * Get false:未停用，ture:已停用 
+     * @return IsDisabled false:未停用，ture:已停用
+     */
+    public Boolean getIsDisabled() {
+        return this.IsDisabled;
+    }
+
+    /**
+     * Set false:未停用，ture:已停用
+     * @param IsDisabled false:未停用，ture:已停用
+     */
+    public void setIsDisabled(Boolean IsDisabled) {
+        this.IsDisabled = IsDisabled;
+    }
+
     public ListDocItem() {
     }
 
@@ -1079,6 +1102,9 @@ public class ListDocItem extends AbstractModel {
                 this.AttributeFlags[i] = new Long(source.AttributeFlags[i]);
             }
         }
+        if (source.IsDisabled != null) {
+            this.IsDisabled = new Boolean(source.IsDisabled);
+        }
     }
 
 
@@ -1120,6 +1146,7 @@ public class ListDocItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
         this.setParamSimple(map, prefix + "CustomerKnowledgeId", this.CustomerKnowledgeId);
         this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
+        this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
 
     }
 }

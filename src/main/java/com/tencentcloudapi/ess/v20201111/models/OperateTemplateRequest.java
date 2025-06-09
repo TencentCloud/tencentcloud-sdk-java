@@ -44,6 +44,7 @@ public class OperateTemplateRequest extends AbstractModel {
 <li>DELETE:  删除</li>
 <li>ENABLE: 启用</li>
 <li>DISABLE: 停用</li>
+<li>COPY: 复制新建</li>
 </ul>
     */
     @SerializedName("OperateType")
@@ -100,12 +101,14 @@ public class OperateTemplateRequest extends AbstractModel {
 <li>DELETE:  删除</li>
 <li>ENABLE: 启用</li>
 <li>DISABLE: 停用</li>
+<li>COPY: 复制新建</li>
 </ul> 
      * @return OperateType 操作类型，可取值如下:
 <ul>
 <li>DELETE:  删除</li>
 <li>ENABLE: 启用</li>
 <li>DISABLE: 停用</li>
+<li>COPY: 复制新建</li>
 </ul>
      */
     public String getOperateType() {
@@ -118,12 +121,14 @@ public class OperateTemplateRequest extends AbstractModel {
 <li>DELETE:  删除</li>
 <li>ENABLE: 启用</li>
 <li>DISABLE: 停用</li>
+<li>COPY: 复制新建</li>
 </ul>
      * @param OperateType 操作类型，可取值如下:
 <ul>
 <li>DELETE:  删除</li>
 <li>ENABLE: 启用</li>
 <li>DISABLE: 停用</li>
+<li>COPY: 复制新建</li>
 </ul>
      */
     public void setOperateType(String OperateType) {

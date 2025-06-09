@@ -31,6 +31,14 @@ public class CheckAttributeLabelReferResponse extends AbstractModel {
     private Boolean IsRefer;
 
     /**
+    * 引用的工作流详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("List")
+    @Expose
+    private AttributeLabelRefByWorkflow [] List;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +59,26 @@ public class CheckAttributeLabelReferResponse extends AbstractModel {
      */
     public void setIsRefer(Boolean IsRefer) {
         this.IsRefer = IsRefer;
+    }
+
+    /**
+     * Get 引用的工作流详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return List 引用的工作流详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AttributeLabelRefByWorkflow [] getList() {
+        return this.List;
+    }
+
+    /**
+     * Set 引用的工作流详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param List 引用的工作流详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setList(AttributeLabelRefByWorkflow [] List) {
+        this.List = List;
     }
 
     /**
@@ -80,6 +108,12 @@ public class CheckAttributeLabelReferResponse extends AbstractModel {
         if (source.IsRefer != null) {
             this.IsRefer = new Boolean(source.IsRefer);
         }
+        if (source.List != null) {
+            this.List = new AttributeLabelRefByWorkflow[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new AttributeLabelRefByWorkflow(source.List[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +125,7 @@ public class CheckAttributeLabelReferResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsRefer", this.IsRefer);
+        this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

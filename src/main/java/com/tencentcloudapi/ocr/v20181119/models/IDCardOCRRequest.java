@@ -281,7 +281,9 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     /**
      * Get 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。 
      * @return EnableDateVerify 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getEnableDateVerify() {
         return this.EnableDateVerify;
     }
@@ -289,7 +291,9 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     /**
      * Set 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
      * @param EnableDateVerify 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
+     * @deprecated
      */
+    @Deprecated
     public void setEnableDateVerify(Boolean EnableDateVerify) {
         this.EnableDateVerify = EnableDateVerify;
     }

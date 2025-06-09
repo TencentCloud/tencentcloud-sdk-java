@@ -46,6 +46,8 @@ public class ListDocRequest extends AbstractModel {
 
     /**
     * 查询内容
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
     */
     @SerializedName("Query")
     @Expose
@@ -85,6 +87,13 @@ public class ListDocRequest extends AbstractModel {
     @SerializedName("FilterFlag")
     @Expose
     private DocFilterFlag [] FilterFlag;
+
+    /**
+    * 是否只展示当前分类的数据 0不是，1是
+    */
+    @SerializedName("ShowCurrCate")
+    @Expose
+    private Long ShowCurrCate;
 
     /**
      * Get 应用ID 
@@ -135,8 +144,12 @@ public class ListDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询内容 
+     * Get 查询内容
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的文档 
      * @return Query 查询内容
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
      */
     public String getQuery() {
         return this.Query;
@@ -144,7 +157,11 @@ public class ListDocRequest extends AbstractModel {
 
     /**
      * Set 查询内容
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
      * @param Query 查询内容
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
      */
     public void setQuery(String Query) {
         this.Query = Query;
@@ -230,6 +247,22 @@ public class ListDocRequest extends AbstractModel {
         this.FilterFlag = FilterFlag;
     }
 
+    /**
+     * Get 是否只展示当前分类的数据 0不是，1是 
+     * @return ShowCurrCate 是否只展示当前分类的数据 0不是，1是
+     */
+    public Long getShowCurrCate() {
+        return this.ShowCurrCate;
+    }
+
+    /**
+     * Set 是否只展示当前分类的数据 0不是，1是
+     * @param ShowCurrCate 是否只展示当前分类的数据 0不是，1是
+     */
+    public void setShowCurrCate(Long ShowCurrCate) {
+        this.ShowCurrCate = ShowCurrCate;
+    }
+
     public ListDocRequest() {
     }
 
@@ -274,6 +307,9 @@ public class ListDocRequest extends AbstractModel {
                 this.FilterFlag[i] = new DocFilterFlag(source.FilterFlag[i]);
             }
         }
+        if (source.ShowCurrCate != null) {
+            this.ShowCurrCate = new Long(source.ShowCurrCate);
+        }
     }
 
 
@@ -290,6 +326,7 @@ public class ListDocRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
         this.setParamArraySimple(map, prefix + "FileTypes.", this.FileTypes);
         this.setParamArrayObj(map, prefix + "FilterFlag.", this.FilterFlag);
+        this.setParamSimple(map, prefix + "ShowCurrCate", this.ShowCurrCate);
 
     }
 }

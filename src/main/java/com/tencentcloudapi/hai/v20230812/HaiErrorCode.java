@@ -72,6 +72,9 @@ public enum HaiErrorCode {
      /* 无效的排序字段 */
      INVALIDPARAMETERVALUE_INVALIDORDERFIELD("InvalidParameterValue.InvalidOrderField"),
      
+     /* 指定的密码不合规范。 */
+     INVALIDPARAMETERVALUE_INVALIDPASSWORD("InvalidParameterValue.InvalidPassword"),
+     
      /* 场景ID格式非法 */
      INVALIDPARAMETERVALUE_INVALIDSCENEIDMALFORMED("InvalidParameterValue.InvalidSceneIdMalformed"),
      

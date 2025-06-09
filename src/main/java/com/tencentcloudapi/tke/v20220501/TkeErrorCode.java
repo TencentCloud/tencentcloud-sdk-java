@@ -55,7 +55,10 @@ public enum TkeErrorCode {
      RESOURCENOTFOUND_CLUSTERNOTFOUND("ResourceNotFound.ClusterNotFound"),
      
      /* 集群状态不支持该操作。 */
-     RESOURCEUNAVAILABLE_CLUSTERSTATE("ResourceUnavailable.ClusterState");
+     RESOURCEUNAVAILABLE_CLUSTERSTATE("ResourceUnavailable.ClusterState"),
+     
+     /* 操作不支持。 */
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private TkeErrorCode (String value){

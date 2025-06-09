@@ -52,6 +52,13 @@ public class ManagerStatusInfo extends AbstractModel {
     private String ExpireTime;
 
     /**
+    * 管理人预审核的域名列表
+    */
+    @SerializedName("ManagerPreAuditDomains")
+    @Expose
+    private ManagerPreAuditDomain [] ManagerPreAuditDomains;
+
+    /**
      * Get 审核类型，枚举值：ov,ev 
      * @return Type 审核类型，枚举值：ov,ev
      */
@@ -115,6 +122,22 @@ public class ManagerStatusInfo extends AbstractModel {
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 管理人预审核的域名列表 
+     * @return ManagerPreAuditDomains 管理人预审核的域名列表
+     */
+    public ManagerPreAuditDomain [] getManagerPreAuditDomains() {
+        return this.ManagerPreAuditDomains;
+    }
+
+    /**
+     * Set 管理人预审核的域名列表
+     * @param ManagerPreAuditDomains 管理人预审核的域名列表
+     */
+    public void setManagerPreAuditDomains(ManagerPreAuditDomain [] ManagerPreAuditDomains) {
+        this.ManagerPreAuditDomains = ManagerPreAuditDomains;
+    }
+
     public ManagerStatusInfo() {
     }
 
@@ -135,6 +158,12 @@ public class ManagerStatusInfo extends AbstractModel {
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.ManagerPreAuditDomains != null) {
+            this.ManagerPreAuditDomains = new ManagerPreAuditDomain[source.ManagerPreAuditDomains.length];
+            for (int i = 0; i < source.ManagerPreAuditDomains.length; i++) {
+                this.ManagerPreAuditDomains[i] = new ManagerPreAuditDomain(source.ManagerPreAuditDomains[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class ManagerStatusInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamArrayObj(map, prefix + "ManagerPreAuditDomains.", this.ManagerPreAuditDomains);
 
     }
 }

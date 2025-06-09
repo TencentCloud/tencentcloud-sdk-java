@@ -25,6 +25,7 @@ public class AutoSnapshotPolicy extends AbstractModel {
 
     /**
     * 已绑定当前定期快照策略的云盘ID列表。
+DescribeDiskAssociatedAutoSnapshotPolicy场景下该字段返回为空。
     */
     @SerializedName("DiskIdSet")
     @Expose
@@ -49,7 +50,7 @@ public class AutoSnapshotPolicy extends AbstractModel {
     private String AutoSnapshotPolicyState;
 
     /**
-    * 是否是跨账号复制快照快照, 1：是, 0: 不是
+    * 是否是跨账号复制快照, 1：是, 0: 不是
     */
     @SerializedName("IsCopyToRemote")
     @Expose
@@ -157,8 +158,10 @@ public class AutoSnapshotPolicy extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 已绑定当前定期快照策略的云盘ID列表。 
+     * Get 已绑定当前定期快照策略的云盘ID列表。
+DescribeDiskAssociatedAutoSnapshotPolicy场景下该字段返回为空。 
      * @return DiskIdSet 已绑定当前定期快照策略的云盘ID列表。
+DescribeDiskAssociatedAutoSnapshotPolicy场景下该字段返回为空。
      */
     public String [] getDiskIdSet() {
         return this.DiskIdSet;
@@ -166,7 +169,9 @@ public class AutoSnapshotPolicy extends AbstractModel {
 
     /**
      * Set 已绑定当前定期快照策略的云盘ID列表。
+DescribeDiskAssociatedAutoSnapshotPolicy场景下该字段返回为空。
      * @param DiskIdSet 已绑定当前定期快照策略的云盘ID列表。
+DescribeDiskAssociatedAutoSnapshotPolicy场景下该字段返回为空。
      */
     public void setDiskIdSet(String [] DiskIdSet) {
         this.DiskIdSet = DiskIdSet;
@@ -221,16 +226,16 @@ public class AutoSnapshotPolicy extends AbstractModel {
     }
 
     /**
-     * Get 是否是跨账号复制快照快照, 1：是, 0: 不是 
-     * @return IsCopyToRemote 是否是跨账号复制快照快照, 1：是, 0: 不是
+     * Get 是否是跨账号复制快照, 1：是, 0: 不是 
+     * @return IsCopyToRemote 是否是跨账号复制快照, 1：是, 0: 不是
      */
     public Long getIsCopyToRemote() {
         return this.IsCopyToRemote;
     }
 
     /**
-     * Set 是否是跨账号复制快照快照, 1：是, 0: 不是
-     * @param IsCopyToRemote 是否是跨账号复制快照快照, 1：是, 0: 不是
+     * Set 是否是跨账号复制快照, 1：是, 0: 不是
+     * @param IsCopyToRemote 是否是跨账号复制快照, 1：是, 0: 不是
      */
     public void setIsCopyToRemote(Long IsCopyToRemote) {
         this.IsCopyToRemote = IsCopyToRemote;

@@ -46,6 +46,8 @@ public class ListQARequest extends AbstractModel {
 
     /**
     * 查询问题
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
     */
     @SerializedName("Query")
     @Expose
@@ -108,6 +110,13 @@ public class ListQARequest extends AbstractModel {
     private String QueryType;
 
     /**
+    * 是否只展示当前分类的数据 0不是，1是
+    */
+    @SerializedName("ShowCurrCate")
+    @Expose
+    private Long ShowCurrCate;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -156,8 +165,12 @@ public class ListQARequest extends AbstractModel {
     }
 
     /**
-     * Get 查询问题 
+     * Get 查询问题
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的问答 
      * @return Query 查询问题
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
      */
     public String getQuery() {
         return this.Query;
@@ -165,7 +178,11 @@ public class ListQARequest extends AbstractModel {
 
     /**
      * Set 查询问题
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
      * @param Query 查询问题
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
      */
     public void setQuery(String Query) {
         this.Query = Query;
@@ -299,6 +316,22 @@ public class ListQARequest extends AbstractModel {
         this.QueryType = QueryType;
     }
 
+    /**
+     * Get 是否只展示当前分类的数据 0不是，1是 
+     * @return ShowCurrCate 是否只展示当前分类的数据 0不是，1是
+     */
+    public Long getShowCurrCate() {
+        return this.ShowCurrCate;
+    }
+
+    /**
+     * Set 是否只展示当前分类的数据 0不是，1是
+     * @param ShowCurrCate 是否只展示当前分类的数据 0不是，1是
+     */
+    public void setShowCurrCate(Long ShowCurrCate) {
+        this.ShowCurrCate = ShowCurrCate;
+    }
+
     public ListQARequest() {
     }
 
@@ -352,6 +385,9 @@ public class ListQARequest extends AbstractModel {
         if (source.QueryType != null) {
             this.QueryType = new String(source.QueryType);
         }
+        if (source.ShowCurrCate != null) {
+            this.ShowCurrCate = new Long(source.ShowCurrCate);
+        }
     }
 
 
@@ -371,6 +407,7 @@ public class ListQARequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
         this.setParamArraySimple(map, prefix + "QaBizIds.", this.QaBizIds);
         this.setParamSimple(map, prefix + "QueryType", this.QueryType);
+        this.setParamSimple(map, prefix + "ShowCurrCate", this.ShowCurrCate);
 
     }
 }

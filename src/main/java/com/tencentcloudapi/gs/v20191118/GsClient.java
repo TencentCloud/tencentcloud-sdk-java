@@ -131,7 +131,7 @@ public class GsClient extends AbstractClient{
     }
 
     /**
-     *创建安卓实例
+     *创建安卓实例标签
      * @param req CreateAndroidInstanceLabelRequest
      * @return CreateAndroidInstanceLabelResponse
      * @throws TencentCloudSDKException
@@ -241,7 +241,7 @@ public class GsClient extends AbstractClient{
     }
 
     /**
-     *创建安卓实例
+     *删除安卓实例标签
      * @param req DeleteAndroidInstanceLabelRequest
      * @return DeleteAndroidInstanceLabelResponse
      * @throws TencentCloudSDKException
@@ -285,7 +285,7 @@ public class GsClient extends AbstractClient{
     }
 
     /**
-     *创建安卓实例
+     *查询安卓实例标签
      * @param req DescribeAndroidInstanceLabelsRequest
      * @return DescribeAndroidInstanceLabelsResponse
      * @throws TencentCloudSDKException
@@ -384,6 +384,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *将一张照片批量分发到多个实例的相册中，一次接口调用触发一次照片分发，一次照片分发只会从公网下载一次，然后照片会走内网分发到实例列表中的实例。
+     * @param req DistributePhotoToAndroidInstancesRequest
+     * @return DistributePhotoToAndroidInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DistributePhotoToAndroidInstancesResponse DistributePhotoToAndroidInstances(DistributePhotoToAndroidInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DistributePhotoToAndroidInstances", DistributePhotoToAndroidInstancesResponse.class);
+    }
+
+    /**
      *批量启用安卓实例应用
      * @param req EnableAndroidInstancesAppRequest
      * @return EnableAndroidInstancesAppResponse
@@ -439,7 +450,7 @@ public class GsClient extends AbstractClient{
     }
 
     /**
-     *安装安卓实例应用
+     *通过 URL 安装安卓实例应用
      * @param req InstallAndroidInstancesAppWithURLRequest
      * @return InstallAndroidInstancesAppWithURLResponse
      * @throws TencentCloudSDKException
@@ -516,7 +527,7 @@ public class GsClient extends AbstractClient{
     }
 
     /**
-     *修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
+     *批量修改安卓实例的标签
      * @param req ModifyAndroidInstancesLabelsRequest
      * @return ModifyAndroidInstancesLabelsResponse
      * @throws TencentCloudSDKException
@@ -607,7 +618,7 @@ public class GsClient extends AbstractClient{
     }
 
     /**
-     *启动安卓实例应用
+     *重启安卓实例应用
      * @param req RestartAndroidInstancesAppRequest
      * @return RestartAndroidInstancesAppResponse
      * @throws TencentCloudSDKException
@@ -662,7 +673,7 @@ public class GsClient extends AbstractClient{
     }
 
     /**
-     *重启安卓实例
+     *开机安卓实例
      * @param req StartAndroidInstancesRequest
      * @return StartAndroidInstancesResponse
      * @throws TencentCloudSDKException
@@ -706,7 +717,7 @@ public class GsClient extends AbstractClient{
     }
 
     /**
-     *重启安卓实例
+     *关机安卓实例
      * @param req StopAndroidInstancesRequest
      * @return StopAndroidInstancesResponse
      * @throws TencentCloudSDKException

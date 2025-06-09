@@ -59,11 +59,18 @@ public class DescribeBackupFilesRequest extends AbstractModel {
     private String DatabaseName;
 
     /**
-    * 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
+    * 列表项排序，desc-降序、asc-升序，按size排序默认desc，按database排序默认asc
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
+
+    /**
+    * 排序字段（Size-按备份大小排序，DBs-按数据库名称排序），默认size
+    */
+    @SerializedName("OrderByType")
+    @Expose
+    private String OrderByType;
 
     /**
      * Get 实例ID，形如mssql-njj2mtpl 
@@ -146,19 +153,35 @@ public class DescribeBackupFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc 
-     * @return OrderBy 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
+     * Get 列表项排序，desc-降序、asc-升序，按size排序默认desc，按database排序默认asc 
+     * @return OrderBy 列表项排序，desc-降序、asc-升序，按size排序默认desc，按database排序默认asc
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
-     * @param OrderBy 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
+     * Set 列表项排序，desc-降序、asc-升序，按size排序默认desc，按database排序默认asc
+     * @param OrderBy 列表项排序，desc-降序、asc-升序，按size排序默认desc，按database排序默认asc
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get 排序字段（Size-按备份大小排序，DBs-按数据库名称排序），默认size 
+     * @return OrderByType 排序字段（Size-按备份大小排序，DBs-按数据库名称排序），默认size
+     */
+    public String getOrderByType() {
+        return this.OrderByType;
+    }
+
+    /**
+     * Set 排序字段（Size-按备份大小排序，DBs-按数据库名称排序），默认size
+     * @param OrderByType 排序字段（Size-按备份大小排序，DBs-按数据库名称排序），默认size
+     */
+    public void setOrderByType(String OrderByType) {
+        this.OrderByType = OrderByType;
     }
 
     public DescribeBackupFilesRequest() {
@@ -187,6 +210,9 @@ public class DescribeBackupFilesRequest extends AbstractModel {
         if (source.OrderBy != null) {
             this.OrderBy = new String(source.OrderBy);
         }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DescribeBackupFilesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
 
     }
 }

@@ -505,6 +505,13 @@ null：用户上传证书（没有套餐类型），
     private HostingConfig HostingConfig;
 
     /**
+    * 是否是上传托管续费证书
+    */
+    @SerializedName("IsHostingUploadRenewCert")
+    @Expose
+    private Boolean IsHostingUploadRenewCert;
+
+    /**
      * Get 用户 UIN。 
      * @return OwnerUin 用户 UIN。
      */
@@ -1756,6 +1763,22 @@ null：用户上传证书（没有套餐类型），
         this.HostingConfig = HostingConfig;
     }
 
+    /**
+     * Get 是否是上传托管续费证书 
+     * @return IsHostingUploadRenewCert 是否是上传托管续费证书
+     */
+    public Boolean getIsHostingUploadRenewCert() {
+        return this.IsHostingUploadRenewCert;
+    }
+
+    /**
+     * Set 是否是上传托管续费证书
+     * @param IsHostingUploadRenewCert 是否是上传托管续费证书
+     */
+    public void setIsHostingUploadRenewCert(Boolean IsHostingUploadRenewCert) {
+        this.IsHostingUploadRenewCert = IsHostingUploadRenewCert;
+    }
+
     public Certificates() {
     }
 
@@ -1956,6 +1979,9 @@ null：用户上传证书（没有套餐类型），
         if (source.HostingConfig != null) {
             this.HostingConfig = new HostingConfig(source.HostingConfig);
         }
+        if (source.IsHostingUploadRenewCert != null) {
+            this.IsHostingUploadRenewCert = new Boolean(source.IsHostingUploadRenewCert);
+        }
     }
 
 
@@ -2019,6 +2045,7 @@ null：用户上传证书（没有套餐类型），
         this.setParamSimple(map, prefix + "CertRevokedTime", this.CertRevokedTime);
         this.setParamArraySimple(map, prefix + "HostingResourceTypes.", this.HostingResourceTypes);
         this.setParamObj(map, prefix + "HostingConfig.", this.HostingConfig);
+        this.setParamSimple(map, prefix + "IsHostingUploadRenewCert", this.IsHostingUploadRenewCert);
 
     }
 }

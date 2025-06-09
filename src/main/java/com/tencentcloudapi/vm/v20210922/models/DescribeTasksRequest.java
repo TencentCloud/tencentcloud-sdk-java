@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel {
 
     /**
-    * 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
+    * 该参数表示任务列表每页展示的任务条数，**默认值为10，最大值为100**（每页展示10条任务）。
     */
     @SerializedName("Limit")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeTasksRequest extends AbstractModel {
     private String EndTime;
 
     /**
-     * Get 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。 
-     * @return Limit 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
+     * Get 该参数表示任务列表每页展示的任务条数，**默认值为10，最大值为100**（每页展示10条任务）。 
+     * @return Limit 该参数表示任务列表每页展示的任务条数，**默认值为10，最大值为100**（每页展示10条任务）。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
-     * @param Limit 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
+     * Set 该参数表示任务列表每页展示的任务条数，**默认值为10，最大值为100**（每页展示10条任务）。
+     * @param Limit 该参数表示任务列表每页展示的任务条数，**默认值为10，最大值为100**（每页展示10条任务）。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

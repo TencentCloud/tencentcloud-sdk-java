@@ -61,6 +61,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *删除原生节点池节点
+     * @param req DeleteClusterMachinesRequest
+     * @return DeleteClusterMachinesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterMachinesResponse DeleteClusterMachines(DeleteClusterMachinesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteClusterMachines", DeleteClusterMachinesResponse.class);
+    }
+
+    /**
      *删除健康检测策略
      * @param req DeleteHealthCheckPolicyRequest
      * @return DeleteHealthCheckPolicyResponse

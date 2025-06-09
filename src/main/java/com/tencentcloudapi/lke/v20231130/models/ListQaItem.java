@@ -178,6 +178,13 @@ public class ListQaItem extends AbstractModel {
     private String SimilarQuestionTips;
 
     /**
+    * 问答是否停用，false:未停用，ture:已停用
+    */
+    @SerializedName("IsDisabled")
+    @Expose
+    private Boolean IsDisabled;
+
+    /**
      * Get 问答ID 
      * @return QaBizId 问答ID
      */
@@ -529,6 +536,22 @@ public class ListQaItem extends AbstractModel {
         this.SimilarQuestionTips = SimilarQuestionTips;
     }
 
+    /**
+     * Get 问答是否停用，false:未停用，ture:已停用 
+     * @return IsDisabled 问答是否停用，false:未停用，ture:已停用
+     */
+    public Boolean getIsDisabled() {
+        return this.IsDisabled;
+    }
+
+    /**
+     * Set 问答是否停用，false:未停用，ture:已停用
+     * @param IsDisabled 问答是否停用，false:未停用，ture:已停用
+     */
+    public void setIsDisabled(Boolean IsDisabled) {
+        this.IsDisabled = IsDisabled;
+    }
+
     public ListQaItem() {
     }
 
@@ -606,6 +629,9 @@ public class ListQaItem extends AbstractModel {
         if (source.SimilarQuestionTips != null) {
             this.SimilarQuestionTips = new String(source.SimilarQuestionTips);
         }
+        if (source.IsDisabled != null) {
+            this.IsDisabled = new Boolean(source.IsDisabled);
+        }
     }
 
 
@@ -635,6 +661,7 @@ public class ListQaItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AttrLabels.", this.AttrLabels);
         this.setParamSimple(map, prefix + "SimilarQuestionNum", this.SimilarQuestionNum);
         this.setParamSimple(map, prefix + "SimilarQuestionTips", this.SimilarQuestionTips);
+        this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
 
     }
 }

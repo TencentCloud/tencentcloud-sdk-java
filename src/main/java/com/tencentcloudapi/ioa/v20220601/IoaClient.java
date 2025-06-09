@@ -94,6 +94,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *查询满足条件的查询终端硬件信息列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceHardwareInfoList
+     * @param req DescribeDeviceHardwareInfoListRequest
+     * @return DescribeDeviceHardwareInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceHardwareInfoListResponse DescribeDeviceHardwareInfoList(DescribeDeviceHardwareInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceHardwareInfoList", DescribeDeviceHardwareInfoListResponse.class);
+    }
+
+    /**
      *查询满足条件的终端数据详情，私有化调用path为：/capi/Assets/Device/DescribeDevices
      * @param req DescribeDevicesRequest
      * @return DescribeDevicesResponse

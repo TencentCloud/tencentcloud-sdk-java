@@ -128,6 +128,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *传入声纹ID，删除之前注册的声纹信息
+     * @param req DeleteVoicePrintRequest
+     * @return DeleteVoicePrintResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVoicePrintResponse DeleteVoicePrint(DeleteVoicePrintRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVoicePrint", DeleteVoicePrintResponse.class);
+    }
+
+    /**
      *查询AI对话任务状态。
      * @param req DescribeAIConversationRequest
      * @return DescribeAIConversationResponse
@@ -516,6 +527,17 @@ xa0
     }
 
     /**
+     *查询先前注册的声纹信息
+     * @param req DescribeVoicePrintRequest
+     * @return DescribeVoicePrintResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVoicePrintResponse DescribeVoicePrint(DescribeVoicePrintRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVoicePrint", DescribeVoicePrintResponse.class);
+    }
+
+    /**
      *查询页面录制任务
      * @param req DescribeWebRecordRequest
      * @return DescribeWebRecordResponse
@@ -568,6 +590,17 @@ xa0
     public ModifyPictureResponse ModifyPicture(ModifyPictureRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPicture", ModifyPictureResponse.class);
+    }
+
+    /**
+     *传入音频base64串，注册声纹信息，返回声纹ID
+     * @param req RegisterVoicePrintRequest
+     * @return RegisterVoicePrintResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterVoicePrintResponse RegisterVoicePrint(RegisterVoicePrintRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RegisterVoicePrint", RegisterVoicePrintResponse.class);
     }
 
     /**
@@ -840,6 +873,17 @@ MCU 混流转码费用，请参考文档：[云端混流转码计费说明](http
     public UpdateStreamIngestResponse UpdateStreamIngest(UpdateStreamIngestRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateStreamIngest", UpdateStreamIngestResponse.class);
+    }
+
+    /**
+     *传入声纹ID以及对应音频信息，更新对应声纹信息
+     * @param req UpdateVoicePrintRequest
+     * @return UpdateVoicePrintResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateVoicePrintResponse UpdateVoicePrint(UpdateVoicePrintRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateVoicePrint", UpdateVoicePrintResponse.class);
     }
 
 }

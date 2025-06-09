@@ -66,6 +66,13 @@ public class DescribeDBsRequest extends AbstractModel {
     private String Encryption;
 
     /**
+    * 排序字段（Name-按名称排序，CreateTime-按创建时间排序），默认CreateTime
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
      * Get 实例ID 
      * @return InstanceIdSet 实例ID
      */
@@ -161,6 +168,22 @@ public class DescribeDBsRequest extends AbstractModel {
         this.Encryption = Encryption;
     }
 
+    /**
+     * Get 排序字段（Name-按名称排序，CreateTime-按创建时间排序），默认CreateTime 
+     * @return OrderBy 排序字段（Name-按名称排序，CreateTime-按创建时间排序），默认CreateTime
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 排序字段（Name-按名称排序，CreateTime-按创建时间排序），默认CreateTime
+     * @param OrderBy 排序字段（Name-按名称排序，CreateTime-按创建时间排序），默认CreateTime
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
     public DescribeDBsRequest() {
     }
 
@@ -190,6 +213,9 @@ public class DescribeDBsRequest extends AbstractModel {
         if (source.Encryption != null) {
             this.Encryption = new String(source.Encryption);
         }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class DescribeDBsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
         this.setParamSimple(map, prefix + "Encryption", this.Encryption);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
 
     }
 }

@@ -87,6 +87,13 @@ public class ListUsageCallDetailRequest extends AbstractModel {
     private String [] SubScenes;
 
     /**
+    * 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+    */
+    @SerializedName("AppType")
+    @Expose
+    private String AppType;
+
+    /**
      * Get 模型标识 
      * @return ModelName 模型标识
      */
@@ -230,6 +237,22 @@ public class ListUsageCallDetailRequest extends AbstractModel {
         this.SubScenes = SubScenes;
     }
 
+    /**
+     * Get 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库) 
+     * @return AppType 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+     */
+    public String getAppType() {
+        return this.AppType;
+    }
+
+    /**
+     * Set 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+     * @param AppType 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+     */
+    public void setAppType(String AppType) {
+        this.AppType = AppType;
+    }
+
     public ListUsageCallDetailRequest() {
     }
 
@@ -274,6 +297,9 @@ public class ListUsageCallDetailRequest extends AbstractModel {
                 this.SubScenes[i] = new String(source.SubScenes[i]);
             }
         }
+        if (source.AppType != null) {
+            this.AppType = new String(source.AppType);
+        }
     }
 
 
@@ -290,6 +316,7 @@ public class ListUsageCallDetailRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
         this.setParamSimple(map, prefix + "CallType", this.CallType);
         this.setParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
+        this.setParamSimple(map, prefix + "AppType", this.AppType);
 
     }
 }

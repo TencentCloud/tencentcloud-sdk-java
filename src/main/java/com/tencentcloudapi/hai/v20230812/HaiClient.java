@@ -149,6 +149,17 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *本接口 (ResetInstancesPassword) 用于重置实例的用户密码。
+     * @param req ResetInstancesPasswordRequest
+     * @return ResetInstancesPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetInstancesPasswordResponse ResetInstancesPassword(ResetInstancesPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetInstancesPassword", ResetInstancesPasswordResponse.class);
+    }
+
+    /**
      *本接口 (RunInstances) 用于创建一个或多个指定配置的实例。
      * @param req RunInstancesRequest
      * @return RunInstancesResponse

@@ -41,6 +41,7 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
     * 云存 AI 服务类型。可选值：
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `SimpleHighlight`：TrueX SimpleHighlight
     */
     @SerializedName("ServiceType")
     @Expose
@@ -66,6 +67,13 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
     @SerializedName("Config")
     @Expose
     private String Config;
+
+    /**
+    * SimpleHighlight 算法配置参数
+    */
+    @SerializedName("SHLConfig")
+    @Expose
+    private DiarySHLConfig SHLConfig;
 
     /**
      * Get 产品 ID 
@@ -102,10 +110,12 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
     /**
      * Get 云存 AI 服务类型。可选值：
 - `RealtimeObjectDetect`：目标检测
-- `Highlight`：视频浓缩 
+- `Highlight`：视频浓缩
+- `SimpleHighlight`：TrueX SimpleHighlight 
      * @return ServiceType 云存 AI 服务类型。可选值：
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `SimpleHighlight`：TrueX SimpleHighlight
      */
     public String getServiceType() {
         return this.ServiceType;
@@ -115,9 +125,11 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
      * Set 云存 AI 服务类型。可选值：
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `SimpleHighlight`：TrueX SimpleHighlight
      * @param ServiceType 云存 AI 服务类型。可选值：
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `SimpleHighlight`：TrueX SimpleHighlight
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -171,6 +183,22 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
         this.Config = Config;
     }
 
+    /**
+     * Get SimpleHighlight 算法配置参数 
+     * @return SHLConfig SimpleHighlight 算法配置参数
+     */
+    public DiarySHLConfig getSHLConfig() {
+        return this.SHLConfig;
+    }
+
+    /**
+     * Set SimpleHighlight 算法配置参数
+     * @param SHLConfig SimpleHighlight 算法配置参数
+     */
+    public void setSHLConfig(DiarySHLConfig SHLConfig) {
+        this.SHLConfig = SHLConfig;
+    }
+
     public ModifyCloudStorageAIServiceRequest() {
     }
 
@@ -197,6 +225,9 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
         if (source.Config != null) {
             this.Config = new String(source.Config);
         }
+        if (source.SHLConfig != null) {
+            this.SHLConfig = new DiarySHLConfig(source.SHLConfig);
+        }
     }
 
 
@@ -210,6 +241,7 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "ROI", this.ROI);
         this.setParamSimple(map, prefix + "Config", this.Config);
+        this.setParamObj(map, prefix + "SHLConfig.", this.SHLConfig);
 
     }
 }

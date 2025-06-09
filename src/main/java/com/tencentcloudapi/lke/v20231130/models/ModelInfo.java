@@ -160,6 +160,13 @@ public class ModelInfo extends AbstractModel {
     private Long SupportAiCallStatus;
 
     /**
+    * 专属并发数
+    */
+    @SerializedName("Concurrency")
+    @Expose
+    private Long Concurrency;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelName 模型名称
@@ -487,6 +494,22 @@ public class ModelInfo extends AbstractModel {
         this.SupportAiCallStatus = SupportAiCallStatus;
     }
 
+    /**
+     * Get 专属并发数 
+     * @return Concurrency 专属并发数
+     */
+    public Long getConcurrency() {
+        return this.Concurrency;
+    }
+
+    /**
+     * Set 专属并发数
+     * @param Concurrency 专属并发数
+     */
+    public void setConcurrency(Long Concurrency) {
+        this.Concurrency = Concurrency;
+    }
+
     public ModelInfo() {
     }
 
@@ -549,6 +572,9 @@ public class ModelInfo extends AbstractModel {
         if (source.SupportAiCallStatus != null) {
             this.SupportAiCallStatus = new Long(source.SupportAiCallStatus);
         }
+        if (source.Concurrency != null) {
+            this.Concurrency = new Long(source.Concurrency);
+        }
     }
 
 
@@ -574,6 +600,7 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RoleLenLimit", this.RoleLenLimit);
         this.setParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
         this.setParamSimple(map, prefix + "SupportAiCallStatus", this.SupportAiCallStatus);
+        this.setParamSimple(map, prefix + "Concurrency", this.Concurrency);
 
     }
 }

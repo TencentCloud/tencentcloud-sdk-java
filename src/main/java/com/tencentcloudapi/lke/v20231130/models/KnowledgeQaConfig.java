@@ -156,6 +156,13 @@ public class KnowledgeQaConfig extends AbstractModel {
     private AICallConfig AiCall;
 
     /**
+    * 共享知识库关联配置
+    */
+    @SerializedName("ShareKnowledgeBases")
+    @Expose
+    private ShareKnowledgeBase [] ShareKnowledgeBases;
+
+    /**
      * Get 欢迎语，200字符以内
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Greeting 欢迎语，200字符以内
@@ -503,6 +510,22 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.AiCall = AiCall;
     }
 
+    /**
+     * Get 共享知识库关联配置 
+     * @return ShareKnowledgeBases 共享知识库关联配置
+     */
+    public ShareKnowledgeBase [] getShareKnowledgeBases() {
+        return this.ShareKnowledgeBases;
+    }
+
+    /**
+     * Set 共享知识库关联配置
+     * @param ShareKnowledgeBases 共享知识库关联配置
+     */
+    public void setShareKnowledgeBases(ShareKnowledgeBase [] ShareKnowledgeBases) {
+        this.ShareKnowledgeBases = ShareKnowledgeBases;
+    }
+
     public KnowledgeQaConfig() {
     }
 
@@ -565,6 +588,12 @@ public class KnowledgeQaConfig extends AbstractModel {
         if (source.AiCall != null) {
             this.AiCall = new AICallConfig(source.AiCall);
         }
+        if (source.ShareKnowledgeBases != null) {
+            this.ShareKnowledgeBases = new ShareKnowledgeBase[source.ShareKnowledgeBases.length];
+            for (int i = 0; i < source.ShareKnowledgeBases.length; i++) {
+                this.ShareKnowledgeBases[i] = new ShareKnowledgeBase(source.ShareKnowledgeBases[i]);
+            }
+        }
     }
 
 
@@ -587,6 +616,7 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.setParamArrayObj(map, prefix + "IntentAchievements.", this.IntentAchievements);
         this.setParamSimple(map, prefix + "ImageTextRetrieval", this.ImageTextRetrieval);
         this.setParamObj(map, prefix + "AiCall.", this.AiCall);
+        this.setParamArrayObj(map, prefix + "ShareKnowledgeBases.", this.ShareKnowledgeBases);
 
     }
 }

@@ -138,6 +138,13 @@ public class StaffStatusMetrics extends AbstractModel {
     private Long LastStatusTimestamp;
 
     /**
+    * 客服登录的端信息
+    */
+    @SerializedName("ClientInfo")
+    @Expose
+    private Client [] ClientInfo;
+
+    /**
      * Get 座席邮箱 
      * @return Email 座席邮箱
      */
@@ -401,6 +408,22 @@ public class StaffStatusMetrics extends AbstractModel {
         this.LastStatusTimestamp = LastStatusTimestamp;
     }
 
+    /**
+     * Get 客服登录的端信息 
+     * @return ClientInfo 客服登录的端信息
+     */
+    public Client [] getClientInfo() {
+        return this.ClientInfo;
+    }
+
+    /**
+     * Set 客服登录的端信息
+     * @param ClientInfo 客服登录的端信息
+     */
+    public void setClientInfo(Client [] ClientInfo) {
+        this.ClientInfo = ClientInfo;
+    }
+
     public StaffStatusMetrics() {
     }
 
@@ -457,6 +480,12 @@ public class StaffStatusMetrics extends AbstractModel {
         if (source.LastStatusTimestamp != null) {
             this.LastStatusTimestamp = new Long(source.LastStatusTimestamp);
         }
+        if (source.ClientInfo != null) {
+            this.ClientInfo = new Client[source.ClientInfo.length];
+            for (int i = 0; i < source.ClientInfo.length; i++) {
+                this.ClientInfo[i] = new Client(source.ClientInfo[i]);
+            }
+        }
     }
 
 
@@ -480,6 +509,7 @@ public class StaffStatusMetrics extends AbstractModel {
         this.setParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
         this.setParamSimple(map, prefix + "LastOnlineTimestamp", this.LastOnlineTimestamp);
         this.setParamSimple(map, prefix + "LastStatusTimestamp", this.LastStatusTimestamp);
+        this.setParamArrayObj(map, prefix + "ClientInfo.", this.ClientInfo);
 
     }
 }

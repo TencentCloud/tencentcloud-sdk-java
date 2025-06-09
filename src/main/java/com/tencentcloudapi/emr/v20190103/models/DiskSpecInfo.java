@@ -47,6 +47,11 @@ public class DiskSpecInfo extends AbstractModel {
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
+<li>CLOUD_BIGDATA：表示大数据型云硬盘。</li>
+<li>CLOUD_HIGHIO：表示高IO型云硬盘。</li>
+<li>CLOUD_BSSD：表示通用型SSD云硬盘。</li>
+<li>REMOTE_SSD：表示远端SSD盘。</li>
+
     */
     @SerializedName("DiskType")
     @Expose
@@ -98,7 +103,12 @@ public class DiskSpecInfo extends AbstractModel {
 <li>LOCAL_SSD：表示本地SSD。</li>
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
-<li>CLOUD_TSSD：表示极速型SSD云硬盘。</li> 
+<li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
+<li>CLOUD_BIGDATA：表示大数据型云硬盘。</li>
+<li>CLOUD_HIGHIO：表示高IO型云硬盘。</li>
+<li>CLOUD_BSSD：表示通用型SSD云硬盘。</li>
+<li>REMOTE_SSD：表示远端SSD盘。</li>
+ 
      * @return DiskType 系统盘类型 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
@@ -115,6 +125,11 @@ public class DiskSpecInfo extends AbstractModel {
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
+<li>CLOUD_BIGDATA：表示大数据型云硬盘。</li>
+<li>CLOUD_HIGHIO：表示高IO型云硬盘。</li>
+<li>CLOUD_BSSD：表示通用型SSD云硬盘。</li>
+<li>REMOTE_SSD：表示远端SSD盘。</li>
+
      */
     public String getDiskType() {
         return this.DiskType;
@@ -137,6 +152,11 @@ public class DiskSpecInfo extends AbstractModel {
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
+<li>CLOUD_BIGDATA：表示大数据型云硬盘。</li>
+<li>CLOUD_HIGHIO：表示高IO型云硬盘。</li>
+<li>CLOUD_BSSD：表示通用型SSD云硬盘。</li>
+<li>REMOTE_SSD：表示远端SSD盘。</li>
+
      * @param DiskType 系统盘类型 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
@@ -153,6 +173,11 @@ public class DiskSpecInfo extends AbstractModel {
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
+<li>CLOUD_BIGDATA：表示大数据型云硬盘。</li>
+<li>CLOUD_HIGHIO：表示高IO型云硬盘。</li>
+<li>CLOUD_BSSD：表示通用型SSD云硬盘。</li>
+<li>REMOTE_SSD：表示远端SSD盘。</li>
+
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;

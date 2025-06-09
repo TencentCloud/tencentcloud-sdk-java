@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KnowledgeQaSearch extends AbstractModel {
 
     /**
-    * 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
+    * 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强，database:数据库
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -96,9 +96,9 @@ public class KnowledgeQaSearch extends AbstractModel {
     private Long ResourceStatus;
 
     /**
-     * Get 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
+     * Get 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强，database:数据库
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
+     * @return Type 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强，database:数据库
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -106,9 +106,9 @@ public class KnowledgeQaSearch extends AbstractModel {
     }
 
     /**
-     * Set 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
+     * Set 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强，database:数据库
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
+     * @param Type 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强，database:数据库
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {

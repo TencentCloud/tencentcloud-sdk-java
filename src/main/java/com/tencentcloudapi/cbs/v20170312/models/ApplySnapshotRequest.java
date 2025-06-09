@@ -39,6 +39,7 @@ public class ApplySnapshotRequest extends AbstractModel {
 
     /**
     * 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
+此参数为true时，AutoStartInstance才能为true。
     */
     @SerializedName("AutoStopInstance")
     @Expose
@@ -84,8 +85,10 @@ public class ApplySnapshotRequest extends AbstractModel {
     }
 
     /**
-     * Get 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。 
+     * Get 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
+此参数为true时，AutoStartInstance才能为true。 
      * @return AutoStopInstance 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
+此参数为true时，AutoStartInstance才能为true。
      */
     public Boolean getAutoStopInstance() {
         return this.AutoStopInstance;
@@ -93,7 +96,9 @@ public class ApplySnapshotRequest extends AbstractModel {
 
     /**
      * Set 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
+此参数为true时，AutoStartInstance才能为true。
      * @param AutoStopInstance 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
+此参数为true时，AutoStartInstance才能为true。
      */
     public void setAutoStopInstance(Boolean AutoStopInstance) {
         this.AutoStopInstance = AutoStopInstance;

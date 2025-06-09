@@ -109,6 +109,20 @@ public class AgentConfig extends AbstractModel {
     private Long FilterBracketsContent;
 
     /**
+    * 环境音设置
+    */
+    @SerializedName("AmbientSound")
+    @Expose
+    private AmbientSound AmbientSound;
+
+    /**
+    * 声纹配置
+    */
+    @SerializedName("VoicePrint")
+    @Expose
+    private VoicePrint VoicePrint;
+
+    /**
      * Get 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。 
      * @return UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
      */
@@ -316,6 +330,38 @@ public class AgentConfig extends AbstractModel {
         this.FilterBracketsContent = FilterBracketsContent;
     }
 
+    /**
+     * Get 环境音设置 
+     * @return AmbientSound 环境音设置
+     */
+    public AmbientSound getAmbientSound() {
+        return this.AmbientSound;
+    }
+
+    /**
+     * Set 环境音设置
+     * @param AmbientSound 环境音设置
+     */
+    public void setAmbientSound(AmbientSound AmbientSound) {
+        this.AmbientSound = AmbientSound;
+    }
+
+    /**
+     * Get 声纹配置 
+     * @return VoicePrint 声纹配置
+     */
+    public VoicePrint getVoicePrint() {
+        return this.VoicePrint;
+    }
+
+    /**
+     * Set 声纹配置
+     * @param VoicePrint 声纹配置
+     */
+    public void setVoicePrint(VoicePrint VoicePrint) {
+        this.VoicePrint = VoicePrint;
+    }
+
     public AgentConfig() {
     }
 
@@ -357,6 +403,12 @@ public class AgentConfig extends AbstractModel {
         if (source.FilterBracketsContent != null) {
             this.FilterBracketsContent = new Long(source.FilterBracketsContent);
         }
+        if (source.AmbientSound != null) {
+            this.AmbientSound = new AmbientSound(source.AmbientSound);
+        }
+        if (source.VoicePrint != null) {
+            this.VoicePrint = new VoicePrint(source.VoicePrint);
+        }
     }
 
 
@@ -375,6 +427,8 @@ public class AgentConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "FilterOneWord", this.FilterOneWord);
         this.setParamSimple(map, prefix + "WelcomeMessagePriority", this.WelcomeMessagePriority);
         this.setParamSimple(map, prefix + "FilterBracketsContent", this.FilterBracketsContent);
+        this.setParamObj(map, prefix + "AmbientSound.", this.AmbientSound);
+        this.setParamObj(map, prefix + "VoicePrint.", this.VoicePrint);
 
     }
 }

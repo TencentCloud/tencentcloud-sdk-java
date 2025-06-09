@@ -25,7 +25,6 @@ public class ActionAlterCkUserResponse extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrMsg")
     @Expose
@@ -39,10 +38,8 @@ public class ActionAlterCkUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return ErrMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrMsg() {
         return this.ErrMsg;
@@ -50,9 +47,7 @@ public class ActionAlterCkUserResponse extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;

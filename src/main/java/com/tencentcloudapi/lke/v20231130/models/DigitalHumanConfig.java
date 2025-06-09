@@ -45,6 +45,13 @@ public class DigitalHumanConfig extends AbstractModel {
     private String Avatar;
 
     /**
+    * 预览图
+    */
+    @SerializedName("PreviewUrl")
+    @Expose
+    private String PreviewUrl;
+
+    /**
      * Get 数智人资产key 
      * @return AssetKey 数智人资产key
      */
@@ -92,6 +99,22 @@ public class DigitalHumanConfig extends AbstractModel {
         this.Avatar = Avatar;
     }
 
+    /**
+     * Get 预览图 
+     * @return PreviewUrl 预览图
+     */
+    public String getPreviewUrl() {
+        return this.PreviewUrl;
+    }
+
+    /**
+     * Set 预览图
+     * @param PreviewUrl 预览图
+     */
+    public void setPreviewUrl(String PreviewUrl) {
+        this.PreviewUrl = PreviewUrl;
+    }
+
     public DigitalHumanConfig() {
     }
 
@@ -109,6 +132,9 @@ public class DigitalHumanConfig extends AbstractModel {
         if (source.Avatar != null) {
             this.Avatar = new String(source.Avatar);
         }
+        if (source.PreviewUrl != null) {
+            this.PreviewUrl = new String(source.PreviewUrl);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DigitalHumanConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "AssetKey", this.AssetKey);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Avatar", this.Avatar);
+        this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
 
     }
 }
