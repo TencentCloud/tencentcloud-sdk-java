@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePurgeTasksResponse extends AbstractModel {
 
     /**
-    * 详细刷新记录
+    * 详细刷新纪录
     */
     @SerializedName("PurgeLogs")
     @Expose
@@ -45,16 +45,16 @@ public class DescribePurgeTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 详细刷新记录 
-     * @return PurgeLogs 详细刷新记录
+     * Get 详细刷新纪录 
+     * @return PurgeLogs 详细刷新纪录
      */
     public PurgeTask [] getPurgeLogs() {
         return this.PurgeLogs;
     }
 
     /**
-     * Set 详细刷新记录
-     * @param PurgeLogs 详细刷新记录
+     * Set 详细刷新纪录
+     * @param PurgeLogs 详细刷新纪录
      */
     public void setPurgeLogs(PurgeTask [] PurgeLogs) {
         this.PurgeLogs = PurgeLogs;

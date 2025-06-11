@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSubdomainValidateTXTValueResponse extends AbstractModel {
 
     /**
-    * 需要添加 TXT 记录的域名。
+    * 需要添加 TXT 记录的主域名。
     */
     @SerializedName("Domain")
     @Expose
@@ -52,6 +52,13 @@ public class CreateSubdomainValidateTXTValueResponse extends AbstractModel {
     private String Value;
 
     /**
+    * 需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。
+    */
+    @SerializedName("ParentDomain")
+    @Expose
+    private String ParentDomain;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -59,16 +66,16 @@ public class CreateSubdomainValidateTXTValueResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 需要添加 TXT 记录的域名。 
-     * @return Domain 需要添加 TXT 记录的域名。
+     * Get 需要添加 TXT 记录的主域名。 
+     * @return Domain 需要添加 TXT 记录的主域名。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 需要添加 TXT 记录的域名。
-     * @param Domain 需要添加 TXT 记录的域名。
+     * Set 需要添加 TXT 记录的主域名。
+     * @param Domain 需要添加 TXT 记录的主域名。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -123,6 +130,22 @@ public class CreateSubdomainValidateTXTValueResponse extends AbstractModel {
     }
 
     /**
+     * Get 需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。 
+     * @return ParentDomain 需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。
+     */
+    public String getParentDomain() {
+        return this.ParentDomain;
+    }
+
+    /**
+     * Set 需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。
+     * @param ParentDomain 需要添加 TXT 记录的上级域名(可选，主域名和上级域名任选一个添加即可)。
+     */
+    public void setParentDomain(String ParentDomain) {
+        this.ParentDomain = ParentDomain;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -158,6 +181,9 @@ public class CreateSubdomainValidateTXTValueResponse extends AbstractModel {
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.ParentDomain != null) {
+            this.ParentDomain = new String(source.ParentDomain);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -172,6 +198,7 @@ public class CreateSubdomainValidateTXTValueResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Subdomain", this.Subdomain);
         this.setParamSimple(map, prefix + "RecordType", this.RecordType);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "ParentDomain", this.ParentDomain);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

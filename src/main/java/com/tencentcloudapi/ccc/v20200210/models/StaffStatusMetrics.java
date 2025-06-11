@@ -142,7 +142,7 @@ public class StaffStatusMetrics extends AbstractModel {
     */
     @SerializedName("ClientInfo")
     @Expose
-    private Client [] ClientInfo;
+    private ClientInfo [] ClientInfo;
 
     /**
      * Get 座席邮箱 
@@ -412,7 +412,7 @@ public class StaffStatusMetrics extends AbstractModel {
      * Get 客服登录的端信息 
      * @return ClientInfo 客服登录的端信息
      */
-    public Client [] getClientInfo() {
+    public ClientInfo [] getClientInfo() {
         return this.ClientInfo;
     }
 
@@ -420,7 +420,7 @@ public class StaffStatusMetrics extends AbstractModel {
      * Set 客服登录的端信息
      * @param ClientInfo 客服登录的端信息
      */
-    public void setClientInfo(Client [] ClientInfo) {
+    public void setClientInfo(ClientInfo [] ClientInfo) {
         this.ClientInfo = ClientInfo;
     }
 
@@ -481,9 +481,9 @@ public class StaffStatusMetrics extends AbstractModel {
             this.LastStatusTimestamp = new Long(source.LastStatusTimestamp);
         }
         if (source.ClientInfo != null) {
-            this.ClientInfo = new Client[source.ClientInfo.length];
+            this.ClientInfo = new ClientInfo[source.ClientInfo.length];
             for (int i = 0; i < source.ClientInfo.length; i++) {
-                this.ClientInfo[i] = new Client(source.ClientInfo[i]);
+                this.ClientInfo[i] = new ClientInfo(source.ClientInfo[i]);
             }
         }
     }

@@ -45,6 +45,13 @@ public class SmartStructuralProResponse extends AbstractModel {
     private WordItem [] WordList;
 
     /**
+    * 识别出的token个数
+    */
+    @SerializedName("TokenNum")
+    @Expose
+    private Long TokenNum;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class SmartStructuralProResponse extends AbstractModel {
     }
 
     /**
+     * Get 识别出的token个数 
+     * @return TokenNum 识别出的token个数
+     */
+    public Long getTokenNum() {
+        return this.TokenNum;
+    }
+
+    /**
+     * Set 识别出的token个数
+     * @param TokenNum 识别出的token个数
+     */
+    public void setTokenNum(Long TokenNum) {
+        this.TokenNum = TokenNum;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -138,6 +161,9 @@ public class SmartStructuralProResponse extends AbstractModel {
                 this.WordList[i] = new WordItem(source.WordList[i]);
             }
         }
+        if (source.TokenNum != null) {
+            this.TokenNum = new Long(source.TokenNum);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -151,6 +177,7 @@ public class SmartStructuralProResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamArrayObj(map, prefix + "StructuralList.", this.StructuralList);
         this.setParamArrayObj(map, prefix + "WordList.", this.WordList);
+        this.setParamSimple(map, prefix + "TokenNum", this.TokenNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

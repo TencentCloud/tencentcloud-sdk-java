@@ -507,6 +507,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *获取套餐列表
+     * @param req DescribeDomainVipListRequest
+     * @return DescribeDomainVipListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainVipListResponse DescribeDomainVipList(DescribeDomainVipListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDomainVipList", DescribeDomainVipListResponse.class);
+    }
+
+    /**
      *获取域名Whois信息
      * @param req DescribeDomainWhoisRequest
      * @return DescribeDomainWhoisResponse
@@ -741,6 +752,17 @@ public class DnspodClient extends AbstractClient{
     public DescribeVASStatisticResponse DescribeVASStatistic(DescribeVASStatisticRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVASStatistic", DescribeVASStatisticResponse.class);
+    }
+
+    /**
+     *获取增值服务列表
+     * @param req DescribeVasListRequest
+     * @return DescribeVasListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVasListResponse DescribeVasList(DescribeVasListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVasList", DescribeVasListResponse.class);
     }
 
     /**

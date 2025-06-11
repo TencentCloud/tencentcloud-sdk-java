@@ -80,6 +80,13 @@ public class SearchDocInfo extends AbstractModel {
     private Long FileSize;
 
     /**
+    * Cos存储文件ID
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
      * Get 知识库名称 
      * @return CollectionViewName 知识库名称
      */
@@ -207,6 +214,22 @@ public class SearchDocInfo extends AbstractModel {
         this.FileSize = FileSize;
     }
 
+    /**
+     * Get Cos存储文件ID 
+     * @return FileId Cos存储文件ID
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set Cos存储文件ID
+     * @param FileId Cos存储文件ID
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
     public SearchDocInfo() {
     }
 
@@ -239,6 +262,9 @@ public class SearchDocInfo extends AbstractModel {
         if (source.FileSize != null) {
             this.FileSize = new Long(source.FileSize);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class SearchDocInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FileMetaData", this.FileMetaData);
         this.setParamSimple(map, prefix + "DocDesc", this.DocDesc);
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

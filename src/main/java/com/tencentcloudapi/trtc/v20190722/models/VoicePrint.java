@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class VoicePrint extends AbstractModel {
 
     /**
-    * 默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹
+    * 默认为0，表示不启用声纹。1表示启用声纹，此时需要填写voiceprint id。
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * 只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
+    * VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
     */
     @SerializedName("IdList")
     @Expose
     private String [] IdList;
 
     /**
-     * Get 默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹 
-     * @return Mode 默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹
+     * Get 默认为0，表示不启用声纹。1表示启用声纹，此时需要填写voiceprint id。 
+     * @return Mode 默认为0，表示不启用声纹。1表示启用声纹，此时需要填写voiceprint id。
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹
-     * @param Mode 默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹
+     * Set 默认为0，表示不启用声纹。1表示启用声纹，此时需要填写voiceprint id。
+     * @param Mode 默认为0，表示不启用声纹。1表示启用声纹，此时需要填写voiceprint id。
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id 
-     * @return IdList 只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
+     * Get VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id 
+     * @return IdList VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
      */
     public String [] getIdList() {
         return this.IdList;
     }
 
     /**
-     * Set 只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
-     * @param IdList 只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
+     * Set VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
+     * @param IdList VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
      */
     public void setIdList(String [] IdList) {
         this.IdList = IdList;

@@ -162,6 +162,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *创建共享知识库。
+     * @param req CreateSharedKnowledgeRequest
+     * @return CreateSharedKnowledgeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSharedKnowledgeResponse CreateSharedKnowledge(CreateSharedKnowledgeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSharedKnowledge", CreateSharedKnowledgeResponse.class);
+    }
+
+    /**
      *创建变量
      * @param req CreateVarRequest
      * @return CreateVarResponse
@@ -247,6 +258,17 @@ public class LkeClient extends AbstractClient{
     public DeleteRejectedQuestionResponse DeleteRejectedQuestion(DeleteRejectedQuestionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRejectedQuestion", DeleteRejectedQuestionResponse.class);
+    }
+
+    /**
+     *删除共享知识库。
+     * @param req DeleteSharedKnowledgeRequest
+     * @return DeleteSharedKnowledgeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSharedKnowledgeResponse DeleteSharedKnowledge(DeleteSharedKnowledgeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSharedKnowledge", DeleteSharedKnowledgeResponse.class);
     }
 
     /**
@@ -423,6 +445,17 @@ public class LkeClient extends AbstractClient{
     public DescribeSegmentsResponse DescribeSegments(DescribeSegmentsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSegments", DescribeSegmentsResponse.class);
+    }
+
+    /**
+     *查询共享知识库。
+     * @param req DescribeSharedKnowledgeRequest
+     * @return DescribeSharedKnowledgeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSharedKnowledgeResponse DescribeSharedKnowledge(DescribeSharedKnowledgeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSharedKnowledge", DescribeSharedKnowledgeResponse.class);
     }
 
     /**
@@ -781,6 +814,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *查看应用引用了哪些共享知识库，可以看到共享知识库的基础信息，包括名称，id等
+     * @param req ListReferShareKnowledgeRequest
+     * @return ListReferShareKnowledgeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListReferShareKnowledgeResponse ListReferShareKnowledge(ListReferShareKnowledgeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListReferShareKnowledge", ListReferShareKnowledgeResponse.class);
+    }
+
+    /**
      *获取拒答问题
      * @param req ListRejectedQuestionRequest
      * @return ListRejectedQuestionResponse
@@ -855,6 +899,17 @@ public class LkeClient extends AbstractClient{
     public ListSelectDocResponse ListSelectDoc(ListSelectDocRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListSelectDoc", ListSelectDocResponse.class);
+    }
+
+    /**
+     *列举共享知识库。
+     * @param req ListSharedKnowledgeRequest
+     * @return ListSharedKnowledgeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSharedKnowledgeResponse ListSharedKnowledge(ListSharedKnowledgeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListSharedKnowledge", ListSharedKnowledgeResponse.class);
     }
 
     /**
@@ -1015,6 +1070,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *应用引用共享知识库，可以引用一个或多个，每次都是全量覆盖
+     * @param req ReferShareKnowledgeRequest
+     * @return ReferShareKnowledgeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReferShareKnowledgeResponse ReferShareKnowledge(ReferShareKnowledgeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReferShareKnowledge", ReferShareKnowledgeResponse.class);
+    }
+
+    /**
      *文档重命名
      * @param req RenameDocRequest
      * @return RenameDocResponse
@@ -1094,6 +1160,17 @@ public class LkeClient extends AbstractClient{
     public StopDocParseResponse StopDocParse(StopDocParseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopDocParse", StopDocParseResponse.class);
+    }
+
+    /**
+     *更新共享知识库。
+     * @param req UpdateSharedKnowledgeRequest
+     * @return UpdateSharedKnowledgeResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateSharedKnowledgeResponse UpdateSharedKnowledge(UpdateSharedKnowledgeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateSharedKnowledge", UpdateSharedKnowledgeResponse.class);
     }
 
     /**

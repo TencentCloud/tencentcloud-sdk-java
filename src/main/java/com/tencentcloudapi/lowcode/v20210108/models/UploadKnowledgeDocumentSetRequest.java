@@ -94,6 +94,13 @@ public class UploadKnowledgeDocumentSetRequest extends AbstractModel {
     private String Delimiter;
 
     /**
+    * Cos存储文件ID
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -253,6 +260,22 @@ public class UploadKnowledgeDocumentSetRequest extends AbstractModel {
         this.Delimiter = Delimiter;
     }
 
+    /**
+     * Get Cos存储文件ID 
+     * @return FileId Cos存储文件ID
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set Cos存储文件ID
+     * @param FileId Cos存储文件ID
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
     public UploadKnowledgeDocumentSetRequest() {
     }
 
@@ -291,6 +314,9 @@ public class UploadKnowledgeDocumentSetRequest extends AbstractModel {
         if (source.Delimiter != null) {
             this.Delimiter = new String(source.Delimiter);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class UploadKnowledgeDocumentSetRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileMetaData", this.FileMetaData);
         this.setParamSimple(map, prefix + "DocumentSetId", this.DocumentSetId);
         this.setParamSimple(map, prefix + "Delimiter", this.Delimiter);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

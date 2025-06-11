@@ -148,4 +148,15 @@ public class IoaClient extends AbstractClient{
         return this.internalRequest(req, "DescribeSoftCensusListByDevice", DescribeSoftCensusListByDeviceResponse.class);
     }
 
+    /**
+     *查看指定终端的软件详情列表,私有化调用path为：capi/Software/DescribeSoftwareInformation
+     * @param req DescribeSoftwareInformationRequest
+     * @return DescribeSoftwareInformationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSoftwareInformationResponse DescribeSoftwareInformation(DescribeSoftwareInformationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSoftwareInformation", DescribeSoftwareInformationResponse.class);
+    }
+
 }

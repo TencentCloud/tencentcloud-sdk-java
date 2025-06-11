@@ -88,7 +88,7 @@ public class LoadBalancer extends AbstractModel {
     private String Status;
 
     /**
-    * 该负载均衡实例绑的定四层层代理实例的列表。
+    * 该负载均衡实例绑的四层代理实例的列表。
     */
     @SerializedName("L4UsedList")
     @Expose
@@ -262,16 +262,16 @@ public class LoadBalancer extends AbstractModel {
     }
 
     /**
-     * Get 该负载均衡实例绑的定四层层代理实例的列表。 
-     * @return L4UsedList 该负载均衡实例绑的定四层层代理实例的列表。
+     * Get 该负载均衡实例绑的四层代理实例的列表。 
+     * @return L4UsedList 该负载均衡实例绑的四层代理实例的列表。
      */
     public String [] getL4UsedList() {
         return this.L4UsedList;
     }
 
     /**
-     * Set 该负载均衡实例绑的定四层层代理实例的列表。
-     * @param L4UsedList 该负载均衡实例绑的定四层层代理实例的列表。
+     * Set 该负载均衡实例绑的四层代理实例的列表。
+     * @param L4UsedList 该负载均衡实例绑的四层代理实例的列表。
      */
     public void setL4UsedList(String [] L4UsedList) {
         this.L4UsedList = L4UsedList;

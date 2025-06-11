@@ -146,6 +146,13 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
     private Long IdleConnectTimeout;
 
     /**
+    * TCP_SSL和QUIC是否支持PP
+    */
+    @SerializedName("ProxyProtocol")
+    @Expose
+    private Boolean ProxyProtocol;
+
+    /**
     * 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
 不传则表示不修改。
     */
@@ -457,6 +464,22 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
     }
 
     /**
+     * Get TCP_SSL和QUIC是否支持PP 
+     * @return ProxyProtocol TCP_SSL和QUIC是否支持PP
+     */
+    public Boolean getProxyProtocol() {
+        return this.ProxyProtocol;
+    }
+
+    /**
+     * Set TCP_SSL和QUIC是否支持PP
+     * @param ProxyProtocol TCP_SSL和QUIC是否支持PP
+     */
+    public void setProxyProtocol(Boolean ProxyProtocol) {
+        this.ProxyProtocol = ProxyProtocol;
+    }
+
+    /**
      * Get 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
 不传则表示不修改。 
      * @return SnatEnable 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
@@ -548,6 +571,9 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
         if (source.IdleConnectTimeout != null) {
             this.IdleConnectTimeout = new Long(source.IdleConnectTimeout);
         }
+        if (source.ProxyProtocol != null) {
+            this.ProxyProtocol = new Boolean(source.ProxyProtocol);
+        }
         if (source.SnatEnable != null) {
             this.SnatEnable = new Boolean(source.SnatEnable);
         }
@@ -577,6 +603,7 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
         this.setParamSimple(map, prefix + "MaxConn", this.MaxConn);
         this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
         this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
+        this.setParamSimple(map, prefix + "ProxyProtocol", this.ProxyProtocol);
         this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
         this.setParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
 

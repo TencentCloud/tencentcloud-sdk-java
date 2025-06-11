@@ -75,6 +75,13 @@ ENABLED 已启用
     private String Meta;
 
     /**
+    * 知识库容量,单位字节
+    */
+    @SerializedName("TotalSize")
+    @Expose
+    private String TotalSize;
+
+    /**
      * Get 知识库标识 
      * @return Name 知识库标识
      */
@@ -194,6 +201,22 @@ ENABLED 已启用
         this.Meta = Meta;
     }
 
+    /**
+     * Get 知识库容量,单位字节 
+     * @return TotalSize 知识库容量,单位字节
+     */
+    public String getTotalSize() {
+        return this.TotalSize;
+    }
+
+    /**
+     * Set 知识库容量,单位字节
+     * @param TotalSize 知识库容量,单位字节
+     */
+    public void setTotalSize(String TotalSize) {
+        this.TotalSize = TotalSize;
+    }
+
     public KnowledgeSet() {
     }
 
@@ -223,6 +246,9 @@ ENABLED 已启用
         if (source.Meta != null) {
             this.Meta = new String(source.Meta);
         }
+        if (source.TotalSize != null) {
+            this.TotalSize = new String(source.TotalSize);
+        }
     }
 
 
@@ -237,6 +263,7 @@ ENABLED 已启用
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Meta", this.Meta);
+        this.setParamSimple(map, prefix + "TotalSize", this.TotalSize);
 
     }
 }

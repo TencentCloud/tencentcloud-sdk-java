@@ -52,9 +52,18 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
     private String FileMetaData;
 
     /**
+    * Cos存储文件ID
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
      * Get 给文件分配的 ID 信息。 
      * @return DocumentSetId 给文件分配的 ID 信息。
+     * @deprecated
      */
+    @Deprecated
     public String getDocumentSetId() {
         return this.DocumentSetId;
     }
@@ -62,7 +71,9 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
     /**
      * Set 给文件分配的 ID 信息。
      * @param DocumentSetId 给文件分配的 ID 信息。
+     * @deprecated
      */
+    @Deprecated
     public void setDocumentSetId(String DocumentSetId) {
         this.DocumentSetId = DocumentSetId;
     }
@@ -115,6 +126,22 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
         this.FileMetaData = FileMetaData;
     }
 
+    /**
+     * Get Cos存储文件ID 
+     * @return FileId Cos存储文件ID
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set Cos存储文件ID
+     * @param FileId Cos存储文件ID
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
     public UploadKnowledgeDocumentSetRsp() {
     }
 
@@ -135,6 +162,9 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
         if (source.FileMetaData != null) {
             this.FileMetaData = new String(source.FileMetaData);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -146,6 +176,7 @@ public class UploadKnowledgeDocumentSetRsp extends AbstractModel {
         this.setParamSimple(map, prefix + "DocumentSetName", this.DocumentSetName);
         this.setParamSimple(map, prefix + "FileTitle", this.FileTitle);
         this.setParamSimple(map, prefix + "FileMetaData", this.FileMetaData);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

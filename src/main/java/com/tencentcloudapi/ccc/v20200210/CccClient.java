@@ -61,6 +61,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *绑定号码呼入回调接口
+     * @param req BindNumberCallInInterfaceRequest
+     * @return BindNumberCallInInterfaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindNumberCallInInterfaceResponse BindNumberCallInInterface(BindNumberCallInInterfaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindNumberCallInInterface", BindNumberCallInInterfaceResponse.class);
+    }
+
+    /**
      *绑定号码外呼技能组
      * @param req BindNumberCallOutSkillGroupRequest
      * @return BindNumberCallOutSkillGroupResponse

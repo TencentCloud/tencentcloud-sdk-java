@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Client extends AbstractModel {
+public class ClientInfo extends AbstractModel {
 
     /**
     * 登录的端类型，"Web"表示web工作台，"WeChatMiniProgram"表示微信小程序
@@ -69,14 +69,14 @@ public class Client extends AbstractModel {
         this.IsConnected = IsConnected;
     }
 
-    public Client() {
+    public ClientInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Client(Client source) {
+    public ClientInfo(ClientInfo source) {
         if (source.ClientType != null) {
             this.ClientType = new String(source.ClientType);
         }

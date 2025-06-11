@@ -72,7 +72,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *批量绑定子产品
+     *批量绑定子产品。
      * @param req BindProductsRequest
      * @return BindProductsResponse
      * @throws TencentCloudSDKException
@@ -921,7 +921,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *用于获取网关可绑定或解绑的子产品
+     *用于获取网关可绑定或解绑的子产品。
      * @param req DescribeGatewaySubProductsRequest
      * @return DescribeGatewaySubProductsResponse
      * @throws TencentCloudSDKException
@@ -1816,7 +1816,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *批量解绑子产品
+     *批量解绑子产品。
      * @param req UnbindProductsRequest
      * @return UnbindProductsResponse
      * @throws TencentCloudSDKException
