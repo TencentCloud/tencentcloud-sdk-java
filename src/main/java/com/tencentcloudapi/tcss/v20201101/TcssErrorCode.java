@@ -112,7 +112,10 @@ public enum TcssErrorCode {
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
      /* 未知参数错误。 */
-     UNKNOWNPARAMETER("UnknownParameter");
+     UNKNOWNPARAMETER("UnknownParameter"),
+     
+     /* 操作不支持。 */
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private TcssErrorCode (String value){

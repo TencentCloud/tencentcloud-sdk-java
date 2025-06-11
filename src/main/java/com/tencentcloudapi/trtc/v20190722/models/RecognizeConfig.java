@@ -35,6 +35,9 @@ public class RecognizeConfig extends AbstractModel {
 - "zh": 中文（简体）
 - "zh-TW": 中文（繁体）
 - "en": 英语
+- "16k_zh_edu"：中文教育
+- "16k_zh_medical"：中文医疗
+- "16k_zh_court"：中文法庭
 
 **标准版：**
 - "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
@@ -67,7 +70,6 @@ public class RecognizeConfig extends AbstractModel {
 
 **注意：**
 如果缺少满足您需求的语言，请联系我们技术人员。
-
     */
     @SerializedName("Language")
     @Expose
@@ -142,6 +144,9 @@ public class RecognizeConfig extends AbstractModel {
 - "zh": 中文（简体）
 - "zh-TW": 中文（繁体）
 - "en": 英语
+- "16k_zh_edu"：中文教育
+- "16k_zh_medical"：中文医疗
+- "16k_zh_court"：中文法庭
 
 **标准版：**
 - "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
@@ -173,8 +178,7 @@ public class RecognizeConfig extends AbstractModel {
 - "no": 挪威语
 
 **注意：**
-如果缺少满足您需求的语言，请联系我们技术人员。
- 
+如果缺少满足您需求的语言，请联系我们技术人员。 
      * @return Language 
 语音转文字支持识别的语言，默认是"zh" 中文
 
@@ -186,6 +190,9 @@ public class RecognizeConfig extends AbstractModel {
 - "zh": 中文（简体）
 - "zh-TW": 中文（繁体）
 - "en": 英语
+- "16k_zh_edu"：中文教育
+- "16k_zh_medical"：中文医疗
+- "16k_zh_court"：中文法庭
 
 **标准版：**
 - "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
@@ -218,7 +225,6 @@ public class RecognizeConfig extends AbstractModel {
 
 **注意：**
 如果缺少满足您需求的语言，请联系我们技术人员。
-
      */
     public String getLanguage() {
         return this.Language;
@@ -236,6 +242,9 @@ public class RecognizeConfig extends AbstractModel {
 - "zh": 中文（简体）
 - "zh-TW": 中文（繁体）
 - "en": 英语
+- "16k_zh_edu"：中文教育
+- "16k_zh_medical"：中文医疗
+- "16k_zh_court"：中文法庭
 
 **标准版：**
 - "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
@@ -268,7 +277,6 @@ public class RecognizeConfig extends AbstractModel {
 
 **注意：**
 如果缺少满足您需求的语言，请联系我们技术人员。
-
      * @param Language 
 语音转文字支持识别的语言，默认是"zh" 中文
 
@@ -280,6 +288,9 @@ public class RecognizeConfig extends AbstractModel {
 - "zh": 中文（简体）
 - "zh-TW": 中文（繁体）
 - "en": 英语
+- "16k_zh_edu"：中文教育
+- "16k_zh_medical"：中文医疗
+- "16k_zh_court"：中文法庭
 
 **标准版：**
 - "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
@@ -312,7 +323,6 @@ public class RecognizeConfig extends AbstractModel {
 
 **注意：**
 如果缺少满足您需求的语言，请联系我们技术人员。
-
      */
     public void setLanguage(String Language) {
         this.Language = Language;

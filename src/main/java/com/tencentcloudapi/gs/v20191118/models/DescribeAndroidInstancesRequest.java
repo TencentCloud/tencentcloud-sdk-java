@@ -76,6 +76,8 @@ public class DescribeAndroidInstancesRequest extends AbstractModel {
     * 字段过滤器。Filter 的 Name 有以下值：
 Name：实例名称
 UserId：实例用户ID
+HostSerialNumber：宿主机序列号
+HostServerSerialNumber：机箱序列号
     */
     @SerializedName("Filters")
     @Expose
@@ -196,10 +198,14 @@ UserId：实例用户ID
     /**
      * Get 字段过滤器。Filter 的 Name 有以下值：
 Name：实例名称
-UserId：实例用户ID 
+UserId：实例用户ID
+HostSerialNumber：宿主机序列号
+HostServerSerialNumber：机箱序列号 
      * @return Filters 字段过滤器。Filter 的 Name 有以下值：
 Name：实例名称
 UserId：实例用户ID
+HostSerialNumber：宿主机序列号
+HostServerSerialNumber：机箱序列号
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -209,9 +215,13 @@ UserId：实例用户ID
      * Set 字段过滤器。Filter 的 Name 有以下值：
 Name：实例名称
 UserId：实例用户ID
+HostSerialNumber：宿主机序列号
+HostServerSerialNumber：机箱序列号
      * @param Filters 字段过滤器。Filter 的 Name 有以下值：
 Name：实例名称
 UserId：实例用户ID
+HostSerialNumber：宿主机序列号
+HostServerSerialNumber：机箱序列号
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

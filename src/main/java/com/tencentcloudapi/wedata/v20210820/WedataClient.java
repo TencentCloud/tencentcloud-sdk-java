@@ -644,6 +644,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *删除任务连接
+     * @param req DeleteLinkRequest
+     * @return DeleteLinkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLinkResponse DeleteLink(DeleteLinkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLink", DeleteLinkResponse.class);
+    }
+
+    /**
      *删除任务
      * @param req DeleteOfflineTaskRequest
      * @return DeleteOfflineTaskResponse
@@ -677,7 +688,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *资源管理删除资源
+     *资源管理删除资源。本接口已废弃，请使用接口DeleteResourceFile。
      * @param req DeleteResourceRequest
      * @return DeleteResourceResponse
      * @throws TencentCloudSDKException
@@ -1438,6 +1449,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询任务父依赖
+     * @param req DescribeParentTaskRequest
+     * @return DescribeParentTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeParentTaskResponse DescribeParentTask(DescribeParentTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeParentTask", DescribeParentTaskResponse.class);
+    }
+
+    /**
      *获取待提交任务预提交校验信息（注意：工作流编号或者任务编号列表，必须填一项）
      * @param req DescribePendingSubmitTaskListRequest
      * @return DescribePendingSubmitTaskListResponse
@@ -1534,6 +1556,17 @@ public class WedataClient extends AbstractClient{
     public DescribeRealViewSchemaPageResponse DescribeRealViewSchemaPage(DescribeRealViewSchemaPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRealViewSchemaPage", DescribeRealViewSchemaPageResponse.class);
+    }
+
+    /**
+     *根据任务ID分页查询任务绑定监听的事件
+     * @param req DescribeRelatedTasksByTaskIdRequest
+     * @return DescribeRelatedTasksByTaskIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRelatedTasksByTaskIdResponse DescribeRelatedTasksByTaskId(DescribeRelatedTasksByTaskIdRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRelatedTasksByTaskId", DescribeRelatedTasksByTaskIdResponse.class);
     }
 
     /**
@@ -2006,6 +2039,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *查询任务具体详情【新】
+     * @param req DescribeTaskDetailDsRequest
+     * @return DescribeTaskDetailDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskDetailDsResponse DescribeTaskDetailDs(DescribeTaskDetailDsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskDetailDs", DescribeTaskDetailDsResponse.class);
+    }
+
+    /**
      *通过任务查询表的血缘关系
      * @param req DescribeTaskLineageRequest
      * @return DescribeTaskLineageResponse
@@ -2135,6 +2179,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public DescribeTrendStatResponse DescribeTrendStat(DescribeTrendStatRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTrendStat", DescribeTrendStatResponse.class);
+    }
+
+    /**
+     *根据文件夹查询工作流
+     * @param req DescribeWorkflowByFordIdsRequest
+     * @return DescribeWorkflowByFordIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkflowByFordIdsResponse DescribeWorkflowByFordIds(DescribeWorkflowByFordIdsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkflowByFordIds", DescribeWorkflowByFordIdsResponse.class);
     }
 
     /**
@@ -2568,7 +2623,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
 
     /**
      *<p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-更新任务
+更新任务。本接口已废弃，请使用接口ModifyTaskInfoDs。
      * @param req ModifyTaskInfoRequest
      * @return ModifyTaskInfoResponse
      * @throws TencentCloudSDKException
@@ -2669,6 +2724,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *注册事件监听者
+     * @param req RegisterDsEventListenerRequest
+     * @return RegisterDsEventListenerResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterDsEventListenerResponse RegisterDsEventListener(RegisterDsEventListenerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RegisterDsEventListener", RegisterDsEventListenerResponse.class);
+    }
+
+    /**
      *<p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 注册事件。本接口已废弃，请使用接口RegisterDsEvent。
      * @param req RegisterEventRequest
@@ -2682,7 +2748,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
 
     /**
      *<p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-注册事件监听器
+注册事件监听器。本接口已废弃，请使用接口RegisterDsEventListener。
      * @param req RegisterEventListenerRequest
      * @return RegisterEventListenerResponse
      * @throws TencentCloudSDKException

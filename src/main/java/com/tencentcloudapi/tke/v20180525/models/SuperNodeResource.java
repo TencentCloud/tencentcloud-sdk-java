@@ -59,6 +59,34 @@ public class SuperNodeResource extends AbstractModel {
     private Float Gpu;
 
     /**
+    * 节点资源的配额类型，exact表示精确配额，fuzzy 表示模糊配额。
+    */
+    @SerializedName("QuotaType")
+    @Expose
+    private String QuotaType;
+
+    /**
+    * 配额的计费类型，PREPAID表示包月，POSTPAID_BY_HOUR表示按量。
+    */
+    @SerializedName("ChargeType")
+    @Expose
+    private String ChargeType;
+
+    /**
+    * QuotaType为 exact 时，此字段有效，表示精确配额的资源类型。
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+    * 置放群组 ID
+    */
+    @SerializedName("DisasterRecoverGroupId")
+    @Expose
+    private String DisasterRecoverGroupId;
+
+    /**
      * Get 节点名称 
      * @return NodeName 节点名称
      */
@@ -138,6 +166,70 @@ public class SuperNodeResource extends AbstractModel {
         this.Gpu = Gpu;
     }
 
+    /**
+     * Get 节点资源的配额类型，exact表示精确配额，fuzzy 表示模糊配额。 
+     * @return QuotaType 节点资源的配额类型，exact表示精确配额，fuzzy 表示模糊配额。
+     */
+    public String getQuotaType() {
+        return this.QuotaType;
+    }
+
+    /**
+     * Set 节点资源的配额类型，exact表示精确配额，fuzzy 表示模糊配额。
+     * @param QuotaType 节点资源的配额类型，exact表示精确配额，fuzzy 表示模糊配额。
+     */
+    public void setQuotaType(String QuotaType) {
+        this.QuotaType = QuotaType;
+    }
+
+    /**
+     * Get 配额的计费类型，PREPAID表示包月，POSTPAID_BY_HOUR表示按量。 
+     * @return ChargeType 配额的计费类型，PREPAID表示包月，POSTPAID_BY_HOUR表示按量。
+     */
+    public String getChargeType() {
+        return this.ChargeType;
+    }
+
+    /**
+     * Set 配额的计费类型，PREPAID表示包月，POSTPAID_BY_HOUR表示按量。
+     * @param ChargeType 配额的计费类型，PREPAID表示包月，POSTPAID_BY_HOUR表示按量。
+     */
+    public void setChargeType(String ChargeType) {
+        this.ChargeType = ChargeType;
+    }
+
+    /**
+     * Get QuotaType为 exact 时，此字段有效，表示精确配额的资源类型。 
+     * @return ResourceType QuotaType为 exact 时，此字段有效，表示精确配额的资源类型。
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set QuotaType为 exact 时，此字段有效，表示精确配额的资源类型。
+     * @param ResourceType QuotaType为 exact 时，此字段有效，表示精确配额的资源类型。
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get 置放群组 ID 
+     * @return DisasterRecoverGroupId 置放群组 ID
+     */
+    public String getDisasterRecoverGroupId() {
+        return this.DisasterRecoverGroupId;
+    }
+
+    /**
+     * Set 置放群组 ID
+     * @param DisasterRecoverGroupId 置放群组 ID
+     */
+    public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
+        this.DisasterRecoverGroupId = DisasterRecoverGroupId;
+    }
+
     public SuperNodeResource() {
     }
 
@@ -161,6 +253,18 @@ public class SuperNodeResource extends AbstractModel {
         if (source.Gpu != null) {
             this.Gpu = new Float(source.Gpu);
         }
+        if (source.QuotaType != null) {
+            this.QuotaType = new String(source.QuotaType);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.DisasterRecoverGroupId != null) {
+            this.DisasterRecoverGroupId = new String(source.DisasterRecoverGroupId);
+        }
     }
 
 
@@ -173,6 +277,10 @@ public class SuperNodeResource extends AbstractModel {
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Gpu", this.Gpu);
+        this.setParamSimple(map, prefix + "QuotaType", this.QuotaType);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
 
     }
 }

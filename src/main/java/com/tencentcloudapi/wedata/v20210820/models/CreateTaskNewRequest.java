@@ -94,14 +94,14 @@ public class CreateTaskNewRequest extends AbstractModel {
     private String TaskFolderId;
 
     /**
-    * 指定脚本内容，base64编码
+    * （必填参数）指定脚本内容，base64编码
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 代码模版ID
+    * 代码模板ID
     */
     @SerializedName("CodeTemplateId")
     @Expose
@@ -268,32 +268,32 @@ public class CreateTaskNewRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定脚本内容，base64编码 
-     * @return Content 指定脚本内容，base64编码
+     * Get （必填参数）指定脚本内容，base64编码 
+     * @return Content （必填参数）指定脚本内容，base64编码
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 指定脚本内容，base64编码
-     * @param Content 指定脚本内容，base64编码
+     * Set （必填参数）指定脚本内容，base64编码
+     * @param Content （必填参数）指定脚本内容，base64编码
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 代码模版ID 
-     * @return CodeTemplateId 代码模版ID
+     * Get 代码模板ID 
+     * @return CodeTemplateId 代码模板ID
      */
     public String getCodeTemplateId() {
         return this.CodeTemplateId;
     }
 
     /**
-     * Set 代码模版ID
-     * @param CodeTemplateId 代码模版ID
+     * Set 代码模板ID
+     * @param CodeTemplateId 代码模板ID
      */
     public void setCodeTemplateId(String CodeTemplateId) {
         this.CodeTemplateId = CodeTemplateId;

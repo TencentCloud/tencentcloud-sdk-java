@@ -74,7 +74,7 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     private CreateFlowOption FlowOption;
 
     /**
-    * 合同签署人信息
+    * 已废弃，请用FlowInfo.Approvers
     */
     @SerializedName("FlowApproverList")
     @Expose
@@ -260,17 +260,21 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 合同签署人信息 
-     * @return FlowApproverList 合同签署人信息
+     * Get 已废弃，请用FlowInfo.Approvers 
+     * @return FlowApproverList 已废弃，请用FlowInfo.Approvers
+     * @deprecated
      */
+    @Deprecated
     public CommonFlowApprover [] getFlowApproverList() {
         return this.FlowApproverList;
     }
 
     /**
-     * Set 合同签署人信息
-     * @param FlowApproverList 合同签署人信息
+     * Set 已废弃，请用FlowInfo.Approvers
+     * @param FlowApproverList 已废弃，请用FlowInfo.Approvers
+     * @deprecated
      */
+    @Deprecated
     public void setFlowApproverList(CommonFlowApprover [] FlowApproverList) {
         this.FlowApproverList = FlowApproverList;
     }

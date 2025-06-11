@@ -44,6 +44,16 @@ public class ImageEraseLogoConfig extends AbstractModel {
     private ImageAreaBoxInfo [] ImageAreaBoxes;
 
     /**
+    * 图片框选区域类型，可选值：
+<li>logo：图标；</li>
+<li>text：文字；</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DetectTypes")
+    @Expose
+    private String [] DetectTypes;
+
+    /**
      * Get 能力配置开关，可选值：
 <li>ON：开启；</li>
 <li>OFF：关闭。</li>
@@ -99,6 +109,34 @@ public class ImageEraseLogoConfig extends AbstractModel {
         this.ImageAreaBoxes = ImageAreaBoxes;
     }
 
+    /**
+     * Get 图片框选区域类型，可选值：
+<li>logo：图标；</li>
+<li>text：文字；</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DetectTypes 图片框选区域类型，可选值：
+<li>logo：图标；</li>
+<li>text：文字；</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDetectTypes() {
+        return this.DetectTypes;
+    }
+
+    /**
+     * Set 图片框选区域类型，可选值：
+<li>logo：图标；</li>
+<li>text：文字；</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetectTypes 图片框选区域类型，可选值：
+<li>logo：图标；</li>
+<li>text：文字；</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDetectTypes(String [] DetectTypes) {
+        this.DetectTypes = DetectTypes;
+    }
+
     public ImageEraseLogoConfig() {
     }
 
@@ -116,6 +154,12 @@ public class ImageEraseLogoConfig extends AbstractModel {
                 this.ImageAreaBoxes[i] = new ImageAreaBoxInfo(source.ImageAreaBoxes[i]);
             }
         }
+        if (source.DetectTypes != null) {
+            this.DetectTypes = new String[source.DetectTypes.length];
+            for (int i = 0; i < source.DetectTypes.length; i++) {
+                this.DetectTypes[i] = new String(source.DetectTypes[i]);
+            }
+        }
     }
 
 
@@ -125,6 +169,7 @@ public class ImageEraseLogoConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "ImageAreaBoxes.", this.ImageAreaBoxes);
+        this.setParamArraySimple(map, prefix + "DetectTypes.", this.DetectTypes);
 
     }
 }

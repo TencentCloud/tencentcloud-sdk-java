@@ -47,7 +47,7 @@ public class VideoTemplateInfo extends AbstractModel {
 
     /**
     * 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
+当取值为 0，表示由云点播自动设置码率。
     */
     @SerializedName("Bitrate")
     @Expose
@@ -205,9 +205,9 @@ public class VideoTemplateInfo extends AbstractModel {
 
     /**
      * Get 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。 
+当取值为 0，表示由云点播自动设置码率。 
      * @return Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
+当取值为 0，表示由云点播自动设置码率。
      */
     public Long getBitrate() {
         return this.Bitrate;
@@ -215,9 +215,9 @@ public class VideoTemplateInfo extends AbstractModel {
 
     /**
      * Set 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
+当取值为 0，表示由云点播自动设置码率。
      * @param Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
+当取值为 0，表示由云点播自动设置码率。
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;

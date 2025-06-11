@@ -83,6 +83,34 @@ MainlandPermit：港澳台来往内地通行证
     private GeneralCardWarnInfo Reprint;
 
     /**
+    * 是否截图
+    */
+    @SerializedName("Screenshot")
+    @Expose
+    private GeneralCardWarnInfo Screenshot;
+
+    /**
+    * 是否遮挡
+    */
+    @SerializedName("Cover")
+    @Expose
+    private GeneralCardWarnInfo Cover;
+
+    /**
+    * 是否重叠
+    */
+    @SerializedName("Overlap")
+    @Expose
+    private GeneralCardWarnInfo Overlap;
+
+    /**
+    * 是否水印
+    */
+    @SerializedName("Watermark")
+    @Expose
+    private GeneralCardWarnInfo Watermark;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -242,6 +270,70 @@ MainlandPermit：港澳台来往内地通行证
     }
 
     /**
+     * Get 是否截图 
+     * @return Screenshot 是否截图
+     */
+    public GeneralCardWarnInfo getScreenshot() {
+        return this.Screenshot;
+    }
+
+    /**
+     * Set 是否截图
+     * @param Screenshot 是否截图
+     */
+    public void setScreenshot(GeneralCardWarnInfo Screenshot) {
+        this.Screenshot = Screenshot;
+    }
+
+    /**
+     * Get 是否遮挡 
+     * @return Cover 是否遮挡
+     */
+    public GeneralCardWarnInfo getCover() {
+        return this.Cover;
+    }
+
+    /**
+     * Set 是否遮挡
+     * @param Cover 是否遮挡
+     */
+    public void setCover(GeneralCardWarnInfo Cover) {
+        this.Cover = Cover;
+    }
+
+    /**
+     * Get 是否重叠 
+     * @return Overlap 是否重叠
+     */
+    public GeneralCardWarnInfo getOverlap() {
+        return this.Overlap;
+    }
+
+    /**
+     * Set 是否重叠
+     * @param Overlap 是否重叠
+     */
+    public void setOverlap(GeneralCardWarnInfo Overlap) {
+        this.Overlap = Overlap;
+    }
+
+    /**
+     * Get 是否水印 
+     * @return Watermark 是否水印
+     */
+    public GeneralCardWarnInfo getWatermark() {
+        return this.Watermark;
+    }
+
+    /**
+     * Set 是否水印
+     * @param Watermark 是否水印
+     */
+    public void setWatermark(GeneralCardWarnInfo Watermark) {
+        this.Watermark = Watermark;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -286,6 +378,18 @@ MainlandPermit：港澳台来往内地通行证
         if (source.Reprint != null) {
             this.Reprint = new GeneralCardWarnInfo(source.Reprint);
         }
+        if (source.Screenshot != null) {
+            this.Screenshot = new GeneralCardWarnInfo(source.Screenshot);
+        }
+        if (source.Cover != null) {
+            this.Cover = new GeneralCardWarnInfo(source.Cover);
+        }
+        if (source.Overlap != null) {
+            this.Overlap = new GeneralCardWarnInfo(source.Overlap);
+        }
+        if (source.Watermark != null) {
+            this.Watermark = new GeneralCardWarnInfo(source.Watermark);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -303,6 +407,10 @@ MainlandPermit：港澳台来往内地通行证
         this.setParamObj(map, prefix + "Ps.", this.Ps);
         this.setParamObj(map, prefix + "Reflection.", this.Reflection);
         this.setParamObj(map, prefix + "Reprint.", this.Reprint);
+        this.setParamObj(map, prefix + "Screenshot.", this.Screenshot);
+        this.setParamObj(map, prefix + "Cover.", this.Cover);
+        this.setParamObj(map, prefix + "Overlap.", this.Overlap);
+        this.setParamObj(map, prefix + "Watermark.", this.Watermark);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

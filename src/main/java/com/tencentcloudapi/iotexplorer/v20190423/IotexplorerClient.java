@@ -479,7 +479,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *删除规则
+     *删除规则。
      * @param req DeleteTopicRuleRequest
      * @return DeleteTopicRuleResponse
      * @throws TencentCloudSDKException

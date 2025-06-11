@@ -206,7 +206,9 @@ public class ProcedureTask extends AbstractModel {
     /**
      * Get 已弃用，请使用各个具体任务的 ErrCode。 
      * @return ErrCode 已弃用，请使用各个具体任务的 ErrCode。
+     * @deprecated
      */
+    @Deprecated
     public Long getErrCode() {
         return this.ErrCode;
     }
@@ -214,7 +216,9 @@ public class ProcedureTask extends AbstractModel {
     /**
      * Set 已弃用，请使用各个具体任务的 ErrCode。
      * @param ErrCode 已弃用，请使用各个具体任务的 ErrCode。
+     * @deprecated
      */
+    @Deprecated
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
@@ -222,7 +226,9 @@ public class ProcedureTask extends AbstractModel {
     /**
      * Get 已弃用，请使用各个具体任务的 Message。 
      * @return Message 已弃用，请使用各个具体任务的 Message。
+     * @deprecated
      */
+    @Deprecated
     public String getMessage() {
         return this.Message;
     }
@@ -230,7 +236,9 @@ public class ProcedureTask extends AbstractModel {
     /**
      * Set 已弃用，请使用各个具体任务的 Message。
      * @param Message 已弃用，请使用各个具体任务的 Message。
+     * @deprecated
      */
+    @Deprecated
     public void setMessage(String Message) {
         this.Message = Message;
     }

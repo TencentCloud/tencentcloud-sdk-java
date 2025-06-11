@@ -36,7 +36,7 @@ public class EditMediaVideoStream extends AbstractModel {
 
     /**
     * 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0 或不填时，表示自动选择最佳视频码率。
+当取值为 0 或不填时，表示由云点播自动设置码率。
     */
     @SerializedName("Bitrate")
     @Expose
@@ -119,9 +119,9 @@ public class EditMediaVideoStream extends AbstractModel {
 
     /**
      * Get 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0 或不填时，表示自动选择最佳视频码率。 
+当取值为 0 或不填时，表示由云点播自动设置码率。 
      * @return Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0 或不填时，表示自动选择最佳视频码率。
+当取值为 0 或不填时，表示由云点播自动设置码率。
      */
     public Long getBitrate() {
         return this.Bitrate;
@@ -129,9 +129,9 @@ public class EditMediaVideoStream extends AbstractModel {
 
     /**
      * Set 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0 或不填时，表示自动选择最佳视频码率。
+当取值为 0 或不填时，表示由云点播自动设置码率。
      * @param Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0 或不填时，表示自动选择最佳视频码率。
+当取值为 0 或不填时，表示由云点播自动设置码率。
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;

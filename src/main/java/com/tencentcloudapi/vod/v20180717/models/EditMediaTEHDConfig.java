@@ -32,7 +32,7 @@ public class EditMediaTEHDConfig extends AbstractModel {
 
     /**
     * 视频码率上限，当 Type 指定了极速高清类型时有效。
-不填或填0表示不设视频码率上限。
+不填或填0表示由云点播自动设置码率上限。
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
@@ -56,9 +56,9 @@ public class EditMediaTEHDConfig extends AbstractModel {
 
     /**
      * Get 视频码率上限，当 Type 指定了极速高清类型时有效。
-不填或填0表示不设视频码率上限。 
+不填或填0表示由云点播自动设置码率上限。 
      * @return MaxVideoBitrate 视频码率上限，当 Type 指定了极速高清类型时有效。
-不填或填0表示不设视频码率上限。
+不填或填0表示由云点播自动设置码率上限。
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
@@ -66,9 +66,9 @@ public class EditMediaTEHDConfig extends AbstractModel {
 
     /**
      * Set 视频码率上限，当 Type 指定了极速高清类型时有效。
-不填或填0表示不设视频码率上限。
+不填或填0表示由云点播自动设置码率上限。
      * @param MaxVideoBitrate 视频码率上限，当 Type 指定了极速高清类型时有效。
-不填或填0表示不设视频码率上限。
+不填或填0表示由云点播自动设置码率上限。
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

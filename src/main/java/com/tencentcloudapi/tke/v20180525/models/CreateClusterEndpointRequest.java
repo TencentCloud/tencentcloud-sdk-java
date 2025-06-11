@@ -71,6 +71,13 @@ BandwidthPackageId含义：带宽包ID，指定此参数时，网络计费方式
     private String ExtensiveParameters;
 
     /**
+    * 使用已有clb开启内网或外网访问
+    */
+    @SerializedName("ExistedLoadBalancerId")
+    @Expose
+    private String ExistedLoadBalancerId;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -186,6 +193,22 @@ BandwidthPackageId含义：带宽包ID，指定此参数时，网络计费方式
         this.ExtensiveParameters = ExtensiveParameters;
     }
 
+    /**
+     * Get 使用已有clb开启内网或外网访问 
+     * @return ExistedLoadBalancerId 使用已有clb开启内网或外网访问
+     */
+    public String getExistedLoadBalancerId() {
+        return this.ExistedLoadBalancerId;
+    }
+
+    /**
+     * Set 使用已有clb开启内网或外网访问
+     * @param ExistedLoadBalancerId 使用已有clb开启内网或外网访问
+     */
+    public void setExistedLoadBalancerId(String ExistedLoadBalancerId) {
+        this.ExistedLoadBalancerId = ExistedLoadBalancerId;
+    }
+
     public CreateClusterEndpointRequest() {
     }
 
@@ -212,6 +235,9 @@ BandwidthPackageId含义：带宽包ID，指定此参数时，网络计费方式
         if (source.ExtensiveParameters != null) {
             this.ExtensiveParameters = new String(source.ExtensiveParameters);
         }
+        if (source.ExistedLoadBalancerId != null) {
+            this.ExistedLoadBalancerId = new String(source.ExistedLoadBalancerId);
+        }
     }
 
 
@@ -225,6 +251,7 @@ BandwidthPackageId含义：带宽包ID，指定此参数时，网络计费方式
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
         this.setParamSimple(map, prefix + "ExtensiveParameters", this.ExtensiveParameters);
+        this.setParamSimple(map, prefix + "ExistedLoadBalancerId", this.ExistedLoadBalancerId);
 
     }
 }

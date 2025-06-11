@@ -49,7 +49,7 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
     private String Codec;
 
     /**
-    * 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示音频码率和原始音频保持一致。
+    * 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。
     */
     @SerializedName("Bitrate")
     @Expose
@@ -168,16 +168,16 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示音频码率和原始音频保持一致。 
-     * @return Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示音频码率和原始音频保持一致。
+     * Get 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。 
+     * @return Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示音频码率和原始音频保持一致。
-     * @param Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示音频码率和原始音频保持一致。
+     * Set 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。
+     * @param Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示由云点播自动设置码率。
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;

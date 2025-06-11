@@ -38,6 +38,13 @@ public class ModifyDatahubTaskRequest extends AbstractModel {
     private String TaskName;
 
     /**
+    * 任务描述信息
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 任务id 
      * @return TaskId 任务id
      */
@@ -69,6 +76,22 @@ public class ModifyDatahubTaskRequest extends AbstractModel {
         this.TaskName = TaskName;
     }
 
+    /**
+     * Get 任务描述信息 
+     * @return Description 任务描述信息
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 任务描述信息
+     * @param Description 任务描述信息
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public ModifyDatahubTaskRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ModifyDatahubTaskRequest extends AbstractModel {
         if (source.TaskName != null) {
             this.TaskName = new String(source.TaskName);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyDatahubTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

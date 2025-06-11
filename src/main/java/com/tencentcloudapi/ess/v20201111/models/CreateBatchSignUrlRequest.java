@@ -183,6 +183,13 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
     private Boolean CanBatchReject;
 
     /**
+    * 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。`
+    */
+    @SerializedName("CanSkipReadFlow")
+    @Expose
+    private Boolean CanSkipReadFlow;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -638,6 +645,22 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         this.CanBatchReject = CanBatchReject;
     }
 
+    /**
+     * Get 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。` 
+     * @return CanSkipReadFlow 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。`
+     */
+    public Boolean getCanSkipReadFlow() {
+        return this.CanSkipReadFlow;
+    }
+
+    /**
+     * Set 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。`
+     * @param CanSkipReadFlow 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。`
+     */
+    public void setCanSkipReadFlow(Boolean CanSkipReadFlow) {
+        this.CanSkipReadFlow = CanSkipReadFlow;
+    }
+
     public CreateBatchSignUrlRequest() {
     }
 
@@ -697,6 +720,9 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         if (source.CanBatchReject != null) {
             this.CanBatchReject = new Boolean(source.CanBatchReject);
         }
+        if (source.CanSkipReadFlow != null) {
+            this.CanSkipReadFlow = new Boolean(source.CanSkipReadFlow);
+        }
     }
 
 
@@ -719,6 +745,7 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         this.setParamSimple(map, prefix + "UrlUseEnv", this.UrlUseEnv);
         this.setParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
+        this.setParamSimple(map, prefix + "CanSkipReadFlow", this.CanSkipReadFlow);
 
     }
 }

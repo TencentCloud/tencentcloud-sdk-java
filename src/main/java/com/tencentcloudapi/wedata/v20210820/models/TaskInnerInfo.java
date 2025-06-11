@@ -76,6 +76,38 @@ public class TaskInnerInfo extends AbstractModel {
     private String RealWorkflowId;
 
     /**
+    * 步长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CycleStep")
+    @Expose
+    private Long CycleStep;
+
+    /**
+    * 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskAction")
+    @Expose
+    private String TaskAction;
+
+    /**
+    * 分支，依赖关系，and/or, 默认and
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DependencyRel")
+    @Expose
+    private String DependencyRel;
+
+    /**
+    * 是否支持工作流依赖 yes / no 默认 no
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DependencyWorkflow")
+    @Expose
+    private String DependencyWorkflow;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -199,6 +231,86 @@ public class TaskInnerInfo extends AbstractModel {
         this.RealWorkflowId = RealWorkflowId;
     }
 
+    /**
+     * Get 步长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CycleStep 步长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCycleStep() {
+        return this.CycleStep;
+    }
+
+    /**
+     * Set 步长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CycleStep 步长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCycleStep(Long CycleStep) {
+        this.CycleStep = CycleStep;
+    }
+
+    /**
+     * Get 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskAction 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskAction() {
+        return this.TaskAction;
+    }
+
+    /**
+     * Set 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskAction 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskAction(String TaskAction) {
+        this.TaskAction = TaskAction;
+    }
+
+    /**
+     * Get 分支，依赖关系，and/or, 默认and
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DependencyRel 分支，依赖关系，and/or, 默认and
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDependencyRel() {
+        return this.DependencyRel;
+    }
+
+    /**
+     * Set 分支，依赖关系，and/or, 默认and
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DependencyRel 分支，依赖关系，and/or, 默认and
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDependencyRel(String DependencyRel) {
+        this.DependencyRel = DependencyRel;
+    }
+
+    /**
+     * Get 是否支持工作流依赖 yes / no 默认 no
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DependencyWorkflow 是否支持工作流依赖 yes / no 默认 no
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDependencyWorkflow() {
+        return this.DependencyWorkflow;
+    }
+
+    /**
+     * Set 是否支持工作流依赖 yes / no 默认 no
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DependencyWorkflow 是否支持工作流依赖 yes / no 默认 no
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDependencyWorkflow(String DependencyWorkflow) {
+        this.DependencyWorkflow = DependencyWorkflow;
+    }
+
     public TaskInnerInfo() {
     }
 
@@ -228,6 +340,18 @@ public class TaskInnerInfo extends AbstractModel {
         if (source.RealWorkflowId != null) {
             this.RealWorkflowId = new String(source.RealWorkflowId);
         }
+        if (source.CycleStep != null) {
+            this.CycleStep = new Long(source.CycleStep);
+        }
+        if (source.TaskAction != null) {
+            this.TaskAction = new String(source.TaskAction);
+        }
+        if (source.DependencyRel != null) {
+            this.DependencyRel = new String(source.DependencyRel);
+        }
+        if (source.DependencyWorkflow != null) {
+            this.DependencyWorkflow = new String(source.DependencyWorkflow);
+        }
     }
 
 
@@ -242,6 +366,10 @@ public class TaskInnerInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VirtualTaskId", this.VirtualTaskId);
         this.setParamSimple(map, prefix + "VirtualFlag", this.VirtualFlag);
         this.setParamSimple(map, prefix + "RealWorkflowId", this.RealWorkflowId);
+        this.setParamSimple(map, prefix + "CycleStep", this.CycleStep);
+        this.setParamSimple(map, prefix + "TaskAction", this.TaskAction);
+        this.setParamSimple(map, prefix + "DependencyRel", this.DependencyRel);
+        this.setParamSimple(map, prefix + "DependencyWorkflow", this.DependencyWorkflow);
 
     }
 }

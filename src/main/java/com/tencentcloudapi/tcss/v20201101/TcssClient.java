@@ -3377,6 +3377,17 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *编辑恶意请求事件状态
+     * @param req ModifyRiskDnsEventStatusRequest
+     * @return ModifyRiskDnsEventStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRiskDnsEventStatusResponse ModifyRiskDnsEventStatus(ModifyRiskDnsEventStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRiskDnsEventStatus", ModifyRiskDnsEventStatusResponse.class);
+    }
+
+    /**
      *修改高危系统调用事件的状态信息
      * @param req ModifyRiskSyscallStatusRequest
      * @return ModifyRiskSyscallStatusResponse

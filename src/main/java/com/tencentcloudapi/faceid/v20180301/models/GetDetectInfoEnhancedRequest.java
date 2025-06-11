@@ -99,6 +99,13 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
     private Boolean IsEncryptResponse;
 
     /**
+    * 是否需要返回认证中间过程的刷脸重试视频，默认不开启，多段视频需要存储到COS空间中，因此开启后还需要额外开启数据存储服务才可生效。详见[数据存储指引](https://cloud.tencent.com/document/product/1007/104229)。
+    */
+    @SerializedName("IsReturnAllVideo")
+    @Expose
+    private Boolean IsReturnAllVideo;
+
+    /**
      * Get 人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。 
      * @return BizToken 人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。
      */
@@ -290,6 +297,22 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
         this.IsEncryptResponse = IsEncryptResponse;
     }
 
+    /**
+     * Get 是否需要返回认证中间过程的刷脸重试视频，默认不开启，多段视频需要存储到COS空间中，因此开启后还需要额外开启数据存储服务才可生效。详见[数据存储指引](https://cloud.tencent.com/document/product/1007/104229)。 
+     * @return IsReturnAllVideo 是否需要返回认证中间过程的刷脸重试视频，默认不开启，多段视频需要存储到COS空间中，因此开启后还需要额外开启数据存储服务才可生效。详见[数据存储指引](https://cloud.tencent.com/document/product/1007/104229)。
+     */
+    public Boolean getIsReturnAllVideo() {
+        return this.IsReturnAllVideo;
+    }
+
+    /**
+     * Set 是否需要返回认证中间过程的刷脸重试视频，默认不开启，多段视频需要存储到COS空间中，因此开启后还需要额外开启数据存储服务才可生效。详见[数据存储指引](https://cloud.tencent.com/document/product/1007/104229)。
+     * @param IsReturnAllVideo 是否需要返回认证中间过程的刷脸重试视频，默认不开启，多段视频需要存储到COS空间中，因此开启后还需要额外开启数据存储服务才可生效。详见[数据存储指引](https://cloud.tencent.com/document/product/1007/104229)。
+     */
+    public void setIsReturnAllVideo(Boolean IsReturnAllVideo) {
+        this.IsReturnAllVideo = IsReturnAllVideo;
+    }
+
     public GetDetectInfoEnhancedRequest() {
     }
 
@@ -325,6 +348,9 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
         if (source.IsEncryptResponse != null) {
             this.IsEncryptResponse = new Boolean(source.IsEncryptResponse);
         }
+        if (source.IsReturnAllVideo != null) {
+            this.IsReturnAllVideo = new Boolean(source.IsReturnAllVideo);
+        }
     }
 
 
@@ -341,6 +367,7 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsEncrypt", this.IsEncrypt);
         this.setParamObj(map, prefix + "Encryption.", this.Encryption);
         this.setParamSimple(map, prefix + "IsEncryptResponse", this.IsEncryptResponse);
+        this.setParamSimple(map, prefix + "IsReturnAllVideo", this.IsReturnAllVideo);
 
     }
 }

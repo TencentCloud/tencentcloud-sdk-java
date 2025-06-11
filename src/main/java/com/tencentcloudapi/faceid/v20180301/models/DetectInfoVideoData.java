@@ -32,6 +32,14 @@ public class DetectInfoVideoData extends AbstractModel {
     private String LivenessVideo;
 
     /**
+    * 当次token中所有用户活体视频的COS存储路径，仅当您开启数据存储服务且“IsReturnAllVideo”入参取值为true 时返回。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LivenessVideos")
+    @Expose
+    private VideoDetailData [] LivenessVideos;
+
+    /**
      * Get 活体视频的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LivenessVideo 活体视频的base64编码。
@@ -51,6 +59,26 @@ public class DetectInfoVideoData extends AbstractModel {
         this.LivenessVideo = LivenessVideo;
     }
 
+    /**
+     * Get 当次token中所有用户活体视频的COS存储路径，仅当您开启数据存储服务且“IsReturnAllVideo”入参取值为true 时返回。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LivenessVideos 当次token中所有用户活体视频的COS存储路径，仅当您开启数据存储服务且“IsReturnAllVideo”入参取值为true 时返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VideoDetailData [] getLivenessVideos() {
+        return this.LivenessVideos;
+    }
+
+    /**
+     * Set 当次token中所有用户活体视频的COS存储路径，仅当您开启数据存储服务且“IsReturnAllVideo”入参取值为true 时返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LivenessVideos 当次token中所有用户活体视频的COS存储路径，仅当您开启数据存储服务且“IsReturnAllVideo”入参取值为true 时返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLivenessVideos(VideoDetailData [] LivenessVideos) {
+        this.LivenessVideos = LivenessVideos;
+    }
+
     public DetectInfoVideoData() {
     }
 
@@ -62,6 +90,12 @@ public class DetectInfoVideoData extends AbstractModel {
         if (source.LivenessVideo != null) {
             this.LivenessVideo = new String(source.LivenessVideo);
         }
+        if (source.LivenessVideos != null) {
+            this.LivenessVideos = new VideoDetailData[source.LivenessVideos.length];
+            for (int i = 0; i < source.LivenessVideos.length; i++) {
+                this.LivenessVideos[i] = new VideoDetailData(source.LivenessVideos[i]);
+            }
+        }
     }
 
 
@@ -70,6 +104,7 @@ public class DetectInfoVideoData extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LivenessVideo", this.LivenessVideo);
+        this.setParamArrayObj(map, prefix + "LivenessVideos.", this.LivenessVideos);
 
     }
 }

@@ -160,6 +160,17 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *本接口（ResizeInstanceDisk）用于对指定HAI实例进行扩容云硬盘操作。
+     * @param req ResizeInstanceDiskRequest
+     * @return ResizeInstanceDiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResizeInstanceDiskResponse ResizeInstanceDisk(ResizeInstanceDiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResizeInstanceDisk", ResizeInstanceDiskResponse.class);
+    }
+
+    /**
      *本接口 (RunInstances) 用于创建一个或多个指定配置的实例。
      * @param req RunInstancesRequest
      * @return RunInstancesResponse
