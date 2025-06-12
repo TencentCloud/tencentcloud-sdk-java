@@ -271,16 +271,15 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
     private Long AutoRenewFlag;
 
     /**
-    * 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
-国密证书类型本字段不用传
+    * 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。当 CSR 生成方式为online的时候，此参数必填。
+
     */
     @SerializedName("CsrKeyParameter")
     @Expose
     private String CsrKeyParameter;
 
     /**
-    * 加密算法，取值为ECC、RSA， 默认为RSA
-国密证书类型本字段不用传
+    * 加密算法，取值为ECC、RSA， 默认为RSA。当 CSR 生成方式为online的时候，此参数必填。
     */
     @SerializedName("CsrEncryptAlgo")
     @Expose
@@ -934,40 +933,36 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
     }
 
     /**
-     * Get 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
-国密证书类型本字段不用传 
-     * @return CsrKeyParameter 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
-国密证书类型本字段不用传
+     * Get 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。当 CSR 生成方式为online的时候，此参数必填。
+ 
+     * @return CsrKeyParameter 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。当 CSR 生成方式为online的时候，此参数必填。
+
      */
     public String getCsrKeyParameter() {
         return this.CsrKeyParameter;
     }
 
     /**
-     * Set 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
-国密证书类型本字段不用传
-     * @param CsrKeyParameter 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
-国密证书类型本字段不用传
+     * Set 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。当 CSR 生成方式为online的时候，此参数必填。
+
+     * @param CsrKeyParameter 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。当 CSR 生成方式为online的时候，此参数必填。
+
      */
     public void setCsrKeyParameter(String CsrKeyParameter) {
         this.CsrKeyParameter = CsrKeyParameter;
     }
 
     /**
-     * Get 加密算法，取值为ECC、RSA， 默认为RSA
-国密证书类型本字段不用传 
-     * @return CsrEncryptAlgo 加密算法，取值为ECC、RSA， 默认为RSA
-国密证书类型本字段不用传
+     * Get 加密算法，取值为ECC、RSA， 默认为RSA。当 CSR 生成方式为online的时候，此参数必填。 
+     * @return CsrEncryptAlgo 加密算法，取值为ECC、RSA， 默认为RSA。当 CSR 生成方式为online的时候，此参数必填。
      */
     public String getCsrEncryptAlgo() {
         return this.CsrEncryptAlgo;
     }
 
     /**
-     * Set 加密算法，取值为ECC、RSA， 默认为RSA
-国密证书类型本字段不用传
-     * @param CsrEncryptAlgo 加密算法，取值为ECC、RSA， 默认为RSA
-国密证书类型本字段不用传
+     * Set 加密算法，取值为ECC、RSA， 默认为RSA。当 CSR 生成方式为online的时候，此参数必填。
+     * @param CsrEncryptAlgo 加密算法，取值为ECC、RSA， 默认为RSA。当 CSR 生成方式为online的时候，此参数必填。
      */
     public void setCsrEncryptAlgo(String CsrEncryptAlgo) {
         this.CsrEncryptAlgo = CsrEncryptAlgo;

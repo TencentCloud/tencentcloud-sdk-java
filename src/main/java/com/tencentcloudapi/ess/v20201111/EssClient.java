@@ -2001,6 +2001,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *修改印章状态（停用、启用）
+     * @param req OperateSealsRequest
+     * @return OperateSealsResponse
+     * @throws TencentCloudSDKException
+     */
+    public OperateSealsResponse OperateSeals(OperateSealsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OperateSeals", OperateSealsResponse.class);
+    }
+
+    /**
      *此接口（OperateTemplate）用于对企业自有模板进行管理操作，所有操作都会有对应的回调触发，具体参考回调文档 <a href="https://qian.tencent.com/developers/company/callback_types_templates" target="_blank">模板操作相关回调</a>
 
 

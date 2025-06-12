@@ -115,6 +115,13 @@ public class AccessPoint extends AbstractModel {
     private String Address;
 
     /**
+    * 是否MACsec
+    */
+    @SerializedName("IsMacSec")
+    @Expose
+    private Boolean IsMacSec;
+
+    /**
      * Get 接入点的名称。 
      * @return AccessPointName 接入点的名称。
      */
@@ -322,6 +329,22 @@ public class AccessPoint extends AbstractModel {
         this.Address = Address;
     }
 
+    /**
+     * Get 是否MACsec 
+     * @return IsMacSec 是否MACsec
+     */
+    public Boolean getIsMacSec() {
+        return this.IsMacSec;
+    }
+
+    /**
+     * Set 是否MACsec
+     * @param IsMacSec 是否MACsec
+     */
+    public void setIsMacSec(Boolean IsMacSec) {
+        this.IsMacSec = IsMacSec;
+    }
+
     public AccessPoint() {
     }
 
@@ -378,6 +401,9 @@ public class AccessPoint extends AbstractModel {
         if (source.Address != null) {
             this.Address = new String(source.Address);
         }
+        if (source.IsMacSec != null) {
+            this.IsMacSec = new Boolean(source.IsMacSec);
+        }
     }
 
 
@@ -398,6 +424,7 @@ public class AccessPoint extends AbstractModel {
         this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
         this.setParamArrayObj(map, prefix + "AvailablePortInfo.", this.AvailablePortInfo);
         this.setParamSimple(map, prefix + "Address", this.Address);
+        this.setParamSimple(map, prefix + "IsMacSec", this.IsMacSec);
 
     }
 }

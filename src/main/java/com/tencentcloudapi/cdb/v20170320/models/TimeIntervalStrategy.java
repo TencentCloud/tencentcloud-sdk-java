@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class TimeIntervalStrategy extends AbstractModel {
 
     /**
-    * 开始扩容时间
+    * 开始扩容时间。
+说明：此值的格式为 Integer 的时间戳。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束扩容时间
+    * 结束扩容时间。
+说明：此值的格式为 Integer 的时间戳。
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get 开始扩容时间 
-     * @return StartTime 开始扩容时间
+     * Get 开始扩容时间。
+说明：此值的格式为 Integer 的时间戳。 
+     * @return StartTime 开始扩容时间。
+说明：此值的格式为 Integer 的时间戳。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始扩容时间
-     * @param StartTime 开始扩容时间
+     * Set 开始扩容时间。
+说明：此值的格式为 Integer 的时间戳。
+     * @param StartTime 开始扩容时间。
+说明：此值的格式为 Integer 的时间戳。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束扩容时间 
-     * @return EndTime 结束扩容时间
+     * Get 结束扩容时间。
+说明：此值的格式为 Integer 的时间戳。 
+     * @return EndTime 结束扩容时间。
+说明：此值的格式为 Integer 的时间戳。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束扩容时间
-     * @param EndTime 结束扩容时间
+     * Set 结束扩容时间。
+说明：此值的格式为 Integer 的时间戳。
+     * @param EndTime 结束扩容时间。
+说明：此值的格式为 Integer 的时间戳。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

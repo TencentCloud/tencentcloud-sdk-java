@@ -38,14 +38,14 @@ public class DescribeNatGatewayDirectConnectGatewayRouteRequest extends Abstract
     private String VpcId;
 
     /**
-    * 0到200之间
+    * 查询NAT网关绑定的路由数量，可选值0-200，默认为10
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 大于0
+    * 数据偏移量，默认为0
     */
     @SerializedName("Offset")
     @Expose
@@ -84,32 +84,32 @@ public class DescribeNatGatewayDirectConnectGatewayRouteRequest extends Abstract
     }
 
     /**
-     * Get 0到200之间 
-     * @return Limit 0到200之间
+     * Get 查询NAT网关绑定的路由数量，可选值0-200，默认为10 
+     * @return Limit 查询NAT网关绑定的路由数量，可选值0-200，默认为10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 0到200之间
-     * @param Limit 0到200之间
+     * Set 查询NAT网关绑定的路由数量，可选值0-200，默认为10
+     * @param Limit 查询NAT网关绑定的路由数量，可选值0-200，默认为10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 大于0 
-     * @return Offset 大于0
+     * Get 数据偏移量，默认为0 
+     * @return Offset 数据偏移量，默认为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 大于0
-     * @param Offset 大于0
+     * Set 数据偏移量，默认为0
+     * @param Offset 数据偏移量，默认为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -277,6 +277,20 @@ public class DirectConnect extends AbstractModel {
     private Boolean IsThreeArch;
 
     /**
+    * 是否MACsec
+    */
+    @SerializedName("IsMacSec")
+    @Expose
+    private Boolean IsMacSec;
+
+    /**
+    * 端口规格(Mbps)
+    */
+    @SerializedName("PortSpecification")
+    @Expose
+    private Long PortSpecification;
+
+    /**
      * Get 物理专线ID。 
      * @return DirectConnectId 物理专线ID。
      */
@@ -868,6 +882,38 @@ public class DirectConnect extends AbstractModel {
         this.IsThreeArch = IsThreeArch;
     }
 
+    /**
+     * Get 是否MACsec 
+     * @return IsMacSec 是否MACsec
+     */
+    public Boolean getIsMacSec() {
+        return this.IsMacSec;
+    }
+
+    /**
+     * Set 是否MACsec
+     * @param IsMacSec 是否MACsec
+     */
+    public void setIsMacSec(Boolean IsMacSec) {
+        this.IsMacSec = IsMacSec;
+    }
+
+    /**
+     * Get 端口规格(Mbps) 
+     * @return PortSpecification 端口规格(Mbps)
+     */
+    public Long getPortSpecification() {
+        return this.PortSpecification;
+    }
+
+    /**
+     * Set 端口规格(Mbps)
+     * @param PortSpecification 端口规格(Mbps)
+     */
+    public void setPortSpecification(Long PortSpecification) {
+        this.PortSpecification = PortSpecification;
+    }
+
     public DirectConnect() {
     }
 
@@ -984,6 +1030,12 @@ public class DirectConnect extends AbstractModel {
         if (source.IsThreeArch != null) {
             this.IsThreeArch = new Boolean(source.IsThreeArch);
         }
+        if (source.IsMacSec != null) {
+            this.IsMacSec = new Boolean(source.IsMacSec);
+        }
+        if (source.PortSpecification != null) {
+            this.PortSpecification = new Long(source.PortSpecification);
+        }
     }
 
 
@@ -1026,6 +1078,8 @@ public class DirectConnect extends AbstractModel {
         this.setParamSimple(map, prefix + "Construct", this.Construct);
         this.setParamSimple(map, prefix + "AccessPointName", this.AccessPointName);
         this.setParamSimple(map, prefix + "IsThreeArch", this.IsThreeArch);
+        this.setParamSimple(map, prefix + "IsMacSec", this.IsMacSec);
+        this.setParamSimple(map, prefix + "PortSpecification", this.PortSpecification);
 
     }
 }

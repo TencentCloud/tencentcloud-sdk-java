@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.lke.v20231130.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TimeInterval extends AbstractModel {
+public class DescribeWorkflowRunRequest extends AbstractModel {
 
     /**
-    * 开始时间。
+    * 工作流运行实例ID
     */
-    @SerializedName("StartTime")
+    @SerializedName("WorkflowRunId")
     @Expose
-    private String StartTime;
+    private String WorkflowRunId;
 
     /**
-    * 结束时间。
-    */
-    @SerializedName("EndTime")
-    @Expose
-    private String EndTime;
-
-    /**
-     * Get 开始时间。 
-     * @return StartTime 开始时间。
+     * Get 工作流运行实例ID 
+     * @return WorkflowRunId 工作流运行实例ID
      */
-    public String getStartTime() {
-        return this.StartTime;
+    public String getWorkflowRunId() {
+        return this.WorkflowRunId;
     }
 
     /**
-     * Set 开始时间。
-     * @param StartTime 开始时间。
+     * Set 工作流运行实例ID
+     * @param WorkflowRunId 工作流运行实例ID
      */
-    public void setStartTime(String StartTime) {
-        this.StartTime = StartTime;
+    public void setWorkflowRunId(String WorkflowRunId) {
+        this.WorkflowRunId = WorkflowRunId;
     }
 
-    /**
-     * Get 结束时间。 
-     * @return EndTime 结束时间。
-     */
-    public String getEndTime() {
-        return this.EndTime;
-    }
-
-    /**
-     * Set 结束时间。
-     * @param EndTime 结束时间。
-     */
-    public void setEndTime(String EndTime) {
-        this.EndTime = EndTime;
-    }
-
-    public TimeInterval() {
+    public DescribeWorkflowRunRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TimeInterval(TimeInterval source) {
-        if (source.StartTime != null) {
-            this.StartTime = new String(source.StartTime);
-        }
-        if (source.EndTime != null) {
-            this.EndTime = new String(source.EndTime);
+    public DescribeWorkflowRunRequest(DescribeWorkflowRunRequest source) {
+        if (source.WorkflowRunId != null) {
+            this.WorkflowRunId = new String(source.WorkflowRunId);
         }
     }
 
@@ -90,8 +64,7 @@ public class TimeInterval extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
-        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "WorkflowRunId", this.WorkflowRunId);
 
     }
 }

@@ -24,161 +24,196 @@ import java.util.HashMap;
 public class TImeCycle extends AbstractModel {
 
     /**
-    * 周一的扩容时间段
+    * 按周期扩容时，是否选择周一扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
     */
     @SerializedName("Monday")
     @Expose
     private Boolean Monday;
 
     /**
-    * 周二的扩容时间段
+    * 按周期扩容时，是否选择周二扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
     */
     @SerializedName("Tuesday")
     @Expose
     private Boolean Tuesday;
 
     /**
-    * 周三的扩容时间段
+    * 按周期扩容时，是否选择周三扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
     */
     @SerializedName("Wednesday")
     @Expose
     private Boolean Wednesday;
 
     /**
-    * 周四的扩容时间段
+    * 按周期扩容时，是否选择周四扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
     */
     @SerializedName("Thursday")
     @Expose
     private Boolean Thursday;
 
     /**
-    * 周五的扩容时间段
+    * 按周期扩容时，是否选择周五扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
     */
     @SerializedName("Friday")
     @Expose
     private Boolean Friday;
 
     /**
-    * 周六的扩容时间段
+    * 按周期扩容时，是否选择周六扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
     */
     @SerializedName("Saturday")
     @Expose
     private Boolean Saturday;
 
     /**
-    * 周日的扩容时间段
+    * 按周期扩容时，是否选择周日扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
     */
     @SerializedName("Sunday")
     @Expose
     private Boolean Sunday;
 
     /**
-     * Get 周一的扩容时间段 
-     * @return Monday 周一的扩容时间段
+     * Get 按周期扩容时，是否选择周一扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。 
+     * @return Monday 按周期扩容时，是否选择周一扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public Boolean getMonday() {
         return this.Monday;
     }
 
     /**
-     * Set 周一的扩容时间段
-     * @param Monday 周一的扩容时间段
+     * Set 按周期扩容时，是否选择周一扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param Monday 按周期扩容时，是否选择周一扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public void setMonday(Boolean Monday) {
         this.Monday = Monday;
     }
 
     /**
-     * Get 周二的扩容时间段 
-     * @return Tuesday 周二的扩容时间段
+     * Get 按周期扩容时，是否选择周二扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。 
+     * @return Tuesday 按周期扩容时，是否选择周二扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public Boolean getTuesday() {
         return this.Tuesday;
     }
 
     /**
-     * Set 周二的扩容时间段
-     * @param Tuesday 周二的扩容时间段
+     * Set 按周期扩容时，是否选择周二扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param Tuesday 按周期扩容时，是否选择周二扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public void setTuesday(Boolean Tuesday) {
         this.Tuesday = Tuesday;
     }
 
     /**
-     * Get 周三的扩容时间段 
-     * @return Wednesday 周三的扩容时间段
+     * Get 按周期扩容时，是否选择周三扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。 
+     * @return Wednesday 按周期扩容时，是否选择周三扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public Boolean getWednesday() {
         return this.Wednesday;
     }
 
     /**
-     * Set 周三的扩容时间段
-     * @param Wednesday 周三的扩容时间段
+     * Set 按周期扩容时，是否选择周三扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param Wednesday 按周期扩容时，是否选择周三扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public void setWednesday(Boolean Wednesday) {
         this.Wednesday = Wednesday;
     }
 
     /**
-     * Get 周四的扩容时间段 
-     * @return Thursday 周四的扩容时间段
+     * Get 按周期扩容时，是否选择周四扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。 
+     * @return Thursday 按周期扩容时，是否选择周四扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public Boolean getThursday() {
         return this.Thursday;
     }
 
     /**
-     * Set 周四的扩容时间段
-     * @param Thursday 周四的扩容时间段
+     * Set 按周期扩容时，是否选择周四扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param Thursday 按周期扩容时，是否选择周四扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public void setThursday(Boolean Thursday) {
         this.Thursday = Thursday;
     }
 
     /**
-     * Get 周五的扩容时间段 
-     * @return Friday 周五的扩容时间段
+     * Get 按周期扩容时，是否选择周五扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。 
+     * @return Friday 按周期扩容时，是否选择周五扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public Boolean getFriday() {
         return this.Friday;
     }
 
     /**
-     * Set 周五的扩容时间段
-     * @param Friday 周五的扩容时间段
+     * Set 按周期扩容时，是否选择周五扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param Friday 按周期扩容时，是否选择周五扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public void setFriday(Boolean Friday) {
         this.Friday = Friday;
     }
 
     /**
-     * Get 周六的扩容时间段 
-     * @return Saturday 周六的扩容时间段
+     * Get 按周期扩容时，是否选择周六扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。 
+     * @return Saturday 按周期扩容时，是否选择周六扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public Boolean getSaturday() {
         return this.Saturday;
     }
 
     /**
-     * Set 周六的扩容时间段
-     * @param Saturday 周六的扩容时间段
+     * Set 按周期扩容时，是否选择周六扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param Saturday 按周期扩容时，是否选择周六扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public void setSaturday(Boolean Saturday) {
         this.Saturday = Saturday;
     }
 
     /**
-     * Get 周日的扩容时间段 
-     * @return Sunday 周日的扩容时间段
+     * Get 按周期扩容时，是否选择周日扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。 
+     * @return Sunday 按周期扩容时，是否选择周日扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public Boolean getSunday() {
         return this.Sunday;
     }
 
     /**
-     * Set 周日的扩容时间段
-     * @param Sunday 周日的扩容时间段
+     * Set 按周期扩容时，是否选择周日扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param Sunday 按周期扩容时，是否选择周日扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public void setSunday(Boolean Sunday) {
         this.Sunday = Sunday;

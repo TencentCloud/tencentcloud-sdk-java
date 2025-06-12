@@ -108,6 +108,13 @@ public class DatahubTaskInfo extends AbstractModel {
     private String [] StepList;
 
     /**
+    * 任务描述信息
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 任务Id 
      * @return TaskId 任务Id
      */
@@ -299,6 +306,22 @@ public class DatahubTaskInfo extends AbstractModel {
         this.StepList = StepList;
     }
 
+    /**
+     * Get 任务描述信息 
+     * @return Description 任务描述信息
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 任务描述信息
+     * @param Description 任务描述信息
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public DatahubTaskInfo() {
     }
 
@@ -346,6 +369,9 @@ public class DatahubTaskInfo extends AbstractModel {
                 this.StepList[i] = new String(source.StepList[i]);
             }
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class DatahubTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskCurrentStep", this.TaskCurrentStep);
         this.setParamSimple(map, prefix + "DatahubId", this.DatahubId);
         this.setParamArraySimple(map, prefix + "StepList.", this.StepList);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

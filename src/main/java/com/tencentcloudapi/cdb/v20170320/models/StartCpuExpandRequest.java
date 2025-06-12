@@ -24,14 +24,15 @@ import java.util.HashMap;
 public class StartCpuExpandRequest extends AbstractModel {
 
     /**
-    * 实例 ID 。
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期
+    * 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期。
+
     */
     @SerializedName("Type")
     @Expose
@@ -53,46 +54,50 @@ public class StartCpuExpandRequest extends AbstractModel {
     private AutoStrategy AutoStrategy;
 
     /**
-    * 按时间段扩容策略
+    * 按时间段扩容策略。
     */
     @SerializedName("TimeIntervalStrategy")
     @Expose
     private TimeIntervalStrategy TimeIntervalStrategy;
 
     /**
-    * 按周期扩容策略
+    * 按周期扩容策略。
     */
     @SerializedName("PeriodStrategy")
     @Expose
     private PeriodStrategy PeriodStrategy;
 
     /**
-     * Get 实例 ID 。 
-     * @return InstanceId 实例 ID 。
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID 。
-     * @param InstanceId 实例 ID 。
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期 
-     * @return Type 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期
+     * Get 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期。
+ 
+     * @return Type 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期。
+
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期
-     * @param Type 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期
+     * Set 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期。
+
+     * @param Type 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期。
+
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -135,32 +140,32 @@ public class StartCpuExpandRequest extends AbstractModel {
     }
 
     /**
-     * Get 按时间段扩容策略 
-     * @return TimeIntervalStrategy 按时间段扩容策略
+     * Get 按时间段扩容策略。 
+     * @return TimeIntervalStrategy 按时间段扩容策略。
      */
     public TimeIntervalStrategy getTimeIntervalStrategy() {
         return this.TimeIntervalStrategy;
     }
 
     /**
-     * Set 按时间段扩容策略
-     * @param TimeIntervalStrategy 按时间段扩容策略
+     * Set 按时间段扩容策略。
+     * @param TimeIntervalStrategy 按时间段扩容策略。
      */
     public void setTimeIntervalStrategy(TimeIntervalStrategy TimeIntervalStrategy) {
         this.TimeIntervalStrategy = TimeIntervalStrategy;
     }
 
     /**
-     * Get 按周期扩容策略 
-     * @return PeriodStrategy 按周期扩容策略
+     * Get 按周期扩容策略。 
+     * @return PeriodStrategy 按周期扩容策略。
      */
     public PeriodStrategy getPeriodStrategy() {
         return this.PeriodStrategy;
     }
 
     /**
-     * Set 按周期扩容策略
-     * @param PeriodStrategy 按周期扩容策略
+     * Set 按周期扩容策略。
+     * @param PeriodStrategy 按周期扩容策略。
      */
     public void setPeriodStrategy(PeriodStrategy PeriodStrategy) {
         this.PeriodStrategy = PeriodStrategy;

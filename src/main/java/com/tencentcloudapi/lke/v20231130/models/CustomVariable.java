@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.lke.v20231130.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TimeInterval extends AbstractModel {
+public class CustomVariable extends AbstractModel {
 
     /**
-    * 开始时间。
+    * 参数名称
     */
-    @SerializedName("StartTime")
+    @SerializedName("Name")
     @Expose
-    private String StartTime;
+    private String Name;
 
     /**
-    * 结束时间。
+    * 参数的值
     */
-    @SerializedName("EndTime")
+    @SerializedName("Value")
     @Expose
-    private String EndTime;
+    private String Value;
 
     /**
-     * Get 开始时间。 
-     * @return StartTime 开始时间。
+     * Get 参数名称 
+     * @return Name 参数名称
      */
-    public String getStartTime() {
-        return this.StartTime;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 开始时间。
-     * @param StartTime 开始时间。
+     * Set 参数名称
+     * @param Name 参数名称
      */
-    public void setStartTime(String StartTime) {
-        this.StartTime = StartTime;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get 结束时间。 
-     * @return EndTime 结束时间。
+     * Get 参数的值 
+     * @return Value 参数的值
      */
-    public String getEndTime() {
-        return this.EndTime;
+    public String getValue() {
+        return this.Value;
     }
 
     /**
-     * Set 结束时间。
-     * @param EndTime 结束时间。
+     * Set 参数的值
+     * @param Value 参数的值
      */
-    public void setEndTime(String EndTime) {
-        this.EndTime = EndTime;
+    public void setValue(String Value) {
+        this.Value = Value;
     }
 
-    public TimeInterval() {
+    public CustomVariable() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TimeInterval(TimeInterval source) {
-        if (source.StartTime != null) {
-            this.StartTime = new String(source.StartTime);
+    public CustomVariable(CustomVariable source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.EndTime != null) {
-            this.EndTime = new String(source.EndTime);
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -90,8 +90,8 @@ public class TimeInterval extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
-        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

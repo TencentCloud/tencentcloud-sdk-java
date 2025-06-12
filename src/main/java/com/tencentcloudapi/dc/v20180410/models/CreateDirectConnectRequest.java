@@ -162,6 +162,13 @@ ChinaOther：中国其他；
     private Tag [] Tags;
 
     /**
+    * 是否MACsec需求
+    */
+    @SerializedName("IsMacSec")
+    @Expose
+    private Boolean IsMacSec;
+
+    /**
      * Get 物理专线的名称。 
      * @return DirectConnectName 物理专线的名称。
      */
@@ -497,6 +504,22 @@ ChinaOther：中国其他；
         this.Tags = Tags;
     }
 
+    /**
+     * Get 是否MACsec需求 
+     * @return IsMacSec 是否MACsec需求
+     */
+    public Boolean getIsMacSec() {
+        return this.IsMacSec;
+    }
+
+    /**
+     * Set 是否MACsec需求
+     * @param IsMacSec 是否MACsec需求
+     */
+    public void setIsMacSec(Boolean IsMacSec) {
+        this.IsMacSec = IsMacSec;
+    }
+
     public CreateDirectConnectRequest() {
     }
 
@@ -562,6 +585,9 @@ ChinaOther：中国其他；
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.IsMacSec != null) {
+            this.IsMacSec = new Boolean(source.IsMacSec);
+        }
     }
 
 
@@ -587,6 +613,7 @@ ChinaOther：中国其他；
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IsMacSec", this.IsMacSec);
 
     }
 }

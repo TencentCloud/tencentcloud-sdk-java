@@ -184,6 +184,18 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *本接口用来创建工作流的异步运行实例，创建成功后工作流会在后台异步运行，接口返回工作流运行实例ID（WorkflowRunId）等信息。后面可通过调用DescribeWorkflowRun接口查工作流运行的详情。
+注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，并且打开“异步调用”的开关，才能创建成功。
+     * @param req CreateWorkflowRunRequest
+     * @return CreateWorkflowRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWorkflowRunResponse CreateWorkflowRun(CreateWorkflowRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWorkflowRun", CreateWorkflowRunResponse.class);
+    }
+
+    /**
      *删除应用
      * @param req DeleteAppRequest
      * @return DeleteAppResponse
@@ -371,6 +383,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *通过DescribeWorkflowRun接口获取了工作流异步运行的整体内容，其中包含了基本的节点信息，再通用本接口可查看节点的运行详情（包括输入、输出、日志等）。
+     * @param req DescribeNodeRunRequest
+     * @return DescribeNodeRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodeRunResponse DescribeNodeRun(DescribeNodeRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNodeRun", DescribeNodeRunResponse.class);
+    }
+
+    /**
      *问答详情
      * @param req DescribeQARequest
      * @return DescribeQAResponse
@@ -500,6 +523,17 @@ public class LkeClient extends AbstractClient{
     public DescribeUnsatisfiedReplyContextResponse DescribeUnsatisfiedReplyContext(DescribeUnsatisfiedReplyContextRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUnsatisfiedReplyContext", DescribeUnsatisfiedReplyContextResponse.class);
+    }
+
+    /**
+     *创建了工作流的异步运行实例后，通过本接口可以查询整体的运行详情。
+     * @param req DescribeWorkflowRunRequest
+     * @return DescribeWorkflowRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkflowRunResponse DescribeWorkflowRun(DescribeWorkflowRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkflowRun", DescribeWorkflowRunResponse.class);
     }
 
     /**
@@ -935,6 +969,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *此接口可查询已创建的所有工作流异步运行实例。
+     * @param req ListWorkflowRunsRequest
+     * @return ListWorkflowRunsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListWorkflowRunsResponse ListWorkflowRuns(ListWorkflowRunsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListWorkflowRuns", ListWorkflowRunsResponse.class);
+    }
+
+    /**
      *修改应用请求结构体
      * @param req ModifyAppRequest
      * @return ModifyAppResponse
@@ -1160,6 +1205,17 @@ public class LkeClient extends AbstractClient{
     public StopDocParseResponse StopDocParse(StopDocParseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopDocParse", StopDocParseResponse.class);
+    }
+
+    /**
+     *此接口用来停止正在进行的工作流异步运行实例。
+     * @param req StopWorkflowRunRequest
+     * @return StopWorkflowRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopWorkflowRunResponse StopWorkflowRun(StopWorkflowRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopWorkflowRun", StopWorkflowRunResponse.class);
     }
 
     /**
