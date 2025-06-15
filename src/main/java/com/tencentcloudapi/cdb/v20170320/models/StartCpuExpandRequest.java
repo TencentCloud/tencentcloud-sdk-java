@@ -31,16 +31,16 @@ public class StartCpuExpandRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期。
-
+    * 扩容类型，支持自动扩容和自定义扩容。
+说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 手动扩容时，扩容的 CPU 核心数。
-说明：1. Type 为 manual 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
+    * 自定义扩容时，扩容的 CPU 核心数。
+说明：1. Type 为 manual、timeInterval、period 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
     */
     @SerializedName("ExpandCpu")
     @Expose
@@ -84,40 +84,40 @@ public class StartCpuExpandRequest extends AbstractModel {
     }
 
     /**
-     * Get 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期。
- 
-     * @return Type 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期。
-
+     * Get 扩容类型，支持自动扩容和自定义扩容。
+说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。 
+     * @return Type 扩容类型，支持自动扩容和自定义扩容。
+说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期。
-
-     * @param Type 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期。
-
+     * Set 扩容类型，支持自动扩容和自定义扩容。
+说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。
+     * @param Type 扩容类型，支持自动扩容和自定义扩容。
+说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 手动扩容时，扩容的 CPU 核心数。
-说明：1. Type 为 manual 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。 
-     * @return ExpandCpu 手动扩容时，扩容的 CPU 核心数。
-说明：1. Type 为 manual 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
+     * Get 自定义扩容时，扩容的 CPU 核心数。
+说明：1. Type 为 manual、timeInterval、period 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。 
+     * @return ExpandCpu 自定义扩容时，扩容的 CPU 核心数。
+说明：1. Type 为 manual、timeInterval、period 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
      */
     public Long getExpandCpu() {
         return this.ExpandCpu;
     }
 
     /**
-     * Set 手动扩容时，扩容的 CPU 核心数。
-说明：1. Type 为 manual 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
-     * @param ExpandCpu 手动扩容时，扩容的 CPU 核心数。
-说明：1. Type 为 manual 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
+     * Set 自定义扩容时，扩容的 CPU 核心数。
+说明：1. Type 为 manual、timeInterval、period 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
+     * @param ExpandCpu 自定义扩容时，扩容的 CPU 核心数。
+说明：1. Type 为 manual、timeInterval、period 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
      */
     public void setExpandCpu(Long ExpandCpu) {
         this.ExpandCpu = ExpandCpu;

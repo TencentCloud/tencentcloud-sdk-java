@@ -52,6 +52,13 @@ public class AndroidInstanceImage extends AbstractModel {
     private String AndroidInstanceImageZone;
 
     /**
+    * 安卓10
+    */
+    @SerializedName("AndroidVersion")
+    @Expose
+    private String AndroidVersion;
+
+    /**
      * Get 镜像 ID 
      * @return AndroidInstanceImageId 镜像 ID
      */
@@ -115,6 +122,22 @@ public class AndroidInstanceImage extends AbstractModel {
         this.AndroidInstanceImageZone = AndroidInstanceImageZone;
     }
 
+    /**
+     * Get 安卓10 
+     * @return AndroidVersion 安卓10
+     */
+    public String getAndroidVersion() {
+        return this.AndroidVersion;
+    }
+
+    /**
+     * Set 安卓10
+     * @param AndroidVersion 安卓10
+     */
+    public void setAndroidVersion(String AndroidVersion) {
+        this.AndroidVersion = AndroidVersion;
+    }
+
     public AndroidInstanceImage() {
     }
 
@@ -135,6 +158,9 @@ public class AndroidInstanceImage extends AbstractModel {
         if (source.AndroidInstanceImageZone != null) {
             this.AndroidInstanceImageZone = new String(source.AndroidInstanceImageZone);
         }
+        if (source.AndroidVersion != null) {
+            this.AndroidVersion = new String(source.AndroidVersion);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class AndroidInstanceImage extends AbstractModel {
         this.setParamSimple(map, prefix + "AndroidInstanceImageName", this.AndroidInstanceImageName);
         this.setParamSimple(map, prefix + "AndroidInstanceImageState", this.AndroidInstanceImageState);
         this.setParamSimple(map, prefix + "AndroidInstanceImageZone", this.AndroidInstanceImageZone);
+        this.setParamSimple(map, prefix + "AndroidVersion", this.AndroidVersion);
 
     }
 }

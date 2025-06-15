@@ -21,10 +21,24 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
+public class CreateAndroidInstancesAccessTokenResponse extends AbstractModel {
 
     /**
-    * 安卓实例错误列表
+    * token
+    */
+    @SerializedName("Token")
+    @Expose
+    private String Token;
+
+    /**
+    * 访问信息
+    */
+    @SerializedName("AccessInfo")
+    @Expose
+    private String AccessInfo;
+
+    /**
+    * 安卓实例错误列表。列表包含有问题的安卓实例 ID，生成的 Token 对这些有问题的实例无效。
     */
     @SerializedName("AndroidInstanceErrors")
     @Expose
@@ -38,16 +52,48 @@ public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安卓实例错误列表 
-     * @return AndroidInstanceErrors 安卓实例错误列表
+     * Get token 
+     * @return Token token
+     */
+    public String getToken() {
+        return this.Token;
+    }
+
+    /**
+     * Set token
+     * @param Token token
+     */
+    public void setToken(String Token) {
+        this.Token = Token;
+    }
+
+    /**
+     * Get 访问信息 
+     * @return AccessInfo 访问信息
+     */
+    public String getAccessInfo() {
+        return this.AccessInfo;
+    }
+
+    /**
+     * Set 访问信息
+     * @param AccessInfo 访问信息
+     */
+    public void setAccessInfo(String AccessInfo) {
+        this.AccessInfo = AccessInfo;
+    }
+
+    /**
+     * Get 安卓实例错误列表。列表包含有问题的安卓实例 ID，生成的 Token 对这些有问题的实例无效。 
+     * @return AndroidInstanceErrors 安卓实例错误列表。列表包含有问题的安卓实例 ID，生成的 Token 对这些有问题的实例无效。
      */
     public AndroidInstanceError [] getAndroidInstanceErrors() {
         return this.AndroidInstanceErrors;
     }
 
     /**
-     * Set 安卓实例错误列表
-     * @param AndroidInstanceErrors 安卓实例错误列表
+     * Set 安卓实例错误列表。列表包含有问题的安卓实例 ID，生成的 Token 对这些有问题的实例无效。
+     * @param AndroidInstanceErrors 安卓实例错误列表。列表包含有问题的安卓实例 ID，生成的 Token 对这些有问题的实例无效。
      */
     public void setAndroidInstanceErrors(AndroidInstanceError [] AndroidInstanceErrors) {
         this.AndroidInstanceErrors = AndroidInstanceErrors;
@@ -69,14 +115,20 @@ public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ModifyAndroidInstancesResolutionResponse() {
+    public CreateAndroidInstancesAccessTokenResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyAndroidInstancesResolutionResponse(ModifyAndroidInstancesResolutionResponse source) {
+    public CreateAndroidInstancesAccessTokenResponse(CreateAndroidInstancesAccessTokenResponse source) {
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
+        if (source.AccessInfo != null) {
+            this.AccessInfo = new String(source.AccessInfo);
+        }
         if (source.AndroidInstanceErrors != null) {
             this.AndroidInstanceErrors = new AndroidInstanceError[source.AndroidInstanceErrors.length];
             for (int i = 0; i < source.AndroidInstanceErrors.length; i++) {
@@ -93,6 +145,8 @@ public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Token", this.Token);
+        this.setParamSimple(map, prefix + "AccessInfo", this.AccessInfo);
         this.setParamArrayObj(map, prefix + "AndroidInstanceErrors.", this.AndroidInstanceErrors);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

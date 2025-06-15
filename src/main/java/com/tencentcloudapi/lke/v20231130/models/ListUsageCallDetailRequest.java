@@ -45,14 +45,14 @@ public class ListUsageCallDetailRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 页码
+    * 页码（从1开始）
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 分页数量
+    * 分页数量(最大值1000)
     */
     @SerializedName("PageSize")
     @Expose
@@ -92,6 +92,13 @@ public class ListUsageCallDetailRequest extends AbstractModel {
     @SerializedName("AppType")
     @Expose
     private String AppType;
+
+    /**
+    * 账单明细对应的自定义tag
+    */
+    @SerializedName("BillingTag")
+    @Expose
+    private String BillingTag;
 
     /**
      * Get 模型标识 
@@ -142,32 +149,32 @@ public class ListUsageCallDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get 页码（从1开始） 
+     * @return PageNumber 页码（从1开始）
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set 页码（从1开始）
+     * @param PageNumber 页码（从1开始）
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页数量 
-     * @return PageSize 分页数量
+     * Get 分页数量(最大值1000) 
+     * @return PageSize 分页数量(最大值1000)
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页数量
-     * @param PageSize 分页数量
+     * Set 分页数量(最大值1000)
+     * @param PageSize 分页数量(最大值1000)
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -253,6 +260,22 @@ public class ListUsageCallDetailRequest extends AbstractModel {
         this.AppType = AppType;
     }
 
+    /**
+     * Get 账单明细对应的自定义tag 
+     * @return BillingTag 账单明细对应的自定义tag
+     */
+    public String getBillingTag() {
+        return this.BillingTag;
+    }
+
+    /**
+     * Set 账单明细对应的自定义tag
+     * @param BillingTag 账单明细对应的自定义tag
+     */
+    public void setBillingTag(String BillingTag) {
+        this.BillingTag = BillingTag;
+    }
+
     public ListUsageCallDetailRequest() {
     }
 
@@ -300,6 +323,9 @@ public class ListUsageCallDetailRequest extends AbstractModel {
         if (source.AppType != null) {
             this.AppType = new String(source.AppType);
         }
+        if (source.BillingTag != null) {
+            this.BillingTag = new String(source.BillingTag);
+        }
     }
 
 
@@ -317,6 +343,7 @@ public class ListUsageCallDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CallType", this.CallType);
         this.setParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
         this.setParamSimple(map, prefix + "AppType", this.AppType);
+        this.setParamSimple(map, prefix + "BillingTag", this.BillingTag);
 
     }
 }

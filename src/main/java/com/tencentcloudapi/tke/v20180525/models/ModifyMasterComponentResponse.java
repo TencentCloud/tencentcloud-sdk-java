@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gs.v20191118.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
-
-    /**
-    * 安卓实例错误列表
-    */
-    @SerializedName("AndroidInstanceErrors")
-    @Expose
-    private AndroidInstanceError [] AndroidInstanceErrors;
+public class ModifyMasterComponentResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 安卓实例错误列表 
-     * @return AndroidInstanceErrors 安卓实例错误列表
-     */
-    public AndroidInstanceError [] getAndroidInstanceErrors() {
-        return this.AndroidInstanceErrors;
-    }
-
-    /**
-     * Set 安卓实例错误列表
-     * @param AndroidInstanceErrors 安卓实例错误列表
-     */
-    public void setAndroidInstanceErrors(AndroidInstanceError [] AndroidInstanceErrors) {
-        this.AndroidInstanceErrors = AndroidInstanceErrors;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,20 +46,14 @@ public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ModifyAndroidInstancesResolutionResponse() {
+    public ModifyMasterComponentResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyAndroidInstancesResolutionResponse(ModifyAndroidInstancesResolutionResponse source) {
-        if (source.AndroidInstanceErrors != null) {
-            this.AndroidInstanceErrors = new AndroidInstanceError[source.AndroidInstanceErrors.length];
-            for (int i = 0; i < source.AndroidInstanceErrors.length; i++) {
-                this.AndroidInstanceErrors[i] = new AndroidInstanceError(source.AndroidInstanceErrors[i]);
-            }
-        }
+    public ModifyMasterComponentResponse(ModifyMasterComponentResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,7 +64,6 @@ public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "AndroidInstanceErrors.", this.AndroidInstanceErrors);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

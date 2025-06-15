@@ -1392,6 +1392,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *进行master组件停机故障演练时，获取master组件运行状态，支持kube-apiserver、kube-scheduler、kube-controller-manager
+     * @param req DescribeMasterComponentRequest
+     * @return DescribeMasterComponentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMasterComponentResponse DescribeMasterComponent(DescribeMasterComponentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMasterComponent", DescribeMasterComponentResponse.class);
+    }
+
+    /**
      *获取OS聚合信息
      * @param req DescribeOSImagesRequest
      * @return DescribeOSImagesResponse
@@ -2159,6 +2170,17 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePool(ModifyClusterVirtualNodePoolRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterVirtualNodePool", ModifyClusterVirtualNodePoolResponse.class);
+    }
+
+    /**
+     *修改master组件，支持kube-apiserver、kube-scheduler、kube-controller-manager副本数调整为0和恢复
+     * @param req ModifyMasterComponentRequest
+     * @return ModifyMasterComponentResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMasterComponentResponse ModifyMasterComponent(ModifyMasterComponentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMasterComponent", ModifyMasterComponentResponse.class);
     }
 
     /**

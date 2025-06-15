@@ -31,7 +31,7 @@ public class DescribeCertDomainsRequest extends AbstractModel {
     private String Cert;
 
     /**
-    * 托管证书ID，Cert和CertId不能均未空，都填写时以CertId为准。
+    * 托管证书ID，Cert和CertId不能均为空，都填写时以CertId为准。
     */
     @SerializedName("CertId")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeCertDomainsRequest extends AbstractModel {
     }
 
     /**
-     * Get 托管证书ID，Cert和CertId不能均未空，都填写时以CertId为准。 
-     * @return CertId 托管证书ID，Cert和CertId不能均未空，都填写时以CertId为准。
+     * Get 托管证书ID，Cert和CertId不能均为空，都填写时以CertId为准。 
+     * @return CertId 托管证书ID，Cert和CertId不能均为空，都填写时以CertId为准。
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 托管证书ID，Cert和CertId不能均未空，都填写时以CertId为准。
-     * @param CertId 托管证书ID，Cert和CertId不能均未空，都填写时以CertId为准。
+     * Set 托管证书ID，Cert和CertId不能均为空，都填写时以CertId为准。
+     * @param CertId 托管证书ID，Cert和CertId不能均为空，都填写时以CertId为准。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

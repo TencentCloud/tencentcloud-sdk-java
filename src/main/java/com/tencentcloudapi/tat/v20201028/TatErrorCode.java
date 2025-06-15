@@ -171,6 +171,9 @@ public enum TatErrorCode {
      /* 命令不存在。 */
      RESOURCENOTFOUND_COMMANDNOTFOUND("ResourceNotFound.CommandNotFound"),
      
+     /* CosBucket不存在。 */
+     RESOURCENOTFOUND_COSBUCKETNOTFOUNDCODE("ResourceNotFound.CosBucketNotFoundCode"),
+     
      /* 实例不存在。 */
      RESOURCENOTFOUND_INSTANCENOTFOUND("ResourceNotFound.InstanceNotFound"),
      

@@ -38,7 +38,7 @@ public class DescribeCfwEipsRequest extends AbstractModel {
     private String NatGatewayId;
 
     /**
-    * 防火墙实例id，当前仅支持接入模式的实例
+    * 防火墙实例id，当前仅支持接入模式的实例，该字段必填
     */
     @SerializedName("CfwInstance")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeCfwEipsRequest extends AbstractModel {
     }
 
     /**
-     * Get 防火墙实例id，当前仅支持接入模式的实例 
-     * @return CfwInstance 防火墙实例id，当前仅支持接入模式的实例
+     * Get 防火墙实例id，当前仅支持接入模式的实例，该字段必填 
+     * @return CfwInstance 防火墙实例id，当前仅支持接入模式的实例，该字段必填
      */
     public String getCfwInstance() {
         return this.CfwInstance;
     }
 
     /**
-     * Set 防火墙实例id，当前仅支持接入模式的实例
-     * @param CfwInstance 防火墙实例id，当前仅支持接入模式的实例
+     * Set 防火墙实例id，当前仅支持接入模式的实例，该字段必填
+     * @param CfwInstance 防火墙实例id，当前仅支持接入模式的实例，该字段必填
      */
     public void setCfwInstance(String CfwInstance) {
         this.CfwInstance = CfwInstance;

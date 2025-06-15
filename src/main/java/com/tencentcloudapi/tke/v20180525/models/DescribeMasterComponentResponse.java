@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gs.v20191118.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
+public class DescribeMasterComponentResponse extends AbstractModel {
 
     /**
-    * 安卓实例错误列表
+    * master组件名称
     */
-    @SerializedName("AndroidInstanceErrors")
+    @SerializedName("Component")
     @Expose
-    private AndroidInstanceError [] AndroidInstanceErrors;
+    private String Component;
+
+    /**
+    * master组件状态，三种状态：running、updating、shutdown
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安卓实例错误列表 
-     * @return AndroidInstanceErrors 安卓实例错误列表
+     * Get master组件名称 
+     * @return Component master组件名称
      */
-    public AndroidInstanceError [] getAndroidInstanceErrors() {
-        return this.AndroidInstanceErrors;
+    public String getComponent() {
+        return this.Component;
     }
 
     /**
-     * Set 安卓实例错误列表
-     * @param AndroidInstanceErrors 安卓实例错误列表
+     * Set master组件名称
+     * @param Component master组件名称
      */
-    public void setAndroidInstanceErrors(AndroidInstanceError [] AndroidInstanceErrors) {
-        this.AndroidInstanceErrors = AndroidInstanceErrors;
+    public void setComponent(String Component) {
+        this.Component = Component;
+    }
+
+    /**
+     * Get master组件状态，三种状态：running、updating、shutdown 
+     * @return Status master组件状态，三种状态：running、updating、shutdown
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set master组件状态，三种状态：running、updating、shutdown
+     * @param Status master组件状态，三种状态：running、updating、shutdown
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
     }
 
     /**
@@ -69,19 +92,19 @@ public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ModifyAndroidInstancesResolutionResponse() {
+    public DescribeMasterComponentResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyAndroidInstancesResolutionResponse(ModifyAndroidInstancesResolutionResponse source) {
-        if (source.AndroidInstanceErrors != null) {
-            this.AndroidInstanceErrors = new AndroidInstanceError[source.AndroidInstanceErrors.length];
-            for (int i = 0; i < source.AndroidInstanceErrors.length; i++) {
-                this.AndroidInstanceErrors[i] = new AndroidInstanceError(source.AndroidInstanceErrors[i]);
-            }
+    public DescribeMasterComponentResponse(DescribeMasterComponentResponse source) {
+        if (source.Component != null) {
+            this.Component = new String(source.Component);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -93,7 +116,8 @@ public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "AndroidInstanceErrors.", this.AndroidInstanceErrors);
+        this.setParamSimple(map, prefix + "Component", this.Component);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

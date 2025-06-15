@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gs.v20191118.models;
+package com.tencentcloudapi.ioa.v20220601.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
+public class DescribeDeviceInfoResponse extends AbstractModel {
 
     /**
-    * 安卓实例错误列表
+    * 业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AndroidInstanceErrors")
+    @SerializedName("Data")
     @Expose
-    private AndroidInstanceError [] AndroidInstanceErrors;
+    private DescribeDeviceInfoRspData Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +39,23 @@ public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安卓实例错误列表 
-     * @return AndroidInstanceErrors 安卓实例错误列表
+     * Get 业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AndroidInstanceError [] getAndroidInstanceErrors() {
-        return this.AndroidInstanceErrors;
+    public DescribeDeviceInfoRspData getData() {
+        return this.Data;
     }
 
     /**
-     * Set 安卓实例错误列表
-     * @param AndroidInstanceErrors 安卓实例错误列表
+     * Set 业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAndroidInstanceErrors(AndroidInstanceError [] AndroidInstanceErrors) {
-        this.AndroidInstanceErrors = AndroidInstanceErrors;
+    public void setData(DescribeDeviceInfoRspData Data) {
+        this.Data = Data;
     }
 
     /**
@@ -69,19 +74,16 @@ public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ModifyAndroidInstancesResolutionResponse() {
+    public DescribeDeviceInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyAndroidInstancesResolutionResponse(ModifyAndroidInstancesResolutionResponse source) {
-        if (source.AndroidInstanceErrors != null) {
-            this.AndroidInstanceErrors = new AndroidInstanceError[source.AndroidInstanceErrors.length];
-            for (int i = 0; i < source.AndroidInstanceErrors.length; i++) {
-                this.AndroidInstanceErrors[i] = new AndroidInstanceError(source.AndroidInstanceErrors[i]);
-            }
+    public DescribeDeviceInfoResponse(DescribeDeviceInfoResponse source) {
+        if (source.Data != null) {
+            this.Data = new DescribeDeviceInfoRspData(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -93,7 +95,7 @@ public class ModifyAndroidInstancesResolutionResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "AndroidInstanceErrors.", this.AndroidInstanceErrors);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

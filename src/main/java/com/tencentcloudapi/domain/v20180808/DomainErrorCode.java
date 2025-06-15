@@ -1,5 +1,8 @@
 package com.tencentcloudapi.domain.v20180808;
 public enum DomainErrorCode {
+     /* 操作未授权，请检查CAM策略。 */
+     AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
+     
      /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      

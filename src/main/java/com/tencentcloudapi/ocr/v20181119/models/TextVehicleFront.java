@@ -112,21 +112,21 @@ public class TextVehicleFront extends AbstractModel {
     private String Seal;
 
     /**
-    * 状态
+    * 状态，该字段仅支持电子行驶证返回
     */
     @SerializedName("StateElectronic")
     @Expose
     private String StateElectronic;
 
     /**
-    * 检验有效期
+    * 检验有效期，该字段仅支持电子行驶证返回
     */
     @SerializedName("InspectionValidityTimeElectronic")
     @Expose
     private String InspectionValidityTimeElectronic;
 
     /**
-    * 生成时间
+    * 生成时间，该字段仅支持电子行驶证返回
     */
     @SerializedName("GenerationTimeElectronic")
     @Expose
@@ -353,48 +353,48 @@ public class TextVehicleFront extends AbstractModel {
     }
 
     /**
-     * Get 状态 
-     * @return StateElectronic 状态
+     * Get 状态，该字段仅支持电子行驶证返回 
+     * @return StateElectronic 状态，该字段仅支持电子行驶证返回
      */
     public String getStateElectronic() {
         return this.StateElectronic;
     }
 
     /**
-     * Set 状态
-     * @param StateElectronic 状态
+     * Set 状态，该字段仅支持电子行驶证返回
+     * @param StateElectronic 状态，该字段仅支持电子行驶证返回
      */
     public void setStateElectronic(String StateElectronic) {
         this.StateElectronic = StateElectronic;
     }
 
     /**
-     * Get 检验有效期 
-     * @return InspectionValidityTimeElectronic 检验有效期
+     * Get 检验有效期，该字段仅支持电子行驶证返回 
+     * @return InspectionValidityTimeElectronic 检验有效期，该字段仅支持电子行驶证返回
      */
     public String getInspectionValidityTimeElectronic() {
         return this.InspectionValidityTimeElectronic;
     }
 
     /**
-     * Set 检验有效期
-     * @param InspectionValidityTimeElectronic 检验有效期
+     * Set 检验有效期，该字段仅支持电子行驶证返回
+     * @param InspectionValidityTimeElectronic 检验有效期，该字段仅支持电子行驶证返回
      */
     public void setInspectionValidityTimeElectronic(String InspectionValidityTimeElectronic) {
         this.InspectionValidityTimeElectronic = InspectionValidityTimeElectronic;
     }
 
     /**
-     * Get 生成时间 
-     * @return GenerationTimeElectronic 生成时间
+     * Get 生成时间，该字段仅支持电子行驶证返回 
+     * @return GenerationTimeElectronic 生成时间，该字段仅支持电子行驶证返回
      */
     public String getGenerationTimeElectronic() {
         return this.GenerationTimeElectronic;
     }
 
     /**
-     * Set 生成时间
-     * @param GenerationTimeElectronic 生成时间
+     * Set 生成时间，该字段仅支持电子行驶证返回
+     * @param GenerationTimeElectronic 生成时间，该字段仅支持电子行驶证返回
      */
     public void setGenerationTimeElectronic(String GenerationTimeElectronic) {
         this.GenerationTimeElectronic = GenerationTimeElectronic;

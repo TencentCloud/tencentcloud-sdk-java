@@ -120,6 +120,13 @@ public class CallDetail extends AbstractModel {
     private String SubScene;
 
     /**
+    * 账单明细对应的自定义tag
+    */
+    @SerializedName("BillingTag")
+    @Expose
+    private String BillingTag;
+
+    /**
      * Get 关联ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 关联ID
@@ -359,6 +366,22 @@ public class CallDetail extends AbstractModel {
         this.SubScene = SubScene;
     }
 
+    /**
+     * Get 账单明细对应的自定义tag 
+     * @return BillingTag 账单明细对应的自定义tag
+     */
+    public String getBillingTag() {
+        return this.BillingTag;
+    }
+
+    /**
+     * Set 账单明细对应的自定义tag
+     * @param BillingTag 账单明细对应的自定义tag
+     */
+    public void setBillingTag(String BillingTag) {
+        this.BillingTag = BillingTag;
+    }
+
     public CallDetail() {
     }
 
@@ -403,6 +426,9 @@ public class CallDetail extends AbstractModel {
         if (source.SubScene != null) {
             this.SubScene = new String(source.SubScene);
         }
+        if (source.BillingTag != null) {
+            this.BillingTag = new String(source.BillingTag);
+        }
     }
 
 
@@ -422,6 +448,7 @@ public class CallDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "PageUsage", this.PageUsage);
         this.setParamSimple(map, prefix + "SubScene", this.SubScene);
+        this.setParamSimple(map, prefix + "BillingTag", this.BillingTag);
 
     }
 }

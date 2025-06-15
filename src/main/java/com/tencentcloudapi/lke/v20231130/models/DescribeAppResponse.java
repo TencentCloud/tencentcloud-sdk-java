@@ -115,6 +115,13 @@ public class DescribeAppResponse extends AbstractModel {
     private String AppStatusDesc;
 
     /**
+    * 应用是否在复制中
+    */
+    @SerializedName("IsCopying")
+    @Expose
+    private Boolean IsCopying;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -330,6 +337,22 @@ public class DescribeAppResponse extends AbstractModel {
     }
 
     /**
+     * Get 应用是否在复制中 
+     * @return IsCopying 应用是否在复制中
+     */
+    public Boolean getIsCopying() {
+        return this.IsCopying;
+    }
+
+    /**
+     * Set 应用是否在复制中
+     * @param IsCopying 应用是否在复制中
+     */
+    public void setIsCopying(Boolean IsCopying) {
+        this.IsCopying = IsCopying;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -392,6 +415,9 @@ public class DescribeAppResponse extends AbstractModel {
         if (source.AppStatusDesc != null) {
             this.AppStatusDesc = new String(source.AppStatusDesc);
         }
+        if (source.IsCopying != null) {
+            this.IsCopying = new Boolean(source.IsCopying);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -415,6 +441,7 @@ public class DescribeAppResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AppKey", this.AppKey);
         this.setParamSimple(map, prefix + "AppStatus", this.AppStatus);
         this.setParamSimple(map, prefix + "AppStatusDesc", this.AppStatusDesc);
+        this.setParamSimple(map, prefix + "IsCopying", this.IsCopying);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

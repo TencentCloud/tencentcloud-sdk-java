@@ -50,6 +50,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *创建获取终端进程网络服务信息任务，私有化调用path为：capi/Assets/Device/DescribeDeviceInfo
+     * @param req CreateDeviceTaskRequest
+     * @return CreateDeviceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeviceTaskResponse CreateDeviceTask(CreateDeviceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDeviceTask", CreateDeviceTaskResponse.class);
+    }
+
+    /**
      *创建终端自定义分组，私有化调用path为：/capi/Assets/Device/CreateDeviceVirtualGroup
      * @param req CreateDeviceVirtualGroupRequest
      * @return CreateDeviceVirtualGroupResponse
@@ -102,6 +113,17 @@ public class IoaClient extends AbstractClient{
     public DescribeDeviceHardwareInfoListResponse DescribeDeviceHardwareInfoList(DescribeDeviceHardwareInfoListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDeviceHardwareInfoList", DescribeDeviceHardwareInfoListResponse.class);
+    }
+
+    /**
+     *获取终端进程网络服务信息，私有化调用path为：capi/Assets/Device/DescribeDeviceInfo
+     * @param req DescribeDeviceInfoRequest
+     * @return DescribeDeviceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceInfoResponse DescribeDeviceInfo(DescribeDeviceInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceInfo", DescribeDeviceInfoResponse.class);
     }
 
     /**

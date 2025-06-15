@@ -175,6 +175,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *创建安卓实例访问Token
+     * @param req CreateAndroidInstancesAccessTokenRequest
+     * @return CreateAndroidInstancesAccessTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAndroidInstancesAccessTokenResponse CreateAndroidInstancesAccessToken(CreateAndroidInstancesAccessTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAndroidInstancesAccessToken", CreateAndroidInstancesAccessTokenResponse.class);
+    }
+
+    /**
      *安卓实例截图
      * @param req CreateAndroidInstancesScreenshotRequest
      * @return CreateAndroidInstancesScreenshotResponse
@@ -227,6 +238,17 @@ public class GsClient extends AbstractClient{
     public DeleteAndroidAppVersionResponse DeleteAndroidAppVersion(DeleteAndroidAppVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAndroidAppVersion", DeleteAndroidAppVersionResponse.class);
+    }
+
+    /**
+     *删除安卓实例备份文件
+     * @param req DeleteAndroidInstanceBackupFilesRequest
+     * @return DeleteAndroidInstanceBackupFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAndroidInstanceBackupFilesResponse DeleteAndroidInstanceBackupFiles(DeleteAndroidInstanceBackupFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAndroidInstanceBackupFiles", DeleteAndroidInstanceBackupFilesResponse.class);
     }
 
     /**
@@ -604,6 +626,17 @@ public class GsClient extends AbstractClient{
     public RebootAndroidInstancesResponse RebootAndroidInstances(RebootAndroidInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RebootAndroidInstances", RebootAndroidInstancesResponse.class);
+    }
+
+    /**
+     *续期安卓实例访问Token
+     * @param req RenewAndroidInstancesAccessTokenRequest
+     * @return RenewAndroidInstancesAccessTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewAndroidInstancesAccessTokenResponse RenewAndroidInstancesAccessToken(RenewAndroidInstancesAccessTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewAndroidInstancesAccessToken", RenewAndroidInstancesAccessTokenResponse.class);
     }
 
     /**
