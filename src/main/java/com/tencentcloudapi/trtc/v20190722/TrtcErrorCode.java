@@ -147,6 +147,9 @@ public enum TrtcErrorCode {
      /* invalid sdkAppId */
      INVALIDPARAMETER_INVALIDSDKAPPID("InvalidParameter.InvalidSdkAppId"),
      
+     /* VoicePrintIdList 不能为空，也不能过长。 */
+     INVALIDPARAMETER_INVALIDVOICEPRINTIDLIST("InvalidParameter.InvalidVoicePrintIdList"),
+     
      /* 大画面居右显示参数错误。 */
      INVALIDPARAMETER_MAINVIDEORIGHTALIGN("InvalidParameter.MainVideoRightAlign"),
      
@@ -282,8 +285,8 @@ public enum TrtcErrorCode {
      /* 缺少endTS_s参数。 */
      MISSINGPARAMETER_ENDTS("MissingParameter.EndTs"),
      
-     /* 缺少VoicePrintIdList 参数。 */
-     MISSINGPARAMETER_MISSINGVOICEPRINTIDLIST("MissingParameter.MissingVoicePrintIdList"),
+     /* 更新声纹时,Audio,AudioName,AudioMetaInfo不能都为空。 */
+     MISSINGPARAMETER_MISSINGVOICEPRINTUPDATEPARAMS("MissingParameter.MissingVoicePrintUpdateParams"),
      
      /* 缺少OutputParams参数。 */
      MISSINGPARAMETER_OUTPUTPARAMS("MissingParameter.OutputParams"),

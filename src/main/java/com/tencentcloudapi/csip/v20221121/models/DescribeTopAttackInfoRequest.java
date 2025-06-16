@@ -24,6 +24,27 @@ import java.util.HashMap;
 public class DescribeTopAttackInfoRequest extends AbstractModel {
 
     /**
+    * 起始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 结束时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * 1:攻击类型 2:攻击者
+    */
+    @SerializedName("QueryType")
+    @Expose
+    private Long QueryType;
+
+    /**
     * 集团账号的成员id
     */
     @SerializedName("MemberId")
@@ -36,6 +57,68 @@ public class DescribeTopAttackInfoRequest extends AbstractModel {
     @SerializedName("OperatedMemberId")
     @Expose
     private String [] OperatedMemberId;
+
+    /**
+    * 资产名称
+    */
+    @SerializedName("AssetName")
+    @Expose
+    private String AssetName;
+
+    /**
+    * 0: 默认全部 1:资产ID 2:域名
+    */
+    @SerializedName("AssetType")
+    @Expose
+    private Long AssetType;
+
+    /**
+     * Get 起始时间 
+     * @return StartTime 起始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 起始时间
+     * @param StartTime 起始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 结束时间 
+     * @return EndTime 结束时间
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间
+     * @param EndTime 结束时间
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 1:攻击类型 2:攻击者 
+     * @return QueryType 1:攻击类型 2:攻击者
+     */
+    public Long getQueryType() {
+        return this.QueryType;
+    }
+
+    /**
+     * Set 1:攻击类型 2:攻击者
+     * @param QueryType 1:攻击类型 2:攻击者
+     */
+    public void setQueryType(Long QueryType) {
+        this.QueryType = QueryType;
+    }
 
     /**
      * Get 集团账号的成员id 
@@ -69,6 +152,38 @@ public class DescribeTopAttackInfoRequest extends AbstractModel {
         this.OperatedMemberId = OperatedMemberId;
     }
 
+    /**
+     * Get 资产名称 
+     * @return AssetName 资产名称
+     */
+    public String getAssetName() {
+        return this.AssetName;
+    }
+
+    /**
+     * Set 资产名称
+     * @param AssetName 资产名称
+     */
+    public void setAssetName(String AssetName) {
+        this.AssetName = AssetName;
+    }
+
+    /**
+     * Get 0: 默认全部 1:资产ID 2:域名 
+     * @return AssetType 0: 默认全部 1:资产ID 2:域名
+     */
+    public Long getAssetType() {
+        return this.AssetType;
+    }
+
+    /**
+     * Set 0: 默认全部 1:资产ID 2:域名
+     * @param AssetType 0: 默认全部 1:资产ID 2:域名
+     */
+    public void setAssetType(Long AssetType) {
+        this.AssetType = AssetType;
+    }
+
     public DescribeTopAttackInfoRequest() {
     }
 
@@ -77,6 +192,15 @@ public class DescribeTopAttackInfoRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeTopAttackInfoRequest(DescribeTopAttackInfoRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.QueryType != null) {
+            this.QueryType = new Long(source.QueryType);
+        }
         if (source.MemberId != null) {
             this.MemberId = new String[source.MemberId.length];
             for (int i = 0; i < source.MemberId.length; i++) {
@@ -89,6 +213,12 @@ public class DescribeTopAttackInfoRequest extends AbstractModel {
                 this.OperatedMemberId[i] = new String(source.OperatedMemberId[i]);
             }
         }
+        if (source.AssetName != null) {
+            this.AssetName = new String(source.AssetName);
+        }
+        if (source.AssetType != null) {
+            this.AssetType = new Long(source.AssetType);
+        }
     }
 
 
@@ -96,8 +226,13 @@ public class DescribeTopAttackInfoRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "QueryType", this.QueryType);
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArraySimple(map, prefix + "OperatedMemberId.", this.OperatedMemberId);
+        this.setParamSimple(map, prefix + "AssetName", this.AssetName);
+        this.setParamSimple(map, prefix + "AssetType", this.AssetType);
 
     }
 }

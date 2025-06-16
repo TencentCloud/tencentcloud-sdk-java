@@ -113,7 +113,7 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
     private String NotifyType;
 
     /**
-    * 批量签署的合同流程ID数组。
+    * 批量签署的合同流程ID数组，<font color="red">此参数必传。</font>
 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
     */
     @SerializedName("FlowIds")
@@ -159,7 +159,7 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
 注: 
 1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
-3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必须用户手动点击完成按钮（微信的限制）</font> 
     */
     @SerializedName("AutoJumpBack")
     @Expose
@@ -183,7 +183,8 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
     private Boolean CanBatchReject;
 
     /**
-    * 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。`
+    * 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>
+注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果对印章/签名控件有限制要求，需要保证所有印章/签名签署控件限制要求(印章id或印章/签名类型限制)一致，否则无法使用此功能。`
     */
     @SerializedName("CanSkipReadFlow")
     @Expose
@@ -450,9 +451,9 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 批量签署的合同流程ID数组。
+     * Get 批量签署的合同流程ID数组，<font color="red">此参数必传。</font>
 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。` 
-     * @return FlowIds 批量签署的合同流程ID数组。
+     * @return FlowIds 批量签署的合同流程ID数组，<font color="red">此参数必传。</font>
 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
      */
     public String [] getFlowIds() {
@@ -460,9 +461,9 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
     }
 
     /**
-     * Set 批量签署的合同流程ID数组。
+     * Set 批量签署的合同流程ID数组，<font color="red">此参数必传。</font>
 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
-     * @param FlowIds 批量签署的合同流程ID数组。
+     * @param FlowIds 批量签署的合同流程ID数组，<font color="red">此参数必传。</font>
 注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
      */
     public void setFlowIds(String [] FlowIds) {
@@ -568,14 +569,14 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
 注: 
 1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
-3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font>  
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必须用户手动点击完成按钮（微信的限制）</font>  
      * @return AutoJumpBack 签署完成后是否自动回跳
 <ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
 
 注: 
 1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
-3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必须用户手动点击完成按钮（微信的限制）</font> 
      */
     public Boolean getAutoJumpBack() {
         return this.AutoJumpBack;
@@ -588,14 +589,14 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
 注: 
 1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
-3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必须用户手动点击完成按钮（微信的限制）</font> 
      * @param AutoJumpBack 签署完成后是否自动回跳
 <ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
 
 注: 
 1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
-3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必须用户手动点击完成按钮（微信的限制）</font> 
      */
     public void setAutoJumpBack(Boolean AutoJumpBack) {
         this.AutoJumpBack = AutoJumpBack;
@@ -646,16 +647,20 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。` 
-     * @return CanSkipReadFlow 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。`
+     * Get 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>
+注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果对印章/签名控件有限制要求，需要保证所有印章/签名签署控件限制要求(印章id或印章/签名类型限制)一致，否则无法使用此功能。` 
+     * @return CanSkipReadFlow 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>
+注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果对印章/签名控件有限制要求，需要保证所有印章/签名签署控件限制要求(印章id或印章/签名类型限制)一致，否则无法使用此功能。`
      */
     public Boolean getCanSkipReadFlow() {
         return this.CanSkipReadFlow;
     }
 
     /**
-     * Set 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。`
-     * @param CanSkipReadFlow 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果有签名控件，则会使用用户首次选择的签名类型签署所有含有签名控件的合同。`
+     * Set 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>
+注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果对印章/签名控件有限制要求，需要保证所有印章/签名签署控件限制要求(印章id或印章/签名类型限制)一致，否则无法使用此功能。`
+     * @param CanSkipReadFlow 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>
+注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果对印章/签名控件有限制要求，需要保证所有印章/签名签署控件限制要求(印章id或印章/签名类型限制)一致，否则无法使用此功能。`
      */
     public void setCanSkipReadFlow(Boolean CanSkipReadFlow) {
         this.CanSkipReadFlow = CanSkipReadFlow;

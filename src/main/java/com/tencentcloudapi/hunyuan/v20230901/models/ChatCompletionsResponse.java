@@ -100,6 +100,13 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     private String [] RecommendedQuestions;
 
     /**
+    * AI搜索返回状态
+    */
+    @SerializedName("Processes")
+    @Expose
+    private Processes Processes;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
     */
     @SerializedName("RequestId")
@@ -295,6 +302,22 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     }
 
     /**
+     * Get AI搜索返回状态 
+     * @return Processes AI搜索返回状态
+     */
+    public Processes getProcesses() {
+        return this.Processes;
+    }
+
+    /**
+     * Set AI搜索返回状态
+     * @param Processes AI搜索返回状态
+     */
+    public void setProcesses(Processes Processes) {
+        this.Processes = Processes;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */
@@ -357,6 +380,9 @@ public class ChatCompletionsResponse extends SSEResponseModel {
                 this.RecommendedQuestions[i] = new String(source.RecommendedQuestions[i]);
             }
         }
+        if (source.Processes != null) {
+            this.Processes = new Processes(source.Processes);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -377,6 +403,7 @@ public class ChatCompletionsResponse extends SSEResponseModel {
         this.setParamObj(map, prefix + "SearchInfo.", this.SearchInfo);
         this.setParamArrayObj(map, prefix + "Replaces.", this.Replaces);
         this.setParamArraySimple(map, prefix + "RecommendedQuestions.", this.RecommendedQuestions);
+        this.setParamObj(map, prefix + "Processes.", this.Processes);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

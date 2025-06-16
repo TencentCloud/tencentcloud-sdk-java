@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.csip.v20221121.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OperateTemplateResponse extends AbstractModel {
+public class DescribeExposuresResponse extends AbstractModel {
 
     /**
-    * 模板ID，为32位字符串，模板复制新建时返回
+    * 互联网暴露资产数量
     */
-    @SerializedName("TemplateId")
+    @SerializedName("TotalCount")
     @Expose
-    private String TemplateId;
+    private Long TotalCount;
 
     /**
-    * 模板名称，模板复制新建时返回
+    * 互联网暴露资产列表
     */
-    @SerializedName("TemplateName")
+    @SerializedName("ExposeList")
     @Expose
-    private String TemplateName;
+    private ExposesItem [] ExposeList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +45,35 @@ public class OperateTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模板ID，为32位字符串，模板复制新建时返回 
-     * @return TemplateId 模板ID，为32位字符串，模板复制新建时返回
+     * Get 互联网暴露资产数量 
+     * @return TotalCount 互联网暴露资产数量
      */
-    public String getTemplateId() {
-        return this.TemplateId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 模板ID，为32位字符串，模板复制新建时返回
-     * @param TemplateId 模板ID，为32位字符串，模板复制新建时返回
+     * Set 互联网暴露资产数量
+     * @param TotalCount 互联网暴露资产数量
      */
-    public void setTemplateId(String TemplateId) {
-        this.TemplateId = TemplateId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 模板名称，模板复制新建时返回 
-     * @return TemplateName 模板名称，模板复制新建时返回
+     * Get 互联网暴露资产列表 
+     * @return ExposeList 互联网暴露资产列表
      */
-    public String getTemplateName() {
-        return this.TemplateName;
+    public ExposesItem [] getExposeList() {
+        return this.ExposeList;
     }
 
     /**
-     * Set 模板名称，模板复制新建时返回
-     * @param TemplateName 模板名称，模板复制新建时返回
+     * Set 互联网暴露资产列表
+     * @param ExposeList 互联网暴露资产列表
      */
-    public void setTemplateName(String TemplateName) {
-        this.TemplateName = TemplateName;
+    public void setExposeList(ExposesItem [] ExposeList) {
+        this.ExposeList = ExposeList;
     }
 
     /**
@@ -92,19 +92,22 @@ public class OperateTemplateResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public OperateTemplateResponse() {
+    public DescribeExposuresResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OperateTemplateResponse(OperateTemplateResponse source) {
-        if (source.TemplateId != null) {
-            this.TemplateId = new String(source.TemplateId);
+    public DescribeExposuresResponse(DescribeExposuresResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.TemplateName != null) {
-            this.TemplateName = new String(source.TemplateName);
+        if (source.ExposeList != null) {
+            this.ExposeList = new ExposesItem[source.ExposeList.length];
+            for (int i = 0; i < source.ExposeList.length; i++) {
+                this.ExposeList[i] = new ExposesItem(source.ExposeList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +119,8 @@ public class OperateTemplateResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
-        this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "ExposeList.", this.ExposeList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

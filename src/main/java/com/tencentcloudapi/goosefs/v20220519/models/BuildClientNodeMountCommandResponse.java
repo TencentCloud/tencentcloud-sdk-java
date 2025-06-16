@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.goosefs.v20220519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OperateTemplateResponse extends AbstractModel {
+public class BuildClientNodeMountCommandResponse extends AbstractModel {
 
     /**
-    * 模板ID，为32位字符串，模板复制新建时返回
+    * 挂载命令
     */
-    @SerializedName("TemplateId")
+    @SerializedName("Command")
     @Expose
-    private String TemplateId;
-
-    /**
-    * 模板名称，模板复制新建时返回
-    */
-    @SerializedName("TemplateName")
-    @Expose
-    private String TemplateName;
+    private String Command;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class OperateTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模板ID，为32位字符串，模板复制新建时返回 
-     * @return TemplateId 模板ID，为32位字符串，模板复制新建时返回
+     * Get 挂载命令 
+     * @return Command 挂载命令
      */
-    public String getTemplateId() {
-        return this.TemplateId;
+    public String getCommand() {
+        return this.Command;
     }
 
     /**
-     * Set 模板ID，为32位字符串，模板复制新建时返回
-     * @param TemplateId 模板ID，为32位字符串，模板复制新建时返回
+     * Set 挂载命令
+     * @param Command 挂载命令
      */
-    public void setTemplateId(String TemplateId) {
-        this.TemplateId = TemplateId;
-    }
-
-    /**
-     * Get 模板名称，模板复制新建时返回 
-     * @return TemplateName 模板名称，模板复制新建时返回
-     */
-    public String getTemplateName() {
-        return this.TemplateName;
-    }
-
-    /**
-     * Set 模板名称，模板复制新建时返回
-     * @param TemplateName 模板名称，模板复制新建时返回
-     */
-    public void setTemplateName(String TemplateName) {
-        this.TemplateName = TemplateName;
+    public void setCommand(String Command) {
+        this.Command = Command;
     }
 
     /**
@@ -92,19 +69,16 @@ public class OperateTemplateResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public OperateTemplateResponse() {
+    public BuildClientNodeMountCommandResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OperateTemplateResponse(OperateTemplateResponse source) {
-        if (source.TemplateId != null) {
-            this.TemplateId = new String(source.TemplateId);
-        }
-        if (source.TemplateName != null) {
-            this.TemplateName = new String(source.TemplateName);
+    public BuildClientNodeMountCommandResponse(BuildClientNodeMountCommandResponse source) {
+        if (source.Command != null) {
+            this.Command = new String(source.Command);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +90,7 @@ public class OperateTemplateResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
-        this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
+        this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

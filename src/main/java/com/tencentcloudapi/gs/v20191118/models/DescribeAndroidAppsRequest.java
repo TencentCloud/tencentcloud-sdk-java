@@ -45,7 +45,7 @@ public class DescribeAndroidAppsRequest extends AbstractModel {
     private String [] AndroidAppIds;
 
     /**
-    * 过滤条件
+    * 过滤条件，支持过滤的字段有：UserId
     */
     @SerializedName("Filters")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeAndroidAppsRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
+     * Get 过滤条件，支持过滤的字段有：UserId 
+     * @return Filters 过滤条件，支持过滤的字段有：UserId
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
+     * Set 过滤条件，支持过滤的字段有：UserId
+     * @param Filters 过滤条件，支持过滤的字段有：UserId
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -204,6 +204,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *互联网暴露资产列表
+     * @param req DescribeExposuresRequest
+     * @return DescribeExposuresResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExposuresResponse DescribeExposures(DescribeExposuresRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExposures", DescribeExposuresResponse.class);
+    }
+
+    /**
      *获取网关列表
      * @param req DescribeGatewayAssetsRequest
      * @return DescribeGatewayAssetsResponse

@@ -83,6 +83,17 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *生成客户端的挂载命令
+     * @param req BuildClientNodeMountCommandRequest
+     * @return BuildClientNodeMountCommandResponse
+     * @throws TencentCloudSDKException
+     */
+    public BuildClientNodeMountCommandResponse BuildClientNodeMountCommand(BuildClientNodeMountCommandRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BuildClientNodeMountCommand", BuildClientNodeMountCommandResponse.class);
+    }
+
+    /**
      *创建数据流通任务,包括从将文件系统的数据上传到存储桶下, 以及从存储桶下载到文件系统里。
      * @param req CreateDataRepositoryTaskRequest
      * @return CreateDataRepositoryTaskResponse

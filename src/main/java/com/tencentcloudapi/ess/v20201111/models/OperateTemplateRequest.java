@@ -60,6 +60,14 @@ public class OperateTemplateRequest extends AbstractModel {
     private Agent Agent;
 
     /**
+    * 模板名称，长度不超过64字符。<br>
+模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
+    */
+    @SerializedName("TemplateName")
+    @Expose
+    private String TemplateName;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -155,6 +163,26 @@ public class OperateTemplateRequest extends AbstractModel {
         this.Agent = Agent;
     }
 
+    /**
+     * Get 模板名称，长度不超过64字符。<br>
+模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。 
+     * @return TemplateName 模板名称，长度不超过64字符。<br>
+模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
+     */
+    public String getTemplateName() {
+        return this.TemplateName;
+    }
+
+    /**
+     * Set 模板名称，长度不超过64字符。<br>
+模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
+     * @param TemplateName 模板名称，长度不超过64字符。<br>
+模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
+     */
+    public void setTemplateName(String TemplateName) {
+        this.TemplateName = TemplateName;
+    }
+
     public OperateTemplateRequest() {
     }
 
@@ -175,6 +203,9 @@ public class OperateTemplateRequest extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
+        }
     }
 
 
@@ -186,6 +217,7 @@ public class OperateTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "OperateType", this.OperateType);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
 
     }
 }

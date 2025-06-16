@@ -123,6 +123,13 @@ public class AgentConfig extends AbstractModel {
     private VoicePrint VoicePrint;
 
     /**
+    * 语义断句检测
+    */
+    @SerializedName("TurnDetection")
+    @Expose
+    private TurnDetection TurnDetection;
+
+    /**
      * Get 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。 
      * @return UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
      */
@@ -362,6 +369,22 @@ public class AgentConfig extends AbstractModel {
         this.VoicePrint = VoicePrint;
     }
 
+    /**
+     * Get 语义断句检测 
+     * @return TurnDetection 语义断句检测
+     */
+    public TurnDetection getTurnDetection() {
+        return this.TurnDetection;
+    }
+
+    /**
+     * Set 语义断句检测
+     * @param TurnDetection 语义断句检测
+     */
+    public void setTurnDetection(TurnDetection TurnDetection) {
+        this.TurnDetection = TurnDetection;
+    }
+
     public AgentConfig() {
     }
 
@@ -409,6 +432,9 @@ public class AgentConfig extends AbstractModel {
         if (source.VoicePrint != null) {
             this.VoicePrint = new VoicePrint(source.VoicePrint);
         }
+        if (source.TurnDetection != null) {
+            this.TurnDetection = new TurnDetection(source.TurnDetection);
+        }
     }
 
 
@@ -429,6 +455,7 @@ public class AgentConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "FilterBracketsContent", this.FilterBracketsContent);
         this.setParamObj(map, prefix + "AmbientSound.", this.AmbientSound);
         this.setParamObj(map, prefix + "VoicePrint.", this.VoicePrint);
+        this.setParamObj(map, prefix + "TurnDetection.", this.TurnDetection);
 
     }
 }

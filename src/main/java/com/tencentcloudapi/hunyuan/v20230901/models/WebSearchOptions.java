@@ -38,6 +38,13 @@ public class WebSearchOptions extends AbstractModel {
     private UserLocation UserLocation;
 
     /**
+    * 打开开关，会返回搜索状态
+    */
+    @SerializedName("Processes")
+    @Expose
+    private Boolean Processes;
+
+    /**
      * Get 表示用户注入的知识信息 
      * @return Knowledge 表示用户注入的知识信息
      */
@@ -69,6 +76,22 @@ public class WebSearchOptions extends AbstractModel {
         this.UserLocation = UserLocation;
     }
 
+    /**
+     * Get 打开开关，会返回搜索状态 
+     * @return Processes 打开开关，会返回搜索状态
+     */
+    public Boolean getProcesses() {
+        return this.Processes;
+    }
+
+    /**
+     * Set 打开开关，会返回搜索状态
+     * @param Processes 打开开关，会返回搜索状态
+     */
+    public void setProcesses(Boolean Processes) {
+        this.Processes = Processes;
+    }
+
     public WebSearchOptions() {
     }
 
@@ -86,6 +109,9 @@ public class WebSearchOptions extends AbstractModel {
         if (source.UserLocation != null) {
             this.UserLocation = new UserLocation(source.UserLocation);
         }
+        if (source.Processes != null) {
+            this.Processes = new Boolean(source.Processes);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class WebSearchOptions extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Knowledge.", this.Knowledge);
         this.setParamObj(map, prefix + "UserLocation.", this.UserLocation);
+        this.setParamSimple(map, prefix + "Processes", this.Processes);
 
     }
 }

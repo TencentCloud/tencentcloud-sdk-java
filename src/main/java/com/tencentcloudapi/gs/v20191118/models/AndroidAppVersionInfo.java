@@ -68,6 +68,13 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
     private String CleanupMode;
 
     /**
+    * 安卓应用版本名称
+    */
+    @SerializedName("AndroidAppVersionName")
+    @Expose
+    private String AndroidAppVersionName;
+
+    /**
      * Get 安卓应用版本 
      * @return AndroidAppVersion 安卓应用版本
      */
@@ -171,6 +178,22 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         this.CleanupMode = CleanupMode;
     }
 
+    /**
+     * Get 安卓应用版本名称 
+     * @return AndroidAppVersionName 安卓应用版本名称
+     */
+    public String getAndroidAppVersionName() {
+        return this.AndroidAppVersionName;
+    }
+
+    /**
+     * Set 安卓应用版本名称
+     * @param AndroidAppVersionName 安卓应用版本名称
+     */
+    public void setAndroidAppVersionName(String AndroidAppVersionName) {
+        this.AndroidAppVersionName = AndroidAppVersionName;
+    }
+
     public AndroidAppVersionInfo() {
     }
 
@@ -197,6 +220,9 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         if (source.CleanupMode != null) {
             this.CleanupMode = new String(source.CleanupMode);
         }
+        if (source.AndroidAppVersionName != null) {
+            this.AndroidAppVersionName = new String(source.AndroidAppVersionName);
+        }
     }
 
 
@@ -210,6 +236,7 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "UninstallCommand", this.UninstallCommand);
         this.setParamSimple(map, prefix + "CleanupMode", this.CleanupMode);
+        this.setParamSimple(map, prefix + "AndroidAppVersionName", this.AndroidAppVersionName);
 
     }
 }
