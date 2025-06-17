@@ -1467,32 +1467,6 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *本接口支持识别并提取制式卡证、票据、表单等结构化场景的字段信息。无需任何配置，灵活高效。适用于各类结构化信息录入场景。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
-
-默认接口请求频率限制：5次/秒。
-     * @param req SmartStructuralOCRV2Request
-     * @return SmartStructuralOCRV2Response
-     * @throws TencentCloudSDKException
-     */
-    public SmartStructuralOCRV2Response SmartStructuralOCRV2(SmartStructuralOCRV2Request req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SmartStructuralOCRV2", SmartStructuralOCRV2Response.class);
-    }
-
-    /**
-     *本接口支持识别并提取场景复杂、版式多等结构化场景的字段信息。重点场景包括：金融、医疗、交通、出行、保险。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
-
-默认接口请求频率限制：5次/秒。
-     * @param req SmartStructuralProRequest
-     * @return SmartStructuralProResponse
-     * @throws TencentCloudSDKException
-     */
-    public SmartStructuralProResponse SmartStructuralPro(SmartStructuralProRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SmartStructuralPro", SmartStructuralProResponse.class);
-    }
-
-    /**
      *<b>此接口为表格识别的旧版本服务，不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/49525">新版表格识别</a>。</b>
 
 本接口支持图片内表格文档的检测和识别，返回每个单元格的文字内容，支持将识别结果保存为 Excel 格式。

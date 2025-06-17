@@ -48,6 +48,14 @@ public class ImageTaskInput extends AbstractModel {
     private ImageEraseConfig EraseConfig;
 
     /**
+    * 盲水印配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BlindWatermarkConfig")
+    @Expose
+    private BlindWatermarkConfig BlindWatermarkConfig;
+
+    /**
      * Get 图片编码配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EncodeConfig 图片编码配置。
@@ -107,6 +115,26 @@ public class ImageTaskInput extends AbstractModel {
         this.EraseConfig = EraseConfig;
     }
 
+    /**
+     * Get 盲水印配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BlindWatermarkConfig 盲水印配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlindWatermarkConfig getBlindWatermarkConfig() {
+        return this.BlindWatermarkConfig;
+    }
+
+    /**
+     * Set 盲水印配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlindWatermarkConfig 盲水印配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBlindWatermarkConfig(BlindWatermarkConfig BlindWatermarkConfig) {
+        this.BlindWatermarkConfig = BlindWatermarkConfig;
+    }
+
     public ImageTaskInput() {
     }
 
@@ -124,6 +152,9 @@ public class ImageTaskInput extends AbstractModel {
         if (source.EraseConfig != null) {
             this.EraseConfig = new ImageEraseConfig(source.EraseConfig);
         }
+        if (source.BlindWatermarkConfig != null) {
+            this.BlindWatermarkConfig = new BlindWatermarkConfig(source.BlindWatermarkConfig);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class ImageTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         this.setParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
+        this.setParamObj(map, prefix + "BlindWatermarkConfig.", this.BlindWatermarkConfig);
 
     }
 }

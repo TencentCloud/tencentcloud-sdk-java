@@ -31,7 +31,7 @@ public class RateMsgRecordRequest extends AbstractModel {
     private String BotAppKey;
 
     /**
-    * 消息ID
+    * 消息ID 【大模型回复答案的RecordID】
     */
     @SerializedName("RecordId")
     @Expose
@@ -68,16 +68,16 @@ public class RateMsgRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 消息ID 
-     * @return RecordId 消息ID
+     * Get 消息ID 【大模型回复答案的RecordID】 
+     * @return RecordId 消息ID 【大模型回复答案的RecordID】
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set 消息ID
-     * @param RecordId 消息ID
+     * Set 消息ID 【大模型回复答案的RecordID】
+     * @param RecordId 消息ID 【大模型回复答案的RecordID】
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;

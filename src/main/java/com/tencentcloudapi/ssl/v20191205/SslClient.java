@@ -728,6 +728,17 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *更新证书内容（证书ID不变）并更新关联的云资源，本接口为异步接口， 调用之后DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
+     * @param req UploadUpdateCertificateInstanceRequest
+     * @return UploadUpdateCertificateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadUpdateCertificateInstanceResponse UploadUpdateCertificateInstance(UploadUpdateCertificateInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadUpdateCertificateInstance", UploadUpdateCertificateInstanceResponse.class);
+    }
+
+    /**
      *重新核验管理人
      * @param req VerifyManagerRequest
      * @return VerifyManagerResponse
