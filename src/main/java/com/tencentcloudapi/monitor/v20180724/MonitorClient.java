@@ -376,6 +376,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *删除告警屏蔽规则
+     * @param req DeleteAlarmShieldsRequest
+     * @return DeleteAlarmShieldsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAlarmShieldsResponse DeleteAlarmShields(DeleteAlarmShieldsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAlarmShields", DeleteAlarmShieldsResponse.class);
+    }
+
+    /**
      *批量删除 Prometheus 报警规则
      * @param req DeleteAlertRulesRequest
      * @return DeleteAlertRulesResponse

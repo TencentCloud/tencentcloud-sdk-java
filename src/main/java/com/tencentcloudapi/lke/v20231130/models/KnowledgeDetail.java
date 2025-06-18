@@ -56,6 +56,14 @@ public class KnowledgeDetail extends AbstractModel {
     private String ExceedCharSize;
 
     /**
+    * 是否共享知识库类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSharedKnowledge")
+    @Expose
+    private Boolean IsSharedKnowledge;
+
+    /**
      * Get 应用名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppName 应用名称
@@ -135,6 +143,26 @@ public class KnowledgeDetail extends AbstractModel {
         this.ExceedCharSize = ExceedCharSize;
     }
 
+    /**
+     * Get 是否共享知识库类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSharedKnowledge 是否共享知识库类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsSharedKnowledge() {
+        return this.IsSharedKnowledge;
+    }
+
+    /**
+     * Set 是否共享知识库类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSharedKnowledge 是否共享知识库类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSharedKnowledge(Boolean IsSharedKnowledge) {
+        this.IsSharedKnowledge = IsSharedKnowledge;
+    }
+
     public KnowledgeDetail() {
     }
 
@@ -155,6 +183,9 @@ public class KnowledgeDetail extends AbstractModel {
         if (source.ExceedCharSize != null) {
             this.ExceedCharSize = new String(source.ExceedCharSize);
         }
+        if (source.IsSharedKnowledge != null) {
+            this.IsSharedKnowledge = new Boolean(source.IsSharedKnowledge);
+        }
     }
 
 
@@ -166,6 +197,7 @@ public class KnowledgeDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "UsedCharSize", this.UsedCharSize);
         this.setParamSimple(map, prefix + "Proportion", this.Proportion);
         this.setParamSimple(map, prefix + "ExceedCharSize", this.ExceedCharSize);
+        this.setParamSimple(map, prefix + "IsSharedKnowledge", this.IsSharedKnowledge);
 
     }
 }

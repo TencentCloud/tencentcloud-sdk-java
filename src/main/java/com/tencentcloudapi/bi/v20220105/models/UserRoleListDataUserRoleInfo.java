@@ -204,6 +204,14 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private Long EmailActivationStatus;
 
     /**
+    * 用户组信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserGroupList")
+    @Expose
+    private UserGroupDTO [] UserGroupList;
+
+    /**
      * Get 业务ID 
      * @return Id 业务ID
      */
@@ -647,6 +655,26 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         this.EmailActivationStatus = EmailActivationStatus;
     }
 
+    /**
+     * Get 用户组信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserGroupList 用户组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UserGroupDTO [] getUserGroupList() {
+        return this.UserGroupList;
+    }
+
+    /**
+     * Set 用户组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserGroupList 用户组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserGroupList(UserGroupDTO [] UserGroupList) {
+        this.UserGroupList = UserGroupList;
+    }
+
     public UserRoleListDataUserRoleInfo() {
     }
 
@@ -730,6 +758,12 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         if (source.EmailActivationStatus != null) {
             this.EmailActivationStatus = new Long(source.EmailActivationStatus);
         }
+        if (source.UserGroupList != null) {
+            this.UserGroupList = new UserGroupDTO[source.UserGroupList.length];
+            for (int i = 0; i < source.UserGroupList.length; i++) {
+                this.UserGroupList[i] = new UserGroupDTO(source.UserGroupList[i]);
+            }
+        }
     }
 
 
@@ -760,6 +794,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
         this.setParamSimple(map, prefix + "AppOpenUserId", this.AppOpenUserId);
         this.setParamSimple(map, prefix + "EmailActivationStatus", this.EmailActivationStatus);
+        this.setParamArrayObj(map, prefix + "UserGroupList.", this.UserGroupList);
 
     }
 }

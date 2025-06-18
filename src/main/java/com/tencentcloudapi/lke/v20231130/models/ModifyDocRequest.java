@@ -45,7 +45,7 @@ public class ModifyDocRequest extends AbstractModel {
     private Boolean IsRefer;
 
     /**
-    * 标签适用范围 1：全部，2：按条件
+    * 标签适用范围，需要传参为1
     */
     @SerializedName("AttrRange")
     @Expose
@@ -109,6 +109,13 @@ public class ModifyDocRequest extends AbstractModel {
     private String CateBizId;
 
     /**
+    * 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+    */
+    @SerializedName("IsDownload")
+    @Expose
+    private Boolean IsDownload;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -157,16 +164,16 @@ public class ModifyDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 标签适用范围 1：全部，2：按条件 
-     * @return AttrRange 标签适用范围 1：全部，2：按条件
+     * Get 标签适用范围，需要传参为1 
+     * @return AttrRange 标签适用范围，需要传参为1
      */
     public Long getAttrRange() {
         return this.AttrRange;
     }
 
     /**
-     * Set 标签适用范围 1：全部，2：按条件
-     * @param AttrRange 标签适用范围 1：全部，2：按条件
+     * Set 标签适用范围，需要传参为1
+     * @param AttrRange 标签适用范围，需要传参为1
      */
     public void setAttrRange(Long AttrRange) {
         this.AttrRange = AttrRange;
@@ -304,6 +311,22 @@ public class ModifyDocRequest extends AbstractModel {
         this.CateBizId = CateBizId;
     }
 
+    /**
+     * Get 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义 
+     * @return IsDownload 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+     */
+    public Boolean getIsDownload() {
+        return this.IsDownload;
+    }
+
+    /**
+     * Set 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+     * @param IsDownload 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+     */
+    public void setIsDownload(Boolean IsDownload) {
+        this.IsDownload = IsDownload;
+    }
+
     public ModifyDocRequest() {
     }
 
@@ -351,6 +374,9 @@ public class ModifyDocRequest extends AbstractModel {
         if (source.CateBizId != null) {
             this.CateBizId = new String(source.CateBizId);
         }
+        if (source.IsDownload != null) {
+            this.IsDownload = new Boolean(source.IsDownload);
+        }
     }
 
 
@@ -370,6 +396,7 @@ public class ModifyDocRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
+        this.setParamSimple(map, prefix + "IsDownload", this.IsDownload);
 
     }
 }

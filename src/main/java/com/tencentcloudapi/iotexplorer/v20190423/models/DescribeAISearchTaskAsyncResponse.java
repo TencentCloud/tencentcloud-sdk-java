@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfs.v20190719.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,35 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyFileSystemAutoScaleUpRuleResponse extends AbstractModel {
+public class DescribeAISearchTaskAsyncResponse extends AbstractModel {
 
     /**
-    * 文件系统 ID
-    */
-    @SerializedName("FileSystemId")
-    @Expose
-    private String FileSystemId;
-
-    /**
-    * 规则状态 0：关闭，1：开启
+    * 状态。0-初始状态；1-正在处理；2-处理失败；3-成功
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 扩容阈值，范围[10-90]
+    * 任务处理结果数据
     */
-    @SerializedName("ScaleUpThreshold")
+    @SerializedName("Data")
     @Expose
-    private Long ScaleUpThreshold;
-
-    /**
-    * 扩容后达到阈值，范围[1-90]
-    */
-    @SerializedName("TargetThreshold")
-    @Expose
-    private Long TargetThreshold;
+    private AISearchInfo Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,67 +45,35 @@ public class ModifyFileSystemAutoScaleUpRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件系统 ID 
-     * @return FileSystemId 文件系统 ID
-     */
-    public String getFileSystemId() {
-        return this.FileSystemId;
-    }
-
-    /**
-     * Set 文件系统 ID
-     * @param FileSystemId 文件系统 ID
-     */
-    public void setFileSystemId(String FileSystemId) {
-        this.FileSystemId = FileSystemId;
-    }
-
-    /**
-     * Get 规则状态 0：关闭，1：开启 
-     * @return Status 规则状态 0：关闭，1：开启
+     * Get 状态。0-初始状态；1-正在处理；2-处理失败；3-成功 
+     * @return Status 状态。0-初始状态；1-正在处理；2-处理失败；3-成功
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 规则状态 0：关闭，1：开启
-     * @param Status 规则状态 0：关闭，1：开启
+     * Set 状态。0-初始状态；1-正在处理；2-处理失败；3-成功
+     * @param Status 状态。0-初始状态；1-正在处理；2-处理失败；3-成功
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 扩容阈值，范围[10-90] 
-     * @return ScaleUpThreshold 扩容阈值，范围[10-90]
+     * Get 任务处理结果数据 
+     * @return Data 任务处理结果数据
      */
-    public Long getScaleUpThreshold() {
-        return this.ScaleUpThreshold;
+    public AISearchInfo getData() {
+        return this.Data;
     }
 
     /**
-     * Set 扩容阈值，范围[10-90]
-     * @param ScaleUpThreshold 扩容阈值，范围[10-90]
+     * Set 任务处理结果数据
+     * @param Data 任务处理结果数据
      */
-    public void setScaleUpThreshold(Long ScaleUpThreshold) {
-        this.ScaleUpThreshold = ScaleUpThreshold;
-    }
-
-    /**
-     * Get 扩容后达到阈值，范围[1-90] 
-     * @return TargetThreshold 扩容后达到阈值，范围[1-90]
-     */
-    public Long getTargetThreshold() {
-        return this.TargetThreshold;
-    }
-
-    /**
-     * Set 扩容后达到阈值，范围[1-90]
-     * @param TargetThreshold 扩容后达到阈值，范围[1-90]
-     */
-    public void setTargetThreshold(Long TargetThreshold) {
-        this.TargetThreshold = TargetThreshold;
+    public void setData(AISearchInfo Data) {
+        this.Data = Data;
     }
 
     /**
@@ -138,25 +92,19 @@ public class ModifyFileSystemAutoScaleUpRuleResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ModifyFileSystemAutoScaleUpRuleResponse() {
+    public DescribeAISearchTaskAsyncResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyFileSystemAutoScaleUpRuleResponse(ModifyFileSystemAutoScaleUpRuleResponse source) {
-        if (source.FileSystemId != null) {
-            this.FileSystemId = new String(source.FileSystemId);
-        }
+    public DescribeAISearchTaskAsyncResponse(DescribeAISearchTaskAsyncResponse source) {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
-        if (source.ScaleUpThreshold != null) {
-            this.ScaleUpThreshold = new Long(source.ScaleUpThreshold);
-        }
-        if (source.TargetThreshold != null) {
-            this.TargetThreshold = new Long(source.TargetThreshold);
+        if (source.Data != null) {
+            this.Data = new AISearchInfo(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -168,10 +116,8 @@ public class ModifyFileSystemAutoScaleUpRuleResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "ScaleUpThreshold", this.ScaleUpThreshold);
-        this.setParamSimple(map, prefix + "TargetThreshold", this.TargetThreshold);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

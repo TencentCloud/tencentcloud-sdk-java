@@ -149,6 +149,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建视频语义异步搜索任务
+     * @param req CreateAISearchTaskAsyncRequest
+     * @return CreateAISearchTaskAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAISearchTaskAsyncResponse CreateAISearchTaskAsync(CreateAISearchTaskAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAISearchTaskAsync", CreateAISearchTaskAsyncResponse.class);
+    }
+
+    /**
      *用于新建批量生产设备
      * @param req CreateBatchProductionRequest
      * @return CreateBatchProductionResponse
@@ -487,6 +498,17 @@ public class IotexplorerClient extends AbstractClient{
     public DeleteTopicRuleResponse DeleteTopicRule(DeleteTopicRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTopicRule", DeleteTopicRuleResponse.class);
+    }
+
+    /**
+     *获取视频语义异步搜索任务详情
+     * @param req DescribeAISearchTaskAsyncRequest
+     * @return DescribeAISearchTaskAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAISearchTaskAsyncResponse DescribeAISearchTaskAsync(DescribeAISearchTaskAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAISearchTaskAsync", DescribeAISearchTaskAsyncResponse.class);
     }
 
     /**

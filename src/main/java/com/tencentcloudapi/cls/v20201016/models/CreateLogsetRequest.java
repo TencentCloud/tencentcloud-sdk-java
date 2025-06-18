@@ -38,6 +38,13 @@ public class CreateLogsetRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 日志集ID，格式为：用户自定义部分-用户appid，用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符，尾部需要使用-拼接用户appid
+    */
+    @SerializedName("LogsetId")
+    @Expose
+    private String LogsetId;
+
+    /**
      * Get 日志集名字，不能重名 
      * @return LogsetName 日志集名字，不能重名
      */
@@ -69,6 +76,22 @@ public class CreateLogsetRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 日志集ID，格式为：用户自定义部分-用户appid，用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符，尾部需要使用-拼接用户appid 
+     * @return LogsetId 日志集ID，格式为：用户自定义部分-用户appid，用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符，尾部需要使用-拼接用户appid
+     */
+    public String getLogsetId() {
+        return this.LogsetId;
+    }
+
+    /**
+     * Set 日志集ID，格式为：用户自定义部分-用户appid，用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符，尾部需要使用-拼接用户appid
+     * @param LogsetId 日志集ID，格式为：用户自定义部分-用户appid，用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符，尾部需要使用-拼接用户appid
+     */
+    public void setLogsetId(String LogsetId) {
+        this.LogsetId = LogsetId;
+    }
+
     public CreateLogsetRequest() {
     }
 
@@ -86,6 +109,9 @@ public class CreateLogsetRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.LogsetId != null) {
+            this.LogsetId = new String(source.LogsetId);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class CreateLogsetRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
 
     }
 }

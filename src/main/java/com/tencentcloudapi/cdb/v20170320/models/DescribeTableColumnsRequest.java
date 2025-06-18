@@ -31,7 +31,7 @@ public class DescribeTableColumnsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 数据库名称，可使用[查询数据库](https://cloud.tencent.com/document/api/253/7167)接口获得。
+    * 数据库名称，可使用[查询数据库](https://cloud.tencent.com/document/api/236/17493)接口获得。
     */
     @SerializedName("Database")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeTableColumnsRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库名称，可使用[查询数据库](https://cloud.tencent.com/document/api/253/7167)接口获得。 
-     * @return Database 数据库名称，可使用[查询数据库](https://cloud.tencent.com/document/api/253/7167)接口获得。
+     * Get 数据库名称，可使用[查询数据库](https://cloud.tencent.com/document/api/236/17493)接口获得。 
+     * @return Database 数据库名称，可使用[查询数据库](https://cloud.tencent.com/document/api/236/17493)接口获得。
      */
     public String getDatabase() {
         return this.Database;
     }
 
     /**
-     * Set 数据库名称，可使用[查询数据库](https://cloud.tencent.com/document/api/253/7167)接口获得。
-     * @param Database 数据库名称，可使用[查询数据库](https://cloud.tencent.com/document/api/253/7167)接口获得。
+     * Set 数据库名称，可使用[查询数据库](https://cloud.tencent.com/document/api/236/17493)接口获得。
+     * @param Database 数据库名称，可使用[查询数据库](https://cloud.tencent.com/document/api/236/17493)接口获得。
      */
     public void setDatabase(String Database) {
         this.Database = Database;

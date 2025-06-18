@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel {
 
     /**
-    * 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+    * 文件系统 ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -38,30 +38,30 @@ public class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel {
     private Long ScaleUpThreshold;
 
     /**
-    * 扩容后目标阈值,范围[10-90],该值要小于ScaleUpThreshold
+    * 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
     */
     @SerializedName("TargetThreshold")
     @Expose
     private Long TargetThreshold;
 
     /**
-    * 规则状态0:关闭，1 开启；不传保留原状态
+    * 规则状态 0：关闭，1：开启；不传保留原状态
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 
-     * @return FileSystemId 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+     * Get 文件系统 ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 
+     * @return FileSystemId 文件系统 ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
-     * @param FileSystemId 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+     * Set 文件系统 ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+     * @param FileSystemId 文件系统 ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
@@ -84,32 +84,32 @@ public class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 扩容后目标阈值,范围[10-90],该值要小于ScaleUpThreshold 
-     * @return TargetThreshold 扩容后目标阈值,范围[10-90],该值要小于ScaleUpThreshold
+     * Get 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold 
+     * @return TargetThreshold 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
      */
     public Long getTargetThreshold() {
         return this.TargetThreshold;
     }
 
     /**
-     * Set 扩容后目标阈值,范围[10-90],该值要小于ScaleUpThreshold
-     * @param TargetThreshold 扩容后目标阈值,范围[10-90],该值要小于ScaleUpThreshold
+     * Set 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
+     * @param TargetThreshold 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
      */
     public void setTargetThreshold(Long TargetThreshold) {
         this.TargetThreshold = TargetThreshold;
     }
 
     /**
-     * Get 规则状态0:关闭，1 开启；不传保留原状态 
-     * @return Status 规则状态0:关闭，1 开启；不传保留原状态
+     * Get 规则状态 0：关闭，1：开启；不传保留原状态 
+     * @return Status 规则状态 0：关闭，1：开启；不传保留原状态
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 规则状态0:关闭，1 开启；不传保留原状态
-     * @param Status 规则状态0:关闭，1 开启；不传保留原状态
+     * Set 规则状态 0：关闭，1：开启；不传保留原状态
+     * @param Status 规则状态 0：关闭，1：开启；不传保留原状态
      */
     public void setStatus(Long Status) {
         this.Status = Status;

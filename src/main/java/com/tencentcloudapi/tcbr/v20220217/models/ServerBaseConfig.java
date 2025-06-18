@@ -199,6 +199,20 @@ public class ServerBaseConfig extends AbstractModel {
     private TimerScale [] TimerScale;
 
     /**
+    * Dockerfile EntryPoint 参数
+    */
+    @SerializedName("EntryPoint")
+    @Expose
+    private String [] EntryPoint;
+
+    /**
+    * Dockerfile Cmd 参数
+    */
+    @SerializedName("Cmd")
+    @Expose
+    private String [] Cmd;
+
+    /**
      * Get 环境 Id 
      * @return EnvId 环境 Id
      */
@@ -598,6 +612,38 @@ public class ServerBaseConfig extends AbstractModel {
         this.TimerScale = TimerScale;
     }
 
+    /**
+     * Get Dockerfile EntryPoint 参数 
+     * @return EntryPoint Dockerfile EntryPoint 参数
+     */
+    public String [] getEntryPoint() {
+        return this.EntryPoint;
+    }
+
+    /**
+     * Set Dockerfile EntryPoint 参数
+     * @param EntryPoint Dockerfile EntryPoint 参数
+     */
+    public void setEntryPoint(String [] EntryPoint) {
+        this.EntryPoint = EntryPoint;
+    }
+
+    /**
+     * Get Dockerfile Cmd 参数 
+     * @return Cmd Dockerfile Cmd 参数
+     */
+    public String [] getCmd() {
+        return this.Cmd;
+    }
+
+    /**
+     * Set Dockerfile Cmd 参数
+     * @param Cmd Dockerfile Cmd 参数
+     */
+    public void setCmd(String [] Cmd) {
+        this.Cmd = Cmd;
+    }
+
     public ServerBaseConfig() {
     }
 
@@ -690,6 +736,18 @@ public class ServerBaseConfig extends AbstractModel {
                 this.TimerScale[i] = new TimerScale(source.TimerScale[i]);
             }
         }
+        if (source.EntryPoint != null) {
+            this.EntryPoint = new String[source.EntryPoint.length];
+            for (int i = 0; i < source.EntryPoint.length; i++) {
+                this.EntryPoint[i] = new String(source.EntryPoint[i]);
+            }
+        }
+        if (source.Cmd != null) {
+            this.Cmd = new String[source.Cmd.length];
+            for (int i = 0; i < source.Cmd.length; i++) {
+                this.Cmd[i] = new String(source.Cmd[i]);
+            }
+        }
     }
 
 
@@ -722,6 +780,8 @@ public class ServerBaseConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "InternalDomain", this.InternalDomain);
         this.setParamSimple(map, prefix + "OperationMode", this.OperationMode);
         this.setParamArrayObj(map, prefix + "TimerScale.", this.TimerScale);
+        this.setParamArraySimple(map, prefix + "EntryPoint.", this.EntryPoint);
+        this.setParamArraySimple(map, prefix + "Cmd.", this.Cmd);
 
     }
 }
