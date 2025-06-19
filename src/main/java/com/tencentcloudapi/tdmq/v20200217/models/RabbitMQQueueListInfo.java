@@ -148,6 +148,20 @@ public class RabbitMQQueueListInfo extends AbstractModel {
     private Boolean Exclusive;
 
     /**
+    * 创建时间时间戳
+    */
+    @SerializedName("CreateTs")
+    @Expose
+    private Long CreateTs;
+
+    /**
+    * 修改时间时间戳
+    */
+    @SerializedName("ModifyTs")
+    @Expose
+    private Long ModifyTs;
+
+    /**
      * Get 队列名 
      * @return QueueName 队列名
      */
@@ -439,6 +453,38 @@ public class RabbitMQQueueListInfo extends AbstractModel {
         this.Exclusive = Exclusive;
     }
 
+    /**
+     * Get 创建时间时间戳 
+     * @return CreateTs 创建时间时间戳
+     */
+    public Long getCreateTs() {
+        return this.CreateTs;
+    }
+
+    /**
+     * Set 创建时间时间戳
+     * @param CreateTs 创建时间时间戳
+     */
+    public void setCreateTs(Long CreateTs) {
+        this.CreateTs = CreateTs;
+    }
+
+    /**
+     * Get 修改时间时间戳 
+     * @return ModifyTs 修改时间时间戳
+     */
+    public Long getModifyTs() {
+        return this.ModifyTs;
+    }
+
+    /**
+     * Set 修改时间时间戳
+     * @param ModifyTs 修改时间时间戳
+     */
+    public void setModifyTs(Long ModifyTs) {
+        this.ModifyTs = ModifyTs;
+    }
+
     public RabbitMQQueueListInfo() {
     }
 
@@ -498,6 +544,12 @@ public class RabbitMQQueueListInfo extends AbstractModel {
         if (source.Exclusive != null) {
             this.Exclusive = new Boolean(source.Exclusive);
         }
+        if (source.CreateTs != null) {
+            this.CreateTs = new Long(source.CreateTs);
+        }
+        if (source.ModifyTs != null) {
+            this.ModifyTs = new Long(source.ModifyTs);
+        }
     }
 
 
@@ -522,6 +574,8 @@ public class RabbitMQQueueListInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamSimple(map, prefix + "Arguments", this.Arguments);
         this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
+        this.setParamSimple(map, prefix + "CreateTs", this.CreateTs);
+        this.setParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmq.v20200217.models;
+package com.tencentcloudapi.trocket.v20230308.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRabbitMQQueuesResponse extends AbstractModel {
+public class DescribeMigrationTaskListResponse extends AbstractModel {
 
     /**
-    * 队列列表信息
-    */
-    @SerializedName("QueueInfoList")
-    @Expose
-    private RabbitMQQueueListInfo [] QueueInfoList;
-
-    /**
-    * 队列数量
+    * 查询总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * 迁移任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tasks")
+    @Expose
+    private MigrationTaskItem [] Tasks;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +46,39 @@ public class DescribeRabbitMQQueuesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 队列列表信息 
-     * @return QueueInfoList 队列列表信息
-     */
-    public RabbitMQQueueListInfo [] getQueueInfoList() {
-        return this.QueueInfoList;
-    }
-
-    /**
-     * Set 队列列表信息
-     * @param QueueInfoList 队列列表信息
-     */
-    public void setQueueInfoList(RabbitMQQueueListInfo [] QueueInfoList) {
-        this.QueueInfoList = QueueInfoList;
-    }
-
-    /**
-     * Get 队列数量 
-     * @return TotalCount 队列数量
+     * Get 查询总数 
+     * @return TotalCount 查询总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 队列数量
-     * @param TotalCount 队列数量
+     * Set 查询总数
+     * @param TotalCount 查询总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 迁移任务列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tasks 迁移任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MigrationTaskItem [] getTasks() {
+        return this.Tasks;
+    }
+
+    /**
+     * Set 迁移任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tasks 迁移任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTasks(MigrationTaskItem [] Tasks) {
+        this.Tasks = Tasks;
     }
 
     /**
@@ -92,22 +97,22 @@ public class DescribeRabbitMQQueuesResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeRabbitMQQueuesResponse() {
+    public DescribeMigrationTaskListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRabbitMQQueuesResponse(DescribeRabbitMQQueuesResponse source) {
-        if (source.QueueInfoList != null) {
-            this.QueueInfoList = new RabbitMQQueueListInfo[source.QueueInfoList.length];
-            for (int i = 0; i < source.QueueInfoList.length; i++) {
-                this.QueueInfoList[i] = new RabbitMQQueueListInfo(source.QueueInfoList[i]);
-            }
-        }
+    public DescribeMigrationTaskListResponse(DescribeMigrationTaskListResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new MigrationTaskItem[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new MigrationTaskItem(source.Tasks[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +124,8 @@ public class DescribeRabbitMQQueuesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "QueueInfoList.", this.QueueInfoList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

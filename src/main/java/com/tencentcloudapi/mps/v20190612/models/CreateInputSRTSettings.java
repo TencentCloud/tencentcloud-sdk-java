@@ -87,6 +87,13 @@ public class CreateInputSRTSettings extends AbstractModel {
     private SRTSourceAddressReq [] SourceAddresses;
 
     /**
+    * SRT FEC 设置
+    */
+    @SerializedName("FEC")
+    @Expose
+    private SRTFECSimpleOptions FEC;
+
+    /**
      * Get SRT模式，可选[LISTENER|CALLER]，默认为LISTENER。 
      * @return Mode SRT模式，可选[LISTENER|CALLER]，默认为LISTENER。
      */
@@ -230,6 +237,22 @@ public class CreateInputSRTSettings extends AbstractModel {
         this.SourceAddresses = SourceAddresses;
     }
 
+    /**
+     * Get SRT FEC 设置 
+     * @return FEC SRT FEC 设置
+     */
+    public SRTFECSimpleOptions getFEC() {
+        return this.FEC;
+    }
+
+    /**
+     * Set SRT FEC 设置
+     * @param FEC SRT FEC 设置
+     */
+    public void setFEC(SRTFECSimpleOptions FEC) {
+        this.FEC = FEC;
+    }
+
     public CreateInputSRTSettings() {
     }
 
@@ -268,6 +291,9 @@ public class CreateInputSRTSettings extends AbstractModel {
                 this.SourceAddresses[i] = new SRTSourceAddressReq(source.SourceAddresses[i]);
             }
         }
+        if (source.FEC != null) {
+            this.FEC = new SRTFECSimpleOptions(source.FEC);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class CreateInputSRTSettings extends AbstractModel {
         this.setParamSimple(map, prefix + "Passphrase", this.Passphrase);
         this.setParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
         this.setParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
+        this.setParamObj(map, prefix + "FEC.", this.FEC);
 
     }
 }

@@ -104,6 +104,13 @@ public class DescribeOutputSRTSettings extends AbstractModel {
     private OutputSRTSourceAddressResp [] SourceAddresses;
 
     /**
+    * FEC 配置
+    */
+    @SerializedName("FEC")
+    @Expose
+    private SRTFECFullOptions FEC;
+
+    /**
      * Get 转推的目标的地址信息列表，SRT模式为CALLER时使用。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Destinations 转推的目标的地址信息列表，SRT模式为CALLER时使用。
@@ -303,6 +310,22 @@ public class DescribeOutputSRTSettings extends AbstractModel {
         this.SourceAddresses = SourceAddresses;
     }
 
+    /**
+     * Get FEC 配置 
+     * @return FEC FEC 配置
+     */
+    public SRTFECFullOptions getFEC() {
+        return this.FEC;
+    }
+
+    /**
+     * Set FEC 配置
+     * @param FEC FEC 配置
+     */
+    public void setFEC(SRTFECFullOptions FEC) {
+        this.FEC = FEC;
+    }
+
     public DescribeOutputSRTSettings() {
     }
 
@@ -347,6 +370,9 @@ public class DescribeOutputSRTSettings extends AbstractModel {
                 this.SourceAddresses[i] = new OutputSRTSourceAddressResp(source.SourceAddresses[i]);
             }
         }
+        if (source.FEC != null) {
+            this.FEC = new SRTFECFullOptions(source.FEC);
+        }
     }
 
 
@@ -364,6 +390,7 @@ public class DescribeOutputSRTSettings extends AbstractModel {
         this.setParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
+        this.setParamObj(map, prefix + "FEC.", this.FEC);
 
     }
 }

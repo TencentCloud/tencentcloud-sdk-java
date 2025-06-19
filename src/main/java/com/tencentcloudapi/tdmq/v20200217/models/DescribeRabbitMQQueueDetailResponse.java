@@ -256,6 +256,20 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
     private String Arguments;
 
     /**
+    * 创建时间时间戳
+    */
+    @SerializedName("CreateTs")
+    @Expose
+    private Long CreateTs;
+
+    /**
+    * 修改时间时间戳
+    */
+    @SerializedName("ModifyTs")
+    @Expose
+    private Long ModifyTs;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -831,6 +845,38 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 创建时间时间戳 
+     * @return CreateTs 创建时间时间戳
+     */
+    public Long getCreateTs() {
+        return this.CreateTs;
+    }
+
+    /**
+     * Set 创建时间时间戳
+     * @param CreateTs 创建时间时间戳
+     */
+    public void setCreateTs(Long CreateTs) {
+        this.CreateTs = CreateTs;
+    }
+
+    /**
+     * Get 修改时间时间戳 
+     * @return ModifyTs 修改时间时间戳
+     */
+    public Long getModifyTs() {
+        return this.ModifyTs;
+    }
+
+    /**
+     * Set 修改时间时间戳
+     * @param ModifyTs 修改时间时间戳
+     */
+    public void setModifyTs(Long ModifyTs) {
+        this.ModifyTs = ModifyTs;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -944,6 +990,12 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
         if (source.Arguments != null) {
             this.Arguments = new String(source.Arguments);
         }
+        if (source.CreateTs != null) {
+            this.CreateTs = new Long(source.CreateTs);
+        }
+        if (source.ModifyTs != null) {
+            this.ModifyTs = new Long(source.ModifyTs);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -984,6 +1036,8 @@ public class DescribeRabbitMQQueueDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamSimple(map, prefix + "Arguments", this.Arguments);
+        this.setParamSimple(map, prefix + "CreateTs", this.CreateTs);
+        this.setParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

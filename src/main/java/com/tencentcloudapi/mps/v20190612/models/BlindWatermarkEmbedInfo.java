@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BlindWatermarkEmbedInfo extends AbstractModel {
 
     /**
-    * 盲水印文字，需要经过 URL 安全的 Base64 编码。
+    * 盲水印文字，经过URL安全的Base64编码的4Byte数据。Base64解码之后，少于4Byte将会填充0x00到4Byte，超过4Byte将会截断为4Byte。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmbedText")
@@ -32,9 +32,9 @@ public class BlindWatermarkEmbedInfo extends AbstractModel {
     private String EmbedText;
 
     /**
-     * Get 盲水印文字，需要经过 URL 安全的 Base64 编码。
+     * Get 盲水印文字，经过URL安全的Base64编码的4Byte数据。Base64解码之后，少于4Byte将会填充0x00到4Byte，超过4Byte将会截断为4Byte。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EmbedText 盲水印文字，需要经过 URL 安全的 Base64 编码。
+     * @return EmbedText 盲水印文字，经过URL安全的Base64编码的4Byte数据。Base64解码之后，少于4Byte将会填充0x00到4Byte，超过4Byte将会截断为4Byte。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmbedText() {
@@ -42,9 +42,9 @@ public class BlindWatermarkEmbedInfo extends AbstractModel {
     }
 
     /**
-     * Set 盲水印文字，需要经过 URL 安全的 Base64 编码。
+     * Set 盲水印文字，经过URL安全的Base64编码的4Byte数据。Base64解码之后，少于4Byte将会填充0x00到4Byte，超过4Byte将会截断为4Byte。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EmbedText 盲水印文字，需要经过 URL 安全的 Base64 编码。
+     * @param EmbedText 盲水印文字，经过URL安全的Base64编码的4Byte数据。Base64解码之后，少于4Byte将会填充0x00到4Byte，超过4Byte将会截断为4Byte。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmbedText(String EmbedText) {

@@ -27,6 +27,9 @@ public enum LighthouseErrorCode {
      /* 对密钥对的删除操作失败。 */
      FAILEDOPERATION_DELETEKEYPAIRFAILED("FailedOperation.DeleteKeyPairFailed"),
      
+     /* 查询镜像配额失败。 */
+     FAILEDOPERATION_DESCRIBEBLUEPRINTQUOTAFAILED("FailedOperation.DescribeBlueprintQuotaFailed"),
+     
      /* 查询镜像失败，请稍后再试。 */
      FAILEDOPERATION_DESCRIBEBLUEPRINTSFAILED("FailedOperation.DescribeBlueprintsFailed"),
      
@@ -120,6 +123,9 @@ public enum LighthouseErrorCode {
      /* 无法创建实例。 */
      FAILEDOPERATION_UNABLETOCREATEINSTANCES("FailedOperation.UnableToCreateInstances"),
      
+     /* 当前镜像状态无法进行跨地域同步。 */
+     FAILEDOPERATION_UNABLETOSYNCBLUEPRINT("FailedOperation.UnableToSyncBlueprint"),
+     
      /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
@@ -176,6 +182,9 @@ public enum LighthouseErrorCode {
      
      /* 参数冲突。 */
      INVALIDPARAMETER_CONFLICTPARAMETER("InvalidParameter.ConflictParameter"),
+     
+     /* 创建游戏专区实例不支持该参数。 */
+     INVALIDPARAMETER_CREATINGGAMEPORTALINSTANCENOTSUPPORTPARAMETER("InvalidParameter.CreatingGamePortalInstanceNotSupportParameter"),
      
      /* 参数非法，Filter 参数中的 Values 取值数量超过允许的最大数量。 */
      INVALIDPARAMETER_FILTERVALUELIMITEXCEEDED("InvalidParameter.FilterValueLimitExceeded"),
@@ -257,6 +266,9 @@ public enum LighthouseErrorCode {
      
      /* 客户令牌长度超出限制。 */
      INVALIDPARAMETERVALUE_CLIENTTOKENTOOLONG("InvalidParameterValue.ClientTokenTooLong"),
+     
+     /* 目的地域与源地域相同。 */
+     INVALIDPARAMETERVALUE_DESTINATIONREGIONSAMEASSOURCEREGION("InvalidParameterValue.DestinationRegionSameAsSourceRegion"),
      
      /* 参数值非法，云硬盘备份点 ID 格式非法。 */
      INVALIDPARAMETERVALUE_DISKBACKUPIDMALFORMED("InvalidParameterValue.DiskBackupIdMalformed"),
@@ -384,6 +396,9 @@ public enum LighthouseErrorCode {
      /* 不允许改变平台类型。 */
      INVALIDPARAMETERVALUE_NOTALLOWTOCHANGEPLATFORMTYPE("InvalidParameterValue.NotAllowToChangePlatformType"),
      
+     /* 不支持跨境同步镜像。 */
+     INVALIDPARAMETERVALUE_NOTSUPPORTCROSSBORDERSYNCBLUEPRINT("InvalidParameterValue.NotSupportCrossBorderSyncBlueprint"),
+     
      /* 实例套餐的套餐类型不支持表更至新套餐。 */
      INVALIDPARAMETERVALUE_NOTSUPPORTMODIFYINSTANCEBUNDLETYPE("InvalidParameterValue.NotSupportModifyInstanceBundleType"),
      
@@ -423,6 +438,9 @@ public enum LighthouseErrorCode {
      /* 参数值非法，小于有效值。 */
      INVALIDPARAMETERVALUE_TOOSMALL("InvalidParameterValue.TooSmall"),
      
+     /* 地域不可用。 */
+     INVALIDPARAMETERVALUE_UNAVAILABLEREGION("InvalidParameterValue.UnavailableRegion"),
+     
      /* 非法的可用区。 */
      INVALIDPARAMETERVALUE_ZONEINVALID("InvalidParameterValue.ZoneInvalid"),
      
@@ -461,6 +479,9 @@ public enum LighthouseErrorCode {
      
      /* 超过快照配额。 */
      LIMITEXCEEDED_SNAPSHOTQUOTALIMITEXCEEDED("LimitExceeded.SnapshotQuotaLimitExceeded"),
+     
+     /* 超过同步镜像目的地域镜像配额。 */
+     LIMITEXCEEDED_SYNCBLUEPRINTQUOTALIMITEXCEEDED("LimitExceeded.SyncBlueprintQuotaLimitExceeded"),
      
      /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),

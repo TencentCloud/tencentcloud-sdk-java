@@ -129,7 +129,7 @@ public class BackupStatus extends AbstractModel {
     private Long BackupJobId;
 
     /**
-    * 实例对应snapshoit的id
+    * 实例对应Snapshot的id
     */
     @SerializedName("TaskId")
     @Expose
@@ -376,16 +376,16 @@ public class BackupStatus extends AbstractModel {
     }
 
     /**
-     * Get 实例对应snapshoit的id 
-     * @return TaskId 实例对应snapshoit的id
+     * Get 实例对应Snapshot的id 
+     * @return TaskId 实例对应Snapshot的id
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 实例对应snapshoit的id
-     * @param TaskId 实例对应snapshoit的id
+     * Set 实例对应Snapshot的id
+     * @param TaskId 实例对应Snapshot的id
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

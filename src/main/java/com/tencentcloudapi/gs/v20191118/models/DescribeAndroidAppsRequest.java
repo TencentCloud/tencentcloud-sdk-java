@@ -45,7 +45,7 @@ public class DescribeAndroidAppsRequest extends AbstractModel {
     private String [] AndroidAppIds;
 
     /**
-    * 过滤条件，支持过滤的字段有：UserId
+    * 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
     */
     @SerializedName("Filters")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeAndroidAppsRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件，支持过滤的字段有：UserId 
-     * @return Filters 过滤条件，支持过滤的字段有：UserId
+     * Get 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。 
+     * @return Filters 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，支持过滤的字段有：UserId
-     * @param Filters 过滤条件，支持过滤的字段有：UserId
+     * Set 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
+     * @param Filters 过滤条件，支持过滤的字段有：UserId、State、UpdateState、Name、AppMode 。其中 Name 为模糊匹配，其他参数为精确匹配。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -538,6 +538,21 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *获取数据迁移任务列表，Filter参数使用说明如下：
+
+TaskId，根据任务ID精确查找
+InstanceId，根据实例ID精确查找
+Type，根据任务类型精确查找
+     * @param req DescribeMigrationTaskListRequest
+     * @return DescribeMigrationTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMigrationTaskListResponse DescribeMigrationTaskList(DescribeMigrationTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMigrationTaskList", DescribeMigrationTaskListResponse.class);
+    }
+
+    /**
      *查询产品售卖规格，针对 RocketMQ 5.x 集群。
      * @param req DescribeProductSKUsRequest
      * @return DescribeProductSKUsResponse

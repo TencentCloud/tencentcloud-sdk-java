@@ -45,7 +45,7 @@ public class ZoneInfo extends AbstractModel {
     private Long ZoneId;
 
     /**
-    * Encryptid
+    * Encrypted
     */
     @SerializedName("Encrypt")
     @Expose
@@ -114,16 +114,16 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Get Encryptid 
-     * @return Encrypt Encryptid
+     * Get Encrypted 
+     * @return Encrypt Encrypted
      */
     public Long getEncrypt() {
         return this.Encrypt;
     }
 
     /**
-     * Set Encryptid
-     * @param Encrypt Encryptid
+     * Set Encrypted
+     * @param Encrypt Encrypted
      */
     public void setEncrypt(Long Encrypt) {
         this.Encrypt = Encrypt;

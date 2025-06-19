@@ -220,6 +220,13 @@ public class ExposesItem extends AbstractModel {
     private Long AppId;
 
     /**
+    * 租户ID字符串
+    */
+    @SerializedName("AppIdStr")
+    @Expose
+    private String AppIdStr;
+
+    /**
      * Get 云厂商 
      * @return Provider 云厂商
      */
@@ -667,6 +674,22 @@ public class ExposesItem extends AbstractModel {
         this.AppId = AppId;
     }
 
+    /**
+     * Get 租户ID字符串 
+     * @return AppIdStr 租户ID字符串
+     */
+    public String getAppIdStr() {
+        return this.AppIdStr;
+    }
+
+    /**
+     * Set 租户ID字符串
+     * @param AppIdStr 租户ID字符串
+     */
+    public void setAppIdStr(String AppIdStr) {
+        this.AppIdStr = AppIdStr;
+    }
+
     public ExposesItem() {
     }
 
@@ -759,6 +782,9 @@ public class ExposesItem extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
+        if (source.AppIdStr != null) {
+            this.AppIdStr = new String(source.AppIdStr);
+        }
     }
 
 
@@ -794,6 +820,7 @@ public class ExposesItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "HasScan", this.HasScan);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "AppIdStr", this.AppIdStr);
 
     }
 }

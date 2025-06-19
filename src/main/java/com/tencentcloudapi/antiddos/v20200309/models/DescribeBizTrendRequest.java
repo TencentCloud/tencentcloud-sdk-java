@@ -87,7 +87,7 @@ public class DescribeBizTrendRequest extends AbstractModel {
     private ProtocolPort [] ProtoInfo;
 
     /**
-    * 业务类型可取值domain, port
+    * 业务类型：</br>
 port：端口业务
 domain：域名业务
     */
@@ -240,10 +240,10 @@ domain：域名业务
     }
 
     /**
-     * Get 业务类型可取值domain, port
+     * Get 业务类型：</br>
 port：端口业务
 domain：域名业务 
-     * @return BusinessType 业务类型可取值domain, port
+     * @return BusinessType 业务类型：</br>
 port：端口业务
 domain：域名业务
      */
@@ -252,10 +252,10 @@ domain：域名业务
     }
 
     /**
-     * Set 业务类型可取值domain, port
+     * Set 业务类型：</br>
 port：端口业务
 domain：域名业务
-     * @param BusinessType 业务类型可取值domain, port
+     * @param BusinessType 业务类型：</br>
 port：端口业务
 domain：域名业务
      */

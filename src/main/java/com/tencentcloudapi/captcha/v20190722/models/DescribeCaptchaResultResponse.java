@@ -84,6 +84,13 @@ EvilLevel=100 请求有恶意
     private String DeviceRiskCategory;
 
     /**
+    * 验证码评分
+    */
+    @SerializedName("Score")
+    @Expose
+    private Long Score;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -247,6 +254,22 @@ EvilLevel=100 请求有恶意
     }
 
     /**
+     * Get 验证码评分 
+     * @return Score 验证码评分
+     */
+    public Long getScore() {
+        return this.Score;
+    }
+
+    /**
+     * Set 验证码评分
+     * @param Score 验证码评分
+     */
+    public void setScore(Long Score) {
+        this.Score = Score;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -291,6 +314,9 @@ EvilLevel=100 请求有恶意
         if (source.DeviceRiskCategory != null) {
             this.DeviceRiskCategory = new String(source.DeviceRiskCategory);
         }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -308,6 +334,7 @@ EvilLevel=100 请求有恶意
         this.setParamSimple(map, prefix + "EvilBitmap", this.EvilBitmap);
         this.setParamSimple(map, prefix + "SubmitCaptchaTime", this.SubmitCaptchaTime);
         this.setParamSimple(map, prefix + "DeviceRiskCategory", this.DeviceRiskCategory);
+        this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

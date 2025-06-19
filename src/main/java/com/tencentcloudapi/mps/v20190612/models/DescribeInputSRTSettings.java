@@ -89,6 +89,13 @@ public class DescribeInputSRTSettings extends AbstractModel {
     private SRTSourceAddressResp [] SourceAddresses;
 
     /**
+    * FEC  设置
+    */
+    @SerializedName("FEC")
+    @Expose
+    private SRTFECSimpleOptions FEC;
+
+    /**
      * Get SRT模式。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Mode SRT模式。
@@ -240,6 +247,22 @@ public class DescribeInputSRTSettings extends AbstractModel {
         this.SourceAddresses = SourceAddresses;
     }
 
+    /**
+     * Get FEC  设置 
+     * @return FEC FEC  设置
+     */
+    public SRTFECSimpleOptions getFEC() {
+        return this.FEC;
+    }
+
+    /**
+     * Set FEC  设置
+     * @param FEC FEC  设置
+     */
+    public void setFEC(SRTFECSimpleOptions FEC) {
+        this.FEC = FEC;
+    }
+
     public DescribeInputSRTSettings() {
     }
 
@@ -278,6 +301,9 @@ public class DescribeInputSRTSettings extends AbstractModel {
                 this.SourceAddresses[i] = new SRTSourceAddressResp(source.SourceAddresses[i]);
             }
         }
+        if (source.FEC != null) {
+            this.FEC = new SRTFECSimpleOptions(source.FEC);
+        }
     }
 
 
@@ -294,6 +320,7 @@ public class DescribeInputSRTSettings extends AbstractModel {
         this.setParamSimple(map, prefix + "Passphrase", this.Passphrase);
         this.setParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
         this.setParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
+        this.setParamObj(map, prefix + "FEC.", this.FEC);
 
     }
 }

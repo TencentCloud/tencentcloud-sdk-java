@@ -39,6 +39,13 @@ AlertTable 告警中心  InterceptionTable拦截列表
     private String TableType;
 
     /**
+    * 处置对象,事件ID列表
+    */
+    @SerializedName("HandleEventIdList")
+    @Expose
+    private String [] HandleEventIdList;
+
+    /**
      * Get 处置对象,ID列表，  IdLists和IpList二选一 
      * @return HandleIdList 处置对象,ID列表，  IdLists和IpList二选一
      */
@@ -74,6 +81,22 @@ AlertTable 告警中心  InterceptionTable拦截列表
         this.TableType = TableType;
     }
 
+    /**
+     * Get 处置对象,事件ID列表 
+     * @return HandleEventIdList 处置对象,事件ID列表
+     */
+    public String [] getHandleEventIdList() {
+        return this.HandleEventIdList;
+    }
+
+    /**
+     * Set 处置对象,事件ID列表
+     * @param HandleEventIdList 处置对象,事件ID列表
+     */
+    public void setHandleEventIdList(String [] HandleEventIdList) {
+        this.HandleEventIdList = HandleEventIdList;
+    }
+
     public CreateAlertCenterOmitRequest() {
     }
 
@@ -91,6 +114,12 @@ AlertTable 告警中心  InterceptionTable拦截列表
         if (source.TableType != null) {
             this.TableType = new String(source.TableType);
         }
+        if (source.HandleEventIdList != null) {
+            this.HandleEventIdList = new String[source.HandleEventIdList.length];
+            for (int i = 0; i < source.HandleEventIdList.length; i++) {
+                this.HandleEventIdList[i] = new String(source.HandleEventIdList[i]);
+            }
+        }
     }
 
 
@@ -100,6 +129,7 @@ AlertTable 告警中心  InterceptionTable拦截列表
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "HandleIdList.", this.HandleIdList);
         this.setParamSimple(map, prefix + "TableType", this.TableType);
+        this.setParamArraySimple(map, prefix + "HandleEventIdList.", this.HandleEventIdList);
 
     }
 }

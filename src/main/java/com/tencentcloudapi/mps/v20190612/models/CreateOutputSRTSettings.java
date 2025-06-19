@@ -87,6 +87,13 @@ public class CreateOutputSRTSettings extends AbstractModel {
     private String Mode;
 
     /**
+    * SRT FEC 设置
+    */
+    @SerializedName("FEC")
+    @Expose
+    private SRTFECFullOptions FEC;
+
+    /**
      * Get 转推的目标地址，当Mode为CALLER时必填，且只能填1组。 
      * @return Destinations 转推的目标地址，当Mode为CALLER时必填，且只能填1组。
      */
@@ -230,6 +237,22 @@ public class CreateOutputSRTSettings extends AbstractModel {
         this.Mode = Mode;
     }
 
+    /**
+     * Get SRT FEC 设置 
+     * @return FEC SRT FEC 设置
+     */
+    public SRTFECFullOptions getFEC() {
+        return this.FEC;
+    }
+
+    /**
+     * Set SRT FEC 设置
+     * @param FEC SRT FEC 设置
+     */
+    public void setFEC(SRTFECFullOptions FEC) {
+        this.FEC = FEC;
+    }
+
     public CreateOutputSRTSettings() {
     }
 
@@ -268,6 +291,9 @@ public class CreateOutputSRTSettings extends AbstractModel {
         if (source.Mode != null) {
             this.Mode = new String(source.Mode);
         }
+        if (source.FEC != null) {
+            this.FEC = new SRTFECFullOptions(source.FEC);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class CreateOutputSRTSettings extends AbstractModel {
         this.setParamSimple(map, prefix + "Passphrase", this.Passphrase);
         this.setParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
         this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamObj(map, prefix + "FEC.", this.FEC);
 
     }
 }

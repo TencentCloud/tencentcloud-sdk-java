@@ -115,6 +115,20 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
     private Boolean MirrorQueuePolicyFlag;
 
     /**
+    * 创建时间时间戳
+    */
+    @SerializedName("CreateTs")
+    @Expose
+    private Long CreateTs;
+
+    /**
+    * 修改时间时间戳
+    */
+    @SerializedName("ModifyTs")
+    @Expose
+    private Long ModifyTs;
+
+    /**
      * Get 集群实例Id 
      * @return InstanceId 集群实例Id
      */
@@ -322,6 +336,38 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
         this.MirrorQueuePolicyFlag = MirrorQueuePolicyFlag;
     }
 
+    /**
+     * Get 创建时间时间戳 
+     * @return CreateTs 创建时间时间戳
+     */
+    public Long getCreateTs() {
+        return this.CreateTs;
+    }
+
+    /**
+     * Set 创建时间时间戳
+     * @param CreateTs 创建时间时间戳
+     */
+    public void setCreateTs(Long CreateTs) {
+        this.CreateTs = CreateTs;
+    }
+
+    /**
+     * Get 修改时间时间戳 
+     * @return ModifyTs 修改时间时间戳
+     */
+    public Long getModifyTs() {
+        return this.ModifyTs;
+    }
+
+    /**
+     * Set 修改时间时间戳
+     * @param ModifyTs 修改时间时间戳
+     */
+    public void setModifyTs(Long ModifyTs) {
+        this.ModifyTs = ModifyTs;
+    }
+
     public RabbitMQVirtualHostInfo() {
     }
 
@@ -372,6 +418,12 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
         if (source.MirrorQueuePolicyFlag != null) {
             this.MirrorQueuePolicyFlag = new Boolean(source.MirrorQueuePolicyFlag);
         }
+        if (source.CreateTs != null) {
+            this.CreateTs = new Long(source.CreateTs);
+        }
+        if (source.ModifyTs != null) {
+            this.ModifyTs = new Long(source.ModifyTs);
+        }
     }
 
 
@@ -392,6 +444,8 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MessageRateIn", this.MessageRateIn);
         this.setParamSimple(map, prefix + "MessageRateOut", this.MessageRateOut);
         this.setParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
+        this.setParamSimple(map, prefix + "CreateTs", this.CreateTs);
+        this.setParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
 
     }
 }

@@ -202,7 +202,9 @@ public class CreateApplicationRequest extends AbstractModel {
     /**
      * Get 应用日志配置项，废弃参数 
      * @return ApplicationLogConfig 应用日志配置项，废弃参数
+     * @deprecated
      */
+    @Deprecated
     public String getApplicationLogConfig() {
         return this.ApplicationLogConfig;
     }
@@ -210,7 +212,9 @@ public class CreateApplicationRequest extends AbstractModel {
     /**
      * Set 应用日志配置项，废弃参数
      * @param ApplicationLogConfig 应用日志配置项，废弃参数
+     * @deprecated
      */
+    @Deprecated
     public void setApplicationLogConfig(String ApplicationLogConfig) {
         this.ApplicationLogConfig = ApplicationLogConfig;
     }
@@ -218,7 +222,9 @@ public class CreateApplicationRequest extends AbstractModel {
     /**
      * Get 应用资源类型，废弃参数 
      * @return ApplicationResourceType 应用资源类型，废弃参数
+     * @deprecated
      */
+    @Deprecated
     public String getApplicationResourceType() {
         return this.ApplicationResourceType;
     }
@@ -226,7 +232,9 @@ public class CreateApplicationRequest extends AbstractModel {
     /**
      * Set 应用资源类型，废弃参数
      * @param ApplicationResourceType 应用资源类型，废弃参数
+     * @deprecated
      */
+    @Deprecated
     public void setApplicationResourceType(String ApplicationResourceType) {
         this.ApplicationResourceType = ApplicationResourceType;
     }

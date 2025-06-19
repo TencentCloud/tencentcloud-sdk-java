@@ -52,6 +52,27 @@ public class ParseDocument extends AbstractModel {
     private String FileContent;
 
     /**
+    * 文档解析配置
+    */
+    @SerializedName("DocumentParseConfig")
+    @Expose
+    private DocumentParseConfig DocumentParseConfig;
+
+    /**
+    * 文档的起始页码
+    */
+    @SerializedName("FileStartPageNumber")
+    @Expose
+    private Long FileStartPageNumber;
+
+    /**
+    * 文档的结束页码
+    */
+    @SerializedName("FileEndPageNumber")
+    @Expose
+    private Long FileEndPageNumber;
+
+    /**
      * Get 文件类型。
 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 支持的文件大小：
@@ -127,6 +148,54 @@ public class ParseDocument extends AbstractModel {
         this.FileContent = FileContent;
     }
 
+    /**
+     * Get 文档解析配置 
+     * @return DocumentParseConfig 文档解析配置
+     */
+    public DocumentParseConfig getDocumentParseConfig() {
+        return this.DocumentParseConfig;
+    }
+
+    /**
+     * Set 文档解析配置
+     * @param DocumentParseConfig 文档解析配置
+     */
+    public void setDocumentParseConfig(DocumentParseConfig DocumentParseConfig) {
+        this.DocumentParseConfig = DocumentParseConfig;
+    }
+
+    /**
+     * Get 文档的起始页码 
+     * @return FileStartPageNumber 文档的起始页码
+     */
+    public Long getFileStartPageNumber() {
+        return this.FileStartPageNumber;
+    }
+
+    /**
+     * Set 文档的起始页码
+     * @param FileStartPageNumber 文档的起始页码
+     */
+    public void setFileStartPageNumber(Long FileStartPageNumber) {
+        this.FileStartPageNumber = FileStartPageNumber;
+    }
+
+    /**
+     * Get 文档的结束页码 
+     * @return FileEndPageNumber 文档的结束页码
+     */
+    public Long getFileEndPageNumber() {
+        return this.FileEndPageNumber;
+    }
+
+    /**
+     * Set 文档的结束页码
+     * @param FileEndPageNumber 文档的结束页码
+     */
+    public void setFileEndPageNumber(Long FileEndPageNumber) {
+        this.FileEndPageNumber = FileEndPageNumber;
+    }
+
     public ParseDocument() {
     }
 
@@ -144,6 +213,15 @@ public class ParseDocument extends AbstractModel {
         if (source.FileContent != null) {
             this.FileContent = new String(source.FileContent);
         }
+        if (source.DocumentParseConfig != null) {
+            this.DocumentParseConfig = new DocumentParseConfig(source.DocumentParseConfig);
+        }
+        if (source.FileStartPageNumber != null) {
+            this.FileStartPageNumber = new Long(source.FileStartPageNumber);
+        }
+        if (source.FileEndPageNumber != null) {
+            this.FileEndPageNumber = new Long(source.FileEndPageNumber);
+        }
     }
 
 
@@ -154,6 +232,9 @@ public class ParseDocument extends AbstractModel {
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
         this.setParamSimple(map, prefix + "FileContent", this.FileContent);
+        this.setParamObj(map, prefix + "DocumentParseConfig.", this.DocumentParseConfig);
+        this.setParamSimple(map, prefix + "FileStartPageNumber", this.FileStartPageNumber);
+        this.setParamSimple(map, prefix + "FileEndPageNumber", this.FileEndPageNumber);
 
     }
 }

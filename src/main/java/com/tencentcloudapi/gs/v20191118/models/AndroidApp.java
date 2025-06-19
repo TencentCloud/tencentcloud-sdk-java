@@ -73,6 +73,13 @@ public class AndroidApp extends AbstractModel {
     private String AppMode;
 
     /**
+    * 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
+    */
+    @SerializedName("UpdateState")
+    @Expose
+    private String UpdateState;
+
+    /**
      * Get 安卓应用 Id 
      * @return AndroidAppId 安卓应用 Id
      */
@@ -184,6 +191,22 @@ public class AndroidApp extends AbstractModel {
         this.AppMode = AppMode;
     }
 
+    /**
+     * Get 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态 
+     * @return UpdateState 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
+     */
+    public String getUpdateState() {
+        return this.UpdateState;
+    }
+
+    /**
+     * Set 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
+     * @param UpdateState 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
+     */
+    public void setUpdateState(String UpdateState) {
+        this.UpdateState = UpdateState;
+    }
+
     public AndroidApp() {
     }
 
@@ -216,6 +239,9 @@ public class AndroidApp extends AbstractModel {
         if (source.AppMode != null) {
             this.AppMode = new String(source.AppMode);
         }
+        if (source.UpdateState != null) {
+            this.UpdateState = new String(source.UpdateState);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class AndroidApp extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "AppMode", this.AppMode);
+        this.setParamSimple(map, prefix + "UpdateState", this.UpdateState);
 
     }
 }

@@ -284,6 +284,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *删除变量
+     * @param req DeleteVarRequest
+     * @return DeleteVarResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVarResponse DeleteVar(DeleteVarRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVar", DeleteVarResponse.class);
+    }
+
+    /**
      *获取企业下应用详情
      * @param req DescribeAppRequest
      * @return DescribeAppResponse
@@ -1227,6 +1238,17 @@ public class LkeClient extends AbstractClient{
     public UpdateSharedKnowledgeResponse UpdateSharedKnowledge(UpdateSharedKnowledgeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateSharedKnowledge", UpdateSharedKnowledgeResponse.class);
+    }
+
+    /**
+     *更新变量
+     * @param req UpdateVarRequest
+     * @return UpdateVarResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateVarResponse UpdateVar(UpdateVarRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateVar", UpdateVarResponse.class);
     }
 
     /**

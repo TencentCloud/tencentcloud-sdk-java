@@ -75,6 +75,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *创建一个 AuthToken
+     * @param req CreateModelServiceAuthTokenRequest
+     * @return CreateModelServiceAuthTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateModelServiceAuthTokenResponse CreateModelServiceAuthToken(CreateModelServiceAuthTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateModelServiceAuthToken", CreateModelServiceAuthTokenResponse.class);
+    }
+
+    /**
      *创建Notebook
      * @param req CreateNotebookRequest
      * @return CreateNotebookResponse
@@ -138,6 +149,17 @@ https://cloud.tencent.com/document/product/1278/85305
     public DeleteModelServiceResponse DeleteModelService(DeleteModelServiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteModelService", DeleteModelServiceResponse.class);
+    }
+
+    /**
+     *删除一个 AuthToken
+     * @param req DeleteModelServiceAuthTokenRequest
+     * @return DeleteModelServiceAuthTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteModelServiceAuthTokenResponse DeleteModelServiceAuthToken(DeleteModelServiceAuthTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteModelServiceAuthToken", DeleteModelServiceAuthTokenResponse.class);
     }
 
     /**
@@ -470,6 +492,28 @@ https://cloud.tencent.com/document/product/1278/85305
     public ModifyModelServiceResponse ModifyModelService(ModifyModelServiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyModelService", ModifyModelServiceResponse.class);
+    }
+
+    /**
+     *修改一个 AuthToken
+     * @param req ModifyModelServiceAuthTokenRequest
+     * @return ModifyModelServiceAuthTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModelServiceAuthTokenResponse ModifyModelServiceAuthToken(ModifyModelServiceAuthTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyModelServiceAuthToken", ModifyModelServiceAuthTokenResponse.class);
+    }
+
+    /**
+     *修改服务鉴权配置
+     * @param req ModifyModelServiceAuthorizationRequest
+     * @return ModifyModelServiceAuthorizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModelServiceAuthorizationResponse ModifyModelServiceAuthorization(ModifyModelServiceAuthorizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyModelServiceAuthorization", ModifyModelServiceAuthorizationResponse.class);
     }
 
     /**

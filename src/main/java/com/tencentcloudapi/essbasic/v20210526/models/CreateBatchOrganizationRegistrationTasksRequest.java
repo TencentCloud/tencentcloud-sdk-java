@@ -59,6 +59,13 @@ public class CreateBatchOrganizationRegistrationTasksRequest extends AbstractMod
     private String Endpoint;
 
     /**
+    * 认证链接使用单链接还是多链接模式<ul><li>0 - 多链接(默认)，指批量生成链接， 每一个企业会拥有一个认证链接，然后分别认证</li><li>1 - 单链接 ， 指批量生成链接，然后会将多个链接聚合成一个链接，进行认证</li></ul>p.s.请注意， 如果使用单链接的模式并且认证方式是授权书方式的时候，必须在接口中传递超管授权书。
+    */
+    @SerializedName("BatchAuthMethod")
+    @Expose
+    private Long BatchAuthMethod;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -162,6 +169,22 @@ public class CreateBatchOrganizationRegistrationTasksRequest extends AbstractMod
         this.Endpoint = Endpoint;
     }
 
+    /**
+     * Get 认证链接使用单链接还是多链接模式<ul><li>0 - 多链接(默认)，指批量生成链接， 每一个企业会拥有一个认证链接，然后分别认证</li><li>1 - 单链接 ， 指批量生成链接，然后会将多个链接聚合成一个链接，进行认证</li></ul>p.s.请注意， 如果使用单链接的模式并且认证方式是授权书方式的时候，必须在接口中传递超管授权书。 
+     * @return BatchAuthMethod 认证链接使用单链接还是多链接模式<ul><li>0 - 多链接(默认)，指批量生成链接， 每一个企业会拥有一个认证链接，然后分别认证</li><li>1 - 单链接 ， 指批量生成链接，然后会将多个链接聚合成一个链接，进行认证</li></ul>p.s.请注意， 如果使用单链接的模式并且认证方式是授权书方式的时候，必须在接口中传递超管授权书。
+     */
+    public Long getBatchAuthMethod() {
+        return this.BatchAuthMethod;
+    }
+
+    /**
+     * Set 认证链接使用单链接还是多链接模式<ul><li>0 - 多链接(默认)，指批量生成链接， 每一个企业会拥有一个认证链接，然后分别认证</li><li>1 - 单链接 ， 指批量生成链接，然后会将多个链接聚合成一个链接，进行认证</li></ul>p.s.请注意， 如果使用单链接的模式并且认证方式是授权书方式的时候，必须在接口中传递超管授权书。
+     * @param BatchAuthMethod 认证链接使用单链接还是多链接模式<ul><li>0 - 多链接(默认)，指批量生成链接， 每一个企业会拥有一个认证链接，然后分别认证</li><li>1 - 单链接 ， 指批量生成链接，然后会将多个链接聚合成一个链接，进行认证</li></ul>p.s.请注意， 如果使用单链接的模式并且认证方式是授权书方式的时候，必须在接口中传递超管授权书。
+     */
+    public void setBatchAuthMethod(Long BatchAuthMethod) {
+        this.BatchAuthMethod = BatchAuthMethod;
+    }
+
     public CreateBatchOrganizationRegistrationTasksRequest() {
     }
 
@@ -182,6 +205,9 @@ public class CreateBatchOrganizationRegistrationTasksRequest extends AbstractMod
         if (source.Endpoint != null) {
             this.Endpoint = new String(source.Endpoint);
         }
+        if (source.BatchAuthMethod != null) {
+            this.BatchAuthMethod = new Long(source.BatchAuthMethod);
+        }
     }
 
 
@@ -192,6 +218,7 @@ public class CreateBatchOrganizationRegistrationTasksRequest extends AbstractMod
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArrayObj(map, prefix + "RegistrationOrganizations.", this.RegistrationOrganizations);
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
+        this.setParamSimple(map, prefix + "BatchAuthMethod", this.BatchAuthMethod);
 
     }
 }

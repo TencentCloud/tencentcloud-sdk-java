@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RabbitMQUser extends AbstractModel {
 
     /**
-    * 集群实例Id
+    * 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -96,16 +96,30 @@ public class RabbitMQUser extends AbstractModel {
     private Long MaxChannels;
 
     /**
-     * Get 集群实例Id 
-     * @return InstanceId 集群实例Id
+    * 创建时间时间戳
+    */
+    @SerializedName("CreateTs")
+    @Expose
+    private Long CreateTs;
+
+    /**
+    * 修改时间时间戳
+    */
+    @SerializedName("ModifyTs")
+    @Expose
+    private Long ModifyTs;
+
+    /**
+     * Get 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。 
+     * @return InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例Id
-     * @param InstanceId 集群实例Id
+     * Set 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * @param InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -263,6 +277,38 @@ public class RabbitMQUser extends AbstractModel {
         this.MaxChannels = MaxChannels;
     }
 
+    /**
+     * Get 创建时间时间戳 
+     * @return CreateTs 创建时间时间戳
+     */
+    public Long getCreateTs() {
+        return this.CreateTs;
+    }
+
+    /**
+     * Set 创建时间时间戳
+     * @param CreateTs 创建时间时间戳
+     */
+    public void setCreateTs(Long CreateTs) {
+        this.CreateTs = CreateTs;
+    }
+
+    /**
+     * Get 修改时间时间戳 
+     * @return ModifyTs 修改时间时间戳
+     */
+    public Long getModifyTs() {
+        return this.ModifyTs;
+    }
+
+    /**
+     * Set 修改时间时间戳
+     * @param ModifyTs 修改时间时间戳
+     */
+    public void setModifyTs(Long ModifyTs) {
+        this.ModifyTs = ModifyTs;
+    }
+
     public RabbitMQUser() {
     }
 
@@ -304,6 +350,12 @@ public class RabbitMQUser extends AbstractModel {
         if (source.MaxChannels != null) {
             this.MaxChannels = new Long(source.MaxChannels);
         }
+        if (source.CreateTs != null) {
+            this.CreateTs = new Long(source.CreateTs);
+        }
+        if (source.ModifyTs != null) {
+            this.ModifyTs = new Long(source.ModifyTs);
+        }
     }
 
 
@@ -321,6 +373,8 @@ public class RabbitMQUser extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "MaxConnections", this.MaxConnections);
         this.setParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
+        this.setParamSimple(map, prefix + "CreateTs", this.CreateTs);
+        this.setParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
 
     }
 }

@@ -171,7 +171,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
     private Long FilterTransRegionFlag;
 
     /**
-    * zoenid列表
+    * ZoneID列表
     */
     @SerializedName("FilterZoneIdList")
     @Expose
@@ -514,16 +514,16 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get zoenid列表 
-     * @return FilterZoneIdList zoenid列表
+     * Get ZoneID列表 
+     * @return FilterZoneIdList ZoneID列表
      */
     public Long [] getFilterZoneIdList() {
         return this.FilterZoneIdList;
     }
 
     /**
-     * Set zoenid列表
-     * @param FilterZoneIdList zoenid列表
+     * Set ZoneID列表
+     * @param FilterZoneIdList ZoneID列表
      */
     public void setFilterZoneIdList(Long [] FilterZoneIdList) {
         this.FilterZoneIdList = FilterZoneIdList;

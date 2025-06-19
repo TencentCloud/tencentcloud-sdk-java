@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RabbitMQExchangeListInfo extends AbstractModel {
 
     /**
-    * exchange 名
+    * exchange 名称
     */
     @SerializedName("ExchangeName")
     @Expose
@@ -46,7 +46,7 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
     private String ExchangeType;
 
     /**
-    * VHost参数
+    * 交换机所属 Virtual Host 名称
     */
     @SerializedName("VirtualHost")
     @Expose
@@ -141,16 +141,30 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
     private Long MessagesDelayed;
 
     /**
-     * Get exchange 名 
-     * @return ExchangeName exchange 名
+    * 创建时间时间戳
+    */
+    @SerializedName("CreateTs")
+    @Expose
+    private Long CreateTs;
+
+    /**
+    * 修改时间时间戳
+    */
+    @SerializedName("ModifyTs")
+    @Expose
+    private Long ModifyTs;
+
+    /**
+     * Get exchange 名称 
+     * @return ExchangeName exchange 名称
      */
     public String getExchangeName() {
         return this.ExchangeName;
     }
 
     /**
-     * Set exchange 名
-     * @param ExchangeName exchange 名
+     * Set exchange 名称
+     * @param ExchangeName exchange 名称
      */
     public void setExchangeName(String ExchangeName) {
         this.ExchangeName = ExchangeName;
@@ -193,16 +207,16 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
     }
 
     /**
-     * Get VHost参数 
-     * @return VirtualHost VHost参数
+     * Get 交换机所属 Virtual Host 名称 
+     * @return VirtualHost 交换机所属 Virtual Host 名称
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set VHost参数
-     * @param VirtualHost VHost参数
+     * Set 交换机所属 Virtual Host 名称
+     * @param VirtualHost 交换机所属 Virtual Host 名称
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
@@ -416,6 +430,38 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
         this.MessagesDelayed = MessagesDelayed;
     }
 
+    /**
+     * Get 创建时间时间戳 
+     * @return CreateTs 创建时间时间戳
+     */
+    public Long getCreateTs() {
+        return this.CreateTs;
+    }
+
+    /**
+     * Set 创建时间时间戳
+     * @param CreateTs 创建时间时间戳
+     */
+    public void setCreateTs(Long CreateTs) {
+        this.CreateTs = CreateTs;
+    }
+
+    /**
+     * Get 修改时间时间戳 
+     * @return ModifyTs 修改时间时间戳
+     */
+    public Long getModifyTs() {
+        return this.ModifyTs;
+    }
+
+    /**
+     * Set 修改时间时间戳
+     * @param ModifyTs 修改时间时间戳
+     */
+    public void setModifyTs(Long ModifyTs) {
+        this.ModifyTs = ModifyTs;
+    }
+
     public RabbitMQExchangeListInfo() {
     }
 
@@ -472,6 +518,12 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
         if (source.MessagesDelayed != null) {
             this.MessagesDelayed = new Long(source.MessagesDelayed);
         }
+        if (source.CreateTs != null) {
+            this.CreateTs = new Long(source.CreateTs);
+        }
+        if (source.ModifyTs != null) {
+            this.ModifyTs = new Long(source.ModifyTs);
+        }
     }
 
 
@@ -495,6 +547,8 @@ public class RabbitMQExchangeListInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamSimple(map, prefix + "Arguments", this.Arguments);
         this.setParamSimple(map, prefix + "MessagesDelayed", this.MessagesDelayed);
+        this.setParamSimple(map, prefix + "CreateTs", this.CreateTs);
+        this.setParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
 
     }
 }

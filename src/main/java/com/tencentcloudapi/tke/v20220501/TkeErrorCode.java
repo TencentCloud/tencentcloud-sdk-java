@@ -18,7 +18,7 @@ public enum TkeErrorCode {
      /* 初始化master失败。 */
      INTERNALERROR_INITMASTERFAILED("InternalError.InitMasterFailed"),
      
-     /* Param。 */
+     /* 参数错误。 */
      INTERNALERROR_PARAM("InternalError.Param"),
      
      /* 公共集群不支持扩展节点。 */
