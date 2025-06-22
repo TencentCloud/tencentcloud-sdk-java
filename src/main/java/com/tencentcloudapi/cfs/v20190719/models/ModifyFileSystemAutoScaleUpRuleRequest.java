@@ -38,7 +38,7 @@ public class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel {
     private Long ScaleUpThreshold;
 
     /**
-    * 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
+    * 扩容后目标阈值，范围[10-90]，该值要小于 ScaleUpThreshold
     */
     @SerializedName("TargetThreshold")
     @Expose
@@ -84,16 +84,16 @@ public class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold 
-     * @return TargetThreshold 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
+     * Get 扩容后目标阈值，范围[10-90]，该值要小于 ScaleUpThreshold 
+     * @return TargetThreshold 扩容后目标阈值，范围[10-90]，该值要小于 ScaleUpThreshold
      */
     public Long getTargetThreshold() {
         return this.TargetThreshold;
     }
 
     /**
-     * Set 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
-     * @param TargetThreshold 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
+     * Set 扩容后目标阈值，范围[10-90]，该值要小于 ScaleUpThreshold
+     * @param TargetThreshold 扩容后目标阈值，范围[10-90]，该值要小于 ScaleUpThreshold
      */
     public void setTargetThreshold(Long TargetThreshold) {
         this.TargetThreshold = TargetThreshold;

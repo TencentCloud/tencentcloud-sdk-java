@@ -578,6 +578,23 @@ Type，根据任务类型精确查找
     }
 
     /**
+     *用于查询平滑迁移任务列表
+
+查询参数Filters， 支持的字段如下：
+TaskStatus, 支持多选 
+ConnectionType，支持多选 
+InstanceId，精确搜索 
+TaskName，支持模糊搜索
+     * @param req DescribeSmoothMigrationTaskListRequest
+     * @return DescribeSmoothMigrationTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSmoothMigrationTaskListResponse DescribeSmoothMigrationTaskList(DescribeSmoothMigrationTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSmoothMigrationTaskList", DescribeSmoothMigrationTaskListResponse.class);
+    }
+
+    /**
      *平滑迁移过程获取源集群group列表接口
 
 查询过滤器，支持字段

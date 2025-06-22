@@ -38,7 +38,7 @@ public class AutoScaleUpRule extends AbstractModel {
     private Long ScaleThreshold;
 
     /**
-    * 扩容后使用量跟集群总量比例,范围[1-90]
+    * 扩容后使用量跟集群总量比例,范围[10-90]
     */
     @SerializedName("TargetThreshold")
     @Expose
@@ -77,16 +77,16 @@ public class AutoScaleUpRule extends AbstractModel {
     }
 
     /**
-     * Get 扩容后使用量跟集群总量比例,范围[1-90] 
-     * @return TargetThreshold 扩容后使用量跟集群总量比例,范围[1-90]
+     * Get 扩容后使用量跟集群总量比例,范围[10-90] 
+     * @return TargetThreshold 扩容后使用量跟集群总量比例,范围[10-90]
      */
     public Long getTargetThreshold() {
         return this.TargetThreshold;
     }
 
     /**
-     * Set 扩容后使用量跟集群总量比例,范围[1-90]
-     * @param TargetThreshold 扩容后使用量跟集群总量比例,范围[1-90]
+     * Set 扩容后使用量跟集群总量比例,范围[10-90]
+     * @param TargetThreshold 扩容后使用量跟集群总量比例,范围[10-90]
      */
     public void setTargetThreshold(Long TargetThreshold) {
         this.TargetThreshold = TargetThreshold;

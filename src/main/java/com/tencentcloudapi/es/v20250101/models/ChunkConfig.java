@@ -38,6 +38,13 @@ public class ChunkConfig extends AbstractModel {
     private String [] Delimiters;
 
     /**
+    * 相邻切片重合字符数，需要小于分片长度
+    */
+    @SerializedName("ChunkOverlap")
+    @Expose
+    private Long ChunkOverlap;
+
+    /**
      * Get 最大分片长度 
      * @return MaxChunkSize 最大分片长度
      */
@@ -69,6 +76,22 @@ public class ChunkConfig extends AbstractModel {
         this.Delimiters = Delimiters;
     }
 
+    /**
+     * Get 相邻切片重合字符数，需要小于分片长度 
+     * @return ChunkOverlap 相邻切片重合字符数，需要小于分片长度
+     */
+    public Long getChunkOverlap() {
+        return this.ChunkOverlap;
+    }
+
+    /**
+     * Set 相邻切片重合字符数，需要小于分片长度
+     * @param ChunkOverlap 相邻切片重合字符数，需要小于分片长度
+     */
+    public void setChunkOverlap(Long ChunkOverlap) {
+        this.ChunkOverlap = ChunkOverlap;
+    }
+
     public ChunkConfig() {
     }
 
@@ -86,6 +109,9 @@ public class ChunkConfig extends AbstractModel {
                 this.Delimiters[i] = new String(source.Delimiters[i]);
             }
         }
+        if (source.ChunkOverlap != null) {
+            this.ChunkOverlap = new Long(source.ChunkOverlap);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class ChunkConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MaxChunkSize", this.MaxChunkSize);
         this.setParamArraySimple(map, prefix + "Delimiters.", this.Delimiters);
+        this.setParamSimple(map, prefix + "ChunkOverlap", this.ChunkOverlap);
 
     }
 }

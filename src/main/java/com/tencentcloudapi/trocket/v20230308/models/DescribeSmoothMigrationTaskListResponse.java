@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.es.v20250101.models;
+package com.tencentcloudapi.trocket.v20230308.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,23 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChunkDocumentResponse extends AbstractModel {
+public class DescribeSmoothMigrationTaskListResponse extends AbstractModel {
 
     /**
-    * 无
+    * 查询总数
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Chunks")
+    @SerializedName("TotalCount")
     @Expose
-    private Chunk [] Chunks;
+    private Long TotalCount;
 
     /**
-    * token消耗量
+    * 任务列表	
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Usage")
+    @SerializedName("Data")
     @Expose
-    private Usage Usage;
+    private SmoothMigrationTaskItem [] Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +47,43 @@ public class ChunkDocumentResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 无 
-     * @return Chunks 无
+     * Get 查询总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 查询总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Chunk [] getChunks() {
-        return this.Chunks;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 无
-     * @param Chunks 无
+     * Set 查询总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 查询总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setChunks(Chunk [] Chunks) {
-        this.Chunks = Chunks;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get token消耗量 
-     * @return Usage token消耗量
+     * Get 任务列表	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 任务列表	
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Usage getUsage() {
-        return this.Usage;
+    public SmoothMigrationTaskItem [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set token消耗量
-     * @param Usage token消耗量
+     * Set 任务列表	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 任务列表	
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUsage(Usage Usage) {
-        this.Usage = Usage;
+    public void setData(SmoothMigrationTaskItem [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -92,22 +102,22 @@ public class ChunkDocumentResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ChunkDocumentResponse() {
+    public DescribeSmoothMigrationTaskListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChunkDocumentResponse(ChunkDocumentResponse source) {
-        if (source.Chunks != null) {
-            this.Chunks = new Chunk[source.Chunks.length];
-            for (int i = 0; i < source.Chunks.length; i++) {
-                this.Chunks[i] = new Chunk(source.Chunks[i]);
-            }
+    public DescribeSmoothMigrationTaskListResponse(DescribeSmoothMigrationTaskListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Usage != null) {
-            this.Usage = new Usage(source.Usage);
+        if (source.Data != null) {
+            this.Data = new SmoothMigrationTaskItem[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new SmoothMigrationTaskItem(source.Data[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +129,8 @@ public class ChunkDocumentResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Chunks.", this.Chunks);
-        this.setParamObj(map, prefix + "Usage.", this.Usage);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

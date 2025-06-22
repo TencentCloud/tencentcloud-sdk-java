@@ -26,7 +26,7 @@ public class Content extends AbstractModel {
     /**
     * 内容类型
 注意：
-需包含至少一个 Type 为"text"的参数及至少一个 Type 为"image_url"的参数。
+需包含至少一个 Type 为"text"的参数。
 参数值可选范围：[text", "image_url"]
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -54,12 +54,12 @@ public class Content extends AbstractModel {
     /**
      * Get 内容类型
 注意：
-需包含至少一个 Type 为"text"的参数及至少一个 Type 为"image_url"的参数。
+需包含至少一个 Type 为"text"的参数。
 参数值可选范围：[text", "image_url"]
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 内容类型
 注意：
-需包含至少一个 Type 为"text"的参数及至少一个 Type 为"image_url"的参数。
+需包含至少一个 Type 为"text"的参数。
 参数值可选范围：[text", "image_url"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -70,12 +70,12 @@ public class Content extends AbstractModel {
     /**
      * Set 内容类型
 注意：
-需包含至少一个 Type 为"text"的参数及至少一个 Type 为"image_url"的参数。
+需包含至少一个 Type 为"text"的参数。
 参数值可选范围：[text", "image_url"]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 内容类型
 注意：
-需包含至少一个 Type 为"text"的参数及至少一个 Type 为"image_url"的参数。
+需包含至少一个 Type 为"text"的参数。
 参数值可选范围：[text", "image_url"]
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.es.v20250101.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChunkDocumentResponse extends AbstractModel {
+public class DescribeBatchOrganizationRegistrationTasksResponse extends AbstractModel {
 
     /**
-    * 无
+    * 企业批量任务状态明细
     */
-    @SerializedName("Chunks")
+    @SerializedName("Details")
     @Expose
-    private Chunk [] Chunks;
-
-    /**
-    * token消耗量
-    */
-    @SerializedName("Usage")
-    @Expose
-    private Usage Usage;
+    private BatchOrganizationRegistrationTasksDetails [] Details;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class ChunkDocumentResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 无 
-     * @return Chunks 无
+     * Get 企业批量任务状态明细 
+     * @return Details 企业批量任务状态明细
      */
-    public Chunk [] getChunks() {
-        return this.Chunks;
+    public BatchOrganizationRegistrationTasksDetails [] getDetails() {
+        return this.Details;
     }
 
     /**
-     * Set 无
-     * @param Chunks 无
+     * Set 企业批量任务状态明细
+     * @param Details 企业批量任务状态明细
      */
-    public void setChunks(Chunk [] Chunks) {
-        this.Chunks = Chunks;
-    }
-
-    /**
-     * Get token消耗量 
-     * @return Usage token消耗量
-     */
-    public Usage getUsage() {
-        return this.Usage;
-    }
-
-    /**
-     * Set token消耗量
-     * @param Usage token消耗量
-     */
-    public void setUsage(Usage Usage) {
-        this.Usage = Usage;
+    public void setDetails(BatchOrganizationRegistrationTasksDetails [] Details) {
+        this.Details = Details;
     }
 
     /**
@@ -92,22 +69,19 @@ public class ChunkDocumentResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ChunkDocumentResponse() {
+    public DescribeBatchOrganizationRegistrationTasksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChunkDocumentResponse(ChunkDocumentResponse source) {
-        if (source.Chunks != null) {
-            this.Chunks = new Chunk[source.Chunks.length];
-            for (int i = 0; i < source.Chunks.length; i++) {
-                this.Chunks[i] = new Chunk(source.Chunks[i]);
+    public DescribeBatchOrganizationRegistrationTasksResponse(DescribeBatchOrganizationRegistrationTasksResponse source) {
+        if (source.Details != null) {
+            this.Details = new BatchOrganizationRegistrationTasksDetails[source.Details.length];
+            for (int i = 0; i < source.Details.length; i++) {
+                this.Details[i] = new BatchOrganizationRegistrationTasksDetails(source.Details[i]);
             }
-        }
-        if (source.Usage != null) {
-            this.Usage = new Usage(source.Usage);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +93,7 @@ public class ChunkDocumentResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Chunks.", this.Chunks);
-        this.setParamObj(map, prefix + "Usage.", this.Usage);
+        this.setParamArrayObj(map, prefix + "Details.", this.Details);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

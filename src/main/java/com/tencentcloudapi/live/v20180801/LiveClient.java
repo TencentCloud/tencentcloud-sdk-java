@@ -1091,6 +1091,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *使用该接口查询云端特效列表，特效列表中包含一部分官方精品特效，同时包含用户自定义生成的特效。
+     * @param req DescribeLiveCloudEffectListRequest
+     * @return DescribeLiveCloudEffectListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveCloudEffectListResponse DescribeLiveCloudEffectList(DescribeLiveCloudEffectListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveCloudEffectList", DescribeLiveCloudEffectListResponse.class);
+    }
+
+    /**
      *获取直播延播列表。
      * @param req DescribeLiveDelayInfoListRequest
      * @return DescribeLiveDelayInfoListResponse
@@ -1224,6 +1235,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLivePadRulesResponse DescribeLivePadRules(DescribeLivePadRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLivePadRules", DescribeLivePadRulesResponse.class);
+    }
+
+    /**
+     *使用该接口查询垫片流列表。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。
+     * @param req DescribeLivePadStreamListRequest
+     * @return DescribeLivePadStreamListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLivePadStreamListResponse DescribeLivePadStreamList(DescribeLivePadStreamListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLivePadStreamList", DescribeLivePadStreamListResponse.class);
     }
 
     /**
@@ -2196,6 +2218,28 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *使用该接口发送云端特效到线上正活跃的直播流，观众可在播放端看到特效从直播流画面中展示。
+     * @param req SendLiveCloudEffectRequest
+     * @return SendLiveCloudEffectResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendLiveCloudEffectResponse SendLiveCloudEffect(SendLiveCloudEffectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendLiveCloudEffect", SendLiveCloudEffectResponse.class);
+    }
+
+    /**
+     *使用该接口将直播流开始切入垫片。
+     * @param req StartLivePadStreamRequest
+     * @return StartLivePadStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartLivePadStreamResponse StartLivePadStream(StartLivePadStreamRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartLivePadStream", StartLivePadStreamResponse.class);
+    }
+
+    /**
      *该接口用来启动直播流监播任务。
      * @param req StartLiveStreamMonitorRequest
      * @return StartLiveStreamMonitorResponse
@@ -2238,6 +2282,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public StopLivePadProcessorResponse StopLivePadProcessor(StopLivePadProcessorRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopLivePadProcessor", StopLivePadProcessorResponse.class);
+    }
+
+    /**
+     *使用该接口将直播流停止切入垫片。
+     * @param req StopLivePadStreamRequest
+     * @return StopLivePadStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopLivePadStreamResponse StopLivePadStream(StopLivePadStreamRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopLivePadStream", StopLivePadStreamResponse.class);
     }
 
     /**
