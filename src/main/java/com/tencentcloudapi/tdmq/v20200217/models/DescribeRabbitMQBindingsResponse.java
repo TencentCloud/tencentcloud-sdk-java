@@ -31,7 +31,7 @@ public class DescribeRabbitMQBindingsResponse extends AbstractModel {
     private RabbitMQBindingListInfo [] BindingInfoList;
 
     /**
-    * 数量
+    * 路由关系数量
     */
     @SerializedName("TotalCount")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeRabbitMQBindingsResponse extends AbstractModel {
     }
 
     /**
-     * Get 数量 
-     * @return TotalCount 数量
+     * Get 路由关系数量 
+     * @return TotalCount 路由关系数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 数量
-     * @param TotalCount 数量
+     * Set 路由关系数量
+     * @param TotalCount 路由关系数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

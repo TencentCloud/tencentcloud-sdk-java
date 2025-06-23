@@ -31,14 +31,14 @@ public class DescribeRabbitMQVipInstancesRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 查询数目上限，默认20
+    * 查询数目上限，默认 20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询起始位置
+    * 查询起始位置，默认 0
     */
     @SerializedName("Offset")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeRabbitMQVipInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询数目上限，默认20 
-     * @return Limit 查询数目上限，默认20
+     * Get 查询数目上限，默认 20 
+     * @return Limit 查询数目上限，默认 20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询数目上限，默认20
-     * @param Limit 查询数目上限，默认20
+     * Set 查询数目上限，默认 20
+     * @param Limit 查询数目上限，默认 20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询起始位置 
-     * @return Offset 查询起始位置
+     * Get 查询起始位置，默认 0 
+     * @return Offset 查询起始位置，默认 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询起始位置
-     * @param Offset 查询起始位置
+     * Set 查询起始位置，默认 0
+     * @param Offset 查询起始位置，默认 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

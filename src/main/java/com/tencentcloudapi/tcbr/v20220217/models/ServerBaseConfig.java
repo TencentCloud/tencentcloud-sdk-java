@@ -213,6 +213,14 @@ public class ServerBaseConfig extends AbstractModel {
     private String [] Cmd;
 
     /**
+    * 会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionAffinity")
+    @Expose
+    private String SessionAffinity;
+
+    /**
      * Get 环境 Id 
      * @return EnvId 环境 Id
      */
@@ -644,6 +652,26 @@ public class ServerBaseConfig extends AbstractModel {
         this.Cmd = Cmd;
     }
 
+    /**
+     * Get 会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionAffinity 会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionAffinity() {
+        return this.SessionAffinity;
+    }
+
+    /**
+     * Set 会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionAffinity 会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionAffinity(String SessionAffinity) {
+        this.SessionAffinity = SessionAffinity;
+    }
+
     public ServerBaseConfig() {
     }
 
@@ -748,6 +776,9 @@ public class ServerBaseConfig extends AbstractModel {
                 this.Cmd[i] = new String(source.Cmd[i]);
             }
         }
+        if (source.SessionAffinity != null) {
+            this.SessionAffinity = new String(source.SessionAffinity);
+        }
     }
 
 
@@ -782,6 +813,7 @@ public class ServerBaseConfig extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TimerScale.", this.TimerScale);
         this.setParamArraySimple(map, prefix + "EntryPoint.", this.EntryPoint);
         this.setParamArraySimple(map, prefix + "Cmd.", this.Cmd);
+        this.setParamSimple(map, prefix + "SessionAffinity", this.SessionAffinity);
 
     }
 }

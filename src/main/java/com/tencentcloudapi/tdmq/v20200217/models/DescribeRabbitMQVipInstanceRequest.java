@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeRabbitMQVipInstanceRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群 ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群 ID 
+     * @return ClusterId 集群 ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群 ID
+     * @param ClusterId 集群 ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

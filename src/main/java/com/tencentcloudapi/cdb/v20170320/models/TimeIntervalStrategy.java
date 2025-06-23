@@ -25,7 +25,7 @@ public class TimeIntervalStrategy extends AbstractModel {
 
     /**
     * 开始扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
     */
     @SerializedName("StartTime")
     @Expose
@@ -33,7 +33,7 @@ public class TimeIntervalStrategy extends AbstractModel {
 
     /**
     * 结束扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
     */
     @SerializedName("EndTime")
     @Expose
@@ -41,9 +41,9 @@ public class TimeIntervalStrategy extends AbstractModel {
 
     /**
      * Get 开始扩容时间。
-说明：此值的格式为 Integer 的时间戳。 
+说明：此值的格式为 Integer 的时间戳（秒级）。 
      * @return StartTime 开始扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
      */
     public Long getStartTime() {
         return this.StartTime;
@@ -51,9 +51,9 @@ public class TimeIntervalStrategy extends AbstractModel {
 
     /**
      * Set 开始扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
      * @param StartTime 开始扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
@@ -61,9 +61,9 @@ public class TimeIntervalStrategy extends AbstractModel {
 
     /**
      * Get 结束扩容时间。
-说明：此值的格式为 Integer 的时间戳。 
+说明：此值的格式为 Integer 的时间戳（秒级）。 
      * @return EndTime 结束扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -71,9 +71,9 @@ public class TimeIntervalStrategy extends AbstractModel {
 
     /**
      * Set 结束扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
      * @param EndTime 结束扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class PriceTag extends AbstractModel {
 
     /**
-    * 计价名称
+    * 计价名称（枚举值：tps：TPS基础价；stepTps：TPS步长）
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 步长
+    * 计费项对应的步长数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Step")
@@ -39,25 +39,25 @@ public class PriceTag extends AbstractModel {
     private Long Step;
 
     /**
-     * Get 计价名称 
-     * @return Name 计价名称
+     * Get 计价名称（枚举值：tps：TPS基础价；stepTps：TPS步长） 
+     * @return Name 计价名称（枚举值：tps：TPS基础价；stepTps：TPS步长）
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 计价名称
-     * @param Name 计价名称
+     * Set 计价名称（枚举值：tps：TPS基础价；stepTps：TPS步长）
+     * @param Name 计价名称（枚举值：tps：TPS基础价；stepTps：TPS步长）
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 步长
+     * Get 计费项对应的步长数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Step 步长
+     * @return Step 计费项对应的步长数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStep() {
@@ -65,9 +65,9 @@ public class PriceTag extends AbstractModel {
     }
 
     /**
-     * Set 步长
+     * Set 计费项对应的步长数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Step 步长
+     * @param Step 计费项对应的步长数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStep(Long Step) {

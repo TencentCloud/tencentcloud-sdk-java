@@ -140,8 +140,9 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 
     /**
     * 可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
+<li>5：授权书+对公打款</li>
 </ul>
     */
     @SerializedName("AuthorizationTypes")
@@ -574,12 +575,14 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 
     /**
      * Get 可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
+<li>5：授权书+对公打款</li>
 </ul> 
      * @return AuthorizationTypes 可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
+<li>5：授权书+对公打款</li>
 </ul>
      */
     public Long [] getAuthorizationTypes() {
@@ -588,12 +591,14 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 
     /**
      * Set 可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
+<li>5：授权书+对公打款</li>
 </ul>
      * @param AuthorizationTypes 可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
+<li>5：授权书+对公打款</li>
 </ul>
      */
     public void setAuthorizationTypes(Long [] AuthorizationTypes) {

@@ -94,6 +94,13 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     private Long UncleanLeaderElectionEnable;
 
     /**
+    * 实例删除保护开关: 1 开启  0 关闭
+    */
+    @SerializedName("DeleteProtectionEnable")
+    @Expose
+    private Long DeleteProtectionEnable;
+
+    /**
      * Get ckafka集群实例Id 
      * @return InstanceId ckafka集群实例Id
      */
@@ -257,6 +264,22 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
     }
 
+    /**
+     * Get 实例删除保护开关: 1 开启  0 关闭 
+     * @return DeleteProtectionEnable 实例删除保护开关: 1 开启  0 关闭
+     */
+    public Long getDeleteProtectionEnable() {
+        return this.DeleteProtectionEnable;
+    }
+
+    /**
+     * Set 实例删除保护开关: 1 开启  0 关闭
+     * @param DeleteProtectionEnable 实例删除保护开关: 1 开启  0 关闭
+     */
+    public void setDeleteProtectionEnable(Long DeleteProtectionEnable) {
+        this.DeleteProtectionEnable = DeleteProtectionEnable;
+    }
+
     public ModifyInstanceAttributesRequest() {
     }
 
@@ -295,6 +318,9 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
         if (source.UncleanLeaderElectionEnable != null) {
             this.UncleanLeaderElectionEnable = new Long(source.UncleanLeaderElectionEnable);
         }
+        if (source.DeleteProtectionEnable != null) {
+            this.DeleteProtectionEnable = new Long(source.DeleteProtectionEnable);
+        }
     }
 
 
@@ -312,6 +338,7 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
         this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
         this.setParamSimple(map, prefix + "MaxMessageByte", this.MaxMessageByte);
         this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
+        this.setParamSimple(map, prefix + "DeleteProtectionEnable", this.DeleteProtectionEnable);
 
     }
 }

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class BalanceRoGroupLoadRequest extends AbstractModel {
 
     /**
-    * RO 组的 ID，格式如：cdbrg-c1nl9rpv。
+    * RO 组的 ID，格式如：cdbrg-c1nl9rpv。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 获取。
     */
     @SerializedName("RoGroupId")
     @Expose
     private String RoGroupId;
 
     /**
-     * Get RO 组的 ID，格式如：cdbrg-c1nl9rpv。 
-     * @return RoGroupId RO 组的 ID，格式如：cdbrg-c1nl9rpv。
+     * Get RO 组的 ID，格式如：cdbrg-c1nl9rpv。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 获取。 
+     * @return RoGroupId RO 组的 ID，格式如：cdbrg-c1nl9rpv。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 获取。
      */
     public String getRoGroupId() {
         return this.RoGroupId;
     }
 
     /**
-     * Set RO 组的 ID，格式如：cdbrg-c1nl9rpv。
-     * @param RoGroupId RO 组的 ID，格式如：cdbrg-c1nl9rpv。
+     * Set RO 组的 ID，格式如：cdbrg-c1nl9rpv。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 获取。
+     * @param RoGroupId RO 组的 ID，格式如：cdbrg-c1nl9rpv。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 获取。
      */
     public void setRoGroupId(String RoGroupId) {
         this.RoGroupId = RoGroupId;

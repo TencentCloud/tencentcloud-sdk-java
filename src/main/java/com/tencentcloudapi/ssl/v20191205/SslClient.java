@@ -508,6 +508,28 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *查询证书云资源更新（证书ID不变）记录列表
+     * @param req DescribeHostUploadUpdateRecordRequest
+     * @return DescribeHostUploadUpdateRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostUploadUpdateRecordResponse DescribeHostUploadUpdateRecord(DescribeHostUploadUpdateRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostUploadUpdateRecord", DescribeHostUploadUpdateRecordResponse.class);
+    }
+
+    /**
+     *查询证书更新（证书ID不变）部署记录详情
+     * @param req DescribeHostUploadUpdateRecordDetailRequest
+     * @return DescribeHostUploadUpdateRecordDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostUploadUpdateRecordDetailResponse DescribeHostUploadUpdateRecordDetail(DescribeHostUploadUpdateRecordDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostUploadUpdateRecordDetail", DescribeHostUploadUpdateRecordDetailResponse.class);
+    }
+
+    /**
      *查询证书Vod云资源部署实例列表
      * @param req DescribeHostVodInstanceListRequest
      * @return DescribeHostVodInstanceListResponse
@@ -736,6 +758,28 @@ public class SslClient extends AbstractClient{
     public UploadUpdateCertificateInstanceResponse UploadUpdateCertificateInstance(UploadUpdateCertificateInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UploadUpdateCertificateInstance", UploadUpdateCertificateInstanceResponse.class);
+    }
+
+    /**
+     *云资源更新（证书ID不变）重试部署记录
+     * @param req UploadUpdateCertificateRecordRetryRequest
+     * @return UploadUpdateCertificateRecordRetryResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadUpdateCertificateRecordRetryResponse UploadUpdateCertificateRecordRetry(UploadUpdateCertificateRecordRetryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadUpdateCertificateRecordRetry", UploadUpdateCertificateRecordRetryResponse.class);
+    }
+
+    /**
+     *云资源更新成功（证书ID不变）记录回滚， 会对全量任务进行回滚
+     * @param req UploadUpdateCertificateRecordRollbackRequest
+     * @return UploadUpdateCertificateRecordRollbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadUpdateCertificateRecordRollbackResponse UploadUpdateCertificateRecordRollback(UploadUpdateCertificateRecordRollbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadUpdateCertificateRecordRollback", UploadUpdateCertificateRecordRollbackResponse.class);
     }
 
     /**

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeRabbitMQExchangesRequest extends AbstractModel {
 
     /**
-    * 实例 id
+    * 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * vhost 参数
+    * VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
     */
     @SerializedName("VirtualHost")
     @Expose
     private String VirtualHost;
 
     /**
-    * 分页 offset
+    * 分页 offset，默认 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页 limit
+    * 分页 limit，默认 20
     */
     @SerializedName("Limit")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeRabbitMQExchangesRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-    * 筛选 exchange 类型, 数组中每个元素为选中的过滤类型
+    * 筛选 exchange 类型, 数组中每个元素为选中的过滤类型，仅支持 direct、fanout、topic、header
     */
     @SerializedName("ExchangeTypeFilters")
     @Expose
@@ -91,70 +91,72 @@ MessageRateOut - 消费速率；
 
     /**
     * 排序顺序，ascend 或 descend
+ascend：升序
+descend：降序
     */
     @SerializedName("SortOrder")
     @Expose
     private String SortOrder;
 
     /**
-     * Get 实例 id 
-     * @return InstanceId 实例 id
+     * Get 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。 
+     * @return InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 id
-     * @param InstanceId 实例 id
+     * Set 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * @param InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get vhost 参数 
-     * @return VirtualHost vhost 参数
+     * Get VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。 
+     * @return VirtualHost VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set vhost 参数
-     * @param VirtualHost vhost 参数
+     * Set VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
+     * @param VirtualHost VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 分页 offset 
-     * @return Offset 分页 offset
+     * Get 分页 offset，默认 0 
+     * @return Offset 分页 offset，默认 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页 offset
-     * @param Offset 分页 offset
+     * Set 分页 offset，默认 0
+     * @param Offset 分页 offset，默认 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页 limit 
-     * @return Limit 分页 limit
+     * Get 分页 limit，默认 20 
+     * @return Limit 分页 limit，默认 20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页 limit
-     * @param Limit 分页 limit
+     * Set 分页 limit，默认 20
+     * @param Limit 分页 limit，默认 20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -177,16 +179,16 @@ MessageRateOut - 消费速率；
     }
 
     /**
-     * Get 筛选 exchange 类型, 数组中每个元素为选中的过滤类型 
-     * @return ExchangeTypeFilters 筛选 exchange 类型, 数组中每个元素为选中的过滤类型
+     * Get 筛选 exchange 类型, 数组中每个元素为选中的过滤类型，仅支持 direct、fanout、topic、header 
+     * @return ExchangeTypeFilters 筛选 exchange 类型, 数组中每个元素为选中的过滤类型，仅支持 direct、fanout、topic、header
      */
     public String [] getExchangeTypeFilters() {
         return this.ExchangeTypeFilters;
     }
 
     /**
-     * Set 筛选 exchange 类型, 数组中每个元素为选中的过滤类型
-     * @param ExchangeTypeFilters 筛选 exchange 类型, 数组中每个元素为选中的过滤类型
+     * Set 筛选 exchange 类型, 数组中每个元素为选中的过滤类型，仅支持 direct、fanout、topic、header
+     * @param ExchangeTypeFilters 筛选 exchange 类型, 数组中每个元素为选中的过滤类型，仅支持 direct、fanout、topic、header
      */
     public void setExchangeTypeFilters(String [] ExchangeTypeFilters) {
         this.ExchangeTypeFilters = ExchangeTypeFilters;
@@ -253,8 +255,12 @@ MessageRateOut - 消费速率；
     }
 
     /**
-     * Get 排序顺序，ascend 或 descend 
+     * Get 排序顺序，ascend 或 descend
+ascend：升序
+descend：降序 
      * @return SortOrder 排序顺序，ascend 或 descend
+ascend：升序
+descend：降序
      */
     public String getSortOrder() {
         return this.SortOrder;
@@ -262,7 +268,11 @@ MessageRateOut - 消费速率；
 
     /**
      * Set 排序顺序，ascend 或 descend
+ascend：升序
+descend：降序
      * @param SortOrder 排序顺序，ascend 或 descend
+ascend：升序
+descend：降序
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;

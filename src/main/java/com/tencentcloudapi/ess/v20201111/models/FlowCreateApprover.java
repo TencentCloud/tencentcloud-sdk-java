@@ -176,7 +176,7 @@ public class FlowCreateApprover extends AbstractModel {
     private String CustomApproverTag;
 
     /**
-    * <font color="red">不再使用</font >, 快速注册相关信息
+    * 快速注册相关信息
     */
     @SerializedName("RegisterInfo")
     @Expose
@@ -781,16 +781,16 @@ public class FlowCreateApprover extends AbstractModel {
     }
 
     /**
-     * Get <font color="red">不再使用</font >, 快速注册相关信息 
-     * @return RegisterInfo <font color="red">不再使用</font >, 快速注册相关信息
+     * Get 快速注册相关信息 
+     * @return RegisterInfo 快速注册相关信息
      */
     public RegisterInfo getRegisterInfo() {
         return this.RegisterInfo;
     }
 
     /**
-     * Set <font color="red">不再使用</font >, 快速注册相关信息
-     * @param RegisterInfo <font color="red">不再使用</font >, 快速注册相关信息
+     * Set 快速注册相关信息
+     * @param RegisterInfo 快速注册相关信息
      */
     public void setRegisterInfo(RegisterInfo RegisterInfo) {
         this.RegisterInfo = RegisterInfo;

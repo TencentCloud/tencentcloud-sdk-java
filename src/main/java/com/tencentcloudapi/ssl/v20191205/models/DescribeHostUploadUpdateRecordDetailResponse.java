@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.ssl.v20191205.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopLivePadProcessorResponse extends AbstractModel {
+public class DescribeHostUploadUpdateRecordDetailResponse extends AbstractModel {
 
     /**
-    * 处理结果信息。
+    * 托管记录详情列表
     */
-    @SerializedName("ResultMessage")
+    @SerializedName("DeployRecordDetail")
     @Expose
-    private String ResultMessage;
+    private DeployRecord [] DeployRecordDetail;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class StopLivePadProcessorResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 处理结果信息。 
-     * @return ResultMessage 处理结果信息。
+     * Get 托管记录详情列表 
+     * @return DeployRecordDetail 托管记录详情列表
      */
-    public String getResultMessage() {
-        return this.ResultMessage;
+    public DeployRecord [] getDeployRecordDetail() {
+        return this.DeployRecordDetail;
     }
 
     /**
-     * Set 处理结果信息。
-     * @param ResultMessage 处理结果信息。
+     * Set 托管记录详情列表
+     * @param DeployRecordDetail 托管记录详情列表
      */
-    public void setResultMessage(String ResultMessage) {
-        this.ResultMessage = ResultMessage;
+    public void setDeployRecordDetail(DeployRecord [] DeployRecordDetail) {
+        this.DeployRecordDetail = DeployRecordDetail;
     }
 
     /**
@@ -69,16 +69,19 @@ public class StopLivePadProcessorResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public StopLivePadProcessorResponse() {
+    public DescribeHostUploadUpdateRecordDetailResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StopLivePadProcessorResponse(StopLivePadProcessorResponse source) {
-        if (source.ResultMessage != null) {
-            this.ResultMessage = new String(source.ResultMessage);
+    public DescribeHostUploadUpdateRecordDetailResponse(DescribeHostUploadUpdateRecordDetailResponse source) {
+        if (source.DeployRecordDetail != null) {
+            this.DeployRecordDetail = new DeployRecord[source.DeployRecordDetail.length];
+            for (int i = 0; i < source.DeployRecordDetail.length; i++) {
+                this.DeployRecordDetail[i] = new DeployRecord(source.DeployRecordDetail[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +93,7 @@ public class StopLivePadProcessorResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ResultMessage", this.ResultMessage);
+        this.setParamArrayObj(map, prefix + "DeployRecordDetail.", this.DeployRecordDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

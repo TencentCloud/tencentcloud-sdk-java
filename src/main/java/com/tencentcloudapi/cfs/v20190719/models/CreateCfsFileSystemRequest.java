@@ -158,6 +158,15 @@ v3.1：创建增强版的通用文件系统
     private String CfsVersion;
 
     /**
+    * turbo文件系统元数据属性
+basic：创建标准型的元数据
+enhanced：创建增强型的元数据
+    */
+    @SerializedName("MetaType")
+    @Expose
+    private String MetaType;
+
+    /**
      * Get 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表 
      * @return Zone 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
      */
@@ -477,6 +486,30 @@ v3.1：创建增强版的通用文件系统
         this.CfsVersion = CfsVersion;
     }
 
+    /**
+     * Get turbo文件系统元数据属性
+basic：创建标准型的元数据
+enhanced：创建增强型的元数据 
+     * @return MetaType turbo文件系统元数据属性
+basic：创建标准型的元数据
+enhanced：创建增强型的元数据
+     */
+    public String getMetaType() {
+        return this.MetaType;
+    }
+
+    /**
+     * Set turbo文件系统元数据属性
+basic：创建标准型的元数据
+enhanced：创建增强型的元数据
+     * @param MetaType turbo文件系统元数据属性
+basic：创建标准型的元数据
+enhanced：创建增强型的元数据
+     */
+    public void setMetaType(String MetaType) {
+        this.MetaType = MetaType;
+    }
+
     public CreateCfsFileSystemRequest() {
     }
 
@@ -542,6 +575,9 @@ v3.1：创建增强版的通用文件系统
         if (source.CfsVersion != null) {
             this.CfsVersion = new String(source.CfsVersion);
         }
+        if (source.MetaType != null) {
+            this.MetaType = new String(source.MetaType);
+        }
     }
 
 
@@ -567,6 +603,7 @@ v3.1：创建增强版的通用文件系统
         this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
         this.setParamSimple(map, prefix + "EnableAutoScaleUp", this.EnableAutoScaleUp);
         this.setParamSimple(map, prefix + "CfsVersion", this.CfsVersion);
+        this.setParamSimple(map, prefix + "MetaType", this.MetaType);
 
     }
 }

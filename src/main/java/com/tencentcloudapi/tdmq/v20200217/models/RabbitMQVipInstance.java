@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RabbitMQVipInstance extends AbstractModel {
 
     /**
-    * 实例id
+    * 实例 ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -87,7 +87,7 @@ public class RabbitMQVipInstance extends AbstractModel {
     private Long MaxStorage;
 
     /**
-    * 实例到期时间，毫秒为单位
+    * 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -101,7 +101,7 @@ public class RabbitMQVipInstance extends AbstractModel {
     private Long AutoRenewFlag;
 
     /**
-    * 0-后付费，1-预付费
+    * 1 表示预付费，0 表示后付费
     */
     @SerializedName("PayMode")
     @Expose
@@ -115,14 +115,23 @@ public class RabbitMQVipInstance extends AbstractModel {
     private String Remark;
 
     /**
-    * 实例配置ID
+    * 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为4C8G：rabbit-vip-basic-1
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * 集群异常。
+    * 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExceptionInformation")
@@ -153,7 +162,7 @@ public class RabbitMQVipInstance extends AbstractModel {
     private VpcEndpointInfo [] Vpcs;
 
     /**
-    * 创建时间，毫秒为单位
+    * 创建时间，毫秒为单位。unix 时间戳
     */
     @SerializedName("CreateTime")
     @Expose
@@ -174,16 +183,16 @@ public class RabbitMQVipInstance extends AbstractModel {
     private Long IsolatedTime;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 实例 ID 
+     * @return InstanceId 实例 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 实例 ID
+     * @param InstanceId 实例 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -318,16 +327,16 @@ public class RabbitMQVipInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例到期时间，毫秒为单位 
-     * @return ExpireTime 实例到期时间，毫秒为单位
+     * Get 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳 
+     * @return ExpireTime 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 实例到期时间，毫秒为单位
-     * @param ExpireTime 实例到期时间，毫秒为单位
+     * Set 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
+     * @param ExpireTime 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -350,16 +359,16 @@ public class RabbitMQVipInstance extends AbstractModel {
     }
 
     /**
-     * Get 0-后付费，1-预付费 
-     * @return PayMode 0-后付费，1-预付费
+     * Get 1 表示预付费，0 表示后付费 
+     * @return PayMode 1 表示预付费，0 表示后付费
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 0-后付费，1-预付费
-     * @param PayMode 0-后付费，1-预付费
+     * Set 1 表示预付费，0 表示后付费
+     * @param PayMode 1 表示预付费，0 表示后付费
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -382,25 +391,61 @@ public class RabbitMQVipInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例配置ID 
-     * @return SpecName 实例配置ID
+     * Get 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为4C8G：rabbit-vip-basic-1 
+     * @return SpecName 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为4C8G：rabbit-vip-basic-1
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set 实例配置ID
-     * @param SpecName 实例配置ID
+     * Set 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为4C8G：rabbit-vip-basic-1
+     * @param SpecName 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为4C8G：rabbit-vip-basic-1
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get 集群异常。
+     * Get 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExceptionInformation 集群异常。
+     * @return ExceptionInformation 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExceptionInformation() {
@@ -408,9 +453,9 @@ public class RabbitMQVipInstance extends AbstractModel {
     }
 
     /**
-     * Set 集群异常。
+     * Set 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExceptionInformation 集群异常。
+     * @param ExceptionInformation 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExceptionInformation(String ExceptionInformation) {
@@ -474,16 +519,16 @@ public class RabbitMQVipInstance extends AbstractModel {
     }
 
     /**
-     * Get 创建时间，毫秒为单位 
-     * @return CreateTime 创建时间，毫秒为单位
+     * Get 创建时间，毫秒为单位。unix 时间戳 
+     * @return CreateTime 创建时间，毫秒为单位。unix 时间戳
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，毫秒为单位
-     * @param CreateTime 创建时间，毫秒为单位
+     * Set 创建时间，毫秒为单位。unix 时间戳
+     * @param CreateTime 创建时间，毫秒为单位。unix 时间戳
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;

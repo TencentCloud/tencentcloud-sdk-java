@@ -1361,6 +1361,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询手动任务触发记录
+     * @param req DescribeManualTriggerRecordPageRequest
+     * @return DescribeManualTriggerRecordPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeManualTriggerRecordPageResponse DescribeManualTriggerRecordPage(DescribeManualTriggerRecordPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeManualTriggerRecordPage", DescribeManualTriggerRecordPageResponse.class);
+    }
+
+    /**
      *获取离线任务长连接Token
      * @param req DescribeOfflineTaskTokenRequest
      * @return DescribeOfflineTaskTokenResponse
@@ -2631,6 +2642,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public ModifyTaskInfoResponse ModifyTaskInfo(ModifyTaskInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTaskInfo", ModifyTaskInfoResponse.class);
+    }
+
+    /**
+     *更新任务Ds
+     * @param req ModifyTaskInfoDsRequest
+     * @return ModifyTaskInfoDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTaskInfoDsResponse ModifyTaskInfoDs(ModifyTaskInfoDsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTaskInfoDs", ModifyTaskInfoDsResponse.class);
     }
 
     /**

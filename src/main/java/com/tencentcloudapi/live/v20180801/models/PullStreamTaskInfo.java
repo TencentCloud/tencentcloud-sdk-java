@@ -243,7 +243,6 @@ pause：暂停中。
     * 备源类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupSourceType")
     @Expose
@@ -251,7 +250,6 @@ PullVodPushLive -点播。
 
     /**
     * 备源URL。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupSourceUrl")
     @Expose
@@ -259,7 +257,6 @@ PullVodPushLive -点播。
 
     /**
     * 水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WatermarkList")
     @Expose
@@ -269,7 +266,6 @@ PullVodPushLive -点播。
     * 点播源是否启用本地推流模式，默认0，不启用。
 0 - 不启用。
 1 - 启用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VodLocalMode")
     @Expose
@@ -277,7 +273,6 @@ PullVodPushLive -点播。
 
     /**
     * 录制模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordTemplateId")
     @Expose
@@ -285,7 +280,6 @@ PullVodPushLive -点播。
 
     /**
     * 新增的推流地址。用于单任务推两路场景。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupToUrl")
     @Expose
@@ -293,7 +287,6 @@ PullVodPushLive -点播。
 
     /**
     * 直播转码模板。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeTemplateName")
     @Expose
@@ -890,12 +883,10 @@ pause：暂停中。
     /**
      * Get 备源类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
-注意：此字段可能返回 null，表示取不到有效值。 
+PullVodPushLive -点播。 
      * @return BackupSourceType 备源类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupSourceType() {
         return this.BackupSourceType;
@@ -905,21 +896,17 @@ PullVodPushLive -点播。
      * Set 备源类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupSourceType 备源类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupSourceType(String BackupSourceType) {
         this.BackupSourceType = BackupSourceType;
     }
 
     /**
-     * Get 备源URL。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备源URL。 
      * @return BackupSourceUrl 备源URL。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupSourceUrl() {
         return this.BackupSourceUrl;
@@ -927,19 +914,15 @@ PullVodPushLive -点播。
 
     /**
      * Set 备源URL。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupSourceUrl 备源URL。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupSourceUrl(String BackupSourceUrl) {
         this.BackupSourceUrl = BackupSourceUrl;
     }
 
     /**
-     * Get 水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印信息列表。 
      * @return WatermarkList 水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PullPushWatermarkInfo [] getWatermarkList() {
         return this.WatermarkList;
@@ -947,9 +930,7 @@ PullVodPushLive -点播。
 
     /**
      * Set 水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WatermarkList 水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWatermarkList(PullPushWatermarkInfo [] WatermarkList) {
         this.WatermarkList = WatermarkList;
@@ -958,12 +939,10 @@ PullVodPushLive -点播。
     /**
      * Get 点播源是否启用本地推流模式，默认0，不启用。
 0 - 不启用。
-1 - 启用。
-注意：此字段可能返回 null，表示取不到有效值。 
+1 - 启用。 
      * @return VodLocalMode 点播源是否启用本地推流模式，默认0，不启用。
 0 - 不启用。
 1 - 启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVodLocalMode() {
         return this.VodLocalMode;
@@ -973,21 +952,17 @@ PullVodPushLive -点播。
      * Set 点播源是否启用本地推流模式，默认0，不启用。
 0 - 不启用。
 1 - 启用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VodLocalMode 点播源是否启用本地推流模式，默认0，不启用。
 0 - 不启用。
 1 - 启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVodLocalMode(Long VodLocalMode) {
         this.VodLocalMode = VodLocalMode;
     }
 
     /**
-     * Get 录制模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制模板 ID。 
      * @return RecordTemplateId 录制模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordTemplateId() {
         return this.RecordTemplateId;
@@ -995,19 +970,15 @@ PullVodPushLive -点播。
 
     /**
      * Set 录制模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordTemplateId 录制模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordTemplateId(String RecordTemplateId) {
         this.RecordTemplateId = RecordTemplateId;
     }
 
     /**
-     * Get 新增的推流地址。用于单任务推两路场景。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新增的推流地址。用于单任务推两路场景。 
      * @return BackupToUrl 新增的推流地址。用于单任务推两路场景。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupToUrl() {
         return this.BackupToUrl;
@@ -1015,19 +986,15 @@ PullVodPushLive -点播。
 
     /**
      * Set 新增的推流地址。用于单任务推两路场景。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupToUrl 新增的推流地址。用于单任务推两路场景。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupToUrl(String BackupToUrl) {
         this.BackupToUrl = BackupToUrl;
     }
 
     /**
-     * Get 直播转码模板。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直播转码模板。 
      * @return TranscodeTemplateName 直播转码模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranscodeTemplateName() {
         return this.TranscodeTemplateName;
@@ -1035,9 +1002,7 @@ PullVodPushLive -点播。
 
     /**
      * Set 直播转码模板。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTemplateName 直播转码模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeTemplateName(String TranscodeTemplateName) {
         this.TranscodeTemplateName = TranscodeTemplateName;

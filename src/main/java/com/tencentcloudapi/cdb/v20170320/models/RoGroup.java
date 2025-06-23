@@ -32,6 +32,7 @@ public class RoGroup extends AbstractModel {
 
     /**
     * 只读组 ID。
+说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
     */
     @SerializedName("RoGroupId")
     @Expose
@@ -52,7 +53,7 @@ public class RoGroup extends AbstractModel {
     private Long RoOfflineDelay;
 
     /**
-    * 延迟阈值。
+    * 延迟阈值。单位：秒。值范围：1-10000，整数。
     */
     @SerializedName("RoMaxDelayTime")
     @Expose
@@ -129,7 +130,7 @@ public class RoGroup extends AbstractModel {
     private String RoGroupZone;
 
     /**
-    * 延迟复制时间。
+    * 延迟复制时间。单位：秒。值范围：1-259200，整数。
     */
     @SerializedName("DelayReplicationTime")
     @Expose
@@ -152,8 +153,10 @@ public class RoGroup extends AbstractModel {
     }
 
     /**
-     * Get 只读组 ID。 
+     * Get 只读组 ID。
+说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。 
      * @return RoGroupId 只读组 ID。
+说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
      */
     public String getRoGroupId() {
         return this.RoGroupId;
@@ -161,7 +164,9 @@ public class RoGroup extends AbstractModel {
 
     /**
      * Set 只读组 ID。
+说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
      * @param RoGroupId 只读组 ID。
+说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
      */
     public void setRoGroupId(String RoGroupId) {
         this.RoGroupId = RoGroupId;
@@ -200,16 +205,16 @@ public class RoGroup extends AbstractModel {
     }
 
     /**
-     * Get 延迟阈值。 
-     * @return RoMaxDelayTime 延迟阈值。
+     * Get 延迟阈值。单位：秒。值范围：1-10000，整数。 
+     * @return RoMaxDelayTime 延迟阈值。单位：秒。值范围：1-10000，整数。
      */
     public Long getRoMaxDelayTime() {
         return this.RoMaxDelayTime;
     }
 
     /**
-     * Set 延迟阈值。
-     * @param RoMaxDelayTime 延迟阈值。
+     * Set 延迟阈值。单位：秒。值范围：1-10000，整数。
+     * @param RoMaxDelayTime 延迟阈值。单位：秒。值范围：1-10000，整数。
      */
     public void setRoMaxDelayTime(Long RoMaxDelayTime) {
         this.RoMaxDelayTime = RoMaxDelayTime;
@@ -376,16 +381,16 @@ public class RoGroup extends AbstractModel {
     }
 
     /**
-     * Get 延迟复制时间。 
-     * @return DelayReplicationTime 延迟复制时间。
+     * Get 延迟复制时间。单位：秒。值范围：1-259200，整数。 
+     * @return DelayReplicationTime 延迟复制时间。单位：秒。值范围：1-259200，整数。
      */
     public Long getDelayReplicationTime() {
         return this.DelayReplicationTime;
     }
 
     /**
-     * Set 延迟复制时间。
-     * @param DelayReplicationTime 延迟复制时间。
+     * Set 延迟复制时间。单位：秒。值范围：1-259200，整数。
+     * @param DelayReplicationTime 延迟复制时间。单位：秒。值范围：1-259200，整数。
      */
     public void setDelayReplicationTime(Long DelayReplicationTime) {
         this.DelayReplicationTime = DelayReplicationTime;

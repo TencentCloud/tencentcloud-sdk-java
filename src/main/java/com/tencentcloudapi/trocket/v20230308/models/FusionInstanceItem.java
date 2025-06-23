@@ -205,6 +205,13 @@ PREPAID，包年包月
     private Long [] ZoneIds;
 
     /**
+    * 是否开启删除保护
+    */
+    @SerializedName("EnableDeletionProtection")
+    @Expose
+    private Boolean EnableDeletionProtection;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -664,6 +671,22 @@ PREPAID，包年包月
         this.ZoneIds = ZoneIds;
     }
 
+    /**
+     * Get 是否开启删除保护 
+     * @return EnableDeletionProtection 是否开启删除保护
+     */
+    public Boolean getEnableDeletionProtection() {
+        return this.EnableDeletionProtection;
+    }
+
+    /**
+     * Set 是否开启删除保护
+     * @param EnableDeletionProtection 是否开启删除保护
+     */
+    public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
+        this.EnableDeletionProtection = EnableDeletionProtection;
+    }
+
     public FusionInstanceItem() {
     }
 
@@ -744,6 +767,9 @@ PREPAID，包年包月
                 this.ZoneIds[i] = new Long(source.ZoneIds[i]);
             }
         }
+        if (source.EnableDeletionProtection != null) {
+            this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
+        }
     }
 
 
@@ -773,6 +799,7 @@ PREPAID，包年包月
         this.setParamObj(map, prefix + "InstanceItemExtraInfo.", this.InstanceItemExtraInfo);
         this.setParamSimple(map, prefix + "DestroyTime", this.DestroyTime);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+        this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
 
     }
 }

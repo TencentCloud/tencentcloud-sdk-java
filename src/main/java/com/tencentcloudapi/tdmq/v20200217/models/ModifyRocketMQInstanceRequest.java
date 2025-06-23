@@ -52,6 +52,13 @@ public class ModifyRocketMQInstanceRequest extends AbstractModel {
     private Long MessageRetention;
 
     /**
+    * 是否开启删除保护
+    */
+    @SerializedName("EnableDeletionProtection")
+    @Expose
+    private Boolean EnableDeletionProtection;
+
+    /**
      * Get 专享实例ID 
      * @return InstanceId 专享实例ID
      */
@@ -115,6 +122,22 @@ public class ModifyRocketMQInstanceRequest extends AbstractModel {
         this.MessageRetention = MessageRetention;
     }
 
+    /**
+     * Get 是否开启删除保护 
+     * @return EnableDeletionProtection 是否开启删除保护
+     */
+    public Boolean getEnableDeletionProtection() {
+        return this.EnableDeletionProtection;
+    }
+
+    /**
+     * Set 是否开启删除保护
+     * @param EnableDeletionProtection 是否开启删除保护
+     */
+    public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
+        this.EnableDeletionProtection = EnableDeletionProtection;
+    }
+
     public ModifyRocketMQInstanceRequest() {
     }
 
@@ -135,6 +158,9 @@ public class ModifyRocketMQInstanceRequest extends AbstractModel {
         if (source.MessageRetention != null) {
             this.MessageRetention = new Long(source.MessageRetention);
         }
+        if (source.EnableDeletionProtection != null) {
+            this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ModifyRocketMQInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
+        this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
 
     }
 }

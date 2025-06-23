@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SourceClusterTopicConfig extends AbstractModel {
 
     /**
-    * 主题名称
+    * 主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
     */
     @SerializedName("TopicName")
     @Expose
@@ -84,6 +84,8 @@ Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
+
+仅作为出参可用
     */
     @SerializedName("ImportStatus")
     @Expose
@@ -111,16 +113,16 @@ Failure 失败
     private String FullNamespaceV4;
 
     /**
-     * Get 主题名称 
-     * @return TopicName 主题名称
+     * Get 主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。 
+     * @return TopicName 主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称
-     * @param TopicName 主题名称
+     * Set 主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
+     * @param TopicName 主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -263,12 +265,16 @@ DelayScheduled 延时消息
 Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
-Failure 失败 
+Failure 失败
+
+仅作为出参可用 
      * @return ImportStatus 导入状态，
 Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
+
+仅作为出参可用
      */
     public String getImportStatus() {
         return this.ImportStatus;
@@ -280,11 +286,15 @@ Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
+
+仅作为出参可用
      * @param ImportStatus 导入状态，
 Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
+
+仅作为出参可用
      */
     public void setImportStatus(String ImportStatus) {
         this.ImportStatus = ImportStatus;

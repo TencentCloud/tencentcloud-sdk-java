@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.csip.v20221121.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLivePadProcessorListResponse extends AbstractModel {
+public class DescribeCheckViewRisksResponse extends AbstractModel {
 
     /**
-    * 当前正在拉取垫片的流名称列表。
+    * 检查视角下风险数量
     */
-    @SerializedName("StreamNameList")
+    @SerializedName("TotalCount")
     @Expose
-    private String [] StreamNameList;
+    private Long TotalCount;
+
+    /**
+    * 检查视角下风险列表
+    */
+    @SerializedName("CheckViewRiskList")
+    @Expose
+    private CheckViewRiskItem [] CheckViewRiskList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeLivePadProcessorListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 当前正在拉取垫片的流名称列表。 
-     * @return StreamNameList 当前正在拉取垫片的流名称列表。
+     * Get 检查视角下风险数量 
+     * @return TotalCount 检查视角下风险数量
      */
-    public String [] getStreamNameList() {
-        return this.StreamNameList;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 当前正在拉取垫片的流名称列表。
-     * @param StreamNameList 当前正在拉取垫片的流名称列表。
+     * Set 检查视角下风险数量
+     * @param TotalCount 检查视角下风险数量
      */
-    public void setStreamNameList(String [] StreamNameList) {
-        this.StreamNameList = StreamNameList;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 检查视角下风险列表 
+     * @return CheckViewRiskList 检查视角下风险列表
+     */
+    public CheckViewRiskItem [] getCheckViewRiskList() {
+        return this.CheckViewRiskList;
+    }
+
+    /**
+     * Set 检查视角下风险列表
+     * @param CheckViewRiskList 检查视角下风险列表
+     */
+    public void setCheckViewRiskList(CheckViewRiskItem [] CheckViewRiskList) {
+        this.CheckViewRiskList = CheckViewRiskList;
     }
 
     /**
@@ -69,18 +92,21 @@ public class DescribeLivePadProcessorListResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeLivePadProcessorListResponse() {
+    public DescribeCheckViewRisksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLivePadProcessorListResponse(DescribeLivePadProcessorListResponse source) {
-        if (source.StreamNameList != null) {
-            this.StreamNameList = new String[source.StreamNameList.length];
-            for (int i = 0; i < source.StreamNameList.length; i++) {
-                this.StreamNameList[i] = new String(source.StreamNameList[i]);
+    public DescribeCheckViewRisksResponse(DescribeCheckViewRisksResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.CheckViewRiskList != null) {
+            this.CheckViewRiskList = new CheckViewRiskItem[source.CheckViewRiskList.length];
+            for (int i = 0; i < source.CheckViewRiskList.length; i++) {
+                this.CheckViewRiskList[i] = new CheckViewRiskItem(source.CheckViewRiskList[i]);
             }
         }
         if (source.RequestId != null) {
@@ -93,7 +119,8 @@ public class DescribeLivePadProcessorListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "StreamNameList.", this.StreamNameList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "CheckViewRiskList.", this.CheckViewRiskList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

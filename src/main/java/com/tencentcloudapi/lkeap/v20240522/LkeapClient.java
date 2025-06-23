@@ -420,17 +420,6 @@ except TencentCloudSDKException as err:
     }
 
     /**
-     *用于实时检索在UploadDocRealtime接口上传的实时文档内容。 使用场景：适用于在会话中对文档进行问答的场景
-     * @param req RetrieveKnowledgeRealtimeRequest
-     * @return RetrieveKnowledgeRealtimeResponse
-     * @throws TencentCloudSDKException
-     */
-    public RetrieveKnowledgeRealtimeResponse RetrieveKnowledgeRealtime(RetrieveKnowledgeRealtimeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RetrieveKnowledgeRealtime", RetrieveKnowledgeRealtimeResponse.class);
-    }
-
-    /**
      *基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
      * @param req RunRerankRequest
      * @return RunRerankResponse

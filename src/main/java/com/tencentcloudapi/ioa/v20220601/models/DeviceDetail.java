@@ -143,6 +143,41 @@ public class DeviceDetail extends AbstractModel {
     private Long CriticalVulListCount;
 
     /**
+    * 操作系统名称
+    */
+    @SerializedName("Os")
+    @Expose
+    private String Os;
+
+    /**
+    * 操作系统位数
+    */
+    @SerializedName("OsBits")
+    @Expose
+    private Long OsBits;
+
+    /**
+    * 操作系统版本
+    */
+    @SerializedName("OsVersion")
+    @Expose
+    private String OsVersion;
+
+    /**
+    * 操作系统语言
+    */
+    @SerializedName("OsLanguage")
+    @Expose
+    private String OsLanguage;
+
+    /**
+    * 操作系统安装时间
+    */
+    @SerializedName("OsInstallDate")
+    @Expose
+    private String OsInstallDate;
+
+    /**
     * 设备名，和Name相同
     */
     @SerializedName("ComputerName")
@@ -601,6 +636,86 @@ public class DeviceDetail extends AbstractModel {
      */
     public void setCriticalVulListCount(Long CriticalVulListCount) {
         this.CriticalVulListCount = CriticalVulListCount;
+    }
+
+    /**
+     * Get 操作系统名称 
+     * @return Os 操作系统名称
+     */
+    public String getOs() {
+        return this.Os;
+    }
+
+    /**
+     * Set 操作系统名称
+     * @param Os 操作系统名称
+     */
+    public void setOs(String Os) {
+        this.Os = Os;
+    }
+
+    /**
+     * Get 操作系统位数 
+     * @return OsBits 操作系统位数
+     */
+    public Long getOsBits() {
+        return this.OsBits;
+    }
+
+    /**
+     * Set 操作系统位数
+     * @param OsBits 操作系统位数
+     */
+    public void setOsBits(Long OsBits) {
+        this.OsBits = OsBits;
+    }
+
+    /**
+     * Get 操作系统版本 
+     * @return OsVersion 操作系统版本
+     */
+    public String getOsVersion() {
+        return this.OsVersion;
+    }
+
+    /**
+     * Set 操作系统版本
+     * @param OsVersion 操作系统版本
+     */
+    public void setOsVersion(String OsVersion) {
+        this.OsVersion = OsVersion;
+    }
+
+    /**
+     * Get 操作系统语言 
+     * @return OsLanguage 操作系统语言
+     */
+    public String getOsLanguage() {
+        return this.OsLanguage;
+    }
+
+    /**
+     * Set 操作系统语言
+     * @param OsLanguage 操作系统语言
+     */
+    public void setOsLanguage(String OsLanguage) {
+        this.OsLanguage = OsLanguage;
+    }
+
+    /**
+     * Get 操作系统安装时间 
+     * @return OsInstallDate 操作系统安装时间
+     */
+    public String getOsInstallDate() {
+        return this.OsInstallDate;
+    }
+
+    /**
+     * Set 操作系统安装时间
+     * @param OsInstallDate 操作系统安装时间
+     */
+    public void setOsInstallDate(String OsInstallDate) {
+        this.OsInstallDate = OsInstallDate;
     }
 
     /**
@@ -1094,6 +1209,21 @@ public class DeviceDetail extends AbstractModel {
         if (source.CriticalVulListCount != null) {
             this.CriticalVulListCount = new Long(source.CriticalVulListCount);
         }
+        if (source.Os != null) {
+            this.Os = new String(source.Os);
+        }
+        if (source.OsBits != null) {
+            this.OsBits = new Long(source.OsBits);
+        }
+        if (source.OsVersion != null) {
+            this.OsVersion = new String(source.OsVersion);
+        }
+        if (source.OsLanguage != null) {
+            this.OsLanguage = new String(source.OsLanguage);
+        }
+        if (source.OsInstallDate != null) {
+            this.OsInstallDate = new String(source.OsInstallDate);
+        }
         if (source.ComputerName != null) {
             this.ComputerName = new String(source.ComputerName);
         }
@@ -1202,6 +1332,11 @@ public class DeviceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "GroupNamePath", this.GroupNamePath);
         this.setParamSimple(map, prefix + "CriticalVulListCount", this.CriticalVulListCount);
+        this.setParamSimple(map, prefix + "Os", this.Os);
+        this.setParamSimple(map, prefix + "OsBits", this.OsBits);
+        this.setParamSimple(map, prefix + "OsVersion", this.OsVersion);
+        this.setParamSimple(map, prefix + "OsLanguage", this.OsLanguage);
+        this.setParamSimple(map, prefix + "OsInstallDate", this.OsInstallDate);
         this.setParamSimple(map, prefix + "ComputerName", this.ComputerName);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "MacAddr", this.MacAddr);

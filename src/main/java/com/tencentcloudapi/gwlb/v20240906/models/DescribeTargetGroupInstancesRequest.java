@@ -35,7 +35,7 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 显示数量限制，默认20，最大1000。
+    * 显示数量限制，默认20，最大100。
     */
     @SerializedName("Limit")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 显示数量限制，默认20，最大1000。 
-     * @return Limit 显示数量限制，默认20，最大1000。
+     * Get 显示数量限制，默认20，最大100。 
+     * @return Limit 显示数量限制，默认20，最大100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 显示数量限制，默认20，最大1000。
-     * @param Limit 显示数量限制，默认20，最大1000。
+     * Set 显示数量限制，默认20，最大100。
+     * @param Limit 显示数量限制，默认20，最大100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

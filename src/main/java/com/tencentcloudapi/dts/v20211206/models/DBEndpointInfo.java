@@ -97,6 +97,13 @@ MongoDB可定义如下的参数：
     private String ConnectType;
 
     /**
+    * 云联网网关所属账号，如果云联网网关为其他账号资源需要填写
+    */
+    @SerializedName("CcnOwnerUin")
+    @Expose
+    private String CcnOwnerUin;
+
+    /**
      * Get 实例所在地域 
      * @return Region 实例所在地域
      */
@@ -280,6 +287,22 @@ MongoDB可定义如下的参数：
         this.ConnectType = ConnectType;
     }
 
+    /**
+     * Get 云联网网关所属账号，如果云联网网关为其他账号资源需要填写 
+     * @return CcnOwnerUin 云联网网关所属账号，如果云联网网关为其他账号资源需要填写
+     */
+    public String getCcnOwnerUin() {
+        return this.CcnOwnerUin;
+    }
+
+    /**
+     * Set 云联网网关所属账号，如果云联网网关为其他账号资源需要填写
+     * @param CcnOwnerUin 云联网网关所属账号，如果云联网网关为其他账号资源需要填写
+     */
+    public void setCcnOwnerUin(String CcnOwnerUin) {
+        this.CcnOwnerUin = CcnOwnerUin;
+    }
+
     public DBEndpointInfo() {
     }
 
@@ -321,6 +344,9 @@ MongoDB可定义如下的参数：
         if (source.ConnectType != null) {
             this.ConnectType = new String(source.ConnectType);
         }
+        if (source.CcnOwnerUin != null) {
+            this.CcnOwnerUin = new String(source.CcnOwnerUin);
+        }
     }
 
 
@@ -337,6 +363,7 @@ MongoDB可定义如下的参数：
         this.setParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
         this.setParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
         this.setParamSimple(map, prefix + "ConnectType", this.ConnectType);
+        this.setParamSimple(map, prefix + "CcnOwnerUin", this.CcnOwnerUin);
 
     }
 }

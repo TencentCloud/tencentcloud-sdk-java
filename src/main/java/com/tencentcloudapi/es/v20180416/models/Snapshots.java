@@ -40,6 +40,14 @@ public class Snapshots extends AbstractModel {
     private String Uuid;
 
     /**
+    * 仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Repository")
+    @Expose
+    private String Repository;
+
+    /**
     * 该快照所属集群的版本号
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -181,6 +189,26 @@ SUCCESS     备份成功
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
+    }
+
+    /**
+     * Get 仓库名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Repository 仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRepository() {
+        return this.Repository;
+    }
+
+    /**
+     * Set 仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Repository 仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRepository(String Repository) {
+        this.Repository = Repository;
     }
 
     /**
@@ -469,6 +497,9 @@ SUCCESS     备份成功
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.Repository != null) {
+            this.Repository = new String(source.Repository);
+        }
         if (source.Version != null) {
             this.Version = new String(source.Version);
         }
@@ -523,6 +554,7 @@ SUCCESS     备份成功
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "Repository", this.Repository);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArraySimple(map, prefix + "Indices.", this.Indices);
         this.setParamArraySimple(map, prefix + "DataStreams.", this.DataStreams);

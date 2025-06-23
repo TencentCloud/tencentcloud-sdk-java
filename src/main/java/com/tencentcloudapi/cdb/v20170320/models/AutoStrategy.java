@@ -54,14 +54,14 @@ public class AutoStrategy extends AbstractModel {
     private Long ShrinkPeriod;
 
     /**
-    * 弹性扩容观测周期（秒级）
+    * 弹性扩容观测周期（秒级），可取值为：5，30，45，60，180，300，600，900，1800。
     */
     @SerializedName("ExpandSecondPeriod")
     @Expose
     private Long ExpandSecondPeriod;
 
     /**
-    * 缩容观测周期（秒级）
+    * 缩容观测周期（秒级），可取值为：300。
     */
     @SerializedName("ShrinkSecondPeriod")
     @Expose
@@ -148,32 +148,32 @@ public class AutoStrategy extends AbstractModel {
     }
 
     /**
-     * Get 弹性扩容观测周期（秒级） 
-     * @return ExpandSecondPeriod 弹性扩容观测周期（秒级）
+     * Get 弹性扩容观测周期（秒级），可取值为：5，30，45，60，180，300，600，900，1800。 
+     * @return ExpandSecondPeriod 弹性扩容观测周期（秒级），可取值为：5，30，45，60，180，300，600，900，1800。
      */
     public Long getExpandSecondPeriod() {
         return this.ExpandSecondPeriod;
     }
 
     /**
-     * Set 弹性扩容观测周期（秒级）
-     * @param ExpandSecondPeriod 弹性扩容观测周期（秒级）
+     * Set 弹性扩容观测周期（秒级），可取值为：5，30，45，60，180，300，600，900，1800。
+     * @param ExpandSecondPeriod 弹性扩容观测周期（秒级），可取值为：5，30，45，60，180，300，600，900，1800。
      */
     public void setExpandSecondPeriod(Long ExpandSecondPeriod) {
         this.ExpandSecondPeriod = ExpandSecondPeriod;
     }
 
     /**
-     * Get 缩容观测周期（秒级） 
-     * @return ShrinkSecondPeriod 缩容观测周期（秒级）
+     * Get 缩容观测周期（秒级），可取值为：300。 
+     * @return ShrinkSecondPeriod 缩容观测周期（秒级），可取值为：300。
      */
     public Long getShrinkSecondPeriod() {
         return this.ShrinkSecondPeriod;
     }
 
     /**
-     * Set 缩容观测周期（秒级）
-     * @param ShrinkSecondPeriod 缩容观测周期（秒级）
+     * Set 缩容观测周期（秒级），可取值为：300。
+     * @param ShrinkSecondPeriod 缩容观测周期（秒级），可取值为：300。
      */
     public void setShrinkSecondPeriod(Long ShrinkSecondPeriod) {
         this.ShrinkSecondPeriod = ShrinkSecondPeriod;

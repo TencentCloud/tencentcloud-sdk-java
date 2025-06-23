@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群 ID
     */
     @SerializedName("ClusterId")
     @Expose
@@ -45,7 +45,7 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private String Region;
 
     /**
-    * 创建时间，毫秒为单位
+    * 创建时间，毫秒为单位。unix 时间戳
     */
     @SerializedName("CreateTime")
     @Expose
@@ -101,7 +101,7 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Long MessageStackNumber;
 
     /**
-    * 过期时间
+    * 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -193,7 +193,7 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Long InstanceType;
 
     /**
-    * 开始隔离时间
+    * 开始隔离时间。unix 时间戳
     */
     @SerializedName("IsolatedTime")
     @Expose
@@ -207,16 +207,16 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Boolean Container;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群 ID 
+     * @return ClusterId 集群 ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群 ID
+     * @param ClusterId 集群 ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -255,16 +255,16 @@ public class RabbitMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间，毫秒为单位 
-     * @return CreateTime 创建时间，毫秒为单位
+     * Get 创建时间，毫秒为单位。unix 时间戳 
+     * @return CreateTime 创建时间，毫秒为单位。unix 时间戳
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，毫秒为单位
-     * @param CreateTime 创建时间，毫秒为单位
+     * Set 创建时间，毫秒为单位。unix 时间戳
+     * @param CreateTime 创建时间，毫秒为单位。unix 时间戳
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
@@ -383,16 +383,16 @@ public class RabbitMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpireTime 过期时间
+     * Get 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳 
+     * @return ExpireTime 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpireTime 过期时间
+     * Set 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
+     * @param ExpireTime 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -595,16 +595,16 @@ public class RabbitMQClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 开始隔离时间 
-     * @return IsolatedTime 开始隔离时间
+     * Get 开始隔离时间。unix 时间戳 
+     * @return IsolatedTime 开始隔离时间。unix 时间戳
      */
     public Long getIsolatedTime() {
         return this.IsolatedTime;
     }
 
     /**
-     * Set 开始隔离时间
-     * @param IsolatedTime 开始隔离时间
+     * Set 开始隔离时间。unix 时间戳
+     * @param IsolatedTime 开始隔离时间。unix 时间戳
      */
     public void setIsolatedTime(Long IsolatedTime) {
         this.IsolatedTime = IsolatedTime;

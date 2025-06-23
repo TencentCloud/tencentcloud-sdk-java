@@ -38,7 +38,110 @@ public class DescribeTableMetasRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-    * 过滤字段
+    * 过滤字段:
+dbName-数据库名称
+bizCatalogIds-资产目录ID
+DataLayerUuid-数仓分层ID
+ownerAccount-负责人ID
+assetStatus-资产状态：1-已上架 0-未上架
+assetLevel-资产等级：40-核心30-重要 20-一般 10-临时 
+msTypes-数据源类型：例如TENCENT_MYSQL-腾讯云MySQL，数据源类型ID可参考
+[
+  {
+    "DisplayName": "TCHouse-P",
+    "Id": "TCHOUSE_P"
+  },
+  {
+    "DisplayName": "Iceberg",
+    "Id": "ICEBERG"
+  },
+  {
+    "DisplayName": "Hive",
+    "Id": "HIVE"
+  },
+  {
+    "DisplayName": "HBase",
+    "Id": "HBASE"
+  },
+  {
+    "DisplayName": "DLC",
+    "Id": "DLC"
+  },
+  {
+    "DisplayName": "腾讯云MySQL",
+    "Id": "TENCENT_MYSQL"
+  },
+  {
+    "DisplayName": "TCHouse-D",
+    "Id": "TCHOUSE_D"
+  },
+  {
+    "DisplayName": "TCHouse-C",
+    "Id": "TCHOUSE_C"
+  },
+  {
+    "DisplayName": "EMR StarRocks",
+    "Id": "EMR_STARROCKS"
+  },
+  {
+    "DisplayName": "Doris",
+    "Id": "DORIS"
+  },
+  {
+    "DisplayName": "MySQL",
+    "Id": "MYSQL"
+  },
+  {
+    "DisplayName": "Oracle",
+    "Id": "ORACLE"
+  },
+  {
+    "DisplayName": "PostgreSQL",
+    "Id": "POSTGRE"
+  },
+  {
+    "DisplayName": "SQL Server",
+    "Id": "SQLSERVER"
+  },
+  {
+    "DisplayName": "TDSQL PostgreSQL",
+    "Id": "TDSQL_POSTGRE"
+  },
+  {
+    "DisplayName": "Greenplum",
+    "Id": "GREENPLUM"
+  },
+  {
+    "DisplayName": "StarRocks",
+    "Id": "STARROCKS"
+  },
+  {
+    "DisplayName": "ClickHouse",
+    "Id": "CLICKHOUSE"
+  },
+  {
+    "DisplayName": "INFLUXDB",
+    "Id": "INFLUXDB"
+  },
+  {
+    "DisplayName": "达梦DM",
+    "Id": "DM"
+  },
+  {
+    "DisplayName": "OceanBase",
+    "Id": "OCEANBASE"
+  },
+  {
+    "DisplayName": "TDSQL MySQL",
+    "Id": "TDSQL_MYSQL"
+  },
+  {
+    "DisplayName": "GaussDB",
+    "Id": "GAUSSDB"
+  }
+]
+projectIds-归属项目ID
+keyword-关键字，支持表名/表中文名/数据库名
     */
     @SerializedName("Filters")
     @Expose
@@ -84,16 +187,428 @@ public class DescribeTableMetasRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤字段 
-     * @return Filters 过滤字段
+     * Get 过滤字段:
+dbName-数据库名称
+bizCatalogIds-资产目录ID
+DataLayerUuid-数仓分层ID
+ownerAccount-负责人ID
+assetStatus-资产状态：1-已上架 0-未上架
+assetLevel-资产等级：40-核心30-重要 20-一般 10-临时 
+msTypes-数据源类型：例如TENCENT_MYSQL-腾讯云MySQL，数据源类型ID可参考
+[
+  {
+    "DisplayName": "TCHouse-P",
+    "Id": "TCHOUSE_P"
+  },
+  {
+    "DisplayName": "Iceberg",
+    "Id": "ICEBERG"
+  },
+  {
+    "DisplayName": "Hive",
+    "Id": "HIVE"
+  },
+  {
+    "DisplayName": "HBase",
+    "Id": "HBASE"
+  },
+  {
+    "DisplayName": "DLC",
+    "Id": "DLC"
+  },
+  {
+    "DisplayName": "腾讯云MySQL",
+    "Id": "TENCENT_MYSQL"
+  },
+  {
+    "DisplayName": "TCHouse-D",
+    "Id": "TCHOUSE_D"
+  },
+  {
+    "DisplayName": "TCHouse-C",
+    "Id": "TCHOUSE_C"
+  },
+  {
+    "DisplayName": "EMR StarRocks",
+    "Id": "EMR_STARROCKS"
+  },
+  {
+    "DisplayName": "Doris",
+    "Id": "DORIS"
+  },
+  {
+    "DisplayName": "MySQL",
+    "Id": "MYSQL"
+  },
+  {
+    "DisplayName": "Oracle",
+    "Id": "ORACLE"
+  },
+  {
+    "DisplayName": "PostgreSQL",
+    "Id": "POSTGRE"
+  },
+  {
+    "DisplayName": "SQL Server",
+    "Id": "SQLSERVER"
+  },
+  {
+    "DisplayName": "TDSQL PostgreSQL",
+    "Id": "TDSQL_POSTGRE"
+  },
+  {
+    "DisplayName": "Greenplum",
+    "Id": "GREENPLUM"
+  },
+  {
+    "DisplayName": "StarRocks",
+    "Id": "STARROCKS"
+  },
+  {
+    "DisplayName": "ClickHouse",
+    "Id": "CLICKHOUSE"
+  },
+  {
+    "DisplayName": "INFLUXDB",
+    "Id": "INFLUXDB"
+  },
+  {
+    "DisplayName": "达梦DM",
+    "Id": "DM"
+  },
+  {
+    "DisplayName": "OceanBase",
+    "Id": "OCEANBASE"
+  },
+  {
+    "DisplayName": "TDSQL MySQL",
+    "Id": "TDSQL_MYSQL"
+  },
+  {
+    "DisplayName": "GaussDB",
+    "Id": "GAUSSDB"
+  }
+]
+projectIds-归属项目ID
+keyword-关键字，支持表名/表中文名/数据库名 
+     * @return Filters 过滤字段:
+dbName-数据库名称
+bizCatalogIds-资产目录ID
+DataLayerUuid-数仓分层ID
+ownerAccount-负责人ID
+assetStatus-资产状态：1-已上架 0-未上架
+assetLevel-资产等级：40-核心30-重要 20-一般 10-临时 
+msTypes-数据源类型：例如TENCENT_MYSQL-腾讯云MySQL，数据源类型ID可参考
+[
+  {
+    "DisplayName": "TCHouse-P",
+    "Id": "TCHOUSE_P"
+  },
+  {
+    "DisplayName": "Iceberg",
+    "Id": "ICEBERG"
+  },
+  {
+    "DisplayName": "Hive",
+    "Id": "HIVE"
+  },
+  {
+    "DisplayName": "HBase",
+    "Id": "HBASE"
+  },
+  {
+    "DisplayName": "DLC",
+    "Id": "DLC"
+  },
+  {
+    "DisplayName": "腾讯云MySQL",
+    "Id": "TENCENT_MYSQL"
+  },
+  {
+    "DisplayName": "TCHouse-D",
+    "Id": "TCHOUSE_D"
+  },
+  {
+    "DisplayName": "TCHouse-C",
+    "Id": "TCHOUSE_C"
+  },
+  {
+    "DisplayName": "EMR StarRocks",
+    "Id": "EMR_STARROCKS"
+  },
+  {
+    "DisplayName": "Doris",
+    "Id": "DORIS"
+  },
+  {
+    "DisplayName": "MySQL",
+    "Id": "MYSQL"
+  },
+  {
+    "DisplayName": "Oracle",
+    "Id": "ORACLE"
+  },
+  {
+    "DisplayName": "PostgreSQL",
+    "Id": "POSTGRE"
+  },
+  {
+    "DisplayName": "SQL Server",
+    "Id": "SQLSERVER"
+  },
+  {
+    "DisplayName": "TDSQL PostgreSQL",
+    "Id": "TDSQL_POSTGRE"
+  },
+  {
+    "DisplayName": "Greenplum",
+    "Id": "GREENPLUM"
+  },
+  {
+    "DisplayName": "StarRocks",
+    "Id": "STARROCKS"
+  },
+  {
+    "DisplayName": "ClickHouse",
+    "Id": "CLICKHOUSE"
+  },
+  {
+    "DisplayName": "INFLUXDB",
+    "Id": "INFLUXDB"
+  },
+  {
+    "DisplayName": "达梦DM",
+    "Id": "DM"
+  },
+  {
+    "DisplayName": "OceanBase",
+    "Id": "OCEANBASE"
+  },
+  {
+    "DisplayName": "TDSQL MySQL",
+    "Id": "TDSQL_MYSQL"
+  },
+  {
+    "DisplayName": "GaussDB",
+    "Id": "GAUSSDB"
+  }
+]
+projectIds-归属项目ID
+keyword-关键字，支持表名/表中文名/数据库名
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤字段
-     * @param Filters 过滤字段
+     * Set 过滤字段:
+dbName-数据库名称
+bizCatalogIds-资产目录ID
+DataLayerUuid-数仓分层ID
+ownerAccount-负责人ID
+assetStatus-资产状态：1-已上架 0-未上架
+assetLevel-资产等级：40-核心30-重要 20-一般 10-临时 
+msTypes-数据源类型：例如TENCENT_MYSQL-腾讯云MySQL，数据源类型ID可参考
+[
+  {
+    "DisplayName": "TCHouse-P",
+    "Id": "TCHOUSE_P"
+  },
+  {
+    "DisplayName": "Iceberg",
+    "Id": "ICEBERG"
+  },
+  {
+    "DisplayName": "Hive",
+    "Id": "HIVE"
+  },
+  {
+    "DisplayName": "HBase",
+    "Id": "HBASE"
+  },
+  {
+    "DisplayName": "DLC",
+    "Id": "DLC"
+  },
+  {
+    "DisplayName": "腾讯云MySQL",
+    "Id": "TENCENT_MYSQL"
+  },
+  {
+    "DisplayName": "TCHouse-D",
+    "Id": "TCHOUSE_D"
+  },
+  {
+    "DisplayName": "TCHouse-C",
+    "Id": "TCHOUSE_C"
+  },
+  {
+    "DisplayName": "EMR StarRocks",
+    "Id": "EMR_STARROCKS"
+  },
+  {
+    "DisplayName": "Doris",
+    "Id": "DORIS"
+  },
+  {
+    "DisplayName": "MySQL",
+    "Id": "MYSQL"
+  },
+  {
+    "DisplayName": "Oracle",
+    "Id": "ORACLE"
+  },
+  {
+    "DisplayName": "PostgreSQL",
+    "Id": "POSTGRE"
+  },
+  {
+    "DisplayName": "SQL Server",
+    "Id": "SQLSERVER"
+  },
+  {
+    "DisplayName": "TDSQL PostgreSQL",
+    "Id": "TDSQL_POSTGRE"
+  },
+  {
+    "DisplayName": "Greenplum",
+    "Id": "GREENPLUM"
+  },
+  {
+    "DisplayName": "StarRocks",
+    "Id": "STARROCKS"
+  },
+  {
+    "DisplayName": "ClickHouse",
+    "Id": "CLICKHOUSE"
+  },
+  {
+    "DisplayName": "INFLUXDB",
+    "Id": "INFLUXDB"
+  },
+  {
+    "DisplayName": "达梦DM",
+    "Id": "DM"
+  },
+  {
+    "DisplayName": "OceanBase",
+    "Id": "OCEANBASE"
+  },
+  {
+    "DisplayName": "TDSQL MySQL",
+    "Id": "TDSQL_MYSQL"
+  },
+  {
+    "DisplayName": "GaussDB",
+    "Id": "GAUSSDB"
+  }
+]
+projectIds-归属项目ID
+keyword-关键字，支持表名/表中文名/数据库名
+     * @param Filters 过滤字段:
+dbName-数据库名称
+bizCatalogIds-资产目录ID
+DataLayerUuid-数仓分层ID
+ownerAccount-负责人ID
+assetStatus-资产状态：1-已上架 0-未上架
+assetLevel-资产等级：40-核心30-重要 20-一般 10-临时 
+msTypes-数据源类型：例如TENCENT_MYSQL-腾讯云MySQL，数据源类型ID可参考
+[
+  {
+    "DisplayName": "TCHouse-P",
+    "Id": "TCHOUSE_P"
+  },
+  {
+    "DisplayName": "Iceberg",
+    "Id": "ICEBERG"
+  },
+  {
+    "DisplayName": "Hive",
+    "Id": "HIVE"
+  },
+  {
+    "DisplayName": "HBase",
+    "Id": "HBASE"
+  },
+  {
+    "DisplayName": "DLC",
+    "Id": "DLC"
+  },
+  {
+    "DisplayName": "腾讯云MySQL",
+    "Id": "TENCENT_MYSQL"
+  },
+  {
+    "DisplayName": "TCHouse-D",
+    "Id": "TCHOUSE_D"
+  },
+  {
+    "DisplayName": "TCHouse-C",
+    "Id": "TCHOUSE_C"
+  },
+  {
+    "DisplayName": "EMR StarRocks",
+    "Id": "EMR_STARROCKS"
+  },
+  {
+    "DisplayName": "Doris",
+    "Id": "DORIS"
+  },
+  {
+    "DisplayName": "MySQL",
+    "Id": "MYSQL"
+  },
+  {
+    "DisplayName": "Oracle",
+    "Id": "ORACLE"
+  },
+  {
+    "DisplayName": "PostgreSQL",
+    "Id": "POSTGRE"
+  },
+  {
+    "DisplayName": "SQL Server",
+    "Id": "SQLSERVER"
+  },
+  {
+    "DisplayName": "TDSQL PostgreSQL",
+    "Id": "TDSQL_POSTGRE"
+  },
+  {
+    "DisplayName": "Greenplum",
+    "Id": "GREENPLUM"
+  },
+  {
+    "DisplayName": "StarRocks",
+    "Id": "STARROCKS"
+  },
+  {
+    "DisplayName": "ClickHouse",
+    "Id": "CLICKHOUSE"
+  },
+  {
+    "DisplayName": "INFLUXDB",
+    "Id": "INFLUXDB"
+  },
+  {
+    "DisplayName": "达梦DM",
+    "Id": "DM"
+  },
+  {
+    "DisplayName": "OceanBase",
+    "Id": "OCEANBASE"
+  },
+  {
+    "DisplayName": "TDSQL MySQL",
+    "Id": "TDSQL_MYSQL"
+  },
+  {
+    "DisplayName": "GaussDB",
+    "Id": "GAUSSDB"
+  }
+]
+projectIds-归属项目ID
+keyword-关键字，支持表名/表中文名/数据库名
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

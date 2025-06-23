@@ -59,6 +59,13 @@ public class ModifyCloudNativeAPIGatewayRequest extends AbstractModel {
     private String InternetPayMode;
 
     /**
+    * 是否开启实例删除保护,默认false
+    */
+    @SerializedName("DeleteProtect")
+    @Expose
+    private Boolean DeleteProtect;
+
+    /**
      * Get 云原生API网关实例ID。 
      * @return GatewayId 云原生API网关实例ID。
      */
@@ -138,6 +145,22 @@ public class ModifyCloudNativeAPIGatewayRequest extends AbstractModel {
         this.InternetPayMode = InternetPayMode;
     }
 
+    /**
+     * Get 是否开启实例删除保护,默认false 
+     * @return DeleteProtect 是否开启实例删除保护,默认false
+     */
+    public Boolean getDeleteProtect() {
+        return this.DeleteProtect;
+    }
+
+    /**
+     * Set 是否开启实例删除保护,默认false
+     * @param DeleteProtect 是否开启实例删除保护,默认false
+     */
+    public void setDeleteProtect(Boolean DeleteProtect) {
+        this.DeleteProtect = DeleteProtect;
+    }
+
     public ModifyCloudNativeAPIGatewayRequest() {
     }
 
@@ -161,6 +184,9 @@ public class ModifyCloudNativeAPIGatewayRequest extends AbstractModel {
         if (source.InternetPayMode != null) {
             this.InternetPayMode = new String(source.InternetPayMode);
         }
+        if (source.DeleteProtect != null) {
+            this.DeleteProtect = new Boolean(source.DeleteProtect);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyCloudNativeAPIGatewayRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "EnableCls", this.EnableCls);
         this.setParamSimple(map, prefix + "InternetPayMode", this.InternetPayMode);
+        this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
 
     }
 }

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeSmoothMigrationTaskListRequest extends AbstractModel {
 
     /**
-    * 查询起始位置
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
-    * 查询结果限制数量
+    * 查询结果限制数量，默认20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询条件列表
+    * 查询起始位置，默认为0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 查询起始位置 
-     * @return Offset 查询起始位置
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 查询起始位置
-     * @param Offset 查询起始位置
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
-
-    /**
-     * Get 查询结果限制数量 
-     * @return Limit 查询结果限制数量
+     * Get 查询结果限制数量，默认20。 
+     * @return Limit 查询结果限制数量，默认20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询结果限制数量
-     * @param Limit 查询结果限制数量
+     * Set 查询结果限制数量，默认20。
+     * @param Limit 查询结果限制数量，默认20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询条件列表 
-     * @return Filters 查询条件列表
+     * Get 查询起始位置，默认为0。 
+     * @return Offset 查询起始位置，默认为0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 查询起始位置，默认为0。
+     * @param Offset 查询起始位置，默认为0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。 
+     * @return Filters 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询条件列表
-     * @param Filters 查询条件列表
+     * Set 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
+     * @param Filters 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -100,11 +100,11 @@ public class DescribeSmoothMigrationTaskListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSmoothMigrationTaskListRequest(DescribeSmoothMigrationTaskListRequest source) {
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -119,8 +119,8 @@ public class DescribeSmoothMigrationTaskListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }

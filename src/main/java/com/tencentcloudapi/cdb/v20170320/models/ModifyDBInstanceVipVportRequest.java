@@ -31,14 +31,14 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 目标 IP。该参数和 DstPort 参数，两者必传一个。
+    * 目标 IP。
     */
     @SerializedName("DstIp")
     @Expose
     private String DstIp;
 
     /**
-    * 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
+    * 目标端口，支持范围为：[1024-65535]。
     */
     @SerializedName("DstPort")
     @Expose
@@ -89,32 +89,32 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标 IP。该参数和 DstPort 参数，两者必传一个。 
-     * @return DstIp 目标 IP。该参数和 DstPort 参数，两者必传一个。
+     * Get 目标 IP。 
+     * @return DstIp 目标 IP。
      */
     public String getDstIp() {
         return this.DstIp;
     }
 
     /**
-     * Set 目标 IP。该参数和 DstPort 参数，两者必传一个。
-     * @param DstIp 目标 IP。该参数和 DstPort 参数，两者必传一个。
+     * Set 目标 IP。
+     * @param DstIp 目标 IP。
      */
     public void setDstIp(String DstIp) {
         this.DstIp = DstIp;
     }
 
     /**
-     * Get 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。 
-     * @return DstPort 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
+     * Get 目标端口，支持范围为：[1024-65535]。 
+     * @return DstPort 目标端口，支持范围为：[1024-65535]。
      */
     public Long getDstPort() {
         return this.DstPort;
     }
 
     /**
-     * Set 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
-     * @param DstPort 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
+     * Set 目标端口，支持范围为：[1024-65535]。
+     * @param DstPort 目标端口，支持范围为：[1024-65535]。
      */
     public void setDstPort(Long DstPort) {
         this.DstPort = DstPort;

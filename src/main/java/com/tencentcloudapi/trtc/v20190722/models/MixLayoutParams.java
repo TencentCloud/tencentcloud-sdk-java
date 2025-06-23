@@ -81,14 +81,14 @@ public class MixLayoutParams extends AbstractModel {
     private String BackgroundImageUrl;
 
     /**
-    * 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
+    * 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行音视频时可显示对应的占位图。
     */
     @SerializedName("PlaceHolderMode")
     @Expose
     private Long PlaceHolderMode;
 
     /**
-    * 背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
+    * 背景画面宽高比不一致的时候处理方案，与MixLayoutList定义的RenderMode一致。
     */
     @SerializedName("BackgroundImageRenderMode")
     @Expose
@@ -109,7 +109,7 @@ public class MixLayoutParams extends AbstractModel {
     private WaterMark [] WaterMarkList;
 
     /**
-    * 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+    * 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoutList定义的RenderMode一致。
     */
     @SerializedName("RenderMode")
     @Expose
@@ -279,32 +279,32 @@ public class MixLayoutParams extends AbstractModel {
     }
 
     /**
-     * Get 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。 
-     * @return PlaceHolderMode 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
+     * Get 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行音视频时可显示对应的占位图。 
+     * @return PlaceHolderMode 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行音视频时可显示对应的占位图。
      */
     public Long getPlaceHolderMode() {
         return this.PlaceHolderMode;
     }
 
     /**
-     * Set 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
-     * @param PlaceHolderMode 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
+     * Set 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行音视频时可显示对应的占位图。
+     * @param PlaceHolderMode 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行音视频时可显示对应的占位图。
      */
     public void setPlaceHolderMode(Long PlaceHolderMode) {
         this.PlaceHolderMode = PlaceHolderMode;
     }
 
     /**
-     * Get 背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。 
-     * @return BackgroundImageRenderMode 背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
+     * Get 背景画面宽高比不一致的时候处理方案，与MixLayoutList定义的RenderMode一致。 
+     * @return BackgroundImageRenderMode 背景画面宽高比不一致的时候处理方案，与MixLayoutList定义的RenderMode一致。
      */
     public Long getBackgroundImageRenderMode() {
         return this.BackgroundImageRenderMode;
     }
 
     /**
-     * Set 背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
-     * @param BackgroundImageRenderMode 背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
+     * Set 背景画面宽高比不一致的时候处理方案，与MixLayoutList定义的RenderMode一致。
+     * @param BackgroundImageRenderMode 背景画面宽高比不一致的时候处理方案，与MixLayoutList定义的RenderMode一致。
      */
     public void setBackgroundImageRenderMode(Long BackgroundImageRenderMode) {
         this.BackgroundImageRenderMode = BackgroundImageRenderMode;
@@ -343,16 +343,16 @@ public class MixLayoutParams extends AbstractModel {
     }
 
     /**
-     * Get 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。 
-     * @return RenderMode 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+     * Get 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoutList定义的RenderMode一致。 
+     * @return RenderMode 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoutList定义的RenderMode一致。
      */
     public Long getRenderMode() {
         return this.RenderMode;
     }
 
     /**
-     * Set 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
-     * @param RenderMode 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+     * Set 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoutList定义的RenderMode一致。
+     * @param RenderMode 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoutList定义的RenderMode一致。
      */
     public void setRenderMode(Long RenderMode) {
         this.RenderMode = RenderMode;

@@ -226,7 +226,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *创建围栏绑定信息
+     *> 创建围栏绑定信息。
      * @param req CreateFenceBindRequest
      * @return CreateFenceBindResponse
      * @throws TencentCloudSDKException
@@ -281,7 +281,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *创建围栏
+     *创建围栏。
      * @param req CreatePositionFenceRequest
      * @return CreatePositionFenceResponse
      * @throws TencentCloudSDKException
@@ -402,7 +402,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *删除围栏绑定信息
+     *删除围栏绑定信息。
      * @param req DeleteFenceBindRequest
      * @return DeleteFenceBindResponse
      * @throws TencentCloudSDKException
@@ -435,7 +435,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *删除围栏
+     *删除围栏。
      * @param req DeletePositionFenceRequest
      * @return DeletePositionFenceResponse
      * @throws TencentCloudSDKException
@@ -446,7 +446,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *删除位置空间
+     *删除位置空间。
      * @param req DeletePositionSpaceRequest
      * @return DeletePositionSpaceResponse
      * @throws TencentCloudSDKException
@@ -855,7 +855,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *获取围栏绑定信息列表
+     *获取围栏绑定信息列表。
      * @param req DescribeFenceBindListRequest
      * @return DescribeFenceBindListResponse
      * @throws TencentCloudSDKException
@@ -866,7 +866,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *获取围栏告警事件列表
+     *获取围栏告警事件列表。
      * @param req DescribeFenceEventListRequest
      * @return DescribeFenceEventListResponse
      * @throws TencentCloudSDKException
@@ -1053,7 +1053,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *获取位置空间中围栏告警事件列表
+     *获取位置空间中围栏告警事件列表。
      * @param req DescribeSpaceFenceEventListRequest
      * @return DescribeSpaceFenceEventListResponse
      * @throws TencentCloudSDKException
@@ -1427,6 +1427,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *获取某个时间段的视频内容关键字
+     * @param req InvokeVideosKeywordsAnalyzerRequest
+     * @return InvokeVideosKeywordsAnalyzerResponse
+     * @throws TencentCloudSDKException
+     */
+    public InvokeVideosKeywordsAnalyzerResponse InvokeVideosKeywordsAnalyzer(InvokeVideosKeywordsAnalyzerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InvokeVideosKeywordsAnalyzer", InvokeVideosKeywordsAnalyzerResponse.class);
+    }
+
+    /**
      *获取设备的历史事件
      * @param req ListEventHistoryRequest
      * @return ListEventHistoryResponse
@@ -1493,7 +1504,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *更新围栏绑定信息
+     *更新围栏绑定信息。
      * @param req ModifyFenceBindRequest
      * @return ModifyFenceBindResponse
      * @throws TencentCloudSDKException
@@ -1537,7 +1548,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *更新围栏
+     *更新围栏。
      * @param req ModifyPositionFenceRequest
      * @return ModifyPositionFenceResponse
      * @throws TencentCloudSDKException
@@ -1548,7 +1559,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *更新位置空间
+     *更新位置空间。
      * @param req ModifyPositionSpaceRequest
      * @return ModifyPositionSpaceResponse
      * @throws TencentCloudSDKException

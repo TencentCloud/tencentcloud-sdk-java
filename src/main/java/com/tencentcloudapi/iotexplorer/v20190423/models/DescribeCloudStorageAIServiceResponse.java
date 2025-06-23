@@ -80,6 +80,13 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
     private String ROI;
 
     /**
+    * 云存 AI 套餐 ID
+    */
+    @SerializedName("PackageId")
+    @Expose
+    private String PackageId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -227,6 +234,22 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
     }
 
     /**
+     * Get 云存 AI 套餐 ID 
+     * @return PackageId 云存 AI 套餐 ID
+     */
+    public String getPackageId() {
+        return this.PackageId;
+    }
+
+    /**
+     * Set 云存 AI 套餐 ID
+     * @param PackageId 云存 AI 套餐 ID
+     */
+    public void setPackageId(String PackageId) {
+        this.PackageId = PackageId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -271,6 +294,9 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
         if (source.ROI != null) {
             this.ROI = new String(source.ROI);
         }
+        if (source.PackageId != null) {
+            this.PackageId = new String(source.PackageId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -288,6 +314,7 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "Config", this.Config);
         this.setParamSimple(map, prefix + "ROI", this.ROI);
+        this.setParamSimple(map, prefix + "PackageId", this.PackageId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

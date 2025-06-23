@@ -1216,17 +1216,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
-     *使用该接口查询垫片流。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。
-     * @param req DescribeLivePadProcessorListRequest
-     * @return DescribeLivePadProcessorListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLivePadProcessorListResponse DescribeLivePadProcessorList(DescribeLivePadProcessorListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeLivePadProcessorList", DescribeLivePadProcessorListResponse.class);
-    }
-
-    /**
      *获取直播垫片规则列表。
      * @param req DescribeLivePadRulesRequest
      * @return DescribeLivePadRulesResponse
@@ -2271,17 +2260,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public StopCasterPvwResponse StopCasterPvw(StopCasterPvwRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopCasterPvw", StopCasterPvwResponse.class);
-    }
-
-    /**
-     *使用该接口停止垫片流。
-     * @param req StopLivePadProcessorRequest
-     * @return StopLivePadProcessorResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopLivePadProcessorResponse StopLivePadProcessor(StopLivePadProcessorRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "StopLivePadProcessor", StopLivePadProcessorResponse.class);
     }
 
     /**

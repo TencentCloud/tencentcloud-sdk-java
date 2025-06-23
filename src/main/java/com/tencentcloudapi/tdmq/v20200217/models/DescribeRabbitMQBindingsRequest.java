@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeRabbitMQBindingsRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Vhost名称
+    * VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
     */
     @SerializedName("VirtualHost")
     @Expose
     private String VirtualHost;
 
     /**
-    * 分页offset
+    * 分页 offset，默认 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页limit
+    * 分页 limit，默认 20
     */
     @SerializedName("Limit")
     @Expose
@@ -66,7 +66,7 @@ public class DescribeRabbitMQBindingsRequest extends AbstractModel {
     private String SourceExchange;
 
     /**
-    * 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
+    * 根据目标队列名精准搜索过滤，和 DestinationExchange 过滤不可同时设置
     */
     @SerializedName("QueueName")
     @Expose
@@ -80,64 +80,64 @@ public class DescribeRabbitMQBindingsRequest extends AbstractModel {
     private String DestinationExchange;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。 
+     * @return InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * @param InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Vhost名称 
-     * @return VirtualHost Vhost名称
+     * Get VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。 
+     * @return VirtualHost VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set Vhost名称
-     * @param VirtualHost Vhost名称
+     * Set VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
+     * @param VirtualHost VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 分页offset 
-     * @return Offset 分页offset
+     * Get 分页 offset，默认 0 
+     * @return Offset 分页 offset，默认 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页offset
-     * @param Offset 分页offset
+     * Set 分页 offset，默认 0
+     * @param Offset 分页 offset，默认 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页limit 
-     * @return Limit 分页limit
+     * Get 分页 limit，默认 20 
+     * @return Limit 分页 limit，默认 20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页limit
-     * @param Limit 分页limit
+     * Set 分页 limit，默认 20
+     * @param Limit 分页 limit，默认 20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -176,16 +176,16 @@ public class DescribeRabbitMQBindingsRequest extends AbstractModel {
     }
 
     /**
-     * Get 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置 
-     * @return QueueName 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
+     * Get 根据目标队列名精准搜索过滤，和 DestinationExchange 过滤不可同时设置 
+     * @return QueueName 根据目标队列名精准搜索过滤，和 DestinationExchange 过滤不可同时设置
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
-     * @param QueueName 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
+     * Set 根据目标队列名精准搜索过滤，和 DestinationExchange 过滤不可同时设置
+     * @param QueueName 根据目标队列名精准搜索过滤，和 DestinationExchange 过滤不可同时设置
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;

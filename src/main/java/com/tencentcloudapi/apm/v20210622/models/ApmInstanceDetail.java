@@ -317,6 +317,13 @@ public class ApmInstanceDetail extends AbstractModel {
     private String LogTraceIdKey;
 
     /**
+    * 业务系统鉴权 token
+    */
+    @SerializedName("Token")
+    @Expose
+    private String Token;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceId 业务系统 ID
      */
@@ -996,6 +1003,22 @@ public class ApmInstanceDetail extends AbstractModel {
         this.LogTraceIdKey = LogTraceIdKey;
     }
 
+    /**
+     * Get 业务系统鉴权 token 
+     * @return Token 业务系统鉴权 token
+     */
+    public String getToken() {
+        return this.Token;
+    }
+
+    /**
+     * Set 业务系统鉴权 token
+     * @param Token 业务系统鉴权 token
+     */
+    public void setToken(String Token) {
+        this.Token = Token;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -1133,6 +1156,9 @@ public class ApmInstanceDetail extends AbstractModel {
         if (source.LogTraceIdKey != null) {
             this.LogTraceIdKey = new String(source.LogTraceIdKey);
         }
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
     }
 
 
@@ -1181,6 +1207,7 @@ public class ApmInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
         this.setParamSimple(map, prefix + "LogIndexType", this.LogIndexType);
         this.setParamSimple(map, prefix + "LogTraceIdKey", this.LogTraceIdKey);
+        this.setParamSimple(map, prefix + "Token", this.Token);
 
     }
 }

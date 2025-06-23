@@ -38,6 +38,34 @@ public class CosBackup extends AbstractModel {
     private String BackupTime;
 
     /**
+    * 0 腾讯云仓库; 1 客户仓库
+    */
+    @SerializedName("EsRepositoryType")
+    @Expose
+    private Long EsRepositoryType;
+
+    /**
+    * 客户快照仓库名称
+    */
+    @SerializedName("UserEsRepository")
+    @Expose
+    private String UserEsRepository;
+
+    /**
+    * 快照存储周期 单位天
+    */
+    @SerializedName("StorageDuration")
+    @Expose
+    private Long StorageDuration;
+
+    /**
+    * 自动备份频率单位小时
+    */
+    @SerializedName("AutoBackupInterval")
+    @Expose
+    private Long AutoBackupInterval;
+
+    /**
      * Get 是否开启cos自动备份 
      * @return IsAutoBackup 是否开启cos自动备份
      */
@@ -69,6 +97,70 @@ public class CosBackup extends AbstractModel {
         this.BackupTime = BackupTime;
     }
 
+    /**
+     * Get 0 腾讯云仓库; 1 客户仓库 
+     * @return EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+     */
+    public Long getEsRepositoryType() {
+        return this.EsRepositoryType;
+    }
+
+    /**
+     * Set 0 腾讯云仓库; 1 客户仓库
+     * @param EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+     */
+    public void setEsRepositoryType(Long EsRepositoryType) {
+        this.EsRepositoryType = EsRepositoryType;
+    }
+
+    /**
+     * Get 客户快照仓库名称 
+     * @return UserEsRepository 客户快照仓库名称
+     */
+    public String getUserEsRepository() {
+        return this.UserEsRepository;
+    }
+
+    /**
+     * Set 客户快照仓库名称
+     * @param UserEsRepository 客户快照仓库名称
+     */
+    public void setUserEsRepository(String UserEsRepository) {
+        this.UserEsRepository = UserEsRepository;
+    }
+
+    /**
+     * Get 快照存储周期 单位天 
+     * @return StorageDuration 快照存储周期 单位天
+     */
+    public Long getStorageDuration() {
+        return this.StorageDuration;
+    }
+
+    /**
+     * Set 快照存储周期 单位天
+     * @param StorageDuration 快照存储周期 单位天
+     */
+    public void setStorageDuration(Long StorageDuration) {
+        this.StorageDuration = StorageDuration;
+    }
+
+    /**
+     * Get 自动备份频率单位小时 
+     * @return AutoBackupInterval 自动备份频率单位小时
+     */
+    public Long getAutoBackupInterval() {
+        return this.AutoBackupInterval;
+    }
+
+    /**
+     * Set 自动备份频率单位小时
+     * @param AutoBackupInterval 自动备份频率单位小时
+     */
+    public void setAutoBackupInterval(Long AutoBackupInterval) {
+        this.AutoBackupInterval = AutoBackupInterval;
+    }
+
     public CosBackup() {
     }
 
@@ -83,6 +175,18 @@ public class CosBackup extends AbstractModel {
         if (source.BackupTime != null) {
             this.BackupTime = new String(source.BackupTime);
         }
+        if (source.EsRepositoryType != null) {
+            this.EsRepositoryType = new Long(source.EsRepositoryType);
+        }
+        if (source.UserEsRepository != null) {
+            this.UserEsRepository = new String(source.UserEsRepository);
+        }
+        if (source.StorageDuration != null) {
+            this.StorageDuration = new Long(source.StorageDuration);
+        }
+        if (source.AutoBackupInterval != null) {
+            this.AutoBackupInterval = new Long(source.AutoBackupInterval);
+        }
     }
 
 
@@ -92,6 +196,10 @@ public class CosBackup extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsAutoBackup", this.IsAutoBackup);
         this.setParamSimple(map, prefix + "BackupTime", this.BackupTime);
+        this.setParamSimple(map, prefix + "EsRepositoryType", this.EsRepositoryType);
+        this.setParamSimple(map, prefix + "UserEsRepository", this.UserEsRepository);
+        this.setParamSimple(map, prefix + "StorageDuration", this.StorageDuration);
+        this.setParamSimple(map, prefix + "AutoBackupInterval", this.AutoBackupInterval);
 
     }
 }

@@ -202,6 +202,13 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
     private String [] PublicIpAddresses;
 
     /**
+    * 是否开启删除保护
+    */
+    @SerializedName("DeleteProtect")
+    @Expose
+    private Boolean DeleteProtect;
+
+    /**
      * Get 云原生API网关ID。 
      * @return GatewayId 云原生API网关ID。
      */
@@ -613,6 +620,22 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         this.PublicIpAddresses = PublicIpAddresses;
     }
 
+    /**
+     * Get 是否开启删除保护 
+     * @return DeleteProtect 是否开启删除保护
+     */
+    public Boolean getDeleteProtect() {
+        return this.DeleteProtect;
+    }
+
+    /**
+     * Set 是否开启删除保护
+     * @param DeleteProtect 是否开启删除保护
+     */
+    public void setDeleteProtect(Boolean DeleteProtect) {
+        this.DeleteProtect = DeleteProtect;
+    }
+
     public DescribeCloudNativeAPIGatewayResult() {
     }
 
@@ -702,6 +725,9 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
                 this.PublicIpAddresses[i] = new String(source.PublicIpAddresses[i]);
             }
         }
+        if (source.DeleteProtect != null) {
+            this.DeleteProtect = new Boolean(source.DeleteProtect);
+        }
     }
 
 
@@ -734,6 +760,7 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         this.setParamObj(map, prefix + "InstancePort.", this.InstancePort);
         this.setParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
         this.setParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
+        this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
 
     }
 }

@@ -59,8 +59,7 @@ public class StaffInfo extends AbstractModel {
     private String StaffNumber;
 
     /**
-    * 用户角色id
-一个用户绑定了多个角色时以RoleIdList为准
+    * 用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
     */
     @SerializedName("RoleId")
     @Expose
@@ -100,6 +99,13 @@ public class StaffInfo extends AbstractModel {
     @SerializedName("ExtensionNumber")
     @Expose
     private String ExtensionNumber;
+
+    /**
+    * 呼叫转移配置
+    */
+    @SerializedName("ForwardingConfig")
+    @Expose
+    private ForwardingConfig ForwardingConfig;
 
     /**
      * Get 座席名称 
@@ -182,10 +188,8 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户角色id
-一个用户绑定了多个角色时以RoleIdList为准 
-     * @return RoleId 用户角色id
-一个用户绑定了多个角色时以RoleIdList为准
+     * Get 用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准 
+     * @return RoleId 用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
      * @deprecated
      */
     @Deprecated
@@ -194,10 +198,8 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Set 用户角色id
-一个用户绑定了多个角色时以RoleIdList为准
-     * @param RoleId 用户角色id
-一个用户绑定了多个角色时以RoleIdList为准
+     * Set 用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
+     * @param RoleId 用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
      * @deprecated
      */
     @Deprecated
@@ -289,6 +291,22 @@ public class StaffInfo extends AbstractModel {
         this.ExtensionNumber = ExtensionNumber;
     }
 
+    /**
+     * Get 呼叫转移配置 
+     * @return ForwardingConfig 呼叫转移配置
+     */
+    public ForwardingConfig getForwardingConfig() {
+        return this.ForwardingConfig;
+    }
+
+    /**
+     * Set 呼叫转移配置
+     * @param ForwardingConfig 呼叫转移配置
+     */
+    public void setForwardingConfig(ForwardingConfig ForwardingConfig) {
+        this.ForwardingConfig = ForwardingConfig;
+    }
+
     public StaffInfo() {
     }
 
@@ -336,6 +354,9 @@ public class StaffInfo extends AbstractModel {
         if (source.ExtensionNumber != null) {
             this.ExtensionNumber = new String(source.ExtensionNumber);
         }
+        if (source.ForwardingConfig != null) {
+            this.ForwardingConfig = new ForwardingConfig(source.ForwardingConfig);
+        }
     }
 
 
@@ -354,6 +375,7 @@ public class StaffInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
         this.setParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
         this.setParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
+        this.setParamObj(map, prefix + "ForwardingConfig.", this.ForwardingConfig);
 
     }
 }

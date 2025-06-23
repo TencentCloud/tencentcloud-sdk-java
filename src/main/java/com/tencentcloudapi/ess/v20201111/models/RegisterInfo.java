@@ -46,6 +46,18 @@ public class RegisterInfo extends AbstractModel {
     private String UnifiedSocialCreditCode;
 
     /**
+    * 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul>
+    */
+    @SerializedName("AuthorizationTypes")
+    @Expose
+    private Long [] AuthorizationTypes;
+
+    /**
      * Get 法人姓名 
      * @return LegalName 法人姓名
      */
@@ -101,6 +113,42 @@ public class RegisterInfo extends AbstractModel {
         this.UnifiedSocialCreditCode = UnifiedSocialCreditCode;
     }
 
+    /**
+     * Get 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul> 
+     * @return AuthorizationTypes 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul>
+     */
+    public Long [] getAuthorizationTypes() {
+        return this.AuthorizationTypes;
+    }
+
+    /**
+     * Set 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul>
+     * @param AuthorizationTypes 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul>
+     */
+    public void setAuthorizationTypes(Long [] AuthorizationTypes) {
+        this.AuthorizationTypes = AuthorizationTypes;
+    }
+
     public RegisterInfo() {
     }
 
@@ -118,6 +166,12 @@ public class RegisterInfo extends AbstractModel {
         if (source.UnifiedSocialCreditCode != null) {
             this.UnifiedSocialCreditCode = new String(source.UnifiedSocialCreditCode);
         }
+        if (source.AuthorizationTypes != null) {
+            this.AuthorizationTypes = new Long[source.AuthorizationTypes.length];
+            for (int i = 0; i < source.AuthorizationTypes.length; i++) {
+                this.AuthorizationTypes[i] = new Long(source.AuthorizationTypes[i]);
+            }
+        }
     }
 
 
@@ -128,6 +182,7 @@ public class RegisterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LegalName", this.LegalName);
         this.setParamSimple(map, prefix + "Uscc", this.Uscc);
         this.setParamSimple(map, prefix + "UnifiedSocialCreditCode", this.UnifiedSocialCreditCode);
+        this.setParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
 
     }
 }

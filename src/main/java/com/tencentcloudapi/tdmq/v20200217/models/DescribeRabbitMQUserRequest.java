@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRabbitMQUserRequest extends AbstractModel {
 
     /**
-    * 集群实例Id
+    * 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,14 +38,14 @@ public class DescribeRabbitMQUserRequest extends AbstractModel {
     private String SearchUser;
 
     /**
-    * 分页Offset
+    * 分页 Offset，默认 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页Limit
+    * 分页 Limit，默认 20
     */
     @SerializedName("Limit")
     @Expose
@@ -59,23 +59,24 @@ public class DescribeRabbitMQUserRequest extends AbstractModel {
     private String User;
 
     /**
-    * 用户标签，根据标签过滤列表
+    * 用户标签，用于决定改用户访问 RabbitMQ Management 的权限范围
+management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get 集群实例Id 
-     * @return InstanceId 集群实例Id
+     * Get 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。 
+     * @return InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例Id
-     * @param InstanceId 集群实例Id
+     * Set 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * @param InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -98,32 +99,32 @@ public class DescribeRabbitMQUserRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页Offset 
-     * @return Offset 分页Offset
+     * Get 分页 Offset，默认 0 
+     * @return Offset 分页 Offset，默认 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页Offset
-     * @param Offset 分页Offset
+     * Set 分页 Offset，默认 0
+     * @param Offset 分页 Offset，默认 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页Limit 
-     * @return Limit 分页Limit
+     * Get 分页 Limit，默认 20 
+     * @return Limit 分页 Limit，默认 20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页Limit
-     * @param Limit 分页Limit
+     * Set 分页 Limit，默认 20
+     * @param Limit 分页 Limit，默认 20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -146,16 +147,20 @@ public class DescribeRabbitMQUserRequest extends AbstractModel {
     }
 
     /**
-     * Get 用户标签，根据标签过滤列表 
-     * @return Tags 用户标签，根据标签过滤列表
+     * Get 用户标签，用于决定改用户访问 RabbitMQ Management 的权限范围
+management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户 
+     * @return Tags 用户标签，用于决定改用户访问 RabbitMQ Management 的权限范围
+management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 用户标签，根据标签过滤列表
-     * @param Tags 用户标签，根据标签过滤列表
+     * Set 用户标签，用于决定改用户访问 RabbitMQ Management 的权限范围
+management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
+     * @param Tags 用户标签，用于决定改用户访问 RabbitMQ Management 的权限范围
+management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

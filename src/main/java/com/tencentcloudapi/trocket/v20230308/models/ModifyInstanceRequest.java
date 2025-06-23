@@ -94,6 +94,13 @@ public class ModifyInstanceRequest extends AbstractModel {
     private String ExtraTopicNum;
 
     /**
+    * 是否开启删除保护
+    */
+    @SerializedName("EnableDeletionProtection")
+    @Expose
+    private Boolean EnableDeletionProtection;
+
+    /**
      * Get 集群ID 
      * @return InstanceId 集群ID
      */
@@ -253,6 +260,22 @@ public class ModifyInstanceRequest extends AbstractModel {
         this.ExtraTopicNum = ExtraTopicNum;
     }
 
+    /**
+     * Get 是否开启删除保护 
+     * @return EnableDeletionProtection 是否开启删除保护
+     */
+    public Boolean getEnableDeletionProtection() {
+        return this.EnableDeletionProtection;
+    }
+
+    /**
+     * Set 是否开启删除保护
+     * @param EnableDeletionProtection 是否开启删除保护
+     */
+    public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
+        this.EnableDeletionProtection = EnableDeletionProtection;
+    }
+
     public ModifyInstanceRequest() {
     }
 
@@ -291,6 +314,9 @@ public class ModifyInstanceRequest extends AbstractModel {
         if (source.ExtraTopicNum != null) {
             this.ExtraTopicNum = new String(source.ExtraTopicNum);
         }
+        if (source.EnableDeletionProtection != null) {
+            this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class ModifyInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
         this.setParamSimple(map, prefix + "MaxTopicNum", this.MaxTopicNum);
         this.setParamSimple(map, prefix + "ExtraTopicNum", this.ExtraTopicNum);
+        this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
 
     }
 }

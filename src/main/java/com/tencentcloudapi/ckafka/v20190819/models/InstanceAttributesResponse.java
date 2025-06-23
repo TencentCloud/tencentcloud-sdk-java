@@ -311,6 +311,13 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long UncleanLeaderElectionEnable;
 
     /**
+    * 实例删除保护开关: 1 开启 0 关闭
+    */
+    @SerializedName("DeleteProtectionEnable")
+    @Expose
+    private Long DeleteProtectionEnable;
+
+    /**
      * Get ckafka集群实例Id 
      * @return InstanceId ckafka集群实例Id
      */
@@ -966,6 +973,22 @@ public class InstanceAttributesResponse extends AbstractModel {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
     }
 
+    /**
+     * Get 实例删除保护开关: 1 开启 0 关闭 
+     * @return DeleteProtectionEnable 实例删除保护开关: 1 开启 0 关闭
+     */
+    public Long getDeleteProtectionEnable() {
+        return this.DeleteProtectionEnable;
+    }
+
+    /**
+     * Set 实例删除保护开关: 1 开启 0 关闭
+     * @param DeleteProtectionEnable 实例删除保护开关: 1 开启 0 关闭
+     */
+    public void setDeleteProtectionEnable(Long DeleteProtectionEnable) {
+        this.DeleteProtectionEnable = DeleteProtectionEnable;
+    }
+
     public InstanceAttributesResponse() {
     }
 
@@ -1109,6 +1132,9 @@ public class InstanceAttributesResponse extends AbstractModel {
         if (source.UncleanLeaderElectionEnable != null) {
             this.UncleanLeaderElectionEnable = new Long(source.UncleanLeaderElectionEnable);
         }
+        if (source.DeleteProtectionEnable != null) {
+            this.DeleteProtectionEnable = new Long(source.DeleteProtectionEnable);
+        }
     }
 
 
@@ -1157,6 +1183,7 @@ public class InstanceAttributesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ElasticFloatBandwidth", this.ElasticFloatBandwidth);
         this.setParamSimple(map, prefix + "CustomCertId", this.CustomCertId);
         this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
+        this.setParamSimple(map, prefix + "DeleteProtectionEnable", this.DeleteProtectionEnable);
 
     }
 }

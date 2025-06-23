@@ -304,6 +304,22 @@ public class SingleInvoiceItem extends AbstractModel {
     private SaleInventory SaleInventory;
 
     /**
+    * 机动车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MotorVehicleSaleInvoiceElectronic")
+    @Expose
+    private MotorVehicleSaleInvoice MotorVehicleSaleInvoiceElectronic;
+
+    /**
+    * 二手车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UsedCarPurchaseInvoiceElectronic")
+    @Expose
+    private UsedCarPurchaseInvoice UsedCarPurchaseInvoiceElectronic;
+
+    /**
      * Get 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VatSpecialInvoice 增值税专用发票
@@ -1003,6 +1019,46 @@ public class SingleInvoiceItem extends AbstractModel {
         this.SaleInventory = SaleInventory;
     }
 
+    /**
+     * Get 机动车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MotorVehicleSaleInvoiceElectronic 机动车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MotorVehicleSaleInvoice getMotorVehicleSaleInvoiceElectronic() {
+        return this.MotorVehicleSaleInvoiceElectronic;
+    }
+
+    /**
+     * Set 机动车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MotorVehicleSaleInvoiceElectronic 机动车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMotorVehicleSaleInvoiceElectronic(MotorVehicleSaleInvoice MotorVehicleSaleInvoiceElectronic) {
+        this.MotorVehicleSaleInvoiceElectronic = MotorVehicleSaleInvoiceElectronic;
+    }
+
+    /**
+     * Get 二手车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UsedCarPurchaseInvoiceElectronic 二手车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UsedCarPurchaseInvoice getUsedCarPurchaseInvoiceElectronic() {
+        return this.UsedCarPurchaseInvoiceElectronic;
+    }
+
+    /**
+     * Set 二手车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UsedCarPurchaseInvoiceElectronic 二手车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUsedCarPurchaseInvoiceElectronic(UsedCarPurchaseInvoice UsedCarPurchaseInvoiceElectronic) {
+        this.UsedCarPurchaseInvoiceElectronic = UsedCarPurchaseInvoiceElectronic;
+    }
+
     public SingleInvoiceItem() {
     }
 
@@ -1116,6 +1172,12 @@ public class SingleInvoiceItem extends AbstractModel {
         if (source.SaleInventory != null) {
             this.SaleInventory = new SaleInventory(source.SaleInventory);
         }
+        if (source.MotorVehicleSaleInvoiceElectronic != null) {
+            this.MotorVehicleSaleInvoiceElectronic = new MotorVehicleSaleInvoice(source.MotorVehicleSaleInvoiceElectronic);
+        }
+        if (source.UsedCarPurchaseInvoiceElectronic != null) {
+            this.UsedCarPurchaseInvoiceElectronic = new UsedCarPurchaseInvoice(source.UsedCarPurchaseInvoiceElectronic);
+        }
     }
 
 
@@ -1158,6 +1220,8 @@ public class SingleInvoiceItem extends AbstractModel {
         this.setParamObj(map, prefix + "OverseasInvoice.", this.OverseasInvoice);
         this.setParamObj(map, prefix + "ShoppingReceipt.", this.ShoppingReceipt);
         this.setParamObj(map, prefix + "SaleInventory.", this.SaleInventory);
+        this.setParamObj(map, prefix + "MotorVehicleSaleInvoiceElectronic.", this.MotorVehicleSaleInvoiceElectronic);
+        this.setParamObj(map, prefix + "UsedCarPurchaseInvoiceElectronic.", this.UsedCarPurchaseInvoiceElectronic);
 
     }
 }

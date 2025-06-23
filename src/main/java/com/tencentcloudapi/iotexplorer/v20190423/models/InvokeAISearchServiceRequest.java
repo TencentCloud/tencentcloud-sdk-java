@@ -59,6 +59,48 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
     private Long ChannelId;
 
     /**
+    * 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+    */
+    @SerializedName("EnableSummary")
+    @Expose
+    private Boolean EnableSummary;
+
+    /**
+    * 开始时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+    */
+    @SerializedName("StartTimeMs")
+    @Expose
+    private Long StartTimeMs;
+
+    /**
+    * 结束时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+    */
+    @SerializedName("EndTimeMs")
+    @Expose
+    private Long EndTimeMs;
+
+    /**
+    * 时区。默认值：Asia/Shanghai
+
+注：
+符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
+
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -138,6 +180,126 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         this.ChannelId = ChannelId;
     }
 
+    /**
+     * Get 是否需要返回总结，默认为False；  开启后会加大接口响应时长 
+     * @return EnableSummary 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+     */
+    public Boolean getEnableSummary() {
+        return this.EnableSummary;
+    }
+
+    /**
+     * Set 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+     * @param EnableSummary 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+     */
+    public void setEnableSummary(Boolean EnableSummary) {
+        this.EnableSummary = EnableSummary;
+    }
+
+    /**
+     * Get 开始时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"） 
+     * @return StartTimeMs 开始时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     */
+    public Long getStartTimeMs() {
+        return this.StartTimeMs;
+    }
+
+    /**
+     * Set 开始时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     * @param StartTimeMs 开始时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     */
+    public void setStartTimeMs(Long StartTimeMs) {
+        this.StartTimeMs = StartTimeMs;
+    }
+
+    /**
+     * Get 结束时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"） 
+     * @return EndTimeMs 结束时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     */
+    public Long getEndTimeMs() {
+        return this.EndTimeMs;
+    }
+
+    /**
+     * Set 结束时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     * @param EndTimeMs 结束时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     */
+    public void setEndTimeMs(Long EndTimeMs) {
+        this.EndTimeMs = EndTimeMs;
+    }
+
+    /**
+     * Get 时区。默认值：Asia/Shanghai
+
+注：
+符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
+ 
+     * @return TimeZone 时区。默认值：Asia/Shanghai
+
+注：
+符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
+
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set 时区。默认值：Asia/Shanghai
+
+注：
+符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
+
+     * @param TimeZone 时区。默认值：Asia/Shanghai
+
+注：
+符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
+
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
     public InvokeAISearchServiceRequest() {
     }
 
@@ -161,6 +323,18 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         if (source.ChannelId != null) {
             this.ChannelId = new Long(source.ChannelId);
         }
+        if (source.EnableSummary != null) {
+            this.EnableSummary = new Boolean(source.EnableSummary);
+        }
+        if (source.StartTimeMs != null) {
+            this.StartTimeMs = new Long(source.StartTimeMs);
+        }
+        if (source.EndTimeMs != null) {
+            this.EndTimeMs = new Long(source.EndTimeMs);
+        }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
     }
 
 
@@ -173,6 +347,10 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "SummaryLang", this.SummaryLang);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "EnableSummary", this.EnableSummary);
+        this.setParamSimple(map, prefix + "StartTimeMs", this.StartTimeMs);
+        this.setParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
 
     }
 }

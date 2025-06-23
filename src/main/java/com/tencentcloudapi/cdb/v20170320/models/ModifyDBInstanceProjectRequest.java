@@ -37,6 +37,7 @@ public class ModifyDBInstanceProjectRequest extends AbstractModel {
 
     /**
     * 实例所属项目的 ID，可在账号中心下的项目管理页面查询。
+说明：此项为必填。
     */
     @SerializedName("NewProjectId")
     @Expose
@@ -79,8 +80,10 @@ public class ModifyDBInstanceProjectRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例所属项目的 ID，可在账号中心下的项目管理页面查询。 
+     * Get 实例所属项目的 ID，可在账号中心下的项目管理页面查询。
+说明：此项为必填。 
      * @return NewProjectId 实例所属项目的 ID，可在账号中心下的项目管理页面查询。
+说明：此项为必填。
      */
     public Long getNewProjectId() {
         return this.NewProjectId;
@@ -88,7 +91,9 @@ public class ModifyDBInstanceProjectRequest extends AbstractModel {
 
     /**
      * Set 实例所属项目的 ID，可在账号中心下的项目管理页面查询。
+说明：此项为必填。
      * @param NewProjectId 实例所属项目的 ID，可在账号中心下的项目管理页面查询。
+说明：此项为必填。
      */
     public void setNewProjectId(Long NewProjectId) {
         this.NewProjectId = NewProjectId;
