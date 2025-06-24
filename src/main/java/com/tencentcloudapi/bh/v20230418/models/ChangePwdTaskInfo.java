@@ -171,6 +171,13 @@ public class ChangePwdTaskInfo extends AbstractModel {
     private String NextTime;
 
     /**
+    * 上次执行时间
+    */
+    @SerializedName("LastTime")
+    @Expose
+    private String LastTime;
+
+    /**
      * Get id 
      * @return Id id
      */
@@ -506,6 +513,22 @@ public class ChangePwdTaskInfo extends AbstractModel {
         this.NextTime = NextTime;
     }
 
+    /**
+     * Get 上次执行时间 
+     * @return LastTime 上次执行时间
+     */
+    public String getLastTime() {
+        return this.LastTime;
+    }
+
+    /**
+     * Set 上次执行时间
+     * @param LastTime 上次执行时间
+     */
+    public void setLastTime(String LastTime) {
+        this.LastTime = LastTime;
+    }
+
     public ChangePwdTaskInfo() {
     }
 
@@ -586,6 +609,9 @@ public class ChangePwdTaskInfo extends AbstractModel {
         if (source.NextTime != null) {
             this.NextTime = new String(source.NextTime);
         }
+        if (source.LastTime != null) {
+            this.LastTime = new String(source.LastTime);
+        }
     }
 
 
@@ -614,6 +640,7 @@ public class ChangePwdTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
         this.setParamSimple(map, prefix + "NextTime", this.NextTime);
+        this.setParamSimple(map, prefix + "LastTime", this.LastTime);
 
     }
 }

@@ -12,6 +12,9 @@ public enum LighthouseErrorCode {
      /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
+     /* 账户余额不足。 */
+     FAILEDOPERATION_BALANCEINSUFFICIENT("FailedOperation.BalanceInsufficient"),
+     
      /* 创建镜像失败。 */
      FAILEDOPERATION_CREATEBLUEPRINTFAILED("FailedOperation.CreateBlueprintFailed"),
      
@@ -92,6 +95,9 @@ public enum LighthouseErrorCode {
      
      /* 修改资源自动续费失败。 */
      FAILEDOPERATION_MODIFYRESOURCESRENEWFLAGFAILED("FailedOperation.ModifyResourcesRenewFlagFailed"),
+     
+     /* 购买数量超过最大限制。 */
+     FAILEDOPERATION_NUMLIMITERROR("FailedOperation.NumLimitError"),
      
      /* 续费资源失败。 */
      FAILEDOPERATION_RENEWRESOURCESFAILED("FailedOperation.RenewResourcesFailed"),
@@ -654,6 +660,9 @@ public enum LighthouseErrorCode {
      /* 未授权操作。 */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
+     /* 因账号安全升级，购买云资源需完善您的实名信息。 */
+     UNAUTHORIZEDOPERATION_CERTIFICATIONNEEDUPGRADE("UnauthorizedOperation.CertificationNeedUpgrade"),
+     
      /* 无效 Token。 */
      UNAUTHORIZEDOPERATION_INVALIDTOKEN("UnauthorizedOperation.InvalidToken"),
      
@@ -665,6 +674,9 @@ public enum LighthouseErrorCode {
      
      /* 无权限。 */
      UNAUTHORIZEDOPERATION_NOPERMISSION("UnauthorizedOperation.NoPermission"),
+     
+     /* 账号没有实名认证，支付失败。 */
+     UNAUTHORIZEDOPERATION_NOTCERTIFICATION("UnauthorizedOperation.NotCertification"),
      
      /* 无权限进行此操作，请求中token不合法。 */
      UNAUTHORIZEDOPERATION_TOKENINVALID("UnauthorizedOperation.TokenInvalid"),

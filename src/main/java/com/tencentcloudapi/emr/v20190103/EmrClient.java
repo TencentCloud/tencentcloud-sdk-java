@@ -515,6 +515,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *获取spark应用列表
+     * @param req DescribeSparkApplicationsRequest
+     * @return DescribeSparkApplicationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSparkApplicationsResponse DescribeSparkApplications(DescribeSparkApplicationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSparkApplications", DescribeSparkApplicationsResponse.class);
+    }
+
+    /**
      *查询Spark查询信息列表
      * @param req DescribeSparkQueriesRequest
      * @return DescribeSparkQueriesResponse

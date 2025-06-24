@@ -108,6 +108,13 @@ public class UserInfo extends AbstractModel {
     private Boolean IsSelected;
 
     /**
+    * 用户密码
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
      * Get 查询username。 
      * @return UserName 查询username。
      */
@@ -299,6 +306,22 @@ public class UserInfo extends AbstractModel {
         this.IsSelected = IsSelected;
     }
 
+    /**
+     * Get 用户密码 
+     * @return Password 用户密码
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set 用户密码
+     * @param Password 用户密码
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
     public UserInfo() {
     }
 
@@ -343,6 +366,9 @@ public class UserInfo extends AbstractModel {
         if (source.IsSelected != null) {
             this.IsSelected = new Boolean(source.IsSelected);
         }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class UserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "IsSelected", this.IsSelected);
+        this.setParamSimple(map, prefix + "Password", this.Password);
 
     }
 }

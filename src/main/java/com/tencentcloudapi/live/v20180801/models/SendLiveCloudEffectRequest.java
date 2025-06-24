@@ -52,6 +52,13 @@ public class SendLiveCloudEffectRequest extends AbstractModel {
     private String Id;
 
     /**
+    * 默认随系统配置，云端特效循环 少于5次。可自定义指定礼物循环次数，不超过100次。
+    */
+    @SerializedName("LoopTimes")
+    @Expose
+    private Long LoopTimes;
+
+    /**
     * 操作人备注信息。
     */
     @SerializedName("Operator")
@@ -144,6 +151,22 @@ public class SendLiveCloudEffectRequest extends AbstractModel {
      */
     public void setId(String Id) {
         this.Id = Id;
+    }
+
+    /**
+     * Get 默认随系统配置，云端特效循环 少于5次。可自定义指定礼物循环次数，不超过100次。 
+     * @return LoopTimes 默认随系统配置，云端特效循环 少于5次。可自定义指定礼物循环次数，不超过100次。
+     */
+    public Long getLoopTimes() {
+        return this.LoopTimes;
+    }
+
+    /**
+     * Set 默认随系统配置，云端特效循环 少于5次。可自定义指定礼物循环次数，不超过100次。
+     * @param LoopTimes 默认随系统配置，云端特效循环 少于5次。可自定义指定礼物循环次数，不超过100次。
+     */
+    public void setLoopTimes(Long LoopTimes) {
+        this.LoopTimes = LoopTimes;
     }
 
     /**
@@ -242,6 +265,9 @@ public class SendLiveCloudEffectRequest extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.LoopTimes != null) {
+            this.LoopTimes = new Long(source.LoopTimes);
+        }
         if (source.Operator != null) {
             this.Operator = new String(source.Operator);
         }
@@ -265,6 +291,7 @@ public class SendLiveCloudEffectRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PushDomainName", this.PushDomainName);
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "LoopTimes", this.LoopTimes);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "ZoomFactor", this.ZoomFactor);
         this.setParamSimple(map, prefix + "XPosition", this.XPosition);

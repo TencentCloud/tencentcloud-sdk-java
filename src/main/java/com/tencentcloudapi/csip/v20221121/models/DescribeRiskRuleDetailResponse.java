@@ -25,7 +25,6 @@ public class DescribeRiskRuleDetailResponse extends AbstractModel {
 
     /**
     * 风险规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskRuleId")
     @Expose
@@ -67,10 +66,8 @@ public class DescribeRiskRuleDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 风险规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险规则ID 
      * @return RiskRuleId 风险规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskRuleId() {
         return this.RiskRuleId;
@@ -78,9 +75,7 @@ public class DescribeRiskRuleDetailResponse extends AbstractModel {
 
     /**
      * Set 风险规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskRuleId 风险规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskRuleId(String RiskRuleId) {
         this.RiskRuleId = RiskRuleId;

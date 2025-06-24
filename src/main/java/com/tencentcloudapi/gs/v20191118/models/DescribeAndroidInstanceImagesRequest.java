@@ -31,6 +31,13 @@ public class DescribeAndroidInstanceImagesRequest extends AbstractModel {
     private String [] AndroidInstanceImageIds;
 
     /**
+    * 镜像可用区列表
+    */
+    @SerializedName("AndroidInstanceImageZones")
+    @Expose
+    private String [] AndroidInstanceImageZones;
+
+    /**
     * 偏移量，默认为0
     */
     @SerializedName("Offset")
@@ -58,6 +65,22 @@ public class DescribeAndroidInstanceImagesRequest extends AbstractModel {
      */
     public void setAndroidInstanceImageIds(String [] AndroidInstanceImageIds) {
         this.AndroidInstanceImageIds = AndroidInstanceImageIds;
+    }
+
+    /**
+     * Get 镜像可用区列表 
+     * @return AndroidInstanceImageZones 镜像可用区列表
+     */
+    public String [] getAndroidInstanceImageZones() {
+        return this.AndroidInstanceImageZones;
+    }
+
+    /**
+     * Set 镜像可用区列表
+     * @param AndroidInstanceImageZones 镜像可用区列表
+     */
+    public void setAndroidInstanceImageZones(String [] AndroidInstanceImageZones) {
+        this.AndroidInstanceImageZones = AndroidInstanceImageZones;
     }
 
     /**
@@ -106,6 +129,12 @@ public class DescribeAndroidInstanceImagesRequest extends AbstractModel {
                 this.AndroidInstanceImageIds[i] = new String(source.AndroidInstanceImageIds[i]);
             }
         }
+        if (source.AndroidInstanceImageZones != null) {
+            this.AndroidInstanceImageZones = new String[source.AndroidInstanceImageZones.length];
+            for (int i = 0; i < source.AndroidInstanceImageZones.length; i++) {
+                this.AndroidInstanceImageZones[i] = new String(source.AndroidInstanceImageZones[i]);
+            }
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -120,6 +149,7 @@ public class DescribeAndroidInstanceImagesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AndroidInstanceImageIds.", this.AndroidInstanceImageIds);
+        this.setParamArraySimple(map, prefix + "AndroidInstanceImageZones.", this.AndroidInstanceImageZones);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

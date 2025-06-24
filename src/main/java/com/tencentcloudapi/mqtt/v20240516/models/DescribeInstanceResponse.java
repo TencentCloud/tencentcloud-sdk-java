@@ -197,6 +197,34 @@ API：通过API手动注册
     private Boolean AuthorizationPolicy;
 
     /**
+    * 共享订阅组数最大限制
+    */
+    @SerializedName("SharedSubscriptionGroupLimit")
+    @Expose
+    private Long SharedSubscriptionGroupLimit;
+
+    /**
+    * 单个共享订阅组TopicFilter数限制
+    */
+    @SerializedName("MaxTopicFilterPerSharedSubscriptionGroup")
+    @Expose
+    private Long MaxTopicFilterPerSharedSubscriptionGroup;
+
+    /**
+    * 自动订阅规则条数限制
+    */
+    @SerializedName("AutoSubscriptionPolicyLimit")
+    @Expose
+    private Long AutoSubscriptionPolicyLimit;
+
+    /**
+    * 单条自动订阅规则TopicFilter数限制
+    */
+    @SerializedName("MaxTopicFilterPerAutoSubscriptionPolicy")
+    @Expose
+    private Long MaxTopicFilterPerAutoSubscriptionPolicy;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -608,6 +636,70 @@ API：通过API手动注册
     }
 
     /**
+     * Get 共享订阅组数最大限制 
+     * @return SharedSubscriptionGroupLimit 共享订阅组数最大限制
+     */
+    public Long getSharedSubscriptionGroupLimit() {
+        return this.SharedSubscriptionGroupLimit;
+    }
+
+    /**
+     * Set 共享订阅组数最大限制
+     * @param SharedSubscriptionGroupLimit 共享订阅组数最大限制
+     */
+    public void setSharedSubscriptionGroupLimit(Long SharedSubscriptionGroupLimit) {
+        this.SharedSubscriptionGroupLimit = SharedSubscriptionGroupLimit;
+    }
+
+    /**
+     * Get 单个共享订阅组TopicFilter数限制 
+     * @return MaxTopicFilterPerSharedSubscriptionGroup 单个共享订阅组TopicFilter数限制
+     */
+    public Long getMaxTopicFilterPerSharedSubscriptionGroup() {
+        return this.MaxTopicFilterPerSharedSubscriptionGroup;
+    }
+
+    /**
+     * Set 单个共享订阅组TopicFilter数限制
+     * @param MaxTopicFilterPerSharedSubscriptionGroup 单个共享订阅组TopicFilter数限制
+     */
+    public void setMaxTopicFilterPerSharedSubscriptionGroup(Long MaxTopicFilterPerSharedSubscriptionGroup) {
+        this.MaxTopicFilterPerSharedSubscriptionGroup = MaxTopicFilterPerSharedSubscriptionGroup;
+    }
+
+    /**
+     * Get 自动订阅规则条数限制 
+     * @return AutoSubscriptionPolicyLimit 自动订阅规则条数限制
+     */
+    public Long getAutoSubscriptionPolicyLimit() {
+        return this.AutoSubscriptionPolicyLimit;
+    }
+
+    /**
+     * Set 自动订阅规则条数限制
+     * @param AutoSubscriptionPolicyLimit 自动订阅规则条数限制
+     */
+    public void setAutoSubscriptionPolicyLimit(Long AutoSubscriptionPolicyLimit) {
+        this.AutoSubscriptionPolicyLimit = AutoSubscriptionPolicyLimit;
+    }
+
+    /**
+     * Get 单条自动订阅规则TopicFilter数限制 
+     * @return MaxTopicFilterPerAutoSubscriptionPolicy 单条自动订阅规则TopicFilter数限制
+     */
+    public Long getMaxTopicFilterPerAutoSubscriptionPolicy() {
+        return this.MaxTopicFilterPerAutoSubscriptionPolicy;
+    }
+
+    /**
+     * Set 单条自动订阅规则TopicFilter数限制
+     * @param MaxTopicFilterPerAutoSubscriptionPolicy 单条自动订阅规则TopicFilter数限制
+     */
+    public void setMaxTopicFilterPerAutoSubscriptionPolicy(Long MaxTopicFilterPerAutoSubscriptionPolicy) {
+        this.MaxTopicFilterPerAutoSubscriptionPolicy = MaxTopicFilterPerAutoSubscriptionPolicy;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -703,6 +795,18 @@ API：通过API手动注册
         if (source.AuthorizationPolicy != null) {
             this.AuthorizationPolicy = new Boolean(source.AuthorizationPolicy);
         }
+        if (source.SharedSubscriptionGroupLimit != null) {
+            this.SharedSubscriptionGroupLimit = new Long(source.SharedSubscriptionGroupLimit);
+        }
+        if (source.MaxTopicFilterPerSharedSubscriptionGroup != null) {
+            this.MaxTopicFilterPerSharedSubscriptionGroup = new Long(source.MaxTopicFilterPerSharedSubscriptionGroup);
+        }
+        if (source.AutoSubscriptionPolicyLimit != null) {
+            this.AutoSubscriptionPolicyLimit = new Long(source.AutoSubscriptionPolicyLimit);
+        }
+        if (source.MaxTopicFilterPerAutoSubscriptionPolicy != null) {
+            this.MaxTopicFilterPerAutoSubscriptionPolicy = new Long(source.MaxTopicFilterPerAutoSubscriptionPolicy);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -737,6 +841,10 @@ API：通过API手动注册
         this.setParamSimple(map, prefix + "RegistrationCode", this.RegistrationCode);
         this.setParamSimple(map, prefix + "MaxSubscription", this.MaxSubscription);
         this.setParamSimple(map, prefix + "AuthorizationPolicy", this.AuthorizationPolicy);
+        this.setParamSimple(map, prefix + "SharedSubscriptionGroupLimit", this.SharedSubscriptionGroupLimit);
+        this.setParamSimple(map, prefix + "MaxTopicFilterPerSharedSubscriptionGroup", this.MaxTopicFilterPerSharedSubscriptionGroup);
+        this.setParamSimple(map, prefix + "AutoSubscriptionPolicyLimit", this.AutoSubscriptionPolicyLimit);
+        this.setParamSimple(map, prefix + "MaxTopicFilterPerAutoSubscriptionPolicy", this.MaxTopicFilterPerAutoSubscriptionPolicy);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

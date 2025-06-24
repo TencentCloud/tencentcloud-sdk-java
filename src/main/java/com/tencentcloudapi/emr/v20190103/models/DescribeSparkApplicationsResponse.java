@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.csip.v20221121.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeExposePathResponse extends AbstractModel {
+public class DescribeSparkApplicationsResponse extends AbstractModel {
 
     /**
-    * 暴露路径节点内容
+    * 返回数量
     */
-    @SerializedName("Content")
+    @SerializedName("TotalCount")
     @Expose
-    private String Content;
+    private Long TotalCount;
+
+    /**
+    * spark应用列表
+    */
+    @SerializedName("ResultList")
+    @Expose
+    private SparkApplicationsList [] ResultList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeExposePathResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 暴露路径节点内容 
-     * @return Content 暴露路径节点内容
+     * Get 返回数量 
+     * @return TotalCount 返回数量
      */
-    public String getContent() {
-        return this.Content;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 暴露路径节点内容
-     * @param Content 暴露路径节点内容
+     * Set 返回数量
+     * @param TotalCount 返回数量
      */
-    public void setContent(String Content) {
-        this.Content = Content;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get spark应用列表 
+     * @return ResultList spark应用列表
+     */
+    public SparkApplicationsList [] getResultList() {
+        return this.ResultList;
+    }
+
+    /**
+     * Set spark应用列表
+     * @param ResultList spark应用列表
+     */
+    public void setResultList(SparkApplicationsList [] ResultList) {
+        this.ResultList = ResultList;
     }
 
     /**
@@ -69,16 +92,22 @@ public class DescribeExposePathResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeExposePathResponse() {
+    public DescribeSparkApplicationsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeExposePathResponse(DescribeExposePathResponse source) {
-        if (source.Content != null) {
-            this.Content = new String(source.Content);
+    public DescribeSparkApplicationsResponse(DescribeSparkApplicationsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ResultList != null) {
+            this.ResultList = new SparkApplicationsList[source.ResultList.length];
+            for (int i = 0; i < source.ResultList.length; i++) {
+                this.ResultList[i] = new SparkApplicationsList(source.ResultList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +119,8 @@ public class DescribeExposePathResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "ResultList.", this.ResultList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

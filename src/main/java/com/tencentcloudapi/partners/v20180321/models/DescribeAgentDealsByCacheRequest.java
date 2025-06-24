@@ -38,14 +38,14 @@ public class DescribeAgentDealsByCacheRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 下单时间范围起始点【请保持时间范围最大90天】
+    * 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
     */
     @SerializedName("CreatTimeRangeStart")
     @Expose
     private String CreatTimeRangeStart;
 
     /**
-    * 下单时间范围终止点【请保持时间范围最大90天】
+    * 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
     */
     @SerializedName("CreatTimeRangeEnd")
     @Expose
@@ -126,32 +126,32 @@ public class DescribeAgentDealsByCacheRequest extends AbstractModel {
     }
 
     /**
-     * Get 下单时间范围起始点【请保持时间范围最大90天】 
-     * @return CreatTimeRangeStart 下单时间范围起始点【请保持时间范围最大90天】
+     * Get 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】 
+     * @return CreatTimeRangeStart 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
      */
     public String getCreatTimeRangeStart() {
         return this.CreatTimeRangeStart;
     }
 
     /**
-     * Set 下单时间范围起始点【请保持时间范围最大90天】
-     * @param CreatTimeRangeStart 下单时间范围起始点【请保持时间范围最大90天】
+     * Set 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
+     * @param CreatTimeRangeStart 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
      */
     public void setCreatTimeRangeStart(String CreatTimeRangeStart) {
         this.CreatTimeRangeStart = CreatTimeRangeStart;
     }
 
     /**
-     * Get 下单时间范围终止点【请保持时间范围最大90天】 
-     * @return CreatTimeRangeEnd 下单时间范围终止点【请保持时间范围最大90天】
+     * Get 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】 
+     * @return CreatTimeRangeEnd 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
      */
     public String getCreatTimeRangeEnd() {
         return this.CreatTimeRangeEnd;
     }
 
     /**
-     * Set 下单时间范围终止点【请保持时间范围最大90天】
-     * @param CreatTimeRangeEnd 下单时间范围终止点【请保持时间范围最大90天】
+     * Set 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
+     * @param CreatTimeRangeEnd 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
      */
     public void setCreatTimeRangeEnd(String CreatTimeRangeEnd) {
         this.CreatTimeRangeEnd = CreatTimeRangeEnd;
