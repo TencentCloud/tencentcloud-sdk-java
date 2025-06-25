@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateCdbProxyRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 私有网络ID
+    * 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 私有子网ID
+    * 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("UniqSubnetId")
     @Expose
@@ -90,48 +90,48 @@ Mem：单个代理节点内存数（单位：MB）。
     private String ProxyVersion;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 私有网络ID 
-     * @return UniqVpcId 私有网络ID
+     * Get 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return UniqVpcId 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 私有网络ID
-     * @param UniqVpcId 私有网络ID
+     * Set 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param UniqVpcId 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 私有子网ID 
-     * @return UniqSubnetId 私有子网ID
+     * Get 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return UniqSubnetId 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 私有子网ID
-     * @param UniqSubnetId 私有子网ID
+     * Set 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param UniqSubnetId 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;

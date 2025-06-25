@@ -430,6 +430,13 @@ public class NodeHardwareInfo extends AbstractModel {
     private String [] ConfigurableServices;
 
     /**
+    * 节点标注信息，目前只提供给tf平台使用
+    */
+    @SerializedName("NodeMark")
+    @Expose
+    private String NodeMark;
+
+    /**
      * Get 用户APPID 
      * @return AppId 用户APPID
      */
@@ -1369,6 +1376,22 @@ public class NodeHardwareInfo extends AbstractModel {
         this.ConfigurableServices = ConfigurableServices;
     }
 
+    /**
+     * Get 节点标注信息，目前只提供给tf平台使用 
+     * @return NodeMark 节点标注信息，目前只提供给tf平台使用
+     */
+    public String getNodeMark() {
+        return this.NodeMark;
+    }
+
+    /**
+     * Set 节点标注信息，目前只提供给tf平台使用
+     * @param NodeMark 节点标注信息，目前只提供给tf平台使用
+     */
+    public void setNodeMark(String NodeMark) {
+        this.NodeMark = NodeMark;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1557,6 +1580,9 @@ public class NodeHardwareInfo extends AbstractModel {
                 this.ConfigurableServices[i] = new String(source.ConfigurableServices[i]);
             }
         }
+        if (source.NodeMark != null) {
+            this.NodeMark = new String(source.NodeMark);
+        }
     }
 
 
@@ -1621,6 +1647,7 @@ public class NodeHardwareInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TimingResource", this.TimingResource);
         this.setParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
         this.setParamArraySimple(map, prefix + "ConfigurableServices.", this.ConfigurableServices);
+        this.setParamSimple(map, prefix + "NodeMark", this.NodeMark);
 
     }
 }

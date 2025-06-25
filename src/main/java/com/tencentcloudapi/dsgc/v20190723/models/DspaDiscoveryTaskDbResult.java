@@ -129,6 +129,27 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
     private Long TotalField;
 
     /**
+    * 任务实例id
+    */
+    @SerializedName("TaskInstanceId")
+    @Expose
+    private String TaskInstanceId;
+
+    /**
+    * 开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 扫描范围（full:全量扫描 incre：变更扫描）
+    */
+    @SerializedName("ScanRange")
+    @Expose
+    private String ScanRange;
+
+    /**
      * Get 扫描数据库结果ID 
      * @return DbResultId 扫描数据库结果ID
      */
@@ -368,6 +389,54 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
         this.TotalField = TotalField;
     }
 
+    /**
+     * Get 任务实例id 
+     * @return TaskInstanceId 任务实例id
+     */
+    public String getTaskInstanceId() {
+        return this.TaskInstanceId;
+    }
+
+    /**
+     * Set 任务实例id
+     * @param TaskInstanceId 任务实例id
+     */
+    public void setTaskInstanceId(String TaskInstanceId) {
+        this.TaskInstanceId = TaskInstanceId;
+    }
+
+    /**
+     * Get 开始时间 
+     * @return StartTime 开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间
+     * @param StartTime 开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 扫描范围（full:全量扫描 incre：变更扫描） 
+     * @return ScanRange 扫描范围（full:全量扫描 incre：变更扫描）
+     */
+    public String getScanRange() {
+        return this.ScanRange;
+    }
+
+    /**
+     * Set 扫描范围（full:全量扫描 incre：变更扫描）
+     * @param ScanRange 扫描范围（full:全量扫描 incre：变更扫描）
+     */
+    public void setScanRange(String ScanRange) {
+        this.ScanRange = ScanRange;
+    }
+
     public DspaDiscoveryTaskDbResult() {
     }
 
@@ -421,6 +490,15 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
         if (source.TotalField != null) {
             this.TotalField = new Long(source.TotalField);
         }
+        if (source.TaskInstanceId != null) {
+            this.TaskInstanceId = new String(source.TaskInstanceId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.ScanRange != null) {
+            this.ScanRange = new String(source.ScanRange);
+        }
     }
 
 
@@ -443,6 +521,9 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "SensitiveField", this.SensitiveField);
         this.setParamSimple(map, prefix + "TotalField", this.TotalField);
+        this.setParamSimple(map, prefix + "TaskInstanceId", this.TaskInstanceId);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "ScanRange", this.ScanRange);
 
     }
 }

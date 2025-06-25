@@ -46,6 +46,13 @@ public class GenerateDataKeyResponse extends AbstractModel {
     private String CiphertextBlob;
 
     /**
+    * DataKey的全局唯一标识,当KMS托管数据密钥时返回。
+    */
+    @SerializedName("DataKeyId")
+    @Expose
+    private String DataKeyId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -105,6 +112,22 @@ public class GenerateDataKeyResponse extends AbstractModel {
     }
 
     /**
+     * Get DataKey的全局唯一标识,当KMS托管数据密钥时返回。 
+     * @return DataKeyId DataKey的全局唯一标识,当KMS托管数据密钥时返回。
+     */
+    public String getDataKeyId() {
+        return this.DataKeyId;
+    }
+
+    /**
+     * Set DataKey的全局唯一标识,当KMS托管数据密钥时返回。
+     * @param DataKeyId DataKey的全局唯一标识,当KMS托管数据密钥时返回。
+     */
+    public void setDataKeyId(String DataKeyId) {
+        this.DataKeyId = DataKeyId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -137,6 +160,9 @@ public class GenerateDataKeyResponse extends AbstractModel {
         if (source.CiphertextBlob != null) {
             this.CiphertextBlob = new String(source.CiphertextBlob);
         }
+        if (source.DataKeyId != null) {
+            this.DataKeyId = new String(source.DataKeyId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -150,6 +176,7 @@ public class GenerateDataKeyResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "Plaintext", this.Plaintext);
         this.setParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
+        this.setParamSimple(map, prefix + "DataKeyId", this.DataKeyId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

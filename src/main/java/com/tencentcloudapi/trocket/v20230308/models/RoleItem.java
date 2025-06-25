@@ -66,14 +66,14 @@ public class RoleItem extends AbstractModel {
     private String Remark;
 
     /**
-    * 创建时间，秒为单位
+    * 角色的创建时间，**Unix时间戳（毫秒）**
     */
     @SerializedName("CreatedTime")
     @Expose
     private Long CreatedTime;
 
     /**
-    * 修改时间，秒为单位
+    * 角色的更新时间，**Unix时间戳（毫秒）**
     */
     @SerializedName("ModifiedTime")
     @Expose
@@ -191,32 +191,32 @@ public class RoleItem extends AbstractModel {
     }
 
     /**
-     * Get 创建时间，秒为单位 
-     * @return CreatedTime 创建时间，秒为单位
+     * Get 角色的创建时间，**Unix时间戳（毫秒）** 
+     * @return CreatedTime 角色的创建时间，**Unix时间戳（毫秒）**
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间，秒为单位
-     * @param CreatedTime 创建时间，秒为单位
+     * Set 角色的创建时间，**Unix时间戳（毫秒）**
+     * @param CreatedTime 角色的创建时间，**Unix时间戳（毫秒）**
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 修改时间，秒为单位 
-     * @return ModifiedTime 修改时间，秒为单位
+     * Get 角色的更新时间，**Unix时间戳（毫秒）** 
+     * @return ModifiedTime 角色的更新时间，**Unix时间戳（毫秒）**
      */
     public Long getModifiedTime() {
         return this.ModifiedTime;
     }
 
     /**
-     * Set 修改时间，秒为单位
-     * @param ModifiedTime 修改时间，秒为单位
+     * Set 角色的更新时间，**Unix时间戳（毫秒）**
+     * @param ModifiedTime 角色的更新时间，**Unix时间戳（毫秒）**
      */
     public void setModifiedTime(Long ModifiedTime) {
         this.ModifiedTime = ModifiedTime;

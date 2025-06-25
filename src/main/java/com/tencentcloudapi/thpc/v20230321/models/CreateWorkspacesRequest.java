@@ -94,7 +94,7 @@ public class CreateWorkspacesRequest extends AbstractModel {
     private SpaceInternetAccessible InternetAccessible;
 
     /**
-    * 购买工作空间数量
+    * 购买工作空间实例的数量
     */
     @SerializedName("SpaceCount")
     @Expose
@@ -338,16 +338,16 @@ public class CreateWorkspacesRequest extends AbstractModel {
     }
 
     /**
-     * Get 购买工作空间数量 
-     * @return SpaceCount 购买工作空间数量
+     * Get 购买工作空间实例的数量 
+     * @return SpaceCount 购买工作空间实例的数量
      */
     public Long getSpaceCount() {
         return this.SpaceCount;
     }
 
     /**
-     * Set 购买工作空间数量
-     * @param SpaceCount 购买工作空间数量
+     * Set 购买工作空间实例的数量
+     * @param SpaceCount 购买工作空间实例的数量
      */
     public void setSpaceCount(Long SpaceCount) {
         this.SpaceCount = SpaceCount;

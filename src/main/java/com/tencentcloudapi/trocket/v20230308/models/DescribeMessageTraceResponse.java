@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMessageTraceResponse extends AbstractModel {
 
     /**
-    * 展示Topic名
+    * 主题名称
     */
     @SerializedName("ShowTopicName")
     @Expose
@@ -46,16 +46,16 @@ public class DescribeMessageTraceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 展示Topic名 
-     * @return ShowTopicName 展示Topic名
+     * Get 主题名称 
+     * @return ShowTopicName 主题名称
      */
     public String getShowTopicName() {
         return this.ShowTopicName;
     }
 
     /**
-     * Set 展示Topic名
-     * @param ShowTopicName 展示Topic名
+     * Set 主题名称
+     * @param ShowTopicName 主题名称
      */
     public void setShowTopicName(String ShowTopicName) {
         this.ShowTopicName = ShowTopicName;

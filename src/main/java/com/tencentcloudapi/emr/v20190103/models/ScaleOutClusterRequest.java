@@ -170,6 +170,13 @@ public class ScaleOutClusterRequest extends AbstractModel {
     private ScaleOutServiceConfGroupsInfo [] ScaleOutServiceConfGroupsInfo;
 
     /**
+    * 节点标记信息，当前只提供给tf平台使用
+    */
+    @SerializedName("NodeMarks")
+    @Expose
+    private NodeMark NodeMarks;
+
+    /**
      * Get 节点计费模式。取值范围：
 <li>PREPAID：预付费，即包年包月。</li>
 <li>POSTPAID_BY_HOUR：按小时后付费。</li>
@@ -513,6 +520,22 @@ public class ScaleOutClusterRequest extends AbstractModel {
         this.ScaleOutServiceConfGroupsInfo = ScaleOutServiceConfGroupsInfo;
     }
 
+    /**
+     * Get 节点标记信息，当前只提供给tf平台使用 
+     * @return NodeMarks 节点标记信息，当前只提供给tf平台使用
+     */
+    public NodeMark getNodeMarks() {
+        return this.NodeMarks;
+    }
+
+    /**
+     * Set 节点标记信息，当前只提供给tf平台使用
+     * @param NodeMarks 节点标记信息，当前只提供给tf平台使用
+     */
+    public void setNodeMarks(NodeMark NodeMarks) {
+        this.NodeMarks = NodeMarks;
+    }
+
     public ScaleOutClusterRequest() {
     }
 
@@ -599,6 +622,9 @@ public class ScaleOutClusterRequest extends AbstractModel {
                 this.ScaleOutServiceConfGroupsInfo[i] = new ScaleOutServiceConfGroupsInfo(source.ScaleOutServiceConfGroupsInfo[i]);
             }
         }
+        if (source.NodeMarks != null) {
+            this.NodeMarks = new NodeMark(source.NodeMarks);
+        }
     }
 
 
@@ -626,6 +652,7 @@ public class ScaleOutClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArrayObj(map, prefix + "ScaleOutServiceConfGroupsInfo.", this.ScaleOutServiceConfGroupsInfo);
+        this.setParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
 
     }
 }

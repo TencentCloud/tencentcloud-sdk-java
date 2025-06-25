@@ -153,6 +153,13 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     private String CateBizId;
 
     /**
+    * 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+    */
+    @SerializedName("IsDownload")
+    @Expose
+    private Boolean IsDownload;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -464,6 +471,22 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
         this.CateBizId = CateBizId;
     }
 
+    /**
+     * Get 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义 
+     * @return IsDownload 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+     */
+    public Boolean getIsDownload() {
+        return this.IsDownload;
+    }
+
+    /**
+     * Set 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+     * @param IsDownload 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+     */
+    public void setIsDownload(Boolean IsDownload) {
+        this.IsDownload = IsDownload;
+    }
+
     public SaveDocRequest() {
     }
 
@@ -526,6 +549,9 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
         if (source.CateBizId != null) {
             this.CateBizId = new String(source.CateBizId);
         }
+        if (source.IsDownload != null) {
+            this.IsDownload = new Boolean(source.IsDownload);
+        }
     }
 
 
@@ -550,6 +576,7 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
         this.setParamSimple(map, prefix + "IsRefer", this.IsRefer);
         this.setParamSimple(map, prefix + "Opt", this.Opt);
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
+        this.setParamSimple(map, prefix + "IsDownload", this.IsDownload);
 
     }
 }

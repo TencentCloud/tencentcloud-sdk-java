@@ -24,25 +24,29 @@ import java.util.HashMap;
 public class CreateInstanceRequest extends AbstractModel {
 
     /**
-    * 实例类型，
-EXPERIMENT 体验版
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
+    * 实例类型，枚举值如下：
+
+- EXPERIMENT：体验版
+
+- BASIC：基础版
+
+- PRO：专业版
+
+- PLATINUM：铂金版
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 集群名称
+    * 集群名称，不能为空， 3-64个字符，只能包含数字、字母、“-”和“_”
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
+    * 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
     */
     @SerializedName("SkuCode")
     @Expose
@@ -91,14 +95,18 @@ PLATINUM 铂金版
     private Long Bandwidth;
 
     /**
-    * 公网访问白名单
+    * 公网访问白名单，不填表示拒绝所有 IP 访问
     */
     @SerializedName("IpRules")
     @Expose
     private IpRule [] IpRules;
 
     /**
-    * 消息保留时长（单位：小时）
+    * 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数
     */
     @SerializedName("MessageRetention")
     @Expose
@@ -112,92 +120,111 @@ PLATINUM 铂金版
     private Long PayMode;
 
     /**
-    * 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+    * 预付费集群是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 购买时长（单位：月），默认值为1
+    * 预付费集群的购买时长（单位：月），取值范围为1～60，默认值为1
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 最大可创建主题数
+    * 最大可创建主题数，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值和最小值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数
     */
     @SerializedName("MaxTopicNum")
     @Expose
     private Long MaxTopicNum;
 
     /**
-    * 部署可用区列表
+    * 部署可用区列表，从 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口获得。
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-     * Get 实例类型，
-EXPERIMENT 体验版
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版 
-     * @return InstanceType 实例类型，
-EXPERIMENT 体验版
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
+     * Get 实例类型，枚举值如下：
+
+- EXPERIMENT：体验版
+
+- BASIC：基础版
+
+- PRO：专业版
+
+- PLATINUM：铂金版 
+     * @return InstanceType 实例类型，枚举值如下：
+
+- EXPERIMENT：体验版
+
+- BASIC：基础版
+
+- PRO：专业版
+
+- PLATINUM：铂金版
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型，
-EXPERIMENT 体验版
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
-     * @param InstanceType 实例类型，
-EXPERIMENT 体验版
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
+     * Set 实例类型，枚举值如下：
+
+- EXPERIMENT：体验版
+
+- BASIC：基础版
+
+- PRO：专业版
+
+- PLATINUM：铂金版
+     * @param InstanceType 实例类型，枚举值如下：
+
+- EXPERIMENT：体验版
+
+- BASIC：基础版
+
+- PRO：专业版
+
+- PLATINUM：铂金版
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 集群名称 
-     * @return Name 集群名称
+     * Get 集群名称，不能为空， 3-64个字符，只能包含数字、字母、“-”和“_” 
+     * @return Name 集群名称，不能为空， 3-64个字符，只能包含数字、字母、“-”和“_”
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 集群名称
-     * @param Name 集群名称
+     * Set 集群名称，不能为空， 3-64个字符，只能包含数字、字母、“-”和“_”
+     * @param Name 集群名称，不能为空， 3-64个字符，只能包含数字、字母、“-”和“_”
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w 
-     * @return SkuCode 商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
+     * Get 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。 
+     * @return SkuCode 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
      */
     public String getSkuCode() {
         return this.SkuCode;
     }
 
     /**
-     * Set 商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
-     * @param SkuCode 商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
+     * Set 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
+     * @param SkuCode 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
      */
     public void setSkuCode(String SkuCode) {
         this.SkuCode = SkuCode;
@@ -300,32 +327,48 @@ PLATINUM 铂金版
     }
 
     /**
-     * Get 公网访问白名单 
-     * @return IpRules 公网访问白名单
+     * Get 公网访问白名单，不填表示拒绝所有 IP 访问 
+     * @return IpRules 公网访问白名单，不填表示拒绝所有 IP 访问
      */
     public IpRule [] getIpRules() {
         return this.IpRules;
     }
 
     /**
-     * Set 公网访问白名单
-     * @param IpRules 公网访问白名单
+     * Set 公网访问白名单，不填表示拒绝所有 IP 访问
+     * @param IpRules 公网访问白名单，不填表示拒绝所有 IP 访问
      */
     public void setIpRules(IpRule [] IpRules) {
         this.IpRules = IpRules;
     }
 
     /**
-     * Get 消息保留时长（单位：小时） 
-     * @return MessageRetention 消息保留时长（单位：小时）
+     * Get 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数 
+     * @return MessageRetention 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数
      */
     public Long getMessageRetention() {
         return this.MessageRetention;
     }
 
     /**
-     * Set 消息保留时长（单位：小时）
-     * @param MessageRetention 消息保留时长（单位：小时）
+     * Set 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数
+     * @param MessageRetention 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数
      */
     public void setMessageRetention(Long MessageRetention) {
         this.MessageRetention = MessageRetention;
@@ -348,64 +391,76 @@ PLATINUM 铂金版
     }
 
     /**
-     * Get 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0 
-     * @return RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+     * Get 预付费集群是否自动续费（0: 不自动续费；1: 自动续费），默认值为0 
+     * @return RenewFlag 预付费集群是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
-     * @param RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+     * Set 预付费集群是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+     * @param RenewFlag 预付费集群是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 购买时长（单位：月），默认值为1 
-     * @return TimeSpan 购买时长（单位：月），默认值为1
+     * Get 预付费集群的购买时长（单位：月），取值范围为1～60，默认值为1 
+     * @return TimeSpan 预付费集群的购买时长（单位：月），取值范围为1～60，默认值为1
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 购买时长（单位：月），默认值为1
-     * @param TimeSpan 购买时长（单位：月），默认值为1
+     * Set 预付费集群的购买时长（单位：月），取值范围为1～60，默认值为1
+     * @param TimeSpan 预付费集群的购买时长（单位：月），取值范围为1～60，默认值为1
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 最大可创建主题数 
-     * @return MaxTopicNum 最大可创建主题数
+     * Get 最大可创建主题数，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值和最小值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数 
+     * @return MaxTopicNum 最大可创建主题数，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值和最小值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数
      */
     public Long getMaxTopicNum() {
         return this.MaxTopicNum;
     }
 
     /**
-     * Set 最大可创建主题数
-     * @param MaxTopicNum 最大可创建主题数
+     * Set 最大可创建主题数，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值和最小值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数
+     * @param MaxTopicNum 最大可创建主题数，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值和最小值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数
      */
     public void setMaxTopicNum(Long MaxTopicNum) {
         this.MaxTopicNum = MaxTopicNum;
     }
 
     /**
-     * Get 部署可用区列表 
-     * @return ZoneIds 部署可用区列表
+     * Get 部署可用区列表，从 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口获得。 
+     * @return ZoneIds 部署可用区列表，从 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口获得。
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 部署可用区列表
-     * @param ZoneIds 部署可用区列表
+     * Set 部署可用区列表，从 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口获得。
+     * @param ZoneIds 部署可用区列表，从 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口获得。
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;

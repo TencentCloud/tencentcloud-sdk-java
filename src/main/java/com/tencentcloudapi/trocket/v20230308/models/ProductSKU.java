@@ -43,7 +43,6 @@ PLATINUM，铂金版
 
     /**
     * TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TpsLimit")
     @Expose
@@ -51,7 +50,6 @@ PLATINUM，铂金版
 
     /**
     * 弹性TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaledTpsLimit")
     @Expose
@@ -59,7 +57,6 @@ PLATINUM，铂金版
 
     /**
     * 主题数量上限默认值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicNumLimit")
     @Expose
@@ -67,7 +64,6 @@ PLATINUM，铂金版
 
     /**
     * 消费组数量上限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupNumLimit")
     @Expose
@@ -75,7 +71,6 @@ PLATINUM，铂金版
 
     /**
     * 默认消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultRetention")
     @Expose
@@ -83,7 +78,6 @@ PLATINUM，铂金版
 
     /**
     * 可调整消息保留时间上限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetentionUpperLimit")
     @Expose
@@ -91,7 +85,6 @@ PLATINUM，铂金版
 
     /**
     * 可调整消息保留时间下限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetentionLowerLimit")
     @Expose
@@ -99,7 +92,6 @@ PLATINUM，铂金版
 
     /**
     * 延时消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMessageDelay")
     @Expose
@@ -121,7 +113,6 @@ PLATINUM，铂金版
 
     /**
     * 主题数量上限默认最大值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicNumUpperLimit")
     @Expose
@@ -176,10 +167,8 @@ PLATINUM，铂金版
     }
 
     /**
-     * Get TPS上限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TPS上限 
      * @return TpsLimit TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTpsLimit() {
         return this.TpsLimit;
@@ -187,19 +176,15 @@ PLATINUM，铂金版
 
     /**
      * Set TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TpsLimit TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTpsLimit(Long TpsLimit) {
         this.TpsLimit = TpsLimit;
     }
 
     /**
-     * Get 弹性TPS上限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性TPS上限 
      * @return ScaledTpsLimit 弹性TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScaledTpsLimit() {
         return this.ScaledTpsLimit;
@@ -207,19 +192,15 @@ PLATINUM，铂金版
 
     /**
      * Set 弹性TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScaledTpsLimit 弹性TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaledTpsLimit(Long ScaledTpsLimit) {
         this.ScaledTpsLimit = ScaledTpsLimit;
     }
 
     /**
-     * Get 主题数量上限默认值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题数量上限默认值 
      * @return TopicNumLimit 主题数量上限默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTopicNumLimit() {
         return this.TopicNumLimit;
@@ -227,19 +208,15 @@ PLATINUM，铂金版
 
     /**
      * Set 主题数量上限默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicNumLimit 主题数量上限默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicNumLimit(Long TopicNumLimit) {
         this.TopicNumLimit = TopicNumLimit;
     }
 
     /**
-     * Get 消费组数量上限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消费组数量上限 
      * @return GroupNumLimit 消费组数量上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupNumLimit() {
         return this.GroupNumLimit;
@@ -247,19 +224,15 @@ PLATINUM，铂金版
 
     /**
      * Set 消费组数量上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupNumLimit 消费组数量上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupNumLimit(Long GroupNumLimit) {
         this.GroupNumLimit = GroupNumLimit;
     }
 
     /**
-     * Get 默认消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认消息保留时间，小时为单位 
      * @return DefaultRetention 默认消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultRetention() {
         return this.DefaultRetention;
@@ -267,19 +240,15 @@ PLATINUM，铂金版
 
     /**
      * Set 默认消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultRetention 默认消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultRetention(Long DefaultRetention) {
         this.DefaultRetention = DefaultRetention;
     }
 
     /**
-     * Get 可调整消息保留时间上限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可调整消息保留时间上限，小时为单位 
      * @return RetentionUpperLimit 可调整消息保留时间上限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetentionUpperLimit() {
         return this.RetentionUpperLimit;
@@ -287,19 +256,15 @@ PLATINUM，铂金版
 
     /**
      * Set 可调整消息保留时间上限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetentionUpperLimit 可调整消息保留时间上限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetentionUpperLimit(Long RetentionUpperLimit) {
         this.RetentionUpperLimit = RetentionUpperLimit;
     }
 
     /**
-     * Get 可调整消息保留时间下限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可调整消息保留时间下限，小时为单位 
      * @return RetentionLowerLimit 可调整消息保留时间下限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetentionLowerLimit() {
         return this.RetentionLowerLimit;
@@ -307,19 +272,15 @@ PLATINUM，铂金版
 
     /**
      * Set 可调整消息保留时间下限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RetentionLowerLimit 可调整消息保留时间下限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetentionLowerLimit(Long RetentionLowerLimit) {
         this.RetentionLowerLimit = RetentionLowerLimit;
     }
 
     /**
-     * Get 延时消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 延时消息最大时长，小时为单位 
      * @return MaxMessageDelay 延时消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMessageDelay() {
         return this.MaxMessageDelay;
@@ -327,9 +288,7 @@ PLATINUM，铂金版
 
     /**
      * Set 延时消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxMessageDelay 延时消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMessageDelay(Long MaxMessageDelay) {
         this.MaxMessageDelay = MaxMessageDelay;
@@ -368,10 +327,8 @@ PLATINUM，铂金版
     }
 
     /**
-     * Get 主题数量上限默认最大值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主题数量上限默认最大值 
      * @return TopicNumUpperLimit 主题数量上限默认最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTopicNumUpperLimit() {
         return this.TopicNumUpperLimit;
@@ -379,9 +336,7 @@ PLATINUM，铂金版
 
     /**
      * Set 主题数量上限默认最大值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicNumUpperLimit 主题数量上限默认最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicNumUpperLimit(Long TopicNumUpperLimit) {
         this.TopicNumUpperLimit = TopicNumUpperLimit;

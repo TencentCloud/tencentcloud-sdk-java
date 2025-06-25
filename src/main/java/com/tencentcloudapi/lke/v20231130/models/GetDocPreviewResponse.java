@@ -76,6 +76,14 @@ public class GetDocPreviewResponse extends AbstractModel {
     private String ParseResultCosUrl;
 
     /**
+    * 是否可下载
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsDownload")
+    @Expose
+    private Boolean IsDownload;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -207,6 +215,26 @@ public class GetDocPreviewResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否可下载
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsDownload 是否可下载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsDownload() {
+        return this.IsDownload;
+    }
+
+    /**
+     * Set 是否可下载
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsDownload 是否可下载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsDownload(Boolean IsDownload) {
+        this.IsDownload = IsDownload;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -251,6 +279,9 @@ public class GetDocPreviewResponse extends AbstractModel {
         if (source.ParseResultCosUrl != null) {
             this.ParseResultCosUrl = new String(source.ParseResultCosUrl);
         }
+        if (source.IsDownload != null) {
+            this.IsDownload = new Boolean(source.IsDownload);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -268,6 +299,7 @@ public class GetDocPreviewResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);
         this.setParamSimple(map, prefix + "NewName", this.NewName);
         this.setParamSimple(map, prefix + "ParseResultCosUrl", this.ParseResultCosUrl);
+        this.setParamSimple(map, prefix + "IsDownload", this.IsDownload);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

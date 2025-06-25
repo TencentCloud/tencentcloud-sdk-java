@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CloseCdbProxyAddressRequest extends AbstractModel {
 
     /**
-    * 代理组ID
+    * 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * 代理组地址ID
+    * 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
     */
     @SerializedName("ProxyAddressId")
     @Expose
     private String ProxyAddressId;
 
     /**
-     * Get 代理组ID 
-     * @return ProxyGroupId 代理组ID
+     * Get 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
+     * @return ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 代理组ID
-     * @param ProxyGroupId 代理组ID
+     * Set 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get 代理组地址ID 
-     * @return ProxyAddressId 代理组地址ID
+     * Get 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
+     * @return ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public String getProxyAddressId() {
         return this.ProxyAddressId;
     }
 
     /**
-     * Set 代理组地址ID
-     * @param ProxyAddressId 代理组地址ID
+     * Set 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public void setProxyAddressId(String ProxyAddressId) {
         this.ProxyAddressId = ProxyAddressId;

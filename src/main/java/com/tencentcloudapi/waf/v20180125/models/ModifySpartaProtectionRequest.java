@@ -145,7 +145,7 @@ https：使用https协议回源
     private Long LoadBalance;
 
     /**
-    * 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+    * 是否开启灰度，0表示不开启灰度。
     */
     @SerializedName("IsGray")
     @Expose
@@ -173,7 +173,7 @@ https：使用https协议回源
     private String IsKeepAlive;
 
     /**
-    * 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+    * 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
     */
     @SerializedName("Anycast")
     @Expose
@@ -350,6 +350,13 @@ https：使用https协议回源
     @SerializedName("UpstreamRules")
     @Expose
     private UpstreamRule [] UpstreamRules;
+
+    /**
+    * 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+    */
+    @SerializedName("UseCase")
+    @Expose
+    private Long UseCase;
 
     /**
      * Get 域名 
@@ -632,17 +639,21 @@ https：使用https协议回源
     }
 
     /**
-     * Get 待废弃，可不填。是否开启灰度，0表示不开启灰度。 
-     * @return IsGray 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+     * Get 是否开启灰度，0表示不开启灰度。 
+     * @return IsGray 是否开启灰度，0表示不开启灰度。
+     * @deprecated
      */
+    @Deprecated
     public Long getIsGray() {
         return this.IsGray;
     }
 
     /**
-     * Set 待废弃，可不填。是否开启灰度，0表示不开启灰度。
-     * @param IsGray 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+     * Set 是否开启灰度，0表示不开启灰度。
+     * @param IsGray 是否开启灰度，0表示不开启灰度。
+     * @deprecated
      */
+    @Deprecated
     public void setIsGray(Long IsGray) {
         this.IsGray = IsGray;
     }
@@ -696,17 +707,21 @@ https：使用https协议回源
     }
 
     /**
-     * Get 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP 
-     * @return Anycast 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * Get 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP 
+     * @return Anycast 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @deprecated
      */
+    @Deprecated
     public Long getAnycast() {
         return this.Anycast;
     }
 
     /**
-     * Set 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
-     * @param Anycast 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * Set 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @param Anycast 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @deprecated
      */
+    @Deprecated
     public void setAnycast(Long Anycast) {
         this.Anycast = Anycast;
     }
@@ -1111,6 +1126,22 @@ https：使用https协议回源
         this.UpstreamRules = UpstreamRules;
     }
 
+    /**
+     * Get 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景 
+     * @return UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     */
+    public Long getUseCase() {
+        return this.UseCase;
+    }
+
+    /**
+     * Set 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     * @param UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     */
+    public void setUseCase(Long UseCase) {
+        this.UseCase = UseCase;
+    }
+
     public ModifySpartaProtectionRequest() {
     }
 
@@ -1275,6 +1306,9 @@ https：使用https协议回源
                 this.UpstreamRules[i] = new UpstreamRule(source.UpstreamRules[i]);
             }
         }
+        if (source.UseCase != null) {
+            this.UseCase = new Long(source.UseCase);
+        }
     }
 
 
@@ -1328,6 +1362,7 @@ https：使用https协议回源
         this.setParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
         this.setParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
         this.setParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
+        this.setParamSimple(map, prefix + "UseCase", this.UseCase);
 
     }
 }

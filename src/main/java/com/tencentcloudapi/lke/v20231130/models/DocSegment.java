@@ -104,6 +104,13 @@ public class DocSegment extends AbstractModel {
     private String DocUrl;
 
     /**
+    * 文档的自定义链接
+    */
+    @SerializedName("WebUrl")
+    @Expose
+    private String WebUrl;
+
+    /**
      * Get 片段ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 片段ID
@@ -303,6 +310,22 @@ public class DocSegment extends AbstractModel {
         this.DocUrl = DocUrl;
     }
 
+    /**
+     * Get 文档的自定义链接 
+     * @return WebUrl 文档的自定义链接
+     */
+    public String getWebUrl() {
+        return this.WebUrl;
+    }
+
+    /**
+     * Set 文档的自定义链接
+     * @param WebUrl 文档的自定义链接
+     */
+    public void setWebUrl(String WebUrl) {
+        this.WebUrl = WebUrl;
+    }
+
     public DocSegment() {
     }
 
@@ -341,6 +364,9 @@ public class DocSegment extends AbstractModel {
         if (source.DocUrl != null) {
             this.DocUrl = new String(source.DocUrl);
         }
+        if (source.WebUrl != null) {
+            this.WebUrl = new String(source.WebUrl);
+        }
     }
 
 
@@ -358,6 +384,7 @@ public class DocSegment extends AbstractModel {
         this.setParamSimple(map, prefix + "DocId", this.DocId);
         this.setParamSimple(map, prefix + "DocBizId", this.DocBizId);
         this.setParamSimple(map, prefix + "DocUrl", this.DocUrl);
+        this.setParamSimple(map, prefix + "WebUrl", this.WebUrl);
 
     }
 }

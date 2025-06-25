@@ -149,7 +149,7 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
-     *删除 RocketMQ 5.x 集群。
+     *删除 RocketMQ 5.x 集群，删除前请先删除正在使用的主题、消费组和角色信息。
      * @param req DeleteInstanceRequest
      * @return DeleteInstanceResponse
      * @throws TencentCloudSDKException
@@ -245,6 +245,17 @@ public class TrocketClient extends AbstractClient{
     public DescribeConsumerClientResponse DescribeConsumerClient(DescribeConsumerClientRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeConsumerClient", DescribeConsumerClientResponse.class);
+    }
+
+    /**
+     *查询消费组下的客户端连接列表。
+     * @param req DescribeConsumerClientListRequest
+     * @return DescribeConsumerClientListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerClientListResponse DescribeConsumerClientList(DescribeConsumerClientListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerClientList", DescribeConsumerClientListResponse.class);
     }
 
     /**
@@ -717,7 +728,7 @@ TopicName，主题名称过滤
     }
 
     /**
-     *修改 RocketMQ 5.x 集群属性。
+     *修改 RocketMQ 5.x 集群属性，仅支持修改运行中的集群。
      * @param req ModifyInstanceRequest
      * @return ModifyInstanceResponse
      * @throws TencentCloudSDKException
@@ -728,7 +739,7 @@ TopicName，主题名称过滤
     }
 
     /**
-     *修改 RocketMQ 5.x 集群接入点。
+     *修改 RocketMQ 5.x 集群接入点，操作前请先确认接入点已存在。
      * @param req ModifyInstanceEndpointRequest
      * @return ModifyInstanceEndpointResponse
      * @throws TencentCloudSDKException

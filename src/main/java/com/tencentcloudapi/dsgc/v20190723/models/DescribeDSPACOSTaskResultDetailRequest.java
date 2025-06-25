@@ -38,18 +38,18 @@ public class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel {
     private Long TaskId;
 
     /**
-    * 扫描Bucket结果ID
-    */
-    @SerializedName("BucketResultId")
-    @Expose
-    private Long BucketResultId;
-
-    /**
     * 合规组ID
     */
     @SerializedName("ComplianceId")
     @Expose
     private Long ComplianceId;
+
+    /**
+    * 扫描Bucket结果ID
+    */
+    @SerializedName("BucketResultId")
+    @Expose
+    private Long BucketResultId;
 
     /**
     * 文件名
@@ -101,6 +101,13 @@ public class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel {
     private Long [] CategoryIdList;
 
     /**
+    * 扫描结果id
+    */
+    @SerializedName("ScanResultId")
+    @Expose
+    private Long ScanResultId;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -133,22 +140,6 @@ public class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 扫描Bucket结果ID 
-     * @return BucketResultId 扫描Bucket结果ID
-     */
-    public Long getBucketResultId() {
-        return this.BucketResultId;
-    }
-
-    /**
-     * Set 扫描Bucket结果ID
-     * @param BucketResultId 扫描Bucket结果ID
-     */
-    public void setBucketResultId(Long BucketResultId) {
-        this.BucketResultId = BucketResultId;
-    }
-
-    /**
      * Get 合规组ID 
      * @return ComplianceId 合规组ID
      */
@@ -162,6 +153,26 @@ public class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel {
      */
     public void setComplianceId(Long ComplianceId) {
         this.ComplianceId = ComplianceId;
+    }
+
+    /**
+     * Get 扫描Bucket结果ID 
+     * @return BucketResultId 扫描Bucket结果ID
+     * @deprecated
+     */
+    @Deprecated
+    public Long getBucketResultId() {
+        return this.BucketResultId;
+    }
+
+    /**
+     * Set 扫描Bucket结果ID
+     * @param BucketResultId 扫描Bucket结果ID
+     * @deprecated
+     */
+    @Deprecated
+    public void setBucketResultId(Long BucketResultId) {
+        this.BucketResultId = BucketResultId;
     }
 
     /**
@@ -276,6 +287,22 @@ public class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel {
         this.CategoryIdList = CategoryIdList;
     }
 
+    /**
+     * Get 扫描结果id 
+     * @return ScanResultId 扫描结果id
+     */
+    public Long getScanResultId() {
+        return this.ScanResultId;
+    }
+
+    /**
+     * Set 扫描结果id
+     * @param ScanResultId 扫描结果id
+     */
+    public void setScanResultId(Long ScanResultId) {
+        this.ScanResultId = ScanResultId;
+    }
+
     public DescribeDSPACOSTaskResultDetailRequest() {
     }
 
@@ -290,11 +317,11 @@ public class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
-        if (source.BucketResultId != null) {
-            this.BucketResultId = new Long(source.BucketResultId);
-        }
         if (source.ComplianceId != null) {
             this.ComplianceId = new Long(source.ComplianceId);
+        }
+        if (source.BucketResultId != null) {
+            this.BucketResultId = new Long(source.BucketResultId);
         }
         if (source.FileName != null) {
             this.FileName = new String(source.FileName);
@@ -320,6 +347,9 @@ public class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel {
                 this.CategoryIdList[i] = new Long(source.CategoryIdList[i]);
             }
         }
+        if (source.ScanResultId != null) {
+            this.ScanResultId = new Long(source.ScanResultId);
+        }
     }
 
 
@@ -329,8 +359,8 @@ public class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamSimple(map, prefix + "BucketResultId", this.BucketResultId);
         this.setParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
+        this.setParamSimple(map, prefix + "BucketResultId", this.BucketResultId);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "CategoryId", this.CategoryId);
         this.setParamSimple(map, prefix + "LevelId", this.LevelId);
@@ -338,6 +368,7 @@ public class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "BucketName", this.BucketName);
         this.setParamArraySimple(map, prefix + "CategoryIdList.", this.CategoryIdList);
+        this.setParamSimple(map, prefix + "ScanResultId", this.ScanResultId);
 
     }
 }

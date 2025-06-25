@@ -38,7 +38,7 @@ public class DescribeAuditRuleTemplatesRequest extends AbstractModel {
     private String [] RuleTemplateNames;
 
     /**
-    * 单次请求返回的数量。默认值20。
+    * 单次请求返回的数量。默认值20，最大值为1000。
     */
     @SerializedName("Limit")
     @Expose
@@ -98,16 +98,16 @@ public class DescribeAuditRuleTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get 单次请求返回的数量。默认值20。 
-     * @return Limit 单次请求返回的数量。默认值20。
+     * Get 单次请求返回的数量。默认值20，最大值为1000。 
+     * @return Limit 单次请求返回的数量。默认值20，最大值为1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次请求返回的数量。默认值20。
-     * @param Limit 单次请求返回的数量。默认值20。
+     * Set 单次请求返回的数量。默认值20，最大值为1000。
+     * @param Limit 单次请求返回的数量。默认值20，最大值为1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

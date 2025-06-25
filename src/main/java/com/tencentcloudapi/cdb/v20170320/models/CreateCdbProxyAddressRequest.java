@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCdbProxyAddressRequest extends AbstractModel {
 
     /**
-    * 代理组ID
+    * 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -53,7 +53,7 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     private Long MinCount;
 
     /**
-    * 延迟剔除阈值，最小取值：0
+    * 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
     */
     @SerializedName("MaxDelay")
     @Expose
@@ -95,21 +95,21 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     private ProxyAllocation [] ProxyAllocation;
 
     /**
-    * 私有网络ID
+    * 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 私有子网ID
+    * 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * 是否开启连接池
+    * 是否开启连接池。默认关闭。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
     */
     @SerializedName("ConnectionPool")
@@ -124,14 +124,14 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     private String Desc;
 
     /**
-    * IP地址
+    * IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 端口
+    * 端口。默认值3306。
     */
     @SerializedName("VPort")
     @Expose
@@ -145,37 +145,37 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     private String [] SecurityGroup;
 
     /**
-    * 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+    * 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-    * 是否自适应负载均衡
+    * 是否开启自适应负载均衡。默认关闭。
     */
     @SerializedName("AutoLoadBalance")
     @Expose
     private Boolean AutoLoadBalance;
 
     /**
-    * 接入模式
+    * 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-     * Get 代理组ID 
-     * @return ProxyGroupId 代理组ID
+     * Get 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
+     * @return ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 代理组ID
-     * @param ProxyGroupId 代理组ID
+     * Set 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
@@ -234,16 +234,16 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get 延迟剔除阈值，最小取值：0 
-     * @return MaxDelay 延迟剔除阈值，最小取值：0
+     * Get 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。 
+     * @return MaxDelay 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
      */
     public Long getMaxDelay() {
         return this.MaxDelay;
     }
 
     /**
-     * Set 延迟剔除阈值，最小取值：0
-     * @param MaxDelay 延迟剔除阈值，最小取值：0
+     * Set 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
+     * @param MaxDelay 延迟剔除阈值，最小取值：1，范围：1 - 10000，整数。
      */
     public void setMaxDelay(Long MaxDelay) {
         this.MaxDelay = MaxDelay;
@@ -330,41 +330,41 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get 私有网络ID 
-     * @return UniqVpcId 私有网络ID
+     * Get 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return UniqVpcId 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 私有网络ID
-     * @param UniqVpcId 私有网络ID
+     * Set 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param UniqVpcId 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 私有子网ID 
-     * @return UniqSubnetId 私有子网ID
+     * Get 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return UniqSubnetId 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 私有子网ID
-     * @param UniqSubnetId 私有子网ID
+     * Set 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param UniqSubnetId 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 是否开启连接池
+     * Get 是否开启连接池。默认关闭。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。 
-     * @return ConnectionPool 是否开启连接池
+     * @return ConnectionPool 是否开启连接池。默认关闭。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public Boolean getConnectionPool() {
@@ -372,9 +372,9 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Set 是否开启连接池
+     * Set 是否开启连接池。默认关闭。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
-     * @param ConnectionPool 是否开启连接池
+     * @param ConnectionPool 是否开启连接池。默认关闭。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public void setConnectionPool(Boolean ConnectionPool) {
@@ -398,32 +398,32 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get IP地址 
-     * @return Vip IP地址
+     * Get IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。 
+     * @return Vip IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set IP地址
-     * @param Vip IP地址
+     * Set IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
+     * @param Vip IP 地址。不填则默认为所选 VPC 下支持的随机一个 IP。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 端口 
-     * @return VPort 端口
+     * Get 端口。默认值3306。 
+     * @return VPort 端口。默认值3306。
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set 端口
-     * @param VPort 端口
+     * Set 端口。默认值3306。
+     * @param VPort 端口。默认值3306。
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
@@ -446,48 +446,48 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。 
-     * @return ConnectionPoolType 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+     * Get 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。 
+     * @return ConnectionPoolType 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
-     * @param ConnectionPoolType 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+     * Set 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
+     * @param ConnectionPoolType 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool 为 true 时生效。默认值：connection。
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;
     }
 
     /**
-     * Get 是否自适应负载均衡 
-     * @return AutoLoadBalance 是否自适应负载均衡
+     * Get 是否开启自适应负载均衡。默认关闭。 
+     * @return AutoLoadBalance 是否开启自适应负载均衡。默认关闭。
      */
     public Boolean getAutoLoadBalance() {
         return this.AutoLoadBalance;
     }
 
     /**
-     * Set 是否自适应负载均衡
-     * @param AutoLoadBalance 是否自适应负载均衡
+     * Set 是否开启自适应负载均衡。默认关闭。
+     * @param AutoLoadBalance 是否开启自适应负载均衡。默认关闭。
      */
     public void setAutoLoadBalance(Boolean AutoLoadBalance) {
         this.AutoLoadBalance = AutoLoadBalance;
     }
 
     /**
-     * Get 接入模式 
-     * @return AccessMode 接入模式
+     * Get 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。 
+     * @return AccessMode 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set 接入模式
-     * @param AccessMode 接入模式
+     * Set 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
+     * @param AccessMode 接入模式。nearBy - 就近访问，balance - 均衡分配，默认值：nearBy。
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;

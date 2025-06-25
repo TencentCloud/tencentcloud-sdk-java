@@ -58,6 +58,27 @@ ResourceRegion：资源所在地域
     private Filter [] Filters;
 
     /**
+    * 开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 结束时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * 是否查询历史结果
+    */
+    @SerializedName("FetchHistory")
+    @Expose
+    private Boolean FetchHistory;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -145,6 +166,54 @@ ResourceRegion：资源所在地域
         this.Filters = Filters;
     }
 
+    /**
+     * Get 开始时间 
+     * @return StartTime 开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间
+     * @param StartTime 开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 结束时间 
+     * @return EndTime 结束时间
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间
+     * @param EndTime 结束时间
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 是否查询历史结果 
+     * @return FetchHistory 是否查询历史结果
+     */
+    public Boolean getFetchHistory() {
+        return this.FetchHistory;
+    }
+
+    /**
+     * Set 是否查询历史结果
+     * @param FetchHistory 是否查询历史结果
+     */
+    public void setFetchHistory(Boolean FetchHistory) {
+        this.FetchHistory = FetchHistory;
+    }
+
     public DescribeDSPACOSDiscoveryTaskResultRequest() {
     }
 
@@ -168,6 +237,15 @@ ResourceRegion：资源所在地域
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.FetchHistory != null) {
+            this.FetchHistory = new Boolean(source.FetchHistory);
+        }
     }
 
 
@@ -179,6 +257,9 @@ ResourceRegion：资源所在地域
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "FetchHistory", this.FetchHistory);
 
     }
 }

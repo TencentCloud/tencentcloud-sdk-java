@@ -40,6 +40,20 @@ MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，
     private String [] Where;
 
     /**
+    * 排序，大小写无关：asc 升序，desc降序
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * 排序列，严格相等：最近检测时间RecentFoundTime
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
      * Get 过滤条件：InstanceID、IP、
 
 MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段 
@@ -79,6 +93,38 @@ MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，
         this.Where = Where;
     }
 
+    /**
+     * Get 排序，大小写无关：asc 升序，desc降序 
+     * @return Order 排序，大小写无关：asc 升序，desc降序
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 排序，大小写无关：asc 升序，desc降序
+     * @param Order 排序，大小写无关：asc 升序，desc降序
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 排序列，严格相等：最近检测时间RecentFoundTime 
+     * @return By 排序列，严格相等：最近检测时间RecentFoundTime
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set 排序列，严格相等：最近检测时间RecentFoundTime
+     * @param By 排序列，严格相等：最近检测时间RecentFoundTime
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
     public ExportJavaMemShellsRequest() {
     }
 
@@ -99,6 +145,12 @@ MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，
                 this.Where[i] = new String(source.Where[i]);
             }
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.By != null) {
+            this.By = new String(source.By);
+        }
     }
 
 
@@ -108,6 +160,8 @@ MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "Where.", this.Where);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

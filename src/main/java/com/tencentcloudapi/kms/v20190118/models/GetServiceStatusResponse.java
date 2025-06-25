@@ -59,7 +59,7 @@ public class GetServiceStatusResponse extends AbstractModel {
     private Long ProRenewFlag;
 
     /**
-    * 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
+    * 旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空
     */
     @SerializedName("ProResourceId")
     @Expose
@@ -106,6 +106,34 @@ public class GetServiceStatusResponse extends AbstractModel {
     @SerializedName("ExclusiveHSMList")
     @Expose
     private ExclusiveHSM [] ExclusiveHSMList;
+
+    /**
+    * 是否支持数据密钥托管。1:支持，0:不支持。
+    */
+    @SerializedName("IsAllowedDataKeyHosted")
+    @Expose
+    private Boolean IsAllowedDataKeyHosted;
+
+    /**
+    * IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度
+    */
+    @SerializedName("DataKeyLimit")
+    @Expose
+    private Long DataKeyLimit;
+
+    /**
+    * IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。
+    */
+    @SerializedName("FreeDataKeyLimit")
+    @Expose
+    private Long FreeDataKeyLimit;
+
+    /**
+    * IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。
+    */
+    @SerializedName("DataKeyUsedCount")
+    @Expose
+    private Long DataKeyUsedCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -195,16 +223,16 @@ public class GetServiceStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空 
-     * @return ProResourceId 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
+     * Get 旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空 
+     * @return ProResourceId 旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空
      */
     public String getProResourceId() {
         return this.ProResourceId;
     }
 
     /**
-     * Set 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
-     * @param ProResourceId 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
+     * Set 旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空
+     * @param ProResourceId 旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空
      */
     public void setProResourceId(String ProResourceId) {
         this.ProResourceId = ProResourceId;
@@ -307,6 +335,70 @@ public class GetServiceStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否支持数据密钥托管。1:支持，0:不支持。 
+     * @return IsAllowedDataKeyHosted 是否支持数据密钥托管。1:支持，0:不支持。
+     */
+    public Boolean getIsAllowedDataKeyHosted() {
+        return this.IsAllowedDataKeyHosted;
+    }
+
+    /**
+     * Set 是否支持数据密钥托管。1:支持，0:不支持。
+     * @param IsAllowedDataKeyHosted 是否支持数据密钥托管。1:支持，0:不支持。
+     */
+    public void setIsAllowedDataKeyHosted(Boolean IsAllowedDataKeyHosted) {
+        this.IsAllowedDataKeyHosted = IsAllowedDataKeyHosted;
+    }
+
+    /**
+     * Get IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度 
+     * @return DataKeyLimit IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度
+     */
+    public Long getDataKeyLimit() {
+        return this.DataKeyLimit;
+    }
+
+    /**
+     * Set IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度
+     * @param DataKeyLimit IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度
+     */
+    public void setDataKeyLimit(Long DataKeyLimit) {
+        this.DataKeyLimit = DataKeyLimit;
+    }
+
+    /**
+     * Get IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。 
+     * @return FreeDataKeyLimit IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。
+     */
+    public Long getFreeDataKeyLimit() {
+        return this.FreeDataKeyLimit;
+    }
+
+    /**
+     * Set IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。
+     * @param FreeDataKeyLimit IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。
+     */
+    public void setFreeDataKeyLimit(Long FreeDataKeyLimit) {
+        this.FreeDataKeyLimit = FreeDataKeyLimit;
+    }
+
+    /**
+     * Get IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。 
+     * @return DataKeyUsedCount IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。
+     */
+    public Long getDataKeyUsedCount() {
+        return this.DataKeyUsedCount;
+    }
+
+    /**
+     * Set IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。
+     * @param DataKeyUsedCount IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。
+     */
+    public void setDataKeyUsedCount(Long DataKeyUsedCount) {
+        this.DataKeyUsedCount = DataKeyUsedCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -369,6 +461,18 @@ public class GetServiceStatusResponse extends AbstractModel {
                 this.ExclusiveHSMList[i] = new ExclusiveHSM(source.ExclusiveHSMList[i]);
             }
         }
+        if (source.IsAllowedDataKeyHosted != null) {
+            this.IsAllowedDataKeyHosted = new Boolean(source.IsAllowedDataKeyHosted);
+        }
+        if (source.DataKeyLimit != null) {
+            this.DataKeyLimit = new Long(source.DataKeyLimit);
+        }
+        if (source.FreeDataKeyLimit != null) {
+            this.FreeDataKeyLimit = new Long(source.FreeDataKeyLimit);
+        }
+        if (source.DataKeyUsedCount != null) {
+            this.DataKeyUsedCount = new Long(source.DataKeyUsedCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -391,6 +495,10 @@ public class GetServiceStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CmkUserCount", this.CmkUserCount);
         this.setParamSimple(map, prefix + "CmkLimit", this.CmkLimit);
         this.setParamArrayObj(map, prefix + "ExclusiveHSMList.", this.ExclusiveHSMList);
+        this.setParamSimple(map, prefix + "IsAllowedDataKeyHosted", this.IsAllowedDataKeyHosted);
+        this.setParamSimple(map, prefix + "DataKeyLimit", this.DataKeyLimit);
+        this.setParamSimple(map, prefix + "FreeDataKeyLimit", this.FreeDataKeyLimit);
+        this.setParamSimple(map, prefix + "DataKeyUsedCount", this.DataKeyUsedCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

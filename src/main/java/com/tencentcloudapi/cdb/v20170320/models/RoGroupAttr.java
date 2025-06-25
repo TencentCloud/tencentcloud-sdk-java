@@ -31,7 +31,8 @@ public class RoGroupAttr extends AbstractModel {
     private String RoGroupName;
 
     /**
-    * RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+    * RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
+注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
     */
     @SerializedName("RoMaxDelayTime")
     @Expose
@@ -45,7 +46,8 @@ public class RoGroupAttr extends AbstractModel {
     private Long RoOfflineDelay;
 
     /**
-    * 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。注意，若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
+    * 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
+注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
     */
     @SerializedName("MinRoInGroup")
     @Expose
@@ -59,7 +61,7 @@ public class RoGroupAttr extends AbstractModel {
     private String WeightMode;
 
     /**
-    * 延迟复制时间。
+    * 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
     */
     @SerializedName("ReplicationDelayTime")
     @Expose
@@ -82,16 +84,20 @@ public class RoGroupAttr extends AbstractModel {
     }
 
     /**
-     * Get RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。 
-     * @return RoMaxDelayTime RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+     * Get RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
+注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。 
+     * @return RoMaxDelayTime RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
+注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
      */
     public Long getRoMaxDelayTime() {
         return this.RoMaxDelayTime;
     }
 
     /**
-     * Set RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
-     * @param RoMaxDelayTime RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+     * Set RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
+注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+     * @param RoMaxDelayTime RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
+注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
      */
     public void setRoMaxDelayTime(Long RoMaxDelayTime) {
         this.RoMaxDelayTime = RoMaxDelayTime;
@@ -114,16 +120,20 @@ public class RoGroupAttr extends AbstractModel {
     }
 
     /**
-     * Get 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。注意，若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。 
-     * @return MinRoInGroup 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。注意，若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
+     * Get 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
+注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。 
+     * @return MinRoInGroup 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
+注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
      */
     public Long getMinRoInGroup() {
         return this.MinRoInGroup;
     }
 
     /**
-     * Set 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。注意，若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
-     * @param MinRoInGroup 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。注意，若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
+     * Set 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
+注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
+     * @param MinRoInGroup 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
+注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
      */
     public void setMinRoInGroup(Long MinRoInGroup) {
         this.MinRoInGroup = MinRoInGroup;
@@ -146,16 +156,16 @@ public class RoGroupAttr extends AbstractModel {
     }
 
     /**
-     * Get 延迟复制时间。 
-     * @return ReplicationDelayTime 延迟复制时间。
+     * Get 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。 
+     * @return ReplicationDelayTime 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
      */
     public Long getReplicationDelayTime() {
         return this.ReplicationDelayTime;
     }
 
     /**
-     * Set 延迟复制时间。
-     * @param ReplicationDelayTime 延迟复制时间。
+     * Set 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
+     * @param ReplicationDelayTime 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
      */
     public void setReplicationDelayTime(Long ReplicationDelayTime) {
         this.ReplicationDelayTime = ReplicationDelayTime;

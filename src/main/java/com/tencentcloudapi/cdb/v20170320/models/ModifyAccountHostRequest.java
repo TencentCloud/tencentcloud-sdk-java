@@ -31,21 +31,21 @@ public class ModifyAccountHostRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 账户的名称
+    * 账户的名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * 账户的旧主机
+    * 账户的旧主机。格式：IP 形式，支持单个 IP 地址或者%。
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 账户的新主机
+    * 账户的新主机。格式：IP 形式，支持单个 IP 地址或者%。
     */
     @SerializedName("NewHost")
     @Expose
@@ -68,48 +68,48 @@ public class ModifyAccountHostRequest extends AbstractModel {
     }
 
     /**
-     * Get 账户的名称 
-     * @return User 账户的名称
+     * Get 账户的名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。 
+     * @return User 账户的名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set 账户的名称
-     * @param User 账户的名称
+     * Set 账户的名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+     * @param User 账户的名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 账户的旧主机 
-     * @return Host 账户的旧主机
+     * Get 账户的旧主机。格式：IP 形式，支持单个 IP 地址或者%。 
+     * @return Host 账户的旧主机。格式：IP 形式，支持单个 IP 地址或者%。
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 账户的旧主机
-     * @param Host 账户的旧主机
+     * Set 账户的旧主机。格式：IP 形式，支持单个 IP 地址或者%。
+     * @param Host 账户的旧主机。格式：IP 形式，支持单个 IP 地址或者%。
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 账户的新主机 
-     * @return NewHost 账户的新主机
+     * Get 账户的新主机。格式：IP 形式，支持单个 IP 地址或者%。 
+     * @return NewHost 账户的新主机。格式：IP 形式，支持单个 IP 地址或者%。
      */
     public String getNewHost() {
         return this.NewHost;
     }
 
     /**
-     * Set 账户的新主机
-     * @param NewHost 账户的新主机
+     * Set 账户的新主机。格式：IP 形式，支持单个 IP 地址或者%。
+     * @param NewHost 账户的新主机。格式：IP 形式，支持单个 IP 地址或者%。
      */
     public void setNewHost(String NewHost) {
         this.NewHost = NewHost;

@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class DescribeInstanceUpgradeCheckJobRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 目标数据库版本
+    * 目标数据库版本。
+说明：可选值5.6、5.7、8.0，不支持跨版本升级，升级后不支持版本降级。
     */
     @SerializedName("DstMysqlVersion")
     @Expose
     private String DstMysqlVersion;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 目标数据库版本 
-     * @return DstMysqlVersion 目标数据库版本
+     * Get 目标数据库版本。
+说明：可选值5.6、5.7、8.0，不支持跨版本升级，升级后不支持版本降级。 
+     * @return DstMysqlVersion 目标数据库版本。
+说明：可选值5.6、5.7、8.0，不支持跨版本升级，升级后不支持版本降级。
      */
     public String getDstMysqlVersion() {
         return this.DstMysqlVersion;
     }
 
     /**
-     * Set 目标数据库版本
-     * @param DstMysqlVersion 目标数据库版本
+     * Set 目标数据库版本。
+说明：可选值5.6、5.7、8.0，不支持跨版本升级，升级后不支持版本降级。
+     * @param DstMysqlVersion 目标数据库版本。
+说明：可选值5.6、5.7、8.0，不支持跨版本升级，升级后不支持版本降级。
      */
     public void setDstMysqlVersion(String DstMysqlVersion) {
         this.DstMysqlVersion = DstMysqlVersion;

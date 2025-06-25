@@ -31,7 +31,7 @@ public class DescribeAuditLogFilesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 分页大小参数。默认值为 20，最小值为 1，最大值为 100。
+    * 分页大小参数。默认值为20，最小值为1，最大值为300。
     */
     @SerializedName("Limit")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeAuditLogFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页大小参数。默认值为 20，最小值为 1，最大值为 100。 
-     * @return Limit 分页大小参数。默认值为 20，最小值为 1，最大值为 100。
+     * Get 分页大小参数。默认值为20，最小值为1，最大值为300。 
+     * @return Limit 分页大小参数。默认值为20，最小值为1，最大值为300。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小参数。默认值为 20，最小值为 1，最大值为 100。
-     * @param Limit 分页大小参数。默认值为 20，最小值为 1，最大值为 100。
+     * Set 分页大小参数。默认值为20，最小值为1，最大值为300。
+     * @param Limit 分页大小参数。默认值为20，最小值为1，最大值为300。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -143,6 +143,13 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
     private Long FixSwitch;
 
     /**
+    * 是否支持防御： 0-不支持 1-支持
+    */
+    @SerializedName("SupportDefence")
+    @Expose
+    private Long SupportDefence;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -422,6 +429,22 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否支持防御： 0-不支持 1-支持 
+     * @return SupportDefence 是否支持防御： 0-不支持 1-支持
+     */
+    public Long getSupportDefence() {
+        return this.SupportDefence;
+    }
+
+    /**
+     * Set 是否支持防御： 0-不支持 1-支持
+     * @param SupportDefence 是否支持防御： 0-不支持 1-支持
+     */
+    public void setSupportDefence(Long SupportDefence) {
+        this.SupportDefence = SupportDefence;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -496,6 +519,9 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
         if (source.FixSwitch != null) {
             this.FixSwitch = new Long(source.FixSwitch);
         }
+        if (source.SupportDefence != null) {
+            this.SupportDefence = new Long(source.SupportDefence);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -523,6 +549,7 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
         this.setParamSimple(map, prefix + "SuccessFixCount", this.SuccessFixCount);
         this.setParamSimple(map, prefix + "FixSwitch", this.FixSwitch);
+        this.setParamSimple(map, prefix + "SupportDefence", this.SupportDefence);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

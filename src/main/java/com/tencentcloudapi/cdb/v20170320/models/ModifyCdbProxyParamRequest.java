@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyCdbProxyParamRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 代理组ID
+    * 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * 连接池阈值
+    * 连接池阈值。取值范围：大于0，小于等于300。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
     */
     @SerializedName("ConnectionPoolLimit")
@@ -46,41 +46,41 @@ public class ModifyCdbProxyParamRequest extends AbstractModel {
     private Long ConnectionPoolLimit;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 代理组ID 
-     * @return ProxyGroupId 代理组ID
+     * Get 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
+     * @return ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 代理组ID
-     * @param ProxyGroupId 代理组ID
+     * Set 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get 连接池阈值
+     * Get 连接池阈值。取值范围：大于0，小于等于300。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。 
-     * @return ConnectionPoolLimit 连接池阈值
+     * @return ConnectionPoolLimit 连接池阈值。取值范围：大于0，小于等于300。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public Long getConnectionPoolLimit() {
@@ -88,9 +88,9 @@ public class ModifyCdbProxyParamRequest extends AbstractModel {
     }
 
     /**
-     * Set 连接池阈值
+     * Set 连接池阈值。取值范围：大于0，小于等于300。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
-     * @param ConnectionPoolLimit 连接池阈值
+     * @param ConnectionPoolLimit 连接池阈值。取值范围：大于0，小于等于300。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public void setConnectionPoolLimit(Long ConnectionPoolLimit) {

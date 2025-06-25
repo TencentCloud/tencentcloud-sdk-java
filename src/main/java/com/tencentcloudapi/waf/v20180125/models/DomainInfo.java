@@ -339,7 +339,7 @@ public：公有云域名
     private String SgID;
 
     /**
-    * clbwaf接入状态
+    * clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
     */
     @SerializedName("AccessStatus")
     @Expose
@@ -1205,16 +1205,16 @@ public：公有云域名
     }
 
     /**
-     * Get clbwaf接入状态 
-     * @return AccessStatus clbwaf接入状态
+     * Get clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中” 
+     * @return AccessStatus clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
      */
     public Long getAccessStatus() {
         return this.AccessStatus;
     }
 
     /**
-     * Set clbwaf接入状态
-     * @param AccessStatus clbwaf接入状态
+     * Set clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+     * @param AccessStatus clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
      */
     public void setAccessStatus(Long AccessStatus) {
         this.AccessStatus = AccessStatus;

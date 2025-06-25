@@ -66,6 +66,36 @@ public class GenerateDataKeyRequest extends AbstractModel {
     private String EncryptionAlgorithm;
 
     /**
+    * 表示生成的数据密钥是否被KMS托管。1:表示被KMS托管保存,0:表示KMS不托管。表示生成的数据密钥是否被KMS托管。1:表示被KMS托管保存,0:表示KMS不托管。
+    */
+    @SerializedName("IsHostedByKms")
+    @Expose
+    private Long IsHostedByKms;
+
+    /**
+    * 数据密钥的名称，当IsHostedByKms为1时,必须填写。当IsHostedByKms为0时,可以不填，KMS不托管。
+    */
+    @SerializedName("DataKeyName")
+    @Expose
+    private String DataKeyName;
+
+    /**
+    * 数据密钥 的描述，最大100字节
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * KMS 独享版对应的 HSM 集群 ID。
+当KeyId 没有传入时有效，如果指定HsmClusterId,会默认在此集群下生成根密钥，然后利用创建的根密钥产生数据密钥。
+如果没有指定HsmClusterId，则会在公有云共享集群下创建一个根密钥，然后利用创建的根密钥产生数据密钥。
+    */
+    @SerializedName("HsmClusterId")
+    @Expose
+    private String HsmClusterId;
+
+    /**
      * Get CMK全局唯一标识符 
      * @return KeyId CMK全局唯一标识符
      */
@@ -161,6 +191,78 @@ public class GenerateDataKeyRequest extends AbstractModel {
         this.EncryptionAlgorithm = EncryptionAlgorithm;
     }
 
+    /**
+     * Get 表示生成的数据密钥是否被KMS托管。1:表示被KMS托管保存,0:表示KMS不托管。表示生成的数据密钥是否被KMS托管。1:表示被KMS托管保存,0:表示KMS不托管。 
+     * @return IsHostedByKms 表示生成的数据密钥是否被KMS托管。1:表示被KMS托管保存,0:表示KMS不托管。表示生成的数据密钥是否被KMS托管。1:表示被KMS托管保存,0:表示KMS不托管。
+     */
+    public Long getIsHostedByKms() {
+        return this.IsHostedByKms;
+    }
+
+    /**
+     * Set 表示生成的数据密钥是否被KMS托管。1:表示被KMS托管保存,0:表示KMS不托管。表示生成的数据密钥是否被KMS托管。1:表示被KMS托管保存,0:表示KMS不托管。
+     * @param IsHostedByKms 表示生成的数据密钥是否被KMS托管。1:表示被KMS托管保存,0:表示KMS不托管。表示生成的数据密钥是否被KMS托管。1:表示被KMS托管保存,0:表示KMS不托管。
+     */
+    public void setIsHostedByKms(Long IsHostedByKms) {
+        this.IsHostedByKms = IsHostedByKms;
+    }
+
+    /**
+     * Get 数据密钥的名称，当IsHostedByKms为1时,必须填写。当IsHostedByKms为0时,可以不填，KMS不托管。 
+     * @return DataKeyName 数据密钥的名称，当IsHostedByKms为1时,必须填写。当IsHostedByKms为0时,可以不填，KMS不托管。
+     */
+    public String getDataKeyName() {
+        return this.DataKeyName;
+    }
+
+    /**
+     * Set 数据密钥的名称，当IsHostedByKms为1时,必须填写。当IsHostedByKms为0时,可以不填，KMS不托管。
+     * @param DataKeyName 数据密钥的名称，当IsHostedByKms为1时,必须填写。当IsHostedByKms为0时,可以不填，KMS不托管。
+     */
+    public void setDataKeyName(String DataKeyName) {
+        this.DataKeyName = DataKeyName;
+    }
+
+    /**
+     * Get 数据密钥 的描述，最大100字节 
+     * @return Description 数据密钥 的描述，最大100字节
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 数据密钥 的描述，最大100字节
+     * @param Description 数据密钥 的描述，最大100字节
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get KMS 独享版对应的 HSM 集群 ID。
+当KeyId 没有传入时有效，如果指定HsmClusterId,会默认在此集群下生成根密钥，然后利用创建的根密钥产生数据密钥。
+如果没有指定HsmClusterId，则会在公有云共享集群下创建一个根密钥，然后利用创建的根密钥产生数据密钥。 
+     * @return HsmClusterId KMS 独享版对应的 HSM 集群 ID。
+当KeyId 没有传入时有效，如果指定HsmClusterId,会默认在此集群下生成根密钥，然后利用创建的根密钥产生数据密钥。
+如果没有指定HsmClusterId，则会在公有云共享集群下创建一个根密钥，然后利用创建的根密钥产生数据密钥。
+     */
+    public String getHsmClusterId() {
+        return this.HsmClusterId;
+    }
+
+    /**
+     * Set KMS 独享版对应的 HSM 集群 ID。
+当KeyId 没有传入时有效，如果指定HsmClusterId,会默认在此集群下生成根密钥，然后利用创建的根密钥产生数据密钥。
+如果没有指定HsmClusterId，则会在公有云共享集群下创建一个根密钥，然后利用创建的根密钥产生数据密钥。
+     * @param HsmClusterId KMS 独享版对应的 HSM 集群 ID。
+当KeyId 没有传入时有效，如果指定HsmClusterId,会默认在此集群下生成根密钥，然后利用创建的根密钥产生数据密钥。
+如果没有指定HsmClusterId，则会在公有云共享集群下创建一个根密钥，然后利用创建的根密钥产生数据密钥。
+     */
+    public void setHsmClusterId(String HsmClusterId) {
+        this.HsmClusterId = HsmClusterId;
+    }
+
     public GenerateDataKeyRequest() {
     }
 
@@ -187,6 +289,18 @@ public class GenerateDataKeyRequest extends AbstractModel {
         if (source.EncryptionAlgorithm != null) {
             this.EncryptionAlgorithm = new String(source.EncryptionAlgorithm);
         }
+        if (source.IsHostedByKms != null) {
+            this.IsHostedByKms = new Long(source.IsHostedByKms);
+        }
+        if (source.DataKeyName != null) {
+            this.DataKeyName = new String(source.DataKeyName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.HsmClusterId != null) {
+            this.HsmClusterId = new String(source.HsmClusterId);
+        }
     }
 
 
@@ -200,6 +314,10 @@ public class GenerateDataKeyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EncryptionContext", this.EncryptionContext);
         this.setParamSimple(map, prefix + "EncryptionPublicKey", this.EncryptionPublicKey);
         this.setParamSimple(map, prefix + "EncryptionAlgorithm", this.EncryptionAlgorithm);
+        this.setParamSimple(map, prefix + "IsHostedByKms", this.IsHostedByKms);
+        this.setParamSimple(map, prefix + "DataKeyName", this.DataKeyName);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
 
     }
 }

@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class NodeOverview extends AbstractModel {
 
     /**
+    * 集群ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * 节点实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -93,6 +100,36 @@ public class NodeOverview extends AbstractModel {
     @SerializedName("NodeAllocateState")
     @Expose
     private String NodeAllocateState;
+
+    /**
+    * 节点的名称
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
+    * 节点的创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+     * Get 集群ID 
+     * @return ClusterId 集群ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群ID
+     * @param ClusterId 集群ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
 
     /**
      * Get 节点实例ID。
@@ -270,6 +307,38 @@ public class NodeOverview extends AbstractModel {
         this.NodeAllocateState = NodeAllocateState;
     }
 
+    /**
+     * Get 节点的名称 
+     * @return NodeName 节点的名称
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set 节点的名称
+     * @param NodeName 节点的名称
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
+    /**
+     * Get 节点的创建时间 
+     * @return CreateTime 节点的创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 节点的创建时间
+     * @param CreateTime 节点的创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public NodeOverview() {
     }
 
@@ -278,6 +347,9 @@ public class NodeOverview extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public NodeOverview(NodeOverview source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
@@ -305,6 +377,12 @@ public class NodeOverview extends AbstractModel {
         if (source.NodeAllocateState != null) {
             this.NodeAllocateState = new String(source.NodeAllocateState);
         }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -312,6 +390,7 @@ public class NodeOverview extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "NodeState", this.NodeState);
@@ -321,6 +400,8 @@ public class NodeOverview extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
         this.setParamSimple(map, prefix + "NodeAllocateState", this.NodeAllocateState);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

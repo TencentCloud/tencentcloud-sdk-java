@@ -31,7 +31,7 @@ public class UpgradeDBInstanceResponse extends AbstractModel {
     private String [] DealIds;
 
     /**
-    * 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+    * 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -61,16 +61,16 @@ public class UpgradeDBInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Get 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。 
-     * @return AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+     * Get 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。 
+     * @return AsyncRequestId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
-     * @param AsyncRequestId 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果。
+     * Set 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
+     * @param AsyncRequestId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteAuditLogFileRequest extends AbstractModel {
 
     /**
-    * 审计日志文件名称。
+    * 审计日志文件名称。可通过 [DescribeAuditLogFiles](https://cloud.tencent.com/document/api/236/45454) 接口获取。
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 实例 ID。
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 审计日志文件名称。 
-     * @return FileName 审计日志文件名称。
+     * Get 审计日志文件名称。可通过 [DescribeAuditLogFiles](https://cloud.tencent.com/document/api/236/45454) 接口获取。 
+     * @return FileName 审计日志文件名称。可通过 [DescribeAuditLogFiles](https://cloud.tencent.com/document/api/236/45454) 接口获取。
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 审计日志文件名称。
-     * @param FileName 审计日志文件名称。
+     * Set 审计日志文件名称。可通过 [DescribeAuditLogFiles](https://cloud.tencent.com/document/api/236/45454) 接口获取。
+     * @param FileName 审计日志文件名称。可通过 [DescribeAuditLogFiles](https://cloud.tencent.com/document/api/236/45454) 接口获取。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

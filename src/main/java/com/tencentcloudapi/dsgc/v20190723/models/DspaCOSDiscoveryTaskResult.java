@@ -122,6 +122,20 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
     private String OverSize;
 
     /**
+    * 任务实例id
+    */
+    @SerializedName("TaskInstanceId")
+    @Expose
+    private String TaskInstanceId;
+
+    /**
+    * 开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
      * Get 扫描bucket结果ID 
      * @return BucketResultId 扫描bucket结果ID
      */
@@ -345,6 +359,38 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
         this.OverSize = OverSize;
     }
 
+    /**
+     * Get 任务实例id 
+     * @return TaskInstanceId 任务实例id
+     */
+    public String getTaskInstanceId() {
+        return this.TaskInstanceId;
+    }
+
+    /**
+     * Set 任务实例id
+     * @param TaskInstanceId 任务实例id
+     */
+    public void setTaskInstanceId(String TaskInstanceId) {
+        this.TaskInstanceId = TaskInstanceId;
+    }
+
+    /**
+     * Get 开始时间 
+     * @return StartTime 开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间
+     * @param StartTime 开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
     public DspaCOSDiscoveryTaskResult() {
     }
 
@@ -395,6 +441,12 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
         if (source.OverSize != null) {
             this.OverSize = new String(source.OverSize);
         }
+        if (source.TaskInstanceId != null) {
+            this.TaskInstanceId = new String(source.TaskInstanceId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
     }
 
 
@@ -416,6 +468,8 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "OverSize", this.OverSize);
+        this.setParamSimple(map, prefix + "TaskInstanceId", this.TaskInstanceId);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
 
     }
 }

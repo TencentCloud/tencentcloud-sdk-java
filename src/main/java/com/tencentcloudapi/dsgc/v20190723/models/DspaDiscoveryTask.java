@@ -102,6 +102,13 @@ public class DspaDiscoveryTask extends AbstractModel {
     private Boolean ComplianceUpdate;
 
     /**
+    * 	full:全量扫描 incre:变更扫描
+    */
+    @SerializedName("ScanRange")
+    @Expose
+    private String ScanRange;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -281,6 +288,22 @@ public class DspaDiscoveryTask extends AbstractModel {
         this.ComplianceUpdate = ComplianceUpdate;
     }
 
+    /**
+     * Get 	full:全量扫描 incre:变更扫描 
+     * @return ScanRange 	full:全量扫描 incre:变更扫描
+     */
+    public String getScanRange() {
+        return this.ScanRange;
+    }
+
+    /**
+     * Set 	full:全量扫描 incre:变更扫描
+     * @param ScanRange 	full:全量扫描 incre:变更扫描
+     */
+    public void setScanRange(String ScanRange) {
+        this.ScanRange = ScanRange;
+    }
+
     public DspaDiscoveryTask() {
     }
 
@@ -322,6 +345,9 @@ public class DspaDiscoveryTask extends AbstractModel {
         if (source.ComplianceUpdate != null) {
             this.ComplianceUpdate = new Boolean(source.ComplianceUpdate);
         }
+        if (source.ScanRange != null) {
+            this.ScanRange = new String(source.ScanRange);
+        }
     }
 
 
@@ -340,6 +366,7 @@ public class DspaDiscoveryTask extends AbstractModel {
         this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "TimingStartTime", this.TimingStartTime);
         this.setParamSimple(map, prefix + "ComplianceUpdate", this.ComplianceUpdate);
+        this.setParamSimple(map, prefix + "ScanRange", this.ScanRange);
 
     }
 }

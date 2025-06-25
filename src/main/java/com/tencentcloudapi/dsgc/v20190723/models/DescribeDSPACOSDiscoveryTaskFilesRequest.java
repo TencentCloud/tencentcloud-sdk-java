@@ -45,6 +45,13 @@ public class DescribeDSPACOSDiscoveryTaskFilesRequest extends AbstractModel {
     private Long BucketResultId;
 
     /**
+    * 扫描结果id
+    */
+    @SerializedName("ScanResultId")
+    @Expose
+    private Long ScanResultId;
+
+    /**
      * Get DSPA实例Id 
      * @return DspaId DSPA实例Id
      */
@@ -79,7 +86,9 @@ public class DescribeDSPACOSDiscoveryTaskFilesRequest extends AbstractModel {
     /**
      * Get 扫描Bucket任务结果ID 
      * @return BucketResultId 扫描Bucket任务结果ID
+     * @deprecated
      */
+    @Deprecated
     public Long getBucketResultId() {
         return this.BucketResultId;
     }
@@ -87,9 +96,27 @@ public class DescribeDSPACOSDiscoveryTaskFilesRequest extends AbstractModel {
     /**
      * Set 扫描Bucket任务结果ID
      * @param BucketResultId 扫描Bucket任务结果ID
+     * @deprecated
      */
+    @Deprecated
     public void setBucketResultId(Long BucketResultId) {
         this.BucketResultId = BucketResultId;
+    }
+
+    /**
+     * Get 扫描结果id 
+     * @return ScanResultId 扫描结果id
+     */
+    public Long getScanResultId() {
+        return this.ScanResultId;
+    }
+
+    /**
+     * Set 扫描结果id
+     * @param ScanResultId 扫描结果id
+     */
+    public void setScanResultId(Long ScanResultId) {
+        this.ScanResultId = ScanResultId;
     }
 
     public DescribeDSPACOSDiscoveryTaskFilesRequest() {
@@ -109,6 +136,9 @@ public class DescribeDSPACOSDiscoveryTaskFilesRequest extends AbstractModel {
         if (source.BucketResultId != null) {
             this.BucketResultId = new Long(source.BucketResultId);
         }
+        if (source.ScanResultId != null) {
+            this.ScanResultId = new Long(source.ScanResultId);
+        }
     }
 
 
@@ -119,6 +149,7 @@ public class DescribeDSPACOSDiscoveryTaskFilesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "BucketResultId", this.BucketResultId);
+        this.setParamSimple(map, prefix + "ScanResultId", this.ScanResultId);
 
     }
 }

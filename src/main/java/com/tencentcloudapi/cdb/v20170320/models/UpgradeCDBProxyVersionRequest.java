@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpgradeCDBProxyVersionRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 数据库代理ID
+    * 数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -59,32 +59,32 @@ public class UpgradeCDBProxyVersionRequest extends AbstractModel {
     private String UpgradeTime;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 数据库代理ID 
-     * @return ProxyGroupId 数据库代理ID
+     * Get 数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
+     * @return ProxyGroupId 数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 数据库代理ID
-     * @param ProxyGroupId 数据库代理ID
+     * Set 数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param ProxyGroupId 数据库代理 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;

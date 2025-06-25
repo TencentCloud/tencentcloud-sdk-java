@@ -101,6 +101,13 @@ public class DescribeDSPADiscoveryTaskResultDetailRequest extends AbstractModel 
     private Long [] CategoryIdList;
 
     /**
+    * 任务扫描id
+    */
+    @SerializedName("ScanResultId")
+    @Expose
+    private Long ScanResultId;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -276,6 +283,22 @@ public class DescribeDSPADiscoveryTaskResultDetailRequest extends AbstractModel 
         this.CategoryIdList = CategoryIdList;
     }
 
+    /**
+     * Get 任务扫描id 
+     * @return ScanResultId 任务扫描id
+     */
+    public Long getScanResultId() {
+        return this.ScanResultId;
+    }
+
+    /**
+     * Set 任务扫描id
+     * @param ScanResultId 任务扫描id
+     */
+    public void setScanResultId(Long ScanResultId) {
+        this.ScanResultId = ScanResultId;
+    }
+
     public DescribeDSPADiscoveryTaskResultDetailRequest() {
     }
 
@@ -320,6 +343,9 @@ public class DescribeDSPADiscoveryTaskResultDetailRequest extends AbstractModel 
                 this.CategoryIdList[i] = new Long(source.CategoryIdList[i]);
             }
         }
+        if (source.ScanResultId != null) {
+            this.ScanResultId = new Long(source.ScanResultId);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class DescribeDSPADiscoveryTaskResultDetailRequest extends AbstractModel 
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "CategoryIdList.", this.CategoryIdList);
+        this.setParamSimple(map, prefix + "ScanResultId", this.ScanResultId);
 
     }
 }

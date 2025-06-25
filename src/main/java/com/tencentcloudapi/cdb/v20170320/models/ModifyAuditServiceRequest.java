@@ -24,21 +24,36 @@ import java.util.HashMap;
 public class ModifyAuditServiceRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 日志保留时长。
+    * 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
     */
     @SerializedName("LogExpireDay")
     @Expose
     private Long LogExpireDay;
 
     /**
-    * 高频日志保留时长。
+    * 高频日志保留时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
     */
     @SerializedName("HighLogExpireDay")
     @Expose
@@ -59,55 +74,115 @@ public class ModifyAuditServiceRequest extends AbstractModel {
     private AuditRuleFilters [] AuditRuleFilters;
 
     /**
-    * 规则模板ID。
+    * 规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 日志保留时长。 
-     * @return LogExpireDay 日志保留时长。
+     * Get 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。 
+     * @return LogExpireDay 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public Long getLogExpireDay() {
         return this.LogExpireDay;
     }
 
     /**
-     * Set 日志保留时长。
-     * @param LogExpireDay 日志保留时长。
+     * Set 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+     * @param LogExpireDay 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public void setLogExpireDay(Long LogExpireDay) {
         this.LogExpireDay = LogExpireDay;
     }
 
     /**
-     * Get 高频日志保留时长。 
-     * @return HighLogExpireDay 高频日志保留时长。
+     * Get 高频日志保留时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。 
+     * @return HighLogExpireDay 高频日志保留时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
     }
 
     /**
-     * Set 高频日志保留时长。
-     * @param HighLogExpireDay 高频日志保留时长。
+     * Set 高频日志保留时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+     * @param HighLogExpireDay 高频日志保留时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
@@ -150,16 +225,16 @@ public class ModifyAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则模板ID。 
-     * @return RuleTemplateIds 规则模板ID。
+     * Get 规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。 
+     * @return RuleTemplateIds 规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set 规则模板ID。
-     * @param RuleTemplateIds 规则模板ID。
+     * Set 规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
+     * @param RuleTemplateIds 规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;

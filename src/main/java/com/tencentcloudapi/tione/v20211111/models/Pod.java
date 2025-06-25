@@ -117,6 +117,13 @@ public class Pod extends AbstractModel {
     private String Message;
 
     /**
+    * 当前实例所在的节点 IP
+    */
+    @SerializedName("NodeIP")
+    @Expose
+    private String NodeIP;
+
+    /**
      * Get pod名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name pod名
@@ -348,6 +355,22 @@ public class Pod extends AbstractModel {
         this.Message = Message;
     }
 
+    /**
+     * Get 当前实例所在的节点 IP 
+     * @return NodeIP 当前实例所在的节点 IP
+     */
+    public String getNodeIP() {
+        return this.NodeIP;
+    }
+
+    /**
+     * Set 当前实例所在的节点 IP
+     * @param NodeIP 当前实例所在的节点 IP
+     */
+    public void setNodeIP(String NodeIP) {
+        this.NodeIP = NodeIP;
+    }
+
     public Pod() {
     }
 
@@ -395,6 +418,9 @@ public class Pod extends AbstractModel {
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.NodeIP != null) {
+            this.NodeIP = new String(source.NodeIP);
+        }
     }
 
 
@@ -414,6 +440,7 @@ public class Pod extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StartScheduleTime", this.StartScheduleTime);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "NodeIP", this.NodeIP);
 
     }
 }

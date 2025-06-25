@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartCpuExpandRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -55,6 +55,7 @@ public class StartCpuExpandRequest extends AbstractModel {
 
     /**
     * 按时间段扩容策略。
+说明：当 Type 为 timeInterval 时，TimeIntervalStrategy 必填。
     */
     @SerializedName("TimeIntervalStrategy")
     @Expose
@@ -62,22 +63,23 @@ public class StartCpuExpandRequest extends AbstractModel {
 
     /**
     * 按周期扩容策略。
+说明：当 Type 为 period 时，PeriodStrategy 必填。
     */
     @SerializedName("PeriodStrategy")
     @Expose
     private PeriodStrategy PeriodStrategy;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -140,8 +142,10 @@ public class StartCpuExpandRequest extends AbstractModel {
     }
 
     /**
-     * Get 按时间段扩容策略。 
+     * Get 按时间段扩容策略。
+说明：当 Type 为 timeInterval 时，TimeIntervalStrategy 必填。 
      * @return TimeIntervalStrategy 按时间段扩容策略。
+说明：当 Type 为 timeInterval 时，TimeIntervalStrategy 必填。
      */
     public TimeIntervalStrategy getTimeIntervalStrategy() {
         return this.TimeIntervalStrategy;
@@ -149,15 +153,19 @@ public class StartCpuExpandRequest extends AbstractModel {
 
     /**
      * Set 按时间段扩容策略。
+说明：当 Type 为 timeInterval 时，TimeIntervalStrategy 必填。
      * @param TimeIntervalStrategy 按时间段扩容策略。
+说明：当 Type 为 timeInterval 时，TimeIntervalStrategy 必填。
      */
     public void setTimeIntervalStrategy(TimeIntervalStrategy TimeIntervalStrategy) {
         this.TimeIntervalStrategy = TimeIntervalStrategy;
     }
 
     /**
-     * Get 按周期扩容策略。 
+     * Get 按周期扩容策略。
+说明：当 Type 为 period 时，PeriodStrategy 必填。 
      * @return PeriodStrategy 按周期扩容策略。
+说明：当 Type 为 period 时，PeriodStrategy 必填。
      */
     public PeriodStrategy getPeriodStrategy() {
         return this.PeriodStrategy;
@@ -165,7 +173,9 @@ public class StartCpuExpandRequest extends AbstractModel {
 
     /**
      * Set 按周期扩容策略。
+说明：当 Type 为 period 时，PeriodStrategy 必填。
      * @param PeriodStrategy 按周期扩容策略。
+说明：当 Type 为 period 时，PeriodStrategy 必填。
      */
     public void setPeriodStrategy(PeriodStrategy PeriodStrategy) {
         this.PeriodStrategy = PeriodStrategy;

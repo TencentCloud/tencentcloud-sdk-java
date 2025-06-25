@@ -1042,6 +1042,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查看任务版本详细信息
+     * @param req DescribeDsTaskVersionInfoRequest
+     * @return DescribeDsTaskVersionInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDsTaskVersionInfoResponse DescribeDsTaskVersionInfo(DescribeDsTaskVersionInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDsTaskVersionInfo", DescribeDsTaskVersionInfoResponse.class);
+    }
+
+    /**
+     *拉取任务版本列表
+     * @param req DescribeDsTaskVersionListRequest
+     * @return DescribeDsTaskVersionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDsTaskVersionListResponse DescribeDsTaskVersionList(DescribeDsTaskVersionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDsTaskVersionList", DescribeDsTaskVersionListResponse.class);
+    }
+
+    /**
      *获取值班日历
      * @param req DescribeDutyScheduleDetailsRequest
      * @return DescribeDutyScheduleDetailsResponse
@@ -2094,7 +2116,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
-     *查询任务脚本
+     *查询任务脚本。本接口已废弃，请使用接口GetPaginationTaskScript。
      * @param req DescribeTaskScriptRequest
      * @return DescribeTaskScriptResponse
      * @throws TencentCloudSDKException
@@ -2691,7 +2713,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
 
     /**
      *<p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-修改任务脚本
+修改任务脚本。本接口已废弃，请使用接口ModifyTaskInfoDs。
      * @param req ModifyTaskScriptRequest
      * @return ModifyTaskScriptResponse
      * @throws TencentCloudSDKException

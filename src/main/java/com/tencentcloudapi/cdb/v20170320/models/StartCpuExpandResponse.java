@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartCpuExpandResponse extends AbstractModel {
 
     /**
-    * 异步任务 ID 。可以调用DescribeAsyncRequest 传入该 ID ，进行任务执行进度的查询
+    * 异步任务 ID 。可以调用 DescribeAsyncRequest 传入该 ID，进行任务执行进度的查询。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class StartCpuExpandResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务 ID 。可以调用DescribeAsyncRequest 传入该 ID ，进行任务执行进度的查询 
-     * @return AsyncRequestId 异步任务 ID 。可以调用DescribeAsyncRequest 传入该 ID ，进行任务执行进度的查询
+     * Get 异步任务 ID 。可以调用 DescribeAsyncRequest 传入该 ID，进行任务执行进度的查询。 
+     * @return AsyncRequestId 异步任务 ID 。可以调用 DescribeAsyncRequest 传入该 ID，进行任务执行进度的查询。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 异步任务 ID 。可以调用DescribeAsyncRequest 传入该 ID ，进行任务执行进度的查询
-     * @param AsyncRequestId 异步任务 ID 。可以调用DescribeAsyncRequest 传入该 ID ，进行任务执行进度的查询
+     * Set 异步任务 ID 。可以调用 DescribeAsyncRequest 传入该 ID，进行任务执行进度的查询。
+     * @param AsyncRequestId 异步任务 ID 。可以调用 DescribeAsyncRequest 传入该 ID，进行任务执行进度的查询。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

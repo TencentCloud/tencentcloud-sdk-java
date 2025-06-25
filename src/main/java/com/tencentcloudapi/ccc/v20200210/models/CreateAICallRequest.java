@@ -167,7 +167,7 @@ HoaiMy
     private Long WelcomeType;
 
     /**
-    * 0: 默认可打断， 1：高优先不可打断
+    * 0: 默认可打断， 2：高优先不可打断
     */
     @SerializedName("WelcomeMessagePriority")
     @Expose
@@ -838,16 +838,16 @@ HoaiMy
     }
 
     /**
-     * Get 0: 默认可打断， 1：高优先不可打断 
-     * @return WelcomeMessagePriority 0: 默认可打断， 1：高优先不可打断
+     * Get 0: 默认可打断， 2：高优先不可打断 
+     * @return WelcomeMessagePriority 0: 默认可打断， 2：高优先不可打断
      */
     public Long getWelcomeMessagePriority() {
         return this.WelcomeMessagePriority;
     }
 
     /**
-     * Set 0: 默认可打断， 1：高优先不可打断
-     * @param WelcomeMessagePriority 0: 默认可打断， 1：高优先不可打断
+     * Set 0: 默认可打断， 2：高优先不可打断
+     * @param WelcomeMessagePriority 0: 默认可打断， 2：高优先不可打断
      */
     public void setWelcomeMessagePriority(Long WelcomeMessagePriority) {
         this.WelcomeMessagePriority = WelcomeMessagePriority;

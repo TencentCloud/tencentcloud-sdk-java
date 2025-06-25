@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateAuditRuleTemplateRequest extends AbstractModel {
 
     /**
-    * 审计规则
+    * 审计规则。
     */
     @SerializedName("RuleFilters")
     @Expose
     private RuleFilters [] RuleFilters;
 
     /**
-    * 规则模板名称
+    * 规则模板名称。最多支持输入30个字符。
     */
     @SerializedName("RuleTemplateName")
     @Expose
     private String RuleTemplateName;
 
     /**
-    * 规则模板描述
+    * 规则模板描述。最多支持输入200个字符。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 告警等级。1-低风险，2-中风险，3-高风险
+    * 告警等级。1 - 低风险，2 - 中风险，3 - 高风险。默认值为1。
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-    * 告警策略。0-不告警，1-告警
+    * 告警策略。0 - 不告警，1 - 告警。默认值为0。
     */
     @SerializedName("AlarmPolicy")
     @Expose
     private Long AlarmPolicy;
 
     /**
-     * Get 审计规则 
-     * @return RuleFilters 审计规则
+     * Get 审计规则。 
+     * @return RuleFilters 审计规则。
      */
     public RuleFilters [] getRuleFilters() {
         return this.RuleFilters;
     }
 
     /**
-     * Set 审计规则
-     * @param RuleFilters 审计规则
+     * Set 审计规则。
+     * @param RuleFilters 审计规则。
      */
     public void setRuleFilters(RuleFilters [] RuleFilters) {
         this.RuleFilters = RuleFilters;
     }
 
     /**
-     * Get 规则模板名称 
-     * @return RuleTemplateName 规则模板名称
+     * Get 规则模板名称。最多支持输入30个字符。 
+     * @return RuleTemplateName 规则模板名称。最多支持输入30个字符。
      */
     public String getRuleTemplateName() {
         return this.RuleTemplateName;
     }
 
     /**
-     * Set 规则模板名称
-     * @param RuleTemplateName 规则模板名称
+     * Set 规则模板名称。最多支持输入30个字符。
+     * @param RuleTemplateName 规则模板名称。最多支持输入30个字符。
      */
     public void setRuleTemplateName(String RuleTemplateName) {
         this.RuleTemplateName = RuleTemplateName;
     }
 
     /**
-     * Get 规则模板描述 
-     * @return Description 规则模板描述
+     * Get 规则模板描述。最多支持输入200个字符。 
+     * @return Description 规则模板描述。最多支持输入200个字符。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 规则模板描述
-     * @param Description 规则模板描述
+     * Set 规则模板描述。最多支持输入200个字符。
+     * @param Description 规则模板描述。最多支持输入200个字符。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 告警等级。1-低风险，2-中风险，3-高风险 
-     * @return AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险
+     * Get 告警等级。1 - 低风险，2 - 中风险，3 - 高风险。默认值为1。 
+     * @return AlarmLevel 告警等级。1 - 低风险，2 - 中风险，3 - 高风险。默认值为1。
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set 告警等级。1-低风险，2-中风险，3-高风险
-     * @param AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险
+     * Set 告警等级。1 - 低风险，2 - 中风险，3 - 高风险。默认值为1。
+     * @param AlarmLevel 告警等级。1 - 低风险，2 - 中风险，3 - 高风险。默认值为1。
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get 告警策略。0-不告警，1-告警 
-     * @return AlarmPolicy 告警策略。0-不告警，1-告警
+     * Get 告警策略。0 - 不告警，1 - 告警。默认值为0。 
+     * @return AlarmPolicy 告警策略。0 - 不告警，1 - 告警。默认值为0。
      */
     public Long getAlarmPolicy() {
         return this.AlarmPolicy;
     }
 
     /**
-     * Set 告警策略。0-不告警，1-告警
-     * @param AlarmPolicy 告警策略。0-不告警，1-告警
+     * Set 告警策略。0 - 不告警，1 - 告警。默认值为0。
+     * @param AlarmPolicy 告警策略。0 - 不告警，1 - 告警。默认值为0。
      */
     public void setAlarmPolicy(Long AlarmPolicy) {
         this.AlarmPolicy = AlarmPolicy;

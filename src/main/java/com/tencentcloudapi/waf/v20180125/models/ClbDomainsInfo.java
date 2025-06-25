@@ -129,6 +129,13 @@ public class ClbDomainsInfo extends AbstractModel {
     private String [] Labels;
 
     /**
+    * clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+    */
+    @SerializedName("AccessStatus")
+    @Expose
+    private Long AccessStatus;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -368,6 +375,22 @@ public class ClbDomainsInfo extends AbstractModel {
         this.Labels = Labels;
     }
 
+    /**
+     * Get clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中” 
+     * @return AccessStatus clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+     */
+    public Long getAccessStatus() {
+        return this.AccessStatus;
+    }
+
+    /**
+     * Set clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+     * @param AccessStatus clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+     */
+    public void setAccessStatus(Long AccessStatus) {
+        this.AccessStatus = AccessStatus;
+    }
+
     public ClbDomainsInfo() {
     }
 
@@ -430,6 +453,9 @@ public class ClbDomainsInfo extends AbstractModel {
                 this.Labels[i] = new String(source.Labels[i]);
             }
         }
+        if (source.AccessStatus != null) {
+            this.AccessStatus = new Long(source.AccessStatus);
+        }
     }
 
 
@@ -452,6 +478,7 @@ public class ClbDomainsInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CloudType", this.CloudType);
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
+        this.setParamSimple(map, prefix + "AccessStatus", this.AccessStatus);
 
     }
 }

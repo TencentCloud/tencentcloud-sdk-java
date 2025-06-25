@@ -83,6 +83,17 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *取消计划删除数据密钥
+     * @param req CancelDataKeyDeletionRequest
+     * @return CancelDataKeyDeletionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelDataKeyDeletionResponse CancelDataKeyDeletion(CancelDataKeyDeletionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelDataKeyDeletion", CancelDataKeyDeletionResponse.class);
+    }
+
+    /**
      *取消密钥归档，取消后密钥的状态变为Enabled。
      * @param req CancelKeyArchiveRequest
      * @return CancelKeyArchiveResponse
@@ -157,6 +168,28 @@ public class KmsClient extends AbstractClient{
     public DeleteWhiteBoxKeyResponse DeleteWhiteBoxKey(DeleteWhiteBoxKeyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteWhiteBoxKey", DeleteWhiteBoxKeyResponse.class);
+    }
+
+    /**
+     *获取数据密钥的详情
+     * @param req DescribeDataKeyRequest
+     * @return DescribeDataKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataKeyResponse DescribeDataKey(DescribeDataKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataKey", DescribeDataKeyResponse.class);
+    }
+
+    /**
+     *返回数据密钥属性信息列表
+     * @param req DescribeDataKeysRequest
+     * @return DescribeDataKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataKeysResponse DescribeDataKeys(DescribeDataKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataKeys", DescribeDataKeysResponse.class);
     }
 
     /**
@@ -237,6 +270,28 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *禁用数据密钥
+     * @param req DisableDataKeyRequest
+     * @return DisableDataKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableDataKeyResponse DisableDataKey(DisableDataKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableDataKey", DisableDataKeyResponse.class);
+    }
+
+    /**
+     *批量禁用数据密钥
+     * @param req DisableDataKeysRequest
+     * @return DisableDataKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableDataKeysResponse DisableDataKeys(DisableDataKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableDataKeys", DisableDataKeysResponse.class);
+    }
+
+    /**
      *本接口用于禁用一个主密钥，处于禁用状态的Key无法用于加密、解密操作。
      * @param req DisableKeyRequest
      * @return DisableKeyResponse
@@ -289,6 +344,28 @@ public class KmsClient extends AbstractClient{
     public DisableWhiteBoxKeysResponse DisableWhiteBoxKeys(DisableWhiteBoxKeysRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DisableWhiteBoxKeys", DisableWhiteBoxKeysResponse.class);
+    }
+
+    /**
+     *启用数据密钥
+     * @param req EnableDataKeyRequest
+     * @return EnableDataKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableDataKeyResponse EnableDataKey(EnableDataKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableDataKey", EnableDataKeyResponse.class);
+    }
+
+    /**
+     *批量启用数据密钥
+     * @param req EnableDataKeysRequest
+     * @return EnableDataKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableDataKeysResponse EnableDataKeys(EnableDataKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableDataKeys", EnableDataKeysResponse.class);
     }
 
     /**
@@ -391,6 +468,28 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *下载数据密钥密文
+     * @param req GetDataKeyCiphertextBlobRequest
+     * @return GetDataKeyCiphertextBlobResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDataKeyCiphertextBlobResponse GetDataKeyCiphertextBlob(GetDataKeyCiphertextBlobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDataKeyCiphertextBlob", GetDataKeyCiphertextBlobResponse.class);
+    }
+
+    /**
+     *获取数据密钥明文
+     * @param req GetDataKeyPlaintextRequest
+     * @return GetDataKeyPlaintextResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDataKeyPlaintextResponse GetDataKeyPlaintext(GetDataKeyPlaintextRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDataKeyPlaintext", GetDataKeyPlaintextResponse.class);
+    }
+
+    /**
      *查询指定的CMK是否开启了密钥轮换功能。
      * @param req GetKeyRotationStatusRequest
      * @return GetKeyRotationStatusResponse
@@ -446,6 +545,17 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *数据密钥导入接口，并托管到KMS
+     * @param req ImportDataKeyRequest
+     * @return ImportDataKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportDataKeyResponse ImportDataKey(ImportDataKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportDataKey", ImportDataKeyResponse.class);
+    }
+
+    /**
      *用于导入密钥材料。只有类型为EXTERNAL 的CMK 才可以导入，导入的密钥材料使用 GetParametersForImport 获取的密钥进行加密。可以为指定的 CMK 重新导入密钥材料，并重新指定过期时间，但必须导入相同的密钥材料。CMK 密钥材料导入后不可以更换密钥材料。导入的密钥材料过期或者被删除后，指定的CMK将无法使用，需要再次导入相同的密钥材料才能正常使用。CMK是独立的，同样的密钥材料可导入不同的 CMK 中，但使用其中一个 CMK 加密的数据无法使用另一个 CMK解密。
 只有Enabled 和 PendingImport状态的CMK可以导入密钥材料。
      * @param req ImportKeyMaterialRequest
@@ -466,6 +576,28 @@ public class KmsClient extends AbstractClient{
     public ListAlgorithmsResponse ListAlgorithms(ListAlgorithmsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListAlgorithms", ListAlgorithmsResponse.class);
+    }
+
+    /**
+     *根据指定Offset和Limit获取数据密钥列表详情。
+     * @param req ListDataKeyDetailRequest
+     * @return ListDataKeyDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDataKeyDetailResponse ListDataKeyDetail(ListDataKeyDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDataKeyDetail", ListDataKeyDetailResponse.class);
+    }
+
+    /**
+     *用于查询数据密钥的列表
+     * @param req ListDataKeysRequest
+     * @return ListDataKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDataKeysResponse ListDataKeys(ListDataKeysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDataKeys", ListDataKeysResponse.class);
     }
 
     /**
@@ -557,6 +689,17 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *计划删除数据密钥
+     * @param req ScheduleDataKeyDeletionRequest
+     * @return ScheduleDataKeyDeletionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScheduleDataKeyDeletionResponse ScheduleDataKeyDeletion(ScheduleDataKeyDeletionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScheduleDataKeyDeletion", ScheduleDataKeyDeletionResponse.class);
+    }
+
+    /**
      *CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
      * @param req ScheduleKeyDeletionRequest
      * @return ScheduleKeyDeletionResponse
@@ -599,6 +742,28 @@ public class KmsClient extends AbstractClient{
     public UpdateAliasResponse UpdateAlias(UpdateAliasRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAlias", UpdateAliasResponse.class);
+    }
+
+    /**
+     *修改数据密钥描述
+     * @param req UpdateDataKeyDescriptionRequest
+     * @return UpdateDataKeyDescriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDataKeyDescriptionResponse UpdateDataKeyDescription(UpdateDataKeyDescriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDataKeyDescription", UpdateDataKeyDescriptionResponse.class);
+    }
+
+    /**
+     *修改数据密钥名称
+     * @param req UpdateDataKeyNameRequest
+     * @return UpdateDataKeyNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDataKeyNameResponse UpdateDataKeyName(UpdateDataKeyNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDataKeyName", UpdateDataKeyNameResponse.class);
     }
 
     /**

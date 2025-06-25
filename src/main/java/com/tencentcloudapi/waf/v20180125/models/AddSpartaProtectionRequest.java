@@ -129,7 +129,7 @@ UpstreamProtocol：与Protocol相同
     private String SSLId;
 
     /**
-    * 待废弃，可不填。Waf的资源ID。
+    * Waf的资源ID。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -159,14 +159,14 @@ https：使用https协议回源
     private String HttpsUpstreamPort;
 
     /**
-    * 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+    * 是否开启灰度，0表示不开启灰度。
     */
     @SerializedName("IsGray")
     @Expose
     private Long IsGray;
 
     /**
-    * 待废弃，可不填。灰度的地区
+    * 灰度的地区
     */
     @SerializedName("GrayAreas")
     @Expose
@@ -205,7 +205,7 @@ https：使用https协议回源
     private Long IsHttp2;
 
     /**
-    * 待废弃，可不填。WAF实例类型。
+    * WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
@@ -215,7 +215,7 @@ cdn-waf：CDN上的Web防护能力
     private String Edition;
 
     /**
-    * 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+    * 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
     */
     @SerializedName("Anycast")
     @Expose
@@ -391,6 +391,13 @@ cdn-waf：CDN上的Web防护能力
     @SerializedName("UpstreamRules")
     @Expose
     private UpstreamRule [] UpstreamRules;
+
+    /**
+    * 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+    */
+    @SerializedName("UseCase")
+    @Expose
+    private Long UseCase;
 
     /**
      * Get 需要防护的域名 
@@ -669,17 +676,21 @@ UpstreamProtocol：与Protocol相同
     }
 
     /**
-     * Get 待废弃，可不填。Waf的资源ID。 
-     * @return ResourceId 待废弃，可不填。Waf的资源ID。
+     * Get Waf的资源ID。 
+     * @return ResourceId Waf的资源ID。
+     * @deprecated
      */
+    @Deprecated
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 待废弃，可不填。Waf的资源ID。
-     * @param ResourceId 待废弃，可不填。Waf的资源ID。
+     * Set Waf的资源ID。
+     * @param ResourceId Waf的资源ID。
+     * @deprecated
      */
+    @Deprecated
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
@@ -741,33 +752,41 @@ https：使用https协议回源
     }
 
     /**
-     * Get 待废弃，可不填。是否开启灰度，0表示不开启灰度。 
-     * @return IsGray 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+     * Get 是否开启灰度，0表示不开启灰度。 
+     * @return IsGray 是否开启灰度，0表示不开启灰度。
+     * @deprecated
      */
+    @Deprecated
     public Long getIsGray() {
         return this.IsGray;
     }
 
     /**
-     * Set 待废弃，可不填。是否开启灰度，0表示不开启灰度。
-     * @param IsGray 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+     * Set 是否开启灰度，0表示不开启灰度。
+     * @param IsGray 是否开启灰度，0表示不开启灰度。
+     * @deprecated
      */
+    @Deprecated
     public void setIsGray(Long IsGray) {
         this.IsGray = IsGray;
     }
 
     /**
-     * Get 待废弃，可不填。灰度的地区 
-     * @return GrayAreas 待废弃，可不填。灰度的地区
+     * Get 灰度的地区 
+     * @return GrayAreas 灰度的地区
+     * @deprecated
      */
+    @Deprecated
     public String [] getGrayAreas() {
         return this.GrayAreas;
     }
 
     /**
-     * Set 待废弃，可不填。灰度的地区
-     * @param GrayAreas 待废弃，可不填。灰度的地区
+     * Set 灰度的地区
+     * @param GrayAreas 灰度的地区
+     * @deprecated
      */
+    @Deprecated
     public void setGrayAreas(String [] GrayAreas) {
         this.GrayAreas = GrayAreas;
     }
@@ -853,45 +872,53 @@ https：使用https协议回源
     }
 
     /**
-     * Get 待废弃，可不填。WAF实例类型。
+     * Get WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力 
-     * @return Edition 待废弃，可不填。WAF实例类型。
+     * @return Edition WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
+     * @deprecated
      */
+    @Deprecated
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set 待废弃，可不填。WAF实例类型。
+     * Set WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
-     * @param Edition 待废弃，可不填。WAF实例类型。
+     * @param Edition WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
+     * @deprecated
      */
+    @Deprecated
     public void setEdition(String Edition) {
         this.Edition = Edition;
     }
 
     /**
-     * Get 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP 
-     * @return Anycast 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * Get 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP 
+     * @return Anycast 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @deprecated
      */
+    @Deprecated
     public Long getAnycast() {
         return this.Anycast;
     }
 
     /**
-     * Set 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
-     * @param Anycast 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * Set 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @param Anycast 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @deprecated
      */
+    @Deprecated
     public void setAnycast(Long Anycast) {
         this.Anycast = Anycast;
     }
@@ -1304,6 +1331,22 @@ cdn-waf：CDN上的Web防护能力
         this.UpstreamRules = UpstreamRules;
     }
 
+    /**
+     * Get 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景 
+     * @return UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     */
+    public Long getUseCase() {
+        return this.UseCase;
+    }
+
+    /**
+     * Set 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     * @param UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     */
+    public void setUseCase(Long UseCase) {
+        this.UseCase = UseCase;
+    }
+
     public AddSpartaProtectionRequest() {
     }
 
@@ -1474,6 +1517,9 @@ cdn-waf：CDN上的Web防护能力
                 this.UpstreamRules[i] = new UpstreamRule(source.UpstreamRules[i]);
             }
         }
+        if (source.UseCase != null) {
+            this.UseCase = new Long(source.UseCase);
+        }
     }
 
 
@@ -1528,6 +1574,7 @@ cdn-waf：CDN上的Web防护能力
         this.setParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
         this.setParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
         this.setParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
+        this.setParamSimple(map, prefix + "UseCase", this.UseCase);
 
     }
 }

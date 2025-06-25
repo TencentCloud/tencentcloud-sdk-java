@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class DescribeCPUExpandStrategyInfoResponse extends AbstractModel {
 
     /**
-    * 策略类型。输出值 auto、manual。如果返回为 NULL 说明尚未开通弹性扩容策略。
+    * 策略类型。输出值：auto、manual、timeInterval、period。
+说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。5. 如果返回为 NULL 说明尚未开通弹性扩容策略。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -32,7 +33,7 @@ public class DescribeCPUExpandStrategyInfoResponse extends AbstractModel {
     private String Type;
 
     /**
-    * 手动扩容的 CPU 。Type 为 manual 时有效。
+    * 自定义扩容，且扩容时间为立即生效时的 CPU。Type 为 manual 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpandCpu")
@@ -48,14 +49,14 @@ public class DescribeCPUExpandStrategyInfoResponse extends AbstractModel {
     private AutoStrategy AutoStrategy;
 
     /**
-    * 按周期扩容策略。
+    * 按周期扩容策略。当 Type 为 period 时有效。
     */
     @SerializedName("PeriodStrategy")
     @Expose
     private PeriodStrategy PeriodStrategy;
 
     /**
-    * 按时间段扩容策略。
+    * 按时间段扩容策略。当 Type 为 timeInterval 时有效。
     */
     @SerializedName("TimeIntervalStrategy")
     @Expose
@@ -69,9 +70,11 @@ public class DescribeCPUExpandStrategyInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略类型。输出值 auto、manual。如果返回为 NULL 说明尚未开通弹性扩容策略。
+     * Get 策略类型。输出值：auto、manual、timeInterval、period。
+说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。5. 如果返回为 NULL 说明尚未开通弹性扩容策略。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 策略类型。输出值 auto、manual。如果返回为 NULL 说明尚未开通弹性扩容策略。
+     * @return Type 策略类型。输出值：auto、manual、timeInterval、period。
+说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。5. 如果返回为 NULL 说明尚未开通弹性扩容策略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -79,9 +82,11 @@ public class DescribeCPUExpandStrategyInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 策略类型。输出值 auto、manual。如果返回为 NULL 说明尚未开通弹性扩容策略。
+     * Set 策略类型。输出值：auto、manual、timeInterval、period。
+说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。5. 如果返回为 NULL 说明尚未开通弹性扩容策略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 策略类型。输出值 auto、manual。如果返回为 NULL 说明尚未开通弹性扩容策略。
+     * @param Type 策略类型。输出值：auto、manual、timeInterval、period。
+说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。5. 如果返回为 NULL 说明尚未开通弹性扩容策略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -89,9 +94,9 @@ public class DescribeCPUExpandStrategyInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 手动扩容的 CPU 。Type 为 manual 时有效。
+     * Get 自定义扩容，且扩容时间为立即生效时的 CPU。Type 为 manual 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpandCpu 手动扩容的 CPU 。Type 为 manual 时有效。
+     * @return ExpandCpu 自定义扩容，且扩容时间为立即生效时的 CPU。Type 为 manual 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpandCpu() {
@@ -99,9 +104,9 @@ public class DescribeCPUExpandStrategyInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 手动扩容的 CPU 。Type 为 manual 时有效。
+     * Set 自定义扩容，且扩容时间为立即生效时的 CPU。Type 为 manual 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpandCpu 手动扩容的 CPU 。Type 为 manual 时有效。
+     * @param ExpandCpu 自定义扩容，且扩容时间为立即生效时的 CPU。Type 为 manual 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpandCpu(Long ExpandCpu) {
@@ -129,32 +134,32 @@ public class DescribeCPUExpandStrategyInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 按周期扩容策略。 
-     * @return PeriodStrategy 按周期扩容策略。
+     * Get 按周期扩容策略。当 Type 为 period 时有效。 
+     * @return PeriodStrategy 按周期扩容策略。当 Type 为 period 时有效。
      */
     public PeriodStrategy getPeriodStrategy() {
         return this.PeriodStrategy;
     }
 
     /**
-     * Set 按周期扩容策略。
-     * @param PeriodStrategy 按周期扩容策略。
+     * Set 按周期扩容策略。当 Type 为 period 时有效。
+     * @param PeriodStrategy 按周期扩容策略。当 Type 为 period 时有效。
      */
     public void setPeriodStrategy(PeriodStrategy PeriodStrategy) {
         this.PeriodStrategy = PeriodStrategy;
     }
 
     /**
-     * Get 按时间段扩容策略。 
-     * @return TimeIntervalStrategy 按时间段扩容策略。
+     * Get 按时间段扩容策略。当 Type 为 timeInterval 时有效。 
+     * @return TimeIntervalStrategy 按时间段扩容策略。当 Type 为 timeInterval 时有效。
      */
     public TimeIntervalStrategy getTimeIntervalStrategy() {
         return this.TimeIntervalStrategy;
     }
 
     /**
-     * Set 按时间段扩容策略。
-     * @param TimeIntervalStrategy 按时间段扩容策略。
+     * Set 按时间段扩容策略。当 Type 为 timeInterval 时有效。
+     * @param TimeIntervalStrategy 按时间段扩容策略。当 Type 为 timeInterval 时有效。
      */
     public void setTimeIntervalStrategy(TimeIntervalStrategy TimeIntervalStrategy) {
         this.TimeIntervalStrategy = TimeIntervalStrategy;

@@ -105,6 +105,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *测试LDAP连接
+     * @param req CheckLDAPConnectionRequest
+     * @return CheckLDAPConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckLDAPConnectionResponse CheckLDAPConnection(CheckLDAPConnectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckLDAPConnection", CheckLDAPConnectionResponse.class);
+    }
+
+    /**
      *添加访问白名单规则
      * @param req CreateAccessWhiteListRuleRequest
      * @return CreateAccessWhiteListRuleResponse
@@ -490,6 +501,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *获取LDAP ou 列表
+     * @param req DescribeLDAPUnitSetRequest
+     * @return DescribeLDAPUnitSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLDAPUnitSetResponse DescribeLDAPUnitSet(DescribeLDAPUnitSetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLDAPUnitSet", DescribeLDAPUnitSetResponse.class);
+    }
+
+    /**
      *查询登录日志
      * @param req DescribeLoginEventRequest
      * @return DescribeLoginEventResponse
@@ -633,6 +655,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *修改LDAP配置信息
+     * @param req ModifyLDAPSettingRequest
+     * @return ModifyLDAPSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLDAPSettingResponse ModifyLDAPSetting(ModifyLDAPSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLDAPSetting", ModifyLDAPSettingResponse.class);
+    }
+
+    /**
      *设置OAuth认证参数
      * @param req ModifyOAuthSettingRequest
      * @return ModifyOAuthSettingResponse
@@ -685,6 +718,17 @@ public class BhClient extends AbstractClient{
     public ModifyUserGroupResponse ModifyUserGroup(ModifyUserGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserGroup", ModifyUserGroupResponse.class);
+    }
+
+    /**
+     *会话回放
+     * @param req ReplaySessionRequest
+     * @return ReplaySessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaySessionResponse ReplaySession(ReplaySessionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplaySession", ReplaySessionResponse.class);
     }
 
     /**
@@ -839,6 +883,28 @@ public class BhClient extends AbstractClient{
     public SearchTaskResultResponse SearchTaskResult(SearchTaskResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchTaskResult", SearchTaskResultResponse.class);
+    }
+
+    /**
+     *设置LDAP 立即同步标记
+     * @param req SetLDAPSyncFlagRequest
+     * @return SetLDAPSyncFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetLDAPSyncFlagResponse SetLDAPSyncFlag(SetLDAPSyncFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetLDAPSyncFlag", SetLDAPSyncFlagResponse.class);
+    }
+
+    /**
+     *解锁用户
+     * @param req UnlockUserRequest
+     * @return UnlockUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnlockUserResponse UnlockUser(UnlockUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnlockUser", UnlockUserResponse.class);
     }
 
 }

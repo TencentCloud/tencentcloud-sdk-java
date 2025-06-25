@@ -294,6 +294,13 @@ Hadoop-Hbase
     private String CosBucket;
 
     /**
+    * 节点标识信息，目前只提供给tf平台使用
+    */
+    @SerializedName("NodeMarks")
+    @Expose
+    private NodeMark [] NodeMarks;
+
+    /**
      * Get 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 51:表示STARROCKS-V1.4.0
 54:表示STARROCKS-V2.0.0
@@ -977,6 +984,22 @@ Hadoop-Hbase
         this.CosBucket = CosBucket;
     }
 
+    /**
+     * Get 节点标识信息，目前只提供给tf平台使用 
+     * @return NodeMarks 节点标识信息，目前只提供给tf平台使用
+     */
+    public NodeMark [] getNodeMarks() {
+        return this.NodeMarks;
+    }
+
+    /**
+     * Set 节点标识信息，目前只提供给tf平台使用
+     * @param NodeMarks 节点标识信息，目前只提供给tf平台使用
+     */
+    public void setNodeMarks(NodeMark [] NodeMarks) {
+        this.NodeMarks = NodeMarks;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -1102,6 +1125,12 @@ Hadoop-Hbase
         if (source.CosBucket != null) {
             this.CosBucket = new String(source.CosBucket);
         }
+        if (source.NodeMarks != null) {
+            this.NodeMarks = new NodeMark[source.NodeMarks.length];
+            for (int i = 0; i < source.NodeMarks.length; i++) {
+                this.NodeMarks[i] = new NodeMark(source.NodeMarks[i]);
+            }
+        }
     }
 
 
@@ -1142,6 +1171,7 @@ Hadoop-Hbase
         this.setParamSimple(map, prefix + "MultiZone", this.MultiZone);
         this.setParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
+        this.setParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
 
     }
 }

@@ -190,6 +190,13 @@ public class CreateClusterRequest extends AbstractModel {
     private String CosBucket;
 
     /**
+    * 节点标识信息，目前只提供给tf平台使用
+    */
+    @SerializedName("NodeMarks")
+    @Expose
+    private NodeMark [] NodeMarks;
+
+    /**
      * Get EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338) 
      * @return ProductVersion EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
      */
@@ -601,6 +608,22 @@ public class CreateClusterRequest extends AbstractModel {
         this.CosBucket = CosBucket;
     }
 
+    /**
+     * Get 节点标识信息，目前只提供给tf平台使用 
+     * @return NodeMarks 节点标识信息，目前只提供给tf平台使用
+     */
+    public NodeMark [] getNodeMarks() {
+        return this.NodeMarks;
+    }
+
+    /**
+     * Set 节点标识信息，目前只提供给tf平台使用
+     * @param NodeMarks 节点标识信息，目前只提供给tf平台使用
+     */
+    public void setNodeMarks(NodeMark [] NodeMarks) {
+        this.NodeMarks = NodeMarks;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -690,6 +713,12 @@ public class CreateClusterRequest extends AbstractModel {
         if (source.CosBucket != null) {
             this.CosBucket = new String(source.CosBucket);
         }
+        if (source.NodeMarks != null) {
+            this.NodeMarks = new NodeMark[source.NodeMarks.length];
+            for (int i = 0; i < source.NodeMarks.length; i++) {
+                this.NodeMarks[i] = new NodeMark(source.NodeMarks[i]);
+            }
+        }
     }
 
 
@@ -718,6 +747,7 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DependService.", this.DependService);
         this.setParamArrayObj(map, prefix + "ZoneResourceConfiguration.", this.ZoneResourceConfiguration);
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
+        this.setParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
 
     }
 }

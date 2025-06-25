@@ -31,14 +31,14 @@ public class DescribeAccountPrivilegesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 数据库的账号名称。
+    * 数据库的账号名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * 数据库的账号域名。
+    * 数据库的账号域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
     */
     @SerializedName("Host")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeAccountPrivilegesRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库的账号名称。 
-     * @return User 数据库的账号名称。
+     * Get 数据库的账号名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。 
+     * @return User 数据库的账号名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set 数据库的账号名称。
-     * @param User 数据库的账号名称。
+     * Set 数据库的账号名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+     * @param User 数据库的账号名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 数据库的账号域名。 
-     * @return Host 数据库的账号域名。
+     * Get 数据库的账号域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。 
+     * @return Host 数据库的账号域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 数据库的账号域名。
-     * @param Host 数据库的账号域名。
+     * Set 数据库的账号域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+     * @param Host 数据库的账号域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public void setHost(String Host) {
         this.Host = Host;

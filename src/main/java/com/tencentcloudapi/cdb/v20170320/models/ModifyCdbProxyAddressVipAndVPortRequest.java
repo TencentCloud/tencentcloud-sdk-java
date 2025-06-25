@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class ModifyCdbProxyAddressVipAndVPortRequest extends AbstractModel {
 
     /**
-    * 代理组ID
+    * 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * 代理组地址ID
+    * 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
     */
     @SerializedName("ProxyAddressId")
     @Expose
     private String ProxyAddressId;
 
     /**
-    * 私有网络ID
+    * 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 私有子网ID
+    * 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * IP地址
+    * IP 地址。若不填写则自动分配子网下的可用 IP。
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 端口
+    * 端口。默认值3306，取值范围：1024 - 65535。
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * 旧IP地址回收时间
+    * 旧 IP 地址回收时间。单位：小时，默认值：24，取值范围：0 - 168。
     */
     @SerializedName("ReleaseDuration")
     @Expose
     private Long ReleaseDuration;
 
     /**
-     * Get 代理组ID 
-     * @return ProxyGroupId 代理组ID
+     * Get 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
+     * @return ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 代理组ID
-     * @param ProxyGroupId 代理组ID
+     * Set 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get 代理组地址ID 
-     * @return ProxyAddressId 代理组地址ID
+     * Get 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
+     * @return ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public String getProxyAddressId() {
         return this.ProxyAddressId;
     }
 
     /**
-     * Set 代理组地址ID
-     * @param ProxyAddressId 代理组地址ID
+     * Set 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public void setProxyAddressId(String ProxyAddressId) {
         this.ProxyAddressId = ProxyAddressId;
     }
 
     /**
-     * Get 私有网络ID 
-     * @return UniqVpcId 私有网络ID
+     * Get 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return UniqVpcId 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 私有网络ID
-     * @param UniqVpcId 私有网络ID
+     * Set 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param UniqVpcId 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 私有子网ID 
-     * @return UniqSubnetId 私有子网ID
+     * Get 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return UniqSubnetId 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 私有子网ID
-     * @param UniqSubnetId 私有子网ID
+     * Set 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param UniqSubnetId 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get IP地址 
-     * @return Vip IP地址
+     * Get IP 地址。若不填写则自动分配子网下的可用 IP。 
+     * @return Vip IP 地址。若不填写则自动分配子网下的可用 IP。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set IP地址
-     * @param Vip IP地址
+     * Set IP 地址。若不填写则自动分配子网下的可用 IP。
+     * @param Vip IP 地址。若不填写则自动分配子网下的可用 IP。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 端口 
-     * @return VPort 端口
+     * Get 端口。默认值3306，取值范围：1024 - 65535。 
+     * @return VPort 端口。默认值3306，取值范围：1024 - 65535。
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set 端口
-     * @param VPort 端口
+     * Set 端口。默认值3306，取值范围：1024 - 65535。
+     * @param VPort 端口。默认值3306，取值范围：1024 - 65535。
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get 旧IP地址回收时间 
-     * @return ReleaseDuration 旧IP地址回收时间
+     * Get 旧 IP 地址回收时间。单位：小时，默认值：24，取值范围：0 - 168。 
+     * @return ReleaseDuration 旧 IP 地址回收时间。单位：小时，默认值：24，取值范围：0 - 168。
      */
     public Long getReleaseDuration() {
         return this.ReleaseDuration;
     }
 
     /**
-     * Set 旧IP地址回收时间
-     * @param ReleaseDuration 旧IP地址回收时间
+     * Set 旧 IP 地址回收时间。单位：小时，默认值：24，取值范围：0 - 168。
+     * @param ReleaseDuration 旧 IP 地址回收时间。单位：小时，默认值：24，取值范围：0 - 168。
      */
     public void setReleaseDuration(Long ReleaseDuration) {
         this.ReleaseDuration = ReleaseDuration;

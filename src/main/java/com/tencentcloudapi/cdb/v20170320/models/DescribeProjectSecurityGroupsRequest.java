@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeProjectSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * 项目ID。
+    * 项目 ID。可通过 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725) 接口获取。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-     * Get 项目ID。 
-     * @return ProjectId 项目ID。
+     * Get 项目 ID。可通过 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725) 接口获取。 
+     * @return ProjectId 项目 ID。可通过 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725) 接口获取。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID。
-     * @param ProjectId 项目ID。
+     * Set 项目 ID。可通过 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725) 接口获取。
+     * @param ProjectId 项目 ID。可通过 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725) 接口获取。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

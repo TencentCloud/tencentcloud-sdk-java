@@ -347,6 +347,20 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private ProxyConfig ProxyConfig;
 
     /**
+    * 是否自动归档
+    */
+    @SerializedName("AutoArchive")
+    @Expose
+    private String AutoArchive;
+
+    /**
+    * 暂停后的归档处理时间
+    */
+    @SerializedName("AutoArchiveDelayHours")
+    @Expose
+    private Long AutoArchiveDelayHours;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -1122,6 +1136,38 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.ProxyConfig = ProxyConfig;
     }
 
+    /**
+     * Get 是否自动归档 
+     * @return AutoArchive 是否自动归档
+     */
+    public String getAutoArchive() {
+        return this.AutoArchive;
+    }
+
+    /**
+     * Set 是否自动归档
+     * @param AutoArchive 是否自动归档
+     */
+    public void setAutoArchive(String AutoArchive) {
+        this.AutoArchive = AutoArchive;
+    }
+
+    /**
+     * Get 暂停后的归档处理时间 
+     * @return AutoArchiveDelayHours 暂停后的归档处理时间
+     */
+    public Long getAutoArchiveDelayHours() {
+        return this.AutoArchiveDelayHours;
+    }
+
+    /**
+     * Set 暂停后的归档处理时间
+     * @param AutoArchiveDelayHours 暂停后的归档处理时间
+     */
+    public void setAutoArchiveDelayHours(Long AutoArchiveDelayHours) {
+        this.AutoArchiveDelayHours = AutoArchiveDelayHours;
+    }
+
     public CreateClustersRequest() {
     }
 
@@ -1274,6 +1320,12 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         if (source.ProxyConfig != null) {
             this.ProxyConfig = new ProxyConfig(source.ProxyConfig);
         }
+        if (source.AutoArchive != null) {
+            this.AutoArchive = new String(source.AutoArchive);
+        }
+        if (source.AutoArchiveDelayHours != null) {
+            this.AutoArchiveDelayHours = new Long(source.AutoArchiveDelayHours);
+        }
     }
 
 
@@ -1324,6 +1376,8 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
         this.setParamSimple(map, prefix + "GdnId", this.GdnId);
         this.setParamObj(map, prefix + "ProxyConfig.", this.ProxyConfig);
+        this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
+        this.setParamSimple(map, prefix + "AutoArchiveDelayHours", this.AutoArchiveDelayHours);
 
     }
 }

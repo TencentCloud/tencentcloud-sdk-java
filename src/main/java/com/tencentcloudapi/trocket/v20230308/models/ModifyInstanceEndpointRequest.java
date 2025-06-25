@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceEndpointRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -60,16 +60,16 @@ PUBLIC 公网
     private Boolean BillingFlow;
 
     /**
-     * Get 集群ID 
-     * @return InstanceId 集群ID
+     * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。 
+     * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群ID
-     * @param InstanceId 集群ID
+     * Set 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

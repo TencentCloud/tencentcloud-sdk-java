@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OpenDBInstanceEncryptionRequest extends AbstractModel {
 
     /**
-    * 云数据库实例 ID。
+    * 云数据库实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,16 +45,16 @@ public class OpenDBInstanceEncryptionRequest extends AbstractModel {
     private String KeyRegion;
 
     /**
-     * Get 云数据库实例 ID。 
-     * @return InstanceId 云数据库实例 ID。
+     * Get 云数据库实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 云数据库实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 云数据库实例 ID。
-     * @param InstanceId 云数据库实例 ID。
+     * Set 云数据库实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 云数据库实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

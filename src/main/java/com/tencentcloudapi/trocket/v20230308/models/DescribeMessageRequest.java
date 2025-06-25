@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeMessageRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名称
+    * 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 消息ID
+    * 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口或业务日志中获得。
     */
     @SerializedName("MsgId")
     @Expose
     private String MsgId;
 
     /**
-    * 查询起始位置
+    * 查询起始位置，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询结果限制数量
+    * 查询结果限制数量，默认20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 是否是死信消息
+    * 是否是死信消息，默认为false
     */
     @SerializedName("QueryDeadLetterMessage")
     @Expose
     private Boolean QueryDeadLetterMessage;
 
     /**
-    * 是否是延时消息
+    * 是否是延时消息，默认为false
     */
     @SerializedName("QueryDelayMessage")
     @Expose
     private Boolean QueryDelayMessage;
 
     /**
-     * Get 集群ID 
-     * @return InstanceId 集群ID
+     * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。 
+     * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群ID
-     * @param InstanceId 集群ID
+     * Set 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名称 
-     * @return Topic 主题名称
+     * Get 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。 
+     * @return Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题名称
-     * @param Topic 主题名称
+     * Set 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+     * @param Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 消息ID 
-     * @return MsgId 消息ID
+     * Get 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口或业务日志中获得。 
+     * @return MsgId 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口或业务日志中获得。
      */
     public String getMsgId() {
         return this.MsgId;
     }
 
     /**
-     * Set 消息ID
-     * @param MsgId 消息ID
+     * Set 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口或业务日志中获得。
+     * @param MsgId 消息 ID，从 [DescribeMessageList](https://cloud.tencent.com/document/api/1493/114593) 接口或业务日志中获得。
      */
     public void setMsgId(String MsgId) {
         this.MsgId = MsgId;
     }
 
     /**
-     * Get 查询起始位置 
-     * @return Offset 查询起始位置
+     * Get 查询起始位置，默认为0。 
+     * @return Offset 查询起始位置，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询起始位置
-     * @param Offset 查询起始位置
+     * Set 查询起始位置，默认为0。
+     * @param Offset 查询起始位置，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询结果限制数量 
-     * @return Limit 查询结果限制数量
+     * Get 查询结果限制数量，默认20。 
+     * @return Limit 查询结果限制数量，默认20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询结果限制数量
-     * @param Limit 查询结果限制数量
+     * Set 查询结果限制数量，默认20。
+     * @param Limit 查询结果限制数量，默认20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 是否是死信消息 
-     * @return QueryDeadLetterMessage 是否是死信消息
+     * Get 是否是死信消息，默认为false 
+     * @return QueryDeadLetterMessage 是否是死信消息，默认为false
      */
     public Boolean getQueryDeadLetterMessage() {
         return this.QueryDeadLetterMessage;
     }
 
     /**
-     * Set 是否是死信消息
-     * @param QueryDeadLetterMessage 是否是死信消息
+     * Set 是否是死信消息，默认为false
+     * @param QueryDeadLetterMessage 是否是死信消息，默认为false
      */
     public void setQueryDeadLetterMessage(Boolean QueryDeadLetterMessage) {
         this.QueryDeadLetterMessage = QueryDeadLetterMessage;
     }
 
     /**
-     * Get 是否是延时消息 
-     * @return QueryDelayMessage 是否是延时消息
+     * Get 是否是延时消息，默认为false 
+     * @return QueryDelayMessage 是否是延时消息，默认为false
      */
     public Boolean getQueryDelayMessage() {
         return this.QueryDelayMessage;
     }
 
     /**
-     * Set 是否是延时消息
-     * @param QueryDelayMessage 是否是延时消息
+     * Set 是否是延时消息，默认为false
+     * @param QueryDelayMessage 是否是延时消息，默认为false
      */
     public void setQueryDelayMessage(Boolean QueryDelayMessage) {
         this.QueryDelayMessage = QueryDelayMessage;

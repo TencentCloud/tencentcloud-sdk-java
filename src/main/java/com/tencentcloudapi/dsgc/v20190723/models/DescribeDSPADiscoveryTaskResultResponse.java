@@ -38,6 +38,13 @@ public class DescribeDSPADiscoveryTaskResultResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 最大展示扫描结果次数
+    */
+    @SerializedName("MaxCount")
+    @Expose
+    private Long MaxCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class DescribeDSPADiscoveryTaskResultResponse extends AbstractModel {
     }
 
     /**
+     * Get 最大展示扫描结果次数 
+     * @return MaxCount 最大展示扫描结果次数
+     */
+    public Long getMaxCount() {
+        return this.MaxCount;
+    }
+
+    /**
+     * Set 最大展示扫描结果次数
+     * @param MaxCount 最大展示扫描结果次数
+     */
+    public void setMaxCount(Long MaxCount) {
+        this.MaxCount = MaxCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,9 @@ public class DescribeDSPADiscoveryTaskResultResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.MaxCount != null) {
+            this.MaxCount = new Long(source.MaxCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class DescribeDSPADiscoveryTaskResultResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "MaxCount", this.MaxCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

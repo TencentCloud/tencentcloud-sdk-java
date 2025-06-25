@@ -59,6 +59,13 @@ public class DescribeNewestVulResponse extends AbstractModel {
     private String CVEID;
 
     /**
+    * 漏洞是否支持防御 0:不支持 1:支持
+    */
+    @SerializedName("SupportDefense")
+    @Expose
+    private Long SupportDefense;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +153,22 @@ public class DescribeNewestVulResponse extends AbstractModel {
     }
 
     /**
+     * Get 漏洞是否支持防御 0:不支持 1:支持 
+     * @return SupportDefense 漏洞是否支持防御 0:不支持 1:支持
+     */
+    public Long getSupportDefense() {
+        return this.SupportDefense;
+    }
+
+    /**
+     * Set 漏洞是否支持防御 0:不支持 1:支持
+     * @param SupportDefense 漏洞是否支持防御 0:不支持 1:支持
+     */
+    public void setSupportDefense(Long SupportDefense) {
+        this.SupportDefense = SupportDefense;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -184,6 +207,9 @@ public class DescribeNewestVulResponse extends AbstractModel {
         if (source.CVEID != null) {
             this.CVEID = new String(source.CVEID);
         }
+        if (source.SupportDefense != null) {
+            this.SupportDefense = new Long(source.SupportDefense);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -199,6 +225,7 @@ public class DescribeNewestVulResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SubmitTime", this.SubmitTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CVEID", this.CVEID);
+        this.setParamSimple(map, prefix + "SupportDefense", this.SupportDefense);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

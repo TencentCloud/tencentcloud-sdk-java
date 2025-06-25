@@ -59,6 +59,34 @@ public class MsgRecordReference extends AbstractModel {
     private String DocId;
 
     /**
+    * 知识库名称
+    */
+    @SerializedName("KnowledgeName")
+    @Expose
+    private String KnowledgeName;
+
+    /**
+    * 知识库业务id
+    */
+    @SerializedName("KnowledgeBizId")
+    @Expose
+    private String KnowledgeBizId;
+
+    /**
+    * 文档业务id
+    */
+    @SerializedName("DocBizId")
+    @Expose
+    private String DocBizId;
+
+    /**
+    * 问答业务id
+    */
+    @SerializedName("QaBizId")
+    @Expose
+    private String QaBizId;
+
+    /**
      * Get id 
      * @return Id id
      */
@@ -138,6 +166,70 @@ public class MsgRecordReference extends AbstractModel {
         this.DocId = DocId;
     }
 
+    /**
+     * Get 知识库名称 
+     * @return KnowledgeName 知识库名称
+     */
+    public String getKnowledgeName() {
+        return this.KnowledgeName;
+    }
+
+    /**
+     * Set 知识库名称
+     * @param KnowledgeName 知识库名称
+     */
+    public void setKnowledgeName(String KnowledgeName) {
+        this.KnowledgeName = KnowledgeName;
+    }
+
+    /**
+     * Get 知识库业务id 
+     * @return KnowledgeBizId 知识库业务id
+     */
+    public String getKnowledgeBizId() {
+        return this.KnowledgeBizId;
+    }
+
+    /**
+     * Set 知识库业务id
+     * @param KnowledgeBizId 知识库业务id
+     */
+    public void setKnowledgeBizId(String KnowledgeBizId) {
+        this.KnowledgeBizId = KnowledgeBizId;
+    }
+
+    /**
+     * Get 文档业务id 
+     * @return DocBizId 文档业务id
+     */
+    public String getDocBizId() {
+        return this.DocBizId;
+    }
+
+    /**
+     * Set 文档业务id
+     * @param DocBizId 文档业务id
+     */
+    public void setDocBizId(String DocBizId) {
+        this.DocBizId = DocBizId;
+    }
+
+    /**
+     * Get 问答业务id 
+     * @return QaBizId 问答业务id
+     */
+    public String getQaBizId() {
+        return this.QaBizId;
+    }
+
+    /**
+     * Set 问答业务id
+     * @param QaBizId 问答业务id
+     */
+    public void setQaBizId(String QaBizId) {
+        this.QaBizId = QaBizId;
+    }
+
     public MsgRecordReference() {
     }
 
@@ -161,6 +253,18 @@ public class MsgRecordReference extends AbstractModel {
         if (source.DocId != null) {
             this.DocId = new String(source.DocId);
         }
+        if (source.KnowledgeName != null) {
+            this.KnowledgeName = new String(source.KnowledgeName);
+        }
+        if (source.KnowledgeBizId != null) {
+            this.KnowledgeBizId = new String(source.KnowledgeBizId);
+        }
+        if (source.DocBizId != null) {
+            this.DocBizId = new String(source.DocBizId);
+        }
+        if (source.QaBizId != null) {
+            this.QaBizId = new String(source.QaBizId);
+        }
     }
 
 
@@ -173,6 +277,10 @@ public class MsgRecordReference extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DocId", this.DocId);
+        this.setParamSimple(map, prefix + "KnowledgeName", this.KnowledgeName);
+        this.setParamSimple(map, prefix + "KnowledgeBizId", this.KnowledgeBizId);
+        this.setParamSimple(map, prefix + "DocBizId", this.DocBizId);
+        this.setParamSimple(map, prefix + "QaBizId", this.QaBizId);
 
     }
 }

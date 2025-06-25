@@ -54,6 +54,20 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
     private Long RepurchaseRenewSwitch;
 
     /**
+    * 新增机器自动绑定rasp,0 关闭 1开启
+    */
+    @SerializedName("AutoBindRaspSwitch")
+    @Expose
+    private Long AutoBindRaspSwitch;
+
+    /**
+    * 新增机器自动开启rasp防护,默认关闭,0 关闭 1开启
+    */
+    @SerializedName("AutoOpenRaspSwitch")
+    @Expose
+    private Long AutoOpenRaspSwitch;
+
+    /**
      * Get 设置自动开通状态。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li> 
@@ -125,6 +139,38 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
         this.RepurchaseRenewSwitch = RepurchaseRenewSwitch;
     }
 
+    /**
+     * Get 新增机器自动绑定rasp,0 关闭 1开启 
+     * @return AutoBindRaspSwitch 新增机器自动绑定rasp,0 关闭 1开启
+     */
+    public Long getAutoBindRaspSwitch() {
+        return this.AutoBindRaspSwitch;
+    }
+
+    /**
+     * Set 新增机器自动绑定rasp,0 关闭 1开启
+     * @param AutoBindRaspSwitch 新增机器自动绑定rasp,0 关闭 1开启
+     */
+    public void setAutoBindRaspSwitch(Long AutoBindRaspSwitch) {
+        this.AutoBindRaspSwitch = AutoBindRaspSwitch;
+    }
+
+    /**
+     * Get 新增机器自动开启rasp防护,默认关闭,0 关闭 1开启 
+     * @return AutoOpenRaspSwitch 新增机器自动开启rasp防护,默认关闭,0 关闭 1开启
+     */
+    public Long getAutoOpenRaspSwitch() {
+        return this.AutoOpenRaspSwitch;
+    }
+
+    /**
+     * Set 新增机器自动开启rasp防护,默认关闭,0 关闭 1开启
+     * @param AutoOpenRaspSwitch 新增机器自动开启rasp防护,默认关闭,0 关闭 1开启
+     */
+    public void setAutoOpenRaspSwitch(Long AutoOpenRaspSwitch) {
+        this.AutoOpenRaspSwitch = AutoOpenRaspSwitch;
+    }
+
     public ModifyAutoOpenProVersionConfigRequest() {
     }
 
@@ -145,6 +191,12 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
         if (source.RepurchaseRenewSwitch != null) {
             this.RepurchaseRenewSwitch = new Long(source.RepurchaseRenewSwitch);
         }
+        if (source.AutoBindRaspSwitch != null) {
+            this.AutoBindRaspSwitch = new Long(source.AutoBindRaspSwitch);
+        }
+        if (source.AutoOpenRaspSwitch != null) {
+            this.AutoOpenRaspSwitch = new Long(source.AutoOpenRaspSwitch);
+        }
     }
 
 
@@ -156,6 +208,8 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
         this.setParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
         this.setParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
+        this.setParamSimple(map, prefix + "AutoBindRaspSwitch", this.AutoBindRaspSwitch);
+        this.setParamSimple(map, prefix + "AutoOpenRaspSwitch", this.AutoOpenRaspSwitch);
 
     }
 }

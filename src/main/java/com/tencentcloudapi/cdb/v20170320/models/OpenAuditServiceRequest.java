@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OpenAuditServiceRequest extends AbstractModel {
 
     /**
-    * CDB实例ID
+    * CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -32,22 +32,28 @@ public class OpenAuditServiceRequest extends AbstractModel {
 
     /**
     * 审计日志保存时长。支持值包括：
-7 - 一周
+7 - 一周；
 30 - 一个月；
 90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
-1825 - 五年；
+1825 - 五年。
     */
     @SerializedName("LogExpireDay")
     @Expose
     private Long LogExpireDay;
 
     /**
-    * 高频审计日志保存时长。支持值包括：
-7 - 一周
+    * 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
 30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
     */
     @SerializedName("HighLogExpireDay")
     @Expose
@@ -61,30 +67,30 @@ public class OpenAuditServiceRequest extends AbstractModel {
     private AuditRuleFilters [] AuditRuleFilters;
 
     /**
-    * 规则模板ID。同AuditRuleFilters都不填是全审计。
+    * 规则模板 ID。
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
 
     /**
-    * 审计类型。true-全审计；默认false-规则审计。
+    * 审计类型。true - 全审计；默认 false - 规则审计。
     */
     @SerializedName("AuditAll")
     @Expose
     private Boolean AuditAll;
 
     /**
-     * Get CDB实例ID 
-     * @return InstanceId CDB实例ID
+     * Get CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set CDB实例ID
-     * @param InstanceId CDB实例ID
+     * Set CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -92,21 +98,21 @@ public class OpenAuditServiceRequest extends AbstractModel {
 
     /**
      * Get 审计日志保存时长。支持值包括：
-7 - 一周
+7 - 一周；
 30 - 一个月；
 90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
-1825 - 五年； 
+1825 - 五年。 
      * @return LogExpireDay 审计日志保存时长。支持值包括：
-7 - 一周
+7 - 一周；
 30 - 一个月；
 90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
-1825 - 五年；
+1825 - 五年。
      */
     public Long getLogExpireDay() {
         return this.LogExpireDay;
@@ -114,45 +120,69 @@ public class OpenAuditServiceRequest extends AbstractModel {
 
     /**
      * Set 审计日志保存时长。支持值包括：
-7 - 一周
+7 - 一周；
 30 - 一个月；
 90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
-1825 - 五年；
+1825 - 五年。
      * @param LogExpireDay 审计日志保存时长。支持值包括：
-7 - 一周
+7 - 一周；
 30 - 一个月；
 90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
-1825 - 五年；
+1825 - 五年。
      */
     public void setLogExpireDay(Long LogExpireDay) {
         this.LogExpireDay = LogExpireDay;
     }
 
     /**
-     * Get 高频审计日志保存时长。支持值包括：
-7 - 一周
-30 - 一个月； 
-     * @return HighLogExpireDay 高频审计日志保存时长。支持值包括：
-7 - 一周
+     * Get 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
 30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。 
+     * @return HighLogExpireDay 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
     }
 
     /**
-     * Set 高频审计日志保存时长。支持值包括：
-7 - 一周
+     * Set 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
 30 - 一个月；
-     * @param HighLogExpireDay 高频审计日志保存时长。支持值包括：
-7 - 一周
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+     * @param HighLogExpireDay 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
 30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
@@ -179,32 +209,32 @@ public class OpenAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则模板ID。同AuditRuleFilters都不填是全审计。 
-     * @return RuleTemplateIds 规则模板ID。同AuditRuleFilters都不填是全审计。
+     * Get 规则模板 ID。 
+     * @return RuleTemplateIds 规则模板 ID。
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set 规则模板ID。同AuditRuleFilters都不填是全审计。
-     * @param RuleTemplateIds 规则模板ID。同AuditRuleFilters都不填是全审计。
+     * Set 规则模板 ID。
+     * @param RuleTemplateIds 规则模板 ID。
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
     }
 
     /**
-     * Get 审计类型。true-全审计；默认false-规则审计。 
-     * @return AuditAll 审计类型。true-全审计；默认false-规则审计。
+     * Get 审计类型。true - 全审计；默认 false - 规则审计。 
+     * @return AuditAll 审计类型。true - 全审计；默认 false - 规则审计。
      */
     public Boolean getAuditAll() {
         return this.AuditAll;
     }
 
     /**
-     * Set 审计类型。true-全审计；默认false-规则审计。
-     * @param AuditAll 审计类型。true-全审计；默认false-规则审计。
+     * Set 审计类型。true - 全审计；默认 false - 规则审计。
+     * @param AuditAll 审计类型。true - 全审计；默认 false - 规则审计。
      */
     public void setAuditAll(Boolean AuditAll) {
         this.AuditAll = AuditAll;

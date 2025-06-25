@@ -238,6 +238,13 @@ public class ScaleOutInstanceRequest extends AbstractModel {
     private ComputeResourceAdvanceParams ComputeResourceAdvanceParams;
 
     /**
+    * 节点标记信息，目前只提供tf平台使用
+    */
+    @SerializedName("NodeMarks")
+    @Expose
+    private NodeMark NodeMarks;
+
+    /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -745,6 +752,22 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         this.ComputeResourceAdvanceParams = ComputeResourceAdvanceParams;
     }
 
+    /**
+     * Get 节点标记信息，目前只提供tf平台使用 
+     * @return NodeMarks 节点标记信息，目前只提供tf平台使用
+     */
+    public NodeMark getNodeMarks() {
+        return this.NodeMarks;
+    }
+
+    /**
+     * Set 节点标记信息，目前只提供tf平台使用
+     * @param NodeMarks 节点标记信息，目前只提供tf平台使用
+     */
+    public void setNodeMarks(NodeMark NodeMarks) {
+        this.NodeMarks = NodeMarks;
+    }
+
     public ScaleOutInstanceRequest() {
     }
 
@@ -858,6 +881,9 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         if (source.ComputeResourceAdvanceParams != null) {
             this.ComputeResourceAdvanceParams = new ComputeResourceAdvanceParams(source.ComputeResourceAdvanceParams);
         }
+        if (source.NodeMarks != null) {
+            this.NodeMarks = new NodeMark(source.NodeMarks);
+        }
     }
 
 
@@ -894,6 +920,7 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
         this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
         this.setParamObj(map, prefix + "ComputeResourceAdvanceParams.", this.ComputeResourceAdvanceParams);
+        this.setParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
 
     }
 }

@@ -114,7 +114,7 @@ public class DomainsPartInfo extends AbstractModel {
     private Long IsCdn;
 
     /**
-    * 是否开启灰度，已废弃。
+    * 是否开启灰度。
     */
     @SerializedName("IsGray")
     @Expose
@@ -442,6 +442,13 @@ https：使用https协议回源
     private UpstreamRule [] UpstreamRules;
 
     /**
+    * 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+    */
+    @SerializedName("UseCase")
+    @Expose
+    private Long UseCase;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -670,17 +677,21 @@ https：使用https协议回源
     }
 
     /**
-     * Get 是否开启灰度，已废弃。 
-     * @return IsGray 是否开启灰度，已废弃。
+     * Get 是否开启灰度。 
+     * @return IsGray 是否开启灰度。
+     * @deprecated
      */
+    @Deprecated
     public Long getIsGray() {
         return this.IsGray;
     }
 
     /**
-     * Set 是否开启灰度，已废弃。
-     * @param IsGray 是否开启灰度，已废弃。
+     * Set 是否开启灰度。
+     * @param IsGray 是否开启灰度。
+     * @deprecated
      */
+    @Deprecated
     public void setIsGray(Long IsGray) {
         this.IsGray = IsGray;
     }
@@ -1477,6 +1488,22 @@ https：使用https协议回源
         this.UpstreamRules = UpstreamRules;
     }
 
+    /**
+     * Get 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景 
+     * @return UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     */
+    public Long getUseCase() {
+        return this.UseCase;
+    }
+
+    /**
+     * Set 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     * @param UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     */
+    public void setUseCase(Long UseCase) {
+        this.UseCase = UseCase;
+    }
+
     public DomainsPartInfo() {
     }
 
@@ -1665,6 +1692,9 @@ https：使用https协议回源
                 this.UpstreamRules[i] = new UpstreamRule(source.UpstreamRules[i]);
             }
         }
+        if (source.UseCase != null) {
+            this.UseCase = new Long(source.UseCase);
+        }
     }
 
 
@@ -1725,6 +1755,7 @@ https：使用https协议回源
         this.setParamSimple(map, prefix + "ProbeStatus", this.ProbeStatus);
         this.setParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
         this.setParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
+        this.setParamSimple(map, prefix + "UseCase", this.UseCase);
 
     }
 }

@@ -25,7 +25,6 @@ public class Volume extends AbstractModel {
 
     /**
     * 日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SendDate")
     @Expose
@@ -75,17 +74,14 @@ public class Volume extends AbstractModel {
 
     /**
     * 取消订阅的用户数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnsubscribeCount")
     @Expose
     private Long UnsubscribeCount;
 
     /**
-     * Get 日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日期 
      * @return SendDate 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSendDate() {
         return this.SendDate;
@@ -93,9 +89,7 @@ public class Volume extends AbstractModel {
 
     /**
      * Set 日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SendDate 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSendDate(String SendDate) {
         this.SendDate = SendDate;
@@ -198,10 +192,8 @@ public class Volume extends AbstractModel {
     }
 
     /**
-     * Get 取消订阅的用户数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 取消订阅的用户数量 
      * @return UnsubscribeCount 取消订阅的用户数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnsubscribeCount() {
         return this.UnsubscribeCount;
@@ -209,9 +201,7 @@ public class Volume extends AbstractModel {
 
     /**
      * Set 取消订阅的用户数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnsubscribeCount 取消订阅的用户数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnsubscribeCount(Long UnsubscribeCount) {
         this.UnsubscribeCount = UnsubscribeCount;

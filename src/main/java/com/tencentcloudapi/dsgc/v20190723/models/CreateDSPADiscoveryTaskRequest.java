@@ -144,6 +144,13 @@ selfbuilt-db 表示自建数据库
     private String GlobalOrderField;
 
     /**
+    * full:全量扫描 incre:变更扫描
+    */
+    @SerializedName("ScanRange")
+    @Expose
+    private String ScanRange;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -435,6 +442,22 @@ selfbuilt-db 表示自建数据库
         this.GlobalOrderField = GlobalOrderField;
     }
 
+    /**
+     * Get full:全量扫描 incre:变更扫描 
+     * @return ScanRange full:全量扫描 incre:变更扫描
+     */
+    public String getScanRange() {
+        return this.ScanRange;
+    }
+
+    /**
+     * Set full:全量扫描 incre:变更扫描
+     * @param ScanRange full:全量扫描 incre:变更扫描
+     */
+    public void setScanRange(String ScanRange) {
+        this.ScanRange = ScanRange;
+    }
+
     public CreateDSPADiscoveryTaskRequest() {
     }
 
@@ -494,6 +517,9 @@ selfbuilt-db 表示自建数据库
         if (source.GlobalOrderField != null) {
             this.GlobalOrderField = new String(source.GlobalOrderField);
         }
+        if (source.ScanRange != null) {
+            this.ScanRange = new String(source.ScanRange);
+        }
     }
 
 
@@ -517,6 +543,7 @@ selfbuilt-db 表示自建数据库
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "Rows", this.Rows);
         this.setParamSimple(map, prefix + "GlobalOrderField", this.GlobalOrderField);
+        this.setParamSimple(map, prefix + "ScanRange", this.ScanRange);
 
     }
 }

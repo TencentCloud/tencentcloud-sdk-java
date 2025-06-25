@@ -52,6 +52,13 @@ public class DescribeDSPADiscoveryTaskTablesRequest extends AbstractModel {
     private String DbName;
 
     /**
+    * 任务扫描id
+    */
+    @SerializedName("ScanResultId")
+    @Expose
+    private Long ScanResultId;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -86,7 +93,9 @@ public class DescribeDSPADiscoveryTaskTablesRequest extends AbstractModel {
     /**
      * Get 数据库扫描结果ID 
      * @return DbResultId 数据库扫描结果ID
+     * @deprecated
      */
+    @Deprecated
     public Long getDbResultId() {
         return this.DbResultId;
     }
@@ -94,7 +103,9 @@ public class DescribeDSPADiscoveryTaskTablesRequest extends AbstractModel {
     /**
      * Set 数据库扫描结果ID
      * @param DbResultId 数据库扫描结果ID
+     * @deprecated
      */
+    @Deprecated
     public void setDbResultId(Long DbResultId) {
         this.DbResultId = DbResultId;
     }
@@ -113,6 +124,22 @@ public class DescribeDSPADiscoveryTaskTablesRequest extends AbstractModel {
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
+    }
+
+    /**
+     * Get 任务扫描id 
+     * @return ScanResultId 任务扫描id
+     */
+    public Long getScanResultId() {
+        return this.ScanResultId;
+    }
+
+    /**
+     * Set 任务扫描id
+     * @param ScanResultId 任务扫描id
+     */
+    public void setScanResultId(Long ScanResultId) {
+        this.ScanResultId = ScanResultId;
     }
 
     public DescribeDSPADiscoveryTaskTablesRequest() {
@@ -135,6 +162,9 @@ public class DescribeDSPADiscoveryTaskTablesRequest extends AbstractModel {
         if (source.DbName != null) {
             this.DbName = new String(source.DbName);
         }
+        if (source.ScanResultId != null) {
+            this.ScanResultId = new Long(source.ScanResultId);
+        }
     }
 
 
@@ -146,6 +176,7 @@ public class DescribeDSPADiscoveryTaskTablesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "DbResultId", this.DbResultId);
         this.setParamSimple(map, prefix + "DbName", this.DbName);
+        this.setParamSimple(map, prefix + "ScanResultId", this.ScanResultId);
 
     }
 }

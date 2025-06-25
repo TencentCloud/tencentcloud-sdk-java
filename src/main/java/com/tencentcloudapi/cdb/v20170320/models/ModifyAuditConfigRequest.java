@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyAuditConfigRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,8 +45,10 @@ public class ModifyAuditConfigRequest extends AbstractModel {
 
     /**
     * 是否关闭审计服务。可选值：true - 关闭审计服务；false - 不关闭审计服务。默认值为 false。
-当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
-CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按照CloseAudit优先的逻辑处理。
+说明：
+1. 当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
+2. CloseAudit、LogExpireDay 必须至少提供一个，如果两个都提供则按照 CloseAudit 优先的逻辑处理。
+3. 可通过设置此参数来关闭审计服务，已关闭后不能通过此接口来开启审计服务。
     */
     @SerializedName("CloseAudit")
     @Expose
@@ -66,16 +68,16 @@ CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按�
     private Long HighLogExpireDay;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -123,11 +125,15 @@ CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按�
 
     /**
      * Get 是否关闭审计服务。可选值：true - 关闭审计服务；false - 不关闭审计服务。默认值为 false。
-当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
-CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按照CloseAudit优先的逻辑处理。 
+说明：
+1. 当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
+2. CloseAudit、LogExpireDay 必须至少提供一个，如果两个都提供则按照 CloseAudit 优先的逻辑处理。
+3. 可通过设置此参数来关闭审计服务，已关闭后不能通过此接口来开启审计服务。 
      * @return CloseAudit 是否关闭审计服务。可选值：true - 关闭审计服务；false - 不关闭审计服务。默认值为 false。
-当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
-CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按照CloseAudit优先的逻辑处理。
+说明：
+1. 当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
+2. CloseAudit、LogExpireDay 必须至少提供一个，如果两个都提供则按照 CloseAudit 优先的逻辑处理。
+3. 可通过设置此参数来关闭审计服务，已关闭后不能通过此接口来开启审计服务。
      */
     public Boolean getCloseAudit() {
         return this.CloseAudit;
@@ -135,11 +141,15 @@ CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按�
 
     /**
      * Set 是否关闭审计服务。可选值：true - 关闭审计服务；false - 不关闭审计服务。默认值为 false。
-当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
-CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按照CloseAudit优先的逻辑处理。
+说明：
+1. 当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
+2. CloseAudit、LogExpireDay 必须至少提供一个，如果两个都提供则按照 CloseAudit 优先的逻辑处理。
+3. 可通过设置此参数来关闭审计服务，已关闭后不能通过此接口来开启审计服务。
      * @param CloseAudit 是否关闭审计服务。可选值：true - 关闭审计服务；false - 不关闭审计服务。默认值为 false。
-当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
-CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按照CloseAudit优先的逻辑处理。
+说明：
+1. 当关闭审计服务时，会删除用户的审计日志和文件，并删除该实例的所有审计策略。
+2. CloseAudit、LogExpireDay 必须至少提供一个，如果两个都提供则按照 CloseAudit 优先的逻辑处理。
+3. 可通过设置此参数来关闭审计服务，已关闭后不能通过此接口来开启审计服务。
      */
     public void setCloseAudit(Boolean CloseAudit) {
         this.CloseAudit = CloseAudit;

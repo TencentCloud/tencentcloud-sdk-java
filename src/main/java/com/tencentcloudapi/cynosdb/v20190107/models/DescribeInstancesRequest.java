@@ -91,6 +91,13 @@ offlined 已下线
     private String [] InstanceIds;
 
     /**
+    * 集群类型，取值范围<li> CYNOSDB：事务集群 </li><li> LIBRADB：分析集群 </li><li> ALL：全部 </li>，缺省为 ALL
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
      * Get 返回数量，默认为 20，取值范围为(0,100] 
      * @return Limit 返回数量，默认为 20，取值范围为(0,100]
      */
@@ -262,6 +269,22 @@ offlined 已下线
         this.InstanceIds = InstanceIds;
     }
 
+    /**
+     * Get 集群类型，取值范围<li> CYNOSDB：事务集群 </li><li> LIBRADB：分析集群 </li><li> ALL：全部 </li>，缺省为 ALL 
+     * @return ClusterType 集群类型，取值范围<li> CYNOSDB：事务集群 </li><li> LIBRADB：分析集群 </li><li> ALL：全部 </li>，缺省为 ALL
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型，取值范围<li> CYNOSDB：事务集群 </li><li> LIBRADB：分析集群 </li><li> ALL：全部 </li>，缺省为 ALL
+     * @param ClusterType 集群类型，取值范围<li> CYNOSDB：事务集群 </li><li> LIBRADB：分析集群 </li><li> ALL：全部 </li>，缺省为 ALL
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -300,6 +323,9 @@ offlined 已下线
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -315,6 +341,7 @@ offlined 已下线
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

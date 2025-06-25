@@ -87,16 +87,18 @@ DELETING，删除中
     private Long GroupNumLimit;
 
     /**
-    * 计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月
+    * 计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 到期时间，秒为单位
+    * 到期时间戳，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiryTime")
@@ -142,7 +144,6 @@ PREPAID，包年包月
 
     /**
     * TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TpsLimit")
     @Expose
@@ -150,7 +151,6 @@ PREPAID，包年包月
 
     /**
     * 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaledTpsLimit")
     @Expose
@@ -158,7 +158,6 @@ PREPAID，包年包月
 
     /**
     * 消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageRetention")
     @Expose
@@ -166,15 +165,13 @@ PREPAID，包年包月
 
     /**
     * 延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMessageDelay")
     @Expose
     private Long MaxMessageDelay;
 
     /**
-    * 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
+    * 是否自动续费，仅针对预付费集群（0: 不自动续费；1:自动续费）
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -349,33 +346,41 @@ DELETING，删除中
     }
 
     /**
-     * Get 计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月 
-     * @return PayMode 计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月
+     * Get 计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月 
+     * @return PayMode 计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月
-     * @param PayMode 计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月
+     * Set 计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月
+     * @param PayMode 计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 到期时间，秒为单位
+     * Get 到期时间戳，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpiryTime 到期时间，秒为单位
+     * @return ExpiryTime 到期时间戳，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpiryTime() {
@@ -383,9 +388,9 @@ PREPAID，包年包月
     }
 
     /**
-     * Set 到期时间，秒为单位
+     * Set 到期时间戳，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpiryTime 到期时间，秒为单位
+     * @param ExpiryTime 到期时间戳，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiryTime(Long ExpiryTime) {
@@ -481,10 +486,8 @@ PREPAID，包年包月
     }
 
     /**
-     * Get TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TPS限流值 
      * @return TpsLimit TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTpsLimit() {
         return this.TpsLimit;
@@ -492,19 +495,15 @@ PREPAID，包年包月
 
     /**
      * Set TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TpsLimit TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTpsLimit(Long TpsLimit) {
         this.TpsLimit = TpsLimit;
     }
 
     /**
-     * Get 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性TPS限流值 
      * @return ScaledTpsLimit 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScaledTpsLimit() {
         return this.ScaledTpsLimit;
@@ -512,19 +511,15 @@ PREPAID，包年包月
 
     /**
      * Set 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScaledTpsLimit 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaledTpsLimit(Long ScaledTpsLimit) {
         this.ScaledTpsLimit = ScaledTpsLimit;
     }
 
     /**
-     * Get 消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息保留时间，小时为单位 
      * @return MessageRetention 消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMessageRetention() {
         return this.MessageRetention;
@@ -532,19 +527,15 @@ PREPAID，包年包月
 
     /**
      * Set 消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageRetention 消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageRetention(Long MessageRetention) {
         this.MessageRetention = MessageRetention;
     }
 
     /**
-     * Get 延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 延迟消息最大时长，小时为单位 
      * @return MaxMessageDelay 延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMessageDelay() {
         return this.MaxMessageDelay;
@@ -552,29 +543,23 @@ PREPAID，包年包月
 
     /**
      * Set 延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxMessageDelay 延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMessageDelay(Long MaxMessageDelay) {
         this.MaxMessageDelay = MaxMessageDelay;
     }
 
     /**
-     * Get 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RenewFlag 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否自动续费，仅针对预付费集群（0: 不自动续费；1:自动续费） 
+     * @return RenewFlag 是否自动续费，仅针对预付费集群（0: 不自动续费；1:自动续费）
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RenewFlag 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 是否自动续费，仅针对预付费集群（0: 不自动续费；1:自动续费）
+     * @param RenewFlag 是否自动续费，仅针对预付费集群（0: 不自动续费；1:自动续费）
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;

@@ -24,10 +24,13 @@ import java.util.HashMap;
 public class Endpoint extends AbstractModel {
 
     /**
-    * 接入点类型，枚举值如下
-VPC: VPC;
-PUBLIC: 公网;
-INTERNAL: 支撑网;
+    * 接入点类型，枚举值如下：
+
+- VPC：VPC 网络
+
+- PUBLIC：公网
+
+- INTERNAL：支撑网
     */
     @SerializedName("Type")
     @Expose
@@ -102,28 +105,40 @@ POSTPAID 按量付费
     private Boolean BillingFlow;
 
     /**
-     * Get 接入点类型，枚举值如下
-VPC: VPC;
-PUBLIC: 公网;
-INTERNAL: 支撑网; 
-     * @return Type 接入点类型，枚举值如下
-VPC: VPC;
-PUBLIC: 公网;
-INTERNAL: 支撑网;
+     * Get 接入点类型，枚举值如下：
+
+- VPC：VPC 网络
+
+- PUBLIC：公网
+
+- INTERNAL：支撑网 
+     * @return Type 接入点类型，枚举值如下：
+
+- VPC：VPC 网络
+
+- PUBLIC：公网
+
+- INTERNAL：支撑网
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 接入点类型，枚举值如下
-VPC: VPC;
-PUBLIC: 公网;
-INTERNAL: 支撑网;
-     * @param Type 接入点类型，枚举值如下
-VPC: VPC;
-PUBLIC: 公网;
-INTERNAL: 支撑网;
+     * Set 接入点类型，枚举值如下：
+
+- VPC：VPC 网络
+
+- PUBLIC：公网
+
+- INTERNAL：支撑网
+     * @param Type 接入点类型，枚举值如下：
+
+- VPC：VPC 网络
+
+- PUBLIC：公网
+
+- INTERNAL：支撑网
      */
     public void setType(String Type) {
         this.Type = Type;

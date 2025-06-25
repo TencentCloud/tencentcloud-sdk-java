@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyInstanceRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * 实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 备注信息
+    * 备注信息，最多 128 个字符
     */
     @SerializedName("Remark")
     @Expose
@@ -52,14 +52,18 @@ public class ModifyInstanceRequest extends AbstractModel {
     private Float SendReceiveRatio;
 
     /**
-    * 调整实例规格的商品代号
+    * 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
     */
     @SerializedName("SkuCode")
     @Expose
     private String SkuCode;
 
     /**
-    * 消息保留时长，小时为单位
+    * 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数
     */
     @SerializedName("MessageRetention")
     @Expose
@@ -80,14 +84,17 @@ public class ModifyInstanceRequest extends AbstractModel {
     private Boolean AclEnabled;
 
     /**
-    * 最大可创建主题数
+    * 最大可创建主题数，取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 最小值和默认值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数
     */
     @SerializedName("MaxTopicNum")
     @Expose
     private Long MaxTopicNum;
 
     /**
-    * 免费额度之外的主题个数
+    * 免费额度之外的主题个数，免费额度参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参中的 TopicNumLimit 参数。
     */
     @SerializedName("ExtraTopicNum")
     @Expose
@@ -101,48 +108,48 @@ public class ModifyInstanceRequest extends AbstractModel {
     private Boolean EnableDeletionProtection;
 
     /**
-     * Get 集群ID 
-     * @return InstanceId 集群ID
+     * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。 
+     * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群ID
-     * @param InstanceId 集群ID
+     * Set 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return Name 实例名称
+     * Get 实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_” 
+     * @return Name 实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例名称
-     * @param Name 实例名称
+     * Set 实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”
+     * @param Name 实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 备注信息 
-     * @return Remark 备注信息
+     * Get 备注信息，最多 128 个字符 
+     * @return Remark 备注信息，最多 128 个字符
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息
-     * @param Remark 备注信息
+     * Set 备注信息，最多 128 个字符
+     * @param Remark 备注信息，最多 128 个字符
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -165,32 +172,48 @@ public class ModifyInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 调整实例规格的商品代号 
-     * @return SkuCode 调整实例规格的商品代号
+     * Get 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。 
+     * @return SkuCode 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
      */
     public String getSkuCode() {
         return this.SkuCode;
     }
 
     /**
-     * Set 调整实例规格的商品代号
-     * @param SkuCode 调整实例规格的商品代号
+     * Set 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
+     * @param SkuCode 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
      */
     public void setSkuCode(String SkuCode) {
         this.SkuCode = SkuCode;
     }
 
     /**
-     * Get 消息保留时长，小时为单位 
-     * @return MessageRetention 消息保留时长，小时为单位
+     * Get 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数 
+     * @return MessageRetention 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数
      */
     public Long getMessageRetention() {
         return this.MessageRetention;
     }
 
     /**
-     * Set 消息保留时长，小时为单位
-     * @param MessageRetention 消息保留时长，小时为单位
+     * Set 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数
+     * @param MessageRetention 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数
      */
     public void setMessageRetention(Long MessageRetention) {
         this.MessageRetention = MessageRetention;
@@ -229,32 +252,44 @@ public class ModifyInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 最大可创建主题数 
-     * @return MaxTopicNum 最大可创建主题数
+     * Get 最大可创建主题数，取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 最小值和默认值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数 
+     * @return MaxTopicNum 最大可创建主题数，取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 最小值和默认值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数
      */
     public Long getMaxTopicNum() {
         return this.MaxTopicNum;
     }
 
     /**
-     * Set 最大可创建主题数
-     * @param MaxTopicNum 最大可创建主题数
+     * Set 最大可创建主题数，取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 最小值和默认值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数
+     * @param MaxTopicNum 最大可创建主题数，取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 最小值和默认值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数
      */
     public void setMaxTopicNum(Long MaxTopicNum) {
         this.MaxTopicNum = MaxTopicNum;
     }
 
     /**
-     * Get 免费额度之外的主题个数 
-     * @return ExtraTopicNum 免费额度之外的主题个数
+     * Get 免费额度之外的主题个数，免费额度参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参中的 TopicNumLimit 参数。 
+     * @return ExtraTopicNum 免费额度之外的主题个数，免费额度参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参中的 TopicNumLimit 参数。
      */
     public String getExtraTopicNum() {
         return this.ExtraTopicNum;
     }
 
     /**
-     * Set 免费额度之外的主题个数
-     * @param ExtraTopicNum 免费额度之外的主题个数
+     * Set 免费额度之外的主题个数，免费额度参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参中的 TopicNumLimit 参数。
+     * @param ExtraTopicNum 免费额度之外的主题个数，免费额度参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参中的 TopicNumLimit 参数。
      */
     public void setExtraTopicNum(String ExtraTopicNum) {
         this.ExtraTopicNum = ExtraTopicNum;

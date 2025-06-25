@@ -52,6 +52,20 @@ public class VulEmergentMsgInfo extends AbstractModel {
     private String NameEn;
 
     /**
+    * 是否支持自动修复 0:不支持 >0: 支持
+    */
+    @SerializedName("SupportFix")
+    @Expose
+    private Long SupportFix;
+
+    /**
+    * 是否支持自动防御 0:不支持 1:支持
+    */
+    @SerializedName("SupportDefense")
+    @Expose
+    private Long SupportDefense;
+
+    /**
      * Get 漏洞id 
      * @return VulId 漏洞id
      */
@@ -115,6 +129,38 @@ public class VulEmergentMsgInfo extends AbstractModel {
         this.NameEn = NameEn;
     }
 
+    /**
+     * Get 是否支持自动修复 0:不支持 >0: 支持 
+     * @return SupportFix 是否支持自动修复 0:不支持 >0: 支持
+     */
+    public Long getSupportFix() {
+        return this.SupportFix;
+    }
+
+    /**
+     * Set 是否支持自动修复 0:不支持 >0: 支持
+     * @param SupportFix 是否支持自动修复 0:不支持 >0: 支持
+     */
+    public void setSupportFix(Long SupportFix) {
+        this.SupportFix = SupportFix;
+    }
+
+    /**
+     * Get 是否支持自动防御 0:不支持 1:支持 
+     * @return SupportDefense 是否支持自动防御 0:不支持 1:支持
+     */
+    public Long getSupportDefense() {
+        return this.SupportDefense;
+    }
+
+    /**
+     * Set 是否支持自动防御 0:不支持 1:支持
+     * @param SupportDefense 是否支持自动防御 0:不支持 1:支持
+     */
+    public void setSupportDefense(Long SupportDefense) {
+        this.SupportDefense = SupportDefense;
+    }
+
     public VulEmergentMsgInfo() {
     }
 
@@ -135,6 +181,12 @@ public class VulEmergentMsgInfo extends AbstractModel {
         if (source.NameEn != null) {
             this.NameEn = new String(source.NameEn);
         }
+        if (source.SupportFix != null) {
+            this.SupportFix = new Long(source.SupportFix);
+        }
+        if (source.SupportDefense != null) {
+            this.SupportDefense = new Long(source.SupportDefense);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class VulEmergentMsgInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PublishTime", this.PublishTime);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "NameEn", this.NameEn);
+        this.setParamSimple(map, prefix + "SupportFix", this.SupportFix);
+        this.setParamSimple(map, prefix + "SupportDefense", this.SupportDefense);
 
     }
 }

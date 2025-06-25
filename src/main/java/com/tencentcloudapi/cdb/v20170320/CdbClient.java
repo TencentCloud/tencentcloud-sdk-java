@@ -50,7 +50,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *调整数据库代理配置
+     *本接口（AdjustCdbProxy）用于调整数据库代理配置。
      * @param req AdjustCdbProxyRequest
      * @return AdjustCdbProxyResponse
      * @throws TencentCloudSDKException
@@ -138,7 +138,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *请求关闭数据库代理地址
+     *本接口（CloseCdbProxyAddress）用于请求关闭数据库代理地址。
      * @param req CloseCdbProxyAddressRequest
      * @return CloseCdbProxyAddressResponse
      * @throws TencentCloudSDKException
@@ -149,7 +149,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *关闭SSL连接功能。
+     *本接口（CloseSSL）用于关闭 SSL 连接功能。
      * @param req CloseSSLRequest
      * @return CloseSSLResponse
      * @throws TencentCloudSDKException
@@ -343,7 +343,8 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *该接口（CreateParamTemplate）用于创建参数模板，全地域公共参数 Region 均为 ap-guangzhou。
+     *该接口（CreateParamTemplate）用于创建参数模板。
+说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -466,7 +467,8 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *该接口（DeleteParamTemplate）用于删除参数模板，全地域公共参数 Region 均为 ap-guangzhou。
+     *该接口（DeleteParamTemplate）用于删除参数模板。
+说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
      * @param req DeleteParamTemplateRequest
      * @return DeleteParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -499,7 +501,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeAccountPrivileges)用于查询云数据库账户支持的权限信息。
+     *本接口（DescribeAccountPrivileges）用于查询云数据库账户支持的权限信息。
      * @param req DescribeAccountPrivilegesRequest
      * @return DescribeAccountPrivilegesResponse
      * @throws TencentCloudSDKException
@@ -1065,7 +1067,8 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *该接口（DescribeParamTemplates）查询参数模板列表，全地域公共参数Region均为ap-guangzhou。
+     *该接口（DescribeParamTemplates）查询参数模板列表。
+说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
      * @param req DescribeParamTemplatesRequest
      * @return DescribeParamTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1098,7 +1101,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *查询实例支持代理版本和参数
+     *本接口（DescribeProxySupportParam）用于查询实例支持代理版本和参数。
      * @param req DescribeProxySupportParamRequest
      * @return DescribeProxySupportParamResponse
      * @throws TencentCloudSDKException
@@ -1456,7 +1459,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *修改代理地址描述信息
+     *本接口（ModifyCdbProxyAddressDesc）用于修改代理地址描述信息。
      * @param req ModifyCdbProxyAddressDescRequest
      * @return ModifyCdbProxyAddressDescResponse
      * @throws TencentCloudSDKException
@@ -1467,7 +1470,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *修改数据库代理地址VPC信息
+     *本接口（ModifyCdbProxyAddressVipAndVPort）用于修改数据库代理地址VPC信息。
      * @param req ModifyCdbProxyAddressVipAndVPortRequest
      * @return ModifyCdbProxyAddressVipAndVPortResponse
      * @throws TencentCloudSDKException
@@ -1478,7 +1481,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *配置数据库代理参数
+     *本接口（ModifyCdbProxyParam）用于配置数据库代理参数。
      * @param req ModifyCdbProxyParamRequest
      * @return ModifyCdbProxyParamResponse
      * @throws TencentCloudSDKException
@@ -1610,7 +1613,8 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *该接口（ModifyParamTemplate）用于修改参数模板，全地域公共参数Region均为ap-guangzhou。
+     *该接口（ModifyParamTemplate）用于修改参数模板。
+说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
      * @param req ModifyParamTemplateRequest
      * @return ModifyParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -1681,7 +1685,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *CDB实例开通审计服务
+     *本接口（OpenAuditService）用 CDB 实例开通审计服务。
      * @param req OpenAuditServiceRequest
      * @return OpenAuditServiceResponse
      * @throws TencentCloudSDKException
@@ -1701,8 +1705,9 @@ public class CdbClient extends AbstractClient{
 2、开启 [KMS服务](https://console.cloud.tencent.com/kms2)；
 
 3、对云数据库(MySQL)[授予访问KMS密钥的权限](https://console.cloud.tencent.com/cam/role)，角色名为MySQL_QCSRole，预设策略名为QcloudAccessForMySQLRole；
+4、开启加密后不允许关闭。
 
-该 API 耗时可能到10s，客户端可能超时，如果调用 API 返回 InternalError ，请您调用DescribeDBInstanceInfo 确认后端加密是否开通成功。
+该 API 耗时可能到10s，客户端可能超时，如果调用 API 返回 InternalError ，请您调用 [DescribeDBInstanceInfo](https://cloud.tencent.com/document/product/236/44160) 确认后端加密是否开通成功，调用后参数 Encryption 为 YES 表示已开通成功。
      * @param req OpenDBInstanceEncryptionRequest
      * @return OpenDBInstanceEncryptionResponse
      * @throws TencentCloudSDKException
@@ -1724,7 +1729,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *开启SSL连接功能。
+     *本接口（OpenSSL）用于开启 SSL 连接功能。
      * @param req OpenSSLRequest
      * @return OpenSSLResponse
      * @throws TencentCloudSDKException
@@ -1862,7 +1867,8 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(StopDBImportJob)用于终止数据导入任务。
+     *本接口（StopDBImportJob）用于终止数据导入任务。
+说明：只有未完成的导入任务支持被终止，且终止后已执行的 SQL 部分会被保留。
      * @param req StopDBImportJobRequest
      * @return StopDBImportJobResponse
      * @throws TencentCloudSDKException
@@ -1906,7 +1912,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *数据库代理配置变更或则升级版本后手动发起立即切换
+     *本接口（SwitchCDBProxy）用于数据库代理配置变更或者升级版本后手动发起立即切换。
      * @param req SwitchCDBProxyRequest
      * @return SwitchCDBProxyResponse
      * @throws TencentCloudSDKException
@@ -1950,7 +1956,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *升级数据库代理版本
+     *本接口（UpgradeCDBProxyVersion）用于升级数据库代理版本。
      * @param req UpgradeCDBProxyVersionRequest
      * @return UpgradeCDBProxyVersionResponse
      * @throws TencentCloudSDKException
@@ -1961,7 +1967,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(UpgradeDBInstance)用于升级或降级云数据库实例的配置，实例类型支持主实例、灾备实例和只读实例。如果进行迁移业务，请一定填写实例规格（CPU、内存），不然系统会默认以最小允许规格传参。
+     *本接口（UpgradeDBInstance）用于升级或降级云数据库实例的配置，实例类型支持主实例、灾备实例和只读实例。如果进行迁移业务，请一定填写实例规格（CPU、内存），不然系统会默认以最小允许规格传参。
      * @param req UpgradeDBInstanceRequest
      * @return UpgradeDBInstanceResponse
      * @throws TencentCloudSDKException

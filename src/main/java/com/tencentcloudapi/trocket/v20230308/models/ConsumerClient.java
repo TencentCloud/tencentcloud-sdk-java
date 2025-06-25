@@ -60,7 +60,12 @@ public class ConsumerClient extends AbstractModel {
     private Long ConsumerLag;
 
     /**
-    * 消费者客户端类型（grpc；remoting；http）
+    * 消费者客户端类型，枚举值如下：
+
+- grpc：GRPC协议
+- remoting：Remoting协议
+- http：HTTP协议
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelProtocol")
     @Expose
@@ -151,16 +156,36 @@ public class ConsumerClient extends AbstractModel {
     }
 
     /**
-     * Get 消费者客户端类型（grpc；remoting；http） 
-     * @return ChannelProtocol 消费者客户端类型（grpc；remoting；http）
+     * Get 消费者客户端类型，枚举值如下：
+
+- grpc：GRPC协议
+- remoting：Remoting协议
+- http：HTTP协议
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelProtocol 消费者客户端类型，枚举值如下：
+
+- grpc：GRPC协议
+- remoting：Remoting协议
+- http：HTTP协议
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelProtocol() {
         return this.ChannelProtocol;
     }
 
     /**
-     * Set 消费者客户端类型（grpc；remoting；http）
-     * @param ChannelProtocol 消费者客户端类型（grpc；remoting；http）
+     * Set 消费者客户端类型，枚举值如下：
+
+- grpc：GRPC协议
+- remoting：Remoting协议
+- http：HTTP协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelProtocol 消费者客户端类型，枚举值如下：
+
+- grpc：GRPC协议
+- remoting：Remoting协议
+- http：HTTP协议
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelProtocol(String ChannelProtocol) {
         this.ChannelProtocol = ChannelProtocol;

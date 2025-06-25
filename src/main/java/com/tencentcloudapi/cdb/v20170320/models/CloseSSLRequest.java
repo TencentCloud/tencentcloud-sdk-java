@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CloseSSLRequest extends AbstractModel {
 
     /**
-    * 实例 ID 。只读组 ID为空时必填。
+    * 实例 ID。只读组 ID 为空时必填。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 只读组 ID。实例 ID为空时必填。
+    * 只读组 ID。实例 ID 为空时必填。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。
     */
     @SerializedName("RoGroupId")
     @Expose
     private String RoGroupId;
 
     /**
-     * Get 实例 ID 。只读组 ID为空时必填。 
-     * @return InstanceId 实例 ID 。只读组 ID为空时必填。
+     * Get 实例 ID。只读组 ID 为空时必填。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。只读组 ID 为空时必填。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID 。只读组 ID为空时必填。
-     * @param InstanceId 实例 ID 。只读组 ID为空时必填。
+     * Set 实例 ID。只读组 ID 为空时必填。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。只读组 ID 为空时必填。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 只读组 ID。实例 ID为空时必填。 
-     * @return RoGroupId 只读组 ID。实例 ID为空时必填。
+     * Get 只读组 ID。实例 ID 为空时必填。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。 
+     * @return RoGroupId 只读组 ID。实例 ID 为空时必填。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。
      */
     public String getRoGroupId() {
         return this.RoGroupId;
     }
 
     /**
-     * Set 只读组 ID。实例 ID为空时必填。
-     * @param RoGroupId 只读组 ID。实例 ID为空时必填。
+     * Set 只读组 ID。实例 ID 为空时必填。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。
+     * @param RoGroupId 只读组 ID。实例 ID 为空时必填。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。
      */
     public void setRoGroupId(String RoGroupId) {
         this.RoGroupId = RoGroupId;

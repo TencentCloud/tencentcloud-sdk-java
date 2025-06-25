@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AdjustCdbProxyAddressRequest extends AbstractModel {
 
     /**
-    * 代理组ID
+    * 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -46,14 +46,15 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
     private Boolean IsKickOut;
 
     /**
-    * 最小保留数量，最小取值：0
+    * 最小保留数量，最小取值：0。
+说明：当 IsKickOut 为 true 时才有效。
     */
     @SerializedName("MinCount")
     @Expose
     private Long MinCount;
 
     /**
-    * 延迟剔除阈值，最小取值：0
+    * 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
     */
     @SerializedName("MaxDelay")
     @Expose
@@ -81,21 +82,21 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
     private Boolean ReadOnly;
 
     /**
-    * 代理组地址ID
+    * 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
     */
     @SerializedName("ProxyAddressId")
     @Expose
     private String ProxyAddressId;
 
     /**
-    * 是否开启事务分离，取值："true" | "false"
+    * 是否开启事务分离，取值："true" | "false"，默认值 false。
     */
     @SerializedName("TransSplit")
     @Expose
     private Boolean TransSplit;
 
     /**
-    * 是否开启连接池
+    * 是否开启连接池。默认关闭。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
     */
     @SerializedName("ConnectionPool")
@@ -110,30 +111,30 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
     private ProxyAllocation [] ProxyAllocation;
 
     /**
-    * 是否开启自适应负载均衡
+    * 是否开启自适应负载均衡。默认关闭。
     */
     @SerializedName("AutoLoadBalance")
     @Expose
     private Boolean AutoLoadBalance;
 
     /**
-    * 访问模式：就近访问，均衡分配
+    * 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-     * Get 代理组ID 
-     * @return ProxyGroupId 代理组ID
+     * Get 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
+     * @return ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set 代理组ID
-     * @param ProxyGroupId 代理组ID
+     * Set 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
@@ -176,32 +177,36 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get 最小保留数量，最小取值：0 
-     * @return MinCount 最小保留数量，最小取值：0
+     * Get 最小保留数量，最小取值：0。
+说明：当 IsKickOut 为 true 时才有效。 
+     * @return MinCount 最小保留数量，最小取值：0。
+说明：当 IsKickOut 为 true 时才有效。
      */
     public Long getMinCount() {
         return this.MinCount;
     }
 
     /**
-     * Set 最小保留数量，最小取值：0
-     * @param MinCount 最小保留数量，最小取值：0
+     * Set 最小保留数量，最小取值：0。
+说明：当 IsKickOut 为 true 时才有效。
+     * @param MinCount 最小保留数量，最小取值：0。
+说明：当 IsKickOut 为 true 时才有效。
      */
     public void setMinCount(Long MinCount) {
         this.MinCount = MinCount;
     }
 
     /**
-     * Get 延迟剔除阈值，最小取值：0 
-     * @return MaxDelay 延迟剔除阈值，最小取值：0
+     * Get 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。 
+     * @return MaxDelay 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
      */
     public Long getMaxDelay() {
         return this.MaxDelay;
     }
 
     /**
-     * Set 延迟剔除阈值，最小取值：0
-     * @param MaxDelay 延迟剔除阈值，最小取值：0
+     * Set 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
+     * @param MaxDelay 延迟剔除阈值，最小取值：1，取值范围：[1,10000]，整数。
      */
     public void setMaxDelay(Long MaxDelay) {
         this.MaxDelay = MaxDelay;
@@ -256,41 +261,41 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get 代理组地址ID 
-     * @return ProxyAddressId 代理组地址ID
+     * Get 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
+     * @return ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public String getProxyAddressId() {
         return this.ProxyAddressId;
     }
 
     /**
-     * Set 代理组地址ID
-     * @param ProxyAddressId 代理组地址ID
+     * Set 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public void setProxyAddressId(String ProxyAddressId) {
         this.ProxyAddressId = ProxyAddressId;
     }
 
     /**
-     * Get 是否开启事务分离，取值："true" | "false" 
-     * @return TransSplit 是否开启事务分离，取值："true" | "false"
+     * Get 是否开启事务分离，取值："true" | "false"，默认值 false。 
+     * @return TransSplit 是否开启事务分离，取值："true" | "false"，默认值 false。
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set 是否开启事务分离，取值："true" | "false"
-     * @param TransSplit 是否开启事务分离，取值："true" | "false"
+     * Set 是否开启事务分离，取值："true" | "false"，默认值 false。
+     * @param TransSplit 是否开启事务分离，取值："true" | "false"，默认值 false。
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get 是否开启连接池
+     * Get 是否开启连接池。默认关闭。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。 
-     * @return ConnectionPool 是否开启连接池
+     * @return ConnectionPool 是否开启连接池。默认关闭。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public Boolean getConnectionPool() {
@@ -298,9 +303,9 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Set 是否开启连接池
+     * Set 是否开启连接池。默认关闭。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
-     * @param ConnectionPool 是否开启连接池
+     * @param ConnectionPool 是否开启连接池。默认关闭。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public void setConnectionPool(Boolean ConnectionPool) {
@@ -324,32 +329,32 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启自适应负载均衡 
-     * @return AutoLoadBalance 是否开启自适应负载均衡
+     * Get 是否开启自适应负载均衡。默认关闭。 
+     * @return AutoLoadBalance 是否开启自适应负载均衡。默认关闭。
      */
     public Boolean getAutoLoadBalance() {
         return this.AutoLoadBalance;
     }
 
     /**
-     * Set 是否开启自适应负载均衡
-     * @param AutoLoadBalance 是否开启自适应负载均衡
+     * Set 是否开启自适应负载均衡。默认关闭。
+     * @param AutoLoadBalance 是否开启自适应负载均衡。默认关闭。
      */
     public void setAutoLoadBalance(Boolean AutoLoadBalance) {
         this.AutoLoadBalance = AutoLoadBalance;
     }
 
     /**
-     * Get 访问模式：就近访问，均衡分配 
-     * @return AccessMode 访问模式：就近访问，均衡分配
+     * Get 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。 
+     * @return AccessMode 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set 访问模式：就近访问，均衡分配
-     * @param AccessMode 访问模式：就近访问，均衡分配
+     * Set 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
+     * @param AccessMode 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;

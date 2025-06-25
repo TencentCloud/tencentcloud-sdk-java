@@ -119,7 +119,7 @@ PLATINUM 铂金版
     private Long MaxMessageDelay;
 
     /**
-    * 创建时间，秒为单位
+    * 创建时间，**Unix时间戳（毫秒）**
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -170,7 +170,17 @@ PLATINUM 铂金版
     private String Remark;
 
     /**
-    * 实例状态
+    * 实例状态，枚举值如下：
+
+- RUNNING：运行中
+- ABNORMAL：异常
+- OVERDUE：隔离中
+- DESTROYED：已销毁
+- CREATING：创建中
+- MODIFYING：变配中
+- CREATE_FAILURE：创建失败
+- MODIFY_FAILURE：变配失败
+- DELETING：删除中
     */
     @SerializedName("InstanceStatus")
     @Expose
@@ -184,7 +194,10 @@ PLATINUM 铂金版
     private String SkuCode;
 
     /**
-    * 计费模式
+    * 计费模式，枚举值如下：
+
+- POSTPAID：后付费按量计费
+- PREPAID：预付费包年包月
     */
     @SerializedName("PayMode")
     @Expose
@@ -198,14 +211,17 @@ PLATINUM 铂金版
     private Boolean ScaledTpsEnabled;
 
     /**
-    * 是否自动续费
+    * 预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 到期时间
+    * 到期时间，**Unix时间戳（毫秒）**
     */
     @SerializedName("ExpiryTime")
     @Expose
@@ -243,7 +259,7 @@ PLATINUM 铂金版
     private Long TopicNumUpperLimit;
 
     /**
-    * 可用区列表
+    * 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -481,16 +497,16 @@ PLATINUM 铂金版
     }
 
     /**
-     * Get 创建时间，秒为单位 
-     * @return CreatedTime 创建时间，秒为单位
+     * Get 创建时间，**Unix时间戳（毫秒）** 
+     * @return CreatedTime 创建时间，**Unix时间戳（毫秒）**
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间，秒为单位
-     * @param CreatedTime 创建时间，秒为单位
+     * Set 创建时间，**Unix时间戳（毫秒）**
+     * @param CreatedTime 创建时间，**Unix时间戳（毫秒）**
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;
@@ -601,16 +617,56 @@ PLATINUM 铂金版
     }
 
     /**
-     * Get 实例状态 
-     * @return InstanceStatus 实例状态
+     * Get 实例状态，枚举值如下：
+
+- RUNNING：运行中
+- ABNORMAL：异常
+- OVERDUE：隔离中
+- DESTROYED：已销毁
+- CREATING：创建中
+- MODIFYING：变配中
+- CREATE_FAILURE：创建失败
+- MODIFY_FAILURE：变配失败
+- DELETING：删除中 
+     * @return InstanceStatus 实例状态，枚举值如下：
+
+- RUNNING：运行中
+- ABNORMAL：异常
+- OVERDUE：隔离中
+- DESTROYED：已销毁
+- CREATING：创建中
+- MODIFYING：变配中
+- CREATE_FAILURE：创建失败
+- MODIFY_FAILURE：变配失败
+- DELETING：删除中
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 实例状态
-     * @param InstanceStatus 实例状态
+     * Set 实例状态，枚举值如下：
+
+- RUNNING：运行中
+- ABNORMAL：异常
+- OVERDUE：隔离中
+- DESTROYED：已销毁
+- CREATING：创建中
+- MODIFYING：变配中
+- CREATE_FAILURE：创建失败
+- MODIFY_FAILURE：变配失败
+- DELETING：删除中
+     * @param InstanceStatus 实例状态，枚举值如下：
+
+- RUNNING：运行中
+- ABNORMAL：异常
+- OVERDUE：隔离中
+- DESTROYED：已销毁
+- CREATING：创建中
+- MODIFYING：变配中
+- CREATE_FAILURE：创建失败
+- MODIFY_FAILURE：变配失败
+- DELETING：删除中
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
@@ -633,16 +689,28 @@ PLATINUM 铂金版
     }
 
     /**
-     * Get 计费模式 
-     * @return PayMode 计费模式
+     * Get 计费模式，枚举值如下：
+
+- POSTPAID：后付费按量计费
+- PREPAID：预付费包年包月 
+     * @return PayMode 计费模式，枚举值如下：
+
+- POSTPAID：后付费按量计费
+- PREPAID：预付费包年包月
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式
-     * @param PayMode 计费模式
+     * Set 计费模式，枚举值如下：
+
+- POSTPAID：后付费按量计费
+- PREPAID：预付费包年包月
+     * @param PayMode 计费模式，枚举值如下：
+
+- POSTPAID：后付费按量计费
+- PREPAID：预付费包年包月
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
@@ -665,32 +733,44 @@ PLATINUM 铂金版
     }
 
     /**
-     * Get 是否自动续费 
-     * @return RenewFlag 是否自动续费
+     * Get 预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费 
+     * @return RenewFlag 预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 是否自动续费
-     * @param RenewFlag 是否自动续费
+     * Set 预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费
+     * @param RenewFlag 预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 到期时间 
-     * @return ExpiryTime 到期时间
+     * Get 到期时间，**Unix时间戳（毫秒）** 
+     * @return ExpiryTime 到期时间，**Unix时间戳（毫秒）**
      */
     public Long getExpiryTime() {
         return this.ExpiryTime;
     }
 
     /**
-     * Set 到期时间
-     * @param ExpiryTime 到期时间
+     * Set 到期时间，**Unix时间戳（毫秒）**
+     * @param ExpiryTime 到期时间，**Unix时间戳（毫秒）**
      */
     public void setExpiryTime(Long ExpiryTime) {
         this.ExpiryTime = ExpiryTime;
@@ -773,16 +853,16 @@ PLATINUM 铂金版
     }
 
     /**
-     * Get 可用区列表 
-     * @return ZoneIds 可用区列表
+     * Get 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。 
+     * @return ZoneIds 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 可用区列表
-     * @param ZoneIds 可用区列表
+     * Set 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
+     * @param ZoneIds 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;

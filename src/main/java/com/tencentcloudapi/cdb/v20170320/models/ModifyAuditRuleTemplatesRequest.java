@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyAuditRuleTemplatesRequest extends AbstractModel {
 
     /**
-    * 审计规则模板ID。
+    * 审计规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
     */
     @SerializedName("RuleTemplateIds")
     @Expose
@@ -66,16 +66,16 @@ public class ModifyAuditRuleTemplatesRequest extends AbstractModel {
     private Long AlarmPolicy;
 
     /**
-     * Get 审计规则模板ID。 
-     * @return RuleTemplateIds 审计规则模板ID。
+     * Get 审计规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。 
+     * @return RuleTemplateIds 审计规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set 审计规则模板ID。
-     * @param RuleTemplateIds 审计规则模板ID。
+     * Set 审计规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
+     * @param RuleTemplateIds 审计规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;

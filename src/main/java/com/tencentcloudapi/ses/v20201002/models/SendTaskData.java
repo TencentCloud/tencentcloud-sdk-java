@@ -102,7 +102,6 @@ public class SendTaskData extends AbstractModel {
 
     /**
     * 模板和模板数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Template")
     @Expose
@@ -126,7 +125,6 @@ public class SendTaskData extends AbstractModel {
 
     /**
     * 任务异常信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrMsg")
     @Expose
@@ -316,10 +314,8 @@ public class SendTaskData extends AbstractModel {
     }
 
     /**
-     * Get 模板和模板数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板和模板数据 
      * @return Template 模板和模板数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Template getTemplate() {
         return this.Template;
@@ -327,9 +323,7 @@ public class SendTaskData extends AbstractModel {
 
     /**
      * Set 模板和模板数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Template 模板和模板数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplate(Template Template) {
         this.Template = Template;
@@ -376,10 +370,8 @@ public class SendTaskData extends AbstractModel {
     }
 
     /**
-     * Get 任务异常信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务异常信息 
      * @return ErrMsg 任务异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrMsg() {
         return this.ErrMsg;
@@ -387,9 +379,7 @@ public class SendTaskData extends AbstractModel {
 
     /**
      * Set 任务异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrMsg 任务异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;

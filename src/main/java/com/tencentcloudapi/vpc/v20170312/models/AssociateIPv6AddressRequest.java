@@ -31,6 +31,13 @@ public class AssociateIPv6AddressRequest extends AbstractModel {
     private String IPv6AddressId;
 
     /**
+    * 要绑定的实例 ID。实例 ID 形如：ins-djflxkvi。可通过登录控制台查询，也可通过 DescribeInstances 接口返回值中的InstanceId获取。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * 要绑定的弹性网卡 ID。 弹性网卡 ID 形如：eni-11112222。NetworkInterfaceId 与 InstanceId 不可同时指定。弹性网卡 ID 可通过登录[控制台](https://console.cloud.tencent.com/vpc/eni?rid=1)查询，也可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/api/215/15817)接口返回值中的networkInterfaceId获取。
     */
     @SerializedName("NetworkInterfaceId")
@@ -58,6 +65,22 @@ public class AssociateIPv6AddressRequest extends AbstractModel {
      */
     public void setIPv6AddressId(String IPv6AddressId) {
         this.IPv6AddressId = IPv6AddressId;
+    }
+
+    /**
+     * Get 要绑定的实例 ID。实例 ID 形如：ins-djflxkvi。可通过登录控制台查询，也可通过 DescribeInstances 接口返回值中的InstanceId获取。 
+     * @return InstanceId 要绑定的实例 ID。实例 ID 形如：ins-djflxkvi。可通过登录控制台查询，也可通过 DescribeInstances 接口返回值中的InstanceId获取。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 要绑定的实例 ID。实例 ID 形如：ins-djflxkvi。可通过登录控制台查询，也可通过 DescribeInstances 接口返回值中的InstanceId获取。
+     * @param InstanceId 要绑定的实例 ID。实例 ID 形如：ins-djflxkvi。可通过登录控制台查询，也可通过 DescribeInstances 接口返回值中的InstanceId获取。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -103,6 +126,9 @@ public class AssociateIPv6AddressRequest extends AbstractModel {
         if (source.IPv6AddressId != null) {
             this.IPv6AddressId = new String(source.IPv6AddressId);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.NetworkInterfaceId != null) {
             this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
         }
@@ -117,6 +143,7 @@ public class AssociateIPv6AddressRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IPv6AddressId", this.IPv6AddressId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamSimple(map, prefix + "PrivateIPv6Address", this.PrivateIPv6Address);
 

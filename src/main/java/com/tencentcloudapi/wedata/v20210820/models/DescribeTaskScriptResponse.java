@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskScriptResponse extends AbstractModel {
 
     /**
-    * 任务脚本内容
+    * 任务脚本内容，BASE64编码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class DescribeTaskScriptResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务脚本内容
+     * Get 任务脚本内容，BASE64编码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 任务脚本内容
+     * @return Data 任务脚本内容，BASE64编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskScriptContent getData() {
@@ -49,9 +49,9 @@ public class DescribeTaskScriptResponse extends AbstractModel {
     }
 
     /**
-     * Set 任务脚本内容
+     * Set 任务脚本内容，BASE64编码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 任务脚本内容
+     * @param Data 任务脚本内容，BASE64编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(TaskScriptContent Data) {

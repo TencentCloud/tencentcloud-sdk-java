@@ -24,7 +24,13 @@ import java.util.HashMap;
 public class MessageTraceItem extends AbstractModel {
 
     /**
-    * 步骤
+    * 消息处理阶段，枚举值如下：
+
+- produce：消息生产
+
+- persist：消息存储
+
+- consume：消息消费
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Stage")
@@ -40,9 +46,21 @@ public class MessageTraceItem extends AbstractModel {
     private String Data;
 
     /**
-     * Get 步骤
+     * Get 消息处理阶段，枚举值如下：
+
+- produce：消息生产
+
+- persist：消息存储
+
+- consume：消息消费
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Stage 步骤
+     * @return Stage 消息处理阶段，枚举值如下：
+
+- produce：消息生产
+
+- persist：消息存储
+
+- consume：消息消费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStage() {
@@ -50,9 +68,21 @@ public class MessageTraceItem extends AbstractModel {
     }
 
     /**
-     * Set 步骤
+     * Set 消息处理阶段，枚举值如下：
+
+- produce：消息生产
+
+- persist：消息存储
+
+- consume：消息消费
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Stage 步骤
+     * @param Stage 消息处理阶段，枚举值如下：
+
+- produce：消息生产
+
+- persist：消息存储
+
+- consume：消息消费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStage(String Stage) {

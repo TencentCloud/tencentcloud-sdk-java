@@ -68,7 +68,7 @@ public class DescribeMessageResponse extends AbstractModel {
     private MessageTrackItem [] MessageTracks;
 
     /**
-    * Topic
+    * 主题名称
     */
     @SerializedName("ShowTopicName")
     @Expose
@@ -194,16 +194,16 @@ public class DescribeMessageResponse extends AbstractModel {
     }
 
     /**
-     * Get Topic 
-     * @return ShowTopicName Topic
+     * Get 主题名称 
+     * @return ShowTopicName 主题名称
      */
     public String getShowTopicName() {
         return this.ShowTopicName;
     }
 
     /**
-     * Set Topic
-     * @param ShowTopicName Topic
+     * Set 主题名称
+     * @param ShowTopicName 主题名称
      */
     public void setShowTopicName(String ShowTopicName) {
         this.ShowTopicName = ShowTopicName;

@@ -157,6 +157,20 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
     private Boolean RepurchaseRenewSwitch;
 
     /**
+    * 是否自动新增机器绑定rasp防护,false 关闭 true 开启
+    */
+    @SerializedName("AutoBindRaspSwitch")
+    @Expose
+    private Boolean AutoBindRaspSwitch;
+
+    /**
+    * 是否自动新增机器开启rasp防护,false 关闭 true 开启
+    */
+    @SerializedName("AutoOpenRaspSwitch")
+    @Expose
+    private Boolean AutoOpenRaspSwitch;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -468,6 +482,38 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否自动新增机器绑定rasp防护,false 关闭 true 开启 
+     * @return AutoBindRaspSwitch 是否自动新增机器绑定rasp防护,false 关闭 true 开启
+     */
+    public Boolean getAutoBindRaspSwitch() {
+        return this.AutoBindRaspSwitch;
+    }
+
+    /**
+     * Set 是否自动新增机器绑定rasp防护,false 关闭 true 开启
+     * @param AutoBindRaspSwitch 是否自动新增机器绑定rasp防护,false 关闭 true 开启
+     */
+    public void setAutoBindRaspSwitch(Boolean AutoBindRaspSwitch) {
+        this.AutoBindRaspSwitch = AutoBindRaspSwitch;
+    }
+
+    /**
+     * Get 是否自动新增机器开启rasp防护,false 关闭 true 开启 
+     * @return AutoOpenRaspSwitch 是否自动新增机器开启rasp防护,false 关闭 true 开启
+     */
+    public Boolean getAutoOpenRaspSwitch() {
+        return this.AutoOpenRaspSwitch;
+    }
+
+    /**
+     * Set 是否自动新增机器开启rasp防护,false 关闭 true 开启
+     * @param AutoOpenRaspSwitch 是否自动新增机器开启rasp防护,false 关闭 true 开启
+     */
+    public void setAutoOpenRaspSwitch(Boolean AutoOpenRaspSwitch) {
+        this.AutoOpenRaspSwitch = AutoOpenRaspSwitch;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -548,6 +594,12 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
         if (source.RepurchaseRenewSwitch != null) {
             this.RepurchaseRenewSwitch = new Boolean(source.RepurchaseRenewSwitch);
         }
+        if (source.AutoBindRaspSwitch != null) {
+            this.AutoBindRaspSwitch = new Boolean(source.AutoBindRaspSwitch);
+        }
+        if (source.AutoOpenRaspSwitch != null) {
+            this.AutoOpenRaspSwitch = new Boolean(source.AutoOpenRaspSwitch);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -577,6 +629,8 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
         this.setParamSimple(map, prefix + "DestroyOrderNum", this.DestroyOrderNum);
         this.setParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
+        this.setParamSimple(map, prefix + "AutoBindRaspSwitch", this.AutoBindRaspSwitch);
+        this.setParamSimple(map, prefix + "AutoOpenRaspSwitch", this.AutoOpenRaspSwitch);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

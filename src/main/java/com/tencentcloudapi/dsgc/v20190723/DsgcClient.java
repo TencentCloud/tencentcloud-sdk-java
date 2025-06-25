@@ -919,9 +919,7 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *获取分类分级任务结果，该接口只有在任务状态为以下状态时才支持结果正常查询：
-3 扫描成功，
-4 扫描失败
+     *获取分类分级任务结果，该接口只有在任务状态为以下状态时才支持结果正常查询：3 扫描成功，4 扫描失败
      * @param req DescribeDSPADiscoveryTaskResultRequest
      * @return DescribeDSPADiscoveryTaskResultResponse
      * @throws TencentCloudSDKException

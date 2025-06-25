@@ -31,7 +31,7 @@ public class IpRule extends AbstractModel {
     private String Ip;
 
     /**
-    * 是否允许放行
+    * 是否允许放行，默认为false表示拒绝
     */
     @SerializedName("Allow")
     @Expose
@@ -39,7 +39,6 @@ public class IpRule extends AbstractModel {
 
     /**
     * 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -62,26 +61,24 @@ public class IpRule extends AbstractModel {
     }
 
     /**
-     * Get 是否允许放行 
-     * @return Allow 是否允许放行
+     * Get 是否允许放行，默认为false表示拒绝 
+     * @return Allow 是否允许放行，默认为false表示拒绝
      */
     public Boolean getAllow() {
         return this.Allow;
     }
 
     /**
-     * Set 是否允许放行
-     * @param Allow 是否允许放行
+     * Set 是否允许放行，默认为false表示拒绝
+     * @param Allow 是否允许放行，默认为false表示拒绝
      */
     public void setAllow(Boolean Allow) {
         this.Allow = Allow;
     }
 
     /**
-     * Get 备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注信息 
      * @return Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -89,9 +86,7 @@ public class IpRule extends AbstractModel {
 
     /**
      * Set 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
