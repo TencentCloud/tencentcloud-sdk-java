@@ -25,7 +25,6 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
     * 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
     * OCR识别文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -41,7 +39,6 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
     * 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
@@ -49,7 +46,6 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -57,7 +53,6 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
     * 库ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibId")
     @Expose
@@ -65,7 +60,6 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
     * 库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibName")
     @Expose
@@ -73,7 +67,6 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
     * 命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keywords")
     @Expose
@@ -81,7 +74,6 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
     * 建议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -89,7 +81,6 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
     * 得分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -97,7 +88,6 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
     * 子标签码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabelCode")
     @Expose
@@ -118,10 +108,8 @@ public class ImageResultsResultDetail extends AbstractModel {
     private OcrHitInfo [] OcrHitInfos;
 
     /**
-     * Get 任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务名称 
      * @return Name 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -129,19 +117,15 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
      * Set 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get OCR识别文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get OCR识别文本 
      * @return Text OCR识别文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
         return this.Text;
@@ -149,19 +133,15 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
      * Set OCR识别文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text OCR识别文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 位置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 位置信息 
      * @return Location 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageResultsResultDetailLocation getLocation() {
         return this.Location;
@@ -169,19 +149,15 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
      * Set 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(ImageResultsResultDetailLocation Location) {
         this.Location = Location;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Label 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -189,19 +165,15 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 库ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 库ID 
      * @return LibId 库ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLibId() {
         return this.LibId;
@@ -209,19 +181,15 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
      * Set 库ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LibId 库ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibId(String LibId) {
         this.LibId = LibId;
     }
 
     /**
-     * Get 库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 库名称 
      * @return LibName 库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLibName() {
         return this.LibName;
@@ -229,19 +197,15 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
      * Set 库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LibName 库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibName(String LibName) {
         this.LibName = LibName;
     }
 
     /**
-     * Get 命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命中的关键词 
      * @return Keywords 命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeywords() {
         return this.Keywords;
@@ -249,19 +213,15 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
      * Set 命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keywords 命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;
     }
 
     /**
-     * Get 建议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建议 
      * @return Suggestion 建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -269,19 +229,15 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
      * Set 建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 得分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 得分 
      * @return Score 得分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -289,19 +245,15 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
      * Set 得分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 得分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 子标签码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子标签码 
      * @return SubLabelCode 子标签码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabelCode() {
         return this.SubLabelCode;
@@ -309,9 +261,7 @@ public class ImageResultsResultDetail extends AbstractModel {
 
     /**
      * Set 子标签码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubLabelCode 子标签码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabelCode(String SubLabelCode) {
         this.SubLabelCode = SubLabelCode;

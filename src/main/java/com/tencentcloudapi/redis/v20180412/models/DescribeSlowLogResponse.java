@@ -38,7 +38,7 @@ public class DescribeSlowLogResponse extends AbstractModel {
     private InstanceSlowlogDetail [] InstanceSlowlogDetail;
 
     /**
-    * 慢查询详情。
+    * 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
     */
     @SerializedName("InstanceSlowLogDetail")
     @Expose
@@ -88,16 +88,16 @@ public class DescribeSlowLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 慢查询详情。 
-     * @return InstanceSlowLogDetail 慢查询详情。
+     * Get 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。 
+     * @return InstanceSlowLogDetail 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
      */
     public InstanceSlowlogDetail [] getInstanceSlowLogDetail() {
         return this.InstanceSlowLogDetail;
     }
 
     /**
-     * Set 慢查询详情。
-     * @param InstanceSlowLogDetail 慢查询详情。
+     * Set 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
+     * @param InstanceSlowLogDetail 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
      */
     public void setInstanceSlowLogDetail(InstanceSlowlogDetail [] InstanceSlowLogDetail) {
         this.InstanceSlowLogDetail = InstanceSlowLogDetail;

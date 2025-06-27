@@ -72,7 +72,11 @@ public class SubscriptionData extends AbstractModel {
     private Boolean IsOnline;
 
     /**
-    * 消费类型
+    * 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumeType")
@@ -96,7 +100,10 @@ public class SubscriptionData extends AbstractModel {
     private String ExpressionType;
 
     /**
-    * 订阅一致性
+    * 订阅一致性，枚举如下：
+
+- 0: 订阅一致
+- 1: 订阅不一致
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Consistency")
@@ -274,9 +281,17 @@ CLUSTERING 集群模式;
     }
 
     /**
-     * Get 消费类型
+     * Get 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConsumeType 消费类型
+     * @return ConsumeType 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsumeType() {
@@ -284,9 +299,17 @@ CLUSTERING 集群模式;
     }
 
     /**
-     * Set 消费类型
+     * Set 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConsumeType 消费类型
+     * @param ConsumeType 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumeType(String ConsumeType) {
@@ -334,9 +357,15 @@ CLUSTERING 集群模式;
     }
 
     /**
-     * Get 订阅一致性
+     * Get 订阅一致性，枚举如下：
+
+- 0: 订阅一致
+- 1: 订阅不一致
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Consistency 订阅一致性
+     * @return Consistency 订阅一致性，枚举如下：
+
+- 0: 订阅一致
+- 1: 订阅不一致
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConsistency() {
@@ -344,9 +373,15 @@ CLUSTERING 集群模式;
     }
 
     /**
-     * Set 订阅一致性
+     * Set 订阅一致性，枚举如下：
+
+- 0: 订阅一致
+- 1: 订阅不一致
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Consistency 订阅一致性
+     * @param Consistency 订阅一致性，枚举如下：
+
+- 0: 订阅一致
+- 1: 订阅不一致
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsistency(Long Consistency) {

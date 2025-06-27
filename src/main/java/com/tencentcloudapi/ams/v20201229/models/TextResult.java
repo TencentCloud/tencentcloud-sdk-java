@@ -28,7 +28,6 @@ public class TextResult extends AbstractModel {
 以及其他令人反感、不安全或不适宜的内容类型。
 
 如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -36,7 +35,6 @@ public class TextResult extends AbstractModel {
 
     /**
     * 命中的关键词，为空则代表该违规内容出自于模型的判断；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keywords")
     @Expose
@@ -44,7 +42,6 @@ public class TextResult extends AbstractModel {
 
     /**
     * 命中关键词库的库标识；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibId")
     @Expose
@@ -52,7 +49,6 @@ public class TextResult extends AbstractModel {
 
     /**
     * 命中关键词库的名字；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibName")
     @Expose
@@ -61,7 +57,6 @@ public class TextResult extends AbstractModel {
     /**
     * 机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
 （如：Porn 99，则该样本属于色情的置信度非常高。）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -70,7 +65,6 @@ public class TextResult extends AbstractModel {
     /**
     * 建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -87,8 +81,6 @@ public class TextResult extends AbstractModel {
 
     /**
     * 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabel")
     @Expose
@@ -105,13 +97,11 @@ public class TextResult extends AbstractModel {
      * Get 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
-如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。 
+如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容； 
      * @return Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
 如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -122,22 +112,18 @@ public class TextResult extends AbstractModel {
 以及其他令人反感、不安全或不适宜的内容类型。
 
 如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
 如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 命中的关键词，为空则代表该违规内容出自于模型的判断；
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命中的关键词，为空则代表该违规内容出自于模型的判断； 
      * @return Keywords 命中的关键词，为空则代表该违规内容出自于模型的判断；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeywords() {
         return this.Keywords;
@@ -145,19 +131,15 @@ public class TextResult extends AbstractModel {
 
     /**
      * Set 命中的关键词，为空则代表该违规内容出自于模型的判断；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keywords 命中的关键词，为空则代表该违规内容出自于模型的判断；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;
     }
 
     /**
-     * Get 命中关键词库的库标识；
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命中关键词库的库标识； 
      * @return LibId 命中关键词库的库标识；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLibId() {
         return this.LibId;
@@ -165,19 +147,15 @@ public class TextResult extends AbstractModel {
 
     /**
      * Set 命中关键词库的库标识；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LibId 命中关键词库的库标识；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibId(String LibId) {
         this.LibId = LibId;
     }
 
     /**
-     * Get 命中关键词库的名字；
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命中关键词库的名字； 
      * @return LibName 命中关键词库的名字；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLibName() {
         return this.LibName;
@@ -185,9 +163,7 @@ public class TextResult extends AbstractModel {
 
     /**
      * Set 命中关键词库的名字；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LibName 命中关键词库的名字；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibName(String LibName) {
         this.LibName = LibName;
@@ -195,11 +171,9 @@ public class TextResult extends AbstractModel {
 
     /**
      * Get 机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
-（如：Porn 99，则该样本属于色情的置信度非常高。）
-注意：此字段可能返回 null，表示取不到有效值。 
+（如：Porn 99，则该样本属于色情的置信度非常高。） 
      * @return Score 机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
 （如：Porn 99，则该样本属于色情的置信度非常高。）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -208,10 +182,8 @@ public class TextResult extends AbstractModel {
     /**
      * Set 机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
 （如：Porn 99，则该样本属于色情的置信度非常高。）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
 （如：Porn 99，则该样本属于色情的置信度非常高。）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
@@ -219,11 +191,9 @@ public class TextResult extends AbstractModel {
 
     /**
      * Get 建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-注意：此字段可能返回 null，表示取不到有效值。 
+建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过 
      * @return Suggestion 建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -232,10 +202,8 @@ public class TextResult extends AbstractModel {
     /**
      * Set 建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
@@ -266,12 +234,8 @@ public class TextResult extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回当前标签（Lable）下的二级标签。 
      * @return SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabel() {
         return this.SubLabel;
@@ -279,11 +243,7 @@ public class TextResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;

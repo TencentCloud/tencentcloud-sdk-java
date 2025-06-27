@@ -468,7 +468,9 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
+     *废弃接口，申请下线
+
+按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
      * @param req CreateTasksInOrderRequest
      * @return CreateTasksInOrderResponse
      * @throws TencentCloudSDKException

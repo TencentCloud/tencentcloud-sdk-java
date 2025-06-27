@@ -32,7 +32,10 @@ public class SubtitleTemplate extends AbstractModel {
     private String Path;
 
     /**
-    * 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+    * 指定要压制到视频中的字幕轨道，Path 和 StreamIndex 至少指定一个；如果指定了Path，则优先使用Path。
+Streamindex的取值须与源文件中的字幕轨索引一致。例如，源文件中的字幕轨为stream#0:3，则StreamIndex应为3，否则可能导致任务处理失败。
+
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamIndex")
@@ -40,12 +43,25 @@ public class SubtitleTemplate extends AbstractModel {
     private Long StreamIndex;
 
     /**
-    * 字体类型，
+    * 字体类型，支持：
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
-<li>simkai.ttf：楷体</li>
+<li>kai.ttf（推荐）或 simkai.ttf：楷体</li>
+<li>msyh.ttf：微软雅黑</li>
+<li>msyhbd.ttf：微软雅黑加粗</li>
+<li>hkjgt.ttf：华康金刚体</li>
+<li>dhttx.ttf：典黑体特细</li>
+<li>xqgdzt.ttf：喜鹊古字典体</li>
+<li>qpcyt.ttf：巧拼超圆体</li>
 <li>arial.ttf：仅支持英文</li>
-默认hei.ttf
+<li>dinalternate.ttf：DIN Alternate Bold</li>
+<li>helveticalt.ttf：Helvetica</li>
+<li>helveticains.ttf：Helvetica Inserat</li>
+<li>trajanpro.ttf：TrajanPro-Bold</li>
+<li>korean.ttf：韩语</li>
+<li>japanese.ttf：日语</li>
+<li>thai.ttf：泰语</li>
+默认：hei.ttf 黑体。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FontType")
@@ -54,6 +70,7 @@ public class SubtitleTemplate extends AbstractModel {
 
     /**
     * 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+默认源视频高度的5%。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FontSize")
@@ -61,7 +78,7 @@ public class SubtitleTemplate extends AbstractModel {
     private String FontSize;
 
     /**
-    * 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+    * 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FontColor")
@@ -78,6 +95,77 @@ public class SubtitleTemplate extends AbstractModel {
     @SerializedName("FontAlpha")
     @Expose
     private Float FontAlpha;
+
+    /**
+    * 字幕y轴坐标位置，指定此参数会忽略字幕文件自带坐标；支持像素和百分比格式：
+
+- 像素：Npx，N范围：[0,4096]。
+- 百分百：N%，N范围：[0,100]；例如10%表示字幕y坐标=10%*源视频高度。
+
+默认值：源视频高度*4%。
+注意：坐标轴原点在源视频中轴线底部，字幕基准点在字幕中轴线底部，参考下图：
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("YPos")
+    @Expose
+    private String YPos;
+
+    /**
+    * 字幕背景底板的y轴坐标位置；支持像素和百分比格式：
+
+- 像素：Npx，N范围：[0,4096]。
+- 百分百：N%，N范围：[0,100]；例如10%表示字幕背景底板y坐标=10%*源视频高度。
+
+不传表示不开启字幕背景底板。
+注意：坐标轴原点位于源视频的中轴线底部，字幕背景底板的基准点在其中轴线底部，参考下图：
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BoardY")
+    @Expose
+    private String BoardY;
+
+    /**
+    * 底板的宽度，单位为像素，取值范围：[0,4096]。
+默认源视频宽像素的90%。
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BoardWidth")
+    @Expose
+    private Long BoardWidth;
+
+    /**
+    * 底板的高度。单位为像素，取值范围：[0,4096]。
+默认为源视频高像素的15%。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BoardHeight")
+    @Expose
+    private Long BoardHeight;
+
+    /**
+    * 底板颜色。格式：0xRRGGBB，
+默认值：0x000000（黑色）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BoardColor")
+    @Expose
+    private String BoardColor;
+
+    /**
+    * 字幕背景板透明度，取值范围：[0, 1]
+<li>0：完全透明</li>
+<li>1：完全不透明</li>
+默认值：0.8。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BoardAlpha")
+    @Expose
+    private Float BoardAlpha;
 
     /**
      * Get 要压制到视频中的字幕文件地址。
@@ -100,9 +188,15 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Get 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+     * Get 指定要压制到视频中的字幕轨道，Path 和 StreamIndex 至少指定一个；如果指定了Path，则优先使用Path。
+Streamindex的取值须与源文件中的字幕轨索引一致。例如，源文件中的字幕轨为stream#0:3，则StreamIndex应为3，否则可能导致任务处理失败。
+
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StreamIndex 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+     * @return StreamIndex 指定要压制到视频中的字幕轨道，Path 和 StreamIndex 至少指定一个；如果指定了Path，则优先使用Path。
+Streamindex的取值须与源文件中的字幕轨索引一致。例如，源文件中的字幕轨为stream#0:3，则StreamIndex应为3，否则可能导致任务处理失败。
+
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStreamIndex() {
@@ -110,9 +204,15 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Set 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+     * Set 指定要压制到视频中的字幕轨道，Path 和 StreamIndex 至少指定一个；如果指定了Path，则优先使用Path。
+Streamindex的取值须与源文件中的字幕轨索引一致。例如，源文件中的字幕轨为stream#0:3，则StreamIndex应为3，否则可能导致任务处理失败。
+
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StreamIndex 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+     * @param StreamIndex 指定要压制到视频中的字幕轨道，Path 和 StreamIndex 至少指定一个；如果指定了Path，则优先使用Path。
+Streamindex的取值须与源文件中的字幕轨索引一致。例如，源文件中的字幕轨为stream#0:3，则StreamIndex应为3，否则可能导致任务处理失败。
+
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamIndex(Long StreamIndex) {
@@ -120,19 +220,45 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Get 字体类型，
+     * Get 字体类型，支持：
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
-<li>simkai.ttf：楷体</li>
+<li>kai.ttf（推荐）或 simkai.ttf：楷体</li>
+<li>msyh.ttf：微软雅黑</li>
+<li>msyhbd.ttf：微软雅黑加粗</li>
+<li>hkjgt.ttf：华康金刚体</li>
+<li>dhttx.ttf：典黑体特细</li>
+<li>xqgdzt.ttf：喜鹊古字典体</li>
+<li>qpcyt.ttf：巧拼超圆体</li>
 <li>arial.ttf：仅支持英文</li>
-默认hei.ttf
+<li>dinalternate.ttf：DIN Alternate Bold</li>
+<li>helveticalt.ttf：Helvetica</li>
+<li>helveticains.ttf：Helvetica Inserat</li>
+<li>trajanpro.ttf：TrajanPro-Bold</li>
+<li>korean.ttf：韩语</li>
+<li>japanese.ttf：日语</li>
+<li>thai.ttf：泰语</li>
+默认：hei.ttf 黑体。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FontType 字体类型，
+     * @return FontType 字体类型，支持：
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
-<li>simkai.ttf：楷体</li>
+<li>kai.ttf（推荐）或 simkai.ttf：楷体</li>
+<li>msyh.ttf：微软雅黑</li>
+<li>msyhbd.ttf：微软雅黑加粗</li>
+<li>hkjgt.ttf：华康金刚体</li>
+<li>dhttx.ttf：典黑体特细</li>
+<li>xqgdzt.ttf：喜鹊古字典体</li>
+<li>qpcyt.ttf：巧拼超圆体</li>
 <li>arial.ttf：仅支持英文</li>
-默认hei.ttf
+<li>dinalternate.ttf：DIN Alternate Bold</li>
+<li>helveticalt.ttf：Helvetica</li>
+<li>helveticains.ttf：Helvetica Inserat</li>
+<li>trajanpro.ttf：TrajanPro-Bold</li>
+<li>korean.ttf：韩语</li>
+<li>japanese.ttf：日语</li>
+<li>thai.ttf：泰语</li>
+默认：hei.ttf 黑体。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFontType() {
@@ -140,19 +266,45 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Set 字体类型，
+     * Set 字体类型，支持：
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
-<li>simkai.ttf：楷体</li>
+<li>kai.ttf（推荐）或 simkai.ttf：楷体</li>
+<li>msyh.ttf：微软雅黑</li>
+<li>msyhbd.ttf：微软雅黑加粗</li>
+<li>hkjgt.ttf：华康金刚体</li>
+<li>dhttx.ttf：典黑体特细</li>
+<li>xqgdzt.ttf：喜鹊古字典体</li>
+<li>qpcyt.ttf：巧拼超圆体</li>
 <li>arial.ttf：仅支持英文</li>
-默认hei.ttf
+<li>dinalternate.ttf：DIN Alternate Bold</li>
+<li>helveticalt.ttf：Helvetica</li>
+<li>helveticains.ttf：Helvetica Inserat</li>
+<li>trajanpro.ttf：TrajanPro-Bold</li>
+<li>korean.ttf：韩语</li>
+<li>japanese.ttf：日语</li>
+<li>thai.ttf：泰语</li>
+默认：hei.ttf 黑体。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FontType 字体类型，
+     * @param FontType 字体类型，支持：
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
-<li>simkai.ttf：楷体</li>
+<li>kai.ttf（推荐）或 simkai.ttf：楷体</li>
+<li>msyh.ttf：微软雅黑</li>
+<li>msyhbd.ttf：微软雅黑加粗</li>
+<li>hkjgt.ttf：华康金刚体</li>
+<li>dhttx.ttf：典黑体特细</li>
+<li>xqgdzt.ttf：喜鹊古字典体</li>
+<li>qpcyt.ttf：巧拼超圆体</li>
 <li>arial.ttf：仅支持英文</li>
-默认hei.ttf
+<li>dinalternate.ttf：DIN Alternate Bold</li>
+<li>helveticalt.ttf：Helvetica</li>
+<li>helveticains.ttf：Helvetica Inserat</li>
+<li>trajanpro.ttf：TrajanPro-Bold</li>
+<li>korean.ttf：韩语</li>
+<li>japanese.ttf：日语</li>
+<li>thai.ttf：泰语</li>
+默认：hei.ttf 黑体。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFontType(String FontType) {
@@ -161,8 +313,10 @@ public class SubtitleTemplate extends AbstractModel {
 
     /**
      * Get 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+默认源视频高度的5%。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FontSize 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+默认源视频高度的5%。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFontSize() {
@@ -171,8 +325,10 @@ public class SubtitleTemplate extends AbstractModel {
 
     /**
      * Set 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+默认源视频高度的5%。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FontSize 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+默认源视频高度的5%。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFontSize(String FontSize) {
@@ -180,9 +336,9 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Get 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+     * Get 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+     * @return FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFontColor() {
@@ -190,9 +346,9 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Set 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+     * Set 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+     * @param FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFontColor(String FontColor) {
@@ -231,6 +387,218 @@ public class SubtitleTemplate extends AbstractModel {
         this.FontAlpha = FontAlpha;
     }
 
+    /**
+     * Get 字幕y轴坐标位置，指定此参数会忽略字幕文件自带坐标；支持像素和百分比格式：
+
+- 像素：Npx，N范围：[0,4096]。
+- 百分百：N%，N范围：[0,100]；例如10%表示字幕y坐标=10%*源视频高度。
+
+默认值：源视频高度*4%。
+注意：坐标轴原点在源视频中轴线底部，字幕基准点在字幕中轴线底部，参考下图：
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return YPos 字幕y轴坐标位置，指定此参数会忽略字幕文件自带坐标；支持像素和百分比格式：
+
+- 像素：Npx，N范围：[0,4096]。
+- 百分百：N%，N范围：[0,100]；例如10%表示字幕y坐标=10%*源视频高度。
+
+默认值：源视频高度*4%。
+注意：坐标轴原点在源视频中轴线底部，字幕基准点在字幕中轴线底部，参考下图：
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getYPos() {
+        return this.YPos;
+    }
+
+    /**
+     * Set 字幕y轴坐标位置，指定此参数会忽略字幕文件自带坐标；支持像素和百分比格式：
+
+- 像素：Npx，N范围：[0,4096]。
+- 百分百：N%，N范围：[0,100]；例如10%表示字幕y坐标=10%*源视频高度。
+
+默认值：源视频高度*4%。
+注意：坐标轴原点在源视频中轴线底部，字幕基准点在字幕中轴线底部，参考下图：
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param YPos 字幕y轴坐标位置，指定此参数会忽略字幕文件自带坐标；支持像素和百分比格式：
+
+- 像素：Npx，N范围：[0,4096]。
+- 百分百：N%，N范围：[0,100]；例如10%表示字幕y坐标=10%*源视频高度。
+
+默认值：源视频高度*4%。
+注意：坐标轴原点在源视频中轴线底部，字幕基准点在字幕中轴线底部，参考下图：
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setYPos(String YPos) {
+        this.YPos = YPos;
+    }
+
+    /**
+     * Get 字幕背景底板的y轴坐标位置；支持像素和百分比格式：
+
+- 像素：Npx，N范围：[0,4096]。
+- 百分百：N%，N范围：[0,100]；例如10%表示字幕背景底板y坐标=10%*源视频高度。
+
+不传表示不开启字幕背景底板。
+注意：坐标轴原点位于源视频的中轴线底部，字幕背景底板的基准点在其中轴线底部，参考下图：
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BoardY 字幕背景底板的y轴坐标位置；支持像素和百分比格式：
+
+- 像素：Npx，N范围：[0,4096]。
+- 百分百：N%，N范围：[0,100]；例如10%表示字幕背景底板y坐标=10%*源视频高度。
+
+不传表示不开启字幕背景底板。
+注意：坐标轴原点位于源视频的中轴线底部，字幕背景底板的基准点在其中轴线底部，参考下图：
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBoardY() {
+        return this.BoardY;
+    }
+
+    /**
+     * Set 字幕背景底板的y轴坐标位置；支持像素和百分比格式：
+
+- 像素：Npx，N范围：[0,4096]。
+- 百分百：N%，N范围：[0,100]；例如10%表示字幕背景底板y坐标=10%*源视频高度。
+
+不传表示不开启字幕背景底板。
+注意：坐标轴原点位于源视频的中轴线底部，字幕背景底板的基准点在其中轴线底部，参考下图：
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BoardY 字幕背景底板的y轴坐标位置；支持像素和百分比格式：
+
+- 像素：Npx，N范围：[0,4096]。
+- 百分百：N%，N范围：[0,100]；例如10%表示字幕背景底板y坐标=10%*源视频高度。
+
+不传表示不开启字幕背景底板。
+注意：坐标轴原点位于源视频的中轴线底部，字幕背景底板的基准点在其中轴线底部，参考下图：
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBoardY(String BoardY) {
+        this.BoardY = BoardY;
+    }
+
+    /**
+     * Get 底板的宽度，单位为像素，取值范围：[0,4096]。
+默认源视频宽像素的90%。
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BoardWidth 底板的宽度，单位为像素，取值范围：[0,4096]。
+默认源视频宽像素的90%。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBoardWidth() {
+        return this.BoardWidth;
+    }
+
+    /**
+     * Set 底板的宽度，单位为像素，取值范围：[0,4096]。
+默认源视频宽像素的90%。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BoardWidth 底板的宽度，单位为像素，取值范围：[0,4096]。
+默认源视频宽像素的90%。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBoardWidth(Long BoardWidth) {
+        this.BoardWidth = BoardWidth;
+    }
+
+    /**
+     * Get 底板的高度。单位为像素，取值范围：[0,4096]。
+默认为源视频高像素的15%。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BoardHeight 底板的高度。单位为像素，取值范围：[0,4096]。
+默认为源视频高像素的15%。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBoardHeight() {
+        return this.BoardHeight;
+    }
+
+    /**
+     * Set 底板的高度。单位为像素，取值范围：[0,4096]。
+默认为源视频高像素的15%。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BoardHeight 底板的高度。单位为像素，取值范围：[0,4096]。
+默认为源视频高像素的15%。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBoardHeight(Long BoardHeight) {
+        this.BoardHeight = BoardHeight;
+    }
+
+    /**
+     * Get 底板颜色。格式：0xRRGGBB，
+默认值：0x000000（黑色）。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BoardColor 底板颜色。格式：0xRRGGBB，
+默认值：0x000000（黑色）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBoardColor() {
+        return this.BoardColor;
+    }
+
+    /**
+     * Set 底板颜色。格式：0xRRGGBB，
+默认值：0x000000（黑色）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BoardColor 底板颜色。格式：0xRRGGBB，
+默认值：0x000000（黑色）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBoardColor(String BoardColor) {
+        this.BoardColor = BoardColor;
+    }
+
+    /**
+     * Get 字幕背景板透明度，取值范围：[0, 1]
+<li>0：完全透明</li>
+<li>1：完全不透明</li>
+默认值：0.8。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BoardAlpha 字幕背景板透明度，取值范围：[0, 1]
+<li>0：完全透明</li>
+<li>1：完全不透明</li>
+默认值：0.8。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getBoardAlpha() {
+        return this.BoardAlpha;
+    }
+
+    /**
+     * Set 字幕背景板透明度，取值范围：[0, 1]
+<li>0：完全透明</li>
+<li>1：完全不透明</li>
+默认值：0.8。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BoardAlpha 字幕背景板透明度，取值范围：[0, 1]
+<li>0：完全透明</li>
+<li>1：完全不透明</li>
+默认值：0.8。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBoardAlpha(Float BoardAlpha) {
+        this.BoardAlpha = BoardAlpha;
+    }
+
     public SubtitleTemplate() {
     }
 
@@ -257,6 +625,24 @@ public class SubtitleTemplate extends AbstractModel {
         if (source.FontAlpha != null) {
             this.FontAlpha = new Float(source.FontAlpha);
         }
+        if (source.YPos != null) {
+            this.YPos = new String(source.YPos);
+        }
+        if (source.BoardY != null) {
+            this.BoardY = new String(source.BoardY);
+        }
+        if (source.BoardWidth != null) {
+            this.BoardWidth = new Long(source.BoardWidth);
+        }
+        if (source.BoardHeight != null) {
+            this.BoardHeight = new Long(source.BoardHeight);
+        }
+        if (source.BoardColor != null) {
+            this.BoardColor = new String(source.BoardColor);
+        }
+        if (source.BoardAlpha != null) {
+            this.BoardAlpha = new Float(source.BoardAlpha);
+        }
     }
 
 
@@ -270,6 +656,12 @@ public class SubtitleTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "FontSize", this.FontSize);
         this.setParamSimple(map, prefix + "FontColor", this.FontColor);
         this.setParamSimple(map, prefix + "FontAlpha", this.FontAlpha);
+        this.setParamSimple(map, prefix + "YPos", this.YPos);
+        this.setParamSimple(map, prefix + "BoardY", this.BoardY);
+        this.setParamSimple(map, prefix + "BoardWidth", this.BoardWidth);
+        this.setParamSimple(map, prefix + "BoardHeight", this.BoardHeight);
+        this.setParamSimple(map, prefix + "BoardColor", this.BoardColor);
+        this.setParamSimple(map, prefix + "BoardAlpha", this.BoardAlpha);
 
     }
 }

@@ -25,7 +25,6 @@ public class TaskResult extends AbstractModel {
 
     /**
     * 该字段用于返回创建音频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataId")
     @Expose
@@ -33,7 +32,6 @@ public class TaskResult extends AbstractModel {
 
     /**
     * 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -41,7 +39,6 @@ public class TaskResult extends AbstractModel {
 
     /**
     * 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -49,17 +46,14 @@ public class TaskResult extends AbstractModel {
 
     /**
     * **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get 该字段用于返回创建音频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回创建音频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。 
      * @return DataId 该字段用于返回创建音频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataId() {
         return this.DataId;
@@ -67,19 +61,15 @@ public class TaskResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回创建音频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataId 该字段用于返回创建音频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataId(String DataId) {
         this.DataId = DataId;
     }
 
     /**
-     * Get 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。 
      * @return TaskId 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -87,19 +77,15 @@ public class TaskResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。 
      * @return Code 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
         return this.Code;
@@ -107,19 +93,15 @@ public class TaskResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。 
      * @return Message **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -127,9 +109,7 @@ public class TaskResult extends AbstractModel {
 
     /**
      * Set **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

@@ -60,7 +60,6 @@ public class OcrResult extends AbstractModel {
 
     /**
     * 该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Details")
     @Expose
@@ -154,10 +153,8 @@ public class OcrResult extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。 
      * @return Details 该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OcrTextDetail [] getDetails() {
         return this.Details;
@@ -165,9 +162,7 @@ public class OcrResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Details 该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetails(OcrTextDetail [] Details) {
         this.Details = Details;

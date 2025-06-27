@@ -31,7 +31,7 @@ public class GenerateSignedVideoURLRequest extends AbstractModel {
     private String VideoURL;
 
     /**
-    * 播放链接过期时间
+    * 播放链接过期时间（时间戳，单位秒）
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -61,16 +61,16 @@ public class GenerateSignedVideoURLRequest extends AbstractModel {
     }
 
     /**
-     * Get 播放链接过期时间 
-     * @return ExpireTime 播放链接过期时间
+     * Get 播放链接过期时间（时间戳，单位秒） 
+     * @return ExpireTime 播放链接过期时间（时间戳，单位秒）
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 播放链接过期时间
-     * @param ExpireTime 播放链接过期时间
+     * Set 播放链接过期时间（时间戳，单位秒）
+     * @param ExpireTime 播放链接过期时间（时间戳，单位秒）
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

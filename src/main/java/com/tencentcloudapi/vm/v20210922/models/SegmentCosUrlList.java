@@ -25,7 +25,6 @@ public class SegmentCosUrlList extends AbstractModel {
 
     /**
     * 全量图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageAllUrl")
     @Expose
@@ -33,7 +32,6 @@ public class SegmentCosUrlList extends AbstractModel {
 
     /**
     * 全量音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioAllUrl")
     @Expose
@@ -41,7 +39,6 @@ public class SegmentCosUrlList extends AbstractModel {
 
     /**
     * 违规图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageBlockUrl")
     @Expose
@@ -49,7 +46,6 @@ public class SegmentCosUrlList extends AbstractModel {
 
     /**
     * 违规音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioBlockUrl")
     @Expose
@@ -57,17 +53,14 @@ public class SegmentCosUrlList extends AbstractModel {
 
     /**
     * 全量音频识别文本的cos url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrUrl")
     @Expose
     private String AsrUrl;
 
     /**
-     * Get 全量图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全量图片片段的cos url 
      * @return ImageAllUrl 全量图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageAllUrl() {
         return this.ImageAllUrl;
@@ -75,19 +68,15 @@ public class SegmentCosUrlList extends AbstractModel {
 
     /**
      * Set 全量图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageAllUrl 全量图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageAllUrl(String ImageAllUrl) {
         this.ImageAllUrl = ImageAllUrl;
     }
 
     /**
-     * Get 全量音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全量音频片段的cos url 
      * @return AudioAllUrl 全量音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAudioAllUrl() {
         return this.AudioAllUrl;
@@ -95,19 +84,15 @@ public class SegmentCosUrlList extends AbstractModel {
 
     /**
      * Set 全量音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioAllUrl 全量音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioAllUrl(String AudioAllUrl) {
         this.AudioAllUrl = AudioAllUrl;
     }
 
     /**
-     * Get 违规图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 违规图片片段的cos url 
      * @return ImageBlockUrl 违规图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageBlockUrl() {
         return this.ImageBlockUrl;
@@ -115,19 +100,15 @@ public class SegmentCosUrlList extends AbstractModel {
 
     /**
      * Set 违规图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageBlockUrl 违规图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageBlockUrl(String ImageBlockUrl) {
         this.ImageBlockUrl = ImageBlockUrl;
     }
 
     /**
-     * Get 违规音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 违规音频片段的cos url 
      * @return AudioBlockUrl 违规音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAudioBlockUrl() {
         return this.AudioBlockUrl;
@@ -135,19 +116,15 @@ public class SegmentCosUrlList extends AbstractModel {
 
     /**
      * Set 违规音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioBlockUrl 违规音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioBlockUrl(String AudioBlockUrl) {
         this.AudioBlockUrl = AudioBlockUrl;
     }
 
     /**
-     * Get 全量音频识别文本的cos url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全量音频识别文本的cos url 
      * @return AsrUrl 全量音频识别文本的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsrUrl() {
         return this.AsrUrl;
@@ -155,9 +132,7 @@ public class SegmentCosUrlList extends AbstractModel {
 
     /**
      * Set 全量音频识别文本的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrUrl 全量音频识别文本的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrUrl(String AsrUrl) {
         this.AsrUrl = AsrUrl;

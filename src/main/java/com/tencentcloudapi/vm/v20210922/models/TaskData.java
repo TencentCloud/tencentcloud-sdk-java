@@ -25,7 +25,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 输入的数据ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataId")
     @Expose
@@ -41,7 +39,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 业务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizType")
     @Expose
@@ -49,7 +46,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -57,7 +53,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -65,7 +60,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -73,7 +67,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 处理建议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -81,7 +74,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -89,7 +81,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 媒体信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaInfo")
     @Expose
@@ -97,7 +88,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 输入信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputInfo")
     @Expose
@@ -105,7 +95,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -113,17 +102,14 @@ public class TaskData extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
     @Expose
     private String UpdatedAt;
 
     /**
-     * Get 任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID 
      * @return TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -131,19 +117,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 输入的数据ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入的数据ID 
      * @return DataId 输入的数据ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataId() {
         return this.DataId;
@@ -151,19 +133,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 输入的数据ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataId 输入的数据ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataId(String DataId) {
         this.DataId = DataId;
     }
 
     /**
-     * Get 业务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务类型 
      * @return BizType 业务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBizType() {
         return this.BizType;
@@ -171,19 +149,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 业务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BizType 业务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get 任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务名称 
      * @return Name 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -191,19 +165,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED 
      * @return Status 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -211,19 +181,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务类型 
      * @return Type 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -231,19 +197,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 处理建议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理建议 
      * @return Suggestion 处理建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -251,19 +213,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 处理建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 处理建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Labels 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskLabel [] getLabels() {
         return this.Labels;
@@ -271,19 +229,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(TaskLabel [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 媒体信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒体信息 
      * @return MediaInfo 媒体信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInfo getMediaInfo() {
         return this.MediaInfo;
@@ -291,19 +245,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 媒体信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaInfo 媒体信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaInfo(MediaInfo MediaInfo) {
         this.MediaInfo = MediaInfo;
     }
 
     /**
-     * Get 输入信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入信息 
      * @return InputInfo 输入信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InputInfo getInputInfo() {
         return this.InputInfo;
@@ -311,19 +261,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 输入信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputInfo 输入信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputInfo(InputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
@@ -331,19 +277,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
@@ -351,9 +293,7 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;

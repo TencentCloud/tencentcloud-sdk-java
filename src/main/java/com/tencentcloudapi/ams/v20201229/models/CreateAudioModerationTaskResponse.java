@@ -25,7 +25,6 @@ public class CreateAudioModerationTaskResponse extends AbstractModel {
 
     /**
     * 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
     @Expose
@@ -39,10 +38,8 @@ public class CreateAudioModerationTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。 
      * @return Results 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskResult [] getResults() {
         return this.Results;
@@ -50,9 +47,7 @@ public class CreateAudioModerationTaskResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Results 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(TaskResult [] Results) {
         this.Results = Results;

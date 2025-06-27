@@ -25,7 +25,6 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
     * 语种
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -33,7 +32,6 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
     * 得分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -41,7 +39,6 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -49,7 +46,6 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -57,17 +53,14 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
     * 子标签码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabelCode")
     @Expose
     private String SubLabelCode;
 
     /**
-     * Get 语种
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语种 
      * @return Label 语种
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -75,19 +68,15 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
      * Set 语种
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 语种
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 得分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 得分 
      * @return Score 得分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -95,19 +84,15 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
      * Set 得分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 得分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTime() {
         return this.StartTime;
@@ -115,19 +100,15 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTime() {
         return this.EndTime;
@@ -135,19 +116,15 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 子标签码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子标签码 
      * @return SubLabelCode 子标签码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabelCode() {
         return this.SubLabelCode;
@@ -155,9 +132,7 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
      * Set 子标签码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubLabelCode 子标签码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabelCode(String SubLabelCode) {
         this.SubLabelCode = SubLabelCode;

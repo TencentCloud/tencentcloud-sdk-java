@@ -25,7 +25,6 @@ public class RecognitionResult extends AbstractModel {
 
     /**
     * 当前可能的取值：Scene（图片场景模型）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -33,17 +32,14 @@ public class RecognitionResult extends AbstractModel {
 
     /**
     * Label对应模型下的识别标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
     private RecognitionTag [] Tags;
 
     /**
-     * Get 当前可能的取值：Scene（图片场景模型）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前可能的取值：Scene（图片场景模型） 
      * @return Label 当前可能的取值：Scene（图片场景模型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -51,19 +47,15 @@ public class RecognitionResult extends AbstractModel {
 
     /**
      * Set 当前可能的取值：Scene（图片场景模型）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 当前可能的取值：Scene（图片场景模型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get Label对应模型下的识别标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Label对应模型下的识别标签信息 
      * @return Tags Label对应模型下的识别标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecognitionTag [] getTags() {
         return this.Tags;
@@ -71,9 +63,7 @@ public class RecognitionResult extends AbstractModel {
 
     /**
      * Set Label对应模型下的识别标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags Label对应模型下的识别标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(RecognitionTag [] Tags) {
         this.Tags = Tags;

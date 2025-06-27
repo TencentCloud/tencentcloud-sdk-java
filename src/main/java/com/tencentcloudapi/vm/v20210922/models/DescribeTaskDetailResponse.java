@@ -25,7 +25,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回调用视频审核接口时传入的数据ID参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataId")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回调用视频审核接口时传入的BizType参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizType")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -58,7 +54,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     /**
     * 该字段用于返回所查询内容的任务状态。
 <br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -66,7 +61,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -74,7 +68,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -82,7 +75,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -90,7 +82,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回输入媒体文件的详细信息，包括编解码格式、分片时长等信息。详细内容敬请参考MediaInfo数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaInfo")
     @Expose
@@ -98,7 +89,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回审核服务的媒体内容信息，主要包括传入文件类型和访问地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputInfo")
     @Expose
@@ -106,7 +96,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -114,7 +103,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
     @Expose
@@ -122,7 +110,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 在秒后重试
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TryInSeconds")
     @Expose
@@ -130,7 +117,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageSegments")
     @Expose
@@ -138,7 +124,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioSegments")
     @Expose
@@ -153,7 +138,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 **MODERATION_ERROR**：审核失败。
 **URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
 任务状态非Error时默认返回为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorType")
     @Expose
@@ -161,7 +145,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorDescription")
     @Expose
@@ -169,7 +152,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -177,7 +159,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioText")
     @Expose
@@ -185,7 +166,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回音频文件识别出的对应文本内容。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Asrs")
     @Expose
@@ -193,7 +173,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
     * 该字段用于返回检测结果明细数据相关的cos url	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentCosUrlList")
     @Expose
@@ -207,10 +186,8 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 该字段用于返回创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。 
      * @return TaskId 该字段用于返回创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -218,19 +195,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 该字段用于返回创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 该字段用于返回调用视频审核接口时传入的数据ID参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回调用视频审核接口时传入的数据ID参数，方便数据的辨别和管理。 
      * @return DataId 该字段用于返回调用视频审核接口时传入的数据ID参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataId() {
         return this.DataId;
@@ -238,19 +211,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回调用视频审核接口时传入的数据ID参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataId 该字段用于返回调用视频审核接口时传入的数据ID参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataId(String DataId) {
         this.DataId = DataId;
     }
 
     /**
-     * Get 该字段用于返回调用视频审核接口时传入的BizType参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回调用视频审核接口时传入的BizType参数，方便数据的辨别和管理。 
      * @return BizType 该字段用于返回调用视频审核接口时传入的BizType参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBizType() {
         return this.BizType;
@@ -258,19 +227,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回调用视频审核接口时传入的BizType参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BizType 该字段用于返回调用视频审核接口时传入的BizType参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。 
      * @return Name 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -278,9 +243,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -288,11 +251,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Get 该字段用于返回所查询内容的任务状态。
-<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
-注意：此字段可能返回 null，表示取不到有效值。 
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。 
      * @return Status 该字段用于返回所查询内容的任务状态。
 <br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -301,20 +262,16 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     /**
      * Set 该字段用于返回所查询内容的任务状态。
 <br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 该字段用于返回所查询内容的任务状态。
 <br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。 
      * @return Type 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -322,19 +279,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 该字段用于返回调用视频审核接口时输入的视频审核类型，取值为：**VIDEO**（点播视频）和**LIVE_VIDEO**（直播视频），默认值为VIDEO。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过 
      * @return Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -342,19 +295,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。 
      * @return Labels 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskLabel [] getLabels() {
         return this.Labels;
@@ -362,19 +311,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(TaskLabel [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 该字段用于返回输入媒体文件的详细信息，包括编解码格式、分片时长等信息。详细内容敬请参考MediaInfo数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回输入媒体文件的详细信息，包括编解码格式、分片时长等信息。详细内容敬请参考MediaInfo数据结构的描述。 
      * @return MediaInfo 该字段用于返回输入媒体文件的详细信息，包括编解码格式、分片时长等信息。详细内容敬请参考MediaInfo数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInfo getMediaInfo() {
         return this.MediaInfo;
@@ -382,19 +327,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回输入媒体文件的详细信息，包括编解码格式、分片时长等信息。详细内容敬请参考MediaInfo数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaInfo 该字段用于返回输入媒体文件的详细信息，包括编解码格式、分片时长等信息。详细内容敬请参考MediaInfo数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaInfo(MediaInfo MediaInfo) {
         this.MediaInfo = MediaInfo;
     }
 
     /**
-     * Get 该字段用于返回审核服务的媒体内容信息，主要包括传入文件类型和访问地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回审核服务的媒体内容信息，主要包括传入文件类型和访问地址。 
      * @return InputInfo 该字段用于返回审核服务的媒体内容信息，主要包括传入文件类型和访问地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InputInfo getInputInfo() {
         return this.InputInfo;
@@ -402,19 +343,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回审核服务的媒体内容信息，主要包括传入文件类型和访问地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputInfo 该字段用于返回审核服务的媒体内容信息，主要包括传入文件类型和访问地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputInfo(InputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。 
      * @return CreatedAt 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedAt() {
         return this.CreatedAt;
@@ -422,19 +359,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedAt 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。 
      * @return UpdatedAt 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
@@ -442,19 +375,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedAt 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
     }
 
     /**
-     * Get 在秒后重试
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在秒后重试 
      * @return TryInSeconds 在秒后重试
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTryInSeconds() {
         return this.TryInSeconds;
@@ -462,19 +391,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 在秒后重试
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TryInSeconds 在秒后重试
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTryInSeconds(Long TryInSeconds) {
         this.TryInSeconds = TryInSeconds;
     }
 
     /**
-     * Get 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。 
      * @return ImageSegments 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageSegments [] getImageSegments() {
         return this.ImageSegments;
@@ -482,19 +407,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageSegments 该字段用于返回视频中截帧审核的结果，详细返回内容敬请参考ImageSegments数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageSegments(ImageSegments [] ImageSegments) {
         this.ImageSegments = ImageSegments;
     }
 
     /**
-     * Get 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。 
      * @return AudioSegments 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioSegments [] getAudioSegments() {
         return this.AudioSegments;
@@ -502,9 +423,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioSegments 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioSegments(AudioSegments [] AudioSegments) {
         this.AudioSegments = AudioSegments;
@@ -518,8 +437,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 **CALLBACK_ERRORR**：回调错误。
 **MODERATION_ERROR**：审核失败。
 **URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
-任务状态非Error时默认返回为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+任务状态非Error时默认返回为空。 
      * @return ErrorType 当任务状态为Error时，返回对应错误的类型，取值：
 **DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
@@ -528,7 +446,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 **MODERATION_ERROR**：审核失败。
 **URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
 任务状态非Error时默认返回为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorType() {
         return this.ErrorType;
@@ -543,7 +460,6 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 **MODERATION_ERROR**：审核失败。
 **URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
 任务状态非Error时默认返回为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorType 当任务状态为Error时，返回对应错误的类型，取值：
 **DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
@@ -552,17 +468,14 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 **MODERATION_ERROR**：审核失败。
 **URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
 任务状态非Error时默认返回为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorType(String ErrorType) {
         this.ErrorType = ErrorType;
     }
 
     /**
-     * Get 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。 
      * @return ErrorDescription 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorDescription() {
         return this.ErrorDescription;
@@ -570,19 +483,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorDescription 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorDescription(String ErrorDescription) {
         this.ErrorDescription = ErrorDescription;
     }
 
     /**
-     * Get 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签 
      * @return Label 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -590,19 +499,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 该字段用于返回检测结果所对应的标签。如果未命中恶意，返回Normal，如果命中恶意，则返回Labels中优先级最高的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。 
      * @return AudioText 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAudioText() {
         return this.AudioText;
@@ -610,19 +515,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioText 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioText(String AudioText) {
         this.AudioText = AudioText;
     }
 
     /**
-     * Get 该字段用于返回音频文件识别出的对应文本内容。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回音频文件识别出的对应文本内容。 
      * @return Asrs 该字段用于返回音频文件识别出的对应文本内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RcbAsr [] getAsrs() {
         return this.Asrs;
@@ -630,19 +531,15 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回音频文件识别出的对应文本内容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Asrs 该字段用于返回音频文件识别出的对应文本内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrs(RcbAsr [] Asrs) {
         this.Asrs = Asrs;
     }
 
     /**
-     * Get 该字段用于返回检测结果明细数据相关的cos url	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回检测结果明细数据相关的cos url	 
      * @return SegmentCosUrlList 该字段用于返回检测结果明细数据相关的cos url	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SegmentCosUrlList getSegmentCosUrlList() {
         return this.SegmentCosUrlList;
@@ -650,9 +547,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回检测结果明细数据相关的cos url	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentCosUrlList 该字段用于返回检测结果明细数据相关的cos url	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentCosUrlList(SegmentCosUrlList SegmentCosUrlList) {
         this.SegmentCosUrlList = SegmentCosUrlList;

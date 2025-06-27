@@ -25,7 +25,6 @@ public class AudioResult extends AbstractModel {
 
     /**
     * 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HitFlag")
     @Expose
@@ -33,7 +32,6 @@ public class AudioResult extends AbstractModel {
 
     /**
     * 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -42,7 +40,6 @@ public class AudioResult extends AbstractModel {
     /**
     * 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
 返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -50,7 +47,6 @@ public class AudioResult extends AbstractModel {
 
     /**
     * 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -58,7 +54,6 @@ public class AudioResult extends AbstractModel {
 
     /**
     * 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -66,7 +61,6 @@ public class AudioResult extends AbstractModel {
 
     /**
     * 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -109,7 +103,6 @@ public class AudioResult extends AbstractModel {
 
     /**
     * 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabel")
     @Expose
@@ -117,7 +110,6 @@ public class AudioResult extends AbstractModel {
 
     /**
     * 识别类标签结果信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecognitionResults")
     @Expose
@@ -159,10 +151,15 @@ public class AudioResult extends AbstractModel {
     private String SubTagCode;
 
     /**
-     * Get 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 审核检测类型
+    */
+    @SerializedName("HitType")
+    @Expose
+    private String HitType;
+
+    /**
+     * Get 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。 
      * @return HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHitFlag() {
         return this.HitFlag;
@@ -170,19 +167,15 @@ public class AudioResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHitFlag(Long HitFlag) {
         this.HitFlag = HitFlag;
     }
 
     /**
-     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。 
      * @return Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -190,9 +183,7 @@ public class AudioResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
@@ -200,11 +191,9 @@ public class AudioResult extends AbstractModel {
 
     /**
      * Get 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
-返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。 
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过 
      * @return Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
 返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -213,20 +202,16 @@ public class AudioResult extends AbstractModel {
     /**
      * Set 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
 返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
 返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。 
      * @return Score 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -234,19 +219,15 @@ public class AudioResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。 
      * @return Text 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
         return this.Text;
@@ -254,19 +235,15 @@ public class AudioResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。 
      * @return Url 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -274,9 +251,7 @@ public class AudioResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -363,10 +338,8 @@ public class AudioResult extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回当前标签（Lable）下的二级标签。 
      * @return SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabel() {
         return this.SubLabel;
@@ -374,19 +347,15 @@ public class AudioResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get 识别类标签结果信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 识别类标签结果信息列表 
      * @return RecognitionResults 识别类标签结果信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecognitionResult [] getRecognitionResults() {
         return this.RecognitionResults;
@@ -394,9 +363,7 @@ public class AudioResult extends AbstractModel {
 
     /**
      * Set 识别类标签结果信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecognitionResults 识别类标签结果信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecognitionResults(RecognitionResult [] RecognitionResults) {
         this.RecognitionResults = RecognitionResults;
@@ -482,6 +449,22 @@ public class AudioResult extends AbstractModel {
         this.SubTagCode = SubTagCode;
     }
 
+    /**
+     * Get 审核检测类型 
+     * @return HitType 审核检测类型
+     */
+    public String getHitType() {
+        return this.HitType;
+    }
+
+    /**
+     * Set 审核检测类型
+     * @param HitType 审核检测类型
+     */
+    public void setHitType(String HitType) {
+        this.HitType = HitType;
+    }
+
     public AudioResult() {
     }
 
@@ -565,6 +548,9 @@ public class AudioResult extends AbstractModel {
         if (source.SubTagCode != null) {
             this.SubTagCode = new String(source.SubTagCode);
         }
+        if (source.HitType != null) {
+            this.HitType = new String(source.HitType);
+        }
     }
 
 
@@ -590,6 +576,7 @@ public class AudioResult extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TravelResults.", this.TravelResults);
         this.setParamSimple(map, prefix + "SubTag", this.SubTag);
         this.setParamSimple(map, prefix + "SubTagCode", this.SubTagCode);
+        this.setParamSimple(map, prefix + "HitType", this.HitType);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyRoleRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 角色名称
+    * 角色名称，从 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862) 接口或控制台获得。
     */
     @SerializedName("Role")
     @Expose
@@ -66,39 +66,39 @@ public class ModifyRoleRequest extends AbstractModel {
     private String Remark;
 
     /**
-    * Topic&Group维度权限配置
+    * Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
     */
     @SerializedName("DetailedPerms")
     @Expose
     private DetailedRolePerm [] DetailedPerms;
 
     /**
-     * Get 集群ID 
-     * @return InstanceId 集群ID
+     * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。 
+     * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群ID
-     * @param InstanceId 集群ID
+     * Set 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 角色名称 
-     * @return Role 角色名称
+     * Get 角色名称，从 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862) 接口或控制台获得。 
+     * @return Role 角色名称，从 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862) 接口或控制台获得。
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 角色名称
-     * @param Role 角色名称
+     * Set 角色名称，从 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862) 接口或控制台获得。
+     * @param Role 角色名称，从 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862) 接口或控制台获得。
      */
     public void setRole(String Role) {
         this.Role = Role;
@@ -169,16 +169,16 @@ public class ModifyRoleRequest extends AbstractModel {
     }
 
     /**
-     * Get Topic&Group维度权限配置 
-     * @return DetailedPerms Topic&Group维度权限配置
+     * Get Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填 
+     * @return DetailedPerms Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
      */
     public DetailedRolePerm [] getDetailedPerms() {
         return this.DetailedPerms;
     }
 
     /**
-     * Set Topic&Group维度权限配置
-     * @param DetailedPerms Topic&Group维度权限配置
+     * Set Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
+     * @param DetailedPerms Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
      */
     public void setDetailedPerms(DetailedRolePerm [] DetailedPerms) {
         this.DetailedPerms = DetailedPerms;

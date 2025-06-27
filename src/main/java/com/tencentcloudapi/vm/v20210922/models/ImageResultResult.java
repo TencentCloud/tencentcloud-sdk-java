@@ -32,7 +32,6 @@ Illegal 违法
 Abuse 谩骂
 Terror 暴恐
 Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scene")
     @Expose
@@ -42,7 +41,6 @@ Ad 广告
     * 是否命中
 0 未命中
 1 命中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HitFlag")
     @Expose
@@ -53,7 +51,6 @@ Ad 广告
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -61,7 +58,6 @@ Block 确认违规
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -69,7 +65,6 @@ Block 确认违规
 
     /**
     * 子标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabel")
     @Expose
@@ -77,7 +72,6 @@ Block 确认违规
 
     /**
     * 分数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -85,7 +79,6 @@ Block 确认违规
 
     /**
     * 人物名称列表，如未识别，则为null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Names")
     @Expose
@@ -93,7 +86,6 @@ Block 确认违规
 
     /**
     * 图片OCR文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -101,11 +93,17 @@ Block 确认违规
 
     /**
     * 其他详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Details")
     @Expose
     private ImageResultsResultDetail [] Details;
+
+    /**
+    * 审核命中类型
+    */
+    @SerializedName("HitType")
+    @Expose
+    private String HitType;
 
     /**
      * Get 场景
@@ -115,8 +113,7 @@ Polity 政治
 Illegal 违法
 Abuse 谩骂
 Terror 暴恐
-Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。 
+Ad 广告 
      * @return Scene 场景
 Porn 色情
 Sexy 性感
@@ -125,7 +122,6 @@ Illegal 违法
 Abuse 谩骂
 Terror 暴恐
 Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScene() {
         return this.Scene;
@@ -140,7 +136,6 @@ Illegal 违法
 Abuse 谩骂
 Terror 暴恐
 Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scene 场景
 Porn 色情
 Sexy 性感
@@ -149,7 +144,6 @@ Illegal 违法
 Abuse 谩骂
 Terror 暴恐
 Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScene(String Scene) {
         this.Scene = Scene;
@@ -158,12 +152,10 @@ Ad 广告
     /**
      * Get 是否命中
 0 未命中
-1 命中
-注意：此字段可能返回 null，表示取不到有效值。 
+1 命中 
      * @return HitFlag 是否命中
 0 未命中
 1 命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHitFlag() {
         return this.HitFlag;
@@ -173,11 +165,9 @@ Ad 广告
      * Set 是否命中
 0 未命中
 1 命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HitFlag 是否命中
 0 未命中
 1 命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHitFlag(Long HitFlag) {
         this.HitFlag = HitFlag;
@@ -187,13 +177,11 @@ Ad 广告
      * Get 审核建议，可选值：
 Pass 通过，
 Review 建议人审，
-Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。 
+Block 确认违规 
      * @return Suggestion 审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -204,22 +192,18 @@ Block 确认违规
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Label 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -227,19 +211,15 @@ Block 确认违规
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 子标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子标签 
      * @return SubLabel 子标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabel() {
         return this.SubLabel;
@@ -247,19 +227,15 @@ Block 确认违规
 
     /**
      * Set 子标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubLabel 子标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get 分数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分数 
      * @return Score 分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -267,19 +243,15 @@ Block 确认违规
 
     /**
      * Set 分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 人物名称列表，如未识别，则为null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人物名称列表，如未识别，则为null 
      * @return Names 人物名称列表，如未识别，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNames() {
         return this.Names;
@@ -287,19 +259,15 @@ Block 确认违规
 
     /**
      * Set 人物名称列表，如未识别，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Names 人物名称列表，如未识别，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get 图片OCR文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 图片OCR文本 
      * @return Text 图片OCR文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
         return this.Text;
@@ -307,19 +275,15 @@ Block 确认违规
 
     /**
      * Set 图片OCR文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 图片OCR文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 其他详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 其他详情 
      * @return Details 其他详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageResultsResultDetail [] getDetails() {
         return this.Details;
@@ -327,12 +291,26 @@ Block 确认违规
 
     /**
      * Set 其他详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Details 其他详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetails(ImageResultsResultDetail [] Details) {
         this.Details = Details;
+    }
+
+    /**
+     * Get 审核命中类型 
+     * @return HitType 审核命中类型
+     */
+    public String getHitType() {
+        return this.HitType;
+    }
+
+    /**
+     * Set 审核命中类型
+     * @param HitType 审核命中类型
+     */
+    public void setHitType(String HitType) {
+        this.HitType = HitType;
     }
 
     public ImageResultResult() {
@@ -376,6 +354,9 @@ Block 确认违规
                 this.Details[i] = new ImageResultsResultDetail(source.Details[i]);
             }
         }
+        if (source.HitType != null) {
+            this.HitType = new String(source.HitType);
+        }
     }
 
 
@@ -392,6 +373,7 @@ Block 确认违规
         this.setParamArraySimple(map, prefix + "Names.", this.Names);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamArrayObj(map, prefix + "Details.", this.Details);
+        this.setParamSimple(map, prefix + "HitType", this.HitType);
 
     }
 }

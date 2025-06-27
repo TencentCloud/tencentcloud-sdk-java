@@ -407,6 +407,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *查询MQTT消息详情
+     * @param req DescribeMessageDetailsRequest
+     * @return DescribeMessageDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMessageDetailsResponse DescribeMessageDetails(DescribeMessageDetailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMessageDetails", DescribeMessageDetailsResponse.class);
+    }
+
+    /**
      *根据一级Topic查询消息列表
      * @param req DescribeMessageListRequest
      * @return DescribeMessageListResponse

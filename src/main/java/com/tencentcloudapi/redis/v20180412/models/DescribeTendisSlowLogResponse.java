@@ -31,7 +31,7 @@ public class DescribeTendisSlowLogResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 慢查询详情
+    * 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
     */
     @SerializedName("TendisSlowLogDetail")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeTendisSlowLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 慢查询详情 
-     * @return TendisSlowLogDetail 慢查询详情
+     * Get 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。 
+     * @return TendisSlowLogDetail 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
      */
     public TendisSlowLogDetail [] getTendisSlowLogDetail() {
         return this.TendisSlowLogDetail;
     }
 
     /**
-     * Set 慢查询详情
-     * @param TendisSlowLogDetail 慢查询详情
+     * Set 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
+     * @param TendisSlowLogDetail 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
      */
     public void setTendisSlowLogDetail(TendisSlowLogDetail [] TendisSlowLogDetail) {
         this.TendisSlowLogDetail = TendisSlowLogDetail;

@@ -31,7 +31,7 @@ public class DescribeProxySlowLogResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 慢查询详情。
+    * 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
     */
     @SerializedName("InstanceProxySlowLogDetail")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeProxySlowLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 慢查询详情。 
-     * @return InstanceProxySlowLogDetail 慢查询详情。
+     * Get 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。 
+     * @return InstanceProxySlowLogDetail 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
      */
     public InstanceProxySlowlogDetail [] getInstanceProxySlowLogDetail() {
         return this.InstanceProxySlowLogDetail;
     }
 
     /**
-     * Set 慢查询详情。
-     * @param InstanceProxySlowLogDetail 慢查询详情。
+     * Set 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
+     * @param InstanceProxySlowLogDetail 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
      */
     public void setInstanceProxySlowLogDetail(InstanceProxySlowlogDetail [] InstanceProxySlowLogDetail) {
         this.InstanceProxySlowLogDetail = InstanceProxySlowLogDetail;

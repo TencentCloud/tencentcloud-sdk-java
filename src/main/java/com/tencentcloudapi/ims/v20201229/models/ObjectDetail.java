@@ -67,7 +67,6 @@ public class ObjectDetail extends AbstractModel {
 
     /**
     * 该参数用于返回命中的人脸id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectId")
     @Expose
@@ -170,10 +169,8 @@ public class ObjectDetail extends AbstractModel {
     }
 
     /**
-     * Get 该参数用于返回命中的人脸id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该参数用于返回命中的人脸id 
      * @return ObjectId 该参数用于返回命中的人脸id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectId() {
         return this.ObjectId;
@@ -181,9 +178,7 @@ public class ObjectDetail extends AbstractModel {
 
     /**
      * Set 该参数用于返回命中的人脸id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectId 该参数用于返回命中的人脸id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectId(String ObjectId) {
         this.ObjectId = ObjectId;

@@ -151,6 +151,13 @@ public class AudioResult extends AbstractModel {
     private LabelResult [] LabelResults;
 
     /**
+    * 审核命中类型
+    */
+    @SerializedName("HitType")
+    @Expose
+    private String HitType;
+
+    /**
      * Get 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。 
      * @return HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
      */
@@ -442,6 +449,22 @@ public class AudioResult extends AbstractModel {
         this.LabelResults = LabelResults;
     }
 
+    /**
+     * Get 审核命中类型 
+     * @return HitType 审核命中类型
+     */
+    public String getHitType() {
+        return this.HitType;
+    }
+
+    /**
+     * Set 审核命中类型
+     * @param HitType 审核命中类型
+     */
+    public void setHitType(String HitType) {
+        this.HitType = HitType;
+    }
+
     public AudioResult() {
     }
 
@@ -525,6 +548,9 @@ public class AudioResult extends AbstractModel {
                 this.LabelResults[i] = new LabelResult(source.LabelResults[i]);
             }
         }
+        if (source.HitType != null) {
+            this.HitType = new String(source.HitType);
+        }
     }
 
 
@@ -550,6 +576,7 @@ public class AudioResult extends AbstractModel {
         this.setParamSimple(map, prefix + "SubTag", this.SubTag);
         this.setParamSimple(map, prefix + "SubTagCode", this.SubTagCode);
         this.setParamArrayObj(map, prefix + "LabelResults.", this.LabelResults);
+        this.setParamSimple(map, prefix + "HitType", this.HitType);
 
     }
 }

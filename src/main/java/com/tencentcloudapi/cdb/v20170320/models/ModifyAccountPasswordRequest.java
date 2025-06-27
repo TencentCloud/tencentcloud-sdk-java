@@ -38,7 +38,7 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
     private String NewPassword;
 
     /**
-    * 云数据库账号。
+    * 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
     */
     @SerializedName("Accounts")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get 云数据库账号。 
-     * @return Accounts 云数据库账号。
+     * Get 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。 
+     * @return Accounts 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set 云数据库账号。
-     * @param Accounts 云数据库账号。
+     * Set 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+     * @param Accounts 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;

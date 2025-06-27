@@ -48,6 +48,13 @@ public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
     private Float Proportion;
 
     /**
+    * 知识库类型:0默认1共享
+    */
+    @SerializedName("KnowledgeType")
+    @Expose
+    private Long KnowledgeType;
+
+    /**
      * Get 当前应用名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppName 当前应用名称
@@ -107,6 +114,22 @@ public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
         this.Proportion = Proportion;
     }
 
+    /**
+     * Get 知识库类型:0默认1共享 
+     * @return KnowledgeType 知识库类型:0默认1共享
+     */
+    public Long getKnowledgeType() {
+        return this.KnowledgeType;
+    }
+
+    /**
+     * Set 知识库类型:0默认1共享
+     * @param KnowledgeType 知识库类型:0默认1共享
+     */
+    public void setKnowledgeType(Long KnowledgeType) {
+        this.KnowledgeType = KnowledgeType;
+    }
+
     public KnowledgeCapacityPieGraphDetail() {
     }
 
@@ -124,6 +147,9 @@ public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
         if (source.Proportion != null) {
             this.Proportion = new Float(source.Proportion);
         }
+        if (source.KnowledgeType != null) {
+            this.KnowledgeType = new Long(source.KnowledgeType);
+        }
     }
 
 
@@ -134,6 +160,7 @@ public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "UsedCharSize", this.UsedCharSize);
         this.setParamSimple(map, prefix + "Proportion", this.Proportion);
+        this.setParamSimple(map, prefix + "KnowledgeType", this.KnowledgeType);
 
     }
 }

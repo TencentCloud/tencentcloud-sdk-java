@@ -25,7 +25,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataId")
     @Expose
@@ -48,7 +47,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -56,7 +54,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizType")
     @Expose
@@ -64,7 +61,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -72,7 +68,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -80,7 +75,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 输入信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaInfo")
     @Expose
@@ -88,7 +82,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -103,7 +96,6 @@ public class TaskData extends AbstractModel {
 
     /**
     * 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
     @Expose
@@ -111,17 +103,14 @@ public class TaskData extends AbstractModel {
 
     /**
     * 任务信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputInfo")
     @Expose
     private InputInfo InputInfo;
 
     /**
-     * Get 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。 
      * @return DataId 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataId() {
         return this.DataId;
@@ -129,9 +118,7 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataId 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataId(String DataId) {
         this.DataId = DataId;
@@ -174,10 +161,8 @@ public class TaskData extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。 
      * @return Name 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -185,19 +170,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。 
      * @return BizType 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBizType() {
         return this.BizType;
@@ -205,19 +186,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BizType 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。 
      * @return Type 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -225,19 +202,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过 
      * @return Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -245,19 +218,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 输入信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入信息 
      * @return MediaInfo 输入信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInfo getMediaInfo() {
         return this.MediaInfo;
@@ -265,19 +234,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 输入信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaInfo 输入信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaInfo(MediaInfo MediaInfo) {
         this.MediaInfo = MediaInfo;
     }
 
     /**
-     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。 
      * @return Labels 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskLabel [] getLabels() {
         return this.Labels;
@@ -285,9 +250,7 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(TaskLabel [] Labels) {
         this.Labels = Labels;
@@ -310,10 +273,8 @@ public class TaskData extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。 
      * @return UpdatedAt 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
@@ -321,19 +282,15 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedAt 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
     }
 
     /**
-     * Get 任务信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务信息 
      * @return InputInfo 任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InputInfo getInputInfo() {
         return this.InputInfo;
@@ -341,9 +298,7 @@ public class TaskData extends AbstractModel {
 
     /**
      * Set 任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputInfo 任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputInfo(InputInfo InputInfo) {
         this.InputInfo = InputInfo;

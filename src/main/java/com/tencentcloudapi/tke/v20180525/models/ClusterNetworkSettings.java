@@ -124,6 +124,15 @@ public class ClusterNetworkSettings extends AbstractModel {
     private String CiliumMode;
 
     /**
+    * 控制面子网信息，仅在以下场景返回。
+- 容器网络插件为CiliumOverlay。
+- 支持CDC的托管集群，且网络插件为VPC-CNI。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突 
      * @return ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      */
@@ -355,6 +364,30 @@ public class ClusterNetworkSettings extends AbstractModel {
         this.CiliumMode = CiliumMode;
     }
 
+    /**
+     * Get 控制面子网信息，仅在以下场景返回。
+- 容器网络插件为CiliumOverlay。
+- 支持CDC的托管集群，且网络插件为VPC-CNI。 
+     * @return SubnetId 控制面子网信息，仅在以下场景返回。
+- 容器网络插件为CiliumOverlay。
+- 支持CDC的托管集群，且网络插件为VPC-CNI。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 控制面子网信息，仅在以下场景返回。
+- 容器网络插件为CiliumOverlay。
+- 支持CDC的托管集群，且网络插件为VPC-CNI。
+     * @param SubnetId 控制面子网信息，仅在以下场景返回。
+- 容器网络插件为CiliumOverlay。
+- 支持CDC的托管集群，且网络插件为VPC-CNI。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
     public ClusterNetworkSettings() {
     }
 
@@ -408,6 +441,9 @@ public class ClusterNetworkSettings extends AbstractModel {
         if (source.CiliumMode != null) {
             this.CiliumMode = new String(source.CiliumMode);
         }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -429,6 +465,7 @@ public class ClusterNetworkSettings extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
         this.setParamSimple(map, prefix + "Ipv6ServiceCIDR", this.Ipv6ServiceCIDR);
         this.setParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

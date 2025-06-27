@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyConsumerGroupRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 消费组名称
+    * 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
     */
     @SerializedName("ConsumerGroup")
     @Expose
@@ -53,46 +53,46 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
     private Boolean ConsumeMessageOrderly;
 
     /**
-    * 最大重试次数
+    * 最大重试次数，取值范围0～1000
     */
     @SerializedName("MaxRetryTimes")
     @Expose
     private Long MaxRetryTimes;
 
     /**
-    * 备注
+    * 备注信息，最多 128 个字符
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 集群ID 
-     * @return InstanceId 集群ID
+     * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。 
+     * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群ID
-     * @param InstanceId 集群ID
+     * Set 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 消费组名称 
-     * @return ConsumerGroup 消费组名称
+     * Get 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。 
+     * @return ConsumerGroup 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
      */
     public String getConsumerGroup() {
         return this.ConsumerGroup;
     }
 
     /**
-     * Set 消费组名称
-     * @param ConsumerGroup 消费组名称
+     * Set 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
+     * @param ConsumerGroup 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
      */
     public void setConsumerGroup(String ConsumerGroup) {
         this.ConsumerGroup = ConsumerGroup;
@@ -135,32 +135,32 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 最大重试次数 
-     * @return MaxRetryTimes 最大重试次数
+     * Get 最大重试次数，取值范围0～1000 
+     * @return MaxRetryTimes 最大重试次数，取值范围0～1000
      */
     public Long getMaxRetryTimes() {
         return this.MaxRetryTimes;
     }
 
     /**
-     * Set 最大重试次数
-     * @param MaxRetryTimes 最大重试次数
+     * Set 最大重试次数，取值范围0～1000
+     * @param MaxRetryTimes 最大重试次数，取值范围0～1000
      */
     public void setMaxRetryTimes(Long MaxRetryTimes) {
         this.MaxRetryTimes = MaxRetryTimes;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get 备注信息，最多 128 个字符 
+     * @return Remark 备注信息，最多 128 个字符
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set 备注信息，最多 128 个字符
+     * @param Remark 备注信息，最多 128 个字符
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

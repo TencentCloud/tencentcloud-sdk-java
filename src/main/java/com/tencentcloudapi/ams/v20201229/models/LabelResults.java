@@ -25,7 +25,6 @@ public class LabelResults extends AbstractModel {
 
     /**
     * 场景
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scene")
     @Expose
@@ -33,7 +32,6 @@ public class LabelResults extends AbstractModel {
 
     /**
     * 建议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -41,7 +39,6 @@ public class LabelResults extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -49,7 +46,6 @@ public class LabelResults extends AbstractModel {
 
     /**
     * 名称：歌曲名，语种名，说话人名 等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -57,7 +53,6 @@ public class LabelResults extends AbstractModel {
 
     /**
     * 得分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -65,7 +60,6 @@ public class LabelResults extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -73,17 +67,14 @@ public class LabelResults extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
     private Float EndTime;
 
     /**
-     * Get 场景
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景 
      * @return Scene 场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScene() {
         return this.Scene;
@@ -91,19 +82,15 @@ public class LabelResults extends AbstractModel {
 
     /**
      * Set 场景
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scene 场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScene(String Scene) {
         this.Scene = Scene;
     }
 
     /**
-     * Get 建议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建议 
      * @return Suggestion 建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuggestion() {
         return this.Suggestion;
@@ -111,19 +98,15 @@ public class LabelResults extends AbstractModel {
 
     /**
      * Set 建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(Long Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Label 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -131,19 +114,15 @@ public class LabelResults extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 名称：歌曲名，语种名，说话人名 等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称：歌曲名，语种名，说话人名 等 
      * @return Name 名称：歌曲名，语种名，说话人名 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -151,19 +130,15 @@ public class LabelResults extends AbstractModel {
 
     /**
      * Set 名称：歌曲名，语种名，说话人名 等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称：歌曲名，语种名，说话人名 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 得分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 得分 
      * @return Score 得分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -171,19 +146,15 @@ public class LabelResults extends AbstractModel {
 
     /**
      * Set 得分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 得分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTime() {
         return this.StartTime;
@@ -191,19 +162,15 @@ public class LabelResults extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTime() {
         return this.EndTime;
@@ -211,9 +178,7 @@ public class LabelResults extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;

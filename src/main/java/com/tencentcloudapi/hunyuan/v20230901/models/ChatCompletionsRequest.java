@@ -108,7 +108,7 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean EnableEnhancement;
 
     /**
-    * 可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
+    * 可调用的工具列表，仅对 hunyuan-turbos、hunyuan-t1、hunyuan-functioncall 模型生效。
     */
     @SerializedName("Tools")
     @Expose
@@ -235,6 +235,13 @@ public class ChatCompletionsRequest extends AbstractModel {
     @SerializedName("TopicChoice")
     @Expose
     private String TopicChoice;
+
+    /**
+    * 模型思维链开关 说明： 1. 未传值时默认开启，打开模型思维链推理能力。 2. 关闭后，关闭模型思维链推理能力。  开关当前仅对hunyuan-a13b模型生效 示例值：ture
+    */
+    @SerializedName("EnableThinking")
+    @Expose
+    private Boolean EnableThinking;
 
     /**
      * Get 模型名称，可选值参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中混元生文模型列表。
@@ -489,16 +496,16 @@ public class ChatCompletionsRequest extends AbstractModel {
     }
 
     /**
-     * Get 可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。 
-     * @return Tools 可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
+     * Get 可调用的工具列表，仅对 hunyuan-turbos、hunyuan-t1、hunyuan-functioncall 模型生效。 
+     * @return Tools 可调用的工具列表，仅对 hunyuan-turbos、hunyuan-t1、hunyuan-functioncall 模型生效。
      */
     public Tool [] getTools() {
         return this.Tools;
     }
 
     /**
-     * Set 可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
-     * @param Tools 可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
+     * Set 可调用的工具列表，仅对 hunyuan-turbos、hunyuan-t1、hunyuan-functioncall 模型生效。
+     * @param Tools 可调用的工具列表，仅对 hunyuan-turbos、hunyuan-t1、hunyuan-functioncall 模型生效。
      */
     public void setTools(Tool [] Tools) {
         this.Tools = Tools;
@@ -824,6 +831,22 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.TopicChoice = TopicChoice;
     }
 
+    /**
+     * Get 模型思维链开关 说明： 1. 未传值时默认开启，打开模型思维链推理能力。 2. 关闭后，关闭模型思维链推理能力。  开关当前仅对hunyuan-a13b模型生效 示例值：ture 
+     * @return EnableThinking 模型思维链开关 说明： 1. 未传值时默认开启，打开模型思维链推理能力。 2. 关闭后，关闭模型思维链推理能力。  开关当前仅对hunyuan-a13b模型生效 示例值：ture
+     */
+    public Boolean getEnableThinking() {
+        return this.EnableThinking;
+    }
+
+    /**
+     * Set 模型思维链开关 说明： 1. 未传值时默认开启，打开模型思维链推理能力。 2. 关闭后，关闭模型思维链推理能力。  开关当前仅对hunyuan-a13b模型生效 示例值：ture
+     * @param EnableThinking 模型思维链开关 说明： 1. 未传值时默认开启，打开模型思维链推理能力。 2. 关闭后，关闭模型思维链推理能力。  开关当前仅对hunyuan-a13b模型生效 示例值：ture
+     */
+    public void setEnableThinking(Boolean EnableThinking) {
+        this.EnableThinking = EnableThinking;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -907,6 +930,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.TopicChoice != null) {
             this.TopicChoice = new String(source.TopicChoice);
         }
+        if (source.EnableThinking != null) {
+            this.EnableThinking = new Boolean(source.EnableThinking);
+        }
     }
 
 
@@ -936,6 +962,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableDeepRead", this.EnableDeepRead);
         this.setParamObj(map, prefix + "WebSearchOptions.", this.WebSearchOptions);
         this.setParamSimple(map, prefix + "TopicChoice", this.TopicChoice);
+        this.setParamSimple(map, prefix + "EnableThinking", this.EnableThinking);
 
     }
 }

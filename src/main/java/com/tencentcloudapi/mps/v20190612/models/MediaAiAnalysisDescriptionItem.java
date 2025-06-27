@@ -60,6 +60,14 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
     private AiParagraphInfo [] Paragraphs;
 
     /**
+    * 摘要思维导图地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MindMapUrl")
+    @Expose
+    private String MindMapUrl;
+
+    /**
      * Get 智能描述。 
      * @return Description 智能描述。
      */
@@ -143,6 +151,26 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
         this.Paragraphs = Paragraphs;
     }
 
+    /**
+     * Get 摘要思维导图地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MindMapUrl 摘要思维导图地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMindMapUrl() {
+        return this.MindMapUrl;
+    }
+
+    /**
+     * Set 摘要思维导图地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MindMapUrl 摘要思维导图地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMindMapUrl(String MindMapUrl) {
+        this.MindMapUrl = MindMapUrl;
+    }
+
     public MediaAiAnalysisDescriptionItem() {
     }
 
@@ -172,6 +200,9 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
                 this.Paragraphs[i] = new AiParagraphInfo(source.Paragraphs[i]);
             }
         }
+        if (source.MindMapUrl != null) {
+            this.MindMapUrl = new String(source.MindMapUrl);
+        }
     }
 
 
@@ -184,6 +215,7 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
+        this.setParamSimple(map, prefix + "MindMapUrl", this.MindMapUrl);
 
     }
 }

@@ -31,7 +31,12 @@ public class TopicConsumeStats extends AbstractModel {
     private String Topic;
 
     /**
-    * 主题类型
+    * 主题类型，枚举值如下：
+
+- NORMAL：普通消息主题
+- FIFO：顺序消息主题
+- DELAY：延迟消息主题
+- TRANSACTION：事务消息主题
     */
     @SerializedName("TopicType")
     @Expose
@@ -52,14 +57,14 @@ public class TopicConsumeStats extends AbstractModel {
     private Long ConsumerLag;
 
     /**
-    * 订阅规则
+    * 订阅规则，`*`表示订阅全部TAG
     */
     @SerializedName("SubString")
     @Expose
     private String SubString;
 
     /**
-    * 最后消费进度更新时间
+    * 最后消费进度更新时间，**Unix时间戳（毫秒）**
     */
     @SerializedName("LastUpdateTime")
     @Expose
@@ -82,16 +87,36 @@ public class TopicConsumeStats extends AbstractModel {
     }
 
     /**
-     * Get 主题类型 
-     * @return TopicType 主题类型
+     * Get 主题类型，枚举值如下：
+
+- NORMAL：普通消息主题
+- FIFO：顺序消息主题
+- DELAY：延迟消息主题
+- TRANSACTION：事务消息主题 
+     * @return TopicType 主题类型，枚举值如下：
+
+- NORMAL：普通消息主题
+- FIFO：顺序消息主题
+- DELAY：延迟消息主题
+- TRANSACTION：事务消息主题
      */
     public String getTopicType() {
         return this.TopicType;
     }
 
     /**
-     * Set 主题类型
-     * @param TopicType 主题类型
+     * Set 主题类型，枚举值如下：
+
+- NORMAL：普通消息主题
+- FIFO：顺序消息主题
+- DELAY：延迟消息主题
+- TRANSACTION：事务消息主题
+     * @param TopicType 主题类型，枚举值如下：
+
+- NORMAL：普通消息主题
+- FIFO：顺序消息主题
+- DELAY：延迟消息主题
+- TRANSACTION：事务消息主题
      */
     public void setTopicType(String TopicType) {
         this.TopicType = TopicType;
@@ -130,32 +155,32 @@ public class TopicConsumeStats extends AbstractModel {
     }
 
     /**
-     * Get 订阅规则 
-     * @return SubString 订阅规则
+     * Get 订阅规则，`*`表示订阅全部TAG 
+     * @return SubString 订阅规则，`*`表示订阅全部TAG
      */
     public String getSubString() {
         return this.SubString;
     }
 
     /**
-     * Set 订阅规则
-     * @param SubString 订阅规则
+     * Set 订阅规则，`*`表示订阅全部TAG
+     * @param SubString 订阅规则，`*`表示订阅全部TAG
      */
     public void setSubString(String SubString) {
         this.SubString = SubString;
     }
 
     /**
-     * Get 最后消费进度更新时间 
-     * @return LastUpdateTime 最后消费进度更新时间
+     * Get 最后消费进度更新时间，**Unix时间戳（毫秒）** 
+     * @return LastUpdateTime 最后消费进度更新时间，**Unix时间戳（毫秒）**
      */
     public Long getLastUpdateTime() {
         return this.LastUpdateTime;
     }
 
     /**
-     * Set 最后消费进度更新时间
-     * @param LastUpdateTime 最后消费进度更新时间
+     * Set 最后消费进度更新时间，**Unix时间戳（毫秒）**
+     * @param LastUpdateTime 最后消费进度更新时间，**Unix时间戳（毫秒）**
      */
     public void setLastUpdateTime(Long LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;

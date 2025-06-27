@@ -56,7 +56,7 @@ TRANSACTION:事务消息
     private Long QueueNum;
 
     /**
-    * 描述
+    * 备注信息
     */
     @SerializedName("Remark")
     @Expose
@@ -96,7 +96,6 @@ TRANSACTION:事务消息
 
     /**
     * 消息保留时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgTTL")
     @Expose
@@ -183,16 +182,16 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Get 描述 
-     * @return Remark 描述
+     * Get 备注信息 
+     * @return Remark 备注信息
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 描述
-     * @param Remark 描述
+     * Set 备注信息
+     * @param Remark 备注信息
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -279,10 +278,8 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Get 消息保留时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息保留时长 
      * @return MsgTTL 消息保留时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMsgTTL() {
         return this.MsgTTL;
@@ -290,9 +287,7 @@ TRANSACTION:事务消息
 
     /**
      * Set 消息保留时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MsgTTL 消息保留时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsgTTL(Long MsgTTL) {
         this.MsgTTL = MsgTTL;

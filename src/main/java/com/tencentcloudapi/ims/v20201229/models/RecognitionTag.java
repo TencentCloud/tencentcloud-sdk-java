@@ -25,7 +25,6 @@ public class RecognitionTag extends AbstractModel {
 
     /**
     * 标签名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class RecognitionTag extends AbstractModel {
 
     /**
     * 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -41,17 +39,14 @@ public class RecognitionTag extends AbstractModel {
 
     /**
     * 标签位置信息，若模型无位置信息，则可能为零值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
     private Location Location;
 
     /**
-     * Get 标签名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签名称 
      * @return Name 标签名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -59,19 +54,15 @@ public class RecognitionTag extends AbstractModel {
 
     /**
      * Set 标签名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 标签名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 置信分：0～100，数值越大表示置信度越高 
      * @return Score 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -79,19 +70,15 @@ public class RecognitionTag extends AbstractModel {
 
     /**
      * Set 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 标签位置信息，若模型无位置信息，则可能为零值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签位置信息，若模型无位置信息，则可能为零值 
      * @return Location 标签位置信息，若模型无位置信息，则可能为零值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Location getLocation() {
         return this.Location;
@@ -99,9 +86,7 @@ public class RecognitionTag extends AbstractModel {
 
     /**
      * Set 标签位置信息，若模型无位置信息，则可能为零值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 标签位置信息，若模型无位置信息，则可能为零值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(Location Location) {
         this.Location = Location;

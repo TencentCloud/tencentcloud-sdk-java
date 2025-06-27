@@ -25,6 +25,8 @@ public class DetailedRolePerm extends AbstractModel {
 
     /**
     * 权限对应的资源
+可以是主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+可以是消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
     */
     @SerializedName("Resource")
     @Expose
@@ -59,8 +61,12 @@ public class DetailedRolePerm extends AbstractModel {
     private String Remark;
 
     /**
-     * Get 权限对应的资源 
+     * Get 权限对应的资源
+可以是主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+可以是消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。 
      * @return Resource 权限对应的资源
+可以是主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+可以是消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
      */
     public String getResource() {
         return this.Resource;
@@ -68,7 +74,11 @@ public class DetailedRolePerm extends AbstractModel {
 
     /**
      * Set 权限对应的资源
+可以是主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+可以是消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
      * @param Resource 权限对应的资源
+可以是主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+可以是消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;

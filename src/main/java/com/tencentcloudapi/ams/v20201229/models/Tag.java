@@ -27,7 +27,6 @@ public class Tag extends AbstractModel {
     * 根据Label字段确定具体名称：
 当Label 为Teenager 时 Name可能取值有：Teenager 
 当Label 为Gender 时 Name可能取值有：Male 、Female
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -35,7 +34,6 @@ public class Tag extends AbstractModel {
 
     /**
     * 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -43,7 +41,6 @@ public class Tag extends AbstractModel {
 
     /**
     * 识别开始偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -51,7 +48,6 @@ public class Tag extends AbstractModel {
 
     /**
     * 识别结束偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -60,12 +56,10 @@ public class Tag extends AbstractModel {
     /**
      * Get 根据Label字段确定具体名称：
 当Label 为Teenager 时 Name可能取值有：Teenager 
-当Label 为Gender 时 Name可能取值有：Male 、Female
-注意：此字段可能返回 null，表示取不到有效值。 
+当Label 为Gender 时 Name可能取值有：Male 、Female 
      * @return Name 根据Label字段确定具体名称：
 当Label 为Teenager 时 Name可能取值有：Teenager 
 当Label 为Gender 时 Name可能取值有：Male 、Female
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -75,21 +69,17 @@ public class Tag extends AbstractModel {
      * Set 根据Label字段确定具体名称：
 当Label 为Teenager 时 Name可能取值有：Teenager 
 当Label 为Gender 时 Name可能取值有：Male 、Female
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 根据Label字段确定具体名称：
 当Label 为Teenager 时 Name可能取值有：Teenager 
 当Label 为Gender 时 Name可能取值有：Male 、Female
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 置信分：0～100，数值越大表示置信度越高 
      * @return Score 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -97,19 +87,15 @@ public class Tag extends AbstractModel {
 
     /**
      * Set 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 识别开始偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 识别开始偏移时间，单位：毫秒 
      * @return StartTime 识别开始偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTime() {
         return this.StartTime;
@@ -117,19 +103,15 @@ public class Tag extends AbstractModel {
 
     /**
      * Set 识别开始偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 识别开始偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 识别结束偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 识别结束偏移时间，单位：毫秒 
      * @return EndTime 识别结束偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTime() {
         return this.EndTime;
@@ -137,9 +119,7 @@ public class Tag extends AbstractModel {
 
     /**
      * Set 识别结束偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 识别结束偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;

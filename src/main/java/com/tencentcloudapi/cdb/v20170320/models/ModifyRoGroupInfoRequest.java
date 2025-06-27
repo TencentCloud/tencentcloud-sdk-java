@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyRoGroupInfoRequest extends AbstractModel {
 
     /**
-    * RO 组的 ID。
+    * RO 组的 ID。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。
     */
     @SerializedName("RoGroupId")
     @Expose
@@ -38,7 +38,7 @@ public class ModifyRoGroupInfoRequest extends AbstractModel {
     private RoGroupAttr RoGroupInfo;
 
     /**
-    * RO 组内实例的权重。若修改 RO 组的权重模式为用户自定义模式（custom），则必须设置该参数，且需要设置每个 RO 实例的权重值。
+    * RO 组内实例的权重。若修改 RO 组的权重模式为用户自定义模式（custom），则必须设置该参数，且需要设置每个 RO 实例的权重值。RO 实例 ID 可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。
     */
     @SerializedName("RoWeightValues")
     @Expose
@@ -59,16 +59,16 @@ public class ModifyRoGroupInfoRequest extends AbstractModel {
     private Long ReplicationDelayTime;
 
     /**
-     * Get RO 组的 ID。 
-     * @return RoGroupId RO 组的 ID。
+     * Get RO 组的 ID。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。 
+     * @return RoGroupId RO 组的 ID。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。
      */
     public String getRoGroupId() {
         return this.RoGroupId;
     }
 
     /**
-     * Set RO 组的 ID。
-     * @param RoGroupId RO 组的 ID。
+     * Set RO 组的 ID。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。
+     * @param RoGroupId RO 组的 ID。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。
      */
     public void setRoGroupId(String RoGroupId) {
         this.RoGroupId = RoGroupId;
@@ -91,16 +91,16 @@ public class ModifyRoGroupInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get RO 组内实例的权重。若修改 RO 组的权重模式为用户自定义模式（custom），则必须设置该参数，且需要设置每个 RO 实例的权重值。 
-     * @return RoWeightValues RO 组内实例的权重。若修改 RO 组的权重模式为用户自定义模式（custom），则必须设置该参数，且需要设置每个 RO 实例的权重值。
+     * Get RO 组内实例的权重。若修改 RO 组的权重模式为用户自定义模式（custom），则必须设置该参数，且需要设置每个 RO 实例的权重值。RO 实例 ID 可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。 
+     * @return RoWeightValues RO 组内实例的权重。若修改 RO 组的权重模式为用户自定义模式（custom），则必须设置该参数，且需要设置每个 RO 实例的权重值。RO 实例 ID 可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。
      */
     public RoWeightValue [] getRoWeightValues() {
         return this.RoWeightValues;
     }
 
     /**
-     * Set RO 组内实例的权重。若修改 RO 组的权重模式为用户自定义模式（custom），则必须设置该参数，且需要设置每个 RO 实例的权重值。
-     * @param RoWeightValues RO 组内实例的权重。若修改 RO 组的权重模式为用户自定义模式（custom），则必须设置该参数，且需要设置每个 RO 实例的权重值。
+     * Set RO 组内实例的权重。若修改 RO 组的权重模式为用户自定义模式（custom），则必须设置该参数，且需要设置每个 RO 实例的权重值。RO 实例 ID 可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。
+     * @param RoWeightValues RO 组内实例的权重。若修改 RO 组的权重模式为用户自定义模式（custom），则必须设置该参数，且需要设置每个 RO 实例的权重值。RO 实例 ID 可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 接口获取。
      */
     public void setRoWeightValues(RoWeightValue [] RoWeightValues) {
         this.RoWeightValues = RoWeightValues;

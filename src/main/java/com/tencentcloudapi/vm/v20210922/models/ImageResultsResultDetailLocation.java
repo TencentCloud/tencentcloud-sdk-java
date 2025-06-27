@@ -25,7 +25,6 @@ public class ImageResultsResultDetailLocation extends AbstractModel {
 
     /**
     * x坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("X")
     @Expose
@@ -33,7 +32,6 @@ public class ImageResultsResultDetailLocation extends AbstractModel {
 
     /**
     * y坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Y")
     @Expose
@@ -41,7 +39,6 @@ public class ImageResultsResultDetailLocation extends AbstractModel {
 
     /**
     * 宽度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
@@ -49,7 +46,6 @@ public class ImageResultsResultDetailLocation extends AbstractModel {
 
     /**
     * 高度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
     @Expose
@@ -57,17 +53,14 @@ public class ImageResultsResultDetailLocation extends AbstractModel {
 
     /**
     * 旋转角度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rotate")
     @Expose
     private Float Rotate;
 
     /**
-     * Get x坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get x坐标 
      * @return X x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getX() {
         return this.X;
@@ -75,19 +68,15 @@ public class ImageResultsResultDetailLocation extends AbstractModel {
 
     /**
      * Set x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param X x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setX(Float X) {
         this.X = X;
     }
 
     /**
-     * Get y坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get y坐标 
      * @return Y y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getY() {
         return this.Y;
@@ -95,19 +84,15 @@ public class ImageResultsResultDetailLocation extends AbstractModel {
 
     /**
      * Set y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Y y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setY(Float Y) {
         this.Y = Y;
     }
 
     /**
-     * Get 宽度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 宽度 
      * @return Width 宽度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
         return this.Width;
@@ -115,19 +100,15 @@ public class ImageResultsResultDetailLocation extends AbstractModel {
 
     /**
      * Set 宽度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 宽度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 高度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高度 
      * @return Height 高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
         return this.Height;
@@ -135,19 +116,15 @@ public class ImageResultsResultDetailLocation extends AbstractModel {
 
     /**
      * Set 高度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 旋转角度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 旋转角度 
      * @return Rotate 旋转角度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRotate() {
         return this.Rotate;
@@ -155,9 +132,7 @@ public class ImageResultsResultDetailLocation extends AbstractModel {
 
     /**
      * Set 旋转角度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rotate 旋转角度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRotate(Float Rotate) {
         this.Rotate = Rotate;

@@ -25,15 +25,13 @@ public class LabelDetailItem extends AbstractModel {
 
     /**
     * 该字段用于返回识别对象的ID以方便识别和区分。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 该字段用于返回识命中的子标签名称。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 该字段用于返回时命中的子标签名称。
     */
     @SerializedName("Name")
     @Expose
@@ -41,17 +39,14 @@ public class LabelDetailItem extends AbstractModel {
 
     /**
     * 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-     * Get 该字段用于返回识别对象的ID以方便识别和区分。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回识别对象的ID以方便识别和区分。 
      * @return Id 该字段用于返回识别对象的ID以方便识别和区分。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -59,39 +54,31 @@ public class LabelDetailItem extends AbstractModel {
 
     /**
      * Set 该字段用于返回识别对象的ID以方便识别和区分。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 该字段用于返回识别对象的ID以方便识别和区分。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 该字段用于返回识命中的子标签名称。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 该字段用于返回识命中的子标签名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该字段用于返回时命中的子标签名称。 
+     * @return Name 该字段用于返回时命中的子标签名称。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 该字段用于返回识命中的子标签名称。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 该字段用于返回识命中的子标签名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 该字段用于返回时命中的子标签名称。
+     * @param Name 该字段用于返回时命中的子标签名称。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。 
      * @return Score 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -99,9 +86,7 @@ public class LabelDetailItem extends AbstractModel {
 
     /**
      * Set 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;

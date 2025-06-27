@@ -56,12 +56,19 @@ public class KnowledgeDetail extends AbstractModel {
     private String ExceedCharSize;
 
     /**
-    * 是否共享知识库类型
+    * 废弃
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSharedKnowledge")
     @Expose
     private Boolean IsSharedKnowledge;
+
+    /**
+    * 知识库类型:0默认1共享
+    */
+    @SerializedName("KnowledgeType")
+    @Expose
+    private Long KnowledgeType;
 
     /**
      * Get 应用名称
@@ -144,9 +151,9 @@ public class KnowledgeDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否共享知识库类型
+     * Get 废弃
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsSharedKnowledge 是否共享知识库类型
+     * @return IsSharedKnowledge 废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsSharedKnowledge() {
@@ -154,13 +161,29 @@ public class KnowledgeDetail extends AbstractModel {
     }
 
     /**
-     * Set 是否共享知识库类型
+     * Set 废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsSharedKnowledge 是否共享知识库类型
+     * @param IsSharedKnowledge 废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSharedKnowledge(Boolean IsSharedKnowledge) {
         this.IsSharedKnowledge = IsSharedKnowledge;
+    }
+
+    /**
+     * Get 知识库类型:0默认1共享 
+     * @return KnowledgeType 知识库类型:0默认1共享
+     */
+    public Long getKnowledgeType() {
+        return this.KnowledgeType;
+    }
+
+    /**
+     * Set 知识库类型:0默认1共享
+     * @param KnowledgeType 知识库类型:0默认1共享
+     */
+    public void setKnowledgeType(Long KnowledgeType) {
+        this.KnowledgeType = KnowledgeType;
     }
 
     public KnowledgeDetail() {
@@ -186,6 +209,9 @@ public class KnowledgeDetail extends AbstractModel {
         if (source.IsSharedKnowledge != null) {
             this.IsSharedKnowledge = new Boolean(source.IsSharedKnowledge);
         }
+        if (source.KnowledgeType != null) {
+            this.KnowledgeType = new Long(source.KnowledgeType);
+        }
     }
 
 
@@ -198,6 +224,7 @@ public class KnowledgeDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Proportion", this.Proportion);
         this.setParamSimple(map, prefix + "ExceedCharSize", this.ExceedCharSize);
         this.setParamSimple(map, prefix + "IsSharedKnowledge", this.IsSharedKnowledge);
+        this.setParamSimple(map, prefix + "KnowledgeType", this.KnowledgeType);
 
     }
 }

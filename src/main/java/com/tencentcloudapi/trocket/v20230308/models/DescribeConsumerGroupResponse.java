@@ -45,14 +45,18 @@ public class DescribeConsumerGroupResponse extends AbstractModel {
     private Long ConsumerLag;
 
     /**
-    * 消费者类型
+    * 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
     */
     @SerializedName("ConsumeType")
     @Expose
     private String ConsumeType;
 
     /**
-    * 创建时间，秒为单位
+    * 创建时间，**Unix时间戳（毫秒）**
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -152,32 +156,48 @@ CLUSTERING 集群模式
     }
 
     /**
-     * Get 消费者类型 
-     * @return ConsumeType 消费者类型
+     * Get 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型 
+     * @return ConsumeType 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
      */
     public String getConsumeType() {
         return this.ConsumeType;
     }
 
     /**
-     * Set 消费者类型
-     * @param ConsumeType 消费者类型
+     * Set 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
+     * @param ConsumeType 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
      */
     public void setConsumeType(String ConsumeType) {
         this.ConsumeType = ConsumeType;
     }
 
     /**
-     * Get 创建时间，秒为单位 
-     * @return CreatedTime 创建时间，秒为单位
+     * Get 创建时间，**Unix时间戳（毫秒）** 
+     * @return CreatedTime 创建时间，**Unix时间戳（毫秒）**
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间，秒为单位
-     * @param CreatedTime 创建时间，秒为单位
+     * Set 创建时间，**Unix时间戳（毫秒）**
+     * @param CreatedTime 创建时间，**Unix时间戳（毫秒）**
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;

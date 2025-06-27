@@ -25,7 +25,6 @@ public class CreateVideoModerationTaskResponse extends AbstractModel {
 
     /**
     * 任务创建结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
     @Expose
@@ -39,10 +38,8 @@ public class CreateVideoModerationTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务创建结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务创建结果 
      * @return Results 任务创建结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskResult [] getResults() {
         return this.Results;
@@ -50,9 +47,7 @@ public class CreateVideoModerationTaskResponse extends AbstractModel {
 
     /**
      * Set 任务创建结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Results 任务创建结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(TaskResult [] Results) {
         this.Results = Results;

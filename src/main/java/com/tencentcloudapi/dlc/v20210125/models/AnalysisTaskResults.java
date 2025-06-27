@@ -66,14 +66,15 @@ public class AnalysisTaskResults extends AbstractModel {
     private String DataEngineName;
 
     /**
-    * 单位毫秒，引擎内执行耗时
+    * 单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
+具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。
     */
     @SerializedName("JobTimeSum")
     @Expose
     private Long JobTimeSum;
 
     /**
-    * 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
+    * 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
     */
     @SerializedName("TaskTimeSum")
     @Expose
@@ -239,32 +240,36 @@ public class AnalysisTaskResults extends AbstractModel {
     }
 
     /**
-     * Get 单位毫秒，引擎内执行耗时 
-     * @return JobTimeSum 单位毫秒，引擎内执行耗时
+     * Get 单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
+具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。 
+     * @return JobTimeSum 单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
+具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。
      */
     public Long getJobTimeSum() {
         return this.JobTimeSum;
     }
 
     /**
-     * Set 单位毫秒，引擎内执行耗时
-     * @param JobTimeSum 单位毫秒，引擎内执行耗时
+     * Set 单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
+具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。
+     * @param JobTimeSum 单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
+具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。
      */
     public void setJobTimeSum(Long JobTimeSum) {
         this.JobTimeSum = JobTimeSum;
     }
 
     /**
-     * Get 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和 
-     * @return TaskTimeSum 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
+     * Get 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和 
+     * @return TaskTimeSum 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
      */
     public Long getTaskTimeSum() {
         return this.TaskTimeSum;
     }
 
     /**
-     * Set 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
-     * @param TaskTimeSum 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
+     * Set 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
+     * @param TaskTimeSum 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
      */
     public void setTaskTimeSum(Long TaskTimeSum) {
         this.TaskTimeSum = TaskTimeSum;

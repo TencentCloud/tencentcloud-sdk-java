@@ -2446,6 +2446,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *获取带分页的任务脚本
+     * @param req GetPaginationTaskScriptRequest
+     * @return GetPaginationTaskScriptResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPaginationTaskScriptResponse GetPaginationTaskScript(GetPaginationTaskScriptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetPaginationTaskScript", GetPaginationTaskScriptResponse.class);
+    }
+
+    /**
      *获取实例列表
      * @param req GetTaskInstanceRequest
      * @return GetTaskInstanceResponse

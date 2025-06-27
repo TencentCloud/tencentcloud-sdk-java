@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ModifyTopicRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名称
+    * 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 队列数量
+    * 队列数量，取值范围3～16
     */
     @SerializedName("QueueNum")
     @Expose
     private Long QueueNum;
 
     /**
-    * 备注信息
+    * 备注信息，最多 128 个字符
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 消息保留时长
+    * 消息保留时长（单位：小时）
     */
     @SerializedName("MsgTTL")
     @Expose
     private Long MsgTTL;
 
     /**
-     * Get 集群ID 
-     * @return InstanceId 集群ID
+     * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。 
+     * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群ID
-     * @param InstanceId 集群ID
+     * Set 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名称 
-     * @return Topic 主题名称
+     * Get 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。 
+     * @return Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题名称
-     * @param Topic 主题名称
+     * Set 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+     * @param Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 队列数量 
-     * @return QueueNum 队列数量
+     * Get 队列数量，取值范围3～16 
+     * @return QueueNum 队列数量，取值范围3～16
      */
     public Long getQueueNum() {
         return this.QueueNum;
     }
 
     /**
-     * Set 队列数量
-     * @param QueueNum 队列数量
+     * Set 队列数量，取值范围3～16
+     * @param QueueNum 队列数量，取值范围3～16
      */
     public void setQueueNum(Long QueueNum) {
         this.QueueNum = QueueNum;
     }
 
     /**
-     * Get 备注信息 
-     * @return Remark 备注信息
+     * Get 备注信息，最多 128 个字符 
+     * @return Remark 备注信息，最多 128 个字符
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息
-     * @param Remark 备注信息
+     * Set 备注信息，最多 128 个字符
+     * @param Remark 备注信息，最多 128 个字符
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 消息保留时长 
-     * @return MsgTTL 消息保留时长
+     * Get 消息保留时长（单位：小时） 
+     * @return MsgTTL 消息保留时长（单位：小时）
      */
     public Long getMsgTTL() {
         return this.MsgTTL;
     }
 
     /**
-     * Set 消息保留时长
-     * @param MsgTTL 消息保留时长
+     * Set 消息保留时长（单位：小时）
+     * @param MsgTTL 消息保留时长（单位：小时）
      */
     public void setMsgTTL(Long MsgTTL) {
         this.MsgTTL = MsgTTL;

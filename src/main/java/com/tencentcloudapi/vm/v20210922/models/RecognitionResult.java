@@ -25,7 +25,6 @@ public class RecognitionResult extends AbstractModel {
 
     /**
     * 可能的取值有：Teenager 、Gender
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -33,17 +32,14 @@ public class RecognitionResult extends AbstractModel {
 
     /**
     * 识别标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get 可能的取值有：Teenager 、Gender
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可能的取值有：Teenager 、Gender 
      * @return Label 可能的取值有：Teenager 、Gender
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -51,19 +47,15 @@ public class RecognitionResult extends AbstractModel {
 
     /**
      * Set 可能的取值有：Teenager 、Gender
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 可能的取值有：Teenager 、Gender
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 识别标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 识别标签列表 
      * @return Tags 识别标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -71,9 +63,7 @@ public class RecognitionResult extends AbstractModel {
 
     /**
      * Set 识别标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 识别标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

@@ -39,13 +39,17 @@ public class CreateAccountsRequest extends AbstractModel {
 
     /**
     * 新账户的密码。
+说明：
+1. 在8 ～ 64位字符数以内（推荐12位以上）。
+2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
+3. 不能包含非法字符。
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 备注信息。
+    * 备注信息。最多支持输入255个字符。
     */
     @SerializedName("Description")
     @Expose
@@ -91,8 +95,16 @@ public class CreateAccountsRequest extends AbstractModel {
     }
 
     /**
-     * Get 新账户的密码。 
+     * Get 新账户的密码。
+说明：
+1. 在8 ～ 64位字符数以内（推荐12位以上）。
+2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
+3. 不能包含非法字符。 
      * @return Password 新账户的密码。
+说明：
+1. 在8 ～ 64位字符数以内（推荐12位以上）。
+2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
+3. 不能包含非法字符。
      */
     public String getPassword() {
         return this.Password;
@@ -100,23 +112,31 @@ public class CreateAccountsRequest extends AbstractModel {
 
     /**
      * Set 新账户的密码。
+说明：
+1. 在8 ～ 64位字符数以内（推荐12位以上）。
+2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
+3. 不能包含非法字符。
      * @param Password 新账户的密码。
+说明：
+1. 在8 ～ 64位字符数以内（推荐12位以上）。
+2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
+3. 不能包含非法字符。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 备注信息。 
-     * @return Description 备注信息。
+     * Get 备注信息。最多支持输入255个字符。 
+     * @return Description 备注信息。最多支持输入255个字符。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 备注信息。
-     * @param Description 备注信息。
+     * Set 备注信息。最多支持输入255个字符。
+     * @param Description 备注信息。最多支持输入255个字符。
      */
     public void setDescription(String Description) {
         this.Description = Description;

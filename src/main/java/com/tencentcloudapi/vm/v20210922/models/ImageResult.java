@@ -99,6 +99,13 @@ Block 确认违规
     private RecognitionResult [] RecognitionResults;
 
     /**
+    * 审核命中类型
+    */
+    @SerializedName("HitType")
+    @Expose
+    private String HitType;
+
+    /**
      * Get 违规标志
 0 未命中
 1 命中 
@@ -290,6 +297,22 @@ Block 确认违规
         this.RecognitionResults = RecognitionResults;
     }
 
+    /**
+     * Get 审核命中类型 
+     * @return HitType 审核命中类型
+     */
+    public String getHitType() {
+        return this.HitType;
+    }
+
+    /**
+     * Set 审核命中类型
+     * @param HitType 审核命中类型
+     */
+    public void setHitType(String HitType) {
+        this.HitType = HitType;
+    }
+
     public ImageResult() {
     }
 
@@ -331,6 +354,9 @@ Block 确认违规
                 this.RecognitionResults[i] = new RecognitionResult(source.RecognitionResults[i]);
             }
         }
+        if (source.HitType != null) {
+            this.HitType = new String(source.HitType);
+        }
     }
 
 
@@ -347,6 +373,7 @@ Block 确认违规
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
         this.setParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
+        this.setParamSimple(map, prefix + "HitType", this.HitType);
 
     }
 }

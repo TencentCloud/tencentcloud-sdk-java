@@ -59,6 +59,13 @@ public class Line extends AbstractModel {
     private ApmTag [] Tags;
 
     /**
+    * 指标数据单位
+    */
+    @SerializedName("MetricUnit")
+    @Expose
+    private String MetricUnit;
+
+    /**
      * Get 指标名 
      * @return MetricName 指标名
      */
@@ -138,6 +145,22 @@ public class Line extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 指标数据单位 
+     * @return MetricUnit 指标数据单位
+     */
+    public String getMetricUnit() {
+        return this.MetricUnit;
+    }
+
+    /**
+     * Set 指标数据单位
+     * @param MetricUnit 指标数据单位
+     */
+    public void setMetricUnit(String MetricUnit) {
+        this.MetricUnit = MetricUnit;
+    }
+
     public Line() {
     }
 
@@ -170,6 +193,9 @@ public class Line extends AbstractModel {
                 this.Tags[i] = new ApmTag(source.Tags[i]);
             }
         }
+        if (source.MetricUnit != null) {
+            this.MetricUnit = new String(source.MetricUnit);
+        }
     }
 
 
@@ -182,6 +208,7 @@ public class Line extends AbstractModel {
         this.setParamArraySimple(map, prefix + "TimeSerial.", this.TimeSerial);
         this.setParamArraySimple(map, prefix + "DataSerial.", this.DataSerial);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "MetricUnit", this.MetricUnit);
 
     }
 }

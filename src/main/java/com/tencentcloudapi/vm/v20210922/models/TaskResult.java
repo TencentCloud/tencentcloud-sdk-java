@@ -25,7 +25,6 @@ public class TaskResult extends AbstractModel {
 
     /**
     * 请求时传入的DataId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataId")
     @Expose
@@ -33,7 +32,6 @@ public class TaskResult extends AbstractModel {
 
     /**
     * TaskId，任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -41,7 +39,6 @@ public class TaskResult extends AbstractModel {
 
     /**
     * 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -49,17 +46,14 @@ public class TaskResult extends AbstractModel {
 
     /**
     * 如果错误，该字段表示错误详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get 请求时传入的DataId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求时传入的DataId 
      * @return DataId 请求时传入的DataId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataId() {
         return this.DataId;
@@ -67,19 +61,15 @@ public class TaskResult extends AbstractModel {
 
     /**
      * Set 请求时传入的DataId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataId 请求时传入的DataId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataId(String DataId) {
         this.DataId = DataId;
     }
 
     /**
-     * Get TaskId，任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TaskId，任务ID 
      * @return TaskId TaskId，任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -87,19 +77,15 @@ public class TaskResult extends AbstractModel {
 
     /**
      * Set TaskId，任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId TaskId，任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码 
      * @return Code 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
         return this.Code;
@@ -107,19 +93,15 @@ public class TaskResult extends AbstractModel {
 
     /**
      * Set 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 如果错误，该字段表示错误详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如果错误，该字段表示错误详情 
      * @return Message 如果错误，该字段表示错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -127,9 +109,7 @@ public class TaskResult extends AbstractModel {
 
     /**
      * Set 如果错误，该字段表示错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 如果错误，该字段表示错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

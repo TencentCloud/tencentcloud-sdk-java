@@ -133,7 +133,7 @@ public enum DnspodErrorCode {
      INVALIDPARAMETER_ACCOUNTISBANNED("InvalidParameter.AccountIsBanned"),
      
      /* 域名正在取回，请勿重复操作。 */
-     INVALIDPARAMETER_ACQUIREHASHEXSITS("InvalidParameter.AcquireHashExsits"),
+     INVALIDPARAMETER_ACQUIREHASHEXISTS("InvalidParameter.AcquireHashExists"),
      
      /* 无效的操作。 */
      INVALIDPARAMETER_ACTIONINVALID("InvalidParameter.ActionInvalid"),

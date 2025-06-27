@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRoleRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -66,23 +66,23 @@ public class CreateRoleRequest extends AbstractModel {
     private String PermType;
 
     /**
-    * Topic&Group维度权限配置
+    * Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
     */
     @SerializedName("DetailedPerms")
     @Expose
     private DetailedRolePerm [] DetailedPerms;
 
     /**
-     * Get 集群ID 
-     * @return InstanceId 集群ID
+     * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。 
+     * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群ID
-     * @param InstanceId 集群ID
+     * Set 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -169,16 +169,16 @@ public class CreateRoleRequest extends AbstractModel {
     }
 
     /**
-     * Get Topic&Group维度权限配置 
-     * @return DetailedPerms Topic&Group维度权限配置
+     * Get Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填 
+     * @return DetailedPerms Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
      */
     public DetailedRolePerm [] getDetailedPerms() {
         return this.DetailedPerms;
     }
 
     /**
-     * Set Topic&Group维度权限配置
-     * @param DetailedPerms Topic&Group维度权限配置
+     * Set Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
+     * @param DetailedPerms Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
      */
     public void setDetailedPerms(DetailedRolePerm [] DetailedPerms) {
         this.DetailedPerms = DetailedPerms;

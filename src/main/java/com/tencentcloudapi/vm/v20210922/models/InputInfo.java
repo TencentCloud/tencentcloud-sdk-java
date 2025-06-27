@@ -25,7 +25,6 @@ public class InputInfo extends AbstractModel {
 
     /**
     * 传入的类型可选：URL，COS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class InputInfo extends AbstractModel {
 
     /**
     * Url地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -48,10 +46,8 @@ public class InputInfo extends AbstractModel {
     private String BucketInfo;
 
     /**
-     * Get 传入的类型可选：URL，COS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 传入的类型可选：URL，COS 
      * @return Type 传入的类型可选：URL，COS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -59,19 +55,15 @@ public class InputInfo extends AbstractModel {
 
     /**
      * Set 传入的类型可选：URL，COS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 传入的类型可选：URL，COS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Url地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Url地址 
      * @return Url Url地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -79,9 +71,7 @@ public class InputInfo extends AbstractModel {
 
     /**
      * Set Url地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url Url地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

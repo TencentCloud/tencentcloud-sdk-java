@@ -59,7 +59,7 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
     private Long ChannelId;
 
     /**
-    * 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+    * 是否需要返回总结，默认为True；  开启后会加大接口响应时长
     */
     @SerializedName("EnableSummary")
     @Expose
@@ -181,16 +181,16 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否需要返回总结，默认为False；  开启后会加大接口响应时长 
-     * @return EnableSummary 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+     * Get 是否需要返回总结，默认为True；  开启后会加大接口响应时长 
+     * @return EnableSummary 是否需要返回总结，默认为True；  开启后会加大接口响应时长
      */
     public Boolean getEnableSummary() {
         return this.EnableSummary;
     }
 
     /**
-     * Set 是否需要返回总结，默认为False；  开启后会加大接口响应时长
-     * @param EnableSummary 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+     * Set 是否需要返回总结，默认为True；  开启后会加大接口响应时长
+     * @param EnableSummary 是否需要返回总结，默认为True；  开启后会加大接口响应时长
      */
     public void setEnableSummary(Boolean EnableSummary) {
         this.EnableSummary = EnableSummary;

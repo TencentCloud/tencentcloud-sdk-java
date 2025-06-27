@@ -60,7 +60,6 @@ public class ObjectResult extends AbstractModel {
 
     /**
     * 该标签用于返回所识别出的实体名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Names")
     @Expose
@@ -69,7 +68,6 @@ public class ObjectResult extends AbstractModel {
     /**
     * 该标签用于返回所识别出实体的详细信息，如：序号、命中标签名称、位置坐标等信息，详细返回内容敬请参考相应数据结构（[ObjectDetail
 ](https://cloud.tencent.com/document/api/1125/53274#ObjectDetail)）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Details")
     @Expose
@@ -156,10 +154,8 @@ public class ObjectResult extends AbstractModel {
     }
 
     /**
-     * Get 该标签用于返回所识别出的实体名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该标签用于返回所识别出的实体名称。 
      * @return Names 该标签用于返回所识别出的实体名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNames() {
         return this.Names;
@@ -167,9 +163,7 @@ public class ObjectResult extends AbstractModel {
 
     /**
      * Set 该标签用于返回所识别出的实体名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Names 该标签用于返回所识别出的实体名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNames(String [] Names) {
         this.Names = Names;
@@ -177,11 +171,9 @@ public class ObjectResult extends AbstractModel {
 
     /**
      * Get 该标签用于返回所识别出实体的详细信息，如：序号、命中标签名称、位置坐标等信息，详细返回内容敬请参考相应数据结构（[ObjectDetail
-](https://cloud.tencent.com/document/api/1125/53274#ObjectDetail)）。
-注意：此字段可能返回 null，表示取不到有效值。 
+](https://cloud.tencent.com/document/api/1125/53274#ObjectDetail)）。 
      * @return Details 该标签用于返回所识别出实体的详细信息，如：序号、命中标签名称、位置坐标等信息，详细返回内容敬请参考相应数据结构（[ObjectDetail
 ](https://cloud.tencent.com/document/api/1125/53274#ObjectDetail)）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ObjectDetail [] getDetails() {
         return this.Details;
@@ -190,10 +182,8 @@ public class ObjectResult extends AbstractModel {
     /**
      * Set 该标签用于返回所识别出实体的详细信息，如：序号、命中标签名称、位置坐标等信息，详细返回内容敬请参考相应数据结构（[ObjectDetail
 ](https://cloud.tencent.com/document/api/1125/53274#ObjectDetail)）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Details 该标签用于返回所识别出实体的详细信息，如：序号、命中标签名称、位置坐标等信息，详细返回内容敬请参考相应数据结构（[ObjectDetail
 ](https://cloud.tencent.com/document/api/1125/53274#ObjectDetail)）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetails(ObjectDetail [] Details) {
         this.Details = Details;

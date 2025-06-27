@@ -31,6 +31,13 @@ public class SlowLogPattern extends AbstractModel {
     private String Pattern;
 
     /**
+    * queryHash
+    */
+    @SerializedName("QueryHash")
+    @Expose
+    private String QueryHash;
+
+    /**
     * 最大执行时间
     */
     @SerializedName("MaxTime")
@@ -65,6 +72,22 @@ public class SlowLogPattern extends AbstractModel {
      */
     public void setPattern(String Pattern) {
         this.Pattern = Pattern;
+    }
+
+    /**
+     * Get queryHash 
+     * @return QueryHash queryHash
+     */
+    public String getQueryHash() {
+        return this.QueryHash;
+    }
+
+    /**
+     * Set queryHash
+     * @param QueryHash queryHash
+     */
+    public void setQueryHash(String QueryHash) {
+        this.QueryHash = QueryHash;
     }
 
     /**
@@ -126,6 +149,9 @@ public class SlowLogPattern extends AbstractModel {
         if (source.Pattern != null) {
             this.Pattern = new String(source.Pattern);
         }
+        if (source.QueryHash != null) {
+            this.QueryHash = new String(source.QueryHash);
+        }
         if (source.MaxTime != null) {
             this.MaxTime = new Long(source.MaxTime);
         }
@@ -143,6 +169,7 @@ public class SlowLogPattern extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Pattern", this.Pattern);
+        this.setParamSimple(map, prefix + "QueryHash", this.QueryHash);
         this.setParamSimple(map, prefix + "MaxTime", this.MaxTime);
         this.setParamSimple(map, prefix + "AverageTime", this.AverageTime);
         this.setParamSimple(map, prefix + "Total", this.Total);

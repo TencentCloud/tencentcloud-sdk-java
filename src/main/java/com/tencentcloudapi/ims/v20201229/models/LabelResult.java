@@ -60,7 +60,6 @@ public class LabelResult extends AbstractModel {
 
     /**
     * 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Details")
     @Expose
@@ -147,10 +146,8 @@ public class LabelResult extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。 
      * @return Details 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LabelDetailItem [] getDetails() {
         return this.Details;
@@ -158,9 +155,7 @@ public class LabelResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Details 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetails(LabelDetailItem [] Details) {
         this.Details = Details;

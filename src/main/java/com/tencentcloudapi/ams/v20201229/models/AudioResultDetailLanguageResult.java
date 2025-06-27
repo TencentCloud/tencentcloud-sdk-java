@@ -25,7 +25,6 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
     * 该字段用于返回对应的语言种类信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -33,7 +32,6 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
     * 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -41,7 +39,6 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
     * 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -49,7 +46,6 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
     * 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -57,17 +53,14 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
     * *内测中，敬请期待*
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabelCode")
     @Expose
     private String SubLabelCode;
 
     /**
-     * Get 该字段用于返回对应的语言种类信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回对应的语言种类信息。 
      * @return Label 该字段用于返回对应的语言种类信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -75,19 +68,15 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回对应的语言种类信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 该字段用于返回对应的语言种类信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签； 
      * @return Score 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -95,19 +84,15 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
      * Set 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。 
      * @return StartTime 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTime() {
         return this.StartTime;
@@ -115,19 +100,15 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
      * Set 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。 
      * @return EndTime 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTime() {
         return this.EndTime;
@@ -135,19 +116,15 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
      * Set 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get *内测中，敬请期待*
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get *内测中，敬请期待* 
      * @return SubLabelCode *内测中，敬请期待*
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabelCode() {
         return this.SubLabelCode;
@@ -155,9 +132,7 @@ public class AudioResultDetailLanguageResult extends AbstractModel {
 
     /**
      * Set *内测中，敬请期待*
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubLabelCode *内测中，敬请期待*
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabelCode(String SubLabelCode) {
         this.SubLabelCode = SubLabelCode;

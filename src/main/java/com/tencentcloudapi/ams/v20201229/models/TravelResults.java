@@ -25,7 +25,6 @@ public class TravelResults extends AbstractModel {
 
     /**
     * 一级标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -33,7 +32,6 @@ public class TravelResults extends AbstractModel {
 
     /**
     * 二级标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabel")
     @Expose
@@ -41,7 +39,6 @@ public class TravelResults extends AbstractModel {
 
     /**
     * 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -49,7 +46,6 @@ public class TravelResults extends AbstractModel {
 
     /**
     * 出行音频角色
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioRole")
     @Expose
@@ -57,7 +53,6 @@ public class TravelResults extends AbstractModel {
 
     /**
     * 出行语音文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioText")
     @Expose
@@ -65,7 +60,6 @@ public class TravelResults extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -73,17 +67,14 @@ public class TravelResults extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
     private Float EndTime;
 
     /**
-     * Get 一级标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一级标签 
      * @return Label 一级标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -91,19 +82,15 @@ public class TravelResults extends AbstractModel {
 
     /**
      * Set 一级标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 一级标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 二级标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 二级标签 
      * @return SubLabel 二级标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabel() {
         return this.SubLabel;
@@ -111,19 +98,15 @@ public class TravelResults extends AbstractModel {
 
     /**
      * Set 二级标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubLabel 二级标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get 风险等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级 
      * @return RiskLevel 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
         return this.RiskLevel;
@@ -131,19 +114,15 @@ public class TravelResults extends AbstractModel {
 
     /**
      * Set 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 出行音频角色
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出行音频角色 
      * @return AudioRole 出行音频角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAudioRole() {
         return this.AudioRole;
@@ -151,19 +130,15 @@ public class TravelResults extends AbstractModel {
 
     /**
      * Set 出行音频角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioRole 出行音频角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioRole(String AudioRole) {
         this.AudioRole = AudioRole;
     }
 
     /**
-     * Get 出行语音文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出行语音文本 
      * @return AudioText 出行语音文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAudioText() {
         return this.AudioText;
@@ -171,19 +146,15 @@ public class TravelResults extends AbstractModel {
 
     /**
      * Set 出行语音文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioText 出行语音文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioText(String AudioText) {
         this.AudioText = AudioText;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTime() {
         return this.StartTime;
@@ -191,19 +162,15 @@ public class TravelResults extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTime() {
         return this.EndTime;
@@ -211,9 +178,7 @@ public class TravelResults extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;

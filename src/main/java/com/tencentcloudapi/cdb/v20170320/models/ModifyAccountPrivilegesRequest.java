@@ -31,7 +31,7 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 数据库的账号，包括用户名和域名。
+    * 数据库的账号，包括用户名和域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
     */
     @SerializedName("Accounts")
     @Expose
@@ -93,16 +93,16 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库的账号，包括用户名和域名。 
-     * @return Accounts 数据库的账号，包括用户名和域名。
+     * Get 数据库的账号，包括用户名和域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。 
+     * @return Accounts 数据库的账号，包括用户名和域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set 数据库的账号，包括用户名和域名。
-     * @param Accounts 数据库的账号，包括用户名和域名。
+     * Set 数据库的账号，包括用户名和域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+     * @param Accounts 数据库的账号，包括用户名和域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;
