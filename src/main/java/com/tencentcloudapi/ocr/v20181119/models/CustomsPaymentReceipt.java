@@ -38,6 +38,13 @@ public class CustomsPaymentReceipt extends AbstractModel {
     private OtherInvoiceItem [] Content;
 
     /**
+    * 海关缴款书常用字段
+    */
+    @SerializedName("CommonContent")
+    @Expose
+    private OtherInvoiceItem [] CommonContent;
+
+    /**
      * Get 发票名称 
      * @return Title 发票名称
      */
@@ -69,6 +76,22 @@ public class CustomsPaymentReceipt extends AbstractModel {
         this.Content = Content;
     }
 
+    /**
+     * Get 海关缴款书常用字段 
+     * @return CommonContent 海关缴款书常用字段
+     */
+    public OtherInvoiceItem [] getCommonContent() {
+        return this.CommonContent;
+    }
+
+    /**
+     * Set 海关缴款书常用字段
+     * @param CommonContent 海关缴款书常用字段
+     */
+    public void setCommonContent(OtherInvoiceItem [] CommonContent) {
+        this.CommonContent = CommonContent;
+    }
+
     public CustomsPaymentReceipt() {
     }
 
@@ -86,6 +109,12 @@ public class CustomsPaymentReceipt extends AbstractModel {
                 this.Content[i] = new OtherInvoiceItem(source.Content[i]);
             }
         }
+        if (source.CommonContent != null) {
+            this.CommonContent = new OtherInvoiceItem[source.CommonContent.length];
+            for (int i = 0; i < source.CommonContent.length; i++) {
+                this.CommonContent[i] = new OtherInvoiceItem(source.CommonContent[i]);
+            }
+        }
     }
 
 
@@ -95,6 +124,7 @@ public class CustomsPaymentReceipt extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamArrayObj(map, prefix + "Content.", this.Content);
+        this.setParamArrayObj(map, prefix + "CommonContent.", this.CommonContent);
 
     }
 }

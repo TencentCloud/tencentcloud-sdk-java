@@ -284,6 +284,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *查询实例慢日志详情
+     * @param req DescribeDetailedSlowLogsRequest
+     * @return DescribeDetailedSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDetailedSlowLogsResponse DescribeDetailedSlowLogs(DescribeDetailedSlowLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDetailedSlowLogs", DescribeDetailedSlowLogsResponse.class);
+    }
+
+    /**
      *本接口（DescribeInstanceParams）用于查询当前实例可修改的参数列表。
      * @param req DescribeInstanceParamsRequest
      * @return DescribeInstanceParamsResponse

@@ -25,7 +25,6 @@ public class SentimentDetail extends AbstractModel {
 
     /**
     * 正向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Positive")
     @Expose
@@ -33,17 +32,14 @@ public class SentimentDetail extends AbstractModel {
 
     /**
     * 负向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Negative")
     @Expose
     private Long Negative;
 
     /**
-     * Get 正向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 正向分数，取值范围0到100 
      * @return Positive 正向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPositive() {
         return this.Positive;
@@ -51,19 +47,15 @@ public class SentimentDetail extends AbstractModel {
 
     /**
      * Set 正向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Positive 正向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPositive(Long Positive) {
         this.Positive = Positive;
     }
 
     /**
-     * Get 负向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负向分数，取值范围0到100 
      * @return Negative 负向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNegative() {
         return this.Negative;
@@ -71,9 +63,7 @@ public class SentimentDetail extends AbstractModel {
 
     /**
      * Set 负向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Negative 负向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNegative(Long Negative) {
         this.Negative = Negative;

@@ -50,6 +50,17 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *创建事件任务
+     * @param req CreateProfileTaskRequest
+     * @return CreateProfileTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProfileTaskResponse CreateProfileTask(CreateProfileTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProfileTask", CreateProfileTaskResponse.class);
+    }
+
+    /**
      *获取 APM 接入点
      * @param req DescribeApmAgentRequest
      * @return DescribeApmAgentResponse

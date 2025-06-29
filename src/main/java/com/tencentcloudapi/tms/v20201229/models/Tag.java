@@ -25,7 +25,6 @@ public class Tag extends AbstractModel {
 
     /**
     * 该字段用于返回命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keyword")
     @Expose
@@ -33,7 +32,6 @@ public class Tag extends AbstractModel {
 
     /**
     * 该字段用于返回子标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabel")
     @Expose
@@ -41,17 +39,14 @@ public class Tag extends AbstractModel {
 
     /**
     * 该字段用于返回子标签对应的分数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-     * Get 该字段用于返回命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回命中的关键词 
      * @return Keyword 该字段用于返回命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyword() {
         return this.Keyword;
@@ -59,19 +54,15 @@ public class Tag extends AbstractModel {
 
     /**
      * Set 该字段用于返回命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keyword 该字段用于返回命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 该字段用于返回子标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回子标签 
      * @return SubLabel 该字段用于返回子标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabel() {
         return this.SubLabel;
@@ -79,19 +70,15 @@ public class Tag extends AbstractModel {
 
     /**
      * Set 该字段用于返回子标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubLabel 该字段用于返回子标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get 该字段用于返回子标签对应的分数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回子标签对应的分数 
      * @return Score 该字段用于返回子标签对应的分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -99,9 +86,7 @@ public class Tag extends AbstractModel {
 
     /**
      * Set 该字段用于返回子标签对应的分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 该字段用于返回子标签对应的分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;

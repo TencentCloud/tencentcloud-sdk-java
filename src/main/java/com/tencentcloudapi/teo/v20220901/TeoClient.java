@@ -83,6 +83,17 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *本接口用于回源 IP 网段发生变更时，确认已将最新回源 IP 网段更新至源站防火墙。确认已更新至最新的回源 IP 网段后，相关变更通知将会停止推送。
+     * @param req ConfirmOriginACLUpdateRequest
+     * @return ConfirmOriginACLUpdateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConfirmOriginACLUpdateResponse ConfirmOriginACLUpdate(ConfirmOriginACLUpdateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ConfirmOriginACLUpdate", ConfirmOriginACLUpdateResponse.class);
+    }
+
+    /**
      *在创建完站点之后，您可以通过本接口创建加速域名。 
 
 CNAME 模式接入时，若您未完成站点归属权校验，本接口将为您返回域名归属权验证信息，您可以单独对域名进行归属权验证，详情参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789)。
@@ -901,6 +912,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口用于查询站点下的七层加速域名/四层代理实例与回源 IP 网段的绑定关系，以及回源 IP 网段详情。如果您想通过自动化脚本定期获取回源 IP 网段的最新版本，可以较低频率（建议每三天一次）轮询本接口，若 NextOriginACL 字段有返回值，则将最新的回源 IP 网段同步到源站防火墙配置中。
+     * @param req DescribeOriginACLRequest
+     * @return DescribeOriginACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOriginACLResponse DescribeOriginACL(DescribeOriginACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOriginACL", DescribeOriginACLResponse.class);
+    }
+
+    /**
      *获取源站组列表
      * @param req DescribeOriginGroupRequest
      * @return DescribeOriginGroupResponse
@@ -1165,6 +1187,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口用于关闭站点的源站防护功能。停用后，相关资源不再仅使用「源站防护」提供的回源 IP 网段请求您的源站，同时停止发送回源 IP 网段更新通知。
+     * @param req DisableOriginACLRequest
+     * @return DisableOriginACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableOriginACLResponse DisableOriginACL(DisableOriginACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableOriginACL", DisableOriginACLResponse.class);
+    }
+
+    /**
      *本接口（DownloadL4Logs）用于下载四层离线日志。
      * @param req DownloadL4LogsRequest
      * @return DownloadL4LogsResponse
@@ -1184,6 +1217,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DownloadL7LogsResponse DownloadL7Logs(DownloadL7LogsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DownloadL7Logs", DownloadL7LogsResponse.class);
+    }
+
+    /**
+     *开启回源白名单功能，按照4/7层实例开启。当前启用时候的实例数有上限设置，七层域名为200，四层转发实例为100，总实例个数不超过200，超过会提醒报错；可以先最大数量开启，超过的数量用ModifyOriginACL接口来设置。
+     * @param req EnableOriginACLRequest
+     * @return EnableOriginACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableOriginACLResponse EnableOriginACL(EnableOriginACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableOriginACL", EnableOriginACLResponse.class);
     }
 
     /**
@@ -1512,6 +1556,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyLoadBalancerResponse ModifyLoadBalancer(ModifyLoadBalancerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyLoadBalancer", ModifyLoadBalancerResponse.class);
+    }
+
+    /**
+     *本接口用于对七层加速域名/四层代理实例启用/关闭特定回源 IP 网段回源。单次支持提交的七层加速域名的数量最大为 200，四层代理实例的数量最大为 100，支持七层加速域名/四层代理实例混合提交，总实例个数最大为 200。如需变更超过 200 个实例，请通过本接口分批提交。
+     * @param req ModifyOriginACLRequest
+     * @return ModifyOriginACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOriginACLResponse ModifyOriginACL(ModifyOriginACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOriginACL", ModifyOriginACLResponse.class);
     }
 
     /**

@@ -25,7 +25,6 @@ public class HitInfo extends AbstractModel {
 
     /**
     * 标识模型命中还是关键词命中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class HitInfo extends AbstractModel {
 
     /**
     * 命中关键词
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keyword")
     @Expose
@@ -41,7 +39,6 @@ public class HitInfo extends AbstractModel {
 
     /**
     * 自定义词库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibName")
     @Expose
@@ -49,17 +46,14 @@ public class HitInfo extends AbstractModel {
 
     /**
     * 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Positions")
     @Expose
     private Positions [] Positions;
 
     /**
-     * Get 标识模型命中还是关键词命中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标识模型命中还是关键词命中 
      * @return Type 标识模型命中还是关键词命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -67,19 +61,15 @@ public class HitInfo extends AbstractModel {
 
     /**
      * Set 标识模型命中还是关键词命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 标识模型命中还是关键词命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 命中关键词
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命中关键词 
      * @return Keyword 命中关键词
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyword() {
         return this.Keyword;
@@ -87,19 +77,15 @@ public class HitInfo extends AbstractModel {
 
     /**
      * Set 命中关键词
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keyword 命中关键词
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 自定义词库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义词库名称 
      * @return LibName 自定义词库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLibName() {
         return this.LibName;
@@ -107,19 +93,15 @@ public class HitInfo extends AbstractModel {
 
     /**
      * Set 自定义词库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LibName 自定义词库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibName(String LibName) {
         this.LibName = LibName;
     }
 
     /**
-     * Get 位置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 位置信息 
      * @return Positions 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Positions [] getPositions() {
         return this.Positions;
@@ -127,9 +109,7 @@ public class HitInfo extends AbstractModel {
 
     /**
      * Set 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Positions 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPositions(Positions [] Positions) {
         this.Positions = Positions;

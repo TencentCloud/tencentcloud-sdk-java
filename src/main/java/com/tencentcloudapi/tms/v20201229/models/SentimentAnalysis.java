@@ -25,7 +25,6 @@ public class SentimentAnalysis extends AbstractModel {
 
     /**
     * 情感标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -33,7 +32,6 @@ public class SentimentAnalysis extends AbstractModel {
 
     /**
     * 标签分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -41,7 +39,6 @@ public class SentimentAnalysis extends AbstractModel {
 
     /**
     * 情感分析明细
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -56,17 +53,14 @@ public class SentimentAnalysis extends AbstractModel {
 
     /**
     * 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get 情感标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 情感标签 
      * @return Label 情感标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -74,19 +68,15 @@ public class SentimentAnalysis extends AbstractModel {
 
     /**
      * Set 情感标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 情感标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 标签分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签分数，取值范围0到100 
      * @return Score 标签分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -94,19 +84,15 @@ public class SentimentAnalysis extends AbstractModel {
 
     /**
      * Set 标签分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 标签分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 情感分析明细
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 情感分析明细 
      * @return Detail 情感分析明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SentimentDetail getDetail() {
         return this.Detail;
@@ -114,9 +100,7 @@ public class SentimentAnalysis extends AbstractModel {
 
     /**
      * Set 情感分析明细
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 情感分析明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(SentimentDetail Detail) {
         this.Detail = Detail;
@@ -139,10 +123,8 @@ public class SentimentAnalysis extends AbstractModel {
     }
 
     /**
-     * Get 异常信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异常信息 
      * @return Message 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -150,9 +132,7 @@ public class SentimentAnalysis extends AbstractModel {
 
     /**
      * Set 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;

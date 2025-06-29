@@ -25,7 +25,6 @@ public class Positions extends AbstractModel {
 
     /**
     * 关键词起始位置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Start")
     @Expose
@@ -33,17 +32,14 @@ public class Positions extends AbstractModel {
 
     /**
     * 关键词结束位置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("End")
     @Expose
     private Long End;
 
     /**
-     * Get 关键词起始位置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关键词起始位置 
      * @return Start 关键词起始位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStart() {
         return this.Start;
@@ -51,19 +47,15 @@ public class Positions extends AbstractModel {
 
     /**
      * Set 关键词起始位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Start 关键词起始位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStart(Long Start) {
         this.Start = Start;
     }
 
     /**
-     * Get 关键词结束位置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关键词结束位置 
      * @return End 关键词结束位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnd() {
         return this.End;
@@ -71,9 +63,7 @@ public class Positions extends AbstractModel {
 
     /**
      * Set 关键词结束位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param End 关键词结束位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnd(Long End) {
         this.End = End;

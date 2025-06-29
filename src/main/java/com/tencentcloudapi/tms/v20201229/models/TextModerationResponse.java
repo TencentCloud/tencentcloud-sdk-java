@@ -77,7 +77,6 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
     * 该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
     @Expose
@@ -85,7 +84,6 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
     * 该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataId")
     @Expose
@@ -93,7 +91,6 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
     * 该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabel")
     @Expose
@@ -101,7 +98,6 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
     * 该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContextText")
     @Expose
@@ -254,10 +250,8 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理 
      * @return Extra 该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
         return this.Extra;
@@ -265,19 +259,15 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Extra 该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;
     }
 
     /**
-     * Get 该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应 
      * @return DataId 该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataId() {
         return this.DataId;
@@ -285,19 +275,15 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataId 该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataId(String DataId) {
         this.DataId = DataId;
     }
 
     /**
-     * Get 该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回当前标签（Label）下的二级标签。 
      * @return SubLabel 该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabel() {
         return this.SubLabel;
@@ -305,19 +291,15 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubLabel 该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get 该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回上下文关联文本 
      * @return ContextText 该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContextText() {
         return this.ContextText;
@@ -325,9 +307,7 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContextText 该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContextText(String ContextText) {
         this.ContextText = ContextText;
