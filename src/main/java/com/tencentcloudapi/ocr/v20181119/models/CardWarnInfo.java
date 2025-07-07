@@ -69,6 +69,22 @@ public class CardWarnInfo extends AbstractModel {
     private Long PSCheck;
 
     /**
+    * 是否模糊：
+0:正常
+1:模糊
+    */
+    @SerializedName("BlurCheck")
+    @Expose
+    private Long BlurCheck;
+
+    /**
+    * 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+    */
+    @SerializedName("BlurScore")
+    @Expose
+    private Float BlurScore;
+
+    /**
      * Get 证件边缘是否完整
 0：正常
 1：边缘不完整 
@@ -188,6 +204,46 @@ public class CardWarnInfo extends AbstractModel {
         this.PSCheck = PSCheck;
     }
 
+    /**
+     * Get 是否模糊：
+0:正常
+1:模糊 
+     * @return BlurCheck 是否模糊：
+0:正常
+1:模糊
+     */
+    public Long getBlurCheck() {
+        return this.BlurCheck;
+    }
+
+    /**
+     * Set 是否模糊：
+0:正常
+1:模糊
+     * @param BlurCheck 是否模糊：
+0:正常
+1:模糊
+     */
+    public void setBlurCheck(Long BlurCheck) {
+        this.BlurCheck = BlurCheck;
+    }
+
+    /**
+     * Get 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5 
+     * @return BlurScore 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+     */
+    public Float getBlurScore() {
+        return this.BlurScore;
+    }
+
+    /**
+     * Set 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+     * @param BlurScore 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+     */
+    public void setBlurScore(Float BlurScore) {
+        this.BlurScore = BlurScore;
+    }
+
     public CardWarnInfo() {
     }
 
@@ -211,6 +267,12 @@ public class CardWarnInfo extends AbstractModel {
         if (source.PSCheck != null) {
             this.PSCheck = new Long(source.PSCheck);
         }
+        if (source.BlurCheck != null) {
+            this.BlurCheck = new Long(source.BlurCheck);
+        }
+        if (source.BlurScore != null) {
+            this.BlurScore = new Float(source.BlurScore);
+        }
     }
 
 
@@ -223,6 +285,8 @@ public class CardWarnInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CopyCheck", this.CopyCheck);
         this.setParamSimple(map, prefix + "ReshootCheck", this.ReshootCheck);
         this.setParamSimple(map, prefix + "PSCheck", this.PSCheck);
+        this.setParamSimple(map, prefix + "BlurCheck", this.BlurCheck);
+        this.setParamSimple(map, prefix + "BlurScore", this.BlurScore);
 
     }
 }

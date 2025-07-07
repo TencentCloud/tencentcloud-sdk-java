@@ -31,6 +31,16 @@ public class TerminateInstancesRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
+    * 释放弹性IP。EIP2.0下，仅提供主网卡下首个EIP，EIP类型限定在HighQualityEIP、AntiDDoSEIP、EIPv6、HighQualityEIPv6这几种类型。默认行为不释放。
+
+示例值：true
+默认值：false
+    */
+    @SerializedName("ReleaseAddress")
+    @Expose
+    private Boolean ReleaseAddress;
+
+    /**
     * 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
 默认值：false
     */
@@ -52,6 +62,34 @@ public class TerminateInstancesRequest extends AbstractModel {
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get 释放弹性IP。EIP2.0下，仅提供主网卡下首个EIP，EIP类型限定在HighQualityEIP、AntiDDoSEIP、EIPv6、HighQualityEIPv6这几种类型。默认行为不释放。
+
+示例值：true
+默认值：false 
+     * @return ReleaseAddress 释放弹性IP。EIP2.0下，仅提供主网卡下首个EIP，EIP类型限定在HighQualityEIP、AntiDDoSEIP、EIPv6、HighQualityEIPv6这几种类型。默认行为不释放。
+
+示例值：true
+默认值：false
+     */
+    public Boolean getReleaseAddress() {
+        return this.ReleaseAddress;
+    }
+
+    /**
+     * Set 释放弹性IP。EIP2.0下，仅提供主网卡下首个EIP，EIP类型限定在HighQualityEIP、AntiDDoSEIP、EIPv6、HighQualityEIPv6这几种类型。默认行为不释放。
+
+示例值：true
+默认值：false
+     * @param ReleaseAddress 释放弹性IP。EIP2.0下，仅提供主网卡下首个EIP，EIP类型限定在HighQualityEIP、AntiDDoSEIP、EIPv6、HighQualityEIPv6这几种类型。默认行为不释放。
+
+示例值：true
+默认值：false
+     */
+    public void setReleaseAddress(Boolean ReleaseAddress) {
+        this.ReleaseAddress = ReleaseAddress;
     }
 
     /**
@@ -88,6 +126,9 @@ public class TerminateInstancesRequest extends AbstractModel {
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.ReleaseAddress != null) {
+            this.ReleaseAddress = new Boolean(source.ReleaseAddress);
+        }
         if (source.ReleasePrepaidDataDisks != null) {
             this.ReleasePrepaidDataDisks = new Boolean(source.ReleasePrepaidDataDisks);
         }
@@ -99,6 +140,7 @@ public class TerminateInstancesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "ReleaseAddress", this.ReleaseAddress);
         this.setParamSimple(map, prefix + "ReleasePrepaidDataDisks", this.ReleasePrepaidDataDisks);
 
     }
