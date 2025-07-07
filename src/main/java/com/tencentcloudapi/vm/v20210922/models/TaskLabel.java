@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,6 @@ public class TaskLabel extends AbstractModel {
     /**
     * 该字段用于返回检测结果所对应的恶意标签。
 返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -37,7 +36,6 @@ public class TaskLabel extends AbstractModel {
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suggestion")
     @Expose
@@ -45,7 +43,6 @@ Block 确认违规
 
     /**
     * 得分，分数是 0 ～ 100
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -53,7 +50,6 @@ Block 确认违规
 
     /**
     * 命中的二级标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabel")
     @Expose
@@ -61,11 +57,9 @@ Block 确认违规
 
     /**
      * Get 该字段用于返回检测结果所对应的恶意标签。
-返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。 
      * @return Label 该字段用于返回检测结果所对应的恶意标签。
 返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -74,10 +68,8 @@ Block 确认违规
     /**
      * Set 该字段用于返回检测结果所对应的恶意标签。
 返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 该字段用于返回检测结果所对应的恶意标签。
 返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
@@ -87,13 +79,11 @@ Block 确认违规
      * Get 审核建议，可选值：
 Pass 通过，
 Review 建议人审，
-Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。 
+Block 确认违规 
      * @return Suggestion 审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -104,22 +94,18 @@ Block 确认违规
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suggestion 审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 得分，分数是 0 ～ 100
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 得分，分数是 0 ～ 100 
      * @return Score 得分，分数是 0 ～ 100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -127,19 +113,15 @@ Block 确认违规
 
     /**
      * Set 得分，分数是 0 ～ 100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 得分，分数是 0 ～ 100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 命中的二级标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命中的二级标签 
      * @return SubLabel 命中的二级标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabel() {
         return this.SubLabel;
@@ -147,9 +129,7 @@ Block 确认违规
 
     /**
      * Set 命中的二级标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubLabel 命中的二级标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;

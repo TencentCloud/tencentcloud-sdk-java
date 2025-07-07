@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,77 +24,77 @@ import java.util.HashMap;
 public class DescribeInstanceUpgradeTypeRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 目标实例 CPU 的核数。
+    * 目标实例 CPU 的核数。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的 CPU 值范围。
     */
     @SerializedName("DstCpu")
     @Expose
     private Float DstCpu;
 
     /**
-    * 目标实例内存大小，单位：MB。
+    * 目标实例内存大小，单位：MB。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的内存大小范围。
     */
     @SerializedName("DstMemory")
     @Expose
     private Long DstMemory;
 
     /**
-    * 目标实例磁盘大小，单位：GB。
+    * 目标实例磁盘大小，单位：GB。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的磁盘大小范围。
     */
     @SerializedName("DstDisk")
     @Expose
     private Long DstDisk;
 
     /**
-    * 目标实例数据库版本。
+    * 目标实例数据库版本。可选值：5.6，5.7，8.0。
     */
     @SerializedName("DstVersion")
     @Expose
     private String DstVersion;
 
     /**
-    * 目标实例部署模型。
+    * 目标实例部署模型。默认为0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。
     */
     @SerializedName("DstDeployMode")
     @Expose
     private Long DstDeployMode;
 
     /**
-    * 目标实例复制类型。
+    * 目标实例复制类型，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
     */
     @SerializedName("DstProtectMode")
     @Expose
     private Long DstProtectMode;
 
     /**
-    * 目标实例备机1可用区。
+    * 目标实例备机1可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
     */
     @SerializedName("DstSlaveZone")
     @Expose
     private Long DstSlaveZone;
 
     /**
-    * 目标实例备机2可用区。
+    * 目标实例备机2可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
     */
     @SerializedName("DstBackupZone")
     @Expose
     private Long DstBackupZone;
 
     /**
-    * 目标实例类型。
+    * 目标实例类型。支持值包括："CUSTOM" - 通用型实例，"EXCLUSIVE" - 独享型实例，"ONTKE" - ONTKE 单节点实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。
     */
     @SerializedName("DstCdbType")
     @Expose
     private String DstCdbType;
 
     /**
-    * 目标实例主可用区。
+    * 目标实例主可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
     */
     @SerializedName("DstZoneId")
     @Expose
@@ -108,183 +108,183 @@ public class DescribeInstanceUpgradeTypeRequest extends AbstractModel {
     private NodeDistribution NodeDistribution;
 
     /**
-    * 集群版的节点拓扑配置
+    * 集群版的节点拓扑配置。Nodeld信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
     */
     @SerializedName("ClusterTopology")
     @Expose
     private ClusterTopology ClusterTopology;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 目标实例 CPU 的核数。 
-     * @return DstCpu 目标实例 CPU 的核数。
+     * Get 目标实例 CPU 的核数。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的 CPU 值范围。 
+     * @return DstCpu 目标实例 CPU 的核数。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的 CPU 值范围。
      */
     public Float getDstCpu() {
         return this.DstCpu;
     }
 
     /**
-     * Set 目标实例 CPU 的核数。
-     * @param DstCpu 目标实例 CPU 的核数。
+     * Set 目标实例 CPU 的核数。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的 CPU 值范围。
+     * @param DstCpu 目标实例 CPU 的核数。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的 CPU 值范围。
      */
     public void setDstCpu(Float DstCpu) {
         this.DstCpu = DstCpu;
     }
 
     /**
-     * Get 目标实例内存大小，单位：MB。 
-     * @return DstMemory 目标实例内存大小，单位：MB。
+     * Get 目标实例内存大小，单位：MB。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的内存大小范围。 
+     * @return DstMemory 目标实例内存大小，单位：MB。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的内存大小范围。
      */
     public Long getDstMemory() {
         return this.DstMemory;
     }
 
     /**
-     * Set 目标实例内存大小，单位：MB。
-     * @param DstMemory 目标实例内存大小，单位：MB。
+     * Set 目标实例内存大小，单位：MB。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的内存大小范围。
+     * @param DstMemory 目标实例内存大小，单位：MB。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的内存大小范围。
      */
     public void setDstMemory(Long DstMemory) {
         this.DstMemory = DstMemory;
     }
 
     /**
-     * Get 目标实例磁盘大小，单位：GB。 
-     * @return DstDisk 目标实例磁盘大小，单位：GB。
+     * Get 目标实例磁盘大小，单位：GB。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的磁盘大小范围。 
+     * @return DstDisk 目标实例磁盘大小，单位：GB。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的磁盘大小范围。
      */
     public Long getDstDisk() {
         return this.DstDisk;
     }
 
     /**
-     * Set 目标实例磁盘大小，单位：GB。
-     * @param DstDisk 目标实例磁盘大小，单位：GB。
+     * Set 目标实例磁盘大小，单位：GB。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的磁盘大小范围。
+     * @param DstDisk 目标实例磁盘大小，单位：GB。为保证传入值有效，请使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取实例可售卖的磁盘大小范围。
      */
     public void setDstDisk(Long DstDisk) {
         this.DstDisk = DstDisk;
     }
 
     /**
-     * Get 目标实例数据库版本。 
-     * @return DstVersion 目标实例数据库版本。
+     * Get 目标实例数据库版本。可选值：5.6，5.7，8.0。 
+     * @return DstVersion 目标实例数据库版本。可选值：5.6，5.7，8.0。
      */
     public String getDstVersion() {
         return this.DstVersion;
     }
 
     /**
-     * Set 目标实例数据库版本。
-     * @param DstVersion 目标实例数据库版本。
+     * Set 目标实例数据库版本。可选值：5.6，5.7，8.0。
+     * @param DstVersion 目标实例数据库版本。可选值：5.6，5.7，8.0。
      */
     public void setDstVersion(String DstVersion) {
         this.DstVersion = DstVersion;
     }
 
     /**
-     * Get 目标实例部署模型。 
-     * @return DstDeployMode 目标实例部署模型。
+     * Get 目标实例部署模型。默认为0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。 
+     * @return DstDeployMode 目标实例部署模型。默认为0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。
      */
     public Long getDstDeployMode() {
         return this.DstDeployMode;
     }
 
     /**
-     * Set 目标实例部署模型。
-     * @param DstDeployMode 目标实例部署模型。
+     * Set 目标实例部署模型。默认为0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。
+     * @param DstDeployMode 目标实例部署模型。默认为0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。
      */
     public void setDstDeployMode(Long DstDeployMode) {
         this.DstDeployMode = DstDeployMode;
     }
 
     /**
-     * Get 目标实例复制类型。 
-     * @return DstProtectMode 目标实例复制类型。
+     * Get 目标实例复制类型，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。 
+     * @return DstProtectMode 目标实例复制类型，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      */
     public Long getDstProtectMode() {
         return this.DstProtectMode;
     }
 
     /**
-     * Set 目标实例复制类型。
-     * @param DstProtectMode 目标实例复制类型。
+     * Set 目标实例复制类型，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
+     * @param DstProtectMode 目标实例复制类型，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      */
     public void setDstProtectMode(Long DstProtectMode) {
         this.DstProtectMode = DstProtectMode;
     }
 
     /**
-     * Get 目标实例备机1可用区。 
-     * @return DstSlaveZone 目标实例备机1可用区。
+     * Get 目标实例备机1可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。 
+     * @return DstSlaveZone 目标实例备机1可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
      */
     public Long getDstSlaveZone() {
         return this.DstSlaveZone;
     }
 
     /**
-     * Set 目标实例备机1可用区。
-     * @param DstSlaveZone 目标实例备机1可用区。
+     * Set 目标实例备机1可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
+     * @param DstSlaveZone 目标实例备机1可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
      */
     public void setDstSlaveZone(Long DstSlaveZone) {
         this.DstSlaveZone = DstSlaveZone;
     }
 
     /**
-     * Get 目标实例备机2可用区。 
-     * @return DstBackupZone 目标实例备机2可用区。
+     * Get 目标实例备机2可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。 
+     * @return DstBackupZone 目标实例备机2可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
      */
     public Long getDstBackupZone() {
         return this.DstBackupZone;
     }
 
     /**
-     * Set 目标实例备机2可用区。
-     * @param DstBackupZone 目标实例备机2可用区。
+     * Set 目标实例备机2可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
+     * @param DstBackupZone 目标实例备机2可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
      */
     public void setDstBackupZone(Long DstBackupZone) {
         this.DstBackupZone = DstBackupZone;
     }
 
     /**
-     * Get 目标实例类型。 
-     * @return DstCdbType 目标实例类型。
+     * Get 目标实例类型。支持值包括："CUSTOM" - 通用型实例，"EXCLUSIVE" - 独享型实例，"ONTKE" - ONTKE 单节点实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。 
+     * @return DstCdbType 目标实例类型。支持值包括："CUSTOM" - 通用型实例，"EXCLUSIVE" - 独享型实例，"ONTKE" - ONTKE 单节点实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。
      */
     public String getDstCdbType() {
         return this.DstCdbType;
     }
 
     /**
-     * Set 目标实例类型。
-     * @param DstCdbType 目标实例类型。
+     * Set 目标实例类型。支持值包括："CUSTOM" - 通用型实例，"EXCLUSIVE" - 独享型实例，"ONTKE" - ONTKE 单节点实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。
+     * @param DstCdbType 目标实例类型。支持值包括："CUSTOM" - 通用型实例，"EXCLUSIVE" - 独享型实例，"ONTKE" - ONTKE 单节点实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。
      */
     public void setDstCdbType(String DstCdbType) {
         this.DstCdbType = DstCdbType;
     }
 
     /**
-     * Get 目标实例主可用区。 
-     * @return DstZoneId 目标实例主可用区。
+     * Get 目标实例主可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。 
+     * @return DstZoneId 目标实例主可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
      */
     public Long getDstZoneId() {
         return this.DstZoneId;
     }
 
     /**
-     * Set 目标实例主可用区。
-     * @param DstZoneId 目标实例主可用区。
+     * Set 目标实例主可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
+     * @param DstZoneId 目标实例主可用区 ID。可使用 [DescribeCdbZoneConfig](https://cloud.tencent.com/document/product/236/80281) 获取可用区 ID。
      */
     public void setDstZoneId(Long DstZoneId) {
         this.DstZoneId = DstZoneId;
@@ -307,16 +307,16 @@ public class DescribeInstanceUpgradeTypeRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群版的节点拓扑配置 
-     * @return ClusterTopology 集群版的节点拓扑配置
+     * Get 集群版的节点拓扑配置。Nodeld信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。 
+     * @return ClusterTopology 集群版的节点拓扑配置。Nodeld信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
      */
     public ClusterTopology getClusterTopology() {
         return this.ClusterTopology;
     }
 
     /**
-     * Set 集群版的节点拓扑配置
-     * @param ClusterTopology 集群版的节点拓扑配置
+     * Set 集群版的节点拓扑配置。Nodeld信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
+     * @param ClusterTopology 集群版的节点拓扑配置。Nodeld信息可通过 [DescribeClusterInfo](https://cloud.tencent.com/document/api/236/105116) 接口获取。
      */
     public void setClusterTopology(ClusterTopology ClusterTopology) {
         this.ClusterTopology = ClusterTopology;

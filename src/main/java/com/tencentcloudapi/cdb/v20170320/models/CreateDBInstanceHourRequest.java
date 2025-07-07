@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,7 +54,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
 
     /**
     * 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
-说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。若此项不填，则系统会选择默认的 VPC。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -62,6 +62,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
 
     /**
     * 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
+说明：若此项不填，则系统会选择默认 VPC 下的默认子网。
     */
     @SerializedName("UniqSubnetId")
     @Expose
@@ -91,7 +92,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
 
     /**
     * 实例类型，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
-说明：必填项。
+说明：请选择实例类型，不填会默认选择 master。
     */
     @SerializedName("InstanceRole")
     @Expose
@@ -105,7 +106,8 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private String MasterRegion;
 
     /**
-    * 自定义端口，端口支持范围：[ 1024-65535 ] 。
+    * 自定义端口，端口支持范围：[1024 - 65535]。
+说明：不填则默认为3306。
     */
     @SerializedName("Port")
     @Expose
@@ -391,9 +393,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
 
     /**
      * Get 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
-说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。 
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。若此项不填，则系统会选择默认的 VPC。 
      * @return UniqVpcId 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
-说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。若此项不填，则系统会选择默认的 VPC。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -401,17 +403,19 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
 
     /**
      * Set 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
-说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。若此项不填，则系统会选择默认的 VPC。
      * @param UniqVpcId 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
-说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。若此项不填，则系统会选择默认的 VPC。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。 
+     * Get 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
+说明：若此项不填，则系统会选择默认 VPC 下的默认子网。 
      * @return UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
+说明：若此项不填，则系统会选择默认 VPC 下的默认子网。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
@@ -419,7 +423,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
 
     /**
      * Set 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
+说明：若此项不填，则系统会选择默认 VPC 下的默认子网。
      * @param UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
+说明：若此项不填，则系统会选择默认 VPC 下的默认子网。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
@@ -479,9 +485,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
 
     /**
      * Get 实例类型，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
-说明：必填项。 
+说明：请选择实例类型，不填会默认选择 master。 
      * @return InstanceRole 实例类型，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
-说明：必填项。
+说明：请选择实例类型，不填会默认选择 master。
      */
     public String getInstanceRole() {
         return this.InstanceRole;
@@ -489,9 +495,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
 
     /**
      * Set 实例类型，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
-说明：必填项。
+说明：请选择实例类型，不填会默认选择 master。
      * @param InstanceRole 实例类型，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
-说明：必填项。
+说明：请选择实例类型，不填会默认选择 master。
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;
@@ -514,16 +520,20 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     }
 
     /**
-     * Get 自定义端口，端口支持范围：[ 1024-65535 ] 。 
-     * @return Port 自定义端口，端口支持范围：[ 1024-65535 ] 。
+     * Get 自定义端口，端口支持范围：[1024 - 65535]。
+说明：不填则默认为3306。 
+     * @return Port 自定义端口，端口支持范围：[1024 - 65535]。
+说明：不填则默认为3306。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 自定义端口，端口支持范围：[ 1024-65535 ] 。
-     * @param Port 自定义端口，端口支持范围：[ 1024-65535 ] 。
+     * Set 自定义端口，端口支持范围：[1024 - 65535]。
+说明：不填则默认为3306。
+     * @param Port 自定义端口，端口支持范围：[1024 - 65535]。
+说明：不填则默认为3306。
      */
     public void setPort(Long Port) {
         this.Port = Port;

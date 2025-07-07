@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -52,19 +52,15 @@ public class ImportDataKeyRequest extends AbstractModel {
     private String Description;
 
     /**
-    * 当导入密文数据密钥时，无需传入根密钥,如果传入也会忽略。
-当KeyId 为空，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果KeyId 不为空，根据指定的根密钥加密数据密钥。
+    * 当导入密文数据密钥时，无需传入根密钥,如果传入会校验此KeyId是否和密文中一致。
+当导入明文数据密钥，KeyId 不能为空，会根据指定的根密钥加密数据密钥。
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * KMS 独享版对应的 HSM 集群 ID。
-当KeyId 没有传入时有效，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
+    * KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
     */
     @SerializedName("HsmClusterId")
     @Expose
@@ -135,52 +131,36 @@ public class ImportDataKeyRequest extends AbstractModel {
     }
 
     /**
-     * Get 当导入密文数据密钥时，无需传入根密钥,如果传入也会忽略。
-当KeyId 为空，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果KeyId 不为空，根据指定的根密钥加密数据密钥。 
-     * @return KeyId 当导入密文数据密钥时，无需传入根密钥,如果传入也会忽略。
-当KeyId 为空，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果KeyId 不为空，根据指定的根密钥加密数据密钥。
+     * Get 当导入密文数据密钥时，无需传入根密钥,如果传入会校验此KeyId是否和密文中一致。
+当导入明文数据密钥，KeyId 不能为空，会根据指定的根密钥加密数据密钥。 
+     * @return KeyId 当导入密文数据密钥时，无需传入根密钥,如果传入会校验此KeyId是否和密文中一致。
+当导入明文数据密钥，KeyId 不能为空，会根据指定的根密钥加密数据密钥。
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 当导入密文数据密钥时，无需传入根密钥,如果传入也会忽略。
-当KeyId 为空，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果KeyId 不为空，根据指定的根密钥加密数据密钥。
-     * @param KeyId 当导入密文数据密钥时，无需传入根密钥,如果传入也会忽略。
-当KeyId 为空，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果KeyId 不为空，根据指定的根密钥加密数据密钥。
+     * Set 当导入密文数据密钥时，无需传入根密钥,如果传入会校验此KeyId是否和密文中一致。
+当导入明文数据密钥，KeyId 不能为空，会根据指定的根密钥加密数据密钥。
+     * @param KeyId 当导入密文数据密钥时，无需传入根密钥,如果传入会校验此KeyId是否和密文中一致。
+当导入明文数据密钥，KeyId 不能为空，会根据指定的根密钥加密数据密钥。
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get KMS 独享版对应的 HSM 集群 ID。
-当KeyId 没有传入时有效，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。 
-     * @return HsmClusterId KMS 独享版对应的 HSM 集群 ID。
-当KeyId 没有传入时有效，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
+     * Get KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。 
+     * @return HsmClusterId KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
      */
     public String getHsmClusterId() {
         return this.HsmClusterId;
     }
 
     /**
-     * Set KMS 独享版对应的 HSM 集群 ID。
-当KeyId 没有传入时有效，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
-     * @param HsmClusterId KMS 独享版对应的 HSM 集群 ID。
-当KeyId 没有传入时有效，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
+     * Set KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
+     * @param HsmClusterId KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
      */
     public void setHsmClusterId(String HsmClusterId) {
         this.HsmClusterId = HsmClusterId;

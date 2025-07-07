@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,18 +31,25 @@ public class DescribeAndroidInstancesByAppsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 限制量，默认为20，最大值为100	
+    * 限制量，默认为 20，最大值为 500	
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 应用 ID 列表。通过应用 ID 做集合查询
+    * 应用 ID 列表。当 AndroidIds 为多条数据时（例如 app1, app2），返回的实例列表为：安装了 app1 应用的实例和安装了 app2 应用的实例集合（并集）。
     */
     @SerializedName("AndroidAppIds")
     @Expose
     private String [] AndroidAppIds;
+
+    /**
+    * 字段过滤器，Filter 的 Name 有以下值： AndroidInstanceId：实例 Id
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
 
     /**
      * Get 偏移量，默认为 0	 
@@ -61,35 +68,51 @@ public class DescribeAndroidInstancesByAppsRequest extends AbstractModel {
     }
 
     /**
-     * Get 限制量，默认为20，最大值为100	 
-     * @return Limit 限制量，默认为20，最大值为100	
+     * Get 限制量，默认为 20，最大值为 500	 
+     * @return Limit 限制量，默认为 20，最大值为 500	
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制量，默认为20，最大值为100	
-     * @param Limit 限制量，默认为20，最大值为100	
+     * Set 限制量，默认为 20，最大值为 500	
+     * @param Limit 限制量，默认为 20，最大值为 500	
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 应用 ID 列表。通过应用 ID 做集合查询 
-     * @return AndroidAppIds 应用 ID 列表。通过应用 ID 做集合查询
+     * Get 应用 ID 列表。当 AndroidIds 为多条数据时（例如 app1, app2），返回的实例列表为：安装了 app1 应用的实例和安装了 app2 应用的实例集合（并集）。 
+     * @return AndroidAppIds 应用 ID 列表。当 AndroidIds 为多条数据时（例如 app1, app2），返回的实例列表为：安装了 app1 应用的实例和安装了 app2 应用的实例集合（并集）。
      */
     public String [] getAndroidAppIds() {
         return this.AndroidAppIds;
     }
 
     /**
-     * Set 应用 ID 列表。通过应用 ID 做集合查询
-     * @param AndroidAppIds 应用 ID 列表。通过应用 ID 做集合查询
+     * Set 应用 ID 列表。当 AndroidIds 为多条数据时（例如 app1, app2），返回的实例列表为：安装了 app1 应用的实例和安装了 app2 应用的实例集合（并集）。
+     * @param AndroidAppIds 应用 ID 列表。当 AndroidIds 为多条数据时（例如 app1, app2），返回的实例列表为：安装了 app1 应用的实例和安装了 app2 应用的实例集合（并集）。
      */
     public void setAndroidAppIds(String [] AndroidAppIds) {
         this.AndroidAppIds = AndroidAppIds;
+    }
+
+    /**
+     * Get 字段过滤器，Filter 的 Name 有以下值： AndroidInstanceId：实例 Id 
+     * @return Filters 字段过滤器，Filter 的 Name 有以下值： AndroidInstanceId：实例 Id
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 字段过滤器，Filter 的 Name 有以下值： AndroidInstanceId：实例 Id
+     * @param Filters 字段过滤器，Filter 的 Name 有以下值： AndroidInstanceId：实例 Id
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     public DescribeAndroidInstancesByAppsRequest() {
@@ -112,6 +135,12 @@ public class DescribeAndroidInstancesByAppsRequest extends AbstractModel {
                 this.AndroidAppIds[i] = new String(source.AndroidAppIds[i]);
             }
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -122,6 +151,7 @@ public class DescribeAndroidInstancesByAppsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "AndroidAppIds.", this.AndroidAppIds);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

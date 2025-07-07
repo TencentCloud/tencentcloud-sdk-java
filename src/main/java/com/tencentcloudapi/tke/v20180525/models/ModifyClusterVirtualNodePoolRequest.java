@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class ModifyClusterVirtualNodePoolRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID，通过DescribeClusters接口获取
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 节点池ID
+    * 节点池ID，通过DescribeNodePools接口获取
     */
     @SerializedName("NodePoolId")
     @Expose
     private String NodePoolId;
 
     /**
-    * 节点池名称
+    * 节点池名称，必须修改至少一个参数
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 安全组ID列表
+    * 安全组ID列表，必须修改至少一个参数
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 虚拟节点label
+    * 虚拟节点label，必须修改至少一个参数
     */
     @SerializedName("Labels")
     @Expose
     private Label [] Labels;
 
     /**
-    * 虚拟节点taint
+    * 虚拟节点taint，必须修改至少一个参数
     */
     @SerializedName("Taints")
     @Expose
     private Taint [] Taints;
 
     /**
-    * 删除保护开关
+    * 删除保护开关，必须修改至少一个参数
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID，通过DescribeClusters接口获取 
+     * @return ClusterId 集群ID，通过DescribeClusters接口获取
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID，通过DescribeClusters接口获取
+     * @param ClusterId 集群ID，通过DescribeClusters接口获取
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 节点池ID 
-     * @return NodePoolId 节点池ID
+     * Get 节点池ID，通过DescribeNodePools接口获取 
+     * @return NodePoolId 节点池ID，通过DescribeNodePools接口获取
      */
     public String getNodePoolId() {
         return this.NodePoolId;
     }
 
     /**
-     * Set 节点池ID
-     * @param NodePoolId 节点池ID
+     * Set 节点池ID，通过DescribeNodePools接口获取
+     * @param NodePoolId 节点池ID，通过DescribeNodePools接口获取
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;
     }
 
     /**
-     * Get 节点池名称 
-     * @return Name 节点池名称
+     * Get 节点池名称，必须修改至少一个参数 
+     * @return Name 节点池名称，必须修改至少一个参数
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 节点池名称
-     * @param Name 节点池名称
+     * Set 节点池名称，必须修改至少一个参数
+     * @param Name 节点池名称，必须修改至少一个参数
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 安全组ID列表 
-     * @return SecurityGroupIds 安全组ID列表
+     * Get 安全组ID列表，必须修改至少一个参数 
+     * @return SecurityGroupIds 安全组ID列表，必须修改至少一个参数
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组ID列表
-     * @param SecurityGroupIds 安全组ID列表
+     * Set 安全组ID列表，必须修改至少一个参数
+     * @param SecurityGroupIds 安全组ID列表，必须修改至少一个参数
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 虚拟节点label 
-     * @return Labels 虚拟节点label
+     * Get 虚拟节点label，必须修改至少一个参数 
+     * @return Labels 虚拟节点label，必须修改至少一个参数
      */
     public Label [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 虚拟节点label
-     * @param Labels 虚拟节点label
+     * Set 虚拟节点label，必须修改至少一个参数
+     * @param Labels 虚拟节点label，必须修改至少一个参数
      */
     public void setLabels(Label [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 虚拟节点taint 
-     * @return Taints 虚拟节点taint
+     * Get 虚拟节点taint，必须修改至少一个参数 
+     * @return Taints 虚拟节点taint，必须修改至少一个参数
      */
     public Taint [] getTaints() {
         return this.Taints;
     }
 
     /**
-     * Set 虚拟节点taint
-     * @param Taints 虚拟节点taint
+     * Set 虚拟节点taint，必须修改至少一个参数
+     * @param Taints 虚拟节点taint，必须修改至少一个参数
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
     }
 
     /**
-     * Get 删除保护开关 
-     * @return DeletionProtection 删除保护开关
+     * Get 删除保护开关，必须修改至少一个参数 
+     * @return DeletionProtection 删除保护开关，必须修改至少一个参数
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 删除保护开关
-     * @param DeletionProtection 删除保护开关
+     * Set 删除保护开关，必须修改至少一个参数
+     * @param DeletionProtection 删除保护开关，必须修改至少一个参数
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;

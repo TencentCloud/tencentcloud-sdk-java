@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeExposuresResponse extends AbstractModel {
 
     /**
-    * 互联网暴露资产数量
+    * 云边界分析资产数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 互联网暴露资产列表
+    * 云边界分析资产列表
     */
     @SerializedName("ExposeList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeExposuresResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 互联网暴露资产数量 
-     * @return TotalCount 互联网暴露资产数量
+     * Get 云边界分析资产数量 
+     * @return TotalCount 云边界分析资产数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 互联网暴露资产数量
-     * @param TotalCount 互联网暴露资产数量
+     * Set 云边界分析资产数量
+     * @param TotalCount 云边界分析资产数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 互联网暴露资产列表 
-     * @return ExposeList 互联网暴露资产列表
+     * Get 云边界分析资产列表 
+     * @return ExposeList 云边界分析资产列表
      */
     public ExposesItem [] getExposeList() {
         return this.ExposeList;
     }
 
     /**
-     * Set 互联网暴露资产列表
-     * @param ExposeList 互联网暴露资产列表
+     * Set 云边界分析资产列表
+     * @param ExposeList 云边界分析资产列表
      */
     public void setExposeList(ExposesItem [] ExposeList) {
         this.ExposeList = ExposeList;

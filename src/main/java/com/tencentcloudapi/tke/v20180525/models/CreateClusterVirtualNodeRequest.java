@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateClusterVirtualNodeRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID，通过DescribeClusters接口获取
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 虚拟节点所属节点池
+    * 虚拟节点所属节点池，通过DescribeNodePools接口获取
     */
     @SerializedName("NodePoolId")
     @Expose
     private String NodePoolId;
 
     /**
-    * 虚拟节点所属子网
+    * 虚拟节点所属子网，SubnetId、SubnetIds、VirtualNodes必选一个。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 虚拟节点子网ID列表，和参数SubnetId互斥
+    * 虚拟节点子网ID列表，SubnetId、SubnetIds、VirtualNodes必选一个。
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-    * 虚拟节点列表
+    * 虚拟节点列表，SubnetId、SubnetIds、VirtualNodes必选一个。
     */
     @SerializedName("VirtualNodes")
     @Expose
     private VirtualNodeSpec [] VirtualNodes;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID，通过DescribeClusters接口获取 
+     * @return ClusterId 集群ID，通过DescribeClusters接口获取
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID，通过DescribeClusters接口获取
+     * @param ClusterId 集群ID，通过DescribeClusters接口获取
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 虚拟节点所属节点池 
-     * @return NodePoolId 虚拟节点所属节点池
+     * Get 虚拟节点所属节点池，通过DescribeNodePools接口获取 
+     * @return NodePoolId 虚拟节点所属节点池，通过DescribeNodePools接口获取
      */
     public String getNodePoolId() {
         return this.NodePoolId;
     }
 
     /**
-     * Set 虚拟节点所属节点池
-     * @param NodePoolId 虚拟节点所属节点池
+     * Set 虚拟节点所属节点池，通过DescribeNodePools接口获取
+     * @param NodePoolId 虚拟节点所属节点池，通过DescribeNodePools接口获取
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;
     }
 
     /**
-     * Get 虚拟节点所属子网 
-     * @return SubnetId 虚拟节点所属子网
+     * Get 虚拟节点所属子网，SubnetId、SubnetIds、VirtualNodes必选一个。 
+     * @return SubnetId 虚拟节点所属子网，SubnetId、SubnetIds、VirtualNodes必选一个。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 虚拟节点所属子网
-     * @param SubnetId 虚拟节点所属子网
+     * Set 虚拟节点所属子网，SubnetId、SubnetIds、VirtualNodes必选一个。
+     * @param SubnetId 虚拟节点所属子网，SubnetId、SubnetIds、VirtualNodes必选一个。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 虚拟节点子网ID列表，和参数SubnetId互斥 
-     * @return SubnetIds 虚拟节点子网ID列表，和参数SubnetId互斥
+     * Get 虚拟节点子网ID列表，SubnetId、SubnetIds、VirtualNodes必选一个。 
+     * @return SubnetIds 虚拟节点子网ID列表，SubnetId、SubnetIds、VirtualNodes必选一个。
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 虚拟节点子网ID列表，和参数SubnetId互斥
-     * @param SubnetIds 虚拟节点子网ID列表，和参数SubnetId互斥
+     * Set 虚拟节点子网ID列表，SubnetId、SubnetIds、VirtualNodes必选一个。
+     * @param SubnetIds 虚拟节点子网ID列表，SubnetId、SubnetIds、VirtualNodes必选一个。
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 虚拟节点列表 
-     * @return VirtualNodes 虚拟节点列表
+     * Get 虚拟节点列表，SubnetId、SubnetIds、VirtualNodes必选一个。 
+     * @return VirtualNodes 虚拟节点列表，SubnetId、SubnetIds、VirtualNodes必选一个。
      */
     public VirtualNodeSpec [] getVirtualNodes() {
         return this.VirtualNodes;
     }
 
     /**
-     * Set 虚拟节点列表
-     * @param VirtualNodes 虚拟节点列表
+     * Set 虚拟节点列表，SubnetId、SubnetIds、VirtualNodes必选一个。
+     * @param VirtualNodes 虚拟节点列表，SubnetId、SubnetIds、VirtualNodes必选一个。
      */
     public void setVirtualNodes(VirtualNodeSpec [] VirtualNodes) {
         this.VirtualNodes = VirtualNodes;

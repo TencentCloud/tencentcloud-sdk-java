@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,6 +35,8 @@ public class ScheduleInfo extends AbstractModel {
 Day-天
 Week-周
 Month-月
+Quarter-季度
+Year-年
 Once-单次
 
     */
@@ -102,12 +104,16 @@ Table-按表
 Day-天
 Week-周
 Month-月
+Quarter-季度
+Year-年
 Once-单次
  
      * @return ScheduleType 调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
+Quarter-季度
+Year-年
 Once-单次
 
      */
@@ -120,12 +126,16 @@ Once-单次
 Day-天
 Week-周
 Month-月
+Quarter-季度
+Year-年
 Once-单次
 
      * @param ScheduleType 调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
+Quarter-季度
+Year-年
 Once-单次
 
      */

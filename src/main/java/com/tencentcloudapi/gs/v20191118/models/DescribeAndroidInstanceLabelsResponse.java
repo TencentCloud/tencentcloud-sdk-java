@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,6 +38,13 @@ public class DescribeAndroidInstanceLabelsResponse extends AbstractModel {
     private AndroidInstanceLabel [] Labels;
 
     /**
+    * 安卓实例标签详情列表
+    */
+    @SerializedName("AndroidInstanceLabels")
+    @Expose
+    private AndroidInstanceLabelDetail [] AndroidInstanceLabels;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -63,7 +70,9 @@ public class DescribeAndroidInstanceLabelsResponse extends AbstractModel {
     /**
      * Get 安卓实例标签列表 
      * @return Labels 安卓实例标签列表
+     * @deprecated
      */
+    @Deprecated
     public AndroidInstanceLabel [] getLabels() {
         return this.Labels;
     }
@@ -71,9 +80,27 @@ public class DescribeAndroidInstanceLabelsResponse extends AbstractModel {
     /**
      * Set 安卓实例标签列表
      * @param Labels 安卓实例标签列表
+     * @deprecated
      */
+    @Deprecated
     public void setLabels(AndroidInstanceLabel [] Labels) {
         this.Labels = Labels;
+    }
+
+    /**
+     * Get 安卓实例标签详情列表 
+     * @return AndroidInstanceLabels 安卓实例标签详情列表
+     */
+    public AndroidInstanceLabelDetail [] getAndroidInstanceLabels() {
+        return this.AndroidInstanceLabels;
+    }
+
+    /**
+     * Set 安卓实例标签详情列表
+     * @param AndroidInstanceLabels 安卓实例标签详情列表
+     */
+    public void setAndroidInstanceLabels(AndroidInstanceLabelDetail [] AndroidInstanceLabels) {
+        this.AndroidInstanceLabels = AndroidInstanceLabels;
     }
 
     /**
@@ -109,6 +136,12 @@ public class DescribeAndroidInstanceLabelsResponse extends AbstractModel {
                 this.Labels[i] = new AndroidInstanceLabel(source.Labels[i]);
             }
         }
+        if (source.AndroidInstanceLabels != null) {
+            this.AndroidInstanceLabels = new AndroidInstanceLabelDetail[source.AndroidInstanceLabels.length];
+            for (int i = 0; i < source.AndroidInstanceLabels.length; i++) {
+                this.AndroidInstanceLabels[i] = new AndroidInstanceLabelDetail(source.AndroidInstanceLabels[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +154,7 @@ public class DescribeAndroidInstanceLabelsResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
+        this.setParamArrayObj(map, prefix + "AndroidInstanceLabels.", this.AndroidInstanceLabels);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

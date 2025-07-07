@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,8 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 主实例数据库引擎版本，支持值包括：5.6 和 5.7。
+    * 主实例数据库引擎版本，支持值包括：5.6、5.7、8.0。
+说明：不支持越级升级，升级后不支持降级。
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -45,21 +46,21 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel {
     private Long WaitSwitch;
 
     /**
-    * 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
+    * 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。无默认值，请指定要升级的版本类型。
     */
     @SerializedName("UpgradeSubversion")
     @Expose
     private Long UpgradeSubversion;
 
     /**
-    * 延迟阈值。取值范围1~10
+    * 延迟阈值。取值范围：1 - 10。无默认值，不传此参数时，延迟阈值为0，表示延迟阈值不做设置。
     */
     @SerializedName("MaxDelayTime")
     @Expose
     private Long MaxDelayTime;
 
     /**
-    * 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+    * 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略。无默认值，不传此参数表示不做处理。
     */
     @SerializedName("IgnoreErrKeyword")
     @Expose
@@ -89,16 +90,20 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get 主实例数据库引擎版本，支持值包括：5.6 和 5.7。 
-     * @return EngineVersion 主实例数据库引擎版本，支持值包括：5.6 和 5.7。
+     * Get 主实例数据库引擎版本，支持值包括：5.6、5.7、8.0。
+说明：不支持越级升级，升级后不支持降级。 
+     * @return EngineVersion 主实例数据库引擎版本，支持值包括：5.6、5.7、8.0。
+说明：不支持越级升级，升级后不支持降级。
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set 主实例数据库引擎版本，支持值包括：5.6 和 5.7。
-     * @param EngineVersion 主实例数据库引擎版本，支持值包括：5.6 和 5.7。
+     * Set 主实例数据库引擎版本，支持值包括：5.6、5.7、8.0。
+说明：不支持越级升级，升级后不支持降级。
+     * @param EngineVersion 主实例数据库引擎版本，支持值包括：5.6、5.7、8.0。
+说明：不支持越级升级，升级后不支持降级。
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
@@ -121,48 +126,48 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。 
-     * @return UpgradeSubversion 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
+     * Get 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。无默认值，请指定要升级的版本类型。 
+     * @return UpgradeSubversion 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。无默认值，请指定要升级的版本类型。
      */
     public Long getUpgradeSubversion() {
         return this.UpgradeSubversion;
     }
 
     /**
-     * Set 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
-     * @param UpgradeSubversion 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
+     * Set 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。无默认值，请指定要升级的版本类型。
+     * @param UpgradeSubversion 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。无默认值，请指定要升级的版本类型。
      */
     public void setUpgradeSubversion(Long UpgradeSubversion) {
         this.UpgradeSubversion = UpgradeSubversion;
     }
 
     /**
-     * Get 延迟阈值。取值范围1~10 
-     * @return MaxDelayTime 延迟阈值。取值范围1~10
+     * Get 延迟阈值。取值范围：1 - 10。无默认值，不传此参数时，延迟阈值为0，表示延迟阈值不做设置。 
+     * @return MaxDelayTime 延迟阈值。取值范围：1 - 10。无默认值，不传此参数时，延迟阈值为0，表示延迟阈值不做设置。
      */
     public Long getMaxDelayTime() {
         return this.MaxDelayTime;
     }
 
     /**
-     * Set 延迟阈值。取值范围1~10
-     * @param MaxDelayTime 延迟阈值。取值范围1~10
+     * Set 延迟阈值。取值范围：1 - 10。无默认值，不传此参数时，延迟阈值为0，表示延迟阈值不做设置。
+     * @param MaxDelayTime 延迟阈值。取值范围：1 - 10。无默认值，不传此参数时，延迟阈值为0，表示延迟阈值不做设置。
      */
     public void setMaxDelayTime(Long MaxDelayTime) {
         this.MaxDelayTime = MaxDelayTime;
     }
 
     /**
-     * Get 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略 
-     * @return IgnoreErrKeyword 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+     * Get 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略。无默认值，不传此参数表示不做处理。 
+     * @return IgnoreErrKeyword 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略。无默认值，不传此参数表示不做处理。
      */
     public Long getIgnoreErrKeyword() {
         return this.IgnoreErrKeyword;
     }
 
     /**
-     * Set 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
-     * @param IgnoreErrKeyword 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+     * Set 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略。无默认值，不传此参数表示不做处理。
+     * @param IgnoreErrKeyword 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略。无默认值，不传此参数表示不做处理。
      */
     public void setIgnoreErrKeyword(Long IgnoreErrKeyword) {
         this.IgnoreErrKeyword = IgnoreErrKeyword;

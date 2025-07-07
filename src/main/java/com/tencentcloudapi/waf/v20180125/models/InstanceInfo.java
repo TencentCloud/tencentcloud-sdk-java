@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -347,6 +347,13 @@ public class InstanceInfo extends AbstractModel {
     @SerializedName("BasicFlag")
     @Expose
     private Long BasicFlag;
+
+    /**
+    * 实例的网络配置
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private NetworkConfig NetworkConfig;
 
     /**
      * Get 实例唯一ID 
@@ -1108,6 +1115,22 @@ public class InstanceInfo extends AbstractModel {
         this.BasicFlag = BasicFlag;
     }
 
+    /**
+     * Get 实例的网络配置 
+     * @return NetworkConfig 实例的网络配置
+     */
+    public NetworkConfig getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set 实例的网络配置
+     * @param NetworkConfig 实例的网络配置
+     */
+    public void setNetworkConfig(NetworkConfig NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1251,6 +1274,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.BasicFlag != null) {
             this.BasicFlag = new Long(source.BasicFlag);
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new NetworkConfig(source.NetworkConfig);
+        }
     }
 
 
@@ -1303,6 +1329,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Last3MaxBandwidth", this.Last3MaxBandwidth);
         this.setParamObj(map, prefix + "MajorEventsProPkg.", this.MajorEventsProPkg);
         this.setParamSimple(map, prefix + "BasicFlag", this.BasicFlag);
+        this.setParamObj(map, prefix + "NetworkConfig.", this.NetworkConfig);
 
     }
 }

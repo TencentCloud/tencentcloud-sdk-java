@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class CsipClient extends AbstractClient{
     private static String endpoint = "csip.tencentcloudapi.com";
     private static String service = "csip";
     private static String version = "2022-11-21";
-    
+
     public CsipClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -94,6 +94,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取用户访问密钥资产列表
+     * @param req DescribeAccessKeyAssetRequest
+     * @return DescribeAccessKeyAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyAssetResponse DescribeAccessKeyAsset(DescribeAccessKeyAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyAsset", DescribeAccessKeyAssetResponse.class);
+    }
+
+    /**
      *告警中心全量告警列表接口
      * @param req DescribeAlertListRequest
      * @return DescribeAlertListResponse
@@ -102,6 +113,17 @@ public class CsipClient extends AbstractClient{
     public DescribeAlertListResponse DescribeAlertList(DescribeAlertListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAlertList", DescribeAlertListResponse.class);
+    }
+
+    /**
+     *查询云边界分析-暴露路径下主机节点的进程列表
+     * @param req DescribeAssetProcessListRequest
+     * @return DescribeAssetProcessListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetProcessListResponse DescribeAssetProcessList(DescribeAssetProcessListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssetProcessList", DescribeAssetProcessListResponse.class);
     }
 
     /**
@@ -171,6 +193,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取调用记录列表
+     * @param req DescribeCallRecordRequest
+     * @return DescribeCallRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCallRecordResponse DescribeCallRecord(DescribeCallRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCallRecord", DescribeCallRecordResponse.class);
+    }
+
+    /**
      *检查视角下云资源配置风险列表示例
      * @param req DescribeCheckViewRisksRequest
      * @return DescribeCheckViewRisksResponse
@@ -237,7 +270,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *暴露面资产分类
+     *云边界分析资产分类
      * @param req DescribeExposeAssetCategoryRequest
      * @return DescribeExposeAssetCategoryResponse
      * @throws TencentCloudSDKException
@@ -248,7 +281,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *查询互联网暴露节点
+     *查询云边界分析路径节点
      * @param req DescribeExposePathRequest
      * @return DescribeExposePathResponse
      * @throws TencentCloudSDKException
@@ -259,7 +292,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *互联网暴露资产列表
+     *云边界分析资产列表
      * @param req DescribeExposuresRequest
      * @return DescribeExposuresResponse
      * @throws TencentCloudSDKException
@@ -278,6 +311,17 @@ public class CsipClient extends AbstractClient{
     public DescribeGatewayAssetsResponse DescribeGatewayAssets(DescribeGatewayAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeGatewayAssets", DescribeGatewayAssetsResponse.class);
+    }
+
+    /**
+     *查询云边界分析-暴露路径下主机节点的高危基线风险列表
+     * @param req DescribeHighBaseLineRiskListRequest
+     * @return DescribeHighBaseLineRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHighBaseLineRiskListResponse DescribeHighBaseLineRiskList(DescribeHighBaseLineRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHighBaseLineRiskList", DescribeHighBaseLineRiskListResponse.class);
     }
 
     /**
@@ -501,7 +545,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *查询互联网暴露扫描结果统计信息
+     *查询云边界分析扫描结果统计信息
      * @param req DescribeScanStatisticRequest
      * @return DescribeScanStatisticResponse
      * @throws TencentCloudSDKException
@@ -531,6 +575,17 @@ public class CsipClient extends AbstractClient{
     public DescribeSearchBugInfoResponse DescribeSearchBugInfo(DescribeSearchBugInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSearchBugInfo", DescribeSearchBugInfoResponse.class);
+    }
+
+    /**
+     *获取用户访问密钥资产列表（源IP视角）
+     * @param req DescribeSourceIPAssetRequest
+     * @return DescribeSourceIPAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSourceIPAssetResponse DescribeSourceIPAsset(DescribeSourceIPAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSourceIPAsset", DescribeSourceIPAssetResponse.class);
     }
 
     /**
@@ -641,6 +696,17 @@ public class CsipClient extends AbstractClient{
     public DescribeVpcAssetsResponse DescribeVpcAssets(DescribeVpcAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVpcAssets", DescribeVpcAssetsResponse.class);
+    }
+
+    /**
+     *查询云边界分析-暴露路径下主机节点的漏洞列表
+     * @param req DescribeVulRiskListRequest
+     * @return DescribeVulRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulRiskListResponse DescribeVulRiskList(DescribeVulRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulRiskList", DescribeVulRiskListResponse.class);
     }
 
     /**

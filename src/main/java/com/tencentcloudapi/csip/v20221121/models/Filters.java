@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Filters extends AbstractModel {
 
     /**
-    * 无
+    * 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -32,7 +32,7 @@ public class Filters extends AbstractModel {
     private String Name;
 
     /**
-    * 无
+    * 实例ID内容
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
@@ -48,9 +48,9 @@ public class Filters extends AbstractModel {
     private String ExactMatch;
 
     /**
-     * Get 无
+     * Get 实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 无
+     * @return Name 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -58,9 +58,9 @@ public class Filters extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 无
+     * @param Name 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -68,9 +68,9 @@ public class Filters extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 实例ID内容
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Values 无
+     * @return Values 实例ID内容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValues() {
@@ -78,9 +78,9 @@ public class Filters extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 实例ID内容
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Values 无
+     * @param Values 实例ID内容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(String [] Values) {

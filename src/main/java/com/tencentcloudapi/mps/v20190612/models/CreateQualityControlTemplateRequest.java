@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,6 +43,14 @@ public class CreateQualityControlTemplateRequest extends AbstractModel {
     @SerializedName("Comment")
     @Expose
     private String Comment;
+
+    /**
+    * 录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+    */
+    @SerializedName("RecordFormat")
+    @Expose
+    private String RecordFormat;
 
     /**
      * Get 媒体质检模板名称，长度限制：64 个字符。 
@@ -92,6 +100,26 @@ public class CreateQualityControlTemplateRequest extends AbstractModel {
         this.Comment = Comment;
     }
 
+    /**
+     * Get 录制文件格式。可选值：
+<li>PNG: PNG图片</li> 
+     * @return RecordFormat 录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+     */
+    public String getRecordFormat() {
+        return this.RecordFormat;
+    }
+
+    /**
+     * Set 录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+     * @param RecordFormat 录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+     */
+    public void setRecordFormat(String RecordFormat) {
+        this.RecordFormat = RecordFormat;
+    }
+
     public CreateQualityControlTemplateRequest() {
     }
 
@@ -112,6 +140,9 @@ public class CreateQualityControlTemplateRequest extends AbstractModel {
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.RecordFormat != null) {
+            this.RecordFormat = new String(source.RecordFormat);
+        }
     }
 
 
@@ -122,6 +153,7 @@ public class CreateQualityControlTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "QualityControlItemSet.", this.QualityControlItemSet);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "RecordFormat", this.RecordFormat);
 
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -299,6 +299,13 @@ Hadoop-Hbase
     @SerializedName("NodeMarks")
     @Expose
     private NodeMark [] NodeMarks;
+
+    /**
+    * CLB id
+    */
+    @SerializedName("LoadBalancerId")
+    @Expose
+    private String LoadBalancerId;
 
     /**
      * Get 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
@@ -1000,6 +1007,22 @@ Hadoop-Hbase
         this.NodeMarks = NodeMarks;
     }
 
+    /**
+     * Get CLB id 
+     * @return LoadBalancerId CLB id
+     */
+    public String getLoadBalancerId() {
+        return this.LoadBalancerId;
+    }
+
+    /**
+     * Set CLB id
+     * @param LoadBalancerId CLB id
+     */
+    public void setLoadBalancerId(String LoadBalancerId) {
+        this.LoadBalancerId = LoadBalancerId;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -1131,6 +1154,9 @@ Hadoop-Hbase
                 this.NodeMarks[i] = new NodeMark(source.NodeMarks[i]);
             }
         }
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
     }
 
 
@@ -1172,6 +1198,7 @@ Hadoop-Hbase
         this.setParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
+        this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
 
     }
 }

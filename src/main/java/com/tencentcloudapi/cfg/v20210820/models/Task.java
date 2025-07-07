@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -281,6 +281,20 @@ public class Task extends AbstractModel {
     @SerializedName("TaskArchId")
     @Expose
     private String TaskArchId;
+
+    /**
+    * 演练场景
+    */
+    @SerializedName("TaskScenario")
+    @Expose
+    private TaskTarget [] TaskScenario;
+
+    /**
+    * 演练目的
+    */
+    @SerializedName("TaskPurpose")
+    @Expose
+    private TaskTarget [] TaskPurpose;
 
     /**
      * Get 任务ID 
@@ -898,6 +912,38 @@ public class Task extends AbstractModel {
         this.TaskArchId = TaskArchId;
     }
 
+    /**
+     * Get 演练场景 
+     * @return TaskScenario 演练场景
+     */
+    public TaskTarget [] getTaskScenario() {
+        return this.TaskScenario;
+    }
+
+    /**
+     * Set 演练场景
+     * @param TaskScenario 演练场景
+     */
+    public void setTaskScenario(TaskTarget [] TaskScenario) {
+        this.TaskScenario = TaskScenario;
+    }
+
+    /**
+     * Get 演练目的 
+     * @return TaskPurpose 演练目的
+     */
+    public TaskTarget [] getTaskPurpose() {
+        return this.TaskPurpose;
+    }
+
+    /**
+     * Set 演练目的
+     * @param TaskPurpose 演练目的
+     */
+    public void setTaskPurpose(TaskTarget [] TaskPurpose) {
+        this.TaskPurpose = TaskPurpose;
+    }
+
     public Task() {
     }
 
@@ -1029,6 +1075,18 @@ public class Task extends AbstractModel {
         if (source.TaskArchId != null) {
             this.TaskArchId = new String(source.TaskArchId);
         }
+        if (source.TaskScenario != null) {
+            this.TaskScenario = new TaskTarget[source.TaskScenario.length];
+            for (int i = 0; i < source.TaskScenario.length; i++) {
+                this.TaskScenario[i] = new TaskTarget(source.TaskScenario[i]);
+            }
+        }
+        if (source.TaskPurpose != null) {
+            this.TaskPurpose = new TaskTarget[source.TaskPurpose.length];
+            for (int i = 0; i < source.TaskPurpose.length; i++) {
+                this.TaskPurpose[i] = new TaskTarget(source.TaskPurpose[i]);
+            }
+        }
     }
 
 
@@ -1071,6 +1129,8 @@ public class Task extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskIssue", this.TaskIssue);
         this.setParamSimple(map, prefix + "TaskRegionName", this.TaskRegionName);
         this.setParamSimple(map, prefix + "TaskArchId", this.TaskArchId);
+        this.setParamArrayObj(map, prefix + "TaskScenario.", this.TaskScenario);
+        this.setParamArrayObj(map, prefix + "TaskPurpose.", this.TaskPurpose);
 
     }
 }

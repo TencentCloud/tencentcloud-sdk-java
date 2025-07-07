@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -129,6 +129,20 @@ public class DescribeDatahubTaskRes extends AbstractModel {
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * 任务描述信息	
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * 1:正常 2:隔离中
+    */
+    @SerializedName("IsolateStatus")
+    @Expose
+    private Long IsolateStatus;
 
     /**
      * Get 任务ID 
@@ -378,6 +392,38 @@ public class DescribeDatahubTaskRes extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 任务描述信息	 
+     * @return Description 任务描述信息	
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 任务描述信息	
+     * @param Description 任务描述信息	
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get 1:正常 2:隔离中 
+     * @return IsolateStatus 1:正常 2:隔离中
+     */
+    public Long getIsolateStatus() {
+        return this.IsolateStatus;
+    }
+
+    /**
+     * Set 1:正常 2:隔离中
+     * @param IsolateStatus 1:正常 2:隔离中
+     */
+    public void setIsolateStatus(Long IsolateStatus) {
+        this.IsolateStatus = IsolateStatus;
+    }
+
     public DescribeDatahubTaskRes() {
     }
 
@@ -437,6 +483,12 @@ public class DescribeDatahubTaskRes extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.IsolateStatus != null) {
+            this.IsolateStatus = new Long(source.IsolateStatus);
+        }
     }
 
 
@@ -459,6 +511,8 @@ public class DescribeDatahubTaskRes extends AbstractModel {
         this.setParamObj(map, prefix + "TransformsParam.", this.TransformsParam);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "IsolateStatus", this.IsolateStatus);
 
     }
 }

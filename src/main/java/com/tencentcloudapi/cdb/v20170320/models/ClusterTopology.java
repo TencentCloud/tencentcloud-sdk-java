@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,6 +25,7 @@ public class ClusterTopology extends AbstractModel {
 
     /**
     * RW 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
     */
     @SerializedName("ReadWriteNode")
     @Expose
@@ -32,14 +33,17 @@ public class ClusterTopology extends AbstractModel {
 
     /**
     * RO 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
     */
     @SerializedName("ReadOnlyNodes")
     @Expose
     private ReadonlyNode [] ReadOnlyNodes;
 
     /**
-     * Get RW 节点拓扑。 
+     * Get RW 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。 
      * @return ReadWriteNode RW 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
      */
     public ReadWriteNode getReadWriteNode() {
         return this.ReadWriteNode;
@@ -47,15 +51,19 @@ public class ClusterTopology extends AbstractModel {
 
     /**
      * Set RW 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
      * @param ReadWriteNode RW 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
      */
     public void setReadWriteNode(ReadWriteNode ReadWriteNode) {
         this.ReadWriteNode = ReadWriteNode;
     }
 
     /**
-     * Get RO 节点拓扑。 
+     * Get RO 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。 
      * @return ReadOnlyNodes RO 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
      */
     public ReadonlyNode [] getReadOnlyNodes() {
         return this.ReadOnlyNodes;
@@ -63,7 +71,9 @@ public class ClusterTopology extends AbstractModel {
 
     /**
      * Set RO 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
      * @param ReadOnlyNodes RO 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
      */
     public void setReadOnlyNodes(ReadonlyNode [] ReadOnlyNodes) {
         this.ReadOnlyNodes = ReadOnlyNodes;

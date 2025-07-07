@@ -1,72 +1,10 @@
-# Release 3.1.1293
+# Release 3.1.1294
 
-## 应用性能监控(apm) 版本：2021-06-22
+## 云联络中心(ccc) 版本：2020-02-10
 
-### 第 40 次发布
+### 第 102 次发布
 
-发布时间：2025-06-30 01:09:28
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [CreateProfileTask](https://cloud.tencent.com/document/api/1463/120402)
-
-
-
-## 边缘计算机器(ecm) 版本：2019-07-19
-
-### 第 77 次发布
-
-发布时间：2025-06-30 01:41:22
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-<font color="#dd0000">**预下线接口**：</font>
-
-* AttachDisks
-* CreateDisks
-* DeleteSnapshots
-* DescribeDisks
-* DescribeSnapshots
-* DetachDisks
-* TerminateDisks
-
-
-
-## 云数据库 MongoDB(mongodb) 版本：2019-07-25
-
-### 第 53 次发布
-
-发布时间：2025-06-30 02:04:59
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [DescribeDetailedSlowLogs](https://cloud.tencent.com/document/api/240/120403)
-
-新增数据结构：
-
-* [SlowLogItem](https://cloud.tencent.com/document/api/240/38576#SlowLogItem)
-
-
-
-## 云数据库 MongoDB(mongodb) 版本：2018-04-08
-
-
-
-## 文字识别(ocr) 版本：2018-11-19
-
-### 第 198 次发布
-
-发布时间：2025-06-30 02:10:19
+发布时间：2025-07-07 01:11:38
 
 本次发布包含了以下内容：
 
@@ -74,18 +12,68 @@
 
 修改数据结构：
 
-* [CustomsPaymentReceipt](https://cloud.tencent.com/document/api/866/33527#CustomsPaymentReceipt)
+* [ServerPushText](https://cloud.tencent.com/document/api/679/47715#ServerPushText)
 
-	* 新增成员：CommonContent
-
-
+	* 新增成员：AddHistory
 
 
-## 边缘安全加速平台(teo) 版本：2022-09-01
 
-### 第 106 次发布
 
-发布时间：2025-06-30 02:29:59
+## 主机安全(cwp) 版本：2018-02-28
+
+### 第 149 次发布
+
+发布时间：2025-07-07 01:18:14
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeMalwareTimingScanSetting](https://cloud.tencent.com/document/api/296/58240)
+
+	* 新增出参：DoClean, QuaraUuids, QuaraScope
+
+* [ModifyMalwareTimingScanSettings](https://cloud.tencent.com/document/api/296/52509)
+
+	* 新增入参：QuaraUuids, QuaraScope
+
+* [ScanVul](https://cloud.tencent.com/document/api/296/57375)
+
+	* 新增出参：BasicVersionCount, SuccessCount
+
+
+修改数据结构：
+
+* [BashEventsInfoNew](https://cloud.tencent.com/document/api/296/19867#BashEventsInfoNew)
+
+	* 新增成员：BashCmdDecoded
+
+* [MalWareList](https://cloud.tencent.com/document/api/296/19867#MalWareList)
+
+	* 新增成员：DoClean, FirstDetectionMethod
+
+* [MalwareInfo](https://cloud.tencent.com/document/api/296/19867#MalwareInfo)
+
+	* 新增成员：FirstDetectionMethod
+
+* [RiskProcessEvent](https://cloud.tencent.com/document/api/296/19867#RiskProcessEvent)
+
+	* 新增成员：FirstDetectionMethod
+
+* [WarningObject](https://cloud.tencent.com/document/api/296/19867#WarningObject)
+
+	* 新增成员：Unit
+
+
+
+
+## 数据湖计算 DLC(dlc) 版本：2021-01-25
+
+### 第 128 次发布
+
+发布时间：2025-07-07 01:22:07
 
 本次发布包含了以下内容：
 
@@ -93,23 +81,131 @@
 
 新增接口：
 
-* [ConfirmOriginACLUpdate](https://cloud.tencent.com/document/api/1552/120409)
-* [DescribeOriginACL](https://cloud.tencent.com/document/api/1552/120408)
-* [DisableOriginACL](https://cloud.tencent.com/document/api/1552/120407)
-* [EnableOriginACL](https://cloud.tencent.com/document/api/1552/120406)
-* [ModifyOriginACL](https://cloud.tencent.com/document/api/1552/120405)
+* [CancelTasks](https://cloud.tencent.com/document/api/1342/120822)
+
+
+
+## 弹性 MapReduce(emr) 版本：2019-01-03
+
+### 第 115 次发布
+
+发布时间：2025-07-07 01:25:40
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateCluster](https://cloud.tencent.com/document/api/589/83953)
+
+	* 新增入参：LoadBalancerId
+
+* [DescribeInstanceRenewNodes](https://cloud.tencent.com/document/api/589/53702)
+
+	* 新增出参：RedisInfo
+
+
+
+
+## 云游戏(gs) 版本：2019-11-18
+
+### 第 48 次发布
+
+发布时间：2025-07-07 01:28:35
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateAndroidInstanceLabel](https://cloud.tencent.com/document/api/1162/117241)
+
+	* 新增入参：Description
+
+* [CreateAndroidInstances](https://cloud.tencent.com/document/api/1162/117265)
+
+	* 新增入参：Labels
+
+* [DescribeAndroidInstanceLabels](https://cloud.tencent.com/document/api/1162/117239)
+
+	* 新增出参：AndroidInstanceLabels
+
+* [ModifyAndroidInstancesLabels](https://cloud.tencent.com/document/api/1162/117238)
+
+	* <font color="#dd0000">**修改入参**：</font>AndroidInstanceLabels
+
 
 新增数据结构：
 
-* [Addresses](https://cloud.tencent.com/document/api/1552/80721#Addresses)
-* [CurrentOriginACL](https://cloud.tencent.com/document/api/1552/80721#CurrentOriginACL)
-* [NextOriginACL](https://cloud.tencent.com/document/api/1552/80721#NextOriginACL)
-* [OriginACLEntity](https://cloud.tencent.com/document/api/1552/80721#OriginACLEntity)
-* [OriginACLInfo](https://cloud.tencent.com/document/api/1552/80721#OriginACLInfo)
+* [AndroidInstanceLabelDetail](https://cloud.tencent.com/document/api/1162/40743#AndroidInstanceLabelDetail)
+
+修改数据结构：
+
+* [AndroidInstanceAppInfo](https://cloud.tencent.com/document/api/1162/40743#AndroidInstanceAppInfo)
+
+	* 新增成员：VersionName
 
 
 
-## 边缘安全加速平台(teo) 版本：2022-01-06
+
+## iOA 零信任安全管理系统(ioa) 版本：2022-06-01
+
+### 第 18 次发布
+
+发布时间：2025-07-07 01:29:51
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeDeviceVirtualGroups](https://cloud.tencent.com/document/api/1092/120823)
+
+新增数据结构：
+
+* [DescribeDeviceVirtualGroupsPageRsp](https://cloud.tencent.com/document/api/1092/102488#DescribeDeviceVirtualGroupsPageRsp)
+* [DeviceVirtualDeviceGroupsDetail](https://cloud.tencent.com/document/api/1092/102488#DeviceVirtualDeviceGroupsDetail)
+
+
+
+## 云数据库 MariaDB(mariadb) 版本：2017-03-12
+
+### 第 73 次发布
+
+发布时间：2025-07-07 01:35:49
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [UpgradeDBInstance](https://cloud.tencent.com/document/api/237/16189)
+
+	* 新增入参：SwitchStartTime, SwitchEndTime, SwitchAutoRetry
+
+
+
+
+## 数据开发治理平台 WeData(wedata) 版本：2021-08-20
+
+### 第 160 次发布
+
+发布时间：2025-07-07 01:57:52
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [BizCatalogsInfo](https://cloud.tencent.com/document/api/1267/76336#BizCatalogsInfo)
+
+	* 新增成员：NameEn
+
 
 
 

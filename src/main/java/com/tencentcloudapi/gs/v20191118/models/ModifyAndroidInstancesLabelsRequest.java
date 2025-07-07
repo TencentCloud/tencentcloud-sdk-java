@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,18 +31,18 @@ public class ModifyAndroidInstancesLabelsRequest extends AbstractModel {
     private String [] AndroidInstanceIds;
 
     /**
-    * 安卓实例标签列表
-    */
-    @SerializedName("AndroidInstanceLabels")
-    @Expose
-    private AndroidInstanceLabel [] AndroidInstanceLabels;
-
-    /**
     * 操作类型。ADD：标签键不存在的添加新标签，标签键存在的将覆盖原有标签REMOVE：根据标签键删除标签REPLACE：使用请求标签列表替换原来所有标签CLEAR：清除所有标签
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
+
+    /**
+    * 安卓实例标签列表
+    */
+    @SerializedName("AndroidInstanceLabels")
+    @Expose
+    private AndroidInstanceLabel [] AndroidInstanceLabels;
 
     /**
      * Get 安卓实例 ID 列表 
@@ -61,22 +61,6 @@ public class ModifyAndroidInstancesLabelsRequest extends AbstractModel {
     }
 
     /**
-     * Get 安卓实例标签列表 
-     * @return AndroidInstanceLabels 安卓实例标签列表
-     */
-    public AndroidInstanceLabel [] getAndroidInstanceLabels() {
-        return this.AndroidInstanceLabels;
-    }
-
-    /**
-     * Set 安卓实例标签列表
-     * @param AndroidInstanceLabels 安卓实例标签列表
-     */
-    public void setAndroidInstanceLabels(AndroidInstanceLabel [] AndroidInstanceLabels) {
-        this.AndroidInstanceLabels = AndroidInstanceLabels;
-    }
-
-    /**
      * Get 操作类型。ADD：标签键不存在的添加新标签，标签键存在的将覆盖原有标签REMOVE：根据标签键删除标签REPLACE：使用请求标签列表替换原来所有标签CLEAR：清除所有标签 
      * @return Operation 操作类型。ADD：标签键不存在的添加新标签，标签键存在的将覆盖原有标签REMOVE：根据标签键删除标签REPLACE：使用请求标签列表替换原来所有标签CLEAR：清除所有标签
      */
@@ -90,6 +74,22 @@ public class ModifyAndroidInstancesLabelsRequest extends AbstractModel {
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
+    }
+
+    /**
+     * Get 安卓实例标签列表 
+     * @return AndroidInstanceLabels 安卓实例标签列表
+     */
+    public AndroidInstanceLabel [] getAndroidInstanceLabels() {
+        return this.AndroidInstanceLabels;
+    }
+
+    /**
+     * Set 安卓实例标签列表
+     * @param AndroidInstanceLabels 安卓实例标签列表
+     */
+    public void setAndroidInstanceLabels(AndroidInstanceLabel [] AndroidInstanceLabels) {
+        this.AndroidInstanceLabels = AndroidInstanceLabels;
     }
 
     public ModifyAndroidInstancesLabelsRequest() {
@@ -106,14 +106,14 @@ public class ModifyAndroidInstancesLabelsRequest extends AbstractModel {
                 this.AndroidInstanceIds[i] = new String(source.AndroidInstanceIds[i]);
             }
         }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
         if (source.AndroidInstanceLabels != null) {
             this.AndroidInstanceLabels = new AndroidInstanceLabel[source.AndroidInstanceLabels.length];
             for (int i = 0; i < source.AndroidInstanceLabels.length; i++) {
                 this.AndroidInstanceLabels[i] = new AndroidInstanceLabel(source.AndroidInstanceLabels[i]);
             }
-        }
-        if (source.Operation != null) {
-            this.Operation = new String(source.Operation);
         }
     }
 
@@ -123,8 +123,8 @@ public class ModifyAndroidInstancesLabelsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
-        this.setParamArrayObj(map, prefix + "AndroidInstanceLabels.", this.AndroidInstanceLabels);
         this.setParamSimple(map, prefix + "Operation", this.Operation);
+        this.setParamArrayObj(map, prefix + "AndroidInstanceLabels.", this.AndroidInstanceLabels);
 
     }
 }

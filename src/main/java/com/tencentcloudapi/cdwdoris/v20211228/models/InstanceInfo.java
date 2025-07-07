@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -118,7 +118,7 @@ Modify 集群变更中；
     private NodesSummary CoreSummary;
 
     /**
-    * 高可用，“true" "false"
+    * 高可用，"true" "false"
     */
     @SerializedName("HA")
     @Expose
@@ -403,6 +403,20 @@ Modify 集群变更中；
     private Long ComputeGroupCount;
 
     /**
+    * 存算分离cos存储数据
+    */
+    @SerializedName("CosStorageSize")
+    @Expose
+    private Float CosStorageSize;
+
+    /**
+    * 存算分离的指标 当是true 不支持新建计算组
+    */
+    @SerializedName("IsMasterNonVM")
+    @Expose
+    private Boolean IsMasterNonVM;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
      */
@@ -623,16 +637,16 @@ Modify 集群变更中；
     }
 
     /**
-     * Get 高可用，“true" "false" 
-     * @return HA 高可用，“true" "false"
+     * Get 高可用，"true" "false" 
+     * @return HA 高可用，"true" "false"
      */
     public String getHA() {
         return this.HA;
     }
 
     /**
-     * Set 高可用，“true" "false"
-     * @param HA 高可用，“true" "false"
+     * Set 高可用，"true" "false"
+     * @param HA 高可用，"true" "false"
      */
     public void setHA(String HA) {
         this.HA = HA;
@@ -1286,6 +1300,38 @@ Modify 集群变更中；
         this.ComputeGroupCount = ComputeGroupCount;
     }
 
+    /**
+     * Get 存算分离cos存储数据 
+     * @return CosStorageSize 存算分离cos存储数据
+     */
+    public Float getCosStorageSize() {
+        return this.CosStorageSize;
+    }
+
+    /**
+     * Set 存算分离cos存储数据
+     * @param CosStorageSize 存算分离cos存储数据
+     */
+    public void setCosStorageSize(Float CosStorageSize) {
+        this.CosStorageSize = CosStorageSize;
+    }
+
+    /**
+     * Get 存算分离的指标 当是true 不支持新建计算组 
+     * @return IsMasterNonVM 存算分离的指标 当是true 不支持新建计算组
+     */
+    public Boolean getIsMasterNonVM() {
+        return this.IsMasterNonVM;
+    }
+
+    /**
+     * Set 存算分离的指标 当是true 不支持新建计算组
+     * @param IsMasterNonVM 存算分离的指标 当是true 不支持新建计算组
+     */
+    public void setIsMasterNonVM(Boolean IsMasterNonVM) {
+        this.IsMasterNonVM = IsMasterNonVM;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1462,6 +1508,12 @@ Modify 集群变更中；
         if (source.ComputeGroupCount != null) {
             this.ComputeGroupCount = new Long(source.ComputeGroupCount);
         }
+        if (source.CosStorageSize != null) {
+            this.CosStorageSize = new Float(source.CosStorageSize);
+        }
+        if (source.IsMasterNonVM != null) {
+            this.IsMasterNonVM = new Boolean(source.IsMasterNonVM);
+        }
     }
 
 
@@ -1522,6 +1574,8 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "MonitorMode", this.MonitorMode);
         this.setParamObj(map, prefix + "CNSummary.", this.CNSummary);
         this.setParamSimple(map, prefix + "ComputeGroupCount", this.ComputeGroupCount);
+        this.setParamSimple(map, prefix + "CosStorageSize", this.CosStorageSize);
+        this.setParamSimple(map, prefix + "IsMasterNonVM", this.IsMasterNonVM);
 
     }
 }

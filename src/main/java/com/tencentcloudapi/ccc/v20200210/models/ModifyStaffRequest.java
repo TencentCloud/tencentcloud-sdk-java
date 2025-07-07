@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -92,6 +92,13 @@ public class ModifyStaffRequest extends AbstractModel {
     @SerializedName("ExtensionNumber")
     @Expose
     private String ExtensionNumber;
+
+    /**
+    * 呼叫转移配置
+    */
+    @SerializedName("ForwardingConfig")
+    @Expose
+    private ForwardingConfig ForwardingConfig;
 
     /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
@@ -253,6 +260,22 @@ public class ModifyStaffRequest extends AbstractModel {
         this.ExtensionNumber = ExtensionNumber;
     }
 
+    /**
+     * Get 呼叫转移配置 
+     * @return ForwardingConfig 呼叫转移配置
+     */
+    public ForwardingConfig getForwardingConfig() {
+        return this.ForwardingConfig;
+    }
+
+    /**
+     * Set 呼叫转移配置
+     * @param ForwardingConfig 呼叫转移配置
+     */
+    public void setForwardingConfig(ForwardingConfig ForwardingConfig) {
+        this.ForwardingConfig = ForwardingConfig;
+    }
+
     public ModifyStaffRequest() {
     }
 
@@ -294,6 +317,9 @@ public class ModifyStaffRequest extends AbstractModel {
         if (source.ExtensionNumber != null) {
             this.ExtensionNumber = new String(source.ExtensionNumber);
         }
+        if (source.ForwardingConfig != null) {
+            this.ForwardingConfig = new ForwardingConfig(source.ForwardingConfig);
+        }
     }
 
 
@@ -311,6 +337,7 @@ public class ModifyStaffRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
         this.setParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
         this.setParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
+        this.setParamObj(map, prefix + "ForwardingConfig.", this.ForwardingConfig);
 
     }
 }

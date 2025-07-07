@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskDetail extends AbstractModel {
 
     /**
-    * 错误码。
+    * 错误码。0代表成功，其他对应不同的报错场景。
     */
     @SerializedName("Code")
     @Expose
@@ -122,16 +122,16 @@ public class TaskDetail extends AbstractModel {
     private TaskAttachInfo [] TaskAttachInfo;
 
     /**
-     * Get 错误码。 
-     * @return Code 错误码。
+     * Get 错误码。0代表成功，其他对应不同的报错场景。 
+     * @return Code 错误码。0代表成功，其他对应不同的报错场景。
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 错误码。
-     * @param Code 错误码。
+     * Set 错误码。0代表成功，其他对应不同的报错场景。
+     * @param Code 错误码。0代表成功，其他对应不同的报错场景。
      */
     public void setCode(Long Code) {
         this.Code = Code;

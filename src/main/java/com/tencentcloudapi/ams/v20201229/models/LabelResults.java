@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ public class LabelResults extends AbstractModel {
     private String Scene;
 
     /**
-    * 建议
+    * 建议值
     */
     @SerializedName("Suggestion")
     @Expose
@@ -89,16 +89,16 @@ public class LabelResults extends AbstractModel {
     }
 
     /**
-     * Get 建议 
-     * @return Suggestion 建议
+     * Get 建议值 
+     * @return Suggestion 建议值
      */
     public Long getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 建议
-     * @param Suggestion 建议
+     * Set 建议值
+     * @param Suggestion 建议值
      */
     public void setSuggestion(Long Suggestion) {
         this.Suggestion = Suggestion;

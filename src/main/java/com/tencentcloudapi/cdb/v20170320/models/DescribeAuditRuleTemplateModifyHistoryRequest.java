@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAuditRuleTemplateModifyHistoryRequest extends AbstractModel {
 
     /**
-    * 模板ID
+    * 审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取。
     */
     @SerializedName("RuleTemplateIds")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeAuditRuleTemplateModifyHistoryRequest extends AbstractModel
     private String EndTime;
 
     /**
-    * 返回条数。
+    * 返回条数,默认值-20，最大值-1000。
     */
     @SerializedName("Limit")
     @Expose
@@ -59,23 +59,23 @@ public class DescribeAuditRuleTemplateModifyHistoryRequest extends AbstractModel
     private Long Offset;
 
     /**
-    * 排序方式。DESC-按修改时间倒排，ASC-正序。
+    * 排序方式，DESC-按修改时间倒排，ASC-正序，默认：DESC。
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get 模板ID 
-     * @return RuleTemplateIds 模板ID
+     * Get 审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取。 
+     * @return RuleTemplateIds 审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取。
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set 模板ID
-     * @param RuleTemplateIds 模板ID
+     * Set 审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取。
+     * @param RuleTemplateIds 审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取。
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
@@ -114,16 +114,16 @@ public class DescribeAuditRuleTemplateModifyHistoryRequest extends AbstractModel
     }
 
     /**
-     * Get 返回条数。 
-     * @return Limit 返回条数。
+     * Get 返回条数,默认值-20，最大值-1000。 
+     * @return Limit 返回条数,默认值-20，最大值-1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回条数。
-     * @param Limit 返回条数。
+     * Set 返回条数,默认值-20，最大值-1000。
+     * @param Limit 返回条数,默认值-20，最大值-1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -146,16 +146,16 @@ public class DescribeAuditRuleTemplateModifyHistoryRequest extends AbstractModel
     }
 
     /**
-     * Get 排序方式。DESC-按修改时间倒排，ASC-正序。 
-     * @return Order 排序方式。DESC-按修改时间倒排，ASC-正序。
+     * Get 排序方式，DESC-按修改时间倒排，ASC-正序，默认：DESC。 
+     * @return Order 排序方式，DESC-按修改时间倒排，ASC-正序，默认：DESC。
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方式。DESC-按修改时间倒排，ASC-正序。
-     * @param Order 排序方式。DESC-按修改时间倒排，ASC-正序。
+     * Set 排序方式，DESC-按修改时间倒排，ASC-正序，默认：DESC。
+     * @param Order 排序方式，DESC-按修改时间倒排，ASC-正序，默认：DESC。
      */
     public void setOrder(String Order) {
         this.Order = Order;

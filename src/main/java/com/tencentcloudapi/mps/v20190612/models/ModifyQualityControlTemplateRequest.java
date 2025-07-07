@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -50,6 +50,14 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
     @SerializedName("QualityControlItemSet")
     @Expose
     private QualityControlItemConfig [] QualityControlItemSet;
+
+    /**
+    * 录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+    */
+    @SerializedName("RecordFormat")
+    @Expose
+    private String RecordFormat;
 
     /**
      * Get 媒体质检模板唯一标识。 
@@ -115,6 +123,26 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
         this.QualityControlItemSet = QualityControlItemSet;
     }
 
+    /**
+     * Get 录制文件格式。可选值：
+<li>PNG: PNG图片</li> 
+     * @return RecordFormat 录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+     */
+    public String getRecordFormat() {
+        return this.RecordFormat;
+    }
+
+    /**
+     * Set 录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+     * @param RecordFormat 录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+     */
+    public void setRecordFormat(String RecordFormat) {
+        this.RecordFormat = RecordFormat;
+    }
+
     public ModifyQualityControlTemplateRequest() {
     }
 
@@ -138,6 +166,9 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
                 this.QualityControlItemSet[i] = new QualityControlItemConfig(source.QualityControlItemSet[i]);
             }
         }
+        if (source.RecordFormat != null) {
+            this.RecordFormat = new String(source.RecordFormat);
+        }
     }
 
 
@@ -149,6 +180,7 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamArrayObj(map, prefix + "QualityControlItemSet.", this.QualityControlItemSet);
+        this.setParamSimple(map, prefix + "RecordFormat", this.RecordFormat);
 
     }
 }

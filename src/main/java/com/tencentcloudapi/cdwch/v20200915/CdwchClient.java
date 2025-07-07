@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class CdwchClient extends AbstractClient{
     private static String endpoint = "cdwch.tencentcloudapi.com";
     private static String service = "cdwch";
     private static String version = "2020-09-15";
-    
+
     public CdwchClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -124,6 +124,17 @@ public class CdwchClient extends AbstractClient{
     public DescribeBackUpTablesResponse DescribeBackUpTables(DescribeBackUpTablesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBackUpTables", DescribeBackUpTablesResponse.class);
+    }
+
+    /**
+     *获取云原生实例列表
+     * @param req DescribeCNInstancesRequest
+     * @return DescribeCNInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCNInstancesResponse DescribeCNInstances(DescribeCNInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCNInstances", DescribeCNInstancesResponse.class);
     }
 
     /**

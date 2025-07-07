@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -115,6 +115,13 @@ public class PriceResource extends AbstractModel {
     @SerializedName("LocalDiskNum")
     @Expose
     private Long LocalDiskNum;
+
+    /**
+    * GPU信息
+    */
+    @SerializedName("GpuDesc")
+    @Expose
+    private String GpuDesc;
 
     /**
      * Get 需要的规格 
@@ -332,6 +339,22 @@ public class PriceResource extends AbstractModel {
         this.LocalDiskNum = LocalDiskNum;
     }
 
+    /**
+     * Get GPU信息 
+     * @return GpuDesc GPU信息
+     */
+    public String getGpuDesc() {
+        return this.GpuDesc;
+    }
+
+    /**
+     * Set GPU信息
+     * @param GpuDesc GPU信息
+     */
+    public void setGpuDesc(String GpuDesc) {
+        this.GpuDesc = GpuDesc;
+    }
+
     public PriceResource() {
     }
 
@@ -385,6 +408,9 @@ public class PriceResource extends AbstractModel {
         if (source.LocalDiskNum != null) {
             this.LocalDiskNum = new Long(source.LocalDiskNum);
         }
+        if (source.GpuDesc != null) {
+            this.GpuDesc = new String(source.GpuDesc);
+        }
     }
 
 
@@ -405,6 +431,7 @@ public class PriceResource extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "DiskNum", this.DiskNum);
         this.setParamSimple(map, prefix + "LocalDiskNum", this.LocalDiskNum);
+        this.setParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
 
     }
 }

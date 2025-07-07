@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -136,7 +136,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String OrderBy;
 
     /**
-    * 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+    * 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
     */
     @SerializedName("OrderDirection")
     @Expose
@@ -144,6 +144,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
 
     /**
     * 是否以安全组 ID 为过滤条件。
+说明：0表示否，1表示是。
     */
     @SerializedName("WithSecurityGroup")
     @Expose
@@ -263,14 +264,14 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String [] ProxyIds;
 
     /**
-    * 数据库引擎类型。
+    * 数据库引擎类型。可选值为：InnoDB、RocksDB。
     */
     @SerializedName("EngineTypes")
     @Expose
     private String [] EngineTypes;
 
     /**
-    * 是否获取集群版实例节点信息，可填：true或false
+    * 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
     */
     @SerializedName("QueryClusterInfo")
     @Expose
@@ -533,24 +534,26 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。 
-     * @return OrderDirection 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+     * Get 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。 
+     * @return OrderDirection 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
-     * @param OrderDirection 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+     * Set 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
+     * @param OrderDirection 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;
     }
 
     /**
-     * Get 是否以安全组 ID 为过滤条件。 
+     * Get 是否以安全组 ID 为过滤条件。
+说明：0表示否，1表示是。 
      * @return WithSecurityGroup 是否以安全组 ID 为过滤条件。
+说明：0表示否，1表示是。
      */
     public Long getWithSecurityGroup() {
         return this.WithSecurityGroup;
@@ -558,7 +561,9 @@ public class DescribeDBInstancesRequest extends AbstractModel {
 
     /**
      * Set 是否以安全组 ID 为过滤条件。
+说明：0表示否，1表示是。
      * @param WithSecurityGroup 是否以安全组 ID 为过滤条件。
+说明：0表示否，1表示是。
      */
     public void setWithSecurityGroup(Long WithSecurityGroup) {
         this.WithSecurityGroup = WithSecurityGroup;
@@ -825,32 +830,32 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库引擎类型。 
-     * @return EngineTypes 数据库引擎类型。
+     * Get 数据库引擎类型。可选值为：InnoDB、RocksDB。 
+     * @return EngineTypes 数据库引擎类型。可选值为：InnoDB、RocksDB。
      */
     public String [] getEngineTypes() {
         return this.EngineTypes;
     }
 
     /**
-     * Set 数据库引擎类型。
-     * @param EngineTypes 数据库引擎类型。
+     * Set 数据库引擎类型。可选值为：InnoDB、RocksDB。
+     * @param EngineTypes 数据库引擎类型。可选值为：InnoDB、RocksDB。
      */
     public void setEngineTypes(String [] EngineTypes) {
         this.EngineTypes = EngineTypes;
     }
 
     /**
-     * Get 是否获取集群版实例节点信息，可填：true或false 
-     * @return QueryClusterInfo 是否获取集群版实例节点信息，可填：true或false
+     * Get 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。 
+     * @return QueryClusterInfo 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
      */
     public Boolean getQueryClusterInfo() {
         return this.QueryClusterInfo;
     }
 
     /**
-     * Set 是否获取集群版实例节点信息，可填：true或false
-     * @param QueryClusterInfo 是否获取集群版实例节点信息，可填：true或false
+     * Set 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
+     * @param QueryClusterInfo 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
      */
     public void setQueryClusterInfo(Boolean QueryClusterInfo) {
         this.QueryClusterInfo = QueryClusterInfo;

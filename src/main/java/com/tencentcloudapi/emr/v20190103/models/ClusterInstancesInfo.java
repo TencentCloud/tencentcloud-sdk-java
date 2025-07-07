@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -378,6 +378,13 @@ public class ClusterInstancesInfo extends AbstractModel {
     @SerializedName("ClusterRelationInfoList")
     @Expose
     private ClusterRelationMeta [] ClusterRelationInfoList;
+
+    /**
+    * Redis信息
+    */
+    @SerializedName("RedisId")
+    @Expose
+    private String RedisId;
 
     /**
      * Get ID号 
@@ -1259,6 +1266,22 @@ public class ClusterInstancesInfo extends AbstractModel {
         this.ClusterRelationInfoList = ClusterRelationInfoList;
     }
 
+    /**
+     * Get Redis信息 
+     * @return RedisId Redis信息
+     */
+    public String getRedisId() {
+        return this.RedisId;
+    }
+
+    /**
+     * Set Redis信息
+     * @param RedisId Redis信息
+     */
+    public void setRedisId(String RedisId) {
+        this.RedisId = RedisId;
+    }
+
     public ClusterInstancesInfo() {
     }
 
@@ -1417,6 +1440,9 @@ public class ClusterInstancesInfo extends AbstractModel {
                 this.ClusterRelationInfoList[i] = new ClusterRelationMeta(source.ClusterRelationInfoList[i]);
             }
         }
+        if (source.RedisId != null) {
+            this.RedisId = new String(source.RedisId);
+        }
     }
 
 
@@ -1470,6 +1496,7 @@ public class ClusterInstancesInfo extends AbstractModel {
         this.setParamObj(map, prefix + "ConfigDetail.", this.ConfigDetail);
         this.setParamSimple(map, prefix + "BindFileSystemNum", this.BindFileSystemNum);
         this.setParamArrayObj(map, prefix + "ClusterRelationInfoList.", this.ClusterRelationInfoList);
+        this.setParamSimple(map, prefix + "RedisId", this.RedisId);
 
     }
 }

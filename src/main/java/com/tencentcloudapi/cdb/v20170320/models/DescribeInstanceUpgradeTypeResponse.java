@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ public class DescribeInstanceUpgradeTypeResponse extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 实例升级类型。
+    * 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
     */
     @SerializedName("UpgradeType")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeInstanceUpgradeTypeResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例升级类型。 
-     * @return UpgradeType 实例升级类型。
+     * Get 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。 
+     * @return UpgradeType 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 实例升级类型。
-     * @param UpgradeType 实例升级类型。
+     * Set 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
+     * @param UpgradeType 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -66,6 +66,27 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
+
+    /**
+    * 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+    */
+    @SerializedName("SwitchStartTime")
+    @Expose
+    private String SwitchStartTime;
+
+    /**
+    * 切换结束时间, 格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+    */
+    @SerializedName("SwitchEndTime")
+    @Expose
+    private String SwitchEndTime;
+
+    /**
+    * 是否自动重试。 0：不自动重试 1：自动重试
+    */
+    @SerializedName("SwitchAutoRetry")
+    @Expose
+    private Long SwitchAutoRetry;
 
     /**
      * Get 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
@@ -171,6 +192,54 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.Zones = Zones;
     }
 
+    /**
+     * Get 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。 
+     * @return SwitchStartTime 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+     */
+    public String getSwitchStartTime() {
+        return this.SwitchStartTime;
+    }
+
+    /**
+     * Set 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+     * @param SwitchStartTime 切换开始时间，格式如: "2019-12-12 07:00:00"。开始时间必须在当前时间一个小时以后，3天以内。
+     */
+    public void setSwitchStartTime(String SwitchStartTime) {
+        this.SwitchStartTime = SwitchStartTime;
+    }
+
+    /**
+     * Get 切换结束时间, 格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。 
+     * @return SwitchEndTime 切换结束时间, 格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+     */
+    public String getSwitchEndTime() {
+        return this.SwitchEndTime;
+    }
+
+    /**
+     * Set 切换结束时间, 格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+     * @param SwitchEndTime 切换结束时间, 格式如: "2019-12-12 07:15:00"，结束时间必须大于开始时间。
+     */
+    public void setSwitchEndTime(String SwitchEndTime) {
+        this.SwitchEndTime = SwitchEndTime;
+    }
+
+    /**
+     * Get 是否自动重试。 0：不自动重试 1：自动重试 
+     * @return SwitchAutoRetry 是否自动重试。 0：不自动重试 1：自动重试
+     */
+    public Long getSwitchAutoRetry() {
+        return this.SwitchAutoRetry;
+    }
+
+    /**
+     * Set 是否自动重试。 0：不自动重试 1：自动重试
+     * @param SwitchAutoRetry 是否自动重试。 0：不自动重试 1：自动重试
+     */
+    public void setSwitchAutoRetry(Long SwitchAutoRetry) {
+        this.SwitchAutoRetry = SwitchAutoRetry;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -203,6 +272,15 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
                 this.Zones[i] = new String(source.Zones[i]);
             }
         }
+        if (source.SwitchStartTime != null) {
+            this.SwitchStartTime = new String(source.SwitchStartTime);
+        }
+        if (source.SwitchEndTime != null) {
+            this.SwitchEndTime = new String(source.SwitchEndTime);
+        }
+        if (source.SwitchAutoRetry != null) {
+            this.SwitchAutoRetry = new Long(source.SwitchAutoRetry);
+        }
     }
 
 
@@ -216,6 +294,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
+        this.setParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
+        this.setParamSimple(map, prefix + "SwitchAutoRetry", this.SwitchAutoRetry);
 
     }
 }

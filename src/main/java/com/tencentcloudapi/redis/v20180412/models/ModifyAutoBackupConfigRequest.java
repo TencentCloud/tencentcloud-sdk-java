@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,6 +51,13 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel {
     @SerializedName("AutoBackupType")
     @Expose
     private Long AutoBackupType;
+
+    /**
+    * 全量备份文件保存天数。单位：天。
+    */
+    @SerializedName("BackupStorageDays")
+    @Expose
+    private Long BackupStorageDays;
 
     /**
      * Get 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
@@ -120,6 +127,22 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel {
         this.AutoBackupType = AutoBackupType;
     }
 
+    /**
+     * Get 全量备份文件保存天数。单位：天。 
+     * @return BackupStorageDays 全量备份文件保存天数。单位：天。
+     */
+    public Long getBackupStorageDays() {
+        return this.BackupStorageDays;
+    }
+
+    /**
+     * Set 全量备份文件保存天数。单位：天。
+     * @param BackupStorageDays 全量备份文件保存天数。单位：天。
+     */
+    public void setBackupStorageDays(Long BackupStorageDays) {
+        this.BackupStorageDays = BackupStorageDays;
+    }
+
     public ModifyAutoBackupConfigRequest() {
     }
 
@@ -143,6 +166,9 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel {
         if (source.AutoBackupType != null) {
             this.AutoBackupType = new Long(source.AutoBackupType);
         }
+        if (source.BackupStorageDays != null) {
+            this.BackupStorageDays = new Long(source.BackupStorageDays);
+        }
     }
 
 
@@ -154,6 +180,7 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "WeekDays.", this.WeekDays);
         this.setParamSimple(map, prefix + "TimePeriod", this.TimePeriod);
         this.setParamSimple(map, prefix + "AutoBackupType", this.AutoBackupType);
+        this.setParamSimple(map, prefix + "BackupStorageDays", this.BackupStorageDays);
 
     }
 }

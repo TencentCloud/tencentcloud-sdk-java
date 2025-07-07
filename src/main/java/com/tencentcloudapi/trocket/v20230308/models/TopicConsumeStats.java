@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,10 +33,11 @@ public class TopicConsumeStats extends AbstractModel {
     /**
     * 主题类型，枚举值如下：
 
-- NORMAL：普通消息主题
-- FIFO：顺序消息主题
-- DELAY：延迟消息主题
-- TRANSACTION：事务消息主题
+- UNSPECIFIED：未指定
+- NORMAL：普通消息
+- FIFO：顺序消息
+- DELAY：延时消息
+- TRANSACTION：事务消息
     */
     @SerializedName("TopicType")
     @Expose
@@ -89,16 +90,18 @@ public class TopicConsumeStats extends AbstractModel {
     /**
      * Get 主题类型，枚举值如下：
 
-- NORMAL：普通消息主题
-- FIFO：顺序消息主题
-- DELAY：延迟消息主题
-- TRANSACTION：事务消息主题 
+- UNSPECIFIED：未指定
+- NORMAL：普通消息
+- FIFO：顺序消息
+- DELAY：延时消息
+- TRANSACTION：事务消息 
      * @return TopicType 主题类型，枚举值如下：
 
-- NORMAL：普通消息主题
-- FIFO：顺序消息主题
-- DELAY：延迟消息主题
-- TRANSACTION：事务消息主题
+- UNSPECIFIED：未指定
+- NORMAL：普通消息
+- FIFO：顺序消息
+- DELAY：延时消息
+- TRANSACTION：事务消息
      */
     public String getTopicType() {
         return this.TopicType;
@@ -107,16 +110,18 @@ public class TopicConsumeStats extends AbstractModel {
     /**
      * Set 主题类型，枚举值如下：
 
-- NORMAL：普通消息主题
-- FIFO：顺序消息主题
-- DELAY：延迟消息主题
-- TRANSACTION：事务消息主题
+- UNSPECIFIED：未指定
+- NORMAL：普通消息
+- FIFO：顺序消息
+- DELAY：延时消息
+- TRANSACTION：事务消息
      * @param TopicType 主题类型，枚举值如下：
 
-- NORMAL：普通消息主题
-- FIFO：顺序消息主题
-- DELAY：延迟消息主题
-- TRANSACTION：事务消息主题
+- UNSPECIFIED：未指定
+- NORMAL：普通消息
+- FIFO：顺序消息
+- DELAY：延时消息
+- TRANSACTION：事务消息
      */
     public void setTopicType(String TopicType) {
         this.TopicType = TopicType;

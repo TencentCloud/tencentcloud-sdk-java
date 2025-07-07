@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class TioneClient extends AbstractClient{
     private static String endpoint = "tione.tencentcloudapi.com";
     private static String service = "tione";
     private static String version = "2021-11-11";
-    
+
     public TioneClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -426,6 +426,17 @@ https://cloud.tencent.com/document/product/1278/85305
     public DescribeNotebooksResponse DescribeNotebooks(DescribeNotebooksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeNotebooks", DescribeNotebooksResponse.class);
+    }
+
+    /**
+     *查询平台镜像信息
+     * @param req DescribePlatformImagesRequest
+     * @return DescribePlatformImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlatformImagesResponse DescribePlatformImages(DescribePlatformImagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePlatformImages", DescribePlatformImagesResponse.class);
     }
 
     /**

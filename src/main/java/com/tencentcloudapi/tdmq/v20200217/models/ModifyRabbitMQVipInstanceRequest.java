@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,18 +31,25 @@ public class ModifyRabbitMQVipInstanceRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 集群名称
+    * 集群名称，不填则不修改。非空字符串时必须 3-64 个字符，只能包含数字、字母、“-”和“_”
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 备注
+    * 备注，不填则不修改
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
+
+    /**
+    * 是否开启删除保护，不填则不修改
+    */
+    @SerializedName("EnableDeletionProtection")
+    @Expose
+    private Boolean EnableDeletionProtection;
 
     /**
      * Get 实例Id 
@@ -61,35 +68,51 @@ public class ModifyRabbitMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get 集群名称，不填则不修改。非空字符串时必须 3-64 个字符，只能包含数字、字母、“-”和“_” 
+     * @return ClusterName 集群名称，不填则不修改。非空字符串时必须 3-64 个字符，只能包含数字、字母、“-”和“_”
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set 集群名称，不填则不修改。非空字符串时必须 3-64 个字符，只能包含数字、字母、“-”和“_”
+     * @param ClusterName 集群名称，不填则不修改。非空字符串时必须 3-64 个字符，只能包含数字、字母、“-”和“_”
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get 备注，不填则不修改 
+     * @return Remark 备注，不填则不修改
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set 备注，不填则不修改
+     * @param Remark 备注，不填则不修改
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get 是否开启删除保护，不填则不修改 
+     * @return EnableDeletionProtection 是否开启删除保护，不填则不修改
+     */
+    public Boolean getEnableDeletionProtection() {
+        return this.EnableDeletionProtection;
+    }
+
+    /**
+     * Set 是否开启删除保护，不填则不修改
+     * @param EnableDeletionProtection 是否开启删除保护，不填则不修改
+     */
+    public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
+        this.EnableDeletionProtection = EnableDeletionProtection;
     }
 
     public ModifyRabbitMQVipInstanceRequest() {
@@ -109,6 +132,9 @@ public class ModifyRabbitMQVipInstanceRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.EnableDeletionProtection != null) {
+            this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ModifyRabbitMQVipInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
 
     }
 }

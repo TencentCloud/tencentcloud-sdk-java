@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -241,6 +241,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     @SerializedName("DisableApiTermination")
     @Expose
     private Boolean DisableApiTermination;
+
+    /**
+    * 实例是否开启巨型帧，取值范围：<br><li/> true：表示实例开启巨型帧，只有支持巨型帧的机型可设置为true。<br><li/>false：表示实例关闭巨型帧，只有支持巨型帧的机型可设置为false。<br> 支持巨型帧的实例规格： [实例规格](https://cloud.tencent.com/document/product/213/11518)
+    */
+    @SerializedName("EnableJumboFrame")
+    @Expose
+    private Boolean EnableJumboFrame;
 
     /**
      * Get 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li><br>默认值：POSTPAID_BY_HOUR。 
@@ -758,6 +765,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.DisableApiTermination = DisableApiTermination;
     }
 
+    /**
+     * Get 实例是否开启巨型帧，取值范围：<br><li/> true：表示实例开启巨型帧，只有支持巨型帧的机型可设置为true。<br><li/>false：表示实例关闭巨型帧，只有支持巨型帧的机型可设置为false。<br> 支持巨型帧的实例规格： [实例规格](https://cloud.tencent.com/document/product/213/11518) 
+     * @return EnableJumboFrame 实例是否开启巨型帧，取值范围：<br><li/> true：表示实例开启巨型帧，只有支持巨型帧的机型可设置为true。<br><li/>false：表示实例关闭巨型帧，只有支持巨型帧的机型可设置为false。<br> 支持巨型帧的实例规格： [实例规格](https://cloud.tencent.com/document/product/213/11518)
+     */
+    public Boolean getEnableJumboFrame() {
+        return this.EnableJumboFrame;
+    }
+
+    /**
+     * Set 实例是否开启巨型帧，取值范围：<br><li/> true：表示实例开启巨型帧，只有支持巨型帧的机型可设置为true。<br><li/>false：表示实例关闭巨型帧，只有支持巨型帧的机型可设置为false。<br> 支持巨型帧的实例规格： [实例规格](https://cloud.tencent.com/document/product/213/11518)
+     * @param EnableJumboFrame 实例是否开启巨型帧，取值范围：<br><li/> true：表示实例开启巨型帧，只有支持巨型帧的机型可设置为true。<br><li/>false：表示实例关闭巨型帧，只有支持巨型帧的机型可设置为false。<br> 支持巨型帧的实例规格： [实例规格](https://cloud.tencent.com/document/product/213/11518)
+     */
+    public void setEnableJumboFrame(Boolean EnableJumboFrame) {
+        this.EnableJumboFrame = EnableJumboFrame;
+    }
+
     public RunInstancesRequest() {
     }
 
@@ -871,6 +894,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.DisableApiTermination != null) {
             this.DisableApiTermination = new Boolean(source.DisableApiTermination);
         }
+        if (source.EnableJumboFrame != null) {
+            this.EnableJumboFrame = new Boolean(source.EnableJumboFrame);
+        }
     }
 
 
@@ -908,6 +934,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         this.setParamArraySimple(map, prefix + "ChcIds.", this.ChcIds);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+        this.setParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
 
     }
 }

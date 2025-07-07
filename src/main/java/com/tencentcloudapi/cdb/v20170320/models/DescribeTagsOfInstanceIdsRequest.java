@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTagsOfInstanceIdsRequest extends AbstractModel {
 
     /**
-    * 实例列表。
+    * 实例列表。实例 ID 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。可传入的数组长度暂无限制。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -38,23 +38,23 @@ public class DescribeTagsOfInstanceIdsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 分页大小。
+    * 分页大小。默认为15。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 实例列表。 
-     * @return InstanceIds 实例列表。
+     * Get 实例列表。实例 ID 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。可传入的数组长度暂无限制。 
+     * @return InstanceIds 实例列表。实例 ID 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。可传入的数组长度暂无限制。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例列表。
-     * @param InstanceIds 实例列表。
+     * Set 实例列表。实例 ID 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。可传入的数组长度暂无限制。
+     * @param InstanceIds 实例列表。实例 ID 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。可传入的数组长度暂无限制。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -77,16 +77,16 @@ public class DescribeTagsOfInstanceIdsRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页大小。 
-     * @return Limit 分页大小。
+     * Get 分页大小。默认为15。 
+     * @return Limit 分页大小。默认为15。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小。
-     * @param Limit 分页大小。
+     * Set 分页大小。默认为15。
+     * @param Limit 分页大小。默认为15。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

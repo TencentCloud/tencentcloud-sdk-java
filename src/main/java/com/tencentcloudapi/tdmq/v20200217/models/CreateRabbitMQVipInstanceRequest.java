@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -143,6 +143,13 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     @SerializedName("EnablePublicAccess")
     @Expose
     private Boolean EnablePublicAccess;
+
+    /**
+    * 是否打开集群删除保护，不传默认为 false
+    */
+    @SerializedName("EnableDeletionProtection")
+    @Expose
+    private Boolean EnableDeletionProtection;
 
     /**
      * Get 可用区 
@@ -436,6 +443,22 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
         this.EnablePublicAccess = EnablePublicAccess;
     }
 
+    /**
+     * Get 是否打开集群删除保护，不传默认为 false 
+     * @return EnableDeletionProtection 是否打开集群删除保护，不传默认为 false
+     */
+    public Boolean getEnableDeletionProtection() {
+        return this.EnableDeletionProtection;
+    }
+
+    /**
+     * Set 是否打开集群删除保护，不传默认为 false
+     * @param EnableDeletionProtection 是否打开集群删除保护，不传默认为 false
+     */
+    public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
+        this.EnableDeletionProtection = EnableDeletionProtection;
+    }
+
     public CreateRabbitMQVipInstanceRequest() {
     }
 
@@ -498,6 +521,9 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
         if (source.EnablePublicAccess != null) {
             this.EnablePublicAccess = new Boolean(source.EnablePublicAccess);
         }
+        if (source.EnableDeletionProtection != null) {
+            this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
+        }
     }
 
 
@@ -521,6 +547,7 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "EnablePublicAccess", this.EnablePublicAccess);
+        this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
 
     }
 }

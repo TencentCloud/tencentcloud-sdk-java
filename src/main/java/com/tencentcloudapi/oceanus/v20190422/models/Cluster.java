@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -424,6 +424,14 @@ public class Cluster extends AbstractModel {
     @SerializedName("Setats")
     @Expose
     private Setats Setats;
+
+    /**
+    * []
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Yarns")
+    @Expose
+    private HadoopYarnItem [] Yarns;
 
     /**
      * Get 集群 ID 
@@ -1397,6 +1405,26 @@ public class Cluster extends AbstractModel {
         this.Setats = Setats;
     }
 
+    /**
+     * Get []
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Yarns []
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HadoopYarnItem [] getYarns() {
+        return this.Yarns;
+    }
+
+    /**
+     * Set []
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Yarns []
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setYarns(HadoopYarnItem [] Yarns) {
+        this.Yarns = Yarns;
+    }
+
     public Cluster() {
     }
 
@@ -1582,6 +1610,12 @@ public class Cluster extends AbstractModel {
         if (source.Setats != null) {
             this.Setats = new Setats(source.Setats);
         }
+        if (source.Yarns != null) {
+            this.Yarns = new HadoopYarnItem[source.Yarns.length];
+            for (int i = 0; i < source.Yarns.length; i++) {
+                this.Yarns[i] = new HadoopYarnItem(source.Yarns[i]);
+            }
+        }
     }
 
 
@@ -1642,6 +1676,7 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
         this.setParamSimple(map, prefix + "RunningMem", this.RunningMem);
         this.setParamObj(map, prefix + "Setats.", this.Setats);
+        this.setParamArrayObj(map, prefix + "Yarns.", this.Yarns);
 
     }
 }

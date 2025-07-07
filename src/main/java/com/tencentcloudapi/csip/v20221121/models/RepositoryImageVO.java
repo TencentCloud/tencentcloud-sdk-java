@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -33,7 +32,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -41,7 +39,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NickName")
     @Expose
@@ -49,7 +46,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 镜像id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -57,7 +53,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 镜像名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -65,7 +60,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 镜像创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceCreateTime")
     @Expose
@@ -73,7 +67,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 镜像大小带单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceSize")
     @Expose
@@ -81,7 +74,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 构建次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BuildCount")
     @Expose
@@ -89,7 +81,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -97,7 +88,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthStatus")
     @Expose
@@ -105,7 +95,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceVersion")
     @Expose
@@ -113,7 +102,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -121,7 +109,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepositoryUrl")
     @Expose
@@ -129,7 +116,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepositoryName")
     @Expose
@@ -137,7 +123,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCore")
     @Expose
@@ -145,7 +130,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 漏洞风险
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulRisk")
     @Expose
@@ -153,7 +137,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 检查任务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckCount")
     @Expose
@@ -161,7 +144,6 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 体检时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckTime")
     @Expose
@@ -169,17 +151,14 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
     * 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNewAsset")
     @Expose
     private Long IsNewAsset;
 
     /**
-     * Get 用户appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户appid 
      * @return AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -187,19 +166,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 用户uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户uin 
      * @return Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -207,19 +182,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 昵称 
      * @return NickName 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickName() {
         return this.NickName;
@@ -227,19 +198,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NickName 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 镜像id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像id 
      * @return InstanceId 镜像id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -247,19 +214,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 镜像id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 镜像id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 镜像名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像名称 
      * @return InstanceName 镜像名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -267,19 +230,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 镜像名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 镜像名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 镜像创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像创建时间 
      * @return InstanceCreateTime 镜像创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceCreateTime() {
         return this.InstanceCreateTime;
@@ -287,19 +246,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 镜像创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceCreateTime 镜像创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceCreateTime(String InstanceCreateTime) {
         this.InstanceCreateTime = InstanceCreateTime;
     }
 
     /**
-     * Get 镜像大小带单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像大小带单位 
      * @return InstanceSize 镜像大小带单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceSize() {
         return this.InstanceSize;
@@ -307,19 +262,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 镜像大小带单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceSize 镜像大小带单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceSize(String InstanceSize) {
         this.InstanceSize = InstanceSize;
     }
 
     /**
-     * Get 构建次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 构建次数 
      * @return BuildCount 构建次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBuildCount() {
         return this.BuildCount;
@@ -327,19 +278,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 构建次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BuildCount 构建次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuildCount(Long BuildCount) {
         this.BuildCount = BuildCount;
     }
 
     /**
-     * Get 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像类型 
      * @return InstanceType 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -347,19 +294,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 授权状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权状态 
      * @return AuthStatus 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthStatus() {
         return this.AuthStatus;
@@ -367,19 +310,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthStatus 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthStatus(Long AuthStatus) {
         this.AuthStatus = AuthStatus;
     }
 
     /**
-     * Get 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像版本 
      * @return InstanceVersion 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceVersion() {
         return this.InstanceVersion;
@@ -387,19 +326,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceVersion 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceVersion(String InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -407,19 +342,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 仓库地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库地址 
      * @return RepositoryUrl 仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepositoryUrl() {
         return this.RepositoryUrl;
@@ -427,19 +358,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepositoryUrl 仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepositoryUrl(String RepositoryUrl) {
         this.RepositoryUrl = RepositoryUrl;
     }
 
     /**
-     * Get 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库名称 
      * @return RepositoryName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepositoryName() {
         return this.RepositoryName;
@@ -447,19 +374,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepositoryName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepositoryName(String RepositoryName) {
         this.RepositoryName = RepositoryName;
     }
 
     /**
-     * Get 是否核心
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否核心 
      * @return IsCore 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsCore() {
         return this.IsCore;
@@ -467,19 +390,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCore 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCore(Long IsCore) {
         this.IsCore = IsCore;
     }
 
     /**
-     * Get 漏洞风险
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞风险 
      * @return VulRisk 漏洞风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulRisk() {
         return this.VulRisk;
@@ -487,19 +406,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 漏洞风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulRisk 漏洞风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulRisk(Long VulRisk) {
         this.VulRisk = VulRisk;
     }
 
     /**
-     * Get 检查任务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查任务 
      * @return CheckCount 检查任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCheckCount() {
         return this.CheckCount;
@@ -507,19 +422,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 检查任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckCount 检查任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckCount(Long CheckCount) {
         this.CheckCount = CheckCount;
     }
 
     /**
-     * Get 体检时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检时间 
      * @return CheckTime 体检时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckTime() {
         return this.CheckTime;
@@ -527,19 +438,15 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 体检时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckTime 体检时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckTime(String CheckTime) {
         this.CheckTime = CheckTime;
     }
 
     /**
-     * Get 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否新资产 1新 
      * @return IsNewAsset 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsNewAsset() {
         return this.IsNewAsset;
@@ -547,9 +454,7 @@ public class RepositoryImageVO extends AbstractModel {
 
     /**
      * Set 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNewAsset 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNewAsset(Long IsNewAsset) {
         this.IsNewAsset = IsNewAsset;

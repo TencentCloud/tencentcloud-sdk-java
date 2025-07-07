@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,6 +39,7 @@ public class FlowDetailInfo extends AbstractModel {
 
     /**
     * 合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType
     */
     @SerializedName("FlowType")
     @Expose
@@ -112,6 +113,23 @@ public class FlowDetailInfo extends AbstractModel {
     private Boolean NeedCreateReview;
 
     /**
+    * 用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/37138cc5f3c38e6f788f4b82f695cebf.png)
+    */
+    @SerializedName("UserFlowType")
+    @Expose
+    private UserFlowType UserFlowType;
+
+    /**
+    * 发起模板时,使用的模板Id
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
      * Get 合同流程ID，为32位字符串。 
      * @return FlowId 合同流程ID，为32位字符串。
      */
@@ -144,8 +162,10 @@ public class FlowDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 合同流程的类别分类（如销售合同/入职合同等）。 
+     * Get 合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType 
      * @return FlowType 合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType
      */
     public String getFlowType() {
         return this.FlowType;
@@ -153,7 +173,9 @@ public class FlowDetailInfo extends AbstractModel {
 
     /**
      * Set 合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType
      * @param FlowType 合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType
      */
     public void setFlowType(String FlowType) {
         this.FlowType = FlowType;
@@ -331,6 +353,50 @@ public class FlowDetailInfo extends AbstractModel {
         this.NeedCreateReview = NeedCreateReview;
     }
 
+    /**
+     * Get 用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/37138cc5f3c38e6f788f4b82f695cebf.png) 
+     * @return UserFlowType 用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/37138cc5f3c38e6f788f4b82f695cebf.png)
+     */
+    public UserFlowType getUserFlowType() {
+        return this.UserFlowType;
+    }
+
+    /**
+     * Set 用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/37138cc5f3c38e6f788f4b82f695cebf.png)
+     * @param UserFlowType 用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/37138cc5f3c38e6f788f4b82f695cebf.png)
+     */
+    public void setUserFlowType(UserFlowType UserFlowType) {
+        this.UserFlowType = UserFlowType;
+    }
+
+    /**
+     * Get 发起模板时,使用的模板Id 
+     * @return TemplateId 发起模板时,使用的模板Id
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 发起模板时,使用的模板Id
+     * @param TemplateId 发起模板时,使用的模板Id
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public FlowDetailInfo() {
     }
 
@@ -378,6 +444,12 @@ public class FlowDetailInfo extends AbstractModel {
         if (source.NeedCreateReview != null) {
             this.NeedCreateReview = new Boolean(source.NeedCreateReview);
         }
+        if (source.UserFlowType != null) {
+            this.UserFlowType = new UserFlowType(source.UserFlowType);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -396,6 +468,8 @@ public class FlowDetailInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         this.setParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
+        this.setParamObj(map, prefix + "UserFlowType.", this.UserFlowType);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

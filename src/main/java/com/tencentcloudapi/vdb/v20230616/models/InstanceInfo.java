@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -202,6 +202,27 @@ public class InstanceInfo extends AbstractModel {
     private Boolean IsNoExpired;
 
     /**
+    * 产品版本，0-标准版，1-容量增强版
+    */
+    @SerializedName("ProductType")
+    @Expose
+    private Long ProductType;
+
+    /**
+    * 实例类型
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 节点类型
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
     * 外网地址。
     */
     @SerializedName("WanAddress")
@@ -228,6 +249,13 @@ public class InstanceInfo extends AbstractModel {
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
+
+    /**
+    * 绑定的安全组id
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
 
     /**
      * Get 实例ID。 
@@ -654,6 +682,54 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
+     * Get 产品版本，0-标准版，1-容量增强版 
+     * @return ProductType 产品版本，0-标准版，1-容量增强版
+     */
+    public Long getProductType() {
+        return this.ProductType;
+    }
+
+    /**
+     * Set 产品版本，0-标准版，1-容量增强版
+     * @param ProductType 产品版本，0-标准版，1-容量增强版
+     */
+    public void setProductType(Long ProductType) {
+        this.ProductType = ProductType;
+    }
+
+    /**
+     * Get 实例类型 
+     * @return InstanceType 实例类型
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型
+     * @param InstanceType 实例类型
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 节点类型 
+     * @return NodeType 节点类型
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型
+     * @param NodeType 节点类型
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
      * Get 外网地址。 
      * @return WanAddress 外网地址。
      */
@@ -715,6 +791,22 @@ public class InstanceInfo extends AbstractModel {
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
+    }
+
+    /**
+     * Get 绑定的安全组id 
+     * @return SecurityGroupIds 绑定的安全组id
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 绑定的安全组id
+     * @param SecurityGroupIds 绑定的安全组id
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
     }
 
     public InstanceInfo() {
@@ -806,6 +898,15 @@ public class InstanceInfo extends AbstractModel {
         if (source.IsNoExpired != null) {
             this.IsNoExpired = new Boolean(source.IsNoExpired);
         }
+        if (source.ProductType != null) {
+            this.ProductType = new Long(source.ProductType);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
         if (source.WanAddress != null) {
             this.WanAddress = new String(source.WanAddress);
         }
@@ -817,6 +918,12 @@ public class InstanceInfo extends AbstractModel {
         }
         if (source.TaskStatus != null) {
             this.TaskStatus = new Long(source.TaskStatus);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
         }
     }
 
@@ -850,10 +957,14 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Extend", this.Extend);
         this.setParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
         this.setParamSimple(map, prefix + "IsNoExpired", this.IsNoExpired);
+        this.setParamSimple(map, prefix + "ProductType", this.ProductType);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
         this.setParamSimple(map, prefix + "WanAddress", this.WanAddress);
         this.setParamSimple(map, prefix + "IsolateAt", this.IsolateAt);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

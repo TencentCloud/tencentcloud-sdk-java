@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -335,6 +335,13 @@ public class JobV1 extends AbstractModel {
     @SerializedName("ProgressDesc")
     @Expose
     private String ProgressDesc;
+
+    /**
+    * 停止持续告警
+    */
+    @SerializedName("ContinueAlarm")
+    @Expose
+    private Long ContinueAlarm;
 
     /**
      * Get 作业ID
@@ -1120,6 +1127,22 @@ public class JobV1 extends AbstractModel {
         this.ProgressDesc = ProgressDesc;
     }
 
+    /**
+     * Get 停止持续告警 
+     * @return ContinueAlarm 停止持续告警
+     */
+    public Long getContinueAlarm() {
+        return this.ContinueAlarm;
+    }
+
+    /**
+     * Set 停止持续告警
+     * @param ContinueAlarm 停止持续告警
+     */
+    public void setContinueAlarm(Long ContinueAlarm) {
+        this.ContinueAlarm = ContinueAlarm;
+    }
+
     public JobV1() {
     }
 
@@ -1248,6 +1271,9 @@ public class JobV1 extends AbstractModel {
         if (source.ProgressDesc != null) {
             this.ProgressDesc = new String(source.ProgressDesc);
         }
+        if (source.ContinueAlarm != null) {
+            this.ContinueAlarm = new Long(source.ContinueAlarm);
+        }
     }
 
 
@@ -1294,6 +1320,7 @@ public class JobV1 extends AbstractModel {
         this.setParamSimple(map, prefix + "RunningMem", this.RunningMem);
         this.setParamSimple(map, prefix + "OpenJobDefaultAlarm", this.OpenJobDefaultAlarm);
         this.setParamSimple(map, prefix + "ProgressDesc", this.ProgressDesc);
+        this.setParamSimple(map, prefix + "ContinueAlarm", this.ContinueAlarm);
 
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,7 +45,7 @@ public class CustomConfig extends AbstractModel {
     private String DeviceType;
 
     /**
-    * 内存
+    * 内存，单位为MB
     */
     @SerializedName("Memory")
     @Expose
@@ -107,16 +107,16 @@ public class CustomConfig extends AbstractModel {
     }
 
     /**
-     * Get 内存 
-     * @return Memory 内存
+     * Get 内存，单位为MB 
+     * @return Memory 内存，单位为MB
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存
-     * @param Memory 内存
+     * Set 内存，单位为MB
+     * @param Memory 内存，单位为MB
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;

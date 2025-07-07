@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,14 +31,14 @@ public class ModifyAccountDescriptionRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 云数据库账号。
+    * 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
     */
     @SerializedName("Accounts")
     @Expose
     private Account [] Accounts;
 
     /**
-    * 数据库账号的备注信息。
+    * 数据库账号的备注信息。最多支持输入255个字符。
     */
     @SerializedName("Description")
     @Expose
@@ -61,32 +61,32 @@ public class ModifyAccountDescriptionRequest extends AbstractModel {
     }
 
     /**
-     * Get 云数据库账号。 
-     * @return Accounts 云数据库账号。
+     * Get 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。 
+     * @return Accounts 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set 云数据库账号。
-     * @param Accounts 云数据库账号。
+     * Set 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+     * @param Accounts 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;
     }
 
     /**
-     * Get 数据库账号的备注信息。 
-     * @return Description 数据库账号的备注信息。
+     * Get 数据库账号的备注信息。最多支持输入255个字符。 
+     * @return Description 数据库账号的备注信息。最多支持输入255个字符。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 数据库账号的备注信息。
-     * @param Description 数据库账号的备注信息。
+     * Set 数据库账号的备注信息。最多支持输入255个字符。
+     * @param Description 数据库账号的备注信息。最多支持输入255个字符。
      */
     public void setDescription(String Description) {
         this.Description = Description;

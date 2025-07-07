@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateClusterVirtualNodePoolRequest extends AbstractModel {
 
     /**
-    * 集群Id
+    * 集群ID，通过DescribeClusters接口获取
     */
     @SerializedName("ClusterId")
     @Expose
@@ -45,7 +45,7 @@ public class CreateClusterVirtualNodePoolRequest extends AbstractModel {
     private String [] SubnetIds;
 
     /**
-    * 安全组ID列表
+    * 安全组ID列表，必选参数
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -73,7 +73,7 @@ public class CreateClusterVirtualNodePoolRequest extends AbstractModel {
     private VirtualNodeSpec [] VirtualNodes;
 
     /**
-    * 删除保护开关
+    * 删除保护开关，默认关闭
     */
     @SerializedName("DeletionProtection")
     @Expose
@@ -89,16 +89,16 @@ public class CreateClusterVirtualNodePoolRequest extends AbstractModel {
     private String OS;
 
     /**
-     * Get 集群Id 
-     * @return ClusterId 集群Id
+     * Get 集群ID，通过DescribeClusters接口获取 
+     * @return ClusterId 集群ID，通过DescribeClusters接口获取
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群Id
-     * @param ClusterId 集群Id
+     * Set 集群ID，通过DescribeClusters接口获取
+     * @param ClusterId 集群ID，通过DescribeClusters接口获取
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -137,16 +137,16 @@ public class CreateClusterVirtualNodePoolRequest extends AbstractModel {
     }
 
     /**
-     * Get 安全组ID列表 
-     * @return SecurityGroupIds 安全组ID列表
+     * Get 安全组ID列表，必选参数 
+     * @return SecurityGroupIds 安全组ID列表，必选参数
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组ID列表
-     * @param SecurityGroupIds 安全组ID列表
+     * Set 安全组ID列表，必选参数
+     * @param SecurityGroupIds 安全组ID列表，必选参数
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
@@ -201,16 +201,16 @@ public class CreateClusterVirtualNodePoolRequest extends AbstractModel {
     }
 
     /**
-     * Get 删除保护开关 
-     * @return DeletionProtection 删除保护开关
+     * Get 删除保护开关，默认关闭 
+     * @return DeletionProtection 删除保护开关，默认关闭
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 删除保护开关
-     * @param DeletionProtection 删除保护开关
+     * Set 删除保护开关，默认关闭
+     * @param DeletionProtection 删除保护开关，默认关闭
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;

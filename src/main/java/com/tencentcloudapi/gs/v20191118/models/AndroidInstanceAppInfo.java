@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,6 +64,13 @@ public class AndroidInstanceAppInfo extends AbstractModel {
     @SerializedName("PackageLabel")
     @Expose
     private String PackageLabel;
+
+    /**
+    * 应用包版本号
+    */
+    @SerializedName("VersionName")
+    @Expose
+    private String VersionName;
 
     /**
      * Get 应用id 
@@ -132,7 +139,9 @@ public class AndroidInstanceAppInfo extends AbstractModel {
     /**
      * Get 应用包版本 
      * @return PackageVersion 应用包版本
+     * @deprecated
      */
+    @Deprecated
     public String getPackageVersion() {
         return this.PackageVersion;
     }
@@ -140,7 +149,9 @@ public class AndroidInstanceAppInfo extends AbstractModel {
     /**
      * Set 应用包版本
      * @param PackageVersion 应用包版本
+     * @deprecated
      */
+    @Deprecated
     public void setPackageVersion(String PackageVersion) {
         this.PackageVersion = PackageVersion;
     }
@@ -159,6 +170,22 @@ public class AndroidInstanceAppInfo extends AbstractModel {
      */
     public void setPackageLabel(String PackageLabel) {
         this.PackageLabel = PackageLabel;
+    }
+
+    /**
+     * Get 应用包版本号 
+     * @return VersionName 应用包版本号
+     */
+    public String getVersionName() {
+        return this.VersionName;
+    }
+
+    /**
+     * Set 应用包版本号
+     * @param VersionName 应用包版本号
+     */
+    public void setVersionName(String VersionName) {
+        this.VersionName = VersionName;
     }
 
     public AndroidInstanceAppInfo() {
@@ -187,6 +214,9 @@ public class AndroidInstanceAppInfo extends AbstractModel {
         if (source.PackageLabel != null) {
             this.PackageLabel = new String(source.PackageLabel);
         }
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
+        }
     }
 
 
@@ -200,6 +230,7 @@ public class AndroidInstanceAppInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PackageName", this.PackageName);
         this.setParamSimple(map, prefix + "PackageVersion", this.PackageVersion);
         this.setParamSimple(map, prefix + "PackageLabel", this.PackageLabel);
+        this.setParamSimple(map, prefix + "VersionName", this.VersionName);
 
     }
 }

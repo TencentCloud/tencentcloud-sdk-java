@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -71,6 +71,13 @@ public class DescribeRabbitMQVipInstanceResponse extends AbstractModel {
     @SerializedName("QueueQuota")
     @Expose
     private QueueQuota QueueQuota;
+
+    /**
+    * 用户配额信息
+    */
+    @SerializedName("UserQuota")
+    @Expose
+    private RabbitMQUserQuota UserQuota;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -192,6 +199,22 @@ public class DescribeRabbitMQVipInstanceResponse extends AbstractModel {
     }
 
     /**
+     * Get 用户配额信息 
+     * @return UserQuota 用户配额信息
+     */
+    public RabbitMQUserQuota getUserQuota() {
+        return this.UserQuota;
+    }
+
+    /**
+     * Set 用户配额信息
+     * @param UserQuota 用户配额信息
+     */
+    public void setUserQuota(RabbitMQUserQuota UserQuota) {
+        this.UserQuota = UserQuota;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -236,6 +259,9 @@ public class DescribeRabbitMQVipInstanceResponse extends AbstractModel {
         if (source.QueueQuota != null) {
             this.QueueQuota = new QueueQuota(source.QueueQuota);
         }
+        if (source.UserQuota != null) {
+            this.UserQuota = new RabbitMQUserQuota(source.UserQuota);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -253,6 +279,7 @@ public class DescribeRabbitMQVipInstanceResponse extends AbstractModel {
         this.setParamObj(map, prefix + "VirtualHostQuota.", this.VirtualHostQuota);
         this.setParamObj(map, prefix + "ExchangeQuota.", this.ExchangeQuota);
         this.setParamObj(map, prefix + "QueueQuota.", this.QueueQuota);
+        this.setParamObj(map, prefix + "UserQuota.", this.UserQuota);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

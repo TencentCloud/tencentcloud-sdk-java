@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,7 +45,7 @@ public class ListVideoDownloadTaskRequest extends AbstractModel {
     private Long Status;
 
     /**
-    * 排序规则（仅支持 StartTime，EndTime，倒序为-StartTime，-EndTime）
+    * 排序规则（仅支持 StartTime，倒序为-StartTime）
     */
     @SerializedName("SortRule")
     @Expose
@@ -85,6 +85,13 @@ public class ListVideoDownloadTaskRequest extends AbstractModel {
     @SerializedName("UrlExpires")
     @Expose
     private Long UrlExpires;
+
+    /**
+    * 任务日期，默认当天
+    */
+    @SerializedName("Date")
+    @Expose
+    private String Date;
 
     /**
      * Get 设备名称，用于模糊搜索 
@@ -135,16 +142,16 @@ public class ListVideoDownloadTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序规则（仅支持 StartTime，EndTime，倒序为-StartTime，-EndTime） 
-     * @return SortRule 排序规则（仅支持 StartTime，EndTime，倒序为-StartTime，-EndTime）
+     * Get 排序规则（仅支持 StartTime，倒序为-StartTime） 
+     * @return SortRule 排序规则（仅支持 StartTime，倒序为-StartTime）
      */
     public String getSortRule() {
         return this.SortRule;
     }
 
     /**
-     * Set 排序规则（仅支持 StartTime，EndTime，倒序为-StartTime，-EndTime）
-     * @param SortRule 排序规则（仅支持 StartTime，EndTime，倒序为-StartTime，-EndTime）
+     * Set 排序规则（仅支持 StartTime，倒序为-StartTime）
+     * @param SortRule 排序规则（仅支持 StartTime，倒序为-StartTime）
      */
     public void setSortRule(String SortRule) {
         this.SortRule = SortRule;
@@ -230,6 +237,22 @@ public class ListVideoDownloadTaskRequest extends AbstractModel {
         this.UrlExpires = UrlExpires;
     }
 
+    /**
+     * Get 任务日期，默认当天 
+     * @return Date 任务日期，默认当天
+     */
+    public String getDate() {
+        return this.Date;
+    }
+
+    /**
+     * Set 任务日期，默认当天
+     * @param Date 任务日期，默认当天
+     */
+    public void setDate(String Date) {
+        this.Date = Date;
+    }
+
     public ListVideoDownloadTaskRequest() {
     }
 
@@ -265,6 +288,9 @@ public class ListVideoDownloadTaskRequest extends AbstractModel {
         if (source.UrlExpires != null) {
             this.UrlExpires = new Long(source.UrlExpires);
         }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class ListVideoDownloadTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "DownloadTaskId", this.DownloadTaskId);
         this.setParamSimple(map, prefix + "UrlExpires", this.UrlExpires);
+        this.setParamSimple(map, prefix + "Date", this.Date);
 
     }
 }

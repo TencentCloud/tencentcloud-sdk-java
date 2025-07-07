@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -68,6 +68,13 @@ A6：六开
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
+
+    /**
+    * 安卓实例标签列表
+    */
+    @SerializedName("Labels")
+    @Expose
+    private AndroidInstanceLabel [] Labels;
 
     /**
      * Get 安卓实例可用区。
@@ -193,6 +200,22 @@ A6：六开
         this.ImageId = ImageId;
     }
 
+    /**
+     * Get 安卓实例标签列表 
+     * @return Labels 安卓实例标签列表
+     */
+    public AndroidInstanceLabel [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 安卓实例标签列表
+     * @param Labels 安卓实例标签列表
+     */
+    public void setLabels(AndroidInstanceLabel [] Labels) {
+        this.Labels = Labels;
+    }
+
     public CreateAndroidInstancesRequest() {
     }
 
@@ -219,6 +242,12 @@ A6：六开
         if (source.ImageId != null) {
             this.ImageId = new String(source.ImageId);
         }
+        if (source.Labels != null) {
+            this.Labels = new AndroidInstanceLabel[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new AndroidInstanceLabel(source.Labels[i]);
+            }
+        }
     }
 
 
@@ -231,6 +260,7 @@ A6：六开
         this.setParamSimple(map, prefix + "Number", this.Number);
         this.setParamArraySimple(map, prefix + "HostSerialNumbers.", this.HostSerialNumbers);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
 
     }
 }

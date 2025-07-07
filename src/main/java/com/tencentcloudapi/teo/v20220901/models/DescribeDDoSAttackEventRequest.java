@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ public class DescribeDDoSAttackEventRequest extends AbstractModel {
     private String StartTime;
 
     /**
-    * 结束时间，时间范围为 30 天。
+    * 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
     */
     @SerializedName("EndTime")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeDDoSAttackEventRequest extends AbstractModel {
     private Long [] PolicyIds;
 
     /**
-    * 站点集合，此参数必填。
+    * 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -117,16 +117,16 @@ public class DescribeDDoSAttackEventRequest extends AbstractModel {
     }
 
     /**
-     * Get 结束时间，时间范围为 30 天。 
-     * @return EndTime 结束时间，时间范围为 30 天。
+     * Get 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。 
+     * @return EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，时间范围为 30 天。
-     * @param EndTime 结束时间，时间范围为 30 天。
+     * Set 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
+     * @param EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -149,16 +149,16 @@ public class DescribeDDoSAttackEventRequest extends AbstractModel {
     }
 
     /**
-     * Get 站点集合，此参数必填。 
-     * @return ZoneIds 站点集合，此参数必填。
+     * Get 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。 
+     * @return ZoneIds 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点集合，此参数必填。
-     * @param ZoneIds 站点集合，此参数必填。
+     * Set 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+     * @param ZoneIds 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

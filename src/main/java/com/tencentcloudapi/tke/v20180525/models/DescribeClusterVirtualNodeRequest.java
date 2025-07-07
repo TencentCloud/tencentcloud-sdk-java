@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeClusterVirtualNodeRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID，通过DescribeClusters接口获取
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 节点池ID
+    * 节点池ID，通过DescribeNodePools接口获取
     */
     @SerializedName("NodePoolId")
     @Expose
     private String NodePoolId;
 
     /**
-    * 节点名称
+    * 节点名称，可搜索DescribeClusterVirtualNode接口节点
     */
     @SerializedName("NodeNames")
     @Expose
     private String [] NodeNames;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID，通过DescribeClusters接口获取 
+     * @return ClusterId 集群ID，通过DescribeClusters接口获取
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID，通过DescribeClusters接口获取
+     * @param ClusterId 集群ID，通过DescribeClusters接口获取
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 节点池ID 
-     * @return NodePoolId 节点池ID
+     * Get 节点池ID，通过DescribeNodePools接口获取 
+     * @return NodePoolId 节点池ID，通过DescribeNodePools接口获取
      */
     public String getNodePoolId() {
         return this.NodePoolId;
     }
 
     /**
-     * Set 节点池ID
-     * @param NodePoolId 节点池ID
+     * Set 节点池ID，通过DescribeNodePools接口获取
+     * @param NodePoolId 节点池ID，通过DescribeNodePools接口获取
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;
     }
 
     /**
-     * Get 节点名称 
-     * @return NodeNames 节点名称
+     * Get 节点名称，可搜索DescribeClusterVirtualNode接口节点 
+     * @return NodeNames 节点名称，可搜索DescribeClusterVirtualNode接口节点
      */
     public String [] getNodeNames() {
         return this.NodeNames;
     }
 
     /**
-     * Set 节点名称
-     * @param NodeNames 节点名称
+     * Set 节点名称，可搜索DescribeClusterVirtualNode接口节点
+     * @param NodeNames 节点名称，可搜索DescribeClusterVirtualNode接口节点
      */
     public void setNodeNames(String [] NodeNames) {
         this.NodeNames = NodeNames;

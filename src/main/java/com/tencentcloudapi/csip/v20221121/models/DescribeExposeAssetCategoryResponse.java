@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeExposeAssetCategoryResponse extends AbstractModel {
 
     /**
-    * 暴露资产分类列表
+    * 云边界分析资产分类列表
     */
     @SerializedName("ExposeAssetTypeList")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeExposeAssetCategoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 暴露资产分类列表 
-     * @return ExposeAssetTypeList 暴露资产分类列表
+     * Get 云边界分析资产分类列表 
+     * @return ExposeAssetTypeList 云边界分析资产分类列表
      */
     public ExposeAssetTypeItem [] getExposeAssetTypeList() {
         return this.ExposeAssetTypeList;
     }
 
     /**
-     * Set 暴露资产分类列表
-     * @param ExposeAssetTypeList 暴露资产分类列表
+     * Set 云边界分析资产分类列表
+     * @param ExposeAssetTypeList 云边界分析资产分类列表
      */
     public void setExposeAssetTypeList(ExposeAssetTypeItem [] ExposeAssetTypeList) {
         this.ExposeAssetTypeList = ExposeAssetTypeList;

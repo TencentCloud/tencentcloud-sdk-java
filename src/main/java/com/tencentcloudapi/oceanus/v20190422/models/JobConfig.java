@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -323,6 +323,13 @@ public class JobConfig extends AbstractModel {
     @SerializedName("JobConfigItem")
     @Expose
     private JobConfig JobConfigItem;
+
+    /**
+    * checkpoint 超时时间
+    */
+    @SerializedName("CheckpointTimeoutSecond")
+    @Expose
+    private Long CheckpointTimeoutSecond;
 
     /**
      * Get 作业Id 
@@ -1072,6 +1079,22 @@ public class JobConfig extends AbstractModel {
         this.JobConfigItem = JobConfigItem;
     }
 
+    /**
+     * Get checkpoint 超时时间 
+     * @return CheckpointTimeoutSecond checkpoint 超时时间
+     */
+    public Long getCheckpointTimeoutSecond() {
+        return this.CheckpointTimeoutSecond;
+    }
+
+    /**
+     * Set checkpoint 超时时间
+     * @param CheckpointTimeoutSecond checkpoint 超时时间
+     */
+    public void setCheckpointTimeoutSecond(Long CheckpointTimeoutSecond) {
+        this.CheckpointTimeoutSecond = CheckpointTimeoutSecond;
+    }
+
     public JobConfig() {
     }
 
@@ -1203,6 +1226,9 @@ public class JobConfig extends AbstractModel {
         if (source.JobConfigItem != null) {
             this.JobConfigItem = new JobConfig(source.JobConfigItem);
         }
+        if (source.CheckpointTimeoutSecond != null) {
+            this.CheckpointTimeoutSecond = new Long(source.CheckpointTimeoutSecond);
+        }
     }
 
 
@@ -1248,6 +1274,7 @@ public class JobConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
         this.setParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
         this.setParamObj(map, prefix + "JobConfigItem.", this.JobConfigItem);
+        this.setParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
 
     }
 }

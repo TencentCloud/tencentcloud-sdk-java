@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VirtualNodeSpec extends AbstractModel {
 
     /**
-    * 节点展示名称
+    * 节点展示名称，建议不超过20个字符
     */
     @SerializedName("DisplayName")
     @Expose
@@ -45,16 +45,16 @@ public class VirtualNodeSpec extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 节点展示名称 
-     * @return DisplayName 节点展示名称
+     * Get 节点展示名称，建议不超过20个字符 
+     * @return DisplayName 节点展示名称，建议不超过20个字符
      */
     public String getDisplayName() {
         return this.DisplayName;
     }
 
     /**
-     * Set 节点展示名称
-     * @param DisplayName 节点展示名称
+     * Set 节点展示名称，建议不超过20个字符
+     * @param DisplayName 节点展示名称，建议不超过20个字符
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -105,6 +105,13 @@ public class STTConfig extends AbstractModel {
     @SerializedName("HotWordList")
     @Expose
     private String HotWordList;
+
+    /**
+    * vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+    */
+    @SerializedName("VadLevel")
+    @Expose
+    private Long VadLevel;
 
     /**
      * Get 
@@ -378,6 +385,22 @@ public class STTConfig extends AbstractModel {
         this.HotWordList = HotWordList;
     }
 
+    /**
+     * Get vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。 
+     * @return VadLevel vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+     */
+    public Long getVadLevel() {
+        return this.VadLevel;
+    }
+
+    /**
+     * Set vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+     * @param VadLevel vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+     */
+    public void setVadLevel(Long VadLevel) {
+        this.VadLevel = VadLevel;
+    }
+
     public STTConfig() {
     }
 
@@ -404,6 +427,9 @@ public class STTConfig extends AbstractModel {
         if (source.HotWordList != null) {
             this.HotWordList = new String(source.HotWordList);
         }
+        if (source.VadLevel != null) {
+            this.VadLevel = new Long(source.VadLevel);
+        }
     }
 
 
@@ -416,6 +442,7 @@ public class STTConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "CustomParam", this.CustomParam);
         this.setParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
         this.setParamSimple(map, prefix + "HotWordList", this.HotWordList);
+        this.setParamSimple(map, prefix + "VadLevel", this.VadLevel);
 
     }
 }

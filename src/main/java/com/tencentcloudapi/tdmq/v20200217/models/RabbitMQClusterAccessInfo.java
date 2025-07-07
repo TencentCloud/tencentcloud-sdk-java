@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -122,6 +122,13 @@ OFF/ON/CREATING/DELETING
     @SerializedName("ControlPlaneEndpointInfo")
     @Expose
     private VpcEndpointInfo ControlPlaneEndpointInfo;
+
+    /**
+    * TLS加密的数据流公网接入点
+    */
+    @SerializedName("PublicTlsAccessEndpoint")
+    @Expose
+    private String PublicTlsAccessEndpoint;
 
     /**
      * Get 集群公网接入地址
@@ -355,6 +362,22 @@ OFF/ON/CREATING/DELETING
         this.ControlPlaneEndpointInfo = ControlPlaneEndpointInfo;
     }
 
+    /**
+     * Get TLS加密的数据流公网接入点 
+     * @return PublicTlsAccessEndpoint TLS加密的数据流公网接入点
+     */
+    public String getPublicTlsAccessEndpoint() {
+        return this.PublicTlsAccessEndpoint;
+    }
+
+    /**
+     * Set TLS加密的数据流公网接入点
+     * @param PublicTlsAccessEndpoint TLS加密的数据流公网接入点
+     */
+    public void setPublicTlsAccessEndpoint(String PublicTlsAccessEndpoint) {
+        this.PublicTlsAccessEndpoint = PublicTlsAccessEndpoint;
+    }
+
     public RabbitMQClusterAccessInfo() {
     }
 
@@ -405,6 +428,9 @@ OFF/ON/CREATING/DELETING
         if (source.ControlPlaneEndpointInfo != null) {
             this.ControlPlaneEndpointInfo = new VpcEndpointInfo(source.ControlPlaneEndpointInfo);
         }
+        if (source.PublicTlsAccessEndpoint != null) {
+            this.PublicTlsAccessEndpoint = new String(source.PublicTlsAccessEndpoint);
+        }
     }
 
 
@@ -426,6 +452,7 @@ OFF/ON/CREATING/DELETING
         this.setParamObj(map, prefix + "PrometheusEndpointInfo.", this.PrometheusEndpointInfo);
         this.setParamSimple(map, prefix + "WebConsoleDomainEndpoint", this.WebConsoleDomainEndpoint);
         this.setParamObj(map, prefix + "ControlPlaneEndpointInfo.", this.ControlPlaneEndpointInfo);
+        this.setParamSimple(map, prefix + "PublicTlsAccessEndpoint", this.PublicTlsAccessEndpoint);
 
     }
 }

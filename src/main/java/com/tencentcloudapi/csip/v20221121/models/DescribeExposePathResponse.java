@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeExposePathResponse extends AbstractModel {
 
     /**
-    * 暴露路径节点内容
+    * 云边界分析路径节点内容
     */
     @SerializedName("Content")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeExposePathResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 暴露路径节点内容 
-     * @return Content 暴露路径节点内容
+     * Get 云边界分析路径节点内容 
+     * @return Content 云边界分析路径节点内容
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 暴露路径节点内容
-     * @param Content 暴露路径节点内容
+     * Set 云边界分析路径节点内容
+     * @param Content 云边界分析路径节点内容
      */
     public void setContent(String Content) {
         this.Content = Content;

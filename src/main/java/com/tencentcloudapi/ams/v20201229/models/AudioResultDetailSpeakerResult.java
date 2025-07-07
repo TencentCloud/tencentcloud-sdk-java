@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,6 @@ public class AudioResultDetailSpeakerResult extends AbstractModel {
 
     /**
     * 该字段用于返回检测结果需要检测的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -33,7 +32,6 @@ public class AudioResultDetailSpeakerResult extends AbstractModel {
 
     /**
     * 该字段用于返回呻吟检测的置信度，取值范围：0（置信度最低）-100（置信度最高），越高代表音频越有可能属于说话人声纹。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
@@ -41,7 +39,6 @@ public class AudioResultDetailSpeakerResult extends AbstractModel {
 
     /**
     * 该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -49,17 +46,14 @@ public class AudioResultDetailSpeakerResult extends AbstractModel {
 
     /**
     * 该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
     private Float EndTime;
 
     /**
-     * Get 该字段用于返回检测结果需要检测的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回检测结果需要检测的内容类型。 
      * @return Label 该字段用于返回检测结果需要检测的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -67,19 +61,15 @@ public class AudioResultDetailSpeakerResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回检测结果需要检测的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 该字段用于返回检测结果需要检测的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 该字段用于返回呻吟检测的置信度，取值范围：0（置信度最低）-100（置信度最高），越高代表音频越有可能属于说话人声纹。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回呻吟检测的置信度，取值范围：0（置信度最低）-100（置信度最高），越高代表音频越有可能属于说话人声纹。 
      * @return Score 该字段用于返回呻吟检测的置信度，取值范围：0（置信度最低）-100（置信度最高），越高代表音频越有可能属于说话人声纹。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -87,19 +77,15 @@ public class AudioResultDetailSpeakerResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回呻吟检测的置信度，取值范围：0（置信度最低）-100（置信度最高），越高代表音频越有可能属于说话人声纹。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 该字段用于返回呻吟检测的置信度，取值范围：0（置信度最低）-100（置信度最高），越高代表音频越有可能属于说话人声纹。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为秒。 
      * @return StartTime 该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTime() {
         return this.StartTime;
@@ -107,19 +93,15 @@ public class AudioResultDetailSpeakerResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为秒。 
      * @return EndTime 该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTime() {
         return this.EndTime;
@@ -127,9 +109,7 @@ public class AudioResultDetailSpeakerResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;

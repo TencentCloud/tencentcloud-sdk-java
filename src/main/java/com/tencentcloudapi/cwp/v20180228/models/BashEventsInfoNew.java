@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -211,6 +211,13 @@ public class BashEventsInfoNew extends AbstractModel {
     @SerializedName("DetectBy")
     @Expose
     private Long DetectBy;
+
+    /**
+    * 执行命令(解码后)
+    */
+    @SerializedName("BashCmdDecoded")
+    @Expose
+    private String BashCmdDecoded;
 
     /**
      * Get 数据ID 
@@ -644,6 +651,22 @@ public class BashEventsInfoNew extends AbstractModel {
         this.DetectBy = DetectBy;
     }
 
+    /**
+     * Get 执行命令(解码后) 
+     * @return BashCmdDecoded 执行命令(解码后)
+     */
+    public String getBashCmdDecoded() {
+        return this.BashCmdDecoded;
+    }
+
+    /**
+     * Set 执行命令(解码后)
+     * @param BashCmdDecoded 执行命令(解码后)
+     */
+    public void setBashCmdDecoded(String BashCmdDecoded) {
+        this.BashCmdDecoded = BashCmdDecoded;
+    }
+
     public BashEventsInfoNew() {
     }
 
@@ -739,6 +762,9 @@ public class BashEventsInfoNew extends AbstractModel {
         if (source.DetectBy != null) {
             this.DetectBy = new Long(source.DetectBy);
         }
+        if (source.BashCmdDecoded != null) {
+            this.BashCmdDecoded = new String(source.BashCmdDecoded);
+        }
     }
 
 
@@ -773,6 +799,7 @@ public class BashEventsInfoNew extends AbstractModel {
         this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "DetectBy", this.DetectBy);
+        this.setParamSimple(map, prefix + "BashCmdDecoded", this.BashCmdDecoded);
 
     }
 }

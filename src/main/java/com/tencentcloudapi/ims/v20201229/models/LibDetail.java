@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,7 +39,6 @@ public class LibDetail extends AbstractModel {
 
     /**
     * 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibName")
     @Expose
@@ -61,7 +60,6 @@ public class LibDetail extends AbstractModel {
 
     /**
     * 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -107,10 +105,8 @@ public class LibDetail extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回自定义库的名称,以方便自定义库管理和配置。 
      * @return LibName 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLibName() {
         return this.LibName;
@@ -118,9 +114,7 @@ public class LibDetail extends AbstractModel {
 
     /**
      * Set 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LibName 该字段用于返回自定义库的名称,以方便自定义库管理和配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibName(String LibName) {
         this.LibName = LibName;
@@ -159,10 +153,8 @@ public class LibDetail extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。 
      * @return Tag 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTag() {
         return this.Tag;
@@ -170,9 +162,7 @@ public class LibDetail extends AbstractModel {
 
     /**
      * Set 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

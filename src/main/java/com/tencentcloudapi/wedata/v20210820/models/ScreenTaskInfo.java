@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -125,6 +125,13 @@ public class ScreenTaskInfo extends AbstractModel {
     @SerializedName("MinuteNum")
     @Expose
     private Long MinuteNum;
+
+    /**
+    * 工作流总数
+    */
+    @SerializedName("WorkflowNum")
+    @Expose
+    private Long WorkflowNum;
 
     /**
      * Get 统计标示 0：全部、1：当前天、2：昨天 
@@ -382,6 +389,22 @@ public class ScreenTaskInfo extends AbstractModel {
         this.MinuteNum = MinuteNum;
     }
 
+    /**
+     * Get 工作流总数 
+     * @return WorkflowNum 工作流总数
+     */
+    public Long getWorkflowNum() {
+        return this.WorkflowNum;
+    }
+
+    /**
+     * Set 工作流总数
+     * @param WorkflowNum 工作流总数
+     */
+    public void setWorkflowNum(Long WorkflowNum) {
+        this.WorkflowNum = WorkflowNum;
+    }
+
     public ScreenTaskInfo() {
     }
 
@@ -429,6 +452,9 @@ public class ScreenTaskInfo extends AbstractModel {
         if (source.MinuteNum != null) {
             this.MinuteNum = new Long(source.MinuteNum);
         }
+        if (source.WorkflowNum != null) {
+            this.WorkflowNum = new Long(source.WorkflowNum);
+        }
     }
 
 
@@ -449,6 +475,7 @@ public class ScreenTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DayNum", this.DayNum);
         this.setParamSimple(map, prefix + "HourNum", this.HourNum);
         this.setParamSimple(map, prefix + "MinuteNum", this.MinuteNum);
+        this.setParamSimple(map, prefix + "WorkflowNum", this.WorkflowNum);
 
     }
 }

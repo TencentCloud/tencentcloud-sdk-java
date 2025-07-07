@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tencentcloudapi</groupId>
   <artifactId>tencentcloud-sdk-java</artifactId>
-  <version>3.1.1293</version>
+  <version>3.1.1294</version>
   <packaging>jar</packaging>
   <name>tencentcloud-sdk-java</name>
   <url>https://cloud.tencent.com/</url>
@@ -49,14 +49,13 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.13</version>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>0.8.0</version>
         <extensions>true</extensions>
         <configuration>
-          <serverId>Releases</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          <publishingServerId>Releases</publishingServerId>
+          <autoPublish>true</autoPublish>
         </configuration>
       </plugin>
       <plugin>
@@ -144,15 +143,10 @@
     </developer>
   </developers>
   <distributionManagement>
-    <repository>
-      <id>Releases</id>
-      <name>Nexus Release Repository</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-    </repository>
     <snapshotRepository>
       <id>Releases</id>
-      <name>Nexus Snapshot Repository</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
+

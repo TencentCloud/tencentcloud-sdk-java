@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,6 @@ public class DescribeRepositoryImageAssetsResponse extends AbstractModel {
 
     /**
     * 仓库镜像列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -53,10 +52,8 @@ public class DescribeRepositoryImageAssetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 仓库镜像列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 仓库镜像列表 
      * @return Data 仓库镜像列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RepositoryImageVO [] getData() {
         return this.Data;
@@ -64,9 +61,7 @@ public class DescribeRepositoryImageAssetsResponse extends AbstractModel {
 
     /**
      * Set 仓库镜像列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 仓库镜像列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(RepositoryImageVO [] Data) {
         this.Data = Data;

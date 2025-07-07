@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class InstanceRebootTime extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
+    * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 预期重启时间
+    * 预期重启时间，单位：秒。
     */
     @SerializedName("TimeInSeconds")
     @Expose
     private Long TimeInSeconds;
 
     /**
-     * Get 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同 
-     * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
+     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
+     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
-     * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
+     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 预期重启时间 
-     * @return TimeInSeconds 预期重启时间
+     * Get 预期重启时间，单位：秒。 
+     * @return TimeInSeconds 预期重启时间，单位：秒。
      */
     public Long getTimeInSeconds() {
         return this.TimeInSeconds;
     }
 
     /**
-     * Set 预期重启时间
-     * @param TimeInSeconds 预期重启时间
+     * Set 预期重启时间，单位：秒。
+     * @param TimeInSeconds 预期重启时间，单位：秒。
      */
     public void setTimeInSeconds(Long TimeInSeconds) {
         this.TimeInSeconds = TimeInSeconds;

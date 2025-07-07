@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DeleteClusterVirtualNodeRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID，通过DescribeClusters接口获取
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 虚拟节点列表
+    * 虚拟节点ID列表
     */
     @SerializedName("NodeNames")
     @Expose
@@ -45,32 +45,32 @@ public class DeleteClusterVirtualNodeRequest extends AbstractModel {
     private Boolean Force;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID，通过DescribeClusters接口获取 
+     * @return ClusterId 集群ID，通过DescribeClusters接口获取
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID，通过DescribeClusters接口获取
+     * @param ClusterId 集群ID，通过DescribeClusters接口获取
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 虚拟节点列表 
-     * @return NodeNames 虚拟节点列表
+     * Get 虚拟节点ID列表 
+     * @return NodeNames 虚拟节点ID列表
      */
     public String [] getNodeNames() {
         return this.NodeNames;
     }
 
     /**
-     * Set 虚拟节点列表
-     * @param NodeNames 虚拟节点列表
+     * Set 虚拟节点ID列表
+     * @param NodeNames 虚拟节点ID列表
      */
     public void setNodeNames(String [] NodeNames) {
         this.NodeNames = NodeNames;

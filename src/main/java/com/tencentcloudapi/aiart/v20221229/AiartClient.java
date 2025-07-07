@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class AiartClient extends AbstractClient{
     private static String endpoint = "aiart.tencentcloudapi.com";
     private static String service = "aiart";
     private static String version = "2022-12-29";
-    
+
     public AiartClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -311,6 +311,30 @@ AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任
     public TextToImageResponse TextToImage(TextToImageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TextToImage", TextToImageResponse.class);
+    }
+
+    /**
+     *混元文生图接口，基于混元大模型，根据输入的文本描述智能生成图片
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req TextToImageLiteRequest
+     * @return TextToImageLiteResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToImageLiteResponse TextToImageLite(TextToImageLiteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToImageLite", TextToImageLiteResponse.class);
+    }
+
+    /**
+     *混元文生图接口，基于混元大模型，根据输入的文本描述智能生成图片
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req TextToImageRapidRequest
+     * @return TextToImageRapidResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToImageRapidResponse TextToImageRapid(TextToImageRapidRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToImageRapid", TextToImageRapidResponse.class);
     }
 
     /**

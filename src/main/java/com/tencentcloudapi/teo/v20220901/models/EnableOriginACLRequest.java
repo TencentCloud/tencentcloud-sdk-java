@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,145 +24,135 @@ import java.util.HashMap;
 public class EnableOriginACLRequest extends AbstractModel {
 
     /**
-    * 站点ID。
+    * 站点 ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 七层加速域名开启回源白名单的模式。
-<li>all：为站点下的所有七层加速域名开启回源白名单。</li>
-<li>specific：为站点下指定的七层加速域名开启回源白名单。</li>
-当参数为空时，默认为specific。
+    * 七层加速域名开启源站防护的模式。
+<li>all：针对站点下的所有七层加速域名开启。</li>
+<li>specific：针对站点下指定的七层加速域名开启。</li>当参数为空时，默认为 specific。
     */
     @SerializedName("L7EnableMode")
     @Expose
     private String L7EnableMode;
 
     /**
-    * 开启回源白名单的七层加速域名列表，当请求参数 L7EnableMode 为 all 时必须为空。
+    * 开启源站防护的七层加速域名列表，仅当参数 L7EnableMode 为 specific 时生效。L7EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 200 个七层加速域名。
     */
     @SerializedName("L7Hosts")
     @Expose
     private String [] L7Hosts;
 
     /**
-    * 四层代理 ID 开启回源白名单的模式。
-<li>all：为站点下的所有四层代理开启回源白名单。</li>
-<li>specific：为站点下指定的四层代理 ID 开启回源白名单。</li>
-当参数为空时，默认为specific。
+    * 四层代理实例开启源站防护的模式。
+<li>all：针对站点下的所有四层代理实例开启。</li>
+<li>specific：针对站点下指定的四层代理实例开启。</li>当参数为空时，默认为 specific。
     */
     @SerializedName("L4EnableMode")
     @Expose
     private String L4EnableMode;
 
     /**
-    * 开启回源白名单的四层代理 ID 列表，当请求参数 L4EnableMode 为 all 时必须为空。单次最多支持 200 个实例。
+    * 开启源站防护的四层代理实例列表，仅当参数 L4EnableMode 为 specific 时生效。L4EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 100 个四层代理实例。
     */
     @SerializedName("L4ProxyIds")
     @Expose
     private String [] L4ProxyIds;
 
     /**
-     * Get 站点ID。 
-     * @return ZoneId 站点ID。
+     * Get 站点 ID。 
+     * @return ZoneId 站点 ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点ID。
-     * @param ZoneId 站点ID。
+     * Set 站点 ID。
+     * @param ZoneId 站点 ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 七层加速域名开启回源白名单的模式。
-<li>all：为站点下的所有七层加速域名开启回源白名单。</li>
-<li>specific：为站点下指定的七层加速域名开启回源白名单。</li>
-当参数为空时，默认为specific。 
-     * @return L7EnableMode 七层加速域名开启回源白名单的模式。
-<li>all：为站点下的所有七层加速域名开启回源白名单。</li>
-<li>specific：为站点下指定的七层加速域名开启回源白名单。</li>
-当参数为空时，默认为specific。
+     * Get 七层加速域名开启源站防护的模式。
+<li>all：针对站点下的所有七层加速域名开启。</li>
+<li>specific：针对站点下指定的七层加速域名开启。</li>当参数为空时，默认为 specific。 
+     * @return L7EnableMode 七层加速域名开启源站防护的模式。
+<li>all：针对站点下的所有七层加速域名开启。</li>
+<li>specific：针对站点下指定的七层加速域名开启。</li>当参数为空时，默认为 specific。
      */
     public String getL7EnableMode() {
         return this.L7EnableMode;
     }
 
     /**
-     * Set 七层加速域名开启回源白名单的模式。
-<li>all：为站点下的所有七层加速域名开启回源白名单。</li>
-<li>specific：为站点下指定的七层加速域名开启回源白名单。</li>
-当参数为空时，默认为specific。
-     * @param L7EnableMode 七层加速域名开启回源白名单的模式。
-<li>all：为站点下的所有七层加速域名开启回源白名单。</li>
-<li>specific：为站点下指定的七层加速域名开启回源白名单。</li>
-当参数为空时，默认为specific。
+     * Set 七层加速域名开启源站防护的模式。
+<li>all：针对站点下的所有七层加速域名开启。</li>
+<li>specific：针对站点下指定的七层加速域名开启。</li>当参数为空时，默认为 specific。
+     * @param L7EnableMode 七层加速域名开启源站防护的模式。
+<li>all：针对站点下的所有七层加速域名开启。</li>
+<li>specific：针对站点下指定的七层加速域名开启。</li>当参数为空时，默认为 specific。
      */
     public void setL7EnableMode(String L7EnableMode) {
         this.L7EnableMode = L7EnableMode;
     }
 
     /**
-     * Get 开启回源白名单的七层加速域名列表，当请求参数 L7EnableMode 为 all 时必须为空。 
-     * @return L7Hosts 开启回源白名单的七层加速域名列表，当请求参数 L7EnableMode 为 all 时必须为空。
+     * Get 开启源站防护的七层加速域名列表，仅当参数 L7EnableMode 为 specific 时生效。L7EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 200 个七层加速域名。 
+     * @return L7Hosts 开启源站防护的七层加速域名列表，仅当参数 L7EnableMode 为 specific 时生效。L7EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 200 个七层加速域名。
      */
     public String [] getL7Hosts() {
         return this.L7Hosts;
     }
 
     /**
-     * Set 开启回源白名单的七层加速域名列表，当请求参数 L7EnableMode 为 all 时必须为空。
-     * @param L7Hosts 开启回源白名单的七层加速域名列表，当请求参数 L7EnableMode 为 all 时必须为空。
+     * Set 开启源站防护的七层加速域名列表，仅当参数 L7EnableMode 为 specific 时生效。L7EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 200 个七层加速域名。
+     * @param L7Hosts 开启源站防护的七层加速域名列表，仅当参数 L7EnableMode 为 specific 时生效。L7EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 200 个七层加速域名。
      */
     public void setL7Hosts(String [] L7Hosts) {
         this.L7Hosts = L7Hosts;
     }
 
     /**
-     * Get 四层代理 ID 开启回源白名单的模式。
-<li>all：为站点下的所有四层代理开启回源白名单。</li>
-<li>specific：为站点下指定的四层代理 ID 开启回源白名单。</li>
-当参数为空时，默认为specific。 
-     * @return L4EnableMode 四层代理 ID 开启回源白名单的模式。
-<li>all：为站点下的所有四层代理开启回源白名单。</li>
-<li>specific：为站点下指定的四层代理 ID 开启回源白名单。</li>
-当参数为空时，默认为specific。
+     * Get 四层代理实例开启源站防护的模式。
+<li>all：针对站点下的所有四层代理实例开启。</li>
+<li>specific：针对站点下指定的四层代理实例开启。</li>当参数为空时，默认为 specific。 
+     * @return L4EnableMode 四层代理实例开启源站防护的模式。
+<li>all：针对站点下的所有四层代理实例开启。</li>
+<li>specific：针对站点下指定的四层代理实例开启。</li>当参数为空时，默认为 specific。
      */
     public String getL4EnableMode() {
         return this.L4EnableMode;
     }
 
     /**
-     * Set 四层代理 ID 开启回源白名单的模式。
-<li>all：为站点下的所有四层代理开启回源白名单。</li>
-<li>specific：为站点下指定的四层代理 ID 开启回源白名单。</li>
-当参数为空时，默认为specific。
-     * @param L4EnableMode 四层代理 ID 开启回源白名单的模式。
-<li>all：为站点下的所有四层代理开启回源白名单。</li>
-<li>specific：为站点下指定的四层代理 ID 开启回源白名单。</li>
-当参数为空时，默认为specific。
+     * Set 四层代理实例开启源站防护的模式。
+<li>all：针对站点下的所有四层代理实例开启。</li>
+<li>specific：针对站点下指定的四层代理实例开启。</li>当参数为空时，默认为 specific。
+     * @param L4EnableMode 四层代理实例开启源站防护的模式。
+<li>all：针对站点下的所有四层代理实例开启。</li>
+<li>specific：针对站点下指定的四层代理实例开启。</li>当参数为空时，默认为 specific。
      */
     public void setL4EnableMode(String L4EnableMode) {
         this.L4EnableMode = L4EnableMode;
     }
 
     /**
-     * Get 开启回源白名单的四层代理 ID 列表，当请求参数 L4EnableMode 为 all 时必须为空。单次最多支持 200 个实例。 
-     * @return L4ProxyIds 开启回源白名单的四层代理 ID 列表，当请求参数 L4EnableMode 为 all 时必须为空。单次最多支持 200 个实例。
+     * Get 开启源站防护的四层代理实例列表，仅当参数 L4EnableMode 为 specific 时生效。L4EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 100 个四层代理实例。 
+     * @return L4ProxyIds 开启源站防护的四层代理实例列表，仅当参数 L4EnableMode 为 specific 时生效。L4EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 100 个四层代理实例。
      */
     public String [] getL4ProxyIds() {
         return this.L4ProxyIds;
     }
 
     /**
-     * Set 开启回源白名单的四层代理 ID 列表，当请求参数 L4EnableMode 为 all 时必须为空。单次最多支持 200 个实例。
-     * @param L4ProxyIds 开启回源白名单的四层代理 ID 列表，当请求参数 L4EnableMode 为 all 时必须为空。单次最多支持 200 个实例。
+     * Set 开启源站防护的四层代理实例列表，仅当参数 L4EnableMode 为 specific 时生效。L4EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 100 个四层代理实例。
+     * @param L4ProxyIds 开启源站防护的四层代理实例列表，仅当参数 L4EnableMode 为 specific 时生效。L4EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 100 个四层代理实例。
      */
     public void setL4ProxyIds(String [] L4ProxyIds) {
         this.L4ProxyIds = L4ProxyIds;

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,6 +49,7 @@ BizLicense：营业执照
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
 MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡
     */
     @SerializedName("CardType")
     @Expose
@@ -111,7 +112,8 @@ DriverLicense：驾驶证
 BizLicense：营业执照 
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证 
+MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡 
      * @return CardType 卡证类型参数，包含以下范围：  
 General：通用卡证
 IDCard：身份证 
@@ -123,6 +125,7 @@ BizLicense：营业执照
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
 MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡
      */
     public String getCardType() {
         return this.CardType;
@@ -140,6 +143,7 @@ BizLicense：营业执照
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
 MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡
      * @param CardType 卡证类型参数，包含以下范围：  
 General：通用卡证
 IDCard：身份证 
@@ -151,6 +155,7 @@ BizLicense：营业执照
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
 MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡
      */
     public void setCardType(String CardType) {
         this.CardType = CardType;

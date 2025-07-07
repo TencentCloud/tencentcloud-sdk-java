@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class CccClient extends AbstractClient{
     private static String endpoint = "ccc.tencentcloudapi.com";
     private static String service = "ccc";
     private static String version = "2020-02-10";
-    
+
     public CccClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -91,6 +91,17 @@ public class CccClient extends AbstractClient{
     public BindStaffSkillGroupListResponse BindStaffSkillGroupList(BindStaffSkillGroupListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "BindStaffSkillGroupList", BindStaffSkillGroupListResponse.class);
+    }
+
+    /**
+     *提供服务端控制机器人的功能
+     * @param req ControlAIConversationRequest
+     * @return ControlAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ControlAIConversationResponse ControlAIConversation(ControlAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ControlAIConversation", ControlAIConversationResponse.class);
     }
 
     /**

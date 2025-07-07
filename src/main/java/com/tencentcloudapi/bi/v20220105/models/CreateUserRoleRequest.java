@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,6 +43,13 @@ public class CreateUserRoleRequest extends AbstractModel {
     @SerializedName("UserInfoList")
     @Expose
     private UserInfo [] UserInfoList;
+
+    /**
+    * 用户组id列表
+    */
+    @SerializedName("UserGroups")
+    @Expose
+    private Long [] UserGroups;
 
     /**
      * Get 角色ID列表 
@@ -96,6 +103,22 @@ public class CreateUserRoleRequest extends AbstractModel {
         this.UserInfoList = UserInfoList;
     }
 
+    /**
+     * Get 用户组id列表 
+     * @return UserGroups 用户组id列表
+     */
+    public Long [] getUserGroups() {
+        return this.UserGroups;
+    }
+
+    /**
+     * Set 用户组id列表
+     * @param UserGroups 用户组id列表
+     */
+    public void setUserGroups(Long [] UserGroups) {
+        this.UserGroups = UserGroups;
+    }
+
     public CreateUserRoleRequest() {
     }
 
@@ -122,6 +145,12 @@ public class CreateUserRoleRequest extends AbstractModel {
                 this.UserInfoList[i] = new UserInfo(source.UserInfoList[i]);
             }
         }
+        if (source.UserGroups != null) {
+            this.UserGroups = new Long[source.UserGroups.length];
+            for (int i = 0; i < source.UserGroups.length; i++) {
+                this.UserGroups[i] = new Long(source.UserGroups[i]);
+            }
+        }
     }
 
 
@@ -132,6 +161,7 @@ public class CreateUserRoleRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RoleIdList.", this.RoleIdList);
         this.setParamArrayObj(map, prefix + "UserList.", this.UserList);
         this.setParamArrayObj(map, prefix + "UserInfoList.", this.UserInfoList);
+        this.setParamArraySimple(map, prefix + "UserGroups.", this.UserGroups);
 
     }
 }

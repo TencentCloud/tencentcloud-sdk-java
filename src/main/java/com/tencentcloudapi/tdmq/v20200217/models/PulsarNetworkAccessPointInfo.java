@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -114,6 +114,20 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
+
+    /**
+    * 是否开启TLS加密
+    */
+    @SerializedName("Tls")
+    @Expose
+    private Boolean Tls;
+
+    /**
+    * 接入点自定义域名
+    */
+    @SerializedName("CustomUrl")
+    @Expose
+    private String CustomUrl;
 
     /**
      * Get vpc的id，支撑网和公网接入点，该字段为空
@@ -351,6 +365,38 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         this.ZoneName = ZoneName;
     }
 
+    /**
+     * Get 是否开启TLS加密 
+     * @return Tls 是否开启TLS加密
+     */
+    public Boolean getTls() {
+        return this.Tls;
+    }
+
+    /**
+     * Set 是否开启TLS加密
+     * @param Tls 是否开启TLS加密
+     */
+    public void setTls(Boolean Tls) {
+        this.Tls = Tls;
+    }
+
+    /**
+     * Get 接入点自定义域名 
+     * @return CustomUrl 接入点自定义域名
+     */
+    public String getCustomUrl() {
+        return this.CustomUrl;
+    }
+
+    /**
+     * Set 接入点自定义域名
+     * @param CustomUrl 接入点自定义域名
+     */
+    public void setCustomUrl(String CustomUrl) {
+        this.CustomUrl = CustomUrl;
+    }
+
     public PulsarNetworkAccessPointInfo() {
     }
 
@@ -395,6 +441,12 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         if (source.ZoneName != null) {
             this.ZoneName = new String(source.ZoneName);
         }
+        if (source.Tls != null) {
+            this.Tls = new Boolean(source.Tls);
+        }
+        if (source.CustomUrl != null) {
+            this.CustomUrl = new String(source.CustomUrl);
+        }
     }
 
 
@@ -413,6 +465,8 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
         this.setParamSimple(map, prefix + "StandardAccessPoint", this.StandardAccessPoint);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "Tls", this.Tls);
+        this.setParamSimple(map, prefix + "CustomUrl", this.CustomUrl);
 
     }
 }

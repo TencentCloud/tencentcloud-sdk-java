@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeAuditLogsRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间。
+    * 开始时间(建议开始到结束时间区间最大7天)。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间。
+    * 结束时间(建议开始到结束时间区间最大7天）。
     */
     @SerializedName("EndTime")
     @Expose
@@ -59,14 +59,14 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
+    * 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序字段。支持值包括：
+    * 排序字段。支持值包括(默认按照时间戳排序)：
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
@@ -83,48 +83,48 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     private InstanceAuditLogFilters [] LogFilter;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间。 
-     * @return StartTime 开始时间。
+     * Get 开始时间(建议开始到结束时间区间最大7天)。 
+     * @return StartTime 开始时间(建议开始到结束时间区间最大7天)。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间。
-     * @param StartTime 开始时间。
+     * Set 开始时间(建议开始到结束时间区间最大7天)。
+     * @param StartTime 开始时间(建议开始到结束时间区间最大7天)。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间。 
-     * @return EndTime 结束时间。
+     * Get 结束时间(建议开始到结束时间区间最大7天）。 
+     * @return EndTime 结束时间(建议开始到结束时间区间最大7天）。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。
-     * @param EndTime 结束时间。
+     * Set 结束时间(建议开始到结束时间区间最大7天）。
+     * @param EndTime 结束时间(建议开始到结束时间区间最大7天）。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -163,27 +163,27 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。 
-     * @return Order 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
+     * Get 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。 
+     * @return Order 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
-     * @param Order 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
+     * Set 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
+     * @param Order 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序字段。支持值包括：
+     * Get 排序字段。支持值包括(默认按照时间戳排序)：
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。 
-     * @return OrderBy 排序字段。支持值包括：
+     * @return OrderBy 排序字段。支持值包括(默认按照时间戳排序)：
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
@@ -193,11 +193,11 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     }
 
     /**
-     * Set 排序字段。支持值包括：
+     * Set 排序字段。支持值包括(默认按照时间戳排序)：
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
-     * @param OrderBy 排序字段。支持值包括：
+     * @param OrderBy 排序字段。支持值包括(默认按照时间戳排序)：
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。

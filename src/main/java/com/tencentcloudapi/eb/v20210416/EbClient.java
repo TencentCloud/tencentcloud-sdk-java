@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class EbClient extends AbstractClient{
     private static String endpoint = "eb.tencentcloudapi.com";
     private static String service = "eb";
     private static String version = "2021-04-16";
-    
+
     public EbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }

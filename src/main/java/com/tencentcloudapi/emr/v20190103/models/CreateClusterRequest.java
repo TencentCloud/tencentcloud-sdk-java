@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -195,6 +195,13 @@ public class CreateClusterRequest extends AbstractModel {
     @SerializedName("NodeMarks")
     @Expose
     private NodeMark [] NodeMarks;
+
+    /**
+    * clb id
+    */
+    @SerializedName("LoadBalancerId")
+    @Expose
+    private String LoadBalancerId;
 
     /**
      * Get EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338) 
@@ -624,6 +631,22 @@ public class CreateClusterRequest extends AbstractModel {
         this.NodeMarks = NodeMarks;
     }
 
+    /**
+     * Get clb id 
+     * @return LoadBalancerId clb id
+     */
+    public String getLoadBalancerId() {
+        return this.LoadBalancerId;
+    }
+
+    /**
+     * Set clb id
+     * @param LoadBalancerId clb id
+     */
+    public void setLoadBalancerId(String LoadBalancerId) {
+        this.LoadBalancerId = LoadBalancerId;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -719,6 +742,9 @@ public class CreateClusterRequest extends AbstractModel {
                 this.NodeMarks[i] = new NodeMark(source.NodeMarks[i]);
             }
         }
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
     }
 
 
@@ -748,6 +774,7 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ZoneResourceConfiguration.", this.ZoneResourceConfiguration);
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
+        this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
 
     }
 }

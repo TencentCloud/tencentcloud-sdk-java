@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -70,6 +70,14 @@ public class BizCatalogsInfo extends AbstractModel {
     @SerializedName("Position")
     @Expose
     private Long Position;
+
+    /**
+    * 类目名称英文
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NameEn")
+    @Expose
+    private String NameEn;
 
     /**
      * Get 应用id
@@ -191,6 +199,26 @@ public class BizCatalogsInfo extends AbstractModel {
         this.Position = Position;
     }
 
+    /**
+     * Get 类目名称英文
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NameEn 类目名称英文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNameEn() {
+        return this.NameEn;
+    }
+
+    /**
+     * Set 类目名称英文
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NameEn 类目名称英文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNameEn(String NameEn) {
+        this.NameEn = NameEn;
+    }
+
     public BizCatalogsInfo() {
     }
 
@@ -217,6 +245,9 @@ public class BizCatalogsInfo extends AbstractModel {
         if (source.Position != null) {
             this.Position = new Long(source.Position);
         }
+        if (source.NameEn != null) {
+            this.NameEn = new String(source.NameEn);
+        }
     }
 
 
@@ -230,6 +261,7 @@ public class BizCatalogsInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ParentId", this.ParentId);
         this.setParamSimple(map, prefix + "Position", this.Position);
+        this.setParamSimple(map, prefix + "NameEn", this.NameEn);
 
     }
 }

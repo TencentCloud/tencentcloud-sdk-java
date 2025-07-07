@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,14 +45,14 @@ public class ProxyGroupInfo extends AbstractModel {
     private String SupportUpgradeProxyVersion;
 
     /**
-    * 代理状态
+    * 代理状态。0 - 初始化中，1 - 在线中，2 - 在线中-读写分离中，3 - 下线，4 - 销毁。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 代理任务状态
+    * 代理任务状态，Upgrading - 升级中，UpgradeTo - 升级待切换，UpgradeSwitching - 升级切换中，ProxyCreateAddress - 配置地址中，ProxyModifyAddress - 修改地址中，ProxyCloseAddress - 关闭地址中。
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -142,32 +142,32 @@ public class ProxyGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 代理状态 
-     * @return Status 代理状态
+     * Get 代理状态。0 - 初始化中，1 - 在线中，2 - 在线中-读写分离中，3 - 下线，4 - 销毁。 
+     * @return Status 代理状态。0 - 初始化中，1 - 在线中，2 - 在线中-读写分离中，3 - 下线，4 - 销毁。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 代理状态
-     * @param Status 代理状态
+     * Set 代理状态。0 - 初始化中，1 - 在线中，2 - 在线中-读写分离中，3 - 下线，4 - 销毁。
+     * @param Status 代理状态。0 - 初始化中，1 - 在线中，2 - 在线中-读写分离中，3 - 下线，4 - 销毁。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 代理任务状态 
-     * @return TaskStatus 代理任务状态
+     * Get 代理任务状态，Upgrading - 升级中，UpgradeTo - 升级待切换，UpgradeSwitching - 升级切换中，ProxyCreateAddress - 配置地址中，ProxyModifyAddress - 修改地址中，ProxyCloseAddress - 关闭地址中。 
+     * @return TaskStatus 代理任务状态，Upgrading - 升级中，UpgradeTo - 升级待切换，UpgradeSwitching - 升级切换中，ProxyCreateAddress - 配置地址中，ProxyModifyAddress - 修改地址中，ProxyCloseAddress - 关闭地址中。
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 代理任务状态
-     * @param TaskStatus 代理任务状态
+     * Set 代理任务状态，Upgrading - 升级中，UpgradeTo - 升级待切换，UpgradeSwitching - 升级切换中，ProxyCreateAddress - 配置地址中，ProxyModifyAddress - 修改地址中，ProxyCloseAddress - 关闭地址中。
+     * @param TaskStatus 代理任务状态，Upgrading - 升级中，UpgradeTo - 升级待切换，UpgradeSwitching - 升级切换中，ProxyCreateAddress - 配置地址中，ProxyModifyAddress - 修改地址中，ProxyCloseAddress - 关闭地址中。
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;

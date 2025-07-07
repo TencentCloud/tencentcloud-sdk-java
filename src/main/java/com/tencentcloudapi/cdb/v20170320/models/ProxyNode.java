@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,14 +38,14 @@ public class ProxyNode extends AbstractModel {
     private Long Cpu;
 
     /**
-    * 内存大小
+    * 内存大小，单位为 MB。
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * 节点状态
+    * 节点状态，0 - 初始化中，1 - 在线中，2 - 下线中，3 - 销毁中，4 - 故障恢复中，5 - 节点故障，6 - 切换中。
     */
     @SerializedName("Status")
     @Expose
@@ -105,32 +105,32 @@ public class ProxyNode extends AbstractModel {
     }
 
     /**
-     * Get 内存大小 
-     * @return Mem 内存大小
+     * Get 内存大小，单位为 MB。 
+     * @return Mem 内存大小，单位为 MB。
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set 内存大小
-     * @param Mem 内存大小
+     * Set 内存大小，单位为 MB。
+     * @param Mem 内存大小，单位为 MB。
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get 节点状态 
-     * @return Status 节点状态
+     * Get 节点状态，0 - 初始化中，1 - 在线中，2 - 下线中，3 - 销毁中，4 - 故障恢复中，5 - 节点故障，6 - 切换中。 
+     * @return Status 节点状态，0 - 初始化中，1 - 在线中，2 - 下线中，3 - 销毁中，4 - 故障恢复中，5 - 节点故障，6 - 切换中。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 节点状态
-     * @param Status 节点状态
+     * Set 节点状态，0 - 初始化中，1 - 在线中，2 - 下线中，3 - 销毁中，4 - 故障恢复中，5 - 节点故障，6 - 切换中。
+     * @param Status 节点状态，0 - 初始化中，1 - 在线中，2 - 下线中，3 - 销毁中，4 - 故障恢复中，5 - 节点故障，6 - 切换中。
      */
     public void setStatus(String Status) {
         this.Status = Status;

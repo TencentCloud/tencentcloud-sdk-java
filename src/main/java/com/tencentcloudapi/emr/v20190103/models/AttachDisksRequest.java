@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -80,6 +80,20 @@ ALIGN_DEADLINE：自动对其到期时间
     @SerializedName("SelectiveConfServices")
     @Expose
     private String [] SelectiveConfServices;
+
+    /**
+    * 磁盘计费类型（1包月、3包销）
+    */
+    @SerializedName("ChargeType")
+    @Expose
+    private Long ChargeType;
+
+    /**
+    * 磁盘包销购买时长（仅支持12、24、36、48、60）
+    */
+    @SerializedName("UnderWriteDuration")
+    @Expose
+    private Long UnderWriteDuration;
 
     /**
      * Get EMR集群实例ID 
@@ -217,6 +231,38 @@ ALIGN_DEADLINE：自动对其到期时间
         this.SelectiveConfServices = SelectiveConfServices;
     }
 
+    /**
+     * Get 磁盘计费类型（1包月、3包销） 
+     * @return ChargeType 磁盘计费类型（1包月、3包销）
+     */
+    public Long getChargeType() {
+        return this.ChargeType;
+    }
+
+    /**
+     * Set 磁盘计费类型（1包月、3包销）
+     * @param ChargeType 磁盘计费类型（1包月、3包销）
+     */
+    public void setChargeType(Long ChargeType) {
+        this.ChargeType = ChargeType;
+    }
+
+    /**
+     * Get 磁盘包销购买时长（仅支持12、24、36、48、60） 
+     * @return UnderWriteDuration 磁盘包销购买时长（仅支持12、24、36、48、60）
+     */
+    public Long getUnderWriteDuration() {
+        return this.UnderWriteDuration;
+    }
+
+    /**
+     * Set 磁盘包销购买时长（仅支持12、24、36、48、60）
+     * @param UnderWriteDuration 磁盘包销购买时长（仅支持12、24、36、48、60）
+     */
+    public void setUnderWriteDuration(Long UnderWriteDuration) {
+        this.UnderWriteDuration = UnderWriteDuration;
+    }
+
     public AttachDisksRequest() {
     }
 
@@ -258,6 +304,12 @@ ALIGN_DEADLINE：自动对其到期时间
                 this.SelectiveConfServices[i] = new String(source.SelectiveConfServices[i]);
             }
         }
+        if (source.ChargeType != null) {
+            this.ChargeType = new Long(source.ChargeType);
+        }
+        if (source.UnderWriteDuration != null) {
+            this.UnderWriteDuration = new Long(source.UnderWriteDuration);
+        }
     }
 
 
@@ -273,6 +325,8 @@ ALIGN_DEADLINE：自动对其到期时间
         this.setParamObj(map, prefix + "DiskSpec.", this.DiskSpec);
         this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
         this.setParamArraySimple(map, prefix + "SelectiveConfServices.", this.SelectiveConfServices);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "UnderWriteDuration", this.UnderWriteDuration);
 
     }
 }

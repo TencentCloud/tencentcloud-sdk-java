@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -92,6 +92,13 @@ public class CreateClusterRequest extends AbstractModel {
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
+
+    /**
+    * 屏蔽安装指定Addon组件，填写相应的AddonName
+    */
+    @SerializedName("DisableAddons")
+    @Expose
+    private String [] DisableAddons;
 
     /**
      * Get 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。 
@@ -253,6 +260,22 @@ public class CreateClusterRequest extends AbstractModel {
         this.CdcId = CdcId;
     }
 
+    /**
+     * Get 屏蔽安装指定Addon组件，填写相应的AddonName 
+     * @return DisableAddons 屏蔽安装指定Addon组件，填写相应的AddonName
+     */
+    public String [] getDisableAddons() {
+        return this.DisableAddons;
+    }
+
+    /**
+     * Set 屏蔽安装指定Addon组件，填写相应的AddonName
+     * @param DisableAddons 屏蔽安装指定Addon组件，填写相应的AddonName
+     */
+    public void setDisableAddons(String [] DisableAddons) {
+        this.DisableAddons = DisableAddons;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -303,6 +326,12 @@ public class CreateClusterRequest extends AbstractModel {
         if (source.CdcId != null) {
             this.CdcId = new String(source.CdcId);
         }
+        if (source.DisableAddons != null) {
+            this.DisableAddons = new String[source.DisableAddons.length];
+            for (int i = 0; i < source.DisableAddons.length; i++) {
+                this.DisableAddons[i] = new String(source.DisableAddons[i]);
+            }
+        }
     }
 
 
@@ -320,6 +349,7 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "InstanceDataDiskMountSettings.", this.InstanceDataDiskMountSettings);
         this.setParamArrayObj(map, prefix + "ExtensionAddons.", this.ExtensionAddons);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamArraySimple(map, prefix + "DisableAddons.", this.DisableAddons);
 
     }
 }

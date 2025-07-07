@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -58,7 +58,7 @@ public class RegisterInfo extends AbstractModel {
     private Long [] AuthorizationTypes;
 
     /**
-    * 指定企业认证的授权方式 支持多选:
+    * 指定企业认证的授权方式:
 
 <ul>
 <li><strong>2</strong>: 法人授权方式</li>
@@ -166,13 +166,13 @@ public class RegisterInfo extends AbstractModel {
     }
 
     /**
-     * Get 指定企业认证的授权方式 支持多选:
+     * Get 指定企业认证的授权方式:
 
 <ul>
 <li><strong>2</strong>: 法人授权方式</li>
 <li><strong>5</strong>: 授权书+对公打款方式</li>
 </ul> 
-     * @return AuthorizationType 指定企业认证的授权方式 支持多选:
+     * @return AuthorizationType 指定企业认证的授权方式:
 
 <ul>
 <li><strong>2</strong>: 法人授权方式</li>
@@ -184,13 +184,13 @@ public class RegisterInfo extends AbstractModel {
     }
 
     /**
-     * Set 指定企业认证的授权方式 支持多选:
+     * Set 指定企业认证的授权方式:
 
 <ul>
 <li><strong>2</strong>: 法人授权方式</li>
 <li><strong>5</strong>: 授权书+对公打款方式</li>
 </ul>
-     * @param AuthorizationType 指定企业认证的授权方式 支持多选:
+     * @param AuthorizationType 指定企业认证的授权方式:
 
 <ul>
 <li><strong>2</strong>: 法人授权方式</li>

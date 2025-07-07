@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -135,6 +135,13 @@ public class CBSInstance extends AbstractModel {
     @SerializedName("EmrResourceId")
     @Expose
     private String EmrResourceId;
+
+    /**
+    * 包销到期时间
+    */
+    @SerializedName("UnderwriteExpiredTime")
+    @Expose
+    private String UnderwriteExpiredTime;
 
     /**
      * Get 云硬盘ID 
@@ -396,6 +403,22 @@ public class CBSInstance extends AbstractModel {
         this.EmrResourceId = EmrResourceId;
     }
 
+    /**
+     * Get 包销到期时间 
+     * @return UnderwriteExpiredTime 包销到期时间
+     */
+    public String getUnderwriteExpiredTime() {
+        return this.UnderwriteExpiredTime;
+    }
+
+    /**
+     * Set 包销到期时间
+     * @param UnderwriteExpiredTime 包销到期时间
+     */
+    public void setUnderwriteExpiredTime(String UnderwriteExpiredTime) {
+        this.UnderwriteExpiredTime = UnderwriteExpiredTime;
+    }
+
     public CBSInstance() {
     }
 
@@ -455,6 +478,9 @@ public class CBSInstance extends AbstractModel {
         if (source.EmrResourceId != null) {
             this.EmrResourceId = new String(source.EmrResourceId);
         }
+        if (source.UnderwriteExpiredTime != null) {
+            this.UnderwriteExpiredTime = new String(source.UnderwriteExpiredTime);
+        }
     }
 
 
@@ -478,6 +504,7 @@ public class CBSInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Shareable", this.Shareable);
         this.setParamSimple(map, prefix + "EmrResourceId", this.EmrResourceId);
+        this.setParamSimple(map, prefix + "UnderwriteExpiredTime", this.UnderwriteExpiredTime);
 
     }
 }

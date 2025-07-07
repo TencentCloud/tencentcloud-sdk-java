@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -47,6 +47,9 @@ public class VirtualNodePool extends AbstractModel {
 
     /**
     * 节点池生命周期
+- creating：创建中
+- normal：正常
+- updating：更新中
     */
     @SerializedName("LifeState")
     @Expose
@@ -121,8 +124,14 @@ public class VirtualNodePool extends AbstractModel {
     }
 
     /**
-     * Get 节点池生命周期 
+     * Get 节点池生命周期
+- creating：创建中
+- normal：正常
+- updating：更新中 
      * @return LifeState 节点池生命周期
+- creating：创建中
+- normal：正常
+- updating：更新中
      */
     public String getLifeState() {
         return this.LifeState;
@@ -130,7 +139,13 @@ public class VirtualNodePool extends AbstractModel {
 
     /**
      * Set 节点池生命周期
+- creating：创建中
+- normal：正常
+- updating：更新中
      * @param LifeState 节点池生命周期
+- creating：创建中
+- normal：正常
+- updating：更新中
      */
     public void setLifeState(String LifeState) {
         this.LifeState = LifeState;

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -253,6 +253,27 @@ public class CreateJobConfigRequest extends AbstractModel {
     @SerializedName("TaskManagerMem")
     @Expose
     private Float TaskManagerMem;
+
+    /**
+    * 0=默认使用老的 1=使用新的
+    */
+    @SerializedName("UseOldSystemConnector")
+    @Expose
+    private Long UseOldSystemConnector;
+
+    /**
+    * 压缩参数
+    */
+    @SerializedName("ProgramArgsAfterGzip")
+    @Expose
+    private String ProgramArgsAfterGzip;
+
+    /**
+    * checkpoint 超时时间
+    */
+    @SerializedName("CheckpointTimeoutSecond")
+    @Expose
+    private Long CheckpointTimeoutSecond;
 
     /**
      * Get 作业Id 
@@ -782,6 +803,54 @@ public class CreateJobConfigRequest extends AbstractModel {
         this.TaskManagerMem = TaskManagerMem;
     }
 
+    /**
+     * Get 0=默认使用老的 1=使用新的 
+     * @return UseOldSystemConnector 0=默认使用老的 1=使用新的
+     */
+    public Long getUseOldSystemConnector() {
+        return this.UseOldSystemConnector;
+    }
+
+    /**
+     * Set 0=默认使用老的 1=使用新的
+     * @param UseOldSystemConnector 0=默认使用老的 1=使用新的
+     */
+    public void setUseOldSystemConnector(Long UseOldSystemConnector) {
+        this.UseOldSystemConnector = UseOldSystemConnector;
+    }
+
+    /**
+     * Get 压缩参数 
+     * @return ProgramArgsAfterGzip 压缩参数
+     */
+    public String getProgramArgsAfterGzip() {
+        return this.ProgramArgsAfterGzip;
+    }
+
+    /**
+     * Set 压缩参数
+     * @param ProgramArgsAfterGzip 压缩参数
+     */
+    public void setProgramArgsAfterGzip(String ProgramArgsAfterGzip) {
+        this.ProgramArgsAfterGzip = ProgramArgsAfterGzip;
+    }
+
+    /**
+     * Get checkpoint 超时时间 
+     * @return CheckpointTimeoutSecond checkpoint 超时时间
+     */
+    public Long getCheckpointTimeoutSecond() {
+        return this.CheckpointTimeoutSecond;
+    }
+
+    /**
+     * Set checkpoint 超时时间
+     * @param CheckpointTimeoutSecond checkpoint 超时时间
+     */
+    public void setCheckpointTimeoutSecond(Long CheckpointTimeoutSecond) {
+        this.CheckpointTimeoutSecond = CheckpointTimeoutSecond;
+    }
+
     public CreateJobConfigRequest() {
     }
 
@@ -898,6 +967,15 @@ public class CreateJobConfigRequest extends AbstractModel {
         if (source.TaskManagerMem != null) {
             this.TaskManagerMem = new Float(source.TaskManagerMem);
         }
+        if (source.UseOldSystemConnector != null) {
+            this.UseOldSystemConnector = new Long(source.UseOldSystemConnector);
+        }
+        if (source.ProgramArgsAfterGzip != null) {
+            this.ProgramArgsAfterGzip = new String(source.ProgramArgsAfterGzip);
+        }
+        if (source.CheckpointTimeoutSecond != null) {
+            this.CheckpointTimeoutSecond = new Long(source.CheckpointTimeoutSecond);
+        }
     }
 
 
@@ -938,6 +1016,9 @@ public class CreateJobConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
         this.setParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
         this.setParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
+        this.setParamSimple(map, prefix + "UseOldSystemConnector", this.UseOldSystemConnector);
+        this.setParamSimple(map, prefix + "ProgramArgsAfterGzip", this.ProgramArgsAfterGzip);
+        this.setParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
 
     }
 }

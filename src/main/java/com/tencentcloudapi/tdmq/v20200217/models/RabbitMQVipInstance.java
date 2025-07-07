@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -169,18 +169,32 @@ public class RabbitMQVipInstance extends AbstractModel {
     private Long CreateTime;
 
     /**
-    * 实例类型，0 专享版、1 Serverless 版
+    * 实例类型，0 托管版、1 Serverless 版
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * 隔离时间，毫秒为单位
+    * 隔离时间，毫秒为单位。unix 时间戳
     */
     @SerializedName("IsolatedTime")
     @Expose
     private Long IsolatedTime;
+
+    /**
+    * 是否已开启删除保护
+    */
+    @SerializedName("EnableDeletionProtection")
+    @Expose
+    private Boolean EnableDeletionProtection;
+
+    /**
+    * 标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get 实例 ID 
@@ -535,35 +549,67 @@ public class RabbitMQVipInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例类型，0 专享版、1 Serverless 版 
-     * @return InstanceType 实例类型，0 专享版、1 Serverless 版
+     * Get 实例类型，0 托管版、1 Serverless 版 
+     * @return InstanceType 实例类型，0 托管版、1 Serverless 版
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型，0 专享版、1 Serverless 版
-     * @param InstanceType 实例类型，0 专享版、1 Serverless 版
+     * Set 实例类型，0 托管版、1 Serverless 版
+     * @param InstanceType 实例类型，0 托管版、1 Serverless 版
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 隔离时间，毫秒为单位 
-     * @return IsolatedTime 隔离时间，毫秒为单位
+     * Get 隔离时间，毫秒为单位。unix 时间戳 
+     * @return IsolatedTime 隔离时间，毫秒为单位。unix 时间戳
      */
     public Long getIsolatedTime() {
         return this.IsolatedTime;
     }
 
     /**
-     * Set 隔离时间，毫秒为单位
-     * @param IsolatedTime 隔离时间，毫秒为单位
+     * Set 隔离时间，毫秒为单位。unix 时间戳
+     * @param IsolatedTime 隔离时间，毫秒为单位。unix 时间戳
      */
     public void setIsolatedTime(Long IsolatedTime) {
         this.IsolatedTime = IsolatedTime;
+    }
+
+    /**
+     * Get 是否已开启删除保护 
+     * @return EnableDeletionProtection 是否已开启删除保护
+     */
+    public Boolean getEnableDeletionProtection() {
+        return this.EnableDeletionProtection;
+    }
+
+    /**
+     * Set 是否已开启删除保护
+     * @param EnableDeletionProtection 是否已开启删除保护
+     */
+    public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
+        this.EnableDeletionProtection = EnableDeletionProtection;
+    }
+
+    /**
+     * Get 标签列表 
+     * @return Tags 标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表
+     * @param Tags 标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     public RabbitMQVipInstance() {
@@ -640,6 +686,15 @@ public class RabbitMQVipInstance extends AbstractModel {
         if (source.IsolatedTime != null) {
             this.IsolatedTime = new Long(source.IsolatedTime);
         }
+        if (source.EnableDeletionProtection != null) {
+            this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -668,6 +723,8 @@ public class RabbitMQVipInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+        this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

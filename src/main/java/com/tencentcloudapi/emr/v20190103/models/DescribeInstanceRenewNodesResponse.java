@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +45,13 @@ public class DescribeInstanceRenewNodesResponse extends AbstractModel {
     @SerializedName("MetaInfo")
     @Expose
     private String [] MetaInfo;
+
+    /**
+    * 集群依赖的Redis实例Id
+    */
+    @SerializedName("RedisInfo")
+    @Expose
+    private String [] RedisInfo;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -110,6 +117,22 @@ public class DescribeInstanceRenewNodesResponse extends AbstractModel {
     }
 
     /**
+     * Get 集群依赖的Redis实例Id 
+     * @return RedisInfo 集群依赖的Redis实例Id
+     */
+    public String [] getRedisInfo() {
+        return this.RedisInfo;
+    }
+
+    /**
+     * Set 集群依赖的Redis实例Id
+     * @param RedisInfo 集群依赖的Redis实例Id
+     */
+    public void setRedisInfo(String [] RedisInfo) {
+        this.RedisInfo = RedisInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -148,6 +171,12 @@ public class DescribeInstanceRenewNodesResponse extends AbstractModel {
                 this.MetaInfo[i] = new String(source.MetaInfo[i]);
             }
         }
+        if (source.RedisInfo != null) {
+            this.RedisInfo = new String[source.RedisInfo.length];
+            for (int i = 0; i < source.RedisInfo.length; i++) {
+                this.RedisInfo[i] = new String(source.RedisInfo[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -161,6 +190,7 @@ public class DescribeInstanceRenewNodesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalCnt", this.TotalCnt);
         this.setParamArrayObj(map, prefix + "NodeList.", this.NodeList);
         this.setParamArraySimple(map, prefix + "MetaInfo.", this.MetaInfo);
+        this.setParamArraySimple(map, prefix + "RedisInfo.", this.RedisInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,6 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
 
     /**
     * 资产总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
 
     /**
     * 地域枚举
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionList")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
 
     /**
     * 资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetTypeList")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
 
     /**
     * Vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcList")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
 
     /**
     * Appid枚举
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppIdList")
     @Expose
@@ -79,10 +73,8 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -90,19 +82,15 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 资产总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产总数 
      * @return Data 资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DBAssetVO [] getData() {
         return this.Data;
@@ -110,19 +98,15 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
 
     /**
      * Set 资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DBAssetVO [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 地域枚举
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域枚举 
      * @return RegionList 地域枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getRegionList() {
         return this.RegionList;
@@ -130,19 +114,15 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
 
     /**
      * Set 地域枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionList 地域枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionList(FilterDataObject [] RegionList) {
         this.RegionList = RegionList;
     }
 
     /**
-     * Get 资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产类型枚举 
      * @return AssetTypeList 资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getAssetTypeList() {
         return this.AssetTypeList;
@@ -150,19 +130,15 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
 
     /**
      * Set 资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetTypeList 资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetTypeList(FilterDataObject [] AssetTypeList) {
         this.AssetTypeList = AssetTypeList;
     }
 
     /**
-     * Get Vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Vpc枚举 
      * @return VpcList Vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getVpcList() {
         return this.VpcList;
@@ -170,19 +146,15 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
 
     /**
      * Set Vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcList Vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcList(FilterDataObject [] VpcList) {
         this.VpcList = VpcList;
     }
 
     /**
-     * Get Appid枚举
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Appid枚举 
      * @return AppIdList Appid枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getAppIdList() {
         return this.AppIdList;
@@ -190,9 +162,7 @@ public class DescribeOtherCloudAssetsResponse extends AbstractModel {
 
     /**
      * Set Appid枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppIdList Appid枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppIdList(FilterDataObject [] AppIdList) {
         this.AppIdList = AppIdList;

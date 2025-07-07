@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -81,6 +81,14 @@ public class LiveStreamTransTextRecognitionResult extends AbstractModel {
     @SerializedName("SteadyState")
     @Expose
     private Boolean SteadyState;
+
+    /**
+    * websocket与trtc实时翻译的UserId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
 
     /**
      * Get 识别文本。 
@@ -222,6 +230,26 @@ public class LiveStreamTransTextRecognitionResult extends AbstractModel {
         this.SteadyState = SteadyState;
     }
 
+    /**
+     * Get websocket与trtc实时翻译的UserId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserId websocket与trtc实时翻译的UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set websocket与trtc实时翻译的UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserId websocket与trtc实时翻译的UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public LiveStreamTransTextRecognitionResult() {
     }
 
@@ -254,6 +282,9 @@ public class LiveStreamTransTextRecognitionResult extends AbstractModel {
         if (source.SteadyState != null) {
             this.SteadyState = new Boolean(source.SteadyState);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -269,6 +300,7 @@ public class LiveStreamTransTextRecognitionResult extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "SteadyState", this.SteadyState);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

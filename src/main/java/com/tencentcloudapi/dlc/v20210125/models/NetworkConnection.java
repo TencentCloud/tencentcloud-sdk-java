@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -159,6 +159,13 @@ public class NetworkConnection extends AbstractModel {
     @SerializedName("DatasourceConnectionSubnetCidrBlock")
     @Expose
     private String DatasourceConnectionSubnetCidrBlock;
+
+    /**
+    * 支持 eg
+    */
+    @SerializedName("EGSupport")
+    @Expose
+    private Long EGSupport;
 
     /**
      * Get 网络配置id 
@@ -492,6 +499,22 @@ public class NetworkConnection extends AbstractModel {
         this.DatasourceConnectionSubnetCidrBlock = DatasourceConnectionSubnetCidrBlock;
     }
 
+    /**
+     * Get 支持 eg 
+     * @return EGSupport 支持 eg
+     */
+    public Long getEGSupport() {
+        return this.EGSupport;
+    }
+
+    /**
+     * Set 支持 eg
+     * @param EGSupport 支持 eg
+     */
+    public void setEGSupport(Long EGSupport) {
+        this.EGSupport = EGSupport;
+    }
+
     public NetworkConnection() {
     }
 
@@ -554,6 +577,9 @@ public class NetworkConnection extends AbstractModel {
         if (source.DatasourceConnectionSubnetCidrBlock != null) {
             this.DatasourceConnectionSubnetCidrBlock = new String(source.DatasourceConnectionSubnetCidrBlock);
         }
+        if (source.EGSupport != null) {
+            this.EGSupport = new Long(source.EGSupport);
+        }
     }
 
 
@@ -579,6 +605,7 @@ public class NetworkConnection extends AbstractModel {
         this.setParamSimple(map, prefix + "DatasourceConnectionSubnetId", this.DatasourceConnectionSubnetId);
         this.setParamSimple(map, prefix + "DatasourceConnectionCidrBlock", this.DatasourceConnectionCidrBlock);
         this.setParamSimple(map, prefix + "DatasourceConnectionSubnetCidrBlock", this.DatasourceConnectionSubnetCidrBlock);
+        this.setParamSimple(map, prefix + "EGSupport", this.EGSupport);
 
     }
 }

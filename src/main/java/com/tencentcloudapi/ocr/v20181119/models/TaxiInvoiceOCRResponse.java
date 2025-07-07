@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class TaxiInvoiceOCRResponse extends AbstractModel {
 
     /**
-    * 发票代码
+    * 发票号码
     */
     @SerializedName("InvoiceNum")
     @Expose
     private String InvoiceNum;
 
     /**
-    * 发票号码
+    * 发票代码
     */
     @SerializedName("InvoiceCode")
     @Expose
@@ -117,32 +117,32 @@ public class TaxiInvoiceOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 发票代码 
-     * @return InvoiceNum 发票代码
+     * Get 发票号码 
+     * @return InvoiceNum 发票号码
      */
     public String getInvoiceNum() {
         return this.InvoiceNum;
     }
 
     /**
-     * Set 发票代码
-     * @param InvoiceNum 发票代码
+     * Set 发票号码
+     * @param InvoiceNum 发票号码
      */
     public void setInvoiceNum(String InvoiceNum) {
         this.InvoiceNum = InvoiceNum;
     }
 
     /**
-     * Get 发票号码 
-     * @return InvoiceCode 发票号码
+     * Get 发票代码 
+     * @return InvoiceCode 发票代码
      */
     public String getInvoiceCode() {
         return this.InvoiceCode;
     }
 
     /**
-     * Set 发票号码
-     * @param InvoiceCode 发票号码
+     * Set 发票代码
+     * @param InvoiceCode 发票代码
      */
     public void setInvoiceCode(String InvoiceCode) {
         this.InvoiceCode = InvoiceCode;

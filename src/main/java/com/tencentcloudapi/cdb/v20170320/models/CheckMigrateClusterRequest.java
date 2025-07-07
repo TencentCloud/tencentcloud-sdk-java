@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class CheckMigrateClusterRequest extends AbstractModel {
 
     /**
-    * 实例Id。
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例CPU核数
+    * 实例 CPU 核数。当 InstanceId 为主实例时必传。
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 实例内存大小，单位：MB
+    * 实例内存大小，单位：MB。当 InstanceId 为主实例时必传。
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例硬盘大小，单位：GB
+    * 实例硬盘大小，单位：GB。
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * 磁盘类型。 CLOUD_SSD: SSD云硬盘; CLOUD_HSSD: 增强型SSD云硬盘
+    * 磁盘类型。 CLOUD_SSD: SSD 云硬盘; CLOUD_HSSD: 增强型 SSD 云硬盘。
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * 云盘版节点拓扑配置。
+    * 云盘版节点拓扑配置。当 InstanceId 为主实例时必传。
     */
     @SerializedName("ClusterTopology")
     @Expose
@@ -73,103 +73,103 @@ public class CheckMigrateClusterRequest extends AbstractModel {
     private String DeviceType;
 
     /**
-    * 只读实例信息
+    * 只读实例信息。
     */
     @SerializedName("RoInfo")
     @Expose
     private MigrateClusterRoInfo [] RoInfo;
 
     /**
-     * Get 实例Id。 
-     * @return InstanceId 实例Id。
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id。
-     * @param InstanceId 实例Id。
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例CPU核数 
-     * @return Cpu 实例CPU核数
+     * Get 实例 CPU 核数。当 InstanceId 为主实例时必传。 
+     * @return Cpu 实例 CPU 核数。当 InstanceId 为主实例时必传。
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 实例CPU核数
-     * @param Cpu 实例CPU核数
+     * Set 实例 CPU 核数。当 InstanceId 为主实例时必传。
+     * @param Cpu 实例 CPU 核数。当 InstanceId 为主实例时必传。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 实例内存大小，单位：MB 
-     * @return Memory 实例内存大小，单位：MB
+     * Get 实例内存大小，单位：MB。当 InstanceId 为主实例时必传。 
+     * @return Memory 实例内存大小，单位：MB。当 InstanceId 为主实例时必传。
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例内存大小，单位：MB
-     * @param Memory 实例内存大小，单位：MB
+     * Set 实例内存大小，单位：MB。当 InstanceId 为主实例时必传。
+     * @param Memory 实例内存大小，单位：MB。当 InstanceId 为主实例时必传。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例硬盘大小，单位：GB 
-     * @return Volume 实例硬盘大小，单位：GB
+     * Get 实例硬盘大小，单位：GB。 
+     * @return Volume 实例硬盘大小，单位：GB。
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 实例硬盘大小，单位：GB
-     * @param Volume 实例硬盘大小，单位：GB
+     * Set 实例硬盘大小，单位：GB。
+     * @param Volume 实例硬盘大小，单位：GB。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get 磁盘类型。 CLOUD_SSD: SSD云硬盘; CLOUD_HSSD: 增强型SSD云硬盘 
-     * @return DiskType 磁盘类型。 CLOUD_SSD: SSD云硬盘; CLOUD_HSSD: 增强型SSD云硬盘
+     * Get 磁盘类型。 CLOUD_SSD: SSD 云硬盘; CLOUD_HSSD: 增强型 SSD 云硬盘。 
+     * @return DiskType 磁盘类型。 CLOUD_SSD: SSD 云硬盘; CLOUD_HSSD: 增强型 SSD 云硬盘。
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 磁盘类型。 CLOUD_SSD: SSD云硬盘; CLOUD_HSSD: 增强型SSD云硬盘
-     * @param DiskType 磁盘类型。 CLOUD_SSD: SSD云硬盘; CLOUD_HSSD: 增强型SSD云硬盘
+     * Set 磁盘类型。 CLOUD_SSD: SSD 云硬盘; CLOUD_HSSD: 增强型 SSD 云硬盘。
+     * @param DiskType 磁盘类型。 CLOUD_SSD: SSD 云硬盘; CLOUD_HSSD: 增强型 SSD 云硬盘。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 云盘版节点拓扑配置。 
-     * @return ClusterTopology 云盘版节点拓扑配置。
+     * Get 云盘版节点拓扑配置。当 InstanceId 为主实例时必传。 
+     * @return ClusterTopology 云盘版节点拓扑配置。当 InstanceId 为主实例时必传。
      */
     public ClusterTopology getClusterTopology() {
         return this.ClusterTopology;
     }
 
     /**
-     * Set 云盘版节点拓扑配置。
-     * @param ClusterTopology 云盘版节点拓扑配置。
+     * Set 云盘版节点拓扑配置。当 InstanceId 为主实例时必传。
+     * @param ClusterTopology 云盘版节点拓扑配置。当 InstanceId 为主实例时必传。
      */
     public void setClusterTopology(ClusterTopology ClusterTopology) {
         this.ClusterTopology = ClusterTopology;
@@ -192,16 +192,16 @@ public class CheckMigrateClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get 只读实例信息 
-     * @return RoInfo 只读实例信息
+     * Get 只读实例信息。 
+     * @return RoInfo 只读实例信息。
      */
     public MigrateClusterRoInfo [] getRoInfo() {
         return this.RoInfo;
     }
 
     /**
-     * Set 只读实例信息
-     * @param RoInfo 只读实例信息
+     * Set 只读实例信息。
+     * @param RoInfo 只读实例信息。
      */
     public void setRoInfo(MigrateClusterRoInfo [] RoInfo) {
         this.RoInfo = RoInfo;

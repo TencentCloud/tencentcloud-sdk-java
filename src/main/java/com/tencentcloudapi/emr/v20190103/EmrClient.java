@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class EmrClient extends AbstractClient{
     private static String endpoint = "emr.tencentcloudapi.com";
     private static String service = "emr";
     private static String version = "2019-01-03";
-    
+
     public EmrClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -81,6 +81,17 @@ public class EmrClient extends AbstractClient{
     public AttachDisksResponse AttachDisks(AttachDisksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "AttachDisks", AttachDisksResponse.class);
+    }
+
+    /**
+     *包月集群转按量集群（不含cdb）
+     * @param req ConvertPreToPostClusterRequest
+     * @return ConvertPreToPostClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConvertPreToPostClusterResponse ConvertPreToPostCluster(ConvertPreToPostClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ConvertPreToPostCluster", ConvertPreToPostClusterResponse.class);
     }
 
     /**
@@ -460,6 +471,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询节点规格
+     * @param req DescribeNodeSpecRequest
+     * @return DescribeNodeSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodeSpecResponse DescribeNodeSpec(DescribeNodeSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNodeSpec", DescribeNodeSpecResponse.class);
+    }
+
+    /**
      *查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
      * @param req DescribeResourceScheduleRequest
      * @return DescribeResourceScheduleResponse
@@ -501,6 +523,17 @@ public class EmrClient extends AbstractClient{
     public DescribeSLInstanceListResponse DescribeSLInstanceList(DescribeSLInstanceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSLInstanceList", DescribeSLInstanceListResponse.class);
+    }
+
+    /**
+     *描述服务配置组信息
+     * @param req DescribeServiceConfGroupInfosRequest
+     * @return DescribeServiceConfGroupInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceConfGroupInfosResponse DescribeServiceConfGroupInfos(DescribeServiceConfGroupInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServiceConfGroupInfos", DescribeServiceConfGroupInfosResponse.class);
     }
 
     /**

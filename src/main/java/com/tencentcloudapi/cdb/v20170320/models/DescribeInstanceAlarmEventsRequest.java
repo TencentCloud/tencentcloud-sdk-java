@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceAlarmEventsRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -66,7 +66,7 @@ public class DescribeInstanceAlarmEventsRequest extends AbstractModel {
     private String Order;
 
     /**
-    * 事件展示数量。
+    * 事件展示数量。默认为100，最大为200。
     */
     @SerializedName("Limit")
     @Expose
@@ -87,16 +87,16 @@ public class DescribeInstanceAlarmEventsRequest extends AbstractModel {
     private String NodeId;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -183,16 +183,16 @@ public class DescribeInstanceAlarmEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get 事件展示数量。 
-     * @return Limit 事件展示数量。
+     * Get 事件展示数量。默认为100，最大为200。 
+     * @return Limit 事件展示数量。默认为100，最大为200。
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 事件展示数量。
-     * @param Limit 事件展示数量。
+     * Set 事件展示数量。默认为100，最大为200。
+     * @param Limit 事件展示数量。默认为100，最大为200。
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;

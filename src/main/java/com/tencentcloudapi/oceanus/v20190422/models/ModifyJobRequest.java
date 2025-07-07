@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,6 +64,13 @@ public class ModifyJobRequest extends AbstractModel {
     @SerializedName("Description")
     @Expose
     private String Description;
+
+    /**
+    * 停止持续告警
+    */
+    @SerializedName("ContinueAlarm")
+    @Expose
+    private Long ContinueAlarm;
 
     /**
      * Get 作业Id 
@@ -161,6 +168,22 @@ public class ModifyJobRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 停止持续告警 
+     * @return ContinueAlarm 停止持续告警
+     */
+    public Long getContinueAlarm() {
+        return this.ContinueAlarm;
+    }
+
+    /**
+     * Set 停止持续告警
+     * @param ContinueAlarm 停止持续告警
+     */
+    public void setContinueAlarm(Long ContinueAlarm) {
+        this.ContinueAlarm = ContinueAlarm;
+    }
+
     public ModifyJobRequest() {
     }
 
@@ -187,6 +210,9 @@ public class ModifyJobRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ContinueAlarm != null) {
+            this.ContinueAlarm = new Long(source.ContinueAlarm);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ModifyJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetFolderId", this.TargetFolderId);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "ContinueAlarm", this.ContinueAlarm);
 
     }
 }

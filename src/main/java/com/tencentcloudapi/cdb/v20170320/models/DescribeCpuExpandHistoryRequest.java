@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCpuExpandHistoryRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,14 +45,14 @@ public class DescribeCpuExpandHistoryRequest extends AbstractModel {
     private String Status;
 
     /**
-    * 查询的开始时间。只能查看30天内的扩容历史
+    * 查询的开始时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 查询的结束时间。只能查看30天内的扩容历史
+    * 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
     */
     @SerializedName("EndTime")
     @Expose
@@ -73,16 +73,16 @@ public class DescribeCpuExpandHistoryRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -121,32 +121,32 @@ public class DescribeCpuExpandHistoryRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询的开始时间。只能查看30天内的扩容历史 
-     * @return StartTime 查询的开始时间。只能查看30天内的扩容历史
+     * Get 查询的开始时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。 
+     * @return StartTime 查询的开始时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询的开始时间。只能查看30天内的扩容历史
-     * @param StartTime 查询的开始时间。只能查看30天内的扩容历史
+     * Set 查询的开始时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
+     * @param StartTime 查询的开始时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询的结束时间。只能查看30天内的扩容历史 
-     * @return EndTime 查询的结束时间。只能查看30天内的扩容历史
+     * Get 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。 
+     * @return EndTime 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询的结束时间。只能查看30天内的扩容历史
-     * @param EndTime 查询的结束时间。只能查看30天内的扩容历史
+     * Set 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
+     * @param EndTime 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

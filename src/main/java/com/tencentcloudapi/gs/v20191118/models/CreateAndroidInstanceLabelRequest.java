@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,11 +31,18 @@ public class CreateAndroidInstanceLabelRequest extends AbstractModel {
     private String Key;
 
     /**
-    * 标签值
+    * 标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
+
+    /**
+    * 标签描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
 
     /**
      * Get 标签键 
@@ -54,19 +61,35 @@ public class CreateAndroidInstanceLabelRequest extends AbstractModel {
     }
 
     /**
-     * Get 标签值 
-     * @return Value 标签值
+     * Get 标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。 
+     * @return Value 标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 标签值
-     * @param Value 标签值
+     * Set 标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
+     * @param Value 标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
      */
     public void setValue(String Value) {
         this.Value = Value;
+    }
+
+    /**
+     * Get 标签描述 
+     * @return Description 标签描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 标签描述
+     * @param Description 标签描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     public CreateAndroidInstanceLabelRequest() {
@@ -83,6 +106,9 @@ public class CreateAndroidInstanceLabelRequest extends AbstractModel {
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateAndroidInstanceLabelRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -78,6 +78,13 @@ public class AndroidApp extends AbstractModel {
     @SerializedName("UpdateState")
     @Expose
     private String UpdateState;
+
+    /**
+    * 安卓应用包名
+    */
+    @SerializedName("PackageName")
+    @Expose
+    private String PackageName;
 
     /**
      * Get 安卓应用 Id 
@@ -207,6 +214,22 @@ public class AndroidApp extends AbstractModel {
         this.UpdateState = UpdateState;
     }
 
+    /**
+     * Get 安卓应用包名 
+     * @return PackageName 安卓应用包名
+     */
+    public String getPackageName() {
+        return this.PackageName;
+    }
+
+    /**
+     * Set 安卓应用包名
+     * @param PackageName 安卓应用包名
+     */
+    public void setPackageName(String PackageName) {
+        this.PackageName = PackageName;
+    }
+
     public AndroidApp() {
     }
 
@@ -242,6 +265,9 @@ public class AndroidApp extends AbstractModel {
         if (source.UpdateState != null) {
             this.UpdateState = new String(source.UpdateState);
         }
+        if (source.PackageName != null) {
+            this.PackageName = new String(source.PackageName);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class AndroidApp extends AbstractModel {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "AppMode", this.AppMode);
         this.setParamSimple(map, prefix + "UpdateState", this.UpdateState);
+        this.setParamSimple(map, prefix + "PackageName", this.PackageName);
 
     }
 }

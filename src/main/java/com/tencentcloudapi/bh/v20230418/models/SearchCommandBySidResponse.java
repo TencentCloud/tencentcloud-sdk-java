@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,6 +31,13 @@ public class SearchCommandBySidResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 命令列表
+    */
+    @SerializedName("CommandSet")
+    @Expose
+    private Command [] CommandSet;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class SearchCommandBySidResponse extends AbstractModel {
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 命令列表 
+     * @return CommandSet 命令列表
+     */
+    public Command [] getCommandSet() {
+        return this.CommandSet;
+    }
+
+    /**
+     * Set 命令列表
+     * @param CommandSet 命令列表
+     */
+    public void setCommandSet(Command [] CommandSet) {
+        this.CommandSet = CommandSet;
     }
 
     /**
@@ -80,6 +103,12 @@ public class SearchCommandBySidResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.CommandSet != null) {
+            this.CommandSet = new Command[source.CommandSet.length];
+            for (int i = 0; i < source.CommandSet.length; i++) {
+                this.CommandSet[i] = new Command(source.CommandSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +120,7 @@ public class SearchCommandBySidResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "CommandSet.", this.CommandSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

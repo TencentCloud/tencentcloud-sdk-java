@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,14 @@ public class LoadMetricsConditions extends AbstractModel {
     private LoadMetricsCondition [] LoadMetrics;
 
     /**
+    * 0:所有条件满足
+1：满足任意一个
+    */
+    @SerializedName("Match")
+    @Expose
+    private Long Match;
+
+    /**
      * Get 触发规则条件
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LoadMetrics 触发规则条件
@@ -51,6 +59,26 @@ public class LoadMetricsConditions extends AbstractModel {
         this.LoadMetrics = LoadMetrics;
     }
 
+    /**
+     * Get 0:所有条件满足
+1：满足任意一个 
+     * @return Match 0:所有条件满足
+1：满足任意一个
+     */
+    public Long getMatch() {
+        return this.Match;
+    }
+
+    /**
+     * Set 0:所有条件满足
+1：满足任意一个
+     * @param Match 0:所有条件满足
+1：满足任意一个
+     */
+    public void setMatch(Long Match) {
+        this.Match = Match;
+    }
+
     public LoadMetricsConditions() {
     }
 
@@ -65,6 +93,9 @@ public class LoadMetricsConditions extends AbstractModel {
                 this.LoadMetrics[i] = new LoadMetricsCondition(source.LoadMetrics[i]);
             }
         }
+        if (source.Match != null) {
+            this.Match = new Long(source.Match);
+        }
     }
 
 
@@ -73,6 +104,7 @@ public class LoadMetricsConditions extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "LoadMetrics.", this.LoadMetrics);
+        this.setParamSimple(map, prefix + "Match", this.Match);
 
     }
 }

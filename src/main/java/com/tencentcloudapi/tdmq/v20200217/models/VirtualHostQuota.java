@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,6 +38,27 @@ public class VirtualHostQuota extends AbstractModel {
     private Long UsedVirtualHost;
 
     /**
+    * 单个 vhost 下允许的最大连接数
+    */
+    @SerializedName("MaxConnectionPerVhost")
+    @Expose
+    private Long MaxConnectionPerVhost;
+
+    /**
+    * 单个 vhost 下允许的最大交换机数
+    */
+    @SerializedName("MaxExchangePerVhost")
+    @Expose
+    private Long MaxExchangePerVhost;
+
+    /**
+    * 单个 vhost 下允许的最大队列机数
+    */
+    @SerializedName("MaxQueuePerVhost")
+    @Expose
+    private Long MaxQueuePerVhost;
+
+    /**
      * Get 允许创建最大vhost数 
      * @return MaxVirtualHost 允许创建最大vhost数
      */
@@ -69,6 +90,54 @@ public class VirtualHostQuota extends AbstractModel {
         this.UsedVirtualHost = UsedVirtualHost;
     }
 
+    /**
+     * Get 单个 vhost 下允许的最大连接数 
+     * @return MaxConnectionPerVhost 单个 vhost 下允许的最大连接数
+     */
+    public Long getMaxConnectionPerVhost() {
+        return this.MaxConnectionPerVhost;
+    }
+
+    /**
+     * Set 单个 vhost 下允许的最大连接数
+     * @param MaxConnectionPerVhost 单个 vhost 下允许的最大连接数
+     */
+    public void setMaxConnectionPerVhost(Long MaxConnectionPerVhost) {
+        this.MaxConnectionPerVhost = MaxConnectionPerVhost;
+    }
+
+    /**
+     * Get 单个 vhost 下允许的最大交换机数 
+     * @return MaxExchangePerVhost 单个 vhost 下允许的最大交换机数
+     */
+    public Long getMaxExchangePerVhost() {
+        return this.MaxExchangePerVhost;
+    }
+
+    /**
+     * Set 单个 vhost 下允许的最大交换机数
+     * @param MaxExchangePerVhost 单个 vhost 下允许的最大交换机数
+     */
+    public void setMaxExchangePerVhost(Long MaxExchangePerVhost) {
+        this.MaxExchangePerVhost = MaxExchangePerVhost;
+    }
+
+    /**
+     * Get 单个 vhost 下允许的最大队列机数 
+     * @return MaxQueuePerVhost 单个 vhost 下允许的最大队列机数
+     */
+    public Long getMaxQueuePerVhost() {
+        return this.MaxQueuePerVhost;
+    }
+
+    /**
+     * Set 单个 vhost 下允许的最大队列机数
+     * @param MaxQueuePerVhost 单个 vhost 下允许的最大队列机数
+     */
+    public void setMaxQueuePerVhost(Long MaxQueuePerVhost) {
+        this.MaxQueuePerVhost = MaxQueuePerVhost;
+    }
+
     public VirtualHostQuota() {
     }
 
@@ -83,6 +152,15 @@ public class VirtualHostQuota extends AbstractModel {
         if (source.UsedVirtualHost != null) {
             this.UsedVirtualHost = new Long(source.UsedVirtualHost);
         }
+        if (source.MaxConnectionPerVhost != null) {
+            this.MaxConnectionPerVhost = new Long(source.MaxConnectionPerVhost);
+        }
+        if (source.MaxExchangePerVhost != null) {
+            this.MaxExchangePerVhost = new Long(source.MaxExchangePerVhost);
+        }
+        if (source.MaxQueuePerVhost != null) {
+            this.MaxQueuePerVhost = new Long(source.MaxQueuePerVhost);
+        }
     }
 
 
@@ -92,6 +170,9 @@ public class VirtualHostQuota extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MaxVirtualHost", this.MaxVirtualHost);
         this.setParamSimple(map, prefix + "UsedVirtualHost", this.UsedVirtualHost);
+        this.setParamSimple(map, prefix + "MaxConnectionPerVhost", this.MaxConnectionPerVhost);
+        this.setParamSimple(map, prefix + "MaxExchangePerVhost", this.MaxExchangePerVhost);
+        this.setParamSimple(map, prefix + "MaxQueuePerVhost", this.MaxQueuePerVhost);
 
     }
 }

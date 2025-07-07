@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ public class CreateTopicRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+    * 只能包含字母、数字、下划线、“-”、“.”
     */
     @SerializedName("TopicName")
     @Expose
@@ -159,16 +159,16 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
-     * @return TopicName 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Get 只能包含字母、数字、下划线、“-”、“.” 
+     * @return TopicName 只能包含字母、数字、下划线、“-”、“.”
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param TopicName 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Set 只能包含字母、数字、下划线、“-”、“.”
+     * @param TopicName 只能包含字母、数字、下划线、“-”、“.”
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

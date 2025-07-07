@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class IoaClient extends AbstractClient{
     private static String endpoint = "ioa.tencentcloudapi.com";
     private static String service = "ioa";
     private static String version = "2022-06-01";
-    
+
     public IoaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -127,6 +127,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *查询终端自定义分组列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceVirtualGroups
+     * @param req DescribeDeviceVirtualGroupsRequest
+     * @return DescribeDeviceVirtualGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceVirtualGroupsResponse DescribeDeviceVirtualGroups(DescribeDeviceVirtualGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceVirtualGroups", DescribeDeviceVirtualGroupsResponse.class);
+    }
+
+    /**
      *查询满足条件的终端数据详情，私有化调用path为：/capi/Assets/Device/DescribeDevices
      * @param req DescribeDevicesRequest
      * @return DescribeDevicesResponse
@@ -179,6 +190,28 @@ public class IoaClient extends AbstractClient{
     public DescribeSoftwareInformationResponse DescribeSoftwareInformation(DescribeSoftwareInformationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSoftwareInformation", DescribeSoftwareInformationResponse.class);
+    }
+
+    /**
+     *展示自定义分组终端列表，私有化调用path为：/capi/Assets/DescribeVirtualDevices
+     * @param req DescribeVirtualDevicesRequest
+     * @return DescribeVirtualDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVirtualDevicesResponse DescribeVirtualDevices(DescribeVirtualDevicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVirtualDevices", DescribeVirtualDevicesResponse.class);
+    }
+
+    /**
+     *终端自定义分组增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
+     * @param req ModifyVirtualDeviceGroupsRequest
+     * @return ModifyVirtualDeviceGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVirtualDeviceGroupsResponse ModifyVirtualDeviceGroups(ModifyVirtualDeviceGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVirtualDeviceGroups", ModifyVirtualDeviceGroupsResponse.class);
     }
 
 }

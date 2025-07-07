@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -435,6 +435,20 @@ public class NodeHardwareInfo extends AbstractModel {
     @SerializedName("NodeMark")
     @Expose
     private String NodeMark;
+
+    /**
+    * 包销资源是否支持设置自动续费
+    */
+    @SerializedName("UnderwriteSetAutoRenew")
+    @Expose
+    private Boolean UnderwriteSetAutoRenew;
+
+    /**
+    * Gpu信息
+    */
+    @SerializedName("GpuDesc")
+    @Expose
+    private String GpuDesc;
 
     /**
      * Get 用户APPID 
@@ -1392,6 +1406,38 @@ public class NodeHardwareInfo extends AbstractModel {
         this.NodeMark = NodeMark;
     }
 
+    /**
+     * Get 包销资源是否支持设置自动续费 
+     * @return UnderwriteSetAutoRenew 包销资源是否支持设置自动续费
+     */
+    public Boolean getUnderwriteSetAutoRenew() {
+        return this.UnderwriteSetAutoRenew;
+    }
+
+    /**
+     * Set 包销资源是否支持设置自动续费
+     * @param UnderwriteSetAutoRenew 包销资源是否支持设置自动续费
+     */
+    public void setUnderwriteSetAutoRenew(Boolean UnderwriteSetAutoRenew) {
+        this.UnderwriteSetAutoRenew = UnderwriteSetAutoRenew;
+    }
+
+    /**
+     * Get Gpu信息 
+     * @return GpuDesc Gpu信息
+     */
+    public String getGpuDesc() {
+        return this.GpuDesc;
+    }
+
+    /**
+     * Set Gpu信息
+     * @param GpuDesc Gpu信息
+     */
+    public void setGpuDesc(String GpuDesc) {
+        this.GpuDesc = GpuDesc;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1583,6 +1629,12 @@ public class NodeHardwareInfo extends AbstractModel {
         if (source.NodeMark != null) {
             this.NodeMark = new String(source.NodeMark);
         }
+        if (source.UnderwriteSetAutoRenew != null) {
+            this.UnderwriteSetAutoRenew = new Boolean(source.UnderwriteSetAutoRenew);
+        }
+        if (source.GpuDesc != null) {
+            this.GpuDesc = new String(source.GpuDesc);
+        }
     }
 
 
@@ -1648,6 +1700,8 @@ public class NodeHardwareInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
         this.setParamArraySimple(map, prefix + "ConfigurableServices.", this.ConfigurableServices);
         this.setParamSimple(map, prefix + "NodeMark", this.NodeMark);
+        this.setParamSimple(map, prefix + "UnderwriteSetAutoRenew", this.UnderwriteSetAutoRenew);
+        this.setParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
 
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,26 +24,26 @@ import java.util.HashMap;
 public class CreateTopicRequest extends AbstractModel {
 
     /**
-    * 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+    * 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+    * 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+    * 主题类型，枚举值如下：
+
+- NORMAL: 普通消息
+- FIFO: 顺序消息
+- DELAY: 延时消息
+- TRANSACTION: 事务消息
     */
     @SerializedName("TopicType")
     @Expose
@@ -57,7 +57,7 @@ TRANSACTION:事务消息
     private Long QueueNum;
 
     /**
-    * 备注，最多 128 字符
+    * 备注信息，最多 128 个字符
     */
     @SerializedName("Remark")
     @Expose
@@ -78,68 +78,68 @@ TRANSACTION:事务消息
     private Tag [] TagList;
 
     /**
-     * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。 
-     * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
+     * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
-     * @param InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * Set 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+     * @param InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。 
-     * @return Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+     * Get 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。 
+     * @return Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
-     * @param Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+     * Set 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
+     * @param Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息 
-     * @return TopicType 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+     * Get 主题类型，枚举值如下：
+
+- NORMAL: 普通消息
+- FIFO: 顺序消息
+- DELAY: 延时消息
+- TRANSACTION: 事务消息 
+     * @return TopicType 主题类型，枚举值如下：
+
+- NORMAL: 普通消息
+- FIFO: 顺序消息
+- DELAY: 延时消息
+- TRANSACTION: 事务消息
      */
     public String getTopicType() {
         return this.TopicType;
     }
 
     /**
-     * Set 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
-     * @param TopicType 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+     * Set 主题类型，枚举值如下：
+
+- NORMAL: 普通消息
+- FIFO: 顺序消息
+- DELAY: 延时消息
+- TRANSACTION: 事务消息
+     * @param TopicType 主题类型，枚举值如下：
+
+- NORMAL: 普通消息
+- FIFO: 顺序消息
+- DELAY: 延时消息
+- TRANSACTION: 事务消息
      */
     public void setTopicType(String TopicType) {
         this.TopicType = TopicType;
@@ -162,16 +162,16 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Get 备注，最多 128 字符 
-     * @return Remark 备注，最多 128 字符
+     * Get 备注信息，最多 128 个字符 
+     * @return Remark 备注信息，最多 128 个字符
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注，最多 128 字符
-     * @param Remark 备注，最多 128 字符
+     * Set 备注信息，最多 128 个字符
+     * @param Remark 备注信息，最多 128 个字符
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

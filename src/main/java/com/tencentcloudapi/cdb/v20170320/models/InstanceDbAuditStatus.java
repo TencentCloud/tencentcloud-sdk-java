@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,42 +45,57 @@ public class InstanceDbAuditStatus extends AbstractModel {
     private Long AuditTask;
 
     /**
-    * 日志保留时长。
+    * 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
     */
     @SerializedName("LogExpireDay")
     @Expose
     private Long LogExpireDay;
 
     /**
-    * 高频存储时长。
+    * 高频存储时长。支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
     */
     @SerializedName("HighLogExpireDay")
     @Expose
     private Long HighLogExpireDay;
 
     /**
-    * 低频存储时长。
+    * 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
     */
     @SerializedName("LowLogExpireDay")
     @Expose
     private Long LowLogExpireDay;
 
     /**
-    * 日志存储量。
+    * 日志存储量(单位：GB)。
     */
     @SerializedName("BillingAmount")
     @Expose
     private Float BillingAmount;
 
     /**
-    * 高频存储量。
+    * 高频存储量(单位：GB)。
     */
     @SerializedName("HighRealStorage")
     @Expose
     private Float HighRealStorage;
 
     /**
-    * 低频存储量。
+    * 低频存储量(单位：GB)。
     */
     @SerializedName("LowRealStorage")
     @Expose
@@ -108,7 +123,7 @@ public class InstanceDbAuditStatus extends AbstractModel {
     private AuditInstanceInfo InstanceInfo;
 
     /**
-    * 总存储量。
+    * 总存储量(单位：GB)。
     */
     @SerializedName("RealStorage")
     @Expose
@@ -177,96 +192,156 @@ public class InstanceDbAuditStatus extends AbstractModel {
     }
 
     /**
-     * Get 日志保留时长。 
-     * @return LogExpireDay 日志保留时长。
+     * Get 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。 
+     * @return LogExpireDay 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public Long getLogExpireDay() {
         return this.LogExpireDay;
     }
 
     /**
-     * Set 日志保留时长。
-     * @param LogExpireDay 日志保留时长。
+     * Set 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+     * @param LogExpireDay 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public void setLogExpireDay(Long LogExpireDay) {
         this.LogExpireDay = LogExpireDay;
     }
 
     /**
-     * Get 高频存储时长。 
-     * @return HighLogExpireDay 高频存储时长。
+     * Get 高频存储时长。支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。 
+     * @return HighLogExpireDay 高频存储时长。支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
     }
 
     /**
-     * Set 高频存储时长。
-     * @param HighLogExpireDay 高频存储时长。
+     * Set 高频存储时长。支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+     * @param HighLogExpireDay 高频存储时长。支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
     }
 
     /**
-     * Get 低频存储时长。 
-     * @return LowLogExpireDay 低频存储时长。
+     * Get 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。 
+     * @return LowLogExpireDay 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
      */
     public Long getLowLogExpireDay() {
         return this.LowLogExpireDay;
     }
 
     /**
-     * Set 低频存储时长。
-     * @param LowLogExpireDay 低频存储时长。
+     * Set 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
+     * @param LowLogExpireDay 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
      */
     public void setLowLogExpireDay(Long LowLogExpireDay) {
         this.LowLogExpireDay = LowLogExpireDay;
     }
 
     /**
-     * Get 日志存储量。 
-     * @return BillingAmount 日志存储量。
+     * Get 日志存储量(单位：GB)。 
+     * @return BillingAmount 日志存储量(单位：GB)。
      */
     public Float getBillingAmount() {
         return this.BillingAmount;
     }
 
     /**
-     * Set 日志存储量。
-     * @param BillingAmount 日志存储量。
+     * Set 日志存储量(单位：GB)。
+     * @param BillingAmount 日志存储量(单位：GB)。
      */
     public void setBillingAmount(Float BillingAmount) {
         this.BillingAmount = BillingAmount;
     }
 
     /**
-     * Get 高频存储量。 
-     * @return HighRealStorage 高频存储量。
+     * Get 高频存储量(单位：GB)。 
+     * @return HighRealStorage 高频存储量(单位：GB)。
      */
     public Float getHighRealStorage() {
         return this.HighRealStorage;
     }
 
     /**
-     * Set 高频存储量。
-     * @param HighRealStorage 高频存储量。
+     * Set 高频存储量(单位：GB)。
+     * @param HighRealStorage 高频存储量(单位：GB)。
      */
     public void setHighRealStorage(Float HighRealStorage) {
         this.HighRealStorage = HighRealStorage;
     }
 
     /**
-     * Get 低频存储量。 
-     * @return LowRealStorage 低频存储量。
+     * Get 低频存储量(单位：GB)。 
+     * @return LowRealStorage 低频存储量(单位：GB)。
      */
     public Float getLowRealStorage() {
         return this.LowRealStorage;
     }
 
     /**
-     * Set 低频存储量。
-     * @param LowRealStorage 低频存储量。
+     * Set 低频存储量(单位：GB)。
+     * @param LowRealStorage 低频存储量(单位：GB)。
      */
     public void setLowRealStorage(Float LowRealStorage) {
         this.LowRealStorage = LowRealStorage;
@@ -321,16 +396,16 @@ public class InstanceDbAuditStatus extends AbstractModel {
     }
 
     /**
-     * Get 总存储量。 
-     * @return RealStorage 总存储量。
+     * Get 总存储量(单位：GB)。 
+     * @return RealStorage 总存储量(单位：GB)。
      */
     public Float getRealStorage() {
         return this.RealStorage;
     }
 
     /**
-     * Set 总存储量。
-     * @param RealStorage 总存储量。
+     * Set 总存储量(单位：GB)。
+     * @param RealStorage 总存储量(单位：GB)。
      */
     public void setRealStorage(Float RealStorage) {
         this.RealStorage = RealStorage;

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -127,6 +127,13 @@ public class DescribeInstancesRequest extends AbstractModel {
     @SerializedName("TaskStatus")
     @Expose
     private Long [] TaskStatus;
+
+    /**
+    * 根据实例vip搜索实例
+    */
+    @SerializedName("Networks")
+    @Expose
+    private String [] Networks;
 
     /**
      * Get 实例ID数组。 
@@ -376,6 +383,22 @@ public class DescribeInstancesRequest extends AbstractModel {
         this.TaskStatus = TaskStatus;
     }
 
+    /**
+     * Get 根据实例vip搜索实例 
+     * @return Networks 根据实例vip搜索实例
+     */
+    public String [] getNetworks() {
+        return this.Networks;
+    }
+
+    /**
+     * Set 根据实例vip搜索实例
+     * @param Networks 根据实例vip搜索实例
+     */
+    public void setNetworks(String [] Networks) {
+        this.Networks = Networks;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -459,6 +482,12 @@ public class DescribeInstancesRequest extends AbstractModel {
                 this.TaskStatus[i] = new Long(source.TaskStatus[i]);
             }
         }
+        if (source.Networks != null) {
+            this.Networks = new String[source.Networks.length];
+            for (int i = 0; i < source.Networks.length; i++) {
+                this.Networks[i] = new String(source.Networks[i]);
+            }
+        }
     }
 
 
@@ -481,6 +510,7 @@ public class DescribeInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamArraySimple(map, prefix + "TaskStatus.", this.TaskStatus);
+        this.setParamArraySimple(map, prefix + "Networks.", this.Networks);
 
     }
 }

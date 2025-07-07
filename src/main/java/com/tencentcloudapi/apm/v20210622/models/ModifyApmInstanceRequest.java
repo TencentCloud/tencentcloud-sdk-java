@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -218,6 +218,90 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     @SerializedName("LogTraceIdKey")
     @Expose
     private String LogTraceIdKey;
+
+    /**
+    * 是否开启删除任意文件检测（0-关闭，1-开启）
+    */
+    @SerializedName("IsDeleteAnyFileAnalysis")
+    @Expose
+    private Long IsDeleteAnyFileAnalysis;
+
+    /**
+    * 是否开启读取任意文件检测（0-关闭，1-开启）
+    */
+    @SerializedName("IsReadAnyFileAnalysis")
+    @Expose
+    private Long IsReadAnyFileAnalysis;
+
+    /**
+    * 是否开启上传任意文件检测（0-关闭，1-开启）
+    */
+    @SerializedName("IsUploadAnyFileAnalysis")
+    @Expose
+    private Long IsUploadAnyFileAnalysis;
+
+    /**
+    * 是否开启包含任意文件检测（0-关闭，1-开启）
+    */
+    @SerializedName("IsIncludeAnyFileAnalysis")
+    @Expose
+    private Long IsIncludeAnyFileAnalysis;
+
+    /**
+    * 是否开启目录遍历检测（0-关闭，1-开启）
+    */
+    @SerializedName("IsDirectoryTraversalAnalysis")
+    @Expose
+    private Long IsDirectoryTraversalAnalysis;
+
+    /**
+    * 是否开启模板引擎注入检测（0-关闭，1-开启）
+    */
+    @SerializedName("IsTemplateEngineInjectionAnalysis")
+    @Expose
+    private Long IsTemplateEngineInjectionAnalysis;
+
+    /**
+    * 是否开启脚本引擎注入检测（0-关闭，1-开启）
+    */
+    @SerializedName("IsScriptEngineInjectionAnalysis")
+    @Expose
+    private Long IsScriptEngineInjectionAnalysis;
+
+    /**
+    * 是否开启表达式注入检测（0-关闭，1-开启）
+    */
+    @SerializedName("IsExpressionInjectionAnalysis")
+    @Expose
+    private Long IsExpressionInjectionAnalysis;
+
+    /**
+    * 是否开启JNDI注入检测（0-关闭，1-开启）
+    */
+    @SerializedName("IsJNDIInjectionAnalysis")
+    @Expose
+    private Long IsJNDIInjectionAnalysis;
+
+    /**
+    * 是否开启JNI注入检测（0-关闭，1-开启）
+    */
+    @SerializedName("IsJNIInjectionAnalysis")
+    @Expose
+    private Long IsJNIInjectionAnalysis;
+
+    /**
+    * 是否开启Webshell后门检测（0-关闭，1-开启）
+    */
+    @SerializedName("IsWebshellBackdoorAnalysis")
+    @Expose
+    private Long IsWebshellBackdoorAnalysis;
+
+    /**
+    * 是否开启反序列化检测（0-关闭，1-开启）
+    */
+    @SerializedName("IsDeserializationAnalysis")
+    @Expose
+    private Long IsDeserializationAnalysis;
 
     /**
      * Get 业务系统 ID 
@@ -667,6 +751,198 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.LogTraceIdKey = LogTraceIdKey;
     }
 
+    /**
+     * Get 是否开启删除任意文件检测（0-关闭，1-开启） 
+     * @return IsDeleteAnyFileAnalysis 是否开启删除任意文件检测（0-关闭，1-开启）
+     */
+    public Long getIsDeleteAnyFileAnalysis() {
+        return this.IsDeleteAnyFileAnalysis;
+    }
+
+    /**
+     * Set 是否开启删除任意文件检测（0-关闭，1-开启）
+     * @param IsDeleteAnyFileAnalysis 是否开启删除任意文件检测（0-关闭，1-开启）
+     */
+    public void setIsDeleteAnyFileAnalysis(Long IsDeleteAnyFileAnalysis) {
+        this.IsDeleteAnyFileAnalysis = IsDeleteAnyFileAnalysis;
+    }
+
+    /**
+     * Get 是否开启读取任意文件检测（0-关闭，1-开启） 
+     * @return IsReadAnyFileAnalysis 是否开启读取任意文件检测（0-关闭，1-开启）
+     */
+    public Long getIsReadAnyFileAnalysis() {
+        return this.IsReadAnyFileAnalysis;
+    }
+
+    /**
+     * Set 是否开启读取任意文件检测（0-关闭，1-开启）
+     * @param IsReadAnyFileAnalysis 是否开启读取任意文件检测（0-关闭，1-开启）
+     */
+    public void setIsReadAnyFileAnalysis(Long IsReadAnyFileAnalysis) {
+        this.IsReadAnyFileAnalysis = IsReadAnyFileAnalysis;
+    }
+
+    /**
+     * Get 是否开启上传任意文件检测（0-关闭，1-开启） 
+     * @return IsUploadAnyFileAnalysis 是否开启上传任意文件检测（0-关闭，1-开启）
+     */
+    public Long getIsUploadAnyFileAnalysis() {
+        return this.IsUploadAnyFileAnalysis;
+    }
+
+    /**
+     * Set 是否开启上传任意文件检测（0-关闭，1-开启）
+     * @param IsUploadAnyFileAnalysis 是否开启上传任意文件检测（0-关闭，1-开启）
+     */
+    public void setIsUploadAnyFileAnalysis(Long IsUploadAnyFileAnalysis) {
+        this.IsUploadAnyFileAnalysis = IsUploadAnyFileAnalysis;
+    }
+
+    /**
+     * Get 是否开启包含任意文件检测（0-关闭，1-开启） 
+     * @return IsIncludeAnyFileAnalysis 是否开启包含任意文件检测（0-关闭，1-开启）
+     */
+    public Long getIsIncludeAnyFileAnalysis() {
+        return this.IsIncludeAnyFileAnalysis;
+    }
+
+    /**
+     * Set 是否开启包含任意文件检测（0-关闭，1-开启）
+     * @param IsIncludeAnyFileAnalysis 是否开启包含任意文件检测（0-关闭，1-开启）
+     */
+    public void setIsIncludeAnyFileAnalysis(Long IsIncludeAnyFileAnalysis) {
+        this.IsIncludeAnyFileAnalysis = IsIncludeAnyFileAnalysis;
+    }
+
+    /**
+     * Get 是否开启目录遍历检测（0-关闭，1-开启） 
+     * @return IsDirectoryTraversalAnalysis 是否开启目录遍历检测（0-关闭，1-开启）
+     */
+    public Long getIsDirectoryTraversalAnalysis() {
+        return this.IsDirectoryTraversalAnalysis;
+    }
+
+    /**
+     * Set 是否开启目录遍历检测（0-关闭，1-开启）
+     * @param IsDirectoryTraversalAnalysis 是否开启目录遍历检测（0-关闭，1-开启）
+     */
+    public void setIsDirectoryTraversalAnalysis(Long IsDirectoryTraversalAnalysis) {
+        this.IsDirectoryTraversalAnalysis = IsDirectoryTraversalAnalysis;
+    }
+
+    /**
+     * Get 是否开启模板引擎注入检测（0-关闭，1-开启） 
+     * @return IsTemplateEngineInjectionAnalysis 是否开启模板引擎注入检测（0-关闭，1-开启）
+     */
+    public Long getIsTemplateEngineInjectionAnalysis() {
+        return this.IsTemplateEngineInjectionAnalysis;
+    }
+
+    /**
+     * Set 是否开启模板引擎注入检测（0-关闭，1-开启）
+     * @param IsTemplateEngineInjectionAnalysis 是否开启模板引擎注入检测（0-关闭，1-开启）
+     */
+    public void setIsTemplateEngineInjectionAnalysis(Long IsTemplateEngineInjectionAnalysis) {
+        this.IsTemplateEngineInjectionAnalysis = IsTemplateEngineInjectionAnalysis;
+    }
+
+    /**
+     * Get 是否开启脚本引擎注入检测（0-关闭，1-开启） 
+     * @return IsScriptEngineInjectionAnalysis 是否开启脚本引擎注入检测（0-关闭，1-开启）
+     */
+    public Long getIsScriptEngineInjectionAnalysis() {
+        return this.IsScriptEngineInjectionAnalysis;
+    }
+
+    /**
+     * Set 是否开启脚本引擎注入检测（0-关闭，1-开启）
+     * @param IsScriptEngineInjectionAnalysis 是否开启脚本引擎注入检测（0-关闭，1-开启）
+     */
+    public void setIsScriptEngineInjectionAnalysis(Long IsScriptEngineInjectionAnalysis) {
+        this.IsScriptEngineInjectionAnalysis = IsScriptEngineInjectionAnalysis;
+    }
+
+    /**
+     * Get 是否开启表达式注入检测（0-关闭，1-开启） 
+     * @return IsExpressionInjectionAnalysis 是否开启表达式注入检测（0-关闭，1-开启）
+     */
+    public Long getIsExpressionInjectionAnalysis() {
+        return this.IsExpressionInjectionAnalysis;
+    }
+
+    /**
+     * Set 是否开启表达式注入检测（0-关闭，1-开启）
+     * @param IsExpressionInjectionAnalysis 是否开启表达式注入检测（0-关闭，1-开启）
+     */
+    public void setIsExpressionInjectionAnalysis(Long IsExpressionInjectionAnalysis) {
+        this.IsExpressionInjectionAnalysis = IsExpressionInjectionAnalysis;
+    }
+
+    /**
+     * Get 是否开启JNDI注入检测（0-关闭，1-开启） 
+     * @return IsJNDIInjectionAnalysis 是否开启JNDI注入检测（0-关闭，1-开启）
+     */
+    public Long getIsJNDIInjectionAnalysis() {
+        return this.IsJNDIInjectionAnalysis;
+    }
+
+    /**
+     * Set 是否开启JNDI注入检测（0-关闭，1-开启）
+     * @param IsJNDIInjectionAnalysis 是否开启JNDI注入检测（0-关闭，1-开启）
+     */
+    public void setIsJNDIInjectionAnalysis(Long IsJNDIInjectionAnalysis) {
+        this.IsJNDIInjectionAnalysis = IsJNDIInjectionAnalysis;
+    }
+
+    /**
+     * Get 是否开启JNI注入检测（0-关闭，1-开启） 
+     * @return IsJNIInjectionAnalysis 是否开启JNI注入检测（0-关闭，1-开启）
+     */
+    public Long getIsJNIInjectionAnalysis() {
+        return this.IsJNIInjectionAnalysis;
+    }
+
+    /**
+     * Set 是否开启JNI注入检测（0-关闭，1-开启）
+     * @param IsJNIInjectionAnalysis 是否开启JNI注入检测（0-关闭，1-开启）
+     */
+    public void setIsJNIInjectionAnalysis(Long IsJNIInjectionAnalysis) {
+        this.IsJNIInjectionAnalysis = IsJNIInjectionAnalysis;
+    }
+
+    /**
+     * Get 是否开启Webshell后门检测（0-关闭，1-开启） 
+     * @return IsWebshellBackdoorAnalysis 是否开启Webshell后门检测（0-关闭，1-开启）
+     */
+    public Long getIsWebshellBackdoorAnalysis() {
+        return this.IsWebshellBackdoorAnalysis;
+    }
+
+    /**
+     * Set 是否开启Webshell后门检测（0-关闭，1-开启）
+     * @param IsWebshellBackdoorAnalysis 是否开启Webshell后门检测（0-关闭，1-开启）
+     */
+    public void setIsWebshellBackdoorAnalysis(Long IsWebshellBackdoorAnalysis) {
+        this.IsWebshellBackdoorAnalysis = IsWebshellBackdoorAnalysis;
+    }
+
+    /**
+     * Get 是否开启反序列化检测（0-关闭，1-开启） 
+     * @return IsDeserializationAnalysis 是否开启反序列化检测（0-关闭，1-开启）
+     */
+    public Long getIsDeserializationAnalysis() {
+        return this.IsDeserializationAnalysis;
+    }
+
+    /**
+     * Set 是否开启反序列化检测（0-关闭，1-开启）
+     * @param IsDeserializationAnalysis 是否开启反序列化检测（0-关闭，1-开启）
+     */
+    public void setIsDeserializationAnalysis(Long IsDeserializationAnalysis) {
+        this.IsDeserializationAnalysis = IsDeserializationAnalysis;
+    }
+
     public ModifyApmInstanceRequest() {
     }
 
@@ -765,6 +1041,42 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         if (source.LogTraceIdKey != null) {
             this.LogTraceIdKey = new String(source.LogTraceIdKey);
         }
+        if (source.IsDeleteAnyFileAnalysis != null) {
+            this.IsDeleteAnyFileAnalysis = new Long(source.IsDeleteAnyFileAnalysis);
+        }
+        if (source.IsReadAnyFileAnalysis != null) {
+            this.IsReadAnyFileAnalysis = new Long(source.IsReadAnyFileAnalysis);
+        }
+        if (source.IsUploadAnyFileAnalysis != null) {
+            this.IsUploadAnyFileAnalysis = new Long(source.IsUploadAnyFileAnalysis);
+        }
+        if (source.IsIncludeAnyFileAnalysis != null) {
+            this.IsIncludeAnyFileAnalysis = new Long(source.IsIncludeAnyFileAnalysis);
+        }
+        if (source.IsDirectoryTraversalAnalysis != null) {
+            this.IsDirectoryTraversalAnalysis = new Long(source.IsDirectoryTraversalAnalysis);
+        }
+        if (source.IsTemplateEngineInjectionAnalysis != null) {
+            this.IsTemplateEngineInjectionAnalysis = new Long(source.IsTemplateEngineInjectionAnalysis);
+        }
+        if (source.IsScriptEngineInjectionAnalysis != null) {
+            this.IsScriptEngineInjectionAnalysis = new Long(source.IsScriptEngineInjectionAnalysis);
+        }
+        if (source.IsExpressionInjectionAnalysis != null) {
+            this.IsExpressionInjectionAnalysis = new Long(source.IsExpressionInjectionAnalysis);
+        }
+        if (source.IsJNDIInjectionAnalysis != null) {
+            this.IsJNDIInjectionAnalysis = new Long(source.IsJNDIInjectionAnalysis);
+        }
+        if (source.IsJNIInjectionAnalysis != null) {
+            this.IsJNIInjectionAnalysis = new Long(source.IsJNIInjectionAnalysis);
+        }
+        if (source.IsWebshellBackdoorAnalysis != null) {
+            this.IsWebshellBackdoorAnalysis = new Long(source.IsWebshellBackdoorAnalysis);
+        }
+        if (source.IsDeserializationAnalysis != null) {
+            this.IsDeserializationAnalysis = new Long(source.IsDeserializationAnalysis);
+        }
     }
 
 
@@ -800,6 +1112,18 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
         this.setParamSimple(map, prefix + "LogIndexType", this.LogIndexType);
         this.setParamSimple(map, prefix + "LogTraceIdKey", this.LogTraceIdKey);
+        this.setParamSimple(map, prefix + "IsDeleteAnyFileAnalysis", this.IsDeleteAnyFileAnalysis);
+        this.setParamSimple(map, prefix + "IsReadAnyFileAnalysis", this.IsReadAnyFileAnalysis);
+        this.setParamSimple(map, prefix + "IsUploadAnyFileAnalysis", this.IsUploadAnyFileAnalysis);
+        this.setParamSimple(map, prefix + "IsIncludeAnyFileAnalysis", this.IsIncludeAnyFileAnalysis);
+        this.setParamSimple(map, prefix + "IsDirectoryTraversalAnalysis", this.IsDirectoryTraversalAnalysis);
+        this.setParamSimple(map, prefix + "IsTemplateEngineInjectionAnalysis", this.IsTemplateEngineInjectionAnalysis);
+        this.setParamSimple(map, prefix + "IsScriptEngineInjectionAnalysis", this.IsScriptEngineInjectionAnalysis);
+        this.setParamSimple(map, prefix + "IsExpressionInjectionAnalysis", this.IsExpressionInjectionAnalysis);
+        this.setParamSimple(map, prefix + "IsJNDIInjectionAnalysis", this.IsJNDIInjectionAnalysis);
+        this.setParamSimple(map, prefix + "IsJNIInjectionAnalysis", this.IsJNIInjectionAnalysis);
+        this.setParamSimple(map, prefix + "IsWebshellBackdoorAnalysis", this.IsWebshellBackdoorAnalysis);
+        this.setParamSimple(map, prefix + "IsDeserializationAnalysis", this.IsDeserializationAnalysis);
 
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -50,6 +50,13 @@ public class VpcEndpointInfo extends AbstractModel {
     @SerializedName("VpcDataStreamEndpointStatus")
     @Expose
     private String VpcDataStreamEndpointStatus;
+
+    /**
+    * TLS加密的数据流接入点
+    */
+    @SerializedName("VpcTlsEndpoint")
+    @Expose
+    private String VpcTlsEndpoint;
 
     /**
      * Get vpc的id 
@@ -115,6 +122,22 @@ public class VpcEndpointInfo extends AbstractModel {
         this.VpcDataStreamEndpointStatus = VpcDataStreamEndpointStatus;
     }
 
+    /**
+     * Get TLS加密的数据流接入点 
+     * @return VpcTlsEndpoint TLS加密的数据流接入点
+     */
+    public String getVpcTlsEndpoint() {
+        return this.VpcTlsEndpoint;
+    }
+
+    /**
+     * Set TLS加密的数据流接入点
+     * @param VpcTlsEndpoint TLS加密的数据流接入点
+     */
+    public void setVpcTlsEndpoint(String VpcTlsEndpoint) {
+        this.VpcTlsEndpoint = VpcTlsEndpoint;
+    }
+
     public VpcEndpointInfo() {
     }
 
@@ -135,6 +158,9 @@ public class VpcEndpointInfo extends AbstractModel {
         if (source.VpcDataStreamEndpointStatus != null) {
             this.VpcDataStreamEndpointStatus = new String(source.VpcDataStreamEndpointStatus);
         }
+        if (source.VpcTlsEndpoint != null) {
+            this.VpcTlsEndpoint = new String(source.VpcTlsEndpoint);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class VpcEndpointInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "VpcEndpoint", this.VpcEndpoint);
         this.setParamSimple(map, prefix + "VpcDataStreamEndpointStatus", this.VpcDataStreamEndpointStatus);
+        this.setParamSimple(map, prefix + "VpcTlsEndpoint", this.VpcTlsEndpoint);
 
     }
 }

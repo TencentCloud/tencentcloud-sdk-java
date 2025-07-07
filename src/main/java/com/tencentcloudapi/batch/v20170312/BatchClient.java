@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class BatchClient extends AbstractClient{
     private static String endpoint = "batch.tencentcloudapi.com";
     private static String service = "batch";
     private static String version = "2017-03-12";
-    
+
     public BatchClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -209,6 +209,17 @@ public class BatchClient extends AbstractClient{
     public DescribeJobResponse DescribeJob(DescribeJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeJob", DescribeJobResponse.class);
+    }
+
+    /**
+     *查询作业任务实例的资源使用监控信息。当前只支持查询弹性节点任务并且Job未删除；暂不支持计算环境类任务；该接口只支持查询作业实例时间范围之内的资源使用情况。
+     * @param req DescribeJobMonitorDataRequest
+     * @return DescribeJobMonitorDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobMonitorDataResponse DescribeJobMonitorData(DescribeJobMonitorDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobMonitorData", DescribeJobMonitorDataResponse.class);
     }
 
     /**

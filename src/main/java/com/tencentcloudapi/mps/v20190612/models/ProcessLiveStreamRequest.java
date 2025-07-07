@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,13 @@ import java.util.HashMap;
 public class ProcessLiveStreamRequest extends AbstractModel {
 
     /**
-    * 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
+    * 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+trtc地址如下：
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` 为trtc的房间号id, 为数字
+`<sdkappid>` 为trtc的sdk app id
+`<userid>` 为服务进入房间的用户id,可以区分谁是机器人
+<`usersig>` 为trtc 用户的签名
     */
     @SerializedName("Url")
     @Expose
@@ -105,16 +111,40 @@ public class ProcessLiveStreamRequest extends AbstractModel {
     private Long ScheduleId;
 
     /**
-     * Get 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。 
-     * @return Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
+     * Get 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+trtc地址如下：
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` 为trtc的房间号id, 为数字
+`<sdkappid>` 为trtc的sdk app id
+`<userid>` 为服务进入房间的用户id,可以区分谁是机器人
+<`usersig>` 为trtc 用户的签名 
+     * @return Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+trtc地址如下：
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` 为trtc的房间号id, 为数字
+`<sdkappid>` 为trtc的sdk app id
+`<userid>` 为服务进入房间的用户id,可以区分谁是机器人
+<`usersig>` 为trtc 用户的签名
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
-     * @param Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
+     * Set 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+trtc地址如下：
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` 为trtc的房间号id, 为数字
+`<sdkappid>` 为trtc的sdk app id
+`<userid>` 为服务进入房间的用户id,可以区分谁是机器人
+<`usersig>` 为trtc 用户的签名
+     * @param Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+trtc地址如下：
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` 为trtc的房间号id, 为数字
+`<sdkappid>` 为trtc的sdk app id
+`<userid>` 为服务进入房间的用户id,可以区分谁是机器人
+<`usersig>` 为trtc 用户的签名
      */
     public void setUrl(String Url) {
         this.Url = Url;

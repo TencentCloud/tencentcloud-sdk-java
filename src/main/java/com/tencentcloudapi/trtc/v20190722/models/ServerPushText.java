@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -75,6 +75,13 @@ public class ServerPushText extends AbstractModel {
     @SerializedName("Priority")
     @Expose
     private Long Priority;
+
+    /**
+    * 是否将文本加入到llm历史上下文中
+    */
+    @SerializedName("AddHistory")
+    @Expose
+    private Boolean AddHistory;
 
     /**
      * Get 服务端推送播报文本 
@@ -216,6 +223,22 @@ public class ServerPushText extends AbstractModel {
         this.Priority = Priority;
     }
 
+    /**
+     * Get 是否将文本加入到llm历史上下文中 
+     * @return AddHistory 是否将文本加入到llm历史上下文中
+     */
+    public Boolean getAddHistory() {
+        return this.AddHistory;
+    }
+
+    /**
+     * Set 是否将文本加入到llm历史上下文中
+     * @param AddHistory 是否将文本加入到llm历史上下文中
+     */
+    public void setAddHistory(Boolean AddHistory) {
+        this.AddHistory = AddHistory;
+    }
+
     public ServerPushText() {
     }
 
@@ -242,6 +265,9 @@ public class ServerPushText extends AbstractModel {
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
         }
+        if (source.AddHistory != null) {
+            this.AddHistory = new Boolean(source.AddHistory);
+        }
     }
 
 
@@ -255,6 +281,7 @@ public class ServerPushText extends AbstractModel {
         this.setParamSimple(map, prefix + "Audio", this.Audio);
         this.setParamSimple(map, prefix + "DropMode", this.DropMode);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamSimple(map, prefix + "AddHistory", this.AddHistory);
 
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,6 +31,20 @@ public class ScanVulResponse extends AbstractModel {
     private Long TaskId;
 
     /**
+    * 自选主机里面包含基础版个数
+    */
+    @SerializedName("BasicVersionCount")
+    @Expose
+    private Long BasicVersionCount;
+
+    /**
+    * 创建扫描任务机器个数
+    */
+    @SerializedName("SuccessCount")
+    @Expose
+    private Long SuccessCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +65,38 @@ public class ScanVulResponse extends AbstractModel {
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 自选主机里面包含基础版个数 
+     * @return BasicVersionCount 自选主机里面包含基础版个数
+     */
+    public Long getBasicVersionCount() {
+        return this.BasicVersionCount;
+    }
+
+    /**
+     * Set 自选主机里面包含基础版个数
+     * @param BasicVersionCount 自选主机里面包含基础版个数
+     */
+    public void setBasicVersionCount(Long BasicVersionCount) {
+        this.BasicVersionCount = BasicVersionCount;
+    }
+
+    /**
+     * Get 创建扫描任务机器个数 
+     * @return SuccessCount 创建扫描任务机器个数
+     */
+    public Long getSuccessCount() {
+        return this.SuccessCount;
+    }
+
+    /**
+     * Set 创建扫描任务机器个数
+     * @param SuccessCount 创建扫描任务机器个数
+     */
+    public void setSuccessCount(Long SuccessCount) {
+        this.SuccessCount = SuccessCount;
     }
 
     /**
@@ -80,6 +126,12 @@ public class ScanVulResponse extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
+        if (source.BasicVersionCount != null) {
+            this.BasicVersionCount = new Long(source.BasicVersionCount);
+        }
+        if (source.SuccessCount != null) {
+            this.SuccessCount = new Long(source.SuccessCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +143,8 @@ public class ScanVulResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "BasicVersionCount", this.BasicVersionCount);
+        this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

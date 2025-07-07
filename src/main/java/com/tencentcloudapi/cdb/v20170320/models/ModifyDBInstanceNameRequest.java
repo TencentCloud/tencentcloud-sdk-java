@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ public class ModifyDBInstanceNameRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 修改后的实例名称。
+    * 修改后的实例名称，仅支持数字,英文大小写字母、中文以及特殊字符-_./()[]（）+=:：@ 且长度不能超过60。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyDBInstanceNameRequest extends AbstractModel {
     }
 
     /**
-     * Get 修改后的实例名称。 
-     * @return InstanceName 修改后的实例名称。
+     * Get 修改后的实例名称，仅支持数字,英文大小写字母、中文以及特殊字符-_./()[]（）+=:：@ 且长度不能超过60。 
+     * @return InstanceName 修改后的实例名称，仅支持数字,英文大小写字母、中文以及特殊字符-_./()[]（）+=:：@ 且长度不能超过60。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 修改后的实例名称。
-     * @param InstanceName 修改后的实例名称。
+     * Set 修改后的实例名称，仅支持数字,英文大小写字母、中文以及特殊字符-_./()[]（）+=:：@ 且长度不能超过60。
+     * @param InstanceName 修改后的实例名称，仅支持数字,英文大小写字母、中文以及特殊字符-_./()[]（）+=:：@ 且长度不能超过60。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

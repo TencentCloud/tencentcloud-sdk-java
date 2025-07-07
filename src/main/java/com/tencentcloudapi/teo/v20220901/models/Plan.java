@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -47,12 +47,21 @@ public class Plan extends AbstractModel {
     /**
     * 服务区域，取值有：
 <li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆)；</li>
-<li>global: 全球（包括中国大陆)。</li>
+<li>overseas: 全球（不包括中国大陆）；</li>
+<li>global: 全球（包括中国大陆）。</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
+
+    /**
+    * 自动续费开关。取值有：
+<li>true: 已开启自动续费；</li>
+<li>false: 未开启自动续费。</li>
+    */
+    @SerializedName("AutoRenewal")
+    @Expose
+    private Boolean AutoRenewal;
 
     /**
     * 套餐状态，取值有：
@@ -238,12 +247,12 @@ public class Plan extends AbstractModel {
     /**
      * Get 服务区域，取值有：
 <li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆)；</li>
-<li>global: 全球（包括中国大陆)。</li> 
+<li>overseas: 全球（不包括中国大陆）；</li>
+<li>global: 全球（包括中国大陆）。</li> 
      * @return Area 服务区域，取值有：
 <li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆)；</li>
-<li>global: 全球（包括中国大陆)。</li>
+<li>overseas: 全球（不包括中国大陆）；</li>
+<li>global: 全球（包括中国大陆）。</li>
      */
     public String getArea() {
         return this.Area;
@@ -252,15 +261,39 @@ public class Plan extends AbstractModel {
     /**
      * Set 服务区域，取值有：
 <li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆)；</li>
-<li>global: 全球（包括中国大陆)。</li>
+<li>overseas: 全球（不包括中国大陆）；</li>
+<li>global: 全球（包括中国大陆）。</li>
      * @param Area 服务区域，取值有：
 <li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆)；</li>
-<li>global: 全球（包括中国大陆)。</li>
+<li>overseas: 全球（不包括中国大陆）；</li>
+<li>global: 全球（包括中国大陆）。</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
+    }
+
+    /**
+     * Get 自动续费开关。取值有：
+<li>true: 已开启自动续费；</li>
+<li>false: 未开启自动续费。</li> 
+     * @return AutoRenewal 自动续费开关。取值有：
+<li>true: 已开启自动续费；</li>
+<li>false: 未开启自动续费。</li>
+     */
+    public Boolean getAutoRenewal() {
+        return this.AutoRenewal;
+    }
+
+    /**
+     * Set 自动续费开关。取值有：
+<li>true: 已开启自动续费；</li>
+<li>false: 未开启自动续费。</li>
+     * @param AutoRenewal 自动续费开关。取值有：
+<li>true: 已开启自动续费；</li>
+<li>false: 未开启自动续费。</li>
+     */
+    public void setAutoRenewal(Boolean AutoRenewal) {
+        this.AutoRenewal = AutoRenewal;
     }
 
     /**
@@ -572,6 +605,9 @@ public class Plan extends AbstractModel {
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.AutoRenewal != null) {
+            this.AutoRenewal = new Boolean(source.AutoRenewal);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -636,6 +672,7 @@ public class Plan extends AbstractModel {
         this.setParamSimple(map, prefix + "PlanType", this.PlanType);
         this.setParamSimple(map, prefix + "PlanId", this.PlanId);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "AutoRenewal", this.AutoRenewal);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamArrayObj(map, prefix + "ZonesInfo.", this.ZonesInfo);

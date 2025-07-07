@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ImportRecord extends AbstractModel {
 
     /**
-    * 状态值
+    * 状态值。0 - 初始化中，1 - 运行中，2 - 运行成功，3 - 运行失败。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 状态值
+    * 状态值，为负数时任务异常。
     */
     @SerializedName("Code")
     @Expose
     private Long Code;
 
     /**
-    * 执行时间
+    * 执行时间，单位：秒。
     */
     @SerializedName("CostTime")
     @Expose
@@ -66,7 +66,7 @@ public class ImportRecord extends AbstractModel {
     private String FileName;
 
     /**
-    * 执行进度
+    * 执行进度，单位：百分比。
     */
     @SerializedName("Process")
     @Expose
@@ -80,7 +80,7 @@ public class ImportRecord extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 文件大小
+    * 文件大小，单位：byte。
     */
     @SerializedName("FileSize")
     @Expose
@@ -115,48 +115,48 @@ public class ImportRecord extends AbstractModel {
     private String AsyncRequestId;
 
     /**
-     * Get 状态值 
-     * @return Status 状态值
+     * Get 状态值。0 - 初始化中，1 - 运行中，2 - 运行成功，3 - 运行失败。 
+     * @return Status 状态值。0 - 初始化中，1 - 运行中，2 - 运行成功，3 - 运行失败。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态值
-     * @param Status 状态值
+     * Set 状态值。0 - 初始化中，1 - 运行中，2 - 运行成功，3 - 运行失败。
+     * @param Status 状态值。0 - 初始化中，1 - 运行中，2 - 运行成功，3 - 运行失败。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 状态值 
-     * @return Code 状态值
+     * Get 状态值，为负数时任务异常。 
+     * @return Code 状态值，为负数时任务异常。
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 状态值
-     * @param Code 状态值
+     * Set 状态值，为负数时任务异常。
+     * @param Code 状态值，为负数时任务异常。
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 执行时间 
-     * @return CostTime 执行时间
+     * Get 执行时间，单位：秒。 
+     * @return CostTime 执行时间，单位：秒。
      */
     public Long getCostTime() {
         return this.CostTime;
     }
 
     /**
-     * Set 执行时间
-     * @param CostTime 执行时间
+     * Set 执行时间，单位：秒。
+     * @param CostTime 执行时间，单位：秒。
      */
     public void setCostTime(Long CostTime) {
         this.CostTime = CostTime;
@@ -211,16 +211,16 @@ public class ImportRecord extends AbstractModel {
     }
 
     /**
-     * Get 执行进度 
-     * @return Process 执行进度
+     * Get 执行进度，单位：百分比。 
+     * @return Process 执行进度，单位：百分比。
      */
     public Long getProcess() {
         return this.Process;
     }
 
     /**
-     * Set 执行进度
-     * @param Process 执行进度
+     * Set 执行进度，单位：百分比。
+     * @param Process 执行进度，单位：百分比。
      */
     public void setProcess(Long Process) {
         this.Process = Process;
@@ -243,16 +243,16 @@ public class ImportRecord extends AbstractModel {
     }
 
     /**
-     * Get 文件大小 
-     * @return FileSize 文件大小
+     * Get 文件大小，单位：byte。 
+     * @return FileSize 文件大小，单位：byte。
      */
     public String getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 文件大小
-     * @param FileSize 文件大小
+     * Set 文件大小，单位：byte。
+     * @param FileSize 文件大小，单位：byte。
      */
     public void setFileSize(String FileSize) {
         this.FileSize = FileSize;

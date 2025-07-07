@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -57,14 +57,14 @@ TRANSACTION:事务消息
     private String Remark;
 
     /**
-    * 创建时间，秒为单位
+    * 创建时间，**Unix时间戳（毫秒）**
     */
     @SerializedName("CreatedTime")
     @Expose
     private Long CreatedTime;
 
     /**
-    * 最后写入时间，秒为单位
+    * 最后写入时间，**Unix时间戳（毫秒）**
     */
     @SerializedName("LastUpdateTime")
     @Expose
@@ -85,7 +85,7 @@ TRANSACTION:事务消息
     private SubscriptionData [] SubscriptionData;
 
     /**
-    * 消息保留时长
+    * 消息保留时长，单位：小时
     */
     @SerializedName("MsgTTL")
     @Expose
@@ -183,32 +183,32 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Get 创建时间，秒为单位 
-     * @return CreatedTime 创建时间，秒为单位
+     * Get 创建时间，**Unix时间戳（毫秒）** 
+     * @return CreatedTime 创建时间，**Unix时间戳（毫秒）**
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间，秒为单位
-     * @param CreatedTime 创建时间，秒为单位
+     * Set 创建时间，**Unix时间戳（毫秒）**
+     * @param CreatedTime 创建时间，**Unix时间戳（毫秒）**
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 最后写入时间，秒为单位 
-     * @return LastUpdateTime 最后写入时间，秒为单位
+     * Get 最后写入时间，**Unix时间戳（毫秒）** 
+     * @return LastUpdateTime 最后写入时间，**Unix时间戳（毫秒）**
      */
     public Long getLastUpdateTime() {
         return this.LastUpdateTime;
     }
 
     /**
-     * Set 最后写入时间，秒为单位
-     * @param LastUpdateTime 最后写入时间，秒为单位
+     * Set 最后写入时间，**Unix时间戳（毫秒）**
+     * @param LastUpdateTime 最后写入时间，**Unix时间戳（毫秒）**
      */
     public void setLastUpdateTime(Long LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;
@@ -247,16 +247,16 @@ TRANSACTION:事务消息
     }
 
     /**
-     * Get 消息保留时长 
-     * @return MsgTTL 消息保留时长
+     * Get 消息保留时长，单位：小时 
+     * @return MsgTTL 消息保留时长，单位：小时
      */
     public Long getMsgTTL() {
         return this.MsgTTL;
     }
 
     /**
-     * Set 消息保留时长
-     * @param MsgTTL 消息保留时长
+     * Set 消息保留时长，单位：小时
+     * @param MsgTTL 消息保留时长，单位：小时
      */
     public void setMsgTTL(Long MsgTTL) {
         this.MsgTTL = MsgTTL;

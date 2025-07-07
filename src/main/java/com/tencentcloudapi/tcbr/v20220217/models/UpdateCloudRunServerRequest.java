@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -50,6 +50,13 @@ public class UpdateCloudRunServerRequest extends AbstractModel {
     @SerializedName("ServerConfig")
     @Expose
     private ServerBaseConfig ServerConfig;
+
+    /**
+    * 业务类型，默认tcr
+    */
+    @SerializedName("Business")
+    @Expose
+    private String Business;
 
     /**
      * Get 环境Id 
@@ -115,6 +122,22 @@ public class UpdateCloudRunServerRequest extends AbstractModel {
         this.ServerConfig = ServerConfig;
     }
 
+    /**
+     * Get 业务类型，默认tcr 
+     * @return Business 业务类型，默认tcr
+     */
+    public String getBusiness() {
+        return this.Business;
+    }
+
+    /**
+     * Set 业务类型，默认tcr
+     * @param Business 业务类型，默认tcr
+     */
+    public void setBusiness(String Business) {
+        this.Business = Business;
+    }
+
     public UpdateCloudRunServerRequest() {
     }
 
@@ -135,6 +158,9 @@ public class UpdateCloudRunServerRequest extends AbstractModel {
         if (source.ServerConfig != null) {
             this.ServerConfig = new ServerBaseConfig(source.ServerConfig);
         }
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class UpdateCloudRunServerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServerName", this.ServerName);
         this.setParamObj(map, prefix + "DeployInfo.", this.DeployInfo);
         this.setParamObj(map, prefix + "ServerConfig.", this.ServerConfig);
+        this.setParamSimple(map, prefix + "Business", this.Business);
 
     }
 }

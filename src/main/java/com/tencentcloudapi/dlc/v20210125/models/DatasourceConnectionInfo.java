@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -144,6 +144,20 @@ public class DatasourceConnectionInfo extends AbstractModel {
     @SerializedName("ConnectivityTips")
     @Expose
     private String ConnectivityTips;
+
+    /**
+    * 自定义参数
+    */
+    @SerializedName("CustomConfig")
+    @Expose
+    private CustomConfig [] CustomConfig;
+
+    /**
+    * 是否允许回退
+    */
+    @SerializedName("AllowRollback")
+    @Expose
+    private Boolean AllowRollback;
 
     /**
      * Get 数据源数字Id 
@@ -429,6 +443,38 @@ public class DatasourceConnectionInfo extends AbstractModel {
         this.ConnectivityTips = ConnectivityTips;
     }
 
+    /**
+     * Get 自定义参数 
+     * @return CustomConfig 自定义参数
+     */
+    public CustomConfig [] getCustomConfig() {
+        return this.CustomConfig;
+    }
+
+    /**
+     * Set 自定义参数
+     * @param CustomConfig 自定义参数
+     */
+    public void setCustomConfig(CustomConfig [] CustomConfig) {
+        this.CustomConfig = CustomConfig;
+    }
+
+    /**
+     * Get 是否允许回退 
+     * @return AllowRollback 是否允许回退
+     */
+    public Boolean getAllowRollback() {
+        return this.AllowRollback;
+    }
+
+    /**
+     * Set 是否允许回退
+     * @param AllowRollback 是否允许回退
+     */
+    public void setAllowRollback(Boolean AllowRollback) {
+        this.AllowRollback = AllowRollback;
+    }
+
     public DatasourceConnectionInfo() {
     }
 
@@ -494,6 +540,15 @@ public class DatasourceConnectionInfo extends AbstractModel {
         if (source.ConnectivityTips != null) {
             this.ConnectivityTips = new String(source.ConnectivityTips);
         }
+        if (source.CustomConfig != null) {
+            this.CustomConfig = new CustomConfig[source.CustomConfig.length];
+            for (int i = 0; i < source.CustomConfig.length; i++) {
+                this.CustomConfig[i] = new CustomConfig(source.CustomConfig[i]);
+            }
+        }
+        if (source.AllowRollback != null) {
+            this.AllowRollback = new Boolean(source.AllowRollback);
+        }
     }
 
 
@@ -518,6 +573,8 @@ public class DatasourceConnectionInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "NetworkConnectionSet.", this.NetworkConnectionSet);
         this.setParamSimple(map, prefix + "ConnectivityState", this.ConnectivityState);
         this.setParamSimple(map, prefix + "ConnectivityTips", this.ConnectivityTips);
+        this.setParamArrayObj(map, prefix + "CustomConfig.", this.CustomConfig);
+        this.setParamSimple(map, prefix + "AllowRollback", this.AllowRollback);
 
     }
 }

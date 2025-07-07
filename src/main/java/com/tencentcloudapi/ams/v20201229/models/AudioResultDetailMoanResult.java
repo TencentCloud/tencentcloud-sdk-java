@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,6 @@ public class AudioResultDetailMoanResult extends AbstractModel {
 
     /**
     * 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -61,7 +60,6 @@ public class AudioResultDetailMoanResult extends AbstractModel {
 
     /**
     * 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubLabel")
     @Expose
@@ -75,10 +73,8 @@ public class AudioResultDetailMoanResult extends AbstractModel {
     private String Suggestion;
 
     /**
-     * Get 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。 
      * @return Label 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -86,9 +82,7 @@ public class AudioResultDetailMoanResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
@@ -163,10 +157,8 @@ public class AudioResultDetailMoanResult extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回当前标签（Lable）下的二级标签。 
      * @return SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubLabel() {
         return this.SubLabel;
@@ -174,9 +166,7 @@ public class AudioResultDetailMoanResult extends AbstractModel {
 
     /**
      * Set 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;

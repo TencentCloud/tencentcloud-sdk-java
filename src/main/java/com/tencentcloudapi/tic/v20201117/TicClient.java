@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class TicClient extends AbstractClient{
     private static String endpoint = "tic.tencentcloudapi.com";
     private static String service = "tic";
     private static String version = "2020-11-17";
-    
+
     public TicClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }

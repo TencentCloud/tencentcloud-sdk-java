@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -219,6 +219,13 @@ public class ServerBaseConfig extends AbstractModel {
     @SerializedName("SessionAffinity")
     @Expose
     private String SessionAffinity;
+
+    /**
+    * Vpc 配置参数
+    */
+    @SerializedName("VpcConf")
+    @Expose
+    private VpcConf VpcConf;
 
     /**
      * Get 环境 Id 
@@ -672,6 +679,22 @@ public class ServerBaseConfig extends AbstractModel {
         this.SessionAffinity = SessionAffinity;
     }
 
+    /**
+     * Get Vpc 配置参数 
+     * @return VpcConf Vpc 配置参数
+     */
+    public VpcConf getVpcConf() {
+        return this.VpcConf;
+    }
+
+    /**
+     * Set Vpc 配置参数
+     * @param VpcConf Vpc 配置参数
+     */
+    public void setVpcConf(VpcConf VpcConf) {
+        this.VpcConf = VpcConf;
+    }
+
     public ServerBaseConfig() {
     }
 
@@ -779,6 +802,9 @@ public class ServerBaseConfig extends AbstractModel {
         if (source.SessionAffinity != null) {
             this.SessionAffinity = new String(source.SessionAffinity);
         }
+        if (source.VpcConf != null) {
+            this.VpcConf = new VpcConf(source.VpcConf);
+        }
     }
 
 
@@ -814,6 +840,7 @@ public class ServerBaseConfig extends AbstractModel {
         this.setParamArraySimple(map, prefix + "EntryPoint.", this.EntryPoint);
         this.setParamArraySimple(map, prefix + "Cmd.", this.Cmd);
         this.setParamSimple(map, prefix + "SessionAffinity", this.SessionAffinity);
+        this.setParamObj(map, prefix + "VpcConf.", this.VpcConf);
 
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -169,6 +169,13 @@ public class PulsarProInstance extends AbstractModel {
     @SerializedName("Tenant")
     @Expose
     private String Tenant;
+
+    /**
+    * 集群的证书列表
+    */
+    @SerializedName("CertificateList")
+    @Expose
+    private CertificateInfo [] CertificateList;
 
     /**
      * Get 实例id 
@@ -518,6 +525,22 @@ public class PulsarProInstance extends AbstractModel {
         this.Tenant = Tenant;
     }
 
+    /**
+     * Get 集群的证书列表 
+     * @return CertificateList 集群的证书列表
+     */
+    public CertificateInfo [] getCertificateList() {
+        return this.CertificateList;
+    }
+
+    /**
+     * Set 集群的证书列表
+     * @param CertificateList 集群的证书列表
+     */
+    public void setCertificateList(CertificateInfo [] CertificateList) {
+        this.CertificateList = CertificateList;
+    }
+
     public PulsarProInstance() {
     }
 
@@ -589,6 +612,12 @@ public class PulsarProInstance extends AbstractModel {
         if (source.Tenant != null) {
             this.Tenant = new String(source.Tenant);
         }
+        if (source.CertificateList != null) {
+            this.CertificateList = new CertificateInfo[source.CertificateList.length];
+            for (int i = 0; i < source.CertificateList.length; i++) {
+                this.CertificateList[i] = new CertificateInfo(source.CertificateList[i]);
+            }
+        }
     }
 
 
@@ -616,6 +645,7 @@ public class PulsarProInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
         this.setParamSimple(map, prefix + "Tenant", this.Tenant);
+        this.setParamArrayObj(map, prefix + "CertificateList.", this.CertificateList);
 
     }
 }

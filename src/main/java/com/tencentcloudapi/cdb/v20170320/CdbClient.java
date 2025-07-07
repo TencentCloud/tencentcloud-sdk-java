@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class CdbClient extends AbstractClient{
     private static String endpoint = "cdb.tencentcloudapi.com";
     private static String service = "cdb";
     private static String version = "2017-03-20";
-    
+
     public CdbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -844,7 +844,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeDBInstanceInfo）用于查询实例基本信息（实例 ID，实例名称，是否开通加密）。
+     *本接口（DescribeDBInstanceInfo）用于查询实例基本信息（实例 ID，实例名称，是否开通加密），只读实例不支持查询。
      * @param req DescribeDBInstanceInfoRequest
      * @return DescribeDBInstanceInfoResponse
      * @throws TencentCloudSDKException
@@ -1056,7 +1056,8 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *该接口（DescribeParamTemplateInfo）用于查询参数模板详情，全地域公共参数Region均为ap-guangzhou。
+     *该接口（DescribeParamTemplateInfo）用于查询参数模板详情。
+说明：参数模板为公共组件，配置完成后全地域生效。接口调用配置地域可选择广州、新加坡。
      * @param req DescribeParamTemplateInfoRequest
      * @return DescribeParamTemplateInfoResponse
      * @throws TencentCloudSDKException
@@ -1167,7 +1168,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *查询 SSL 开通情况。如果已经开通 SSL ，会同步返回证书下载链接。
+     *本接口（DescribeSSLStatus）用于查询 SSL 开通情况。如果已经开通 SSL ，会同步返回证书下载链接。
      * @param req DescribeSSLStatusRequest
      * @return DescribeSSLStatusResponse
      * @throws TencentCloudSDKException
@@ -1234,7 +1235,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeTagsOfInstanceIds)用于获取云数据库实例的标签信息。
+     *本接口（DescribeTagsOfInstanceIds）用于获取云数据库实例的标签信息。
      * @param req DescribeTagsOfInstanceIdsRequest
      * @return DescribeTagsOfInstanceIdsResponse
      * @throws TencentCloudSDKException
@@ -1289,7 +1290,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(InquiryPriceUpgradeInstances)用于查询云数据库实例升级的价格，支持查询按量计费或者包年包月实例的升级价格，实例类型支持主实例、灾备实例和只读实例。
+     *本接口（InquiryPriceUpgradeInstances）用于查询云数据库实例升级的价格，支持查询按量计费或者包年包月实例的升级价格，实例类型支持主实例、灾备实例和只读实例。
      * @param req InquiryPriceUpgradeInstancesRequest
      * @return InquiryPriceUpgradeInstancesResponse
      * @throws TencentCloudSDKException
@@ -1672,7 +1673,7 @@ public class CdbClient extends AbstractClient{
     /**
      *本接口(OfflineIsolatedInstances)用于立即下线隔离状态的云数据库实例。进行操作的实例状态必须为隔离状态，即通过 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询到 Status 值为 5 的实例。
 
-该接口为异步操作，部分资源的回收可能存在延迟。您可以通过使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口，指定实例 InstanceId 和状态 Status 为 [5,6,7] 进行查询，若返回实例为空，则实例资源已全部释放。
+该接口为异步操作，部分资源的回收可能存在延迟。您可以通过使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口，指定实例 InstanceId 和状态 Status 为 [5,6,7] 进行查询，其中5代表已隔离，6代表下线中，7代表已下线。若返回实例为空，则实例资源已全部释放。
 
 注意，实例下线后，相关资源和数据将无法找回，请谨慎操作。
      * @param req OfflineIsolatedInstancesRequest
@@ -1978,7 +1979,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(UpgradeDBInstanceEngineVersion)用于升级云数据库实例版本，实例类型支持主实例、灾备实例和只读实例等。
+     *本接口（UpgradeDBInstanceEngineVersion）用于升级云数据库实例版本，实例类型支持主实例、灾备实例和只读实例等。升级前请通过 [SubmitInstanceUpgradeCheckJob](https://cloud.tencent.com/document/product/236/110468) 提交升级检查任务，通过后才能升级。
      * @param req UpgradeDBInstanceEngineVersionRequest
      * @return UpgradeDBInstanceEngineVersionResponse
      * @throws TencentCloudSDKException

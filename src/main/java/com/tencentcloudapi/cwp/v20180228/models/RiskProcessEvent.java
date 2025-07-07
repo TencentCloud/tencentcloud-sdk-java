@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -155,6 +155,13 @@ public class RiskProcessEvent extends AbstractModel {
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
+
+    /**
+    * 首次检出方式 0扫描;1实时监控
+    */
+    @SerializedName("FirstDetectionMethod")
+    @Expose
+    private Long FirstDetectionMethod;
 
     /**
      * Get 事件ID 
@@ -460,6 +467,22 @@ public class RiskProcessEvent extends AbstractModel {
         this.Uuid = Uuid;
     }
 
+    /**
+     * Get 首次检出方式 0扫描;1实时监控 
+     * @return FirstDetectionMethod 首次检出方式 0扫描;1实时监控
+     */
+    public Long getFirstDetectionMethod() {
+        return this.FirstDetectionMethod;
+    }
+
+    /**
+     * Set 首次检出方式 0扫描;1实时监控
+     * @param FirstDetectionMethod 首次检出方式 0扫描;1实时监控
+     */
+    public void setFirstDetectionMethod(Long FirstDetectionMethod) {
+        this.FirstDetectionMethod = FirstDetectionMethod;
+    }
+
     public RiskProcessEvent() {
     }
 
@@ -531,6 +554,9 @@ public class RiskProcessEvent extends AbstractModel {
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.FirstDetectionMethod != null) {
+            this.FirstDetectionMethod = new Long(source.FirstDetectionMethod);
+        }
     }
 
 
@@ -557,6 +583,7 @@ public class RiskProcessEvent extends AbstractModel {
         this.setParamSimple(map, prefix + "OnlineStatus", this.OnlineStatus);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "FirstDetectionMethod", this.FirstDetectionMethod);
 
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DeleteClusterVirtualNodePoolRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID，通过DescribeClusters接口获取
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 超级节点池ID列表
+    * 节点池ID，通过DescribeNodePools接口获取
     */
     @SerializedName("NodePoolIds")
     @Expose
@@ -45,32 +45,32 @@ public class DeleteClusterVirtualNodePoolRequest extends AbstractModel {
     private Boolean Force;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID，通过DescribeClusters接口获取 
+     * @return ClusterId 集群ID，通过DescribeClusters接口获取
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID，通过DescribeClusters接口获取
+     * @param ClusterId 集群ID，通过DescribeClusters接口获取
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 超级节点池ID列表 
-     * @return NodePoolIds 超级节点池ID列表
+     * Get 节点池ID，通过DescribeNodePools接口获取 
+     * @return NodePoolIds 节点池ID，通过DescribeNodePools接口获取
      */
     public String [] getNodePoolIds() {
         return this.NodePoolIds;
     }
 
     /**
-     * Set 超级节点池ID列表
-     * @param NodePoolIds 超级节点池ID列表
+     * Set 节点池ID，通过DescribeNodePools接口获取
+     * @param NodePoolIds 节点池ID，通过DescribeNodePools接口获取
      */
     public void setNodePoolIds(String [] NodePoolIds) {
         this.NodePoolIds = NodePoolIds;

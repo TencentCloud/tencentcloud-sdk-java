@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -80,6 +80,13 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
     @SerializedName("TargetUserIdList")
     @Expose
     private String [] TargetUserIdList;
+
+    /**
+    * 声纹配置
+    */
+    @SerializedName("VoicePrint")
+    @Expose
+    private VoicePrint VoicePrint;
 
     /**
      * Get 转录机器人的UserId，用于进房发起转录任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个转录任务时，机器人的userid也不能相互重复，否则会中断前一个任务。需要保证转录机器人UserId在房间内唯一。 
@@ -225,6 +232,22 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
         this.TargetUserIdList = TargetUserIdList;
     }
 
+    /**
+     * Get 声纹配置 
+     * @return VoicePrint 声纹配置
+     */
+    public VoicePrint getVoicePrint() {
+        return this.VoicePrint;
+    }
+
+    /**
+     * Set 声纹配置
+     * @param VoicePrint 声纹配置
+     */
+    public void setVoicePrint(VoicePrint VoicePrint) {
+        this.VoicePrint = VoicePrint;
+    }
+
     public TranscriptionParams() {
     }
 
@@ -260,6 +283,9 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
                 this.TargetUserIdList[i] = new String(source.TargetUserIdList[i]);
             }
         }
+        if (source.VoicePrint != null) {
+            this.VoicePrint = new VoicePrint(source.VoicePrint);
+        }
     }
 
 
@@ -275,6 +301,7 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
         this.setParamSimple(map, prefix + "TranscriptionMode", this.TranscriptionMode);
         this.setParamSimple(map, prefix + "TargetUserId", this.TargetUserId);
         this.setParamArraySimple(map, prefix + "TargetUserIdList.", this.TargetUserIdList);
+        this.setParamObj(map, prefix + "VoicePrint.", this.VoicePrint);
 
     }
 }

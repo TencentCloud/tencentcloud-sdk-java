@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -68,11 +68,25 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
     private String CleanupMode;
 
     /**
-    * 安卓应用版本名称
+    * 安卓应用版本名称（版本描述、备注）
     */
     @SerializedName("AndroidAppVersionName")
     @Expose
     private String AndroidAppVersionName;
+
+    /**
+    * 安卓应用启动页
+    */
+    @SerializedName("Activity")
+    @Expose
+    private String Activity;
+
+    /**
+    * 应用版本号（Version Name）
+    */
+    @SerializedName("VersionName")
+    @Expose
+    private String VersionName;
 
     /**
      * Get 安卓应用版本 
@@ -179,19 +193,51 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
     }
 
     /**
-     * Get 安卓应用版本名称 
-     * @return AndroidAppVersionName 安卓应用版本名称
+     * Get 安卓应用版本名称（版本描述、备注） 
+     * @return AndroidAppVersionName 安卓应用版本名称（版本描述、备注）
      */
     public String getAndroidAppVersionName() {
         return this.AndroidAppVersionName;
     }
 
     /**
-     * Set 安卓应用版本名称
-     * @param AndroidAppVersionName 安卓应用版本名称
+     * Set 安卓应用版本名称（版本描述、备注）
+     * @param AndroidAppVersionName 安卓应用版本名称（版本描述、备注）
      */
     public void setAndroidAppVersionName(String AndroidAppVersionName) {
         this.AndroidAppVersionName = AndroidAppVersionName;
+    }
+
+    /**
+     * Get 安卓应用启动页 
+     * @return Activity 安卓应用启动页
+     */
+    public String getActivity() {
+        return this.Activity;
+    }
+
+    /**
+     * Set 安卓应用启动页
+     * @param Activity 安卓应用启动页
+     */
+    public void setActivity(String Activity) {
+        this.Activity = Activity;
+    }
+
+    /**
+     * Get 应用版本号（Version Name） 
+     * @return VersionName 应用版本号（Version Name）
+     */
+    public String getVersionName() {
+        return this.VersionName;
+    }
+
+    /**
+     * Set 应用版本号（Version Name）
+     * @param VersionName 应用版本号（Version Name）
+     */
+    public void setVersionName(String VersionName) {
+        this.VersionName = VersionName;
     }
 
     public AndroidAppVersionInfo() {
@@ -223,6 +269,12 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         if (source.AndroidAppVersionName != null) {
             this.AndroidAppVersionName = new String(source.AndroidAppVersionName);
         }
+        if (source.Activity != null) {
+            this.Activity = new String(source.Activity);
+        }
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
+        }
     }
 
 
@@ -237,6 +289,8 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         this.setParamSimple(map, prefix + "UninstallCommand", this.UninstallCommand);
         this.setParamSimple(map, prefix + "CleanupMode", this.CleanupMode);
         this.setParamSimple(map, prefix + "AndroidAppVersionName", this.AndroidAppVersionName);
+        this.setParamSimple(map, prefix + "Activity", this.Activity);
+        this.setParamSimple(map, prefix + "VersionName", this.VersionName);
 
     }
 }
