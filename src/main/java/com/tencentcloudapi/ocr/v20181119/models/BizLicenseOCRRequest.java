@@ -59,6 +59,13 @@ public class BizLicenseOCRRequest extends AbstractModel {
     private Boolean EnablePeriodComplete;
 
     /**
+    * 是否支持营业类证件识别（包括营业执照和非营业执照的其他证件），默认为false
+    */
+    @SerializedName("EnableBusinessCertificate")
+    @Expose
+    private Boolean EnableBusinessCertificate;
+
+    /**
      * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -150,6 +157,22 @@ public class BizLicenseOCRRequest extends AbstractModel {
         this.EnablePeriodComplete = EnablePeriodComplete;
     }
 
+    /**
+     * Get 是否支持营业类证件识别（包括营业执照和非营业执照的其他证件），默认为false 
+     * @return EnableBusinessCertificate 是否支持营业类证件识别（包括营业执照和非营业执照的其他证件），默认为false
+     */
+    public Boolean getEnableBusinessCertificate() {
+        return this.EnableBusinessCertificate;
+    }
+
+    /**
+     * Set 是否支持营业类证件识别（包括营业执照和非营业执照的其他证件），默认为false
+     * @param EnableBusinessCertificate 是否支持营业类证件识别（包括营业执照和非营业执照的其他证件），默认为false
+     */
+    public void setEnableBusinessCertificate(Boolean EnableBusinessCertificate) {
+        this.EnableBusinessCertificate = EnableBusinessCertificate;
+    }
+
     public BizLicenseOCRRequest() {
     }
 
@@ -170,6 +193,9 @@ public class BizLicenseOCRRequest extends AbstractModel {
         if (source.EnablePeriodComplete != null) {
             this.EnablePeriodComplete = new Boolean(source.EnablePeriodComplete);
         }
+        if (source.EnableBusinessCertificate != null) {
+            this.EnableBusinessCertificate = new Boolean(source.EnableBusinessCertificate);
+        }
     }
 
 
@@ -181,6 +207,7 @@ public class BizLicenseOCRRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "EnableCopyWarn", this.EnableCopyWarn);
         this.setParamSimple(map, prefix + "EnablePeriodComplete", this.EnablePeriodComplete);
+        this.setParamSimple(map, prefix + "EnableBusinessCertificate", this.EnableBusinessCertificate);
 
     }
 }

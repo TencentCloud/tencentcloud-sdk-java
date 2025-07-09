@@ -31,7 +31,7 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     private String TaskName;
 
     /**
-    * 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
+    * 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
     */
     @SerializedName("MigrationType")
     @Expose
@@ -45,21 +45,21 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     private Long MigrationMode;
 
     /**
-    * 数据源账号的SecretId
+    * 数据源账号的 SecretId
     */
     @SerializedName("SrcSecretId")
     @Expose
     private String SrcSecretId;
 
     /**
-    * 数据源账号的SecretKey
+    * 数据源账号的 SecretKey
     */
     @SerializedName("SrcSecretKey")
     @Expose
     private String SrcSecretKey;
 
     /**
-    * 文件系统实例Id
+    * 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -80,14 +80,14 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     private Long CoverType;
 
     /**
-    * 数据源服务商。COS: 腾讯云COS，OSS: 阿里云OSS，OBS:华为云OBS
+    * 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
     */
     @SerializedName("SrcService")
     @Expose
     private String SrcService;
 
     /**
-    * 数据源桶名称，名称和地址至少有一个
+    * 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
     */
     @SerializedName("BucketName")
     @Expose
@@ -101,7 +101,7 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     private String BucketRegion;
 
     /**
-    * 数据源桶地址，名称和地址至少有一个
+    * 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
     */
     @SerializedName("BucketAddress")
     @Expose
@@ -122,14 +122,14 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     private String FsName;
 
     /**
-    * 源桶路径，默认为/
+    * 源桶路径，默认为 /
     */
     @SerializedName("BucketPath")
     @Expose
     private String BucketPath;
 
     /**
-    * 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+    * 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
     */
     @SerializedName("Direction")
     @Expose
@@ -152,16 +152,16 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移 
-     * @return MigrationType 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
+     * Get 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移 
+     * @return MigrationType 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
      */
     public Long getMigrationType() {
         return this.MigrationType;
     }
 
     /**
-     * Set 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
-     * @param MigrationType 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
+     * Set 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
+     * @param MigrationType 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
      */
     public void setMigrationType(Long MigrationType) {
         this.MigrationType = MigrationType;
@@ -184,48 +184,48 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据源账号的SecretId 
-     * @return SrcSecretId 数据源账号的SecretId
+     * Get 数据源账号的 SecretId 
+     * @return SrcSecretId 数据源账号的 SecretId
      */
     public String getSrcSecretId() {
         return this.SrcSecretId;
     }
 
     /**
-     * Set 数据源账号的SecretId
-     * @param SrcSecretId 数据源账号的SecretId
+     * Set 数据源账号的 SecretId
+     * @param SrcSecretId 数据源账号的 SecretId
      */
     public void setSrcSecretId(String SrcSecretId) {
         this.SrcSecretId = SrcSecretId;
     }
 
     /**
-     * Get 数据源账号的SecretKey 
-     * @return SrcSecretKey 数据源账号的SecretKey
+     * Get 数据源账号的 SecretKey 
+     * @return SrcSecretKey 数据源账号的 SecretKey
      */
     public String getSrcSecretKey() {
         return this.SrcSecretKey;
     }
 
     /**
-     * Set 数据源账号的SecretKey
-     * @param SrcSecretKey 数据源账号的SecretKey
+     * Set 数据源账号的 SecretKey
+     * @param SrcSecretKey 数据源账号的 SecretKey
      */
     public void setSrcSecretKey(String SrcSecretKey) {
         this.SrcSecretKey = SrcSecretKey;
     }
 
     /**
-     * Get 文件系统实例Id 
-     * @return FileSystemId 文件系统实例Id
+     * Get 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取 
+     * @return FileSystemId 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统实例Id
-     * @param FileSystemId 文件系统实例Id
+     * Set 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
+     * @param FileSystemId 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
@@ -264,32 +264,32 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据源服务商。COS: 腾讯云COS，OSS: 阿里云OSS，OBS:华为云OBS 
-     * @return SrcService 数据源服务商。COS: 腾讯云COS，OSS: 阿里云OSS，OBS:华为云OBS
+     * Get 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS 
+     * @return SrcService 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
      */
     public String getSrcService() {
         return this.SrcService;
     }
 
     /**
-     * Set 数据源服务商。COS: 腾讯云COS，OSS: 阿里云OSS，OBS:华为云OBS
-     * @param SrcService 数据源服务商。COS: 腾讯云COS，OSS: 阿里云OSS，OBS:华为云OBS
+     * Set 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
+     * @param SrcService 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
      */
     public void setSrcService(String SrcService) {
         this.SrcService = SrcService;
     }
 
     /**
-     * Get 数据源桶名称，名称和地址至少有一个 
-     * @return BucketName 数据源桶名称，名称和地址至少有一个
+     * Get 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数 
+     * @return BucketName 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set 数据源桶名称，名称和地址至少有一个
-     * @param BucketName 数据源桶名称，名称和地址至少有一个
+     * Set 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+     * @param BucketName 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
@@ -312,16 +312,16 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据源桶地址，名称和地址至少有一个 
-     * @return BucketAddress 数据源桶地址，名称和地址至少有一个
+     * Get 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数 
+     * @return BucketAddress 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
      */
     public String getBucketAddress() {
         return this.BucketAddress;
     }
 
     /**
-     * Set 数据源桶地址，名称和地址至少有一个
-     * @param BucketAddress 数据源桶地址，名称和地址至少有一个
+     * Set 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+     * @param BucketAddress 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
      */
     public void setBucketAddress(String BucketAddress) {
         this.BucketAddress = BucketAddress;
@@ -360,32 +360,32 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 源桶路径，默认为/ 
-     * @return BucketPath 源桶路径，默认为/
+     * Get 源桶路径，默认为 / 
+     * @return BucketPath 源桶路径，默认为 /
      */
     public String getBucketPath() {
         return this.BucketPath;
     }
 
     /**
-     * Set 源桶路径，默认为/
-     * @param BucketPath 源桶路径，默认为/
+     * Set 源桶路径，默认为 /
+     * @param BucketPath 源桶路径，默认为 /
      */
     public void setBucketPath(String BucketPath) {
         this.BucketPath = BucketPath;
     }
 
     /**
-     * Get 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0 
-     * @return Direction 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     * Get 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0 
+     * @return Direction 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
-     * @param Direction 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     * Set 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
+     * @param Direction 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;

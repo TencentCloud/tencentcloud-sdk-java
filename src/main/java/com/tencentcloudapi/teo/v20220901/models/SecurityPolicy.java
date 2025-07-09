@@ -38,7 +38,7 @@ public class SecurityPolicy extends AbstractModel {
     private ManagedRules ManagedRules;
 
     /**
-    * HTTP DDOS防护配置。
+    * HTTP DDOS 防护配置。
     */
     @SerializedName("HttpDDoSProtection")
     @Expose
@@ -57,6 +57,13 @@ public class SecurityPolicy extends AbstractModel {
     @SerializedName("ExceptionRules")
     @Expose
     private ExceptionRules ExceptionRules;
+
+    /**
+    * Bot 管理配置。
+    */
+    @SerializedName("BotManagement")
+    @Expose
+    private BotManagement BotManagement;
 
     /**
      * Get 自定义规则配置。 
@@ -91,16 +98,16 @@ public class SecurityPolicy extends AbstractModel {
     }
 
     /**
-     * Get HTTP DDOS防护配置。 
-     * @return HttpDDoSProtection HTTP DDOS防护配置。
+     * Get HTTP DDOS 防护配置。 
+     * @return HttpDDoSProtection HTTP DDOS 防护配置。
      */
     public HttpDDoSProtection getHttpDDoSProtection() {
         return this.HttpDDoSProtection;
     }
 
     /**
-     * Set HTTP DDOS防护配置。
-     * @param HttpDDoSProtection HTTP DDOS防护配置。
+     * Set HTTP DDOS 防护配置。
+     * @param HttpDDoSProtection HTTP DDOS 防护配置。
      */
     public void setHttpDDoSProtection(HttpDDoSProtection HttpDDoSProtection) {
         this.HttpDDoSProtection = HttpDDoSProtection;
@@ -138,6 +145,22 @@ public class SecurityPolicy extends AbstractModel {
         this.ExceptionRules = ExceptionRules;
     }
 
+    /**
+     * Get Bot 管理配置。 
+     * @return BotManagement Bot 管理配置。
+     */
+    public BotManagement getBotManagement() {
+        return this.BotManagement;
+    }
+
+    /**
+     * Set Bot 管理配置。
+     * @param BotManagement Bot 管理配置。
+     */
+    public void setBotManagement(BotManagement BotManagement) {
+        this.BotManagement = BotManagement;
+    }
+
     public SecurityPolicy() {
     }
 
@@ -161,6 +184,9 @@ public class SecurityPolicy extends AbstractModel {
         if (source.ExceptionRules != null) {
             this.ExceptionRules = new ExceptionRules(source.ExceptionRules);
         }
+        if (source.BotManagement != null) {
+            this.BotManagement = new BotManagement(source.BotManagement);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class SecurityPolicy extends AbstractModel {
         this.setParamObj(map, prefix + "HttpDDoSProtection.", this.HttpDDoSProtection);
         this.setParamObj(map, prefix + "RateLimitingRules.", this.RateLimitingRules);
         this.setParamObj(map, prefix + "ExceptionRules.", this.ExceptionRules);
+        this.setParamObj(map, prefix + "BotManagement.", this.BotManagement);
 
     }
 }

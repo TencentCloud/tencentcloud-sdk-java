@@ -36,7 +36,7 @@ blacklist：黑名单
     /**
     * IP 黑白名单列表
 支持 X.X.X.X 格式IPV4地址 或X:X:X:X:X:X:X:X 格式IPV6地址， 或网段格式/X（IPV4:1≤X≤32；IPV6:1≤X≤128）
-最多可填充 200 个白名单或 500 个黑名单；
+最多可填充 500 个白名单或 200 个黑名单；
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Filters")
@@ -105,11 +105,11 @@ blacklist：黑名单
     /**
      * Get IP 黑白名单列表
 支持 X.X.X.X 格式IPV4地址 或X:X:X:X:X:X:X:X 格式IPV6地址， 或网段格式/X（IPV4:1≤X≤32；IPV6:1≤X≤128）
-最多可填充 200 个白名单或 500 个黑名单；
+最多可填充 500 个白名单或 200 个黑名单；
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Filters IP 黑白名单列表
 支持 X.X.X.X 格式IPV4地址 或X:X:X:X:X:X:X:X 格式IPV6地址， 或网段格式/X（IPV4:1≤X≤32；IPV6:1≤X≤128）
-最多可填充 200 个白名单或 500 个黑名单；
+最多可填充 500 个白名单或 200 个黑名单；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFilters() {
@@ -119,11 +119,11 @@ blacklist：黑名单
     /**
      * Set IP 黑白名单列表
 支持 X.X.X.X 格式IPV4地址 或X:X:X:X:X:X:X:X 格式IPV6地址， 或网段格式/X（IPV4:1≤X≤32；IPV6:1≤X≤128）
-最多可填充 200 个白名单或 500 个黑名单；
+最多可填充 500 个白名单或 200 个黑名单；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Filters IP 黑白名单列表
 支持 X.X.X.X 格式IPV4地址 或X:X:X:X:X:X:X:X 格式IPV6地址， 或网段格式/X（IPV4:1≤X≤32；IPV6:1≤X≤128）
-最多可填充 200 个白名单或 500 个黑名单；
+最多可填充 500 个白名单或 200 个黑名单；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilters(String [] Filters) {

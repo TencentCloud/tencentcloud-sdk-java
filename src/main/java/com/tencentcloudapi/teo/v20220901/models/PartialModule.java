@@ -25,7 +25,9 @@ public class PartialModule extends AbstractModel {
 
     /**
     * 模块名称，取值为：
-<li>waf：托管规则。</li>
+<li>managed-rule：托管规则 Id；</li>
+<li>managed-group：托管规则组；</li>
+<li>waf：待废弃，托管规则。</li>
     */
     @SerializedName("Module")
     @Expose
@@ -40,9 +42,13 @@ public class PartialModule extends AbstractModel {
 
     /**
      * Get 模块名称，取值为：
-<li>waf：托管规则。</li> 
+<li>managed-rule：托管规则 Id；</li>
+<li>managed-group：托管规则组；</li>
+<li>waf：待废弃，托管规则。</li> 
      * @return Module 模块名称，取值为：
-<li>waf：托管规则。</li>
+<li>managed-rule：托管规则 Id；</li>
+<li>managed-group：托管规则组；</li>
+<li>waf：待废弃，托管规则。</li>
      */
     public String getModule() {
         return this.Module;
@@ -50,9 +56,13 @@ public class PartialModule extends AbstractModel {
 
     /**
      * Set 模块名称，取值为：
-<li>waf：托管规则。</li>
+<li>managed-rule：托管规则 Id；</li>
+<li>managed-group：托管规则组；</li>
+<li>waf：待废弃，托管规则。</li>
      * @param Module 模块名称，取值为：
-<li>waf：托管规则。</li>
+<li>managed-rule：托管规则 Id；</li>
+<li>managed-group：托管规则组；</li>
+<li>waf：待废弃，托管规则。</li>
      */
     public void setModule(String Module) {
         this.Module = Module;

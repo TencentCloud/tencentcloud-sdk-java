@@ -114,6 +114,13 @@ public class RecognizeValidIDCardOCRRequest extends AbstractModel {
     private Boolean EnableWordCheck;
 
     /**
+    * 默认值为false，打开返回证件是否模糊。
+    */
+    @SerializedName("EnableQualityCheck")
+    @Expose
+    private Boolean EnableQualityCheck;
+
+    /**
      * Get 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
@@ -341,6 +348,22 @@ public class RecognizeValidIDCardOCRRequest extends AbstractModel {
         this.EnableWordCheck = EnableWordCheck;
     }
 
+    /**
+     * Get 默认值为false，打开返回证件是否模糊。 
+     * @return EnableQualityCheck 默认值为false，打开返回证件是否模糊。
+     */
+    public Boolean getEnableQualityCheck() {
+        return this.EnableQualityCheck;
+    }
+
+    /**
+     * Set 默认值为false，打开返回证件是否模糊。
+     * @param EnableQualityCheck 默认值为false，打开返回证件是否模糊。
+     */
+    public void setEnableQualityCheck(Boolean EnableQualityCheck) {
+        this.EnableQualityCheck = EnableQualityCheck;
+    }
+
     public RecognizeValidIDCardOCRRequest() {
     }
 
@@ -382,6 +405,9 @@ public class RecognizeValidIDCardOCRRequest extends AbstractModel {
         if (source.EnableWordCheck != null) {
             this.EnableWordCheck = new Boolean(source.EnableWordCheck);
         }
+        if (source.EnableQualityCheck != null) {
+            this.EnableQualityCheck = new Boolean(source.EnableQualityCheck);
+        }
     }
 
 
@@ -400,6 +426,7 @@ public class RecognizeValidIDCardOCRRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableReshootCheck", this.EnableReshootCheck);
         this.setParamSimple(map, prefix + "EnablePSCheck", this.EnablePSCheck);
         this.setParamSimple(map, prefix + "EnableWordCheck", this.EnableWordCheck);
+        this.setParamSimple(map, prefix + "EnableQualityCheck", this.EnableQualityCheck);
 
     }
 }

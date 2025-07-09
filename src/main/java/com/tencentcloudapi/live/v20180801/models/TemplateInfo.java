@@ -212,6 +212,24 @@ baseline/main/high。默认baseline
     private String DRMTracks;
 
     /**
+    * 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAdaptiveBitRate")
+    @Expose
+    private Long IsAdaptiveBitRate;
+
+    /**
+    * 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdaptiveChildren")
+    @Expose
+    private ChildTemplateInfo [] AdaptiveChildren;
+
+    /**
      * Get 视频编码：h264/h265/origin，默认h264。
 
 origin: 保持原始编码格式 
@@ -687,6 +705,54 @@ baseline/main/high。默认baseline
         this.DRMTracks = DRMTracks;
     }
 
+    /**
+     * Get 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsAdaptiveBitRate 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsAdaptiveBitRate() {
+        return this.IsAdaptiveBitRate;
+    }
+
+    /**
+     * Set 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAdaptiveBitRate 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAdaptiveBitRate(Long IsAdaptiveBitRate) {
+        this.IsAdaptiveBitRate = IsAdaptiveBitRate;
+    }
+
+    /**
+     * Get 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdaptiveChildren 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ChildTemplateInfo [] getAdaptiveChildren() {
+        return this.AdaptiveChildren;
+    }
+
+    /**
+     * Set 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdaptiveChildren 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdaptiveChildren(ChildTemplateInfo [] AdaptiveChildren) {
+        this.AdaptiveChildren = AdaptiveChildren;
+    }
+
     public TemplateInfo() {
     }
 
@@ -764,6 +830,15 @@ baseline/main/high。默认baseline
         if (source.DRMTracks != null) {
             this.DRMTracks = new String(source.DRMTracks);
         }
+        if (source.IsAdaptiveBitRate != null) {
+            this.IsAdaptiveBitRate = new Long(source.IsAdaptiveBitRate);
+        }
+        if (source.AdaptiveChildren != null) {
+            this.AdaptiveChildren = new ChildTemplateInfo[source.AdaptiveChildren.length];
+            for (int i = 0; i < source.AdaptiveChildren.length; i++) {
+                this.AdaptiveChildren[i] = new ChildTemplateInfo(source.AdaptiveChildren[i]);
+            }
+        }
     }
 
 
@@ -794,6 +869,8 @@ baseline/main/high。默认baseline
         this.setParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
         this.setParamSimple(map, prefix + "DRMType", this.DRMType);
         this.setParamSimple(map, prefix + "DRMTracks", this.DRMTracks);
+        this.setParamSimple(map, prefix + "IsAdaptiveBitRate", this.IsAdaptiveBitRate);
+        this.setParamArrayObj(map, prefix + "AdaptiveChildren.", this.AdaptiveChildren);
 
     }
 }

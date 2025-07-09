@@ -182,6 +182,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *设置是否开启节点登录
+     * @param req SetMachineLoginRequest
+     * @return SetMachineLoginResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetMachineLoginResponse SetMachineLogin(SetMachineLoginRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetMachineLogin", SetMachineLoginResponse.class);
+    }
+
+    /**
      *本接口 (StartMachines) 用于启动一个或多个原生节点实例。
 
 只有状态为 Stopped 的实例才可以进行此操作。

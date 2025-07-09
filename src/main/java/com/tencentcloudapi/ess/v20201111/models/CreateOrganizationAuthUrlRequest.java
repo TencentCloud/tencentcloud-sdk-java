@@ -218,6 +218,15 @@ p.s. 如果上传授权书 ，需遵循以下条件
     private String [] PowerOfAttorneys;
 
     /**
+    * 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
      * Get 操作人信息 
      * @return Operator 操作人信息
      */
@@ -741,6 +750,30 @@ p.s. 如果上传授权书 ，需遵循以下条件
         this.PowerOfAttorneys = PowerOfAttorneys;
     }
 
+    /**
+     * Get 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。 
+     * @return UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。
+     * @param UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
     public CreateOrganizationAuthUrlRequest() {
     }
 
@@ -821,6 +854,9 @@ p.s. 如果上传授权书 ，需遵循以下条件
                 this.PowerOfAttorneys[i] = new String(source.PowerOfAttorneys[i]);
             }
         }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
     }
 
 
@@ -849,6 +885,7 @@ p.s. 如果上传授权书 ，需遵循以下条件
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
         this.setParamArraySimple(map, prefix + "Initialization.", this.Initialization);
         this.setParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
 
     }
 }

@@ -45,8 +45,15 @@ public class IPGroup extends AbstractModel {
     private String [] Content;
 
     /**
+    * IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。
+    */
+    @SerializedName("IPTotalCount")
+    @Expose
+    private Long IPTotalCount;
+
+    /**
     * IP 定时过期信息。
-作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
 作为出参，包含以下两类信息：
 <li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
 <li>一周内已到期的定时过期信息：已触发的过期配置。</li>
@@ -104,13 +111,29 @@ public class IPGroup extends AbstractModel {
     }
 
     /**
+     * Get IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。 
+     * @return IPTotalCount IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。
+     */
+    public Long getIPTotalCount() {
+        return this.IPTotalCount;
+    }
+
+    /**
+     * Set IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。
+     * @param IPTotalCount IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。
+     */
+    public void setIPTotalCount(Long IPTotalCount) {
+        this.IPTotalCount = IPTotalCount;
+    }
+
+    /**
      * Get IP 定时过期信息。
-作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
 作为出参，包含以下两类信息：
 <li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
 <li>一周内已到期的定时过期信息：已触发的过期配置。</li> 
      * @return IPExpireInfo IP 定时过期信息。
-作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
 作为出参，包含以下两类信息：
 <li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
 <li>一周内已到期的定时过期信息：已触发的过期配置。</li>
@@ -121,12 +144,12 @@ public class IPGroup extends AbstractModel {
 
     /**
      * Set IP 定时过期信息。
-作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
 作为出参，包含以下两类信息：
 <li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
 <li>一周内已到期的定时过期信息：已触发的过期配置。</li>
      * @param IPExpireInfo IP 定时过期信息。
-作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
 作为出参，包含以下两类信息：
 <li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
 <li>一周内已到期的定时过期信息：已触发的过期配置。</li>
@@ -155,6 +178,9 @@ public class IPGroup extends AbstractModel {
                 this.Content[i] = new String(source.Content[i]);
             }
         }
+        if (source.IPTotalCount != null) {
+            this.IPTotalCount = new Long(source.IPTotalCount);
+        }
         if (source.IPExpireInfo != null) {
             this.IPExpireInfo = new IPExpireInfo[source.IPExpireInfo.length];
             for (int i = 0; i < source.IPExpireInfo.length; i++) {
@@ -171,6 +197,7 @@ public class IPGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArraySimple(map, prefix + "Content.", this.Content);
+        this.setParamSimple(map, prefix + "IPTotalCount", this.IPTotalCount);
         this.setParamArrayObj(map, prefix + "IPExpireInfo.", this.IPExpireInfo);
 
     }

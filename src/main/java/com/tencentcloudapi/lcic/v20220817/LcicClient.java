@@ -556,6 +556,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *获取用户信息
+     * @param req DescribeUserDetailRequest
+     * @return DescribeUserDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserDetailResponse DescribeUserDetail(DescribeUserDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserDetail", DescribeUserDetailResponse.class);
+    }
+
+    /**
      *查询白板板书截图
      * @param req DescribeWhiteBoardSnapshotRequest
      * @return DescribeWhiteBoardSnapshotResponse

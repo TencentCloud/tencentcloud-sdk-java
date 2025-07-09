@@ -59,6 +59,20 @@ public class Document extends AbstractModel {
     private String FileName;
 
     /**
+    * 文档的起始页码
+    */
+    @SerializedName("FileStartPageNumber")
+    @Expose
+    private Long FileStartPageNumber;
+
+    /**
+    * 文档的结束页码
+    */
+    @SerializedName("FileEndPageNumber")
+    @Expose
+    private Long FileEndPageNumber;
+
+    /**
      * Get 文件类型。
 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 支持的文件大小：
@@ -150,6 +164,38 @@ public class Document extends AbstractModel {
         this.FileName = FileName;
     }
 
+    /**
+     * Get 文档的起始页码 
+     * @return FileStartPageNumber 文档的起始页码
+     */
+    public Long getFileStartPageNumber() {
+        return this.FileStartPageNumber;
+    }
+
+    /**
+     * Set 文档的起始页码
+     * @param FileStartPageNumber 文档的起始页码
+     */
+    public void setFileStartPageNumber(Long FileStartPageNumber) {
+        this.FileStartPageNumber = FileStartPageNumber;
+    }
+
+    /**
+     * Get 文档的结束页码 
+     * @return FileEndPageNumber 文档的结束页码
+     */
+    public Long getFileEndPageNumber() {
+        return this.FileEndPageNumber;
+    }
+
+    /**
+     * Set 文档的结束页码
+     * @param FileEndPageNumber 文档的结束页码
+     */
+    public void setFileEndPageNumber(Long FileEndPageNumber) {
+        this.FileEndPageNumber = FileEndPageNumber;
+    }
+
     public Document() {
     }
 
@@ -170,6 +216,12 @@ public class Document extends AbstractModel {
         if (source.FileName != null) {
             this.FileName = new String(source.FileName);
         }
+        if (source.FileStartPageNumber != null) {
+            this.FileStartPageNumber = new Long(source.FileStartPageNumber);
+        }
+        if (source.FileEndPageNumber != null) {
+            this.FileEndPageNumber = new Long(source.FileEndPageNumber);
+        }
     }
 
 
@@ -181,6 +233,8 @@ public class Document extends AbstractModel {
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
         this.setParamSimple(map, prefix + "FileContent", this.FileContent);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
+        this.setParamSimple(map, prefix + "FileStartPageNumber", this.FileStartPageNumber);
+        this.setParamSimple(map, prefix + "FileEndPageNumber", this.FileEndPageNumber);
 
     }
 }

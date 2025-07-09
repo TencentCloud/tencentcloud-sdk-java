@@ -584,6 +584,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *租户日志存储统计
+     * @param req DescribeLogStorageStatisticRequest
+     * @return DescribeLogStorageStatisticResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(DescribeLogStorageStatisticRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogStorageStatistic", DescribeLogStorageStatisticResponse.class);
+    }
+
+    /**
      *日志审计日志查询
      * @param req DescribeLogsRequest
      * @return DescribeLogsResponse

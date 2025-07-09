@@ -34,6 +34,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
     */
     @SerializedName("TypeId")
     @Expose
@@ -127,7 +128,8 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 - 15：Redis 6.2 内存版（标准架构）。
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。 
+- 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。 
      * @return TypeId 实例类型。
 - 2：Redis 2.8 内存版（标准架构）。
 - 6：Redis 4.0 内存版（标准架构）。
@@ -138,6 +140,7 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
      */
     public Long getTypeId() {
         return this.TypeId;
@@ -154,6 +157,7 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
      * @param TypeId 实例类型。
 - 2：Redis 2.8 内存版（标准架构）。
 - 6：Redis 4.0 内存版（标准架构）。
@@ -164,6 +168,7 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;

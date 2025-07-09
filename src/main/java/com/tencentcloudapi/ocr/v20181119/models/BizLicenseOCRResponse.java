@@ -184,6 +184,13 @@ WARN_RESHOOT_CARD翻拍件告警
     private Boolean Electronic;
 
     /**
+    * 非营业执照的营业类证件识别结果，将以结构化形式呈现。
+    */
+    @SerializedName("BusinessCertificate")
+    @Expose
+    private BusinessCertificateInfo [] BusinessCertificate;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -567,6 +574,22 @@ WARN_RESHOOT_CARD翻拍件告警
     }
 
     /**
+     * Get 非营业执照的营业类证件识别结果，将以结构化形式呈现。 
+     * @return BusinessCertificate 非营业执照的营业类证件识别结果，将以结构化形式呈现。
+     */
+    public BusinessCertificateInfo [] getBusinessCertificate() {
+        return this.BusinessCertificate;
+    }
+
+    /**
+     * Set 非营业执照的营业类证件识别结果，将以结构化形式呈现。
+     * @param BusinessCertificate 非营业执照的营业类证件识别结果，将以结构化形式呈现。
+     */
+    public void setBusinessCertificate(BusinessCertificateInfo [] BusinessCertificate) {
+        this.BusinessCertificate = BusinessCertificate;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -662,6 +685,12 @@ WARN_RESHOOT_CARD翻拍件告警
         if (source.Electronic != null) {
             this.Electronic = new Boolean(source.Electronic);
         }
+        if (source.BusinessCertificate != null) {
+            this.BusinessCertificate = new BusinessCertificateInfo[source.BusinessCertificate.length];
+            for (int i = 0; i < source.BusinessCertificate.length; i++) {
+                this.BusinessCertificate[i] = new BusinessCertificateInfo(source.BusinessCertificate[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -694,6 +723,7 @@ WARN_RESHOOT_CARD翻拍件告警
         this.setParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
         this.setParamSimple(map, prefix + "RegistrationAuthority", this.RegistrationAuthority);
         this.setParamSimple(map, prefix + "Electronic", this.Electronic);
+        this.setParamArrayObj(map, prefix + "BusinessCertificate.", this.BusinessCertificate);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

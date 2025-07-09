@@ -31,6 +31,13 @@ public class DescribeVulInfoCvssRequest extends AbstractModel {
     private Long VulId;
 
     /**
+    * 兼容应用防护漏洞防御容器视角告警里漏洞详情，默认是主机视角，可选字段，Source=tcss则为容器视角漏洞详情，后端会把VulId转为主机vul_vuls里的VulId
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
      * Get 漏洞id 
      * @return VulId 漏洞id
      */
@@ -46,6 +53,22 @@ public class DescribeVulInfoCvssRequest extends AbstractModel {
         this.VulId = VulId;
     }
 
+    /**
+     * Get 兼容应用防护漏洞防御容器视角告警里漏洞详情，默认是主机视角，可选字段，Source=tcss则为容器视角漏洞详情，后端会把VulId转为主机vul_vuls里的VulId 
+     * @return Source 兼容应用防护漏洞防御容器视角告警里漏洞详情，默认是主机视角，可选字段，Source=tcss则为容器视角漏洞详情，后端会把VulId转为主机vul_vuls里的VulId
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 兼容应用防护漏洞防御容器视角告警里漏洞详情，默认是主机视角，可选字段，Source=tcss则为容器视角漏洞详情，后端会把VulId转为主机vul_vuls里的VulId
+     * @param Source 兼容应用防护漏洞防御容器视角告警里漏洞详情，默认是主机视角，可选字段，Source=tcss则为容器视角漏洞详情，后端会把VulId转为主机vul_vuls里的VulId
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
     public DescribeVulInfoCvssRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeVulInfoCvssRequest extends AbstractModel {
         if (source.VulId != null) {
             this.VulId = new Long(source.VulId);
         }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeVulInfoCvssRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VulId", this.VulId);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

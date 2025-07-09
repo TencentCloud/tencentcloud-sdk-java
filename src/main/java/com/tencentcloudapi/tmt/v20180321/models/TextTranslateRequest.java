@@ -97,14 +97,14 @@ hi：印地语
     private String UntranslatedText;
 
     /**
-    * 需要使用的术语库列表
+    * 需要使用的术语库列表，通过 [术语库操作指南](https://cloud.tencent.com/document/product/551/107926) 自行创建术语库获取。
     */
     @SerializedName("TermRepoIDList")
     @Expose
     private String [] TermRepoIDList;
 
     /**
-    * 需要使用的例句库列表
+    * 需要使用的例句库列表，通过 [例句库操作指南](https://cloud.tencent.com/document/product/551/107927) 自行创建例句库获取。
     */
     @SerializedName("SentRepoIDList")
     @Expose
@@ -343,32 +343,32 @@ hi：印地语
     }
 
     /**
-     * Get 需要使用的术语库列表 
-     * @return TermRepoIDList 需要使用的术语库列表
+     * Get 需要使用的术语库列表，通过 [术语库操作指南](https://cloud.tencent.com/document/product/551/107926) 自行创建术语库获取。 
+     * @return TermRepoIDList 需要使用的术语库列表，通过 [术语库操作指南](https://cloud.tencent.com/document/product/551/107926) 自行创建术语库获取。
      */
     public String [] getTermRepoIDList() {
         return this.TermRepoIDList;
     }
 
     /**
-     * Set 需要使用的术语库列表
-     * @param TermRepoIDList 需要使用的术语库列表
+     * Set 需要使用的术语库列表，通过 [术语库操作指南](https://cloud.tencent.com/document/product/551/107926) 自行创建术语库获取。
+     * @param TermRepoIDList 需要使用的术语库列表，通过 [术语库操作指南](https://cloud.tencent.com/document/product/551/107926) 自行创建术语库获取。
      */
     public void setTermRepoIDList(String [] TermRepoIDList) {
         this.TermRepoIDList = TermRepoIDList;
     }
 
     /**
-     * Get 需要使用的例句库列表 
-     * @return SentRepoIDList 需要使用的例句库列表
+     * Get 需要使用的例句库列表，通过 [例句库操作指南](https://cloud.tencent.com/document/product/551/107927) 自行创建例句库获取。 
+     * @return SentRepoIDList 需要使用的例句库列表，通过 [例句库操作指南](https://cloud.tencent.com/document/product/551/107927) 自行创建例句库获取。
      */
     public String [] getSentRepoIDList() {
         return this.SentRepoIDList;
     }
 
     /**
-     * Set 需要使用的例句库列表
-     * @param SentRepoIDList 需要使用的例句库列表
+     * Set 需要使用的例句库列表，通过 [例句库操作指南](https://cloud.tencent.com/document/product/551/107927) 自行创建例句库获取。
+     * @param SentRepoIDList 需要使用的例句库列表，通过 [例句库操作指南](https://cloud.tencent.com/document/product/551/107927) 自行创建例句库获取。
      */
     public void setSentRepoIDList(String [] SentRepoIDList) {
         this.SentRepoIDList = SentRepoIDList;

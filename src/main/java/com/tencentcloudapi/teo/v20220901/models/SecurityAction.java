@@ -55,6 +55,13 @@ public class SecurityAction extends AbstractModel {
     private RedirectActionParameters RedirectActionParameters;
 
     /**
+    * 当 Name 为 Allow 时的附加参数。
+    */
+    @SerializedName("AllowActionParameters")
+    @Expose
+    private AllowActionParameters AllowActionParameters;
+
+    /**
     * 当 Name 为 Challenge 时的附加参数。
     */
     @SerializedName("ChallengeActionParameters")
@@ -164,6 +171,22 @@ public class SecurityAction extends AbstractModel {
     }
 
     /**
+     * Get 当 Name 为 Allow 时的附加参数。 
+     * @return AllowActionParameters 当 Name 为 Allow 时的附加参数。
+     */
+    public AllowActionParameters getAllowActionParameters() {
+        return this.AllowActionParameters;
+    }
+
+    /**
+     * Set 当 Name 为 Allow 时的附加参数。
+     * @param AllowActionParameters 当 Name 为 Allow 时的附加参数。
+     */
+    public void setAllowActionParameters(AllowActionParameters AllowActionParameters) {
+        this.AllowActionParameters = AllowActionParameters;
+    }
+
+    /**
      * Get 当 Name 为 Challenge 时的附加参数。 
      * @return ChallengeActionParameters 当 Name 为 Challenge 时的附加参数。
      */
@@ -228,6 +251,9 @@ public class SecurityAction extends AbstractModel {
         if (source.RedirectActionParameters != null) {
             this.RedirectActionParameters = new RedirectActionParameters(source.RedirectActionParameters);
         }
+        if (source.AllowActionParameters != null) {
+            this.AllowActionParameters = new AllowActionParameters(source.AllowActionParameters);
+        }
         if (source.ChallengeActionParameters != null) {
             this.ChallengeActionParameters = new ChallengeActionParameters(source.ChallengeActionParameters);
         }
@@ -247,6 +273,7 @@ public class SecurityAction extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "DenyActionParameters.", this.DenyActionParameters);
         this.setParamObj(map, prefix + "RedirectActionParameters.", this.RedirectActionParameters);
+        this.setParamObj(map, prefix + "AllowActionParameters.", this.AllowActionParameters);
         this.setParamObj(map, prefix + "ChallengeActionParameters.", this.ChallengeActionParameters);
         this.setParamObj(map, prefix + "BlockIPActionParameters.", this.BlockIPActionParameters);
         this.setParamObj(map, prefix + "ReturnCustomPageActionParameters.", this.ReturnCustomPageActionParameters);

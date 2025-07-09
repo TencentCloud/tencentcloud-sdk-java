@@ -387,6 +387,9 @@ public enum AsErrorCode {
      /* 指定的带宽包ID不存在。 */
      RESOURCENOTFOUND_BANDWIDTHPACKAGEIDNOTFOUND("ResourceNotFound.BandwidthPackageIdNotFound"),
      
+     /* 指定的传统型负载均衡器ID不存在。 */
+     RESOURCENOTFOUND_CLASSICLOADBALANCERNOTFOUND("ResourceNotFound.ClassicLoadBalancerNotFound"),
+     
      /* 指定的 CMQ queue 不存在。 */
      RESOURCENOTFOUND_CMQQUEUENOTFOUND("ResourceNotFound.CmqQueueNotFound"),
      

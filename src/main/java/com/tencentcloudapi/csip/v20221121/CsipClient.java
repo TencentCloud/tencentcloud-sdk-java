@@ -50,6 +50,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *检测AK 异步任务
+     * @param req CreateAccessKeyCheckTaskRequest
+     * @return CreateAccessKeyCheckTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccessKeyCheckTaskResponse CreateAccessKeyCheckTask(CreateAccessKeyCheckTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAccessKeyCheckTask", CreateAccessKeyCheckTaskResponse.class);
+    }
+
+    /**
+     *发起AK资产同步任务
+     * @param req CreateAccessKeySyncTaskRequest
+     * @return CreateAccessKeySyncTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccessKeySyncTaskResponse CreateAccessKeySyncTask(CreateAccessKeySyncTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAccessKeySyncTask", CreateAccessKeySyncTaskResponse.class);
+    }
+
+    /**
      *创建域名、ip相关信息
      * @param req CreateDomainAndIpRequest
      * @return CreateDomainAndIpResponse
@@ -94,6 +116,39 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取调用记录列表
+     * @param req DescribeAbnormalCallRecordRequest
+     * @return DescribeAbnormalCallRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAbnormalCallRecordResponse DescribeAbnormalCallRecord(DescribeAbnormalCallRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAbnormalCallRecord", DescribeAbnormalCallRecordResponse.class);
+    }
+
+    /**
+     *访问密钥告警记录列表
+     * @param req DescribeAccessKeyAlarmRequest
+     * @return DescribeAccessKeyAlarmResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyAlarmResponse DescribeAccessKeyAlarm(DescribeAccessKeyAlarmRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyAlarm", DescribeAccessKeyAlarmResponse.class);
+    }
+
+    /**
+     *访问密钥告警记录详情
+     * @param req DescribeAccessKeyAlarmDetailRequest
+     * @return DescribeAccessKeyAlarmDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyAlarmDetailResponse DescribeAccessKeyAlarmDetail(DescribeAccessKeyAlarmDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyAlarmDetail", DescribeAccessKeyAlarmDetailResponse.class);
+    }
+
+    /**
      *获取用户访问密钥资产列表
      * @param req DescribeAccessKeyAssetRequest
      * @return DescribeAccessKeyAssetResponse
@@ -102,6 +157,50 @@ public class CsipClient extends AbstractClient{
     public DescribeAccessKeyAssetResponse DescribeAccessKeyAsset(DescribeAccessKeyAssetRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAccessKeyAsset", DescribeAccessKeyAssetResponse.class);
+    }
+
+    /**
+     *访问密钥风险记录列表
+     * @param req DescribeAccessKeyRiskRequest
+     * @return DescribeAccessKeyRiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyRiskResponse DescribeAccessKeyRisk(DescribeAccessKeyRiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyRisk", DescribeAccessKeyRiskResponse.class);
+    }
+
+    /**
+     *访问密钥风险记录详情
+     * @param req DescribeAccessKeyRiskDetailRequest
+     * @return DescribeAccessKeyRiskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyRiskDetailResponse DescribeAccessKeyRiskDetail(DescribeAccessKeyRiskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyRiskDetail", DescribeAccessKeyRiskDetailResponse.class);
+    }
+
+    /**
+     *查询用户的账号详情
+     * @param req DescribeAccessKeyUserDetailRequest
+     * @return DescribeAccessKeyUserDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyUserDetailResponse DescribeAccessKeyUserDetail(DescribeAccessKeyUserDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyUserDetail", DescribeAccessKeyUserDetailResponse.class);
+    }
+
+    /**
+     *查询用户的账号列表
+     * @param req DescribeAccessKeyUserListRequest
+     * @return DescribeAccessKeyUserListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyUserListResponse DescribeAccessKeyUserList(DescribeAccessKeyUserListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyUserList", DescribeAccessKeyUserListResponse.class);
     }
 
     /**
@@ -402,6 +501,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取风险调用记录列表
+     * @param req DescribeRiskCallRecordRequest
+     * @return DescribeRiskCallRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskCallRecordResponse DescribeRiskCallRecord(DescribeRiskCallRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskCallRecord", DescribeRiskCallRecordResponse.class);
+    }
+
+    /**
      *获取资产视角的配置风险列表
      * @param req DescribeRiskCenterAssetViewCFGRiskListRequest
      * @return DescribeRiskCenterAssetViewCFGRiskListResponse
@@ -655,6 +765,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取账号调用记录列表
+     * @param req DescribeUserCallRecordRequest
+     * @return DescribeUserCallRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserCallRecordResponse DescribeUserCallRecord(DescribeUserCallRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserCallRecord", DescribeUserCallRecordResponse.class);
+    }
+
+    /**
      *新安全中心风险中心-漏洞列表
      * @param req DescribeVULListRequest
      * @return DescribeVULListResponse
@@ -773,6 +894,28 @@ public class CsipClient extends AbstractClient{
     public StopRiskCenterTaskResponse StopRiskCenterTask(StopRiskCenterTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopRiskCenterTask", StopRiskCenterTaskResponse.class);
+    }
+
+    /**
+     *标记风险或者告警为 已处置/已忽略
+     * @param req UpdateAccessKeyAlarmStatusRequest
+     * @return UpdateAccessKeyAlarmStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAccessKeyAlarmStatusResponse UpdateAccessKeyAlarmStatus(UpdateAccessKeyAlarmStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAccessKeyAlarmStatus", UpdateAccessKeyAlarmStatusResponse.class);
+    }
+
+    /**
+     *编辑访问密钥/源IP备注
+     * @param req UpdateAccessKeyRemarkRequest
+     * @return UpdateAccessKeyRemarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAccessKeyRemarkResponse UpdateAccessKeyRemark(UpdateAccessKeyRemarkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAccessKeyRemark", UpdateAccessKeyRemarkResponse.class);
     }
 
     /**

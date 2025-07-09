@@ -137,6 +137,13 @@ public class SendEmailStatus extends AbstractModel {
     private Boolean UserComplainted;
 
     /**
+    * 用户是否举报该发送者
+    */
+    @SerializedName("UserComplained")
+    @Expose
+    private Boolean UserComplained;
+
+    /**
      * Get SendEmail返回的MessageId 
      * @return MessageId SendEmail返回的MessageId
      */
@@ -431,7 +438,9 @@ public class SendEmailStatus extends AbstractModel {
     /**
      * Get 用户是否举报该发送者 
      * @return UserComplainted 用户是否举报该发送者
+     * @deprecated
      */
+    @Deprecated
     public Boolean getUserComplainted() {
         return this.UserComplainted;
     }
@@ -439,9 +448,27 @@ public class SendEmailStatus extends AbstractModel {
     /**
      * Set 用户是否举报该发送者
      * @param UserComplainted 用户是否举报该发送者
+     * @deprecated
      */
+    @Deprecated
     public void setUserComplainted(Boolean UserComplainted) {
         this.UserComplainted = UserComplainted;
+    }
+
+    /**
+     * Get 用户是否举报该发送者 
+     * @return UserComplained 用户是否举报该发送者
+     */
+    public Boolean getUserComplained() {
+        return this.UserComplained;
+    }
+
+    /**
+     * Set 用户是否举报该发送者
+     * @param UserComplained 用户是否举报该发送者
+     */
+    public void setUserComplained(Boolean UserComplained) {
+        this.UserComplained = UserComplained;
     }
 
     public SendEmailStatus() {
@@ -488,6 +515,9 @@ public class SendEmailStatus extends AbstractModel {
         if (source.UserComplainted != null) {
             this.UserComplainted = new Boolean(source.UserComplainted);
         }
+        if (source.UserComplained != null) {
+            this.UserComplained = new Boolean(source.UserComplained);
+        }
     }
 
 
@@ -507,6 +537,7 @@ public class SendEmailStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "UserClicked", this.UserClicked);
         this.setParamSimple(map, prefix + "UserUnsubscribed", this.UserUnsubscribed);
         this.setParamSimple(map, prefix + "UserComplainted", this.UserComplainted);
+        this.setParamSimple(map, prefix + "UserComplained", this.UserComplained);
 
     }
 }

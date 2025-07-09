@@ -136,6 +136,7 @@ public class InstanceSet extends AbstractModel {
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
     */
     @SerializedName("Type")
     @Expose
@@ -376,6 +377,7 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 实例的节点详细信息。
+只有多可用区实例会返回。
     */
     @SerializedName("NodeSet")
     @Expose
@@ -703,7 +705,8 @@ public class InstanceSet extends AbstractModel {
 - 15：Redis 6.2 内存版（标准架构）。
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。 
+- 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。 
      * @return Type 实例类型。
 - 2：Redis 2.8 内存版（标准架构）。
 - 3：CKV 3.2 内存版（标准架构）。
@@ -717,6 +720,7 @@ public class InstanceSet extends AbstractModel {
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
      */
     public Long getType() {
         return this.Type;
@@ -736,6 +740,7 @@ public class InstanceSet extends AbstractModel {
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
      * @param Type 实例类型。
 - 2：Redis 2.8 内存版（标准架构）。
 - 3：CKV 3.2 内存版（标准架构）。
@@ -749,6 +754,7 @@ public class InstanceSet extends AbstractModel {
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -1291,8 +1297,10 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
-     * Get 实例的节点详细信息。 
+     * Get 实例的节点详细信息。
+只有多可用区实例会返回。 
      * @return NodeSet 实例的节点详细信息。
+只有多可用区实例会返回。
      */
     public RedisNodeInfo [] getNodeSet() {
         return this.NodeSet;
@@ -1300,7 +1308,9 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 实例的节点详细信息。
+只有多可用区实例会返回。
      * @param NodeSet 实例的节点详细信息。
+只有多可用区实例会返回。
      */
     public void setNodeSet(RedisNodeInfo [] NodeSet) {
         this.NodeSet = NodeSet;

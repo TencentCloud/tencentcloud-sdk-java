@@ -72,7 +72,11 @@ public class CreateFlowOption extends AbstractModel {
     * 是否可以编辑签署人包括新增，修改，删除 
 <ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
 
-注意：如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+
+
+注意：
+* 如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+* 此参数对子客和自动签无效，不允许进行修改。
     */
     @SerializedName("ForbidEditApprover")
     @Expose
@@ -245,11 +249,19 @@ public class CreateFlowOption extends AbstractModel {
      * Get 是否可以编辑签署人包括新增，修改，删除 
 <ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
 
-注意：如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空 
+
+
+注意：
+* 如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+* 此参数对子客和自动签无效，不允许进行修改。 
      * @return ForbidEditApprover 是否可以编辑签署人包括新增，修改，删除 
 <ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
 
-注意：如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+
+
+注意：
+* 如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+* 此参数对子客和自动签无效，不允许进行修改。
      */
     public Boolean getForbidEditApprover() {
         return this.ForbidEditApprover;
@@ -259,11 +271,19 @@ public class CreateFlowOption extends AbstractModel {
      * Set 是否可以编辑签署人包括新增，修改，删除 
 <ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
 
-注意：如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+
+
+注意：
+* 如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+* 此参数对子客和自动签无效，不允许进行修改。
      * @param ForbidEditApprover 是否可以编辑签署人包括新增，修改，删除 
 <ul><li>（默认） false -可以编辑签署人</li> <li> true - 禁止编辑签署人</li></ul>
 
-注意：如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+
+
+注意：
+* 如果设置参数为 true， 则 参数签署人 [FlowApproverList](https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow) 不能为空
+* 此参数对子客和自动签无效，不允许进行修改。
      */
     public void setForbidEditApprover(Boolean ForbidEditApprover) {
         this.ForbidEditApprover = ForbidEditApprover;

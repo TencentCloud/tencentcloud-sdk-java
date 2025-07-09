@@ -321,6 +321,13 @@ public class Instance extends AbstractModel {
     private String LatestOperationErrorMsg;
 
     /**
+    * 实例绑定的公网IPv6地址。
+    */
+    @SerializedName("PublicIPv6Addresses")
+    @Expose
+    private String [] PublicIPv6Addresses;
+
+    /**
      * Get 实例所在的位置。 
      * @return Placement 实例所在的位置。
      */
@@ -1016,6 +1023,22 @@ public class Instance extends AbstractModel {
         this.LatestOperationErrorMsg = LatestOperationErrorMsg;
     }
 
+    /**
+     * Get 实例绑定的公网IPv6地址。 
+     * @return PublicIPv6Addresses 实例绑定的公网IPv6地址。
+     */
+    public String [] getPublicIPv6Addresses() {
+        return this.PublicIPv6Addresses;
+    }
+
+    /**
+     * Set 实例绑定的公网IPv6地址。
+     * @param PublicIPv6Addresses 实例绑定的公网IPv6地址。
+     */
+    public void setPublicIPv6Addresses(String [] PublicIPv6Addresses) {
+        this.PublicIPv6Addresses = PublicIPv6Addresses;
+    }
+
     public Instance() {
     }
 
@@ -1168,6 +1191,12 @@ public class Instance extends AbstractModel {
         if (source.LatestOperationErrorMsg != null) {
             this.LatestOperationErrorMsg = new String(source.LatestOperationErrorMsg);
         }
+        if (source.PublicIPv6Addresses != null) {
+            this.PublicIPv6Addresses = new String[source.PublicIPv6Addresses.length];
+            for (int i = 0; i < source.PublicIPv6Addresses.length; i++) {
+                this.PublicIPv6Addresses[i] = new String(source.PublicIPv6Addresses[i]);
+            }
+        }
     }
 
 
@@ -1216,6 +1245,7 @@ public class Instance extends AbstractModel {
         this.setParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
         this.setParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
         this.setParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
+        this.setParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
 
     }
 }

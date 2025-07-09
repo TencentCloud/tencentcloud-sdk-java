@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSecurityIPGroupResponse extends AbstractModel {
 
     /**
-    * 安全 IP 组的详细配置信息。包含每个安全 IP 组的 ID 、名称、 IP / 网段列表信息和过期时间信息。
+    * 安全 IP 组的详细配置信息。包含每个安全 IP 组的 ID 、名称、IP / 网段总数量、 IP / 网段列表信息和过期时间信息。
     */
     @SerializedName("IPGroups")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeSecurityIPGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安全 IP 组的详细配置信息。包含每个安全 IP 组的 ID 、名称、 IP / 网段列表信息和过期时间信息。 
-     * @return IPGroups 安全 IP 组的详细配置信息。包含每个安全 IP 组的 ID 、名称、 IP / 网段列表信息和过期时间信息。
+     * Get 安全 IP 组的详细配置信息。包含每个安全 IP 组的 ID 、名称、IP / 网段总数量、 IP / 网段列表信息和过期时间信息。 
+     * @return IPGroups 安全 IP 组的详细配置信息。包含每个安全 IP 组的 ID 、名称、IP / 网段总数量、 IP / 网段列表信息和过期时间信息。
      */
     public IPGroup [] getIPGroups() {
         return this.IPGroups;
     }
 
     /**
-     * Set 安全 IP 组的详细配置信息。包含每个安全 IP 组的 ID 、名称、 IP / 网段列表信息和过期时间信息。
-     * @param IPGroups 安全 IP 组的详细配置信息。包含每个安全 IP 组的 ID 、名称、 IP / 网段列表信息和过期时间信息。
+     * Set 安全 IP 组的详细配置信息。包含每个安全 IP 组的 ID 、名称、IP / 网段总数量、 IP / 网段列表信息和过期时间信息。
+     * @param IPGroups 安全 IP 组的详细配置信息。包含每个安全 IP 组的 ID 、名称、IP / 网段总数量、 IP / 网段列表信息和过期时间信息。
      */
     public void setIPGroups(IPGroup [] IPGroups) {
         this.IPGroups = IPGroups;
