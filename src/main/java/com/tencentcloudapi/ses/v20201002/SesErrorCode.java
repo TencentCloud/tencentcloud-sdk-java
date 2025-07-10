@@ -1,5 +1,8 @@
 package com.tencentcloudapi.ses.v20201002;
 public enum SesErrorCode {
+     /* CAM 后台鉴权失败 */
+     AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
+     
      /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      

@@ -182,7 +182,7 @@ https://cloud.tencent.com/document/product/267/56208
     private String SpecifyTaskId;
 
     /**
-    * 任务描述，限制 512 字节。
+    * 任务描述，限制 512 字节。不可以使用特殊字符，如Unicode的特殊字符集。
     */
     @SerializedName("Comment")
     @Expose
@@ -736,16 +736,16 @@ https://cloud.tencent.com/document/product/267/56208
     }
 
     /**
-     * Get 任务描述，限制 512 字节。 
-     * @return Comment 任务描述，限制 512 字节。
+     * Get 任务描述，限制 512 字节。不可以使用特殊字符，如Unicode的特殊字符集。 
+     * @return Comment 任务描述，限制 512 字节。不可以使用特殊字符，如Unicode的特殊字符集。
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 任务描述，限制 512 字节。
-     * @param Comment 任务描述，限制 512 字节。
+     * Set 任务描述，限制 512 字节。不可以使用特殊字符，如Unicode的特殊字符集。
+     * @param Comment 任务描述，限制 512 字节。不可以使用特殊字符，如Unicode的特殊字符集。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

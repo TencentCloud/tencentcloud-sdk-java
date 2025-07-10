@@ -129,7 +129,7 @@ public class ReservedInstance extends AbstractModel {
     private String NodeName;
 
     /**
-    *  上个周期预留券的抵扣状态，Deduct、NotDeduct
+    *  上个周期预留券的抵扣状态，Deduct：已抵扣、NotDeduct：未抵扣
     */
     @SerializedName("DeductStatus")
     @Expose
@@ -376,16 +376,16 @@ public class ReservedInstance extends AbstractModel {
     }
 
     /**
-     * Get  上个周期预留券的抵扣状态，Deduct、NotDeduct 
-     * @return DeductStatus  上个周期预留券的抵扣状态，Deduct、NotDeduct
+     * Get  上个周期预留券的抵扣状态，Deduct：已抵扣、NotDeduct：未抵扣 
+     * @return DeductStatus  上个周期预留券的抵扣状态，Deduct：已抵扣、NotDeduct：未抵扣
      */
     public String getDeductStatus() {
         return this.DeductStatus;
     }
 
     /**
-     * Set  上个周期预留券的抵扣状态，Deduct、NotDeduct
-     * @param DeductStatus  上个周期预留券的抵扣状态，Deduct、NotDeduct
+     * Set  上个周期预留券的抵扣状态，Deduct：已抵扣、NotDeduct：未抵扣
+     * @param DeductStatus  上个周期预留券的抵扣状态，Deduct：已抵扣、NotDeduct：未抵扣
      */
     public void setDeductStatus(String DeductStatus) {
         this.DeductStatus = DeductStatus;

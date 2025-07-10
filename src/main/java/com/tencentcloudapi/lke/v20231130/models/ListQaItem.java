@@ -185,6 +185,13 @@ public class ListQaItem extends AbstractModel {
     private Boolean IsDisabled;
 
     /**
+    * 员工名称
+    */
+    @SerializedName("StaffName")
+    @Expose
+    private String StaffName;
+
+    /**
      * Get 问答ID 
      * @return QaBizId 问答ID
      */
@@ -552,6 +559,22 @@ public class ListQaItem extends AbstractModel {
         this.IsDisabled = IsDisabled;
     }
 
+    /**
+     * Get 员工名称 
+     * @return StaffName 员工名称
+     */
+    public String getStaffName() {
+        return this.StaffName;
+    }
+
+    /**
+     * Set 员工名称
+     * @param StaffName 员工名称
+     */
+    public void setStaffName(String StaffName) {
+        this.StaffName = StaffName;
+    }
+
     public ListQaItem() {
     }
 
@@ -632,6 +655,9 @@ public class ListQaItem extends AbstractModel {
         if (source.IsDisabled != null) {
             this.IsDisabled = new Boolean(source.IsDisabled);
         }
+        if (source.StaffName != null) {
+            this.StaffName = new String(source.StaffName);
+        }
     }
 
 
@@ -662,6 +688,7 @@ public class ListQaItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SimilarQuestionNum", this.SimilarQuestionNum);
         this.setParamSimple(map, prefix + "SimilarQuestionTips", this.SimilarQuestionTips);
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
+        this.setParamSimple(map, prefix + "StaffName", this.StaffName);
 
     }
 }

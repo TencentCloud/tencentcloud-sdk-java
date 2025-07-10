@@ -45,6 +45,20 @@ public class AgentKnowledgeFilter extends AbstractModel {
     private AgentKnowledgeFilterTag Tag;
 
     /**
+    * 知识库列表
+    */
+    @SerializedName("KnowledgeList")
+    @Expose
+    private AgentKnowledge [] KnowledgeList;
+
+    /**
+    * 是否检索全部知识
+    */
+    @SerializedName("AllKnowledge")
+    @Expose
+    private Boolean AllKnowledge;
+
+    /**
      * Get 知识检索筛选方式; 0: 全部知识; 1:按文档和问答; 2: 按标签 
      * @return FilterType 知识检索筛选方式; 0: 全部知识; 1:按文档和问答; 2: 按标签
      */
@@ -92,6 +106,38 @@ public class AgentKnowledgeFilter extends AbstractModel {
         this.Tag = Tag;
     }
 
+    /**
+     * Get 知识库列表 
+     * @return KnowledgeList 知识库列表
+     */
+    public AgentKnowledge [] getKnowledgeList() {
+        return this.KnowledgeList;
+    }
+
+    /**
+     * Set 知识库列表
+     * @param KnowledgeList 知识库列表
+     */
+    public void setKnowledgeList(AgentKnowledge [] KnowledgeList) {
+        this.KnowledgeList = KnowledgeList;
+    }
+
+    /**
+     * Get 是否检索全部知识 
+     * @return AllKnowledge 是否检索全部知识
+     */
+    public Boolean getAllKnowledge() {
+        return this.AllKnowledge;
+    }
+
+    /**
+     * Set 是否检索全部知识
+     * @param AllKnowledge 是否检索全部知识
+     */
+    public void setAllKnowledge(Boolean AllKnowledge) {
+        this.AllKnowledge = AllKnowledge;
+    }
+
     public AgentKnowledgeFilter() {
     }
 
@@ -109,6 +155,15 @@ public class AgentKnowledgeFilter extends AbstractModel {
         if (source.Tag != null) {
             this.Tag = new AgentKnowledgeFilterTag(source.Tag);
         }
+        if (source.KnowledgeList != null) {
+            this.KnowledgeList = new AgentKnowledge[source.KnowledgeList.length];
+            for (int i = 0; i < source.KnowledgeList.length; i++) {
+                this.KnowledgeList[i] = new AgentKnowledge(source.KnowledgeList[i]);
+            }
+        }
+        if (source.AllKnowledge != null) {
+            this.AllKnowledge = new Boolean(source.AllKnowledge);
+        }
     }
 
 
@@ -119,6 +174,8 @@ public class AgentKnowledgeFilter extends AbstractModel {
         this.setParamSimple(map, prefix + "FilterType", this.FilterType);
         this.setParamObj(map, prefix + "DocAndAnswer.", this.DocAndAnswer);
         this.setParamObj(map, prefix + "Tag.", this.Tag);
+        this.setParamArrayObj(map, prefix + "KnowledgeList.", this.KnowledgeList);
+        this.setParamSimple(map, prefix + "AllKnowledge", this.AllKnowledge);
 
     }
 }

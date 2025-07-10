@@ -31,14 +31,14 @@ public class CreateSLInstanceRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 实例计费模式，0表示后付费，即按量计费。
+    * 实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 实例存储类型，填写CLOUD_HSSD，表示性能云存储。
+    * 实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。
     */
     @SerializedName("DiskType")
     @Expose
@@ -87,6 +87,13 @@ public class CreateSLInstanceRequest extends AbstractModel {
     private String ClientToken;
 
     /**
+    * 部署模式
+    */
+    @SerializedName("DeploymentMode")
+    @Expose
+    private String DeploymentMode;
+
+    /**
      * Get 实例名称。 
      * @return InstanceName 实例名称。
      */
@@ -103,32 +110,32 @@ public class CreateSLInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例计费模式，0表示后付费，即按量计费。 
-     * @return PayMode 实例计费模式，0表示后付费，即按量计费。
+     * Get 实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。 
+     * @return PayMode 实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 实例计费模式，0表示后付费，即按量计费。
-     * @param PayMode 实例计费模式，0表示后付费，即按量计费。
+     * Set 实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。
+     * @param PayMode 实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 实例存储类型，填写CLOUD_HSSD，表示性能云存储。 
-     * @return DiskType 实例存储类型，填写CLOUD_HSSD，表示性能云存储。
+     * Get 实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。 
+     * @return DiskType 实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 实例存储类型，填写CLOUD_HSSD，表示性能云存储。
-     * @param DiskType 实例存储类型，填写CLOUD_HSSD，表示性能云存储。
+     * Set 实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。
+     * @param DiskType 实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -230,6 +237,22 @@ public class CreateSLInstanceRequest extends AbstractModel {
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get 部署模式 
+     * @return DeploymentMode 部署模式
+     */
+    public String getDeploymentMode() {
+        return this.DeploymentMode;
+    }
+
+    /**
+     * Set 部署模式
+     * @param DeploymentMode 部署模式
+     */
+    public void setDeploymentMode(String DeploymentMode) {
+        this.DeploymentMode = DeploymentMode;
+    }
+
     public CreateSLInstanceRequest() {
     }
 
@@ -271,6 +294,9 @@ public class CreateSLInstanceRequest extends AbstractModel {
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.DeploymentMode != null) {
+            this.DeploymentMode = new String(source.DeploymentMode);
+        }
     }
 
 
@@ -287,6 +313,7 @@ public class CreateSLInstanceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "PrePaySetting.", this.PrePaySetting);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
 
     }
 }

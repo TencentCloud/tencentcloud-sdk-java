@@ -111,6 +111,13 @@ public class DocSegment extends AbstractModel {
     private String WebUrl;
 
     /**
+    * 页码信息
+    */
+    @SerializedName("PageInfos")
+    @Expose
+    private Long [] PageInfos;
+
+    /**
      * Get 片段ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 片段ID
@@ -326,6 +333,22 @@ public class DocSegment extends AbstractModel {
         this.WebUrl = WebUrl;
     }
 
+    /**
+     * Get 页码信息 
+     * @return PageInfos 页码信息
+     */
+    public Long [] getPageInfos() {
+        return this.PageInfos;
+    }
+
+    /**
+     * Set 页码信息
+     * @param PageInfos 页码信息
+     */
+    public void setPageInfos(Long [] PageInfos) {
+        this.PageInfos = PageInfos;
+    }
+
     public DocSegment() {
     }
 
@@ -367,6 +390,12 @@ public class DocSegment extends AbstractModel {
         if (source.WebUrl != null) {
             this.WebUrl = new String(source.WebUrl);
         }
+        if (source.PageInfos != null) {
+            this.PageInfos = new Long[source.PageInfos.length];
+            for (int i = 0; i < source.PageInfos.length; i++) {
+                this.PageInfos[i] = new Long(source.PageInfos[i]);
+            }
+        }
     }
 
 
@@ -385,6 +414,7 @@ public class DocSegment extends AbstractModel {
         this.setParamSimple(map, prefix + "DocBizId", this.DocBizId);
         this.setParamSimple(map, prefix + "DocUrl", this.DocUrl);
         this.setParamSimple(map, prefix + "WebUrl", this.WebUrl);
+        this.setParamArraySimple(map, prefix + "PageInfos.", this.PageInfos);
 
     }
 }

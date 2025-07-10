@@ -144,6 +144,13 @@ public class DescribeSLInstanceResponse extends AbstractModel {
     private Long NodeNum;
 
     /**
+    * Serverless Instance infomation
+    */
+    @SerializedName("SLInstance")
+    @Expose
+    private SLInstance [] SLInstance;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -427,6 +434,22 @@ public class DescribeSLInstanceResponse extends AbstractModel {
     }
 
     /**
+     * Get Serverless Instance infomation 
+     * @return SLInstance Serverless Instance infomation
+     */
+    public SLInstance [] getSLInstance() {
+        return this.SLInstance;
+    }
+
+    /**
+     * Set Serverless Instance infomation
+     * @param SLInstance Serverless Instance infomation
+     */
+    public void setSLInstance(SLInstance [] SLInstance) {
+        this.SLInstance = SLInstance;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -507,6 +530,12 @@ public class DescribeSLInstanceResponse extends AbstractModel {
         if (source.NodeNum != null) {
             this.NodeNum = new Long(source.NodeNum);
         }
+        if (source.SLInstance != null) {
+            this.SLInstance = new SLInstance[source.SLInstance.length];
+            for (int i = 0; i < source.SLInstance.length; i++) {
+                this.SLInstance[i] = new SLInstance(source.SLInstance[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -534,6 +563,7 @@ public class DescribeSLInstanceResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
+        this.setParamArrayObj(map, prefix + "SLInstance.", this.SLInstance);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -390,7 +390,9 @@ public class ImageRepository extends AbstractModel {
     /**
      * Get ApplicationName值（废弃） 
      * @return ApplicationName ApplicationName值（废弃）
+     * @deprecated
      */
+    @Deprecated
     public ScalableRule getApplicationName() {
         return this.ApplicationName;
     }
@@ -398,7 +400,9 @@ public class ImageRepository extends AbstractModel {
     /**
      * Set ApplicationName值（废弃）
      * @param ApplicationName ApplicationName值（废弃）
+     * @deprecated
      */
+    @Deprecated
     public void setApplicationName(ScalableRule ApplicationName) {
         this.ApplicationName = ApplicationName;
     }

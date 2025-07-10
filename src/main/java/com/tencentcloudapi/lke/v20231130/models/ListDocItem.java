@@ -300,6 +300,13 @@ public class ListDocItem extends AbstractModel {
     private Boolean IsDisabled;
 
     /**
+    * 员工名称
+    */
+    @SerializedName("StaffName")
+    @Expose
+    private String StaffName;
+
+    /**
      * Get 文档ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocBizId 文档ID
@@ -983,6 +990,22 @@ public class ListDocItem extends AbstractModel {
         this.IsDisabled = IsDisabled;
     }
 
+    /**
+     * Get 员工名称 
+     * @return StaffName 员工名称
+     */
+    public String getStaffName() {
+        return this.StaffName;
+    }
+
+    /**
+     * Set 员工名称
+     * @param StaffName 员工名称
+     */
+    public void setStaffName(String StaffName) {
+        this.StaffName = StaffName;
+    }
+
     public ListDocItem() {
     }
 
@@ -1105,6 +1128,9 @@ public class ListDocItem extends AbstractModel {
         if (source.IsDisabled != null) {
             this.IsDisabled = new Boolean(source.IsDisabled);
         }
+        if (source.StaffName != null) {
+            this.StaffName = new String(source.StaffName);
+        }
     }
 
 
@@ -1147,6 +1173,7 @@ public class ListDocItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CustomerKnowledgeId", this.CustomerKnowledgeId);
         this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
+        this.setParamSimple(map, prefix + "StaffName", this.StaffName);
 
     }
 }

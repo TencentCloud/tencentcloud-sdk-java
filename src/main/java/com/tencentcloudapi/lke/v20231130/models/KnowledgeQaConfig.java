@@ -163,6 +163,22 @@ public class KnowledgeQaConfig extends AbstractModel {
     private ShareKnowledgeBase [] ShareKnowledgeBases;
 
     /**
+    * 背景图相关信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackgroundImage")
+    @Expose
+    private BackgroundImageConfig BackgroundImage;
+
+    /**
+    * 开场问题
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OpeningQuestions")
+    @Expose
+    private String [] OpeningQuestions;
+
+    /**
      * Get 欢迎语，200字符以内
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Greeting 欢迎语，200字符以内
@@ -526,6 +542,46 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.ShareKnowledgeBases = ShareKnowledgeBases;
     }
 
+    /**
+     * Get 背景图相关信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackgroundImage 背景图相关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BackgroundImageConfig getBackgroundImage() {
+        return this.BackgroundImage;
+    }
+
+    /**
+     * Set 背景图相关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackgroundImage 背景图相关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackgroundImage(BackgroundImageConfig BackgroundImage) {
+        this.BackgroundImage = BackgroundImage;
+    }
+
+    /**
+     * Get 开场问题
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OpeningQuestions 开场问题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getOpeningQuestions() {
+        return this.OpeningQuestions;
+    }
+
+    /**
+     * Set 开场问题
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OpeningQuestions 开场问题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOpeningQuestions(String [] OpeningQuestions) {
+        this.OpeningQuestions = OpeningQuestions;
+    }
+
     public KnowledgeQaConfig() {
     }
 
@@ -594,6 +650,15 @@ public class KnowledgeQaConfig extends AbstractModel {
                 this.ShareKnowledgeBases[i] = new ShareKnowledgeBase(source.ShareKnowledgeBases[i]);
             }
         }
+        if (source.BackgroundImage != null) {
+            this.BackgroundImage = new BackgroundImageConfig(source.BackgroundImage);
+        }
+        if (source.OpeningQuestions != null) {
+            this.OpeningQuestions = new String[source.OpeningQuestions.length];
+            for (int i = 0; i < source.OpeningQuestions.length; i++) {
+                this.OpeningQuestions[i] = new String(source.OpeningQuestions[i]);
+            }
+        }
     }
 
 
@@ -617,6 +682,8 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageTextRetrieval", this.ImageTextRetrieval);
         this.setParamObj(map, prefix + "AiCall.", this.AiCall);
         this.setParamArrayObj(map, prefix + "ShareKnowledgeBases.", this.ShareKnowledgeBases);
+        this.setParamObj(map, prefix + "BackgroundImage.", this.BackgroundImage);
+        this.setParamArraySimple(map, prefix + "OpeningQuestions.", this.OpeningQuestions);
 
     }
 }

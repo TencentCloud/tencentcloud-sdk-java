@@ -27,6 +27,9 @@ public enum TsfErrorCode {
      /* 创建集群，开通VPC网络权限失败。 */
      FAILEDOPERATION_CLUSTERCREATEVPCFAIL("FailedOperation.ClusterCreateVpcFail"),
      
+     /* 本环境仅允许操作名称 %s 的集群 */
+     FAILEDOPERATION_CLUSTEROPERATEENVILLEGALERROR("FailedOperation.ClusterOperateEnvIllegalError"),
+     
      /* 查询集群失败。 */
      FAILEDOPERATION_CLUSTERQUERYFAILED("FailedOperation.ClusterQueryFailed"),
      
@@ -617,6 +620,9 @@ public enum TsfErrorCode {
      
      /* 集群命名已存在，请更换其他名称。 */
      INVALIDPARAMETERVALUE_CLUSTERNAMEEXIST("InvalidParameterValue.ClusterNameExist"),
+     
+     /* 本环境集群名称禁止以 %s 开头 */
+     INVALIDPARAMETERVALUE_CLUSTERNAMEPREFIXILLEGALERROR("InvalidParameterValue.ClusterNamePrefixIllegalError"),
      
      /* 集群命名不能为空。 */
      INVALIDPARAMETERVALUE_CLUSTERNAMEREQUIRED("InvalidParameterValue.ClusterNameRequired"),

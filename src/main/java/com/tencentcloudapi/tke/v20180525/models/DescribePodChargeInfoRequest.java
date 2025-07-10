@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePodChargeInfoRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群 ID。TKE 集群可通过 [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) 接口返回值中的ClusterId获取。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -45,23 +45,23 @@ public class DescribePodChargeInfoRequest extends AbstractModel {
     private String Name;
 
     /**
-    * Pod的Uid
+    * Pod的Uid，可以通过Uids 来批量查询，也可以通过 Namespace 和 Name 来查询某个 Pod 的计费信息。Uids 不传时，Namespace 和 Name 必须同时传。
     */
     @SerializedName("Uids")
     @Expose
     private String [] Uids;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群 ID。TKE 集群可通过 [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) 接口返回值中的ClusterId获取。 
+     * @return ClusterId 集群 ID。TKE 集群可通过 [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) 接口返回值中的ClusterId获取。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群 ID。TKE 集群可通过 [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) 接口返回值中的ClusterId获取。
+     * @param ClusterId 集群 ID。TKE 集群可通过 [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) 接口返回值中的ClusterId获取。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -100,16 +100,16 @@ public class DescribePodChargeInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get Pod的Uid 
-     * @return Uids Pod的Uid
+     * Get Pod的Uid，可以通过Uids 来批量查询，也可以通过 Namespace 和 Name 来查询某个 Pod 的计费信息。Uids 不传时，Namespace 和 Name 必须同时传。 
+     * @return Uids Pod的Uid，可以通过Uids 来批量查询，也可以通过 Namespace 和 Name 来查询某个 Pod 的计费信息。Uids 不传时，Namespace 和 Name 必须同时传。
      */
     public String [] getUids() {
         return this.Uids;
     }
 
     /**
-     * Set Pod的Uid
-     * @param Uids Pod的Uid
+     * Set Pod的Uid，可以通过Uids 来批量查询，也可以通过 Namespace 和 Name 来查询某个 Pod 的计费信息。Uids 不传时，Namespace 和 Name 必须同时传。
+     * @param Uids Pod的Uid，可以通过Uids 来批量查询，也可以通过 Namespace 和 Name 来查询某个 Pod 的计费信息。Uids 不传时，Namespace 和 Name 必须同时传。
      */
     public void setUids(String [] Uids) {
         this.Uids = Uids;

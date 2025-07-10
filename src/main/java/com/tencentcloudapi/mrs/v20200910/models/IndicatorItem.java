@@ -122,6 +122,13 @@ public class IndicatorItem extends AbstractModel {
     private String Sample;
 
     /**
+    * 检测方法
+    */
+    @SerializedName("Method")
+    @Expose
+    private String Method;
+
+    /**
      * Get 英文缩写 
      * @return Code 英文缩写
      */
@@ -345,6 +352,22 @@ public class IndicatorItem extends AbstractModel {
         this.Sample = Sample;
     }
 
+    /**
+     * Get 检测方法 
+     * @return Method 检测方法
+     */
+    public String getMethod() {
+        return this.Method;
+    }
+
+    /**
+     * Set 检测方法
+     * @param Method 检测方法
+     */
+    public void setMethod(String Method) {
+        this.Method = Method;
+    }
+
     public IndicatorItem() {
     }
 
@@ -395,6 +418,9 @@ public class IndicatorItem extends AbstractModel {
         if (source.Sample != null) {
             this.Sample = new String(source.Sample);
         }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
     }
 
 
@@ -416,6 +442,7 @@ public class IndicatorItem extends AbstractModel {
         this.setParamObj(map, prefix + "Coords.", this.Coords);
         this.setParamSimple(map, prefix + "InferNormal", this.InferNormal);
         this.setParamSimple(map, prefix + "Sample", this.Sample);
+        this.setParamSimple(map, prefix + "Method", this.Method);
 
     }
 }

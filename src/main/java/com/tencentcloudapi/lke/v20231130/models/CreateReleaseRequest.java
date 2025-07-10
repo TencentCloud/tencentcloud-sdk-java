@@ -38,6 +38,13 @@ public class CreateReleaseRequest extends AbstractModel {
     private String Desc;
 
     /**
+    * 渠道业务ID
+    */
+    @SerializedName("ChannelBizIds")
+    @Expose
+    private String [] ChannelBizIds;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -69,6 +76,22 @@ public class CreateReleaseRequest extends AbstractModel {
         this.Desc = Desc;
     }
 
+    /**
+     * Get 渠道业务ID 
+     * @return ChannelBizIds 渠道业务ID
+     */
+    public String [] getChannelBizIds() {
+        return this.ChannelBizIds;
+    }
+
+    /**
+     * Set 渠道业务ID
+     * @param ChannelBizIds 渠道业务ID
+     */
+    public void setChannelBizIds(String [] ChannelBizIds) {
+        this.ChannelBizIds = ChannelBizIds;
+    }
+
     public CreateReleaseRequest() {
     }
 
@@ -83,6 +106,12 @@ public class CreateReleaseRequest extends AbstractModel {
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.ChannelBizIds != null) {
+            this.ChannelBizIds = new String[source.ChannelBizIds.length];
+            for (int i = 0; i < source.ChannelBizIds.length; i++) {
+                this.ChannelBizIds[i] = new String(source.ChannelBizIds[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class CreateReleaseRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BotBizId", this.BotBizId);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamArraySimple(map, prefix + "ChannelBizIds.", this.ChannelBizIds);
 
     }
 }

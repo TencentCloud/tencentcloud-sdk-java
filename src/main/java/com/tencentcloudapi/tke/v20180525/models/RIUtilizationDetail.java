@@ -59,7 +59,7 @@ public class RIUtilizationDetail extends AbstractModel {
     private String Namespace;
 
     /**
-    * 工作负载类型
+    * 工作负载类型，如 deployment、statefulset和pod等。
     */
     @SerializedName("Kind")
     @Expose
@@ -181,16 +181,16 @@ public class RIUtilizationDetail extends AbstractModel {
     }
 
     /**
-     * Get 工作负载类型 
-     * @return Kind 工作负载类型
+     * Get 工作负载类型，如 deployment、statefulset和pod等。 
+     * @return Kind 工作负载类型，如 deployment、statefulset和pod等。
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 工作负载类型
-     * @param Kind 工作负载类型
+     * Set 工作负载类型，如 deployment、statefulset和pod等。
+     * @param Kind 工作负载类型，如 deployment、statefulset和pod等。
      */
     public void setKind(String Kind) {
         this.Kind = Kind;

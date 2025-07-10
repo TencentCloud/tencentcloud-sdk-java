@@ -45,14 +45,14 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
     private Float CPU;
 
     /**
-    * 内存
+    * 内存，单位：GiB
     */
     @SerializedName("Memory")
     @Expose
     private Float Memory;
 
     /**
-    *  预留券类型
+    *  预留券类型, common：CPU通用，amd：AMD专用，windows-common: Windows容器 CPU通用，windows-amd：Windows容器 AMD专用，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
     */
     @SerializedName("Type")
     @Expose
@@ -80,7 +80,7 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 节点名称
+    * 节点 ID
     */
     @SerializedName("NodeName")
     @Expose
@@ -142,32 +142,32 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
     }
 
     /**
-     * Get 内存 
-     * @return Memory 内存
+     * Get 内存，单位：GiB 
+     * @return Memory 内存，单位：GiB
      */
     public Float getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存
-     * @param Memory 内存
+     * Set 内存，单位：GiB
+     * @param Memory 内存，单位：GiB
      */
     public void setMemory(Float Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  预留券类型 
-     * @return Type  预留券类型
+     * Get  预留券类型, common：CPU通用，amd：AMD专用，windows-common: Windows容器 CPU通用，windows-amd：Windows容器 AMD专用，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4 
+     * @return Type  预留券类型, common：CPU通用，amd：AMD专用，windows-common: Windows容器 CPU通用，windows-amd：Windows容器 AMD专用，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set  预留券类型
-     * @param Type  预留券类型
+     * Set  预留券类型, common：CPU通用，amd：AMD专用，windows-common: Windows容器 CPU通用，windows-amd：Windows容器 AMD专用，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
+     * @param Type  预留券类型, common：CPU通用，amd：AMD专用，windows-common: Windows容器 CPU通用，windows-amd：Windows容器 AMD专用，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -222,16 +222,16 @@ public class ReservedInstanceUtilizationRate extends AbstractModel {
     }
 
     /**
-     * Get 节点名称 
-     * @return NodeName 节点名称
+     * Get 节点 ID 
+     * @return NodeName 节点 ID
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 节点名称
-     * @param NodeName 节点名称
+     * Set 节点 ID
+     * @param NodeName 节点 ID
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;

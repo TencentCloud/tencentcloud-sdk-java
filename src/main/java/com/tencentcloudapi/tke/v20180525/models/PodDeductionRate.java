@@ -31,14 +31,14 @@ public class PodDeductionRate extends AbstractModel {
     private Float Cpu;
 
     /**
-    * Pod 的内存
+    * Pod 的内存，单位：GiB
     */
     @SerializedName("Memory")
     @Expose
     private Float Memory;
 
     /**
-    *  Pod 的类型
+    *  Pod 的类型， intel，amd，windows-common，windows-amd，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
     */
     @SerializedName("Type")
     @Expose
@@ -82,32 +82,32 @@ public class PodDeductionRate extends AbstractModel {
     }
 
     /**
-     * Get Pod 的内存 
-     * @return Memory Pod 的内存
+     * Get Pod 的内存，单位：GiB 
+     * @return Memory Pod 的内存，单位：GiB
      */
     public Float getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Pod 的内存
-     * @param Memory Pod 的内存
+     * Set Pod 的内存，单位：GiB
+     * @param Memory Pod 的内存，单位：GiB
      */
     public void setMemory(Float Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  Pod 的类型 
-     * @return Type  Pod 的类型
+     * Get  Pod 的类型， intel，amd，windows-common，windows-amd，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4 
+     * @return Type  Pod 的类型， intel，amd，windows-common，windows-amd，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set  Pod 的类型
-     * @param Type  Pod 的类型
+     * Set  Pod 的类型， intel，amd，windows-common，windows-amd，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
+     * @param Type  Pod 的类型， intel，amd，windows-common，windows-amd，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
      */
     public void setType(String Type) {
         this.Type = Type;

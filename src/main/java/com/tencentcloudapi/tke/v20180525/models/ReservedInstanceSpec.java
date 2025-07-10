@@ -38,7 +38,7 @@ public class ReservedInstanceSpec extends AbstractModel {
     private Float Cpu;
 
     /**
-    * 内存
+    * 内存，单位：GiB
     */
     @SerializedName("Memory")
     @Expose
@@ -84,16 +84,16 @@ public class ReservedInstanceSpec extends AbstractModel {
     }
 
     /**
-     * Get 内存 
-     * @return Memory 内存
+     * Get 内存，单位：GiB 
+     * @return Memory 内存，单位：GiB
      */
     public Float getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存
-     * @param Memory 内存
+     * Set 内存，单位：GiB
+     * @param Memory 内存，单位：GiB
      */
     public void setMemory(Float Memory) {
         this.Memory = Memory;

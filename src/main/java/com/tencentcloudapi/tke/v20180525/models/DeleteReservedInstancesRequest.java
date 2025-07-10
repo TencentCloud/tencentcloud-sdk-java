@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteReservedInstancesRequest extends AbstractModel {
 
     /**
-    * 预留券实例ID。
+    * 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
     */
     @SerializedName("ReservedInstanceIds")
     @Expose
     private String [] ReservedInstanceIds;
 
     /**
-     * Get 预留券实例ID。 
-     * @return ReservedInstanceIds 预留券实例ID。
+     * Get 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。 
+     * @return ReservedInstanceIds 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
      */
     public String [] getReservedInstanceIds() {
         return this.ReservedInstanceIds;
     }
 
     /**
-     * Set 预留券实例ID。
-     * @param ReservedInstanceIds 预留券实例ID。
+     * Set 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
+     * @param ReservedInstanceIds 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
      */
     public void setReservedInstanceIds(String [] ReservedInstanceIds) {
         this.ReservedInstanceIds = ReservedInstanceIds;

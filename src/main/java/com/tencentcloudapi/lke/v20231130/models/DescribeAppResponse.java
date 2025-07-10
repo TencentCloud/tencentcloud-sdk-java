@@ -122,6 +122,13 @@ public class DescribeAppResponse extends AbstractModel {
     private Boolean IsCopying;
 
     /**
+    * 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+    */
+    @SerializedName("AgentType")
+    @Expose
+    private String AgentType;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -353,6 +360,22 @@ public class DescribeAppResponse extends AbstractModel {
     }
 
     /**
+     * Get 智能体类型 dialogue 对话式智能体，wechat 公众号智能体 
+     * @return AgentType 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+     */
+    public String getAgentType() {
+        return this.AgentType;
+    }
+
+    /**
+     * Set 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+     * @param AgentType 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+     */
+    public void setAgentType(String AgentType) {
+        this.AgentType = AgentType;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -418,6 +441,9 @@ public class DescribeAppResponse extends AbstractModel {
         if (source.IsCopying != null) {
             this.IsCopying = new Boolean(source.IsCopying);
         }
+        if (source.AgentType != null) {
+            this.AgentType = new String(source.AgentType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -442,6 +468,7 @@ public class DescribeAppResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AppStatus", this.AppStatus);
         this.setParamSimple(map, prefix + "AppStatusDesc", this.AppStatusDesc);
         this.setParamSimple(map, prefix + "IsCopying", this.IsCopying);
+        this.setParamSimple(map, prefix + "AgentType", this.AgentType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

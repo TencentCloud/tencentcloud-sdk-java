@@ -38,7 +38,7 @@ public class DescribeReservedInstanceUtilizationRateRequest extends AbstractMode
     private String ClusterId;
 
     /**
-    *  节点名称
+    * 节点 ID
     */
     @SerializedName("NodeName")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeReservedInstanceUtilizationRateRequest extends AbstractMode
     }
 
     /**
-     * Get  节点名称 
-     * @return NodeName  节点名称
+     * Get 节点 ID 
+     * @return NodeName 节点 ID
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set  节点名称
-     * @param NodeName  节点名称
+     * Set 节点 ID
+     * @param NodeName 节点 ID
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;

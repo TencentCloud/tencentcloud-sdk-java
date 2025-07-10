@@ -38,7 +38,9 @@ public class WeChatMiniProgramPublishRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * 发布视频所对应的转码模板 ID，为0代表原始视频。
+    * 发布视频所对应的转码模板 ID，为 0 代表原始视频。支持的视频格式：
+<li>当 SourceDefinition 为 0 时，视频格式支持 MP4、3GP 格式；</li>
+<li>当 SourceDefinition 大于 0 时，视频格式支持 MP4、3GP 及 M3U8 格式。</li>不填默认值为 0。
     */
     @SerializedName("SourceDefinition")
     @Expose
@@ -77,16 +79,24 @@ public class WeChatMiniProgramPublishRequest extends AbstractModel {
     }
 
     /**
-     * Get 发布视频所对应的转码模板 ID，为0代表原始视频。 
-     * @return SourceDefinition 发布视频所对应的转码模板 ID，为0代表原始视频。
+     * Get 发布视频所对应的转码模板 ID，为 0 代表原始视频。支持的视频格式：
+<li>当 SourceDefinition 为 0 时，视频格式支持 MP4、3GP 格式；</li>
+<li>当 SourceDefinition 大于 0 时，视频格式支持 MP4、3GP 及 M3U8 格式。</li>不填默认值为 0。 
+     * @return SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。支持的视频格式：
+<li>当 SourceDefinition 为 0 时，视频格式支持 MP4、3GP 格式；</li>
+<li>当 SourceDefinition 大于 0 时，视频格式支持 MP4、3GP 及 M3U8 格式。</li>不填默认值为 0。
      */
     public Long getSourceDefinition() {
         return this.SourceDefinition;
     }
 
     /**
-     * Set 发布视频所对应的转码模板 ID，为0代表原始视频。
-     * @param SourceDefinition 发布视频所对应的转码模板 ID，为0代表原始视频。
+     * Set 发布视频所对应的转码模板 ID，为 0 代表原始视频。支持的视频格式：
+<li>当 SourceDefinition 为 0 时，视频格式支持 MP4、3GP 格式；</li>
+<li>当 SourceDefinition 大于 0 时，视频格式支持 MP4、3GP 及 M3U8 格式。</li>不填默认值为 0。
+     * @param SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。支持的视频格式：
+<li>当 SourceDefinition 为 0 时，视频格式支持 MP4、3GP 格式；</li>
+<li>当 SourceDefinition 大于 0 时，视频格式支持 MP4、3GP 及 M3U8 格式。</li>不填默认值为 0。
      */
     public void setSourceDefinition(Long SourceDefinition) {
         this.SourceDefinition = SourceDefinition;

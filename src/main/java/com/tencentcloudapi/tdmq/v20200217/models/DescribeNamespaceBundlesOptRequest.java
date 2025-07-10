@@ -80,6 +80,13 @@ public class DescribeNamespaceBundlesOptRequest extends AbstractModel {
     private String OwnerBroker;
 
     /**
+    * 租户(如果没有自定义租户名称，和 tenantId 相同；如果有配置自定义租户名称，则为自定义租户名 user_tenant)
+    */
+    @SerializedName("Tenant")
+    @Expose
+    private String Tenant;
+
+    /**
      * Get 物理集群名 
      * @return ClusterName 物理集群名
      */
@@ -207,6 +214,22 @@ public class DescribeNamespaceBundlesOptRequest extends AbstractModel {
         this.OwnerBroker = OwnerBroker;
     }
 
+    /**
+     * Get 租户(如果没有自定义租户名称，和 tenantId 相同；如果有配置自定义租户名称，则为自定义租户名 user_tenant) 
+     * @return Tenant 租户(如果没有自定义租户名称，和 tenantId 相同；如果有配置自定义租户名称，则为自定义租户名 user_tenant)
+     */
+    public String getTenant() {
+        return this.Tenant;
+    }
+
+    /**
+     * Set 租户(如果没有自定义租户名称，和 tenantId 相同；如果有配置自定义租户名称，则为自定义租户名 user_tenant)
+     * @param Tenant 租户(如果没有自定义租户名称，和 tenantId 相同；如果有配置自定义租户名称，则为自定义租户名 user_tenant)
+     */
+    public void setTenant(String Tenant) {
+        this.Tenant = Tenant;
+    }
+
     public DescribeNamespaceBundlesOptRequest() {
     }
 
@@ -239,6 +262,9 @@ public class DescribeNamespaceBundlesOptRequest extends AbstractModel {
         if (source.OwnerBroker != null) {
             this.OwnerBroker = new String(source.OwnerBroker);
         }
+        if (source.Tenant != null) {
+            this.Tenant = new String(source.Tenant);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class DescribeNamespaceBundlesOptRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Bundle", this.Bundle);
         this.setParamSimple(map, prefix + "OwnerBroker", this.OwnerBroker);
+        this.setParamSimple(map, prefix + "Tenant", this.Tenant);
 
     }
 }

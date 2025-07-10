@@ -113,6 +113,13 @@ public class ModelInfo extends AbstractModel {
     private String ModelCategory;
 
     /**
+    * 数据源的配置
+    */
+    @SerializedName("PublicDataSource")
+    @Expose
+    private PublicDataSourceFS PublicDataSource;
+
+    /**
      * Get 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
 自动学习类型的模型填写自动学习的任务id 
      * @return ModelVersionId 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
@@ -324,6 +331,22 @@ public class ModelInfo extends AbstractModel {
         this.ModelCategory = ModelCategory;
     }
 
+    /**
+     * Get 数据源的配置 
+     * @return PublicDataSource 数据源的配置
+     */
+    public PublicDataSourceFS getPublicDataSource() {
+        return this.PublicDataSource;
+    }
+
+    /**
+     * Set 数据源的配置
+     * @param PublicDataSource 数据源的配置
+     */
+    public void setPublicDataSource(PublicDataSourceFS PublicDataSource) {
+        this.PublicDataSource = PublicDataSource;
+    }
+
     public ModelInfo() {
     }
 
@@ -368,6 +391,9 @@ public class ModelInfo extends AbstractModel {
         if (source.ModelCategory != null) {
             this.ModelCategory = new String(source.ModelCategory);
         }
+        if (source.PublicDataSource != null) {
+            this.PublicDataSource = new PublicDataSourceFS(source.PublicDataSource);
+        }
     }
 
 
@@ -387,6 +413,7 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
         this.setParamSimple(map, prefix + "IsPrivateModel", this.IsPrivateModel);
         this.setParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
+        this.setParamObj(map, prefix + "PublicDataSource.", this.PublicDataSource);
 
     }
 }

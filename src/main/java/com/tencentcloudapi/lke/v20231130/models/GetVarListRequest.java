@@ -66,6 +66,13 @@ public class GetVarListRequest extends AbstractModel {
     private String VarType;
 
     /**
+    * 是否需要内部变量(默认false)
+    */
+    @SerializedName("NeedInternalVar")
+    @Expose
+    private Boolean NeedInternalVar;
+
+    /**
      * Get 应用ID 
      * @return AppBizId 应用ID
      */
@@ -161,6 +168,22 @@ public class GetVarListRequest extends AbstractModel {
         this.VarType = VarType;
     }
 
+    /**
+     * Get 是否需要内部变量(默认false) 
+     * @return NeedInternalVar 是否需要内部变量(默认false)
+     */
+    public Boolean getNeedInternalVar() {
+        return this.NeedInternalVar;
+    }
+
+    /**
+     * Set 是否需要内部变量(默认false)
+     * @param NeedInternalVar 是否需要内部变量(默认false)
+     */
+    public void setNeedInternalVar(Boolean NeedInternalVar) {
+        this.NeedInternalVar = NeedInternalVar;
+    }
+
     public GetVarListRequest() {
     }
 
@@ -190,6 +213,9 @@ public class GetVarListRequest extends AbstractModel {
         if (source.VarType != null) {
             this.VarType = new String(source.VarType);
         }
+        if (source.NeedInternalVar != null) {
+            this.NeedInternalVar = new Boolean(source.NeedInternalVar);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class GetVarListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "VarType", this.VarType);
+        this.setParamSimple(map, prefix + "NeedInternalVar", this.NeedInternalVar);
 
     }
 }

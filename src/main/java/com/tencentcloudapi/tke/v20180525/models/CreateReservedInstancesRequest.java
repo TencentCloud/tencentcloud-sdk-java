@@ -45,7 +45,7 @@ public class CreateReservedInstancesRequest extends AbstractModel {
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * 预留券名称。
+    * 预留券名称，名称不得超过60个字符。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -107,16 +107,16 @@ public class CreateReservedInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 预留券名称。 
-     * @return InstanceName 预留券名称。
+     * Get 预留券名称，名称不得超过60个字符。 
+     * @return InstanceName 预留券名称，名称不得超过60个字符。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 预留券名称。
-     * @param InstanceName 预留券名称。
+     * Set 预留券名称，名称不得超过60个字符。
+     * @param InstanceName 预留券名称，名称不得超过60个字符。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RenewReservedInstancesRequest extends AbstractModel {
 
     /**
-    * 预留券实例ID，每次请求实例的上限为100。
+    * 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取，每次请求实例的上限为100。
     */
     @SerializedName("ReservedInstanceIds")
     @Expose
@@ -45,16 +45,16 @@ public class RenewReservedInstancesRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-     * Get 预留券实例ID，每次请求实例的上限为100。 
-     * @return ReservedInstanceIds 预留券实例ID，每次请求实例的上限为100。
+     * Get 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取，每次请求实例的上限为100。 
+     * @return ReservedInstanceIds 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取，每次请求实例的上限为100。
      */
     public String [] getReservedInstanceIds() {
         return this.ReservedInstanceIds;
     }
 
     /**
-     * Set 预留券实例ID，每次请求实例的上限为100。
-     * @param ReservedInstanceIds 预留券实例ID，每次请求实例的上限为100。
+     * Set 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取，每次请求实例的上限为100。
+     * @param ReservedInstanceIds 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取，每次请求实例的上限为100。
      */
     public void setReservedInstanceIds(String [] ReservedInstanceIds) {
         this.ReservedInstanceIds = ReservedInstanceIds;

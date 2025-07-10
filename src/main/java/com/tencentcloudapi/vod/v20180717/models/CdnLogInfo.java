@@ -32,7 +32,7 @@ public class CdnLogInfo extends AbstractModel {
 
     /**
     * 日志名称，格式为：日期小时-域名
-如 2018120101-test.vod2.mqcloud.com。
+如 example.com。
     */
     @SerializedName("Name")
     @Expose
@@ -77,9 +77,9 @@ public class CdnLogInfo extends AbstractModel {
 
     /**
      * Get 日志名称，格式为：日期小时-域名
-如 2018120101-test.vod2.mqcloud.com。 
+如 example.com。 
      * @return Name 日志名称，格式为：日期小时-域名
-如 2018120101-test.vod2.mqcloud.com。
+如 example.com。
      */
     public String getName() {
         return this.Name;
@@ -87,9 +87,9 @@ public class CdnLogInfo extends AbstractModel {
 
     /**
      * Set 日志名称，格式为：日期小时-域名
-如 2018120101-test.vod2.mqcloud.com。
+如 example.com。
      * @param Name 日志名称，格式为：日期小时-域名
-如 2018120101-test.vod2.mqcloud.com。
+如 example.com。
      */
     public void setName(String Name) {
         this.Name = Name;

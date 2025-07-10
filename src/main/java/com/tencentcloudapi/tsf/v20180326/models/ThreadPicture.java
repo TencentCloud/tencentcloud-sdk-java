@@ -86,7 +86,9 @@ public class ThreadPicture extends AbstractModel {
     /**
      * Get 守护线程数 拼写错误，废弃 
      * @return DeamonThreadCount 守护线程数 拼写错误，废弃
+     * @deprecated
      */
+    @Deprecated
     public CurvePoint [] getDeamonThreadCount() {
         return this.DeamonThreadCount;
     }
@@ -94,7 +96,9 @@ public class ThreadPicture extends AbstractModel {
     /**
      * Set 守护线程数 拼写错误，废弃
      * @param DeamonThreadCount 守护线程数 拼写错误，废弃
+     * @deprecated
      */
+    @Deprecated
     public void setDeamonThreadCount(CurvePoint [] DeamonThreadCount) {
         this.DeamonThreadCount = DeamonThreadCount;
     }

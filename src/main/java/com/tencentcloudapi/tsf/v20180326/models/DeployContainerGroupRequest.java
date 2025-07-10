@@ -792,7 +792,9 @@ public class DeployContainerGroupRequest extends AbstractModel {
     /**
      * Get 数据卷信息-废弃，请用VolumeInfoList参数 
      * @return VolumeInfos 数据卷信息-废弃，请用VolumeInfoList参数
+     * @deprecated
      */
+    @Deprecated
     public VolumeInfo getVolumeInfos() {
         return this.VolumeInfos;
     }
@@ -800,7 +802,9 @@ public class DeployContainerGroupRequest extends AbstractModel {
     /**
      * Set 数据卷信息-废弃，请用VolumeInfoList参数
      * @param VolumeInfos 数据卷信息-废弃，请用VolumeInfoList参数
+     * @deprecated
      */
+    @Deprecated
     public void setVolumeInfos(VolumeInfo VolumeInfos) {
         this.VolumeInfos = VolumeInfos;
     }
@@ -808,7 +812,9 @@ public class DeployContainerGroupRequest extends AbstractModel {
     /**
      * Get 数据卷挂载点信息-废弃，请用VolumeMountInfoList参数 
      * @return VolumeMountInfos 数据卷挂载点信息-废弃，请用VolumeMountInfoList参数
+     * @deprecated
      */
+    @Deprecated
     public VolumeMountInfo getVolumeMountInfos() {
         return this.VolumeMountInfos;
     }
@@ -816,7 +822,9 @@ public class DeployContainerGroupRequest extends AbstractModel {
     /**
      * Set 数据卷挂载点信息-废弃，请用VolumeMountInfoList参数
      * @param VolumeMountInfos 数据卷挂载点信息-废弃，请用VolumeMountInfoList参数
+     * @deprecated
      */
+    @Deprecated
     public void setVolumeMountInfos(VolumeMountInfo VolumeMountInfos) {
         this.VolumeMountInfos = VolumeMountInfos;
     }

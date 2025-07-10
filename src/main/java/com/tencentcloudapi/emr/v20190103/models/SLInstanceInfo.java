@@ -159,6 +159,13 @@ public class SLInstanceInfo extends AbstractModel {
     private String ExpireTime;
 
     /**
+    * 主备部署角色
+    */
+    @SerializedName("DeployRole")
+    @Expose
+    private String DeployRole;
+
+    /**
      * Get 集群实例字符串ID 
      * @return ClusterId 集群实例字符串ID
      */
@@ -470,6 +477,22 @@ public class SLInstanceInfo extends AbstractModel {
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 主备部署角色 
+     * @return DeployRole 主备部署角色
+     */
+    public String getDeployRole() {
+        return this.DeployRole;
+    }
+
+    /**
+     * Set 主备部署角色
+     * @param DeployRole 主备部署角色
+     */
+    public void setDeployRole(String DeployRole) {
+        this.DeployRole = DeployRole;
+    }
+
     public SLInstanceInfo() {
     }
 
@@ -541,6 +564,9 @@ public class SLInstanceInfo extends AbstractModel {
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.DeployRole != null) {
+            this.DeployRole = new String(source.DeployRole);
+        }
     }
 
 
@@ -567,6 +593,7 @@ public class SLInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "DeployRole", this.DeployRole);
 
     }
 }

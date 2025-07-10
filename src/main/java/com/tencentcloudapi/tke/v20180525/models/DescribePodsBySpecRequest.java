@@ -31,14 +31,14 @@ public class DescribePodsBySpecRequest extends AbstractModel {
     private Float Cpu;
 
     /**
-    * 内存
+    * 内存，单位：GiB
     */
     @SerializedName("Memory")
     @Expose
     private Float Memory;
 
     /**
-    * 卡数，有0.25、0.5、1、2、4等
+    * 卡数，有0.25、0.5、1、2、4和8
     */
     @SerializedName("GpuNum")
     @Expose
@@ -59,7 +59,7 @@ public class DescribePodsBySpecRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 节点名称
+    * 节点 ID
     */
     @SerializedName("NodeName")
     @Expose
@@ -114,32 +114,32 @@ pod-not-deduct
     }
 
     /**
-     * Get 内存 
-     * @return Memory 内存
+     * Get 内存，单位：GiB 
+     * @return Memory 内存，单位：GiB
      */
     public Float getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存
-     * @param Memory 内存
+     * Set 内存，单位：GiB
+     * @param Memory 内存，单位：GiB
      */
     public void setMemory(Float Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 卡数，有0.25、0.5、1、2、4等 
-     * @return GpuNum 卡数，有0.25、0.5、1、2、4等
+     * Get 卡数，有0.25、0.5、1、2、4和8 
+     * @return GpuNum 卡数，有0.25、0.5、1、2、4和8
      */
     public String getGpuNum() {
         return this.GpuNum;
     }
 
     /**
-     * Set 卡数，有0.25、0.5、1、2、4等
-     * @param GpuNum 卡数，有0.25、0.5、1、2、4等
+     * Set 卡数，有0.25、0.5、1、2、4和8
+     * @param GpuNum 卡数，有0.25、0.5、1、2、4和8
      */
     public void setGpuNum(String GpuNum) {
         this.GpuNum = GpuNum;
@@ -178,16 +178,16 @@ pod-not-deduct
     }
 
     /**
-     * Get 节点名称 
-     * @return NodeName 节点名称
+     * Get 节点 ID 
+     * @return NodeName 节点 ID
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 节点名称
-     * @param NodeName 节点名称
+     * Set 节点 ID
+     * @param NodeName 节点 ID
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;

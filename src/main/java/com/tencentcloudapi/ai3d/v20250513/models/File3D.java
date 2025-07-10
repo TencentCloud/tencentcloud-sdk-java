@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class File3D extends AbstractModel {
 
     /**
-    * 3D文件的格式。取值范围：OBJ
+    * 文件格式
     */
     @SerializedName("Type")
     @Expose
@@ -45,16 +45,16 @@ public class File3D extends AbstractModel {
     private String PreviewImageUrl;
 
     /**
-     * Get 3D文件的格式。取值范围：OBJ 
-     * @return Type 3D文件的格式。取值范围：OBJ
+     * Get 文件格式 
+     * @return Type 文件格式
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 3D文件的格式。取值范围：OBJ
-     * @param Type 3D文件的格式。取值范围：OBJ
+     * Set 文件格式
+     * @param Type 文件格式
      */
     public void setType(String Type) {
         this.Type = Type;

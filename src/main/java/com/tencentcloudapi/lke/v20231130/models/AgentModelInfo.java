@@ -80,6 +80,13 @@ public class AgentModelInfo extends AbstractModel {
     private Long InstructionsWordsLimit;
 
     /**
+    * 单次会话最大推理轮数
+    */
+    @SerializedName("MaxReasoningRound")
+    @Expose
+    private Long MaxReasoningRound;
+
+    /**
      * Get 模型名称 
      * @return ModelName 模型名称
      */
@@ -207,6 +214,22 @@ public class AgentModelInfo extends AbstractModel {
         this.InstructionsWordsLimit = InstructionsWordsLimit;
     }
 
+    /**
+     * Get 单次会话最大推理轮数 
+     * @return MaxReasoningRound 单次会话最大推理轮数
+     */
+    public Long getMaxReasoningRound() {
+        return this.MaxReasoningRound;
+    }
+
+    /**
+     * Set 单次会话最大推理轮数
+     * @param MaxReasoningRound 单次会话最大推理轮数
+     */
+    public void setMaxReasoningRound(Long MaxReasoningRound) {
+        this.MaxReasoningRound = MaxReasoningRound;
+    }
+
     public AgentModelInfo() {
     }
 
@@ -239,6 +262,9 @@ public class AgentModelInfo extends AbstractModel {
         if (source.InstructionsWordsLimit != null) {
             this.InstructionsWordsLimit = new Long(source.InstructionsWordsLimit);
         }
+        if (source.MaxReasoningRound != null) {
+            this.MaxReasoningRound = new Long(source.MaxReasoningRound);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class AgentModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "HistoryLimit", this.HistoryLimit);
         this.setParamSimple(map, prefix + "ModelContextWordsLimit", this.ModelContextWordsLimit);
         this.setParamSimple(map, prefix + "InstructionsWordsLimit", this.InstructionsWordsLimit);
+        this.setParamSimple(map, prefix + "MaxReasoningRound", this.MaxReasoningRound);
 
     }
 }
