@@ -38,6 +38,13 @@ public class RefreshSettings extends AbstractModel {
     private Boolean CheckInstanceTargetHealth;
 
     /**
+    * 实例后端服务健康状态检查的超时时间，单位为秒，取值范围[60,7200]，默认时间1800秒。仅在CheckInstanceTargetHealth参数开启后生效，若实例健康检查超时，则标记为刷新失败。
+    */
+    @SerializedName("CheckInstanceTargetHealthTimeout")
+    @Expose
+    private Long CheckInstanceTargetHealthTimeout;
+
+    /**
      * Get 滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。 
      * @return RollingUpdateSettings 滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。
      */
@@ -69,6 +76,22 @@ public class RefreshSettings extends AbstractModel {
         this.CheckInstanceTargetHealth = CheckInstanceTargetHealth;
     }
 
+    /**
+     * Get 实例后端服务健康状态检查的超时时间，单位为秒，取值范围[60,7200]，默认时间1800秒。仅在CheckInstanceTargetHealth参数开启后生效，若实例健康检查超时，则标记为刷新失败。 
+     * @return CheckInstanceTargetHealthTimeout 实例后端服务健康状态检查的超时时间，单位为秒，取值范围[60,7200]，默认时间1800秒。仅在CheckInstanceTargetHealth参数开启后生效，若实例健康检查超时，则标记为刷新失败。
+     */
+    public Long getCheckInstanceTargetHealthTimeout() {
+        return this.CheckInstanceTargetHealthTimeout;
+    }
+
+    /**
+     * Set 实例后端服务健康状态检查的超时时间，单位为秒，取值范围[60,7200]，默认时间1800秒。仅在CheckInstanceTargetHealth参数开启后生效，若实例健康检查超时，则标记为刷新失败。
+     * @param CheckInstanceTargetHealthTimeout 实例后端服务健康状态检查的超时时间，单位为秒，取值范围[60,7200]，默认时间1800秒。仅在CheckInstanceTargetHealth参数开启后生效，若实例健康检查超时，则标记为刷新失败。
+     */
+    public void setCheckInstanceTargetHealthTimeout(Long CheckInstanceTargetHealthTimeout) {
+        this.CheckInstanceTargetHealthTimeout = CheckInstanceTargetHealthTimeout;
+    }
+
     public RefreshSettings() {
     }
 
@@ -83,6 +106,9 @@ public class RefreshSettings extends AbstractModel {
         if (source.CheckInstanceTargetHealth != null) {
             this.CheckInstanceTargetHealth = new Boolean(source.CheckInstanceTargetHealth);
         }
+        if (source.CheckInstanceTargetHealthTimeout != null) {
+            this.CheckInstanceTargetHealthTimeout = new Long(source.CheckInstanceTargetHealthTimeout);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class RefreshSettings extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "RollingUpdateSettings.", this.RollingUpdateSettings);
         this.setParamSimple(map, prefix + "CheckInstanceTargetHealth", this.CheckInstanceTargetHealth);
+        this.setParamSimple(map, prefix + "CheckInstanceTargetHealthTimeout", this.CheckInstanceTargetHealthTimeout);
 
     }
 }

@@ -82,7 +82,7 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     private DorisSourceInfo DorisSourceInfo;
 
     /**
-    * 0为默认。1时是一次性备份。2时是远端备份
+    * 0为周期备份。1时是立即备份。3时是定时备份。
     */
     @SerializedName("BackupTimeType")
     @Expose
@@ -139,6 +139,20 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     @SerializedName("CosBucket")
     @Expose
     private String CosBucket;
+
+    /**
+    * 快照保留策略
+    */
+    @SerializedName("SnapshotRemainPolicy")
+    @Expose
+    private SnapshotRemainPolicy SnapshotRemainPolicy;
+
+    /**
+    * 备份数据所在地域，当前地域应该为空
+    */
+    @SerializedName("DataRemoteRegion")
+    @Expose
+    private String DataRemoteRegion;
 
     /**
      * Get 集群id 
@@ -255,7 +269,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     /**
      * Get 0为默认。1时是对远端的doris进行备份，不周期，一次性 
      * @return BackupType 0为默认。1时是对远端的doris进行备份，不周期，一次性
+     * @deprecated
      */
+    @Deprecated
     public Long getBackupType() {
         return this.BackupType;
     }
@@ -263,7 +279,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     /**
      * Set 0为默认。1时是对远端的doris进行备份，不周期，一次性
      * @param BackupType 0为默认。1时是对远端的doris进行备份，不周期，一次性
+     * @deprecated
      */
+    @Deprecated
     public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;
     }
@@ -271,7 +289,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     /**
      * Get 远端doris集群的连接信息 
      * @return DorisSourceInfo 远端doris集群的连接信息
+     * @deprecated
      */
+    @Deprecated
     public DorisSourceInfo getDorisSourceInfo() {
         return this.DorisSourceInfo;
     }
@@ -279,22 +299,24 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     /**
      * Set 远端doris集群的连接信息
      * @param DorisSourceInfo 远端doris集群的连接信息
+     * @deprecated
      */
+    @Deprecated
     public void setDorisSourceInfo(DorisSourceInfo DorisSourceInfo) {
         this.DorisSourceInfo = DorisSourceInfo;
     }
 
     /**
-     * Get 0为默认。1时是一次性备份。2时是远端备份 
-     * @return BackupTimeType 0为默认。1时是一次性备份。2时是远端备份
+     * Get 0为周期备份。1时是立即备份。3时是定时备份。 
+     * @return BackupTimeType 0为周期备份。1时是立即备份。3时是定时备份。
      */
     public Long getBackupTimeType() {
         return this.BackupTimeType;
     }
 
     /**
-     * Set 0为默认。1时是一次性备份。2时是远端备份
-     * @param BackupTimeType 0为默认。1时是一次性备份。2时是远端备份
+     * Set 0为周期备份。1时是立即备份。3时是定时备份。
+     * @param BackupTimeType 0为周期备份。1时是立即备份。3时是定时备份。
      */
     public void setBackupTimeType(Long BackupTimeType) {
         this.BackupTimeType = BackupTimeType;
@@ -303,7 +325,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     /**
      * Get 0为默认。1时是备份完成后立即恢复 
      * @return RestoreType 0为默认。1时是备份完成后立即恢复
+     * @deprecated
      */
+    @Deprecated
     public Long getRestoreType() {
         return this.RestoreType;
     }
@@ -311,7 +335,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     /**
      * Set 0为默认。1时是备份完成后立即恢复
      * @param RestoreType 0为默认。1时是备份完成后立即恢复
+     * @deprecated
      */
+    @Deprecated
     public void setRestoreType(Long RestoreType) {
         this.RestoreType = RestoreType;
     }
@@ -319,7 +345,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     /**
      * Get 0为默认。1时是提供自定义的secret连接cos 
      * @return AuthType 0为默认。1时是提供自定义的secret连接cos
+     * @deprecated
      */
+    @Deprecated
     public Long getAuthType() {
         return this.AuthType;
     }
@@ -327,7 +355,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     /**
      * Set 0为默认。1时是提供自定义的secret连接cos
      * @param AuthType 0为默认。1时是提供自定义的secret连接cos
+     * @deprecated
      */
+    @Deprecated
     public void setAuthType(Long AuthType) {
         this.AuthType = AuthType;
     }
@@ -335,7 +365,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     /**
      * Get cos认证的信息 
      * @return CosSourceInfo cos认证的信息
+     * @deprecated
      */
+    @Deprecated
     public CosSourceInfo getCosSourceInfo() {
         return this.CosSourceInfo;
     }
@@ -343,7 +375,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     /**
      * Set cos认证的信息
      * @param CosSourceInfo cos认证的信息
+     * @deprecated
      */
+    @Deprecated
     public void setCosSourceInfo(CosSourceInfo CosSourceInfo) {
         this.CosSourceInfo = CosSourceInfo;
     }
@@ -424,6 +458,38 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
         this.CosBucket = CosBucket;
     }
 
+    /**
+     * Get 快照保留策略 
+     * @return SnapshotRemainPolicy 快照保留策略
+     */
+    public SnapshotRemainPolicy getSnapshotRemainPolicy() {
+        return this.SnapshotRemainPolicy;
+    }
+
+    /**
+     * Set 快照保留策略
+     * @param SnapshotRemainPolicy 快照保留策略
+     */
+    public void setSnapshotRemainPolicy(SnapshotRemainPolicy SnapshotRemainPolicy) {
+        this.SnapshotRemainPolicy = SnapshotRemainPolicy;
+    }
+
+    /**
+     * Get 备份数据所在地域，当前地域应该为空 
+     * @return DataRemoteRegion 备份数据所在地域，当前地域应该为空
+     */
+    public String getDataRemoteRegion() {
+        return this.DataRemoteRegion;
+    }
+
+    /**
+     * Set 备份数据所在地域，当前地域应该为空
+     * @param DataRemoteRegion 备份数据所在地域，当前地域应该为空
+     */
+    public void setDataRemoteRegion(String DataRemoteRegion) {
+        this.DataRemoteRegion = DataRemoteRegion;
+    }
+
     public CreateBackUpScheduleRequest() {
     }
 
@@ -483,6 +549,12 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
         if (source.CosBucket != null) {
             this.CosBucket = new String(source.CosBucket);
         }
+        if (source.SnapshotRemainPolicy != null) {
+            this.SnapshotRemainPolicy = new SnapshotRemainPolicy(source.SnapshotRemainPolicy);
+        }
+        if (source.DataRemoteRegion != null) {
+            this.DataRemoteRegion = new String(source.DataRemoteRegion);
+        }
     }
 
 
@@ -506,6 +578,8 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ScheduleInfo.", this.ScheduleInfo);
         this.setParamSimple(map, prefix + "UpdateStatus", this.UpdateStatus);
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
+        this.setParamObj(map, prefix + "SnapshotRemainPolicy.", this.SnapshotRemainPolicy);
+        this.setParamSimple(map, prefix + "DataRemoteRegion", this.DataRemoteRegion);
 
     }
 }

@@ -52,6 +52,16 @@ public class DescribeAndroidInstanceImagesRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 字段过滤器。Filter 的 Name 有以下值：
+ImageName：镜像名称
+ImageState：镜像状态
+AndroidVersion：安卓版本
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 镜像 ID 列表 
      * @return AndroidInstanceImageIds 镜像 ID 列表
      */
@@ -115,6 +125,34 @@ public class DescribeAndroidInstanceImagesRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 字段过滤器。Filter 的 Name 有以下值：
+ImageName：镜像名称
+ImageState：镜像状态
+AndroidVersion：安卓版本 
+     * @return Filters 字段过滤器。Filter 的 Name 有以下值：
+ImageName：镜像名称
+ImageState：镜像状态
+AndroidVersion：安卓版本
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 字段过滤器。Filter 的 Name 有以下值：
+ImageName：镜像名称
+ImageState：镜像状态
+AndroidVersion：安卓版本
+     * @param Filters 字段过滤器。Filter 的 Name 有以下值：
+ImageName：镜像名称
+ImageState：镜像状态
+AndroidVersion：安卓版本
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeAndroidInstanceImagesRequest() {
     }
 
@@ -141,6 +179,12 @@ public class DescribeAndroidInstanceImagesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -152,6 +196,7 @@ public class DescribeAndroidInstanceImagesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AndroidInstanceImageZones.", this.AndroidInstanceImageZones);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

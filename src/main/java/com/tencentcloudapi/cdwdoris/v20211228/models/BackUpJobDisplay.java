@@ -122,6 +122,13 @@ public class BackUpJobDisplay extends AbstractModel {
     private String ErrorReason;
 
     /**
+    * 快照保留策略
+    */
+    @SerializedName("SnapshotRemainPolicy")
+    @Expose
+    private SnapshotRemainPolicy SnapshotRemainPolicy;
+
+    /**
      * Get 备份实例id 
      * @return JobId 备份实例id
      */
@@ -345,6 +352,22 @@ public class BackUpJobDisplay extends AbstractModel {
         this.ErrorReason = ErrorReason;
     }
 
+    /**
+     * Get 快照保留策略 
+     * @return SnapshotRemainPolicy 快照保留策略
+     */
+    public SnapshotRemainPolicy getSnapshotRemainPolicy() {
+        return this.SnapshotRemainPolicy;
+    }
+
+    /**
+     * Set 快照保留策略
+     * @param SnapshotRemainPolicy 快照保留策略
+     */
+    public void setSnapshotRemainPolicy(SnapshotRemainPolicy SnapshotRemainPolicy) {
+        this.SnapshotRemainPolicy = SnapshotRemainPolicy;
+    }
+
     public BackUpJobDisplay() {
     }
 
@@ -395,6 +418,9 @@ public class BackUpJobDisplay extends AbstractModel {
         if (source.ErrorReason != null) {
             this.ErrorReason = new String(source.ErrorReason);
         }
+        if (source.SnapshotRemainPolicy != null) {
+            this.SnapshotRemainPolicy = new SnapshotRemainPolicy(source.SnapshotRemainPolicy);
+        }
     }
 
 
@@ -416,6 +442,7 @@ public class BackUpJobDisplay extends AbstractModel {
         this.setParamObj(map, prefix + "BackupCosInfo.", this.BackupCosInfo);
         this.setParamSimple(map, prefix + "IsUserDefineBucket", this.IsUserDefineBucket);
         this.setParamSimple(map, prefix + "ErrorReason", this.ErrorReason);
+        this.setParamObj(map, prefix + "SnapshotRemainPolicy.", this.SnapshotRemainPolicy);
 
     }
 }

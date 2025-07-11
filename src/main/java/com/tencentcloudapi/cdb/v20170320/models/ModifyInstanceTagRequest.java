@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyInstanceTagRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 要增加或修改的标签。
+    * 要增加或修改的标签。ReplaceTags 和 DeleteTags 必填一个。
     */
     @SerializedName("ReplaceTags")
     @Expose
     private TagInfo [] ReplaceTags;
 
     /**
-    * 要删除的标签。
+    * 要删除的标签。ReplaceTags 和 DeleteTags 必填一个。
     */
     @SerializedName("DeleteTags")
     @Expose
     private TagInfo [] DeleteTags;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 要增加或修改的标签。 
-     * @return ReplaceTags 要增加或修改的标签。
+     * Get 要增加或修改的标签。ReplaceTags 和 DeleteTags 必填一个。 
+     * @return ReplaceTags 要增加或修改的标签。ReplaceTags 和 DeleteTags 必填一个。
      */
     public TagInfo [] getReplaceTags() {
         return this.ReplaceTags;
     }
 
     /**
-     * Set 要增加或修改的标签。
-     * @param ReplaceTags 要增加或修改的标签。
+     * Set 要增加或修改的标签。ReplaceTags 和 DeleteTags 必填一个。
+     * @param ReplaceTags 要增加或修改的标签。ReplaceTags 和 DeleteTags 必填一个。
      */
     public void setReplaceTags(TagInfo [] ReplaceTags) {
         this.ReplaceTags = ReplaceTags;
     }
 
     /**
-     * Get 要删除的标签。 
-     * @return DeleteTags 要删除的标签。
+     * Get 要删除的标签。ReplaceTags 和 DeleteTags 必填一个。 
+     * @return DeleteTags 要删除的标签。ReplaceTags 和 DeleteTags 必填一个。
      */
     public TagInfo [] getDeleteTags() {
         return this.DeleteTags;
     }
 
     /**
-     * Set 要删除的标签。
-     * @param DeleteTags 要删除的标签。
+     * Set 要删除的标签。ReplaceTags 和 DeleteTags 必填一个。
+     * @param DeleteTags 要删除的标签。ReplaceTags 和 DeleteTags 必填一个。
      */
     public void setDeleteTags(TagInfo [] DeleteTags) {
         this.DeleteTags = DeleteTags;

@@ -38,6 +38,13 @@ public class CreateAndroidInstanceImageRequest extends AbstractModel {
     private String AndroidInstanceId;
 
     /**
+    * 安卓实例镜像描述
+    */
+    @SerializedName("AndroidInstanceImageDescription")
+    @Expose
+    private String AndroidInstanceImageDescription;
+
+    /**
      * Get 安卓实例镜像名称 
      * @return AndroidInstanceImageName 安卓实例镜像名称
      */
@@ -69,6 +76,22 @@ public class CreateAndroidInstanceImageRequest extends AbstractModel {
         this.AndroidInstanceId = AndroidInstanceId;
     }
 
+    /**
+     * Get 安卓实例镜像描述 
+     * @return AndroidInstanceImageDescription 安卓实例镜像描述
+     */
+    public String getAndroidInstanceImageDescription() {
+        return this.AndroidInstanceImageDescription;
+    }
+
+    /**
+     * Set 安卓实例镜像描述
+     * @param AndroidInstanceImageDescription 安卓实例镜像描述
+     */
+    public void setAndroidInstanceImageDescription(String AndroidInstanceImageDescription) {
+        this.AndroidInstanceImageDescription = AndroidInstanceImageDescription;
+    }
+
     public CreateAndroidInstanceImageRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateAndroidInstanceImageRequest extends AbstractModel {
         if (source.AndroidInstanceId != null) {
             this.AndroidInstanceId = new String(source.AndroidInstanceId);
         }
+        if (source.AndroidInstanceImageDescription != null) {
+            this.AndroidInstanceImageDescription = new String(source.AndroidInstanceImageDescription);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateAndroidInstanceImageRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AndroidInstanceImageName", this.AndroidInstanceImageName);
         this.setParamSimple(map, prefix + "AndroidInstanceId", this.AndroidInstanceId);
+        this.setParamSimple(map, prefix + "AndroidInstanceImageDescription", this.AndroidInstanceImageDescription);
 
     }
 }

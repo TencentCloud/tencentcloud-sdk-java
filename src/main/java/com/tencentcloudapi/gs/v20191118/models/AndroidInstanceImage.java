@@ -52,11 +52,25 @@ public class AndroidInstanceImage extends AbstractModel {
     private String AndroidInstanceImageZone;
 
     /**
+    * 镜像描述
+    */
+    @SerializedName("AndroidInstanceImageDescription")
+    @Expose
+    private String AndroidInstanceImageDescription;
+
+    /**
     * 安卓10
     */
     @SerializedName("AndroidVersion")
     @Expose
     private String AndroidVersion;
+
+    /**
+    * 创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
 
     /**
      * Get 镜像 ID 
@@ -123,6 +137,22 @@ public class AndroidInstanceImage extends AbstractModel {
     }
 
     /**
+     * Get 镜像描述 
+     * @return AndroidInstanceImageDescription 镜像描述
+     */
+    public String getAndroidInstanceImageDescription() {
+        return this.AndroidInstanceImageDescription;
+    }
+
+    /**
+     * Set 镜像描述
+     * @param AndroidInstanceImageDescription 镜像描述
+     */
+    public void setAndroidInstanceImageDescription(String AndroidInstanceImageDescription) {
+        this.AndroidInstanceImageDescription = AndroidInstanceImageDescription;
+    }
+
+    /**
      * Get 安卓10 
      * @return AndroidVersion 安卓10
      */
@@ -136,6 +166,22 @@ public class AndroidInstanceImage extends AbstractModel {
      */
     public void setAndroidVersion(String AndroidVersion) {
         this.AndroidVersion = AndroidVersion;
+    }
+
+    /**
+     * Get 创建时间 
+     * @return CreateTime 创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreateTime 创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     public AndroidInstanceImage() {
@@ -158,8 +204,14 @@ public class AndroidInstanceImage extends AbstractModel {
         if (source.AndroidInstanceImageZone != null) {
             this.AndroidInstanceImageZone = new String(source.AndroidInstanceImageZone);
         }
+        if (source.AndroidInstanceImageDescription != null) {
+            this.AndroidInstanceImageDescription = new String(source.AndroidInstanceImageDescription);
+        }
         if (source.AndroidVersion != null) {
             this.AndroidVersion = new String(source.AndroidVersion);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
         }
     }
 
@@ -172,7 +224,9 @@ public class AndroidInstanceImage extends AbstractModel {
         this.setParamSimple(map, prefix + "AndroidInstanceImageName", this.AndroidInstanceImageName);
         this.setParamSimple(map, prefix + "AndroidInstanceImageState", this.AndroidInstanceImageState);
         this.setParamSimple(map, prefix + "AndroidInstanceImageZone", this.AndroidInstanceImageZone);
+        this.setParamSimple(map, prefix + "AndroidInstanceImageDescription", this.AndroidInstanceImageDescription);
         this.setParamSimple(map, prefix + "AndroidVersion", this.AndroidVersion);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

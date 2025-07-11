@@ -185,6 +185,13 @@ public class RestoreStatus extends AbstractModel {
     private Long TaskId;
 
     /**
+    * 恢复任务id
+    */
+    @SerializedName("ID")
+    @Expose
+    private Long ID;
+
+    /**
      * Get 恢复任务id 
      * @return JobId 恢复任务id
      */
@@ -552,6 +559,22 @@ public class RestoreStatus extends AbstractModel {
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 恢复任务id 
+     * @return ID 恢复任务id
+     */
+    public Long getID() {
+        return this.ID;
+    }
+
+    /**
+     * Set 恢复任务id
+     * @param ID 恢复任务id
+     */
+    public void setID(Long ID) {
+        this.ID = ID;
+    }
+
     public RestoreStatus() {
     }
 
@@ -629,6 +652,9 @@ public class RestoreStatus extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
+        if (source.ID != null) {
+            this.ID = new Long(source.ID);
+        }
     }
 
 
@@ -659,6 +685,7 @@ public class RestoreStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "ReserveDynamicPartitionEnable", this.ReserveDynamicPartitionEnable);
         this.setParamSimple(map, prefix + "BackupJobId", this.BackupJobId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "ID", this.ID);
 
     }
 }

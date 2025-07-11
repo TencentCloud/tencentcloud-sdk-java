@@ -45,6 +45,13 @@ public class BackupCosInfo extends AbstractModel {
     private String SnapShotPath;
 
     /**
+    * cos桶所在地域
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get 备份文件所在的cos桶 
      * @return CosBucket 备份文件所在的cos桶
      */
@@ -92,6 +99,22 @@ public class BackupCosInfo extends AbstractModel {
         this.SnapShotPath = SnapShotPath;
     }
 
+    /**
+     * Get cos桶所在地域 
+     * @return Region cos桶所在地域
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set cos桶所在地域
+     * @param Region cos桶所在地域
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
     public BackupCosInfo() {
     }
 
@@ -109,6 +132,9 @@ public class BackupCosInfo extends AbstractModel {
         if (source.SnapShotPath != null) {
             this.SnapShotPath = new String(source.SnapShotPath);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class BackupCosInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamSimple(map, prefix + "CosPath", this.CosPath);
         this.setParamSimple(map, prefix + "SnapShotPath", this.SnapShotPath);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

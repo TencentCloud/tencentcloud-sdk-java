@@ -44,7 +44,7 @@ path: 根据完整访问路径生效
     private String [] RulePaths;
 
     /**
-    * UserAgent列表
+    * UserAgent列表，UserAgent 个数不能超过 10个
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserAgents")
@@ -116,9 +116,9 @@ path: 根据完整访问路径生效
     }
 
     /**
-     * Get UserAgent列表
+     * Get UserAgent列表，UserAgent 个数不能超过 10个
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserAgents UserAgent列表
+     * @return UserAgents UserAgent列表，UserAgent 个数不能超过 10个
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUserAgents() {
@@ -126,9 +126,9 @@ path: 根据完整访问路径生效
     }
 
     /**
-     * Set UserAgent列表
+     * Set UserAgent列表，UserAgent 个数不能超过 10个
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserAgents UserAgent列表
+     * @param UserAgents UserAgent列表，UserAgent 个数不能超过 10个
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserAgents(String [] UserAgents) {

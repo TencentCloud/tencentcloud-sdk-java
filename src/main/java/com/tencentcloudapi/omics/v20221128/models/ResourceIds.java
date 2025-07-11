@@ -84,6 +84,20 @@ public class ResourceIds extends AbstractModel {
     private String EKSId;
 
     /**
+    * TKE容器集群ID。
+    */
+    @SerializedName("TKEId")
+    @Expose
+    private String TKEId;
+
+    /**
+    * TKE系统节点池ID。
+    */
+    @SerializedName("TKESystemNodePoolId")
+    @Expose
+    private String TKESystemNodePoolId;
+
+    /**
      * Get 私有网络ID。 
      * @return VPCId 私有网络ID。
      */
@@ -227,6 +241,38 @@ public class ResourceIds extends AbstractModel {
         this.EKSId = EKSId;
     }
 
+    /**
+     * Get TKE容器集群ID。 
+     * @return TKEId TKE容器集群ID。
+     */
+    public String getTKEId() {
+        return this.TKEId;
+    }
+
+    /**
+     * Set TKE容器集群ID。
+     * @param TKEId TKE容器集群ID。
+     */
+    public void setTKEId(String TKEId) {
+        this.TKEId = TKEId;
+    }
+
+    /**
+     * Get TKE系统节点池ID。 
+     * @return TKESystemNodePoolId TKE系统节点池ID。
+     */
+    public String getTKESystemNodePoolId() {
+        return this.TKESystemNodePoolId;
+    }
+
+    /**
+     * Set TKE系统节点池ID。
+     * @param TKESystemNodePoolId TKE系统节点池ID。
+     */
+    public void setTKESystemNodePoolId(String TKESystemNodePoolId) {
+        this.TKESystemNodePoolId = TKESystemNodePoolId;
+    }
+
     public ResourceIds() {
     }
 
@@ -259,6 +305,12 @@ public class ResourceIds extends AbstractModel {
         if (source.EKSId != null) {
             this.EKSId = new String(source.EKSId);
         }
+        if (source.TKEId != null) {
+            this.TKEId = new String(source.TKEId);
+        }
+        if (source.TKESystemNodePoolId != null) {
+            this.TKESystemNodePoolId = new String(source.TKESystemNodePoolId);
+        }
     }
 
 
@@ -274,6 +326,8 @@ public class ResourceIds extends AbstractModel {
         this.setParamSimple(map, prefix + "CFSStorageType", this.CFSStorageType);
         this.setParamSimple(map, prefix + "CVMId", this.CVMId);
         this.setParamSimple(map, prefix + "EKSId", this.EKSId);
+        this.setParamSimple(map, prefix + "TKEId", this.TKEId);
+        this.setParamSimple(map, prefix + "TKESystemNodePoolId", this.TKESystemNodePoolId);
 
     }
 }

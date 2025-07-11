@@ -45,6 +45,13 @@ public class ListEmailIdentitiesResponse extends AbstractModel {
     private Long MaxDailyQuota;
 
     /**
+    * 总数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class ListEmailIdentitiesResponse extends AbstractModel {
     }
 
     /**
+     * Get 总数 
+     * @return Total 总数
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 总数
+     * @param Total 总数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -135,6 +158,9 @@ public class ListEmailIdentitiesResponse extends AbstractModel {
         if (source.MaxDailyQuota != null) {
             this.MaxDailyQuota = new Long(source.MaxDailyQuota);
         }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -148,6 +174,7 @@ public class ListEmailIdentitiesResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "EmailIdentities.", this.EmailIdentities);
         this.setParamSimple(map, prefix + "MaxReputationLevel", this.MaxReputationLevel);
         this.setParamSimple(map, prefix + "MaxDailyQuota", this.MaxDailyQuota);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

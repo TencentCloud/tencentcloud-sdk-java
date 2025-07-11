@@ -367,6 +367,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *创建安全策略配置模板
+     * @param req CreateWebSecurityTemplateRequest
+     * @return CreateWebSecurityTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWebSecurityTemplateResponse CreateWebSecurityTemplate(CreateWebSecurityTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWebSecurityTemplate", CreateWebSecurityTemplateResponse.class);
+    }
+
+    /**
      *EdgeOne 为您提供 CNAME、NS 和无域名接入三种接入方式，您需要先通过此接口完成站点创建。CNAME 和 NS 接入站点的场景可参考 [从零开始快速接入 EdgeOne](https://cloud.tencent.com/document/product/1552/87601); 无域名接入的场景可参考 [快速启用四层代理服务](https://cloud.tencent.com/document/product/1552/96051)。
 
 > 建议您在账号下已存在套餐时调用本接口创建站点，请在入参时传入 PlanId ，直接将站点绑定至该套餐；不传入 PlanId 时，创建出来的站点会处于未激活状态，无法正常服务，您需要通过 [BindZoneToPlan](https://cloud.tencent.com/document/product/1552/83042) 完成套餐绑定之后，站点才可正常提供服务 。若您当前没有可绑定的套餐时，请前往控制台购买套餐完成站点创建。
@@ -578,6 +589,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DeleteSharedCNAMEResponse DeleteSharedCNAME(DeleteSharedCNAMERequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSharedCNAME", DeleteSharedCNAMEResponse.class);
+    }
+
+    /**
+     *删除安全策略配置模板
+     * @param req DeleteWebSecurityTemplateRequest
+     * @return DeleteWebSecurityTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWebSecurityTemplateResponse DeleteWebSecurityTemplate(DeleteWebSecurityTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWebSecurityTemplate", DeleteWebSecurityTemplateResponse.class);
     }
 
     /**
@@ -1138,6 +1160,28 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *查询安全策略配置模板详情
+     * @param req DescribeWebSecurityTemplateRequest
+     * @return DescribeWebSecurityTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebSecurityTemplateResponse DescribeWebSecurityTemplate(DescribeWebSecurityTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebSecurityTemplate", DescribeWebSecurityTemplateResponse.class);
+    }
+
+    /**
+     *查询安全策略配置模板列表
+     * @param req DescribeWebSecurityTemplatesRequest
+     * @return DescribeWebSecurityTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebSecurityTemplatesResponse DescribeWebSecurityTemplates(DescribeWebSecurityTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebSecurityTemplates", DescribeWebSecurityTemplatesResponse.class);
+    }
+
+    /**
      *查询站点配置项导入结果接口，本接口用于站点配置导入接口（ImportZoneConfig）的结果查询。该功能仅支持标准版或企业版套餐的站点使用。
      * @param req DescribeZoneConfigImportResultRequest
      * @return DescribeZoneConfigImportResultResponse
@@ -1640,6 +1684,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifySecurityPolicyResponse ModifySecurityPolicy(ModifySecurityPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySecurityPolicy", ModifySecurityPolicyResponse.class);
+    }
+
+    /**
+     *修改安全策略配置模板
+     * @param req ModifyWebSecurityTemplateRequest
+     * @return ModifyWebSecurityTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWebSecurityTemplateResponse ModifyWebSecurityTemplate(ModifyWebSecurityTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyWebSecurityTemplate", ModifyWebSecurityTemplateResponse.class);
     }
 
     /**

@@ -38,6 +38,13 @@ public class CreateEmailIdentityRequest extends AbstractModel {
     private Long DKIMOption;
 
     /**
+    * tag 标签
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagList [] TagList;
+
+    /**
      * Get 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。 
      * @return EmailIdentity 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
      */
@@ -69,6 +76,22 @@ public class CreateEmailIdentityRequest extends AbstractModel {
         this.DKIMOption = DKIMOption;
     }
 
+    /**
+     * Get tag 标签 
+     * @return TagList tag 标签
+     */
+    public TagList [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set tag 标签
+     * @param TagList tag 标签
+     */
+    public void setTagList(TagList [] TagList) {
+        this.TagList = TagList;
+    }
+
     public CreateEmailIdentityRequest() {
     }
 
@@ -83,6 +106,12 @@ public class CreateEmailIdentityRequest extends AbstractModel {
         if (source.DKIMOption != null) {
             this.DKIMOption = new Long(source.DKIMOption);
         }
+        if (source.TagList != null) {
+            this.TagList = new TagList[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagList(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class CreateEmailIdentityRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
         this.setParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

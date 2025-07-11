@@ -34,7 +34,7 @@ off：关闭
     private String Switch;
 
     /**
-    * UA黑白名单生效规则列表
+    * UA黑白名单生效规则列表，不能超过10条规则
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterRules")
@@ -70,9 +70,9 @@ off：关闭
     }
 
     /**
-     * Get UA黑白名单生效规则列表
+     * Get UA黑白名单生效规则列表，不能超过10条规则
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FilterRules UA黑白名单生效规则列表
+     * @return FilterRules UA黑白名单生效规则列表，不能超过10条规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserAgentFilterRule [] getFilterRules() {
@@ -80,9 +80,9 @@ off：关闭
     }
 
     /**
-     * Set UA黑白名单生效规则列表
+     * Set UA黑白名单生效规则列表，不能超过10条规则
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FilterRules UA黑白名单生效规则列表
+     * @param FilterRules UA黑白名单生效规则列表，不能超过10条规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterRules(UserAgentFilterRule [] FilterRules) {

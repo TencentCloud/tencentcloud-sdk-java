@@ -158,6 +158,20 @@ public class Template extends AbstractModel {
     private Long PolicyDealType;
 
     /**
+    * 演练场景
+    */
+    @SerializedName("TemplateScenario")
+    @Expose
+    private TaskTarget [] TemplateScenario;
+
+    /**
+    * 演练目的
+    */
+    @SerializedName("TemplatePurpose")
+    @Expose
+    private TaskTarget [] TemplatePurpose;
+
+    /**
      * Get 经验库ID 
      * @return TemplateId 经验库ID
      */
@@ -465,6 +479,38 @@ public class Template extends AbstractModel {
         this.PolicyDealType = PolicyDealType;
     }
 
+    /**
+     * Get 演练场景 
+     * @return TemplateScenario 演练场景
+     */
+    public TaskTarget [] getTemplateScenario() {
+        return this.TemplateScenario;
+    }
+
+    /**
+     * Set 演练场景
+     * @param TemplateScenario 演练场景
+     */
+    public void setTemplateScenario(TaskTarget [] TemplateScenario) {
+        this.TemplateScenario = TemplateScenario;
+    }
+
+    /**
+     * Get 演练目的 
+     * @return TemplatePurpose 演练目的
+     */
+    public TaskTarget [] getTemplatePurpose() {
+        return this.TemplatePurpose;
+    }
+
+    /**
+     * Set 演练目的
+     * @param TemplatePurpose 演练目的
+     */
+    public void setTemplatePurpose(TaskTarget [] TemplatePurpose) {
+        this.TemplatePurpose = TemplatePurpose;
+    }
+
     public Template() {
     }
 
@@ -545,6 +591,18 @@ public class Template extends AbstractModel {
         if (source.PolicyDealType != null) {
             this.PolicyDealType = new Long(source.PolicyDealType);
         }
+        if (source.TemplateScenario != null) {
+            this.TemplateScenario = new TaskTarget[source.TemplateScenario.length];
+            for (int i = 0; i < source.TemplateScenario.length; i++) {
+                this.TemplateScenario[i] = new TaskTarget(source.TemplateScenario[i]);
+            }
+        }
+        if (source.TemplatePurpose != null) {
+            this.TemplatePurpose = new TaskTarget[source.TemplatePurpose.length];
+            for (int i = 0; i < source.TemplatePurpose.length; i++) {
+                this.TemplatePurpose[i] = new TaskTarget(source.TemplatePurpose[i]);
+            }
+        }
     }
 
 
@@ -571,6 +629,8 @@ public class Template extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
         this.setParamArraySimple(map, prefix + "AlarmPolicy.", this.AlarmPolicy);
         this.setParamSimple(map, prefix + "PolicyDealType", this.PolicyDealType);
+        this.setParamArrayObj(map, prefix + "TemplateScenario.", this.TemplateScenario);
+        this.setParamArrayObj(map, prefix + "TemplatePurpose.", this.TemplatePurpose);
 
     }
 }

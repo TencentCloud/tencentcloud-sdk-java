@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ses.v20201002.models;
+package com.tencentcloudapi.igtm.v20231024.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,96 +21,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListEmailIdentitiesRequest extends AbstractModel {
+public class DescribeDetectTaskPackageListRequest extends AbstractModel {
 
     /**
-    * tag 标签
-    */
-    @SerializedName("TagList")
-    @Expose
-    private TagList [] TagList;
-
-    /**
-    * 分页 limit
+    * 每页条数
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页 offset
+    * 探测任务过滤条件：ResourceId 探测任务的资源id，PeriodStart 最小过期时间,PeriodEnd 最大过期时间
     */
-    @SerializedName("Offset")
+    @SerializedName("Filters")
     @Expose
-    private Long Offset;
+    private ResourceFilter [] Filters;
 
     /**
-     * Get tag 标签 
-     * @return TagList tag 标签
-     */
-    public TagList [] getTagList() {
-        return this.TagList;
-    }
-
-    /**
-     * Set tag 标签
-     * @param TagList tag 标签
-     */
-    public void setTagList(TagList [] TagList) {
-        this.TagList = TagList;
-    }
-
-    /**
-     * Get 分页 limit 
-     * @return Limit 分页 limit
+     * Get 每页条数 
+     * @return Limit 每页条数
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页 limit
-     * @param Limit 分页 limit
+     * Set 每页条数
+     * @param Limit 每页条数
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页 offset 
-     * @return Offset 分页 offset
+     * Get 探测任务过滤条件：ResourceId 探测任务的资源id，PeriodStart 最小过期时间,PeriodEnd 最大过期时间 
+     * @return Filters 探测任务过滤条件：ResourceId 探测任务的资源id，PeriodStart 最小过期时间,PeriodEnd 最大过期时间
      */
-    public Long getOffset() {
-        return this.Offset;
+    public ResourceFilter [] getFilters() {
+        return this.Filters;
     }
 
     /**
-     * Set 分页 offset
-     * @param Offset 分页 offset
+     * Set 探测任务过滤条件：ResourceId 探测任务的资源id，PeriodStart 最小过期时间,PeriodEnd 最大过期时间
+     * @param Filters 探测任务过滤条件：ResourceId 探测任务的资源id，PeriodStart 最小过期时间,PeriodEnd 最大过期时间
      */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
+    public void setFilters(ResourceFilter [] Filters) {
+        this.Filters = Filters;
     }
 
-    public ListEmailIdentitiesRequest() {
+    public DescribeDetectTaskPackageListRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ListEmailIdentitiesRequest(ListEmailIdentitiesRequest source) {
-        if (source.TagList != null) {
-            this.TagList = new TagList[source.TagList.length];
-            for (int i = 0; i < source.TagList.length; i++) {
-                this.TagList[i] = new TagList(source.TagList[i]);
-            }
-        }
+    public DescribeDetectTaskPackageListRequest(DescribeDetectTaskPackageListRequest source) {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
+        if (source.Filters != null) {
+            this.Filters = new ResourceFilter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new ResourceFilter(source.Filters[i]);
+            }
         }
     }
 
@@ -119,9 +93,8 @@ public class ListEmailIdentitiesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

@@ -101,6 +101,13 @@ public class NodeInfo extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 虚拟可用区
+    */
+    @SerializedName("VirtualZone")
+    @Expose
+    private String VirtualZone;
+
+    /**
      * Get 用户IP 
      * @return Ip 用户IP
      */
@@ -276,6 +283,22 @@ public class NodeInfo extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 虚拟可用区 
+     * @return VirtualZone 虚拟可用区
+     */
+    public String getVirtualZone() {
+        return this.VirtualZone;
+    }
+
+    /**
+     * Set 虚拟可用区
+     * @param VirtualZone 虚拟可用区
+     */
+    public void setVirtualZone(String VirtualZone) {
+        this.VirtualZone = VirtualZone;
+    }
+
     public NodeInfo() {
     }
 
@@ -317,6 +340,9 @@ public class NodeInfo extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.VirtualZone != null) {
+            this.VirtualZone = new String(source.VirtualZone);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class NodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RIp", this.RIp);
         this.setParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "VirtualZone", this.VirtualZone);
 
     }
 }

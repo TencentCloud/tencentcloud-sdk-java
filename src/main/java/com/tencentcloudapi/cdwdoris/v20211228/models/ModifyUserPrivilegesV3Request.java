@@ -52,7 +52,7 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
     private String WhiteHost;
 
     /**
-    * 更新类型，默认0，1为更新绑定计算组
+    * 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
     */
     @SerializedName("UpdateType")
     @Expose
@@ -64,6 +64,13 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
     @SerializedName("UpdateComputeGroups")
     @Expose
     private String [] UpdateComputeGroups;
+
+    /**
+    * 默认计算组
+    */
+    @SerializedName("DefaultComputeGroup")
+    @Expose
+    private String DefaultComputeGroup;
 
     /**
      * Get 集群id 
@@ -130,16 +137,16 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
     }
 
     /**
-     * Get 更新类型，默认0，1为更新绑定计算组 
-     * @return UpdateType 更新类型，默认0，1为更新绑定计算组
+     * Get 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组 
+     * @return UpdateType 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
      */
     public Long getUpdateType() {
         return this.UpdateType;
     }
 
     /**
-     * Set 更新类型，默认0，1为更新绑定计算组
-     * @param UpdateType 更新类型，默认0，1为更新绑定计算组
+     * Set 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
+     * @param UpdateType 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
      */
     public void setUpdateType(Long UpdateType) {
         this.UpdateType = UpdateType;
@@ -159,6 +166,22 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
      */
     public void setUpdateComputeGroups(String [] UpdateComputeGroups) {
         this.UpdateComputeGroups = UpdateComputeGroups;
+    }
+
+    /**
+     * Get 默认计算组 
+     * @return DefaultComputeGroup 默认计算组
+     */
+    public String getDefaultComputeGroup() {
+        return this.DefaultComputeGroup;
+    }
+
+    /**
+     * Set 默认计算组
+     * @param DefaultComputeGroup 默认计算组
+     */
+    public void setDefaultComputeGroup(String DefaultComputeGroup) {
+        this.DefaultComputeGroup = DefaultComputeGroup;
     }
 
     public ModifyUserPrivilegesV3Request() {
@@ -190,6 +213,9 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
                 this.UpdateComputeGroups[i] = new String(source.UpdateComputeGroups[i]);
             }
         }
+        if (source.DefaultComputeGroup != null) {
+            this.DefaultComputeGroup = new String(source.DefaultComputeGroup);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
         this.setParamSimple(map, prefix + "WhiteHost", this.WhiteHost);
         this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
         this.setParamArraySimple(map, prefix + "UpdateComputeGroups.", this.UpdateComputeGroups);
+        this.setParamSimple(map, prefix + "DefaultComputeGroup", this.DefaultComputeGroup);
 
     }
 }

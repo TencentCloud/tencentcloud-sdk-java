@@ -105,7 +105,9 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *取消分配
+     *业务已下线
+
+取消分配
      * @param req CancelAssignTWeCallLicenseRequest
      * @return CancelAssignTWeCallLicenseResponse
      * @throws TencentCloudSDKException

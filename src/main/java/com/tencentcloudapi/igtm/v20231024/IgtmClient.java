@@ -149,6 +149,28 @@ public class IgtmClient extends AbstractClient{
     }
 
     /**
+     *探测任务包详情
+     * @param req DescribeDetectPackageDetailRequest
+     * @return DescribeDetectPackageDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDetectPackageDetailResponse DescribeDetectPackageDetail(DescribeDetectPackageDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDetectPackageDetail", DescribeDetectPackageDetailResponse.class);
+    }
+
+    /**
+     *探测任务套餐列表
+     * @param req DescribeDetectTaskPackageListRequest
+     * @return DescribeDetectTaskPackageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDetectTaskPackageListResponse DescribeDetectTaskPackageList(DescribeDetectTaskPackageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDetectTaskPackageList", DescribeDetectTaskPackageListResponse.class);
+    }
+
+    /**
      *获取探测节点列表接口
      * @param req DescribeDetectorsRequest
      * @return DescribeDetectorsResponse
@@ -190,6 +212,17 @@ public class IgtmClient extends AbstractClient{
     public DescribeInstanceListResponse DescribeInstanceList(DescribeInstanceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceList", DescribeInstanceListResponse.class);
+    }
+
+    /**
+     *实例套餐列表
+     * @param req DescribeInstancePackageListRequest
+     * @return DescribeInstancePackageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancePackageListResponse DescribeInstancePackageList(DescribeInstancePackageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstancePackageList", DescribeInstancePackageListResponse.class);
     }
 
     /**

@@ -60,6 +60,20 @@ public class ClusterOption extends AbstractModel {
     private LimitRange LimitRange;
 
     /**
+    * 系统节点池实例规格。
+    */
+    @SerializedName("SystemNodeInstanceType")
+    @Expose
+    private String SystemNodeInstanceType;
+
+    /**
+    * 系统节点池实例数量。
+    */
+    @SerializedName("SystemNodeCount")
+    @Expose
+    private Long SystemNodeCount;
+
+    /**
      * Get 计算集群可用区。 
      * @return Zone 计算集群可用区。
      */
@@ -143,6 +157,38 @@ public class ClusterOption extends AbstractModel {
         this.LimitRange = LimitRange;
     }
 
+    /**
+     * Get 系统节点池实例规格。 
+     * @return SystemNodeInstanceType 系统节点池实例规格。
+     */
+    public String getSystemNodeInstanceType() {
+        return this.SystemNodeInstanceType;
+    }
+
+    /**
+     * Set 系统节点池实例规格。
+     * @param SystemNodeInstanceType 系统节点池实例规格。
+     */
+    public void setSystemNodeInstanceType(String SystemNodeInstanceType) {
+        this.SystemNodeInstanceType = SystemNodeInstanceType;
+    }
+
+    /**
+     * Get 系统节点池实例数量。 
+     * @return SystemNodeCount 系统节点池实例数量。
+     */
+    public Long getSystemNodeCount() {
+        return this.SystemNodeCount;
+    }
+
+    /**
+     * Set 系统节点池实例数量。
+     * @param SystemNodeCount 系统节点池实例数量。
+     */
+    public void setSystemNodeCount(Long SystemNodeCount) {
+        this.SystemNodeCount = SystemNodeCount;
+    }
+
     public ClusterOption() {
     }
 
@@ -166,6 +212,12 @@ public class ClusterOption extends AbstractModel {
         if (source.LimitRange != null) {
             this.LimitRange = new LimitRange(source.LimitRange);
         }
+        if (source.SystemNodeInstanceType != null) {
+            this.SystemNodeInstanceType = new String(source.SystemNodeInstanceType);
+        }
+        if (source.SystemNodeCount != null) {
+            this.SystemNodeCount = new Long(source.SystemNodeCount);
+        }
     }
 
 
@@ -178,6 +230,8 @@ public class ClusterOption extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceCidr", this.ServiceCidr);
         this.setParamObj(map, prefix + "ResourceQuota.", this.ResourceQuota);
         this.setParamObj(map, prefix + "LimitRange.", this.LimitRange);
+        this.setParamSimple(map, prefix + "SystemNodeInstanceType", this.SystemNodeInstanceType);
+        this.setParamSimple(map, prefix + "SystemNodeCount", this.SystemNodeCount);
 
     }
 }

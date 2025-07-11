@@ -66,6 +66,13 @@ public class EmailIdentity extends AbstractModel {
     private String [] SendIp;
 
     /**
+    * tag 标签
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagList [] TagList;
+
+    /**
      * Get 发信域名 
      * @return IdentityName 发信域名
      */
@@ -161,6 +168,22 @@ public class EmailIdentity extends AbstractModel {
         this.SendIp = SendIp;
     }
 
+    /**
+     * Get tag 标签 
+     * @return TagList tag 标签
+     */
+    public TagList [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set tag 标签
+     * @param TagList tag 标签
+     */
+    public void setTagList(TagList [] TagList) {
+        this.TagList = TagList;
+    }
+
     public EmailIdentity() {
     }
 
@@ -190,6 +213,12 @@ public class EmailIdentity extends AbstractModel {
                 this.SendIp[i] = new String(source.SendIp[i]);
             }
         }
+        if (source.TagList != null) {
+            this.TagList = new TagList[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagList(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -203,6 +232,7 @@ public class EmailIdentity extends AbstractModel {
         this.setParamSimple(map, prefix + "CurrentReputationLevel", this.CurrentReputationLevel);
         this.setParamSimple(map, prefix + "DailyQuota", this.DailyQuota);
         this.setParamArraySimple(map, prefix + "SendIp.", this.SendIp);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

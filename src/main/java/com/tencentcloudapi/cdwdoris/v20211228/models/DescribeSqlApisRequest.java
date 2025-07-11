@@ -85,6 +85,13 @@ GetCatalog：获取Catalog列表；
     private String TableName;
 
     /**
+    * 用户名列表
+    */
+    @SerializedName("UserNames")
+    @Expose
+    private String [] UserNames;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -232,6 +239,22 @@ GetCatalog：获取Catalog列表；
         this.TableName = TableName;
     }
 
+    /**
+     * Get 用户名列表 
+     * @return UserNames 用户名列表
+     */
+    public String [] getUserNames() {
+        return this.UserNames;
+    }
+
+    /**
+     * Set 用户名列表
+     * @param UserNames 用户名列表
+     */
+    public void setUserNames(String [] UserNames) {
+        this.UserNames = UserNames;
+    }
+
     public DescribeSqlApisRequest() {
     }
 
@@ -267,6 +290,12 @@ GetCatalog：获取Catalog列表；
         if (source.TableName != null) {
             this.TableName = new String(source.TableName);
         }
+        if (source.UserNames != null) {
+            this.UserNames = new String[source.UserNames.length];
+            for (int i = 0; i < source.UserNames.length; i++) {
+                this.UserNames[i] = new String(source.UserNames[i]);
+            }
+        }
     }
 
 
@@ -282,6 +311,7 @@ GetCatalog：获取Catalog列表；
         this.setParamArraySimple(map, prefix + "Catalogs.", this.Catalogs);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamArraySimple(map, prefix + "UserNames.", this.UserNames);
 
     }
 }

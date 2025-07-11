@@ -130,6 +130,13 @@ true就是开启了，false是关闭
     private String Tenant;
 
     /**
+    * 删除保护开关标识
+    */
+    @SerializedName("DeleteProtection")
+    @Expose
+    private Long DeleteProtection;
+
+    /**
      * Get 集群Id。 
      * @return ClusterId 集群Id。
      */
@@ -385,6 +392,22 @@ true就是开启了，false是关闭
         this.Tenant = Tenant;
     }
 
+    /**
+     * Get 删除保护开关标识 
+     * @return DeleteProtection 删除保护开关标识
+     */
+    public Long getDeleteProtection() {
+        return this.DeleteProtection;
+    }
+
+    /**
+     * Set 删除保护开关标识
+     * @param DeleteProtection 删除保护开关标识
+     */
+    public void setDeleteProtection(Long DeleteProtection) {
+        this.DeleteProtection = DeleteProtection;
+    }
+
     public PulsarProClusterInfo() {
     }
 
@@ -438,6 +461,9 @@ true就是开启了，false是关闭
         if (source.Tenant != null) {
             this.Tenant = new String(source.Tenant);
         }
+        if (source.DeleteProtection != null) {
+            this.DeleteProtection = new Long(source.DeleteProtection);
+        }
     }
 
 
@@ -459,6 +485,7 @@ true就是开启了，false是关闭
         this.setParamSimple(map, prefix + "AutoCreateTopicStatus", this.AutoCreateTopicStatus);
         this.setParamSimple(map, prefix + "DefaultPartitionNumber", this.DefaultPartitionNumber);
         this.setParamSimple(map, prefix + "Tenant", this.Tenant);
+        this.setParamSimple(map, prefix + "DeleteProtection", this.DeleteProtection);
 
     }
 }
