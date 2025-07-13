@@ -80,7 +80,7 @@ public class InternetAccessible extends AbstractModel {
 
 示例值：WanIP
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
     */
     @SerializedName("IPv4AddressType")
     @Expose
@@ -94,7 +94,7 @@ public class InternetAccessible extends AbstractModel {
 如需为资源分配IPv6地址，请指定弹性公网IPv6类型。
 示例值：EIPv6
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
     */
     @SerializedName("IPv6AddressType")
     @Expose
@@ -244,7 +244,7 @@ public class InternetAccessible extends AbstractModel {
 
 示例值：WanIP
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category) 
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category) 
      * @return IPv4AddressType 公网 IP 类型。
 
 - WanIP：普通公网IP。
@@ -255,7 +255,7 @@ public class InternetAccessible extends AbstractModel {
 
 示例值：WanIP
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
      */
     public String getIPv4AddressType() {
         return this.IPv4AddressType;
@@ -272,7 +272,7 @@ public class InternetAccessible extends AbstractModel {
 
 示例值：WanIP
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
      * @param IPv4AddressType 公网 IP 类型。
 
 - WanIP：普通公网IP。
@@ -283,7 +283,7 @@ public class InternetAccessible extends AbstractModel {
 
 示例值：WanIP
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
      */
     public void setIPv4AddressType(String IPv4AddressType) {
         this.IPv4AddressType = IPv4AddressType;
@@ -297,7 +297,7 @@ public class InternetAccessible extends AbstractModel {
 如需为资源分配IPv6地址，请指定弹性公网IPv6类型。
 示例值：EIPv6
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category) 
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category) 
      * @return IPv6AddressType 弹性公网 IPv6 类型。
 - EIPv6：弹性公网 IPv6。
 - HighQualityEIPv6：精品 IPv6。仅中国香港支持精品IPv6。
@@ -305,7 +305,7 @@ public class InternetAccessible extends AbstractModel {
 如需为资源分配IPv6地址，请指定弹性公网IPv6类型。
 示例值：EIPv6
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
      */
     public String getIPv6AddressType() {
         return this.IPv6AddressType;
@@ -319,7 +319,7 @@ public class InternetAccessible extends AbstractModel {
 如需为资源分配IPv6地址，请指定弹性公网IPv6类型。
 示例值：EIPv6
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
      * @param IPv6AddressType 弹性公网 IPv6 类型。
 - EIPv6：弹性公网 IPv6。
 - HighQualityEIPv6：精品 IPv6。仅中国香港支持精品IPv6。
@@ -327,7 +327,7 @@ public class InternetAccessible extends AbstractModel {
 如需为资源分配IPv6地址，请指定弹性公网IPv6类型。
 示例值：EIPv6
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
      */
     public void setIPv6AddressType(String IPv6AddressType) {
         this.IPv6AddressType = IPv6AddressType;

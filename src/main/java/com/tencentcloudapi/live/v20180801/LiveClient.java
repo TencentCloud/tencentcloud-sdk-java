@@ -162,6 +162,17 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *创建关键词，并关联到关键词库。
+     * @param req CreateAuditKeywordsRequest
+     * @return CreateAuditKeywordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditKeywordsResponse CreateAuditKeywords(CreateAuditKeywordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuditKeywords", CreateAuditKeywordsResponse.class);
+    }
+
+    /**
      *该接口用来创建新的导播台
      * @param req CreateCasterRequest
      * @return CreateCasterResponse
@@ -493,6 +504,17 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *删除关键词信息。
+     * @param req DeleteAuditKeywordsRequest
+     * @return DeleteAuditKeywordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditKeywordsResponse DeleteAuditKeywords(DeleteAuditKeywordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuditKeywords", DeleteAuditKeywordsResponse.class);
+    }
+
+    /**
      *该接口用来删除一个导播台的所有信息。
 注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。
      * @param req DeleteCasterRequest
@@ -816,6 +838,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxList(DescribeAreaBillBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAreaBillBandwidthAndFluxList", DescribeAreaBillBandwidthAndFluxListResponse.class);
+    }
+
+    /**
+     *获取关键词信息。
+     * @param req DescribeAuditKeywordsRequest
+     * @return DescribeAuditKeywordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditKeywordsResponse DescribeAuditKeywords(DescribeAuditKeywordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditKeywords", DescribeAuditKeywordsResponse.class);
     }
 
     /**

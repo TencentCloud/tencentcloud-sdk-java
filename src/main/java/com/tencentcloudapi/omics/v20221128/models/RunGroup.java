@@ -164,7 +164,7 @@ public class RunGroup extends AbstractModel {
     private String InputCosUri;
 
     /**
-    * 输入模版ID。
+    * 输入模板ID。
     */
     @SerializedName("InputTemplateId")
     @Expose
@@ -587,16 +587,16 @@ public class RunGroup extends AbstractModel {
     }
 
     /**
-     * Get 输入模版ID。 
-     * @return InputTemplateId 输入模版ID。
+     * Get 输入模板ID。 
+     * @return InputTemplateId 输入模板ID。
      */
     public String getInputTemplateId() {
         return this.InputTemplateId;
     }
 
     /**
-     * Set 输入模版ID。
-     * @param InputTemplateId 输入模版ID。
+     * Set 输入模板ID。
+     * @param InputTemplateId 输入模板ID。
      */
     public void setInputTemplateId(String InputTemplateId) {
         this.InputTemplateId = InputTemplateId;

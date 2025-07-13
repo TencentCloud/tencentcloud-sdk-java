@@ -81,7 +81,7 @@ public class SyncDetailInfo extends AbstractModel {
     private StepInfo [] StepInfos;
 
     /**
-    * 不能发起一致性校验的原因
+    * 不能发起内置校验的原因
     */
     @SerializedName("CauseOfCompareDisable")
     @Expose
@@ -227,16 +227,16 @@ public class SyncDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 不能发起一致性校验的原因 
-     * @return CauseOfCompareDisable 不能发起一致性校验的原因
+     * Get 不能发起内置校验的原因 
+     * @return CauseOfCompareDisable 不能发起内置校验的原因
      */
     public String getCauseOfCompareDisable() {
         return this.CauseOfCompareDisable;
     }
 
     /**
-     * Set 不能发起一致性校验的原因
-     * @param CauseOfCompareDisable 不能发起一致性校验的原因
+     * Set 不能发起内置校验的原因
+     * @param CauseOfCompareDisable 不能发起内置校验的原因
      */
     public void setCauseOfCompareDisable(String CauseOfCompareDisable) {
         this.CauseOfCompareDisable = CauseOfCompareDisable;

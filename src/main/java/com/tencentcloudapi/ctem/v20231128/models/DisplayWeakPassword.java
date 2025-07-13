@@ -94,6 +94,20 @@ public class DisplayWeakPassword extends AbstractModel {
     private String ScreenshotUrl;
 
     /**
+    * 状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 上次复测时间
+    */
+    @SerializedName("LastCheckTime")
+    @Expose
+    private String LastCheckTime;
+
+    /**
      * Get 主键ID 
      * @return Id 主键ID
      */
@@ -253,6 +267,38 @@ public class DisplayWeakPassword extends AbstractModel {
         this.ScreenshotUrl = ScreenshotUrl;
     }
 
+    /**
+     * Get 状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中 
+     * @return Status 状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中
+     * @param Status 状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 上次复测时间 
+     * @return LastCheckTime 上次复测时间
+     */
+    public String getLastCheckTime() {
+        return this.LastCheckTime;
+    }
+
+    /**
+     * Set 上次复测时间
+     * @param LastCheckTime 上次复测时间
+     */
+    public void setLastCheckTime(String LastCheckTime) {
+        this.LastCheckTime = LastCheckTime;
+    }
+
     public DisplayWeakPassword() {
     }
 
@@ -291,6 +337,12 @@ public class DisplayWeakPassword extends AbstractModel {
         if (source.ScreenshotUrl != null) {
             this.ScreenshotUrl = new String(source.ScreenshotUrl);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.LastCheckTime != null) {
+            this.LastCheckTime = new String(source.LastCheckTime);
+        }
     }
 
 
@@ -308,6 +360,8 @@ public class DisplayWeakPassword extends AbstractModel {
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "IsHoneypot", this.IsHoneypot);
         this.setParamSimple(map, prefix + "ScreenshotUrl", this.ScreenshotUrl);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
 
     }
 }

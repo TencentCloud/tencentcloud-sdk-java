@@ -31,6 +31,13 @@ public class SkippedItem extends AbstractModel {
     private String Db;
 
     /**
+    * schema名
+    */
+    @SerializedName("Schema")
+    @Expose
+    private String Schema;
+
+    /**
     * 表名
     */
     @SerializedName("Table")
@@ -58,6 +65,22 @@ public class SkippedItem extends AbstractModel {
      */
     public void setDb(String Db) {
         this.Db = Db;
+    }
+
+    /**
+     * Get schema名 
+     * @return Schema schema名
+     */
+    public String getSchema() {
+        return this.Schema;
+    }
+
+    /**
+     * Set schema名
+     * @param Schema schema名
+     */
+    public void setSchema(String Schema) {
+        this.Schema = Schema;
     }
 
     /**
@@ -103,6 +126,9 @@ public class SkippedItem extends AbstractModel {
         if (source.Db != null) {
             this.Db = new String(source.Db);
         }
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
+        }
         if (source.Table != null) {
             this.Table = new String(source.Table);
         }
@@ -117,6 +143,7 @@ public class SkippedItem extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Db", this.Db);
+        this.setParamSimple(map, prefix + "Schema", this.Schema);
         this.setParamSimple(map, prefix + "Table", this.Table);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
 

@@ -118,7 +118,7 @@ Modify 集群变更中；
     private NodesSummary CommonSummary;
 
     /**
-    * 高可用，“true" "false"
+    * 高可用,"true" "false"
     */
     @SerializedName("HA")
     @Expose
@@ -398,6 +398,13 @@ Modify 集群变更中；
     private Boolean HasPublicCloudClb;
 
     /**
+    * 可升级的zk版本
+    */
+    @SerializedName("UpgradeZkVersions")
+    @Expose
+    private String UpgradeZkVersions;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
      */
@@ -618,16 +625,16 @@ Modify 集群变更中；
     }
 
     /**
-     * Get 高可用，“true" "false" 
-     * @return HA 高可用，“true" "false"
+     * Get 高可用,"true" "false" 
+     * @return HA 高可用,"true" "false"
      */
     public String getHA() {
         return this.HA;
     }
 
     /**
-     * Set 高可用，“true" "false"
-     * @param HA 高可用，“true" "false"
+     * Set 高可用,"true" "false"
+     * @param HA 高可用,"true" "false"
      */
     public void setHA(String HA) {
         this.HA = HA;
@@ -1257,6 +1264,22 @@ Modify 集群变更中；
         this.HasPublicCloudClb = HasPublicCloudClb;
     }
 
+    /**
+     * Get 可升级的zk版本 
+     * @return UpgradeZkVersions 可升级的zk版本
+     */
+    public String getUpgradeZkVersions() {
+        return this.UpgradeZkVersions;
+    }
+
+    /**
+     * Set 可升级的zk版本
+     * @param UpgradeZkVersions 可升级的zk版本
+     */
+    public void setUpgradeZkVersions(String UpgradeZkVersions) {
+        this.UpgradeZkVersions = UpgradeZkVersions;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1433,6 +1456,9 @@ Modify 集群变更中；
         if (source.HasPublicCloudClb != null) {
             this.HasPublicCloudClb = new Boolean(source.HasPublicCloudClb);
         }
+        if (source.UpgradeZkVersions != null) {
+            this.UpgradeZkVersions = new String(source.UpgradeZkVersions);
+        }
     }
 
 
@@ -1493,6 +1519,7 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "IsWhiteSGs", this.IsWhiteSGs);
         this.setParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
         this.setParamSimple(map, prefix + "HasPublicCloudClb", this.HasPublicCloudClb);
+        this.setParamSimple(map, prefix + "UpgradeZkVersions", this.UpgradeZkVersions);
 
     }
 }
