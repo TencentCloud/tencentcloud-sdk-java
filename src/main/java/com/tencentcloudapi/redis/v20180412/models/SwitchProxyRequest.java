@@ -38,6 +38,13 @@ public class SwitchProxyRequest extends AbstractModel {
     private String ProxyID;
 
     /**
+    * 实例 ProxyID列表，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。
+    */
+    @SerializedName("ProxyIDList")
+    @Expose
+    private String [] ProxyIDList;
+
+    /**
      * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
      * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
@@ -69,6 +76,22 @@ public class SwitchProxyRequest extends AbstractModel {
         this.ProxyID = ProxyID;
     }
 
+    /**
+     * Get 实例 ProxyID列表，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。 
+     * @return ProxyIDList 实例 ProxyID列表，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。
+     */
+    public String [] getProxyIDList() {
+        return this.ProxyIDList;
+    }
+
+    /**
+     * Set 实例 ProxyID列表，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。
+     * @param ProxyIDList 实例 ProxyID列表，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。
+     */
+    public void setProxyIDList(String [] ProxyIDList) {
+        this.ProxyIDList = ProxyIDList;
+    }
+
     public SwitchProxyRequest() {
     }
 
@@ -83,6 +106,12 @@ public class SwitchProxyRequest extends AbstractModel {
         if (source.ProxyID != null) {
             this.ProxyID = new String(source.ProxyID);
         }
+        if (source.ProxyIDList != null) {
+            this.ProxyIDList = new String[source.ProxyIDList.length];
+            for (int i = 0; i < source.ProxyIDList.length; i++) {
+                this.ProxyIDList[i] = new String(source.ProxyIDList[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class SwitchProxyRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ProxyID", this.ProxyID);
+        this.setParamArraySimple(map, prefix + "ProxyIDList.", this.ProxyIDList);
 
     }
 }

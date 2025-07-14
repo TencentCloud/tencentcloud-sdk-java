@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lke.v20231130.models;
+package com.tencentcloudapi.ctem.v20231128.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Coord extends AbstractModel {
+public class DisplayLeakageCode extends AbstractModel {
 
     /**
-    * 横坐标
+    * 主键ID
     */
-    @SerializedName("X")
+    @SerializedName("Id")
     @Expose
-    private Long X;
+    private Long Id;
 
     /**
-    * 纵坐标
+    * 链接
     */
-    @SerializedName("Y")
+    @SerializedName("Url")
     @Expose
-    private Long Y;
+    private String Url;
 
     /**
-     * Get 横坐标 
-     * @return X 横坐标
+     * Get 主键ID 
+     * @return Id 主键ID
      */
-    public Long getX() {
-        return this.X;
+    public Long getId() {
+        return this.Id;
     }
 
     /**
-     * Set 横坐标
-     * @param X 横坐标
+     * Set 主键ID
+     * @param Id 主键ID
      */
-    public void setX(Long X) {
-        this.X = X;
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 
     /**
-     * Get 纵坐标 
-     * @return Y 纵坐标
+     * Get 链接 
+     * @return Url 链接
      */
-    public Long getY() {
-        return this.Y;
+    public String getUrl() {
+        return this.Url;
     }
 
     /**
-     * Set 纵坐标
-     * @param Y 纵坐标
+     * Set 链接
+     * @param Url 链接
      */
-    public void setY(Long Y) {
-        this.Y = Y;
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
-    public Coord() {
+    public DisplayLeakageCode() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Coord(Coord source) {
-        if (source.X != null) {
-            this.X = new Long(source.X);
+    public DisplayLeakageCode(DisplayLeakageCode source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
         }
-        if (source.Y != null) {
-            this.Y = new Long(source.Y);
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
         }
     }
 
@@ -90,8 +90,8 @@ public class Coord extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "X", this.X);
-        this.setParamSimple(map, prefix + "Y", this.Y);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

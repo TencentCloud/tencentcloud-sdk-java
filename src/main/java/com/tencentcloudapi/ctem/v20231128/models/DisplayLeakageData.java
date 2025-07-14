@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.monitor.v20230616.models;
+package com.tencentcloudapi.ctem.v20231128.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Expr extends AbstractModel {
+public class DisplayLeakageData extends AbstractModel {
 
     /**
-    * 算子名称
+    * 主键ID
     */
-    @SerializedName("Function")
+    @SerializedName("Id")
     @Expose
-    private String Function;
+    private Long Id;
 
     /**
-    * 算子入参值
+    * 链接
     */
-    @SerializedName("N")
+    @SerializedName("Url")
     @Expose
-    private Float N;
+    private String Url;
 
     /**
-     * Get 算子名称 
-     * @return Function 算子名称
+     * Get 主键ID 
+     * @return Id 主键ID
      */
-    public String getFunction() {
-        return this.Function;
+    public Long getId() {
+        return this.Id;
     }
 
     /**
-     * Set 算子名称
-     * @param Function 算子名称
+     * Set 主键ID
+     * @param Id 主键ID
      */
-    public void setFunction(String Function) {
-        this.Function = Function;
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 
     /**
-     * Get 算子入参值 
-     * @return N 算子入参值
+     * Get 链接 
+     * @return Url 链接
      */
-    public Float getN() {
-        return this.N;
+    public String getUrl() {
+        return this.Url;
     }
 
     /**
-     * Set 算子入参值
-     * @param N 算子入参值
+     * Set 链接
+     * @param Url 链接
      */
-    public void setN(Float N) {
-        this.N = N;
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
-    public Expr() {
+    public DisplayLeakageData() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Expr(Expr source) {
-        if (source.Function != null) {
-            this.Function = new String(source.Function);
+    public DisplayLeakageData(DisplayLeakageData source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
         }
-        if (source.N != null) {
-            this.N = new Float(source.N);
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
         }
     }
 
@@ -90,8 +90,8 @@ public class Expr extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Function", this.Function);
-        this.setParamSimple(map, prefix + "N", this.N);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

@@ -24,6 +24,9 @@ public enum ScfErrorCode {
      /* 绑定插件失败，请检查参数。 */
      FAILEDOPERATION_BINDPLUGIN("FailedOperation.BindPlugin"),
      
+     /* CNAME解析错误 */
+     FAILEDOPERATION_CNAME("FailedOperation.CNAME"),
+     
      /* 调用 NetDeploy 失败。 */
      FAILEDOPERATION_CALLNETDEPLOYFAILED("FailedOperation.CallNetDeployFailed"),
      
@@ -216,6 +219,9 @@ public enum ScfErrorCode {
      /* 获取sts票据信息失败。 */
      INTERNALERROR_GETSTSTOKENFAILED("InternalError.GetStsTokenFailed"),
      
+     /* 查找失败 */
+     INTERNALERROR_SEARCHFAILED("InternalError.SearchFailed"),
+     
      /* 内部系统错误。 */
      INTERNALERROR_SYSTEM("InternalError.System"),
      
@@ -378,6 +384,9 @@ public enum ScfErrorCode {
      /* 环境变量DNS[OS_NAMESERVER]配置有误。 */
      INVALIDPARAMETERVALUE_DNSINFO("InvalidParameterValue.DnsInfo"),
      
+     /* 域名参数非法 */
+     INVALIDPARAMETERVALUE_DOMAIN("InvalidParameterValue.Domain"),
+     
      /* DynamicEnabled 参数传入错误。 */
      INVALIDPARAMETERVALUE_DYNAMICENABLED("InvalidParameterValue.DynamicEnabled"),
      
@@ -452,6 +461,9 @@ public enum ScfErrorCode {
      
      /* InstanceConcurrencyConfig 参数传入错误。 */
      INVALIDPARAMETERVALUE_INSTANCECONCURRENCYCONFIG("InvalidParameterValue.InstanceConcurrencyConfig"),
+     
+     /* 证书配置错误 */
+     INVALIDPARAMETERVALUE_INVALIDCERTCONFIG("InvalidParameterValue.InvalidCertConfig"),
      
      /* InvokeType取值与规范不符，请修正后再试。 */
      INVALIDPARAMETERVALUE_INVOKETYPE("InvalidParameterValue.InvokeType"),
@@ -630,6 +642,9 @@ public enum ScfErrorCode {
      /* eip资源超限。 */
      LIMITEXCEEDED_EIP("LimitExceeded.Eip"),
      
+     /* 文件数超限 */
+     LIMITEXCEEDED_FS("LimitExceeded.Fs"),
+     
      /* 函数数量超出最大限制 ，可通过[提交工单](https://cloud.tencent.com/act/event/Online_service?from=scf%7Cindex)申请提升限制。 */
      LIMITEXCEEDED_FUNCTION("LimitExceeded.Function"),
      
@@ -647,6 +662,12 @@ public enum ScfErrorCode {
      
      /* 函数预置并发总数达到限制。 */
      LIMITEXCEEDED_FUNCTIONTOTALPROVISIONEDCONCURRENCYNUM("LimitExceeded.FunctionTotalProvisionedConcurrencyNum"),
+     
+     /* 函数版本超限 */
+     LIMITEXCEEDED_FUNCTIONVERSIONS("LimitExceeded.FunctionVersions"),
+     
+     /* GPU预留额度不足 */
+     LIMITEXCEEDED_GPURESERVEDQUOTA("LimitExceeded.GpuReservedQuota"),
      
      /* InitTimeout达到限制，可提交工单申请提升限制：https://tencentcs.com/7Fixwt63。 */
      LIMITEXCEEDED_INITTIMEOUT("LimitExceeded.InitTimeout"),
@@ -788,6 +809,9 @@ public enum ScfErrorCode {
      
      /* Cos不存在。 */
      RESOURCENOTFOUND_COS("ResourceNotFound.Cos"),
+     
+     /* Cos对象不存在 */
+     RESOURCENOTFOUND_COSOBJECT("ResourceNotFound.CosObject"),
      
      /* 不存在的Demo。 */
      RESOURCENOTFOUND_DEMO("ResourceNotFound.Demo"),

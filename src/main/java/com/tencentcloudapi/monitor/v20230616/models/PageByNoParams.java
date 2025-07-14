@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lke.v20231130.models;
+package com.tencentcloudapi.monitor.v20230616.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,77 +21,77 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WordRecognizeInfo extends AbstractModel {
+public class PageByNoParams extends AbstractModel {
 
     /**
-    * 输入文件的页码数
+    * 每个分页的数量是多少
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("PageNumber")
+    @SerializedName("PerPage")
     @Expose
-    private Long PageNumber;
+    private Long PerPage;
 
     /**
-    * word的base64
+    * 第几个分页，从1开始
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("WordBase64")
+    @SerializedName("PageNo")
     @Expose
-    private String WordBase64;
+    private String PageNo;
 
     /**
-     * Get 输入文件的页码数
+     * Get 每个分页的数量是多少
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageNumber 输入文件的页码数
+     * @return PerPage 每个分页的数量是多少
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getPageNumber() {
-        return this.PageNumber;
+    public Long getPerPage() {
+        return this.PerPage;
     }
 
     /**
-     * Set 输入文件的页码数
+     * Set 每个分页的数量是多少
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageNumber 输入文件的页码数
+     * @param PerPage 每个分页的数量是多少
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPageNumber(Long PageNumber) {
-        this.PageNumber = PageNumber;
+    public void setPerPage(Long PerPage) {
+        this.PerPage = PerPage;
     }
 
     /**
-     * Get word的base64
+     * Get 第几个分页，从1开始
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WordBase64 word的base64
+     * @return PageNo 第几个分页，从1开始
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getWordBase64() {
-        return this.WordBase64;
+    public String getPageNo() {
+        return this.PageNo;
     }
 
     /**
-     * Set word的base64
+     * Set 第几个分页，从1开始
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WordBase64 word的base64
+     * @param PageNo 第几个分页，从1开始
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setWordBase64(String WordBase64) {
-        this.WordBase64 = WordBase64;
+    public void setPageNo(String PageNo) {
+        this.PageNo = PageNo;
     }
 
-    public WordRecognizeInfo() {
+    public PageByNoParams() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public WordRecognizeInfo(WordRecognizeInfo source) {
-        if (source.PageNumber != null) {
-            this.PageNumber = new Long(source.PageNumber);
+    public PageByNoParams(PageByNoParams source) {
+        if (source.PerPage != null) {
+            this.PerPage = new Long(source.PerPage);
         }
-        if (source.WordBase64 != null) {
-            this.WordBase64 = new String(source.WordBase64);
+        if (source.PageNo != null) {
+            this.PageNo = new String(source.PageNo);
         }
     }
 
@@ -100,8 +100,8 @@ public class WordRecognizeInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
-        this.setParamSimple(map, prefix + "WordBase64", this.WordBase64);
+        this.setParamSimple(map, prefix + "PerPage", this.PerPage);
+        this.setParamSimple(map, prefix + "PageNo", this.PageNo);
 
     }
 }

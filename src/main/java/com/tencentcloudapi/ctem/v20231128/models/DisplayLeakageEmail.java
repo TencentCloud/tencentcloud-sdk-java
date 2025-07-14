@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lke.v20231130.models;
+package com.tencentcloudapi.ctem.v20231128.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReconstructDocumentConfig extends AbstractModel {
+public class DisplayLeakageEmail extends AbstractModel {
 
     /**
-    * 生成的Markdown中是否嵌入图片
+    * 主键ID
     */
-    @SerializedName("EnableInsetImage")
+    @SerializedName("Id")
     @Expose
-    private Boolean EnableInsetImage;
+    private Long Id;
 
     /**
-     * Get 生成的Markdown中是否嵌入图片 
-     * @return EnableInsetImage 生成的Markdown中是否嵌入图片
+    * 邮箱
+    */
+    @SerializedName("Email")
+    @Expose
+    private String Email;
+
+    /**
+     * Get 主键ID 
+     * @return Id 主键ID
      */
-    public Boolean getEnableInsetImage() {
-        return this.EnableInsetImage;
+    public Long getId() {
+        return this.Id;
     }
 
     /**
-     * Set 生成的Markdown中是否嵌入图片
-     * @param EnableInsetImage 生成的Markdown中是否嵌入图片
+     * Set 主键ID
+     * @param Id 主键ID
      */
-    public void setEnableInsetImage(Boolean EnableInsetImage) {
-        this.EnableInsetImage = EnableInsetImage;
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 
-    public ReconstructDocumentConfig() {
+    /**
+     * Get 邮箱 
+     * @return Email 邮箱
+     */
+    public String getEmail() {
+        return this.Email;
+    }
+
+    /**
+     * Set 邮箱
+     * @param Email 邮箱
+     */
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    public DisplayLeakageEmail() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReconstructDocumentConfig(ReconstructDocumentConfig source) {
-        if (source.EnableInsetImage != null) {
-            this.EnableInsetImage = new Boolean(source.EnableInsetImage);
+    public DisplayLeakageEmail(DisplayLeakageEmail source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
         }
     }
 
@@ -64,7 +90,8 @@ public class ReconstructDocumentConfig extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EnableInsetImage", this.EnableInsetImage);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Email", this.Email);
 
     }
 }

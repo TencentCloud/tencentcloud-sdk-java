@@ -150,6 +150,55 @@ public class KeyMetadata extends AbstractModel {
     private Long LastRotateTime;
 
     /**
+    *  密钥是否是主副本。0:主本，1:同步副本。
+    */
+    @SerializedName("IsSyncReplica")
+    @Expose
+    private Long IsSyncReplica;
+
+    /**
+    * 同步的原始地域
+    */
+    @SerializedName("SourceRegion")
+    @Expose
+    private String SourceRegion;
+
+    /**
+    * 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
+    */
+    @SerializedName("SyncStatus")
+    @Expose
+    private Long SyncStatus;
+
+    /**
+    * 同步的结果描述
+    */
+    @SerializedName("SyncMessages")
+    @Expose
+    private String SyncMessages;
+
+    /**
+    * 同步的开始时间
+    */
+    @SerializedName("SyncStartTime")
+    @Expose
+    private Long SyncStartTime;
+
+    /**
+    * 同步的结束时间
+    */
+    @SerializedName("SyncEndTime")
+    @Expose
+    private Long SyncEndTime;
+
+    /**
+    * 同步的原始集群，如果为空，是公有云公共集群
+    */
+    @SerializedName("SourceHsmClusterId")
+    @Expose
+    private String SourceHsmClusterId;
+
+    /**
      * Get CMK的全局唯一标识 
      * @return KeyId CMK的全局唯一标识
      */
@@ -437,6 +486,118 @@ public class KeyMetadata extends AbstractModel {
         this.LastRotateTime = LastRotateTime;
     }
 
+    /**
+     * Get  密钥是否是主副本。0:主本，1:同步副本。 
+     * @return IsSyncReplica  密钥是否是主副本。0:主本，1:同步副本。
+     */
+    public Long getIsSyncReplica() {
+        return this.IsSyncReplica;
+    }
+
+    /**
+     * Set  密钥是否是主副本。0:主本，1:同步副本。
+     * @param IsSyncReplica  密钥是否是主副本。0:主本，1:同步副本。
+     */
+    public void setIsSyncReplica(Long IsSyncReplica) {
+        this.IsSyncReplica = IsSyncReplica;
+    }
+
+    /**
+     * Get 同步的原始地域 
+     * @return SourceRegion 同步的原始地域
+     */
+    public String getSourceRegion() {
+        return this.SourceRegion;
+    }
+
+    /**
+     * Set 同步的原始地域
+     * @param SourceRegion 同步的原始地域
+     */
+    public void setSourceRegion(String SourceRegion) {
+        this.SourceRegion = SourceRegion;
+    }
+
+    /**
+     * Get 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。 
+     * @return SyncStatus 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
+     */
+    public Long getSyncStatus() {
+        return this.SyncStatus;
+    }
+
+    /**
+     * Set 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
+     * @param SyncStatus 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
+     */
+    public void setSyncStatus(Long SyncStatus) {
+        this.SyncStatus = SyncStatus;
+    }
+
+    /**
+     * Get 同步的结果描述 
+     * @return SyncMessages 同步的结果描述
+     */
+    public String getSyncMessages() {
+        return this.SyncMessages;
+    }
+
+    /**
+     * Set 同步的结果描述
+     * @param SyncMessages 同步的结果描述
+     */
+    public void setSyncMessages(String SyncMessages) {
+        this.SyncMessages = SyncMessages;
+    }
+
+    /**
+     * Get 同步的开始时间 
+     * @return SyncStartTime 同步的开始时间
+     */
+    public Long getSyncStartTime() {
+        return this.SyncStartTime;
+    }
+
+    /**
+     * Set 同步的开始时间
+     * @param SyncStartTime 同步的开始时间
+     */
+    public void setSyncStartTime(Long SyncStartTime) {
+        this.SyncStartTime = SyncStartTime;
+    }
+
+    /**
+     * Get 同步的结束时间 
+     * @return SyncEndTime 同步的结束时间
+     */
+    public Long getSyncEndTime() {
+        return this.SyncEndTime;
+    }
+
+    /**
+     * Set 同步的结束时间
+     * @param SyncEndTime 同步的结束时间
+     */
+    public void setSyncEndTime(Long SyncEndTime) {
+        this.SyncEndTime = SyncEndTime;
+    }
+
+    /**
+     * Get 同步的原始集群，如果为空，是公有云公共集群 
+     * @return SourceHsmClusterId 同步的原始集群，如果为空，是公有云公共集群
+     */
+    public String getSourceHsmClusterId() {
+        return this.SourceHsmClusterId;
+    }
+
+    /**
+     * Set 同步的原始集群，如果为空，是公有云公共集群
+     * @param SourceHsmClusterId 同步的原始集群，如果为空，是公有云公共集群
+     */
+    public void setSourceHsmClusterId(String SourceHsmClusterId) {
+        this.SourceHsmClusterId = SourceHsmClusterId;
+    }
+
     public KeyMetadata() {
     }
 
@@ -499,6 +660,27 @@ public class KeyMetadata extends AbstractModel {
         if (source.LastRotateTime != null) {
             this.LastRotateTime = new Long(source.LastRotateTime);
         }
+        if (source.IsSyncReplica != null) {
+            this.IsSyncReplica = new Long(source.IsSyncReplica);
+        }
+        if (source.SourceRegion != null) {
+            this.SourceRegion = new String(source.SourceRegion);
+        }
+        if (source.SyncStatus != null) {
+            this.SyncStatus = new Long(source.SyncStatus);
+        }
+        if (source.SyncMessages != null) {
+            this.SyncMessages = new String(source.SyncMessages);
+        }
+        if (source.SyncStartTime != null) {
+            this.SyncStartTime = new Long(source.SyncStartTime);
+        }
+        if (source.SyncEndTime != null) {
+            this.SyncEndTime = new Long(source.SyncEndTime);
+        }
+        if (source.SourceHsmClusterId != null) {
+            this.SourceHsmClusterId = new String(source.SourceHsmClusterId);
+        }
     }
 
 
@@ -524,6 +706,13 @@ public class KeyMetadata extends AbstractModel {
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
         this.setParamSimple(map, prefix + "RotateDays", this.RotateDays);
         this.setParamSimple(map, prefix + "LastRotateTime", this.LastRotateTime);
+        this.setParamSimple(map, prefix + "IsSyncReplica", this.IsSyncReplica);
+        this.setParamSimple(map, prefix + "SourceRegion", this.SourceRegion);
+        this.setParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
+        this.setParamSimple(map, prefix + "SyncMessages", this.SyncMessages);
+        this.setParamSimple(map, prefix + "SyncStartTime", this.SyncStartTime);
+        this.setParamSimple(map, prefix + "SyncEndTime", this.SyncEndTime);
+        this.setParamSimple(map, prefix + "SourceHsmClusterId", this.SourceHsmClusterId);
 
     }
 }

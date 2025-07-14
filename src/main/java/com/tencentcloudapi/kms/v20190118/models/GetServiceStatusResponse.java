@@ -136,6 +136,20 @@ public class GetServiceStatusResponse extends AbstractModel {
     private Long DataKeyUsedCount;
 
     /**
+    * 同步任务的目标地域信息
+    */
+    @SerializedName("SyncTaskList")
+    @Expose
+    private DestinationSyncConfig [] SyncTaskList;
+
+    /**
+    * 是否支持同步任务。true:支持，false:不支持。
+    */
+    @SerializedName("IsAllowedSync")
+    @Expose
+    private Boolean IsAllowedSync;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -399,6 +413,38 @@ public class GetServiceStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get 同步任务的目标地域信息 
+     * @return SyncTaskList 同步任务的目标地域信息
+     */
+    public DestinationSyncConfig [] getSyncTaskList() {
+        return this.SyncTaskList;
+    }
+
+    /**
+     * Set 同步任务的目标地域信息
+     * @param SyncTaskList 同步任务的目标地域信息
+     */
+    public void setSyncTaskList(DestinationSyncConfig [] SyncTaskList) {
+        this.SyncTaskList = SyncTaskList;
+    }
+
+    /**
+     * Get 是否支持同步任务。true:支持，false:不支持。 
+     * @return IsAllowedSync 是否支持同步任务。true:支持，false:不支持。
+     */
+    public Boolean getIsAllowedSync() {
+        return this.IsAllowedSync;
+    }
+
+    /**
+     * Set 是否支持同步任务。true:支持，false:不支持。
+     * @param IsAllowedSync 是否支持同步任务。true:支持，false:不支持。
+     */
+    public void setIsAllowedSync(Boolean IsAllowedSync) {
+        this.IsAllowedSync = IsAllowedSync;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -473,6 +519,15 @@ public class GetServiceStatusResponse extends AbstractModel {
         if (source.DataKeyUsedCount != null) {
             this.DataKeyUsedCount = new Long(source.DataKeyUsedCount);
         }
+        if (source.SyncTaskList != null) {
+            this.SyncTaskList = new DestinationSyncConfig[source.SyncTaskList.length];
+            for (int i = 0; i < source.SyncTaskList.length; i++) {
+                this.SyncTaskList[i] = new DestinationSyncConfig(source.SyncTaskList[i]);
+            }
+        }
+        if (source.IsAllowedSync != null) {
+            this.IsAllowedSync = new Boolean(source.IsAllowedSync);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -499,6 +554,8 @@ public class GetServiceStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "DataKeyLimit", this.DataKeyLimit);
         this.setParamSimple(map, prefix + "FreeDataKeyLimit", this.FreeDataKeyLimit);
         this.setParamSimple(map, prefix + "DataKeyUsedCount", this.DataKeyUsedCount);
+        this.setParamArrayObj(map, prefix + "SyncTaskList.", this.SyncTaskList);
+        this.setParamSimple(map, prefix + "IsAllowedSync", this.IsAllowedSync);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

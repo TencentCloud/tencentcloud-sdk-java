@@ -34,6 +34,7 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     * 更换为新的安全组 ID 列表，即一个或者多个安全组 ID 组成的数组。
 - 若实例第一次配置安全组，请使用接口[AssociateSecurityGroups](https://cloud.tencent.com/document/product/239/41260)先绑定安全组。
 - 更换安全组，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
+  **注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -65,10 +66,12 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     /**
      * Get 更换为新的安全组 ID 列表，即一个或者多个安全组 ID 组成的数组。
 - 若实例第一次配置安全组，请使用接口[AssociateSecurityGroups](https://cloud.tencent.com/document/product/239/41260)先绑定安全组。
-- 更换安全组，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。 
+- 更换安全组，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
+  **注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。 
      * @return SecurityGroupIds 更换为新的安全组 ID 列表，即一个或者多个安全组 ID 组成的数组。
 - 若实例第一次配置安全组，请使用接口[AssociateSecurityGroups](https://cloud.tencent.com/document/product/239/41260)先绑定安全组。
 - 更换安全组，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
+  **注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
@@ -78,9 +81,11 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
      * Set 更换为新的安全组 ID 列表，即一个或者多个安全组 ID 组成的数组。
 - 若实例第一次配置安全组，请使用接口[AssociateSecurityGroups](https://cloud.tencent.com/document/product/239/41260)先绑定安全组。
 - 更换安全组，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
+  **注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      * @param SecurityGroupIds 更换为新的安全组 ID 列表，即一个或者多个安全组 ID 组成的数组。
 - 若实例第一次配置安全组，请使用接口[AssociateSecurityGroups](https://cloud.tencent.com/document/product/239/41260)先绑定安全组。
 - 更换安全组，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
+  **注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

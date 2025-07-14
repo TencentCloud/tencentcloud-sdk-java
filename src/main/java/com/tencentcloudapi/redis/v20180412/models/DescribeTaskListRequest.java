@@ -52,7 +52,7 @@ public class DescribeTaskListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 项目 ID。登录 [Redis 控制台](https://console.cloud.tencent.com/redis)，在右上角的账号信息下拉菜单中，选择**项目管理**，即可获取对应的项目 ID。
+    * 该字段已废弃, 请忽略, 项目 ID
     */
     @SerializedName("ProjectIds")
     @Expose
@@ -87,7 +87,7 @@ public class DescribeTaskListRequest extends AbstractModel {
 - FLOW_MODIFYINSTANCEPARAMS："034"，修改实例参数。
 - FLOW_MODIFYINSTANCEPASSWORDFREE："035"，设置免密。
 - FLOW_SWITCHINSTANCEVIP："036"，实例VIP切换。
-- FLOW_MODIFYINSTANCEACCOUNT："037"，实例帐号变更。
+- FLOW_MODIFYINSTANCEACCOUNT："037"，实例账号变更。
 - FLOW_MODIFYINSTANCEBANDWIDTH："038"，实例带宽变更。
 - FLOW_ENABLEINSTANCE_REPLICATE："039"，开启副本只读。
 - FLOW_DISABLEINSTANCE_REPLICATE："040"，关闭副本只读。
@@ -108,7 +108,7 @@ public class DescribeTaskListRequest extends AbstractModel {
 - FLOW_CODE_CHANGE_INSTANCE_ROLE： "057"，更改复制组实例角色。
 - FLOW_MIGRATE_NODE："058"，迁移节点。
 - FLOW_SWITCH_NODE："059"，切换节点。
-- FLOW_UPGRADE_SMALL_VERSION："060"，升级 Redi s版本。
+- FLOW_UPGRADE_SMALL_VERSION："060"，升级 Redis版本。
 - FLOW_UPGRADE_PROXY_VERSION："061"，升级 Proxy 版本。
 - FLOW_MODIFY_INSTANCE_NETWORK： "062"，实例修改网络。
 - FLOW_MIGRATE_PROXY_NODE："063"，迁移proxy节点。
@@ -232,17 +232,21 @@ public class DescribeTaskListRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目 ID。登录 [Redis 控制台](https://console.cloud.tencent.com/redis)，在右上角的账号信息下拉菜单中，选择**项目管理**，即可获取对应的项目 ID。 
-     * @return ProjectIds 项目 ID。登录 [Redis 控制台](https://console.cloud.tencent.com/redis)，在右上角的账号信息下拉菜单中，选择**项目管理**，即可获取对应的项目 ID。
+     * Get 该字段已废弃, 请忽略, 项目 ID 
+     * @return ProjectIds 该字段已废弃, 请忽略, 项目 ID
+     * @deprecated
      */
+    @Deprecated
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目 ID。登录 [Redis 控制台](https://console.cloud.tencent.com/redis)，在右上角的账号信息下拉菜单中，选择**项目管理**，即可获取对应的项目 ID。
-     * @param ProjectIds 项目 ID。登录 [Redis 控制台](https://console.cloud.tencent.com/redis)，在右上角的账号信息下拉菜单中，选择**项目管理**，即可获取对应的项目 ID。
+     * Set 该字段已废弃, 请忽略, 项目 ID
+     * @param ProjectIds 该字段已废弃, 请忽略, 项目 ID
+     * @deprecated
      */
+    @Deprecated
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
@@ -276,7 +280,7 @@ public class DescribeTaskListRequest extends AbstractModel {
 - FLOW_MODIFYINSTANCEPARAMS："034"，修改实例参数。
 - FLOW_MODIFYINSTANCEPASSWORDFREE："035"，设置免密。
 - FLOW_SWITCHINSTANCEVIP："036"，实例VIP切换。
-- FLOW_MODIFYINSTANCEACCOUNT："037"，实例帐号变更。
+- FLOW_MODIFYINSTANCEACCOUNT："037"，实例账号变更。
 - FLOW_MODIFYINSTANCEBANDWIDTH："038"，实例带宽变更。
 - FLOW_ENABLEINSTANCE_REPLICATE："039"，开启副本只读。
 - FLOW_DISABLEINSTANCE_REPLICATE："040"，关闭副本只读。
@@ -297,7 +301,7 @@ public class DescribeTaskListRequest extends AbstractModel {
 - FLOW_CODE_CHANGE_INSTANCE_ROLE： "057"，更改复制组实例角色。
 - FLOW_MIGRATE_NODE："058"，迁移节点。
 - FLOW_SWITCH_NODE："059"，切换节点。
-- FLOW_UPGRADE_SMALL_VERSION："060"，升级 Redi s版本。
+- FLOW_UPGRADE_SMALL_VERSION："060"，升级 Redis版本。
 - FLOW_UPGRADE_PROXY_VERSION："061"，升级 Proxy 版本。
 - FLOW_MODIFY_INSTANCE_NETWORK： "062"，实例修改网络。
 - FLOW_MIGRATE_PROXY_NODE："063"，迁移proxy节点。
@@ -333,7 +337,7 @@ public class DescribeTaskListRequest extends AbstractModel {
 - FLOW_MODIFYINSTANCEPARAMS："034"，修改实例参数。
 - FLOW_MODIFYINSTANCEPASSWORDFREE："035"，设置免密。
 - FLOW_SWITCHINSTANCEVIP："036"，实例VIP切换。
-- FLOW_MODIFYINSTANCEACCOUNT："037"，实例帐号变更。
+- FLOW_MODIFYINSTANCEACCOUNT："037"，实例账号变更。
 - FLOW_MODIFYINSTANCEBANDWIDTH："038"，实例带宽变更。
 - FLOW_ENABLEINSTANCE_REPLICATE："039"，开启副本只读。
 - FLOW_DISABLEINSTANCE_REPLICATE："040"，关闭副本只读。
@@ -354,7 +358,7 @@ public class DescribeTaskListRequest extends AbstractModel {
 - FLOW_CODE_CHANGE_INSTANCE_ROLE： "057"，更改复制组实例角色。
 - FLOW_MIGRATE_NODE："058"，迁移节点。
 - FLOW_SWITCH_NODE："059"，切换节点。
-- FLOW_UPGRADE_SMALL_VERSION："060"，升级 Redi s版本。
+- FLOW_UPGRADE_SMALL_VERSION："060"，升级 Redis版本。
 - FLOW_UPGRADE_PROXY_VERSION："061"，升级 Proxy 版本。
 - FLOW_MODIFY_INSTANCE_NETWORK： "062"，实例修改网络。
 - FLOW_MIGRATE_PROXY_NODE："063"，迁移proxy节点。
@@ -396,7 +400,7 @@ public class DescribeTaskListRequest extends AbstractModel {
 - FLOW_MODIFYINSTANCEPARAMS："034"，修改实例参数。
 - FLOW_MODIFYINSTANCEPASSWORDFREE："035"，设置免密。
 - FLOW_SWITCHINSTANCEVIP："036"，实例VIP切换。
-- FLOW_MODIFYINSTANCEACCOUNT："037"，实例帐号变更。
+- FLOW_MODIFYINSTANCEACCOUNT："037"，实例账号变更。
 - FLOW_MODIFYINSTANCEBANDWIDTH："038"，实例带宽变更。
 - FLOW_ENABLEINSTANCE_REPLICATE："039"，开启副本只读。
 - FLOW_DISABLEINSTANCE_REPLICATE："040"，关闭副本只读。
@@ -417,7 +421,7 @@ public class DescribeTaskListRequest extends AbstractModel {
 - FLOW_CODE_CHANGE_INSTANCE_ROLE： "057"，更改复制组实例角色。
 - FLOW_MIGRATE_NODE："058"，迁移节点。
 - FLOW_SWITCH_NODE："059"，切换节点。
-- FLOW_UPGRADE_SMALL_VERSION："060"，升级 Redi s版本。
+- FLOW_UPGRADE_SMALL_VERSION："060"，升级 Redis版本。
 - FLOW_UPGRADE_PROXY_VERSION："061"，升级 Proxy 版本。
 - FLOW_MODIFY_INSTANCE_NETWORK： "062"，实例修改网络。
 - FLOW_MIGRATE_PROXY_NODE："063"，迁移proxy节点。
@@ -453,7 +457,7 @@ public class DescribeTaskListRequest extends AbstractModel {
 - FLOW_MODIFYINSTANCEPARAMS："034"，修改实例参数。
 - FLOW_MODIFYINSTANCEPASSWORDFREE："035"，设置免密。
 - FLOW_SWITCHINSTANCEVIP："036"，实例VIP切换。
-- FLOW_MODIFYINSTANCEACCOUNT："037"，实例帐号变更。
+- FLOW_MODIFYINSTANCEACCOUNT："037"，实例账号变更。
 - FLOW_MODIFYINSTANCEBANDWIDTH："038"，实例带宽变更。
 - FLOW_ENABLEINSTANCE_REPLICATE："039"，开启副本只读。
 - FLOW_DISABLEINSTANCE_REPLICATE："040"，关闭副本只读。
@@ -474,7 +478,7 @@ public class DescribeTaskListRequest extends AbstractModel {
 - FLOW_CODE_CHANGE_INSTANCE_ROLE： "057"，更改复制组实例角色。
 - FLOW_MIGRATE_NODE："058"，迁移节点。
 - FLOW_SWITCH_NODE："059"，切换节点。
-- FLOW_UPGRADE_SMALL_VERSION："060"，升级 Redi s版本。
+- FLOW_UPGRADE_SMALL_VERSION："060"，升级 Redis版本。
 - FLOW_UPGRADE_PROXY_VERSION："061"，升级 Proxy 版本。
 - FLOW_MODIFY_INSTANCE_NETWORK： "062"，实例修改网络。
 - FLOW_MIGRATE_PROXY_NODE："063"，迁移proxy节点。

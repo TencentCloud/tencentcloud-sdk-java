@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lke.v20231130.models;
+package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RunReRankResponse extends AbstractModel {
+public class DescribeCloudNativeAPIGatewayServicesLightResponse extends AbstractModel {
 
     /**
-    * 相关性, 数值越大越相关
+    * 无
     */
-    @SerializedName("ScoreList")
+    @SerializedName("Result")
     @Expose
-    private Float [] ScoreList;
-
-    /**
-    * 消耗量，仅返回TotalToken
-    */
-    @SerializedName("Usage")
-    @Expose
-    private Usage Usage;
+    private GatewayServices Result;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class RunReRankResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 相关性, 数值越大越相关 
-     * @return ScoreList 相关性, 数值越大越相关
+     * Get 无 
+     * @return Result 无
      */
-    public Float [] getScoreList() {
-        return this.ScoreList;
+    public GatewayServices getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 相关性, 数值越大越相关
-     * @param ScoreList 相关性, 数值越大越相关
+     * Set 无
+     * @param Result 无
      */
-    public void setScoreList(Float [] ScoreList) {
-        this.ScoreList = ScoreList;
-    }
-
-    /**
-     * Get 消耗量，仅返回TotalToken 
-     * @return Usage 消耗量，仅返回TotalToken
-     */
-    public Usage getUsage() {
-        return this.Usage;
-    }
-
-    /**
-     * Set 消耗量，仅返回TotalToken
-     * @param Usage 消耗量，仅返回TotalToken
-     */
-    public void setUsage(Usage Usage) {
-        this.Usage = Usage;
+    public void setResult(GatewayServices Result) {
+        this.Result = Result;
     }
 
     /**
@@ -92,22 +69,16 @@ public class RunReRankResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public RunReRankResponse() {
+    public DescribeCloudNativeAPIGatewayServicesLightResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RunReRankResponse(RunReRankResponse source) {
-        if (source.ScoreList != null) {
-            this.ScoreList = new Float[source.ScoreList.length];
-            for (int i = 0; i < source.ScoreList.length; i++) {
-                this.ScoreList[i] = new Float(source.ScoreList[i]);
-            }
-        }
-        if (source.Usage != null) {
-            this.Usage = new Usage(source.Usage);
+    public DescribeCloudNativeAPIGatewayServicesLightResponse(DescribeCloudNativeAPIGatewayServicesLightResponse source) {
+        if (source.Result != null) {
+            this.Result = new GatewayServices(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +90,7 @@ public class RunReRankResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ScoreList.", this.ScoreList);
-        this.setParamObj(map, prefix + "Usage.", this.Usage);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

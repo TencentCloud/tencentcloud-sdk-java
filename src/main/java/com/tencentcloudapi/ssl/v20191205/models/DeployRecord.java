@@ -80,6 +80,13 @@ public class DeployRecord extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 待部署总数
+    */
+    @SerializedName("PendingTotalCount")
+    @Expose
+    private Long PendingTotalCount;
+
+    /**
      * Get 总数 
      * @return TotalCount 总数
      */
@@ -207,6 +214,22 @@ public class DeployRecord extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 待部署总数 
+     * @return PendingTotalCount 待部署总数
+     */
+    public Long getPendingTotalCount() {
+        return this.PendingTotalCount;
+    }
+
+    /**
+     * Set 待部署总数
+     * @param PendingTotalCount 待部署总数
+     */
+    public void setPendingTotalCount(Long PendingTotalCount) {
+        this.PendingTotalCount = PendingTotalCount;
+    }
+
     public DeployRecord() {
     }
 
@@ -242,6 +265,9 @@ public class DeployRecord extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.PendingTotalCount != null) {
+            this.PendingTotalCount = new Long(source.PendingTotalCount);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class DeployRecord extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RecordDetailList.", this.RecordDetailList);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "PendingTotalCount", this.PendingTotalCount);
 
     }
 }

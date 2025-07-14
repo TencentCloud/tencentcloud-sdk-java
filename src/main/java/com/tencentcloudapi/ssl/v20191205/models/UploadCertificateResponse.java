@@ -31,7 +31,7 @@ public class UploadCertificateResponse extends AbstractModel {
     private String CertificateId;
 
     /**
-    * 重复证书的ID
+    * 当入参Repeatable为false的时候 返回的重复证书的ID，注意当用户上传相同的证书超过5000张的时候，当前接口会无视入参Repeatable，直接返回重复证书的ID。
     */
     @SerializedName("RepeatCertId")
     @Expose
@@ -61,16 +61,16 @@ public class UploadCertificateResponse extends AbstractModel {
     }
 
     /**
-     * Get 重复证书的ID 
-     * @return RepeatCertId 重复证书的ID
+     * Get 当入参Repeatable为false的时候 返回的重复证书的ID，注意当用户上传相同的证书超过5000张的时候，当前接口会无视入参Repeatable，直接返回重复证书的ID。 
+     * @return RepeatCertId 当入参Repeatable为false的时候 返回的重复证书的ID，注意当用户上传相同的证书超过5000张的时候，当前接口会无视入参Repeatable，直接返回重复证书的ID。
      */
     public String getRepeatCertId() {
         return this.RepeatCertId;
     }
 
     /**
-     * Set 重复证书的ID
-     * @param RepeatCertId 重复证书的ID
+     * Set 当入参Repeatable为false的时候 返回的重复证书的ID，注意当用户上传相同的证书超过5000张的时候，当前接口会无视入参Repeatable，直接返回重复证书的ID。
+     * @param RepeatCertId 当入参Repeatable为false的时候 返回的重复证书的ID，注意当用户上传相同的证书超过5000张的时候，当前接口会无视入参Repeatable，直接返回重复证书的ID。
      */
     public void setRepeatCertId(String RepeatCertId) {
         this.RepeatCertId = RepeatCertId;

@@ -115,6 +115,34 @@ public class ApplicationDataStatistics extends AbstractModel {
     private StatisticsItem [] PcuDataSum;
 
     /**
+    * 小游戏时长统计项数目
+    */
+    @SerializedName("MiniGameDataNum")
+    @Expose
+    private Long MiniGameDataNum;
+
+    /**
+    * 大陆地区小游戏时长统计数据，单位分钟
+    */
+    @SerializedName("MiniGameDataMainland")
+    @Expose
+    private StatisticsItem [] MiniGameDataMainland;
+
+    /**
+    * 海外地区小游戏时长统计数据，单位分钟
+    */
+    @SerializedName("MiniGameDataOversea")
+    @Expose
+    private StatisticsItem [] MiniGameDataOversea;
+
+    /**
+    * 大陆和海外地区小游戏时长统计数据汇总，单位分钟
+    */
+    @SerializedName("MiniGameDataSum")
+    @Expose
+    private StatisticsItem [] MiniGameDataSum;
+
+    /**
      * Get 应用ID 
      * @return BizId 应用ID
      */
@@ -322,6 +350,70 @@ public class ApplicationDataStatistics extends AbstractModel {
         this.PcuDataSum = PcuDataSum;
     }
 
+    /**
+     * Get 小游戏时长统计项数目 
+     * @return MiniGameDataNum 小游戏时长统计项数目
+     */
+    public Long getMiniGameDataNum() {
+        return this.MiniGameDataNum;
+    }
+
+    /**
+     * Set 小游戏时长统计项数目
+     * @param MiniGameDataNum 小游戏时长统计项数目
+     */
+    public void setMiniGameDataNum(Long MiniGameDataNum) {
+        this.MiniGameDataNum = MiniGameDataNum;
+    }
+
+    /**
+     * Get 大陆地区小游戏时长统计数据，单位分钟 
+     * @return MiniGameDataMainland 大陆地区小游戏时长统计数据，单位分钟
+     */
+    public StatisticsItem [] getMiniGameDataMainland() {
+        return this.MiniGameDataMainland;
+    }
+
+    /**
+     * Set 大陆地区小游戏时长统计数据，单位分钟
+     * @param MiniGameDataMainland 大陆地区小游戏时长统计数据，单位分钟
+     */
+    public void setMiniGameDataMainland(StatisticsItem [] MiniGameDataMainland) {
+        this.MiniGameDataMainland = MiniGameDataMainland;
+    }
+
+    /**
+     * Get 海外地区小游戏时长统计数据，单位分钟 
+     * @return MiniGameDataOversea 海外地区小游戏时长统计数据，单位分钟
+     */
+    public StatisticsItem [] getMiniGameDataOversea() {
+        return this.MiniGameDataOversea;
+    }
+
+    /**
+     * Set 海外地区小游戏时长统计数据，单位分钟
+     * @param MiniGameDataOversea 海外地区小游戏时长统计数据，单位分钟
+     */
+    public void setMiniGameDataOversea(StatisticsItem [] MiniGameDataOversea) {
+        this.MiniGameDataOversea = MiniGameDataOversea;
+    }
+
+    /**
+     * Get 大陆和海外地区小游戏时长统计数据汇总，单位分钟 
+     * @return MiniGameDataSum 大陆和海外地区小游戏时长统计数据汇总，单位分钟
+     */
+    public StatisticsItem [] getMiniGameDataSum() {
+        return this.MiniGameDataSum;
+    }
+
+    /**
+     * Set 大陆和海外地区小游戏时长统计数据汇总，单位分钟
+     * @param MiniGameDataSum 大陆和海外地区小游戏时长统计数据汇总，单位分钟
+     */
+    public void setMiniGameDataSum(StatisticsItem [] MiniGameDataSum) {
+        this.MiniGameDataSum = MiniGameDataSum;
+    }
+
     public ApplicationDataStatistics() {
     }
 
@@ -396,6 +488,27 @@ public class ApplicationDataStatistics extends AbstractModel {
                 this.PcuDataSum[i] = new StatisticsItem(source.PcuDataSum[i]);
             }
         }
+        if (source.MiniGameDataNum != null) {
+            this.MiniGameDataNum = new Long(source.MiniGameDataNum);
+        }
+        if (source.MiniGameDataMainland != null) {
+            this.MiniGameDataMainland = new StatisticsItem[source.MiniGameDataMainland.length];
+            for (int i = 0; i < source.MiniGameDataMainland.length; i++) {
+                this.MiniGameDataMainland[i] = new StatisticsItem(source.MiniGameDataMainland[i]);
+            }
+        }
+        if (source.MiniGameDataOversea != null) {
+            this.MiniGameDataOversea = new StatisticsItem[source.MiniGameDataOversea.length];
+            for (int i = 0; i < source.MiniGameDataOversea.length; i++) {
+                this.MiniGameDataOversea[i] = new StatisticsItem(source.MiniGameDataOversea[i]);
+            }
+        }
+        if (source.MiniGameDataSum != null) {
+            this.MiniGameDataSum = new StatisticsItem[source.MiniGameDataSum.length];
+            for (int i = 0; i < source.MiniGameDataSum.length; i++) {
+                this.MiniGameDataSum[i] = new StatisticsItem(source.MiniGameDataSum[i]);
+            }
+        }
     }
 
 
@@ -416,6 +529,10 @@ public class ApplicationDataStatistics extends AbstractModel {
         this.setParamArrayObj(map, prefix + "PcuDataMainland.", this.PcuDataMainland);
         this.setParamArrayObj(map, prefix + "PcuDataOversea.", this.PcuDataOversea);
         this.setParamArrayObj(map, prefix + "PcuDataSum.", this.PcuDataSum);
+        this.setParamSimple(map, prefix + "MiniGameDataNum", this.MiniGameDataNum);
+        this.setParamArrayObj(map, prefix + "MiniGameDataMainland.", this.MiniGameDataMainland);
+        this.setParamArrayObj(map, prefix + "MiniGameDataOversea.", this.MiniGameDataOversea);
+        this.setParamArrayObj(map, prefix + "MiniGameDataSum.", this.MiniGameDataSum);
 
     }
 }

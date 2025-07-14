@@ -59,6 +59,13 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     private Long RunningTotalCount;
 
     /**
+    * 待部署总数
+    */
+    @SerializedName("PendingTotalCount")
+    @Expose
+    private Long PendingTotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +153,22 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 待部署总数 
+     * @return PendingTotalCount 待部署总数
+     */
+    public Long getPendingTotalCount() {
+        return this.PendingTotalCount;
+    }
+
+    /**
+     * Set 待部署总数
+     * @param PendingTotalCount 待部署总数
+     */
+    public void setPendingTotalCount(Long PendingTotalCount) {
+        this.PendingTotalCount = PendingTotalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -187,6 +210,9 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
         if (source.RunningTotalCount != null) {
             this.RunningTotalCount = new Long(source.RunningTotalCount);
         }
+        if (source.PendingTotalCount != null) {
+            this.PendingTotalCount = new Long(source.PendingTotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -202,6 +228,7 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SuccessTotalCount", this.SuccessTotalCount);
         this.setParamSimple(map, prefix + "FailedTotalCount", this.FailedTotalCount);
         this.setParamSimple(map, prefix + "RunningTotalCount", this.RunningTotalCount);
+        this.setParamSimple(map, prefix + "PendingTotalCount", this.PendingTotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

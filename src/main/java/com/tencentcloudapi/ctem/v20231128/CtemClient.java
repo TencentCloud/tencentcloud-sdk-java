@@ -182,6 +182,39 @@ public class CtemClient extends AbstractClient{
     }
 
     /**
+     *获取代码泄露数据
+     * @param req DescribeLeakageCodesRequest
+     * @return DescribeLeakageCodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLeakageCodesResponse DescribeLeakageCodes(DescribeLeakageCodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLeakageCodes", DescribeLeakageCodesResponse.class);
+    }
+
+    /**
+     *获取数据泄露事件
+     * @param req DescribeLeakageDatasRequest
+     * @return DescribeLeakageDatasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLeakageDatasResponse DescribeLeakageDatas(DescribeLeakageDatasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLeakageDatas", DescribeLeakageDatasResponse.class);
+    }
+
+    /**
+     *获取邮箱泄露数据
+     * @param req DescribeLeakageEmailsRequest
+     * @return DescribeLeakageEmailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLeakageEmailsResponse DescribeLeakageEmails(DescribeLeakageEmailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLeakageEmails", DescribeLeakageEmailsResponse.class);
+    }
+
+    /**
      *查看后台管理数据
      * @param req DescribeManagesRequest
      * @return DescribeManagesResponse
