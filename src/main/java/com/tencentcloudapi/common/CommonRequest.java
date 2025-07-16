@@ -2,6 +2,7 @@ package com.tencentcloudapi.common;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.ToNumberPolicy;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
@@ -12,7 +13,8 @@ import java.util.Map;
 public final class CommonRequest extends AbstractModel {
 
     // Gson instance for JSON processing
-    private static final Gson gson = new GsonBuilder().create();
+    private static final Gson gson =
+            new GsonBuilder().setObjectToNumberStrategy(ToNumberPolicy.LONG_OR_DOUBLE).create();
 
     // Type token to specify the type for Gson deserialization (HashMap<String, Object>)
     private static final Type typeToken = new TypeToken<HashMap<String, Object>>() {
