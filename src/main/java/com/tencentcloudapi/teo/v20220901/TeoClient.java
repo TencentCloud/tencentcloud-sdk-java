@@ -263,6 +263,39 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *通过本接口创建多通道安全加速网关，包括云上网关（腾讯云创建和管理的网关）和自有网关（用户部署的私有网关），需要通过接口 DescribeMultiPathGateway，查询状态为 online 即创建成功。
+     * @param req CreateMultiPathGatewayRequest
+     * @return CreateMultiPathGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMultiPathGatewayResponse CreateMultiPathGateway(CreateMultiPathGatewayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMultiPathGateway", CreateMultiPathGatewayResponse.class);
+    }
+
+    /**
+     *通过本接口创建接入多通道安全加速网关的线路。包括 EdgeOne 四层代理线路、自定义线路。
+     * @param req CreateMultiPathGatewayLineRequest
+     * @return CreateMultiPathGatewayLineResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMultiPathGatewayLineResponse CreateMultiPathGatewayLine(CreateMultiPathGatewayLineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMultiPathGatewayLine", CreateMultiPathGatewayLineResponse.class);
+    }
+
+    /**
+     *通过本接口创建接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关。每个站点下只有一个密钥，可用于接入该站点下的所有网关，可通过接口 DescribeMultiPathGatewaySecretKey 查询。
+     * @param req CreateMultiPathGatewaySecretKeyRequest
+     * @return CreateMultiPathGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMultiPathGatewaySecretKeyResponse CreateMultiPathGatewaySecretKey(CreateMultiPathGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMultiPathGatewaySecretKey", CreateMultiPathGatewaySecretKeyResponse.class);
+    }
+
+    /**
      *创建源站组，以源站组的方式管理业务源站。此处配置的源站组可于**添加加速域名**和**四层代理**等功能中引用。
      * @param req CreateOriginGroupRequest
      * @return CreateOriginGroupResponse
@@ -533,6 +566,28 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DeleteLoadBalancerResponse DeleteLoadBalancer(DeleteLoadBalancerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteLoadBalancer", DeleteLoadBalancerResponse.class);
+    }
+
+    /**
+     *通过本接口删除多通道安全加速网关，包括自有网关和云上网关。
+     * @param req DeleteMultiPathGatewayRequest
+     * @return DeleteMultiPathGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMultiPathGatewayResponse DeleteMultiPathGateway(DeleteMultiPathGatewayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMultiPathGateway", DeleteMultiPathGatewayResponse.class);
+    }
+
+    /**
+     *通过本接口删除接入多通道安全加速网关的线路，仅自定义线路支持删除。
+     * @param req DeleteMultiPathGatewayLineRequest
+     * @return DeleteMultiPathGatewayLineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMultiPathGatewayLineResponse DeleteMultiPathGatewayLine(DeleteMultiPathGatewayLineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMultiPathGatewayLine", DeleteMultiPathGatewayLineResponse.class);
     }
 
     /**
@@ -931,6 +986,61 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeLoadBalancerListResponse DescribeLoadBalancerList(DescribeLoadBalancerListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLoadBalancerList", DescribeLoadBalancerListResponse.class);
+    }
+
+    /**
+     *通过本接口查询多通道安全加速网关详情。如名称、网关 ID、IP、端口、类型等。
+     * @param req DescribeMultiPathGatewayRequest
+     * @return DescribeMultiPathGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultiPathGatewayResponse DescribeMultiPathGateway(DescribeMultiPathGatewayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultiPathGateway", DescribeMultiPathGatewayResponse.class);
+    }
+
+    /**
+     *通过本接口查询接入多通道安全加速网关的线路。包括直连、EdgeOne 四层代理线路、自定义线路。
+     * @param req DescribeMultiPathGatewayLineRequest
+     * @return DescribeMultiPathGatewayLineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultiPathGatewayLineResponse DescribeMultiPathGatewayLine(DescribeMultiPathGatewayLineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultiPathGatewayLine", DescribeMultiPathGatewayLineResponse.class);
+    }
+
+    /**
+     *通过本接口查询用户创建的多通道安全加速网关（云上网关）的可用地域列表。
+     * @param req DescribeMultiPathGatewayRegionsRequest
+     * @return DescribeMultiPathGatewayRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultiPathGatewayRegionsResponse DescribeMultiPathGatewayRegions(DescribeMultiPathGatewayRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultiPathGatewayRegions", DescribeMultiPathGatewayRegionsResponse.class);
+    }
+
+    /**
+     *通过本接口查询接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关。
+     * @param req DescribeMultiPathGatewaySecretKeyRequest
+     * @return DescribeMultiPathGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultiPathGatewaySecretKeyResponse DescribeMultiPathGatewaySecretKey(DescribeMultiPathGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultiPathGatewaySecretKey", DescribeMultiPathGatewaySecretKeyResponse.class);
+    }
+
+    /**
+     *通过本接口查询用户创建的多通道安全加速网关列表。支持翻页。
+     * @param req DescribeMultiPathGatewaysRequest
+     * @return DescribeMultiPathGatewaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultiPathGatewaysResponse DescribeMultiPathGateways(DescribeMultiPathGatewaysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultiPathGateways", DescribeMultiPathGatewaysResponse.class);
     }
 
     /**
@@ -1609,6 +1719,39 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *通过本接口修改多通道安全加速网关信息，如名称、网关 ID、IP、端口等。
+     * @param req ModifyMultiPathGatewayRequest
+     * @return ModifyMultiPathGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMultiPathGatewayResponse ModifyMultiPathGateway(ModifyMultiPathGatewayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMultiPathGateway", ModifyMultiPathGatewayResponse.class);
+    }
+
+    /**
+     *通过本接口修改接入多通道安全加速网关的线路，包括 EdgeOne 四层代理线路、自定义线路。
+     * @param req ModifyMultiPathGatewayLineRequest
+     * @return ModifyMultiPathGatewayLineResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMultiPathGatewayLineResponse ModifyMultiPathGatewayLine(ModifyMultiPathGatewayLineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMultiPathGatewayLine", ModifyMultiPathGatewayLineResponse.class);
+    }
+
+    /**
+     *通过本接口修改接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关，修改后原密钥失效。
+     * @param req ModifyMultiPathGatewaySecretKeyRequest
+     * @return ModifyMultiPathGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMultiPathGatewaySecretKeyResponse ModifyMultiPathGatewaySecretKey(ModifyMultiPathGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMultiPathGatewaySecretKey", ModifyMultiPathGatewaySecretKeyResponse.class);
+    }
+
+    /**
      *本接口用于对七层加速域名/四层代理实例启用/关闭特定回源 IP 网段回源。单次支持提交的七层加速域名的数量最大为 200，四层代理实例的数量最大为 100，支持七层加速域名/四层代理实例混合提交，总实例个数最大为 200。如需变更超过 200 个实例，请通过本接口分批提交。
      * @param req ModifyOriginACLRequest
      * @return ModifyOriginACLResponse
@@ -1728,6 +1871,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyZoneStatusResponse ModifyZoneStatus(ModifyZoneStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyZoneStatus", ModifyZoneStatusResponse.class);
+    }
+
+    /**
+     *通过本接口刷新多通道安全加速网关的密钥。客户基于接入密钥签名接入多通道安全加速网关。每个站点下只有一个密钥，可用于接入该站点下的所有网关，刷新密钥后，原始密钥会失效。
+     * @param req RefreshMultiPathGatewaySecretKeyRequest
+     * @return RefreshMultiPathGatewaySecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefreshMultiPathGatewaySecretKeyResponse RefreshMultiPathGatewaySecretKey(RefreshMultiPathGatewaySecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RefreshMultiPathGatewaySecretKey", RefreshMultiPathGatewaySecretKeyResponse.class);
     }
 
     /**

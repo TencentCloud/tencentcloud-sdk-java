@@ -52,7 +52,7 @@ public class AddAITaskRequest extends AbstractModel {
     private String Desc;
 
     /**
-    * AI 结果回调地址。类似 "http://ip:port/***或者https://domain/***
+    * AI 结果回调地址
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -130,16 +130,16 @@ public class AddAITaskRequest extends AbstractModel {
     }
 
     /**
-     * Get AI 结果回调地址。类似 "http://ip:port/***或者https://domain/*** 
-     * @return CallbackUrl AI 结果回调地址。类似 "http://ip:port/***或者https://domain/***
+     * Get AI 结果回调地址 
+     * @return CallbackUrl AI 结果回调地址
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set AI 结果回调地址。类似 "http://ip:port/***或者https://domain/***
-     * @param CallbackUrl AI 结果回调地址。类似 "http://ip:port/***或者https://domain/***
+     * Set AI 结果回调地址
+     * @param CallbackUrl AI 结果回调地址
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;

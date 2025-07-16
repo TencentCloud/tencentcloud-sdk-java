@@ -57,7 +57,6 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     * 人物性别：
 <li>Male：男性；</li>
 <li>Female：女性。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gender")
     @Expose
@@ -65,7 +64,6 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
     * 人物出生日期。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Birthday")
     @Expose
@@ -73,7 +71,6 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
     * 人物职业或者职务。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Profession")
     @Expose
@@ -81,7 +78,6 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
     * 人物毕业院校。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchoolOfGraduation")
     @Expose
@@ -89,7 +85,6 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
     * 人物简介。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Abstract")
     @Expose
@@ -97,7 +92,6 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
     * 人物出生地或者籍贯。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlaceOfBirth")
     @Expose
@@ -107,7 +101,6 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     * 人物类型：
 <li>Politician：官员；</li>
 <li>Artist：艺人。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PersonType")
     @Expose
@@ -117,7 +110,6 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     * 敏感度标注：
 <li>Normal：正常；</li>
 <li>Sensitive：敏感。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -125,7 +117,6 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
     * 截图链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -206,12 +197,10 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     /**
      * Get 人物性别：
 <li>Male：男性；</li>
-<li>Female：女性。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>Female：女性。</li> 
      * @return Gender 人物性别：
 <li>Male：男性；</li>
 <li>Female：女性。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGender() {
         return this.Gender;
@@ -221,21 +210,17 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
      * Set 人物性别：
 <li>Male：男性；</li>
 <li>Female：女性。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Gender 人物性别：
 <li>Male：男性；</li>
 <li>Female：女性。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGender(String Gender) {
         this.Gender = Gender;
     }
 
     /**
-     * Get 人物出生日期。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人物出生日期。 
      * @return Birthday 人物出生日期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBirthday() {
         return this.Birthday;
@@ -243,19 +228,15 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
      * Set 人物出生日期。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Birthday 人物出生日期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get 人物职业或者职务。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人物职业或者职务。 
      * @return Profession 人物职业或者职务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProfession() {
         return this.Profession;
@@ -263,19 +244,15 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
      * Set 人物职业或者职务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Profession 人物职业或者职务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProfession(String Profession) {
         this.Profession = Profession;
     }
 
     /**
-     * Get 人物毕业院校。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人物毕业院校。 
      * @return SchoolOfGraduation 人物毕业院校。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchoolOfGraduation() {
         return this.SchoolOfGraduation;
@@ -283,19 +260,15 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
      * Set 人物毕业院校。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchoolOfGraduation 人物毕业院校。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchoolOfGraduation(String SchoolOfGraduation) {
         this.SchoolOfGraduation = SchoolOfGraduation;
     }
 
     /**
-     * Get 人物简介。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人物简介。 
      * @return Abstract 人物简介。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAbstract() {
         return this.Abstract;
@@ -303,19 +276,15 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
      * Set 人物简介。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Abstract 人物简介。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAbstract(String Abstract) {
         this.Abstract = Abstract;
     }
 
     /**
-     * Get 人物出生地或者籍贯。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人物出生地或者籍贯。 
      * @return PlaceOfBirth 人物出生地或者籍贯。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlaceOfBirth() {
         return this.PlaceOfBirth;
@@ -323,9 +292,7 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
      * Set 人物出生地或者籍贯。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlaceOfBirth 人物出生地或者籍贯。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlaceOfBirth(String PlaceOfBirth) {
         this.PlaceOfBirth = PlaceOfBirth;
@@ -334,12 +301,10 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     /**
      * Get 人物类型：
 <li>Politician：官员；</li>
-<li>Artist：艺人。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>Artist：艺人。</li> 
      * @return PersonType 人物类型：
 <li>Politician：官员；</li>
 <li>Artist：艺人。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPersonType() {
         return this.PersonType;
@@ -349,11 +314,9 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
      * Set 人物类型：
 <li>Politician：官员；</li>
 <li>Artist：艺人。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PersonType 人物类型：
 <li>Politician：官员；</li>
 <li>Artist：艺人。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPersonType(String PersonType) {
         this.PersonType = PersonType;
@@ -362,12 +325,10 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     /**
      * Get 敏感度标注：
 <li>Normal：正常；</li>
-<li>Sensitive：敏感。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>Sensitive：敏感。</li> 
      * @return Remark 敏感度标注：
 <li>Normal：正常；</li>
 <li>Sensitive：敏感。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -377,21 +338,17 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
      * Set 敏感度标注：
 <li>Normal：正常；</li>
 <li>Sensitive：敏感。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 敏感度标注：
 <li>Normal：正常；</li>
 <li>Sensitive：敏感。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 截图链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 截图链接 
      * @return Url 截图链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -399,9 +356,7 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
      * Set 截图链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 截图链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

@@ -25,7 +25,6 @@ public class UpdateAITaskResponse extends AbstractModel {
 
     /**
     * AI任务信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class UpdateAITaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get AI任务信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AI任务信息 
      * @return Data AI任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AITaskInfo getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class UpdateAITaskResponse extends AbstractModel {
 
     /**
      * Set AI任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data AI任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(AITaskInfo Data) {
         this.Data = Data;

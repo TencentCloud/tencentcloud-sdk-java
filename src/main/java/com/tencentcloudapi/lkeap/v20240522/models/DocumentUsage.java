@@ -59,6 +59,20 @@ public class DocumentUsage extends AbstractModel {
     private Long MllmTokens;
 
     /**
+    * 解析成功页数
+    */
+    @SerializedName("SuccessPageNum")
+    @Expose
+    private Long SuccessPageNum;
+
+    /**
+    * 解析失败页数
+    */
+    @SerializedName("FailPageNum")
+    @Expose
+    private Long FailPageNum;
+
+    /**
      * Get 文档拆分任务的页数 
      * @return PageNumber 文档拆分任务的页数
      */
@@ -142,6 +156,38 @@ public class DocumentUsage extends AbstractModel {
         this.MllmTokens = MllmTokens;
     }
 
+    /**
+     * Get 解析成功页数 
+     * @return SuccessPageNum 解析成功页数
+     */
+    public Long getSuccessPageNum() {
+        return this.SuccessPageNum;
+    }
+
+    /**
+     * Set 解析成功页数
+     * @param SuccessPageNum 解析成功页数
+     */
+    public void setSuccessPageNum(Long SuccessPageNum) {
+        this.SuccessPageNum = SuccessPageNum;
+    }
+
+    /**
+     * Get 解析失败页数 
+     * @return FailPageNum 解析失败页数
+     */
+    public Long getFailPageNum() {
+        return this.FailPageNum;
+    }
+
+    /**
+     * Set 解析失败页数
+     * @param FailPageNum 解析失败页数
+     */
+    public void setFailPageNum(Long FailPageNum) {
+        this.FailPageNum = FailPageNum;
+    }
+
     public DocumentUsage() {
     }
 
@@ -165,6 +211,12 @@ public class DocumentUsage extends AbstractModel {
         if (source.MllmTokens != null) {
             this.MllmTokens = new Long(source.MllmTokens);
         }
+        if (source.SuccessPageNum != null) {
+            this.SuccessPageNum = new Long(source.SuccessPageNum);
+        }
+        if (source.FailPageNum != null) {
+            this.FailPageNum = new Long(source.FailPageNum);
+        }
     }
 
 
@@ -177,6 +229,8 @@ public class DocumentUsage extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
         this.setParamSimple(map, prefix + "SplitTokens", this.SplitTokens);
         this.setParamSimple(map, prefix + "MllmTokens", this.MllmTokens);
+        this.setParamSimple(map, prefix + "SuccessPageNum", this.SuccessPageNum);
+        this.setParamSimple(map, prefix + "FailPageNum", this.FailPageNum);
 
     }
 }

@@ -271,6 +271,13 @@ HYBRID_PAID:
     private SidecarSpec Sidecar;
 
     /**
+    * 资源组 id
+    */
+    @SerializedName("ResourceGroupId")
+    @Expose
+    private String ResourceGroupId;
+
+    /**
      * Get 服务id 
      * @return ServiceId 服务id
      */
@@ -874,6 +881,22 @@ HYBRID_PAID:
         this.Sidecar = Sidecar;
     }
 
+    /**
+     * Get 资源组 id 
+     * @return ResourceGroupId 资源组 id
+     */
+    public String getResourceGroupId() {
+        return this.ResourceGroupId;
+    }
+
+    /**
+     * Set 资源组 id
+     * @param ResourceGroupId 资源组 id
+     */
+    public void setResourceGroupId(String ResourceGroupId) {
+        this.ResourceGroupId = ResourceGroupId;
+    }
+
     public ModifyModelServiceRequest() {
     }
 
@@ -987,6 +1010,9 @@ HYBRID_PAID:
         if (source.Sidecar != null) {
             this.Sidecar = new SidecarSpec(source.Sidecar);
         }
+        if (source.ResourceGroupId != null) {
+            this.ResourceGroupId = new String(source.ResourceGroupId);
+        }
     }
 
 
@@ -1026,6 +1052,7 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "HealthProbe.", this.HealthProbe);
         this.setParamObj(map, prefix + "RollingUpdate.", this.RollingUpdate);
         this.setParamObj(map, prefix + "Sidecar.", this.Sidecar);
+        this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
 
     }
 }

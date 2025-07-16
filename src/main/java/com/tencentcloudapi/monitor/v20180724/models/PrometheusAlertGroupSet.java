@@ -40,7 +40,7 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     private String GroupName;
 
     /**
-    * 云监控告警模板ID ，返回告警模板转换后的notice ID。
+    * 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AMPReceivers")
@@ -136,9 +136,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Get 云监控告警模板ID ，返回告警模板转换后的notice ID。
+     * Get 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AMPReceivers 云监控告警模板ID ，返回告警模板转换后的notice ID。
+     * @return AMPReceivers 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAMPReceivers() {
@@ -146,9 +146,9 @@ public class PrometheusAlertGroupSet extends AbstractModel {
     }
 
     /**
-     * Set 云监控告警模板ID ，返回告警模板转换后的notice ID。
+     * Set 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AMPReceivers 云监控告警模板ID ，返回告警模板转换后的notice ID。
+     * @param AMPReceivers 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAMPReceivers(String [] AMPReceivers) {

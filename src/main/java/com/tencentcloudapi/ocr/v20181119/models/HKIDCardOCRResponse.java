@@ -108,7 +108,7 @@ public class HKIDCardOCRResponse extends AbstractModel {
     private Long FakeDetectResult;
 
     /**
-    * 人像照片Base64后的结果
+    * Base64编码的证件左侧人像大图
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeadImage")
@@ -116,9 +116,16 @@ public class HKIDCardOCRResponse extends AbstractModel {
     private String HeadImage;
 
     /**
-    * 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
--9102：证照复印件告警
--9103：证照翻拍告警
+    * Base64编码的证件右侧人像小图
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SmallHeadImage")
+    @Expose
+    private String SmallHeadImage;
+
+    /**
+    * 该字段已废弃， 将固定返回空数组，不建议使用。
+This field is deprecated and will always return an empty array. Usage is not recommended.
     */
     @SerializedName("WarningCode")
     @Expose
@@ -137,6 +144,13 @@ public class HKIDCardOCRResponse extends AbstractModel {
     @SerializedName("WarnCardInfos")
     @Expose
     private Long [] WarnCardInfos;
+
+    /**
+    * 证件透明视窗内的文本信息
+    */
+    @SerializedName("WindowEmbeddedText")
+    @Expose
+    private String WindowEmbeddedText;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -354,9 +368,9 @@ public class HKIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 人像照片Base64后的结果
+     * Get Base64编码的证件左侧人像大图
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HeadImage 人像照片Base64后的结果
+     * @return HeadImage Base64编码的证件左侧人像大图
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHeadImage() {
@@ -364,9 +378,9 @@ public class HKIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 人像照片Base64后的结果
+     * Set Base64编码的证件左侧人像大图
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HeadImage 人像照片Base64后的结果
+     * @param HeadImage Base64编码的证件左侧人像大图
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeadImage(String HeadImage) {
@@ -374,12 +388,30 @@ public class HKIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
--9102：证照复印件告警
--9103：证照翻拍告警 
-     * @return WarningCode 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
--9102：证照复印件告警
--9103：证照翻拍告警
+     * Get Base64编码的证件右侧人像小图
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SmallHeadImage Base64编码的证件右侧人像小图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSmallHeadImage() {
+        return this.SmallHeadImage;
+    }
+
+    /**
+     * Set Base64编码的证件右侧人像小图
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmallHeadImage Base64编码的证件右侧人像小图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSmallHeadImage(String SmallHeadImage) {
+        this.SmallHeadImage = SmallHeadImage;
+    }
+
+    /**
+     * Get 该字段已废弃， 将固定返回空数组，不建议使用。
+This field is deprecated and will always return an empty array. Usage is not recommended. 
+     * @return WarningCode 该字段已废弃， 将固定返回空数组，不建议使用。
+This field is deprecated and will always return an empty array. Usage is not recommended.
      * @deprecated
      */
     @Deprecated
@@ -388,12 +420,10 @@ public class HKIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
--9102：证照复印件告警
--9103：证照翻拍告警
-     * @param WarningCode 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
--9102：证照复印件告警
--9103：证照翻拍告警
+     * Set 该字段已废弃， 将固定返回空数组，不建议使用。
+This field is deprecated and will always return an empty array. Usage is not recommended.
+     * @param WarningCode 该字段已废弃， 将固定返回空数组，不建议使用。
+This field is deprecated and will always return an empty array. Usage is not recommended.
      * @deprecated
      */
     @Deprecated
@@ -443,6 +473,22 @@ public class HKIDCardOCRResponse extends AbstractModel {
      */
     public void setWarnCardInfos(Long [] WarnCardInfos) {
         this.WarnCardInfos = WarnCardInfos;
+    }
+
+    /**
+     * Get 证件透明视窗内的文本信息 
+     * @return WindowEmbeddedText 证件透明视窗内的文本信息
+     */
+    public String getWindowEmbeddedText() {
+        return this.WindowEmbeddedText;
+    }
+
+    /**
+     * Set 证件透明视窗内的文本信息
+     * @param WindowEmbeddedText 证件透明视窗内的文本信息
+     */
+    public void setWindowEmbeddedText(String WindowEmbeddedText) {
+        this.WindowEmbeddedText = WindowEmbeddedText;
     }
 
     /**
@@ -505,6 +551,9 @@ public class HKIDCardOCRResponse extends AbstractModel {
         if (source.HeadImage != null) {
             this.HeadImage = new String(source.HeadImage);
         }
+        if (source.SmallHeadImage != null) {
+            this.SmallHeadImage = new String(source.SmallHeadImage);
+        }
         if (source.WarningCode != null) {
             this.WarningCode = new Long[source.WarningCode.length];
             for (int i = 0; i < source.WarningCode.length; i++) {
@@ -516,6 +565,9 @@ public class HKIDCardOCRResponse extends AbstractModel {
             for (int i = 0; i < source.WarnCardInfos.length; i++) {
                 this.WarnCardInfos[i] = new Long(source.WarnCardInfos[i]);
             }
+        }
+        if (source.WindowEmbeddedText != null) {
+            this.WindowEmbeddedText = new String(source.WindowEmbeddedText);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -539,8 +591,10 @@ public class HKIDCardOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CurrentIssueDate", this.CurrentIssueDate);
         this.setParamSimple(map, prefix + "FakeDetectResult", this.FakeDetectResult);
         this.setParamSimple(map, prefix + "HeadImage", this.HeadImage);
+        this.setParamSimple(map, prefix + "SmallHeadImage", this.SmallHeadImage);
         this.setParamArraySimple(map, prefix + "WarningCode.", this.WarningCode);
         this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
+        this.setParamSimple(map, prefix + "WindowEmbeddedText", this.WindowEmbeddedText);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

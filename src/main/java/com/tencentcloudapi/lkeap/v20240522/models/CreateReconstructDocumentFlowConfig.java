@@ -47,6 +47,13 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
     private String ResultType;
 
     /**
+    * 是否忽略失败页，返回已成功的页数据。默认为true。
+    */
+    @SerializedName("IgnoreFailedPage")
+    @Expose
+    private Boolean IgnoreFailedPage;
+
+    /**
      * Get Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
@@ -114,6 +121,22 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
         this.ResultType = ResultType;
     }
 
+    /**
+     * Get 是否忽略失败页，返回已成功的页数据。默认为true。 
+     * @return IgnoreFailedPage 是否忽略失败页，返回已成功的页数据。默认为true。
+     */
+    public Boolean getIgnoreFailedPage() {
+        return this.IgnoreFailedPage;
+    }
+
+    /**
+     * Set 是否忽略失败页，返回已成功的页数据。默认为true。
+     * @param IgnoreFailedPage 是否忽略失败页，返回已成功的页数据。默认为true。
+     */
+    public void setIgnoreFailedPage(Boolean IgnoreFailedPage) {
+        this.IgnoreFailedPage = IgnoreFailedPage;
+    }
+
     public CreateReconstructDocumentFlowConfig() {
     }
 
@@ -128,6 +151,9 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
         if (source.ResultType != null) {
             this.ResultType = new String(source.ResultType);
         }
+        if (source.IgnoreFailedPage != null) {
+            this.IgnoreFailedPage = new Boolean(source.IgnoreFailedPage);
+        }
     }
 
 
@@ -137,6 +163,7 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableResultType", this.TableResultType);
         this.setParamSimple(map, prefix + "ResultType", this.ResultType);
+        this.setParamSimple(map, prefix + "IgnoreFailedPage", this.IgnoreFailedPage);
 
     }
 }

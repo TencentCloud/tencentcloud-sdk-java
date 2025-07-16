@@ -39,7 +39,6 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
 
     /**
     * 基于画面提取的字幕文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginSubtitlePath")
     @Expose
@@ -47,7 +46,6 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
 
     /**
     * 基于画面提取的字幕翻译文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranslateSubtitlePath")
     @Expose
@@ -86,10 +84,8 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     }
 
     /**
-     * Get 基于画面提取的字幕文件路径。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基于画面提取的字幕文件路径。 
      * @return OriginSubtitlePath 基于画面提取的字幕文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginSubtitlePath() {
         return this.OriginSubtitlePath;
@@ -97,19 +93,15 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
 
     /**
      * Set 基于画面提取的字幕文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginSubtitlePath 基于画面提取的字幕文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginSubtitlePath(String OriginSubtitlePath) {
         this.OriginSubtitlePath = OriginSubtitlePath;
     }
 
     /**
-     * Get 基于画面提取的字幕翻译文件路径。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基于画面提取的字幕翻译文件路径。 
      * @return TranslateSubtitlePath 基于画面提取的字幕翻译文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranslateSubtitlePath() {
         return this.TranslateSubtitlePath;
@@ -117,9 +109,7 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
 
     /**
      * Set 基于画面提取的字幕翻译文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TranslateSubtitlePath 基于画面提取的字幕翻译文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranslateSubtitlePath(String TranslateSubtitlePath) {
         this.TranslateSubtitlePath = TranslateSubtitlePath;

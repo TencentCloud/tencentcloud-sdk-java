@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class DescribeAuditKeywordsResponse extends AbstractModel {
 
     /**
+    * 关键词总条数。
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
+    * 关键词详情列表。
+    */
+    @SerializedName("Infos")
+    @Expose
+    private AuditKeywordInfo [] Infos;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 关键词总条数。 
+     * @return Total 关键词总条数。
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 关键词总条数。
+     * @param Total 关键词总条数。
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get 关键词详情列表。 
+     * @return Infos 关键词详情列表。
+     */
+    public AuditKeywordInfo [] getInfos() {
+        return this.Infos;
+    }
+
+    /**
+     * Set 关键词详情列表。
+     * @param Infos 关键词详情列表。
+     */
+    public void setInfos(AuditKeywordInfo [] Infos) {
+        this.Infos = Infos;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,15 @@ public class DescribeAuditKeywordsResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAuditKeywordsResponse(DescribeAuditKeywordsResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Infos != null) {
+            this.Infos = new AuditKeywordInfo[source.Infos.length];
+            for (int i = 0; i < source.Infos.length; i++) {
+                this.Infos[i] = new AuditKeywordInfo(source.Infos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +119,8 @@ public class DescribeAuditKeywordsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Infos.", this.Infos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

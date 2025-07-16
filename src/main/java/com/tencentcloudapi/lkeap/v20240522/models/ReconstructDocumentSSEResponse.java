@@ -31,7 +31,7 @@ public class ReconstructDocumentSSEResponse extends SSEResponseModel {
     private String TaskId;
 
     /**
-    * 响应类型。1：返回进度信息，2：返回解析结果
+    * 响应类型。1：返回进度信息， 2：返回解析结果
     */
     @SerializedName("ResponseType")
     @Expose
@@ -52,9 +52,7 @@ public class ReconstructDocumentSSEResponse extends SSEResponseModel {
     private String ProgressMessage;
 
     /**
-    * 文档解析结果的临时下载地址。
-文件类型为zip压缩包，下载链接有效期30分钟。
-压缩包内包含*.md、*.json以及images文件夹。
+    * 文档解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟。压缩包内包含*.md、*.json以及images文件夹。
 
     */
     @SerializedName("DocumentRecognizeResultUrl")
@@ -67,6 +65,20 @@ public class ReconstructDocumentSSEResponse extends SSEResponseModel {
     @SerializedName("FailedPages")
     @Expose
     private ReconstructDocumentFailedPage [] FailedPages;
+
+    /**
+    * 文档解析失败页数
+    */
+    @SerializedName("FailPageNum")
+    @Expose
+    private Long FailPageNum;
+
+    /**
+    * 文档解析成功页数
+    */
+    @SerializedName("SuccessPageNum")
+    @Expose
+    private Long SuccessPageNum;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
@@ -92,16 +104,16 @@ public class ReconstructDocumentSSEResponse extends SSEResponseModel {
     }
 
     /**
-     * Get 响应类型。1：返回进度信息，2：返回解析结果 
-     * @return ResponseType 响应类型。1：返回进度信息，2：返回解析结果
+     * Get 响应类型。1：返回进度信息， 2：返回解析结果 
+     * @return ResponseType 响应类型。1：返回进度信息， 2：返回解析结果
      */
     public String getResponseType() {
         return this.ResponseType;
     }
 
     /**
-     * Set 响应类型。1：返回进度信息，2：返回解析结果
-     * @param ResponseType 响应类型。1：返回进度信息，2：返回解析结果
+     * Set 响应类型。1：返回进度信息， 2：返回解析结果
+     * @param ResponseType 响应类型。1：返回进度信息， 2：返回解析结果
      */
     public void setResponseType(String ResponseType) {
         this.ResponseType = ResponseType;
@@ -140,13 +152,9 @@ public class ReconstructDocumentSSEResponse extends SSEResponseModel {
     }
 
     /**
-     * Get 文档解析结果的临时下载地址。
-文件类型为zip压缩包，下载链接有效期30分钟。
-压缩包内包含*.md、*.json以及images文件夹。
+     * Get 文档解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟。压缩包内包含*.md、*.json以及images文件夹。
  
-     * @return DocumentRecognizeResultUrl 文档解析结果的临时下载地址。
-文件类型为zip压缩包，下载链接有效期30分钟。
-压缩包内包含*.md、*.json以及images文件夹。
+     * @return DocumentRecognizeResultUrl 文档解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟。压缩包内包含*.md、*.json以及images文件夹。
 
      */
     public String getDocumentRecognizeResultUrl() {
@@ -154,13 +162,9 @@ public class ReconstructDocumentSSEResponse extends SSEResponseModel {
     }
 
     /**
-     * Set 文档解析结果的临时下载地址。
-文件类型为zip压缩包，下载链接有效期30分钟。
-压缩包内包含*.md、*.json以及images文件夹。
+     * Set 文档解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟。压缩包内包含*.md、*.json以及images文件夹。
 
-     * @param DocumentRecognizeResultUrl 文档解析结果的临时下载地址。
-文件类型为zip压缩包，下载链接有效期30分钟。
-压缩包内包含*.md、*.json以及images文件夹。
+     * @param DocumentRecognizeResultUrl 文档解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟。压缩包内包含*.md、*.json以及images文件夹。
 
      */
     public void setDocumentRecognizeResultUrl(String DocumentRecognizeResultUrl) {
@@ -181,6 +185,38 @@ public class ReconstructDocumentSSEResponse extends SSEResponseModel {
      */
     public void setFailedPages(ReconstructDocumentFailedPage [] FailedPages) {
         this.FailedPages = FailedPages;
+    }
+
+    /**
+     * Get 文档解析失败页数 
+     * @return FailPageNum 文档解析失败页数
+     */
+    public Long getFailPageNum() {
+        return this.FailPageNum;
+    }
+
+    /**
+     * Set 文档解析失败页数
+     * @param FailPageNum 文档解析失败页数
+     */
+    public void setFailPageNum(Long FailPageNum) {
+        this.FailPageNum = FailPageNum;
+    }
+
+    /**
+     * Get 文档解析成功页数 
+     * @return SuccessPageNum 文档解析成功页数
+     */
+    public Long getSuccessPageNum() {
+        return this.SuccessPageNum;
+    }
+
+    /**
+     * Set 文档解析成功页数
+     * @param SuccessPageNum 文档解析成功页数
+     */
+    public void setSuccessPageNum(Long SuccessPageNum) {
+        this.SuccessPageNum = SuccessPageNum;
     }
 
     /**
@@ -228,6 +264,12 @@ public class ReconstructDocumentSSEResponse extends SSEResponseModel {
                 this.FailedPages[i] = new ReconstructDocumentFailedPage(source.FailedPages[i]);
             }
         }
+        if (source.FailPageNum != null) {
+            this.FailPageNum = new Long(source.FailPageNum);
+        }
+        if (source.SuccessPageNum != null) {
+            this.SuccessPageNum = new Long(source.SuccessPageNum);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -244,6 +286,8 @@ public class ReconstructDocumentSSEResponse extends SSEResponseModel {
         this.setParamSimple(map, prefix + "ProgressMessage", this.ProgressMessage);
         this.setParamSimple(map, prefix + "DocumentRecognizeResultUrl", this.DocumentRecognizeResultUrl);
         this.setParamArrayObj(map, prefix + "FailedPages.", this.FailedPages);
+        this.setParamSimple(map, prefix + "FailPageNum", this.FailPageNum);
+        this.setParamSimple(map, prefix + "SuccessPageNum", this.SuccessPageNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

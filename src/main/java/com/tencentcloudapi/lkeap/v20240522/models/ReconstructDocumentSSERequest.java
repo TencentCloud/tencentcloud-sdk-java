@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ReconstructDocumentSSERequest extends AbstractModel {
 
     /**
-    * 文件类型。
+    * 支持解析的文件类型。
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
@@ -37,56 +37,63 @@ public class ReconstructDocumentSSERequest extends AbstractModel {
     private String FileType;
 
     /**
-    * 文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+    * 文件的 URL 地址。文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
+
+默认值：无
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * 文件的 Base64 值。
-支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
-支持的图片像素：单边介于20-10000px之间。
-文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+    * 说明：文件的 Base64 值。
+备注：支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+
+默认值：无
     */
     @SerializedName("FileBase64")
     @Expose
     private String FileBase64;
 
     /**
-    * 文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+    * 说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无
     */
     @SerializedName("FileStartPageNumber")
     @Expose
     private Long FileStartPageNumber;
 
     /**
-    * 文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+    * 说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无
     */
     @SerializedName("FileEndPageNumber")
     @Expose
     private Long FileEndPageNumber;
 
     /**
-    * 文档解析配置信息	
+    * 说明：文档解析配置信息	
+备注：可设置返回markdown结果的格式
+默认值：无
+
     */
     @SerializedName("Config")
     @Expose
     private ReconstructDocumentSSEConfig Config;
 
     /**
-     * Get 文件类型。
+     * Get 支持解析的文件类型。
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
 - MD、TXT、XLS、XLSX、CSV 支持10M
 - 其他支持20M
  
-     * @return FileType 文件类型。
+     * @return FileType 支持解析的文件类型。
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
@@ -99,14 +106,14 @@ public class ReconstructDocumentSSERequest extends AbstractModel {
     }
 
     /**
-     * Set 文件类型。
+     * Set 支持解析的文件类型。
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
 - MD、TXT、XLS、XLSX、CSV 支持10M
 - 其他支持20M
 
-     * @param FileType 文件类型。
+     * @param FileType 支持解析的文件类型。
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
@@ -119,108 +126,136 @@ public class ReconstructDocumentSSERequest extends AbstractModel {
     }
 
     /**
-     * Get 文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
-参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749) 
-     * @return FileUrl 文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+     * Get 文件的 URL 地址。文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
+
+默认值：无 
+     * @return FileUrl 文件的 URL 地址。文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
+
+默认值：无
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+     * Set 文件的 URL 地址。文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
-     * @param FileUrl 文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+
+默认值：无
+     * @param FileUrl 文件的 URL 地址。文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
+
+默认值：无
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get 文件的 Base64 值。
-支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
-支持的图片像素：单边介于20-10000px之间。
-文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。 
-     * @return FileBase64 文件的 Base64 值。
-支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
-支持的图片像素：单边介于20-10000px之间。
-文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+     * Get 说明：文件的 Base64 值。
+备注：支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+
+默认值：无 
+     * @return FileBase64 说明：文件的 Base64 值。
+备注：支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+
+默认值：无
      */
     public String getFileBase64() {
         return this.FileBase64;
     }
 
     /**
-     * Set 文件的 Base64 值。
-支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
-支持的图片像素：单边介于20-10000px之间。
-文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
-     * @param FileBase64 文件的 Base64 值。
-支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
-支持的图片像素：单边介于20-10000px之间。
-文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+     * Set 说明：文件的 Base64 值。
+备注：支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+
+默认值：无
+     * @param FileBase64 说明：文件的 Base64 值。
+备注：支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+
+默认值：无
      */
     public void setFileBase64(String FileBase64) {
         this.FileBase64 = FileBase64;
     }
 
     /**
-     * Get 文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。 
-     * @return FileStartPageNumber 文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+     * Get 说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无 
+     * @return FileStartPageNumber 说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无
      */
     public Long getFileStartPageNumber() {
         return this.FileStartPageNumber;
     }
 
     /**
-     * Set 文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
-     * @param FileStartPageNumber 文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+     * Set 说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无
+     * @param FileStartPageNumber 说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无
      */
     public void setFileStartPageNumber(Long FileStartPageNumber) {
         this.FileStartPageNumber = FileStartPageNumber;
     }
 
     /**
-     * Get 文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。 
-     * @return FileEndPageNumber 文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+     * Get 说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无 
+     * @return FileEndPageNumber 说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无
      */
     public Long getFileEndPageNumber() {
         return this.FileEndPageNumber;
     }
 
     /**
-     * Set 文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
-     * @param FileEndPageNumber 文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+     * Set 说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无
+     * @param FileEndPageNumber 说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无
      */
     public void setFileEndPageNumber(Long FileEndPageNumber) {
         this.FileEndPageNumber = FileEndPageNumber;
     }
 
     /**
-     * Get 文档解析配置信息	 
-     * @return Config 文档解析配置信息	
+     * Get 说明：文档解析配置信息	
+备注：可设置返回markdown结果的格式
+默认值：无
+ 
+     * @return Config 说明：文档解析配置信息	
+备注：可设置返回markdown结果的格式
+默认值：无
+
      */
     public ReconstructDocumentSSEConfig getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 文档解析配置信息	
-     * @param Config 文档解析配置信息	
+     * Set 说明：文档解析配置信息	
+备注：可设置返回markdown结果的格式
+默认值：无
+
+     * @param Config 说明：文档解析配置信息	
+备注：可设置返回markdown结果的格式
+默认值：无
+
      */
     public void setConfig(ReconstructDocumentSSEConfig Config) {
         this.Config = Config;

@@ -83,7 +83,6 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
 
     /**
     * Drm信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DrmInfo")
     @Expose
@@ -93,7 +92,6 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     * 自适应转码模板类型：
 Common：音视频类型
 PureAudio：纯音频类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefinitionType")
     @Expose
@@ -248,10 +246,8 @@ PureAudio：纯音频类型
     }
 
     /**
-     * Get Drm信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Drm信息。 
      * @return DrmInfo Drm信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DrmInfo getDrmInfo() {
         return this.DrmInfo;
@@ -259,9 +255,7 @@ PureAudio：纯音频类型
 
     /**
      * Set Drm信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DrmInfo Drm信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDrmInfo(DrmInfo DrmInfo) {
         this.DrmInfo = DrmInfo;
@@ -270,12 +264,10 @@ PureAudio：纯音频类型
     /**
      * Get 自适应转码模板类型：
 Common：音视频类型
-PureAudio：纯音频类型
-注意：此字段可能返回 null，表示取不到有效值。 
+PureAudio：纯音频类型 
      * @return DefinitionType 自适应转码模板类型：
 Common：音视频类型
 PureAudio：纯音频类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefinitionType() {
         return this.DefinitionType;
@@ -285,11 +277,9 @@ PureAudio：纯音频类型
      * Set 自适应转码模板类型：
 Common：音视频类型
 PureAudio：纯音频类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefinitionType 自适应转码模板类型：
 Common：音视频类型
 PureAudio：纯音频类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefinitionType(String DefinitionType) {
         this.DefinitionType = DefinitionType;

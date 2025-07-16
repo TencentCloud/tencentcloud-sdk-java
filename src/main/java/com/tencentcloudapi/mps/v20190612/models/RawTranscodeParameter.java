@@ -73,7 +73,6 @@ public class RawTranscodeParameter extends AbstractModel {
 
     /**
     * 扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StdExtInfo")
     @Expose
@@ -208,10 +207,8 @@ public class RawTranscodeParameter extends AbstractModel {
     }
 
     /**
-     * Get 扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展参数，序列化的 json 字符串。 
      * @return StdExtInfo 扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
@@ -219,9 +216,7 @@ public class RawTranscodeParameter extends AbstractModel {
 
     /**
      * Set 扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StdExtInfo 扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;

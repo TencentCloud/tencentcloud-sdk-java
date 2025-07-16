@@ -58,6 +58,13 @@ public class ReconstructDocumentSSEConfig extends AbstractModel {
     private String PageFormat;
 
     /**
+    * 是否忽略失败页，返回已成功的页数据
+    */
+    @SerializedName("IgnoreFailedPage")
+    @Expose
+    private Boolean IgnoreFailedPage;
+
+    /**
      * Get Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
@@ -145,6 +152,22 @@ public class ReconstructDocumentSSEConfig extends AbstractModel {
         this.PageFormat = PageFormat;
     }
 
+    /**
+     * Get 是否忽略失败页，返回已成功的页数据 
+     * @return IgnoreFailedPage 是否忽略失败页，返回已成功的页数据
+     */
+    public Boolean getIgnoreFailedPage() {
+        return this.IgnoreFailedPage;
+    }
+
+    /**
+     * Set 是否忽略失败页，返回已成功的页数据
+     * @param IgnoreFailedPage 是否忽略失败页，返回已成功的页数据
+     */
+    public void setIgnoreFailedPage(Boolean IgnoreFailedPage) {
+        this.IgnoreFailedPage = IgnoreFailedPage;
+    }
+
     public ReconstructDocumentSSEConfig() {
     }
 
@@ -165,6 +188,9 @@ public class ReconstructDocumentSSEConfig extends AbstractModel {
         if (source.PageFormat != null) {
             this.PageFormat = new String(source.PageFormat);
         }
+        if (source.IgnoreFailedPage != null) {
+            this.IgnoreFailedPage = new Boolean(source.IgnoreFailedPage);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ReconstructDocumentSSEConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "MarkdownImageResponseType", this.MarkdownImageResponseType);
         this.setParamSimple(map, prefix + "ReturnPageFormat", this.ReturnPageFormat);
         this.setParamSimple(map, prefix + "PageFormat", this.PageFormat);
+        this.setParamSimple(map, prefix + "IgnoreFailedPage", this.IgnoreFailedPage);
 
     }
 }

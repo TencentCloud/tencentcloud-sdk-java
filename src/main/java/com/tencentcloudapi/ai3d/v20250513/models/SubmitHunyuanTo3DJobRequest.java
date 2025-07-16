@@ -25,7 +25,7 @@ public class SubmitHunyuanTo3DJobRequest extends AbstractModel {
 
     /**
     * 文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
+最多支持1024个 utf-8 字符。
 文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
     */
     @SerializedName("Prompt")
@@ -85,10 +85,10 @@ back：后视图；
 
     /**
      * Get 文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
+最多支持1024个 utf-8 字符。
 文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。 
      * @return Prompt 文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
+最多支持1024个 utf-8 字符。
 文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
      */
     public String getPrompt() {
@@ -97,10 +97,10 @@ back：后视图；
 
     /**
      * Set 文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
+最多支持1024个 utf-8 字符。
 文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
      * @param Prompt 文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
+最多支持1024个 utf-8 字符。
 文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
      */
     public void setPrompt(String Prompt) {

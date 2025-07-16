@@ -154,6 +154,23 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（CreateBatchInformationExtractionTask）用来通过上传后的PDF资源编号来批量创建合同智能审查任务。<br/>
+
+适用场景：根据合同关键词（字段名称）来提取PDF合同文件的字段结果信息。
+
+注: 
+1. PDF格式限制大小为10M以下
+2. 仅支持5个PDF文件批量发起
+     * @param req CreateBatchInformationExtractionTaskRequest
+     * @return CreateBatchInformationExtractionTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBatchInformationExtractionTaskResponse CreateBatchInformationExtractionTask(CreateBatchInformationExtractionTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBatchInformationExtractionTask", CreateBatchInformationExtractionTaskResponse.class);
+    }
+
+    /**
      *支持企业进行批量初始化操作：
 
 此接口存在以下限制：
@@ -1727,6 +1744,17 @@ public class EssClient extends AbstractClient{
     public DescribeFlowTemplatesResponse DescribeFlowTemplates(DescribeFlowTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeFlowTemplates", DescribeFlowTemplatesResponse.class);
+    }
+
+    /**
+     *本接口（DescribeInformationExtractionTask）用于获取合同智能提取任务详情，包括任务的状态和提取的字段结果信息。
+     * @param req DescribeInformationExtractionTaskRequest
+     * @return DescribeInformationExtractionTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInformationExtractionTaskResponse DescribeInformationExtractionTask(DescribeInformationExtractionTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInformationExtractionTask", DescribeInformationExtractionTaskResponse.class);
     }
 
     /**

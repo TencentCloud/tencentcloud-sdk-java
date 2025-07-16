@@ -55,7 +55,7 @@ public class UpdatePrometheusAlertGroupRequest extends AbstractModel {
     private Long GroupState;
 
     /**
-    * 云监控告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
+    * 腾讯云可观测平台告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
     */
     @SerializedName("AMPReceivers")
     @Expose
@@ -159,16 +159,16 @@ public class UpdatePrometheusAlertGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 云监控告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx 
-     * @return AMPReceivers 云监控告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
+     * Get 腾讯云可观测平台告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx 
+     * @return AMPReceivers 腾讯云可观测平台告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
      */
     public String [] getAMPReceivers() {
         return this.AMPReceivers;
     }
 
     /**
-     * Set 云监控告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
-     * @param AMPReceivers 云监控告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
+     * Set 腾讯云可观测平台告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
+     * @param AMPReceivers 腾讯云可观测平台告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
      */
     public void setAMPReceivers(String [] AMPReceivers) {
         this.AMPReceivers = AMPReceivers;

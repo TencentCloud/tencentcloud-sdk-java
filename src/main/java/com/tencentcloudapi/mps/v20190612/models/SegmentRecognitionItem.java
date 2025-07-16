@@ -46,7 +46,6 @@ public class SegmentRecognitionItem extends AbstractModel {
 
     /**
     * 拆条片段URL。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentUrl")
     @Expose
@@ -54,7 +53,6 @@ public class SegmentRecognitionItem extends AbstractModel {
 
     /**
     * 拆条片段封面。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CovImgUrl")
     @Expose
@@ -62,7 +60,6 @@ public class SegmentRecognitionItem extends AbstractModel {
 
     /**
     * 分段标题。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Title")
     @Expose
@@ -70,7 +67,6 @@ public class SegmentRecognitionItem extends AbstractModel {
 
     /**
     * 分段概要。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Summary")
     @Expose
@@ -85,7 +81,6 @@ public class SegmentRecognitionItem extends AbstractModel {
 
     /**
     * 直播切片对应直播起始时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginTime")
     @Expose
@@ -93,7 +88,6 @@ public class SegmentRecognitionItem extends AbstractModel {
 
     /**
     * 直播切片对应直播结束时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -183,10 +177,8 @@ public class SegmentRecognitionItem extends AbstractModel {
     }
 
     /**
-     * Get 拆条片段URL。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 拆条片段URL。 
      * @return SegmentUrl 拆条片段URL。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSegmentUrl() {
         return this.SegmentUrl;
@@ -194,19 +186,15 @@ public class SegmentRecognitionItem extends AbstractModel {
 
     /**
      * Set 拆条片段URL。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentUrl 拆条片段URL。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentUrl(String SegmentUrl) {
         this.SegmentUrl = SegmentUrl;
     }
 
     /**
-     * Get 拆条片段封面。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 拆条片段封面。 
      * @return CovImgUrl 拆条片段封面。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCovImgUrl() {
         return this.CovImgUrl;
@@ -214,19 +202,15 @@ public class SegmentRecognitionItem extends AbstractModel {
 
     /**
      * Set 拆条片段封面。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CovImgUrl 拆条片段封面。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCovImgUrl(String CovImgUrl) {
         this.CovImgUrl = CovImgUrl;
     }
 
     /**
-     * Get 分段标题。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分段标题。 
      * @return Title 分段标题。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTitle() {
         return this.Title;
@@ -234,19 +218,15 @@ public class SegmentRecognitionItem extends AbstractModel {
 
     /**
      * Set 分段标题。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Title 分段标题。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 分段概要。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分段概要。 
      * @return Summary 分段概要。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSummary() {
         return this.Summary;
@@ -254,9 +234,7 @@ public class SegmentRecognitionItem extends AbstractModel {
 
     /**
      * Set 分段概要。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Summary 分段概要。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSummary(String Summary) {
         this.Summary = Summary;
@@ -279,10 +257,8 @@ public class SegmentRecognitionItem extends AbstractModel {
     }
 
     /**
-     * Get 直播切片对应直播起始时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直播切片对应直播起始时间点，采用 ISO 日期格式。 
      * @return BeginTime 直播切片对应直播起始时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginTime() {
         return this.BeginTime;
@@ -290,19 +266,15 @@ public class SegmentRecognitionItem extends AbstractModel {
 
     /**
      * Set 直播切片对应直播起始时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginTime 直播切片对应直播起始时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 直播切片对应直播结束时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直播切片对应直播结束时间点，采用 ISO 日期格式。 
      * @return EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -310,9 +282,7 @@ public class SegmentRecognitionItem extends AbstractModel {
 
     /**
      * Set 直播切片对应直播结束时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

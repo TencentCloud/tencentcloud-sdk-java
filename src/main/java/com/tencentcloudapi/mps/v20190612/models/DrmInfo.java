@@ -25,11 +25,25 @@ public class DrmInfo extends AbstractModel {
 
     /**
     * 加密类型：
-<li> simpleaes: aes-128 加密</li>
-<li> widevine</li>
-<li> fairplay：Dash不支持fairplay加密</li>  
-<li> playready</li>
-注意：此字段可能返回 null，表示取不到有效值。
+
+- simpleaes
+只能用于HLS，切片格式支持ts和mp4
+只能使用切片模式，不能使用singlefile模式
+
+- fairplay：
+只能用于HLS，切片格式只能是mp4
+可以使用切片模式或singlefile模式
+
+- widevine：
+可以用于HLS和DASH，切片格式只能是mp4
+输出HLS：可以使用切片模式或singlefile模式
+输出DASH：只能singlefile模式
+
+- playready：
+可以用于HLS和DASH，切片格式只能是mp4
+输出HLS：可以使用切片模式或singlefile模式
+输出DASH：只能singlefile模式
+
     */
     @SerializedName("Type")
     @Expose
@@ -44,7 +58,7 @@ public class DrmInfo extends AbstractModel {
     private SimpleAesDrm SimpleAesDrm;
 
     /**
-    * FairPlay, WideVine， PlayReady 加密信息。
+    * FairPlay，WideVine，PlayReady 加密信息。
     */
     @SerializedName("SpekeDrm")
     @Expose
@@ -52,17 +66,45 @@ public class DrmInfo extends AbstractModel {
 
     /**
      * Get 加密类型：
-<li> simpleaes: aes-128 加密</li>
-<li> widevine</li>
-<li> fairplay：Dash不支持fairplay加密</li>  
-<li> playready</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+
+- simpleaes
+只能用于HLS，切片格式支持ts和mp4
+只能使用切片模式，不能使用singlefile模式
+
+- fairplay：
+只能用于HLS，切片格式只能是mp4
+可以使用切片模式或singlefile模式
+
+- widevine：
+可以用于HLS和DASH，切片格式只能是mp4
+输出HLS：可以使用切片模式或singlefile模式
+输出DASH：只能singlefile模式
+
+- playready：
+可以用于HLS和DASH，切片格式只能是mp4
+输出HLS：可以使用切片模式或singlefile模式
+输出DASH：只能singlefile模式
+ 
      * @return Type 加密类型：
-<li> simpleaes: aes-128 加密</li>
-<li> widevine</li>
-<li> fairplay：Dash不支持fairplay加密</li>  
-<li> playready</li>
-注意：此字段可能返回 null，表示取不到有效值。
+
+- simpleaes
+只能用于HLS，切片格式支持ts和mp4
+只能使用切片模式，不能使用singlefile模式
+
+- fairplay：
+只能用于HLS，切片格式只能是mp4
+可以使用切片模式或singlefile模式
+
+- widevine：
+可以用于HLS和DASH，切片格式只能是mp4
+输出HLS：可以使用切片模式或singlefile模式
+输出DASH：只能singlefile模式
+
+- playready：
+可以用于HLS和DASH，切片格式只能是mp4
+输出HLS：可以使用切片模式或singlefile模式
+输出DASH：只能singlefile模式
+
      */
     public String getType() {
         return this.Type;
@@ -70,17 +112,45 @@ public class DrmInfo extends AbstractModel {
 
     /**
      * Set 加密类型：
-<li> simpleaes: aes-128 加密</li>
-<li> widevine</li>
-<li> fairplay：Dash不支持fairplay加密</li>  
-<li> playready</li>
-注意：此字段可能返回 null，表示取不到有效值。
+
+- simpleaes
+只能用于HLS，切片格式支持ts和mp4
+只能使用切片模式，不能使用singlefile模式
+
+- fairplay：
+只能用于HLS，切片格式只能是mp4
+可以使用切片模式或singlefile模式
+
+- widevine：
+可以用于HLS和DASH，切片格式只能是mp4
+输出HLS：可以使用切片模式或singlefile模式
+输出DASH：只能singlefile模式
+
+- playready：
+可以用于HLS和DASH，切片格式只能是mp4
+输出HLS：可以使用切片模式或singlefile模式
+输出DASH：只能singlefile模式
+
      * @param Type 加密类型：
-<li> simpleaes: aes-128 加密</li>
-<li> widevine</li>
-<li> fairplay：Dash不支持fairplay加密</li>  
-<li> playready</li>
-注意：此字段可能返回 null，表示取不到有效值。
+
+- simpleaes
+只能用于HLS，切片格式支持ts和mp4
+只能使用切片模式，不能使用singlefile模式
+
+- fairplay：
+只能用于HLS，切片格式只能是mp4
+可以使用切片模式或singlefile模式
+
+- widevine：
+可以用于HLS和DASH，切片格式只能是mp4
+输出HLS：可以使用切片模式或singlefile模式
+输出DASH：只能singlefile模式
+
+- playready：
+可以用于HLS和DASH，切片格式只能是mp4
+输出HLS：可以使用切片模式或singlefile模式
+输出DASH：只能singlefile模式
+
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -107,16 +177,16 @@ public class DrmInfo extends AbstractModel {
     }
 
     /**
-     * Get FairPlay, WideVine， PlayReady 加密信息。 
-     * @return SpekeDrm FairPlay, WideVine， PlayReady 加密信息。
+     * Get FairPlay，WideVine，PlayReady 加密信息。 
+     * @return SpekeDrm FairPlay，WideVine，PlayReady 加密信息。
      */
     public SpekeDrm getSpekeDrm() {
         return this.SpekeDrm;
     }
 
     /**
-     * Set FairPlay, WideVine， PlayReady 加密信息。
-     * @param SpekeDrm FairPlay, WideVine， PlayReady 加密信息。
+     * Set FairPlay，WideVine，PlayReady 加密信息。
+     * @param SpekeDrm FairPlay，WideVine，PlayReady 加密信息。
      */
     public void setSpekeDrm(SpekeDrm SpekeDrm) {
         this.SpekeDrm = SpekeDrm;

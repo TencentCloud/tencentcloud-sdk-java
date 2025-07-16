@@ -172,6 +172,20 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *发起视频评测任务，功能包括：
+
+1. 对一个原视频和多个转码后的视频进行评分。
+2. 计算不同转码方式的 BD-Rate。
+     * @param req CreateMediaEvaluationRequest
+     * @return CreateMediaEvaluationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMediaEvaluationResponse CreateMediaEvaluation(CreateMediaEvaluationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMediaEvaluation", CreateMediaEvaluationResponse.class);
+    }
+
+    /**
      *该接口用于创建素材样本，用于通过五官定位等技术，进行内容识别、内容不适宜等视频处理。
      * @param req CreatePersonSampleRequest
      * @return CreatePersonSampleResponse

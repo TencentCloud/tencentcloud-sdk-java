@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class DeleteAuditKeywordsResponse extends AbstractModel {
 
     /**
+    * 成功删除关键词的数量。
+    */
+    @SerializedName("SuccessCount")
+    @Expose
+    private Long SuccessCount;
+
+    /**
+    * 关键词详情列表。
+    */
+    @SerializedName("Infos")
+    @Expose
+    private AuditKeywordDeleteDetail [] Infos;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 成功删除关键词的数量。 
+     * @return SuccessCount 成功删除关键词的数量。
+     */
+    public Long getSuccessCount() {
+        return this.SuccessCount;
+    }
+
+    /**
+     * Set 成功删除关键词的数量。
+     * @param SuccessCount 成功删除关键词的数量。
+     */
+    public void setSuccessCount(Long SuccessCount) {
+        this.SuccessCount = SuccessCount;
+    }
+
+    /**
+     * Get 关键词详情列表。 
+     * @return Infos 关键词详情列表。
+     */
+    public AuditKeywordDeleteDetail [] getInfos() {
+        return this.Infos;
+    }
+
+    /**
+     * Set 关键词详情列表。
+     * @param Infos 关键词详情列表。
+     */
+    public void setInfos(AuditKeywordDeleteDetail [] Infos) {
+        this.Infos = Infos;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,15 @@ public class DeleteAuditKeywordsResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteAuditKeywordsResponse(DeleteAuditKeywordsResponse source) {
+        if (source.SuccessCount != null) {
+            this.SuccessCount = new Long(source.SuccessCount);
+        }
+        if (source.Infos != null) {
+            this.Infos = new AuditKeywordDeleteDetail[source.Infos.length];
+            for (int i = 0; i < source.Infos.length; i++) {
+                this.Infos[i] = new AuditKeywordDeleteDetail(source.Infos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +119,8 @@ public class DeleteAuditKeywordsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
+        this.setParamArrayObj(map, prefix + "Infos.", this.Infos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

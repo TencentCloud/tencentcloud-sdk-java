@@ -38,6 +38,13 @@ public class SlaveZoneAttrItem extends AbstractModel {
     private String BinlogSyncWay;
 
     /**
+    * 半同步超时时间，单位ms
+    */
+    @SerializedName("SemiSyncTimeout")
+    @Expose
+    private Long SemiSyncTimeout;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -69,6 +76,22 @@ public class SlaveZoneAttrItem extends AbstractModel {
         this.BinlogSyncWay = BinlogSyncWay;
     }
 
+    /**
+     * Get 半同步超时时间，单位ms 
+     * @return SemiSyncTimeout 半同步超时时间，单位ms
+     */
+    public Long getSemiSyncTimeout() {
+        return this.SemiSyncTimeout;
+    }
+
+    /**
+     * Set 半同步超时时间，单位ms
+     * @param SemiSyncTimeout 半同步超时时间，单位ms
+     */
+    public void setSemiSyncTimeout(Long SemiSyncTimeout) {
+        this.SemiSyncTimeout = SemiSyncTimeout;
+    }
+
     public SlaveZoneAttrItem() {
     }
 
@@ -83,6 +106,9 @@ public class SlaveZoneAttrItem extends AbstractModel {
         if (source.BinlogSyncWay != null) {
             this.BinlogSyncWay = new String(source.BinlogSyncWay);
         }
+        if (source.SemiSyncTimeout != null) {
+            this.SemiSyncTimeout = new Long(source.SemiSyncTimeout);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class SlaveZoneAttrItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "BinlogSyncWay", this.BinlogSyncWay);
+        this.setParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
 
     }
 }

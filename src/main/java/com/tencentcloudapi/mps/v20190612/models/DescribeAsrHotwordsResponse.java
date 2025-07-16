@@ -32,7 +32,6 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
     * 当前热词库 id 状态，为 0 表示查询的时刻，没有模板绑定这个热词库，可以删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
     * 热词库的名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -51,7 +49,6 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 文件热词库为 1，返回创建是上传的文件内容
 
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -59,7 +56,6 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
     * 热词文件上传时的文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -76,7 +72,6 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
     * 热词库文本，根据 Type 区分
 如果 Type 为 0，是热词库字符串
 如果 Type 是 1，是热词库文本文件的文件内容 base64 编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -84,7 +79,6 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
     * 当前热词库包含的词语数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WordCount")
     @Expose
@@ -92,7 +86,6 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
     * 分页偏移量，默认值：0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Offset")
     @Expose
@@ -100,7 +93,6 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
     * 返回记录条数，默认值：10，最大值：100。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Limit")
     @Expose
@@ -108,7 +100,6 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
     * 热词库创建时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -116,7 +107,6 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
     * 热词库修改时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -146,10 +136,8 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
     }
 
     /**
-     * Get 当前热词库 id 状态，为 0 表示查询的时刻，没有模板绑定这个热词库，可以删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前热词库 id 状态，为 0 表示查询的时刻，没有模板绑定这个热词库，可以删除 
      * @return Status 当前热词库 id 状态，为 0 表示查询的时刻，没有模板绑定这个热词库，可以删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -157,19 +145,15 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
      * Set 当前热词库 id 状态，为 0 表示查询的时刻，没有模板绑定这个热词库，可以删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 当前热词库 id 状态，为 0 表示查询的时刻，没有模板绑定这个热词库，可以删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 热词库的名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 热词库的名称 
      * @return Name 热词库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -177,9 +161,7 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
      * Set 热词库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 热词库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -189,13 +171,11 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
      * Get 临时热词库为 0，返回创建时候的字符串
 文件热词库为 1，返回创建是上传的文件内容
 
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Type 临时热词库为 0，返回创建时候的字符串
 文件热词库为 1，返回创建是上传的文件内容
 
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -206,22 +186,18 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 文件热词库为 1，返回创建是上传的文件内容
 
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 临时热词库为 0，返回创建时候的字符串
 文件热词库为 1，返回创建是上传的文件内容
 
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 热词文件上传时的文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 热词文件上传时的文件名 
      * @return FileName 热词文件上传时的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -229,9 +205,7 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
      * Set 热词文件上传时的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 热词文件上传时的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -256,12 +230,10 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
     /**
      * Get 热词库文本，根据 Type 区分
 如果 Type 为 0，是热词库字符串
-如果 Type 是 1，是热词库文本文件的文件内容 base64 编码
-注意：此字段可能返回 null，表示取不到有效值。 
+如果 Type 是 1，是热词库文本文件的文件内容 base64 编码 
      * @return Content 热词库文本，根据 Type 区分
 如果 Type 为 0，是热词库字符串
 如果 Type 是 1，是热词库文本文件的文件内容 base64 编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -271,21 +243,17 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
      * Set 热词库文本，根据 Type 区分
 如果 Type 为 0，是热词库字符串
 如果 Type 是 1，是热词库文本文件的文件内容 base64 编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 热词库文本，根据 Type 区分
 如果 Type 为 0，是热词库字符串
 如果 Type 是 1，是热词库文本文件的文件内容 base64 编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 当前热词库包含的词语数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前热词库包含的词语数量 
      * @return WordCount 当前热词库包含的词语数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWordCount() {
         return this.WordCount;
@@ -293,19 +261,15 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
      * Set 当前热词库包含的词语数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WordCount 当前热词库包含的词语数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWordCount(Long WordCount) {
         this.WordCount = WordCount;
     }
 
     /**
-     * Get 分页偏移量，默认值：0。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页偏移量，默认值：0。 
      * @return Offset 分页偏移量，默认值：0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffset() {
         return this.Offset;
@@ -313,19 +277,15 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
      * Set 分页偏移量，默认值：0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Offset 分页偏移量，默认值：0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回记录条数，默认值：10，最大值：100。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回记录条数，默认值：10，最大值：100。 
      * @return Limit 返回记录条数，默认值：10，最大值：100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLimit() {
         return this.Limit;
@@ -333,19 +293,15 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
      * Set 返回记录条数，默认值：10，最大值：100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Limit 返回记录条数，默认值：10，最大值：100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 热词库创建时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 热词库创建时间 ISOUTC 格式 "2006-01-02T15:04:05Z" 
      * @return CreateTime 热词库创建时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -353,19 +309,15 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
      * Set 热词库创建时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 热词库创建时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 热词库修改时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 热词库修改时间 ISOUTC 格式 "2006-01-02T15:04:05Z" 
      * @return UpdateTime 热词库修改时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -373,9 +325,7 @@ public class DescribeAsrHotwordsResponse extends AbstractModel {
 
     /**
      * Set 热词库修改时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 热词库修改时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

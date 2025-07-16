@@ -31,7 +31,7 @@ public class ComposeSubtitleItem extends AbstractModel {
     private String StyleId;
 
     /**
-    * 字幕文本。
+    * 字幕文本。<br/>注：长文本可能超出画面范围，建议使用 \n 进行换行。
     */
     @SerializedName("Text")
     @Expose
@@ -61,16 +61,16 @@ public class ComposeSubtitleItem extends AbstractModel {
     }
 
     /**
-     * Get 字幕文本。 
-     * @return Text 字幕文本。
+     * Get 字幕文本。<br/>注：长文本可能超出画面范围，建议使用 \n 进行换行。 
+     * @return Text 字幕文本。<br/>注：长文本可能超出画面范围，建议使用 \n 进行换行。
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 字幕文本。
-     * @param Text 字幕文本。
+     * Set 字幕文本。<br/>注：长文本可能超出画面范围，建议使用 \n 进行换行。
+     * @param Text 字幕文本。<br/>注：长文本可能超出画面范围，建议使用 \n 进行换行。
      */
     public void setText(String Text) {
         this.Text = Text;

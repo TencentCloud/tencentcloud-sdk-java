@@ -30,7 +30,7 @@ public class TaskNotifyConfig extends AbstractModel {
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
 <li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
+<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
     */
     @SerializedName("NotifyType")
     @Expose
@@ -89,7 +89,6 @@ public class TaskNotifyConfig extends AbstractModel {
 
     /**
     * 用于生成回调签名的key。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotifyKey")
     @Expose
@@ -102,14 +101,14 @@ public class TaskNotifyConfig extends AbstractModel {
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
 <li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font> 
+<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font> 
      * @return NotifyType 通知类型，可选值：
 <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
 <li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
+<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
      */
     public String getNotifyType() {
         return this.NotifyType;
@@ -122,14 +121,14 @@ public class TaskNotifyConfig extends AbstractModel {
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
 <li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
+<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
      * @param NotifyType 通知类型，可选值：
 <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
 <li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
-<font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
+<font color="red"> 注：不填或为空时默认 TDMQ-CMQ，如需采用其他类型需填写对应类型值；如果使用TDMQ-CMQ消息队列，任务回包过大可能会写入队列失败 </font>
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
@@ -256,10 +255,8 @@ public class TaskNotifyConfig extends AbstractModel {
     }
 
     /**
-     * Get 用于生成回调签名的key。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用于生成回调签名的key。 
      * @return NotifyKey 用于生成回调签名的key。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNotifyKey() {
         return this.NotifyKey;
@@ -267,9 +264,7 @@ public class TaskNotifyConfig extends AbstractModel {
 
     /**
      * Set 用于生成回调签名的key。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotifyKey 用于生成回调签名的key。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotifyKey(String NotifyKey) {
         this.NotifyKey = NotifyKey;

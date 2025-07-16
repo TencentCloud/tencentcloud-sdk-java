@@ -45,6 +45,13 @@ public class AddClusterSlaveZoneRequest extends AbstractModel {
     private String BinlogSyncWay;
 
     /**
+    * 半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。
+    */
+    @SerializedName("SemiSyncTimeout")
+    @Expose
+    private Long SemiSyncTimeout;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -92,6 +99,22 @@ public class AddClusterSlaveZoneRequest extends AbstractModel {
         this.BinlogSyncWay = BinlogSyncWay;
     }
 
+    /**
+     * Get 半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。 
+     * @return SemiSyncTimeout 半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。
+     */
+    public Long getSemiSyncTimeout() {
+        return this.SemiSyncTimeout;
+    }
+
+    /**
+     * Set 半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。
+     * @param SemiSyncTimeout 半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。最低设置为1000ms，最高支持4294967295ms，默认10000ms。
+     */
+    public void setSemiSyncTimeout(Long SemiSyncTimeout) {
+        this.SemiSyncTimeout = SemiSyncTimeout;
+    }
+
     public AddClusterSlaveZoneRequest() {
     }
 
@@ -109,6 +132,9 @@ public class AddClusterSlaveZoneRequest extends AbstractModel {
         if (source.BinlogSyncWay != null) {
             this.BinlogSyncWay = new String(source.BinlogSyncWay);
         }
+        if (source.SemiSyncTimeout != null) {
+            this.SemiSyncTimeout = new Long(source.SemiSyncTimeout);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class AddClusterSlaveZoneRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
         this.setParamSimple(map, prefix + "BinlogSyncWay", this.BinlogSyncWay);
+        this.setParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
 
     }
 }

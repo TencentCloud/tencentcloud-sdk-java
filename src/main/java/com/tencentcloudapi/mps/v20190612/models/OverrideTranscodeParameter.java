@@ -72,7 +72,6 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
     * 字幕流配置参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubtitleTemplate")
     @Expose
@@ -80,7 +79,6 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
     * 外挂音轨参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddonAudioStream")
     @Expose
@@ -88,7 +86,6 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
     * 转码扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StdExtInfo")
     @Expose
@@ -96,7 +93,6 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
     * 要插入的字幕文件。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddOnSubtitles")
     @Expose
@@ -219,10 +215,8 @@ public class OverrideTranscodeParameter extends AbstractModel {
     }
 
     /**
-     * Get 字幕流配置参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字幕流配置参数。 
      * @return SubtitleTemplate 字幕流配置参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubtitleTemplate getSubtitleTemplate() {
         return this.SubtitleTemplate;
@@ -230,19 +224,15 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
      * Set 字幕流配置参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubtitleTemplate 字幕流配置参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
         this.SubtitleTemplate = SubtitleTemplate;
     }
 
     /**
-     * Get 外挂音轨参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外挂音轨参数。 
      * @return AddonAudioStream 外挂音轨参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaInputInfo [] getAddonAudioStream() {
         return this.AddonAudioStream;
@@ -250,19 +240,15 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
      * Set 外挂音轨参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddonAudioStream 外挂音轨参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddonAudioStream(MediaInputInfo [] AddonAudioStream) {
         this.AddonAudioStream = AddonAudioStream;
     }
 
     /**
-     * Get 转码扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转码扩展字段。 
      * @return StdExtInfo 转码扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
@@ -270,19 +256,15 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
      * Set 转码扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StdExtInfo 转码扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;
     }
 
     /**
-     * Get 要插入的字幕文件。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 要插入的字幕文件。 
      * @return AddOnSubtitles 要插入的字幕文件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AddOnSubtitle [] getAddOnSubtitles() {
         return this.AddOnSubtitles;
@@ -290,9 +272,7 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
      * Set 要插入的字幕文件。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddOnSubtitles 要插入的字幕文件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
         this.AddOnSubtitles = AddOnSubtitles;

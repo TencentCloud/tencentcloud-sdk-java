@@ -50,6 +50,13 @@ public class GetReconstructDocumentResultResponse extends AbstractModel {
     private ReconstructDocumentFailedPage [] FailedPages;
 
     /**
+    * 文档拆分任务的用量	
+    */
+    @SerializedName("Usage")
+    @Expose
+    private DocumentUsage Usage;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -125,6 +132,22 @@ public class GetReconstructDocumentResultResponse extends AbstractModel {
     }
 
     /**
+     * Get 文档拆分任务的用量	 
+     * @return Usage 文档拆分任务的用量	
+     */
+    public DocumentUsage getUsage() {
+        return this.Usage;
+    }
+
+    /**
+     * Set 文档拆分任务的用量	
+     * @param Usage 文档拆分任务的用量	
+     */
+    public void setUsage(DocumentUsage Usage) {
+        this.Usage = Usage;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -160,6 +183,9 @@ public class GetReconstructDocumentResultResponse extends AbstractModel {
                 this.FailedPages[i] = new ReconstructDocumentFailedPage(source.FailedPages[i]);
             }
         }
+        if (source.Usage != null) {
+            this.Usage = new DocumentUsage(source.Usage);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -173,6 +199,7 @@ public class GetReconstructDocumentResultResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DocumentRecognizeResultUrl", this.DocumentRecognizeResultUrl);
         this.setParamArrayObj(map, prefix + "FailedPages.", this.FailedPages);
+        this.setParamObj(map, prefix + "Usage.", this.Usage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

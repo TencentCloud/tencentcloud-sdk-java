@@ -138,6 +138,50 @@ public class CtemClient extends AbstractClient{
     }
 
     /**
+     *查询仿冒应用
+     * @param req DescribeFakeAppsRequest
+     * @return DescribeFakeAppsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFakeAppsResponse DescribeFakeApps(DescribeFakeAppsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFakeApps", DescribeFakeAppsResponse.class);
+    }
+
+    /**
+     *查询仿冒小程序
+     * @param req DescribeFakeMiniProgramsRequest
+     * @return DescribeFakeMiniProgramsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFakeMiniProgramsResponse DescribeFakeMiniPrograms(DescribeFakeMiniProgramsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFakeMiniPrograms", DescribeFakeMiniProgramsResponse.class);
+    }
+
+    /**
+     *查询仿冒网站
+     * @param req DescribeFakeWebsitesRequest
+     * @return DescribeFakeWebsitesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFakeWebsitesResponse DescribeFakeWebsites(DescribeFakeWebsitesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFakeWebsites", DescribeFakeWebsitesResponse.class);
+    }
+
+    /**
+     *查询仿冒公众号
+     * @param req DescribeFakeWechatOfficialsRequest
+     * @return DescribeFakeWechatOfficialsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFakeWechatOfficialsResponse DescribeFakeWechatOfficials(DescribeFakeWechatOfficialsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFakeWechatOfficials", DescribeFakeWechatOfficialsResponse.class);
+    }
+
+    /**
      *查看Github泄露数据
      * @param req DescribeGithubsRequest
      * @return DescribeGithubsResponse

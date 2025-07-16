@@ -74,6 +74,13 @@ public class ClusterOption extends AbstractModel {
     private Long SystemNodeCount;
 
     /**
+    * 纳管环境自动升配
+    */
+    @SerializedName("AutoUpgradeClusterLevel")
+    @Expose
+    private Boolean AutoUpgradeClusterLevel;
+
+    /**
      * Get 计算集群可用区。 
      * @return Zone 计算集群可用区。
      */
@@ -189,6 +196,22 @@ public class ClusterOption extends AbstractModel {
         this.SystemNodeCount = SystemNodeCount;
     }
 
+    /**
+     * Get 纳管环境自动升配 
+     * @return AutoUpgradeClusterLevel 纳管环境自动升配
+     */
+    public Boolean getAutoUpgradeClusterLevel() {
+        return this.AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Set 纳管环境自动升配
+     * @param AutoUpgradeClusterLevel 纳管环境自动升配
+     */
+    public void setAutoUpgradeClusterLevel(Boolean AutoUpgradeClusterLevel) {
+        this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
+    }
+
     public ClusterOption() {
     }
 
@@ -218,6 +241,9 @@ public class ClusterOption extends AbstractModel {
         if (source.SystemNodeCount != null) {
             this.SystemNodeCount = new Long(source.SystemNodeCount);
         }
+        if (source.AutoUpgradeClusterLevel != null) {
+            this.AutoUpgradeClusterLevel = new Boolean(source.AutoUpgradeClusterLevel);
+        }
     }
 
 
@@ -232,6 +258,7 @@ public class ClusterOption extends AbstractModel {
         this.setParamObj(map, prefix + "LimitRange.", this.LimitRange);
         this.setParamSimple(map, prefix + "SystemNodeInstanceType", this.SystemNodeInstanceType);
         this.setParamSimple(map, prefix + "SystemNodeCount", this.SystemNodeCount);
+        this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
 
     }
 }

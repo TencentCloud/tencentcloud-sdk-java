@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class CreateAuditKeywordsRequest extends AbstractModel {
 
+    /**
+    * 关键词列表。
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private AuditKeyword [] Keywords;
+
+    /**
+    * 直播审核词库Id。
+    */
+    @SerializedName("LibId")
+    @Expose
+    private String LibId;
+
+    /**
+     * Get 关键词列表。 
+     * @return Keywords 关键词列表。
+     */
+    public AuditKeyword [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set 关键词列表。
+     * @param Keywords 关键词列表。
+     */
+    public void setKeywords(AuditKeyword [] Keywords) {
+        this.Keywords = Keywords;
+    }
+
+    /**
+     * Get 直播审核词库Id。 
+     * @return LibId 直播审核词库Id。
+     */
+    public String getLibId() {
+        return this.LibId;
+    }
+
+    /**
+     * Set 直播审核词库Id。
+     * @param LibId 直播审核词库Id。
+     */
+    public void setLibId(String LibId) {
+        this.LibId = LibId;
+    }
+
     public CreateAuditKeywordsRequest() {
     }
 
@@ -31,6 +77,15 @@ public class CreateAuditKeywordsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateAuditKeywordsRequest(CreateAuditKeywordsRequest source) {
+        if (source.Keywords != null) {
+            this.Keywords = new AuditKeyword[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new AuditKeyword(source.Keywords[i]);
+            }
+        }
+        if (source.LibId != null) {
+            this.LibId = new String(source.LibId);
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class CreateAuditKeywordsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Keywords.", this.Keywords);
+        this.setParamSimple(map, prefix + "LibId", this.LibId);
 
     }
 }

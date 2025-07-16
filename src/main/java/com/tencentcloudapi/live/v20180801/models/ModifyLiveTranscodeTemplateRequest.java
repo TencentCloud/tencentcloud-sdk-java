@@ -194,6 +194,22 @@ baseline/main/high。
     private String DRMTracks;
 
     /**
+    * 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+    */
+    @SerializedName("IsAdaptiveBitRate")
+    @Expose
+    private Long IsAdaptiveBitRate;
+
+    /**
+    * 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+    */
+    @SerializedName("AdaptiveChildren")
+    @Expose
+    private ChildTemplateInfo [] AdaptiveChildren;
+
+    /**
      * Get 模板 Id。 
      * @return TemplateId 模板 Id。
      */
@@ -621,6 +637,46 @@ baseline/main/high。
         this.DRMTracks = DRMTracks;
     }
 
+    /**
+     * Get 是否创建自适应码率，默认值 0。
+0：否。
+1：是。 
+     * @return IsAdaptiveBitRate 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+     */
+    public Long getIsAdaptiveBitRate() {
+        return this.IsAdaptiveBitRate;
+    }
+
+    /**
+     * Set 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+     * @param IsAdaptiveBitRate 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+     */
+    public void setIsAdaptiveBitRate(Long IsAdaptiveBitRate) {
+        this.IsAdaptiveBitRate = IsAdaptiveBitRate;
+    }
+
+    /**
+     * Get 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。 
+     * @return AdaptiveChildren 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+     */
+    public ChildTemplateInfo [] getAdaptiveChildren() {
+        return this.AdaptiveChildren;
+    }
+
+    /**
+     * Set 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+     * @param AdaptiveChildren 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+     */
+    public void setAdaptiveChildren(ChildTemplateInfo [] AdaptiveChildren) {
+        this.AdaptiveChildren = AdaptiveChildren;
+    }
+
     public ModifyLiveTranscodeTemplateRequest() {
     }
 
@@ -692,6 +748,15 @@ baseline/main/high。
         if (source.DRMTracks != null) {
             this.DRMTracks = new String(source.DRMTracks);
         }
+        if (source.IsAdaptiveBitRate != null) {
+            this.IsAdaptiveBitRate = new Long(source.IsAdaptiveBitRate);
+        }
+        if (source.AdaptiveChildren != null) {
+            this.AdaptiveChildren = new ChildTemplateInfo[source.AdaptiveChildren.length];
+            for (int i = 0; i < source.AdaptiveChildren.length; i++) {
+                this.AdaptiveChildren[i] = new ChildTemplateInfo(source.AdaptiveChildren[i]);
+            }
+        }
     }
 
 
@@ -720,6 +785,8 @@ baseline/main/high。
         this.setParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
         this.setParamSimple(map, prefix + "DRMType", this.DRMType);
         this.setParamSimple(map, prefix + "DRMTracks", this.DRMTracks);
+        this.setParamSimple(map, prefix + "IsAdaptiveBitRate", this.IsAdaptiveBitRate);
+        this.setParamArrayObj(map, prefix + "AdaptiveChildren.", this.AdaptiveChildren);
 
     }
 }

@@ -262,6 +262,13 @@ public class Machine extends AbstractModel {
     private String Remark;
 
     /**
+    * 主机安全agent版本
+    */
+    @SerializedName("AgentVersion")
+    @Expose
+    private String AgentVersion;
+
+    /**
      * Get 主机名称。 
      * @return MachineName 主机名称。
      */
@@ -817,6 +824,22 @@ public class Machine extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 主机安全agent版本 
+     * @return AgentVersion 主机安全agent版本
+     */
+    public String getAgentVersion() {
+        return this.AgentVersion;
+    }
+
+    /**
+     * Set 主机安全agent版本
+     * @param AgentVersion 主机安全agent版本
+     */
+    public void setAgentVersion(String AgentVersion) {
+        this.AgentVersion = AgentVersion;
+    }
+
     public Machine() {
     }
 
@@ -930,6 +953,9 @@ public class Machine extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.AgentVersion != null) {
+            this.AgentVersion = new String(source.AgentVersion);
+        }
     }
 
 
@@ -970,6 +996,7 @@ public class Machine extends AbstractModel {
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
 
     }
 }

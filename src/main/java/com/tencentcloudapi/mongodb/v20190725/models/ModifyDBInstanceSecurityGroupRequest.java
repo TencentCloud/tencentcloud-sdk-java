@@ -32,6 +32,7 @@ public class ModifyDBInstanceSecurityGroupRequest extends AbstractModel {
 
     /**
     * 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+**注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -54,8 +55,10 @@ public class ModifyDBInstanceSecurityGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。 
+     * Get 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+**注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。 
      * @return SecurityGroupIds 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+**注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
@@ -63,7 +66,9 @@ public class ModifyDBInstanceSecurityGroupRequest extends AbstractModel {
 
     /**
      * Set 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+**注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      * @param SecurityGroupIds 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+**注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

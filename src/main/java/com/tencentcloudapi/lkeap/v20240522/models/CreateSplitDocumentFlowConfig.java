@@ -63,6 +63,13 @@ public class CreateSplitDocumentFlowConfig extends AbstractModel {
     private Long MaxChunkSize;
 
     /**
+    * 是否忽略返回失败页码
+    */
+    @SerializedName("IgnoreFailedPage")
+    @Expose
+    private Boolean IgnoreFailedPage;
+
+    /**
      * Get Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
@@ -178,6 +185,22 @@ public class CreateSplitDocumentFlowConfig extends AbstractModel {
         this.MaxChunkSize = MaxChunkSize;
     }
 
+    /**
+     * Get 是否忽略返回失败页码 
+     * @return IgnoreFailedPage 是否忽略返回失败页码
+     */
+    public Boolean getIgnoreFailedPage() {
+        return this.IgnoreFailedPage;
+    }
+
+    /**
+     * Set 是否忽略返回失败页码
+     * @param IgnoreFailedPage 是否忽略返回失败页码
+     */
+    public void setIgnoreFailedPage(Boolean IgnoreFailedPage) {
+        this.IgnoreFailedPage = IgnoreFailedPage;
+    }
+
     public CreateSplitDocumentFlowConfig() {
     }
 
@@ -198,6 +221,9 @@ public class CreateSplitDocumentFlowConfig extends AbstractModel {
         if (source.MaxChunkSize != null) {
             this.MaxChunkSize = new Long(source.MaxChunkSize);
         }
+        if (source.IgnoreFailedPage != null) {
+            this.IgnoreFailedPage = new Boolean(source.IgnoreFailedPage);
+        }
     }
 
 
@@ -209,6 +235,7 @@ public class CreateSplitDocumentFlowConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ResultType", this.ResultType);
         this.setParamSimple(map, prefix + "EnableMllm", this.EnableMllm);
         this.setParamSimple(map, prefix + "MaxChunkSize", this.MaxChunkSize);
+        this.setParamSimple(map, prefix + "IgnoreFailedPage", this.IgnoreFailedPage);
 
     }
 }

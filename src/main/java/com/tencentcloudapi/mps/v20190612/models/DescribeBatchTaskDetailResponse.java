@@ -71,7 +71,6 @@ public class DescribeBatchTaskDetailResponse extends AbstractModel {
 
     /**
     * 视频处理任务信息，仅当 TaskType 为 BatchTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchTaskResult")
     @Expose
@@ -233,10 +232,8 @@ public class DescribeBatchTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 视频处理任务信息，仅当 TaskType 为 BatchTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频处理任务信息，仅当 TaskType 为 BatchTask，该字段有值。 
      * @return BatchTaskResult 视频处理任务信息，仅当 TaskType 为 BatchTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BatchSubTaskResult getBatchTaskResult() {
         return this.BatchTaskResult;
@@ -244,9 +241,7 @@ public class DescribeBatchTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 视频处理任务信息，仅当 TaskType 为 BatchTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchTaskResult 视频处理任务信息，仅当 TaskType 为 BatchTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchTaskResult(BatchSubTaskResult BatchTaskResult) {
         this.BatchTaskResult = BatchTaskResult;

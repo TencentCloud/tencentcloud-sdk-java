@@ -53,7 +53,6 @@ public class ScheduleSmartSubtitleTaskResult extends AbstractModel {
 
     /**
     * 识别任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Input")
     @Expose
@@ -61,7 +60,6 @@ public class ScheduleSmartSubtitleTaskResult extends AbstractModel {
 
     /**
     * 识别任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -69,7 +67,6 @@ public class ScheduleSmartSubtitleTaskResult extends AbstractModel {
 
     /**
     * 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginProcessTime")
     @Expose
@@ -77,7 +74,6 @@ public class ScheduleSmartSubtitleTaskResult extends AbstractModel {
 
     /**
     * 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishTime")
     @Expose
@@ -148,10 +144,8 @@ public class ScheduleSmartSubtitleTaskResult extends AbstractModel {
     }
 
     /**
-     * Get 识别任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 识别任务的输入。 
      * @return Input 识别任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartSubtitlesTaskInput getInput() {
         return this.Input;
@@ -159,19 +153,15 @@ public class ScheduleSmartSubtitleTaskResult extends AbstractModel {
 
     /**
      * Set 识别任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Input 识别任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInput(SmartSubtitlesTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 识别任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 识别任务的输出。 
      * @return Output 识别任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartSubtitlesResult [] getOutput() {
         return this.Output;
@@ -179,19 +169,15 @@ public class ScheduleSmartSubtitleTaskResult extends AbstractModel {
 
     /**
      * Set 识别任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 识别任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(SmartSubtitlesResult [] Output) {
         this.Output = Output;
     }
 
     /**
-     * Get 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。 
      * @return BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
@@ -199,19 +185,15 @@ public class ScheduleSmartSubtitleTaskResult extends AbstractModel {
 
     /**
      * Set 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。 
      * @return FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishTime() {
         return this.FinishTime;
@@ -219,9 +201,7 @@ public class ScheduleSmartSubtitleTaskResult extends AbstractModel {
 
     /**
      * Set 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

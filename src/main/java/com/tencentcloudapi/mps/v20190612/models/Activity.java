@@ -41,7 +41,6 @@ public class Activity extends AbstractModel {
 
 
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivityType")
     @Expose
@@ -49,7 +48,6 @@ public class Activity extends AbstractModel {
 
     /**
     * 后驱节点索引数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReardriveIndex")
     @Expose
@@ -80,8 +78,7 @@ public class Activity extends AbstractModel {
 <li>action-SmartSubtitles：智能字幕</li>
 
 
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return ActivityType 原子任务类型：
 <li>input: 起始节点</li>
 <li>output：终止节点</li>
@@ -99,7 +96,6 @@ public class Activity extends AbstractModel {
 
 
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActivityType() {
         return this.ActivityType;
@@ -123,7 +119,6 @@ public class Activity extends AbstractModel {
 
 
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivityType 原子任务类型：
 <li>input: 起始节点</li>
 <li>output：终止节点</li>
@@ -141,17 +136,14 @@ public class Activity extends AbstractModel {
 
 
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;
     }
 
     /**
-     * Get 后驱节点索引数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后驱节点索引数组 
      * @return ReardriveIndex 后驱节点索引数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getReardriveIndex() {
         return this.ReardriveIndex;
@@ -159,9 +151,7 @@ public class Activity extends AbstractModel {
 
     /**
      * Set 后驱节点索引数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReardriveIndex 后驱节点索引数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReardriveIndex(Long [] ReardriveIndex) {
         this.ReardriveIndex = ReardriveIndex;

@@ -52,9 +52,25 @@ public class ModifyConditionsTemplateRequestEventCondition extends AbstractModel
     private Long RuleID;
 
     /**
+    * 重构后的eventType
+    */
+    @SerializedName("MetricName")
+    @Expose
+    private String MetricName;
+
+    /**
+    * 事件描述信息
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 告警通知周期 
      * @return AlarmNotifyPeriod 告警通知周期
+     * @deprecated
      */
+    @Deprecated
     public String getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
@@ -62,7 +78,9 @@ public class ModifyConditionsTemplateRequestEventCondition extends AbstractModel
     /**
      * Set 告警通知周期
      * @param AlarmNotifyPeriod 告警通知周期
+     * @deprecated
      */
+    @Deprecated
     public void setAlarmNotifyPeriod(String AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
@@ -70,7 +88,9 @@ public class ModifyConditionsTemplateRequestEventCondition extends AbstractModel
     /**
      * Get 告警通知方式 
      * @return AlarmNotifyType 告警通知方式
+     * @deprecated
      */
+    @Deprecated
     public String getAlarmNotifyType() {
         return this.AlarmNotifyType;
     }
@@ -78,7 +98,9 @@ public class ModifyConditionsTemplateRequestEventCondition extends AbstractModel
     /**
      * Set 告警通知方式
      * @param AlarmNotifyType 告警通知方式
+     * @deprecated
      */
+    @Deprecated
     public void setAlarmNotifyType(String AlarmNotifyType) {
         this.AlarmNotifyType = AlarmNotifyType;
     }
@@ -86,7 +108,9 @@ public class ModifyConditionsTemplateRequestEventCondition extends AbstractModel
     /**
      * Get 事件ID 
      * @return EventID 事件ID
+     * @deprecated
      */
+    @Deprecated
     public String getEventID() {
         return this.EventID;
     }
@@ -94,7 +118,9 @@ public class ModifyConditionsTemplateRequestEventCondition extends AbstractModel
     /**
      * Set 事件ID
      * @param EventID 事件ID
+     * @deprecated
      */
+    @Deprecated
     public void setEventID(String EventID) {
         this.EventID = EventID;
     }
@@ -102,7 +128,9 @@ public class ModifyConditionsTemplateRequestEventCondition extends AbstractModel
     /**
      * Get 规则ID 
      * @return RuleID 规则ID
+     * @deprecated
      */
+    @Deprecated
     public Long getRuleID() {
         return this.RuleID;
     }
@@ -110,9 +138,43 @@ public class ModifyConditionsTemplateRequestEventCondition extends AbstractModel
     /**
      * Set 规则ID
      * @param RuleID 规则ID
+     * @deprecated
      */
+    @Deprecated
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
+    }
+
+    /**
+     * Get 重构后的eventType 
+     * @return MetricName 重构后的eventType
+     */
+    public String getMetricName() {
+        return this.MetricName;
+    }
+
+    /**
+     * Set 重构后的eventType
+     * @param MetricName 重构后的eventType
+     */
+    public void setMetricName(String MetricName) {
+        this.MetricName = MetricName;
+    }
+
+    /**
+     * Get 事件描述信息 
+     * @return Description 事件描述信息
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 事件描述信息
+     * @param Description 事件描述信息
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     public ModifyConditionsTemplateRequestEventCondition() {
@@ -135,6 +197,12 @@ public class ModifyConditionsTemplateRequestEventCondition extends AbstractModel
         if (source.RuleID != null) {
             this.RuleID = new Long(source.RuleID);
         }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -146,6 +214,8 @@ public class ModifyConditionsTemplateRequestEventCondition extends AbstractModel
         this.setParamSimple(map, prefix + "AlarmNotifyType", this.AlarmNotifyType);
         this.setParamSimple(map, prefix + "EventID", this.EventID);
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
+        this.setParamSimple(map, prefix + "MetricName", this.MetricName);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

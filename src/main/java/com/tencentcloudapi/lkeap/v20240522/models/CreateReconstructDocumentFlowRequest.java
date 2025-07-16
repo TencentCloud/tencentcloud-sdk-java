@@ -41,8 +41,8 @@ public class CreateReconstructDocumentFlowRequest extends AbstractModel {
     private String FileType;
 
     /**
-    * 文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+    * 说明：文件的 URL 地址。
+备注：文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
     */
     @SerializedName("FileUrl")
@@ -61,23 +61,27 @@ public class CreateReconstructDocumentFlowRequest extends AbstractModel {
     private String FileBase64;
 
     /**
-    * 文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+    * 说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无
     */
     @SerializedName("FileStartPageNumber")
     @Expose
     private Long FileStartPageNumber;
 
     /**
-    * 文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+    * 说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无
     */
     @SerializedName("FileEndPageNumber")
     @Expose
     private Long FileEndPageNumber;
 
     /**
-    * 创建文档解析任务配置信息。
+    * 说明：创建文档解析任务配置信息。
+备注：可设置结果的返回格式
+默认值：无
     */
     @SerializedName("Config")
     @Expose
@@ -140,11 +144,11 @@ public class CreateReconstructDocumentFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+     * Get 说明：文件的 URL 地址。
+备注：文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749) 
-     * @return FileUrl 文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+     * @return FileUrl 说明：文件的 URL 地址。
+备注：文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
      */
     public String getFileUrl() {
@@ -152,11 +156,11 @@ public class CreateReconstructDocumentFlowRequest extends AbstractModel {
     }
 
     /**
-     * Set 文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+     * Set 说明：文件的 URL 地址。
+备注：文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
-     * @param FileUrl 文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+     * @param FileUrl 说明：文件的 URL 地址。
+备注：文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
      */
     public void setFileUrl(String FileUrl) {
@@ -196,56 +200,72 @@ public class CreateReconstructDocumentFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。 
-     * @return FileStartPageNumber 文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+     * Get 说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无 
+     * @return FileStartPageNumber 说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无
      */
     public Long getFileStartPageNumber() {
         return this.FileStartPageNumber;
     }
 
     /**
-     * Set 文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
-     * @param FileStartPageNumber 文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+     * Set 说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无
+     * @param FileStartPageNumber 说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无
      */
     public void setFileStartPageNumber(Long FileStartPageNumber) {
         this.FileStartPageNumber = FileStartPageNumber;
     }
 
     /**
-     * Get 文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。 
-     * @return FileEndPageNumber 文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+     * Get 说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无 
+     * @return FileEndPageNumber 说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无
      */
     public Long getFileEndPageNumber() {
         return this.FileEndPageNumber;
     }
 
     /**
-     * Set 文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
-     * @param FileEndPageNumber 文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+     * Set 说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无
+     * @param FileEndPageNumber 说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无
      */
     public void setFileEndPageNumber(Long FileEndPageNumber) {
         this.FileEndPageNumber = FileEndPageNumber;
     }
 
     /**
-     * Get 创建文档解析任务配置信息。 
-     * @return Config 创建文档解析任务配置信息。
+     * Get 说明：创建文档解析任务配置信息。
+备注：可设置结果的返回格式
+默认值：无 
+     * @return Config 说明：创建文档解析任务配置信息。
+备注：可设置结果的返回格式
+默认值：无
      */
     public CreateReconstructDocumentFlowConfig getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 创建文档解析任务配置信息。
-     * @param Config 创建文档解析任务配置信息。
+     * Set 说明：创建文档解析任务配置信息。
+备注：可设置结果的返回格式
+默认值：无
+     * @param Config 说明：创建文档解析任务配置信息。
+备注：可设置结果的返回格式
+默认值：无
      */
     public void setConfig(CreateReconstructDocumentFlowConfig Config) {
         this.Config = Config;
