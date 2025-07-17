@@ -31,6 +31,13 @@ public class TaskIdListKey extends AbstractModel {
     private String TaskId;
 
     /**
+    * APP ID
+    */
+    @SerializedName("TargetAppId")
+    @Expose
+    private String TargetAppId;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -46,6 +53,22 @@ public class TaskIdListKey extends AbstractModel {
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get APP ID 
+     * @return TargetAppId APP ID
+     */
+    public String getTargetAppId() {
+        return this.TargetAppId;
+    }
+
+    /**
+     * Set APP ID
+     * @param TargetAppId APP ID
+     */
+    public void setTargetAppId(String TargetAppId) {
+        this.TargetAppId = TargetAppId;
+    }
+
     public TaskIdListKey() {
     }
 
@@ -57,6 +80,9 @@ public class TaskIdListKey extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.TargetAppId != null) {
+            this.TargetAppId = new String(source.TargetAppId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class TaskIdListKey extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "TargetAppId", this.TargetAppId);
 
     }
 }

@@ -38,7 +38,7 @@ public class CreateRuleRequest extends AbstractModel {
     private String EventBusId;
 
     /**
-    * 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+    * 事件规则名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
     */
     @SerializedName("RuleName")
     @Expose
@@ -52,7 +52,7 @@ public class CreateRuleRequest extends AbstractModel {
     private Boolean Enable;
 
     /**
-    * 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+    * 事件规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
     */
     @SerializedName("Description")
     @Expose
@@ -91,16 +91,16 @@ public class CreateRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符 
-     * @return RuleName 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+     * Get 事件规则名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符 
+     * @return RuleName 事件规则名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
-     * @param RuleName 事件集名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+     * Set 事件规则名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
+     * @param RuleName 事件规则名称，只能包含字母、中文、数字、下划线、连字符，以字母/中文开头，以数字、字母或中文结尾，2~60个字符
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
@@ -123,16 +123,16 @@ public class CreateRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符 
-     * @return Description 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+     * Get 事件规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符 
+     * @return Description 事件规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
-     * @param Description 事件集描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+     * Set 事件规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+     * @param Description 事件规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
      */
     public void setDescription(String Description) {
         this.Description = Description;

@@ -52,6 +52,13 @@ public class CreateAccessKeyCheckTaskRequest extends AbstractModel {
     private String [] SubUinList;
 
     /**
+    * 风险规则id列表
+    */
+    @SerializedName("RiskRuleIDList")
+    @Expose
+    private Long [] RiskRuleIDList;
+
+    /**
      * Get 集团账号的成员id 
      * @return MemberId 集团账号的成员id
      */
@@ -115,6 +122,22 @@ public class CreateAccessKeyCheckTaskRequest extends AbstractModel {
         this.SubUinList = SubUinList;
     }
 
+    /**
+     * Get 风险规则id列表 
+     * @return RiskRuleIDList 风险规则id列表
+     */
+    public Long [] getRiskRuleIDList() {
+        return this.RiskRuleIDList;
+    }
+
+    /**
+     * Set 风险规则id列表
+     * @param RiskRuleIDList 风险规则id列表
+     */
+    public void setRiskRuleIDList(Long [] RiskRuleIDList) {
+        this.RiskRuleIDList = RiskRuleIDList;
+    }
+
     public CreateAccessKeyCheckTaskRequest() {
     }
 
@@ -147,6 +170,12 @@ public class CreateAccessKeyCheckTaskRequest extends AbstractModel {
                 this.SubUinList[i] = new String(source.SubUinList[i]);
             }
         }
+        if (source.RiskRuleIDList != null) {
+            this.RiskRuleIDList = new Long[source.RiskRuleIDList.length];
+            for (int i = 0; i < source.RiskRuleIDList.length; i++) {
+                this.RiskRuleIDList[i] = new Long(source.RiskRuleIDList[i]);
+            }
+        }
     }
 
 
@@ -158,6 +187,7 @@ public class CreateAccessKeyCheckTaskRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RiskIDList.", this.RiskIDList);
         this.setParamArraySimple(map, prefix + "AccessKeyList.", this.AccessKeyList);
         this.setParamArraySimple(map, prefix + "SubUinList.", this.SubUinList);
+        this.setParamArraySimple(map, prefix + "RiskRuleIDList.", this.RiskRuleIDList);
 
     }
 }

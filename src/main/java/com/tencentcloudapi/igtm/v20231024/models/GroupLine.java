@@ -25,7 +25,6 @@ public class GroupLine extends AbstractModel {
 
     /**
     * 分组线路id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DnsLineId")
     @Expose
@@ -33,7 +32,6 @@ public class GroupLine extends AbstractModel {
 
     /**
     * 父节点 0为根节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Parent")
     @Expose
@@ -41,7 +39,6 @@ public class GroupLine extends AbstractModel {
 
     /**
     * 线路名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LineName")
     @Expose
@@ -49,7 +46,6 @@ public class GroupLine extends AbstractModel {
 
     /**
     * 10=9 DNSPod 线路 id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LineId")
     @Expose
@@ -57,7 +53,6 @@ public class GroupLine extends AbstractModel {
 
     /**
     * 是否已使用过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Useful")
     @Expose
@@ -65,7 +60,6 @@ public class GroupLine extends AbstractModel {
 
     /**
     * 0为未使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubGroup")
     @Expose
@@ -73,7 +67,6 @@ public class GroupLine extends AbstractModel {
 
     /**
     * 权限标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LinePackage")
     @Expose
@@ -81,17 +74,14 @@ public class GroupLine extends AbstractModel {
 
     /**
     * 1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-     * Get 分组线路id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组线路id 
      * @return DnsLineId 分组线路id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDnsLineId() {
         return this.DnsLineId;
@@ -99,19 +89,15 @@ public class GroupLine extends AbstractModel {
 
     /**
      * Set 分组线路id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DnsLineId 分组线路id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDnsLineId(Long DnsLineId) {
         this.DnsLineId = DnsLineId;
     }
 
     /**
-     * Get 父节点 0为根节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父节点 0为根节点 
      * @return Parent 父节点 0为根节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getParent() {
         return this.Parent;
@@ -119,19 +105,15 @@ public class GroupLine extends AbstractModel {
 
     /**
      * Set 父节点 0为根节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Parent 父节点 0为根节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParent(Long Parent) {
         this.Parent = Parent;
     }
 
     /**
-     * Get 线路名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 线路名 
      * @return LineName 线路名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLineName() {
         return this.LineName;
@@ -139,19 +121,15 @@ public class GroupLine extends AbstractModel {
 
     /**
      * Set 线路名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LineName 线路名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLineName(String LineName) {
         this.LineName = LineName;
     }
 
     /**
-     * Get 10=9 DNSPod 线路 id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 10=9 DNSPod 线路 id 
      * @return LineId 10=9 DNSPod 线路 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLineId() {
         return this.LineId;
@@ -159,19 +137,15 @@ public class GroupLine extends AbstractModel {
 
     /**
      * Set 10=9 DNSPod 线路 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LineId 10=9 DNSPod 线路 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLineId(String LineId) {
         this.LineId = LineId;
     }
 
     /**
-     * Get 是否已使用过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否已使用过 
      * @return Useful 是否已使用过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUseful() {
         return this.Useful;
@@ -179,19 +153,15 @@ public class GroupLine extends AbstractModel {
 
     /**
      * Set 是否已使用过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Useful 是否已使用过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseful(Boolean Useful) {
         this.Useful = Useful;
     }
 
     /**
-     * Get 0为未使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0为未使用 
      * @return SubGroup 0为未使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubGroup() {
         return this.SubGroup;
@@ -199,19 +169,15 @@ public class GroupLine extends AbstractModel {
 
     /**
      * Set 0为未使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubGroup 0为未使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubGroup(Long SubGroup) {
         this.SubGroup = SubGroup;
     }
 
     /**
-     * Get 权限标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限标识 
      * @return LinePackage 权限标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLinePackage() {
         return this.LinePackage;
@@ -219,19 +185,15 @@ public class GroupLine extends AbstractModel {
 
     /**
      * Set 权限标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LinePackage 权限标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLinePackage(Long LinePackage) {
         this.LinePackage = LinePackage;
     }
 
     /**
-     * Get 1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1 
      * @return Weight 1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -239,9 +201,7 @@ public class GroupLine extends AbstractModel {
 
     /**
      * Set 1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

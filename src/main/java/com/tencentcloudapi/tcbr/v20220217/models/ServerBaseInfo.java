@@ -87,6 +87,13 @@ public class ServerBaseInfo extends AbstractModel {
     private String TrafficType;
 
     /**
+    * 创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 服务名 
      * @return ServerName 服务名
      */
@@ -230,6 +237,22 @@ public class ServerBaseInfo extends AbstractModel {
         this.TrafficType = TrafficType;
     }
 
+    /**
+     * Get 创建时间 
+     * @return CreateTime 创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreateTime 创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public ServerBaseInfo() {
     }
 
@@ -271,6 +294,9 @@ public class ServerBaseInfo extends AbstractModel {
         if (source.TrafficType != null) {
             this.TrafficType = new String(source.TrafficType);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -287,6 +313,7 @@ public class ServerBaseInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "CustomDomainNames.", this.CustomDomainNames);
         this.setParamSimple(map, prefix + "ServerType", this.ServerType);
         this.setParamSimple(map, prefix + "TrafficType", this.TrafficType);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

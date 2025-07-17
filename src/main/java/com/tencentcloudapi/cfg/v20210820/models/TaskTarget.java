@@ -53,6 +53,13 @@ public class TaskTarget extends AbstractModel {
     private Long Source;
 
     /**
+    * 目标标签是否已被删除
+    */
+    @SerializedName("TargetStatus")
+    @Expose
+    private Long TargetStatus;
+
+    /**
      * Get 目标标签ID 
      * @return TargetId 目标标签ID
      */
@@ -120,6 +127,22 @@ public class TaskTarget extends AbstractModel {
         this.Source = Source;
     }
 
+    /**
+     * Get 目标标签是否已被删除 
+     * @return TargetStatus 目标标签是否已被删除
+     */
+    public Long getTargetStatus() {
+        return this.TargetStatus;
+    }
+
+    /**
+     * Set 目标标签是否已被删除
+     * @param TargetStatus 目标标签是否已被删除
+     */
+    public void setTargetStatus(Long TargetStatus) {
+        this.TargetStatus = TargetStatus;
+    }
+
     public TaskTarget() {
     }
 
@@ -140,6 +163,9 @@ public class TaskTarget extends AbstractModel {
         if (source.Source != null) {
             this.Source = new Long(source.Source);
         }
+        if (source.TargetStatus != null) {
+            this.TargetStatus = new Long(source.TargetStatus);
+        }
     }
 
 
@@ -151,6 +177,7 @@ public class TaskTarget extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetDesc", this.TargetDesc);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "TargetStatus", this.TargetStatus);
 
     }
 }

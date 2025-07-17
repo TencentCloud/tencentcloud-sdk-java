@@ -63,6 +63,22 @@ public class TrtcClient extends AbstractClient{
 
     /**
      *接口说明：
+启动云端审核功能，完成房间内的音视频切片，视频截帧，或者录制音频流，送审到指定的审核商，完成审核。
+
+您可以通过此接口实现如下目标：
+* 指定审核参数（ModerationParams）来指定审核需要的详细参数。
+* 指定存储参数（ModerationStorageParams）将命中的审核文件指定上传到您希望的云存储，目前支持腾讯云（对象存储COS）和第三方AWS
+     * @param req CreateCloudModerationRequest
+     * @return CreateCloudModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudModerationResponse CreateCloudModeration(CreateCloudModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudModeration", CreateCloudModerationResponse.class);
+    }
+
+    /**
+     *接口说明：
 启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。您可以通过此 API 接口把TRTC 房间中的每一路音视频流做单独的录制又或者多路视频画面合流混成一路。
 
 您可以通过此接口实现如下目标：
@@ -81,6 +97,22 @@ public class TrtcClient extends AbstractClient{
     public CreateCloudRecordingResponse CreateCloudRecording(CreateCloudRecordingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCloudRecording", CreateCloudRecordingResponse.class);
+    }
+
+    /**
+     *接口说明：
+启动云端切片功能，完成房间内的音视频切片，并上传到指定的云存储。
+
+您可以通过此接口实现如下目标：
+* 指定切片参数（SliceParams）来指定需要切片的主播的黑名单或者白名单。
+* 指定存储参数（SliceStorageParams）来指定上传到您希望的云存储，目前支持腾讯云（对象存储COS）和第三方AWS
+     * @param req CreateCloudSliceTaskRequest
+     * @return CreateCloudSliceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudSliceTaskResponse CreateCloudSliceTask(CreateCloudSliceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudSliceTask", CreateCloudSliceTaskResponse.class);
     }
 
     /**
@@ -106,6 +138,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *成功开启云端审核任务后，可以使用此接口来停止送审。
+     * @param req DeleteCloudModerationRequest
+     * @return DeleteCloudModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudModerationResponse DeleteCloudModeration(DeleteCloudModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudModeration", DeleteCloudModerationResponse.class);
+    }
+
+    /**
      *成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
      * @param req DeleteCloudRecordingRequest
      * @return DeleteCloudRecordingResponse
@@ -114,6 +157,17 @@ public class TrtcClient extends AbstractClient{
     public DeleteCloudRecordingResponse DeleteCloudRecording(DeleteCloudRecordingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudRecording", DeleteCloudRecordingResponse.class);
+    }
+
+    /**
+     *成功开启切片任务后，可以使用此接口来停止任务。停止切片成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
+     * @param req DeleteCloudSliceTaskRequest
+     * @return DeleteCloudSliceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudSliceTaskResponse DeleteCloudSliceTask(DeleteCloudSliceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudSliceTask", DeleteCloudSliceTaskResponse.class);
     }
 
     /**
@@ -177,6 +231,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *成功开启审核任务后，可以使用此接口来查询审核任务状态和订阅的黑白名单信息。仅在任务进行时有效，任务退出后查询将会返回错误。
+     * @param req DescribeCloudModerationRequest
+     * @return DescribeCloudModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudModerationResponse DescribeCloudModeration(DescribeCloudModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudModeration", DescribeCloudModerationResponse.class);
+    }
+
+    /**
      *成功开启录制后，可以使用此接口来查询录制状态。仅在录制任务进行时有效，录制退出后查询将会返回错误。
 录制文件上传到云点播VOD时，StorageFileList中不会返回录制文件信息，请订阅相关录制文件回调事件，获取录制文件信息。
      * @param req DescribeCloudRecordingRequest
@@ -186,6 +251,17 @@ public class TrtcClient extends AbstractClient{
     public DescribeCloudRecordingResponse DescribeCloudRecording(DescribeCloudRecordingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudRecording", DescribeCloudRecordingResponse.class);
+    }
+
+    /**
+     *成功开启切片后，可以使用此接口来查询切片任务状态。仅在任务进行时有效，任务退出后查询将会返回错误。
+     * @param req DescribeCloudSliceTaskRequest
+     * @return DescribeCloudSliceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudSliceTaskResponse DescribeCloudSliceTask(DescribeCloudSliceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudSliceTask", DescribeCloudSliceTaskResponse.class);
     }
 
     /**
@@ -571,6 +647,17 @@ xa0
     }
 
     /**
+     *成功开启云端审核任务后，可以使用此接口来更新订阅黑白名单。
+     * @param req ModifyCloudModerationRequest
+     * @return ModifyCloudModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudModerationResponse ModifyCloudModeration(ModifyCloudModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudModeration", ModifyCloudModerationResponse.class);
+    }
+
+    /**
      *成功开启录制后，可以使用此接口来更新录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。更新操作是全量覆盖，并不是增量更新的模式，也就是说每次更新都需要携带全量的信息。
      * @param req ModifyCloudRecordingRequest
      * @return ModifyCloudRecordingResponse
@@ -579,6 +666,17 @@ xa0
     public ModifyCloudRecordingResponse ModifyCloudRecording(ModifyCloudRecordingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCloudRecording", ModifyCloudRecordingResponse.class);
+    }
+
+    /**
+     *成功开启切片任务后，可以使用此接口来更新任务。用于更新指定订阅流白名单或者黑名单。
+     * @param req ModifyCloudSliceTaskRequest
+     * @return ModifyCloudSliceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudSliceTaskResponse ModifyCloudSliceTask(ModifyCloudSliceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudSliceTask", ModifyCloudSliceTaskResponse.class);
     }
 
     /**

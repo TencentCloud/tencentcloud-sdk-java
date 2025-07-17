@@ -59,11 +59,18 @@ public class CreateCodeTemplateRequest extends AbstractModel {
     private String FolderId;
 
     /**
-    * 指定脚本内容
+    * Base64转化的脚本内容
     */
     @SerializedName("Content")
     @Expose
     private String Content;
+
+    /**
+    * 代码模板类型
+    */
+    @SerializedName("ProductName")
+    @Expose
+    private String ProductName;
 
     /**
      * Get 项目Id 
@@ -146,19 +153,35 @@ public class CreateCodeTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定脚本内容 
-     * @return Content 指定脚本内容
+     * Get Base64转化的脚本内容 
+     * @return Content Base64转化的脚本内容
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 指定脚本内容
-     * @param Content 指定脚本内容
+     * Set Base64转化的脚本内容
+     * @param Content Base64转化的脚本内容
      */
     public void setContent(String Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get 代码模板类型 
+     * @return ProductName 代码模板类型
+     */
+    public String getProductName() {
+        return this.ProductName;
+    }
+
+    /**
+     * Set 代码模板类型
+     * @param ProductName 代码模板类型
+     */
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
     }
 
     public CreateCodeTemplateRequest() {
@@ -187,6 +210,9 @@ public class CreateCodeTemplateRequest extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class CreateCodeTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CodeTemplateDesc", this.CodeTemplateDesc);
         this.setParamSimple(map, prefix + "FolderId", this.FolderId);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
 
     }
 }

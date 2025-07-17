@@ -144,6 +144,13 @@ public class Bundle extends AbstractModel {
     private String BundleDisplayLabel;
 
     /**
+    * 流量是否无上限。
+    */
+    @SerializedName("TrafficUnlimited")
+    @Expose
+    private Boolean TrafficUnlimited;
+
+    /**
      * Get 套餐 ID。 
      * @return BundleId 套餐 ID。
      */
@@ -443,6 +450,22 @@ public class Bundle extends AbstractModel {
         this.BundleDisplayLabel = BundleDisplayLabel;
     }
 
+    /**
+     * Get 流量是否无上限。 
+     * @return TrafficUnlimited 流量是否无上限。
+     */
+    public Boolean getTrafficUnlimited() {
+        return this.TrafficUnlimited;
+    }
+
+    /**
+     * Set 流量是否无上限。
+     * @param TrafficUnlimited 流量是否无上限。
+     */
+    public void setTrafficUnlimited(Boolean TrafficUnlimited) {
+        this.TrafficUnlimited = TrafficUnlimited;
+    }
+
     public Bundle() {
     }
 
@@ -496,6 +519,9 @@ public class Bundle extends AbstractModel {
         if (source.BundleDisplayLabel != null) {
             this.BundleDisplayLabel = new String(source.BundleDisplayLabel);
         }
+        if (source.TrafficUnlimited != null) {
+            this.TrafficUnlimited = new Boolean(source.TrafficUnlimited);
+        }
     }
 
 
@@ -518,6 +544,7 @@ public class Bundle extends AbstractModel {
         this.setParamSimple(map, prefix + "BundleType", this.BundleType);
         this.setParamSimple(map, prefix + "BundleTypeDescription", this.BundleTypeDescription);
         this.setParamSimple(map, prefix + "BundleDisplayLabel", this.BundleDisplayLabel);
+        this.setParamSimple(map, prefix + "TrafficUnlimited", this.TrafficUnlimited);
 
     }
 }

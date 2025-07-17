@@ -237,6 +237,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *商业化版本：执行资源组-资源包绑定项目
+     * @param req BindProjectExecutorResourceRequest
+     * @return BindProjectExecutorResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindProjectExecutorResourceResponse BindProjectExecutorResource(BindProjectExecutorResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindProjectExecutorResource", BindProjectExecutorResourceResponse.class);
+    }
+
+    /**
      *判断告警规则重名
      * @param req CheckAlarmRegularNameExistRequest
      * @return CheckAlarmRegularNameExistResponse
@@ -311,6 +322,17 @@ public class WedataClient extends AbstractClient{
     public CountOpsInstanceStateResponse CountOpsInstanceState(CountOpsInstanceStateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CountOpsInstanceState", CountOpsInstanceStateResponse.class);
+    }
+
+    /**
+     *创建项目 仅项目本身，不包含集群等信息
+     * @param req CreateBaseProjectRequest
+     * @return CreateBaseProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBaseProjectResponse CreateBaseProject(CreateBaseProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBaseProject", CreateBaseProjectResponse.class);
     }
 
     /**
@@ -762,6 +784,17 @@ public class WedataClient extends AbstractClient{
     public DeleteTaskDsResponse DeleteTaskDs(DeleteTaskDsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTaskDs", DeleteTaskDsResponse.class);
+    }
+
+    /**
+     *删除任务血缘信息
+     * @param req DeleteTaskLineageRequest
+     * @return DeleteTaskLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTaskLineageResponse DeleteTaskLineage(DeleteTaskLineageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTaskLineage", DeleteTaskLineageResponse.class);
     }
 
     /**
@@ -2303,6 +2336,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *禁用项目
+     * @param req DisableProjectRequest
+     * @return DisableProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableProjectResponse DisableProject(DisableProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableProject", DisableProjectResponse.class);
+    }
+
+    /**
      *按行下载日志信息
      * @param req DownloadLogByLineRequest
      * @return DownloadLogByLineResponse
@@ -2322,6 +2366,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public DryRunDIOfflineTaskResponse DryRunDIOfflineTask(DryRunDIOfflineTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DryRunDIOfflineTask", DryRunDIOfflineTaskResponse.class);
+    }
+
+    /**
+     *启用项目
+     * @param req EnableProjectRequest
+     * @return EnableProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableProjectResponse EnableProject(EnableProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableProject", EnableProjectResponse.class);
     }
 
     /**
@@ -2619,6 +2674,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public ModifyMonitorStatusResponse ModifyMonitorStatus(ModifyMonitorStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMonitorStatus", ModifyMonitorStatusResponse.class);
+    }
+
+    /**
+     *修改项目基础信息。
+     * @param req ModifyProjectRequest
+     * @return ModifyProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProjectResponse ModifyProject(ModifyProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyProject", ModifyProjectResponse.class);
     }
 
     /**
@@ -3067,6 +3133,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public TriggerManualTasksResponse TriggerManualTasks(TriggerManualTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TriggerManualTasks", TriggerManualTasksResponse.class);
+    }
+
+    /**
+     *商业化版本：执行资源组/资源包解除绑定项目
+     * @param req UnboundProjectExecutorResourceRequest
+     * @return UnboundProjectExecutorResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnboundProjectExecutorResourceResponse UnboundProjectExecutorResource(UnboundProjectExecutorResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnboundProjectExecutorResource", UnboundProjectExecutorResourceResponse.class);
     }
 
     /**

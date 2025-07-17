@@ -24,17 +24,7 @@ import java.util.HashMap;
 public class CreateSplitDocumentFlowRequest extends AbstractModel {
 
     /**
-    * 文件类型。
-
-**支持的文件类型：**
-- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
-
-**支持的文件大小：**
- - `PDF` 最大300M
- - `DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
- - `TXT`、`MD` 最大10M
- - 其他 最大20M
-
+    * 文件类型。**支持的文件类型：**- `WPS`、`PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`**支持的文件大小：** - `PDF` 最大300M - `WPS`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M - `TXT`、`MD` 最大10M - 其他 最大20M
     */
     @SerializedName("FileType")
     @Expose
@@ -92,56 +82,16 @@ public class CreateSplitDocumentFlowRequest extends AbstractModel {
     private CreateSplitDocumentFlowConfig Config;
 
     /**
-     * Get 文件类型。
-
-**支持的文件类型：**
-- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
-
-**支持的文件大小：**
- - `PDF` 最大300M
- - `DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
- - `TXT`、`MD` 最大10M
- - 其他 最大20M
- 
-     * @return FileType 文件类型。
-
-**支持的文件类型：**
-- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
-
-**支持的文件大小：**
- - `PDF` 最大300M
- - `DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
- - `TXT`、`MD` 最大10M
- - 其他 最大20M
-
+     * Get 文件类型。**支持的文件类型：**- `WPS`、`PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`**支持的文件大小：** - `PDF` 最大300M - `WPS`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M - `TXT`、`MD` 最大10M - 其他 最大20M 
+     * @return FileType 文件类型。**支持的文件类型：**- `WPS`、`PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`**支持的文件大小：** - `PDF` 最大300M - `WPS`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M - `TXT`、`MD` 最大10M - 其他 最大20M
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 文件类型。
-
-**支持的文件类型：**
-- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
-
-**支持的文件大小：**
- - `PDF` 最大300M
- - `DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
- - `TXT`、`MD` 最大10M
- - 其他 最大20M
-
-     * @param FileType 文件类型。
-
-**支持的文件类型：**
-- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
-
-**支持的文件大小：**
- - `PDF` 最大300M
- - `DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
- - `TXT`、`MD` 最大10M
- - 其他 最大20M
-
+     * Set 文件类型。**支持的文件类型：**- `WPS`、`PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`**支持的文件大小：** - `PDF` 最大300M - `WPS`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M - `TXT`、`MD` 最大10M - 其他 最大20M
+     * @param FileType 文件类型。**支持的文件类型：**- `WPS`、`PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`**支持的文件大小：** - `PDF` 最大300M - `WPS`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M - `TXT`、`MD` 最大10M - 其他 最大20M
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

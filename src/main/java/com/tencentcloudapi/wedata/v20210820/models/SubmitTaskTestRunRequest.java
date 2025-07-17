@@ -87,6 +87,13 @@ public class SubmitTaskTestRunRequest extends AbstractModel {
     private String VersionId;
 
     /**
+    * 提交任务测试运行类型
+    */
+    @SerializedName("SubmitTaskTestRunType")
+    @Expose
+    private String SubmitTaskTestRunType;
+
+    /**
      * Get taskId列表 
      * @return TaskIds taskId列表
      */
@@ -230,6 +237,22 @@ public class SubmitTaskTestRunRequest extends AbstractModel {
         this.VersionId = VersionId;
     }
 
+    /**
+     * Get 提交任务测试运行类型 
+     * @return SubmitTaskTestRunType 提交任务测试运行类型
+     */
+    public String getSubmitTaskTestRunType() {
+        return this.SubmitTaskTestRunType;
+    }
+
+    /**
+     * Set 提交任务测试运行类型
+     * @param SubmitTaskTestRunType 提交任务测试运行类型
+     */
+    public void setSubmitTaskTestRunType(String SubmitTaskTestRunType) {
+        this.SubmitTaskTestRunType = SubmitTaskTestRunType;
+    }
+
     public SubmitTaskTestRunRequest() {
     }
 
@@ -268,6 +291,9 @@ public class SubmitTaskTestRunRequest extends AbstractModel {
         if (source.VersionId != null) {
             this.VersionId = new String(source.VersionId);
         }
+        if (source.SubmitTaskTestRunType != null) {
+            this.SubmitTaskTestRunType = new String(source.SubmitTaskTestRunType);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class SubmitTaskTestRunRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RunParams", this.RunParams);
         this.setParamSimple(map, prefix + "ScriptContent", this.ScriptContent);
         this.setParamSimple(map, prefix + "VersionId", this.VersionId);
+        this.setParamSimple(map, prefix + "SubmitTaskTestRunType", this.SubmitTaskTestRunType);
 
     }
 }

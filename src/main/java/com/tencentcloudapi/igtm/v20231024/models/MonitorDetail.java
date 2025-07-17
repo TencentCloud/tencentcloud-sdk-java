@@ -32,7 +32,6 @@ public class MonitorDetail extends AbstractModel {
 
     /**
     * 监控器名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorName")
     @Expose
@@ -40,7 +39,6 @@ public class MonitorDetail extends AbstractModel {
 
     /**
     * 所属用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -48,7 +46,6 @@ public class MonitorDetail extends AbstractModel {
 
     /**
     * 监控节点id组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectorGroupIds")
     @Expose
@@ -56,7 +53,6 @@ public class MonitorDetail extends AbstractModel {
 
     /**
     * 探测协议 PING TCP HTTP HTTPS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckProtocol")
     @Expose
@@ -64,7 +60,6 @@ public class MonitorDetail extends AbstractModel {
 
     /**
     * 探测周期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckInterval")
     @Expose
@@ -72,7 +67,6 @@ public class MonitorDetail extends AbstractModel {
 
     /**
     * 发包数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PingNum")
     @Expose
@@ -80,7 +74,6 @@ public class MonitorDetail extends AbstractModel {
 
     /**
     * tcp端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TcpPort")
     @Expose
@@ -88,7 +81,6 @@ public class MonitorDetail extends AbstractModel {
 
     /**
     * 探测 host
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Host")
     @Expose
@@ -96,7 +88,6 @@ public class MonitorDetail extends AbstractModel {
 
     /**
     * 探测路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -104,7 +95,6 @@ public class MonitorDetail extends AbstractModel {
 
     /**
     * 返回值阈值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnCodeThreshold")
     @Expose
@@ -112,7 +102,6 @@ public class MonitorDetail extends AbstractModel {
 
     /**
     * 是否开启3xx重定向跟随 ENABLED DISABLED
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableRedirect")
     @Expose
@@ -121,7 +110,6 @@ public class MonitorDetail extends AbstractModel {
     /**
     * 是否启用 sni
 ENABLED DISABLED
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableSni")
     @Expose
@@ -129,7 +117,6 @@ ENABLED DISABLED
 
     /**
     * 丢包率上限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PacketLossRate")
     @Expose
@@ -137,7 +124,6 @@ ENABLED DISABLED
 
     /**
     * 探测超时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timeout")
     @Expose
@@ -145,7 +131,6 @@ ENABLED DISABLED
 
     /**
     * 失败次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailTimes")
     @Expose
@@ -153,7 +138,6 @@ ENABLED DISABLED
 
     /**
     * 失败率上限100
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailRate")
     @Expose
@@ -161,7 +145,6 @@ ENABLED DISABLED
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedOn")
     @Expose
@@ -169,7 +152,6 @@ ENABLED DISABLED
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedOn")
     @Expose
@@ -178,7 +160,6 @@ ENABLED DISABLED
     /**
     * 监控节点类型
 AUTO INTERNAL OVERSEAS IPV6 ALL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectorStyle")
     @Expose
@@ -186,7 +167,6 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
     * 探测次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectNum")
     @Expose
@@ -194,7 +174,6 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
     * 持续周期数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContinuePeriod")
     @Expose
@@ -217,10 +196,8 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
     }
 
     /**
-     * Get 监控器名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控器名称 
      * @return MonitorName 监控器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMonitorName() {
         return this.MonitorName;
@@ -228,19 +205,15 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set 监控器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorName 监控器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorName(String MonitorName) {
         this.MonitorName = MonitorName;
     }
 
     /**
-     * Get 所属用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属用户 
      * @return Uin 所属用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -248,19 +221,15 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set 所属用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 所属用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 监控节点id组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控节点id组 
      * @return DetectorGroupIds 监控节点id组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getDetectorGroupIds() {
         return this.DetectorGroupIds;
@@ -268,19 +237,15 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set 监控节点id组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectorGroupIds 监控节点id组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectorGroupIds(Long [] DetectorGroupIds) {
         this.DetectorGroupIds = DetectorGroupIds;
     }
 
     /**
-     * Get 探测协议 PING TCP HTTP HTTPS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测协议 PING TCP HTTP HTTPS 
      * @return CheckProtocol 探测协议 PING TCP HTTP HTTPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckProtocol() {
         return this.CheckProtocol;
@@ -288,19 +253,15 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set 探测协议 PING TCP HTTP HTTPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckProtocol 探测协议 PING TCP HTTP HTTPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckProtocol(String CheckProtocol) {
         this.CheckProtocol = CheckProtocol;
     }
 
     /**
-     * Get 探测周期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测周期 
      * @return CheckInterval 探测周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCheckInterval() {
         return this.CheckInterval;
@@ -308,19 +269,15 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set 探测周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckInterval 探测周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckInterval(Long CheckInterval) {
         this.CheckInterval = CheckInterval;
     }
 
     /**
-     * Get 发包数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发包数量 
      * @return PingNum 发包数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPingNum() {
         return this.PingNum;
@@ -328,19 +285,15 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set 发包数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PingNum 发包数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPingNum(Long PingNum) {
         this.PingNum = PingNum;
     }
 
     /**
-     * Get tcp端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tcp端口 
      * @return TcpPort tcp端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTcpPort() {
         return this.TcpPort;
@@ -348,19 +301,15 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set tcp端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TcpPort tcp端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTcpPort(Long TcpPort) {
         this.TcpPort = TcpPort;
     }
 
     /**
-     * Get 探测 host
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测 host 
      * @return Host 探测 host
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHost() {
         return this.Host;
@@ -368,19 +317,15 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set 探测 host
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Host 探测 host
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 探测路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测路径 
      * @return Path 探测路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -388,19 +333,15 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set 探测路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 探测路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 返回值阈值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回值阈值 
      * @return ReturnCodeThreshold 返回值阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReturnCodeThreshold() {
         return this.ReturnCodeThreshold;
@@ -408,19 +349,15 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set 返回值阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnCodeThreshold 返回值阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnCodeThreshold(Long ReturnCodeThreshold) {
         this.ReturnCodeThreshold = ReturnCodeThreshold;
     }
 
     /**
-     * Get 是否开启3xx重定向跟随 ENABLED DISABLED
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启3xx重定向跟随 ENABLED DISABLED 
      * @return EnableRedirect 是否开启3xx重定向跟随 ENABLED DISABLED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnableRedirect() {
         return this.EnableRedirect;
@@ -428,9 +365,7 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set 是否开启3xx重定向跟随 ENABLED DISABLED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableRedirect 是否开启3xx重定向跟随 ENABLED DISABLED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableRedirect(String EnableRedirect) {
         this.EnableRedirect = EnableRedirect;
@@ -438,11 +373,9 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Get 是否启用 sni
-ENABLED DISABLED
-注意：此字段可能返回 null，表示取不到有效值。 
+ENABLED DISABLED 
      * @return EnableSni 是否启用 sni
 ENABLED DISABLED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnableSni() {
         return this.EnableSni;
@@ -451,20 +384,16 @@ ENABLED DISABLED
     /**
      * Set 是否启用 sni
 ENABLED DISABLED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableSni 是否启用 sni
 ENABLED DISABLED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableSni(String EnableSni) {
         this.EnableSni = EnableSni;
     }
 
     /**
-     * Get 丢包率上限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 丢包率上限 
      * @return PacketLossRate 丢包率上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPacketLossRate() {
         return this.PacketLossRate;
@@ -472,19 +401,15 @@ ENABLED DISABLED
 
     /**
      * Set 丢包率上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PacketLossRate 丢包率上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPacketLossRate(Long PacketLossRate) {
         this.PacketLossRate = PacketLossRate;
     }
 
     /**
-     * Get 探测超时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测超时 
      * @return Timeout 探测超时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeout() {
         return this.Timeout;
@@ -492,19 +417,15 @@ ENABLED DISABLED
 
     /**
      * Set 探测超时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timeout 探测超时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 失败次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败次数 
      * @return FailTimes 失败次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailTimes() {
         return this.FailTimes;
@@ -512,19 +433,15 @@ ENABLED DISABLED
 
     /**
      * Set 失败次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailTimes 失败次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailTimes(Long FailTimes) {
         this.FailTimes = FailTimes;
     }
 
     /**
-     * Get 失败率上限100
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败率上限100 
      * @return FailRate 失败率上限100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailRate() {
         return this.FailRate;
@@ -532,19 +449,15 @@ ENABLED DISABLED
 
     /**
      * Set 失败率上限100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailRate 失败率上限100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailRate(Long FailRate) {
         this.FailRate = FailRate;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedOn 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedOn() {
         return this.CreatedOn;
@@ -552,19 +465,15 @@ ENABLED DISABLED
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedOn 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedOn 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedOn() {
         return this.UpdatedOn;
@@ -572,9 +481,7 @@ ENABLED DISABLED
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedOn 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedOn(String UpdatedOn) {
         this.UpdatedOn = UpdatedOn;
@@ -582,11 +489,9 @@ ENABLED DISABLED
 
     /**
      * Get 监控节点类型
-AUTO INTERNAL OVERSEAS IPV6 ALL
-注意：此字段可能返回 null，表示取不到有效值。 
+AUTO INTERNAL OVERSEAS IPV6 ALL 
      * @return DetectorStyle 监控节点类型
 AUTO INTERNAL OVERSEAS IPV6 ALL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetectorStyle() {
         return this.DetectorStyle;
@@ -595,20 +500,16 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
     /**
      * Set 监控节点类型
 AUTO INTERNAL OVERSEAS IPV6 ALL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectorStyle 监控节点类型
 AUTO INTERNAL OVERSEAS IPV6 ALL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectorStyle(String DetectorStyle) {
         this.DetectorStyle = DetectorStyle;
     }
 
     /**
-     * Get 探测次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测次数 
      * @return DetectNum 探测次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDetectNum() {
         return this.DetectNum;
@@ -616,19 +517,15 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set 探测次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectNum 探测次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectNum(Long DetectNum) {
         this.DetectNum = DetectNum;
     }
 
     /**
-     * Get 持续周期数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 持续周期数 
      * @return ContinuePeriod 持续周期数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getContinuePeriod() {
         return this.ContinuePeriod;
@@ -636,9 +533,7 @@ AUTO INTERNAL OVERSEAS IPV6 ALL
 
     /**
      * Set 持续周期数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContinuePeriod 持续周期数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContinuePeriod(Long ContinuePeriod) {
         this.ContinuePeriod = ContinuePeriod;

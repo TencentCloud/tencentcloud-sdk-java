@@ -73,6 +73,13 @@ public class UpdateImageCacheRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
+    * 腾讯云标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 镜像缓存ID 
      * @return ImageCacheId 镜像缓存ID
      */
@@ -184,6 +191,22 @@ public class UpdateImageCacheRequest extends AbstractModel {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get 腾讯云标签 
+     * @return Tags 腾讯云标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 腾讯云标签
+     * @param Tags 腾讯云标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public UpdateImageCacheRequest() {
     }
 
@@ -222,6 +245,12 @@ public class UpdateImageCacheRequest extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -236,6 +265,7 @@ public class UpdateImageCacheRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageCacheSize", this.ImageCacheSize);
         this.setParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

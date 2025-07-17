@@ -25,7 +25,6 @@ public class AddressLocation extends AbstractModel {
 
     /**
     * ip地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Addr")
     @Expose
@@ -33,17 +32,14 @@ public class AddressLocation extends AbstractModel {
 
     /**
     * 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-     * Get ip地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ip地址 
      * @return Addr ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddr() {
         return this.Addr;
@@ -51,19 +47,15 @@ public class AddressLocation extends AbstractModel {
 
     /**
      * Set ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Addr ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddr(String Addr) {
         this.Addr = Addr;
     }
 
     /**
-     * Get 所属地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属地域 
      * @return Location 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocation() {
         return this.Location;
@@ -71,9 +63,7 @@ public class AddressLocation extends AbstractModel {
 
     /**
      * Set 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(String Location) {
         this.Location = Location;

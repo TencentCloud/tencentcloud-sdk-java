@@ -100,6 +100,27 @@ UpdateFailed：更新失败
     private String Status;
 
     /**
+    * 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+    */
+    @SerializedName("RetentionDays")
+    @Expose
+    private Long RetentionDays;
+
+    /**
+    * 镜像拉取凭证
+    */
+    @SerializedName("ImageRegistryCredentials")
+    @Expose
+    private ImageRegistryCredential [] ImageRegistryCredentials;
+
+    /**
+    * 腾讯云标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 镜像缓存Id 
      * @return ImageCacheId 镜像缓存Id
      */
@@ -283,6 +304,54 @@ UpdateFailed：更新失败
         this.Status = Status;
     }
 
+    /**
+     * Get 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。 
+     * @return RetentionDays 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+     */
+    public Long getRetentionDays() {
+        return this.RetentionDays;
+    }
+
+    /**
+     * Set 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+     * @param RetentionDays 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+     */
+    public void setRetentionDays(Long RetentionDays) {
+        this.RetentionDays = RetentionDays;
+    }
+
+    /**
+     * Get 镜像拉取凭证 
+     * @return ImageRegistryCredentials 镜像拉取凭证
+     */
+    public ImageRegistryCredential [] getImageRegistryCredentials() {
+        return this.ImageRegistryCredentials;
+    }
+
+    /**
+     * Set 镜像拉取凭证
+     * @param ImageRegistryCredentials 镜像拉取凭证
+     */
+    public void setImageRegistryCredentials(ImageRegistryCredential [] ImageRegistryCredentials) {
+        this.ImageRegistryCredentials = ImageRegistryCredentials;
+    }
+
+    /**
+     * Get 腾讯云标签 
+     * @return Tags 腾讯云标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 腾讯云标签
+     * @param Tags 腾讯云标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public ImageCache() {
     }
 
@@ -327,6 +396,21 @@ UpdateFailed：更新失败
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.RetentionDays != null) {
+            this.RetentionDays = new Long(source.RetentionDays);
+        }
+        if (source.ImageRegistryCredentials != null) {
+            this.ImageRegistryCredentials = new ImageRegistryCredential[source.ImageRegistryCredentials.length];
+            for (int i = 0; i < source.ImageRegistryCredentials.length; i++) {
+                this.ImageRegistryCredentials[i] = new ImageRegistryCredential(source.ImageRegistryCredentials[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -344,6 +428,9 @@ UpdateFailed：更新失败
         this.setParamSimple(map, prefix + "LastMatchedTime", this.LastMatchedTime);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
+        this.setParamArrayObj(map, prefix + "ImageRegistryCredentials.", this.ImageRegistryCredentials);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -124,6 +124,13 @@ public class CreateImageCacheRequest extends AbstractModel {
     private String ResolveConfig;
 
     /**
+    * 腾讯云标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 用于制作镜像缓存的容器镜像列表 
      * @return Images 用于制作镜像缓存的容器镜像列表
      */
@@ -355,6 +362,22 @@ public class CreateImageCacheRequest extends AbstractModel {
         this.ResolveConfig = ResolveConfig;
     }
 
+    /**
+     * Get 腾讯云标签 
+     * @return Tags 腾讯云标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 腾讯云标签
+     * @param Tags 腾讯云标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateImageCacheRequest() {
     }
 
@@ -420,6 +443,12 @@ public class CreateImageCacheRequest extends AbstractModel {
         if (source.ResolveConfig != null) {
             this.ResolveConfig = new String(source.ResolveConfig);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -441,6 +470,7 @@ public class CreateImageCacheRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RegistrySkipVerifyList.", this.RegistrySkipVerifyList);
         this.setParamArraySimple(map, prefix + "RegistryHttpEndPointList.", this.RegistryHttpEndPointList);
         this.setParamSimple(map, prefix + "ResolveConfig", this.ResolveConfig);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -38,8 +38,7 @@ public class InstanceConfig extends AbstractModel {
     private String Domain;
 
     /**
-    * CUSTOM: 自定义接入域名
-SYSTEM: 系统接入域名
+    * CUSTOM: 自定义接入域名，SYSTEM: 系统接入域名
     */
     @SerializedName("AccessType")
     @Expose
@@ -60,15 +59,14 @@ SYSTEM: 系统接入域名
     private Long GlobalTtl;
 
     /**
-    * 接入主域名，自定义接入域名时必填
-
+    * 接入主域名
     */
     @SerializedName("AccessDomain")
     @Expose
     private String AccessDomain;
 
     /**
-    * 接入子域名，自定义接入域名时必填
+    * 接入子域名
     */
     @SerializedName("AccessSubDomain")
     @Expose
@@ -107,20 +105,16 @@ SYSTEM: 系统接入域名
     }
 
     /**
-     * Get CUSTOM: 自定义接入域名
-SYSTEM: 系统接入域名 
-     * @return AccessType CUSTOM: 自定义接入域名
-SYSTEM: 系统接入域名
+     * Get CUSTOM: 自定义接入域名，SYSTEM: 系统接入域名 
+     * @return AccessType CUSTOM: 自定义接入域名，SYSTEM: 系统接入域名
      */
     public String getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set CUSTOM: 自定义接入域名
-SYSTEM: 系统接入域名
-     * @param AccessType CUSTOM: 自定义接入域名
-SYSTEM: 系统接入域名
+     * Set CUSTOM: 自定义接入域名，SYSTEM: 系统接入域名
+     * @param AccessType CUSTOM: 自定义接入域名，SYSTEM: 系统接入域名
      */
     public void setAccessType(String AccessType) {
         this.AccessType = AccessType;
@@ -159,36 +153,32 @@ SYSTEM: 系统接入域名
     }
 
     /**
-     * Get 接入主域名，自定义接入域名时必填
- 
-     * @return AccessDomain 接入主域名，自定义接入域名时必填
-
+     * Get 接入主域名 
+     * @return AccessDomain 接入主域名
      */
     public String getAccessDomain() {
         return this.AccessDomain;
     }
 
     /**
-     * Set 接入主域名，自定义接入域名时必填
-
-     * @param AccessDomain 接入主域名，自定义接入域名时必填
-
+     * Set 接入主域名
+     * @param AccessDomain 接入主域名
      */
     public void setAccessDomain(String AccessDomain) {
         this.AccessDomain = AccessDomain;
     }
 
     /**
-     * Get 接入子域名，自定义接入域名时必填 
-     * @return AccessSubDomain 接入子域名，自定义接入域名时必填
+     * Get 接入子域名 
+     * @return AccessSubDomain 接入子域名
      */
     public String getAccessSubDomain() {
         return this.AccessSubDomain;
     }
 
     /**
-     * Set 接入子域名，自定义接入域名时必填
-     * @param AccessSubDomain 接入子域名，自定义接入域名时必填
+     * Set 接入子域名
+     * @param AccessSubDomain 接入子域名
      */
     public void setAccessSubDomain(String AccessSubDomain) {
         this.AccessSubDomain = AccessSubDomain;

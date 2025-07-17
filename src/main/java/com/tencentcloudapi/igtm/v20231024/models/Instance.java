@@ -39,7 +39,6 @@ public class Instance extends AbstractModel {
 
     /**
     * 资源 id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -87,7 +86,6 @@ SYSTEM: 系统接入域名
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
     @Expose
@@ -99,16 +97,13 @@ NORMAL: 健康
 FAULTY: 有风险
 DOWN: 宕机
 UNKNOWN: 未知
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkingStatus")
     @Expose
     private String WorkingStatus;
 
     /**
-    * 实例状态
-ENABLED: 正常
-DISABLED: 禁用
+    * 实例状态，ENABLED: 正常，DISABLED: 禁用
     */
     @SerializedName("Status")
     @Expose
@@ -116,7 +111,6 @@ DISABLED: 禁用
 
     /**
     * 是否cname接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCnameConfigured")
     @Expose
@@ -124,7 +118,6 @@ DISABLED: 禁用
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -132,7 +125,6 @@ DISABLED: 禁用
 
     /**
     * 策略数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyNum")
     @Expose
@@ -140,7 +132,6 @@ DISABLED: 禁用
 
     /**
     * 绑定地址池个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressPoolNum")
     @Expose
@@ -148,7 +139,6 @@ DISABLED: 禁用
 
     /**
     * 绑定监控器数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorNum")
     @Expose
@@ -156,7 +146,6 @@ DISABLED: 禁用
 
     /**
     * 地址池id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoolId")
     @Expose
@@ -164,7 +153,6 @@ DISABLED: 禁用
 
     /**
     * 地址池名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoolName")
     @Expose
@@ -217,10 +205,8 @@ DISABLED: 禁用
     }
 
     /**
-     * Get 资源 id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源 id 
      * @return ResourceId 资源 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -228,9 +214,7 @@ DISABLED: 禁用
 
     /**
      * Set 资源 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
@@ -328,13 +312,11 @@ SYSTEM: 系统接入域名
      * Get 套餐类型
 FREE: 免费版
 STANDARD：标准版
-ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。 
+ULTIMATE：旗舰版 
      * @return PackageType 套餐类型
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
         return this.PackageType;
@@ -345,12 +327,10 @@ ULTIMATE：旗舰版
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageType 套餐类型
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
@@ -361,14 +341,12 @@ ULTIMATE：旗舰版
 NORMAL: 健康
 FAULTY: 有风险
 DOWN: 宕机
-UNKNOWN: 未知
-注意：此字段可能返回 null，表示取不到有效值。 
+UNKNOWN: 未知 
      * @return WorkingStatus 实例运行状态
 NORMAL: 健康
 FAULTY: 有风险
 DOWN: 宕机
 UNKNOWN: 未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkingStatus() {
         return this.WorkingStatus;
@@ -380,47 +358,35 @@ NORMAL: 健康
 FAULTY: 有风险
 DOWN: 宕机
 UNKNOWN: 未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkingStatus 实例运行状态
 NORMAL: 健康
 FAULTY: 有风险
 DOWN: 宕机
 UNKNOWN: 未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkingStatus(String WorkingStatus) {
         this.WorkingStatus = WorkingStatus;
     }
 
     /**
-     * Get 实例状态
-ENABLED: 正常
-DISABLED: 禁用 
-     * @return Status 实例状态
-ENABLED: 正常
-DISABLED: 禁用
+     * Get 实例状态，ENABLED: 正常，DISABLED: 禁用 
+     * @return Status 实例状态，ENABLED: 正常，DISABLED: 禁用
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态
-ENABLED: 正常
-DISABLED: 禁用
-     * @param Status 实例状态
-ENABLED: 正常
-DISABLED: 禁用
+     * Set 实例状态，ENABLED: 正常，DISABLED: 禁用
+     * @param Status 实例状态，ENABLED: 正常，DISABLED: 禁用
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否cname接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否cname接入：true已接入；false未接入 
      * @return IsCnameConfigured 是否cname接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsCnameConfigured() {
         return this.IsCnameConfigured;
@@ -428,19 +394,15 @@ DISABLED: 禁用
 
     /**
      * Set 是否cname接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCnameConfigured 是否cname接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCnameConfigured(Boolean IsCnameConfigured) {
         this.IsCnameConfigured = IsCnameConfigured;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -448,19 +410,15 @@ DISABLED: 禁用
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 策略数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略数量 
      * @return StrategyNum 策略数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategyNum() {
         return this.StrategyNum;
@@ -468,19 +426,15 @@ DISABLED: 禁用
 
     /**
      * Set 策略数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyNum 策略数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyNum(Long StrategyNum) {
         this.StrategyNum = StrategyNum;
     }
 
     /**
-     * Get 绑定地址池个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定地址池个数 
      * @return AddressPoolNum 绑定地址池个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAddressPoolNum() {
         return this.AddressPoolNum;
@@ -488,19 +442,15 @@ DISABLED: 禁用
 
     /**
      * Set 绑定地址池个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressPoolNum 绑定地址池个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressPoolNum(Long AddressPoolNum) {
         this.AddressPoolNum = AddressPoolNum;
     }
 
     /**
-     * Get 绑定监控器数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定监控器数量 
      * @return MonitorNum 绑定监控器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorNum() {
         return this.MonitorNum;
@@ -508,19 +458,15 @@ DISABLED: 禁用
 
     /**
      * Set 绑定监控器数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorNum 绑定监控器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorNum(Long MonitorNum) {
         this.MonitorNum = MonitorNum;
     }
 
     /**
-     * Get 地址池id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址池id 
      * @return PoolId 地址池id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPoolId() {
         return this.PoolId;
@@ -528,19 +474,15 @@ DISABLED: 禁用
 
     /**
      * Set 地址池id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PoolId 地址池id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoolId(Long PoolId) {
         this.PoolId = PoolId;
     }
 
     /**
-     * Get 地址池名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址池名称 
      * @return PoolName 地址池名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPoolName() {
         return this.PoolName;
@@ -548,9 +490,7 @@ DISABLED: 禁用
 
     /**
      * Set 地址池名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PoolName 地址池名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoolName(String PoolName) {
         this.PoolName = PoolName;

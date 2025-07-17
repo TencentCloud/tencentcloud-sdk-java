@@ -25,7 +25,7 @@ public class Hair extends AbstractModel {
 
     /**
     * 头发长度信息。
-AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
+- AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
     */
     @SerializedName("Length")
     @Expose
@@ -33,7 +33,7 @@ AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：
 
     /**
     * 刘海信息。
-AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
+- AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
     */
     @SerializedName("Bang")
     @Expose
@@ -41,7 +41,7 @@ AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
 
     /**
     * 头发颜色信息。
-AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
+- AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
     */
     @SerializedName("Color")
     @Expose
@@ -49,9 +49,9 @@ AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：
 
     /**
      * Get 头发长度信息。
-AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。 
+- AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。 
      * @return Length 头发长度信息。
-AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
+- AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
      */
     public AttributeItem getLength() {
         return this.Length;
@@ -59,9 +59,9 @@ AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：
 
     /**
      * Set 头发长度信息。
-AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
+- AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
      * @param Length 头发长度信息。
-AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
+- AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
      */
     public void setLength(AttributeItem Length) {
         this.Length = Length;
@@ -69,9 +69,9 @@ AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：
 
     /**
      * Get 刘海信息。
-AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。 
+- AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。 
      * @return Bang 刘海信息。
-AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
+- AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
      */
     public AttributeItem getBang() {
         return this.Bang;
@@ -79,9 +79,9 @@ AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
 
     /**
      * Set 刘海信息。
-AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
+- AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
      * @param Bang 刘海信息。
-AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
+- AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
      */
     public void setBang(AttributeItem Bang) {
         this.Bang = Bang;
@@ -89,9 +89,9 @@ AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
 
     /**
      * Get 头发颜色信息。
-AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。 
+- AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。 
      * @return Color 头发颜色信息。
-AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
+- AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
      */
     public AttributeItem getColor() {
         return this.Color;
@@ -99,9 +99,9 @@ AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：
 
     /**
      * Set 头发颜色信息。
-AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
+- AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
      * @param Color 头发颜色信息。
-AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
+- AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
      */
     public void setColor(AttributeItem Color) {
         this.Color = Color;

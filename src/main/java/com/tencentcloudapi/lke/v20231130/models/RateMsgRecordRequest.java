@@ -38,14 +38,14 @@ public class RateMsgRecordRequest extends AbstractModel {
     private String RecordId;
 
     /**
-    * 1点赞2点踩
+    * 1: 点赞,  2: 点踩
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-    * 原因
+    * 原因，只有Score参数为2即点踩的时候才需要输入
     */
     @SerializedName("Reasons")
     @Expose
@@ -84,32 +84,32 @@ public class RateMsgRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 1点赞2点踩 
-     * @return Score 1点赞2点踩
+     * Get 1: 点赞,  2: 点踩 
+     * @return Score 1: 点赞,  2: 点踩
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 1点赞2点踩
-     * @param Score 1点赞2点踩
+     * Set 1: 点赞,  2: 点踩
+     * @param Score 1: 点赞,  2: 点踩
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 原因 
-     * @return Reasons 原因
+     * Get 原因，只有Score参数为2即点踩的时候才需要输入 
+     * @return Reasons 原因，只有Score参数为2即点踩的时候才需要输入
      */
     public String [] getReasons() {
         return this.Reasons;
     }
 
     /**
-     * Set 原因
-     * @param Reasons 原因
+     * Set 原因，只有Score参数为2即点踩的时候才需要输入
+     * @param Reasons 原因，只有Score参数为2即点踩的时候才需要输入
      */
     public void setReasons(String [] Reasons) {
         this.Reasons = Reasons;

@@ -215,6 +215,22 @@ Available:可用
     private String Version;
 
     /**
+    * 额外性能信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExstraPerformanceInfo")
+    @Expose
+    private ExstraPerformanceInfo [] ExstraPerformanceInfo;
+
+    /**
+    * basic：标准版元数据类型
+enhanced：增项版元数据类型
+    */
+    @SerializedName("MetaType")
+    @Expose
+    private String MetaType;
+
+    /**
      * Get 创建时间 
      * @return CreationTime 创建时间
      */
@@ -666,6 +682,46 @@ Available:可用
         this.Version = Version;
     }
 
+    /**
+     * Get 额外性能信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExstraPerformanceInfo 额外性能信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExstraPerformanceInfo [] getExstraPerformanceInfo() {
+        return this.ExstraPerformanceInfo;
+    }
+
+    /**
+     * Set 额外性能信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExstraPerformanceInfo 额外性能信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExstraPerformanceInfo(ExstraPerformanceInfo [] ExstraPerformanceInfo) {
+        this.ExstraPerformanceInfo = ExstraPerformanceInfo;
+    }
+
+    /**
+     * Get basic：标准版元数据类型
+enhanced：增项版元数据类型 
+     * @return MetaType basic：标准版元数据类型
+enhanced：增项版元数据类型
+     */
+    public String getMetaType() {
+        return this.MetaType;
+    }
+
+    /**
+     * Set basic：标准版元数据类型
+enhanced：增项版元数据类型
+     * @param MetaType basic：标准版元数据类型
+enhanced：增项版元数据类型
+     */
+    public void setMetaType(String MetaType) {
+        this.MetaType = MetaType;
+    }
+
     public FileSystemInfo() {
     }
 
@@ -755,6 +811,15 @@ Available:可用
         if (source.Version != null) {
             this.Version = new String(source.Version);
         }
+        if (source.ExstraPerformanceInfo != null) {
+            this.ExstraPerformanceInfo = new ExstraPerformanceInfo[source.ExstraPerformanceInfo.length];
+            for (int i = 0; i < source.ExstraPerformanceInfo.length; i++) {
+                this.ExstraPerformanceInfo[i] = new ExstraPerformanceInfo(source.ExstraPerformanceInfo[i]);
+            }
+        }
+        if (source.MetaType != null) {
+            this.MetaType = new String(source.MetaType);
+        }
     }
 
 
@@ -788,6 +853,8 @@ Available:可用
         this.setParamObj(map, prefix + "TieringDetail.", this.TieringDetail);
         this.setParamObj(map, prefix + "AutoScaleUpRule.", this.AutoScaleUpRule);
         this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamArrayObj(map, prefix + "ExstraPerformanceInfo.", this.ExstraPerformanceInfo);
+        this.setParamSimple(map, prefix + "MetaType", this.MetaType);
 
     }
 }

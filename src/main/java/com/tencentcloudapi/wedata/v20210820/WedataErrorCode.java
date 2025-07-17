@@ -18,6 +18,12 @@ public enum WedataErrorCode {
      /* 连接超时 */
      FAILEDOPERATION_CONNECTIONTIMEOUTERROR("FailedOperation.ConnectionTimeOutError"),
      
+     /* 当前操作的资源状态不合法。 */
+     FAILEDOPERATION_EXECUTORCLUSTERSTATUSERROR("FailedOperation.ExecutorClusterStatusError"),
+     
+     /* 操作失败 */
+     FAILEDOPERATION_FAILEDOPERATIONWITHREASON("FailedOperation.FailedOperationWithReason"),
+     
      /* 查询数据开发资源锁状态-当前用户不持有锁 */
      FAILEDOPERATION_NOLOCK("FailedOperation.NoLock"),
      
@@ -54,6 +60,9 @@ public enum WedataErrorCode {
      /* 超出最大限额 */
      INVALIDPARAMETER_MAXLIMITEXCEEDED("InvalidParameter.MaxLimitExceeded"),
      
+     /* 已超过系统安全配额。 */
+     INVALIDPARAMETER_QUOTAEXCEEDERROR("InvalidParameter.QuotaExceedError"),
+     
      /* 规则不存在。 */
      INVALIDPARAMETER_RULENOTEXIST("InvalidParameter.RuleNotExist"),
      
@@ -65,6 +74,9 @@ public enum WedataErrorCode {
      
      /* WeData_QCSRole不存在，请进行服务授权。 */
      INVALIDPARAMETER_WEDATAROLENOTEXISTS("InvalidParameter.WeDataRoleNotExists"),
+     
+     /* 项目名重复。 */
+     INVALIDPARAMETER_WORKSPACENAMEDUPLICATION("InvalidParameter.WorkspaceNameDuplication"),
      
      /* 工作空间不存在。 */
      INVALIDPARAMETER_WORKSPACENOTEXIST("InvalidParameter.WorkspaceNotExist"),

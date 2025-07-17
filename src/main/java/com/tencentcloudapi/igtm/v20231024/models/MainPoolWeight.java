@@ -25,7 +25,6 @@ public class MainPoolWeight extends AbstractModel {
 
     /**
     * 地址池id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoolId")
     @Expose
@@ -40,10 +39,8 @@ public class MainPoolWeight extends AbstractModel {
     private Long Weight;
 
     /**
-     * Get 地址池id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址池id 
      * @return PoolId 地址池id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPoolId() {
         return this.PoolId;
@@ -51,9 +48,7 @@ public class MainPoolWeight extends AbstractModel {
 
     /**
      * Set 地址池id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PoolId 地址池id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoolId(Long PoolId) {
         this.PoolId = PoolId;

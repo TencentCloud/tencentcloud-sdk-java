@@ -26,7 +26,6 @@ public class Address extends AbstractModel {
     /**
     * 地址值：只支持ipv4、ipv6和域名格式；
 不支持回环地址、保留地址、内网地址与腾讯保留网段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Addr")
     @Expose
@@ -34,7 +33,6 @@ public class Address extends AbstractModel {
 
     /**
     * 是否启用:DISABLED不启用；ENABLED启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsEnable")
     @Expose
@@ -42,7 +40,6 @@ public class Address extends AbstractModel {
 
     /**
     * 地址id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressId")
     @Expose
@@ -50,7 +47,6 @@ public class Address extends AbstractModel {
 
     /**
     * 地址名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
@@ -58,7 +54,6 @@ public class Address extends AbstractModel {
 
     /**
     * OK正常，DOWN故障，WARN风险，UNKNOWN探测中，UNMONITORED未知
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -74,7 +69,6 @@ public class Address extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedOn")
     @Expose
@@ -82,7 +76,6 @@ public class Address extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedOn")
     @Expose
@@ -90,11 +83,9 @@ public class Address extends AbstractModel {
 
     /**
      * Get 地址值：只支持ipv4、ipv6和域名格式；
-不支持回环地址、保留地址、内网地址与腾讯保留网段
-注意：此字段可能返回 null，表示取不到有效值。 
+不支持回环地址、保留地址、内网地址与腾讯保留网段 
      * @return Addr 地址值：只支持ipv4、ipv6和域名格式；
 不支持回环地址、保留地址、内网地址与腾讯保留网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddr() {
         return this.Addr;
@@ -103,20 +94,16 @@ public class Address extends AbstractModel {
     /**
      * Set 地址值：只支持ipv4、ipv6和域名格式；
 不支持回环地址、保留地址、内网地址与腾讯保留网段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Addr 地址值：只支持ipv4、ipv6和域名格式；
 不支持回环地址、保留地址、内网地址与腾讯保留网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddr(String Addr) {
         this.Addr = Addr;
     }
 
     /**
-     * Get 是否启用:DISABLED不启用；ENABLED启用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用:DISABLED不启用；ENABLED启用 
      * @return IsEnable 是否启用:DISABLED不启用；ENABLED启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsEnable() {
         return this.IsEnable;
@@ -124,19 +111,15 @@ public class Address extends AbstractModel {
 
     /**
      * Set 是否启用:DISABLED不启用；ENABLED启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsEnable 是否启用:DISABLED不启用；ENABLED启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsEnable(String IsEnable) {
         this.IsEnable = IsEnable;
     }
 
     /**
-     * Get 地址id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址id 
      * @return AddressId 地址id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAddressId() {
         return this.AddressId;
@@ -144,19 +127,15 @@ public class Address extends AbstractModel {
 
     /**
      * Set 地址id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressId 地址id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressId(Long AddressId) {
         this.AddressId = AddressId;
     }
 
     /**
-     * Get 地址名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址名称 
      * @return Location 地址名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocation() {
         return this.Location;
@@ -164,19 +143,15 @@ public class Address extends AbstractModel {
 
     /**
      * Set 地址名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 地址名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get OK正常，DOWN故障，WARN风险，UNKNOWN探测中，UNMONITORED未知
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get OK正常，DOWN故障，WARN风险，UNKNOWN探测中，UNMONITORED未知 
      * @return Status OK正常，DOWN故障，WARN风险，UNKNOWN探测中，UNMONITORED未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -184,9 +159,7 @@ public class Address extends AbstractModel {
 
     /**
      * Set OK正常，DOWN故障，WARN风险，UNKNOWN探测中，UNMONITORED未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status OK正常，DOWN故障，WARN风险，UNKNOWN探测中，UNMONITORED未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -213,10 +186,8 @@ public class Address extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedOn 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedOn() {
         return this.CreatedOn;
@@ -224,19 +195,15 @@ public class Address extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedOn 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return UpdatedOn 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedOn() {
         return this.UpdatedOn;
@@ -244,9 +211,7 @@ public class Address extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedOn 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedOn(String UpdatedOn) {
         this.UpdatedOn = UpdatedOn;

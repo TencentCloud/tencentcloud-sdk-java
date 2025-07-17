@@ -79,7 +79,6 @@ SYSTEM: 系统接入域名
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageType")
     @Expose
@@ -97,9 +96,7 @@ UNKNOWN: 未知
     private String WorkingStatus;
 
     /**
-    * 实例状态
-ENABLED: 正常
-DISABLED: 禁用
+    * 实例状态，ENABLED: 正常；DISABLED: 禁用
     */
     @SerializedName("Status")
     @Expose
@@ -107,7 +104,6 @@ DISABLED: 禁用
 
     /**
     * cname是否接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCnameConfigured")
     @Expose
@@ -115,7 +111,6 @@ DISABLED: 禁用
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -144,7 +139,6 @@ DISABLED: 禁用
 
     /**
     * 实例绑定套餐资源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -295,13 +289,11 @@ SYSTEM: 系统接入域名
      * Get 套餐类型
 FREE: 免费版
 STANDARD：标准版
-ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。 
+ULTIMATE：旗舰版 
      * @return PackageType 套餐类型
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageType() {
         return this.PackageType;
@@ -312,12 +304,10 @@ ULTIMATE：旗舰版
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageType 套餐类型
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
@@ -356,34 +346,24 @@ UNKNOWN: 未知
     }
 
     /**
-     * Get 实例状态
-ENABLED: 正常
-DISABLED: 禁用 
-     * @return Status 实例状态
-ENABLED: 正常
-DISABLED: 禁用
+     * Get 实例状态，ENABLED: 正常；DISABLED: 禁用 
+     * @return Status 实例状态，ENABLED: 正常；DISABLED: 禁用
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态
-ENABLED: 正常
-DISABLED: 禁用
-     * @param Status 实例状态
-ENABLED: 正常
-DISABLED: 禁用
+     * Set 实例状态，ENABLED: 正常；DISABLED: 禁用
+     * @param Status 实例状态，ENABLED: 正常；DISABLED: 禁用
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get cname是否接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cname是否接入：true已接入；false未接入 
      * @return IsCnameConfigured cname是否接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsCnameConfigured() {
         return this.IsCnameConfigured;
@@ -391,19 +371,15 @@ DISABLED: 禁用
 
     /**
      * Set cname是否接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCnameConfigured cname是否接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCnameConfigured(Boolean IsCnameConfigured) {
         this.IsCnameConfigured = IsCnameConfigured;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -411,9 +387,7 @@ DISABLED: 禁用
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -468,10 +442,8 @@ DISABLED: 禁用
     }
 
     /**
-     * Get 实例绑定套餐资源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例绑定套餐资源id 
      * @return ResourceId 实例绑定套餐资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -479,9 +451,7 @@ DISABLED: 禁用
 
     /**
      * Set 实例绑定套餐资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 实例绑定套餐资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

@@ -45,7 +45,7 @@ public class UpdateRuleRequest extends AbstractModel {
     private Boolean Enable;
 
     /**
-    * 规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+    * 事件规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
     */
     @SerializedName("Description")
     @Expose
@@ -114,16 +114,16 @@ public class UpdateRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符 
-     * @return Description 规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+     * Get 事件规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符 
+     * @return Description 事件规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
-     * @param Description 规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+     * Set 事件规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
+     * @param Description 事件规则描述，只能包含数字、中英文及常用标点符号，不超过200个字符
      */
     public void setDescription(String Description) {
         this.Description = Description;

@@ -24,28 +24,33 @@ import java.util.HashMap;
 public class Mouth extends AbstractModel {
 
     /**
-    * 是否张嘴信息。
-AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
+    * 是否张嘴信息。 
+
+- AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
     */
     @SerializedName("MouthOpen")
     @Expose
     private AttributeItem MouthOpen;
 
     /**
-     * Get 是否张嘴信息。
-AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。 
-     * @return MouthOpen 是否张嘴信息。
-AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
+     * Get 是否张嘴信息。 
+
+- AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。 
+     * @return MouthOpen 是否张嘴信息。 
+
+- AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
      */
     public AttributeItem getMouthOpen() {
         return this.MouthOpen;
     }
 
     /**
-     * Set 是否张嘴信息。
-AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
-     * @param MouthOpen 是否张嘴信息。
-AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
+     * Set 是否张嘴信息。 
+
+- AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
+     * @param MouthOpen 是否张嘴信息。 
+
+- AttributeItem对应的Type为 —— 0：不张嘴，1：张嘴。
      */
     public void setMouthOpen(AttributeItem MouthOpen) {
         this.MouthOpen = MouthOpen;

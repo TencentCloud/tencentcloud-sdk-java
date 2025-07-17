@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteRiskScanTaskRequest extends AbstractModel {
 
     /**
-    * 任务id 列表
+    * 任务id 和目标AppID列表
     */
     @SerializedName("TaskIdList")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteRiskScanTaskRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get 任务id 列表 
-     * @return TaskIdList 任务id 列表
+     * Get 任务id 和目标AppID列表 
+     * @return TaskIdList 任务id 和目标AppID列表
      */
     public TaskIdListKey [] getTaskIdList() {
         return this.TaskIdList;
     }
 
     /**
-     * Set 任务id 列表
-     * @param TaskIdList 任务id 列表
+     * Set 任务id 和目标AppID列表
+     * @param TaskIdList 任务id 和目标AppID列表
      */
     public void setTaskIdList(TaskIdListKey [] TaskIdList) {
         this.TaskIdList = TaskIdList;

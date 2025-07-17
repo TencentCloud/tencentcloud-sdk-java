@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListEventBusesRequest extends AbstractModel {
 
     /**
-    * 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
+    * 根据哪个字段进行返回结果排序,支持以下字段：created_at（创建时间）, updated_at（修改时间）
     */
     @SerializedName("OrderBy")
     @Expose
@@ -59,16 +59,16 @@ public class ListEventBusesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间） 
-     * @return OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
+     * Get 根据哪个字段进行返回结果排序,支持以下字段：created_at（创建时间）, updated_at（修改时间） 
+     * @return OrderBy 根据哪个字段进行返回结果排序,支持以下字段：created_at（创建时间）, updated_at（修改时间）
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
-     * @param OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
+     * Set 根据哪个字段进行返回结果排序,支持以下字段：created_at（创建时间）, updated_at（修改时间）
+     * @param OrderBy 根据哪个字段进行返回结果排序,支持以下字段：created_at（创建时间）, updated_at（修改时间）
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
