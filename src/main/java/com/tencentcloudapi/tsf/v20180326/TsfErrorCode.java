@@ -78,7 +78,7 @@ public enum TsfErrorCode {
      /* 调用 kube-api-server 失败。 */
      FAILEDOPERATION_CONTAINERGROUPKUBERNETEAPIINVOKEERROR("FailedOperation.ContainergroupKuberneteApiInvokeError"),
      
-     /* 连接 kube-api-sever 失败。 */
+     /* 连接 kube-api-server 失败。 */
      FAILEDOPERATION_CONTAINERGROUPKUBERNETECONNECTERROR("FailedOperation.ContainergroupKuberneteConnectError"),
      
      /* 调用 kube-api-server 失败。 */

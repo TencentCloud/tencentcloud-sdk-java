@@ -25,7 +25,6 @@ public class AddressPool extends AbstractModel {
 
     /**
     * 地址池 id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoolId")
     @Expose
@@ -33,7 +32,6 @@ public class AddressPool extends AbstractModel {
 
     /**
     * 地址池名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoolName")
     @Expose
@@ -41,7 +39,6 @@ public class AddressPool extends AbstractModel {
 
     /**
     * 地址池地址类型：IPV4、IPV6、DOMAIN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddrType")
     @Expose
@@ -49,7 +46,6 @@ public class AddressPool extends AbstractModel {
 
     /**
     * 流量策略: WEIGHT负载均衡，ALL解析全部
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrafficStrategy")
     @Expose
@@ -65,7 +61,6 @@ public class AddressPool extends AbstractModel {
 
     /**
     * OK正常，DOWN故障，WARN风险，UNKNOWN未知
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -73,7 +68,6 @@ public class AddressPool extends AbstractModel {
 
     /**
     * 地址数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressNum")
     @Expose
@@ -81,7 +75,6 @@ public class AddressPool extends AbstractModel {
 
     /**
     * 探点数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorGroupNum")
     @Expose
@@ -89,7 +82,6 @@ public class AddressPool extends AbstractModel {
 
     /**
     * 探测任务数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorTaskNum")
     @Expose
@@ -113,7 +105,6 @@ public class AddressPool extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedOn")
     @Expose
@@ -121,17 +112,14 @@ public class AddressPool extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedOn")
     @Expose
     private String UpdatedOn;
 
     /**
-     * Get 地址池 id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址池 id 
      * @return PoolId 地址池 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPoolId() {
         return this.PoolId;
@@ -139,19 +127,15 @@ public class AddressPool extends AbstractModel {
 
     /**
      * Set 地址池 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PoolId 地址池 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoolId(Long PoolId) {
         this.PoolId = PoolId;
     }
 
     /**
-     * Get 地址池名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址池名 
      * @return PoolName 地址池名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPoolName() {
         return this.PoolName;
@@ -159,19 +143,15 @@ public class AddressPool extends AbstractModel {
 
     /**
      * Set 地址池名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PoolName 地址池名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoolName(String PoolName) {
         this.PoolName = PoolName;
     }
 
     /**
-     * Get 地址池地址类型：IPV4、IPV6、DOMAIN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址池地址类型：IPV4、IPV6、DOMAIN 
      * @return AddrType 地址池地址类型：IPV4、IPV6、DOMAIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddrType() {
         return this.AddrType;
@@ -179,19 +159,15 @@ public class AddressPool extends AbstractModel {
 
     /**
      * Set 地址池地址类型：IPV4、IPV6、DOMAIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddrType 地址池地址类型：IPV4、IPV6、DOMAIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddrType(String AddrType) {
         this.AddrType = AddrType;
     }
 
     /**
-     * Get 流量策略: WEIGHT负载均衡，ALL解析全部
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量策略: WEIGHT负载均衡，ALL解析全部 
      * @return TrafficStrategy 流量策略: WEIGHT负载均衡，ALL解析全部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrafficStrategy() {
         return this.TrafficStrategy;
@@ -199,9 +175,7 @@ public class AddressPool extends AbstractModel {
 
     /**
      * Set 流量策略: WEIGHT负载均衡，ALL解析全部
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrafficStrategy 流量策略: WEIGHT负载均衡，ALL解析全部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrafficStrategy(String TrafficStrategy) {
         this.TrafficStrategy = TrafficStrategy;
@@ -228,10 +202,8 @@ public class AddressPool extends AbstractModel {
     }
 
     /**
-     * Get OK正常，DOWN故障，WARN风险，UNKNOWN未知
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get OK正常，DOWN故障，WARN风险，UNKNOWN未知 
      * @return Status OK正常，DOWN故障，WARN风险，UNKNOWN未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -239,19 +211,15 @@ public class AddressPool extends AbstractModel {
 
     /**
      * Set OK正常，DOWN故障，WARN风险，UNKNOWN未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status OK正常，DOWN故障，WARN风险，UNKNOWN未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 地址数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址数 
      * @return AddressNum 地址数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAddressNum() {
         return this.AddressNum;
@@ -259,19 +227,15 @@ public class AddressPool extends AbstractModel {
 
     /**
      * Set 地址数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressNum 地址数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressNum(Long AddressNum) {
         this.AddressNum = AddressNum;
     }
 
     /**
-     * Get 探点数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探点数 
      * @return MonitorGroupNum 探点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorGroupNum() {
         return this.MonitorGroupNum;
@@ -279,19 +243,15 @@ public class AddressPool extends AbstractModel {
 
     /**
      * Set 探点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorGroupNum 探点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorGroupNum(Long MonitorGroupNum) {
         this.MonitorGroupNum = MonitorGroupNum;
     }
 
     /**
-     * Get 探测任务数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测任务数 
      * @return MonitorTaskNum 探测任务数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorTaskNum() {
         return this.MonitorTaskNum;
@@ -299,9 +259,7 @@ public class AddressPool extends AbstractModel {
 
     /**
      * Set 探测任务数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorTaskNum 探测任务数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorTaskNum(Long MonitorTaskNum) {
         this.MonitorTaskNum = MonitorTaskNum;
@@ -348,10 +306,8 @@ public class AddressPool extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedOn 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedOn() {
         return this.CreatedOn;
@@ -359,19 +315,15 @@ public class AddressPool extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedOn 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedOn 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedOn() {
         return this.UpdatedOn;
@@ -379,9 +331,7 @@ public class AddressPool extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedOn 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedOn(String UpdatedOn) {
         this.UpdatedOn = UpdatedOn;

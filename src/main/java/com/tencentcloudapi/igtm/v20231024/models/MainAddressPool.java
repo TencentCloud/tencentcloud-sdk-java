@@ -33,7 +33,6 @@ public class MainAddressPool extends AbstractModel {
 
     /**
     * 地址池集合id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MainAddressPoolId")
     @Expose
@@ -41,7 +40,6 @@ public class MainAddressPool extends AbstractModel {
 
     /**
     * 切换阀值，不能大于主力集合内地址总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinSurviveNum")
     @Expose
@@ -49,7 +47,6 @@ public class MainAddressPool extends AbstractModel {
 
     /**
     * 切换策略:ALL解析所有地址；WEIGHT：负载均衡。当为ALL时，解析地址的权重值为1；当为WEIGHT时；权重为地址池权重*地址权重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrafficStrategy")
     @Expose
@@ -76,10 +73,8 @@ public class MainAddressPool extends AbstractModel {
     }
 
     /**
-     * Get 地址池集合id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址池集合id 
      * @return MainAddressPoolId 地址池集合id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMainAddressPoolId() {
         return this.MainAddressPoolId;
@@ -87,19 +82,15 @@ public class MainAddressPool extends AbstractModel {
 
     /**
      * Set 地址池集合id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MainAddressPoolId 地址池集合id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMainAddressPoolId(Long MainAddressPoolId) {
         this.MainAddressPoolId = MainAddressPoolId;
     }
 
     /**
-     * Get 切换阀值，不能大于主力集合内地址总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 切换阀值，不能大于主力集合内地址总数 
      * @return MinSurviveNum 切换阀值，不能大于主力集合内地址总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinSurviveNum() {
         return this.MinSurviveNum;
@@ -107,19 +98,15 @@ public class MainAddressPool extends AbstractModel {
 
     /**
      * Set 切换阀值，不能大于主力集合内地址总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinSurviveNum 切换阀值，不能大于主力集合内地址总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinSurviveNum(Long MinSurviveNum) {
         this.MinSurviveNum = MinSurviveNum;
     }
 
     /**
-     * Get 切换策略:ALL解析所有地址；WEIGHT：负载均衡。当为ALL时，解析地址的权重值为1；当为WEIGHT时；权重为地址池权重*地址权重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 切换策略:ALL解析所有地址；WEIGHT：负载均衡。当为ALL时，解析地址的权重值为1；当为WEIGHT时；权重为地址池权重*地址权重 
      * @return TrafficStrategy 切换策略:ALL解析所有地址；WEIGHT：负载均衡。当为ALL时，解析地址的权重值为1；当为WEIGHT时；权重为地址池权重*地址权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrafficStrategy() {
         return this.TrafficStrategy;
@@ -127,9 +114,7 @@ public class MainAddressPool extends AbstractModel {
 
     /**
      * Set 切换策略:ALL解析所有地址；WEIGHT：负载均衡。当为ALL时，解析地址的权重值为1；当为WEIGHT时；权重为地址池权重*地址权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrafficStrategy 切换策略:ALL解析所有地址；WEIGHT：负载均衡。当为ALL时，解析地址的权重值为1；当为WEIGHT时；权重为地址池权重*地址权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrafficStrategy(String TrafficStrategy) {
         this.TrafficStrategy = TrafficStrategy;

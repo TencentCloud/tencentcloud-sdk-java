@@ -299,21 +299,6 @@ AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任
     }
 
     /**
-     ***本接口已迁移至腾讯混元大模型-文生图轻量版，即将停止此处维护，可切换至 [文生图轻量版 API](https://cloud.tencent.com/document/product/1729/108738) 继续使用。**
-
-智能文生图接口基于文生图（标准版）模型，将根据输入的文本描述，智能生成与之相关的结果图。
-
-智能文生图默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
-     * @param req TextToImageRequest
-     * @return TextToImageResponse
-     * @throws TencentCloudSDKException
-     */
-    public TextToImageResponse TextToImage(TextToImageRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "TextToImage", TextToImageResponse.class);
-    }
-
-    /**
      *混元文生图接口，基于混元大模型，根据输入的文本描述智能生成图片
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
      * @param req TextToImageLiteRequest

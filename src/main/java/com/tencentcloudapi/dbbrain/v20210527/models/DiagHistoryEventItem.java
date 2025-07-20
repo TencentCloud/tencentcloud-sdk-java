@@ -94,6 +94,34 @@ public class DiagHistoryEventItem extends AbstractModel {
     private String Region;
 
     /**
+    * 集群ID。
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 集群名称。
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * vip地址。
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
+    * vip端口。
+    */
+    @SerializedName("Vport")
+    @Expose
+    private Long Vport;
+
+    /**
      * Get 诊断类型。 
      * @return DiagType 诊断类型。
      */
@@ -253,6 +281,70 @@ public class DiagHistoryEventItem extends AbstractModel {
         this.Region = Region;
     }
 
+    /**
+     * Get 集群ID。 
+     * @return ClusterId 集群ID。
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群ID。
+     * @param ClusterId 集群ID。
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 集群名称。 
+     * @return ClusterName 集群名称。
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 集群名称。
+     * @param ClusterName 集群名称。
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get vip地址。 
+     * @return Vip vip地址。
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set vip地址。
+     * @param Vip vip地址。
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
+    /**
+     * Get vip端口。 
+     * @return Vport vip端口。
+     */
+    public Long getVport() {
+        return this.Vport;
+    }
+
+    /**
+     * Set vip端口。
+     * @param Vport vip端口。
+     */
+    public void setVport(Long Vport) {
+        this.Vport = Vport;
+    }
+
     public DiagHistoryEventItem() {
     }
 
@@ -291,6 +383,18 @@ public class DiagHistoryEventItem extends AbstractModel {
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
     }
 
 
@@ -308,6 +412,10 @@ public class DiagHistoryEventItem extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Metric", this.Metric);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "Vport", this.Vport);
 
     }
 }

@@ -31,9 +31,7 @@ public class AndroidAppVersionInfo extends AbstractModel {
     private String AndroidAppVersion;
 
     /**
-    * 安卓应用版本创建状态（NORMAL：无、UPLOADING：上传中、
-CREATING： 创建中、
-CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
+    * 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
     */
     @SerializedName("State")
     @Expose
@@ -89,6 +87,27 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
     private String VersionName;
 
     /**
+    * 应用包 MD5
+    */
+    @SerializedName("MD5")
+    @Expose
+    private String MD5;
+
+    /**
+    * 应用包文件大小（字节）
+    */
+    @SerializedName("FileSize")
+    @Expose
+    private Long FileSize;
+
+    /**
+    * 安卓应用包名
+    */
+    @SerializedName("PackageName")
+    @Expose
+    private String PackageName;
+
+    /**
      * Get 安卓应用版本 
      * @return AndroidAppVersion 安卓应用版本
      */
@@ -105,24 +124,16 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
     }
 
     /**
-     * Get 安卓应用版本创建状态（NORMAL：无、UPLOADING：上传中、
-CREATING： 创建中、
-CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功） 
-     * @return State 安卓应用版本创建状态（NORMAL：无、UPLOADING：上传中、
-CREATING： 创建中、
-CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
+     * Get 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功 
+     * @return State 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 安卓应用版本创建状态（NORMAL：无、UPLOADING：上传中、
-CREATING： 创建中、
-CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
-     * @param State 安卓应用版本创建状态（NORMAL：无、UPLOADING：上传中、
-CREATING： 创建中、
-CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
+     * Set 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
+     * @param State 安卓应用版本创建状态，取值：NORMAL：无（默认）、UPLOADING：上传中、CREATING： 创建中、CREATE_FAIL：创建失败、PACKAGE_NAME_MISMATCH：包名不匹配、VERSION_ALREADY_EXISTS：版本已存在、APP_PARSE_FAIL： app 解析失败、APP_EXISTS_SECURITY_RISK：app 存在安全风险、CREATE_SUCCESS：创建成功
      */
     public void setState(String State) {
         this.State = State;
@@ -240,6 +251,54 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         this.VersionName = VersionName;
     }
 
+    /**
+     * Get 应用包 MD5 
+     * @return MD5 应用包 MD5
+     */
+    public String getMD5() {
+        return this.MD5;
+    }
+
+    /**
+     * Set 应用包 MD5
+     * @param MD5 应用包 MD5
+     */
+    public void setMD5(String MD5) {
+        this.MD5 = MD5;
+    }
+
+    /**
+     * Get 应用包文件大小（字节） 
+     * @return FileSize 应用包文件大小（字节）
+     */
+    public Long getFileSize() {
+        return this.FileSize;
+    }
+
+    /**
+     * Set 应用包文件大小（字节）
+     * @param FileSize 应用包文件大小（字节）
+     */
+    public void setFileSize(Long FileSize) {
+        this.FileSize = FileSize;
+    }
+
+    /**
+     * Get 安卓应用包名 
+     * @return PackageName 安卓应用包名
+     */
+    public String getPackageName() {
+        return this.PackageName;
+    }
+
+    /**
+     * Set 安卓应用包名
+     * @param PackageName 安卓应用包名
+     */
+    public void setPackageName(String PackageName) {
+        this.PackageName = PackageName;
+    }
+
     public AndroidAppVersionInfo() {
     }
 
@@ -275,6 +334,15 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         if (source.VersionName != null) {
             this.VersionName = new String(source.VersionName);
         }
+        if (source.MD5 != null) {
+            this.MD5 = new String(source.MD5);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
+        if (source.PackageName != null) {
+            this.PackageName = new String(source.PackageName);
+        }
     }
 
 
@@ -291,6 +359,9 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
         this.setParamSimple(map, prefix + "AndroidAppVersionName", this.AndroidAppVersionName);
         this.setParamSimple(map, prefix + "Activity", this.Activity);
         this.setParamSimple(map, prefix + "VersionName", this.VersionName);
+        this.setParamSimple(map, prefix + "MD5", this.MD5);
+        this.setParamSimple(map, prefix + "FileSize", this.FileSize);
+        this.setParamSimple(map, prefix + "PackageName", this.PackageName);
 
     }
 }

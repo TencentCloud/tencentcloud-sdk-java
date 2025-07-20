@@ -73,7 +73,7 @@ public class DescribeDetectPackageDetailResponse extends AbstractModel {
     private String Status;
 
     /**
-    * 是否自动续费0不1是
+    * 是否自动续费：0否1是
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -220,16 +220,16 @@ public class DescribeDetectPackageDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否自动续费0不1是 
-     * @return AutoRenewFlag 是否自动续费0不1是
+     * Get 是否自动续费：0否1是 
+     * @return AutoRenewFlag 是否自动续费：0否1是
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 是否自动续费0不1是
-     * @param AutoRenewFlag 是否自动续费0不1是
+     * Set 是否自动续费：0否1是
+     * @param AutoRenewFlag 是否自动续费：0否1是
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

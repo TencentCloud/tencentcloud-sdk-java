@@ -178,6 +178,20 @@ public class CdbZoneSellConf extends AbstractModel {
     private String [] EngineType;
 
     /**
+    * 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+    */
+    @SerializedName("CloudNativeClusterStatus")
+    @Expose
+    private Long CloudNativeClusterStatus;
+
+    /**
+    * 集群版或者单节点基础型支持的磁盘类型。
+    */
+    @SerializedName("DiskTypeConf")
+    @Expose
+    private DiskTypeConfigItem [] DiskTypeConf;
+
+    /**
      * Get 可用区状态。可能的返回值为：1-上线；3-停售；4-不展示 
      * @return Status 可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
      */
@@ -529,6 +543,38 @@ public class CdbZoneSellConf extends AbstractModel {
         this.EngineType = EngineType;
     }
 
+    /**
+     * Get 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示 
+     * @return CloudNativeClusterStatus 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+     */
+    public Long getCloudNativeClusterStatus() {
+        return this.CloudNativeClusterStatus;
+    }
+
+    /**
+     * Set 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+     * @param CloudNativeClusterStatus 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+     */
+    public void setCloudNativeClusterStatus(Long CloudNativeClusterStatus) {
+        this.CloudNativeClusterStatus = CloudNativeClusterStatus;
+    }
+
+    /**
+     * Get 集群版或者单节点基础型支持的磁盘类型。 
+     * @return DiskTypeConf 集群版或者单节点基础型支持的磁盘类型。
+     */
+    public DiskTypeConfigItem [] getDiskTypeConf() {
+        return this.DiskTypeConf;
+    }
+
+    /**
+     * Set 集群版或者单节点基础型支持的磁盘类型。
+     * @param DiskTypeConf 集群版或者单节点基础型支持的磁盘类型。
+     */
+    public void setDiskTypeConf(DiskTypeConfigItem [] DiskTypeConf) {
+        this.DiskTypeConf = DiskTypeConf;
+    }
+
     public CdbZoneSellConf() {
     }
 
@@ -624,6 +670,15 @@ public class CdbZoneSellConf extends AbstractModel {
                 this.EngineType[i] = new String(source.EngineType[i]);
             }
         }
+        if (source.CloudNativeClusterStatus != null) {
+            this.CloudNativeClusterStatus = new Long(source.CloudNativeClusterStatus);
+        }
+        if (source.DiskTypeConf != null) {
+            this.DiskTypeConf = new DiskTypeConfigItem[source.DiskTypeConf.length];
+            for (int i = 0; i < source.DiskTypeConf.length; i++) {
+                this.DiskTypeConf[i] = new DiskTypeConfigItem(source.DiskTypeConf[i]);
+            }
+        }
     }
 
 
@@ -653,6 +708,8 @@ public class CdbZoneSellConf extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "IsSupportIpv6", this.IsSupportIpv6);
         this.setParamArraySimple(map, prefix + "EngineType.", this.EngineType);
+        this.setParamSimple(map, prefix + "CloudNativeClusterStatus", this.CloudNativeClusterStatus);
+        this.setParamArrayObj(map, prefix + "DiskTypeConf.", this.DiskTypeConf);
 
     }
 }

@@ -25,7 +25,6 @@ public class StrategyDetail extends AbstractModel {
 
     /**
     * 实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class StrategyDetail extends AbstractModel {
 
     /**
     * 策略id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyId")
     @Expose
@@ -41,7 +39,6 @@ public class StrategyDetail extends AbstractModel {
 
     /**
     * 策略名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -73,7 +70,6 @@ public class StrategyDetail extends AbstractModel {
 
     /**
     * 是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeepDomainRecords")
     @Expose
@@ -89,7 +85,6 @@ public class StrategyDetail extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedOn")
     @Expose
@@ -97,7 +92,6 @@ public class StrategyDetail extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedOn")
     @Expose
@@ -105,17 +99,14 @@ public class StrategyDetail extends AbstractModel {
 
     /**
     * 调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchPoolType")
     @Expose
     private String SwitchPoolType;
 
     /**
-     * Get 实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例id 
      * @return InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -123,19 +114,15 @@ public class StrategyDetail extends AbstractModel {
 
     /**
      * Set 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 策略id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略id 
      * @return StrategyId 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategyId() {
         return this.StrategyId;
@@ -143,19 +130,15 @@ public class StrategyDetail extends AbstractModel {
 
     /**
      * Set 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyId 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
     }
 
     /**
-     * Get 策略名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名 
      * @return Name 策略名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -163,9 +146,7 @@ public class StrategyDetail extends AbstractModel {
 
     /**
      * Set 策略名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 策略名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -232,10 +213,8 @@ public class StrategyDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否保留线路：enabled保留，disabled不保留，只保留默认线路 
      * @return KeepDomainRecords 是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeepDomainRecords() {
         return this.KeepDomainRecords;
@@ -243,9 +222,7 @@ public class StrategyDetail extends AbstractModel {
 
     /**
      * Set 是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeepDomainRecords 是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeepDomainRecords(String KeepDomainRecords) {
         this.KeepDomainRecords = KeepDomainRecords;
@@ -272,10 +249,8 @@ public class StrategyDetail extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedOn 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedOn() {
         return this.CreatedOn;
@@ -283,19 +258,15 @@ public class StrategyDetail extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedOn 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdatedOn 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedOn() {
         return this.UpdatedOn;
@@ -303,19 +274,15 @@ public class StrategyDetail extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedOn 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedOn(String UpdatedOn) {
         this.UpdatedOn = UpdatedOn;
     }
 
     /**
-     * Get 调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 调度模式：AUTO默认；PAUSE仅暂停不切换 
      * @return SwitchPoolType 调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitchPoolType() {
         return this.SwitchPoolType;
@@ -323,9 +290,7 @@ public class StrategyDetail extends AbstractModel {
 
     /**
      * Set 调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchPoolType 调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchPoolType(String SwitchPoolType) {
         this.SwitchPoolType = SwitchPoolType;

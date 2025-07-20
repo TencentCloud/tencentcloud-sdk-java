@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class LocalBinlogConfigDefault extends AbstractModel {
 
     /**
-    * 本地binlog保留时长，可取值范围：[72,168]。
+    * 本地 binlog 保留时长，可取值范围：[6,168]。
     */
     @SerializedName("SaveHours")
     @Expose
     private Long SaveHours;
 
     /**
-    * 本地binlog空间使用率，可取值范围：[30,50]。
+    * 本地 binlog 空间使用率，可取值范围：[30,50]。
     */
     @SerializedName("MaxUsage")
     @Expose
     private Long MaxUsage;
 
     /**
-     * Get 本地binlog保留时长，可取值范围：[72,168]。 
-     * @return SaveHours 本地binlog保留时长，可取值范围：[72,168]。
+     * Get 本地 binlog 保留时长，可取值范围：[6,168]。 
+     * @return SaveHours 本地 binlog 保留时长，可取值范围：[6,168]。
      */
     public Long getSaveHours() {
         return this.SaveHours;
     }
 
     /**
-     * Set 本地binlog保留时长，可取值范围：[72,168]。
-     * @param SaveHours 本地binlog保留时长，可取值范围：[72,168]。
+     * Set 本地 binlog 保留时长，可取值范围：[6,168]。
+     * @param SaveHours 本地 binlog 保留时长，可取值范围：[6,168]。
      */
     public void setSaveHours(Long SaveHours) {
         this.SaveHours = SaveHours;
     }
 
     /**
-     * Get 本地binlog空间使用率，可取值范围：[30,50]。 
-     * @return MaxUsage 本地binlog空间使用率，可取值范围：[30,50]。
+     * Get 本地 binlog 空间使用率，可取值范围：[30,50]。 
+     * @return MaxUsage 本地 binlog 空间使用率，可取值范围：[30,50]。
      */
     public Long getMaxUsage() {
         return this.MaxUsage;
     }
 
     /**
-     * Set 本地binlog空间使用率，可取值范围：[30,50]。
-     * @param MaxUsage 本地binlog空间使用率，可取值范围：[30,50]。
+     * Set 本地 binlog 空间使用率，可取值范围：[30,50]。
+     * @param MaxUsage 本地 binlog 空间使用率，可取值范围：[30,50]。
      */
     public void setMaxUsage(Long MaxUsage) {
         this.MaxUsage = MaxUsage;

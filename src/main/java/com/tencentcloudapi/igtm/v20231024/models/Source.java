@@ -32,7 +32,6 @@ public class Source extends AbstractModel {
 
     /**
     * 解析请求来源线路名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -55,10 +54,8 @@ public class Source extends AbstractModel {
     }
 
     /**
-     * Get 解析请求来源线路名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解析请求来源线路名 
      * @return Name 解析请求来源线路名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -66,9 +63,7 @@ public class Source extends AbstractModel {
 
     /**
      * Set 解析请求来源线路名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 解析请求来源线路名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -1196,6 +1196,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *该接口（DescribeUserRegisterTime）用于查询当前用户注册时间，并判断是否是老用户。
+     * @param req DescribeUserRegisterTimeRequest
+     * @return DescribeUserRegisterTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserRegisterTimeResponse DescribeUserRegisterTime(DescribeUserRegisterTimeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserRegisterTime", DescribeUserRegisterTimeResponse.class);
+    }
+
+    /**
      *列举用户角色信息
      * @param req DescribeUserRolesRequest
      * @return DescribeUserRolesResponse

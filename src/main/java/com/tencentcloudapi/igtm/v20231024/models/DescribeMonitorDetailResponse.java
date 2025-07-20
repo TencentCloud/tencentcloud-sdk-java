@@ -25,7 +25,6 @@ public class DescribeMonitorDetailResponse extends AbstractModel {
 
     /**
     * 探测规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorDetail")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeMonitorDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 探测规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测规则 
      * @return MonitorDetail 探测规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MonitorDetail getMonitorDetail() {
         return this.MonitorDetail;
@@ -50,9 +47,7 @@ public class DescribeMonitorDetailResponse extends AbstractModel {
 
     /**
      * Set 探测规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorDetail 探测规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorDetail(MonitorDetail MonitorDetail) {
         this.MonitorDetail = MonitorDetail;

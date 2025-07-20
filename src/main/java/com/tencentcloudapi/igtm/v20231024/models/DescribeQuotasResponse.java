@@ -25,7 +25,6 @@ public class DescribeQuotasResponse extends AbstractModel {
 
     /**
     * 配额id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quotas")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeQuotasResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 配额id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配额id 
      * @return Quotas 配额id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Quota getQuotas() {
         return this.Quotas;
@@ -50,9 +47,7 @@ public class DescribeQuotasResponse extends AbstractModel {
 
     /**
      * Set 配额id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quotas 配额id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuotas(Quota Quotas) {
         this.Quotas = Quotas;

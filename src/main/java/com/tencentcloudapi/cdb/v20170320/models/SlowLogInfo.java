@@ -38,7 +38,7 @@ public class SlowLogInfo extends AbstractModel {
     private Long Size;
 
     /**
-    * 备份快照时间，时间格式：2016-03-17 02:10:37
+    * 备份快照时间，时间格式：2016-03-17
     */
     @SerializedName("Date")
     @Expose
@@ -98,16 +98,16 @@ public class SlowLogInfo extends AbstractModel {
     }
 
     /**
-     * Get 备份快照时间，时间格式：2016-03-17 02:10:37 
-     * @return Date 备份快照时间，时间格式：2016-03-17 02:10:37
+     * Get 备份快照时间，时间格式：2016-03-17 
+     * @return Date 备份快照时间，时间格式：2016-03-17
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 备份快照时间，时间格式：2016-03-17 02:10:37
-     * @param Date 备份快照时间，时间格式：2016-03-17 02:10:37
+     * Set 备份快照时间，时间格式：2016-03-17
+     * @param Date 备份快照时间，时间格式：2016-03-17
      */
     public void setDate(String Date) {
         this.Date = Date;

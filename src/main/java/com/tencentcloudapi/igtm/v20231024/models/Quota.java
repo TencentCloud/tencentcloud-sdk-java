@@ -25,7 +25,6 @@ public class Quota extends AbstractModel {
 
     /**
     * 探测任务配额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskQuota")
     @Expose
@@ -33,7 +32,6 @@ public class Quota extends AbstractModel {
 
     /**
     * 地址池配额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PoolQuota")
     @Expose
@@ -41,7 +39,6 @@ public class Quota extends AbstractModel {
 
     /**
     * 地址配额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressQuota")
     @Expose
@@ -49,7 +46,6 @@ public class Quota extends AbstractModel {
 
     /**
     * 探点资源数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorQuota")
     @Expose
@@ -57,7 +53,6 @@ public class Quota extends AbstractModel {
 
     /**
     * 消息资源数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MessageQuota")
     @Expose
@@ -65,7 +60,6 @@ public class Quota extends AbstractModel {
 
     /**
     * 已使用探测任务数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedTaskQuota")
     @Expose
@@ -73,7 +67,6 @@ public class Quota extends AbstractModel {
 
     /**
     * 已使用体验实例数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedFreeInstanceNum")
     @Expose
@@ -81,7 +74,6 @@ public class Quota extends AbstractModel {
 
     /**
     * 已使用付费实例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedBillInstanceNum")
     @Expose
@@ -89,7 +81,6 @@ public class Quota extends AbstractModel {
 
     /**
     * 体验套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreePackageNum")
     @Expose
@@ -97,7 +88,6 @@ public class Quota extends AbstractModel {
 
     /**
     * 已使用付费套餐数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedBillPackageNum")
     @Expose
@@ -105,17 +95,14 @@ public class Quota extends AbstractModel {
 
     /**
     * 付费套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillPackageNum")
     @Expose
     private Long BillPackageNum;
 
     /**
-     * Get 探测任务配额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探测任务配额 
      * @return TaskQuota 探测任务配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskQuota() {
         return this.TaskQuota;
@@ -123,19 +110,15 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 探测任务配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskQuota 探测任务配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskQuota(Long TaskQuota) {
         this.TaskQuota = TaskQuota;
     }
 
     /**
-     * Get 地址池配额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址池配额 
      * @return PoolQuota 地址池配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPoolQuota() {
         return this.PoolQuota;
@@ -143,19 +126,15 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 地址池配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PoolQuota 地址池配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoolQuota(Long PoolQuota) {
         this.PoolQuota = PoolQuota;
     }
 
     /**
-     * Get 地址配额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址配额 
      * @return AddressQuota 地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAddressQuota() {
         return this.AddressQuota;
@@ -163,19 +142,15 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressQuota 地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressQuota(Long AddressQuota) {
         this.AddressQuota = AddressQuota;
     }
 
     /**
-     * Get 探点资源数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 探点资源数 
      * @return MonitorQuota 探点资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorQuota() {
         return this.MonitorQuota;
@@ -183,19 +158,15 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 探点资源数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorQuota 探点资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorQuota(Long MonitorQuota) {
         this.MonitorQuota = MonitorQuota;
     }
 
     /**
-     * Get 消息资源数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息资源数 
      * @return MessageQuota 消息资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMessageQuota() {
         return this.MessageQuota;
@@ -203,19 +174,15 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 消息资源数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MessageQuota 消息资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessageQuota(Long MessageQuota) {
         this.MessageQuota = MessageQuota;
     }
 
     /**
-     * Get 已使用探测任务数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已使用探测任务数 
      * @return UsedTaskQuota 已使用探测任务数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedTaskQuota() {
         return this.UsedTaskQuota;
@@ -223,19 +190,15 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 已使用探测任务数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedTaskQuota 已使用探测任务数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedTaskQuota(Long UsedTaskQuota) {
         this.UsedTaskQuota = UsedTaskQuota;
     }
 
     /**
-     * Get 已使用体验实例数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已使用体验实例数 
      * @return UsedFreeInstanceNum 已使用体验实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedFreeInstanceNum() {
         return this.UsedFreeInstanceNum;
@@ -243,19 +206,15 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 已使用体验实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedFreeInstanceNum 已使用体验实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedFreeInstanceNum(Long UsedFreeInstanceNum) {
         this.UsedFreeInstanceNum = UsedFreeInstanceNum;
     }
 
     /**
-     * Get 已使用付费实例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已使用付费实例 
      * @return UsedBillInstanceNum 已使用付费实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedBillInstanceNum() {
         return this.UsedBillInstanceNum;
@@ -263,19 +222,15 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 已使用付费实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedBillInstanceNum 已使用付费实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedBillInstanceNum(Long UsedBillInstanceNum) {
         this.UsedBillInstanceNum = UsedBillInstanceNum;
     }
 
     /**
-     * Get 体验套餐总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体验套餐总数 
      * @return FreePackageNum 体验套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFreePackageNum() {
         return this.FreePackageNum;
@@ -283,19 +238,15 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 体验套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FreePackageNum 体验套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreePackageNum(Long FreePackageNum) {
         this.FreePackageNum = FreePackageNum;
     }
 
     /**
-     * Get 已使用付费套餐数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已使用付费套餐数 
      * @return UsedBillPackageNum 已使用付费套餐数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedBillPackageNum() {
         return this.UsedBillPackageNum;
@@ -303,19 +254,15 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 已使用付费套餐数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedBillPackageNum 已使用付费套餐数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedBillPackageNum(Long UsedBillPackageNum) {
         this.UsedBillPackageNum = UsedBillPackageNum;
     }
 
     /**
-     * Get 付费套餐总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 付费套餐总数 
      * @return BillPackageNum 付费套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBillPackageNum() {
         return this.BillPackageNum;
@@ -323,9 +270,7 @@ public class Quota extends AbstractModel {
 
     /**
      * Set 付费套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillPackageNum 付费套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillPackageNum(Long BillPackageNum) {
         this.BillPackageNum = BillPackageNum;

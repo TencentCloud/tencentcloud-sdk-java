@@ -87,6 +87,13 @@ public class SkillGroupInfoItem extends AbstractModel {
     private String Alias;
 
     /**
+    * 是否同振
+    */
+    @SerializedName("RingAll")
+    @Expose
+    private Boolean RingAll;
+
+    /**
      * Get 技能组ID 
      * @return SkillGroupId 技能组ID
      */
@@ -230,6 +237,22 @@ public class SkillGroupInfoItem extends AbstractModel {
         this.Alias = Alias;
     }
 
+    /**
+     * Get 是否同振 
+     * @return RingAll 是否同振
+     */
+    public Boolean getRingAll() {
+        return this.RingAll;
+    }
+
+    /**
+     * Set 是否同振
+     * @param RingAll 是否同振
+     */
+    public void setRingAll(Boolean RingAll) {
+        this.RingAll = RingAll;
+    }
+
     public SkillGroupInfoItem() {
     }
 
@@ -265,6 +288,9 @@ public class SkillGroupInfoItem extends AbstractModel {
         if (source.Alias != null) {
             this.Alias = new String(source.Alias);
         }
+        if (source.RingAll != null) {
+            this.RingAll = new Boolean(source.RingAll);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class SkillGroupInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
         this.setParamSimple(map, prefix + "SkillGroupType", this.SkillGroupType);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamSimple(map, prefix + "RingAll", this.RingAll);
 
     }
 }
