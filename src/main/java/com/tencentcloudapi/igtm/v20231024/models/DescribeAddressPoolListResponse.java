@@ -25,7 +25,6 @@ public class DescribeAddressPoolListResponse extends AbstractModel {
 
     /**
     * 资源组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressPoolSet")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAddressPoolListResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeAddressPoolListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源组列表 
      * @return AddressPoolSet 资源组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AddressPool [] getAddressPoolSet() {
         return this.AddressPoolSet;
@@ -58,19 +54,15 @@ public class DescribeAddressPoolListResponse extends AbstractModel {
 
     /**
      * Set 资源组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressPoolSet 资源组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressPoolSet(AddressPool [] AddressPoolSet) {
         this.AddressPoolSet = AddressPoolSet;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeAddressPoolListResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

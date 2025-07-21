@@ -560,7 +560,9 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *表格数据回档
+     *不再使用
+
+表格数据回档
      * @param req RollbackTablesRequest
      * @return RollbackTablesResponse
      * @throws TencentCloudSDKException

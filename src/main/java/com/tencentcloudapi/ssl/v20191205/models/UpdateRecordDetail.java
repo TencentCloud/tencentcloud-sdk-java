@@ -217,6 +217,20 @@ public class UpdateRecordDetail extends AbstractModel {
     private String Url;
 
     /**
+    * 新证书加密算法
+    */
+    @SerializedName("Algorithm")
+    @Expose
+    private String Algorithm;
+
+    /**
+    * 旧证书加密算法
+    */
+    @SerializedName("OldAlgorithm")
+    @Expose
+    private String OldAlgorithm;
+
+    /**
      * Get 更新详情记录id 
      * @return Id 更新详情记录id
      */
@@ -712,6 +726,38 @@ public class UpdateRecordDetail extends AbstractModel {
         this.Url = Url;
     }
 
+    /**
+     * Get 新证书加密算法 
+     * @return Algorithm 新证书加密算法
+     */
+    public String getAlgorithm() {
+        return this.Algorithm;
+    }
+
+    /**
+     * Set 新证书加密算法
+     * @param Algorithm 新证书加密算法
+     */
+    public void setAlgorithm(String Algorithm) {
+        this.Algorithm = Algorithm;
+    }
+
+    /**
+     * Get 旧证书加密算法 
+     * @return OldAlgorithm 旧证书加密算法
+     */
+    public String getOldAlgorithm() {
+        return this.OldAlgorithm;
+    }
+
+    /**
+     * Set 旧证书加密算法
+     * @param OldAlgorithm 旧证书加密算法
+     */
+    public void setOldAlgorithm(String OldAlgorithm) {
+        this.OldAlgorithm = OldAlgorithm;
+    }
+
     public UpdateRecordDetail() {
     }
 
@@ -792,6 +838,12 @@ public class UpdateRecordDetail extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Algorithm != null) {
+            this.Algorithm = new String(source.Algorithm);
+        }
+        if (source.OldAlgorithm != null) {
+            this.OldAlgorithm = new String(source.OldAlgorithm);
+        }
     }
 
 
@@ -822,6 +874,8 @@ public class UpdateRecordDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "TCBType", this.TCBType);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
+        this.setParamSimple(map, prefix + "OldAlgorithm", this.OldAlgorithm);
 
     }
 }

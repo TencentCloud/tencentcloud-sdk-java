@@ -56,6 +56,57 @@ public class InternetAccessible extends AbstractModel {
     private String BandwidthPackageId;
 
     /**
+    * 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+
+<li>BGP：常规 BGP 线路</li>
+已开通静态单线IP白名单的用户，可选值：
+
+<li>CMCC：中国移动</li>
+<li>CTCC：中国电信</li>
+<li>CUCC：中国联通</li>
+注意：仅部分地域支持静态单线IP。
+
+    */
+    @SerializedName("InternetServiceProvider")
+    @Expose
+    private String InternetServiceProvider;
+
+    /**
+    * 公网 IP 类型。
+
+<li> WanIP：普通公网IP。</li>
+<li> HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
+<li> AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见[弹性公网IP产品概述](https://cloud.tencent.com/document/product/1199/41646) 。  </li> 
+如需为资源分配公网IPv4地址，请指定公网IPv4地址类型。
+
+精品IP 高防IP功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+    */
+    @SerializedName("IPv4AddressType")
+    @Expose
+    private String IPv4AddressType;
+
+    /**
+    * 高防包唯一ID，申请高防IP时，该字段必传。
+    */
+    @SerializedName("AntiDDoSPackageId")
+    @Expose
+    private String AntiDDoSPackageId;
+
+    /**
+    * 实例销毁时是否一并销毁绑定的弹性IP。
+
+取值范围：
+<li>TRUE：表示保留EIP</li>
+<li>FALSE：表示不保留</li>
+请注意，当IPv4AddressType字段指定EIP类型时，默认不保留EIP。WanIP不受此字段影响始终随实例销毁。
+变更配置此字段，已绑定伸缩组会立刻生效。
+
+    */
+    @SerializedName("IsKeepEIP")
+    @Expose
+    private Boolean IsKeepEIP;
+
+    /**
      * Get 网络计费类型。取值范围：<li>BANDWIDTH_PREPAID：预付费按带宽结算</li><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li><li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li><li>BANDWIDTH_PACKAGE：带宽包用户</li>默认取值：TRAFFIC_POSTPAID_BY_HOUR。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InternetChargeType 网络计费类型。取值范围：<li>BANDWIDTH_PREPAID：预付费按带宽结算</li><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li><li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li><li>BANDWIDTH_PACKAGE：带宽包用户</li>默认取值：TRAFFIC_POSTPAID_BY_HOUR。
@@ -135,6 +186,162 @@ public class InternetAccessible extends AbstractModel {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
+    /**
+     * Get 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+
+<li>BGP：常规 BGP 线路</li>
+已开通静态单线IP白名单的用户，可选值：
+
+<li>CMCC：中国移动</li>
+<li>CTCC：中国电信</li>
+<li>CUCC：中国联通</li>
+注意：仅部分地域支持静态单线IP。
+ 
+     * @return InternetServiceProvider 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+
+<li>BGP：常规 BGP 线路</li>
+已开通静态单线IP白名单的用户，可选值：
+
+<li>CMCC：中国移动</li>
+<li>CTCC：中国电信</li>
+<li>CUCC：中国联通</li>
+注意：仅部分地域支持静态单线IP。
+
+     */
+    public String getInternetServiceProvider() {
+        return this.InternetServiceProvider;
+    }
+
+    /**
+     * Set 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+
+<li>BGP：常规 BGP 线路</li>
+已开通静态单线IP白名单的用户，可选值：
+
+<li>CMCC：中国移动</li>
+<li>CTCC：中国电信</li>
+<li>CUCC：中国联通</li>
+注意：仅部分地域支持静态单线IP。
+
+     * @param InternetServiceProvider 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+
+<li>BGP：常规 BGP 线路</li>
+已开通静态单线IP白名单的用户，可选值：
+
+<li>CMCC：中国移动</li>
+<li>CTCC：中国电信</li>
+<li>CUCC：中国联通</li>
+注意：仅部分地域支持静态单线IP。
+
+     */
+    public void setInternetServiceProvider(String InternetServiceProvider) {
+        this.InternetServiceProvider = InternetServiceProvider;
+    }
+
+    /**
+     * Get 公网 IP 类型。
+
+<li> WanIP：普通公网IP。</li>
+<li> HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
+<li> AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见[弹性公网IP产品概述](https://cloud.tencent.com/document/product/1199/41646) 。  </li> 
+如需为资源分配公网IPv4地址，请指定公网IPv4地址类型。
+
+精品IP 高防IP功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category) 
+     * @return IPv4AddressType 公网 IP 类型。
+
+<li> WanIP：普通公网IP。</li>
+<li> HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
+<li> AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见[弹性公网IP产品概述](https://cloud.tencent.com/document/product/1199/41646) 。  </li> 
+如需为资源分配公网IPv4地址，请指定公网IPv4地址类型。
+
+精品IP 高防IP功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+     */
+    public String getIPv4AddressType() {
+        return this.IPv4AddressType;
+    }
+
+    /**
+     * Set 公网 IP 类型。
+
+<li> WanIP：普通公网IP。</li>
+<li> HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
+<li> AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见[弹性公网IP产品概述](https://cloud.tencent.com/document/product/1199/41646) 。  </li> 
+如需为资源分配公网IPv4地址，请指定公网IPv4地址类型。
+
+精品IP 高防IP功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+     * @param IPv4AddressType 公网 IP 类型。
+
+<li> WanIP：普通公网IP。</li>
+<li> HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
+<li> AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见[弹性公网IP产品概述](https://cloud.tencent.com/document/product/1199/41646) 。  </li> 
+如需为资源分配公网IPv4地址，请指定公网IPv4地址类型。
+
+精品IP 高防IP功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+     */
+    public void setIPv4AddressType(String IPv4AddressType) {
+        this.IPv4AddressType = IPv4AddressType;
+    }
+
+    /**
+     * Get 高防包唯一ID，申请高防IP时，该字段必传。 
+     * @return AntiDDoSPackageId 高防包唯一ID，申请高防IP时，该字段必传。
+     */
+    public String getAntiDDoSPackageId() {
+        return this.AntiDDoSPackageId;
+    }
+
+    /**
+     * Set 高防包唯一ID，申请高防IP时，该字段必传。
+     * @param AntiDDoSPackageId 高防包唯一ID，申请高防IP时，该字段必传。
+     */
+    public void setAntiDDoSPackageId(String AntiDDoSPackageId) {
+        this.AntiDDoSPackageId = AntiDDoSPackageId;
+    }
+
+    /**
+     * Get 实例销毁时是否一并销毁绑定的弹性IP。
+
+取值范围：
+<li>TRUE：表示保留EIP</li>
+<li>FALSE：表示不保留</li>
+请注意，当IPv4AddressType字段指定EIP类型时，默认不保留EIP。WanIP不受此字段影响始终随实例销毁。
+变更配置此字段，已绑定伸缩组会立刻生效。
+ 
+     * @return IsKeepEIP 实例销毁时是否一并销毁绑定的弹性IP。
+
+取值范围：
+<li>TRUE：表示保留EIP</li>
+<li>FALSE：表示不保留</li>
+请注意，当IPv4AddressType字段指定EIP类型时，默认不保留EIP。WanIP不受此字段影响始终随实例销毁。
+变更配置此字段，已绑定伸缩组会立刻生效。
+
+     */
+    public Boolean getIsKeepEIP() {
+        return this.IsKeepEIP;
+    }
+
+    /**
+     * Set 实例销毁时是否一并销毁绑定的弹性IP。
+
+取值范围：
+<li>TRUE：表示保留EIP</li>
+<li>FALSE：表示不保留</li>
+请注意，当IPv4AddressType字段指定EIP类型时，默认不保留EIP。WanIP不受此字段影响始终随实例销毁。
+变更配置此字段，已绑定伸缩组会立刻生效。
+
+     * @param IsKeepEIP 实例销毁时是否一并销毁绑定的弹性IP。
+
+取值范围：
+<li>TRUE：表示保留EIP</li>
+<li>FALSE：表示不保留</li>
+请注意，当IPv4AddressType字段指定EIP类型时，默认不保留EIP。WanIP不受此字段影响始终随实例销毁。
+变更配置此字段，已绑定伸缩组会立刻生效。
+
+     */
+    public void setIsKeepEIP(Boolean IsKeepEIP) {
+        this.IsKeepEIP = IsKeepEIP;
+    }
+
     public InternetAccessible() {
     }
 
@@ -155,6 +362,18 @@ public class InternetAccessible extends AbstractModel {
         if (source.BandwidthPackageId != null) {
             this.BandwidthPackageId = new String(source.BandwidthPackageId);
         }
+        if (source.InternetServiceProvider != null) {
+            this.InternetServiceProvider = new String(source.InternetServiceProvider);
+        }
+        if (source.IPv4AddressType != null) {
+            this.IPv4AddressType = new String(source.IPv4AddressType);
+        }
+        if (source.AntiDDoSPackageId != null) {
+            this.AntiDDoSPackageId = new String(source.AntiDDoSPackageId);
+        }
+        if (source.IsKeepEIP != null) {
+            this.IsKeepEIP = new Boolean(source.IsKeepEIP);
+        }
     }
 
 
@@ -166,6 +385,10 @@ public class InternetAccessible extends AbstractModel {
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamSimple(map, prefix + "PublicIpAssigned", this.PublicIpAssigned);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+        this.setParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+        this.setParamSimple(map, prefix + "IPv4AddressType", this.IPv4AddressType);
+        this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
+        this.setParamSimple(map, prefix + "IsKeepEIP", this.IsKeepEIP);
 
     }
 }

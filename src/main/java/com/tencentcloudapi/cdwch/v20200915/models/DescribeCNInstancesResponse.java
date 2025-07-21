@@ -25,7 +25,6 @@ public class DescribeCNInstancesResponse extends AbstractModel {
 
     /**
     * 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCNInstancesResponse extends AbstractModel {
 
     /**
     * 实例数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstancesList")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCNInstancesResponse extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeCNInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例总数 
      * @return TotalCount 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -66,19 +61,15 @@ public class DescribeCNInstancesResponse extends AbstractModel {
 
     /**
      * Set 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 实例数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例数组 
      * @return InstancesList 实例数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CnInstanceInfo [] getInstancesList() {
         return this.InstancesList;
@@ -86,19 +77,15 @@ public class DescribeCNInstancesResponse extends AbstractModel {
 
     /**
      * Set 实例数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstancesList 实例数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstancesList(CnInstanceInfo [] InstancesList) {
         this.InstancesList = InstancesList;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
@@ -106,9 +93,7 @@ public class DescribeCNInstancesResponse extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

@@ -25,7 +25,6 @@ public class CreateStrategyResponse extends AbstractModel {
 
     /**
     * 新增策略id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateStrategyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新增策略id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新增策略id 
      * @return StrategyId 新增策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategyId() {
         return this.StrategyId;
@@ -50,9 +47,7 @@ public class CreateStrategyResponse extends AbstractModel {
 
     /**
      * Set 新增策略id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyId 新增策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;

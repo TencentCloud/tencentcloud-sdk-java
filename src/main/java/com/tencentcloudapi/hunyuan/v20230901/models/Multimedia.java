@@ -43,6 +43,20 @@ public class Multimedia extends AbstractModel {
     private String Url;
 
     /**
+    * 如果Url为图片地址，标识图片宽度。
+    */
+    @SerializedName("Width")
+    @Expose
+    private Long Width;
+
+    /**
+    * 如果Url为图片地址，标识图片高度。
+    */
+    @SerializedName("Height")
+    @Expose
+    private Long Height;
+
+    /**
     * 多媒体详情地址。
 说明：
 1. 仅 type 为 image 时，该字段有值。
@@ -51,6 +65,27 @@ public class Multimedia extends AbstractModel {
     @SerializedName("JumpUrl")
     @Expose
     private String JumpUrl;
+
+    /**
+    * 缩略图地址。
+    */
+    @SerializedName("ThumbURL")
+    @Expose
+    private String ThumbURL;
+
+    /**
+    * 缩略图宽度
+    */
+    @SerializedName("ThumbWidth")
+    @Expose
+    private Long ThumbWidth;
+
+    /**
+    * 缩略图高度
+    */
+    @SerializedName("ThumbHeight")
+    @Expose
+    private Long ThumbHeight;
 
     /**
     * 名称。
@@ -89,6 +124,27 @@ public class Multimedia extends AbstractModel {
     @SerializedName("Ext")
     @Expose
     private SongExt Ext;
+
+    /**
+    * 发布时间。
+    */
+    @SerializedName("PublishTime")
+    @Expose
+    private String PublishTime;
+
+    /**
+    * 站点名称
+    */
+    @SerializedName("SiteName")
+    @Expose
+    private String SiteName;
+
+    /**
+    * 站点图标
+    */
+    @SerializedName("SiteIcon")
+    @Expose
+    private String SiteIcon;
 
     /**
      * Get 多媒体类型，可选值包括 image、music、album、playlist。
@@ -143,6 +199,38 @@ public class Multimedia extends AbstractModel {
     }
 
     /**
+     * Get 如果Url为图片地址，标识图片宽度。 
+     * @return Width 如果Url为图片地址，标识图片宽度。
+     */
+    public Long getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * Set 如果Url为图片地址，标识图片宽度。
+     * @param Width 如果Url为图片地址，标识图片宽度。
+     */
+    public void setWidth(Long Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * Get 如果Url为图片地址，标识图片高度。 
+     * @return Height 如果Url为图片地址，标识图片高度。
+     */
+    public Long getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set 如果Url为图片地址，标识图片高度。
+     * @param Height 如果Url为图片地址，标识图片高度。
+     */
+    public void setHeight(Long Height) {
+        this.Height = Height;
+    }
+
+    /**
      * Get 多媒体详情地址。
 说明：
 1. 仅 type 为 image 时，该字段有值。
@@ -168,6 +256,54 @@ public class Multimedia extends AbstractModel {
      */
     public void setJumpUrl(String JumpUrl) {
         this.JumpUrl = JumpUrl;
+    }
+
+    /**
+     * Get 缩略图地址。 
+     * @return ThumbURL 缩略图地址。
+     */
+    public String getThumbURL() {
+        return this.ThumbURL;
+    }
+
+    /**
+     * Set 缩略图地址。
+     * @param ThumbURL 缩略图地址。
+     */
+    public void setThumbURL(String ThumbURL) {
+        this.ThumbURL = ThumbURL;
+    }
+
+    /**
+     * Get 缩略图宽度 
+     * @return ThumbWidth 缩略图宽度
+     */
+    public Long getThumbWidth() {
+        return this.ThumbWidth;
+    }
+
+    /**
+     * Set 缩略图宽度
+     * @param ThumbWidth 缩略图宽度
+     */
+    public void setThumbWidth(Long ThumbWidth) {
+        this.ThumbWidth = ThumbWidth;
+    }
+
+    /**
+     * Get 缩略图高度 
+     * @return ThumbHeight 缩略图高度
+     */
+    public Long getThumbHeight() {
+        return this.ThumbHeight;
+    }
+
+    /**
+     * Set 缩略图高度
+     * @param ThumbHeight 缩略图高度
+     */
+    public void setThumbHeight(Long ThumbHeight) {
+        this.ThumbHeight = ThumbHeight;
     }
 
     /**
@@ -274,6 +410,54 @@ public class Multimedia extends AbstractModel {
         this.Ext = Ext;
     }
 
+    /**
+     * Get 发布时间。 
+     * @return PublishTime 发布时间。
+     */
+    public String getPublishTime() {
+        return this.PublishTime;
+    }
+
+    /**
+     * Set 发布时间。
+     * @param PublishTime 发布时间。
+     */
+    public void setPublishTime(String PublishTime) {
+        this.PublishTime = PublishTime;
+    }
+
+    /**
+     * Get 站点名称 
+     * @return SiteName 站点名称
+     */
+    public String getSiteName() {
+        return this.SiteName;
+    }
+
+    /**
+     * Set 站点名称
+     * @param SiteName 站点名称
+     */
+    public void setSiteName(String SiteName) {
+        this.SiteName = SiteName;
+    }
+
+    /**
+     * Get 站点图标 
+     * @return SiteIcon 站点图标
+     */
+    public String getSiteIcon() {
+        return this.SiteIcon;
+    }
+
+    /**
+     * Set 站点图标
+     * @param SiteIcon 站点图标
+     */
+    public void setSiteIcon(String SiteIcon) {
+        this.SiteIcon = SiteIcon;
+    }
+
     public Multimedia() {
     }
 
@@ -288,8 +472,23 @@ public class Multimedia extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
         if (source.JumpUrl != null) {
             this.JumpUrl = new String(source.JumpUrl);
+        }
+        if (source.ThumbURL != null) {
+            this.ThumbURL = new String(source.ThumbURL);
+        }
+        if (source.ThumbWidth != null) {
+            this.ThumbWidth = new Long(source.ThumbWidth);
+        }
+        if (source.ThumbHeight != null) {
+            this.ThumbHeight = new Long(source.ThumbHeight);
         }
         if (source.Title != null) {
             this.Title = new String(source.Title);
@@ -303,6 +502,15 @@ public class Multimedia extends AbstractModel {
         if (source.Ext != null) {
             this.Ext = new SongExt(source.Ext);
         }
+        if (source.PublishTime != null) {
+            this.PublishTime = new String(source.PublishTime);
+        }
+        if (source.SiteName != null) {
+            this.SiteName = new String(source.SiteName);
+        }
+        if (source.SiteIcon != null) {
+            this.SiteIcon = new String(source.SiteIcon);
+        }
     }
 
 
@@ -312,11 +520,19 @@ public class Multimedia extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+        this.setParamSimple(map, prefix + "ThumbURL", this.ThumbURL);
+        this.setParamSimple(map, prefix + "ThumbWidth", this.ThumbWidth);
+        this.setParamSimple(map, prefix + "ThumbHeight", this.ThumbHeight);
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "Singer", this.Singer);
         this.setParamObj(map, prefix + "Ext.", this.Ext);
+        this.setParamSimple(map, prefix + "PublishTime", this.PublishTime);
+        this.setParamSimple(map, prefix + "SiteName", this.SiteName);
+        this.setParamSimple(map, prefix + "SiteIcon", this.SiteIcon);
 
     }
 }

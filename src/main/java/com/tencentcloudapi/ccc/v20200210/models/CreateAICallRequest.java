@@ -398,6 +398,27 @@ HoaiMy
     private Variable [] Variables;
 
     /**
+    * 模型topP
+    */
+    @SerializedName("TopP")
+    @Expose
+    private Float TopP;
+
+    /**
+    * vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+    */
+    @SerializedName("VadLevel")
+    @Expose
+    private Long VadLevel;
+
+    /**
+    * 衔接语
+    */
+    @SerializedName("ToneWord")
+    @Expose
+    private ToneWordInfo ToneWord;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -1549,6 +1570,54 @@ HoaiMy
         this.Variables = Variables;
     }
 
+    /**
+     * Get 模型topP 
+     * @return TopP 模型topP
+     */
+    public Float getTopP() {
+        return this.TopP;
+    }
+
+    /**
+     * Set 模型topP
+     * @param TopP 模型topP
+     */
+    public void setTopP(Float TopP) {
+        this.TopP = TopP;
+    }
+
+    /**
+     * Get vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。 
+     * @return VadLevel vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+     */
+    public Long getVadLevel() {
+        return this.VadLevel;
+    }
+
+    /**
+     * Set vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+     * @param VadLevel vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+     */
+    public void setVadLevel(Long VadLevel) {
+        this.VadLevel = VadLevel;
+    }
+
+    /**
+     * Get 衔接语 
+     * @return ToneWord 衔接语
+     */
+    public ToneWordInfo getToneWord() {
+        return this.ToneWord;
+    }
+
+    /**
+     * Set 衔接语
+     * @param ToneWord 衔接语
+     */
+    public void setToneWord(ToneWordInfo ToneWord) {
+        this.ToneWord = ToneWord;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -1662,6 +1731,15 @@ HoaiMy
                 this.Variables[i] = new Variable(source.Variables[i]);
             }
         }
+        if (source.TopP != null) {
+            this.TopP = new Float(source.TopP);
+        }
+        if (source.VadLevel != null) {
+            this.VadLevel = new Long(source.VadLevel);
+        }
+        if (source.ToneWord != null) {
+            this.ToneWord = new ToneWordInfo(source.ToneWord);
+        }
     }
 
 
@@ -1698,6 +1776,9 @@ HoaiMy
         this.setParamArrayObj(map, prefix + "ExtractConfig.", this.ExtractConfig);
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);
         this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
+        this.setParamSimple(map, prefix + "TopP", this.TopP);
+        this.setParamSimple(map, prefix + "VadLevel", this.VadLevel);
+        this.setParamObj(map, prefix + "ToneWord.", this.ToneWord);
 
     }
 }

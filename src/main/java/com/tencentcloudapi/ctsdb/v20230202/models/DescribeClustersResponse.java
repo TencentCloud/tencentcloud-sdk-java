@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.igtm.v20231024.models;
+package com.tencentcloudapi.ctsdb.v20230202.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,23 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMonitorResponse extends AbstractModel {
+public class DescribeClustersResponse extends AbstractModel {
 
     /**
-    * success 为修改成功
+    * 当前条件下的总记录数
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Msg")
+    @SerializedName("TotalCount")
     @Expose
-    private String Msg;
+    private Long TotalCount;
+
+    /**
+    * 符合条件的实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Clusters")
+    @Expose
+    private Cluster [] Clusters;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +47,43 @@ public class ModifyMonitorResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get success 为修改成功 
-     * @return Msg success 为修改成功
+     * Get 当前条件下的总记录数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 当前条件下的总记录数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getMsg() {
-        return this.Msg;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set success 为修改成功
-     * @param Msg success 为修改成功
+     * Set 当前条件下的总记录数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 当前条件下的总记录数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMsg(String Msg) {
-        this.Msg = Msg;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 符合条件的实例列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Clusters 符合条件的实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Cluster [] getClusters() {
+        return this.Clusters;
+    }
+
+    /**
+     * Set 符合条件的实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Clusters 符合条件的实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusters(Cluster [] Clusters) {
+        this.Clusters = Clusters;
     }
 
     /**
@@ -69,16 +102,22 @@ public class ModifyMonitorResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ModifyMonitorResponse() {
+    public DescribeClustersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyMonitorResponse(ModifyMonitorResponse source) {
-        if (source.Msg != null) {
-            this.Msg = new String(source.Msg);
+    public DescribeClustersResponse(DescribeClustersResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Clusters != null) {
+            this.Clusters = new Cluster[source.Clusters.length];
+            for (int i = 0; i < source.Clusters.length; i++) {
+                this.Clusters[i] = new Cluster(source.Clusters[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +129,8 @@ public class ModifyMonitorResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Msg", this.Msg);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Clusters.", this.Clusters);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

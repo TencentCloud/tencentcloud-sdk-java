@@ -25,7 +25,6 @@ public class DescribeMonitorsResponse extends AbstractModel {
 
     /**
     * 监控器列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorDataSet")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeMonitorsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 监控器列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控器列表 
      * @return MonitorDataSet 监控器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MonitorDetail [] getMonitorDataSet() {
         return this.MonitorDataSet;
@@ -57,9 +54,7 @@ public class DescribeMonitorsResponse extends AbstractModel {
 
     /**
      * Set 监控器列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorDataSet 监控器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorDataSet(MonitorDetail [] MonitorDataSet) {
         this.MonitorDataSet = MonitorDataSet;

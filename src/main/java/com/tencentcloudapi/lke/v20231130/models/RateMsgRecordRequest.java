@@ -38,7 +38,10 @@ public class RateMsgRecordRequest extends AbstractModel {
     private String RecordId;
 
     /**
-    * 1: 点赞,  2: 点踩
+    * 1: 点赞;  2: 点踩;   
+注：
+1) 评测端不支持点赞、点踩
+2) 消息回复类型为欢迎语、并发超限、实时文档，不支持点赞、点踩
     */
     @SerializedName("Score")
     @Expose
@@ -84,16 +87,28 @@ public class RateMsgRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 1: 点赞,  2: 点踩 
-     * @return Score 1: 点赞,  2: 点踩
+     * Get 1: 点赞;  2: 点踩;   
+注：
+1) 评测端不支持点赞、点踩
+2) 消息回复类型为欢迎语、并发超限、实时文档，不支持点赞、点踩 
+     * @return Score 1: 点赞;  2: 点踩;   
+注：
+1) 评测端不支持点赞、点踩
+2) 消息回复类型为欢迎语、并发超限、实时文档，不支持点赞、点踩
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 1: 点赞,  2: 点踩
-     * @param Score 1: 点赞,  2: 点踩
+     * Set 1: 点赞;  2: 点踩;   
+注：
+1) 评测端不支持点赞、点踩
+2) 消息回复类型为欢迎语、并发超限、实时文档，不支持点赞、点踩
+     * @param Score 1: 点赞;  2: 点踩;   
+注：
+1) 评测端不支持点赞、点踩
+2) 消息回复类型为欢迎语、并发超限、实时文档，不支持点赞、点踩
      */
     public void setScore(Long Score) {
         this.Score = Score;

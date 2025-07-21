@@ -25,7 +25,6 @@ public class DeleteMonitorResponse extends AbstractModel {
 
     /**
     * 成功返回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
     @Expose
@@ -39,10 +38,8 @@ public class DeleteMonitorResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成功返回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功返回 
      * @return Msg 成功返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
         return this.Msg;
@@ -50,9 +47,7 @@ public class DeleteMonitorResponse extends AbstractModel {
 
     /**
      * Set 成功返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Msg 成功返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

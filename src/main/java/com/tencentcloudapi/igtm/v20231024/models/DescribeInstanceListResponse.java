@@ -25,7 +25,6 @@ public class DescribeInstanceListResponse extends AbstractModel {
 
     /**
     * 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceSet")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeInstanceListResponse extends AbstractModel {
 
     /**
     * 列表总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeInstanceListResponse extends AbstractModel {
 
     /**
     * 是否支持系统域名接入：true支持；false不支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SystemAccessEnabled")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例列表 
      * @return InstanceSet 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Instance [] getInstanceSet() {
         return this.InstanceSet;
@@ -66,19 +61,15 @@ public class DescribeInstanceListResponse extends AbstractModel {
 
     /**
      * Set 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceSet 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceSet(Instance [] InstanceSet) {
         this.InstanceSet = InstanceSet;
     }
 
     /**
-     * Get 列表总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表总数 
      * @return TotalCount 列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -86,19 +77,15 @@ public class DescribeInstanceListResponse extends AbstractModel {
 
     /**
      * Set 列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 是否支持系统域名接入：true支持；false不支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持系统域名接入：true支持；false不支持 
      * @return SystemAccessEnabled 是否支持系统域名接入：true支持；false不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSystemAccessEnabled() {
         return this.SystemAccessEnabled;
@@ -106,9 +93,7 @@ public class DescribeInstanceListResponse extends AbstractModel {
 
     /**
      * Set 是否支持系统域名接入：true支持；false不支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SystemAccessEnabled 是否支持系统域名接入：true支持；false不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSystemAccessEnabled(Boolean SystemAccessEnabled) {
         this.SystemAccessEnabled = SystemAccessEnabled;

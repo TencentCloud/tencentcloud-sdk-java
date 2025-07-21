@@ -25,7 +25,6 @@ public class DescribeStrategyListResponse extends AbstractModel {
 
     /**
     * 策略列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategySet")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeStrategyListResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeStrategyListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略列表 
      * @return StrategySet 策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Strategy [] getStrategySet() {
         return this.StrategySet;
@@ -58,19 +54,15 @@ public class DescribeStrategyListResponse extends AbstractModel {
 
     /**
      * Set 策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategySet 策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategySet(Strategy [] StrategySet) {
         this.StrategySet = StrategySet;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeStrategyListResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

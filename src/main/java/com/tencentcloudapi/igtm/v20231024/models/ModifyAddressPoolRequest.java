@@ -38,7 +38,7 @@ public class ModifyAddressPoolRequest extends AbstractModel {
     private String PoolName;
 
     /**
-    * 流量策略: WEIGHT负载均衡，ALl解析全部
+    * 流量策略: WEIGHT负载均衡，ALL解析全部
     */
     @SerializedName("TrafficStrategy")
     @Expose
@@ -91,16 +91,16 @@ public class ModifyAddressPoolRequest extends AbstractModel {
     }
 
     /**
-     * Get 流量策略: WEIGHT负载均衡，ALl解析全部 
-     * @return TrafficStrategy 流量策略: WEIGHT负载均衡，ALl解析全部
+     * Get 流量策略: WEIGHT负载均衡，ALL解析全部 
+     * @return TrafficStrategy 流量策略: WEIGHT负载均衡，ALL解析全部
      */
     public String getTrafficStrategy() {
         return this.TrafficStrategy;
     }
 
     /**
-     * Set 流量策略: WEIGHT负载均衡，ALl解析全部
-     * @param TrafficStrategy 流量策略: WEIGHT负载均衡，ALl解析全部
+     * Set 流量策略: WEIGHT负载均衡，ALL解析全部
+     * @param TrafficStrategy 流量策略: WEIGHT负载均衡，ALL解析全部
      */
     public void setTrafficStrategy(String TrafficStrategy) {
         this.TrafficStrategy = TrafficStrategy;

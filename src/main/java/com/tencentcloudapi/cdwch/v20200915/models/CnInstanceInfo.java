@@ -25,7 +25,6 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
     * ID值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -33,7 +32,6 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
     * cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -41,7 +39,6 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
     * cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -49,7 +46,6 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
     * Running
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
     * 运行中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusDesc")
     @Expose
@@ -65,7 +60,6 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
     * 无
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStateInfo")
     @Expose
@@ -73,7 +67,6 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
     * -
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceID")
     @Expose
@@ -81,17 +74,14 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
     * 无
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resources")
     @Expose
     private CNResource [] Resources;
 
     /**
-     * Get ID值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ID值 
      * @return ID ID值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getID() {
         return this.ID;
@@ -99,19 +89,15 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
      * Set ID值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID ID值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cdwch-cn或者其他 
      * @return InstanceType cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -119,19 +105,15 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
      * Set cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cdwch-cn或者其他 
      * @return InstanceName cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -139,19 +121,15 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
      * Set cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Running
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Running 
      * @return Status Running
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -159,19 +137,15 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
      * Set Running
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status Running
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 运行中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行中 
      * @return StatusDesc 运行中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusDesc() {
         return this.StatusDesc;
@@ -179,19 +153,15 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
      * Set 运行中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusDesc 运行中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get 无
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 无 
      * @return InstanceStateInfo 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceStateInfo getInstanceStateInfo() {
         return this.InstanceStateInfo;
@@ -199,19 +169,15 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
      * Set 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStateInfo 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStateInfo(InstanceStateInfo InstanceStateInfo) {
         this.InstanceStateInfo = InstanceStateInfo;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get - 
      * @return InstanceID -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceID() {
         return this.InstanceID;
@@ -219,19 +185,15 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
      * Set -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceID -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 无
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 无 
      * @return Resources 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CNResource [] getResources() {
         return this.Resources;
@@ -239,9 +201,7 @@ public class CnInstanceInfo extends AbstractModel {
 
     /**
      * Set 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resources 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResources(CNResource [] Resources) {
         this.Resources = Resources;

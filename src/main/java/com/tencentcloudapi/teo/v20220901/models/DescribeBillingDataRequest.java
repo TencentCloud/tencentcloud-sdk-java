@@ -31,44 +31,23 @@ public class DescribeBillingDataRequest extends AbstractModel {
     private String StartTime;
 
     /**
-    * 结束时间。
+    * 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 站点 ID 集合，此参数必填。
+    * 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * 指标列表，取值有：
-<li>acc_flux: 内容加速流量，单位为 Byte；</li>
-<li>smt_flux: 智能加速流量，单位为 Byte；</li>
-<li>l4_flux: 四层加速流量，单位为 Byte；</li>
-<li>sec_flux: 独立防护流量，单位为 Byte；</li>
-<li>zxctg_flux: 中国大陆网络优化流量，单位为 Byte；</li>
-<li>acc_bandwidth: 内容加速带宽，单位为 bps；</li>
-<li>smt_bandwidth: 智能加速带宽，单位为 bps；</li>
-<li>l4_bandwidth: 四层加速带宽，单位为 bps；</li>
-<li>sec_bandwidth: 独立防护带宽，单位为 bps；</li>
-<li>zxctg_bandwidth: 中国大陆网络优化带宽，单位为 bps；</li>
-<li>sec_request_clean: HTTP/HTTPS 请求，单位为次；</li>
-<li>smt_request_clean: 智能加速请求，单位为次；</li>
-<li>quic_request: QUIC 请求，单位为次；</li>
-<li>bot_request_clean: Bot 请求，单位为次；</li>
-<li>cls_count: 实时日志推送条数，单位为条；</li>
-<li>ddos_bandwidth: 弹性 DDoS 防护带宽，单位为 bps；</li>
-<li>total_transcode：所有规格音频，视频即时转码，转封装时长，单位为秒；</li>
-<li>remux：转封装时长，单位为秒；</li>
-<li>transcode_audio：音频转码时长，单位为秒；</li>
-<li>transcode_H264_SD：H.264 编码方式的标清视频（短边 <= 480 px）时长，单位为秒；</li>
-<li>transcode_H264_HD：H.264 编码方式的高清视频（短边 <= 720 px）时长，单位为秒；</li>
-<li>transcode_H264_FHD：H.264 编码方式的全高清视频（短边 <= 1080 px）时长，单位为秒；</li>
-<li>transcode_H264_2K：H.264 编码方式的 2K 视频（短边 <= 1440 px）时长，单位为秒。</li>
+    * 指标列表，取值如下：
+<b>四/七层加速流量：</b><li>acc_flux: 内容加速流量，单位为 Byte；</li><li>smt_flux: 智能加速流量，单位为 Byte；</li><li>l4_flux: 四层加速流量，单位为 Byte；</li><li>sec_flux: 独立防护流量，单位为 Byte；</li><li>zxctg_flux: 中国大陆网络优化流量，单位为 Byte。</li><br><b>四/七层加速带宽:</b><li>acc_bandwidth: 内容加速带宽，单位为 bps；</li><li>smt_bandwidth: 智能加速带宽，单位为 bps；</li><li>l4_bandwidth: 四层加速带宽，单位为 bps；</li><li>sec_bandwidth: 独立防护带宽，单位为 bps；</li><li>zxctg_bandwidth: 中国大陆网络优化带宽，单位为 bps。</li><br><b>HTTP/HTTPS 安全请求数：</b><li>sec_request_clean: HTTP/HTTPS 请求，单位为次。</li><b><br>增值服务用量：</b><li>smt_request_clean: 智能加速请求，单位为次；</li><li>quic_request: QUIC 请求，单位为次；</li><li>bot_request_clean: Bot 请求，单位为次；</li><li>cls_count: 实时日志推送条数，单位为条；</li><li>ddos_bandwidth: 弹性 DDoS 防护带宽，单位为 bps。</li><br><b>边缘计算用量：</b><li>edgefunction_request：边缘函数请求数，单位为次；</li><li>edgefunction_cpu_time：边缘函数CPU处理时间，单位为毫秒。</li>
+<b>媒体处理用量：</b><li>total_transcode：所有规格音频，视频即时转码，转封装时长，单位为秒；</li><li>remux：转封装时长，单位为秒；</li><li>transcode_audio：音频转码时长，单位为秒；</li><li>transcode_H264_SD：H.264 编码方式的标清视频（短边 <= 480 px）时长，单位为秒；</li><li>transcode_H264_HD：H.264 编码方式的高清视频（短边 <= 720 px）时长，单位为秒；</li><li>transcode_H264_FHD：H.264 编码方式的全高清视频（短边 <= 1080 px）时长，单位为秒；</li><li>transcode_H264_2K：H.264 编码方式的 2K 视频（短边 <= 1440 px）时长，单位为秒。</li>
     */
     @SerializedName("MetricName")
     @Expose
@@ -89,10 +68,18 @@ public class DescribeBillingDataRequest extends AbstractModel {
 <li>host：按照域名进行过滤。示例值：test.example.com。<br></li>
 <li>proxy-id：按照四层代理实例 ID 进行过滤。示例值：sid-2rugn89bkla9。<br></li>
 <li>region-id：按照计费大区进行过滤。可选项如下：<br>  CH：中国大陆境内<br>  AF：非洲<br>  AS1：亚太一区<br>  AS2：亚太二区<br>  AS3：亚太三区<br>  EU：欧洲<br>  MidEast：中东<br>  NA：北美<br>  SA：南美</li>
+说明：相同 `Type` 的 `BillingDataFilter` 之间为“或”关系，不同 `Type` 的 `BillingDataFilter` 之间为“且”关系。
     */
     @SerializedName("Filters")
     @Expose
     private BillingDataFilter [] Filters;
+
+    /**
+    * 分组聚合维度。最多允许同时按照两种维度进行分组。取值如下：  <li>zone-id：按照站点 ID 进行分组，若使用了内容标识符功能，则优先按照内容标识符分组；<br></li><li>host：按照域名进行分组；<br></li> <li>proxy-id：按照四层代理实例 ID 进行分组；<br></li> <li>region-id：按照计费大区进行分组。</li> 
+    */
+    @SerializedName("GroupBy")
+    @Expose
+    private String [] GroupBy;
 
     /**
      * Get 起始时间。 
@@ -111,140 +98,56 @@ public class DescribeBillingDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 结束时间。 
-     * @return EndTime 结束时间。
+     * Get 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。 
+     * @return EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。
-     * @param EndTime 结束时间。
+     * Set 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
+     * @param EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 站点 ID 集合，此参数必填。 
-     * @return ZoneIds 站点 ID 集合，此参数必填。
+     * Get 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。 
+     * @return ZoneIds 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点 ID 集合，此参数必填。
-     * @param ZoneIds 站点 ID 集合，此参数必填。
+     * Set 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+     * @param ZoneIds 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 指标列表，取值有：
-<li>acc_flux: 内容加速流量，单位为 Byte；</li>
-<li>smt_flux: 智能加速流量，单位为 Byte；</li>
-<li>l4_flux: 四层加速流量，单位为 Byte；</li>
-<li>sec_flux: 独立防护流量，单位为 Byte；</li>
-<li>zxctg_flux: 中国大陆网络优化流量，单位为 Byte；</li>
-<li>acc_bandwidth: 内容加速带宽，单位为 bps；</li>
-<li>smt_bandwidth: 智能加速带宽，单位为 bps；</li>
-<li>l4_bandwidth: 四层加速带宽，单位为 bps；</li>
-<li>sec_bandwidth: 独立防护带宽，单位为 bps；</li>
-<li>zxctg_bandwidth: 中国大陆网络优化带宽，单位为 bps；</li>
-<li>sec_request_clean: HTTP/HTTPS 请求，单位为次；</li>
-<li>smt_request_clean: 智能加速请求，单位为次；</li>
-<li>quic_request: QUIC 请求，单位为次；</li>
-<li>bot_request_clean: Bot 请求，单位为次；</li>
-<li>cls_count: 实时日志推送条数，单位为条；</li>
-<li>ddos_bandwidth: 弹性 DDoS 防护带宽，单位为 bps；</li>
-<li>total_transcode：所有规格音频，视频即时转码，转封装时长，单位为秒；</li>
-<li>remux：转封装时长，单位为秒；</li>
-<li>transcode_audio：音频转码时长，单位为秒；</li>
-<li>transcode_H264_SD：H.264 编码方式的标清视频（短边 <= 480 px）时长，单位为秒；</li>
-<li>transcode_H264_HD：H.264 编码方式的高清视频（短边 <= 720 px）时长，单位为秒；</li>
-<li>transcode_H264_FHD：H.264 编码方式的全高清视频（短边 <= 1080 px）时长，单位为秒；</li>
-<li>transcode_H264_2K：H.264 编码方式的 2K 视频（短边 <= 1440 px）时长，单位为秒。</li> 
-     * @return MetricName 指标列表，取值有：
-<li>acc_flux: 内容加速流量，单位为 Byte；</li>
-<li>smt_flux: 智能加速流量，单位为 Byte；</li>
-<li>l4_flux: 四层加速流量，单位为 Byte；</li>
-<li>sec_flux: 独立防护流量，单位为 Byte；</li>
-<li>zxctg_flux: 中国大陆网络优化流量，单位为 Byte；</li>
-<li>acc_bandwidth: 内容加速带宽，单位为 bps；</li>
-<li>smt_bandwidth: 智能加速带宽，单位为 bps；</li>
-<li>l4_bandwidth: 四层加速带宽，单位为 bps；</li>
-<li>sec_bandwidth: 独立防护带宽，单位为 bps；</li>
-<li>zxctg_bandwidth: 中国大陆网络优化带宽，单位为 bps；</li>
-<li>sec_request_clean: HTTP/HTTPS 请求，单位为次；</li>
-<li>smt_request_clean: 智能加速请求，单位为次；</li>
-<li>quic_request: QUIC 请求，单位为次；</li>
-<li>bot_request_clean: Bot 请求，单位为次；</li>
-<li>cls_count: 实时日志推送条数，单位为条；</li>
-<li>ddos_bandwidth: 弹性 DDoS 防护带宽，单位为 bps；</li>
-<li>total_transcode：所有规格音频，视频即时转码，转封装时长，单位为秒；</li>
-<li>remux：转封装时长，单位为秒；</li>
-<li>transcode_audio：音频转码时长，单位为秒；</li>
-<li>transcode_H264_SD：H.264 编码方式的标清视频（短边 <= 480 px）时长，单位为秒；</li>
-<li>transcode_H264_HD：H.264 编码方式的高清视频（短边 <= 720 px）时长，单位为秒；</li>
-<li>transcode_H264_FHD：H.264 编码方式的全高清视频（短边 <= 1080 px）时长，单位为秒；</li>
-<li>transcode_H264_2K：H.264 编码方式的 2K 视频（短边 <= 1440 px）时长，单位为秒。</li>
+     * Get 指标列表，取值如下：
+<b>四/七层加速流量：</b><li>acc_flux: 内容加速流量，单位为 Byte；</li><li>smt_flux: 智能加速流量，单位为 Byte；</li><li>l4_flux: 四层加速流量，单位为 Byte；</li><li>sec_flux: 独立防护流量，单位为 Byte；</li><li>zxctg_flux: 中国大陆网络优化流量，单位为 Byte。</li><br><b>四/七层加速带宽:</b><li>acc_bandwidth: 内容加速带宽，单位为 bps；</li><li>smt_bandwidth: 智能加速带宽，单位为 bps；</li><li>l4_bandwidth: 四层加速带宽，单位为 bps；</li><li>sec_bandwidth: 独立防护带宽，单位为 bps；</li><li>zxctg_bandwidth: 中国大陆网络优化带宽，单位为 bps。</li><br><b>HTTP/HTTPS 安全请求数：</b><li>sec_request_clean: HTTP/HTTPS 请求，单位为次。</li><b><br>增值服务用量：</b><li>smt_request_clean: 智能加速请求，单位为次；</li><li>quic_request: QUIC 请求，单位为次；</li><li>bot_request_clean: Bot 请求，单位为次；</li><li>cls_count: 实时日志推送条数，单位为条；</li><li>ddos_bandwidth: 弹性 DDoS 防护带宽，单位为 bps。</li><br><b>边缘计算用量：</b><li>edgefunction_request：边缘函数请求数，单位为次；</li><li>edgefunction_cpu_time：边缘函数CPU处理时间，单位为毫秒。</li>
+<b>媒体处理用量：</b><li>total_transcode：所有规格音频，视频即时转码，转封装时长，单位为秒；</li><li>remux：转封装时长，单位为秒；</li><li>transcode_audio：音频转码时长，单位为秒；</li><li>transcode_H264_SD：H.264 编码方式的标清视频（短边 <= 480 px）时长，单位为秒；</li><li>transcode_H264_HD：H.264 编码方式的高清视频（短边 <= 720 px）时长，单位为秒；</li><li>transcode_H264_FHD：H.264 编码方式的全高清视频（短边 <= 1080 px）时长，单位为秒；</li><li>transcode_H264_2K：H.264 编码方式的 2K 视频（短边 <= 1440 px）时长，单位为秒。</li> 
+     * @return MetricName 指标列表，取值如下：
+<b>四/七层加速流量：</b><li>acc_flux: 内容加速流量，单位为 Byte；</li><li>smt_flux: 智能加速流量，单位为 Byte；</li><li>l4_flux: 四层加速流量，单位为 Byte；</li><li>sec_flux: 独立防护流量，单位为 Byte；</li><li>zxctg_flux: 中国大陆网络优化流量，单位为 Byte。</li><br><b>四/七层加速带宽:</b><li>acc_bandwidth: 内容加速带宽，单位为 bps；</li><li>smt_bandwidth: 智能加速带宽，单位为 bps；</li><li>l4_bandwidth: 四层加速带宽，单位为 bps；</li><li>sec_bandwidth: 独立防护带宽，单位为 bps；</li><li>zxctg_bandwidth: 中国大陆网络优化带宽，单位为 bps。</li><br><b>HTTP/HTTPS 安全请求数：</b><li>sec_request_clean: HTTP/HTTPS 请求，单位为次。</li><b><br>增值服务用量：</b><li>smt_request_clean: 智能加速请求，单位为次；</li><li>quic_request: QUIC 请求，单位为次；</li><li>bot_request_clean: Bot 请求，单位为次；</li><li>cls_count: 实时日志推送条数，单位为条；</li><li>ddos_bandwidth: 弹性 DDoS 防护带宽，单位为 bps。</li><br><b>边缘计算用量：</b><li>edgefunction_request：边缘函数请求数，单位为次；</li><li>edgefunction_cpu_time：边缘函数CPU处理时间，单位为毫秒。</li>
+<b>媒体处理用量：</b><li>total_transcode：所有规格音频，视频即时转码，转封装时长，单位为秒；</li><li>remux：转封装时长，单位为秒；</li><li>transcode_audio：音频转码时长，单位为秒；</li><li>transcode_H264_SD：H.264 编码方式的标清视频（短边 <= 480 px）时长，单位为秒；</li><li>transcode_H264_HD：H.264 编码方式的高清视频（短边 <= 720 px）时长，单位为秒；</li><li>transcode_H264_FHD：H.264 编码方式的全高清视频（短边 <= 1080 px）时长，单位为秒；</li><li>transcode_H264_2K：H.264 编码方式的 2K 视频（短边 <= 1440 px）时长，单位为秒。</li>
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 指标列表，取值有：
-<li>acc_flux: 内容加速流量，单位为 Byte；</li>
-<li>smt_flux: 智能加速流量，单位为 Byte；</li>
-<li>l4_flux: 四层加速流量，单位为 Byte；</li>
-<li>sec_flux: 独立防护流量，单位为 Byte；</li>
-<li>zxctg_flux: 中国大陆网络优化流量，单位为 Byte；</li>
-<li>acc_bandwidth: 内容加速带宽，单位为 bps；</li>
-<li>smt_bandwidth: 智能加速带宽，单位为 bps；</li>
-<li>l4_bandwidth: 四层加速带宽，单位为 bps；</li>
-<li>sec_bandwidth: 独立防护带宽，单位为 bps；</li>
-<li>zxctg_bandwidth: 中国大陆网络优化带宽，单位为 bps；</li>
-<li>sec_request_clean: HTTP/HTTPS 请求，单位为次；</li>
-<li>smt_request_clean: 智能加速请求，单位为次；</li>
-<li>quic_request: QUIC 请求，单位为次；</li>
-<li>bot_request_clean: Bot 请求，单位为次；</li>
-<li>cls_count: 实时日志推送条数，单位为条；</li>
-<li>ddos_bandwidth: 弹性 DDoS 防护带宽，单位为 bps；</li>
-<li>total_transcode：所有规格音频，视频即时转码，转封装时长，单位为秒；</li>
-<li>remux：转封装时长，单位为秒；</li>
-<li>transcode_audio：音频转码时长，单位为秒；</li>
-<li>transcode_H264_SD：H.264 编码方式的标清视频（短边 <= 480 px）时长，单位为秒；</li>
-<li>transcode_H264_HD：H.264 编码方式的高清视频（短边 <= 720 px）时长，单位为秒；</li>
-<li>transcode_H264_FHD：H.264 编码方式的全高清视频（短边 <= 1080 px）时长，单位为秒；</li>
-<li>transcode_H264_2K：H.264 编码方式的 2K 视频（短边 <= 1440 px）时长，单位为秒。</li>
-     * @param MetricName 指标列表，取值有：
-<li>acc_flux: 内容加速流量，单位为 Byte；</li>
-<li>smt_flux: 智能加速流量，单位为 Byte；</li>
-<li>l4_flux: 四层加速流量，单位为 Byte；</li>
-<li>sec_flux: 独立防护流量，单位为 Byte；</li>
-<li>zxctg_flux: 中国大陆网络优化流量，单位为 Byte；</li>
-<li>acc_bandwidth: 内容加速带宽，单位为 bps；</li>
-<li>smt_bandwidth: 智能加速带宽，单位为 bps；</li>
-<li>l4_bandwidth: 四层加速带宽，单位为 bps；</li>
-<li>sec_bandwidth: 独立防护带宽，单位为 bps；</li>
-<li>zxctg_bandwidth: 中国大陆网络优化带宽，单位为 bps；</li>
-<li>sec_request_clean: HTTP/HTTPS 请求，单位为次；</li>
-<li>smt_request_clean: 智能加速请求，单位为次；</li>
-<li>quic_request: QUIC 请求，单位为次；</li>
-<li>bot_request_clean: Bot 请求，单位为次；</li>
-<li>cls_count: 实时日志推送条数，单位为条；</li>
-<li>ddos_bandwidth: 弹性 DDoS 防护带宽，单位为 bps；</li>
-<li>total_transcode：所有规格音频，视频即时转码，转封装时长，单位为秒；</li>
-<li>remux：转封装时长，单位为秒；</li>
-<li>transcode_audio：音频转码时长，单位为秒；</li>
-<li>transcode_H264_SD：H.264 编码方式的标清视频（短边 <= 480 px）时长，单位为秒；</li>
-<li>transcode_H264_HD：H.264 编码方式的高清视频（短边 <= 720 px）时长，单位为秒；</li>
-<li>transcode_H264_FHD：H.264 编码方式的全高清视频（短边 <= 1080 px）时长，单位为秒；</li>
-<li>transcode_H264_2K：H.264 编码方式的 2K 视频（短边 <= 1440 px）时长，单位为秒。</li>
+     * Set 指标列表，取值如下：
+<b>四/七层加速流量：</b><li>acc_flux: 内容加速流量，单位为 Byte；</li><li>smt_flux: 智能加速流量，单位为 Byte；</li><li>l4_flux: 四层加速流量，单位为 Byte；</li><li>sec_flux: 独立防护流量，单位为 Byte；</li><li>zxctg_flux: 中国大陆网络优化流量，单位为 Byte。</li><br><b>四/七层加速带宽:</b><li>acc_bandwidth: 内容加速带宽，单位为 bps；</li><li>smt_bandwidth: 智能加速带宽，单位为 bps；</li><li>l4_bandwidth: 四层加速带宽，单位为 bps；</li><li>sec_bandwidth: 独立防护带宽，单位为 bps；</li><li>zxctg_bandwidth: 中国大陆网络优化带宽，单位为 bps。</li><br><b>HTTP/HTTPS 安全请求数：</b><li>sec_request_clean: HTTP/HTTPS 请求，单位为次。</li><b><br>增值服务用量：</b><li>smt_request_clean: 智能加速请求，单位为次；</li><li>quic_request: QUIC 请求，单位为次；</li><li>bot_request_clean: Bot 请求，单位为次；</li><li>cls_count: 实时日志推送条数，单位为条；</li><li>ddos_bandwidth: 弹性 DDoS 防护带宽，单位为 bps。</li><br><b>边缘计算用量：</b><li>edgefunction_request：边缘函数请求数，单位为次；</li><li>edgefunction_cpu_time：边缘函数CPU处理时间，单位为毫秒。</li>
+<b>媒体处理用量：</b><li>total_transcode：所有规格音频，视频即时转码，转封装时长，单位为秒；</li><li>remux：转封装时长，单位为秒；</li><li>transcode_audio：音频转码时长，单位为秒；</li><li>transcode_H264_SD：H.264 编码方式的标清视频（短边 <= 480 px）时长，单位为秒；</li><li>transcode_H264_HD：H.264 编码方式的高清视频（短边 <= 720 px）时长，单位为秒；</li><li>transcode_H264_FHD：H.264 编码方式的全高清视频（短边 <= 1080 px）时长，单位为秒；</li><li>transcode_H264_2K：H.264 编码方式的 2K 视频（短边 <= 1440 px）时长，单位为秒。</li>
+     * @param MetricName 指标列表，取值如下：
+<b>四/七层加速流量：</b><li>acc_flux: 内容加速流量，单位为 Byte；</li><li>smt_flux: 智能加速流量，单位为 Byte；</li><li>l4_flux: 四层加速流量，单位为 Byte；</li><li>sec_flux: 独立防护流量，单位为 Byte；</li><li>zxctg_flux: 中国大陆网络优化流量，单位为 Byte。</li><br><b>四/七层加速带宽:</b><li>acc_bandwidth: 内容加速带宽，单位为 bps；</li><li>smt_bandwidth: 智能加速带宽，单位为 bps；</li><li>l4_bandwidth: 四层加速带宽，单位为 bps；</li><li>sec_bandwidth: 独立防护带宽，单位为 bps；</li><li>zxctg_bandwidth: 中国大陆网络优化带宽，单位为 bps。</li><br><b>HTTP/HTTPS 安全请求数：</b><li>sec_request_clean: HTTP/HTTPS 请求，单位为次。</li><b><br>增值服务用量：</b><li>smt_request_clean: 智能加速请求，单位为次；</li><li>quic_request: QUIC 请求，单位为次；</li><li>bot_request_clean: Bot 请求，单位为次；</li><li>cls_count: 实时日志推送条数，单位为条；</li><li>ddos_bandwidth: 弹性 DDoS 防护带宽，单位为 bps。</li><br><b>边缘计算用量：</b><li>edgefunction_request：边缘函数请求数，单位为次；</li><li>edgefunction_cpu_time：边缘函数CPU处理时间，单位为毫秒。</li>
+<b>媒体处理用量：</b><li>total_transcode：所有规格音频，视频即时转码，转封装时长，单位为秒；</li><li>remux：转封装时长，单位为秒；</li><li>transcode_audio：音频转码时长，单位为秒；</li><li>transcode_H264_SD：H.264 编码方式的标清视频（短边 <= 480 px）时长，单位为秒；</li><li>transcode_H264_HD：H.264 编码方式的高清视频（短边 <= 720 px）时长，单位为秒；</li><li>transcode_H264_FHD：H.264 编码方式的全高清视频（短边 <= 1080 px）时长，单位为秒；</li><li>transcode_H264_2K：H.264 编码方式的 2K 视频（短边 <= 1440 px）时长，单位为秒。</li>
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
@@ -282,11 +185,13 @@ public class DescribeBillingDataRequest extends AbstractModel {
      * Get 过滤条件，详细的过滤条件取值如下：
 <li>host：按照域名进行过滤。示例值：test.example.com。<br></li>
 <li>proxy-id：按照四层代理实例 ID 进行过滤。示例值：sid-2rugn89bkla9。<br></li>
-<li>region-id：按照计费大区进行过滤。可选项如下：<br>  CH：中国大陆境内<br>  AF：非洲<br>  AS1：亚太一区<br>  AS2：亚太二区<br>  AS3：亚太三区<br>  EU：欧洲<br>  MidEast：中东<br>  NA：北美<br>  SA：南美</li> 
+<li>region-id：按照计费大区进行过滤。可选项如下：<br>  CH：中国大陆境内<br>  AF：非洲<br>  AS1：亚太一区<br>  AS2：亚太二区<br>  AS3：亚太三区<br>  EU：欧洲<br>  MidEast：中东<br>  NA：北美<br>  SA：南美</li>
+说明：相同 `Type` 的 `BillingDataFilter` 之间为“或”关系，不同 `Type` 的 `BillingDataFilter` 之间为“且”关系。 
      * @return Filters 过滤条件，详细的过滤条件取值如下：
 <li>host：按照域名进行过滤。示例值：test.example.com。<br></li>
 <li>proxy-id：按照四层代理实例 ID 进行过滤。示例值：sid-2rugn89bkla9。<br></li>
 <li>region-id：按照计费大区进行过滤。可选项如下：<br>  CH：中国大陆境内<br>  AF：非洲<br>  AS1：亚太一区<br>  AS2：亚太二区<br>  AS3：亚太三区<br>  EU：欧洲<br>  MidEast：中东<br>  NA：北美<br>  SA：南美</li>
+说明：相同 `Type` 的 `BillingDataFilter` 之间为“或”关系，不同 `Type` 的 `BillingDataFilter` 之间为“且”关系。
      */
     public BillingDataFilter [] getFilters() {
         return this.Filters;
@@ -297,13 +202,31 @@ public class DescribeBillingDataRequest extends AbstractModel {
 <li>host：按照域名进行过滤。示例值：test.example.com。<br></li>
 <li>proxy-id：按照四层代理实例 ID 进行过滤。示例值：sid-2rugn89bkla9。<br></li>
 <li>region-id：按照计费大区进行过滤。可选项如下：<br>  CH：中国大陆境内<br>  AF：非洲<br>  AS1：亚太一区<br>  AS2：亚太二区<br>  AS3：亚太三区<br>  EU：欧洲<br>  MidEast：中东<br>  NA：北美<br>  SA：南美</li>
+说明：相同 `Type` 的 `BillingDataFilter` 之间为“或”关系，不同 `Type` 的 `BillingDataFilter` 之间为“且”关系。
      * @param Filters 过滤条件，详细的过滤条件取值如下：
 <li>host：按照域名进行过滤。示例值：test.example.com。<br></li>
 <li>proxy-id：按照四层代理实例 ID 进行过滤。示例值：sid-2rugn89bkla9。<br></li>
 <li>region-id：按照计费大区进行过滤。可选项如下：<br>  CH：中国大陆境内<br>  AF：非洲<br>  AS1：亚太一区<br>  AS2：亚太二区<br>  AS3：亚太三区<br>  EU：欧洲<br>  MidEast：中东<br>  NA：北美<br>  SA：南美</li>
+说明：相同 `Type` 的 `BillingDataFilter` 之间为“或”关系，不同 `Type` 的 `BillingDataFilter` 之间为“且”关系。
      */
     public void setFilters(BillingDataFilter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get 分组聚合维度。最多允许同时按照两种维度进行分组。取值如下：  <li>zone-id：按照站点 ID 进行分组，若使用了内容标识符功能，则优先按照内容标识符分组；<br></li><li>host：按照域名进行分组；<br></li> <li>proxy-id：按照四层代理实例 ID 进行分组；<br></li> <li>region-id：按照计费大区进行分组。</li>  
+     * @return GroupBy 分组聚合维度。最多允许同时按照两种维度进行分组。取值如下：  <li>zone-id：按照站点 ID 进行分组，若使用了内容标识符功能，则优先按照内容标识符分组；<br></li><li>host：按照域名进行分组；<br></li> <li>proxy-id：按照四层代理实例 ID 进行分组；<br></li> <li>region-id：按照计费大区进行分组。</li> 
+     */
+    public String [] getGroupBy() {
+        return this.GroupBy;
+    }
+
+    /**
+     * Set 分组聚合维度。最多允许同时按照两种维度进行分组。取值如下：  <li>zone-id：按照站点 ID 进行分组，若使用了内容标识符功能，则优先按照内容标识符分组；<br></li><li>host：按照域名进行分组；<br></li> <li>proxy-id：按照四层代理实例 ID 进行分组；<br></li> <li>region-id：按照计费大区进行分组。</li> 
+     * @param GroupBy 分组聚合维度。最多允许同时按照两种维度进行分组。取值如下：  <li>zone-id：按照站点 ID 进行分组，若使用了内容标识符功能，则优先按照内容标识符分组；<br></li><li>host：按照域名进行分组；<br></li> <li>proxy-id：按照四层代理实例 ID 进行分组；<br></li> <li>region-id：按照计费大区进行分组。</li> 
+     */
+    public void setGroupBy(String [] GroupBy) {
+        this.GroupBy = GroupBy;
     }
 
     public DescribeBillingDataRequest() {
@@ -338,6 +261,12 @@ public class DescribeBillingDataRequest extends AbstractModel {
                 this.Filters[i] = new BillingDataFilter(source.Filters[i]);
             }
         }
+        if (source.GroupBy != null) {
+            this.GroupBy = new String[source.GroupBy.length];
+            for (int i = 0; i < source.GroupBy.length; i++) {
+                this.GroupBy[i] = new String(source.GroupBy[i]);
+            }
+        }
     }
 
 
@@ -351,6 +280,7 @@ public class DescribeBillingDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
 
     }
 }

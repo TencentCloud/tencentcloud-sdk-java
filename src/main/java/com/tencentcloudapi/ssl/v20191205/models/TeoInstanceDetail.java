@@ -58,6 +58,13 @@ issued：绑定失败。
     private String Status;
 
     /**
+    * 证书加密算法
+    */
+    @SerializedName("Algorithm")
+    @Expose
+    private String Algorithm;
+
+    /**
      * Get 域名 
      * @return Host 域名
      */
@@ -145,6 +152,22 @@ issued：绑定失败。
         this.Status = Status;
     }
 
+    /**
+     * Get 证书加密算法 
+     * @return Algorithm 证书加密算法
+     */
+    public String getAlgorithm() {
+        return this.Algorithm;
+    }
+
+    /**
+     * Set 证书加密算法
+     * @param Algorithm 证书加密算法
+     */
+    public void setAlgorithm(String Algorithm) {
+        this.Algorithm = Algorithm;
+    }
+
     public TeoInstanceDetail() {
     }
 
@@ -165,6 +188,9 @@ issued：绑定失败。
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Algorithm != null) {
+            this.Algorithm = new String(source.Algorithm);
+        }
     }
 
 
@@ -176,6 +202,7 @@ issued：绑定失败。
         this.setParamSimple(map, prefix + "CertId", this.CertId);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
 
     }
 }

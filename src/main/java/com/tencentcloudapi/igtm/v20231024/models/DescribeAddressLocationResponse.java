@@ -25,7 +25,6 @@ public class DescribeAddressLocationResponse extends AbstractModel {
 
     /**
     * 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressLocation")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAddressLocationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 所属地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属地域 
      * @return AddressLocation 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AddressLocation [] getAddressLocation() {
         return this.AddressLocation;
@@ -50,9 +47,7 @@ public class DescribeAddressLocationResponse extends AbstractModel {
 
     /**
      * Set 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressLocation 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressLocation(AddressLocation [] AddressLocation) {
         this.AddressLocation = AddressLocation;

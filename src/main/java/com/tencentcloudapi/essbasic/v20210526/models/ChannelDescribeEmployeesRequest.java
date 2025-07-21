@@ -59,8 +59,7 @@ public class ChannelDescribeEmployeesRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。
+    * 偏移量:从 0 开始，最大20000。
     */
     @SerializedName("Offset")
     @Expose
@@ -178,20 +177,16 @@ public class ChannelDescribeEmployeesRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。 
-     * @return Offset 指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。
+     * Get 偏移量:从 0 开始，最大20000。 
+     * @return Offset 偏移量:从 0 开始，最大20000。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。
-     * @param Offset 指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。
+     * Set 偏移量:从 0 开始，最大20000。
+     * @param Offset 偏移量:从 0 开始，最大20000。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

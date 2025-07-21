@@ -25,7 +25,6 @@ public class ModifyAddressPoolResponse extends AbstractModel {
 
     /**
     * 是否修改成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
     @Expose
@@ -39,10 +38,8 @@ public class ModifyAddressPoolResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否修改成功
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否修改成功 
      * @return Msg 是否修改成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
         return this.Msg;
@@ -50,9 +47,7 @@ public class ModifyAddressPoolResponse extends AbstractModel {
 
     /**
      * Set 是否修改成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Msg 是否修改成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

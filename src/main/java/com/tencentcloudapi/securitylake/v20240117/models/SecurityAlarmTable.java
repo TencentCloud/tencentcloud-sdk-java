@@ -319,7 +319,6 @@ public class SecurityAlarmTable extends AbstractModel {
 
     /**
     * 自定义富化字段信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RichCustomInfos")
     @Expose
@@ -1047,10 +1046,8 @@ public class SecurityAlarmTable extends AbstractModel {
     }
 
     /**
-     * Get 自定义富化字段信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义富化字段信息 
      * @return RichCustomInfos 自定义富化字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRichCustomInfos() {
         return this.RichCustomInfos;
@@ -1058,9 +1055,7 @@ public class SecurityAlarmTable extends AbstractModel {
 
     /**
      * Set 自定义富化字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RichCustomInfos 自定义富化字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRichCustomInfos(String [] RichCustomInfos) {
         this.RichCustomInfos = RichCustomInfos;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.igtm.v20231024.models;
+package com.tencentcloudapi.ctsdb.v20230202.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMonitorResponse extends AbstractModel {
+public class DescribeDatabasesResponse extends AbstractModel {
 
     /**
-    * success 为修改成功
+    * 数据库列表
     */
-    @SerializedName("Msg")
+    @SerializedName("Databases")
     @Expose
-    private String Msg;
+    private Database [] Databases;
+
+    /**
+    * 数量
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class ModifyMonitorResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get success 为修改成功 
-     * @return Msg success 为修改成功
+     * Get 数据库列表 
+     * @return Databases 数据库列表
      */
-    public String getMsg() {
-        return this.Msg;
+    public Database [] getDatabases() {
+        return this.Databases;
     }
 
     /**
-     * Set success 为修改成功
-     * @param Msg success 为修改成功
+     * Set 数据库列表
+     * @param Databases 数据库列表
      */
-    public void setMsg(String Msg) {
-        this.Msg = Msg;
+    public void setDatabases(Database [] Databases) {
+        this.Databases = Databases;
+    }
+
+    /**
+     * Get 数量 
+     * @return TotalCount 数量
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 数量
+     * @param TotalCount 数量
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -69,16 +92,22 @@ public class ModifyMonitorResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ModifyMonitorResponse() {
+    public DescribeDatabasesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyMonitorResponse(ModifyMonitorResponse source) {
-        if (source.Msg != null) {
-            this.Msg = new String(source.Msg);
+    public DescribeDatabasesResponse(DescribeDatabasesResponse source) {
+        if (source.Databases != null) {
+            this.Databases = new Database[source.Databases.length];
+            for (int i = 0; i < source.Databases.length; i++) {
+                this.Databases[i] = new Database(source.Databases[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +119,8 @@ public class ModifyMonitorResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Msg", this.Msg);
+        this.setParamArrayObj(map, prefix + "Databases.", this.Databases);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

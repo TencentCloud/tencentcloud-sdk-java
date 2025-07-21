@@ -25,7 +25,6 @@ public class DescribeAddressPoolDetailResponse extends AbstractModel {
 
     /**
     * 资源组详情描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressPool")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAddressPoolDetailResponse extends AbstractModel {
 
     /**
     * 资源组中的资源列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressSet")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeAddressPoolDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源组详情描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源组详情描述 
      * @return AddressPool 资源组详情描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AddressPoolDetail getAddressPool() {
         return this.AddressPool;
@@ -58,19 +54,15 @@ public class DescribeAddressPoolDetailResponse extends AbstractModel {
 
     /**
      * Set 资源组详情描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressPool 资源组详情描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressPool(AddressPoolDetail AddressPool) {
         this.AddressPool = AddressPool;
     }
 
     /**
-     * Get 资源组中的资源列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源组中的资源列表 
      * @return AddressSet 资源组中的资源列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Address [] getAddressSet() {
         return this.AddressSet;
@@ -78,9 +70,7 @@ public class DescribeAddressPoolDetailResponse extends AbstractModel {
 
     /**
      * Set 资源组中的资源列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressSet 资源组中的资源列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressSet(Address [] AddressSet) {
         this.AddressSet = AddressSet;

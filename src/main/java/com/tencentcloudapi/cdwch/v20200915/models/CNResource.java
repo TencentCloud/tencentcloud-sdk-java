@@ -24,460 +24,460 @@ import java.util.HashMap;
 public class CNResource extends AbstractModel {
 
     /**
-    * 无
+    * 资源id
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 无
+    * 集群的id
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 无
+    * 用户appid
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-    * 无
+    * 用户uin
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 无
+    * 组件
     */
     @SerializedName("Component")
     @Expose
     private String Component;
 
     /**
-    * 无
+    * 部署模式
     */
     @SerializedName("DeployMode")
     @Expose
     private Long DeployMode;
 
     /**
-    * 无
+    * 规格名称
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * 无
+    * 资源id
     */
     @SerializedName("ResourceID")
     @Expose
     private String ResourceID;
 
     /**
-    * 无
+    * 资源的状态
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 无
+    * 私有网络ip
     */
     @SerializedName("IP")
     @Expose
     private String IP;
 
     /**
-    * 无
+    * 核数
     */
     @SerializedName("CPU")
     @Expose
     private Long CPU;
 
     /**
-    * 无
+    * 内存
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 无
+    * 存储大小
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 无
+    * 服务器ID
     */
     @SerializedName("UUID")
     @Expose
     private String UUID;
 
     /**
-    * 无
+    * 地域
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 无
+    * 地区
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 无
+    * 详细信息
     */
     @SerializedName("Details")
     @Expose
     private String Details;
 
     /**
-    * 无
+    * 创建时间
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 无
+    * 修改时间
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 无
+    * 过期时间
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get 无 
-     * @return ID 无
+     * Get 资源id 
+     * @return ID 资源id
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 无
-     * @param ID 无
+     * Set 资源id
+     * @param ID 资源id
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 无 
-     * @return InstanceID 无
+     * Get 集群的id 
+     * @return InstanceID 集群的id
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 无
-     * @param InstanceID 无
+     * Set 集群的id
+     * @param InstanceID 集群的id
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 无 
-     * @return AppID 无
+     * Get 用户appid 
+     * @return AppID 用户appid
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set 无
-     * @param AppID 无
+     * Set 用户appid
+     * @param AppID 用户appid
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get 无 
-     * @return Uin 无
+     * Get 用户uin 
+     * @return Uin 用户uin
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 无
-     * @param Uin 无
+     * Set 用户uin
+     * @param Uin 用户uin
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 无 
-     * @return Component 无
+     * Get 组件 
+     * @return Component 组件
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set 无
-     * @param Component 无
+     * Set 组件
+     * @param Component 组件
      */
     public void setComponent(String Component) {
         this.Component = Component;
     }
 
     /**
-     * Get 无 
-     * @return DeployMode 无
+     * Get 部署模式 
+     * @return DeployMode 部署模式
      */
     public Long getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set 无
-     * @param DeployMode 无
+     * Set 部署模式
+     * @param DeployMode 部署模式
      */
     public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * Get 无 
-     * @return SpecName 无
+     * Get 规格名称 
+     * @return SpecName 规格名称
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set 无
-     * @param SpecName 无
+     * Set 规格名称
+     * @param SpecName 规格名称
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get 无 
-     * @return ResourceID 无
+     * Get 资源id 
+     * @return ResourceID 资源id
      */
     public String getResourceID() {
         return this.ResourceID;
     }
 
     /**
-     * Set 无
-     * @param ResourceID 无
+     * Set 资源id
+     * @param ResourceID 资源id
      */
     public void setResourceID(String ResourceID) {
         this.ResourceID = ResourceID;
     }
 
     /**
-     * Get 无 
-     * @return Status 无
+     * Get 资源的状态 
+     * @return Status 资源的状态
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 无
-     * @param Status 无
+     * Set 资源的状态
+     * @param Status 资源的状态
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 无 
-     * @return IP 无
+     * Get 私有网络ip 
+     * @return IP 私有网络ip
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * Set 无
-     * @param IP 无
+     * Set 私有网络ip
+     * @param IP 私有网络ip
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get 无 
-     * @return CPU 无
+     * Get 核数 
+     * @return CPU 核数
      */
     public Long getCPU() {
         return this.CPU;
     }
 
     /**
-     * Set 无
-     * @param CPU 无
+     * Set 核数
+     * @param CPU 核数
      */
     public void setCPU(Long CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * Get 无 
-     * @return Memory 无
+     * Get 内存 
+     * @return Memory 内存
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 无
-     * @param Memory 无
+     * Set 内存
+     * @param Memory 内存
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 无 
-     * @return Storage 无
+     * Get 存储大小 
+     * @return Storage 存储大小
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 无
-     * @param Storage 无
+     * Set 存储大小
+     * @param Storage 存储大小
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 无 
-     * @return UUID 无
+     * Get 服务器ID 
+     * @return UUID 服务器ID
      */
     public String getUUID() {
         return this.UUID;
     }
 
     /**
-     * Set 无
-     * @param UUID 无
+     * Set 服务器ID
+     * @param UUID 服务器ID
      */
     public void setUUID(String UUID) {
         this.UUID = UUID;
     }
 
     /**
-     * Get 无 
-     * @return Region 无
+     * Get 地域 
+     * @return Region 地域
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 无
-     * @param Region 无
+     * Set 地域
+     * @param Region 地域
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 无 
-     * @return Zone 无
+     * Get 地区 
+     * @return Zone 地区
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 无
-     * @param Zone 无
+     * Set 地区
+     * @param Zone 地区
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 无 
-     * @return Details 无
+     * Get 详细信息 
+     * @return Details 详细信息
      */
     public String getDetails() {
         return this.Details;
     }
 
     /**
-     * Set 无
-     * @param Details 无
+     * Set 详细信息
+     * @param Details 详细信息
      */
     public void setDetails(String Details) {
         this.Details = Details;
     }
 
     /**
-     * Get 无 
-     * @return CreateTime 无
+     * Get 创建时间 
+     * @return CreateTime 创建时间
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 无
-     * @param CreateTime 无
+     * Set 创建时间
+     * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 无 
-     * @return ModifyTime 无
+     * Get 修改时间 
+     * @return ModifyTime 修改时间
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 无
-     * @param ModifyTime 无
+     * Set 修改时间
+     * @param ModifyTime 修改时间
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 无 
-     * @return ExpireTime 无
+     * Get 过期时间 
+     * @return ExpireTime 过期时间
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 无
-     * @param ExpireTime 无
+     * Set 过期时间
+     * @param ExpireTime 过期时间
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

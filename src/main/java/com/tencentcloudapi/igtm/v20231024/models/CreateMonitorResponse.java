@@ -25,7 +25,6 @@ public class CreateMonitorResponse extends AbstractModel {
 
     /**
     * 监控器id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateMonitorResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 监控器id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监控器id 
      * @return MonitorId 监控器id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonitorId() {
         return this.MonitorId;
@@ -50,9 +47,7 @@ public class CreateMonitorResponse extends AbstractModel {
 
     /**
      * Set 监控器id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorId 监控器id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorId(Long MonitorId) {
         this.MonitorId = MonitorId;

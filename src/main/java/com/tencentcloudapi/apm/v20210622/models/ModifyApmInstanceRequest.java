@@ -304,6 +304,20 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Long IsDeserializationAnalysis;
 
     /**
+    * URL长分段收敛阈值
+    */
+    @SerializedName("UrlLongSegmentThreshold")
+    @Expose
+    private Long UrlLongSegmentThreshold;
+
+    /**
+    * URL数字分段收敛阈值
+    */
+    @SerializedName("UrlNumberSegmentThreshold")
+    @Expose
+    private Long UrlNumberSegmentThreshold;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceId 业务系统 ID
      */
@@ -943,6 +957,38 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.IsDeserializationAnalysis = IsDeserializationAnalysis;
     }
 
+    /**
+     * Get URL长分段收敛阈值 
+     * @return UrlLongSegmentThreshold URL长分段收敛阈值
+     */
+    public Long getUrlLongSegmentThreshold() {
+        return this.UrlLongSegmentThreshold;
+    }
+
+    /**
+     * Set URL长分段收敛阈值
+     * @param UrlLongSegmentThreshold URL长分段收敛阈值
+     */
+    public void setUrlLongSegmentThreshold(Long UrlLongSegmentThreshold) {
+        this.UrlLongSegmentThreshold = UrlLongSegmentThreshold;
+    }
+
+    /**
+     * Get URL数字分段收敛阈值 
+     * @return UrlNumberSegmentThreshold URL数字分段收敛阈值
+     */
+    public Long getUrlNumberSegmentThreshold() {
+        return this.UrlNumberSegmentThreshold;
+    }
+
+    /**
+     * Set URL数字分段收敛阈值
+     * @param UrlNumberSegmentThreshold URL数字分段收敛阈值
+     */
+    public void setUrlNumberSegmentThreshold(Long UrlNumberSegmentThreshold) {
+        this.UrlNumberSegmentThreshold = UrlNumberSegmentThreshold;
+    }
+
     public ModifyApmInstanceRequest() {
     }
 
@@ -1077,6 +1123,12 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         if (source.IsDeserializationAnalysis != null) {
             this.IsDeserializationAnalysis = new Long(source.IsDeserializationAnalysis);
         }
+        if (source.UrlLongSegmentThreshold != null) {
+            this.UrlLongSegmentThreshold = new Long(source.UrlLongSegmentThreshold);
+        }
+        if (source.UrlNumberSegmentThreshold != null) {
+            this.UrlNumberSegmentThreshold = new Long(source.UrlNumberSegmentThreshold);
+        }
     }
 
 
@@ -1124,6 +1176,8 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsJNIInjectionAnalysis", this.IsJNIInjectionAnalysis);
         this.setParamSimple(map, prefix + "IsWebshellBackdoorAnalysis", this.IsWebshellBackdoorAnalysis);
         this.setParamSimple(map, prefix + "IsDeserializationAnalysis", this.IsDeserializationAnalysis);
+        this.setParamSimple(map, prefix + "UrlLongSegmentThreshold", this.UrlLongSegmentThreshold);
+        this.setParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
 
     }
 }

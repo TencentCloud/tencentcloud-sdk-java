@@ -178,6 +178,20 @@ public class DeployRecordDetail extends AbstractModel {
     private String [] Url;
 
     /**
+    * 当前部署证书加密算法
+    */
+    @SerializedName("Algorithm")
+    @Expose
+    private String Algorithm;
+
+    /**
+    * 原证书加密算法
+    */
+    @SerializedName("OldAlgorithm")
+    @Expose
+    private String OldAlgorithm;
+
+    /**
      * Get 部署记录详情ID 
      * @return Id 部署记录详情ID
      */
@@ -529,6 +543,38 @@ public class DeployRecordDetail extends AbstractModel {
         this.Url = Url;
     }
 
+    /**
+     * Get 当前部署证书加密算法 
+     * @return Algorithm 当前部署证书加密算法
+     */
+    public String getAlgorithm() {
+        return this.Algorithm;
+    }
+
+    /**
+     * Set 当前部署证书加密算法
+     * @param Algorithm 当前部署证书加密算法
+     */
+    public void setAlgorithm(String Algorithm) {
+        this.Algorithm = Algorithm;
+    }
+
+    /**
+     * Get 原证书加密算法 
+     * @return OldAlgorithm 原证书加密算法
+     */
+    public String getOldAlgorithm() {
+        return this.OldAlgorithm;
+    }
+
+    /**
+     * Set 原证书加密算法
+     * @param OldAlgorithm 原证书加密算法
+     */
+    public void setOldAlgorithm(String OldAlgorithm) {
+        this.OldAlgorithm = OldAlgorithm;
+    }
+
     public DeployRecordDetail() {
     }
 
@@ -609,6 +655,12 @@ public class DeployRecordDetail extends AbstractModel {
                 this.Url[i] = new String(source.Url[i]);
             }
         }
+        if (source.Algorithm != null) {
+            this.Algorithm = new String(source.Algorithm);
+        }
+        if (source.OldAlgorithm != null) {
+            this.OldAlgorithm = new String(source.OldAlgorithm);
+        }
     }
 
 
@@ -638,6 +690,8 @@ public class DeployRecordDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "TCBType", this.TCBType);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArraySimple(map, prefix + "Url.", this.Url);
+        this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
+        this.setParamSimple(map, prefix + "OldAlgorithm", this.OldAlgorithm);
 
     }
 }

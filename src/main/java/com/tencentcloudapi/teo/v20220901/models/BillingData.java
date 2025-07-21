@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BillingData extends AbstractModel {
 
     /**
-    * 时间。
+    * 数据时间戳。
     */
     @SerializedName("Time")
     @Expose
@@ -38,16 +38,44 @@ public class BillingData extends AbstractModel {
     private Long Value;
 
     /**
-     * Get 时间。 
-     * @return Time 时间。
+    * 数据点所属站点 ID。若使用内容标识符功能，则该项值为内容标识符。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * 数据点所属域名。
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
+
+    /**
+    * 数据点所属四层代理实例 ID。
+    */
+    @SerializedName("ProxyId")
+    @Expose
+    private String ProxyId;
+
+    /**
+    * 数据点所属计费大区 ID。计费大区以实际服务用户客户端的 EdgeOne 节点所在区域为准。取值有：<li>CH：中国大陆境内</li><li>AF：非洲</li><li>AS1：亚太一区</li><li>AS2：亚太二区</li><li>AS3：亚太三区</li><li>EU：欧洲</li><li>MidEast：中东</li><li>NA：北美</li><li> SA：南美</li>
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private String RegionId;
+
+    /**
+     * Get 数据时间戳。 
+     * @return Time 数据时间戳。
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 时间。
-     * @param Time 时间。
+     * Set 数据时间戳。
+     * @param Time 数据时间戳。
      */
     public void setTime(String Time) {
         this.Time = Time;
@@ -69,6 +97,70 @@ public class BillingData extends AbstractModel {
         this.Value = Value;
     }
 
+    /**
+     * Get 数据点所属站点 ID。若使用内容标识符功能，则该项值为内容标识符。 
+     * @return ZoneId 数据点所属站点 ID。若使用内容标识符功能，则该项值为内容标识符。
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 数据点所属站点 ID。若使用内容标识符功能，则该项值为内容标识符。
+     * @param ZoneId 数据点所属站点 ID。若使用内容标识符功能，则该项值为内容标识符。
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get 数据点所属域名。 
+     * @return Host 数据点所属域名。
+     */
+    public String getHost() {
+        return this.Host;
+    }
+
+    /**
+     * Set 数据点所属域名。
+     * @param Host 数据点所属域名。
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
+    }
+
+    /**
+     * Get 数据点所属四层代理实例 ID。 
+     * @return ProxyId 数据点所属四层代理实例 ID。
+     */
+    public String getProxyId() {
+        return this.ProxyId;
+    }
+
+    /**
+     * Set 数据点所属四层代理实例 ID。
+     * @param ProxyId 数据点所属四层代理实例 ID。
+     */
+    public void setProxyId(String ProxyId) {
+        this.ProxyId = ProxyId;
+    }
+
+    /**
+     * Get 数据点所属计费大区 ID。计费大区以实际服务用户客户端的 EdgeOne 节点所在区域为准。取值有：<li>CH：中国大陆境内</li><li>AF：非洲</li><li>AS1：亚太一区</li><li>AS2：亚太二区</li><li>AS3：亚太三区</li><li>EU：欧洲</li><li>MidEast：中东</li><li>NA：北美</li><li> SA：南美</li> 
+     * @return RegionId 数据点所属计费大区 ID。计费大区以实际服务用户客户端的 EdgeOne 节点所在区域为准。取值有：<li>CH：中国大陆境内</li><li>AF：非洲</li><li>AS1：亚太一区</li><li>AS2：亚太二区</li><li>AS3：亚太三区</li><li>EU：欧洲</li><li>MidEast：中东</li><li>NA：北美</li><li> SA：南美</li>
+     */
+    public String getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 数据点所属计费大区 ID。计费大区以实际服务用户客户端的 EdgeOne 节点所在区域为准。取值有：<li>CH：中国大陆境内</li><li>AF：非洲</li><li>AS1：亚太一区</li><li>AS2：亚太二区</li><li>AS3：亚太三区</li><li>EU：欧洲</li><li>MidEast：中东</li><li>NA：北美</li><li> SA：南美</li>
+     * @param RegionId 数据点所属计费大区 ID。计费大区以实际服务用户客户端的 EdgeOne 节点所在区域为准。取值有：<li>CH：中国大陆境内</li><li>AF：非洲</li><li>AS1：亚太一区</li><li>AS2：亚太二区</li><li>AS3：亚太三区</li><li>EU：欧洲</li><li>MidEast：中东</li><li>NA：北美</li><li> SA：南美</li>
+     */
+    public void setRegionId(String RegionId) {
+        this.RegionId = RegionId;
+    }
+
     public BillingData() {
     }
 
@@ -83,6 +175,18 @@ public class BillingData extends AbstractModel {
         if (source.Value != null) {
             this.Value = new Long(source.Value);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
     }
 
 
@@ -92,6 +196,10 @@ public class BillingData extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "Host", this.Host);
+        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }
