@@ -7,6 +7,8 @@ import com.tencentcloudapi.common.CommonClient;
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.JsonResponseModel;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+import com.tencentcloudapi.common.profile.ClientProfile;
+import com.tencentcloudapi.common.profile.HttpProfile;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -25,6 +27,7 @@ public class OIDCRoleArnProvider implements CredentialsProvider, Credential.Upda
     public String WebIdentityToken;
     public String RoleArn;
     public String RoleSessionName;
+    public String Endpoint = "sts.tencentcloudapi.com";
     public long DurationSeconds;
     public long ExpirationReservationTime = 600;
     private long expiredTime;
@@ -39,6 +42,17 @@ public class OIDCRoleArnProvider implements CredentialsProvider, Credential.Upda
         RoleArn = roleArn;
         RoleSessionName = roleSessionName;
         DurationSeconds = durationSeconds;
+    }
+
+    public OIDCRoleArnProvider(String region, String providerId, String webIdentityToken,
+                               String roleArn, String roleSessionName, long durationSeconds, String endpoint) {
+        Region = region;
+        ProviderId = providerId;
+        WebIdentityToken = webIdentityToken;
+        RoleArn = roleArn;
+        RoleSessionName = roleSessionName;
+        DurationSeconds = durationSeconds;
+        Endpoint = endpoint;
     }
 
     public OIDCRoleArnProvider() throws TencentCloudSDKException {
@@ -95,8 +109,12 @@ public class OIDCRoleArnProvider implements CredentialsProvider, Credential.Upda
         if (isTke)
             initFromTke();
 
+        HttpProfile httpProfile = new HttpProfile();
+        httpProfile.setEndpoint(Endpoint);
+        ClientProfile clientProfile = new ClientProfile();
+        clientProfile.setHttpProfile(httpProfile);
         // can not use sts package here, because it will cause circular dependency
-        CommonClient client = new CommonClient(Service, Version, new Credential("", ""), Region);
+        CommonClient client = new CommonClient(Service, Version, new Credential("", ""), Region, clientProfile);
 
         Request request = new Request();
         request.ProviderId = ProviderId;
