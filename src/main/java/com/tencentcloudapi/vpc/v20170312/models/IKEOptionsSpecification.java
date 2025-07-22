@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class IKEOptionsSpecification extends AbstractModel {
 
     /**
-    * 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+    * 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
     */
     @SerializedName("PropoEncryAlgorithm")
     @Expose
     private String PropoEncryAlgorithm;
 
     /**
-    * 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+    * 认证算法：可选值：'MD5'，'SHA'，'SHA-256'，'SHA-512'， 默认为SHA。
     */
     @SerializedName("PropoAuthenAlgorithm")
     @Expose
     private String PropoAuthenAlgorithm;
 
     /**
-    * 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+    * 协商模式：可选值：'AGGRESSIVE'， 'MAIN'，默认为MAIN。
     */
     @SerializedName("ExchangeMode")
     @Expose
@@ -87,7 +87,7 @@ public class IKEOptionsSpecification extends AbstractModel {
     private String RemoteFqdnName;
 
     /**
-    * DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+    * DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，默认是GROUP1。
     */
     @SerializedName("DhGroupName")
     @Expose
@@ -108,48 +108,48 @@ public class IKEOptionsSpecification extends AbstractModel {
     private String IKEVersion;
 
     /**
-     * Get 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC 
-     * @return PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+     * Get 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC 
+     * @return PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
      */
     public String getPropoEncryAlgorithm() {
         return this.PropoEncryAlgorithm;
     }
 
     /**
-     * Set 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
-     * @param PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+     * Set 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+     * @param PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
      */
     public void setPropoEncryAlgorithm(String PropoEncryAlgorithm) {
         this.PropoEncryAlgorithm = PropoEncryAlgorithm;
     }
 
     /**
-     * Get 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5 
-     * @return PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+     * Get 认证算法：可选值：'MD5'，'SHA'，'SHA-256'，'SHA-512'， 默认为SHA。 
+     * @return PropoAuthenAlgorithm 认证算法：可选值：'MD5'，'SHA'，'SHA-256'，'SHA-512'， 默认为SHA。
      */
     public String getPropoAuthenAlgorithm() {
         return this.PropoAuthenAlgorithm;
     }
 
     /**
-     * Set 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
-     * @param PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+     * Set 认证算法：可选值：'MD5'，'SHA'，'SHA-256'，'SHA-512'， 默认为SHA。
+     * @param PropoAuthenAlgorithm 认证算法：可选值：'MD5'，'SHA'，'SHA-256'，'SHA-512'， 默认为SHA。
      */
     public void setPropoAuthenAlgorithm(String PropoAuthenAlgorithm) {
         this.PropoAuthenAlgorithm = PropoAuthenAlgorithm;
     }
 
     /**
-     * Get 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN 
-     * @return ExchangeMode 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+     * Get 协商模式：可选值：'AGGRESSIVE'， 'MAIN'，默认为MAIN。 
+     * @return ExchangeMode 协商模式：可选值：'AGGRESSIVE'， 'MAIN'，默认为MAIN。
      */
     public String getExchangeMode() {
         return this.ExchangeMode;
     }
 
     /**
-     * Set 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
-     * @param ExchangeMode 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+     * Set 协商模式：可选值：'AGGRESSIVE'， 'MAIN'，默认为MAIN。
+     * @param ExchangeMode 协商模式：可选值：'AGGRESSIVE'， 'MAIN'，默认为MAIN。
      */
     public void setExchangeMode(String ExchangeMode) {
         this.ExchangeMode = ExchangeMode;
@@ -252,16 +252,16 @@ public class IKEOptionsSpecification extends AbstractModel {
     }
 
     /**
-     * Get DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'， 
-     * @return DhGroupName DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+     * Get DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，默认是GROUP1。 
+     * @return DhGroupName DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，默认是GROUP1。
      */
     public String getDhGroupName() {
         return this.DhGroupName;
     }
 
     /**
-     * Set DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
-     * @param DhGroupName DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+     * Set DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，默认是GROUP1。
+     * @param DhGroupName DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，默认是GROUP1。
      */
     public void setDhGroupName(String DhGroupName) {
         this.DhGroupName = DhGroupName;

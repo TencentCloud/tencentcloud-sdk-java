@@ -98,6 +98,14 @@ PureAudio：纯音频类型
     private String DefinitionType;
 
     /**
+    * 字幕参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubtitleTemplate")
+    @Expose
+    private SubtitleTemplate SubtitleTemplate;
+
+    /**
      * Get 转自适应码流模板 ID。 
      * @return Definition 转自适应码流模板 ID。
      */
@@ -285,6 +293,26 @@ PureAudio：纯音频类型
         this.DefinitionType = DefinitionType;
     }
 
+    /**
+     * Get 字幕参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubtitleTemplate 字幕参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SubtitleTemplate getSubtitleTemplate() {
+        return this.SubtitleTemplate;
+    }
+
+    /**
+     * Set 字幕参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubtitleTemplate 字幕参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
+        this.SubtitleTemplate = SubtitleTemplate;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -326,6 +354,9 @@ PureAudio：纯音频类型
         if (source.DefinitionType != null) {
             this.DefinitionType = new String(source.DefinitionType);
         }
+        if (source.SubtitleTemplate != null) {
+            this.SubtitleTemplate = new SubtitleTemplate(source.SubtitleTemplate);
+        }
     }
 
 
@@ -342,6 +373,7 @@ PureAudio：纯音频类型
         this.setParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
         this.setParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
         this.setParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
+        this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
 
     }
 }

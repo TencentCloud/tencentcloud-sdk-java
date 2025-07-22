@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstancePasswordComplexityRequest extends AbstractModel {
 
     /**
-    * 要修改密码复杂度的实例 ID。
+    * 要修改密码复杂度的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
 说明：支持输入多个实例 ID 进行修改。
     */
     @SerializedName("InstanceIds")
@@ -35,13 +35,13 @@ public class ModifyInstancePasswordComplexityRequest extends AbstractModel {
     * 要修改的密码复杂度的选项。每一个选项是以组合形式写入的，一个组合包括 Name 和 CurrentValue，其中 Name 表示对应选项的参数名，CurrentValue 表示参数值。例如：[{"Name": "validate_password.length", "CurrentValue": "10"}]，表示将密码的最小字符数修改为10。
 说明：不同数据库版本的实例，支持修改的密码复杂度的选项如下。
 1. MySQL 8.0：
-选项 validate_password.policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。温馨提示：如需修改具体的密码策略，此选项的值需为 MEDIUM。
+选项 validate_password.policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。
 选项 validate_password.length，表示密码总长度的最小字符数。
 选项 validate_password.mixed_case_count，表示小写和大写字母的最小字符数。
 选项 validate_password.number_count，表示数字的最小字符数。
 选项 validate_password.special_char_count，表示特殊字符的最小字符数。
 2. MySQL 5.6、MySQL 5.7：
-选项 validate_password_policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。温馨提示：如需修改具体的密码策略，此选项的值需为 MEDIUM。
+选项 validate_password_policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。
 选项 validate_password_length，表示密码总长度的最小字符数。
 选项 validate_password_mixed_case_count，表示小写和大写字母的最小字符数。
 选项 validate_password_number_count，表示数字的最小字符数。
@@ -52,9 +52,9 @@ public class ModifyInstancePasswordComplexityRequest extends AbstractModel {
     private Parameter [] ParamList;
 
     /**
-     * Get 要修改密码复杂度的实例 ID。
+     * Get 要修改密码复杂度的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
 说明：支持输入多个实例 ID 进行修改。 
-     * @return InstanceIds 要修改密码复杂度的实例 ID。
+     * @return InstanceIds 要修改密码复杂度的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
 说明：支持输入多个实例 ID 进行修改。
      */
     public String [] getInstanceIds() {
@@ -62,9 +62,9 @@ public class ModifyInstancePasswordComplexityRequest extends AbstractModel {
     }
 
     /**
-     * Set 要修改密码复杂度的实例 ID。
+     * Set 要修改密码复杂度的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
 说明：支持输入多个实例 ID 进行修改。
-     * @param InstanceIds 要修改密码复杂度的实例 ID。
+     * @param InstanceIds 要修改密码复杂度的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
 说明：支持输入多个实例 ID 进行修改。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -75,13 +75,13 @@ public class ModifyInstancePasswordComplexityRequest extends AbstractModel {
      * Get 要修改的密码复杂度的选项。每一个选项是以组合形式写入的，一个组合包括 Name 和 CurrentValue，其中 Name 表示对应选项的参数名，CurrentValue 表示参数值。例如：[{"Name": "validate_password.length", "CurrentValue": "10"}]，表示将密码的最小字符数修改为10。
 说明：不同数据库版本的实例，支持修改的密码复杂度的选项如下。
 1. MySQL 8.0：
-选项 validate_password.policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。温馨提示：如需修改具体的密码策略，此选项的值需为 MEDIUM。
+选项 validate_password.policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。
 选项 validate_password.length，表示密码总长度的最小字符数。
 选项 validate_password.mixed_case_count，表示小写和大写字母的最小字符数。
 选项 validate_password.number_count，表示数字的最小字符数。
 选项 validate_password.special_char_count，表示特殊字符的最小字符数。
 2. MySQL 5.6、MySQL 5.7：
-选项 validate_password_policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。温馨提示：如需修改具体的密码策略，此选项的值需为 MEDIUM。
+选项 validate_password_policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。
 选项 validate_password_length，表示密码总长度的最小字符数。
 选项 validate_password_mixed_case_count，表示小写和大写字母的最小字符数。
 选项 validate_password_number_count，表示数字的最小字符数。
@@ -89,13 +89,13 @@ public class ModifyInstancePasswordComplexityRequest extends AbstractModel {
      * @return ParamList 要修改的密码复杂度的选项。每一个选项是以组合形式写入的，一个组合包括 Name 和 CurrentValue，其中 Name 表示对应选项的参数名，CurrentValue 表示参数值。例如：[{"Name": "validate_password.length", "CurrentValue": "10"}]，表示将密码的最小字符数修改为10。
 说明：不同数据库版本的实例，支持修改的密码复杂度的选项如下。
 1. MySQL 8.0：
-选项 validate_password.policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。温馨提示：如需修改具体的密码策略，此选项的值需为 MEDIUM。
+选项 validate_password.policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。
 选项 validate_password.length，表示密码总长度的最小字符数。
 选项 validate_password.mixed_case_count，表示小写和大写字母的最小字符数。
 选项 validate_password.number_count，表示数字的最小字符数。
 选项 validate_password.special_char_count，表示特殊字符的最小字符数。
 2. MySQL 5.6、MySQL 5.7：
-选项 validate_password_policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。温馨提示：如需修改具体的密码策略，此选项的值需为 MEDIUM。
+选项 validate_password_policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。
 选项 validate_password_length，表示密码总长度的最小字符数。
 选项 validate_password_mixed_case_count，表示小写和大写字母的最小字符数。
 选项 validate_password_number_count，表示数字的最小字符数。
@@ -109,13 +109,13 @@ public class ModifyInstancePasswordComplexityRequest extends AbstractModel {
      * Set 要修改的密码复杂度的选项。每一个选项是以组合形式写入的，一个组合包括 Name 和 CurrentValue，其中 Name 表示对应选项的参数名，CurrentValue 表示参数值。例如：[{"Name": "validate_password.length", "CurrentValue": "10"}]，表示将密码的最小字符数修改为10。
 说明：不同数据库版本的实例，支持修改的密码复杂度的选项如下。
 1. MySQL 8.0：
-选项 validate_password.policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。温馨提示：如需修改具体的密码策略，此选项的值需为 MEDIUM。
+选项 validate_password.policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。
 选项 validate_password.length，表示密码总长度的最小字符数。
 选项 validate_password.mixed_case_count，表示小写和大写字母的最小字符数。
 选项 validate_password.number_count，表示数字的最小字符数。
 选项 validate_password.special_char_count，表示特殊字符的最小字符数。
 2. MySQL 5.6、MySQL 5.7：
-选项 validate_password_policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。温馨提示：如需修改具体的密码策略，此选项的值需为 MEDIUM。
+选项 validate_password_policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。
 选项 validate_password_length，表示密码总长度的最小字符数。
 选项 validate_password_mixed_case_count，表示小写和大写字母的最小字符数。
 选项 validate_password_number_count，表示数字的最小字符数。
@@ -123,13 +123,13 @@ public class ModifyInstancePasswordComplexityRequest extends AbstractModel {
      * @param ParamList 要修改的密码复杂度的选项。每一个选项是以组合形式写入的，一个组合包括 Name 和 CurrentValue，其中 Name 表示对应选项的参数名，CurrentValue 表示参数值。例如：[{"Name": "validate_password.length", "CurrentValue": "10"}]，表示将密码的最小字符数修改为10。
 说明：不同数据库版本的实例，支持修改的密码复杂度的选项如下。
 1. MySQL 8.0：
-选项 validate_password.policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。温馨提示：如需修改具体的密码策略，此选项的值需为 MEDIUM。
+选项 validate_password.policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。
 选项 validate_password.length，表示密码总长度的最小字符数。
 选项 validate_password.mixed_case_count，表示小写和大写字母的最小字符数。
 选项 validate_password.number_count，表示数字的最小字符数。
 选项 validate_password.special_char_count，表示特殊字符的最小字符数。
 2. MySQL 5.6、MySQL 5.7：
-选项 validate_password_policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。温馨提示：如需修改具体的密码策略，此选项的值需为 MEDIUM。
+选项 validate_password_policy，表示密码复杂度的开关，值为 LOW 时表示关闭；值为 MEDIUM 时表示开启。
 选项 validate_password_length，表示密码总长度的最小字符数。
 选项 validate_password_mixed_case_count，表示小写和大写字母的最小字符数。
 选项 validate_password_number_count，表示数字的最小字符数。

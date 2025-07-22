@@ -1645,6 +1645,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *回放实例审计日志
+     * @param req ReplayInstanceAuditLogRequest
+     * @return ReplayInstanceAuditLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplayInstanceAuditLogResponse ReplayInstanceAuditLog(ReplayInstanceAuditLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplayInstanceAuditLog", ReplayInstanceAuditLogResponse.class);
+    }
+
+    /**
      *本接口（ResetAccountPassword）用于修改数据库账号密码。
      * @param req ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse

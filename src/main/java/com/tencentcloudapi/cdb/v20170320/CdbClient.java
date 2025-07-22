@@ -1660,6 +1660,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *该接口（ModifyRoGroupVipVport）用于修改Ro组的vip和vport。
+     * @param req ModifyRoGroupVipVportRequest
+     * @return ModifyRoGroupVipVportResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoGroupVipVportResponse ModifyRoGroupVipVport(ModifyRoGroupVipVportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRoGroupVipVport", ModifyRoGroupVipVportResponse.class);
+    }
+
+    /**
      *本接口(ModifyTimeWindow)用于更新云数据库实例的维护时间窗口。
      * @param req ModifyTimeWindowRequest
      * @return ModifyTimeWindowResponse

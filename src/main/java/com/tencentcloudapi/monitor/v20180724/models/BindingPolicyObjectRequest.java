@@ -52,7 +52,7 @@ public class BindingPolicyObjectRequest extends AbstractModel {
     private Long InstanceGroupId;
 
     /**
-    * 需要绑定的对象维度信息
+    * 需要绑定的对象维度信息，当为实例绑定渠道时，此处为必填信息
     */
     @SerializedName("Dimensions")
     @Expose
@@ -137,16 +137,16 @@ public class BindingPolicyObjectRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要绑定的对象维度信息 
-     * @return Dimensions 需要绑定的对象维度信息
+     * Get 需要绑定的对象维度信息，当为实例绑定渠道时，此处为必填信息 
+     * @return Dimensions 需要绑定的对象维度信息，当为实例绑定渠道时，此处为必填信息
      */
     public BindingPolicyObjectDimension [] getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 需要绑定的对象维度信息
-     * @param Dimensions 需要绑定的对象维度信息
+     * Set 需要绑定的对象维度信息，当为实例绑定渠道时，此处为必填信息
+     * @param Dimensions 需要绑定的对象维度信息，当为实例绑定渠道时，此处为必填信息
      */
     public void setDimensions(BindingPolicyObjectDimension [] Dimensions) {
         this.Dimensions = Dimensions;

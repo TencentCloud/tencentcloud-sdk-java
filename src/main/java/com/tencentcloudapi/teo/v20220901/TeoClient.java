@@ -824,6 +824,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *获取站点的独立 DDoS 防护信息。
+     * @param req DescribeDDoSProtectionRequest
+     * @return DescribeDDoSProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDoSProtectionResponse DescribeDDoSProtection(DescribeDDoSProtectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDDoSProtection", DescribeDDoSProtectionResponse.class);
+    }
+
+    /**
      *查询默认证书列表
      * @param req DescribeDefaultCertificatesRequest
      * @return DescribeDefaultCertificatesResponse
@@ -1560,6 +1571,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyCustomErrorPageResponse ModifyCustomErrorPage(ModifyCustomErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCustomErrorPage", ModifyCustomErrorPageResponse.class);
+    }
+
+    /**
+     *修改站点的独立 DDoS 防护。
+     * @param req ModifyDDoSProtectionRequest
+     * @return ModifyDDoSProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDDoSProtectionResponse ModifyDDoSProtection(ModifyDDoSProtectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDDoSProtection", ModifyDDoSProtectionResponse.class);
     }
 
     /**

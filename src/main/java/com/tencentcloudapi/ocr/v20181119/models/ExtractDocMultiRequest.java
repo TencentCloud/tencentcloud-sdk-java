@@ -113,6 +113,14 @@ HongKongUtilityBill -- 香港水电煤单识别模板
     private ConfigAdvanced ConfigAdvanced;
 
     /**
+    * cn时，添加的key为中文  
+en时，添加的key为英语
+    */
+    @SerializedName("OutputLanguage")
+    @Expose
+    private String OutputLanguage;
+
+    /**
      * Get 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，WORD，EXCEL，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
      * @return ImageUrl 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，WORD，EXCEL，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
@@ -348,6 +356,26 @@ HongKongUtilityBill -- 香港水电煤单识别模板
         this.ConfigAdvanced = ConfigAdvanced;
     }
 
+    /**
+     * Get cn时，添加的key为中文  
+en时，添加的key为英语 
+     * @return OutputLanguage cn时，添加的key为中文  
+en时，添加的key为英语
+     */
+    public String getOutputLanguage() {
+        return this.OutputLanguage;
+    }
+
+    /**
+     * Set cn时，添加的key为中文  
+en时，添加的key为英语
+     * @param OutputLanguage cn时，添加的key为中文  
+en时，添加的key为英语
+     */
+    public void setOutputLanguage(String OutputLanguage) {
+        this.OutputLanguage = OutputLanguage;
+    }
+
     public ExtractDocMultiRequest() {
     }
 
@@ -389,6 +417,9 @@ HongKongUtilityBill -- 香港水电煤单识别模板
         if (source.ConfigAdvanced != null) {
             this.ConfigAdvanced = new ConfigAdvanced(source.ConfigAdvanced);
         }
+        if (source.OutputLanguage != null) {
+            this.OutputLanguage = new String(source.OutputLanguage);
+        }
     }
 
 
@@ -406,6 +437,7 @@ HongKongUtilityBill -- 香港水电煤单识别模板
         this.setParamSimple(map, prefix + "EnableCoord", this.EnableCoord);
         this.setParamSimple(map, prefix + "OutputParentKey", this.OutputParentKey);
         this.setParamObj(map, prefix + "ConfigAdvanced.", this.ConfigAdvanced);
+        this.setParamSimple(map, prefix + "OutputLanguage", this.OutputLanguage);
 
     }
 }

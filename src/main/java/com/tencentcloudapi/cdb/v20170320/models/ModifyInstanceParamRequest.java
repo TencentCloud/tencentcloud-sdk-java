@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceParamRequest extends AbstractModel {
 
     /**
-    * 实例短 ID 列表。
+    * 实例 ID 列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -38,7 +38,7 @@ public class ModifyInstanceParamRequest extends AbstractModel {
     private Parameter [] ParamList;
 
     /**
-    * 模板id，ParamList和TemplateId必须至少传其中之一
+    * 模板 ID，ParamList 和 TemplateId 必须至少传其中之一。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -66,16 +66,16 @@ public class ModifyInstanceParamRequest extends AbstractModel {
     private Boolean NotSyncDr;
 
     /**
-     * Get 实例短 ID 列表。 
-     * @return InstanceIds 实例短 ID 列表。
+     * Get 实例 ID 列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceIds 实例 ID 列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例短 ID 列表。
-     * @param InstanceIds 实例短 ID 列表。
+     * Set 实例 ID 列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceIds 实例 ID 列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -98,16 +98,16 @@ public class ModifyInstanceParamRequest extends AbstractModel {
     }
 
     /**
-     * Get 模板id，ParamList和TemplateId必须至少传其中之一 
-     * @return TemplateId 模板id，ParamList和TemplateId必须至少传其中之一
+     * Get 模板 ID，ParamList 和 TemplateId 必须至少传其中之一。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。 
+     * @return TemplateId 模板 ID，ParamList 和 TemplateId 必须至少传其中之一。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板id，ParamList和TemplateId必须至少传其中之一
-     * @param TemplateId 模板id，ParamList和TemplateId必须至少传其中之一
+     * Set 模板 ID，ParamList 和 TemplateId 必须至少传其中之一。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
+     * @param TemplateId 模板 ID，ParamList 和 TemplateId 必须至少传其中之一。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

@@ -67,7 +67,7 @@ public class DescribeCostDetailRequest extends AbstractModel {
     private String Month;
 
     /**
-    * 查询指定产品信息（暂时未开放获取）
+    * 查询指定产品信息
     */
     @SerializedName("ProductCode")
     @Expose
@@ -188,16 +188,16 @@ public class DescribeCostDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询指定产品信息（暂时未开放获取） 
-     * @return ProductCode 查询指定产品信息（暂时未开放获取）
+     * Get 查询指定产品信息 
+     * @return ProductCode 查询指定产品信息
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 查询指定产品信息（暂时未开放获取）
-     * @param ProductCode 查询指定产品信息（暂时未开放获取）
+     * Set 查询指定产品信息
+     * @param ProductCode 查询指定产品信息
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;

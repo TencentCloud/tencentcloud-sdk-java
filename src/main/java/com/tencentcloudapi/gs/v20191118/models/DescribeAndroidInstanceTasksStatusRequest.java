@@ -52,6 +52,13 @@ public class DescribeAndroidInstanceTasksStatusRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 时间范围限制，以天数为单位
+    */
+    @SerializedName("RecentDays")
+    @Expose
+    private Long RecentDays;
+
+    /**
      * Get 任务 ID 列表 
      * @return TaskIds 任务 ID 列表
      */
@@ -115,6 +122,22 @@ public class DescribeAndroidInstanceTasksStatusRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 时间范围限制，以天数为单位 
+     * @return RecentDays 时间范围限制，以天数为单位
+     */
+    public Long getRecentDays() {
+        return this.RecentDays;
+    }
+
+    /**
+     * Set 时间范围限制，以天数为单位
+     * @param RecentDays 时间范围限制，以天数为单位
+     */
+    public void setRecentDays(Long RecentDays) {
+        this.RecentDays = RecentDays;
+    }
+
     public DescribeAndroidInstanceTasksStatusRequest() {
     }
 
@@ -141,6 +164,9 @@ public class DescribeAndroidInstanceTasksStatusRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.RecentDays != null) {
+            this.RecentDays = new Long(source.RecentDays);
+        }
     }
 
 
@@ -152,6 +178,7 @@ public class DescribeAndroidInstanceTasksStatusRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filter.", this.Filter);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "RecentDays", this.RecentDays);
 
     }
 }
