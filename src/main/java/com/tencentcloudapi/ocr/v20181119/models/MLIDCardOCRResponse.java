@@ -52,11 +52,7 @@ public class MLIDCardOCRResponse extends AbstractModel {
     private String Sex;
 
     /**
-    * 告警码
--9103	证照翻拍告警
--9102	证照复印件告警
--9106       证件遮挡告警
--9107       模糊图片告警
+    * 该字段已废弃， 将固定返回空数组，不建议使用。
     */
     @SerializedName("Warn")
     @Expose
@@ -70,13 +66,7 @@ public class MLIDCardOCRResponse extends AbstractModel {
     private String Image;
 
     /**
-    * 此字段为扩展字段。
-返回字段识别结果的置信度，格式如下
-{
-  字段名:{
-    Confidence:0.9999
-  }
-}
+    * 该字段已废弃， 将固定返回"1"，不建议使用。
     */
     @SerializedName("AdvancedInfo")
     @Expose
@@ -196,16 +186,8 @@ MyKid 儿童卡
     }
 
     /**
-     * Get 告警码
--9103	证照翻拍告警
--9102	证照复印件告警
--9106       证件遮挡告警
--9107       模糊图片告警 
-     * @return Warn 告警码
--9103	证照翻拍告警
--9102	证照复印件告警
--9106       证件遮挡告警
--9107       模糊图片告警
+     * Get 该字段已废弃， 将固定返回空数组，不建议使用。 
+     * @return Warn 该字段已废弃， 将固定返回空数组，不建议使用。
      * @deprecated
      */
     @Deprecated
@@ -214,16 +196,8 @@ MyKid 儿童卡
     }
 
     /**
-     * Set 告警码
--9103	证照翻拍告警
--9102	证照复印件告警
--9106       证件遮挡告警
--9107       模糊图片告警
-     * @param Warn 告警码
--9103	证照翻拍告警
--9102	证照复印件告警
--9106       证件遮挡告警
--9107       模糊图片告警
+     * Set 该字段已废弃， 将固定返回空数组，不建议使用。
+     * @param Warn 该字段已废弃， 将固定返回空数组，不建议使用。
      * @deprecated
      */
     @Deprecated
@@ -248,41 +222,21 @@ MyKid 儿童卡
     }
 
     /**
-     * Get 此字段为扩展字段。
-返回字段识别结果的置信度，格式如下
-{
-  字段名:{
-    Confidence:0.9999
-  }
-} 
-     * @return AdvancedInfo 此字段为扩展字段。
-返回字段识别结果的置信度，格式如下
-{
-  字段名:{
-    Confidence:0.9999
-  }
-}
+     * Get 该字段已废弃， 将固定返回"1"，不建议使用。 
+     * @return AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。
+     * @deprecated
      */
+    @Deprecated
     public String getAdvancedInfo() {
         return this.AdvancedInfo;
     }
 
     /**
-     * Set 此字段为扩展字段。
-返回字段识别结果的置信度，格式如下
-{
-  字段名:{
-    Confidence:0.9999
-  }
-}
-     * @param AdvancedInfo 此字段为扩展字段。
-返回字段识别结果的置信度，格式如下
-{
-  字段名:{
-    Confidence:0.9999
-  }
-}
+     * Set 该字段已废弃， 将固定返回"1"，不建议使用。
+     * @param AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。
+     * @deprecated
      */
+    @Deprecated
     public void setAdvancedInfo(String AdvancedInfo) {
         this.AdvancedInfo = AdvancedInfo;
     }

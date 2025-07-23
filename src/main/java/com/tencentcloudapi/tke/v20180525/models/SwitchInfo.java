@@ -31,11 +31,25 @@ public class SwitchInfo extends AbstractModel {
     private Boolean Enable;
 
     /**
+    * 获取日志状态失败时，返回错误信息
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
     * CLS日志集ID
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
+
+    /**
+    * 日志主题状态，opened表示已开启，opening开启中，closed表示已关闭，closing 表示关闭中
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
 
     /**
     * CLS日志主题ID
@@ -45,11 +59,11 @@ public class SwitchInfo extends AbstractModel {
     private String TopicId;
 
     /**
-    * 当前log-agent版本
+    * CLS日志主题所属region
     */
-    @SerializedName("Version")
+    @SerializedName("TopicRegion")
     @Expose
-    private String Version;
+    private String TopicRegion;
 
     /**
     * 是否可升级
@@ -59,11 +73,11 @@ public class SwitchInfo extends AbstractModel {
     private Boolean UpgradeAble;
 
     /**
-    * CLS日志主题所属region
+    * 当前log-agent版本
     */
-    @SerializedName("TopicRegion")
+    @SerializedName("Version")
     @Expose
-    private String TopicRegion;
+    private String Version;
 
     /**
      * Get 开启标识符 true代表开启 
@@ -79,6 +93,22 @@ public class SwitchInfo extends AbstractModel {
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
+    }
+
+    /**
+     * Get 获取日志状态失败时，返回错误信息 
+     * @return ErrorMsg 获取日志状态失败时，返回错误信息
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set 获取日志状态失败时，返回错误信息
+     * @param ErrorMsg 获取日志状态失败时，返回错误信息
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
     }
 
     /**
@@ -98,6 +128,22 @@ public class SwitchInfo extends AbstractModel {
     }
 
     /**
+     * Get 日志主题状态，opened表示已开启，opening开启中，closed表示已关闭，closing 表示关闭中 
+     * @return Status 日志主题状态，opened表示已开启，opening开启中，closed表示已关闭，closing 表示关闭中
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 日志主题状态，opened表示已开启，opening开启中，closed表示已关闭，closing 表示关闭中
+     * @param Status 日志主题状态，opened表示已开启，opening开启中，closed表示已关闭，closing 表示关闭中
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Get CLS日志主题ID 
      * @return TopicId CLS日志主题ID
      */
@@ -114,19 +160,19 @@ public class SwitchInfo extends AbstractModel {
     }
 
     /**
-     * Get 当前log-agent版本 
-     * @return Version 当前log-agent版本
+     * Get CLS日志主题所属region 
+     * @return TopicRegion CLS日志主题所属region
      */
-    public String getVersion() {
-        return this.Version;
+    public String getTopicRegion() {
+        return this.TopicRegion;
     }
 
     /**
-     * Set 当前log-agent版本
-     * @param Version 当前log-agent版本
+     * Set CLS日志主题所属region
+     * @param TopicRegion CLS日志主题所属region
      */
-    public void setVersion(String Version) {
-        this.Version = Version;
+    public void setTopicRegion(String TopicRegion) {
+        this.TopicRegion = TopicRegion;
     }
 
     /**
@@ -146,19 +192,19 @@ public class SwitchInfo extends AbstractModel {
     }
 
     /**
-     * Get CLS日志主题所属region 
-     * @return TopicRegion CLS日志主题所属region
+     * Get 当前log-agent版本 
+     * @return Version 当前log-agent版本
      */
-    public String getTopicRegion() {
-        return this.TopicRegion;
+    public String getVersion() {
+        return this.Version;
     }
 
     /**
-     * Set CLS日志主题所属region
-     * @param TopicRegion CLS日志主题所属region
+     * Set 当前log-agent版本
+     * @param Version 当前log-agent版本
      */
-    public void setTopicRegion(String TopicRegion) {
-        this.TopicRegion = TopicRegion;
+    public void setVersion(String Version) {
+        this.Version = Version;
     }
 
     public SwitchInfo() {
@@ -172,20 +218,26 @@ public class SwitchInfo extends AbstractModel {
         if (source.Enable != null) {
             this.Enable = new Boolean(source.Enable);
         }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
         if (source.LogsetId != null) {
             this.LogsetId = new String(source.LogsetId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
         }
         if (source.TopicId != null) {
             this.TopicId = new String(source.TopicId);
         }
-        if (source.Version != null) {
-            this.Version = new String(source.Version);
+        if (source.TopicRegion != null) {
+            this.TopicRegion = new String(source.TopicRegion);
         }
         if (source.UpgradeAble != null) {
             this.UpgradeAble = new Boolean(source.UpgradeAble);
         }
-        if (source.TopicRegion != null) {
-            this.TopicRegion = new String(source.TopicRegion);
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
         }
     }
 
@@ -195,11 +247,13 @@ public class SwitchInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
-        this.setParamSimple(map, prefix + "Version", this.Version);
-        this.setParamSimple(map, prefix + "UpgradeAble", this.UpgradeAble);
         this.setParamSimple(map, prefix + "TopicRegion", this.TopicRegion);
+        this.setParamSimple(map, prefix + "UpgradeAble", this.UpgradeAble);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

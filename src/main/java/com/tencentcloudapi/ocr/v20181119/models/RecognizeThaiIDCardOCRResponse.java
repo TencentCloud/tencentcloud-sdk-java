@@ -142,15 +142,7 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     private Long [] WarnCardInfos;
 
     /**
-    * 字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-}
+    * 该字段已废弃， 将固定返回"1"，不建议使用。 
     */
     @SerializedName("AdvancedInfo")
     @Expose
@@ -444,49 +436,21 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-} 
-     * @return AdvancedInfo 字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-}
+     * Get 该字段已废弃， 将固定返回"1"，不建议使用。  
+     * @return AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。 
+     * @deprecated
      */
+    @Deprecated
     public String getAdvancedInfo() {
         return this.AdvancedInfo;
     }
 
     /**
-     * Set 字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-}
-     * @param AdvancedInfo 字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-}
+     * Set 该字段已废弃， 将固定返回"1"，不建议使用。 
+     * @param AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。 
+     * @deprecated
      */
+    @Deprecated
     public void setAdvancedInfo(String AdvancedInfo) {
         this.AdvancedInfo = AdvancedInfo;
     }

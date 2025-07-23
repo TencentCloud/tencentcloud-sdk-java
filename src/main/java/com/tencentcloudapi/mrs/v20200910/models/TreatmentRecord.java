@@ -263,7 +263,9 @@ public class TreatmentRecord extends AbstractModel {
     /**
      * Get 现病史 
      * @return DiseasePresent 现病史
+     * @deprecated
      */
+    @Deprecated
     public String getDiseasePresent() {
         return this.DiseasePresent;
     }
@@ -271,7 +273,9 @@ public class TreatmentRecord extends AbstractModel {
     /**
      * Set 现病史
      * @param DiseasePresent 现病史
+     * @deprecated
      */
+    @Deprecated
     public void setDiseasePresent(String DiseasePresent) {
         this.DiseasePresent = DiseasePresent;
     }

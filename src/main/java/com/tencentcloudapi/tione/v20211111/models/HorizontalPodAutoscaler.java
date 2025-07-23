@@ -50,6 +50,20 @@ public class HorizontalPodAutoscaler extends AbstractModel {
     private Option [] HpaMetrics;
 
     /**
+    * 扩容观察期，单位秒
+    */
+    @SerializedName("ScaleUpStabilizationWindowSeconds")
+    @Expose
+    private Long ScaleUpStabilizationWindowSeconds;
+
+    /**
+    * 缩容观察期，单位秒
+    */
+    @SerializedName("ScaleDownStabilizationWindowSeconds")
+    @Expose
+    private Long ScaleDownStabilizationWindowSeconds;
+
+    /**
      * Get 最小实例数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MinReplicas 最小实例数
@@ -117,6 +131,38 @@ public class HorizontalPodAutoscaler extends AbstractModel {
         this.HpaMetrics = HpaMetrics;
     }
 
+    /**
+     * Get 扩容观察期，单位秒 
+     * @return ScaleUpStabilizationWindowSeconds 扩容观察期，单位秒
+     */
+    public Long getScaleUpStabilizationWindowSeconds() {
+        return this.ScaleUpStabilizationWindowSeconds;
+    }
+
+    /**
+     * Set 扩容观察期，单位秒
+     * @param ScaleUpStabilizationWindowSeconds 扩容观察期，单位秒
+     */
+    public void setScaleUpStabilizationWindowSeconds(Long ScaleUpStabilizationWindowSeconds) {
+        this.ScaleUpStabilizationWindowSeconds = ScaleUpStabilizationWindowSeconds;
+    }
+
+    /**
+     * Get 缩容观察期，单位秒 
+     * @return ScaleDownStabilizationWindowSeconds 缩容观察期，单位秒
+     */
+    public Long getScaleDownStabilizationWindowSeconds() {
+        return this.ScaleDownStabilizationWindowSeconds;
+    }
+
+    /**
+     * Set 缩容观察期，单位秒
+     * @param ScaleDownStabilizationWindowSeconds 缩容观察期，单位秒
+     */
+    public void setScaleDownStabilizationWindowSeconds(Long ScaleDownStabilizationWindowSeconds) {
+        this.ScaleDownStabilizationWindowSeconds = ScaleDownStabilizationWindowSeconds;
+    }
+
     public HorizontalPodAutoscaler() {
     }
 
@@ -137,6 +183,12 @@ public class HorizontalPodAutoscaler extends AbstractModel {
                 this.HpaMetrics[i] = new Option(source.HpaMetrics[i]);
             }
         }
+        if (source.ScaleUpStabilizationWindowSeconds != null) {
+            this.ScaleUpStabilizationWindowSeconds = new Long(source.ScaleUpStabilizationWindowSeconds);
+        }
+        if (source.ScaleDownStabilizationWindowSeconds != null) {
+            this.ScaleDownStabilizationWindowSeconds = new Long(source.ScaleDownStabilizationWindowSeconds);
+        }
     }
 
 
@@ -147,6 +199,8 @@ public class HorizontalPodAutoscaler extends AbstractModel {
         this.setParamSimple(map, prefix + "MinReplicas", this.MinReplicas);
         this.setParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);
         this.setParamArrayObj(map, prefix + "HpaMetrics.", this.HpaMetrics);
+        this.setParamSimple(map, prefix + "ScaleUpStabilizationWindowSeconds", this.ScaleUpStabilizationWindowSeconds);
+        this.setParamSimple(map, prefix + "ScaleDownStabilizationWindowSeconds", this.ScaleDownStabilizationWindowSeconds);
 
     }
 }

@@ -59,6 +59,13 @@ public class DiseaseMedicalHistory extends AbstractModel {
     private String TransfusionHistory;
 
     /**
+    * 现病史
+    */
+    @SerializedName("DiseasePresent")
+    @Expose
+    private String DiseasePresent;
+
+    /**
      * Get 主病史 
      * @return MainDiseaseHistory 主病史
      */
@@ -138,6 +145,22 @@ public class DiseaseMedicalHistory extends AbstractModel {
         this.TransfusionHistory = TransfusionHistory;
     }
 
+    /**
+     * Get 现病史 
+     * @return DiseasePresent 现病史
+     */
+    public String getDiseasePresent() {
+        return this.DiseasePresent;
+    }
+
+    /**
+     * Set 现病史
+     * @param DiseasePresent 现病史
+     */
+    public void setDiseasePresent(String DiseasePresent) {
+        this.DiseasePresent = DiseasePresent;
+    }
+
     public DiseaseMedicalHistory() {
     }
 
@@ -161,6 +184,9 @@ public class DiseaseMedicalHistory extends AbstractModel {
         if (source.TransfusionHistory != null) {
             this.TransfusionHistory = new String(source.TransfusionHistory);
         }
+        if (source.DiseasePresent != null) {
+            this.DiseasePresent = new String(source.DiseasePresent);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DiseaseMedicalHistory extends AbstractModel {
         this.setParamSimple(map, prefix + "InfectHistory", this.InfectHistory);
         this.setParamSimple(map, prefix + "OperationHistory", this.OperationHistory);
         this.setParamSimple(map, prefix + "TransfusionHistory", this.TransfusionHistory);
+        this.setParamSimple(map, prefix + "DiseasePresent", this.DiseasePresent);
 
     }
 }

@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class Switch extends AbstractModel {
 
     /**
-    * 集群ID
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
-
-    /**
     * 审计开关的详细信息
     */
     @SerializedName("Audit")
     @Expose
     private SwitchInfo Audit;
+
+    /**
+    * 集群ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
 
     /**
     * 事件开关的详细信息
@@ -59,22 +59,6 @@ public class Switch extends AbstractModel {
     private SwitchInfo MasterLog;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
-    }
-
-    /**
      * Get 审计开关的详细信息 
      * @return Audit 审计开关的详细信息
      */
@@ -88,6 +72,22 @@ public class Switch extends AbstractModel {
      */
     public void setAudit(SwitchInfo Audit) {
         this.Audit = Audit;
+    }
+
+    /**
+     * Get 集群ID 
+     * @return ClusterId 集群ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群ID
+     * @param ClusterId 集群ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -146,11 +146,11 @@ public class Switch extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Switch(Switch source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
-        }
         if (source.Audit != null) {
             this.Audit = new SwitchInfo(source.Audit);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
         }
         if (source.Event != null) {
             this.Event = new SwitchInfo(source.Event);
@@ -168,8 +168,8 @@ public class Switch extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamObj(map, prefix + "Audit.", this.Audit);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamObj(map, prefix + "Event.", this.Event);
         this.setParamObj(map, prefix + "Log.", this.Log);
         this.setParamObj(map, prefix + "MasterLog.", this.MasterLog);

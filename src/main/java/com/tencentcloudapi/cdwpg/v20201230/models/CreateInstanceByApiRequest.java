@@ -208,7 +208,9 @@ public class CreateInstanceByApiRequest extends AbstractModel {
     /**
      * Get 废弃，用TagItems 
      * @return Tags 废弃，用TagItems
+     * @deprecated
      */
+    @Deprecated
     public Tag getTags() {
         return this.Tags;
     }
@@ -216,7 +218,9 @@ public class CreateInstanceByApiRequest extends AbstractModel {
     /**
      * Set 废弃，用TagItems
      * @param Tags 废弃，用TagItems
+     * @deprecated
      */
+    @Deprecated
     public void setTags(Tag Tags) {
         this.Tags = Tags;
     }

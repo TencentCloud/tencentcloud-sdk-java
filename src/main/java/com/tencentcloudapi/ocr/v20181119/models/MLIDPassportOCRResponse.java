@@ -73,10 +73,8 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     private String Nationality;
 
     /**
-    * 告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警
+    * 该字段已废弃， 将固定返回空数组，不建议使用。
+
     */
     @SerializedName("Warn")
     @Expose
@@ -90,15 +88,8 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     private String Image;
 
     /**
-    * 扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
+    * 该字段已废弃， 将固定返回"1"，不建议使用。
+
     */
     @SerializedName("AdvancedInfo")
     @Expose
@@ -282,29 +273,25 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警 
-     * @return Warn 告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警
+     * Get 该字段已废弃， 将固定返回空数组，不建议使用。
+ 
+     * @return Warn 该字段已废弃， 将固定返回空数组，不建议使用。
+
+     * @deprecated
      */
+    @Deprecated
     public Long [] getWarn() {
         return this.Warn;
     }
 
     /**
-     * Set 告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警
-     * @param Warn 告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警
+     * Set 该字段已废弃， 将固定返回空数组，不建议使用。
+
+     * @param Warn 该字段已废弃， 将固定返回空数组，不建议使用。
+
+     * @deprecated
      */
+    @Deprecated
     public void setWarn(Long [] Warn) {
         this.Warn = Warn;
     }
@@ -326,49 +313,25 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-} 
-     * @return AdvancedInfo 扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
+     * Get 该字段已废弃， 将固定返回"1"，不建议使用。
+ 
+     * @return AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。
+
+     * @deprecated
      */
+    @Deprecated
     public String getAdvancedInfo() {
         return this.AdvancedInfo;
     }
 
     /**
-     * Set 扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
-     * @param AdvancedInfo 扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
+     * Set 该字段已废弃， 将固定返回"1"，不建议使用。
+
+     * @param AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。
+
+     * @deprecated
      */
+    @Deprecated
     public void setAdvancedInfo(String AdvancedInfo) {
         this.AdvancedInfo = AdvancedInfo;
     }
