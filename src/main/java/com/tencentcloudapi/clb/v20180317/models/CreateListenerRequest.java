@@ -120,7 +120,7 @@ public class CreateListenerRequest extends AbstractModel {
     private Long EndPort;
 
     /**
-    * 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+    * 解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
     */
     @SerializedName("DeregisterTargetRst")
     @Expose
@@ -430,16 +430,16 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。 
-     * @return DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+     * Get 解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。 
+     * @return DeregisterTargetRst 解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
      */
     public Boolean getDeregisterTargetRst() {
         return this.DeregisterTargetRst;
     }
 
     /**
-     * Set 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
-     * @param DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+     * Set 解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
+     * @param DeregisterTargetRst 解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
      */
     public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
         this.DeregisterTargetRst = DeregisterTargetRst;

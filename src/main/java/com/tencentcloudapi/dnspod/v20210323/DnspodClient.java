@@ -667,6 +667,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *查看域名的解析量
+     * @param req DescribeResolveCountRequest
+     * @return DescribeResolveCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResolveCountResponse DescribeResolveCount(DescribeResolveCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResolveCount", DescribeResolveCountResponse.class);
+    }
+
+    /**
      *查询解析快照配置
      * @param req DescribeSnapshotConfigRequest
      * @return DescribeSnapshotConfigResponse

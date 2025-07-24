@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,35 +21,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLicenseWhiteConfigResponse extends AbstractModel {
+public class DescribeResolveCountResponse extends AbstractModel {
 
     /**
-    * 旗舰版 配置信息
+    * 解析量明细
     */
-    @SerializedName("FlagShip")
+    @SerializedName("Data")
     @Expose
-    private VersionWhiteConfig FlagShip;
+    private ResolveCountDataItem [] Data;
 
     /**
-    * 专业版 配置信息
+    * 解析量统计信息
     */
-    @SerializedName("Professional")
+    @SerializedName("Info")
     @Expose
-    private VersionWhiteConfig Professional;
+    private ResolveCountInfo Info;
 
     /**
-    * 轻量版 配置信息
+    * 别名解析量明细
     */
-    @SerializedName("PrattWhitney")
+    @SerializedName("AliasData")
     @Expose
-    private VersionWhiteConfig PrattWhitney;
-
-    /**
-    * 重保授权包 配置信息
-    */
-    @SerializedName("RASP")
-    @Expose
-    private VersionWhiteConfig RASP;
+    private ResolveCountAliasItem [] AliasData;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,67 +52,51 @@ public class DescribeLicenseWhiteConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 旗舰版 配置信息 
-     * @return FlagShip 旗舰版 配置信息
+     * Get 解析量明细 
+     * @return Data 解析量明细
      */
-    public VersionWhiteConfig getFlagShip() {
-        return this.FlagShip;
+    public ResolveCountDataItem [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 旗舰版 配置信息
-     * @param FlagShip 旗舰版 配置信息
+     * Set 解析量明细
+     * @param Data 解析量明细
      */
-    public void setFlagShip(VersionWhiteConfig FlagShip) {
-        this.FlagShip = FlagShip;
+    public void setData(ResolveCountDataItem [] Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 专业版 配置信息 
-     * @return Professional 专业版 配置信息
+     * Get 解析量统计信息 
+     * @return Info 解析量统计信息
      */
-    public VersionWhiteConfig getProfessional() {
-        return this.Professional;
+    public ResolveCountInfo getInfo() {
+        return this.Info;
     }
 
     /**
-     * Set 专业版 配置信息
-     * @param Professional 专业版 配置信息
+     * Set 解析量统计信息
+     * @param Info 解析量统计信息
      */
-    public void setProfessional(VersionWhiteConfig Professional) {
-        this.Professional = Professional;
+    public void setInfo(ResolveCountInfo Info) {
+        this.Info = Info;
     }
 
     /**
-     * Get 轻量版 配置信息 
-     * @return PrattWhitney 轻量版 配置信息
+     * Get 别名解析量明细 
+     * @return AliasData 别名解析量明细
      */
-    public VersionWhiteConfig getPrattWhitney() {
-        return this.PrattWhitney;
+    public ResolveCountAliasItem [] getAliasData() {
+        return this.AliasData;
     }
 
     /**
-     * Set 轻量版 配置信息
-     * @param PrattWhitney 轻量版 配置信息
+     * Set 别名解析量明细
+     * @param AliasData 别名解析量明细
      */
-    public void setPrattWhitney(VersionWhiteConfig PrattWhitney) {
-        this.PrattWhitney = PrattWhitney;
-    }
-
-    /**
-     * Get 重保授权包 配置信息 
-     * @return RASP 重保授权包 配置信息
-     */
-    public VersionWhiteConfig getRASP() {
-        return this.RASP;
-    }
-
-    /**
-     * Set 重保授权包 配置信息
-     * @param RASP 重保授权包 配置信息
-     */
-    public void setRASP(VersionWhiteConfig RASP) {
-        this.RASP = RASP;
+    public void setAliasData(ResolveCountAliasItem [] AliasData) {
+        this.AliasData = AliasData;
     }
 
     /**
@@ -138,25 +115,28 @@ public class DescribeLicenseWhiteConfigResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeLicenseWhiteConfigResponse() {
+    public DescribeResolveCountResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLicenseWhiteConfigResponse(DescribeLicenseWhiteConfigResponse source) {
-        if (source.FlagShip != null) {
-            this.FlagShip = new VersionWhiteConfig(source.FlagShip);
+    public DescribeResolveCountResponse(DescribeResolveCountResponse source) {
+        if (source.Data != null) {
+            this.Data = new ResolveCountDataItem[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new ResolveCountDataItem(source.Data[i]);
+            }
         }
-        if (source.Professional != null) {
-            this.Professional = new VersionWhiteConfig(source.Professional);
+        if (source.Info != null) {
+            this.Info = new ResolveCountInfo(source.Info);
         }
-        if (source.PrattWhitney != null) {
-            this.PrattWhitney = new VersionWhiteConfig(source.PrattWhitney);
-        }
-        if (source.RASP != null) {
-            this.RASP = new VersionWhiteConfig(source.RASP);
+        if (source.AliasData != null) {
+            this.AliasData = new ResolveCountAliasItem[source.AliasData.length];
+            for (int i = 0; i < source.AliasData.length; i++) {
+                this.AliasData[i] = new ResolveCountAliasItem(source.AliasData[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -168,10 +148,9 @@ public class DescribeLicenseWhiteConfigResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "FlagShip.", this.FlagShip);
-        this.setParamObj(map, prefix + "Professional.", this.Professional);
-        this.setParamObj(map, prefix + "PrattWhitney.", this.PrattWhitney);
-        this.setParamObj(map, prefix + "RASP.", this.RASP);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamObj(map, prefix + "Info.", this.Info);
+        this.setParamArrayObj(map, prefix + "AliasData.", this.AliasData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

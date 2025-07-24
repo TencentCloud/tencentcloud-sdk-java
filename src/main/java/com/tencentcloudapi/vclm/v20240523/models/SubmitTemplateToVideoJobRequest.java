@@ -61,6 +61,13 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
     private LogoParam LogoParam;
 
     /**
+    * 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+    */
+    @SerializedName("Resolution")
+    @Expose
+    private String Resolution;
+
+    /**
      * Get 特效模板名称。请在 [视频特效模版列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。 
      * @return Template 特效模板名称。请在 [视频特效模版列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
      */
@@ -160,6 +167,22 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
         this.LogoParam = LogoParam;
     }
 
+    /**
+     * Get 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。 
+     * @return Resolution 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+     */
+    public String getResolution() {
+        return this.Resolution;
+    }
+
+    /**
+     * Set 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+     * @param Resolution 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+     */
+    public void setResolution(String Resolution) {
+        this.Resolution = Resolution;
+    }
+
     public SubmitTemplateToVideoJobRequest() {
     }
 
@@ -183,6 +206,9 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
         if (source.LogoParam != null) {
             this.LogoParam = new LogoParam(source.LogoParam);
         }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
     }
 
 
@@ -194,6 +220,7 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
+        this.setParamSimple(map, prefix + "Resolution", this.Resolution);
 
     }
 }

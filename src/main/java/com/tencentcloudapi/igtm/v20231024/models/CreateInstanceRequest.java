@@ -84,7 +84,7 @@ ULTIMATE：旗舰版
     private String Remark;
 
     /**
-    * 套餐资源id，必填
+    * 套餐资源id
     */
     @SerializedName("ResourceId")
     @Expose
@@ -235,16 +235,16 @@ ULTIMATE：旗舰版
     }
 
     /**
-     * Get 套餐资源id，必填 
-     * @return ResourceId 套餐资源id，必填
+     * Get 套餐资源id 
+     * @return ResourceId 套餐资源id
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 套餐资源id，必填
-     * @param ResourceId 套餐资源id，必填
+     * Set 套餐资源id
+     * @param ResourceId 套餐资源id
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

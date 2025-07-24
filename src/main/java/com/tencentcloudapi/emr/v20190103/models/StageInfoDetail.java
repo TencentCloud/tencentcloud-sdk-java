@@ -131,6 +131,13 @@ public class StageInfoDetail extends AbstractModel {
     private String TimeConsuming;
 
     /**
+    * id，前端用
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
+
+    /**
      * Get 步骤 
      * @return Stage 步骤
      */
@@ -378,6 +385,22 @@ public class StageInfoDetail extends AbstractModel {
         this.TimeConsuming = TimeConsuming;
     }
 
+    /**
+     * Get id，前端用 
+     * @return Id id，前端用
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set id，前端用
+     * @param Id id，前端用
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
     public StageInfoDetail() {
     }
 
@@ -431,6 +454,9 @@ public class StageInfoDetail extends AbstractModel {
         if (source.TimeConsuming != null) {
             this.TimeConsuming = new String(source.TimeConsuming);
         }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
     }
 
 
@@ -453,6 +479,7 @@ public class StageInfoDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "LanguageKey", this.LanguageKey);
         this.setParamSimple(map, prefix + "FailedReason", this.FailedReason);
         this.setParamSimple(map, prefix + "TimeConsuming", this.TimeConsuming);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

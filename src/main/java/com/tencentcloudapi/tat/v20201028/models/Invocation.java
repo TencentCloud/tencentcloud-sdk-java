@@ -38,6 +38,13 @@ public class Invocation extends AbstractModel {
     private String CommandId;
 
     /**
+    * 执行的命令的名称
+    */
+    @SerializedName("CommandName")
+    @Expose
+    private String CommandName;
+
+    /**
     * 执行任务状态。取值范围：
 
 - PENDING：等待下发
@@ -206,6 +213,22 @@ public class Invocation extends AbstractModel {
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
+    }
+
+    /**
+     * Get 执行的命令的名称 
+     * @return CommandName 执行的命令的名称
+     */
+    public String getCommandName() {
+        return this.CommandName;
+    }
+
+    /**
+     * Set 执行的命令的名称
+     * @param CommandName 执行的命令的名称
+     */
+    public void setCommandName(String CommandName) {
+        this.CommandName = CommandName;
     }
 
     /**
@@ -562,6 +585,9 @@ public class Invocation extends AbstractModel {
         if (source.CommandId != null) {
             this.CommandId = new String(source.CommandId);
         }
+        if (source.CommandName != null) {
+            this.CommandName = new String(source.CommandName);
+        }
         if (source.InvocationStatus != null) {
             this.InvocationStatus = new String(source.InvocationStatus);
         }
@@ -628,6 +654,7 @@ public class Invocation extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InvocationId", this.InvocationId);
         this.setParamSimple(map, prefix + "CommandId", this.CommandId);
+        this.setParamSimple(map, prefix + "CommandName", this.CommandName);
         this.setParamSimple(map, prefix + "InvocationStatus", this.InvocationStatus);
         this.setParamArrayObj(map, prefix + "InvocationTaskBasicInfoSet.", this.InvocationTaskBasicInfoSet);
         this.setParamSimple(map, prefix + "Description", this.Description);

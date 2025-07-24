@@ -73,6 +73,13 @@ public class ProcedureTemplate extends AbstractModel {
 
     /**
     * AI 内容识别类型任务参数。
+    */
+    @SerializedName("AiRecognitionTaskSet")
+    @Expose
+    private AiRecognitionTaskInput [] AiRecognitionTaskSet;
+
+    /**
+    * 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiRecognitionTask")
@@ -230,21 +237,41 @@ public class ProcedureTemplate extends AbstractModel {
     }
 
     /**
-     * Get AI 内容识别类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiRecognitionTask AI 内容识别类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get AI 内容识别类型任务参数。 
+     * @return AiRecognitionTaskSet AI 内容识别类型任务参数。
      */
+    public AiRecognitionTaskInput [] getAiRecognitionTaskSet() {
+        return this.AiRecognitionTaskSet;
+    }
+
+    /**
+     * Set AI 内容识别类型任务参数。
+     * @param AiRecognitionTaskSet AI 内容识别类型任务参数。
+     */
+    public void setAiRecognitionTaskSet(AiRecognitionTaskInput [] AiRecognitionTaskSet) {
+        this.AiRecognitionTaskSet = AiRecognitionTaskSet;
+    }
+
+    /**
+     * Get 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AiRecognitionTask 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
     public AiRecognitionTaskInput getAiRecognitionTask() {
         return this.AiRecognitionTask;
     }
 
     /**
-     * Set AI 内容识别类型任务参数。
+     * Set 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiRecognitionTask AI 内容识别类型任务参数。
+     * @param AiRecognitionTask 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
         this.AiRecognitionTask = AiRecognitionTask;
     }
@@ -347,6 +374,12 @@ public class ProcedureTemplate extends AbstractModel {
         if (source.AiAnalysisTask != null) {
             this.AiAnalysisTask = new AiAnalysisTaskInput(source.AiAnalysisTask);
         }
+        if (source.AiRecognitionTaskSet != null) {
+            this.AiRecognitionTaskSet = new AiRecognitionTaskInput[source.AiRecognitionTaskSet.length];
+            for (int i = 0; i < source.AiRecognitionTaskSet.length; i++) {
+                this.AiRecognitionTaskSet[i] = new AiRecognitionTaskInput(source.AiRecognitionTaskSet[i]);
+            }
+        }
         if (source.AiRecognitionTask != null) {
             this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
         }
@@ -375,6 +408,7 @@ public class ProcedureTemplate extends AbstractModel {
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
+        this.setParamArrayObj(map, prefix + "AiRecognitionTaskSet.", this.AiRecognitionTaskSet);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "MiniProgramPublishTask.", this.MiniProgramPublishTask);
         this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);

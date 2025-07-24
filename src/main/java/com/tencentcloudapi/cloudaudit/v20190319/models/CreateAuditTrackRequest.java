@@ -73,6 +73,13 @@ public class CreateAuditTrackRequest extends AbstractModel {
     private Long TrackForAllMembers;
 
     /**
+    * 任务ID
+    */
+    @SerializedName("ExportId")
+    @Expose
+    private String ExportId;
+
+    /**
      * Get 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符 
      * @return Name 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
      */
@@ -184,6 +191,22 @@ public class CreateAuditTrackRequest extends AbstractModel {
         this.TrackForAllMembers = TrackForAllMembers;
     }
 
+    /**
+     * Get 任务ID 
+     * @return ExportId 任务ID
+     */
+    public String getExportId() {
+        return this.ExportId;
+    }
+
+    /**
+     * Set 任务ID
+     * @param ExportId 任务ID
+     */
+    public void setExportId(String ExportId) {
+        this.ExportId = ExportId;
+    }
+
     public CreateAuditTrackRequest() {
     }
 
@@ -216,6 +239,9 @@ public class CreateAuditTrackRequest extends AbstractModel {
         if (source.TrackForAllMembers != null) {
             this.TrackForAllMembers = new Long(source.TrackForAllMembers);
         }
+        if (source.ExportId != null) {
+            this.ExportId = new String(source.ExportId);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class CreateAuditTrackRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamArraySimple(map, prefix + "EventNames.", this.EventNames);
         this.setParamSimple(map, prefix + "TrackForAllMembers", this.TrackForAllMembers);
+        this.setParamSimple(map, prefix + "ExportId", this.ExportId);
 
     }
 }

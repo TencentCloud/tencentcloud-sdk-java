@@ -380,6 +380,17 @@ public class CtemClient extends AbstractClient{
     }
 
     /**
+     *修改标签
+     * @param req ModifyLabelRequest
+     * @return ModifyLabelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLabelResponse ModifyLabel(ModifyLabelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLabel", ModifyLabelResponse.class);
+    }
+
+    /**
      *停止扫描
      * @param req StopJobRecordRequest
      * @return StopJobRecordResponse

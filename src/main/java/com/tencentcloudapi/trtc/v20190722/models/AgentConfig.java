@@ -130,6 +130,15 @@ public class AgentConfig extends AbstractModel {
     private TurnDetection TurnDetection;
 
     /**
+    * 机器人字幕显示模式。
+- 0表示尽快显示，不会和音频播放进行同步。此时字幕全量下发，后面的字幕会包含前面的字幕。
+- 1表示句子级别的实时显示，会和音频播放进行同步，只有当前句子对应的音频播放完后，下一条字幕才会下发。此时字幕增量下发，端上需要把前后的字幕进行拼接才是完整字幕。
+    */
+    @SerializedName("SubtitleMode")
+    @Expose
+    private Long SubtitleMode;
+
+    /**
      * Get 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。 
      * @return UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
      */
@@ -385,6 +394,30 @@ public class AgentConfig extends AbstractModel {
         this.TurnDetection = TurnDetection;
     }
 
+    /**
+     * Get 机器人字幕显示模式。
+- 0表示尽快显示，不会和音频播放进行同步。此时字幕全量下发，后面的字幕会包含前面的字幕。
+- 1表示句子级别的实时显示，会和音频播放进行同步，只有当前句子对应的音频播放完后，下一条字幕才会下发。此时字幕增量下发，端上需要把前后的字幕进行拼接才是完整字幕。 
+     * @return SubtitleMode 机器人字幕显示模式。
+- 0表示尽快显示，不会和音频播放进行同步。此时字幕全量下发，后面的字幕会包含前面的字幕。
+- 1表示句子级别的实时显示，会和音频播放进行同步，只有当前句子对应的音频播放完后，下一条字幕才会下发。此时字幕增量下发，端上需要把前后的字幕进行拼接才是完整字幕。
+     */
+    public Long getSubtitleMode() {
+        return this.SubtitleMode;
+    }
+
+    /**
+     * Set 机器人字幕显示模式。
+- 0表示尽快显示，不会和音频播放进行同步。此时字幕全量下发，后面的字幕会包含前面的字幕。
+- 1表示句子级别的实时显示，会和音频播放进行同步，只有当前句子对应的音频播放完后，下一条字幕才会下发。此时字幕增量下发，端上需要把前后的字幕进行拼接才是完整字幕。
+     * @param SubtitleMode 机器人字幕显示模式。
+- 0表示尽快显示，不会和音频播放进行同步。此时字幕全量下发，后面的字幕会包含前面的字幕。
+- 1表示句子级别的实时显示，会和音频播放进行同步，只有当前句子对应的音频播放完后，下一条字幕才会下发。此时字幕增量下发，端上需要把前后的字幕进行拼接才是完整字幕。
+     */
+    public void setSubtitleMode(Long SubtitleMode) {
+        this.SubtitleMode = SubtitleMode;
+    }
+
     public AgentConfig() {
     }
 
@@ -435,6 +468,9 @@ public class AgentConfig extends AbstractModel {
         if (source.TurnDetection != null) {
             this.TurnDetection = new TurnDetection(source.TurnDetection);
         }
+        if (source.SubtitleMode != null) {
+            this.SubtitleMode = new Long(source.SubtitleMode);
+        }
     }
 
 
@@ -456,6 +492,7 @@ public class AgentConfig extends AbstractModel {
         this.setParamObj(map, prefix + "AmbientSound.", this.AmbientSound);
         this.setParamObj(map, prefix + "VoicePrint.", this.VoicePrint);
         this.setParamObj(map, prefix + "TurnDetection.", this.TurnDetection);
+        this.setParamSimple(map, prefix + "SubtitleMode", this.SubtitleMode);
 
     }
 }
