@@ -20,15 +20,8 @@ public class STSCredential extends Credential {
     private String tmpSecretId;
     private String tmpSecretKey;
     private String token;
-    private String endpoint = "sts.tencentcloudapi.com";
+    private String endpoint;
     private int expiredTime;
-
-    public STSCredential(String secretId, String secretKey, String roleArn, String roleSessionName) {
-        this.secretId = secretId;
-        this.secretKey = secretKey;
-        this.roleArn = roleArn;
-        this.roleSessionName = roleSessionName;
-    }
 
     public STSCredential(String secretId, String secretKey, String roleArn, String roleSessionName, String endpoint) {
         this.secretId = secretId;
@@ -36,6 +29,10 @@ public class STSCredential extends Credential {
         this.roleArn = roleArn;
         this.roleSessionName = roleSessionName;
         this.endpoint = endpoint;
+    }
+
+    public STSCredential(String secretId, String secretKey, String roleArn, String roleSessionName) {
+        this(secretId, secretKey, roleArn, roleSessionName, "sts.tencentcloudapi.com");
     }
 
     public String getSecretId() {

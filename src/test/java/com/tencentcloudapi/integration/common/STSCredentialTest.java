@@ -18,18 +18,24 @@ public class STSCredentialTest {
 
     class MyInterceptor implements Interceptor {
 
-        public static final String expectUrl = "sts.tencentcloudapi.com";
+        private String realHost;
+
+        public String getRealHost() {
+            return this.realHost;
+        }
 
         @Override
         public Response intercept(Chain chain) throws IOException {
             Request request = chain.request();
-            Assert.assertEquals(expectUrl, request.url().host());
+            this.realHost = request.url().host();
             return chain.proceed(request);
         }
     }
 
     @Test
-    public void testSTSCredentialEndpointWithDefault() throws Exception {
+    public void testSTSCredentialWithDefaultEndpoint() throws Exception {
+        String expectedHost = "sts.tencentcloudapi.com";
+
         STSCredential cred = new STSCredential(
             "test-secret-id",
             "test-secret-key",
@@ -37,8 +43,9 @@ public class STSCredentialTest {
             "test-role-session-name"
         );
 
+        MyInterceptor interceptor = new MyInterceptor();
         OkHttpClient okClient = new OkHttpClient.Builder()
-                .addInterceptor(new MyInterceptor())
+                .addInterceptor(interceptor)
                 .build();
 
         Field field = HttpConnection.class.getDeclaredField("clientSingleton");
@@ -51,20 +58,25 @@ public class STSCredentialTest {
         field.set(null, okClient);
 
         cred.getToken();
+
+        Assert.assertEquals(expectedHost, interceptor.getRealHost());
     }
 
     @Test
-    public void testSTSCredentialEndpointWithSet() throws Exception {
+    public void testSTSCredentialWithSetEndpoint() throws Exception {
+        String expectedHost = "sts.internal.tencentcloudapi.com";
+
         STSCredential cred = new STSCredential(
             "test-secret-id",
             "test-secret-key",
             "test-role-arn",
             "test-role-session-name",
-            "sts.tencentcloudapi.com"
+            "sts.internal.tencentcloudapi.com"
         );
 
+        MyInterceptor interceptor = new MyInterceptor();
         OkHttpClient okClient = new OkHttpClient.Builder()
-                .addInterceptor(new MyInterceptor())
+                .addInterceptor(interceptor)
                 .build();
 
         Field field = HttpConnection.class.getDeclaredField("clientSingleton");
@@ -77,5 +89,7 @@ public class STSCredentialTest {
         field.set(null, okClient);
 
         cred.getToken();
+
+        Assert.assertEquals(expectedHost, interceptor.getRealHost());
     }
 }

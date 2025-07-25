@@ -11,35 +11,38 @@ import okhttp3.Response;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.nio.file.Files;
 
 
 public class OIDCRoleProviderTest {
 
-    class MyInterceptor implements Interceptor {
+    static class MyInterceptor implements Interceptor {
 
-        public static final String expectUrl = "sts.tencentcloudapi.com";
+        private String realHost;
+
+        public String getRealHost() {
+            return this.realHost;
+        }
 
         @Override
         public Response intercept(Chain chain) throws IOException {
             Request request = chain.request();
-            Assert.assertEquals(expectUrl, request.url().host());
-            
-            String mockResponseJson = "{\n" +
-                "  \"Response\": {\n" +
-                "    \"Credentials\": {\n" +
-                "      \"Token\": \"mock-oidc-token\",\n" +
-                "      \"TmpSecretId\": \"mock-oidc-tmp-secret-id\",\n" +
-                "      \"TmpSecretKey\": \"mock-oidc-tmp-secret-key\"\n" +
-                "    },\n" +
-                "    \"ExpiredTime\": " + (System.currentTimeMillis() / 1000 + 7200) + ",\n" +
-                "    \"Expiration\": \"2025-12-31T23:59:59Z\",\n" +
-                "    \"RequestId\": \"mock-oidc-request-id\"\n" +
-                "  }\n" +
-                "}";
 
+            realHost = request.url().host();
+
+            String mockResponseJson = "{\"Response\": {"
+                                        + "\"Credentials\": {"
+                                        + "\"Token\":\"mock-oidc-token\","
+                                        + "\"TmpSecretId\":\"mock-oidc-tmp-secret-id\","
+                                        + "\"TmpSecretKey\":\"mock-oidc-tmp-secret-key\""
+                                        + "},"
+                                        + "\"ExpiredTime\":" + (System.currentTimeMillis() / 1000 + 7200) + ","
+                                        + "\"Expiration\":\"2025-12-31T23:59:59Z\","
+                                        + "\"RequestId\":\"mock-oidc-request-id\"}}";
             return new Response.Builder()
                 .request(request)
                 .protocol(okhttp3.Protocol.HTTP_1_1)
@@ -54,7 +57,9 @@ public class OIDCRoleProviderTest {
     }
 
     @Test
-    public void testOIDCRoleProviderEndpointWithDefault() throws Exception {
+    public void testOIDCRoleProviderWithDefaultEndpoint() throws Exception {
+        String expectedHost = "sts.tencentcloudapi.com";
+
         OIDCRoleArnProvider cred = new OIDCRoleArnProvider(
             "ap-guangzhou",
             "test-provider-id",
@@ -64,8 +69,9 @@ public class OIDCRoleProviderTest {
             7200
         );
 
+        MyInterceptor interceptor = new MyInterceptor();
         OkHttpClient okClient = new OkHttpClient.Builder()
-                .addInterceptor(new MyInterceptor())
+                .addInterceptor(interceptor)
                 .build();
 
         Field field = HttpConnection.class.getDeclaredField("clientSingleton");
@@ -78,10 +84,14 @@ public class OIDCRoleProviderTest {
         field.set(null, okClient);
 
         cred.getCredentials();
+
+        Assert.assertEquals(expectedHost, interceptor.getRealHost());
     }
 
     @Test
-    public void testOIDCRoleProviderEndpointWithSet() throws Exception {
+    public void testOIDCRoleProviderWithSetEndpoint() throws Exception {
+        String expectedHost = "sts.internal.tencentcloudapi.com";
+
         OIDCRoleArnProvider cred = new OIDCRoleArnProvider(
             "ap-guangzhou",
             "test-provider-id",
@@ -89,11 +99,12 @@ public class OIDCRoleProviderTest {
             "test-role-arn",
             "test-role-session-name",
             7200,
-            "sts.tencentcloudapi.com"
+            "sts.internal.tencentcloudapi.com"
         );
 
+        MyInterceptor interceptor = new MyInterceptor();
         OkHttpClient okClient = new OkHttpClient.Builder()
-                .addInterceptor(new MyInterceptor())
+                .addInterceptor(interceptor)
                 .build();
 
         Field field = HttpConnection.class.getDeclaredField("clientSingleton");
@@ -106,5 +117,77 @@ public class OIDCRoleProviderTest {
         field.set(null, okClient);
 
         cred.getCredentials();
+
+        Assert.assertEquals(expectedHost, interceptor.getRealHost());
+    }
+
+
+    @Test
+    public void testTkeOIDCRoleProviderWithDefaultEndpoint() throws Exception {
+        String expectedHost = "sts.tencentcloudapi.com";
+
+        String tkeTokenFileName = System.getenv("TKE_WEB_IDENTITY_TOKEN_FILE");
+        if (tkeTokenFileName == null || tkeTokenFileName.isEmpty()) {
+            Assert.fail("Environment variable TKE_WEB_IDENTITY_TOKEN_FILE is not set or empty");
+        }
+        File tkeTokenFile = new File(tkeTokenFileName);
+        Files.write(tkeTokenFile.toPath(), "xxx".getBytes());
+        
+        OIDCRoleArnProvider cred = new OIDCRoleArnProvider();
+
+        MyInterceptor interceptor = new MyInterceptor();
+        OkHttpClient okClient = new OkHttpClient.Builder()
+                .addInterceptor(interceptor)
+                .build();
+
+        Field field = HttpConnection.class.getDeclaredField("clientSingleton");
+        field.setAccessible(true);
+
+        Field modifiersField = Field.class.getDeclaredField("modifiers");
+        modifiersField.setAccessible(true);
+        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+
+        field.set(null, okClient);
+
+        cred.getCredentials();
+
+        tkeTokenFile.delete();
+
+        Assert.assertEquals(expectedHost, interceptor.getRealHost());
+    }
+
+    @Test
+    public void testTkeOIDCRoleProviderWithSetEndpoint() throws Exception {
+        String expectedHost = "sts.internal.tencentcloudapi.com";
+        
+        String tkeTokenFileName = System.getenv("TKE_WEB_IDENTITY_TOKEN_FILE");
+        if (tkeTokenFileName == null || tkeTokenFileName.isEmpty()) {
+            Assert.fail("Environment variable TKE_WEB_IDENTITY_TOKEN_FILE is not set or empty");
+        }
+        File tkeTokenFile = new File(tkeTokenFileName);
+        Files.write(tkeTokenFile.toPath(), "xxx".getBytes());
+
+        OIDCRoleArnProvider cred = new OIDCRoleArnProvider();
+        cred.setEndpoint("sts.internal.tencentcloudapi.com");
+
+        MyInterceptor interceptor = new MyInterceptor();
+        OkHttpClient okClient = new OkHttpClient.Builder()
+                .addInterceptor(interceptor)
+                .build();
+
+        Field field = HttpConnection.class.getDeclaredField("clientSingleton");
+        field.setAccessible(true);
+
+        Field modifiersField = Field.class.getDeclaredField("modifiers");
+        modifiersField.setAccessible(true);
+        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+        
+        field.set(null, okClient);
+
+        cred.getCredentials();
+
+        tkeTokenFile.deleteOnExit();
+
+        Assert.assertEquals(expectedHost, interceptor.getRealHost());
     }
 }

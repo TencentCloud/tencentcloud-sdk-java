@@ -27,22 +27,12 @@ public class OIDCRoleArnProvider implements CredentialsProvider, Credential.Upda
     public String WebIdentityToken;
     public String RoleArn;
     public String RoleSessionName;
-    public String Endpoint = "sts.tencentcloudapi.com";
+    public String Endpoint;
     public long DurationSeconds;
     public long ExpirationReservationTime = 600;
     private long expiredTime;
 
     private boolean isTke;
-
-    public OIDCRoleArnProvider(String region, String providerId, String webIdentityToken,
-                               String roleArn, String roleSessionName, long durationSeconds) {
-        Region = region;
-        ProviderId = providerId;
-        WebIdentityToken = webIdentityToken;
-        RoleArn = roleArn;
-        RoleSessionName = roleSessionName;
-        DurationSeconds = durationSeconds;
-    }
 
     public OIDCRoleArnProvider(String region, String providerId, String webIdentityToken,
                                String roleArn, String roleSessionName, long durationSeconds, String endpoint) {
@@ -55,9 +45,23 @@ public class OIDCRoleArnProvider implements CredentialsProvider, Credential.Upda
         Endpoint = endpoint;
     }
 
+    public OIDCRoleArnProvider(String region, String providerId, String webIdentityToken,
+                               String roleArn, String roleSessionName, long durationSeconds) {
+        this(region, providerId, webIdentityToken, roleArn, roleSessionName, durationSeconds, 
+        "sts.tencentcloudapi.com");
+    }
+
     public OIDCRoleArnProvider() throws TencentCloudSDKException {
         isTke = true;
         initFromTke();
+    }
+
+    public String getEndpoint() {
+        return Endpoint;
+    }
+
+    public void setEndpoint(String endpoint) {
+        this.Endpoint = endpoint;
     }
 
     private void initFromTke() throws TencentCloudSDKException {
