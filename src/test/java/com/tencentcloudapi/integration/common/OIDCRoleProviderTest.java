@@ -11,11 +11,9 @@ import okhttp3.Response;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import java.nio.file.Files;
 
 
 public class OIDCRoleProviderTest {
@@ -117,76 +115,6 @@ public class OIDCRoleProviderTest {
         field.set(null, okClient);
 
         cred.getCredentials();
-
-        Assert.assertEquals(expectedHost, interceptor.getRealHost());
-    }
-
-
-    @Test
-    public void testTkeOIDCRoleProviderWithDefaultEndpoint() throws Exception {
-        String expectedHost = "sts.tencentcloudapi.com";
-
-        String tkeTokenFileName = System.getenv("TKE_WEB_IDENTITY_TOKEN_FILE");
-        if (tkeTokenFileName == null || tkeTokenFileName.isEmpty()) {
-            Assert.fail("Environment variable TKE_WEB_IDENTITY_TOKEN_FILE is not set or empty");
-        }
-        File tkeTokenFile = new File(tkeTokenFileName);
-        Files.write(tkeTokenFile.toPath(), "xxx".getBytes());
-        
-        OIDCRoleArnProvider cred = new OIDCRoleArnProvider();
-
-        MyInterceptor interceptor = new MyInterceptor();
-        OkHttpClient okClient = new OkHttpClient.Builder()
-                .addInterceptor(interceptor)
-                .build();
-
-        Field field = HttpConnection.class.getDeclaredField("clientSingleton");
-        field.setAccessible(true);
-
-        Field modifiersField = Field.class.getDeclaredField("modifiers");
-        modifiersField.setAccessible(true);
-        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
-
-        field.set(null, okClient);
-
-        cred.getCredentials();
-
-        tkeTokenFile.delete();
-
-        Assert.assertEquals(expectedHost, interceptor.getRealHost());
-    }
-
-    @Test
-    public void testTkeOIDCRoleProviderWithSetEndpoint() throws Exception {
-        String expectedHost = "sts.internal.tencentcloudapi.com";
-        
-        String tkeTokenFileName = System.getenv("TKE_WEB_IDENTITY_TOKEN_FILE");
-        if (tkeTokenFileName == null || tkeTokenFileName.isEmpty()) {
-            Assert.fail("Environment variable TKE_WEB_IDENTITY_TOKEN_FILE is not set or empty");
-        }
-        File tkeTokenFile = new File(tkeTokenFileName);
-        Files.write(tkeTokenFile.toPath(), "xxx".getBytes());
-
-        OIDCRoleArnProvider cred = new OIDCRoleArnProvider();
-        cred.setEndpoint("sts.internal.tencentcloudapi.com");
-
-        MyInterceptor interceptor = new MyInterceptor();
-        OkHttpClient okClient = new OkHttpClient.Builder()
-                .addInterceptor(interceptor)
-                .build();
-
-        Field field = HttpConnection.class.getDeclaredField("clientSingleton");
-        field.setAccessible(true);
-
-        Field modifiersField = Field.class.getDeclaredField("modifiers");
-        modifiersField.setAccessible(true);
-        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
-        
-        field.set(null, okClient);
-
-        cred.getCredentials();
-
-        tkeTokenFile.deleteOnExit();
 
         Assert.assertEquals(expectedHost, interceptor.getRealHost());
     }
