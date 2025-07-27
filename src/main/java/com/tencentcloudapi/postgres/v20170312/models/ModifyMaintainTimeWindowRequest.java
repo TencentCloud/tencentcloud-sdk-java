@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyMaintainTimeWindowRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -38,7 +38,7 @@ public class ModifyMaintainTimeWindowRequest extends AbstractModel {
     private String MaintainStartTime;
 
     /**
-    * 维护持续时间。单位：小时
+    * 维护持续时间。单位：小时。取值范围：[1,4]
     */
     @SerializedName("MaintainDuration")
     @Expose
@@ -52,16 +52,16 @@ public class ModifyMaintainTimeWindowRequest extends AbstractModel {
     private String [] MaintainWeekDays;
 
     /**
-     * Get 实例ID 
-     * @return DBInstanceId 实例ID
+     * Get 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param DBInstanceId 实例ID
+     * Set 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -84,16 +84,16 @@ public class ModifyMaintainTimeWindowRequest extends AbstractModel {
     }
 
     /**
-     * Get 维护持续时间。单位：小时 
-     * @return MaintainDuration 维护持续时间。单位：小时
+     * Get 维护持续时间。单位：小时。取值范围：[1,4] 
+     * @return MaintainDuration 维护持续时间。单位：小时。取值范围：[1,4]
      */
     public Long getMaintainDuration() {
         return this.MaintainDuration;
     }
 
     /**
-     * Set 维护持续时间。单位：小时
-     * @param MaintainDuration 维护持续时间。单位：小时
+     * Set 维护持续时间。单位：小时。取值范围：[1,4]
+     * @param MaintainDuration 维护持续时间。单位：小时。取值范围：[1,4]
      */
     public void setMaintainDuration(Long MaintainDuration) {
         this.MaintainDuration = MaintainDuration;

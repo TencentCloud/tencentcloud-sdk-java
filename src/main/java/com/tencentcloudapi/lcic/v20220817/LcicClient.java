@@ -269,6 +269,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *删除房间
+删除课堂前，请先删除该课堂下的各类资源（包括录制文件、板书等），并解绑相关课件。
      * @param req DeleteRoomRequest
      * @return DeleteRoomResponse
      * @throws TencentCloudSDKException
@@ -568,6 +569,8 @@ public class LcicClient extends AbstractClient{
 
     /**
      *查询白板板书截图
+课程结束后，可以查询和以图片的形式导出这些内容，方便后续查看、整理与分享。
+注意：不支持屏幕共享中的板书导出。
      * @param req DescribeWhiteBoardSnapshotRequest
      * @return DescribeWhiteBoardSnapshotResponse
      * @throws TencentCloudSDKException

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClassesRequest extends AbstractModel {
 
     /**
-    * 可用区ID。可以通过接口DescribeZones获取。
+    * 可用区名称。可以通过接口[DescribeZones](https://cloud.tencent.com/document/product/409/16769)获取。
     */
     @SerializedName("Zone")
     @Expose
@@ -40,23 +40,23 @@ public class DescribeClassesRequest extends AbstractModel {
     private String DBEngine;
 
     /**
-    * 数据库主版本号。例如12，13，可以通过接口DescribeDBVersions获取。
+    * 数据库主版本号。例如12，13，可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取。
     */
     @SerializedName("DBMajorVersion")
     @Expose
     private String DBMajorVersion;
 
     /**
-     * Get 可用区ID。可以通过接口DescribeZones获取。 
-     * @return Zone 可用区ID。可以通过接口DescribeZones获取。
+     * Get 可用区名称。可以通过接口[DescribeZones](https://cloud.tencent.com/document/product/409/16769)获取。 
+     * @return Zone 可用区名称。可以通过接口[DescribeZones](https://cloud.tencent.com/document/product/409/16769)获取。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区ID。可以通过接口DescribeZones获取。
-     * @param Zone 可用区ID。可以通过接口DescribeZones获取。
+     * Set 可用区名称。可以通过接口[DescribeZones](https://cloud.tencent.com/document/product/409/16769)获取。
+     * @param Zone 可用区名称。可以通过接口[DescribeZones](https://cloud.tencent.com/document/product/409/16769)获取。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -87,16 +87,16 @@ public class DescribeClassesRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库主版本号。例如12，13，可以通过接口DescribeDBVersions获取。 
-     * @return DBMajorVersion 数据库主版本号。例如12，13，可以通过接口DescribeDBVersions获取。
+     * Get 数据库主版本号。例如12，13，可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取。 
+     * @return DBMajorVersion 数据库主版本号。例如12，13，可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取。
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
     }
 
     /**
-     * Set 数据库主版本号。例如12，13，可以通过接口DescribeDBVersions获取。
-     * @param DBMajorVersion 数据库主版本号。例如12，13，可以通过接口DescribeDBVersions获取。
+     * Set 数据库主版本号。例如12，13，可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取。
+     * @param DBMajorVersion 数据库主版本号。例如12，13，可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取。
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;

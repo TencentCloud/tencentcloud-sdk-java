@@ -45,6 +45,25 @@ public class CloudEffectInfo extends AbstractModel {
     private String Flag;
 
     /**
+    * 云端特效生成状态。
+生成中 - GENERATING。
+处理中 - PROCESSING。
+生成失败 - FAILED。
+已完成 - FINISH。
+
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 特效信息，生成失败时，此处返回失败原因。
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
     * 云端特效预览图片。
     */
     @SerializedName("PreviewImageUrl")
@@ -121,6 +140,58 @@ UGC : 用户上传特效。
      */
     public void setFlag(String Flag) {
         this.Flag = Flag;
+    }
+
+    /**
+     * Get 云端特效生成状态。
+生成中 - GENERATING。
+处理中 - PROCESSING。
+生成失败 - FAILED。
+已完成 - FINISH。
+ 
+     * @return Status 云端特效生成状态。
+生成中 - GENERATING。
+处理中 - PROCESSING。
+生成失败 - FAILED。
+已完成 - FINISH。
+
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 云端特效生成状态。
+生成中 - GENERATING。
+处理中 - PROCESSING。
+生成失败 - FAILED。
+已完成 - FINISH。
+
+     * @param Status 云端特效生成状态。
+生成中 - GENERATING。
+处理中 - PROCESSING。
+生成失败 - FAILED。
+已完成 - FINISH。
+
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 特效信息，生成失败时，此处返回失败原因。 
+     * @return Message 特效信息，生成失败时，此处返回失败原因。
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 特效信息，生成失败时，此处返回失败原因。
+     * @param Message 特效信息，生成失败时，此处返回失败原因。
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
     /**
@@ -216,6 +287,12 @@ UGC : 用户上传特效。
         if (source.Flag != null) {
             this.Flag = new String(source.Flag);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
         if (source.PreviewImageUrl != null) {
             this.PreviewImageUrl = new String(source.PreviewImageUrl);
         }
@@ -238,6 +315,8 @@ UGC : 用户上传特效。
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "Flag", this.Flag);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "PreviewImageUrl", this.PreviewImageUrl);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

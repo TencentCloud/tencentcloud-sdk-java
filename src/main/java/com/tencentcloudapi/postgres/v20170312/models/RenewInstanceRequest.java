@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RenewInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID，形如postgres-6fego161
+    * 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。仅支持预付费（包年包月）实例。
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -33,7 +33,6 @@ public class RenewInstanceRequest extends AbstractModel {
     /**
     * 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
     */
     @SerializedName("Period")
     @Expose
@@ -57,16 +56,16 @@ public class RenewInstanceRequest extends AbstractModel {
     private String [] VoucherIds;
 
     /**
-     * Get 实例ID，形如postgres-6fego161 
-     * @return DBInstanceId 实例ID，形如postgres-6fego161
+     * Get 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。仅支持预付费（包年包月）实例。 
+     * @return DBInstanceId 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。仅支持预付费（包年包月）实例。
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如postgres-6fego161
-     * @param DBInstanceId 实例ID，形如postgres-6fego161
+     * Set 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。仅支持预付费（包年包月）实例。
+     * @param DBInstanceId 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。仅支持预付费（包年包月）实例。
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -74,11 +73,9 @@ public class RenewInstanceRequest extends AbstractModel {
 
     /**
      * Get 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li> 
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li> 
      * @return Period 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
      */
     public Long getPeriod() {
         return this.Period;
@@ -87,10 +84,8 @@ public class RenewInstanceRequest extends AbstractModel {
     /**
      * Set 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
      * @param Period 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

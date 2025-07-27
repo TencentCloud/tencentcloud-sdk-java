@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class InquiryPriceCreateDBInstancesRequest extends AbstractModel {
 
     /**
-    * 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+    * 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
+    * 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * 存储容量大小，单位：GB。
+    * 存储容量大小，单位：GB。该参数的设置步长为10。
     */
     @SerializedName("Storage")
     @Expose
@@ -66,7 +66,8 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel {
     private Long Pid;
 
     /**
-    * 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
+    * 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
+默认值：PREPAID
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -91,48 +92,48 @@ mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
     private String DBEngine;
 
     /**
-     * Get 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。 
-     * @return Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * Get 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。 
+     * @return Zone 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
-     * @param Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * Set 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
+     * @param Zone 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。 
-     * @return SpecCode 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
+     * Get 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。 
+     * @return SpecCode 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
-     * @param SpecCode 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
+     * Set 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
+     * @param SpecCode 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get 存储容量大小，单位：GB。 
-     * @return Storage 存储容量大小，单位：GB。
+     * Get 存储容量大小，单位：GB。该参数的设置步长为10。 
+     * @return Storage 存储容量大小，单位：GB。该参数的设置步长为10。
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 存储容量大小，单位：GB。
-     * @param Storage 存储容量大小，单位：GB。
+     * Set 存储容量大小，单位：GB。该参数的设置步长为10。
+     * @param Storage 存储容量大小，单位：GB。该参数的设置步长为10。
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -187,16 +188,20 @@ mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
     }
 
     /**
-     * Get 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。 
-     * @return InstanceChargeType 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
+     * Get 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
+默认值：PREPAID 
+     * @return InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
+默认值：PREPAID
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
-     * @param InstanceChargeType 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
+     * Set 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
+默认值：PREPAID
+     * @param InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
+默认值：PREPAID
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;

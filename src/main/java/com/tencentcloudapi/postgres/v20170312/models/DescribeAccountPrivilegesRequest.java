@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAccountPrivilegesRequest extends AbstractModel {
 
     /**
-    * 实例ID。	
+    * 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 查询此账号对某数据库对象所拥有的权限信息。
+    * 查询此账号对某数据库对象所拥有的权限信息。账号名可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
     */
     @SerializedName("UserName")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAccountPrivilegesRequest extends AbstractModel {
     private DatabaseObject [] DatabaseObjectSet;
 
     /**
-     * Get 实例ID。	 
-     * @return DBInstanceId 实例ID。	
+     * Get 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。	
-     * @param DBInstanceId 实例ID。	
+     * Set 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 查询此账号对某数据库对象所拥有的权限信息。 
-     * @return UserName 查询此账号对某数据库对象所拥有的权限信息。
+     * Get 查询此账号对某数据库对象所拥有的权限信息。账号名可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取 
+     * @return UserName 查询此账号对某数据库对象所拥有的权限信息。账号名可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 查询此账号对某数据库对象所拥有的权限信息。
-     * @param UserName 查询此账号对某数据库对象所拥有的权限信息。
+     * Set 查询此账号对某数据库对象所拥有的权限信息。账号名可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
+     * @param UserName 查询此账号对某数据库对象所拥有的权限信息。账号名可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

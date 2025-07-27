@@ -59,7 +59,7 @@ public class EventInfo extends AbstractModel {
     private String EffectiveTime;
 
     /**
-    * 修改状态
+    * 修改状态。枚举值：in progress、success、paused
     */
     @SerializedName("State")
     @Expose
@@ -160,16 +160,16 @@ public class EventInfo extends AbstractModel {
     }
 
     /**
-     * Get 修改状态 
-     * @return State 修改状态
+     * Get 修改状态。枚举值：in progress、success、paused 
+     * @return State 修改状态。枚举值：in progress、success、paused
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 修改状态
-     * @param State 修改状态
+     * Set 修改状态。枚举值：in progress、success、paused
+     * @param State 修改状态。枚举值：in progress、success、paused
      */
     public void setState(String State) {
         this.State = State;

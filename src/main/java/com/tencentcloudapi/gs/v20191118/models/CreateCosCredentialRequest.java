@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class CreateCosCredentialRequest extends AbstractModel {
 
     /**
-    * Cos 密钥类型， Mobile 移动端, PC 桌面, AndroidApp 安卓应用
+    * Cos 密钥类型，取值： Mobile 云手游、PC 云端游、AndroidApp 云手机应用管理、AndroidAppFile 云手机文件管理、AndroidAppBackup 云手机备份还原
     */
     @SerializedName("CosType")
     @Expose
     private String CosType;
 
     /**
-    * 云手机 Cos 数据
+    * 云手机应用管理 Cos 数据
     */
     @SerializedName("AndroidAppCosInfo")
     @Expose
     private AndroidAppCosInfo AndroidAppCosInfo;
 
     /**
-     * Get Cos 密钥类型， Mobile 移动端, PC 桌面, AndroidApp 安卓应用 
-     * @return CosType Cos 密钥类型， Mobile 移动端, PC 桌面, AndroidApp 安卓应用
+    * 云手机文件管理 Cos 数据
+    */
+    @SerializedName("AndroidAppFileCosInfo")
+    @Expose
+    private FileCosInfo AndroidAppFileCosInfo;
+
+    /**
+     * Get Cos 密钥类型，取值： Mobile 云手游、PC 云端游、AndroidApp 云手机应用管理、AndroidAppFile 云手机文件管理、AndroidAppBackup 云手机备份还原 
+     * @return CosType Cos 密钥类型，取值： Mobile 云手游、PC 云端游、AndroidApp 云手机应用管理、AndroidAppFile 云手机文件管理、AndroidAppBackup 云手机备份还原
      */
     public String getCosType() {
         return this.CosType;
     }
 
     /**
-     * Set Cos 密钥类型， Mobile 移动端, PC 桌面, AndroidApp 安卓应用
-     * @param CosType Cos 密钥类型， Mobile 移动端, PC 桌面, AndroidApp 安卓应用
+     * Set Cos 密钥类型，取值： Mobile 云手游、PC 云端游、AndroidApp 云手机应用管理、AndroidAppFile 云手机文件管理、AndroidAppBackup 云手机备份还原
+     * @param CosType Cos 密钥类型，取值： Mobile 云手游、PC 云端游、AndroidApp 云手机应用管理、AndroidAppFile 云手机文件管理、AndroidAppBackup 云手机备份还原
      */
     public void setCosType(String CosType) {
         this.CosType = CosType;
     }
 
     /**
-     * Get 云手机 Cos 数据 
-     * @return AndroidAppCosInfo 云手机 Cos 数据
+     * Get 云手机应用管理 Cos 数据 
+     * @return AndroidAppCosInfo 云手机应用管理 Cos 数据
      */
     public AndroidAppCosInfo getAndroidAppCosInfo() {
         return this.AndroidAppCosInfo;
     }
 
     /**
-     * Set 云手机 Cos 数据
-     * @param AndroidAppCosInfo 云手机 Cos 数据
+     * Set 云手机应用管理 Cos 数据
+     * @param AndroidAppCosInfo 云手机应用管理 Cos 数据
      */
     public void setAndroidAppCosInfo(AndroidAppCosInfo AndroidAppCosInfo) {
         this.AndroidAppCosInfo = AndroidAppCosInfo;
+    }
+
+    /**
+     * Get 云手机文件管理 Cos 数据 
+     * @return AndroidAppFileCosInfo 云手机文件管理 Cos 数据
+     */
+    public FileCosInfo getAndroidAppFileCosInfo() {
+        return this.AndroidAppFileCosInfo;
+    }
+
+    /**
+     * Set 云手机文件管理 Cos 数据
+     * @param AndroidAppFileCosInfo 云手机文件管理 Cos 数据
+     */
+    public void setAndroidAppFileCosInfo(FileCosInfo AndroidAppFileCosInfo) {
+        this.AndroidAppFileCosInfo = AndroidAppFileCosInfo;
     }
 
     public CreateCosCredentialRequest() {
@@ -83,6 +106,9 @@ public class CreateCosCredentialRequest extends AbstractModel {
         if (source.AndroidAppCosInfo != null) {
             this.AndroidAppCosInfo = new AndroidAppCosInfo(source.AndroidAppCosInfo);
         }
+        if (source.AndroidAppFileCosInfo != null) {
+            this.AndroidAppFileCosInfo = new FileCosInfo(source.AndroidAppFileCosInfo);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateCosCredentialRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CosType", this.CosType);
         this.setParamObj(map, prefix + "AndroidAppCosInfo.", this.AndroidAppCosInfo);
+        this.setParamObj(map, prefix + "AndroidAppFileCosInfo.", this.AndroidAppFileCosInfo);
 
     }
 }

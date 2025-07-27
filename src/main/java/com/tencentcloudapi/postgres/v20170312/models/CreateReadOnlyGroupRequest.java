@@ -24,70 +24,70 @@ import java.util.HashMap;
 public class CreateReadOnlyGroupRequest extends AbstractModel {
 
     /**
-    * 主实例ID
+    * 主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("MasterDBInstanceId")
     @Expose
     private String MasterDBInstanceId;
 
     /**
-    * 只读组名称
+    * 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 项目ID
+    * 项目ID。默认值为0，表示归属于默认项目。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 私有网络ID
+    * 私有网络ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网ID
+    * 子网ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 延迟时间大小开关：0关、1开
+    * 延迟时间大小开关：0关、1开。该参数必填。
     */
     @SerializedName("ReplayLagEliminate")
     @Expose
     private Long ReplayLagEliminate;
 
     /**
-    * 延迟空间大小开关： 0关、1开
+    * 延迟空间大小开关： 0关、1开。该参数的填写需要与ReplayLagEliminate一致。
     */
     @SerializedName("ReplayLatencyEliminate")
     @Expose
     private Long ReplayLatencyEliminate;
 
     /**
-    * 延迟时间大小阈值，单位ms
+    * 延迟时间大小阈值，取值为正整数，单位s。当ReplayLagEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数需填0。
     */
     @SerializedName("MaxReplayLag")
     @Expose
     private Long MaxReplayLag;
 
     /**
-    * 延迟空间大小阈值，单位MB
+    * 延迟空间大小阈值，取值为正整数，单位MB。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLatencyEliminate为0时，该参数需填0。
     */
     @SerializedName("MaxReplayLatency")
     @Expose
     private Long MaxReplayLatency;
 
     /**
-    * 延迟剔除最小保留实例数
+    * 延迟剔除最小保留实例数。取值范围[0,100]。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数无效。
     */
     @SerializedName("MinDelayEliminateReserve")
     @Expose
@@ -101,160 +101,160 @@ public class CreateReadOnlyGroupRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-     * Get 主实例ID 
-     * @return MasterDBInstanceId 主实例ID
+     * Get 主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return MasterDBInstanceId 主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getMasterDBInstanceId() {
         return this.MasterDBInstanceId;
     }
 
     /**
-     * Set 主实例ID
-     * @param MasterDBInstanceId 主实例ID
+     * Set 主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param MasterDBInstanceId 主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setMasterDBInstanceId(String MasterDBInstanceId) {
         this.MasterDBInstanceId = MasterDBInstanceId;
     }
 
     /**
-     * Get 只读组名称 
-     * @return Name 只读组名称
+     * Get 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"。 
+     * @return Name 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 只读组名称
-     * @param Name 只读组名称
+     * Set 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"。
+     * @param Name 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get 项目ID。默认值为0，表示归属于默认项目。 
+     * @return ProjectId 项目ID。默认值为0，表示归属于默认项目。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set 项目ID。默认值为0，表示归属于默认项目。
+     * @param ProjectId 项目ID。默认值为0，表示归属于默认项目。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 私有网络ID 
-     * @return VpcId 私有网络ID
+     * Get 私有网络ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。 
+     * @return VpcId 私有网络ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID
-     * @param VpcId 私有网络ID
+     * Set 私有网络ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
+     * @param VpcId 私有网络ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get 子网ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。 
+     * @return SubnetId 子网ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set 子网ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
+     * @param SubnetId 子网ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 延迟时间大小开关：0关、1开 
-     * @return ReplayLagEliminate 延迟时间大小开关：0关、1开
+     * Get 延迟时间大小开关：0关、1开。该参数必填。 
+     * @return ReplayLagEliminate 延迟时间大小开关：0关、1开。该参数必填。
      */
     public Long getReplayLagEliminate() {
         return this.ReplayLagEliminate;
     }
 
     /**
-     * Set 延迟时间大小开关：0关、1开
-     * @param ReplayLagEliminate 延迟时间大小开关：0关、1开
+     * Set 延迟时间大小开关：0关、1开。该参数必填。
+     * @param ReplayLagEliminate 延迟时间大小开关：0关、1开。该参数必填。
      */
     public void setReplayLagEliminate(Long ReplayLagEliminate) {
         this.ReplayLagEliminate = ReplayLagEliminate;
     }
 
     /**
-     * Get 延迟空间大小开关： 0关、1开 
-     * @return ReplayLatencyEliminate 延迟空间大小开关： 0关、1开
+     * Get 延迟空间大小开关： 0关、1开。该参数的填写需要与ReplayLagEliminate一致。 
+     * @return ReplayLatencyEliminate 延迟空间大小开关： 0关、1开。该参数的填写需要与ReplayLagEliminate一致。
      */
     public Long getReplayLatencyEliminate() {
         return this.ReplayLatencyEliminate;
     }
 
     /**
-     * Set 延迟空间大小开关： 0关、1开
-     * @param ReplayLatencyEliminate 延迟空间大小开关： 0关、1开
+     * Set 延迟空间大小开关： 0关、1开。该参数的填写需要与ReplayLagEliminate一致。
+     * @param ReplayLatencyEliminate 延迟空间大小开关： 0关、1开。该参数的填写需要与ReplayLagEliminate一致。
      */
     public void setReplayLatencyEliminate(Long ReplayLatencyEliminate) {
         this.ReplayLatencyEliminate = ReplayLatencyEliminate;
     }
 
     /**
-     * Get 延迟时间大小阈值，单位ms 
-     * @return MaxReplayLag 延迟时间大小阈值，单位ms
+     * Get 延迟时间大小阈值，取值为正整数，单位s。当ReplayLagEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数需填0。 
+     * @return MaxReplayLag 延迟时间大小阈值，取值为正整数，单位s。当ReplayLagEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数需填0。
      */
     public Long getMaxReplayLag() {
         return this.MaxReplayLag;
     }
 
     /**
-     * Set 延迟时间大小阈值，单位ms
-     * @param MaxReplayLag 延迟时间大小阈值，单位ms
+     * Set 延迟时间大小阈值，取值为正整数，单位s。当ReplayLagEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数需填0。
+     * @param MaxReplayLag 延迟时间大小阈值，取值为正整数，单位s。当ReplayLagEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数需填0。
      */
     public void setMaxReplayLag(Long MaxReplayLag) {
         this.MaxReplayLag = MaxReplayLag;
     }
 
     /**
-     * Get 延迟空间大小阈值，单位MB 
-     * @return MaxReplayLatency 延迟空间大小阈值，单位MB
+     * Get 延迟空间大小阈值，取值为正整数，单位MB。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLatencyEliminate为0时，该参数需填0。 
+     * @return MaxReplayLatency 延迟空间大小阈值，取值为正整数，单位MB。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLatencyEliminate为0时，该参数需填0。
      */
     public Long getMaxReplayLatency() {
         return this.MaxReplayLatency;
     }
 
     /**
-     * Set 延迟空间大小阈值，单位MB
-     * @param MaxReplayLatency 延迟空间大小阈值，单位MB
+     * Set 延迟空间大小阈值，取值为正整数，单位MB。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLatencyEliminate为0时，该参数需填0。
+     * @param MaxReplayLatency 延迟空间大小阈值，取值为正整数，单位MB。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLatencyEliminate为0时，该参数需填0。
      */
     public void setMaxReplayLatency(Long MaxReplayLatency) {
         this.MaxReplayLatency = MaxReplayLatency;
     }
 
     /**
-     * Get 延迟剔除最小保留实例数 
-     * @return MinDelayEliminateReserve 延迟剔除最小保留实例数
+     * Get 延迟剔除最小保留实例数。取值范围[0,100]。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数无效。 
+     * @return MinDelayEliminateReserve 延迟剔除最小保留实例数。取值范围[0,100]。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数无效。
      */
     public Long getMinDelayEliminateReserve() {
         return this.MinDelayEliminateReserve;
     }
 
     /**
-     * Set 延迟剔除最小保留实例数
-     * @param MinDelayEliminateReserve 延迟剔除最小保留实例数
+     * Set 延迟剔除最小保留实例数。取值范围[0,100]。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数无效。
+     * @param MinDelayEliminateReserve 延迟剔除最小保留实例数。取值范围[0,100]。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数无效。
      */
     public void setMinDelayEliminateReserve(Long MinDelayEliminateReserve) {
         this.MinDelayEliminateReserve = MinDelayEliminateReserve;

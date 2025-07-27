@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDBInstanceNetworkAccessRequest extends AbstractModel {
 
     /**
-    * 实例ID，形如：postgres-6bwgamo3。
+    * 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -52,23 +52,23 @@ public class CreateDBInstanceNetworkAccessRequest extends AbstractModel {
     private Boolean IsAssignVip;
 
     /**
-    * 目标VIP地址。
+    * 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-     * Get 实例ID，形如：postgres-6bwgamo3。 
-     * @return DBInstanceId 实例ID，形如：postgres-6bwgamo3。
+     * Get 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如：postgres-6bwgamo3。
-     * @param DBInstanceId 实例ID，形如：postgres-6bwgamo3。
+     * Set 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -123,16 +123,16 @@ public class CreateDBInstanceNetworkAccessRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标VIP地址。 
-     * @return Vip 目标VIP地址。
+     * Get 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。 
+     * @return Vip 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 目标VIP地址。
-     * @param Vip 目标VIP地址。
+     * Set 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
+     * @param Vip 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;

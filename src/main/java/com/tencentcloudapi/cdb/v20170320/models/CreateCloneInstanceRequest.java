@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCloneInstanceRequest extends AbstractModel {
 
     /**
-    * 克隆源实例Id。
+    * 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -75,7 +75,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private Long Volume;
 
     /**
-    * 新产生的克隆实例名称。
+    * 新产生的克隆实例名称。支持输入最大60个字符。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -208,16 +208,16 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private Long SpecifiedSubBackupId;
 
     /**
-     * Get 克隆源实例Id。 
-     * @return InstanceId 克隆源实例Id。
+     * Get 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。 
+     * @return InstanceId 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 克隆源实例Id。
-     * @param InstanceId 克隆源实例Id。
+     * Set 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
+     * @param InstanceId 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -328,16 +328,16 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 新产生的克隆实例名称。 
-     * @return InstanceName 新产生的克隆实例名称。
+     * Get 新产生的克隆实例名称。支持输入最大60个字符。 
+     * @return InstanceName 新产生的克隆实例名称。支持输入最大60个字符。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 新产生的克隆实例名称。
-     * @param InstanceName 新产生的克隆实例名称。
+     * Set 新产生的克隆实例名称。支持输入最大60个字符。
+     * @param InstanceName 新产生的克隆实例名称。支持输入最大60个字符。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

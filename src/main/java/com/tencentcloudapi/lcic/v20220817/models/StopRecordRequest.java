@@ -31,7 +31,7 @@ public class StopRecordRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
-    * 房间ID
+    * 课堂ID
     */
     @SerializedName("RoomId")
     @Expose
@@ -61,16 +61,16 @@ public class StopRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 房间ID 
-     * @return RoomId 房间ID
+     * Get 课堂ID 
+     * @return RoomId 课堂ID
      */
     public Long getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 房间ID
-     * @param RoomId 房间ID
+     * Set 课堂ID
+     * @param RoomId 课堂ID
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;

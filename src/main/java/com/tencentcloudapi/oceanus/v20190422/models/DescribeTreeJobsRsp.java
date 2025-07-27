@@ -72,6 +72,22 @@ public class DescribeTreeJobsRsp extends AbstractModel {
     private String RequestId;
 
     /**
+    * attach-000
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PageAttach")
+    @Expose
+    private String PageAttach;
+
+    /**
+    * bool
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HasMore")
+    @Expose
+    private Boolean HasMore;
+
+    /**
      * Get 父节点ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ParentId 父节点ID
@@ -191,6 +207,46 @@ public class DescribeTreeJobsRsp extends AbstractModel {
         this.RequestId = RequestId;
     }
 
+    /**
+     * Get attach-000
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PageAttach attach-000
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPageAttach() {
+        return this.PageAttach;
+    }
+
+    /**
+     * Set attach-000
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PageAttach attach-000
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPageAttach(String PageAttach) {
+        this.PageAttach = PageAttach;
+    }
+
+    /**
+     * Get bool
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HasMore bool
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getHasMore() {
+        return this.HasMore;
+    }
+
+    /**
+     * Set bool
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HasMore bool
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHasMore(Boolean HasMore) {
+        this.HasMore = HasMore;
+    }
+
     public DescribeTreeJobsRsp() {
     }
 
@@ -223,6 +279,12 @@ public class DescribeTreeJobsRsp extends AbstractModel {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
+        if (source.PageAttach != null) {
+            this.PageAttach = new String(source.PageAttach);
+        }
+        if (source.HasMore != null) {
+            this.HasMore = new Boolean(source.HasMore);
+        }
     }
 
 
@@ -236,6 +298,8 @@ public class DescribeTreeJobsRsp extends AbstractModel {
         this.setParamArrayObj(map, prefix + "JobSet.", this.JobSet);
         this.setParamArrayObj(map, prefix + "Children.", this.Children);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "PageAttach", this.PageAttach);
+        this.setParamSimple(map, prefix + "HasMore", this.HasMore);
 
     }
 }

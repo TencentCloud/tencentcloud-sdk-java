@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyDBInstanceSSLConfigRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 开启或关闭SSL
+    * 开启或关闭SSL。true - 开启 ；false - 关闭。
     */
     @SerializedName("SSLEnabled")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyDBInstanceSSLConfigRequest extends AbstractModel {
     private String ConnectAddress;
 
     /**
-     * Get 实例 ID 
-     * @return DBInstanceId 实例 ID
+     * Get 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param DBInstanceId 实例 ID
+     * Set 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 开启或关闭SSL 
-     * @return SSLEnabled 开启或关闭SSL
+     * Get 开启或关闭SSL。true - 开启 ；false - 关闭。 
+     * @return SSLEnabled 开启或关闭SSL。true - 开启 ；false - 关闭。
      */
     public Boolean getSSLEnabled() {
         return this.SSLEnabled;
     }
 
     /**
-     * Set 开启或关闭SSL
-     * @param SSLEnabled 开启或关闭SSL
+     * Set 开启或关闭SSL。true - 开启 ；false - 关闭。
+     * @param SSLEnabled 开启或关闭SSL。true - 开启 ；false - 关闭。
      */
     public void setSSLEnabled(Boolean SSLEnabled) {
         this.SSLEnabled = SSLEnabled;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SlowLogItem extends AbstractModel {
 
     /**
-    * Sql的执行时间。
+    * Sql的执行时间。秒级时间戳。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -101,16 +101,16 @@ public class SlowLogItem extends AbstractModel {
     private String Md5;
 
     /**
-     * Get Sql的执行时间。 
-     * @return Timestamp Sql的执行时间。
+     * Get Sql的执行时间。秒级时间戳。 
+     * @return Timestamp Sql的执行时间。秒级时间戳。
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set Sql的执行时间。
-     * @param Timestamp Sql的执行时间。
+     * Set Sql的执行时间。秒级时间戳。
+     * @param Timestamp Sql的执行时间。秒级时间戳。
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;

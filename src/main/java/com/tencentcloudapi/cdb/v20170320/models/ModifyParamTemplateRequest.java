@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyParamTemplateRequest extends AbstractModel {
 
     /**
-    * 模板 ID。
+    * 模板 ID。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 模板名称，长度不超过64。
+    * 模板名称，仅支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。
     */
     @SerializedName("Name")
     @Expose
@@ -52,32 +52,32 @@ public class ModifyParamTemplateRequest extends AbstractModel {
     private Parameter [] ParamList;
 
     /**
-     * Get 模板 ID。 
-     * @return TemplateId 模板 ID。
+     * Get 模板 ID。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。 
+     * @return TemplateId 模板 ID。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板 ID。
-     * @param TemplateId 模板 ID。
+     * Set 模板 ID。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
+     * @param TemplateId 模板 ID。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模板名称，长度不超过64。 
-     * @return Name 模板名称，长度不超过64。
+     * Get 模板名称，仅支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。 
+     * @return Name 模板名称，仅支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模板名称，长度不超过64。
-     * @param Name 模板名称，长度不超过64。
+     * Set 模板名称，仅支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。
+     * @param Name 模板名称，仅支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。
      */
     public void setName(String Name) {
         this.Name = Name;

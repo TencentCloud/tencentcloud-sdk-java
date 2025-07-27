@@ -38,7 +38,7 @@ public class DescribeRollbackTaskDetailRequest extends AbstractModel {
     private String AsyncRequestId;
 
     /**
-    * 分页参数，每次请求返回的记录数。默认值为 20，最大值为 100。
+    * 分页参数，每次请求返回的记录数。默认值为20，建议最大取值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeRollbackTaskDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页参数，每次请求返回的记录数。默认值为 20，最大值为 100。 
-     * @return Limit 分页参数，每次请求返回的记录数。默认值为 20，最大值为 100。
+     * Get 分页参数，每次请求返回的记录数。默认值为20，建议最大取值为100。 
+     * @return Limit 分页参数，每次请求返回的记录数。默认值为20，建议最大取值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页参数，每次请求返回的记录数。默认值为 20，最大值为 100。
-     * @param Limit 分页参数，每次请求返回的记录数。默认值为 20，最大值为 100。
+     * Set 分页参数，每次请求返回的记录数。默认值为20，建议最大取值为100。
+     * @param Limit 分页参数，每次请求返回的记录数。默认值为20，建议最大取值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

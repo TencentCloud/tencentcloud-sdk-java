@@ -31,7 +31,7 @@ public class DescribeDatabasesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 返回的实例信息。
+    * 实例中的数据库名称列表。
     */
     @SerializedName("Items")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeDatabasesResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回的实例信息。 
-     * @return Items 返回的实例信息。
+     * Get 实例中的数据库名称列表。 
+     * @return Items 实例中的数据库名称列表。
      */
     public String [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 返回的实例信息。
-     * @param Items 返回的实例信息。
+     * Set 实例中的数据库名称列表。
+     * @param Items 实例中的数据库名称列表。
      */
     public void setItems(String [] Items) {
         this.Items = Items;

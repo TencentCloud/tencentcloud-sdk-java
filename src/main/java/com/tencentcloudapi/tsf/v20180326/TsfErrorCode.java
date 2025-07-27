@@ -1233,7 +1233,7 @@ public enum TsfErrorCode {
      /* 缺少License。。 */
      UNAUTHORIZEDOPERATION_NOLICENSE("UnauthorizedOperation.NoLicense"),
      
-     /* 用户无权限访问该接口。。 */
+     /* 用户无权限访问该接口。 */
      UNAUTHORIZEDOPERATION_NOPRIVILEGE("UnauthorizedOperation.NoPrivilege"),
      
      /* 批量操作数量超过限制:%s。 */

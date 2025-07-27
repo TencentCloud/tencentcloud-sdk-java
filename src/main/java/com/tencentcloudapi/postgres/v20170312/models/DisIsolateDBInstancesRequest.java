@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DisIsolateDBInstancesRequest extends AbstractModel {
 
     /**
-    * 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+    * 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
@@ -33,7 +33,7 @@ public class DisIsolateDBInstancesRequest extends AbstractModel {
     /**
     * 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
+<li>后付费：该参数不生效</li>
     */
     @SerializedName("Period")
     @Expose
@@ -57,16 +57,16 @@ public class DisIsolateDBInstancesRequest extends AbstractModel {
     private String [] VoucherIds;
 
     /**
-     * Get 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。 
-     * @return DBInstanceIdSet 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+     * Get 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。 
+     * @return DBInstanceIdSet 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
-     * @param DBInstanceIdSet 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+     * Set 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
+     * @param DBInstanceIdSet 实例ID列表。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时解隔离多个实例。
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;
@@ -75,10 +75,10 @@ public class DisIsolateDBInstancesRequest extends AbstractModel {
     /**
      * Get 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li> 
+<li>后付费：该参数不生效</li> 
      * @return Period 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
+<li>后付费：该参数不生效</li>
      */
     public Long getPeriod() {
         return this.Period;
@@ -87,10 +87,10 @@ public class DisIsolateDBInstancesRequest extends AbstractModel {
     /**
      * Set 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
+<li>后付费：该参数不生效</li>
      * @param Period 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
+<li>后付费：该参数不生效</li>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

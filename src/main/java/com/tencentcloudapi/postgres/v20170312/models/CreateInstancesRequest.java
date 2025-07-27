@@ -39,7 +39,7 @@ public class CreateInstancesRequest extends AbstractModel {
     private String SpecCode;
 
     /**
-    * 实例容量大小，单位：GB。
+    * 实例磁盘容量大小，单位：GB。该参数的设置步长为10。
     */
     @SerializedName("Storage")
     @Expose
@@ -177,7 +177,7 @@ public class CreateInstancesRequest extends AbstractModel {
     private String [] VoucherIds;
 
     /**
-    * 项目ID。
+    * 项目ID。默认取之为0，表示归属默认项目。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -329,16 +329,16 @@ mssql_compatible引擎：
     }
 
     /**
-     * Get 实例容量大小，单位：GB。 
-     * @return Storage 实例容量大小，单位：GB。
+     * Get 实例磁盘容量大小，单位：GB。该参数的设置步长为10。 
+     * @return Storage 实例磁盘容量大小，单位：GB。该参数的设置步长为10。
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 实例容量大小，单位：GB。
-     * @param Storage 实例容量大小，单位：GB。
+     * Set 实例磁盘容量大小，单位：GB。该参数的设置步长为10。
+     * @param Storage 实例磁盘容量大小，单位：GB。该参数的设置步长为10。
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -689,16 +689,16 @@ mssql_compatible引擎：
     }
 
     /**
-     * Get 项目ID。 
-     * @return ProjectId 项目ID。
+     * Get 项目ID。默认取之为0，表示归属默认项目。 
+     * @return ProjectId 项目ID。默认取之为0，表示归属默认项目。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID。
-     * @param ProjectId 项目ID。
+     * Set 项目ID。默认取之为0，表示归属默认项目。
+     * @param ProjectId 项目ID。默认取之为0，表示归属默认项目。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

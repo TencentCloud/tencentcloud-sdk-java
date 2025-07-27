@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifySwitchTimePeriodRequest extends AbstractModel {
 
     /**
-    * 处于等待切换状态中的实例ID
+    * 处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifySwitchTimePeriodRequest extends AbstractModel {
     private Long SwitchTag;
 
     /**
-     * Get 处于等待切换状态中的实例ID 
-     * @return DBInstanceId 处于等待切换状态中的实例ID
+     * Get 处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 处于等待切换状态中的实例ID
-     * @param DBInstanceId 处于等待切换状态中的实例ID
+     * Set 处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;

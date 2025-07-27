@@ -329,6 +329,13 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
     private String CaType;
 
     /**
+    * 签名算法
+    */
+    @SerializedName("SignAlgo")
+    @Expose
+    private String SignAlgo;
+
+    /**
      * Get 待提交资料的付费证书 ID。	 
      * @return CertId 待提交资料的付费证书 ID。	
      */
@@ -1068,6 +1075,22 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
         this.CaType = CaType;
     }
 
+    /**
+     * Get 签名算法 
+     * @return SignAlgo 签名算法
+     */
+    public String getSignAlgo() {
+        return this.SignAlgo;
+    }
+
+    /**
+     * Set 签名算法
+     * @param SignAlgo 签名算法
+     */
+    public void setSignAlgo(String SignAlgo) {
+        this.SignAlgo = SignAlgo;
+    }
+
     public CertificateInfoSubmitRequest() {
     }
 
@@ -1199,6 +1222,9 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
         if (source.CaType != null) {
             this.CaType = new String(source.CaType);
         }
+        if (source.SignAlgo != null) {
+            this.SignAlgo = new String(source.SignAlgo);
+        }
     }
 
 
@@ -1246,6 +1272,7 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
         this.setParamSimple(map, prefix + "TechTitle", this.TechTitle);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CaType", this.CaType);
+        this.setParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
 
     }
 }

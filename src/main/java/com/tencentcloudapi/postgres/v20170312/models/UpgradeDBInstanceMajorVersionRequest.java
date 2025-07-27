@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpgradeDBInstanceMajorVersionRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 目标内核版本号，可以通过API DescribeDBVersions获取可以升级的目标内核版本号。
+    * 目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。
     */
     @SerializedName("TargetDBKernelVersion")
     @Expose
@@ -101,32 +101,32 @@ UpgradeCheck为True时，此参数无效。
     private String UpgradeTimeEnd;
 
     /**
-     * Get 实例ID。 
-     * @return DBInstanceId 实例ID。
+     * Get 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param DBInstanceId 实例ID。
+     * Set 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 目标内核版本号，可以通过API DescribeDBVersions获取可以升级的目标内核版本号。 
-     * @return TargetDBKernelVersion 目标内核版本号，可以通过API DescribeDBVersions获取可以升级的目标内核版本号。
+     * Get 目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。 
+     * @return TargetDBKernelVersion 目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。
      */
     public String getTargetDBKernelVersion() {
         return this.TargetDBKernelVersion;
     }
 
     /**
-     * Set 目标内核版本号，可以通过API DescribeDBVersions获取可以升级的目标内核版本号。
-     * @param TargetDBKernelVersion 目标内核版本号，可以通过API DescribeDBVersions获取可以升级的目标内核版本号。
+     * Set 目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。
+     * @param TargetDBKernelVersion 目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。
      */
     public void setTargetDBKernelVersion(String TargetDBKernelVersion) {
         this.TargetDBKernelVersion = TargetDBKernelVersion;

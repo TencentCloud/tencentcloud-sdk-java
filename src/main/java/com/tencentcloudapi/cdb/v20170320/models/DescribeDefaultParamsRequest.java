@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class DescribeDefaultParamsRequest extends AbstractModel {
 
     /**
-    * 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
+    * 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]。
+说明：引擎版本为必填。
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+    * 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。默认值为：HIGH_STABILITY。
     */
     @SerializedName("TemplateType")
     @Expose
     private String TemplateType;
 
     /**
-    * 参数模板引擎，默认值：InnoDB
+    * 参数模板引擎，默认值：InnoDB，可取值：InnoDB、RocksDB。
     */
     @SerializedName("EngineType")
     @Expose
     private String EngineType;
 
     /**
-     * Get 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"] 
-     * @return EngineVersion 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
+     * Get 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]。
+说明：引擎版本为必填。 
+     * @return EngineVersion 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]。
+说明：引擎版本为必填。
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
-     * @param EngineVersion 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
+     * Set 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]。
+说明：引擎版本为必填。
+     * @param EngineVersion 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]。
+说明：引擎版本为必填。
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。 
-     * @return TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+     * Get 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。默认值为：HIGH_STABILITY。 
+     * @return TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。默认值为：HIGH_STABILITY。
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
-     * @param TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+     * Set 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。默认值为：HIGH_STABILITY。
+     * @param TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。默认值为：HIGH_STABILITY。
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;
     }
 
     /**
-     * Get 参数模板引擎，默认值：InnoDB 
-     * @return EngineType 参数模板引擎，默认值：InnoDB
+     * Get 参数模板引擎，默认值：InnoDB，可取值：InnoDB、RocksDB。 
+     * @return EngineType 参数模板引擎，默认值：InnoDB，可取值：InnoDB、RocksDB。
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set 参数模板引擎，默认值：InnoDB
-     * @param EngineType 参数模板引擎，默认值：InnoDB
+     * Set 参数模板引擎，默认值：InnoDB，可取值：InnoDB、RocksDB。
+     * @param EngineType 参数模板引擎，默认值：InnoDB，可取值：InnoDB、RocksDB。
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;

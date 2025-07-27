@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateParamTemplateRequest extends AbstractModel {
 
     /**
-    * 参数模板名称。
+    * 参数模板名称。支持输入最大60个字符。
     */
     @SerializedName("Name")
     @Expose
@@ -38,14 +38,14 @@ public class CreateParamTemplateRequest extends AbstractModel {
     private String Description;
 
     /**
-    * MySQL 版本号。
+    * MySQL 版本号。可选值：5.6、5.7、8.0。
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * 源参数模板 ID。
+    * 源参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -67,22 +67,23 @@ public class CreateParamTemplateRequest extends AbstractModel {
 
     /**
     * 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+说明：数据库版本 MySQL 5.7、MySQL 8.0才支持 RocksDB。
     */
     @SerializedName("EngineType")
     @Expose
     private String EngineType;
 
     /**
-     * Get 参数模板名称。 
-     * @return Name 参数模板名称。
+     * Get 参数模板名称。支持输入最大60个字符。 
+     * @return Name 参数模板名称。支持输入最大60个字符。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 参数模板名称。
-     * @param Name 参数模板名称。
+     * Set 参数模板名称。支持输入最大60个字符。
+     * @param Name 参数模板名称。支持输入最大60个字符。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -105,32 +106,32 @@ public class CreateParamTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get MySQL 版本号。 
-     * @return EngineVersion MySQL 版本号。
+     * Get MySQL 版本号。可选值：5.6、5.7、8.0。 
+     * @return EngineVersion MySQL 版本号。可选值：5.6、5.7、8.0。
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set MySQL 版本号。
-     * @param EngineVersion MySQL 版本号。
+     * Set MySQL 版本号。可选值：5.6、5.7、8.0。
+     * @param EngineVersion MySQL 版本号。可选值：5.6、5.7、8.0。
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get 源参数模板 ID。 
-     * @return TemplateId 源参数模板 ID。
+     * Get 源参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。 
+     * @return TemplateId 源参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 源参数模板 ID。
-     * @param TemplateId 源参数模板 ID。
+     * Set 源参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
+     * @param TemplateId 源参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
@@ -169,8 +170,10 @@ public class CreateParamTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。 
+     * Get 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+说明：数据库版本 MySQL 5.7、MySQL 8.0才支持 RocksDB。 
      * @return EngineType 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+说明：数据库版本 MySQL 5.7、MySQL 8.0才支持 RocksDB。
      */
     public String getEngineType() {
         return this.EngineType;
@@ -178,7 +181,9 @@ public class CreateParamTemplateRequest extends AbstractModel {
 
     /**
      * Set 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+说明：数据库版本 MySQL 5.7、MySQL 8.0才支持 RocksDB。
      * @param EngineType 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+说明：数据库版本 MySQL 5.7、MySQL 8.0才支持 RocksDB。
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;

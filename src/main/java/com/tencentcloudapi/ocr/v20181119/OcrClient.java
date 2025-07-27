@@ -1348,6 +1348,19 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *基于MLLM(多模态大语言模型)的表格识别能力，针对复杂表格的算法识别效果更佳，适配财务报表识别场景，并可输出直接对接业务系统的Excel数据。
+
+默认接口请求频率限制：1次/秒。
+     * @param req RecognizeTableMultiOCRRequest
+     * @return RecognizeTableMultiOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeTableMultiOCRResponse RecognizeTableMultiOCR(RecognizeTableMultiOCRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecognizeTableMultiOCR", RecognizeTableMultiOCRResponse.class);
+    }
+
+    /**
      *本接口支持中英文图片/ PDF内常规表格、无线表格、多表格的检测和识别，支持日文有线表格识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。
 
 默认接口请求频率限制：10次/秒。

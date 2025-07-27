@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceSpecRequest extends AbstractModel {
 
     /**
-    * 实例ID，形如：postgres-6bwgamo3。
+    * 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -38,7 +38,7 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     private Long Memory;
 
     /**
-    * 修改后的实例磁盘大小，单位GiB。
+    * 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
     */
     @SerializedName("Storage")
     @Expose
@@ -94,23 +94,23 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     private String SwitchEndTime;
 
     /**
-    * 修改后的实例CPU大小，单位Core。
+    * 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-     * Get 实例ID，形如：postgres-6bwgamo3。 
-     * @return DBInstanceId 实例ID，形如：postgres-6bwgamo3。
+     * Get 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如：postgres-6bwgamo3。
-     * @param DBInstanceId 实例ID，形如：postgres-6bwgamo3。
+     * Set 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -133,16 +133,16 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     }
 
     /**
-     * Get 修改后的实例磁盘大小，单位GiB。 
-     * @return Storage 修改后的实例磁盘大小，单位GiB。
+     * Get 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。 
+     * @return Storage 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 修改后的实例磁盘大小，单位GiB。
-     * @param Storage 修改后的实例磁盘大小，单位GiB。
+     * Set 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
+     * @param Storage 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -273,16 +273,16 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     }
 
     /**
-     * Get 修改后的实例CPU大小，单位Core。 
-     * @return Cpu 修改后的实例CPU大小，单位Core。
+     * Get 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。 
+     * @return Cpu 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 修改后的实例CPU大小，单位Core。
-     * @param Cpu 修改后的实例CPU大小，单位Core。
+     * Set 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
+     * @param Cpu 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

@@ -45,21 +45,21 @@ public class BaseBackup extends AbstractModel {
     private String Name;
 
     /**
-    * 备份方式：物理备份、逻辑备份。
+    * 备份方式：physical - 物理备份、logical - 逻辑备份。
     */
     @SerializedName("BackupMethod")
     @Expose
     private String BackupMethod;
 
     /**
-    * 备份模式：自动备份、手动备份。
+    * 备份模式：automatic - 自动备份、manual - 手动备份。
     */
     @SerializedName("BackupMode")
     @Expose
     private String BackupMode;
 
     /**
-    * 备份任务状态。
+    * 备份任务状态。枚举值：init、running、finished、failed、canceled
     */
     @SerializedName("State")
     @Expose
@@ -142,48 +142,48 @@ public class BaseBackup extends AbstractModel {
     }
 
     /**
-     * Get 备份方式：物理备份、逻辑备份。 
-     * @return BackupMethod 备份方式：物理备份、逻辑备份。
+     * Get 备份方式：physical - 物理备份、logical - 逻辑备份。 
+     * @return BackupMethod 备份方式：physical - 物理备份、logical - 逻辑备份。
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set 备份方式：物理备份、逻辑备份。
-     * @param BackupMethod 备份方式：物理备份、逻辑备份。
+     * Set 备份方式：physical - 物理备份、logical - 逻辑备份。
+     * @param BackupMethod 备份方式：physical - 物理备份、logical - 逻辑备份。
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get 备份模式：自动备份、手动备份。 
-     * @return BackupMode 备份模式：自动备份、手动备份。
+     * Get 备份模式：automatic - 自动备份、manual - 手动备份。 
+     * @return BackupMode 备份模式：automatic - 自动备份、manual - 手动备份。
      */
     public String getBackupMode() {
         return this.BackupMode;
     }
 
     /**
-     * Set 备份模式：自动备份、手动备份。
-     * @param BackupMode 备份模式：自动备份、手动备份。
+     * Set 备份模式：automatic - 自动备份、manual - 手动备份。
+     * @param BackupMode 备份模式：automatic - 自动备份、manual - 手动备份。
      */
     public void setBackupMode(String BackupMode) {
         this.BackupMode = BackupMode;
     }
 
     /**
-     * Get 备份任务状态。 
-     * @return State 备份任务状态。
+     * Get 备份任务状态。枚举值：init、running、finished、failed、canceled 
+     * @return State 备份任务状态。枚举值：init、running、finished、failed、canceled
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 备份任务状态。
-     * @param State 备份任务状态。
+     * Set 备份任务状态。枚举值：init、running、finished、failed、canceled
+     * @param State 备份任务状态。枚举值：init、running、finished、failed、canceled
      */
     public void setState(String State) {
         this.State = State;

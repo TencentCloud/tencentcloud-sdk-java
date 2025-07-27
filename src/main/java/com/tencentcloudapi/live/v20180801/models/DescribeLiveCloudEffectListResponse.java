@@ -31,6 +31,20 @@ public class DescribeLiveCloudEffectListResponse extends AbstractModel {
     private CloudEffectInfo [] InfoList;
 
     /**
+    * 允许创建的云端特效个数。
+    */
+    @SerializedName("EnableCreateNum")
+    @Expose
+    private Long EnableCreateNum;
+
+    /**
+    * 当前已有的特效总个数。
+    */
+    @SerializedName("TotalNum")
+    @Expose
+    private Long TotalNum;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +65,38 @@ public class DescribeLiveCloudEffectListResponse extends AbstractModel {
      */
     public void setInfoList(CloudEffectInfo [] InfoList) {
         this.InfoList = InfoList;
+    }
+
+    /**
+     * Get 允许创建的云端特效个数。 
+     * @return EnableCreateNum 允许创建的云端特效个数。
+     */
+    public Long getEnableCreateNum() {
+        return this.EnableCreateNum;
+    }
+
+    /**
+     * Set 允许创建的云端特效个数。
+     * @param EnableCreateNum 允许创建的云端特效个数。
+     */
+    public void setEnableCreateNum(Long EnableCreateNum) {
+        this.EnableCreateNum = EnableCreateNum;
+    }
+
+    /**
+     * Get 当前已有的特效总个数。 
+     * @return TotalNum 当前已有的特效总个数。
+     */
+    public Long getTotalNum() {
+        return this.TotalNum;
+    }
+
+    /**
+     * Set 当前已有的特效总个数。
+     * @param TotalNum 当前已有的特效总个数。
+     */
+    public void setTotalNum(Long TotalNum) {
+        this.TotalNum = TotalNum;
     }
 
     /**
@@ -83,6 +129,12 @@ public class DescribeLiveCloudEffectListResponse extends AbstractModel {
                 this.InfoList[i] = new CloudEffectInfo(source.InfoList[i]);
             }
         }
+        if (source.EnableCreateNum != null) {
+            this.EnableCreateNum = new Long(source.EnableCreateNum);
+        }
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +146,8 @@ public class DescribeLiveCloudEffectListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "InfoList.", this.InfoList);
+        this.setParamSimple(map, prefix + "EnableCreateNum", this.EnableCreateNum);
+        this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCloneListRequest extends AbstractModel {
 
     /**
-    * 查询指定源实例的克隆任务列表。
+    * 查询指定源实例的克隆任务列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,23 +38,23 @@ public class DescribeCloneListRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 分页查询时的每页条目数，默认值为20。
+    * 分页查询时的每页条目数，默认值为20，建议最大取值100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 查询指定源实例的克隆任务列表。 
-     * @return InstanceId 查询指定源实例的克隆任务列表。
+     * Get 查询指定源实例的克隆任务列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取实例 ID。 
+     * @return InstanceId 查询指定源实例的克隆任务列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 查询指定源实例的克隆任务列表。
-     * @param InstanceId 查询指定源实例的克隆任务列表。
+     * Set 查询指定源实例的克隆任务列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取实例 ID。
+     * @param InstanceId 查询指定源实例的克隆任务列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -77,16 +77,16 @@ public class DescribeCloneListRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页查询时的每页条目数，默认值为20。 
-     * @return Limit 分页查询时的每页条目数，默认值为20。
+     * Get 分页查询时的每页条目数，默认值为20，建议最大取值100。 
+     * @return Limit 分页查询时的每页条目数，默认值为20，建议最大取值100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页查询时的每页条目数，默认值为20。
-     * @param Limit 分页查询时的每页条目数，默认值为20。
+     * Set 分页查询时的每页条目数，默认值为20，建议最大取值100。
+     * @param Limit 分页查询时的每页条目数，默认值为20，建议最大取值100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

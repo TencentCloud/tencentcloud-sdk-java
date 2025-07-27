@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetWsTokenRequest extends AbstractModel {
 
     /**
-    * 接入类型， 5-API 访客
+    * 接入类型， 5-API 访客，目前仅支持传5
     */
     @SerializedName("Type")
     @Expose
@@ -53,16 +53,16 @@ public class GetWsTokenRequest extends AbstractModel {
     private GetWsTokenReq_Label [] VisitorLabels;
 
     /**
-     * Get 接入类型， 5-API 访客 
-     * @return Type 接入类型， 5-API 访客
+     * Get 接入类型， 5-API 访客，目前仅支持传5 
+     * @return Type 接入类型， 5-API 访客，目前仅支持传5
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 接入类型， 5-API 访客
-     * @param Type 接入类型， 5-API 访客
+     * Set 接入类型， 5-API 访客，目前仅支持传5
+     * @param Type 接入类型， 5-API 访客，目前仅支持传5
      */
     public void setType(Long Type) {
         this.Type = Type;

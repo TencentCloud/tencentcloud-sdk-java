@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ErrlogItem extends AbstractModel {
 
     /**
-    * 错误发生时间。
+    * 错误发生时间。时间戳，秒级
     */
     @SerializedName("Timestamp")
     @Expose
@@ -38,16 +38,16 @@ public class ErrlogItem extends AbstractModel {
     private String Content;
 
     /**
-     * Get 错误发生时间。 
-     * @return Timestamp 错误发生时间。
+     * Get 错误发生时间。时间戳，秒级 
+     * @return Timestamp 错误发生时间。时间戳，秒级
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 错误发生时间。
-     * @param Timestamp 错误发生时间。
+     * Set 错误发生时间。时间戳，秒级
+     * @param Timestamp 错误发生时间。时间戳，秒级
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;

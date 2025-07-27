@@ -108,7 +108,7 @@ selfbuilt-db 表示自建数据库
     private String Condition;
 
     /**
-    * 合规组ID列表，最多支持添加5个
+    * 此参数必选。合规组ID列表，最多支持添加5个
     */
     @SerializedName("ComplianceGroupIds")
     @Expose
@@ -359,16 +359,16 @@ selfbuilt-db 表示自建数据库
     }
 
     /**
-     * Get 合规组ID列表，最多支持添加5个 
-     * @return ComplianceGroupIds 合规组ID列表，最多支持添加5个
+     * Get 此参数必选。合规组ID列表，最多支持添加5个 
+     * @return ComplianceGroupIds 此参数必选。合规组ID列表，最多支持添加5个
      */
     public Long [] getComplianceGroupIds() {
         return this.ComplianceGroupIds;
     }
 
     /**
-     * Set 合规组ID列表，最多支持添加5个
-     * @param ComplianceGroupIds 合规组ID列表，最多支持添加5个
+     * Set 此参数必选。合规组ID列表，最多支持添加5个
+     * @param ComplianceGroupIds 此参数必选。合规组ID列表，最多支持添加5个
      */
     public void setComplianceGroupIds(Long [] ComplianceGroupIds) {
         this.ComplianceGroupIds = ComplianceGroupIds;

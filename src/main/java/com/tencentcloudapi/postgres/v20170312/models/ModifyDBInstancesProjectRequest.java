@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyDBInstancesProjectRequest extends AbstractModel {
 
     /**
-    * 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
+    * 实例ID集合。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时操作多个实例。
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
     private String [] DBInstanceIdSet;
 
     /**
-    * 所属新项目的ID
+    * 所属新项目的ID。可通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)获取
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-     * Get 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。 
-     * @return DBInstanceIdSet 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
+     * Get 实例ID集合。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时操作多个实例。 
+     * @return DBInstanceIdSet 实例ID集合。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时操作多个实例。
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
-     * @param DBInstanceIdSet 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
+     * Set 实例ID集合。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时操作多个实例。
+     * @param DBInstanceIdSet 实例ID集合。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时操作多个实例。
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;
     }
 
     /**
-     * Get 所属新项目的ID 
-     * @return ProjectId 所属新项目的ID
+     * Get 所属新项目的ID。可通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)获取 
+     * @return ProjectId 所属新项目的ID。可通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)获取
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 所属新项目的ID
-     * @param ProjectId 所属新项目的ID
+     * Set 所属新项目的ID。可通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)获取
+     * @param ProjectId 所属新项目的ID。可通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)获取
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

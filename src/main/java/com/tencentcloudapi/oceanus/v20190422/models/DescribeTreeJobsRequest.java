@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTreeJobsRequest extends AbstractModel {
 
     /**
-    * 筛选条件字段
+    * 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
     */
     @SerializedName("Filters")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTreeJobsRequest extends AbstractModel {
     private String WorkSpaceId;
 
     /**
-     * Get 筛选条件字段 
-     * @return Filters 筛选条件字段
+     * Get 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录 
+     * @return Filters 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 筛选条件字段
-     * @param Filters 筛选条件字段
+     * Set 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
+     * @param Filters 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

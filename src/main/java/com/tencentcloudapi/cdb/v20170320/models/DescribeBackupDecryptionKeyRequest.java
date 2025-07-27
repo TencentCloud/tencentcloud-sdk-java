@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeBackupDecryptionKeyRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
+    * 实例 ID，格式如：cdb-fybaegd8。与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例的备份ID，可通过DescribeBackups接口查询备份的ID。
+    * 实例的备份 ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/api/236/15842) 接口查询备份的 ID。
     */
     @SerializedName("BackupId")
     @Expose
     private Long BackupId;
 
     /**
-    * 备份类型 data: 数据备份 binlog:日志备份，默认为data
+    * 备份类型。data-数据备份，binlog-日志备份，默认为 data。
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
 
     /**
-     * Get 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。 
-     * @return InstanceId 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例 ID，格式如：cdb-fybaegd8。与云数据库控制台页面中显示的实例 ID 相同。 
+     * @return InstanceId 实例 ID，格式如：cdb-fybaegd8。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
-     * @param InstanceId 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID，格式如：cdb-fybaegd8。与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，格式如：cdb-fybaegd8。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例的备份ID，可通过DescribeBackups接口查询备份的ID。 
-     * @return BackupId 实例的备份ID，可通过DescribeBackups接口查询备份的ID。
+     * Get 实例的备份 ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/api/236/15842) 接口查询备份的 ID。 
+     * @return BackupId 实例的备份 ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/api/236/15842) 接口查询备份的 ID。
      */
     public Long getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 实例的备份ID，可通过DescribeBackups接口查询备份的ID。
-     * @param BackupId 实例的备份ID，可通过DescribeBackups接口查询备份的ID。
+     * Set 实例的备份 ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/api/236/15842) 接口查询备份的 ID。
+     * @param BackupId 实例的备份 ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/api/236/15842) 接口查询备份的 ID。
      */
     public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get 备份类型 data: 数据备份 binlog:日志备份，默认为data 
-     * @return BackupType 备份类型 data: 数据备份 binlog:日志备份，默认为data
+     * Get 备份类型。data-数据备份，binlog-日志备份，默认为 data。 
+     * @return BackupType 备份类型。data-数据备份，binlog-日志备份，默认为 data。
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 备份类型 data: 数据备份 binlog:日志备份，默认为data
-     * @param BackupType 备份类型 data: 数据备份 binlog:日志备份，默认为data
+     * Set 备份类型。data-数据备份，binlog-日志备份，默认为 data。
+     * @param BackupType 备份类型。data-数据备份，binlog-日志备份，默认为 data。
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;

@@ -38,7 +38,7 @@ public class DescribeInstanceParamRecordsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 分页大小，默认值：20。
+    * 分页大小，默认值：20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeInstanceParamRecordsRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页大小，默认值：20。 
-     * @return Limit 分页大小，默认值：20。
+     * Get 分页大小，默认值：20，最大值为100。 
+     * @return Limit 分页大小，默认值：20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小，默认值：20。
-     * @param Limit 分页大小，默认值：20。
+     * Set 分页大小，默认值：20，最大值为100。
+     * @param Limit 分页大小，默认值：20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

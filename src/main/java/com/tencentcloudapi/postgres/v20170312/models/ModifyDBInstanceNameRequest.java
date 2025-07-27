@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyDBInstanceNameRequest extends AbstractModel {
 
     /**
-    * 数据库实例ID，形如postgres-6fego161
+    * 数据库实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+    * 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"。
 
     */
     @SerializedName("InstanceName")
@@ -39,25 +39,25 @@ public class ModifyDBInstanceNameRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-     * Get 数据库实例ID，形如postgres-6fego161 
-     * @return DBInstanceId 数据库实例ID，形如postgres-6fego161
+     * Get 数据库实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 数据库实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 数据库实例ID，形如postgres-6fego161
-     * @param DBInstanceId 数据库实例ID，形如postgres-6fego161
+     * Set 数据库实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 数据库实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+     * Get 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"。
  
-     * @return InstanceName 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+     * @return InstanceName 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"。
 
      */
     public String getInstanceName() {
@@ -65,9 +65,9 @@ public class ModifyDBInstanceNameRequest extends AbstractModel {
     }
 
     /**
-     * Set 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+     * Set 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"。
 
-     * @param InstanceName 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+     * @param InstanceName 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"。
 
      */
     public void setInstanceName(String InstanceName) {

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBackupSummariesRequest extends AbstractModel {
 
     /**
-    * 需要查询的云数据库产品类型，目前仅支持 "mysql"。
+    * 需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点云盘版实例，mysql-cluster 指云盘版（原集群版）实例。
     */
     @SerializedName("Product")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeBackupSummariesRequest extends AbstractModel {
     private String OrderDirection;
 
     /**
-     * Get 需要查询的云数据库产品类型，目前仅支持 "mysql"。 
-     * @return Product 需要查询的云数据库产品类型，目前仅支持 "mysql"。
+     * Get 需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点云盘版实例，mysql-cluster 指云盘版（原集群版）实例。 
+     * @return Product 需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点云盘版实例，mysql-cluster 指云盘版（原集群版）实例。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 需要查询的云数据库产品类型，目前仅支持 "mysql"。
-     * @param Product 需要查询的云数据库产品类型，目前仅支持 "mysql"。
+     * Set 需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点云盘版实例，mysql-cluster 指云盘版（原集群版）实例。
+     * @param Product 需要查询备份实时统计的云数据库产品类型。可取值为：mysql 指双节点/三节点的高可用实例，mysql-basic 指单节点云盘版实例，mysql-cluster 指云盘版（原集群版）实例。
      */
     public void setProduct(String Product) {
         this.Product = Product;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyReadOnlyGroupConfigRequest extends AbstractModel {
 
     /**
-    * 只读组ID
+    * 只读组ID。
     */
     @SerializedName("ReadOnlyGroupId")
     @Expose
     private String ReadOnlyGroupId;
 
     /**
-    * 只读组名称
+    * 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"
     */
     @SerializedName("ReadOnlyGroupName")
     @Expose
@@ -52,14 +52,14 @@ public class ModifyReadOnlyGroupConfigRequest extends AbstractModel {
     private Long ReplayLatencyEliminate;
 
     /**
-    * 延迟日志大小阈值，单位MB
+    * 延迟日志大小阈值，单位MB。当开启延迟日志大小配置，应输入正整数
     */
     @SerializedName("MaxReplayLatency")
     @Expose
     private Long MaxReplayLatency;
 
     /**
-    * 延迟时间大小阈值，单位ms
+    * 延迟时间大小阈值，单位s。当开启延迟时间配置时，应输入正整数。
     */
     @SerializedName("MaxReplayLag")
     @Expose
@@ -73,39 +73,39 @@ public class ModifyReadOnlyGroupConfigRequest extends AbstractModel {
     private Long Rebalance;
 
     /**
-    * 延迟剔除最小保留实例数
+    * 延迟剔除最小保留实例数。取值范围[0,100]
     */
     @SerializedName("MinDelayEliminateReserve")
     @Expose
     private Long MinDelayEliminateReserve;
 
     /**
-     * Get 只读组ID 
-     * @return ReadOnlyGroupId 只读组ID
+     * Get 只读组ID。 
+     * @return ReadOnlyGroupId 只读组ID。
      */
     public String getReadOnlyGroupId() {
         return this.ReadOnlyGroupId;
     }
 
     /**
-     * Set 只读组ID
-     * @param ReadOnlyGroupId 只读组ID
+     * Set 只读组ID。
+     * @param ReadOnlyGroupId 只读组ID。
      */
     public void setReadOnlyGroupId(String ReadOnlyGroupId) {
         this.ReadOnlyGroupId = ReadOnlyGroupId;
     }
 
     /**
-     * Get 只读组名称 
-     * @return ReadOnlyGroupName 只读组名称
+     * Get 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-" 
+     * @return ReadOnlyGroupName 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"
      */
     public String getReadOnlyGroupName() {
         return this.ReadOnlyGroupName;
     }
 
     /**
-     * Set 只读组名称
-     * @param ReadOnlyGroupName 只读组名称
+     * Set 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"
+     * @param ReadOnlyGroupName 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"
      */
     public void setReadOnlyGroupName(String ReadOnlyGroupName) {
         this.ReadOnlyGroupName = ReadOnlyGroupName;
@@ -144,32 +144,32 @@ public class ModifyReadOnlyGroupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 延迟日志大小阈值，单位MB 
-     * @return MaxReplayLatency 延迟日志大小阈值，单位MB
+     * Get 延迟日志大小阈值，单位MB。当开启延迟日志大小配置，应输入正整数 
+     * @return MaxReplayLatency 延迟日志大小阈值，单位MB。当开启延迟日志大小配置，应输入正整数
      */
     public Long getMaxReplayLatency() {
         return this.MaxReplayLatency;
     }
 
     /**
-     * Set 延迟日志大小阈值，单位MB
-     * @param MaxReplayLatency 延迟日志大小阈值，单位MB
+     * Set 延迟日志大小阈值，单位MB。当开启延迟日志大小配置，应输入正整数
+     * @param MaxReplayLatency 延迟日志大小阈值，单位MB。当开启延迟日志大小配置，应输入正整数
      */
     public void setMaxReplayLatency(Long MaxReplayLatency) {
         this.MaxReplayLatency = MaxReplayLatency;
     }
 
     /**
-     * Get 延迟时间大小阈值，单位ms 
-     * @return MaxReplayLag 延迟时间大小阈值，单位ms
+     * Get 延迟时间大小阈值，单位s。当开启延迟时间配置时，应输入正整数。 
+     * @return MaxReplayLag 延迟时间大小阈值，单位s。当开启延迟时间配置时，应输入正整数。
      */
     public Long getMaxReplayLag() {
         return this.MaxReplayLag;
     }
 
     /**
-     * Set 延迟时间大小阈值，单位ms
-     * @param MaxReplayLag 延迟时间大小阈值，单位ms
+     * Set 延迟时间大小阈值，单位s。当开启延迟时间配置时，应输入正整数。
+     * @param MaxReplayLag 延迟时间大小阈值，单位s。当开启延迟时间配置时，应输入正整数。
      */
     public void setMaxReplayLag(Long MaxReplayLag) {
         this.MaxReplayLag = MaxReplayLag;
@@ -192,16 +192,16 @@ public class ModifyReadOnlyGroupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 延迟剔除最小保留实例数 
-     * @return MinDelayEliminateReserve 延迟剔除最小保留实例数
+     * Get 延迟剔除最小保留实例数。取值范围[0,100] 
+     * @return MinDelayEliminateReserve 延迟剔除最小保留实例数。取值范围[0,100]
      */
     public Long getMinDelayEliminateReserve() {
         return this.MinDelayEliminateReserve;
     }
 
     /**
-     * Set 延迟剔除最小保留实例数
-     * @param MinDelayEliminateReserve 延迟剔除最小保留实例数
+     * Set 延迟剔除最小保留实例数。取值范围[0,100]
+     * @param MinDelayEliminateReserve 延迟剔除最小保留实例数。取值范围[0,100]
      */
     public void setMinDelayEliminateReserve(Long MinDelayEliminateReserve) {
         this.MinDelayEliminateReserve = MinDelayEliminateReserve;

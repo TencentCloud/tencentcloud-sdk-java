@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -40,9 +40,9 @@ public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel {
 
     /**
     * 指定实例升级内核版本号完成后的切换时间。可选值:
-<li>0：立即切换
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
+<li>0：立即切换</li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内切换</li>
 默认值：0 
     */
     @SerializedName("SwitchTag")
@@ -65,8 +65,8 @@ public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel {
 
     /**
     * 是否对本次升级实例内核版本号操作执行预检查。
-<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
-<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。</li>
+<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。</li>
 默认值：false
     */
     @SerializedName("DryRun")
@@ -74,16 +74,16 @@ public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel {
     private Boolean DryRun;
 
     /**
-     * Get 实例ID。 
-     * @return DBInstanceId 实例ID。
+     * Get 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param DBInstanceId 实例ID。
+     * Set 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -111,14 +111,14 @@ public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel {
 
     /**
      * Get 指定实例升级内核版本号完成后的切换时间。可选值:
-<li>0：立即切换
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
+<li>0：立即切换</li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内切换</li>
 默认值：0  
      * @return SwitchTag 指定实例升级内核版本号完成后的切换时间。可选值:
-<li>0：立即切换
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
+<li>0：立即切换</li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内切换</li>
 默认值：0 
      */
     public Long getSwitchTag() {
@@ -127,14 +127,14 @@ public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel {
 
     /**
      * Set 指定实例升级内核版本号完成后的切换时间。可选值:
-<li>0：立即切换
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
+<li>0：立即切换</li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内切换</li>
 默认值：0 
      * @param SwitchTag 指定实例升级内核版本号完成后的切换时间。可选值:
-<li>0：立即切换
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
+<li>0：立即切换</li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内切换</li>
 默认值：0 
      */
     public void setSwitchTag(Long SwitchTag) {
@@ -175,12 +175,12 @@ public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel {
 
     /**
      * Get 是否对本次升级实例内核版本号操作执行预检查。
-<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
-<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。</li>
+<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。</li>
 默认值：false 
      * @return DryRun 是否对本次升级实例内核版本号操作执行预检查。
-<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
-<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。</li>
+<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。</li>
 默认值：false
      */
     public Boolean getDryRun() {
@@ -189,12 +189,12 @@ public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel {
 
     /**
      * Set 是否对本次升级实例内核版本号操作执行预检查。
-<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
-<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。</li>
+<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。</li>
 默认值：false
      * @param DryRun 是否对本次升级实例内核版本号操作执行预检查。
-<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
-<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。</li>
+<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。</li>
 默认值：false
      */
     public void setDryRun(Boolean DryRun) {

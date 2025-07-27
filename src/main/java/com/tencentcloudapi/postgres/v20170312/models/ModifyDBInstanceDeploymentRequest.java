@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceDeploymentRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -43,7 +43,7 @@ public class ModifyDBInstanceDeploymentRequest extends AbstractModel {
 <li>0：立即切换 </li>
 <li>1：指定时间切换</li>
 <li>2：维护时间窗口内切换</li>
-默认值：0 
+
     */
     @SerializedName("SwitchTag")
     @Expose
@@ -64,16 +64,16 @@ public class ModifyDBInstanceDeploymentRequest extends AbstractModel {
     private String SwitchEndTime;
 
     /**
-     * Get 实例ID。 
-     * @return DBInstanceId 实例ID。
+     * Get 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param DBInstanceId 实例ID。
+     * Set 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -104,12 +104,12 @@ public class ModifyDBInstanceDeploymentRequest extends AbstractModel {
 <li>0：立即切换 </li>
 <li>1：指定时间切换</li>
 <li>2：维护时间窗口内切换</li>
-默认值：0  
+ 
      * @return SwitchTag 指定实例配置完成变更后的切换时间。
 <li>0：立即切换 </li>
 <li>1：指定时间切换</li>
 <li>2：维护时间窗口内切换</li>
-默认值：0 
+
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
@@ -120,12 +120,12 @@ public class ModifyDBInstanceDeploymentRequest extends AbstractModel {
 <li>0：立即切换 </li>
 <li>1：指定时间切换</li>
 <li>2：维护时间窗口内切换</li>
-默认值：0 
+
      * @param SwitchTag 指定实例配置完成变更后的切换时间。
 <li>0：立即切换 </li>
 <li>1：指定时间切换</li>
 <li>2：维护时间窗口内切换</li>
-默认值：0 
+
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateReadOnlyGroupNetworkAccessRequest extends AbstractModel {
 
     /**
-    * RO组ID，形如：pgro-4t9c6g7k。
+    * RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
     */
     @SerializedName("ReadOnlyGroupId")
     @Expose
@@ -52,23 +52,23 @@ public class CreateReadOnlyGroupNetworkAccessRequest extends AbstractModel {
     private Boolean IsAssignVip;
 
     /**
-    * 目标VIP地址。
+    * 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-     * Get RO组ID，形如：pgro-4t9c6g7k。 
-     * @return ReadOnlyGroupId RO组ID，形如：pgro-4t9c6g7k。
+     * Get RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取 
+     * @return ReadOnlyGroupId RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      */
     public String getReadOnlyGroupId() {
         return this.ReadOnlyGroupId;
     }
 
     /**
-     * Set RO组ID，形如：pgro-4t9c6g7k。
-     * @param ReadOnlyGroupId RO组ID，形如：pgro-4t9c6g7k。
+     * Set RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
+     * @param ReadOnlyGroupId RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      */
     public void setReadOnlyGroupId(String ReadOnlyGroupId) {
         this.ReadOnlyGroupId = ReadOnlyGroupId;
@@ -123,16 +123,16 @@ public class CreateReadOnlyGroupNetworkAccessRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标VIP地址。 
-     * @return Vip 目标VIP地址。
+     * Get 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。 
+     * @return Vip 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 目标VIP地址。
-     * @param Vip 目标VIP地址。
+     * Set 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
+     * @param Vip 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;

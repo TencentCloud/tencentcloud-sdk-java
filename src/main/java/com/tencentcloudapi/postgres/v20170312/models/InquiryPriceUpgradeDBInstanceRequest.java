@@ -38,7 +38,7 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     private Long Memory;
 
     /**
-    * 实例ID，形如postgres-hez4fh0v
+    * 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -52,7 +52,8 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     private String InstanceChargeType;
 
     /**
-    * 实例的Cpu大小，单位Core
+    * 实例的Cpu大小，单位Core。
+不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
     */
     @SerializedName("Cpu")
     @Expose
@@ -91,16 +92,16 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例ID，形如postgres-hez4fh0v 
-     * @return DBInstanceId 实例ID，形如postgres-hez4fh0v
+     * Get 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如postgres-hez4fh0v
-     * @param DBInstanceId 实例ID，形如postgres-hez4fh0v
+     * Set 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -127,16 +128,20 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例的Cpu大小，单位Core 
-     * @return Cpu 实例的Cpu大小，单位Core
+     * Get 实例的Cpu大小，单位Core。
+不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。 
+     * @return Cpu 实例的Cpu大小，单位Core。
+不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 实例的Cpu大小，单位Core
-     * @param Cpu 实例的Cpu大小，单位Core
+     * Set 实例的Cpu大小，单位Core。
+不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
+     * @param Cpu 实例的Cpu大小，单位Core。
+不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

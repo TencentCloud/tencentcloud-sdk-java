@@ -59,7 +59,7 @@ public class DedicatedCluster extends AbstractModel {
     private Long InstanceCount;
 
     /**
-    * Cpu总量
+    * Cpu总数量
     */
     @SerializedName("CpuTotal")
     @Expose
@@ -73,28 +73,28 @@ public class DedicatedCluster extends AbstractModel {
     private Long CpuAvailable;
 
     /**
-    * 内存总量
+    * 内存总量，单位GB
     */
     @SerializedName("MemTotal")
     @Expose
     private Long MemTotal;
 
     /**
-    * 内存可用量
+    * 内存可用量，单位GB
     */
     @SerializedName("MemAvailable")
     @Expose
     private Long MemAvailable;
 
     /**
-    * 磁盘总量
+    * 磁盘总量，单位GB
     */
     @SerializedName("DiskTotal")
     @Expose
     private Long DiskTotal;
 
     /**
-    * 磁盘可用量
+    * 磁盘可用量，单位GB
     */
     @SerializedName("DiskAvailable")
     @Expose
@@ -181,16 +181,16 @@ public class DedicatedCluster extends AbstractModel {
     }
 
     /**
-     * Get Cpu总量 
-     * @return CpuTotal Cpu总量
+     * Get Cpu总数量 
+     * @return CpuTotal Cpu总数量
      */
     public Long getCpuTotal() {
         return this.CpuTotal;
     }
 
     /**
-     * Set Cpu总量
-     * @param CpuTotal Cpu总量
+     * Set Cpu总数量
+     * @param CpuTotal Cpu总数量
      */
     public void setCpuTotal(Long CpuTotal) {
         this.CpuTotal = CpuTotal;
@@ -213,64 +213,64 @@ public class DedicatedCluster extends AbstractModel {
     }
 
     /**
-     * Get 内存总量 
-     * @return MemTotal 内存总量
+     * Get 内存总量，单位GB 
+     * @return MemTotal 内存总量，单位GB
      */
     public Long getMemTotal() {
         return this.MemTotal;
     }
 
     /**
-     * Set 内存总量
-     * @param MemTotal 内存总量
+     * Set 内存总量，单位GB
+     * @param MemTotal 内存总量，单位GB
      */
     public void setMemTotal(Long MemTotal) {
         this.MemTotal = MemTotal;
     }
 
     /**
-     * Get 内存可用量 
-     * @return MemAvailable 内存可用量
+     * Get 内存可用量，单位GB 
+     * @return MemAvailable 内存可用量，单位GB
      */
     public Long getMemAvailable() {
         return this.MemAvailable;
     }
 
     /**
-     * Set 内存可用量
-     * @param MemAvailable 内存可用量
+     * Set 内存可用量，单位GB
+     * @param MemAvailable 内存可用量，单位GB
      */
     public void setMemAvailable(Long MemAvailable) {
         this.MemAvailable = MemAvailable;
     }
 
     /**
-     * Get 磁盘总量 
-     * @return DiskTotal 磁盘总量
+     * Get 磁盘总量，单位GB 
+     * @return DiskTotal 磁盘总量，单位GB
      */
     public Long getDiskTotal() {
         return this.DiskTotal;
     }
 
     /**
-     * Set 磁盘总量
-     * @param DiskTotal 磁盘总量
+     * Set 磁盘总量，单位GB
+     * @param DiskTotal 磁盘总量，单位GB
      */
     public void setDiskTotal(Long DiskTotal) {
         this.DiskTotal = DiskTotal;
     }
 
     /**
-     * Get 磁盘可用量 
-     * @return DiskAvailable 磁盘可用量
+     * Get 磁盘可用量，单位GB 
+     * @return DiskAvailable 磁盘可用量，单位GB
      */
     public Long getDiskAvailable() {
         return this.DiskAvailable;
     }
 
     /**
-     * Set 磁盘可用量
-     * @param DiskAvailable 磁盘可用量
+     * Set 磁盘可用量，单位GB
+     * @param DiskAvailable 磁盘可用量，单位GB
      */
     public void setDiskAvailable(Long DiskAvailable) {
         this.DiskAvailable = DiskAvailable;

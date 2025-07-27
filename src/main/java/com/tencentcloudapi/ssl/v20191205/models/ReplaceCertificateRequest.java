@@ -38,7 +38,7 @@ public class ReplaceCertificateRequest extends AbstractModel {
     private String ValidType;
 
     /**
-    * 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
+    * 类型，默认 original。可选项：original = 原证书 CSR，upload = 手动上传，online = 在线生成。
     */
     @SerializedName("CsrType")
     @Expose
@@ -81,6 +81,13 @@ public class ReplaceCertificateRequest extends AbstractModel {
     private String CertCSRKeyParameter;
 
     /**
+    * 签名算法
+    */
+    @SerializedName("SignAlgo")
+    @Expose
+    private String SignAlgo;
+
+    /**
      * Get 证书 ID。 
      * @return CertificateId 证书 ID。
      */
@@ -113,16 +120,16 @@ public class ReplaceCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。 
-     * @return CsrType 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
+     * Get 类型，默认 original。可选项：original = 原证书 CSR，upload = 手动上传，online = 在线生成。 
+     * @return CsrType 类型，默认 original。可选项：original = 原证书 CSR，upload = 手动上传，online = 在线生成。
      */
     public String getCsrType() {
         return this.CsrType;
     }
 
     /**
-     * Set 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
-     * @param CsrType 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
+     * Set 类型，默认 original。可选项：original = 原证书 CSR，upload = 手动上传，online = 在线生成。
+     * @param CsrType 类型，默认 original。可选项：original = 原证书 CSR，upload = 手动上传，online = 在线生成。
      */
     public void setCsrType(String CsrType) {
         this.CsrType = CsrType;
@@ -212,6 +219,22 @@ public class ReplaceCertificateRequest extends AbstractModel {
         this.CertCSRKeyParameter = CertCSRKeyParameter;
     }
 
+    /**
+     * Get 签名算法 
+     * @return SignAlgo 签名算法
+     */
+    public String getSignAlgo() {
+        return this.SignAlgo;
+    }
+
+    /**
+     * Set 签名算法
+     * @param SignAlgo 签名算法
+     */
+    public void setSignAlgo(String SignAlgo) {
+        this.SignAlgo = SignAlgo;
+    }
+
     public ReplaceCertificateRequest() {
     }
 
@@ -244,6 +267,9 @@ public class ReplaceCertificateRequest extends AbstractModel {
         if (source.CertCSRKeyParameter != null) {
             this.CertCSRKeyParameter = new String(source.CertCSRKeyParameter);
         }
+        if (source.SignAlgo != null) {
+            this.SignAlgo = new String(source.SignAlgo);
+        }
     }
 
 
@@ -259,6 +285,7 @@ public class ReplaceCertificateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Reason", this.Reason);
         this.setParamSimple(map, prefix + "CertCSREncryptAlgo", this.CertCSREncryptAlgo);
         this.setParamSimple(map, prefix + "CertCSRKeyParameter", this.CertCSRKeyParameter);
+        this.setParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
 
     }
 }

@@ -45,7 +45,7 @@ public class DescribeTablesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 单次请求返回的数量，默认值为20，最大值为2000。
+    * 单次请求返回的数量，默认值为20，最大值为5000。
     */
     @SerializedName("Limit")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeTablesRequest extends AbstractModel {
     }
 
     /**
-     * Get 单次请求返回的数量，默认值为20，最大值为2000。 
-     * @return Limit 单次请求返回的数量，默认值为20，最大值为2000。
+     * Get 单次请求返回的数量，默认值为20，最大值为5000。 
+     * @return Limit 单次请求返回的数量，默认值为20，最大值为5000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次请求返回的数量，默认值为20，最大值为2000。
-     * @param Limit 单次请求返回的数量，默认值为20，最大值为2000。
+     * Set 单次请求返回的数量，默认值为20，最大值为5000。
+     * @param Limit 单次请求返回的数量，默认值为20，最大值为5000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

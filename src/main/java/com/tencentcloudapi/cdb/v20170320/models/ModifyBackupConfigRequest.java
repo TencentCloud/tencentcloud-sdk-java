@@ -24,14 +24,16 @@ import java.util.HashMap;
 public class ModifyBackupConfigRequest extends AbstractModel {
 
     /**
-    * 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+    * 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。
+    * 数据备份文件的保留时间，单位为天。
+1. MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。
+2. MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。
     */
     @SerializedName("ExpireDays")
     @Expose
@@ -52,7 +54,9 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private String BackupMethod;
 
     /**
-    * binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。
+    * binlog 的保留时间，单位为天。
+1. MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。
+2. MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。
     */
     @SerializedName("BinlogExpireDays")
     @Expose
@@ -66,7 +70,7 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private CommonTimeWindow BackupTimeWindow;
 
     /**
-    * 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
+    * 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。
     */
     @SerializedName("EnableBackupPeriodSave")
     @Expose
@@ -164,32 +168,40 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private Long BinlogStandbyDays;
 
     /**
-     * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。 
-     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
+     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。 
-     * @return ExpireDays 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。
+     * Get 数据备份文件的保留时间，单位为天。
+1. MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。
+2. MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。 
+     * @return ExpireDays 数据备份文件的保留时间，单位为天。
+1. MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。
+2. MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。
      */
     public Long getExpireDays() {
         return this.ExpireDays;
     }
 
     /**
-     * Set 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。
-     * @param ExpireDays 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。
+     * Set 数据备份文件的保留时间，单位为天。
+1. MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。
+2. MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。
+     * @param ExpireDays 数据备份文件的保留时间，单位为天。
+1. MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。
+2. MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。
      */
     public void setExpireDays(Long ExpireDays) {
         this.ExpireDays = ExpireDays;
@@ -228,16 +240,24 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。 
-     * @return BinlogExpireDays binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。
+     * Get binlog 的保留时间，单位为天。
+1. MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。
+2. MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。 
+     * @return BinlogExpireDays binlog 的保留时间，单位为天。
+1. MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。
+2. MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。
      */
     public Long getBinlogExpireDays() {
         return this.BinlogExpireDays;
     }
 
     /**
-     * Set binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。
-     * @param BinlogExpireDays binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。
+     * Set binlog 的保留时间，单位为天。
+1. MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。
+2. MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。
+     * @param BinlogExpireDays binlog 的保留时间，单位为天。
+1. MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。
+2. MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。
      */
     public void setBinlogExpireDays(Long BinlogExpireDays) {
         this.BinlogExpireDays = BinlogExpireDays;
@@ -260,16 +280,16 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效 
-     * @return EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
+     * Get 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。 
+     * @return EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。
      */
     public String getEnableBackupPeriodSave() {
         return this.EnableBackupPeriodSave;
     }
 
     /**
-     * Set 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
-     * @param EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
+     * Set 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。
+     * @param EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。
      */
     public void setEnableBackupPeriodSave(String EnableBackupPeriodSave) {
         this.EnableBackupPeriodSave = EnableBackupPeriodSave;

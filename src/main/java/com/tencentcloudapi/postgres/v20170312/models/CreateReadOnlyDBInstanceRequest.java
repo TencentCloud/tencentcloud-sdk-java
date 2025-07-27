@@ -32,7 +32,7 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     private String Zone;
 
     /**
-    * 只读实例的主实例ID。
+    * 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("MasterDBInstanceId")
     @Expose
@@ -46,7 +46,7 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     private String SpecCode;
 
     /**
-    * 实例容量大小，单位：GB。
+    * 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
     */
     @SerializedName("Storage")
     @Expose
@@ -120,7 +120,7 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     private Long AutoRenewFlag;
 
     /**
-    * 项目ID。
+    * 项目ID。默认值为0，表示归属默认项目。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -166,7 +166,7 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     private Long NeedSupportIpv6;
 
     /**
-    * 实例名(后续支持)
+    * 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
     */
     @SerializedName("Name")
     @Expose
@@ -207,16 +207,16 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 只读实例的主实例ID。 
-     * @return MasterDBInstanceId 只读实例的主实例ID。
+     * Get 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return MasterDBInstanceId 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getMasterDBInstanceId() {
         return this.MasterDBInstanceId;
     }
 
     /**
-     * Set 只读实例的主实例ID。
-     * @param MasterDBInstanceId 只读实例的主实例ID。
+     * Set 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param MasterDBInstanceId 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setMasterDBInstanceId(String MasterDBInstanceId) {
         this.MasterDBInstanceId = MasterDBInstanceId;
@@ -239,16 +239,16 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例容量大小，单位：GB。 
-     * @return Storage 实例容量大小，单位：GB。
+     * Get 实例硬盘容量大小，单位：GB。该参数的设置步长为10。 
+     * @return Storage 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 实例容量大小，单位：GB。
-     * @param Storage 实例容量大小，单位：GB。
+     * Set 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
+     * @param Storage 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -427,16 +427,16 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目ID。 
-     * @return ProjectId 项目ID。
+     * Get 项目ID。默认值为0，表示归属默认项目。 
+     * @return ProjectId 项目ID。默认值为0，表示归属默认项目。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID。
-     * @param ProjectId 项目ID。
+     * Set 项目ID。默认值为0，表示归属默认项目。
+     * @param ProjectId 项目ID。默认值为0，表示归属默认项目。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -539,16 +539,16 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例名(后续支持) 
-     * @return Name 实例名(后续支持)
+     * Get 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-" 
+     * @return Name 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例名(后续支持)
-     * @param Name 实例名(后续支持)
+     * Set 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
+     * @param Name 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
      */
     public void setName(String Name) {
         this.Name = Name;

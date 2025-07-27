@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteParameterTemplateRequest extends AbstractModel {
 
     /**
-    * 参数模板ID，用于唯一确认待操作的参数模板
+    * 参数模板ID，用于唯一确认待操作的参数模板。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get 参数模板ID，用于唯一确认待操作的参数模板 
-     * @return TemplateId 参数模板ID，用于唯一确认待操作的参数模板
+     * Get 参数模板ID，用于唯一确认待操作的参数模板。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取 
+     * @return TemplateId 参数模板ID，用于唯一确认待操作的参数模板。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 参数模板ID，用于唯一确认待操作的参数模板
-     * @param TemplateId 参数模板ID，用于唯一确认待操作的参数模板
+     * Set 参数模板ID，用于唯一确认待操作的参数模板。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
+     * @param TemplateId 参数模板ID，用于唯一确认待操作的参数模板。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

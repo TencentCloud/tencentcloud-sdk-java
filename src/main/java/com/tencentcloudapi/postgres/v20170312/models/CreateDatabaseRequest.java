@@ -24,28 +24,31 @@ import java.util.HashMap;
 public class CreateDatabaseRequest extends AbstractModel {
 
     /**
-    * 实例ID，形如postgres-6fego161
+    * 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 创建的数据库名
+    * 创建的数据库名。
+名称规范：由字母（a-z, A-Z）、数字（0-9）、下划线（_）组成，以字母或（_）开头，最多63个字符。不能使用系统保留关键字，不能为postgres。
     */
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
 
     /**
-    * 数据库的所有者
+    * 数据库的所有者。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
     */
     @SerializedName("DatabaseOwner")
     @Expose
     private String DatabaseOwner;
 
     /**
-    * 数据库的字符编码
+    * 数据库的字符编码。
+支持的常用字符集包括：UTF8、LATIN1、LATIN2、WIN1250、WIN1251、WIN1252、KOI8R、EUC_JP、EUC_KR
+默认值：UTF8
     */
     @SerializedName("Encoding")
     @Expose
@@ -66,64 +69,76 @@ public class CreateDatabaseRequest extends AbstractModel {
     private String Ctype;
 
     /**
-     * Get 实例ID，形如postgres-6fego161 
-     * @return DBInstanceId 实例ID，形如postgres-6fego161
+     * Get 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如postgres-6fego161
-     * @param DBInstanceId 实例ID，形如postgres-6fego161
+     * Set 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 创建的数据库名 
-     * @return DatabaseName 创建的数据库名
+     * Get 创建的数据库名。
+名称规范：由字母（a-z, A-Z）、数字（0-9）、下划线（_）组成，以字母或（_）开头，最多63个字符。不能使用系统保留关键字，不能为postgres。 
+     * @return DatabaseName 创建的数据库名。
+名称规范：由字母（a-z, A-Z）、数字（0-9）、下划线（_）组成，以字母或（_）开头，最多63个字符。不能使用系统保留关键字，不能为postgres。
      */
     public String getDatabaseName() {
         return this.DatabaseName;
     }
 
     /**
-     * Set 创建的数据库名
-     * @param DatabaseName 创建的数据库名
+     * Set 创建的数据库名。
+名称规范：由字母（a-z, A-Z）、数字（0-9）、下划线（_）组成，以字母或（_）开头，最多63个字符。不能使用系统保留关键字，不能为postgres。
+     * @param DatabaseName 创建的数据库名。
+名称规范：由字母（a-z, A-Z）、数字（0-9）、下划线（_）组成，以字母或（_）开头，最多63个字符。不能使用系统保留关键字，不能为postgres。
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 数据库的所有者 
-     * @return DatabaseOwner 数据库的所有者
+     * Get 数据库的所有者。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取 
+     * @return DatabaseOwner 数据库的所有者。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      */
     public String getDatabaseOwner() {
         return this.DatabaseOwner;
     }
 
     /**
-     * Set 数据库的所有者
-     * @param DatabaseOwner 数据库的所有者
+     * Set 数据库的所有者。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
+     * @param DatabaseOwner 数据库的所有者。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      */
     public void setDatabaseOwner(String DatabaseOwner) {
         this.DatabaseOwner = DatabaseOwner;
     }
 
     /**
-     * Get 数据库的字符编码 
-     * @return Encoding 数据库的字符编码
+     * Get 数据库的字符编码。
+支持的常用字符集包括：UTF8、LATIN1、LATIN2、WIN1250、WIN1251、WIN1252、KOI8R、EUC_JP、EUC_KR
+默认值：UTF8 
+     * @return Encoding 数据库的字符编码。
+支持的常用字符集包括：UTF8、LATIN1、LATIN2、WIN1250、WIN1251、WIN1252、KOI8R、EUC_JP、EUC_KR
+默认值：UTF8
      */
     public String getEncoding() {
         return this.Encoding;
     }
 
     /**
-     * Set 数据库的字符编码
-     * @param Encoding 数据库的字符编码
+     * Set 数据库的字符编码。
+支持的常用字符集包括：UTF8、LATIN1、LATIN2、WIN1250、WIN1251、WIN1252、KOI8R、EUC_JP、EUC_KR
+默认值：UTF8
+     * @param Encoding 数据库的字符编码。
+支持的常用字符集包括：UTF8、LATIN1、LATIN2、WIN1250、WIN1251、WIN1252、KOI8R、EUC_JP、EUC_KR
+默认值：UTF8
      */
     public void setEncoding(String Encoding) {
         this.Encoding = Encoding;

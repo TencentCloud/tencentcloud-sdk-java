@@ -59,7 +59,7 @@ public class AnalysisItems extends AbstractModel {
     private Long CallNum;
 
     /**
-    * 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的比例（小数返回）
+    * 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的百分比。
     */
     @SerializedName("CallPercent")
     @Expose
@@ -101,14 +101,14 @@ public class AnalysisItems extends AbstractModel {
     private Float AvgCostTime;
 
     /**
-    * 在选定时间范围内，慢SQL第一条开始执行的时间戳
+    * 在选定时间范围内，慢SQL第一条开始执行的时间
     */
     @SerializedName("FirstTime")
     @Expose
     private String FirstTime;
 
     /**
-    * 在选定时间范围内，慢SQL最后一条开始执行的时间戳
+    * 在选定时间范围内，慢SQL最后一条开始执行的时间
     */
     @SerializedName("LastTime")
     @Expose
@@ -195,16 +195,16 @@ public class AnalysisItems extends AbstractModel {
     }
 
     /**
-     * Get 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的比例（小数返回） 
-     * @return CallPercent 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的比例（小数返回）
+     * Get 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的百分比。 
+     * @return CallPercent 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的百分比。
      */
     public Float getCallPercent() {
         return this.CallPercent;
     }
 
     /**
-     * Set 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的比例（小数返回）
-     * @param CallPercent 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的比例（小数返回）
+     * Set 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的百分比。
+     * @param CallPercent 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的百分比。
      */
     public void setCallPercent(Float CallPercent) {
         this.CallPercent = CallPercent;
@@ -291,32 +291,32 @@ public class AnalysisItems extends AbstractModel {
     }
 
     /**
-     * Get 在选定时间范围内，慢SQL第一条开始执行的时间戳 
-     * @return FirstTime 在选定时间范围内，慢SQL第一条开始执行的时间戳
+     * Get 在选定时间范围内，慢SQL第一条开始执行的时间 
+     * @return FirstTime 在选定时间范围内，慢SQL第一条开始执行的时间
      */
     public String getFirstTime() {
         return this.FirstTime;
     }
 
     /**
-     * Set 在选定时间范围内，慢SQL第一条开始执行的时间戳
-     * @param FirstTime 在选定时间范围内，慢SQL第一条开始执行的时间戳
+     * Set 在选定时间范围内，慢SQL第一条开始执行的时间
+     * @param FirstTime 在选定时间范围内，慢SQL第一条开始执行的时间
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get 在选定时间范围内，慢SQL最后一条开始执行的时间戳 
-     * @return LastTime 在选定时间范围内，慢SQL最后一条开始执行的时间戳
+     * Get 在选定时间范围内，慢SQL最后一条开始执行的时间 
+     * @return LastTime 在选定时间范围内，慢SQL最后一条开始执行的时间
      */
     public String getLastTime() {
         return this.LastTime;
     }
 
     /**
-     * Set 在选定时间范围内，慢SQL最后一条开始执行的时间戳
-     * @param LastTime 在选定时间范围内，慢SQL最后一条开始执行的时间戳
+     * Set 在选定时间范围内，慢SQL最后一条开始执行的时间
+     * @param LastTime 在选定时间范围内，慢SQL最后一条开始执行的时间
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;

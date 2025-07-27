@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceChargeTypeRequest extends AbstractModel {
 
     /**
-    * 实例ID，形如postgres-6fego161
+    * 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -70,16 +70,16 @@ public class ModifyDBInstanceChargeTypeRequest extends AbstractModel {
     private Long AutoVoucher;
 
     /**
-     * Get 实例ID，形如postgres-6fego161 
-     * @return DBInstanceId 实例ID，形如postgres-6fego161
+     * Get 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如postgres-6fego161
-     * @param DBInstanceId 实例ID，形如postgres-6fego161
+     * Set 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;

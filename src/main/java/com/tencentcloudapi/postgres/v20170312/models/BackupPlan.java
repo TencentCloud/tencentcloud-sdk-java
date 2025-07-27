@@ -31,7 +31,7 @@ public class BackupPlan extends AbstractModel {
     private String BackupPeriod;
 
     /**
-    * 数据备份保留时长
+    * 数据备份保留时长。单位：天
     */
     @SerializedName("BaseBackupRetentionPeriod")
     @Expose
@@ -66,7 +66,7 @@ public class BackupPlan extends AbstractModel {
     private String PlanName;
 
     /**
-    * 日志备份保留时长。
+    * 日志备份保留时长。单位：天
     */
     @SerializedName("LogBackupRetentionPeriod")
     @Expose
@@ -117,16 +117,16 @@ public class BackupPlan extends AbstractModel {
     }
 
     /**
-     * Get 数据备份保留时长 
-     * @return BaseBackupRetentionPeriod 数据备份保留时长
+     * Get 数据备份保留时长。单位：天 
+     * @return BaseBackupRetentionPeriod 数据备份保留时长。单位：天
      */
     public Long getBaseBackupRetentionPeriod() {
         return this.BaseBackupRetentionPeriod;
     }
 
     /**
-     * Set 数据备份保留时长
-     * @param BaseBackupRetentionPeriod 数据备份保留时长
+     * Set 数据备份保留时长。单位：天
+     * @param BaseBackupRetentionPeriod 数据备份保留时长。单位：天
      */
     public void setBaseBackupRetentionPeriod(Long BaseBackupRetentionPeriod) {
         this.BaseBackupRetentionPeriod = BaseBackupRetentionPeriod;
@@ -197,16 +197,16 @@ public class BackupPlan extends AbstractModel {
     }
 
     /**
-     * Get 日志备份保留时长。 
-     * @return LogBackupRetentionPeriod 日志备份保留时长。
+     * Get 日志备份保留时长。单位：天 
+     * @return LogBackupRetentionPeriod 日志备份保留时长。单位：天
      */
     public Long getLogBackupRetentionPeriod() {
         return this.LogBackupRetentionPeriod;
     }
 
     /**
-     * Set 日志备份保留时长。
-     * @param LogBackupRetentionPeriod 日志备份保留时长。
+     * Set 日志备份保留时长。单位：天
+     * @param LogBackupRetentionPeriod 日志备份保留时长。单位：天
      */
     public void setLogBackupRetentionPeriod(Long LogBackupRetentionPeriod) {
         this.LogBackupRetentionPeriod = LogBackupRetentionPeriod;
