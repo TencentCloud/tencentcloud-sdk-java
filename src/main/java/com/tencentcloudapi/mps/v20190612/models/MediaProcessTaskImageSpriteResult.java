@@ -60,6 +60,7 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
 
     /**
     * 对视频截雪碧图任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -160,8 +161,10 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
     }
 
     /**
-     * Get 对视频截雪碧图任务的输出。 
+     * Get 对视频截雪碧图任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Output 对视频截雪碧图任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaImageSpriteItem getOutput() {
         return this.Output;
@@ -169,7 +172,9 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
 
     /**
      * Set 对视频截雪碧图任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 对视频截雪碧图任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(MediaImageSpriteItem Output) {
         this.Output = Output;

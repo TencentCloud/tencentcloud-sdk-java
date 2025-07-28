@@ -104,6 +104,14 @@ public class ActivityResItem extends AbstractModel {
     private ScheduleQualityControlTaskResult QualityControlTask;
 
     /**
+    * 条件判断任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecRuleTask")
+    @Expose
+    private ScheduleExecRuleTaskResult ExecRuleTask;
+
+    /**
     * 智能字幕任务输出
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -312,6 +320,26 @@ public class ActivityResItem extends AbstractModel {
     }
 
     /**
+     * Get 条件判断任务输出
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecRuleTask 条件判断任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ScheduleExecRuleTaskResult getExecRuleTask() {
+        return this.ExecRuleTask;
+    }
+
+    /**
+     * Set 条件判断任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecRuleTask 条件判断任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecRuleTask(ScheduleExecRuleTaskResult ExecRuleTask) {
+        this.ExecRuleTask = ExecRuleTask;
+    }
+
+    /**
      * Get 智能字幕任务输出
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SmartSubtitlesTask 智能字幕任务输出
@@ -369,6 +397,9 @@ public class ActivityResItem extends AbstractModel {
         if (source.QualityControlTask != null) {
             this.QualityControlTask = new ScheduleQualityControlTaskResult(source.QualityControlTask);
         }
+        if (source.ExecRuleTask != null) {
+            this.ExecRuleTask = new ScheduleExecRuleTaskResult(source.ExecRuleTask);
+        }
         if (source.SmartSubtitlesTask != null) {
             this.SmartSubtitlesTask = new ScheduleSmartSubtitleTaskResult(source.SmartSubtitlesTask);
         }
@@ -389,6 +420,7 @@ public class ActivityResItem extends AbstractModel {
         this.setParamObj(map, prefix + "ReviewTask.", this.ReviewTask);
         this.setParamObj(map, prefix + "AnalysisTask.", this.AnalysisTask);
         this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
+        this.setParamObj(map, prefix + "ExecRuleTask.", this.ExecRuleTask);
         this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
 
     }

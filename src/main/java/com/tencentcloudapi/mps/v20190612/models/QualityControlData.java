@@ -25,7 +25,6 @@ public class QualityControlData extends AbstractModel {
 
     /**
     * 为true时表示视频无音频轨。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoAudio")
     @Expose
@@ -33,7 +32,6 @@ public class QualityControlData extends AbstractModel {
 
     /**
     * 为true时表示视频无视频轨。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoVideo")
     @Expose
@@ -41,7 +39,6 @@ public class QualityControlData extends AbstractModel {
 
     /**
     * 视频无参考质量评分，百分制。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityEvaluationScore")
     @Expose
@@ -49,7 +46,6 @@ public class QualityControlData extends AbstractModel {
 
     /**
     * 视频无参考质量评分，MOS分数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityEvaluationMeanOpinionScore")
     @Expose
@@ -57,25 +53,21 @@ public class QualityControlData extends AbstractModel {
 
     /**
     * 内容质检检出异常项。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityControlResultSet")
     @Expose
     private QualityControlResult [] QualityControlResultSet;
 
     /**
-    * 格式诊断检出异常项
-注意：此字段可能返回 null，表示取不到有效值。
+    * 格式诊断检出异常项。
     */
     @SerializedName("ContainerDiagnoseResultSet")
     @Expose
     private ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet;
 
     /**
-     * Get 为true时表示视频无音频轨。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 为true时表示视频无音频轨。 
      * @return NoAudio 为true时表示视频无音频轨。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getNoAudio() {
         return this.NoAudio;
@@ -83,19 +75,15 @@ public class QualityControlData extends AbstractModel {
 
     /**
      * Set 为true时表示视频无音频轨。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoAudio 为true时表示视频无音频轨。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoAudio(Boolean NoAudio) {
         this.NoAudio = NoAudio;
     }
 
     /**
-     * Get 为true时表示视频无视频轨。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 为true时表示视频无视频轨。 
      * @return NoVideo 为true时表示视频无视频轨。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getNoVideo() {
         return this.NoVideo;
@@ -103,19 +91,15 @@ public class QualityControlData extends AbstractModel {
 
     /**
      * Set 为true时表示视频无视频轨。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoVideo 为true时表示视频无视频轨。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoVideo(Boolean NoVideo) {
         this.NoVideo = NoVideo;
     }
 
     /**
-     * Get 视频无参考质量评分，百分制。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频无参考质量评分，百分制。 
      * @return QualityEvaluationScore 视频无参考质量评分，百分制。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQualityEvaluationScore() {
         return this.QualityEvaluationScore;
@@ -123,19 +107,15 @@ public class QualityControlData extends AbstractModel {
 
     /**
      * Set 视频无参考质量评分，百分制。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QualityEvaluationScore 视频无参考质量评分，百分制。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityEvaluationScore(Long QualityEvaluationScore) {
         this.QualityEvaluationScore = QualityEvaluationScore;
     }
 
     /**
-     * Get 视频无参考质量评分，MOS分数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 视频无参考质量评分，MOS分数。 
      * @return QualityEvaluationMeanOpinionScore 视频无参考质量评分，MOS分数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getQualityEvaluationMeanOpinionScore() {
         return this.QualityEvaluationMeanOpinionScore;
@@ -143,19 +123,15 @@ public class QualityControlData extends AbstractModel {
 
     /**
      * Set 视频无参考质量评分，MOS分数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QualityEvaluationMeanOpinionScore 视频无参考质量评分，MOS分数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityEvaluationMeanOpinionScore(Float QualityEvaluationMeanOpinionScore) {
         this.QualityEvaluationMeanOpinionScore = QualityEvaluationMeanOpinionScore;
     }
 
     /**
-     * Get 内容质检检出异常项。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内容质检检出异常项。 
      * @return QualityControlResultSet 内容质检检出异常项。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityControlResult [] getQualityControlResultSet() {
         return this.QualityControlResultSet;
@@ -163,29 +139,23 @@ public class QualityControlData extends AbstractModel {
 
     /**
      * Set 内容质检检出异常项。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QualityControlResultSet 内容质检检出异常项。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityControlResultSet(QualityControlResult [] QualityControlResultSet) {
         this.QualityControlResultSet = QualityControlResultSet;
     }
 
     /**
-     * Get 格式诊断检出异常项
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContainerDiagnoseResultSet 格式诊断检出异常项
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 格式诊断检出异常项。 
+     * @return ContainerDiagnoseResultSet 格式诊断检出异常项。
      */
     public ContainerDiagnoseResultItem [] getContainerDiagnoseResultSet() {
         return this.ContainerDiagnoseResultSet;
     }
 
     /**
-     * Set 格式诊断检出异常项
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContainerDiagnoseResultSet 格式诊断检出异常项
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 格式诊断检出异常项。
+     * @param ContainerDiagnoseResultSet 格式诊断检出异常项。
      */
     public void setContainerDiagnoseResultSet(ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet) {
         this.ContainerDiagnoseResultSet = ContainerDiagnoseResultSet;

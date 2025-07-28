@@ -59,6 +59,13 @@ public class CreateSnapshotRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。
+    */
+    @SerializedName("DiskUsage")
+    @Expose
+    private String DiskUsage;
+
+    /**
      * Get 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。 
      * @return DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
@@ -138,6 +145,22 @@ public class CreateSnapshotRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。 
+     * @return DiskUsage 快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。
+     */
+    public String getDiskUsage() {
+        return this.DiskUsage;
+    }
+
+    /**
+     * Set 快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。
+     * @param DiskUsage 快照关联云硬盘类型, SYSTEM_DISK: 系统盘, DATA_DISK: 数据盘,非必填参数，不填时快照类型与云盘类型保持一致， 该参数基于某些场景用户需要将系统盘创建出数据盘快照共享使用。
+     */
+    public void setDiskUsage(String DiskUsage) {
+        this.DiskUsage = DiskUsage;
+    }
+
     public CreateSnapshotRequest() {
     }
 
@@ -164,6 +187,9 @@ public class CreateSnapshotRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.DiskUsage != null) {
+            this.DiskUsage = new String(source.DiskUsage);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class CreateSnapshotRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
 
     }
 }

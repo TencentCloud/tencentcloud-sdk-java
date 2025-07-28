@@ -136,6 +136,14 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String ModifyTime;
 
     /**
+    * 最近更新人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifyUser")
+    @Expose
+    private String ModifyUser;
+
+    /**
     * 工作流类型，周期cycle，手动manual
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -424,6 +432,26 @@ public class WorkflowExtOpsDto extends AbstractModel {
     }
 
     /**
+     * Get 最近更新人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifyUser 最近更新人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModifyUser() {
+        return this.ModifyUser;
+    }
+
+    /**
+     * Set 最近更新人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifyUser 最近更新人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifyUser(String ModifyUser) {
+        this.ModifyUser = ModifyUser;
+    }
+
+    /**
      * Get 工作流类型，周期cycle，手动manual
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowType 工作流类型，周期cycle，手动manual
@@ -493,6 +521,9 @@ public class WorkflowExtOpsDto extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.ModifyUser != null) {
+            this.ModifyUser = new String(source.ModifyUser);
+        }
         if (source.WorkflowType != null) {
             this.WorkflowType = new String(source.WorkflowType);
         }
@@ -517,6 +548,7 @@ public class WorkflowExtOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "ModifyUser", this.ModifyUser);
         this.setParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
 
     }

@@ -60,6 +60,7 @@ public class MediaProcessTaskSampleSnapshotResult extends AbstractModel {
 
     /**
     * 对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -160,8 +161,10 @@ public class MediaProcessTaskSampleSnapshotResult extends AbstractModel {
     }
 
     /**
-     * Get 对视频做采样截图任务输出。 
+     * Get 对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Output 对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaSampleSnapshotItem getOutput() {
         return this.Output;
@@ -169,7 +172,9 @@ public class MediaProcessTaskSampleSnapshotResult extends AbstractModel {
 
     /**
      * Set 对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(MediaSampleSnapshotItem Output) {
         this.Output = Output;

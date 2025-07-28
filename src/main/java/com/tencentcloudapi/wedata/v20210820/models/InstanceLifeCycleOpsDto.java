@@ -159,6 +159,14 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
     private TaskTypeOpsDto TaskType;
 
     /**
+    * 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceGroup")
+    @Expose
+    private String ResourceGroup;
+
+    /**
      * Get 任务id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务id
@@ -494,6 +502,26 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
         this.TaskType = TaskType;
     }
 
+    /**
+     * Get 资源组id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceGroup 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceGroup() {
+        return this.ResourceGroup;
+    }
+
+    /**
+     * Set 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceGroup 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceGroup(String ResourceGroup) {
+        this.ResourceGroup = ResourceGroup;
+    }
+
     public InstanceLifeCycleOpsDto() {
     }
 
@@ -556,6 +584,9 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
         if (source.TaskType != null) {
             this.TaskType = new TaskTypeOpsDto(source.TaskType);
         }
+        if (source.ResourceGroup != null) {
+            this.ResourceGroup = new String(source.ResourceGroup);
+        }
     }
 
 
@@ -580,6 +611,7 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceRunType", this.InstanceRunType);
         this.setParamSimple(map, prefix + "TotalLifeRound", this.TotalLifeRound);
         this.setParamObj(map, prefix + "TaskType.", this.TaskType);
+        this.setParamSimple(map, prefix + "ResourceGroup", this.ResourceGroup);
 
     }
 }

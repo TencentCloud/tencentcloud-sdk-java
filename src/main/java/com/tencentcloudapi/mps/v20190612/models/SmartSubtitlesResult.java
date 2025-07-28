@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class SmartSubtitlesResult extends AbstractModel {
 
     /**
-    * 任务的类型，取值范围：
-<li>AsrFullTextRecognition：语音全文识别，</li>
+    * 任务的类型，取值范围： 
+<li>AsrFullTextRecognition：语音全文识别，</li> 
 <li>TransTextRecognition：语音翻译。</li>
     */
     @SerializedName("Type")
@@ -52,11 +52,11 @@ TransTextRecognition 时有效。
     private SmartSubtitleTaskTransTextResult TransTextTask;
 
     /**
-     * Get 任务的类型，取值范围：
-<li>AsrFullTextRecognition：语音全文识别，</li>
+     * Get 任务的类型，取值范围： 
+<li>AsrFullTextRecognition：语音全文识别，</li> 
 <li>TransTextRecognition：语音翻译。</li> 
-     * @return Type 任务的类型，取值范围：
-<li>AsrFullTextRecognition：语音全文识别，</li>
+     * @return Type 任务的类型，取值范围： 
+<li>AsrFullTextRecognition：语音全文识别，</li> 
 <li>TransTextRecognition：语音翻译。</li>
      */
     public String getType() {
@@ -64,11 +64,11 @@ TransTextRecognition 时有效。
     }
 
     /**
-     * Set 任务的类型，取值范围：
-<li>AsrFullTextRecognition：语音全文识别，</li>
+     * Set 任务的类型，取值范围： 
+<li>AsrFullTextRecognition：语音全文识别，</li> 
 <li>TransTextRecognition：语音翻译。</li>
-     * @param Type 任务的类型，取值范围：
-<li>AsrFullTextRecognition：语音全文识别，</li>
+     * @param Type 任务的类型，取值范围： 
+<li>AsrFullTextRecognition：语音全文识别，</li> 
 <li>TransTextRecognition：语音翻译。</li>
      */
     public void setType(String Type) {

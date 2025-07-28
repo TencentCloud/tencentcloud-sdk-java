@@ -106,6 +106,13 @@ PureAudio：纯音频类型
     private SubtitleTemplate SubtitleTemplate;
 
     /**
+    * 转码参数扩展字段
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
      * Get 转自适应码流模板 ID。 
      * @return Definition 转自适应码流模板 ID。
      */
@@ -313,6 +320,22 @@ PureAudio：纯音频类型
         this.SubtitleTemplate = SubtitleTemplate;
     }
 
+    /**
+     * Get 转码参数扩展字段 
+     * @return StdExtInfo 转码参数扩展字段
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set 转码参数扩展字段
+     * @param StdExtInfo 转码参数扩展字段
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -357,6 +380,9 @@ PureAudio：纯音频类型
         if (source.SubtitleTemplate != null) {
             this.SubtitleTemplate = new SubtitleTemplate(source.SubtitleTemplate);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -374,6 +400,7 @@ PureAudio：纯音频类型
         this.setParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
         this.setParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
         this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

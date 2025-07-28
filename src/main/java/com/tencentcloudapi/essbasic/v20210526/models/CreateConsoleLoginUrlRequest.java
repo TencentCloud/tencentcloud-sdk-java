@@ -150,13 +150,6 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     private Long [] AuthorizationTypes;
 
     /**
-    * 暂未开放
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 子客经办人身份证
 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
     */
@@ -232,6 +225,23 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     @SerializedName("OrganizationAuthorizationOptions")
     @Expose
     private OrganizationAuthorizationOptions OrganizationAuthorizationOptions;
+
+    /**
+    * 组织机构对公打款 账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。
+    */
+    @SerializedName("BankAccountNumber")
+    @Expose
+    private String BankAccountNumber;
+
+    /**
+    * 无
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
@@ -606,26 +616,6 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 暂未开放 
-     * @return Operator 暂未开放
-     * @deprecated
-     */
-    @Deprecated
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 暂未开放
-     * @param Operator 暂未开放
-     * @deprecated
-     */
-    @Deprecated
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
      * Get 子客经办人身份证
 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。 
      * @return ProxyOperatorIdCardNumber 子客经办人身份证
@@ -825,6 +815,54 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.OrganizationAuthorizationOptions = OrganizationAuthorizationOptions;
     }
 
+    /**
+     * Get 组织机构对公打款 账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。 
+     * @return BankAccountNumber 组织机构对公打款 账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。
+     */
+    public String getBankAccountNumber() {
+        return this.BankAccountNumber;
+    }
+
+    /**
+     * Set 组织机构对公打款 账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。
+     * @param BankAccountNumber 组织机构对公打款 账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。
+     */
+    public void setBankAccountNumber(String BankAccountNumber) {
+        this.BankAccountNumber = BankAccountNumber;
+    }
+
+    /**
+     * Get 无 
+     * @return Operator 无
+     * @deprecated
+     */
+    @Deprecated
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 无
+     * @param Operator 无
+     * @deprecated
+     */
+    @Deprecated
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
     public CreateConsoleLoginUrlRequest() {
     }
 
@@ -869,9 +907,6 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
                 this.AuthorizationTypes[i] = new Long(source.AuthorizationTypes[i]);
             }
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.ProxyOperatorIdCardNumber != null) {
             this.ProxyOperatorIdCardNumber = new String(source.ProxyOperatorIdCardNumber);
         }
@@ -902,6 +937,12 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         if (source.OrganizationAuthorizationOptions != null) {
             this.OrganizationAuthorizationOptions = new OrganizationAuthorizationOptions(source.OrganizationAuthorizationOptions);
         }
+        if (source.BankAccountNumber != null) {
+            this.BankAccountNumber = new String(source.BankAccountNumber);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
     }
 
 
@@ -920,7 +961,6 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
         this.setParamSimple(map, prefix + "AutoJumpBackEvent", this.AutoJumpBackEvent);
         this.setParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "ProxyOperatorIdCardNumber", this.ProxyOperatorIdCardNumber);
         this.setParamSimple(map, prefix + "AutoJumpUrl", this.AutoJumpUrl);
         this.setParamSimple(map, prefix + "TopNavigationStatus", this.TopNavigationStatus);
@@ -930,6 +970,8 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProxyLegalName", this.ProxyLegalName);
         this.setParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
         this.setParamObj(map, prefix + "OrganizationAuthorizationOptions.", this.OrganizationAuthorizationOptions);
+        this.setParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

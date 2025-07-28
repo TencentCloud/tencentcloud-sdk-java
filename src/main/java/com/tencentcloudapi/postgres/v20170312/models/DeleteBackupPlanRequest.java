@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteBackupPlanRequest extends AbstractModel {
 
     /**
-    * 实例ID。	
+    * 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 备份计划的ID。
+    * 备份计划的ID。可通过[DescribeBackupPlans](https://cloud.tencent.com/document/api/409/68069)接口获取
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-     * Get 实例ID。	 
-     * @return DBInstanceId 实例ID。	
+     * Get 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。	
-     * @param DBInstanceId 实例ID。	
+     * Set 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 备份计划的ID。 
-     * @return PlanId 备份计划的ID。
+     * Get 备份计划的ID。可通过[DescribeBackupPlans](https://cloud.tencent.com/document/api/409/68069)接口获取 
+     * @return PlanId 备份计划的ID。可通过[DescribeBackupPlans](https://cloud.tencent.com/document/api/409/68069)接口获取
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set 备份计划的ID。
-     * @param PlanId 备份计划的ID。
+     * Set 备份计划的ID。可通过[DescribeBackupPlans](https://cloud.tencent.com/document/api/409/68069)接口获取
+     * @param PlanId 备份计划的ID。可通过[DescribeBackupPlans](https://cloud.tencent.com/document/api/409/68069)接口获取
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;

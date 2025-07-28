@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBackupDownloadURLRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeBackupDownloadURLRequest extends AbstractModel {
     private String BackupId;
 
     /**
-    * 链接的有效时间，默认为12小时。
+    * 链接的有效时间，取值为[0,36]，默认为12小时。
     */
     @SerializedName("URLExpireTime")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeBackupDownloadURLRequest extends AbstractModel {
     private BackupDownloadRestriction BackupDownloadRestriction;
 
     /**
-     * Get 实例ID。 
-     * @return DBInstanceId 实例ID。
+     * Get 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param DBInstanceId 实例ID。
+     * Set 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -107,16 +107,16 @@ public class DescribeBackupDownloadURLRequest extends AbstractModel {
     }
 
     /**
-     * Get 链接的有效时间，默认为12小时。 
-     * @return URLExpireTime 链接的有效时间，默认为12小时。
+     * Get 链接的有效时间，取值为[0,36]，默认为12小时。 
+     * @return URLExpireTime 链接的有效时间，取值为[0,36]，默认为12小时。
      */
     public Long getURLExpireTime() {
         return this.URLExpireTime;
     }
 
     /**
-     * Set 链接的有效时间，默认为12小时。
-     * @param URLExpireTime 链接的有效时间，默认为12小时。
+     * Set 链接的有效时间，取值为[0,36]，默认为12小时。
+     * @param URLExpireTime 链接的有效时间，取值为[0,36]，默认为12小时。
      */
     public void setURLExpireTime(Long URLExpireTime) {
         this.URLExpireTime = URLExpireTime;

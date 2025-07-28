@@ -894,7 +894,7 @@ public enum TsfErrorCode {
      /* 数据集名非法。 */
      INVALIDPARAMETERVALUE_INVALIDPROGRAMNAME("InvalidParameterValue.InvalidProgramName"),
      
-     /* 已经绑定灰度规则，无法删除。 */
+     /* 该泳道已关联全链路灰度发布规则,请先从规则中移除后删除 */
      INVALIDPARAMETERVALUE_LANEINFOALREADYUSED("InvalidParameterValue.LaneInfoAlreadyUsed"),
      
      /* 存在同名的泳道。 */

@@ -96,6 +96,13 @@ public class ProcessMediaRequest extends AbstractModel {
     private AiQualityControlTaskInput AiQualityControlTask;
 
     /**
+    * 智能字幕
+    */
+    @SerializedName("SmartSubtitlesTask")
+    @Expose
+    private SmartSubtitlesTaskInput SmartSubtitlesTask;
+
+    /**
     * 任务的事件通知信息，不填代表不获取事件通知。
     */
     @SerializedName("TaskNotifyConfig")
@@ -138,13 +145,6 @@ public class ProcessMediaRequest extends AbstractModel {
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
-
-    /**
-    * 智能字幕
-    */
-    @SerializedName("SmartSubtitlesTask")
-    @Expose
-    private SmartSubtitlesTaskInput SmartSubtitlesTask;
 
     /**
     * 是否跳过元信息获取，可选值： 
@@ -337,6 +337,22 @@ public class ProcessMediaRequest extends AbstractModel {
     }
 
     /**
+     * Get 智能字幕 
+     * @return SmartSubtitlesTask 智能字幕
+     */
+    public SmartSubtitlesTaskInput getSmartSubtitlesTask() {
+        return this.SmartSubtitlesTask;
+    }
+
+    /**
+     * Set 智能字幕
+     * @param SmartSubtitlesTask 智能字幕
+     */
+    public void setSmartSubtitlesTask(SmartSubtitlesTaskInput SmartSubtitlesTask) {
+        this.SmartSubtitlesTask = SmartSubtitlesTask;
+    }
+
+    /**
      * Get 任务的事件通知信息，不填代表不获取事件通知。 
      * @return TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
@@ -441,22 +457,6 @@ public class ProcessMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get 智能字幕 
-     * @return SmartSubtitlesTask 智能字幕
-     */
-    public SmartSubtitlesTaskInput getSmartSubtitlesTask() {
-        return this.SmartSubtitlesTask;
-    }
-
-    /**
-     * Set 智能字幕
-     * @param SmartSubtitlesTask 智能字幕
-     */
-    public void setSmartSubtitlesTask(SmartSubtitlesTaskInput SmartSubtitlesTask) {
-        this.SmartSubtitlesTask = SmartSubtitlesTask;
-    }
-
-    /**
      * Get 是否跳过元信息获取，可选值： 
 0：表示不跳过 
 1：表示跳过 
@@ -519,6 +519,9 @@ public class ProcessMediaRequest extends AbstractModel {
         if (source.AiQualityControlTask != null) {
             this.AiQualityControlTask = new AiQualityControlTaskInput(source.AiQualityControlTask);
         }
+        if (source.SmartSubtitlesTask != null) {
+            this.SmartSubtitlesTask = new SmartSubtitlesTaskInput(source.SmartSubtitlesTask);
+        }
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
@@ -536,9 +539,6 @@ public class ProcessMediaRequest extends AbstractModel {
         }
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
-        }
-        if (source.SmartSubtitlesTask != null) {
-            this.SmartSubtitlesTask = new SmartSubtitlesTaskInput(source.SmartSubtitlesTask);
         }
         if (source.SkipMateData != null) {
             this.SkipMateData = new Long(source.SkipMateData);
@@ -559,13 +559,13 @@ public class ProcessMediaRequest extends AbstractModel {
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
+        this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
-        this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
         this.setParamSimple(map, prefix + "SkipMateData", this.SkipMateData);
 
     }

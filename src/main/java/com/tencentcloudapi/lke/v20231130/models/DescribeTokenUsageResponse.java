@@ -87,6 +87,20 @@ public class DescribeTokenUsageResponse extends AbstractModel {
     private Float InternetSearchUsage;
 
     /**
+    * dosage配额限制
+    */
+    @SerializedName("DosageTypeLimit")
+    @Expose
+    private Float DosageTypeLimit;
+
+    /**
+    * dosage当前用量	
+    */
+    @SerializedName("DosageTypeCurr")
+    @Expose
+    private Float DosageTypeCurr;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -238,6 +252,38 @@ public class DescribeTokenUsageResponse extends AbstractModel {
     }
 
     /**
+     * Get dosage配额限制 
+     * @return DosageTypeLimit dosage配额限制
+     */
+    public Float getDosageTypeLimit() {
+        return this.DosageTypeLimit;
+    }
+
+    /**
+     * Set dosage配额限制
+     * @param DosageTypeLimit dosage配额限制
+     */
+    public void setDosageTypeLimit(Float DosageTypeLimit) {
+        this.DosageTypeLimit = DosageTypeLimit;
+    }
+
+    /**
+     * Get dosage当前用量	 
+     * @return DosageTypeCurr dosage当前用量	
+     */
+    public Float getDosageTypeCurr() {
+        return this.DosageTypeCurr;
+    }
+
+    /**
+     * Set dosage当前用量	
+     * @param DosageTypeCurr dosage当前用量	
+     */
+    public void setDosageTypeCurr(Float DosageTypeCurr) {
+        this.DosageTypeCurr = DosageTypeCurr;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -288,6 +334,12 @@ public class DescribeTokenUsageResponse extends AbstractModel {
         if (source.InternetSearchUsage != null) {
             this.InternetSearchUsage = new Float(source.InternetSearchUsage);
         }
+        if (source.DosageTypeLimit != null) {
+            this.DosageTypeLimit = new Float(source.DosageTypeLimit);
+        }
+        if (source.DosageTypeCurr != null) {
+            this.DosageTypeCurr = new Float(source.DosageTypeCurr);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -307,6 +359,8 @@ public class DescribeTokenUsageResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SplitTokenUsage", this.SplitTokenUsage);
         this.setParamSimple(map, prefix + "RagSearchUsage", this.RagSearchUsage);
         this.setParamSimple(map, prefix + "InternetSearchUsage", this.InternetSearchUsage);
+        this.setParamSimple(map, prefix + "DosageTypeLimit", this.DosageTypeLimit);
+        this.setParamSimple(map, prefix + "DosageTypeCurr", this.DosageTypeCurr);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

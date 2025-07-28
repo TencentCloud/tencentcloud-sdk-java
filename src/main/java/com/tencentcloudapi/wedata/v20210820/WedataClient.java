@@ -2138,6 +2138,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *查询任务引用参数
+     * @param req DescribeTaskParamDsRequest
+     * @return DescribeTaskParamDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskParamDsResponse DescribeTaskParamDs(DescribeTaskParamDsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskParamDs", DescribeTaskParamDsResponse.class);
+    }
+
+    /**
      *分页查询任务运行历史
      * @param req DescribeTaskRunHistoryRequest
      * @return DescribeTaskRunHistoryResponse
@@ -2476,6 +2487,17 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public GetIntegrationNodeColumnSchemaResponse GetIntegrationNodeColumnSchema(GetIntegrationNodeColumnSchemaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetIntegrationNodeColumnSchema", GetIntegrationNodeColumnSchemaResponse.class);
+    }
+
+    /**
+     *获取异步任务执行结果
+     * @param req GetJobStatusRequest
+     * @return GetJobStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetJobStatusResponse GetJobStatus(GetJobStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetJobStatus", GetJobStatusResponse.class);
     }
 
     /**
@@ -2880,6 +2902,39 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     }
 
     /**
+     *移除database元数据
+     * @param req RemoveDatabaseRequest
+     * @return RemoveDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveDatabaseResponse RemoveDatabase(RemoveDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveDatabase", RemoveDatabaseResponse.class);
+    }
+
+    /**
+     *移除schema元数据
+     * @param req RemoveSchemaRequest
+     * @return RemoveSchemaResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveSchemaResponse RemoveSchema(RemoveSchemaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveSchema", RemoveSchemaResponse.class);
+    }
+
+    /**
+     *移除table元数据
+     * @param req RemoveTableRequest
+     * @return RemoveTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveTableResponse RemoveTable(RemoveTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveTable", RemoveTableResponse.class);
+    }
+
+    /**
      *删除编排空间工作流
      * @param req RemoveWorkflowDsRequest
      * @return RemoveWorkflowDsResponse
@@ -2910,6 +2965,39 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
     public RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDs(RenewWorkflowSchedulerInfoDsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RenewWorkflowSchedulerInfoDs", RenewWorkflowSchedulerInfoDsResponse.class);
+    }
+
+    /**
+     *上报database元数据
+     * @param req ReportDatabaseRequest
+     * @return ReportDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportDatabaseResponse ReportDatabase(ReportDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReportDatabase", ReportDatabaseResponse.class);
+    }
+
+    /**
+     *上报schema元数据
+     * @param req ReportSchemaRequest
+     * @return ReportSchemaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportSchemaResponse ReportSchema(ReportSchemaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReportSchema", ReportSchemaResponse.class);
+    }
+
+    /**
+     *上报table元数据
+     * @param req ReportTableRequest
+     * @return ReportTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportTableResponse ReportTable(ReportTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReportTable", ReportTableResponse.class);
     }
 
     /**

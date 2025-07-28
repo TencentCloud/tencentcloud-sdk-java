@@ -54,7 +54,6 @@ public class HighlightSegmentItem extends AbstractModel {
 
     /**
     * 直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginTime")
     @Expose
@@ -62,7 +61,6 @@ public class HighlightSegmentItem extends AbstractModel {
 
     /**
     * 直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -137,10 +135,8 @@ public class HighlightSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get 直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直播切片对应直播起始时间点，采用 ISO 日期格式。	 
      * @return BeginTime 直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginTime() {
         return this.BeginTime;
@@ -148,19 +144,15 @@ public class HighlightSegmentItem extends AbstractModel {
 
     /**
      * Set 直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginTime 直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直播切片对应直播结束时间点，采用 ISO 日期格式。	 
      * @return EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -168,9 +160,7 @@ public class HighlightSegmentItem extends AbstractModel {
 
     /**
      * Set 直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

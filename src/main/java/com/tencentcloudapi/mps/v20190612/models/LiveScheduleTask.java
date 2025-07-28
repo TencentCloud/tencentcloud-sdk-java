@@ -25,7 +25,6 @@ public class LiveScheduleTask extends AbstractModel {
 
     /**
     * 直播编排任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -35,7 +34,6 @@ public class LiveScheduleTask extends AbstractModel {
     * 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -43,7 +41,6 @@ public class LiveScheduleTask extends AbstractModel {
 
     /**
     * 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
     @Expose
@@ -51,7 +48,6 @@ public class LiveScheduleTask extends AbstractModel {
 
     /**
     * 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -59,7 +55,6 @@ public class LiveScheduleTask extends AbstractModel {
 
     /**
     * 直播流 URL。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -74,10 +69,8 @@ public class LiveScheduleTask extends AbstractModel {
     private LiveActivityResult [] LiveActivityResultSet;
 
     /**
-     * Get 直播编排任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直播编排任务 ID。 
      * @return TaskId 直播编排任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -85,9 +78,7 @@ public class LiveScheduleTask extends AbstractModel {
 
     /**
      * Set 直播编排任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 直播编排任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -96,12 +87,10 @@ public class LiveScheduleTask extends AbstractModel {
     /**
      * Get 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>FINISH：已完成。</li> 
      * @return Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -111,21 +100,17 @@ public class LiveScheduleTask extends AbstractModel {
      * Set 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。 
      * @return ErrCode 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -133,19 +118,15 @@ public class LiveScheduleTask extends AbstractModel {
 
     /**
      * Set 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrCode 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。 
      * @return Message 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -153,19 +134,15 @@ public class LiveScheduleTask extends AbstractModel {
 
     /**
      * Set 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 直播流 URL。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直播流 URL。 
      * @return Url 直播流 URL。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -173,9 +150,7 @@ public class LiveScheduleTask extends AbstractModel {
 
     /**
      * Set 直播流 URL。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 直播流 URL。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

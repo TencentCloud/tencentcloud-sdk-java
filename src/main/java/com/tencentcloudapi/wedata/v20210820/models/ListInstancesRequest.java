@@ -207,6 +207,22 @@ timeZone, 默认UTC+8
     private String ScheduleTimeZone;
 
     /**
+    * **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+    */
+    @SerializedName("LastUpdateTimeFrom")
+    @Expose
+    private String LastUpdateTimeFrom;
+
+    /**
+    * **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+    */
+    @SerializedName("LastUpdateTimeTo")
+    @Expose
+    private String LastUpdateTimeTo;
+
+    /**
      * Get **项目ID** 
      * @return ProjectId **项目ID**
      */
@@ -710,6 +726,46 @@ timeZone, 默认UTC+8
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
+    /**
+     * Get **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss 
+     * @return LastUpdateTimeFrom **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+     */
+    public String getLastUpdateTimeFrom() {
+        return this.LastUpdateTimeFrom;
+    }
+
+    /**
+     * Set **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+     * @param LastUpdateTimeFrom **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+     */
+    public void setLastUpdateTimeFrom(String LastUpdateTimeFrom) {
+        this.LastUpdateTimeFrom = LastUpdateTimeFrom;
+    }
+
+    /**
+     * Get **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss 
+     * @return LastUpdateTimeTo **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+     */
+    public String getLastUpdateTimeTo() {
+        return this.LastUpdateTimeTo;
+    }
+
+    /**
+     * Set **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+     * @param LastUpdateTimeTo **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+     */
+    public void setLastUpdateTimeTo(String LastUpdateTimeTo) {
+        this.LastUpdateTimeTo = LastUpdateTimeTo;
+    }
+
     public ListInstancesRequest() {
     }
 
@@ -796,6 +852,12 @@ timeZone, 默认UTC+8
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.LastUpdateTimeFrom != null) {
+            this.LastUpdateTimeFrom = new String(source.LastUpdateTimeFrom);
+        }
+        if (source.LastUpdateTimeTo != null) {
+            this.LastUpdateTimeTo = new String(source.LastUpdateTimeTo);
+        }
     }
 
 
@@ -822,6 +884,8 @@ timeZone, 默认UTC+8
         this.setParamSimple(map, prefix + "StartTimeFrom", this.StartTimeFrom);
         this.setParamSimple(map, prefix + "StartTimeTo", this.StartTimeTo);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamSimple(map, prefix + "LastUpdateTimeFrom", this.LastUpdateTimeFrom);
+        this.setParamSimple(map, prefix + "LastUpdateTimeTo", this.LastUpdateTimeTo);
 
     }
 }

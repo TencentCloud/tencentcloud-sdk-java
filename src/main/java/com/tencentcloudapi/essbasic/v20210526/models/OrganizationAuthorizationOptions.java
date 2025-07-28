@@ -45,6 +45,13 @@ public class OrganizationAuthorizationOptions extends AbstractModel {
     private Boolean LegalNameSame;
 
     /**
+    * 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>p.s. 仅在对公打款账号不为空时有效
+    */
+    @SerializedName("BankAccountNumberSame")
+    @Expose
+    private Boolean BankAccountNumberSame;
+
+    /**
      * Get 对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul> 
      * @return UniformSocialCreditCodeSame 对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      */
@@ -92,6 +99,22 @@ public class OrganizationAuthorizationOptions extends AbstractModel {
         this.LegalNameSame = LegalNameSame;
     }
 
+    /**
+     * Get 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>p.s. 仅在对公打款账号不为空时有效 
+     * @return BankAccountNumberSame 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>p.s. 仅在对公打款账号不为空时有效
+     */
+    public Boolean getBankAccountNumberSame() {
+        return this.BankAccountNumberSame;
+    }
+
+    /**
+     * Set 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>p.s. 仅在对公打款账号不为空时有效
+     * @param BankAccountNumberSame 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>p.s. 仅在对公打款账号不为空时有效
+     */
+    public void setBankAccountNumberSame(Boolean BankAccountNumberSame) {
+        this.BankAccountNumberSame = BankAccountNumberSame;
+    }
+
     public OrganizationAuthorizationOptions() {
     }
 
@@ -109,6 +132,9 @@ public class OrganizationAuthorizationOptions extends AbstractModel {
         if (source.LegalNameSame != null) {
             this.LegalNameSame = new Boolean(source.LegalNameSame);
         }
+        if (source.BankAccountNumberSame != null) {
+            this.BankAccountNumberSame = new Boolean(source.BankAccountNumberSame);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class OrganizationAuthorizationOptions extends AbstractModel {
         this.setParamSimple(map, prefix + "UniformSocialCreditCodeSame", this.UniformSocialCreditCodeSame);
         this.setParamSimple(map, prefix + "OrganizationNameSame", this.OrganizationNameSame);
         this.setParamSimple(map, prefix + "LegalNameSame", this.LegalNameSame);
+        this.setParamSimple(map, prefix + "BankAccountNumberSame", this.BankAccountNumberSame);
 
     }
 }

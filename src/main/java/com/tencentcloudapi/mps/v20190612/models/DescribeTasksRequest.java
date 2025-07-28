@@ -45,6 +45,20 @@ public class DescribeTasksRequest extends AbstractModel {
     private String ScrollToken;
 
     /**
+    * 查询任务开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 查询任务结束时间。
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
      * Get 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。 
      * @return Status 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
      */
@@ -92,6 +106,38 @@ public class DescribeTasksRequest extends AbstractModel {
         this.ScrollToken = ScrollToken;
     }
 
+    /**
+     * Get 查询任务开始时间 
+     * @return StartTime 查询任务开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 查询任务开始时间
+     * @param StartTime 查询任务开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 查询任务结束时间。 
+     * @return EndTime 查询任务结束时间。
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 查询任务结束时间。
+     * @param EndTime 查询任务结束时间。
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public DescribeTasksRequest() {
     }
 
@@ -109,6 +155,12 @@ public class DescribeTasksRequest extends AbstractModel {
         if (source.ScrollToken != null) {
             this.ScrollToken = new String(source.ScrollToken);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class DescribeTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

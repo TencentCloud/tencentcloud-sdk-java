@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyBackupPlanRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -52,7 +52,7 @@ public class ModifyBackupPlanRequest extends AbstractModel {
     private Long BaseBackupRetentionPeriod;
 
     /**
-    * 实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
+    * 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
     */
     @SerializedName("BackupPeriod")
     @Expose
@@ -80,16 +80,16 @@ public class ModifyBackupPlanRequest extends AbstractModel {
     private String PlanName;
 
     /**
-     * Get 实例ID 
-     * @return DBInstanceId 实例ID
+     * Get 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param DBInstanceId 实例ID
+     * Set 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -144,16 +144,16 @@ public class ModifyBackupPlanRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。 
-     * @return BackupPeriod 实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
+     * Get 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。 
+     * @return BackupPeriod 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
      */
     public String [] getBackupPeriod() {
         return this.BackupPeriod;
     }
 
     /**
-     * Set 实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
-     * @param BackupPeriod 实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
+     * Set 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
+     * @param BackupPeriod 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
      */
     public void setBackupPeriod(String [] BackupPeriod) {
         this.BackupPeriod = BackupPeriod;

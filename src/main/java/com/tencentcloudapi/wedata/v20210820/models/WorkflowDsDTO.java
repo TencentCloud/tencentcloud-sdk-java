@@ -139,6 +139,22 @@ public class WorkflowDsDTO extends AbstractModel {
     private String WorkflowType;
 
     /**
+    * 最近更新人名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateUser")
+    @Expose
+    private String UpdateUser;
+
+    /**
+    * 最近更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateUserId")
+    @Expose
+    private String UpdateUserId;
+
+    /**
      * Get 工作流ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowId 工作流ID
@@ -430,6 +446,46 @@ public class WorkflowDsDTO extends AbstractModel {
         this.WorkflowType = WorkflowType;
     }
 
+    /**
+     * Get 最近更新人名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateUser 最近更新人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateUser() {
+        return this.UpdateUser;
+    }
+
+    /**
+     * Set 最近更新人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateUser 最近更新人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateUser(String UpdateUser) {
+        this.UpdateUser = UpdateUser;
+    }
+
+    /**
+     * Get 最近更新人id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateUserId 最近更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateUserId() {
+        return this.UpdateUserId;
+    }
+
+    /**
+     * Set 最近更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateUserId 最近更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateUserId(String UpdateUserId) {
+        this.UpdateUserId = UpdateUserId;
+    }
+
     public WorkflowDsDTO() {
     }
 
@@ -489,6 +545,12 @@ public class WorkflowDsDTO extends AbstractModel {
         if (source.WorkflowType != null) {
             this.WorkflowType = new String(source.WorkflowType);
         }
+        if (source.UpdateUser != null) {
+            this.UpdateUser = new String(source.UpdateUser);
+        }
+        if (source.UpdateUserId != null) {
+            this.UpdateUserId = new String(source.UpdateUserId);
+        }
     }
 
 
@@ -510,6 +572,8 @@ public class WorkflowDsDTO extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Links.", this.Links);
         this.setParamArrayObj(map, prefix + "Params.", this.Params);
         this.setParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
+        this.setParamSimple(map, prefix + "UpdateUser", this.UpdateUser);
+        this.setParamSimple(map, prefix + "UpdateUserId", this.UpdateUserId);
 
     }
 }

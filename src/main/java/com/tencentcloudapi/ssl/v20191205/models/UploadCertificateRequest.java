@@ -80,6 +80,13 @@ public class UploadCertificateRequest extends AbstractModel {
     private Boolean Repeatable;
 
     /**
+    * 私钥密码
+    */
+    @SerializedName("KeyPassword")
+    @Expose
+    private String KeyPassword;
+
+    /**
      * Get 证书内容。 
      * @return CertificatePublicKey 证书内容。
      */
@@ -207,6 +214,22 @@ public class UploadCertificateRequest extends AbstractModel {
         this.Repeatable = Repeatable;
     }
 
+    /**
+     * Get 私钥密码 
+     * @return KeyPassword 私钥密码
+     */
+    public String getKeyPassword() {
+        return this.KeyPassword;
+    }
+
+    /**
+     * Set 私钥密码
+     * @param KeyPassword 私钥密码
+     */
+    public void setKeyPassword(String KeyPassword) {
+        this.KeyPassword = KeyPassword;
+    }
+
     public UploadCertificateRequest() {
     }
 
@@ -242,6 +265,9 @@ public class UploadCertificateRequest extends AbstractModel {
         if (source.Repeatable != null) {
             this.Repeatable = new Boolean(source.Repeatable);
         }
+        if (source.KeyPassword != null) {
+            this.KeyPassword = new String(source.KeyPassword);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class UploadCertificateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CertificateUse", this.CertificateUse);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Repeatable", this.Repeatable);
+        this.setParamSimple(map, prefix + "KeyPassword", this.KeyPassword);
 
     }
 }

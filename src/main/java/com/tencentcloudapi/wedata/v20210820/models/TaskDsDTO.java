@@ -828,6 +828,14 @@ public class TaskDsDTO extends AbstractModel {
     private String TemplateId;
 
     /**
+    * 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllowRedoType")
+    @Expose
+    private String AllowRedoType;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -2843,6 +2851,26 @@ public class TaskDsDTO extends AbstractModel {
         this.TemplateId = TemplateId;
     }
 
+    /**
+     * Get 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllowRedoType 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAllowRedoType() {
+        return this.AllowRedoType;
+    }
+
+    /**
+     * Set 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllowRedoType 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllowRedoType(String AllowRedoType) {
+        this.AllowRedoType = AllowRedoType;
+    }
+
     public TaskDsDTO() {
     }
 
@@ -3178,6 +3206,9 @@ public class TaskDsDTO extends AbstractModel {
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
         }
+        if (source.AllowRedoType != null) {
+            this.AllowRedoType = new String(source.AllowRedoType);
+        }
     }
 
 
@@ -3285,6 +3316,7 @@ public class TaskDsDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "ConcurrentStrategy", this.ConcurrentStrategy);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
 
     }
 }

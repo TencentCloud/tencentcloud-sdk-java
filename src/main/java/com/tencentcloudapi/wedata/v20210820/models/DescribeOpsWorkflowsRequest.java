@@ -136,6 +136,13 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
     private String KeyWord;
 
     /**
+    * **时区** timeZone, 默认UTC+8
+    */
+    @SerializedName("ScheduleTimeZone")
+    @Expose
+    private String ScheduleTimeZone;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -391,6 +398,22 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
         this.KeyWord = KeyWord;
     }
 
+    /**
+     * Get **时区** timeZone, 默认UTC+8 
+     * @return ScheduleTimeZone **时区** timeZone, 默认UTC+8
+     */
+    public String getScheduleTimeZone() {
+        return this.ScheduleTimeZone;
+    }
+
+    /**
+     * Set **时区** timeZone, 默认UTC+8
+     * @param ScheduleTimeZone **时区** timeZone, 默认UTC+8
+     */
+    public void setScheduleTimeZone(String ScheduleTimeZone) {
+        this.ScheduleTimeZone = ScheduleTimeZone;
+    }
+
     public DescribeOpsWorkflowsRequest() {
     }
 
@@ -453,6 +476,9 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
         if (source.KeyWord != null) {
             this.KeyWord = new String(source.KeyWord);
         }
+        if (source.ScheduleTimeZone != null) {
+            this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
+        }
     }
 
 
@@ -476,6 +502,7 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamArraySimple(map, prefix + "WorkflowTypeList.", this.WorkflowTypeList);
         this.setParamSimple(map, prefix + "KeyWord", this.KeyWord);
+        this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
 
     }
 }

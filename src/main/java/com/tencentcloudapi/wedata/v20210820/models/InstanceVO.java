@@ -215,6 +215,14 @@ public class InstanceVO extends AbstractModel {
     private String SchedulerTime;
 
     /**
+    * 实例最近更新时间, 时间格式为 yyyy-MM-dd HH:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastUpdateTime")
+    @Expose
+    private String LastUpdateTime;
+
+    /**
     * 执行资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -229,6 +237,14 @@ public class InstanceVO extends AbstractModel {
     @SerializedName("ExecutorGroupName")
     @Expose
     private String ExecutorGroupName;
+
+    /**
+    * 简要的任务失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobErrorMsg")
+    @Expose
+    private String JobErrorMsg;
 
     /**
      * Get **实例唯一标识**
@@ -743,6 +759,26 @@ public class InstanceVO extends AbstractModel {
     }
 
     /**
+     * Get 实例最近更新时间, 时间格式为 yyyy-MM-dd HH:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastUpdateTime 实例最近更新时间, 时间格式为 yyyy-MM-dd HH:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastUpdateTime() {
+        return this.LastUpdateTime;
+    }
+
+    /**
+     * Set 实例最近更新时间, 时间格式为 yyyy-MM-dd HH:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastUpdateTime 实例最近更新时间, 时间格式为 yyyy-MM-dd HH:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastUpdateTime(String LastUpdateTime) {
+        this.LastUpdateTime = LastUpdateTime;
+    }
+
+    /**
      * Get 执行资源组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExecutorGroupId 执行资源组ID
@@ -780,6 +816,26 @@ public class InstanceVO extends AbstractModel {
      */
     public void setExecutorGroupName(String ExecutorGroupName) {
         this.ExecutorGroupName = ExecutorGroupName;
+    }
+
+    /**
+     * Get 简要的任务失败信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobErrorMsg 简要的任务失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJobErrorMsg() {
+        return this.JobErrorMsg;
+    }
+
+    /**
+     * Set 简要的任务失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobErrorMsg 简要的任务失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobErrorMsg(String JobErrorMsg) {
+        this.JobErrorMsg = JobErrorMsg;
     }
 
     public InstanceVO() {
@@ -856,11 +912,17 @@ public class InstanceVO extends AbstractModel {
         if (source.SchedulerTime != null) {
             this.SchedulerTime = new String(source.SchedulerTime);
         }
+        if (source.LastUpdateTime != null) {
+            this.LastUpdateTime = new String(source.LastUpdateTime);
+        }
         if (source.ExecutorGroupId != null) {
             this.ExecutorGroupId = new String(source.ExecutorGroupId);
         }
         if (source.ExecutorGroupName != null) {
             this.ExecutorGroupName = new String(source.ExecutorGroupName);
+        }
+        if (source.JobErrorMsg != null) {
+            this.JobErrorMsg = new String(source.JobErrorMsg);
         }
     }
 
@@ -890,8 +952,10 @@ public class InstanceVO extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "CostTime", this.CostTime);
         this.setParamSimple(map, prefix + "SchedulerTime", this.SchedulerTime);
+        this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
         this.setParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
         this.setParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
+        this.setParamSimple(map, prefix + "JobErrorMsg", this.JobErrorMsg);
 
     }
 }

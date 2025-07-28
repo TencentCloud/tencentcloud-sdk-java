@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RestoreDBInstanceObjectsRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -38,7 +38,7 @@ public class RestoreDBInstanceObjectsRequest extends AbstractModel {
     private String [] RestoreObjects;
 
     /**
-    * 恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。
+    * 恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。可通过[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)接口获取
     */
     @SerializedName("BackupSetId")
     @Expose
@@ -52,16 +52,16 @@ public class RestoreDBInstanceObjectsRequest extends AbstractModel {
     private String RestoreTargetTime;
 
     /**
-     * Get 实例ID。 
-     * @return DBInstanceId 实例ID。
+     * Get 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param DBInstanceId 实例ID。
+     * Set 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -84,16 +84,16 @@ public class RestoreDBInstanceObjectsRequest extends AbstractModel {
     }
 
     /**
-     * Get 恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。 
-     * @return BackupSetId 恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。
+     * Get 恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。可通过[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)接口获取 
+     * @return BackupSetId 恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。可通过[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)接口获取
      */
     public String getBackupSetId() {
         return this.BackupSetId;
     }
 
     /**
-     * Set 恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。
-     * @param BackupSetId 恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。
+     * Set 恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。可通过[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)接口获取
+     * @param BackupSetId 恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。可通过[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)接口获取
      */
     public void setBackupSetId(String BackupSetId) {
         this.BackupSetId = BackupSetId;

@@ -31,7 +31,7 @@ public class CreateParameterTemplateRequest extends AbstractModel {
     private String TemplateName;
 
     /**
-    * 数据库大版本号，例如：11，12，13
+    * 数据库大版本号，例如：11，12，13。可通过[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
     */
     @SerializedName("DBMajorVersion")
     @Expose
@@ -68,16 +68,16 @@ public class CreateParameterTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库大版本号，例如：11，12，13 
-     * @return DBMajorVersion 数据库大版本号，例如：11，12，13
+     * Get 数据库大版本号，例如：11，12，13。可通过[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取 
+     * @return DBMajorVersion 数据库大版本号，例如：11，12，13。可通过[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
     }
 
     /**
-     * Set 数据库大版本号，例如：11，12，13
-     * @param DBMajorVersion 数据库大版本号，例如：11，12，13
+     * Set 数据库大版本号，例如：11，12，13。可通过[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
+     * @param DBMajorVersion 数据库大版本号，例如：11，12，13。可通过[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;

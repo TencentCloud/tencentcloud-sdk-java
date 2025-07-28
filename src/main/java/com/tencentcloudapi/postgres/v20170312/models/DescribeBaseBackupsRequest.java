@@ -40,10 +40,10 @@ public class DescribeBaseBackupsRequest extends AbstractModel {
     /**
     * 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
 base-backup-id：按照备份集ID过滤，类型为string。
-db-instance-status：按实例状态过滤，类型为string。取值参考DBInstance结构的DBInstanceStatus字段。
+db-instance-status：按实例状态过滤，类型为string。取值参考[DBInstance](https://cloud.tencent.com/document/api/409/16778#DBInstance)结构的DBInstanceStatus字段。
     */
     @SerializedName("Filters")
     @Expose
@@ -64,14 +64,14 @@ db-instance-status：按实例状态过滤，类型为string。取值参考DBIns
     private Long Offset;
 
     /**
-    * 排序字段，支持StartTime,FinishTime,Size。
+    * 排序字段，支持StartTime,FinishTime,Size。默认值：StartTime。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序方式，包括升序：asc，降序：desc。
+    * 排序方式，包括升序：asc，降序：desc。默认值：desc。
     */
     @SerializedName("OrderByType")
     @Expose
@@ -112,16 +112,16 @@ db-instance-status：按实例状态过滤，类型为string。取值参考DBIns
     /**
      * Get 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
 base-backup-id：按照备份集ID过滤，类型为string。
-db-instance-status：按实例状态过滤，类型为string。取值参考DBInstance结构的DBInstanceStatus字段。 
+db-instance-status：按实例状态过滤，类型为string。取值参考[DBInstance](https://cloud.tencent.com/document/api/409/16778#DBInstance)结构的DBInstanceStatus字段。 
      * @return Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
 base-backup-id：按照备份集ID过滤，类型为string。
-db-instance-status：按实例状态过滤，类型为string。取值参考DBInstance结构的DBInstanceStatus字段。
+db-instance-status：按实例状态过滤，类型为string。取值参考[DBInstance](https://cloud.tencent.com/document/api/409/16778#DBInstance)结构的DBInstanceStatus字段。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -130,16 +130,16 @@ db-instance-status：按实例状态过滤，类型为string。取值参考DBIns
     /**
      * Set 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
 base-backup-id：按照备份集ID过滤，类型为string。
-db-instance-status：按实例状态过滤，类型为string。取值参考DBInstance结构的DBInstanceStatus字段。
+db-instance-status：按实例状态过滤，类型为string。取值参考[DBInstance](https://cloud.tencent.com/document/api/409/16778#DBInstance)结构的DBInstanceStatus字段。
      * @param Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
 base-backup-id：按照备份集ID过滤，类型为string。
-db-instance-status：按实例状态过滤，类型为string。取值参考DBInstance结构的DBInstanceStatus字段。
+db-instance-status：按实例状态过滤，类型为string。取值参考[DBInstance](https://cloud.tencent.com/document/api/409/16778#DBInstance)结构的DBInstanceStatus字段。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -178,32 +178,32 @@ db-instance-status：按实例状态过滤，类型为string。取值参考DBIns
     }
 
     /**
-     * Get 排序字段，支持StartTime,FinishTime,Size。 
-     * @return OrderBy 排序字段，支持StartTime,FinishTime,Size。
+     * Get 排序字段，支持StartTime,FinishTime,Size。默认值：StartTime。 
+     * @return OrderBy 排序字段，支持StartTime,FinishTime,Size。默认值：StartTime。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序字段，支持StartTime,FinishTime,Size。
-     * @param OrderBy 排序字段，支持StartTime,FinishTime,Size。
+     * Set 排序字段，支持StartTime,FinishTime,Size。默认值：StartTime。
+     * @param OrderBy 排序字段，支持StartTime,FinishTime,Size。默认值：StartTime。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序方式，包括升序：asc，降序：desc。 
-     * @return OrderByType 排序方式，包括升序：asc，降序：desc。
+     * Get 排序方式，包括升序：asc，降序：desc。默认值：desc。 
+     * @return OrderByType 排序方式，包括升序：asc，降序：desc。默认值：desc。
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 排序方式，包括升序：asc，降序：desc。
-     * @param OrderByType 排序方式，包括升序：asc，降序：desc。
+     * Set 排序方式，包括升序：asc，降序：desc。默认值：desc。
+     * @param OrderByType 排序方式，包括升序：asc，降序：desc。默认值：desc。
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

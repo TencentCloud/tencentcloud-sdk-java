@@ -104,6 +104,14 @@ public class ActivityPara extends AbstractModel {
     private AiQualityControlTaskInput QualityControlTask;
 
     /**
+    * 任务条件判断
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecRulesTask")
+    @Expose
+    private ExecRulesTask ExecRulesTask;
+
+    /**
     * 智能字幕任务
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -312,6 +320,26 @@ public class ActivityPara extends AbstractModel {
     }
 
     /**
+     * Get 任务条件判断
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecRulesTask 任务条件判断
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExecRulesTask getExecRulesTask() {
+        return this.ExecRulesTask;
+    }
+
+    /**
+     * Set 任务条件判断
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecRulesTask 任务条件判断
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecRulesTask(ExecRulesTask ExecRulesTask) {
+        this.ExecRulesTask = ExecRulesTask;
+    }
+
+    /**
      * Get 智能字幕任务
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SmartSubtitlesTask 智能字幕任务
@@ -369,6 +397,9 @@ public class ActivityPara extends AbstractModel {
         if (source.QualityControlTask != null) {
             this.QualityControlTask = new AiQualityControlTaskInput(source.QualityControlTask);
         }
+        if (source.ExecRulesTask != null) {
+            this.ExecRulesTask = new ExecRulesTask(source.ExecRulesTask);
+        }
         if (source.SmartSubtitlesTask != null) {
             this.SmartSubtitlesTask = new SmartSubtitlesTaskInput(source.SmartSubtitlesTask);
         }
@@ -389,6 +420,7 @@ public class ActivityPara extends AbstractModel {
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
+        this.setParamObj(map, prefix + "ExecRulesTask.", this.ExecRulesTask);
         this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
 
     }

@@ -210,6 +210,14 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String Description;
 
     /**
+    * 时区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleTimeZone")
+    @Expose
+    private String ScheduleTimeZone;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -665,6 +673,26 @@ public class RuleGroupExecStrategy extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 时区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleTimeZone 时区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduleTimeZone() {
+        return this.ScheduleTimeZone;
+    }
+
+    /**
+     * Set 时区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleTimeZone 时区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleTimeZone(String ScheduleTimeZone) {
+        this.ScheduleTimeZone = ScheduleTimeZone;
+    }
+
     public RuleGroupExecStrategy() {
     }
 
@@ -751,6 +779,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ScheduleTimeZone != null) {
+            this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
+        }
     }
 
 
@@ -782,6 +813,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "TableName", this.TableName);
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
 
     }
 }

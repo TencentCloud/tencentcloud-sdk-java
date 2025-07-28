@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyParameterTemplateRequest extends AbstractModel {
 
     /**
-    * 参数模板ID，用于唯一确认参数模板，不可修改
+    * 参数模板ID，用于唯一确认参数模板，不可修改。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
     */
     @SerializedName("TemplateId")
     @Expose
@@ -59,16 +59,16 @@ public class ModifyParameterTemplateRequest extends AbstractModel {
     private String [] DeleteParamSet;
 
     /**
-     * Get 参数模板ID，用于唯一确认参数模板，不可修改 
-     * @return TemplateId 参数模板ID，用于唯一确认参数模板，不可修改
+     * Get 参数模板ID，用于唯一确认参数模板，不可修改。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取 
+     * @return TemplateId 参数模板ID，用于唯一确认参数模板，不可修改。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 参数模板ID，用于唯一确认参数模板，不可修改
-     * @param TemplateId 参数模板ID，用于唯一确认参数模板，不可修改
+     * Set 参数模板ID，用于唯一确认参数模板，不可修改。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
+     * @param TemplateId 参数模板ID，用于唯一确认参数模板，不可修改。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

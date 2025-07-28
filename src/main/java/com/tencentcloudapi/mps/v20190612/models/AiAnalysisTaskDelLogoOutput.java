@@ -52,6 +52,14 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     private String TranslateSubtitlePath;
 
     /**
+    * 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubtitlePos")
+    @Expose
+    private SubtitlePosition SubtitlePos;
+
+    /**
      * Get 擦除后文件的路径。 
      * @return Path 擦除后文件的路径。
      */
@@ -115,6 +123,26 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         this.TranslateSubtitlePath = TranslateSubtitlePath;
     }
 
+    /**
+     * Get 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubtitlePos 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SubtitlePosition getSubtitlePos() {
+        return this.SubtitlePos;
+    }
+
+    /**
+     * Set 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubtitlePos 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubtitlePos(SubtitlePosition SubtitlePos) {
+        this.SubtitlePos = SubtitlePos;
+    }
+
     public AiAnalysisTaskDelLogoOutput() {
     }
 
@@ -135,6 +163,9 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         if (source.TranslateSubtitlePath != null) {
             this.TranslateSubtitlePath = new String(source.TranslateSubtitlePath);
         }
+        if (source.SubtitlePos != null) {
+            this.SubtitlePos = new SubtitlePosition(source.SubtitlePos);
+        }
     }
 
 
@@ -146,6 +177,7 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OriginSubtitlePath", this.OriginSubtitlePath);
         this.setParamSimple(map, prefix + "TranslateSubtitlePath", this.TranslateSubtitlePath);
+        this.setParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
 
     }
 }

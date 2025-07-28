@@ -27,7 +27,6 @@ public class LiveActivityResult extends AbstractModel {
     * 原子任务类型。
 <li>LiveRecord：直播录制。</li>
 <li>AiQualityControl：媒体质检。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivityType")
     @Expose
@@ -44,12 +43,10 @@ public class LiveActivityResult extends AbstractModel {
     /**
      * Get 原子任务类型。
 <li>LiveRecord：直播录制。</li>
-<li>AiQualityControl：媒体质检。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>AiQualityControl：媒体质检。</li> 
      * @return ActivityType 原子任务类型。
 <li>LiveRecord：直播录制。</li>
 <li>AiQualityControl：媒体质检。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActivityType() {
         return this.ActivityType;
@@ -59,11 +56,9 @@ public class LiveActivityResult extends AbstractModel {
      * Set 原子任务类型。
 <li>LiveRecord：直播录制。</li>
 <li>AiQualityControl：媒体质检。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivityType 原子任务类型。
 <li>LiveRecord：直播录制。</li>
 <li>AiQualityControl：媒体质检。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;

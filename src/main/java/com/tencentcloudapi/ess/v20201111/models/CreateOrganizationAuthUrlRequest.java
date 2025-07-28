@@ -227,6 +227,26 @@ p.s. 如果上传授权书 ，需遵循以下条件
     private String UserData;
 
     /**
+    * 组织机构对公打款账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。
+    */
+    @SerializedName("BankAccountNumber")
+    @Expose
+    private String BankAccountNumber;
+
+    /**
+    * 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在对公打款不为空时有效
+    */
+    @SerializedName("BankAccountNumberSame")
+    @Expose
+    private Boolean BankAccountNumberSame;
+
+    /**
      * Get 操作人信息 
      * @return Operator 操作人信息
      */
@@ -774,6 +794,62 @@ p.s. 如果上传授权书 ，需遵循以下条件
         this.UserData = UserData;
     }
 
+    /**
+     * Get 组织机构对公打款账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。 
+     * @return BankAccountNumber 组织机构对公打款账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。
+     */
+    public String getBankAccountNumber() {
+        return this.BankAccountNumber;
+    }
+
+    /**
+     * Set 组织机构对公打款账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。
+     * @param BankAccountNumber 组织机构对公打款账号，账户名跟企业名称一致。
+
+p.s.
+只有认证方式是授权书+对公打款时才生效。
+     */
+    public void setBankAccountNumber(String BankAccountNumber) {
+        this.BankAccountNumber = BankAccountNumber;
+    }
+
+    /**
+     * Get 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在对公打款不为空时有效 
+     * @return BankAccountNumberSame 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在对公打款不为空时有效
+     */
+    public Boolean getBankAccountNumberSame() {
+        return this.BankAccountNumberSame;
+    }
+
+    /**
+     * Set 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在对公打款不为空时有效
+     * @param BankAccountNumberSame 对方打开链接认证时，对公打款账号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在对公打款不为空时有效
+     */
+    public void setBankAccountNumberSame(Boolean BankAccountNumberSame) {
+        this.BankAccountNumberSame = BankAccountNumberSame;
+    }
+
     public CreateOrganizationAuthUrlRequest() {
     }
 
@@ -857,6 +933,12 @@ p.s. 如果上传授权书 ，需遵循以下条件
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
+        if (source.BankAccountNumber != null) {
+            this.BankAccountNumber = new String(source.BankAccountNumber);
+        }
+        if (source.BankAccountNumberSame != null) {
+            this.BankAccountNumberSame = new Boolean(source.BankAccountNumberSame);
+        }
     }
 
 
@@ -886,6 +968,8 @@ p.s. 如果上传授权书 ，需遵循以下条件
         this.setParamArraySimple(map, prefix + "Initialization.", this.Initialization);
         this.setParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
+        this.setParamSimple(map, prefix + "BankAccountNumberSame", this.BankAccountNumberSame);
 
     }
 }

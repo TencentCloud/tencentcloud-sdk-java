@@ -437,6 +437,22 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long CurrentSyncPosition;
 
     /**
+    * 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagList")
+    @Expose
+    private IntegrationTag [] TagList;
+
+    /**
+    * 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorMessage")
+    @Expose
+    private String ErrorMessage;
+
+    /**
      * Get 任务名称 
      * @return TaskName 任务名称
      */
@@ -1464,6 +1480,46 @@ public class IntegrationTaskInfo extends AbstractModel {
         this.CurrentSyncPosition = CurrentSyncPosition;
     }
 
+    /**
+     * Get 标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagList 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IntegrationTag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagList 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagList(IntegrationTag [] TagList) {
+        this.TagList = TagList;
+    }
+
+    /**
+     * Get 错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorMessage 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrorMessage() {
+        return this.ErrorMessage;
+    }
+
+    /**
+     * Set 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorMessage 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
+    }
+
     public IntegrationTaskInfo() {
     }
 
@@ -1649,6 +1705,15 @@ public class IntegrationTaskInfo extends AbstractModel {
         if (source.CurrentSyncPosition != null) {
             this.CurrentSyncPosition = new Long(source.CurrentSyncPosition);
         }
+        if (source.TagList != null) {
+            this.TagList = new IntegrationTag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new IntegrationTag(source.TagList[i]);
+            }
+        }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
+        }
     }
 
 
@@ -1708,6 +1773,8 @@ public class IntegrationTaskInfo extends AbstractModel {
         this.setParamObj(map, prefix + "TaskImportInfo.", this.TaskImportInfo);
         this.setParamSimple(map, prefix + "BusinessLatency", this.BusinessLatency);
         this.setParamSimple(map, prefix + "CurrentSyncPosition", this.CurrentSyncPosition);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
 
     }
 }

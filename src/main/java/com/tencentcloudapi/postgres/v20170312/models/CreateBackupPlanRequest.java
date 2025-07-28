@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateBackupPlanRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -66,23 +66,24 @@ public class CreateBackupPlanRequest extends AbstractModel {
     private String MaxBackupStartTime;
 
     /**
-    * 数据备份保留时长，week默认是7,month为30。
+    * 数据备份保留时长，单位：天。取值范围为：[0,30000)
+BackupPeriodType为week时默认是7,为month时默认为31。
     */
     @SerializedName("BaseBackupRetentionPeriod")
     @Expose
     private Long BaseBackupRetentionPeriod;
 
     /**
-     * Get 实例ID。 
-     * @return DBInstanceId 实例ID。
+     * Get 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param DBInstanceId 实例ID。
+     * Set 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -169,16 +170,20 @@ public class CreateBackupPlanRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据备份保留时长，week默认是7,month为30。 
-     * @return BaseBackupRetentionPeriod 数据备份保留时长，week默认是7,month为30。
+     * Get 数据备份保留时长，单位：天。取值范围为：[0,30000)
+BackupPeriodType为week时默认是7,为month时默认为31。 
+     * @return BaseBackupRetentionPeriod 数据备份保留时长，单位：天。取值范围为：[0,30000)
+BackupPeriodType为week时默认是7,为month时默认为31。
      */
     public Long getBaseBackupRetentionPeriod() {
         return this.BaseBackupRetentionPeriod;
     }
 
     /**
-     * Set 数据备份保留时长，week默认是7,month为30。
-     * @param BaseBackupRetentionPeriod 数据备份保留时长，week默认是7,month为30。
+     * Set 数据备份保留时长，单位：天。取值范围为：[0,30000)
+BackupPeriodType为week时默认是7,为month时默认为31。
+     * @param BaseBackupRetentionPeriod 数据备份保留时长，单位：天。取值范围为：[0,30000)
+BackupPeriodType为week时默认是7,为month时默认为31。
      */
     public void setBaseBackupRetentionPeriod(Long BaseBackupRetentionPeriod) {
         this.BaseBackupRetentionPeriod = BaseBackupRetentionPeriod;

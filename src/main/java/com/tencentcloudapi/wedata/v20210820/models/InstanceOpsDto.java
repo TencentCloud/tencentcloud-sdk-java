@@ -536,6 +536,13 @@ public class InstanceOpsDto extends AbstractModel {
     private Long ScheduleRunType;
 
     /**
+    * 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+    */
+    @SerializedName("AllowRedoType")
+    @Expose
+    private String AllowRedoType;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -1815,6 +1822,22 @@ public class InstanceOpsDto extends AbstractModel {
         this.ScheduleRunType = ScheduleRunType;
     }
 
+    /**
+     * Get 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑 
+     * @return AllowRedoType 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     */
+    public String getAllowRedoType() {
+        return this.AllowRedoType;
+    }
+
+    /**
+     * Set 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     * @param AllowRedoType 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     */
+    public void setAllowRedoType(String AllowRedoType) {
+        this.AllowRedoType = AllowRedoType;
+    }
+
     public InstanceOpsDto() {
     }
 
@@ -2024,6 +2047,9 @@ public class InstanceOpsDto extends AbstractModel {
         if (source.ScheduleRunType != null) {
             this.ScheduleRunType = new Long(source.ScheduleRunType);
         }
+        if (source.AllowRedoType != null) {
+            this.AllowRedoType = new String(source.AllowRedoType);
+        }
     }
 
 
@@ -2095,6 +2121,7 @@ public class InstanceOpsDto extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CirculateInstanceList.", this.CirculateInstanceList);
         this.setParamSimple(map, prefix + "ConcurrentStrategy", this.ConcurrentStrategy);
         this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
+        this.setParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
 
     }
 }

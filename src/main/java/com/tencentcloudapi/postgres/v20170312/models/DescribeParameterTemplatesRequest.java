@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeParameterTemplatesRequest extends AbstractModel {
 
     /**
-    * 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine
+    * 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine。TemplateName不支持模糊匹配。
     */
     @SerializedName("Filters")
     @Expose
@@ -45,30 +45,30 @@ public class DescribeParameterTemplatesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion
+    * 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion。如果不指定该参数，默认将按照参数模板的编号倒序排列，也就是说最新添加的参数模板会排在最前面。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序方式，枚举值，支持：asc（升序） ，desc（降序）
+    * 排序方式，枚举值，支持：asc（升序） ，desc（降序）。默认值为asc。当未指定OrderBy时，该参数失效，此时排序方式为OrderBy参数描述中给出的默认排序方式。
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-     * Get 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine 
-     * @return Filters 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine
+     * Get 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine。TemplateName不支持模糊匹配。 
+     * @return Filters 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine。TemplateName不支持模糊匹配。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine
-     * @param Filters 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine
+     * Set 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine。TemplateName不支持模糊匹配。
+     * @param Filters 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine。TemplateName不支持模糊匹配。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -107,32 +107,32 @@ public class DescribeParameterTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion 
-     * @return OrderBy 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion
+     * Get 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion。如果不指定该参数，默认将按照参数模板的编号倒序排列，也就是说最新添加的参数模板会排在最前面。 
+     * @return OrderBy 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion。如果不指定该参数，默认将按照参数模板的编号倒序排列，也就是说最新添加的参数模板会排在最前面。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion
-     * @param OrderBy 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion
+     * Set 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion。如果不指定该参数，默认将按照参数模板的编号倒序排列，也就是说最新添加的参数模板会排在最前面。
+     * @param OrderBy 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion。如果不指定该参数，默认将按照参数模板的编号倒序排列，也就是说最新添加的参数模板会排在最前面。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序方式，枚举值，支持：asc（升序） ，desc（降序） 
-     * @return OrderByType 排序方式，枚举值，支持：asc（升序） ，desc（降序）
+     * Get 排序方式，枚举值，支持：asc（升序） ，desc（降序）。默认值为asc。当未指定OrderBy时，该参数失效，此时排序方式为OrderBy参数描述中给出的默认排序方式。 
+     * @return OrderByType 排序方式，枚举值，支持：asc（升序） ，desc（降序）。默认值为asc。当未指定OrderBy时，该参数失效，此时排序方式为OrderBy参数描述中给出的默认排序方式。
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 排序方式，枚举值，支持：asc（升序） ，desc（降序）
-     * @param OrderByType 排序方式，枚举值，支持：asc（升序） ，desc（降序）
+     * Set 排序方式，枚举值，支持：asc（升序） ，desc（降序）。默认值为asc。当未指定OrderBy时，该参数失效，此时排序方式为OrderBy参数描述中给出的默认排序方式。
+     * @param OrderByType 排序方式，枚举值，支持：asc（升序） ，desc（降序）。默认值为asc。当未指定OrderBy时，该参数失效，此时排序方式为OrderBy参数描述中给出的默认排序方式。
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

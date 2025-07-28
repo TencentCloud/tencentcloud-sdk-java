@@ -58,7 +58,6 @@ public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel {
 “FluxPerSecond”：平均流量
 “Flux”：流量
 “Request”：请求数
-“Online”：并发连接数
     */
     @SerializedName("StatType")
     @Expose
@@ -186,14 +185,12 @@ public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel {
 “Bandwidth”：带宽
 “FluxPerSecond”：平均流量
 “Flux”：流量
-“Request”：请求数
-“Online”：并发连接数 
+“Request”：请求数 
      * @return StatType 统计指标类型：
 “Bandwidth”：带宽
 “FluxPerSecond”：平均流量
 “Flux”：流量
 “Request”：请求数
-“Online”：并发连接数
      */
     public String getStatType() {
         return this.StatType;
@@ -205,13 +202,11 @@ public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel {
 “FluxPerSecond”：平均流量
 “Flux”：流量
 “Request”：请求数
-“Online”：并发连接数
      * @param StatType 统计指标类型：
 “Bandwidth”：带宽
 “FluxPerSecond”：平均流量
 “Flux”：流量
 “Request”：请求数
-“Online”：并发连接数
      */
     public void setStatType(String StatType) {
         this.StatType = StatType;
