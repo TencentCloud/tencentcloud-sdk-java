@@ -118,14 +118,14 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     private Long ReferUrlType;
 
     /**
-    * 有效开始时间，unix时间戳
+    * 有效开始时间，unix秒级时间戳
     */
     @SerializedName("ExpireStart")
     @Expose
     private String ExpireStart;
 
     /**
-    * 有效结束时间，unix时间戳，0代表永久有效
+    * 有效结束时间，unix秒级时间戳，0代表永久有效
     */
     @SerializedName("ExpireEnd")
     @Expose
@@ -392,32 +392,32 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     }
 
     /**
-     * Get 有效开始时间，unix时间戳 
-     * @return ExpireStart 有效开始时间，unix时间戳
+     * Get 有效开始时间，unix秒级时间戳 
+     * @return ExpireStart 有效开始时间，unix秒级时间戳
      */
     public String getExpireStart() {
         return this.ExpireStart;
     }
 
     /**
-     * Set 有效开始时间，unix时间戳
-     * @param ExpireStart 有效开始时间，unix时间戳
+     * Set 有效开始时间，unix秒级时间戳
+     * @param ExpireStart 有效开始时间，unix秒级时间戳
      */
     public void setExpireStart(String ExpireStart) {
         this.ExpireStart = ExpireStart;
     }
 
     /**
-     * Get 有效结束时间，unix时间戳，0代表永久有效 
-     * @return ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+     * Get 有效结束时间，unix秒级时间戳，0代表永久有效 
+     * @return ExpireEnd 有效结束时间，unix秒级时间戳，0代表永久有效
      */
     public String getExpireEnd() {
         return this.ExpireEnd;
     }
 
     /**
-     * Set 有效结束时间，unix时间戳，0代表永久有效
-     * @param ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+     * Set 有效结束时间，unix秒级时间戳，0代表永久有效
+     * @param ExpireEnd 有效结束时间，unix秒级时间戳，0代表永久有效
      */
     public void setExpireEnd(String ExpireEnd) {
         this.ExpireEnd = ExpireEnd;

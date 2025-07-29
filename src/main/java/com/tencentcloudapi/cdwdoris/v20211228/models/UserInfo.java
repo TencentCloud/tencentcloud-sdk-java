@@ -87,6 +87,13 @@ public class UserInfo extends AbstractModel {
     private Long [] CamRangerGroupIds;
 
     /**
+    * 0: 灵活场景 1: 固定场景
+    */
+    @SerializedName("ComputeGroupType")
+    @Expose
+    private Long ComputeGroupType;
+
+    /**
      * Get 集群实例id 
      * @return InstanceId 集群实例id
      */
@@ -230,6 +237,22 @@ public class UserInfo extends AbstractModel {
         this.CamRangerGroupIds = CamRangerGroupIds;
     }
 
+    /**
+     * Get 0: 灵活场景 1: 固定场景 
+     * @return ComputeGroupType 0: 灵活场景 1: 固定场景
+     */
+    public Long getComputeGroupType() {
+        return this.ComputeGroupType;
+    }
+
+    /**
+     * Set 0: 灵活场景 1: 固定场景
+     * @param ComputeGroupType 0: 灵活场景 1: 固定场景
+     */
+    public void setComputeGroupType(Long ComputeGroupType) {
+        this.ComputeGroupType = ComputeGroupType;
+    }
+
     public UserInfo() {
     }
 
@@ -268,6 +291,9 @@ public class UserInfo extends AbstractModel {
                 this.CamRangerGroupIds[i] = new Long(source.CamRangerGroupIds[i]);
             }
         }
+        if (source.ComputeGroupType != null) {
+            this.ComputeGroupType = new Long(source.ComputeGroupType);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class UserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "OldPwd", this.OldPwd);
         this.setParamSimple(map, prefix + "CamUin", this.CamUin);
         this.setParamArraySimple(map, prefix + "CamRangerGroupIds.", this.CamRangerGroupIds);
+        this.setParamSimple(map, prefix + "ComputeGroupType", this.ComputeGroupType);
 
     }
 }

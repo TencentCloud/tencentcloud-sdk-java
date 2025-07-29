@@ -240,6 +240,13 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String AccessLogTopicId;
 
     /**
+    * 是否开启七层高级路由
+    */
+    @SerializedName("AdvancedRoute")
+    @Expose
+    private Boolean AdvancedRoute;
+
+    /**
      * Get 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。 
      * @return LoadBalancerType 负载均衡实例的网络类型：
@@ -743,6 +750,22 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.AccessLogTopicId = AccessLogTopicId;
     }
 
+    /**
+     * Get 是否开启七层高级路由 
+     * @return AdvancedRoute 是否开启七层高级路由
+     */
+    public Boolean getAdvancedRoute() {
+        return this.AdvancedRoute;
+    }
+
+    /**
+     * Set 是否开启七层高级路由
+     * @param AdvancedRoute 是否开启七层高级路由
+     */
+    public void setAdvancedRoute(Boolean AdvancedRoute) {
+        this.AdvancedRoute = AdvancedRoute;
+    }
+
     public CreateLoadBalancerRequest() {
     }
 
@@ -850,6 +873,9 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (source.AccessLogTopicId != null) {
             this.AccessLogTopicId = new String(source.AccessLogTopicId);
         }
+        if (source.AdvancedRoute != null) {
+            this.AdvancedRoute = new Boolean(source.AdvancedRoute);
+        }
     }
 
 
@@ -887,6 +913,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamObj(map, prefix + "LBChargePrepaid.", this.LBChargePrepaid);
         this.setParamSimple(map, prefix + "LBChargeType", this.LBChargeType);
         this.setParamSimple(map, prefix + "AccessLogTopicId", this.AccessLogTopicId);
+        this.setParamSimple(map, prefix + "AdvancedRoute", this.AdvancedRoute);
 
     }
 }

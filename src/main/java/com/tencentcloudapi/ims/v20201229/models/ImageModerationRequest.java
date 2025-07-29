@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageModerationRequest extends AbstractModel {
 
     /**
-    * 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置。
+    * 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
 备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
     */
     @SerializedName("BizType")
@@ -88,9 +88,9 @@ public class ImageModerationRequest extends AbstractModel {
     private String Type;
 
     /**
-     * Get 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置。
+     * Get 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
 备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。 
-     * @return BizType 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置。
+     * @return BizType 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
 备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
      */
     public String getBizType() {
@@ -98,9 +98,9 @@ public class ImageModerationRequest extends AbstractModel {
     }
 
     /**
-     * Set 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置。
+     * Set 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
 备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
-     * @param BizType 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置。
+     * @param BizType 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
 备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
      */
     public void setBizType(String BizType) {

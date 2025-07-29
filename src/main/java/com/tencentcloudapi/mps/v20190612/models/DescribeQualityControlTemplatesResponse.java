@@ -32,7 +32,6 @@ public class DescribeQualityControlTemplatesResponse extends AbstractModel {
 
     /**
     * 媒体质检模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityControlTemplateSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeQualityControlTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get 媒体质检模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒体质检模板详情列表。 
      * @return QualityControlTemplateSet 媒体质检模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityControlTemplate [] getQualityControlTemplateSet() {
         return this.QualityControlTemplateSet;
@@ -73,9 +70,7 @@ public class DescribeQualityControlTemplatesResponse extends AbstractModel {
 
     /**
      * Set 媒体质检模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QualityControlTemplateSet 媒体质检模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityControlTemplateSet(QualityControlTemplate [] QualityControlTemplateSet) {
         this.QualityControlTemplateSet = QualityControlTemplateSet;

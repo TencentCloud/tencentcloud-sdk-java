@@ -53,6 +53,13 @@ public class CreateQualityControlTemplateRequest extends AbstractModel {
     private String RecordFormat;
 
     /**
+    * 媒体质检抽检策略。
+    */
+    @SerializedName("Strategy")
+    @Expose
+    private QualityControlStrategy Strategy;
+
+    /**
      * Get 媒体质检模板名称，长度限制：64 个字符。 
      * @return Name 媒体质检模板名称，长度限制：64 个字符。
      */
@@ -120,6 +127,22 @@ public class CreateQualityControlTemplateRequest extends AbstractModel {
         this.RecordFormat = RecordFormat;
     }
 
+    /**
+     * Get 媒体质检抽检策略。 
+     * @return Strategy 媒体质检抽检策略。
+     */
+    public QualityControlStrategy getStrategy() {
+        return this.Strategy;
+    }
+
+    /**
+     * Set 媒体质检抽检策略。
+     * @param Strategy 媒体质检抽检策略。
+     */
+    public void setStrategy(QualityControlStrategy Strategy) {
+        this.Strategy = Strategy;
+    }
+
     public CreateQualityControlTemplateRequest() {
     }
 
@@ -143,6 +166,9 @@ public class CreateQualityControlTemplateRequest extends AbstractModel {
         if (source.RecordFormat != null) {
             this.RecordFormat = new String(source.RecordFormat);
         }
+        if (source.Strategy != null) {
+            this.Strategy = new QualityControlStrategy(source.Strategy);
+        }
     }
 
 
@@ -154,6 +180,7 @@ public class CreateQualityControlTemplateRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "QualityControlItemSet.", this.QualityControlItemSet);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "RecordFormat", this.RecordFormat);
+        this.setParamObj(map, prefix + "Strategy.", this.Strategy);
 
     }
 }

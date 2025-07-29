@@ -136,6 +136,13 @@ public class ModifyInput extends AbstractModel {
     private String InputRegion;
 
     /**
+    * 冷热备相关
+    */
+    @SerializedName("FailOverOption")
+    @Expose
+    private FailOverOption FailOverOption;
+
+    /**
      * Get 输入Id。 
      * @return InputId 输入Id。
      */
@@ -391,6 +398,22 @@ public class ModifyInput extends AbstractModel {
         this.InputRegion = InputRegion;
     }
 
+    /**
+     * Get 冷热备相关 
+     * @return FailOverOption 冷热备相关
+     */
+    public FailOverOption getFailOverOption() {
+        return this.FailOverOption;
+    }
+
+    /**
+     * Set 冷热备相关
+     * @param FailOverOption 冷热备相关
+     */
+    public void setFailOverOption(FailOverOption FailOverOption) {
+        this.FailOverOption = FailOverOption;
+    }
+
     public ModifyInput() {
     }
 
@@ -456,6 +479,9 @@ public class ModifyInput extends AbstractModel {
         if (source.InputRegion != null) {
             this.InputRegion = new String(source.InputRegion);
         }
+        if (source.FailOverOption != null) {
+            this.FailOverOption = new FailOverOption(source.FailOverOption);
+        }
     }
 
 
@@ -479,6 +505,7 @@ public class ModifyInput extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
         this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
+        this.setParamObj(map, prefix + "FailOverOption.", this.FailOverOption);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ecdn.v20191012.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,44 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PurgeUrlsCacheRequest extends AbstractModel {
+public class FailOverOption extends AbstractModel {
 
     /**
-    * 要刷新的Url列表，必须包含协议头部。
+    * 热备
     */
-    @SerializedName("Urls")
+    @SerializedName("FailOverType")
     @Expose
-    private String [] Urls;
+    private String FailOverType;
 
     /**
-     * Get 要刷新的Url列表，必须包含协议头部。 
-     * @return Urls 要刷新的Url列表，必须包含协议头部。
+     * Get 热备 
+     * @return FailOverType 热备
      */
-    public String [] getUrls() {
-        return this.Urls;
+    public String getFailOverType() {
+        return this.FailOverType;
     }
 
     /**
-     * Set 要刷新的Url列表，必须包含协议头部。
-     * @param Urls 要刷新的Url列表，必须包含协议头部。
+     * Set 热备
+     * @param FailOverType 热备
      */
-    public void setUrls(String [] Urls) {
-        this.Urls = Urls;
+    public void setFailOverType(String FailOverType) {
+        this.FailOverType = FailOverType;
     }
 
-    public PurgeUrlsCacheRequest() {
+    public FailOverOption() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public PurgeUrlsCacheRequest(PurgeUrlsCacheRequest source) {
-        if (source.Urls != null) {
-            this.Urls = new String[source.Urls.length];
-            for (int i = 0; i < source.Urls.length; i++) {
-                this.Urls[i] = new String(source.Urls[i]);
-            }
+    public FailOverOption(FailOverOption source) {
+        if (source.FailOverType != null) {
+            this.FailOverType = new String(source.FailOverType);
         }
     }
 
@@ -67,7 +64,7 @@ public class PurgeUrlsCacheRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
+        this.setParamSimple(map, prefix + "FailOverType", this.FailOverType);
 
     }
 }

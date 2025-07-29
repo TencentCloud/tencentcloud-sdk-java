@@ -33,8 +33,7 @@ public class CreateLiveTimeShiftTemplateRequest extends AbstractModel {
     private String TemplateName;
 
     /**
-    * 时移时长。
-单位：s。
+    * 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
     */
     @SerializedName("Duration")
     @Expose
@@ -110,20 +109,16 @@ Overseas：海外及港澳台地区。
     }
 
     /**
-     * Get 时移时长。
-单位：s。 
-     * @return Duration 时移时长。
-单位：s。
+     * Get 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。 
+     * @return Duration 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 时移时长。
-单位：s。
-     * @param Duration 时移时长。
-单位：s。
+     * Set 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
+     * @param Duration 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;

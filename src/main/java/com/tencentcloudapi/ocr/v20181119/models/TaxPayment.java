@@ -40,6 +40,13 @@ public class TaxPayment extends AbstractModel {
     private OtherInvoiceItem [] Content;
 
     /**
+    * 表格。
+    */
+    @SerializedName("TableItems")
+    @Expose
+    private OtherInvoiceList [] TableItems;
+
+    /**
      * Get 发票名称 
      * @return Title 发票名称
      */
@@ -79,6 +86,22 @@ public class TaxPayment extends AbstractModel {
         this.Content = Content;
     }
 
+    /**
+     * Get 表格。 
+     * @return TableItems 表格。
+     */
+    public OtherInvoiceList [] getTableItems() {
+        return this.TableItems;
+    }
+
+    /**
+     * Set 表格。
+     * @param TableItems 表格。
+     */
+    public void setTableItems(OtherInvoiceList [] TableItems) {
+        this.TableItems = TableItems;
+    }
+
     public TaxPayment() {
     }
 
@@ -96,6 +119,12 @@ public class TaxPayment extends AbstractModel {
                 this.Content[i] = new OtherInvoiceItem(source.Content[i]);
             }
         }
+        if (source.TableItems != null) {
+            this.TableItems = new OtherInvoiceList[source.TableItems.length];
+            for (int i = 0; i < source.TableItems.length; i++) {
+                this.TableItems[i] = new OtherInvoiceList(source.TableItems[i]);
+            }
+        }
     }
 
 
@@ -105,6 +134,7 @@ public class TaxPayment extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamArrayObj(map, prefix + "Content.", this.Content);
+        this.setParamArrayObj(map, prefix + "TableItems.", this.TableItems);
 
     }
 }

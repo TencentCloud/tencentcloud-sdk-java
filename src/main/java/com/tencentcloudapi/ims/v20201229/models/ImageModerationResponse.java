@@ -31,7 +31,7 @@ public class ImageModerationResponse extends AbstractModel {
     private String Suggestion;
 
     /**
-    * 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+    * 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值标签示例：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）。
     */
     @SerializedName("Label")
     @Expose
@@ -52,9 +52,9 @@ public class ImageModerationResponse extends AbstractModel {
     private Long Score;
 
     /**
-    * 该字段用于返回检测结果(LabelResults)中所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。
+    * 该字段用于返回分类检测模型的详细检测结果；表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。详细返回值信息可参阅对应的数据结构（LabelResults）描述。
 
-返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或咨询客服）
+返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelResults")
@@ -63,7 +63,6 @@ public class ImageModerationResponse extends AbstractModel {
 
     /**
     * 该字段用于返回物体检测模型的详细检测结果；包括：实体、广告台标、二维码等内容命中的标签名称、标签分数、坐标信息、场景识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（ObjectResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectResults")
     @Expose
@@ -71,7 +70,6 @@ public class ImageModerationResponse extends AbstractModel {
 
     /**
     * 该字段用于返回OCR文本识别的详细检测结果；包括：文本坐标信息、文本识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（OcrResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrResults")
     @Expose
@@ -79,7 +77,6 @@ public class ImageModerationResponse extends AbstractModel {
 
     /**
     * 该字段用于返回基于图片风险库（风险黑库与正常白库）识别的结果,详细返回值信息可参阅对应的数据结构（LibResults）描述。<br>备注：图片风险库目前**暂不支持自定义库**。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LibResults")
     @Expose
@@ -116,7 +113,6 @@ public class ImageModerationResponse extends AbstractModel {
 
     /**
     * 该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecognitionResults")
     @Expose
@@ -146,16 +142,16 @@ public class ImageModerationResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。 
-     * @return Label 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+     * Get 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值标签示例：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）。 
+     * @return Label 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值标签示例：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）。
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
-     * @param Label 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+     * Set 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值标签示例：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）。
+     * @param Label 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值标签示例：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）。
      */
     public void setLabel(String Label) {
         this.Label = Label;
@@ -194,13 +190,13 @@ public class ImageModerationResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回检测结果(LabelResults)中所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。
+     * Get 该字段用于返回分类检测模型的详细检测结果；表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。详细返回值信息可参阅对应的数据结构（LabelResults）描述。
 
-返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或咨询客服）
+返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LabelResults 该字段用于返回检测结果(LabelResults)中所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。
+     * @return LabelResults 该字段用于返回分类检测模型的详细检测结果；表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。详细返回值信息可参阅对应的数据结构（LabelResults）描述。
 
-返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或咨询客服）
+返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LabelResult [] getLabelResults() {
@@ -208,13 +204,13 @@ public class ImageModerationResponse extends AbstractModel {
     }
 
     /**
-     * Set 该字段用于返回检测结果(LabelResults)中所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。
+     * Set 该字段用于返回分类检测模型的详细检测结果；表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。详细返回值信息可参阅对应的数据结构（LabelResults）描述。
 
-返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或咨询客服）
+返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LabelResults 该字段用于返回检测结果(LabelResults)中所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。
+     * @param LabelResults 该字段用于返回分类检测模型的详细检测结果；表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。详细返回值信息可参阅对应的数据结构（LabelResults）描述。
 
-返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或咨询客服）
+返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelResults(LabelResult [] LabelResults) {
@@ -222,10 +218,8 @@ public class ImageModerationResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回物体检测模型的详细检测结果；包括：实体、广告台标、二维码等内容命中的标签名称、标签分数、坐标信息、场景识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（ObjectResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回物体检测模型的详细检测结果；包括：实体、广告台标、二维码等内容命中的标签名称、标签分数、坐标信息、场景识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（ObjectResults）描述。 
      * @return ObjectResults 该字段用于返回物体检测模型的详细检测结果；包括：实体、广告台标、二维码等内容命中的标签名称、标签分数、坐标信息、场景识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（ObjectResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ObjectResult [] getObjectResults() {
         return this.ObjectResults;
@@ -233,19 +227,15 @@ public class ImageModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回物体检测模型的详细检测结果；包括：实体、广告台标、二维码等内容命中的标签名称、标签分数、坐标信息、场景识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（ObjectResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectResults 该字段用于返回物体检测模型的详细检测结果；包括：实体、广告台标、二维码等内容命中的标签名称、标签分数、坐标信息、场景识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（ObjectResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectResults(ObjectResult [] ObjectResults) {
         this.ObjectResults = ObjectResults;
     }
 
     /**
-     * Get 该字段用于返回OCR文本识别的详细检测结果；包括：文本坐标信息、文本识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（OcrResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回OCR文本识别的详细检测结果；包括：文本坐标信息、文本识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（OcrResults）描述。 
      * @return OcrResults 该字段用于返回OCR文本识别的详细检测结果；包括：文本坐标信息、文本识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（OcrResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OcrResult [] getOcrResults() {
         return this.OcrResults;
@@ -253,19 +243,15 @@ public class ImageModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回OCR文本识别的详细检测结果；包括：文本坐标信息、文本识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（OcrResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrResults 该字段用于返回OCR文本识别的详细检测结果；包括：文本坐标信息、文本识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（OcrResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrResults(OcrResult [] OcrResults) {
         this.OcrResults = OcrResults;
     }
 
     /**
-     * Get 该字段用于返回基于图片风险库（风险黑库与正常白库）识别的结果,详细返回值信息可参阅对应的数据结构（LibResults）描述。<br>备注：图片风险库目前**暂不支持自定义库**。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回基于图片风险库（风险黑库与正常白库）识别的结果,详细返回值信息可参阅对应的数据结构（LibResults）描述。<br>备注：图片风险库目前**暂不支持自定义库**。 
      * @return LibResults 该字段用于返回基于图片风险库（风险黑库与正常白库）识别的结果,详细返回值信息可参阅对应的数据结构（LibResults）描述。<br>备注：图片风险库目前**暂不支持自定义库**。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LibResult [] getLibResults() {
         return this.LibResults;
@@ -273,9 +259,7 @@ public class ImageModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回基于图片风险库（风险黑库与正常白库）识别的结果,详细返回值信息可参阅对应的数据结构（LibResults）描述。<br>备注：图片风险库目前**暂不支持自定义库**。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LibResults 该字段用于返回基于图片风险库（风险黑库与正常白库）识别的结果,详细返回值信息可参阅对应的数据结构（LibResults）描述。<br>备注：图片风险库目前**暂不支持自定义库**。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLibResults(LibResult [] LibResults) {
         this.LibResults = LibResults;
@@ -350,10 +334,8 @@ public class ImageModerationResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息 
      * @return RecognitionResults 该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RecognitionResult [] getRecognitionResults() {
         return this.RecognitionResults;
@@ -361,9 +343,7 @@ public class ImageModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecognitionResults 该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecognitionResults(RecognitionResult [] RecognitionResults) {
         this.RecognitionResults = RecognitionResults;

@@ -97,6 +97,13 @@ public class AssociationItem extends AbstractModel {
     private Long Weight;
 
     /**
+    * 高级路由规则ID
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
+
+    /**
      * Get 关联到的负载均衡ID 
      * @return LoadBalancerId 关联到的负载均衡ID
      */
@@ -268,6 +275,22 @@ public class AssociationItem extends AbstractModel {
         this.Weight = Weight;
     }
 
+    /**
+     * Get 高级路由规则ID 
+     * @return RuleId 高级路由规则ID
+     */
+    public String getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 高级路由规则ID
+     * @param RuleId 高级路由规则ID
+     */
+    public void setRuleId(String RuleId) {
+        this.RuleId = RuleId;
+    }
+
     public AssociationItem() {
     }
 
@@ -306,6 +329,9 @@ public class AssociationItem extends AbstractModel {
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
         }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
     }
 
 
@@ -323,6 +349,7 @@ public class AssociationItem extends AbstractModel {
         this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
 
     }
 }

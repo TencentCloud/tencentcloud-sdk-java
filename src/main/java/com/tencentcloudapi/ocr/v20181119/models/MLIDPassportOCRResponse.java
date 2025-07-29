@@ -154,6 +154,13 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     private Long [] WarnCardInfos;
 
     /**
+    * 输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
+    */
+    @SerializedName("CardCount")
+    @Expose
+    private Long CardCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -485,6 +492,22 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     }
 
     /**
+     * Get 输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回） 
+     * @return CardCount 输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
+     */
+    public Long getCardCount() {
+        return this.CardCount;
+    }
+
+    /**
+     * Set 输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
+     * @param CardCount 输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
+     */
+    public void setCardCount(Long CardCount) {
+        this.CardCount = CardCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -565,6 +588,9 @@ public class MLIDPassportOCRResponse extends AbstractModel {
                 this.WarnCardInfos[i] = new Long(source.WarnCardInfos[i]);
             }
         }
+        if (source.CardCount != null) {
+            this.CardCount = new Long(source.CardCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -592,6 +618,7 @@ public class MLIDPassportOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "PassportRecognizeInfos.", this.PassportRecognizeInfos);
         this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
+        this.setParamSimple(map, prefix + "CardCount", this.CardCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -60,6 +60,13 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
     private String RecordFormat;
 
     /**
+    * 媒体质检抽检策略。
+    */
+    @SerializedName("Strategy")
+    @Expose
+    private QualityControlStrategy Strategy;
+
+    /**
      * Get 媒体质检模板唯一标识。 
      * @return Definition 媒体质检模板唯一标识。
      */
@@ -143,6 +150,22 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
         this.RecordFormat = RecordFormat;
     }
 
+    /**
+     * Get 媒体质检抽检策略。 
+     * @return Strategy 媒体质检抽检策略。
+     */
+    public QualityControlStrategy getStrategy() {
+        return this.Strategy;
+    }
+
+    /**
+     * Set 媒体质检抽检策略。
+     * @param Strategy 媒体质检抽检策略。
+     */
+    public void setStrategy(QualityControlStrategy Strategy) {
+        this.Strategy = Strategy;
+    }
+
     public ModifyQualityControlTemplateRequest() {
     }
 
@@ -169,6 +192,9 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
         if (source.RecordFormat != null) {
             this.RecordFormat = new String(source.RecordFormat);
         }
+        if (source.Strategy != null) {
+            this.Strategy = new QualityControlStrategy(source.Strategy);
+        }
     }
 
 
@@ -181,6 +207,7 @@ public class ModifyQualityControlTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamArrayObj(map, prefix + "QualityControlItemSet.", this.QualityControlItemSet);
         this.setParamSimple(map, prefix + "RecordFormat", this.RecordFormat);
+        this.setParamObj(map, prefix + "Strategy.", this.Strategy);
 
     }
 }

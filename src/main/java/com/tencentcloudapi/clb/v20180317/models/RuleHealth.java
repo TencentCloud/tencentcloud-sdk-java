@@ -47,6 +47,13 @@ public class RuleHealth extends AbstractModel {
     private String Url;
 
     /**
+    * 高级路由规则ID
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
+
+    /**
     * 本规则上绑定的后端服务的健康检查状态
     */
     @SerializedName("Targets")
@@ -110,6 +117,22 @@ public class RuleHealth extends AbstractModel {
     }
 
     /**
+     * Get 高级路由规则ID 
+     * @return RuleId 高级路由规则ID
+     */
+    public String getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 高级路由规则ID
+     * @param RuleId 高级路由规则ID
+     */
+    public void setRuleId(String RuleId) {
+        this.RuleId = RuleId;
+    }
+
+    /**
      * Get 本规则上绑定的后端服务的健康检查状态 
      * @return Targets 本规则上绑定的后端服务的健康检查状态
      */
@@ -142,6 +165,9 @@ public class RuleHealth extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
+        }
         if (source.Targets != null) {
             this.Targets = new TargetHealth[source.Targets.length];
             for (int i = 0; i < source.Targets.length; i++) {
@@ -158,6 +184,7 @@ public class RuleHealth extends AbstractModel {
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
 
     }

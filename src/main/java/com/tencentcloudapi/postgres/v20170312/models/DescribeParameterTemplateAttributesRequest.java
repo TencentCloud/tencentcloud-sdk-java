@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeParameterTemplateAttributesRequest extends AbstractModel {
 
     /**
-    * 参数模板ID。可通过[DescribeParameterTemplates](https://tapd.woa.com/tapd_fe/20400322/story/detail/1020400322125673714)接口获取
+    * 参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get 参数模板ID。可通过[DescribeParameterTemplates](https://tapd.woa.com/tapd_fe/20400322/story/detail/1020400322125673714)接口获取 
-     * @return TemplateId 参数模板ID。可通过[DescribeParameterTemplates](https://tapd.woa.com/tapd_fe/20400322/story/detail/1020400322125673714)接口获取
+     * Get 参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取 
+     * @return TemplateId 参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 参数模板ID。可通过[DescribeParameterTemplates](https://tapd.woa.com/tapd_fe/20400322/story/detail/1020400322125673714)接口获取
-     * @param TemplateId 参数模板ID。可通过[DescribeParameterTemplates](https://tapd.woa.com/tapd_fe/20400322/story/detail/1020400322125673714)接口获取
+     * Set 参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
+     * @param TemplateId 参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
