@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeProjectUsersRequest extends AbstractModel {
 
     /**
+    * 项目id
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
     * 分页号
     */
     @SerializedName("PageNumber")
@@ -57,6 +64,22 @@ public class DescribeProjectUsersRequest extends AbstractModel {
     @SerializedName("IsProjectAdmin")
     @Expose
     private Boolean IsProjectAdmin;
+
+    /**
+     * Get 项目id 
+     * @return ProjectId 项目id
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目id
+     * @param ProjectId 项目id
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
 
     /**
      * Get 分页号 
@@ -146,6 +169,9 @@ public class DescribeProjectUsersRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeProjectUsersRequest(DescribeProjectUsersRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
         if (source.PageNumber != null) {
             this.PageNumber = new Long(source.PageNumber);
         }
@@ -174,6 +200,7 @@ public class DescribeProjectUsersRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
