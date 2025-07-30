@@ -1947,6 +1947,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取下游任务信息批量
+     * @param req DescribeSuccessorTaskInfoListRequest
+     * @return DescribeSuccessorTaskInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSuccessorTaskInfoListResponse DescribeSuccessorTaskInfoList(DescribeSuccessorTaskInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSuccessorTaskInfoList", DescribeSuccessorTaskInfoListResponse.class);
+    }
+
+    /**
      *元数据模型-表基础信息查询接口
      * @param req DescribeTableBasicInfoRequest
      * @return DescribeTableBasicInfoResponse

@@ -203,14 +203,14 @@ null：用户上传证书（没有套餐类型），
     private String VerifyType;
 
     /**
-    * 证书生效时间。
+    * 证书生效时间。时区为GMT+8:00
     */
     @SerializedName("CertBeginTime")
     @Expose
     private String CertBeginTime;
 
     /**
-    * 证书过期时间。
+    * 证书过期时间。时区为GMT+8:00
     */
     @SerializedName("CertEndTime")
     @Expose
@@ -224,7 +224,7 @@ null：用户上传证书（没有套餐类型），
     private String ValidityPeriod;
 
     /**
-    * 创建时间。
+    * 创建时间。时区为GMT+8:00
     */
     @SerializedName("InsertTime")
     @Expose
@@ -420,14 +420,14 @@ null：用户上传证书（没有套餐类型），
     private Boolean IsExpiring;
 
     /**
-    * DV证书添加验证截止时间
+    * DV证书添加验证截止时间，时区为GMT+8:00
     */
     @SerializedName("DVAuthDeadline")
     @Expose
     private String DVAuthDeadline;
 
     /**
-    * 域名验证通过时间
+    * 域名验证通过时间，时区为GMT+8:00
     */
     @SerializedName("ValidationPassedTime")
     @Expose
@@ -483,7 +483,7 @@ null：用户上传证书（没有套餐类型），
     private SupportDownloadType SupportDownloadType;
 
     /**
-    * 证书吊销完成时间
+    * 证书吊销完成时间，时区为GMT+8:00
     */
     @SerializedName("CertRevokedTime")
     @Expose
@@ -1072,32 +1072,32 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 证书生效时间。 
-     * @return CertBeginTime 证书生效时间。
+     * Get 证书生效时间。时区为GMT+8:00 
+     * @return CertBeginTime 证书生效时间。时区为GMT+8:00
      */
     public String getCertBeginTime() {
         return this.CertBeginTime;
     }
 
     /**
-     * Set 证书生效时间。
-     * @param CertBeginTime 证书生效时间。
+     * Set 证书生效时间。时区为GMT+8:00
+     * @param CertBeginTime 证书生效时间。时区为GMT+8:00
      */
     public void setCertBeginTime(String CertBeginTime) {
         this.CertBeginTime = CertBeginTime;
     }
 
     /**
-     * Get 证书过期时间。 
-     * @return CertEndTime 证书过期时间。
+     * Get 证书过期时间。时区为GMT+8:00 
+     * @return CertEndTime 证书过期时间。时区为GMT+8:00
      */
     public String getCertEndTime() {
         return this.CertEndTime;
     }
 
     /**
-     * Set 证书过期时间。
-     * @param CertEndTime 证书过期时间。
+     * Set 证书过期时间。时区为GMT+8:00
+     * @param CertEndTime 证书过期时间。时区为GMT+8:00
      */
     public void setCertEndTime(String CertEndTime) {
         this.CertEndTime = CertEndTime;
@@ -1120,16 +1120,16 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 创建时间。 
-     * @return InsertTime 创建时间。
+     * Get 创建时间。时区为GMT+8:00 
+     * @return InsertTime 创建时间。时区为GMT+8:00
      */
     public String getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param InsertTime 创建时间。
+     * Set 创建时间。时区为GMT+8:00
+     * @param InsertTime 创建时间。时区为GMT+8:00
      */
     public void setInsertTime(String InsertTime) {
         this.InsertTime = InsertTime;
@@ -1568,32 +1568,32 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get DV证书添加验证截止时间 
-     * @return DVAuthDeadline DV证书添加验证截止时间
+     * Get DV证书添加验证截止时间，时区为GMT+8:00 
+     * @return DVAuthDeadline DV证书添加验证截止时间，时区为GMT+8:00
      */
     public String getDVAuthDeadline() {
         return this.DVAuthDeadline;
     }
 
     /**
-     * Set DV证书添加验证截止时间
-     * @param DVAuthDeadline DV证书添加验证截止时间
+     * Set DV证书添加验证截止时间，时区为GMT+8:00
+     * @param DVAuthDeadline DV证书添加验证截止时间，时区为GMT+8:00
      */
     public void setDVAuthDeadline(String DVAuthDeadline) {
         this.DVAuthDeadline = DVAuthDeadline;
     }
 
     /**
-     * Get 域名验证通过时间 
-     * @return ValidationPassedTime 域名验证通过时间
+     * Get 域名验证通过时间，时区为GMT+8:00 
+     * @return ValidationPassedTime 域名验证通过时间，时区为GMT+8:00
      */
     public String getValidationPassedTime() {
         return this.ValidationPassedTime;
     }
 
     /**
-     * Set 域名验证通过时间
-     * @param ValidationPassedTime 域名验证通过时间
+     * Set 域名验证通过时间，时区为GMT+8:00
+     * @param ValidationPassedTime 域名验证通过时间，时区为GMT+8:00
      */
     public void setValidationPassedTime(String ValidationPassedTime) {
         this.ValidationPassedTime = ValidationPassedTime;
@@ -1712,16 +1712,16 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 证书吊销完成时间 
-     * @return CertRevokedTime 证书吊销完成时间
+     * Get 证书吊销完成时间，时区为GMT+8:00 
+     * @return CertRevokedTime 证书吊销完成时间，时区为GMT+8:00
      */
     public String getCertRevokedTime() {
         return this.CertRevokedTime;
     }
 
     /**
-     * Set 证书吊销完成时间
-     * @param CertRevokedTime 证书吊销完成时间
+     * Set 证书吊销完成时间，时区为GMT+8:00
+     * @param CertRevokedTime 证书吊销完成时间，时区为GMT+8:00
      */
     public void setCertRevokedTime(String CertRevokedTime) {
         this.CertRevokedTime = CertRevokedTime;

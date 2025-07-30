@@ -60,7 +60,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private String Type;
 
     /**
-    * 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+    * 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
     */
     @SerializedName("Protocol")
     @Expose
@@ -86,7 +86,7 @@ v1 目标组类型不支持设置 Weight 参数。
     private Long Weight;
 
     /**
-    * 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+    * 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
     */
     @SerializedName("FullListenSwitch")
     @Expose
@@ -100,7 +100,7 @@ v1 目标组类型不支持设置 Weight 参数。
     private Boolean KeepaliveEnable;
 
     /**
-    * 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
+    * 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
     */
     @SerializedName("SessionExpireTime")
     @Expose
@@ -191,16 +191,16 @@ v1 目标组类型不支持设置 Weight 参数。
     }
 
     /**
-     * Get 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。 
-     * @return Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+     * Get 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。 
+     * @return Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
-     * @param Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+     * Set 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
+     * @param Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -259,16 +259,16 @@ v1 目标组类型不支持设置 Weight 参数。
     }
 
     /**
-     * Get 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。 
-     * @return FullListenSwitch 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+     * Get 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。 
+     * @return FullListenSwitch 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
      */
     public Boolean getFullListenSwitch() {
         return this.FullListenSwitch;
     }
 
     /**
-     * Set 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
-     * @param FullListenSwitch 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+     * Set 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
+     * @param FullListenSwitch 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
      */
     public void setFullListenSwitch(Boolean FullListenSwitch) {
         this.FullListenSwitch = FullListenSwitch;
@@ -291,16 +291,16 @@ v1 目标组类型不支持设置 Weight 参数。
     }
 
     /**
-     * Get 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。 
-     * @return SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
+     * Get 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。 
+     * @return SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
      */
     public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
     /**
-     * Set 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
-     * @param SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
+     * Set 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
+     * @param SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;

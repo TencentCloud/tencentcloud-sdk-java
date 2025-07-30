@@ -32,7 +32,7 @@ public class ModifyDatasourceCloudResponse extends AbstractModel {
     private ErrorInfo ErrorInfo;
 
     /**
-    * 成功无
+    * 无
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -83,9 +83,9 @@ public class ModifyDatasourceCloudResponse extends AbstractModel {
     }
 
     /**
-     * Get 成功无
+     * Get 无
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 成功无
+     * @return Data 无
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
@@ -93,9 +93,9 @@ public class ModifyDatasourceCloudResponse extends AbstractModel {
     }
 
     /**
-     * Set 成功无
+     * Set 无
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 成功无
+     * @param Data 无
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {

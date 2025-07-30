@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeWechatAppletsRequest extends AbstractModel {
 
     /**
+    * 企业ID列表，可多选
+    */
+    @SerializedName("CustomerIdList")
+    @Expose
+    private Long [] CustomerIdList;
+
+    /**
     * 企业ID
     */
     @SerializedName("CustomerId")
@@ -106,6 +113,22 @@ public class DescribeWechatAppletsRequest extends AbstractModel {
     @SerializedName("Ignored")
     @Expose
     private Boolean Ignored;
+
+    /**
+     * Get 企业ID列表，可多选 
+     * @return CustomerIdList 企业ID列表，可多选
+     */
+    public Long [] getCustomerIdList() {
+        return this.CustomerIdList;
+    }
+
+    /**
+     * Set 企业ID列表，可多选
+     * @param CustomerIdList 企业ID列表，可多选
+     */
+    public void setCustomerIdList(Long [] CustomerIdList) {
+        this.CustomerIdList = CustomerIdList;
+    }
 
     /**
      * Get 企业ID 
@@ -307,6 +330,12 @@ public class DescribeWechatAppletsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeWechatAppletsRequest(DescribeWechatAppletsRequest source) {
+        if (source.CustomerIdList != null) {
+            this.CustomerIdList = new Long[source.CustomerIdList.length];
+            for (int i = 0; i < source.CustomerIdList.length; i++) {
+                this.CustomerIdList[i] = new Long(source.CustomerIdList[i]);
+            }
+        }
         if (source.CustomerId != null) {
             this.CustomerId = new Long(source.CustomerId);
         }
@@ -356,6 +385,7 @@ public class DescribeWechatAppletsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "CustomerIdList.", this.CustomerIdList);
         this.setParamSimple(map, prefix + "CustomerId", this.CustomerId);
         this.setParamSimple(map, prefix + "IsNew", this.IsNew);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

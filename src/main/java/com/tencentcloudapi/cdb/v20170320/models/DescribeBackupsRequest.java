@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBackupsRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+    * 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,23 +38,23 @@ public class DescribeBackupsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 分页大小，默认值为20，最小值为1，最大值为100。
+    * 分页大小，默认值为20，最小值为1，最大值为1000。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
-     * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
+     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
-     * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -77,16 +77,16 @@ public class DescribeBackupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页大小，默认值为20，最小值为1，最大值为100。 
-     * @return Limit 分页大小，默认值为20，最小值为1，最大值为100。
+     * Get 分页大小，默认值为20，最小值为1，最大值为1000。 
+     * @return Limit 分页大小，默认值为20，最小值为1，最大值为1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小，默认值为20，最小值为1，最大值为100。
-     * @param Limit 分页大小，默认值为20，最小值为1，最大值为100。
+     * Set 分页大小，默认值为20，最小值为1，最大值为1000。
+     * @param Limit 分页大小，默认值为20，最小值为1，最大值为1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

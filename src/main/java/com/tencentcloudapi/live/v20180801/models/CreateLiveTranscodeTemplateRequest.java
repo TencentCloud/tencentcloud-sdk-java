@@ -118,7 +118,7 @@ origin: 保持原始编码格式
     /**
     * 关键帧间隔，单位：秒。
 默认原始的间隔
-范围2-6
+范围1-6
     */
     @SerializedName("Gop")
     @Expose
@@ -462,10 +462,10 @@ origin: 保持原始编码格式
     /**
      * Get 关键帧间隔，单位：秒。
 默认原始的间隔
-范围2-6 
+范围1-6 
      * @return Gop 关键帧间隔，单位：秒。
 默认原始的间隔
-范围2-6
+范围1-6
      */
     public Long getGop() {
         return this.Gop;
@@ -474,10 +474,10 @@ origin: 保持原始编码格式
     /**
      * Set 关键帧间隔，单位：秒。
 默认原始的间隔
-范围2-6
+范围1-6
      * @param Gop 关键帧间隔，单位：秒。
 默认原始的间隔
-范围2-6
+范围1-6
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;

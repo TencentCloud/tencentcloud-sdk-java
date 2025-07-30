@@ -45,7 +45,7 @@ public class MachineInfo extends AbstractModel {
     private Long Status;
 
     /**
-    * 机器离线时间，空为正常，异常返回具体时间
+    * 机器离线时间，空为正常，异常返回具体时间。时间格式：YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("OfflineTime")
     @Expose
@@ -137,16 +137,16 @@ public class MachineInfo extends AbstractModel {
     }
 
     /**
-     * Get 机器离线时间，空为正常，异常返回具体时间 
-     * @return OfflineTime 机器离线时间，空为正常，异常返回具体时间
+     * Get 机器离线时间，空为正常，异常返回具体时间。时间格式：YYYY-MM-DD HH:mm:ss 
+     * @return OfflineTime 机器离线时间，空为正常，异常返回具体时间。时间格式：YYYY-MM-DD HH:mm:ss
      */
     public String getOfflineTime() {
         return this.OfflineTime;
     }
 
     /**
-     * Set 机器离线时间，空为正常，异常返回具体时间
-     * @param OfflineTime 机器离线时间，空为正常，异常返回具体时间
+     * Set 机器离线时间，空为正常，异常返回具体时间。时间格式：YYYY-MM-DD HH:mm:ss
+     * @param OfflineTime 机器离线时间，空为正常，异常返回具体时间。时间格式：YYYY-MM-DD HH:mm:ss
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;

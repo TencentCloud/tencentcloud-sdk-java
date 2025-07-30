@@ -45,7 +45,7 @@ public class DashboardInfo extends AbstractModel {
     private String Data;
 
     /**
-    * 创建仪表盘的时间
+    * 创建仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
     */
     @SerializedName("CreateTime")
     @Expose
@@ -87,7 +87,7 @@ public class DashboardInfo extends AbstractModel {
     private String DashboardRegion;
 
     /**
-    * 修改仪表盘的时间
+    * 修改仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -149,16 +149,16 @@ public class DashboardInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建仪表盘的时间 
-     * @return CreateTime 创建仪表盘的时间
+     * Get 创建仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS 
+     * @return CreateTime 创建仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建仪表盘的时间
-     * @param CreateTime 创建仪表盘的时间
+     * Set 创建仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
+     * @param CreateTime 创建仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -245,16 +245,16 @@ public class DashboardInfo extends AbstractModel {
     }
 
     /**
-     * Get 修改仪表盘的时间 
-     * @return UpdateTime 修改仪表盘的时间
+     * Get 修改仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS 
+     * @return UpdateTime 修改仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 修改仪表盘的时间
-     * @param UpdateTime 修改仪表盘的时间
+     * Set 修改仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
+     * @param UpdateTime 修改仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

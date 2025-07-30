@@ -164,6 +164,20 @@ public class CreateDatasourceCloudRequest extends AbstractModel {
     private String ClusterId;
 
     /**
+    * 数据库schema
+    */
+    @SerializedName("Schema")
+    @Expose
+    private String Schema;
+
+    /**
+    * 数据库版本
+    */
+    @SerializedName("DbVersion")
+    @Expose
+    private String DbVersion;
+
+    /**
      * Get 后端提供字典：域类型，1、腾讯云，2、本地 
      * @return ServiceType 后端提供字典：域类型，1、腾讯云，2、本地
      */
@@ -483,6 +497,38 @@ public class CreateDatasourceCloudRequest extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 数据库schema 
+     * @return Schema 数据库schema
+     */
+    public String getSchema() {
+        return this.Schema;
+    }
+
+    /**
+     * Set 数据库schema
+     * @param Schema 数据库schema
+     */
+    public void setSchema(String Schema) {
+        this.Schema = Schema;
+    }
+
+    /**
+     * Get 数据库版本 
+     * @return DbVersion 数据库版本
+     */
+    public String getDbVersion() {
+        return this.DbVersion;
+    }
+
+    /**
+     * Set 数据库版本
+     * @param DbVersion 数据库版本
+     */
+    public void setDbVersion(String DbVersion) {
+        this.DbVersion = DbVersion;
+    }
+
     public CreateDatasourceCloudRequest() {
     }
 
@@ -551,6 +597,12 @@ public class CreateDatasourceCloudRequest extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
+        }
+        if (source.DbVersion != null) {
+            this.DbVersion = new String(source.DbVersion);
+        }
     }
 
 
@@ -578,6 +630,8 @@ public class CreateDatasourceCloudRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataOriginProjectId", this.DataOriginProjectId);
         this.setParamSimple(map, prefix + "DataOriginDatasourceId", this.DataOriginDatasourceId);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Schema", this.Schema);
+        this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
 
     }
 }

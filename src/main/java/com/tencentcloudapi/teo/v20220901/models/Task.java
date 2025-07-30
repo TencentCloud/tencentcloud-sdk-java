@@ -57,7 +57,7 @@ public class Task extends AbstractModel {
     * 状态。取值有：
 <li>processing：处理中；</li>
 <li>success：成功；</li>
-<li> failed：失败；</li>
+<li>failed：失败；</li>
 <li>timeout：超时；</li>
 <li>canceled：已取消。</li>
     */
@@ -78,6 +78,25 @@ public class Task extends AbstractModel {
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
+
+    /**
+    * 刷新、预热失败类型。取值有：
+<li>taskFailed：任务失败；</li>
+<li>quotaExceeded：配额超限；</li>
+<li>downloadManifestFailed：下载描述文件失败；</li>
+<li>accessDenied：访问被拒绝。</li>
+<li>originPullFailed：回源失败。</li>
+    */
+    @SerializedName("FailType")
+    @Expose
+    private String FailType;
+
+    /**
+    * 刷新、预热失败描述。
+    */
+    @SerializedName("FailMessage")
+    @Expose
+    private String FailMessage;
 
     /**
      * Get 任务 ID。 
@@ -155,13 +174,13 @@ public class Task extends AbstractModel {
      * Get 状态。取值有：
 <li>processing：处理中；</li>
 <li>success：成功；</li>
-<li> failed：失败；</li>
+<li>failed：失败；</li>
 <li>timeout：超时；</li>
 <li>canceled：已取消。</li> 
      * @return Status 状态。取值有：
 <li>processing：处理中；</li>
 <li>success：成功；</li>
-<li> failed：失败；</li>
+<li>failed：失败；</li>
 <li>timeout：超时；</li>
 <li>canceled：已取消。</li>
      */
@@ -173,13 +192,13 @@ public class Task extends AbstractModel {
      * Set 状态。取值有：
 <li>processing：处理中；</li>
 <li>success：成功；</li>
-<li> failed：失败；</li>
+<li>failed：失败；</li>
 <li>timeout：超时；</li>
 <li>canceled：已取消。</li>
      * @param Status 状态。取值有：
 <li>processing：处理中；</li>
 <li>success：成功；</li>
-<li> failed：失败；</li>
+<li>failed：失败；</li>
 <li>timeout：超时；</li>
 <li>canceled：已取消。</li>
      */
@@ -219,6 +238,58 @@ public class Task extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 刷新、预热失败类型。取值有：
+<li>taskFailed：任务失败；</li>
+<li>quotaExceeded：配额超限；</li>
+<li>downloadManifestFailed：下载描述文件失败；</li>
+<li>accessDenied：访问被拒绝。</li>
+<li>originPullFailed：回源失败。</li> 
+     * @return FailType 刷新、预热失败类型。取值有：
+<li>taskFailed：任务失败；</li>
+<li>quotaExceeded：配额超限；</li>
+<li>downloadManifestFailed：下载描述文件失败；</li>
+<li>accessDenied：访问被拒绝。</li>
+<li>originPullFailed：回源失败。</li>
+     */
+    public String getFailType() {
+        return this.FailType;
+    }
+
+    /**
+     * Set 刷新、预热失败类型。取值有：
+<li>taskFailed：任务失败；</li>
+<li>quotaExceeded：配额超限；</li>
+<li>downloadManifestFailed：下载描述文件失败；</li>
+<li>accessDenied：访问被拒绝。</li>
+<li>originPullFailed：回源失败。</li>
+     * @param FailType 刷新、预热失败类型。取值有：
+<li>taskFailed：任务失败；</li>
+<li>quotaExceeded：配额超限；</li>
+<li>downloadManifestFailed：下载描述文件失败；</li>
+<li>accessDenied：访问被拒绝。</li>
+<li>originPullFailed：回源失败。</li>
+     */
+    public void setFailType(String FailType) {
+        this.FailType = FailType;
+    }
+
+    /**
+     * Get 刷新、预热失败描述。 
+     * @return FailMessage 刷新、预热失败描述。
+     */
+    public String getFailMessage() {
+        return this.FailMessage;
+    }
+
+    /**
+     * Set 刷新、预热失败描述。
+     * @param FailMessage 刷新、预热失败描述。
+     */
+    public void setFailMessage(String FailMessage) {
+        this.FailMessage = FailMessage;
+    }
+
     public Task() {
     }
 
@@ -248,6 +319,12 @@ public class Task extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.FailType != null) {
+            this.FailType = new String(source.FailType);
+        }
+        if (source.FailMessage != null) {
+            this.FailMessage = new String(source.FailMessage);
+        }
     }
 
 
@@ -262,6 +339,8 @@ public class Task extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "FailType", this.FailType);
+        this.setParamSimple(map, prefix + "FailMessage", this.FailMessage);
 
     }
 }

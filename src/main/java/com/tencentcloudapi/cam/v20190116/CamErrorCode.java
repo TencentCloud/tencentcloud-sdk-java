@@ -9,6 +9,9 @@ public enum CamErrorCode {
      /* 操作访问密钥错误。 */
      FAILEDOPERATION_ACCESSKEY("FailedOperation.Accesskey"),
      
+     /* 协助审批人已达到上限。 */
+     FAILEDOPERATION_ASSISTAPPROVERFULL("FailedOperation.AssistApproverFull"),
+     
      /* 生成AuthToken异常。 */
      FAILEDOPERATION_BUILDAUTHTOKEN("FailedOperation.BuildAuthToken"),
      
@@ -84,6 +87,9 @@ public enum CamErrorCode {
      /* 策略语法中操作服务不存在。 */
      INVALIDPARAMETER_ACTIONSERVICENOTEXIST("InvalidParameter.ActionServiceNotExist"),
      
+     /* 协助审批类型不合法。 */
+     INVALIDPARAMETER_ASSITAPPROVERTYPEERROR("InvalidParameter.AssitApproverTypeError"),
+     
      /* principal字段的授权对象关联策略数已达到上限。 */
      INVALIDPARAMETER_ATTACHMENTFULL("InvalidParameter.AttachmentFull"),
      
@@ -122,6 +128,12 @@ public enum CamErrorCode {
      
      /* 用户组中的子用户数量达到上限。 */
      INVALIDPARAMETER_GROUPUSERFULL("InvalidParameter.GroupUserFull"),
+     
+     /* IP段格式不合法。 */
+     INVALIDPARAMETER_IPILLEGAL("InvalidParameter.IPIllegal"),
+     
+     /* IP段重复。 */
+     INVALIDPARAMETER_IPRANGEOVERLAPPING("InvalidParameter.IPRangeOverlapping"),
      
      /* 身份提供商名称已经使用。 */
      INVALIDPARAMETER_IDENTITYNAMEINUSE("InvalidParameter.IdentityNameInUse"),
@@ -248,6 +260,9 @@ public enum CamErrorCode {
      
      /* 子用户名称重复。 */
      INVALIDPARAMETER_SUBUSERNAMEINUSE("InvalidParameter.SubUserNameInUse"),
+     
+     /* 子账号不存在已认证的手机。 */
+     INVALIDPARAMETER_SUBUSERPHONENOTEXSIT("InvalidParameter.SubUserPhoneNotExsit"),
      
      /* 超出标签限制。 */
      INVALIDPARAMETER_TAGLIMITEXCEEDED("InvalidParameter.TagLimitExceeded"),

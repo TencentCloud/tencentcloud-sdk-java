@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class DescribeMachinesRequest extends AbstractModel {
 
     /**
-    * 查询的机器组ID
+    * 查询的机器组ID。
+
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组ID。
     */
     @SerializedName("GroupId")
     @Expose
@@ -32,31 +34,31 @@ public class DescribeMachinesRequest extends AbstractModel {
 
     /**
     * ip
-- 按照【ip】进行过滤。
+- 按照ip进行过滤。
 - 类型：String
 - 必选：否
 
 instance
-- 按照【instance】进行过滤。
+- 按照实例id进行过滤。
 - 类型：String
 - 必选：否
 
 version
-- 按照【LogListener版本】进行过滤。
+- 按照LogListener版本进行过滤。
 - 类型：String
 - 必选：否
 
 status
-- 按照【状态】进行过滤。
+- 按照机器状态进行过滤。
 - 类型：String
 - 必选：否
 - 可选值：0：离线，1：正常
 
 offlineTime
-- 按照【机器离线时间】进行过滤。
+- 按照机器离线时间进行过滤。
 - 类型：String
 - 必选：否
-- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+- -可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
     */
@@ -79,16 +81,24 @@ offlineTime
     private Long Limit;
 
     /**
-     * Get 查询的机器组ID 
-     * @return GroupId 查询的机器组ID
+     * Get 查询的机器组ID。
+
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组ID。 
+     * @return GroupId 查询的机器组ID。
+
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 查询的机器组ID
-     * @param GroupId 查询的机器组ID
+     * Set 查询的机器组ID。
+
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组ID。
+     * @param GroupId 查询的机器组ID。
+
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -96,59 +106,59 @@ offlineTime
 
     /**
      * Get ip
-- 按照【ip】进行过滤。
+- 按照ip进行过滤。
 - 类型：String
 - 必选：否
 
 instance
-- 按照【instance】进行过滤。
+- 按照实例id进行过滤。
 - 类型：String
 - 必选：否
 
 version
-- 按照【LogListener版本】进行过滤。
+- 按照LogListener版本进行过滤。
 - 类型：String
 - 必选：否
 
 status
-- 按照【状态】进行过滤。
+- 按照机器状态进行过滤。
 - 类型：String
 - 必选：否
 - 可选值：0：离线，1：正常
 
 offlineTime
-- 按照【机器离线时间】进行过滤。
+- 按照机器离线时间进行过滤。
 - 类型：String
 - 必选：否
-- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+- -可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。 
      * @return Filters ip
-- 按照【ip】进行过滤。
+- 按照ip进行过滤。
 - 类型：String
 - 必选：否
 
 instance
-- 按照【instance】进行过滤。
+- 按照实例id进行过滤。
 - 类型：String
 - 必选：否
 
 version
-- 按照【LogListener版本】进行过滤。
+- 按照LogListener版本进行过滤。
 - 类型：String
 - 必选：否
 
 status
-- 按照【状态】进行过滤。
+- 按照机器状态进行过滤。
 - 类型：String
 - 必选：否
 - 可选值：0：离线，1：正常
 
 offlineTime
-- 按照【机器离线时间】进行过滤。
+- 按照机器离线时间进行过滤。
 - 类型：String
 - 必选：否
-- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+- -可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
@@ -158,59 +168,59 @@ offlineTime
 
     /**
      * Set ip
-- 按照【ip】进行过滤。
+- 按照ip进行过滤。
 - 类型：String
 - 必选：否
 
 instance
-- 按照【instance】进行过滤。
+- 按照实例id进行过滤。
 - 类型：String
 - 必选：否
 
 version
-- 按照【LogListener版本】进行过滤。
+- 按照LogListener版本进行过滤。
 - 类型：String
 - 必选：否
 
 status
-- 按照【状态】进行过滤。
+- 按照机器状态进行过滤。
 - 类型：String
 - 必选：否
 - 可选值：0：离线，1：正常
 
 offlineTime
-- 按照【机器离线时间】进行过滤。
+- 按照机器离线时间进行过滤。
 - 类型：String
 - 必选：否
-- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+- -可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      * @param Filters ip
-- 按照【ip】进行过滤。
+- 按照ip进行过滤。
 - 类型：String
 - 必选：否
 
 instance
-- 按照【instance】进行过滤。
+- 按照实例id进行过滤。
 - 类型：String
 - 必选：否
 
 version
-- 按照【LogListener版本】进行过滤。
+- 按照LogListener版本进行过滤。
 - 类型：String
 - 必选：否
 
 status
-- 按照【状态】进行过滤。
+- 按照机器状态进行过滤。
 - 类型：String
 - 必选：否
 - 可选值：0：离线，1：正常
 
 offlineTime
-- 按照【机器离线时间】进行过滤。
+- 按照机器离线时间进行过滤。
 - 类型：String
 - 必选：否
-- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+- -可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      */

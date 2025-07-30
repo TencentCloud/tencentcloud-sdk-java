@@ -59,7 +59,7 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
     private Long RunningTotalCount;
 
     /**
-    * 带部署总数
+    * 待部署总数
     */
     @SerializedName("PendingTotalCount")
     @Expose
@@ -153,16 +153,16 @@ public class DescribeHostDeployRecordDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 带部署总数 
-     * @return PendingTotalCount 带部署总数
+     * Get 待部署总数 
+     * @return PendingTotalCount 待部署总数
      */
     public Long getPendingTotalCount() {
         return this.PendingTotalCount;
     }
 
     /**
-     * Set 带部署总数
-     * @param PendingTotalCount 带部署总数
+     * Set 待部署总数
+     * @param PendingTotalCount 待部署总数
      */
     public void setPendingTotalCount(Long PendingTotalCount) {
         this.PendingTotalCount = PendingTotalCount;

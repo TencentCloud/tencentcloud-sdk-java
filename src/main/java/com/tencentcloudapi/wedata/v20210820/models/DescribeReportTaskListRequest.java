@@ -38,13 +38,6 @@ public class DescribeReportTaskListRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-    * 租户id
-    */
-    @SerializedName("TenantId")
-    @Expose
-    private String TenantId;
-
-    /**
     * 项目id
     */
     @SerializedName("ProjectId")
@@ -137,22 +130,6 @@ public class DescribeReportTaskListRequest extends AbstractModel {
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
-    }
-
-    /**
-     * Get 租户id 
-     * @return TenantId 租户id
-     */
-    public String getTenantId() {
-        return this.TenantId;
-    }
-
-    /**
-     * Set 租户id
-     * @param TenantId 租户id
-     */
-    public void setTenantId(String TenantId) {
-        this.TenantId = TenantId;
     }
 
     /**
@@ -313,9 +290,6 @@ public class DescribeReportTaskListRequest extends AbstractModel {
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
-        if (source.TenantId != null) {
-            this.TenantId = new String(source.TenantId);
-        }
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
@@ -352,7 +326,6 @@ public class DescribeReportTaskListRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
-        this.setParamSimple(map, prefix + "TenantId", this.TenantId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

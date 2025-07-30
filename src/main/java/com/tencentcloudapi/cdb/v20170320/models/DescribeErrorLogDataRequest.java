@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeErrorLogDataRequest extends AbstractModel {
 
     /**
-    * 实例 ID 。
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间戳。例如 1585142640 。
+    * 开始时间戳。例如1585142640，秒级。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间戳。例如 1585142640 。
+    * 结束时间戳。例如1585142640，秒级。
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 要匹配的关键字列表，最多支持15个关键字。
+    * 要匹配的关键字列表，最多支持15个关键字，支持模糊匹配。
     */
     @SerializedName("KeyWords")
     @Expose
@@ -73,64 +73,64 @@ public class DescribeErrorLogDataRequest extends AbstractModel {
     private String InstType;
 
     /**
-     * Get 实例 ID 。 
-     * @return InstanceId 实例 ID 。
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID 。
-     * @param InstanceId 实例 ID 。
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间戳。例如 1585142640 。 
-     * @return StartTime 开始时间戳。例如 1585142640 。
+     * Get 开始时间戳。例如1585142640，秒级。 
+     * @return StartTime 开始时间戳。例如1585142640，秒级。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间戳。例如 1585142640 。
-     * @param StartTime 开始时间戳。例如 1585142640 。
+     * Set 开始时间戳。例如1585142640，秒级。
+     * @param StartTime 开始时间戳。例如1585142640，秒级。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间戳。例如 1585142640 。 
-     * @return EndTime 结束时间戳。例如 1585142640 。
+     * Get 结束时间戳。例如1585142640，秒级。 
+     * @return EndTime 结束时间戳。例如1585142640，秒级。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间戳。例如 1585142640 。
-     * @param EndTime 结束时间戳。例如 1585142640 。
+     * Set 结束时间戳。例如1585142640，秒级。
+     * @param EndTime 结束时间戳。例如1585142640，秒级。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 要匹配的关键字列表，最多支持15个关键字。 
-     * @return KeyWords 要匹配的关键字列表，最多支持15个关键字。
+     * Get 要匹配的关键字列表，最多支持15个关键字，支持模糊匹配。 
+     * @return KeyWords 要匹配的关键字列表，最多支持15个关键字，支持模糊匹配。
      */
     public String [] getKeyWords() {
         return this.KeyWords;
     }
 
     /**
-     * Set 要匹配的关键字列表，最多支持15个关键字。
-     * @param KeyWords 要匹配的关键字列表，最多支持15个关键字。
+     * Set 要匹配的关键字列表，最多支持15个关键字，支持模糊匹配。
+     * @param KeyWords 要匹配的关键字列表，最多支持15个关键字，支持模糊匹配。
      */
     public void setKeyWords(String [] KeyWords) {
         this.KeyWords = KeyWords;

@@ -108,7 +108,7 @@ public class ShipperInfo extends AbstractModel {
     private ContentInfo Content;
 
     /**
-    * 投递日志的创建时间
+    * 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
     */
     @SerializedName("CreateTime")
     @Expose
@@ -162,7 +162,16 @@ public class ShipperInfo extends AbstractModel {
     private Long HistoryStatus;
 
     /**
-    * cos桶类型
+    * 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
+STANDARD：标准存储
+STANDARD_IA：低频存储
+ARCHIVE：归档存储
+DEEP_ARCHIVE：深度归档存储
+MAZ_STANDARD：标准存储（多 AZ）
+MAZ_STANDARD_IA：低频存储（多 AZ）
+INTELLIGENT_TIERING：智能分层存储
+MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
     */
     @SerializedName("StorageType")
     @Expose
@@ -361,16 +370,16 @@ public class ShipperInfo extends AbstractModel {
     }
 
     /**
-     * Get 投递日志的创建时间 
-     * @return CreateTime 投递日志的创建时间
+     * Get 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS 
+     * @return CreateTime 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 投递日志的创建时间
-     * @param CreateTime 投递日志的创建时间
+     * Set 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
+     * @param CreateTime 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -493,16 +502,52 @@ public class ShipperInfo extends AbstractModel {
     }
 
     /**
-     * Get cos桶类型 
-     * @return StorageType cos桶类型
+     * Get 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
+STANDARD：标准存储
+STANDARD_IA：低频存储
+ARCHIVE：归档存储
+DEEP_ARCHIVE：深度归档存储
+MAZ_STANDARD：标准存储（多 AZ）
+MAZ_STANDARD_IA：低频存储（多 AZ）
+INTELLIGENT_TIERING：智能分层存储
+MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ） 
+     * @return StorageType 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
+STANDARD：标准存储
+STANDARD_IA：低频存储
+ARCHIVE：归档存储
+DEEP_ARCHIVE：深度归档存储
+MAZ_STANDARD：标准存储（多 AZ）
+MAZ_STANDARD_IA：低频存储（多 AZ）
+INTELLIGENT_TIERING：智能分层存储
+MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set cos桶类型
-     * @param StorageType cos桶类型
+     * Set 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
+STANDARD：标准存储
+STANDARD_IA：低频存储
+ARCHIVE：归档存储
+DEEP_ARCHIVE：深度归档存储
+MAZ_STANDARD：标准存储（多 AZ）
+MAZ_STANDARD_IA：低频存储（多 AZ）
+INTELLIGENT_TIERING：智能分层存储
+MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+     * @param StorageType 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
+STANDARD：标准存储
+STANDARD_IA：低频存储
+ARCHIVE：归档存储
+DEEP_ARCHIVE：深度归档存储
+MAZ_STANDARD：标准存储（多 AZ）
+MAZ_STANDARD_IA：低频存储（多 AZ）
+INTELLIGENT_TIERING：智能分层存储
+MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;

@@ -38,7 +38,7 @@ public class DescribeBinlogsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 分页大小，默认值为20，最小值为1，最大值为100。
+    * 分页大小，默认值为20，最小值为1，最大值为1000。
     */
     @SerializedName("Limit")
     @Expose
@@ -98,16 +98,16 @@ public class DescribeBinlogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页大小，默认值为20，最小值为1，最大值为100。 
-     * @return Limit 分页大小，默认值为20，最小值为1，最大值为100。
+     * Get 分页大小，默认值为20，最小值为1，最大值为1000。 
+     * @return Limit 分页大小，默认值为20，最小值为1，最大值为1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小，默认值为20，最小值为1，最大值为100。
-     * @param Limit 分页大小，默认值为20，最小值为1，最大值为100。
+     * Set 分页大小，默认值为20，最小值为1，最大值为1000。
+     * @param Limit 分页大小，默认值为20，最小值为1，最大值为1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

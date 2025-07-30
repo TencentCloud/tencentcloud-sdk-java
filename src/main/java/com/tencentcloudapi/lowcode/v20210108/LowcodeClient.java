@@ -39,6 +39,17 @@ public class LowcodeClient extends AbstractClient{
     }
 
     /**
+     *检查应用发布状态
+     * @param req CheckDeployAppRequest
+     * @return CheckDeployAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckDeployAppResponse CheckDeployApp(CheckDeployAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckDeployApp", CheckDeployAppResponse.class);
+    }
+
+    /**
      *创建知识库
      * @param req CreateKnowledgeSetRequest
      * @return CreateKnowledgeSetResponse
@@ -47,6 +58,17 @@ public class LowcodeClient extends AbstractClient{
     public CreateKnowledgeSetResponse CreateKnowledgeSet(CreateKnowledgeSetRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateKnowledgeSet", CreateKnowledgeSetResponse.class);
+    }
+
+    /**
+     *删除应用绑定小程序
+     * @param req DeleteAppBindWxAppRequest
+     * @return DeleteAppBindWxAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAppBindWxAppResponse DeleteAppBindWxApp(DeleteAppBindWxAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAppBindWxApp", DeleteAppBindWxAppResponse.class);
     }
 
     /**
@@ -69,6 +91,17 @@ public class LowcodeClient extends AbstractClient{
     public DeleteKnowledgeSetResponse DeleteKnowledgeSet(DeleteKnowledgeSetRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteKnowledgeSet", DeleteKnowledgeSetResponse.class);
+    }
+
+    /**
+     *发布应用
+     * @param req DeployAppRequest
+     * @return DeployAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeployAppResponse DeployApp(DeployAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeployApp", DeployAppResponse.class);
     }
 
     /**
@@ -113,6 +146,17 @@ public class LowcodeClient extends AbstractClient{
     public DescribeKnowledgeSetListResponse DescribeKnowledgeSetList(DescribeKnowledgeSetListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeKnowledgeSetList", DescribeKnowledgeSetListResponse.class);
+    }
+
+    /**
+     *接口提供应用绑定微信ID功能。
+     * @param req PutWxAppIdToWeAppRequest
+     * @return PutWxAppIdToWeAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutWxAppIdToWeAppResponse PutWxAppIdToWeApp(PutWxAppIdToWeAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PutWxAppIdToWeApp", PutWxAppIdToWeAppResponse.class);
     }
 
     /**

@@ -24,21 +24,25 @@ import java.util.HashMap;
 public class ModifyCosRechargeRequest extends AbstractModel {
 
     /**
-    * COS导入配置Id
+    * COS导入配置Id。
+
+- 通过[获取cos导入配置](https://cloud.tencent.com/document/product/614/88099)接口获取COS导入配置Id。
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 日志主题Id
+    * 日志主题Id。
+
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * COS导入任务名称
+    * COS导入任务名称,最大支持128个字节。
     */
     @SerializedName("Name")
     @Expose
@@ -53,6 +57,8 @@ public class ModifyCosRechargeRequest extends AbstractModel {
 
     /**
     * COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
     */
     @SerializedName("Bucket")
     @Expose
@@ -80,7 +86,7 @@ public class ModifyCosRechargeRequest extends AbstractModel {
     private String LogType;
 
     /**
-    * 解析格式。supported: "", "gzip", "lzop", "snappy"; 默认空
+    * 解析格式。supported: "", "gzip", "lzop", "snappy"。空串表示不压缩。
     */
     @SerializedName("Compress")
     @Expose
@@ -108,48 +114,64 @@ public class ModifyCosRechargeRequest extends AbstractModel {
     private String [] Metadata;
 
     /**
-     * Get COS导入配置Id 
-     * @return Id COS导入配置Id
+     * Get COS导入配置Id。
+
+- 通过[获取cos导入配置](https://cloud.tencent.com/document/product/614/88099)接口获取COS导入配置Id。 
+     * @return Id COS导入配置Id。
+
+- 通过[获取cos导入配置](https://cloud.tencent.com/document/product/614/88099)接口获取COS导入配置Id。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set COS导入配置Id
-     * @param Id COS导入配置Id
+     * Set COS导入配置Id。
+
+- 通过[获取cos导入配置](https://cloud.tencent.com/document/product/614/88099)接口获取COS导入配置Id。
+     * @param Id COS导入配置Id。
+
+- 通过[获取cos导入配置](https://cloud.tencent.com/document/product/614/88099)接口获取COS导入配置Id。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 日志主题Id 
-     * @return TopicId 日志主题Id
+     * Get 日志主题Id。
+
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
+     * @return TopicId 日志主题Id。
+
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题Id
-     * @param TopicId 日志主题Id
+     * Set 日志主题Id。
+
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param TopicId 日志主题Id。
+
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get COS导入任务名称 
-     * @return Name COS导入任务名称
+     * Get COS导入任务名称,最大支持128个字节。 
+     * @return Name COS导入任务名称,最大支持128个字节。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set COS导入任务名称
-     * @param Name COS导入任务名称
+     * Set COS导入任务名称,最大支持128个字节。
+     * @param Name COS导入任务名称,最大支持128个字节。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -172,8 +194,12 @@ public class ModifyCosRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	 
+     * Get COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。 
      * @return Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
      */
     public String getBucket() {
         return this.Bucket;
@@ -181,7 +207,11 @@ public class ModifyCosRechargeRequest extends AbstractModel {
 
     /**
      * Set COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
      * @param Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
@@ -236,16 +266,16 @@ public class ModifyCosRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get 解析格式。supported: "", "gzip", "lzop", "snappy"; 默认空 
-     * @return Compress 解析格式。supported: "", "gzip", "lzop", "snappy"; 默认空
+     * Get 解析格式。supported: "", "gzip", "lzop", "snappy"。空串表示不压缩。 
+     * @return Compress 解析格式。supported: "", "gzip", "lzop", "snappy"。空串表示不压缩。
      */
     public String getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set 解析格式。supported: "", "gzip", "lzop", "snappy"; 默认空
-     * @param Compress 解析格式。supported: "", "gzip", "lzop", "snappy"; 默认空
+     * Set 解析格式。supported: "", "gzip", "lzop", "snappy"。空串表示不压缩。
+     * @param Compress 解析格式。supported: "", "gzip", "lzop", "snappy"。空串表示不压缩。
      */
     public void setCompress(String Compress) {
         this.Compress = Compress;

@@ -215,6 +215,17 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *增加子账号登录IP策略
+     * @param req CreateSubAccountLoginIpPolicyRequest
+     * @return CreateSubAccountLoginIpPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubAccountLoginIpPolicyResponse CreateSubAccountLoginIpPolicy(CreateSubAccountLoginIpPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSubAccountLoginIpPolicy", CreateSubAccountLoginIpPolicyResponse.class);
+    }
+
+    /**
      *创建用户OIDC配置。只能创建一个用户OIDC身份提供商，并且创建用户OIDC配置之后会自动关闭用户SAML SSO身份提供商。
      * @param req CreateUserOIDCConfigRequest
      * @return CreateUserOIDCConfigResponse

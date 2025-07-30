@@ -326,6 +326,22 @@ public class DatasourceInfo extends AbstractModel {
     private String OwnerName;
 
     /**
+    * 数据库schema
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Schema")
+    @Expose
+    private String Schema;
+
+    /**
+    * 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbVersion")
+    @Expose
+    private String DbVersion;
+
+    /**
      * Get 数据库ID 
      * @return Id 数据库ID
      */
@@ -1065,6 +1081,46 @@ public class DatasourceInfo extends AbstractModel {
         this.OwnerName = OwnerName;
     }
 
+    /**
+     * Get 数据库schema
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Schema 数据库schema
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSchema() {
+        return this.Schema;
+    }
+
+    /**
+     * Set 数据库schema
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Schema 数据库schema
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchema(String Schema) {
+        this.Schema = Schema;
+    }
+
+    /**
+     * Get 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbVersion 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbVersion() {
+        return this.DbVersion;
+    }
+
+    /**
+     * Set 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbVersion 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbVersion(String DbVersion) {
+        this.DbVersion = DbVersion;
+    }
+
     public DatasourceInfo() {
     }
 
@@ -1196,6 +1252,12 @@ public class DatasourceInfo extends AbstractModel {
         if (source.OwnerName != null) {
             this.OwnerName = new String(source.OwnerName);
         }
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
+        }
+        if (source.DbVersion != null) {
+            this.DbVersion = new String(source.DbVersion);
+        }
     }
 
 
@@ -1242,6 +1304,8 @@ public class DatasourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UseVPC", this.UseVPC);
         this.setParamSimple(map, prefix + "Owner", this.Owner);
         this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
+        this.setParamSimple(map, prefix + "Schema", this.Schema);
+        this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
 
     }
 }

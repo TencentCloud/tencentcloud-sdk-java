@@ -192,6 +192,13 @@ public class DeployRecordDetail extends AbstractModel {
     private String OldAlgorithm;
 
     /**
+    * 实例状态，不同云产品状态不一样
+    */
+    @SerializedName("InstanceStatus")
+    @Expose
+    private String InstanceStatus;
+
+    /**
      * Get 部署记录详情ID 
      * @return Id 部署记录详情ID
      */
@@ -575,6 +582,22 @@ public class DeployRecordDetail extends AbstractModel {
         this.OldAlgorithm = OldAlgorithm;
     }
 
+    /**
+     * Get 实例状态，不同云产品状态不一样 
+     * @return InstanceStatus 实例状态，不同云产品状态不一样
+     */
+    public String getInstanceStatus() {
+        return this.InstanceStatus;
+    }
+
+    /**
+     * Set 实例状态，不同云产品状态不一样
+     * @param InstanceStatus 实例状态，不同云产品状态不一样
+     */
+    public void setInstanceStatus(String InstanceStatus) {
+        this.InstanceStatus = InstanceStatus;
+    }
+
     public DeployRecordDetail() {
     }
 
@@ -661,6 +684,9 @@ public class DeployRecordDetail extends AbstractModel {
         if (source.OldAlgorithm != null) {
             this.OldAlgorithm = new String(source.OldAlgorithm);
         }
+        if (source.InstanceStatus != null) {
+            this.InstanceStatus = new String(source.InstanceStatus);
+        }
     }
 
 
@@ -692,6 +718,7 @@ public class DeployRecordDetail extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Url.", this.Url);
         this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
         this.setParamSimple(map, prefix + "OldAlgorithm", this.OldAlgorithm);
+        this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
 
     }
 }

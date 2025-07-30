@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ParamTemplateInfo extends AbstractModel {
 
     /**
-    * 参数模板ID
+    * 参数模板 ID
     */
     @SerializedName("TemplateId")
     @Expose
@@ -45,37 +45,37 @@ public class ParamTemplateInfo extends AbstractModel {
     private String Description;
 
     /**
-    * 实例引擎版本
+    * 实例引擎版本，值为：5.5、5.6、5.7、8.0。
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * 参数模板类型
+    * 参数模板类型，值为：HIGH_STABILITY、HIGH_PERFORMANCE。
     */
     @SerializedName("TemplateType")
     @Expose
     private String TemplateType;
 
     /**
-    * 参数模板引擎
+    * 参数模板引擎，值为：InnoDB、RocksDB。
     */
     @SerializedName("EngineType")
     @Expose
     private String EngineType;
 
     /**
-     * Get 参数模板ID 
-     * @return TemplateId 参数模板ID
+     * Get 参数模板 ID 
+     * @return TemplateId 参数模板 ID
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 参数模板ID
-     * @param TemplateId 参数模板ID
+     * Set 参数模板 ID
+     * @param TemplateId 参数模板 ID
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
@@ -114,48 +114,48 @@ public class ParamTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例引擎版本 
-     * @return EngineVersion 实例引擎版本
+     * Get 实例引擎版本，值为：5.5、5.6、5.7、8.0。 
+     * @return EngineVersion 实例引擎版本，值为：5.5、5.6、5.7、8.0。
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set 实例引擎版本
-     * @param EngineVersion 实例引擎版本
+     * Set 实例引擎版本，值为：5.5、5.6、5.7、8.0。
+     * @param EngineVersion 实例引擎版本，值为：5.5、5.6、5.7、8.0。
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get 参数模板类型 
-     * @return TemplateType 参数模板类型
+     * Get 参数模板类型，值为：HIGH_STABILITY、HIGH_PERFORMANCE。 
+     * @return TemplateType 参数模板类型，值为：HIGH_STABILITY、HIGH_PERFORMANCE。
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set 参数模板类型
-     * @param TemplateType 参数模板类型
+     * Set 参数模板类型，值为：HIGH_STABILITY、HIGH_PERFORMANCE。
+     * @param TemplateType 参数模板类型，值为：HIGH_STABILITY、HIGH_PERFORMANCE。
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;
     }
 
     /**
-     * Get 参数模板引擎 
-     * @return EngineType 参数模板引擎
+     * Get 参数模板引擎，值为：InnoDB、RocksDB。 
+     * @return EngineType 参数模板引擎，值为：InnoDB、RocksDB。
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set 参数模板引擎
-     * @param EngineType 参数模板引擎
+     * Set 参数模板引擎，值为：InnoDB、RocksDB。
+     * @param EngineType 参数模板引擎，值为：InnoDB、RocksDB。
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;

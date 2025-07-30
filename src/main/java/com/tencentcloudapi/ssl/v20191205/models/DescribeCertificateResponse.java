@@ -220,7 +220,7 @@ null：用户上传证书（没有套餐类型），
     private String VulnerabilityStatus;
 
     /**
-    * 证书生效时间。
+    * 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertBeginTime")
@@ -228,7 +228,7 @@ null：用户上传证书（没有套餐类型），
     private String CertBeginTime;
 
     /**
-    * 证书失效时间。
+    * 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertEndTime")
@@ -244,7 +244,7 @@ null：用户上传证书（没有套餐类型），
     private String ValidityPeriod;
 
     /**
-    * 申请时间。
+    * 申请时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InsertTime")
@@ -396,7 +396,7 @@ null：用户上传证书（没有套餐类型），
     private String [] CACommonNames;
 
     /**
-    * CA证书所有的到期时间。仅证书类型CertificateType为CA有效
+    * CA证书所有的到期时间。仅证书类型CertificateType为CA有效，时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CAEndTimes")
@@ -1059,9 +1059,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 证书生效时间。
+     * Get 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CertBeginTime 证书生效时间。
+     * @return CertBeginTime 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertBeginTime() {
@@ -1069,9 +1069,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Set 证书生效时间。
+     * Set 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CertBeginTime 证书生效时间。
+     * @param CertBeginTime 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertBeginTime(String CertBeginTime) {
@@ -1079,9 +1079,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 证书失效时间。
+     * Get 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CertEndTime 证书失效时间。
+     * @return CertEndTime 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertEndTime() {
@@ -1089,9 +1089,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Set 证书失效时间。
+     * Set 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CertEndTime 证书失效时间。
+     * @param CertEndTime 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertEndTime(String CertEndTime) {
@@ -1119,9 +1119,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 申请时间。
+     * Get 申请时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InsertTime 申请时间。
+     * @return InsertTime 申请时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInsertTime() {
@@ -1129,9 +1129,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Set 申请时间。
+     * Set 申请时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InsertTime 申请时间。
+     * @param InsertTime 申请时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInsertTime(String InsertTime) {
@@ -1499,9 +1499,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get CA证书所有的到期时间。仅证书类型CertificateType为CA有效
+     * Get CA证书所有的到期时间。仅证书类型CertificateType为CA有效，时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CAEndTimes CA证书所有的到期时间。仅证书类型CertificateType为CA有效
+     * @return CAEndTimes CA证书所有的到期时间。仅证书类型CertificateType为CA有效，时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCAEndTimes() {
@@ -1509,9 +1509,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Set CA证书所有的到期时间。仅证书类型CertificateType为CA有效
+     * Set CA证书所有的到期时间。仅证书类型CertificateType为CA有效，时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CAEndTimes CA证书所有的到期时间。仅证书类型CertificateType为CA有效
+     * @param CAEndTimes CA证书所有的到期时间。仅证书类型CertificateType为CA有效，时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCAEndTimes(String [] CAEndTimes) {

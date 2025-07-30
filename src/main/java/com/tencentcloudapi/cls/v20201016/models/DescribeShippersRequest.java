@@ -33,10 +33,9 @@ public class DescribeShippersRequest extends AbstractModel {
 - topicId：按照【日志主题】进行过滤。
     类型：String。
     必选：否
-- taskStatus
-按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
-类型：String
-必选：否
+- taskStatus：按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+    类型：String
+    必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为10。
     */
@@ -75,10 +74,9 @@ public class DescribeShippersRequest extends AbstractModel {
 - topicId：按照【日志主题】进行过滤。
     类型：String。
     必选：否
-- taskStatus
-按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
-类型：String
-必选：否
+- taskStatus：按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+    类型：String
+    必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为10。 
      * @return Filters - shipperName：按照【投递规则名称】进行过滤。
@@ -90,10 +88,9 @@ public class DescribeShippersRequest extends AbstractModel {
 - topicId：按照【日志主题】进行过滤。
     类型：String。
     必选：否
-- taskStatus
-按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
-类型：String
-必选：否
+- taskStatus：按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+    类型：String
+    必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为10。
      */
@@ -111,10 +108,9 @@ public class DescribeShippersRequest extends AbstractModel {
 - topicId：按照【日志主题】进行过滤。
     类型：String。
     必选：否
-- taskStatus
-按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
-类型：String
-必选：否
+- taskStatus：按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+    类型：String
+    必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为10。
      * @param Filters - shipperName：按照【投递规则名称】进行过滤。
@@ -126,10 +122,9 @@ public class DescribeShippersRequest extends AbstractModel {
 - topicId：按照【日志主题】进行过滤。
     类型：String。
     必选：否
-- taskStatus
-按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
-类型：String
-必选：否
+- taskStatus：按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+    类型：String
+    必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为10。
      */

@@ -39,6 +39,17 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *配置生命周期策略关联到的目录列表
+     * @param req ApplyPathLifecyclePolicyRequest
+     * @return ApplyPathLifecyclePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyPathLifecyclePolicyResponse ApplyPathLifecyclePolicy(ApplyPathLifecyclePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ApplyPathLifecyclePolicy", ApplyPathLifecyclePolicyResponse.class);
+    }
+
+    /**
      *文件系统绑定快照策略，可以同时绑定多个fs，一个fs 只能跟一个策略绑定
      * @param req BindAutoSnapshotPolicyRequest
      * @return BindAutoSnapshotPolicyResponse
@@ -116,6 +127,50 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *创建数据流动接口
+     * @param req CreateDataFlowRequest
+     * @return CreateDataFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataFlowResponse CreateDataFlow(CreateDataFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDataFlow", CreateDataFlowResponse.class);
+    }
+
+    /**
+     *支持主动沉降/预热接口
+     * @param req CreateLifecycleDataTaskRequest
+     * @return CreateLifecycleDataTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLifecycleDataTaskResponse CreateLifecycleDataTask(CreateLifecycleDataTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLifecycleDataTask", CreateLifecycleDataTaskResponse.class);
+    }
+
+    /**
+     *创建文件存储生命周期策略
+     * @param req CreateLifecyclePolicyRequest
+     * @return CreateLifecyclePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLifecyclePolicyResponse CreateLifecyclePolicy(CreateLifecyclePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLifecyclePolicy", CreateLifecyclePolicyResponse.class);
+    }
+
+    /**
+     *下载生命周期任务中文件列表
+     * @param req CreateLifecyclePolicyDownloadTaskRequest
+     * @return CreateLifecyclePolicyDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLifecyclePolicyDownloadTaskResponse CreateLifecyclePolicyDownloadTask(CreateLifecyclePolicyDownloadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLifecyclePolicyDownloadTask", CreateLifecyclePolicyDownloadTaskResponse.class);
+    }
+
+    /**
      *用于创建迁移任务。
      * @param req CreateMigrationTaskRequest
      * @return CreateMigrationTaskResponse
@@ -179,6 +234,28 @@ public class CfsClient extends AbstractClient{
     public DeleteCfsSnapshotResponse DeleteCfsSnapshot(DeleteCfsSnapshotRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCfsSnapshot", DeleteCfsSnapshotResponse.class);
+    }
+
+    /**
+     *删除数据流动
+     * @param req DeleteDataFlowRequest
+     * @return DeleteDataFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataFlowResponse DeleteDataFlow(DeleteDataFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDataFlow", DeleteDataFlowResponse.class);
+    }
+
+    /**
+     *删除生命周期管理策略
+     * @param req DeleteLifecyclePolicyRequest
+     * @return DeleteLifecyclePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLifecyclePolicyResponse DeleteLifecyclePolicy(DeleteLifecyclePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLifecyclePolicy", DeleteLifecyclePolicyResponse.class);
     }
 
     /**
@@ -326,6 +403,39 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *查询数据流动信息接口
+     * @param req DescribeDataFlowRequest
+     * @return DescribeDataFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataFlowResponse DescribeDataFlow(DescribeDataFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataFlow", DescribeDataFlowResponse.class);
+    }
+
+    /**
+     *查询生命周期任务的接口
+     * @param req DescribeLifecycleDataTaskRequest
+     * @return DescribeLifecycleDataTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLifecycleDataTaskResponse DescribeLifecycleDataTask(DescribeLifecycleDataTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLifecycleDataTask", DescribeLifecycleDataTaskResponse.class);
+    }
+
+    /**
+     *查询生命周期管理策略
+     * @param req DescribeLifecyclePoliciesRequest
+     * @return DescribeLifecyclePoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLifecyclePoliciesResponse DescribeLifecyclePolicies(DescribeLifecyclePoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLifecyclePolicies", DescribeLifecyclePoliciesResponse.class);
+    }
+
+    /**
      *用于获取迁移任务列表。
 此接口需提交工单，开启白名单之后才能使用。
      * @param req DescribeMigrationTasksRequest
@@ -371,6 +481,17 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *修改数据流动相关参数
+     * @param req ModifyDataFlowRequest
+     * @return ModifyDataFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDataFlowResponse ModifyDataFlow(ModifyDataFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDataFlow", ModifyDataFlowResponse.class);
+    }
+
+    /**
      *用来设置文件系统扩容策略，该接口只支持turbo文件系统
      * @param req ModifyFileSystemAutoScaleUpRuleRequest
      * @return ModifyFileSystemAutoScaleUpRuleResponse
@@ -379,6 +500,17 @@ public class CfsClient extends AbstractClient{
     public ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRule(ModifyFileSystemAutoScaleUpRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyFileSystemAutoScaleUpRule", ModifyFileSystemAutoScaleUpRuleResponse.class);
+    }
+
+    /**
+     *更新文件存储生命周期策略
+     * @param req ModifyLifecyclePolicyRequest
+     * @return ModifyLifecyclePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLifecyclePolicyResponse ModifyLifecyclePolicy(ModifyLifecyclePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLifecyclePolicy", ModifyLifecyclePolicyResponse.class);
     }
 
     /**
@@ -412,6 +544,17 @@ public class CfsClient extends AbstractClient{
     public SignUpCfsServiceResponse SignUpCfsService(SignUpCfsServiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SignUpCfsService", SignUpCfsServiceResponse.class);
+    }
+
+    /**
+     *终止生命周期任务的接口
+     * @param req StopLifecycleDataTaskRequest
+     * @return StopLifecycleDataTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopLifecycleDataTaskResponse StopLifecycleDataTask(StopLifecycleDataTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopLifecycleDataTask", StopLifecycleDataTaskResponse.class);
     }
 
     /**

@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeHttpsRequest extends AbstractModel {
 
     /**
+    * 企业ID列表，可多选
+    */
+    @SerializedName("CustomerIdList")
+    @Expose
+    private Long [] CustomerIdList;
+
+    /**
     * 是否聚合数据
     */
     @SerializedName("IsAggregation")
@@ -127,6 +134,22 @@ public class DescribeHttpsRequest extends AbstractModel {
     @SerializedName("HasExpirationRisk")
     @Expose
     private Boolean HasExpirationRisk;
+
+    /**
+     * Get 企业ID列表，可多选 
+     * @return CustomerIdList 企业ID列表，可多选
+     */
+    public Long [] getCustomerIdList() {
+        return this.CustomerIdList;
+    }
+
+    /**
+     * Set 企业ID列表，可多选
+     * @param CustomerIdList 企业ID列表，可多选
+     */
+    public void setCustomerIdList(Long [] CustomerIdList) {
+        this.CustomerIdList = CustomerIdList;
+    }
 
     /**
      * Get 是否聚合数据 
@@ -376,6 +399,12 @@ public class DescribeHttpsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeHttpsRequest(DescribeHttpsRequest source) {
+        if (source.CustomerIdList != null) {
+            this.CustomerIdList = new Long[source.CustomerIdList.length];
+            for (int i = 0; i < source.CustomerIdList.length; i++) {
+                this.CustomerIdList[i] = new Long(source.CustomerIdList[i]);
+            }
+        }
         if (source.IsAggregation != null) {
             this.IsAggregation = new Boolean(source.IsAggregation);
         }
@@ -434,6 +463,7 @@ public class DescribeHttpsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "CustomerIdList.", this.CustomerIdList);
         this.setParamSimple(map, prefix + "IsAggregation", this.IsAggregation);
         this.setParamSimple(map, prefix + "IsNew", this.IsNew);
         this.setParamSimple(map, prefix + "CustomerId", this.CustomerId);

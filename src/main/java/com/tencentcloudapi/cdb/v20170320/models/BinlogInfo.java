@@ -46,6 +46,7 @@ public class BinlogInfo extends AbstractModel {
 
     /**
     * 下载地址
+说明：此下载地址和参数 InternetUrl 的下载地址一样。
     */
     @SerializedName("IntranetUrl")
     @Expose
@@ -53,6 +54,7 @@ public class BinlogInfo extends AbstractModel {
 
     /**
     * 下载地址
+说明：此下载地址和参数 IntranetUrl 的下载地址一样。
     */
     @SerializedName("InternetUrl")
     @Expose
@@ -163,8 +165,10 @@ public class BinlogInfo extends AbstractModel {
     }
 
     /**
-     * Get 下载地址 
+     * Get 下载地址
+说明：此下载地址和参数 InternetUrl 的下载地址一样。 
      * @return IntranetUrl 下载地址
+说明：此下载地址和参数 InternetUrl 的下载地址一样。
      */
     public String getIntranetUrl() {
         return this.IntranetUrl;
@@ -172,15 +176,19 @@ public class BinlogInfo extends AbstractModel {
 
     /**
      * Set 下载地址
+说明：此下载地址和参数 InternetUrl 的下载地址一样。
      * @param IntranetUrl 下载地址
+说明：此下载地址和参数 InternetUrl 的下载地址一样。
      */
     public void setIntranetUrl(String IntranetUrl) {
         this.IntranetUrl = IntranetUrl;
     }
 
     /**
-     * Get 下载地址 
+     * Get 下载地址
+说明：此下载地址和参数 IntranetUrl 的下载地址一样。 
      * @return InternetUrl 下载地址
+说明：此下载地址和参数 IntranetUrl 的下载地址一样。
      */
     public String getInternetUrl() {
         return this.InternetUrl;
@@ -188,7 +196,9 @@ public class BinlogInfo extends AbstractModel {
 
     /**
      * Set 下载地址
+说明：此下载地址和参数 IntranetUrl 的下载地址一样。
      * @param InternetUrl 下载地址
+说明：此下载地址和参数 IntranetUrl 的下载地址一样。
      */
     public void setInternetUrl(String InternetUrl) {
         this.InternetUrl = InternetUrl;
@@ -309,7 +319,9 @@ public class BinlogInfo extends AbstractModel {
     /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceId() {
         return this.InstanceId;
     }
@@ -317,7 +329,9 @@ public class BinlogInfo extends AbstractModel {
     /**
      * Set 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }

@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class DeleteCosRechargeRequest extends AbstractModel {
 
     /**
-    * COS导入配置Id
+    * COS导入配置Id。
+- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 日志主题Id
+    * 日志主题Id。
+-  通过[获取日志主题列表](https://cloud.tencent.com/document/api/614/56454)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-     * Get COS导入配置Id 
-     * @return Id COS导入配置Id
+     * Get COS导入配置Id。
+- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。 
+     * @return Id COS导入配置Id。
+- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set COS导入配置Id
-     * @param Id COS导入配置Id
+     * Set COS导入配置Id。
+- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
+     * @param Id COS导入配置Id。
+- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 日志主题Id 
-     * @return TopicId 日志主题Id
+     * Get 日志主题Id。
+-  通过[获取日志主题列表](https://cloud.tencent.com/document/api/614/56454)获取日志主题Id。 
+     * @return TopicId 日志主题Id。
+-  通过[获取日志主题列表](https://cloud.tencent.com/document/api/614/56454)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题Id
-     * @param TopicId 日志主题Id
+     * Set 日志主题Id。
+-  通过[获取日志主题列表](https://cloud.tencent.com/document/api/614/56454)获取日志主题Id。
+     * @param TopicId 日志主题Id。
+-  通过[获取日志主题列表](https://cloud.tencent.com/document/api/614/56454)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

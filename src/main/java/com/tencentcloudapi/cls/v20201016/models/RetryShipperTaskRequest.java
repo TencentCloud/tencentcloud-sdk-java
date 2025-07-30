@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class RetryShipperTaskRequest extends AbstractModel {
 
     /**
-    * 投递规则ID
+    * 投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
     */
     @SerializedName("ShipperId")
     @Expose
     private String ShipperId;
 
     /**
-    * 投递任务ID
+    * 投递任务Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745) 获取TaskId。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 投递规则ID 
-     * @return ShipperId 投递规则ID
+     * Get 投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。 
+     * @return ShipperId 投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
      */
     public String getShipperId() {
         return this.ShipperId;
     }
 
     /**
-     * Set 投递规则ID
-     * @param ShipperId 投递规则ID
+     * Set 投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
+     * @param ShipperId 投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
      */
     public void setShipperId(String ShipperId) {
         this.ShipperId = ShipperId;
     }
 
     /**
-     * Get 投递任务ID 
-     * @return TaskId 投递任务ID
+     * Get 投递任务Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745) 获取TaskId。 
+     * @return TaskId 投递任务Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745) 获取TaskId。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 投递任务ID
-     * @param TaskId 投递任务ID
+     * Set 投递任务Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745) 获取TaskId。
+     * @param TaskId 投递任务Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745) 获取TaskId。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

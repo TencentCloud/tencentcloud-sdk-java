@@ -38,7 +38,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel {
     private String Name;
 
     /**
-    * 参数模板对应实例版本
+    * 参数模板对应实例版本，可取值：5.5、5.6、5.7、8.0。
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -119,16 +119,16 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 参数模板对应实例版本 
-     * @return EngineVersion 参数模板对应实例版本
+     * Get 参数模板对应实例版本，可取值：5.5、5.6、5.7、8.0。 
+     * @return EngineVersion 参数模板对应实例版本，可取值：5.5、5.6、5.7、8.0。
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set 参数模板对应实例版本
-     * @param EngineVersion 参数模板对应实例版本
+     * Set 参数模板对应实例版本，可取值：5.5、5.6、5.7、8.0。
+     * @param EngineVersion 参数模板对应实例版本，可取值：5.5、5.6、5.7、8.0。
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;

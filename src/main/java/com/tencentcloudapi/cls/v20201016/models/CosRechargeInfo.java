@@ -59,7 +59,9 @@ public class CosRechargeInfo extends AbstractModel {
     private String Bucket;
 
     /**
-    * COS存储桶所在地域
+    * COS存储桶所在地域。
+
+- 通过[地域和访问域名](https://cloud.tencent.com/document/product/436/6224)获取地域信息。
     */
     @SerializedName("BucketRegion")
     @Expose
@@ -95,14 +97,14 @@ public class CosRechargeInfo extends AbstractModel {
     private Long Enable;
 
     /**
-    * 创建时间
+    * 创建时间。时间格式：YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间
+    * 更新时间。时间格式：YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -116,7 +118,7 @@ public class CosRechargeInfo extends AbstractModel {
     private Long Progress;
 
     /**
-    * supported: "", "gzip", "lzop", "snappy”; 默认空
+    * 压缩方式supported: "", "gzip", "lzop", "snappy”;  默认空不压缩
     */
     @SerializedName("Compress")
     @Expose
@@ -224,16 +226,24 @@ public class CosRechargeInfo extends AbstractModel {
     }
 
     /**
-     * Get COS存储桶所在地域 
-     * @return BucketRegion COS存储桶所在地域
+     * Get COS存储桶所在地域。
+
+- 通过[地域和访问域名](https://cloud.tencent.com/document/product/436/6224)获取地域信息。 
+     * @return BucketRegion COS存储桶所在地域。
+
+- 通过[地域和访问域名](https://cloud.tencent.com/document/product/436/6224)获取地域信息。
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set COS存储桶所在地域
-     * @param BucketRegion COS存储桶所在地域
+     * Set COS存储桶所在地域。
+
+- 通过[地域和访问域名](https://cloud.tencent.com/document/product/436/6224)获取地域信息。
+     * @param BucketRegion COS存储桶所在地域。
+
+- 通过[地域和访问域名](https://cloud.tencent.com/document/product/436/6224)获取地域信息。
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
@@ -308,32 +318,32 @@ public class CosRechargeInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间。时间格式：YYYY-MM-DD HH:mm:ss 
+     * @return CreateTime 创建时间。时间格式：YYYY-MM-DD HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间。时间格式：YYYY-MM-DD HH:mm:ss
+     * @param CreateTime 创建时间。时间格式：YYYY-MM-DD HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get 更新时间。时间格式：YYYY-MM-DD HH:mm:ss 
+     * @return UpdateTime 更新时间。时间格式：YYYY-MM-DD HH:mm:ss
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set 更新时间。时间格式：YYYY-MM-DD HH:mm:ss
+     * @param UpdateTime 更新时间。时间格式：YYYY-MM-DD HH:mm:ss
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -356,16 +366,16 @@ public class CosRechargeInfo extends AbstractModel {
     }
 
     /**
-     * Get supported: "", "gzip", "lzop", "snappy”; 默认空 
-     * @return Compress supported: "", "gzip", "lzop", "snappy”; 默认空
+     * Get 压缩方式supported: "", "gzip", "lzop", "snappy”;  默认空不压缩 
+     * @return Compress 压缩方式supported: "", "gzip", "lzop", "snappy”;  默认空不压缩
      */
     public String getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set supported: "", "gzip", "lzop", "snappy”; 默认空
-     * @param Compress supported: "", "gzip", "lzop", "snappy”; 默认空
+     * Set 压缩方式supported: "", "gzip", "lzop", "snappy”;  默认空不压缩
+     * @param Compress 压缩方式supported: "", "gzip", "lzop", "snappy”;  默认空不压缩
      */
     public void setCompress(String Compress) {
         this.Compress = Compress;

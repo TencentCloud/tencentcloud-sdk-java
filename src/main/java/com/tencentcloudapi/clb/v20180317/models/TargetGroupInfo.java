@@ -75,8 +75,7 @@ public class TargetGroupInfo extends AbstractModel {
     private AssociationItem [] AssociatedRule;
 
     /**
-    * 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
-
+    * 目标组后端转发协议, 仅v2新版目标组返回有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
@@ -84,7 +83,7 @@ public class TargetGroupInfo extends AbstractModel {
     private String Protocol;
 
     /**
-    * 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+    * 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
     */
     @SerializedName("TargetGroupType")
     @Expose
@@ -113,17 +112,32 @@ public class TargetGroupInfo extends AbstractModel {
 
     /**
     * 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * 是否全监听目标组
+    * 是否全监听目标组。
     */
     @SerializedName("FullListenSwitch")
     @Expose
     private Boolean FullListenSwitch;
+
+    /**
+    * 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+    */
+    @SerializedName("KeepaliveEnable")
+    @Expose
+    private Boolean KeepaliveEnable;
+
+    /**
+    * 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+    */
+    @SerializedName("SessionExpireTime")
+    @Expose
+    private Long SessionExpireTime;
 
     /**
      * Get 目标组ID 
@@ -246,11 +260,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
-
+     * Get 目标组后端转发协议, 仅v2新版目标组返回有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Protocol 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
-
+     * @return Protocol 目标组后端转发协议, 仅v2新版目标组返回有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
@@ -258,11 +270,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
-
+     * Set 目标组后端转发协议, 仅v2新版目标组返回有效值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Protocol 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
-
+     * @param Protocol 目标组后端转发协议, 仅v2新版目标组返回有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
@@ -270,16 +280,16 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。 
-     * @return TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+     * Get 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。 
+     * @return TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
      */
     public String getTargetGroupType() {
         return this.TargetGroupType;
     }
 
     /**
-     * Set 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
-     * @param TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+     * Set 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
+     * @param TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
      */
     public void setTargetGroupType(String TargetGroupType) {
         this.TargetGroupType = TargetGroupType;
@@ -334,8 +344,10 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。 
+     * Get 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -343,26 +355,60 @@ public class TargetGroupInfo extends AbstractModel {
 
     /**
      * Set 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 是否全监听目标组 
-     * @return FullListenSwitch 是否全监听目标组
+     * Get 是否全监听目标组。 
+     * @return FullListenSwitch 是否全监听目标组。
      */
     public Boolean getFullListenSwitch() {
         return this.FullListenSwitch;
     }
 
     /**
-     * Set 是否全监听目标组
-     * @param FullListenSwitch 是否全监听目标组
+     * Set 是否全监听目标组。
+     * @param FullListenSwitch 是否全监听目标组。
      */
     public void setFullListenSwitch(Boolean FullListenSwitch) {
         this.FullListenSwitch = FullListenSwitch;
+    }
+
+    /**
+     * Get 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。 
+     * @return KeepaliveEnable 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     */
+    public Boolean getKeepaliveEnable() {
+        return this.KeepaliveEnable;
+    }
+
+    /**
+     * Set 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     * @param KeepaliveEnable 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     */
+    public void setKeepaliveEnable(Boolean KeepaliveEnable) {
+        this.KeepaliveEnable = KeepaliveEnable;
+    }
+
+    /**
+     * Get 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。 
+     * @return SessionExpireTime 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     */
+    public Long getSessionExpireTime() {
+        return this.SessionExpireTime;
+    }
+
+    /**
+     * Set 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     * @param SessionExpireTime 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     */
+    public void setSessionExpireTime(Long SessionExpireTime) {
+        this.SessionExpireTime = SessionExpireTime;
     }
 
     public TargetGroupInfo() {
@@ -421,6 +467,12 @@ public class TargetGroupInfo extends AbstractModel {
         if (source.FullListenSwitch != null) {
             this.FullListenSwitch = new Boolean(source.FullListenSwitch);
         }
+        if (source.KeepaliveEnable != null) {
+            this.KeepaliveEnable = new Boolean(source.KeepaliveEnable);
+        }
+        if (source.SessionExpireTime != null) {
+            this.SessionExpireTime = new Long(source.SessionExpireTime);
+        }
     }
 
 
@@ -442,6 +494,8 @@ public class TargetGroupInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "FullListenSwitch", this.FullListenSwitch);
+        this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
+        this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
 
     }
 }

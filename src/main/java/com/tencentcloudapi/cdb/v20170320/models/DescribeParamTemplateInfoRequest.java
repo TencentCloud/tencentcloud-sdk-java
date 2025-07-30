@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeParamTemplateInfoRequest extends AbstractModel {
 
     /**
-    * 参数模板 ID。
+    * 参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get 参数模板 ID。 
-     * @return TemplateId 参数模板 ID。
+     * Get 参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。 
+     * @return TemplateId 参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 参数模板 ID。
-     * @param TemplateId 参数模板 ID。
+     * Set 参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
+     * @param TemplateId 参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

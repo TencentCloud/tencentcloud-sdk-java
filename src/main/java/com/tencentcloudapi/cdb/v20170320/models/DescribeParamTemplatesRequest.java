@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeParamTemplatesRequest extends AbstractModel {
 
     /**
-    * 引擎版本，缺省则查询所有
+    * 引擎版本，缺省则查询所有。可取值为：5.5、5.6、5.7、8.0。
     */
     @SerializedName("EngineVersions")
     @Expose
     private String [] EngineVersions;
 
     /**
-    * 引擎类型，缺省则查询所有
+    * 引擎类型，缺省则查询所有。可取值为：InnoDB、RocksDB，不区分大小写。
     */
     @SerializedName("EngineTypes")
     @Expose
     private String [] EngineTypes;
 
     /**
-    * 模板名称，缺省则查询所有
+    * 模板名称，缺省则查询所有。支持模糊匹配。
     */
     @SerializedName("TemplateNames")
     @Expose
     private String [] TemplateNames;
 
     /**
-    * 模板id，缺省则查询所有
+    * 模板 ID，缺省则查询所有。
     */
     @SerializedName("TemplateIds")
     @Expose
     private Long [] TemplateIds;
 
     /**
-     * Get 引擎版本，缺省则查询所有 
-     * @return EngineVersions 引擎版本，缺省则查询所有
+     * Get 引擎版本，缺省则查询所有。可取值为：5.5、5.6、5.7、8.0。 
+     * @return EngineVersions 引擎版本，缺省则查询所有。可取值为：5.5、5.6、5.7、8.0。
      */
     public String [] getEngineVersions() {
         return this.EngineVersions;
     }
 
     /**
-     * Set 引擎版本，缺省则查询所有
-     * @param EngineVersions 引擎版本，缺省则查询所有
+     * Set 引擎版本，缺省则查询所有。可取值为：5.5、5.6、5.7、8.0。
+     * @param EngineVersions 引擎版本，缺省则查询所有。可取值为：5.5、5.6、5.7、8.0。
      */
     public void setEngineVersions(String [] EngineVersions) {
         this.EngineVersions = EngineVersions;
     }
 
     /**
-     * Get 引擎类型，缺省则查询所有 
-     * @return EngineTypes 引擎类型，缺省则查询所有
+     * Get 引擎类型，缺省则查询所有。可取值为：InnoDB、RocksDB，不区分大小写。 
+     * @return EngineTypes 引擎类型，缺省则查询所有。可取值为：InnoDB、RocksDB，不区分大小写。
      */
     public String [] getEngineTypes() {
         return this.EngineTypes;
     }
 
     /**
-     * Set 引擎类型，缺省则查询所有
-     * @param EngineTypes 引擎类型，缺省则查询所有
+     * Set 引擎类型，缺省则查询所有。可取值为：InnoDB、RocksDB，不区分大小写。
+     * @param EngineTypes 引擎类型，缺省则查询所有。可取值为：InnoDB、RocksDB，不区分大小写。
      */
     public void setEngineTypes(String [] EngineTypes) {
         this.EngineTypes = EngineTypes;
     }
 
     /**
-     * Get 模板名称，缺省则查询所有 
-     * @return TemplateNames 模板名称，缺省则查询所有
+     * Get 模板名称，缺省则查询所有。支持模糊匹配。 
+     * @return TemplateNames 模板名称，缺省则查询所有。支持模糊匹配。
      */
     public String [] getTemplateNames() {
         return this.TemplateNames;
     }
 
     /**
-     * Set 模板名称，缺省则查询所有
-     * @param TemplateNames 模板名称，缺省则查询所有
+     * Set 模板名称，缺省则查询所有。支持模糊匹配。
+     * @param TemplateNames 模板名称，缺省则查询所有。支持模糊匹配。
      */
     public void setTemplateNames(String [] TemplateNames) {
         this.TemplateNames = TemplateNames;
     }
 
     /**
-     * Get 模板id，缺省则查询所有 
-     * @return TemplateIds 模板id，缺省则查询所有
+     * Get 模板 ID，缺省则查询所有。 
+     * @return TemplateIds 模板 ID，缺省则查询所有。
      */
     public Long [] getTemplateIds() {
         return this.TemplateIds;
     }
 
     /**
-     * Set 模板id，缺省则查询所有
-     * @param TemplateIds 模板id，缺省则查询所有
+     * Set 模板 ID，缺省则查询所有。
+     * @param TemplateIds 模板 ID，缺省则查询所有。
      */
     public void setTemplateIds(Long [] TemplateIds) {
         this.TemplateIds = TemplateIds;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSlowLogDataRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -68,14 +68,19 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     private String [] DataBases;
 
     /**
-    * 排序字段。当前支持：Timestamp,QueryTime,LockTime,RowsExamined,RowsSent 。
+    * 排序字段，当前支持字段及含义如下，默认值为 Timestamp。
+1. Timestamp：SQL 的执行时间
+2. QueryTime：SQL 的执行时长（秒）
+3. LockTime：锁时长（秒）
+4. RowsExamined：扫描行数
+5. RowsSent：结果集行数
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
 
     /**
-    * 升序还是降序排列。当前支持：ASC,DESC 。
+    * 升序还是降序排列。当前支持值为 ASC - 升序，DESC - 降序 ，默认值为 ASC。
     */
     @SerializedName("OrderBy")
     @Expose
@@ -89,7 +94,7 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 一次性返回的记录数量，默认为100，最大为400。
+    * 一次性返回的记录数量，默认为100，最大为800。
     */
     @SerializedName("Limit")
     @Expose
@@ -110,16 +115,16 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     private String OpResourceId;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -214,32 +219,52 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段。当前支持：Timestamp,QueryTime,LockTime,RowsExamined,RowsSent 。 
-     * @return SortBy 排序字段。当前支持：Timestamp,QueryTime,LockTime,RowsExamined,RowsSent 。
+     * Get 排序字段，当前支持字段及含义如下，默认值为 Timestamp。
+1. Timestamp：SQL 的执行时间
+2. QueryTime：SQL 的执行时长（秒）
+3. LockTime：锁时长（秒）
+4. RowsExamined：扫描行数
+5. RowsSent：结果集行数 
+     * @return SortBy 排序字段，当前支持字段及含义如下，默认值为 Timestamp。
+1. Timestamp：SQL 的执行时间
+2. QueryTime：SQL 的执行时长（秒）
+3. LockTime：锁时长（秒）
+4. RowsExamined：扫描行数
+5. RowsSent：结果集行数
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 排序字段。当前支持：Timestamp,QueryTime,LockTime,RowsExamined,RowsSent 。
-     * @param SortBy 排序字段。当前支持：Timestamp,QueryTime,LockTime,RowsExamined,RowsSent 。
+     * Set 排序字段，当前支持字段及含义如下，默认值为 Timestamp。
+1. Timestamp：SQL 的执行时间
+2. QueryTime：SQL 的执行时长（秒）
+3. LockTime：锁时长（秒）
+4. RowsExamined：扫描行数
+5. RowsSent：结果集行数
+     * @param SortBy 排序字段，当前支持字段及含义如下，默认值为 Timestamp。
+1. Timestamp：SQL 的执行时间
+2. QueryTime：SQL 的执行时长（秒）
+3. LockTime：锁时长（秒）
+4. RowsExamined：扫描行数
+5. RowsSent：结果集行数
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get 升序还是降序排列。当前支持：ASC,DESC 。 
-     * @return OrderBy 升序还是降序排列。当前支持：ASC,DESC 。
+     * Get 升序还是降序排列。当前支持值为 ASC - 升序，DESC - 降序 ，默认值为 ASC。 
+     * @return OrderBy 升序还是降序排列。当前支持值为 ASC - 升序，DESC - 降序 ，默认值为 ASC。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 升序还是降序排列。当前支持：ASC,DESC 。
-     * @param OrderBy 升序还是降序排列。当前支持：ASC,DESC 。
+     * Set 升序还是降序排列。当前支持值为 ASC - 升序，DESC - 降序 ，默认值为 ASC。
+     * @param OrderBy 升序还是降序排列。当前支持值为 ASC - 升序，DESC - 降序 ，默认值为 ASC。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
@@ -262,16 +287,16 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 一次性返回的记录数量，默认为100，最大为400。 
-     * @return Limit 一次性返回的记录数量，默认为100，最大为400。
+     * Get 一次性返回的记录数量，默认为100，最大为800。 
+     * @return Limit 一次性返回的记录数量，默认为100，最大为800。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 一次性返回的记录数量，默认为100，最大为400。
-     * @param Limit 一次性返回的记录数量，默认为100，最大为400。
+     * Set 一次性返回的记录数量，默认为100，最大为800。
+     * @param Limit 一次性返回的记录数量，默认为100，最大为800。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

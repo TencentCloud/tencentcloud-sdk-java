@@ -178,6 +178,20 @@ public class CreateDatasourceRequest extends AbstractModel {
     private String RegionId;
 
     /**
+    * 数据库schema
+    */
+    @SerializedName("Schema")
+    @Expose
+    private String Schema;
+
+    /**
+    * 数据库版本
+    */
+    @SerializedName("DbVersion")
+    @Expose
+    private String DbVersion;
+
+    /**
      * Get HOST 
      * @return DbHost HOST
      */
@@ -529,6 +543,38 @@ public class CreateDatasourceRequest extends AbstractModel {
         this.RegionId = RegionId;
     }
 
+    /**
+     * Get 数据库schema 
+     * @return Schema 数据库schema
+     */
+    public String getSchema() {
+        return this.Schema;
+    }
+
+    /**
+     * Set 数据库schema
+     * @param Schema 数据库schema
+     */
+    public void setSchema(String Schema) {
+        this.Schema = Schema;
+    }
+
+    /**
+     * Get 数据库版本 
+     * @return DbVersion 数据库版本
+     */
+    public String getDbVersion() {
+        return this.DbVersion;
+    }
+
+    /**
+     * Set 数据库版本
+     * @param DbVersion 数据库版本
+     */
+    public void setDbVersion(String DbVersion) {
+        this.DbVersion = DbVersion;
+    }
+
     public CreateDatasourceRequest() {
     }
 
@@ -606,6 +652,12 @@ public class CreateDatasourceRequest extends AbstractModel {
         if (source.RegionId != null) {
             this.RegionId = new String(source.RegionId);
         }
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
+        }
+        if (source.DbVersion != null) {
+            this.DbVersion = new String(source.DbVersion);
+        }
     }
 
 
@@ -635,6 +687,8 @@ public class CreateDatasourceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OperationAuthLimit.", this.OperationAuthLimit);
         this.setParamSimple(map, prefix + "UseVPC", this.UseVPC);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "Schema", this.Schema);
+        this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
 
     }
 }
