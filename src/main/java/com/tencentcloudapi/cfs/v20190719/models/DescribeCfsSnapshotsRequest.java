@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCfsSnapshotsRequest extends AbstractModel {
 
     /**
-    * 文件系统ID
+    * 文件系统 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 快照ID
+    * 快照 ID
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -57,10 +57,9 @@ public class DescribeCfsSnapshotsRequest extends AbstractModel {
 <br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
 <br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
 <br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
-<br>Status - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤
-(creating：创建中 | available：运行中| deleting: 删除中 | rollbacking_new：由快照创建新文件系统中| create-failed 创建失败）
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤。状态分类：creating：创建中 | available：运行中 | deleting：删除中 | rollbacking_new：由快照创建新文件系统中 | create-failed：创建失败。
 <br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
-<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key 使用具体的标签键进行替换。
     */
     @SerializedName("Filters")
     @Expose
@@ -74,39 +73,39 @@ public class DescribeCfsSnapshotsRequest extends AbstractModel {
     private String OrderField;
 
     /**
-    * 排序 升序或者降序
+    * 排序；升序或者降序
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get 文件系统ID 
-     * @return FileSystemId 文件系统ID
+     * Get 文件系统 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取 
+     * @return FileSystemId 文件系统 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统ID
-     * @param FileSystemId 文件系统ID
+     * Set 文件系统 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
+     * @param FileSystemId 文件系统 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 快照ID 
-     * @return SnapshotId 快照ID
+     * Get 快照 ID 
+     * @return SnapshotId 快照 ID
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 快照ID
-     * @param SnapshotId 快照ID
+     * Set 快照 ID
+     * @param SnapshotId 快照 ID
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
@@ -150,19 +149,17 @@ public class DescribeCfsSnapshotsRequest extends AbstractModel {
 <br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
 <br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
 <br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
-<br>Status - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤
-(creating：创建中 | available：运行中| deleting: 删除中 | rollbacking_new：由快照创建新文件系统中| create-failed 创建失败）
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤。状态分类：creating：创建中 | available：运行中 | deleting：删除中 | rollbacking_new：由快照创建新文件系统中 | create-failed：创建失败。
 <br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
-<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。 
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key 使用具体的标签键进行替换。 
      * @return Filters 过滤条件。
 <br>SnapshotId - Array of String - 是否必填：否 -（过滤条件）按快照ID过滤。
 <br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
 <br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
 <br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
-<br>Status - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤
-(creating：创建中 | available：运行中| deleting: 删除中 | rollbacking_new：由快照创建新文件系统中| create-failed 创建失败）
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤。状态分类：creating：创建中 | available：运行中 | deleting：删除中 | rollbacking_new：由快照创建新文件系统中 | create-failed：创建失败。
 <br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
-<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key 使用具体的标签键进行替换。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -174,19 +171,17 @@ public class DescribeCfsSnapshotsRequest extends AbstractModel {
 <br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
 <br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
 <br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
-<br>Status - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤
-(creating：创建中 | available：运行中| deleting: 删除中 | rollbacking_new：由快照创建新文件系统中| create-failed 创建失败）
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤。状态分类：creating：创建中 | available：运行中 | deleting：删除中 | rollbacking_new：由快照创建新文件系统中 | create-failed：创建失败。
 <br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
-<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key 使用具体的标签键进行替换。
      * @param Filters 过滤条件。
 <br>SnapshotId - Array of String - 是否必填：否 -（过滤条件）按快照ID过滤。
 <br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
 <br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
 <br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
-<br>Status - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤
-(creating：创建中 | available：运行中| deleting: 删除中 | rollbacking_new：由快照创建新文件系统中| create-failed 创建失败）
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按照快照状态过滤。状态分类：creating：创建中 | available：运行中 | deleting：删除中 | rollbacking_new：由快照创建新文件系统中 | create-failed：创建失败。
 <br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
-<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key 使用具体的标签键进行替换。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -209,16 +204,16 @@ public class DescribeCfsSnapshotsRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序 升序或者降序 
-     * @return Order 排序 升序或者降序
+     * Get 排序；升序或者降序 
+     * @return Order 排序；升序或者降序
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序 升序或者降序
-     * @param Order 排序 升序或者降序
+     * Set 排序；升序或者降序
+     * @param Order 排序；升序或者降序
      */
     public void setOrder(String Order) {
         this.Order = Order;

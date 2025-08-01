@@ -268,17 +268,6 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
-     *查询混元生3D任务
-     * @param req QueryHunyuanTo3DJobRequest
-     * @return QueryHunyuanTo3DJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public QueryHunyuanTo3DJobResponse QueryHunyuanTo3DJob(QueryHunyuanTo3DJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "QueryHunyuanTo3DJob", QueryHunyuanTo3DJobResponse.class);
-    }
-
-    /**
      *腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
 
  1. 本接口暂不支持返回图片内容。
@@ -331,17 +320,6 @@ public class HunyuanClient extends AbstractClient{
     public SubmitHunyuanImageJobResponse SubmitHunyuanImageJob(SubmitHunyuanImageJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitHunyuanImageJob", SubmitHunyuanImageJobResponse.class);
-    }
-
-    /**
-     *提交混元生3D任务
-     * @param req SubmitHunyuanTo3DJobRequest
-     * @return SubmitHunyuanTo3DJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitHunyuanTo3DJobResponse SubmitHunyuanTo3DJob(SubmitHunyuanTo3DJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SubmitHunyuanTo3DJob", SubmitHunyuanTo3DJobResponse.class);
     }
 
     /**

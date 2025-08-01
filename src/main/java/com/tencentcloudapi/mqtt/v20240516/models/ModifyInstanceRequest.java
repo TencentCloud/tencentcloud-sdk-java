@@ -76,6 +76,22 @@ API：手动通过API注册
     private Boolean AuthorizationPolicy;
 
     /**
+    * 是否使用默认的服务端证书
+    */
+    @SerializedName("UseDefaultServerCert")
+    @Expose
+    private Boolean UseDefaultServerCert;
+
+    /**
+    * TLS：单向认证
+mTLS；双向认证
+BYOC：一机一证
+    */
+    @SerializedName("X509Mode")
+    @Expose
+    private String X509Mode;
+
+    /**
      * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
      * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
@@ -207,6 +223,46 @@ API：手动通过API注册
         this.AuthorizationPolicy = AuthorizationPolicy;
     }
 
+    /**
+     * Get 是否使用默认的服务端证书 
+     * @return UseDefaultServerCert 是否使用默认的服务端证书
+     */
+    public Boolean getUseDefaultServerCert() {
+        return this.UseDefaultServerCert;
+    }
+
+    /**
+     * Set 是否使用默认的服务端证书
+     * @param UseDefaultServerCert 是否使用默认的服务端证书
+     */
+    public void setUseDefaultServerCert(Boolean UseDefaultServerCert) {
+        this.UseDefaultServerCert = UseDefaultServerCert;
+    }
+
+    /**
+     * Get TLS：单向认证
+mTLS；双向认证
+BYOC：一机一证 
+     * @return X509Mode TLS：单向认证
+mTLS；双向认证
+BYOC：一机一证
+     */
+    public String getX509Mode() {
+        return this.X509Mode;
+    }
+
+    /**
+     * Set TLS：单向认证
+mTLS；双向认证
+BYOC：一机一证
+     * @param X509Mode TLS：单向认证
+mTLS；双向认证
+BYOC：一机一证
+     */
+    public void setX509Mode(String X509Mode) {
+        this.X509Mode = X509Mode;
+    }
+
     public ModifyInstanceRequest() {
     }
 
@@ -236,6 +292,12 @@ API：手动通过API注册
         if (source.AuthorizationPolicy != null) {
             this.AuthorizationPolicy = new Boolean(source.AuthorizationPolicy);
         }
+        if (source.UseDefaultServerCert != null) {
+            this.UseDefaultServerCert = new Boolean(source.UseDefaultServerCert);
+        }
+        if (source.X509Mode != null) {
+            this.X509Mode = new String(source.X509Mode);
+        }
     }
 
 
@@ -250,6 +312,8 @@ API：手动通过API注册
         this.setParamSimple(map, prefix + "DeviceCertificateProvisionType", this.DeviceCertificateProvisionType);
         this.setParamSimple(map, prefix + "AutomaticActivation", this.AutomaticActivation);
         this.setParamSimple(map, prefix + "AuthorizationPolicy", this.AuthorizationPolicy);
+        this.setParamSimple(map, prefix + "UseDefaultServerCert", this.UseDefaultServerCert);
+        this.setParamSimple(map, prefix + "X509Mode", this.X509Mode);
 
     }
 }

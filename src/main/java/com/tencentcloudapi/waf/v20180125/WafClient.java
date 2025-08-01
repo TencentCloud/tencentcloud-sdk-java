@@ -193,6 +193,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *添加规则引擎白名单
+     * @param req CreateOwaspWhiteRuleRequest
+     * @return CreateOwaspWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOwaspWhiteRuleResponse CreateOwaspWhiteRule(CreateOwaspWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOwaspWhiteRule", CreateOwaspWhiteRuleResponse.class);
+    }
+
+    /**
      *创建CKafka投递流任务
      * @param req CreatePostCKafkaFlowRequest
      * @return CreatePostCKafkaFlowResponse
@@ -355,6 +366,17 @@ public class WafClient extends AbstractClient{
     public DeleteIpAccessControlV2Response DeleteIpAccessControlV2(DeleteIpAccessControlV2Request req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteIpAccessControlV2", DeleteIpAccessControlV2Response.class);
+    }
+
+    /**
+     *删除用户规则引擎白名单
+     * @param req DeleteOwaspWhiteRuleRequest
+     * @return DeleteOwaspWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRule(DeleteOwaspWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOwaspWhiteRule", DeleteOwaspWhiteRuleResponse.class);
     }
 
     /**
@@ -861,6 +883,17 @@ public class WafClient extends AbstractClient{
     public DescribeObjectsResponse DescribeObjects(DescribeObjectsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeObjects", DescribeObjectsResponse.class);
+    }
+
+    /**
+     *获取规则引擎白名单列表
+     * @param req DescribeOwaspWhiteRulesRequest
+     * @return DescribeOwaspWhiteRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOwaspWhiteRulesResponse DescribeOwaspWhiteRules(DescribeOwaspWhiteRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOwaspWhiteRules", DescribeOwaspWhiteRulesResponse.class);
     }
 
     /**
@@ -1612,6 +1645,17 @@ public class WafClient extends AbstractClient{
     public ModifyObjectResponse ModifyObject(ModifyObjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyObject", ModifyObjectResponse.class);
+    }
+
+    /**
+     *编辑规则引擎白名单
+     * @param req ModifyOwaspWhiteRuleRequest
+     * @return ModifyOwaspWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwaspWhiteRuleResponse ModifyOwaspWhiteRule(ModifyOwaspWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwaspWhiteRule", ModifyOwaspWhiteRuleResponse.class);
     }
 
     /**

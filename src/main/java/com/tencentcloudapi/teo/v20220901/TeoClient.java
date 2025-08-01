@@ -219,6 +219,19 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *即时转码已经提供了预置转码模板，满足大部分的需求。如果有个性化的转码需求，可以通过本接口创建自定义的转码模板，最多可创建100个自定义转码模板。
+为了确保即时转码效果的一致性，避免因 EO 缓存或 M3U8 分片处理过程中的模板变更导致视频输出异常，模板在创建后不可进行修改。
+即时转码详细能力了解：[EdgeOne视频即时处理功能介绍](https://cloud.tencent.com/document/product/1552/111927)。
+     * @param req CreateJustInTimeTranscodeTemplateRequest
+     * @return CreateJustInTimeTranscodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplate(CreateJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateJustInTimeTranscodeTemplate", CreateJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
      *用于创建四层代理实例。
      * @param req CreateL4ProxyRequest
      * @return CreateL4ProxyResponse
@@ -378,6 +391,39 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *用于创建 API 资源。
+     * @param req CreateSecurityAPIResourceRequest
+     * @return CreateSecurityAPIResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityAPIResourceResponse CreateSecurityAPIResource(CreateSecurityAPIResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSecurityAPIResource", CreateSecurityAPIResourceResponse.class);
+    }
+
+    /**
+     *用于创建 API 服务。
+     * @param req CreateSecurityAPIServiceRequest
+     * @return CreateSecurityAPIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityAPIServiceResponse CreateSecurityAPIService(CreateSecurityAPIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSecurityAPIService", CreateSecurityAPIServiceResponse.class);
+    }
+
+    /**
+     *创建客户端认证选项。
+     * @param req CreateSecurityClientAttesterRequest
+     * @return CreateSecurityClientAttesterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityClientAttesterResponse CreateSecurityClientAttester(CreateSecurityClientAttesterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSecurityClientAttester", CreateSecurityClientAttesterResponse.class);
+    }
+
+    /**
      *创建安全 IP 组
      * @param req CreateSecurityIPGroupRequest
      * @return CreateSecurityIPGroupResponse
@@ -386,6 +432,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public CreateSecurityIPGroupResponse CreateSecurityIPGroup(CreateSecurityIPGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSecurityIPGroup", CreateSecurityIPGroupResponse.class);
+    }
+
+    /**
+     *创建 JavaScript 注入规则。
+     * @param req CreateSecurityJSInjectionRuleRequest
+     * @return CreateSecurityJSInjectionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityJSInjectionRuleResponse CreateSecurityJSInjectionRule(CreateSecurityJSInjectionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSecurityJSInjectionRule", CreateSecurityJSInjectionRuleResponse.class);
     }
 
     /**
@@ -525,6 +582,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *根据站点 id 下唯一的模板标识，删除相应的即时转码模板。
+     * @param req DeleteJustInTimeTranscodeTemplatesRequest
+     * @return DeleteJustInTimeTranscodeTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteJustInTimeTranscodeTemplatesResponse DeleteJustInTimeTranscodeTemplates(DeleteJustInTimeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteJustInTimeTranscodeTemplates", DeleteJustInTimeTranscodeTemplatesResponse.class);
+    }
+
+    /**
      *用于删除四层代理实例。
      * @param req DeleteL4ProxyRequest
      * @return DeleteL4ProxyResponse
@@ -625,6 +693,39 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *用于删除 API 资源。
+     * @param req DeleteSecurityAPIResourceRequest
+     * @return DeleteSecurityAPIResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityAPIResourceResponse DeleteSecurityAPIResource(DeleteSecurityAPIResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSecurityAPIResource", DeleteSecurityAPIResourceResponse.class);
+    }
+
+    /**
+     *用于删除 API 服务。
+     * @param req DeleteSecurityAPIServiceRequest
+     * @return DeleteSecurityAPIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityAPIServiceResponse DeleteSecurityAPIService(DeleteSecurityAPIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSecurityAPIService", DeleteSecurityAPIServiceResponse.class);
+    }
+
+    /**
+     *删除客户端认证选项。
+     * @param req DeleteSecurityClientAttesterRequest
+     * @return DeleteSecurityClientAttesterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityClientAttesterResponse DeleteSecurityClientAttester(DeleteSecurityClientAttesterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSecurityClientAttester", DeleteSecurityClientAttesterResponse.class);
+    }
+
+    /**
      *删除指定 IP 组，如果有规则引用了 IP 组情况，则不允许删除。
      * @param req DeleteSecurityIPGroupRequest
      * @return DeleteSecurityIPGroupResponse
@@ -633,6 +734,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DeleteSecurityIPGroupResponse DeleteSecurityIPGroup(DeleteSecurityIPGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSecurityIPGroup", DeleteSecurityIPGroupResponse.class);
+    }
+
+    /**
+     *删除 JavaScript 注入规则。
+     * @param req DeleteSecurityJSInjectionRuleRequest
+     * @return DeleteSecurityJSInjectionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityJSInjectionRuleResponse DeleteSecurityJSInjectionRule(DeleteSecurityJSInjectionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSecurityJSInjectionRule", DeleteSecurityJSInjectionRuleResponse.class);
     }
 
     /**
@@ -945,6 +1057,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *根据即时转码模板名字、模板类型或唯一标识，获取即时转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及预置模板。
+     * @param req DescribeJustInTimeTranscodeTemplatesRequest
+     * @return DescribeJustInTimeTranscodeTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplates(DescribeJustInTimeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJustInTimeTranscodeTemplates", DescribeJustInTimeTranscodeTemplatesResponse.class);
+    }
+
+    /**
      *用于查询四层代理实例列表。
      * @param req DescribeL4ProxyRequest
      * @return DescribeL4ProxyResponse
@@ -1179,6 +1302,39 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *查询站点下的 API 资源。
+     * @param req DescribeSecurityAPIResourceRequest
+     * @return DescribeSecurityAPIResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityAPIResourceResponse DescribeSecurityAPIResource(DescribeSecurityAPIResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityAPIResource", DescribeSecurityAPIResourceResponse.class);
+    }
+
+    /**
+     *查询站点下的 API 服务。
+     * @param req DescribeSecurityAPIServiceRequest
+     * @return DescribeSecurityAPIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityAPIServiceResponse DescribeSecurityAPIService(DescribeSecurityAPIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityAPIService", DescribeSecurityAPIServiceResponse.class);
+    }
+
+    /**
+     *查询客户端认证选项配置。
+     * @param req DescribeSecurityClientAttesterRequest
+     * @return DescribeSecurityClientAttesterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityClientAttesterResponse DescribeSecurityClientAttester(DescribeSecurityClientAttesterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityClientAttester", DescribeSecurityClientAttesterResponse.class);
+    }
+
+    /**
      *查询安全 IP 组的配置信息，包括安全 IP 组的 ID、名称和内容。本接口的查询结果中，每个 IP 组最多只返回 2000 个 IP / 网段。如果存在超过 2000 个 IP / 网段的超大 IP 组，请调用 DescribeSecurityIPGroupContent 进行分页查询。
      * @param req DescribeSecurityIPGroupRequest
      * @return DescribeSecurityIPGroupResponse
@@ -1187,6 +1343,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeSecurityIPGroupResponse DescribeSecurityIPGroup(DescribeSecurityIPGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSecurityIPGroup", DescribeSecurityIPGroupResponse.class);
+    }
+
+    /**
+     *该接口用于分页查询指定 IP 组中的 IP 地址列表。当 IP 组中的 IP 地址数量超过 2000 个时，可以使用此接口进行分页查询，以获取完整的 IP 地址列表。
+     * @param req DescribeSecurityIPGroupContentRequest
+     * @return DescribeSecurityIPGroupContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityIPGroupContentResponse DescribeSecurityIPGroupContent(DescribeSecurityIPGroupContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityIPGroupContent", DescribeSecurityIPGroupContentResponse.class);
     }
 
     /**
@@ -1201,6 +1368,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfo(DescribeSecurityIPGroupInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSecurityIPGroupInfo", DescribeSecurityIPGroupInfoResponse.class);
+    }
+
+    /**
+     *查询 JavaScript 注入规则。
+     * @param req DescribeSecurityJSInjectionRuleRequest
+     * @return DescribeSecurityJSInjectionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityJSInjectionRuleResponse DescribeSecurityJSInjectionRule(DescribeSecurityJSInjectionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityJSInjectionRule", DescribeSecurityJSInjectionRuleResponse.class);
     }
 
     /**
@@ -1830,6 +2008,39 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *该接口用于修改 API 资源。
+     * @param req ModifySecurityAPIResourceRequest
+     * @return ModifySecurityAPIResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySecurityAPIResourceResponse ModifySecurityAPIResource(ModifySecurityAPIResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySecurityAPIResource", ModifySecurityAPIResourceResponse.class);
+    }
+
+    /**
+     *该接口用于修改 API 服务。
+     * @param req ModifySecurityAPIServiceRequest
+     * @return ModifySecurityAPIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySecurityAPIServiceResponse ModifySecurityAPIService(ModifySecurityAPIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySecurityAPIService", ModifySecurityAPIServiceResponse.class);
+    }
+
+    /**
+     *修改客户端认证选项。
+     * @param req ModifySecurityClientAttesterRequest
+     * @return ModifySecurityClientAttesterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySecurityClientAttesterResponse ModifySecurityClientAttester(ModifySecurityClientAttesterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySecurityClientAttester", ModifySecurityClientAttesterResponse.class);
+    }
+
+    /**
      *修改安全 IP 组。
      * @param req ModifySecurityIPGroupRequest
      * @return ModifySecurityIPGroupResponse
@@ -1838,6 +2049,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifySecurityIPGroupResponse ModifySecurityIPGroup(ModifySecurityIPGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySecurityIPGroup", ModifySecurityIPGroupResponse.class);
+    }
+
+    /**
+     *修改 JavaScript 注入规则。
+     * @param req ModifySecurityJSInjectionRuleRequest
+     * @return ModifySecurityJSInjectionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySecurityJSInjectionRuleResponse ModifySecurityJSInjectionRule(ModifySecurityJSInjectionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySecurityJSInjectionRule", ModifySecurityJSInjectionRuleResponse.class);
     }
 
     /**

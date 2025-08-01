@@ -303,6 +303,13 @@ DEFAULT: 其他来源
     private String MonitorSource;
 
     /**
+    * 服务创建者的子账号名称
+    */
+    @SerializedName("SubUinName")
+    @Expose
+    private String SubUinName;
+
+    /**
      * Get 服务组id 
      * @return ServiceGroupId 服务组id
      */
@@ -1018,6 +1025,22 @@ DEFAULT: 其他来源
         this.MonitorSource = MonitorSource;
     }
 
+    /**
+     * Get 服务创建者的子账号名称 
+     * @return SubUinName 服务创建者的子账号名称
+     */
+    public String getSubUinName() {
+        return this.SubUinName;
+    }
+
+    /**
+     * Set 服务创建者的子账号名称
+     * @param SubUinName 服务创建者的子账号名称
+     */
+    public void setSubUinName(String SubUinName) {
+        this.SubUinName = SubUinName;
+    }
+
     public Service() {
     }
 
@@ -1131,6 +1154,9 @@ DEFAULT: 其他来源
         if (source.MonitorSource != null) {
             this.MonitorSource = new String(source.MonitorSource);
         }
+        if (source.SubUinName != null) {
+            this.SubUinName = new String(source.SubUinName);
+        }
     }
 
 
@@ -1172,6 +1198,7 @@ DEFAULT: 其他来源
         this.setParamSimple(map, prefix + "DeployType", this.DeployType);
         this.setParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
         this.setParamSimple(map, prefix + "MonitorSource", this.MonitorSource);
+        this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
 
     }
 }

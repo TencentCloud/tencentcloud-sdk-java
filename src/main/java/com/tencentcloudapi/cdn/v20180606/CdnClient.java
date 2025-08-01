@@ -97,45 +97,6 @@ CreateDiagnoseUrl 用于添加域名诊断任务URL。
     }
 
     /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-CreateScdnDomain 用于创建 SCDN 加速域名
-     * @param req CreateScdnDomainRequest
-     * @return CreateScdnDomainResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateScdnDomainResponse CreateScdnDomain(CreateScdnDomainRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateScdnDomain", CreateScdnDomainResponse.class);
-    }
-
-    /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-CreateScdnFailedLogTask 用于重试创建失败的事件日志任务
-     * @param req CreateScdnFailedLogTaskRequest
-     * @return CreateScdnFailedLogTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateScdnFailedLogTaskResponse CreateScdnFailedLogTask(CreateScdnFailedLogTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateScdnFailedLogTask", CreateScdnFailedLogTaskResponse.class);
-    }
-
-    /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-CreateScdnLogTask 用于创建事件日志任务
-     * @param req CreateScdnLogTaskRequest
-     * @return CreateScdnLogTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateScdnLogTaskResponse CreateScdnLogTask(CreateScdnLogTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateScdnLogTask", CreateScdnLogTaskResponse.class);
-    }
-
-    /**
      *CreateVerifyRecord 用于生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权。
 生成的解析记录可通过 [VerifyDomainRecord](https://cloud.tencent.com/document/product/228/48117) 完成归属权校验。
 注意：生成的解析记录有效期为24小时，超过24小时后，需重新生成。
@@ -172,19 +133,6 @@ CreateScdnLogTask 用于创建事件日志任务
     }
 
     /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-删除SCDN域名
-     * @param req DeleteScdnDomainRequest
-     * @return DeleteScdnDomainResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteScdnDomainResponse DeleteScdnDomain(DeleteScdnDomainRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteScdnDomain", DeleteScdnDomainResponse.class);
-    }
-
-    /**
      *DescribeBillingData 用于查询实际计费数据明细。
      * @param req DescribeBillingDataRequest
      * @return DescribeBillingDataResponse
@@ -193,19 +141,6 @@ CreateScdnLogTask 用于创建事件日志任务
     public DescribeBillingDataResponse DescribeBillingData(DescribeBillingDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBillingData", DescribeBillingDataResponse.class);
-    }
-
-    /**
-     *SCDN平台下线，接口开始预下线处理
-
-CC统计数据查询
-     * @param req DescribeCcDataRequest
-     * @return DescribeCcDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCcDataResponse DescribeCcData(DescribeCcDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCcData", DescribeCcDataResponse.class);
     }
 
     /**
@@ -278,19 +213,6 @@ CC统计数据查询
     }
 
     /**
-     *SCDN平台下线，接口开始预下线处理
-
-DDoS统计数据查询
-     * @param req DescribeDDoSDataRequest
-     * @return DescribeDDoSDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDDoSDataResponse DescribeDDoSData(DescribeDDoSDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDDoSData", DescribeDDoSDataResponse.class);
-    }
-
-    /**
      *以上诊断报告, 域名版本管理相关接口功能均废弃,  已确认现网0调用, 申请预下线,(预下线不会影响调用, 只会在接口中添加提示信息, 正式下线仍需人工确认)
 
 ### <font color=red>**该接口已废弃** </font><br>
@@ -347,19 +269,6 @@ DescribeDiagnoseReport 用于获取指定报告id的内容。
     public DescribeEdgePackTaskStatusResponse DescribeEdgePackTaskStatus(DescribeEdgePackTaskStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEdgePackTaskStatus", DescribeEdgePackTaskStatusResponse.class);
-    }
-
-    /**
-     *SCDN平台下线，接口开始预下线处理
-
-DescribeEventLogData 用于查询事件日志统计曲线
-     * @param req DescribeEventLogDataRequest
-     * @return DescribeEventLogDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEventLogDataResponse DescribeEventLogData(DescribeEventLogDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEventLogData", DescribeEventLogDataResponse.class);
     }
 
     /**
@@ -510,71 +419,6 @@ DescribeEventLogData 用于查询事件日志统计曲线
     }
 
     /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-获取BOT统计数据列表
-     * @param req DescribeScdnBotDataRequest
-     * @return DescribeScdnBotDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeScdnBotDataResponse DescribeScdnBotData(DescribeScdnBotDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeScdnBotData", DescribeScdnBotDataResponse.class);
-    }
-
-    /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-查询BOT会话记录列表
-     * @param req DescribeScdnBotRecordsRequest
-     * @return DescribeScdnBotRecordsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeScdnBotRecordsResponse DescribeScdnBotRecords(DescribeScdnBotRecordsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeScdnBotRecords", DescribeScdnBotRecordsResponse.class);
-    }
-
-    /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
-     * @param req DescribeScdnConfigRequest
-     * @return DescribeScdnConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeScdnConfigResponse DescribeScdnConfig(DescribeScdnConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeScdnConfig", DescribeScdnConfigResponse.class);
-    }
-
-    /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-查询在SCDN IP安全策略
-     * @param req DescribeScdnIpStrategyRequest
-     * @return DescribeScdnIpStrategyResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeScdnIpStrategyResponse DescribeScdnIpStrategy(DescribeScdnIpStrategyRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeScdnIpStrategy", DescribeScdnIpStrategyResponse.class);
-    }
-
-    /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-获取SCDN的Top数据
-     * @param req DescribeScdnTopDataRequest
-     * @return DescribeScdnTopDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeScdnTopDataResponse DescribeScdnTopData(DescribeScdnTopDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeScdnTopData", DescribeScdnTopDataResponse.class);
-    }
-
-    /**
      *DescribeTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
 
 + 依据总流量、总请求数对访问 IP 排序，从大至小返回 TOP 100 IP
@@ -615,19 +459,6 @@ DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
     public DescribeUrlViolationsResponse DescribeUrlViolations(DescribeUrlViolationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUrlViolations", DescribeUrlViolationsResponse.class);
-    }
-
-    /**
-     *SCDN平台下线，接口开始预下线处理
-
-Waf统计数据查询
-     * @param req DescribeWafDataRequest
-     * @return DescribeWafDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWafDataResponse DescribeWafData(DescribeWafDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWafData", DescribeWafDataResponse.class);
     }
 
     /**
@@ -739,71 +570,6 @@ ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要�
     }
 
     /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-ListScdnDomains 用于查询 SCDN 安全加速域名列表，及域名基本配置信息
-     * @param req ListScdnDomainsRequest
-     * @return ListScdnDomainsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListScdnDomainsResponse ListScdnDomains(ListScdnDomainsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListScdnDomains", ListScdnDomainsResponse.class);
-    }
-
-    /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任务基本信息
-     * @param req ListScdnLogTasksRequest
-     * @return ListScdnLogTasksResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListScdnLogTasksResponse ListScdnLogTasks(ListScdnLogTasksRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListScdnLogTasks", ListScdnLogTasksResponse.class);
-    }
-
-    /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-获取Bot攻击的Top数据列表
-     * @param req ListScdnTopBotDataRequest
-     * @return ListScdnTopBotDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListScdnTopBotDataResponse ListScdnTopBotData(ListScdnTopBotDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListScdnTopBotData", ListScdnTopBotDataResponse.class);
-    }
-
-    /**
-     *SCDN平台下线，接口开始预下线处理
-
-获取Bot攻击的Top信息
-     * @param req ListTopBotDataRequest
-     * @return ListTopBotDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListTopBotDataResponse ListTopBotData(ListTopBotDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListTopBotData", ListTopBotDataResponse.class);
-    }
-
-    /**
-     *SCDN平台下线，接口开始预下线处理
-
-获取CC攻击Top数据
-     * @param req ListTopCcDataRequest
-     * @return ListTopCcDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListTopCcDataResponse ListTopCcData(ListTopCcDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListTopCcData", ListTopCcDataResponse.class);
-    }
-
-    /**
      *通过CLS日志计算Top信息。支持近7天的日志数据。
      * @param req ListTopClsLogDataRequest
      * @return ListTopClsLogDataResponse
@@ -812,19 +578,6 @@ ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任�
     public ListTopClsLogDataResponse ListTopClsLogData(ListTopClsLogDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListTopClsLogData", ListTopClsLogDataResponse.class);
-    }
-
-    /**
-     *SCDN平台下线，接口开始预下线处理
-
-获取DDoS攻击Top数据
-     * @param req ListTopDDoSDataRequest
-     * @return ListTopDDoSDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListTopDDoSDataResponse ListTopDDoSData(ListTopDDoSDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListTopDDoSData", ListTopDDoSDataResponse.class);
     }
 
     /**
@@ -844,19 +597,6 @@ ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任�
     public ListTopDataResponse ListTopData(ListTopDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListTopData", ListTopDataResponse.class);
-    }
-
-    /**
-     *SCDN平台下线，接口开始预下线处理
-
-获取Waf攻击Top数据
-     * @param req ListTopWafDataRequest
-     * @return ListTopWafDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListTopWafDataResponse ListTopWafData(ListTopWafDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListTopWafData", ListTopWafDataResponse.class);
     }
 
     /**
@@ -955,19 +695,6 @@ Value 字段，使用 json 进行序列化，其中固定 update 作为 key，�
     }
 
     /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-StartScdnDomain 用于开启域名的安全防护配置
-     * @param req StartScdnDomainRequest
-     * @return StartScdnDomainResponse
-     * @throws TencentCloudSDKException
-     */
-    public StartScdnDomainResponse StartScdnDomain(StartScdnDomainRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "StartScdnDomain", StartScdnDomainResponse.class);
-    }
-
-    /**
      *StopCdnDomain 用于停止域名的加速服务。
 注意：停止加速服务后，访问至加速节点的请求将会直接返回 404。为避免对您的业务造成影响，请在停止加速服务前将解析切走。
      * @param req StopCdnDomainRequest
@@ -977,19 +704,6 @@ StartScdnDomain 用于开启域名的安全防护配置
     public StopCdnDomainResponse StopCdnDomain(StopCdnDomainRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopCdnDomain", StopCdnDomainResponse.class);
-    }
-
-    /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-StopScdnDomain 用于关闭域名的安全防护配置
-     * @param req StopScdnDomainRequest
-     * @return StopScdnDomainResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopScdnDomainResponse StopScdnDomain(StopScdnDomainRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "StopScdnDomain", StopScdnDomainResponse.class);
     }
 
     /**
@@ -1025,19 +739,6 @@ StopScdnDomain 用于关闭域名的安全防护配置
     public UpdatePayTypeResponse UpdatePayType(UpdatePayTypeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdatePayType", UpdatePayTypeResponse.class);
-    }
-
-    /**
-     *SCDN平台已经正式下线，接口开始预下线处理
-
-UpdateScdnDomain 用于修改 SCDN 加速域名安全相关配置
-     * @param req UpdateScdnDomainRequest
-     * @return UpdateScdnDomainResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateScdnDomainResponse UpdateScdnDomain(UpdateScdnDomainRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpdateScdnDomain", UpdateScdnDomainResponse.class);
     }
 
     /**

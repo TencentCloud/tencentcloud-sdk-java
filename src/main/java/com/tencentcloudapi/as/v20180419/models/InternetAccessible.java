@@ -56,7 +56,7 @@ public class InternetAccessible extends AbstractModel {
     private String BandwidthPackageId;
 
     /**
-    * 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+    * 线路类型。各种线路类型及支持地区详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
 
 <li>BGP：常规 BGP 线路</li>
 已开通静态单线IP白名单的用户，可选值：
@@ -187,7 +187,7 @@ public class InternetAccessible extends AbstractModel {
     }
 
     /**
-     * Get 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+     * Get 线路类型。各种线路类型及支持地区详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
 
 <li>BGP：常规 BGP 线路</li>
 已开通静态单线IP白名单的用户，可选值：
@@ -197,7 +197,7 @@ public class InternetAccessible extends AbstractModel {
 <li>CUCC：中国联通</li>
 注意：仅部分地域支持静态单线IP。
  
-     * @return InternetServiceProvider 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+     * @return InternetServiceProvider 线路类型。各种线路类型及支持地区详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
 
 <li>BGP：常规 BGP 线路</li>
 已开通静态单线IP白名单的用户，可选值：
@@ -213,7 +213,7 @@ public class InternetAccessible extends AbstractModel {
     }
 
     /**
-     * Set 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+     * Set 线路类型。各种线路类型及支持地区详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
 
 <li>BGP：常规 BGP 线路</li>
 已开通静态单线IP白名单的用户，可选值：
@@ -223,7 +223,7 @@ public class InternetAccessible extends AbstractModel {
 <li>CUCC：中国联通</li>
 注意：仅部分地域支持静态单线IP。
 
-     * @param InternetServiceProvider 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+     * @param InternetServiceProvider 线路类型。各种线路类型及支持地区详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
 
 <li>BGP：常规 BGP 线路</li>
 已开通静态单线IP白名单的用户，可选值：

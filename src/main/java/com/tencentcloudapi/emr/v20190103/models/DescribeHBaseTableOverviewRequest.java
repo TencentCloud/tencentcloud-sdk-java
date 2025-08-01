@@ -31,7 +31,7 @@ public class DescribeHBaseTableOverviewRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 分页查询编号偏移量，从0开始	
+    * 页码，第一页:0，第二页:1
     */
     @SerializedName("Offset")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeHBaseTableOverviewRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页查询编号偏移量，从0开始	 
-     * @return Offset 分页查询编号偏移量，从0开始	
+     * Get 页码，第一页:0，第二页:1 
+     * @return Offset 页码，第一页:0，第二页:1
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页查询编号偏移量，从0开始	
-     * @param Offset 分页查询编号偏移量，从0开始	
+     * Set 页码，第一页:0，第二页:1
+     * @param Offset 页码，第一页:0，第二页:1
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ContentInfo extends AbstractModel {
 
     /**
-    * 内容格式，支持json、csv
+    * 内容格式，支持json，csv，parquet
     */
     @SerializedName("Format")
     @Expose
@@ -55,16 +55,16 @@ public class ContentInfo extends AbstractModel {
     private ParquetInfo Parquet;
 
     /**
-     * Get 内容格式，支持json、csv 
-     * @return Format 内容格式，支持json、csv
+     * Get 内容格式，支持json，csv，parquet 
+     * @return Format 内容格式，支持json，csv，parquet
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 内容格式，支持json、csv
-     * @param Format 内容格式，支持json、csv
+     * Set 内容格式，支持json，csv，parquet
+     * @param Format 内容格式，支持json，csv，parquet
      */
     public void setFormat(String Format) {
         this.Format = Format;

@@ -116,6 +116,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *绑定数据源和队列
+     * @param req AssociateDatasourceHouseRequest
+     * @return AssociateDatasourceHouseResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateDatasourceHouseResponse AssociateDatasourceHouse(AssociateDatasourceHouseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateDatasourceHouse", AssociateDatasourceHouseResponse.class);
+    }
+
+    /**
      *绑定鉴权策略到用户
      * @param req AttachUserPolicyRequest
      * @return AttachUserPolicyResponse
@@ -435,6 +446,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建标准引擎资源组
+     * @param req CreateStandardEngineResourceGroupRequest
+     * @return CreateStandardEngineResourceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStandardEngineResourceGroupResponse CreateStandardEngineResourceGroup(CreateStandardEngineResourceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStandardEngineResourceGroup", CreateStandardEngineResourceGroupResponse.class);
+    }
+
+    /**
      *该接口（CreateStoreLocation）新增或覆盖计算结果存储位置。
      * @param req CreateStoreLocationRequest
      * @return CreateStoreLocationResponse
@@ -503,6 +525,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建用户vpc连接到指定引擎网络
+     * @param req CreateUserVpcConnectionRequest
+     * @return CreateUserVpcConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserVpcConnectionResponse CreateUserVpcConnection(CreateUserVpcConnectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserVpcConnection", CreateUserVpcConnectionResponse.class);
+    }
+
+    /**
      *创建工作组
      * @param req CreateWorkGroupRequest
      * @return CreateWorkGroupResponse
@@ -533,6 +566,17 @@ public class DlcClient extends AbstractClient{
     public DeleteDataEngineResponse DeleteDataEngine(DeleteDataEngineRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDataEngine", DeleteDataEngineResponse.class);
+    }
+
+    /**
+     *根据spark session名称销毁eg spark session
+     * @param req DeleteNativeSparkSessionRequest
+     * @return DeleteNativeSparkSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNativeSparkSessionResponse DeleteNativeSparkSession(DeleteNativeSparkSessionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNativeSparkSession", DeleteNativeSparkSessionResponse.class);
     }
 
     /**
@@ -569,6 +613,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *删除标准引擎资源组
+     * @param req DeleteStandardEngineResourceGroupRequest
+     * @return DeleteStandardEngineResourceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStandardEngineResourceGroupResponse DeleteStandardEngineResourceGroup(DeleteStandardEngineResourceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStandardEngineResourceGroup", DeleteStandardEngineResourceGroupResponse.class);
+    }
+
+    /**
      *删除表
      * @param req DeleteTableRequest
      * @return DeleteTableResponse
@@ -599,6 +654,17 @@ public class DlcClient extends AbstractClient{
     public DeleteUserResponse DeleteUser(DeleteUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteUser", DeleteUserResponse.class);
+    }
+
+    /**
+     *删除用户vpc到引擎网络的连接
+     * @param req DeleteUserVpcConnectionRequest
+     * @return DeleteUserVpcConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserVpcConnectionResponse DeleteUserVpcConnection(DeleteUserVpcConnectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUserVpcConnection", DeleteUserVpcConnectionResponse.class);
     }
 
     /**
@@ -745,6 +811,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDataEngineSessionParameters）用于获取指定小版本下的Session配置。
+     * @param req DescribeDataEngineSessionParametersRequest
+     * @return DescribeDataEngineSessionParametersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataEngineSessionParametersResponse DescribeDataEngineSessionParameters(DescribeDataEngineSessionParametersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataEngineSessionParameters", DescribeDataEngineSessionParametersResponse.class);
+    }
+
+    /**
      *本接口（DescribeDataEngines）用于查询DataEngines信息列表.
      * @param req DescribeDataEnginesRequest
      * @return DescribeDataEnginesResponse
@@ -786,6 +863,28 @@ public class DlcClient extends AbstractClient{
     public DescribeDatasourceConnectionResponse DescribeDatasourceConnection(DescribeDatasourceConnectionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDatasourceConnection", DescribeDatasourceConnectionResponse.class);
+    }
+
+    /**
+     *查询引擎网络信息
+     * @param req DescribeEngineNetworksRequest
+     * @return DescribeEngineNetworksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEngineNetworksResponse DescribeEngineNetworks(DescribeEngineNetworksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEngineNetworks", DescribeEngineNetworksResponse.class);
+    }
+
+    /**
+     *查询引擎可用的节点规格
+     * @param req DescribeEngineNodeSpecRequest
+     * @return DescribeEngineNodeSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEngineNodeSpecResponse DescribeEngineNodeSpec(DescribeEngineNodeSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEngineNodeSpec", DescribeEngineNodeSpecResponse.class);
     }
 
     /**
@@ -841,6 +940,28 @@ public class DlcClient extends AbstractClient{
     public DescribeLakeFsTaskResultResponse DescribeLakeFsTaskResult(DescribeLakeFsTaskResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLakeFsTaskResult", DescribeLakeFsTaskResultResponse.class);
+    }
+
+    /**
+     *根据资源组获取spark session列表
+     * @param req DescribeNativeSparkSessionsRequest
+     * @return DescribeNativeSparkSessionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNativeSparkSessionsResponse DescribeNativeSparkSessions(DescribeNativeSparkSessionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNativeSparkSessions", DescribeNativeSparkSessionsResponse.class);
+    }
+
+    /**
+     *查询网络配置列表
+     * @param req DescribeNetworkConnectionsRequest
+     * @return DescribeNetworkConnectionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkConnectionsResponse DescribeNetworkConnections(DescribeNetworkConnectionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNetworkConnections", DescribeNetworkConnectionsResponse.class);
     }
 
     /**
@@ -943,6 +1064,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *获取指定大版本下所有小版本的所有内置镜像
+     * @param req DescribeSessionImageVersionRequest
+     * @return DescribeSessionImageVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSessionImageVersionResponse DescribeSessionImageVersion(DescribeSessionImageVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSessionImageVersion", DescribeSessionImageVersionResponse.class);
+    }
+
+    /**
      *查询spark作业信息
      * @param req DescribeSparkAppJobRequest
      * @return DescribeSparkAppJobResponse
@@ -1006,6 +1138,28 @@ public class DlcClient extends AbstractClient{
     public DescribeSparkSessionBatchSqlLogResponse DescribeSparkSessionBatchSqlLog(DescribeSparkSessionBatchSqlLogRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSparkSessionBatchSqlLog", DescribeSparkSessionBatchSqlLogResponse.class);
+    }
+
+    /**
+     *查询标准引擎资源组信息
+     * @param req DescribeStandardEngineResourceGroupConfigInfoRequest
+     * @return DescribeStandardEngineResourceGroupConfigInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStandardEngineResourceGroupConfigInfoResponse DescribeStandardEngineResourceGroupConfigInfo(DescribeStandardEngineResourceGroupConfigInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStandardEngineResourceGroupConfigInfo", DescribeStandardEngineResourceGroupConfigInfoResponse.class);
+    }
+
+    /**
+     *查询标准引擎资源组信息
+     * @param req DescribeStandardEngineResourceGroupsRequest
+     * @return DescribeStandardEngineResourceGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStandardEngineResourceGroupsResponse DescribeStandardEngineResourceGroups(DescribeStandardEngineResourceGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStandardEngineResourceGroups", DescribeStandardEngineResourceGroupsResponse.class);
     }
 
     /**
@@ -1229,6 +1383,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *查询用户vpc到引擎网络的连接
+     * @param req DescribeUserVpcConnectionRequest
+     * @return DescribeUserVpcConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserVpcConnectionResponse DescribeUserVpcConnection(DescribeUserVpcConnectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserVpcConnection", DescribeUserVpcConnectionResponse.class);
+    }
+
+    /**
      *获取用户列表信息
      * @param req DescribeUsersRequest
      * @return DescribeUsersResponse
@@ -1361,6 +1526,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *启动标准引擎资源组
+     * @param req LaunchStandardEngineResourceGroupsRequest
+     * @return LaunchStandardEngineResourceGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public LaunchStandardEngineResourceGroupsResponse LaunchStandardEngineResourceGroups(LaunchStandardEngineResourceGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "LaunchStandardEngineResourceGroups", LaunchStandardEngineResourceGroupsResponse.class);
+    }
+
+    /**
      *本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
      * @param req ListTaskJobLogDetailRequest
      * @return ListTaskJobLogDetailResponse
@@ -1479,6 +1655,17 @@ public class DlcClient extends AbstractClient{
     public ModifyWorkGroupResponse ModifyWorkGroup(ModifyWorkGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyWorkGroup", ModifyWorkGroupResponse.class);
+    }
+
+    /**
+     *暂停标准引擎session
+     * @param req PauseStandardEngineResourceGroupsRequest
+     * @return PauseStandardEngineResourceGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseStandardEngineResourceGroupsResponse PauseStandardEngineResourceGroups(PauseStandardEngineResourceGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PauseStandardEngineResourceGroups", PauseStandardEngineResourceGroupsResponse.class);
     }
 
     /**
@@ -1625,6 +1812,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *解绑数据源与队列
+     * @param req UnboundDatasourceHouseRequest
+     * @return UnboundDatasourceHouseResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnboundDatasourceHouseResponse UnboundDatasourceHouse(UnboundDatasourceHouseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnboundDatasourceHouse", UnboundDatasourceHouseResponse.class);
+    }
+
+    /**
      *元数据解锁
      * @param req UnlockMetaDataRequest
      * @return UnlockMetaDataResponse
@@ -1658,6 +1856,28 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *更新标准引擎资源组网络配置信息
+     * @param req UpdateEngineResourceGroupNetworkConfigInfoRequest
+     * @return UpdateEngineResourceGroupNetworkConfigInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateEngineResourceGroupNetworkConfigInfoResponse UpdateEngineResourceGroupNetworkConfigInfo(UpdateEngineResourceGroupNetworkConfigInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateEngineResourceGroupNetworkConfigInfo", UpdateEngineResourceGroupNetworkConfigInfoResponse.class);
+    }
+
+    /**
+     *更新网络配置
+     * @param req UpdateNetworkConnectionRequest
+     * @return UpdateNetworkConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateNetworkConnectionResponse UpdateNetworkConnection(UpdateNetworkConnectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateNetworkConnection", UpdateNetworkConnectionResponse.class);
+    }
+
+    /**
      *此接口用于更新行过滤规则。注意只能更新过滤规则，不能更新规格对象catalog，database和table。
      * @param req UpdateRowFilterRequest
      * @return UpdateRowFilterResponse
@@ -1666,6 +1886,39 @@ public class DlcClient extends AbstractClient{
     public UpdateRowFilterResponse UpdateRowFilter(UpdateRowFilterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateRowFilter", UpdateRowFilterResponse.class);
+    }
+
+    /**
+     *更新标准引擎资源组基础信息
+     * @param req UpdateStandardEngineResourceGroupBaseInfoRequest
+     * @return UpdateStandardEngineResourceGroupBaseInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateStandardEngineResourceGroupBaseInfoResponse UpdateStandardEngineResourceGroupBaseInfo(UpdateStandardEngineResourceGroupBaseInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateStandardEngineResourceGroupBaseInfo", UpdateStandardEngineResourceGroupBaseInfoResponse.class);
+    }
+
+    /**
+     *更新标准引擎资源组基础信息
+     * @param req UpdateStandardEngineResourceGroupConfigInfoRequest
+     * @return UpdateStandardEngineResourceGroupConfigInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateStandardEngineResourceGroupConfigInfoResponse UpdateStandardEngineResourceGroupConfigInfo(UpdateStandardEngineResourceGroupConfigInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateStandardEngineResourceGroupConfigInfo", UpdateStandardEngineResourceGroupConfigInfoResponse.class);
+    }
+
+    /**
+     *更新标准引擎资源组基础信息
+     * @param req UpdateStandardEngineResourceGroupResourceInfoRequest
+     * @return UpdateStandardEngineResourceGroupResourceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateStandardEngineResourceGroupResourceInfoResponse UpdateStandardEngineResourceGroupResourceInfo(UpdateStandardEngineResourceGroupResourceInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateStandardEngineResourceGroupResourceInfo", UpdateStandardEngineResourceGroupResourceInfoResponse.class);
     }
 
     /**

@@ -45,6 +45,13 @@ public class ParseDocumentResponse extends SSEResponseModel {
     private Long [] FailedPages;
 
     /**
+    * 消耗页数
+    */
+    @SerializedName("Usage")
+    @Expose
+    private PageUsage Usage;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class ParseDocumentResponse extends SSEResponseModel {
     }
 
     /**
+     * Get 消耗页数 
+     * @return Usage 消耗页数
+     */
+    public PageUsage getUsage() {
+        return this.Usage;
+    }
+
+    /**
+     * Set 消耗页数
+     * @param Usage 消耗页数
+     */
+    public void setUsage(PageUsage Usage) {
+        this.Usage = Usage;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */
@@ -135,6 +158,9 @@ public class ParseDocumentResponse extends SSEResponseModel {
                 this.FailedPages[i] = new Long(source.FailedPages[i]);
             }
         }
+        if (source.Usage != null) {
+            this.Usage = new PageUsage(source.Usage);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -148,6 +174,7 @@ public class ParseDocumentResponse extends SSEResponseModel {
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "DocumentParseResultUrl", this.DocumentParseResultUrl);
         this.setParamArraySimple(map, prefix + "FailedPages.", this.FailedPages);
+        this.setParamObj(map, prefix + "Usage.", this.Usage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

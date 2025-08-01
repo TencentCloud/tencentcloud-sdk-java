@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TimeSpotCheck extends AbstractModel {
 
     /**
-    * 抽检策略的每次循环检测的时长。取值范围（单位s）：
+    * 每次循环检测的时长。取值范围（单位s）：
 
 - 最小值：10
 - 最大值：86400
@@ -35,33 +35,41 @@ public class TimeSpotCheck extends AbstractModel {
     private Long CheckDuration;
 
     /**
-    * 抽检测略的检测间隔，表示在一次检测结束后，等待多长时间后，再次检测。
+    * 抽检间隔，表示在一次检测结束后，等待多长时间后，再次检测。取值范围（单位 s）：
+- 最小值：10
+- 最大值：3600
     */
     @SerializedName("CheckInterval")
     @Expose
     private Long CheckInterval;
 
     /**
-    * 片头跳过时长。
+    * 片头跳过时长。取值范围（单位 s）：
+- 最小值：1
+- 最大值：1800
     */
     @SerializedName("SkipDuration")
     @Expose
     private Long SkipDuration;
 
     /**
-    * 循环次数，该字段为空或 0 时，默认循环直至视频结束。
+    * 循环次数。取值范围:
+- 最小值：0
+- 最大值：1000
+
+取值为 0 或为空时，表示循环至视频结束。
     */
     @SerializedName("CirclesNumber")
     @Expose
     private Long CirclesNumber;
 
     /**
-     * Get 抽检策略的每次循环检测的时长。取值范围（单位s）：
+     * Get 每次循环检测的时长。取值范围（单位s）：
 
 - 最小值：10
 - 最大值：86400
  
-     * @return CheckDuration 抽检策略的每次循环检测的时长。取值范围（单位s）：
+     * @return CheckDuration 每次循环检测的时长。取值范围（单位s）：
 
 - 最小值：10
 - 最大值：86400
@@ -72,12 +80,12 @@ public class TimeSpotCheck extends AbstractModel {
     }
 
     /**
-     * Set 抽检策略的每次循环检测的时长。取值范围（单位s）：
+     * Set 每次循环检测的时长。取值范围（单位s）：
 
 - 最小值：10
 - 最大值：86400
 
-     * @param CheckDuration 抽检策略的每次循环检测的时长。取值范围（单位s）：
+     * @param CheckDuration 每次循环检测的时长。取值范围（单位s）：
 
 - 最小值：10
 - 最大值：86400
@@ -88,48 +96,80 @@ public class TimeSpotCheck extends AbstractModel {
     }
 
     /**
-     * Get 抽检测略的检测间隔，表示在一次检测结束后，等待多长时间后，再次检测。 
-     * @return CheckInterval 抽检测略的检测间隔，表示在一次检测结束后，等待多长时间后，再次检测。
+     * Get 抽检间隔，表示在一次检测结束后，等待多长时间后，再次检测。取值范围（单位 s）：
+- 最小值：10
+- 最大值：3600 
+     * @return CheckInterval 抽检间隔，表示在一次检测结束后，等待多长时间后，再次检测。取值范围（单位 s）：
+- 最小值：10
+- 最大值：3600
      */
     public Long getCheckInterval() {
         return this.CheckInterval;
     }
 
     /**
-     * Set 抽检测略的检测间隔，表示在一次检测结束后，等待多长时间后，再次检测。
-     * @param CheckInterval 抽检测略的检测间隔，表示在一次检测结束后，等待多长时间后，再次检测。
+     * Set 抽检间隔，表示在一次检测结束后，等待多长时间后，再次检测。取值范围（单位 s）：
+- 最小值：10
+- 最大值：3600
+     * @param CheckInterval 抽检间隔，表示在一次检测结束后，等待多长时间后，再次检测。取值范围（单位 s）：
+- 最小值：10
+- 最大值：3600
      */
     public void setCheckInterval(Long CheckInterval) {
         this.CheckInterval = CheckInterval;
     }
 
     /**
-     * Get 片头跳过时长。 
-     * @return SkipDuration 片头跳过时长。
+     * Get 片头跳过时长。取值范围（单位 s）：
+- 最小值：1
+- 最大值：1800 
+     * @return SkipDuration 片头跳过时长。取值范围（单位 s）：
+- 最小值：1
+- 最大值：1800
      */
     public Long getSkipDuration() {
         return this.SkipDuration;
     }
 
     /**
-     * Set 片头跳过时长。
-     * @param SkipDuration 片头跳过时长。
+     * Set 片头跳过时长。取值范围（单位 s）：
+- 最小值：1
+- 最大值：1800
+     * @param SkipDuration 片头跳过时长。取值范围（单位 s）：
+- 最小值：1
+- 最大值：1800
      */
     public void setSkipDuration(Long SkipDuration) {
         this.SkipDuration = SkipDuration;
     }
 
     /**
-     * Get 循环次数，该字段为空或 0 时，默认循环直至视频结束。 
-     * @return CirclesNumber 循环次数，该字段为空或 0 时，默认循环直至视频结束。
+     * Get 循环次数。取值范围:
+- 最小值：0
+- 最大值：1000
+
+取值为 0 或为空时，表示循环至视频结束。 
+     * @return CirclesNumber 循环次数。取值范围:
+- 最小值：0
+- 最大值：1000
+
+取值为 0 或为空时，表示循环至视频结束。
      */
     public Long getCirclesNumber() {
         return this.CirclesNumber;
     }
 
     /**
-     * Set 循环次数，该字段为空或 0 时，默认循环直至视频结束。
-     * @param CirclesNumber 循环次数，该字段为空或 0 时，默认循环直至视频结束。
+     * Set 循环次数。取值范围:
+- 最小值：0
+- 最大值：1000
+
+取值为 0 或为空时，表示循环至视频结束。
+     * @param CirclesNumber 循环次数。取值范围:
+- 最小值：0
+- 最大值：1000
+
+取值为 0 或为空时，表示循环至视频结束。
      */
     public void setCirclesNumber(Long CirclesNumber) {
         this.CirclesNumber = CirclesNumber;

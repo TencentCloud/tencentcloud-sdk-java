@@ -55,6 +55,13 @@ public class MQTTClientSubscription extends AbstractModel {
     private Long Inflight;
 
     /**
+    * 用户属性
+    */
+    @SerializedName("UserProperties")
+    @Expose
+    private SubscriptionUserProperty [] UserProperties;
+
+    /**
      * Get topic 订阅 
      * @return TopicFilter topic 订阅
      */
@@ -130,6 +137,22 @@ public class MQTTClientSubscription extends AbstractModel {
         this.Inflight = Inflight;
     }
 
+    /**
+     * Get 用户属性 
+     * @return UserProperties 用户属性
+     */
+    public SubscriptionUserProperty [] getUserProperties() {
+        return this.UserProperties;
+    }
+
+    /**
+     * Set 用户属性
+     * @param UserProperties 用户属性
+     */
+    public void setUserProperties(SubscriptionUserProperty [] UserProperties) {
+        this.UserProperties = UserProperties;
+    }
+
     public MQTTClientSubscription() {
     }
 
@@ -150,6 +173,12 @@ public class MQTTClientSubscription extends AbstractModel {
         if (source.Inflight != null) {
             this.Inflight = new Long(source.Inflight);
         }
+        if (source.UserProperties != null) {
+            this.UserProperties = new SubscriptionUserProperty[source.UserProperties.length];
+            for (int i = 0; i < source.UserProperties.length; i++) {
+                this.UserProperties[i] = new SubscriptionUserProperty(source.UserProperties[i]);
+            }
+        }
     }
 
 
@@ -161,6 +190,7 @@ public class MQTTClientSubscription extends AbstractModel {
         this.setParamSimple(map, prefix + "Qos", this.Qos);
         this.setParamSimple(map, prefix + "Lag", this.Lag);
         this.setParamSimple(map, prefix + "Inflight", this.Inflight);
+        this.setParamArrayObj(map, prefix + "UserProperties.", this.UserProperties);
 
     }
 }

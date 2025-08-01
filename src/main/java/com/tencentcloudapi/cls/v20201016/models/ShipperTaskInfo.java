@@ -73,7 +73,11 @@ public class ShipperTaskInfo extends AbstractModel {
     private Long EndTime;
 
     /**
-    * 本次投递的结果，"success","running","failed"
+    * 本次投递的结果。"success"，"running"，"failed"
+
+- success：任务成功。
+- running：任务处理中。
+- failed：任务失败。
     */
     @SerializedName("Status")
     @Expose
@@ -199,16 +203,32 @@ public class ShipperTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 本次投递的结果，"success","running","failed" 
-     * @return Status 本次投递的结果，"success","running","failed"
+     * Get 本次投递的结果。"success"，"running"，"failed"
+
+- success：任务成功。
+- running：任务处理中。
+- failed：任务失败。 
+     * @return Status 本次投递的结果。"success"，"running"，"failed"
+
+- success：任务成功。
+- running：任务处理中。
+- failed：任务失败。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 本次投递的结果，"success","running","failed"
-     * @param Status 本次投递的结果，"success","running","failed"
+     * Set 本次投递的结果。"success"，"running"，"failed"
+
+- success：任务成功。
+- running：任务处理中。
+- failed：任务失败。
+     * @param Status 本次投递的结果。"success"，"running"，"failed"
+
+- success：任务成功。
+- running：任务处理中。
+- failed：任务失败。
      */
     public void setStatus(String Status) {
         this.Status = Status;

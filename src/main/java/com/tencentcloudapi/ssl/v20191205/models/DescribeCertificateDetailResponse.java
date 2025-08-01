@@ -211,7 +211,7 @@ null：用户上传证书（没有套餐类型），
     private String VulnerabilityStatus;
 
     /**
-    * 证书生效时间。
+    * 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertBeginTime")
@@ -219,7 +219,7 @@ null：用户上传证书（没有套餐类型），
     private String CertBeginTime;
 
     /**
-    * 证书失效时间。
+    * 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertEndTime")
@@ -234,7 +234,7 @@ null：用户上传证书（没有套餐类型），
     private String ValidityPeriod;
 
     /**
-    * 证书申请时间。
+    * 证书申请时间。时区为GMT+8:00
     */
     @SerializedName("InsertTime")
     @Expose
@@ -1061,9 +1061,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 证书生效时间。
+     * Get 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CertBeginTime 证书生效时间。
+     * @return CertBeginTime 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertBeginTime() {
@@ -1071,9 +1071,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Set 证书生效时间。
+     * Set 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CertBeginTime 证书生效时间。
+     * @param CertBeginTime 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertBeginTime(String CertBeginTime) {
@@ -1081,9 +1081,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 证书失效时间。
+     * Get 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CertEndTime 证书失效时间。
+     * @return CertEndTime 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertEndTime() {
@@ -1091,9 +1091,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Set 证书失效时间。
+     * Set 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CertEndTime 证书失效时间。
+     * @param CertEndTime 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertEndTime(String CertEndTime) {
@@ -1117,16 +1117,16 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 证书申请时间。 
-     * @return InsertTime 证书申请时间。
+     * Get 证书申请时间。时区为GMT+8:00 
+     * @return InsertTime 证书申请时间。时区为GMT+8:00
      */
     public String getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set 证书申请时间。
-     * @param InsertTime 证书申请时间。
+     * Set 证书申请时间。时区为GMT+8:00
+     * @param InsertTime 证书申请时间。时区为GMT+8:00
      */
     public void setInsertTime(String InsertTime) {
         this.InsertTime = InsertTime;

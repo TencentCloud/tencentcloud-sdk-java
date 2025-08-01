@@ -225,6 +225,27 @@ API：通过API手动注册
     private Long MaxTopicFilterPerAutoSubscriptionPolicy;
 
     /**
+    * 是否使用默认的服务端证书
+    */
+    @SerializedName("UseDefaultServerCert")
+    @Expose
+    private Boolean UseDefaultServerCert;
+
+    /**
+    * 服务端CA最大数量
+    */
+    @SerializedName("TrustedCaLimit")
+    @Expose
+    private Long TrustedCaLimit;
+
+    /**
+    * 服务端证书最大数量
+    */
+    @SerializedName("ServerCertLimit")
+    @Expose
+    private Long ServerCertLimit;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -700,6 +721,54 @@ API：通过API手动注册
     }
 
     /**
+     * Get 是否使用默认的服务端证书 
+     * @return UseDefaultServerCert 是否使用默认的服务端证书
+     */
+    public Boolean getUseDefaultServerCert() {
+        return this.UseDefaultServerCert;
+    }
+
+    /**
+     * Set 是否使用默认的服务端证书
+     * @param UseDefaultServerCert 是否使用默认的服务端证书
+     */
+    public void setUseDefaultServerCert(Boolean UseDefaultServerCert) {
+        this.UseDefaultServerCert = UseDefaultServerCert;
+    }
+
+    /**
+     * Get 服务端CA最大数量 
+     * @return TrustedCaLimit 服务端CA最大数量
+     */
+    public Long getTrustedCaLimit() {
+        return this.TrustedCaLimit;
+    }
+
+    /**
+     * Set 服务端CA最大数量
+     * @param TrustedCaLimit 服务端CA最大数量
+     */
+    public void setTrustedCaLimit(Long TrustedCaLimit) {
+        this.TrustedCaLimit = TrustedCaLimit;
+    }
+
+    /**
+     * Get 服务端证书最大数量 
+     * @return ServerCertLimit 服务端证书最大数量
+     */
+    public Long getServerCertLimit() {
+        return this.ServerCertLimit;
+    }
+
+    /**
+     * Set 服务端证书最大数量
+     * @param ServerCertLimit 服务端证书最大数量
+     */
+    public void setServerCertLimit(Long ServerCertLimit) {
+        this.ServerCertLimit = ServerCertLimit;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -807,6 +876,15 @@ API：通过API手动注册
         if (source.MaxTopicFilterPerAutoSubscriptionPolicy != null) {
             this.MaxTopicFilterPerAutoSubscriptionPolicy = new Long(source.MaxTopicFilterPerAutoSubscriptionPolicy);
         }
+        if (source.UseDefaultServerCert != null) {
+            this.UseDefaultServerCert = new Boolean(source.UseDefaultServerCert);
+        }
+        if (source.TrustedCaLimit != null) {
+            this.TrustedCaLimit = new Long(source.TrustedCaLimit);
+        }
+        if (source.ServerCertLimit != null) {
+            this.ServerCertLimit = new Long(source.ServerCertLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -845,6 +923,9 @@ API：通过API手动注册
         this.setParamSimple(map, prefix + "MaxTopicFilterPerSharedSubscriptionGroup", this.MaxTopicFilterPerSharedSubscriptionGroup);
         this.setParamSimple(map, prefix + "AutoSubscriptionPolicyLimit", this.AutoSubscriptionPolicyLimit);
         this.setParamSimple(map, prefix + "MaxTopicFilterPerAutoSubscriptionPolicy", this.MaxTopicFilterPerAutoSubscriptionPolicy);
+        this.setParamSimple(map, prefix + "UseDefaultServerCert", this.UseDefaultServerCert);
+        this.setParamSimple(map, prefix + "TrustedCaLimit", this.TrustedCaLimit);
+        this.setParamSimple(map, prefix + "ServerCertLimit", this.ServerCertLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
