@@ -225,6 +225,43 @@ public class RocketMQClusterInfo extends AbstractModel {
     private Boolean IsFrozen;
 
     /**
+    * 是否开启自动创建主题
+    */
+    @SerializedName("AutoCreateTopicEnabled")
+    @Expose
+    private Boolean AutoCreateTopicEnabled;
+
+    /**
+    * 是否开启集群Admin能力
+    */
+    @SerializedName("AdminFeatureEnabled")
+    @Expose
+    private Boolean AdminFeatureEnabled;
+
+    /**
+    * Admin AK
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdminAccessKey")
+    @Expose
+    private String AdminAccessKey;
+
+    /**
+    * Admin SK
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdminSecretKey")
+    @Expose
+    private String AdminSecretKey;
+
+    /**
+    * 是否开启删除保护
+    */
+    @SerializedName("EnableDeletionProtection")
+    @Expose
+    private Boolean EnableDeletionProtection;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -716,6 +753,94 @@ public class RocketMQClusterInfo extends AbstractModel {
         this.IsFrozen = IsFrozen;
     }
 
+    /**
+     * Get 是否开启自动创建主题 
+     * @return AutoCreateTopicEnabled 是否开启自动创建主题
+     */
+    public Boolean getAutoCreateTopicEnabled() {
+        return this.AutoCreateTopicEnabled;
+    }
+
+    /**
+     * Set 是否开启自动创建主题
+     * @param AutoCreateTopicEnabled 是否开启自动创建主题
+     */
+    public void setAutoCreateTopicEnabled(Boolean AutoCreateTopicEnabled) {
+        this.AutoCreateTopicEnabled = AutoCreateTopicEnabled;
+    }
+
+    /**
+     * Get 是否开启集群Admin能力 
+     * @return AdminFeatureEnabled 是否开启集群Admin能力
+     */
+    public Boolean getAdminFeatureEnabled() {
+        return this.AdminFeatureEnabled;
+    }
+
+    /**
+     * Set 是否开启集群Admin能力
+     * @param AdminFeatureEnabled 是否开启集群Admin能力
+     */
+    public void setAdminFeatureEnabled(Boolean AdminFeatureEnabled) {
+        this.AdminFeatureEnabled = AdminFeatureEnabled;
+    }
+
+    /**
+     * Get Admin AK
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdminAccessKey Admin AK
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAdminAccessKey() {
+        return this.AdminAccessKey;
+    }
+
+    /**
+     * Set Admin AK
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdminAccessKey Admin AK
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdminAccessKey(String AdminAccessKey) {
+        this.AdminAccessKey = AdminAccessKey;
+    }
+
+    /**
+     * Get Admin SK
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdminSecretKey Admin SK
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAdminSecretKey() {
+        return this.AdminSecretKey;
+    }
+
+    /**
+     * Set Admin SK
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdminSecretKey Admin SK
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdminSecretKey(String AdminSecretKey) {
+        this.AdminSecretKey = AdminSecretKey;
+    }
+
+    /**
+     * Get 是否开启删除保护 
+     * @return EnableDeletionProtection 是否开启删除保护
+     */
+    public Boolean getEnableDeletionProtection() {
+        return this.EnableDeletionProtection;
+    }
+
+    /**
+     * Set 是否开启删除保护
+     * @param EnableDeletionProtection 是否开启删除保护
+     */
+    public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
+        this.EnableDeletionProtection = EnableDeletionProtection;
+    }
+
     public RocketMQClusterInfo() {
     }
 
@@ -808,6 +933,21 @@ public class RocketMQClusterInfo extends AbstractModel {
         if (source.IsFrozen != null) {
             this.IsFrozen = new Boolean(source.IsFrozen);
         }
+        if (source.AutoCreateTopicEnabled != null) {
+            this.AutoCreateTopicEnabled = new Boolean(source.AutoCreateTopicEnabled);
+        }
+        if (source.AdminFeatureEnabled != null) {
+            this.AdminFeatureEnabled = new Boolean(source.AdminFeatureEnabled);
+        }
+        if (source.AdminAccessKey != null) {
+            this.AdminAccessKey = new String(source.AdminAccessKey);
+        }
+        if (source.AdminSecretKey != null) {
+            this.AdminSecretKey = new String(source.AdminSecretKey);
+        }
+        if (source.EnableDeletionProtection != null) {
+            this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
+        }
     }
 
 
@@ -841,6 +981,11 @@ public class RocketMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamSimple(map, prefix + "IsFrozen", this.IsFrozen);
+        this.setParamSimple(map, prefix + "AutoCreateTopicEnabled", this.AutoCreateTopicEnabled);
+        this.setParamSimple(map, prefix + "AdminFeatureEnabled", this.AdminFeatureEnabled);
+        this.setParamSimple(map, prefix + "AdminAccessKey", this.AdminAccessKey);
+        this.setParamSimple(map, prefix + "AdminSecretKey", this.AdminSecretKey);
+        this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
 
     }
 }

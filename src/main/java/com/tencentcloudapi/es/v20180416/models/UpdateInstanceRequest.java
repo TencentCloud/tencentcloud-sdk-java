@@ -353,6 +353,20 @@ CLOSE 关闭
     private String EnableDestroyProtection;
 
     /**
+    * 自动扩盘参数
+    */
+    @SerializedName("AutoScaleDiskInfoList")
+    @Expose
+    private AutoScaleDiskInfo [] AutoScaleDiskInfoList;
+
+    /**
+    * 自动扩盘删除参数
+    */
+    @SerializedName("AutoScaleDiskDeleteNodeTypeList")
+    @Expose
+    private String [] AutoScaleDiskDeleteNodeTypeList;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1140,6 +1154,38 @@ CLOSE 关闭
         this.EnableDestroyProtection = EnableDestroyProtection;
     }
 
+    /**
+     * Get 自动扩盘参数 
+     * @return AutoScaleDiskInfoList 自动扩盘参数
+     */
+    public AutoScaleDiskInfo [] getAutoScaleDiskInfoList() {
+        return this.AutoScaleDiskInfoList;
+    }
+
+    /**
+     * Set 自动扩盘参数
+     * @param AutoScaleDiskInfoList 自动扩盘参数
+     */
+    public void setAutoScaleDiskInfoList(AutoScaleDiskInfo [] AutoScaleDiskInfoList) {
+        this.AutoScaleDiskInfoList = AutoScaleDiskInfoList;
+    }
+
+    /**
+     * Get 自动扩盘删除参数 
+     * @return AutoScaleDiskDeleteNodeTypeList 自动扩盘删除参数
+     */
+    public String [] getAutoScaleDiskDeleteNodeTypeList() {
+        return this.AutoScaleDiskDeleteNodeTypeList;
+    }
+
+    /**
+     * Set 自动扩盘删除参数
+     * @param AutoScaleDiskDeleteNodeTypeList 自动扩盘删除参数
+     */
+    public void setAutoScaleDiskDeleteNodeTypeList(String [] AutoScaleDiskDeleteNodeTypeList) {
+        this.AutoScaleDiskDeleteNodeTypeList = AutoScaleDiskDeleteNodeTypeList;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -1289,6 +1335,18 @@ CLOSE 关闭
         if (source.EnableDestroyProtection != null) {
             this.EnableDestroyProtection = new String(source.EnableDestroyProtection);
         }
+        if (source.AutoScaleDiskInfoList != null) {
+            this.AutoScaleDiskInfoList = new AutoScaleDiskInfo[source.AutoScaleDiskInfoList.length];
+            for (int i = 0; i < source.AutoScaleDiskInfoList.length; i++) {
+                this.AutoScaleDiskInfoList[i] = new AutoScaleDiskInfo(source.AutoScaleDiskInfoList[i]);
+            }
+        }
+        if (source.AutoScaleDiskDeleteNodeTypeList != null) {
+            this.AutoScaleDiskDeleteNodeTypeList = new String[source.AutoScaleDiskDeleteNodeTypeList.length];
+            for (int i = 0; i < source.AutoScaleDiskDeleteNodeTypeList.length; i++) {
+                this.AutoScaleDiskDeleteNodeTypeList[i] = new String(source.AutoScaleDiskDeleteNodeTypeList[i]);
+            }
+        }
     }
 
 
@@ -1340,6 +1398,8 @@ CLOSE 关闭
         this.setParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
         this.setParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
         this.setParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
+        this.setParamArrayObj(map, prefix + "AutoScaleDiskInfoList.", this.AutoScaleDiskInfoList);
+        this.setParamArraySimple(map, prefix + "AutoScaleDiskDeleteNodeTypeList.", this.AutoScaleDiskDeleteNodeTypeList);
 
     }
 }

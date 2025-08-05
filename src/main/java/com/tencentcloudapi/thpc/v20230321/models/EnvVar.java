@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cls.v20201016.models;
+package com.tencentcloudapi.thpc.v20230321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,46 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIndexRequest extends AbstractModel {
+public class EnvVar extends AbstractModel {
 
     /**
-    * 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * ENV
     */
-    @SerializedName("TopicId")
+    @SerializedName("Name")
     @Expose
-    private String TopicId;
+    private String Name;
 
     /**
-     * Get 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
-     * @return TopicId 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * test
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get ENV 
+     * @return Name ENV
      */
-    public String getTopicId() {
-        return this.TopicId;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param TopicId 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Set ENV
+     * @param Name ENV
      */
-    public void setTopicId(String TopicId) {
-        this.TopicId = TopicId;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-    public DescribeIndexRequest() {
+    /**
+     * Get test 
+     * @return Value test
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set test
+     * @param Value test
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public EnvVar() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeIndexRequest(DescribeIndexRequest source) {
-        if (source.TopicId != null) {
-            this.TopicId = new String(source.TopicId);
+    public EnvVar(EnvVar source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -69,7 +90,8 @@ public class DescribeIndexRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

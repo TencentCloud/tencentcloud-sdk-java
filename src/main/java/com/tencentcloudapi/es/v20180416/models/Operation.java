@@ -88,6 +88,13 @@ public class Operation extends AbstractModel {
     private String SubAccountUin;
 
     /**
+    * 自动扩容标识：0-非自动，1-自动
+    */
+    @SerializedName("AutoScaleTag")
+    @Expose
+    private Long AutoScaleTag;
+
+    /**
      * Get 操作唯一id 
      * @return Id 操作唯一id
      */
@@ -235,6 +242,22 @@ public class Operation extends AbstractModel {
         this.SubAccountUin = SubAccountUin;
     }
 
+    /**
+     * Get 自动扩容标识：0-非自动，1-自动 
+     * @return AutoScaleTag 自动扩容标识：0-非自动，1-自动
+     */
+    public Long getAutoScaleTag() {
+        return this.AutoScaleTag;
+    }
+
+    /**
+     * Set 自动扩容标识：0-非自动，1-自动
+     * @param AutoScaleTag 自动扩容标识：0-非自动，1-自动
+     */
+    public void setAutoScaleTag(Long AutoScaleTag) {
+        this.AutoScaleTag = AutoScaleTag;
+    }
+
     public Operation() {
     }
 
@@ -273,6 +296,9 @@ public class Operation extends AbstractModel {
         if (source.SubAccountUin != null) {
             this.SubAccountUin = new String(source.SubAccountUin);
         }
+        if (source.AutoScaleTag != null) {
+            this.AutoScaleTag = new Long(source.AutoScaleTag);
+        }
     }
 
 
@@ -289,6 +315,7 @@ public class Operation extends AbstractModel {
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "RollbackTag", this.RollbackTag);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "AutoScaleTag", this.AutoScaleTag);
 
     }
 }

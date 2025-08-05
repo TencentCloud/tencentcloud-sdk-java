@@ -28,11 +28,12 @@ public class DescribeLogsetsRequest extends AbstractModel {
 - 按照【日志集名称】进行过滤。
 - 类型：String
 - 必选：否
-
+- 通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集名称。
 logsetId
 - 按照【日志集ID】进行过滤。
 - 类型：String
 - 必选：否
+- 通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
 
 tagKey
 - 按照【标签键】进行过滤。
@@ -69,11 +70,12 @@ tag:tagKey
 - 按照【日志集名称】进行过滤。
 - 类型：String
 - 必选：否
-
+- 通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集名称。
 logsetId
 - 按照【日志集ID】进行过滤。
 - 类型：String
 - 必选：否
+- 通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
 
 tagKey
 - 按照【标签键】进行过滤。
@@ -90,11 +92,12 @@ tag:tagKey
 - 按照【日志集名称】进行过滤。
 - 类型：String
 - 必选：否
-
+- 通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集名称。
 logsetId
 - 按照【日志集ID】进行过滤。
 - 类型：String
 - 必选：否
+- 通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
 
 tagKey
 - 按照【标签键】进行过滤。
@@ -117,11 +120,12 @@ tag:tagKey
 - 按照【日志集名称】进行过滤。
 - 类型：String
 - 必选：否
-
+- 通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集名称。
 logsetId
 - 按照【日志集ID】进行过滤。
 - 类型：String
 - 必选：否
+- 通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
 
 tagKey
 - 按照【标签键】进行过滤。
@@ -138,11 +142,12 @@ tag:tagKey
 - 按照【日志集名称】进行过滤。
 - 类型：String
 - 必选：否
-
+- 通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集名称。
 logsetId
 - 按照【日志集ID】进行过滤。
 - 类型：String
 - 必选：否
+- 通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
 
 tagKey
 - 按照【标签键】进行过滤。

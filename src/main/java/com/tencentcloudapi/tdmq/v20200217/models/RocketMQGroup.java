@@ -150,6 +150,13 @@ public class RocketMQGroup extends AbstractModel {
     private String Namespace;
 
     /**
+    * 订阅的主题个数
+    */
+    @SerializedName("SubscribeTopicNum")
+    @Expose
+    private Long SubscribeTopicNum;
+
+    /**
      * Get 消费组名称 
      * @return Name 消费组名称
      */
@@ -184,7 +191,9 @@ public class RocketMQGroup extends AbstractModel {
     /**
      * Get 消费TPS 
      * @return TPS 消费TPS
+     * @deprecated
      */
+    @Deprecated
     public Long getTPS() {
         return this.TPS;
     }
@@ -192,7 +201,9 @@ public class RocketMQGroup extends AbstractModel {
     /**
      * Set 消费TPS
      * @param TPS 消费TPS
+     * @deprecated
      */
+    @Deprecated
     public void setTPS(Long TPS) {
         this.TPS = TPS;
     }
@@ -200,7 +211,9 @@ public class RocketMQGroup extends AbstractModel {
     /**
      * Get 总堆积数量 
      * @return TotalAccumulative 总堆积数量
+     * @deprecated
      */
+    @Deprecated
     public Long getTotalAccumulative() {
         return this.TotalAccumulative;
     }
@@ -208,7 +221,9 @@ public class RocketMQGroup extends AbstractModel {
     /**
      * Set 总堆积数量
      * @param TotalAccumulative 总堆积数量
+     * @deprecated
      */
+    @Deprecated
     public void setTotalAccumulative(Long TotalAccumulative) {
         this.TotalAccumulative = TotalAccumulative;
     }
@@ -449,6 +464,22 @@ public class RocketMQGroup extends AbstractModel {
         this.Namespace = Namespace;
     }
 
+    /**
+     * Get 订阅的主题个数 
+     * @return SubscribeTopicNum 订阅的主题个数
+     */
+    public Long getSubscribeTopicNum() {
+        return this.SubscribeTopicNum;
+    }
+
+    /**
+     * Set 订阅的主题个数
+     * @param SubscribeTopicNum 订阅的主题个数
+     */
+    public void setSubscribeTopicNum(Long SubscribeTopicNum) {
+        this.SubscribeTopicNum = SubscribeTopicNum;
+    }
+
     public RocketMQGroup() {
     }
 
@@ -508,6 +539,9 @@ public class RocketMQGroup extends AbstractModel {
         if (source.Namespace != null) {
             this.Namespace = new String(source.Namespace);
         }
+        if (source.SubscribeTopicNum != null) {
+            this.SubscribeTopicNum = new Long(source.SubscribeTopicNum);
+        }
     }
 
 
@@ -532,6 +566,7 @@ public class RocketMQGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
 
     }
 }

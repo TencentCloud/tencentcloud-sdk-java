@@ -312,6 +312,20 @@ public class CreateInstanceRequest extends AbstractModel {
     private EnableScheduleOperationDuration EnableScheduleOperationDuration;
 
     /**
+    * 自动扩盘参数列表
+    */
+    @SerializedName("AutoScaleDiskInfoList")
+    @Expose
+    private AutoScaleDiskInfo [] AutoScaleDiskInfoList;
+
+    /**
+    * 是否开启kibana公网访问，不传默认开启
+    */
+    @SerializedName("EnableKibanaPublicAccess")
+    @Expose
+    private String EnableKibanaPublicAccess;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -983,6 +997,38 @@ public class CreateInstanceRequest extends AbstractModel {
         this.EnableScheduleOperationDuration = EnableScheduleOperationDuration;
     }
 
+    /**
+     * Get 自动扩盘参数列表 
+     * @return AutoScaleDiskInfoList 自动扩盘参数列表
+     */
+    public AutoScaleDiskInfo [] getAutoScaleDiskInfoList() {
+        return this.AutoScaleDiskInfoList;
+    }
+
+    /**
+     * Set 自动扩盘参数列表
+     * @param AutoScaleDiskInfoList 自动扩盘参数列表
+     */
+    public void setAutoScaleDiskInfoList(AutoScaleDiskInfo [] AutoScaleDiskInfoList) {
+        this.AutoScaleDiskInfoList = AutoScaleDiskInfoList;
+    }
+
+    /**
+     * Get 是否开启kibana公网访问，不传默认开启 
+     * @return EnableKibanaPublicAccess 是否开启kibana公网访问，不传默认开启
+     */
+    public String getEnableKibanaPublicAccess() {
+        return this.EnableKibanaPublicAccess;
+    }
+
+    /**
+     * Set 是否开启kibana公网访问，不传默认开启
+     * @param EnableKibanaPublicAccess 是否开启kibana公网访问，不传默认开启
+     */
+    public void setEnableKibanaPublicAccess(String EnableKibanaPublicAccess) {
+        this.EnableKibanaPublicAccess = EnableKibanaPublicAccess;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -1123,6 +1169,15 @@ public class CreateInstanceRequest extends AbstractModel {
         if (source.EnableScheduleOperationDuration != null) {
             this.EnableScheduleOperationDuration = new EnableScheduleOperationDuration(source.EnableScheduleOperationDuration);
         }
+        if (source.AutoScaleDiskInfoList != null) {
+            this.AutoScaleDiskInfoList = new AutoScaleDiskInfo[source.AutoScaleDiskInfoList.length];
+            for (int i = 0; i < source.AutoScaleDiskInfoList.length; i++) {
+                this.AutoScaleDiskInfoList[i] = new AutoScaleDiskInfo(source.AutoScaleDiskInfoList[i]);
+            }
+        }
+        if (source.EnableKibanaPublicAccess != null) {
+            this.EnableKibanaPublicAccess = new String(source.EnableKibanaPublicAccess);
+        }
     }
 
 
@@ -1170,6 +1225,8 @@ public class CreateInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ReadWriteMode", this.ReadWriteMode);
         this.setParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
         this.setParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
+        this.setParamArrayObj(map, prefix + "AutoScaleDiskInfoList.", this.AutoScaleDiskInfoList);
+        this.setParamSimple(map, prefix + "EnableKibanaPublicAccess", this.EnableKibanaPublicAccess);
 
     }
 }

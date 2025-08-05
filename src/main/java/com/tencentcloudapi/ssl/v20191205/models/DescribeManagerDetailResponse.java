@@ -159,6 +159,34 @@ public class DescribeManagerDetailResponse extends AbstractModel {
     private ManagerStatusInfo [] StatusInfo;
 
     /**
+    * 管理员证件类型，SFZ代表身份证，HZ代表护照
+    */
+    @SerializedName("ManagerIdType")
+    @Expose
+    private String ManagerIdType;
+
+    /**
+    * 管理员证件号码
+    */
+    @SerializedName("ManagerIdNumber")
+    @Expose
+    private String ManagerIdNumber;
+
+    /**
+    * 联系人证件类型，SFZ代表身份证，HZ代表护照
+    */
+    @SerializedName("ContactIdType")
+    @Expose
+    private String ContactIdType;
+
+    /**
+    * 联系人证件号码
+    */
+    @SerializedName("ContactIdNumber")
+    @Expose
+    private String ContactIdNumber;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -482,6 +510,70 @@ public class DescribeManagerDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 管理员证件类型，SFZ代表身份证，HZ代表护照 
+     * @return ManagerIdType 管理员证件类型，SFZ代表身份证，HZ代表护照
+     */
+    public String getManagerIdType() {
+        return this.ManagerIdType;
+    }
+
+    /**
+     * Set 管理员证件类型，SFZ代表身份证，HZ代表护照
+     * @param ManagerIdType 管理员证件类型，SFZ代表身份证，HZ代表护照
+     */
+    public void setManagerIdType(String ManagerIdType) {
+        this.ManagerIdType = ManagerIdType;
+    }
+
+    /**
+     * Get 管理员证件号码 
+     * @return ManagerIdNumber 管理员证件号码
+     */
+    public String getManagerIdNumber() {
+        return this.ManagerIdNumber;
+    }
+
+    /**
+     * Set 管理员证件号码
+     * @param ManagerIdNumber 管理员证件号码
+     */
+    public void setManagerIdNumber(String ManagerIdNumber) {
+        this.ManagerIdNumber = ManagerIdNumber;
+    }
+
+    /**
+     * Get 联系人证件类型，SFZ代表身份证，HZ代表护照 
+     * @return ContactIdType 联系人证件类型，SFZ代表身份证，HZ代表护照
+     */
+    public String getContactIdType() {
+        return this.ContactIdType;
+    }
+
+    /**
+     * Set 联系人证件类型，SFZ代表身份证，HZ代表护照
+     * @param ContactIdType 联系人证件类型，SFZ代表身份证，HZ代表护照
+     */
+    public void setContactIdType(String ContactIdType) {
+        this.ContactIdType = ContactIdType;
+    }
+
+    /**
+     * Get 联系人证件号码 
+     * @return ContactIdNumber 联系人证件号码
+     */
+    public String getContactIdNumber() {
+        return this.ContactIdNumber;
+    }
+
+    /**
+     * Set 联系人证件号码
+     * @param ContactIdNumber 联系人证件号码
+     */
+    public void setContactIdNumber(String ContactIdNumber) {
+        this.ContactIdNumber = ContactIdNumber;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -565,6 +657,18 @@ public class DescribeManagerDetailResponse extends AbstractModel {
                 this.StatusInfo[i] = new ManagerStatusInfo(source.StatusInfo[i]);
             }
         }
+        if (source.ManagerIdType != null) {
+            this.ManagerIdType = new String(source.ManagerIdType);
+        }
+        if (source.ManagerIdNumber != null) {
+            this.ManagerIdNumber = new String(source.ManagerIdNumber);
+        }
+        if (source.ContactIdType != null) {
+            this.ContactIdType = new String(source.ContactIdType);
+        }
+        if (source.ContactIdNumber != null) {
+            this.ContactIdNumber = new String(source.ContactIdNumber);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -594,6 +698,10 @@ public class DescribeManagerDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);
         this.setParamSimple(map, prefix + "ManagerId", this.ManagerId);
         this.setParamArrayObj(map, prefix + "StatusInfo.", this.StatusInfo);
+        this.setParamSimple(map, prefix + "ManagerIdType", this.ManagerIdType);
+        this.setParamSimple(map, prefix + "ManagerIdNumber", this.ManagerIdNumber);
+        this.setParamSimple(map, prefix + "ContactIdType", this.ContactIdType);
+        this.setParamSimple(map, prefix + "ContactIdNumber", this.ContactIdNumber);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

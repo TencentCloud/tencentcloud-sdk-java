@@ -24,14 +24,15 @@ import java.util.HashMap;
 public class DescribeIndexResponse extends AbstractModel {
 
     /**
-    * 日志主题ID
+    * 日志主题Id
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 是否生效
+    * 索引状态。true：开启状态，false：关闭状态
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
     */
     @SerializedName("Status")
     @Expose
@@ -46,7 +47,7 @@ public class DescribeIndexResponse extends AbstractModel {
     private RuleInfo Rule;
 
     /**
-    * 索引修改时间，初始值为索引创建时间。
+    * 索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS`
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -79,32 +80,36 @@ public class DescribeIndexResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get 日志主题Id 
+     * @return TopicId 日志主题Id
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set 日志主题Id
+     * @param TopicId 日志主题Id
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 是否生效 
-     * @return Status 是否生效
+     * Get 索引状态。true：开启状态，false：关闭状态
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9) 
+     * @return Status 索引状态。true：开启状态，false：关闭状态
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 是否生效
-     * @param Status 是否生效
+     * Set 索引状态。true：开启状态，false：关闭状态
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
+     * @param Status 索引状态。true：开启状态，false：关闭状态
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
@@ -131,16 +136,16 @@ public class DescribeIndexResponse extends AbstractModel {
     }
 
     /**
-     * Get 索引修改时间，初始值为索引创建时间。 
-     * @return ModifyTime 索引修改时间，初始值为索引创建时间。
+     * Get 索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS` 
+     * @return ModifyTime 索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS`
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 索引修改时间，初始值为索引创建时间。
-     * @param ModifyTime 索引修改时间，初始值为索引创建时间。
+     * Set 索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS`
+     * @param ModifyTime 索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS`
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;

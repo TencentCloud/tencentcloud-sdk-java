@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cls.v20201016.models;
+package com.tencentcloudapi.thpc.v20230321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,46 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIndexRequest extends AbstractModel {
+public class DeleteJobRequest extends AbstractModel {
 
     /**
-    * 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * 作业任务ID
     */
-    @SerializedName("TopicId")
+    @SerializedName("JobId")
     @Expose
-    private String TopicId;
+    private String JobId;
 
     /**
-     * Get 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
-     * @return TopicId 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Get 作业任务ID 
+     * @return JobId 作业任务ID
      */
-    public String getTopicId() {
-        return this.TopicId;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param TopicId 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Set 作业任务ID
+     * @param JobId 作业任务ID
      */
-    public void setTopicId(String TopicId) {
-        this.TopicId = TopicId;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
-    public DescribeIndexRequest() {
+    public DeleteJobRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeIndexRequest(DescribeIndexRequest source) {
-        if (source.TopicId != null) {
-            this.TopicId = new String(source.TopicId);
+    public DeleteJobRequest(DeleteJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
     }
 
@@ -69,7 +64,7 @@ public class DescribeIndexRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }

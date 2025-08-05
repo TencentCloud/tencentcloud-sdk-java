@@ -41,6 +41,7 @@ public class TaskStatData extends AbstractModel {
 <li>VoiceTranslation: 语音翻译</li>
 <li>JITTranscoding: 即时转码</li>
 <li>VideoSnapshot: 视频截图</li>
+<li>JITEncryption: 即时加密</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -140,7 +141,8 @@ public class TaskStatData extends AbstractModel {
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
 <li>VoiceTranslation: 语音翻译</li>
 <li>JITTranscoding: 即时转码</li>
-<li>VideoSnapshot: 视频截图</li> 
+<li>VideoSnapshot: 视频截图</li>
+<li>JITEncryption: 即时加密</li> 
      * @return TaskType 任务类型。
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -158,6 +160,7 @@ public class TaskStatData extends AbstractModel {
 <li>VoiceTranslation: 语音翻译</li>
 <li>JITTranscoding: 即时转码</li>
 <li>VideoSnapshot: 视频截图</li>
+<li>JITEncryption: 即时加密</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -181,6 +184,7 @@ public class TaskStatData extends AbstractModel {
 <li>VoiceTranslation: 语音翻译</li>
 <li>JITTranscoding: 即时转码</li>
 <li>VideoSnapshot: 视频截图</li>
+<li>JITEncryption: 即时加密</li>
      * @param TaskType 任务类型。
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -198,6 +202,7 @@ public class TaskStatData extends AbstractModel {
 <li>VoiceTranslation: 语音翻译</li>
 <li>JITTranscoding: 即时转码</li>
 <li>VideoSnapshot: 视频截图</li>
+<li>JITEncryption: 即时加密</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

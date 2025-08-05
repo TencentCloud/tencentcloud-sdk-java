@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cls.v20201016.models;
+package com.tencentcloudapi.thpc.v20230321.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,46 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIndexRequest extends AbstractModel {
+public class CommandItem extends AbstractModel {
 
     /**
-    * 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * 脚本命令
     */
-    @SerializedName("TopicId")
+    @SerializedName("Command")
     @Expose
-    private String TopicId;
+    private String Command;
 
     /**
-     * Get 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
-     * @return TopicId 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Get 脚本命令 
+     * @return Command 脚本命令
      */
-    public String getTopicId() {
-        return this.TopicId;
+    public String getCommand() {
+        return this.Command;
     }
 
     /**
-     * Set 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param TopicId 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Set 脚本命令
+     * @param Command 脚本命令
      */
-    public void setTopicId(String TopicId) {
-        this.TopicId = TopicId;
+    public void setCommand(String Command) {
+        this.Command = Command;
     }
 
-    public DescribeIndexRequest() {
+    public CommandItem() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeIndexRequest(DescribeIndexRequest source) {
-        if (source.TopicId != null) {
-            this.TopicId = new String(source.TopicId);
+    public CommandItem(CommandItem source) {
+        if (source.Command != null) {
+            this.Command = new String(source.Command);
         }
     }
 
@@ -69,7 +64,7 @@ public class DescribeIndexRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
+        this.setParamSimple(map, prefix + "Command", this.Command);
 
     }
 }

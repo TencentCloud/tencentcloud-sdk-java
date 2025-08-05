@@ -52,6 +52,13 @@ public class CreateTaskNewRequest extends AbstractModel {
     private Long TaskType;
 
     /**
+    * （必填参数）指定脚本内容，base64编码
+    */
+    @SerializedName("Content")
+    @Expose
+    private String Content;
+
+    /**
     * 扩展属性
     */
     @SerializedName("TaskExt")
@@ -92,13 +99,6 @@ public class CreateTaskNewRequest extends AbstractModel {
     @SerializedName("TaskFolderId")
     @Expose
     private String TaskFolderId;
-
-    /**
-    * （必填参数）指定脚本内容，base64编码
-    */
-    @SerializedName("Content")
-    @Expose
-    private String Content;
 
     /**
     * 代码模板ID
@@ -169,6 +169,22 @@ public class CreateTaskNewRequest extends AbstractModel {
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
+    }
+
+    /**
+     * Get （必填参数）指定脚本内容，base64编码 
+     * @return Content （必填参数）指定脚本内容，base64编码
+     */
+    public String getContent() {
+        return this.Content;
+    }
+
+    /**
+     * Set （必填参数）指定脚本内容，base64编码
+     * @param Content （必填参数）指定脚本内容，base64编码
+     */
+    public void setContent(String Content) {
+        this.Content = Content;
     }
 
     /**
@@ -268,22 +284,6 @@ public class CreateTaskNewRequest extends AbstractModel {
     }
 
     /**
-     * Get （必填参数）指定脚本内容，base64编码 
-     * @return Content （必填参数）指定脚本内容，base64编码
-     */
-    public String getContent() {
-        return this.Content;
-    }
-
-    /**
-     * Set （必填参数）指定脚本内容，base64编码
-     * @param Content （必填参数）指定脚本内容，base64编码
-     */
-    public void setContent(String Content) {
-        this.Content = Content;
-    }
-
-    /**
      * Get 代码模板ID 
      * @return CodeTemplateId 代码模板ID
      */
@@ -319,6 +319,9 @@ public class CreateTaskNewRequest extends AbstractModel {
         if (source.TaskType != null) {
             this.TaskType = new Long(source.TaskType);
         }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
         if (source.TaskExt != null) {
             this.TaskExt = new TaskExtInfo[source.TaskExt.length];
             for (int i = 0; i < source.TaskExt.length; i++) {
@@ -340,9 +343,6 @@ public class CreateTaskNewRequest extends AbstractModel {
         if (source.TaskFolderId != null) {
             this.TaskFolderId = new String(source.TaskFolderId);
         }
-        if (source.Content != null) {
-            this.Content = new String(source.Content);
-        }
         if (source.CodeTemplateId != null) {
             this.CodeTemplateId = new String(source.CodeTemplateId);
         }
@@ -357,13 +357,13 @@ public class CreateTaskNewRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamArrayObj(map, prefix + "TaskExt.", this.TaskExt);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamSimple(map, prefix + "InstanceInitStrategy", this.InstanceInitStrategy);
         this.setParamSimple(map, prefix + "LeftCoordinate", this.LeftCoordinate);
         this.setParamSimple(map, prefix + "TopCoordinate", this.TopCoordinate);
         this.setParamSimple(map, prefix + "TaskFolderId", this.TaskFolderId);
-        this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "CodeTemplateId", this.CodeTemplateId);
 
     }

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class CreateLogsetRequest extends AbstractModel {
 
     /**
-    * 日志集名字，不能重名
+    * 日志集名字。
+
+- 最大支持255个字符。不支持`|`字符。
     */
     @SerializedName("LogsetName")
     @Expose
@@ -45,16 +47,24 @@ public class CreateLogsetRequest extends AbstractModel {
     private String LogsetId;
 
     /**
-     * Get 日志集名字，不能重名 
-     * @return LogsetName 日志集名字，不能重名
+     * Get 日志集名字。
+
+- 最大支持255个字符。不支持`|`字符。 
+     * @return LogsetName 日志集名字。
+
+- 最大支持255个字符。不支持`|`字符。
      */
     public String getLogsetName() {
         return this.LogsetName;
     }
 
     /**
-     * Set 日志集名字，不能重名
-     * @param LogsetName 日志集名字，不能重名
+     * Set 日志集名字。
+
+- 最大支持255个字符。不支持`|`字符。
+     * @param LogsetName 日志集名字。
+
+- 最大支持255个字符。不支持`|`字符。
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;

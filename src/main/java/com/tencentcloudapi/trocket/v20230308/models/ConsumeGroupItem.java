@@ -99,6 +99,21 @@ public class ConsumeGroupItem extends AbstractModel {
     private String FullNamespaceV4;
 
     /**
+    * 订阅的主题个数
+    */
+    @SerializedName("SubscribeTopicNum")
+    @Expose
+    private Long SubscribeTopicNum;
+
+    /**
+    * 1753153590
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -278,6 +293,42 @@ public class ConsumeGroupItem extends AbstractModel {
         this.FullNamespaceV4 = FullNamespaceV4;
     }
 
+    /**
+     * Get 订阅的主题个数 
+     * @return SubscribeTopicNum 订阅的主题个数
+     */
+    public Long getSubscribeTopicNum() {
+        return this.SubscribeTopicNum;
+    }
+
+    /**
+     * Set 订阅的主题个数
+     * @param SubscribeTopicNum 订阅的主题个数
+     */
+    public void setSubscribeTopicNum(Long SubscribeTopicNum) {
+        this.SubscribeTopicNum = SubscribeTopicNum;
+    }
+
+    /**
+     * Get 1753153590
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 1753153590
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 1753153590
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 1753153590
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public ConsumeGroupItem() {
     }
 
@@ -316,6 +367,12 @@ public class ConsumeGroupItem extends AbstractModel {
         if (source.FullNamespaceV4 != null) {
             this.FullNamespaceV4 = new String(source.FullNamespaceV4);
         }
+        if (source.SubscribeTopicNum != null) {
+            this.SubscribeTopicNum = new Long(source.SubscribeTopicNum);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
     }
 
 
@@ -333,6 +390,8 @@ public class ConsumeGroupItem extends AbstractModel {
         this.setParamSimple(map, prefix + "NamespaceV4", this.NamespaceV4);
         this.setParamSimple(map, prefix + "ConsumerGroupV4", this.ConsumerGroupV4);
         this.setParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
+        this.setParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

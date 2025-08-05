@@ -38,7 +38,7 @@ public class LogsetInfo extends AbstractModel {
     private String LogsetName;
 
     /**
-    * 创建时间
+    * 创建时间。格式 `YYYY-MM-DD HH:MM:SS`
     */
     @SerializedName("CreateTime")
     @Expose
@@ -105,16 +105,16 @@ public class LogsetInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间。格式 `YYYY-MM-DD HH:MM:SS` 
+     * @return CreateTime 创建时间。格式 `YYYY-MM-DD HH:MM:SS`
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间。格式 `YYYY-MM-DD HH:MM:SS`
+     * @param CreateTime 创建时间。格式 `YYYY-MM-DD HH:MM:SS`
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyLogsetRequest extends AbstractModel {
 
     /**
-    * 日志集ID
+    * 日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * 日志集名称
+    * 日志集名字。- 最大支持255个字符。不支持`|`字符。
     */
     @SerializedName("LogsetName")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyLogsetRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 日志集ID 
-     * @return LogsetId 日志集ID
+     * Get 日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。 
+     * @return LogsetId 日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 日志集ID
-     * @param LogsetId 日志集ID
+     * Set 日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
+     * @param LogsetId 日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 日志集名称 
-     * @return LogsetName 日志集名称
+     * Get 日志集名字。- 最大支持255个字符。不支持`|`字符。 
+     * @return LogsetName 日志集名字。- 最大支持255个字符。不支持`|`字符。
      */
     public String getLogsetName() {
         return this.LogsetName;
     }
 
     /**
-     * Set 日志集名称
-     * @param LogsetName 日志集名称
+     * Set 日志集名字。- 最大支持255个字符。不支持`|`字符。
+     * @param LogsetName 日志集名字。- 最大支持255个字符。不支持`|`字符。
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;

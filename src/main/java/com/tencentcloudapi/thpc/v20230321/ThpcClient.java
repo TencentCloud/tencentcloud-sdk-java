@@ -131,6 +131,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DeleteJob) 用于删除一个作业任务。
+     * @param req DeleteJobRequest
+     * @return DeleteJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteJobResponse DeleteJob(DeleteJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteJob", DeleteJobResponse.class);
+    }
+
+    /**
      *本接口(DeleteNodes)用于删除指定集群中一个或者多个计算节点或者登录节点。
      * @param req DeleteNodesRequest
      * @return DeleteNodesResponse
@@ -208,6 +219,39 @@ public class ThpcClient extends AbstractClient{
     public DescribeInitNodeScriptsResponse DescribeInitNodeScripts(DescribeInitNodeScriptsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInitNodeScripts", DescribeInitNodeScriptsResponse.class);
+    }
+
+    /**
+     *本接口用于查询作业的提交信息。
+     * @param req DescribeJobSubmitInfoRequest
+     * @return DescribeJobSubmitInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobSubmitInfoResponse DescribeJobSubmitInfo(DescribeJobSubmitInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobSubmitInfo", DescribeJobSubmitInfoResponse.class);
+    }
+
+    /**
+     *本接口 (DescribeJobs) 用于查询作业任务列表信息。
+     * @param req DescribeJobsRequest
+     * @return DescribeJobsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobsResponse DescribeJobs(DescribeJobsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobs", DescribeJobsResponse.class);
+    }
+
+    /**
+     *本接口 (DescribeJobs) 用于查询作业任务列表信息。
+     * @param req DescribeJobsOverviewRequest
+     * @return DescribeJobsOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobsOverviewResponse DescribeJobsOverview(DescribeJobsOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobsOverview", DescribeJobsOverviewResponse.class);
     }
 
     /**
@@ -296,6 +340,28 @@ public class ThpcClient extends AbstractClient{
     public SetAutoScalingConfigurationResponse SetAutoScalingConfiguration(SetAutoScalingConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetAutoScalingConfiguration", SetAutoScalingConfigurationResponse.class);
+    }
+
+    /**
+     *本接口 (SubmitJob) 用于提交一个作业任务。
+     * @param req SubmitJobRequest
+     * @return SubmitJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitJobResponse SubmitJob(SubmitJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitJob", SubmitJobResponse.class);
+    }
+
+    /**
+     *本接口 (TerminateJob) 用于终止一个作业任务。
+     * @param req TerminateJobRequest
+     * @return TerminateJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateJobResponse TerminateJob(TerminateJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateJob", TerminateJobResponse.class);
     }
 
     /**

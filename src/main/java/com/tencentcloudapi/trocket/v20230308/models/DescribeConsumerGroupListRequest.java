@@ -59,6 +59,24 @@ public class DescribeConsumerGroupListRequest extends AbstractModel {
     private String FromTopic;
 
     /**
+    * 按照指定字段排序，枚举值如下：
+- subscribeNum：订阅 Topic 个数
+    */
+    @SerializedName("SortedBy")
+    @Expose
+    private String SortedBy;
+
+    /**
+    * 按升序或降序排列，枚举值如下：
+
+- asc：升序
+- desc：降序
+    */
+    @SerializedName("SortOrder")
+    @Expose
+    private String SortOrder;
+
+    /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
      * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
@@ -138,6 +156,54 @@ public class DescribeConsumerGroupListRequest extends AbstractModel {
         this.FromTopic = FromTopic;
     }
 
+    /**
+     * Get 按照指定字段排序，枚举值如下：
+- subscribeNum：订阅 Topic 个数 
+     * @return SortedBy 按照指定字段排序，枚举值如下：
+- subscribeNum：订阅 Topic 个数
+     */
+    public String getSortedBy() {
+        return this.SortedBy;
+    }
+
+    /**
+     * Set 按照指定字段排序，枚举值如下：
+- subscribeNum：订阅 Topic 个数
+     * @param SortedBy 按照指定字段排序，枚举值如下：
+- subscribeNum：订阅 Topic 个数
+     */
+    public void setSortedBy(String SortedBy) {
+        this.SortedBy = SortedBy;
+    }
+
+    /**
+     * Get 按升序或降序排列，枚举值如下：
+
+- asc：升序
+- desc：降序 
+     * @return SortOrder 按升序或降序排列，枚举值如下：
+
+- asc：升序
+- desc：降序
+     */
+    public String getSortOrder() {
+        return this.SortOrder;
+    }
+
+    /**
+     * Set 按升序或降序排列，枚举值如下：
+
+- asc：升序
+- desc：降序
+     * @param SortOrder 按升序或降序排列，枚举值如下：
+
+- asc：升序
+- desc：降序
+     */
+    public void setSortOrder(String SortOrder) {
+        this.SortOrder = SortOrder;
+    }
+
     public DescribeConsumerGroupListRequest() {
     }
 
@@ -164,6 +230,12 @@ public class DescribeConsumerGroupListRequest extends AbstractModel {
         if (source.FromTopic != null) {
             this.FromTopic = new String(source.FromTopic);
         }
+        if (source.SortedBy != null) {
+            this.SortedBy = new String(source.SortedBy);
+        }
+        if (source.SortOrder != null) {
+            this.SortOrder = new String(source.SortOrder);
+        }
     }
 
 
@@ -176,6 +248,8 @@ public class DescribeConsumerGroupListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "FromTopic", this.FromTopic);
+        this.setParamSimple(map, prefix + "SortedBy", this.SortedBy);
+        this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);
 
     }
 }
