@@ -38,6 +38,13 @@ public class ModifyAddressTemplateResponse extends AbstractModel {
     private String Uuid;
 
     /**
+    * 规则数上限配置
+    */
+    @SerializedName("RuleLimitNum")
+    @Expose
+    private Long RuleLimitNum;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class ModifyAddressTemplateResponse extends AbstractModel {
     }
 
     /**
+     * Get 规则数上限配置 
+     * @return RuleLimitNum 规则数上限配置
+     */
+    public Long getRuleLimitNum() {
+        return this.RuleLimitNum;
+    }
+
+    /**
+     * Set 规则数上限配置
+     * @param RuleLimitNum 规则数上限配置
+     */
+    public void setRuleLimitNum(Long RuleLimitNum) {
+        this.RuleLimitNum = RuleLimitNum;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -106,6 +129,9 @@ public class ModifyAddressTemplateResponse extends AbstractModel {
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.RuleLimitNum != null) {
+            this.RuleLimitNum = new Long(source.RuleLimitNum);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +144,7 @@ public class ModifyAddressTemplateResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "RuleLimitNum", this.RuleLimitNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

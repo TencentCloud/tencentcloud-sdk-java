@@ -31,6 +31,13 @@ public class ModifyAllRuleStatusResponse extends AbstractModel {
     private Long Status;
 
     /**
+    * 规则限制数量
+    */
+    @SerializedName("RuleLimitNum")
+    @Expose
+    private Long RuleLimitNum;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class ModifyAllRuleStatusResponse extends AbstractModel {
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 规则限制数量 
+     * @return RuleLimitNum 规则限制数量
+     */
+    public Long getRuleLimitNum() {
+        return this.RuleLimitNum;
+    }
+
+    /**
+     * Set 规则限制数量
+     * @param RuleLimitNum 规则限制数量
+     */
+    public void setRuleLimitNum(Long RuleLimitNum) {
+        this.RuleLimitNum = RuleLimitNum;
     }
 
     /**
@@ -80,6 +103,9 @@ public class ModifyAllRuleStatusResponse extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.RuleLimitNum != null) {
+            this.RuleLimitNum = new Long(source.RuleLimitNum);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class ModifyAllRuleStatusResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "RuleLimitNum", this.RuleLimitNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

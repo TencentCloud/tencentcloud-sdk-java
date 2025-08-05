@@ -160,6 +160,13 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     private Boolean IsDownload;
 
     /**
+    * 重复文档处理方式，按顺序匹配第一个满足条件的方式处理
+    */
+    @SerializedName("DuplicateFileHandles")
+    @Expose
+    private DuplicateFileHandle [] DuplicateFileHandles;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -487,6 +494,22 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
         this.IsDownload = IsDownload;
     }
 
+    /**
+     * Get 重复文档处理方式，按顺序匹配第一个满足条件的方式处理 
+     * @return DuplicateFileHandles 重复文档处理方式，按顺序匹配第一个满足条件的方式处理
+     */
+    public DuplicateFileHandle [] getDuplicateFileHandles() {
+        return this.DuplicateFileHandles;
+    }
+
+    /**
+     * Set 重复文档处理方式，按顺序匹配第一个满足条件的方式处理
+     * @param DuplicateFileHandles 重复文档处理方式，按顺序匹配第一个满足条件的方式处理
+     */
+    public void setDuplicateFileHandles(DuplicateFileHandle [] DuplicateFileHandles) {
+        this.DuplicateFileHandles = DuplicateFileHandles;
+    }
+
     public SaveDocRequest() {
     }
 
@@ -552,6 +575,12 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
         if (source.IsDownload != null) {
             this.IsDownload = new Boolean(source.IsDownload);
         }
+        if (source.DuplicateFileHandles != null) {
+            this.DuplicateFileHandles = new DuplicateFileHandle[source.DuplicateFileHandles.length];
+            for (int i = 0; i < source.DuplicateFileHandles.length; i++) {
+                this.DuplicateFileHandles[i] = new DuplicateFileHandle(source.DuplicateFileHandles[i]);
+            }
+        }
     }
 
 
@@ -577,6 +606,7 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
         this.setParamSimple(map, prefix + "Opt", this.Opt);
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
         this.setParamSimple(map, prefix + "IsDownload", this.IsDownload);
+        this.setParamArrayObj(map, prefix + "DuplicateFileHandles.", this.DuplicateFileHandles);
 
     }
 }

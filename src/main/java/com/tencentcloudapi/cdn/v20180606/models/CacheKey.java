@@ -34,6 +34,8 @@ off：关闭全路径缓存（即开启参数忽略）
 
     /**
     * 是否忽略大小写缓存
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IgnoreCase")
@@ -114,8 +116,12 @@ off：关闭全路径缓存（即开启参数忽略）
 
     /**
      * Get 是否忽略大小写缓存
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IgnoreCase 是否忽略大小写缓存
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIgnoreCase() {
@@ -124,8 +130,12 @@ off：关闭全路径缓存（即开启参数忽略）
 
     /**
      * Set 是否忽略大小写缓存
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IgnoreCase 是否忽略大小写缓存
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIgnoreCase(String IgnoreCase) {

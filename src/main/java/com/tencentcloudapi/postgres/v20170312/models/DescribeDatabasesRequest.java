@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDatabasesRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -45,23 +45,24 @@ public class DescribeDatabasesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 单次显示数量
+    * 单次显示数量。建议最大取值100。
+默认值：20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 实例ID 
-     * @return DBInstanceId 实例ID
+     * Get 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/409/16773)接口获取 
+     * @return DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param DBInstanceId 实例ID
+     * Set 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/409/16773)接口获取
+     * @param DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -100,16 +101,20 @@ public class DescribeDatabasesRequest extends AbstractModel {
     }
 
     /**
-     * Get 单次显示数量 
-     * @return Limit 单次显示数量
+     * Get 单次显示数量。建议最大取值100。
+默认值：20 
+     * @return Limit 单次显示数量。建议最大取值100。
+默认值：20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次显示数量
-     * @param Limit 单次显示数量
+     * Set 单次显示数量。建议最大取值100。
+默认值：20
+     * @param Limit 单次显示数量。建议最大取值100。
+默认值：20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

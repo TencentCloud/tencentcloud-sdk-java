@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteReadOnlyGroupNetworkAccessRequest extends AbstractModel {
 
     /**
-    * RO组ID，形如：pgro-4t9c6g7k。
+    * RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
     */
     @SerializedName("ReadOnlyGroupId")
     @Expose
@@ -52,16 +52,16 @@ public class DeleteReadOnlyGroupNetworkAccessRequest extends AbstractModel {
     private String Vip;
 
     /**
-     * Get RO组ID，形如：pgro-4t9c6g7k。 
-     * @return ReadOnlyGroupId RO组ID，形如：pgro-4t9c6g7k。
+     * Get RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取 
+     * @return ReadOnlyGroupId RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      */
     public String getReadOnlyGroupId() {
         return this.ReadOnlyGroupId;
     }
 
     /**
-     * Set RO组ID，形如：pgro-4t9c6g7k。
-     * @param ReadOnlyGroupId RO组ID，形如：pgro-4t9c6g7k。
+     * Set RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
+     * @param ReadOnlyGroupId RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      */
     public void setReadOnlyGroupId(String ReadOnlyGroupId) {
         this.ReadOnlyGroupId = ReadOnlyGroupId;

@@ -45,6 +45,13 @@ public class DescribeEngineUsageInfoResponse extends AbstractModel {
     private Long Available;
 
     /**
+    * 剩余集群规格百分比
+    */
+    @SerializedName("AvailPercent")
+    @Expose
+    private Long AvailPercent;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class DescribeEngineUsageInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get 剩余集群规格百分比 
+     * @return AvailPercent 剩余集群规格百分比
+     */
+    public Long getAvailPercent() {
+        return this.AvailPercent;
+    }
+
+    /**
+     * Set 剩余集群规格百分比
+     * @param AvailPercent 剩余集群规格百分比
+     */
+    public void setAvailPercent(Long AvailPercent) {
+        this.AvailPercent = AvailPercent;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -132,6 +155,9 @@ public class DescribeEngineUsageInfoResponse extends AbstractModel {
         if (source.Available != null) {
             this.Available = new Long(source.Available);
         }
+        if (source.AvailPercent != null) {
+            this.AvailPercent = new Long(source.AvailPercent);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -145,6 +171,7 @@ public class DescribeEngineUsageInfoResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "Used", this.Used);
         this.setParamSimple(map, prefix + "Available", this.Available);
+        this.setParamSimple(map, prefix + "AvailPercent", this.AvailPercent);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

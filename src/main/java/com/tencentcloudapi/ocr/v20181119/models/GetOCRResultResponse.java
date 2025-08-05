@@ -38,6 +38,13 @@ public class GetOCRResultResponse extends AbstractModel {
     private OCRResult OCRResult;
 
     /**
+    * requestid 信息
+    */
+    @SerializedName("RequestIdInfos")
+    @Expose
+    private RequestIdInfo [] RequestIdInfos;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class GetOCRResultResponse extends AbstractModel {
     }
 
     /**
+     * Get requestid 信息 
+     * @return RequestIdInfos requestid 信息
+     */
+    public RequestIdInfo [] getRequestIdInfos() {
+        return this.RequestIdInfos;
+    }
+
+    /**
+     * Set requestid 信息
+     * @param RequestIdInfos requestid 信息
+     */
+    public void setRequestIdInfos(RequestIdInfo [] RequestIdInfos) {
+        this.RequestIdInfos = RequestIdInfos;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -106,6 +129,12 @@ public class GetOCRResultResponse extends AbstractModel {
         if (source.OCRResult != null) {
             this.OCRResult = new OCRResult(source.OCRResult);
         }
+        if (source.RequestIdInfos != null) {
+            this.RequestIdInfos = new RequestIdInfo[source.RequestIdInfos.length];
+            for (int i = 0; i < source.RequestIdInfos.length; i++) {
+                this.RequestIdInfos[i] = new RequestIdInfo(source.RequestIdInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +147,7 @@ public class GetOCRResultResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "OCRResult.", this.OCRResult);
+        this.setParamArrayObj(map, prefix + "RequestIdInfos.", this.RequestIdInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

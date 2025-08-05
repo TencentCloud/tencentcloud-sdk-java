@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ZoneStatus extends AbstractModel {
 
     /**
-    * 规格地域
+    * 规格可用区
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 规格可用区
+    * 规格地域
     */
     @SerializedName("Region")
     @Expose
@@ -45,32 +45,32 @@ public class ZoneStatus extends AbstractModel {
     private Long Status;
 
     /**
-     * Get 规格地域 
-     * @return Zone 规格地域
+     * Get 规格可用区 
+     * @return Zone 规格可用区
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 规格地域
-     * @param Zone 规格地域
+     * Set 规格可用区
+     * @param Zone 规格可用区
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 规格可用区 
-     * @return Region 规格可用区
+     * Get 规格地域 
+     * @return Region 规格地域
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 规格可用区
-     * @param Region 规格可用区
+     * Set 规格地域
+     * @param Region 规格地域
      */
     public void setRegion(String Region) {
         this.Region = Region;

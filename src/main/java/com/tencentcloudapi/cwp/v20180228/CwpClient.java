@@ -803,7 +803,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口 (DescribeAccountStatistics) 用于获取帐号统计列表数据。
+     *本接口 (DescribeAccountStatistics) 用于获取账号统计列表数据。
      * @param req DescribeAccountStatisticsRequest
      * @return DescribeAccountStatisticsResponse
      * @throws TencentCloudSDKException
@@ -2101,7 +2101,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
+     *本接口 (DescribeHistoryAccounts) 用于获取账号变更历史列表数据。
      * @param req DescribeHistoryAccountsRequest
      * @return DescribeHistoryAccountsResponse
      * @throws TencentCloudSDKException

@@ -73,6 +73,13 @@ public class ModifyTWeSeeConfigRequest extends AbstractModel {
     private String Config;
 
     /**
+    * 视频摘要配置参数，不传则不修改
+    */
+    @SerializedName("SummaryConfig")
+    @Expose
+    private VisionSummaryConfig SummaryConfig;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -184,6 +191,22 @@ public class ModifyTWeSeeConfigRequest extends AbstractModel {
         this.Config = Config;
     }
 
+    /**
+     * Get 视频摘要配置参数，不传则不修改 
+     * @return SummaryConfig 视频摘要配置参数，不传则不修改
+     */
+    public VisionSummaryConfig getSummaryConfig() {
+        return this.SummaryConfig;
+    }
+
+    /**
+     * Set 视频摘要配置参数，不传则不修改
+     * @param SummaryConfig 视频摘要配置参数，不传则不修改
+     */
+    public void setSummaryConfig(VisionSummaryConfig SummaryConfig) {
+        this.SummaryConfig = SummaryConfig;
+    }
+
     public ModifyTWeSeeConfigRequest() {
     }
 
@@ -213,6 +236,9 @@ public class ModifyTWeSeeConfigRequest extends AbstractModel {
         if (source.Config != null) {
             this.Config = new String(source.Config);
         }
+        if (source.SummaryConfig != null) {
+            this.SummaryConfig = new VisionSummaryConfig(source.SummaryConfig);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class ModifyTWeSeeConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableSummary", this.EnableSummary);
         this.setParamSimple(map, prefix + "EnableSearch", this.EnableSearch);
         this.setParamSimple(map, prefix + "Config", this.Config);
+        this.setParamObj(map, prefix + "SummaryConfig.", this.SummaryConfig);
 
     }
 }

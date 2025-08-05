@@ -89,7 +89,7 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     <li>**2** - 合同审查任务排队中</li>  
     <li>**3** - 合同审查任务执行中</li>   
     <li>**4** - 合同审查任务执行成功</li>
-    <li>**4** - 合同审查任务执行失败</li>
+    <li>**5** - 合同审查任务执行失败</li>
 </ul>
     */
     @SerializedName("Status")
@@ -266,7 +266,7 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     <li>**2** - 合同审查任务排队中</li>  
     <li>**3** - 合同审查任务执行中</li>   
     <li>**4** - 合同审查任务执行成功</li>
-    <li>**4** - 合同审查任务执行失败</li>
+    <li>**5** - 合同审查任务执行失败</li>
 </ul> 
      * @return Status 合同审查任务状态。
 状态如下：
@@ -275,7 +275,7 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     <li>**2** - 合同审查任务排队中</li>  
     <li>**3** - 合同审查任务执行中</li>   
     <li>**4** - 合同审查任务执行成功</li>
-    <li>**4** - 合同审查任务执行失败</li>
+    <li>**5** - 合同审查任务执行失败</li>
 </ul>
      */
     public Long getStatus() {
@@ -290,7 +290,7 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     <li>**2** - 合同审查任务排队中</li>  
     <li>**3** - 合同审查任务执行中</li>   
     <li>**4** - 合同审查任务执行成功</li>
-    <li>**4** - 合同审查任务执行失败</li>
+    <li>**5** - 合同审查任务执行失败</li>
 </ul>
      * @param Status 合同审查任务状态。
 状态如下：
@@ -299,7 +299,7 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     <li>**2** - 合同审查任务排队中</li>  
     <li>**3** - 合同审查任务执行中</li>   
     <li>**4** - 合同审查任务执行成功</li>
-    <li>**4** - 合同审查任务执行失败</li>
+    <li>**5** - 合同审查任务执行失败</li>
 </ul>
      */
     public void setStatus(Long Status) {

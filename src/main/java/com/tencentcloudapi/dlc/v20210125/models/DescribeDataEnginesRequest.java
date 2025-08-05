@@ -115,6 +115,13 @@ public class DescribeDataEnginesRequest extends AbstractModel {
     private String EngineTypeDetail;
 
     /**
+    * 默认 false, 为 true 时仅列出具有洞察 listener 的引擎
+    */
+    @SerializedName("ListHasListener")
+    @Expose
+    private Boolean ListHasListener;
+
+    /**
      * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
@@ -322,6 +329,22 @@ public class DescribeDataEnginesRequest extends AbstractModel {
         this.EngineTypeDetail = EngineTypeDetail;
     }
 
+    /**
+     * Get 默认 false, 为 true 时仅列出具有洞察 listener 的引擎 
+     * @return ListHasListener 默认 false, 为 true 时仅列出具有洞察 listener 的引擎
+     */
+    public Boolean getListHasListener() {
+        return this.ListHasListener;
+    }
+
+    /**
+     * Set 默认 false, 为 true 时仅列出具有洞察 listener 的引擎
+     * @param ListHasListener 默认 false, 为 true 时仅列出具有洞察 listener 的引擎
+     */
+    public void setListHasListener(Boolean ListHasListener) {
+        this.ListHasListener = ListHasListener;
+    }
+
     public DescribeDataEnginesRequest() {
     }
 
@@ -378,6 +401,9 @@ public class DescribeDataEnginesRequest extends AbstractModel {
         if (source.EngineTypeDetail != null) {
             this.EngineTypeDetail = new String(source.EngineTypeDetail);
         }
+        if (source.ListHasListener != null) {
+            this.ListHasListener = new Boolean(source.ListHasListener);
+        }
     }
 
 
@@ -398,6 +424,7 @@ public class DescribeDataEnginesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DatasourceConnectionNameSet.", this.DatasourceConnectionNameSet);
         this.setParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
         this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
+        this.setParamSimple(map, prefix + "ListHasListener", this.ListHasListener);
 
     }
 }

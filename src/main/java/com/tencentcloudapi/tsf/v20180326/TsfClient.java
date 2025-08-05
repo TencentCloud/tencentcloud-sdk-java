@@ -1401,6 +1401,28 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *查询许可列表
+     * @param req DescribeLicensesRequest
+     * @return DescribeLicensesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLicensesResponse DescribeLicenses(DescribeLicensesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLicenses", DescribeLicensesResponse.class);
+    }
+
+    /**
+     *获取用户日志使用量
+     * @param req DescribeLogCapacityRequest
+     * @return DescribeLogCapacityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogCapacityResponse DescribeLogCapacity(DescribeLogCapacityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogCapacity", DescribeLogCapacityResponse.class);
+    }
+
+    /**
      *查询微服务详情
      * @param req DescribeMicroserviceRequest
      * @return DescribeMicroserviceResponse
@@ -1607,6 +1629,17 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeRepositoryResponse DescribeRepository(DescribeRepositoryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRepository", DescribeRepositoryResponse.class);
+    }
+
+    /**
+     *无
+     * @param req DescribeResourceConfigRequest
+     * @return DescribeResourceConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceConfigResponse DescribeResourceConfig(DescribeResourceConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceConfig", DescribeResourceConfigResponse.class);
     }
 
     /**

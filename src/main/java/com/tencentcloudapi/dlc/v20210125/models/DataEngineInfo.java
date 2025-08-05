@@ -483,6 +483,13 @@ public class DataEngineInfo extends AbstractModel {
     private Long IsAIEngine;
 
     /**
+    * 引擎资源弹性伸缩策略
+    */
+    @SerializedName("ScheduleElasticityConf")
+    @Expose
+    private ScheduleElasticityConf ScheduleElasticityConf;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -1610,6 +1617,22 @@ public class DataEngineInfo extends AbstractModel {
         this.IsAIEngine = IsAIEngine;
     }
 
+    /**
+     * Get 引擎资源弹性伸缩策略 
+     * @return ScheduleElasticityConf 引擎资源弹性伸缩策略
+     */
+    public ScheduleElasticityConf getScheduleElasticityConf() {
+        return this.ScheduleElasticityConf;
+    }
+
+    /**
+     * Set 引擎资源弹性伸缩策略
+     * @param ScheduleElasticityConf 引擎资源弹性伸缩策略
+     */
+    public void setScheduleElasticityConf(ScheduleElasticityConf ScheduleElasticityConf) {
+        this.ScheduleElasticityConf = ScheduleElasticityConf;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -1807,6 +1830,9 @@ public class DataEngineInfo extends AbstractModel {
         if (source.IsAIEngine != null) {
             this.IsAIEngine = new Long(source.IsAIEngine);
         }
+        if (source.ScheduleElasticityConf != null) {
+            this.ScheduleElasticityConf = new ScheduleElasticityConf(source.ScheduleElasticityConf);
+        }
     }
 
 
@@ -1873,6 +1899,7 @@ public class DataEngineInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "GatewayState", this.GatewayState);
         this.setParamSimple(map, prefix + "IsAIGateway", this.IsAIGateway);
         this.setParamSimple(map, prefix + "IsAIEngine", this.IsAIEngine);
+        this.setParamObj(map, prefix + "ScheduleElasticityConf.", this.ScheduleElasticityConf);
 
     }
 }

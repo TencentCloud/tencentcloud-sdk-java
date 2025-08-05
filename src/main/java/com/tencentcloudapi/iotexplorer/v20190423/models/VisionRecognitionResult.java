@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VisionRecognitionResult extends AbstractModel {
 
     /**
-    * 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
+    * 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功；4：执行中）
     */
     @SerializedName("Status")
     @Expose
@@ -41,7 +41,6 @@ public class VisionRecognitionResult extends AbstractModel {
 - `smoke`：烟雾
 - `package`：快递包裹
 - `license_plate`：车牌
-
     */
     @SerializedName("DetectedClassifications")
     @Expose
@@ -62,16 +61,26 @@ public class VisionRecognitionResult extends AbstractModel {
     private String AlternativeSummary;
 
     /**
-     * Get 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功） 
-     * @return Status 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
+    * 错误码，可能取值：
+
+- `DownloadFailed`：下载视频/图片文件失败
+- `ReadFailed`：读取视频/图片文件失败
+    */
+    @SerializedName("ErrorCode")
+    @Expose
+    private String ErrorCode;
+
+    /**
+     * Get 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功；4：执行中） 
+     * @return Status 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功；4：执行中）
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
-     * @param Status 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
+     * Set 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功；4：执行中）
+     * @param Status 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功；4：执行中）
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -87,8 +96,7 @@ public class VisionRecognitionResult extends AbstractModel {
 - `fire`：火焰
 - `smoke`：烟雾
 - `package`：快递包裹
-- `license_plate`：车牌
- 
+- `license_plate`：车牌 
      * @return DetectedClassifications 识别到的目标类型。可能取值：
 
 - `person`：人
@@ -99,7 +107,6 @@ public class VisionRecognitionResult extends AbstractModel {
 - `smoke`：烟雾
 - `package`：快递包裹
 - `license_plate`：车牌
-
      */
     public String [] getDetectedClassifications() {
         return this.DetectedClassifications;
@@ -116,7 +123,6 @@ public class VisionRecognitionResult extends AbstractModel {
 - `smoke`：烟雾
 - `package`：快递包裹
 - `license_plate`：车牌
-
      * @param DetectedClassifications 识别到的目标类型。可能取值：
 
 - `person`：人
@@ -127,7 +133,6 @@ public class VisionRecognitionResult extends AbstractModel {
 - `smoke`：烟雾
 - `package`：快递包裹
 - `license_plate`：车牌
-
      */
     public void setDetectedClassifications(String [] DetectedClassifications) {
         this.DetectedClassifications = DetectedClassifications;
@@ -165,6 +170,34 @@ public class VisionRecognitionResult extends AbstractModel {
         this.AlternativeSummary = AlternativeSummary;
     }
 
+    /**
+     * Get 错误码，可能取值：
+
+- `DownloadFailed`：下载视频/图片文件失败
+- `ReadFailed`：读取视频/图片文件失败 
+     * @return ErrorCode 错误码，可能取值：
+
+- `DownloadFailed`：下载视频/图片文件失败
+- `ReadFailed`：读取视频/图片文件失败
+     */
+    public String getErrorCode() {
+        return this.ErrorCode;
+    }
+
+    /**
+     * Set 错误码，可能取值：
+
+- `DownloadFailed`：下载视频/图片文件失败
+- `ReadFailed`：读取视频/图片文件失败
+     * @param ErrorCode 错误码，可能取值：
+
+- `DownloadFailed`：下载视频/图片文件失败
+- `ReadFailed`：读取视频/图片文件失败
+     */
+    public void setErrorCode(String ErrorCode) {
+        this.ErrorCode = ErrorCode;
+    }
+
     public VisionRecognitionResult() {
     }
 
@@ -188,6 +221,9 @@ public class VisionRecognitionResult extends AbstractModel {
         if (source.AlternativeSummary != null) {
             this.AlternativeSummary = new String(source.AlternativeSummary);
         }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
     }
 
 
@@ -199,6 +235,7 @@ public class VisionRecognitionResult extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DetectedClassifications.", this.DetectedClassifications);
         this.setParamSimple(map, prefix + "Summary", this.Summary);
         this.setParamSimple(map, prefix + "AlternativeSummary", this.AlternativeSummary);
+        this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
 
     }
 }

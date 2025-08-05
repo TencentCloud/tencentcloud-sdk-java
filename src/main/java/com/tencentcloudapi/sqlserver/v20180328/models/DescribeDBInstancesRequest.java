@@ -113,7 +113,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String [] VersionSet;
 
     /**
-    * 实例可用区，格式如：ap-guangzhou-2
+    * 实例可用区
     */
     @SerializedName("Zone")
     @Expose
@@ -379,16 +379,16 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例可用区，格式如：ap-guangzhou-2 
-     * @return Zone 实例可用区，格式如：ap-guangzhou-2
+     * Get 实例可用区 
+     * @return Zone 实例可用区
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 实例可用区，格式如：ap-guangzhou-2
-     * @param Zone 实例可用区，格式如：ap-guangzhou-2
+     * Set 实例可用区
+     * @param Zone 实例可用区
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

@@ -38,7 +38,7 @@ public class ModifyTaskScriptRequest extends AbstractModel {
     private String TaskId;
 
     /**
-    * 必填，脚本内容 base64编码
+    * 存在脚本的任务必填（shell任务、Hive任务、python任务等），脚本内容 base64编码
     */
     @SerializedName("ScriptContent")
     @Expose
@@ -84,16 +84,16 @@ public class ModifyTaskScriptRequest extends AbstractModel {
     }
 
     /**
-     * Get 必填，脚本内容 base64编码 
-     * @return ScriptContent 必填，脚本内容 base64编码
+     * Get 存在脚本的任务必填（shell任务、Hive任务、python任务等），脚本内容 base64编码 
+     * @return ScriptContent 存在脚本的任务必填（shell任务、Hive任务、python任务等），脚本内容 base64编码
      */
     public String getScriptContent() {
         return this.ScriptContent;
     }
 
     /**
-     * Set 必填，脚本内容 base64编码
-     * @param ScriptContent 必填，脚本内容 base64编码
+     * Set 存在脚本的任务必填（shell任务、Hive任务、python任务等），脚本内容 base64编码
+     * @param ScriptContent 存在脚本的任务必填（shell任务、Hive任务、python任务等），脚本内容 base64编码
      */
     public void setScriptContent(String ScriptContent) {
         this.ScriptContent = ScriptContent;

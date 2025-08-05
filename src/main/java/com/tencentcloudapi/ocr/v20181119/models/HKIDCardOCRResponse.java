@@ -125,7 +125,7 @@ public class HKIDCardOCRResponse extends AbstractModel {
 
     /**
     * 该字段已废弃， 将固定返回空数组，不建议使用。
-This field is deprecated and will always return an empty array. Usage is not recommended.
+
     */
     @SerializedName("WarningCode")
     @Expose
@@ -409,9 +409,9 @@ This field is deprecated and will always return an empty array. Usage is not rec
 
     /**
      * Get 该字段已废弃， 将固定返回空数组，不建议使用。
-This field is deprecated and will always return an empty array. Usage is not recommended. 
+ 
      * @return WarningCode 该字段已废弃， 将固定返回空数组，不建议使用。
-This field is deprecated and will always return an empty array. Usage is not recommended.
+
      * @deprecated
      */
     @Deprecated
@@ -421,9 +421,9 @@ This field is deprecated and will always return an empty array. Usage is not rec
 
     /**
      * Set 该字段已废弃， 将固定返回空数组，不建议使用。
-This field is deprecated and will always return an empty array. Usage is not recommended.
+
      * @param WarningCode 该字段已废弃， 将固定返回空数组，不建议使用。
-This field is deprecated and will always return an empty array. Usage is not recommended.
+
      * @deprecated
      */
     @Deprecated

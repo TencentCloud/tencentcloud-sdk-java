@@ -31,6 +31,20 @@ public class ModifyProjectRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 项目显示名称，可以为中文名,需要租户范围内唯一
+    */
+    @SerializedName("DisplayName")
+    @Expose
+    private String DisplayName;
+
+    /**
+    * 备注
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
     * true/false则修改，不带该参数不修改。
     */
     @SerializedName("TaskSubmitApproval")
@@ -80,6 +94,13 @@ public class ModifyProjectRequest extends AbstractModel {
     private String [] ProjectOwner;
 
     /**
+    * 更新类型
+    */
+    @SerializedName("ModifyType")
+    @Expose
+    private String ModifyType;
+
+    /**
      * Get 目标修改的项目ID 
      * @return ProjectId 目标修改的项目ID
      */
@@ -93,6 +114,38 @@ public class ModifyProjectRequest extends AbstractModel {
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 项目显示名称，可以为中文名,需要租户范围内唯一 
+     * @return DisplayName 项目显示名称，可以为中文名,需要租户范围内唯一
+     */
+    public String getDisplayName() {
+        return this.DisplayName;
+    }
+
+    /**
+     * Set 项目显示名称，可以为中文名,需要租户范围内唯一
+     * @param DisplayName 项目显示名称，可以为中文名,需要租户范围内唯一
+     */
+    public void setDisplayName(String DisplayName) {
+        this.DisplayName = DisplayName;
+    }
+
+    /**
+     * Get 备注 
+     * @return Description 备注
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 备注
+     * @param Description 备注
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     /**
@@ -207,6 +260,22 @@ public class ModifyProjectRequest extends AbstractModel {
         this.ProjectOwner = ProjectOwner;
     }
 
+    /**
+     * Get 更新类型 
+     * @return ModifyType 更新类型
+     */
+    public String getModifyType() {
+        return this.ModifyType;
+    }
+
+    /**
+     * Set 更新类型
+     * @param ModifyType 更新类型
+     */
+    public void setModifyType(String ModifyType) {
+        this.ModifyType = ModifyType;
+    }
+
     public ModifyProjectRequest() {
     }
 
@@ -217,6 +286,12 @@ public class ModifyProjectRequest extends AbstractModel {
     public ModifyProjectRequest(ModifyProjectRequest source) {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.DisplayName != null) {
+            this.DisplayName = new String(source.DisplayName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
         }
         if (source.TaskSubmitApproval != null) {
             this.TaskSubmitApproval = new Boolean(source.TaskSubmitApproval);
@@ -245,6 +320,9 @@ public class ModifyProjectRequest extends AbstractModel {
                 this.ProjectOwner[i] = new String(source.ProjectOwner[i]);
             }
         }
+        if (source.ModifyType != null) {
+            this.ModifyType = new String(source.ModifyType);
+        }
     }
 
 
@@ -253,6 +331,8 @@ public class ModifyProjectRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "TaskSubmitApproval", this.TaskSubmitApproval);
         this.setParamObj(map, prefix + "ResourcePoolInfo.", this.ResourcePoolInfo);
         this.setParamArraySimple(map, prefix + "ProjectManagers.", this.ProjectManagers);
@@ -260,6 +340,7 @@ public class ModifyProjectRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExtraOptions", this.ExtraOptions);
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamArraySimple(map, prefix + "ProjectOwner.", this.ProjectOwner);
+        this.setParamSimple(map, prefix + "ModifyType", this.ModifyType);
 
     }
 }

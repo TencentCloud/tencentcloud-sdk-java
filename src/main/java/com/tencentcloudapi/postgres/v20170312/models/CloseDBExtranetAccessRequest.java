@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CloseDBExtranetAccessRequest extends AbstractModel {
 
     /**
-    * 实例ID，形如postgres-6r233v55
+    * 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。形如postgres-6r233v55
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 是否关闭Ipv6外网，1：是，0：否
+    * 是否关闭Ipv6外网，1：是，0：否。默认值：0。
     */
     @SerializedName("IsIpv6")
     @Expose
     private Long IsIpv6;
 
     /**
-     * Get 实例ID，形如postgres-6r233v55 
-     * @return DBInstanceId 实例ID，形如postgres-6r233v55
+     * Get 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。形如postgres-6r233v55 
+     * @return DBInstanceId 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。形如postgres-6r233v55
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如postgres-6r233v55
-     * @param DBInstanceId 实例ID，形如postgres-6r233v55
+     * Set 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。形如postgres-6r233v55
+     * @param DBInstanceId 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。形如postgres-6r233v55
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 是否关闭Ipv6外网，1：是，0：否 
-     * @return IsIpv6 是否关闭Ipv6外网，1：是，0：否
+     * Get 是否关闭Ipv6外网，1：是，0：否。默认值：0。 
+     * @return IsIpv6 是否关闭Ipv6外网，1：是，0：否。默认值：0。
      */
     public Long getIsIpv6() {
         return this.IsIpv6;
     }
 
     /**
-     * Set 是否关闭Ipv6外网，1：是，0：否
-     * @param IsIpv6 是否关闭Ipv6外网，1：是，0：否
+     * Set 是否关闭Ipv6外网，1：是，0：否。默认值：0。
+     * @param IsIpv6 是否关闭Ipv6外网，1：是，0：否。默认值：0。
      */
     public void setIsIpv6(Long IsIpv6) {
         this.IsIpv6 = IsIpv6;

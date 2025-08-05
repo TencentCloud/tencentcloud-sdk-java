@@ -289,6 +289,34 @@ public class StandardEngineResourceGroupInfo extends AbstractModel {
     private Long SparkMinSize;
 
     /**
+    * 自定义镜像容器镜像服务domain 名称
+    */
+    @SerializedName("PublicDomain")
+    @Expose
+    private String PublicDomain;
+
+    /**
+    * 自定义镜像容器镜像服务tcr实例id
+    */
+    @SerializedName("RegistryId")
+    @Expose
+    private String RegistryId;
+
+    /**
+    * 容器镜像服务tcr所在地域
+    */
+    @SerializedName("RegionName")
+    @Expose
+    private String RegionName;
+
+    /**
+    * 资源组启动耗时
+    */
+    @SerializedName("LaunchTime")
+    @Expose
+    private String LaunchTime;
+
+    /**
      * Get 标准引擎资源组ID 
      * @return EngineResourceGroupId 标准引擎资源组ID
      */
@@ -928,6 +956,70 @@ public class StandardEngineResourceGroupInfo extends AbstractModel {
         this.SparkMinSize = SparkMinSize;
     }
 
+    /**
+     * Get 自定义镜像容器镜像服务domain 名称 
+     * @return PublicDomain 自定义镜像容器镜像服务domain 名称
+     */
+    public String getPublicDomain() {
+        return this.PublicDomain;
+    }
+
+    /**
+     * Set 自定义镜像容器镜像服务domain 名称
+     * @param PublicDomain 自定义镜像容器镜像服务domain 名称
+     */
+    public void setPublicDomain(String PublicDomain) {
+        this.PublicDomain = PublicDomain;
+    }
+
+    /**
+     * Get 自定义镜像容器镜像服务tcr实例id 
+     * @return RegistryId 自定义镜像容器镜像服务tcr实例id
+     */
+    public String getRegistryId() {
+        return this.RegistryId;
+    }
+
+    /**
+     * Set 自定义镜像容器镜像服务tcr实例id
+     * @param RegistryId 自定义镜像容器镜像服务tcr实例id
+     */
+    public void setRegistryId(String RegistryId) {
+        this.RegistryId = RegistryId;
+    }
+
+    /**
+     * Get 容器镜像服务tcr所在地域 
+     * @return RegionName 容器镜像服务tcr所在地域
+     */
+    public String getRegionName() {
+        return this.RegionName;
+    }
+
+    /**
+     * Set 容器镜像服务tcr所在地域
+     * @param RegionName 容器镜像服务tcr所在地域
+     */
+    public void setRegionName(String RegionName) {
+        this.RegionName = RegionName;
+    }
+
+    /**
+     * Get 资源组启动耗时 
+     * @return LaunchTime 资源组启动耗时
+     */
+    public String getLaunchTime() {
+        return this.LaunchTime;
+    }
+
+    /**
+     * Set 资源组启动耗时
+     * @param LaunchTime 资源组启动耗时
+     */
+    public void setLaunchTime(String LaunchTime) {
+        this.LaunchTime = LaunchTime;
+    }
+
     public StandardEngineResourceGroupInfo() {
     }
 
@@ -1044,6 +1136,18 @@ public class StandardEngineResourceGroupInfo extends AbstractModel {
         if (source.SparkMinSize != null) {
             this.SparkMinSize = new Long(source.SparkMinSize);
         }
+        if (source.PublicDomain != null) {
+            this.PublicDomain = new String(source.PublicDomain);
+        }
+        if (source.RegistryId != null) {
+            this.RegistryId = new String(source.RegistryId);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.LaunchTime != null) {
+            this.LaunchTime = new String(source.LaunchTime);
+        }
     }
 
 
@@ -1086,6 +1190,10 @@ public class StandardEngineResourceGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SparkSpecMode", this.SparkSpecMode);
         this.setParamSimple(map, prefix + "SparkSize", this.SparkSize);
         this.setParamSimple(map, prefix + "SparkMinSize", this.SparkMinSize);
+        this.setParamSimple(map, prefix + "PublicDomain", this.PublicDomain);
+        this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
+        this.setParamSimple(map, prefix + "RegionName", this.RegionName);
+        this.setParamSimple(map, prefix + "LaunchTime", this.LaunchTime);
 
     }
 }

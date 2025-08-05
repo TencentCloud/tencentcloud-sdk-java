@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,46 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteIdsWhiteRuleRequest extends AbstractModel {
+public class DescribeLicensesRequest extends AbstractModel {
 
     /**
-    * 入侵防御白名单id
-参考DescribeIdsWhiteRule接口返回的Id字段
+    * 偏移量
     */
-    @SerializedName("Id")
+    @SerializedName("Offset")
     @Expose
-    private Long Id;
+    private Long Offset;
 
     /**
-     * Get 入侵防御白名单id
-参考DescribeIdsWhiteRule接口返回的Id字段 
-     * @return Id 入侵防御白名单id
-参考DescribeIdsWhiteRule接口返回的Id字段
+    * 每页条数
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+     * Get 偏移量 
+     * @return Offset 偏移量
      */
-    public Long getId() {
-        return this.Id;
+    public Long getOffset() {
+        return this.Offset;
     }
 
     /**
-     * Set 入侵防御白名单id
-参考DescribeIdsWhiteRule接口返回的Id字段
-     * @param Id 入侵防御白名单id
-参考DescribeIdsWhiteRule接口返回的Id字段
+     * Set 偏移量
+     * @param Offset 偏移量
      */
-    public void setId(Long Id) {
-        this.Id = Id;
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
-    public DeleteIdsWhiteRuleRequest() {
+    /**
+     * Get 每页条数 
+     * @return Limit 每页条数
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 每页条数
+     * @param Limit 每页条数
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    public DescribeLicensesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteIdsWhiteRuleRequest(DeleteIdsWhiteRuleRequest source) {
-        if (source.Id != null) {
-            this.Id = new Long(source.Id);
+    public DescribeLicensesRequest(DescribeLicensesRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
         }
     }
 
@@ -69,7 +90,8 @@ public class DeleteIdsWhiteRuleRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

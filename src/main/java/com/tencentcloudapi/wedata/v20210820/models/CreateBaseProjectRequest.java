@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class CreateBaseProjectRequest extends AbstractModel {
 
+    /**
+    * 项目信息
+    */
+    @SerializedName("Project")
+    @Expose
+    private BaseProject Project;
+
+    /**
+     * Get 项目信息 
+     * @return Project 项目信息
+     */
+    public BaseProject getProject() {
+        return this.Project;
+    }
+
+    /**
+     * Set 项目信息
+     * @param Project 项目信息
+     */
+    public void setProject(BaseProject Project) {
+        this.Project = Project;
+    }
+
     public CreateBaseProjectRequest() {
     }
 
@@ -31,6 +54,9 @@ public class CreateBaseProjectRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateBaseProjectRequest(CreateBaseProjectRequest source) {
+        if (source.Project != null) {
+            this.Project = new BaseProject(source.Project);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class CreateBaseProjectRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Project.", this.Project);
 
     }
 }

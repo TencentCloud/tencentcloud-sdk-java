@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteDashboardSubscribeRequest extends AbstractModel {
 
     /**
-    * 仪表盘订阅记录id。
+    * 仪表盘订阅记录id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-     * Get 仪表盘订阅记录id。 
-     * @return Id 仪表盘订阅记录id。
+     * Get 仪表盘订阅记录id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。 
+     * @return Id 仪表盘订阅记录id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 仪表盘订阅记录id。
-     * @param Id 仪表盘订阅记录id。
+     * Set 仪表盘订阅记录id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
+     * @param Id 仪表盘订阅记录id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
      */
     public void setId(Long Id) {
         this.Id = Id;

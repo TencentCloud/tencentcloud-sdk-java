@@ -344,6 +344,13 @@ public class DataSourceInfo extends AbstractModel {
     private DataSourceEnvInfo [] DataSourceEnvInfos;
 
     /**
+    * 禁止数据探查
+    */
+    @SerializedName("ForbidProbe")
+    @Expose
+    private Boolean ForbidProbe;
+
+    /**
      * Get 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseName 若数据源列表为绑定数据库，则为db名称
@@ -1143,6 +1150,22 @@ public class DataSourceInfo extends AbstractModel {
         this.DataSourceEnvInfos = DataSourceEnvInfos;
     }
 
+    /**
+     * Get 禁止数据探查 
+     * @return ForbidProbe 禁止数据探查
+     */
+    public Boolean getForbidProbe() {
+        return this.ForbidProbe;
+    }
+
+    /**
+     * Set 禁止数据探查
+     * @param ForbidProbe 禁止数据探查
+     */
+    public void setForbidProbe(Boolean ForbidProbe) {
+        this.ForbidProbe = ForbidProbe;
+    }
+
     public DataSourceInfo() {
     }
 
@@ -1274,6 +1297,9 @@ public class DataSourceInfo extends AbstractModel {
                 this.DataSourceEnvInfos[i] = new DataSourceEnvInfo(source.DataSourceEnvInfos[i]);
             }
         }
+        if (source.ForbidProbe != null) {
+            this.ForbidProbe = new Boolean(source.ForbidProbe);
+        }
     }
 
 
@@ -1321,6 +1347,7 @@ public class DataSourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DatasourceUrn", this.DatasourceUrn);
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamArrayObj(map, prefix + "DataSourceEnvInfos.", this.DataSourceEnvInfos);
+        this.setParamSimple(map, prefix + "ForbidProbe", this.ForbidProbe);
 
     }
 }

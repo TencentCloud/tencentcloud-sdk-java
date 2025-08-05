@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyAccountPrivilegesRequest extends AbstractModel {
 
     /**
-    * 实例ID。	
+    * 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 修改此账号对某数据库对象的权限。
+    * 修改此账号对某数据库对象的权限。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
     */
     @SerializedName("UserName")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel {
     private ModifyPrivilege [] ModifyPrivilegeSet;
 
     /**
-     * Get 实例ID。	 
-     * @return DBInstanceId 实例ID。	
+     * Get 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。	
-     * @param DBInstanceId 实例ID。	
+     * Set 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 修改此账号对某数据库对象的权限。 
-     * @return UserName 修改此账号对某数据库对象的权限。
+     * Get 修改此账号对某数据库对象的权限。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取 
+     * @return UserName 修改此账号对某数据库对象的权限。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 修改此账号对某数据库对象的权限。
-     * @param UserName 修改此账号对某数据库对象的权限。
+     * Set 修改此账号对某数据库对象的权限。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
+     * @param UserName 修改此账号对某数据库对象的权限。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

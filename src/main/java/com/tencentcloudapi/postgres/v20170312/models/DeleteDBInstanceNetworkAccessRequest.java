@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteDBInstanceNetworkAccessRequest extends AbstractModel {
 
     /**
-    * 实例ID，形如：postgres-6bwgamo3。
+    * 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -52,16 +52,16 @@ public class DeleteDBInstanceNetworkAccessRequest extends AbstractModel {
     private String Vip;
 
     /**
-     * Get 实例ID，形如：postgres-6bwgamo3。 
-     * @return DBInstanceId 实例ID，形如：postgres-6bwgamo3。
+     * Get 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如：postgres-6bwgamo3。
-     * @param DBInstanceId 实例ID，形如：postgres-6bwgamo3。
+     * Set 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;

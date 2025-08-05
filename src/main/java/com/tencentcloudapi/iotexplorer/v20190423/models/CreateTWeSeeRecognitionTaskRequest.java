@@ -107,6 +107,13 @@ public class CreateTWeSeeRecognitionTaskRequest extends AbstractModel {
     private String SummaryQOS;
 
     /**
+    * 摘要输出配置
+    */
+    @SerializedName("SummaryConfig")
+    @Expose
+    private VisionSummaryConfig SummaryConfig;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -306,6 +313,22 @@ public class CreateTWeSeeRecognitionTaskRequest extends AbstractModel {
         this.SummaryQOS = SummaryQOS;
     }
 
+    /**
+     * Get 摘要输出配置 
+     * @return SummaryConfig 摘要输出配置
+     */
+    public VisionSummaryConfig getSummaryConfig() {
+        return this.SummaryConfig;
+    }
+
+    /**
+     * Set 摘要输出配置
+     * @param SummaryConfig 摘要输出配置
+     */
+    public void setSummaryConfig(VisionSummaryConfig SummaryConfig) {
+        this.SummaryConfig = SummaryConfig;
+    }
+
     public CreateTWeSeeRecognitionTaskRequest() {
     }
 
@@ -347,6 +370,9 @@ public class CreateTWeSeeRecognitionTaskRequest extends AbstractModel {
         if (source.SummaryQOS != null) {
             this.SummaryQOS = new String(source.SummaryQOS);
         }
+        if (source.SummaryConfig != null) {
+            this.SummaryConfig = new VisionSummaryConfig(source.SummaryConfig);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class CreateTWeSeeRecognitionTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsCustomDevice", this.IsCustomDevice);
         this.setParamSimple(map, prefix + "InputType", this.InputType);
         this.setParamSimple(map, prefix + "SummaryQOS", this.SummaryQOS);
+        this.setParamObj(map, prefix + "SummaryConfig.", this.SummaryConfig);
 
     }
 }

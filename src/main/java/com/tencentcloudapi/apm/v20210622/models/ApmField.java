@@ -68,6 +68,13 @@ public class ApmField extends AbstractModel {
     private String CompareVal;
 
     /**
+    * 指标中文名
+    */
+    @SerializedName("NameCN")
+    @Expose
+    private String NameCN;
+
+    /**
      * Get 指标名 
      * @return Key 指标名
      */
@@ -171,6 +178,22 @@ public class ApmField extends AbstractModel {
         this.CompareVal = CompareVal;
     }
 
+    /**
+     * Get 指标中文名 
+     * @return NameCN 指标中文名
+     */
+    public String getNameCN() {
+        return this.NameCN;
+    }
+
+    /**
+     * Set 指标中文名
+     * @param NameCN 指标中文名
+     */
+    public void setNameCN(String NameCN) {
+        this.NameCN = NameCN;
+    }
+
     public ApmField() {
     }
 
@@ -203,6 +226,9 @@ public class ApmField extends AbstractModel {
         if (source.CompareVal != null) {
             this.CompareVal = new String(source.CompareVal);
         }
+        if (source.NameCN != null) {
+            this.NameCN = new String(source.NameCN);
+        }
     }
 
 
@@ -216,6 +242,7 @@ public class ApmField extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CompareVals.", this.CompareVals);
         this.setParamArrayObj(map, prefix + "LastPeriodValue.", this.LastPeriodValue);
         this.setParamSimple(map, prefix + "CompareVal", this.CompareVal);
+        this.setParamSimple(map, prefix + "NameCN", this.NameCN);
 
     }
 }

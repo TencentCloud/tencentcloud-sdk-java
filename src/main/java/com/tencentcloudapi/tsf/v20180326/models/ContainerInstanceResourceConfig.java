@@ -1,0 +1,143 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tsf.v20180326.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class ContainerInstanceResourceConfig extends AbstractModel {
+
+    /**
+    * 实例导入方式，可多个，公有云为 ["R"]，独立版的取值有 "M" 脚本模式、"S" SSH 模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImportMode")
+    @Expose
+    private String [] ImportMode;
+
+    /**
+    * SSH 模式时，前端应该限制用户填这个数量的 master 主机信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MasterNumLimit")
+    @Expose
+    private Long MasterNumLimit;
+
+    /**
+    * SSH 模式时，前端应该限制用户填的最高数量的 node 主机信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeNumLimitPerSetup")
+    @Expose
+    private Long NodeNumLimitPerSetup;
+
+    /**
+     * Get 实例导入方式，可多个，公有云为 ["R"]，独立版的取值有 "M" 脚本模式、"S" SSH 模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImportMode 实例导入方式，可多个，公有云为 ["R"]，独立版的取值有 "M" 脚本模式、"S" SSH 模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getImportMode() {
+        return this.ImportMode;
+    }
+
+    /**
+     * Set 实例导入方式，可多个，公有云为 ["R"]，独立版的取值有 "M" 脚本模式、"S" SSH 模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImportMode 实例导入方式，可多个，公有云为 ["R"]，独立版的取值有 "M" 脚本模式、"S" SSH 模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImportMode(String [] ImportMode) {
+        this.ImportMode = ImportMode;
+    }
+
+    /**
+     * Get SSH 模式时，前端应该限制用户填这个数量的 master 主机信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MasterNumLimit SSH 模式时，前端应该限制用户填这个数量的 master 主机信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMasterNumLimit() {
+        return this.MasterNumLimit;
+    }
+
+    /**
+     * Set SSH 模式时，前端应该限制用户填这个数量的 master 主机信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MasterNumLimit SSH 模式时，前端应该限制用户填这个数量的 master 主机信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMasterNumLimit(Long MasterNumLimit) {
+        this.MasterNumLimit = MasterNumLimit;
+    }
+
+    /**
+     * Get SSH 模式时，前端应该限制用户填的最高数量的 node 主机信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeNumLimitPerSetup SSH 模式时，前端应该限制用户填的最高数量的 node 主机信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNodeNumLimitPerSetup() {
+        return this.NodeNumLimitPerSetup;
+    }
+
+    /**
+     * Set SSH 模式时，前端应该限制用户填的最高数量的 node 主机信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeNumLimitPerSetup SSH 模式时，前端应该限制用户填的最高数量的 node 主机信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeNumLimitPerSetup(Long NodeNumLimitPerSetup) {
+        this.NodeNumLimitPerSetup = NodeNumLimitPerSetup;
+    }
+
+    public ContainerInstanceResourceConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ContainerInstanceResourceConfig(ContainerInstanceResourceConfig source) {
+        if (source.ImportMode != null) {
+            this.ImportMode = new String[source.ImportMode.length];
+            for (int i = 0; i < source.ImportMode.length; i++) {
+                this.ImportMode[i] = new String(source.ImportMode[i]);
+            }
+        }
+        if (source.MasterNumLimit != null) {
+            this.MasterNumLimit = new Long(source.MasterNumLimit);
+        }
+        if (source.NodeNumLimitPerSetup != null) {
+            this.NodeNumLimitPerSetup = new Long(source.NodeNumLimitPerSetup);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "ImportMode.", this.ImportMode);
+        this.setParamSimple(map, prefix + "MasterNumLimit", this.MasterNumLimit);
+        this.setParamSimple(map, prefix + "NodeNumLimitPerSetup", this.NodeNumLimitPerSetup);
+
+    }
+}
+

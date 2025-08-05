@@ -53,8 +53,7 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
     private String IpString;
 
     /**
-    * 1 ip模板
-5 域名模板
+    * 1 ip模板  5 域名模板
     */
     @SerializedName("Type")
     @Expose
@@ -136,20 +135,16 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
     }
 
     /**
-     * Get 1 ip模板
-5 域名模板 
-     * @return Type 1 ip模板
-5 域名模板
+     * Get 1 ip模板  5 域名模板 
+     * @return Type 1 ip模板  5 域名模板
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 1 ip模板
-5 域名模板
-     * @param Type 1 ip模板
-5 域名模板
+     * Set 1 ip模板  5 域名模板
+     * @param Type 1 ip模板  5 域名模板
      */
     public void setType(Long Type) {
         this.Type = Type;

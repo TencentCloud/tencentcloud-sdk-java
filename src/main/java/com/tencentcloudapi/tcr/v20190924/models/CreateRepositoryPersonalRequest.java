@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRepositoryPersonalRequest extends AbstractModel {
 
     /**
-    * 仓库名称
+    * 仓库名称，格式为 {Namespace}/{lmageName}。
     */
     @SerializedName("RepoName")
     @Expose
@@ -45,16 +45,16 @@ public class CreateRepositoryPersonalRequest extends AbstractModel {
     private String Description;
 
     /**
-     * Get 仓库名称 
-     * @return RepoName 仓库名称
+     * Get 仓库名称，格式为 {Namespace}/{lmageName}。 
+     * @return RepoName 仓库名称，格式为 {Namespace}/{lmageName}。
      */
     public String getRepoName() {
         return this.RepoName;
     }
 
     /**
-     * Set 仓库名称
-     * @param RepoName 仓库名称
+     * Set 仓库名称，格式为 {Namespace}/{lmageName}。
+     * @param RepoName 仓库名称，格式为 {Namespace}/{lmageName}。
      */
     public void setRepoName(String RepoName) {
         this.RepoName = RepoName;

@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class ListTaskJobLogDetailRequest extends AbstractModel {
 
     /**
-    * 列表返回的Id
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private String TaskId;
-
-    /**
     * 开始运行时间，unix时间戳（毫秒）
     */
     @SerializedName("StartTime")
@@ -59,6 +52,13 @@ public class ListTaskJobLogDetailRequest extends AbstractModel {
     private String Context;
 
     /**
+    * 列表返回的Id
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
     * 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
     */
     @SerializedName("Asc")
@@ -80,20 +80,18 @@ public class ListTaskJobLogDetailRequest extends AbstractModel {
     private String BatchId;
 
     /**
-     * Get 列表返回的Id 
-     * @return TaskId 列表返回的Id
-     */
-    public String getTaskId() {
-        return this.TaskId;
-    }
+    * 引擎id
+    */
+    @SerializedName("DataEngineId")
+    @Expose
+    private String DataEngineId;
 
     /**
-     * Set 列表返回的Id
-     * @param TaskId 列表返回的Id
-     */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
-    }
+    * 资源组id
+    */
+    @SerializedName("ResourceGroupId")
+    @Expose
+    private String ResourceGroupId;
 
     /**
      * Get 开始运行时间，unix时间戳（毫秒） 
@@ -160,6 +158,22 @@ public class ListTaskJobLogDetailRequest extends AbstractModel {
     }
 
     /**
+     * Get 列表返回的Id 
+     * @return TaskId 列表返回的Id
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 列表返回的Id
+     * @param TaskId 列表返回的Id
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
      * Get 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列 
      * @return Asc 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
      */
@@ -207,6 +221,38 @@ public class ListTaskJobLogDetailRequest extends AbstractModel {
         this.BatchId = BatchId;
     }
 
+    /**
+     * Get 引擎id 
+     * @return DataEngineId 引擎id
+     */
+    public String getDataEngineId() {
+        return this.DataEngineId;
+    }
+
+    /**
+     * Set 引擎id
+     * @param DataEngineId 引擎id
+     */
+    public void setDataEngineId(String DataEngineId) {
+        this.DataEngineId = DataEngineId;
+    }
+
+    /**
+     * Get 资源组id 
+     * @return ResourceGroupId 资源组id
+     */
+    public String getResourceGroupId() {
+        return this.ResourceGroupId;
+    }
+
+    /**
+     * Set 资源组id
+     * @param ResourceGroupId 资源组id
+     */
+    public void setResourceGroupId(String ResourceGroupId) {
+        this.ResourceGroupId = ResourceGroupId;
+    }
+
     public ListTaskJobLogDetailRequest() {
     }
 
@@ -215,9 +261,6 @@ public class ListTaskJobLogDetailRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListTaskJobLogDetailRequest(ListTaskJobLogDetailRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
-        }
         if (source.StartTime != null) {
             this.StartTime = new Long(source.StartTime);
         }
@@ -229,6 +272,9 @@ public class ListTaskJobLogDetailRequest extends AbstractModel {
         }
         if (source.Context != null) {
             this.Context = new String(source.Context);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
         if (source.Asc != null) {
             this.Asc = new Boolean(source.Asc);
@@ -242,6 +288,12 @@ public class ListTaskJobLogDetailRequest extends AbstractModel {
         if (source.BatchId != null) {
             this.BatchId = new String(source.BatchId);
         }
+        if (source.DataEngineId != null) {
+            this.DataEngineId = new String(source.DataEngineId);
+        }
+        if (source.ResourceGroupId != null) {
+            this.ResourceGroupId = new String(source.ResourceGroupId);
+        }
     }
 
 
@@ -249,14 +301,16 @@ public class ListTaskJobLogDetailRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Context", this.Context);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Asc", this.Asc);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "BatchId", this.BatchId);
+        this.setParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+        this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,35 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIdsWhiteRuleResponse extends AbstractModel {
+public class DescribeLogCapacityResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * 使用日志容量大小
     */
-    @SerializedName("Total")
+    @SerializedName("UsedSpace")
     @Expose
-    private Long Total;
+    private Float UsedSpace;
 
     /**
-    * 规则详情
+    * 日志总容量大小
     */
-    @SerializedName("Data")
+    @SerializedName("Capacity")
     @Expose
-    private IdsWhiteInfo [] Data;
-
-    /**
-    * 返回状态码 0 成功 非0不成功
-    */
-    @SerializedName("ReturnCode")
-    @Expose
-    private Long ReturnCode;
-
-    /**
-    * 返回信息  success 成功 其他 不成功
-    */
-    @SerializedName("ReturnMsg")
-    @Expose
-    private String ReturnMsg;
+    private Float Capacity;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,67 +45,35 @@ public class DescribeIdsWhiteRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return Total 总条数
+     * Get 使用日志容量大小 
+     * @return UsedSpace 使用日志容量大小
      */
-    public Long getTotal() {
-        return this.Total;
+    public Float getUsedSpace() {
+        return this.UsedSpace;
     }
 
     /**
-     * Set 总条数
-     * @param Total 总条数
+     * Set 使用日志容量大小
+     * @param UsedSpace 使用日志容量大小
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setUsedSpace(Float UsedSpace) {
+        this.UsedSpace = UsedSpace;
     }
 
     /**
-     * Get 规则详情 
-     * @return Data 规则详情
+     * Get 日志总容量大小 
+     * @return Capacity 日志总容量大小
      */
-    public IdsWhiteInfo [] getData() {
-        return this.Data;
+    public Float getCapacity() {
+        return this.Capacity;
     }
 
     /**
-     * Set 规则详情
-     * @param Data 规则详情
+     * Set 日志总容量大小
+     * @param Capacity 日志总容量大小
      */
-    public void setData(IdsWhiteInfo [] Data) {
-        this.Data = Data;
-    }
-
-    /**
-     * Get 返回状态码 0 成功 非0不成功 
-     * @return ReturnCode 返回状态码 0 成功 非0不成功
-     */
-    public Long getReturnCode() {
-        return this.ReturnCode;
-    }
-
-    /**
-     * Set 返回状态码 0 成功 非0不成功
-     * @param ReturnCode 返回状态码 0 成功 非0不成功
-     */
-    public void setReturnCode(Long ReturnCode) {
-        this.ReturnCode = ReturnCode;
-    }
-
-    /**
-     * Get 返回信息  success 成功 其他 不成功 
-     * @return ReturnMsg 返回信息  success 成功 其他 不成功
-     */
-    public String getReturnMsg() {
-        return this.ReturnMsg;
-    }
-
-    /**
-     * Set 返回信息  success 成功 其他 不成功
-     * @param ReturnMsg 返回信息  success 成功 其他 不成功
-     */
-    public void setReturnMsg(String ReturnMsg) {
-        this.ReturnMsg = ReturnMsg;
+    public void setCapacity(Float Capacity) {
+        this.Capacity = Capacity;
     }
 
     /**
@@ -138,28 +92,19 @@ public class DescribeIdsWhiteRuleResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeIdsWhiteRuleResponse() {
+    public DescribeLogCapacityResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeIdsWhiteRuleResponse(DescribeIdsWhiteRuleResponse source) {
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
+    public DescribeLogCapacityResponse(DescribeLogCapacityResponse source) {
+        if (source.UsedSpace != null) {
+            this.UsedSpace = new Float(source.UsedSpace);
         }
-        if (source.Data != null) {
-            this.Data = new IdsWhiteInfo[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new IdsWhiteInfo(source.Data[i]);
-            }
-        }
-        if (source.ReturnCode != null) {
-            this.ReturnCode = new Long(source.ReturnCode);
-        }
-        if (source.ReturnMsg != null) {
-            this.ReturnMsg = new String(source.ReturnMsg);
+        if (source.Capacity != null) {
+            this.Capacity = new Float(source.Capacity);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -171,10 +116,8 @@ public class DescribeIdsWhiteRuleResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
-        this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
-        this.setParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
+        this.setParamSimple(map, prefix + "UsedSpace", this.UsedSpace);
+        this.setParamSimple(map, prefix + "Capacity", this.Capacity);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

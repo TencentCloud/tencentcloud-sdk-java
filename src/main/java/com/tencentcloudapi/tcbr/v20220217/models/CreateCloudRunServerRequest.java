@@ -45,11 +45,18 @@ public class CreateCloudRunServerRequest extends AbstractModel {
     private DeployParam DeployInfo;
 
     /**
-    * 服务配置信息
+    * 服务配置信息(已废弃)
     */
     @SerializedName("ServerConfig")
     @Expose
     private ServerBaseConfig ServerConfig;
+
+    /**
+    * 服务配置信息
+    */
+    @SerializedName("Items")
+    @Expose
+    private DiffConfigItem [] Items;
 
     /**
      * Get 环境Id 
@@ -100,19 +107,35 @@ public class CreateCloudRunServerRequest extends AbstractModel {
     }
 
     /**
-     * Get 服务配置信息 
-     * @return ServerConfig 服务配置信息
+     * Get 服务配置信息(已废弃) 
+     * @return ServerConfig 服务配置信息(已废弃)
      */
     public ServerBaseConfig getServerConfig() {
         return this.ServerConfig;
     }
 
     /**
-     * Set 服务配置信息
-     * @param ServerConfig 服务配置信息
+     * Set 服务配置信息(已废弃)
+     * @param ServerConfig 服务配置信息(已废弃)
      */
     public void setServerConfig(ServerBaseConfig ServerConfig) {
         this.ServerConfig = ServerConfig;
+    }
+
+    /**
+     * Get 服务配置信息 
+     * @return Items 服务配置信息
+     */
+    public DiffConfigItem [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set 服务配置信息
+     * @param Items 服务配置信息
+     */
+    public void setItems(DiffConfigItem [] Items) {
+        this.Items = Items;
     }
 
     public CreateCloudRunServerRequest() {
@@ -135,6 +158,12 @@ public class CreateCloudRunServerRequest extends AbstractModel {
         if (source.ServerConfig != null) {
             this.ServerConfig = new ServerBaseConfig(source.ServerConfig);
         }
+        if (source.Items != null) {
+            this.Items = new DiffConfigItem[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new DiffConfigItem(source.Items[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class CreateCloudRunServerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServerName", this.ServerName);
         this.setParamObj(map, prefix + "DeployInfo.", this.DeployInfo);
         this.setParamObj(map, prefix + "ServerConfig.", this.ServerConfig);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
 
     }
 }

@@ -24,7 +24,11 @@ import java.util.HashMap;
 public class DescribeDashboardSubscribesRequest extends AbstractModel {
 
     /**
-    * <br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
+    * dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
+
+- 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
     */
     @SerializedName("Filters")
     @Expose
@@ -45,16 +49,32 @@ public class DescribeDashboardSubscribesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。 
-     * @return Filters <br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * Get dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
+
+- 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。 
+     * @return Filters dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
+
+- 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
-     * @param Filters <br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * Set dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
+
+- 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * @param Filters dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
+
+- 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

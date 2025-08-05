@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchDashboardSubscribeRequest extends AbstractModel {
 
     /**
-    * 仪表盘id。
+    * 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
     */
     @SerializedName("DashboardId")
     @Expose
@@ -38,30 +38,30 @@ public class SearchDashboardSubscribeRequest extends AbstractModel {
     private DashboardSubscribeData SubscribeData;
 
     /**
-    * 仪表盘订阅Id。
+    * 仪表盘订阅Id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 仪表盘订阅名称。
+    * 仪表盘订阅名称。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Name。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 仪表盘id。 
-     * @return DashboardId 仪表盘id。
+     * Get 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。 
+     * @return DashboardId 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
      */
     public String getDashboardId() {
         return this.DashboardId;
     }
 
     /**
-     * Set 仪表盘id。
-     * @param DashboardId 仪表盘id。
+     * Set 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+     * @param DashboardId 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
      */
     public void setDashboardId(String DashboardId) {
         this.DashboardId = DashboardId;
@@ -84,32 +84,32 @@ public class SearchDashboardSubscribeRequest extends AbstractModel {
     }
 
     /**
-     * Get 仪表盘订阅Id。 
-     * @return Id 仪表盘订阅Id。
+     * Get 仪表盘订阅Id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。 
+     * @return Id 仪表盘订阅Id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 仪表盘订阅Id。
-     * @param Id 仪表盘订阅Id。
+     * Set 仪表盘订阅Id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
+     * @param Id 仪表盘订阅Id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 仪表盘订阅名称。 
-     * @return Name 仪表盘订阅名称。
+     * Get 仪表盘订阅名称。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Name。 
+     * @return Name 仪表盘订阅名称。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Name。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 仪表盘订阅名称。
-     * @param Name 仪表盘订阅名称。
+     * Set 仪表盘订阅名称。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Name。
+     * @param Name 仪表盘订阅名称。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Name。
      */
     public void setName(String Name) {
         this.Name = Name;

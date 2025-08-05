@@ -31,7 +31,7 @@ public class SearchProRequest extends AbstractModel {
     private String Query;
 
     /**
-    * 返回结果类型，0-自然检索结果(默认)，1-垂类VR结果，2-混合结果（垂类VR结果+自然检索结果）
+    * 返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
     */
     @SerializedName("Mode")
     @Expose
@@ -75,16 +75,16 @@ public class SearchProRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回结果类型，0-自然检索结果(默认)，1-垂类VR结果，2-混合结果（垂类VR结果+自然检索结果） 
-     * @return Mode 返回结果类型，0-自然检索结果(默认)，1-垂类VR结果，2-混合结果（垂类VR结果+自然检索结果）
+     * Get 返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果） 
+     * @return Mode 返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 返回结果类型，0-自然检索结果(默认)，1-垂类VR结果，2-混合结果（垂类VR结果+自然检索结果）
-     * @param Mode 返回结果类型，0-自然检索结果(默认)，1-垂类VR结果，2-混合结果（垂类VR结果+自然检索结果）
+     * Set 返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
+     * @param Mode 返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;

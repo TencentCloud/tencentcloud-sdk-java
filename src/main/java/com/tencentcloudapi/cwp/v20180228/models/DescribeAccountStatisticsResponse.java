@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAccountStatisticsResponse extends AbstractModel {
 
     /**
-    * 帐号统计列表记录总数。
+    * 账号统计列表记录总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 帐号统计列表。
+    * 账号统计列表。
     */
     @SerializedName("AccountStatistics")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAccountStatisticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 帐号统计列表记录总数。 
-     * @return TotalCount 帐号统计列表记录总数。
+     * Get 账号统计列表记录总数。 
+     * @return TotalCount 账号统计列表记录总数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 帐号统计列表记录总数。
-     * @param TotalCount 帐号统计列表记录总数。
+     * Set 账号统计列表记录总数。
+     * @param TotalCount 账号统计列表记录总数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 帐号统计列表。 
-     * @return AccountStatistics 帐号统计列表。
+     * Get 账号统计列表。 
+     * @return AccountStatistics 账号统计列表。
      */
     public AccountStatistics [] getAccountStatistics() {
         return this.AccountStatistics;
     }
 
     /**
-     * Set 帐号统计列表。
-     * @param AccountStatistics 帐号统计列表。
+     * Set 账号统计列表。
+     * @param AccountStatistics 账号统计列表。
      */
     public void setAccountStatistics(AccountStatistics [] AccountStatistics) {
         this.AccountStatistics = AccountStatistics;

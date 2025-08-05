@@ -230,7 +230,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *可对实例进行网络的删除操作。
+     *可对实例进行网络的删除操作（实例内至少保留一个网络）。
      * @param req DeleteDBInstanceNetworkAccessRequest
      * @return DeleteDBInstanceNetworkAccessResponse
      * @throws TencentCloudSDKException
@@ -274,7 +274,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *可对RO组进行网络的删除操作。
+     *可对RO组进行网络的删除操作（网络数量至少保留1个）。
      * @param req DeleteReadOnlyGroupNetworkAccessRequest
      * @return DeleteReadOnlyGroupNetworkAccessResponse
      * @throws TencentCloudSDKException

@@ -567,7 +567,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeDBInstances)用于查询实例列表。
+     *本接口（DescribeDBInstances）用于查询实例列表。
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -831,7 +831,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口 (DescribeProductConfig) 用于查询售卖规格配置。
+     *本接口（DescribeProductConfig）用于查询售卖规格配置。
      * @param req DescribeProductConfigRequest
      * @return DescribeProductConfigResponse
      * @throws TencentCloudSDKException
@@ -1040,7 +1040,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口 (DescribeZones) 用于查询当前可售卖的可用区信息。
+     *本接口（DescribeZones）用于查询当前可售卖的可用区信息。
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
      * @throws TencentCloudSDKException

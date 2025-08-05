@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class InquiryPriceRenewDBInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)获取。
+（此接口仅支持预付费实例的查询）
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 续费周期，按月计算，最大不超过48
+    * 续费周期，按月计算
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-     * Get 实例ID 
-     * @return DBInstanceId 实例ID
+     * Get 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)获取。
+（此接口仅支持预付费实例的查询） 
+     * @return DBInstanceId 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)获取。
+（此接口仅支持预付费实例的查询）
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param DBInstanceId 实例ID
+     * Set 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)获取。
+（此接口仅支持预付费实例的查询）
+     * @param DBInstanceId 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)获取。
+（此接口仅支持预付费实例的查询）
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 续费周期，按月计算，最大不超过48 
-     * @return Period 续费周期，按月计算，最大不超过48
+     * Get 续费周期，按月计算 
+     * @return Period 续费周期，按月计算
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 续费周期，按月计算，最大不超过48
-     * @param Period 续费周期，按月计算，最大不超过48
+     * Set 续费周期，按月计算
+     * @param Period 续费周期，按月计算
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

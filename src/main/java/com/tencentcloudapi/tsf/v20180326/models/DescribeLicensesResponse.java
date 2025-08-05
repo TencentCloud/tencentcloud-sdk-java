@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,34 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteIdsWhiteRuleResponse extends AbstractModel {
+public class DescribeLicensesResponse extends AbstractModel {
 
     /**
-    * 返回状态码：
-0 成功
-非0 失败
+    * 许可标签列表分页信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ReturnCode")
+    @SerializedName("Result")
     @Expose
-    private Long ReturnCode;
-
-    /**
-    * 返回信息：
-success 成功
-其他
-    */
-    @SerializedName("ReturnMsg")
-    @Expose
-    private String ReturnMsg;
-
-    /**
-    * 返回状态码：
-0  处置成功
--1 通用错误，不用处理
-    */
-    @SerializedName("Status")
-    @Expose
-    private Long Status;
+    private TsfPageLicenseTag Result;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -58,75 +39,23 @@ success 成功
     private String RequestId;
 
     /**
-     * Get 返回状态码：
-0 成功
-非0 失败 
-     * @return ReturnCode 返回状态码：
-0 成功
-非0 失败
+     * Get 许可标签列表分页信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Result 许可标签列表分页信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getReturnCode() {
-        return this.ReturnCode;
+    public TsfPageLicenseTag getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 返回状态码：
-0 成功
-非0 失败
-     * @param ReturnCode 返回状态码：
-0 成功
-非0 失败
+     * Set 许可标签列表分页信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result 许可标签列表分页信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setReturnCode(Long ReturnCode) {
-        this.ReturnCode = ReturnCode;
-    }
-
-    /**
-     * Get 返回信息：
-success 成功
-其他 
-     * @return ReturnMsg 返回信息：
-success 成功
-其他
-     */
-    public String getReturnMsg() {
-        return this.ReturnMsg;
-    }
-
-    /**
-     * Set 返回信息：
-success 成功
-其他
-     * @param ReturnMsg 返回信息：
-success 成功
-其他
-     */
-    public void setReturnMsg(String ReturnMsg) {
-        this.ReturnMsg = ReturnMsg;
-    }
-
-    /**
-     * Get 返回状态码：
-0  处置成功
--1 通用错误，不用处理 
-     * @return Status 返回状态码：
-0  处置成功
--1 通用错误，不用处理
-     */
-    public Long getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set 返回状态码：
-0  处置成功
--1 通用错误，不用处理
-     * @param Status 返回状态码：
-0  处置成功
--1 通用错误，不用处理
-     */
-    public void setStatus(Long Status) {
-        this.Status = Status;
+    public void setResult(TsfPageLicenseTag Result) {
+        this.Result = Result;
     }
 
     /**
@@ -145,22 +74,16 @@ success 成功
         this.RequestId = RequestId;
     }
 
-    public DeleteIdsWhiteRuleResponse() {
+    public DescribeLicensesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteIdsWhiteRuleResponse(DeleteIdsWhiteRuleResponse source) {
-        if (source.ReturnCode != null) {
-            this.ReturnCode = new Long(source.ReturnCode);
-        }
-        if (source.ReturnMsg != null) {
-            this.ReturnMsg = new String(source.ReturnMsg);
-        }
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
+    public DescribeLicensesResponse(DescribeLicensesResponse source) {
+        if (source.Result != null) {
+            this.Result = new TsfPageLicenseTag(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -172,9 +95,7 @@ success 成功
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
-        this.setParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

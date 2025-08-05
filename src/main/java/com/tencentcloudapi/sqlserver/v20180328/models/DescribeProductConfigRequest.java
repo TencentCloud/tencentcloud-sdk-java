@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProductConfigRequest extends AbstractModel {
 
     /**
-    * 可用区英文ID，形如ap-guangzhou-1
+    * 可用区英文 ID
     */
     @SerializedName("Zone")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeProductConfigRequest extends AbstractModel {
     private String InstanceType;
 
     /**
-     * Get 可用区英文ID，形如ap-guangzhou-1 
-     * @return Zone 可用区英文ID，形如ap-guangzhou-1
+     * Get 可用区英文 ID 
+     * @return Zone 可用区英文 ID
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区英文ID，形如ap-guangzhou-1
-     * @param Zone 可用区英文ID，形如ap-guangzhou-1
+     * Set 可用区英文 ID
+     * @param Zone 可用区英文 ID
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

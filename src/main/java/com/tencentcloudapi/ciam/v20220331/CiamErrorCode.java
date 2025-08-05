@@ -117,7 +117,7 @@ public enum CiamErrorCode {
      /* 未知错误。 */
      INTERNALERROR_UNKNOWNERROR("InternalError.UnknownError"),
      
-     /* 创建用户目录时创建秘钥失败。 */
+     /* 创建用户目录时创建密钥失败。 */
      INTERNALERROR_USERSTORECREATESECRETFAIL("InternalError.UserStoreCreateSecretFail"),
      
      /* 删除用户目录时删除用户失败。 */

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeHistoryAccountsResponse extends AbstractModel {
 
     /**
-    * 帐号变更历史列表记录总数。
+    * 账号变更历史列表记录总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 帐号变更历史数据数组。
+    * 账号变更历史数据数组。
     */
     @SerializedName("HistoryAccounts")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeHistoryAccountsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 帐号变更历史列表记录总数。 
-     * @return TotalCount 帐号变更历史列表记录总数。
+     * Get 账号变更历史列表记录总数。 
+     * @return TotalCount 账号变更历史列表记录总数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 帐号变更历史列表记录总数。
-     * @param TotalCount 帐号变更历史列表记录总数。
+     * Set 账号变更历史列表记录总数。
+     * @param TotalCount 账号变更历史列表记录总数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 帐号变更历史数据数组。 
-     * @return HistoryAccounts 帐号变更历史数据数组。
+     * Get 账号变更历史数据数组。 
+     * @return HistoryAccounts 账号变更历史数据数组。
      */
     public HistoryAccount [] getHistoryAccounts() {
         return this.HistoryAccounts;
     }
 
     /**
-     * Set 帐号变更历史数据数组。
-     * @param HistoryAccounts 帐号变更历史数据数组。
+     * Set 账号变更历史数据数组。
+     * @param HistoryAccounts 账号变更历史数据数组。
      */
     public void setHistoryAccounts(HistoryAccount [] HistoryAccounts) {
         this.HistoryAccounts = HistoryAccounts;

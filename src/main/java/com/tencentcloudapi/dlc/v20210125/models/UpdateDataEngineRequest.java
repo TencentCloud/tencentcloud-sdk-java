@@ -129,6 +129,13 @@ public class UpdateDataEngineRequest extends AbstractModel {
     private SessionResourceTemplate SessionResourceTemplate;
 
     /**
+    * 引擎资源弹性伸缩策略
+    */
+    @SerializedName("ScheduleElasticityConf")
+    @Expose
+    private ScheduleElasticityConf ScheduleElasticityConf;
+
+    /**
      * Get 资源大小 
      * @return Size 资源大小
      */
@@ -368,6 +375,22 @@ public class UpdateDataEngineRequest extends AbstractModel {
         this.SessionResourceTemplate = SessionResourceTemplate;
     }
 
+    /**
+     * Get 引擎资源弹性伸缩策略 
+     * @return ScheduleElasticityConf 引擎资源弹性伸缩策略
+     */
+    public ScheduleElasticityConf getScheduleElasticityConf() {
+        return this.ScheduleElasticityConf;
+    }
+
+    /**
+     * Set 引擎资源弹性伸缩策略
+     * @param ScheduleElasticityConf 引擎资源弹性伸缩策略
+     */
+    public void setScheduleElasticityConf(ScheduleElasticityConf ScheduleElasticityConf) {
+        this.ScheduleElasticityConf = ScheduleElasticityConf;
+    }
+
     public UpdateDataEngineRequest() {
     }
 
@@ -421,6 +444,9 @@ public class UpdateDataEngineRequest extends AbstractModel {
         if (source.SessionResourceTemplate != null) {
             this.SessionResourceTemplate = new SessionResourceTemplate(source.SessionResourceTemplate);
         }
+        if (source.ScheduleElasticityConf != null) {
+            this.ScheduleElasticityConf = new ScheduleElasticityConf(source.ScheduleElasticityConf);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class UpdateDataEngineRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
         this.setParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
         this.setParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
+        this.setParamObj(map, prefix + "ScheduleElasticityConf.", this.ScheduleElasticityConf);
 
     }
 }

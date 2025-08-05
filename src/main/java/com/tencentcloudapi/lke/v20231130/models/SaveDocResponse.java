@@ -52,6 +52,13 @@ public class SaveDocResponse extends AbstractModel {
     private String ErrorLinkText;
 
     /**
+    * 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
+    */
+    @SerializedName("DuplicateFileCheckType")
+    @Expose
+    private Long DuplicateFileCheckType;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +130,22 @@ public class SaveDocResponse extends AbstractModel {
     }
 
     /**
+     * Get 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段 
+     * @return DuplicateFileCheckType 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
+     */
+    public Long getDuplicateFileCheckType() {
+        return this.DuplicateFileCheckType;
+    }
+
+    /**
+     * Set 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
+     * @param DuplicateFileCheckType 重复类型，0：未重复，其他取值请参考入参DuplicateFileHandle结构体的CheckType字段
+     */
+    public void setDuplicateFileCheckType(Long DuplicateFileCheckType) {
+        this.DuplicateFileCheckType = DuplicateFileCheckType;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -158,6 +181,9 @@ public class SaveDocResponse extends AbstractModel {
         if (source.ErrorLinkText != null) {
             this.ErrorLinkText = new String(source.ErrorLinkText);
         }
+        if (source.DuplicateFileCheckType != null) {
+            this.DuplicateFileCheckType = new Long(source.DuplicateFileCheckType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -172,6 +198,7 @@ public class SaveDocResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "ErrorLink", this.ErrorLink);
         this.setParamSimple(map, prefix + "ErrorLinkText", this.ErrorLinkText);
+        this.setParamSimple(map, prefix + "DuplicateFileCheckType", this.DuplicateFileCheckType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
