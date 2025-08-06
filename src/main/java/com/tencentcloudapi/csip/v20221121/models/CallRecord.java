@@ -103,8 +103,7 @@ public class CallRecord extends AbstractModel {
     private Long EventType;
 
     /**
-    * 用户类型
-CAMUser/root/AssumedRole
+    * 用户类型CAMUser/root/AssumedRole
 
     */
     @SerializedName("UserType")
@@ -195,6 +194,13 @@ CAMUser/root/AssumedRole
     @SerializedName("ISP")
     @Expose
     private String ISP;
+
+    /**
+    * 账号外vpc信息列表
+    */
+    @SerializedName("VpcInfo")
+    @Expose
+    private SourceIPVpcInfo [] VpcInfo;
 
     /**
      * Get 调用记录ID 
@@ -381,11 +387,9 @@ CAMUser/root/AssumedRole
     }
 
     /**
-     * Get 用户类型
-CAMUser/root/AssumedRole
+     * Get 用户类型CAMUser/root/AssumedRole
  
-     * @return UserType 用户类型
-CAMUser/root/AssumedRole
+     * @return UserType 用户类型CAMUser/root/AssumedRole
 
      */
     public String getUserType() {
@@ -393,11 +397,9 @@ CAMUser/root/AssumedRole
     }
 
     /**
-     * Set 用户类型
-CAMUser/root/AssumedRole
+     * Set 用户类型CAMUser/root/AssumedRole
 
-     * @param UserType 用户类型
-CAMUser/root/AssumedRole
+     * @param UserType 用户类型CAMUser/root/AssumedRole
 
      */
     public void setUserType(String UserType) {
@@ -600,6 +602,22 @@ CAMUser/root/AssumedRole
         this.ISP = ISP;
     }
 
+    /**
+     * Get 账号外vpc信息列表 
+     * @return VpcInfo 账号外vpc信息列表
+     */
+    public SourceIPVpcInfo [] getVpcInfo() {
+        return this.VpcInfo;
+    }
+
+    /**
+     * Set 账号外vpc信息列表
+     * @param VpcInfo 账号外vpc信息列表
+     */
+    public void setVpcInfo(SourceIPVpcInfo [] VpcInfo) {
+        this.VpcInfo = VpcInfo;
+    }
+
     public CallRecord() {
     }
 
@@ -683,6 +701,12 @@ CAMUser/root/AssumedRole
         if (source.ISP != null) {
             this.ISP = new String(source.ISP);
         }
+        if (source.VpcInfo != null) {
+            this.VpcInfo = new SourceIPVpcInfo[source.VpcInfo.length];
+            for (int i = 0; i < source.VpcInfo.length; i++) {
+                this.VpcInfo[i] = new SourceIPVpcInfo(source.VpcInfo[i]);
+            }
+        }
     }
 
 
@@ -714,6 +738,7 @@ CAMUser/root/AssumedRole
         this.setParamSimple(map, prefix + "AppID", this.AppID);
         this.setParamSimple(map, prefix + "ShowStatus", this.ShowStatus);
         this.setParamSimple(map, prefix + "ISP", this.ISP);
+        this.setParamArrayObj(map, prefix + "VpcInfo.", this.VpcInfo);
 
     }
 }

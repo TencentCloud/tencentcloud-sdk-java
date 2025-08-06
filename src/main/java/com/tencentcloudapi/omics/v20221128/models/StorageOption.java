@@ -51,6 +51,20 @@ public class StorageOption extends AbstractModel {
     private Long Capacity;
 
     /**
+    * 是否开启默认扩容，仅turbo类型文件存储支持
+    */
+    @SerializedName("EnableAutoScaleUp")
+    @Expose
+    private Boolean EnableAutoScaleUp;
+
+    /**
+    * turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+    */
+    @SerializedName("MetaType")
+    @Expose
+    private String MetaType;
+
+    /**
      * Get 文件存储类型，取值范围：
 - SD：通用标准型
 - HP：通用性能型
@@ -122,6 +136,38 @@ public class StorageOption extends AbstractModel {
         this.Capacity = Capacity;
     }
 
+    /**
+     * Get 是否开启默认扩容，仅turbo类型文件存储支持 
+     * @return EnableAutoScaleUp 是否开启默认扩容，仅turbo类型文件存储支持
+     */
+    public Boolean getEnableAutoScaleUp() {
+        return this.EnableAutoScaleUp;
+    }
+
+    /**
+     * Set 是否开启默认扩容，仅turbo类型文件存储支持
+     * @param EnableAutoScaleUp 是否开启默认扩容，仅turbo类型文件存储支持
+     */
+    public void setEnableAutoScaleUp(Boolean EnableAutoScaleUp) {
+        this.EnableAutoScaleUp = EnableAutoScaleUp;
+    }
+
+    /**
+     * Get turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据 
+     * @return MetaType turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+     */
+    public String getMetaType() {
+        return this.MetaType;
+    }
+
+    /**
+     * Set turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+     * @param MetaType turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+     */
+    public void setMetaType(String MetaType) {
+        this.MetaType = MetaType;
+    }
+
     public StorageOption() {
     }
 
@@ -139,6 +185,12 @@ public class StorageOption extends AbstractModel {
         if (source.Capacity != null) {
             this.Capacity = new Long(source.Capacity);
         }
+        if (source.EnableAutoScaleUp != null) {
+            this.EnableAutoScaleUp = new Boolean(source.EnableAutoScaleUp);
+        }
+        if (source.MetaType != null) {
+            this.MetaType = new String(source.MetaType);
+        }
     }
 
 
@@ -149,6 +201,8 @@ public class StorageOption extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Capacity", this.Capacity);
+        this.setParamSimple(map, prefix + "EnableAutoScaleUp", this.EnableAutoScaleUp);
+        this.setParamSimple(map, prefix + "MetaType", this.MetaType);
 
     }
 }

@@ -116,8 +116,7 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
     private Boolean HAZk;
 
     /**
-    * ZK节点
-SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
+    * ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
     */
     @SerializedName("CommonSpec")
     @Expose
@@ -131,11 +130,18 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
     private Tag [] TagItems;
 
     /**
-    * 副可用去信息
+    * 副可用区信息
     */
     @SerializedName("SecondaryZoneInfo")
     @Expose
     private SecondaryZoneInfo [] SecondaryZoneInfo;
+
+    /**
+    * default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
+    */
+    @SerializedName("CkDefaultUserPwd")
+    @Expose
+    private String CkDefaultUserPwd;
 
     /**
      * Get 可用区 
@@ -354,20 +360,16 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
     }
 
     /**
-     * Get ZK节点
-SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取 
-     * @return CommonSpec ZK节点
-SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
+     * Get ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取 
+     * @return CommonSpec ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
      */
     public NodeSpec getCommonSpec() {
         return this.CommonSpec;
     }
 
     /**
-     * Set ZK节点
-SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
-     * @param CommonSpec ZK节点
-SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
+     * Set ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
+     * @param CommonSpec ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
      */
     public void setCommonSpec(NodeSpec CommonSpec) {
         this.CommonSpec = CommonSpec;
@@ -390,19 +392,35 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
     }
 
     /**
-     * Get 副可用去信息 
-     * @return SecondaryZoneInfo 副可用去信息
+     * Get 副可用区信息 
+     * @return SecondaryZoneInfo 副可用区信息
      */
     public SecondaryZoneInfo [] getSecondaryZoneInfo() {
         return this.SecondaryZoneInfo;
     }
 
     /**
-     * Set 副可用去信息
-     * @param SecondaryZoneInfo 副可用去信息
+     * Set 副可用区信息
+     * @param SecondaryZoneInfo 副可用区信息
      */
     public void setSecondaryZoneInfo(SecondaryZoneInfo [] SecondaryZoneInfo) {
         this.SecondaryZoneInfo = SecondaryZoneInfo;
+    }
+
+    /**
+     * Get default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符 
+     * @return CkDefaultUserPwd default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
+     */
+    public String getCkDefaultUserPwd() {
+        return this.CkDefaultUserPwd;
+    }
+
+    /**
+     * Set default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
+     * @param CkDefaultUserPwd default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
+     */
+    public void setCkDefaultUserPwd(String CkDefaultUserPwd) {
+        this.CkDefaultUserPwd = CkDefaultUserPwd;
     }
 
     public CreateInstanceNewRequest() {
@@ -467,6 +485,9 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
                 this.SecondaryZoneInfo[i] = new SecondaryZoneInfo(source.SecondaryZoneInfo[i]);
             }
         }
+        if (source.CkDefaultUserPwd != null) {
+            this.CkDefaultUserPwd = new String(source.CkDefaultUserPwd);
+        }
     }
 
 
@@ -490,6 +511,7 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
         this.setParamObj(map, prefix + "CommonSpec.", this.CommonSpec);
         this.setParamArrayObj(map, prefix + "TagItems.", this.TagItems);
         this.setParamArrayObj(map, prefix + "SecondaryZoneInfo.", this.SecondaryZoneInfo);
+        this.setParamSimple(map, prefix + "CkDefaultUserPwd", this.CkDefaultUserPwd);
 
     }
 }

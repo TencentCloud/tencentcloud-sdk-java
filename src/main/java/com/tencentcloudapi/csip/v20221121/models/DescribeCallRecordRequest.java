@@ -45,6 +45,13 @@ public class DescribeCallRecordRequest extends AbstractModel {
     private Long SourceIPID;
 
     /**
+    * 访问账号uin
+    */
+    @SerializedName("AccUin")
+    @Expose
+    private String AccUin;
+
+    /**
     * 过滤器
     */
     @SerializedName("Filter")
@@ -100,6 +107,22 @@ public class DescribeCallRecordRequest extends AbstractModel {
     }
 
     /**
+     * Get 访问账号uin 
+     * @return AccUin 访问账号uin
+     */
+    public String getAccUin() {
+        return this.AccUin;
+    }
+
+    /**
+     * Set 访问账号uin
+     * @param AccUin 访问账号uin
+     */
+    public void setAccUin(String AccUin) {
+        this.AccUin = AccUin;
+    }
+
+    /**
      * Get 过滤器 
      * @return Filter 过滤器
      */
@@ -135,6 +158,9 @@ public class DescribeCallRecordRequest extends AbstractModel {
         if (source.SourceIPID != null) {
             this.SourceIPID = new Long(source.SourceIPID);
         }
+        if (source.AccUin != null) {
+            this.AccUin = new String(source.AccUin);
+        }
         if (source.Filter != null) {
             this.Filter = new Filter(source.Filter);
         }
@@ -148,6 +174,7 @@ public class DescribeCallRecordRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamSimple(map, prefix + "AccessKeyID", this.AccessKeyID);
         this.setParamSimple(map, prefix + "SourceIPID", this.SourceIPID);
+        this.setParamSimple(map, prefix + "AccUin", this.AccUin);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
 
     }

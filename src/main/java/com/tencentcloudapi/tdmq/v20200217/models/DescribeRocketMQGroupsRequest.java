@@ -66,7 +66,7 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
     private String FilterGroup;
 
     /**
-    * 按照指定字段排序，可选值为tps，accumulative
+    * 按照指定字段排序，可选值为 subscribeNum: 订阅 Topic 个数
     */
     @SerializedName("SortedBy")
     @Expose
@@ -190,16 +190,16 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 按照指定字段排序，可选值为tps，accumulative 
-     * @return SortedBy 按照指定字段排序，可选值为tps，accumulative
+     * Get 按照指定字段排序，可选值为 subscribeNum: 订阅 Topic 个数 
+     * @return SortedBy 按照指定字段排序，可选值为 subscribeNum: 订阅 Topic 个数
      */
     public String getSortedBy() {
         return this.SortedBy;
     }
 
     /**
-     * Set 按照指定字段排序，可选值为tps，accumulative
-     * @param SortedBy 按照指定字段排序，可选值为tps，accumulative
+     * Set 按照指定字段排序，可选值为 subscribeNum: 订阅 Topic 个数
+     * @param SortedBy 按照指定字段排序，可选值为 subscribeNum: 订阅 Topic 个数
      */
     public void setSortedBy(String SortedBy) {
         this.SortedBy = SortedBy;

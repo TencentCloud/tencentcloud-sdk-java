@@ -114,6 +114,27 @@ public class Volume extends AbstractModel {
     private String Status;
 
     /**
+    * turbo自动扩容策略
+    */
+    @SerializedName("AutoScaleUpRule")
+    @Expose
+    private VolumeAutoScaleUpRule AutoScaleUpRule;
+
+    /**
+    * turbo元数据属性
+    */
+    @SerializedName("MetaType")
+    @Expose
+    private String MetaType;
+
+    /**
+    * 可用区
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get 缓存卷ID。 
      * @return VolumeId 缓存卷ID。
      */
@@ -329,6 +350,54 @@ public class Volume extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get turbo自动扩容策略 
+     * @return AutoScaleUpRule turbo自动扩容策略
+     */
+    public VolumeAutoScaleUpRule getAutoScaleUpRule() {
+        return this.AutoScaleUpRule;
+    }
+
+    /**
+     * Set turbo自动扩容策略
+     * @param AutoScaleUpRule turbo自动扩容策略
+     */
+    public void setAutoScaleUpRule(VolumeAutoScaleUpRule AutoScaleUpRule) {
+        this.AutoScaleUpRule = AutoScaleUpRule;
+    }
+
+    /**
+     * Get turbo元数据属性 
+     * @return MetaType turbo元数据属性
+     */
+    public String getMetaType() {
+        return this.MetaType;
+    }
+
+    /**
+     * Set turbo元数据属性
+     * @param MetaType turbo元数据属性
+     */
+    public void setMetaType(String MetaType) {
+        this.MetaType = MetaType;
+    }
+
+    /**
+     * Get 可用区 
+     * @return Zone 可用区
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 可用区
+     * @param Zone 可用区
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public Volume() {
     }
 
@@ -373,6 +442,15 @@ public class Volume extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.AutoScaleUpRule != null) {
+            this.AutoScaleUpRule = new VolumeAutoScaleUpRule(source.AutoScaleUpRule);
+        }
+        if (source.MetaType != null) {
+            this.MetaType = new String(source.MetaType);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -392,6 +470,9 @@ public class Volume extends AbstractModel {
         this.setParamSimple(map, prefix + "DefaultMountPath", this.DefaultMountPath);
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "AutoScaleUpRule.", this.AutoScaleUpRule);
+        this.setParamSimple(map, prefix + "MetaType", this.MetaType);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

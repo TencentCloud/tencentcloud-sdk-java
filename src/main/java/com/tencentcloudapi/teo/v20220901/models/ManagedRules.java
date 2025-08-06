@@ -59,6 +59,13 @@ public class ManagedRules extends AbstractModel {
     private ManagedRuleGroup [] ManagedRuleGroups;
 
     /**
+    * 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+    */
+    @SerializedName("FrequentScanningProtection")
+    @Expose
+    private FrequentScanningProtection FrequentScanningProtection;
+
+    /**
      * Get 托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li> 
      * @return Enabled 托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li>
      */
@@ -138,6 +145,22 @@ public class ManagedRules extends AbstractModel {
         this.ManagedRuleGroups = ManagedRuleGroups;
     }
 
+    /**
+     * Get 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。 
+     * @return FrequentScanningProtection 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+     */
+    public FrequentScanningProtection getFrequentScanningProtection() {
+        return this.FrequentScanningProtection;
+    }
+
+    /**
+     * Set 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+     * @param FrequentScanningProtection 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+     */
+    public void setFrequentScanningProtection(FrequentScanningProtection FrequentScanningProtection) {
+        this.FrequentScanningProtection = FrequentScanningProtection;
+    }
+
     public ManagedRules() {
     }
 
@@ -164,6 +187,9 @@ public class ManagedRules extends AbstractModel {
                 this.ManagedRuleGroups[i] = new ManagedRuleGroup(source.ManagedRuleGroups[i]);
             }
         }
+        if (source.FrequentScanningProtection != null) {
+            this.FrequentScanningProtection = new FrequentScanningProtection(source.FrequentScanningProtection);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ManagedRules extends AbstractModel {
         this.setParamSimple(map, prefix + "SemanticAnalysis", this.SemanticAnalysis);
         this.setParamObj(map, prefix + "AutoUpdate.", this.AutoUpdate);
         this.setParamArrayObj(map, prefix + "ManagedRuleGroups.", this.ManagedRuleGroups);
+        this.setParamObj(map, prefix + "FrequentScanningProtection.", this.FrequentScanningProtection);
 
     }
 }

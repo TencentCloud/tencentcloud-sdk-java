@@ -51,6 +51,8 @@ public class DescribeJobMonitorDataRequest extends AbstractModel {
 - MemUsage：内存利用率，单位：%
 - LanOuttraffic：内网出带宽，单位：Bytes/s
 - LanIntraffic：内网入带宽，单位：Bytes/s
+- MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%
+- TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用
     */
     @SerializedName("MetricName")
     @Expose
@@ -69,6 +71,17 @@ public class DescribeJobMonitorDataRequest extends AbstractModel {
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
+
+    /**
+    * 查询指标的扩展参数；当前只支持TargetDiskUsage;
+
+- TargetDiskUsage
+    -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。
+    样例：[{"Name":"diskname", "Value":"vdb"}]
+    */
+    @SerializedName("Dimensions")
+    @Expose
+    private Dimension [] Dimensions;
 
     /**
      * Get 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909) 
@@ -124,13 +137,17 @@ public class DescribeJobMonitorDataRequest extends AbstractModel {
 - CpuUsage：cpu利用率，单位：%
 - MemUsage：内存利用率，单位：%
 - LanOuttraffic：内网出带宽，单位：Bytes/s
-- LanIntraffic：内网入带宽，单位：Bytes/s 
+- LanIntraffic：内网入带宽，单位：Bytes/s
+- MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%
+- TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用 
      * @return MetricName 支持查询的指标；当前支持查询的任务指标；
 
 - CpuUsage：cpu利用率，单位：%
 - MemUsage：内存利用率，单位：%
 - LanOuttraffic：内网出带宽，单位：Bytes/s
 - LanIntraffic：内网入带宽，单位：Bytes/s
+- MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%
+- TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用
      */
     public String getMetricName() {
         return this.MetricName;
@@ -143,12 +160,16 @@ public class DescribeJobMonitorDataRequest extends AbstractModel {
 - MemUsage：内存利用率，单位：%
 - LanOuttraffic：内网出带宽，单位：Bytes/s
 - LanIntraffic：内网入带宽，单位：Bytes/s
+- MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%
+- TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用
      * @param MetricName 支持查询的指标；当前支持查询的任务指标；
 
 - CpuUsage：cpu利用率，单位：%
 - MemUsage：内存利用率，单位：%
 - LanOuttraffic：内网出带宽，单位：Bytes/s
 - LanIntraffic：内网入带宽，单位：Bytes/s
+- MaxDiskUsage：所有磁盘中的使用率最高的磁盘使用率，单位：%
+- TargetDiskUsage：指定磁盘的使用率，单位：%；配合Dimensions参数使用
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
@@ -186,6 +207,38 @@ public class DescribeJobMonitorDataRequest extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 查询指标的扩展参数；当前只支持TargetDiskUsage;
+
+- TargetDiskUsage
+    -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。
+    样例：[{"Name":"diskname", "Value":"vdb"}] 
+     * @return Dimensions 查询指标的扩展参数；当前只支持TargetDiskUsage;
+
+- TargetDiskUsage
+    -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。
+    样例：[{"Name":"diskname", "Value":"vdb"}]
+     */
+    public Dimension [] getDimensions() {
+        return this.Dimensions;
+    }
+
+    /**
+     * Set 查询指标的扩展参数；当前只支持TargetDiskUsage;
+
+- TargetDiskUsage
+    -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。
+    样例：[{"Name":"diskname", "Value":"vdb"}]
+     * @param Dimensions 查询指标的扩展参数；当前只支持TargetDiskUsage;
+
+- TargetDiskUsage
+    -支持的查询维度diskname, 维度值为磁盘挂载名，例如vdb；如果不传此参数，默认查询vdb磁盘的使用率。
+    样例：[{"Name":"diskname", "Value":"vdb"}]
+     */
+    public void setDimensions(Dimension [] Dimensions) {
+        this.Dimensions = Dimensions;
+    }
+
     public DescribeJobMonitorDataRequest() {
     }
 
@@ -212,6 +265,12 @@ public class DescribeJobMonitorDataRequest extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.Dimensions != null) {
+            this.Dimensions = new Dimension[source.Dimensions.length];
+            for (int i = 0; i < source.Dimensions.length; i++) {
+                this.Dimensions[i] = new Dimension(source.Dimensions[i]);
+            }
+        }
     }
 
 
@@ -225,6 +284,7 @@ public class DescribeJobMonitorDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
 
     }
 }

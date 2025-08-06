@@ -100,6 +100,13 @@ public class CreateInstanceRequest extends AbstractModel {
     private String Project;
 
     /**
+    * 产品版本，0-标准版，1-容量增强版
+    */
+    @SerializedName("ProductType")
+    @Expose
+    private Long ProductType;
+
+    /**
     * 实例类型。
 - base：免费测试版。
 - single：单机版。
@@ -430,6 +437,22 @@ VPC或TCS
     @Deprecated
     public void setProject(String Project) {
         this.Project = Project;
+    }
+
+    /**
+     * Get 产品版本，0-标准版，1-容量增强版 
+     * @return ProductType 产品版本，0-标准版，1-容量增强版
+     */
+    public Long getProductType() {
+        return this.ProductType;
+    }
+
+    /**
+     * Set 产品版本，0-标准版，1-容量增强版
+     * @param ProductType 产品版本，0-标准版，1-容量增强版
+     */
+    public void setProductType(Long ProductType) {
+        this.ProductType = ProductType;
     }
 
     /**
@@ -876,6 +899,9 @@ VPC或TCS
         if (source.Project != null) {
             this.Project = new String(source.Project);
         }
+        if (source.ProductType != null) {
+            this.ProductType = new Long(source.ProductType);
+        }
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
@@ -956,6 +982,7 @@ VPC或TCS
         this.setParamSimple(map, prefix + "Params", this.Params);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Project", this.Project);
+        this.setParamSimple(map, prefix + "ProductType", this.ProductType);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);

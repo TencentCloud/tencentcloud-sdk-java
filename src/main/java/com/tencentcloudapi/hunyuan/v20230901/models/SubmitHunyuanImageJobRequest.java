@@ -78,7 +78,7 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
 
     /**
     * 用于引导内容的参考图。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png。
     */
     @SerializedName("ContentImage")
     @Expose
@@ -265,9 +265,9 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
 
     /**
      * Get 用于引导内容的参考图。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。 
+图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png。 
      * @return ContentImage 用于引导内容的参考图。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png。
      */
     public Image getContentImage() {
         return this.ContentImage;
@@ -275,9 +275,9 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
 
     /**
      * Set 用于引导内容的参考图。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png。
      * @param ContentImage 用于引导内容的参考图。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png。
      */
     public void setContentImage(Image ContentImage) {
         this.ContentImage = ContentImage;

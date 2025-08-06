@@ -66,6 +66,13 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     private Long ResetTimestamp;
 
     /**
+    * 重置的是否是retry topic
+    */
+    @SerializedName("RetryFlag")
+    @Expose
+    private Boolean RetryFlag;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -161,6 +168,22 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
         this.ResetTimestamp = ResetTimestamp;
     }
 
+    /**
+     * Get 重置的是否是retry topic 
+     * @return RetryFlag 重置的是否是retry topic
+     */
+    public Boolean getRetryFlag() {
+        return this.RetryFlag;
+    }
+
+    /**
+     * Set 重置的是否是retry topic
+     * @param RetryFlag 重置的是否是retry topic
+     */
+    public void setRetryFlag(Boolean RetryFlag) {
+        this.RetryFlag = RetryFlag;
+    }
+
     public ResetRocketMQConsumerOffSetRequest() {
     }
 
@@ -187,6 +210,9 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
         if (source.ResetTimestamp != null) {
             this.ResetTimestamp = new Long(source.ResetTimestamp);
         }
+        if (source.RetryFlag != null) {
+            this.RetryFlag = new Boolean(source.RetryFlag);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "ResetTimestamp", this.ResetTimestamp);
+        this.setParamSimple(map, prefix + "RetryFlag", this.RetryFlag);
 
     }
 }

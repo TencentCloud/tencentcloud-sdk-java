@@ -129,6 +129,20 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
     private Long IsDiskEncryptFlag;
 
     /**
+    * 是否安全限制部分功能，0-没有限制，1-有限制。限制的功能有：修改可用区、迁移变配、DTS数据迁移等
+    */
+    @SerializedName("IsSafetyLimited")
+    @Expose
+    private Long IsSafetyLimited;
+
+    /**
+    * 是否支持创建SA权限账号，0-不支持，1-支持
+    */
+    @SerializedName("IsSupportSA")
+    @Expose
+    private Long IsSupportSA;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -376,6 +390,38 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否安全限制部分功能，0-没有限制，1-有限制。限制的功能有：修改可用区、迁移变配、DTS数据迁移等 
+     * @return IsSafetyLimited 是否安全限制部分功能，0-没有限制，1-有限制。限制的功能有：修改可用区、迁移变配、DTS数据迁移等
+     */
+    public Long getIsSafetyLimited() {
+        return this.IsSafetyLimited;
+    }
+
+    /**
+     * Set 是否安全限制部分功能，0-没有限制，1-有限制。限制的功能有：修改可用区、迁移变配、DTS数据迁移等
+     * @param IsSafetyLimited 是否安全限制部分功能，0-没有限制，1-有限制。限制的功能有：修改可用区、迁移变配、DTS数据迁移等
+     */
+    public void setIsSafetyLimited(Long IsSafetyLimited) {
+        this.IsSafetyLimited = IsSafetyLimited;
+    }
+
+    /**
+     * Get 是否支持创建SA权限账号，0-不支持，1-支持 
+     * @return IsSupportSA 是否支持创建SA权限账号，0-不支持，1-支持
+     */
+    public Long getIsSupportSA() {
+        return this.IsSupportSA;
+    }
+
+    /**
+     * Set 是否支持创建SA权限账号，0-不支持，1-支持
+     * @param IsSupportSA 是否支持创建SA权限账号，0-不支持，1-支持
+     */
+    public void setIsSupportSA(Long IsSupportSA) {
+        this.IsSupportSA = IsSupportSA;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -450,6 +496,12 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
         if (source.IsDiskEncryptFlag != null) {
             this.IsDiskEncryptFlag = new Long(source.IsDiskEncryptFlag);
         }
+        if (source.IsSafetyLimited != null) {
+            this.IsSafetyLimited = new Long(source.IsSafetyLimited);
+        }
+        if (source.IsSupportSA != null) {
+            this.IsSupportSA = new Long(source.IsSupportSA);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -475,6 +527,8 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "XEventStatus", this.XEventStatus);
         this.setParamArrayObj(map, prefix + "MultiDrReadableInfo.", this.MultiDrReadableInfo);
         this.setParamSimple(map, prefix + "IsDiskEncryptFlag", this.IsDiskEncryptFlag);
+        this.setParamSimple(map, prefix + "IsSafetyLimited", this.IsSafetyLimited);
+        this.setParamSimple(map, prefix + "IsSupportSA", this.IsSupportSA);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

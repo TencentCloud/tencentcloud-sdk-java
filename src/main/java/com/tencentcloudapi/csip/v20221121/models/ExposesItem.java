@@ -227,6 +227,27 @@ public class ExposesItem extends AbstractModel {
     private String AppIdStr;
 
     /**
+    * 记录ID
+    */
+    @SerializedName("ExposureID")
+    @Expose
+    private Long ExposureID;
+
+    /**
+    * 端口开放数量
+    */
+    @SerializedName("PortDetectCount")
+    @Expose
+    private Long PortDetectCount;
+
+    /**
+    * 端口开放结果
+    */
+    @SerializedName("PortDetectResult")
+    @Expose
+    private String PortDetectResult;
+
+    /**
      * Get 云厂商 
      * @return Provider 云厂商
      */
@@ -690,6 +711,54 @@ public class ExposesItem extends AbstractModel {
         this.AppIdStr = AppIdStr;
     }
 
+    /**
+     * Get 记录ID 
+     * @return ExposureID 记录ID
+     */
+    public Long getExposureID() {
+        return this.ExposureID;
+    }
+
+    /**
+     * Set 记录ID
+     * @param ExposureID 记录ID
+     */
+    public void setExposureID(Long ExposureID) {
+        this.ExposureID = ExposureID;
+    }
+
+    /**
+     * Get 端口开放数量 
+     * @return PortDetectCount 端口开放数量
+     */
+    public Long getPortDetectCount() {
+        return this.PortDetectCount;
+    }
+
+    /**
+     * Set 端口开放数量
+     * @param PortDetectCount 端口开放数量
+     */
+    public void setPortDetectCount(Long PortDetectCount) {
+        this.PortDetectCount = PortDetectCount;
+    }
+
+    /**
+     * Get 端口开放结果 
+     * @return PortDetectResult 端口开放结果
+     */
+    public String getPortDetectResult() {
+        return this.PortDetectResult;
+    }
+
+    /**
+     * Set 端口开放结果
+     * @param PortDetectResult 端口开放结果
+     */
+    public void setPortDetectResult(String PortDetectResult) {
+        this.PortDetectResult = PortDetectResult;
+    }
+
     public ExposesItem() {
     }
 
@@ -785,6 +854,15 @@ public class ExposesItem extends AbstractModel {
         if (source.AppIdStr != null) {
             this.AppIdStr = new String(source.AppIdStr);
         }
+        if (source.ExposureID != null) {
+            this.ExposureID = new Long(source.ExposureID);
+        }
+        if (source.PortDetectCount != null) {
+            this.PortDetectCount = new Long(source.PortDetectCount);
+        }
+        if (source.PortDetectResult != null) {
+            this.PortDetectResult = new String(source.PortDetectResult);
+        }
     }
 
 
@@ -821,6 +899,9 @@ public class ExposesItem extends AbstractModel {
         this.setParamSimple(map, prefix + "HasScan", this.HasScan);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "AppIdStr", this.AppIdStr);
+        this.setParamSimple(map, prefix + "ExposureID", this.ExposureID);
+        this.setParamSimple(map, prefix + "PortDetectCount", this.PortDetectCount);
+        this.setParamSimple(map, prefix + "PortDetectResult", this.PortDetectResult);
 
     }
 }

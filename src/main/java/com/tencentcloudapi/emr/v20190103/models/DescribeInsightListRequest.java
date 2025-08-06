@@ -66,6 +66,13 @@ public class DescribeInsightListRequest extends AbstractModel {
     private String Type;
 
     /**
+    * 是否包含具体参数建议等信息
+    */
+    @SerializedName("MustHasContext")
+    @Expose
+    private Boolean MustHasContext;
+
+    /**
      * Get 集群ID 
      * @return InstanceId 集群ID
      */
@@ -161,6 +168,22 @@ public class DescribeInsightListRequest extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get 是否包含具体参数建议等信息 
+     * @return MustHasContext 是否包含具体参数建议等信息
+     */
+    public Boolean getMustHasContext() {
+        return this.MustHasContext;
+    }
+
+    /**
+     * Set 是否包含具体参数建议等信息
+     * @param MustHasContext 是否包含具体参数建议等信息
+     */
+    public void setMustHasContext(Boolean MustHasContext) {
+        this.MustHasContext = MustHasContext;
+    }
+
     public DescribeInsightListRequest() {
     }
 
@@ -187,6 +210,9 @@ public class DescribeInsightListRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.MustHasContext != null) {
+            this.MustHasContext = new Boolean(source.MustHasContext);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DescribeInsightListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "MustHasContext", this.MustHasContext);
 
     }
 }

@@ -336,6 +336,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *云资源配置风险规则列表示例
+     * @param req DescribeConfigCheckRulesRequest
+     * @return DescribeConfigCheckRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigCheckRulesResponse DescribeConfigCheckRules(DescribeConfigCheckRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConfigCheckRules", DescribeConfigCheckRulesResponse.class);
+    }
+
+    /**
      *db资产详情
      * @param req DescribeDbAssetInfoRequest
      * @return DescribeDbAssetInfoResponse

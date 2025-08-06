@@ -76,7 +76,7 @@ public class CreateListenerRequest extends AbstractModel {
     private Long SessionExpireTime;
 
     /**
-    * 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+    * 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）
 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
     */
     @SerializedName("Scheduler")
@@ -326,9 +326,9 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+     * Get 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）
 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。 
-     * @return Scheduler 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+     * @return Scheduler 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）
 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public String getScheduler() {
@@ -336,9 +336,9 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Set 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+     * Set 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）
 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
-     * @param Scheduler 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+     * @param Scheduler 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）
 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public void setScheduler(String Scheduler) {

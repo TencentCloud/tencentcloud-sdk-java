@@ -72,6 +72,20 @@ public class CreateVolumeRequest extends AbstractModel {
     private Long Capacity;
 
     /**
+    * 是否开启默认扩容，仅turbo类型文件存储支持
+    */
+    @SerializedName("EnableAutoScaleUp")
+    @Expose
+    private Boolean EnableAutoScaleUp;
+
+    /**
+    * turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+    */
+    @SerializedName("MetaType")
+    @Expose
+    private String MetaType;
+
+    /**
      * Get 环境ID。 
      * @return EnvironmentId 环境ID。
      */
@@ -191,6 +205,38 @@ public class CreateVolumeRequest extends AbstractModel {
         this.Capacity = Capacity;
     }
 
+    /**
+     * Get 是否开启默认扩容，仅turbo类型文件存储支持 
+     * @return EnableAutoScaleUp 是否开启默认扩容，仅turbo类型文件存储支持
+     */
+    public Boolean getEnableAutoScaleUp() {
+        return this.EnableAutoScaleUp;
+    }
+
+    /**
+     * Set 是否开启默认扩容，仅turbo类型文件存储支持
+     * @param EnableAutoScaleUp 是否开启默认扩容，仅turbo类型文件存储支持
+     */
+    public void setEnableAutoScaleUp(Boolean EnableAutoScaleUp) {
+        this.EnableAutoScaleUp = EnableAutoScaleUp;
+    }
+
+    /**
+     * Get turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据 
+     * @return MetaType turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+     */
+    public String getMetaType() {
+        return this.MetaType;
+    }
+
+    /**
+     * Set turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+     * @param MetaType turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+     */
+    public void setMetaType(String MetaType) {
+        this.MetaType = MetaType;
+    }
+
     public CreateVolumeRequest() {
     }
 
@@ -217,6 +263,12 @@ public class CreateVolumeRequest extends AbstractModel {
         if (source.Capacity != null) {
             this.Capacity = new Long(source.Capacity);
         }
+        if (source.EnableAutoScaleUp != null) {
+            this.EnableAutoScaleUp = new Boolean(source.EnableAutoScaleUp);
+        }
+        if (source.MetaType != null) {
+            this.MetaType = new String(source.MetaType);
+        }
     }
 
 
@@ -230,6 +282,8 @@ public class CreateVolumeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Spec", this.Spec);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Capacity", this.Capacity);
+        this.setParamSimple(map, prefix + "EnableAutoScaleUp", this.EnableAutoScaleUp);
+        this.setParamSimple(map, prefix + "MetaType", this.MetaType);
 
     }
 }

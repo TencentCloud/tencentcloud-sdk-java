@@ -53,6 +53,13 @@ public class CreateInstanceRequest extends AbstractModel {
     private String SkuCode;
 
     /**
+    * 集群绑定的VPC信息
+    */
+    @SerializedName("VpcList")
+    @Expose
+    private VpcInfo [] VpcList;
+
+    /**
     * 备注信息
     */
     @SerializedName("Remark")
@@ -65,13 +72,6 @@ public class CreateInstanceRequest extends AbstractModel {
     @SerializedName("TagList")
     @Expose
     private Tag [] TagList;
-
-    /**
-    * 集群绑定的VPC信息，必填
-    */
-    @SerializedName("VpcList")
-    @Expose
-    private VpcInfo [] VpcList;
 
     /**
     * 是否开启公网，默认值为false表示不开启
@@ -231,6 +231,22 @@ public class CreateInstanceRequest extends AbstractModel {
     }
 
     /**
+     * Get 集群绑定的VPC信息 
+     * @return VpcList 集群绑定的VPC信息
+     */
+    public VpcInfo [] getVpcList() {
+        return this.VpcList;
+    }
+
+    /**
+     * Set 集群绑定的VPC信息
+     * @param VpcList 集群绑定的VPC信息
+     */
+    public void setVpcList(VpcInfo [] VpcList) {
+        this.VpcList = VpcList;
+    }
+
+    /**
      * Get 备注信息 
      * @return Remark 备注信息
      */
@@ -260,22 +276,6 @@ public class CreateInstanceRequest extends AbstractModel {
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;
-    }
-
-    /**
-     * Get 集群绑定的VPC信息，必填 
-     * @return VpcList 集群绑定的VPC信息，必填
-     */
-    public VpcInfo [] getVpcList() {
-        return this.VpcList;
-    }
-
-    /**
-     * Set 集群绑定的VPC信息，必填
-     * @param VpcList 集群绑定的VPC信息，必填
-     */
-    public void setVpcList(VpcInfo [] VpcList) {
-        this.VpcList = VpcList;
     }
 
     /**
@@ -483,6 +483,12 @@ public class CreateInstanceRequest extends AbstractModel {
         if (source.SkuCode != null) {
             this.SkuCode = new String(source.SkuCode);
         }
+        if (source.VpcList != null) {
+            this.VpcList = new VpcInfo[source.VpcList.length];
+            for (int i = 0; i < source.VpcList.length; i++) {
+                this.VpcList[i] = new VpcInfo(source.VpcList[i]);
+            }
+        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
@@ -490,12 +496,6 @@ public class CreateInstanceRequest extends AbstractModel {
             this.TagList = new Tag[source.TagList.length];
             for (int i = 0; i < source.TagList.length; i++) {
                 this.TagList[i] = new Tag(source.TagList[i]);
-            }
-        }
-        if (source.VpcList != null) {
-            this.VpcList = new VpcInfo[source.VpcList.length];
-            for (int i = 0; i < source.VpcList.length; i++) {
-                this.VpcList[i] = new VpcInfo(source.VpcList[i]);
             }
         }
         if (source.EnablePublic != null) {
@@ -544,9 +544,9 @@ public class CreateInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "SkuCode", this.SkuCode);
+        this.setParamArrayObj(map, prefix + "VpcList.", this.VpcList);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
-        this.setParamArrayObj(map, prefix + "VpcList.", this.VpcList);
         this.setParamSimple(map, prefix + "EnablePublic", this.EnablePublic);
         this.setParamSimple(map, prefix + "BillingFlow", this.BillingFlow);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
