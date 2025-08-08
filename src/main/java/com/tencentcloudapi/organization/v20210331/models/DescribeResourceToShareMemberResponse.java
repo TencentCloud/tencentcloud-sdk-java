@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.privatedns.v20201028.models;
+package com.tencentcloudapi.organization.v20210331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,23 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePrivateZoneResponse extends AbstractModel {
+public class DescribeResourceToShareMemberResponse extends AbstractModel {
 
     /**
-    * 私有域ID, zone-12sa5ce78
+    * 总数
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ZoneId")
+    @SerializedName("Total")
     @Expose
-    private String ZoneId;
+    private Long Total;
 
     /**
-    * 私有域名
+    * 详情
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Domain")
+    @SerializedName("Items")
     @Expose
-    private String Domain;
+    private ShareResourceToMember [] Items;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +47,43 @@ public class CreatePrivateZoneResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 私有域ID, zone-12sa5ce78 
-     * @return ZoneId 私有域ID, zone-12sa5ce78
+     * Get 总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Total 总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getZoneId() {
-        return this.ZoneId;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 私有域ID, zone-12sa5ce78
-     * @param ZoneId 私有域ID, zone-12sa5ce78
+     * Set 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Total 总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setZoneId(String ZoneId) {
-        this.ZoneId = ZoneId;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
-     * Get 私有域名 
-     * @return Domain 私有域名
+     * Get 详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Items 详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getDomain() {
-        return this.Domain;
+    public ShareResourceToMember [] getItems() {
+        return this.Items;
     }
 
     /**
-     * Set 私有域名
-     * @param Domain 私有域名
+     * Set 详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Items 详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
+    public void setItems(ShareResourceToMember [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -92,19 +102,22 @@ public class CreatePrivateZoneResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreatePrivateZoneResponse() {
+    public DescribeResourceToShareMemberResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreatePrivateZoneResponse(CreatePrivateZoneResponse source) {
-        if (source.ZoneId != null) {
-            this.ZoneId = new String(source.ZoneId);
+    public DescribeResourceToShareMemberResponse(DescribeResourceToShareMemberResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
+        if (source.Items != null) {
+            this.Items = new ShareResourceToMember[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new ShareResourceToMember(source.Items[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +129,8 @@ public class CreatePrivateZoneResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

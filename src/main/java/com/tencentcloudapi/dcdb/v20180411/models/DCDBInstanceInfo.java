@@ -374,6 +374,13 @@ public class DCDBInstanceInfo extends AbstractModel {
     private String DbVersionId;
 
     /**
+    * 实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
+    */
+    @SerializedName("ProtectedProperty")
+    @Expose
+    private Long ProtectedProperty;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1173,6 +1180,22 @@ public class DCDBInstanceInfo extends AbstractModel {
         this.DbVersionId = DbVersionId;
     }
 
+    /**
+     * Get 实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护 
+     * @return ProtectedProperty 实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
+     */
+    public Long getProtectedProperty() {
+        return this.ProtectedProperty;
+    }
+
+    /**
+     * Set 实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
+     * @param ProtectedProperty 实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
+     */
+    public void setProtectedProperty(Long ProtectedProperty) {
+        this.ProtectedProperty = ProtectedProperty;
+    }
+
     public DCDBInstanceInfo() {
     }
 
@@ -1337,6 +1360,9 @@ public class DCDBInstanceInfo extends AbstractModel {
         if (source.DbVersionId != null) {
             this.DbVersionId = new String(source.DbVersionId);
         }
+        if (source.ProtectedProperty != null) {
+            this.ProtectedProperty = new Long(source.ProtectedProperty);
+        }
     }
 
 
@@ -1394,6 +1420,7 @@ public class DCDBInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
+        this.setParamSimple(map, prefix + "ProtectedProperty", this.ProtectedProperty);
 
     }
 }

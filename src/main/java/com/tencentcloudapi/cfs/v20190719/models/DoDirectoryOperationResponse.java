@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.privatedns.v20201028.models;
+package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePrivateZoneResponse extends AbstractModel {
+public class DoDirectoryOperationResponse extends AbstractModel {
 
     /**
-    * 私有域ID, zone-12sa5ce78
+    * 1:成功  0:失败  创建目录的操作，1表示创建成功，0表示创建失败。  确认目录是否存在的操作，1表示目录存在，0表示目录不存在。  说明：创建目录操作若目录已存在，也会返回创建成功。
     */
-    @SerializedName("ZoneId")
+    @SerializedName("Result")
     @Expose
-    private String ZoneId;
-
-    /**
-    * 私有域名
-    */
-    @SerializedName("Domain")
-    @Expose
-    private String Domain;
+    private Long Result;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class CreatePrivateZoneResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 私有域ID, zone-12sa5ce78 
-     * @return ZoneId 私有域ID, zone-12sa5ce78
+     * Get 1:成功  0:失败  创建目录的操作，1表示创建成功，0表示创建失败。  确认目录是否存在的操作，1表示目录存在，0表示目录不存在。  说明：创建目录操作若目录已存在，也会返回创建成功。 
+     * @return Result 1:成功  0:失败  创建目录的操作，1表示创建成功，0表示创建失败。  确认目录是否存在的操作，1表示目录存在，0表示目录不存在。  说明：创建目录操作若目录已存在，也会返回创建成功。
      */
-    public String getZoneId() {
-        return this.ZoneId;
+    public Long getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 私有域ID, zone-12sa5ce78
-     * @param ZoneId 私有域ID, zone-12sa5ce78
+     * Set 1:成功  0:失败  创建目录的操作，1表示创建成功，0表示创建失败。  确认目录是否存在的操作，1表示目录存在，0表示目录不存在。  说明：创建目录操作若目录已存在，也会返回创建成功。
+     * @param Result 1:成功  0:失败  创建目录的操作，1表示创建成功，0表示创建失败。  确认目录是否存在的操作，1表示目录存在，0表示目录不存在。  说明：创建目录操作若目录已存在，也会返回创建成功。
      */
-    public void setZoneId(String ZoneId) {
-        this.ZoneId = ZoneId;
-    }
-
-    /**
-     * Get 私有域名 
-     * @return Domain 私有域名
-     */
-    public String getDomain() {
-        return this.Domain;
-    }
-
-    /**
-     * Set 私有域名
-     * @param Domain 私有域名
-     */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
+    public void setResult(Long Result) {
+        this.Result = Result;
     }
 
     /**
@@ -92,19 +69,16 @@ public class CreatePrivateZoneResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreatePrivateZoneResponse() {
+    public DoDirectoryOperationResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreatePrivateZoneResponse(CreatePrivateZoneResponse source) {
-        if (source.ZoneId != null) {
-            this.ZoneId = new String(source.ZoneId);
-        }
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
+    public DoDirectoryOperationResponse(DoDirectoryOperationResponse source) {
+        if (source.Result != null) {
+            this.Result = new Long(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +90,7 @@ public class CreatePrivateZoneResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

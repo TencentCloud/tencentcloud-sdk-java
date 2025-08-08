@@ -453,6 +453,13 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private String CpuType;
 
     /**
+    * 删除保护标记，1: 已开启删除保护，0: 未开启删除保护
+    */
+    @SerializedName("ProtectedProperty")
+    @Expose
+    private Long ProtectedProperty;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1444,6 +1451,22 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 删除保护标记，1: 已开启删除保护，0: 未开启删除保护 
+     * @return ProtectedProperty 删除保护标记，1: 已开启删除保护，0: 未开启删除保护
+     */
+    public Long getProtectedProperty() {
+        return this.ProtectedProperty;
+    }
+
+    /**
+     * Set 删除保护标记，1: 已开启删除保护，0: 未开启删除保护
+     * @param ProtectedProperty 删除保护标记，1: 已开启删除保护，0: 未开启删除保护
+     */
+    public void setProtectedProperty(Long ProtectedProperty) {
+        this.ProtectedProperty = ProtectedProperty;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1662,6 +1685,9 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         if (source.CpuType != null) {
             this.CpuType = new String(source.CpuType);
         }
+        if (source.ProtectedProperty != null) {
+            this.ProtectedProperty = new Long(source.ProtectedProperty);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1733,6 +1759,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDcnSwitchSupported", this.IsDcnSwitchSupported);
         this.setParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
         this.setParamSimple(map, prefix + "CpuType", this.CpuType);
+        this.setParamSimple(map, prefix + "ProtectedProperty", this.ProtectedProperty);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

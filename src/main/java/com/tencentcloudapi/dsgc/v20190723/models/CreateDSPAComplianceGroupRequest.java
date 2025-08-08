@@ -59,7 +59,7 @@ public class CreateDSPAComplianceGroupRequest extends AbstractModel {
     private Long LevelGroupId;
 
     /**
-    * 1代表模版开启，0代表模版关闭
+    * 1代表模板开启，0代表模板关闭
     */
     @SerializedName("Status")
     @Expose
@@ -153,16 +153,16 @@ public class CreateDSPAComplianceGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 1代表模版开启，0代表模版关闭 
-     * @return Status 1代表模版开启，0代表模版关闭
+     * Get 1代表模板开启，0代表模板关闭 
+     * @return Status 1代表模板开启，0代表模板关闭
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 1代表模版开启，0代表模版关闭
-     * @param Status 1代表模版开启，0代表模版关闭
+     * Set 1代表模板开启，0代表模板关闭
+     * @param Status 1代表模板开启，0代表模板关闭
      */
     public void setStatus(Long Status) {
         this.Status = Status;

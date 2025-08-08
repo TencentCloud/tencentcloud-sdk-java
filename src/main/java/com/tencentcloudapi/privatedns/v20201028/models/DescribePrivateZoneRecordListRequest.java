@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePrivateZoneRecordListRequest extends AbstractModel {
 
     /**
-    * 私有域ID: zone-xxxxxx
+    * 私有域ID: zone-12c5a6e8
     */
     @SerializedName("ZoneId")
     @Expose
@@ -52,16 +52,16 @@ public class DescribePrivateZoneRecordListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 私有域ID: zone-xxxxxx 
-     * @return ZoneId 私有域ID: zone-xxxxxx
+     * Get 私有域ID: zone-12c5a6e8 
+     * @return ZoneId 私有域ID: zone-12c5a6e8
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 私有域ID: zone-xxxxxx
-     * @param ZoneId 私有域ID: zone-xxxxxx
+     * Set 私有域ID: zone-12c5a6e8
+     * @param ZoneId 私有域ID: zone-12c5a6e8
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

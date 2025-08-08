@@ -66,7 +66,7 @@ public class DescribeDSPAComplianceGroupsRequest extends AbstractModel {
     private Long [] ComplianceGroupTypeList;
 
     /**
-    * 是否仅显示已开启模版
+    * 是否仅显示已开启模板
     */
     @SerializedName("IsFilterCloseComplianceGroup")
     @Expose
@@ -169,16 +169,16 @@ public class DescribeDSPAComplianceGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否仅显示已开启模版 
-     * @return IsFilterCloseComplianceGroup 是否仅显示已开启模版
+     * Get 是否仅显示已开启模板 
+     * @return IsFilterCloseComplianceGroup 是否仅显示已开启模板
      */
     public Boolean getIsFilterCloseComplianceGroup() {
         return this.IsFilterCloseComplianceGroup;
     }
 
     /**
-     * Set 是否仅显示已开启模版
-     * @param IsFilterCloseComplianceGroup 是否仅显示已开启模版
+     * Set 是否仅显示已开启模板
+     * @param IsFilterCloseComplianceGroup 是否仅显示已开启模板
      */
     public void setIsFilterCloseComplianceGroup(Boolean IsFilterCloseComplianceGroup) {
         this.IsFilterCloseComplianceGroup = IsFilterCloseComplianceGroup;

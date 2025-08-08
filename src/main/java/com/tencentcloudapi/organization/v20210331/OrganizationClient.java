@@ -732,6 +732,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *获取与我共享的资源列表。
+     * @param req DescribeResourceToShareMemberRequest
+     * @return DescribeResourceToShareMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceToShareMemberResponse DescribeResourceToShareMember(DescribeResourceToShareMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceToShareMember", DescribeResourceToShareMemberResponse.class);
+    }
+
+    /**
      *获取可共享地域列表
      * @param req DescribeShareAreasRequest
      * @return DescribeShareAreasResponse

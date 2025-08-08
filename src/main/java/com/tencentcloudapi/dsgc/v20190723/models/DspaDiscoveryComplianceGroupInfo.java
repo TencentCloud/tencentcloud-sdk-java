@@ -80,14 +80,14 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
     private Boolean IsAlias;
 
     /**
-    * 1代表模版开启，0代表模版关闭
+    * 1代表模板开启，0代表模板关闭
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 模版最后修改时间
+    * 模板最后修改时间
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -222,32 +222,32 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 1代表模版开启，0代表模版关闭 
-     * @return Status 1代表模版开启，0代表模版关闭
+     * Get 1代表模板开启，0代表模板关闭 
+     * @return Status 1代表模板开启，0代表模板关闭
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 1代表模版开启，0代表模版关闭
-     * @param Status 1代表模版开启，0代表模版关闭
+     * Set 1代表模板开启，0代表模板关闭
+     * @param Status 1代表模板开启，0代表模板关闭
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 模版最后修改时间 
-     * @return ModifyTime 模版最后修改时间
+     * Get 模板最后修改时间 
+     * @return ModifyTime 模板最后修改时间
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 模版最后修改时间
-     * @param ModifyTime 模版最后修改时间
+     * Set 模板最后修改时间
+     * @param ModifyTime 模板最后修改时间
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;

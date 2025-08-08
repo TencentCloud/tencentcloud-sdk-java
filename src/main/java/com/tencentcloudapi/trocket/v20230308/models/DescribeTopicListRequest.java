@@ -52,6 +52,13 @@ public class DescribeTopicListRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 按照消费组查询订阅的主题
+    */
+    @SerializedName("FromGroup")
+    @Expose
+    private String FromGroup;
+
+    /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
      * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
@@ -115,6 +122,22 @@ public class DescribeTopicListRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 按照消费组查询订阅的主题 
+     * @return FromGroup 按照消费组查询订阅的主题
+     */
+    public String getFromGroup() {
+        return this.FromGroup;
+    }
+
+    /**
+     * Set 按照消费组查询订阅的主题
+     * @param FromGroup 按照消费组查询订阅的主题
+     */
+    public void setFromGroup(String FromGroup) {
+        this.FromGroup = FromGroup;
+    }
+
     public DescribeTopicListRequest() {
     }
 
@@ -138,6 +161,9 @@ public class DescribeTopicListRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.FromGroup != null) {
+            this.FromGroup = new String(source.FromGroup);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class DescribeTopicListRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "FromGroup", this.FromGroup);
 
     }
 }

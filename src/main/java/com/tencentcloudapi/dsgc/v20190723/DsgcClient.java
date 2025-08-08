@@ -674,7 +674,7 @@ public class DsgcClient extends AbstractClient{
     }
 
     /**
-     *获取DSPA评估模版关联的评估控制项列表
+     *获取DSPA评估模板关联的评估控制项列表
      * @param req DescribeDSPAAssessmentTemplateControlItemsRequest
      * @return DescribeDSPAAssessmentTemplateControlItemsResponse
      * @throws TencentCloudSDKException

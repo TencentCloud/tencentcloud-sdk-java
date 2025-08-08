@@ -481,6 +481,17 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *文件系统目录操作接口
+     * @param req DoDirectoryOperationRequest
+     * @return DoDirectoryOperationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DoDirectoryOperationResponse DoDirectoryOperation(DoDirectoryOperationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DoDirectoryOperation", DoDirectoryOperationResponse.class);
+    }
+
+    /**
      *修改数据流动相关参数
      * @param req ModifyDataFlowRequest
      * @return ModifyDataFlowResponse

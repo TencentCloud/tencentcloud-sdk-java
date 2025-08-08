@@ -122,7 +122,7 @@ public class ReportInfo extends AbstractModel {
     private Long ProgressPercent;
 
     /**
-    * 报告模版名称
+    * 报告模板名称
     */
     @SerializedName("ReportTemplateName")
     @Expose
@@ -353,16 +353,16 @@ public class ReportInfo extends AbstractModel {
     }
 
     /**
-     * Get 报告模版名称 
-     * @return ReportTemplateName 报告模版名称
+     * Get 报告模板名称 
+     * @return ReportTemplateName 报告模板名称
      */
     public String getReportTemplateName() {
         return this.ReportTemplateName;
     }
 
     /**
-     * Set 报告模版名称
-     * @param ReportTemplateName 报告模版名称
+     * Set 报告模板名称
+     * @param ReportTemplateName 报告模板名称
      */
     public void setReportTemplateName(String ReportTemplateName) {
         this.ReportTemplateName = ReportTemplateName;

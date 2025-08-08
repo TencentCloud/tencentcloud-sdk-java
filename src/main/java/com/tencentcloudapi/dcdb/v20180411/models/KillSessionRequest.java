@@ -52,6 +52,13 @@ public class KillSessionRequest extends AbstractModel {
     private String ShardSerialId;
 
     /**
+    * 节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
+    */
+    @SerializedName("NodeId")
+    @Expose
+    private String NodeId;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -115,6 +122,22 @@ public class KillSessionRequest extends AbstractModel {
         this.ShardSerialId = ShardSerialId;
     }
 
+    /**
+     * Get 节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。 
+     * @return NodeId 节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
+     */
+    public String getNodeId() {
+        return this.NodeId;
+    }
+
+    /**
+     * Set 节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
+     * @param NodeId 节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
+     */
+    public void setNodeId(String NodeId) {
+        this.NodeId = NodeId;
+    }
+
     public KillSessionRequest() {
     }
 
@@ -138,6 +161,9 @@ public class KillSessionRequest extends AbstractModel {
         if (source.ShardSerialId != null) {
             this.ShardSerialId = new String(source.ShardSerialId);
         }
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class KillSessionRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SessionId.", this.SessionId);
         this.setParamSimple(map, prefix + "ShardId", this.ShardId);
         this.setParamSimple(map, prefix + "ShardSerialId", this.ShardSerialId);
+        this.setParamSimple(map, prefix + "NodeId", this.NodeId);
 
     }
 }

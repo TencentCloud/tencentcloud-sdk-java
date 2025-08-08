@@ -328,6 +328,13 @@ public class TaskResponseInfo extends AbstractModel {
     private String ResourceGroupName;
 
     /**
+    * 任务执行耗时
+    */
+    @SerializedName("JobTimeSum")
+    @Expose
+    private Long JobTimeSum;
+
+    /**
      * Get 任务所属Database的名称。 
      * @return DatabaseName 任务所属Database的名称。
      */
@@ -1027,6 +1034,22 @@ public class TaskResponseInfo extends AbstractModel {
         this.ResourceGroupName = ResourceGroupName;
     }
 
+    /**
+     * Get 任务执行耗时 
+     * @return JobTimeSum 任务执行耗时
+     */
+    public Long getJobTimeSum() {
+        return this.JobTimeSum;
+    }
+
+    /**
+     * Set 任务执行耗时
+     * @param JobTimeSum 任务执行耗时
+     */
+    public void setJobTimeSum(Long JobTimeSum) {
+        this.JobTimeSum = JobTimeSum;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -1164,6 +1187,9 @@ public class TaskResponseInfo extends AbstractModel {
         if (source.ResourceGroupName != null) {
             this.ResourceGroupName = new String(source.ResourceGroupName);
         }
+        if (source.JobTimeSum != null) {
+            this.JobTimeSum = new Long(source.JobTimeSum);
+        }
     }
 
 
@@ -1214,6 +1240,7 @@ public class TaskResponseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
         this.setParamSimple(map, prefix + "EngineTypeDetail", this.EngineTypeDetail);
         this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+        this.setParamSimple(map, prefix + "JobTimeSum", this.JobTimeSum);
 
     }
 }
