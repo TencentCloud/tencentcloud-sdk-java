@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class UploadLogRequest extends AbstractModel {
 
     /**
-    * 主题id
+    * 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
@@ -38,23 +39,29 @@ public class UploadLogRequest extends AbstractModel {
     private String HashKey;
 
     /**
-    * 压缩方法
+    * 压缩方法，目前支持
+- lz4
+- zstd
     */
     @SerializedName("CompressType")
     @Expose
     private String CompressType;
 
     /**
-     * Get 主题id 
-     * @return TopicId 主题id
+     * Get 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
+     * @return TopicId 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 主题id
-     * @param TopicId 主题id
+     * Set 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param TopicId 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -81,16 +88,24 @@ public class UploadLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 压缩方法 
-     * @return CompressType 压缩方法
+     * Get 压缩方法，目前支持
+- lz4
+- zstd 
+     * @return CompressType 压缩方法，目前支持
+- lz4
+- zstd
      */
     public String getCompressType() {
         return this.CompressType;
     }
 
     /**
-     * Set 压缩方法
-     * @param CompressType 压缩方法
+     * Set 压缩方法，目前支持
+- lz4
+- zstd
+     * @param CompressType 压缩方法，目前支持
+- lz4
+- zstd
      */
     public void setCompressType(String CompressType) {
         this.CompressType = CompressType;

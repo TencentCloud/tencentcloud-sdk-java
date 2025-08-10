@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class DeleteKafkaRechargeRequest extends AbstractModel {
 
     /**
-    * Kafka导入配置ID
+    * Kafka导入配置Id。
+
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 导入CLS目标topic ID
+    * 导入CLS目标日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-     * Get Kafka导入配置ID 
-     * @return Id Kafka导入配置ID
+     * Get Kafka导入配置Id。
+
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。 
+     * @return Id Kafka导入配置Id。
+
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Kafka导入配置ID
-     * @param Id Kafka导入配置ID
+     * Set Kafka导入配置Id。
+
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+     * @param Id Kafka导入配置Id。
+
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 导入CLS目标topic ID 
-     * @return TopicId 导入CLS目标topic ID
+     * Get 导入CLS目标日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
+     * @return TopicId 导入CLS目标日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 导入CLS目标topic ID
-     * @param TopicId 导入CLS目标topic ID
+     * Set 导入CLS目标日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param TopicId 导入CLS目标日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

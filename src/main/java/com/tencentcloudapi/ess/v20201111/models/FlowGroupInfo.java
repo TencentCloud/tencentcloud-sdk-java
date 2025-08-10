@@ -41,7 +41,7 @@ public class FlowGroupInfo extends AbstractModel {
 
     /**
     * 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注：此字段定义为数组，但仅支持单个文件
     */
     @SerializedName("FileIds")
     @Expose
@@ -188,9 +188,9 @@ false：有序签
 
     /**
      * Get 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。 
+注：此字段定义为数组，但仅支持单个文件 
      * @return FileIds 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注：此字段定义为数组，但仅支持单个文件
      */
     public String [] getFileIds() {
         return this.FileIds;
@@ -198,9 +198,9 @@ false：有序签
 
     /**
      * Set 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注：此字段定义为数组，但仅支持单个文件
      * @param FileIds 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注：此字段定义为数组，但仅支持单个文件
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;

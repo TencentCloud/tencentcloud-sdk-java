@@ -33,6 +33,8 @@ public class CheckRechargeKafkaServerRequest extends AbstractModel {
     /**
     * 腾讯云CKafka实例ID。
 KafkaType为0时，KafkaInstance必填
+
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
     */
     @SerializedName("KafkaInstance")
     @Expose
@@ -78,9 +80,13 @@ KafkaType为1时，ServerAddr必填
 
     /**
      * Get 腾讯云CKafka实例ID。
-KafkaType为0时，KafkaInstance必填 
+KafkaType为0时，KafkaInstance必填
+
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。 
      * @return KafkaInstance 腾讯云CKafka实例ID。
 KafkaType为0时，KafkaInstance必填
+
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
@@ -89,8 +95,12 @@ KafkaType为0时，KafkaInstance必填
     /**
      * Set 腾讯云CKafka实例ID。
 KafkaType为0时，KafkaInstance必填
+
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      * @param KafkaInstance 腾讯云CKafka实例ID。
 KafkaType为0时，KafkaInstance必填
+
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;

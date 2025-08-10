@@ -25,6 +25,7 @@ public class ModifyConfigExtraRequest extends AbstractModel {
 
     /**
     * 采集配置扩展信息id
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)获取采集配置扩展信息id。
     */
     @SerializedName("ConfigExtraId")
     @Expose
@@ -39,13 +40,14 @@ public class ModifyConfigExtraRequest extends AbstractModel {
 
     /**
     * 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 节点文件配置信息
+    * 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
     */
     @SerializedName("HostFile")
     @Expose
@@ -60,7 +62,7 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     private ContainerFileInfo ContainerFile;
 
     /**
-    * 容器标准输出信息
+    * 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
     */
     @SerializedName("ContainerStdout")
     @Expose
@@ -113,7 +115,10 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     private String UserDefineRule;
 
     /**
-    * 类型：container_stdout、container_file、host_file
+    * 容器场景，日志采集输入类型，支持以下三种类型
+- container_stdout 标准输出
+- container_file 容器文件
+- host_file 主机节点文件
     */
     @SerializedName("Type")
     @Expose
@@ -121,6 +126,7 @@ public class ModifyConfigExtraRequest extends AbstractModel {
 
     /**
     * 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
     */
     @SerializedName("GroupId")
     @Expose
@@ -135,20 +141,23 @@ public class ModifyConfigExtraRequest extends AbstractModel {
 
     /**
     * 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * 日志集name
+    * 日志集名称
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集名称。
     */
     @SerializedName("LogsetName")
     @Expose
     private String LogsetName;
 
     /**
-    * 日志主题name
+    * 日志主题名称
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题名称。
     */
     @SerializedName("TopicName")
     @Expose
@@ -167,8 +176,10 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     private String AdvancedConfig;
 
     /**
-     * Get 采集配置扩展信息id 
+     * Get 采集配置扩展信息id
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)获取采集配置扩展信息id。 
      * @return ConfigExtraId 采集配置扩展信息id
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)获取采集配置扩展信息id。
      */
     public String getConfigExtraId() {
         return this.ConfigExtraId;
@@ -176,7 +187,9 @@ public class ModifyConfigExtraRequest extends AbstractModel {
 
     /**
      * Set 采集配置扩展信息id
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)获取采集配置扩展信息id。
      * @param ConfigExtraId 采集配置扩展信息id
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)获取采集配置扩展信息id。
      */
     public void setConfigExtraId(String ConfigExtraId) {
         this.ConfigExtraId = ConfigExtraId;
@@ -199,8 +212,10 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志主题id 
+     * Get 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
      * @return TopicId 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -208,23 +223,25 @@ public class ModifyConfigExtraRequest extends AbstractModel {
 
     /**
      * Set 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param TopicId 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 节点文件配置信息 
-     * @return HostFile 节点文件配置信息
+     * Get 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo 
+     * @return HostFile 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
      */
     public HostFileInfo getHostFile() {
         return this.HostFile;
     }
 
     /**
-     * Set 节点文件配置信息
-     * @param HostFile 节点文件配置信息
+     * Set 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
+     * @param HostFile 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
      */
     public void setHostFile(HostFileInfo HostFile) {
         this.HostFile = HostFile;
@@ -251,16 +268,16 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     }
 
     /**
-     * Get 容器标准输出信息 
-     * @return ContainerStdout 容器标准输出信息
+     * Get 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo 
+     * @return ContainerStdout 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
      */
     public ContainerStdoutInfo getContainerStdout() {
         return this.ContainerStdout;
     }
 
     /**
-     * Set 容器标准输出信息
-     * @param ContainerStdout 容器标准输出信息
+     * Set 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
+     * @param ContainerStdout 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
      */
     public void setContainerStdout(ContainerStdoutInfo ContainerStdout) {
         this.ContainerStdout = ContainerStdout;
@@ -395,24 +412,38 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     }
 
     /**
-     * Get 类型：container_stdout、container_file、host_file 
-     * @return Type 类型：container_stdout、container_file、host_file
+     * Get 容器场景，日志采集输入类型，支持以下三种类型
+- container_stdout 标准输出
+- container_file 容器文件
+- host_file 主机节点文件 
+     * @return Type 容器场景，日志采集输入类型，支持以下三种类型
+- container_stdout 标准输出
+- container_file 容器文件
+- host_file 主机节点文件
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型：container_stdout、container_file、host_file
-     * @param Type 类型：container_stdout、container_file、host_file
+     * Set 容器场景，日志采集输入类型，支持以下三种类型
+- container_stdout 标准输出
+- container_file 容器文件
+- host_file 主机节点文件
+     * @param Type 容器场景，日志采集输入类型，支持以下三种类型
+- container_stdout 标准输出
+- container_file 容器文件
+- host_file 主机节点文件
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 机器组ID 
+     * Get 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。 
      * @return GroupId 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -420,7 +451,9 @@ public class ModifyConfigExtraRequest extends AbstractModel {
 
     /**
      * Set 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      * @param GroupId 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -443,8 +476,10 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志集ID 
+     * Get 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。 
      * @return LogsetId 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      */
     public String getLogsetId() {
         return this.LogsetId;
@@ -452,39 +487,49 @@ public class ModifyConfigExtraRequest extends AbstractModel {
 
     /**
      * Set 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      * @param LogsetId 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 日志集name 
-     * @return LogsetName 日志集name
+     * Get 日志集名称
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集名称。 
+     * @return LogsetName 日志集名称
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集名称。
      */
     public String getLogsetName() {
         return this.LogsetName;
     }
 
     /**
-     * Set 日志集name
-     * @param LogsetName 日志集name
+     * Set 日志集名称
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集名称。
+     * @param LogsetName 日志集名称
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集名称。
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;
     }
 
     /**
-     * Get 日志主题name 
-     * @return TopicName 日志主题name
+     * Get 日志主题名称
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题名称。 
+     * @return TopicName 日志主题名称
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题名称。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 日志主题name
-     * @param TopicName 日志主题name
+     * Set 日志主题名称
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题名称。
+     * @param TopicName 日志主题名称
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题名称。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

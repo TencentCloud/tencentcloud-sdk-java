@@ -108,14 +108,14 @@ public class CreateDataEngineRequest extends AbstractModel {
     private Long PayMode;
 
     /**
-    * 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
+    * 资源使用时长，后付费：固定填1，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 资源使用时长的单位，后付费：s，预付费：m。默认为s
+    * 资源使用时长的单位，后付费：h，预付费：m。默认为h
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -157,7 +157,7 @@ public class CreateDataEngineRequest extends AbstractModel {
     private CrontabResumeSuspendStrategy CrontabResumeSuspendStrategy;
 
     /**
-    * 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
+    * 引擎执行任务类型，有效值：SQL/BATCH，标准引擎默认为BATCH
     */
     @SerializedName("EngineExecType")
     @Expose
@@ -451,32 +451,32 @@ public class CreateDataEngineRequest extends AbstractModel {
     }
 
     /**
-     * Get 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1 
-     * @return TimeSpan 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
+     * Get 资源使用时长，后付费：固定填1，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1 
+     * @return TimeSpan 资源使用时长，后付费：固定填1，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
-     * @param TimeSpan 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
+     * Set 资源使用时长，后付费：固定填1，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
+     * @param TimeSpan 资源使用时长，后付费：固定填1，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 资源使用时长的单位，后付费：s，预付费：m。默认为s 
-     * @return TimeUnit 资源使用时长的单位，后付费：s，预付费：m。默认为s
+     * Get 资源使用时长的单位，后付费：h，预付费：m。默认为h 
+     * @return TimeUnit 资源使用时长的单位，后付费：h，预付费：m。默认为h
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 资源使用时长的单位，后付费：s，预付费：m。默认为s
-     * @param TimeUnit 资源使用时长的单位，后付费：s，预付费：m。默认为s
+     * Set 资源使用时长的单位，后付费：h，预付费：m。默认为h
+     * @param TimeUnit 资源使用时长的单位，后付费：h，预付费：m。默认为h
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
@@ -563,16 +563,16 @@ public class CreateDataEngineRequest extends AbstractModel {
     }
 
     /**
-     * Get 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL 
-     * @return EngineExecType 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
+     * Get 引擎执行任务类型，有效值：SQL/BATCH，标准引擎默认为BATCH 
+     * @return EngineExecType 引擎执行任务类型，有效值：SQL/BATCH，标准引擎默认为BATCH
      */
     public String getEngineExecType() {
         return this.EngineExecType;
     }
 
     /**
-     * Set 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
-     * @param EngineExecType 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
+     * Set 引擎执行任务类型，有效值：SQL/BATCH，标准引擎默认为BATCH
+     * @param EngineExecType 引擎执行任务类型，有效值：SQL/BATCH，标准引擎默认为BATCH
      */
     public void setEngineExecType(String EngineExecType) {
         this.EngineExecType = EngineExecType;

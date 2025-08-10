@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class ContainerWorkLoadInfo extends AbstractModel {
 
     /**
-    * 工作负载的类型
+    * 工作负载的类型，支持
+- deployment
+- statefulset
+- daemonset
+- job
+- cronjob
     */
     @SerializedName("Kind")
     @Expose
@@ -52,16 +57,36 @@ public class ContainerWorkLoadInfo extends AbstractModel {
     private String Namespace;
 
     /**
-     * Get 工作负载的类型 
-     * @return Kind 工作负载的类型
+     * Get 工作负载的类型，支持
+- deployment
+- statefulset
+- daemonset
+- job
+- cronjob 
+     * @return Kind 工作负载的类型，支持
+- deployment
+- statefulset
+- daemonset
+- job
+- cronjob
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 工作负载的类型
-     * @param Kind 工作负载的类型
+     * Set 工作负载的类型，支持
+- deployment
+- statefulset
+- daemonset
+- job
+- cronjob
+     * @param Kind 工作负载的类型，支持
+- deployment
+- statefulset
+- daemonset
+- job
+- cronjob
      */
     public void setKind(String Kind) {
         this.Kind = Kind;

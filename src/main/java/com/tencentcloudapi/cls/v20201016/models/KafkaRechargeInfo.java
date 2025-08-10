@@ -108,14 +108,14 @@ public class KafkaRechargeInfo extends AbstractModel {
     private Long Offset;
 
     /**
-    * 创建时间
+    * 创建时间。格式`YYYY-MM-DD HH:MM:SS`
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间
+    * 更新时间。格式`YYYY-MM-DD HH:MM:SS`
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -321,32 +321,32 @@ public class KafkaRechargeInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间。格式`YYYY-MM-DD HH:MM:SS` 
+     * @return CreateTime 创建时间。格式`YYYY-MM-DD HH:MM:SS`
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间。格式`YYYY-MM-DD HH:MM:SS`
+     * @param CreateTime 创建时间。格式`YYYY-MM-DD HH:MM:SS`
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get 更新时间。格式`YYYY-MM-DD HH:MM:SS` 
+     * @return UpdateTime 更新时间。格式`YYYY-MM-DD HH:MM:SS`
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set 更新时间。格式`YYYY-MM-DD HH:MM:SS`
+     * @param UpdateTime 更新时间。格式`YYYY-MM-DD HH:MM:SS`
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

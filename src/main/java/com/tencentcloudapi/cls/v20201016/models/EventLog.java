@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class EventLog extends AbstractModel {
 
     /**
-    * 事件通道，支持Application，Security，Setup，System，ALL
+    * 事件通道，支持
+- Application 应用日志
+- Security 安全日志
+- Setup 启动日志
+- System 系统日志
+- ALL 所有日志
 
     */
     @SerializedName("EventChannel")
@@ -39,7 +44,7 @@ public class EventLog extends AbstractModel {
     private Long TimeType;
 
     /**
-    * 时间，用户选择自定义时间类型时，需要指定时间
+    * 时间，用户选择自定义时间类型时，需要指定时间，单位秒
     */
     @SerializedName("Timestamp")
     @Expose
@@ -57,9 +62,19 @@ public class EventLog extends AbstractModel {
     private String [] EventIDs;
 
     /**
-     * Get 事件通道，支持Application，Security，Setup，System，ALL
+     * Get 事件通道，支持
+- Application 应用日志
+- Security 安全日志
+- Setup 启动日志
+- System 系统日志
+- ALL 所有日志
  
-     * @return EventChannel 事件通道，支持Application，Security，Setup，System，ALL
+     * @return EventChannel 事件通道，支持
+- Application 应用日志
+- Security 安全日志
+- Setup 启动日志
+- System 系统日志
+- ALL 所有日志
 
      */
     public String getEventChannel() {
@@ -67,9 +82,19 @@ public class EventLog extends AbstractModel {
     }
 
     /**
-     * Set 事件通道，支持Application，Security，Setup，System，ALL
+     * Set 事件通道，支持
+- Application 应用日志
+- Security 安全日志
+- Setup 启动日志
+- System 系统日志
+- ALL 所有日志
 
-     * @param EventChannel 事件通道，支持Application，Security，Setup，System，ALL
+     * @param EventChannel 事件通道，支持
+- Application 应用日志
+- Security 安全日志
+- Setup 启动日志
+- System 系统日志
+- ALL 所有日志
 
      */
     public void setEventChannel(String EventChannel) {
@@ -93,16 +118,16 @@ public class EventLog extends AbstractModel {
     }
 
     /**
-     * Get 时间，用户选择自定义时间类型时，需要指定时间 
-     * @return Timestamp 时间，用户选择自定义时间类型时，需要指定时间
+     * Get 时间，用户选择自定义时间类型时，需要指定时间，单位秒 
+     * @return Timestamp 时间，用户选择自定义时间类型时，需要指定时间，单位秒
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 时间，用户选择自定义时间类型时，需要指定时间
-     * @param Timestamp 时间，用户选择自定义时间类型时，需要指定时间
+     * Set 时间，用户选择自定义时间类型时，需要指定时间，单位秒
+     * @param Timestamp 时间，用户选择自定义时间类型时，需要指定时间，单位秒
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;

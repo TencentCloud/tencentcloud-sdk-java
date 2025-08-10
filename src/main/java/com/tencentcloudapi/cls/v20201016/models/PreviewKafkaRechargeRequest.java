@@ -54,6 +54,7 @@ public class PreviewKafkaRechargeRequest extends AbstractModel {
 
     /**
     * 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
     */
     @SerializedName("KafkaInstance")
     @Expose
@@ -84,7 +85,9 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     private KafkaProtocolInfo Protocol;
 
     /**
-    * 用户Kafka消费组
+    * 用户Kafka消费组。
+
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
     */
     @SerializedName("ConsumerGroupName")
     @Expose
@@ -166,8 +169,10 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     }
 
     /**
-     * Get 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。 
+     * Get 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。 
      * @return KafkaInstance 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
@@ -175,7 +180,9 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
 
     /**
      * Set 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      * @param KafkaInstance 腾讯云CKafka实例ID，当KafkaType为0时参数KafkaInstance有效且必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
@@ -242,16 +249,24 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     }
 
     /**
-     * Get 用户Kafka消费组 
-     * @return ConsumerGroupName 用户Kafka消费组
+     * Get 用户Kafka消费组。
+
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。 
+     * @return ConsumerGroupName 用户Kafka消费组。
+
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
      */
     public String getConsumerGroupName() {
         return this.ConsumerGroupName;
     }
 
     /**
-     * Set 用户Kafka消费组
-     * @param ConsumerGroupName 用户Kafka消费组
+     * Set 用户Kafka消费组。
+
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
+     * @param ConsumerGroupName 用户Kafka消费组。
+
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
      */
     public void setConsumerGroupName(String ConsumerGroupName) {
         this.ConsumerGroupName = ConsumerGroupName;

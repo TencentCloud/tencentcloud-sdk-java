@@ -53,6 +53,13 @@ public class Intention extends AbstractModel {
     private IntentionAction [] IntentionActions;
 
     /**
+    * 视频核身相关配置
+    */
+    @SerializedName("RuleIdConfig")
+    @Expose
+    private RuleIdConfig RuleIdConfig;
+
+    /**
      * Get 视频认证类型，支持以下类型
 <ul><li>1 : 问答模式</li>
 <li>2 : 点头模式</li></ul>
@@ -132,6 +139,22 @@ public class Intention extends AbstractModel {
         this.IntentionActions = IntentionActions;
     }
 
+    /**
+     * Get 视频核身相关配置 
+     * @return RuleIdConfig 视频核身相关配置
+     */
+    public RuleIdConfig getRuleIdConfig() {
+        return this.RuleIdConfig;
+    }
+
+    /**
+     * Set 视频核身相关配置
+     * @param RuleIdConfig 视频核身相关配置
+     */
+    public void setRuleIdConfig(RuleIdConfig RuleIdConfig) {
+        this.RuleIdConfig = RuleIdConfig;
+    }
+
     public Intention() {
     }
 
@@ -155,6 +178,9 @@ public class Intention extends AbstractModel {
                 this.IntentionActions[i] = new IntentionAction(source.IntentionActions[i]);
             }
         }
+        if (source.RuleIdConfig != null) {
+            this.RuleIdConfig = new RuleIdConfig(source.RuleIdConfig);
+        }
     }
 
 
@@ -165,6 +191,7 @@ public class Intention extends AbstractModel {
         this.setParamSimple(map, prefix + "IntentionType", this.IntentionType);
         this.setParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
         this.setParamArrayObj(map, prefix + "IntentionActions.", this.IntentionActions);
+        this.setParamObj(map, prefix + "RuleIdConfig.", this.RuleIdConfig);
 
     }
 }
