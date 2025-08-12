@@ -31,21 +31,21 @@ public class DescribeRepositoriesRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-    * 查询起始偏移
+    * 查询起始偏移，大于等于0，默认值为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量限制
+    * 返回数量限制，大于0，默认为不分页
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 仓库类型（默认仓库：default，私有仓库：private）
+    * 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
     */
     @SerializedName("RepositoryType")
     @Expose
@@ -68,48 +68,48 @@ public class DescribeRepositoriesRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询起始偏移 
-     * @return Offset 查询起始偏移
+     * Get 查询起始偏移，大于等于0，默认值为0 
+     * @return Offset 查询起始偏移，大于等于0，默认值为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询起始偏移
-     * @param Offset 查询起始偏移
+     * Set 查询起始偏移，大于等于0，默认值为0
+     * @param Offset 查询起始偏移，大于等于0，默认值为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量限制 
-     * @return Limit 返回数量限制
+     * Get 返回数量限制，大于0，默认为不分页 
+     * @return Limit 返回数量限制，大于0，默认为不分页
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量限制
-     * @param Limit 返回数量限制
+     * Set 返回数量限制，大于0，默认为不分页
+     * @param Limit 返回数量限制，大于0，默认为不分页
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 仓库类型（默认仓库：default，私有仓库：private） 
-     * @return RepositoryType 仓库类型（默认仓库：default，私有仓库：private）
+     * Get 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo） 
+     * @return RepositoryType 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
      */
     public String getRepositoryType() {
         return this.RepositoryType;
     }
 
     /**
-     * Set 仓库类型（默认仓库：default，私有仓库：private）
-     * @param RepositoryType 仓库类型（默认仓库：default，私有仓库：private）
+     * Set 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
+     * @param RepositoryType 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
      */
     public void setRepositoryType(String RepositoryType) {
         this.RepositoryType = RepositoryType;

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class DescribeCreateGatewayApiStatusResponse extends AbstractModel {
 
     /**
-    * 是否已完成导入任务
+    * 导入任务状态执行结果。
+- true：已完成
+- false：未完成
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +40,24 @@ public class DescribeCreateGatewayApiStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否已完成导入任务 
-     * @return Result 是否已完成导入任务
+     * Get 导入任务状态执行结果。
+- true：已完成
+- false：未完成 
+     * @return Result 导入任务状态执行结果。
+- true：已完成
+- false：未完成
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 是否已完成导入任务
-     * @param Result 是否已完成导入任务
+     * Set 导入任务状态执行结果。
+- true：已完成
+- false：未完成
+     * @param Result 导入任务状态执行结果。
+- true：已完成
+- false：未完成
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

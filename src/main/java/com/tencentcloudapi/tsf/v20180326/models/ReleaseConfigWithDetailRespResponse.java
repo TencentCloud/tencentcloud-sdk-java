@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ReleaseConfigWithDetailRespResponse extends AbstractModel {
 
     /**
-    * 配置项发布 ID
+    * 配置项发布ID。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ReleaseConfigWithDetailRespResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 配置项发布 ID 
-     * @return Result 配置项发布 ID
+     * Get 配置项发布ID。 
+     * @return Result 配置项发布ID。
      */
     public ConfigRelease getResult() {
         return this.Result;
     }
 
     /**
-     * Set 配置项发布 ID
-     * @param Result 配置项发布 ID
+     * Set 配置项发布ID。
+     * @param Result 配置项发布ID。
      */
     public void setResult(ConfigRelease Result) {
         this.Result = Result;

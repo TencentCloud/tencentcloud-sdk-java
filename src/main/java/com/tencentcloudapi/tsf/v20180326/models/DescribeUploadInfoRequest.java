@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUploadInfoRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -59,30 +59,30 @@ public class DescribeUploadInfoRequest extends AbstractModel {
     private String PkgDesc;
 
     /**
-    * 程序包仓库类型
+    * 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
     */
     @SerializedName("RepositoryType")
     @Expose
     private String RepositoryType;
 
     /**
-    * 程序包仓库id
+    * 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
     */
     @SerializedName("RepositoryId")
     @Expose
     private String RepositoryId;
 
     /**
-     * Get 应用ID 
-     * @return ApplicationId 应用ID
+     * Get 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值 
+     * @return ApplicationId 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 应用ID
-     * @param ApplicationId 应用ID
+     * Set 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
+     * @param ApplicationId 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
@@ -153,32 +153,32 @@ public class DescribeUploadInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 程序包仓库类型 
-     * @return RepositoryType 程序包仓库类型
+     * Get 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo） 
+     * @return RepositoryType 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
      */
     public String getRepositoryType() {
         return this.RepositoryType;
     }
 
     /**
-     * Set 程序包仓库类型
-     * @param RepositoryType 程序包仓库类型
+     * Set 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
+     * @param RepositoryType 仓库类型（默认仓库：default，私有仓库：private，公共仓库：public-demo）
      */
     public void setRepositoryType(String RepositoryType) {
         this.RepositoryType = RepositoryType;
     }
 
     /**
-     * Get 程序包仓库id 
-     * @return RepositoryId 程序包仓库id
+     * Get 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看 
+     * @return RepositoryId 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public String getRepositoryId() {
         return this.RepositoryId;
     }
 
     /**
-     * Set 程序包仓库id
-     * @param RepositoryId 程序包仓库id
+     * Set 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
+     * @param RepositoryId 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public void setRepositoryId(String RepositoryId) {
         this.RepositoryId = RepositoryId;

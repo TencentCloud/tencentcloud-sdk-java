@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePublicConfigResponse extends AbstractModel {
 
     /**
-    * 全局配置
+    * 全局配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -39,9 +39,9 @@ public class DescribePublicConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 全局配置
+     * Get 全局配置。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 全局配置
+     * @return Result 全局配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Config getResult() {
@@ -49,9 +49,9 @@ public class DescribePublicConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set 全局配置
+     * Set 全局配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 全局配置
+     * @param Result 全局配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Config Result) {

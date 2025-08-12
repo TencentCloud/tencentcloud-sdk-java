@@ -24,14 +24,16 @@ import java.util.HashMap;
 public class ModifyKafkaConsumerRequest extends AbstractModel {
 
     /**
-    * 日志主题ID
+    * 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
     */
     @SerializedName("FromTopicId")
     @Expose
     private String FromTopicId;
 
     /**
-    * 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+    * 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
     */
     @SerializedName("Compression")
     @Expose
@@ -45,32 +47,40 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
     private KafkaConsumerContent ConsumerContent;
 
     /**
-     * Get 日志主题ID 
-     * @return FromTopicId 日志主题ID
+     * Get 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。 
+     * @return FromTopicId 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public String getFromTopicId() {
         return this.FromTopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param FromTopicId 日志主题ID
+     * Set 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * @param FromTopicId 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public void setFromTopicId(String FromTopicId) {
         this.FromTopicId = FromTopicId;
     }
 
     /**
-     * Get 压缩方式[0:NONE；2:SNAPPY；3:LZ4] 
-     * @return Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * Get 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩 
+     * @return Compression 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
      */
     public Long getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
-     * @param Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * Set 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
+     * @param Compression 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;

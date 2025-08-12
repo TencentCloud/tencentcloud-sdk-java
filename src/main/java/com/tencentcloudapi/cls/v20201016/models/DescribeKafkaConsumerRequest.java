@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class DescribeKafkaConsumerRequest extends AbstractModel {
 
     /**
-    * 日志主题ID
+    * 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
     */
     @SerializedName("FromTopicId")
     @Expose
     private String FromTopicId;
 
     /**
-     * Get 日志主题ID 
-     * @return FromTopicId 日志主题ID
+     * Get 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。 
+     * @return FromTopicId 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public String getFromTopicId() {
         return this.FromTopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param FromTopicId 日志主题ID
+     * Set 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * @param FromTopicId 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public void setFromTopicId(String FromTopicId) {
         this.FromTopicId = FromTopicId;

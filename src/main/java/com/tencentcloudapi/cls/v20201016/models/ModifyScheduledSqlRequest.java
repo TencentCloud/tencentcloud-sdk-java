@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyScheduledSqlRequest extends AbstractModel {
 
     /**
-    * 任务ID
+    * 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 源日志主题
+    * 源日志主题，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
     */
     @SerializedName("SrcTopicId")
     @Expose
@@ -59,7 +59,7 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     private String ScheduledSqlContent;
 
     /**
-    * 调度周期(分钟)
+    * 调度周期(分钟)，1~1440分钟
     */
     @SerializedName("ProcessPeriod")
     @Expose
@@ -73,21 +73,21 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     private String ProcessTimeWindow;
 
     /**
-    * 执行延迟(秒)
+    * 执行延迟(秒)，0~120秒，默认60秒
     */
     @SerializedName("ProcessDelay")
     @Expose
     private Long ProcessDelay;
 
     /**
-    * 源topicId的地域信息
+    * 源topicId的地域信息,支持地域见(https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
     */
     @SerializedName("SrcTopicRegion")
     @Expose
     private String SrcTopicRegion;
 
     /**
-    * 任务名称
+    * 任务名称，0~255字符
     */
     @SerializedName("Name")
     @Expose
@@ -101,32 +101,32 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     private Long SyntaxRule;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取 
+     * @return TaskId 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
+     * @param TaskId 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 源日志主题 
-     * @return SrcTopicId 源日志主题
+     * Get 源日志主题，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取 
+     * @return SrcTopicId 源日志主题，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
      */
     public String getSrcTopicId() {
         return this.SrcTopicId;
     }
 
     /**
-     * Set 源日志主题
-     * @param SrcTopicId 源日志主题
+     * Set 源日志主题，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
+     * @param SrcTopicId 源日志主题，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
      */
     public void setSrcTopicId(String SrcTopicId) {
         this.SrcTopicId = SrcTopicId;
@@ -181,16 +181,16 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     }
 
     /**
-     * Get 调度周期(分钟) 
-     * @return ProcessPeriod 调度周期(分钟)
+     * Get 调度周期(分钟)，1~1440分钟 
+     * @return ProcessPeriod 调度周期(分钟)，1~1440分钟
      */
     public Long getProcessPeriod() {
         return this.ProcessPeriod;
     }
 
     /**
-     * Set 调度周期(分钟)
-     * @param ProcessPeriod 调度周期(分钟)
+     * Set 调度周期(分钟)，1~1440分钟
+     * @param ProcessPeriod 调度周期(分钟)，1~1440分钟
      */
     public void setProcessPeriod(Long ProcessPeriod) {
         this.ProcessPeriod = ProcessPeriod;
@@ -213,48 +213,48 @@ public class ModifyScheduledSqlRequest extends AbstractModel {
     }
 
     /**
-     * Get 执行延迟(秒) 
-     * @return ProcessDelay 执行延迟(秒)
+     * Get 执行延迟(秒)，0~120秒，默认60秒 
+     * @return ProcessDelay 执行延迟(秒)，0~120秒，默认60秒
      */
     public Long getProcessDelay() {
         return this.ProcessDelay;
     }
 
     /**
-     * Set 执行延迟(秒)
-     * @param ProcessDelay 执行延迟(秒)
+     * Set 执行延迟(秒)，0~120秒，默认60秒
+     * @param ProcessDelay 执行延迟(秒)，0~120秒，默认60秒
      */
     public void setProcessDelay(Long ProcessDelay) {
         this.ProcessDelay = ProcessDelay;
     }
 
     /**
-     * Get 源topicId的地域信息 
-     * @return SrcTopicRegion 源topicId的地域信息
+     * Get 源topicId的地域信息,支持地域见(https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 
+     * @return SrcTopicRegion 源topicId的地域信息,支持地域见(https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
      */
     public String getSrcTopicRegion() {
         return this.SrcTopicRegion;
     }
 
     /**
-     * Set 源topicId的地域信息
-     * @param SrcTopicRegion 源topicId的地域信息
+     * Set 源topicId的地域信息,支持地域见(https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
+     * @param SrcTopicRegion 源topicId的地域信息,支持地域见(https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
      */
     public void setSrcTopicRegion(String SrcTopicRegion) {
         this.SrcTopicRegion = SrcTopicRegion;
     }
 
     /**
-     * Get 任务名称 
-     * @return Name 任务名称
+     * Get 任务名称，0~255字符 
+     * @return Name 任务名称，0~255字符
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 任务名称
-     * @param Name 任务名称
+     * Set 任务名称，0~255字符
+     * @param Name 任务名称，0~255字符
      */
     public void setName(String Name) {
         this.Name = Name;

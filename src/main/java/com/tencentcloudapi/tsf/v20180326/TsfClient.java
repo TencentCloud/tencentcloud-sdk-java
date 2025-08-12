@@ -259,7 +259,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *创建文件配置项，返回详细信息
+     *创建文件配置项，返回详细信息。
      * @param req CreateFileConfigWithDetailRespRequest
      * @return CreateFileConfigWithDetailRespResponse
      * @throws TencentCloudSDKException
@@ -292,7 +292,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *创建泳道
+     *创建泳道配置
      * @param req CreateLaneRequest
      * @return CreateLaneResponse
      * @throws TencentCloudSDKException
@@ -303,7 +303,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *创建泳道规则
+     *创建灰度发布规则
      * @param req CreateLaneRuleRequest
      * @return CreateLaneRuleResponse
      * @throws TencentCloudSDKException
@@ -325,7 +325,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *新增微服务返回id
+     *新增微服务返回ID
      * @param req CreateMicroserviceWithDetailRespRequest
      * @return CreateMicroserviceWithDetailRespResponse
      * @throws TencentCloudSDKException
@@ -391,7 +391,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *创建公共配置项，并返回配置项详细信息
+     *创建公共配置项，并返回配置项详细信息。
      * @param req CreatePublicConfigWithDetailRespRequest
      * @return CreatePublicConfigWithDetailRespResponse
      * @throws TencentCloudSDKException
@@ -589,7 +589,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *删除泳道
+     *删除泳道配置
      * @param req DeleteLaneRequest
      * @return DeleteLaneResponse
      * @throws TencentCloudSDKException
@@ -600,7 +600,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *删除泳道规则
+     *删除灰度发布规则
      * @param req DeleteLaneRuleRequest
      * @return DeleteLaneRuleResponse
      * @throws TencentCloudSDKException
@@ -812,7 +812,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *查询API 版本
+     *查询API版本
      * @param req DescribeApiVersionsRequest
      * @return DescribeApiVersionsResponse
      * @throws TencentCloudSDKException
@@ -1080,7 +1080,7 @@ public class TsfClient extends AbstractClient{
 
     /**
      *TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
-COS相关文档请查阅：https://cloud.tencent.com/document/product/436
+请查阅[COS相关文档](https://cloud.tencent.com/document/product/436)
      * @param req DescribeDownloadInfoRequest
      * @return DescribeDownloadInfoResponse
      * @throws TencentCloudSDKException
@@ -1379,7 +1379,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
-     *查询泳道规则列表
+     *查询灰度发布规则列表
      * @param req DescribeLaneRulesRequest
      * @return DescribeLaneRulesResponse
      * @throws TencentCloudSDKException
@@ -1390,7 +1390,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
-     *查询泳道列表
+     *查询泳道配置列表
      * @param req DescribeLanesRequest
      * @return DescribeLanesResponse
      * @throws TencentCloudSDKException
@@ -1599,7 +1599,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
-     *查询group发布的配置
+     *查询部署组发布的配置
      * @param req DescribeReleasedConfigRequest
      * @return DescribeReleasedConfigResponse
      * @throws TencentCloudSDKException
@@ -1798,7 +1798,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
 
     /**
      *TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
-COS相关文档请查阅：https://cloud.tencent.com/document/product/436
+请查阅[COS相关文档](https://cloud.tencent.com/document/product/436)
      * @param req DescribeUploadInfoRequest
      * @return DescribeUploadInfoResponse
      * @throws TencentCloudSDKException
@@ -1820,7 +1820,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
-     *禁用泳道规则
+     *禁用灰度发布规则
      * @param req DisableLaneRuleRequest
      * @return DisableLaneRuleResponse
      * @throws TencentCloudSDKException
@@ -1908,7 +1908,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
-     *启用泳道规则
+     *启用灰度发布规则
      * @param req EnableLaneRuleRequest
      * @return EnableLaneRuleResponse
      * @throws TencentCloudSDKException
@@ -2051,7 +2051,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
-     *更新泳道信息
+     *更新泳道配置信息
      * @param req ModifyLaneRequest
      * @return ModifyLaneResponse
      * @throws TencentCloudSDKException
@@ -2062,7 +2062,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
-     *更新泳道规则
+     *更新灰度发布规则
      * @param req ModifyLaneRuleRequest
      * @return ModifyLaneRuleResponse
      * @throws TencentCloudSDKException
@@ -2230,7 +2230,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
-     *发布配置,并且返回配置 ID
+     *发布配置，并且返回配置ID。
      * @param req ReleaseConfigWithDetailRespRequest
      * @return ReleaseConfigWithDetailRespResponse
      * @throws TencentCloudSDKException

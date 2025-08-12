@@ -24,230 +24,265 @@ import java.util.HashMap;
 public class DescribeMicroservicesRequest extends AbstractModel {
 
     /**
-    * 命名空间ID
+    * 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * 搜索字段
+    * 搜索字段。
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 排序字段
+    * 排序字段。
+- create_time：创建时间
+默认为创建时间，暂不支持其他值。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序类型
+    * 排序类型。
+- 1：倒序
+默认为倒序，暂不支持其他值。
     */
     @SerializedName("OrderType")
     @Expose
     private Long OrderType;
 
     /**
-    * 偏移量
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页个数
+    * 返回数量，默认为20，最大值为50。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 状态过滤，online、offline、single_online
+    * 状态。
+- online：在线
+- offline：离线
+- single_online：单点在线
     */
     @SerializedName("Status")
     @Expose
     private String [] Status;
 
     /**
-    * IdList
+    * 微服务ID列表。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
     */
     @SerializedName("MicroserviceIdList")
     @Expose
     private String [] MicroserviceIdList;
 
     /**
-    * 搜索的服务名列表
+    * 微服务名称列表。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
     */
     @SerializedName("MicroserviceNameList")
     @Expose
     private String [] MicroserviceNameList;
 
     /**
-    * 注册中心实例id
+    * 注册中心实例ID。业务预留参数，忽略传参。
     */
     @SerializedName("ConfigCenterInstanceId")
     @Expose
     private String ConfigCenterInstanceId;
 
     /**
-     * Get 命名空间ID 
-     * @return NamespaceId 命名空间ID
+     * Get 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。 
+     * @return NamespaceId 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间ID
-     * @param NamespaceId 命名空间ID
+     * Set 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
+     * @param NamespaceId 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 搜索字段 
-     * @return SearchWord 搜索字段
+     * Get 搜索字段。 
+     * @return SearchWord 搜索字段。
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 搜索字段
-     * @param SearchWord 搜索字段
+     * Set 搜索字段。
+     * @param SearchWord 搜索字段。
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 排序字段 
-     * @return OrderBy 排序字段
+     * Get 排序字段。
+- create_time：创建时间
+默认为创建时间，暂不支持其他值。 
+     * @return OrderBy 排序字段。
+- create_time：创建时间
+默认为创建时间，暂不支持其他值。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序字段
-     * @param OrderBy 排序字段
+     * Set 排序字段。
+- create_time：创建时间
+默认为创建时间，暂不支持其他值。
+     * @param OrderBy 排序字段。
+- create_time：创建时间
+默认为创建时间，暂不支持其他值。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序类型 
-     * @return OrderType 排序类型
+     * Get 排序类型。
+- 1：倒序
+默认为倒序，暂不支持其他值。 
+     * @return OrderType 排序类型。
+- 1：倒序
+默认为倒序，暂不支持其他值。
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 排序类型
-     * @param OrderType 排序类型
+     * Set 排序类型。
+- 1：倒序
+默认为倒序，暂不支持其他值。
+     * @param OrderType 排序类型。
+- 1：倒序
+默认为倒序，暂不支持其他值。
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页个数 
-     * @return Limit 分页个数
+     * Get 返回数量，默认为20，最大值为50。 
+     * @return Limit 返回数量，默认为20，最大值为50。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页个数
-     * @param Limit 分页个数
+     * Set 返回数量，默认为20，最大值为50。
+     * @param Limit 返回数量，默认为20，最大值为50。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 状态过滤，online、offline、single_online 
-     * @return Status 状态过滤，online、offline、single_online
+     * Get 状态。
+- online：在线
+- offline：离线
+- single_online：单点在线 
+     * @return Status 状态。
+- online：在线
+- offline：离线
+- single_online：单点在线
      */
     public String [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态过滤，online、offline、single_online
-     * @param Status 状态过滤，online、offline、single_online
+     * Set 状态。
+- online：在线
+- offline：离线
+- single_online：单点在线
+     * @param Status 状态。
+- online：在线
+- offline：离线
+- single_online：单点在线
      */
     public void setStatus(String [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get IdList 
-     * @return MicroserviceIdList IdList
+     * Get 微服务ID列表。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。 
+     * @return MicroserviceIdList 微服务ID列表。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public String [] getMicroserviceIdList() {
         return this.MicroserviceIdList;
     }
 
     /**
-     * Set IdList
-     * @param MicroserviceIdList IdList
+     * Set 微服务ID列表。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param MicroserviceIdList 微服务ID列表。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public void setMicroserviceIdList(String [] MicroserviceIdList) {
         this.MicroserviceIdList = MicroserviceIdList;
     }
 
     /**
-     * Get 搜索的服务名列表 
-     * @return MicroserviceNameList 搜索的服务名列表
+     * Get 微服务名称列表。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。 
+     * @return MicroserviceNameList 微服务名称列表。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public String [] getMicroserviceNameList() {
         return this.MicroserviceNameList;
     }
 
     /**
-     * Set 搜索的服务名列表
-     * @param MicroserviceNameList 搜索的服务名列表
+     * Set 微服务名称列表。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param MicroserviceNameList 微服务名称列表。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public void setMicroserviceNameList(String [] MicroserviceNameList) {
         this.MicroserviceNameList = MicroserviceNameList;
     }
 
     /**
-     * Get 注册中心实例id 
-     * @return ConfigCenterInstanceId 注册中心实例id
+     * Get 注册中心实例ID。业务预留参数，忽略传参。 
+     * @return ConfigCenterInstanceId 注册中心实例ID。业务预留参数，忽略传参。
      */
     public String getConfigCenterInstanceId() {
         return this.ConfigCenterInstanceId;
     }
 
     /**
-     * Set 注册中心实例id
-     * @param ConfigCenterInstanceId 注册中心实例id
+     * Set 注册中心实例ID。业务预留参数，忽略传参。
+     * @param ConfigCenterInstanceId 注册中心实例ID。业务预留参数，忽略传参。
      */
     public void setConfigCenterInstanceId(String ConfigCenterInstanceId) {
         this.ConfigCenterInstanceId = ConfigCenterInstanceId;

@@ -123,6 +123,9 @@ public enum DnspodErrorCode {
      /* 操作未响应，请稍后重试。 */
      FAILEDOPERATION_UNKNOWERROR("FailedOperation.UnknowError"),
      
+     /* 目标用户不允许转入域名 */
+     FAILEDOPERATION_USERNOTALLOWTRANSFER("FailedOperation.UserNotAllowTransfer"),
+     
      /* 域名已经提交过订单并且正在审核中，请稍候。 */
      FAILEDOPERATION_VERIFYINGBILLEXISTS("FailedOperation.VerifyingBillExists"),
      

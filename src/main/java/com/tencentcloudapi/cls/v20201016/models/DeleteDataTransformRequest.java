@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteDataTransformRequest extends AbstractModel {
 
     /**
-    * 数据加工任务id
+    * 数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 数据加工任务id 
-     * @return TaskId 数据加工任务id
+     * Get 数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。 
+     * @return TaskId 数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 数据加工任务id
-     * @param TaskId 数据加工任务id
+     * Set 数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+     * @param TaskId 数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

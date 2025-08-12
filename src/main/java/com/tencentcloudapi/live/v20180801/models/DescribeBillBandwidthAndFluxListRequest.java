@@ -50,11 +50,7 @@ public class DescribeBillBandwidthAndFluxListRequest extends AbstractModel {
     private String [] PlayDomains;
 
     /**
-    * 可选值：
-Mainland：查询国内数据，
-Oversea：则查询国外数据，
-默认：查询国内+国外的数据。
-注：LEB（快直播）只支持国内+国外数据查询。
+    * 可选值：Mainland：查询国内数据，Oversea：则查询国外数据，默认：查询国内+国外的数据。
     */
     @SerializedName("MainlandOrOversea")
     @Expose
@@ -163,32 +159,16 @@ Africa 非洲。
     }
 
     /**
-     * Get 可选值：
-Mainland：查询国内数据，
-Oversea：则查询国外数据，
-默认：查询国内+国外的数据。
-注：LEB（快直播）只支持国内+国外数据查询。 
-     * @return MainlandOrOversea 可选值：
-Mainland：查询国内数据，
-Oversea：则查询国外数据，
-默认：查询国内+国外的数据。
-注：LEB（快直播）只支持国内+国外数据查询。
+     * Get 可选值：Mainland：查询国内数据，Oversea：则查询国外数据，默认：查询国内+国外的数据。 
+     * @return MainlandOrOversea 可选值：Mainland：查询国内数据，Oversea：则查询国外数据，默认：查询国内+国外的数据。
      */
     public String getMainlandOrOversea() {
         return this.MainlandOrOversea;
     }
 
     /**
-     * Set 可选值：
-Mainland：查询国内数据，
-Oversea：则查询国外数据，
-默认：查询国内+国外的数据。
-注：LEB（快直播）只支持国内+国外数据查询。
-     * @param MainlandOrOversea 可选值：
-Mainland：查询国内数据，
-Oversea：则查询国外数据，
-默认：查询国内+国外的数据。
-注：LEB（快直播）只支持国内+国外数据查询。
+     * Set 可选值：Mainland：查询国内数据，Oversea：则查询国外数据，默认：查询国内+国外的数据。
+     * @param MainlandOrOversea 可选值：Mainland：查询国内数据，Oversea：则查询国外数据，默认：查询国内+国外的数据。
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
         this.MainlandOrOversea = MainlandOrOversea;

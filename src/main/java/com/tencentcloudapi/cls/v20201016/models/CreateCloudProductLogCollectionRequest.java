@@ -25,6 +25,7 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
 
     /**
     * 实例ID
+- 通过各个接入云产品官方文档获取
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,7 +46,7 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
     private String LogType;
 
     /**
-    * 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+    * 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT:  gz
@@ -65,6 +66,7 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
 
     /**
     * CLS目标地域
+- 支持地域参考  [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档   
     */
     @SerializedName("ClsRegion")
     @Expose
@@ -85,7 +87,7 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
     private String TopicName;
 
     /**
-    * 日志配置拓展信息， 一般用于存储额外的日志投递配置
+    * 日志配置扩展信息， 一般用于存储额外的日志投递配置
     */
     @SerializedName("Extend")
     @Expose
@@ -93,6 +95,7 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
 
     /**
     * 日志集id
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
     */
     @SerializedName("LogsetId")
     @Expose
@@ -100,14 +103,17 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
 
     /**
     * 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-     * Get 实例ID 
+     * Get 实例ID
+- 通过各个接入云产品官方文档获取 
      * @return InstanceId 实例ID
+- 通过各个接入云产品官方文档获取
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -115,7 +121,9 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
 
     /**
      * Set 实例ID
+- 通过各个接入云产品官方文档获取
      * @param InstanceId 实例ID
+- 通过各个接入云产品官方文档获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -154,7 +162,7 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
     }
 
     /**
-     * Get 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+     * Get 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT:  gz
@@ -167,7 +175,7 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
 - PostgreSQL所有日志类型：gz
 - BH所有日志类型：overseas-polaris(国内站海外)/fsi-polaris(国内站金融)/general-polaris(国内站普通)/intl-sg-prod(国际站)
 - APIS所有日志类型：gz 
-     * @return CloudProductRegion 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+     * @return CloudProductRegion 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT:  gz
@@ -186,7 +194,7 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
     }
 
     /**
-     * Set 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+     * Set 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT:  gz
@@ -199,7 +207,7 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
 - PostgreSQL所有日志类型：gz
 - BH所有日志类型：overseas-polaris(国内站海外)/fsi-polaris(国内站金融)/general-polaris(国内站普通)/intl-sg-prod(国际站)
 - APIS所有日志类型：gz
-     * @param CloudProductRegion 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+     * @param CloudProductRegion 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT:  gz
@@ -218,8 +226,10 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
     }
 
     /**
-     * Get CLS目标地域 
+     * Get CLS目标地域
+- 支持地域参考  [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档    
      * @return ClsRegion CLS目标地域
+- 支持地域参考  [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档   
      */
     public String getClsRegion() {
         return this.ClsRegion;
@@ -227,7 +237,9 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
 
     /**
      * Set CLS目标地域
+- 支持地域参考  [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档   
      * @param ClsRegion CLS目标地域
+- 支持地域参考  [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档   
      */
     public void setClsRegion(String ClsRegion) {
         this.ClsRegion = ClsRegion;
@@ -266,24 +278,26 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志配置拓展信息， 一般用于存储额外的日志投递配置 
-     * @return Extend 日志配置拓展信息， 一般用于存储额外的日志投递配置
+     * Get 日志配置扩展信息， 一般用于存储额外的日志投递配置 
+     * @return Extend 日志配置扩展信息， 一般用于存储额外的日志投递配置
      */
     public String getExtend() {
         return this.Extend;
     }
 
     /**
-     * Set 日志配置拓展信息， 一般用于存储额外的日志投递配置
-     * @param Extend 日志配置拓展信息， 一般用于存储额外的日志投递配置
+     * Set 日志配置扩展信息， 一般用于存储额外的日志投递配置
+     * @param Extend 日志配置扩展信息， 一般用于存储额外的日志投递配置
      */
     public void setExtend(String Extend) {
         this.Extend = Extend;
     }
 
     /**
-     * Get 日志集id 
+     * Get 日志集id
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。 
      * @return LogsetId 日志集id
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      */
     public String getLogsetId() {
         return this.LogsetId;
@@ -291,15 +305,19 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
 
     /**
      * Set 日志集id
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      * @param LogsetId 日志集id
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 日志主题id 
+     * Get 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
      * @return TopicId 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -307,7 +325,9 @@ public class CreateCloudProductLogCollectionRequest extends AbstractModel {
 
     /**
      * Set 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param TopicId 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

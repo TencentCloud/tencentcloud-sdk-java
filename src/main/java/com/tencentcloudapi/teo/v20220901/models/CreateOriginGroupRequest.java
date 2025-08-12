@@ -31,6 +31,13 @@ public class CreateOriginGroupRequest extends AbstractModel {
     private String ZoneId;
 
     /**
+    * 源站记录信息，此参数必填。
+    */
+    @SerializedName("Records")
+    @Expose
+    private OriginRecord [] Records;
+
+    /**
     * 源站组名称，可输入1 - 200个字符，允许的字符为 a - z, A - Z, 0 - 9, _, - 。
     */
     @SerializedName("Name")
@@ -45,13 +52,6 @@ public class CreateOriginGroupRequest extends AbstractModel {
     @SerializedName("Type")
     @Expose
     private String Type;
-
-    /**
-    * 源站记录信息，此参数必填。
-    */
-    @SerializedName("Records")
-    @Expose
-    private OriginRecord [] Records;
 
     /**
     * 回源 Host Header，仅 Type = HTTP 时传入生效，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。
@@ -74,6 +74,22 @@ public class CreateOriginGroupRequest extends AbstractModel {
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get 源站记录信息，此参数必填。 
+     * @return Records 源站记录信息，此参数必填。
+     */
+    public OriginRecord [] getRecords() {
+        return this.Records;
+    }
+
+    /**
+     * Set 源站记录信息，此参数必填。
+     * @param Records 源站记录信息，此参数必填。
+     */
+    public void setRecords(OriginRecord [] Records) {
+        this.Records = Records;
     }
 
     /**
@@ -117,22 +133,6 @@ public class CreateOriginGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 源站记录信息，此参数必填。 
-     * @return Records 源站记录信息，此参数必填。
-     */
-    public OriginRecord [] getRecords() {
-        return this.Records;
-    }
-
-    /**
-     * Set 源站记录信息，此参数必填。
-     * @param Records 源站记录信息，此参数必填。
-     */
-    public void setRecords(OriginRecord [] Records) {
-        this.Records = Records;
-    }
-
-    /**
      * Get 回源 Host Header，仅 Type = HTTP 时传入生效，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。 
      * @return HostHeader 回源 Host Header，仅 Type = HTTP 时传入生效，规则引擎修改 Host Header 配置优先级高于源站组的 Host Header。
      */
@@ -159,17 +159,17 @@ public class CreateOriginGroupRequest extends AbstractModel {
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
-        }
         if (source.Records != null) {
             this.Records = new OriginRecord[source.Records.length];
             for (int i = 0; i < source.Records.length; i++) {
                 this.Records[i] = new OriginRecord(source.Records[i]);
             }
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
         if (source.HostHeader != null) {
             this.HostHeader = new String(source.HostHeader);
@@ -182,9 +182,9 @@ public class CreateOriginGroupRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamArrayObj(map, prefix + "Records.", this.Records);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamArrayObj(map, prefix + "Records.", this.Records);
         this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
 
     }

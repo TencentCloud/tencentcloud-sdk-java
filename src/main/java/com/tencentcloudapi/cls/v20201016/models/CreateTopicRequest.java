@@ -25,6 +25,7 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
     * 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
     */
     @SerializedName("LogsetId")
     @Expose
@@ -32,6 +33,11 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
     * 日志主题名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+
     */
     @SerializedName("TopicName")
     @Expose
@@ -122,8 +128,10 @@ public class CreateTopicRequest extends AbstractModel {
     private TopicExtendInfo Extends;
 
     /**
-     * Get 日志集ID 
+     * Get 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。 
      * @return LogsetId 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
      */
     public String getLogsetId() {
         return this.LogsetId;
@@ -131,15 +139,27 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
      * Set 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
      * @param LogsetId 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 日志主题名称 
+     * Get 日志主题名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+ 
      * @return TopicName 日志主题名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+
      */
     public String getTopicName() {
         return this.TopicName;
@@ -147,7 +167,17 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
      * Set 日志主题名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+
      * @param TopicName 日志主题名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

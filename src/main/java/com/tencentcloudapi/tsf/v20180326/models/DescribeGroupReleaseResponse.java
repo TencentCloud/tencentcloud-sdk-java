@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGroupReleaseResponse extends AbstractModel {
 
     /**
-    * 部署组发布的相关信息
+    * 部署组发布的相关信息。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeGroupReleaseResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 部署组发布的相关信息 
-     * @return Result 部署组发布的相关信息
+     * Get 部署组发布的相关信息。 
+     * @return Result 部署组发布的相关信息。
      */
     public GroupRelease getResult() {
         return this.Result;
     }
 
     /**
-     * Set 部署组发布的相关信息
-     * @param Result 部署组发布的相关信息
+     * Set 部署组发布的相关信息。
+     * @param Result 部署组发布的相关信息。
      */
     public void setResult(GroupRelease Result) {
         this.Result = Result;

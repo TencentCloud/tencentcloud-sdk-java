@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class ModifyTaskRequest extends AbstractModel {
 
     /**
-    * 任务ID
+    * 任务ID。在任务管理列表页面第一列查看任务ID。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务名称
+    * 任务名称，长度限制为64字符。在任务管理列表页面第一列或是任务基本信息页查看任务名称。
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 任务类型
+    * 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 任务内容
+    * 任务内容，长度限制为 65536 字节
     */
     @SerializedName("TaskContent")
     @Expose
     private String TaskContent;
 
     /**
-    * 任务执行类型
+    * 任务执行方式，枚举值。unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
     */
     @SerializedName("ExecuteType")
     @Expose
@@ -66,21 +66,21 @@ public class ModifyTaskRequest extends AbstractModel {
     private TaskRule TaskRule;
 
     /**
-    * 超时时间，单位 ms
+    * 超时时间，取值大于0，单位：毫秒（ms）
     */
     @SerializedName("TimeOut")
     @Expose
     private Long TimeOut;
 
     /**
-    * 分组ID
+    * 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 分片数量
+    * 分片数量，取值范围2~1000
     */
     @SerializedName("ShardCount")
     @Expose
@@ -108,21 +108,21 @@ public class ModifyTaskRequest extends AbstractModel {
     private String SuccessOperator;
 
     /**
-    * 判断任务成功率的阈值
+    * 判断任务成功率的阈值，取值范围：1-100，单位：百分比（%）
     */
     @SerializedName("SuccessRatio")
     @Expose
     private Long SuccessRatio;
 
     /**
-    * 重试次数
+    * 重试次数，取值范围 0 - 10，单位：次
     */
     @SerializedName("RetryCount")
     @Expose
     private Long RetryCount;
 
     /**
-    * 重试间隔
+    * 重试间隔，取值范围 0-600，单位：秒（s）
     */
     @SerializedName("RetryInterval")
     @Expose
@@ -136,87 +136,87 @@ public class ModifyTaskRequest extends AbstractModel {
     private String TaskArgument;
 
     /**
-    * 无
+    * 数据集列表。
     */
     @SerializedName("ProgramIdList")
     @Expose
     private String [] ProgramIdList;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 任务ID。在任务管理列表页面第一列查看任务ID。 
+     * @return TaskId 任务ID。在任务管理列表页面第一列查看任务ID。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 任务ID。在任务管理列表页面第一列查看任务ID。
+     * @param TaskId 任务ID。在任务管理列表页面第一列查看任务ID。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务名称 
-     * @return TaskName 任务名称
+     * Get 任务名称，长度限制为64字符。在任务管理列表页面第一列或是任务基本信息页查看任务名称。 
+     * @return TaskName 任务名称，长度限制为64字符。在任务管理列表页面第一列或是任务基本信息页查看任务名称。
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名称
-     * @param TaskName 任务名称
+     * Set 任务名称，长度限制为64字符。在任务管理列表页面第一列或是任务基本信息页查看任务名称。
+     * @param TaskName 任务名称，长度限制为64字符。在任务管理列表页面第一列或是任务基本信息页查看任务名称。
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 任务类型 
-     * @return TaskType 任务类型
+     * Get 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务 
+     * @return TaskType 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型
-     * @param TaskType 任务类型
+     * Set 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
+     * @param TaskType 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 任务内容 
-     * @return TaskContent 任务内容
+     * Get 任务内容，长度限制为 65536 字节 
+     * @return TaskContent 任务内容，长度限制为 65536 字节
      */
     public String getTaskContent() {
         return this.TaskContent;
     }
 
     /**
-     * Set 任务内容
-     * @param TaskContent 任务内容
+     * Set 任务内容，长度限制为 65536 字节
+     * @param TaskContent 任务内容，长度限制为 65536 字节
      */
     public void setTaskContent(String TaskContent) {
         this.TaskContent = TaskContent;
     }
 
     /**
-     * Get 任务执行类型 
-     * @return ExecuteType 任务执行类型
+     * Get 任务执行方式，枚举值。unicast：随机单节点执行，broadcast：广播执行，shard：分片执行 
+     * @return ExecuteType 任务执行方式，枚举值。unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
      */
     public String getExecuteType() {
         return this.ExecuteType;
     }
 
     /**
-     * Set 任务执行类型
-     * @param ExecuteType 任务执行类型
+     * Set 任务执行方式，枚举值。unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
+     * @param ExecuteType 任务执行方式，枚举值。unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
      */
     public void setExecuteType(String ExecuteType) {
         this.ExecuteType = ExecuteType;
@@ -239,48 +239,48 @@ public class ModifyTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 超时时间，单位 ms 
-     * @return TimeOut 超时时间，单位 ms
+     * Get 超时时间，取值大于0，单位：毫秒（ms） 
+     * @return TimeOut 超时时间，取值大于0，单位：毫秒（ms）
      */
     public Long getTimeOut() {
         return this.TimeOut;
     }
 
     /**
-     * Set 超时时间，单位 ms
-     * @param TimeOut 超时时间，单位 ms
+     * Set 超时时间，取值大于0，单位：毫秒（ms）
+     * @param TimeOut 超时时间，取值大于0，单位：毫秒（ms）
      */
     public void setTimeOut(Long TimeOut) {
         this.TimeOut = TimeOut;
     }
 
     /**
-     * Get 分组ID 
-     * @return GroupId 分组ID
+     * Get 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。 
+     * @return GroupId 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 分组ID
-     * @param GroupId 分组ID
+     * Set 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
+     * @param GroupId 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 分片数量 
-     * @return ShardCount 分片数量
+     * Get 分片数量，取值范围2~1000 
+     * @return ShardCount 分片数量，取值范围2~1000
      */
     public Long getShardCount() {
         return this.ShardCount;
     }
 
     /**
-     * Set 分片数量
-     * @param ShardCount 分片数量
+     * Set 分片数量，取值范围2~1000
+     * @param ShardCount 分片数量，取值范围2~1000
      */
     public void setShardCount(Long ShardCount) {
         this.ShardCount = ShardCount;
@@ -335,48 +335,48 @@ public class ModifyTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 判断任务成功率的阈值 
-     * @return SuccessRatio 判断任务成功率的阈值
+     * Get 判断任务成功率的阈值，取值范围：1-100，单位：百分比（%） 
+     * @return SuccessRatio 判断任务成功率的阈值，取值范围：1-100，单位：百分比（%）
      */
     public Long getSuccessRatio() {
         return this.SuccessRatio;
     }
 
     /**
-     * Set 判断任务成功率的阈值
-     * @param SuccessRatio 判断任务成功率的阈值
+     * Set 判断任务成功率的阈值，取值范围：1-100，单位：百分比（%）
+     * @param SuccessRatio 判断任务成功率的阈值，取值范围：1-100，单位：百分比（%）
      */
     public void setSuccessRatio(Long SuccessRatio) {
         this.SuccessRatio = SuccessRatio;
     }
 
     /**
-     * Get 重试次数 
-     * @return RetryCount 重试次数
+     * Get 重试次数，取值范围 0 - 10，单位：次 
+     * @return RetryCount 重试次数，取值范围 0 - 10，单位：次
      */
     public Long getRetryCount() {
         return this.RetryCount;
     }
 
     /**
-     * Set 重试次数
-     * @param RetryCount 重试次数
+     * Set 重试次数，取值范围 0 - 10，单位：次
+     * @param RetryCount 重试次数，取值范围 0 - 10，单位：次
      */
     public void setRetryCount(Long RetryCount) {
         this.RetryCount = RetryCount;
     }
 
     /**
-     * Get 重试间隔 
-     * @return RetryInterval 重试间隔
+     * Get 重试间隔，取值范围 0-600，单位：秒（s） 
+     * @return RetryInterval 重试间隔，取值范围 0-600，单位：秒（s）
      */
     public Long getRetryInterval() {
         return this.RetryInterval;
     }
 
     /**
-     * Set 重试间隔
-     * @param RetryInterval 重试间隔
+     * Set 重试间隔，取值范围 0-600，单位：秒（s）
+     * @param RetryInterval 重试间隔，取值范围 0-600，单位：秒（s）
      */
     public void setRetryInterval(Long RetryInterval) {
         this.RetryInterval = RetryInterval;
@@ -399,16 +399,16 @@ public class ModifyTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return ProgramIdList 无
+     * Get 数据集列表。 
+     * @return ProgramIdList 数据集列表。
      */
     public String [] getProgramIdList() {
         return this.ProgramIdList;
     }
 
     /**
-     * Set 无
-     * @param ProgramIdList 无
+     * Set 数据集列表。
+     * @param ProgramIdList 数据集列表。
      */
     public void setProgramIdList(String [] ProgramIdList) {
         this.ProgramIdList = ProgramIdList;

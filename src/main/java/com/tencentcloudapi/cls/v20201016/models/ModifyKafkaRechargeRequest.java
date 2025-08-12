@@ -24,14 +24,18 @@ import java.util.HashMap;
 public class ModifyKafkaRechargeRequest extends AbstractModel {
 
     /**
-    * Kafka导入配置ID
+    * 导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 导入CLS目标topic ID
+    * 导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
@@ -53,6 +57,7 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
 
     /**
     * 腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
     */
     @SerializedName("KafkaInstance")
     @Expose
@@ -80,7 +85,9 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
     private KafkaProtocolInfo Protocol;
 
     /**
-    * 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
+    * 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
+
+- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
     */
     @SerializedName("UserKafkaTopics")
     @Expose
@@ -101,39 +108,55 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
-    * 导入控制，1：暂停；2：继续。
+    * 导入控制，1：暂停；2：启动。
     */
     @SerializedName("StatusControl")
     @Expose
     private Long StatusControl;
 
     /**
-     * Get Kafka导入配置ID 
-     * @return Id Kafka导入配置ID
+     * Get 导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。 
+     * @return Id 导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Kafka导入配置ID
-     * @param Id Kafka导入配置ID
+     * Set 导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+     * @param Id 导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 导入CLS目标topic ID 
-     * @return TopicId 导入CLS目标topic ID
+     * Get 导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。 
+     * @return TopicId 导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 导入CLS目标topic ID
-     * @param TopicId 导入CLS目标topic ID
+     * Set 导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
+     * @param TopicId 导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -172,8 +195,10 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get 腾讯云CKafka实例ID，KafkaType为0时必填。 
+     * Get 腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。 
      * @return KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
@@ -181,7 +206,9 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
 
     /**
      * Set 腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      * @param KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
@@ -236,16 +263,24 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开 
-     * @return UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
+     * Get 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
+
+- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。 
+     * @return UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
+
+- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
      */
     public String getUserKafkaTopics() {
         return this.UserKafkaTopics;
     }
 
     /**
-     * Set 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
-     * @param UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
+     * Set 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
+
+- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
+     * @param UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开。
+
+- Kafka类型为腾讯云CKafka时：通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获取TopicName。
      */
     public void setUserKafkaTopics(String UserKafkaTopics) {
         this.UserKafkaTopics = UserKafkaTopics;
@@ -284,16 +319,16 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
     }
 
     /**
-     * Get 导入控制，1：暂停；2：继续。 
-     * @return StatusControl 导入控制，1：暂停；2：继续。
+     * Get 导入控制，1：暂停；2：启动。 
+     * @return StatusControl 导入控制，1：暂停；2：启动。
      */
     public Long getStatusControl() {
         return this.StatusControl;
     }
 
     /**
-     * Set 导入控制，1：暂停；2：继续。
-     * @param StatusControl 导入控制，1：暂停；2：继续。
+     * Set 导入控制，1：暂停；2：启动。
+     * @param StatusControl 导入控制，1：暂停；2：启动。
      */
     public void setStatusControl(Long StatusControl) {
         this.StatusControl = StatusControl;

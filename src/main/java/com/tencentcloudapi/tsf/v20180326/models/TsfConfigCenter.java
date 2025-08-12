@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class TsfConfigCenter extends AbstractModel {
 
     /**
-    * 配置中心类型
+    * 配置中心类型。
+- SHARE：共享型
+- EXCLUSIVE：独占型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigType")
@@ -80,9 +82,13 @@ public class TsfConfigCenter extends AbstractModel {
     private String TargetVersion;
 
     /**
-     * Get 配置中心类型
+     * Get 配置中心类型。
+- SHARE：共享型
+- EXCLUSIVE：独占型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConfigType 配置中心类型
+     * @return ConfigType 配置中心类型。
+- SHARE：共享型
+- EXCLUSIVE：独占型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigType() {
@@ -90,9 +96,13 @@ public class TsfConfigCenter extends AbstractModel {
     }
 
     /**
-     * Set 配置中心类型
+     * Set 配置中心类型。
+- SHARE：共享型
+- EXCLUSIVE：独占型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConfigType 配置中心类型
+     * @param ConfigType 配置中心类型。
+- SHARE：共享型
+- EXCLUSIVE：独占型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigType(String ConfigType) {

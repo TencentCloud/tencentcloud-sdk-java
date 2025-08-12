@@ -939,6 +939,28 @@ MCU 混流转码费用，请参考文档：[云端混流转码计费说明](http
     }
 
     /**
+     *语音合成接口
+     * @param req TextToSpeechRequest
+     * @return TextToSpeechResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToSpeechResponse TextToSpeech(TextToSpeechRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToSpeech", TextToSpeechResponse.class);
+    }
+
+    /**
+     *SSE流式文本转语音
+     * @param req TextToSpeechSSERequest
+     * @return TextToSpeechSSEResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToSpeechSSEResponse TextToSpeechSSE(TextToSpeechSSERequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToSpeechSSE", TextToSpeechSSEResponse.class);
+    }
+
+    /**
      *更新AIConversation参数
      * @param req UpdateAIConversationRequest
      * @return UpdateAIConversationResponse
@@ -982,6 +1004,17 @@ MCU 混流转码费用，请参考文档：[云端混流转码计费说明](http
     public UpdateVoicePrintResponse UpdateVoicePrint(UpdateVoicePrintRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateVoicePrint", UpdateVoicePrintResponse.class);
+    }
+
+    /**
+     *声音克隆
+     * @param req VoiceCloneRequest
+     * @return VoiceCloneResponse
+     * @throws TencentCloudSDKException
+     */
+    public VoiceCloneResponse VoiceClone(VoiceCloneRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VoiceClone", VoiceCloneResponse.class);
     }
 
 }

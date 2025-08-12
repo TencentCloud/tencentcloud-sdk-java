@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribePublicConfigReleaseLogsRequest extends AbstractModel {
 
     /**
-    * 命名空间ID，不传入时查询全量
+    * 命名空间ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * 偏移量，默认为0
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页条数，默认为20
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 命名空间ID，不传入时查询全量 
-     * @return NamespaceId 命名空间ID，不传入时查询全量
+     * Get 命名空间ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。 
+     * @return NamespaceId 命名空间ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间ID，不传入时查询全量
-     * @param NamespaceId 命名空间ID，不传入时查询全量
+     * Set 命名空间ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
+     * @param NamespaceId 命名空间ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页条数，默认为20 
-     * @return Limit 每页条数，默认为20
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条数，默认为20
-     * @param Limit 每页条数，默认为20
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

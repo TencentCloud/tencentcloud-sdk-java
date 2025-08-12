@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RollbackConfigRequest extends AbstractModel {
 
     /**
-    * 配置项发布历史ID
+    * 配置项发布历史ID。该参数可以通过调用 [DescribeConfigReleaseLogs](https://cloud.tencent.com/document/product/649/38343) 的返回值中的 ConfigReleaseLogId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
     */
     @SerializedName("ConfigReleaseLogId")
     @Expose
     private String ConfigReleaseLogId;
 
     /**
-    * 回滚描述
+    * 回滚描述，最多支持200个字符。
     */
     @SerializedName("ReleaseDesc")
     @Expose
     private String ReleaseDesc;
 
     /**
-     * Get 配置项发布历史ID 
-     * @return ConfigReleaseLogId 配置项发布历史ID
+     * Get 配置项发布历史ID。该参数可以通过调用 [DescribeConfigReleaseLogs](https://cloud.tencent.com/document/product/649/38343) 的返回值中的 ConfigReleaseLogId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。 
+     * @return ConfigReleaseLogId 配置项发布历史ID。该参数可以通过调用 [DescribeConfigReleaseLogs](https://cloud.tencent.com/document/product/649/38343) 的返回值中的 ConfigReleaseLogId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
      */
     public String getConfigReleaseLogId() {
         return this.ConfigReleaseLogId;
     }
 
     /**
-     * Set 配置项发布历史ID
-     * @param ConfigReleaseLogId 配置项发布历史ID
+     * Set 配置项发布历史ID。该参数可以通过调用 [DescribeConfigReleaseLogs](https://cloud.tencent.com/document/product/649/38343) 的返回值中的 ConfigReleaseLogId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
+     * @param ConfigReleaseLogId 配置项发布历史ID。该参数可以通过调用 [DescribeConfigReleaseLogs](https://cloud.tencent.com/document/product/649/38343) 的返回值中的 ConfigReleaseLogId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
      */
     public void setConfigReleaseLogId(String ConfigReleaseLogId) {
         this.ConfigReleaseLogId = ConfigReleaseLogId;
     }
 
     /**
-     * Get 回滚描述 
-     * @return ReleaseDesc 回滚描述
+     * Get 回滚描述，最多支持200个字符。 
+     * @return ReleaseDesc 回滚描述，最多支持200个字符。
      */
     public String getReleaseDesc() {
         return this.ReleaseDesc;
     }
 
     /**
-     * Set 回滚描述
-     * @param ReleaseDesc 回滚描述
+     * Set 回滚描述，最多支持200个字符。
+     * @param ReleaseDesc 回滚描述，最多支持200个字符。
      */
     public void setReleaseDesc(String ReleaseDesc) {
         this.ReleaseDesc = ReleaseDesc;

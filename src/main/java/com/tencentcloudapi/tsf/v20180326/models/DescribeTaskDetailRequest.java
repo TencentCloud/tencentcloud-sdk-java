@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeTaskDetailRequest extends AbstractModel {
 
     /**
-    * 任务ID
+    * 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列和任务基本信息页查看任务ID。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务历史ID
+    * 任务历史ID。查询任务列表 [DescribeTaskRecords](https://cloud.tencent.com/document/api/649/56136) 返回值字段 TaskLogId
     */
     @SerializedName("TaskLogId")
     @Expose
     private String TaskLogId;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列和任务基本信息页查看任务ID。 
+     * @return TaskId 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列和任务基本信息页查看任务ID。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列和任务基本信息页查看任务ID。
+     * @param TaskId 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列和任务基本信息页查看任务ID。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务历史ID 
-     * @return TaskLogId 任务历史ID
+     * Get 任务历史ID。查询任务列表 [DescribeTaskRecords](https://cloud.tencent.com/document/api/649/56136) 返回值字段 TaskLogId 
+     * @return TaskLogId 任务历史ID。查询任务列表 [DescribeTaskRecords](https://cloud.tencent.com/document/api/649/56136) 返回值字段 TaskLogId
      */
     public String getTaskLogId() {
         return this.TaskLogId;
     }
 
     /**
-     * Set 任务历史ID
-     * @param TaskLogId 任务历史ID
+     * Set 任务历史ID。查询任务列表 [DescribeTaskRecords](https://cloud.tencent.com/document/api/649/56136) 返回值字段 TaskLogId
+     * @param TaskLogId 任务历史ID。查询任务列表 [DescribeTaskRecords](https://cloud.tencent.com/document/api/649/56136) 返回值字段 TaskLogId
      */
     public void setTaskLogId(String TaskLogId) {
         this.TaskLogId = TaskLogId;

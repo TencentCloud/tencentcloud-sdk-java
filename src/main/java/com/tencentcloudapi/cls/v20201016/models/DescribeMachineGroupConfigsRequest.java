@@ -25,14 +25,17 @@ public class DescribeMachineGroupConfigsRequest extends AbstractModel {
 
     /**
     * 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get 机器组ID 
+     * Get 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。 
      * @return GroupId 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -40,7 +43,9 @@ public class DescribeMachineGroupConfigsRequest extends AbstractModel {
 
     /**
      * Set 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      * @param GroupId 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

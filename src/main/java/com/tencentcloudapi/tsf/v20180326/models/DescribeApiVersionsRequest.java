@@ -24,69 +24,104 @@ import java.util.HashMap;
 public class DescribeApiVersionsRequest extends AbstractModel {
 
     /**
-    * 微服务ID
+    * 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
     */
     @SerializedName("MicroserviceId")
     @Expose
     private String MicroserviceId;
 
     /**
-    * API 请求路径
+    * API请求路径。
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 请求方法
+    * API请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-     * Get 微服务ID 
-     * @return MicroserviceId 微服务ID
+     * Get 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。 
+     * @return MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public String getMicroserviceId() {
         return this.MicroserviceId;
     }
 
     /**
-     * Set 微服务ID
-     * @param MicroserviceId 微服务ID
+     * Set 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public void setMicroserviceId(String MicroserviceId) {
         this.MicroserviceId = MicroserviceId;
     }
 
     /**
-     * Get API 请求路径 
-     * @return Path API 请求路径
+     * Get API请求路径。 
+     * @return Path API请求路径。
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set API 请求路径
-     * @param Path API 请求路径
+     * Set API请求路径。
+     * @param Path API请求路径。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 请求方法 
-     * @return Method 请求方法
+     * Get API请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS 
+     * @return Method API请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 请求方法
-     * @param Method 请求方法
+     * Set API请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS
+     * @param Method API请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS
      */
     public void setMethod(String Method) {
         this.Method = Method;

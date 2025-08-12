@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RevocationConfigRequest extends AbstractModel {
 
     /**
-    * 配置项发布ID
+    * 配置项发布ID。该参数可以通过调用 [DescribeConfigReleases](https://cloud.tencent.com/document/product/649/38342) 的返回值中的 ConfigReleaseId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
     */
     @SerializedName("ConfigReleaseId")
     @Expose
     private String ConfigReleaseId;
 
     /**
-     * Get 配置项发布ID 
-     * @return ConfigReleaseId 配置项发布ID
+     * Get 配置项发布ID。该参数可以通过调用 [DescribeConfigReleases](https://cloud.tencent.com/document/product/649/38342) 的返回值中的 ConfigReleaseId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。 
+     * @return ConfigReleaseId 配置项发布ID。该参数可以通过调用 [DescribeConfigReleases](https://cloud.tencent.com/document/product/649/38342) 的返回值中的 ConfigReleaseId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
      */
     public String getConfigReleaseId() {
         return this.ConfigReleaseId;
     }
 
     /**
-     * Set 配置项发布ID
-     * @param ConfigReleaseId 配置项发布ID
+     * Set 配置项发布ID。该参数可以通过调用 [DescribeConfigReleases](https://cloud.tencent.com/document/product/649/38342) 的返回值中的 ConfigReleaseId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
+     * @param ConfigReleaseId 配置项发布ID。该参数可以通过调用 [DescribeConfigReleases](https://cloud.tencent.com/document/product/649/38342) 的返回值中的 ConfigReleaseId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
      */
     public void setConfigReleaseId(String ConfigReleaseId) {
         this.ConfigReleaseId = ConfigReleaseId;

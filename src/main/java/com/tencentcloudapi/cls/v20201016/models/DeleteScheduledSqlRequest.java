@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteScheduledSqlRequest extends AbstractModel {
 
     /**
-    * 任务ID
+    * 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 源日志主题ID
+    * 源日志主题ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
     */
     @SerializedName("SrcTopicId")
     @Expose
     private String SrcTopicId;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取 
+     * @return TaskId 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
+     * @param TaskId 任务ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 源日志主题ID 
-     * @return SrcTopicId 源日志主题ID
+     * Get 源日志主题ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取 
+     * @return SrcTopicId 源日志主题ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
      */
     public String getSrcTopicId() {
         return this.SrcTopicId;
     }
 
     /**
-     * Set 源日志主题ID
-     * @param SrcTopicId 源日志主题ID
+     * Set 源日志主题ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
+     * @param SrcTopicId 源日志主题ID，通过[获取定时SQL分析任务列表](https://cloud.tencent.com/document/product/614/95519)获取
      */
     public void setSrcTopicId(String SrcTopicId) {
         this.SrcTopicId = SrcTopicId;

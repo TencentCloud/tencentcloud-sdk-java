@@ -25,14 +25,17 @@ public class DeleteConfigExtraRequest extends AbstractModel {
 
     /**
     * 特殊采集规则扩展配置ID
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)特殊采集规则扩展配置ID。
     */
     @SerializedName("ConfigExtraId")
     @Expose
     private String ConfigExtraId;
 
     /**
-     * Get 特殊采集规则扩展配置ID 
+     * Get 特殊采集规则扩展配置ID
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)特殊采集规则扩展配置ID。 
      * @return ConfigExtraId 特殊采集规则扩展配置ID
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)特殊采集规则扩展配置ID。
      */
     public String getConfigExtraId() {
         return this.ConfigExtraId;
@@ -40,7 +43,9 @@ public class DeleteConfigExtraRequest extends AbstractModel {
 
     /**
      * Set 特殊采集规则扩展配置ID
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)特殊采集规则扩展配置ID。
      * @param ConfigExtraId 特殊采集规则扩展配置ID
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)特殊采集规则扩展配置ID。
      */
     public void setConfigExtraId(String ConfigExtraId) {
         this.ConfigExtraId = ConfigExtraId;

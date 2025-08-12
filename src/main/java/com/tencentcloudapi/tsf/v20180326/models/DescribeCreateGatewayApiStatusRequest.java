@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeCreateGatewayApiStatusRequest extends AbstractModel {
 
     /**
-    * 所属分组ID
+    * 网关分组ID。该参数可以通过调用 [DescribeApiGroups](https://cloud.tencent.com/document/product/649/50636) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app?tab=middleware&subTab=app)-网关应用详情-Java网关实例-实例详情-分组管理页查看；也可以调用[CreateApiGroup](https://cloud.tencent.com/document/product/649/50641)创建新的网关分组。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 微服务ID
+    * 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
     */
     @SerializedName("MicroserviceId")
     @Expose
     private String MicroserviceId;
 
     /**
-     * Get 所属分组ID 
-     * @return GroupId 所属分组ID
+     * Get 网关分组ID。该参数可以通过调用 [DescribeApiGroups](https://cloud.tencent.com/document/product/649/50636) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app?tab=middleware&subTab=app)-网关应用详情-Java网关实例-实例详情-分组管理页查看；也可以调用[CreateApiGroup](https://cloud.tencent.com/document/product/649/50641)创建新的网关分组。 
+     * @return GroupId 网关分组ID。该参数可以通过调用 [DescribeApiGroups](https://cloud.tencent.com/document/product/649/50636) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app?tab=middleware&subTab=app)-网关应用详情-Java网关实例-实例详情-分组管理页查看；也可以调用[CreateApiGroup](https://cloud.tencent.com/document/product/649/50641)创建新的网关分组。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 所属分组ID
-     * @param GroupId 所属分组ID
+     * Set 网关分组ID。该参数可以通过调用 [DescribeApiGroups](https://cloud.tencent.com/document/product/649/50636) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app?tab=middleware&subTab=app)-网关应用详情-Java网关实例-实例详情-分组管理页查看；也可以调用[CreateApiGroup](https://cloud.tencent.com/document/product/649/50641)创建新的网关分组。
+     * @param GroupId 网关分组ID。该参数可以通过调用 [DescribeApiGroups](https://cloud.tencent.com/document/product/649/50636) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app?tab=middleware&subTab=app)-网关应用详情-Java网关实例-实例详情-分组管理页查看；也可以调用[CreateApiGroup](https://cloud.tencent.com/document/product/649/50641)创建新的网关分组。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 微服务ID 
-     * @return MicroserviceId 微服务ID
+     * Get 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。 
+     * @return MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public String getMicroserviceId() {
         return this.MicroserviceId;
     }
 
     /**
-     * Set 微服务ID
-     * @param MicroserviceId 微服务ID
+     * Set 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public void setMicroserviceId(String MicroserviceId) {
         this.MicroserviceId = MicroserviceId;

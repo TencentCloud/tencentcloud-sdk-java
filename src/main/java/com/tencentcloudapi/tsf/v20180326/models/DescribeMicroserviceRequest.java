@@ -24,115 +24,145 @@ import java.util.HashMap;
 public class DescribeMicroserviceRequest extends AbstractModel {
 
     /**
-    * 微服务ID
+    * 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
     */
     @SerializedName("MicroserviceId")
     @Expose
     private String MicroserviceId;
 
     /**
-    * 偏移量
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页个数
+    * 返回数量，默认为20，最大值为50。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 可选，根据部署组ID进行过滤
+    * 部署组ID。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
     */
     @SerializedName("GroupIds")
     @Expose
     private String [] GroupIds;
 
     /**
-    * 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
+    * 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"LanIp","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- id：实例ID
+- name：实例名
+- lan-ip：内网IP
+- node-ip：所在节点IP
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 微服务ID 
-     * @return MicroserviceId 微服务ID
+     * Get 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。 
+     * @return MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public String getMicroserviceId() {
         return this.MicroserviceId;
     }
 
     /**
-     * Set 微服务ID
-     * @param MicroserviceId 微服务ID
+     * Set 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public void setMicroserviceId(String MicroserviceId) {
         this.MicroserviceId = MicroserviceId;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页个数 
-     * @return Limit 分页个数
+     * Get 返回数量，默认为20，最大值为50。 
+     * @return Limit 返回数量，默认为20，最大值为50。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页个数
-     * @param Limit 分页个数
+     * Set 返回数量，默认为20，最大值为50。
+     * @param Limit 返回数量，默认为20，最大值为50。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 可选，根据部署组ID进行过滤 
-     * @return GroupIds 可选，根据部署组ID进行过滤
+     * Get 部署组ID。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。 
+     * @return GroupIds 部署组ID。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
      */
     public String [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 可选，根据部署组ID进行过滤
-     * @param GroupIds 可选，根据部署组ID进行过滤
+     * Set 部署组ID。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
+     * @param GroupIds 部署组ID。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip） 
-     * @return Filters 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
+     * Get 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"LanIp","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- id：实例ID
+- name：实例名
+- lan-ip：内网IP
+- node-ip：所在节点IP 
+     * @return Filters 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"LanIp","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- id：实例ID
+- name：实例名
+- lan-ip：内网IP
+- node-ip：所在节点IP
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
-     * @param Filters 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
+     * Set 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"LanIp","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- id：实例ID
+- name：实例名
+- lan-ip：内网IP
+- node-ip：所在节点IP
+     * @param Filters 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"LanIp","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- id：实例ID
+- name：实例名
+- lan-ip：内网IP
+- node-ip：所在节点IP
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

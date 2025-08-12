@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class ModifyConsumerRequest extends AbstractModel {
 
     /**
-    * 投递任务绑定的日志主题 ID
+    * 投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
@@ -68,16 +70,24 @@ public class ModifyConsumerRequest extends AbstractModel {
     private Long Compression;
 
     /**
-     * Get 投递任务绑定的日志主题 ID 
-     * @return TopicId 投递任务绑定的日志主题 ID
+     * Get 投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。 
+     * @return TopicId 投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 投递任务绑定的日志主题 ID
-     * @param TopicId 投递任务绑定的日志主题 ID
+     * Set 投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * @param TopicId 投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

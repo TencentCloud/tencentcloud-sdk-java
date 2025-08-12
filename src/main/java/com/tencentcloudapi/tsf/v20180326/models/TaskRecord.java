@@ -38,7 +38,7 @@ public class TaskRecord extends AbstractModel {
     private String TaskType;
 
     /**
-    * 执行类型
+    * 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
     */
     @SerializedName("ExecuteType")
     @Expose
@@ -59,7 +59,7 @@ public class TaskRecord extends AbstractModel {
     private String GroupId;
 
     /**
-    * 超时时间
+    * 超时时间，单位：毫秒。
     */
     @SerializedName("TimeOut")
     @Expose
@@ -73,7 +73,7 @@ public class TaskRecord extends AbstractModel {
     private Long RetryCount;
 
     /**
-    * 重试间隔
+    * 重试间隔，单位：毫秒。
     */
     @SerializedName("RetryInterval")
     @Expose
@@ -87,7 +87,7 @@ public class TaskRecord extends AbstractModel {
     private TaskRule TaskRule;
 
     /**
-    * 是否启用任务,ENABLED/DISABLED
+    * 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
     */
     @SerializedName("TaskState")
     @Expose
@@ -150,7 +150,7 @@ public class TaskRecord extends AbstractModel {
     private String TaskLogId;
 
     /**
-    * 触发类型
+    * 触发类型，一共3种类型，WorkFlow：工作流触发，Cron：定时触发，FixRate：周期触发
     */
     @SerializedName("TriggerType")
     @Expose
@@ -196,16 +196,16 @@ public class TaskRecord extends AbstractModel {
     }
 
     /**
-     * Get 执行类型 
-     * @return ExecuteType 执行类型
+     * Get 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行 
+     * @return ExecuteType 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
      */
     public String getExecuteType() {
         return this.ExecuteType;
     }
 
     /**
-     * Set 执行类型
-     * @param ExecuteType 执行类型
+     * Set 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
+     * @param ExecuteType 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
      */
     public void setExecuteType(String ExecuteType) {
         this.ExecuteType = ExecuteType;
@@ -244,16 +244,16 @@ public class TaskRecord extends AbstractModel {
     }
 
     /**
-     * Get 超时时间 
-     * @return TimeOut 超时时间
+     * Get 超时时间，单位：毫秒。 
+     * @return TimeOut 超时时间，单位：毫秒。
      */
     public Long getTimeOut() {
         return this.TimeOut;
     }
 
     /**
-     * Set 超时时间
-     * @param TimeOut 超时时间
+     * Set 超时时间，单位：毫秒。
+     * @param TimeOut 超时时间，单位：毫秒。
      */
     public void setTimeOut(Long TimeOut) {
         this.TimeOut = TimeOut;
@@ -276,16 +276,16 @@ public class TaskRecord extends AbstractModel {
     }
 
     /**
-     * Get 重试间隔 
-     * @return RetryInterval 重试间隔
+     * Get 重试间隔，单位：毫秒。 
+     * @return RetryInterval 重试间隔，单位：毫秒。
      */
     public Long getRetryInterval() {
         return this.RetryInterval;
     }
 
     /**
-     * Set 重试间隔
-     * @param RetryInterval 重试间隔
+     * Set 重试间隔，单位：毫秒。
+     * @param RetryInterval 重试间隔，单位：毫秒。
      */
     public void setRetryInterval(Long RetryInterval) {
         this.RetryInterval = RetryInterval;
@@ -308,16 +308,16 @@ public class TaskRecord extends AbstractModel {
     }
 
     /**
-     * Get 是否启用任务,ENABLED/DISABLED 
-     * @return TaskState 是否启用任务,ENABLED/DISABLED
+     * Get 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用 
+     * @return TaskState 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
      */
     public String getTaskState() {
         return this.TaskState;
     }
 
     /**
-     * Set 是否启用任务,ENABLED/DISABLED
-     * @param TaskState 是否启用任务,ENABLED/DISABLED
+     * Set 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
+     * @param TaskState 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
      */
     public void setTaskState(String TaskState) {
         this.TaskState = TaskState;
@@ -452,16 +452,16 @@ public class TaskRecord extends AbstractModel {
     }
 
     /**
-     * Get 触发类型 
-     * @return TriggerType 触发类型
+     * Get 触发类型，一共3种类型，WorkFlow：工作流触发，Cron：定时触发，FixRate：周期触发 
+     * @return TriggerType 触发类型，一共3种类型，WorkFlow：工作流触发，Cron：定时触发，FixRate：周期触发
      */
     public String getTriggerType() {
         return this.TriggerType;
     }
 
     /**
-     * Set 触发类型
-     * @param TriggerType 触发类型
+     * Set 触发类型，一共3种类型，WorkFlow：工作流触发，Cron：定时触发，FixRate：周期触发
+     * @param TriggerType 触发类型，一共3种类型，WorkFlow：工作流触发，Cron：定时触发，FixRate：周期触发
      */
     public void setTriggerType(String TriggerType) {
         this.TriggerType = TriggerType;

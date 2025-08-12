@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeLaneRulesRequest extends AbstractModel {
 
     /**
-    * 每页展示的条数
+    * 返回数量，默认为20，最大值为500。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 翻页偏移量
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 搜索关键词
+    * 搜索关键词。
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 泳道规则ID（用于精确搜索）
+    * 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 无
+    * 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
     */
     @SerializedName("RuleIdList")
     @Expose
     private String [] RuleIdList;
 
     /**
-     * Get 每页展示的条数 
-     * @return Limit 每页展示的条数
+     * Get 返回数量，默认为20，最大值为500。 
+     * @return Limit 返回数量，默认为20，最大值为500。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页展示的条数
-     * @param Limit 每页展示的条数
+     * Set 返回数量，默认为20，最大值为500。
+     * @param Limit 返回数量，默认为20，最大值为500。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 翻页偏移量 
-     * @return Offset 翻页偏移量
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 翻页偏移量
-     * @param Offset 翻页偏移量
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 搜索关键词 
-     * @return SearchWord 搜索关键词
+     * Get 搜索关键词。 
+     * @return SearchWord 搜索关键词。
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 搜索关键词
-     * @param SearchWord 搜索关键词
+     * Set 搜索关键词。
+     * @param SearchWord 搜索关键词。
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 泳道规则ID（用于精确搜索） 
-     * @return RuleId 泳道规则ID（用于精确搜索）
+     * Get 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。 
+     * @return RuleId 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 泳道规则ID（用于精确搜索）
-     * @param RuleId 泳道规则ID（用于精确搜索）
+     * Set 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
+     * @param RuleId 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 无 
-     * @return RuleIdList 无
+     * Get 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。 
+     * @return RuleIdList 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
      */
     public String [] getRuleIdList() {
         return this.RuleIdList;
     }
 
     /**
-     * Set 无
-     * @param RuleIdList 无
+     * Set 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
+     * @param RuleIdList 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
      */
     public void setRuleIdList(String [] RuleIdList) {
         this.RuleIdList = RuleIdList;

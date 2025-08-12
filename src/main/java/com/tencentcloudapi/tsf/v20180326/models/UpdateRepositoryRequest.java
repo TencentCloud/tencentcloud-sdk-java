@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateRepositoryRequest extends AbstractModel {
 
     /**
-    * 仓库ID
+    * 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
     */
     @SerializedName("RepositoryId")
     @Expose
@@ -38,16 +38,16 @@ public class UpdateRepositoryRequest extends AbstractModel {
     private String RepositoryDesc;
 
     /**
-     * Get 仓库ID 
-     * @return RepositoryId 仓库ID
+     * Get 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看 
+     * @return RepositoryId 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public String getRepositoryId() {
         return this.RepositoryId;
     }
 
     /**
-     * Set 仓库ID
-     * @param RepositoryId 仓库ID
+     * Set 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
+     * @param RepositoryId 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public void setRepositoryId(String RepositoryId) {
         this.RepositoryId = RepositoryId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePublicConfigReleasesResponse extends AbstractModel {
 
     /**
-    * 公共配置发布信息
+    * 公共配置发布信息。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribePublicConfigReleasesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 公共配置发布信息 
-     * @return Result 公共配置发布信息
+     * Get 公共配置发布信息。 
+     * @return Result 公共配置发布信息。
      */
     public TsfPageConfigRelease getResult() {
         return this.Result;
     }
 
     /**
-     * Set 公共配置发布信息
-     * @param Result 公共配置发布信息
+     * Set 公共配置发布信息。
+     * @param Result 公共配置发布信息。
      */
     public void setResult(TsfPageConfigRelease Result) {
         this.Result = Result;

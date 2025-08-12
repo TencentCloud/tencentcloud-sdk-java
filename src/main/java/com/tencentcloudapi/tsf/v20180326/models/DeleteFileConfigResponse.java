@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class DeleteFileConfigResponse extends AbstractModel {
 
     /**
-    * 删除结果
+    * 删除结果。
+- true：成功
+- false：失败
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +40,24 @@ public class DeleteFileConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除结果 
-     * @return Result 删除结果
+     * Get 删除结果。
+- true：成功
+- false：失败 
+     * @return Result 删除结果。
+- true：成功
+- false：失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 删除结果
-     * @param Result 删除结果
+     * Set 删除结果。
+- true：成功
+- false：失败
+     * @param Result 删除结果。
+- true：成功
+- false：失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

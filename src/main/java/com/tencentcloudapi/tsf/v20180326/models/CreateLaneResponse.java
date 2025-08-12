@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateLaneResponse extends AbstractModel {
 
     /**
-    * 泳道ID
+    * 泳道配置ID。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLaneResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 泳道ID 
-     * @return Result 泳道ID
+     * Get 泳道配置ID。 
+     * @return Result 泳道配置ID。
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 泳道ID
-     * @param Result 泳道ID
+     * Set 泳道配置ID。
+     * @param Result 泳道配置ID。
      */
     public void setResult(String Result) {
         this.Result = Result;

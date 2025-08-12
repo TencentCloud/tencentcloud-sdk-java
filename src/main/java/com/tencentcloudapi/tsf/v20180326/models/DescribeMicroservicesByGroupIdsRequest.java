@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeMicroservicesByGroupIdsRequest extends AbstractModel {
 
     /**
-    * 部署组ID列表
+    * 部署组ID列表。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
     */
     @SerializedName("GroupIds")
     @Expose
     private String [] GroupIds;
 
     /**
-     * Get 部署组ID列表 
-     * @return GroupIds 部署组ID列表
+     * Get 部署组ID列表。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。 
+     * @return GroupIds 部署组ID列表。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
      */
     public String [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 部署组ID列表
-     * @param GroupIds 部署组ID列表
+     * Set 部署组ID列表。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
+     * @param GroupIds 部署组ID列表。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;

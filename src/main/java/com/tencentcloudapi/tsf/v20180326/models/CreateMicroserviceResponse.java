@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateMicroserviceResponse extends AbstractModel {
 
     /**
-    * 新增微服务是否成功。
+    * 新增结果。
 true：操作成功。
 false：操作失败。
     */
@@ -40,10 +40,10 @@ false：操作失败。
     private String RequestId;
 
     /**
-     * Get 新增微服务是否成功。
+     * Get 新增结果。
 true：操作成功。
 false：操作失败。 
-     * @return Result 新增微服务是否成功。
+     * @return Result 新增结果。
 true：操作成功。
 false：操作失败。
      */
@@ -52,10 +52,10 @@ false：操作失败。
     }
 
     /**
-     * Set 新增微服务是否成功。
+     * Set 新增结果。
 true：操作成功。
 false：操作失败。
-     * @param Result 新增微服务是否成功。
+     * @param Result 新增结果。
 true：操作成功。
 false：操作失败。
      */

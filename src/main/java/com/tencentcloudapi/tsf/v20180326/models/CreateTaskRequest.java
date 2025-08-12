@@ -38,28 +38,28 @@ public class CreateTaskRequest extends AbstractModel {
     private String TaskContent;
 
     /**
-    * 执行类型，unicast/broadcast
+    * 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
     */
     @SerializedName("ExecuteType")
     @Expose
     private String ExecuteType;
 
     /**
-    * 任务类型,java
+    * 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 任务超时时间， 时间单位 ms
+    * 任务超时时间，取值大于0，单位：毫秒（ms）
     */
     @SerializedName("TimeOut")
     @Expose
     private Long TimeOut;
 
     /**
-    * 部署组ID
+    * 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
     */
     @SerializedName("GroupId")
     @Expose
@@ -87,7 +87,7 @@ public class CreateTaskRequest extends AbstractModel {
     private Long RetryInterval;
 
     /**
-    * 分片数量
+    * 分片数量，仅当任务执行方式为分片执行时需要设置该值，取值范围2~1000
     */
     @SerializedName("ShardCount")
     @Expose
@@ -129,7 +129,7 @@ public class CreateTaskRequest extends AbstractModel {
     private String TaskArgument;
 
     /**
-    * 无
+    * 数据集列表
     */
     @SerializedName("ProgramIdList")
     @Expose
@@ -168,64 +168,64 @@ public class CreateTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 执行类型，unicast/broadcast 
-     * @return ExecuteType 执行类型，unicast/broadcast
+     * Get 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行 
+     * @return ExecuteType 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
      */
     public String getExecuteType() {
         return this.ExecuteType;
     }
 
     /**
-     * Set 执行类型，unicast/broadcast
-     * @param ExecuteType 执行类型，unicast/broadcast
+     * Set 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
+     * @param ExecuteType 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
      */
     public void setExecuteType(String ExecuteType) {
         this.ExecuteType = ExecuteType;
     }
 
     /**
-     * Get 任务类型,java 
-     * @return TaskType 任务类型,java
+     * Get 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务 
+     * @return TaskType 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型,java
-     * @param TaskType 任务类型,java
+     * Set 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
+     * @param TaskType 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 任务超时时间， 时间单位 ms 
-     * @return TimeOut 任务超时时间， 时间单位 ms
+     * Get 任务超时时间，取值大于0，单位：毫秒（ms） 
+     * @return TimeOut 任务超时时间，取值大于0，单位：毫秒（ms）
      */
     public Long getTimeOut() {
         return this.TimeOut;
     }
 
     /**
-     * Set 任务超时时间， 时间单位 ms
-     * @param TimeOut 任务超时时间， 时间单位 ms
+     * Set 任务超时时间，取值大于0，单位：毫秒（ms）
+     * @param TimeOut 任务超时时间，取值大于0，单位：毫秒（ms）
      */
     public void setTimeOut(Long TimeOut) {
         this.TimeOut = TimeOut;
     }
 
     /**
-     * Get 部署组ID 
-     * @return GroupId 部署组ID
+     * Get 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。 
+     * @return GroupId 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组ID
-     * @param GroupId 部署组ID
+     * Set 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
+     * @param GroupId 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -280,16 +280,16 @@ public class CreateTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 分片数量 
-     * @return ShardCount 分片数量
+     * Get 分片数量，仅当任务执行方式为分片执行时需要设置该值，取值范围2~1000 
+     * @return ShardCount 分片数量，仅当任务执行方式为分片执行时需要设置该值，取值范围2~1000
      */
     public Long getShardCount() {
         return this.ShardCount;
     }
 
     /**
-     * Set 分片数量
-     * @param ShardCount 分片数量
+     * Set 分片数量，仅当任务执行方式为分片执行时需要设置该值，取值范围2~1000
+     * @param ShardCount 分片数量，仅当任务执行方式为分片执行时需要设置该值，取值范围2~1000
      */
     public void setShardCount(Long ShardCount) {
         this.ShardCount = ShardCount;
@@ -376,16 +376,16 @@ public class CreateTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return ProgramIdList 无
+     * Get 数据集列表 
+     * @return ProgramIdList 数据集列表
      */
     public String [] getProgramIdList() {
         return this.ProgramIdList;
     }
 
     /**
-     * Set 无
-     * @param ProgramIdList 无
+     * Set 数据集列表
+     * @param ProgramIdList 数据集列表
      */
     public void setProgramIdList(String [] ProgramIdList) {
         this.ProgramIdList = ProgramIdList;

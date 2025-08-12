@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class DeleteLaneRuleResponse extends AbstractModel {
 
     /**
-    * 操作状态
+    * 删除结果。
+- true：成功
+- false：失败
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +40,24 @@ public class DeleteLaneRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作状态 
-     * @return Result 操作状态
+     * Get 删除结果。
+- true：成功
+- false：失败 
+     * @return Result 删除结果。
+- true：成功
+- false：失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 操作状态
-     * @param Result 操作状态
+     * Set 删除结果。
+- true：成功
+- false：失败
+     * @param Result 删除结果。
+- true：成功
+- false：失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

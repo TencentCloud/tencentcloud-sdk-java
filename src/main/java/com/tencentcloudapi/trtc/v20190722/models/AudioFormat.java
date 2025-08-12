@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lke.v20231130.models;
+package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,16 +21,42 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListAppCategoryRequest extends AbstractModel {
+public class AudioFormat extends AbstractModel {
 
-    public ListAppCategoryRequest() {
+    /**
+    * 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
+     * Get 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。 
+     * @return Format 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
+     * @param Format 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
+    public AudioFormat() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ListAppCategoryRequest(ListAppCategoryRequest source) {
+    public AudioFormat(AudioFormat source) {
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class ListAppCategoryRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Format", this.Format);
 
     }
 }

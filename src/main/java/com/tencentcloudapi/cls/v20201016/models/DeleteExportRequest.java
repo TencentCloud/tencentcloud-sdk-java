@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class DeleteExportRequest extends AbstractModel {
 
     /**
-    * 日志导出ID
+    * 日志导出任务Id
+- 通过[获取日志下载任务列表](https://cloud.tencent.com/document/product/614/56449)获取日志导出任务Id。
+
     */
     @SerializedName("ExportId")
     @Expose
     private String ExportId;
 
     /**
-     * Get 日志导出ID 
-     * @return ExportId 日志导出ID
+     * Get 日志导出任务Id
+- 通过[获取日志下载任务列表](https://cloud.tencent.com/document/product/614/56449)获取日志导出任务Id。
+ 
+     * @return ExportId 日志导出任务Id
+- 通过[获取日志下载任务列表](https://cloud.tencent.com/document/product/614/56449)获取日志导出任务Id。
+
      */
     public String getExportId() {
         return this.ExportId;
     }
 
     /**
-     * Set 日志导出ID
-     * @param ExportId 日志导出ID
+     * Set 日志导出任务Id
+- 通过[获取日志下载任务列表](https://cloud.tencent.com/document/product/614/56449)获取日志导出任务Id。
+
+     * @param ExportId 日志导出任务Id
+- 通过[获取日志下载任务列表](https://cloud.tencent.com/document/product/614/56449)获取日志导出任务Id。
+
      */
     public void setExportId(String ExportId) {
         this.ExportId = ExportId;

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class RevocationConfigResponse extends AbstractModel {
 
     /**
-    * true：回滚成功；false：回滚失败
+    * 撤回结果。
+- true：成功
+- false：失败
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +40,24 @@ public class RevocationConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get true：回滚成功；false：回滚失败 
-     * @return Result true：回滚成功；false：回滚失败
+     * Get 撤回结果。
+- true：成功
+- false：失败 
+     * @return Result 撤回结果。
+- true：成功
+- false：失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set true：回滚成功；false：回滚失败
-     * @param Result true：回滚成功；false：回滚失败
+     * Set 撤回结果。
+- true：成功
+- false：失败
+     * @param Result 撤回结果。
+- true：成功
+- false：失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

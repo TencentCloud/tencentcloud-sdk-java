@@ -64,7 +64,7 @@ public class FileConfigRelease extends AbstractModel {
     private String ReleaseDesc;
 
     /**
-    * 发布时间
+    * 发布时间。格式为 YYYY-MM-DD hh:mm:ss。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReleaseTime")
@@ -228,9 +228,9 @@ public class FileConfigRelease extends AbstractModel {
     }
 
     /**
-     * Get 发布时间
+     * Get 发布时间。格式为 YYYY-MM-DD hh:mm:ss。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReleaseTime 发布时间
+     * @return ReleaseTime 发布时间。格式为 YYYY-MM-DD hh:mm:ss。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReleaseTime() {
@@ -238,9 +238,9 @@ public class FileConfigRelease extends AbstractModel {
     }
 
     /**
-     * Set 发布时间
+     * Set 发布时间。格式为 YYYY-MM-DD hh:mm:ss。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReleaseTime 发布时间
+     * @param ReleaseTime 发布时间。格式为 YYYY-MM-DD hh:mm:ss。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReleaseTime(String ReleaseTime) {

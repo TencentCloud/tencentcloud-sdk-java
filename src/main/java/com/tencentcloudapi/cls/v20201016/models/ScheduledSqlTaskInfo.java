@@ -59,14 +59,14 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     private ScheduledSqlResouceInfo DstResource;
 
     /**
-    * 任务创建时间
+    * 任务创建时间。格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 任务更新时间
+    * 任务更新时间，格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -96,7 +96,7 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     private String ScheduledSqlContent;
 
     /**
-    * 调度开始时间
+    * 调度开始时间，格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("ProcessStartTime")
     @Expose
@@ -110,14 +110,14 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     private Long ProcessType;
 
     /**
-    * 调度结束时间，当process_type=2时为必传字段
+    * 调度结束时间，格式：yyyy-MM-dd HH:mm:ss，当process_type=2时为必传字段
     */
     @SerializedName("ProcessEndTime")
     @Expose
     private String ProcessEndTime;
 
     /**
-    * 调度周期(分钟)
+    * 调度周期(分钟)，1~1440分钟
     */
     @SerializedName("ProcessPeriod")
     @Expose
@@ -131,14 +131,14 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     private String ProcessTimeWindow;
 
     /**
-    * 执行延迟(秒)
+    * 执行延迟(秒)，0~120秒，默认60秒
     */
     @SerializedName("ProcessDelay")
     @Expose
     private Long ProcessDelay;
 
     /**
-    * 源topicId的地域信息
+    * 源topicId的地域信息，支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
     */
     @SerializedName("SrcTopicRegion")
     @Expose
@@ -246,32 +246,32 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务创建时间 
-     * @return CreateTime 任务创建时间
+     * Get 任务创建时间。格式：yyyy-MM-dd HH:mm:ss 
+     * @return CreateTime 任务创建时间。格式：yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 任务创建时间
-     * @param CreateTime 任务创建时间
+     * Set 任务创建时间。格式：yyyy-MM-dd HH:mm:ss
+     * @param CreateTime 任务创建时间。格式：yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 任务更新时间 
-     * @return UpdateTime 任务更新时间
+     * Get 任务更新时间，格式：yyyy-MM-dd HH:mm:ss 
+     * @return UpdateTime 任务更新时间，格式：yyyy-MM-dd HH:mm:ss
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 任务更新时间
-     * @param UpdateTime 任务更新时间
+     * Set 任务更新时间，格式：yyyy-MM-dd HH:mm:ss
+     * @param UpdateTime 任务更新时间，格式：yyyy-MM-dd HH:mm:ss
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -334,16 +334,16 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 调度开始时间 
-     * @return ProcessStartTime 调度开始时间
+     * Get 调度开始时间，格式：yyyy-MM-dd HH:mm:ss 
+     * @return ProcessStartTime 调度开始时间，格式：yyyy-MM-dd HH:mm:ss
      */
     public String getProcessStartTime() {
         return this.ProcessStartTime;
     }
 
     /**
-     * Set 调度开始时间
-     * @param ProcessStartTime 调度开始时间
+     * Set 调度开始时间，格式：yyyy-MM-dd HH:mm:ss
+     * @param ProcessStartTime 调度开始时间，格式：yyyy-MM-dd HH:mm:ss
      */
     public void setProcessStartTime(String ProcessStartTime) {
         this.ProcessStartTime = ProcessStartTime;
@@ -366,32 +366,32 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 调度结束时间，当process_type=2时为必传字段 
-     * @return ProcessEndTime 调度结束时间，当process_type=2时为必传字段
+     * Get 调度结束时间，格式：yyyy-MM-dd HH:mm:ss，当process_type=2时为必传字段 
+     * @return ProcessEndTime 调度结束时间，格式：yyyy-MM-dd HH:mm:ss，当process_type=2时为必传字段
      */
     public String getProcessEndTime() {
         return this.ProcessEndTime;
     }
 
     /**
-     * Set 调度结束时间，当process_type=2时为必传字段
-     * @param ProcessEndTime 调度结束时间，当process_type=2时为必传字段
+     * Set 调度结束时间，格式：yyyy-MM-dd HH:mm:ss，当process_type=2时为必传字段
+     * @param ProcessEndTime 调度结束时间，格式：yyyy-MM-dd HH:mm:ss，当process_type=2时为必传字段
      */
     public void setProcessEndTime(String ProcessEndTime) {
         this.ProcessEndTime = ProcessEndTime;
     }
 
     /**
-     * Get 调度周期(分钟) 
-     * @return ProcessPeriod 调度周期(分钟)
+     * Get 调度周期(分钟)，1~1440分钟 
+     * @return ProcessPeriod 调度周期(分钟)，1~1440分钟
      */
     public Long getProcessPeriod() {
         return this.ProcessPeriod;
     }
 
     /**
-     * Set 调度周期(分钟)
-     * @param ProcessPeriod 调度周期(分钟)
+     * Set 调度周期(分钟)，1~1440分钟
+     * @param ProcessPeriod 调度周期(分钟)，1~1440分钟
      */
     public void setProcessPeriod(Long ProcessPeriod) {
         this.ProcessPeriod = ProcessPeriod;
@@ -414,32 +414,32 @@ public class ScheduledSqlTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 执行延迟(秒) 
-     * @return ProcessDelay 执行延迟(秒)
+     * Get 执行延迟(秒)，0~120秒，默认60秒 
+     * @return ProcessDelay 执行延迟(秒)，0~120秒，默认60秒
      */
     public Long getProcessDelay() {
         return this.ProcessDelay;
     }
 
     /**
-     * Set 执行延迟(秒)
-     * @param ProcessDelay 执行延迟(秒)
+     * Set 执行延迟(秒)，0~120秒，默认60秒
+     * @param ProcessDelay 执行延迟(秒)，0~120秒，默认60秒
      */
     public void setProcessDelay(Long ProcessDelay) {
         this.ProcessDelay = ProcessDelay;
     }
 
     /**
-     * Get 源topicId的地域信息 
-     * @return SrcTopicRegion 源topicId的地域信息
+     * Get 源topicId的地域信息，支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。 
+     * @return SrcTopicRegion 源topicId的地域信息，支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
      */
     public String getSrcTopicRegion() {
         return this.SrcTopicRegion;
     }
 
     /**
-     * Set 源topicId的地域信息
-     * @param SrcTopicRegion 源topicId的地域信息
+     * Set 源topicId的地域信息，支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
+     * @param SrcTopicRegion 源topicId的地域信息，支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
      */
     public void setSrcTopicRegion(String SrcTopicRegion) {
         this.SrcTopicRegion = SrcTopicRegion;

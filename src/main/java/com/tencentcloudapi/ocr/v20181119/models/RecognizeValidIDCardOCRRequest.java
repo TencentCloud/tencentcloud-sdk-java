@@ -121,6 +121,13 @@ public class RecognizeValidIDCardOCRRequest extends AbstractModel {
     private Boolean EnableQualityCheck;
 
     /**
+    * 默认值为false，打开返回是否存在电子身份证判断。
+    */
+    @SerializedName("EnableElectronCheck")
+    @Expose
+    private Boolean EnableElectronCheck;
+
+    /**
      * Get 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
@@ -364,6 +371,22 @@ public class RecognizeValidIDCardOCRRequest extends AbstractModel {
         this.EnableQualityCheck = EnableQualityCheck;
     }
 
+    /**
+     * Get 默认值为false，打开返回是否存在电子身份证判断。 
+     * @return EnableElectronCheck 默认值为false，打开返回是否存在电子身份证判断。
+     */
+    public Boolean getEnableElectronCheck() {
+        return this.EnableElectronCheck;
+    }
+
+    /**
+     * Set 默认值为false，打开返回是否存在电子身份证判断。
+     * @param EnableElectronCheck 默认值为false，打开返回是否存在电子身份证判断。
+     */
+    public void setEnableElectronCheck(Boolean EnableElectronCheck) {
+        this.EnableElectronCheck = EnableElectronCheck;
+    }
+
     public RecognizeValidIDCardOCRRequest() {
     }
 
@@ -408,6 +431,9 @@ public class RecognizeValidIDCardOCRRequest extends AbstractModel {
         if (source.EnableQualityCheck != null) {
             this.EnableQualityCheck = new Boolean(source.EnableQualityCheck);
         }
+        if (source.EnableElectronCheck != null) {
+            this.EnableElectronCheck = new Boolean(source.EnableElectronCheck);
+        }
     }
 
 
@@ -427,6 +453,7 @@ public class RecognizeValidIDCardOCRRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnablePSCheck", this.EnablePSCheck);
         this.setParamSimple(map, prefix + "EnableWordCheck", this.EnableWordCheck);
         this.setParamSimple(map, prefix + "EnableQualityCheck", this.EnableQualityCheck);
+        this.setParamSimple(map, prefix + "EnableElectronCheck", this.EnableElectronCheck);
 
     }
 }

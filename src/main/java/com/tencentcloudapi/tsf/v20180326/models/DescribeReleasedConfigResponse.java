@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeReleasedConfigResponse extends AbstractModel {
 
     /**
-    * 已发布的配置内容
+    * 已发布的配置内容。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeReleasedConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 已发布的配置内容 
-     * @return Result 已发布的配置内容
+     * Get 已发布的配置内容。 
+     * @return Result 已发布的配置内容。
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 已发布的配置内容
-     * @param Result 已发布的配置内容
+     * Set 已发布的配置内容。
+     * @param Result 已发布的配置内容。
      */
     public void setResult(String Result) {
         this.Result = Result;

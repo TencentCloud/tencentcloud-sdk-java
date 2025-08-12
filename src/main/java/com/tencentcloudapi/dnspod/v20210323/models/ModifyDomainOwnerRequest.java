@@ -31,7 +31,7 @@ public class ModifyDomainOwnerRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 域名需要转入的账号，支持Uin或者邮箱格式
+    * 域名需要转入的账号Uin
     */
     @SerializedName("Account")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyDomainOwnerRequest extends AbstractModel {
     }
 
     /**
-     * Get 域名需要转入的账号，支持Uin或者邮箱格式 
-     * @return Account 域名需要转入的账号，支持Uin或者邮箱格式
+     * Get 域名需要转入的账号Uin 
+     * @return Account 域名需要转入的账号Uin
      */
     public String getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 域名需要转入的账号，支持Uin或者邮箱格式
-     * @param Account 域名需要转入的账号，支持Uin或者邮箱格式
+     * Set 域名需要转入的账号Uin
+     * @param Account 域名需要转入的账号Uin
      */
     public void setAccount(String Account) {
         this.Account = Account;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreatePublicConfigWithDetailRespResponse extends AbstractModel {
 
     /**
-    * 公共配置项 ID
+    * 公共配置项ID。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreatePublicConfigWithDetailRespResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 公共配置项 ID 
-     * @return Result 公共配置项 ID
+     * Get 公共配置项ID。 
+     * @return Result 公共配置项ID。
      */
     public Config getResult() {
         return this.Result;
     }
 
     /**
-     * Set 公共配置项 ID
-     * @param Result 公共配置项 ID
+     * Set 公共配置项ID。
+     * @param Result 公共配置项ID。
      */
     public void setResult(Config Result) {
         this.Result = Result;

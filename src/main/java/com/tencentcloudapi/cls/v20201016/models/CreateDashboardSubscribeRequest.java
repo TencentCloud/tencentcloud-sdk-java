@@ -25,20 +25,31 @@ public class CreateDashboardSubscribeRequest extends AbstractModel {
 
     /**
     * 仪表盘订阅名称。
+输入限制：
+- 不能为空
+- 长度不能超过128字节
+- 不能包含字符'|'
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 仪表盘id。
+    * 仪表盘Id。
+- 通过[获取仪表盘](https://cloud.tencent.com/document/product/614/95636)获取仪表盘Id。
     */
     @SerializedName("DashboardId")
     @Expose
     private String DashboardId;
 
     /**
-    * 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。<br><li/>{秒数} 取值范围： 0 ~ 59 <br><li/>{分钟} 取值范围： 0 ~ 59  <br><li/>{小时} 取值范围： 0 ~ 23  <br><li/>{日期} 取值范围： 1 ~ 31 AND (dayOfMonth最后一天： L) <br><li/>{月份} 取值范围： 1 ~ 12 <br><li/>{星期} 取值范围： 0 ~ 6 【0:星期日， 6星期六】
+    * 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。
+- {秒数} 取值范围： 0 ~ 59 
+- {分钟} 取值范围： 0 ~ 59 
+- {小时} 取值范围： 0 ~ 23 
+- {日期} 取值范围： 1 ~ 31 AND (dayOfMonth最后一天： L) 
+- {月份} 取值范围： 1 ~ 12 
+- {星期} 取值范围： 0 ~ 6 【0:星期日， 6星期六】
     */
     @SerializedName("Cron")
     @Expose
@@ -52,8 +63,16 @@ public class CreateDashboardSubscribeRequest extends AbstractModel {
     private DashboardSubscribeData SubscribeData;
 
     /**
-     * Get 仪表盘订阅名称。 
+     * Get 仪表盘订阅名称。
+输入限制：
+- 不能为空
+- 长度不能超过128字节
+- 不能包含字符'|' 
      * @return Name 仪表盘订阅名称。
+输入限制：
+- 不能为空
+- 长度不能超过128字节
+- 不能包含字符'|'
      */
     public String getName() {
         return this.Name;
@@ -61,39 +80,75 @@ public class CreateDashboardSubscribeRequest extends AbstractModel {
 
     /**
      * Set 仪表盘订阅名称。
+输入限制：
+- 不能为空
+- 长度不能超过128字节
+- 不能包含字符'|'
      * @param Name 仪表盘订阅名称。
+输入限制：
+- 不能为空
+- 长度不能超过128字节
+- 不能包含字符'|'
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 仪表盘id。 
-     * @return DashboardId 仪表盘id。
+     * Get 仪表盘Id。
+- 通过[获取仪表盘](https://cloud.tencent.com/document/product/614/95636)获取仪表盘Id。 
+     * @return DashboardId 仪表盘Id。
+- 通过[获取仪表盘](https://cloud.tencent.com/document/product/614/95636)获取仪表盘Id。
      */
     public String getDashboardId() {
         return this.DashboardId;
     }
 
     /**
-     * Set 仪表盘id。
-     * @param DashboardId 仪表盘id。
+     * Set 仪表盘Id。
+- 通过[获取仪表盘](https://cloud.tencent.com/document/product/614/95636)获取仪表盘Id。
+     * @param DashboardId 仪表盘Id。
+- 通过[获取仪表盘](https://cloud.tencent.com/document/product/614/95636)获取仪表盘Id。
      */
     public void setDashboardId(String DashboardId) {
         this.DashboardId = DashboardId;
     }
 
     /**
-     * Get 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。<br><li/>{秒数} 取值范围： 0 ~ 59 <br><li/>{分钟} 取值范围： 0 ~ 59  <br><li/>{小时} 取值范围： 0 ~ 23  <br><li/>{日期} 取值范围： 1 ~ 31 AND (dayOfMonth最后一天： L) <br><li/>{月份} 取值范围： 1 ~ 12 <br><li/>{星期} 取值范围： 0 ~ 6 【0:星期日， 6星期六】 
-     * @return Cron 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。<br><li/>{秒数} 取值范围： 0 ~ 59 <br><li/>{分钟} 取值范围： 0 ~ 59  <br><li/>{小时} 取值范围： 0 ~ 23  <br><li/>{日期} 取值范围： 1 ~ 31 AND (dayOfMonth最后一天： L) <br><li/>{月份} 取值范围： 1 ~ 12 <br><li/>{星期} 取值范围： 0 ~ 6 【0:星期日， 6星期六】
+     * Get 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。
+- {秒数} 取值范围： 0 ~ 59 
+- {分钟} 取值范围： 0 ~ 59 
+- {小时} 取值范围： 0 ~ 23 
+- {日期} 取值范围： 1 ~ 31 AND (dayOfMonth最后一天： L) 
+- {月份} 取值范围： 1 ~ 12 
+- {星期} 取值范围： 0 ~ 6 【0:星期日， 6星期六】 
+     * @return Cron 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。
+- {秒数} 取值范围： 0 ~ 59 
+- {分钟} 取值范围： 0 ~ 59 
+- {小时} 取值范围： 0 ~ 23 
+- {日期} 取值范围： 1 ~ 31 AND (dayOfMonth最后一天： L) 
+- {月份} 取值范围： 1 ~ 12 
+- {星期} 取值范围： 0 ~ 6 【0:星期日， 6星期六】
      */
     public String getCron() {
         return this.Cron;
     }
 
     /**
-     * Set 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。<br><li/>{秒数} 取值范围： 0 ~ 59 <br><li/>{分钟} 取值范围： 0 ~ 59  <br><li/>{小时} 取值范围： 0 ~ 23  <br><li/>{日期} 取值范围： 1 ~ 31 AND (dayOfMonth最后一天： L) <br><li/>{月份} 取值范围： 1 ~ 12 <br><li/>{星期} 取值范围： 0 ~ 6 【0:星期日， 6星期六】
-     * @param Cron 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。<br><li/>{秒数} 取值范围： 0 ~ 59 <br><li/>{分钟} 取值范围： 0 ~ 59  <br><li/>{小时} 取值范围： 0 ~ 23  <br><li/>{日期} 取值范围： 1 ~ 31 AND (dayOfMonth最后一天： L) <br><li/>{月份} 取值范围： 1 ~ 12 <br><li/>{星期} 取值范围： 0 ~ 6 【0:星期日， 6星期六】
+     * Set 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。
+- {秒数} 取值范围： 0 ~ 59 
+- {分钟} 取值范围： 0 ~ 59 
+- {小时} 取值范围： 0 ~ 23 
+- {日期} 取值范围： 1 ~ 31 AND (dayOfMonth最后一天： L) 
+- {月份} 取值范围： 1 ~ 12 
+- {星期} 取值范围： 0 ~ 6 【0:星期日， 6星期六】
+     * @param Cron 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。
+- {秒数} 取值范围： 0 ~ 59 
+- {分钟} 取值范围： 0 ~ 59 
+- {小时} 取值范围： 0 ~ 23 
+- {日期} 取值范围： 1 ~ 31 AND (dayOfMonth最后一天： L) 
+- {月份} 取值范围： 1 ~ 12 
+- {星期} 取值范围： 0 ~ 6 【0:星期日， 6星期六】
      */
     public void setCron(String Cron) {
         this.Cron = Cron;

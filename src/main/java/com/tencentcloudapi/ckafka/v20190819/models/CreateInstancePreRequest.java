@@ -52,14 +52,14 @@ public class CreateInstancePreRequest extends AbstractModel {
     private Long InstanceType;
 
     /**
-    * 私有网络Id，必填
+    * 私有网络Id
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网id，必填
+    * 子网id
     */
     @SerializedName("SubnetId")
     @Expose
@@ -242,32 +242,32 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get 私有网络Id，必填 
-     * @return VpcId 私有网络Id，必填
+     * Get 私有网络Id 
+     * @return VpcId 私有网络Id
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络Id，必填
-     * @param VpcId 私有网络Id，必填
+     * Set 私有网络Id
+     * @param VpcId 私有网络Id
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网id，必填 
-     * @return SubnetId 子网id，必填
+     * Get 子网id 
+     * @return SubnetId 子网id
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网id，必填
-     * @param SubnetId 子网id，必填
+     * Set 子网id
+     * @param SubnetId 子网id
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

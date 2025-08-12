@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class AssociateHaVipInstanceRequest extends AbstractModel {
 
+    /**
+    * HaVip绑定的子机或网卡。最多支持10个实例。
+    */
+    @SerializedName("HaVipAssociationSet")
+    @Expose
+    private HaVipAssociation [] HaVipAssociationSet;
+
+    /**
+     * Get HaVip绑定的子机或网卡。最多支持10个实例。 
+     * @return HaVipAssociationSet HaVip绑定的子机或网卡。最多支持10个实例。
+     */
+    public HaVipAssociation [] getHaVipAssociationSet() {
+        return this.HaVipAssociationSet;
+    }
+
+    /**
+     * Set HaVip绑定的子机或网卡。最多支持10个实例。
+     * @param HaVipAssociationSet HaVip绑定的子机或网卡。最多支持10个实例。
+     */
+    public void setHaVipAssociationSet(HaVipAssociation [] HaVipAssociationSet) {
+        this.HaVipAssociationSet = HaVipAssociationSet;
+    }
+
     public AssociateHaVipInstanceRequest() {
     }
 
@@ -31,6 +54,12 @@ public class AssociateHaVipInstanceRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AssociateHaVipInstanceRequest(AssociateHaVipInstanceRequest source) {
+        if (source.HaVipAssociationSet != null) {
+            this.HaVipAssociationSet = new HaVipAssociation[source.HaVipAssociationSet.length];
+            for (int i = 0; i < source.HaVipAssociationSet.length; i++) {
+                this.HaVipAssociationSet[i] = new HaVipAssociation(source.HaVipAssociationSet[i]);
+            }
+        }
     }
 
 
@@ -38,6 +67,7 @@ public class AssociateHaVipInstanceRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "HaVipAssociationSet.", this.HaVipAssociationSet);
 
     }
 }

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class RollbackConfigResponse extends AbstractModel {
 
     /**
-    * true：回滚成功；false：回滚失败
+    * 回滚结果。
+- true：回滚成功
+- false：回滚失败
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +40,24 @@ public class RollbackConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get true：回滚成功；false：回滚失败 
-     * @return Result true：回滚成功；false：回滚失败
+     * Get 回滚结果。
+- true：回滚成功
+- false：回滚失败 
+     * @return Result 回滚结果。
+- true：回滚成功
+- false：回滚失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set true：回滚成功；false：回滚失败
-     * @param Result true：回滚成功；false：回滚失败
+     * Set 回滚结果。
+- true：回滚成功
+- false：回滚失败
+     * @param Result 回滚结果。
+- true：回滚成功
+- false：回滚失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

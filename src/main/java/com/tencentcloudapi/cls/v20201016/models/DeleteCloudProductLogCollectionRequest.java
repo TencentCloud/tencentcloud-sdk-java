@@ -45,7 +45,7 @@ public class DeleteCloudProductLogCollectionRequest extends AbstractModel {
     private String LogType;
 
     /**
-    * 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+    * 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT: gz
@@ -112,7 +112,7 @@ public class DeleteCloudProductLogCollectionRequest extends AbstractModel {
     }
 
     /**
-     * Get 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+     * Get 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT: gz
@@ -125,7 +125,7 @@ public class DeleteCloudProductLogCollectionRequest extends AbstractModel {
 - PostgreSQL所有日志类型：gz
 - BH所有日志类型：overseas-polaris(国内站海外)/fsi-polaris(国内站金融)/general-polaris(国内站普通)/intl-sg-prod(国际站)
 - APIS所有日志类型：gz 
-     * @return CloudProductRegion 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+     * @return CloudProductRegion 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT: gz
@@ -144,7 +144,7 @@ public class DeleteCloudProductLogCollectionRequest extends AbstractModel {
     }
 
     /**
-     * Set 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+     * Set 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT: gz
@@ -157,7 +157,7 @@ public class DeleteCloudProductLogCollectionRequest extends AbstractModel {
 - PostgreSQL所有日志类型：gz
 - BH所有日志类型：overseas-polaris(国内站海外)/fsi-polaris(国内站金融)/general-polaris(国内站普通)/intl-sg-prod(国际站)
 - APIS所有日志类型：gz
-     * @param CloudProductRegion 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+     * @param CloudProductRegion 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT: gz

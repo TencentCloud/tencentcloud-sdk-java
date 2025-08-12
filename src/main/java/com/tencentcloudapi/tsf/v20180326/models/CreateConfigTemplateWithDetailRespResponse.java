@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateConfigTemplateWithDetailRespResponse extends AbstractModel {
 
     /**
-    * 创建成功，返回 ID
+    * 创建成功，返回配置模板ID。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateConfigTemplateWithDetailRespResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建成功，返回 ID 
-     * @return Result 创建成功，返回 ID
+     * Get 创建成功，返回配置模板ID。 
+     * @return Result 创建成功，返回配置模板ID。
      */
     public ConfigTemplate getResult() {
         return this.Result;
     }
 
     /**
-     * Set 创建成功，返回 ID
-     * @param Result 创建成功，返回 ID
+     * Set 创建成功，返回配置模板ID。
+     * @param Result 创建成功，返回配置模板ID。
      */
     public void setResult(ConfigTemplate Result) {
         this.Result = Result;

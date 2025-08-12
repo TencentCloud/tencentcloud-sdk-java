@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
-    * API 详情
+    * API详情。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeApiDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get API 详情 
-     * @return Result API 详情
+     * Get API详情。 
+     * @return Result API详情。
      */
     public ApiDetailResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set API 详情
-     * @param Result API 详情
+     * Set API详情。
+     * @param Result API详情。
      */
     public void setResult(ApiDetailResponse Result) {
         this.Result = Result;

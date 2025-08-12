@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMicroservicesByGroupIdsResponse extends AbstractModel {
 
     /**
-    * 微服务信息分页列表
+    * 微服务信息分页列表。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMicroservicesByGroupIdsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 微服务信息分页列表 
-     * @return Result 微服务信息分页列表
+     * Get 微服务信息分页列表。 
+     * @return Result 微服务信息分页列表。
      */
     public TsfPageMicroservice getResult() {
         return this.Result;
     }
 
     /**
-     * Set 微服务信息分页列表
-     * @param Result 微服务信息分页列表
+     * Set 微服务信息分页列表。
+     * @param Result 微服务信息分页列表。
      */
     public void setResult(TsfPageMicroservice Result) {
         this.Result = Result;

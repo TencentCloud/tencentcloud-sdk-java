@@ -250,7 +250,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（AssociateHaVipInstance）用于HAVIP绑定子机或网卡（限制HaVip的飘移范围）。
+     *本接口（AssociateHaVipInstance）用于HAVIP绑定子机或网卡（限制HaVip的漂移范围）。
      * @param req AssociateHaVipInstanceRequest
      * @return AssociateHaVipInstanceResponse
      * @throws TencentCloudSDKException

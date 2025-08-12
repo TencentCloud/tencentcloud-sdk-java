@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DeleteConfigRequest extends AbstractModel {
 
     /**
-    * 采集规则配置ID
+    * 采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-     * Get 采集规则配置ID 
-     * @return ConfigId 采集规则配置ID
+     * Get 采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。 
+     * @return ConfigId 采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 采集规则配置ID
-     * @param ConfigId 采集规则配置ID
+     * Set 采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
+     * @param ConfigId 采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;

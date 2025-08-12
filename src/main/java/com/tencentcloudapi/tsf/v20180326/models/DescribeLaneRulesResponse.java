@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLaneRulesResponse extends AbstractModel {
 
     /**
-    * 泳道规则列表
+    * 灰度发布规则列表。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeLaneRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 泳道规则列表 
-     * @return Result 泳道规则列表
+     * Get 灰度发布规则列表。 
+     * @return Result 灰度发布规则列表。
      */
     public LaneRules getResult() {
         return this.Result;
     }
 
     /**
-     * Set 泳道规则列表
-     * @param Result 泳道规则列表
+     * Set 灰度发布规则列表。
+     * @param Result 灰度发布规则列表。
      */
     public void setResult(LaneRules Result) {
         this.Result = Result;

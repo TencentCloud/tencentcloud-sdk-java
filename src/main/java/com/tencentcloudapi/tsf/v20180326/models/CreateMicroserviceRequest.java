@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateMicroserviceRequest extends AbstractModel {
 
     /**
-    * 命名空间ID
+    * 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * 微服务名称
+    * 微服务名称。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
     */
     @SerializedName("MicroserviceName")
     @Expose
     private String MicroserviceName;
 
     /**
-    * 微服务描述信息
+    * 微服务备注信息，最多支持200个字符。
     */
     @SerializedName("MicroserviceDesc")
     @Expose
     private String MicroserviceDesc;
 
     /**
-     * Get 命名空间ID 
-     * @return NamespaceId 命名空间ID
+     * Get 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。 
+     * @return NamespaceId 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间ID
-     * @param NamespaceId 命名空间ID
+     * Set 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
+     * @param NamespaceId 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 微服务名称 
-     * @return MicroserviceName 微服务名称
+     * Get 微服务名称。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。 
+     * @return MicroserviceName 微服务名称。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public String getMicroserviceName() {
         return this.MicroserviceName;
     }
 
     /**
-     * Set 微服务名称
-     * @param MicroserviceName 微服务名称
+     * Set 微服务名称。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param MicroserviceName 微服务名称。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public void setMicroserviceName(String MicroserviceName) {
         this.MicroserviceName = MicroserviceName;
     }
 
     /**
-     * Get 微服务描述信息 
-     * @return MicroserviceDesc 微服务描述信息
+     * Get 微服务备注信息，最多支持200个字符。 
+     * @return MicroserviceDesc 微服务备注信息，最多支持200个字符。
      */
     public String getMicroserviceDesc() {
         return this.MicroserviceDesc;
     }
 
     /**
-     * Set 微服务描述信息
-     * @param MicroserviceDesc 微服务描述信息
+     * Set 微服务备注信息，最多支持200个字符。
+     * @param MicroserviceDesc 微服务备注信息，最多支持200个字符。
      */
     public void setMicroserviceDesc(String MicroserviceDesc) {
         this.MicroserviceDesc = MicroserviceDesc;

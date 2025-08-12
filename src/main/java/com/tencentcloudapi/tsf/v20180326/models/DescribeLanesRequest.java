@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeLanesRequest extends AbstractModel {
 
     /**
-    * 每页展示的条数
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 翻页偏移量
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 搜索关键字
+    * 搜索关键字。
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 无
+    * 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
     */
     @SerializedName("LaneIdList")
     @Expose
     private String [] LaneIdList;
 
     /**
-    * 无
+    * 忽略传参，业务预留字段。
     */
     @SerializedName("DisableProgramAuthCheck")
     @Expose
     private Boolean DisableProgramAuthCheck;
 
     /**
-     * Get 每页展示的条数 
-     * @return Limit 每页展示的条数
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页展示的条数
-     * @param Limit 每页展示的条数
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 翻页偏移量 
-     * @return Offset 翻页偏移量
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 翻页偏移量
-     * @param Offset 翻页偏移量
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 搜索关键字 
-     * @return SearchWord 搜索关键字
+     * Get 搜索关键字。 
+     * @return SearchWord 搜索关键字。
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 搜索关键字
-     * @param SearchWord 搜索关键字
+     * Set 搜索关键字。
+     * @param SearchWord 搜索关键字。
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 无 
-     * @return LaneIdList 无
+     * Get 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。 
+     * @return LaneIdList 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
      */
     public String [] getLaneIdList() {
         return this.LaneIdList;
     }
 
     /**
-     * Set 无
-     * @param LaneIdList 无
+     * Set 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
+     * @param LaneIdList 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
      */
     public void setLaneIdList(String [] LaneIdList) {
         this.LaneIdList = LaneIdList;
     }
 
     /**
-     * Get 无 
-     * @return DisableProgramAuthCheck 无
+     * Get 忽略传参，业务预留字段。 
+     * @return DisableProgramAuthCheck 忽略传参，业务预留字段。
      */
     public Boolean getDisableProgramAuthCheck() {
         return this.DisableProgramAuthCheck;
     }
 
     /**
-     * Set 无
-     * @param DisableProgramAuthCheck 无
+     * Set 忽略传参，业务预留字段。
+     * @param DisableProgramAuthCheck 忽略传参，业务预留字段。
      */
     public void setDisableProgramAuthCheck(Boolean DisableProgramAuthCheck) {
         this.DisableProgramAuthCheck = DisableProgramAuthCheck;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ReleaseFileConfigRequest extends AbstractModel {
 
     /**
-    * 配置ID
+    * 配置ID。该参数可以通过调用 [DescribeFileConfigs](https://cloud.tencent.com/document/product/649/58593) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?rid=1&subTab=file)配置详情-配置版本页查看；也可以调用[CreateFileConfig](https://cloud.tencent.com/document/product/649/58594)创建新的配置。
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-    * 部署组ID
+    * 部署组ID。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 发布描述
+    * 发布描述，最多支持200个字符。
     */
     @SerializedName("ReleaseDesc")
     @Expose
     private String ReleaseDesc;
 
     /**
-     * Get 配置ID 
-     * @return ConfigId 配置ID
+     * Get 配置ID。该参数可以通过调用 [DescribeFileConfigs](https://cloud.tencent.com/document/product/649/58593) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?rid=1&subTab=file)配置详情-配置版本页查看；也可以调用[CreateFileConfig](https://cloud.tencent.com/document/product/649/58594)创建新的配置。 
+     * @return ConfigId 配置ID。该参数可以通过调用 [DescribeFileConfigs](https://cloud.tencent.com/document/product/649/58593) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?rid=1&subTab=file)配置详情-配置版本页查看；也可以调用[CreateFileConfig](https://cloud.tencent.com/document/product/649/58594)创建新的配置。
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 配置ID
-     * @param ConfigId 配置ID
+     * Set 配置ID。该参数可以通过调用 [DescribeFileConfigs](https://cloud.tencent.com/document/product/649/58593) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?rid=1&subTab=file)配置详情-配置版本页查看；也可以调用[CreateFileConfig](https://cloud.tencent.com/document/product/649/58594)创建新的配置。
+     * @param ConfigId 配置ID。该参数可以通过调用 [DescribeFileConfigs](https://cloud.tencent.com/document/product/649/58593) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?rid=1&subTab=file)配置详情-配置版本页查看；也可以调用[CreateFileConfig](https://cloud.tencent.com/document/product/649/58594)创建新的配置。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get 部署组ID 
-     * @return GroupId 部署组ID
+     * Get 部署组ID。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。 
+     * @return GroupId 部署组ID。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组ID
-     * @param GroupId 部署组ID
+     * Set 部署组ID。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
+     * @param GroupId 部署组ID。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 发布描述 
-     * @return ReleaseDesc 发布描述
+     * Get 发布描述，最多支持200个字符。 
+     * @return ReleaseDesc 发布描述，最多支持200个字符。
      */
     public String getReleaseDesc() {
         return this.ReleaseDesc;
     }
 
     /**
-     * Set 发布描述
-     * @param ReleaseDesc 发布描述
+     * Set 发布描述，最多支持200个字符。
+     * @param ReleaseDesc 发布描述，最多支持200个字符。
      */
     public void setReleaseDesc(String ReleaseDesc) {
         this.ReleaseDesc = ReleaseDesc;

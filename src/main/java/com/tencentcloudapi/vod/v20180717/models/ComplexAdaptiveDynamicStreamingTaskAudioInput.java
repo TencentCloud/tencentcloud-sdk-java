@@ -55,6 +55,13 @@ public class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
     private String Default;
 
     /**
+    * 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+    */
+    @SerializedName("AudioTrackIdx")
+    @Expose
+    private Long AudioTrackIdx;
+
+    /**
      * Get 音频源的媒体 ID。固定取该媒体中的首个音频流，视频流和其它音频流（如有）将被忽略。 
      * @return FileId 音频源的媒体 ID。固定取该媒体中的首个音频流，视频流和其它音频流（如有）将被忽略。
      */
@@ -130,6 +137,22 @@ public class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
         this.Default = Default;
     }
 
+    /**
+     * Get 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。 
+     * @return AudioTrackIdx 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+     */
+    public Long getAudioTrackIdx() {
+        return this.AudioTrackIdx;
+    }
+
+    /**
+     * Set 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+     * @param AudioTrackIdx 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+     */
+    public void setAudioTrackIdx(Long AudioTrackIdx) {
+        this.AudioTrackIdx = AudioTrackIdx;
+    }
+
     public ComplexAdaptiveDynamicStreamingTaskAudioInput() {
     }
 
@@ -150,6 +173,9 @@ public class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
         if (source.Default != null) {
             this.Default = new String(source.Default);
         }
+        if (source.AudioTrackIdx != null) {
+            this.AudioTrackIdx = new Long(source.AudioTrackIdx);
+        }
     }
 
 
@@ -161,6 +187,7 @@ public class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "Default", this.Default);
+        this.setParamSimple(map, prefix + "AudioTrackIdx", this.AudioTrackIdx);
 
     }
 }

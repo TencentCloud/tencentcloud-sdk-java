@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateFileConfigRequest extends AbstractModel {
 
     /**
-    * 配置项名称
+    * 配置项名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”、“_”），且不能以分隔符开头或结尾。
     */
     @SerializedName("ConfigName")
     @Expose
     private String ConfigName;
 
     /**
-    * 配置项版本
+    * 配置项版本，只能包含小写字母、数字及分隔符("-"，".")，且必须以小写字母或数字开头、以小写字母或数字结尾，中间不能有连续的"-"或"."。
     */
     @SerializedName("ConfigVersion")
     @Expose
     private String ConfigVersion;
 
     /**
-    * 配置项文件名
+    * 配置项文件名，最多支持60个字符，只能包含英文、数字、"-"（英文）、"_"（英文）、"."（英文）。
     */
     @SerializedName("ConfigFileName")
     @Expose
@@ -52,97 +52,99 @@ public class CreateFileConfigRequest extends AbstractModel {
     private String ConfigFileValue;
 
     /**
-    * 配置项关联应用ID
+    * 配置项关联应用ID，该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * 发布路径
+    * 发布路径。
     */
     @SerializedName("ConfigFilePath")
     @Expose
     private String ConfigFilePath;
 
     /**
-    * 配置项版本描述
+    * 配置项版本描述，最多支持200个字符。
     */
     @SerializedName("ConfigVersionDesc")
     @Expose
     private String ConfigVersionDesc;
 
     /**
-    * 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持
+    * 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持。
     */
     @SerializedName("ConfigFileCode")
     @Expose
     private String ConfigFileCode;
 
     /**
-    * 后置命令
+    * 后置命令。
     */
     @SerializedName("ConfigPostCmd")
     @Expose
     private String ConfigPostCmd;
 
     /**
-    * Base64编码的配置项
+    * Base64编码的配置项。
+- true：开启
+- false：关闭
     */
     @SerializedName("EncodeWithBase64")
     @Expose
     private Boolean EncodeWithBase64;
 
     /**
-    * 无
+    * 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
     */
     @SerializedName("ProgramIdList")
     @Expose
     private String [] ProgramIdList;
 
     /**
-     * Get 配置项名称 
-     * @return ConfigName 配置项名称
+     * Get 配置项名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”、“_”），且不能以分隔符开头或结尾。 
+     * @return ConfigName 配置项名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”、“_”），且不能以分隔符开头或结尾。
      */
     public String getConfigName() {
         return this.ConfigName;
     }
 
     /**
-     * Set 配置项名称
-     * @param ConfigName 配置项名称
+     * Set 配置项名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”、“_”），且不能以分隔符开头或结尾。
+     * @param ConfigName 配置项名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”、“_”），且不能以分隔符开头或结尾。
      */
     public void setConfigName(String ConfigName) {
         this.ConfigName = ConfigName;
     }
 
     /**
-     * Get 配置项版本 
-     * @return ConfigVersion 配置项版本
+     * Get 配置项版本，只能包含小写字母、数字及分隔符("-"，".")，且必须以小写字母或数字开头、以小写字母或数字结尾，中间不能有连续的"-"或"."。 
+     * @return ConfigVersion 配置项版本，只能包含小写字母、数字及分隔符("-"，".")，且必须以小写字母或数字开头、以小写字母或数字结尾，中间不能有连续的"-"或"."。
      */
     public String getConfigVersion() {
         return this.ConfigVersion;
     }
 
     /**
-     * Set 配置项版本
-     * @param ConfigVersion 配置项版本
+     * Set 配置项版本，只能包含小写字母、数字及分隔符("-"，".")，且必须以小写字母或数字开头、以小写字母或数字结尾，中间不能有连续的"-"或"."。
+     * @param ConfigVersion 配置项版本，只能包含小写字母、数字及分隔符("-"，".")，且必须以小写字母或数字开头、以小写字母或数字结尾，中间不能有连续的"-"或"."。
      */
     public void setConfigVersion(String ConfigVersion) {
         this.ConfigVersion = ConfigVersion;
     }
 
     /**
-     * Get 配置项文件名 
-     * @return ConfigFileName 配置项文件名
+     * Get 配置项文件名，最多支持60个字符，只能包含英文、数字、"-"（英文）、"_"（英文）、"."（英文）。 
+     * @return ConfigFileName 配置项文件名，最多支持60个字符，只能包含英文、数字、"-"（英文）、"_"（英文）、"."（英文）。
      */
     public String getConfigFileName() {
         return this.ConfigFileName;
     }
 
     /**
-     * Set 配置项文件名
-     * @param ConfigFileName 配置项文件名
+     * Set 配置项文件名，最多支持60个字符，只能包含英文、数字、"-"（英文）、"_"（英文）、"."（英文）。
+     * @param ConfigFileName 配置项文件名，最多支持60个字符，只能包含英文、数字、"-"（英文）、"_"（英文）、"."（英文）。
      */
     public void setConfigFileName(String ConfigFileName) {
         this.ConfigFileName = ConfigFileName;
@@ -165,112 +167,120 @@ public class CreateFileConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 配置项关联应用ID 
-     * @return ApplicationId 配置项关联应用ID
+     * Get 配置项关联应用ID，该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。 
+     * @return ApplicationId 配置项关联应用ID，该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 配置项关联应用ID
-     * @param ApplicationId 配置项关联应用ID
+     * Set 配置项关联应用ID，该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
+     * @param ApplicationId 配置项关联应用ID，该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 发布路径 
-     * @return ConfigFilePath 发布路径
+     * Get 发布路径。 
+     * @return ConfigFilePath 发布路径。
      */
     public String getConfigFilePath() {
         return this.ConfigFilePath;
     }
 
     /**
-     * Set 发布路径
-     * @param ConfigFilePath 发布路径
+     * Set 发布路径。
+     * @param ConfigFilePath 发布路径。
      */
     public void setConfigFilePath(String ConfigFilePath) {
         this.ConfigFilePath = ConfigFilePath;
     }
 
     /**
-     * Get 配置项版本描述 
-     * @return ConfigVersionDesc 配置项版本描述
+     * Get 配置项版本描述，最多支持200个字符。 
+     * @return ConfigVersionDesc 配置项版本描述，最多支持200个字符。
      */
     public String getConfigVersionDesc() {
         return this.ConfigVersionDesc;
     }
 
     /**
-     * Set 配置项版本描述
-     * @param ConfigVersionDesc 配置项版本描述
+     * Set 配置项版本描述，最多支持200个字符。
+     * @param ConfigVersionDesc 配置项版本描述，最多支持200个字符。
      */
     public void setConfigVersionDesc(String ConfigVersionDesc) {
         this.ConfigVersionDesc = ConfigVersionDesc;
     }
 
     /**
-     * Get 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持 
-     * @return ConfigFileCode 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持
+     * Get 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持。 
+     * @return ConfigFileCode 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持。
      */
     public String getConfigFileCode() {
         return this.ConfigFileCode;
     }
 
     /**
-     * Set 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持
-     * @param ConfigFileCode 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持
+     * Set 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持。
+     * @param ConfigFileCode 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持。
      */
     public void setConfigFileCode(String ConfigFileCode) {
         this.ConfigFileCode = ConfigFileCode;
     }
 
     /**
-     * Get 后置命令 
-     * @return ConfigPostCmd 后置命令
+     * Get 后置命令。 
+     * @return ConfigPostCmd 后置命令。
      */
     public String getConfigPostCmd() {
         return this.ConfigPostCmd;
     }
 
     /**
-     * Set 后置命令
-     * @param ConfigPostCmd 后置命令
+     * Set 后置命令。
+     * @param ConfigPostCmd 后置命令。
      */
     public void setConfigPostCmd(String ConfigPostCmd) {
         this.ConfigPostCmd = ConfigPostCmd;
     }
 
     /**
-     * Get Base64编码的配置项 
-     * @return EncodeWithBase64 Base64编码的配置项
+     * Get Base64编码的配置项。
+- true：开启
+- false：关闭 
+     * @return EncodeWithBase64 Base64编码的配置项。
+- true：开启
+- false：关闭
      */
     public Boolean getEncodeWithBase64() {
         return this.EncodeWithBase64;
     }
 
     /**
-     * Set Base64编码的配置项
-     * @param EncodeWithBase64 Base64编码的配置项
+     * Set Base64编码的配置项。
+- true：开启
+- false：关闭
+     * @param EncodeWithBase64 Base64编码的配置项。
+- true：开启
+- false：关闭
      */
     public void setEncodeWithBase64(Boolean EncodeWithBase64) {
         this.EncodeWithBase64 = EncodeWithBase64;
     }
 
     /**
-     * Get 无 
-     * @return ProgramIdList 无
+     * Get 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。 
+     * @return ProgramIdList 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      */
     public String [] getProgramIdList() {
         return this.ProgramIdList;
     }
 
     /**
-     * Set 无
-     * @param ProgramIdList 无
+     * Set 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
+     * @param ProgramIdList 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      */
     public void setProgramIdList(String [] ProgramIdList) {
         this.ProgramIdList = ProgramIdList;

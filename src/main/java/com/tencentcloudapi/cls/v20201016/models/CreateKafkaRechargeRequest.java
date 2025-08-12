@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class CreateKafkaRechargeRequest extends AbstractModel {
 
     /**
-    * 导入CLS目标topic ID
+    * 导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
@@ -67,6 +69,7 @@ public class CreateKafkaRechargeRequest extends AbstractModel {
 
     /**
     * 腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
     */
     @SerializedName("KafkaInstance")
     @Expose
@@ -95,23 +98,32 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     private KafkaProtocolInfo Protocol;
 
     /**
-    * 用户Kafka消费组名称
+    * 用户Kafka消费组名称。
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
     */
     @SerializedName("ConsumerGroupName")
     @Expose
     private String ConsumerGroupName;
 
     /**
-     * Get 导入CLS目标topic ID 
-     * @return TopicId 导入CLS目标topic ID
+     * Get 导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。 
+     * @return TopicId 导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 导入CLS目标topic ID
-     * @param TopicId 导入CLS目标topic ID
+     * Set 导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * @param TopicId 导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -198,8 +210,10 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     }
 
     /**
-     * Get 腾讯云CKafka实例ID，KafkaType为0时必填。 
+     * Get 腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。 
      * @return KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      */
     public String getKafkaInstance() {
         return this.KafkaInstance;
@@ -207,7 +221,9 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
 
     /**
      * Set 腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      * @param KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      */
     public void setKafkaInstance(String KafkaInstance) {
         this.KafkaInstance = KafkaInstance;
@@ -266,16 +282,20 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     }
 
     /**
-     * Get 用户Kafka消费组名称 
-     * @return ConsumerGroupName 用户Kafka消费组名称
+     * Get 用户Kafka消费组名称。
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。 
+     * @return ConsumerGroupName 用户Kafka消费组名称。
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
      */
     public String getConsumerGroupName() {
         return this.ConsumerGroupName;
     }
 
     /**
-     * Set 用户Kafka消费组名称
-     * @param ConsumerGroupName 用户Kafka消费组名称
+     * Set 用户Kafka消费组名称。
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
+     * @param ConsumerGroupName 用户Kafka消费组名称。
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
      */
     public void setConsumerGroupName(String ConsumerGroupName) {
         this.ConsumerGroupName = ConsumerGroupName;

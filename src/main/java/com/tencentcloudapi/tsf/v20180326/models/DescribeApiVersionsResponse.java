@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeApiVersionsResponse extends AbstractModel {
 
     /**
-    * API版本列表
+    * API版本列表。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeApiVersionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get API版本列表 
-     * @return Result API版本列表
+     * Get API版本列表。 
+     * @return Result API版本列表。
      */
     public ApiVersionArray [] getResult() {
         return this.Result;
     }
 
     /**
-     * Set API版本列表
-     * @param Result API版本列表
+     * Set API版本列表。
+     * @param Result API版本列表。
      */
     public void setResult(ApiVersionArray [] Result) {
         this.Result = Result;

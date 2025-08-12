@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ExecuteTaskRequest extends AbstractModel {
 
     /**
-    * 任务 ID
+    * 任务ID。在任务管理列表页面第一列或是任务基本信息页查看任务ID。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 任务 ID 
-     * @return TaskId 任务 ID
+     * Get 任务ID。在任务管理列表页面第一列或是任务基本信息页查看任务ID。 
+     * @return TaskId 任务ID。在任务管理列表页面第一列或是任务基本信息页查看任务ID。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务 ID
-     * @param TaskId 任务 ID
+     * Set 任务ID。在任务管理列表页面第一列或是任务基本信息页查看任务ID。
+     * @param TaskId 任务ID。在任务管理列表页面第一列或是任务基本信息页查看任务ID。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

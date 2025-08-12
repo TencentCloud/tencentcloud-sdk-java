@@ -25,7 +25,7 @@ public class NoticeContentInfo extends AbstractModel {
 
     /**
     * 通知内容模板标题信息。
-部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
+部分通知渠道类型不支持“标题”，请参照[腾讯云控制台页面](https://console.cloud.tencent.com/cls/alarm/notice-template)。
     */
     @SerializedName("Title")
     @Expose
@@ -48,9 +48,9 @@ public class NoticeContentInfo extends AbstractModel {
 
     /**
      * Get 通知内容模板标题信息。
-部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。 
+部分通知渠道类型不支持“标题”，请参照[腾讯云控制台页面](https://console.cloud.tencent.com/cls/alarm/notice-template)。 
      * @return Title 通知内容模板标题信息。
-部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
+部分通知渠道类型不支持“标题”，请参照[腾讯云控制台页面](https://console.cloud.tencent.com/cls/alarm/notice-template)。
      */
     public String getTitle() {
         return this.Title;
@@ -58,9 +58,9 @@ public class NoticeContentInfo extends AbstractModel {
 
     /**
      * Set 通知内容模板标题信息。
-部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
+部分通知渠道类型不支持“标题”，请参照[腾讯云控制台页面](https://console.cloud.tencent.com/cls/alarm/notice-template)。
      * @param Title 通知内容模板标题信息。
-部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
+部分通知渠道类型不支持“标题”，请参照[腾讯云控制台页面](https://console.cloud.tencent.com/cls/alarm/notice-template)。
      */
     public void setTitle(String Title) {
         this.Title = Title;

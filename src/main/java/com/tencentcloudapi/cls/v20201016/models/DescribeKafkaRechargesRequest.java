@@ -24,69 +24,84 @@ import java.util.HashMap;
 public class DescribeKafkaRechargesRequest extends AbstractModel {
 
     /**
-    * 日志主题 ID
+    * 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 导入配置ID
+    * 导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 状态   status 1: 运行中, 2: 暂停...
+    * 状态。1: 运行中，2: 暂停，3：错误
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 日志主题 ID 
-     * @return TopicId 日志主题 ID
+     * Get 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
+     * @return TopicId 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题 ID
-     * @param TopicId 日志主题 ID
+     * Set 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param TopicId 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 导入配置ID 
-     * @return Id 导入配置ID
+     * Get 导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。 
+     * @return Id 导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 导入配置ID
-     * @param Id 导入配置ID
+     * Set 导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+     * @param Id 导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 状态   status 1: 运行中, 2: 暂停... 
-     * @return Status 状态   status 1: 运行中, 2: 暂停...
+     * Get 状态。1: 运行中，2: 暂停，3：错误 
+     * @return Status 状态。1: 运行中，2: 暂停，3：错误
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态   status 1: 运行中, 2: 暂停...
-     * @param Status 状态   status 1: 运行中, 2: 暂停...
+     * Set 状态。1: 运行中，2: 暂停，3：错误
+     * @param Status 状态。1: 运行中，2: 暂停，3：错误
      */
     public void setStatus(Long Status) {
         this.Status = Status;

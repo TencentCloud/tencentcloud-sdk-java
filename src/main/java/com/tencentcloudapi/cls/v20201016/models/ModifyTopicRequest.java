@@ -25,6 +25,7 @@ public class ModifyTopicRequest extends AbstractModel {
 
     /**
     * 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
@@ -32,6 +33,10 @@ public class ModifyTopicRequest extends AbstractModel {
 
     /**
     * 日志主题名称
+输入限制：
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
     */
     @SerializedName("TopicName")
     @Expose
@@ -60,7 +65,8 @@ public class ModifyTopicRequest extends AbstractModel {
     private Boolean AutoSplit;
 
     /**
-    * 若开启最大分裂，该主题能够能够允许的最大分区数
+    * 若开启最大分裂，该主题能够能够允许的最大分区数；
+默认为50；必须为正数
     */
     @SerializedName("MaxSplitPartitions")
     @Expose
@@ -104,7 +110,12 @@ public class ModifyTopicRequest extends AbstractModel {
     private TopicExtendInfo Extends;
 
     /**
-    * 日志主题分区数量
+    * 日志主题分区数量。
+默认为1；
+取值范围及约束：
+- 当输入值<=0，系统自动调整为1。
+- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
+- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
     */
     @SerializedName("PartitionCount")
     @Expose
@@ -112,14 +123,17 @@ public class ModifyTopicRequest extends AbstractModel {
 
     /**
     * 取消切换存储任务的id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
     */
     @SerializedName("CancelTopicAsyncTaskID")
     @Expose
     private String CancelTopicAsyncTaskID;
 
     /**
-     * Get 日志主题ID 
+     * Get 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
      * @return TopicId 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -127,15 +141,25 @@ public class ModifyTopicRequest extends AbstractModel {
 
     /**
      * Set 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param TopicId 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志主题名称 
+     * Get 日志主题名称
+输入限制：
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"] 
      * @return TopicName 日志主题名称
+输入限制：
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
      */
     public String getTopicName() {
         return this.TopicName;
@@ -143,7 +167,15 @@ public class ModifyTopicRequest extends AbstractModel {
 
     /**
      * Set 日志主题名称
+输入限制：
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
      * @param TopicName 日志主题名称
+输入限制：
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -202,16 +234,20 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 若开启最大分裂，该主题能够能够允许的最大分区数 
-     * @return MaxSplitPartitions 若开启最大分裂，该主题能够能够允许的最大分区数
+     * Get 若开启最大分裂，该主题能够能够允许的最大分区数；
+默认为50；必须为正数 
+     * @return MaxSplitPartitions 若开启最大分裂，该主题能够能够允许的最大分区数；
+默认为50；必须为正数
      */
     public Long getMaxSplitPartitions() {
         return this.MaxSplitPartitions;
     }
 
     /**
-     * Set 若开启最大分裂，该主题能够能够允许的最大分区数
-     * @param MaxSplitPartitions 若开启最大分裂，该主题能够能够允许的最大分区数
+     * Set 若开启最大分裂，该主题能够能够允许的最大分区数；
+默认为50；必须为正数
+     * @param MaxSplitPartitions 若开启最大分裂，该主题能够能够允许的最大分区数；
+默认为50；必须为正数
      */
     public void setMaxSplitPartitions(Long MaxSplitPartitions) {
         this.MaxSplitPartitions = MaxSplitPartitions;
@@ -306,24 +342,46 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志主题分区数量 
-     * @return PartitionCount 日志主题分区数量
+     * Get 日志主题分区数量。
+默认为1；
+取值范围及约束：
+- 当输入值<=0，系统自动调整为1。
+- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
+- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions； 
+     * @return PartitionCount 日志主题分区数量。
+默认为1；
+取值范围及约束：
+- 当输入值<=0，系统自动调整为1。
+- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
+- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
      */
     public Long getPartitionCount() {
         return this.PartitionCount;
     }
 
     /**
-     * Set 日志主题分区数量
-     * @param PartitionCount 日志主题分区数量
+     * Set 日志主题分区数量。
+默认为1；
+取值范围及约束：
+- 当输入值<=0，系统自动调整为1。
+- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
+- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
+     * @param PartitionCount 日志主题分区数量。
+默认为1；
+取值范围及约束：
+- 当输入值<=0，系统自动调整为1。
+- 如果未传MaxSplitPartitions，需要PartitionCount<=50；
+- 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
      */
     public void setPartitionCount(Long PartitionCount) {
         this.PartitionCount = PartitionCount;
     }
 
     /**
-     * Get 取消切换存储任务的id 
+     * Get 取消切换存储任务的id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。 
      * @return CancelTopicAsyncTaskID 取消切换存储任务的id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
      */
     public String getCancelTopicAsyncTaskID() {
         return this.CancelTopicAsyncTaskID;
@@ -331,7 +389,9 @@ public class ModifyTopicRequest extends AbstractModel {
 
     /**
      * Set 取消切换存储任务的id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
      * @param CancelTopicAsyncTaskID 取消切换存储任务的id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
      */
     public void setCancelTopicAsyncTaskID(String CancelTopicAsyncTaskID) {
         this.CancelTopicAsyncTaskID = CancelTopicAsyncTaskID;

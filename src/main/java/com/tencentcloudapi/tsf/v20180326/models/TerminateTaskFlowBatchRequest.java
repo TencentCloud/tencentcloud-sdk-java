@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class TerminateTaskFlowBatchRequest extends AbstractModel {
 
     /**
-    * 工作流批次 ID
+    * 工作流批次 ID，在[工作流执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=taskflow)列表页第一列获取。
     */
     @SerializedName("FlowBatchId")
     @Expose
     private String FlowBatchId;
 
     /**
-     * Get 工作流批次 ID 
-     * @return FlowBatchId 工作流批次 ID
+     * Get 工作流批次 ID，在[工作流执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=taskflow)列表页第一列获取。 
+     * @return FlowBatchId 工作流批次 ID，在[工作流执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=taskflow)列表页第一列获取。
      */
     public String getFlowBatchId() {
         return this.FlowBatchId;
     }
 
     /**
-     * Set 工作流批次 ID
-     * @param FlowBatchId 工作流批次 ID
+     * Set 工作流批次 ID，在[工作流执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=taskflow)列表页第一列获取。
+     * @param FlowBatchId 工作流批次 ID，在[工作流执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=taskflow)列表页第一列获取。
      */
     public void setFlowBatchId(String FlowBatchId) {
         this.FlowBatchId = FlowBatchId;

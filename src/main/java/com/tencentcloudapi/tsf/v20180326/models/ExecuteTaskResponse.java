@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExecuteTaskResponse extends AbstractModel {
 
     /**
-    * 成功/失败
+    * 操作成功返回任务批次ID，操作失败返回空字符串。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ExecuteTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成功/失败 
-     * @return Result 成功/失败
+     * Get 操作成功返回任务批次ID，操作失败返回空字符串。 
+     * @return Result 操作成功返回任务批次ID，操作失败返回空字符串。
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 成功/失败
-     * @param Result 成功/失败
+     * Set 操作成功返回任务批次ID，操作失败返回空字符串。
+     * @param Result 操作成功返回任务批次ID，操作失败返回空字符串。
      */
     public void setResult(String Result) {
         this.Result = Result;

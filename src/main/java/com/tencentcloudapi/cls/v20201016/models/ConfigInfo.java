@@ -91,6 +91,7 @@ public class ConfigInfo extends AbstractModel {
 
     /**
     * 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -98,6 +99,7 @@ public class ConfigInfo extends AbstractModel {
 
     /**
     * 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
@@ -293,8 +295,10 @@ public class ConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get 更新时间 
+     * Get 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss 
      * @return UpdateTime 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -302,15 +306,19 @@ public class ConfigInfo extends AbstractModel {
 
     /**
      * Set 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      * @param UpdateTime 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 创建时间 
+     * Get 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss 
      * @return CreateTime 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -318,7 +326,9 @@ public class ConfigInfo extends AbstractModel {
 
     /**
      * Set 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      * @param CreateTime 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

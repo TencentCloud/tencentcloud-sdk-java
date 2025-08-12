@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyLaneRequest extends AbstractModel {
 
     /**
-    * 泳道ID
+    * 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
     */
     @SerializedName("LaneId")
     @Expose
     private String LaneId;
 
     /**
-    * 泳道名称
+    * 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
     */
     @SerializedName("LaneName")
     @Expose
     private String LaneName;
 
     /**
-    * 备注
+    * 备注，最多支持200个字符。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 泳道ID 
-     * @return LaneId 泳道ID
+     * Get 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。 
+     * @return LaneId 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
      */
     public String getLaneId() {
         return this.LaneId;
     }
 
     /**
-     * Set 泳道ID
-     * @param LaneId 泳道ID
+     * Set 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
+     * @param LaneId 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
      */
     public void setLaneId(String LaneId) {
         this.LaneId = LaneId;
     }
 
     /**
-     * Get 泳道名称 
-     * @return LaneName 泳道名称
+     * Get 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。 
+     * @return LaneName 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
      */
     public String getLaneName() {
         return this.LaneName;
     }
 
     /**
-     * Set 泳道名称
-     * @param LaneName 泳道名称
+     * Set 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
+     * @param LaneName 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
      */
     public void setLaneName(String LaneName) {
         this.LaneName = LaneName;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get 备注，最多支持200个字符。 
+     * @return Remark 备注，最多支持200个字符。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set 备注，最多支持200个字符。
+     * @param Remark 备注，最多支持200个字符。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

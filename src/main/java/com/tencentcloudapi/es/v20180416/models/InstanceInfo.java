@@ -745,6 +745,13 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String EnableDestroyProtection;
 
     /**
+    * kibana内网访问地址
+    */
+    @SerializedName("ShowKibanaIpPort")
+    @Expose
+    private String ShowKibanaIpPort;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -2500,6 +2507,22 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.EnableDestroyProtection = EnableDestroyProtection;
     }
 
+    /**
+     * Get kibana内网访问地址 
+     * @return ShowKibanaIpPort kibana内网访问地址
+     */
+    public String getShowKibanaIpPort() {
+        return this.ShowKibanaIpPort;
+    }
+
+    /**
+     * Set kibana内网访问地址
+     * @param ShowKibanaIpPort kibana内网访问地址
+     */
+    public void setShowKibanaIpPort(String ShowKibanaIpPort) {
+        this.ShowKibanaIpPort = ShowKibanaIpPort;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2811,6 +2834,9 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.EnableDestroyProtection != null) {
             this.EnableDestroyProtection = new String(source.EnableDestroyProtection);
         }
+        if (source.ShowKibanaIpPort != null) {
+            this.ShowKibanaIpPort = new String(source.ShowKibanaIpPort);
+        }
     }
 
 
@@ -2912,6 +2938,7 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
         this.setParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
         this.setParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
+        this.setParamSimple(map, prefix + "ShowKibanaIpPort", this.ShowKibanaIpPort);
 
     }
 }

@@ -38,25 +38,42 @@ public class SearchProRequest extends AbstractModel {
     private Long Mode;
 
     /**
-    * 指定域名站内搜索（用于过滤自然检索结果）  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+    * 指定域名站内搜索（用于过滤自然检索结果）
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
     */
     @SerializedName("Site")
     @Expose
     private String Site;
 
     /**
-    * 起始时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+    * 起始时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
     */
     @SerializedName("FromTime")
     @Expose
     private Long FromTime;
 
     /**
-    * 结束时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+    * 结束时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
     */
     @SerializedName("ToTime")
     @Expose
     private Long ToTime;
+
+    /**
+    * cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
+    */
+    @SerializedName("Cnt")
+    @Expose
+    private Long Cnt;
+
+    /**
+    * Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+    */
+    @SerializedName("Industry")
+    @Expose
+    private String Industry;
 
     /**
      * Get 搜索词 
@@ -91,51 +108,95 @@ public class SearchProRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定域名站内搜索（用于过滤自然检索结果）  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效 
-     * @return Site 指定域名站内搜索（用于过滤自然检索结果）  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+     * Get 指定域名站内搜索（用于过滤自然检索结果）
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效 
+     * @return Site 指定域名站内搜索（用于过滤自然检索结果）
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
      */
     public String getSite() {
         return this.Site;
     }
 
     /**
-     * Set 指定域名站内搜索（用于过滤自然检索结果）  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
-     * @param Site 指定域名站内搜索（用于过滤自然检索结果）  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+     * Set 指定域名站内搜索（用于过滤自然检索结果）
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+     * @param Site 指定域名站内搜索（用于过滤自然检索结果）
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
      */
     public void setSite(String Site) {
         this.Site = Site;
     }
 
     /**
-     * Get 起始时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效 
-     * @return FromTime 起始时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+     * Get 起始时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效 
+     * @return FromTime 起始时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
      */
     public Long getFromTime() {
         return this.FromTime;
     }
 
     /**
-     * Set 起始时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
-     * @param FromTime 起始时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+     * Set 起始时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+     * @param FromTime 起始时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
      */
     public void setFromTime(Long FromTime) {
         this.FromTime = FromTime;
     }
 
     /**
-     * Get 结束时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效 
-     * @return ToTime 结束时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+     * Get 结束时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效 
+     * @return ToTime 结束时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
      */
     public Long getToTime() {
         return this.ToTime;
     }
 
     /**
-     * Set 结束时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
-     * @param ToTime 结束时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+     * Set 结束时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+     * @param ToTime 结束时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
      */
     public void setToTime(Long ToTime) {
         this.ToTime = ToTime;
+    }
+
+    /**
+     * Get cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用** 
+     * @return Cnt cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
+     */
+    public Long getCnt() {
+        return this.Cnt;
+    }
+
+    /**
+     * Set cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
+     * @param Cnt cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
+     */
+    public void setCnt(Long Cnt) {
+        this.Cnt = Cnt;
+    }
+
+    /**
+     * Get Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用** 
+     * @return Industry Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+     */
+    public String getIndustry() {
+        return this.Industry;
+    }
+
+    /**
+     * Set Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+     * @param Industry Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+     */
+    public void setIndustry(String Industry) {
+        this.Industry = Industry;
     }
 
     public SearchProRequest() {
@@ -161,6 +222,12 @@ public class SearchProRequest extends AbstractModel {
         if (source.ToTime != null) {
             this.ToTime = new Long(source.ToTime);
         }
+        if (source.Cnt != null) {
+            this.Cnt = new Long(source.Cnt);
+        }
+        if (source.Industry != null) {
+            this.Industry = new String(source.Industry);
+        }
     }
 
 
@@ -173,6 +240,8 @@ public class SearchProRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Site", this.Site);
         this.setParamSimple(map, prefix + "FromTime", this.FromTime);
         this.setParamSimple(map, prefix + "ToTime", this.ToTime);
+        this.setParamSimple(map, prefix + "Cnt", this.Cnt);
+        this.setParamSimple(map, prefix + "Industry", this.Industry);
 
     }
 }

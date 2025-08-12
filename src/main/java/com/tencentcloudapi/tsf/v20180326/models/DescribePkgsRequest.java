@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePkgsRequest extends AbstractModel {
 
     /**
-    * 应用ID（只传入应用ID，返回该应用下所有软件包信息）
+    * 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -38,7 +38,7 @@ public class DescribePkgsRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-    * 排序关键字（默认为"UploadTime"：上传时间）
+    * 排序关键字（默认值"UploadTime"），允许值："UploadTime"上传时间, "name"程序包名, "size"应用大小, "id"程序包ID
     */
     @SerializedName("OrderBy")
     @Expose
@@ -52,7 +52,7 @@ public class DescribePkgsRequest extends AbstractModel {
     private Long OrderType;
 
     /**
-    * 查询起始偏移
+    * 查询起始偏移，大于等于0，默认值为0
     */
     @SerializedName("Offset")
     @Expose
@@ -66,14 +66,14 @@ public class DescribePkgsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 程序包仓库类型
+    * 程序包仓库类型，允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库
     */
     @SerializedName("RepositoryType")
     @Expose
     private String RepositoryType;
 
     /**
-    * 程序包仓库id
+    * 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
     */
     @SerializedName("RepositoryId")
     @Expose
@@ -87,16 +87,16 @@ public class DescribePkgsRequest extends AbstractModel {
     private String [] PackageTypeList;
 
     /**
-     * Get 应用ID（只传入应用ID，返回该应用下所有软件包信息） 
-     * @return ApplicationId 应用ID（只传入应用ID，返回该应用下所有软件包信息）
+     * Get 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值 
+     * @return ApplicationId 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 应用ID（只传入应用ID，返回该应用下所有软件包信息）
-     * @param ApplicationId 应用ID（只传入应用ID，返回该应用下所有软件包信息）
+     * Set 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
+     * @param ApplicationId 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
@@ -119,16 +119,16 @@ public class DescribePkgsRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序关键字（默认为"UploadTime"：上传时间） 
-     * @return OrderBy 排序关键字（默认为"UploadTime"：上传时间）
+     * Get 排序关键字（默认值"UploadTime"），允许值："UploadTime"上传时间, "name"程序包名, "size"应用大小, "id"程序包ID 
+     * @return OrderBy 排序关键字（默认值"UploadTime"），允许值："UploadTime"上传时间, "name"程序包名, "size"应用大小, "id"程序包ID
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序关键字（默认为"UploadTime"：上传时间）
-     * @param OrderBy 排序关键字（默认为"UploadTime"：上传时间）
+     * Set 排序关键字（默认值"UploadTime"），允许值："UploadTime"上传时间, "name"程序包名, "size"应用大小, "id"程序包ID
+     * @param OrderBy 排序关键字（默认值"UploadTime"），允许值："UploadTime"上传时间, "name"程序包名, "size"应用大小, "id"程序包ID
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
@@ -151,16 +151,16 @@ public class DescribePkgsRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询起始偏移 
-     * @return Offset 查询起始偏移
+     * Get 查询起始偏移，大于等于0，默认值为0 
+     * @return Offset 查询起始偏移，大于等于0，默认值为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询起始偏移
-     * @param Offset 查询起始偏移
+     * Set 查询起始偏移，大于等于0，默认值为0
+     * @param Offset 查询起始偏移，大于等于0，默认值为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -183,32 +183,32 @@ public class DescribePkgsRequest extends AbstractModel {
     }
 
     /**
-     * Get 程序包仓库类型 
-     * @return RepositoryType 程序包仓库类型
+     * Get 程序包仓库类型，允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库 
+     * @return RepositoryType 程序包仓库类型，允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库
      */
     public String getRepositoryType() {
         return this.RepositoryType;
     }
 
     /**
-     * Set 程序包仓库类型
-     * @param RepositoryType 程序包仓库类型
+     * Set 程序包仓库类型，允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库
+     * @param RepositoryType 程序包仓库类型，允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库
      */
     public void setRepositoryType(String RepositoryType) {
         this.RepositoryType = RepositoryType;
     }
 
     /**
-     * Get 程序包仓库id 
-     * @return RepositoryId 程序包仓库id
+     * Get 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看 
+     * @return RepositoryId 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public String getRepositoryId() {
         return this.RepositoryId;
     }
 
     /**
-     * Set 程序包仓库id
-     * @param RepositoryId 程序包仓库id
+     * Set 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
+     * @param RepositoryId 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public void setRepositoryId(String RepositoryId) {
         this.RepositoryId = RepositoryId;

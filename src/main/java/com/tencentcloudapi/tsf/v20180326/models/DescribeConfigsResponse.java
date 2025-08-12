@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeConfigsResponse extends AbstractModel {
 
     /**
-    * 分页后的配置项列表
+    * 分页后的配置项列表。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeConfigsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分页后的配置项列表 
-     * @return Result 分页后的配置项列表
+     * Get 分页后的配置项列表。 
+     * @return Result 分页后的配置项列表。
      */
     public TsfPageConfig getResult() {
         return this.Result;
     }
 
     /**
-     * Set 分页后的配置项列表
-     * @param Result 分页后的配置项列表
+     * Set 分页后的配置项列表。
+     * @param Result 分页后的配置项列表。
      */
     public void setResult(TsfPageConfig Result) {
         this.Result = Result;

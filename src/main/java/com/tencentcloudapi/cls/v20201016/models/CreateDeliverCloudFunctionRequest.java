@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class CreateDeliverCloudFunctionRequest extends AbstractModel {
 
     /**
-    * 投递规则属于的 topic id
+    * 投递规则属于的TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
@@ -32,58 +34,71 @@ public class CreateDeliverCloudFunctionRequest extends AbstractModel {
 
     /**
     * 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
+通过 [获取函数列表](https://cloud.tencent.com/document/product/583/18582) 获取函数信息。
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * 命名空间
+    * 命名空间。参考 [命名空间管理](https://cloud.tencent.com/document/product/583/35913)
+- 通过 [列出命名空间列表](https://cloud.tencent.com/document/product/583/37158) 获取Name。
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 函数版本
+    * 函数版本。
+- 通过 [查询函数版本 ](https://cloud.tencent.com/document/product/583/37162) 获取函数版本。
     */
     @SerializedName("Qualifier")
     @Expose
     private String Qualifier;
 
     /**
-    * 投递最长等待时间，单位：秒
+    * 投递最长等待时间，单位：秒。 默认：60
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * 投递最大消息数
+    * 投递最大消息数。默认为100。支持范围[1,10000]
     */
     @SerializedName("MaxMsgNum")
     @Expose
     private Long MaxMsgNum;
 
     /**
-     * Get 投递规则属于的 topic id 
-     * @return TopicId 投递规则属于的 topic id
+     * Get 投递规则属于的TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。 
+     * @return TopicId 投递规则属于的TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 投递规则属于的 topic id
-     * @param TopicId 投递规则属于的 topic id
+     * Set 投递规则属于的TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * @param TopicId 投递规则属于的TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)） 
+     * Get 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
+通过 [获取函数列表](https://cloud.tencent.com/document/product/583/18582) 获取函数信息。 
      * @return FunctionName 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
+通过 [获取函数列表](https://cloud.tencent.com/document/product/583/18582) 获取函数信息。
      */
     public String getFunctionName() {
         return this.FunctionName;
@@ -91,71 +106,81 @@ public class CreateDeliverCloudFunctionRequest extends AbstractModel {
 
     /**
      * Set 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
+通过 [获取函数列表](https://cloud.tencent.com/document/product/583/18582) 获取函数信息。
      * @param FunctionName 投递的云函数名字。仅支持[事件函数](https://cloud.tencent.com/document/product/583/9694#scf-.E4.BA.8B.E4.BB.B6.E5.87.BD.E6.95.B0) （[函数类型选型](https://cloud.tencent.com/document/product/583/73483)）
+通过 [获取函数列表](https://cloud.tencent.com/document/product/583/18582) 获取函数信息。
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get 命名空间 
-     * @return Namespace 命名空间
+     * Get 命名空间。参考 [命名空间管理](https://cloud.tencent.com/document/product/583/35913)
+- 通过 [列出命名空间列表](https://cloud.tencent.com/document/product/583/37158) 获取Name。 
+     * @return Namespace 命名空间。参考 [命名空间管理](https://cloud.tencent.com/document/product/583/35913)
+- 通过 [列出命名空间列表](https://cloud.tencent.com/document/product/583/37158) 获取Name。
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 命名空间
-     * @param Namespace 命名空间
+     * Set 命名空间。参考 [命名空间管理](https://cloud.tencent.com/document/product/583/35913)
+- 通过 [列出命名空间列表](https://cloud.tencent.com/document/product/583/37158) 获取Name。
+     * @param Namespace 命名空间。参考 [命名空间管理](https://cloud.tencent.com/document/product/583/35913)
+- 通过 [列出命名空间列表](https://cloud.tencent.com/document/product/583/37158) 获取Name。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 函数版本 
-     * @return Qualifier 函数版本
+     * Get 函数版本。
+- 通过 [查询函数版本 ](https://cloud.tencent.com/document/product/583/37162) 获取函数版本。 
+     * @return Qualifier 函数版本。
+- 通过 [查询函数版本 ](https://cloud.tencent.com/document/product/583/37162) 获取函数版本。
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set 函数版本
-     * @param Qualifier 函数版本
+     * Set 函数版本。
+- 通过 [查询函数版本 ](https://cloud.tencent.com/document/product/583/37162) 获取函数版本。
+     * @param Qualifier 函数版本。
+- 通过 [查询函数版本 ](https://cloud.tencent.com/document/product/583/37162) 获取函数版本。
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
     }
 
     /**
-     * Get 投递最长等待时间，单位：秒 
-     * @return Timeout 投递最长等待时间，单位：秒
+     * Get 投递最长等待时间，单位：秒。 默认：60 
+     * @return Timeout 投递最长等待时间，单位：秒。 默认：60
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 投递最长等待时间，单位：秒
-     * @param Timeout 投递最长等待时间，单位：秒
+     * Set 投递最长等待时间，单位：秒。 默认：60
+     * @param Timeout 投递最长等待时间，单位：秒。 默认：60
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 投递最大消息数 
-     * @return MaxMsgNum 投递最大消息数
+     * Get 投递最大消息数。默认为100。支持范围[1,10000] 
+     * @return MaxMsgNum 投递最大消息数。默认为100。支持范围[1,10000]
      */
     public Long getMaxMsgNum() {
         return this.MaxMsgNum;
     }
 
     /**
-     * Set 投递最大消息数
-     * @param MaxMsgNum 投递最大消息数
+     * Set 投递最大消息数。默认为100。支持范围[1,10000]
+     * @param MaxMsgNum 投递最大消息数。默认为100。支持范围[1,10000]
      */
     public void setMaxMsgNum(Long MaxMsgNum) {
         this.MaxMsgNum = MaxMsgNum;

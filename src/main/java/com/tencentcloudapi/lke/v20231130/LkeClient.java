@@ -745,17 +745,6 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *应用类型列表
-     * @param req ListAppCategoryRequest
-     * @return ListAppCategoryResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListAppCategoryResponse ListAppCategory(ListAppCategoryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListAppCategory", ListAppCategoryResponse.class);
-    }
-
-    /**
      *列表查询知识库容量详情
      * @param req ListAppKnowledgeDetailRequest
      * @return ListAppKnowledgeDetailResponse

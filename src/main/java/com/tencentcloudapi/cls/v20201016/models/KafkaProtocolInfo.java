@@ -25,7 +25,14 @@ public class KafkaProtocolInfo extends AbstractModel {
 
     /**
     * 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
-入参必填
+
+- 当IsEncryptionAddr为true时，Protocol必填。
+- 支持的协议类型如下：
+    - plaintext：纯文本无加密协议
+    - sasl_ssl：SASL 认证 + SSL 加密
+    - ssl：纯 SSL/TLS 加密协议
+    - sasl_plaintext：SASL 认证 + 非加密通道
+
     */
     @SerializedName("Protocol")
     @Expose
@@ -33,7 +40,12 @@ public class KafkaProtocolInfo extends AbstractModel {
 
     /**
     * 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
-当Protocol为sasl_plaintext或sasl_ssl时必填
+
+- 当Protocol为  `sasl_plaintext` 或 `sasl_ssl` 时 Mechanism 必填。
+- 支持加密类型如下
+    -  PLAIN：明文认证
+    -  SCRAM-SHA-256：基于挑战-响应机制，使用PBKDF2-HMAC-SHA256算法
+    -  SCRAM-SHA-512：增强版SCRAM，使用PBKDF2-HMAC-SHA512算法
     */
     @SerializedName("Mechanism")
     @Expose
@@ -57,9 +69,23 @@ public class KafkaProtocolInfo extends AbstractModel {
 
     /**
      * Get 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
-入参必填 
+
+- 当IsEncryptionAddr为true时，Protocol必填。
+- 支持的协议类型如下：
+    - plaintext：纯文本无加密协议
+    - sasl_ssl：SASL 认证 + SSL 加密
+    - ssl：纯 SSL/TLS 加密协议
+    - sasl_plaintext：SASL 认证 + 非加密通道
+ 
      * @return Protocol 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
-入参必填
+
+- 当IsEncryptionAddr为true时，Protocol必填。
+- 支持的协议类型如下：
+    - plaintext：纯文本无加密协议
+    - sasl_ssl：SASL 认证 + SSL 加密
+    - ssl：纯 SSL/TLS 加密协议
+    - sasl_plaintext：SASL 认证 + 非加密通道
+
      */
     public String getProtocol() {
         return this.Protocol;
@@ -67,9 +93,23 @@ public class KafkaProtocolInfo extends AbstractModel {
 
     /**
      * Set 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
-入参必填
+
+- 当IsEncryptionAddr为true时，Protocol必填。
+- 支持的协议类型如下：
+    - plaintext：纯文本无加密协议
+    - sasl_ssl：SASL 认证 + SSL 加密
+    - ssl：纯 SSL/TLS 加密协议
+    - sasl_plaintext：SASL 认证 + 非加密通道
+
      * @param Protocol 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
-入参必填
+
+- 当IsEncryptionAddr为true时，Protocol必填。
+- 支持的协议类型如下：
+    - plaintext：纯文本无加密协议
+    - sasl_ssl：SASL 认证 + SSL 加密
+    - ssl：纯 SSL/TLS 加密协议
+    - sasl_plaintext：SASL 认证 + 非加密通道
+
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -77,9 +117,19 @@ public class KafkaProtocolInfo extends AbstractModel {
 
     /**
      * Get 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
-当Protocol为sasl_plaintext或sasl_ssl时必填 
+
+- 当Protocol为  `sasl_plaintext` 或 `sasl_ssl` 时 Mechanism 必填。
+- 支持加密类型如下
+    -  PLAIN：明文认证
+    -  SCRAM-SHA-256：基于挑战-响应机制，使用PBKDF2-HMAC-SHA256算法
+    -  SCRAM-SHA-512：增强版SCRAM，使用PBKDF2-HMAC-SHA512算法 
      * @return Mechanism 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
-当Protocol为sasl_plaintext或sasl_ssl时必填
+
+- 当Protocol为  `sasl_plaintext` 或 `sasl_ssl` 时 Mechanism 必填。
+- 支持加密类型如下
+    -  PLAIN：明文认证
+    -  SCRAM-SHA-256：基于挑战-响应机制，使用PBKDF2-HMAC-SHA256算法
+    -  SCRAM-SHA-512：增强版SCRAM，使用PBKDF2-HMAC-SHA512算法
      */
     public String getMechanism() {
         return this.Mechanism;
@@ -87,9 +137,19 @@ public class KafkaProtocolInfo extends AbstractModel {
 
     /**
      * Set 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
-当Protocol为sasl_plaintext或sasl_ssl时必填
+
+- 当Protocol为  `sasl_plaintext` 或 `sasl_ssl` 时 Mechanism 必填。
+- 支持加密类型如下
+    -  PLAIN：明文认证
+    -  SCRAM-SHA-256：基于挑战-响应机制，使用PBKDF2-HMAC-SHA256算法
+    -  SCRAM-SHA-512：增强版SCRAM，使用PBKDF2-HMAC-SHA512算法
      * @param Mechanism 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
-当Protocol为sasl_plaintext或sasl_ssl时必填
+
+- 当Protocol为  `sasl_plaintext` 或 `sasl_ssl` 时 Mechanism 必填。
+- 支持加密类型如下
+    -  PLAIN：明文认证
+    -  SCRAM-SHA-256：基于挑战-响应机制，使用PBKDF2-HMAC-SHA256算法
+    -  SCRAM-SHA-512：增强版SCRAM，使用PBKDF2-HMAC-SHA512算法
      */
     public void setMechanism(String Mechanism) {
         this.Mechanism = Mechanism;

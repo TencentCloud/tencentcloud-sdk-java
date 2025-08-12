@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyMicroserviceRequest extends AbstractModel {
 
     /**
-    * 微服务 ID
+    * 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
     */
     @SerializedName("MicroserviceId")
     @Expose
     private String MicroserviceId;
 
     /**
-    * 微服务备注信息
+    * 微服务备注信息，最多支持200个字符。
     */
     @SerializedName("MicroserviceDesc")
     @Expose
     private String MicroserviceDesc;
 
     /**
-     * Get 微服务 ID 
-     * @return MicroserviceId 微服务 ID
+     * Get 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。 
+     * @return MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public String getMicroserviceId() {
         return this.MicroserviceId;
     }
 
     /**
-     * Set 微服务 ID
-     * @param MicroserviceId 微服务 ID
+     * Set 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public void setMicroserviceId(String MicroserviceId) {
         this.MicroserviceId = MicroserviceId;
     }
 
     /**
-     * Get 微服务备注信息 
-     * @return MicroserviceDesc 微服务备注信息
+     * Get 微服务备注信息，最多支持200个字符。 
+     * @return MicroserviceDesc 微服务备注信息，最多支持200个字符。
      */
     public String getMicroserviceDesc() {
         return this.MicroserviceDesc;
     }
 
     /**
-     * Set 微服务备注信息
-     * @param MicroserviceDesc 微服务备注信息
+     * Set 微服务备注信息，最多支持200个字符。
+     * @param MicroserviceDesc 微服务备注信息，最多支持200个字符。
      */
     public void setMicroserviceDesc(String MicroserviceDesc) {
         this.MicroserviceDesc = MicroserviceDesc;

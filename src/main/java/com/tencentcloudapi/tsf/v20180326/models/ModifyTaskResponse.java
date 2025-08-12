@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyTaskResponse extends AbstractModel {
 
     /**
-    * 更新是否成功
+    * 更新是否成功。true：操作成功、false：操作失败
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 更新是否成功 
-     * @return Result 更新是否成功
+     * Get 更新是否成功。true：操作成功、false：操作失败 
+     * @return Result 更新是否成功。true：操作成功、false：操作失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 更新是否成功
-     * @param Result 更新是否成功
+     * Set 更新是否成功。true：操作成功、false：操作失败
+     * @param Result 更新是否成功。true：操作成功、false：操作失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

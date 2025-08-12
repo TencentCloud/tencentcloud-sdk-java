@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class DeleteConsoleSharingRequest extends AbstractModel {
 
     /**
-    * 免密分享Id
+    * 免密分享Id。
+- 通过 [获取免密分享列表](https://cloud.tencent.com/document/product/614/109798) 获取免密分享Id。 
+- 通过 [创建免密分享](https://cloud.tencent.com/document/product/614/109800) 获取免密分享Id。
     */
     @SerializedName("SharingId")
     @Expose
     private String SharingId;
 
     /**
-     * Get 免密分享Id 
-     * @return SharingId 免密分享Id
+     * Get 免密分享Id。
+- 通过 [获取免密分享列表](https://cloud.tencent.com/document/product/614/109798) 获取免密分享Id。 
+- 通过 [创建免密分享](https://cloud.tencent.com/document/product/614/109800) 获取免密分享Id。 
+     * @return SharingId 免密分享Id。
+- 通过 [获取免密分享列表](https://cloud.tencent.com/document/product/614/109798) 获取免密分享Id。 
+- 通过 [创建免密分享](https://cloud.tencent.com/document/product/614/109800) 获取免密分享Id。
      */
     public String getSharingId() {
         return this.SharingId;
     }
 
     /**
-     * Set 免密分享Id
-     * @param SharingId 免密分享Id
+     * Set 免密分享Id。
+- 通过 [获取免密分享列表](https://cloud.tencent.com/document/product/614/109798) 获取免密分享Id。 
+- 通过 [创建免密分享](https://cloud.tencent.com/document/product/614/109800) 获取免密分享Id。
+     * @param SharingId 免密分享Id。
+- 通过 [获取免密分享列表](https://cloud.tencent.com/document/product/614/109798) 获取免密分享Id。 
+- 通过 [创建免密分享](https://cloud.tencent.com/document/product/614/109800) 获取免密分享Id。
      */
     public void setSharingId(String SharingId) {
         this.SharingId = SharingId;

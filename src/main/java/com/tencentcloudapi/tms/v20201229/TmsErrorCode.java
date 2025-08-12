@@ -3,6 +3,9 @@ public enum TmsErrorCode {
      /* 请求超时。 */
      INTERNALERROR_ERRTEXTTIMEOUT("InternalError.ErrTextTimeOut"),
      
+     /* 查询异常：请求被限流 */
+     INTERNALERROR_QUERYREQLIMITED("InternalError.QueryReqLimited"),
+     
      /* 错误的action。 */
      INVALIDPARAMETER_ERRACTION("InvalidParameter.ErrAction"),
      

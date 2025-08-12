@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ModifyMachineGroupRequest extends AbstractModel {
 
     /**
-    * 机器组ID
+    * 机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
     */
     @SerializedName("GroupId")
     @Expose
@@ -32,6 +33,9 @@ public class ModifyMachineGroupRequest extends AbstractModel {
 
     /**
     * 机器组名称
+输入限制：
+- 不能为空字符串
+- 不能包含字符'|'
     */
     @SerializedName("GroupName")
     @Expose
@@ -62,6 +66,7 @@ Type：label，Values中为标签字符串列表机器组。
 
     /**
     * 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
     */
     @SerializedName("UpdateStartTime")
     @Expose
@@ -69,6 +74,7 @@ Type：label，Values中为标签字符串列表机器组。
 
     /**
     * 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
     */
     @SerializedName("UpdateEndTime")
     @Expose
@@ -96,24 +102,34 @@ Type：label，Values中为标签字符串列表机器组。
     private MetaTagInfo [] MetaTags;
 
     /**
-     * Get 机器组ID 
-     * @return GroupId 机器组ID
+     * Get 机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。 
+     * @return GroupId 机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 机器组ID
-     * @param GroupId 机器组ID
+     * Set 机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
+     * @param GroupId 机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 机器组名称 
+     * Get 机器组名称
+输入限制：
+- 不能为空字符串
+- 不能包含字符'|' 
      * @return GroupName 机器组名称
+输入限制：
+- 不能为空字符串
+- 不能包含字符'|'
      */
     public String getGroupName() {
         return this.GroupName;
@@ -121,7 +137,13 @@ Type：label，Values中为标签字符串列表机器组。
 
     /**
      * Set 机器组名称
+输入限制：
+- 不能为空字符串
+- 不能包含字符'|'
      * @param GroupName 机器组名称
+输入限制：
+- 不能为空字符串
+- 不能包含字符'|'
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
@@ -184,8 +206,10 @@ Type：label，Values中为标签字符串列表机器组。
     }
 
     /**
-     * Get 升级开始时间，建议业务低峰期升级LogListener 
+     * Get 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss 
      * @return UpdateStartTime 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public String getUpdateStartTime() {
         return this.UpdateStartTime;
@@ -193,15 +217,19 @@ Type：label，Values中为标签字符串列表机器组。
 
     /**
      * Set 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      * @param UpdateStartTime 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public void setUpdateStartTime(String UpdateStartTime) {
         this.UpdateStartTime = UpdateStartTime;
     }
 
     /**
-     * Get 升级结束时间，建议业务低峰期升级LogListener 
+     * Get 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss 
      * @return UpdateEndTime 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public String getUpdateEndTime() {
         return this.UpdateEndTime;
@@ -209,7 +237,9 @@ Type：label，Values中为标签字符串列表机器组。
 
     /**
      * Set 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      * @param UpdateEndTime 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public void setUpdateEndTime(String UpdateEndTime) {
         this.UpdateEndTime = UpdateEndTime;

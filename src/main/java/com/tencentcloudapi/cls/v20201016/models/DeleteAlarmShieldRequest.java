@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteAlarmShieldRequest extends AbstractModel {
 
     /**
-    * 屏蔽规则id。
+    * 屏蔽规则id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 通知渠道组id。
+    * 通知渠道组id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
     */
     @SerializedName("AlarmNoticeId")
     @Expose
     private String AlarmNoticeId;
 
     /**
-     * Get 屏蔽规则id。 
-     * @return TaskId 屏蔽规则id。
+     * Get 屏蔽规则id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID 
+     * @return TaskId 屏蔽规则id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 屏蔽规则id。
-     * @param TaskId 屏蔽规则id。
+     * Set 屏蔽规则id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
+     * @param TaskId 屏蔽规则id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 通知渠道组id。 
-     * @return AlarmNoticeId 通知渠道组id。
+     * Get 通知渠道组id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id 
+     * @return AlarmNoticeId 通知渠道组id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set 通知渠道组id。
-     * @param AlarmNoticeId 通知渠道组id。
+     * Set 通知渠道组id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
+     * @param AlarmNoticeId 通知渠道组id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;

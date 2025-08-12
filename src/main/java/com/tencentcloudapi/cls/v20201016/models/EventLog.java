@@ -37,7 +37,9 @@ public class EventLog extends AbstractModel {
     private String EventChannel;
 
     /**
-    * 时间类型，1:用户自定义，2:当前时间
+    * 时间字段（Timestamp）支持的类型
+- 1（用户自定义时间）
+- 2（当前时间）
     */
     @SerializedName("TimeType")
     @Expose
@@ -45,6 +47,7 @@ public class EventLog extends AbstractModel {
 
     /**
     * 时间，用户选择自定义时间类型时，需要指定时间，单位秒
+格式：时间戳，1754897446
     */
     @SerializedName("Timestamp")
     @Expose
@@ -102,24 +105,34 @@ public class EventLog extends AbstractModel {
     }
 
     /**
-     * Get 时间类型，1:用户自定义，2:当前时间 
-     * @return TimeType 时间类型，1:用户自定义，2:当前时间
+     * Get 时间字段（Timestamp）支持的类型
+- 1（用户自定义时间）
+- 2（当前时间） 
+     * @return TimeType 时间字段（Timestamp）支持的类型
+- 1（用户自定义时间）
+- 2（当前时间）
      */
     public Long getTimeType() {
         return this.TimeType;
     }
 
     /**
-     * Set 时间类型，1:用户自定义，2:当前时间
-     * @param TimeType 时间类型，1:用户自定义，2:当前时间
+     * Set 时间字段（Timestamp）支持的类型
+- 1（用户自定义时间）
+- 2（当前时间）
+     * @param TimeType 时间字段（Timestamp）支持的类型
+- 1（用户自定义时间）
+- 2（当前时间）
      */
     public void setTimeType(Long TimeType) {
         this.TimeType = TimeType;
     }
 
     /**
-     * Get 时间，用户选择自定义时间类型时，需要指定时间，单位秒 
+     * Get 时间，用户选择自定义时间类型时，需要指定时间，单位秒
+格式：时间戳，1754897446 
      * @return Timestamp 时间，用户选择自定义时间类型时，需要指定时间，单位秒
+格式：时间戳，1754897446
      */
     public Long getTimestamp() {
         return this.Timestamp;
@@ -127,7 +140,9 @@ public class EventLog extends AbstractModel {
 
     /**
      * Set 时间，用户选择自定义时间类型时，需要指定时间，单位秒
+格式：时间戳，1754897446
      * @param Timestamp 时间，用户选择自定义时间类型时，需要指定时间，单位秒
+格式：时间戳，1754897446
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;

@@ -24,7 +24,11 @@ import java.util.HashMap;
 public class QueryMetricResponse extends AbstractModel {
 
     /**
-    * 指标查询结果类型
+    * 指标查询结果类型，支持
+- scalar 标量值
+- string 字符串值
+- vector 瞬时向量
+- matrix 区间向量
     */
     @SerializedName("ResultType")
     @Expose
@@ -45,16 +49,32 @@ public class QueryMetricResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 指标查询结果类型 
-     * @return ResultType 指标查询结果类型
+     * Get 指标查询结果类型，支持
+- scalar 标量值
+- string 字符串值
+- vector 瞬时向量
+- matrix 区间向量 
+     * @return ResultType 指标查询结果类型，支持
+- scalar 标量值
+- string 字符串值
+- vector 瞬时向量
+- matrix 区间向量
      */
     public String getResultType() {
         return this.ResultType;
     }
 
     /**
-     * Set 指标查询结果类型
-     * @param ResultType 指标查询结果类型
+     * Set 指标查询结果类型，支持
+- scalar 标量值
+- string 字符串值
+- vector 瞬时向量
+- matrix 区间向量
+     * @param ResultType 指标查询结果类型，支持
+- scalar 标量值
+- string 字符串值
+- vector 瞬时向量
+- matrix 区间向量
      */
     public void setResultType(String ResultType) {
         this.ResultType = ResultType;

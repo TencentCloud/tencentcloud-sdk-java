@@ -38,14 +38,14 @@ public class CreateRepositoryRequest extends AbstractModel {
     private String RepositoryType;
 
     /**
-    * 仓库所在桶名称
+    * 仓库所在桶名称，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
     */
     @SerializedName("BucketName")
     @Expose
     private String BucketName;
 
     /**
-    * 仓库所在桶地域
+    * 仓库所在桶地域，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
     */
     @SerializedName("BucketRegion")
     @Expose
@@ -98,32 +98,32 @@ public class CreateRepositoryRequest extends AbstractModel {
     }
 
     /**
-     * Get 仓库所在桶名称 
-     * @return BucketName 仓库所在桶名称
+     * Get 仓库所在桶名称，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312) 
+     * @return BucketName 仓库所在桶名称，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set 仓库所在桶名称
-     * @param BucketName 仓库所在桶名称
+     * Set 仓库所在桶名称，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
+     * @param BucketName 仓库所在桶名称，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 仓库所在桶地域 
-     * @return BucketRegion 仓库所在桶地域
+     * Get 仓库所在桶地域，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312) 
+     * @return BucketRegion 仓库所在桶地域，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set 仓库所在桶地域
-     * @param BucketRegion 仓库所在桶地域
+     * Set 仓库所在桶地域，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
+     * @param BucketRegion 仓库所在桶地域，[存储桶概述和创建](https://cloud.tencent.com/document/product/436/13312)
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;

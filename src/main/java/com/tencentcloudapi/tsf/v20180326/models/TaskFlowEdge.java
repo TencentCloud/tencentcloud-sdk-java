@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class TaskFlowEdge extends AbstractModel {
 
     /**
-    * 节点 ID
+    * 节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR，节点类型为头节点时为字符串"head"
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-    * 子节点 ID
+    * 子节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR
     */
     @SerializedName("ChildNodeId")
     @Expose
@@ -45,14 +45,14 @@ public class TaskFlowEdge extends AbstractModel {
     private String CoreNode;
 
     /**
-    * 边类型
+    * 边类型，上下游任务依赖触发关系。一共2个值，Y：成功触发，N：失败触发
     */
     @SerializedName("EdgeType")
     @Expose
     private String EdgeType;
 
     /**
-    * 任务节点类型
+    * 任务节点类型，一共有4种类型，AND：逻辑节点且，OR：逻辑节点或，TASK：任务节点，START：头节点
     */
     @SerializedName("NodeType")
     @Expose
@@ -73,14 +73,14 @@ public class TaskFlowEdge extends AbstractModel {
     private String PositionY;
 
     /**
-    * 图 ID
+    * 图 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
     */
     @SerializedName("GraphId")
     @Expose
     private String GraphId;
 
     /**
-    * 工作流 ID
+    * 工作流 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
     */
     @SerializedName("FlowId")
     @Expose
@@ -94,46 +94,46 @@ public class TaskFlowEdge extends AbstractModel {
     private String NodeName;
 
     /**
-    * 任务ID
+    * 任务ID，新建工作流时不需要填写，查看工作流图时后端返回
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务历史ID
+    * 任务历史ID，新建工作流时不需要填写，查看工作流图时后端返回
     */
     @SerializedName("TaskLogId")
     @Expose
     private String TaskLogId;
 
     /**
-     * Get 节点 ID 
-     * @return NodeId 节点 ID
+     * Get 节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR，节点类型为头节点时为字符串"head" 
+     * @return NodeId 节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR，节点类型为头节点时为字符串"head"
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 节点 ID
-     * @param NodeId 节点 ID
+     * Set 节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR，节点类型为头节点时为字符串"head"
+     * @param NodeId 节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR，节点类型为头节点时为字符串"head"
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get 子节点 ID 
-     * @return ChildNodeId 子节点 ID
+     * Get 子节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR 
+     * @return ChildNodeId 子节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR
      */
     public String getChildNodeId() {
         return this.ChildNodeId;
     }
 
     /**
-     * Set 子节点 ID
-     * @param ChildNodeId 子节点 ID
+     * Set 子节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR
+     * @param ChildNodeId 子节点 ID，节点类型为任务时为任务ID，节点类型为逻辑节点"且"时为 AND，为逻辑节点"或"时为 OR
      */
     public void setChildNodeId(String ChildNodeId) {
         this.ChildNodeId = ChildNodeId;
@@ -156,32 +156,32 @@ public class TaskFlowEdge extends AbstractModel {
     }
 
     /**
-     * Get 边类型 
-     * @return EdgeType 边类型
+     * Get 边类型，上下游任务依赖触发关系。一共2个值，Y：成功触发，N：失败触发 
+     * @return EdgeType 边类型，上下游任务依赖触发关系。一共2个值，Y：成功触发，N：失败触发
      */
     public String getEdgeType() {
         return this.EdgeType;
     }
 
     /**
-     * Set 边类型
-     * @param EdgeType 边类型
+     * Set 边类型，上下游任务依赖触发关系。一共2个值，Y：成功触发，N：失败触发
+     * @param EdgeType 边类型，上下游任务依赖触发关系。一共2个值，Y：成功触发，N：失败触发
      */
     public void setEdgeType(String EdgeType) {
         this.EdgeType = EdgeType;
     }
 
     /**
-     * Get 任务节点类型 
-     * @return NodeType 任务节点类型
+     * Get 任务节点类型，一共有4种类型，AND：逻辑节点且，OR：逻辑节点或，TASK：任务节点，START：头节点 
+     * @return NodeType 任务节点类型，一共有4种类型，AND：逻辑节点且，OR：逻辑节点或，TASK：任务节点，START：头节点
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 任务节点类型
-     * @param NodeType 任务节点类型
+     * Set 任务节点类型，一共有4种类型，AND：逻辑节点且，OR：逻辑节点或，TASK：任务节点，START：头节点
+     * @param NodeType 任务节点类型，一共有4种类型，AND：逻辑节点且，OR：逻辑节点或，TASK：任务节点，START：头节点
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
@@ -220,32 +220,32 @@ public class TaskFlowEdge extends AbstractModel {
     }
 
     /**
-     * Get 图 ID 
-     * @return GraphId 图 ID
+     * Get 图 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回 
+     * @return GraphId 图 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
      */
     public String getGraphId() {
         return this.GraphId;
     }
 
     /**
-     * Set 图 ID
-     * @param GraphId 图 ID
+     * Set 图 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
+     * @param GraphId 图 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
      */
     public void setGraphId(String GraphId) {
         this.GraphId = GraphId;
     }
 
     /**
-     * Get 工作流 ID 
-     * @return FlowId 工作流 ID
+     * Get 工作流 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回 
+     * @return FlowId 工作流 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 工作流 ID
-     * @param FlowId 工作流 ID
+     * Set 工作流 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
+     * @param FlowId 工作流 ID，新建工作流时自动生成，不需要填写，查看工作流图时后端返回
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
@@ -268,32 +268,32 @@ public class TaskFlowEdge extends AbstractModel {
     }
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 任务ID，新建工作流时不需要填写，查看工作流图时后端返回 
+     * @return TaskId 任务ID，新建工作流时不需要填写，查看工作流图时后端返回
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 任务ID，新建工作流时不需要填写，查看工作流图时后端返回
+     * @param TaskId 任务ID，新建工作流时不需要填写，查看工作流图时后端返回
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务历史ID 
-     * @return TaskLogId 任务历史ID
+     * Get 任务历史ID，新建工作流时不需要填写，查看工作流图时后端返回 
+     * @return TaskLogId 任务历史ID，新建工作流时不需要填写，查看工作流图时后端返回
      */
     public String getTaskLogId() {
         return this.TaskLogId;
     }
 
     /**
-     * Set 任务历史ID
-     * @param TaskLogId 任务历史ID
+     * Set 任务历史ID，新建工作流时不需要填写，查看工作流图时后端返回
+     * @param TaskLogId 任务历史ID，新建工作流时不需要填写，查看工作流图时后端返回
      */
     public void setTaskLogId(String TaskLogId) {
         this.TaskLogId = TaskLogId;

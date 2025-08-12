@@ -67,6 +67,7 @@ public class TopicInfo extends AbstractModel {
 
     /**
     * 创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
@@ -175,6 +176,10 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
     * 异步迁移状态
+- 1：进行中
+- 2：已完成
+- 3：失败
+- 4：已取消
     */
     @SerializedName("MigrationStatus")
     @Expose
@@ -182,6 +187,7 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
     * 异步迁移完成后，预计生效日期
+时间格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("EffectiveDate")
     @Expose
@@ -284,8 +290,10 @@ HotPeriod=0为没有开启日志沉降。
     }
 
     /**
-     * Get 创建时间 
+     * Get 创建时间
+时间格式：yyyy-MM-dd HH:mm:ss 
      * @return CreateTime 创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -293,7 +301,9 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param CreateTime 创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -548,8 +558,16 @@ HotPeriod=0为没有开启日志沉降。
     }
 
     /**
-     * Get 异步迁移状态 
+     * Get 异步迁移状态
+- 1：进行中
+- 2：已完成
+- 3：失败
+- 4：已取消 
      * @return MigrationStatus 异步迁移状态
+- 1：进行中
+- 2：已完成
+- 3：失败
+- 4：已取消
      */
     public Long getMigrationStatus() {
         return this.MigrationStatus;
@@ -557,15 +575,25 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 异步迁移状态
+- 1：进行中
+- 2：已完成
+- 3：失败
+- 4：已取消
      * @param MigrationStatus 异步迁移状态
+- 1：进行中
+- 2：已完成
+- 3：失败
+- 4：已取消
      */
     public void setMigrationStatus(Long MigrationStatus) {
         this.MigrationStatus = MigrationStatus;
     }
 
     /**
-     * Get 异步迁移完成后，预计生效日期 
+     * Get 异步迁移完成后，预计生效日期
+时间格式：yyyy-MM-dd HH:mm:ss 
      * @return EffectiveDate 异步迁移完成后，预计生效日期
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public String getEffectiveDate() {
         return this.EffectiveDate;
@@ -573,7 +601,9 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 异步迁移完成后，预计生效日期
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param EffectiveDate 异步迁移完成后，预计生效日期
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public void setEffectiveDate(String EffectiveDate) {
         this.EffectiveDate = EffectiveDate;

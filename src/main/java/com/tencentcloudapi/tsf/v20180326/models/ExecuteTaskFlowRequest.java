@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ExecuteTaskFlowRequest extends AbstractModel {
 
     /**
-    * 工作流 ID
+    * 工作流 ID。前往工作流管理，在工作流列表第一列和工作流详情页查看工作流ID。
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-     * Get 工作流 ID 
-     * @return FlowId 工作流 ID
+     * Get 工作流 ID。前往工作流管理，在工作流列表第一列和工作流详情页查看工作流ID。 
+     * @return FlowId 工作流 ID。前往工作流管理，在工作流列表第一列和工作流详情页查看工作流ID。
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 工作流 ID
-     * @param FlowId 工作流 ID
+     * Set 工作流 ID。前往工作流管理，在工作流列表第一列和工作流详情页查看工作流ID。
+     * @param FlowId 工作流 ID。前往工作流管理，在工作流列表第一列和工作流详情页查看工作流ID。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

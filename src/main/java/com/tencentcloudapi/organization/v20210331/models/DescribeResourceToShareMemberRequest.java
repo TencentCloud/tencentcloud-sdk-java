@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeResourceToShareMemberRequest extends AbstractModel {
 
     /**
-    * 地域
+    * 共享地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 偏移量
+    * 偏移量。取值是limit的整数倍。默认值 : 0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页条数
+    * 限制数目。取值范围：1~50。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 搜索关键字，支持业务资源ID搜索
+    * 搜索关键字，支持业务资源ID搜索。
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * 资源类型
+    * 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
     */
     @SerializedName("Type")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeResourceToShareMemberRequest extends AbstractModel {
     private String [] ProductResourceIds;
 
     /**
-     * Get 地域 
-     * @return Area 地域
+     * Get 共享地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。 
+     * @return Area 共享地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 地域
-     * @param Area 地域
+     * Set 共享地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
+     * @param Area 共享地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量。取值是limit的整数倍。默认值 : 0。 
+     * @return Offset 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量。取值是limit的整数倍。默认值 : 0。
+     * @param Offset 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页条数 
-     * @return Limit 每页条数
+     * Get 限制数目。取值范围：1~50。 
+     * @return Limit 限制数目。取值范围：1~50。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条数
-     * @param Limit 每页条数
+     * Set 限制数目。取值范围：1~50。
+     * @param Limit 限制数目。取值范围：1~50。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 搜索关键字，支持业务资源ID搜索 
-     * @return SearchKey 搜索关键字，支持业务资源ID搜索
+     * Get 搜索关键字，支持业务资源ID搜索。 
+     * @return SearchKey 搜索关键字，支持业务资源ID搜索。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 搜索关键字，支持业务资源ID搜索
-     * @param SearchKey 搜索关键字，支持业务资源ID搜索
+     * Set 搜索关键字，支持业务资源ID搜索。
+     * @param SearchKey 搜索关键字，支持业务资源ID搜索。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get 资源类型 
-     * @return Type 资源类型
+     * Get 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489) 
+     * @return Type 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 资源类型
-     * @param Type 资源类型
+     * Set 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
+     * @param Type 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
      */
     public void setType(String Type) {
         this.Type = Type;

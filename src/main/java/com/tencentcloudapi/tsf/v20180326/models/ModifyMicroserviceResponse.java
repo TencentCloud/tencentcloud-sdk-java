@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class ModifyMicroserviceResponse extends AbstractModel {
 
     /**
-    * 修改微服务详情是否成功。
-true：操作成功。
-false：操作失败。
+    * 修改结果。
+- true：修改成功
+- false：修改失败
     */
     @SerializedName("Result")
     @Expose
@@ -40,24 +40,24 @@ false：操作失败。
     private String RequestId;
 
     /**
-     * Get 修改微服务详情是否成功。
-true：操作成功。
-false：操作失败。 
-     * @return Result 修改微服务详情是否成功。
-true：操作成功。
-false：操作失败。
+     * Get 修改结果。
+- true：修改成功
+- false：修改失败 
+     * @return Result 修改结果。
+- true：修改成功
+- false：修改失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 修改微服务详情是否成功。
-true：操作成功。
-false：操作失败。
-     * @param Result 修改微服务详情是否成功。
-true：操作成功。
-false：操作失败。
+     * Set 修改结果。
+- true：修改成功
+- false：修改失败
+     * @param Result 修改结果。
+- true：修改成功
+- false：修改失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

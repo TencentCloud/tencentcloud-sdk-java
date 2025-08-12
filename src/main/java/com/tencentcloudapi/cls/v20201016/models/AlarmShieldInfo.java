@@ -96,14 +96,14 @@ public class AlarmShieldInfo extends AbstractModel {
     private Long Status;
 
     /**
-    * 规则创建时间。
+    * 规则创建时间。秒级时间戳(s)
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 规则更新时间。
+    * 规则更新时间。秒级时间戳(s)
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -278,32 +278,32 @@ public class AlarmShieldInfo extends AbstractModel {
     }
 
     /**
-     * Get 规则创建时间。 
-     * @return CreateTime 规则创建时间。
+     * Get 规则创建时间。秒级时间戳(s) 
+     * @return CreateTime 规则创建时间。秒级时间戳(s)
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 规则创建时间。
-     * @param CreateTime 规则创建时间。
+     * Set 规则创建时间。秒级时间戳(s)
+     * @param CreateTime 规则创建时间。秒级时间戳(s)
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 规则更新时间。 
-     * @return UpdateTime 规则更新时间。
+     * Get 规则更新时间。秒级时间戳(s) 
+     * @return UpdateTime 规则更新时间。秒级时间戳(s)
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 规则更新时间。
-     * @param UpdateTime 规则更新时间。
+     * Set 规则更新时间。秒级时间戳(s)
+     * @param UpdateTime 规则更新时间。秒级时间戳(s)
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;

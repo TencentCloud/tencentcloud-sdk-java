@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateLaneRuleResponse extends AbstractModel {
 
     /**
-    * 泳道规则Id
+    * 灰度发布规则ID。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLaneRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 泳道规则Id 
-     * @return Result 泳道规则Id
+     * Get 灰度发布规则ID。 
+     * @return Result 灰度发布规则ID。
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 泳道规则Id
-     * @param Result 泳道规则Id
+     * Set 灰度发布规则ID。
+     * @param Result 灰度发布规则ID。
      */
     public void setResult(String Result) {
         this.Result = Result;

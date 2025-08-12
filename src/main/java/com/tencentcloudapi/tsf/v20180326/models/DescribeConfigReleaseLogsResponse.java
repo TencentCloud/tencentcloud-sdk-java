@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeConfigReleaseLogsResponse extends AbstractModel {
 
     /**
-    * 分页的配置项发布历史列表
+    * 分页的配置项发布历史列表。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeConfigReleaseLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分页的配置项发布历史列表 
-     * @return Result 分页的配置项发布历史列表
+     * Get 分页的配置项发布历史列表。 
+     * @return Result 分页的配置项发布历史列表。
      */
     public TsfPageConfigReleaseLog getResult() {
         return this.Result;
     }
 
     /**
-     * Set 分页的配置项发布历史列表
-     * @param Result 分页的配置项发布历史列表
+     * Set 分页的配置项发布历史列表。
+     * @param Result 分页的配置项发布历史列表。
      */
     public void setResult(TsfPageConfigReleaseLog Result) {
         this.Result = Result;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskRule extends AbstractModel {
 
     /**
-    * 触发规则类型, Cron/Repeat
+    * 触发规则类型，枚举值。一共3个值，Cron：定时触发，Repeat：周期触发，WorkFlow：工作流触发
     */
     @SerializedName("RuleType")
     @Expose
@@ -46,16 +46,16 @@ public class TaskRule extends AbstractModel {
     private Long RepeatInterval;
 
     /**
-     * Get 触发规则类型, Cron/Repeat 
-     * @return RuleType 触发规则类型, Cron/Repeat
+     * Get 触发规则类型，枚举值。一共3个值，Cron：定时触发，Repeat：周期触发，WorkFlow：工作流触发 
+     * @return RuleType 触发规则类型，枚举值。一共3个值，Cron：定时触发，Repeat：周期触发，WorkFlow：工作流触发
      */
     public String getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set 触发规则类型, Cron/Repeat
-     * @param RuleType 触发规则类型, Cron/Repeat
+     * Set 触发规则类型，枚举值。一共3个值，Cron：定时触发，Repeat：周期触发，WorkFlow：工作流触发
+     * @param RuleType 触发规则类型，枚举值。一共3个值，Cron：定时触发，Repeat：周期触发，WorkFlow：工作流触发
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;

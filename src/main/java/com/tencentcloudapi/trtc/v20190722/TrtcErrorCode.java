@@ -123,6 +123,9 @@ public enum TrtcErrorCode {
      /* 音频编码参数错误。 */
      INVALIDPARAMETER_AUDIOENCODEPARAMS("InvalidParameter.AudioEncodeParams"),
      
+     /* 无效的参考音频 */
+     INVALIDPARAMETER_AUDIOPROMPT("InvalidParameter.AudioPrompt"),
+     
      /* BackgroundImageUrl参数错误。 */
      INVALIDPARAMETER_BACKGROUNDIMAGEURL("InvalidParameter.BackgroundImageUrl"),
      
@@ -228,6 +231,9 @@ public enum TrtcErrorCode {
      /* TaskId 参数错误。 */
      INVALIDPARAMETER_TASKID("InvalidParameter.TaskId"),
      
+     /* 无效的文本长度 */
+     INVALIDPARAMETER_TEXTLENGTH("InvalidParameter.TextLength"),
+     
      /* Url解析参数失败。 */
      INVALIDPARAMETER_URLPARAMSERROR("InvalidParameter.UrlParamsError"),
      
@@ -248,6 +254,12 @@ public enum TrtcErrorCode {
      
      /* 视频分辨率参数错误。 */
      INVALIDPARAMETER_VIDEORESOLUTION("InvalidParameter.VideoResolution"),
+     
+     /* 无效的VoiceId */
+     INVALIDPARAMETER_VOICEID("InvalidParameter.VoiceId"),
+     
+     /* 无效的声音名字 */
+     INVALIDPARAMETER_VOICENAME("InvalidParameter.VoiceName"),
      
      /* RoomId值错误。 */
      INVALIDPARAMETERVALUE_ROOMID("InvalidParameterValue.RoomId"),
@@ -376,7 +388,10 @@ public enum TrtcErrorCode {
      UNKNOWNPARAMETER("UnknownParameter"),
      
      /* 操作不支持。 */
-     UNSUPPORTEDOPERATION("UnsupportedOperation");
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
+     /* 不允许使用，请联系技术人员 */
+     UNSUPPORTEDOPERATION_NOTALLOWED("UnsupportedOperation.NotAllowed");
      
     private String value;
     private TrtcErrorCode (String value){

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeMsApiListRequest extends AbstractModel {
 
     /**
-    * 微服务ID
+    * 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
     */
     @SerializedName("MicroserviceId")
     @Expose
     private String MicroserviceId;
 
     /**
-    * 搜索关键字
+    * 搜索关键字。
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 每页的数量
+    * 返回数量，默认为20，最大值为50。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 翻页偏移量
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 微服务ID 
-     * @return MicroserviceId 微服务ID
+     * Get 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。 
+     * @return MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public String getMicroserviceId() {
         return this.MicroserviceId;
     }
 
     /**
-     * Set 微服务ID
-     * @param MicroserviceId 微服务ID
+     * Set 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public void setMicroserviceId(String MicroserviceId) {
         this.MicroserviceId = MicroserviceId;
     }
 
     /**
-     * Get 搜索关键字 
-     * @return SearchWord 搜索关键字
+     * Get 搜索关键字。 
+     * @return SearchWord 搜索关键字。
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 搜索关键字
-     * @param SearchWord 搜索关键字
+     * Set 搜索关键字。
+     * @param SearchWord 搜索关键字。
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 每页的数量 
-     * @return Limit 每页的数量
+     * Get 返回数量，默认为20，最大值为50。 
+     * @return Limit 返回数量，默认为20，最大值为50。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页的数量
-     * @param Limit 每页的数量
+     * Set 返回数量，默认为20，最大值为50。
+     * @param Limit 返回数量，默认为20，最大值为50。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 翻页偏移量 
-     * @return Offset 翻页偏移量
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 翻页偏移量
-     * @param Offset 翻页偏移量
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

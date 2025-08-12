@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExtractRuleInfo extends AbstractModel {
 
     /**
-    * 时间字段的key名字，TikeKey和TimeFormat必须成对出现
+    * 时间字段的key名字，TimeKey和TimeFormat必须成对出现
     */
     @SerializedName("TimeKey")
     @Expose
@@ -32,6 +32,7 @@ public class ExtractRuleInfo extends AbstractModel {
 
     /**
     * 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
+- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
     */
     @SerializedName("TimeFormat")
     @Expose
@@ -207,24 +208,26 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     private AdvanceFilterRuleInfo [] AdvanceFilterRules;
 
     /**
-     * Get 时间字段的key名字，TikeKey和TimeFormat必须成对出现 
-     * @return TimeKey 时间字段的key名字，TikeKey和TimeFormat必须成对出现
+     * Get 时间字段的key名字，TimeKey和TimeFormat必须成对出现 
+     * @return TimeKey 时间字段的key名字，TimeKey和TimeFormat必须成对出现
      */
     public String getTimeKey() {
         return this.TimeKey;
     }
 
     /**
-     * Set 时间字段的key名字，TikeKey和TimeFormat必须成对出现
-     * @param TimeKey 时间字段的key名字，TikeKey和TimeFormat必须成对出现
+     * Set 时间字段的key名字，TimeKey和TimeFormat必须成对出现
+     * @param TimeKey 时间字段的key名字，TimeKey和TimeFormat必须成对出现
      */
     public void setTimeKey(String TimeKey) {
         this.TimeKey = TimeKey;
     }
 
     /**
-     * Get 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数 
+     * Get 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
+- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档  
      * @return TimeFormat 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
+- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
      */
     public String getTimeFormat() {
         return this.TimeFormat;
@@ -232,7 +235,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 
     /**
      * Set 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
+- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
      * @param TimeFormat 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
+- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
      */
     public void setTimeFormat(String TimeFormat) {
         this.TimeFormat = TimeFormat;

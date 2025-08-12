@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RevokeFileConfigRequest extends AbstractModel {
 
     /**
-    * 配置项发布ID
+    * 按照【配置项发布ID】进行撤回。可通过调用[DescribeFileConfigReleases](https://cloud.tencent.com/document/product/649/85855)查询已发布的文件配置列表或登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=file)-查看发布信息-发布情况进行查看；也可以调用[ReleaseFileConfig](https://cloud.tencent.com/document/product/649/58592)发布文件配置。
     */
     @SerializedName("ConfigReleaseId")
     @Expose
     private String ConfigReleaseId;
 
     /**
-     * Get 配置项发布ID 
-     * @return ConfigReleaseId 配置项发布ID
+     * Get 按照【配置项发布ID】进行撤回。可通过调用[DescribeFileConfigReleases](https://cloud.tencent.com/document/product/649/85855)查询已发布的文件配置列表或登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=file)-查看发布信息-发布情况进行查看；也可以调用[ReleaseFileConfig](https://cloud.tencent.com/document/product/649/58592)发布文件配置。 
+     * @return ConfigReleaseId 按照【配置项发布ID】进行撤回。可通过调用[DescribeFileConfigReleases](https://cloud.tencent.com/document/product/649/85855)查询已发布的文件配置列表或登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=file)-查看发布信息-发布情况进行查看；也可以调用[ReleaseFileConfig](https://cloud.tencent.com/document/product/649/58592)发布文件配置。
      */
     public String getConfigReleaseId() {
         return this.ConfigReleaseId;
     }
 
     /**
-     * Set 配置项发布ID
-     * @param ConfigReleaseId 配置项发布ID
+     * Set 按照【配置项发布ID】进行撤回。可通过调用[DescribeFileConfigReleases](https://cloud.tencent.com/document/product/649/85855)查询已发布的文件配置列表或登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=file)-查看发布信息-发布情况进行查看；也可以调用[ReleaseFileConfig](https://cloud.tencent.com/document/product/649/58592)发布文件配置。
+     * @param ConfigReleaseId 按照【配置项发布ID】进行撤回。可通过调用[DescribeFileConfigReleases](https://cloud.tencent.com/document/product/649/85855)查询已发布的文件配置列表或登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=file)-查看发布信息-发布情况进行查看；也可以调用[ReleaseFileConfig](https://cloud.tencent.com/document/product/649/58592)发布文件配置。
      */
     public void setConfigReleaseId(String ConfigReleaseId) {
         this.ConfigReleaseId = ConfigReleaseId;

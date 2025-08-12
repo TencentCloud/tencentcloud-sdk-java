@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class CreatePostPaidInstanceRequest extends AbstractModel {
 
     /**
+    * 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
     * ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
-
-    /**
-    * 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填
-    */
-    @SerializedName("VpcId")
-    @Expose
-    private String VpcId;
 
     /**
     * 子网id。创建实例默认接入点所在的子网对应的子网 id
@@ -164,6 +164,22 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     private Long ElasticBandwidthSwitch;
 
     /**
+     * Get 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId 
+     * @return VpcId 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
+     * @param VpcId 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
      * Get ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
      * @return InstanceName ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
@@ -177,22 +193,6 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
-    }
-
-    /**
-     * Get 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填 
-     * @return VpcId 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填
-     */
-    public String getVpcId() {
-        return this.VpcId;
-    }
-
-    /**
-     * Set 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填
-     * @param VpcId 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填
-     */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
     }
 
     /**
@@ -491,11 +491,11 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreatePostPaidInstanceRequest(CreatePostPaidInstanceRequest source) {
-        if (source.InstanceName != null) {
-            this.InstanceName = new String(source.InstanceName);
-        }
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
         }
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
@@ -564,8 +564,8 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "MsgRetentionTime", this.MsgRetentionTime);

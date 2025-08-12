@@ -609,6 +609,17 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DescribeImagesToShare) 用于查询CVM的自定义镜像列表共享到轻量应用服务器。
+     * @param req DescribeImagesToShareRequest
+     * @return DescribeImagesToShareResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImagesToShareResponse DescribeImagesToShare(DescribeImagesToShareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImagesToShare", DescribeImagesToShareResponse.class);
+    }
+
+    /**
      *本接口 ( DescribeInstanceVncUrl ) 用于查询实例管理终端地址，获取的地址可用于实例的 VNC 登录。
 
 * 仅处于 `RUNNING`，`RESCUE_MODE` 状态的机器，且当前机器无变更中操作，才可使用此功能。
@@ -1047,6 +1058,24 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     public ModifyFirewallTemplateResponse ModifyFirewallTemplate(ModifyFirewallTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyFirewallTemplate", ModifyFirewallTemplateResponse.class);
+    }
+
+    /**
+     *本接口 (ModifyImageSharePermission) 用于共享和取消共享CVM自定义镜像到轻量应用服务器服务。
+CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
+1.已共享过的镜像不支持再次共享。
+2.外部导入的镜像不支持共享。
+3.整机镜像不支持共享。
+4.镜像要支持Cloudinit才支持共享。
+5.镜像的Platform和OsName要满足。
+6.NORMAL状态的镜像才支持共享。
+     * @param req ModifyImageSharePermissionRequest
+     * @return ModifyImageSharePermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyImageSharePermissionResponse ModifyImageSharePermission(ModifyImageSharePermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyImageSharePermission", ModifyImageSharePermissionResponse.class);
     }
 
     /**

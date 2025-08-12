@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateLaneRequest extends AbstractModel {
 
     /**
-    * 泳道名称
+    * 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
     */
     @SerializedName("LaneName")
     @Expose
     private String LaneName;
 
     /**
-    * 泳道备注
+    * 泳道配置备注，最多支持200个字符。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 泳道部署组信息
+    * 泳道部署组信息。
     */
     @SerializedName("LaneGroupList")
     @Expose
     private LaneGroup [] LaneGroupList;
 
     /**
-    * 无
+    * 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
     */
     @SerializedName("ProgramIdList")
     @Expose
     private String [] ProgramIdList;
 
     /**
-     * Get 泳道名称 
-     * @return LaneName 泳道名称
+     * Get 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。 
+     * @return LaneName 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
      */
     public String getLaneName() {
         return this.LaneName;
     }
 
     /**
-     * Set 泳道名称
-     * @param LaneName 泳道名称
+     * Set 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
+     * @param LaneName 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
      */
     public void setLaneName(String LaneName) {
         this.LaneName = LaneName;
     }
 
     /**
-     * Get 泳道备注 
-     * @return Remark 泳道备注
+     * Get 泳道配置备注，最多支持200个字符。 
+     * @return Remark 泳道配置备注，最多支持200个字符。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 泳道备注
-     * @param Remark 泳道备注
+     * Set 泳道配置备注，最多支持200个字符。
+     * @param Remark 泳道配置备注，最多支持200个字符。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 泳道部署组信息 
-     * @return LaneGroupList 泳道部署组信息
+     * Get 泳道部署组信息。 
+     * @return LaneGroupList 泳道部署组信息。
      */
     public LaneGroup [] getLaneGroupList() {
         return this.LaneGroupList;
     }
 
     /**
-     * Set 泳道部署组信息
-     * @param LaneGroupList 泳道部署组信息
+     * Set 泳道部署组信息。
+     * @param LaneGroupList 泳道部署组信息。
      */
     public void setLaneGroupList(LaneGroup [] LaneGroupList) {
         this.LaneGroupList = LaneGroupList;
     }
 
     /**
-     * Get 无 
-     * @return ProgramIdList 无
+     * Get 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。 
+     * @return ProgramIdList 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      */
     public String [] getProgramIdList() {
         return this.ProgramIdList;
     }
 
     /**
-     * Set 无
-     * @param ProgramIdList 无
+     * Set 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
+     * @param ProgramIdList 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      */
     public void setProgramIdList(String [] ProgramIdList) {
         this.ProgramIdList = ProgramIdList;

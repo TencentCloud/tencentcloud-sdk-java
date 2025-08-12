@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ReleasePublicConfigRequest extends AbstractModel {
 
     /**
-    * 配置ID
+    * 配置ID。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-    * 命名空间ID
+    * 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * 发布描述
+    * 发布描述，最多支持200个字符。
     */
     @SerializedName("ReleaseDesc")
     @Expose
     private String ReleaseDesc;
 
     /**
-     * Get 配置ID 
-     * @return ConfigId 配置ID
+     * Get 配置ID。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。 
+     * @return ConfigId 配置ID。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 配置ID
-     * @param ConfigId 配置ID
+     * Set 配置ID。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。
+     * @param ConfigId 配置ID。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get 命名空间ID 
-     * @return NamespaceId 命名空间ID
+     * Get 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。 
+     * @return NamespaceId 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间ID
-     * @param NamespaceId 命名空间ID
+     * Set 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
+     * @param NamespaceId 命名空间ID。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 发布描述 
-     * @return ReleaseDesc 发布描述
+     * Get 发布描述，最多支持200个字符。 
+     * @return ReleaseDesc 发布描述，最多支持200个字符。
      */
     public String getReleaseDesc() {
         return this.ReleaseDesc;
     }
 
     /**
-     * Set 发布描述
-     * @param ReleaseDesc 发布描述
+     * Set 发布描述，最多支持200个字符。
+     * @param ReleaseDesc 发布描述，最多支持200个字符。
      */
     public void setReleaseDesc(String ReleaseDesc) {
         this.ReleaseDesc = ReleaseDesc;

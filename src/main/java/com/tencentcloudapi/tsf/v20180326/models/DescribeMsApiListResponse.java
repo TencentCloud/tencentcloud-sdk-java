@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMsApiListResponse extends AbstractModel {
 
     /**
-    * 相应结果
+    * 微服务API列表。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMsApiListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 相应结果 
-     * @return Result 相应结果
+     * Get 微服务API列表。 
+     * @return Result 微服务API列表。
      */
     public TsfApiListResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set 相应结果
-     * @param Result 相应结果
+     * Set 微服务API列表。
+     * @param Result 微服务API列表。
      */
     public void setResult(TsfApiListResponse Result) {
         this.Result = Result;

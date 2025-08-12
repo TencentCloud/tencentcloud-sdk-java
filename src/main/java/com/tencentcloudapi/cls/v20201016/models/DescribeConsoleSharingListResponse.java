@@ -31,6 +31,13 @@ public class DescribeConsoleSharingListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 控制台免密分享列表
+    */
+    @SerializedName("ConsoleSharingInfos")
+    @Expose
+    private ConsoleSharingInfo [] ConsoleSharingInfos;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeConsoleSharingListResponse extends AbstractModel {
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 控制台免密分享列表 
+     * @return ConsoleSharingInfos 控制台免密分享列表
+     */
+    public ConsoleSharingInfo [] getConsoleSharingInfos() {
+        return this.ConsoleSharingInfos;
+    }
+
+    /**
+     * Set 控制台免密分享列表
+     * @param ConsoleSharingInfos 控制台免密分享列表
+     */
+    public void setConsoleSharingInfos(ConsoleSharingInfo [] ConsoleSharingInfos) {
+        this.ConsoleSharingInfos = ConsoleSharingInfos;
     }
 
     /**
@@ -80,6 +103,12 @@ public class DescribeConsoleSharingListResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.ConsoleSharingInfos != null) {
+            this.ConsoleSharingInfos = new ConsoleSharingInfo[source.ConsoleSharingInfos.length];
+            for (int i = 0; i < source.ConsoleSharingInfos.length; i++) {
+                this.ConsoleSharingInfos[i] = new ConsoleSharingInfo(source.ConsoleSharingInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +120,7 @@ public class DescribeConsoleSharingListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "ConsoleSharingInfos.", this.ConsoleSharingInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

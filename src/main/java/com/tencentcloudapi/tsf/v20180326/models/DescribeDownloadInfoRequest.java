@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeDownloadInfoRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * 程序包ID
+    * 软件包ID可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
     */
     @SerializedName("PkgId")
     @Expose
     private String PkgId;
 
     /**
-    * 程序包仓库ID
+    * 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
     */
     @SerializedName("RepositoryId")
     @Expose
     private String RepositoryId;
 
     /**
-    * 程序包仓库类型
+    * 程序包仓库类型（允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库）
     */
     @SerializedName("RepositoryType")
     @Expose
     private String RepositoryType;
 
     /**
-     * Get 应用ID 
-     * @return ApplicationId 应用ID
+     * Get 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值 
+     * @return ApplicationId 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 应用ID
-     * @param ApplicationId 应用ID
+     * Set 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
+     * @param ApplicationId 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 程序包ID 
-     * @return PkgId 程序包ID
+     * Get 软件包ID可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看 
+     * @return PkgId 软件包ID可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public String getPkgId() {
         return this.PkgId;
     }
 
     /**
-     * Set 程序包ID
-     * @param PkgId 程序包ID
+     * Set 软件包ID可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
+     * @param PkgId 软件包ID可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public void setPkgId(String PkgId) {
         this.PkgId = PkgId;
     }
 
     /**
-     * Get 程序包仓库ID 
-     * @return RepositoryId 程序包仓库ID
+     * Get 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看 
+     * @return RepositoryId 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public String getRepositoryId() {
         return this.RepositoryId;
     }
 
     /**
-     * Set 程序包仓库ID
-     * @param RepositoryId 程序包仓库ID
+     * Set 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
+     * @param RepositoryId 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public void setRepositoryId(String RepositoryId) {
         this.RepositoryId = RepositoryId;
     }
 
     /**
-     * Get 程序包仓库类型 
-     * @return RepositoryType 程序包仓库类型
+     * Get 程序包仓库类型（允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库） 
+     * @return RepositoryType 程序包仓库类型（允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库）
      */
     public String getRepositoryType() {
         return this.RepositoryType;
     }
 
     /**
-     * Set 程序包仓库类型
-     * @param RepositoryType 程序包仓库类型
+     * Set 程序包仓库类型（允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库）
+     * @param RepositoryType 程序包仓库类型（允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库）
      */
     public void setRepositoryType(String RepositoryType) {
         this.RepositoryType = RepositoryType;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePublicConfigSummaryResponse extends AbstractModel {
 
     /**
-    * 分页的全局配置统计信息列表
+    * 分页的全局配置统计信息列表。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribePublicConfigSummaryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分页的全局配置统计信息列表 
-     * @return Result 分页的全局配置统计信息列表
+     * Get 分页的全局配置统计信息列表。 
+     * @return Result 分页的全局配置统计信息列表。
      */
     public TsfPageConfig getResult() {
         return this.Result;
     }
 
     /**
-     * Set 分页的全局配置统计信息列表
-     * @param Result 分页的全局配置统计信息列表
+     * Set 分页的全局配置统计信息列表。
+     * @param Result 分页的全局配置统计信息列表。
      */
     public void setResult(TsfPageConfig Result) {
         this.Result = Result;

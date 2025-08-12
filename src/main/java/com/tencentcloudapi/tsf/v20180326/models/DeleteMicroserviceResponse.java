@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class DeleteMicroserviceResponse extends AbstractModel {
 
     /**
-    * 删除微服务是否成功。
-true：操作成功。
-false：操作失败。
+    * 删除结果。
+- true：操作成功
+- false：操作失败
     */
     @SerializedName("Result")
     @Expose
@@ -40,24 +40,24 @@ false：操作失败。
     private String RequestId;
 
     /**
-     * Get 删除微服务是否成功。
-true：操作成功。
-false：操作失败。 
-     * @return Result 删除微服务是否成功。
-true：操作成功。
-false：操作失败。
+     * Get 删除结果。
+- true：操作成功
+- false：操作失败 
+     * @return Result 删除结果。
+- true：操作成功
+- false：操作失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 删除微服务是否成功。
-true：操作成功。
-false：操作失败。
-     * @param Result 删除微服务是否成功。
-true：操作成功。
-false：操作失败。
+     * Set 删除结果。
+- true：操作成功
+- false：操作失败
+     * @param Result 删除结果。
+- true：操作成功
+- false：操作失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

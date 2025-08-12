@@ -24,166 +24,161 @@ import java.util.HashMap;
 public class ShareResourceToMember extends AbstractModel {
 
     /**
-    * 资源ID
+    * 共享单元资源ID。
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源类型
+    * 资源类型。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 共享单元ID
+    * 共享单元ID。
     */
     @SerializedName("UnitId")
     @Expose
     private String UnitId;
 
     /**
-    * 共享单元名
+    * 共享单元名称。
     */
     @SerializedName("UnitName")
     @Expose
     private String UnitName;
 
     /**
-    * 创建时间
+    * 创建时间。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 业务资源ID
+    * 业务资源ID。
     */
     @SerializedName("ProductResourceId")
     @Expose
     private String ProductResourceId;
 
     /**
-    * 共享管理员uin
-注意：此字段可能返回 null，表示取不到有效值。
+    * 共享账号Uin。
     */
     @SerializedName("ShareManagerUin")
     @Expose
     private Long ShareManagerUin;
 
     /**
-     * Get 资源ID 
-     * @return ResourceId 资源ID
+     * Get 共享单元资源ID。 
+     * @return ResourceId 共享单元资源ID。
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID
-     * @param ResourceId 资源ID
+     * Set 共享单元资源ID。
+     * @param ResourceId 共享单元资源ID。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源类型 
-     * @return Type 资源类型
+     * Get 资源类型。 
+     * @return Type 资源类型。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 资源类型
-     * @param Type 资源类型
+     * Set 资源类型。
+     * @param Type 资源类型。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 共享单元ID 
-     * @return UnitId 共享单元ID
+     * Get 共享单元ID。 
+     * @return UnitId 共享单元ID。
      */
     public String getUnitId() {
         return this.UnitId;
     }
 
     /**
-     * Set 共享单元ID
-     * @param UnitId 共享单元ID
+     * Set 共享单元ID。
+     * @param UnitId 共享单元ID。
      */
     public void setUnitId(String UnitId) {
         this.UnitId = UnitId;
     }
 
     /**
-     * Get 共享单元名 
-     * @return UnitName 共享单元名
+     * Get 共享单元名称。 
+     * @return UnitName 共享单元名称。
      */
     public String getUnitName() {
         return this.UnitName;
     }
 
     /**
-     * Set 共享单元名
-     * @param UnitName 共享单元名
+     * Set 共享单元名称。
+     * @param UnitName 共享单元名称。
      */
     public void setUnitName(String UnitName) {
         this.UnitName = UnitName;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间。 
+     * @return CreateTime 创建时间。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间。
+     * @param CreateTime 创建时间。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 业务资源ID 
-     * @return ProductResourceId 业务资源ID
+     * Get 业务资源ID。 
+     * @return ProductResourceId 业务资源ID。
      */
     public String getProductResourceId() {
         return this.ProductResourceId;
     }
 
     /**
-     * Set 业务资源ID
-     * @param ProductResourceId 业务资源ID
+     * Set 业务资源ID。
+     * @param ProductResourceId 业务资源ID。
      */
     public void setProductResourceId(String ProductResourceId) {
         this.ProductResourceId = ProductResourceId;
     }
 
     /**
-     * Get 共享管理员uin
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShareManagerUin 共享管理员uin
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 共享账号Uin。 
+     * @return ShareManagerUin 共享账号Uin。
      */
     public Long getShareManagerUin() {
         return this.ShareManagerUin;
     }
 
     /**
-     * Set 共享管理员uin
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShareManagerUin 共享管理员uin
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 共享账号Uin。
+     * @param ShareManagerUin 共享账号Uin。
      */
     public void setShareManagerUin(Long ShareManagerUin) {
         this.ShareManagerUin = ShareManagerUin;

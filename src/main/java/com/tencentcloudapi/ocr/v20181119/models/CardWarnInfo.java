@@ -85,6 +85,15 @@ public class CardWarnInfo extends AbstractModel {
     private Float BlurScore;
 
     /**
+    * 是否电子身份证
+0：否
+1：是电子身份证
+    */
+    @SerializedName("ElectronCheck")
+    @Expose
+    private Long ElectronCheck;
+
+    /**
      * Get 证件边缘是否完整
 0：正常
 1：边缘不完整 
@@ -244,6 +253,30 @@ public class CardWarnInfo extends AbstractModel {
         this.BlurScore = BlurScore;
     }
 
+    /**
+     * Get 是否电子身份证
+0：否
+1：是电子身份证 
+     * @return ElectronCheck 是否电子身份证
+0：否
+1：是电子身份证
+     */
+    public Long getElectronCheck() {
+        return this.ElectronCheck;
+    }
+
+    /**
+     * Set 是否电子身份证
+0：否
+1：是电子身份证
+     * @param ElectronCheck 是否电子身份证
+0：否
+1：是电子身份证
+     */
+    public void setElectronCheck(Long ElectronCheck) {
+        this.ElectronCheck = ElectronCheck;
+    }
+
     public CardWarnInfo() {
     }
 
@@ -273,6 +306,9 @@ public class CardWarnInfo extends AbstractModel {
         if (source.BlurScore != null) {
             this.BlurScore = new Float(source.BlurScore);
         }
+        if (source.ElectronCheck != null) {
+            this.ElectronCheck = new Long(source.ElectronCheck);
+        }
     }
 
 
@@ -287,6 +323,7 @@ public class CardWarnInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PSCheck", this.PSCheck);
         this.setParamSimple(map, prefix + "BlurCheck", this.BlurCheck);
         this.setParamSimple(map, prefix + "BlurScore", this.BlurScore);
+        this.setParamSimple(map, prefix + "ElectronCheck", this.ElectronCheck);
 
     }
 }

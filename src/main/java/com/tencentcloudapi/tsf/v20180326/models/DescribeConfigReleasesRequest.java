@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeConfigReleasesRequest extends AbstractModel {
 
     /**
-    * 配置项名称，不传入时查询全量
+    * 配置项名称，不传入时查询全量。该参数可以通过调用 [DescribeConfigs](https://cloud.tencent.com/document/product/649/38340) 的返回值中的 ConfigName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-配置版本页查看；也可以调用[CreateConfig](https://cloud.tencent.com/document/product/649/38348)创建新的配置。
     */
     @SerializedName("ConfigName")
     @Expose
     private String ConfigName;
 
     /**
-    * 部署组ID，不传入时查询全量
+    * 部署组ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 命名空间ID，不传入时查询全量
+    * 命名空间ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * 集群ID，不传入时查询全量
+    * 集群ID，不传入时查询全量。该参数可以通过调用 [DescribeClusters](https://cloud.tencent.com/document/product/649/85857) 的返回值中的 ClusterId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 每页条数
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 配置ID，不传入时查询全量
+    * 配置ID，不传入时查询全量。该参数可以通过调用 [DescribeConfigs](https://cloud.tencent.com/document/product/649/38340) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-配置版本页查看；也可以调用[CreateConfig](https://cloud.tencent.com/document/product/649/38348)创建新的配置。
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-    * 应用ID，不传入时查询全量
+    * 应用ID，不传入时查询全量。该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-     * Get 配置项名称，不传入时查询全量 
-     * @return ConfigName 配置项名称，不传入时查询全量
+     * Get 配置项名称，不传入时查询全量。该参数可以通过调用 [DescribeConfigs](https://cloud.tencent.com/document/product/649/38340) 的返回值中的 ConfigName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-配置版本页查看；也可以调用[CreateConfig](https://cloud.tencent.com/document/product/649/38348)创建新的配置。 
+     * @return ConfigName 配置项名称，不传入时查询全量。该参数可以通过调用 [DescribeConfigs](https://cloud.tencent.com/document/product/649/38340) 的返回值中的 ConfigName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-配置版本页查看；也可以调用[CreateConfig](https://cloud.tencent.com/document/product/649/38348)创建新的配置。
      */
     public String getConfigName() {
         return this.ConfigName;
     }
 
     /**
-     * Set 配置项名称，不传入时查询全量
-     * @param ConfigName 配置项名称，不传入时查询全量
+     * Set 配置项名称，不传入时查询全量。该参数可以通过调用 [DescribeConfigs](https://cloud.tencent.com/document/product/649/38340) 的返回值中的 ConfigName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-配置版本页查看；也可以调用[CreateConfig](https://cloud.tencent.com/document/product/649/38348)创建新的配置。
+     * @param ConfigName 配置项名称，不传入时查询全量。该参数可以通过调用 [DescribeConfigs](https://cloud.tencent.com/document/product/649/38340) 的返回值中的 ConfigName 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-配置版本页查看；也可以调用[CreateConfig](https://cloud.tencent.com/document/product/649/38348)创建新的配置。
      */
     public void setConfigName(String ConfigName) {
         this.ConfigName = ConfigName;
     }
 
     /**
-     * Get 部署组ID，不传入时查询全量 
-     * @return GroupId 部署组ID，不传入时查询全量
+     * Get 部署组ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。 
+     * @return GroupId 部署组ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组ID，不传入时查询全量
-     * @param GroupId 部署组ID，不传入时查询全量
+     * Set 部署组ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
+     * @param GroupId 部署组ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleGroups](https://cloud.tencent.com/document/product/649/36064) 的返回值中的 GroupId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource)-查看部署组页查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 命名空间ID，不传入时查询全量 
-     * @return NamespaceId 命名空间ID，不传入时查询全量
+     * Get 命名空间ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。 
+     * @return NamespaceId 命名空间ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间ID，不传入时查询全量
-     * @param NamespaceId 命名空间ID，不传入时查询全量
+     * Set 命名空间ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
+     * @param NamespaceId 命名空间ID，不传入时查询全量。该参数可以通过调用 [DescribeSimpleNamespaces](https://cloud.tencent.com/document/api/649/36096) 的返回值中的 NamespaceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 集群ID，不传入时查询全量 
-     * @return ClusterId 集群ID，不传入时查询全量
+     * Get 集群ID，不传入时查询全量。该参数可以通过调用 [DescribeClusters](https://cloud.tencent.com/document/product/649/85857) 的返回值中的 ClusterId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。 
+     * @return ClusterId 集群ID，不传入时查询全量。该参数可以通过调用 [DescribeClusters](https://cloud.tencent.com/document/product/649/85857) 的返回值中的 ClusterId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID，不传入时查询全量
-     * @param ClusterId 集群ID，不传入时查询全量
+     * Set 集群ID，不传入时查询全量。该参数可以通过调用 [DescribeClusters](https://cloud.tencent.com/document/product/649/85857) 的返回值中的 ClusterId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
+     * @param ClusterId 集群ID，不传入时查询全量。该参数可以通过调用 [DescribeClusters](https://cloud.tencent.com/document/product/649/85857) 的返回值中的 ClusterId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?tab=namespace)查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 每页条数 
-     * @return Limit 每页条数
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条数
-     * @param Limit 每页条数
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 配置ID，不传入时查询全量 
-     * @return ConfigId 配置ID，不传入时查询全量
+     * Get 配置ID，不传入时查询全量。该参数可以通过调用 [DescribeConfigs](https://cloud.tencent.com/document/product/649/38340) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-配置版本页查看；也可以调用[CreateConfig](https://cloud.tencent.com/document/product/649/38348)创建新的配置。 
+     * @return ConfigId 配置ID，不传入时查询全量。该参数可以通过调用 [DescribeConfigs](https://cloud.tencent.com/document/product/649/38340) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-配置版本页查看；也可以调用[CreateConfig](https://cloud.tencent.com/document/product/649/38348)创建新的配置。
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 配置ID，不传入时查询全量
-     * @param ConfigId 配置ID，不传入时查询全量
+     * Set 配置ID，不传入时查询全量。该参数可以通过调用 [DescribeConfigs](https://cloud.tencent.com/document/product/649/38340) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-配置版本页查看；也可以调用[CreateConfig](https://cloud.tencent.com/document/product/649/38348)创建新的配置。
+     * @param ConfigId 配置ID，不传入时查询全量。该参数可以通过调用 [DescribeConfigs](https://cloud.tencent.com/document/product/649/38340) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-配置版本页查看；也可以调用[CreateConfig](https://cloud.tencent.com/document/product/649/38348)创建新的配置。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get 应用ID，不传入时查询全量 
-     * @return ApplicationId 应用ID，不传入时查询全量
+     * Get 应用ID，不传入时查询全量。该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。 
+     * @return ApplicationId 应用ID，不传入时查询全量。该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 应用ID，不传入时查询全量
-     * @param ApplicationId 应用ID，不传入时查询全量
+     * Set 应用ID，不传入时查询全量。该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
+     * @param ApplicationId 应用ID，不传入时查询全量。该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;

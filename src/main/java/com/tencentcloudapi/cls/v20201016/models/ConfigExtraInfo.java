@@ -45,7 +45,10 @@ public class ConfigExtraInfo extends AbstractModel {
     private String TopicId;
 
     /**
-    * 类型：container_stdout、container_file、host_file
+    * 自建k8s集群日志采集类型，支持
+- container_stdout 标准输出
+- container_file 标准文件
+- host_file 节点文件
     */
     @SerializedName("Type")
     @Expose
@@ -103,6 +106,7 @@ public class ConfigExtraInfo extends AbstractModel {
 
     /**
     * 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -110,6 +114,7 @@ public class ConfigExtraInfo extends AbstractModel {
 
     /**
     * 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
@@ -124,6 +129,7 @@ public class ConfigExtraInfo extends AbstractModel {
 
     /**
     * 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
     */
     @SerializedName("GroupId")
     @Expose
@@ -138,6 +144,7 @@ public class ConfigExtraInfo extends AbstractModel {
 
     /**
     * 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
     */
     @SerializedName("LogsetId")
     @Expose
@@ -224,16 +231,28 @@ public class ConfigExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get 类型：container_stdout、container_file、host_file 
-     * @return Type 类型：container_stdout、container_file、host_file
+     * Get 自建k8s集群日志采集类型，支持
+- container_stdout 标准输出
+- container_file 标准文件
+- host_file 节点文件 
+     * @return Type 自建k8s集群日志采集类型，支持
+- container_stdout 标准输出
+- container_file 标准文件
+- host_file 节点文件
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型：container_stdout、container_file、host_file
-     * @param Type 类型：container_stdout、container_file、host_file
+     * Set 自建k8s集群日志采集类型，支持
+- container_stdout 标准输出
+- container_file 标准文件
+- host_file 节点文件
+     * @param Type 自建k8s集群日志采集类型，支持
+- container_stdout 标准输出
+- container_file 标准文件
+- host_file 节点文件
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -356,8 +375,10 @@ public class ConfigExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get 更新时间 
+     * Get 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss 
      * @return UpdateTime 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -365,15 +386,19 @@ public class ConfigExtraInfo extends AbstractModel {
 
     /**
      * Set 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      * @param UpdateTime 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 创建时间 
+     * Get 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss 
      * @return CreateTime 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -381,7 +406,9 @@ public class ConfigExtraInfo extends AbstractModel {
 
     /**
      * Set 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      * @param CreateTime 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -404,8 +431,10 @@ public class ConfigExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get 机器组ID 
+     * Get 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。 
      * @return GroupId 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -413,7 +442,9 @@ public class ConfigExtraInfo extends AbstractModel {
 
     /**
      * Set 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      * @param GroupId 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -436,8 +467,10 @@ public class ConfigExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志集ID 
+     * Get 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。 
      * @return LogsetId 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      */
     public String getLogsetId() {
         return this.LogsetId;
@@ -445,7 +478,9 @@ public class ConfigExtraInfo extends AbstractModel {
 
     /**
      * Set 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      * @param LogsetId 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;

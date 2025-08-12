@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class CreatePublicConfigResponse extends AbstractModel {
 
     /**
-    * true：创建成功；false：创建失败
+    * 创建结果。
+- true：创建成功
+- false：创建失败
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +40,24 @@ public class CreatePublicConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get true：创建成功；false：创建失败 
-     * @return Result true：创建成功；false：创建失败
+     * Get 创建结果。
+- true：创建成功
+- false：创建失败 
+     * @return Result 创建结果。
+- true：创建成功
+- false：创建失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set true：创建成功；false：创建失败
-     * @param Result true：创建成功；false：创建失败
+     * Set 创建结果。
+- true：创建成功
+- false：创建失败
+     * @param Result 创建结果。
+- true：创建成功
+- false：创建失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

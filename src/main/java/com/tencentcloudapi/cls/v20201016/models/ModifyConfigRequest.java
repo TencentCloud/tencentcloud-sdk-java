@@ -32,6 +32,8 @@ public class ModifyConfigRequest extends AbstractModel {
 
     /**
     * 采集规则配置名称
+- 不能包含特殊字符｜
+- 长度不能超过255字符，超过会被截断
     */
     @SerializedName("Name")
     @Expose
@@ -78,6 +80,7 @@ public class ModifyConfigRequest extends AbstractModel {
 
     /**
     * 采集配置关联的日志主题（TopicId）
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("Output")
     @Expose
@@ -119,8 +122,12 @@ public class ModifyConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 采集规则配置名称 
+     * Get 采集规则配置名称
+- 不能包含特殊字符｜
+- 长度不能超过255字符，超过会被截断 
      * @return Name 采集规则配置名称
+- 不能包含特殊字符｜
+- 长度不能超过255字符，超过会被截断
      */
     public String getName() {
         return this.Name;
@@ -128,7 +135,11 @@ public class ModifyConfigRequest extends AbstractModel {
 
     /**
      * Set 采集规则配置名称
+- 不能包含特殊字符｜
+- 长度不能超过255字符，超过会被截断
      * @param Name 采集规则配置名称
+- 不能包含特殊字符｜
+- 长度不能超过255字符，超过会被截断
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -243,8 +254,10 @@ public class ModifyConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 采集配置关联的日志主题（TopicId） 
+     * Get 采集配置关联的日志主题（TopicId）
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
      * @return Output 采集配置关联的日志主题（TopicId）
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getOutput() {
         return this.Output;
@@ -252,7 +265,9 @@ public class ModifyConfigRequest extends AbstractModel {
 
     /**
      * Set 采集配置关联的日志主题（TopicId）
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param Output 采集配置关联的日志主题（TopicId）
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setOutput(String Output) {
         this.Output = Output;

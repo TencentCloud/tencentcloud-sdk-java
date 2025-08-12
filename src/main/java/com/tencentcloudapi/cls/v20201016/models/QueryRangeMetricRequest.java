@@ -25,6 +25,7 @@ public class QueryRangeMetricRequest extends AbstractModel {
 
     /**
     * 指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
@@ -32,6 +33,7 @@ public class QueryRangeMetricRequest extends AbstractModel {
 
     /**
     * 查询语句，使用PromQL语法
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
     */
     @SerializedName("Query")
     @Expose
@@ -59,8 +61,10 @@ public class QueryRangeMetricRequest extends AbstractModel {
     private Long Step;
 
     /**
-     * Get 指标主题ID 
+     * Get 指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
      * @return TopicId 指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -68,15 +72,19 @@ public class QueryRangeMetricRequest extends AbstractModel {
 
     /**
      * Set 指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param TopicId 指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 查询语句，使用PromQL语法 
+     * Get 查询语句，使用PromQL语法
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档 
      * @return Query 查询语句，使用PromQL语法
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
      */
     public String getQuery() {
         return this.Query;
@@ -84,7 +92,9 @@ public class QueryRangeMetricRequest extends AbstractModel {
 
     /**
      * Set 查询语句，使用PromQL语法
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
      * @param Query 查询语句，使用PromQL语法
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
      */
     public void setQuery(String Query) {
         this.Query = Query;

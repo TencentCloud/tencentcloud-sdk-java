@@ -31,6 +31,13 @@ public class CreateAttributeLabelResponse extends AbstractModel {
     private String AttrBizId;
 
     /**
+    * 标签值ID与名称
+    */
+    @SerializedName("Labels")
+    @Expose
+    private AttributeLabel [] Labels;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class CreateAttributeLabelResponse extends AbstractModel {
      */
     public void setAttrBizId(String AttrBizId) {
         this.AttrBizId = AttrBizId;
+    }
+
+    /**
+     * Get 标签值ID与名称 
+     * @return Labels 标签值ID与名称
+     */
+    public AttributeLabel [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 标签值ID与名称
+     * @param Labels 标签值ID与名称
+     */
+    public void setLabels(AttributeLabel [] Labels) {
+        this.Labels = Labels;
     }
 
     /**
@@ -80,6 +103,12 @@ public class CreateAttributeLabelResponse extends AbstractModel {
         if (source.AttrBizId != null) {
             this.AttrBizId = new String(source.AttrBizId);
         }
+        if (source.Labels != null) {
+            this.Labels = new AttributeLabel[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new AttributeLabel(source.Labels[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +120,7 @@ public class CreateAttributeLabelResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AttrBizId", this.AttrBizId);
+        this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

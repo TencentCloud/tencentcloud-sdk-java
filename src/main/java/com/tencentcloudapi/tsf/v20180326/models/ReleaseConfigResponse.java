@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class ReleaseConfigResponse extends AbstractModel {
 
     /**
-    * true：发布成功；false：发布失败
+    * 发布结果。
+- true：发布成功
+- false：发布失败
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +40,24 @@ public class ReleaseConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get true：发布成功；false：发布失败 
-     * @return Result true：发布成功；false：发布失败
+     * Get 发布结果。
+- true：发布成功
+- false：发布失败 
+     * @return Result 发布结果。
+- true：发布成功
+- false：发布失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set true：发布成功；false：发布失败
-     * @param Result true：发布成功；false：发布失败
+     * Set 发布结果。
+- true：发布成功
+- false：发布失败
+     * @param Result 发布结果。
+- true：发布成功
+- false：发布失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

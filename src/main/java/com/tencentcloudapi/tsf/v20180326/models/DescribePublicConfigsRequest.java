@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribePublicConfigsRequest extends AbstractModel {
 
     /**
-    * 配置项ID，不传入时查询全量，高优先级
+    * 配置ID。不传入时查询全量，高优先级。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-    * 偏移量，默认为0
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页条数，默认为20
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 配置项ID列表，不传入时查询全量，低优先级
+    * 配置ID列表，不传入时查询全量，低优先级。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。
     */
     @SerializedName("ConfigIdList")
     @Expose
     private String [] ConfigIdList;
 
     /**
-    * 配置项名称，精确查询，不传入时查询全量
+    * 配置项名称，精确查询，不传入时查询全量。
     */
     @SerializedName("ConfigName")
     @Expose
     private String ConfigName;
 
     /**
-    * 配置项版本，精确查询，不传入时查询全量
+    * 配置项版本，精确查询，不传入时查询全量。
     */
     @SerializedName("ConfigVersion")
     @Expose
     private String ConfigVersion;
 
     /**
-     * Get 配置项ID，不传入时查询全量，高优先级 
-     * @return ConfigId 配置项ID，不传入时查询全量，高优先级
+     * Get 配置ID。不传入时查询全量，高优先级。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。 
+     * @return ConfigId 配置ID。不传入时查询全量，高优先级。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 配置项ID，不传入时查询全量，高优先级
-     * @param ConfigId 配置项ID，不传入时查询全量，高优先级
+     * Set 配置ID。不传入时查询全量，高优先级。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。
+     * @param ConfigId 配置ID。不传入时查询全量，高优先级。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页条数，默认为20 
-     * @return Limit 每页条数，默认为20
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条数，默认为20
-     * @param Limit 每页条数，默认为20
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 配置项ID列表，不传入时查询全量，低优先级 
-     * @return ConfigIdList 配置项ID列表，不传入时查询全量，低优先级
+     * Get 配置ID列表，不传入时查询全量，低优先级。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。 
+     * @return ConfigIdList 配置ID列表，不传入时查询全量，低优先级。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。
      */
     public String [] getConfigIdList() {
         return this.ConfigIdList;
     }
 
     /**
-     * Set 配置项ID列表，不传入时查询全量，低优先级
-     * @param ConfigIdList 配置项ID列表，不传入时查询全量，低优先级
+     * Set 配置ID列表，不传入时查询全量，低优先级。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。
+     * @param ConfigIdList 配置ID列表，不传入时查询全量，低优先级。该参数可以通过调用 [DescribePublicConfigs](https://cloud.tencent.com/document/product/649/38335) 的返回值中的 ConfigId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=public)配置详情-配置版本页查看；也可以调用[CreatePublicConfig](https://cloud.tencent.com/document/product/649/38347)创建新的配置。
      */
     public void setConfigIdList(String [] ConfigIdList) {
         this.ConfigIdList = ConfigIdList;
     }
 
     /**
-     * Get 配置项名称，精确查询，不传入时查询全量 
-     * @return ConfigName 配置项名称，精确查询，不传入时查询全量
+     * Get 配置项名称，精确查询，不传入时查询全量。 
+     * @return ConfigName 配置项名称，精确查询，不传入时查询全量。
      */
     public String getConfigName() {
         return this.ConfigName;
     }
 
     /**
-     * Set 配置项名称，精确查询，不传入时查询全量
-     * @param ConfigName 配置项名称，精确查询，不传入时查询全量
+     * Set 配置项名称，精确查询，不传入时查询全量。
+     * @param ConfigName 配置项名称，精确查询，不传入时查询全量。
      */
     public void setConfigName(String ConfigName) {
         this.ConfigName = ConfigName;
     }
 
     /**
-     * Get 配置项版本，精确查询，不传入时查询全量 
-     * @return ConfigVersion 配置项版本，精确查询，不传入时查询全量
+     * Get 配置项版本，精确查询，不传入时查询全量。 
+     * @return ConfigVersion 配置项版本，精确查询，不传入时查询全量。
      */
     public String getConfigVersion() {
         return this.ConfigVersion;
     }
 
     /**
-     * Set 配置项版本，精确查询，不传入时查询全量
-     * @param ConfigVersion 配置项版本，精确查询，不传入时查询全量
+     * Set 配置项版本，精确查询，不传入时查询全量。
+     * @param ConfigVersion 配置项版本，精确查询，不传入时查询全量。
      */
     public void setConfigVersion(String ConfigVersion) {
         this.ConfigVersion = ConfigVersion;

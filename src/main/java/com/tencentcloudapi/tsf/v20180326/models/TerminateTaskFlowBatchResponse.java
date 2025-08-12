@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TerminateTaskFlowBatchResponse extends AbstractModel {
 
     /**
-    * 是否停止成功
+    * 是否停止成功，true：停止成功，false：停止失败
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class TerminateTaskFlowBatchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否停止成功 
-     * @return Result 是否停止成功
+     * Get 是否停止成功，true：停止成功，false：停止失败 
+     * @return Result 是否停止成功，true：停止成功，false：停止失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 是否停止成功
-     * @param Result 是否停止成功
+     * Set 是否停止成功，true：停止成功，false：停止失败
+     * @param Result 是否停止成功，true：停止成功，false：停止失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

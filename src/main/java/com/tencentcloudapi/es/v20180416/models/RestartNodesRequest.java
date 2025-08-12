@@ -94,6 +94,13 @@ public class RestartNodesRequest extends AbstractModel {
     private EnableScheduleOperationDuration EnableScheduleOperationDuration;
 
     /**
+    * 事件id列表
+    */
+    @SerializedName("EventTypeIds")
+    @Expose
+    private String [] EventTypeIds;
+
+    /**
      * Get 集群实例ID 
      * @return InstanceId 集群实例ID
      */
@@ -253,6 +260,22 @@ public class RestartNodesRequest extends AbstractModel {
         this.EnableScheduleOperationDuration = EnableScheduleOperationDuration;
     }
 
+    /**
+     * Get 事件id列表 
+     * @return EventTypeIds 事件id列表
+     */
+    public String [] getEventTypeIds() {
+        return this.EventTypeIds;
+    }
+
+    /**
+     * Set 事件id列表
+     * @param EventTypeIds 事件id列表
+     */
+    public void setEventTypeIds(String [] EventTypeIds) {
+        this.EventTypeIds = EventTypeIds;
+    }
+
     public RestartNodesRequest() {
     }
 
@@ -294,6 +317,12 @@ public class RestartNodesRequest extends AbstractModel {
         if (source.EnableScheduleOperationDuration != null) {
             this.EnableScheduleOperationDuration = new EnableScheduleOperationDuration(source.EnableScheduleOperationDuration);
         }
+        if (source.EventTypeIds != null) {
+            this.EventTypeIds = new String[source.EventTypeIds.length];
+            for (int i = 0; i < source.EventTypeIds.length; i++) {
+                this.EventTypeIds[i] = new String(source.EventTypeIds[i]);
+            }
+        }
     }
 
 
@@ -311,6 +340,7 @@ public class RestartNodesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ShardAllocationBytes", this.ShardAllocationBytes);
         this.setParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
         this.setParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
+        this.setParamArraySimple(map, prefix + "EventTypeIds.", this.EventTypeIds);
 
     }
 }

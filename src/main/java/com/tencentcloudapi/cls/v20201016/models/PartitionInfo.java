@@ -53,6 +53,7 @@ public class PartitionInfo extends AbstractModel {
 
     /**
     * 分区创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
@@ -60,6 +61,7 @@ public class PartitionInfo extends AbstractModel {
 
     /**
     * 只读分区数据停止写入时间
+时间格式：yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastWriteTime")
@@ -131,8 +133,10 @@ public class PartitionInfo extends AbstractModel {
     }
 
     /**
-     * Get 分区创建时间 
+     * Get 分区创建时间
+时间格式：yyyy-MM-dd HH:mm:ss 
      * @return CreateTime 分区创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -140,7 +144,9 @@ public class PartitionInfo extends AbstractModel {
 
     /**
      * Set 分区创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param CreateTime 分区创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -148,8 +154,10 @@ public class PartitionInfo extends AbstractModel {
 
     /**
      * Get 只读分区数据停止写入时间
+时间格式：yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LastWriteTime 只读分区数据停止写入时间
+时间格式：yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastWriteTime() {
@@ -158,8 +166,10 @@ public class PartitionInfo extends AbstractModel {
 
     /**
      * Set 只读分区数据停止写入时间
+时间格式：yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LastWriteTime 只读分区数据停止写入时间
+时间格式：yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastWriteTime(String LastWriteTime) {

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RedoTaskExecuteResponse extends AbstractModel {
 
     /**
-    * 成功失败
+    * 成功返回执行批次流水ID。失败返回空字符串。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class RedoTaskExecuteResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成功失败 
-     * @return Result 成功失败
+     * Get 成功返回执行批次流水ID。失败返回空字符串。 
+     * @return Result 成功返回执行批次流水ID。失败返回空字符串。
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 成功失败
-     * @param Result 成功失败
+     * Set 成功返回执行批次流水ID。失败返回空字符串。
+     * @param Result 成功返回执行批次流水ID。失败返回空字符串。
      */
     public void setResult(String Result) {
         this.Result = Result;

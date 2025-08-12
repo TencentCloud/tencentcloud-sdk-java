@@ -38,7 +38,9 @@ public class DescribeLogHistogramRequest extends AbstractModel {
     private Long To;
 
     /**
-    * 查询语句
+    * 检索分析语句。
+语句由 [检索条件] | [SQL语句]构成，无需对日志进行统计分析时，可省略其中的管道符 | 及SQL语句。
+使用*或空字符串可查询所有日志。
     */
     @SerializedName("Query")
     @Expose
@@ -46,6 +48,7 @@ public class DescribeLogHistogramRequest extends AbstractModel {
 
     /**
     * 要查询的日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
@@ -100,24 +103,34 @@ public class DescribeLogHistogramRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询语句 
-     * @return Query 查询语句
+     * Get 检索分析语句。
+语句由 [检索条件] | [SQL语句]构成，无需对日志进行统计分析时，可省略其中的管道符 | 及SQL语句。
+使用*或空字符串可查询所有日志。 
+     * @return Query 检索分析语句。
+语句由 [检索条件] | [SQL语句]构成，无需对日志进行统计分析时，可省略其中的管道符 | 及SQL语句。
+使用*或空字符串可查询所有日志。
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询语句
-     * @param Query 查询语句
+     * Set 检索分析语句。
+语句由 [检索条件] | [SQL语句]构成，无需对日志进行统计分析时，可省略其中的管道符 | 及SQL语句。
+使用*或空字符串可查询所有日志。
+     * @param Query 检索分析语句。
+语句由 [检索条件] | [SQL语句]构成，无需对日志进行统计分析时，可省略其中的管道符 | 及SQL语句。
+使用*或空字符串可查询所有日志。
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 要查询的日志主题ID 
+     * Get 要查询的日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
      * @return TopicId 要查询的日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -125,7 +138,9 @@ public class DescribeLogHistogramRequest extends AbstractModel {
 
     /**
      * Set 要查询的日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param TopicId 要查询的日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

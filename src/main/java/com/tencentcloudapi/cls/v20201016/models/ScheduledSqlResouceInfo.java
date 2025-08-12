@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ScheduledSqlResouceInfo extends AbstractModel {
 
     /**
-    * 目标主题id
+    * 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 主题的地域信息
+    * 主题的地域信息，当前不支持跨地域，支持地域参考 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
     */
     @SerializedName("Region")
     @Expose
@@ -82,32 +82,32 @@ BizType为1时，优先使用MetricNames字段多指标只能填充到MetricName
     private MetricLabel [] CustomMetricLabels;
 
     /**
-     * Get 目标主题id 
-     * @return TopicId 目标主题id
+     * Get 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。 
+     * @return TopicId 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 目标主题id
-     * @param TopicId 目标主题id
+     * Set 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+     * @param TopicId 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 主题的地域信息 
-     * @return Region 主题的地域信息
+     * Get 主题的地域信息，当前不支持跨地域，支持地域参考 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。 
+     * @return Region 主题的地域信息，当前不支持跨地域，支持地域参考 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 主题的地域信息
-     * @param Region 主题的地域信息
+     * Set 主题的地域信息，当前不支持跨地域，支持地域参考 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
+     * @param Region 主题的地域信息，当前不支持跨地域，支持地域参考 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
      */
     public void setRegion(String Region) {
         this.Region = Region;

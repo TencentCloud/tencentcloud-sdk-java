@@ -112,6 +112,15 @@ public class CompareFaceRequest extends AbstractModel {
     private Long NeedRotateDetection;
 
     /**
+    * 若图片中包含多张人脸，指定选取策略，默认为0。
+- 0：选取其中置信度最高的人脸
+- 1：选取其中面积最大的人脸。
+    */
+    @SerializedName("FaceMatchingStrategy")
+    @Expose
+    private Long FaceMatchingStrategy;
+
+    /**
      * Get A 图片 base64 数据。
 - base64 编码后大小不可超过5M。
 - jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。所有格式的图片短边像素不小于64。
@@ -379,6 +388,30 @@ public class CompareFaceRequest extends AbstractModel {
         this.NeedRotateDetection = NeedRotateDetection;
     }
 
+    /**
+     * Get 若图片中包含多张人脸，指定选取策略，默认为0。
+- 0：选取其中置信度最高的人脸
+- 1：选取其中面积最大的人脸。 
+     * @return FaceMatchingStrategy 若图片中包含多张人脸，指定选取策略，默认为0。
+- 0：选取其中置信度最高的人脸
+- 1：选取其中面积最大的人脸。
+     */
+    public Long getFaceMatchingStrategy() {
+        return this.FaceMatchingStrategy;
+    }
+
+    /**
+     * Set 若图片中包含多张人脸，指定选取策略，默认为0。
+- 0：选取其中置信度最高的人脸
+- 1：选取其中面积最大的人脸。
+     * @param FaceMatchingStrategy 若图片中包含多张人脸，指定选取策略，默认为0。
+- 0：选取其中置信度最高的人脸
+- 1：选取其中面积最大的人脸。
+     */
+    public void setFaceMatchingStrategy(Long FaceMatchingStrategy) {
+        this.FaceMatchingStrategy = FaceMatchingStrategy;
+    }
+
     public CompareFaceRequest() {
     }
 
@@ -408,6 +441,9 @@ public class CompareFaceRequest extends AbstractModel {
         if (source.NeedRotateDetection != null) {
             this.NeedRotateDetection = new Long(source.NeedRotateDetection);
         }
+        if (source.FaceMatchingStrategy != null) {
+            this.FaceMatchingStrategy = new Long(source.FaceMatchingStrategy);
+        }
     }
 
 
@@ -422,6 +458,7 @@ public class CompareFaceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
         this.setParamSimple(map, prefix + "QualityControl", this.QualityControl);
         this.setParamSimple(map, prefix + "NeedRotateDetection", this.NeedRotateDetection);
+        this.setParamSimple(map, prefix + "FaceMatchingStrategy", this.FaceMatchingStrategy);
 
     }
 }

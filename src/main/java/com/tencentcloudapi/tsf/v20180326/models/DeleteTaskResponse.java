@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteTaskResponse extends AbstractModel {
 
     /**
-    * 删除成功or失败
+    * true：删除成功，false：删除失败
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除成功or失败 
-     * @return Result 删除成功or失败
+     * Get true：删除成功，false：删除失败 
+     * @return Result true：删除成功，false：删除失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 删除成功or失败
-     * @param Result 删除成功or失败
+     * Set true：删除成功，false：删除失败
+     * @param Result true：删除成功，false：删除失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

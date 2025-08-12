@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTaskRecordsRequest extends AbstractModel {
 
     /**
-    * 翻页偏移量。
+    * 翻页偏移量。默认值为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 翻页查询单页数量。
+    * 翻页查询单页数量。默认值为 20，最大值为 1000
     */
     @SerializedName("Limit")
     @Expose
@@ -45,67 +45,67 @@ public class DescribeTaskRecordsRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-    * 任务启用状态。enabled/disabled
+    * 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
     */
     @SerializedName("TaskState")
     @Expose
     private String TaskState;
 
     /**
-    * 分组ID。
+    * 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 任务类型。
+    * 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 任务触发类型，UNICAST、BROADCAST。
+    * 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
     */
     @SerializedName("ExecuteType")
     @Expose
     private String ExecuteType;
 
     /**
-    * 无
+    * 任务ID列表。
     */
     @SerializedName("Ids")
     @Expose
     private String [] Ids;
 
     /**
-     * Get 翻页偏移量。 
-     * @return Offset 翻页偏移量。
+     * Get 翻页偏移量。默认值为0 
+     * @return Offset 翻页偏移量。默认值为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 翻页偏移量。
-     * @param Offset 翻页偏移量。
+     * Set 翻页偏移量。默认值为0
+     * @param Offset 翻页偏移量。默认值为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 翻页查询单页数量。 
-     * @return Limit 翻页查询单页数量。
+     * Get 翻页查询单页数量。默认值为 20，最大值为 1000 
+     * @return Limit 翻页查询单页数量。默认值为 20，最大值为 1000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 翻页查询单页数量。
-     * @param Limit 翻页查询单页数量。
+     * Set 翻页查询单页数量。默认值为 20，最大值为 1000
+     * @param Limit 翻页查询单页数量。默认值为 20，最大值为 1000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -128,80 +128,80 @@ public class DescribeTaskRecordsRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务启用状态。enabled/disabled 
-     * @return TaskState 任务启用状态。enabled/disabled
+     * Get 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用 
+     * @return TaskState 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
      */
     public String getTaskState() {
         return this.TaskState;
     }
 
     /**
-     * Set 任务启用状态。enabled/disabled
-     * @param TaskState 任务启用状态。enabled/disabled
+     * Set 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
+     * @param TaskState 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
      */
     public void setTaskState(String TaskState) {
         this.TaskState = TaskState;
     }
 
     /**
-     * Get 分组ID。 
-     * @return GroupId 分组ID。
+     * Get 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。 
+     * @return GroupId 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 分组ID。
-     * @param GroupId 分组ID。
+     * Set 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
+     * @param GroupId 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 任务类型。 
-     * @return TaskType 任务类型。
+     * Get 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务 
+     * @return TaskType 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型。
-     * @param TaskType 任务类型。
+     * Set 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
+     * @param TaskType 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 任务触发类型，UNICAST、BROADCAST。 
-     * @return ExecuteType 任务触发类型，UNICAST、BROADCAST。
+     * Get 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行 
+     * @return ExecuteType 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
      */
     public String getExecuteType() {
         return this.ExecuteType;
     }
 
     /**
-     * Set 任务触发类型，UNICAST、BROADCAST。
-     * @param ExecuteType 任务触发类型，UNICAST、BROADCAST。
+     * Set 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
+     * @param ExecuteType 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
      */
     public void setExecuteType(String ExecuteType) {
         this.ExecuteType = ExecuteType;
     }
 
     /**
-     * Get 无 
-     * @return Ids 无
+     * Get 任务ID列表。 
+     * @return Ids 任务ID列表。
      */
     public String [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set 无
-     * @param Ids 无
+     * Set 任务ID列表。
+     * @param Ids 任务ID列表。
      */
     public void setIds(String [] Ids) {
         this.Ids = Ids;

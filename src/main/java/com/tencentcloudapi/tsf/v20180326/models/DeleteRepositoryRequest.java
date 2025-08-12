@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteRepositoryRequest extends AbstractModel {
 
     /**
-    * 仓库ID
+    * 删除对应仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
     */
     @SerializedName("RepositoryId")
     @Expose
     private String RepositoryId;
 
     /**
-     * Get 仓库ID 
-     * @return RepositoryId 仓库ID
+     * Get 删除对应仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看 
+     * @return RepositoryId 删除对应仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public String getRepositoryId() {
         return this.RepositoryId;
     }
 
     /**
-     * Set 仓库ID
-     * @param RepositoryId 仓库ID
+     * Set 删除对应仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
+     * @param RepositoryId 删除对应仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public void setRepositoryId(String RepositoryId) {
         this.RepositoryId = RepositoryId;

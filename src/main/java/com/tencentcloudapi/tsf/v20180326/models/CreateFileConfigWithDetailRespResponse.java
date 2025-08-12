@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateFileConfigWithDetailRespResponse extends AbstractModel {
 
     /**
-    * 文件配置项
+    * 文件配置项。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateFileConfigWithDetailRespResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件配置项 
-     * @return Result 文件配置项
+     * Get 文件配置项。 
+     * @return Result 文件配置项。
      */
     public FileConfig getResult() {
         return this.Result;
     }
 
     /**
-     * Set 文件配置项
-     * @param Result 文件配置项
+     * Set 文件配置项。
+     * @param Result 文件配置项。
      */
     public void setResult(FileConfig Result) {
         this.Result = Result;

@@ -228,6 +228,20 @@ zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
     private String AffinityConstraint;
 
     /**
+    * 指定zone id列表
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private Long [] ZoneIds;
+
+    /**
+    * 地域特殊标签，用于区分相同地域，不通的业务属性
+    */
+    @SerializedName("EngineRegionTag")
+    @Expose
+    private String EngineRegionTag;
+
+    /**
      * Get 引擎类型。参考值：
 - zookeeper
 - nacos
@@ -803,6 +817,38 @@ zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
         this.AffinityConstraint = AffinityConstraint;
     }
 
+    /**
+     * Get 指定zone id列表 
+     * @return ZoneIds 指定zone id列表
+     */
+    public Long [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set 指定zone id列表
+     * @param ZoneIds 指定zone id列表
+     */
+    public void setZoneIds(Long [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
+    }
+
+    /**
+     * Get 地域特殊标签，用于区分相同地域，不通的业务属性 
+     * @return EngineRegionTag 地域特殊标签，用于区分相同地域，不通的业务属性
+     */
+    public String getEngineRegionTag() {
+        return this.EngineRegionTag;
+    }
+
+    /**
+     * Set 地域特殊标签，用于区分相同地域，不通的业务属性
+     * @param EngineRegionTag 地域特殊标签，用于区分相同地域，不通的业务属性
+     */
+    public void setEngineRegionTag(String EngineRegionTag) {
+        this.EngineRegionTag = EngineRegionTag;
+    }
+
     public CreateEngineRequest() {
     }
 
@@ -883,6 +929,15 @@ zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
         if (source.AffinityConstraint != null) {
             this.AffinityConstraint = new String(source.AffinityConstraint);
         }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new Long[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new Long(source.ZoneIds[i]);
+            }
+        }
+        if (source.EngineRegionTag != null) {
+            this.EngineRegionTag = new String(source.EngineRegionTag);
+        }
     }
 
 
@@ -910,6 +965,8 @@ zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
         this.setParamSimple(map, prefix + "StorageCapacity", this.StorageCapacity);
         this.setParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
         this.setParamSimple(map, prefix + "AffinityConstraint", this.AffinityConstraint);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+        this.setParamSimple(map, prefix + "EngineRegionTag", this.EngineRegionTag);
 
     }
 }

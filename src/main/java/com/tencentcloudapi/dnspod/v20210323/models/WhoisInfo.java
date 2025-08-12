@@ -112,6 +112,13 @@ public class WhoisInfo extends AbstractModel {
     private String Dnssec;
 
     /**
+    * 腾讯注册商资质
+    */
+    @SerializedName("RegistrarType")
+    @Expose
+    private String RegistrarType;
+
+    /**
      * Get 联系信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Contacts 联系信息
@@ -331,6 +338,22 @@ public class WhoisInfo extends AbstractModel {
         this.Dnssec = Dnssec;
     }
 
+    /**
+     * Get 腾讯注册商资质 
+     * @return RegistrarType 腾讯注册商资质
+     */
+    public String getRegistrarType() {
+        return this.RegistrarType;
+    }
+
+    /**
+     * Set 腾讯注册商资质
+     * @param RegistrarType 腾讯注册商资质
+     */
+    public void setRegistrarType(String RegistrarType) {
+        this.RegistrarType = RegistrarType;
+    }
+
     public WhoisInfo() {
     }
 
@@ -384,6 +407,9 @@ public class WhoisInfo extends AbstractModel {
         if (source.Dnssec != null) {
             this.Dnssec = new String(source.Dnssec);
         }
+        if (source.RegistrarType != null) {
+            this.RegistrarType = new String(source.RegistrarType);
+        }
     }
 
 
@@ -402,6 +428,7 @@ public class WhoisInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
         this.setParamSimple(map, prefix + "UpdatedDate", this.UpdatedDate);
         this.setParamSimple(map, prefix + "Dnssec", this.Dnssec);
+        this.setParamSimple(map, prefix + "RegistrarType", this.RegistrarType);
 
     }
 }

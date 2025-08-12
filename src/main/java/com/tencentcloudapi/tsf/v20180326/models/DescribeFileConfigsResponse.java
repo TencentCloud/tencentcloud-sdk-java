@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeFileConfigsResponse extends AbstractModel {
 
     /**
-    * 文件配置项列表
+    * 文件配置项列表。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeFileConfigsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件配置项列表 
-     * @return Result 文件配置项列表
+     * Get 文件配置项列表。 
+     * @return Result 文件配置项列表。
      */
     public TsfPageFileConfig getResult() {
         return this.Result;
     }
 
     /**
-     * Set 文件配置项列表
-     * @param Result 文件配置项列表
+     * Set 文件配置项列表。
+     * @param Result 文件配置项列表。
      */
     public void setResult(TsfPageFileConfig Result) {
         this.Result = Result;

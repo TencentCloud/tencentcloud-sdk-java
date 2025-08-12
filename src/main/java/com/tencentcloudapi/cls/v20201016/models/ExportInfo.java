@@ -87,14 +87,14 @@ public class ExportInfo extends AbstractModel {
     private String Status;
 
     /**
-    * 日志导出起始时间
+    * 日志导出起始时间，毫秒时间戳
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * 日志导出结束时间
+    * 日志导出结束时间，毫秒时间戳
     */
     @SerializedName("To")
     @Expose
@@ -109,6 +109,7 @@ public class ExportInfo extends AbstractModel {
 
     /**
     * 日志导出创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
@@ -274,32 +275,32 @@ public class ExportInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志导出起始时间 
-     * @return From 日志导出起始时间
+     * Get 日志导出起始时间，毫秒时间戳 
+     * @return From 日志导出起始时间，毫秒时间戳
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set 日志导出起始时间
-     * @param From 日志导出起始时间
+     * Set 日志导出起始时间，毫秒时间戳
+     * @param From 日志导出起始时间，毫秒时间戳
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get 日志导出结束时间 
-     * @return To 日志导出结束时间
+     * Get 日志导出结束时间，毫秒时间戳 
+     * @return To 日志导出结束时间，毫秒时间戳
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set 日志导出结束时间
-     * @param To 日志导出结束时间
+     * Set 日志导出结束时间，毫秒时间戳
+     * @param To 日志导出结束时间，毫秒时间戳
      */
     public void setTo(Long To) {
         this.To = To;
@@ -322,8 +323,10 @@ public class ExportInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志导出创建时间 
+     * Get 日志导出创建时间
+时间格式：yyyy-MM-dd HH:mm:ss 
      * @return CreateTime 日志导出创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -331,7 +334,9 @@ public class ExportInfo extends AbstractModel {
 
     /**
      * Set 日志导出创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param CreateTime 日志导出创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

@@ -46,6 +46,7 @@ public class MachineGroupInfo extends AbstractModel {
 
     /**
     * 创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
@@ -67,6 +68,7 @@ public class MachineGroupInfo extends AbstractModel {
 
     /**
     * 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
     */
     @SerializedName("UpdateStartTime")
     @Expose
@@ -74,6 +76,7 @@ public class MachineGroupInfo extends AbstractModel {
 
     /**
     * 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
     */
     @SerializedName("UpdateEndTime")
     @Expose
@@ -87,7 +90,7 @@ public class MachineGroupInfo extends AbstractModel {
     private Boolean ServiceLogging;
 
     /**
-    * 机器组中机器离线定期清理时间
+    * 机器组中机器离线定期清理时间，单位天，默认设置30天。
     */
     @SerializedName("DelayCleanupTime")
     @Expose
@@ -156,8 +159,10 @@ public class MachineGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
+     * Get 创建时间
+时间格式：yyyy-MM-dd HH:mm:ss 
      * @return CreateTime 创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -165,7 +170,9 @@ public class MachineGroupInfo extends AbstractModel {
 
     /**
      * Set 创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param CreateTime 创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -204,8 +211,10 @@ public class MachineGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 升级开始时间，建议业务低峰期升级LogListener 
+     * Get 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss 
      * @return UpdateStartTime 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public String getUpdateStartTime() {
         return this.UpdateStartTime;
@@ -213,15 +222,19 @@ public class MachineGroupInfo extends AbstractModel {
 
     /**
      * Set 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      * @param UpdateStartTime 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public void setUpdateStartTime(String UpdateStartTime) {
         this.UpdateStartTime = UpdateStartTime;
     }
 
     /**
-     * Get 升级结束时间，建议业务低峰期升级LogListener 
+     * Get 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss 
      * @return UpdateEndTime 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public String getUpdateEndTime() {
         return this.UpdateEndTime;
@@ -229,7 +242,9 @@ public class MachineGroupInfo extends AbstractModel {
 
     /**
      * Set 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      * @param UpdateEndTime 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public void setUpdateEndTime(String UpdateEndTime) {
         this.UpdateEndTime = UpdateEndTime;
@@ -252,16 +267,16 @@ public class MachineGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 机器组中机器离线定期清理时间 
-     * @return DelayCleanupTime 机器组中机器离线定期清理时间
+     * Get 机器组中机器离线定期清理时间，单位天，默认设置30天。 
+     * @return DelayCleanupTime 机器组中机器离线定期清理时间，单位天，默认设置30天。
      */
     public Long getDelayCleanupTime() {
         return this.DelayCleanupTime;
     }
 
     /**
-     * Set 机器组中机器离线定期清理时间
-     * @param DelayCleanupTime 机器组中机器离线定期清理时间
+     * Set 机器组中机器离线定期清理时间，单位天，默认设置30天。
+     * @param DelayCleanupTime 机器组中机器离线定期清理时间，单位天，默认设置30天。
      */
     public void setDelayCleanupTime(Long DelayCleanupTime) {
         this.DelayCleanupTime = DelayCleanupTime;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RedoTaskBatchResponse extends AbstractModel {
 
     /**
-    * 批次ID
+    * 批次流水ID
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class RedoTaskBatchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 批次ID 
-     * @return Result 批次ID
+     * Get 批次流水ID 
+     * @return Result 批次流水ID
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 批次ID
-     * @param Result 批次ID
+     * Set 批次流水ID
+     * @param Result 批次流水ID
      */
     public void setResult(String Result) {
         this.Result = Result;

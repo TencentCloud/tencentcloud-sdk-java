@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RedoTaskFlowBatchResponse extends AbstractModel {
 
     /**
-    * 工作流批次历史 ID
+    * 工作流批次历史 ID。操作失败时不返回该字段，返回错误码。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class RedoTaskFlowBatchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 工作流批次历史 ID 
-     * @return Result 工作流批次历史 ID
+     * Get 工作流批次历史 ID。操作失败时不返回该字段，返回错误码。 
+     * @return Result 工作流批次历史 ID。操作失败时不返回该字段，返回错误码。
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 工作流批次历史 ID
-     * @param Result 工作流批次历史 ID
+     * Set 工作流批次历史 ID。操作失败时不返回该字段，返回错误码。
+     * @param Result 工作流批次历史 ID。操作失败时不返回该字段，返回错误码。
      */
     public void setResult(String Result) {
         this.Result = Result;

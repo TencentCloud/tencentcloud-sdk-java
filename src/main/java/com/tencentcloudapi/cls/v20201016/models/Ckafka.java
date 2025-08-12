@@ -24,138 +24,208 @@ import java.util.HashMap;
 public class Ckafka extends AbstractModel {
 
     /**
-    * Ckafka 的 InstanceId
+    * Ckafka 的 InstanceId。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取实例id。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Ckafka 的 TopicName
+    * Ckafka 的 TopicName。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicName。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicName。
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Ckafka 的 Vip
+    * Ckafka 的 Vip。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vip字段可为空。
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Ckafka 的 Vport
+    * Ckafka 的 Vport。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip port信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vport字段可为空。
     */
     @SerializedName("Vport")
     @Expose
     private String Vport;
 
     /**
-    * Ckafka 的 InstanceName
+    * Ckafka 的 InstanceName。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取InstanceName。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取InstanceName。
+- 如果是通过 角色ARN 方式创建投递任务，则InstanceName字段可为空。
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Ckafka 的 TopicId
+    * Ckafka 的 TopicId。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicId。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicId。
+- 如果是通过 角色ARN 方式创建投递任务，则TopicId字段可为空。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-     * Get Ckafka 的 InstanceId 
-     * @return InstanceId Ckafka 的 InstanceId
+     * Get Ckafka 的 InstanceId。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取实例id。 
+     * @return InstanceId Ckafka 的 InstanceId。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取实例id。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Ckafka 的 InstanceId
-     * @param InstanceId Ckafka 的 InstanceId
+     * Set Ckafka 的 InstanceId。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取实例id。
+     * @param InstanceId Ckafka 的 InstanceId。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取实例id。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Ckafka 的 TopicName 
-     * @return TopicName Ckafka 的 TopicName
+     * Get Ckafka 的 TopicName。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicName。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicName。 
+     * @return TopicName Ckafka 的 TopicName。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicName。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicName。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Ckafka 的 TopicName
-     * @param TopicName Ckafka 的 TopicName
+     * Set Ckafka 的 TopicName。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicName。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicName。
+     * @param TopicName Ckafka 的 TopicName。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicName。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicName。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Ckafka 的 Vip 
-     * @return Vip Ckafka 的 Vip
+     * Get Ckafka 的 Vip。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vip字段可为空。 
+     * @return Vip Ckafka 的 Vip。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vip字段可为空。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set Ckafka 的 Vip
-     * @param Vip Ckafka 的 Vip
+     * Set Ckafka 的 Vip。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vip字段可为空。
+     * @param Vip Ckafka 的 Vip。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vip字段可为空。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Ckafka 的 Vport 
-     * @return Vport Ckafka 的 Vport
+     * Get Ckafka 的 Vport。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip port信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vport字段可为空。 
+     * @return Vport Ckafka 的 Vport。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip port信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vport字段可为空。
      */
     public String getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Ckafka 的 Vport
-     * @param Vport Ckafka 的 Vport
+     * Set Ckafka 的 Vport。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip port信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vport字段可为空。
+     * @param Vport Ckafka 的 Vport。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip port信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vport字段可为空。
      */
     public void setVport(String Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Ckafka 的 InstanceName 
-     * @return InstanceName Ckafka 的 InstanceName
+     * Get Ckafka 的 InstanceName。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取InstanceName。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取InstanceName。
+- 如果是通过 角色ARN 方式创建投递任务，则InstanceName字段可为空。 
+     * @return InstanceName Ckafka 的 InstanceName。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取InstanceName。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取InstanceName。
+- 如果是通过 角色ARN 方式创建投递任务，则InstanceName字段可为空。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Ckafka 的 InstanceName
-     * @param InstanceName Ckafka 的 InstanceName
+     * Set Ckafka 的 InstanceName。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取InstanceName。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取InstanceName。
+- 如果是通过 角色ARN 方式创建投递任务，则InstanceName字段可为空。
+     * @param InstanceName Ckafka 的 InstanceName。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取InstanceName。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取InstanceName。
+- 如果是通过 角色ARN 方式创建投递任务，则InstanceName字段可为空。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Ckafka 的 TopicId 
-     * @return TopicId Ckafka 的 TopicId
+     * Get Ckafka 的 TopicId。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicId。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicId。
+- 如果是通过 角色ARN 方式创建投递任务，则TopicId字段可为空。 
+     * @return TopicId Ckafka 的 TopicId。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicId。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicId。
+- 如果是通过 角色ARN 方式创建投递任务，则TopicId字段可为空。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Ckafka 的 TopicId
-     * @param TopicId Ckafka 的 TopicId
+     * Set Ckafka 的 TopicId。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicId。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicId。
+- 如果是通过 角色ARN 方式创建投递任务，则TopicId字段可为空。
+     * @param TopicId Ckafka 的 TopicId。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicId。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicId。
+- 如果是通过 角色ARN 方式创建投递任务，则TopicId字段可为空。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

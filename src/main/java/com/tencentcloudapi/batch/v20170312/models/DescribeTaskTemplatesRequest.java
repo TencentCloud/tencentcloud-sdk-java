@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskTemplatesRequest extends AbstractModel {
 
     /**
-    * 任务模板ID列表，与Filters参数不能同时指定。
+    * 任务模板ID列表，与Filters参数不能同时指定。模版ID最大限制100.
     */
     @SerializedName("TaskTemplateIds")
     @Expose
@@ -50,23 +50,23 @@ public class DescribeTaskTemplatesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 返回数量
+    * 返回数量; 可选范围[1-100]；默认值为20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 任务模板ID列表，与Filters参数不能同时指定。 
-     * @return TaskTemplateIds 任务模板ID列表，与Filters参数不能同时指定。
+     * Get 任务模板ID列表，与Filters参数不能同时指定。模版ID最大限制100. 
+     * @return TaskTemplateIds 任务模板ID列表，与Filters参数不能同时指定。模版ID最大限制100.
      */
     public String [] getTaskTemplateIds() {
         return this.TaskTemplateIds;
     }
 
     /**
-     * Set 任务模板ID列表，与Filters参数不能同时指定。
-     * @param TaskTemplateIds 任务模板ID列表，与Filters参数不能同时指定。
+     * Set 任务模板ID列表，与Filters参数不能同时指定。模版ID最大限制100.
+     * @param TaskTemplateIds 任务模板ID列表，与Filters参数不能同时指定。模版ID最大限制100.
      */
     public void setTaskTemplateIds(String [] TaskTemplateIds) {
         this.TaskTemplateIds = TaskTemplateIds;
@@ -125,16 +125,16 @@ public class DescribeTaskTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get 返回数量; 可选范围[1-100]；默认值为20。 
+     * @return Limit 返回数量; 可选范围[1-100]；默认值为20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set 返回数量; 可选范围[1-100]；默认值为20。
+     * @param Limit 返回数量; 可选范围[1-100]；默认值为20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

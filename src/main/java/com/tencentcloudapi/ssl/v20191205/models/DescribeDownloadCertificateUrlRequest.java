@@ -31,7 +31,7 @@ public class DescribeDownloadCertificateUrlRequest extends AbstractModel {
     private String CertificateId;
 
     /**
-    * 必填选项，下载的服务类型: nginx tomcat apache iis jks other root
+    * 下载的服务类型: nginx tomcat apache iis jks other root， 不传则默认下载nginx格式
     */
     @SerializedName("ServiceType")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeDownloadCertificateUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 必填选项，下载的服务类型: nginx tomcat apache iis jks other root 
-     * @return ServiceType 必填选项，下载的服务类型: nginx tomcat apache iis jks other root
+     * Get 下载的服务类型: nginx tomcat apache iis jks other root， 不传则默认下载nginx格式 
+     * @return ServiceType 下载的服务类型: nginx tomcat apache iis jks other root， 不传则默认下载nginx格式
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 必填选项，下载的服务类型: nginx tomcat apache iis jks other root
-     * @param ServiceType 必填选项，下载的服务类型: nginx tomcat apache iis jks other root
+     * Set 下载的服务类型: nginx tomcat apache iis jks other root， 不传则默认下载nginx格式
+     * @param ServiceType 下载的服务类型: nginx tomcat apache iis jks other root， 不传则默认下载nginx格式
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;

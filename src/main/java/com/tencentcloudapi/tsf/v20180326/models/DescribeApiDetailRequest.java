@@ -24,115 +24,150 @@ import java.util.HashMap;
 public class DescribeApiDetailRequest extends AbstractModel {
 
     /**
-    * 微服务id
+    * 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
     */
     @SerializedName("MicroserviceId")
     @Expose
     private String MicroserviceId;
 
     /**
-    * 请求路径
+    * 请求路径。
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 请求方法
+    * 请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-    * 包版本
+    * 应用包版本号。
     */
     @SerializedName("PkgVersion")
     @Expose
     private String PkgVersion;
 
     /**
-    * 应用ID
+    * 应用ID。该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-     * Get 微服务id 
-     * @return MicroserviceId 微服务id
+     * Get 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。 
+     * @return MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public String getMicroserviceId() {
         return this.MicroserviceId;
     }
 
     /**
-     * Set 微服务id
-     * @param MicroserviceId 微服务id
+     * Set 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public void setMicroserviceId(String MicroserviceId) {
         this.MicroserviceId = MicroserviceId;
     }
 
     /**
-     * Get 请求路径 
-     * @return Path 请求路径
+     * Get 请求路径。 
+     * @return Path 请求路径。
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 请求路径
-     * @param Path 请求路径
+     * Set 请求路径。
+     * @param Path 请求路径。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 请求方法 
-     * @return Method 请求方法
+     * Get 请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS 
+     * @return Method 请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 请求方法
-     * @param Method 请求方法
+     * Set 请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS
+     * @param Method 请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 包版本 
-     * @return PkgVersion 包版本
+     * Get 应用包版本号。 
+     * @return PkgVersion 应用包版本号。
      */
     public String getPkgVersion() {
         return this.PkgVersion;
     }
 
     /**
-     * Set 包版本
-     * @param PkgVersion 包版本
+     * Set 应用包版本号。
+     * @param PkgVersion 应用包版本号。
      */
     public void setPkgVersion(String PkgVersion) {
         this.PkgVersion = PkgVersion;
     }
 
     /**
-     * Get 应用ID 
-     * @return ApplicationId 应用ID
+     * Get 应用ID。该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。 
+     * @return ApplicationId 应用ID。该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 应用ID
-     * @param ApplicationId 应用ID
+     * Set 应用ID。该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
+     * @param ApplicationId 应用ID。该参数可以通过调用 [DescribeApplications](https://cloud.tencent.com/document/product/649/36090) 的返回值中的 ApplicationId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/app)查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;

@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DeleteMachineGroupRequest extends AbstractModel {
 
     /**
-    * 机器组ID
+    * 机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get 机器组ID 
-     * @return GroupId 机器组ID
+     * Get 机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。 
+     * @return GroupId 机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 机器组ID
-     * @param GroupId 机器组ID
+     * Set 机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
+     * @param GroupId 机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
