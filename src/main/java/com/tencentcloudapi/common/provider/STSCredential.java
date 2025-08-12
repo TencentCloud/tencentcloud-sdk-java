@@ -20,13 +20,19 @@ public class STSCredential extends Credential {
     private String tmpSecretId;
     private String tmpSecretKey;
     private String token;
+    private String endpoint;
     private int expiredTime;
 
-    public STSCredential(String secretId, String secretKey, String roleArn, String roleSessionName) {
+    public STSCredential(String secretId, String secretKey, String roleArn, String roleSessionName, String endpoint) {
         this.secretId = secretId;
         this.secretKey = secretKey;
         this.roleArn = roleArn;
         this.roleSessionName = roleSessionName;
+        this.endpoint = endpoint;
+    }
+
+    public STSCredential(String secretId, String secretKey, String roleArn, String roleSessionName) {
+        this(secretId, secretKey, roleArn, roleSessionName, "sts.tencentcloudapi.com");
     }
 
     public String getSecretId() {
@@ -65,7 +71,7 @@ public class STSCredential extends Credential {
     private void updateCredential() throws TencentCloudSDKException {
         Credential cred = new Credential(secretId, secretKey);
         HttpProfile httpProfile = new HttpProfile();
-        httpProfile.setEndpoint("sts.tencentcloudapi.com");
+        httpProfile.setEndpoint(endpoint);
         ClientProfile clientProfile = new ClientProfile();
         clientProfile.setHttpProfile(httpProfile);
         CommonClient client = new CommonClient("sts", "2018-08-13", cred, "ap-guangzhou", clientProfile);
