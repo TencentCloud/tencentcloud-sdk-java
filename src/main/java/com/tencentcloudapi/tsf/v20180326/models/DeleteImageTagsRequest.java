@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteImageTagsRequest extends AbstractModel {
 
     /**
-    * 镜像版本数组
+    * 需要删除的镜像版本列表，可通过调用[DescribeImageTags](https://cloud.tencent.com/document/api/649/36052)查询已创建的镜像版本列表或登录控制台进行查看。
     */
     @SerializedName("ImageTags")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteImageTagsRequest extends AbstractModel {
     private String RepoType;
 
     /**
-     * Get 镜像版本数组 
-     * @return ImageTags 镜像版本数组
+     * Get 需要删除的镜像版本列表，可通过调用[DescribeImageTags](https://cloud.tencent.com/document/api/649/36052)查询已创建的镜像版本列表或登录控制台进行查看。 
+     * @return ImageTags 需要删除的镜像版本列表，可通过调用[DescribeImageTags](https://cloud.tencent.com/document/api/649/36052)查询已创建的镜像版本列表或登录控制台进行查看。
      */
     public DeleteImageTag [] getImageTags() {
         return this.ImageTags;
     }
 
     /**
-     * Set 镜像版本数组
-     * @param ImageTags 镜像版本数组
+     * Set 需要删除的镜像版本列表，可通过调用[DescribeImageTags](https://cloud.tencent.com/document/api/649/36052)查询已创建的镜像版本列表或登录控制台进行查看。
+     * @param ImageTags 需要删除的镜像版本列表，可通过调用[DescribeImageTags](https://cloud.tencent.com/document/api/649/36052)查询已创建的镜像版本列表或登录控制台进行查看。
      */
     public void setImageTags(DeleteImageTag [] ImageTags) {
         this.ImageTags = ImageTags;

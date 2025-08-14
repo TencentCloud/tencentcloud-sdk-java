@@ -200,6 +200,94 @@ public class RuleExecResult extends AbstractModel {
     private String TriggerCondition;
 
     /**
+    * 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleGroupName")
+    @Expose
+    private String RuleGroupName;
+
+    /**
+    * 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceId")
+    @Expose
+    private String DatasourceId;
+
+    /**
+    * 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceName")
+    @Expose
+    private String DatasourceName;
+
+    /**
+    * 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatabaseName")
+    @Expose
+    private String DatabaseName;
+
+    /**
+    * 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
+
+    /**
+    * 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableName")
+    @Expose
+    private String TableName;
+
+    /**
+    * 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleGroupExist")
+    @Expose
+    private Long RuleGroupExist;
+
+    /**
+    * 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceType")
+    @Expose
+    private Long DatasourceType;
+
+    /**
+    * 数据表id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleGroupTableId")
+    @Expose
+    private Long RuleGroupTableId;
+
+    /**
+    * 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MonitorType")
+    @Expose
+    private Long MonitorType;
+
+    /**
+    * 执行结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
+
+    /**
      * Get 规则执行ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleExecId 规则执行ID
@@ -639,6 +727,226 @@ public class RuleExecResult extends AbstractModel {
         this.TriggerCondition = TriggerCondition;
     }
 
+    /**
+     * Get 任务名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleGroupName 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleGroupName() {
+        return this.RuleGroupName;
+    }
+
+    /**
+     * Set 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleGroupName 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleGroupName(String RuleGroupName) {
+        this.RuleGroupName = RuleGroupName;
+    }
+
+    /**
+     * Get 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceId 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceId() {
+        return this.DatasourceId;
+    }
+
+    /**
+     * Set 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceId 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceId(String DatasourceId) {
+        this.DatasourceId = DatasourceId;
+    }
+
+    /**
+     * Get 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceName() {
+        return this.DatasourceName;
+    }
+
+    /**
+     * Set 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceName(String DatasourceName) {
+        this.DatasourceName = DatasourceName;
+    }
+
+    /**
+     * Get 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatabaseName 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatabaseName() {
+        return this.DatabaseName;
+    }
+
+    /**
+     * Set 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatabaseName 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatabaseName(String DatabaseName) {
+        this.DatabaseName = DatabaseName;
+    }
+
+    /**
+     * Get 模式名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
+    }
+
+    /**
+     * Get 表名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTableName() {
+        return this.TableName;
+    }
+
+    /**
+     * Set 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableName(String TableName) {
+        this.TableName = TableName;
+    }
+
+    /**
+     * Get 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleGroupExist 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleGroupExist() {
+        return this.RuleGroupExist;
+    }
+
+    /**
+     * Set 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleGroupExist 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleGroupExist(Long RuleGroupExist) {
+        this.RuleGroupExist = RuleGroupExist;
+    }
+
+    /**
+     * Get 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDatasourceType() {
+        return this.DatasourceType;
+    }
+
+    /**
+     * Set 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceType(Long DatasourceType) {
+        this.DatasourceType = DatasourceType;
+    }
+
+    /**
+     * Get 数据表id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleGroupTableId 数据表id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleGroupTableId() {
+        return this.RuleGroupTableId;
+    }
+
+    /**
+     * Set 数据表id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleGroupTableId 数据表id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleGroupTableId(Long RuleGroupTableId) {
+        this.RuleGroupTableId = RuleGroupTableId;
+    }
+
+    /**
+     * Get 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MonitorType 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMonitorType() {
+        return this.MonitorType;
+    }
+
+    /**
+     * Set 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MonitorType 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMonitorType(Long MonitorType) {
+        this.MonitorType = MonitorType;
+    }
+
+    /**
+     * Get 执行结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FinishTime 执行结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set 执行结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FinishTime 执行结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
+    }
+
     public RuleExecResult() {
     }
 
@@ -713,6 +1021,39 @@ public class RuleExecResult extends AbstractModel {
         if (source.TriggerCondition != null) {
             this.TriggerCondition = new String(source.TriggerCondition);
         }
+        if (source.RuleGroupName != null) {
+            this.RuleGroupName = new String(source.RuleGroupName);
+        }
+        if (source.DatasourceId != null) {
+            this.DatasourceId = new String(source.DatasourceId);
+        }
+        if (source.DatasourceName != null) {
+            this.DatasourceName = new String(source.DatasourceName);
+        }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
+        if (source.RuleGroupExist != null) {
+            this.RuleGroupExist = new Long(source.RuleGroupExist);
+        }
+        if (source.DatasourceType != null) {
+            this.DatasourceType = new Long(source.DatasourceType);
+        }
+        if (source.RuleGroupTableId != null) {
+            this.RuleGroupTableId = new Long(source.RuleGroupTableId);
+        }
+        if (source.MonitorType != null) {
+            this.MonitorType = new Long(source.MonitorType);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -742,6 +1083,17 @@ public class RuleExecResult extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
         this.setParamSimple(map, prefix + "TriggerCondition", this.TriggerCondition);
+        this.setParamSimple(map, prefix + "RuleGroupName", this.RuleGroupName);
+        this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+        this.setParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
+        this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamSimple(map, prefix + "RuleGroupExist", this.RuleGroupExist);
+        this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
+        this.setParamSimple(map, prefix + "RuleGroupTableId", this.RuleGroupTableId);
+        this.setParamSimple(map, prefix + "MonitorType", this.MonitorType);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

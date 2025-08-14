@@ -176,7 +176,7 @@ public class DescribeRoomResponse extends AbstractModel {
     private Long IsGradingRequiredPostClass;
 
     /**
-    * 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)注：大班课的布局(layout)只有三分屏
+    * 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
     */
     @SerializedName("RoomType")
     @Expose
@@ -232,7 +232,7 @@ public class DescribeRoomResponse extends AbstractModel {
     private String RTMPStreamingURL;
 
     /**
-    * 录制自定义场景，仅recordlayout=9的时候此参数有效
+    * 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
     */
     @SerializedName("RecordScene")
     @Expose
@@ -272,6 +272,13 @@ public class DescribeRoomResponse extends AbstractModel {
     @SerializedName("SubtitlesTranscription")
     @Expose
     private Long SubtitlesTranscription;
+
+    /**
+    * 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+    */
+    @SerializedName("Guests")
+    @Expose
+    private String [] Guests;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -649,16 +656,16 @@ public class DescribeRoomResponse extends AbstractModel {
     }
 
     /**
-     * Get 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)注：大班课的布局(layout)只有三分屏 
-     * @return RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)注：大班课的布局(layout)只有三分屏
+     * Get 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏 
+     * @return RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
      */
     public Long getRoomType() {
         return this.RoomType;
     }
 
     /**
-     * Set 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)注：大班课的布局(layout)只有三分屏
-     * @param RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)注：大班课的布局(layout)只有三分屏
+     * Set 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
+     * @param RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
      */
     public void setRoomType(Long RoomType) {
         this.RoomType = RoomType;
@@ -777,16 +784,16 @@ public class DescribeRoomResponse extends AbstractModel {
     }
 
     /**
-     * Get 录制自定义场景，仅recordlayout=9的时候此参数有效 
-     * @return RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+     * Get 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。 
+     * @return RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
      */
     public String getRecordScene() {
         return this.RecordScene;
     }
 
     /**
-     * Set 录制自定义场景，仅recordlayout=9的时候此参数有效
-     * @param RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+     * Set 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
+     * @param RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
      */
     public void setRecordScene(String RecordScene) {
         this.RecordScene = RecordScene;
@@ -870,6 +877,22 @@ public class DescribeRoomResponse extends AbstractModel {
      */
     public void setSubtitlesTranscription(Long SubtitlesTranscription) {
         this.SubtitlesTranscription = SubtitlesTranscription;
+    }
+
+    /**
+     * Get 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效 
+     * @return Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     */
+    public String [] getGuests() {
+        return this.Guests;
+    }
+
+    /**
+     * Set 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     * @param Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     */
+    public void setGuests(String [] Guests) {
+        this.Guests = Guests;
     }
 
     /**
@@ -1001,6 +1024,12 @@ public class DescribeRoomResponse extends AbstractModel {
         if (source.SubtitlesTranscription != null) {
             this.SubtitlesTranscription = new Long(source.SubtitlesTranscription);
         }
+        if (source.Guests != null) {
+            this.Guests = new String[source.Guests.length];
+            for (int i = 0; i < source.Guests.length; i++) {
+                this.Guests[i] = new String(source.Guests[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1045,6 +1074,7 @@ public class DescribeRoomResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
         this.setParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
         this.setParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
+        this.setParamArraySimple(map, prefix + "Guests.", this.Guests);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

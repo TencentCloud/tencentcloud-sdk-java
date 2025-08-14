@@ -67,6 +67,20 @@ public class HighlightSegmentItem extends AbstractModel {
     private String EndTime;
 
     /**
+    * 集锦标题。
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * 集锦概要。
+    */
+    @SerializedName("Summary")
+    @Expose
+    private String Summary;
+
+    /**
      * Get 置信度。 
      * @return Confidence 置信度。
      */
@@ -166,6 +180,38 @@ public class HighlightSegmentItem extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 集锦标题。 
+     * @return Title 集锦标题。
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set 集锦标题。
+     * @param Title 集锦标题。
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get 集锦概要。 
+     * @return Summary 集锦概要。
+     */
+    public String getSummary() {
+        return this.Summary;
+    }
+
+    /**
+     * Set 集锦概要。
+     * @param Summary 集锦概要。
+     */
+    public void setSummary(String Summary) {
+        this.Summary = Summary;
+    }
+
     public HighlightSegmentItem() {
     }
 
@@ -195,6 +241,12 @@ public class HighlightSegmentItem extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Summary != null) {
+            this.Summary = new String(source.Summary);
+        }
     }
 
 
@@ -208,6 +260,8 @@ public class HighlightSegmentItem extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SegmentTags.", this.SegmentTags);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "Summary", this.Summary);
 
     }
 }

@@ -213,6 +213,13 @@ public class DescribeClusterDetailResponse extends AbstractModel {
     private String OwnerName;
 
     /**
+    * 检查失败原因
+    */
+    @SerializedName("CheckFailReason")
+    @Expose
+    private String CheckFailReason;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -652,6 +659,22 @@ public class DescribeClusterDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 检查失败原因 
+     * @return CheckFailReason 检查失败原因
+     */
+    public String getCheckFailReason() {
+        return this.CheckFailReason;
+    }
+
+    /**
+     * Set 检查失败原因
+     * @param CheckFailReason 检查失败原因
+     */
+    public void setCheckFailReason(String CheckFailReason) {
+        this.CheckFailReason = CheckFailReason;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -756,6 +779,9 @@ public class DescribeClusterDetailResponse extends AbstractModel {
         if (source.OwnerName != null) {
             this.OwnerName = new String(source.OwnerName);
         }
+        if (source.CheckFailReason != null) {
+            this.CheckFailReason = new String(source.CheckFailReason);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -793,6 +819,7 @@ public class DescribeClusterDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IngressCount", this.IngressCount);
         this.setParamSimple(map, prefix + "MasterIps", this.MasterIps);
         this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
+        this.setParamSimple(map, prefix + "CheckFailReason", this.CheckFailReason);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

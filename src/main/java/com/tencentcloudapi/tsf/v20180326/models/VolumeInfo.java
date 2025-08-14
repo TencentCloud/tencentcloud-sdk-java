@@ -59,6 +59,13 @@ public class VolumeInfo extends AbstractModel {
     private EmptyDirOption EmptyDirOption;
 
     /**
+    * 数据卷PVC声明模板
+    */
+    @SerializedName("VolumeClaimTemplateOption")
+    @Expose
+    private VolumeClaimTemplatesOption VolumeClaimTemplateOption;
+
+    /**
      * Get 数据卷类型 
      * @return VolumeType 数据卷类型
      */
@@ -138,6 +145,22 @@ public class VolumeInfo extends AbstractModel {
         this.EmptyDirOption = EmptyDirOption;
     }
 
+    /**
+     * Get 数据卷PVC声明模板 
+     * @return VolumeClaimTemplateOption 数据卷PVC声明模板
+     */
+    public VolumeClaimTemplatesOption getVolumeClaimTemplateOption() {
+        return this.VolumeClaimTemplateOption;
+    }
+
+    /**
+     * Set 数据卷PVC声明模板
+     * @param VolumeClaimTemplateOption 数据卷PVC声明模板
+     */
+    public void setVolumeClaimTemplateOption(VolumeClaimTemplatesOption VolumeClaimTemplateOption) {
+        this.VolumeClaimTemplateOption = VolumeClaimTemplateOption;
+    }
+
     public VolumeInfo() {
     }
 
@@ -164,6 +187,9 @@ public class VolumeInfo extends AbstractModel {
         if (source.EmptyDirOption != null) {
             this.EmptyDirOption = new EmptyDirOption(source.EmptyDirOption);
         }
+        if (source.VolumeClaimTemplateOption != null) {
+            this.VolumeClaimTemplateOption = new VolumeClaimTemplatesOption(source.VolumeClaimTemplateOption);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class VolumeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VolumeConfig", this.VolumeConfig);
         this.setParamArrayObj(map, prefix + "ConfigMapOptions.", this.ConfigMapOptions);
         this.setParamObj(map, prefix + "EmptyDirOption.", this.EmptyDirOption);
+        this.setParamObj(map, prefix + "VolumeClaimTemplateOption.", this.VolumeClaimTemplateOption);
 
     }
 }

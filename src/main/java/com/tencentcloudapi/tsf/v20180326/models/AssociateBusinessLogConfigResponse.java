@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AssociateBusinessLogConfigResponse extends AbstractModel {
 
     /**
-    * 操作结果
+    * 操作结果，true：成功，false：失败
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class AssociateBusinessLogConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作结果 
-     * @return Result 操作结果
+     * Get 操作结果，true：成功，false：失败 
+     * @return Result 操作结果，true：成功，false：失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 操作结果
-     * @param Result 操作结果
+     * Set 操作结果，true：成功，false：失败
+     * @param Result 操作结果，true：成功，false：失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

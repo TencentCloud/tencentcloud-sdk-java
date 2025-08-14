@@ -83,6 +83,28 @@ public class TargetGroupInfo extends AbstractModel {
     private String Protocol;
 
     /**
+    * 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
+<ur>
+<li>WRR:按权重轮询。</li>
+<li>LEAST_CONN:最小连接数。</li>
+<li>IP_HASH:按IP哈希。</li>
+</ur>
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleAlgorithm")
+    @Expose
+    private String ScheduleAlgorithm;
+
+    /**
+    * 健康检查详情。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthCheck")
+    @Expose
+    private TargetGroupHealthCheck HealthCheck;
+
+    /**
     * 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
     */
     @SerializedName("TargetGroupType")
@@ -280,6 +302,70 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
+     * Get 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
+<ur>
+<li>WRR:按权重轮询。</li>
+<li>LEAST_CONN:最小连接数。</li>
+<li>IP_HASH:按IP哈希。</li>
+</ur>
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleAlgorithm 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
+<ur>
+<li>WRR:按权重轮询。</li>
+<li>LEAST_CONN:最小连接数。</li>
+<li>IP_HASH:按IP哈希。</li>
+</ur>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduleAlgorithm() {
+        return this.ScheduleAlgorithm;
+    }
+
+    /**
+     * Set 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
+<ur>
+<li>WRR:按权重轮询。</li>
+<li>LEAST_CONN:最小连接数。</li>
+<li>IP_HASH:按IP哈希。</li>
+</ur>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleAlgorithm 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
+<ur>
+<li>WRR:按权重轮询。</li>
+<li>LEAST_CONN:最小连接数。</li>
+<li>IP_HASH:按IP哈希。</li>
+</ur>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleAlgorithm(String ScheduleAlgorithm) {
+        this.ScheduleAlgorithm = ScheduleAlgorithm;
+    }
+
+    /**
+     * Get 健康检查详情。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthCheck 健康检查详情。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TargetGroupHealthCheck getHealthCheck() {
+        return this.HealthCheck;
+    }
+
+    /**
+     * Set 健康检查详情。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCheck 健康检查详情。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
+        this.HealthCheck = HealthCheck;
+    }
+
+    /**
      * Get 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。 
      * @return TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
      */
@@ -446,6 +532,12 @@ public class TargetGroupInfo extends AbstractModel {
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.ScheduleAlgorithm != null) {
+            this.ScheduleAlgorithm = new String(source.ScheduleAlgorithm);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new TargetGroupHealthCheck(source.HealthCheck);
+        }
         if (source.TargetGroupType != null) {
             this.TargetGroupType = new String(source.TargetGroupType);
         }
@@ -488,6 +580,8 @@ public class TargetGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamArrayObj(map, prefix + "AssociatedRule.", this.AssociatedRule);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
+        this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         this.setParamSimple(map, prefix + "TargetGroupType", this.TargetGroupType);
         this.setParamSimple(map, prefix + "AssociatedRuleCount", this.AssociatedRuleCount);
         this.setParamSimple(map, prefix + "RegisteredInstancesCount", this.RegisteredInstancesCount);

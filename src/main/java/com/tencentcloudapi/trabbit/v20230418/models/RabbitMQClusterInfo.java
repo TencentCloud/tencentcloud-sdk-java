@@ -199,6 +199,20 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Long MessageRetainTime;
 
     /**
+    * 发送消息流量比例
+    */
+    @SerializedName("SendReceiveRatio")
+    @Expose
+    private Float SendReceiveRatio;
+
+    /**
+    * 消息轨迹保留时间，单位小时
+    */
+    @SerializedName("TraceTime")
+    @Expose
+    private Long TraceTime;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -598,6 +612,38 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.MessageRetainTime = MessageRetainTime;
     }
 
+    /**
+     * Get 发送消息流量比例 
+     * @return SendReceiveRatio 发送消息流量比例
+     */
+    public Float getSendReceiveRatio() {
+        return this.SendReceiveRatio;
+    }
+
+    /**
+     * Set 发送消息流量比例
+     * @param SendReceiveRatio 发送消息流量比例
+     */
+    public void setSendReceiveRatio(Float SendReceiveRatio) {
+        this.SendReceiveRatio = SendReceiveRatio;
+    }
+
+    /**
+     * Get 消息轨迹保留时间，单位小时 
+     * @return TraceTime 消息轨迹保留时间，单位小时
+     */
+    public Long getTraceTime() {
+        return this.TraceTime;
+    }
+
+    /**
+     * Set 消息轨迹保留时间，单位小时
+     * @param TraceTime 消息轨迹保留时间，单位小时
+     */
+    public void setTraceTime(Long TraceTime) {
+        this.TraceTime = TraceTime;
+    }
+
     public RabbitMQClusterInfo() {
     }
 
@@ -687,6 +733,12 @@ public class RabbitMQClusterInfo extends AbstractModel {
         if (source.MessageRetainTime != null) {
             this.MessageRetainTime = new Long(source.MessageRetainTime);
         }
+        if (source.SendReceiveRatio != null) {
+            this.SendReceiveRatio = new Float(source.SendReceiveRatio);
+        }
+        if (source.TraceTime != null) {
+            this.TraceTime = new Long(source.TraceTime);
+        }
     }
 
 
@@ -719,6 +771,8 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "MessageRetainTime", this.MessageRetainTime);
+        this.setParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+        this.setParamSimple(map, prefix + "TraceTime", this.TraceTime);
 
     }
 }

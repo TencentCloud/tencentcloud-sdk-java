@@ -108,7 +108,7 @@ public class ServiceSetting extends AbstractModel {
     private String LoadBalancerProvisioner;
 
     /**
-    * 负载均衡类型
+    * 负载均衡类型，Intranet表示内网，Internet表示外网
     */
     @SerializedName("LoadBalancingType")
     @Expose
@@ -370,16 +370,16 @@ public class ServiceSetting extends AbstractModel {
     }
 
     /**
-     * Get 负载均衡类型 
-     * @return LoadBalancingType 负载均衡类型
+     * Get 负载均衡类型，Intranet表示内网，Internet表示外网 
+     * @return LoadBalancingType 负载均衡类型，Intranet表示内网，Internet表示外网
      */
     public String getLoadBalancingType() {
         return this.LoadBalancingType;
     }
 
     /**
-     * Set 负载均衡类型
-     * @param LoadBalancingType 负载均衡类型
+     * Set 负载均衡类型，Intranet表示内网，Internet表示外网
+     * @param LoadBalancingType 负载均衡类型，Intranet表示内网，Internet表示外网
      */
     public void setLoadBalancingType(String LoadBalancingType) {
         this.LoadBalancingType = LoadBalancingType;

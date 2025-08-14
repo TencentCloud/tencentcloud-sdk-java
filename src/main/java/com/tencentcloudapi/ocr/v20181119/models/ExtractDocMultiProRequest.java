@@ -92,7 +92,7 @@ ReceiptWeightNote -- 磅单收货单识别模板
     private Boolean OutputParentKey;
 
     /**
-    * 模版的单个属性配置
+    * 模板的单个属性配置
     */
     @SerializedName("ConfigAdvanced")
     @Expose
@@ -263,16 +263,16 @@ ReceiptWeightNote -- 磅单收货单识别模板
     }
 
     /**
-     * Get 模版的单个属性配置 
-     * @return ConfigAdvanced 模版的单个属性配置
+     * Get 模板的单个属性配置 
+     * @return ConfigAdvanced 模板的单个属性配置
      */
     public ConfigAdvanced getConfigAdvanced() {
         return this.ConfigAdvanced;
     }
 
     /**
-     * Set 模版的单个属性配置
-     * @param ConfigAdvanced 模版的单个属性配置
+     * Set 模板的单个属性配置
+     * @param ConfigAdvanced 模板的单个属性配置
      */
     public void setConfigAdvanced(ConfigAdvanced ConfigAdvanced) {
         this.ConfigAdvanced = ConfigAdvanced;

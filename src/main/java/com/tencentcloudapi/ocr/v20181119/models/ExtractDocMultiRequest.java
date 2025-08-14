@@ -70,7 +70,7 @@ flase：输出默认字段+自定义字段
     /**
     * 配置id支持：
 General -- 通用场景 
-InvoiceEng -- 国际invoice模版 
+InvoiceEng -- 国际invoice模板 
 WayBillEng --海运订单模板
 CustomsDeclaration -- 进出口报关单
 WeightNote -- 磅单
@@ -80,12 +80,12 @@ EntrustmentBook -- 海运托书
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
-Table -- 表格模版
+Table -- 表格模板
 SteelLabel -- 实物标签识别模板
 CarInsurance -- 车辆保险单识别模板
 MultiRealEstateCertificate -- 房产材料识别模板
 MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 香港水电煤单识别模板
+HongKongUtilityBill -- 中国香港水电煤单识别模板
     */
     @SerializedName("ConfigId")
     @Expose
@@ -106,7 +106,7 @@ HongKongUtilityBill -- 香港水电煤单识别模板
     private Boolean OutputParentKey;
 
     /**
-    * 模版的单个属性配置
+    * 模板的单个属性配置
     */
     @SerializedName("ConfigAdvanced")
     @Expose
@@ -227,7 +227,7 @@ flase：输出默认字段+自定义字段
     /**
      * Get 配置id支持：
 General -- 通用场景 
-InvoiceEng -- 国际invoice模版 
+InvoiceEng -- 国际invoice模板 
 WayBillEng --海运订单模板
 CustomsDeclaration -- 进出口报关单
 WeightNote -- 磅单
@@ -237,15 +237,15 @@ EntrustmentBook -- 海运托书
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
-Table -- 表格模版
+Table -- 表格模板
 SteelLabel -- 实物标签识别模板
 CarInsurance -- 车辆保险单识别模板
 MultiRealEstateCertificate -- 房产材料识别模板
 MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 香港水电煤单识别模板 
+HongKongUtilityBill -- 中国香港水电煤单识别模板 
      * @return ConfigId 配置id支持：
 General -- 通用场景 
-InvoiceEng -- 国际invoice模版 
+InvoiceEng -- 国际invoice模板 
 WayBillEng --海运订单模板
 CustomsDeclaration -- 进出口报关单
 WeightNote -- 磅单
@@ -255,12 +255,12 @@ EntrustmentBook -- 海运托书
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
-Table -- 表格模版
+Table -- 表格模板
 SteelLabel -- 实物标签识别模板
 CarInsurance -- 车辆保险单识别模板
 MultiRealEstateCertificate -- 房产材料识别模板
 MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 香港水电煤单识别模板
+HongKongUtilityBill -- 中国香港水电煤单识别模板
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -269,7 +269,7 @@ HongKongUtilityBill -- 香港水电煤单识别模板
     /**
      * Set 配置id支持：
 General -- 通用场景 
-InvoiceEng -- 国际invoice模版 
+InvoiceEng -- 国际invoice模板 
 WayBillEng --海运订单模板
 CustomsDeclaration -- 进出口报关单
 WeightNote -- 磅单
@@ -279,15 +279,15 @@ EntrustmentBook -- 海运托书
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
-Table -- 表格模版
+Table -- 表格模板
 SteelLabel -- 实物标签识别模板
 CarInsurance -- 车辆保险单识别模板
 MultiRealEstateCertificate -- 房产材料识别模板
 MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 香港水电煤单识别模板
+HongKongUtilityBill -- 中国香港水电煤单识别模板
      * @param ConfigId 配置id支持：
 General -- 通用场景 
-InvoiceEng -- 国际invoice模版 
+InvoiceEng -- 国际invoice模板 
 WayBillEng --海运订单模板
 CustomsDeclaration -- 进出口报关单
 WeightNote -- 磅单
@@ -297,12 +297,12 @@ EntrustmentBook -- 海运托书
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
-Table -- 表格模版
+Table -- 表格模板
 SteelLabel -- 实物标签识别模板
 CarInsurance -- 车辆保险单识别模板
 MultiRealEstateCertificate -- 房产材料识别模板
 MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 香港水电煤单识别模板
+HongKongUtilityBill -- 中国香港水电煤单识别模板
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
@@ -341,16 +341,16 @@ HongKongUtilityBill -- 香港水电煤单识别模板
     }
 
     /**
-     * Get 模版的单个属性配置 
-     * @return ConfigAdvanced 模版的单个属性配置
+     * Get 模板的单个属性配置 
+     * @return ConfigAdvanced 模板的单个属性配置
      */
     public ConfigAdvanced getConfigAdvanced() {
         return this.ConfigAdvanced;
     }
 
     /**
-     * Set 模版的单个属性配置
-     * @param ConfigAdvanced 模版的单个属性配置
+     * Set 模板的单个属性配置
+     * @param ConfigAdvanced 模板的单个属性配置
      */
     public void setConfigAdvanced(ConfigAdvanced ConfigAdvanced) {
         this.ConfigAdvanced = ConfigAdvanced;

@@ -24,14 +24,16 @@ import java.util.HashMap;
 public class DescribeJvmMonitorRequest extends AbstractModel {
 
     /**
-    * 查询的实例Id
+    * 查询的实例ID
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例所属应用Id
+    * 实例所属应用ID
+可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已经存在的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)查看。应用ID例如：application-v378ewna
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -59,7 +61,8 @@ public class DescribeJvmMonitorRequest extends AbstractModel {
     private String To;
 
     /**
-    * 查询的监控图列表,以返回值属性名作为入参
+    * 查询的监控图列表，以返回值属性名作为入参，可选值：
+heapMemory：堆内存监控图；nonHeapMemory：非堆内存监控图；edenSpace：伊甸区监控图；survivorSpace：幸存者区监控图；oldSpace：老年代监控图；metaSpace：元空间监控图；youngGC：youngGC增量监控图；fullGC：fullGC增量监控图；cpuUsage：cpu使用率监控图；classCount：加载类数监控图；threadPicture：线程图
     */
     @SerializedName("RequiredPictures")
     @Expose
@@ -73,32 +76,40 @@ public class DescribeJvmMonitorRequest extends AbstractModel {
     private String Tag;
 
     /**
-     * Get 查询的实例Id 
-     * @return InstanceId 查询的实例Id
+     * Get 查询的实例ID
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk 
+     * @return InstanceId 查询的实例ID
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 查询的实例Id
-     * @param InstanceId 查询的实例Id
+     * Set 查询的实例ID
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk
+     * @param InstanceId 查询的实例ID
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例所属应用Id 
-     * @return ApplicationId 实例所属应用Id
+     * Get 实例所属应用ID
+可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已经存在的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)查看。应用ID例如：application-v378ewna 
+     * @return ApplicationId 实例所属应用ID
+可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已经存在的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)查看。应用ID例如：application-v378ewna
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 实例所属应用Id
-     * @param ApplicationId 实例所属应用Id
+     * Set 实例所属应用ID
+可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已经存在的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)查看。应用ID例如：application-v378ewna
+     * @param ApplicationId 实例所属应用ID
+可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已经存在的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)查看。应用ID例如：application-v378ewna
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
@@ -153,16 +164,20 @@ public class DescribeJvmMonitorRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询的监控图列表,以返回值属性名作为入参 
-     * @return RequiredPictures 查询的监控图列表,以返回值属性名作为入参
+     * Get 查询的监控图列表，以返回值属性名作为入参，可选值：
+heapMemory：堆内存监控图；nonHeapMemory：非堆内存监控图；edenSpace：伊甸区监控图；survivorSpace：幸存者区监控图；oldSpace：老年代监控图；metaSpace：元空间监控图；youngGC：youngGC增量监控图；fullGC：fullGC增量监控图；cpuUsage：cpu使用率监控图；classCount：加载类数监控图；threadPicture：线程图 
+     * @return RequiredPictures 查询的监控图列表，以返回值属性名作为入参，可选值：
+heapMemory：堆内存监控图；nonHeapMemory：非堆内存监控图；edenSpace：伊甸区监控图；survivorSpace：幸存者区监控图；oldSpace：老年代监控图；metaSpace：元空间监控图；youngGC：youngGC增量监控图；fullGC：fullGC增量监控图；cpuUsage：cpu使用率监控图；classCount：加载类数监控图；threadPicture：线程图
      */
     public String [] getRequiredPictures() {
         return this.RequiredPictures;
     }
 
     /**
-     * Set 查询的监控图列表,以返回值属性名作为入参
-     * @param RequiredPictures 查询的监控图列表,以返回值属性名作为入参
+     * Set 查询的监控图列表，以返回值属性名作为入参，可选值：
+heapMemory：堆内存监控图；nonHeapMemory：非堆内存监控图；edenSpace：伊甸区监控图；survivorSpace：幸存者区监控图；oldSpace：老年代监控图；metaSpace：元空间监控图；youngGC：youngGC增量监控图；fullGC：fullGC增量监控图；cpuUsage：cpu使用率监控图；classCount：加载类数监控图；threadPicture：线程图
+     * @param RequiredPictures 查询的监控图列表，以返回值属性名作为入参，可选值：
+heapMemory：堆内存监控图；nonHeapMemory：非堆内存监控图；edenSpace：伊甸区监控图；survivorSpace：幸存者区监控图；oldSpace：老年代监控图；metaSpace：元空间监控图；youngGC：youngGC增量监控图；fullGC：fullGC增量监控图；cpuUsage：cpu使用率监控图；classCount：加载类数监控图；threadPicture：线程图
      */
     public void setRequiredPictures(String [] RequiredPictures) {
         this.RequiredPictures = RequiredPictures;

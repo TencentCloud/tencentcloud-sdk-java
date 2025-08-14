@@ -272,7 +272,7 @@ public class ContainerGroupDeploy extends AbstractModel {
     private TcrRepoInfo TcrRepoInfo;
 
     /**
-    * 数据卷信息，list
+    * 数据卷信息，数组结构
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeInfos")
@@ -954,9 +954,9 @@ public class ContainerGroupDeploy extends AbstractModel {
     }
 
     /**
-     * Get 数据卷信息，list
+     * Get 数据卷信息，数组结构
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeInfos 数据卷信息，list
+     * @return VolumeInfos 数据卷信息，数组结构
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VolumeInfo [] getVolumeInfos() {
@@ -964,9 +964,9 @@ public class ContainerGroupDeploy extends AbstractModel {
     }
 
     /**
-     * Set 数据卷信息，list
+     * Set 数据卷信息，数组结构
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeInfos 数据卷信息，list
+     * @param VolumeInfos 数据卷信息，数组结构
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeInfos(VolumeInfo [] VolumeInfos) {

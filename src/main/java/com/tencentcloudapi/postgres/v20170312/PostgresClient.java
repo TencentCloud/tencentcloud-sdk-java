@@ -184,19 +184,6 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-
-【接口下线中，请勿使用】本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
-     * @param req CreateServerlessDBInstanceRequest
-     * @return CreateServerlessDBInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateServerlessDBInstanceResponse CreateServerlessDBInstance(CreateServerlessDBInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateServerlessDBInstance", CreateServerlessDBInstanceResponse.class);
-    }
-
-    /**
      *此接口用于删除数据库账号，需要同时输入Oid与UserName，避免误删。注：该接口可重入，如果账号已经不存在，调用此接口进行删除时不会报错。
      * @param req DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -496,19 +483,6 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *早期接口不规范，已提供新接口 DescribeSlowQueryList 替换
-
-本接口（DescribeDBSlowlogs）用于获取慢查询日志。本接口已于2021.09.01日废弃，后续此接口将不再返回任何数据，推荐使用接口[DescribeSlowQueryList](https://cloud.tencent.com/document/api/409/60540)替代。
-     * @param req DescribeDBSlowlogsRequest
-     * @return DescribeDBSlowlogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBSlowlogsResponse DescribeDBSlowlogs(DescribeDBSlowlogsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDBSlowlogs", DescribeDBSlowlogsResponse.class);
-    }
-
-    /**
      *本接口（DescribeDBVersions）用于查询支持的数据库版本。
      * @param req DescribeDBVersionsRequest
      * @return DescribeDBVersionsResponse
@@ -682,19 +656,6 @@ public class PostgresClient extends AbstractClient{
     public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRegions", DescribeRegionsResponse.class);
-    }
-
-    /**
-     *该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-
-【接口下线中，请勿使用】用于查询一个或多个serverlessDB实例的详细信息
-     * @param req DescribeServerlessDBInstancesRequest
-     * @return DescribeServerlessDBInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeServerlessDBInstancesResponse DescribeServerlessDBInstances(DescribeServerlessDBInstancesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeServerlessDBInstances", DescribeServerlessDBInstancesResponse.class);
     }
 
     /**

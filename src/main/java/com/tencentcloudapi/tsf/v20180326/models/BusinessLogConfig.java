@@ -68,7 +68,7 @@ public class BusinessLogConfig extends AbstractModel {
     private String ConfigPipeline;
 
     /**
-    * 配置项创建时间
+    * 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigCreateTime")
@@ -76,7 +76,7 @@ public class BusinessLogConfig extends AbstractModel {
     private String ConfigCreateTime;
 
     /**
-    * 配置项更新时间
+    * 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigUpdateTime")
@@ -118,6 +118,34 @@ public class BusinessLogConfig extends AbstractModel {
     @SerializedName("FilebeatCloseTimeout")
     @Expose
     private Long FilebeatCloseTimeout;
+
+    /**
+    * filebeat ignore_older参数
+    */
+    @SerializedName("FilebeatIgnoreOlder")
+    @Expose
+    private Long FilebeatIgnoreOlder;
+
+    /**
+    * filebeat harvester_limit参数
+    */
+    @SerializedName("FilebeatHarvesterLimit")
+    @Expose
+    private Long FilebeatHarvesterLimit;
+
+    /**
+    * filebeat close_inactive参数
+    */
+    @SerializedName("FilebeatCloseInactive")
+    @Expose
+    private Long FilebeatCloseInactive;
+
+    /**
+    * filebeat clean_inactive参数
+    */
+    @SerializedName("FilebeatCleanInactive")
+    @Expose
+    private Long FilebeatCleanInactive;
 
     /**
      * Get 配置项ID 
@@ -224,9 +252,9 @@ public class BusinessLogConfig extends AbstractModel {
     }
 
     /**
-     * Get 配置项创建时间
+     * Get 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConfigCreateTime 配置项创建时间
+     * @return ConfigCreateTime 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigCreateTime() {
@@ -234,9 +262,9 @@ public class BusinessLogConfig extends AbstractModel {
     }
 
     /**
-     * Set 配置项创建时间
+     * Set 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConfigCreateTime 配置项创建时间
+     * @param ConfigCreateTime 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigCreateTime(String ConfigCreateTime) {
@@ -244,9 +272,9 @@ public class BusinessLogConfig extends AbstractModel {
     }
 
     /**
-     * Get 配置项更新时间
+     * Get 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConfigUpdateTime 配置项更新时间
+     * @return ConfigUpdateTime 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigUpdateTime() {
@@ -254,9 +282,9 @@ public class BusinessLogConfig extends AbstractModel {
     }
 
     /**
-     * Set 配置项更新时间
+     * Set 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConfigUpdateTime 配置项更新时间
+     * @param ConfigUpdateTime 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigUpdateTime(String ConfigUpdateTime) {
@@ -351,6 +379,70 @@ public class BusinessLogConfig extends AbstractModel {
         this.FilebeatCloseTimeout = FilebeatCloseTimeout;
     }
 
+    /**
+     * Get filebeat ignore_older参数 
+     * @return FilebeatIgnoreOlder filebeat ignore_older参数
+     */
+    public Long getFilebeatIgnoreOlder() {
+        return this.FilebeatIgnoreOlder;
+    }
+
+    /**
+     * Set filebeat ignore_older参数
+     * @param FilebeatIgnoreOlder filebeat ignore_older参数
+     */
+    public void setFilebeatIgnoreOlder(Long FilebeatIgnoreOlder) {
+        this.FilebeatIgnoreOlder = FilebeatIgnoreOlder;
+    }
+
+    /**
+     * Get filebeat harvester_limit参数 
+     * @return FilebeatHarvesterLimit filebeat harvester_limit参数
+     */
+    public Long getFilebeatHarvesterLimit() {
+        return this.FilebeatHarvesterLimit;
+    }
+
+    /**
+     * Set filebeat harvester_limit参数
+     * @param FilebeatHarvesterLimit filebeat harvester_limit参数
+     */
+    public void setFilebeatHarvesterLimit(Long FilebeatHarvesterLimit) {
+        this.FilebeatHarvesterLimit = FilebeatHarvesterLimit;
+    }
+
+    /**
+     * Get filebeat close_inactive参数 
+     * @return FilebeatCloseInactive filebeat close_inactive参数
+     */
+    public Long getFilebeatCloseInactive() {
+        return this.FilebeatCloseInactive;
+    }
+
+    /**
+     * Set filebeat close_inactive参数
+     * @param FilebeatCloseInactive filebeat close_inactive参数
+     */
+    public void setFilebeatCloseInactive(Long FilebeatCloseInactive) {
+        this.FilebeatCloseInactive = FilebeatCloseInactive;
+    }
+
+    /**
+     * Get filebeat clean_inactive参数 
+     * @return FilebeatCleanInactive filebeat clean_inactive参数
+     */
+    public Long getFilebeatCleanInactive() {
+        return this.FilebeatCleanInactive;
+    }
+
+    /**
+     * Set filebeat clean_inactive参数
+     * @param FilebeatCleanInactive filebeat clean_inactive参数
+     */
+    public void setFilebeatCleanInactive(Long FilebeatCleanInactive) {
+        this.FilebeatCleanInactive = FilebeatCleanInactive;
+    }
+
     public BusinessLogConfig() {
     }
 
@@ -404,6 +496,18 @@ public class BusinessLogConfig extends AbstractModel {
         if (source.FilebeatCloseTimeout != null) {
             this.FilebeatCloseTimeout = new Long(source.FilebeatCloseTimeout);
         }
+        if (source.FilebeatIgnoreOlder != null) {
+            this.FilebeatIgnoreOlder = new Long(source.FilebeatIgnoreOlder);
+        }
+        if (source.FilebeatHarvesterLimit != null) {
+            this.FilebeatHarvesterLimit = new Long(source.FilebeatHarvesterLimit);
+        }
+        if (source.FilebeatCloseInactive != null) {
+            this.FilebeatCloseInactive = new Long(source.FilebeatCloseInactive);
+        }
+        if (source.FilebeatCleanInactive != null) {
+            this.FilebeatCleanInactive = new Long(source.FilebeatCleanInactive);
+        }
     }
 
 
@@ -424,6 +528,10 @@ public class BusinessLogConfig extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ConfigAssociatedGroupList.", this.ConfigAssociatedGroupList);
         this.setParamSimple(map, prefix + "FilebeatConfigEnable", this.FilebeatConfigEnable);
         this.setParamSimple(map, prefix + "FilebeatCloseTimeout", this.FilebeatCloseTimeout);
+        this.setParamSimple(map, prefix + "FilebeatIgnoreOlder", this.FilebeatIgnoreOlder);
+        this.setParamSimple(map, prefix + "FilebeatHarvesterLimit", this.FilebeatHarvesterLimit);
+        this.setParamSimple(map, prefix + "FilebeatCloseInactive", this.FilebeatCloseInactive);
+        this.setParamSimple(map, prefix + "FilebeatCleanInactive", this.FilebeatCleanInactive);
 
     }
 }

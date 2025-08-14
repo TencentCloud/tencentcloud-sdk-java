@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyContainerReplicasRequest extends AbstractModel {
 
     /**
-    * 部署组ID，部署组唯一标识
+    * 部署组ID，部署组唯一标识，调用[DescribeClusters](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)接口，选定一个容器集群，选择部署组，查看DescribeSingleContainerGroups接口返回的GroupId
     */
     @SerializedName("GroupId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyContainerReplicasRequest extends AbstractModel {
     private Long InstanceNum;
 
     /**
-     * Get 部署组ID，部署组唯一标识 
-     * @return GroupId 部署组ID，部署组唯一标识
+     * Get 部署组ID，部署组唯一标识，调用[DescribeClusters](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)接口，选定一个容器集群，选择部署组，查看DescribeSingleContainerGroups接口返回的GroupId 
+     * @return GroupId 部署组ID，部署组唯一标识，调用[DescribeClusters](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)接口，选定一个容器集群，选择部署组，查看DescribeSingleContainerGroups接口返回的GroupId
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组ID，部署组唯一标识
-     * @param GroupId 部署组ID，部署组唯一标识
+     * Set 部署组ID，部署组唯一标识，调用[DescribeClusters](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)接口，选定一个容器集群，选择部署组，查看DescribeSingleContainerGroups接口返回的GroupId
+     * @param GroupId 部署组ID，部署组唯一标识，调用[DescribeClusters](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)接口，选定一个容器集群，选择部署组，查看DescribeSingleContainerGroups接口返回的GroupId
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeResourceTaskStatusRequest extends AbstractModel {
 
     /**
-    * 任务ID
+    * 容器实例任务ID，可通过调用 ListContainerTask 查询已创建的变更记录总数或登录控制台进行查看。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 容器实例任务ID，可通过调用 ListContainerTask 查询已创建的变更记录总数或登录控制台进行查看。 
+     * @return TaskId 容器实例任务ID，可通过调用 ListContainerTask 查询已创建的变更记录总数或登录控制台进行查看。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 容器实例任务ID，可通过调用 ListContainerTask 查询已创建的变更记录总数或登录控制台进行查看。
+     * @param TaskId 容器实例任务ID，可通过调用 ListContainerTask 查询已创建的变更记录总数或登录控制台进行查看。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

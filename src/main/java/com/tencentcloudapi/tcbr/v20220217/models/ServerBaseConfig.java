@@ -228,6 +228,13 @@ public class ServerBaseConfig extends AbstractModel {
     private VpcConf VpcConf;
 
     /**
+    * 存储配置信息
+    */
+    @SerializedName("VolumesConf")
+    @Expose
+    private VolumeConf [] VolumesConf;
+
+    /**
      * Get 环境 Id 
      * @return EnvId 环境 Id
      */
@@ -695,6 +702,22 @@ public class ServerBaseConfig extends AbstractModel {
         this.VpcConf = VpcConf;
     }
 
+    /**
+     * Get 存储配置信息 
+     * @return VolumesConf 存储配置信息
+     */
+    public VolumeConf [] getVolumesConf() {
+        return this.VolumesConf;
+    }
+
+    /**
+     * Set 存储配置信息
+     * @param VolumesConf 存储配置信息
+     */
+    public void setVolumesConf(VolumeConf [] VolumesConf) {
+        this.VolumesConf = VolumesConf;
+    }
+
     public ServerBaseConfig() {
     }
 
@@ -805,6 +828,12 @@ public class ServerBaseConfig extends AbstractModel {
         if (source.VpcConf != null) {
             this.VpcConf = new VpcConf(source.VpcConf);
         }
+        if (source.VolumesConf != null) {
+            this.VolumesConf = new VolumeConf[source.VolumesConf.length];
+            for (int i = 0; i < source.VolumesConf.length; i++) {
+                this.VolumesConf[i] = new VolumeConf(source.VolumesConf[i]);
+            }
+        }
     }
 
 
@@ -841,6 +870,7 @@ public class ServerBaseConfig extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Cmd.", this.Cmd);
         this.setParamSimple(map, prefix + "SessionAffinity", this.SessionAffinity);
         this.setParamObj(map, prefix + "VpcConf.", this.VpcConf);
+        this.setParamArrayObj(map, prefix + "VolumesConf.", this.VolumesConf);
 
     }
 }

@@ -31,14 +31,17 @@ public class CreateClusterRequest extends AbstractModel {
     private String ClusterName;
 
     /**
-    * 集群类型
+    * 指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 私有网络ID
+    * 私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
     */
     @SerializedName("VpcId")
     @Expose
@@ -159,32 +162,44 @@ public class CreateClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群类型 
-     * @return ClusterType 集群类型
+     * Get 指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群 
+     * @return ClusterType 指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型
-     * @param ClusterType 集群类型
+     * Set 指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群
+     * @param ClusterType 指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 私有网络ID 
-     * @return VpcId 私有网络ID
+     * Get 私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。 
+     * @return VpcId 私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID
-     * @param VpcId 私有网络ID
+     * Set 私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
+     * @param VpcId 私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

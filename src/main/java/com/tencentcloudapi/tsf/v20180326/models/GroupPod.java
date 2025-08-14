@@ -80,28 +80,28 @@ public class GroupPod extends AbstractModel {
     private Long ReadyCount;
 
     /**
-    * 运行时长
+    * 运行时长，单位秒
     */
     @SerializedName("Runtime")
     @Expose
     private String Runtime;
 
     /**
-    * 实例启动时间
+    * 实例启动时的时间戳
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 服务实例状态
+    * 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
     */
     @SerializedName("ServiceInstanceStatus")
     @Expose
     private String ServiceInstanceStatus;
 
     /**
-    * 机器实例可使用状态
+    * 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
     */
     @SerializedName("InstanceAvailableStatus")
     @Expose
@@ -257,64 +257,64 @@ public class GroupPod extends AbstractModel {
     }
 
     /**
-     * Get 运行时长 
-     * @return Runtime 运行时长
+     * Get 运行时长，单位秒 
+     * @return Runtime 运行时长，单位秒
      */
     public String getRuntime() {
         return this.Runtime;
     }
 
     /**
-     * Set 运行时长
-     * @param Runtime 运行时长
+     * Set 运行时长，单位秒
+     * @param Runtime 运行时长，单位秒
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;
     }
 
     /**
-     * Get 实例启动时间 
-     * @return CreatedAt 实例启动时间
+     * Get 实例启动时的时间戳 
+     * @return CreatedAt 实例启动时的时间戳
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 实例启动时间
-     * @param CreatedAt 实例启动时间
+     * Set 实例启动时的时间戳
+     * @param CreatedAt 实例启动时的时间戳
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 服务实例状态 
-     * @return ServiceInstanceStatus 服务实例状态
+     * Get 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown 
+     * @return ServiceInstanceStatus 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
      */
     public String getServiceInstanceStatus() {
         return this.ServiceInstanceStatus;
     }
 
     /**
-     * Set 服务实例状态
-     * @param ServiceInstanceStatus 服务实例状态
+     * Set 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+     * @param ServiceInstanceStatus 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
      */
     public void setServiceInstanceStatus(String ServiceInstanceStatus) {
         this.ServiceInstanceStatus = ServiceInstanceStatus;
     }
 
     /**
-     * Get 机器实例可使用状态 
-     * @return InstanceAvailableStatus 机器实例可使用状态
+     * Get 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown 
+     * @return InstanceAvailableStatus 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
      */
     public String getInstanceAvailableStatus() {
         return this.InstanceAvailableStatus;
     }
 
     /**
-     * Set 机器实例可使用状态
-     * @param InstanceAvailableStatus 机器实例可使用状态
+     * Set 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+     * @param InstanceAvailableStatus 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
      */
     public void setInstanceAvailableStatus(String InstanceAvailableStatus) {
         this.InstanceAvailableStatus = InstanceAvailableStatus;

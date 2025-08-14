@@ -82,14 +82,14 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
     private Long SubUin;
 
     /**
-    * 创建时间。秒级时间戳
+    * 创建时间。秒(s)级时间戳
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 更新时间。秒级时间戳
+    * 更新时间。秒(s)级时间戳
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -232,32 +232,32 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
     }
 
     /**
-     * Get 创建时间。秒级时间戳 
-     * @return CreateTime 创建时间。秒级时间戳
+     * Get 创建时间。秒(s)级时间戳 
+     * @return CreateTime 创建时间。秒(s)级时间戳
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。秒级时间戳
-     * @param CreateTime 创建时间。秒级时间戳
+     * Set 创建时间。秒(s)级时间戳
+     * @param CreateTime 创建时间。秒(s)级时间戳
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间。秒级时间戳 
-     * @return UpdateTime 更新时间。秒级时间戳
+     * Get 更新时间。秒(s)级时间戳 
+     * @return UpdateTime 更新时间。秒(s)级时间戳
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间。秒级时间戳
-     * @param UpdateTime 更新时间。秒级时间戳
+     * Set 更新时间。秒(s)级时间戳
+     * @param UpdateTime 更新时间。秒(s)级时间戳
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;

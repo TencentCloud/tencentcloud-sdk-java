@@ -45,7 +45,7 @@ public class AlarmInfo extends AbstractModel {
     private MonitorTime MonitorTime;
 
     /**
-    * 单触发条件。与MultiConditions参数互斥。
+    * 是否触发告警的单触发条件。与MultiConditions参数互斥。
     */
     @SerializedName("Condition")
     @Expose
@@ -87,14 +87,14 @@ public class AlarmInfo extends AbstractModel {
     private String AlarmId;
 
     /**
-    * 创建时间。
+    * 创建时间。格式： YYYY-MM-DD HH:MM:SS
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 最近更新时间。
+    * 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -221,16 +221,16 @@ Condition互斥。
     }
 
     /**
-     * Get 单触发条件。与MultiConditions参数互斥。 
-     * @return Condition 单触发条件。与MultiConditions参数互斥。
+     * Get 是否触发告警的单触发条件。与MultiConditions参数互斥。 
+     * @return Condition 是否触发告警的单触发条件。与MultiConditions参数互斥。
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 单触发条件。与MultiConditions参数互斥。
-     * @param Condition 单触发条件。与MultiConditions参数互斥。
+     * Set 是否触发告警的单触发条件。与MultiConditions参数互斥。
+     * @param Condition 是否触发告警的单触发条件。与MultiConditions参数互斥。
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
@@ -317,32 +317,32 @@ Condition互斥。
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreateTime 创建时间。
+     * Get 创建时间。格式： YYYY-MM-DD HH:MM:SS 
+     * @return CreateTime 创建时间。格式： YYYY-MM-DD HH:MM:SS
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreateTime 创建时间。
+     * Set 创建时间。格式： YYYY-MM-DD HH:MM:SS
+     * @param CreateTime 创建时间。格式： YYYY-MM-DD HH:MM:SS
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最近更新时间。 
-     * @return UpdateTime 最近更新时间。
+     * Get 最近更新时间。格式： YYYY-MM-DD HH:MM:SS 
+     * @return UpdateTime 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 最近更新时间。
-     * @param UpdateTime 最近更新时间。
+     * Set 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+     * @param UpdateTime 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

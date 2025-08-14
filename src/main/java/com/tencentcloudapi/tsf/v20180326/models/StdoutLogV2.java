@@ -38,7 +38,7 @@ public class StdoutLogV2 extends AbstractModel {
     private String Content;
 
     /**
-    * 日志时间戳
+    * 日志时间戳，单位毫秒
     */
     @SerializedName("Timestamp")
     @Expose
@@ -84,16 +84,16 @@ public class StdoutLogV2 extends AbstractModel {
     }
 
     /**
-     * Get 日志时间戳 
-     * @return Timestamp 日志时间戳
+     * Get 日志时间戳，单位毫秒 
+     * @return Timestamp 日志时间戳，单位毫秒
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 日志时间戳
-     * @param Timestamp 日志时间戳
+     * Set 日志时间戳，单位毫秒
+     * @param Timestamp 日志时间戳，单位毫秒
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;

@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DescribeBusinessLogConfigRequest extends AbstractModel {
 
     /**
-    * 配置项ID
+    * 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-     * Get 配置项ID 
-     * @return ConfigId 配置项ID
+     * Get 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看 
+     * @return ConfigId 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 配置项ID
-     * @param ConfigId 配置项ID
+     * Set 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
+     * @param ConfigId 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;

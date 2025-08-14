@@ -48,6 +48,9 @@ public enum LcicErrorCode {
      /* css/js地址无法访问 */
      INVALIDPARAMETER_CSSORJS("InvalidParameter.CssOrJs"),
      
+     /* DisableRecord参数错误 */
+     INVALIDPARAMETER_DISABLERECORD("InvalidParameter.DisableRecord"),
+     
      /* 结束时间不能早于开始时间。 */
      INVALIDPARAMETER_ENDTIME("InvalidParameter.EndTime"),
      
@@ -65,6 +68,15 @@ public enum LcicErrorCode {
      
      /* 群组类型错误 */
      INVALIDPARAMETER_GROUPTYPEINVALID("InvalidParameter.GroupTypeInvalid"),
+     
+     /* LiveType参数错误 */
+     INVALIDPARAMETER_LIVETYPE("InvalidParameter.LiveType"),
+     
+     /* MaxMicNumber参数错误 */
+     INVALIDPARAMETER_MAXMICNUMBER("InvalidParameter.MaxMicNumber"),
+     
+     /* RecordLayout参数错误 */
+     INVALIDPARAMETER_RECORDLAYOUT("InvalidParameter.RecordLayout"),
      
      /* room类型错误 */
      INVALIDPARAMETER_ROOMTYPEINVALID("InvalidParameter.RoomTypeInvalid"),
@@ -139,7 +151,10 @@ public enum LcicErrorCode {
      UNKNOWNPARAMETER("UnknownParameter"),
      
      /* 操作不支持。 */
-     UNSUPPORTEDOPERATION("UnsupportedOperation");
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
+     /* 套餐包版本不支持 */
+     UNSUPPORTEDOPERATION_VERSION("UnsupportedOperation.Version");
      
     private String value;
     private LcicErrorCode (String value){

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StopTaskExecuteResponse extends AbstractModel {
 
     /**
-    * 操作成功 or 失败
+    * 返回 true 或 false。true：操作成功，false：操作失败
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class StopTaskExecuteResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作成功 or 失败 
-     * @return Result 操作成功 or 失败
+     * Get 返回 true 或 false。true：操作成功，false：操作失败 
+     * @return Result 返回 true 或 false。true：操作成功，false：操作失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 操作成功 or 失败
-     * @param Result 操作成功 or 失败
+     * Set 返回 true 或 false。true：操作成功，false：操作失败
+     * @param Result 返回 true 或 false。true：操作成功，false：操作失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

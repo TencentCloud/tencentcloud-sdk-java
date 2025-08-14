@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class GroupInfo extends AbstractModel {
 
     /**
-    * 部署组id
+    * 部署组ID
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看。
     */
     @SerializedName("GroupId")
     @Expose
@@ -38,14 +39,15 @@ public class GroupInfo extends AbstractModel {
     private String GroupName;
 
     /**
-    * 集群类型
+    * 集群类型，C：容器集群，V：虚拟机集群
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 集群id
+    * 集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -66,23 +68,27 @@ public class GroupInfo extends AbstractModel {
     private String NamespaceName;
 
     /**
-    * 绑定时间
+    * 绑定时间，格式yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("AssociateTime")
     @Expose
     private String AssociateTime;
 
     /**
-     * Get 部署组id 
-     * @return GroupId 部署组id
+     * Get 部署组ID
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看。 
+     * @return GroupId 部署组ID
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组id
-     * @param GroupId 部署组id
+     * Set 部署组ID
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看。
+     * @param GroupId 部署组ID
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -105,32 +111,36 @@ public class GroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群类型 
-     * @return ClusterType 集群类型
+     * Get 集群类型，C：容器集群，V：虚拟机集群 
+     * @return ClusterType 集群类型，C：容器集群，V：虚拟机集群
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型
-     * @param ClusterType 集群类型
+     * Set 集群类型，C：容器集群，V：虚拟机集群
+     * @param ClusterType 集群类型，C：容器集群，V：虚拟机集群
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get 集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看。 
+     * @return ClusterId 集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set 集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看。
+     * @param ClusterId 集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -169,16 +179,16 @@ public class GroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 绑定时间 
-     * @return AssociateTime 绑定时间
+     * Get 绑定时间，格式yyyy-MM-dd HH:mm:ss 
+     * @return AssociateTime 绑定时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getAssociateTime() {
         return this.AssociateTime;
     }
 
     /**
-     * Set 绑定时间
-     * @param AssociateTime 绑定时间
+     * Set 绑定时间，格式yyyy-MM-dd HH:mm:ss
+     * @param AssociateTime 绑定时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setAssociateTime(String AssociateTime) {
         this.AssociateTime = AssociateTime;

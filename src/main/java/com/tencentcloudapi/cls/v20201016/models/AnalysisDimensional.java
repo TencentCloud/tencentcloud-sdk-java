@@ -31,7 +31,8 @@ public class AnalysisDimensional extends AbstractModel {
     private String Name;
 
     /**
-    * 分析类型：query，field ，original
+    * 分析类型：query(自定义检索分析)，field(字段TOP5及占比统计) ，original(相关原始日志)
+
     */
     @SerializedName("Type")
     @Expose
@@ -108,16 +109,20 @@ public class AnalysisDimensional extends AbstractModel {
     }
 
     /**
-     * Get 分析类型：query，field ，original 
-     * @return Type 分析类型：query，field ，original
+     * Get 分析类型：query(自定义检索分析)，field(字段TOP5及占比统计) ，original(相关原始日志)
+ 
+     * @return Type 分析类型：query(自定义检索分析)，field(字段TOP5及占比统计) ，original(相关原始日志)
+
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 分析类型：query，field ，original
-     * @param Type 分析类型：query，field ，original
+     * Set 分析类型：query(自定义检索分析)，field(字段TOP5及占比统计) ，original(相关原始日志)
+
+     * @param Type 分析类型：query(自定义检索分析)，field(字段TOP5及占比统计) ，original(相关原始日志)
+
      */
     public void setType(String Type) {
         this.Type = Type;

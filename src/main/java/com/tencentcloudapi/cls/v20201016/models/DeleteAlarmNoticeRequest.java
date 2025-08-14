@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteAlarmNoticeRequest extends AbstractModel {
 
     /**
-    * 通知渠道组ID
+    * 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
     */
     @SerializedName("AlarmNoticeId")
     @Expose
     private String AlarmNoticeId;
 
     /**
-     * Get 通知渠道组ID 
-     * @return AlarmNoticeId 通知渠道组ID
+     * Get 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID 
+     * @return AlarmNoticeId 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set 通知渠道组ID
-     * @param AlarmNoticeId 通知渠道组ID
+     * Set 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
+     * @param AlarmNoticeId 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;

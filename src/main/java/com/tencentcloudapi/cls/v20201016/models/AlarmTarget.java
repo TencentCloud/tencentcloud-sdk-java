@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AlarmTarget extends AbstractModel {
 
     /**
-    * 日志主题ID。
+    * 日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
     */
     @SerializedName("TopicId")
     @Expose
@@ -59,7 +59,7 @@ public class AlarmTarget extends AbstractModel {
     private Long EndTimeOffset;
 
     /**
-    * 日志集ID。
+    * 日志集ID。通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志集ID
     */
     @SerializedName("LogsetId")
     @Expose
@@ -75,16 +75,16 @@ public class AlarmTarget extends AbstractModel {
     private Long SyntaxRule;
 
     /**
-     * Get 日志主题ID。 
-     * @return TopicId 日志主题ID。
+     * Get 日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID 
+     * @return TopicId 日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID。
-     * @param TopicId 日志主题ID。
+     * Set 日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
+     * @param TopicId 日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -155,16 +155,16 @@ public class AlarmTarget extends AbstractModel {
     }
 
     /**
-     * Get 日志集ID。 
-     * @return LogsetId 日志集ID。
+     * Get 日志集ID。通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志集ID 
+     * @return LogsetId 日志集ID。通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志集ID
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 日志集ID。
-     * @param LogsetId 日志集ID。
+     * Set 日志集ID。通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志集ID
+     * @param LogsetId 日志集ID。通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志集ID
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;

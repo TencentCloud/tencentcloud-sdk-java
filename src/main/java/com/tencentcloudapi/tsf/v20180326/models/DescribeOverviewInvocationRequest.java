@@ -25,13 +25,14 @@ public class DescribeOverviewInvocationRequest extends AbstractModel {
 
     /**
     * 命名空间ID， 此参数必填
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * 监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
+    * 监控统计类型，必填，取值范围 SumReqAmount：请求量，AvgFailureRate：请求错误率，AvgTimeCost：平均响应耗时
     */
     @SerializedName("Type")
     @Expose
@@ -45,22 +46,24 @@ public class DescribeOverviewInvocationRequest extends AbstractModel {
     private Long Period;
 
     /**
-    * 查询开始时间，默认为当天的 00:00:00
+    * 查询开始时间，格式为yyyy-MM-dd HH:mm:ss，默认为当天的 00:00:00
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间，默认为当前时间
+    * 查询结束时间，格式为yyyy-MM-dd HH:mm:ss，默认为当前时间
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 命名空间ID， 此参数必填 
+     * Get 命名空间ID， 此参数必填
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看 
      * @return NamespaceId 命名空间ID， 此参数必填
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
      */
     public String getNamespaceId() {
         return this.NamespaceId;
@@ -68,23 +71,25 @@ public class DescribeOverviewInvocationRequest extends AbstractModel {
 
     /**
      * Set 命名空间ID， 此参数必填
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
      * @param NamespaceId 命名空间ID， 此参数必填
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时 
-     * @return Type 监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
+     * Get 监控统计类型，必填，取值范围 SumReqAmount：请求量，AvgFailureRate：请求错误率，AvgTimeCost：平均响应耗时 
+     * @return Type 监控统计类型，必填，取值范围 SumReqAmount：请求量，AvgFailureRate：请求错误率，AvgTimeCost：平均响应耗时
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
-     * @param Type 监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
+     * Set 监控统计类型，必填，取值范围 SumReqAmount：请求量，AvgFailureRate：请求错误率，AvgTimeCost：平均响应耗时
+     * @param Type 监控统计类型，必填，取值范围 SumReqAmount：请求量，AvgFailureRate：请求错误率，AvgTimeCost：平均响应耗时
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -107,32 +112,32 @@ public class DescribeOverviewInvocationRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询开始时间，默认为当天的 00:00:00 
-     * @return StartTime 查询开始时间，默认为当天的 00:00:00
+     * Get 查询开始时间，格式为yyyy-MM-dd HH:mm:ss，默认为当天的 00:00:00 
+     * @return StartTime 查询开始时间，格式为yyyy-MM-dd HH:mm:ss，默认为当天的 00:00:00
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间，默认为当天的 00:00:00
-     * @param StartTime 查询开始时间，默认为当天的 00:00:00
+     * Set 查询开始时间，格式为yyyy-MM-dd HH:mm:ss，默认为当天的 00:00:00
+     * @param StartTime 查询开始时间，格式为yyyy-MM-dd HH:mm:ss，默认为当天的 00:00:00
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间，默认为当前时间 
-     * @return EndTime 查询结束时间，默认为当前时间
+     * Get 查询结束时间，格式为yyyy-MM-dd HH:mm:ss，默认为当前时间 
+     * @return EndTime 查询结束时间，格式为yyyy-MM-dd HH:mm:ss，默认为当前时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间，默认为当前时间
-     * @param EndTime 查询结束时间，默认为当前时间
+     * Set 查询结束时间，格式为yyyy-MM-dd HH:mm:ss，默认为当前时间
+     * @param EndTime 查询结束时间，格式为yyyy-MM-dd HH:mm:ss，默认为当前时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

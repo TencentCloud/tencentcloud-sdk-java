@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ExclusiveInstance extends AbstractModel {
 
     /**
-    * 配置中心类型[Registration、Configuration]
+    * 配置中心类型[注册中心Registration、配置中心Configuration]
     */
     @SerializedName("CenterType")
     @Expose
     private String CenterType;
 
     /**
-    * 实例id
+    * 实例id，通过北极星控制台获取
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例类型[Polaris]
+    * 实例类型，例如北极星Polaris
     */
     @SerializedName("InstanceType")
     @Expose
@@ -52,62 +52,62 @@ public class ExclusiveInstance extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 实例地域id
+    * 实例地域id，通过北极星控制台获取
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * 实例命名空间ID
+    * 实例命名空间ID，通过北极星控制台获取
     */
     @SerializedName("InstanceNamespaceId")
     @Expose
     private String InstanceNamespaceId;
 
     /**
-     * Get 配置中心类型[Registration、Configuration] 
-     * @return CenterType 配置中心类型[Registration、Configuration]
+     * Get 配置中心类型[注册中心Registration、配置中心Configuration] 
+     * @return CenterType 配置中心类型[注册中心Registration、配置中心Configuration]
      */
     public String getCenterType() {
         return this.CenterType;
     }
 
     /**
-     * Set 配置中心类型[Registration、Configuration]
-     * @param CenterType 配置中心类型[Registration、Configuration]
+     * Set 配置中心类型[注册中心Registration、配置中心Configuration]
+     * @param CenterType 配置中心类型[注册中心Registration、配置中心Configuration]
      */
     public void setCenterType(String CenterType) {
         this.CenterType = CenterType;
     }
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 实例id，通过北极星控制台获取 
+     * @return InstanceId 实例id，通过北极星控制台获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 实例id，通过北极星控制台获取
+     * @param InstanceId 实例id，通过北极星控制台获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例类型[Polaris] 
-     * @return InstanceType 实例类型[Polaris]
+     * Get 实例类型，例如北极星Polaris 
+     * @return InstanceType 实例类型，例如北极星Polaris
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型[Polaris]
-     * @param InstanceType 实例类型[Polaris]
+     * Set 实例类型，例如北极星Polaris
+     * @param InstanceType 实例类型，例如北极星Polaris
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -130,32 +130,32 @@ public class ExclusiveInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例地域id 
-     * @return RegionId 实例地域id
+     * Get 实例地域id，通过北极星控制台获取 
+     * @return RegionId 实例地域id，通过北极星控制台获取
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 实例地域id
-     * @param RegionId 实例地域id
+     * Set 实例地域id，通过北极星控制台获取
+     * @param RegionId 实例地域id，通过北极星控制台获取
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 实例命名空间ID 
-     * @return InstanceNamespaceId 实例命名空间ID
+     * Get 实例命名空间ID，通过北极星控制台获取 
+     * @return InstanceNamespaceId 实例命名空间ID，通过北极星控制台获取
      */
     public String getInstanceNamespaceId() {
         return this.InstanceNamespaceId;
     }
 
     /**
-     * Set 实例命名空间ID
-     * @param InstanceNamespaceId 实例命名空间ID
+     * Set 实例命名空间ID，通过北极星控制台获取
+     * @param InstanceNamespaceId 实例命名空间ID，通过北极星控制台获取
      */
     public void setInstanceNamespaceId(String InstanceNamespaceId) {
         this.InstanceNamespaceId = InstanceNamespaceId;

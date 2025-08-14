@@ -31,7 +31,7 @@ public class Ports extends AbstractModel {
     private Long TargetPort;
 
     /**
-    * 端口协议
+    * 端口协议，TCP或者UDP
     */
     @SerializedName("Protocol")
     @Expose
@@ -54,16 +54,16 @@ public class Ports extends AbstractModel {
     }
 
     /**
-     * Get 端口协议 
-     * @return Protocol 端口协议
+     * Get 端口协议，TCP或者UDP 
+     * @return Protocol 端口协议，TCP或者UDP
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 端口协议
-     * @param Protocol 端口协议
+     * Set 端口协议，TCP或者UDP
+     * @param Protocol 端口协议，TCP或者UDP
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

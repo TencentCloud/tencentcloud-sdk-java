@@ -45,14 +45,16 @@ public class DescribeDeliveryConfigsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 数据集idList
+    * 数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
     */
     @SerializedName("ProgramIdList")
     @Expose
     private String [] ProgramIdList;
 
     /**
-    * ConfigIdList
+    * 日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
     */
     @SerializedName("ConfigIdList")
     @Expose
@@ -107,32 +109,40 @@ public class DescribeDeliveryConfigsRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据集idList 
-     * @return ProgramIdList 数据集idList
+     * Get 数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看 
+     * @return ProgramIdList 数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
      */
     public String [] getProgramIdList() {
         return this.ProgramIdList;
     }
 
     /**
-     * Set 数据集idList
-     * @param ProgramIdList 数据集idList
+     * Set 数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
+     * @param ProgramIdList 数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
      */
     public void setProgramIdList(String [] ProgramIdList) {
         this.ProgramIdList = ProgramIdList;
     }
 
     /**
-     * Get ConfigIdList 
-     * @return ConfigIdList ConfigIdList
+     * Get 日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看 
+     * @return ConfigIdList 日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public String [] getConfigIdList() {
         return this.ConfigIdList;
     }
 
     /**
-     * Set ConfigIdList
-     * @param ConfigIdList ConfigIdList
+     * Set 日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
+     * @param ConfigIdList 日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public void setConfigIdList(String [] ConfigIdList) {
         this.ConfigIdList = ConfigIdList;

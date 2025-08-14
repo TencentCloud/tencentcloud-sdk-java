@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAlarmNoticeRequest extends AbstractModel {
 
     /**
-    * 通知渠道组名称。
+    * 通知渠道组名称。最大支持255个字节。 不支持 '|'。
     */
     @SerializedName("Name")
     @Expose
@@ -106,16 +106,16 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
     private Long AlarmShieldStatus;
 
     /**
-     * Get 通知渠道组名称。 
-     * @return Name 通知渠道组名称。
+     * Get 通知渠道组名称。最大支持255个字节。 不支持 '|'。 
+     * @return Name 通知渠道组名称。最大支持255个字节。 不支持 '|'。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 通知渠道组名称。
-     * @param Name 通知渠道组名称。
+     * Set 通知渠道组名称。最大支持255个字节。 不支持 '|'。
+     * @param Name 通知渠道组名称。最大支持255个字节。 不支持 '|'。
      */
     public void setName(String Name) {
         this.Name = Name;

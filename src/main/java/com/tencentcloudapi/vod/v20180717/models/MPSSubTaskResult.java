@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MPSSubTaskResult extends AbstractModel {
 
     /**
-    * 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li>
+    * 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -53,6 +53,7 @@ public class MPSSubTaskResult extends AbstractModel {
 
     /**
     * MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
+示例：{"Definition": 24}
     */
     @SerializedName("Input")
     @Expose
@@ -66,16 +67,16 @@ public class MPSSubTaskResult extends AbstractModel {
     private MPSTaskOutput Output;
 
     /**
-     * Get 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li> 
-     * @return TaskType 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li>
+     * Get 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li> 
+     * @return TaskType 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li>
-     * @param TaskType 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li>
+     * Set 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li>
+     * @param TaskType 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -130,8 +131,10 @@ public class MPSSubTaskResult extends AbstractModel {
     }
 
     /**
-     * Get MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。 
+     * Get MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
+示例：{"Definition": 24} 
      * @return Input MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
+示例：{"Definition": 24}
      */
     public String getInput() {
         return this.Input;
@@ -139,7 +142,9 @@ public class MPSSubTaskResult extends AbstractModel {
 
     /**
      * Set MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
+示例：{"Definition": 24}
      * @param Input MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
+示例：{"Definition": 24}
      */
     public void setInput(String Input) {
         this.Input = Input;

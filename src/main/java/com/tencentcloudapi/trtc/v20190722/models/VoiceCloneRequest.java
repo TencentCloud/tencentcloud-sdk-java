@@ -38,7 +38,7 @@ public class VoiceCloneRequest extends AbstractModel {
     private String APIKey;
 
     /**
-    * 声音克隆的名字
+    * 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
     */
     @SerializedName("VoiceName")
     @Expose
@@ -91,16 +91,16 @@ public class VoiceCloneRequest extends AbstractModel {
     }
 
     /**
-     * Get 声音克隆的名字 
-     * @return VoiceName 声音克隆的名字
+     * Get 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位 
+     * @return VoiceName 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
      */
     public String getVoiceName() {
         return this.VoiceName;
     }
 
     /**
-     * Set 声音克隆的名字
-     * @param VoiceName 声音克隆的名字
+     * Set 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
+     * @param VoiceName 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
      */
     public void setVoiceName(String VoiceName) {
         this.VoiceName = VoiceName;

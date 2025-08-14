@@ -24,23 +24,38 @@ import java.util.HashMap;
 public class ResourceTaskStatusResult extends AbstractModel {
 
     /**
-    * 任务的执行状态
+    * 变更状态：
+- `0`：成功
+- `1`：失败
+- `2`：执行中
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
 
     /**
-     * Get 任务的执行状态 
-     * @return TaskStatus 任务的执行状态
+     * Get 变更状态：
+- `0`：成功
+- `1`：失败
+- `2`：执行中 
+     * @return TaskStatus 变更状态：
+- `0`：成功
+- `1`：失败
+- `2`：执行中
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 任务的执行状态
-     * @param TaskStatus 任务的执行状态
+     * Set 变更状态：
+- `0`：成功
+- `1`：失败
+- `2`：执行中
+     * @param TaskStatus 变更状态：
+- `0`：成功
+- `1`：失败
+- `2`：执行中
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAlertRecordHistoryRequest extends AbstractModel {
 
     /**
-    * 查询时间范围启始时间，毫秒级unix时间戳
+    * 查询时间范围启始时间，毫秒级unix时间戳(ms)
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * 查询时间范围结束时间，毫秒级unix时间戳
+    * 查询时间范围结束时间，毫秒级unix时间戳(ms)
     */
     @SerializedName("To")
     @Expose
@@ -64,32 +64,32 @@ public class DescribeAlertRecordHistoryRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get 查询时间范围启始时间，毫秒级unix时间戳 
-     * @return From 查询时间范围启始时间，毫秒级unix时间戳
+     * Get 查询时间范围启始时间，毫秒级unix时间戳(ms) 
+     * @return From 查询时间范围启始时间，毫秒级unix时间戳(ms)
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set 查询时间范围启始时间，毫秒级unix时间戳
-     * @param From 查询时间范围启始时间，毫秒级unix时间戳
+     * Set 查询时间范围启始时间，毫秒级unix时间戳(ms)
+     * @param From 查询时间范围启始时间，毫秒级unix时间戳(ms)
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get 查询时间范围结束时间，毫秒级unix时间戳 
-     * @return To 查询时间范围结束时间，毫秒级unix时间戳
+     * Get 查询时间范围结束时间，毫秒级unix时间戳(ms) 
+     * @return To 查询时间范围结束时间，毫秒级unix时间戳(ms)
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set 查询时间范围结束时间，毫秒级unix时间戳
-     * @param To 查询时间范围结束时间，毫秒级unix时间戳
+     * Set 查询时间范围结束时间，毫秒级unix时间戳(ms)
+     * @param To 查询时间范围结束时间，毫秒级unix时间戳(ms)
      */
     public void setTo(Long To) {
         this.To = To;

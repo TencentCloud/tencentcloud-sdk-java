@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGroupInstancesRequest extends AbstractModel {
 
     /**
-    * 部署组ID
+    * 部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。
     */
     @SerializedName("GroupId")
     @Expose
@@ -45,37 +45,37 @@ public class DescribeGroupInstancesRequest extends AbstractModel {
     private String OrderBy;
 
     /**
-    * 排序类型
+    * 排序类型；0：升序，1：降序
     */
     @SerializedName("OrderType")
     @Expose
     private Long OrderType;
 
     /**
-    * 偏移量
+    * 偏移量，默认值：0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页个数
+    * 分页个数；默认值：20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 部署组ID 
-     * @return GroupId 部署组ID
+     * Get 部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。 
+     * @return GroupId 部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组ID
-     * @param GroupId 部署组ID
+     * Set 部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。
+     * @param GroupId 部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -114,48 +114,48 @@ public class DescribeGroupInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序类型 
-     * @return OrderType 排序类型
+     * Get 排序类型；0：升序，1：降序 
+     * @return OrderType 排序类型；0：升序，1：降序
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 排序类型
-     * @param OrderType 排序类型
+     * Set 排序类型；0：升序，1：降序
+     * @param OrderType 排序类型；0：升序，1：降序
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认值：0 
+     * @return Offset 偏移量，默认值：0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认值：0
+     * @param Offset 偏移量，默认值：0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页个数 
-     * @return Limit 分页个数
+     * Get 分页个数；默认值：20 
+     * @return Limit 分页个数；默认值：20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页个数
-     * @param Limit 分页个数
+     * Set 分页个数；默认值：20
+     * @param Limit 分页个数；默认值：20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

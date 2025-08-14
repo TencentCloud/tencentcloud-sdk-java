@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DisassociateKafkaConfigResponse extends AbstractModel {
 
     /**
-    * 解除绑定是否成功
+    * 解除绑定是否成功，true：成功，false：失败。
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DisassociateKafkaConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 解除绑定是否成功 
-     * @return Result 解除绑定是否成功
+     * Get 解除绑定是否成功，true：成功，false：失败。 
+     * @return Result 解除绑定是否成功，true：成功，false：失败。
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 解除绑定是否成功
-     * @param Result 解除绑定是否成功
+     * Set 解除绑定是否成功，true：成功，false：失败。
+     * @param Result 解除绑定是否成功，true：成功，false：失败。
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

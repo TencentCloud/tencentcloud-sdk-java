@@ -76,7 +76,7 @@ public class VmGroupOther extends AbstractModel {
     private Long OffInstanceCount;
 
     /**
-    * 部署组状态
+    * 部署组状态，Running运行中，Waiting等待中，Paused暂停中，Updating更新中，RollingBack回滚中，Abnormal异常，Unknown未知
     */
     @SerializedName("GroupStatus")
     @Expose
@@ -222,16 +222,16 @@ public class VmGroupOther extends AbstractModel {
     }
 
     /**
-     * Get 部署组状态 
-     * @return GroupStatus 部署组状态
+     * Get 部署组状态，Running运行中，Waiting等待中，Paused暂停中，Updating更新中，RollingBack回滚中，Abnormal异常，Unknown未知 
+     * @return GroupStatus 部署组状态，Running运行中，Waiting等待中，Paused暂停中，Updating更新中，RollingBack回滚中，Abnormal异常，Unknown未知
      */
     public String getGroupStatus() {
         return this.GroupStatus;
     }
 
     /**
-     * Set 部署组状态
-     * @param GroupStatus 部署组状态
+     * Set 部署组状态，Running运行中，Waiting等待中，Paused暂停中，Updating更新中，RollingBack回滚中，Abnormal异常，Unknown未知
+     * @param GroupStatus 部署组状态，Running运行中，Waiting等待中，Paused暂停中，Updating更新中，RollingBack回滚中，Abnormal异常，Unknown未知
      */
     public void setGroupStatus(String GroupStatus) {
         this.GroupStatus = GroupStatus;

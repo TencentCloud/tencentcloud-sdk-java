@@ -369,6 +369,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *解除门神规则的状态锁
+     * @param req DeleteOwaspRuleStatusRequest
+     * @return DeleteOwaspRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOwaspRuleStatusResponse DeleteOwaspRuleStatus(DeleteOwaspRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOwaspRuleStatus", DeleteOwaspRuleStatusResponse.class);
+    }
+
+    /**
      *删除用户规则引擎白名单
      * @param req DeleteOwaspWhiteRuleRequest
      * @return DeleteOwaspWhiteRuleResponse
@@ -883,6 +894,28 @@ public class WafClient extends AbstractClient{
     public DescribeObjectsResponse DescribeObjects(DescribeObjectsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeObjects", DescribeObjectsResponse.class);
+    }
+
+    /**
+     *查询规则引擎的规则类型列表
+     * @param req DescribeOwaspRuleTypesRequest
+     * @return DescribeOwaspRuleTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOwaspRuleTypesResponse DescribeOwaspRuleTypes(DescribeOwaspRuleTypesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOwaspRuleTypes", DescribeOwaspRuleTypesResponse.class);
+    }
+
+    /**
+     *查询规则引擎的规则列表
+     * @param req DescribeOwaspRulesRequest
+     * @return DescribeOwaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOwaspRulesResponse DescribeOwaspRules(DescribeOwaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOwaspRules", DescribeOwaspRulesResponse.class);
     }
 
     /**
@@ -1645,6 +1678,50 @@ public class WafClient extends AbstractClient{
     public ModifyObjectResponse ModifyObject(ModifyObjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyObject", ModifyObjectResponse.class);
+    }
+
+    /**
+     *更新规则的开关
+     * @param req ModifyOwaspRuleStatusRequest
+     * @return ModifyOwaspRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwaspRuleStatusResponse ModifyOwaspRuleStatus(ModifyOwaspRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwaspRuleStatus", ModifyOwaspRuleStatusResponse.class);
+    }
+
+    /**
+     *更新规则类型的防护模式
+     * @param req ModifyOwaspRuleTypeActionRequest
+     * @return ModifyOwaspRuleTypeActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwaspRuleTypeActionResponse ModifyOwaspRuleTypeAction(ModifyOwaspRuleTypeActionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwaspRuleTypeAction", ModifyOwaspRuleTypeActionResponse.class);
+    }
+
+    /**
+     *更新规则类型的防护等级
+     * @param req ModifyOwaspRuleTypeLevelRequest
+     * @return ModifyOwaspRuleTypeLevelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwaspRuleTypeLevelResponse ModifyOwaspRuleTypeLevel(ModifyOwaspRuleTypeLevelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwaspRuleTypeLevel", ModifyOwaspRuleTypeLevelResponse.class);
+    }
+
+    /**
+     *更新规则类型的开关
+     * @param req ModifyOwaspRuleTypeStatusRequest
+     * @return ModifyOwaspRuleTypeStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwaspRuleTypeStatusResponse ModifyOwaspRuleTypeStatus(ModifyOwaspRuleTypeStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwaspRuleTypeStatus", ModifyOwaspRuleTypeStatusResponse.class);
     }
 
     /**

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyNamespaceRequest extends AbstractModel {
 
     /**
-    * 命名空间ID
+    * 命名空间ID，按照【命名空间ID】进行过滤，可通过调用DescribeNamespaces查询已创建的项目列表或登录控制台进行查看；也可以调用CreateNamespace创建新的项目。命名空间ID例如：namespace-6a79x94v。
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -45,23 +45,23 @@ public class ModifyNamespaceRequest extends AbstractModel {
     private String NamespaceDesc;
 
     /**
-    * 是否开启高可用
+    * 是否开启高可用，0表示不开启，1表示开启
     */
     @SerializedName("IsHaEnable")
     @Expose
     private String IsHaEnable;
 
     /**
-     * Get 命名空间ID 
-     * @return NamespaceId 命名空间ID
+     * Get 命名空间ID，按照【命名空间ID】进行过滤，可通过调用DescribeNamespaces查询已创建的项目列表或登录控制台进行查看；也可以调用CreateNamespace创建新的项目。命名空间ID例如：namespace-6a79x94v。 
+     * @return NamespaceId 命名空间ID，按照【命名空间ID】进行过滤，可通过调用DescribeNamespaces查询已创建的项目列表或登录控制台进行查看；也可以调用CreateNamespace创建新的项目。命名空间ID例如：namespace-6a79x94v。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间ID
-     * @param NamespaceId 命名空间ID
+     * Set 命名空间ID，按照【命名空间ID】进行过滤，可通过调用DescribeNamespaces查询已创建的项目列表或登录控制台进行查看；也可以调用CreateNamespace创建新的项目。命名空间ID例如：namespace-6a79x94v。
+     * @param NamespaceId 命名空间ID，按照【命名空间ID】进行过滤，可通过调用DescribeNamespaces查询已创建的项目列表或登录控制台进行查看；也可以调用CreateNamespace创建新的项目。命名空间ID例如：namespace-6a79x94v。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
@@ -100,16 +100,16 @@ public class ModifyNamespaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启高可用 
-     * @return IsHaEnable 是否开启高可用
+     * Get 是否开启高可用，0表示不开启，1表示开启 
+     * @return IsHaEnable 是否开启高可用，0表示不开启，1表示开启
      */
     public String getIsHaEnable() {
         return this.IsHaEnable;
     }
 
     /**
-     * Set 是否开启高可用
-     * @param IsHaEnable 是否开启高可用
+     * Set 是否开启高可用，0表示不开启，1表示开启
+     * @param IsHaEnable 是否开启高可用，0表示不开启，1表示开启
      */
     public void setIsHaEnable(String IsHaEnable) {
         this.IsHaEnable = IsHaEnable;

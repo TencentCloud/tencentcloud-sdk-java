@@ -227,6 +227,13 @@ public class DescribeAssetHostDetailResponse extends AbstractModel {
     private String ClusterAccessedStatus;
 
     /**
+    * 资产同步时间
+    */
+    @SerializedName("AssetSyncTime")
+    @Expose
+    private String AssetSyncTime;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -698,6 +705,22 @@ public class DescribeAssetHostDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 资产同步时间 
+     * @return AssetSyncTime 资产同步时间
+     */
+    public String getAssetSyncTime() {
+        return this.AssetSyncTime;
+    }
+
+    /**
+     * Set 资产同步时间
+     * @param AssetSyncTime 资产同步时间
+     */
+    public void setAssetSyncTime(String AssetSyncTime) {
+        this.AssetSyncTime = AssetSyncTime;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -811,6 +834,9 @@ public class DescribeAssetHostDetailResponse extends AbstractModel {
         if (source.ClusterAccessedStatus != null) {
             this.ClusterAccessedStatus = new String(source.ClusterAccessedStatus);
         }
+        if (source.AssetSyncTime != null) {
+            this.AssetSyncTime = new String(source.AssetSyncTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -850,6 +876,7 @@ public class DescribeAssetHostDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
+        this.setParamSimple(map, prefix + "AssetSyncTime", this.AssetSyncTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

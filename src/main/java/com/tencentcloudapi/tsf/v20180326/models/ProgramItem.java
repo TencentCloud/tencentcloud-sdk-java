@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ProgramItem extends AbstractModel {
 
     /**
-    * 数据项ID
+    * 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+
     */
     @SerializedName("ProgramItemId")
     @Expose
@@ -52,14 +53,14 @@ public class ProgramItem extends AbstractModel {
     private Boolean IsAll;
 
     /**
-    * 创建时间
+    * 创建时间，时间戳格式【Long】
     */
     @SerializedName("CreationTime")
     @Expose
     private Long CreationTime;
 
     /**
-    * 最后更新时间
+    * 最后更新时间，时间戳格式【Long】，单位毫秒
     */
     @SerializedName("LastUpdateTime")
     @Expose
@@ -73,23 +74,27 @@ public class ProgramItem extends AbstractModel {
     private Boolean DeleteFlag;
 
     /**
-    * 数据集ID
+    * 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
     */
     @SerializedName("ProgramId")
     @Expose
     private String ProgramId;
 
     /**
-     * Get 数据项ID 
-     * @return ProgramItemId 数据项ID
+     * Get 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+ 
+     * @return ProgramItemId 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+
      */
     public String getProgramItemId() {
         return this.ProgramItemId;
     }
 
     /**
-     * Set 数据项ID
-     * @param ProgramItemId 数据项ID
+     * Set 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+
+     * @param ProgramItemId 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+
      */
     public void setProgramItemId(String ProgramItemId) {
         this.ProgramItemId = ProgramItemId;
@@ -144,32 +149,32 @@ public class ProgramItem extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreationTime 创建时间
+     * Get 创建时间，时间戳格式【Long】 
+     * @return CreationTime 创建时间，时间戳格式【Long】
      */
     public Long getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreationTime 创建时间
+     * Set 创建时间，时间戳格式【Long】
+     * @param CreationTime 创建时间，时间戳格式【Long】
      */
     public void setCreationTime(Long CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 最后更新时间 
-     * @return LastUpdateTime 最后更新时间
+     * Get 最后更新时间，时间戳格式【Long】，单位毫秒 
+     * @return LastUpdateTime 最后更新时间，时间戳格式【Long】，单位毫秒
      */
     public Long getLastUpdateTime() {
         return this.LastUpdateTime;
     }
 
     /**
-     * Set 最后更新时间
-     * @param LastUpdateTime 最后更新时间
+     * Set 最后更新时间，时间戳格式【Long】，单位毫秒
+     * @param LastUpdateTime 最后更新时间，时间戳格式【Long】，单位毫秒
      */
     public void setLastUpdateTime(Long LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;
@@ -192,16 +197,16 @@ public class ProgramItem extends AbstractModel {
     }
 
     /**
-     * Get 数据集ID 
-     * @return ProgramId 数据集ID
+     * Get 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取 
+     * @return ProgramId 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
      */
     public String getProgramId() {
         return this.ProgramId;
     }
 
     /**
-     * Set 数据集ID
-     * @param ProgramId 数据集ID
+     * Set 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
+     * @param ProgramId 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
      */
     public void setProgramId(String ProgramId) {
         this.ProgramId = ProgramId;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class StopTaskBatchRequest extends AbstractModel {
 
     /**
-    * 批次ID
+    * 任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入任务详情，进入执行记录列表页，第一列即为任务批次ID。
     */
     @SerializedName("BatchId")
     @Expose
     private String BatchId;
 
     /**
-    * 参数ID
+    * 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页面可以查看任务ID。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 批次ID 
-     * @return BatchId 批次ID
+     * Get 任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入任务详情，进入执行记录列表页，第一列即为任务批次ID。 
+     * @return BatchId 任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入任务详情，进入执行记录列表页，第一列即为任务批次ID。
      */
     public String getBatchId() {
         return this.BatchId;
     }
 
     /**
-     * Set 批次ID
-     * @param BatchId 批次ID
+     * Set 任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入任务详情，进入执行记录列表页，第一列即为任务批次ID。
+     * @param BatchId 任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入任务详情，进入执行记录列表页，第一列即为任务批次ID。
      */
     public void setBatchId(String BatchId) {
         this.BatchId = BatchId;
     }
 
     /**
-     * Get 参数ID 
-     * @return TaskId 参数ID
+     * Get 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页面可以查看任务ID。 
+     * @return TaskId 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页面可以查看任务ID。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 参数ID
-     * @param TaskId 参数ID
+     * Set 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页面可以查看任务ID。
+     * @param TaskId 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页面可以查看任务ID。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

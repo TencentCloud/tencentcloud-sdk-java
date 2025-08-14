@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ModifyApplicationResponse extends AbstractModel {
 
     /**
-    * true：操作成功
-false：操作失败
+    * true表示修改成功，false表示修改失败
     */
     @SerializedName("Result")
     @Expose
@@ -39,20 +38,16 @@ false：操作失败
     private String RequestId;
 
     /**
-     * Get true：操作成功
-false：操作失败 
-     * @return Result true：操作成功
-false：操作失败
+     * Get true表示修改成功，false表示修改失败 
+     * @return Result true表示修改成功，false表示修改失败
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set true：操作成功
-false：操作失败
-     * @param Result true：操作成功
-false：操作失败
+     * Set true表示修改成功，false表示修改失败
+     * @param Result true表示修改成功，false表示修改失败
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

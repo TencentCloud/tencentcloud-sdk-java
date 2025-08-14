@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyTaskRequest extends AbstractModel {
 
     /**
-    * 任务ID。在任务管理列表页面第一列查看任务ID。
+    * 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
     */
     @SerializedName("TaskId")
     @Expose
@@ -143,16 +143,16 @@ public class ModifyTaskRequest extends AbstractModel {
     private String [] ProgramIdList;
 
     /**
-     * Get 任务ID。在任务管理列表页面第一列查看任务ID。 
-     * @return TaskId 任务ID。在任务管理列表页面第一列查看任务ID。
+     * Get 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。 
+     * @return TaskId 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID。在任务管理列表页面第一列查看任务ID。
-     * @param TaskId 任务ID。在任务管理列表页面第一列查看任务ID。
+     * Set 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
+     * @param TaskId 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

@@ -196,6 +196,13 @@ public class ClusterInfoItem extends AbstractModel {
     private String AccessedSubStatus;
 
     /**
+    * 接入/卸载失败原因
+    */
+    @SerializedName("AccessedErrorReason")
+    @Expose
+    private String AccessedErrorReason;
+
+    /**
     * 节点总数
     */
     @SerializedName("NodeCount")
@@ -672,6 +679,22 @@ public class ClusterInfoItem extends AbstractModel {
     }
 
     /**
+     * Get 接入/卸载失败原因 
+     * @return AccessedErrorReason 接入/卸载失败原因
+     */
+    public String getAccessedErrorReason() {
+        return this.AccessedErrorReason;
+    }
+
+    /**
+     * Set 接入/卸载失败原因
+     * @param AccessedErrorReason 接入/卸载失败原因
+     */
+    public void setAccessedErrorReason(String AccessedErrorReason) {
+        this.AccessedErrorReason = AccessedErrorReason;
+    }
+
+    /**
      * Get 节点总数 
      * @return NodeCount 节点总数
      */
@@ -896,6 +919,9 @@ public class ClusterInfoItem extends AbstractModel {
         if (source.AccessedSubStatus != null) {
             this.AccessedSubStatus = new String(source.AccessedSubStatus);
         }
+        if (source.AccessedErrorReason != null) {
+            this.AccessedErrorReason = new String(source.AccessedErrorReason);
+        }
         if (source.NodeCount != null) {
             this.NodeCount = new Long(source.NodeCount);
         }
@@ -956,6 +982,7 @@ public class ClusterInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskCreateTime", this.TaskCreateTime);
         this.setParamSimple(map, prefix + "AccessedStatus", this.AccessedStatus);
         this.setParamSimple(map, prefix + "AccessedSubStatus", this.AccessedSubStatus);
+        this.setParamSimple(map, prefix + "AccessedErrorReason", this.AccessedErrorReason);
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "OffLineNodeCount", this.OffLineNodeCount);
         this.setParamSimple(map, prefix + "UnInstallAgentNodeCount", this.UnInstallAgentNodeCount);

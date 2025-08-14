@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteWebCallbackRequest extends AbstractModel {
 
     /**
-    * 告警渠道回调配置ID。
+    * 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
     */
     @SerializedName("WebCallbackId")
     @Expose
     private String WebCallbackId;
 
     /**
-     * Get 告警渠道回调配置ID。 
-     * @return WebCallbackId 告警渠道回调配置ID。
+     * Get 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID 
+     * @return WebCallbackId 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
      */
     public String getWebCallbackId() {
         return this.WebCallbackId;
     }
 
     /**
-     * Set 告警渠道回调配置ID。
-     * @param WebCallbackId 告警渠道回调配置ID。
+     * Set 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
+     * @param WebCallbackId 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
      */
     public void setWebCallbackId(String WebCallbackId) {
         this.WebCallbackId = WebCallbackId;

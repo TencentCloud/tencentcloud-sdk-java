@@ -32,7 +32,7 @@ public class HealthCheckSetting extends AbstractModel {
     private String ActionType;
 
     /**
-    * 容器延时启动健康检查的时间。
+    * 容器延时启动健康检查的时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InitialDelaySeconds")
@@ -40,7 +40,7 @@ public class HealthCheckSetting extends AbstractModel {
     private Long InitialDelaySeconds;
 
     /**
-    * 每次健康检查响应的最大超时时间。
+    * 每次健康检查响应的最大超时时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeoutSeconds")
@@ -48,7 +48,7 @@ public class HealthCheckSetting extends AbstractModel {
     private Long TimeoutSeconds;
 
     /**
-    * 进行健康检查的时间间隔。
+    * 进行健康检查的时间间隔，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeriodSeconds")
@@ -132,9 +132,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get 容器延时启动健康检查的时间。
+     * Get 容器延时启动健康检查的时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InitialDelaySeconds 容器延时启动健康检查的时间。
+     * @return InitialDelaySeconds 容器延时启动健康检查的时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInitialDelaySeconds() {
@@ -142,9 +142,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set 容器延时启动健康检查的时间。
+     * Set 容器延时启动健康检查的时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InitialDelaySeconds 容器延时启动健康检查的时间。
+     * @param InitialDelaySeconds 容器延时启动健康检查的时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInitialDelaySeconds(Long InitialDelaySeconds) {
@@ -152,9 +152,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get 每次健康检查响应的最大超时时间。
+     * Get 每次健康检查响应的最大超时时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeoutSeconds 每次健康检查响应的最大超时时间。
+     * @return TimeoutSeconds 每次健康检查响应的最大超时时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeoutSeconds() {
@@ -162,9 +162,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set 每次健康检查响应的最大超时时间。
+     * Set 每次健康检查响应的最大超时时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeoutSeconds 每次健康检查响应的最大超时时间。
+     * @param TimeoutSeconds 每次健康检查响应的最大超时时间，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeoutSeconds(Long TimeoutSeconds) {
@@ -172,9 +172,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Get 进行健康检查的时间间隔。
+     * Get 进行健康检查的时间间隔，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PeriodSeconds 进行健康检查的时间间隔。
+     * @return PeriodSeconds 进行健康检查的时间间隔，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeriodSeconds() {
@@ -182,9 +182,9 @@ public class HealthCheckSetting extends AbstractModel {
     }
 
     /**
-     * Set 进行健康检查的时间间隔。
+     * Set 进行健康检查的时间间隔，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PeriodSeconds 进行健康检查的时间间隔。
+     * @param PeriodSeconds 进行健康检查的时间间隔，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriodSeconds(Long PeriodSeconds) {

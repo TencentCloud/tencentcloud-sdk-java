@@ -73,6 +73,13 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
     private Boolean EnableDetectText;
 
     /**
+    * 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景 
+    */
+    @SerializedName("ConfigID")
+    @Expose
+    private String ConfigID;
+
+    /**
      * Get 图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
@@ -184,6 +191,22 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
         this.EnableDetectText = EnableDetectText;
     }
 
+    /**
+     * Get 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景  
+     * @return ConfigID 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景 
+     */
+    public String getConfigID() {
+        return this.ConfigID;
+    }
+
+    /**
+     * Set 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景 
+     * @param ConfigID 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景 
+     */
+    public void setConfigID(String ConfigID) {
+        this.ConfigID = ConfigID;
+    }
+
     public GeneralAccurateOCRRequest() {
     }
 
@@ -213,6 +236,9 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
         if (source.EnableDetectText != null) {
             this.EnableDetectText = new Boolean(source.EnableDetectText);
         }
+        if (source.ConfigID != null) {
+            this.ConfigID = new String(source.ConfigID);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         this.setParamSimple(map, prefix + "EnableDetectText", this.EnableDetectText);
+        this.setParamSimple(map, prefix + "ConfigID", this.ConfigID);
 
     }
 }

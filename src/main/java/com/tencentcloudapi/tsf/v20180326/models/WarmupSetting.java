@@ -31,7 +31,7 @@ public class WarmupSetting extends AbstractModel {
     private Boolean Enabled;
 
     /**
-    * 预热时间
+    * 预热时间，单位秒
     */
     @SerializedName("WarmupTime")
     @Expose
@@ -68,16 +68,16 @@ public class WarmupSetting extends AbstractModel {
     }
 
     /**
-     * Get 预热时间 
-     * @return WarmupTime 预热时间
+     * Get 预热时间，单位秒 
+     * @return WarmupTime 预热时间，单位秒
      */
     public Long getWarmupTime() {
         return this.WarmupTime;
     }
 
     /**
-     * Set 预热时间
-     * @param WarmupTime 预热时间
+     * Set 预热时间，单位秒
+     * @param WarmupTime 预热时间，单位秒
      */
     public void setWarmupTime(Long WarmupTime) {
         this.WarmupTime = WarmupTime;

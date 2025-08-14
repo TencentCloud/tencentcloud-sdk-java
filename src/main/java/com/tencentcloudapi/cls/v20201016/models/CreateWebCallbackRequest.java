@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateWebCallbackRequest extends AbstractModel {
 
     /**
-    * 通知内容名称。
+    * 通知内容名称。最大支持255个字节
     */
     @SerializedName("Name")
     @Expose
@@ -56,23 +56,23 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调。
     private String Method;
 
     /**
-    * 秘钥。
+    * 秘钥。最大支持1024个字节
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-     * Get 通知内容名称。 
-     * @return Name 通知内容名称。
+     * Get 通知内容名称。最大支持255个字节 
+     * @return Name 通知内容名称。最大支持255个字节
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 通知内容名称。
-     * @param Name 通知内容名称。
+     * Set 通知内容名称。最大支持255个字节
+     * @param Name 通知内容名称。最大支持255个字节
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -143,16 +143,16 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调。
     }
 
     /**
-     * Get 秘钥。 
-     * @return Key 秘钥。
+     * Get 秘钥。最大支持1024个字节 
+     * @return Key 秘钥。最大支持1024个字节
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 秘钥。
-     * @param Key 秘钥。
+     * Set 秘钥。最大支持1024个字节
+     * @param Key 秘钥。最大支持1024个字节
      */
     public void setKey(String Key) {
         this.Key = Key;

@@ -73,6 +73,13 @@ public class ClusterAdvancedSettings extends AbstractModel {
     private String ContainerRuntime;
 
     /**
+    * 是否启用 DataPlaneV2（cilium替代kube-proxy） 
+    */
+    @SerializedName("DataPlaneV2")
+    @Expose
+    private Boolean DataPlaneV2;
+
+    /**
     * 是否启用集群删除保护
     */
     @SerializedName("DeletionProtection")
@@ -135,7 +142,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     private String KubeProxyMode;
 
     /**
-    * 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+    * 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
     */
     @SerializedName("NetworkType")
     @Expose
@@ -279,6 +286,22 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
      */
     public void setContainerRuntime(String ContainerRuntime) {
         this.ContainerRuntime = ContainerRuntime;
+    }
+
+    /**
+     * Get 是否启用 DataPlaneV2（cilium替代kube-proxy）  
+     * @return DataPlaneV2 是否启用 DataPlaneV2（cilium替代kube-proxy） 
+     */
+    public Boolean getDataPlaneV2() {
+        return this.DataPlaneV2;
+    }
+
+    /**
+     * Set 是否启用 DataPlaneV2（cilium替代kube-proxy） 
+     * @param DataPlaneV2 是否启用 DataPlaneV2（cilium替代kube-proxy） 
+     */
+    public void setDataPlaneV2(Boolean DataPlaneV2) {
+        this.DataPlaneV2 = DataPlaneV2;
     }
 
     /**
@@ -434,16 +457,16 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     }
 
     /**
-     * Get 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。 
-     * @return NetworkType 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+     * Get 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。 
+     * @return NetworkType 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
-     * @param NetworkType 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+     * Set 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
+     * @param NetworkType 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
@@ -542,6 +565,9 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         if (source.ContainerRuntime != null) {
             this.ContainerRuntime = new String(source.ContainerRuntime);
         }
+        if (source.DataPlaneV2 != null) {
+            this.DataPlaneV2 = new Boolean(source.DataPlaneV2);
+        }
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
@@ -598,6 +624,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         this.setParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
         this.setParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
+        this.setParamSimple(map, prefix + "DataPlaneV2", this.DataPlaneV2);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         this.setParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
         this.setParamArrayObj(map, prefix + "EtcdOverrideConfigs.", this.EtcdOverrideConfigs);

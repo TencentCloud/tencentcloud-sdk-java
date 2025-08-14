@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ModifyAlarmShieldRequest extends AbstractModel {
 
     /**
-    * 屏蔽规则ID。
+    * 屏蔽规则ID。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 通知渠道组id。
+    * 通知渠道组id。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
     */
     @SerializedName("AlarmNoticeId")
     @Expose
     private String AlarmNoticeId;
 
     /**
-    * 屏蔽开始时间（秒级时间戳）。
+    * 屏蔽开始时间，秒级(s)时间戳。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 屏蔽结束时间（秒级时间戳）。
+    * 屏蔽结束时间，秒级(s)时间戳。
     */
     @SerializedName("EndTime")
     @Expose
@@ -74,70 +74,71 @@ public class ModifyAlarmShieldRequest extends AbstractModel {
 
     /**
     * 规则状态。只有规则状态为生效中（status:1）时，才能将其修改为已失效（status:2）。
+枚举：0（未生效），1（生效中），2（已失效）
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 屏蔽规则ID。 
-     * @return TaskId 屏蔽规则ID。
+     * Get 屏蔽规则ID。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID 
+     * @return TaskId 屏蔽规则ID。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 屏蔽规则ID。
-     * @param TaskId 屏蔽规则ID。
+     * Set 屏蔽规则ID。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
+     * @param TaskId 屏蔽规则ID。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 通知渠道组id。 
-     * @return AlarmNoticeId 通知渠道组id。
+     * Get 通知渠道组id。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id 
+     * @return AlarmNoticeId 通知渠道组id。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set 通知渠道组id。
-     * @param AlarmNoticeId 通知渠道组id。
+     * Set 通知渠道组id。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
+     * @param AlarmNoticeId 通知渠道组id。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;
     }
 
     /**
-     * Get 屏蔽开始时间（秒级时间戳）。 
-     * @return StartTime 屏蔽开始时间（秒级时间戳）。
+     * Get 屏蔽开始时间，秒级(s)时间戳。 
+     * @return StartTime 屏蔽开始时间，秒级(s)时间戳。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 屏蔽开始时间（秒级时间戳）。
-     * @param StartTime 屏蔽开始时间（秒级时间戳）。
+     * Set 屏蔽开始时间，秒级(s)时间戳。
+     * @param StartTime 屏蔽开始时间，秒级(s)时间戳。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 屏蔽结束时间（秒级时间戳）。 
-     * @return EndTime 屏蔽结束时间（秒级时间戳）。
+     * Get 屏蔽结束时间，秒级(s)时间戳。 
+     * @return EndTime 屏蔽结束时间，秒级(s)时间戳。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 屏蔽结束时间（秒级时间戳）。
-     * @param EndTime 屏蔽结束时间（秒级时间戳）。
+     * Set 屏蔽结束时间，秒级(s)时间戳。
+     * @param EndTime 屏蔽结束时间，秒级(s)时间戳。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
@@ -192,8 +193,10 @@ public class ModifyAlarmShieldRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则状态。只有规则状态为生效中（status:1）时，才能将其修改为已失效（status:2）。 
+     * Get 规则状态。只有规则状态为生效中（status:1）时，才能将其修改为已失效（status:2）。
+枚举：0（未生效），1（生效中），2（已失效） 
      * @return Status 规则状态。只有规则状态为生效中（status:1）时，才能将其修改为已失效（status:2）。
+枚举：0（未生效），1（生效中），2（已失效）
      */
     public Long getStatus() {
         return this.Status;
@@ -201,7 +204,9 @@ public class ModifyAlarmShieldRequest extends AbstractModel {
 
     /**
      * Set 规则状态。只有规则状态为生效中（status:1）时，才能将其修改为已失效（status:2）。
+枚举：0（未生效），1（生效中），2（已失效）
      * @param Status 规则状态。只有规则状态为生效中（status:1）时，才能将其修改为已失效（status:2）。
+枚举：0（未生效），1（生效中），2（已失效）
      */
     public void setStatus(Long Status) {
         this.Status = Status;

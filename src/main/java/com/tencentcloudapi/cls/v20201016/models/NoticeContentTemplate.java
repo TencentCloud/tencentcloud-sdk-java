@@ -79,14 +79,14 @@ public class NoticeContentTemplate extends AbstractModel {
     private Long SubUin;
 
     /**
-    * 创建时间 秒级时间戳。
+    * 创建时间 秒级(s)时间戳。
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 更新时间 秒级时间戳。
+    * 更新时间 秒级(s)时间戳。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -229,32 +229,32 @@ public class NoticeContentTemplate extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 秒级时间戳。 
-     * @return CreateTime 创建时间 秒级时间戳。
+     * Get 创建时间 秒级(s)时间戳。 
+     * @return CreateTime 创建时间 秒级(s)时间戳。
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间 秒级时间戳。
-     * @param CreateTime 创建时间 秒级时间戳。
+     * Set 创建时间 秒级(s)时间戳。
+     * @param CreateTime 创建时间 秒级(s)时间戳。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 秒级时间戳。 
-     * @return UpdateTime 更新时间 秒级时间戳。
+     * Get 更新时间 秒级(s)时间戳。 
+     * @return UpdateTime 更新时间 秒级(s)时间戳。
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间 秒级时间戳。
-     * @param UpdateTime 更新时间 秒级时间戳。
+     * Set 更新时间 秒级(s)时间戳。
+     * @param UpdateTime 更新时间 秒级(s)时间戳。
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;

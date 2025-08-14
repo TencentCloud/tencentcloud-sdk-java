@@ -87,7 +87,7 @@ public class InstanceEnrichedInfo extends AbstractModel {
     private String ApplicationName;
 
     /**
-    * 应用类型
+    * 应用类型，C表示容器应用，V表示虚拟机应用
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -108,7 +108,7 @@ public class InstanceEnrichedInfo extends AbstractModel {
     private String ClusterName;
 
     /**
-    * 集群类型
+    * 集群类型，C表示容器集群，V表示虚拟机集群
     */
     @SerializedName("ClusterType")
     @Expose
@@ -287,16 +287,16 @@ public class InstanceEnrichedInfo extends AbstractModel {
     }
 
     /**
-     * Get 应用类型 
-     * @return ApplicationType 应用类型
+     * Get 应用类型，C表示容器应用，V表示虚拟机应用 
+     * @return ApplicationType 应用类型，C表示容器应用，V表示虚拟机应用
      */
     public String getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set 应用类型
-     * @param ApplicationType 应用类型
+     * Set 应用类型，C表示容器应用，V表示虚拟机应用
+     * @param ApplicationType 应用类型，C表示容器应用，V表示虚拟机应用
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
@@ -335,16 +335,16 @@ public class InstanceEnrichedInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群类型 
-     * @return ClusterType 集群类型
+     * Get 集群类型，C表示容器集群，V表示虚拟机集群 
+     * @return ClusterType 集群类型，C表示容器集群，V表示虚拟机集群
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型
-     * @param ClusterType 集群类型
+     * Set 集群类型，C表示容器集群，V表示虚拟机集群
+     * @param ClusterType 集群类型，C表示容器集群，V表示虚拟机集群
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

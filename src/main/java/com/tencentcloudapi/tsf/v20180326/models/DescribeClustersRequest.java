@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribeClustersRequest extends AbstractModel {
 
     /**
-    * 搜索词
+    * 搜索词，可以搜索ID/名称/备注/标签
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 排序字段
+    * 排序字段，例如创建时间
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序方式
+    * 排序方式，0表示升序，1表示倒序
     */
     @SerializedName("OrderType")
     @Expose
     private Long OrderType;
 
     /**
-    * 偏移量
+    * 偏移量，默认0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页个数
+    * 分页个数，0-50 之间，默认20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 集群类型
+    * 集群类型，C表示容器集群，V表示虚拟机集群
     */
     @SerializedName("ClusterType")
     @Expose
@@ -73,96 +73,96 @@ public class DescribeClustersRequest extends AbstractModel {
     private String [] ClusterIdList;
 
     /**
-     * Get 搜索词 
-     * @return SearchWord 搜索词
+     * Get 搜索词，可以搜索ID/名称/备注/标签 
+     * @return SearchWord 搜索词，可以搜索ID/名称/备注/标签
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 搜索词
-     * @param SearchWord 搜索词
+     * Set 搜索词，可以搜索ID/名称/备注/标签
+     * @param SearchWord 搜索词，可以搜索ID/名称/备注/标签
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 排序字段 
-     * @return OrderBy 排序字段
+     * Get 排序字段，例如创建时间 
+     * @return OrderBy 排序字段，例如创建时间
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序字段
-     * @param OrderBy 排序字段
+     * Set 排序字段，例如创建时间
+     * @param OrderBy 排序字段，例如创建时间
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序方式 
-     * @return OrderType 排序方式
+     * Get 排序方式，0表示升序，1表示倒序 
+     * @return OrderType 排序方式，0表示升序，1表示倒序
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 排序方式
-     * @param OrderType 排序方式
+     * Set 排序方式，0表示升序，1表示倒序
+     * @param OrderType 排序方式，0表示升序，1表示倒序
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认0 
+     * @return Offset 偏移量，默认0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认0
+     * @param Offset 偏移量，默认0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页个数 
-     * @return Limit 分页个数
+     * Get 分页个数，0-50 之间，默认20 
+     * @return Limit 分页个数，0-50 之间，默认20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页个数
-     * @param Limit 分页个数
+     * Set 分页个数，0-50 之间，默认20
+     * @param Limit 分页个数，0-50 之间，默认20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 集群类型 
-     * @return ClusterType 集群类型
+     * Get 集群类型，C表示容器集群，V表示虚拟机集群 
+     * @return ClusterType 集群类型，C表示容器集群，V表示虚拟机集群
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型
-     * @param ClusterType 集群类型
+     * Set 集群类型，C表示容器集群，V表示虚拟机集群
+     * @param ClusterType 集群类型，C表示容器集群，V表示虚拟机集群
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

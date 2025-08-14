@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeStatisticsRequest extends AbstractModel {
 
     /**
-    * 类型：Interface、Service、Group、Instance、SQL、NoSQL
+    * 统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 步长，单位s：60、3600、86400
+    * 步长，单位秒。可选值 60、3600、86400
     */
     @SerializedName("TimeStep")
     @Expose
@@ -52,7 +52,9 @@ public class DescribeStatisticsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+    * 命名空间ID。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
+
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -101,7 +103,7 @@ public class DescribeStatisticsRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-    * 维度
+    * 维度。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
     */
     @SerializedName("MetricDimensionValues")
     @Expose
@@ -115,53 +117,54 @@ public class DescribeStatisticsRequest extends AbstractModel {
     private String BucketKey;
 
     /**
-    * 数据库
+    * 数据库名称
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * 命名空间id数组
+    * 命名空间ID数组。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
     */
     @SerializedName("NamespaceIdList")
     @Expose
     private String [] NamespaceIdList;
 
     /**
-    * 独占配置中心的ID
+    * 独占配置中心的ID。
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。
     */
     @SerializedName("ConfigCenterInstanceId")
     @Expose
     private String ConfigCenterInstanceId;
 
     /**
-     * Get 类型：Interface、Service、Group、Instance、SQL、NoSQL 
-     * @return Type 类型：Interface、Service、Group、Instance、SQL、NoSQL
+     * Get 统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型 
+     * @return Type 统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型：Interface、Service、Group、Instance、SQL、NoSQL
-     * @param Type 类型：Interface、Service、Group、Instance、SQL、NoSQL
+     * Set 统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型
+     * @param Type 统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 步长，单位s：60、3600、86400 
-     * @return TimeStep 步长，单位s：60、3600、86400
+     * Get 步长，单位秒。可选值 60、3600、86400 
+     * @return TimeStep 步长，单位秒。可选值 60、3600、86400
      */
     public Long getTimeStep() {
         return this.TimeStep;
     }
 
     /**
-     * Set 步长，单位s：60、3600、86400
-     * @param TimeStep 步长，单位s：60、3600、86400
+     * Set 步长，单位秒。可选值 60、3600、86400
+     * @param TimeStep 步长，单位秒。可选值 60、3600、86400
      */
     public void setTimeStep(Long TimeStep) {
         this.TimeStep = TimeStep;
@@ -200,16 +203,24 @@ public class DescribeStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。 
-     * @return NamespaceId 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+     * Get 命名空间ID。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
+ 
+     * @return NamespaceId 命名空间ID。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
+
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
-     * @param NamespaceId 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+     * Set 命名空间ID。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
+
+     * @param NamespaceId 命名空间ID。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
+
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
@@ -312,16 +323,16 @@ public class DescribeStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 维度 
-     * @return MetricDimensionValues 维度
+     * Get 维度。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一 
+     * @return MetricDimensionValues 维度。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
      */
     public MetricDimensionValue [] getMetricDimensionValues() {
         return this.MetricDimensionValues;
     }
 
     /**
-     * Set 维度
-     * @param MetricDimensionValues 维度
+     * Set 维度。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
+     * @param MetricDimensionValues 维度。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
      */
     public void setMetricDimensionValues(MetricDimensionValue [] MetricDimensionValues) {
         this.MetricDimensionValues = MetricDimensionValues;
@@ -344,48 +355,52 @@ public class DescribeStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据库 
-     * @return DbName 数据库
+     * Get 数据库名称 
+     * @return DbName 数据库名称
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 数据库
-     * @param DbName 数据库
+     * Set 数据库名称
+     * @param DbName 数据库名称
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 命名空间id数组 
-     * @return NamespaceIdList 命名空间id数组
+     * Get 命名空间ID数组。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一 
+     * @return NamespaceIdList 命名空间ID数组。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
      */
     public String [] getNamespaceIdList() {
         return this.NamespaceIdList;
     }
 
     /**
-     * Set 命名空间id数组
-     * @param NamespaceIdList 命名空间id数组
+     * Set 命名空间ID数组。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
+     * @param NamespaceIdList 命名空间ID数组。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
      */
     public void setNamespaceIdList(String [] NamespaceIdList) {
         this.NamespaceIdList = NamespaceIdList;
     }
 
     /**
-     * Get 独占配置中心的ID 
-     * @return ConfigCenterInstanceId 独占配置中心的ID
+     * Get 独占配置中心的ID。
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。 
+     * @return ConfigCenterInstanceId 独占配置中心的ID。
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。
      */
     public String getConfigCenterInstanceId() {
         return this.ConfigCenterInstanceId;
     }
 
     /**
-     * Set 独占配置中心的ID
-     * @param ConfigCenterInstanceId 独占配置中心的ID
+     * Set 独占配置中心的ID。
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。
+     * @param ConfigCenterInstanceId 独占配置中心的ID。
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。
      */
     public void setConfigCenterInstanceId(String ConfigCenterInstanceId) {
         this.ConfigCenterInstanceId = ConfigCenterInstanceId;

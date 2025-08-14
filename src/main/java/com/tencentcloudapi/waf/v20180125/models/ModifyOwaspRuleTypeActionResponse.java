@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBSlowlogsResponse extends AbstractModel {
-
-    /**
-    * 本次返回多少条数据
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 慢查询日志详情
-    */
-    @SerializedName("Detail")
-    @Expose
-    private SlowlogDetail Detail;
+public class ModifyOwaspRuleTypeActionResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,38 +29,6 @@ public class DescribeDBSlowlogsResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 本次返回多少条数据 
-     * @return TotalCount 本次返回多少条数据
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 本次返回多少条数据
-     * @param TotalCount 本次返回多少条数据
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 慢查询日志详情 
-     * @return Detail 慢查询日志详情
-     */
-    public SlowlogDetail getDetail() {
-        return this.Detail;
-    }
-
-    /**
-     * Set 慢查询日志详情
-     * @param Detail 慢查询日志详情
-     */
-    public void setDetail(SlowlogDetail Detail) {
-        this.Detail = Detail;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -92,20 +46,14 @@ public class DescribeDBSlowlogsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeDBSlowlogsResponse() {
+    public ModifyOwaspRuleTypeActionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBSlowlogsResponse(DescribeDBSlowlogsResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Detail != null) {
-            this.Detail = new SlowlogDetail(source.Detail);
-        }
+    public ModifyOwaspRuleTypeActionResponse(ModifyOwaspRuleTypeActionResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -116,8 +64,6 @@ public class DescribeDBSlowlogsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamObj(map, prefix + "Detail.", this.Detail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeContainerEventsRequest extends AbstractModel {
 
     /**
-    * event 的资源类型, group 或者 instance
+    * event 的资源类型, 仅支持 group
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * event 的资源 id
+    * 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
     */
     @SerializedName("ResourceId")
     @Expose
@@ -52,21 +52,21 @@ public class DescribeContainerEventsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 当类型是 instance 时需要
+    * 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * event的资源kind
+    * event的资源种类
     */
     @SerializedName("Kind")
     @Expose
     private String Kind;
 
     /**
-    * event 的type
+    * event 的事件级别
     */
     @SerializedName("Type")
     @Expose
@@ -87,32 +87,32 @@ public class DescribeContainerEventsRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-     * Get event 的资源类型, group 或者 instance 
-     * @return ResourceType event 的资源类型, group 或者 instance
+     * Get event 的资源类型, 仅支持 group 
+     * @return ResourceType event 的资源类型, 仅支持 group
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set event 的资源类型, group 或者 instance
-     * @param ResourceType event 的资源类型, group 或者 instance
+     * Set event 的资源类型, 仅支持 group
+     * @param ResourceType event 的资源类型, 仅支持 group
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get event 的资源 id 
-     * @return ResourceId event 的资源 id
+     * Get 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd 
+     * @return ResourceId 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set event 的资源 id
-     * @param ResourceId event 的资源 id
+     * Set 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
+     * @param ResourceId 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
@@ -151,48 +151,48 @@ public class DescribeContainerEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get 当类型是 instance 时需要 
-     * @return GroupId 当类型是 instance 时需要
+     * Get 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。 
+     * @return GroupId 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 当类型是 instance 时需要
-     * @param GroupId 当类型是 instance 时需要
+     * Set 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。
+     * @param GroupId 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get event的资源kind 
-     * @return Kind event的资源kind
+     * Get event的资源种类 
+     * @return Kind event的资源种类
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set event的资源kind
-     * @param Kind event的资源kind
+     * Set event的资源种类
+     * @param Kind event的资源种类
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get event 的type 
-     * @return Type event 的type
+     * Get event 的事件级别 
+     * @return Type event 的事件级别
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set event 的type
-     * @param Type event 的type
+     * Set event 的事件级别
+     * @param Type event 的事件级别
      */
     public void setType(String Type) {
         this.Type = Type;

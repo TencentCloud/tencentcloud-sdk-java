@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DisableTaskFlowRequest extends AbstractModel {
 
     /**
-    * 工作流 ID。前往工作流管理，在工作流列表第一列和工作流详情页查看工作流ID。
+    * 工作流 ID。[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)列表页查看工作流ID。
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-     * Get 工作流 ID。前往工作流管理，在工作流列表第一列和工作流详情页查看工作流ID。 
-     * @return FlowId 工作流 ID。前往工作流管理，在工作流列表第一列和工作流详情页查看工作流ID。
+     * Get 工作流 ID。[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)列表页查看工作流ID。 
+     * @return FlowId 工作流 ID。[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)列表页查看工作流ID。
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 工作流 ID。前往工作流管理，在工作流列表第一列和工作流详情页查看工作流ID。
-     * @param FlowId 工作流 ID。前往工作流管理，在工作流列表第一列和工作流详情页查看工作流ID。
+     * Set 工作流 ID。[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)列表页查看工作流ID。
+     * @param FlowId 工作流 ID。[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)列表页查看工作流ID。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

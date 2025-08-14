@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyWebCallbackRequest extends AbstractModel {
 
     /**
-    * 告警渠道回调配置ID。
+    * 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
     */
     @SerializedName("WebCallbackId")
     @Expose
     private String WebCallbackId;
 
     /**
-    * 告警渠道回调配置名称。
+    * 告警渠道回调配置名称。最大支持255个字节
     */
     @SerializedName("Name")
     @Expose
@@ -65,39 +65,39 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
     private String Method;
 
     /**
-    * 秘钥信息。
+    * 秘钥信息。最大支持1024个字节
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-     * Get 告警渠道回调配置ID。 
-     * @return WebCallbackId 告警渠道回调配置ID。
+     * Get 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID 
+     * @return WebCallbackId 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
      */
     public String getWebCallbackId() {
         return this.WebCallbackId;
     }
 
     /**
-     * Set 告警渠道回调配置ID。
-     * @param WebCallbackId 告警渠道回调配置ID。
+     * Set 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
+     * @param WebCallbackId 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
      */
     public void setWebCallbackId(String WebCallbackId) {
         this.WebCallbackId = WebCallbackId;
     }
 
     /**
-     * Get 告警渠道回调配置名称。 
-     * @return Name 告警渠道回调配置名称。
+     * Get 告警渠道回调配置名称。最大支持255个字节 
+     * @return Name 告警渠道回调配置名称。最大支持255个字节
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 告警渠道回调配置名称。
-     * @param Name 告警渠道回调配置名称。
+     * Set 告警渠道回调配置名称。最大支持255个字节
+     * @param Name 告警渠道回调配置名称。最大支持255个字节
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -176,16 +176,16 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
     }
 
     /**
-     * Get 秘钥信息。 
-     * @return Key 秘钥信息。
+     * Get 秘钥信息。最大支持1024个字节 
+     * @return Key 秘钥信息。最大支持1024个字节
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 秘钥信息。
-     * @param Key 秘钥信息。
+     * Set 秘钥信息。最大支持1024个字节
+     * @param Key 秘钥信息。最大支持1024个字节
      */
     public void setKey(String Key) {
         this.Key = Key;

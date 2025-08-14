@@ -185,11 +185,18 @@ public class CreateRoomRequest extends AbstractModel {
     private Long IsGradingRequiredPostClass;
 
     /**
-    * 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
+    * 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
     */
     @SerializedName("RoomType")
     @Expose
     private Long RoomType;
+
+    /**
+    * 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+    */
+    @SerializedName("Guests")
+    @Expose
+    private String [] Guests;
 
     /**
     * 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
@@ -227,8 +234,12 @@ public class CreateRoomRequest extends AbstractModel {
     private String RecordBackground;
 
     /**
-    * 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
-数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+    * 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+
+自定义场景参数的含义。如下：
+     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。 
+    lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）
+     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
     */
     @SerializedName("RecordScene")
     @Expose
@@ -659,19 +670,35 @@ public class CreateRoomRequest extends AbstractModel {
     }
 
     /**
-     * Get 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏 
-     * @return RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
+     * Get 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏 
+     * @return RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
      */
     public Long getRoomType() {
         return this.RoomType;
     }
 
     /**
-     * Set 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
-     * @param RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)注：大班课的布局(layout)只有三分屏
+     * Set 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
+     * @param RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
      */
     public void setRoomType(Long RoomType) {
         this.RoomType = RoomType;
+    }
+
+    /**
+     * Get 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效 
+     * @return Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     */
+    public String [] getGuests() {
+        return this.Guests;
+    }
+
+    /**
+     * Set 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     * @param Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     */
+    public void setGuests(String [] Guests) {
+        this.Guests = Guests;
     }
 
     /**
@@ -755,20 +782,36 @@ public class CreateRoomRequest extends AbstractModel {
     }
 
     /**
-     * Get 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
-数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。 
-     * @return RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
-数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+     * Get 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+
+自定义场景参数的含义。如下：
+     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。 
+    lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）
+     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。 
+     * @return RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+
+自定义场景参数的含义。如下：
+     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。 
+    lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）
+     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
      */
     public String getRecordScene() {
         return this.RecordScene;
     }
 
     /**
-     * Set 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
-数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
-     * @param RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
-数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+     * Set 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+
+自定义场景参数的含义。如下：
+     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。 
+    lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）
+     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
+     * @param RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+
+自定义场景参数的含义。如下：
+     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。 
+    lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）
+     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
      */
     public void setRecordScene(String RecordScene) {
         this.RecordScene = RecordScene;
@@ -919,6 +962,12 @@ public class CreateRoomRequest extends AbstractModel {
         if (source.RoomType != null) {
             this.RoomType = new Long(source.RoomType);
         }
+        if (source.Guests != null) {
+            this.Guests = new String[source.Guests.length];
+            for (int i = 0; i < source.Guests.length; i++) {
+                this.Guests[i] = new String(source.Guests[i]);
+            }
+        }
         if (source.EndDelayTime != null) {
             this.EndDelayTime = new Long(source.EndDelayTime);
         }
@@ -978,6 +1027,7 @@ public class CreateRoomRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
         this.setParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
         this.setParamSimple(map, prefix + "RoomType", this.RoomType);
+        this.setParamArraySimple(map, prefix + "Guests.", this.Guests);
         this.setParamSimple(map, prefix + "EndDelayTime", this.EndDelayTime);
         this.setParamSimple(map, prefix + "LiveType", this.LiveType);
         this.setParamSimple(map, prefix + "RecordLiveUrl", this.RecordLiveUrl);

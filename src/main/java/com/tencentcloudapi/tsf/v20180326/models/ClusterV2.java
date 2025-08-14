@@ -47,7 +47,7 @@ public class ClusterV2 extends AbstractModel {
     private String ClusterDesc;
 
     /**
-    * 集群类型
+    * 集群类型，C表示容器集群，V表示虚拟机集群
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
@@ -143,7 +143,7 @@ public class ClusterV2 extends AbstractModel {
     private Boolean DeleteFlag;
 
     /**
-    * 创建时间
+    * 创建时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -151,7 +151,7 @@ public class ClusterV2 extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 更新时间
+    * 更新时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -295,7 +295,7 @@ public class ClusterV2 extends AbstractModel {
     private String KuberneteApiServer;
 
     /**
-    * K : kubeconfig, S : service account
+    * K 表示通过kubeconfig 导入, S 表示通过service account导入
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KuberneteNativeType")
@@ -381,9 +381,9 @@ public class ClusterV2 extends AbstractModel {
     }
 
     /**
-     * Get 集群类型
+     * Get 集群类型，C表示容器集群，V表示虚拟机集群
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterType 集群类型
+     * @return ClusterType 集群类型，C表示容器集群，V表示虚拟机集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
@@ -391,9 +391,9 @@ public class ClusterV2 extends AbstractModel {
     }
 
     /**
-     * Set 集群类型
+     * Set 集群类型，C表示容器集群，V表示虚拟机集群
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterType 集群类型
+     * @param ClusterType 集群类型，C表示容器集群，V表示虚拟机集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {
@@ -621,9 +621,9 @@ public class ClusterV2 extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get 创建时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime 创建时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -631,9 +631,9 @@ public class ClusterV2 extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set 创建时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime 创建时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -641,9 +641,9 @@ public class ClusterV2 extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get 更新时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime 更新时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -651,9 +651,9 @@ public class ClusterV2 extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set 更新时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime 更新时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -1001,9 +1001,9 @@ public class ClusterV2 extends AbstractModel {
     }
 
     /**
-     * Get K : kubeconfig, S : service account
+     * Get K 表示通过kubeconfig 导入, S 表示通过service account导入
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KuberneteNativeType K : kubeconfig, S : service account
+     * @return KuberneteNativeType K 表示通过kubeconfig 导入, S 表示通过service account导入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKuberneteNativeType() {
@@ -1011,9 +1011,9 @@ public class ClusterV2 extends AbstractModel {
     }
 
     /**
-     * Set K : kubeconfig, S : service account
+     * Set K 表示通过kubeconfig 导入, S 表示通过service account导入
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KuberneteNativeType K : kubeconfig, S : service account
+     * @param KuberneteNativeType K 表示通过kubeconfig 导入, S 表示通过service account导入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKuberneteNativeType(String KuberneteNativeType) {

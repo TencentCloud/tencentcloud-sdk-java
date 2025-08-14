@@ -59,6 +59,22 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel {
     private HighlightSegmentItem [] SegmentSet;
 
     /**
+    * 智能精彩集锦地址。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HighlightUrl")
+    @Expose
+    private String HighlightUrl;
+
+    /**
+    * 智能精彩集锦封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CovImgUrl")
+    @Expose
+    private String CovImgUrl;
+
+    /**
      * Get 智能精彩集锦地址。 
      * @return HighlightPath 智能精彩集锦地址。
      */
@@ -138,6 +154,46 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel {
         this.SegmentSet = SegmentSet;
     }
 
+    /**
+     * Get 智能精彩集锦地址。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HighlightUrl 智能精彩集锦地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHighlightUrl() {
+        return this.HighlightUrl;
+    }
+
+    /**
+     * Set 智能精彩集锦地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HighlightUrl 智能精彩集锦地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHighlightUrl(String HighlightUrl) {
+        this.HighlightUrl = HighlightUrl;
+    }
+
+    /**
+     * Get 智能精彩集锦封面地址。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CovImgUrl 智能精彩集锦封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCovImgUrl() {
+        return this.CovImgUrl;
+    }
+
+    /**
+     * Set 智能精彩集锦封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CovImgUrl 智能精彩集锦封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCovImgUrl(String CovImgUrl) {
+        this.CovImgUrl = CovImgUrl;
+    }
+
     public MediaAiAnalysisHighlightItem() {
     }
 
@@ -164,6 +220,12 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel {
                 this.SegmentSet[i] = new HighlightSegmentItem(source.SegmentSet[i]);
             }
         }
+        if (source.HighlightUrl != null) {
+            this.HighlightUrl = new String(source.HighlightUrl);
+        }
+        if (source.CovImgUrl != null) {
+            this.CovImgUrl = new String(source.CovImgUrl);
+        }
     }
 
 
@@ -176,6 +238,8 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+        this.setParamSimple(map, prefix + "HighlightUrl", this.HighlightUrl);
+        this.setParamSimple(map, prefix + "CovImgUrl", this.CovImgUrl);
 
     }
 }

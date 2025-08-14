@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateNoticeContentRequest extends AbstractModel {
 
     /**
-    * 模板名称。
+    * 模板名称。最大支持255个字节
     */
     @SerializedName("Name")
     @Expose
@@ -45,16 +45,16 @@ public class CreateNoticeContentRequest extends AbstractModel {
     private NoticeContent [] NoticeContents;
 
     /**
-     * Get 模板名称。 
-     * @return Name 模板名称。
+     * Get 模板名称。最大支持255个字节 
+     * @return Name 模板名称。最大支持255个字节
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模板名称。
-     * @param Name 模板名称。
+     * Set 模板名称。最大支持255个字节
+     * @param Name 模板名称。最大支持255个字节
      */
     public void setName(String Name) {
         this.Name = Name;

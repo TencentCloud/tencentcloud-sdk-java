@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RemoveInstancesRequest extends AbstractModel {
 
     /**
-    * 集群 ID
+    * 集群 ID。调用[DescribeSimpleClusters](https://cloud.tencent.com/document/api/649/36047)查询已创建的集群或通过[CreateCluster](https://cloud.tencent.com/document/api/649/36049)接口创建新的集群。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -38,16 +38,16 @@ public class RemoveInstancesRequest extends AbstractModel {
     private String [] InstanceIdList;
 
     /**
-     * Get 集群 ID 
-     * @return ClusterId 集群 ID
+     * Get 集群 ID。调用[DescribeSimpleClusters](https://cloud.tencent.com/document/api/649/36047)查询已创建的集群或通过[CreateCluster](https://cloud.tencent.com/document/api/649/36049)接口创建新的集群。 
+     * @return ClusterId 集群 ID。调用[DescribeSimpleClusters](https://cloud.tencent.com/document/api/649/36047)查询已创建的集群或通过[CreateCluster](https://cloud.tencent.com/document/api/649/36049)接口创建新的集群。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群 ID
-     * @param ClusterId 集群 ID
+     * Set 集群 ID。调用[DescribeSimpleClusters](https://cloud.tencent.com/document/api/649/36047)查询已创建的集群或通过[CreateCluster](https://cloud.tencent.com/document/api/649/36049)接口创建新的集群。
+     * @param ClusterId 集群 ID。调用[DescribeSimpleClusters](https://cloud.tencent.com/document/api/649/36047)查询已创建的集群或通过[CreateCluster](https://cloud.tencent.com/document/api/649/36049)接口创建新的集群。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

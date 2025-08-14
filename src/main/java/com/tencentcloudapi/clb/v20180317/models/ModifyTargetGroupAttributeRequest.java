@@ -45,12 +45,22 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
     private Long Port;
 
     /**
-    * 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
-</ul>
-v1目标组类型不支持设置Weight参数。
+    * 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+    */
+    @SerializedName("ScheduleAlgorithm")
+    @Expose
+    private String ScheduleAlgorithm;
+
+    /**
+    * 健康检查详情。
+    */
+    @SerializedName("HealthCheck")
+    @Expose
+    private TargetGroupHealthCheck HealthCheck;
+
+    /**
+    * 后端服务默认权重, 其中：<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1目标组类型不支持设置Weight参数。</li> </ul>
     */
     @SerializedName("Weight")
     @Expose
@@ -119,36 +129,52 @@ v1目标组类型不支持设置Weight参数。
     }
 
     /**
-     * Get 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
-</ul>
-v1目标组类型不支持设置Weight参数。 
-     * @return Weight 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
-</ul>
-v1目标组类型不支持设置Weight参数。
+     * Get 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur> 
+     * @return ScheduleAlgorithm 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+     */
+    public String getScheduleAlgorithm() {
+        return this.ScheduleAlgorithm;
+    }
+
+    /**
+     * Set 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+     * @param ScheduleAlgorithm 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+     */
+    public void setScheduleAlgorithm(String ScheduleAlgorithm) {
+        this.ScheduleAlgorithm = ScheduleAlgorithm;
+    }
+
+    /**
+     * Get 健康检查详情。 
+     * @return HealthCheck 健康检查详情。
+     */
+    public TargetGroupHealthCheck getHealthCheck() {
+        return this.HealthCheck;
+    }
+
+    /**
+     * Set 健康检查详情。
+     * @param HealthCheck 健康检查详情。
+     */
+    public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
+        this.HealthCheck = HealthCheck;
+    }
+
+    /**
+     * Get 后端服务默认权重, 其中：<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1目标组类型不支持设置Weight参数。</li> </ul> 
+     * @return Weight 后端服务默认权重, 其中：<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1目标组类型不支持设置Weight参数。</li> </ul>
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
-</ul>
-v1目标组类型不支持设置Weight参数。
-     * @param Weight 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
-</ul>
-v1目标组类型不支持设置Weight参数。
+     * Set 后端服务默认权重, 其中：<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1目标组类型不支持设置Weight参数。</li> </ul>
+     * @param Weight 后端服务默认权重, 其中：<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1目标组类型不支持设置Weight参数。</li> </ul>
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
@@ -203,6 +229,12 @@ v1目标组类型不支持设置Weight参数。
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.ScheduleAlgorithm != null) {
+            this.ScheduleAlgorithm = new String(source.ScheduleAlgorithm);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new TargetGroupHealthCheck(source.HealthCheck);
+        }
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
         }
@@ -222,6 +254,8 @@ v1目标组类型不支持设置Weight参数。
         this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
         this.setParamSimple(map, prefix + "TargetGroupName", this.TargetGroupName);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
+        this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);

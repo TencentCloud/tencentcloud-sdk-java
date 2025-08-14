@@ -46,7 +46,7 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
     private String ScrollId;
 
     /**
-    * 查询状态
+    * 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -54,7 +54,7 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
     private String Status;
 
     /**
-    * 游标ID
+    * 查询es使用searchAfter时，游标
     */
     @SerializedName("SearchAfter")
     @Expose
@@ -113,9 +113,9 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
     }
 
     /**
-     * Get 查询状态
+     * Get 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 查询状态
+     * @return Status 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -123,9 +123,9 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
     }
 
     /**
-     * Set 查询状态
+     * Set 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 查询状态
+     * @param Status 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -133,16 +133,16 @@ public class TsfPageStdoutLogV2 extends AbstractModel {
     }
 
     /**
-     * Get 游标ID 
-     * @return SearchAfter 游标ID
+     * Get 查询es使用searchAfter时，游标 
+     * @return SearchAfter 查询es使用searchAfter时，游标
      */
     public String [] getSearchAfter() {
         return this.SearchAfter;
     }
 
     /**
-     * Set 游标ID
-     * @param SearchAfter 游标ID
+     * Set 查询es使用searchAfter时，游标
+     * @param SearchAfter 查询es使用searchAfter时，游标
      */
     public void setSearchAfter(String [] SearchAfter) {
         this.SearchAfter = SearchAfter;

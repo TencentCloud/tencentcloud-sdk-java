@@ -589,6 +589,19 @@ Type，根据任务类型精确查找
     }
 
     /**
+     *查询主题关联的生产者列表信息，Filters支持以下筛选条件：
+- ClientIP，客户端IP
+- ClientID，客户端ID
+     * @param req DescribeProducerListRequest
+     * @return DescribeProducerListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProducerListResponse DescribeProducerList(DescribeProducerListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProducerList", DescribeProducerListResponse.class);
+    }
+
+    /**
      *查询产品售卖规格，针对 RocketMQ 5.x 集群。
      * @param req DescribeProductSKUsRequest
      * @return DescribeProductSKUsResponse

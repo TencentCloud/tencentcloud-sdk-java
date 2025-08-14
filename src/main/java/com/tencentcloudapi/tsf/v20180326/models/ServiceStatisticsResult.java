@@ -38,7 +38,7 @@ public class ServiceStatisticsResult extends AbstractModel {
     private String Method;
 
     /**
-    * 微服务Id
+    * 微服务ID
     */
     @SerializedName("MicroserviceId")
     @Expose
@@ -94,7 +94,7 @@ public class ServiceStatisticsResult extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 部署组id
+    * 部署组ID
     */
     @SerializedName("GroupId")
     @Expose
@@ -108,7 +108,7 @@ public class ServiceStatisticsResult extends AbstractModel {
     private String GroupName;
 
     /**
-    * 部署组类型
+    * 集群类型，C：容器集群，V：虚拟机集群
     */
     @SerializedName("ClusterType")
     @Expose
@@ -129,14 +129,14 @@ public class ServiceStatisticsResult extends AbstractModel {
     private Long InstanceExist;
 
     /**
-    * 应用id
+    * 应用ID
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * 微服务类型
+    * 微服务类型。RAW：裸应用，M：mesh应用，N：普通应用，G：网关应用
     */
     @SerializedName("MicroserviceType")
     @Expose
@@ -206,28 +206,28 @@ public class ServiceStatisticsResult extends AbstractModel {
     private Long InstanceTotalCount;
 
     /**
-    * normal/error
+    * 状态。normal：正常，warn：警告，error：错误
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * normal/warn/error
+    * 请求错误率等级。normal：正常，warn：警告，error：错误
     */
     @SerializedName("ErrorRateLevel")
     @Expose
     private String ErrorRateLevel;
 
     /**
-    * normal/warn/error
+    * 请求平均耗时等级。normal：正常，warn：警告，error：错误
     */
     @SerializedName("AvgTimeConsumingLevel")
     @Expose
     private String AvgTimeConsumingLevel;
 
     /**
-    * normal/warn/error
+    * 应用程序性能指数等级。normal：正常，warn：警告，error：错误
     */
     @SerializedName("ApdexLevel")
     @Expose
@@ -266,16 +266,16 @@ public class ServiceStatisticsResult extends AbstractModel {
     }
 
     /**
-     * Get 微服务Id 
-     * @return MicroserviceId 微服务Id
+     * Get 微服务ID 
+     * @return MicroserviceId 微服务ID
      */
     public String getMicroserviceId() {
         return this.MicroserviceId;
     }
 
     /**
-     * Set 微服务Id
-     * @param MicroserviceId 微服务Id
+     * Set 微服务ID
+     * @param MicroserviceId 微服务ID
      */
     public void setMicroserviceId(String MicroserviceId) {
         this.MicroserviceId = MicroserviceId;
@@ -394,16 +394,16 @@ public class ServiceStatisticsResult extends AbstractModel {
     }
 
     /**
-     * Get 部署组id 
-     * @return GroupId 部署组id
+     * Get 部署组ID 
+     * @return GroupId 部署组ID
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组id
-     * @param GroupId 部署组id
+     * Set 部署组ID
+     * @param GroupId 部署组ID
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -426,16 +426,16 @@ public class ServiceStatisticsResult extends AbstractModel {
     }
 
     /**
-     * Get 部署组类型 
-     * @return ClusterType 部署组类型
+     * Get 集群类型，C：容器集群，V：虚拟机集群 
+     * @return ClusterType 集群类型，C：容器集群，V：虚拟机集群
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 部署组类型
-     * @param ClusterType 部署组类型
+     * Set 集群类型，C：容器集群，V：虚拟机集群
+     * @param ClusterType 集群类型，C：容器集群，V：虚拟机集群
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
@@ -474,32 +474,32 @@ public class ServiceStatisticsResult extends AbstractModel {
     }
 
     /**
-     * Get 应用id 
-     * @return ApplicationId 应用id
+     * Get 应用ID 
+     * @return ApplicationId 应用ID
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 应用id
-     * @param ApplicationId 应用id
+     * Set 应用ID
+     * @param ApplicationId 应用ID
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 微服务类型 
-     * @return MicroserviceType 微服务类型
+     * Get 微服务类型。RAW：裸应用，M：mesh应用，N：普通应用，G：网关应用 
+     * @return MicroserviceType 微服务类型。RAW：裸应用，M：mesh应用，N：普通应用，G：网关应用
      */
     public String getMicroserviceType() {
         return this.MicroserviceType;
     }
 
     /**
-     * Set 微服务类型
-     * @param MicroserviceType 微服务类型
+     * Set 微服务类型。RAW：裸应用，M：mesh应用，N：普通应用，G：网关应用
+     * @param MicroserviceType 微服务类型。RAW：裸应用，M：mesh应用，N：普通应用，G：网关应用
      */
     public void setMicroserviceType(String MicroserviceType) {
         this.MicroserviceType = MicroserviceType;
@@ -650,64 +650,64 @@ public class ServiceStatisticsResult extends AbstractModel {
     }
 
     /**
-     * Get normal/error 
-     * @return Status normal/error
+     * Get 状态。normal：正常，warn：警告，error：错误 
+     * @return Status 状态。normal：正常，warn：警告，error：错误
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set normal/error
-     * @param Status normal/error
+     * Set 状态。normal：正常，warn：警告，error：错误
+     * @param Status 状态。normal：正常，warn：警告，error：错误
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get normal/warn/error 
-     * @return ErrorRateLevel normal/warn/error
+     * Get 请求错误率等级。normal：正常，warn：警告，error：错误 
+     * @return ErrorRateLevel 请求错误率等级。normal：正常，warn：警告，error：错误
      */
     public String getErrorRateLevel() {
         return this.ErrorRateLevel;
     }
 
     /**
-     * Set normal/warn/error
-     * @param ErrorRateLevel normal/warn/error
+     * Set 请求错误率等级。normal：正常，warn：警告，error：错误
+     * @param ErrorRateLevel 请求错误率等级。normal：正常，warn：警告，error：错误
      */
     public void setErrorRateLevel(String ErrorRateLevel) {
         this.ErrorRateLevel = ErrorRateLevel;
     }
 
     /**
-     * Get normal/warn/error 
-     * @return AvgTimeConsumingLevel normal/warn/error
+     * Get 请求平均耗时等级。normal：正常，warn：警告，error：错误 
+     * @return AvgTimeConsumingLevel 请求平均耗时等级。normal：正常，warn：警告，error：错误
      */
     public String getAvgTimeConsumingLevel() {
         return this.AvgTimeConsumingLevel;
     }
 
     /**
-     * Set normal/warn/error
-     * @param AvgTimeConsumingLevel normal/warn/error
+     * Set 请求平均耗时等级。normal：正常，warn：警告，error：错误
+     * @param AvgTimeConsumingLevel 请求平均耗时等级。normal：正常，warn：警告，error：错误
      */
     public void setAvgTimeConsumingLevel(String AvgTimeConsumingLevel) {
         this.AvgTimeConsumingLevel = AvgTimeConsumingLevel;
     }
 
     /**
-     * Get normal/warn/error 
-     * @return ApdexLevel normal/warn/error
+     * Get 应用程序性能指数等级。normal：正常，warn：警告，error：错误 
+     * @return ApdexLevel 应用程序性能指数等级。normal：正常，warn：警告，error：错误
      */
     public String getApdexLevel() {
         return this.ApdexLevel;
     }
 
     /**
-     * Set normal/warn/error
-     * @param ApdexLevel normal/warn/error
+     * Set 应用程序性能指数等级。normal：正常，warn：警告，error：错误
+     * @param ApdexLevel 应用程序性能指数等级。normal：正常，warn：警告，error：错误
      */
     public void setApdexLevel(String ApdexLevel) {
         this.ApdexLevel = ApdexLevel;

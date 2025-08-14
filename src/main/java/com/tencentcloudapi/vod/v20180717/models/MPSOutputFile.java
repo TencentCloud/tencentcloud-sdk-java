@@ -25,7 +25,7 @@ public class MPSOutputFile extends AbstractModel {
 
     /**
     * 文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
-取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li>
+取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li>
     */
     @SerializedName("FileType")
     @Expose
@@ -53,6 +53,13 @@ public class MPSOutputFile extends AbstractModel {
     private String Url;
 
     /**
+    * 转码规格 ID。当 FileType 等于 MediaProcess.Transcode.Video时有效，取值为0表示原始文件。 
+    */
+    @SerializedName("Definition")
+    @Expose
+    private String Definition;
+
+    /**
     * 过期时间。当 StorageMode 为 Temporary 时有效，表示 Url 的过期时间，单位为秒。
     */
     @SerializedName("ExpiredTime")
@@ -61,9 +68,9 @@ public class MPSOutputFile extends AbstractModel {
 
     /**
      * Get 文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
-取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li> 
+取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li> 
      * @return FileType 文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
-取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li>
+取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li>
      */
     public String getFileType() {
         return this.FileType;
@@ -71,9 +78,9 @@ public class MPSOutputFile extends AbstractModel {
 
     /**
      * Set 文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
-取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li>
+取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li>
      * @param FileType 文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
-取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li>
+取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li>
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
@@ -128,6 +135,22 @@ public class MPSOutputFile extends AbstractModel {
     }
 
     /**
+     * Get 转码规格 ID。当 FileType 等于 MediaProcess.Transcode.Video时有效，取值为0表示原始文件。  
+     * @return Definition 转码规格 ID。当 FileType 等于 MediaProcess.Transcode.Video时有效，取值为0表示原始文件。 
+     */
+    public String getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set 转码规格 ID。当 FileType 等于 MediaProcess.Transcode.Video时有效，取值为0表示原始文件。 
+     * @param Definition 转码规格 ID。当 FileType 等于 MediaProcess.Transcode.Video时有效，取值为0表示原始文件。 
+     */
+    public void setDefinition(String Definition) {
+        this.Definition = Definition;
+    }
+
+    /**
      * Get 过期时间。当 StorageMode 为 Temporary 时有效，表示 Url 的过期时间，单位为秒。 
      * @return ExpiredTime 过期时间。当 StorageMode 为 Temporary 时有效，表示 Url 的过期时间，单位为秒。
      */
@@ -163,6 +186,9 @@ public class MPSOutputFile extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Definition != null) {
+            this.Definition = new String(source.Definition);
+        }
         if (source.ExpiredTime != null) {
             this.ExpiredTime = new Long(source.ExpiredTime);
         }
@@ -177,6 +203,7 @@ public class MPSOutputFile extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageMode", this.StorageMode);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
 
     }

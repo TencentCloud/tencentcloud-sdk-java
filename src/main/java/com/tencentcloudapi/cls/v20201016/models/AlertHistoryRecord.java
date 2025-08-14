@@ -80,7 +80,7 @@ public class AlertHistoryRecord extends AbstractModel {
     private Long TriggerCount;
 
     /**
-    * 告警通知发送频率，单位为分钟
+    * 告警通知发送频率，单位为分钟(min)
     */
     @SerializedName("AlarmPeriod")
     @Expose
@@ -94,7 +94,7 @@ public class AlertHistoryRecord extends AbstractModel {
     private AlertHistoryNotice [] Notices;
 
     /**
-    * 告警持续时间，单位为分钟
+    * 告警持续时间，单位为分钟(min)
     */
     @SerializedName("Duration")
     @Expose
@@ -108,7 +108,7 @@ public class AlertHistoryRecord extends AbstractModel {
     private Long Status;
 
     /**
-    * 告警发生时间，毫秒级Unix时间戳
+    * 告警发生时间，毫秒级Unix时间戳(ms)
     */
     @SerializedName("CreateTime")
     @Expose
@@ -265,16 +265,16 @@ public class AlertHistoryRecord extends AbstractModel {
     }
 
     /**
-     * Get 告警通知发送频率，单位为分钟 
-     * @return AlarmPeriod 告警通知发送频率，单位为分钟
+     * Get 告警通知发送频率，单位为分钟(min) 
+     * @return AlarmPeriod 告警通知发送频率，单位为分钟(min)
      */
     public Long getAlarmPeriod() {
         return this.AlarmPeriod;
     }
 
     /**
-     * Set 告警通知发送频率，单位为分钟
-     * @param AlarmPeriod 告警通知发送频率，单位为分钟
+     * Set 告警通知发送频率，单位为分钟(min)
+     * @param AlarmPeriod 告警通知发送频率，单位为分钟(min)
      */
     public void setAlarmPeriod(Long AlarmPeriod) {
         this.AlarmPeriod = AlarmPeriod;
@@ -297,16 +297,16 @@ public class AlertHistoryRecord extends AbstractModel {
     }
 
     /**
-     * Get 告警持续时间，单位为分钟 
-     * @return Duration 告警持续时间，单位为分钟
+     * Get 告警持续时间，单位为分钟(min) 
+     * @return Duration 告警持续时间，单位为分钟(min)
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 告警持续时间，单位为分钟
-     * @param Duration 告警持续时间，单位为分钟
+     * Set 告警持续时间，单位为分钟(min)
+     * @param Duration 告警持续时间，单位为分钟(min)
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
@@ -329,16 +329,16 @@ public class AlertHistoryRecord extends AbstractModel {
     }
 
     /**
-     * Get 告警发生时间，毫秒级Unix时间戳 
-     * @return CreateTime 告警发生时间，毫秒级Unix时间戳
+     * Get 告警发生时间，毫秒级Unix时间戳(ms) 
+     * @return CreateTime 告警发生时间，毫秒级Unix时间戳(ms)
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 告警发生时间，毫秒级Unix时间戳
-     * @param CreateTime 告警发生时间，毫秒级Unix时间戳
+     * Set 告警发生时间，毫秒级Unix时间戳(ms)
+     * @param CreateTime 告警发生时间，毫秒级Unix时间戳(ms)
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;

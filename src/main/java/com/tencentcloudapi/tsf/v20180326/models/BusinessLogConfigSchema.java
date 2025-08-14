@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BusinessLogConfigSchema extends AbstractModel {
 
     /**
-    * 解析规则类型
+    * 解析规则类型。可选值 0（SPRING_BOOT：默认Spring Boot格式），1（NONE：无解析规则），4（NGINX_ACCESS：nginx access日志），5（CUSTOM_LOGBACK：自定义Logback），6（CUSTOM_LOG4J：自定义Log4J），7（CUSTOM_LOG4J2：自定义Log4J2），8（TEXT：单行/多行文本），9（ENVOY_MSGW_ACCESS：envoy access日志）。
     */
     @SerializedName("SchemaType")
     @Expose
@@ -55,7 +55,7 @@ public class BusinessLogConfigSchema extends AbstractModel {
     private String SchemaMultilinePattern;
 
     /**
-    * 解析规则创建时间
+    * 解析规则创建时间，格式为yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("SchemaCreateTime")
     @Expose
@@ -70,16 +70,16 @@ public class BusinessLogConfigSchema extends AbstractModel {
     private String SchemaPatternLayout;
 
     /**
-     * Get 解析规则类型 
-     * @return SchemaType 解析规则类型
+     * Get 解析规则类型。可选值 0（SPRING_BOOT：默认Spring Boot格式），1（NONE：无解析规则），4（NGINX_ACCESS：nginx access日志），5（CUSTOM_LOGBACK：自定义Logback），6（CUSTOM_LOG4J：自定义Log4J），7（CUSTOM_LOG4J2：自定义Log4J2），8（TEXT：单行/多行文本），9（ENVOY_MSGW_ACCESS：envoy access日志）。 
+     * @return SchemaType 解析规则类型。可选值 0（SPRING_BOOT：默认Spring Boot格式），1（NONE：无解析规则），4（NGINX_ACCESS：nginx access日志），5（CUSTOM_LOGBACK：自定义Logback），6（CUSTOM_LOG4J：自定义Log4J），7（CUSTOM_LOG4J2：自定义Log4J2），8（TEXT：单行/多行文本），9（ENVOY_MSGW_ACCESS：envoy access日志）。
      */
     public Long getSchemaType() {
         return this.SchemaType;
     }
 
     /**
-     * Set 解析规则类型
-     * @param SchemaType 解析规则类型
+     * Set 解析规则类型。可选值 0（SPRING_BOOT：默认Spring Boot格式），1（NONE：无解析规则），4（NGINX_ACCESS：nginx access日志），5（CUSTOM_LOGBACK：自定义Logback），6（CUSTOM_LOG4J：自定义Log4J），7（CUSTOM_LOG4J2：自定义Log4J2），8（TEXT：单行/多行文本），9（ENVOY_MSGW_ACCESS：envoy access日志）。
+     * @param SchemaType 解析规则类型。可选值 0（SPRING_BOOT：默认Spring Boot格式），1（NONE：无解析规则），4（NGINX_ACCESS：nginx access日志），5（CUSTOM_LOGBACK：自定义Logback），6（CUSTOM_LOG4J：自定义Log4J），7（CUSTOM_LOG4J2：自定义Log4J2），8（TEXT：单行/多行文本），9（ENVOY_MSGW_ACCESS：envoy access日志）。
      */
     public void setSchemaType(Long SchemaType) {
         this.SchemaType = SchemaType;
@@ -146,16 +146,16 @@ public class BusinessLogConfigSchema extends AbstractModel {
     }
 
     /**
-     * Get 解析规则创建时间 
-     * @return SchemaCreateTime 解析规则创建时间
+     * Get 解析规则创建时间，格式为yyyy-MM-dd HH:mm:ss 
+     * @return SchemaCreateTime 解析规则创建时间，格式为yyyy-MM-dd HH:mm:ss
      */
     public String getSchemaCreateTime() {
         return this.SchemaCreateTime;
     }
 
     /**
-     * Set 解析规则创建时间
-     * @param SchemaCreateTime 解析规则创建时间
+     * Set 解析规则创建时间，格式为yyyy-MM-dd HH:mm:ss
+     * @param SchemaCreateTime 解析规则创建时间，格式为yyyy-MM-dd HH:mm:ss
      */
     public void setSchemaCreateTime(String SchemaCreateTime) {
         this.SchemaCreateTime = SchemaCreateTime;

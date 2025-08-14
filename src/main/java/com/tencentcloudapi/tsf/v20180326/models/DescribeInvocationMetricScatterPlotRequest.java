@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeInvocationMetricScatterPlotRequest extends AbstractModel {
 
     /**
-    * 查询开始时间
+    * 查询开始时间，格式yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间
+    * 查询结束时间，格式yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 查询时间粒度，单位秒。可选值：60、3600、86400。
+    * 查询时间粒度，单位秒。可选值：60、3600、86400
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 查询指标维度, 不能为空。可选 NamespaceId, GroupId, InstanceId, OperationName, ServiceName, PeerServiceName, PeerOperationName
+    * 查询指标维度, 不能为空。Name, Valeu键值对形式。Name可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
     */
     @SerializedName("MetricDimensions")
     @Expose
     private MetricDimension [] MetricDimensions;
 
     /**
-    * 查询指标名， 不能为空。仅支持 range_count_duratioin 为 key 下的 sum 方法
+    * 查询指标名， 不能为空。仅支持 range_count_duration（响应耗时分布） 为 key 下的 sum（求和） 方法
     */
     @SerializedName("Metrics")
     @Expose
     private Metric [] Metrics;
 
     /**
-    * 视图视角。可选值：SERVER, CLIENT。默认为SERVER
+    * 视图视角。可选值：SERVER：服务端, CLIENT：客户端。默认为SERVER
     */
     @SerializedName("Kind")
     @Expose
     private String Kind;
 
     /**
-     * Get 查询开始时间 
-     * @return StartTime 查询开始时间
+     * Get 查询开始时间，格式yyyy-MM-dd HH:mm:ss 
+     * @return StartTime 查询开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间
-     * @param StartTime 查询开始时间
+     * Set 查询开始时间，格式yyyy-MM-dd HH:mm:ss
+     * @param StartTime 查询开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间 
-     * @return EndTime 查询结束时间
+     * Get 查询结束时间，格式yyyy-MM-dd HH:mm:ss 
+     * @return EndTime 查询结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间
-     * @param EndTime 查询结束时间
+     * Set 查询结束时间，格式yyyy-MM-dd HH:mm:ss
+     * @param EndTime 查询结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 查询时间粒度，单位秒。可选值：60、3600、86400。 
-     * @return Period 查询时间粒度，单位秒。可选值：60、3600、86400。
+     * Get 查询时间粒度，单位秒。可选值：60、3600、86400 
+     * @return Period 查询时间粒度，单位秒。可选值：60、3600、86400
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 查询时间粒度，单位秒。可选值：60、3600、86400。
-     * @param Period 查询时间粒度，单位秒。可选值：60、3600、86400。
+     * Set 查询时间粒度，单位秒。可选值：60、3600、86400
+     * @param Period 查询时间粒度，单位秒。可选值：60、3600、86400
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 查询指标维度, 不能为空。可选 NamespaceId, GroupId, InstanceId, OperationName, ServiceName, PeerServiceName, PeerOperationName 
-     * @return MetricDimensions 查询指标维度, 不能为空。可选 NamespaceId, GroupId, InstanceId, OperationName, ServiceName, PeerServiceName, PeerOperationName
+     * Get 查询指标维度, 不能为空。Name, Valeu键值对形式。Name可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID 
+     * @return MetricDimensions 查询指标维度, 不能为空。Name, Valeu键值对形式。Name可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
      */
     public MetricDimension [] getMetricDimensions() {
         return this.MetricDimensions;
     }
 
     /**
-     * Set 查询指标维度, 不能为空。可选 NamespaceId, GroupId, InstanceId, OperationName, ServiceName, PeerServiceName, PeerOperationName
-     * @param MetricDimensions 查询指标维度, 不能为空。可选 NamespaceId, GroupId, InstanceId, OperationName, ServiceName, PeerServiceName, PeerOperationName
+     * Set 查询指标维度, 不能为空。Name, Valeu键值对形式。Name可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
+     * @param MetricDimensions 查询指标维度, 不能为空。Name, Valeu键值对形式。Name可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
      */
     public void setMetricDimensions(MetricDimension [] MetricDimensions) {
         this.MetricDimensions = MetricDimensions;
     }
 
     /**
-     * Get 查询指标名， 不能为空。仅支持 range_count_duratioin 为 key 下的 sum 方法 
-     * @return Metrics 查询指标名， 不能为空。仅支持 range_count_duratioin 为 key 下的 sum 方法
+     * Get 查询指标名， 不能为空。仅支持 range_count_duration（响应耗时分布） 为 key 下的 sum（求和） 方法 
+     * @return Metrics 查询指标名， 不能为空。仅支持 range_count_duration（响应耗时分布） 为 key 下的 sum（求和） 方法
      */
     public Metric [] getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set 查询指标名， 不能为空。仅支持 range_count_duratioin 为 key 下的 sum 方法
-     * @param Metrics 查询指标名， 不能为空。仅支持 range_count_duratioin 为 key 下的 sum 方法
+     * Set 查询指标名， 不能为空。仅支持 range_count_duration（响应耗时分布） 为 key 下的 sum（求和） 方法
+     * @param Metrics 查询指标名， 不能为空。仅支持 range_count_duration（响应耗时分布） 为 key 下的 sum（求和） 方法
      */
     public void setMetrics(Metric [] Metrics) {
         this.Metrics = Metrics;
     }
 
     /**
-     * Get 视图视角。可选值：SERVER, CLIENT。默认为SERVER 
-     * @return Kind 视图视角。可选值：SERVER, CLIENT。默认为SERVER
+     * Get 视图视角。可选值：SERVER：服务端, CLIENT：客户端。默认为SERVER 
+     * @return Kind 视图视角。可选值：SERVER：服务端, CLIENT：客户端。默认为SERVER
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 视图视角。可选值：SERVER, CLIENT。默认为SERVER
-     * @param Kind 视图视角。可选值：SERVER, CLIENT。默认为SERVER
+     * Set 视图视角。可选值：SERVER：服务端, CLIENT：客户端。默认为SERVER
+     * @param Kind 视图视角。可选值：SERVER：服务端, CLIENT：客户端。默认为SERVER
      */
     public void setKind(String Kind) {
         this.Kind = Kind;

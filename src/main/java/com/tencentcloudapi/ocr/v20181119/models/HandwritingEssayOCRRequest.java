@@ -46,7 +46,7 @@ public class HandwritingEssayOCRRequest extends AbstractModel {
 
     /**
     * 配置id支持：
-ArticleRecognize -- 手写作文模版
+ArticleRecognize -- 手写作文模板
 默认：ArticleRecognize
     */
     @SerializedName("ConfigId")
@@ -54,7 +54,7 @@ ArticleRecognize -- 手写作文模版
     private String ConfigId;
 
     /**
-    * 模版的单个属性配置
+    * 模板的单个属性配置
     */
     @SerializedName("Scene")
     @Expose
@@ -110,10 +110,10 @@ ArticleRecognize -- 手写作文模版
 
     /**
      * Get 配置id支持：
-ArticleRecognize -- 手写作文模版
+ArticleRecognize -- 手写作文模板
 默认：ArticleRecognize 
      * @return ConfigId 配置id支持：
-ArticleRecognize -- 手写作文模版
+ArticleRecognize -- 手写作文模板
 默认：ArticleRecognize
      */
     public String getConfigId() {
@@ -122,10 +122,10 @@ ArticleRecognize -- 手写作文模版
 
     /**
      * Set 配置id支持：
-ArticleRecognize -- 手写作文模版
+ArticleRecognize -- 手写作文模板
 默认：ArticleRecognize
      * @param ConfigId 配置id支持：
-ArticleRecognize -- 手写作文模版
+ArticleRecognize -- 手写作文模板
 默认：ArticleRecognize
      */
     public void setConfigId(String ConfigId) {
@@ -133,16 +133,16 @@ ArticleRecognize -- 手写作文模版
     }
 
     /**
-     * Get 模版的单个属性配置 
-     * @return Scene 模版的单个属性配置
+     * Get 模板的单个属性配置 
+     * @return Scene 模板的单个属性配置
      */
     public String getScene() {
         return this.Scene;
     }
 
     /**
-     * Set 模版的单个属性配置
-     * @param Scene 模版的单个属性配置
+     * Set 模板的单个属性配置
+     * @param Scene 模板的单个属性配置
      */
     public void setScene(String Scene) {
         this.Scene = Scene;

@@ -31,7 +31,7 @@ public class CreateNamespaceRequest extends AbstractModel {
     private String NamespaceName;
 
     /**
-    * 集群ID
+    * 集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -45,7 +45,7 @@ public class CreateNamespaceRequest extends AbstractModel {
     private String NamespaceDesc;
 
     /**
-    * 命名空间资源类型(默认值为DEF)
+    * 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
     */
     @SerializedName("NamespaceResourceType")
     @Expose
@@ -59,7 +59,7 @@ public class CreateNamespaceRequest extends AbstractModel {
     private String NamespaceType;
 
     /**
-    * 命名空间ID
+    * 命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -73,18 +73,25 @@ public class CreateNamespaceRequest extends AbstractModel {
     private String IsHaEnable;
 
     /**
-    * 需要绑定的数据集ID
+    * 需要绑定的数据集ID，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
     */
     @SerializedName("ProgramId")
     @Expose
     private String ProgramId;
 
     /**
-    * 需要绑定的数据集ID
+    * 需要绑定的数据集ID列表，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
     */
     @SerializedName("ProgramIdList")
     @Expose
     private String [] ProgramIdList;
+
+    /**
+    * 是否创建k8s命名空间标识
+    */
+    @SerializedName("CreateK8sNamespaceFlag")
+    @Expose
+    private Boolean CreateK8sNamespaceFlag;
 
     /**
      * Get 命名空间名称 
@@ -103,16 +110,16 @@ public class CreateNamespaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。 
+     * @return ClusterId 集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
+     * @param ClusterId 集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -135,16 +142,16 @@ public class CreateNamespaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 命名空间资源类型(默认值为DEF) 
-     * @return NamespaceResourceType 命名空间资源类型(默认值为DEF)
+     * Get 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间 
+     * @return NamespaceResourceType 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
      */
     public String getNamespaceResourceType() {
         return this.NamespaceResourceType;
     }
 
     /**
-     * Set 命名空间资源类型(默认值为DEF)
-     * @param NamespaceResourceType 命名空间资源类型(默认值为DEF)
+     * Set 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
+     * @param NamespaceResourceType 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
      */
     public void setNamespaceResourceType(String NamespaceResourceType) {
         this.NamespaceResourceType = NamespaceResourceType;
@@ -167,16 +174,16 @@ public class CreateNamespaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 命名空间ID 
-     * @return NamespaceId 命名空间ID
+     * Get 命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。 
+     * @return NamespaceId 命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间ID
-     * @param NamespaceId 命名空间ID
+     * Set 命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。
+     * @param NamespaceId 命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
@@ -199,35 +206,51 @@ public class CreateNamespaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要绑定的数据集ID 
-     * @return ProgramId 需要绑定的数据集ID
+     * Get 需要绑定的数据集ID，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。 
+     * @return ProgramId 需要绑定的数据集ID，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
      */
     public String getProgramId() {
         return this.ProgramId;
     }
 
     /**
-     * Set 需要绑定的数据集ID
-     * @param ProgramId 需要绑定的数据集ID
+     * Set 需要绑定的数据集ID，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+     * @param ProgramId 需要绑定的数据集ID，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
      */
     public void setProgramId(String ProgramId) {
         this.ProgramId = ProgramId;
     }
 
     /**
-     * Get 需要绑定的数据集ID 
-     * @return ProgramIdList 需要绑定的数据集ID
+     * Get 需要绑定的数据集ID列表，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。 
+     * @return ProgramIdList 需要绑定的数据集ID列表，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
      */
     public String [] getProgramIdList() {
         return this.ProgramIdList;
     }
 
     /**
-     * Set 需要绑定的数据集ID
-     * @param ProgramIdList 需要绑定的数据集ID
+     * Set 需要绑定的数据集ID列表，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+     * @param ProgramIdList 需要绑定的数据集ID列表，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
      */
     public void setProgramIdList(String [] ProgramIdList) {
         this.ProgramIdList = ProgramIdList;
+    }
+
+    /**
+     * Get 是否创建k8s命名空间标识 
+     * @return CreateK8sNamespaceFlag 是否创建k8s命名空间标识
+     */
+    public Boolean getCreateK8sNamespaceFlag() {
+        return this.CreateK8sNamespaceFlag;
+    }
+
+    /**
+     * Set 是否创建k8s命名空间标识
+     * @param CreateK8sNamespaceFlag 是否创建k8s命名空间标识
+     */
+    public void setCreateK8sNamespaceFlag(Boolean CreateK8sNamespaceFlag) {
+        this.CreateK8sNamespaceFlag = CreateK8sNamespaceFlag;
     }
 
     public CreateNamespaceRequest() {
@@ -268,6 +291,9 @@ public class CreateNamespaceRequest extends AbstractModel {
                 this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
             }
         }
+        if (source.CreateK8sNamespaceFlag != null) {
+            this.CreateK8sNamespaceFlag = new Boolean(source.CreateK8sNamespaceFlag);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class CreateNamespaceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsHaEnable", this.IsHaEnable);
         this.setParamSimple(map, prefix + "ProgramId", this.ProgramId);
         this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
+        this.setParamSimple(map, prefix + "CreateK8sNamespaceFlag", this.CreateK8sNamespaceFlag);
 
     }
 }

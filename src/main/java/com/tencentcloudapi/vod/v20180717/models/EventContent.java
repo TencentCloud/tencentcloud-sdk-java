@@ -51,6 +51,7 @@ public class EventContent extends AbstractModel {
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
+<li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -279,6 +280,13 @@ public class EventContent extends AbstractModel {
     private ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingCompleteEvent;
 
     /**
+    * MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。
+    */
+    @SerializedName("ProcessMediaByMPSCompleteEvent")
+    @Expose
+    private ProcessMediaByMPS ProcessMediaByMPSCompleteEvent;
+
+    /**
      * Get 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。 
      * @return EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      */
@@ -315,6 +323,7 @@ public class EventContent extends AbstractModel {
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
+<li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -341,6 +350,7 @@ public class EventContent extends AbstractModel {
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
+<li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -373,6 +383,7 @@ public class EventContent extends AbstractModel {
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
+<li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -399,6 +410,7 @@ public class EventContent extends AbstractModel {
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
+<li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -950,6 +962,22 @@ public class EventContent extends AbstractModel {
         this.ComplexAdaptiveDynamicStreamingCompleteEvent = ComplexAdaptiveDynamicStreamingCompleteEvent;
     }
 
+    /**
+     * Get MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。 
+     * @return ProcessMediaByMPSCompleteEvent MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。
+     */
+    public ProcessMediaByMPS getProcessMediaByMPSCompleteEvent() {
+        return this.ProcessMediaByMPSCompleteEvent;
+    }
+
+    /**
+     * Set MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。
+     * @param ProcessMediaByMPSCompleteEvent MPS 视频处理任务信息，仅当 EventType 为 ProcessMediaByMPSComplete 时有效。
+     */
+    public void setProcessMediaByMPSCompleteEvent(ProcessMediaByMPS ProcessMediaByMPSCompleteEvent) {
+        this.ProcessMediaByMPSCompleteEvent = ProcessMediaByMPSCompleteEvent;
+    }
+
     public EventContent() {
     }
 
@@ -1045,6 +1073,9 @@ public class EventContent extends AbstractModel {
         if (source.ComplexAdaptiveDynamicStreamingCompleteEvent != null) {
             this.ComplexAdaptiveDynamicStreamingCompleteEvent = new ComplexAdaptiveDynamicStreamingTask(source.ComplexAdaptiveDynamicStreamingCompleteEvent);
         }
+        if (source.ProcessMediaByMPSCompleteEvent != null) {
+            this.ProcessMediaByMPSCompleteEvent = new ProcessMediaByMPS(source.ProcessMediaByMPSCompleteEvent);
+        }
     }
 
 
@@ -1081,6 +1112,7 @@ public class EventContent extends AbstractModel {
         this.setParamObj(map, prefix + "MediaCastStatusChangedEvent.", this.MediaCastStatusChangedEvent);
         this.setParamObj(map, prefix + "PersistenceCompleteEvent.", this.PersistenceCompleteEvent);
         this.setParamObj(map, prefix + "ComplexAdaptiveDynamicStreamingCompleteEvent.", this.ComplexAdaptiveDynamicStreamingCompleteEvent);
+        this.setParamObj(map, prefix + "ProcessMediaByMPSCompleteEvent.", this.ProcessMediaByMPSCompleteEvent);
 
     }
 }

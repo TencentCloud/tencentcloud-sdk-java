@@ -31,7 +31,7 @@ public class Metric extends AbstractModel {
     private String Name;
 
     /**
-    * 指标计算方式
+    * 指标计算方式，可选值： none：无，sum：求和，exclusive：独占值，avg：平均值，max：最大值，min：最小值，percentage_50：50分位数，percentage_75：75分位数，percentage_95：95分位数，percentage_99：99分位数，bucket_5：分桶统计。
     */
     @SerializedName("Function")
     @Expose
@@ -54,16 +54,16 @@ public class Metric extends AbstractModel {
     }
 
     /**
-     * Get 指标计算方式 
-     * @return Function 指标计算方式
+     * Get 指标计算方式，可选值： none：无，sum：求和，exclusive：独占值，avg：平均值，max：最大值，min：最小值，percentage_50：50分位数，percentage_75：75分位数，percentage_95：95分位数，percentage_99：99分位数，bucket_5：分桶统计。 
+     * @return Function 指标计算方式，可选值： none：无，sum：求和，exclusive：独占值，avg：平均值，max：最大值，min：最小值，percentage_50：50分位数，percentage_75：75分位数，percentage_95：95分位数，percentage_99：99分位数，bucket_5：分桶统计。
      */
     public String getFunction() {
         return this.Function;
     }
 
     /**
-     * Set 指标计算方式
-     * @param Function 指标计算方式
+     * Set 指标计算方式，可选值： none：无，sum：求和，exclusive：独占值，avg：平均值，max：最大值，min：最小值，percentage_50：50分位数，percentage_75：75分位数，percentage_95：95分位数，percentage_99：99分位数，bucket_5：分桶统计。
+     * @param Function 指标计算方式，可选值： none：无，sum：求和，exclusive：独占值，avg：平均值，max：最大值，min：最小值，percentage_50：50分位数，percentage_75：75分位数，percentage_95：95分位数，percentage_99：99分位数，bucket_5：分桶统计。
      */
     public void setFunction(String Function) {
         this.Function = Function;

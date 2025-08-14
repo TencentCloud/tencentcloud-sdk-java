@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribeInvocationMetricDataCurveRequest extends AbstractModel {
 
     /**
-    * 查询开始时间
+    * 开始时间，格式yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间
+    * 结束时间，格式yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 查询时间粒度，单位秒可选值：60、3600、86400
+    * 查询时间粒度，单位秒。可选值：60、3600、86400
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
+    * 查询指标维度，不能为空
     */
     @SerializedName("MetricDimensions")
     @Expose
     private MetricDimension [] MetricDimensions;
 
     /**
-    * 查询指标名，不能为空.
+    * 查询指标名，不能为空
     */
     @SerializedName("Metrics")
     @Expose
     private Metric [] Metrics;
 
     /**
-    * 视图视角。可选值：SERVER, CLIENT。默认为SERVER
+    * 视图视角。可选值：SERVER：服务端，CLIENT：客户端。默认为SERVER
     */
     @SerializedName("Kind")
     @Expose
@@ -73,96 +73,96 @@ public class DescribeInvocationMetricDataCurveRequest extends AbstractModel {
     private String Type;
 
     /**
-     * Get 查询开始时间 
-     * @return StartTime 查询开始时间
+     * Get 开始时间，格式yyyy-MM-dd HH:mm:ss 
+     * @return StartTime 开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间
-     * @param StartTime 查询开始时间
+     * Set 开始时间，格式yyyy-MM-dd HH:mm:ss
+     * @param StartTime 开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间 
-     * @return EndTime 查询结束时间
+     * Get 结束时间，格式yyyy-MM-dd HH:mm:ss 
+     * @return EndTime 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间
-     * @param EndTime 查询结束时间
+     * Set 结束时间，格式yyyy-MM-dd HH:mm:ss
+     * @param EndTime 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 查询时间粒度，单位秒可选值：60、3600、86400 
-     * @return Period 查询时间粒度，单位秒可选值：60、3600、86400
+     * Get 查询时间粒度，单位秒。可选值：60、3600、86400 
+     * @return Period 查询时间粒度，单位秒。可选值：60、3600、86400
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 查询时间粒度，单位秒可选值：60、3600、86400
-     * @param Period 查询时间粒度，单位秒可选值：60、3600、86400
+     * Set 查询时间粒度，单位秒。可选值：60、3600、86400
+     * @param Period 查询时间粒度，单位秒。可选值：60、3600、86400
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName 
-     * @return MetricDimensions 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
+     * Get 查询指标维度，不能为空 
+     * @return MetricDimensions 查询指标维度，不能为空
      */
     public MetricDimension [] getMetricDimensions() {
         return this.MetricDimensions;
     }
 
     /**
-     * Set 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
-     * @param MetricDimensions 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
+     * Set 查询指标维度，不能为空
+     * @param MetricDimensions 查询指标维度，不能为空
      */
     public void setMetricDimensions(MetricDimension [] MetricDimensions) {
         this.MetricDimensions = MetricDimensions;
     }
 
     /**
-     * Get 查询指标名，不能为空. 
-     * @return Metrics 查询指标名，不能为空.
+     * Get 查询指标名，不能为空 
+     * @return Metrics 查询指标名，不能为空
      */
     public Metric [] getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set 查询指标名，不能为空.
-     * @param Metrics 查询指标名，不能为空.
+     * Set 查询指标名，不能为空
+     * @param Metrics 查询指标名，不能为空
      */
     public void setMetrics(Metric [] Metrics) {
         this.Metrics = Metrics;
     }
 
     /**
-     * Get 视图视角。可选值：SERVER, CLIENT。默认为SERVER 
-     * @return Kind 视图视角。可选值：SERVER, CLIENT。默认为SERVER
+     * Get 视图视角。可选值：SERVER：服务端，CLIENT：客户端。默认为SERVER 
+     * @return Kind 视图视角。可选值：SERVER：服务端，CLIENT：客户端。默认为SERVER
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 视图视角。可选值：SERVER, CLIENT。默认为SERVER
-     * @param Kind 视图视角。可选值：SERVER, CLIENT。默认为SERVER
+     * Set 视图视角。可选值：SERVER：服务端，CLIENT：客户端。默认为SERVER
+     * @param Kind 视图视角。可选值：SERVER：服务端，CLIENT：客户端。默认为SERVER
      */
     public void setKind(String Kind) {
         this.Kind = Kind;

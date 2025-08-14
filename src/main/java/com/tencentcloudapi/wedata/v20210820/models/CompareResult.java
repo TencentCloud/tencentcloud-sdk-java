@@ -56,6 +56,14 @@ public class CompareResult extends AbstractModel {
     private Long TriggerRows;
 
     /**
+    * 比较关系
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ComputeExpression")
+    @Expose
+    private String ComputeExpression;
+
+    /**
      * Get 对比结果项列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Items 对比结果项列表
@@ -135,6 +143,26 @@ public class CompareResult extends AbstractModel {
         this.TriggerRows = TriggerRows;
     }
 
+    /**
+     * Get 比较关系
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ComputeExpression 比较关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getComputeExpression() {
+        return this.ComputeExpression;
+    }
+
+    /**
+     * Set 比较关系
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComputeExpression 比较关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComputeExpression(String ComputeExpression) {
+        this.ComputeExpression = ComputeExpression;
+    }
+
     public CompareResult() {
     }
 
@@ -158,6 +186,9 @@ public class CompareResult extends AbstractModel {
         if (source.TriggerRows != null) {
             this.TriggerRows = new Long(source.TriggerRows);
         }
+        if (source.ComputeExpression != null) {
+            this.ComputeExpression = new String(source.ComputeExpression);
+        }
     }
 
 
@@ -169,6 +200,7 @@ public class CompareResult extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalRows", this.TotalRows);
         this.setParamSimple(map, prefix + "PassRows", this.PassRows);
         this.setParamSimple(map, prefix + "TriggerRows", this.TriggerRows);
+        this.setParamSimple(map, prefix + "ComputeExpression", this.ComputeExpression);
 
     }
 }

@@ -40,7 +40,7 @@ public class DescribeBackupSummariesRequest extends AbstractModel {
     /**
     * 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
     */
     @SerializedName("Filters")
@@ -48,14 +48,14 @@ db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
     private Filter [] Filters;
 
     /**
-    * 排序字段，支持TotalBackupSize,LogBackupSize,ManualBaseBackupSize,AutoBaseBackupSize。
+    * 排序字段，支持TotalBackupSize - 备份总大小、LogBackupSize - 备份日志的大小、ManualBaseBackupSize - 手动备份数据大小、AutoBaseBackupSize - 自动备份数据大小。当不传入该参数时，默认不进行排序。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序方式，包括升序：asc，降序：desc。
+    * 排序方式，包括升序：asc，降序：desc。默认值：asc。
     */
     @SerializedName("OrderByType")
     @Expose
@@ -96,11 +96,11 @@ db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
     /**
      * Get 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。 
      * @return Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
      */
     public Filter [] getFilters() {
@@ -110,11 +110,11 @@ db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
     /**
      * Set 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
      * @param Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
      */
     public void setFilters(Filter [] Filters) {
@@ -122,32 +122,32 @@ db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
     }
 
     /**
-     * Get 排序字段，支持TotalBackupSize,LogBackupSize,ManualBaseBackupSize,AutoBaseBackupSize。 
-     * @return OrderBy 排序字段，支持TotalBackupSize,LogBackupSize,ManualBaseBackupSize,AutoBaseBackupSize。
+     * Get 排序字段，支持TotalBackupSize - 备份总大小、LogBackupSize - 备份日志的大小、ManualBaseBackupSize - 手动备份数据大小、AutoBaseBackupSize - 自动备份数据大小。当不传入该参数时，默认不进行排序。 
+     * @return OrderBy 排序字段，支持TotalBackupSize - 备份总大小、LogBackupSize - 备份日志的大小、ManualBaseBackupSize - 手动备份数据大小、AutoBaseBackupSize - 自动备份数据大小。当不传入该参数时，默认不进行排序。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序字段，支持TotalBackupSize,LogBackupSize,ManualBaseBackupSize,AutoBaseBackupSize。
-     * @param OrderBy 排序字段，支持TotalBackupSize,LogBackupSize,ManualBaseBackupSize,AutoBaseBackupSize。
+     * Set 排序字段，支持TotalBackupSize - 备份总大小、LogBackupSize - 备份日志的大小、ManualBaseBackupSize - 手动备份数据大小、AutoBaseBackupSize - 自动备份数据大小。当不传入该参数时，默认不进行排序。
+     * @param OrderBy 排序字段，支持TotalBackupSize - 备份总大小、LogBackupSize - 备份日志的大小、ManualBaseBackupSize - 手动备份数据大小、AutoBaseBackupSize - 自动备份数据大小。当不传入该参数时，默认不进行排序。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序方式，包括升序：asc，降序：desc。 
-     * @return OrderByType 排序方式，包括升序：asc，降序：desc。
+     * Get 排序方式，包括升序：asc，降序：desc。默认值：asc。 
+     * @return OrderByType 排序方式，包括升序：asc，降序：desc。默认值：asc。
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 排序方式，包括升序：asc，降序：desc。
-     * @param OrderByType 排序方式，包括升序：asc，降序：desc。
+     * Set 排序方式，包括升序：asc，降序：desc。默认值：asc。
+     * @param OrderByType 排序方式，包括升序：asc，降序：desc。默认值：asc。
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

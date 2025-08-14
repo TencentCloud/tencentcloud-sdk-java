@@ -87,6 +87,13 @@ public class CreateRabbitMQServerlessExchangeRequest extends AbstractModel {
     private String AlternateExchange;
 
     /**
+    * 延迟类型的exchange背后对应的exchange类型, 支持 "fanout","direct","topic","headers"
+    */
+    @SerializedName("DelayedExchangeType")
+    @Expose
+    private String DelayedExchangeType;
+
+    /**
      * Get 实例Id 
      * @return InstanceId 实例Id
      */
@@ -230,6 +237,22 @@ public class CreateRabbitMQServerlessExchangeRequest extends AbstractModel {
         this.AlternateExchange = AlternateExchange;
     }
 
+    /**
+     * Get 延迟类型的exchange背后对应的exchange类型, 支持 "fanout","direct","topic","headers" 
+     * @return DelayedExchangeType 延迟类型的exchange背后对应的exchange类型, 支持 "fanout","direct","topic","headers"
+     */
+    public String getDelayedExchangeType() {
+        return this.DelayedExchangeType;
+    }
+
+    /**
+     * Set 延迟类型的exchange背后对应的exchange类型, 支持 "fanout","direct","topic","headers"
+     * @param DelayedExchangeType 延迟类型的exchange背后对应的exchange类型, 支持 "fanout","direct","topic","headers"
+     */
+    public void setDelayedExchangeType(String DelayedExchangeType) {
+        this.DelayedExchangeType = DelayedExchangeType;
+    }
+
     public CreateRabbitMQServerlessExchangeRequest() {
     }
 
@@ -265,6 +288,9 @@ public class CreateRabbitMQServerlessExchangeRequest extends AbstractModel {
         if (source.AlternateExchange != null) {
             this.AlternateExchange = new String(source.AlternateExchange);
         }
+        if (source.DelayedExchangeType != null) {
+            this.DelayedExchangeType = new String(source.DelayedExchangeType);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class CreateRabbitMQServerlessExchangeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoDelete", this.AutoDelete);
         this.setParamSimple(map, prefix + "Internal", this.Internal);
         this.setParamSimple(map, prefix + "AlternateExchange", this.AlternateExchange);
+        this.setParamSimple(map, prefix + "DelayedExchangeType", this.DelayedExchangeType);
 
     }
 }

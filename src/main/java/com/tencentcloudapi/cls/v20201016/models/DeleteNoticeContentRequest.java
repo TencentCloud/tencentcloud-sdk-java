@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteNoticeContentRequest extends AbstractModel {
 
     /**
-    * 通知内容模板ID
+    * 通知内容模板ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知内容模版ID
     */
     @SerializedName("NoticeContentId")
     @Expose
     private String NoticeContentId;
 
     /**
-     * Get 通知内容模板ID 
-     * @return NoticeContentId 通知内容模板ID
+     * Get 通知内容模板ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知内容模版ID 
+     * @return NoticeContentId 通知内容模板ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知内容模版ID
      */
     public String getNoticeContentId() {
         return this.NoticeContentId;
     }
 
     /**
-     * Set 通知内容模板ID
-     * @param NoticeContentId 通知内容模板ID
+     * Set 通知内容模板ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知内容模版ID
+     * @param NoticeContentId 通知内容模板ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知内容模版ID
      */
     public void setNoticeContentId(String NoticeContentId) {
         this.NoticeContentId = NoticeContentId;

@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class CreateMachineGroupRequest extends AbstractModel {
 
     /**
-    * 机器组名字，不能重复
+    * 机器组名字。
+输入限制：
+- 最大支持255个字符，不能为空字符串
+- 不能包含字符'|'
     */
     @SerializedName("GroupName")
     @Expose
@@ -55,6 +58,7 @@ public class CreateMachineGroupRequest extends AbstractModel {
 
     /**
     * 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
     */
     @SerializedName("UpdateStartTime")
     @Expose
@@ -62,6 +66,7 @@ public class CreateMachineGroupRequest extends AbstractModel {
 
     /**
     * 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
     */
     @SerializedName("UpdateEndTime")
     @Expose
@@ -76,6 +81,8 @@ public class CreateMachineGroupRequest extends AbstractModel {
 
     /**
     * 机器组中机器离线清理时间。单位：天
+
+- 大于0时生效。
     */
     @SerializedName("DelayCleanupTime")
     @Expose
@@ -98,16 +105,28 @@ public class CreateMachineGroupRequest extends AbstractModel {
     private Long OSType;
 
     /**
-     * Get 机器组名字，不能重复 
-     * @return GroupName 机器组名字，不能重复
+     * Get 机器组名字。
+输入限制：
+- 最大支持255个字符，不能为空字符串
+- 不能包含字符'|' 
+     * @return GroupName 机器组名字。
+输入限制：
+- 最大支持255个字符，不能为空字符串
+- 不能包含字符'|'
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 机器组名字，不能重复
-     * @param GroupName 机器组名字，不能重复
+     * Set 机器组名字。
+输入限制：
+- 最大支持255个字符，不能为空字符串
+- 不能包含字符'|'
+     * @param GroupName 机器组名字。
+输入限制：
+- 最大支持255个字符，不能为空字符串
+- 不能包含字符'|'
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
@@ -170,8 +189,10 @@ public class CreateMachineGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 升级开始时间，建议业务低峰期升级LogListener 
+     * Get 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss 
      * @return UpdateStartTime 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public String getUpdateStartTime() {
         return this.UpdateStartTime;
@@ -179,15 +200,19 @@ public class CreateMachineGroupRequest extends AbstractModel {
 
     /**
      * Set 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      * @param UpdateStartTime 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public void setUpdateStartTime(String UpdateStartTime) {
         this.UpdateStartTime = UpdateStartTime;
     }
 
     /**
-     * Get 升级结束时间，建议业务低峰期升级LogListener 
+     * Get 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss 
      * @return UpdateEndTime 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public String getUpdateEndTime() {
         return this.UpdateEndTime;
@@ -195,7 +220,9 @@ public class CreateMachineGroupRequest extends AbstractModel {
 
     /**
      * Set 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      * @param UpdateEndTime 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public void setUpdateEndTime(String UpdateEndTime) {
         this.UpdateEndTime = UpdateEndTime;
@@ -218,8 +245,12 @@ public class CreateMachineGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 机器组中机器离线清理时间。单位：天 
+     * Get 机器组中机器离线清理时间。单位：天
+
+- 大于0时生效。 
      * @return DelayCleanupTime 机器组中机器离线清理时间。单位：天
+
+- 大于0时生效。
      */
     public Long getDelayCleanupTime() {
         return this.DelayCleanupTime;
@@ -227,7 +258,11 @@ public class CreateMachineGroupRequest extends AbstractModel {
 
     /**
      * Set 机器组中机器离线清理时间。单位：天
+
+- 大于0时生效。
      * @param DelayCleanupTime 机器组中机器离线清理时间。单位：天
+
+- 大于0时生效。
      */
     public void setDelayCleanupTime(Long DelayCleanupTime) {
         this.DelayCleanupTime = DelayCleanupTime;

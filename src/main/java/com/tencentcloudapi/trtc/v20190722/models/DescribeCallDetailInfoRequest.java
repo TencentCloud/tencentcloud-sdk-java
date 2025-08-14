@@ -78,6 +78,7 @@ bigvHeight：上/下行分辨率高；
 aCapEnergy：音频采集能量；
 aPlayEnergy：音频播放能量；
 rtt：SDK到云端的往返延时；单位: ms
+bigvRecFps: 云端送达帧率；
     */
     @SerializedName("DataType")
     @Expose
@@ -206,7 +207,8 @@ bigvWidth：上/下行分辨率宽；
 bigvHeight：上/下行分辨率高；
 aCapEnergy：音频采集能量；
 aPlayEnergy：音频播放能量；
-rtt：SDK到云端的往返延时；单位: ms 
+rtt：SDK到云端的往返延时；单位: ms
+bigvRecFps: 云端送达帧率； 
      * @return DataType 需查询的指标，不填则只返回用户列表，填all则返回所有指标。
 appCpu：APP CPU使用率；
 sysCpu：系统 CPU使用率；
@@ -224,6 +226,7 @@ bigvHeight：上/下行分辨率高；
 aCapEnergy：音频采集能量；
 aPlayEnergy：音频播放能量；
 rtt：SDK到云端的往返延时；单位: ms
+bigvRecFps: 云端送达帧率；
      */
     public String [] getDataType() {
         return this.DataType;
@@ -247,6 +250,7 @@ bigvHeight：上/下行分辨率高；
 aCapEnergy：音频采集能量；
 aPlayEnergy：音频播放能量；
 rtt：SDK到云端的往返延时；单位: ms
+bigvRecFps: 云端送达帧率；
      * @param DataType 需查询的指标，不填则只返回用户列表，填all则返回所有指标。
 appCpu：APP CPU使用率；
 sysCpu：系统 CPU使用率；
@@ -264,6 +268,7 @@ bigvHeight：上/下行分辨率高；
 aCapEnergy：音频采集能量；
 aPlayEnergy：音频播放能量；
 rtt：SDK到云端的往返延时；单位: ms
+bigvRecFps: 云端送达帧率；
      */
     public void setDataType(String [] DataType) {
         this.DataType = DataType;

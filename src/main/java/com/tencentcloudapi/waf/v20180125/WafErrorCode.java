@@ -57,6 +57,9 @@ public enum WafErrorCode {
      /* 调用SSL证书接口发生内部错误 */
      INTERNALERROR_SSLCALLFAILED("InternalError.SSLCallFailed"),
      
+     /* InternalError.Unknown */
+     INTERNALERROR_UNKNOWN("InternalError.Unknown"),
+     
      /* 存在内部错误，请联系我们 */
      INTERNALERROR_UNKNOWNERR("InternalError.UnknownErr"),
      
@@ -161,6 +164,9 @@ public enum WafErrorCode {
      
      /* 资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound"),
+     
+     /* ResourceNotFound.NotFound */
+     RESOURCENOTFOUND_NOTFOUND("ResourceNotFound.NotFound"),
      
      /* 资源不可用。 */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),

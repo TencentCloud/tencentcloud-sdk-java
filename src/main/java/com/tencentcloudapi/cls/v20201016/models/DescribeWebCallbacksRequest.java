@@ -38,7 +38,7 @@ public class DescribeWebCallbacksRequest extends AbstractModel {
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
-
+枚举值：WeCom，DingTalk，Lark，Http
 每次请求的Filters的上限为10，Filter.Values的上限为100。
     */
     @SerializedName("Filters")
@@ -74,7 +74,7 @@ public class DescribeWebCallbacksRequest extends AbstractModel {
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
-
+枚举值：WeCom，DingTalk，Lark，Http
 每次请求的Filters的上限为10，Filter.Values的上限为100。 
      * @return Filters - name
 按照【告警渠道回调配置名称】进行过滤。
@@ -90,7 +90,7 @@ public class DescribeWebCallbacksRequest extends AbstractModel {
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
-
+枚举值：WeCom，DingTalk，Lark，Http
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
     public Filter [] getFilters() {
@@ -112,7 +112,7 @@ public class DescribeWebCallbacksRequest extends AbstractModel {
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
-
+枚举值：WeCom，DingTalk，Lark，Http
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      * @param Filters - name
 按照【告警渠道回调配置名称】进行过滤。
@@ -128,7 +128,7 @@ public class DescribeWebCallbacksRequest extends AbstractModel {
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
-
+枚举值：WeCom，DingTalk，Lark，Http
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
     public void setFilters(Filter [] Filters) {

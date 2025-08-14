@@ -25,10 +25,10 @@ public class WebCallback extends AbstractModel {
 
     /**
     * 回调的类型。可选值：
-- Http
-- WeCom
-- DingTalk
-- Lark
+- Http(自定义接口回调)
+- WeCom(企业微信)
+- DingTalk(钉钉)
+- Lark(飞书)
     */
     @SerializedName("CallbackType")
     @Expose
@@ -43,7 +43,7 @@ public class WebCallback extends AbstractModel {
     private String Url;
 
     /**
-    * 集成配置ID。
+    * 集成配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/product/614/115229)获取集成配置ID
     */
     @SerializedName("WebCallbackId")
     @Expose
@@ -117,15 +117,15 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Get 回调的类型。可选值：
-- Http
-- WeCom
-- DingTalk
-- Lark 
+- Http(自定义接口回调)
+- WeCom(企业微信)
+- DingTalk(钉钉)
+- Lark(飞书) 
      * @return CallbackType 回调的类型。可选值：
-- Http
-- WeCom
-- DingTalk
-- Lark
+- Http(自定义接口回调)
+- WeCom(企业微信)
+- DingTalk(钉钉)
+- Lark(飞书)
      */
     public String getCallbackType() {
         return this.CallbackType;
@@ -133,15 +133,15 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Set 回调的类型。可选值：
-- Http
-- WeCom
-- DingTalk
-- Lark
+- Http(自定义接口回调)
+- WeCom(企业微信)
+- DingTalk(钉钉)
+- Lark(飞书)
      * @param CallbackType 回调的类型。可选值：
-- Http
-- WeCom
-- DingTalk
-- Lark
+- Http(自定义接口回调)
+- WeCom(企业微信)
+- DingTalk(钉钉)
+- Lark(飞书)
      */
     public void setCallbackType(String CallbackType) {
         this.CallbackType = CallbackType;
@@ -168,16 +168,16 @@ public class WebCallback extends AbstractModel {
     }
 
     /**
-     * Get 集成配置ID。 
-     * @return WebCallbackId 集成配置ID。
+     * Get 集成配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/product/614/115229)获取集成配置ID 
+     * @return WebCallbackId 集成配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/product/614/115229)获取集成配置ID
      */
     public String getWebCallbackId() {
         return this.WebCallbackId;
     }
 
     /**
-     * Set 集成配置ID。
-     * @param WebCallbackId 集成配置ID。
+     * Set 集成配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/product/614/115229)获取集成配置ID
+     * @param WebCallbackId 集成配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/product/614/115229)获取集成配置ID
      */
     public void setWebCallbackId(String WebCallbackId) {
         this.WebCallbackId = WebCallbackId;

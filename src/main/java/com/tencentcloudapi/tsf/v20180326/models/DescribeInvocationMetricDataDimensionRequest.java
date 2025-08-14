@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInvocationMetricDataDimensionRequest extends AbstractModel {
 
     /**
-    * 开始时间
+    * 开始时间，格式yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间，格式yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("EndTime")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeInvocationMetricDataDimensionRequest extends AbstractModel 
     private Long Limit;
 
     /**
-    * 聚合维度
+    * 聚合维度。可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
     */
     @SerializedName("DimensionName")
     @Expose
@@ -66,39 +66,39 @@ public class DescribeInvocationMetricDataDimensionRequest extends AbstractModel 
     private String SearchWord;
 
     /**
-    * 维度
+    * 构建维度
     */
     @SerializedName("MetricDimensionValues")
     @Expose
     private MetricDimensionValue [] MetricDimensionValues;
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间，格式yyyy-MM-dd HH:mm:ss 
+     * @return StartTime 开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间，格式yyyy-MM-dd HH:mm:ss
+     * @param StartTime 开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间，格式yyyy-MM-dd HH:mm:ss 
+     * @return EndTime 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间，格式yyyy-MM-dd HH:mm:ss
+     * @param EndTime 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -137,16 +137,16 @@ public class DescribeInvocationMetricDataDimensionRequest extends AbstractModel 
     }
 
     /**
-     * Get 聚合维度 
-     * @return DimensionName 聚合维度
+     * Get 聚合维度。可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID 
+     * @return DimensionName 聚合维度。可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
      */
     public String getDimensionName() {
         return this.DimensionName;
     }
 
     /**
-     * Set 聚合维度
-     * @param DimensionName 聚合维度
+     * Set 聚合维度。可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
+     * @param DimensionName 聚合维度。可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
      */
     public void setDimensionName(String DimensionName) {
         this.DimensionName = DimensionName;
@@ -169,16 +169,16 @@ public class DescribeInvocationMetricDataDimensionRequest extends AbstractModel 
     }
 
     /**
-     * Get 维度 
-     * @return MetricDimensionValues 维度
+     * Get 构建维度 
+     * @return MetricDimensionValues 构建维度
      */
     public MetricDimensionValue [] getMetricDimensionValues() {
         return this.MetricDimensionValues;
     }
 
     /**
-     * Set 维度
-     * @param MetricDimensionValues 维度
+     * Set 构建维度
+     * @param MetricDimensionValues 构建维度
      */
     public void setMetricDimensionValues(MetricDimensionValue [] MetricDimensionValues) {
         this.MetricDimensionValues = MetricDimensionValues;

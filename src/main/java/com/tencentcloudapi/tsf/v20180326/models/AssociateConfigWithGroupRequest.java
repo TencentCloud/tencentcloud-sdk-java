@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class AssociateConfigWithGroupRequest extends AbstractModel {
 
     /**
-    * 配置项id
+    * 配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
     */
     @SerializedName("ConfigId")
     @Expose
@@ -45,14 +46,16 @@ public class AssociateConfigWithGroupRequest extends AbstractModel {
     private Long SelectAll;
 
     /**
-    * 命名空间id
+    * 命名空间ID
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * 集群id
+    * 集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看
     */
     @SerializedName("ClusterId")
     @Expose
@@ -66,16 +69,20 @@ public class AssociateConfigWithGroupRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-     * Get 配置项id 
-     * @return ConfigId 配置项id
+     * Get 配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看 
+     * @return ConfigId 配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 配置项id
-     * @param ConfigId 配置项id
+     * Set 配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
+     * @param ConfigId 配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
@@ -114,32 +121,40 @@ public class AssociateConfigWithGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 命名空间id 
-     * @return NamespaceId 命名空间id
+     * Get 命名空间ID
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看 
+     * @return NamespaceId 命名空间ID
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间id
-     * @param NamespaceId 命名空间id
+     * Set 命名空间ID
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
+     * @param NamespaceId 命名空间ID
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get 集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看 
+     * @return ClusterId 集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set 集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看
+     * @param ClusterId 集群ID
+可通过[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已经创建的集群列表，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1)查看
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

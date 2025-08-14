@@ -27,18 +27,22 @@ public class DescribeAlarmNoticesRequest extends AbstractModel {
     * <li> name
 按照【通知渠道组名称】进行过滤。
 类型：String
+示例："Filters":[{"Key":"name","Values":["test-notice"]}]
 必选：否</li>
 <li> alarmNoticeId
 按照【通知渠道组ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
 必选：否</li>
 <li> uid
 按照【接收用户ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "uid", Values: ["1137546"]}]
 必选：否</li>
 <li> groupId
 按照【接收用户组ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "groupId", Values: ["344098"]}]
 必选：否</li>
 
 <li> deliverFlag
@@ -46,7 +50,7 @@ public class DescribeAlarmNoticesRequest extends AbstractModel {
 类型：String
 必选：否
 可选值： "1":未启用,  "2": 已启用, "3":投递异常</li>
-
+示例："Filters":[{"Key":"deliverFlag","Values":["2"]}]
 每次请求的Filters的上限为10，Filter.Values的上限为5。
     */
     @SerializedName("Filters")
@@ -71,18 +75,22 @@ public class DescribeAlarmNoticesRequest extends AbstractModel {
      * Get <li> name
 按照【通知渠道组名称】进行过滤。
 类型：String
+示例："Filters":[{"Key":"name","Values":["test-notice"]}]
 必选：否</li>
 <li> alarmNoticeId
 按照【通知渠道组ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
 必选：否</li>
 <li> uid
 按照【接收用户ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "uid", Values: ["1137546"]}]
 必选：否</li>
 <li> groupId
 按照【接收用户组ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "groupId", Values: ["344098"]}]
 必选：否</li>
 
 <li> deliverFlag
@@ -90,23 +98,27 @@ public class DescribeAlarmNoticesRequest extends AbstractModel {
 类型：String
 必选：否
 可选值： "1":未启用,  "2": 已启用, "3":投递异常</li>
-
+示例："Filters":[{"Key":"deliverFlag","Values":["2"]}]
 每次请求的Filters的上限为10，Filter.Values的上限为5。 
      * @return Filters <li> name
 按照【通知渠道组名称】进行过滤。
 类型：String
+示例："Filters":[{"Key":"name","Values":["test-notice"]}]
 必选：否</li>
 <li> alarmNoticeId
 按照【通知渠道组ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
 必选：否</li>
 <li> uid
 按照【接收用户ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "uid", Values: ["1137546"]}]
 必选：否</li>
 <li> groupId
 按照【接收用户组ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "groupId", Values: ["344098"]}]
 必选：否</li>
 
 <li> deliverFlag
@@ -114,7 +126,7 @@ public class DescribeAlarmNoticesRequest extends AbstractModel {
 类型：String
 必选：否
 可选值： "1":未启用,  "2": 已启用, "3":投递异常</li>
-
+示例："Filters":[{"Key":"deliverFlag","Values":["2"]}]
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
     public Filter [] getFilters() {
@@ -125,18 +137,22 @@ public class DescribeAlarmNoticesRequest extends AbstractModel {
      * Set <li> name
 按照【通知渠道组名称】进行过滤。
 类型：String
+示例："Filters":[{"Key":"name","Values":["test-notice"]}]
 必选：否</li>
 <li> alarmNoticeId
 按照【通知渠道组ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
 必选：否</li>
 <li> uid
 按照【接收用户ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "uid", Values: ["1137546"]}]
 必选：否</li>
 <li> groupId
 按照【接收用户组ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "groupId", Values: ["344098"]}]
 必选：否</li>
 
 <li> deliverFlag
@@ -144,23 +160,27 @@ public class DescribeAlarmNoticesRequest extends AbstractModel {
 类型：String
 必选：否
 可选值： "1":未启用,  "2": 已启用, "3":投递异常</li>
-
+示例："Filters":[{"Key":"deliverFlag","Values":["2"]}]
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      * @param Filters <li> name
 按照【通知渠道组名称】进行过滤。
 类型：String
+示例："Filters":[{"Key":"name","Values":["test-notice"]}]
 必选：否</li>
 <li> alarmNoticeId
 按照【通知渠道组ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
 必选：否</li>
 <li> uid
 按照【接收用户ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "uid", Values: ["1137546"]}]
 必选：否</li>
 <li> groupId
 按照【接收用户组ID】进行过滤。
 类型：String
+示例："Filters": [{Key: "groupId", Values: ["344098"]}]
 必选：否</li>
 
 <li> deliverFlag
@@ -168,7 +188,7 @@ public class DescribeAlarmNoticesRequest extends AbstractModel {
 类型：String
 必选：否
 可选值： "1":未启用,  "2": 已启用, "3":投递异常</li>
-
+示例："Filters":[{"Key":"deliverFlag","Values":["2"]}]
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
     public void setFilters(Filter [] Filters) {

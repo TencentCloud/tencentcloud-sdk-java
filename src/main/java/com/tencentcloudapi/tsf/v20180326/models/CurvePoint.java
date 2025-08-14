@@ -38,7 +38,7 @@ public class CurvePoint extends AbstractModel {
     private String Value;
 
     /**
-    * 该坐标点时间戳
+    * 该坐标点时间戳，单位毫秒
     */
     @SerializedName("Timestamp")
     @Expose
@@ -77,16 +77,16 @@ public class CurvePoint extends AbstractModel {
     }
 
     /**
-     * Get 该坐标点时间戳 
-     * @return Timestamp 该坐标点时间戳
+     * Get 该坐标点时间戳，单位毫秒 
+     * @return Timestamp 该坐标点时间戳，单位毫秒
      */
     public String getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 该坐标点时间戳
-     * @param Timestamp 该坐标点时间戳
+     * Set 该坐标点时间戳，单位毫秒
+     * @param Timestamp 该坐标点时间戳，单位毫秒
      */
     public void setTimestamp(String Timestamp) {
         this.Timestamp = Timestamp;

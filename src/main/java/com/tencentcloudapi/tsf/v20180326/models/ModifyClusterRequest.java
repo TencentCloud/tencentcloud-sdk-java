@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyClusterRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID，按照【集群ID】进行过滤，可通过调用DescribeClusters查询已创建的项目列表或登录控制台进行查看；也可以调用CreateCluster创建新的项目。集群ID例如：cls-6a79x94v。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -52,30 +52,30 @@ public class ModifyClusterRequest extends AbstractModel {
     private String ClusterRemarkName;
 
     /**
-    * 是否开启cls日志功能
+    * 是否开启cls日志功能，true表示开启，false表示关闭
     */
     @SerializedName("EnableLogCollection")
     @Expose
     private Boolean EnableLogCollection;
 
     /**
-    * 是否修复cls日志功能
+    * 是否修复cls日志功能，true表示修复，false表示不修复
     */
     @SerializedName("RepairLog")
     @Expose
     private Boolean RepairLog;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID，按照【集群ID】进行过滤，可通过调用DescribeClusters查询已创建的项目列表或登录控制台进行查看；也可以调用CreateCluster创建新的项目。集群ID例如：cls-6a79x94v。 
+     * @return ClusterId 集群ID，按照【集群ID】进行过滤，可通过调用DescribeClusters查询已创建的项目列表或登录控制台进行查看；也可以调用CreateCluster创建新的项目。集群ID例如：cls-6a79x94v。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID，按照【集群ID】进行过滤，可通过调用DescribeClusters查询已创建的项目列表或登录控制台进行查看；也可以调用CreateCluster创建新的项目。集群ID例如：cls-6a79x94v。
+     * @param ClusterId 集群ID，按照【集群ID】进行过滤，可通过调用DescribeClusters查询已创建的项目列表或登录控制台进行查看；也可以调用CreateCluster创建新的项目。集群ID例如：cls-6a79x94v。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -130,32 +130,32 @@ public class ModifyClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启cls日志功能 
-     * @return EnableLogCollection 是否开启cls日志功能
+     * Get 是否开启cls日志功能，true表示开启，false表示关闭 
+     * @return EnableLogCollection 是否开启cls日志功能，true表示开启，false表示关闭
      */
     public Boolean getEnableLogCollection() {
         return this.EnableLogCollection;
     }
 
     /**
-     * Set 是否开启cls日志功能
-     * @param EnableLogCollection 是否开启cls日志功能
+     * Set 是否开启cls日志功能，true表示开启，false表示关闭
+     * @param EnableLogCollection 是否开启cls日志功能，true表示开启，false表示关闭
      */
     public void setEnableLogCollection(Boolean EnableLogCollection) {
         this.EnableLogCollection = EnableLogCollection;
     }
 
     /**
-     * Get 是否修复cls日志功能 
-     * @return RepairLog 是否修复cls日志功能
+     * Get 是否修复cls日志功能，true表示修复，false表示不修复 
+     * @return RepairLog 是否修复cls日志功能，true表示修复，false表示不修复
      */
     public Boolean getRepairLog() {
         return this.RepairLog;
     }
 
     /**
-     * Set 是否修复cls日志功能
-     * @param RepairLog 是否修复cls日志功能
+     * Set 是否修复cls日志功能，true表示修复，false表示不修复
+     * @param RepairLog 是否修复cls日志功能，true表示修复，false表示不修复
      */
     public void setRepairLog(Boolean RepairLog) {
         this.RepairLog = RepairLog;

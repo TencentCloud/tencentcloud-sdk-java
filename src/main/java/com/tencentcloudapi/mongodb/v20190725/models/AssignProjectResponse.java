@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AssignProjectResponse extends AbstractModel {
 
     /**
-    * 返回的异步任务ID列表
+    * 返回的异步任务ID列表。
     */
     @SerializedName("FlowIds")
     @Expose
@@ -38,16 +38,16 @@ public class AssignProjectResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的异步任务ID列表 
-     * @return FlowIds 返回的异步任务ID列表
+     * Get 返回的异步任务ID列表。 
+     * @return FlowIds 返回的异步任务ID列表。
      */
     public Long [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 返回的异步任务ID列表
-     * @param FlowIds 返回的异步任务ID列表
+     * Set 返回的异步任务ID列表。
+     * @param FlowIds 返回的异步任务ID列表。
      */
     public void setFlowIds(Long [] FlowIds) {
         this.FlowIds = FlowIds;

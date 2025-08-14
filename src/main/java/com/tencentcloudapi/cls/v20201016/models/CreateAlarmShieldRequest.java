@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateAlarmShieldRequest extends AbstractModel {
 
     /**
-    * 通知渠道组id。
+    * 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取通知渠道组id
     */
     @SerializedName("AlarmNoticeId")
     @Expose
     private String AlarmNoticeId;
 
     /**
-    * 屏蔽开始时间（秒级时间戳）。
+    * 屏蔽规则开始时间，秒级(s)时间戳。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 屏蔽结束时间（秒级时间戳）。
+    * 屏蔽规则结束时间，秒级(s)时间戳。结束时间需要大于当前时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -66,48 +66,48 @@ public class CreateAlarmShieldRequest extends AbstractModel {
     private String Rule;
 
     /**
-     * Get 通知渠道组id。 
-     * @return AlarmNoticeId 通知渠道组id。
+     * Get 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取通知渠道组id 
+     * @return AlarmNoticeId 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取通知渠道组id
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set 通知渠道组id。
-     * @param AlarmNoticeId 通知渠道组id。
+     * Set 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取通知渠道组id
+     * @param AlarmNoticeId 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取通知渠道组id
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;
     }
 
     /**
-     * Get 屏蔽开始时间（秒级时间戳）。 
-     * @return StartTime 屏蔽开始时间（秒级时间戳）。
+     * Get 屏蔽规则开始时间，秒级(s)时间戳。 
+     * @return StartTime 屏蔽规则开始时间，秒级(s)时间戳。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 屏蔽开始时间（秒级时间戳）。
-     * @param StartTime 屏蔽开始时间（秒级时间戳）。
+     * Set 屏蔽规则开始时间，秒级(s)时间戳。
+     * @param StartTime 屏蔽规则开始时间，秒级(s)时间戳。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 屏蔽结束时间（秒级时间戳）。 
-     * @return EndTime 屏蔽结束时间（秒级时间戳）。
+     * Get 屏蔽规则结束时间，秒级(s)时间戳。结束时间需要大于当前时间 
+     * @return EndTime 屏蔽规则结束时间，秒级(s)时间戳。结束时间需要大于当前时间
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 屏蔽结束时间（秒级时间戳）。
-     * @param EndTime 屏蔽结束时间（秒级时间戳）。
+     * Set 屏蔽规则结束时间，秒级(s)时间戳。结束时间需要大于当前时间
+     * @param EndTime 屏蔽规则结束时间，秒级(s)时间戳。结束时间需要大于当前时间
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

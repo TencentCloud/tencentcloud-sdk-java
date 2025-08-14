@@ -31,7 +31,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private String TargetGroupName;
 
     /**
-    * 目标组的vpcid属性，不填则使用默认vpc
+    * 目标组的vpcId属性，不填则使用默认vpc。
     */
     @SerializedName("VpcId")
     @Expose
@@ -67,6 +67,21 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private String Protocol;
 
     /**
+    * 健康检查。
+    */
+    @SerializedName("HealthCheck")
+    @Expose
+    private TargetGroupHealthCheck HealthCheck;
+
+    /**
+    * 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+    */
+    @SerializedName("ScheduleAlgorithm")
+    @Expose
+    private String ScheduleAlgorithm;
+
+    /**
     * 标签。
     */
     @SerializedName("Tags")
@@ -74,12 +89,8 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private TagInfo [] Tags;
 
     /**
-    * 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
-</ul>
-v1 目标组类型不支持设置 Weight 参数。
+    * 后端服务默认权重, 其中：
+<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
     */
     @SerializedName("Weight")
     @Expose
@@ -123,16 +134,16 @@ v1 目标组类型不支持设置 Weight 参数。
     }
 
     /**
-     * Get 目标组的vpcid属性，不填则使用默认vpc 
-     * @return VpcId 目标组的vpcid属性，不填则使用默认vpc
+     * Get 目标组的vpcId属性，不填则使用默认vpc。 
+     * @return VpcId 目标组的vpcId属性，不填则使用默认vpc。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 目标组的vpcid属性，不填则使用默认vpc
-     * @param VpcId 目标组的vpcid属性，不填则使用默认vpc
+     * Set 目标组的vpcId属性，不填则使用默认vpc。
+     * @param VpcId 目标组的vpcId属性，不填则使用默认vpc。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -207,6 +218,42 @@ v1 目标组类型不支持设置 Weight 参数。
     }
 
     /**
+     * Get 健康检查。 
+     * @return HealthCheck 健康检查。
+     */
+    public TargetGroupHealthCheck getHealthCheck() {
+        return this.HealthCheck;
+    }
+
+    /**
+     * Set 健康检查。
+     * @param HealthCheck 健康检查。
+     */
+    public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
+        this.HealthCheck = HealthCheck;
+    }
+
+    /**
+     * Get 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur> 
+     * @return ScheduleAlgorithm 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+     */
+    public String getScheduleAlgorithm() {
+        return this.ScheduleAlgorithm;
+    }
+
+    /**
+     * Set 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+     * @param ScheduleAlgorithm 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+     */
+    public void setScheduleAlgorithm(String ScheduleAlgorithm) {
+        this.ScheduleAlgorithm = ScheduleAlgorithm;
+    }
+
+    /**
      * Get 标签。 
      * @return Tags 标签。
      */
@@ -223,36 +270,20 @@ v1 目标组类型不支持设置 Weight 参数。
     }
 
     /**
-     * Get 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
-</ul>
-v1 目标组类型不支持设置 Weight 参数。 
-     * @return Weight 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
-</ul>
-v1 目标组类型不支持设置 Weight 参数。
+     * Get 后端服务默认权重, 其中：
+<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul> 
+     * @return Weight 后端服务默认权重, 其中：
+<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
-</ul>
-v1 目标组类型不支持设置 Weight 参数。
-     * @param Weight 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
-</ul>
-v1 目标组类型不支持设置 Weight 参数。
+     * Set 后端服务默认权重, 其中：
+<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
+     * @param Weight 后端服务默认权重, 其中：
+<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
@@ -335,6 +366,12 @@ v1 目标组类型不支持设置 Weight 参数。
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new TargetGroupHealthCheck(source.HealthCheck);
+        }
+        if (source.ScheduleAlgorithm != null) {
+            this.ScheduleAlgorithm = new String(source.ScheduleAlgorithm);
+        }
         if (source.Tags != null) {
             this.Tags = new TagInfo[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -366,6 +403,8 @@ v1 目标组类型不支持设置 Weight 参数。
         this.setParamArrayObj(map, prefix + "TargetGroupInstances.", this.TargetGroupInstances);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
+        this.setParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "FullListenSwitch", this.FullListenSwitch);

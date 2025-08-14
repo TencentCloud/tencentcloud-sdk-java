@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePodInstancesRequest extends AbstractModel {
 
     /**
-    * 实例所属groupId
+    * 实例所属部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。部署组所在集群必须是活跃状态的。
     */
     @SerializedName("GroupId")
     @Expose
@@ -45,37 +45,37 @@ public class DescribePodInstancesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 过滤字段
+    * 用于通过PodName字段过滤返回结果。
     */
     @SerializedName("PodNameList")
     @Expose
     private String [] PodNameList;
 
     /**
-    * 新老版本pod批次标识
+    * 新老版本pod批次标识，old表示老版本，new表示新版本。
     */
     @SerializedName("DeployVersion")
     @Expose
     private String DeployVersion;
 
     /**
-    * 任务ID
+    * 实例所属任务ID，登录控制台进行查看。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 实例所属groupId 
-     * @return GroupId 实例所属groupId
+     * Get 实例所属部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。部署组所在集群必须是活跃状态的。 
+     * @return GroupId 实例所属部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。部署组所在集群必须是活跃状态的。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 实例所属groupId
-     * @param GroupId 实例所属groupId
+     * Set 实例所属部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。部署组所在集群必须是活跃状态的。
+     * @param GroupId 实例所属部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。部署组所在集群必须是活跃状态的。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -114,48 +114,48 @@ public class DescribePodInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤字段 
-     * @return PodNameList 过滤字段
+     * Get 用于通过PodName字段过滤返回结果。 
+     * @return PodNameList 用于通过PodName字段过滤返回结果。
      */
     public String [] getPodNameList() {
         return this.PodNameList;
     }
 
     /**
-     * Set 过滤字段
-     * @param PodNameList 过滤字段
+     * Set 用于通过PodName字段过滤返回结果。
+     * @param PodNameList 用于通过PodName字段过滤返回结果。
      */
     public void setPodNameList(String [] PodNameList) {
         this.PodNameList = PodNameList;
     }
 
     /**
-     * Get 新老版本pod批次标识 
-     * @return DeployVersion 新老版本pod批次标识
+     * Get 新老版本pod批次标识，old表示老版本，new表示新版本。 
+     * @return DeployVersion 新老版本pod批次标识，old表示老版本，new表示新版本。
      */
     public String getDeployVersion() {
         return this.DeployVersion;
     }
 
     /**
-     * Set 新老版本pod批次标识
-     * @param DeployVersion 新老版本pod批次标识
+     * Set 新老版本pod批次标识，old表示老版本，new表示新版本。
+     * @param DeployVersion 新老版本pod批次标识，old表示老版本，new表示新版本。
      */
     public void setDeployVersion(String DeployVersion) {
         this.DeployVersion = DeployVersion;
     }
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 实例所属任务ID，登录控制台进行查看。 
+     * @return TaskId 实例所属任务ID，登录控制台进行查看。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 实例所属任务ID，登录控制台进行查看。
+     * @param TaskId 实例所属任务ID，登录控制台进行查看。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

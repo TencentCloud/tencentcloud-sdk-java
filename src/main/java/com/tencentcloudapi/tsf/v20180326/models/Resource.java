@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class Resource extends AbstractModel {
 
     /**
-    * 资源ID
+    * 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源编码
+    * 资源编码，枚举值描述【cluster、namespace、config】
     */
     @SerializedName("ResourceCode")
     @Expose
@@ -45,21 +45,21 @@ public class Resource extends AbstractModel {
     private String ResourceName;
 
     /**
-    * 资源所属产品编码
+    * 资源所属产品编码，枚举值描述【tsf】
     */
     @SerializedName("ServiceCode")
     @Expose
     private String ServiceCode;
 
     /**
-    * 选取资源使用的Action
+    * 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
     */
     @SerializedName("ResourceAction")
     @Expose
     private String ResourceAction;
 
     /**
-    * 资源数据查询的ID字段名
+    * 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
     */
     @SerializedName("IdField")
     @Expose
@@ -80,14 +80,14 @@ public class Resource extends AbstractModel {
     private String SelectIdsField;
 
     /**
-    * 创建时间
+    * 创建时间，时间戳格式【Long】
     */
     @SerializedName("CreationTime")
     @Expose
     private Long CreationTime;
 
     /**
-    * 最后更新时间
+    * 最后更新时间，时间戳格式【Long】
     */
     @SerializedName("LastUpdateTime")
     @Expose
@@ -122,39 +122,39 @@ public class Resource extends AbstractModel {
     private String SearchWordField;
 
     /**
-    * 排序
+    * 排序，枚举值描述【10、20、77】
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
 
     /**
-     * Get 资源ID 
-     * @return ResourceId 资源ID
+     * Get 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取 
+     * @return ResourceId 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID
-     * @param ResourceId 资源ID
+     * Set 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+     * @param ResourceId 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源编码 
-     * @return ResourceCode 资源编码
+     * Get 资源编码，枚举值描述【cluster、namespace、config】 
+     * @return ResourceCode 资源编码，枚举值描述【cluster、namespace、config】
      */
     public String getResourceCode() {
         return this.ResourceCode;
     }
 
     /**
-     * Set 资源编码
-     * @param ResourceCode 资源编码
+     * Set 资源编码，枚举值描述【cluster、namespace、config】
+     * @param ResourceCode 资源编码，枚举值描述【cluster、namespace、config】
      */
     public void setResourceCode(String ResourceCode) {
         this.ResourceCode = ResourceCode;
@@ -177,48 +177,48 @@ public class Resource extends AbstractModel {
     }
 
     /**
-     * Get 资源所属产品编码 
-     * @return ServiceCode 资源所属产品编码
+     * Get 资源所属产品编码，枚举值描述【tsf】 
+     * @return ServiceCode 资源所属产品编码，枚举值描述【tsf】
      */
     public String getServiceCode() {
         return this.ServiceCode;
     }
 
     /**
-     * Set 资源所属产品编码
-     * @param ServiceCode 资源所属产品编码
+     * Set 资源所属产品编码，枚举值描述【tsf】
+     * @param ServiceCode 资源所属产品编码，枚举值描述【tsf】
      */
     public void setServiceCode(String ServiceCode) {
         this.ServiceCode = ServiceCode;
     }
 
     /**
-     * Get 选取资源使用的Action 
-     * @return ResourceAction 选取资源使用的Action
+     * Get 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】 
+     * @return ResourceAction 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
      */
     public String getResourceAction() {
         return this.ResourceAction;
     }
 
     /**
-     * Set 选取资源使用的Action
-     * @param ResourceAction 选取资源使用的Action
+     * Set 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
+     * @param ResourceAction 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
      */
     public void setResourceAction(String ResourceAction) {
         this.ResourceAction = ResourceAction;
     }
 
     /**
-     * Get 资源数据查询的ID字段名 
-     * @return IdField 资源数据查询的ID字段名
+     * Get 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取 
+     * @return IdField 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
      */
     public String getIdField() {
         return this.IdField;
     }
 
     /**
-     * Set 资源数据查询的ID字段名
-     * @param IdField 资源数据查询的ID字段名
+     * Set 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+     * @param IdField 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
      */
     public void setIdField(String IdField) {
         this.IdField = IdField;
@@ -257,32 +257,32 @@ public class Resource extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreationTime 创建时间
+     * Get 创建时间，时间戳格式【Long】 
+     * @return CreationTime 创建时间，时间戳格式【Long】
      */
     public Long getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreationTime 创建时间
+     * Set 创建时间，时间戳格式【Long】
+     * @param CreationTime 创建时间，时间戳格式【Long】
      */
     public void setCreationTime(Long CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 最后更新时间 
-     * @return LastUpdateTime 最后更新时间
+     * Get 最后更新时间，时间戳格式【Long】 
+     * @return LastUpdateTime 最后更新时间，时间戳格式【Long】
      */
     public Long getLastUpdateTime() {
         return this.LastUpdateTime;
     }
 
     /**
-     * Set 最后更新时间
-     * @param LastUpdateTime 最后更新时间
+     * Set 最后更新时间，时间戳格式【Long】
+     * @param LastUpdateTime 最后更新时间，时间戳格式【Long】
      */
     public void setLastUpdateTime(Long LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;
@@ -353,16 +353,16 @@ public class Resource extends AbstractModel {
     }
 
     /**
-     * Get 排序 
-     * @return Index 排序
+     * Get 排序，枚举值描述【10、20、77】 
+     * @return Index 排序，枚举值描述【10、20、77】
      */
     public Long getIndex() {
         return this.Index;
     }
 
     /**
-     * Set 排序
-     * @param Index 排序
+     * Set 排序，枚举值描述【10、20、77】
+     * @param Index 排序，枚举值描述【10、20、77】
      */
     public void setIndex(Long Index) {
         this.Index = Index;

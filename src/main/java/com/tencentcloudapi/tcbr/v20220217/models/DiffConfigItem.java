@@ -114,6 +114,13 @@ AccessTypes，EntryPoint，Cmd
     private VpcConf VpcConf;
 
     /**
+    * 存储配置信息
+    */
+    @SerializedName("VolumesConf")
+    @Expose
+    private VolumeConf [] VolumesConf;
+
+    /**
      * Get 配置项 Key
 MinNum 最小副本数
 MaxNum 最大副本数
@@ -365,6 +372,22 @@ AccessTypes，EntryPoint，Cmd
         this.VpcConf = VpcConf;
     }
 
+    /**
+     * Get 存储配置信息 
+     * @return VolumesConf 存储配置信息
+     */
+    public VolumeConf [] getVolumesConf() {
+        return this.VolumesConf;
+    }
+
+    /**
+     * Set 存储配置信息
+     * @param VolumesConf 存储配置信息
+     */
+    public void setVolumesConf(VolumeConf [] VolumesConf) {
+        this.VolumesConf = VolumesConf;
+    }
+
     public DiffConfigItem() {
     }
 
@@ -409,6 +432,12 @@ AccessTypes，EntryPoint，Cmd
         if (source.VpcConf != null) {
             this.VpcConf = new VpcConf(source.VpcConf);
         }
+        if (source.VolumesConf != null) {
+            this.VolumesConf = new VolumeConf[source.VolumesConf.length];
+            for (int i = 0; i < source.VolumesConf.length; i++) {
+                this.VolumesConf[i] = new VolumeConf(source.VolumesConf[i]);
+            }
+        }
     }
 
 
@@ -425,6 +454,7 @@ AccessTypes，EntryPoint，Cmd
         this.setParamArrayObj(map, prefix + "PolicyDetails.", this.PolicyDetails);
         this.setParamArrayObj(map, prefix + "TimerScale.", this.TimerScale);
         this.setParamObj(map, prefix + "VpcConf.", this.VpcConf);
+        this.setParamArrayObj(map, prefix + "VolumesConf.", this.VolumesConf);
 
     }
 }

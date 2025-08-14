@@ -25,6 +25,7 @@ public class SearchBusinessLogRequest extends AbstractModel {
 
     /**
     * 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
     */
     @SerializedName("ConfigId")
     @Expose
@@ -38,14 +39,14 @@ public class SearchBusinessLogRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * 开始时间
+    * 开始时间，格式yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间，格式yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("EndTime")
     @Expose
@@ -88,20 +89,21 @@ public class SearchBusinessLogRequest extends AbstractModel {
 
     /**
     * 部署组ID列表，不传表示全部部署组
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
     */
     @SerializedName("GroupIds")
     @Expose
     private String [] GroupIds;
 
     /**
-    * 检索类型，取值"LUCENE", "REGEXP", "NORMAL"
+    * 检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
     */
     @SerializedName("SearchWordType")
     @Expose
     private String SearchWordType;
 
     /**
-    * 批量请求类型，取值"page"或"scroll"
+    * 批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
     */
     @SerializedName("BatchType")
     @Expose
@@ -122,8 +124,10 @@ public class SearchBusinessLogRequest extends AbstractModel {
     private String [] SearchAfter;
 
     /**
-     * Get 日志配置项ID 
+     * Get 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看 
      * @return ConfigId 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public String getConfigId() {
         return this.ConfigId;
@@ -131,7 +135,9 @@ public class SearchBusinessLogRequest extends AbstractModel {
 
     /**
      * Set 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      * @param ConfigId 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
@@ -154,32 +160,32 @@ public class SearchBusinessLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间，格式yyyy-MM-dd HH:mm:ss 
+     * @return StartTime 开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间，格式yyyy-MM-dd HH:mm:ss
+     * @param StartTime 开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间，格式yyyy-MM-dd HH:mm:ss 
+     * @return EndTime 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间，格式yyyy-MM-dd HH:mm:ss
+     * @param EndTime 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -266,8 +272,10 @@ public class SearchBusinessLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 部署组ID列表，不传表示全部部署组 
+     * Get 部署组ID列表，不传表示全部部署组
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看 
      * @return GroupIds 部署组ID列表，不传表示全部部署组
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
      */
     public String [] getGroupIds() {
         return this.GroupIds;
@@ -275,39 +283,41 @@ public class SearchBusinessLogRequest extends AbstractModel {
 
     /**
      * Set 部署组ID列表，不传表示全部部署组
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
      * @param GroupIds 部署组ID列表，不传表示全部部署组
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get 检索类型，取值"LUCENE", "REGEXP", "NORMAL" 
-     * @return SearchWordType 检索类型，取值"LUCENE", "REGEXP", "NORMAL"
+     * Get 检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索 
+     * @return SearchWordType 检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
      */
     public String getSearchWordType() {
         return this.SearchWordType;
     }
 
     /**
-     * Set 检索类型，取值"LUCENE", "REGEXP", "NORMAL"
-     * @param SearchWordType 检索类型，取值"LUCENE", "REGEXP", "NORMAL"
+     * Set 检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
+     * @param SearchWordType 检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
      */
     public void setSearchWordType(String SearchWordType) {
         this.SearchWordType = SearchWordType;
     }
 
     /**
-     * Get 批量请求类型，取值"page"或"scroll" 
-     * @return BatchType 批量请求类型，取值"page"或"scroll"
+     * Get 批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE 
+     * @return BatchType 批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
      */
     public String getBatchType() {
         return this.BatchType;
     }
 
     /**
-     * Set 批量请求类型，取值"page"或"scroll"
-     * @param BatchType 批量请求类型，取值"page"或"scroll"
+     * Set 批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
+     * @param BatchType 批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
      */
     public void setBatchType(String BatchType) {
         this.BatchType = BatchType;

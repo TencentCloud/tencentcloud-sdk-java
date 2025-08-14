@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * 过滤条件
+    * 过滤条件，name表示过滤字段，value表示过滤字段值。
     */
     @SerializedName("Filters")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeInstancesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
+     * Get 过滤条件，name表示过滤字段，value表示过滤字段值。 
+     * @return Filters 过滤条件，name表示过滤字段，value表示过滤字段值。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
+     * Set 过滤条件，name表示过滤字段，value表示过滤字段值。
+     * @param Filters 过滤条件，name表示过滤字段，value表示过滤字段值。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

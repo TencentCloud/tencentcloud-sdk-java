@@ -52,7 +52,7 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
     private String ApplicationName;
 
     /**
-    * 部署组所属应用类型
+    * 部署组所属应用类型，C：容器应用，V：虚拟机应用
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -87,14 +87,14 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
     private String ClusterName;
 
     /**
-    * 部署组所属集群类型
+    * 部署组所属集群类型，C：容器集群，V：虚拟机集群
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 部署组关联日志配置时间
+    * 部署组关联日志配置时间，格式yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("AssociatedTime")
     @Expose
@@ -165,16 +165,16 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
     }
 
     /**
-     * Get 部署组所属应用类型 
-     * @return ApplicationType 部署组所属应用类型
+     * Get 部署组所属应用类型，C：容器应用，V：虚拟机应用 
+     * @return ApplicationType 部署组所属应用类型，C：容器应用，V：虚拟机应用
      */
     public String getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set 部署组所属应用类型
-     * @param ApplicationType 部署组所属应用类型
+     * Set 部署组所属应用类型，C：容器应用，V：虚拟机应用
+     * @param ApplicationType 部署组所属应用类型，C：容器应用，V：虚拟机应用
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
@@ -245,32 +245,32 @@ public class BusinessLogConfigAssociatedGroup extends AbstractModel {
     }
 
     /**
-     * Get 部署组所属集群类型 
-     * @return ClusterType 部署组所属集群类型
+     * Get 部署组所属集群类型，C：容器集群，V：虚拟机集群 
+     * @return ClusterType 部署组所属集群类型，C：容器集群，V：虚拟机集群
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 部署组所属集群类型
-     * @param ClusterType 部署组所属集群类型
+     * Set 部署组所属集群类型，C：容器集群，V：虚拟机集群
+     * @param ClusterType 部署组所属集群类型，C：容器集群，V：虚拟机集群
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 部署组关联日志配置时间 
-     * @return AssociatedTime 部署组关联日志配置时间
+     * Get 部署组关联日志配置时间，格式yyyy-MM-dd HH:mm:ss 
+     * @return AssociatedTime 部署组关联日志配置时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getAssociatedTime() {
         return this.AssociatedTime;
     }
 
     /**
-     * Set 部署组关联日志配置时间
-     * @param AssociatedTime 部署组关联日志配置时间
+     * Set 部署组关联日志配置时间，格式yyyy-MM-dd HH:mm:ss
+     * @param AssociatedTime 部署组关联日志配置时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setAssociatedTime(String AssociatedTime) {
         this.AssociatedTime = AssociatedTime;

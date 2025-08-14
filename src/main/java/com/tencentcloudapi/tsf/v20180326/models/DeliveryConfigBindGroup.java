@@ -52,14 +52,14 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     private GroupInfo [] Groups;
 
     /**
-    * 创建时间
+    * 创建时间，格式yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * KafkaVIp
+    * Kafka的vip
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaVIp")
@@ -67,7 +67,7 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     private String KafkaVIp;
 
     /**
-    * KafkaAddress
+    * Kafka地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaAddress")
@@ -75,7 +75,7 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     private String KafkaAddress;
 
     /**
-    * KafkaVPort
+    * Kafka端口
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaVPort")
@@ -98,7 +98,7 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     private String LineRule;
 
     /**
-    * CustomRule
+    * 自定义规则
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomRule")
@@ -114,14 +114,14 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     private Boolean EnableGlobalLineRule;
 
     /**
-    * EnableAuth
+    * 是否开启认证
     */
     @SerializedName("EnableAuth")
     @Expose
     private Boolean EnableAuth;
 
     /**
-    * Username
+    * 用户名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Username")
@@ -129,7 +129,7 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     private String Username;
 
     /**
-    * Password
+    * 密码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
@@ -209,25 +209,25 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间，格式yyyy-MM-dd HH:mm:ss 
+     * @return CreateTime 创建时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间，格式yyyy-MM-dd HH:mm:ss
+     * @param CreateTime 创建时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get KafkaVIp
+     * Get Kafka的vip
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KafkaVIp KafkaVIp
+     * @return KafkaVIp Kafka的vip
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKafkaVIp() {
@@ -235,9 +235,9 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Set KafkaVIp
+     * Set Kafka的vip
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KafkaVIp KafkaVIp
+     * @param KafkaVIp Kafka的vip
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaVIp(String KafkaVIp) {
@@ -245,9 +245,9 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Get KafkaAddress
+     * Get Kafka地址
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KafkaAddress KafkaAddress
+     * @return KafkaAddress Kafka地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKafkaAddress() {
@@ -255,9 +255,9 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Set KafkaAddress
+     * Set Kafka地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KafkaAddress KafkaAddress
+     * @param KafkaAddress Kafka地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaAddress(String KafkaAddress) {
@@ -265,9 +265,9 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Get KafkaVPort
+     * Get Kafka端口
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KafkaVPort KafkaVPort
+     * @return KafkaVPort Kafka端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKafkaVPort() {
@@ -275,9 +275,9 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Set KafkaVPort
+     * Set Kafka端口
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KafkaVPort KafkaVPort
+     * @param KafkaVPort Kafka端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaVPort(String KafkaVPort) {
@@ -321,9 +321,9 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Get CustomRule
+     * Get 自定义规则
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomRule CustomRule
+     * @return CustomRule 自定义规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomRule() {
@@ -331,9 +331,9 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Set CustomRule
+     * Set 自定义规则
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomRule CustomRule
+     * @param CustomRule 自定义规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomRule(String CustomRule) {
@@ -361,25 +361,25 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Get EnableAuth 
-     * @return EnableAuth EnableAuth
+     * Get 是否开启认证 
+     * @return EnableAuth 是否开启认证
      */
     public Boolean getEnableAuth() {
         return this.EnableAuth;
     }
 
     /**
-     * Set EnableAuth
-     * @param EnableAuth EnableAuth
+     * Set 是否开启认证
+     * @param EnableAuth 是否开启认证
      */
     public void setEnableAuth(Boolean EnableAuth) {
         this.EnableAuth = EnableAuth;
     }
 
     /**
-     * Get Username
+     * Get 用户名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Username Username
+     * @return Username 用户名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsername() {
@@ -387,9 +387,9 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Set Username
+     * Set 用户名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Username Username
+     * @param Username 用户名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsername(String Username) {
@@ -397,9 +397,9 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Get Password
+     * Get 密码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Password Password
+     * @return Password 密码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
@@ -407,9 +407,9 @@ public class DeliveryConfigBindGroup extends AbstractModel {
     }
 
     /**
-     * Set Password
+     * Set 密码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Password Password
+     * @param Password 密码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {

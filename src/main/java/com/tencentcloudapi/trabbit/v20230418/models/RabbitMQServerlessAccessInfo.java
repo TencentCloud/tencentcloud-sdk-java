@@ -38,6 +38,13 @@ public class RabbitMQServerlessAccessInfo extends AbstractModel {
     private String PublicDataStreamStatus;
 
     /**
+    * 公网CLB实例ID
+    */
+    @SerializedName("PublicClbId")
+    @Expose
+    private String PublicClbId;
+
+    /**
      * Get 公网域名 
      * @return PublicAccessEndpoint 公网域名
      */
@@ -69,6 +76,22 @@ public class RabbitMQServerlessAccessInfo extends AbstractModel {
         this.PublicDataStreamStatus = PublicDataStreamStatus;
     }
 
+    /**
+     * Get 公网CLB实例ID 
+     * @return PublicClbId 公网CLB实例ID
+     */
+    public String getPublicClbId() {
+        return this.PublicClbId;
+    }
+
+    /**
+     * Set 公网CLB实例ID
+     * @param PublicClbId 公网CLB实例ID
+     */
+    public void setPublicClbId(String PublicClbId) {
+        this.PublicClbId = PublicClbId;
+    }
+
     public RabbitMQServerlessAccessInfo() {
     }
 
@@ -83,6 +106,9 @@ public class RabbitMQServerlessAccessInfo extends AbstractModel {
         if (source.PublicDataStreamStatus != null) {
             this.PublicDataStreamStatus = new String(source.PublicDataStreamStatus);
         }
+        if (source.PublicClbId != null) {
+            this.PublicClbId = new String(source.PublicClbId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class RabbitMQServerlessAccessInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PublicAccessEndpoint", this.PublicAccessEndpoint);
         this.setParamSimple(map, prefix + "PublicDataStreamStatus", this.PublicDataStreamStatus);
+        this.setParamSimple(map, prefix + "PublicClbId", this.PublicClbId);
 
     }
 }

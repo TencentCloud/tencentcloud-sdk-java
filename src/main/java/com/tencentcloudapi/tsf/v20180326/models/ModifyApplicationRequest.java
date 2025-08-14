@@ -59,7 +59,7 @@ public class ModifyApplicationRequest extends AbstractModel {
     private ServiceConfig [] ServiceConfigList;
 
     /**
-    * 应用的微服务类型
+    * 应用的微服务类型，N表示普通应用，M表示Mesh应用，G表示网关应用，NATIVE表示原生应用，RAW表示裸应用
     */
     @SerializedName("MicroserviceType")
     @Expose
@@ -73,7 +73,7 @@ public class ModifyApplicationRequest extends AbstractModel {
     private ServiceGovernanceConfig ServiceGovernanceConfig;
 
     /**
-    * 应用开发框架
+    * 应用开发框架，SpringCloud表示SpringCloud应用，Dubbo表示Dubbo应用，Go-GRPC表示Go-GRPC应用，Other表示其他应用
     */
     @SerializedName("FrameworkType")
     @Expose
@@ -160,16 +160,16 @@ public class ModifyApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用的微服务类型 
-     * @return MicroserviceType 应用的微服务类型
+     * Get 应用的微服务类型，N表示普通应用，M表示Mesh应用，G表示网关应用，NATIVE表示原生应用，RAW表示裸应用 
+     * @return MicroserviceType 应用的微服务类型，N表示普通应用，M表示Mesh应用，G表示网关应用，NATIVE表示原生应用，RAW表示裸应用
      */
     public String getMicroserviceType() {
         return this.MicroserviceType;
     }
 
     /**
-     * Set 应用的微服务类型
-     * @param MicroserviceType 应用的微服务类型
+     * Set 应用的微服务类型，N表示普通应用，M表示Mesh应用，G表示网关应用，NATIVE表示原生应用，RAW表示裸应用
+     * @param MicroserviceType 应用的微服务类型，N表示普通应用，M表示Mesh应用，G表示网关应用，NATIVE表示原生应用，RAW表示裸应用
      */
     public void setMicroserviceType(String MicroserviceType) {
         this.MicroserviceType = MicroserviceType;
@@ -192,16 +192,16 @@ public class ModifyApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用开发框架 
-     * @return FrameworkType 应用开发框架
+     * Get 应用开发框架，SpringCloud表示SpringCloud应用，Dubbo表示Dubbo应用，Go-GRPC表示Go-GRPC应用，Other表示其他应用 
+     * @return FrameworkType 应用开发框架，SpringCloud表示SpringCloud应用，Dubbo表示Dubbo应用，Go-GRPC表示Go-GRPC应用，Other表示其他应用
      */
     public String getFrameworkType() {
         return this.FrameworkType;
     }
 
     /**
-     * Set 应用开发框架
-     * @param FrameworkType 应用开发框架
+     * Set 应用开发框架，SpringCloud表示SpringCloud应用，Dubbo表示Dubbo应用，Go-GRPC表示Go-GRPC应用，Other表示其他应用
+     * @param FrameworkType 应用开发框架，SpringCloud表示SpringCloud应用，Dubbo表示Dubbo应用，Go-GRPC表示Go-GRPC应用，Other表示其他应用
      */
     public void setFrameworkType(String FrameworkType) {
         this.FrameworkType = FrameworkType;

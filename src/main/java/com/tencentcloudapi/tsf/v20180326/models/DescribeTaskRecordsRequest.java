@@ -52,7 +52,7 @@ public class DescribeTaskRecordsRequest extends AbstractModel {
     private String TaskState;
 
     /**
-    * 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
+    * 部署组ID。前往[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)点击应用ID进入应用部署列表页面获取部署组ID。
     */
     @SerializedName("GroupId")
     @Expose
@@ -73,7 +73,7 @@ public class DescribeTaskRecordsRequest extends AbstractModel {
     private String ExecuteType;
 
     /**
-    * 任务ID列表。
+    * 任务ID列表。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列查看任务ID。
     */
     @SerializedName("Ids")
     @Expose
@@ -144,16 +144,16 @@ public class DescribeTaskRecordsRequest extends AbstractModel {
     }
 
     /**
-     * Get 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。 
-     * @return GroupId 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
+     * Get 部署组ID。前往[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)点击应用ID进入应用部署列表页面获取部署组ID。 
+     * @return GroupId 部署组ID。前往[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)点击应用ID进入应用部署列表页面获取部署组ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
-     * @param GroupId 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
+     * Set 部署组ID。前往[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)点击应用ID进入应用部署列表页面获取部署组ID。
+     * @param GroupId 部署组ID。前往[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)点击应用ID进入应用部署列表页面获取部署组ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -192,16 +192,16 @@ public class DescribeTaskRecordsRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务ID列表。 
-     * @return Ids 任务ID列表。
+     * Get 任务ID列表。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列查看任务ID。 
+     * @return Ids 任务ID列表。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列查看任务ID。
      */
     public String [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set 任务ID列表。
-     * @param Ids 任务ID列表。
+     * Set 任务ID列表。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列查看任务ID。
+     * @param Ids 任务ID列表。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列查看任务ID。
      */
     public void setIds(String [] Ids) {
         this.Ids = Ids;

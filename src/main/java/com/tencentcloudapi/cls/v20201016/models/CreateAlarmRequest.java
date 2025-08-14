@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAlarmRequest extends AbstractModel {
 
     /**
-    * 告警策略名称
+    * 告警策略名称。最大支持255个字节。 不支持 '|'。
     */
     @SerializedName("Name")
     @Expose
@@ -59,14 +59,14 @@ public class CreateAlarmRequest extends AbstractModel {
     private Long AlarmPeriod;
 
     /**
-    * 关联的告警通知模板列表。
+    * 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表
     */
     @SerializedName("AlarmNoticeIds")
     @Expose
     private String [] AlarmNoticeIds;
 
     /**
-    * 触发条件
+    * 告警发送通知的触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
@@ -179,16 +179,16 @@ Classifications元素的Value长度不能超过200个字符。
     private AlarmClassification [] Classifications;
 
     /**
-     * Get 告警策略名称 
-     * @return Name 告警策略名称
+     * Get 告警策略名称。最大支持255个字节。 不支持 '|'。 
+     * @return Name 告警策略名称。最大支持255个字节。 不支持 '|'。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 告警策略名称
-     * @param Name 告警策略名称
+     * Set 告警策略名称。最大支持255个字节。 不支持 '|'。
+     * @param Name 告警策略名称。最大支持255个字节。 不支持 '|'。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -259,27 +259,27 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Get 关联的告警通知模板列表。 
-     * @return AlarmNoticeIds 关联的告警通知模板列表。
+     * Get 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表 
+     * @return AlarmNoticeIds 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表
      */
     public String [] getAlarmNoticeIds() {
         return this.AlarmNoticeIds;
     }
 
     /**
-     * Set 关联的告警通知模板列表。
-     * @param AlarmNoticeIds 关联的告警通知模板列表。
+     * Set 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表
+     * @param AlarmNoticeIds 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表
      */
     public void setAlarmNoticeIds(String [] AlarmNoticeIds) {
         this.AlarmNoticeIds = AlarmNoticeIds;
     }
 
     /**
-     * Get 触发条件
+     * Get 告警发送通知的触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
  
-     * @return Condition 触发条件
+     * @return Condition 告警发送通知的触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
@@ -289,11 +289,11 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Set 触发条件
+     * Set 告警发送通知的触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
-     * @param Condition 触发条件
+     * @param Condition 告警发送通知的触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 

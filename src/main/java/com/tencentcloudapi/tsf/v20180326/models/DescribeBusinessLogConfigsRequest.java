@@ -45,14 +45,15 @@ public class DescribeBusinessLogConfigsRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-    * 无
+    * 是否禁用数据集鉴权
     */
     @SerializedName("DisableProgramAuthCheck")
     @Expose
     private Boolean DisableProgramAuthCheck;
 
     /**
-    * 无
+    * 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
     */
     @SerializedName("ConfigIdList")
     @Expose
@@ -107,32 +108,36 @@ public class DescribeBusinessLogConfigsRequest extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return DisableProgramAuthCheck 无
+     * Get 是否禁用数据集鉴权 
+     * @return DisableProgramAuthCheck 是否禁用数据集鉴权
      */
     public Boolean getDisableProgramAuthCheck() {
         return this.DisableProgramAuthCheck;
     }
 
     /**
-     * Set 无
-     * @param DisableProgramAuthCheck 无
+     * Set 是否禁用数据集鉴权
+     * @param DisableProgramAuthCheck 是否禁用数据集鉴权
      */
     public void setDisableProgramAuthCheck(Boolean DisableProgramAuthCheck) {
         this.DisableProgramAuthCheck = DisableProgramAuthCheck;
     }
 
     /**
-     * Get 无 
-     * @return ConfigIdList 无
+     * Get 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看 
+     * @return ConfigIdList 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public String [] getConfigIdList() {
         return this.ConfigIdList;
     }
 
     /**
-     * Set 无
-     * @param ConfigIdList 无
+     * Set 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
+     * @param ConfigIdList 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public void setConfigIdList(String [] ConfigIdList) {
         this.ConfigIdList = ConfigIdList;
