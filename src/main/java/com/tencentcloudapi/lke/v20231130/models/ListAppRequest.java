@@ -59,6 +59,20 @@ public class ListAppRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
+    * 智能体类型 dialogue：对话智能体，wechat：公众号智能体
+    */
+    @SerializedName("AgentType")
+    @Expose
+    private String AgentType;
+
+    /**
+    * 应用状态 1:未上线 2：运行中
+    */
+    @SerializedName("AppStatus")
+    @Expose
+    private String AppStatus;
+
+    /**
      * Get 应用类型；knowledge_qa - 知识问答管理  
      * @return AppType 应用类型；knowledge_qa - 知识问答管理 
      */
@@ -138,6 +152,38 @@ public class ListAppRequest extends AbstractModel {
         this.LoginSubAccountUin = LoginSubAccountUin;
     }
 
+    /**
+     * Get 智能体类型 dialogue：对话智能体，wechat：公众号智能体 
+     * @return AgentType 智能体类型 dialogue：对话智能体，wechat：公众号智能体
+     */
+    public String getAgentType() {
+        return this.AgentType;
+    }
+
+    /**
+     * Set 智能体类型 dialogue：对话智能体，wechat：公众号智能体
+     * @param AgentType 智能体类型 dialogue：对话智能体，wechat：公众号智能体
+     */
+    public void setAgentType(String AgentType) {
+        this.AgentType = AgentType;
+    }
+
+    /**
+     * Get 应用状态 1:未上线 2：运行中 
+     * @return AppStatus 应用状态 1:未上线 2：运行中
+     */
+    public String getAppStatus() {
+        return this.AppStatus;
+    }
+
+    /**
+     * Set 应用状态 1:未上线 2：运行中
+     * @param AppStatus 应用状态 1:未上线 2：运行中
+     */
+    public void setAppStatus(String AppStatus) {
+        this.AppStatus = AppStatus;
+    }
+
     public ListAppRequest() {
     }
 
@@ -161,6 +207,12 @@ public class ListAppRequest extends AbstractModel {
         if (source.LoginSubAccountUin != null) {
             this.LoginSubAccountUin = new String(source.LoginSubAccountUin);
         }
+        if (source.AgentType != null) {
+            this.AgentType = new String(source.AgentType);
+        }
+        if (source.AppStatus != null) {
+            this.AppStatus = new String(source.AppStatus);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class ListAppRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
+        this.setParamSimple(map, prefix + "AgentType", this.AgentType);
+        this.setParamSimple(map, prefix + "AppStatus", this.AppStatus);
 
     }
 }

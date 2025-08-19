@@ -107,6 +107,27 @@ public class OccupiedSeal extends AbstractModel {
     private AuthorizedUser [] AuthorizedUsers;
 
     /**
+    * 印章的真实宽度，单位毫米	
+    */
+    @SerializedName("RealWidth")
+    @Expose
+    private Long RealWidth;
+
+    /**
+    * 印章的真实高度，单位毫米	
+    */
+    @SerializedName("RealHeight")
+    @Expose
+    private Long RealHeight;
+
+    /**
+    * 印章描述
+    */
+    @SerializedName("SealDescription")
+    @Expose
+    private String SealDescription;
+
+    /**
      * Get 电子印章编号 
      * @return SealId 电子印章编号
      */
@@ -306,6 +327,54 @@ public class OccupiedSeal extends AbstractModel {
         this.AuthorizedUsers = AuthorizedUsers;
     }
 
+    /**
+     * Get 印章的真实宽度，单位毫米	 
+     * @return RealWidth 印章的真实宽度，单位毫米	
+     */
+    public Long getRealWidth() {
+        return this.RealWidth;
+    }
+
+    /**
+     * Set 印章的真实宽度，单位毫米	
+     * @param RealWidth 印章的真实宽度，单位毫米	
+     */
+    public void setRealWidth(Long RealWidth) {
+        this.RealWidth = RealWidth;
+    }
+
+    /**
+     * Get 印章的真实高度，单位毫米	 
+     * @return RealHeight 印章的真实高度，单位毫米	
+     */
+    public Long getRealHeight() {
+        return this.RealHeight;
+    }
+
+    /**
+     * Set 印章的真实高度，单位毫米	
+     * @param RealHeight 印章的真实高度，单位毫米	
+     */
+    public void setRealHeight(Long RealHeight) {
+        this.RealHeight = RealHeight;
+    }
+
+    /**
+     * Get 印章描述 
+     * @return SealDescription 印章描述
+     */
+    public String getSealDescription() {
+        return this.SealDescription;
+    }
+
+    /**
+     * Set 印章描述
+     * @param SealDescription 印章描述
+     */
+    public void setSealDescription(String SealDescription) {
+        this.SealDescription = SealDescription;
+    }
+
     public OccupiedSeal() {
     }
 
@@ -350,6 +419,15 @@ public class OccupiedSeal extends AbstractModel {
                 this.AuthorizedUsers[i] = new AuthorizedUser(source.AuthorizedUsers[i]);
             }
         }
+        if (source.RealWidth != null) {
+            this.RealWidth = new Long(source.RealWidth);
+        }
+        if (source.RealHeight != null) {
+            this.RealHeight = new Long(source.RealHeight);
+        }
+        if (source.SealDescription != null) {
+            this.SealDescription = new String(source.SealDescription);
+        }
     }
 
 
@@ -368,6 +446,9 @@ public class OccupiedSeal extends AbstractModel {
         this.setParamSimple(map, prefix + "SealType", this.SealType);
         this.setParamSimple(map, prefix + "IsAllTime", this.IsAllTime);
         this.setParamArrayObj(map, prefix + "AuthorizedUsers.", this.AuthorizedUsers);
+        this.setParamSimple(map, prefix + "RealWidth", this.RealWidth);
+        this.setParamSimple(map, prefix + "RealHeight", this.RealHeight);
+        this.setParamSimple(map, prefix + "SealDescription", this.SealDescription);
 
     }
 }

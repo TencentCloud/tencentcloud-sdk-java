@@ -111,6 +111,9 @@ public enum TsfErrorCode {
      /* 网关通用异常[网关异常]。 */
      FAILEDOPERATION_GATEWAYCOMMONERROR("FailedOperation.GatewayCommonError"),
      
+     /* 当前分组已绑定部署组,请解绑后删除 */
+     FAILEDOPERATION_GATEWAYGROUPBOUNDDELETEFAILED("FailedOperation.GatewayGroupBoundDeleteFailed"),
+     
      /* 远端访问错误。 */
      FAILEDOPERATION_GATEWAYREMOTECALLERROR("FailedOperation.GatewayRemoteCallError"),
      
@@ -374,6 +377,9 @@ public enum TsfErrorCode {
      
      /* Kubernetes deployment 未找到。 */
      INTERNALERROR_CONTAINERGROUPKUBERNETEDEPLOYMENTNOTFOUND("InternalError.ContainergroupKuberneteDeploymentNotfound"),
+     
+     /* 连接TKE服务失败。 */
+     INTERNALERROR_CONTAINERGROUPKUBERNETESCONNECTERROR("InternalError.ContainergroupKubernetesConnectError"),
      
      /* 容器应用SQL错误。 */
      INTERNALERROR_CONTAINERGROUPSQLFAILED("InternalError.ContainergroupSqlFailed"),
@@ -770,6 +776,9 @@ public enum TsfErrorCode {
      
      /* 示例：agent 容器资源值非法 , cpu。 */
      INVALIDPARAMETERVALUE_CONTAINERGROUPRESOURCEAGENTVALUEINVALID("InvalidParameterValue.ContainergroupResourceAgentValueInvalid"),
+     
+     /* service名称校验失败。 */
+     INVALIDPARAMETERVALUE_CONTAINERGROUPSERVICENAMEVALIDERROR("InvalidParameterValue.ContainergroupServiceNameValidError"),
      
      /* 容器端口不允许重复映射。 */
      INVALIDPARAMETERVALUE_CONTAINERGROUPTARGETPORTSREPEAT("InvalidParameterValue.ContainergroupTargetPortsRepeat"),

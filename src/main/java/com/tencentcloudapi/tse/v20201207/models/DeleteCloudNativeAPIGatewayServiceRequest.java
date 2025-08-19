@@ -38,6 +38,13 @@ public class DeleteCloudNativeAPIGatewayServiceRequest extends AbstractModel {
     private String Name;
 
     /**
+    * 是否同步删除服务上绑定的路由
+    */
+    @SerializedName("DeleteRoutes")
+    @Expose
+    private Boolean DeleteRoutes;
+
+    /**
      * Get 网关ID 
      * @return GatewayId 网关ID
      */
@@ -69,6 +76,22 @@ public class DeleteCloudNativeAPIGatewayServiceRequest extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get 是否同步删除服务上绑定的路由 
+     * @return DeleteRoutes 是否同步删除服务上绑定的路由
+     */
+    public Boolean getDeleteRoutes() {
+        return this.DeleteRoutes;
+    }
+
+    /**
+     * Set 是否同步删除服务上绑定的路由
+     * @param DeleteRoutes 是否同步删除服务上绑定的路由
+     */
+    public void setDeleteRoutes(Boolean DeleteRoutes) {
+        this.DeleteRoutes = DeleteRoutes;
+    }
+
     public DeleteCloudNativeAPIGatewayServiceRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DeleteCloudNativeAPIGatewayServiceRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.DeleteRoutes != null) {
+            this.DeleteRoutes = new Boolean(source.DeleteRoutes);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DeleteCloudNativeAPIGatewayServiceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "DeleteRoutes", this.DeleteRoutes);
 
     }
 }

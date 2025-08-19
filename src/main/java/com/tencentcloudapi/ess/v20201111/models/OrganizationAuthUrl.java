@@ -53,6 +53,13 @@ public class OrganizationAuthUrl extends AbstractModel {
     private String SubTaskId;
 
     /**
+    * 企业批量注册 传递过来的企业名称，方便客户定位企业
+    */
+    @SerializedName("OrganizationName")
+    @Expose
+    private String OrganizationName;
+
+    /**
      * Get 企业批量注册链接，根据Endpoint的不同设置，返回不同的链接地址。失效时间：7天
 跳转链接, 链接的有效期根据企业,员工状态和终端等有区别, 可以参考下表
 <table> <thead> <tr> <th>Endpoint</th> <th>示例</th> <th>链接有效期限</th> </tr> </thead>  <tbody>
@@ -132,6 +139,22 @@ public class OrganizationAuthUrl extends AbstractModel {
         this.SubTaskId = SubTaskId;
     }
 
+    /**
+     * Get 企业批量注册 传递过来的企业名称，方便客户定位企业 
+     * @return OrganizationName 企业批量注册 传递过来的企业名称，方便客户定位企业
+     */
+    public String getOrganizationName() {
+        return this.OrganizationName;
+    }
+
+    /**
+     * Set 企业批量注册 传递过来的企业名称，方便客户定位企业
+     * @param OrganizationName 企业批量注册 传递过来的企业名称，方便客户定位企业
+     */
+    public void setOrganizationName(String OrganizationName) {
+        this.OrganizationName = OrganizationName;
+    }
+
     public OrganizationAuthUrl() {
     }
 
@@ -149,6 +172,9 @@ public class OrganizationAuthUrl extends AbstractModel {
         if (source.SubTaskId != null) {
             this.SubTaskId = new String(source.SubTaskId);
         }
+        if (source.OrganizationName != null) {
+            this.OrganizationName = new String(source.OrganizationName);
+        }
     }
 
 
@@ -159,6 +185,7 @@ public class OrganizationAuthUrl extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthUrl", this.AuthUrl);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
+        this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
 
     }
 }

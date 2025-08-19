@@ -648,6 +648,17 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *用于批量查询设备详细信息。
+     * @param req DescribeUserDeviceListRequest
+     * @return DescribeUserDeviceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserDeviceListResponse DescribeUserDeviceList(DescribeUserDeviceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserDeviceList", DescribeUserDeviceListResponse.class);
+    }
+
+    /**
      *用于获取视频通道的码率信息
      * @param req DescribeVideoBitRateRequest
      * @return DescribeVideoBitRateResponse

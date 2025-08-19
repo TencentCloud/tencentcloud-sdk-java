@@ -25,7 +25,6 @@ public class TableResultNew extends AbstractModel {
 
     /**
     * 表格实例ID，形如：tcaplus-3be64cbb
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableInstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class TableResultNew extends AbstractModel {
 
     /**
     * 任务ID，对于创建单任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -41,7 +39,6 @@ public class TableResultNew extends AbstractModel {
 
     /**
     * 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
@@ -49,7 +46,6 @@ public class TableResultNew extends AbstractModel {
 
     /**
     * 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableType")
     @Expose
@@ -57,7 +53,6 @@ public class TableResultNew extends AbstractModel {
 
     /**
     * 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableIdlType")
     @Expose
@@ -65,7 +60,6 @@ public class TableResultNew extends AbstractModel {
 
     /**
     * 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableGroupId")
     @Expose
@@ -73,7 +67,6 @@ public class TableResultNew extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
@@ -81,7 +74,6 @@ public class TableResultNew extends AbstractModel {
 
     /**
     * 任务ID列表，对于创建多任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskIds")
     @Expose
@@ -89,17 +81,14 @@ public class TableResultNew extends AbstractModel {
 
     /**
     * 腾讯云申请审核单Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-     * Get 表格实例ID，形如：tcaplus-3be64cbb
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格实例ID，形如：tcaplus-3be64cbb 
      * @return TableInstanceId 表格实例ID，形如：tcaplus-3be64cbb
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableInstanceId() {
         return this.TableInstanceId;
@@ -107,19 +96,15 @@ public class TableResultNew extends AbstractModel {
 
     /**
      * Set 表格实例ID，形如：tcaplus-3be64cbb
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableInstanceId 表格实例ID，形如：tcaplus-3be64cbb
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableInstanceId(String TableInstanceId) {
         this.TableInstanceId = TableInstanceId;
     }
 
     /**
-     * Get 任务ID，对于创建单任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID，对于创建单任务的接口有效 
      * @return TaskId 任务ID，对于创建单任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -127,19 +112,15 @@ public class TableResultNew extends AbstractModel {
 
     /**
      * Set 任务ID，对于创建单任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务ID，对于创建单任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 表格名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格名称 
      * @return TableName 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -147,19 +128,15 @@ public class TableResultNew extends AbstractModel {
 
     /**
      * Set 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格数据结构类型，如：`GENERIC`或`LIST` 
      * @return TableType 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableType() {
         return this.TableType;
@@ -167,19 +144,15 @@ public class TableResultNew extends AbstractModel {
 
     /**
      * Set 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableType 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableType(String TableType) {
         this.TableType = TableType;
     }
 
     /**
-     * Get 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表数据描述语言（IDL）类型，如：`PROTO`或`TDR` 
      * @return TableIdlType 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableIdlType() {
         return this.TableIdlType;
@@ -187,19 +160,15 @@ public class TableResultNew extends AbstractModel {
 
     /**
      * Set 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableIdlType 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableIdlType(String TableIdlType) {
         this.TableIdlType = TableIdlType;
     }
 
     /**
-     * Get 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格所属表格组ID 
      * @return TableGroupId 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableGroupId() {
         return this.TableGroupId;
@@ -207,19 +176,15 @@ public class TableResultNew extends AbstractModel {
 
     /**
      * Set 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableGroupId 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableGroupId(String TableGroupId) {
         this.TableGroupId = TableGroupId;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorInfo getError() {
         return this.Error;
@@ -227,19 +192,15 @@ public class TableResultNew extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(ErrorInfo Error) {
         this.Error = Error;
     }
 
     /**
-     * Get 任务ID列表，对于创建多任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID列表，对于创建多任务的接口有效 
      * @return TaskIds 任务ID列表，对于创建多任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTaskIds() {
         return this.TaskIds;
@@ -247,19 +208,15 @@ public class TableResultNew extends AbstractModel {
 
     /**
      * Set 任务ID列表，对于创建多任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskIds 任务ID列表，对于创建多任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskIds(String [] TaskIds) {
         this.TaskIds = TaskIds;
     }
 
     /**
-     * Get 腾讯云申请审核单Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腾讯云申请审核单Id 
      * @return ApplicationId 腾讯云申请审核单Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -267,9 +224,7 @@ public class TableResultNew extends AbstractModel {
 
     /**
      * Set 腾讯云申请审核单Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 腾讯云申请审核单Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;

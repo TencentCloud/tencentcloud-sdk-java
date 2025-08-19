@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class ModifyVirtualDeviceGroupsRequest extends AbstractModel {
 
     /**
+    * 必填，操作的设备列表数据
+    */
+    @SerializedName("DeviceList")
+    @Expose
+    private ModifyVirtualDeviceGroupsReqItem [] DeviceList;
+
+    /**
     * 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
     */
     @SerializedName("DomainInstanceId")
@@ -38,13 +45,6 @@ public class ModifyVirtualDeviceGroupsRequest extends AbstractModel {
     private Long DeviceVirtualGroupId;
 
     /**
-    * 必填，操作的设备列表数据
-    */
-    @SerializedName("DeviceList")
-    @Expose
-    private ModifyVirtualDeviceGroupsReqItem [] DeviceList;
-
-    /**
     * 要添加的终端自定义分组id列表
     */
     @SerializedName("DeviceVirtualGroupIds")
@@ -52,11 +52,27 @@ public class ModifyVirtualDeviceGroupsRequest extends AbstractModel {
     private Long [] DeviceVirtualGroupIds;
 
     /**
-    * 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+    * 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
     */
     @SerializedName("OsType")
     @Expose
     private Long OsType;
+
+    /**
+     * Get 必填，操作的设备列表数据 
+     * @return DeviceList 必填，操作的设备列表数据
+     */
+    public ModifyVirtualDeviceGroupsReqItem [] getDeviceList() {
+        return this.DeviceList;
+    }
+
+    /**
+     * Set 必填，操作的设备列表数据
+     * @param DeviceList 必填，操作的设备列表数据
+     */
+    public void setDeviceList(ModifyVirtualDeviceGroupsReqItem [] DeviceList) {
+        this.DeviceList = DeviceList;
+    }
 
     /**
      * Get 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。 
@@ -91,22 +107,6 @@ public class ModifyVirtualDeviceGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 必填，操作的设备列表数据 
-     * @return DeviceList 必填，操作的设备列表数据
-     */
-    public ModifyVirtualDeviceGroupsReqItem [] getDeviceList() {
-        return this.DeviceList;
-    }
-
-    /**
-     * Set 必填，操作的设备列表数据
-     * @param DeviceList 必填，操作的设备列表数据
-     */
-    public void setDeviceList(ModifyVirtualDeviceGroupsReqItem [] DeviceList) {
-        this.DeviceList = DeviceList;
-    }
-
-    /**
      * Get 要添加的终端自定义分组id列表 
      * @return DeviceVirtualGroupIds 要添加的终端自定义分组id列表
      */
@@ -123,16 +123,16 @@ public class ModifyVirtualDeviceGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0） 
-     * @return OsType 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+     * Get 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0） 
+     * @return OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
-     * @param OsType 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+     * Set 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+     * @param OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;
@@ -146,17 +146,17 @@ public class ModifyVirtualDeviceGroupsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyVirtualDeviceGroupsRequest(ModifyVirtualDeviceGroupsRequest source) {
-        if (source.DomainInstanceId != null) {
-            this.DomainInstanceId = new String(source.DomainInstanceId);
-        }
-        if (source.DeviceVirtualGroupId != null) {
-            this.DeviceVirtualGroupId = new Long(source.DeviceVirtualGroupId);
-        }
         if (source.DeviceList != null) {
             this.DeviceList = new ModifyVirtualDeviceGroupsReqItem[source.DeviceList.length];
             for (int i = 0; i < source.DeviceList.length; i++) {
                 this.DeviceList[i] = new ModifyVirtualDeviceGroupsReqItem(source.DeviceList[i]);
             }
+        }
+        if (source.DomainInstanceId != null) {
+            this.DomainInstanceId = new String(source.DomainInstanceId);
+        }
+        if (source.DeviceVirtualGroupId != null) {
+            this.DeviceVirtualGroupId = new Long(source.DeviceVirtualGroupId);
         }
         if (source.DeviceVirtualGroupIds != null) {
             this.DeviceVirtualGroupIds = new Long[source.DeviceVirtualGroupIds.length];
@@ -174,9 +174,9 @@ public class ModifyVirtualDeviceGroupsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "DeviceList.", this.DeviceList);
         this.setParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
         this.setParamSimple(map, prefix + "DeviceVirtualGroupId", this.DeviceVirtualGroupId);
-        this.setParamArrayObj(map, prefix + "DeviceList.", this.DeviceList);
         this.setParamArraySimple(map, prefix + "DeviceVirtualGroupIds.", this.DeviceVirtualGroupIds);
         this.setParamSimple(map, prefix + "OsType", this.OsType);
 

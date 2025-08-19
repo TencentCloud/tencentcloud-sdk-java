@@ -45,6 +45,13 @@ public class ListAppKnowledgeDetailRequest extends AbstractModel {
     private String [] AppBizIds;
 
     /**
+    * 空间列表
+    */
+    @SerializedName("SpaceId")
+    @Expose
+    private String SpaceId;
+
+    /**
      * Get 页码 
      * @return PageNumber 页码
      */
@@ -92,6 +99,22 @@ public class ListAppKnowledgeDetailRequest extends AbstractModel {
         this.AppBizIds = AppBizIds;
     }
 
+    /**
+     * Get 空间列表 
+     * @return SpaceId 空间列表
+     */
+    public String getSpaceId() {
+        return this.SpaceId;
+    }
+
+    /**
+     * Set 空间列表
+     * @param SpaceId 空间列表
+     */
+    public void setSpaceId(String SpaceId) {
+        this.SpaceId = SpaceId;
+    }
+
     public ListAppKnowledgeDetailRequest() {
     }
 
@@ -112,6 +135,9 @@ public class ListAppKnowledgeDetailRequest extends AbstractModel {
                 this.AppBizIds[i] = new String(source.AppBizIds[i]);
             }
         }
+        if (source.SpaceId != null) {
+            this.SpaceId = new String(source.SpaceId);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class ListAppKnowledgeDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
+        this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
 
     }
 }

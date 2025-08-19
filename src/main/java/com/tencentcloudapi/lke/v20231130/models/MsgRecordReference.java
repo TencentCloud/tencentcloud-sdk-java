@@ -87,6 +87,13 @@ public class MsgRecordReference extends AbstractModel {
     private String QaBizId;
 
     /**
+    * 文档索引id
+    */
+    @SerializedName("Index")
+    @Expose
+    private Long Index;
+
+    /**
      * Get id 
      * @return Id id
      */
@@ -230,6 +237,22 @@ public class MsgRecordReference extends AbstractModel {
         this.QaBizId = QaBizId;
     }
 
+    /**
+     * Get 文档索引id 
+     * @return Index 文档索引id
+     */
+    public Long getIndex() {
+        return this.Index;
+    }
+
+    /**
+     * Set 文档索引id
+     * @param Index 文档索引id
+     */
+    public void setIndex(Long Index) {
+        this.Index = Index;
+    }
+
     public MsgRecordReference() {
     }
 
@@ -265,6 +288,9 @@ public class MsgRecordReference extends AbstractModel {
         if (source.QaBizId != null) {
             this.QaBizId = new String(source.QaBizId);
         }
+        if (source.Index != null) {
+            this.Index = new Long(source.Index);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class MsgRecordReference extends AbstractModel {
         this.setParamSimple(map, prefix + "KnowledgeBizId", this.KnowledgeBizId);
         this.setParamSimple(map, prefix + "DocBizId", this.DocBizId);
         this.setParamSimple(map, prefix + "QaBizId", this.QaBizId);
+        this.setParamSimple(map, prefix + "Index", this.Index);
 
     }
 }

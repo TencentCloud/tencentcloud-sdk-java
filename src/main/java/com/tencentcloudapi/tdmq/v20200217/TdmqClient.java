@@ -1246,6 +1246,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *执行域名异地访问切换，域名的访问指向将切换至备份集群。
+     * @param req ExecuteDisasterRecoveryRequest
+     * @return ExecuteDisasterRecoveryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExecuteDisasterRecoveryResponse ExecuteDisasterRecovery(ExecuteDisasterRecoveryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExecuteDisasterRecovery", ExecuteDisasterRecoveryResponse.class);
+    }
+
+    /**
      *导出RocketMQ消息详情
      * @param req ExportRocketMQMessageDetailRequest
      * @return ExportRocketMQMessageDetailResponse

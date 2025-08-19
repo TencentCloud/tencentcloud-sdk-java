@@ -47,7 +47,9 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     private String TopicId;
 
     /**
-    * 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
+    * 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息。
+
+- 详情参考  [HostFileInfo](https://cloud.tencent.com/document/api/614/56471#HostFileInfo) 文档。
     */
     @SerializedName("HostFile")
     @Expose
@@ -56,13 +58,16 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     /**
     * 采集配置标记。
 - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+- 详情参考 [ ContainerFileInfo](https://cloud.tencent.com/document/api/614/56471#ContainerFileInfo) 文档
     */
     @SerializedName("ContainerFile")
     @Expose
     private ContainerFileInfo ContainerFile;
 
     /**
-    * 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
+    * 自建k8s-容器标准输出信息，包括容器、命名空间等，
+
+- 详情参考 [ContainerStdoutInfo]( https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo) 文档
     */
     @SerializedName("ContainerStdout")
     @Expose
@@ -92,7 +97,7 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     private String LogFormat;
 
     /**
-    * 提取规则，如果设置了ExtractRule，则必须设置LogType
+    * 提取规则，如果设置了ExtractRule，则必须设置LogType。
     */
     @SerializedName("ExtractRule")
     @Expose
@@ -232,16 +237,24 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     }
 
     /**
-     * Get 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo 
-     * @return HostFile 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
+     * Get 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息。
+
+- 详情参考  [HostFileInfo](https://cloud.tencent.com/document/api/614/56471#HostFileInfo) 文档。 
+     * @return HostFile 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息。
+
+- 详情参考  [HostFileInfo](https://cloud.tencent.com/document/api/614/56471#HostFileInfo) 文档。
      */
     public HostFileInfo getHostFile() {
         return this.HostFile;
     }
 
     /**
-     * Set 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
-     * @param HostFile 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
+     * Set 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息。
+
+- 详情参考  [HostFileInfo](https://cloud.tencent.com/document/api/614/56471#HostFileInfo) 文档。
+     * @param HostFile 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息。
+
+- 详情参考  [HostFileInfo](https://cloud.tencent.com/document/api/614/56471#HostFileInfo) 文档。
      */
     public void setHostFile(HostFileInfo HostFile) {
         this.HostFile = HostFile;
@@ -249,9 +262,11 @@ public class ModifyConfigExtraRequest extends AbstractModel {
 
     /**
      * Get 采集配置标记。
-- 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置 
+- 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+- 详情参考 [ ContainerFileInfo](https://cloud.tencent.com/document/api/614/56471#ContainerFileInfo) 文档 
      * @return ContainerFile 采集配置标记。
 - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+- 详情参考 [ ContainerFileInfo](https://cloud.tencent.com/document/api/614/56471#ContainerFileInfo) 文档
      */
     public ContainerFileInfo getContainerFile() {
         return this.ContainerFile;
@@ -260,24 +275,34 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     /**
      * Set 采集配置标记。
 - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+- 详情参考 [ ContainerFileInfo](https://cloud.tencent.com/document/api/614/56471#ContainerFileInfo) 文档
      * @param ContainerFile 采集配置标记。
 - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+- 详情参考 [ ContainerFileInfo](https://cloud.tencent.com/document/api/614/56471#ContainerFileInfo) 文档
      */
     public void setContainerFile(ContainerFileInfo ContainerFile) {
         this.ContainerFile = ContainerFile;
     }
 
     /**
-     * Get 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo 
-     * @return ContainerStdout 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
+     * Get 自建k8s-容器标准输出信息，包括容器、命名空间等，
+
+- 详情参考 [ContainerStdoutInfo]( https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo) 文档 
+     * @return ContainerStdout 自建k8s-容器标准输出信息，包括容器、命名空间等，
+
+- 详情参考 [ContainerStdoutInfo]( https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo) 文档
      */
     public ContainerStdoutInfo getContainerStdout() {
         return this.ContainerStdout;
     }
 
     /**
-     * Set 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
-     * @param ContainerStdout 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
+     * Set 自建k8s-容器标准输出信息，包括容器、命名空间等，
+
+- 详情参考 [ContainerStdoutInfo]( https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo) 文档
+     * @param ContainerStdout 自建k8s-容器标准输出信息，包括容器、命名空间等，
+
+- 详情参考 [ContainerStdoutInfo]( https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo) 文档
      */
     public void setContainerStdout(ContainerStdoutInfo ContainerStdout) {
         this.ContainerStdout = ContainerStdout;
@@ -356,16 +381,16 @@ public class ModifyConfigExtraRequest extends AbstractModel {
     }
 
     /**
-     * Get 提取规则，如果设置了ExtractRule，则必须设置LogType 
-     * @return ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType
+     * Get 提取规则，如果设置了ExtractRule，则必须设置LogType。 
+     * @return ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType。
      */
     public ExtractRuleInfo getExtractRule() {
         return this.ExtractRule;
     }
 
     /**
-     * Set 提取规则，如果设置了ExtractRule，则必须设置LogType
-     * @param ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType
+     * Set 提取规则，如果设置了ExtractRule，则必须设置LogType。
+     * @param ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType。
      */
     public void setExtractRule(ExtractRuleInfo ExtractRule) {
         this.ExtractRule = ExtractRule;

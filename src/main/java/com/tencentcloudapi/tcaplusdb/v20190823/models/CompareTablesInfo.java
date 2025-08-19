@@ -25,7 +25,6 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
     * 源表格的集群id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcTableClusterId")
     @Expose
@@ -33,7 +32,6 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
     * 源表格的表格组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcTableGroupId")
     @Expose
@@ -41,7 +39,6 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
     * 源表格的表名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcTableName")
     @Expose
@@ -49,7 +46,6 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
     * 目标表格的集群id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstTableClusterId")
     @Expose
@@ -57,7 +53,6 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
     * 目标表格的表格组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstTableGroupId")
     @Expose
@@ -65,7 +60,6 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
     * 目标表格的表名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstTableName")
     @Expose
@@ -73,7 +67,6 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
     * 源表格的实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcTableInstanceId")
     @Expose
@@ -81,17 +74,14 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
     * 目标表格的实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstTableInstanceId")
     @Expose
     private String DstTableInstanceId;
 
     /**
-     * Get 源表格的集群id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源表格的集群id 
      * @return SrcTableClusterId 源表格的集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcTableClusterId() {
         return this.SrcTableClusterId;
@@ -99,19 +89,15 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
      * Set 源表格的集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcTableClusterId 源表格的集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcTableClusterId(String SrcTableClusterId) {
         this.SrcTableClusterId = SrcTableClusterId;
     }
 
     /**
-     * Get 源表格的表格组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源表格的表格组id 
      * @return SrcTableGroupId 源表格的表格组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcTableGroupId() {
         return this.SrcTableGroupId;
@@ -119,19 +105,15 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
      * Set 源表格的表格组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcTableGroupId 源表格的表格组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcTableGroupId(String SrcTableGroupId) {
         this.SrcTableGroupId = SrcTableGroupId;
     }
 
     /**
-     * Get 源表格的表名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源表格的表名 
      * @return SrcTableName 源表格的表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcTableName() {
         return this.SrcTableName;
@@ -139,19 +121,15 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
      * Set 源表格的表名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcTableName 源表格的表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcTableName(String SrcTableName) {
         this.SrcTableName = SrcTableName;
     }
 
     /**
-     * Get 目标表格的集群id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标表格的集群id 
      * @return DstTableClusterId 目标表格的集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstTableClusterId() {
         return this.DstTableClusterId;
@@ -159,19 +137,15 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
      * Set 目标表格的集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstTableClusterId 目标表格的集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstTableClusterId(String DstTableClusterId) {
         this.DstTableClusterId = DstTableClusterId;
     }
 
     /**
-     * Get 目标表格的表格组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标表格的表格组id 
      * @return DstTableGroupId 目标表格的表格组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstTableGroupId() {
         return this.DstTableGroupId;
@@ -179,19 +153,15 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
      * Set 目标表格的表格组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstTableGroupId 目标表格的表格组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstTableGroupId(String DstTableGroupId) {
         this.DstTableGroupId = DstTableGroupId;
     }
 
     /**
-     * Get 目标表格的表名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标表格的表名 
      * @return DstTableName 目标表格的表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstTableName() {
         return this.DstTableName;
@@ -199,19 +169,15 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
      * Set 目标表格的表名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstTableName 目标表格的表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstTableName(String DstTableName) {
         this.DstTableName = DstTableName;
     }
 
     /**
-     * Get 源表格的实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源表格的实例id 
      * @return SrcTableInstanceId 源表格的实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcTableInstanceId() {
         return this.SrcTableInstanceId;
@@ -219,19 +185,15 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
      * Set 源表格的实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcTableInstanceId 源表格的实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcTableInstanceId(String SrcTableInstanceId) {
         this.SrcTableInstanceId = SrcTableInstanceId;
     }
 
     /**
-     * Get 目标表格的实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标表格的实例id 
      * @return DstTableInstanceId 目标表格的实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstTableInstanceId() {
         return this.DstTableInstanceId;
@@ -239,9 +201,7 @@ public class CompareTablesInfo extends AbstractModel {
 
     /**
      * Set 目标表格的实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstTableInstanceId 目标表格的实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstTableInstanceId(String DstTableInstanceId) {
         this.DstTableInstanceId = DstTableInstanceId;

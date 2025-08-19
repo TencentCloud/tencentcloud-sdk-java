@@ -53,7 +53,6 @@ public class Application extends AbstractModel {
 
     /**
     * 表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableGroupName")
     @Expose
@@ -103,7 +102,6 @@ public class Application extends AbstractModel {
 
     /**
     * 腾讯云上table的唯一键
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableInstanceId")
     @Expose
@@ -111,7 +109,6 @@ public class Application extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -119,7 +116,6 @@ public class Application extends AbstractModel {
 
     /**
     * 审批人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecuteUser")
     @Expose
@@ -127,7 +123,6 @@ public class Application extends AbstractModel {
 
     /**
     * 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecuteStatus")
     @Expose
@@ -135,7 +130,6 @@ public class Application extends AbstractModel {
 
     /**
     * 该申请单是否可以被当前用户审批
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanCensor")
     @Expose
@@ -143,7 +137,6 @@ public class Application extends AbstractModel {
 
     /**
     * 该申请单是否可以被当前用户撤回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanWithdrawal")
     @Expose
@@ -214,10 +207,8 @@ public class Application extends AbstractModel {
     }
 
     /**
-     * Get 表格组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格组名称 
      * @return TableGroupName 表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableGroupName() {
         return this.TableGroupName;
@@ -225,9 +216,7 @@ public class Application extends AbstractModel {
 
     /**
      * Set 表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableGroupName 表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableGroupName(String TableGroupName) {
         this.TableGroupName = TableGroupName;
@@ -330,10 +319,8 @@ public class Application extends AbstractModel {
     }
 
     /**
-     * Get 腾讯云上table的唯一键
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腾讯云上table的唯一键 
      * @return TableInstanceId 腾讯云上table的唯一键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableInstanceId() {
         return this.TableInstanceId;
@@ -341,19 +328,15 @@ public class Application extends AbstractModel {
 
     /**
      * Set 腾讯云上table的唯一键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableInstanceId 腾讯云上table的唯一键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableInstanceId(String TableInstanceId) {
         this.TableInstanceId = TableInstanceId;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -361,19 +344,15 @@ public class Application extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 审批人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审批人 
      * @return ExecuteUser 审批人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecuteUser() {
         return this.ExecuteUser;
@@ -381,19 +360,15 @@ public class Application extends AbstractModel {
 
     /**
      * Set 审批人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecuteUser 审批人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecuteUser(String ExecuteUser) {
         this.ExecuteUser = ExecuteUser;
     }
 
     /**
-     * Get 执行状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行状态 
      * @return ExecuteStatus 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecuteStatus() {
         return this.ExecuteStatus;
@@ -401,19 +376,15 @@ public class Application extends AbstractModel {
 
     /**
      * Set 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecuteStatus 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecuteStatus(String ExecuteStatus) {
         this.ExecuteStatus = ExecuteStatus;
     }
 
     /**
-     * Get 该申请单是否可以被当前用户审批
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该申请单是否可以被当前用户审批 
      * @return CanCensor 该申请单是否可以被当前用户审批
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanCensor() {
         return this.CanCensor;
@@ -421,19 +392,15 @@ public class Application extends AbstractModel {
 
     /**
      * Set 该申请单是否可以被当前用户审批
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CanCensor 该申请单是否可以被当前用户审批
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanCensor(Boolean CanCensor) {
         this.CanCensor = CanCensor;
     }
 
     /**
-     * Get 该申请单是否可以被当前用户撤回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该申请单是否可以被当前用户撤回 
      * @return CanWithdrawal 该申请单是否可以被当前用户撤回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanWithdrawal() {
         return this.CanWithdrawal;
@@ -441,9 +408,7 @@ public class Application extends AbstractModel {
 
     /**
      * Set 该申请单是否可以被当前用户撤回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CanWithdrawal 该申请单是否可以被当前用户撤回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanWithdrawal(Boolean CanWithdrawal) {
         this.CanWithdrawal = CanWithdrawal;

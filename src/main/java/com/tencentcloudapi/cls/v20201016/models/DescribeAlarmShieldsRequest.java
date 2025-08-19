@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAlarmShieldsRequest extends AbstractModel {
 
     /**
-    * 通知渠道组id。
+    * 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组id
     */
     @SerializedName("AlarmNoticeId")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeAlarmShieldsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 通知渠道组id。 
-     * @return AlarmNoticeId 通知渠道组id。
+     * Get 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组id 
+     * @return AlarmNoticeId 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组id
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set 通知渠道组id。
-     * @param AlarmNoticeId 通知渠道组id。
+     * Set 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组id
+     * @param AlarmNoticeId 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组id
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;

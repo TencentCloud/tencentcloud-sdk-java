@@ -25,7 +25,6 @@ public class MergeTableResult extends AbstractModel {
 
     /**
     * 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class MergeTableResult extends AbstractModel {
 
     /**
     * 成功时此字段返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
@@ -48,17 +46,14 @@ public class MergeTableResult extends AbstractModel {
 
     /**
     * 申请单Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-     * Get 任务Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务Id 
      * @return TaskId 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -66,19 +61,15 @@ public class MergeTableResult extends AbstractModel {
 
     /**
      * Set 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 成功时此字段返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功时此字段返回 null，表示取不到有效值。 
      * @return Error 成功时此字段返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorInfo getError() {
         return this.Error;
@@ -86,9 +77,7 @@ public class MergeTableResult extends AbstractModel {
 
     /**
      * Set 成功时此字段返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 成功时此字段返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(ErrorInfo Error) {
         this.Error = Error;
@@ -111,10 +100,8 @@ public class MergeTableResult extends AbstractModel {
     }
 
     /**
-     * Get 申请单Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请单Id 
      * @return ApplicationId 申请单Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -122,9 +109,7 @@ public class MergeTableResult extends AbstractModel {
 
     /**
      * Set 申请单Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 申请单Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;

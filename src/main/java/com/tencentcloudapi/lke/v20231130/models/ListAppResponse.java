@@ -31,7 +31,7 @@ public class ListAppResponse extends AbstractModel {
     private String Total;
 
     /**
-    * 标签列表
+    * 应用列表
     */
     @SerializedName("List")
     @Expose
@@ -61,16 +61,16 @@ public class ListAppResponse extends AbstractModel {
     }
 
     /**
-     * Get 标签列表 
-     * @return List 标签列表
+     * Get 应用列表 
+     * @return List 应用列表
      */
     public AppInfo [] getList() {
         return this.List;
     }
 
     /**
-     * Set 标签列表
-     * @param List 标签列表
+     * Set 应用列表
+     * @param List 应用列表
      */
     public void setList(AppInfo [] List) {
         this.List = List;

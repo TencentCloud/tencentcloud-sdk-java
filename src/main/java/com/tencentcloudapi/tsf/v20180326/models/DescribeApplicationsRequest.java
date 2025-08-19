@@ -61,7 +61,10 @@ public class DescribeApplicationsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 应用类型
+    * 指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用
     */
     @SerializedName("ApplicationType")
     @Expose
@@ -75,7 +78,7 @@ public class DescribeApplicationsRequest extends AbstractModel {
     private String MicroserviceType;
 
     /**
-    * 应用资源类型数组
+    * 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
     */
     @SerializedName("ApplicationResourceTypeList")
     @Expose
@@ -184,16 +187,28 @@ public class DescribeApplicationsRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用类型 
-     * @return ApplicationType 应用类型
+     * Get 指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用 
+     * @return ApplicationType 指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用
      */
     public String getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set 应用类型
-     * @param ApplicationType 应用类型
+     * Set 指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用
+     * @param ApplicationType 指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
@@ -216,16 +231,16 @@ public class DescribeApplicationsRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用资源类型数组 
-     * @return ApplicationResourceTypeList 应用资源类型数组
+     * Get 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型 
+     * @return ApplicationResourceTypeList 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public String [] getApplicationResourceTypeList() {
         return this.ApplicationResourceTypeList;
     }
 
     /**
-     * Set 应用资源类型数组
-     * @param ApplicationResourceTypeList 应用资源类型数组
+     * Set 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
+     * @param ApplicationResourceTypeList 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public void setApplicationResourceTypeList(String [] ApplicationResourceTypeList) {
         this.ApplicationResourceTypeList = ApplicationResourceTypeList;

@@ -95,7 +95,6 @@ public class TaskInfoNew extends AbstractModel {
 
     /**
     * 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableGroupId")
     @Expose
@@ -103,7 +102,6 @@ public class TaskInfoNew extends AbstractModel {
 
     /**
     * 表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableGroupName")
     @Expose
@@ -111,7 +109,6 @@ public class TaskInfoNew extends AbstractModel {
 
     /**
     * 表名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
@@ -278,10 +275,8 @@ public class TaskInfoNew extends AbstractModel {
     }
 
     /**
-     * Get 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格组ID 
      * @return TableGroupId 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableGroupId() {
         return this.TableGroupId;
@@ -289,19 +284,15 @@ public class TaskInfoNew extends AbstractModel {
 
     /**
      * Set 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableGroupId 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableGroupId(String TableGroupId) {
         this.TableGroupId = TableGroupId;
     }
 
     /**
-     * Get 表格组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格组名称 
      * @return TableGroupName 表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableGroupName() {
         return this.TableGroupName;
@@ -309,19 +300,15 @@ public class TaskInfoNew extends AbstractModel {
 
     /**
      * Set 表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableGroupName 表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableGroupName(String TableGroupName) {
         this.TableGroupName = TableGroupName;
     }
 
     /**
-     * Get 表名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表名称 
      * @return TableName 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -329,9 +316,7 @@ public class TaskInfoNew extends AbstractModel {
 
     /**
      * Set 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;

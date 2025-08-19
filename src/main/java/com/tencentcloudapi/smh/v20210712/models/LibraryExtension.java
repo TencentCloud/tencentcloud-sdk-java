@@ -81,7 +81,7 @@ public class LibraryExtension extends AbstractModel {
     private Boolean EnableFileHistory;
 
     /**
-    * 当开启历史版本时，指定单个文件保留的历史版本的数量上限，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+    * 当开启历史版本时，指定单个文件保留的历史版本的数量上限，取值范围为 1 到 999。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileHistoryCount")
@@ -89,7 +89,7 @@ public class LibraryExtension extends AbstractModel {
     private Long FileHistoryCount;
 
     /**
-    * 当开启历史版本时，指定历史版本保留的最长天数，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+    * 当开启历史版本时，指定历史版本保留的最长天数，取值范围为 0 到 999，当指定为 0 时代表永久保留。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileHistoryExpireDay")
@@ -300,9 +300,9 @@ public class LibraryExtension extends AbstractModel {
     }
 
     /**
-     * Get 当开启历史版本时，指定单个文件保留的历史版本的数量上限，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+     * Get 当开启历史版本时，指定单个文件保留的历史版本的数量上限，取值范围为 1 到 999。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileHistoryCount 当开启历史版本时，指定单个文件保留的历史版本的数量上限，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+     * @return FileHistoryCount 当开启历史版本时，指定单个文件保留的历史版本的数量上限，取值范围为 1 到 999。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileHistoryCount() {
@@ -310,9 +310,9 @@ public class LibraryExtension extends AbstractModel {
     }
 
     /**
-     * Set 当开启历史版本时，指定单个文件保留的历史版本的数量上限，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+     * Set 当开启历史版本时，指定单个文件保留的历史版本的数量上限，取值范围为 1 到 999。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileHistoryCount 当开启历史版本时，指定单个文件保留的历史版本的数量上限，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+     * @param FileHistoryCount 当开启历史版本时，指定单个文件保留的历史版本的数量上限，取值范围为 1 到 999。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileHistoryCount(Long FileHistoryCount) {
@@ -320,9 +320,9 @@ public class LibraryExtension extends AbstractModel {
     }
 
     /**
-     * Get 当开启历史版本时，指定历史版本保留的最长天数，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+     * Get 当开启历史版本时，指定历史版本保留的最长天数，取值范围为 0 到 999，当指定为 0 时代表永久保留。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileHistoryExpireDay 当开启历史版本时，指定历史版本保留的最长天数，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+     * @return FileHistoryExpireDay 当开启历史版本时，指定历史版本保留的最长天数，取值范围为 0 到 999，当指定为 0 时代表永久保留。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileHistoryExpireDay() {
@@ -330,9 +330,9 @@ public class LibraryExtension extends AbstractModel {
     }
 
     /**
-     * Set 当开启历史版本时，指定历史版本保留的最长天数，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+     * Set 当开启历史版本时，指定历史版本保留的最长天数，取值范围为 0 到 999，当指定为 0 时代表永久保留。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileHistoryExpireDay 当开启历史版本时，指定历史版本保留的最长天数，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+     * @param FileHistoryExpireDay 当开启历史版本时，指定历史版本保留的最长天数，取值范围为 0 到 999，当指定为 0 时代表永久保留。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileHistoryExpireDay(Long FileHistoryExpireDay) {

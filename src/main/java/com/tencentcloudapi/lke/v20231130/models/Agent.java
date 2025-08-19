@@ -108,6 +108,13 @@ public class Agent extends AbstractModel {
     private Long AgentType;
 
     /**
+    * 0 自由转交，1 计划与执行
+    */
+    @SerializedName("AgentMode")
+    @Expose
+    private Long AgentMode;
+
+    /**
      * Get AgentID 
      * @return AgentId AgentID
      */
@@ -299,6 +306,22 @@ public class Agent extends AbstractModel {
         this.AgentType = AgentType;
     }
 
+    /**
+     * Get 0 自由转交，1 计划与执行 
+     * @return AgentMode 0 自由转交，1 计划与执行
+     */
+    public Long getAgentMode() {
+        return this.AgentMode;
+    }
+
+    /**
+     * Set 0 自由转交，1 计划与执行
+     * @param AgentMode 0 自由转交，1 计划与执行
+     */
+    public void setAgentMode(Long AgentMode) {
+        this.AgentMode = AgentMode;
+    }
+
     public Agent() {
     }
 
@@ -352,6 +375,9 @@ public class Agent extends AbstractModel {
         if (source.AgentType != null) {
             this.AgentType = new Long(source.AgentType);
         }
+        if (source.AgentMode != null) {
+            this.AgentMode = new Long(source.AgentMode);
+        }
     }
 
 
@@ -371,6 +397,7 @@ public class Agent extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Plugins.", this.Plugins);
         this.setParamSimple(map, prefix + "IsStartingAgent", this.IsStartingAgent);
         this.setParamSimple(map, prefix + "AgentType", this.AgentType);
+        this.setParamSimple(map, prefix + "AgentMode", this.AgentMode);
 
     }
 }

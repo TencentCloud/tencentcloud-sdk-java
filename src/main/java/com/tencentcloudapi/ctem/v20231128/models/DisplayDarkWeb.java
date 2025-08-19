@@ -59,6 +59,13 @@ public class DisplayDarkWeb extends AbstractModel {
     private DisplayToolCommon DisplayToolCommon;
 
     /**
+    * 状态：unrepaired:未修复，repaired:已修复，ignore:已忽略
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get 主键ID 
      * @return Id 主键ID
      */
@@ -138,6 +145,22 @@ public class DisplayDarkWeb extends AbstractModel {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
+    /**
+     * Get 状态：unrepaired:未修复，repaired:已修复，ignore:已忽略 
+     * @return Status 状态：unrepaired:未修复，repaired:已修复，ignore:已忽略
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 状态：unrepaired:未修复，repaired:已修复，ignore:已忽略
+     * @param Status 状态：unrepaired:未修复，repaired:已修复，ignore:已忽略
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public DisplayDarkWeb() {
     }
 
@@ -161,6 +184,9 @@ public class DisplayDarkWeb extends AbstractModel {
         if (source.DisplayToolCommon != null) {
             this.DisplayToolCommon = new DisplayToolCommon(source.DisplayToolCommon);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DisplayDarkWeb extends AbstractModel {
         this.setParamSimple(map, prefix + "MatchedKeywords", this.MatchedKeywords);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamObj(map, prefix + "DisplayToolCommon.", this.DisplayToolCommon);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

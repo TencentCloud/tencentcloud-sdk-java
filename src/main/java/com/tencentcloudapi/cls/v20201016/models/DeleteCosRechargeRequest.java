@@ -25,7 +25,7 @@ public class DeleteCosRechargeRequest extends AbstractModel {
 
     /**
     * COS导入配置Id。
-- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
+- 通过 [获取cos导入配置](https://cloud.tencent.com/document/product/614/88099) 获取COS导入配置Id。
     */
     @SerializedName("Id")
     @Expose
@@ -41,9 +41,9 @@ public class DeleteCosRechargeRequest extends AbstractModel {
 
     /**
      * Get COS导入配置Id。
-- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。 
+- 通过 [获取cos导入配置](https://cloud.tencent.com/document/product/614/88099) 获取COS导入配置Id。 
      * @return Id COS导入配置Id。
-- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
+- 通过 [获取cos导入配置](https://cloud.tencent.com/document/product/614/88099) 获取COS导入配置Id。
      */
     public String getId() {
         return this.Id;
@@ -51,9 +51,9 @@ public class DeleteCosRechargeRequest extends AbstractModel {
 
     /**
      * Set COS导入配置Id。
-- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
+- 通过 [获取cos导入配置](https://cloud.tencent.com/document/product/614/88099) 获取COS导入配置Id。
      * @param Id COS导入配置Id。
-- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
+- 通过 [获取cos导入配置](https://cloud.tencent.com/document/product/614/88099) 获取COS导入配置Id。
      */
     public void setId(String Id) {
         this.Id = Id;

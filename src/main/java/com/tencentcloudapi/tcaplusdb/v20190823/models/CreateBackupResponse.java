@@ -25,7 +25,6 @@ public class CreateBackupResponse extends AbstractModel {
 
     /**
     * 创建的备份任务ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskIds")
     @Expose
@@ -33,7 +32,6 @@ public class CreateBackupResponse extends AbstractModel {
 
     /**
     * 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationIds")
     @Expose
@@ -47,10 +45,8 @@ public class CreateBackupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建的备份任务ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建的备份任务ID列表 
      * @return TaskIds 创建的备份任务ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTaskIds() {
         return this.TaskIds;
@@ -58,19 +54,15 @@ public class CreateBackupResponse extends AbstractModel {
 
     /**
      * Set 创建的备份任务ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskIds 创建的备份任务ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskIds(String [] TaskIds) {
         this.TaskIds = TaskIds;
     }
 
     /**
-     * Get 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建的备份申请ID列表 
      * @return ApplicationIds 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getApplicationIds() {
         return this.ApplicationIds;
@@ -78,9 +70,7 @@ public class CreateBackupResponse extends AbstractModel {
 
     /**
      * Set 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationIds 创建的备份申请ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationIds(String [] ApplicationIds) {
         this.ApplicationIds = ApplicationIds;

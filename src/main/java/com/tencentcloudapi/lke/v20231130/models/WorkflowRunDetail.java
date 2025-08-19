@@ -59,6 +59,13 @@ public class WorkflowRunDetail extends AbstractModel {
     private String Name;
 
     /**
+    * 工作流输出
+    */
+    @SerializedName("Output")
+    @Expose
+    private String Output;
+
+    /**
     * 运行状态。0: 排队中；1: 运行中；2: 运行成功；3: 运行失败； 4: 已取消
     */
     @SerializedName("State")
@@ -206,6 +213,22 @@ public class WorkflowRunDetail extends AbstractModel {
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get 工作流输出 
+     * @return Output 工作流输出
+     */
+    public String getOutput() {
+        return this.Output;
+    }
+
+    /**
+     * Set 工作流输出
+     * @param Output 工作流输出
+     */
+    public void setOutput(String Output) {
+        this.Output = Output;
     }
 
     /**
@@ -391,6 +414,9 @@ public class WorkflowRunDetail extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Output != null) {
+            this.Output = new String(source.Output);
+        }
         if (source.State != null) {
             this.State = new Long(source.State);
         }
@@ -436,6 +462,7 @@ public class WorkflowRunDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowRunId", this.WorkflowRunId);
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Output", this.Output);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "FailMessage", this.FailMessage);
         this.setParamSimple(map, prefix + "TotalTokens", this.TotalTokens);

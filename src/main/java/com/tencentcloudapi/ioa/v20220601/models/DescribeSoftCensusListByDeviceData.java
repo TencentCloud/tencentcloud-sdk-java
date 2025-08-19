@@ -120,6 +120,13 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
     private Long PiracyRisk;
 
     /**
+    * 终端备注名
+    */
+    @SerializedName("RemarkName")
+    @Expose
+    private String RemarkName;
+
+    /**
      * Get 终端用户名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserName 终端用户名
@@ -359,6 +366,22 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
         this.PiracyRisk = PiracyRisk;
     }
 
+    /**
+     * Get 终端备注名 
+     * @return RemarkName 终端备注名
+     */
+    public String getRemarkName() {
+        return this.RemarkName;
+    }
+
+    /**
+     * Set 终端备注名
+     * @param RemarkName 终端备注名
+     */
+    public void setRemarkName(String RemarkName) {
+        this.RemarkName = RemarkName;
+    }
+
     public DescribeSoftCensusListByDeviceData() {
     }
 
@@ -403,6 +426,9 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
         if (source.PiracyRisk != null) {
             this.PiracyRisk = new Long(source.PiracyRisk);
         }
+        if (source.RemarkName != null) {
+            this.RemarkName = new String(source.RemarkName);
+        }
     }
 
 
@@ -422,6 +448,7 @@ public class DescribeSoftCensusListByDeviceData extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "SoftNum", this.SoftNum);
         this.setParamSimple(map, prefix + "PiracyRisk", this.PiracyRisk);
+        this.setParamSimple(map, prefix + "RemarkName", this.RemarkName);
 
     }
 }

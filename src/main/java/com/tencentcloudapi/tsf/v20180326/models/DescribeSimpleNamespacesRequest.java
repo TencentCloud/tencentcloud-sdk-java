@@ -59,7 +59,7 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel {
     private String NamespaceId;
 
     /**
-    * 查询资源类型列表
+    * 查询资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
     */
     @SerializedName("NamespaceResourceTypeList")
     @Expose
@@ -181,16 +181,16 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询资源类型列表 
-     * @return NamespaceResourceTypeList 查询资源类型列表
+     * Get 查询资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型 
+     * @return NamespaceResourceTypeList 查询资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public String [] getNamespaceResourceTypeList() {
         return this.NamespaceResourceTypeList;
     }
 
     /**
-     * Set 查询资源类型列表
-     * @param NamespaceResourceTypeList 查询资源类型列表
+     * Set 查询资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
+     * @param NamespaceResourceTypeList 查询资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public void setNamespaceResourceTypeList(String [] NamespaceResourceTypeList) {
         this.NamespaceResourceTypeList = NamespaceResourceTypeList;

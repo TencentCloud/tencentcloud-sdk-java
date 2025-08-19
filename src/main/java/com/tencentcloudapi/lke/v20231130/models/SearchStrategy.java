@@ -32,12 +32,36 @@ public class SearchStrategy extends AbstractModel {
     private Long StrategyType;
 
     /**
-    * Excel检索增强开关
+    * Excel检索增强开关, false关闭，true打开
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableEnhancement")
     @Expose
     private Boolean TableEnhancement;
+
+    /**
+    * 向量模型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EmbeddingModel")
+    @Expose
+    private String EmbeddingModel;
+
+    /**
+    * 结果重排序开关， on打开，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RerankModelSwitch")
+    @Expose
+    private String RerankModelSwitch;
+
+    /**
+    * 结果重排序模型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RerankModel")
+    @Expose
+    private String RerankModel;
 
     /**
      * Get 检索策略类型 0:混合检索，1：语义检索
@@ -60,9 +84,9 @@ public class SearchStrategy extends AbstractModel {
     }
 
     /**
-     * Get Excel检索增强开关
+     * Get Excel检索增强开关, false关闭，true打开
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableEnhancement Excel检索增强开关
+     * @return TableEnhancement Excel检索增强开关, false关闭，true打开
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTableEnhancement() {
@@ -70,13 +94,73 @@ public class SearchStrategy extends AbstractModel {
     }
 
     /**
-     * Set Excel检索增强开关
+     * Set Excel检索增强开关, false关闭，true打开
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableEnhancement Excel检索增强开关
+     * @param TableEnhancement Excel检索增强开关, false关闭，true打开
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableEnhancement(Boolean TableEnhancement) {
         this.TableEnhancement = TableEnhancement;
+    }
+
+    /**
+     * Get 向量模型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EmbeddingModel 向量模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEmbeddingModel() {
+        return this.EmbeddingModel;
+    }
+
+    /**
+     * Set 向量模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EmbeddingModel 向量模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEmbeddingModel(String EmbeddingModel) {
+        this.EmbeddingModel = EmbeddingModel;
+    }
+
+    /**
+     * Get 结果重排序开关， on打开，off关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RerankModelSwitch 结果重排序开关， on打开，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRerankModelSwitch() {
+        return this.RerankModelSwitch;
+    }
+
+    /**
+     * Set 结果重排序开关， on打开，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RerankModelSwitch 结果重排序开关， on打开，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRerankModelSwitch(String RerankModelSwitch) {
+        this.RerankModelSwitch = RerankModelSwitch;
+    }
+
+    /**
+     * Get 结果重排序模型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RerankModel 结果重排序模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRerankModel() {
+        return this.RerankModel;
+    }
+
+    /**
+     * Set 结果重排序模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RerankModel 结果重排序模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRerankModel(String RerankModel) {
+        this.RerankModel = RerankModel;
     }
 
     public SearchStrategy() {
@@ -93,6 +177,15 @@ public class SearchStrategy extends AbstractModel {
         if (source.TableEnhancement != null) {
             this.TableEnhancement = new Boolean(source.TableEnhancement);
         }
+        if (source.EmbeddingModel != null) {
+            this.EmbeddingModel = new String(source.EmbeddingModel);
+        }
+        if (source.RerankModelSwitch != null) {
+            this.RerankModelSwitch = new String(source.RerankModelSwitch);
+        }
+        if (source.RerankModel != null) {
+            this.RerankModel = new String(source.RerankModel);
+        }
     }
 
 
@@ -102,6 +195,9 @@ public class SearchStrategy extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StrategyType", this.StrategyType);
         this.setParamSimple(map, prefix + "TableEnhancement", this.TableEnhancement);
+        this.setParamSimple(map, prefix + "EmbeddingModel", this.EmbeddingModel);
+        this.setParamSimple(map, prefix + "RerankModelSwitch", this.RerankModelSwitch);
+        this.setParamSimple(map, prefix + "RerankModel", this.RerankModel);
 
     }
 }

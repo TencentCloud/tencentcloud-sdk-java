@@ -59,6 +59,13 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
+    * 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
+    */
+    @SerializedName("RecordType")
+    @Expose
+    private String RecordType;
+
+    /**
      * Get 录制模板唯一标识。 
      * @return Definition 录制模板唯一标识。
      */
@@ -138,6 +145,22 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel {
         this.Comment = Comment;
     }
 
+    /**
+     * Get 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。 
+     * @return RecordType 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
+     */
+    public String getRecordType() {
+        return this.RecordType;
+    }
+
+    /**
+     * Set 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
+     * @param RecordType 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
+     */
+    public void setRecordType(String RecordType) {
+        this.RecordType = RecordType;
+    }
+
     public ModifyLiveRecordTemplateRequest() {
     }
 
@@ -161,6 +184,9 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel {
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.RecordType != null) {
+            this.RecordType = new String(source.RecordType);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "MP4Configure.", this.MP4Configure);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "RecordType", this.RecordType);
 
     }
 }

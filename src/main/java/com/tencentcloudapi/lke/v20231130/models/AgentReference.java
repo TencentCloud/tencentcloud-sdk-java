@@ -104,6 +104,22 @@ public class AgentReference extends AbstractModel {
     private String Title;
 
     /**
+    * 知识库名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KnowledgeName")
+    @Expose
+    private String KnowledgeName;
+
+    /**
+    * 知识库标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KnowledgeBizId")
+    @Expose
+    private String KnowledgeBizId;
+
+    /**
      * Get 来源文档ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocId 来源文档ID
@@ -303,6 +319,46 @@ public class AgentReference extends AbstractModel {
         this.Title = Title;
     }
 
+    /**
+     * Get 知识库名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KnowledgeName 知识库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKnowledgeName() {
+        return this.KnowledgeName;
+    }
+
+    /**
+     * Set 知识库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KnowledgeName 知识库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKnowledgeName(String KnowledgeName) {
+        this.KnowledgeName = KnowledgeName;
+    }
+
+    /**
+     * Get 知识库标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KnowledgeBizId 知识库标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKnowledgeBizId() {
+        return this.KnowledgeBizId;
+    }
+
+    /**
+     * Set 知识库标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KnowledgeBizId 知识库标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKnowledgeBizId(String KnowledgeBizId) {
+        this.KnowledgeBizId = KnowledgeBizId;
+    }
+
     public AgentReference() {
     }
 
@@ -341,6 +397,12 @@ public class AgentReference extends AbstractModel {
         if (source.Title != null) {
             this.Title = new String(source.Title);
         }
+        if (source.KnowledgeName != null) {
+            this.KnowledgeName = new String(source.KnowledgeName);
+        }
+        if (source.KnowledgeBizId != null) {
+            this.KnowledgeBizId = new String(source.KnowledgeBizId);
+        }
     }
 
 
@@ -358,6 +420,8 @@ public class AgentReference extends AbstractModel {
         this.setParamSimple(map, prefix + "QaBizId", this.QaBizId);
         this.setParamSimple(map, prefix + "Index", this.Index);
         this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "KnowledgeName", this.KnowledgeName);
+        this.setParamSimple(map, prefix + "KnowledgeBizId", this.KnowledgeBizId);
 
     }
 }

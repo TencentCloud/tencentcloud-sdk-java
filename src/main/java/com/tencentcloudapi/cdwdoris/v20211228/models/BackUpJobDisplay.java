@@ -129,6 +129,13 @@ public class BackUpJobDisplay extends AbstractModel {
     private SnapshotRemainPolicy SnapshotRemainPolicy;
 
     /**
+    * 隔离次数
+    */
+    @SerializedName("IsolationCount")
+    @Expose
+    private Long IsolationCount;
+
+    /**
      * Get 备份实例id 
      * @return JobId 备份实例id
      */
@@ -368,6 +375,22 @@ public class BackUpJobDisplay extends AbstractModel {
         this.SnapshotRemainPolicy = SnapshotRemainPolicy;
     }
 
+    /**
+     * Get 隔离次数 
+     * @return IsolationCount 隔离次数
+     */
+    public Long getIsolationCount() {
+        return this.IsolationCount;
+    }
+
+    /**
+     * Set 隔离次数
+     * @param IsolationCount 隔离次数
+     */
+    public void setIsolationCount(Long IsolationCount) {
+        this.IsolationCount = IsolationCount;
+    }
+
     public BackUpJobDisplay() {
     }
 
@@ -421,6 +444,9 @@ public class BackUpJobDisplay extends AbstractModel {
         if (source.SnapshotRemainPolicy != null) {
             this.SnapshotRemainPolicy = new SnapshotRemainPolicy(source.SnapshotRemainPolicy);
         }
+        if (source.IsolationCount != null) {
+            this.IsolationCount = new Long(source.IsolationCount);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class BackUpJobDisplay extends AbstractModel {
         this.setParamSimple(map, prefix + "IsUserDefineBucket", this.IsUserDefineBucket);
         this.setParamSimple(map, prefix + "ErrorReason", this.ErrorReason);
         this.setParamObj(map, prefix + "SnapshotRemainPolicy.", this.SnapshotRemainPolicy);
+        this.setParamSimple(map, prefix + "IsolationCount", this.IsolationCount);
 
     }
 }

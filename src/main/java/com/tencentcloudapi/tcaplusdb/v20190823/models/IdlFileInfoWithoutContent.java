@@ -25,7 +25,6 @@ public class IdlFileInfoWithoutContent extends AbstractModel {
 
     /**
     * 文件名称，不包含扩展名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -33,7 +32,6 @@ public class IdlFileInfoWithoutContent extends AbstractModel {
 
     /**
     * 数据描述语言（IDL）类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileType")
     @Expose
@@ -41,7 +39,6 @@ public class IdlFileInfoWithoutContent extends AbstractModel {
 
     /**
     * 文件扩展名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileExtType")
     @Expose
@@ -49,7 +46,6 @@ public class IdlFileInfoWithoutContent extends AbstractModel {
 
     /**
     * 文件大小（Bytes）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSize")
     @Expose
@@ -57,7 +53,6 @@ public class IdlFileInfoWithoutContent extends AbstractModel {
 
     /**
     * 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -65,17 +60,14 @@ public class IdlFileInfoWithoutContent extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
     private ErrorInfo Error;
 
     /**
-     * Get 文件名称，不包含扩展名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件名称，不包含扩展名 
      * @return FileName 文件名称，不包含扩展名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -83,19 +75,15 @@ public class IdlFileInfoWithoutContent extends AbstractModel {
 
     /**
      * Set 文件名称，不包含扩展名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 文件名称，不包含扩展名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 数据描述语言（IDL）类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据描述语言（IDL）类型 
      * @return FileType 数据描述语言（IDL）类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileType() {
         return this.FileType;
@@ -103,19 +91,15 @@ public class IdlFileInfoWithoutContent extends AbstractModel {
 
     /**
      * Set 数据描述语言（IDL）类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileType 数据描述语言（IDL）类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 文件扩展名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件扩展名 
      * @return FileExtType 文件扩展名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileExtType() {
         return this.FileExtType;
@@ -123,19 +107,15 @@ public class IdlFileInfoWithoutContent extends AbstractModel {
 
     /**
      * Set 文件扩展名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileExtType 文件扩展名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileExtType(String FileExtType) {
         this.FileExtType = FileExtType;
     }
 
     /**
-     * Get 文件大小（Bytes）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件大小（Bytes） 
      * @return FileSize 文件大小（Bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileSize() {
         return this.FileSize;
@@ -143,19 +123,15 @@ public class IdlFileInfoWithoutContent extends AbstractModel {
 
     /**
      * Set 文件大小（Bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSize 文件大小（Bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 文件ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件ID 
      * @return FileId 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileId() {
         return this.FileId;
@@ -163,19 +139,15 @@ public class IdlFileInfoWithoutContent extends AbstractModel {
 
     /**
      * Set 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(Long FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorInfo getError() {
         return this.Error;
@@ -183,9 +155,7 @@ public class IdlFileInfoWithoutContent extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(ErrorInfo Error) {
         this.Error = Error;

@@ -31,14 +31,14 @@ public class DescribeProgramsRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-    * 每页数量
+    * 每页数量，默认值20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 起始偏移量
+    * 起始偏移量，默认值0
     */
     @SerializedName("Offset")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeProgramsRequest extends AbstractModel {
     }
 
     /**
-     * Get 每页数量 
-     * @return Limit 每页数量
+     * Get 每页数量，默认值20 
+     * @return Limit 每页数量，默认值20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数量
-     * @param Limit 每页数量
+     * Set 每页数量，默认值20
+     * @param Limit 每页数量，默认值20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 起始偏移量 
-     * @return Offset 起始偏移量
+     * Get 起始偏移量，默认值0 
+     * @return Offset 起始偏移量，默认值0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 起始偏移量
-     * @param Offset 起始偏移量
+     * Set 起始偏移量，默认值0
+     * @param Offset 起始偏移量，默认值0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

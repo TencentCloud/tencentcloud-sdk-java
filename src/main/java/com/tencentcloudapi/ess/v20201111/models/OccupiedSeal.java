@@ -108,6 +108,41 @@ public class OccupiedSeal extends AbstractModel {
     private ExtendScene ExtendScene;
 
     /**
+    * 印章的真实宽度，单位毫米
+    */
+    @SerializedName("RealWidth")
+    @Expose
+    private Long RealWidth;
+
+    /**
+    * 印章的真实高度，单位毫米
+    */
+    @SerializedName("RealHeight")
+    @Expose
+    private Long RealHeight;
+
+    /**
+    * 自定义子类型印章
+    */
+    @SerializedName("SubSealType")
+    @Expose
+    private String SubSealType;
+
+    /**
+    * 自定义子类型印章名称
+    */
+    @SerializedName("SubSealName")
+    @Expose
+    private String SubSealName;
+
+    /**
+    * 印章描述
+    */
+    @SerializedName("SealDescription")
+    @Expose
+    private String SealDescription;
+
+    /**
      * Get 电子印章编号 
      * @return SealId 电子印章编号
      */
@@ -299,6 +334,86 @@ public class OccupiedSeal extends AbstractModel {
         this.ExtendScene = ExtendScene;
     }
 
+    /**
+     * Get 印章的真实宽度，单位毫米 
+     * @return RealWidth 印章的真实宽度，单位毫米
+     */
+    public Long getRealWidth() {
+        return this.RealWidth;
+    }
+
+    /**
+     * Set 印章的真实宽度，单位毫米
+     * @param RealWidth 印章的真实宽度，单位毫米
+     */
+    public void setRealWidth(Long RealWidth) {
+        this.RealWidth = RealWidth;
+    }
+
+    /**
+     * Get 印章的真实高度，单位毫米 
+     * @return RealHeight 印章的真实高度，单位毫米
+     */
+    public Long getRealHeight() {
+        return this.RealHeight;
+    }
+
+    /**
+     * Set 印章的真实高度，单位毫米
+     * @param RealHeight 印章的真实高度，单位毫米
+     */
+    public void setRealHeight(Long RealHeight) {
+        this.RealHeight = RealHeight;
+    }
+
+    /**
+     * Get 自定义子类型印章 
+     * @return SubSealType 自定义子类型印章
+     */
+    public String getSubSealType() {
+        return this.SubSealType;
+    }
+
+    /**
+     * Set 自定义子类型印章
+     * @param SubSealType 自定义子类型印章
+     */
+    public void setSubSealType(String SubSealType) {
+        this.SubSealType = SubSealType;
+    }
+
+    /**
+     * Get 自定义子类型印章名称 
+     * @return SubSealName 自定义子类型印章名称
+     */
+    public String getSubSealName() {
+        return this.SubSealName;
+    }
+
+    /**
+     * Set 自定义子类型印章名称
+     * @param SubSealName 自定义子类型印章名称
+     */
+    public void setSubSealName(String SubSealName) {
+        this.SubSealName = SubSealName;
+    }
+
+    /**
+     * Get 印章描述 
+     * @return SealDescription 印章描述
+     */
+    public String getSealDescription() {
+        return this.SealDescription;
+    }
+
+    /**
+     * Set 印章描述
+     * @param SealDescription 印章描述
+     */
+    public void setSealDescription(String SealDescription) {
+        this.SealDescription = SealDescription;
+    }
+
     public OccupiedSeal() {
     }
 
@@ -346,6 +461,21 @@ public class OccupiedSeal extends AbstractModel {
         if (source.ExtendScene != null) {
             this.ExtendScene = new ExtendScene(source.ExtendScene);
         }
+        if (source.RealWidth != null) {
+            this.RealWidth = new Long(source.RealWidth);
+        }
+        if (source.RealHeight != null) {
+            this.RealHeight = new Long(source.RealHeight);
+        }
+        if (source.SubSealType != null) {
+            this.SubSealType = new String(source.SubSealType);
+        }
+        if (source.SubSealName != null) {
+            this.SubSealName = new String(source.SubSealName);
+        }
+        if (source.SealDescription != null) {
+            this.SealDescription = new String(source.SealDescription);
+        }
     }
 
 
@@ -365,6 +495,11 @@ public class OccupiedSeal extends AbstractModel {
         this.setParamSimple(map, prefix + "IsAllTime", this.IsAllTime);
         this.setParamArrayObj(map, prefix + "AuthorizedUsers.", this.AuthorizedUsers);
         this.setParamObj(map, prefix + "ExtendScene.", this.ExtendScene);
+        this.setParamSimple(map, prefix + "RealWidth", this.RealWidth);
+        this.setParamSimple(map, prefix + "RealHeight", this.RealHeight);
+        this.setParamSimple(map, prefix + "SubSealType", this.SubSealType);
+        this.setParamSimple(map, prefix + "SubSealName", this.SubSealName);
+        this.setParamSimple(map, prefix + "SealDescription", this.SealDescription);
 
     }
 }

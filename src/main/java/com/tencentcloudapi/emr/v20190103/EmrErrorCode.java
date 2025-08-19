@@ -607,7 +607,10 @@ public enum EmrErrorCode {
      UNSUPPORTEDOPERATION_NOTINWHITELIST("UnsupportedOperation.NotInWhiteList"),
      
      /* 该服务不支持此操作。 */
-     UNSUPPORTEDOPERATION_SERVICENOTSUPPORT("UnsupportedOperation.ServiceNotSupport");
+     UNSUPPORTEDOPERATION_SERVICENOTSUPPORT("UnsupportedOperation.ServiceNotSupport"),
+     
+     /* 操作不支持。 */
+     UNSUPPORTEDOPERATION_UNSUPPORTEDDISKTYPE("UnsupportedOperation.UnsupportedDiskType");
      
     private String value;
     private EmrErrorCode (String value){

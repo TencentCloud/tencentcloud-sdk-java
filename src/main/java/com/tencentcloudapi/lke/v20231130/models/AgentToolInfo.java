@@ -132,6 +132,20 @@ public class AgentToolInfo extends AbstractModel {
     private String CallingMethod;
 
     /**
+    * query信息
+    */
+    @SerializedName("Query")
+    @Expose
+    private AgentPluginQuery [] Query;
+
+    /**
+    * 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
+    */
+    @SerializedName("FinanceStatus")
+    @Expose
+    private Long FinanceStatus;
+
+    /**
      * Get 插件id 
      * @return PluginId 插件id
      */
@@ -383,6 +397,38 @@ public class AgentToolInfo extends AbstractModel {
         this.CallingMethod = CallingMethod;
     }
 
+    /**
+     * Get query信息 
+     * @return Query query信息
+     */
+    public AgentPluginQuery [] getQuery() {
+        return this.Query;
+    }
+
+    /**
+     * Set query信息
+     * @param Query query信息
+     */
+    public void setQuery(AgentPluginQuery [] Query) {
+        this.Query = Query;
+    }
+
+    /**
+     * Get 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等） 
+     * @return FinanceStatus 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
+     */
+    public Long getFinanceStatus() {
+        return this.FinanceStatus;
+    }
+
+    /**
+     * Set 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
+     * @param FinanceStatus 工具计费状态 0-不计费 1-可用 2-不可用（欠费、无资源等）
+     */
+    public void setFinanceStatus(Long FinanceStatus) {
+        this.FinanceStatus = FinanceStatus;
+    }
+
     public AgentToolInfo() {
     }
 
@@ -445,6 +491,15 @@ public class AgentToolInfo extends AbstractModel {
         if (source.CallingMethod != null) {
             this.CallingMethod = new String(source.CallingMethod);
         }
+        if (source.Query != null) {
+            this.Query = new AgentPluginQuery[source.Query.length];
+            for (int i = 0; i < source.Query.length; i++) {
+                this.Query[i] = new AgentPluginQuery(source.Query[i]);
+            }
+        }
+        if (source.FinanceStatus != null) {
+            this.FinanceStatus = new Long(source.FinanceStatus);
+        }
     }
 
 
@@ -467,6 +522,8 @@ public class AgentToolInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
         this.setParamSimple(map, prefix + "CallingMethod", this.CallingMethod);
+        this.setParamArrayObj(map, prefix + "Query.", this.Query);
+        this.setParamSimple(map, prefix + "FinanceStatus", this.FinanceStatus);
 
     }
 }

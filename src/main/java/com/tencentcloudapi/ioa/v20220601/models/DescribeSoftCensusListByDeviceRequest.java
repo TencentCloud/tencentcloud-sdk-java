@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class DescribeSoftCensusListByDeviceRequest extends AbstractModel {
 
     /**
-    * 必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
-    */
-    @SerializedName("OsType")
-    @Expose
-    private Long OsType;
-
-    /**
     * 必填，终端分组ID
     */
     @SerializedName("GroupId")
@@ -38,27 +31,25 @@ public class DescribeSoftCensusListByDeviceRequest extends AbstractModel {
     private Long GroupId;
 
     /**
+    * 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+    */
+    @SerializedName("DomainInstanceId")
+    @Expose
+    private String DomainInstanceId;
+
+    /**
+    * 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）；默认值0
+    */
+    @SerializedName("OsType")
+    @Expose
+    private Long OsType;
+
+    /**
     * 过滤条件、分页参数   <li>Name - String - 是否必填：否 - 操作符: eq,like,ilike  - 排序支持：否 - 备注：字段含义，终端名。</li> 	<li>UserName - String - 是否必填：否 - 操作符: eq,like,ilike  - 排序支持：否 - 备注：字段含义，终端用户名。</li> 	<li>IoaUserName - String - 是否必填：否 - 操作符: eq,like,ilike  - 排序支持：否 - 备注：字段含义，最近登录账号。</li> 	<li>Ip - String - 是否必填：否 - 操作符: eq,like,ilike  - 排序支持：否 - 备注：字段含义，IP地址。</li> 	<li>MacAddr - String - 是否必填：否 - 操作符: eq,like,ilike  - 排序支持：否 - 备注：字段含义，MAC地址。</li>
     */
     @SerializedName("Condition")
     @Expose
     private Condition Condition;
-
-    /**
-     * Get 必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios  ） 
-     * @return OsType 必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
-     */
-    public Long getOsType() {
-        return this.OsType;
-    }
-
-    /**
-     * Set 必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
-     * @param OsType 必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）
-     */
-    public void setOsType(Long OsType) {
-        this.OsType = OsType;
-    }
 
     /**
      * Get 必填，终端分组ID 
@@ -74,6 +65,38 @@ public class DescribeSoftCensusListByDeviceRequest extends AbstractModel {
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。 
+     * @return DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public String getDomainInstanceId() {
+        return this.DomainInstanceId;
+    }
+
+    /**
+     * Set 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @param DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public void setDomainInstanceId(String DomainInstanceId) {
+        this.DomainInstanceId = DomainInstanceId;
+    }
+
+    /**
+     * Get 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）；默认值0 
+     * @return OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）；默认值0
+     */
+    public Long getOsType() {
+        return this.OsType;
+    }
+
+    /**
+     * Set 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）；默认值0
+     * @param OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios  ）；默认值0
+     */
+    public void setOsType(Long OsType) {
+        this.OsType = OsType;
     }
 
     /**
@@ -100,11 +123,14 @@ public class DescribeSoftCensusListByDeviceRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSoftCensusListByDeviceRequest(DescribeSoftCensusListByDeviceRequest source) {
-        if (source.OsType != null) {
-            this.OsType = new Long(source.OsType);
-        }
         if (source.GroupId != null) {
             this.GroupId = new Long(source.GroupId);
+        }
+        if (source.DomainInstanceId != null) {
+            this.DomainInstanceId = new String(source.DomainInstanceId);
+        }
+        if (source.OsType != null) {
+            this.OsType = new Long(source.OsType);
         }
         if (source.Condition != null) {
             this.Condition = new Condition(source.Condition);
@@ -116,8 +142,9 @@ public class DescribeSoftCensusListByDeviceRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OsType", this.OsType);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
+        this.setParamSimple(map, prefix + "OsType", this.OsType);
         this.setParamObj(map, prefix + "Condition.", this.Condition);
 
     }

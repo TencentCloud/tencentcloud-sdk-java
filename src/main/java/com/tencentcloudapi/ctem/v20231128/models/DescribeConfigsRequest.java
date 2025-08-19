@@ -122,6 +122,13 @@ public class DescribeConfigsRequest extends AbstractModel {
     private Boolean Ignored;
 
     /**
+    * 支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
      * Get 企业ID列表，可多选 
      * @return CustomerIdList 企业ID列表，可多选
      */
@@ -345,6 +352,22 @@ public class DescribeConfigsRequest extends AbstractModel {
         this.Ignored = Ignored;
     }
 
+    /**
+     * Get 支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减 
+     * @return OrderBy 支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
+     * @param OrderBy 支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
     public DescribeConfigsRequest() {
     }
 
@@ -404,6 +427,9 @@ public class DescribeConfigsRequest extends AbstractModel {
         if (source.Ignored != null) {
             this.Ignored = new Boolean(source.Ignored);
         }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
     }
 
 
@@ -425,6 +451,7 @@ public class DescribeConfigsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateAtEnd", this.UpdateAtEnd);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Ignored", this.Ignored);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
 
     }
 }

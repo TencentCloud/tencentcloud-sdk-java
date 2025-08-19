@@ -39,7 +39,6 @@ public class ApplyResult extends AbstractModel {
 
     /**
     * 处理状态 0-待审核 1-已经审核并提交任务 2-已驳回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationStatus")
     @Expose
@@ -47,7 +46,6 @@ public class ApplyResult extends AbstractModel {
 
     /**
     * 已提交的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -55,7 +53,6 @@ public class ApplyResult extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
@@ -94,10 +91,8 @@ public class ApplyResult extends AbstractModel {
     }
 
     /**
-     * Get 处理状态 0-待审核 1-已经审核并提交任务 2-已驳回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理状态 0-待审核 1-已经审核并提交任务 2-已驳回 
      * @return ApplicationStatus 处理状态 0-待审核 1-已经审核并提交任务 2-已驳回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApplicationStatus() {
         return this.ApplicationStatus;
@@ -105,19 +100,15 @@ public class ApplyResult extends AbstractModel {
 
     /**
      * Set 处理状态 0-待审核 1-已经审核并提交任务 2-已驳回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationStatus 处理状态 0-待审核 1-已经审核并提交任务 2-已驳回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationStatus(Long ApplicationStatus) {
         this.ApplicationStatus = ApplicationStatus;
     }
 
     /**
-     * Get 已提交的任务Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已提交的任务Id 
      * @return TaskId 已提交的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -125,19 +116,15 @@ public class ApplyResult extends AbstractModel {
 
     /**
      * Set 已提交的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 已提交的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorInfo getError() {
         return this.Error;
@@ -145,9 +132,7 @@ public class ApplyResult extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(ErrorInfo Error) {
         this.Error = Error;

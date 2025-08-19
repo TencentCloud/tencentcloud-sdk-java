@@ -32,7 +32,6 @@ public class ModifyCensorshipResponse extends AbstractModel {
 
     /**
     * 已加入审批人的uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uins")
     @Expose
@@ -69,10 +68,8 @@ public class ModifyCensorshipResponse extends AbstractModel {
     }
 
     /**
-     * Get 已加入审批人的uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已加入审批人的uin 
      * @return Uins 已加入审批人的uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUins() {
         return this.Uins;
@@ -80,9 +77,7 @@ public class ModifyCensorshipResponse extends AbstractModel {
 
     /**
      * Set 已加入审批人的uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uins 已加入审批人的uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUins(String [] Uins) {
         this.Uins = Uins;

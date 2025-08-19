@@ -123,7 +123,7 @@ public class ModifyTopicRequest extends AbstractModel {
 
     /**
     * 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
     */
     @SerializedName("CancelTopicAsyncTaskID")
     @Expose
@@ -379,9 +379,9 @@ public class ModifyTopicRequest extends AbstractModel {
 
     /**
      * Get 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。 
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。 
      * @return CancelTopicAsyncTaskID 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
      */
     public String getCancelTopicAsyncTaskID() {
         return this.CancelTopicAsyncTaskID;
@@ -389,9 +389,9 @@ public class ModifyTopicRequest extends AbstractModel {
 
     /**
      * Set 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
      * @param CancelTopicAsyncTaskID 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
      */
     public void setCancelTopicAsyncTaskID(String CancelTopicAsyncTaskID) {
         this.CancelTopicAsyncTaskID = CancelTopicAsyncTaskID;

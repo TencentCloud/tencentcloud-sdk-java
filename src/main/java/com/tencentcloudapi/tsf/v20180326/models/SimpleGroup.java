@@ -115,6 +115,13 @@ public class SimpleGroup extends AbstractModel {
     private String AppMicroServiceType;
 
     /**
+    * k8s 命名空间名称
+    */
+    @SerializedName("K8sNamespaceName")
+    @Expose
+    private String K8sNamespaceName;
+
+    /**
      * Get 部署组ID 
      * @return GroupId 部署组ID
      */
@@ -322,6 +329,22 @@ public class SimpleGroup extends AbstractModel {
         this.AppMicroServiceType = AppMicroServiceType;
     }
 
+    /**
+     * Get k8s 命名空间名称 
+     * @return K8sNamespaceName k8s 命名空间名称
+     */
+    public String getK8sNamespaceName() {
+        return this.K8sNamespaceName;
+    }
+
+    /**
+     * Set k8s 命名空间名称
+     * @param K8sNamespaceName k8s 命名空间名称
+     */
+    public void setK8sNamespaceName(String K8sNamespaceName) {
+        this.K8sNamespaceName = K8sNamespaceName;
+    }
+
     public SimpleGroup() {
     }
 
@@ -369,6 +392,9 @@ public class SimpleGroup extends AbstractModel {
         if (source.AppMicroServiceType != null) {
             this.AppMicroServiceType = new String(source.AppMicroServiceType);
         }
+        if (source.K8sNamespaceName != null) {
+            this.K8sNamespaceName = new String(source.K8sNamespaceName);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class SimpleGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
         this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
         this.setParamSimple(map, prefix + "AppMicroServiceType", this.AppMicroServiceType);
+        this.setParamSimple(map, prefix + "K8sNamespaceName", this.K8sNamespaceName);
 
     }
 }

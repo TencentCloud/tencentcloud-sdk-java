@@ -25,7 +25,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
@@ -33,7 +32,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableInstanceId")
     @Expose
@@ -41,7 +39,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableType")
     @Expose
@@ -49,7 +46,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableIdlType")
     @Expose
@@ -57,7 +53,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格所属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -65,7 +60,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格所属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -73,7 +67,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableGroupId")
     @Expose
@@ -81,7 +74,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格所属表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableGroupName")
     @Expose
@@ -89,7 +81,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格主键字段结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyStruct")
     @Expose
@@ -97,7 +88,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格非主键字段结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValueStruct")
     @Expose
@@ -105,7 +95,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格分表因子集合，对PROTO类型表格有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShardingKeySet")
     @Expose
@@ -113,7 +102,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格索引键字段集合，对PROTO类型表格有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexStruct")
     @Expose
@@ -121,7 +109,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * LIST类型表格元素个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListElementNum")
     @Expose
@@ -129,7 +116,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格所关联IDL文件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdlFiles")
     @Expose
@@ -137,7 +123,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格预留容量（GB）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReservedVolume")
     @Expose
@@ -145,7 +130,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格预留读CU
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReservedReadQps")
     @Expose
@@ -153,7 +137,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格预留写CU
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReservedWriteQps")
     @Expose
@@ -161,7 +144,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格实际数据量大小（MB）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableSize")
     @Expose
@@ -169,7 +151,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -177,7 +158,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -185,7 +165,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格最后一次修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -193,7 +172,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Memo")
     @Expose
@@ -201,7 +179,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
@@ -209,7 +186,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * TcaplusDB SDK数据访问接入ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiAccessId")
     @Expose
@@ -217,7 +193,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * SORTLIST类型表格排序字段个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SortFieldNum")
     @Expose
@@ -225,7 +200,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * SORTLIST类型表格排序顺序
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SortRule")
     @Expose
@@ -233,7 +207,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格分布式索引/缓写、kafka数据订阅信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbClusterInfoStruct")
     @Expose
@@ -241,7 +214,6 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TxhBackupExpireDay")
     @Expose
@@ -249,17 +221,14 @@ public class TableInfoNew extends AbstractModel {
 
     /**
     * 表格的缓写信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyncTableInfo")
     @Expose
     private SyncTableInfo SyncTableInfo;
 
     /**
-     * Get 表格名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格名称 
      * @return TableName 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -267,19 +236,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格实例ID 
      * @return TableInstanceId 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableInstanceId() {
         return this.TableInstanceId;
@@ -287,19 +252,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableInstanceId 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableInstanceId(String TableInstanceId) {
         this.TableInstanceId = TableInstanceId;
     }
 
     /**
-     * Get 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格数据结构类型，如：`GENERIC`或`LIST` 
      * @return TableType 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableType() {
         return this.TableType;
@@ -307,19 +268,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableType 表格数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableType(String TableType) {
         this.TableType = TableType;
     }
 
     /**
-     * Get 表格数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格数据描述语言（IDL）类型，如：`PROTO`或`TDR` 
      * @return TableIdlType 表格数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableIdlType() {
         return this.TableIdlType;
@@ -327,19 +284,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableIdlType 表格数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableIdlType(String TableIdlType) {
         this.TableIdlType = TableIdlType;
     }
 
     /**
-     * Get 表格所属集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格所属集群ID 
      * @return ClusterId 表格所属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -347,19 +300,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格所属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 表格所属集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 表格所属集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格所属集群名称 
      * @return ClusterName 表格所属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -367,19 +316,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格所属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 表格所属集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格所属表格组ID 
      * @return TableGroupId 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableGroupId() {
         return this.TableGroupId;
@@ -387,19 +332,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableGroupId 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableGroupId(String TableGroupId) {
         this.TableGroupId = TableGroupId;
     }
 
     /**
-     * Get 表格所属表格组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格所属表格组名称 
      * @return TableGroupName 表格所属表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableGroupName() {
         return this.TableGroupName;
@@ -407,19 +348,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格所属表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableGroupName 表格所属表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableGroupName(String TableGroupName) {
         this.TableGroupName = TableGroupName;
     }
 
     /**
-     * Get 表格主键字段结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格主键字段结构json字符串 
      * @return KeyStruct 表格主键字段结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyStruct() {
         return this.KeyStruct;
@@ -427,19 +364,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格主键字段结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyStruct 表格主键字段结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyStruct(String KeyStruct) {
         this.KeyStruct = KeyStruct;
     }
 
     /**
-     * Get 表格非主键字段结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格非主键字段结构json字符串 
      * @return ValueStruct 表格非主键字段结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValueStruct() {
         return this.ValueStruct;
@@ -447,19 +380,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格非主键字段结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueStruct 表格非主键字段结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValueStruct(String ValueStruct) {
         this.ValueStruct = ValueStruct;
     }
 
     /**
-     * Get 表格分表因子集合，对PROTO类型表格有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格分表因子集合，对PROTO类型表格有效 
      * @return ShardingKeySet 表格分表因子集合，对PROTO类型表格有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getShardingKeySet() {
         return this.ShardingKeySet;
@@ -467,19 +396,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格分表因子集合，对PROTO类型表格有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShardingKeySet 表格分表因子集合，对PROTO类型表格有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShardingKeySet(String ShardingKeySet) {
         this.ShardingKeySet = ShardingKeySet;
     }
 
     /**
-     * Get 表格索引键字段集合，对PROTO类型表格有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格索引键字段集合，对PROTO类型表格有效 
      * @return IndexStruct 表格索引键字段集合，对PROTO类型表格有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexStruct() {
         return this.IndexStruct;
@@ -487,19 +412,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格索引键字段集合，对PROTO类型表格有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexStruct 表格索引键字段集合，对PROTO类型表格有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexStruct(String IndexStruct) {
         this.IndexStruct = IndexStruct;
     }
 
     /**
-     * Get LIST类型表格元素个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get LIST类型表格元素个数 
      * @return ListElementNum LIST类型表格元素个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getListElementNum() {
         return this.ListElementNum;
@@ -507,19 +428,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set LIST类型表格元素个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListElementNum LIST类型表格元素个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListElementNum(Long ListElementNum) {
         this.ListElementNum = ListElementNum;
     }
 
     /**
-     * Get 表格所关联IDL文件信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格所关联IDL文件信息列表 
      * @return IdlFiles 表格所关联IDL文件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IdlFileInfo [] getIdlFiles() {
         return this.IdlFiles;
@@ -527,19 +444,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格所关联IDL文件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdlFiles 表格所关联IDL文件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdlFiles(IdlFileInfo [] IdlFiles) {
         this.IdlFiles = IdlFiles;
     }
 
     /**
-     * Get 表格预留容量（GB）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格预留容量（GB） 
      * @return ReservedVolume 表格预留容量（GB）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReservedVolume() {
         return this.ReservedVolume;
@@ -547,19 +460,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格预留容量（GB）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReservedVolume 表格预留容量（GB）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReservedVolume(Long ReservedVolume) {
         this.ReservedVolume = ReservedVolume;
     }
 
     /**
-     * Get 表格预留读CU
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格预留读CU 
      * @return ReservedReadQps 表格预留读CU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReservedReadQps() {
         return this.ReservedReadQps;
@@ -567,19 +476,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格预留读CU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReservedReadQps 表格预留读CU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReservedReadQps(Long ReservedReadQps) {
         this.ReservedReadQps = ReservedReadQps;
     }
 
     /**
-     * Get 表格预留写CU
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格预留写CU 
      * @return ReservedWriteQps 表格预留写CU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReservedWriteQps() {
         return this.ReservedWriteQps;
@@ -587,19 +492,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格预留写CU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReservedWriteQps 表格预留写CU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReservedWriteQps(Long ReservedWriteQps) {
         this.ReservedWriteQps = ReservedWriteQps;
     }
 
     /**
-     * Get 表格实际数据量大小（MB）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格实际数据量大小（MB） 
      * @return TableSize 表格实际数据量大小（MB）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTableSize() {
         return this.TableSize;
@@ -607,19 +508,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格实际数据量大小（MB）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableSize 表格实际数据量大小（MB）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableSize(Long TableSize) {
         this.TableSize = TableSize;
     }
 
     /**
-     * Get 表格状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格状态 
      * @return Status 表格状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -627,19 +524,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 表格状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 表格创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格创建时间 
      * @return CreatedTime 表格创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -647,19 +540,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 表格创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 表格最后一次修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格最后一次修改时间 
      * @return UpdatedTime 表格最后一次修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
@@ -667,19 +556,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格最后一次修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedTime 表格最后一次修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get 表格备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格备注信息 
      * @return Memo 表格备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemo() {
         return this.Memo;
@@ -687,19 +572,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Memo 表格备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemo(String Memo) {
         this.Memo = Memo;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorInfo getError() {
         return this.Error;
@@ -707,19 +588,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(ErrorInfo Error) {
         this.Error = Error;
     }
 
     /**
-     * Get TcaplusDB SDK数据访问接入ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TcaplusDB SDK数据访问接入ID 
      * @return ApiAccessId TcaplusDB SDK数据访问接入ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiAccessId() {
         return this.ApiAccessId;
@@ -727,19 +604,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set TcaplusDB SDK数据访问接入ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiAccessId TcaplusDB SDK数据访问接入ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiAccessId(String ApiAccessId) {
         this.ApiAccessId = ApiAccessId;
     }
 
     /**
-     * Get SORTLIST类型表格排序字段个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SORTLIST类型表格排序字段个数 
      * @return SortFieldNum SORTLIST类型表格排序字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSortFieldNum() {
         return this.SortFieldNum;
@@ -747,19 +620,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set SORTLIST类型表格排序字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SortFieldNum SORTLIST类型表格排序字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSortFieldNum(Long SortFieldNum) {
         this.SortFieldNum = SortFieldNum;
     }
 
     /**
-     * Get SORTLIST类型表格排序顺序
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SORTLIST类型表格排序顺序 
      * @return SortRule SORTLIST类型表格排序顺序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSortRule() {
         return this.SortRule;
@@ -767,19 +636,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set SORTLIST类型表格排序顺序
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SortRule SORTLIST类型表格排序顺序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSortRule(Long SortRule) {
         this.SortRule = SortRule;
     }
 
     /**
-     * Get 表格分布式索引/缓写、kafka数据订阅信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格分布式索引/缓写、kafka数据订阅信息 
      * @return DbClusterInfoStruct 表格分布式索引/缓写、kafka数据订阅信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbClusterInfoStruct() {
         return this.DbClusterInfoStruct;
@@ -787,19 +652,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格分布式索引/缓写、kafka数据订阅信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbClusterInfoStruct 表格分布式索引/缓写、kafka数据订阅信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbClusterInfoStruct(String DbClusterInfoStruct) {
         this.DbClusterInfoStruct = DbClusterInfoStruct;
     }
 
     /**
-     * Get 表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格Txh备份文件多少天后过期删除 
      * @return TxhBackupExpireDay 表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTxhBackupExpireDay() {
         return this.TxhBackupExpireDay;
@@ -807,19 +668,15 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TxhBackupExpireDay 表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTxhBackupExpireDay(Long TxhBackupExpireDay) {
         this.TxhBackupExpireDay = TxhBackupExpireDay;
     }
 
     /**
-     * Get 表格的缓写信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格的缓写信息 
      * @return SyncTableInfo 表格的缓写信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SyncTableInfo getSyncTableInfo() {
         return this.SyncTableInfo;
@@ -827,9 +684,7 @@ public class TableInfoNew extends AbstractModel {
 
     /**
      * Set 表格的缓写信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SyncTableInfo 表格的缓写信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyncTableInfo(SyncTableInfo SyncTableInfo) {
         this.SyncTableInfo = SyncTableInfo;

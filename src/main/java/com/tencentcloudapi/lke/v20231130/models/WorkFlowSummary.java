@@ -80,6 +80,20 @@ public class WorkFlowSummary extends AbstractModel {
     private String WorkflowReleaseTime;
 
     /**
+    * 中间消息
+    */
+    @SerializedName("PendingMessages")
+    @Expose
+    private String [] PendingMessages;
+
+    /**
+    * 选项卡索引
+    */
+    @SerializedName("OptionCardIndex")
+    @Expose
+    private OptionCardIndex OptionCardIndex;
+
+    /**
      * Get 工作流ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowId 工作流ID
@@ -219,6 +233,38 @@ public class WorkFlowSummary extends AbstractModel {
         this.WorkflowReleaseTime = WorkflowReleaseTime;
     }
 
+    /**
+     * Get 中间消息 
+     * @return PendingMessages 中间消息
+     */
+    public String [] getPendingMessages() {
+        return this.PendingMessages;
+    }
+
+    /**
+     * Set 中间消息
+     * @param PendingMessages 中间消息
+     */
+    public void setPendingMessages(String [] PendingMessages) {
+        this.PendingMessages = PendingMessages;
+    }
+
+    /**
+     * Get 选项卡索引 
+     * @return OptionCardIndex 选项卡索引
+     */
+    public OptionCardIndex getOptionCardIndex() {
+        return this.OptionCardIndex;
+    }
+
+    /**
+     * Set 选项卡索引
+     * @param OptionCardIndex 选项卡索引
+     */
+    public void setOptionCardIndex(OptionCardIndex OptionCardIndex) {
+        this.OptionCardIndex = OptionCardIndex;
+    }
+
     public WorkFlowSummary() {
     }
 
@@ -257,6 +303,15 @@ public class WorkFlowSummary extends AbstractModel {
         if (source.WorkflowReleaseTime != null) {
             this.WorkflowReleaseTime = new String(source.WorkflowReleaseTime);
         }
+        if (source.PendingMessages != null) {
+            this.PendingMessages = new String[source.PendingMessages.length];
+            for (int i = 0; i < source.PendingMessages.length; i++) {
+                this.PendingMessages[i] = new String(source.PendingMessages[i]);
+            }
+        }
+        if (source.OptionCardIndex != null) {
+            this.OptionCardIndex = new OptionCardIndex(source.OptionCardIndex);
+        }
     }
 
 
@@ -271,6 +326,8 @@ public class WorkFlowSummary extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
         this.setParamArraySimple(map, prefix + "Outputs.", this.Outputs);
         this.setParamSimple(map, prefix + "WorkflowReleaseTime", this.WorkflowReleaseTime);
+        this.setParamArraySimple(map, prefix + "PendingMessages.", this.PendingMessages);
+        this.setParamObj(map, prefix + "OptionCardIndex.", this.OptionCardIndex);
 
     }
 }

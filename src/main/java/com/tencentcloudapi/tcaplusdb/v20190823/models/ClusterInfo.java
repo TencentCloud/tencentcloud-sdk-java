@@ -116,7 +116,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldPasswordExpireTime")
     @Expose
@@ -124,7 +123,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * TcaplusDB SDK连接参数，接入ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiAccessIpv6")
     @Expose
@@ -132,7 +130,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 集群类型，0,1:共享集群; 2:独立集群
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -140,7 +137,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterStatus")
     @Expose
@@ -148,7 +144,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 读CU
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadCapacityUnit")
     @Expose
@@ -156,7 +151,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 写CU
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WriteCapacityUnit")
     @Expose
@@ -164,7 +158,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskVolume")
     @Expose
@@ -172,7 +165,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 独占server机器信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerList")
     @Expose
@@ -180,7 +172,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 独占proxy机器信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyList")
     @Expose
@@ -195,7 +186,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 审批人uin列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbaUins")
     @Expose
@@ -203,7 +193,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 是否开启了数据订阅
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataFlowStatus")
     @Expose
@@ -211,7 +200,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 数据订阅的kafka信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaInfo")
     @Expose
@@ -219,7 +207,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 集群Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TxhBackupExpireDay")
     @Expose
@@ -227,7 +214,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 集群Ulog备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UlogBackupExpireDay")
     @Expose
@@ -235,7 +221,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsReadOnlyUlogBackupExpireDay")
     @Expose
@@ -243,7 +228,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * restproxy状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RestProxyStatus")
     @Expose
@@ -458,10 +442,8 @@ public class ClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空 
      * @return OldPasswordExpireTime 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldPasswordExpireTime() {
         return this.OldPasswordExpireTime;
@@ -469,19 +451,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldPasswordExpireTime 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldPasswordExpireTime(String OldPasswordExpireTime) {
         this.OldPasswordExpireTime = OldPasswordExpireTime;
     }
 
     /**
-     * Get TcaplusDB SDK连接参数，接入ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TcaplusDB SDK连接参数，接入ipv6地址 
      * @return ApiAccessIpv6 TcaplusDB SDK连接参数，接入ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiAccessIpv6() {
         return this.ApiAccessIpv6;
@@ -489,19 +467,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set TcaplusDB SDK连接参数，接入ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiAccessIpv6 TcaplusDB SDK连接参数，接入ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiAccessIpv6(String ApiAccessIpv6) {
         this.ApiAccessIpv6 = ApiAccessIpv6;
     }
 
     /**
-     * Get 集群类型，0,1:共享集群; 2:独立集群
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群类型，0,1:共享集群; 2:独立集群 
      * @return ClusterType 集群类型，0,1:共享集群; 2:独立集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClusterType() {
         return this.ClusterType;
@@ -509,19 +483,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 集群类型，0,1:共享集群; 2:独立集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterType 集群类型，0,1:共享集群; 2:独立集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中 
      * @return ClusterStatus 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClusterStatus() {
         return this.ClusterStatus;
@@ -529,19 +499,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterStatus 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterStatus(Long ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
     }
 
     /**
-     * Get 读CU
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 读CU 
      * @return ReadCapacityUnit 读CU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReadCapacityUnit() {
         return this.ReadCapacityUnit;
@@ -549,19 +515,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 读CU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadCapacityUnit 读CU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadCapacityUnit(Long ReadCapacityUnit) {
         this.ReadCapacityUnit = ReadCapacityUnit;
     }
 
     /**
-     * Get 写CU
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 写CU 
      * @return WriteCapacityUnit 写CU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWriteCapacityUnit() {
         return this.WriteCapacityUnit;
@@ -569,19 +531,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 写CU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WriteCapacityUnit 写CU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWriteCapacityUnit(Long WriteCapacityUnit) {
         this.WriteCapacityUnit = WriteCapacityUnit;
     }
 
     /**
-     * Get 磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘容量 
      * @return DiskVolume 磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskVolume() {
         return this.DiskVolume;
@@ -589,19 +547,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskVolume 磁盘容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskVolume(Long DiskVolume) {
         this.DiskVolume = DiskVolume;
     }
 
     /**
-     * Get 独占server机器信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 独占server机器信息 
      * @return ServerList 独占server机器信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServerDetailInfo [] getServerList() {
         return this.ServerList;
@@ -609,19 +563,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 独占server机器信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerList 独占server机器信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerList(ServerDetailInfo [] ServerList) {
         this.ServerList = ServerList;
     }
 
     /**
-     * Get 独占proxy机器信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 独占proxy机器信息 
      * @return ProxyList 独占proxy机器信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyDetailInfo [] getProxyList() {
         return this.ProxyList;
@@ -629,9 +579,7 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 独占proxy机器信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyList 独占proxy机器信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyList(ProxyDetailInfo [] ProxyList) {
         this.ProxyList = ProxyList;
@@ -654,10 +602,8 @@ public class ClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get 审批人uin列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审批人uin列表 
      * @return DbaUins 审批人uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDbaUins() {
         return this.DbaUins;
@@ -665,19 +611,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 审批人uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbaUins 审批人uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbaUins(String [] DbaUins) {
         this.DbaUins = DbaUins;
     }
 
     /**
-     * Get 是否开启了数据订阅
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启了数据订阅 
      * @return DataFlowStatus 是否开启了数据订阅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataFlowStatus() {
         return this.DataFlowStatus;
@@ -685,19 +627,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 是否开启了数据订阅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataFlowStatus 是否开启了数据订阅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataFlowStatus(Long DataFlowStatus) {
         this.DataFlowStatus = DataFlowStatus;
     }
 
     /**
-     * Get 数据订阅的kafka信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据订阅的kafka信息 
      * @return KafkaInfo 数据订阅的kafka信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KafkaInfo getKafkaInfo() {
         return this.KafkaInfo;
@@ -705,19 +643,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 数据订阅的kafka信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaInfo 数据订阅的kafka信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaInfo(KafkaInfo KafkaInfo) {
         this.KafkaInfo = KafkaInfo;
     }
 
     /**
-     * Get 集群Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群Txh备份文件多少天后过期删除 
      * @return TxhBackupExpireDay 集群Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTxhBackupExpireDay() {
         return this.TxhBackupExpireDay;
@@ -725,19 +659,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 集群Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TxhBackupExpireDay 集群Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTxhBackupExpireDay(Long TxhBackupExpireDay) {
         this.TxhBackupExpireDay = TxhBackupExpireDay;
     }
 
     /**
-     * Get 集群Ulog备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群Ulog备份文件多少天后过期删除 
      * @return UlogBackupExpireDay 集群Ulog备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUlogBackupExpireDay() {
         return this.UlogBackupExpireDay;
@@ -745,19 +675,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 集群Ulog备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UlogBackupExpireDay 集群Ulog备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUlogBackupExpireDay(Long UlogBackupExpireDay) {
         this.UlogBackupExpireDay = UlogBackupExpireDay;
     }
 
     /**
-     * Get 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器） 
      * @return IsReadOnlyUlogBackupExpireDay 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsReadOnlyUlogBackupExpireDay() {
         return this.IsReadOnlyUlogBackupExpireDay;
@@ -765,19 +691,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsReadOnlyUlogBackupExpireDay 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsReadOnlyUlogBackupExpireDay(Long IsReadOnlyUlogBackupExpireDay) {
         this.IsReadOnlyUlogBackupExpireDay = IsReadOnlyUlogBackupExpireDay;
     }
 
     /**
-     * Get restproxy状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get restproxy状态 
      * @return RestProxyStatus restproxy状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRestProxyStatus() {
         return this.RestProxyStatus;
@@ -785,9 +707,7 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set restproxy状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RestProxyStatus restproxy状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRestProxyStatus(Long RestProxyStatus) {
         this.RestProxyStatus = RestProxyStatus;

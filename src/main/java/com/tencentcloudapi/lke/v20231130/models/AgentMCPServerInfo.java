@@ -52,6 +52,13 @@ public class AgentMCPServerInfo extends AbstractModel {
     private Long SseReadTimeout;
 
     /**
+    * mcp server query信息
+    */
+    @SerializedName("Query")
+    @Expose
+    private AgentPluginQuery [] Query;
+
+    /**
      * Get mcp server URL地址 
      * @return McpServerUrl mcp server URL地址
      */
@@ -115,6 +122,22 @@ public class AgentMCPServerInfo extends AbstractModel {
         this.SseReadTimeout = SseReadTimeout;
     }
 
+    /**
+     * Get mcp server query信息 
+     * @return Query mcp server query信息
+     */
+    public AgentPluginQuery [] getQuery() {
+        return this.Query;
+    }
+
+    /**
+     * Set mcp server query信息
+     * @param Query mcp server query信息
+     */
+    public void setQuery(AgentPluginQuery [] Query) {
+        this.Query = Query;
+    }
+
     public AgentMCPServerInfo() {
     }
 
@@ -138,6 +161,12 @@ public class AgentMCPServerInfo extends AbstractModel {
         if (source.SseReadTimeout != null) {
             this.SseReadTimeout = new Long(source.SseReadTimeout);
         }
+        if (source.Query != null) {
+            this.Query = new AgentPluginQuery[source.Query.length];
+            for (int i = 0; i < source.Query.length; i++) {
+                this.Query[i] = new AgentPluginQuery(source.Query[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class AgentMCPServerInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "SseReadTimeout", this.SseReadTimeout);
+        this.setParamArrayObj(map, prefix + "Query.", this.Query);
 
     }
 }

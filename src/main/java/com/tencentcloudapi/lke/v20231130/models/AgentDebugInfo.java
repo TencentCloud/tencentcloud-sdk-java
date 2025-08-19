@@ -40,6 +40,13 @@ public class AgentDebugInfo extends AbstractModel {
     private String Output;
 
     /**
+    * 模型名
+    */
+    @SerializedName("ModelName")
+    @Expose
+    private String ModelName;
+
+    /**
      * Get 工具、大模型的输入信息，json
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Input 工具、大模型的输入信息，json
@@ -79,6 +86,22 @@ public class AgentDebugInfo extends AbstractModel {
         this.Output = Output;
     }
 
+    /**
+     * Get 模型名 
+     * @return ModelName 模型名
+     */
+    public String getModelName() {
+        return this.ModelName;
+    }
+
+    /**
+     * Set 模型名
+     * @param ModelName 模型名
+     */
+    public void setModelName(String ModelName) {
+        this.ModelName = ModelName;
+    }
+
     public AgentDebugInfo() {
     }
 
@@ -93,6 +116,9 @@ public class AgentDebugInfo extends AbstractModel {
         if (source.Output != null) {
             this.Output = new String(source.Output);
         }
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
+        }
     }
 
 
@@ -102,6 +128,7 @@ public class AgentDebugInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Input", this.Input);
         this.setParamSimple(map, prefix + "Output", this.Output);
+        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
 
     }
 }

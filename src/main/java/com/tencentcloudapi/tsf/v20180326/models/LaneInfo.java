@@ -96,6 +96,22 @@ public class LaneInfo extends AbstractModel {
     private String LaneGroupId;
 
     /**
+    * 是否禁用删除。
+true：禁用
+false：取消禁用
+    */
+    @SerializedName("DeleteDisabled")
+    @Expose
+    private Boolean DeleteDisabled;
+
+    /**
+    * 禁用原因
+    */
+    @SerializedName("DeleteDisabledReason")
+    @Expose
+    private String DeleteDisabledReason;
+
+    /**
      * Get 泳道ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LaneId 泳道ID
@@ -275,6 +291,46 @@ public class LaneInfo extends AbstractModel {
         this.LaneGroupId = LaneGroupId;
     }
 
+    /**
+     * Get 是否禁用删除。
+true：禁用
+false：取消禁用 
+     * @return DeleteDisabled 是否禁用删除。
+true：禁用
+false：取消禁用
+     */
+    public Boolean getDeleteDisabled() {
+        return this.DeleteDisabled;
+    }
+
+    /**
+     * Set 是否禁用删除。
+true：禁用
+false：取消禁用
+     * @param DeleteDisabled 是否禁用删除。
+true：禁用
+false：取消禁用
+     */
+    public void setDeleteDisabled(Boolean DeleteDisabled) {
+        this.DeleteDisabled = DeleteDisabled;
+    }
+
+    /**
+     * Get 禁用原因 
+     * @return DeleteDisabledReason 禁用原因
+     */
+    public String getDeleteDisabledReason() {
+        return this.DeleteDisabledReason;
+    }
+
+    /**
+     * Set 禁用原因
+     * @param DeleteDisabledReason 禁用原因
+     */
+    public void setDeleteDisabledReason(String DeleteDisabledReason) {
+        this.DeleteDisabledReason = DeleteDisabledReason;
+    }
+
     public LaneInfo() {
     }
 
@@ -316,6 +372,12 @@ public class LaneInfo extends AbstractModel {
         if (source.LaneGroupId != null) {
             this.LaneGroupId = new String(source.LaneGroupId);
         }
+        if (source.DeleteDisabled != null) {
+            this.DeleteDisabled = new Boolean(source.DeleteDisabled);
+        }
+        if (source.DeleteDisabledReason != null) {
+            this.DeleteDisabledReason = new String(source.DeleteDisabledReason);
+        }
     }
 
 
@@ -332,6 +394,8 @@ public class LaneInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Entrance", this.Entrance);
         this.setParamArraySimple(map, prefix + "NamespaceIdList.", this.NamespaceIdList);
         this.setParamSimple(map, prefix + "LaneGroupId", this.LaneGroupId);
+        this.setParamSimple(map, prefix + "DeleteDisabled", this.DeleteDisabled);
+        this.setParamSimple(map, prefix + "DeleteDisabledReason", this.DeleteDisabledReason);
 
     }
 }

@@ -25,7 +25,6 @@ public class ImportSnapshotsResponse extends AbstractModel {
 
     /**
     * TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class ImportSnapshotsResponse extends AbstractModel {
 
     /**
     * ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -47,10 +45,8 @@ public class ImportSnapshotsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务 
      * @return TaskId TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -58,19 +54,15 @@ public class ImportSnapshotsResponse extends AbstractModel {
 
     /**
      * Set TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请 
      * @return ApplicationId ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -78,9 +70,7 @@ public class ImportSnapshotsResponse extends AbstractModel {
 
     /**
      * Set ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;

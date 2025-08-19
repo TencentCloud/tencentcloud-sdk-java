@@ -157,6 +157,7 @@ public class KnowledgeQaConfig extends AbstractModel {
 
     /**
     * 共享知识库关联配置
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShareKnowledgeBases")
     @Expose
@@ -177,6 +178,44 @@ public class KnowledgeQaConfig extends AbstractModel {
     @SerializedName("OpeningQuestions")
     @Expose
     private String [] OpeningQuestions;
+
+    /**
+    * 长期记忆开关
+    */
+    @SerializedName("LongMemoryOpen")
+    @Expose
+    private Boolean LongMemoryOpen;
+
+    /**
+    * 长期记忆时效
+    */
+    @SerializedName("LongMemoryDay")
+    @Expose
+    private Long LongMemoryDay;
+
+    /**
+    * agent配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Agent")
+    @Expose
+    private KnowledgeQaAgent Agent;
+
+    /**
+    * 知识库模型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KnowledgeModelConfig")
+    @Expose
+    private KnowledgeModelConfig KnowledgeModelConfig;
+
+    /**
+    * 知识库高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KnowledgeAdvancedConfig")
+    @Expose
+    private KnowledgeAdvancedConfig KnowledgeAdvancedConfig;
 
     /**
      * Get 欢迎语，200字符以内
@@ -527,8 +566,10 @@ public class KnowledgeQaConfig extends AbstractModel {
     }
 
     /**
-     * Get 共享知识库关联配置 
+     * Get 共享知识库关联配置
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ShareKnowledgeBases 共享知识库关联配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ShareKnowledgeBase [] getShareKnowledgeBases() {
         return this.ShareKnowledgeBases;
@@ -536,7 +577,9 @@ public class KnowledgeQaConfig extends AbstractModel {
 
     /**
      * Set 共享知识库关联配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ShareKnowledgeBases 共享知识库关联配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShareKnowledgeBases(ShareKnowledgeBase [] ShareKnowledgeBases) {
         this.ShareKnowledgeBases = ShareKnowledgeBases;
@@ -580,6 +623,98 @@ public class KnowledgeQaConfig extends AbstractModel {
      */
     public void setOpeningQuestions(String [] OpeningQuestions) {
         this.OpeningQuestions = OpeningQuestions;
+    }
+
+    /**
+     * Get 长期记忆开关 
+     * @return LongMemoryOpen 长期记忆开关
+     */
+    public Boolean getLongMemoryOpen() {
+        return this.LongMemoryOpen;
+    }
+
+    /**
+     * Set 长期记忆开关
+     * @param LongMemoryOpen 长期记忆开关
+     */
+    public void setLongMemoryOpen(Boolean LongMemoryOpen) {
+        this.LongMemoryOpen = LongMemoryOpen;
+    }
+
+    /**
+     * Get 长期记忆时效 
+     * @return LongMemoryDay 长期记忆时效
+     */
+    public Long getLongMemoryDay() {
+        return this.LongMemoryDay;
+    }
+
+    /**
+     * Set 长期记忆时效
+     * @param LongMemoryDay 长期记忆时效
+     */
+    public void setLongMemoryDay(Long LongMemoryDay) {
+        this.LongMemoryDay = LongMemoryDay;
+    }
+
+    /**
+     * Get agent配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Agent agent配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KnowledgeQaAgent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set agent配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Agent agent配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgent(KnowledgeQaAgent Agent) {
+        this.Agent = Agent;
+    }
+
+    /**
+     * Get 知识库模型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KnowledgeModelConfig 知识库模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KnowledgeModelConfig getKnowledgeModelConfig() {
+        return this.KnowledgeModelConfig;
+    }
+
+    /**
+     * Set 知识库模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KnowledgeModelConfig 知识库模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKnowledgeModelConfig(KnowledgeModelConfig KnowledgeModelConfig) {
+        this.KnowledgeModelConfig = KnowledgeModelConfig;
+    }
+
+    /**
+     * Get 知识库高级设置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KnowledgeAdvancedConfig 知识库高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KnowledgeAdvancedConfig getKnowledgeAdvancedConfig() {
+        return this.KnowledgeAdvancedConfig;
+    }
+
+    /**
+     * Set 知识库高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KnowledgeAdvancedConfig 知识库高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKnowledgeAdvancedConfig(KnowledgeAdvancedConfig KnowledgeAdvancedConfig) {
+        this.KnowledgeAdvancedConfig = KnowledgeAdvancedConfig;
     }
 
     public KnowledgeQaConfig() {
@@ -659,6 +794,21 @@ public class KnowledgeQaConfig extends AbstractModel {
                 this.OpeningQuestions[i] = new String(source.OpeningQuestions[i]);
             }
         }
+        if (source.LongMemoryOpen != null) {
+            this.LongMemoryOpen = new Boolean(source.LongMemoryOpen);
+        }
+        if (source.LongMemoryDay != null) {
+            this.LongMemoryDay = new Long(source.LongMemoryDay);
+        }
+        if (source.Agent != null) {
+            this.Agent = new KnowledgeQaAgent(source.Agent);
+        }
+        if (source.KnowledgeModelConfig != null) {
+            this.KnowledgeModelConfig = new KnowledgeModelConfig(source.KnowledgeModelConfig);
+        }
+        if (source.KnowledgeAdvancedConfig != null) {
+            this.KnowledgeAdvancedConfig = new KnowledgeAdvancedConfig(source.KnowledgeAdvancedConfig);
+        }
     }
 
 
@@ -684,6 +834,11 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ShareKnowledgeBases.", this.ShareKnowledgeBases);
         this.setParamObj(map, prefix + "BackgroundImage.", this.BackgroundImage);
         this.setParamArraySimple(map, prefix + "OpeningQuestions.", this.OpeningQuestions);
+        this.setParamSimple(map, prefix + "LongMemoryOpen", this.LongMemoryOpen);
+        this.setParamSimple(map, prefix + "LongMemoryDay", this.LongMemoryDay);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamObj(map, prefix + "KnowledgeModelConfig.", this.KnowledgeModelConfig);
+        this.setParamObj(map, prefix + "KnowledgeAdvancedConfig.", this.KnowledgeAdvancedConfig);
 
     }
 }

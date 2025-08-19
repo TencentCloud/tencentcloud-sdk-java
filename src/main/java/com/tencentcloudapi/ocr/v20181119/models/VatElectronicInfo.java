@@ -178,6 +178,13 @@ public class VatElectronicInfo extends AbstractModel {
     private Long CompanySealMark;
 
     /**
+    * 全电类型的多页pdf票据中，支持输出票面页码：当前第几页，一共第几页。
+    */
+    @SerializedName("InvoicePageIndex")
+    @Expose
+    private String InvoicePageIndex;
+
+    /**
      * Get 发票名称 
      * @return Title 发票名称
      */
@@ -529,6 +536,22 @@ public class VatElectronicInfo extends AbstractModel {
         this.CompanySealMark = CompanySealMark;
     }
 
+    /**
+     * Get 全电类型的多页pdf票据中，支持输出票面页码：当前第几页，一共第几页。 
+     * @return InvoicePageIndex 全电类型的多页pdf票据中，支持输出票面页码：当前第几页，一共第几页。
+     */
+    public String getInvoicePageIndex() {
+        return this.InvoicePageIndex;
+    }
+
+    /**
+     * Set 全电类型的多页pdf票据中，支持输出票面页码：当前第几页，一共第几页。
+     * @param InvoicePageIndex 全电类型的多页pdf票据中，支持输出票面页码：当前第几页，一共第几页。
+     */
+    public void setInvoicePageIndex(String InvoicePageIndex) {
+        this.InvoicePageIndex = InvoicePageIndex;
+    }
+
     public VatElectronicInfo() {
     }
 
@@ -606,6 +629,9 @@ public class VatElectronicInfo extends AbstractModel {
         if (source.CompanySealMark != null) {
             this.CompanySealMark = new Long(source.CompanySealMark);
         }
+        if (source.InvoicePageIndex != null) {
+            this.InvoicePageIndex = new String(source.InvoicePageIndex);
+        }
     }
 
 
@@ -635,6 +661,7 @@ public class VatElectronicInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PretaxAmountMark", this.PretaxAmountMark);
         this.setParamSimple(map, prefix + "TaxMark", this.TaxMark);
         this.setParamSimple(map, prefix + "CompanySealMark", this.CompanySealMark);
+        this.setParamSimple(map, prefix + "InvoicePageIndex", this.InvoicePageIndex);
 
     }
 }

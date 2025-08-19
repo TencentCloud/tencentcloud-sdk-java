@@ -167,6 +167,43 @@ public class ModelInfo extends AbstractModel {
     private Long Concurrency;
 
     /**
+    * 模型标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModelTags")
+    @Expose
+    private String [] ModelTags;
+
+    /**
+    * 模型超参定义
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModelParams")
+    @Expose
+    private ModelParameter [] ModelParams;
+
+    /**
+    * 提供商名称
+    */
+    @SerializedName("ProviderName")
+    @Expose
+    private String ProviderName;
+
+    /**
+    * 提供商别名
+    */
+    @SerializedName("ProviderAliasName")
+    @Expose
+    private String ProviderAliasName;
+
+    /**
+    * 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+    */
+    @SerializedName("ProviderType")
+    @Expose
+    private String ProviderType;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelName 模型名称
@@ -510,6 +547,94 @@ public class ModelInfo extends AbstractModel {
         this.Concurrency = Concurrency;
     }
 
+    /**
+     * Get 模型标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModelTags 模型标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getModelTags() {
+        return this.ModelTags;
+    }
+
+    /**
+     * Set 模型标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelTags 模型标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModelTags(String [] ModelTags) {
+        this.ModelTags = ModelTags;
+    }
+
+    /**
+     * Get 模型超参定义
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModelParams 模型超参定义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ModelParameter [] getModelParams() {
+        return this.ModelParams;
+    }
+
+    /**
+     * Set 模型超参定义
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelParams 模型超参定义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModelParams(ModelParameter [] ModelParams) {
+        this.ModelParams = ModelParams;
+    }
+
+    /**
+     * Get 提供商名称 
+     * @return ProviderName 提供商名称
+     */
+    public String getProviderName() {
+        return this.ProviderName;
+    }
+
+    /**
+     * Set 提供商名称
+     * @param ProviderName 提供商名称
+     */
+    public void setProviderName(String ProviderName) {
+        this.ProviderName = ProviderName;
+    }
+
+    /**
+     * Get 提供商别名 
+     * @return ProviderAliasName 提供商别名
+     */
+    public String getProviderAliasName() {
+        return this.ProviderAliasName;
+    }
+
+    /**
+     * Set 提供商别名
+     * @param ProviderAliasName 提供商别名
+     */
+    public void setProviderAliasName(String ProviderAliasName) {
+        this.ProviderAliasName = ProviderAliasName;
+    }
+
+    /**
+     * Get 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商 
+     * @return ProviderType 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+     */
+    public String getProviderType() {
+        return this.ProviderType;
+    }
+
+    /**
+     * Set 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+     * @param ProviderType 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+     */
+    public void setProviderType(String ProviderType) {
+        this.ProviderType = ProviderType;
+    }
+
     public ModelInfo() {
     }
 
@@ -575,6 +700,27 @@ public class ModelInfo extends AbstractModel {
         if (source.Concurrency != null) {
             this.Concurrency = new Long(source.Concurrency);
         }
+        if (source.ModelTags != null) {
+            this.ModelTags = new String[source.ModelTags.length];
+            for (int i = 0; i < source.ModelTags.length; i++) {
+                this.ModelTags[i] = new String(source.ModelTags[i]);
+            }
+        }
+        if (source.ModelParams != null) {
+            this.ModelParams = new ModelParameter[source.ModelParams.length];
+            for (int i = 0; i < source.ModelParams.length; i++) {
+                this.ModelParams[i] = new ModelParameter(source.ModelParams[i]);
+            }
+        }
+        if (source.ProviderName != null) {
+            this.ProviderName = new String(source.ProviderName);
+        }
+        if (source.ProviderAliasName != null) {
+            this.ProviderAliasName = new String(source.ProviderAliasName);
+        }
+        if (source.ProviderType != null) {
+            this.ProviderType = new String(source.ProviderType);
+        }
     }
 
 
@@ -601,6 +747,11 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
         this.setParamSimple(map, prefix + "SupportAiCallStatus", this.SupportAiCallStatus);
         this.setParamSimple(map, prefix + "Concurrency", this.Concurrency);
+        this.setParamArraySimple(map, prefix + "ModelTags.", this.ModelTags);
+        this.setParamArrayObj(map, prefix + "ModelParams.", this.ModelParams);
+        this.setParamSimple(map, prefix + "ProviderName", this.ProviderName);
+        this.setParamSimple(map, prefix + "ProviderAliasName", this.ProviderAliasName);
+        this.setParamSimple(map, prefix + "ProviderType", this.ProviderType);
 
     }
 }

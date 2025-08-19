@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateContainGroupRequest extends AbstractModel {
 
     /**
-    * 分组所属应用ID
+    * 分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * 分组所属命名空间ID
+    * 分组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -122,16 +122,14 @@ public class CreateContainGroupRequest extends AbstractModel {
     private String MemRequest;
 
     /**
-    * 部署组资源类型；
-DEF — 默认资源类型；
-GW — 网关资源类型；
+    * 部署组资源类型；DEF 表示默认资源类型
     */
     @SerializedName("GroupResourceType")
     @Expose
     private String GroupResourceType;
 
     /**
-    * 子网ID
+    * 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
     */
     @SerializedName("SubnetId")
     @Expose
@@ -194,32 +192,32 @@ GW — 网关资源类型；
     private String IstioMemLimit;
 
     /**
-     * Get 分组所属应用ID 
-     * @return ApplicationId 分组所属应用ID
+     * Get 分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。 
+     * @return ApplicationId 分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 分组所属应用ID
-     * @param ApplicationId 分组所属应用ID
+     * Set 分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
+     * @param ApplicationId 分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 分组所属命名空间ID 
-     * @return NamespaceId 分组所属命名空间ID
+     * Get 分组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。 
+     * @return NamespaceId 分组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 分组所属命名空间ID
-     * @param NamespaceId 分组所属命名空间ID
+     * Set 分组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
+     * @param NamespaceId 分组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
@@ -418,40 +416,32 @@ GW — 网关资源类型；
     }
 
     /**
-     * Get 部署组资源类型；
-DEF — 默认资源类型；
-GW — 网关资源类型； 
-     * @return GroupResourceType 部署组资源类型；
-DEF — 默认资源类型；
-GW — 网关资源类型；
+     * Get 部署组资源类型；DEF 表示默认资源类型 
+     * @return GroupResourceType 部署组资源类型；DEF 表示默认资源类型
      */
     public String getGroupResourceType() {
         return this.GroupResourceType;
     }
 
     /**
-     * Set 部署组资源类型；
-DEF — 默认资源类型；
-GW — 网关资源类型；
-     * @param GroupResourceType 部署组资源类型；
-DEF — 默认资源类型；
-GW — 网关资源类型；
+     * Set 部署组资源类型；DEF 表示默认资源类型
+     * @param GroupResourceType 部署组资源类型；DEF 表示默认资源类型
      */
     public void setGroupResourceType(String GroupResourceType) {
         this.GroupResourceType = GroupResourceType;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取 
+     * @return SubnetId 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
+     * @param SubnetId 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

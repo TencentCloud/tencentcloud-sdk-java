@@ -45,6 +45,13 @@ public class CreateSharedKnowledgeRequest extends AbstractModel {
     private String EmbeddingModel;
 
     /**
+    * 共享知识库类型，0普通，1公众号
+    */
+    @SerializedName("KnowledgeType")
+    @Expose
+    private Long KnowledgeType;
+
+    /**
      * Get 共享知识库名称，字符数量范围：[1, 50] 
      * @return KnowledgeName 共享知识库名称，字符数量范围：[1, 50]
      */
@@ -79,7 +86,9 @@ public class CreateSharedKnowledgeRequest extends AbstractModel {
     /**
      * Get Embedding模型，字符数量上限128 
      * @return EmbeddingModel Embedding模型，字符数量上限128
+     * @deprecated
      */
+    @Deprecated
     public String getEmbeddingModel() {
         return this.EmbeddingModel;
     }
@@ -87,9 +96,27 @@ public class CreateSharedKnowledgeRequest extends AbstractModel {
     /**
      * Set Embedding模型，字符数量上限128
      * @param EmbeddingModel Embedding模型，字符数量上限128
+     * @deprecated
      */
+    @Deprecated
     public void setEmbeddingModel(String EmbeddingModel) {
         this.EmbeddingModel = EmbeddingModel;
+    }
+
+    /**
+     * Get 共享知识库类型，0普通，1公众号 
+     * @return KnowledgeType 共享知识库类型，0普通，1公众号
+     */
+    public Long getKnowledgeType() {
+        return this.KnowledgeType;
+    }
+
+    /**
+     * Set 共享知识库类型，0普通，1公众号
+     * @param KnowledgeType 共享知识库类型，0普通，1公众号
+     */
+    public void setKnowledgeType(Long KnowledgeType) {
+        this.KnowledgeType = KnowledgeType;
     }
 
     public CreateSharedKnowledgeRequest() {
@@ -109,6 +136,9 @@ public class CreateSharedKnowledgeRequest extends AbstractModel {
         if (source.EmbeddingModel != null) {
             this.EmbeddingModel = new String(source.EmbeddingModel);
         }
+        if (source.KnowledgeType != null) {
+            this.KnowledgeType = new Long(source.KnowledgeType);
+        }
     }
 
 
@@ -119,6 +149,7 @@ public class CreateSharedKnowledgeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KnowledgeName", this.KnowledgeName);
         this.setParamSimple(map, prefix + "KnowledgeDescription", this.KnowledgeDescription);
         this.setParamSimple(map, prefix + "EmbeddingModel", this.EmbeddingModel);
+        this.setParamSimple(map, prefix + "KnowledgeType", this.KnowledgeType);
 
     }
 }

@@ -25,7 +25,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 表格描述语言类型：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableIdlType")
     @Expose
@@ -33,7 +32,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableInstanceId")
     @Expose
@@ -41,7 +39,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
@@ -49,7 +46,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 表格数据结构类型：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableType")
     @Expose
@@ -57,7 +53,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyFields")
     @Expose
@@ -65,7 +60,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 原主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldKeyFields")
     @Expose
@@ -73,7 +67,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 非主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValueFields")
     @Expose
@@ -81,7 +74,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 原非主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldValueFields")
     @Expose
@@ -89,7 +81,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableGroupId")
     @Expose
@@ -97,7 +88,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SumKeyFieldSize")
     @Expose
@@ -105,7 +95,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 非主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SumValueFieldSize")
     @Expose
@@ -113,7 +102,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 索引键集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexKeySet")
     @Expose
@@ -121,7 +109,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 分表因子集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShardingKeySet")
     @Expose
@@ -129,7 +116,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * TDR版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TdrVersion")
     @Expose
@@ -137,7 +123,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
@@ -145,7 +130,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * LIST类型表格元素个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListElementNum")
     @Expose
@@ -153,7 +137,6 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * SORTLIST类型表格排序字段个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SortFieldNum")
     @Expose
@@ -161,17 +144,14 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
     * SORTLIST类型表格排序顺序
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SortRule")
     @Expose
     private Long SortRule;
 
     /**
-     * Get 表格描述语言类型：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格描述语言类型：`PROTO`或`TDR` 
      * @return TableIdlType 表格描述语言类型：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableIdlType() {
         return this.TableIdlType;
@@ -179,19 +159,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 表格描述语言类型：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableIdlType 表格描述语言类型：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableIdlType(String TableIdlType) {
         this.TableIdlType = TableIdlType;
     }
 
     /**
-     * Get 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格实例ID 
      * @return TableInstanceId 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableInstanceId() {
         return this.TableInstanceId;
@@ -199,19 +175,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableInstanceId 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableInstanceId(String TableInstanceId) {
         this.TableInstanceId = TableInstanceId;
     }
 
     /**
-     * Get 表格名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格名称 
      * @return TableName 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -219,19 +191,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 表格数据结构类型：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格数据结构类型：`GENERIC`或`LIST` 
      * @return TableType 表格数据结构类型：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableType() {
         return this.TableType;
@@ -239,19 +207,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 表格数据结构类型：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableType 表格数据结构类型：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableType(String TableType) {
         this.TableType = TableType;
     }
 
     /**
-     * Get 主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主键字段信息 
      * @return KeyFields 主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyFields() {
         return this.KeyFields;
@@ -259,19 +223,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyFields 主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyFields(String KeyFields) {
         this.KeyFields = KeyFields;
     }
 
     /**
-     * Get 原主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原主键字段信息，改表校验时有效 
      * @return OldKeyFields 原主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldKeyFields() {
         return this.OldKeyFields;
@@ -279,19 +239,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 原主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldKeyFields 原主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldKeyFields(String OldKeyFields) {
         this.OldKeyFields = OldKeyFields;
     }
 
     /**
-     * Get 非主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 非主键字段信息 
      * @return ValueFields 非主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValueFields() {
         return this.ValueFields;
@@ -299,19 +255,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 非主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueFields 非主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValueFields(String ValueFields) {
         this.ValueFields = ValueFields;
     }
 
     /**
-     * Get 原非主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原非主键字段信息，改表校验时有效 
      * @return OldValueFields 原非主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOldValueFields() {
         return this.OldValueFields;
@@ -319,19 +271,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 原非主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldValueFields 原非主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldValueFields(String OldValueFields) {
         this.OldValueFields = OldValueFields;
     }
 
     /**
-     * Get 所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属表格组ID 
      * @return TableGroupId 所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableGroupId() {
         return this.TableGroupId;
@@ -339,19 +287,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableGroupId 所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableGroupId(String TableGroupId) {
         this.TableGroupId = TableGroupId;
     }
 
     /**
-     * Get 主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主键字段总大小 
      * @return SumKeyFieldSize 主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSumKeyFieldSize() {
         return this.SumKeyFieldSize;
@@ -359,19 +303,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SumKeyFieldSize 主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSumKeyFieldSize(Long SumKeyFieldSize) {
         this.SumKeyFieldSize = SumKeyFieldSize;
     }
 
     /**
-     * Get 非主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 非主键字段总大小 
      * @return SumValueFieldSize 非主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSumValueFieldSize() {
         return this.SumValueFieldSize;
@@ -379,19 +319,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 非主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SumValueFieldSize 非主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSumValueFieldSize(Long SumValueFieldSize) {
         this.SumValueFieldSize = SumValueFieldSize;
     }
 
     /**
-     * Get 索引键集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 索引键集合 
      * @return IndexKeySet 索引键集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexKeySet() {
         return this.IndexKeySet;
@@ -399,19 +335,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 索引键集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexKeySet 索引键集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexKeySet(String IndexKeySet) {
         this.IndexKeySet = IndexKeySet;
     }
 
     /**
-     * Get 分表因子集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分表因子集合 
      * @return ShardingKeySet 分表因子集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getShardingKeySet() {
         return this.ShardingKeySet;
@@ -419,19 +351,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 分表因子集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShardingKeySet 分表因子集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShardingKeySet(String ShardingKeySet) {
         this.ShardingKeySet = ShardingKeySet;
     }
 
     /**
-     * Get TDR版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TDR版本号 
      * @return TdrVersion TDR版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTdrVersion() {
         return this.TdrVersion;
@@ -439,19 +367,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set TDR版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TdrVersion TDR版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTdrVersion(Long TdrVersion) {
         this.TdrVersion = TdrVersion;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorInfo getError() {
         return this.Error;
@@ -459,19 +383,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(ErrorInfo Error) {
         this.Error = Error;
     }
 
     /**
-     * Get LIST类型表格元素个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get LIST类型表格元素个数 
      * @return ListElementNum LIST类型表格元素个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getListElementNum() {
         return this.ListElementNum;
@@ -479,19 +399,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set LIST类型表格元素个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListElementNum LIST类型表格元素个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListElementNum(Long ListElementNum) {
         this.ListElementNum = ListElementNum;
     }
 
     /**
-     * Get SORTLIST类型表格排序字段个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SORTLIST类型表格排序字段个数 
      * @return SortFieldNum SORTLIST类型表格排序字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSortFieldNum() {
         return this.SortFieldNum;
@@ -499,19 +415,15 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set SORTLIST类型表格排序字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SortFieldNum SORTLIST类型表格排序字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSortFieldNum(Long SortFieldNum) {
         this.SortFieldNum = SortFieldNum;
     }
 
     /**
-     * Get SORTLIST类型表格排序顺序
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SORTLIST类型表格排序顺序 
      * @return SortRule SORTLIST类型表格排序顺序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSortRule() {
         return this.SortRule;
@@ -519,9 +431,7 @@ public class ParsedTableInfoNew extends AbstractModel {
 
     /**
      * Set SORTLIST类型表格排序顺序
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SortRule SORTLIST类型表格排序顺序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSortRule(Long SortRule) {
         this.SortRule = SortRule;

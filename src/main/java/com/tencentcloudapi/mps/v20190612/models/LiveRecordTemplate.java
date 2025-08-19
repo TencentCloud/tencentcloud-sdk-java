@@ -82,6 +82,13 @@ public class LiveRecordTemplate extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
+    */
+    @SerializedName("RecordType")
+    @Expose
+    private String RecordType;
+
+    /**
      * Get 录制模板唯一标识。 
      * @return Definition 录制模板唯一标识。
      */
@@ -217,6 +224,22 @@ public class LiveRecordTemplate extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。 
+     * @return RecordType 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
+     */
+    public String getRecordType() {
+        return this.RecordType;
+    }
+
+    /**
+     * Set 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
+     * @param RecordType 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
+     */
+    public void setRecordType(String RecordType) {
+        this.RecordType = RecordType;
+    }
+
     public LiveRecordTemplate() {
     }
 
@@ -249,6 +272,9 @@ public class LiveRecordTemplate extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.RecordType != null) {
+            this.RecordType = new String(source.RecordType);
+        }
     }
 
 
@@ -264,6 +290,7 @@ public class LiveRecordTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "RecordType", this.RecordType);
 
     }
 }

@@ -24,13 +24,14 @@ import java.util.HashMap;
 public class DashboardNoticeMode extends AbstractModel {
 
     /**
-    * 仪表盘通知方式。<br>
-<li/>Uin：腾讯云用户<br>
-<li/>Group：腾讯云用户组<br>
-<li/>Email：自定义Email<br>
-<li/>WeCom: 企业微信回调<br>
-<li/>DingTalk：钉钉<br>
-<li/>Lark：飞书
+    * 仪表盘通知方式。
+
+- Uin：腾讯云用户
+- Group：腾讯云用户组
+- WeCom：企业微信回调
+- Email：自定义邮件
+- DingTalk：钉钉
+- Lark：飞书
     */
     @SerializedName("ReceiverType")
     @Expose
@@ -38,7 +39,11 @@ public class DashboardNoticeMode extends AbstractModel {
 
     /**
     * 知方式对应的值。
-<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
+- 当ReceiverType为：`WeCom`、`DingTalk`、`Lark` 时，Values必须为空，且Url字段必填。
+- 当ReceiverType为：`Uin`、`Group`、`Email` 时，Values必填，且Url字段必须为空。
+- 当ReceiverType为：`Uin ` 时，Values为用户id，通过 [拉取子用户](https://cloud.tencent.com/document/product/598/34587) 获取子用户 UID 。
+- 当ReceiverType为：`Group` 时，Values为用户组id，通过 [查询用户组列表](https://cloud.tencent.com/document/product/598/34589) 获取用户组 ID 。
+- 当ReceiverType为：`Email` 时，Values为用户邮箱信息。
     */
     @SerializedName("Values")
     @Expose
@@ -46,8 +51,9 @@ public class DashboardNoticeMode extends AbstractModel {
 
     /**
     * 仪表盘通知渠道。
-<br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
+
+-  支持：["Email","Sms","WeChat","Phone"]。
+-  当ReceiverType为 `Email` 或 `WeCom` 时，ReceiverChannels无效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiverChannels")
@@ -55,49 +61,56 @@ public class DashboardNoticeMode extends AbstractModel {
     private String [] ReceiverChannels;
 
     /**
-    * 回调Url。
-<br><li/> 当ReceiverType是 WeCom 时，Url必填。
-<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
+    * 订阅方式	- 回调地址。
+- 当ReceiverType为：`WeCom`、`DingTalk`、`Lark` 时，Url字段必填为各渠道的回调地址。
+    - 为：`WeCom` 时，Url为 企业微信回调地址。
+    - 为：`DingTalk` 时，Url为 钉钉机器人Webhook地址。
+    - 为：`Lark` 时，Url为 飞书机器人Webhook地址。
+- 当ReceiverType为：`Uin`、`Group`、`Email` 时，Url字段必须为空。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get 仪表盘通知方式。<br>
-<li/>Uin：腾讯云用户<br>
-<li/>Group：腾讯云用户组<br>
-<li/>Email：自定义Email<br>
-<li/>WeCom: 企业微信回调<br>
-<li/>DingTalk：钉钉<br>
-<li/>Lark：飞书 
-     * @return ReceiverType 仪表盘通知方式。<br>
-<li/>Uin：腾讯云用户<br>
-<li/>Group：腾讯云用户组<br>
-<li/>Email：自定义Email<br>
-<li/>WeCom: 企业微信回调<br>
-<li/>DingTalk：钉钉<br>
-<li/>Lark：飞书
+     * Get 仪表盘通知方式。
+
+- Uin：腾讯云用户
+- Group：腾讯云用户组
+- WeCom：企业微信回调
+- Email：自定义邮件
+- DingTalk：钉钉
+- Lark：飞书 
+     * @return ReceiverType 仪表盘通知方式。
+
+- Uin：腾讯云用户
+- Group：腾讯云用户组
+- WeCom：企业微信回调
+- Email：自定义邮件
+- DingTalk：钉钉
+- Lark：飞书
      */
     public String getReceiverType() {
         return this.ReceiverType;
     }
 
     /**
-     * Set 仪表盘通知方式。<br>
-<li/>Uin：腾讯云用户<br>
-<li/>Group：腾讯云用户组<br>
-<li/>Email：自定义Email<br>
-<li/>WeCom: 企业微信回调<br>
-<li/>DingTalk：钉钉<br>
-<li/>Lark：飞书
-     * @param ReceiverType 仪表盘通知方式。<br>
-<li/>Uin：腾讯云用户<br>
-<li/>Group：腾讯云用户组<br>
-<li/>Email：自定义Email<br>
-<li/>WeCom: 企业微信回调<br>
-<li/>DingTalk：钉钉<br>
-<li/>Lark：飞书
+     * Set 仪表盘通知方式。
+
+- Uin：腾讯云用户
+- Group：腾讯云用户组
+- WeCom：企业微信回调
+- Email：自定义邮件
+- DingTalk：钉钉
+- Lark：飞书
+     * @param ReceiverType 仪表盘通知方式。
+
+- Uin：腾讯云用户
+- Group：腾讯云用户组
+- WeCom：企业微信回调
+- Email：自定义邮件
+- DingTalk：钉钉
+- Lark：飞书
      */
     public void setReceiverType(String ReceiverType) {
         this.ReceiverType = ReceiverType;
@@ -105,9 +118,17 @@ public class DashboardNoticeMode extends AbstractModel {
 
     /**
      * Get 知方式对应的值。
-<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。 
+- 当ReceiverType为：`WeCom`、`DingTalk`、`Lark` 时，Values必须为空，且Url字段必填。
+- 当ReceiverType为：`Uin`、`Group`、`Email` 时，Values必填，且Url字段必须为空。
+- 当ReceiverType为：`Uin ` 时，Values为用户id，通过 [拉取子用户](https://cloud.tencent.com/document/product/598/34587) 获取子用户 UID 。
+- 当ReceiverType为：`Group` 时，Values为用户组id，通过 [查询用户组列表](https://cloud.tencent.com/document/product/598/34589) 获取用户组 ID 。
+- 当ReceiverType为：`Email` 时，Values为用户邮箱信息。 
      * @return Values 知方式对应的值。
-<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
+- 当ReceiverType为：`WeCom`、`DingTalk`、`Lark` 时，Values必须为空，且Url字段必填。
+- 当ReceiverType为：`Uin`、`Group`、`Email` 时，Values必填，且Url字段必须为空。
+- 当ReceiverType为：`Uin ` 时，Values为用户id，通过 [拉取子用户](https://cloud.tencent.com/document/product/598/34587) 获取子用户 UID 。
+- 当ReceiverType为：`Group` 时，Values为用户组id，通过 [查询用户组列表](https://cloud.tencent.com/document/product/598/34589) 获取用户组 ID 。
+- 当ReceiverType为：`Email` 时，Values为用户邮箱信息。
      */
     public String [] getValues() {
         return this.Values;
@@ -115,9 +136,17 @@ public class DashboardNoticeMode extends AbstractModel {
 
     /**
      * Set 知方式对应的值。
-<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
+- 当ReceiverType为：`WeCom`、`DingTalk`、`Lark` 时，Values必须为空，且Url字段必填。
+- 当ReceiverType为：`Uin`、`Group`、`Email` 时，Values必填，且Url字段必须为空。
+- 当ReceiverType为：`Uin ` 时，Values为用户id，通过 [拉取子用户](https://cloud.tencent.com/document/product/598/34587) 获取子用户 UID 。
+- 当ReceiverType为：`Group` 时，Values为用户组id，通过 [查询用户组列表](https://cloud.tencent.com/document/product/598/34589) 获取用户组 ID 。
+- 当ReceiverType为：`Email` 时，Values为用户邮箱信息。
      * @param Values 知方式对应的值。
-<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
+- 当ReceiverType为：`WeCom`、`DingTalk`、`Lark` 时，Values必须为空，且Url字段必填。
+- 当ReceiverType为：`Uin`、`Group`、`Email` 时，Values必填，且Url字段必须为空。
+- 当ReceiverType为：`Uin ` 时，Values为用户id，通过 [拉取子用户](https://cloud.tencent.com/document/product/598/34587) 获取子用户 UID 。
+- 当ReceiverType为：`Group` 时，Values为用户组id，通过 [查询用户组列表](https://cloud.tencent.com/document/product/598/34589) 获取用户组 ID 。
+- 当ReceiverType为：`Email` 时，Values为用户邮箱信息。
      */
     public void setValues(String [] Values) {
         this.Values = Values;
@@ -125,12 +154,14 @@ public class DashboardNoticeMode extends AbstractModel {
 
     /**
      * Get 仪表盘通知渠道。
-<br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
+
+-  支持：["Email","Sms","WeChat","Phone"]。
+-  当ReceiverType为 `Email` 或 `WeCom` 时，ReceiverChannels无效。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReceiverChannels 仪表盘通知渠道。
-<br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
+
+-  支持：["Email","Sms","WeChat","Phone"]。
+-  当ReceiverType为 `Email` 或 `WeCom` 时，ReceiverChannels无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getReceiverChannels() {
@@ -139,12 +170,14 @@ public class DashboardNoticeMode extends AbstractModel {
 
     /**
      * Set 仪表盘通知渠道。
-<br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
+
+-  支持：["Email","Sms","WeChat","Phone"]。
+-  当ReceiverType为 `Email` 或 `WeCom` 时，ReceiverChannels无效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReceiverChannels 仪表盘通知渠道。
-<br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
+
+-  支持：["Email","Sms","WeChat","Phone"]。
+-  当ReceiverType为 `Email` 或 `WeCom` 时，ReceiverChannels无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiverChannels(String [] ReceiverChannels) {
@@ -152,24 +185,36 @@ public class DashboardNoticeMode extends AbstractModel {
     }
 
     /**
-     * Get 回调Url。
-<br><li/> 当ReceiverType是 WeCom 时，Url必填。
-<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。 
-     * @return Url 回调Url。
-<br><li/> 当ReceiverType是 WeCom 时，Url必填。
-<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
+     * Get 订阅方式	- 回调地址。
+- 当ReceiverType为：`WeCom`、`DingTalk`、`Lark` 时，Url字段必填为各渠道的回调地址。
+    - 为：`WeCom` 时，Url为 企业微信回调地址。
+    - 为：`DingTalk` 时，Url为 钉钉机器人Webhook地址。
+    - 为：`Lark` 时，Url为 飞书机器人Webhook地址。
+- 当ReceiverType为：`Uin`、`Group`、`Email` 时，Url字段必须为空。 
+     * @return Url 订阅方式	- 回调地址。
+- 当ReceiverType为：`WeCom`、`DingTalk`、`Lark` 时，Url字段必填为各渠道的回调地址。
+    - 为：`WeCom` 时，Url为 企业微信回调地址。
+    - 为：`DingTalk` 时，Url为 钉钉机器人Webhook地址。
+    - 为：`Lark` 时，Url为 飞书机器人Webhook地址。
+- 当ReceiverType为：`Uin`、`Group`、`Email` 时，Url字段必须为空。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 回调Url。
-<br><li/> 当ReceiverType是 WeCom 时，Url必填。
-<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
-     * @param Url 回调Url。
-<br><li/> 当ReceiverType是 WeCom 时，Url必填。
-<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
+     * Set 订阅方式	- 回调地址。
+- 当ReceiverType为：`WeCom`、`DingTalk`、`Lark` 时，Url字段必填为各渠道的回调地址。
+    - 为：`WeCom` 时，Url为 企业微信回调地址。
+    - 为：`DingTalk` 时，Url为 钉钉机器人Webhook地址。
+    - 为：`Lark` 时，Url为 飞书机器人Webhook地址。
+- 当ReceiverType为：`Uin`、`Group`、`Email` 时，Url字段必须为空。
+     * @param Url 订阅方式	- 回调地址。
+- 当ReceiverType为：`WeCom`、`DingTalk`、`Lark` 时，Url字段必填为各渠道的回调地址。
+    - 为：`WeCom` 时，Url为 企业微信回调地址。
+    - 为：`DingTalk` 时，Url为 钉钉机器人Webhook地址。
+    - 为：`Lark` 时，Url为 飞书机器人Webhook地址。
+- 当ReceiverType为：`Uin`、`Group`、`Email` 时，Url字段必须为空。
      */
     public void setUrl(String Url) {
         this.Url = Url;

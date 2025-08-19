@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeContainerGroupAttributeRequest extends AbstractModel {
 
     /**
-    * 部署组ID
+    * 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-ab958z6y
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get 部署组ID 
-     * @return GroupId 部署组ID
+     * Get 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-ab958z6y 
+     * @return GroupId 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-ab958z6y
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组ID
-     * @param GroupId 部署组ID
+     * Set 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-ab958z6y
+     * @param GroupId 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-ab958z6y
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

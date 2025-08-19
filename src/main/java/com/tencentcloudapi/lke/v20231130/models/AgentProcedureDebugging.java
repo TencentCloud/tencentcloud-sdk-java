@@ -40,7 +40,7 @@ public class AgentProcedureDebugging extends AbstractModel {
     private String DisplayContent;
 
     /**
-    * 展示类型
+    * 1：搜索引擎参考来源；2：知识库参考来源
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisplayType")
@@ -128,9 +128,9 @@ public class AgentProcedureDebugging extends AbstractModel {
     }
 
     /**
-     * Get 展示类型
+     * Get 1：搜索引擎参考来源；2：知识库参考来源
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DisplayType 展示类型
+     * @return DisplayType 1：搜索引擎参考来源；2：知识库参考来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDisplayType() {
@@ -138,9 +138,9 @@ public class AgentProcedureDebugging extends AbstractModel {
     }
 
     /**
-     * Set 展示类型
+     * Set 1：搜索引擎参考来源；2：知识库参考来源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DisplayType 展示类型
+     * @param DisplayType 1：搜索引擎参考来源；2：知识库参考来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisplayType(Long DisplayType) {

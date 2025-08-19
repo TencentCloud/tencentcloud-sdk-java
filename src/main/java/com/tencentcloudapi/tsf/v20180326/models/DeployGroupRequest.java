@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DeployGroupRequest extends AbstractModel {
 
     /**
-    * 部署组ID
+    * 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 程序包ID
+    * 软件包ID，可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
     */
     @SerializedName("PkgId")
     @Expose
@@ -101,7 +101,7 @@ public class DeployGroupRequest extends AbstractModel {
     private String DeployExeMode;
 
     /**
-    * 滚动发布每个批次的时间间隔
+    * 滚动发布每个批次的时间间隔，单位min。默认值是0，不等待。
     */
     @SerializedName("DeployWaitTime")
     @Expose
@@ -165,32 +165,32 @@ openJDK版本：8、17
     private Boolean EnableBatchHealthCheck;
 
     /**
-     * Get 部署组ID 
-     * @return GroupId 部署组ID
+     * Get 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。 
+     * @return GroupId 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 部署组ID
-     * @param GroupId 部署组ID
+     * Set 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+     * @param GroupId 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 程序包ID 
-     * @return PkgId 程序包ID
+     * Get 软件包ID，可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看 
+     * @return PkgId 软件包ID，可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public String getPkgId() {
         return this.PkgId;
     }
 
     /**
-     * Set 程序包ID
-     * @param PkgId 程序包ID
+     * Set 软件包ID，可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
+     * @param PkgId 软件包ID，可通过调用DescribeUploadInfo接口时[获取上传程序包信息](https://cloud.tencent.com/document/api/649/36078)返回的COS上传信息获取，登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public void setPkgId(String PkgId) {
         this.PkgId = PkgId;
@@ -341,16 +341,16 @@ openJDK版本：8、17
     }
 
     /**
-     * Get 滚动发布每个批次的时间间隔 
-     * @return DeployWaitTime 滚动发布每个批次的时间间隔
+     * Get 滚动发布每个批次的时间间隔，单位min。默认值是0，不等待。 
+     * @return DeployWaitTime 滚动发布每个批次的时间间隔，单位min。默认值是0，不等待。
      */
     public Long getDeployWaitTime() {
         return this.DeployWaitTime;
     }
 
     /**
-     * Set 滚动发布每个批次的时间间隔
-     * @param DeployWaitTime 滚动发布每个批次的时间间隔
+     * Set 滚动发布每个批次的时间间隔，单位min。默认值是0，不等待。
+     * @param DeployWaitTime 滚动发布每个批次的时间间隔，单位min。默认值是0，不等待。
      */
     public void setDeployWaitTime(Long DeployWaitTime) {
         this.DeployWaitTime = DeployWaitTime;

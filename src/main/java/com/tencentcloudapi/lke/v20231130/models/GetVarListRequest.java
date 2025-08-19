@@ -73,6 +73,13 @@ public class GetVarListRequest extends AbstractModel {
     private Boolean NeedInternalVar;
 
     /**
+    * 变量类型
+    */
+    @SerializedName("VarModuleType")
+    @Expose
+    private Long VarModuleType;
+
+    /**
      * Get 应用ID 
      * @return AppBizId 应用ID
      */
@@ -184,6 +191,22 @@ public class GetVarListRequest extends AbstractModel {
         this.NeedInternalVar = NeedInternalVar;
     }
 
+    /**
+     * Get 变量类型 
+     * @return VarModuleType 变量类型
+     */
+    public Long getVarModuleType() {
+        return this.VarModuleType;
+    }
+
+    /**
+     * Set 变量类型
+     * @param VarModuleType 变量类型
+     */
+    public void setVarModuleType(Long VarModuleType) {
+        this.VarModuleType = VarModuleType;
+    }
+
     public GetVarListRequest() {
     }
 
@@ -216,6 +239,9 @@ public class GetVarListRequest extends AbstractModel {
         if (source.NeedInternalVar != null) {
             this.NeedInternalVar = new Boolean(source.NeedInternalVar);
         }
+        if (source.VarModuleType != null) {
+            this.VarModuleType = new Long(source.VarModuleType);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class GetVarListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "VarType", this.VarType);
         this.setParamSimple(map, prefix + "NeedInternalVar", this.NeedInternalVar);
+        this.setParamSimple(map, prefix + "VarModuleType", this.VarModuleType);
 
     }
 }

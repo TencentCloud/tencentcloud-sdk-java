@@ -476,6 +476,13 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
     private Long TargetCount;
 
     /**
+    * 负载均衡实例关联的Endpoint id。
+    */
+    @SerializedName("AssociateEndpoint")
+    @Expose
+    private String AssociateEndpoint;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -1603,6 +1610,22 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
         this.TargetCount = TargetCount;
     }
 
+    /**
+     * Get 负载均衡实例关联的Endpoint id。 
+     * @return AssociateEndpoint 负载均衡实例关联的Endpoint id。
+     */
+    public String getAssociateEndpoint() {
+        return this.AssociateEndpoint;
+    }
+
+    /**
+     * Set 负载均衡实例关联的Endpoint id。
+     * @param AssociateEndpoint 负载均衡实例关联的Endpoint id。
+     */
+    public void setAssociateEndpoint(String AssociateEndpoint) {
+        this.AssociateEndpoint = AssociateEndpoint;
+    }
+
     public LoadBalancer() {
     }
 
@@ -1806,6 +1829,9 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
         if (source.TargetCount != null) {
             this.TargetCount = new Long(source.TargetCount);
         }
+        if (source.AssociateEndpoint != null) {
+            this.AssociateEndpoint = new String(source.AssociateEndpoint);
+        }
     }
 
 
@@ -1870,6 +1896,7 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
         this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
         this.setParamSimple(map, prefix + "TargetCount", this.TargetCount);
+        this.setParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
 
     }
 }

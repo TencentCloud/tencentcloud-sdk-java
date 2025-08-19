@@ -53,7 +53,6 @@ public class MPSSubTaskResult extends AbstractModel {
 
     /**
     * MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
-示例：{"Definition": 24}
     */
     @SerializedName("Input")
     @Expose
@@ -131,10 +130,8 @@ public class MPSSubTaskResult extends AbstractModel {
     }
 
     /**
-     * Get MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
-示例：{"Definition": 24} 
+     * Get MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。 
      * @return Input MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
-示例：{"Definition": 24}
      */
     public String getInput() {
         return this.Input;
@@ -142,9 +139,7 @@ public class MPSSubTaskResult extends AbstractModel {
 
     /**
      * Set MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
-示例：{"Definition": 24}
      * @param Input MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
-示例：{"Definition": 24}
      */
     public void setInput(String Input) {
         this.Input = Input;

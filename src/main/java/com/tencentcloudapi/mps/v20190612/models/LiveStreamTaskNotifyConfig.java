@@ -25,7 +25,7 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
 
     /**
     * 通知类型：
-"CMQ"：回调消息写入cmq队列； 
+TDMQ-CMQ：消息队列
 "URL"： 指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同[解析直播事件通知接口](https://cloud.tencent.com/document/product/862/39229) 的输出参数
 
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
@@ -42,28 +42,28 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
     private String NotifyUrl;
 
     /**
-    * CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
+    * 有 Queue 和 Topic 两种模型。
     */
     @SerializedName("CmqModel")
     @Expose
     private String CmqModel;
 
     /**
-    * CMQ 的园区，如 sh，bj 等。
+    * TDMQ-CMQ 的园区，如 sh，bj 等。
     */
     @SerializedName("CmqRegion")
     @Expose
     private String CmqRegion;
 
     /**
-    * 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
+    * 当模型为 Queue 时有效，表示接收事件通知的 TDMQ-CMQ 的队列名。
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
+    * 当模型为 Topic 时有效，表示接收事件通知的 TDMQ-CMQ 的主题名。
     */
     @SerializedName("TopicName")
     @Expose
@@ -79,12 +79,12 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
 
     /**
      * Get 通知类型：
-"CMQ"：回调消息写入cmq队列； 
+TDMQ-CMQ：消息队列
 "URL"： 指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同[解析直播事件通知接口](https://cloud.tencent.com/document/product/862/39229) 的输出参数
 
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font> 
      * @return NotifyType 通知类型：
-"CMQ"：回调消息写入cmq队列； 
+TDMQ-CMQ：消息队列
 "URL"： 指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同[解析直播事件通知接口](https://cloud.tencent.com/document/product/862/39229) 的输出参数
 
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
@@ -95,12 +95,12 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
 
     /**
      * Set 通知类型：
-"CMQ"：回调消息写入cmq队列； 
+TDMQ-CMQ：消息队列
 "URL"： 指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同[解析直播事件通知接口](https://cloud.tencent.com/document/product/862/39229) 的输出参数
 
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
      * @param NotifyType 通知类型：
-"CMQ"：回调消息写入cmq队列； 
+TDMQ-CMQ：消息队列
 "URL"： 指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同[解析直播事件通知接口](https://cloud.tencent.com/document/product/862/39229) 的输出参数
 
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
@@ -126,64 +126,64 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
     }
 
     /**
-     * Get CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。 
-     * @return CmqModel CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
+     * Get 有 Queue 和 Topic 两种模型。 
+     * @return CmqModel 有 Queue 和 Topic 两种模型。
      */
     public String getCmqModel() {
         return this.CmqModel;
     }
 
     /**
-     * Set CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
-     * @param CmqModel CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
+     * Set 有 Queue 和 Topic 两种模型。
+     * @param CmqModel 有 Queue 和 Topic 两种模型。
      */
     public void setCmqModel(String CmqModel) {
         this.CmqModel = CmqModel;
     }
 
     /**
-     * Get CMQ 的园区，如 sh，bj 等。 
-     * @return CmqRegion CMQ 的园区，如 sh，bj 等。
+     * Get TDMQ-CMQ 的园区，如 sh，bj 等。 
+     * @return CmqRegion TDMQ-CMQ 的园区，如 sh，bj 等。
      */
     public String getCmqRegion() {
         return this.CmqRegion;
     }
 
     /**
-     * Set CMQ 的园区，如 sh，bj 等。
-     * @param CmqRegion CMQ 的园区，如 sh，bj 等。
+     * Set TDMQ-CMQ 的园区，如 sh，bj 等。
+     * @param CmqRegion TDMQ-CMQ 的园区，如 sh，bj 等。
      */
     public void setCmqRegion(String CmqRegion) {
         this.CmqRegion = CmqRegion;
     }
 
     /**
-     * Get 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。 
-     * @return QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
+     * Get 当模型为 Queue 时有效，表示接收事件通知的 TDMQ-CMQ 的队列名。 
+     * @return QueueName 当模型为 Queue 时有效，表示接收事件通知的 TDMQ-CMQ 的队列名。
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
-     * @param QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
+     * Set 当模型为 Queue 时有效，表示接收事件通知的 TDMQ-CMQ 的队列名。
+     * @param QueueName 当模型为 Queue 时有效，表示接收事件通知的 TDMQ-CMQ 的队列名。
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。 
-     * @return TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
+     * Get 当模型为 Topic 时有效，表示接收事件通知的 TDMQ-CMQ 的主题名。 
+     * @return TopicName 当模型为 Topic 时有效，表示接收事件通知的 TDMQ-CMQ 的主题名。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
-     * @param TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
+     * Set 当模型为 Topic 时有效，表示接收事件通知的 TDMQ-CMQ 的主题名。
+     * @param TopicName 当模型为 Topic 时有效，表示接收事件通知的 TDMQ-CMQ 的主题名。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

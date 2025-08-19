@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeResourceTaskStatusRequest extends AbstractModel {
 
     /**
-    * 容器实例任务ID，可通过调用 ListContainerTask 查询已创建的变更记录总数或登录控制台进行查看。
+    * 容器实例任务ID，可通过调用 [DeployContainerGroup](https://cloud.tencent.com/document/product/649/120669) 部署容器应用，查询其返回内容中的任务ID。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 容器实例任务ID，可通过调用 ListContainerTask 查询已创建的变更记录总数或登录控制台进行查看。 
-     * @return TaskId 容器实例任务ID，可通过调用 ListContainerTask 查询已创建的变更记录总数或登录控制台进行查看。
+     * Get 容器实例任务ID，可通过调用 [DeployContainerGroup](https://cloud.tencent.com/document/product/649/120669) 部署容器应用，查询其返回内容中的任务ID。 
+     * @return TaskId 容器实例任务ID，可通过调用 [DeployContainerGroup](https://cloud.tencent.com/document/product/649/120669) 部署容器应用，查询其返回内容中的任务ID。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 容器实例任务ID，可通过调用 ListContainerTask 查询已创建的变更记录总数或登录控制台进行查看。
-     * @param TaskId 容器实例任务ID，可通过调用 ListContainerTask 查询已创建的变更记录总数或登录控制台进行查看。
+     * Set 容器实例任务ID，可通过调用 [DeployContainerGroup](https://cloud.tencent.com/document/product/649/120669) 部署容器应用，查询其返回内容中的任务ID。
+     * @param TaskId 容器实例任务ID，可通过调用 [DeployContainerGroup](https://cloud.tencent.com/document/product/649/120669) 部署容器应用，查询其返回内容中的任务ID。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

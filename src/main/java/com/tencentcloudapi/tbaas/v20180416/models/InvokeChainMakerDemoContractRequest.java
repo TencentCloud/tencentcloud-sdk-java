@@ -45,14 +45,14 @@ public class InvokeChainMakerDemoContractRequest extends AbstractModel {
     private String ContractName;
 
     /**
-    * 合约方法名
+    * 合约方法名，由合约代码定义，可以参考合约详情中的合约调用定义
     */
     @SerializedName("FuncName")
     @Expose
     private String FuncName;
 
     /**
-    * 合约方法入参，json格式字符串，key/value都是string类型的map
+    * 合约方法入参，json格式字符串，key/value都是string类型的map，由合约代码定义，可以参考合约详情中的合约调用定义
     */
     @SerializedName("FuncParam")
     @Expose
@@ -114,32 +114,32 @@ public class InvokeChainMakerDemoContractRequest extends AbstractModel {
     }
 
     /**
-     * Get 合约方法名 
-     * @return FuncName 合约方法名
+     * Get 合约方法名，由合约代码定义，可以参考合约详情中的合约调用定义 
+     * @return FuncName 合约方法名，由合约代码定义，可以参考合约详情中的合约调用定义
      */
     public String getFuncName() {
         return this.FuncName;
     }
 
     /**
-     * Set 合约方法名
-     * @param FuncName 合约方法名
+     * Set 合约方法名，由合约代码定义，可以参考合约详情中的合约调用定义
+     * @param FuncName 合约方法名，由合约代码定义，可以参考合约详情中的合约调用定义
      */
     public void setFuncName(String FuncName) {
         this.FuncName = FuncName;
     }
 
     /**
-     * Get 合约方法入参，json格式字符串，key/value都是string类型的map 
-     * @return FuncParam 合约方法入参，json格式字符串，key/value都是string类型的map
+     * Get 合约方法入参，json格式字符串，key/value都是string类型的map，由合约代码定义，可以参考合约详情中的合约调用定义 
+     * @return FuncParam 合约方法入参，json格式字符串，key/value都是string类型的map，由合约代码定义，可以参考合约详情中的合约调用定义
      */
     public String getFuncParam() {
         return this.FuncParam;
     }
 
     /**
-     * Set 合约方法入参，json格式字符串，key/value都是string类型的map
-     * @param FuncParam 合约方法入参，json格式字符串，key/value都是string类型的map
+     * Set 合约方法入参，json格式字符串，key/value都是string类型的map，由合约代码定义，可以参考合约详情中的合约调用定义
+     * @param FuncParam 合约方法入参，json格式字符串，key/value都是string类型的map，由合约代码定义，可以参考合约详情中的合约调用定义
      */
     public void setFuncParam(String FuncParam) {
         this.FuncParam = FuncParam;

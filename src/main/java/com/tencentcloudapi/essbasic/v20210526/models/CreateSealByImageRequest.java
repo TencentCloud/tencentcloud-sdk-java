@@ -123,6 +123,13 @@ public class CreateSealByImageRequest extends AbstractModel {
     private String TaxIdentifyCode;
 
     /**
+    * 印章描述内容
+    */
+    @SerializedName("SealDescription")
+    @Expose
+    private String SealDescription;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -402,6 +409,22 @@ public class CreateSealByImageRequest extends AbstractModel {
         this.TaxIdentifyCode = TaxIdentifyCode;
     }
 
+    /**
+     * Get 印章描述内容 
+     * @return SealDescription 印章描述内容
+     */
+    public String getSealDescription() {
+        return this.SealDescription;
+    }
+
+    /**
+     * Set 印章描述内容
+     * @param SealDescription 印章描述内容
+     */
+    public void setSealDescription(String SealDescription) {
+        this.SealDescription = SealDescription;
+    }
+
     public CreateSealByImageRequest() {
     }
 
@@ -440,6 +463,9 @@ public class CreateSealByImageRequest extends AbstractModel {
         if (source.TaxIdentifyCode != null) {
             this.TaxIdentifyCode = new String(source.TaxIdentifyCode);
         }
+        if (source.SealDescription != null) {
+            this.SealDescription = new String(source.SealDescription);
+        }
     }
 
 
@@ -457,6 +483,7 @@ public class CreateSealByImageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SealStyle", this.SealStyle);
         this.setParamSimple(map, prefix + "SealSize", this.SealSize);
         this.setParamSimple(map, prefix + "TaxIdentifyCode", this.TaxIdentifyCode);
+        this.setParamSimple(map, prefix + "SealDescription", this.SealDescription);
 
     }
 }

@@ -81,6 +81,7 @@ public class ProcedureDebugging extends AbstractModel {
 
     /**
     * 自定义参数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomVariables")
     @Expose
@@ -227,8 +228,10 @@ public class ProcedureDebugging extends AbstractModel {
     }
 
     /**
-     * Get 自定义参数 
+     * Get 自定义参数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CustomVariables 自定义参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCustomVariables() {
         return this.CustomVariables;
@@ -236,7 +239,9 @@ public class ProcedureDebugging extends AbstractModel {
 
     /**
      * Set 自定义参数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomVariables 自定义参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomVariables(String [] CustomVariables) {
         this.CustomVariables = CustomVariables;

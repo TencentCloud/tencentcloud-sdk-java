@@ -752,6 +752,13 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String ShowKibanaIpPort;
 
     /**
+    * 是否为CDZLite可用区
+    */
+    @SerializedName("IsCdzLite")
+    @Expose
+    private Boolean IsCdzLite;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -2523,6 +2530,22 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.ShowKibanaIpPort = ShowKibanaIpPort;
     }
 
+    /**
+     * Get 是否为CDZLite可用区 
+     * @return IsCdzLite 是否为CDZLite可用区
+     */
+    public Boolean getIsCdzLite() {
+        return this.IsCdzLite;
+    }
+
+    /**
+     * Set 是否为CDZLite可用区
+     * @param IsCdzLite 是否为CDZLite可用区
+     */
+    public void setIsCdzLite(Boolean IsCdzLite) {
+        this.IsCdzLite = IsCdzLite;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2837,6 +2860,9 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.ShowKibanaIpPort != null) {
             this.ShowKibanaIpPort = new String(source.ShowKibanaIpPort);
         }
+        if (source.IsCdzLite != null) {
+            this.IsCdzLite = new Boolean(source.IsCdzLite);
+        }
     }
 
 
@@ -2939,6 +2965,7 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
         this.setParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
         this.setParamSimple(map, prefix + "ShowKibanaIpPort", this.ShowKibanaIpPort);
+        this.setParamSimple(map, prefix + "IsCdzLite", this.IsCdzLite);
 
     }
 }

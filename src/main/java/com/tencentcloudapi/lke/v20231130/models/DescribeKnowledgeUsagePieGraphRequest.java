@@ -31,6 +31,13 @@ public class DescribeKnowledgeUsagePieGraphRequest extends AbstractModel {
     private String [] AppBizIds;
 
     /**
+    * 空间列表
+    */
+    @SerializedName("SpaceId")
+    @Expose
+    private String SpaceId;
+
+    /**
      * Get 应用ID数组 
      * @return AppBizIds 应用ID数组
      */
@@ -44,6 +51,22 @@ public class DescribeKnowledgeUsagePieGraphRequest extends AbstractModel {
      */
     public void setAppBizIds(String [] AppBizIds) {
         this.AppBizIds = AppBizIds;
+    }
+
+    /**
+     * Get 空间列表 
+     * @return SpaceId 空间列表
+     */
+    public String getSpaceId() {
+        return this.SpaceId;
+    }
+
+    /**
+     * Set 空间列表
+     * @param SpaceId 空间列表
+     */
+    public void setSpaceId(String SpaceId) {
+        this.SpaceId = SpaceId;
     }
 
     public DescribeKnowledgeUsagePieGraphRequest() {
@@ -60,6 +83,9 @@ public class DescribeKnowledgeUsagePieGraphRequest extends AbstractModel {
                 this.AppBizIds[i] = new String(source.AppBizIds[i]);
             }
         }
+        if (source.SpaceId != null) {
+            this.SpaceId = new String(source.SpaceId);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class DescribeKnowledgeUsagePieGraphRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
+        this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
 
     }
 }

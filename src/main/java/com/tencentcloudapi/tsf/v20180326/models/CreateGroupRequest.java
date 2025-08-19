@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateGroupRequest extends AbstractModel {
 
     /**
-    * 部署组所属的应用ID
+    * 部署组所属的【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * 部署组所属命名空间ID
+    * 部署组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -45,7 +45,7 @@ public class CreateGroupRequest extends AbstractModel {
     private String GroupName;
 
     /**
-    * 集群ID
+    * 部署组所属的【集群ID】，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -59,7 +59,7 @@ public class CreateGroupRequest extends AbstractModel {
     private String GroupDesc;
 
     /**
-    * 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
+    * 部署组资源类型；DEF 表示默认资源类型
     */
     @SerializedName("GroupResourceType")
     @Expose
@@ -80,32 +80,39 @@ public class CreateGroupRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 部署组所属的应用ID 
-     * @return ApplicationId 部署组所属的应用ID
+    * k8s命名空间名称
+    */
+    @SerializedName("K8sNamespaceName")
+    @Expose
+    private String K8sNamespaceName;
+
+    /**
+     * Get 部署组所属的【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。 
+     * @return ApplicationId 部署组所属的【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 部署组所属的应用ID
-     * @param ApplicationId 部署组所属的应用ID
+     * Set 部署组所属的【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
+     * @param ApplicationId 部署组所属的【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 部署组所属命名空间ID 
-     * @return NamespaceId 部署组所属命名空间ID
+     * Get 部署组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。 
+     * @return NamespaceId 部署组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 部署组所属命名空间ID
-     * @param NamespaceId 部署组所属命名空间ID
+     * Set 部署组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
+     * @param NamespaceId 部署组所属【命名空间ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
@@ -128,16 +135,16 @@ public class CreateGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 部署组所属的【集群ID】，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。 
+     * @return ClusterId 部署组所属的【集群ID】，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 部署组所属的【集群ID】，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
+     * @param ClusterId 部署组所属的【集群ID】，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -160,16 +167,16 @@ public class CreateGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型 
-     * @return GroupResourceType 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
+     * Get 部署组资源类型；DEF 表示默认资源类型 
+     * @return GroupResourceType 部署组资源类型；DEF 表示默认资源类型
      */
     public String getGroupResourceType() {
         return this.GroupResourceType;
     }
 
     /**
-     * Set 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
-     * @param GroupResourceType 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
+     * Set 部署组资源类型；DEF 表示默认资源类型
+     * @param GroupResourceType 部署组资源类型；DEF 表示默认资源类型
      */
     public void setGroupResourceType(String GroupResourceType) {
         this.GroupResourceType = GroupResourceType;
@@ -207,6 +214,22 @@ public class CreateGroupRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get k8s命名空间名称 
+     * @return K8sNamespaceName k8s命名空间名称
+     */
+    public String getK8sNamespaceName() {
+        return this.K8sNamespaceName;
+    }
+
+    /**
+     * Set k8s命名空间名称
+     * @param K8sNamespaceName k8s命名空间名称
+     */
+    public void setK8sNamespaceName(String K8sNamespaceName) {
+        this.K8sNamespaceName = K8sNamespaceName;
+    }
+
     public CreateGroupRequest() {
     }
 
@@ -242,6 +265,9 @@ public class CreateGroupRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.K8sNamespaceName != null) {
+            this.K8sNamespaceName = new String(source.K8sNamespaceName);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class CreateGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "K8sNamespaceName", this.K8sNamespaceName);
 
     }
 }

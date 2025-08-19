@@ -70,6 +70,36 @@ public class KnowledgeBaseInfo extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 共享知识库类型，0普通，1公众号
+    */
+    @SerializedName("KnowledgeType")
+    @Expose
+    private Long KnowledgeType;
+
+    /**
+    * 拥有者id
+    */
+    @SerializedName("OwnerStaffId")
+    @Expose
+    private String OwnerStaffId;
+
+    /**
+    * 知识库文档数量,当前仅支持公众号知识库
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DocTotal")
+    @Expose
+    private Long DocTotal;
+
+    /**
+    * 知识库处理中状态标记，1：向量embedding变更中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProcessingFlags")
+    @Expose
+    private Long [] ProcessingFlags;
+
+    /**
      * Get 共享知识库业务ID 
      * @return KnowledgeBizId 共享知识库业务ID
      */
@@ -181,6 +211,78 @@ public class KnowledgeBaseInfo extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 共享知识库类型，0普通，1公众号 
+     * @return KnowledgeType 共享知识库类型，0普通，1公众号
+     */
+    public Long getKnowledgeType() {
+        return this.KnowledgeType;
+    }
+
+    /**
+     * Set 共享知识库类型，0普通，1公众号
+     * @param KnowledgeType 共享知识库类型，0普通，1公众号
+     */
+    public void setKnowledgeType(Long KnowledgeType) {
+        this.KnowledgeType = KnowledgeType;
+    }
+
+    /**
+     * Get 拥有者id 
+     * @return OwnerStaffId 拥有者id
+     */
+    public String getOwnerStaffId() {
+        return this.OwnerStaffId;
+    }
+
+    /**
+     * Set 拥有者id
+     * @param OwnerStaffId 拥有者id
+     */
+    public void setOwnerStaffId(String OwnerStaffId) {
+        this.OwnerStaffId = OwnerStaffId;
+    }
+
+    /**
+     * Get 知识库文档数量,当前仅支持公众号知识库
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DocTotal 知识库文档数量,当前仅支持公众号知识库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDocTotal() {
+        return this.DocTotal;
+    }
+
+    /**
+     * Set 知识库文档数量,当前仅支持公众号知识库
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DocTotal 知识库文档数量,当前仅支持公众号知识库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDocTotal(Long DocTotal) {
+        this.DocTotal = DocTotal;
+    }
+
+    /**
+     * Get 知识库处理中状态标记，1：向量embedding变更中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProcessingFlags 知识库处理中状态标记，1：向量embedding变更中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getProcessingFlags() {
+        return this.ProcessingFlags;
+    }
+
+    /**
+     * Set 知识库处理中状态标记，1：向量embedding变更中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProcessingFlags 知识库处理中状态标记，1：向量embedding变更中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProcessingFlags(Long [] ProcessingFlags) {
+        this.ProcessingFlags = ProcessingFlags;
+    }
+
     public KnowledgeBaseInfo() {
     }
 
@@ -207,6 +309,21 @@ public class KnowledgeBaseInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.KnowledgeType != null) {
+            this.KnowledgeType = new Long(source.KnowledgeType);
+        }
+        if (source.OwnerStaffId != null) {
+            this.OwnerStaffId = new String(source.OwnerStaffId);
+        }
+        if (source.DocTotal != null) {
+            this.DocTotal = new Long(source.DocTotal);
+        }
+        if (source.ProcessingFlags != null) {
+            this.ProcessingFlags = new Long[source.ProcessingFlags.length];
+            for (int i = 0; i < source.ProcessingFlags.length; i++) {
+                this.ProcessingFlags[i] = new Long(source.ProcessingFlags[i]);
+            }
+        }
     }
 
 
@@ -220,6 +337,10 @@ public class KnowledgeBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EmbeddingModel", this.EmbeddingModel);
         this.setParamSimple(map, prefix + "QaExtractModel", this.QaExtractModel);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "KnowledgeType", this.KnowledgeType);
+        this.setParamSimple(map, prefix + "OwnerStaffId", this.OwnerStaffId);
+        this.setParamSimple(map, prefix + "DocTotal", this.DocTotal);
+        this.setParamArraySimple(map, prefix + "ProcessingFlags.", this.ProcessingFlags);
 
     }
 }

@@ -66,7 +66,7 @@ public class DescribeCrossBackupStatisticalRequest extends AbstractModel {
     private String CrossRegion;
 
     /**
-    * 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份培训
+    * 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份
     */
     @SerializedName("OrderBy")
     @Expose
@@ -176,16 +176,16 @@ public class DescribeCrossBackupStatisticalRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份培训 
-     * @return OrderBy 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份培训
+     * Get 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份 
+     * @return OrderBy 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份培训
-     * @param OrderBy 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份培训
+     * Set 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份
+     * @param OrderBy 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

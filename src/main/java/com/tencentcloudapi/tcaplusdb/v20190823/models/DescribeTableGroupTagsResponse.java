@@ -25,7 +25,6 @@ public class DescribeTableGroupTagsResponse extends AbstractModel {
 
     /**
     * 表格组标签信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rows")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeTableGroupTagsResponse extends AbstractModel {
 
     /**
     * 返回结果个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeTableGroupTagsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 表格组标签信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格组标签信息列表 
      * @return Rows 表格组标签信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagsInfoOfTableGroup [] getRows() {
         return this.Rows;
@@ -58,19 +54,15 @@ public class DescribeTableGroupTagsResponse extends AbstractModel {
 
     /**
      * Set 表格组标签信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rows 表格组标签信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRows(TagsInfoOfTableGroup [] Rows) {
         this.Rows = Rows;
     }
 
     /**
-     * Get 返回结果个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回结果个数 
      * @return TotalCount 返回结果个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeTableGroupTagsResponse extends AbstractModel {
 
     /**
      * Set 返回结果个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 返回结果个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

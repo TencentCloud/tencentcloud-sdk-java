@@ -31,15 +31,14 @@ public class ListSelectDocRequest extends AbstractModel {
     private String BotBizId;
 
     /**
-    * 文档名称
-
+    * 文档名称。可通过文档名称检索支持生成问答的文档，不支持xlsx、xls、csv格式
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
+    * 文档状态筛选。文档状态对应码为7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期。其中仅状态为10 待发布、12 已发布的文档支持生成问答
     */
     @SerializedName("Status")
     @Expose
@@ -62,36 +61,32 @@ public class ListSelectDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 文档名称
- 
-     * @return FileName 文档名称
-
+     * Get 文档名称。可通过文档名称检索支持生成问答的文档，不支持xlsx、xls、csv格式 
+     * @return FileName 文档名称。可通过文档名称检索支持生成问答的文档，不支持xlsx、xls、csv格式
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 文档名称
-
-     * @param FileName 文档名称
-
+     * Set 文档名称。可通过文档名称检索支持生成问答的文档，不支持xlsx、xls、csv格式
+     * @param FileName 文档名称。可通过文档名称检索支持生成问答的文档，不支持xlsx、xls、csv格式
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期 
-     * @return Status 文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
+     * Get 文档状态筛选。文档状态对应码为7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期。其中仅状态为10 待发布、12 已发布的文档支持生成问答 
+     * @return Status 文档状态筛选。文档状态对应码为7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期。其中仅状态为10 待发布、12 已发布的文档支持生成问答
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
-     * @param Status 文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
+     * Set 文档状态筛选。文档状态对应码为7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期。其中仅状态为10 待发布、12 已发布的文档支持生成问答
+     * @param Status 文档状态筛选。文档状态对应码为7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期。其中仅状态为10 待发布、12 已发布的文档支持生成问答
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;

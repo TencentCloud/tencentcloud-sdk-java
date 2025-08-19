@@ -136,6 +136,13 @@ public class DescribeDeviceHardwareInfoItem extends AbstractModel {
     private String Monitor;
 
     /**
+    * 终端备注名
+    */
+    @SerializedName("RemarkName")
+    @Expose
+    private String RemarkName;
+
+    /**
      * Get 设备ID 
      * @return Id 设备ID
      */
@@ -391,6 +398,22 @@ public class DescribeDeviceHardwareInfoItem extends AbstractModel {
         this.Monitor = Monitor;
     }
 
+    /**
+     * Get 终端备注名 
+     * @return RemarkName 终端备注名
+     */
+    public String getRemarkName() {
+        return this.RemarkName;
+    }
+
+    /**
+     * Set 终端备注名
+     * @param RemarkName 终端备注名
+     */
+    public void setRemarkName(String RemarkName) {
+        this.RemarkName = RemarkName;
+    }
+
     public DescribeDeviceHardwareInfoItem() {
     }
 
@@ -447,6 +470,9 @@ public class DescribeDeviceHardwareInfoItem extends AbstractModel {
         if (source.Monitor != null) {
             this.Monitor = new String(source.Monitor);
         }
+        if (source.RemarkName != null) {
+            this.RemarkName = new String(source.RemarkName);
+        }
     }
 
 
@@ -470,6 +496,7 @@ public class DescribeDeviceHardwareInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "HardDiskSize", this.HardDiskSize);
         this.setParamSimple(map, prefix + "Monitor", this.Monitor);
+        this.setParamSimple(map, prefix + "RemarkName", this.RemarkName);
 
     }
 }

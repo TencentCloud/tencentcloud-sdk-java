@@ -24,14 +24,16 @@ import java.util.HashMap;
 public class ModifyIndexRequest extends AbstractModel {
 
     /**
-    * 日志主题ID
+    * 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 默认不生效
+    * 索引状态。false：关闭索引， true：开启索引
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
     */
     @SerializedName("Status")
     @Expose
@@ -64,32 +66,40 @@ public class ModifyIndexRequest extends AbstractModel {
     private Long MetadataFlag;
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
+     * @return TopicId 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param TopicId 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 默认不生效 
-     * @return Status 默认不生效
+     * Get 索引状态。false：关闭索引， true：开启索引
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9) 
+     * @return Status 索引状态。false：关闭索引， true：开启索引
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 默认不生效
-     * @param Status 默认不生效
+     * Set 索引状态。false：关闭索引， true：开启索引
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
+     * @param Status 索引状态。false：关闭索引， true：开启索引
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateApplicationRequest extends AbstractModel {
 
     /**
-    * 应用名称
+    * 应用名称，最长60字符
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -73,7 +73,7 @@ public class CreateApplicationRequest extends AbstractModel {
     private String ApplicationRuntimeType;
 
     /**
-    * 需要绑定的数据集ID
+    * 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
     */
     @SerializedName("ProgramId")
     @Expose
@@ -136,16 +136,16 @@ public class CreateApplicationRequest extends AbstractModel {
     private Boolean CreateSameNameImageRepository;
 
     /**
-     * Get 应用名称 
-     * @return ApplicationName 应用名称
+     * Get 应用名称，最长60字符 
+     * @return ApplicationName 应用名称，最长60字符
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set 应用名称
-     * @param ApplicationName 应用名称
+     * Set 应用名称，最长60字符
+     * @param ApplicationName 应用名称，最长60字符
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
@@ -256,16 +256,16 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要绑定的数据集ID 
-     * @return ProgramId 需要绑定的数据集ID
+     * Get 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。 
+     * @return ProgramId 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      */
     public String getProgramId() {
         return this.ProgramId;
     }
 
     /**
-     * Set 需要绑定的数据集ID
-     * @param ProgramId 需要绑定的数据集ID
+     * Set 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
+     * @param ProgramId 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      */
     public void setProgramId(String ProgramId) {
         this.ProgramId = ProgramId;

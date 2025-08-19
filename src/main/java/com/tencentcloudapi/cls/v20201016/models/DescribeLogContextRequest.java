@@ -24,28 +24,30 @@ import java.util.HashMap;
 public class DescribeLogContextRequest extends AbstractModel {
 
     /**
-    * 要查询的日志主题ID
+    * 要查询的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+    * 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
     */
     @SerializedName("BTime")
     @Expose
     private String BTime;
 
     /**
-    * 日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
+    * 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
     */
     @SerializedName("PkgId")
     @Expose
     private String PkgId;
 
     /**
-    * 日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
+    * 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
     */
     @SerializedName("PkgLogId")
     @Expose
@@ -96,64 +98,72 @@ public class DescribeLogContextRequest extends AbstractModel {
     private Long To;
 
     /**
-     * Get 要查询的日志主题ID 
-     * @return TopicId 要查询的日志主题ID
+     * Get 要查询的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。 
+     * @return TopicId 要查询的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 要查询的日志主题ID
-     * @param TopicId 要查询的日志主题ID
+     * Set 要查询的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * @param TopicId 要查询的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。 
-     * @return BTime 日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+     * Get 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。 
+     * @return BTime 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
      */
     public String getBTime() {
         return this.BTime;
     }
 
     /**
-     * Set 日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
-     * @param BTime 日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+     * Set 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+     * @param BTime 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
      */
     public void setBTime(String BTime) {
         this.BTime = BTime;
     }
 
     /**
-     * Get 日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。 
-     * @return PkgId 日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
+     * Get 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。 
+     * @return PkgId 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
      */
     public String getPkgId() {
         return this.PkgId;
     }
 
     /**
-     * Set 日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
-     * @param PkgId 日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
+     * Set 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
+     * @param PkgId 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
      */
     public void setPkgId(String PkgId) {
         this.PkgId = PkgId;
     }
 
     /**
-     * Get 日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。 
-     * @return PkgLogId 日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
+     * Get 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。 
+     * @return PkgLogId 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
      */
     public Long getPkgLogId() {
         return this.PkgLogId;
     }
 
     /**
-     * Set 日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
-     * @param PkgLogId 日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
+     * Set 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
+     * @param PkgLogId 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
      */
     public void setPkgLogId(Long PkgLogId) {
         this.PkgLogId = PkgLogId;

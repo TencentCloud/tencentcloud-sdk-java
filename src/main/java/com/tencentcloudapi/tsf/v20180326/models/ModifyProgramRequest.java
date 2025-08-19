@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyProgramRequest extends AbstractModel {
 
     /**
-    * 数据集ID
+    * 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口会返回数据集信息，包括programId
     */
     @SerializedName("ProgramId")
     @Expose
@@ -59,16 +59,16 @@ public class ModifyProgramRequest extends AbstractModel {
     private Boolean EmptyProgramItemList;
 
     /**
-     * Get 数据集ID 
-     * @return ProgramId 数据集ID
+     * Get 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口会返回数据集信息，包括programId 
+     * @return ProgramId 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口会返回数据集信息，包括programId
      */
     public String getProgramId() {
         return this.ProgramId;
     }
 
     /**
-     * Set 数据集ID
-     * @param ProgramId 数据集ID
+     * Set 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口会返回数据集信息，包括programId
+     * @param ProgramId 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口会返回数据集信息，包括programId
      */
     public void setProgramId(String ProgramId) {
         this.ProgramId = ProgramId;

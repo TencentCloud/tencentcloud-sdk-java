@@ -87,6 +87,13 @@ public class AgentModelInfo extends AbstractModel {
     private Long MaxReasoningRound;
 
     /**
+    * 模型参数
+    */
+    @SerializedName("ModelParams")
+    @Expose
+    private ModelParams ModelParams;
+
+    /**
      * Get 模型名称 
      * @return ModelName 模型名称
      */
@@ -230,6 +237,22 @@ public class AgentModelInfo extends AbstractModel {
         this.MaxReasoningRound = MaxReasoningRound;
     }
 
+    /**
+     * Get 模型参数 
+     * @return ModelParams 模型参数
+     */
+    public ModelParams getModelParams() {
+        return this.ModelParams;
+    }
+
+    /**
+     * Set 模型参数
+     * @param ModelParams 模型参数
+     */
+    public void setModelParams(ModelParams ModelParams) {
+        this.ModelParams = ModelParams;
+    }
+
     public AgentModelInfo() {
     }
 
@@ -265,6 +288,9 @@ public class AgentModelInfo extends AbstractModel {
         if (source.MaxReasoningRound != null) {
             this.MaxReasoningRound = new Long(source.MaxReasoningRound);
         }
+        if (source.ModelParams != null) {
+            this.ModelParams = new ModelParams(source.ModelParams);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class AgentModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelContextWordsLimit", this.ModelContextWordsLimit);
         this.setParamSimple(map, prefix + "InstructionsWordsLimit", this.InstructionsWordsLimit);
         this.setParamSimple(map, prefix + "MaxReasoningRound", this.MaxReasoningRound);
+        this.setParamObj(map, prefix + "ModelParams.", this.ModelParams);
 
     }
 }

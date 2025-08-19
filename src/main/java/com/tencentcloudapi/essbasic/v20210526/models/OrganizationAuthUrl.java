@@ -43,6 +43,20 @@ public class OrganizationAuthUrl extends AbstractModel {
     private String ErrorMessage;
 
     /**
+    * 企业批量注册 传递过来的企业名称，方便客户定位企业	
+    */
+    @SerializedName("OrganizationName")
+    @Expose
+    private String OrganizationName;
+
+    /**
+    * 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks)。
+    */
+    @SerializedName("SubTaskId")
+    @Expose
+    private String SubTaskId;
+
+    /**
      * Get 跳转链接, 链接的有效期根据企业,员工状态和终端等有区别, 可以参考下表
 <table> <thead> <tr> <th>子客企业状态</th> <th>子客企业员工状态</th> <th>Endpoint</th> <th>链接有效期限</th> </tr> </thead>  <tbody> <tr> <td>企业未激活</td> <td>员工未认证</td> <td>PC</td> <td>5分钟</td>  </tr>  <tr> <td>企业未激活</td> <td>员工未认证</td> <td>CHANNEL/SHORT_URL/APP</td> <td>一年</td>  </tr>  <tr> <td>企业已激活</td> <td>员工未认证</td> <td>PC</td> <td>5分钟</td>  </tr> <tr> <td>企业已激活</td> <td>员工未认证</td> <td>CHANNEL/SHORT_URL/APP</td> <td>一年</td>  </tr>  <tr> <td>企业已激活</td> <td>员工已认证</td> <td>PC</td> <td>5分钟</td>  </tr>  <tr> <td>企业已激活</td> <td>员工已认证</td> <td>CHANNEL/SHORT_URL/APP</td> <td>一年</td>  </tr> </tbody> </table>
 注： 
@@ -94,6 +108,38 @@ public class OrganizationAuthUrl extends AbstractModel {
         this.ErrorMessage = ErrorMessage;
     }
 
+    /**
+     * Get 企业批量注册 传递过来的企业名称，方便客户定位企业	 
+     * @return OrganizationName 企业批量注册 传递过来的企业名称，方便客户定位企业	
+     */
+    public String getOrganizationName() {
+        return this.OrganizationName;
+    }
+
+    /**
+     * Set 企业批量注册 传递过来的企业名称，方便客户定位企业	
+     * @param OrganizationName 企业批量注册 传递过来的企业名称，方便客户定位企业	
+     */
+    public void setOrganizationName(String OrganizationName) {
+        this.OrganizationName = OrganizationName;
+    }
+
+    /**
+     * Get 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks)。 
+     * @return SubTaskId 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks)。
+     */
+    public String getSubTaskId() {
+        return this.SubTaskId;
+    }
+
+    /**
+     * Set 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks)。
+     * @param SubTaskId 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks)。
+     */
+    public void setSubTaskId(String SubTaskId) {
+        this.SubTaskId = SubTaskId;
+    }
+
     public OrganizationAuthUrl() {
     }
 
@@ -108,6 +154,12 @@ public class OrganizationAuthUrl extends AbstractModel {
         if (source.ErrorMessage != null) {
             this.ErrorMessage = new String(source.ErrorMessage);
         }
+        if (source.OrganizationName != null) {
+            this.OrganizationName = new String(source.OrganizationName);
+        }
+        if (source.SubTaskId != null) {
+            this.SubTaskId = new String(source.SubTaskId);
+        }
     }
 
 
@@ -117,6 +169,8 @@ public class OrganizationAuthUrl extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AuthUrl", this.AuthUrl);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+        this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+        this.setParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
 
     }
 }

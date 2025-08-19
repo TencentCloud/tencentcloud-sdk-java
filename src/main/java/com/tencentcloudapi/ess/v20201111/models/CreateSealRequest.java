@@ -170,6 +170,13 @@ public class CreateSealRequest extends AbstractModel {
     private String TaxIdentifyCode;
 
     /**
+    * 印章描述内容
+    */
+    @SerializedName("SealDescription")
+    @Expose
+    private String SealDescription;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -549,6 +556,22 @@ public class CreateSealRequest extends AbstractModel {
         this.TaxIdentifyCode = TaxIdentifyCode;
     }
 
+    /**
+     * Get 印章描述内容 
+     * @return SealDescription 印章描述内容
+     */
+    public String getSealDescription() {
+        return this.SealDescription;
+    }
+
+    /**
+     * Set 印章描述内容
+     * @param SealDescription 印章描述内容
+     */
+    public void setSealDescription(String SealDescription) {
+        this.SealDescription = SealDescription;
+    }
+
     public CreateSealRequest() {
     }
 
@@ -608,6 +631,9 @@ public class CreateSealRequest extends AbstractModel {
         if (source.TaxIdentifyCode != null) {
             this.TaxIdentifyCode = new String(source.TaxIdentifyCode);
         }
+        if (source.SealDescription != null) {
+            this.SealDescription = new String(source.SealDescription);
+        }
     }
 
 
@@ -632,6 +658,7 @@ public class CreateSealRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SealStyle", this.SealStyle);
         this.setParamSimple(map, prefix + "SealSize", this.SealSize);
         this.setParamSimple(map, prefix + "TaxIdentifyCode", this.TaxIdentifyCode);
+        this.setParamSimple(map, prefix + "SealDescription", this.SealDescription);
 
     }
 }

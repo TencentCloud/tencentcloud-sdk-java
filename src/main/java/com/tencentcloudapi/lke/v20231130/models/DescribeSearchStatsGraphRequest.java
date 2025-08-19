@@ -80,6 +80,13 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     private String [] AppBizIds;
 
     /**
+    * 空间id
+    */
+    @SerializedName("SpaceId")
+    @Expose
+    private String SpaceId;
+
+    /**
      * Get 登录用户主账号(集成商模式必填) 
      * @return LoginUin 登录用户主账号(集成商模式必填)
      */
@@ -207,6 +214,22 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
         this.AppBizIds = AppBizIds;
     }
 
+    /**
+     * Get 空间id 
+     * @return SpaceId 空间id
+     */
+    public String getSpaceId() {
+        return this.SpaceId;
+    }
+
+    /**
+     * Set 空间id
+     * @param SpaceId 空间id
+     */
+    public void setSpaceId(String SpaceId) {
+        this.SpaceId = SpaceId;
+    }
+
     public DescribeSearchStatsGraphRequest() {
     }
 
@@ -245,6 +268,9 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
                 this.AppBizIds[i] = new String(source.AppBizIds[i]);
             }
         }
+        if (source.SpaceId != null) {
+            this.SpaceId = new String(source.SpaceId);
+        }
     }
 
 
@@ -260,6 +286,7 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
+        this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
 
     }
 }

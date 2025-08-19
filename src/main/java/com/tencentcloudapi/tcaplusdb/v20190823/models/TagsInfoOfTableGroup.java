@@ -25,7 +25,6 @@ public class TagsInfoOfTableGroup extends AbstractModel {
 
     /**
     * 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -33,7 +32,6 @@ public class TagsInfoOfTableGroup extends AbstractModel {
 
     /**
     * 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableGroupId")
     @Expose
@@ -41,7 +39,6 @@ public class TagsInfoOfTableGroup extends AbstractModel {
 
     /**
     * 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -49,17 +46,14 @@ public class TagsInfoOfTableGroup extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
     private ErrorInfo Error;
 
     /**
-     * Get 集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群ID 
      * @return ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -67,19 +61,15 @@ public class TagsInfoOfTableGroup extends AbstractModel {
 
     /**
      * Set 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格组ID 
      * @return TableGroupId 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableGroupId() {
         return this.TableGroupId;
@@ -87,19 +77,15 @@ public class TagsInfoOfTableGroup extends AbstractModel {
 
     /**
      * Set 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableGroupId 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableGroupId(String TableGroupId) {
         this.TableGroupId = TableGroupId;
     }
 
     /**
-     * Get 标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签信息 
      * @return Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInfoUnit [] getTags() {
         return this.Tags;
@@ -107,19 +93,15 @@ public class TagsInfoOfTableGroup extends AbstractModel {
 
     /**
      * Set 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagInfoUnit [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorInfo getError() {
         return this.Error;
@@ -127,9 +109,7 @@ public class TagsInfoOfTableGroup extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(ErrorInfo Error) {
         this.Error = Error;

@@ -25,7 +25,6 @@ public class TagsInfoOfTable extends AbstractModel {
 
     /**
     * 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableInstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class TagsInfoOfTable extends AbstractModel {
 
     /**
     * 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
@@ -41,7 +39,6 @@ public class TagsInfoOfTable extends AbstractModel {
 
     /**
     * 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableGroupId")
     @Expose
@@ -49,7 +46,6 @@ public class TagsInfoOfTable extends AbstractModel {
 
     /**
     * 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -57,17 +53,14 @@ public class TagsInfoOfTable extends AbstractModel {
 
     /**
     * 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Error")
     @Expose
     private ErrorInfo Error;
 
     /**
-     * Get 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格实例ID 
      * @return TableInstanceId 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableInstanceId() {
         return this.TableInstanceId;
@@ -75,19 +68,15 @@ public class TagsInfoOfTable extends AbstractModel {
 
     /**
      * Set 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableInstanceId 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableInstanceId(String TableInstanceId) {
         this.TableInstanceId = TableInstanceId;
     }
 
     /**
-     * Get 表格名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格名称 
      * @return TableName 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -95,19 +84,15 @@ public class TagsInfoOfTable extends AbstractModel {
 
     /**
      * Set 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格组ID 
      * @return TableGroupId 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableGroupId() {
         return this.TableGroupId;
@@ -115,19 +100,15 @@ public class TagsInfoOfTable extends AbstractModel {
 
     /**
      * Set 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableGroupId 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableGroupId(String TableGroupId) {
         this.TableGroupId = TableGroupId;
     }
 
     /**
-     * Get 标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签信息 
      * @return Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInfoUnit [] getTags() {
         return this.Tags;
@@ -135,19 +116,15 @@ public class TagsInfoOfTable extends AbstractModel {
 
     /**
      * Set 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagInfoUnit [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息 
      * @return Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrorInfo getError() {
         return this.Error;
@@ -155,9 +132,7 @@ public class TagsInfoOfTable extends AbstractModel {
 
     /**
      * Set 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setError(ErrorInfo Error) {
         this.Error = Error;

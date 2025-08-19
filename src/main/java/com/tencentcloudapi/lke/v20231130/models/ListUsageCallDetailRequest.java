@@ -101,6 +101,13 @@ public class ListUsageCallDetailRequest extends AbstractModel {
     private String BillingTag;
 
     /**
+    * 空间id
+    */
+    @SerializedName("SpaceId")
+    @Expose
+    private String SpaceId;
+
+    /**
      * Get 模型标识 
      * @return ModelName 模型标识
      */
@@ -276,6 +283,22 @@ public class ListUsageCallDetailRequest extends AbstractModel {
         this.BillingTag = BillingTag;
     }
 
+    /**
+     * Get 空间id 
+     * @return SpaceId 空间id
+     */
+    public String getSpaceId() {
+        return this.SpaceId;
+    }
+
+    /**
+     * Set 空间id
+     * @param SpaceId 空间id
+     */
+    public void setSpaceId(String SpaceId) {
+        this.SpaceId = SpaceId;
+    }
+
     public ListUsageCallDetailRequest() {
     }
 
@@ -326,6 +349,9 @@ public class ListUsageCallDetailRequest extends AbstractModel {
         if (source.BillingTag != null) {
             this.BillingTag = new String(source.BillingTag);
         }
+        if (source.SpaceId != null) {
+            this.SpaceId = new String(source.SpaceId);
+        }
     }
 
 
@@ -344,6 +370,7 @@ public class ListUsageCallDetailRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
         this.setParamSimple(map, prefix + "AppType", this.AppType);
         this.setParamSimple(map, prefix + "BillingTag", this.BillingTag);
+        this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
 
     }
 }

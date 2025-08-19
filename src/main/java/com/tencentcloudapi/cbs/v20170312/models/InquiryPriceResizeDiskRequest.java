@@ -31,7 +31,7 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel {
     private Long DiskSize;
 
     /**
-    * 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+    * 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。与参数DiskIds互斥。
     */
     @SerializedName("DiskId")
     @Expose
@@ -43,6 +43,13 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel {
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
+
+    /**
+    * 云硬盘ID列表， 通过[DescribeDisks](/document/product/362/16315)接口查询。与参数DiskId互斥。
+    */
+    @SerializedName("DiskIds")
+    @Expose
+    private String [] DiskIds;
 
     /**
      * Get 云硬盘扩容后的大小，单位为GiB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。 
@@ -61,16 +68,16 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。 
-     * @return DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Get 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。与参数DiskIds互斥。 
+     * @return DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。与参数DiskIds互斥。
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-     * @param DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Set 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。与参数DiskIds互斥。
+     * @param DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。与参数DiskIds互斥。
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
@@ -92,6 +99,22 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 云硬盘ID列表， 通过[DescribeDisks](/document/product/362/16315)接口查询。与参数DiskId互斥。 
+     * @return DiskIds 云硬盘ID列表， 通过[DescribeDisks](/document/product/362/16315)接口查询。与参数DiskId互斥。
+     */
+    public String [] getDiskIds() {
+        return this.DiskIds;
+    }
+
+    /**
+     * Set 云硬盘ID列表， 通过[DescribeDisks](/document/product/362/16315)接口查询。与参数DiskId互斥。
+     * @param DiskIds 云硬盘ID列表， 通过[DescribeDisks](/document/product/362/16315)接口查询。与参数DiskId互斥。
+     */
+    public void setDiskIds(String [] DiskIds) {
+        this.DiskIds = DiskIds;
+    }
+
     public InquiryPriceResizeDiskRequest() {
     }
 
@@ -109,6 +132,12 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.DiskIds != null) {
+            this.DiskIds = new String[source.DiskIds.length];
+            for (int i = 0; i < source.DiskIds.length; i++) {
+                this.DiskIds[i] = new String(source.DiskIds[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
 
     }
 }

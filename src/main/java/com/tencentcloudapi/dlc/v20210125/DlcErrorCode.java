@@ -132,6 +132,9 @@ public enum DlcErrorCode {
      /* 标签数量超出限制。 */
      FAILEDOPERATION_TOOMANYTAGS("FailedOperation.TooManyTags"),
      
+     /* 更新权限信息失败。 */
+     FAILEDOPERATION_UPDATEPOLICYFAILED("FailedOperation.UpdatePolicyFailed"),
+     
      /* 内部错误。 */
      INTERNALERROR("InternalError"),
      

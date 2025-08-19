@@ -72,6 +72,20 @@ public class Procedure extends AbstractModel {
     private Long ResourceStatus;
 
     /**
+    * 输入消耗 token 数
+    */
+    @SerializedName("InputCount")
+    @Expose
+    private Long InputCount;
+
+    /**
+    * 输出消耗 token 数
+    */
+    @SerializedName("OutputCount")
+    @Expose
+    private Long OutputCount;
+
+    /**
      * Get 执行过程英语名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 执行过程英语名
@@ -191,6 +205,38 @@ public class Procedure extends AbstractModel {
         this.ResourceStatus = ResourceStatus;
     }
 
+    /**
+     * Get 输入消耗 token 数 
+     * @return InputCount 输入消耗 token 数
+     */
+    public Long getInputCount() {
+        return this.InputCount;
+    }
+
+    /**
+     * Set 输入消耗 token 数
+     * @param InputCount 输入消耗 token 数
+     */
+    public void setInputCount(Long InputCount) {
+        this.InputCount = InputCount;
+    }
+
+    /**
+     * Get 输出消耗 token 数 
+     * @return OutputCount 输出消耗 token 数
+     */
+    public Long getOutputCount() {
+        return this.OutputCount;
+    }
+
+    /**
+     * Set 输出消耗 token 数
+     * @param OutputCount 输出消耗 token 数
+     */
+    public void setOutputCount(Long OutputCount) {
+        this.OutputCount = OutputCount;
+    }
+
     public Procedure() {
     }
 
@@ -217,6 +263,12 @@ public class Procedure extends AbstractModel {
         if (source.ResourceStatus != null) {
             this.ResourceStatus = new Long(source.ResourceStatus);
         }
+        if (source.InputCount != null) {
+            this.InputCount = new Long(source.InputCount);
+        }
+        if (source.OutputCount != null) {
+            this.OutputCount = new Long(source.OutputCount);
+        }
     }
 
 
@@ -230,6 +282,8 @@ public class Procedure extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamObj(map, prefix + "Debugging.", this.Debugging);
         this.setParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
+        this.setParamSimple(map, prefix + "InputCount", this.InputCount);
+        this.setParamSimple(map, prefix + "OutputCount", this.OutputCount);
 
     }
 }

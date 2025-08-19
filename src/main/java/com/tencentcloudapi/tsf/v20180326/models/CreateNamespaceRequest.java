@@ -45,14 +45,14 @@ public class CreateNamespaceRequest extends AbstractModel {
     private String NamespaceDesc;
 
     /**
-    * 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
+    * 命名空间资源类型；DEF：表示默认资源类型；GW：表示网关资源类型
     */
     @SerializedName("NamespaceResourceType")
     @Expose
     private String NamespaceResourceType;
 
     /**
-    * 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+    * 命名空间类型；DEF 表示默认普通命名空间；GLOBAL 表示全局命名空间
     */
     @SerializedName("NamespaceType")
     @Expose
@@ -142,32 +142,32 @@ public class CreateNamespaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间 
-     * @return NamespaceResourceType 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
+     * Get 命名空间资源类型；DEF：表示默认资源类型；GW：表示网关资源类型 
+     * @return NamespaceResourceType 命名空间资源类型；DEF：表示默认资源类型；GW：表示网关资源类型
      */
     public String getNamespaceResourceType() {
         return this.NamespaceResourceType;
     }
 
     /**
-     * Set 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
-     * @param NamespaceResourceType 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
+     * Set 命名空间资源类型；DEF：表示默认资源类型；GW：表示网关资源类型
+     * @param NamespaceResourceType 命名空间资源类型；DEF：表示默认资源类型；GW：表示网关资源类型
      */
     public void setNamespaceResourceType(String NamespaceResourceType) {
         this.NamespaceResourceType = NamespaceResourceType;
     }
 
     /**
-     * Get 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间) 
-     * @return NamespaceType 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+     * Get 命名空间类型；DEF 表示默认普通命名空间；GLOBAL 表示全局命名空间 
+     * @return NamespaceType 命名空间类型；DEF 表示默认普通命名空间；GLOBAL 表示全局命名空间
      */
     public String getNamespaceType() {
         return this.NamespaceType;
     }
 
     /**
-     * Set 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
-     * @param NamespaceType 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+     * Set 命名空间类型；DEF 表示默认普通命名空间；GLOBAL 表示全局命名空间
+     * @param NamespaceType 命名空间类型；DEF 表示默认普通命名空间；GLOBAL 表示全局命名空间
      */
     public void setNamespaceType(String NamespaceType) {
         this.NamespaceType = NamespaceType;

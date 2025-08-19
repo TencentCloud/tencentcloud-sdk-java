@@ -73,14 +73,14 @@ public class DescribeAgentAuditedClientsRequest extends AbstractModel {
     private String ClientRemark;
 
     /**
-    * 偏移量
+    * *偏移量 【请保持必传】
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制数目
+    * *限制数目 【请保持必传】最大2000
     */
     @SerializedName("Limit")
     @Expose
@@ -227,32 +227,32 @@ public class DescribeAgentAuditedClientsRequest extends AbstractModel {
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get *偏移量 【请保持必传】 
+     * @return Offset *偏移量 【请保持必传】
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set *偏移量 【请保持必传】
+     * @param Offset *偏移量 【请保持必传】
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制数目 
-     * @return Limit 限制数目
+     * Get *限制数目 【请保持必传】最大2000 
+     * @return Limit *限制数目 【请保持必传】最大2000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数目
-     * @param Limit 限制数目
+     * Set *限制数目 【请保持必传】最大2000
+     * @param Limit *限制数目 【请保持必传】最大2000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

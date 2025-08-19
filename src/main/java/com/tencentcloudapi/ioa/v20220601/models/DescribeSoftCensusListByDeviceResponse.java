@@ -25,7 +25,6 @@ public class DescribeSoftCensusListByDeviceResponse extends AbstractModel {
 
     /**
     * 业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeSoftCensusListByDeviceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务响应数据 
      * @return Data 业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeSoftCensusListByDevicePageData getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeSoftCensusListByDeviceResponse extends AbstractModel {
 
     /**
      * Set 业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DescribeSoftCensusListByDevicePageData Data) {
         this.Data = Data;

@@ -59,6 +59,13 @@ public class Library extends AbstractModel {
     private String BucketRegion;
 
     /**
+    * 该媒体库的业务 API 访问域名
+    */
+    @SerializedName("AccessDomain")
+    @Expose
+    private String AccessDomain;
+
+    /**
     * 媒体库创建时间
     */
     @SerializedName("CreationTime")
@@ -174,6 +181,22 @@ public class Library extends AbstractModel {
     }
 
     /**
+     * Get 该媒体库的业务 API 访问域名 
+     * @return AccessDomain 该媒体库的业务 API 访问域名
+     */
+    public String getAccessDomain() {
+        return this.AccessDomain;
+    }
+
+    /**
+     * Set 该媒体库的业务 API 访问域名
+     * @param AccessDomain 该媒体库的业务 API 访问域名
+     */
+    public void setAccessDomain(String AccessDomain) {
+        this.AccessDomain = AccessDomain;
+    }
+
+    /**
      * Get 媒体库创建时间 
      * @return CreationTime 媒体库创建时间
      */
@@ -276,6 +299,9 @@ public class Library extends AbstractModel {
         if (source.BucketRegion != null) {
             this.BucketRegion = new String(source.BucketRegion);
         }
+        if (source.AccessDomain != null) {
+            this.AccessDomain = new String(source.AccessDomain);
+        }
         if (source.CreationTime != null) {
             this.CreationTime = new String(source.CreationTime);
         }
@@ -303,6 +329,7 @@ public class Library extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "BucketName", this.BucketName);
         this.setParamSimple(map, prefix + "BucketRegion", this.BucketRegion);
+        this.setParamSimple(map, prefix + "AccessDomain", this.AccessDomain);
         this.setParamSimple(map, prefix + "CreationTime", this.CreationTime);
         this.setParamObj(map, prefix + "LibraryExtension.", this.LibraryExtension);
         this.setParamSimple(map, prefix + "Size", this.Size);

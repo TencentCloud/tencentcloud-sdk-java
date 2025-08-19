@@ -38,6 +38,13 @@ public class DeleteVarRequest extends AbstractModel {
     private String VarId;
 
     /**
+    * 参数类型
+    */
+    @SerializedName("VarModuleType")
+    @Expose
+    private Long VarModuleType;
+
+    /**
      * Get 应用ID 
      * @return AppBizId 应用ID
      */
@@ -69,6 +76,22 @@ public class DeleteVarRequest extends AbstractModel {
         this.VarId = VarId;
     }
 
+    /**
+     * Get 参数类型 
+     * @return VarModuleType 参数类型
+     */
+    public Long getVarModuleType() {
+        return this.VarModuleType;
+    }
+
+    /**
+     * Set 参数类型
+     * @param VarModuleType 参数类型
+     */
+    public void setVarModuleType(Long VarModuleType) {
+        this.VarModuleType = VarModuleType;
+    }
+
     public DeleteVarRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DeleteVarRequest extends AbstractModel {
         if (source.VarId != null) {
             this.VarId = new String(source.VarId);
         }
+        if (source.VarModuleType != null) {
+            this.VarModuleType = new Long(source.VarModuleType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DeleteVarRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppBizId", this.AppBizId);
         this.setParamSimple(map, prefix + "VarId", this.VarId);
+        this.setParamSimple(map, prefix + "VarModuleType", this.VarModuleType);
 
     }
 }

@@ -83,6 +83,13 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
     private Boolean ModifyClassicDomain;
 
     /**
+    * 关联的终端节点Id，可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679)接口查询。传空字符串代表解除关联。
+    */
+    @SerializedName("AssociateEndpoint")
+    @Expose
+    private String AssociateEndpoint;
+
+    /**
      * Get 负载均衡的唯一ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。 
      * @return LoadBalancerId 负载均衡的唯一ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
@@ -222,6 +229,22 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
         this.ModifyClassicDomain = ModifyClassicDomain;
     }
 
+    /**
+     * Get 关联的终端节点Id，可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679)接口查询。传空字符串代表解除关联。 
+     * @return AssociateEndpoint 关联的终端节点Id，可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679)接口查询。传空字符串代表解除关联。
+     */
+    public String getAssociateEndpoint() {
+        return this.AssociateEndpoint;
+    }
+
+    /**
+     * Set 关联的终端节点Id，可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679)接口查询。传空字符串代表解除关联。
+     * @param AssociateEndpoint 关联的终端节点Id，可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679)接口查询。传空字符串代表解除关联。
+     */
+    public void setAssociateEndpoint(String AssociateEndpoint) {
+        this.AssociateEndpoint = AssociateEndpoint;
+    }
+
     public ModifyLoadBalancerAttributesRequest() {
     }
 
@@ -254,6 +277,9 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
         if (source.ModifyClassicDomain != null) {
             this.ModifyClassicDomain = new Boolean(source.ModifyClassicDomain);
         }
+        if (source.AssociateEndpoint != null) {
+            this.AssociateEndpoint = new String(source.AssociateEndpoint);
+        }
     }
 
 
@@ -269,6 +295,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
         this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
         this.setParamSimple(map, prefix + "ModifyClassicDomain", this.ModifyClassicDomain);
+        this.setParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
 
     }
 }

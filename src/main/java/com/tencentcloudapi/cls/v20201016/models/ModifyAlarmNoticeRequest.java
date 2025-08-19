@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyAlarmNoticeRequest extends AbstractModel {
 
     /**
-    * 通知渠道组ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知渠道组ID
+    * 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
     */
     @SerializedName("AlarmNoticeId")
     @Expose
@@ -119,16 +119,16 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
     private Long AlarmShieldStatus;
 
     /**
-     * Get 通知渠道组ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知渠道组ID 
-     * @return AlarmNoticeId 通知渠道组ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知渠道组ID
+     * Get 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID 
+     * @return AlarmNoticeId 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set 通知渠道组ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知渠道组ID
-     * @param AlarmNoticeId 通知渠道组ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知渠道组ID
+     * Set 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
+     * @param AlarmNoticeId 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;

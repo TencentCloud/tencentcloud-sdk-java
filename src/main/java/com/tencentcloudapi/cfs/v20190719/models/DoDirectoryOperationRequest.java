@@ -31,7 +31,7 @@ public class DoDirectoryOperationRequest extends AbstractModel {
     private String FileSystemId;
 
     /**
-    * create：创建目录  check：确认目录是否存在
+    * create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
     */
     @SerializedName("OpetationType")
     @Expose
@@ -52,6 +52,13 @@ public class DoDirectoryOperationRequest extends AbstractModel {
     private String Mode;
 
     /**
+    * mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
+    */
+    @SerializedName("DestPath")
+    @Expose
+    private String DestPath;
+
+    /**
      * Get 文件系统Id 
      * @return FileSystemId 文件系统Id
      */
@@ -68,16 +75,16 @@ public class DoDirectoryOperationRequest extends AbstractModel {
     }
 
     /**
-     * Get create：创建目录  check：确认目录是否存在 
-     * @return OpetationType create：创建目录  check：确认目录是否存在
+     * Get create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作 
+     * @return OpetationType create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
      */
     public String getOpetationType() {
         return this.OpetationType;
     }
 
     /**
-     * Set create：创建目录  check：确认目录是否存在
-     * @param OpetationType create：创建目录  check：确认目录是否存在
+     * Set create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
+     * @param OpetationType create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
      */
     public void setOpetationType(String OpetationType) {
         this.OpetationType = OpetationType;
@@ -115,6 +122,22 @@ public class DoDirectoryOperationRequest extends AbstractModel {
         this.Mode = Mode;
     }
 
+    /**
+     * Get mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头 
+     * @return DestPath mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
+     */
+    public String getDestPath() {
+        return this.DestPath;
+    }
+
+    /**
+     * Set mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
+     * @param DestPath mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
+     */
+    public void setDestPath(String DestPath) {
+        this.DestPath = DestPath;
+    }
+
     public DoDirectoryOperationRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DoDirectoryOperationRequest extends AbstractModel {
         if (source.Mode != null) {
             this.Mode = new String(source.Mode);
         }
+        if (source.DestPath != null) {
+            this.DestPath = new String(source.DestPath);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DoDirectoryOperationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OpetationType", this.OpetationType);
         this.setParamSimple(map, prefix + "DirectoryPath", this.DirectoryPath);
         this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "DestPath", this.DestPath);
 
     }
 }

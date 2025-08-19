@@ -80,6 +80,20 @@ public class GatewayPlugin extends AbstractModel {
     private String Status;
 
     /**
+    * 是否禁用删除
+    */
+    @SerializedName("DeleteDisabled")
+    @Expose
+    private Boolean DeleteDisabled;
+
+    /**
+    * 禁用原因
+    */
+    @SerializedName("DeleteDisabledReason")
+    @Expose
+    private String DeleteDisabledReason;
+
+    /**
      * Get 网关插件id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 网关插件id
@@ -219,6 +233,38 @@ public class GatewayPlugin extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 是否禁用删除 
+     * @return DeleteDisabled 是否禁用删除
+     */
+    public Boolean getDeleteDisabled() {
+        return this.DeleteDisabled;
+    }
+
+    /**
+     * Set 是否禁用删除
+     * @param DeleteDisabled 是否禁用删除
+     */
+    public void setDeleteDisabled(Boolean DeleteDisabled) {
+        this.DeleteDisabled = DeleteDisabled;
+    }
+
+    /**
+     * Get 禁用原因 
+     * @return DeleteDisabledReason 禁用原因
+     */
+    public String getDeleteDisabledReason() {
+        return this.DeleteDisabledReason;
+    }
+
+    /**
+     * Set 禁用原因
+     * @param DeleteDisabledReason 禁用原因
+     */
+    public void setDeleteDisabledReason(String DeleteDisabledReason) {
+        this.DeleteDisabledReason = DeleteDisabledReason;
+    }
+
     public GatewayPlugin() {
     }
 
@@ -248,6 +294,12 @@ public class GatewayPlugin extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.DeleteDisabled != null) {
+            this.DeleteDisabled = new Boolean(source.DeleteDisabled);
+        }
+        if (source.DeleteDisabledReason != null) {
+            this.DeleteDisabledReason = new String(source.DeleteDisabledReason);
+        }
     }
 
 
@@ -262,6 +314,8 @@ public class GatewayPlugin extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "DeleteDisabled", this.DeleteDisabled);
+        this.setParamSimple(map, prefix + "DeleteDisabledReason", this.DeleteDisabledReason);
 
     }
 }

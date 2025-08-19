@@ -48,6 +48,14 @@ public class ModelParameter extends AbstractModel {
     private Float Max;
 
     /**
+    * 超参名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 默认值
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Default 默认值
@@ -107,6 +115,26 @@ public class ModelParameter extends AbstractModel {
         this.Max = Max;
     }
 
+    /**
+     * Get 超参名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 超参名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 超参名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 超参名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public ModelParameter() {
     }
 
@@ -124,6 +152,9 @@ public class ModelParameter extends AbstractModel {
         if (source.Max != null) {
             this.Max = new Float(source.Max);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class ModelParameter extends AbstractModel {
         this.setParamSimple(map, prefix + "Default", this.Default);
         this.setParamSimple(map, prefix + "Min", this.Min);
         this.setParamSimple(map, prefix + "Max", this.Max);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

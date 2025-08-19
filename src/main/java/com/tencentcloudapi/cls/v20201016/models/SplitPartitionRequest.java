@@ -24,14 +24,16 @@ import java.util.HashMap;
 public class SplitPartitionRequest extends AbstractModel {
 
     /**
-    * 日志主题ID
+    * 日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 待分裂分区ID
+    * 待分裂分区Id
+- 通过[获取分区列表](https://cloud.tencent.com/document/product/614/56470)获取待分裂分区Id。
     */
     @SerializedName("PartitionId")
     @Expose
@@ -52,32 +54,40 @@ public class SplitPartitionRequest extends AbstractModel {
     private Long Number;
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get 日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
+     * @return TopicId 日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set 日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param TopicId 日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 待分裂分区ID 
-     * @return PartitionId 待分裂分区ID
+     * Get 待分裂分区Id
+- 通过[获取分区列表](https://cloud.tencent.com/document/product/614/56470)获取待分裂分区Id。 
+     * @return PartitionId 待分裂分区Id
+- 通过[获取分区列表](https://cloud.tencent.com/document/product/614/56470)获取待分裂分区Id。
      */
     public Long getPartitionId() {
         return this.PartitionId;
     }
 
     /**
-     * Set 待分裂分区ID
-     * @param PartitionId 待分裂分区ID
+     * Set 待分裂分区Id
+- 通过[获取分区列表](https://cloud.tencent.com/document/product/614/56470)获取待分裂分区Id。
+     * @param PartitionId 待分裂分区Id
+- 通过[获取分区列表](https://cloud.tencent.com/document/product/614/56470)获取待分裂分区Id。
      */
     public void setPartitionId(Long PartitionId) {
         this.PartitionId = PartitionId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSharedKnowledgeResponse extends AbstractModel {
 
     /**
-    * 知识库列表
+    * 知识库详情列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Info")
@@ -39,9 +39,9 @@ public class DescribeSharedKnowledgeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 知识库列表
+     * Get 知识库详情列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Info 知识库列表
+     * @return Info 知识库详情列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public KnowledgeDetailInfo getInfo() {
@@ -49,9 +49,9 @@ public class DescribeSharedKnowledgeResponse extends AbstractModel {
     }
 
     /**
-     * Set 知识库列表
+     * Set 知识库详情列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Info 知识库列表
+     * @param Info 知识库详情列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfo(KnowledgeDetailInfo Info) {

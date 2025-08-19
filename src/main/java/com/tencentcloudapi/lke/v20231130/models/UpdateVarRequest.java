@@ -73,6 +73,13 @@ public class UpdateVarRequest extends AbstractModel {
     private String VarDefaultFileName;
 
     /**
+    * 变量类型
+    */
+    @SerializedName("VarModuleType")
+    @Expose
+    private Long VarModuleType;
+
+    /**
      * Get 应用ID 
      * @return AppBizId 应用ID
      */
@@ -184,6 +191,22 @@ public class UpdateVarRequest extends AbstractModel {
         this.VarDefaultFileName = VarDefaultFileName;
     }
 
+    /**
+     * Get 变量类型 
+     * @return VarModuleType 变量类型
+     */
+    public Long getVarModuleType() {
+        return this.VarModuleType;
+    }
+
+    /**
+     * Set 变量类型
+     * @param VarModuleType 变量类型
+     */
+    public void setVarModuleType(Long VarModuleType) {
+        this.VarModuleType = VarModuleType;
+    }
+
     public UpdateVarRequest() {
     }
 
@@ -213,6 +236,9 @@ public class UpdateVarRequest extends AbstractModel {
         if (source.VarDefaultFileName != null) {
             this.VarDefaultFileName = new String(source.VarDefaultFileName);
         }
+        if (source.VarModuleType != null) {
+            this.VarModuleType = new Long(source.VarModuleType);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class UpdateVarRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VarType", this.VarType);
         this.setParamSimple(map, prefix + "VarDefaultValue", this.VarDefaultValue);
         this.setParamSimple(map, prefix + "VarDefaultFileName", this.VarDefaultFileName);
+        this.setParamSimple(map, prefix + "VarModuleType", this.VarModuleType);
 
     }
 }

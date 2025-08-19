@@ -24,7 +24,14 @@ import java.util.HashMap;
 public class DescribeEnvironmentRolesRequest extends AbstractModel {
 
     /**
-    * 必填字段，环境（命名空间）名称。
+    * Pulsar 集群的ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 环境（命名空间）名称。
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -45,13 +52,6 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 必填字段，Pulsar 集群的ID
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
-
-    /**
     * 角色名称
     */
     @SerializedName("RoleName")
@@ -69,16 +69,32 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get 必填字段，环境（命名空间）名称。 
-     * @return EnvironmentId 必填字段，环境（命名空间）名称。
+     * Get Pulsar 集群的ID 
+     * @return ClusterId Pulsar 集群的ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar 集群的ID
+     * @param ClusterId Pulsar 集群的ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 环境（命名空间）名称。 
+     * @return EnvironmentId 环境（命名空间）名称。
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set 必填字段，环境（命名空间）名称。
-     * @param EnvironmentId 必填字段，环境（命名空间）名称。
+     * Set 环境（命名空间）名称。
+     * @param EnvironmentId 环境（命名空间）名称。
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
@@ -114,22 +130,6 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel {
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
-    }
-
-    /**
-     * Get 必填字段，Pulsar 集群的ID 
-     * @return ClusterId 必填字段，Pulsar 集群的ID
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set 必填字段，Pulsar 集群的ID
-     * @param ClusterId 必填字段，Pulsar 集群的ID
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
     }
 
     /**
@@ -184,6 +184,9 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeEnvironmentRolesRequest(DescribeEnvironmentRolesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
@@ -192,9 +195,6 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel {
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
-        }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
         }
         if (source.RoleName != null) {
             this.RoleName = new String(source.RoleName);
@@ -212,10 +212,10 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 

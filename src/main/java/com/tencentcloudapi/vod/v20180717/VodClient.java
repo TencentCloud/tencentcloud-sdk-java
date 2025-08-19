@@ -291,6 +291,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于创建自定义模板，模板用于 ProcessMediaByMPS 接口的部分功能。
+创建模板时，需要将 MPS 相关参数以 JSON 格式填入 MPSCreateTemplateParams 参数中。关于具体的任务参数配置方法，请参考 MPS 任务模板相关文档说明。
+当前支持创建自定义模板的 MPS 功能：
+1. [音视频增强](https://cloud.tencent.com/document/product/862/118703)。
+
+> 以该种方式创建的任务模板：
+> 1. 模板的管理仍在点播平台中完成。
+> 2. 该功能目前仍在内测中，如需测试体验，您可以联系我们获得支持。
+     * @param req CreateMPSTemplateRequest
+     * @return CreateMPSTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMPSTemplateResponse CreateMPSTemplate(CreateMPSTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMPSTemplate", CreateMPSTemplateResponse.class);
+    }
+
+    /**
      *该接口用于创建素材样本，用于通过五官定位等技术，进行内容识别、不适宜视频识别等视频处理。
      * @param req CreatePersonSampleRequest
      * @return CreatePersonSampleResponse
@@ -598,6 +616,17 @@ public class VodClient extends AbstractClient{
     public DeleteJustInTimeTranscodeTemplateResponse DeleteJustInTimeTranscodeTemplate(DeleteJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteJustInTimeTranscodeTemplate", DeleteJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
+     *删除用户自定义 MPS 任务模板。
+     * @param req DeleteMPSTemplateRequest
+     * @return DeleteMPSTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMPSTemplateResponse DeleteMPSTemplate(DeleteMPSTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMPSTemplate", DeleteMPSTemplateResponse.class);
     }
 
     /**
@@ -1139,6 +1168,18 @@ public class VodClient extends AbstractClient{
     public DescribeLicenseUsageDataResponse DescribeLicenseUsageData(DescribeLicenseUsageDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLicenseUsageData", DescribeLicenseUsageDataResponse.class);
+    }
+
+    /**
+     *获取用户自定义媒体处理服务（MPS）任务模板。
+查询模板列表时，需要将 MPS 相关参数以 JSON 格式填入 MPSDescribeTemplateParams 参数中。关于具体的任务参数配置方法，请参考 MPS 任务模板相关文档说明。
+     * @param req DescribeMPSTemplatesRequest
+     * @return DescribeMPSTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMPSTemplatesResponse DescribeMPSTemplates(DescribeMPSTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMPSTemplates", DescribeMPSTemplatesResponse.class);
     }
 
     /**
@@ -1771,6 +1812,18 @@ public class VodClient extends AbstractClient{
     public ModifyJustInTimeTranscodeTemplateResponse ModifyJustInTimeTranscodeTemplate(ModifyJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyJustInTimeTranscodeTemplate", ModifyJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
+     *修改用户自定义 MPS 任务模板。
+修改模板时，需要将 MPS 相关参数以 JSON 格式填入 MPSModifyTemplateParams 参数中。关于具体的任务参数配置方法，请参考 MPS 任务模板相关文档说明。
+     * @param req ModifyMPSTemplateRequest
+     * @return ModifyMPSTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMPSTemplateResponse ModifyMPSTemplate(ModifyMPSTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMPSTemplate", ModifyMPSTemplateResponse.class);
     }
 
     /**

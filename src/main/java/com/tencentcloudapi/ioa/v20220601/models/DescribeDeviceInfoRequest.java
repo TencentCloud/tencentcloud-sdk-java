@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeDeviceInfoRequest extends AbstractModel {
 
     /**
+    * 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+    */
+    @SerializedName("DomainInstanceId")
+    @Expose
+    private String DomainInstanceId;
+
+    /**
     * 终端id
     */
     @SerializedName("Mid")
@@ -36,6 +43,22 @@ public class DescribeDeviceInfoRequest extends AbstractModel {
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+     * Get 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。 
+     * @return DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public String getDomainInstanceId() {
+        return this.DomainInstanceId;
+    }
+
+    /**
+     * Set 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @param DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public void setDomainInstanceId(String DomainInstanceId) {
+        this.DomainInstanceId = DomainInstanceId;
+    }
 
     /**
      * Get 终端id 
@@ -77,6 +100,9 @@ public class DescribeDeviceInfoRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDeviceInfoRequest(DescribeDeviceInfoRequest source) {
+        if (source.DomainInstanceId != null) {
+            this.DomainInstanceId = new String(source.DomainInstanceId);
+        }
         if (source.Mid != null) {
             this.Mid = new String(source.Mid);
         }
@@ -90,6 +116,7 @@ public class DescribeDeviceInfoRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
         this.setParamSimple(map, prefix + "Mid", this.Mid);
         this.setParamSimple(map, prefix + "Type", this.Type);
 

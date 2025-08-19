@@ -207,6 +207,22 @@ public class DescribeDocResponse extends AbstractModel {
     private Boolean IsDownload;
 
     /**
+    * 自定义切分规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SplitRule")
+    @Expose
+    private String SplitRule;
+
+    /**
+    * 文档更新频率
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdatePeriodInfo")
+    @Expose
+    private UpdatePeriodInfo UpdatePeriodInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -634,6 +650,46 @@ public class DescribeDocResponse extends AbstractModel {
     }
 
     /**
+     * Get 自定义切分规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SplitRule 自定义切分规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSplitRule() {
+        return this.SplitRule;
+    }
+
+    /**
+     * Set 自定义切分规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SplitRule 自定义切分规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSplitRule(String SplitRule) {
+        this.SplitRule = SplitRule;
+    }
+
+    /**
+     * Get 文档更新频率
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdatePeriodInfo 文档更新频率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UpdatePeriodInfo getUpdatePeriodInfo() {
+        return this.UpdatePeriodInfo;
+    }
+
+    /**
+     * Set 文档更新频率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdatePeriodInfo 文档更新频率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdatePeriodInfo(UpdatePeriodInfo UpdatePeriodInfo) {
+        this.UpdatePeriodInfo = UpdatePeriodInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -738,6 +794,12 @@ public class DescribeDocResponse extends AbstractModel {
         if (source.IsDownload != null) {
             this.IsDownload = new Boolean(source.IsDownload);
         }
+        if (source.SplitRule != null) {
+            this.SplitRule = new String(source.SplitRule);
+        }
+        if (source.UpdatePeriodInfo != null) {
+            this.UpdatePeriodInfo = new UpdatePeriodInfo(source.UpdatePeriodInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -774,6 +836,8 @@ public class DescribeDocResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         this.setParamSimple(map, prefix + "IsDownload", this.IsDownload);
+        this.setParamSimple(map, prefix + "SplitRule", this.SplitRule);
+        this.setParamObj(map, prefix + "UpdatePeriodInfo.", this.UpdatePeriodInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

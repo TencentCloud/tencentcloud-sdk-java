@@ -52,6 +52,13 @@ public class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel {
     private Boolean TraceFlag;
 
     /**
+    * 限流生产消费比例
+    */
+    @SerializedName("SendReceiveRatio")
+    @Expose
+    private Float SendReceiveRatio;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -115,6 +122,22 @@ public class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel {
         this.TraceFlag = TraceFlag;
     }
 
+    /**
+     * Get 限流生产消费比例 
+     * @return SendReceiveRatio 限流生产消费比例
+     */
+    public Float getSendReceiveRatio() {
+        return this.SendReceiveRatio;
+    }
+
+    /**
+     * Set 限流生产消费比例
+     * @param SendReceiveRatio 限流生产消费比例
+     */
+    public void setSendReceiveRatio(Float SendReceiveRatio) {
+        this.SendReceiveRatio = SendReceiveRatio;
+    }
+
     public ModifyRabbitMQServerlessInstanceRequest() {
     }
 
@@ -135,6 +158,9 @@ public class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel {
         if (source.TraceFlag != null) {
             this.TraceFlag = new Boolean(source.TraceFlag);
         }
+        if (source.SendReceiveRatio != null) {
+            this.SendReceiveRatio = new Float(source.SendReceiveRatio);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
+        this.setParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
 
     }
 }

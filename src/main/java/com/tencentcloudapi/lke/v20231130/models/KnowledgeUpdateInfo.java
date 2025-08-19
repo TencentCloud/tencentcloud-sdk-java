@@ -55,6 +55,13 @@ public class KnowledgeUpdateInfo extends AbstractModel {
     private String QaExtractModel;
 
     /**
+    * 拥有者id
+    */
+    @SerializedName("OwnerStaffId")
+    @Expose
+    private String OwnerStaffId;
+
+    /**
      * Get 共享知识库名称 
      * @return KnowledgeName 共享知识库名称
      */
@@ -95,7 +102,9 @@ public class KnowledgeUpdateInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EmbeddingModel Embedding模型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getEmbeddingModel() {
         return this.EmbeddingModel;
     }
@@ -105,7 +114,9 @@ public class KnowledgeUpdateInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EmbeddingModel Embedding模型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setEmbeddingModel(String EmbeddingModel) {
         this.EmbeddingModel = EmbeddingModel;
     }
@@ -115,7 +126,9 @@ public class KnowledgeUpdateInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return QaExtractModel 问答提取模型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getQaExtractModel() {
         return this.QaExtractModel;
     }
@@ -125,9 +138,27 @@ public class KnowledgeUpdateInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param QaExtractModel 问答提取模型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setQaExtractModel(String QaExtractModel) {
         this.QaExtractModel = QaExtractModel;
+    }
+
+    /**
+     * Get 拥有者id 
+     * @return OwnerStaffId 拥有者id
+     */
+    public String getOwnerStaffId() {
+        return this.OwnerStaffId;
+    }
+
+    /**
+     * Set 拥有者id
+     * @param OwnerStaffId 拥有者id
+     */
+    public void setOwnerStaffId(String OwnerStaffId) {
+        this.OwnerStaffId = OwnerStaffId;
     }
 
     public KnowledgeUpdateInfo() {
@@ -150,6 +181,9 @@ public class KnowledgeUpdateInfo extends AbstractModel {
         if (source.QaExtractModel != null) {
             this.QaExtractModel = new String(source.QaExtractModel);
         }
+        if (source.OwnerStaffId != null) {
+            this.OwnerStaffId = new String(source.OwnerStaffId);
+        }
     }
 
 
@@ -161,6 +195,7 @@ public class KnowledgeUpdateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "KnowledgeDescription", this.KnowledgeDescription);
         this.setParamSimple(map, prefix + "EmbeddingModel", this.EmbeddingModel);
         this.setParamSimple(map, prefix + "QaExtractModel", this.QaExtractModel);
+        this.setParamSimple(map, prefix + "OwnerStaffId", this.OwnerStaffId);
 
     }
 }

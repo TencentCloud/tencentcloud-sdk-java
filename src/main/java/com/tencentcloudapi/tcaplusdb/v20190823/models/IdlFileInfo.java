@@ -53,7 +53,6 @@ public class IdlFileInfo extends AbstractModel {
 
     /**
     * 文件ID，对于已上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -61,7 +60,6 @@ public class IdlFileInfo extends AbstractModel {
 
     /**
     * 文件内容，对于本次新上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileContent")
     @Expose
@@ -132,10 +130,8 @@ public class IdlFileInfo extends AbstractModel {
     }
 
     /**
-     * Get 文件ID，对于已上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件ID，对于已上传的文件有意义 
      * @return FileId 文件ID，对于已上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileId() {
         return this.FileId;
@@ -143,19 +139,15 @@ public class IdlFileInfo extends AbstractModel {
 
     /**
      * Set 文件ID，对于已上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 文件ID，对于已上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(Long FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 文件内容，对于本次新上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件内容，对于本次新上传的文件有意义 
      * @return FileContent 文件内容，对于本次新上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileContent() {
         return this.FileContent;
@@ -163,9 +155,7 @@ public class IdlFileInfo extends AbstractModel {
 
     /**
      * Set 文件内容，对于本次新上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileContent 文件内容，对于本次新上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;

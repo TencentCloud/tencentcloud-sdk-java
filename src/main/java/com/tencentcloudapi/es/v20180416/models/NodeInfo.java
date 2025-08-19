@@ -108,6 +108,14 @@ public class NodeInfo extends AbstractModel {
     private Long DiskEnhance;
 
     /**
+    * 节点Gpu信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GpuInfo")
+    @Expose
+    private GpuInfo GpuInfo;
+
+    /**
      * Get 节点数量 
      * @return NodeNum 节点数量
      */
@@ -311,6 +319,26 @@ public class NodeInfo extends AbstractModel {
         this.DiskEnhance = DiskEnhance;
     }
 
+    /**
+     * Get 节点Gpu信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GpuInfo 节点Gpu信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GpuInfo getGpuInfo() {
+        return this.GpuInfo;
+    }
+
+    /**
+     * Set 节点Gpu信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GpuInfo 节点Gpu信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGpuInfo(GpuInfo GpuInfo) {
+        this.GpuInfo = GpuInfo;
+    }
+
     public NodeInfo() {
     }
 
@@ -352,6 +380,9 @@ public class NodeInfo extends AbstractModel {
         if (source.DiskEnhance != null) {
             this.DiskEnhance = new Long(source.DiskEnhance);
         }
+        if (source.GpuInfo != null) {
+            this.GpuInfo = new GpuInfo(source.GpuInfo);
+        }
     }
 
 
@@ -370,6 +401,7 @@ public class NodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CpuNum", this.CpuNum);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
         this.setParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
+        this.setParamObj(map, prefix + "GpuInfo.", this.GpuInfo);
 
     }
 }

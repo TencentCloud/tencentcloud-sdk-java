@@ -60,7 +60,6 @@ public class ProxyDetailInfo extends AbstractModel {
 
     /**
     * 版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -147,10 +146,8 @@ public class ProxyDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本 
      * @return Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -158,9 +155,7 @@ public class ProxyDetailInfo extends AbstractModel {
 
     /**
      * Set 版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;

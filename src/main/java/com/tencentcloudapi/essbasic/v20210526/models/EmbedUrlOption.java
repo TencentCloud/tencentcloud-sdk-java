@@ -64,6 +64,21 @@ public class EmbedUrlOption extends AbstractModel {
     private Boolean ForbidEditWatermark;
 
     /**
+    * 印章描述
+    */
+    @SerializedName("SealDescription")
+    @Expose
+    private String SealDescription;
+
+    /**
+    * 是否禁止编辑印章描述内容
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+    */
+    @SerializedName("ForbidEditSealDescription")
+    @Expose
+    private String ForbidEditSealDescription;
+
+    /**
      * Get 合同详情预览，允许展示控件信息
 <ul>
 <li><b>true</b>：允许在合同详情页展示控件</li>
@@ -175,6 +190,42 @@ public class EmbedUrlOption extends AbstractModel {
         this.ForbidEditWatermark = ForbidEditWatermark;
     }
 
+    /**
+     * Get 印章描述 
+     * @return SealDescription 印章描述
+     */
+    public String getSealDescription() {
+        return this.SealDescription;
+    }
+
+    /**
+     * Set 印章描述
+     * @param SealDescription 印章描述
+     */
+    public void setSealDescription(String SealDescription) {
+        this.SealDescription = SealDescription;
+    }
+
+    /**
+     * Get 是否禁止编辑印章描述内容
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul> 
+     * @return ForbidEditSealDescription 是否禁止编辑印章描述内容
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     */
+    public String getForbidEditSealDescription() {
+        return this.ForbidEditSealDescription;
+    }
+
+    /**
+     * Set 是否禁止编辑印章描述内容
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     * @param ForbidEditSealDescription 是否禁止编辑印章描述内容
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     */
+    public void setForbidEditSealDescription(String ForbidEditSealDescription) {
+        this.ForbidEditSealDescription = ForbidEditSealDescription;
+    }
+
     public EmbedUrlOption() {
     }
 
@@ -195,6 +246,12 @@ public class EmbedUrlOption extends AbstractModel {
         if (source.ForbidEditWatermark != null) {
             this.ForbidEditWatermark = new Boolean(source.ForbidEditWatermark);
         }
+        if (source.SealDescription != null) {
+            this.SealDescription = new String(source.SealDescription);
+        }
+        if (source.ForbidEditSealDescription != null) {
+            this.ForbidEditSealDescription = new String(source.ForbidEditSealDescription);
+        }
     }
 
 
@@ -206,6 +263,8 @@ public class EmbedUrlOption extends AbstractModel {
         this.setParamSimple(map, prefix + "ShowTemplateComponent", this.ShowTemplateComponent);
         this.setParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
         this.setParamSimple(map, prefix + "ForbidEditWatermark", this.ForbidEditWatermark);
+        this.setParamSimple(map, prefix + "SealDescription", this.SealDescription);
+        this.setParamSimple(map, prefix + "ForbidEditSealDescription", this.ForbidEditSealDescription);
 
     }
 }

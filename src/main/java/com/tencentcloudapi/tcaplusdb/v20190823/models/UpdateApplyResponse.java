@@ -25,7 +25,6 @@ public class UpdateApplyResponse extends AbstractModel {
 
     /**
     * 已更新的申请单列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplyResults")
     @Expose
@@ -46,10 +45,8 @@ public class UpdateApplyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 已更新的申请单列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已更新的申请单列表 
      * @return ApplyResults 已更新的申请单列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApplyResult [] getApplyResults() {
         return this.ApplyResults;
@@ -57,9 +54,7 @@ public class UpdateApplyResponse extends AbstractModel {
 
     /**
      * Set 已更新的申请单列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplyResults 已更新的申请单列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplyResults(ApplyResult [] ApplyResults) {
         this.ApplyResults = ApplyResults;

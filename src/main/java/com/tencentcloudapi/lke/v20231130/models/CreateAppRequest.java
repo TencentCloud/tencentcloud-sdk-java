@@ -45,6 +45,13 @@ public class CreateAppRequest extends AbstractModel {
     private String Pattern;
 
     /**
+    * 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+    */
+    @SerializedName("AgentType")
+    @Expose
+    private String AgentType;
+
+    /**
      * Get 应用类型；knowledge_qa-知识问答管理 
      * @return AppType 应用类型；knowledge_qa-知识问答管理
      */
@@ -92,6 +99,22 @@ public class CreateAppRequest extends AbstractModel {
         this.Pattern = Pattern;
     }
 
+    /**
+     * Get 智能体类型 dialogue 对话式智能体，wechat 公众号智能体 
+     * @return AgentType 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+     */
+    public String getAgentType() {
+        return this.AgentType;
+    }
+
+    /**
+     * Set 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+     * @param AgentType 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+     */
+    public void setAgentType(String AgentType) {
+        this.AgentType = AgentType;
+    }
+
     public CreateAppRequest() {
     }
 
@@ -109,6 +132,9 @@ public class CreateAppRequest extends AbstractModel {
         if (source.Pattern != null) {
             this.Pattern = new String(source.Pattern);
         }
+        if (source.AgentType != null) {
+            this.AgentType = new String(source.AgentType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class CreateAppRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AppType", this.AppType);
         this.setParamObj(map, prefix + "BaseConfig.", this.BaseConfig);
         this.setParamSimple(map, prefix + "Pattern", this.Pattern);
+        this.setParamSimple(map, prefix + "AgentType", this.AgentType);
 
     }
 }

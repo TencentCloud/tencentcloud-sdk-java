@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceRollbackRangeTime extends AbstractModel {
 
     /**
-    * 查询数据库错误码
+    * 查询数据库错误码。0 - 正常，1600001 - 内部错误，1600003 - 入参异常，1600009 - 实例不存在，1624001 - DB 访问异常。
     */
     @SerializedName("Code")
     @Expose
@@ -52,16 +52,16 @@ public class InstanceRollbackRangeTime extends AbstractModel {
     private RollbackTimeRange [] Times;
 
     /**
-     * Get 查询数据库错误码 
-     * @return Code 查询数据库错误码
+     * Get 查询数据库错误码。0 - 正常，1600001 - 内部错误，1600003 - 入参异常，1600009 - 实例不存在，1624001 - DB 访问异常。 
+     * @return Code 查询数据库错误码。0 - 正常，1600001 - 内部错误，1600003 - 入参异常，1600009 - 实例不存在，1624001 - DB 访问异常。
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 查询数据库错误码
-     * @param Code 查询数据库错误码
+     * Set 查询数据库错误码。0 - 正常，1600001 - 内部错误，1600003 - 入参异常，1600009 - 实例不存在，1624001 - DB 访问异常。
+     * @param Code 查询数据库错误码。0 - 正常，1600001 - 内部错误，1600003 - 入参异常，1600009 - 实例不存在，1624001 - DB 访问异常。
      */
     public void setCode(Long Code) {
         this.Code = Code;

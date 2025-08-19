@@ -136,6 +136,13 @@ public class AppInfo extends AbstractModel {
     private String ThoughtModelAliasName;
 
     /**
+    * 权限位信息
+    */
+    @SerializedName("PermissionIds")
+    @Expose
+    private String [] PermissionIds;
+
+    /**
      * Get 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
@@ -415,6 +422,22 @@ public class AppInfo extends AbstractModel {
         this.ThoughtModelAliasName = ThoughtModelAliasName;
     }
 
+    /**
+     * Get 权限位信息 
+     * @return PermissionIds 权限位信息
+     */
+    public String [] getPermissionIds() {
+        return this.PermissionIds;
+    }
+
+    /**
+     * Set 权限位信息
+     * @param PermissionIds 权限位信息
+     */
+    public void setPermissionIds(String [] PermissionIds) {
+        this.PermissionIds = PermissionIds;
+    }
+
     public AppInfo() {
     }
 
@@ -465,6 +488,12 @@ public class AppInfo extends AbstractModel {
         if (source.ThoughtModelAliasName != null) {
             this.ThoughtModelAliasName = new String(source.ThoughtModelAliasName);
         }
+        if (source.PermissionIds != null) {
+            this.PermissionIds = new String[source.PermissionIds.length];
+            for (int i = 0; i < source.PermissionIds.length; i++) {
+                this.PermissionIds[i] = new String(source.PermissionIds[i]);
+            }
+        }
     }
 
 
@@ -486,6 +515,7 @@ public class AppInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelAliasName", this.ModelAliasName);
         this.setParamSimple(map, prefix + "Pattern", this.Pattern);
         this.setParamSimple(map, prefix + "ThoughtModelAliasName", this.ThoughtModelAliasName);
+        this.setParamArraySimple(map, prefix + "PermissionIds.", this.PermissionIds);
 
     }
 }

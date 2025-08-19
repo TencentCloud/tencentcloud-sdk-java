@@ -59,6 +59,27 @@ public class AgentPluginInfo extends AbstractModel {
     private AgentKnowledgeQAPlugin KnowledgeQa;
 
     /**
+    * 是否使用一键授权
+    */
+    @SerializedName("EnableRoleAuth")
+    @Expose
+    private Boolean EnableRoleAuth;
+
+    /**
+    * 应用配置的插件query信息
+    */
+    @SerializedName("Query")
+    @Expose
+    private AgentPluginQuery [] Query;
+
+    /**
+    * MCP类型
+    */
+    @SerializedName("McpType")
+    @Expose
+    private Long McpType;
+
+    /**
      * Get 插件id 
      * @return PluginId 插件id
      */
@@ -138,6 +159,54 @@ public class AgentPluginInfo extends AbstractModel {
         this.KnowledgeQa = KnowledgeQa;
     }
 
+    /**
+     * Get 是否使用一键授权 
+     * @return EnableRoleAuth 是否使用一键授权
+     */
+    public Boolean getEnableRoleAuth() {
+        return this.EnableRoleAuth;
+    }
+
+    /**
+     * Set 是否使用一键授权
+     * @param EnableRoleAuth 是否使用一键授权
+     */
+    public void setEnableRoleAuth(Boolean EnableRoleAuth) {
+        this.EnableRoleAuth = EnableRoleAuth;
+    }
+
+    /**
+     * Get 应用配置的插件query信息 
+     * @return Query 应用配置的插件query信息
+     */
+    public AgentPluginQuery [] getQuery() {
+        return this.Query;
+    }
+
+    /**
+     * Set 应用配置的插件query信息
+     * @param Query 应用配置的插件query信息
+     */
+    public void setQuery(AgentPluginQuery [] Query) {
+        this.Query = Query;
+    }
+
+    /**
+     * Get MCP类型 
+     * @return McpType MCP类型
+     */
+    public Long getMcpType() {
+        return this.McpType;
+    }
+
+    /**
+     * Set MCP类型
+     * @param McpType MCP类型
+     */
+    public void setMcpType(Long McpType) {
+        this.McpType = McpType;
+    }
+
     public AgentPluginInfo() {
     }
 
@@ -164,6 +233,18 @@ public class AgentPluginInfo extends AbstractModel {
         if (source.KnowledgeQa != null) {
             this.KnowledgeQa = new AgentKnowledgeQAPlugin(source.KnowledgeQa);
         }
+        if (source.EnableRoleAuth != null) {
+            this.EnableRoleAuth = new Boolean(source.EnableRoleAuth);
+        }
+        if (source.Query != null) {
+            this.Query = new AgentPluginQuery[source.Query.length];
+            for (int i = 0; i < source.Query.length; i++) {
+                this.Query[i] = new AgentPluginQuery(source.Query[i]);
+            }
+        }
+        if (source.McpType != null) {
+            this.McpType = new Long(source.McpType);
+        }
     }
 
 
@@ -176,6 +257,9 @@ public class AgentPluginInfo extends AbstractModel {
         this.setParamObj(map, prefix + "Model.", this.Model);
         this.setParamSimple(map, prefix + "PluginInfoType", this.PluginInfoType);
         this.setParamObj(map, prefix + "KnowledgeQa.", this.KnowledgeQa);
+        this.setParamSimple(map, prefix + "EnableRoleAuth", this.EnableRoleAuth);
+        this.setParamArrayObj(map, prefix + "Query.", this.Query);
+        this.setParamSimple(map, prefix + "McpType", this.McpType);
 
     }
 }

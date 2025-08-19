@@ -27,6 +27,7 @@ public class DescribeDashboardSubscribesRequest extends AbstractModel {
     * dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
 
 - 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+- 入参示例：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
     */
@@ -52,11 +53,13 @@ public class DescribeDashboardSubscribesRequest extends AbstractModel {
      * Get dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
 
 - 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+- 入参示例：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。 
      * @return Filters dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
 
 - 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+- 入参示例：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
@@ -68,11 +71,13 @@ public class DescribeDashboardSubscribesRequest extends AbstractModel {
      * Set dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
 
 - 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+- 入参示例：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      * @param Filters dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
 
 - 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+- 入参示例：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      */

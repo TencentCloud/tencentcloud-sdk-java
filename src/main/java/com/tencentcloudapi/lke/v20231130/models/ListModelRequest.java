@@ -38,7 +38,7 @@ public class ListModelRequest extends AbstractModel {
     private String Pattern;
 
     /**
-    * 模型类别 generate：生成模型，thought：思考模型
+    * 模型类别 generate：生成模型，thought：思考模型,embedding模型，rerank：rerank模型
     */
     @SerializedName("ModelCategory")
     @Expose
@@ -91,16 +91,16 @@ public class ListModelRequest extends AbstractModel {
     }
 
     /**
-     * Get 模型类别 generate：生成模型，thought：思考模型 
-     * @return ModelCategory 模型类别 generate：生成模型，thought：思考模型
+     * Get 模型类别 generate：生成模型，thought：思考模型,embedding模型，rerank：rerank模型 
+     * @return ModelCategory 模型类别 generate：生成模型，thought：思考模型,embedding模型，rerank：rerank模型
      */
     public String getModelCategory() {
         return this.ModelCategory;
     }
 
     /**
-     * Set 模型类别 generate：生成模型，thought：思考模型
-     * @param ModelCategory 模型类别 generate：生成模型，thought：思考模型
+     * Set 模型类别 generate：生成模型，thought：思考模型,embedding模型，rerank：rerank模型
+     * @param ModelCategory 模型类别 generate：生成模型，thought：思考模型,embedding模型，rerank：rerank模型
      */
     public void setModelCategory(String ModelCategory) {
         this.ModelCategory = ModelCategory;

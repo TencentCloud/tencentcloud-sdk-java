@@ -30,9 +30,9 @@ public class DeliverConfig extends AbstractModel {
  ap-guangzhou  广州地域；
 ap-nanjing 南京地域。
 
-详细信息请查看官网：
+详细信息请查看官网[地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
 
-https://cloud.tencent.com/document/product/614/18940
+
     */
     @SerializedName("Region")
     @Expose
@@ -63,18 +63,18 @@ https://cloud.tencent.com/document/product/614/18940
  ap-guangzhou  广州地域；
 ap-nanjing 南京地域。
 
-详细信息请查看官网：
+详细信息请查看官网[地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
 
-https://cloud.tencent.com/document/product/614/18940 
+ 
      * @return Region 地域信息。
 
 示例：
  ap-guangzhou  广州地域；
 ap-nanjing 南京地域。
 
-详细信息请查看官网：
+详细信息请查看官网[地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
 
-https://cloud.tencent.com/document/product/614/18940
+
      */
     public String getRegion() {
         return this.Region;
@@ -87,18 +87,18 @@ https://cloud.tencent.com/document/product/614/18940
  ap-guangzhou  广州地域；
 ap-nanjing 南京地域。
 
-详细信息请查看官网：
+详细信息请查看官网[地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
 
-https://cloud.tencent.com/document/product/614/18940
+
      * @param Region 地域信息。
 
 示例：
  ap-guangzhou  广州地域；
 ap-nanjing 南京地域。
 
-详细信息请查看官网：
+详细信息请查看官网[地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
 
-https://cloud.tencent.com/document/product/614/18940
+
      */
     public void setRegion(String Region) {
         this.Region = Region;

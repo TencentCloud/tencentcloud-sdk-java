@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeResourceConfigLicenseFunction extends AbstractModel {
 
     /**
-    * name
+    * 功能名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -32,7 +32,7 @@ public class DescribeResourceConfigLicenseFunction extends AbstractModel {
     private String Name;
 
     /**
-    * enable
+    * 是否启用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
@@ -40,9 +40,9 @@ public class DescribeResourceConfigLicenseFunction extends AbstractModel {
     private Boolean Enable;
 
     /**
-     * Get name
+     * Get 功能名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name name
+     * @return Name 功能名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -50,9 +50,9 @@ public class DescribeResourceConfigLicenseFunction extends AbstractModel {
     }
 
     /**
-     * Set name
+     * Set 功能名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name name
+     * @param Name 功能名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -60,9 +60,9 @@ public class DescribeResourceConfigLicenseFunction extends AbstractModel {
     }
 
     /**
-     * Get enable
+     * Get 是否启用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Enable enable
+     * @return Enable 是否启用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnable() {
@@ -70,9 +70,9 @@ public class DescribeResourceConfigLicenseFunction extends AbstractModel {
     }
 
     /**
-     * Set enable
+     * Set 是否启用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Enable enable
+     * @param Enable 是否启用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Boolean Enable) {

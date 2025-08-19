@@ -25,7 +25,6 @@ public class SetBackupExpireRuleResponse extends AbstractModel {
 
     /**
     * TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -39,10 +38,8 @@ public class SetBackupExpireRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务 
      * @return TaskId TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -50,9 +47,7 @@ public class SetBackupExpireRuleResponse extends AbstractModel {
 
     /**
      * Set TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

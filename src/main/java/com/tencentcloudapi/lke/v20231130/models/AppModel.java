@@ -112,6 +112,14 @@ public class AppModel extends AbstractModel {
     private Long ResourceStatus;
 
     /**
+    * 模型参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModelParams")
+    @Expose
+    private ModelParams ModelParams;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 模型名称
@@ -331,6 +339,26 @@ public class AppModel extends AbstractModel {
         this.ResourceStatus = ResourceStatus;
     }
 
+    /**
+     * Get 模型参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModelParams 模型参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ModelParams getModelParams() {
+        return this.ModelParams;
+    }
+
+    /**
+     * Set 模型参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelParams 模型参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModelParams(ModelParams ModelParams) {
+        this.ModelParams = ModelParams;
+    }
+
     public AppModel() {
     }
 
@@ -372,6 +400,9 @@ public class AppModel extends AbstractModel {
         if (source.ResourceStatus != null) {
             this.ResourceStatus = new Long(source.ResourceStatus);
         }
+        if (source.ModelParams != null) {
+            this.ModelParams = new ModelParams(source.ModelParams);
+        }
     }
 
 
@@ -390,6 +421,7 @@ public class AppModel extends AbstractModel {
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);
         this.setParamSimple(map, prefix + "TopP", this.TopP);
         this.setParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
+        this.setParamObj(map, prefix + "ModelParams.", this.ModelParams);
 
     }
 }

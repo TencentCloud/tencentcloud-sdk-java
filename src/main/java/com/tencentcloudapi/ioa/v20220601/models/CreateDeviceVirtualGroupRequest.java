@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class CreateDeviceVirtualGroupRequest extends AbstractModel {
 
     /**
-    * 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
-    */
-    @SerializedName("DomainInstanceId")
-    @Expose
-    private String DomainInstanceId;
-
-    /**
     * 必填，终端自定义分组名
     */
     @SerializedName("DeviceVirtualGroupName")
     @Expose
     private String DeviceVirtualGroupName;
+
+    /**
+    * 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+    */
+    @SerializedName("DomainInstanceId")
+    @Expose
+    private String DomainInstanceId;
 
     /**
     * 详情
@@ -45,14 +45,14 @@ public class CreateDeviceVirtualGroupRequest extends AbstractModel {
     private String Description;
 
     /**
-    * 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
+    * 系统类型（0: win，1：linux，2: mac，4：android，5：ios ； 默认值0）(只支持32位)
     */
     @SerializedName("OsType")
     @Expose
     private Long OsType;
 
     /**
-    * 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
+    * 分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组； 默认值0）(只支持32位)
     */
     @SerializedName("TimeType")
     @Expose
@@ -73,22 +73,6 @@ public class CreateDeviceVirtualGroupRequest extends AbstractModel {
     private ComplexRule AutoRules;
 
     /**
-     * Get 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。 
-     * @return DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
-     */
-    public String getDomainInstanceId() {
-        return this.DomainInstanceId;
-    }
-
-    /**
-     * Set 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
-     * @param DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
-     */
-    public void setDomainInstanceId(String DomainInstanceId) {
-        this.DomainInstanceId = DomainInstanceId;
-    }
-
-    /**
      * Get 必填，终端自定义分组名 
      * @return DeviceVirtualGroupName 必填，终端自定义分组名
      */
@@ -102,6 +86,22 @@ public class CreateDeviceVirtualGroupRequest extends AbstractModel {
      */
     public void setDeviceVirtualGroupName(String DeviceVirtualGroupName) {
         this.DeviceVirtualGroupName = DeviceVirtualGroupName;
+    }
+
+    /**
+     * Get 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。 
+     * @return DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public String getDomainInstanceId() {
+        return this.DomainInstanceId;
+    }
+
+    /**
+     * Set 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @param DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public void setDomainInstanceId(String DomainInstanceId) {
+        this.DomainInstanceId = DomainInstanceId;
     }
 
     /**
@@ -121,32 +121,32 @@ public class CreateDeviceVirtualGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位) 
-     * @return OsType 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
+     * Get 系统类型（0: win，1：linux，2: mac，4：android，5：ios ； 默认值0）(只支持32位) 
+     * @return OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios ； 默认值0）(只支持32位)
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
-     * @param OsType 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
+     * Set 系统类型（0: win，1：linux，2: mac，4：android，5：ios ； 默认值0）(只支持32位)
+     * @param OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios ； 默认值0）(只支持32位)
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;
     }
 
     /**
-     * Get 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位) 
-     * @return TimeType 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
+     * Get 分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组； 默认值0）(只支持32位) 
+     * @return TimeType 分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组； 默认值0）(只支持32位)
      */
     public Long getTimeType() {
         return this.TimeType;
     }
 
     /**
-     * Set 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
-     * @param TimeType 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
+     * Set 分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组； 默认值0）(只支持32位)
+     * @param TimeType 分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组； 默认值0）(只支持32位)
      */
     public void setTimeType(Long TimeType) {
         this.TimeType = TimeType;
@@ -192,11 +192,11 @@ public class CreateDeviceVirtualGroupRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateDeviceVirtualGroupRequest(CreateDeviceVirtualGroupRequest source) {
-        if (source.DomainInstanceId != null) {
-            this.DomainInstanceId = new String(source.DomainInstanceId);
-        }
         if (source.DeviceVirtualGroupName != null) {
             this.DeviceVirtualGroupName = new String(source.DeviceVirtualGroupName);
+        }
+        if (source.DomainInstanceId != null) {
+            this.DomainInstanceId = new String(source.DomainInstanceId);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -220,8 +220,8 @@ public class CreateDeviceVirtualGroupRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
         this.setParamSimple(map, prefix + "DeviceVirtualGroupName", this.DeviceVirtualGroupName);
+        this.setParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "OsType", this.OsType);
         this.setParamSimple(map, prefix + "TimeType", this.TimeType);

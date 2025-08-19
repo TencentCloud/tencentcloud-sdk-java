@@ -45,6 +45,13 @@ public class ListSharedKnowledgeRequest extends AbstractModel {
     private String Keyword;
 
     /**
+    * 共享知识库类型，0普通，1公众号
+    */
+    @SerializedName("KnowledgeTypes")
+    @Expose
+    private Long [] KnowledgeTypes;
+
+    /**
      * Get 分页序号，编码从1开始 
      * @return PageNumber 分页序号，编码从1开始
      */
@@ -92,6 +99,22 @@ public class ListSharedKnowledgeRequest extends AbstractModel {
         this.Keyword = Keyword;
     }
 
+    /**
+     * Get 共享知识库类型，0普通，1公众号 
+     * @return KnowledgeTypes 共享知识库类型，0普通，1公众号
+     */
+    public Long [] getKnowledgeTypes() {
+        return this.KnowledgeTypes;
+    }
+
+    /**
+     * Set 共享知识库类型，0普通，1公众号
+     * @param KnowledgeTypes 共享知识库类型，0普通，1公众号
+     */
+    public void setKnowledgeTypes(Long [] KnowledgeTypes) {
+        this.KnowledgeTypes = KnowledgeTypes;
+    }
+
     public ListSharedKnowledgeRequest() {
     }
 
@@ -109,6 +132,12 @@ public class ListSharedKnowledgeRequest extends AbstractModel {
         if (source.Keyword != null) {
             this.Keyword = new String(source.Keyword);
         }
+        if (source.KnowledgeTypes != null) {
+            this.KnowledgeTypes = new Long[source.KnowledgeTypes.length];
+            for (int i = 0; i < source.KnowledgeTypes.length; i++) {
+                this.KnowledgeTypes[i] = new Long(source.KnowledgeTypes[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class ListSharedKnowledgeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
+        this.setParamArraySimple(map, prefix + "KnowledgeTypes.", this.KnowledgeTypes);
 
     }
 }

@@ -48,6 +48,13 @@ public class KnowledgeDetailInfo extends AbstractModel {
     private UserBaseInfo User;
 
     /**
+    * 权限位信息
+    */
+    @SerializedName("PermissionIds")
+    @Expose
+    private String [] PermissionIds;
+
+    /**
      * Get 知识库信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Knowledge 知识库信息
@@ -107,6 +114,22 @@ public class KnowledgeDetailInfo extends AbstractModel {
         this.User = User;
     }
 
+    /**
+     * Get 权限位信息 
+     * @return PermissionIds 权限位信息
+     */
+    public String [] getPermissionIds() {
+        return this.PermissionIds;
+    }
+
+    /**
+     * Set 权限位信息
+     * @param PermissionIds 权限位信息
+     */
+    public void setPermissionIds(String [] PermissionIds) {
+        this.PermissionIds = PermissionIds;
+    }
+
     public KnowledgeDetailInfo() {
     }
 
@@ -127,6 +150,12 @@ public class KnowledgeDetailInfo extends AbstractModel {
         if (source.User != null) {
             this.User = new UserBaseInfo(source.User);
         }
+        if (source.PermissionIds != null) {
+            this.PermissionIds = new String[source.PermissionIds.length];
+            for (int i = 0; i < source.PermissionIds.length; i++) {
+                this.PermissionIds[i] = new String(source.PermissionIds[i]);
+            }
+        }
     }
 
 
@@ -137,6 +166,7 @@ public class KnowledgeDetailInfo extends AbstractModel {
         this.setParamObj(map, prefix + "Knowledge.", this.Knowledge);
         this.setParamArrayObj(map, prefix + "AppList.", this.AppList);
         this.setParamObj(map, prefix + "User.", this.User);
+        this.setParamArraySimple(map, prefix + "PermissionIds.", this.PermissionIds);
 
     }
 }

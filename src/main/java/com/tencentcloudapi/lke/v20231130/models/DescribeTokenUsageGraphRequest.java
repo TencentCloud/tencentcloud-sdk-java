@@ -73,6 +73,13 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     private String AppType;
 
     /**
+    * 筛选子场景
+    */
+    @SerializedName("SubScenes")
+    @Expose
+    private String [] SubScenes;
+
+    /**
      * Get 腾讯云主账号 
      * @return UinAccount 腾讯云主账号
      */
@@ -184,6 +191,22 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
         this.AppType = AppType;
     }
 
+    /**
+     * Get 筛选子场景 
+     * @return SubScenes 筛选子场景
+     */
+    public String [] getSubScenes() {
+        return this.SubScenes;
+    }
+
+    /**
+     * Set 筛选子场景
+     * @param SubScenes 筛选子场景
+     */
+    public void setSubScenes(String [] SubScenes) {
+        this.SubScenes = SubScenes;
+    }
+
     public DescribeTokenUsageGraphRequest() {
     }
 
@@ -219,6 +242,12 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
         if (source.AppType != null) {
             this.AppType = new String(source.AppType);
         }
+        if (source.SubScenes != null) {
+            this.SubScenes = new String[source.SubScenes.length];
+            for (int i = 0; i < source.SubScenes.length; i++) {
+                this.SubScenes[i] = new String(source.SubScenes[i]);
+            }
+        }
     }
 
 
@@ -233,6 +262,7 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
         this.setParamSimple(map, prefix + "AppType", this.AppType);
+        this.setParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
 
     }
 }

@@ -45,6 +45,13 @@ public class DeleteBackUpDataRequest extends AbstractModel {
     private Boolean IsDeleteAll;
 
     /**
+    * true代表恢复删除隔离中的job 默认false就是删除
+    */
+    @SerializedName("IsRecover")
+    @Expose
+    private Boolean IsRecover;
+
+    /**
      * Get 集群id 
      * @return InstanceId 集群id
      */
@@ -92,6 +99,22 @@ public class DeleteBackUpDataRequest extends AbstractModel {
         this.IsDeleteAll = IsDeleteAll;
     }
 
+    /**
+     * Get true代表恢复删除隔离中的job 默认false就是删除 
+     * @return IsRecover true代表恢复删除隔离中的job 默认false就是删除
+     */
+    public Boolean getIsRecover() {
+        return this.IsRecover;
+    }
+
+    /**
+     * Set true代表恢复删除隔离中的job 默认false就是删除
+     * @param IsRecover true代表恢复删除隔离中的job 默认false就是删除
+     */
+    public void setIsRecover(Boolean IsRecover) {
+        this.IsRecover = IsRecover;
+    }
+
     public DeleteBackUpDataRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DeleteBackUpDataRequest extends AbstractModel {
         if (source.IsDeleteAll != null) {
             this.IsDeleteAll = new Boolean(source.IsDeleteAll);
         }
+        if (source.IsRecover != null) {
+            this.IsRecover = new Boolean(source.IsRecover);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DeleteBackUpDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "BackUpJobId", this.BackUpJobId);
         this.setParamSimple(map, prefix + "IsDeleteAll", this.IsDeleteAll);
+        this.setParamSimple(map, prefix + "IsRecover", this.IsRecover);
 
     }
 }

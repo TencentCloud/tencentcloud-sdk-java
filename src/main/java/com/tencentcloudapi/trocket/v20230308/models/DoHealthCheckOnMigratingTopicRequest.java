@@ -40,7 +40,7 @@ public class DoHealthCheckOnMigratingTopicRequest extends AbstractModel {
     private String TopicName;
 
     /**
-    * 必填，是否忽略当前检查
+    * 是否忽略当前检查
     */
     @SerializedName("IgnoreCheck")
     @Expose
@@ -94,16 +94,16 @@ public class DoHealthCheckOnMigratingTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 必填，是否忽略当前检查 
-     * @return IgnoreCheck 必填，是否忽略当前检查
+     * Get 是否忽略当前检查 
+     * @return IgnoreCheck 是否忽略当前检查
      */
     public Boolean getIgnoreCheck() {
         return this.IgnoreCheck;
     }
 
     /**
-     * Set 必填，是否忽略当前检查
-     * @param IgnoreCheck 必填，是否忽略当前检查
+     * Set 是否忽略当前检查
+     * @param IgnoreCheck 是否忽略当前检查
      */
     public void setIgnoreCheck(Boolean IgnoreCheck) {
         this.IgnoreCheck = IgnoreCheck;

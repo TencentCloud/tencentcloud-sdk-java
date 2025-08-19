@@ -116,6 +116,27 @@ public class ModifyDocRequest extends AbstractModel {
     private Boolean IsDownload;
 
     /**
+    * 需要修改的内容类型  0  无效 1 更新文档cos信息 2 更新文档引用信息 3 更新文档刷新频率 4 腾讯文档刷新
+    */
+    @SerializedName("ModifyTypes")
+    @Expose
+    private Long [] ModifyTypes;
+
+    /**
+    * 文档更新频率
+    */
+    @SerializedName("UpdatePeriodInfo")
+    @Expose
+    private UpdatePeriodInfo UpdatePeriodInfo;
+
+    /**
+    * 自定义切分规则
+    */
+    @SerializedName("SplitRule")
+    @Expose
+    private String SplitRule;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -327,6 +348,54 @@ public class ModifyDocRequest extends AbstractModel {
         this.IsDownload = IsDownload;
     }
 
+    /**
+     * Get 需要修改的内容类型  0  无效 1 更新文档cos信息 2 更新文档引用信息 3 更新文档刷新频率 4 腾讯文档刷新 
+     * @return ModifyTypes 需要修改的内容类型  0  无效 1 更新文档cos信息 2 更新文档引用信息 3 更新文档刷新频率 4 腾讯文档刷新
+     */
+    public Long [] getModifyTypes() {
+        return this.ModifyTypes;
+    }
+
+    /**
+     * Set 需要修改的内容类型  0  无效 1 更新文档cos信息 2 更新文档引用信息 3 更新文档刷新频率 4 腾讯文档刷新
+     * @param ModifyTypes 需要修改的内容类型  0  无效 1 更新文档cos信息 2 更新文档引用信息 3 更新文档刷新频率 4 腾讯文档刷新
+     */
+    public void setModifyTypes(Long [] ModifyTypes) {
+        this.ModifyTypes = ModifyTypes;
+    }
+
+    /**
+     * Get 文档更新频率 
+     * @return UpdatePeriodInfo 文档更新频率
+     */
+    public UpdatePeriodInfo getUpdatePeriodInfo() {
+        return this.UpdatePeriodInfo;
+    }
+
+    /**
+     * Set 文档更新频率
+     * @param UpdatePeriodInfo 文档更新频率
+     */
+    public void setUpdatePeriodInfo(UpdatePeriodInfo UpdatePeriodInfo) {
+        this.UpdatePeriodInfo = UpdatePeriodInfo;
+    }
+
+    /**
+     * Get 自定义切分规则 
+     * @return SplitRule 自定义切分规则
+     */
+    public String getSplitRule() {
+        return this.SplitRule;
+    }
+
+    /**
+     * Set 自定义切分规则
+     * @param SplitRule 自定义切分规则
+     */
+    public void setSplitRule(String SplitRule) {
+        this.SplitRule = SplitRule;
+    }
+
     public ModifyDocRequest() {
     }
 
@@ -377,6 +446,18 @@ public class ModifyDocRequest extends AbstractModel {
         if (source.IsDownload != null) {
             this.IsDownload = new Boolean(source.IsDownload);
         }
+        if (source.ModifyTypes != null) {
+            this.ModifyTypes = new Long[source.ModifyTypes.length];
+            for (int i = 0; i < source.ModifyTypes.length; i++) {
+                this.ModifyTypes[i] = new Long(source.ModifyTypes[i]);
+            }
+        }
+        if (source.UpdatePeriodInfo != null) {
+            this.UpdatePeriodInfo = new UpdatePeriodInfo(source.UpdatePeriodInfo);
+        }
+        if (source.SplitRule != null) {
+            this.SplitRule = new String(source.SplitRule);
+        }
     }
 
 
@@ -397,6 +478,9 @@ public class ModifyDocRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
         this.setParamSimple(map, prefix + "IsDownload", this.IsDownload);
+        this.setParamArraySimple(map, prefix + "ModifyTypes.", this.ModifyTypes);
+        this.setParamObj(map, prefix + "UpdatePeriodInfo.", this.UpdatePeriodInfo);
+        this.setParamSimple(map, prefix + "SplitRule", this.SplitRule);
 
     }
 }

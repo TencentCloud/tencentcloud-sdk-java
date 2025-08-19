@@ -52,6 +52,13 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
+    * 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。不填时默认值为video。
+    */
+    @SerializedName("RecordType")
+    @Expose
+    private String RecordType;
+
+    /**
      * Get HLS配置参数，和MP4Configure需要二选一必填。 
      * @return HLSConfigure HLS配置参数，和MP4Configure需要二选一必填。
      */
@@ -115,6 +122,22 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
         this.Comment = Comment;
     }
 
+    /**
+     * Get 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。不填时默认值为video。 
+     * @return RecordType 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。不填时默认值为video。
+     */
+    public String getRecordType() {
+        return this.RecordType;
+    }
+
+    /**
+     * Set 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。不填时默认值为video。
+     * @param RecordType 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。不填时默认值为video。
+     */
+    public void setRecordType(String RecordType) {
+        this.RecordType = RecordType;
+    }
+
     public CreateLiveRecordTemplateRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.RecordType != null) {
+            this.RecordType = new String(source.RecordType);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "MP4Configure.", this.MP4Configure);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "RecordType", this.RecordType);
 
     }
 }

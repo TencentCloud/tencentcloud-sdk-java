@@ -62,7 +62,7 @@ public class DescribeSimpleApplicationsRequest extends AbstractModel {
     private String MicroserviceType;
 
     /**
-    * 资源类型数组
+    * 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
     */
     @SerializedName("ApplicationResourceTypeList")
     @Expose
@@ -182,16 +182,16 @@ public class DescribeSimpleApplicationsRequest extends AbstractModel {
     }
 
     /**
-     * Get 资源类型数组 
-     * @return ApplicationResourceTypeList 资源类型数组
+     * Get 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型 
+     * @return ApplicationResourceTypeList 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public String [] getApplicationResourceTypeList() {
         return this.ApplicationResourceTypeList;
     }
 
     /**
-     * Set 资源类型数组
-     * @param ApplicationResourceTypeList 资源类型数组
+     * Set 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
+     * @param ApplicationResourceTypeList 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public void setApplicationResourceTypeList(String [] ApplicationResourceTypeList) {
         this.ApplicationResourceTypeList = ApplicationResourceTypeList;

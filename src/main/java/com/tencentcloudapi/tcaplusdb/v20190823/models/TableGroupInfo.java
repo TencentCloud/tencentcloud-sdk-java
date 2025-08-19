@@ -60,7 +60,6 @@ public class TableGroupInfo extends AbstractModel {
 
     /**
     * 表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TxhBackupExpireDay")
     @Expose
@@ -75,7 +74,6 @@ public class TableGroupInfo extends AbstractModel {
 
     /**
     * mysql负载均衡vip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MysqlConnIp")
     @Expose
@@ -83,7 +81,6 @@ public class TableGroupInfo extends AbstractModel {
 
     /**
     * mysql负载均衡vport
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MysqlConnPort")
     @Expose
@@ -170,10 +167,8 @@ public class TableGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格Txh备份文件多少天后过期删除 
      * @return TxhBackupExpireDay 表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTxhBackupExpireDay() {
         return this.TxhBackupExpireDay;
@@ -181,9 +176,7 @@ public class TableGroupInfo extends AbstractModel {
 
     /**
      * Set 表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TxhBackupExpireDay 表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTxhBackupExpireDay(Long TxhBackupExpireDay) {
         this.TxhBackupExpireDay = TxhBackupExpireDay;
@@ -206,10 +199,8 @@ public class TableGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get mysql负载均衡vip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mysql负载均衡vip 
      * @return MysqlConnIp mysql负载均衡vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMysqlConnIp() {
         return this.MysqlConnIp;
@@ -217,19 +208,15 @@ public class TableGroupInfo extends AbstractModel {
 
     /**
      * Set mysql负载均衡vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MysqlConnIp mysql负载均衡vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMysqlConnIp(String MysqlConnIp) {
         this.MysqlConnIp = MysqlConnIp;
     }
 
     /**
-     * Get mysql负载均衡vport
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mysql负载均衡vport 
      * @return MysqlConnPort mysql负载均衡vport
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMysqlConnPort() {
         return this.MysqlConnPort;
@@ -237,9 +224,7 @@ public class TableGroupInfo extends AbstractModel {
 
     /**
      * Set mysql负载均衡vport
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MysqlConnPort mysql负载均衡vport
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMysqlConnPort(Long MysqlConnPort) {
         this.MysqlConnPort = MysqlConnPort;

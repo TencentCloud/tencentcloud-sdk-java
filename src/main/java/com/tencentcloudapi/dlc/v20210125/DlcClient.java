@@ -127,6 +127,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *绑定数据脱敏策略
+     * @param req AttachDataMaskPolicyRequest
+     * @return AttachDataMaskPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachDataMaskPolicyResponse AttachDataMaskPolicy(AttachDataMaskPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AttachDataMaskPolicy", AttachDataMaskPolicyResponse.class);
+    }
+
+    /**
      *绑定鉴权策略到用户
      * @param req AttachUserPolicyRequest
      * @return AttachUserPolicyResponse
@@ -300,6 +311,17 @@ public class DlcClient extends AbstractClient{
     public CreateDataEngineResponse CreateDataEngine(CreateDataEngineRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDataEngine", CreateDataEngineResponse.class);
+    }
+
+    /**
+     *创建数据脱敏策略
+     * @param req CreateDataMaskStrategyRequest
+     * @return CreateDataMaskStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataMaskStrategyResponse CreateDataMaskStrategy(CreateDataMaskStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDataMaskStrategy", CreateDataMaskStrategyResponse.class);
     }
 
     /**
@@ -566,6 +588,17 @@ public class DlcClient extends AbstractClient{
     public DeleteDataEngineResponse DeleteDataEngine(DeleteDataEngineRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDataEngine", DeleteDataEngineResponse.class);
+    }
+
+    /**
+     *删除数据脱敏策略
+     * @param req DeleteDataMaskStrategyRequest
+     * @return DeleteDataMaskStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataMaskStrategyResponse DeleteDataMaskStrategy(DeleteDataMaskStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDataMaskStrategy", DeleteDataMaskStrategyResponse.class);
     }
 
     /**
@@ -841,6 +874,17 @@ public class DlcClient extends AbstractClient{
     public DescribeDataEnginesScaleDetailResponse DescribeDataEnginesScaleDetail(DescribeDataEnginesScaleDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataEnginesScaleDetail", DescribeDataEnginesScaleDetailResponse.class);
+    }
+
+    /**
+     *查询数据脱敏列表接口
+     * @param req DescribeDataMaskStrategiesRequest
+     * @return DescribeDataMaskStrategiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataMaskStrategiesResponse DescribeDataMaskStrategies(DescribeDataMaskStrategiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataMaskStrategies", DescribeDataMaskStrategiesResponse.class);
     }
 
     /**
@@ -1314,6 +1358,17 @@ public class DlcClient extends AbstractClient{
     public DescribeThirdPartyAccessUserResponse DescribeThirdPartyAccessUser(DescribeThirdPartyAccessUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeThirdPartyAccessUser", DescribeThirdPartyAccessUserResponse.class);
+    }
+
+    /**
+     *获取UDF权限信息
+     * @param req DescribeUDFPolicyRequest
+     * @return DescribeUDFPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUDFPolicyResponse DescribeUDFPolicy(DescribeUDFPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUDFPolicy", DescribeUDFPolicyResponse.class);
     }
 
     /**
@@ -1856,6 +1911,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *更新数据脱敏策略
+     * @param req UpdateDataMaskStrategyRequest
+     * @return UpdateDataMaskStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDataMaskStrategyResponse UpdateDataMaskStrategy(UpdateDataMaskStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDataMaskStrategy", UpdateDataMaskStrategyResponse.class);
+    }
+
+    /**
      *更新标准引擎资源组网络配置信息
      * @param req UpdateEngineResourceGroupNetworkConfigInfoRequest
      * @return UpdateEngineResourceGroupNetworkConfigInfoResponse
@@ -1919,6 +1985,17 @@ public class DlcClient extends AbstractClient{
     public UpdateStandardEngineResourceGroupResourceInfoResponse UpdateStandardEngineResourceGroupResourceInfo(UpdateStandardEngineResourceGroupResourceInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateStandardEngineResourceGroupResourceInfo", UpdateStandardEngineResourceGroupResourceInfoResponse.class);
+    }
+
+    /**
+     *UDP权限修改
+     * @param req UpdateUDFPolicyRequest
+     * @return UpdateUDFPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUDFPolicyResponse UpdateUDFPolicy(UpdateUDFPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateUDFPolicy", UpdateUDFPolicyResponse.class);
     }
 
     /**

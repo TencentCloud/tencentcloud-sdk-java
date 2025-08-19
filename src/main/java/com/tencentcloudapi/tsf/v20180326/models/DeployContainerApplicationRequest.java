@@ -423,6 +423,34 @@ public class DeployContainerApplicationRequest extends AbstractModel {
     private String DeployDesc;
 
     /**
+    * k8s命名空间名称
+    */
+    @SerializedName("K8sNamespaceName")
+    @Expose
+    private String K8sNamespaceName;
+
+    /**
+    * 是否启用静态IP
+    */
+    @SerializedName("StaticIpEnabled")
+    @Expose
+    private Boolean StaticIpEnabled;
+
+    /**
+    * 启动策略[OrderedReady/Parallel]
+    */
+    @SerializedName("PodManagementPolicyType")
+    @Expose
+    private String PodManagementPolicyType;
+
+    /**
+    * 滚动更新分区序号
+    */
+    @SerializedName("Partition")
+    @Expose
+    private Long Partition;
+
+    /**
      * Get 应用ID 
      * @return ApplicationId 应用ID
      */
@@ -1334,6 +1362,70 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         this.DeployDesc = DeployDesc;
     }
 
+    /**
+     * Get k8s命名空间名称 
+     * @return K8sNamespaceName k8s命名空间名称
+     */
+    public String getK8sNamespaceName() {
+        return this.K8sNamespaceName;
+    }
+
+    /**
+     * Set k8s命名空间名称
+     * @param K8sNamespaceName k8s命名空间名称
+     */
+    public void setK8sNamespaceName(String K8sNamespaceName) {
+        this.K8sNamespaceName = K8sNamespaceName;
+    }
+
+    /**
+     * Get 是否启用静态IP 
+     * @return StaticIpEnabled 是否启用静态IP
+     */
+    public Boolean getStaticIpEnabled() {
+        return this.StaticIpEnabled;
+    }
+
+    /**
+     * Set 是否启用静态IP
+     * @param StaticIpEnabled 是否启用静态IP
+     */
+    public void setStaticIpEnabled(Boolean StaticIpEnabled) {
+        this.StaticIpEnabled = StaticIpEnabled;
+    }
+
+    /**
+     * Get 启动策略[OrderedReady/Parallel] 
+     * @return PodManagementPolicyType 启动策略[OrderedReady/Parallel]
+     */
+    public String getPodManagementPolicyType() {
+        return this.PodManagementPolicyType;
+    }
+
+    /**
+     * Set 启动策略[OrderedReady/Parallel]
+     * @param PodManagementPolicyType 启动策略[OrderedReady/Parallel]
+     */
+    public void setPodManagementPolicyType(String PodManagementPolicyType) {
+        this.PodManagementPolicyType = PodManagementPolicyType;
+    }
+
+    /**
+     * Get 滚动更新分区序号 
+     * @return Partition 滚动更新分区序号
+     */
+    public Long getPartition() {
+        return this.Partition;
+    }
+
+    /**
+     * Set 滚动更新分区序号
+     * @param Partition 滚动更新分区序号
+     */
+    public void setPartition(Long Partition) {
+        this.Partition = Partition;
+    }
+
     public DeployContainerApplicationRequest() {
     }
 
@@ -1537,6 +1629,18 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         if (source.DeployDesc != null) {
             this.DeployDesc = new String(source.DeployDesc);
         }
+        if (source.K8sNamespaceName != null) {
+            this.K8sNamespaceName = new String(source.K8sNamespaceName);
+        }
+        if (source.StaticIpEnabled != null) {
+            this.StaticIpEnabled = new Boolean(source.StaticIpEnabled);
+        }
+        if (source.PodManagementPolicyType != null) {
+            this.PodManagementPolicyType = new String(source.PodManagementPolicyType);
+        }
+        if (source.Partition != null) {
+            this.Partition = new Long(source.Partition);
+        }
     }
 
 
@@ -1601,6 +1705,10 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceClean", this.ServiceClean);
         this.setParamSimple(map, prefix + "EnvClean", this.EnvClean);
         this.setParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+        this.setParamSimple(map, prefix + "K8sNamespaceName", this.K8sNamespaceName);
+        this.setParamSimple(map, prefix + "StaticIpEnabled", this.StaticIpEnabled);
+        this.setParamSimple(map, prefix + "PodManagementPolicyType", this.PodManagementPolicyType);
+        this.setParamSimple(map, prefix + "Partition", this.Partition);
 
     }
 }
