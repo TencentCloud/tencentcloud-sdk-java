@@ -16,7 +16,7 @@ public class TempCredentialTest {
         List<String> reqMethods = Arrays.asList("GET", "POST");
         List<String> signMethods = Arrays.asList(
                 ClientProfile.SIGN_SHA1, ClientProfile.SIGN_SHA256, ClientProfile.SIGN_TC3_256);
-        List<String> tokens = Arrays.asList("abc", null);
+        List<String> tokens = Arrays.asList("", null);
 
         for (String reqMethod : reqMethods) {
             for (String signMethod : signMethods) {
