@@ -31,7 +31,8 @@ public class CreateDataTransformRequest extends AbstractModel {
     private Long FuncType;
 
     /**
-    * 源日志主题
+    * 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("SrcTopicId")
     @Expose
@@ -39,6 +40,10 @@ public class CreateDataTransformRequest extends AbstractModel {
 
     /**
     * 加工任务名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
     */
     @SerializedName("Name")
     @Expose
@@ -65,7 +70,10 @@ public class CreateDataTransformRequest extends AbstractModel {
     private Long TaskType;
 
     /**
-    * 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+    * 加工任务目标topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+目标topic_id，通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+别名限制 1.不能为空字符串，2. 不能包含字符'|'。
+
     */
     @SerializedName("DstResources")
     @Expose
@@ -80,6 +88,7 @@ public class CreateDataTransformRequest extends AbstractModel {
 
     /**
     * 用于预览加工结果的测试数据
+目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("PreviewLogStatistics")
     @Expose
@@ -109,24 +118,36 @@ public class CreateDataTransformRequest extends AbstractModel {
     }
 
     /**
-     * Get 源日志主题 
-     * @return SrcTopicId 源日志主题
+     * Get 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
+     * @return SrcTopicId 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getSrcTopicId() {
         return this.SrcTopicId;
     }
 
     /**
-     * Set 源日志主题
-     * @param SrcTopicId 源日志主题
+     * Set 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param SrcTopicId 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setSrcTopicId(String SrcTopicId) {
         this.SrcTopicId = SrcTopicId;
     }
 
     /**
-     * Get 加工任务名称 
+     * Get 加工任务名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符 
      * @return Name 加工任务名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
      */
     public String getName() {
         return this.Name;
@@ -134,7 +155,15 @@ public class CreateDataTransformRequest extends AbstractModel {
 
     /**
      * Set 加工任务名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
      * @param Name 加工任务名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -197,16 +226,28 @@ public class CreateDataTransformRequest extends AbstractModel {
     }
 
     /**
-     * Get 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。 
-     * @return DstResources 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+     * Get 加工任务目标topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+目标topic_id，通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+别名限制 1.不能为空字符串，2. 不能包含字符'|'。
+ 
+     * @return DstResources 加工任务目标topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+目标topic_id，通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+别名限制 1.不能为空字符串，2. 不能包含字符'|'。
+
      */
     public DataTransformResouceInfo [] getDstResources() {
         return this.DstResources;
     }
 
     /**
-     * Set 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
-     * @param DstResources 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+     * Set 加工任务目标topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+目标topic_id，通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+别名限制 1.不能为空字符串，2. 不能包含字符'|'。
+
+     * @param DstResources 加工任务目标topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+目标topic_id，通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+别名限制 1.不能为空字符串，2. 不能包含字符'|'。
+
      */
     public void setDstResources(DataTransformResouceInfo [] DstResources) {
         this.DstResources = DstResources;
@@ -229,8 +270,10 @@ public class CreateDataTransformRequest extends AbstractModel {
     }
 
     /**
-     * Get 用于预览加工结果的测试数据 
+     * Get 用于预览加工结果的测试数据
+目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
      * @return PreviewLogStatistics 用于预览加工结果的测试数据
+目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public PreviewLogStatistic [] getPreviewLogStatistics() {
         return this.PreviewLogStatistics;
@@ -238,7 +281,9 @@ public class CreateDataTransformRequest extends AbstractModel {
 
     /**
      * Set 用于预览加工结果的测试数据
+目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param PreviewLogStatistics 用于预览加工结果的测试数据
+目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setPreviewLogStatistics(PreviewLogStatistic [] PreviewLogStatistics) {
         this.PreviewLogStatistics = PreviewLogStatistics;

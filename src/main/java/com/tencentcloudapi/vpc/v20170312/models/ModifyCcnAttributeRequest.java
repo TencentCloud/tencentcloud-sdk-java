@@ -59,6 +59,13 @@ public class ModifyCcnAttributeRequest extends AbstractModel {
     private Boolean RouteOverlapFlag;
 
     /**
+    * 是否开启qos功能。`False` 不开启，`True` 开启。
+    */
+    @SerializedName("TrafficMarkingPolicyFlag")
+    @Expose
+    private Boolean TrafficMarkingPolicyFlag;
+
+    /**
      * Get CCN实例ID。形如：ccn-f49l6u0z。 
      * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
@@ -138,6 +145,22 @@ public class ModifyCcnAttributeRequest extends AbstractModel {
         this.RouteOverlapFlag = RouteOverlapFlag;
     }
 
+    /**
+     * Get 是否开启qos功能。`False` 不开启，`True` 开启。 
+     * @return TrafficMarkingPolicyFlag 是否开启qos功能。`False` 不开启，`True` 开启。
+     */
+    public Boolean getTrafficMarkingPolicyFlag() {
+        return this.TrafficMarkingPolicyFlag;
+    }
+
+    /**
+     * Set 是否开启qos功能。`False` 不开启，`True` 开启。
+     * @param TrafficMarkingPolicyFlag 是否开启qos功能。`False` 不开启，`True` 开启。
+     */
+    public void setTrafficMarkingPolicyFlag(Boolean TrafficMarkingPolicyFlag) {
+        this.TrafficMarkingPolicyFlag = TrafficMarkingPolicyFlag;
+    }
+
     public ModifyCcnAttributeRequest() {
     }
 
@@ -161,6 +184,9 @@ public class ModifyCcnAttributeRequest extends AbstractModel {
         if (source.RouteOverlapFlag != null) {
             this.RouteOverlapFlag = new Boolean(source.RouteOverlapFlag);
         }
+        if (source.TrafficMarkingPolicyFlag != null) {
+            this.TrafficMarkingPolicyFlag = new Boolean(source.TrafficMarkingPolicyFlag);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyCcnAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CcnDescription", this.CcnDescription);
         this.setParamSimple(map, prefix + "RouteECMPFlag", this.RouteECMPFlag);
         this.setParamSimple(map, prefix + "RouteOverlapFlag", this.RouteOverlapFlag);
+        this.setParamSimple(map, prefix + "TrafficMarkingPolicyFlag", this.TrafficMarkingPolicyFlag);
 
     }
 }

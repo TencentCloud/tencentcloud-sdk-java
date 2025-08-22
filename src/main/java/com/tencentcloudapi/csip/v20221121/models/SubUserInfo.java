@@ -129,7 +129,7 @@ public class SubUserInfo extends AbstractModel {
     private Long ActionRiskCount;
 
     /**
-    * 是否接入云审计日志
+    * 是否接入操作审计日志
     */
     @SerializedName("IsAccessCloudAudit")
     @Expose
@@ -390,16 +390,16 @@ public class SubUserInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否接入云审计日志 
-     * @return IsAccessCloudAudit 是否接入云审计日志
+     * Get 是否接入操作审计日志 
+     * @return IsAccessCloudAudit 是否接入操作审计日志
      */
     public Boolean getIsAccessCloudAudit() {
         return this.IsAccessCloudAudit;
     }
 
     /**
-     * Set 是否接入云审计日志
-     * @param IsAccessCloudAudit 是否接入云审计日志
+     * Set 是否接入操作审计日志
+     * @param IsAccessCloudAudit 是否接入操作审计日志
      */
     public void setIsAccessCloudAudit(Boolean IsAccessCloudAudit) {
         this.IsAccessCloudAudit = IsAccessCloudAudit;

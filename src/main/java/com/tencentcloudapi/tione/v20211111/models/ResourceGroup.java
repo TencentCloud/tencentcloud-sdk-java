@@ -52,7 +52,7 @@ public class ResourceGroup extends AbstractModel {
     private Long TotalInstance;
 
     /**
-    * 资资源组已用的资源
+    * 资源组已用的资源
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedResource")
@@ -148,9 +148,9 @@ public class ResourceGroup extends AbstractModel {
     }
 
     /**
-     * Get 资资源组已用的资源
+     * Get 资源组已用的资源
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UsedResource 资资源组已用的资源
+     * @return UsedResource 资源组已用的资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupResource getUsedResource() {
@@ -158,9 +158,9 @@ public class ResourceGroup extends AbstractModel {
     }
 
     /**
-     * Set 资资源组已用的资源
+     * Set 资源组已用的资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UsedResource 资资源组已用的资源
+     * @param UsedResource 资源组已用的资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedResource(GroupResource UsedResource) {

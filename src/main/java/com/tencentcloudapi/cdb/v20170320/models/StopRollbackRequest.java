@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class StopRollbackRequest extends AbstractModel {
 
     /**
-    * 撤销回档任务对应的实例Id。
+    * 撤销回档任务对应的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 撤销回档任务对应的实例Id。 
-     * @return InstanceId 撤销回档任务对应的实例Id。
+     * Get 撤销回档任务对应的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。 
+     * @return InstanceId 撤销回档任务对应的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 撤销回档任务对应的实例Id。
-     * @param InstanceId 撤销回档任务对应的实例Id。
+     * Set 撤销回档任务对应的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
+     * @param InstanceId 撤销回档任务对应的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -38,7 +38,7 @@ public class OrderPerLicenseRequest extends AbstractModel {
     private Long Type;
 
     /**
-    * 购买失败后是否回滚（删除）设备，默认true，如果设备绑定了生效中的流量包则不能回滚。
+    * 购买失败后是否回滚（删除）设备，默认false，如果设备绑定了生效中的流量包则不能回滚。
     */
     @SerializedName("RollBack")
     @Expose
@@ -93,16 +93,16 @@ public class OrderPerLicenseRequest extends AbstractModel {
     }
 
     /**
-     * Get 购买失败后是否回滚（删除）设备，默认true，如果设备绑定了生效中的流量包则不能回滚。 
-     * @return RollBack 购买失败后是否回滚（删除）设备，默认true，如果设备绑定了生效中的流量包则不能回滚。
+     * Get 购买失败后是否回滚（删除）设备，默认false，如果设备绑定了生效中的流量包则不能回滚。 
+     * @return RollBack 购买失败后是否回滚（删除）设备，默认false，如果设备绑定了生效中的流量包则不能回滚。
      */
     public Boolean getRollBack() {
         return this.RollBack;
     }
 
     /**
-     * Set 购买失败后是否回滚（删除）设备，默认true，如果设备绑定了生效中的流量包则不能回滚。
-     * @param RollBack 购买失败后是否回滚（删除）设备，默认true，如果设备绑定了生效中的流量包则不能回滚。
+     * Set 购买失败后是否回滚（删除）设备，默认false，如果设备绑定了生效中的流量包则不能回滚。
+     * @param RollBack 购买失败后是否回滚（删除）设备，默认false，如果设备绑定了生效中的流量包则不能回滚。
      */
     public void setRollBack(Boolean RollBack) {
         this.RollBack = RollBack;

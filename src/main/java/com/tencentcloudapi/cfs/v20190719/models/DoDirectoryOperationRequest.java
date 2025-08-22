@@ -31,7 +31,9 @@ public class DoDirectoryOperationRequest extends AbstractModel {
     private String FileSystemId;
 
     /**
-    * create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
+    * create：创建目录，等同于mkdir。
+check：确认目录是否存在，等同于stat。
+move：对文件/目录进行重命名，等同于mv。
     */
     @SerializedName("OpetationType")
     @Expose
@@ -75,16 +77,24 @@ public class DoDirectoryOperationRequest extends AbstractModel {
     }
 
     /**
-     * Get create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作 
-     * @return OpetationType create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
+     * Get create：创建目录，等同于mkdir。
+check：确认目录是否存在，等同于stat。
+move：对文件/目录进行重命名，等同于mv。 
+     * @return OpetationType create：创建目录，等同于mkdir。
+check：确认目录是否存在，等同于stat。
+move：对文件/目录进行重命名，等同于mv。
      */
     public String getOpetationType() {
         return this.OpetationType;
     }
 
     /**
-     * Set create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
-     * @param OpetationType create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
+     * Set create：创建目录，等同于mkdir。
+check：确认目录是否存在，等同于stat。
+move：对文件/目录进行重命名，等同于mv。
+     * @param OpetationType create：创建目录，等同于mkdir。
+check：确认目录是否存在，等同于stat。
+move：对文件/目录进行重命名，等同于mv。
      */
     public void setOpetationType(String OpetationType) {
         this.OpetationType = OpetationType;

@@ -1664,7 +1664,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     }
 
     /**
-     *发送RocketMQ消息
+     *发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
      * @param req SendRocketMQMessageRequest
      * @return SendRocketMQMessageResponse
      * @throws TencentCloudSDKException

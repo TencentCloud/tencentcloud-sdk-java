@@ -957,6 +957,9 @@ public enum VpcErrorCode {
      /* 和用户自定义的路由形成ECMP。 */
      UNSUPPORTEDOPERATION_ECMPWITHUSERROUTE("UnsupportedOperation.EcmpWithUserRoute"),
      
+     /* 开启了多份带宽，不支持关闭流量调度策略功能。 */
+     UNSUPPORTEDOPERATION_ENABLEMULTICCNBANDWIDTH("UnsupportedOperation.EnableMultiCcnBandwidth"),
+     
      /* 当前地域不支持启用组播。 */
      UNSUPPORTEDOPERATION_ENABLEMULTICAST("UnsupportedOperation.EnableMulticast"),
      
@@ -977,6 +980,12 @@ public enum VpcErrorCode {
      
      /* 存在云联网关联实例不允许删除云联网 */
      UNSUPPORTEDOPERATION_EXISTCCNINSTANCESNOTSUPPORTDELETECCN("UnsupportedOperation.ExistCcnInstancesNotSupportDeleteCcn"),
+     
+     /* 存在路由匹配规则，不支持关闭流量调度策略功能。 */
+     UNSUPPORTEDOPERATION_EXISTCCNROUTEMATCHRULE("UnsupportedOperation.ExistCcnRouteMatchRule"),
+     
+     /* 存在非默认流量调度策略，不支持关闭流量调度策略功能。 */
+     UNSUPPORTEDOPERATION_EXISTTRAFFICQOSPOLICY("UnsupportedOperation.ExistTrafficQosPolicy"),
      
      /* 指定ResourceId对应的流日志已经创建 */
      UNSUPPORTEDOPERATION_FLOWLOGINSTANCEEXISTED("UnsupportedOperation.FlowLogInstanceExisted"),
@@ -1170,6 +1179,9 @@ public enum VpcErrorCode {
      /* 此产品计费方式已下线，请尝试其他计费方式。 */
      UNSUPPORTEDOPERATION_OFFLINECHARGETYPE("UnsupportedOperation.OfflineChargeType"),
      
+     /* 仅地域间限速模式才支持流量调度策略功能。 */
+     UNSUPPORTEDOPERATION_ONLYINTERREGIONLIMITSUPPORTEDCREATETRAFFICQOSPOLICY("UnsupportedOperation.OnlyInterRegionLimitSupportedCreateTrafficQosPolicy"),
+     
      /* 仅支持专业版Ckafka。 */
      UNSUPPORTEDOPERATION_ONLYSUPPORTPROFESSIONKAFKA("UnsupportedOperation.OnlySupportProfessionKafka"),
      
@@ -1320,6 +1332,9 @@ public enum VpcErrorCode {
      /* 流量镜像源、目的不可同端。 */
      UNSUPPORTEDOPERATION_TRAFFICMIRRORNOTSUPPORTSAMESRCTARGET("UnsupportedOperation.TrafficMirrorNotSupportSameSrcTarget"),
      
+     /* 流量调度策略分配带宽和地域间带宽不一致，不支持关闭流量调度策略功能。 */
+     UNSUPPORTEDOPERATION_TRAFFICQOSPOLICYBANDWIDTH("UnsupportedOperation.TrafficQosPolicyBandwidth"),
+     
      /* 账号ID不存在。 */
      UNSUPPORTEDOPERATION_UINNOTFOUND("UnsupportedOperation.UinNotFound"),
      
@@ -1403,6 +1418,9 @@ public enum VpcErrorCode {
      
      /* 对端网关不存在BGP ASN。 */
      UNSUPPORTEDOPERATION_VPNUNSUPPORTEDUSRGWNOTEXISTBGPASN("UnsupportedOperation.VpnUnsupportedUsrGwNotExistBgpAsn"),
+     
+     /* 没在白名单内，不支持当前操作。 */
+     UNSUPPORTEDOPERATION_WHITELISTNOTADD("UnsupportedOperation.WhiteListNotAdd"),
      
      /* 指定资源在不同的可用区。 */
      UNSUPPORTEDOPERATION_ZONEMISMATCH("UnsupportedOperation.ZoneMismatch"),

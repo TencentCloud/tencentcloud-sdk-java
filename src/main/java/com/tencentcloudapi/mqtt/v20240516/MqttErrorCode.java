@@ -57,6 +57,9 @@ public enum MqttErrorCode {
      /* 资源被占用。 */
      RESOURCEINUSE("ResourceInUse"),
      
+     /* 资源不存在。 */
+     RESOURCENOTFOUND("ResourceNotFound"),
+     
      /* 授权策略未找到 */
      RESOURCENOTFOUND_AUTHORIZATIONPOLICY("ResourceNotFound.AuthorizationPolicy"),
      

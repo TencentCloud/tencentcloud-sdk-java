@@ -124,6 +124,34 @@ public class Pod extends AbstractModel {
     private String NodeIP;
 
     /**
+    * 当前实例所在节点id
+    */
+    @SerializedName("NodeId")
+    @Expose
+    private String NodeId;
+
+    /**
+    * 当时实例所属资源组 id
+    */
+    @SerializedName("ResourceGroupId")
+    @Expose
+    private String ResourceGroupId;
+
+    /**
+    * 资源组名称
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
+    * 实例的资源占用信息
+    */
+    @SerializedName("ResourceInfo")
+    @Expose
+    private ResourceInfo ResourceInfo;
+
+    /**
      * Get pod名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name pod名
@@ -371,6 +399,70 @@ public class Pod extends AbstractModel {
         this.NodeIP = NodeIP;
     }
 
+    /**
+     * Get 当前实例所在节点id 
+     * @return NodeId 当前实例所在节点id
+     */
+    public String getNodeId() {
+        return this.NodeId;
+    }
+
+    /**
+     * Set 当前实例所在节点id
+     * @param NodeId 当前实例所在节点id
+     */
+    public void setNodeId(String NodeId) {
+        this.NodeId = NodeId;
+    }
+
+    /**
+     * Get 当时实例所属资源组 id 
+     * @return ResourceGroupId 当时实例所属资源组 id
+     */
+    public String getResourceGroupId() {
+        return this.ResourceGroupId;
+    }
+
+    /**
+     * Set 当时实例所属资源组 id
+     * @param ResourceGroupId 当时实例所属资源组 id
+     */
+    public void setResourceGroupId(String ResourceGroupId) {
+        this.ResourceGroupId = ResourceGroupId;
+    }
+
+    /**
+     * Get 资源组名称 
+     * @return ResourceGroupName 资源组名称
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set 资源组名称
+     * @param ResourceGroupName 资源组名称
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
+    /**
+     * Get 实例的资源占用信息 
+     * @return ResourceInfo 实例的资源占用信息
+     */
+    public ResourceInfo getResourceInfo() {
+        return this.ResourceInfo;
+    }
+
+    /**
+     * Set 实例的资源占用信息
+     * @param ResourceInfo 实例的资源占用信息
+     */
+    public void setResourceInfo(ResourceInfo ResourceInfo) {
+        this.ResourceInfo = ResourceInfo;
+    }
+
     public Pod() {
     }
 
@@ -421,6 +513,18 @@ public class Pod extends AbstractModel {
         if (source.NodeIP != null) {
             this.NodeIP = new String(source.NodeIP);
         }
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
+        }
+        if (source.ResourceGroupId != null) {
+            this.ResourceGroupId = new String(source.ResourceGroupId);
+        }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
+        if (source.ResourceInfo != null) {
+            this.ResourceInfo = new ResourceInfo(source.ResourceInfo);
+        }
     }
 
 
@@ -441,6 +545,10 @@ public class Pod extends AbstractModel {
         this.setParamSimple(map, prefix + "StartScheduleTime", this.StartScheduleTime);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "NodeIP", this.NodeIP);
+        this.setParamSimple(map, prefix + "NodeId", this.NodeId);
+        this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+        this.setParamObj(map, prefix + "ResourceInfo.", this.ResourceInfo);
 
     }
 }

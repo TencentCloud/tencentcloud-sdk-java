@@ -164,7 +164,7 @@ public class TemplateInfo extends AbstractModel {
     private Long Available;
 
     /**
-    * 模版的用户合同类型
+    * 模板的用户合同类型
     */
     @SerializedName("UserFlowType")
     @Expose
@@ -531,16 +531,16 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 模版的用户合同类型 
-     * @return UserFlowType 模版的用户合同类型
+     * Get 模板的用户合同类型 
+     * @return UserFlowType 模板的用户合同类型
      */
     public UserFlowType getUserFlowType() {
         return this.UserFlowType;
     }
 
     /**
-     * Set 模版的用户合同类型
-     * @param UserFlowType 模版的用户合同类型
+     * Set 模板的用户合同类型
+     * @param UserFlowType 模板的用户合同类型
      */
     public void setUserFlowType(UserFlowType UserFlowType) {
         this.UserFlowType = UserFlowType;

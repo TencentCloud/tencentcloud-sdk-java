@@ -28,28 +28,40 @@ public class DescribeDataTransformInfoRequest extends AbstractModel {
 按照【加工任务名称】进行过滤。
 类型：String
 必选：否
+示例：test-task
 
 - taskId
 按照【加工任务id】进行过滤。
 类型：String
 必选：否
+示例：a3622556-6402-4942-b4ff-5ae32ec29810
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
 
 - topicId
 按照【源topicId】进行过滤。
 类型：String
 必选：否
+示例：756cec3e-a0a5-44c3-85a8-090870582000
+日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+
 - status
 按照【 任务运行状态】进行过滤。 1：准备中，2：运行中，3：停止中，4：已停止
 类型：String
 必选：否
+示例：1
+
 - hasServiceLog
 按照【是否开启服务日志】进行过滤。 1：未开启，2：已开启
 类型：String
 必选：否
+示例：1
+
 - dstTopicType
 按照【目标topic类型】进行过滤。  1：固定，2：动态
 类型：String
 必选：否
+示例：1
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
     */
@@ -80,6 +92,7 @@ public class DescribeDataTransformInfoRequest extends AbstractModel {
 
     /**
     * Type为1， 此参数必填
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
     */
     @SerializedName("TaskId")
     @Expose
@@ -90,56 +103,80 @@ public class DescribeDataTransformInfoRequest extends AbstractModel {
 按照【加工任务名称】进行过滤。
 类型：String
 必选：否
+示例：test-task
 
 - taskId
 按照【加工任务id】进行过滤。
 类型：String
 必选：否
+示例：a3622556-6402-4942-b4ff-5ae32ec29810
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
 
 - topicId
 按照【源topicId】进行过滤。
 类型：String
 必选：否
+示例：756cec3e-a0a5-44c3-85a8-090870582000
+日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+
 - status
 按照【 任务运行状态】进行过滤。 1：准备中，2：运行中，3：停止中，4：已停止
 类型：String
 必选：否
+示例：1
+
 - hasServiceLog
 按照【是否开启服务日志】进行过滤。 1：未开启，2：已开启
 类型：String
 必选：否
+示例：1
+
 - dstTopicType
 按照【目标topic类型】进行过滤。  1：固定，2：动态
 类型：String
 必选：否
+示例：1
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。 
      * @return Filters - taskName
 按照【加工任务名称】进行过滤。
 类型：String
 必选：否
+示例：test-task
 
 - taskId
 按照【加工任务id】进行过滤。
 类型：String
 必选：否
+示例：a3622556-6402-4942-b4ff-5ae32ec29810
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
 
 - topicId
 按照【源topicId】进行过滤。
 类型：String
 必选：否
+示例：756cec3e-a0a5-44c3-85a8-090870582000
+日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+
 - status
 按照【 任务运行状态】进行过滤。 1：准备中，2：运行中，3：停止中，4：已停止
 类型：String
 必选：否
+示例：1
+
 - hasServiceLog
 按照【是否开启服务日志】进行过滤。 1：未开启，2：已开启
 类型：String
 必选：否
+示例：1
+
 - dstTopicType
 按照【目标topic类型】进行过滤。  1：固定，2：动态
 类型：String
 必选：否
+示例：1
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
@@ -152,56 +189,80 @@ public class DescribeDataTransformInfoRequest extends AbstractModel {
 按照【加工任务名称】进行过滤。
 类型：String
 必选：否
+示例：test-task
 
 - taskId
 按照【加工任务id】进行过滤。
 类型：String
 必选：否
+示例：a3622556-6402-4942-b4ff-5ae32ec29810
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
 
 - topicId
 按照【源topicId】进行过滤。
 类型：String
 必选：否
+示例：756cec3e-a0a5-44c3-85a8-090870582000
+日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+
 - status
 按照【 任务运行状态】进行过滤。 1：准备中，2：运行中，3：停止中，4：已停止
 类型：String
 必选：否
+示例：1
+
 - hasServiceLog
 按照【是否开启服务日志】进行过滤。 1：未开启，2：已开启
 类型：String
 必选：否
+示例：1
+
 - dstTopicType
 按照【目标topic类型】进行过滤。  1：固定，2：动态
 类型：String
 必选：否
+示例：1
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      * @param Filters - taskName
 按照【加工任务名称】进行过滤。
 类型：String
 必选：否
+示例：test-task
 
 - taskId
 按照【加工任务id】进行过滤。
 类型：String
 必选：否
+示例：a3622556-6402-4942-b4ff-5ae32ec29810
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
 
 - topicId
 按照【源topicId】进行过滤。
 类型：String
 必选：否
+示例：756cec3e-a0a5-44c3-85a8-090870582000
+日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+
 - status
 按照【 任务运行状态】进行过滤。 1：准备中，2：运行中，3：停止中，4：已停止
 类型：String
 必选：否
+示例：1
+
 - hasServiceLog
 按照【是否开启服务日志】进行过滤。 1：未开启，2：已开启
 类型：String
 必选：否
+示例：1
+
 - dstTopicType
 按照【目标topic类型】进行过滤。  1：固定，2：动态
 类型：String
 必选：否
+示例：1
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
@@ -258,8 +319,10 @@ public class DescribeDataTransformInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get Type为1， 此参数必填 
+     * Get Type为1， 此参数必填
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。 
      * @return TaskId Type为1， 此参数必填
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -267,7 +330,9 @@ public class DescribeDataTransformInfoRequest extends AbstractModel {
 
     /**
      * Set Type为1， 此参数必填
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
      * @param TaskId Type为1， 此参数必填
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

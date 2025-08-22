@@ -31,7 +31,7 @@ public class WeChatBillDetail extends AbstractModel {
     private String BizToken;
 
     /**
-    * 本token收费次数
+    * 本token收费次数。（说明：一次核身过程用户可能会重试多次，因此一个biztoken可能会对应多次计费，如需配置重试上限，请[联系我们](https://cloud.tencent.com/document/product/1007/56130)配置。）
     */
     @SerializedName("ChargeCount")
     @Expose
@@ -68,16 +68,16 @@ public class WeChatBillDetail extends AbstractModel {
     }
 
     /**
-     * Get 本token收费次数 
-     * @return ChargeCount 本token收费次数
+     * Get 本token收费次数。（说明：一次核身过程用户可能会重试多次，因此一个biztoken可能会对应多次计费，如需配置重试上限，请[联系我们](https://cloud.tencent.com/document/product/1007/56130)配置。） 
+     * @return ChargeCount 本token收费次数。（说明：一次核身过程用户可能会重试多次，因此一个biztoken可能会对应多次计费，如需配置重试上限，请[联系我们](https://cloud.tencent.com/document/product/1007/56130)配置。）
      */
     public Long getChargeCount() {
         return this.ChargeCount;
     }
 
     /**
-     * Set 本token收费次数
-     * @param ChargeCount 本token收费次数
+     * Set 本token收费次数。（说明：一次核身过程用户可能会重试多次，因此一个biztoken可能会对应多次计费，如需配置重试上限，请[联系我们](https://cloud.tencent.com/document/product/1007/56130)配置。）
+     * @param ChargeCount 本token收费次数。（说明：一次核身过程用户可能会重试多次，因此一个biztoken可能会对应多次计费，如需配置重试上限，请[联系我们](https://cloud.tencent.com/document/product/1007/56130)配置。）
      */
     public void setChargeCount(Long ChargeCount) {
         this.ChargeCount = ChargeCount;

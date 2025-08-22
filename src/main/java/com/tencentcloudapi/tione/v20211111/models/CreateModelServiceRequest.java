@@ -292,14 +292,14 @@ HYBRID_PAID:
     private Long InstancePerReplicas;
 
     /**
-    * 30
+    * 服务的优雅退出时限。单位为秒，默认值为30，最小为1
     */
     @SerializedName("TerminationGracePeriodSeconds")
     @Expose
     private Long TerminationGracePeriodSeconds;
 
     /**
-    * ["sleep","60"]
+    * 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
     */
     @SerializedName("PreStopCommand")
     @Expose
@@ -332,6 +332,13 @@ HYBRID_PAID:
     @SerializedName("Sidecar")
     @Expose
     private SidecarSpec Sidecar;
+
+    /**
+    * 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
+    */
+    @SerializedName("VolumeMounts")
+    @Expose
+    private VolumeMount [] VolumeMounts;
 
     /**
      * Get 新增版本时需要填写 
@@ -986,32 +993,32 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 30 
-     * @return TerminationGracePeriodSeconds 30
+     * Get 服务的优雅退出时限。单位为秒，默认值为30，最小为1 
+     * @return TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
      */
     public Long getTerminationGracePeriodSeconds() {
         return this.TerminationGracePeriodSeconds;
     }
 
     /**
-     * Set 30
-     * @param TerminationGracePeriodSeconds 30
+     * Set 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     * @param TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
      */
     public void setTerminationGracePeriodSeconds(Long TerminationGracePeriodSeconds) {
         this.TerminationGracePeriodSeconds = TerminationGracePeriodSeconds;
     }
 
     /**
-     * Get ["sleep","60"] 
-     * @return PreStopCommand ["sleep","60"]
+     * Get 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束 
+     * @return PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
      */
     public String [] getPreStopCommand() {
         return this.PreStopCommand;
     }
 
     /**
-     * Set ["sleep","60"]
-     * @param PreStopCommand ["sleep","60"]
+     * Set 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     * @param PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
      */
     public void setPreStopCommand(String [] PreStopCommand) {
         this.PreStopCommand = PreStopCommand;
@@ -1079,6 +1086,22 @@ HYBRID_PAID:
      */
     public void setSidecar(SidecarSpec Sidecar) {
         this.Sidecar = Sidecar;
+    }
+
+    /**
+     * Get 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。 
+     * @return VolumeMounts 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
+     */
+    public VolumeMount [] getVolumeMounts() {
+        return this.VolumeMounts;
+    }
+
+    /**
+     * Set 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
+     * @param VolumeMounts 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
+     */
+    public void setVolumeMounts(VolumeMount [] VolumeMounts) {
+        this.VolumeMounts = VolumeMounts;
     }
 
     public CreateModelServiceRequest() {
@@ -1224,6 +1247,12 @@ HYBRID_PAID:
         if (source.Sidecar != null) {
             this.Sidecar = new SidecarSpec(source.Sidecar);
         }
+        if (source.VolumeMounts != null) {
+            this.VolumeMounts = new VolumeMount[source.VolumeMounts.length];
+            for (int i = 0; i < source.VolumeMounts.length; i++) {
+                this.VolumeMounts[i] = new VolumeMount(source.VolumeMounts[i]);
+            }
+        }
     }
 
 
@@ -1272,6 +1301,7 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "HealthProbe.", this.HealthProbe);
         this.setParamObj(map, prefix + "RollingUpdate.", this.RollingUpdate);
         this.setParamObj(map, prefix + "Sidecar.", this.Sidecar);
+        this.setParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
 
     }
 }

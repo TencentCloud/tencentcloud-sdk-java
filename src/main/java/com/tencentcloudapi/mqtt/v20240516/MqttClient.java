@@ -83,6 +83,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *创建一机一密设备签名
+     * @param req CreateDeviceIdentityRequest
+     * @return CreateDeviceIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeviceIdentityResponse CreateDeviceIdentity(CreateDeviceIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDeviceIdentity", CreateDeviceIdentityResponse.class);
+    }
+
+    /**
      *创建一个HTTP的认证器
      * @param req CreateHttpAuthenticatorRequest
      * @return CreateHttpAuthenticatorResponse
@@ -226,6 +237,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *删除一机一密设备签名
+     * @param req DeleteDeviceIdentityRequest
+     * @return DeleteDeviceIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeviceIdentityResponse DeleteDeviceIdentity(DeleteDeviceIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDeviceIdentity", DeleteDeviceIdentityResponse.class);
+    }
+
+    /**
      *删除MQTT实例的公网接入点
      * @param req DeleteInsPublicEndpointRequest
      * @return DeleteInsPublicEndpointResponse
@@ -344,6 +366,28 @@ public class MqttClient extends AbstractClient{
     public DescribeDeviceCertificatesResponse DescribeDeviceCertificates(DescribeDeviceCertificatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDeviceCertificates", DescribeDeviceCertificatesResponse.class);
+    }
+
+    /**
+     *查询集群下设备标识列表
+     * @param req DescribeDeviceIdentitiesRequest
+     * @return DescribeDeviceIdentitiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceIdentitiesResponse DescribeDeviceIdentities(DescribeDeviceIdentitiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceIdentities", DescribeDeviceIdentitiesResponse.class);
+    }
+
+    /**
+     *查询设备一机一密标识
+     * @param req DescribeDeviceIdentityRequest
+     * @return DescribeDeviceIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceIdentityResponse DescribeDeviceIdentity(DescribeDeviceIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceIdentity", DescribeDeviceIdentityResponse.class);
     }
 
     /**
@@ -497,6 +541,17 @@ public class MqttClient extends AbstractClient{
     public ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(ModifyAuthorizationPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAuthorizationPolicy", ModifyAuthorizationPolicyResponse.class);
+    }
+
+    /**
+     *修改一机一密设备签名
+     * @param req ModifyDeviceIdentityRequest
+     * @return ModifyDeviceIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeviceIdentityResponse ModifyDeviceIdentity(ModifyDeviceIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDeviceIdentity", ModifyDeviceIdentityResponse.class);
     }
 
     /**

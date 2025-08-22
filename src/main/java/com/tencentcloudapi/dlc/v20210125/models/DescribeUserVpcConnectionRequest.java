@@ -38,6 +38,13 @@ public class DescribeUserVpcConnectionRequest extends AbstractModel {
     private String [] DataEngineIds;
 
     /**
+    * 终端节点ID集合
+    */
+    @SerializedName("UserVpcEndpointIds")
+    @Expose
+    private String [] UserVpcEndpointIds;
+
+    /**
      * Get 引擎网络ID 
      * @return EngineNetworkId 引擎网络ID
      */
@@ -69,6 +76,22 @@ public class DescribeUserVpcConnectionRequest extends AbstractModel {
         this.DataEngineIds = DataEngineIds;
     }
 
+    /**
+     * Get 终端节点ID集合 
+     * @return UserVpcEndpointIds 终端节点ID集合
+     */
+    public String [] getUserVpcEndpointIds() {
+        return this.UserVpcEndpointIds;
+    }
+
+    /**
+     * Set 终端节点ID集合
+     * @param UserVpcEndpointIds 终端节点ID集合
+     */
+    public void setUserVpcEndpointIds(String [] UserVpcEndpointIds) {
+        this.UserVpcEndpointIds = UserVpcEndpointIds;
+    }
+
     public DescribeUserVpcConnectionRequest() {
     }
 
@@ -86,6 +109,12 @@ public class DescribeUserVpcConnectionRequest extends AbstractModel {
                 this.DataEngineIds[i] = new String(source.DataEngineIds[i]);
             }
         }
+        if (source.UserVpcEndpointIds != null) {
+            this.UserVpcEndpointIds = new String[source.UserVpcEndpointIds.length];
+            for (int i = 0; i < source.UserVpcEndpointIds.length; i++) {
+                this.UserVpcEndpointIds[i] = new String(source.UserVpcEndpointIds[i]);
+            }
+        }
     }
 
 
@@ -95,6 +124,7 @@ public class DescribeUserVpcConnectionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EngineNetworkId", this.EngineNetworkId);
         this.setParamArraySimple(map, prefix + "DataEngineIds.", this.DataEngineIds);
+        this.setParamArraySimple(map, prefix + "UserVpcEndpointIds.", this.UserVpcEndpointIds);
 
     }
 }

@@ -38,7 +38,7 @@ public class Place extends AbstractModel {
     private Long ProvinceId;
 
     /**
-    * 国家ID，暂只支持国内：1。
+    * 国家ID，暂只支持境内：1。
     */
     @SerializedName("CountryId")
     @Expose
@@ -84,16 +84,16 @@ public class Place extends AbstractModel {
     }
 
     /**
-     * Get 国家ID，暂只支持国内：1。 
-     * @return CountryId 国家ID，暂只支持国内：1。
+     * Get 国家ID，暂只支持境内：1。 
+     * @return CountryId 国家ID，暂只支持境内：1。
      */
     public Long getCountryId() {
         return this.CountryId;
     }
 
     /**
-     * Set 国家ID，暂只支持国内：1。
-     * @param CountryId 国家ID，暂只支持国内：1。
+     * Set 国家ID，暂只支持境内：1。
+     * @param CountryId 国家ID，暂只支持境内：1。
      */
     public void setCountryId(Long CountryId) {
         this.CountryId = CountryId;

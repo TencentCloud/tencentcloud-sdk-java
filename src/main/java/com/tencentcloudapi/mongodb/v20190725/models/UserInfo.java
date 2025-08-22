@@ -59,6 +59,13 @@ public class UserInfo extends AbstractModel {
     private String UserDesc;
 
     /**
+    * 控制台密码更新时间
+    */
+    @SerializedName("ConsolePassUpdateTime")
+    @Expose
+    private String ConsolePassUpdateTime;
+
+    /**
      * Get 账号名。 
      * @return UserName 账号名。
      */
@@ -138,6 +145,22 @@ public class UserInfo extends AbstractModel {
         this.UserDesc = UserDesc;
     }
 
+    /**
+     * Get 控制台密码更新时间 
+     * @return ConsolePassUpdateTime 控制台密码更新时间
+     */
+    public String getConsolePassUpdateTime() {
+        return this.ConsolePassUpdateTime;
+    }
+
+    /**
+     * Set 控制台密码更新时间
+     * @param ConsolePassUpdateTime 控制台密码更新时间
+     */
+    public void setConsolePassUpdateTime(String ConsolePassUpdateTime) {
+        this.ConsolePassUpdateTime = ConsolePassUpdateTime;
+    }
+
     public UserInfo() {
     }
 
@@ -164,6 +187,9 @@ public class UserInfo extends AbstractModel {
         if (source.UserDesc != null) {
             this.UserDesc = new String(source.UserDesc);
         }
+        if (source.ConsolePassUpdateTime != null) {
+            this.ConsolePassUpdateTime = new String(source.ConsolePassUpdateTime);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class UserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "UserDesc", this.UserDesc);
+        this.setParamSimple(map, prefix + "ConsolePassUpdateTime", this.ConsolePassUpdateTime);
 
     }
 }

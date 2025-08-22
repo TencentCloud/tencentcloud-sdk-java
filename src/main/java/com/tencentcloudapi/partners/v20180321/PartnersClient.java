@@ -164,7 +164,7 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
-     *可以查询代理商代付的预付费订单
+     *查询最近15天内的代理商代付订单
      * @param req DescribeAgentPayDealsV2Request
      * @return DescribeAgentPayDealsV2Response
      * @throws TencentCloudSDKException
@@ -186,7 +186,7 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
-     *查询代理商名下指定代客的自付订单（预付费）
+     *查询代理商名下指定代客最近15天内的自付订单（预付费）
      * @param req DescribeAgentSelfPayDealsV2Request
      * @return DescribeAgentSelfPayDealsV2Response
      * @throws TencentCloudSDKException

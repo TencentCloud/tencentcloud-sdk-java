@@ -44,6 +44,14 @@ public class SubtitleTemplate extends AbstractModel {
     private Long StreamIndex;
 
     /**
+    * 要压制到视频中的字幕文件的输入信息，目前仅支持存储在COS的字幕文件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubtitleFileInput")
+    @Expose
+    private MediaInputInfo SubtitleFileInput;
+
+    /**
     * 字体类型，支持：
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
@@ -169,6 +177,70 @@ public class SubtitleTemplate extends AbstractModel {
     private Float BoardAlpha;
 
     /**
+    * 描边宽度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OutlineWidth")
+    @Expose
+    private Float OutlineWidth;
+
+    /**
+    * 描边颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OutlineColor")
+    @Expose
+    private String OutlineColor;
+
+    /**
+    * 描边透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OutlineAlpha")
+    @Expose
+    private Float OutlineAlpha;
+
+    /**
+    * 阴影宽度。浮点数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShadowWidth")
+    @Expose
+    private Float ShadowWidth;
+
+    /**
+    * 阴影颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShadowColor")
+    @Expose
+    private String ShadowColor;
+
+    /**
+    * 阴影透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShadowAlpha")
+    @Expose
+    private Float ShadowAlpha;
+
+    /**
+    * 行间距。正整数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LineSpacing")
+    @Expose
+    private Long LineSpacing;
+
+    /**
+    * 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Alignment")
+    @Expose
+    private String Alignment;
+
+    /**
      * Get 要压制到视频中的字幕文件地址。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Path 要压制到视频中的字幕文件地址。
@@ -222,6 +294,26 @@ public class SubtitleTemplate extends AbstractModel {
      */
     public void setStreamIndex(Long StreamIndex) {
         this.StreamIndex = StreamIndex;
+    }
+
+    /**
+     * Get 要压制到视频中的字幕文件的输入信息，目前仅支持存储在COS的字幕文件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubtitleFileInput 要压制到视频中的字幕文件的输入信息，目前仅支持存储在COS的字幕文件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaInputInfo getSubtitleFileInput() {
+        return this.SubtitleFileInput;
+    }
+
+    /**
+     * Set 要压制到视频中的字幕文件的输入信息，目前仅支持存储在COS的字幕文件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubtitleFileInput 要压制到视频中的字幕文件的输入信息，目前仅支持存储在COS的字幕文件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubtitleFileInput(MediaInputInfo SubtitleFileInput) {
+        this.SubtitleFileInput = SubtitleFileInput;
     }
 
     /**
@@ -604,6 +696,166 @@ public class SubtitleTemplate extends AbstractModel {
         this.BoardAlpha = BoardAlpha;
     }
 
+    /**
+     * Get 描边宽度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OutlineWidth 描边宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getOutlineWidth() {
+        return this.OutlineWidth;
+    }
+
+    /**
+     * Set 描边宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OutlineWidth 描边宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOutlineWidth(Float OutlineWidth) {
+        this.OutlineWidth = OutlineWidth;
+    }
+
+    /**
+     * Get 描边颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OutlineColor 描边颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOutlineColor() {
+        return this.OutlineColor;
+    }
+
+    /**
+     * Set 描边颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OutlineColor 描边颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOutlineColor(String OutlineColor) {
+        this.OutlineColor = OutlineColor;
+    }
+
+    /**
+     * Get 描边透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OutlineAlpha 描边透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getOutlineAlpha() {
+        return this.OutlineAlpha;
+    }
+
+    /**
+     * Set 描边透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OutlineAlpha 描边透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOutlineAlpha(Float OutlineAlpha) {
+        this.OutlineAlpha = OutlineAlpha;
+    }
+
+    /**
+     * Get 阴影宽度。浮点数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShadowWidth 阴影宽度。浮点数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getShadowWidth() {
+        return this.ShadowWidth;
+    }
+
+    /**
+     * Set 阴影宽度。浮点数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShadowWidth 阴影宽度。浮点数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShadowWidth(Float ShadowWidth) {
+        this.ShadowWidth = ShadowWidth;
+    }
+
+    /**
+     * Get 阴影颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShadowColor 阴影颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getShadowColor() {
+        return this.ShadowColor;
+    }
+
+    /**
+     * Set 阴影颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShadowColor 阴影颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShadowColor(String ShadowColor) {
+        this.ShadowColor = ShadowColor;
+    }
+
+    /**
+     * Get 阴影透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShadowAlpha 阴影透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getShadowAlpha() {
+        return this.ShadowAlpha;
+    }
+
+    /**
+     * Set 阴影透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShadowAlpha 阴影透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShadowAlpha(Float ShadowAlpha) {
+        this.ShadowAlpha = ShadowAlpha;
+    }
+
+    /**
+     * Get 行间距。正整数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LineSpacing 行间距。正整数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLineSpacing() {
+        return this.LineSpacing;
+    }
+
+    /**
+     * Set 行间距。正整数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LineSpacing 行间距。正整数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLineSpacing(Long LineSpacing) {
+        this.LineSpacing = LineSpacing;
+    }
+
+    /**
+     * Get 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Alignment 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlignment() {
+        return this.Alignment;
+    }
+
+    /**
+     * Set 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Alignment 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlignment(String Alignment) {
+        this.Alignment = Alignment;
+    }
+
     public SubtitleTemplate() {
     }
 
@@ -617,6 +869,9 @@ public class SubtitleTemplate extends AbstractModel {
         }
         if (source.StreamIndex != null) {
             this.StreamIndex = new Long(source.StreamIndex);
+        }
+        if (source.SubtitleFileInput != null) {
+            this.SubtitleFileInput = new MediaInputInfo(source.SubtitleFileInput);
         }
         if (source.FontType != null) {
             this.FontType = new String(source.FontType);
@@ -648,6 +903,30 @@ public class SubtitleTemplate extends AbstractModel {
         if (source.BoardAlpha != null) {
             this.BoardAlpha = new Float(source.BoardAlpha);
         }
+        if (source.OutlineWidth != null) {
+            this.OutlineWidth = new Float(source.OutlineWidth);
+        }
+        if (source.OutlineColor != null) {
+            this.OutlineColor = new String(source.OutlineColor);
+        }
+        if (source.OutlineAlpha != null) {
+            this.OutlineAlpha = new Float(source.OutlineAlpha);
+        }
+        if (source.ShadowWidth != null) {
+            this.ShadowWidth = new Float(source.ShadowWidth);
+        }
+        if (source.ShadowColor != null) {
+            this.ShadowColor = new String(source.ShadowColor);
+        }
+        if (source.ShadowAlpha != null) {
+            this.ShadowAlpha = new Float(source.ShadowAlpha);
+        }
+        if (source.LineSpacing != null) {
+            this.LineSpacing = new Long(source.LineSpacing);
+        }
+        if (source.Alignment != null) {
+            this.Alignment = new String(source.Alignment);
+        }
     }
 
 
@@ -657,6 +936,7 @@ public class SubtitleTemplate extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "StreamIndex", this.StreamIndex);
+        this.setParamObj(map, prefix + "SubtitleFileInput.", this.SubtitleFileInput);
         this.setParamSimple(map, prefix + "FontType", this.FontType);
         this.setParamSimple(map, prefix + "FontSize", this.FontSize);
         this.setParamSimple(map, prefix + "FontColor", this.FontColor);
@@ -667,6 +947,14 @@ public class SubtitleTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "BoardHeight", this.BoardHeight);
         this.setParamSimple(map, prefix + "BoardColor", this.BoardColor);
         this.setParamSimple(map, prefix + "BoardAlpha", this.BoardAlpha);
+        this.setParamSimple(map, prefix + "OutlineWidth", this.OutlineWidth);
+        this.setParamSimple(map, prefix + "OutlineColor", this.OutlineColor);
+        this.setParamSimple(map, prefix + "OutlineAlpha", this.OutlineAlpha);
+        this.setParamSimple(map, prefix + "ShadowWidth", this.ShadowWidth);
+        this.setParamSimple(map, prefix + "ShadowColor", this.ShadowColor);
+        this.setParamSimple(map, prefix + "ShadowAlpha", this.ShadowAlpha);
+        this.setParamSimple(map, prefix + "LineSpacing", this.LineSpacing);
+        this.setParamSimple(map, prefix + "Alignment", this.Alignment);
 
     }
 }

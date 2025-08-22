@@ -45,6 +45,13 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
     private Rule WeightRule;
 
     /**
+    * 代理配置
+    */
+    @SerializedName("CustomConfInfo")
+    @Expose
+    private CustomConfig [] CustomConfInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -70,7 +77,9 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
     /**
      * Get 代理配置 
      * @return CustomConf 代理配置
+     * @deprecated
      */
+    @Deprecated
     public CustomConfig getCustomConf() {
         return this.CustomConf;
     }
@@ -78,7 +87,9 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
     /**
      * Set 代理配置
      * @param CustomConf 代理配置
+     * @deprecated
      */
+    @Deprecated
     public void setCustomConf(CustomConfig CustomConf) {
         this.CustomConf = CustomConf;
     }
@@ -97,6 +108,22 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
      */
     public void setWeightRule(Rule WeightRule) {
         this.WeightRule = WeightRule;
+    }
+
+    /**
+     * Get 代理配置 
+     * @return CustomConfInfo 代理配置
+     */
+    public CustomConfig [] getCustomConfInfo() {
+        return this.CustomConfInfo;
+    }
+
+    /**
+     * Set 代理配置
+     * @param CustomConfInfo 代理配置
+     */
+    public void setCustomConfInfo(CustomConfig [] CustomConfInfo) {
+        this.CustomConfInfo = CustomConfInfo;
     }
 
     /**
@@ -132,6 +159,12 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
         if (source.WeightRule != null) {
             this.WeightRule = new Rule(source.WeightRule);
         }
+        if (source.CustomConfInfo != null) {
+            this.CustomConfInfo = new CustomConfig[source.CustomConfInfo.length];
+            for (int i = 0; i < source.CustomConfInfo.length; i++) {
+                this.CustomConfInfo[i] = new CustomConfig(source.CustomConfInfo[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -145,6 +178,7 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamObj(map, prefix + "CustomConf.", this.CustomConf);
         this.setParamObj(map, prefix + "WeightRule.", this.WeightRule);
+        this.setParamArrayObj(map, prefix + "CustomConfInfo.", this.CustomConfInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class PublicDataSourceFS extends AbstractModel {
 
+    /**
+    * 数据源id
+    */
+    @SerializedName("DataSourceId")
+    @Expose
+    private String DataSourceId;
+
+    /**
+    * 相对数据源子路径
+    */
+    @SerializedName("SubPath")
+    @Expose
+    private String SubPath;
+
+    /**
+     * Get 数据源id 
+     * @return DataSourceId 数据源id
+     */
+    public String getDataSourceId() {
+        return this.DataSourceId;
+    }
+
+    /**
+     * Set 数据源id
+     * @param DataSourceId 数据源id
+     */
+    public void setDataSourceId(String DataSourceId) {
+        this.DataSourceId = DataSourceId;
+    }
+
+    /**
+     * Get 相对数据源子路径 
+     * @return SubPath 相对数据源子路径
+     */
+    public String getSubPath() {
+        return this.SubPath;
+    }
+
+    /**
+     * Set 相对数据源子路径
+     * @param SubPath 相对数据源子路径
+     */
+    public void setSubPath(String SubPath) {
+        this.SubPath = SubPath;
+    }
+
     public PublicDataSourceFS() {
     }
 
@@ -31,6 +77,12 @@ public class PublicDataSourceFS extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public PublicDataSourceFS(PublicDataSourceFS source) {
+        if (source.DataSourceId != null) {
+            this.DataSourceId = new String(source.DataSourceId);
+        }
+        if (source.SubPath != null) {
+            this.SubPath = new String(source.SubPath);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class PublicDataSourceFS extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
+        this.setParamSimple(map, prefix + "SubPath", this.SubPath);
 
     }
 }

@@ -87,6 +87,14 @@ public class RawTranscodeParameter extends AbstractModel {
     private EnhanceConfig EnhanceConfig;
 
     /**
+    * 字幕参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubtitleTemplate")
+    @Expose
+    private SubtitleTemplate SubtitleTemplate;
+
+    /**
      * Get 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。 
      * @return Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
@@ -242,6 +250,26 @@ public class RawTranscodeParameter extends AbstractModel {
         this.EnhanceConfig = EnhanceConfig;
     }
 
+    /**
+     * Get 字幕参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubtitleTemplate 字幕参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SubtitleTemplate getSubtitleTemplate() {
+        return this.SubtitleTemplate;
+    }
+
+    /**
+     * Set 字幕参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubtitleTemplate 字幕参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
+        this.SubtitleTemplate = SubtitleTemplate;
+    }
+
     public RawTranscodeParameter() {
     }
 
@@ -274,6 +302,9 @@ public class RawTranscodeParameter extends AbstractModel {
         if (source.EnhanceConfig != null) {
             this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
         }
+        if (source.SubtitleTemplate != null) {
+            this.SubtitleTemplate = new SubtitleTemplate(source.SubtitleTemplate);
+        }
     }
 
 
@@ -289,6 +320,7 @@ public class RawTranscodeParameter extends AbstractModel {
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+        this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
 
     }
 }

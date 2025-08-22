@@ -77,7 +77,7 @@ public class EmbedUrlOption extends AbstractModel {
     */
     @SerializedName("ForbidEditSealDescription")
     @Expose
-    private String ForbidEditSealDescription;
+    private Boolean ForbidEditSealDescription;
 
     /**
      * Get 合同详情预览，允许展示控件信息
@@ -217,7 +217,7 @@ public class EmbedUrlOption extends AbstractModel {
      * @return ForbidEditSealDescription 是否禁止编辑印章描述内容
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
      */
-    public String getForbidEditSealDescription() {
+    public Boolean getForbidEditSealDescription() {
         return this.ForbidEditSealDescription;
     }
 
@@ -227,7 +227,7 @@ public class EmbedUrlOption extends AbstractModel {
      * @param ForbidEditSealDescription 是否禁止编辑印章描述内容
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
      */
-    public void setForbidEditSealDescription(String ForbidEditSealDescription) {
+    public void setForbidEditSealDescription(Boolean ForbidEditSealDescription) {
         this.ForbidEditSealDescription = ForbidEditSealDescription;
     }
 
@@ -255,7 +255,7 @@ public class EmbedUrlOption extends AbstractModel {
             this.SealDescription = new String(source.SealDescription);
         }
         if (source.ForbidEditSealDescription != null) {
-            this.ForbidEditSealDescription = new String(source.ForbidEditSealDescription);
+            this.ForbidEditSealDescription = new Boolean(source.ForbidEditSealDescription);
         }
     }
 

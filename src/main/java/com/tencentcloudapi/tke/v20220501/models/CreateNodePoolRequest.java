@@ -80,7 +80,7 @@ public class CreateNodePoolRequest extends AbstractModel {
     private Boolean Unschedulable;
 
     /**
-    * 原生节点池创建参数
+    * 原生节点池创建参数（Type字段设置为Native时需填写）
     */
     @SerializedName("Native")
     @Expose
@@ -222,16 +222,16 @@ public class CreateNodePoolRequest extends AbstractModel {
     }
 
     /**
-     * Get 原生节点池创建参数 
-     * @return Native 原生节点池创建参数
+     * Get 原生节点池创建参数（Type字段设置为Native时需填写） 
+     * @return Native 原生节点池创建参数（Type字段设置为Native时需填写）
      */
     public CreateNativeNodePoolParam getNative() {
         return this.Native;
     }
 
     /**
-     * Set 原生节点池创建参数
-     * @param Native 原生节点池创建参数
+     * Set 原生节点池创建参数（Type字段设置为Native时需填写）
+     * @param Native 原生节点池创建参数（Type字段设置为Native时需填写）
      */
     public void setNative(CreateNativeNodePoolParam Native) {
         this.Native = Native;

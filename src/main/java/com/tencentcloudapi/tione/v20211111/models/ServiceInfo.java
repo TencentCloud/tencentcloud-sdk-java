@@ -322,6 +322,20 @@ HYBRID_PAID:
     private RollingUpdate RollingUpdate;
 
     /**
+    * 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+    */
+    @SerializedName("InstancePerReplicas")
+    @Expose
+    private Long InstancePerReplicas;
+
+    /**
+    * 批量数据盘挂载配置
+    */
+    @SerializedName("VolumeMounts")
+    @Expose
+    private VolumeMount [] VolumeMounts;
+
+    /**
      * Get 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -1077,6 +1091,38 @@ HYBRID_PAID:
         this.RollingUpdate = RollingUpdate;
     }
 
+    /**
+     * Get 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1 
+     * @return InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+     */
+    public Long getInstancePerReplicas() {
+        return this.InstancePerReplicas;
+    }
+
+    /**
+     * Set 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+     * @param InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+     */
+    public void setInstancePerReplicas(Long InstancePerReplicas) {
+        this.InstancePerReplicas = InstancePerReplicas;
+    }
+
+    /**
+     * Get 批量数据盘挂载配置 
+     * @return VolumeMounts 批量数据盘挂载配置
+     */
+    public VolumeMount [] getVolumeMounts() {
+        return this.VolumeMounts;
+    }
+
+    /**
+     * Set 批量数据盘挂载配置
+     * @param VolumeMounts 批量数据盘挂载配置
+     */
+    public void setVolumeMounts(VolumeMount [] VolumeMounts) {
+        this.VolumeMounts = VolumeMounts;
+    }
+
     public ServiceInfo() {
     }
 
@@ -1211,6 +1257,15 @@ HYBRID_PAID:
         if (source.RollingUpdate != null) {
             this.RollingUpdate = new RollingUpdate(source.RollingUpdate);
         }
+        if (source.InstancePerReplicas != null) {
+            this.InstancePerReplicas = new Long(source.InstancePerReplicas);
+        }
+        if (source.VolumeMounts != null) {
+            this.VolumeMounts = new VolumeMount[source.VolumeMounts.length];
+            for (int i = 0; i < source.VolumeMounts.length; i++) {
+                this.VolumeMounts[i] = new VolumeMount(source.VolumeMounts[i]);
+            }
+        }
     }
 
 
@@ -1255,6 +1310,8 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "GrpcEnable", this.GrpcEnable);
         this.setParamObj(map, prefix + "HealthProbe.", this.HealthProbe);
         this.setParamObj(map, prefix + "RollingUpdate.", this.RollingUpdate);
+        this.setParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
+        this.setParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
 
     }
 }

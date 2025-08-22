@@ -680,6 +680,17 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *重置已经结束的同步任务，重置后可以重新配置启动任务。
+     * @param req ResetSyncJobRequest
+     * @return ResetSyncJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetSyncJobResponse ResetSyncJob(ResetSyncJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetSyncJob", ResetSyncJobResponse.class);
+    }
+
+    /**
      *调整同步任务规格，此接口只支持按量计费任务的调整，调用此接口后不会立即生效，后台调整时间大概为3~5分钟。调用此接口后可通过查询同步任务信息接口DescribeSyncJobs，获取变配后的状态。
      * @param req ResizeSyncJobRequest
      * @return ResizeSyncJobResponse

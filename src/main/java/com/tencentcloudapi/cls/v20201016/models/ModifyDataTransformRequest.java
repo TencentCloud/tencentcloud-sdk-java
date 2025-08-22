@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ModifyDataTransformRequest extends AbstractModel {
 
     /**
-    * 加工任务id
+    * 数据加工任务ID
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
     */
     @SerializedName("TaskId")
     @Expose
@@ -32,6 +33,12 @@ public class ModifyDataTransformRequest extends AbstractModel {
 
     /**
     * 加工任务名称
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务名称。
+
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
     */
     @SerializedName("Name")
     @Expose
@@ -71,24 +78,40 @@ public class ModifyDataTransformRequest extends AbstractModel {
     private Long HasServicesLog;
 
     /**
-     * Get 加工任务id 
-     * @return TaskId 加工任务id
+     * Get 数据加工任务ID
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。 
+     * @return TaskId 数据加工任务ID
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 加工任务id
-     * @param TaskId 加工任务id
+     * Set 数据加工任务ID
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+     * @param TaskId 数据加工任务ID
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 加工任务名称 
+     * Get 加工任务名称
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务名称。
+
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符 
      * @return Name 加工任务名称
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务名称。
+
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
      */
     public String getName() {
         return this.Name;
@@ -96,7 +119,19 @@ public class ModifyDataTransformRequest extends AbstractModel {
 
     /**
      * Set 加工任务名称
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务名称。
+
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
      * @param Name 加工任务名称
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务名称。
+
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
      */
     public void setName(String Name) {
         this.Name = Name;

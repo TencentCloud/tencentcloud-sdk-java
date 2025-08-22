@@ -157,6 +157,13 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     private DataDisk [] DataDisks;
 
     /**
+    * qgpu开关
+    */
+    @SerializedName("QGPUEnable")
+    @Expose
+    private Boolean QGPUEnable;
+
+    /**
     * 节点池ssh公钥id数组
     */
     @SerializedName("KeyIds")
@@ -169,6 +176,13 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
+
+    /**
+    * 原生节点池安装节点自动化助手开关
+    */
+    @SerializedName("AutomationService")
+    @Expose
+    private Boolean AutomationService;
 
     /**
      * Get 节点池伸缩配置 
@@ -475,6 +489,22 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     }
 
     /**
+     * Get qgpu开关 
+     * @return QGPUEnable qgpu开关
+     */
+    public Boolean getQGPUEnable() {
+        return this.QGPUEnable;
+    }
+
+    /**
+     * Set qgpu开关
+     * @param QGPUEnable qgpu开关
+     */
+    public void setQGPUEnable(Boolean QGPUEnable) {
+        this.QGPUEnable = QGPUEnable;
+    }
+
+    /**
      * Get 节点池ssh公钥id数组 
      * @return KeyIds 节点池ssh公钥id数组
      */
@@ -504,6 +534,22 @@ public class CreateNativeNodePoolParam extends AbstractModel {
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
+    }
+
+    /**
+     * Get 原生节点池安装节点自动化助手开关 
+     * @return AutomationService 原生节点池安装节点自动化助手开关
+     */
+    public Boolean getAutomationService() {
+        return this.AutomationService;
+    }
+
+    /**
+     * Set 原生节点池安装节点自动化助手开关
+     * @param AutomationService 原生节点池安装节点自动化助手开关
+     */
+    public void setAutomationService(Boolean AutomationService) {
+        this.AutomationService = AutomationService;
     }
 
     public CreateNativeNodePoolParam() {
@@ -586,6 +632,9 @@ public class CreateNativeNodePoolParam extends AbstractModel {
                 this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
             }
         }
+        if (source.QGPUEnable != null) {
+            this.QGPUEnable = new Boolean(source.QGPUEnable);
+        }
         if (source.KeyIds != null) {
             this.KeyIds = new String[source.KeyIds.length];
             for (int i = 0; i < source.KeyIds.length; i++) {
@@ -594,6 +643,9 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         }
         if (source.MachineType != null) {
             this.MachineType = new String(source.MachineType);
+        }
+        if (source.AutomationService != null) {
+            this.AutomationService = new Boolean(source.AutomationService);
         }
     }
 
@@ -621,8 +673,10 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         this.setParamSimple(map, prefix + "Replicas", this.Replicas);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+        this.setParamSimple(map, prefix + "QGPUEnable", this.QGPUEnable);
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "AutomationService", this.AutomationService);
 
     }
 }

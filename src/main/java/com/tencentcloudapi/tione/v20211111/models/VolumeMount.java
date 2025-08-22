@@ -38,6 +38,14 @@ public class VolumeMount extends AbstractModel {
     private String VolumeSourceType;
 
     /**
+    * 自定义容器内挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MountPath")
+    @Expose
+    private String MountPath;
+
+    /**
      * Get cfs的配置信息 
      * @return CFSConfig cfs的配置信息
      */
@@ -69,6 +77,26 @@ public class VolumeMount extends AbstractModel {
         this.VolumeSourceType = VolumeSourceType;
     }
 
+    /**
+     * Get 自定义容器内挂载路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MountPath 自定义容器内挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMountPath() {
+        return this.MountPath;
+    }
+
+    /**
+     * Set 自定义容器内挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MountPath 自定义容器内挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMountPath(String MountPath) {
+        this.MountPath = MountPath;
+    }
+
     public VolumeMount() {
     }
 
@@ -83,6 +111,9 @@ public class VolumeMount extends AbstractModel {
         if (source.VolumeSourceType != null) {
             this.VolumeSourceType = new String(source.VolumeSourceType);
         }
+        if (source.MountPath != null) {
+            this.MountPath = new String(source.MountPath);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class VolumeMount extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "CFSConfig.", this.CFSConfig);
         this.setParamSimple(map, prefix + "VolumeSourceType", this.VolumeSourceType);
+        this.setParamSimple(map, prefix + "MountPath", this.MountPath);
 
     }
 }

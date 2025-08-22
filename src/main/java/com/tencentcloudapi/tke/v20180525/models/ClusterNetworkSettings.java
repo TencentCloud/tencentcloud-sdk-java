@@ -133,6 +133,13 @@ public class ClusterNetworkSettings extends AbstractModel {
     private String SubnetId;
 
     /**
+    * 是否启用了 DataPlaneV2（cilium替代kube-proxy）
+    */
+    @SerializedName("DataPlaneV2")
+    @Expose
+    private Boolean DataPlaneV2;
+
+    /**
      * Get 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突 
      * @return ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      */
@@ -388,6 +395,22 @@ public class ClusterNetworkSettings extends AbstractModel {
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 是否启用了 DataPlaneV2（cilium替代kube-proxy） 
+     * @return DataPlaneV2 是否启用了 DataPlaneV2（cilium替代kube-proxy）
+     */
+    public Boolean getDataPlaneV2() {
+        return this.DataPlaneV2;
+    }
+
+    /**
+     * Set 是否启用了 DataPlaneV2（cilium替代kube-proxy）
+     * @param DataPlaneV2 是否启用了 DataPlaneV2（cilium替代kube-proxy）
+     */
+    public void setDataPlaneV2(Boolean DataPlaneV2) {
+        this.DataPlaneV2 = DataPlaneV2;
+    }
+
     public ClusterNetworkSettings() {
     }
 
@@ -444,6 +467,9 @@ public class ClusterNetworkSettings extends AbstractModel {
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.DataPlaneV2 != null) {
+            this.DataPlaneV2 = new Boolean(source.DataPlaneV2);
+        }
     }
 
 
@@ -466,6 +492,7 @@ public class ClusterNetworkSettings extends AbstractModel {
         this.setParamSimple(map, prefix + "Ipv6ServiceCIDR", this.Ipv6ServiceCIDR);
         this.setParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "DataPlaneV2", this.DataPlaneV2);
 
     }
 }

@@ -94,6 +94,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *聚合的分类软件列表
+     * @param req DescribeAggrSoftCategorySoftListRequest
+     * @return DescribeAggrSoftCategorySoftListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAggrSoftCategorySoftListResponse DescribeAggrSoftCategorySoftList(DescribeAggrSoftCategorySoftListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAggrSoftCategorySoftList", DescribeAggrSoftCategorySoftListResponse.class);
+    }
+
+    /**
      *webservice查询文件检测结果
      * @param req DescribeDLPFileDetectResultRequest
      * @return DescribeDLPFileDetectResultResponse
@@ -102,6 +113,17 @@ public class IoaClient extends AbstractClient{
     public DescribeDLPFileDetectResultResponse DescribeDLPFileDetectResult(DescribeDLPFileDetectResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDLPFileDetectResult", DescribeDLPFileDetectResultResponse.class);
+    }
+
+    /**
+     *查询设备组子分组详情，私有化调用path为：capi/Assets/Device/DescribeDeviceChildGroups
+     * @param req DescribeDeviceChildGroupsRequest
+     * @return DescribeDeviceChildGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceChildGroupsResponse DescribeDeviceChildGroups(DescribeDeviceChildGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceChildGroups", DescribeDeviceChildGroupsResponse.class);
     }
 
     /**

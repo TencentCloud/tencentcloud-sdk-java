@@ -38,7 +38,7 @@ public class DescribeAgentPayDealsV2Request extends AbstractModel {
     private Long Limit;
 
     /**
-    * 下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
+    * 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
     */
     @SerializedName("CreatTimeRangeStart")
     @Expose
@@ -119,16 +119,16 @@ public class DescribeAgentPayDealsV2Request extends AbstractModel {
     }
 
     /**
-     * Get 下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间) 
-     * @return CreatTimeRangeStart 下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
+     * Get 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间) 
+     * @return CreatTimeRangeStart 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
      */
     public String getCreatTimeRangeStart() {
         return this.CreatTimeRangeStart;
     }
 
     /**
-     * Set 下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
-     * @param CreatTimeRangeStart 下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
+     * Set 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
+     * @param CreatTimeRangeStart 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
      */
     public void setCreatTimeRangeStart(String CreatTimeRangeStart) {
         this.CreatTimeRangeStart = CreatTimeRangeStart;

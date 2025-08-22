@@ -160,7 +160,7 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 高危信息说明：
-ABROAD - 海外IP；
+ABROAD - 境外IP；
 XTI - 威胁情报
     */
     @SerializedName("Desc")
@@ -495,10 +495,10 @@ XTI - 威胁情报
 
     /**
      * Get 高危信息说明：
-ABROAD - 海外IP；
+ABROAD - 境外IP；
 XTI - 威胁情报 
      * @return Desc 高危信息说明：
-ABROAD - 海外IP；
+ABROAD - 境外IP；
 XTI - 威胁情报
      */
     public String getDesc() {
@@ -507,10 +507,10 @@ XTI - 威胁情报
 
     /**
      * Set 高危信息说明：
-ABROAD - 海外IP；
+ABROAD - 境外IP；
 XTI - 威胁情报
      * @param Desc 高危信息说明：
-ABROAD - 海外IP；
+ABROAD - 境外IP；
 XTI - 威胁情报
      */
     public void setDesc(String Desc) {

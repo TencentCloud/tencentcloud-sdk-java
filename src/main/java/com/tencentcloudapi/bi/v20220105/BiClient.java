@@ -50,6 +50,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *强鉴权token 清理，只有企业管理员才能调用该接口
+     * @param req ClearEmbedTokenRequest
+     * @return ClearEmbedTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public ClearEmbedTokenResponse ClearEmbedToken(ClearEmbedTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ClearEmbedToken", ClearEmbedTokenResponse.class);
+    }
+
+    /**
      *创建数据源
      * @param req CreateDatasourceRequest
      * @return CreateDatasourceResponse

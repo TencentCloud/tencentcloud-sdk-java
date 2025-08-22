@@ -101,6 +101,13 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel {
     private String FaultReportContactNumber;
 
     /**
+    * 报障联系邮箱。
+    */
+    @SerializedName("FaultReportContactEmail")
+    @Expose
+    private String FaultReportContactEmail;
+
+    /**
     * 物理专线申请者补签用户使用协议。
     */
     @SerializedName("SignLaw")
@@ -291,6 +298,22 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel {
     }
 
     /**
+     * Get 报障联系邮箱。 
+     * @return FaultReportContactEmail 报障联系邮箱。
+     */
+    public String getFaultReportContactEmail() {
+        return this.FaultReportContactEmail;
+    }
+
+    /**
+     * Set 报障联系邮箱。
+     * @param FaultReportContactEmail 报障联系邮箱。
+     */
+    public void setFaultReportContactEmail(String FaultReportContactEmail) {
+        this.FaultReportContactEmail = FaultReportContactEmail;
+    }
+
+    /**
      * Get 物理专线申请者补签用户使用协议。 
      * @return SignLaw 物理专线申请者补签用户使用协议。
      */
@@ -363,6 +386,9 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel {
         if (source.FaultReportContactNumber != null) {
             this.FaultReportContactNumber = new String(source.FaultReportContactNumber);
         }
+        if (source.FaultReportContactEmail != null) {
+            this.FaultReportContactEmail = new String(source.FaultReportContactEmail);
+        }
         if (source.SignLaw != null) {
             this.SignLaw = new Boolean(source.SignLaw);
         }
@@ -387,6 +413,7 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CustomerContactNumber", this.CustomerContactNumber);
         this.setParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+        this.setParamSimple(map, prefix + "FaultReportContactEmail", this.FaultReportContactEmail);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
 

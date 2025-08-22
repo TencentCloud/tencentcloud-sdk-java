@@ -114,6 +114,22 @@ public class InvokeTWeSeeRecognitionTaskRequest extends AbstractModel {
     private VisionSummaryConfig SummaryConfig;
 
     /**
+    * 算法类型，可能取值：
+- `Summary`：视频/图片摘要
+- `ObjectDetect`：目标检测
+    */
+    @SerializedName("ServiceType")
+    @Expose
+    private String ServiceType;
+
+    /**
+    * 目标检测配置
+    */
+    @SerializedName("ObjectDetectConfig")
+    @Expose
+    private VisionObjectDetectConfig ObjectDetectConfig;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -329,6 +345,46 @@ public class InvokeTWeSeeRecognitionTaskRequest extends AbstractModel {
         this.SummaryConfig = SummaryConfig;
     }
 
+    /**
+     * Get 算法类型，可能取值：
+- `Summary`：视频/图片摘要
+- `ObjectDetect`：目标检测 
+     * @return ServiceType 算法类型，可能取值：
+- `Summary`：视频/图片摘要
+- `ObjectDetect`：目标检测
+     */
+    public String getServiceType() {
+        return this.ServiceType;
+    }
+
+    /**
+     * Set 算法类型，可能取值：
+- `Summary`：视频/图片摘要
+- `ObjectDetect`：目标检测
+     * @param ServiceType 算法类型，可能取值：
+- `Summary`：视频/图片摘要
+- `ObjectDetect`：目标检测
+     */
+    public void setServiceType(String ServiceType) {
+        this.ServiceType = ServiceType;
+    }
+
+    /**
+     * Get 目标检测配置 
+     * @return ObjectDetectConfig 目标检测配置
+     */
+    public VisionObjectDetectConfig getObjectDetectConfig() {
+        return this.ObjectDetectConfig;
+    }
+
+    /**
+     * Set 目标检测配置
+     * @param ObjectDetectConfig 目标检测配置
+     */
+    public void setObjectDetectConfig(VisionObjectDetectConfig ObjectDetectConfig) {
+        this.ObjectDetectConfig = ObjectDetectConfig;
+    }
+
     public InvokeTWeSeeRecognitionTaskRequest() {
     }
 
@@ -373,6 +429,12 @@ public class InvokeTWeSeeRecognitionTaskRequest extends AbstractModel {
         if (source.SummaryConfig != null) {
             this.SummaryConfig = new VisionSummaryConfig(source.SummaryConfig);
         }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
+        if (source.ObjectDetectConfig != null) {
+            this.ObjectDetectConfig = new VisionObjectDetectConfig(source.ObjectDetectConfig);
+        }
     }
 
 
@@ -392,6 +454,8 @@ public class InvokeTWeSeeRecognitionTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InputType", this.InputType);
         this.setParamSimple(map, prefix + "SummaryQOS", this.SummaryQOS);
         this.setParamObj(map, prefix + "SummaryConfig.", this.SummaryConfig);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
+        this.setParamObj(map, prefix + "ObjectDetectConfig.", this.ObjectDetectConfig);
 
     }
 }

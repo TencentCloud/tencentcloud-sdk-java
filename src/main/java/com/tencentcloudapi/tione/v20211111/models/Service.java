@@ -310,6 +310,20 @@ DEFAULT: 其他来源
     private String SubUinName;
 
     /**
+    * 服务的调度策略
+    */
+    @SerializedName("SchedulingPolicy")
+    @Expose
+    private SchedulingPolicy SchedulingPolicy;
+
+    /**
+    * 外部的资源组信息，表示借调了哪些资源组的资源
+    */
+    @SerializedName("ExternalResourceGroups")
+    @Expose
+    private ResourceGroupInfo [] ExternalResourceGroups;
+
+    /**
      * Get 服务组id 
      * @return ServiceGroupId 服务组id
      */
@@ -1041,6 +1055,38 @@ DEFAULT: 其他来源
         this.SubUinName = SubUinName;
     }
 
+    /**
+     * Get 服务的调度策略 
+     * @return SchedulingPolicy 服务的调度策略
+     */
+    public SchedulingPolicy getSchedulingPolicy() {
+        return this.SchedulingPolicy;
+    }
+
+    /**
+     * Set 服务的调度策略
+     * @param SchedulingPolicy 服务的调度策略
+     */
+    public void setSchedulingPolicy(SchedulingPolicy SchedulingPolicy) {
+        this.SchedulingPolicy = SchedulingPolicy;
+    }
+
+    /**
+     * Get 外部的资源组信息，表示借调了哪些资源组的资源 
+     * @return ExternalResourceGroups 外部的资源组信息，表示借调了哪些资源组的资源
+     */
+    public ResourceGroupInfo [] getExternalResourceGroups() {
+        return this.ExternalResourceGroups;
+    }
+
+    /**
+     * Set 外部的资源组信息，表示借调了哪些资源组的资源
+     * @param ExternalResourceGroups 外部的资源组信息，表示借调了哪些资源组的资源
+     */
+    public void setExternalResourceGroups(ResourceGroupInfo [] ExternalResourceGroups) {
+        this.ExternalResourceGroups = ExternalResourceGroups;
+    }
+
     public Service() {
     }
 
@@ -1157,6 +1203,15 @@ DEFAULT: 其他来源
         if (source.SubUinName != null) {
             this.SubUinName = new String(source.SubUinName);
         }
+        if (source.SchedulingPolicy != null) {
+            this.SchedulingPolicy = new SchedulingPolicy(source.SchedulingPolicy);
+        }
+        if (source.ExternalResourceGroups != null) {
+            this.ExternalResourceGroups = new ResourceGroupInfo[source.ExternalResourceGroups.length];
+            for (int i = 0; i < source.ExternalResourceGroups.length; i++) {
+                this.ExternalResourceGroups[i] = new ResourceGroupInfo(source.ExternalResourceGroups[i]);
+            }
+        }
     }
 
 
@@ -1199,6 +1254,8 @@ DEFAULT: 其他来源
         this.setParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
         this.setParamSimple(map, prefix + "MonitorSource", this.MonitorSource);
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
+        this.setParamObj(map, prefix + "SchedulingPolicy.", this.SchedulingPolicy);
+        this.setParamArrayObj(map, prefix + "ExternalResourceGroups.", this.ExternalResourceGroups);
 
     }
 }

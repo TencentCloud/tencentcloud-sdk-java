@@ -148,6 +148,13 @@ ChinaOther：中国其他；
     private String FaultReportContactNumber;
 
     /**
+    * 报障联系邮箱。
+    */
+    @SerializedName("FaultReportContactEmail")
+    @Expose
+    private String FaultReportContactEmail;
+
+    /**
     * 物理专线申请者是否签署了用户使用协议。默认已签署。
     */
     @SerializedName("SignLaw")
@@ -473,6 +480,22 @@ ChinaOther：中国其他；
     }
 
     /**
+     * Get 报障联系邮箱。 
+     * @return FaultReportContactEmail 报障联系邮箱。
+     */
+    public String getFaultReportContactEmail() {
+        return this.FaultReportContactEmail;
+    }
+
+    /**
+     * Set 报障联系邮箱。
+     * @param FaultReportContactEmail 报障联系邮箱。
+     */
+    public void setFaultReportContactEmail(String FaultReportContactEmail) {
+        this.FaultReportContactEmail = FaultReportContactEmail;
+    }
+
+    /**
      * Get 物理专线申请者是否签署了用户使用协议。默认已签署。 
      * @return SignLaw 物理专线申请者是否签署了用户使用协议。默认已签署。
      */
@@ -576,6 +599,9 @@ ChinaOther：中国其他；
         if (source.FaultReportContactNumber != null) {
             this.FaultReportContactNumber = new String(source.FaultReportContactNumber);
         }
+        if (source.FaultReportContactEmail != null) {
+            this.FaultReportContactEmail = new String(source.FaultReportContactEmail);
+        }
         if (source.SignLaw != null) {
             this.SignLaw = new Boolean(source.SignLaw);
         }
@@ -611,6 +637,7 @@ ChinaOther：中国其他；
         this.setParamSimple(map, prefix + "CustomerContactNumber", this.CustomerContactNumber);
         this.setParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+        this.setParamSimple(map, prefix + "FaultReportContactEmail", this.FaultReportContactEmail);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "IsMacSec", this.IsMacSec);

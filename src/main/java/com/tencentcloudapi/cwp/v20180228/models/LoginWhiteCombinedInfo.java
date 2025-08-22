@@ -122,7 +122,7 @@ public class LoginWhiteCombinedInfo extends AbstractModel {
     private String Uuid;
 
     /**
-    * 登陆地
+    * 登录地
     */
     @SerializedName("Locations")
     @Expose
@@ -353,16 +353,16 @@ public class LoginWhiteCombinedInfo extends AbstractModel {
     }
 
     /**
-     * Get 登陆地 
-     * @return Locations 登陆地
+     * Get 登录地 
+     * @return Locations 登录地
      */
     public String getLocations() {
         return this.Locations;
     }
 
     /**
-     * Set 登陆地
-     * @param Locations 登陆地
+     * Set 登录地
+     * @param Locations 登录地
      */
     public void setLocations(String Locations) {
         this.Locations = Locations;

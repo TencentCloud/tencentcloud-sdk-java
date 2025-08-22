@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StopRollbackResponse extends AbstractModel {
 
     /**
-    * 执行请求的异步任务ID
+    * 执行请求的异步任务 ID。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class StopRollbackResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 执行请求的异步任务ID 
-     * @return AsyncRequestId 执行请求的异步任务ID
+     * Get 执行请求的异步任务 ID。 
+     * @return AsyncRequestId 执行请求的异步任务 ID。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 执行请求的异步任务ID
-     * @param AsyncRequestId 执行请求的异步任务ID
+     * Set 执行请求的异步任务 ID。
+     * @param AsyncRequestId 执行请求的异步任务 ID。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

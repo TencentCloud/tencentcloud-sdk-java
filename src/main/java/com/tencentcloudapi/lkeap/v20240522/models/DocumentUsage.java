@@ -73,6 +73,13 @@ public class DocumentUsage extends AbstractModel {
     private Long FailPageNum;
 
     /**
+    * 文件大小，单位KB
+    */
+    @SerializedName("FileSize")
+    @Expose
+    private Long FileSize;
+
+    /**
      * Get 文档拆分任务的页数 
      * @return PageNumber 文档拆分任务的页数
      */
@@ -188,6 +195,22 @@ public class DocumentUsage extends AbstractModel {
         this.FailPageNum = FailPageNum;
     }
 
+    /**
+     * Get 文件大小，单位KB 
+     * @return FileSize 文件大小，单位KB
+     */
+    public Long getFileSize() {
+        return this.FileSize;
+    }
+
+    /**
+     * Set 文件大小，单位KB
+     * @param FileSize 文件大小，单位KB
+     */
+    public void setFileSize(Long FileSize) {
+        this.FileSize = FileSize;
+    }
+
     public DocumentUsage() {
     }
 
@@ -217,6 +240,9 @@ public class DocumentUsage extends AbstractModel {
         if (source.FailPageNum != null) {
             this.FailPageNum = new Long(source.FailPageNum);
         }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
     }
 
 
@@ -231,6 +257,7 @@ public class DocumentUsage extends AbstractModel {
         this.setParamSimple(map, prefix + "MllmTokens", this.MllmTokens);
         this.setParamSimple(map, prefix + "SuccessPageNum", this.SuccessPageNum);
         this.setParamSimple(map, prefix + "FailPageNum", this.FailPageNum);
+        this.setParamSimple(map, prefix + "FileSize", this.FileSize);
 
     }
 }
