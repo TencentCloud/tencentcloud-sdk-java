@@ -79,6 +79,13 @@ public class OutputRisk extends AbstractModel {
     private String Content;
 
     /**
+    * 审查出的PDF段落位置信息
+    */
+    @SerializedName("Positions")
+    @Expose
+    private PositionInfo [] Positions;
+
+    /**
     * 审查依据
     */
     @SerializedName("RiskBasis")
@@ -222,6 +229,22 @@ public class OutputRisk extends AbstractModel {
     }
 
     /**
+     * Get 审查出的PDF段落位置信息 
+     * @return Positions 审查出的PDF段落位置信息
+     */
+    public PositionInfo [] getPositions() {
+        return this.Positions;
+    }
+
+    /**
+     * Set 审查出的PDF段落位置信息
+     * @param Positions 审查出的PDF段落位置信息
+     */
+    public void setPositions(PositionInfo [] Positions) {
+        this.Positions = Positions;
+    }
+
+    /**
      * Get 审查依据 
      * @return RiskBasis 审查依据
      */
@@ -269,6 +292,12 @@ public class OutputRisk extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.Positions != null) {
+            this.Positions = new PositionInfo[source.Positions.length];
+            for (int i = 0; i < source.Positions.length; i++) {
+                this.Positions[i] = new PositionInfo(source.Positions[i]);
+            }
+        }
         if (source.RiskBasis != null) {
             this.RiskBasis = new String(source.RiskBasis);
         }
@@ -286,6 +315,7 @@ public class OutputRisk extends AbstractModel {
         this.setParamSimple(map, prefix + "RiskAdvice", this.RiskAdvice);
         this.setParamArraySimple(map, prefix + "RiskPresentation.", this.RiskPresentation);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamArrayObj(map, prefix + "Positions.", this.Positions);
         this.setParamSimple(map, prefix + "RiskBasis", this.RiskBasis);
 
     }

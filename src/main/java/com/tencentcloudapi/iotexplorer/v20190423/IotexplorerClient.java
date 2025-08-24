@@ -1088,6 +1088,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询 TWeSee 语义理解任务
+     * @param req DescribeTWeSeeRecognitionTaskRequest
+     * @return DescribeTWeSeeRecognitionTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTWeSeeRecognitionTaskResponse DescribeTWeSeeRecognitionTask(DescribeTWeSeeRecognitionTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTWeSeeRecognitionTask", DescribeTWeSeeRecognitionTaskResponse.class);
+    }
+
+    /**
      *本接口（DescribeTopicPolicy）用于查看Topic详细信息
      * @param req DescribeTopicPolicyRequest
      * @return DescribeTopicPolicyResponse

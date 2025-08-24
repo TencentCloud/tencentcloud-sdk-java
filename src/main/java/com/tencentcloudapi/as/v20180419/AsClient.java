@@ -313,7 +313,7 @@ public class AsClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeAutoScalingActivities）用于查询伸缩组的伸缩活动记录。
+     *本接口（DescribeAutoScalingActivities）用于查询伸缩组的伸缩活动记录。当前仅保存近两年的伸缩活动。
      * @param req DescribeAutoScalingActivitiesRequest
      * @return DescribeAutoScalingActivitiesResponse
      * @throws TencentCloudSDKException

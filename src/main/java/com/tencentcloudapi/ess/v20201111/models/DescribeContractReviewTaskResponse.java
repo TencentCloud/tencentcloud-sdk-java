@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeContractReviewTaskResponse extends AbstractModel {
 
     /**
-    * 用于审查任务的审查清单ID。
+    * 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
     */
     @SerializedName("ChecklistId")
     @Expose
@@ -75,7 +75,8 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     private OutputRisk [] Risks;
 
     /**
-    * 合同审查中的角色信息。
+    * 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
     @Expose
@@ -104,6 +105,22 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     private String TaskId;
 
     /**
+    * 审查任务备注信息，长度不能超过100个字符
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
+    * 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -111,16 +128,16 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用于审查任务的审查清单ID。 
-     * @return ChecklistId 用于审查任务的审查清单ID。
+     * Get 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。 
+     * @return ChecklistId 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
      */
     public String getChecklistId() {
         return this.ChecklistId;
     }
 
     /**
-     * Set 用于审查任务的审查清单ID。
-     * @param ChecklistId 用于审查任务的审查清单ID。
+     * Set 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+     * @param ChecklistId 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
      */
     public void setChecklistId(String ChecklistId) {
         this.ChecklistId = ChecklistId;
@@ -243,16 +260,20 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 合同审查中的角色信息。 
-     * @return Role 合同审查中的角色信息。
+     * Get 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Role 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskIdentificationRoleInfo getRole() {
         return this.Role;
     }
 
     /**
-     * Set 合同审查中的角色信息。
-     * @param Role 合同审查中的角色信息。
+     * Set 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Role 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(RiskIdentificationRoleInfo Role) {
         this.Role = Role;
@@ -323,6 +344,46 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get 审查任务备注信息，长度不能超过100个字符 
+     * @return Comment 审查任务备注信息，长度不能超过100个字符
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 审查任务备注信息，长度不能超过100个字符
+     * @param Comment 审查任务备注信息，长度不能超过100个字符
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
+    /**
+     * Get 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。 
+     * @return UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+     * @param UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -376,6 +437,12 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -395,6 +462,8 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
         this.setParamObj(map, prefix + "Role.", this.Role);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

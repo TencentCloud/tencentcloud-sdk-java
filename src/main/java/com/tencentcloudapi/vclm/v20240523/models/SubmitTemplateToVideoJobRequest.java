@@ -68,6 +68,13 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
     private String Resolution;
 
     /**
+    * 是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
+    */
+    @SerializedName("BGM")
+    @Expose
+    private Boolean BGM;
+
+    /**
      * Get 特效模板名称。请在 [视频特效模版列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。 
      * @return Template 特效模板名称。请在 [视频特效模版列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
      */
@@ -183,6 +190,22 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
         this.Resolution = Resolution;
     }
 
+    /**
+     * Get 是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。 
+     * @return BGM 是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
+     */
+    public Boolean getBGM() {
+        return this.BGM;
+    }
+
+    /**
+     * Set 是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
+     * @param BGM 是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
+     */
+    public void setBGM(Boolean BGM) {
+        this.BGM = BGM;
+    }
+
     public SubmitTemplateToVideoJobRequest() {
     }
 
@@ -209,6 +232,9 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
         if (source.Resolution != null) {
             this.Resolution = new String(source.Resolution);
         }
+        if (source.BGM != null) {
+            this.BGM = new Boolean(source.BGM);
+        }
     }
 
 
@@ -221,6 +247,7 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
+        this.setParamSimple(map, prefix + "BGM", this.BGM);
 
     }
 }

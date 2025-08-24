@@ -67,6 +67,8 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
     * 加工任务创建时间
+示例值：2025-03-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
@@ -74,7 +76,8 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
     * 最近修改时间
-示例值：2025-06-18 16:55:54
+示例值：2025-04-18 16:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -82,7 +85,8 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
     * 最后启用时间，如果需要重建集群，修改该时间
-示例值：2025-06-18 19:55:54
+示例值：2025-05-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("LastEnableTime")
     @Expose
@@ -234,8 +238,12 @@ public class DataTransformTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 加工任务创建时间 
+     * Get 加工任务创建时间
+示例值：2025-03-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss 
      * @return CreateTime 加工任务创建时间
+示例值：2025-03-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -243,7 +251,11 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
      * Set 加工任务创建时间
+示例值：2025-03-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param CreateTime 加工任务创建时间
+示例值：2025-03-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -251,9 +263,11 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
      * Get 最近修改时间
-示例值：2025-06-18 16:55:54 
+示例值：2025-04-18 16:55:54
+时间格式：yyyy-MM-dd HH:mm:ss 
      * @return UpdateTime 最近修改时间
-示例值：2025-06-18 16:55:54
+示例值：2025-04-18 16:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -261,9 +275,11 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
      * Set 最近修改时间
-示例值：2025-06-18 16:55:54
+示例值：2025-04-18 16:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param UpdateTime 最近修改时间
-示例值：2025-06-18 16:55:54
+示例值：2025-04-18 16:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -271,9 +287,11 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
      * Get 最后启用时间，如果需要重建集群，修改该时间
-示例值：2025-06-18 19:55:54 
+示例值：2025-05-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss 
      * @return LastEnableTime 最后启用时间，如果需要重建集群，修改该时间
-示例值：2025-06-18 19:55:54
+示例值：2025-05-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public String getLastEnableTime() {
         return this.LastEnableTime;
@@ -281,9 +299,11 @@ public class DataTransformTaskInfo extends AbstractModel {
 
     /**
      * Set 最后启用时间，如果需要重建集群，修改该时间
-示例值：2025-06-18 19:55:54
+示例值：2025-05-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param LastEnableTime 最后启用时间，如果需要重建集群，修改该时间
-示例值：2025-06-18 19:55:54
+示例值：2025-05-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public void setLastEnableTime(String LastEnableTime) {
         this.LastEnableTime = LastEnableTime;

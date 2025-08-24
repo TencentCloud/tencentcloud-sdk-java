@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class Resource extends AbstractModel {
 
     /**
-    * 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+    * 资源ID，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的ResourceId
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源编码，枚举值描述【cluster、namespace、config】
+    * 资源编码，枚举值描述【cluster（集群）、namespace（命名空间）、config（应用配置）】
     */
     @SerializedName("ResourceCode")
     @Expose
@@ -52,14 +52,14 @@ public class Resource extends AbstractModel {
     private String ServiceCode;
 
     /**
-    * 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
+    * 选取资源使用的Action，枚举值描述【DescribeSimpleCluster（查询简单集群列表）、DescribeTaskRecords（查询任务列表）】
     */
     @SerializedName("ResourceAction")
     @Expose
     private String ResourceAction;
 
     /**
-    * 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+    * 资源数据查询的ID字段名，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的IdField
     */
     @SerializedName("IdField")
     @Expose
@@ -129,32 +129,32 @@ public class Resource extends AbstractModel {
     private Long Index;
 
     /**
-     * Get 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取 
-     * @return ResourceId 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+     * Get 资源ID，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的ResourceId 
+     * @return ResourceId 资源ID，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的ResourceId
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
-     * @param ResourceId 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+     * Set 资源ID，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的ResourceId
+     * @param ResourceId 资源ID，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的ResourceId
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源编码，枚举值描述【cluster、namespace、config】 
-     * @return ResourceCode 资源编码，枚举值描述【cluster、namespace、config】
+     * Get 资源编码，枚举值描述【cluster（集群）、namespace（命名空间）、config（应用配置）】 
+     * @return ResourceCode 资源编码，枚举值描述【cluster（集群）、namespace（命名空间）、config（应用配置）】
      */
     public String getResourceCode() {
         return this.ResourceCode;
     }
 
     /**
-     * Set 资源编码，枚举值描述【cluster、namespace、config】
-     * @param ResourceCode 资源编码，枚举值描述【cluster、namespace、config】
+     * Set 资源编码，枚举值描述【cluster（集群）、namespace（命名空间）、config（应用配置）】
+     * @param ResourceCode 资源编码，枚举值描述【cluster（集群）、namespace（命名空间）、config（应用配置）】
      */
     public void setResourceCode(String ResourceCode) {
         this.ResourceCode = ResourceCode;
@@ -193,32 +193,32 @@ public class Resource extends AbstractModel {
     }
 
     /**
-     * Get 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】 
-     * @return ResourceAction 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
+     * Get 选取资源使用的Action，枚举值描述【DescribeSimpleCluster（查询简单集群列表）、DescribeTaskRecords（查询任务列表）】 
+     * @return ResourceAction 选取资源使用的Action，枚举值描述【DescribeSimpleCluster（查询简单集群列表）、DescribeTaskRecords（查询任务列表）】
      */
     public String getResourceAction() {
         return this.ResourceAction;
     }
 
     /**
-     * Set 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
-     * @param ResourceAction 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
+     * Set 选取资源使用的Action，枚举值描述【DescribeSimpleCluster（查询简单集群列表）、DescribeTaskRecords（查询任务列表）】
+     * @param ResourceAction 选取资源使用的Action，枚举值描述【DescribeSimpleCluster（查询简单集群列表）、DescribeTaskRecords（查询任务列表）】
      */
     public void setResourceAction(String ResourceAction) {
         this.ResourceAction = ResourceAction;
     }
 
     /**
-     * Get 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取 
-     * @return IdField 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+     * Get 资源数据查询的ID字段名，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的IdField 
+     * @return IdField 资源数据查询的ID字段名，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的IdField
      */
     public String getIdField() {
         return this.IdField;
     }
 
     /**
-     * Set 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
-     * @param IdField 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+     * Set 资源数据查询的ID字段名，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的IdField
+     * @param IdField 资源数据查询的ID字段名，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的IdField
      */
     public void setIdField(String IdField) {
         this.IdField = IdField;

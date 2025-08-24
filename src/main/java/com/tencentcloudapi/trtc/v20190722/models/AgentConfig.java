@@ -139,6 +139,14 @@ public class AgentConfig extends AbstractModel {
     private Long SubtitleMode;
 
     /**
+    * 打断词列表，在AI说话期间，只有说出列表中的打断词才会打断AI说话。
+注意：打断词不会触发AI回复。
+    */
+    @SerializedName("InterruptWordList")
+    @Expose
+    private String [] InterruptWordList;
+
+    /**
      * Get 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。 
      * @return UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
      */
@@ -418,6 +426,26 @@ public class AgentConfig extends AbstractModel {
         this.SubtitleMode = SubtitleMode;
     }
 
+    /**
+     * Get 打断词列表，在AI说话期间，只有说出列表中的打断词才会打断AI说话。
+注意：打断词不会触发AI回复。 
+     * @return InterruptWordList 打断词列表，在AI说话期间，只有说出列表中的打断词才会打断AI说话。
+注意：打断词不会触发AI回复。
+     */
+    public String [] getInterruptWordList() {
+        return this.InterruptWordList;
+    }
+
+    /**
+     * Set 打断词列表，在AI说话期间，只有说出列表中的打断词才会打断AI说话。
+注意：打断词不会触发AI回复。
+     * @param InterruptWordList 打断词列表，在AI说话期间，只有说出列表中的打断词才会打断AI说话。
+注意：打断词不会触发AI回复。
+     */
+    public void setInterruptWordList(String [] InterruptWordList) {
+        this.InterruptWordList = InterruptWordList;
+    }
+
     public AgentConfig() {
     }
 
@@ -471,6 +499,12 @@ public class AgentConfig extends AbstractModel {
         if (source.SubtitleMode != null) {
             this.SubtitleMode = new Long(source.SubtitleMode);
         }
+        if (source.InterruptWordList != null) {
+            this.InterruptWordList = new String[source.InterruptWordList.length];
+            for (int i = 0; i < source.InterruptWordList.length; i++) {
+                this.InterruptWordList[i] = new String(source.InterruptWordList[i]);
+            }
+        }
     }
 
 
@@ -493,6 +527,7 @@ public class AgentConfig extends AbstractModel {
         this.setParamObj(map, prefix + "VoicePrint.", this.VoicePrint);
         this.setParamObj(map, prefix + "TurnDetection.", this.TurnDetection);
         this.setParamSimple(map, prefix + "SubtitleMode", this.SubtitleMode);
+        this.setParamArraySimple(map, prefix + "InterruptWordList.", this.InterruptWordList);
 
     }
 }

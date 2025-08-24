@@ -46,6 +46,7 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
     * 自动逻辑备份保留时间
+单位：秒
     */
     @SerializedName("LogicReserveDuration")
     @Expose
@@ -53,6 +54,7 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
     * 是否开启跨地域逻辑备份
+可选值：ON/OFF
     */
     @SerializedName("LogicCrossRegionsEnable")
     @Expose
@@ -115,8 +117,10 @@ public class LogicBackupConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get 自动逻辑备份保留时间 
+     * Get 自动逻辑备份保留时间
+单位：秒 
      * @return LogicReserveDuration 自动逻辑备份保留时间
+单位：秒
      */
     public Long getLogicReserveDuration() {
         return this.LogicReserveDuration;
@@ -124,15 +128,19 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
      * Set 自动逻辑备份保留时间
+单位：秒
      * @param LogicReserveDuration 自动逻辑备份保留时间
+单位：秒
      */
     public void setLogicReserveDuration(Long LogicReserveDuration) {
         this.LogicReserveDuration = LogicReserveDuration;
     }
 
     /**
-     * Get 是否开启跨地域逻辑备份 
+     * Get 是否开启跨地域逻辑备份
+可选值：ON/OFF 
      * @return LogicCrossRegionsEnable 是否开启跨地域逻辑备份
+可选值：ON/OFF
      */
     public String getLogicCrossRegionsEnable() {
         return this.LogicCrossRegionsEnable;
@@ -140,7 +148,9 @@ public class LogicBackupConfigInfo extends AbstractModel {
 
     /**
      * Set 是否开启跨地域逻辑备份
+可选值：ON/OFF
      * @param LogicCrossRegionsEnable 是否开启跨地域逻辑备份
+可选值：ON/OFF
      */
     public void setLogicCrossRegionsEnable(String LogicCrossRegionsEnable) {
         this.LogicCrossRegionsEnable = LogicCrossRegionsEnable;
