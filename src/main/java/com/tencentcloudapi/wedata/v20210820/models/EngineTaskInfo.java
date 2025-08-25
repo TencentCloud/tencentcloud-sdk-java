@@ -189,6 +189,46 @@ public class EngineTaskInfo extends AbstractModel {
     private String CmdArgs;
 
     /**
+    * 使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VCoreSeconds")
+    @Expose
+    private Long VCoreSeconds;
+
+    /**
+    * 使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MemorySeconds")
+    @Expose
+    private Long MemorySeconds;
+
+    /**
+    * EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EmrUserName")
+    @Expose
+    private String EmrUserName;
+
+    /**
+    * 任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QueryId")
+    @Expose
+    private String QueryId;
+
+    /**
+    * 应用程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
      * Get 引擎提交时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EngineSubmitTime 引擎提交时间
@@ -608,6 +648,106 @@ public class EngineTaskInfo extends AbstractModel {
         this.CmdArgs = CmdArgs;
     }
 
+    /**
+     * Get 使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VCoreSeconds 使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVCoreSeconds() {
+        return this.VCoreSeconds;
+    }
+
+    /**
+     * Set 使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VCoreSeconds 使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVCoreSeconds(Long VCoreSeconds) {
+        this.VCoreSeconds = VCoreSeconds;
+    }
+
+    /**
+     * Get 使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MemorySeconds 使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMemorySeconds() {
+        return this.MemorySeconds;
+    }
+
+    /**
+     * Set 使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MemorySeconds 使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMemorySeconds(Long MemorySeconds) {
+        this.MemorySeconds = MemorySeconds;
+    }
+
+    /**
+     * Get EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EmrUserName EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEmrUserName() {
+        return this.EmrUserName;
+    }
+
+    /**
+     * Set EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EmrUserName EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEmrUserName(String EmrUserName) {
+        this.EmrUserName = EmrUserName;
+    }
+
+    /**
+     * Get 任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QueryId 任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getQueryId() {
+        return this.QueryId;
+    }
+
+    /**
+     * Set 任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QueryId 任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQueryId(String QueryId) {
+        this.QueryId = QueryId;
+    }
+
+    /**
+     * Get 应用程序ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationId 应用程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 应用程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationId 应用程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
     public EngineTaskInfo() {
     }
 
@@ -676,6 +816,21 @@ public class EngineTaskInfo extends AbstractModel {
         if (source.CmdArgs != null) {
             this.CmdArgs = new String(source.CmdArgs);
         }
+        if (source.VCoreSeconds != null) {
+            this.VCoreSeconds = new Long(source.VCoreSeconds);
+        }
+        if (source.MemorySeconds != null) {
+            this.MemorySeconds = new Long(source.MemorySeconds);
+        }
+        if (source.EmrUserName != null) {
+            this.EmrUserName = new String(source.EmrUserName);
+        }
+        if (source.QueryId != null) {
+            this.QueryId = new String(source.QueryId);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
     }
 
 
@@ -703,6 +858,11 @@ public class EngineTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "WaitTime", this.WaitTime);
         this.setParamSimple(map, prefix + "QueryResultTime", this.QueryResultTime);
         this.setParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
+        this.setParamSimple(map, prefix + "VCoreSeconds", this.VCoreSeconds);
+        this.setParamSimple(map, prefix + "MemorySeconds", this.MemorySeconds);
+        this.setParamSimple(map, prefix + "EmrUserName", this.EmrUserName);
+        this.setParamSimple(map, prefix + "QueryId", this.QueryId);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
 
     }
 }

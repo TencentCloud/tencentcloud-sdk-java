@@ -45,6 +45,13 @@ public class DescribeDsTaskVersionListRequest extends AbstractModel {
     private Boolean IsOnlyCurrentEditingVersion;
 
     /**
+    * 是否仅只返回生产使用版本
+    */
+    @SerializedName("IsOnlyProductVersion")
+    @Expose
+    private Boolean IsOnlyProductVersion;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -92,6 +99,22 @@ public class DescribeDsTaskVersionListRequest extends AbstractModel {
         this.IsOnlyCurrentEditingVersion = IsOnlyCurrentEditingVersion;
     }
 
+    /**
+     * Get 是否仅只返回生产使用版本 
+     * @return IsOnlyProductVersion 是否仅只返回生产使用版本
+     */
+    public Boolean getIsOnlyProductVersion() {
+        return this.IsOnlyProductVersion;
+    }
+
+    /**
+     * Set 是否仅只返回生产使用版本
+     * @param IsOnlyProductVersion 是否仅只返回生产使用版本
+     */
+    public void setIsOnlyProductVersion(Boolean IsOnlyProductVersion) {
+        this.IsOnlyProductVersion = IsOnlyProductVersion;
+    }
+
     public DescribeDsTaskVersionListRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeDsTaskVersionListRequest extends AbstractModel {
         if (source.IsOnlyCurrentEditingVersion != null) {
             this.IsOnlyCurrentEditingVersion = new Boolean(source.IsOnlyCurrentEditingVersion);
         }
+        if (source.IsOnlyProductVersion != null) {
+            this.IsOnlyProductVersion = new Boolean(source.IsOnlyProductVersion);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeDsTaskVersionListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "IsOnlyCurrentEditingVersion", this.IsOnlyCurrentEditingVersion);
+        this.setParamSimple(map, prefix + "IsOnlyProductVersion", this.IsOnlyProductVersion);
 
     }
 }

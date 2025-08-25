@@ -90,6 +90,20 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，�
     private KeyValuePairOption [] ExtraAttr;
 
     /**
+    * vpc id
+    */
+    @SerializedName("ConsumerVpcId")
+    @Expose
+    private String ConsumerVpcId;
+
+    /**
+    * subnet id
+    */
+    @SerializedName("ConsumerSubnetId")
+    @Expose
+    private String ConsumerSubnetId;
+
+    /**
      * Get 数据订阅实例的 ID 
      * @return SubscribeId 数据订阅实例的 ID
      */
@@ -245,6 +259,38 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，�
         this.ExtraAttr = ExtraAttr;
     }
 
+    /**
+     * Get vpc id 
+     * @return ConsumerVpcId vpc id
+     */
+    public String getConsumerVpcId() {
+        return this.ConsumerVpcId;
+    }
+
+    /**
+     * Set vpc id
+     * @param ConsumerVpcId vpc id
+     */
+    public void setConsumerVpcId(String ConsumerVpcId) {
+        this.ConsumerVpcId = ConsumerVpcId;
+    }
+
+    /**
+     * Get subnet id 
+     * @return ConsumerSubnetId subnet id
+     */
+    public String getConsumerSubnetId() {
+        return this.ConsumerSubnetId;
+    }
+
+    /**
+     * Set subnet id
+     * @param ConsumerSubnetId subnet id
+     */
+    public void setConsumerSubnetId(String ConsumerSubnetId) {
+        this.ConsumerSubnetId = ConsumerSubnetId;
+    }
+
     public ConfigureSubscribeJobRequest() {
     }
 
@@ -292,6 +338,12 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，�
                 this.ExtraAttr[i] = new KeyValuePairOption(source.ExtraAttr[i]);
             }
         }
+        if (source.ConsumerVpcId != null) {
+            this.ConsumerVpcId = new String(source.ConsumerVpcId);
+        }
+        if (source.ConsumerSubnetId != null) {
+            this.ConsumerSubnetId = new String(source.ConsumerSubnetId);
+        }
     }
 
 
@@ -308,6 +360,8 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，�
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamArrayObj(map, prefix + "PipelineInfo.", this.PipelineInfo);
         this.setParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
+        this.setParamSimple(map, prefix + "ConsumerVpcId", this.ConsumerVpcId);
+        this.setParamSimple(map, prefix + "ConsumerSubnetId", this.ConsumerSubnetId);
 
     }
 }

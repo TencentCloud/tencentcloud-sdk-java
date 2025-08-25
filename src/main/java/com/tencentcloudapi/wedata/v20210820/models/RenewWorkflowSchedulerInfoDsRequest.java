@@ -172,6 +172,20 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
     private Boolean ClearLink;
 
     /**
+    * ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+    */
+    @SerializedName("MainCyclicConfig")
+    @Expose
+    private String MainCyclicConfig;
+
+    /**
+    * ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
+    */
+    @SerializedName("SubordinateCyclicConfig")
+    @Expose
+    private String SubordinateCyclicConfig;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -511,6 +525,38 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         this.ClearLink = ClearLink;
     }
 
+    /**
+     * Get ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度 
+     * @return MainCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+     */
+    public String getMainCyclicConfig() {
+        return this.MainCyclicConfig;
+    }
+
+    /**
+     * Set ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+     * @param MainCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-时间维度
+     */
+    public void setMainCyclicConfig(String MainCyclicConfig) {
+        this.MainCyclicConfig = MainCyclicConfig;
+    }
+
+    /**
+     * Get ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围 
+     * @return SubordinateCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
+     */
+    public String getSubordinateCyclicConfig() {
+        return this.SubordinateCyclicConfig;
+    }
+
+    /**
+     * Set ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
+     * @param SubordinateCyclicConfig ModifyCycleValue为1的时候生效，表示默认修改的上游依赖-实例范围
+     */
+    public void setSubordinateCyclicConfig(String SubordinateCyclicConfig) {
+        this.SubordinateCyclicConfig = SubordinateCyclicConfig;
+    }
+
     public RenewWorkflowSchedulerInfoDsRequest() {
     }
 
@@ -582,6 +628,12 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         if (source.ClearLink != null) {
             this.ClearLink = new Boolean(source.ClearLink);
         }
+        if (source.MainCyclicConfig != null) {
+            this.MainCyclicConfig = new String(source.MainCyclicConfig);
+        }
+        if (source.SubordinateCyclicConfig != null) {
+            this.SubordinateCyclicConfig = new String(source.SubordinateCyclicConfig);
+        }
     }
 
 
@@ -610,6 +662,8 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         this.setParamSimple(map, prefix + "ClearLink", this.ClearLink);
+        this.setParamSimple(map, prefix + "MainCyclicConfig", this.MainCyclicConfig);
+        this.setParamSimple(map, prefix + "SubordinateCyclicConfig", this.SubordinateCyclicConfig);
 
     }
 }

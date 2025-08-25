@@ -304,6 +304,22 @@ public class TaskAlarmInfo extends AbstractModel {
     private Long ReportTarget;
 
     /**
+    * 告警接收组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmReceiverGroups")
+    @Expose
+    private AlarmReceiverGroup [] AlarmReceiverGroups;
+
+    /**
+    * 告警接收组标记，0代表历史版本，1代表新版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmReceiverGroupFlag")
+    @Expose
+    private Long AlarmReceiverGroupFlag;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -991,6 +1007,46 @@ public class TaskAlarmInfo extends AbstractModel {
         this.ReportTarget = ReportTarget;
     }
 
+    /**
+     * Get 告警接收组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmReceiverGroups 告警接收组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AlarmReceiverGroup [] getAlarmReceiverGroups() {
+        return this.AlarmReceiverGroups;
+    }
+
+    /**
+     * Set 告警接收组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmReceiverGroups 告警接收组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmReceiverGroups(AlarmReceiverGroup [] AlarmReceiverGroups) {
+        this.AlarmReceiverGroups = AlarmReceiverGroups;
+    }
+
+    /**
+     * Get 告警接收组标记，0代表历史版本，1代表新版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmReceiverGroupFlag 告警接收组标记，0代表历史版本，1代表新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAlarmReceiverGroupFlag() {
+        return this.AlarmReceiverGroupFlag;
+    }
+
+    /**
+     * Set 告警接收组标记，0代表历史版本，1代表新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmReceiverGroupFlag 告警接收组标记，0代表历史版本，1代表新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmReceiverGroupFlag(Long AlarmReceiverGroupFlag) {
+        this.AlarmReceiverGroupFlag = AlarmReceiverGroupFlag;
+    }
+
     public TaskAlarmInfo() {
     }
 
@@ -1116,6 +1172,15 @@ public class TaskAlarmInfo extends AbstractModel {
         if (source.ReportTarget != null) {
             this.ReportTarget = new Long(source.ReportTarget);
         }
+        if (source.AlarmReceiverGroups != null) {
+            this.AlarmReceiverGroups = new AlarmReceiverGroup[source.AlarmReceiverGroups.length];
+            for (int i = 0; i < source.AlarmReceiverGroups.length; i++) {
+                this.AlarmReceiverGroups[i] = new AlarmReceiverGroup(source.AlarmReceiverGroups[i]);
+            }
+        }
+        if (source.AlarmReceiverGroupFlag != null) {
+            this.AlarmReceiverGroupFlag = new Long(source.AlarmReceiverGroupFlag);
+        }
     }
 
 
@@ -1159,6 +1224,8 @@ public class TaskAlarmInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
         this.setParamSimple(map, prefix + "AlarmMessageRule", this.AlarmMessageRule);
         this.setParamSimple(map, prefix + "ReportTarget", this.ReportTarget);
+        this.setParamArrayObj(map, prefix + "AlarmReceiverGroups.", this.AlarmReceiverGroups);
+        this.setParamSimple(map, prefix + "AlarmReceiverGroupFlag", this.AlarmReceiverGroupFlag);
 
     }
 }

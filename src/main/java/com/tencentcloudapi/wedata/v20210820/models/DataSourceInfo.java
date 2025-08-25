@@ -351,6 +351,14 @@ public class DataSourceInfo extends AbstractModel {
     private Boolean ForbidProbe;
 
     /**
+    * 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceType")
+    @Expose
+    private String DatasourceType;
+
+    /**
      * Get 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseName 若数据源列表为绑定数据库，则为db名称
@@ -1166,6 +1174,26 @@ public class DataSourceInfo extends AbstractModel {
         this.ForbidProbe = ForbidProbe;
     }
 
+    /**
+     * Get 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceType() {
+        return this.DatasourceType;
+    }
+
+    /**
+     * Set 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceType(String DatasourceType) {
+        this.DatasourceType = DatasourceType;
+    }
+
     public DataSourceInfo() {
     }
 
@@ -1300,6 +1328,9 @@ public class DataSourceInfo extends AbstractModel {
         if (source.ForbidProbe != null) {
             this.ForbidProbe = new Boolean(source.ForbidProbe);
         }
+        if (source.DatasourceType != null) {
+            this.DatasourceType = new String(source.DatasourceType);
+        }
     }
 
 
@@ -1348,6 +1379,7 @@ public class DataSourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamArrayObj(map, prefix + "DataSourceEnvInfos.", this.DataSourceEnvInfos);
         this.setParamSimple(map, prefix + "ForbidProbe", this.ForbidProbe);
+        this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
 
     }
 }

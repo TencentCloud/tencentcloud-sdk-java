@@ -31,6 +31,14 @@ public class CommitIntegrationTaskResponse extends AbstractModel {
     private Boolean Data;
 
     /**
+    * 数据结构
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataDto")
+    @Expose
+    private CommitTaskDataDto DataDto;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +59,26 @@ public class CommitIntegrationTaskResponse extends AbstractModel {
      */
     public void setData(Boolean Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get 数据结构
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataDto 数据结构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CommitTaskDataDto getDataDto() {
+        return this.DataDto;
+    }
+
+    /**
+     * Set 数据结构
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataDto 数据结构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataDto(CommitTaskDataDto DataDto) {
+        this.DataDto = DataDto;
     }
 
     /**
@@ -80,6 +108,9 @@ public class CommitIntegrationTaskResponse extends AbstractModel {
         if (source.Data != null) {
             this.Data = new Boolean(source.Data);
         }
+        if (source.DataDto != null) {
+            this.DataDto = new CommitTaskDataDto(source.DataDto);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +122,7 @@ public class CommitIntegrationTaskResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamObj(map, prefix + "DataDto.", this.DataDto);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

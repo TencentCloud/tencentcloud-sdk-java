@@ -80,6 +80,13 @@ public class UploadResourceRequestInfo extends AbstractModel {
     private String FileMd5;
 
     /**
+    * 资源在对象存储上的实际路径
+    */
+    @SerializedName("RemotePath")
+    @Expose
+    private String RemotePath;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -207,6 +214,22 @@ public class UploadResourceRequestInfo extends AbstractModel {
         this.FileMd5 = FileMd5;
     }
 
+    /**
+     * Get 资源在对象存储上的实际路径 
+     * @return RemotePath 资源在对象存储上的实际路径
+     */
+    public String getRemotePath() {
+        return this.RemotePath;
+    }
+
+    /**
+     * Set 资源在对象存储上的实际路径
+     * @param RemotePath 资源在对象存储上的实际路径
+     */
+    public void setRemotePath(String RemotePath) {
+        this.RemotePath = RemotePath;
+    }
+
     public UploadResourceRequestInfo() {
     }
 
@@ -245,6 +268,9 @@ public class UploadResourceRequestInfo extends AbstractModel {
         if (source.FileMd5 != null) {
             this.FileMd5 = new String(source.FileMd5);
         }
+        if (source.RemotePath != null) {
+            this.RemotePath = new String(source.RemotePath);
+        }
     }
 
 
@@ -260,6 +286,7 @@ public class UploadResourceRequestInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "FileList.", this.FileList);
         this.setParamArraySimple(map, prefix + "FileSizeList.", this.FileSizeList);
         this.setParamSimple(map, prefix + "FileMd5", this.FileMd5);
+        this.setParamSimple(map, prefix + "RemotePath", this.RemotePath);
 
     }
 }

@@ -151,6 +151,14 @@ public class Project extends AbstractModel {
     private BaseUser Owner;
 
     /**
+    * 项目扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkspaceExt")
+    @Expose
+    private WorkspaceExt [] WorkspaceExt;
+
+    /**
      * Get 项目的所在租户ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TenantId 项目的所在租户ID
@@ -466,6 +474,26 @@ public class Project extends AbstractModel {
         this.Owner = Owner;
     }
 
+    /**
+     * Get 项目扩展信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkspaceExt 项目扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WorkspaceExt [] getWorkspaceExt() {
+        return this.WorkspaceExt;
+    }
+
+    /**
+     * Set 项目扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkspaceExt 项目扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkspaceExt(WorkspaceExt [] WorkspaceExt) {
+        this.WorkspaceExt = WorkspaceExt;
+    }
+
     public Project() {
     }
 
@@ -531,6 +559,12 @@ public class Project extends AbstractModel {
         if (source.Owner != null) {
             this.Owner = new BaseUser(source.Owner);
         }
+        if (source.WorkspaceExt != null) {
+            this.WorkspaceExt = new WorkspaceExt[source.WorkspaceExt.length];
+            for (int i = 0; i < source.WorkspaceExt.length; i++) {
+                this.WorkspaceExt[i] = new WorkspaceExt(source.WorkspaceExt[i]);
+            }
+        }
     }
 
 
@@ -554,6 +588,7 @@ public class Project extends AbstractModel {
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamArraySimple(map, prefix + "SecondModuleList.", this.SecondModuleList);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
+        this.setParamArrayObj(map, prefix + "WorkspaceExt.", this.WorkspaceExt);
 
     }
 }

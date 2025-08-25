@@ -73,6 +73,13 @@ public class CreateSubscribeRequest extends AbstractModel {
     private String Name;
 
     /**
+    * 订阅实例规格，当前仅支持small、medium、large
+    */
+    @SerializedName("InstanceClass")
+    @Expose
+    private String InstanceClass;
+
+    /**
      * Get 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版) 
      * @return Product 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
      */
@@ -184,6 +191,22 @@ public class CreateSubscribeRequest extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get 订阅实例规格，当前仅支持small、medium、large 
+     * @return InstanceClass 订阅实例规格，当前仅支持small、medium、large
+     */
+    public String getInstanceClass() {
+        return this.InstanceClass;
+    }
+
+    /**
+     * Set 订阅实例规格，当前仅支持small、medium、large
+     * @param InstanceClass 订阅实例规格，当前仅支持small、medium、large
+     */
+    public void setInstanceClass(String InstanceClass) {
+        this.InstanceClass = InstanceClass;
+    }
+
     public CreateSubscribeRequest() {
     }
 
@@ -216,6 +239,9 @@ public class CreateSubscribeRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.InstanceClass != null) {
+            this.InstanceClass = new String(source.InstanceClass);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class CreateSubscribeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
 
     }
 }

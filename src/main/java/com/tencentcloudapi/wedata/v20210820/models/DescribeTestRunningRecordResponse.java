@@ -21,15 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskByCycleReportResponse extends AbstractModel {
+public class DescribeTestRunningRecordResponse extends AbstractModel {
 
     /**
-    * 任务周期增长趋势统计
+    * 编排空间试运行任务
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
-    private TaskByStatus [] Data;
+    private TestRunningRecord [] Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -39,22 +39,22 @@ public class DescribeTaskByCycleReportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务周期增长趋势统计
+     * Get 编排空间试运行任务
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 任务周期增长趋势统计
+     * @return Data 编排空间试运行任务
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TaskByStatus [] getData() {
+    public TestRunningRecord [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 任务周期增长趋势统计
+     * Set 编排空间试运行任务
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 任务周期增长趋势统计
+     * @param Data 编排空间试运行任务
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(TaskByStatus [] Data) {
+    public void setData(TestRunningRecord [] Data) {
         this.Data = Data;
     }
 
@@ -74,18 +74,18 @@ public class DescribeTaskByCycleReportResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeTaskByCycleReportResponse() {
+    public DescribeTestRunningRecordResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTaskByCycleReportResponse(DescribeTaskByCycleReportResponse source) {
+    public DescribeTestRunningRecordResponse(DescribeTestRunningRecordResponse source) {
         if (source.Data != null) {
-            this.Data = new TaskByStatus[source.Data.length];
+            this.Data = new TestRunningRecord[source.Data.length];
             for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new TaskByStatus(source.Data[i]);
+                this.Data[i] = new TestRunningRecord(source.Data[i]);
             }
         }
         if (source.RequestId != null) {

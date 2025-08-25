@@ -112,7 +112,15 @@ public class TaskDsDTO extends AbstractModel {
     private String LastUpdate;
 
     /**
-    * 任务状态
+    * <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -515,7 +523,15 @@ public class TaskDsDTO extends AbstractModel {
     private DependencyConfigDsDTO [] DependencyConfigList;
 
     /**
-    * 虚拟任务状态
+    * <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualTaskStatus")
@@ -836,6 +852,23 @@ public class TaskDsDTO extends AbstractModel {
     private String AllowRedoType;
 
     /**
+    * BundleId
+CI/CD工程生成的bundle唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BundleId")
+    @Expose
+    private String BundleId;
+
+    /**
+    * Bundle名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BundleName")
+    @Expose
+    private String BundleName;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -1056,9 +1089,25 @@ public class TaskDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 任务状态
+     * Get <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 任务状态
+     * @return Status <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -1066,9 +1115,25 @@ public class TaskDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 任务状态
+     * Set <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 任务状态
+     * @param Status <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -2068,9 +2133,25 @@ public class TaskDsDTO extends AbstractModel {
     }
 
     /**
-     * Get 虚拟任务状态
+     * Get <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualTaskStatus 虚拟任务状态
+     * @return VirtualTaskStatus <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualTaskStatus() {
@@ -2078,9 +2159,25 @@ public class TaskDsDTO extends AbstractModel {
     }
 
     /**
-     * Set 虚拟任务状态
+     * Set <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualTaskStatus 虚拟任务状态
+     * @param VirtualTaskStatus <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualTaskStatus(String VirtualTaskStatus) {
@@ -2871,6 +2968,50 @@ public class TaskDsDTO extends AbstractModel {
         this.AllowRedoType = AllowRedoType;
     }
 
+    /**
+     * Get BundleId
+CI/CD工程生成的bundle唯一标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BundleId BundleId
+CI/CD工程生成的bundle唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBundleId() {
+        return this.BundleId;
+    }
+
+    /**
+     * Set BundleId
+CI/CD工程生成的bundle唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BundleId BundleId
+CI/CD工程生成的bundle唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBundleId(String BundleId) {
+        this.BundleId = BundleId;
+    }
+
+    /**
+     * Get Bundle名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BundleName Bundle名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBundleName() {
+        return this.BundleName;
+    }
+
+    /**
+     * Set Bundle名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BundleName Bundle名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBundleName(String BundleName) {
+        this.BundleName = BundleName;
+    }
+
     public TaskDsDTO() {
     }
 
@@ -3209,6 +3350,12 @@ public class TaskDsDTO extends AbstractModel {
         if (source.AllowRedoType != null) {
             this.AllowRedoType = new String(source.AllowRedoType);
         }
+        if (source.BundleId != null) {
+            this.BundleId = new String(source.BundleId);
+        }
+        if (source.BundleName != null) {
+            this.BundleName = new String(source.BundleName);
+        }
     }
 
 
@@ -3317,6 +3464,8 @@ public class TaskDsDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
+        this.setParamSimple(map, prefix + "BundleId", this.BundleId);
+        this.setParamSimple(map, prefix + "BundleName", this.BundleName);
 
     }
 }

@@ -75,7 +75,7 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     private OutputRisk [] Risks;
 
     /**
-    * 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+    * 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
@@ -119,6 +119,20 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     @SerializedName("UserData")
     @Expose
     private String UserData;
+
+    /**
+    * 合同审查出的高风险项数量
+    */
+    @SerializedName("HighRiskCount")
+    @Expose
+    private Long HighRiskCount;
+
+    /**
+    * 合同审查出的风险总数
+    */
+    @SerializedName("TotalRiskCount")
+    @Expose
+    private Long TotalRiskCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -260,9 +274,9 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+     * Get 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Role 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+     * @return Role 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskIdentificationRoleInfo getRole() {
@@ -270,9 +284,9 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+     * Set 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Role 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+     * @param Role 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(RiskIdentificationRoleInfo Role) {
@@ -384,6 +398,38 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get 合同审查出的高风险项数量 
+     * @return HighRiskCount 合同审查出的高风险项数量
+     */
+    public Long getHighRiskCount() {
+        return this.HighRiskCount;
+    }
+
+    /**
+     * Set 合同审查出的高风险项数量
+     * @param HighRiskCount 合同审查出的高风险项数量
+     */
+    public void setHighRiskCount(Long HighRiskCount) {
+        this.HighRiskCount = HighRiskCount;
+    }
+
+    /**
+     * Get 合同审查出的风险总数 
+     * @return TotalRiskCount 合同审查出的风险总数
+     */
+    public Long getTotalRiskCount() {
+        return this.TotalRiskCount;
+    }
+
+    /**
+     * Set 合同审查出的风险总数
+     * @param TotalRiskCount 合同审查出的风险总数
+     */
+    public void setTotalRiskCount(Long TotalRiskCount) {
+        this.TotalRiskCount = TotalRiskCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -443,6 +489,12 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
+        if (source.HighRiskCount != null) {
+            this.HighRiskCount = new Long(source.HighRiskCount);
+        }
+        if (source.TotalRiskCount != null) {
+            this.TotalRiskCount = new Long(source.TotalRiskCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -464,6 +516,8 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamSimple(map, prefix + "HighRiskCount", this.HighRiskCount);
+        this.setParamSimple(map, prefix + "TotalRiskCount", this.TotalRiskCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

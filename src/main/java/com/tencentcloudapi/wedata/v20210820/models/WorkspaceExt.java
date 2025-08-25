@@ -21,80 +21,108 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DrInstanceOpsDtoPage extends AbstractModel {
+public class WorkspaceExt extends AbstractModel {
 
     /**
-    * 记录总数
+    * 2670965482618679296
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("ProjectId")
     @Expose
-    private Long TotalCount;
+    private String ProjectId;
 
     /**
-    * 记录列表
+    * metrics
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Items")
+    @SerializedName("Key")
     @Expose
-    private DrInstanceOpsDto [] Items;
+    private String Key;
 
     /**
-     * Get 记录总数
+    * json
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get 2670965482618679296
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 记录总数
+     * @return ProjectId 2670965482618679296
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getProjectId() {
+        return this.ProjectId;
     }
 
     /**
-     * Set 记录总数
+     * Set 2670965482618679296
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 记录总数
+     * @param ProjectId 2670965482618679296
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 记录列表
+     * Get metrics
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 记录列表
+     * @return Key metrics
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public DrInstanceOpsDto [] getItems() {
-        return this.Items;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 记录列表
+     * Set metrics
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 记录列表
+     * @param Key metrics
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setItems(DrInstanceOpsDto [] Items) {
-        this.Items = Items;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public DrInstanceOpsDtoPage() {
+    /**
+     * Get json
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Value json
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set json
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Value json
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public WorkspaceExt() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DrInstanceOpsDtoPage(DrInstanceOpsDtoPage source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public WorkspaceExt(WorkspaceExt source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
         }
-        if (source.Items != null) {
-            this.Items = new DrInstanceOpsDto[source.Items.length];
-            for (int i = 0; i < source.Items.length; i++) {
-                this.Items[i] = new DrInstanceOpsDto(source.Items[i]);
-            }
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -103,8 +131,9 @@ public class DrInstanceOpsDtoPage extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

@@ -157,6 +157,20 @@ public class ApmApplicationConfigView extends AbstractModel {
     private Boolean TraceSquash;
 
     /**
+    * 探针熔断内存阈值
+    */
+    @SerializedName("DisableMemoryUsed")
+    @Expose
+    private Long DisableMemoryUsed;
+
+    /**
+    * 探针熔断CPU阈值
+    */
+    @SerializedName("DisableCpuUsed")
+    @Expose
+    private Long DisableCpuUsed;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceKey 业务系统 ID
      */
@@ -460,6 +474,38 @@ public class ApmApplicationConfigView extends AbstractModel {
         this.TraceSquash = TraceSquash;
     }
 
+    /**
+     * Get 探针熔断内存阈值 
+     * @return DisableMemoryUsed 探针熔断内存阈值
+     */
+    public Long getDisableMemoryUsed() {
+        return this.DisableMemoryUsed;
+    }
+
+    /**
+     * Set 探针熔断内存阈值
+     * @param DisableMemoryUsed 探针熔断内存阈值
+     */
+    public void setDisableMemoryUsed(Long DisableMemoryUsed) {
+        this.DisableMemoryUsed = DisableMemoryUsed;
+    }
+
+    /**
+     * Get 探针熔断CPU阈值 
+     * @return DisableCpuUsed 探针熔断CPU阈值
+     */
+    public Long getDisableCpuUsed() {
+        return this.DisableCpuUsed;
+    }
+
+    /**
+     * Set 探针熔断CPU阈值
+     * @param DisableCpuUsed 探针熔断CPU阈值
+     */
+    public void setDisableCpuUsed(Long DisableCpuUsed) {
+        this.DisableCpuUsed = DisableCpuUsed;
+    }
+
     public ApmApplicationConfigView() {
     }
 
@@ -528,6 +574,12 @@ public class ApmApplicationConfigView extends AbstractModel {
         if (source.TraceSquash != null) {
             this.TraceSquash = new Boolean(source.TraceSquash);
         }
+        if (source.DisableMemoryUsed != null) {
+            this.DisableMemoryUsed = new Long(source.DisableMemoryUsed);
+        }
+        if (source.DisableCpuUsed != null) {
+            this.DisableCpuUsed = new Long(source.DisableCpuUsed);
+        }
     }
 
 
@@ -554,6 +606,8 @@ public class ApmApplicationConfigView extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentEnable", this.AgentEnable);
         this.setParamArrayObj(map, prefix + "InstrumentList.", this.InstrumentList);
         this.setParamSimple(map, prefix + "TraceSquash", this.TraceSquash);
+        this.setParamSimple(map, prefix + "DisableMemoryUsed", this.DisableMemoryUsed);
+        this.setParamSimple(map, prefix + "DisableCpuUsed", this.DisableCpuUsed);
 
     }
 }

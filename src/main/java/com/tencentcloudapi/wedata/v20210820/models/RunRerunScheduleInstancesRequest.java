@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class RunRerunScheduleInstancesRequest extends AbstractModel {
 
     /**
-    * 实例列表
+    * 必填，实例列表，每项必填TaskId ，CurRunDate
     */
     @SerializedName("Instances")
     @Expose
     private InstanceOpsDto [] Instances;
 
     /**
-    * 检查父任务类型, true: 检查父任务; false: 不检查父任务 
+    * 必填，检查父任务类型, true: 检查父任务; false: 不检查父任务 
     */
     @SerializedName("CheckFather")
     @Expose
     private Boolean CheckFather;
 
     /**
-    * 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+    * 必填，重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
     */
     @SerializedName("RerunType")
     @Expose
@@ -52,7 +52,7 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
     private String DependentWay;
 
     /**
-    * 重跑忽略事件监听与否 
+    * 必填，重跑忽略事件监听与否 
     */
     @SerializedName("SkipEventListening")
     @Expose
@@ -94,7 +94,7 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
     private String OperatorId;
 
     /**
-    * 项目id
+    * 必填，项目id
     */
     @SerializedName("ProjectId")
     @Expose
@@ -150,7 +150,7 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
     private Boolean IsCount;
 
     /**
-    * 是否异步模式
+    * 必填，是否异步模式
     */
     @SerializedName("AsyncMode")
     @Expose
@@ -206,48 +206,62 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
     private String ReDoParams;
 
     /**
-     * Get 实例列表 
-     * @return Instances 实例列表
+    * 重跑实例自定义参数
+    */
+    @SerializedName("MapParamList")
+    @Expose
+    private StrToStrMap [] MapParamList;
+
+    /**
+    * 引擎应用执行参数
+    */
+    @SerializedName("AppParam")
+    @Expose
+    private String AppParam;
+
+    /**
+     * Get 必填，实例列表，每项必填TaskId ，CurRunDate 
+     * @return Instances 必填，实例列表，每项必填TaskId ，CurRunDate
      */
     public InstanceOpsDto [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set 实例列表
-     * @param Instances 实例列表
+     * Set 必填，实例列表，每项必填TaskId ，CurRunDate
+     * @param Instances 必填，实例列表，每项必填TaskId ，CurRunDate
      */
     public void setInstances(InstanceOpsDto [] Instances) {
         this.Instances = Instances;
     }
 
     /**
-     * Get 检查父任务类型, true: 检查父任务; false: 不检查父任务  
-     * @return CheckFather 检查父任务类型, true: 检查父任务; false: 不检查父任务 
+     * Get 必填，检查父任务类型, true: 检查父任务; false: 不检查父任务  
+     * @return CheckFather 必填，检查父任务类型, true: 检查父任务; false: 不检查父任务 
      */
     public Boolean getCheckFather() {
         return this.CheckFather;
     }
 
     /**
-     * Set 检查父任务类型, true: 检查父任务; false: 不检查父任务 
-     * @param CheckFather 检查父任务类型, true: 检查父任务; false: 不检查父任务 
+     * Set 必填，检查父任务类型, true: 检查父任务; false: 不检查父任务 
+     * @param CheckFather 必填，检查父任务类型, true: 检查父任务; false: 不检查父任务 
      */
     public void setCheckFather(Boolean CheckFather) {
         this.CheckFather = CheckFather;
     }
 
     /**
-     * Get 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子  
-     * @return RerunType 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+     * Get 必填，重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子  
+     * @return RerunType 必填，重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
      */
     public String getRerunType() {
         return this.RerunType;
     }
 
     /**
-     * Set 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
-     * @param RerunType 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+     * Set 必填，重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+     * @param RerunType 必填，重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
      */
     public void setRerunType(String RerunType) {
         this.RerunType = RerunType;
@@ -270,16 +284,16 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 重跑忽略事件监听与否  
-     * @return SkipEventListening 重跑忽略事件监听与否 
+     * Get 必填，重跑忽略事件监听与否  
+     * @return SkipEventListening 必填，重跑忽略事件监听与否 
      */
     public Boolean getSkipEventListening() {
         return this.SkipEventListening;
     }
 
     /**
-     * Set 重跑忽略事件监听与否 
-     * @param SkipEventListening 重跑忽略事件监听与否 
+     * Set 必填，重跑忽略事件监听与否 
+     * @param SkipEventListening 必填，重跑忽略事件监听与否 
      */
     public void setSkipEventListening(Boolean SkipEventListening) {
         this.SkipEventListening = SkipEventListening;
@@ -366,16 +380,16 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectId 项目id
+     * Get 必填，项目id 
+     * @return ProjectId 必填，项目id
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectId 项目id
+     * Set 必填，项目id
+     * @param ProjectId 必填，项目id
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
@@ -494,16 +508,16 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否异步模式 
-     * @return AsyncMode 是否异步模式
+     * Get 必填，是否异步模式 
+     * @return AsyncMode 必填，是否异步模式
      */
     public Boolean getAsyncMode() {
         return this.AsyncMode;
     }
 
     /**
-     * Set 是否异步模式
-     * @param AsyncMode 是否异步模式
+     * Set 必填，是否异步模式
+     * @param AsyncMode 必填，是否异步模式
      */
     public void setAsyncMode(Boolean AsyncMode) {
         this.AsyncMode = AsyncMode;
@@ -621,6 +635,38 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
         this.ReDoParams = ReDoParams;
     }
 
+    /**
+     * Get 重跑实例自定义参数 
+     * @return MapParamList 重跑实例自定义参数
+     */
+    public StrToStrMap [] getMapParamList() {
+        return this.MapParamList;
+    }
+
+    /**
+     * Set 重跑实例自定义参数
+     * @param MapParamList 重跑实例自定义参数
+     */
+    public void setMapParamList(StrToStrMap [] MapParamList) {
+        this.MapParamList = MapParamList;
+    }
+
+    /**
+     * Get 引擎应用执行参数 
+     * @return AppParam 引擎应用执行参数
+     */
+    public String getAppParam() {
+        return this.AppParam;
+    }
+
+    /**
+     * Set 引擎应用执行参数
+     * @param AppParam 引擎应用执行参数
+     */
+    public void setAppParam(String AppParam) {
+        this.AppParam = AppParam;
+    }
+
     public RunRerunScheduleInstancesRequest() {
     }
 
@@ -710,6 +756,15 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
         if (source.ReDoParams != null) {
             this.ReDoParams = new String(source.ReDoParams);
         }
+        if (source.MapParamList != null) {
+            this.MapParamList = new StrToStrMap[source.MapParamList.length];
+            for (int i = 0; i < source.MapParamList.length; i++) {
+                this.MapParamList[i] = new StrToStrMap(source.MapParamList[i]);
+            }
+        }
+        if (source.AppParam != null) {
+            this.AppParam = new String(source.AppParam);
+        }
     }
 
 
@@ -743,6 +798,8 @@ public class RunRerunScheduleInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
         this.setParamSimple(map, prefix + "DataTimeOrder", this.DataTimeOrder);
         this.setParamSimple(map, prefix + "ReDoParams", this.ReDoParams);
+        this.setParamArrayObj(map, prefix + "MapParamList.", this.MapParamList);
+        this.setParamSimple(map, prefix + "AppParam", this.AppParam);
 
     }
 }

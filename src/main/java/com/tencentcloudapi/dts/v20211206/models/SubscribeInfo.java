@@ -150,7 +150,7 @@ public class SubscribeInfo extends AbstractModel {
     private EndpointItem [] Endpoints;
 
     /**
-    * 数据订阅版本, 当前只支持 kafka 版本。
+    * 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
     */
     @SerializedName("SubscribeVersion")
     @Expose
@@ -171,6 +171,13 @@ public class SubscribeInfo extends AbstractModel {
     @SerializedName("Errors")
     @Expose
     private SubsErr [] Errors;
+
+    /**
+    * 订阅实例规格
+    */
+    @SerializedName("InstanceClass")
+    @Expose
+    private String InstanceClass;
 
     /**
      * Get 数据订阅的实例ID 
@@ -461,16 +468,16 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据订阅版本, 当前只支持 kafka 版本。 
-     * @return SubscribeVersion 数据订阅版本, 当前只支持 kafka 版本。
+     * Get 数据订阅版本, 当前支持kafka和kafkaPro（专业版） 
+     * @return SubscribeVersion 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
      */
     public String getSubscribeVersion() {
         return this.SubscribeVersion;
     }
 
     /**
-     * Set 数据订阅版本, 当前只支持 kafka 版本。
-     * @param SubscribeVersion 数据订阅版本, 当前只支持 kafka 版本。
+     * Set 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+     * @param SubscribeVersion 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
      */
     public void setSubscribeVersion(String SubscribeVersion) {
         this.SubscribeVersion = SubscribeVersion;
@@ -514,6 +521,22 @@ public class SubscribeInfo extends AbstractModel {
      */
     public void setErrors(SubsErr [] Errors) {
         this.Errors = Errors;
+    }
+
+    /**
+     * Get 订阅实例规格 
+     * @return InstanceClass 订阅实例规格
+     */
+    public String getInstanceClass() {
+        return this.InstanceClass;
+    }
+
+    /**
+     * Set 订阅实例规格
+     * @param InstanceClass 订阅实例规格
+     */
+    public void setInstanceClass(String InstanceClass) {
+        this.InstanceClass = InstanceClass;
     }
 
     public SubscribeInfo() {
@@ -596,6 +619,9 @@ public class SubscribeInfo extends AbstractModel {
                 this.Errors[i] = new SubsErr(source.Errors[i]);
             }
         }
+        if (source.InstanceClass != null) {
+            this.InstanceClass = new String(source.InstanceClass);
+        }
     }
 
 
@@ -624,6 +650,7 @@ public class SubscribeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "Errors.", this.Errors);
+        this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
 
     }
 }

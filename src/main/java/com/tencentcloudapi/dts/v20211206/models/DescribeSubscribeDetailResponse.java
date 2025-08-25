@@ -223,6 +223,34 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
     private KeyValuePairOption [] ExtraAttr;
 
     /**
+    * 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+    */
+    @SerializedName("SubscribeVersion")
+    @Expose
+    private String SubscribeVersion;
+
+    /**
+    * 消费端地址所在vpc
+    */
+    @SerializedName("ConsumerVpcId")
+    @Expose
+    private String ConsumerVpcId;
+
+    /**
+    * 消费端地址所在子网
+    */
+    @SerializedName("ConsumerSubnetId")
+    @Expose
+    private String ConsumerSubnetId;
+
+    /**
+    * 订阅实例规格
+    */
+    @SerializedName("InstanceClass")
+    @Expose
+    private String InstanceClass;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -690,6 +718,70 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
     }
 
     /**
+     * Get 数据订阅版本, 当前支持kafka和kafkaPro（专业版） 
+     * @return SubscribeVersion 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+     */
+    public String getSubscribeVersion() {
+        return this.SubscribeVersion;
+    }
+
+    /**
+     * Set 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+     * @param SubscribeVersion 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+     */
+    public void setSubscribeVersion(String SubscribeVersion) {
+        this.SubscribeVersion = SubscribeVersion;
+    }
+
+    /**
+     * Get 消费端地址所在vpc 
+     * @return ConsumerVpcId 消费端地址所在vpc
+     */
+    public String getConsumerVpcId() {
+        return this.ConsumerVpcId;
+    }
+
+    /**
+     * Set 消费端地址所在vpc
+     * @param ConsumerVpcId 消费端地址所在vpc
+     */
+    public void setConsumerVpcId(String ConsumerVpcId) {
+        this.ConsumerVpcId = ConsumerVpcId;
+    }
+
+    /**
+     * Get 消费端地址所在子网 
+     * @return ConsumerSubnetId 消费端地址所在子网
+     */
+    public String getConsumerSubnetId() {
+        return this.ConsumerSubnetId;
+    }
+
+    /**
+     * Set 消费端地址所在子网
+     * @param ConsumerSubnetId 消费端地址所在子网
+     */
+    public void setConsumerSubnetId(String ConsumerSubnetId) {
+        this.ConsumerSubnetId = ConsumerSubnetId;
+    }
+
+    /**
+     * Get 订阅实例规格 
+     * @return InstanceClass 订阅实例规格
+     */
+    public String getInstanceClass() {
+        return this.InstanceClass;
+    }
+
+    /**
+     * Set 订阅实例规格
+     * @param InstanceClass 订阅实例规格
+     */
+    public void setInstanceClass(String InstanceClass) {
+        this.InstanceClass = InstanceClass;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -815,6 +907,18 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
                 this.ExtraAttr[i] = new KeyValuePairOption(source.ExtraAttr[i]);
             }
         }
+        if (source.SubscribeVersion != null) {
+            this.SubscribeVersion = new String(source.SubscribeVersion);
+        }
+        if (source.ConsumerVpcId != null) {
+            this.ConsumerVpcId = new String(source.ConsumerVpcId);
+        }
+        if (source.ConsumerSubnetId != null) {
+            this.ConsumerSubnetId = new String(source.ConsumerSubnetId);
+        }
+        if (source.InstanceClass != null) {
+            this.InstanceClass = new String(source.InstanceClass);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -853,6 +957,10 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "Errors.", this.Errors);
         this.setParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
+        this.setParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
+        this.setParamSimple(map, prefix + "ConsumerVpcId", this.ConsumerVpcId);
+        this.setParamSimple(map, prefix + "ConsumerSubnetId", this.ConsumerSubnetId);
+        this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
