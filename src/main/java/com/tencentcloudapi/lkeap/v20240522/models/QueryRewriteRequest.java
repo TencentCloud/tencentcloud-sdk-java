@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class QueryRewriteRequest extends AbstractModel {
 
     /**
-    * 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写
+    * 说明：需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入
+备注：由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写。四轮对话最多包含3600个字符。
     */
     @SerializedName("Messages")
     @Expose
     private Message [] Messages;
 
     /**
-    * 模型名称
+    * 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-query-rewrite-base
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-     * Get 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写 
-     * @return Messages 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写
+     * Get 说明：需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入
+备注：由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写。四轮对话最多包含3600个字符。 
+     * @return Messages 说明：需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入
+备注：由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写。四轮对话最多包含3600个字符。
      */
     public Message [] getMessages() {
         return this.Messages;
     }
 
     /**
-     * Set 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写
-     * @param Messages 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写
+     * Set 说明：需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入
+备注：由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写。四轮对话最多包含3600个字符。
+     * @param Messages 说明：需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入
+备注：由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写。四轮对话最多包含3600个字符。
      */
     public void setMessages(Message [] Messages) {
         this.Messages = Messages;
     }
 
     /**
-     * Get 模型名称 
-     * @return Model 模型名称
+     * Get 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-query-rewrite-base 
+     * @return Model 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-query-rewrite-base
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 模型名称
-     * @param Model 模型名称
+     * Set 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-query-rewrite-base
+     * @param Model 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-query-rewrite-base
      */
     public void setModel(String Model) {
         this.Model = Model;

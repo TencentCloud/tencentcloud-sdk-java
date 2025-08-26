@@ -427,6 +427,17 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeInstanceSSLAttributes）用于拉取实例SSL认证属性
+     * @param req DescribeInstanceSSLAttributesRequest
+     * @return DescribeInstanceSSLAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSSLAttributesResponse DescribeInstanceSSLAttributes(DescribeInstanceSSLAttributesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceSSLAttributes", DescribeInstanceSSLAttributesResponse.class);
+    }
+
+    /**
      *本接口(DescribeLogFileRetentionPeriod)用于查看数据库备份日志的备份天数的设置情况。
      * @param req DescribeLogFileRetentionPeriodRequest
      * @return DescribeLogFileRetentionPeriodResponse
@@ -457,6 +468,20 @@ public class MariadbClient extends AbstractClient{
     public DescribePriceResponse DescribePrice(DescribePriceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePrice", DescribePriceResponse.class);
+    }
+
+    /**
+     *本接口 (DescribeProcessList) 用于查询当前正在运行的线程（连接/查询）信息。
+
+- 可以根据客户端IP，DB，执行时间等信息来查询实例正在运行的线程信息。过滤信息详细请见过滤器Filter。
+- 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的线程信息。
+     * @param req DescribeProcessListRequest
+     * @return DescribeProcessListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProcessListResponse DescribeProcessList(DescribeProcessListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProcessList", DescribeProcessListResponse.class);
     }
 
     /**
@@ -741,6 +766,28 @@ public class MariadbClient extends AbstractClient{
     public ModifyInstanceNetworkResponse ModifyInstanceNetwork(ModifyInstanceNetworkRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstanceNetwork", ModifyInstanceNetworkResponse.class);
+    }
+
+    /**
+     *该接口用于对实例修改删除保护属性
+     * @param req ModifyInstanceProtectedPropertyRequest
+     * @return ModifyInstanceProtectedPropertyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceProtectedPropertyResponse ModifyInstanceProtectedProperty(ModifyInstanceProtectedPropertyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceProtectedProperty", ModifyInstanceProtectedPropertyResponse.class);
+    }
+
+    /**
+     *本接口  （ModifyInstanceSSLAttributes）用于修改实例SSL认证功能属性
+     * @param req ModifyInstanceSSLAttributesRequest
+     * @return ModifyInstanceSSLAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceSSLAttributesResponse ModifyInstanceSSLAttributes(ModifyInstanceSSLAttributesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceSSLAttributes", ModifyInstanceSSLAttributesResponse.class);
     }
 
     /**

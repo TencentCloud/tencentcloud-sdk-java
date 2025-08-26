@@ -39,7 +39,7 @@ public class Placement extends AbstractModel {
     private String CageId;
 
     /**
-    * 实例所属项目ID，可通过[DescribeProject](/document/api/651/78725)获取。不填默认为0，表示默认项目。
+    * 实例所属项目ID，可通过DescribeProject获取。不填默认为0，表示默认项目。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -113,16 +113,16 @@ public class Placement extends AbstractModel {
     }
 
     /**
-     * Get 实例所属项目ID，可通过[DescribeProject](/document/api/651/78725)获取。不填默认为0，表示默认项目。 
-     * @return ProjectId 实例所属项目ID，可通过[DescribeProject](/document/api/651/78725)获取。不填默认为0，表示默认项目。
+     * Get 实例所属项目ID，可通过DescribeProject获取。不填默认为0，表示默认项目。 
+     * @return ProjectId 实例所属项目ID，可通过DescribeProject获取。不填默认为0，表示默认项目。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 实例所属项目ID，可通过[DescribeProject](/document/api/651/78725)获取。不填默认为0，表示默认项目。
-     * @param ProjectId 实例所属项目ID，可通过[DescribeProject](/document/api/651/78725)获取。不填默认为0，表示默认项目。
+     * Set 实例所属项目ID，可通过DescribeProject获取。不填默认为0，表示默认项目。
+     * @param ProjectId 实例所属项目ID，可通过DescribeProject获取。不填默认为0，表示默认项目。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

@@ -92,7 +92,7 @@ public class Task extends AbstractModel {
     private String FailType;
 
     /**
-    * 刷新、预热失败描述。
+    * 清除缓存、预热缓存的失败原因描述。
     */
     @SerializedName("FailMessage")
     @Expose
@@ -275,16 +275,16 @@ public class Task extends AbstractModel {
     }
 
     /**
-     * Get 刷新、预热失败描述。 
-     * @return FailMessage 刷新、预热失败描述。
+     * Get 清除缓存、预热缓存的失败原因描述。 
+     * @return FailMessage 清除缓存、预热缓存的失败原因描述。
      */
     public String getFailMessage() {
         return this.FailMessage;
     }
 
     /**
-     * Set 刷新、预热失败描述。
-     * @param FailMessage 刷新、预热失败描述。
+     * Set 清除缓存、预热缓存的失败原因描述。
+     * @param FailMessage 清除缓存、预热缓存的失败原因描述。
      */
     public void setFailMessage(String FailMessage) {
         this.FailMessage = FailMessage;

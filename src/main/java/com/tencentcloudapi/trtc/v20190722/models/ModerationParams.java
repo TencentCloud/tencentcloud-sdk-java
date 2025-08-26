@@ -70,7 +70,7 @@ yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核
     private ModerationSupplierParam ModerationSupplierParam;
 
     /**
-    * 是否保存命中文件 0 默认不保存  1 保存命中文件
+    * 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
     */
     @SerializedName("SaveModerationFile")
     @Expose
@@ -203,16 +203,16 @@ yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核
     }
 
     /**
-     * Get 是否保存命中文件 0 默认不保存  1 保存命中文件 
-     * @return SaveModerationFile 是否保存命中文件 0 默认不保存  1 保存命中文件
+     * Get 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件 
+     * @return SaveModerationFile 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
      */
     public Long getSaveModerationFile() {
         return this.SaveModerationFile;
     }
 
     /**
-     * Set 是否保存命中文件 0 默认不保存  1 保存命中文件
-     * @param SaveModerationFile 是否保存命中文件 0 默认不保存  1 保存命中文件
+     * Set 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
+     * @param SaveModerationFile 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
      */
     public void setSaveModerationFile(Long SaveModerationFile) {
         this.SaveModerationFile = SaveModerationFile;

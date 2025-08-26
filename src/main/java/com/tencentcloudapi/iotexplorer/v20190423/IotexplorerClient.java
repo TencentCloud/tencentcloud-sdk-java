@@ -349,6 +349,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *用于配置TWeTalk服务连接产品配置信息。
+     * @param req CreateTWeTalkProductConfigRequest
+     * @return CreateTWeTalkProductConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTWeTalkProductConfigResponse CreateTWeTalkProductConfig(CreateTWeTalkProductConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTWeTalkProductConfig", CreateTWeTalkProductConfigResponse.class);
+    }
+
+    /**
      *本接口（CreateTopicPolicy）用于创建一个Topic
      * @param req CreateTopicPolicyRequest
      * @return CreateTopicPolicyResponse
@@ -1099,6 +1110,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *用于获取TWeTalk服务连接产品配置信息。
+     * @param req DescribeTWeTalkProductConfigRequest
+     * @return DescribeTWeTalkProductConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTWeTalkProductConfigResponse DescribeTWeTalkProductConfig(DescribeTWeTalkProductConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTWeTalkProductConfig", DescribeTWeTalkProductConfigResponse.class);
+    }
+
+    /**
      *本接口（DescribeTopicPolicy）用于查看Topic详细信息
      * @param req DescribeTopicPolicyRequest
      * @return DescribeTopicPolicyResponse
@@ -1360,6 +1382,17 @@ public class IotexplorerClient extends AbstractClient{
     public GetTWeCallActiveStatusResponse GetTWeCallActiveStatus(GetTWeCallActiveStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetTWeCallActiveStatus", GetTWeCallActiveStatusResponse.class);
+    }
+
+    /**
+     *用于获取TWeTalk服务连接产品配置信息列表。
+     * @param req GetTWeTalkProductConfigListRequest
+     * @return GetTWeTalkProductConfigListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTWeTalkProductConfigListResponse GetTWeTalkProductConfigList(GetTWeTalkProductConfigListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTWeTalkProductConfigList", GetTWeTalkProductConfigListResponse.class);
     }
 
     /**
@@ -1635,6 +1668,17 @@ public class IotexplorerClient extends AbstractClient{
     public ModifyTWeSeeConfigResponse ModifyTWeSeeConfig(ModifyTWeSeeConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTWeSeeConfig", ModifyTWeSeeConfigResponse.class);
+    }
+
+    /**
+     *用于修改TWeTalk服务连接产品配置信息。
+     * @param req ModifyTWeTalkProductConfigRequest
+     * @return ModifyTWeTalkProductConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTWeTalkProductConfigResponse ModifyTWeTalkProductConfig(ModifyTWeTalkProductConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTWeTalkProductConfig", ModifyTWeTalkProductConfigResponse.class);
     }
 
     /**

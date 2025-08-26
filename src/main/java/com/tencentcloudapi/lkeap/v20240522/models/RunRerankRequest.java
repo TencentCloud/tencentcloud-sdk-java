@@ -24,69 +24,89 @@ import java.util.HashMap;
 public class RunRerankRequest extends AbstractModel {
 
     /**
-    * 查询内容
+    * 说明：查询内容
+备注：用于匹配的query
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 文档列表，最多20个
+    * 说明：文档列表
+备注：最多60个，Query字段和Docs字段的总长度上限为2000字符
     */
     @SerializedName("Docs")
     @Expose
     private String [] Docs;
 
     /**
-    * 模型名称, 默认: lke-reranker-base
+    * 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-reranker-base
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-     * Get 查询内容 
-     * @return Query 查询内容
+     * Get 说明：查询内容
+备注：用于匹配的query 
+     * @return Query 说明：查询内容
+备注：用于匹配的query
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询内容
-     * @param Query 查询内容
+     * Set 说明：查询内容
+备注：用于匹配的query
+     * @param Query 说明：查询内容
+备注：用于匹配的query
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 文档列表，最多20个 
-     * @return Docs 文档列表，最多20个
+     * Get 说明：文档列表
+备注：最多60个，Query字段和Docs字段的总长度上限为2000字符 
+     * @return Docs 说明：文档列表
+备注：最多60个，Query字段和Docs字段的总长度上限为2000字符
      */
     public String [] getDocs() {
         return this.Docs;
     }
 
     /**
-     * Set 文档列表，最多20个
-     * @param Docs 文档列表，最多20个
+     * Set 说明：文档列表
+备注：最多60个，Query字段和Docs字段的总长度上限为2000字符
+     * @param Docs 说明：文档列表
+备注：最多60个，Query字段和Docs字段的总长度上限为2000字符
      */
     public void setDocs(String [] Docs) {
         this.Docs = Docs;
     }
 
     /**
-     * Get 模型名称, 默认: lke-reranker-base 
-     * @return Model 模型名称, 默认: lke-reranker-base
+     * Get 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-reranker-base 
+     * @return Model 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-reranker-base
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 模型名称, 默认: lke-reranker-base
-     * @param Model 模型名称, 默认: lke-reranker-base
+     * Set 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-reranker-base
+     * @param Model 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-reranker-base
      */
     public void setModel(String Model) {
         this.Model = Model;

@@ -1736,6 +1736,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *更改防护等级
+     * @param req ModifyProtectionLevelRequest
+     * @return ModifyProtectionLevelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProtectionLevelResponse ModifyProtectionLevel(ModifyProtectionLevelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyProtectionLevel", ModifyProtectionLevelResponse.class);
+    }
+
+    /**
      *开启、关闭WAF开关
      * @param req ModifyProtectionStatusRequest
      * @return ModifyProtectionStatusResponse
