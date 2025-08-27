@@ -402,6 +402,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *用户上报自定义的订单信息，多网聚合加速服务将相关信息进行保存
+     * @param req ReportOrderRequest
+     * @return ReportOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportOrderResponse ReportOrder(ReportOrderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReportOrder", ReportOrderResponse.class);
+    }
+
+    /**
      *设置用户流量告警信息接口，通过该接口设置流量包告警阈值以及告警时回调的url和key
      * @param req SetNotifyUrlRequest
      * @return SetNotifyUrlResponse

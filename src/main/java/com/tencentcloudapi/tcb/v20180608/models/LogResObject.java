@@ -45,6 +45,13 @@ public class LogResObject extends AbstractModel {
     private LogObject [] Results;
 
     /**
+    * 日志聚合结果
+    */
+    @SerializedName("AnalysisRecords")
+    @Expose
+    private String [] AnalysisRecords;
+
+    /**
      * Get 获取更多检索结果的游标 
      * @return Context 获取更多检索结果的游标
      */
@@ -92,6 +99,22 @@ public class LogResObject extends AbstractModel {
         this.Results = Results;
     }
 
+    /**
+     * Get 日志聚合结果 
+     * @return AnalysisRecords 日志聚合结果
+     */
+    public String [] getAnalysisRecords() {
+        return this.AnalysisRecords;
+    }
+
+    /**
+     * Set 日志聚合结果
+     * @param AnalysisRecords 日志聚合结果
+     */
+    public void setAnalysisRecords(String [] AnalysisRecords) {
+        this.AnalysisRecords = AnalysisRecords;
+    }
+
     public LogResObject() {
     }
 
@@ -112,6 +135,12 @@ public class LogResObject extends AbstractModel {
                 this.Results[i] = new LogObject(source.Results[i]);
             }
         }
+        if (source.AnalysisRecords != null) {
+            this.AnalysisRecords = new String[source.AnalysisRecords.length];
+            for (int i = 0; i < source.AnalysisRecords.length; i++) {
+                this.AnalysisRecords[i] = new String(source.AnalysisRecords[i]);
+            }
+        }
     }
 
 
@@ -122,6 +151,7 @@ public class LogResObject extends AbstractModel {
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "ListOver", this.ListOver);
         this.setParamArrayObj(map, prefix + "Results.", this.Results);
+        this.setParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
 
     }
 }

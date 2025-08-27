@@ -73,7 +73,7 @@ public class DocumentUsage extends AbstractModel {
     private Long FailPageNum;
 
     /**
-    * 文件大小，单位KB
+    * 文件大小，单位：字节
     */
     @SerializedName("FileSize")
     @Expose
@@ -196,16 +196,16 @@ public class DocumentUsage extends AbstractModel {
     }
 
     /**
-     * Get 文件大小，单位KB 
-     * @return FileSize 文件大小，单位KB
+     * Get 文件大小，单位：字节 
+     * @return FileSize 文件大小，单位：字节
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 文件大小，单位KB
-     * @param FileSize 文件大小，单位KB
+     * Set 文件大小，单位：字节
+     * @param FileSize 文件大小，单位：字节
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;

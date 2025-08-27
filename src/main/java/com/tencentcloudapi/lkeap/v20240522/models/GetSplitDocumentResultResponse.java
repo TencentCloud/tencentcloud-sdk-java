@@ -68,6 +68,13 @@ public class GetSplitDocumentResultResponse extends AbstractModel {
     private DocumentUsage Usage;
 
     /**
+    * 文档拆分失败的错误信息，当拆分任务失败时返回该错误信息
+    */
+    @SerializedName("Error")
+    @Expose
+    private ErrorInfo Error;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -207,6 +214,22 @@ public class GetSplitDocumentResultResponse extends AbstractModel {
     }
 
     /**
+     * Get 文档拆分失败的错误信息，当拆分任务失败时返回该错误信息 
+     * @return Error 文档拆分失败的错误信息，当拆分任务失败时返回该错误信息
+     */
+    public ErrorInfo getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set 文档拆分失败的错误信息，当拆分任务失败时返回该错误信息
+     * @param Error 文档拆分失败的错误信息，当拆分任务失败时返回该错误信息
+     */
+    public void setError(ErrorInfo Error) {
+        this.Error = Error;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -245,6 +268,9 @@ public class GetSplitDocumentResultResponse extends AbstractModel {
         if (source.Usage != null) {
             this.Usage = new DocumentUsage(source.Usage);
         }
+        if (source.Error != null) {
+            this.Error = new ErrorInfo(source.Error);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -259,6 +285,7 @@ public class GetSplitDocumentResultResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "DocumentRecognizeResultUrl", this.DocumentRecognizeResultUrl);
         this.setParamArrayObj(map, prefix + "FailedPages.", this.FailedPages);
         this.setParamObj(map, prefix + "Usage.", this.Usage);
+        this.setParamObj(map, prefix + "Error.", this.Error);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

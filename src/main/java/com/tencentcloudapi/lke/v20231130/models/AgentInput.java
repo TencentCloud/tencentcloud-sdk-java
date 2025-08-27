@@ -45,6 +45,27 @@ public class AgentInput extends AbstractModel {
     private String CustomVarId;
 
     /**
+    * 环境变量参数
+    */
+    @SerializedName("EnvVarId")
+    @Expose
+    private String EnvVarId;
+
+    /**
+    * 应用变量参数
+    */
+    @SerializedName("AppVarId")
+    @Expose
+    private String AppVarId;
+
+    /**
+    * 系统参数
+    */
+    @SerializedName("SystemVariable")
+    @Expose
+    private AgentInputSystemVariable SystemVariable;
+
+    /**
      * Get 输入来源类型：0 用户输入，3 自定义变量（API参数） 
      * @return InputType 输入来源类型：0 用户输入，3 自定义变量（API参数）
      */
@@ -92,6 +113,54 @@ public class AgentInput extends AbstractModel {
         this.CustomVarId = CustomVarId;
     }
 
+    /**
+     * Get 环境变量参数 
+     * @return EnvVarId 环境变量参数
+     */
+    public String getEnvVarId() {
+        return this.EnvVarId;
+    }
+
+    /**
+     * Set 环境变量参数
+     * @param EnvVarId 环境变量参数
+     */
+    public void setEnvVarId(String EnvVarId) {
+        this.EnvVarId = EnvVarId;
+    }
+
+    /**
+     * Get 应用变量参数 
+     * @return AppVarId 应用变量参数
+     */
+    public String getAppVarId() {
+        return this.AppVarId;
+    }
+
+    /**
+     * Set 应用变量参数
+     * @param AppVarId 应用变量参数
+     */
+    public void setAppVarId(String AppVarId) {
+        this.AppVarId = AppVarId;
+    }
+
+    /**
+     * Get 系统参数 
+     * @return SystemVariable 系统参数
+     */
+    public AgentInputSystemVariable getSystemVariable() {
+        return this.SystemVariable;
+    }
+
+    /**
+     * Set 系统参数
+     * @param SystemVariable 系统参数
+     */
+    public void setSystemVariable(AgentInputSystemVariable SystemVariable) {
+        this.SystemVariable = SystemVariable;
+    }
+
     public AgentInput() {
     }
 
@@ -109,6 +178,15 @@ public class AgentInput extends AbstractModel {
         if (source.CustomVarId != null) {
             this.CustomVarId = new String(source.CustomVarId);
         }
+        if (source.EnvVarId != null) {
+            this.EnvVarId = new String(source.EnvVarId);
+        }
+        if (source.AppVarId != null) {
+            this.AppVarId = new String(source.AppVarId);
+        }
+        if (source.SystemVariable != null) {
+            this.SystemVariable = new AgentInputSystemVariable(source.SystemVariable);
+        }
     }
 
 
@@ -119,6 +197,9 @@ public class AgentInput extends AbstractModel {
         this.setParamSimple(map, prefix + "InputType", this.InputType);
         this.setParamObj(map, prefix + "UserInputValue.", this.UserInputValue);
         this.setParamSimple(map, prefix + "CustomVarId", this.CustomVarId);
+        this.setParamSimple(map, prefix + "EnvVarId", this.EnvVarId);
+        this.setParamSimple(map, prefix + "AppVarId", this.AppVarId);
+        this.setParamObj(map, prefix + "SystemVariable.", this.SystemVariable);
 
     }
 }

@@ -38,14 +38,14 @@ public class DescribeVirtualDevicesRequest extends AbstractModel {
     private Condition Condition;
 
     /**
-    * 必填，终端自定义分组id
+    * 终端自定义分组ID（0：获取租户全部自定义分组下的终端数据；其他值：获取具体ID分组下的终端数据）
     */
     @SerializedName("DeviceVirtualGroupId")
     @Expose
     private Long DeviceVirtualGroupId;
 
     /**
-    * 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+    * 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
     */
     @SerializedName("OsType")
     @Expose
@@ -91,32 +91,32 @@ public class DescribeVirtualDevicesRequest extends AbstractModel {
     }
 
     /**
-     * Get 必填，终端自定义分组id 
-     * @return DeviceVirtualGroupId 必填，终端自定义分组id
+     * Get 终端自定义分组ID（0：获取租户全部自定义分组下的终端数据；其他值：获取具体ID分组下的终端数据） 
+     * @return DeviceVirtualGroupId 终端自定义分组ID（0：获取租户全部自定义分组下的终端数据；其他值：获取具体ID分组下的终端数据）
      */
     public Long getDeviceVirtualGroupId() {
         return this.DeviceVirtualGroupId;
     }
 
     /**
-     * Set 必填，终端自定义分组id
-     * @param DeviceVirtualGroupId 必填，终端自定义分组id
+     * Set 终端自定义分组ID（0：获取租户全部自定义分组下的终端数据；其他值：获取具体ID分组下的终端数据）
+     * @param DeviceVirtualGroupId 终端自定义分组ID（0：获取租户全部自定义分组下的终端数据；其他值：获取具体ID分组下的终端数据）
      */
     public void setDeviceVirtualGroupId(Long DeviceVirtualGroupId) {
         this.DeviceVirtualGroupId = DeviceVirtualGroupId;
     }
 
     /**
-     * Get 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0） 
-     * @return OsType 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+     * Get 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0） 
+     * @return OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
-     * @param OsType 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+     * Set 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+     * @param OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;

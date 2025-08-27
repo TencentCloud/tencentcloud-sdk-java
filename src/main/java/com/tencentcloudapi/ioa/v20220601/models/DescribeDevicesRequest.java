@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeDevicesRequest extends AbstractModel {
 
     /**
+    * 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+    */
+    @SerializedName("DomainInstanceId")
+    @Expose
+    private String DomainInstanceId;
+
+    /**
     * 过滤条件参数（字段含义请参考接口返回值）
 
 - Mid, 类型String，支持操作：【eq，like，ilike】，支持排序
@@ -101,7 +108,7 @@ SaaS需要调用分组接口DescribeDeviceChildGroups获取对应分组id
     private Long GroupId;
 
     /**
-    * 【必填】操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+    * 操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
     */
     @SerializedName("OsType")
     @Expose
@@ -156,6 +163,22 @@ SaaS需要调用分组接口DescribeDeviceChildGroups获取对应分组id
     @SerializedName("GroupIds")
     @Expose
     private Long [] GroupIds;
+
+    /**
+     * Get 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。 
+     * @return DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public String getDomainInstanceId() {
+        return this.DomainInstanceId;
+    }
+
+    /**
+     * Set 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @param DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public void setDomainInstanceId(String DomainInstanceId) {
+        this.DomainInstanceId = DomainInstanceId;
+    }
 
     /**
      * Get 过滤条件参数（字段含义请参考接口返回值）
@@ -442,16 +465,16 @@ SaaS需要调用分组接口DescribeDeviceChildGroups获取对应分组id
     }
 
     /**
-     * Get 【必填】操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配 
-     * @return OsType 【必填】操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+     * Get 操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配 
+     * @return OsType 操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 【必填】操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
-     * @param OsType 【必填】操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+     * Set 操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+     * @param OsType 操作系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;
@@ -581,6 +604,9 @@ SaaS需要调用分组接口DescribeDeviceChildGroups获取对应分组id
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDevicesRequest(DescribeDevicesRequest source) {
+        if (source.DomainInstanceId != null) {
+            this.DomainInstanceId = new String(source.DomainInstanceId);
+        }
         if (source.Condition != null) {
             this.Condition = new Condition(source.Condition);
         }
@@ -624,6 +650,7 @@ SaaS需要调用分组接口DescribeDeviceChildGroups获取对应分组id
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
         this.setParamObj(map, prefix + "Condition.", this.Condition);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "OsType", this.OsType);

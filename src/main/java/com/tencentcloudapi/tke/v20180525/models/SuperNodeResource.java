@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class SuperNodeResource extends AbstractModel {
 
     /**
-    * 节点名称
+    * 节点名称，此字段在出参中有效。
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * 节点上的资源总数
+    * 节点上的资源总数，QuotaType为 exact 时，表示创建指定规格的精确配额数量。
     */
     @SerializedName("Num")
     @Expose
     private Long Num;
 
     /**
-    * 节点上的总核数
+    * 节点上的总核数，QuotaType为 exact 时表示指定规格的核数。
     */
     @SerializedName("Cpu")
     @Expose
     private Float Cpu;
 
     /**
-    * 节点上的总内存数
+    * 节点上的总内存数，QuotaType为 exact 时表示指定规格的内存，单位：Gi
     */
     @SerializedName("Memory")
     @Expose
     private Float Memory;
 
     /**
-    * 节点上的总 GPU 卡数
+    * 节点上的总 GPU 卡数，QuotaType为 exact 时表示指定规格的GPU卡数。
     */
     @SerializedName("Gpu")
     @Expose
@@ -80,87 +80,87 @@ public class SuperNodeResource extends AbstractModel {
     private String ResourceType;
 
     /**
-    * 置放群组 ID
+    * 置放群组 ID，QuotaType为 exact 时有效，表示购买的精确配额需满足置放群组。可通过 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810) 接口返回值中的DisasterRecoverGroupId获取。
     */
     @SerializedName("DisasterRecoverGroupId")
     @Expose
     private String DisasterRecoverGroupId;
 
     /**
-     * Get 节点名称 
-     * @return NodeName 节点名称
+     * Get 节点名称，此字段在出参中有效。 
+     * @return NodeName 节点名称，此字段在出参中有效。
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 节点名称
-     * @param NodeName 节点名称
+     * Set 节点名称，此字段在出参中有效。
+     * @param NodeName 节点名称，此字段在出参中有效。
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 节点上的资源总数 
-     * @return Num 节点上的资源总数
+     * Get 节点上的资源总数，QuotaType为 exact 时，表示创建指定规格的精确配额数量。 
+     * @return Num 节点上的资源总数，QuotaType为 exact 时，表示创建指定规格的精确配额数量。
      */
     public Long getNum() {
         return this.Num;
     }
 
     /**
-     * Set 节点上的资源总数
-     * @param Num 节点上的资源总数
+     * Set 节点上的资源总数，QuotaType为 exact 时，表示创建指定规格的精确配额数量。
+     * @param Num 节点上的资源总数，QuotaType为 exact 时，表示创建指定规格的精确配额数量。
      */
     public void setNum(Long Num) {
         this.Num = Num;
     }
 
     /**
-     * Get 节点上的总核数 
-     * @return Cpu 节点上的总核数
+     * Get 节点上的总核数，QuotaType为 exact 时表示指定规格的核数。 
+     * @return Cpu 节点上的总核数，QuotaType为 exact 时表示指定规格的核数。
      */
     public Float getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 节点上的总核数
-     * @param Cpu 节点上的总核数
+     * Set 节点上的总核数，QuotaType为 exact 时表示指定规格的核数。
+     * @param Cpu 节点上的总核数，QuotaType为 exact 时表示指定规格的核数。
      */
     public void setCpu(Float Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 节点上的总内存数 
-     * @return Memory 节点上的总内存数
+     * Get 节点上的总内存数，QuotaType为 exact 时表示指定规格的内存，单位：Gi 
+     * @return Memory 节点上的总内存数，QuotaType为 exact 时表示指定规格的内存，单位：Gi
      */
     public Float getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 节点上的总内存数
-     * @param Memory 节点上的总内存数
+     * Set 节点上的总内存数，QuotaType为 exact 时表示指定规格的内存，单位：Gi
+     * @param Memory 节点上的总内存数，QuotaType为 exact 时表示指定规格的内存，单位：Gi
      */
     public void setMemory(Float Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 节点上的总 GPU 卡数 
-     * @return Gpu 节点上的总 GPU 卡数
+     * Get 节点上的总 GPU 卡数，QuotaType为 exact 时表示指定规格的GPU卡数。 
+     * @return Gpu 节点上的总 GPU 卡数，QuotaType为 exact 时表示指定规格的GPU卡数。
      */
     public Float getGpu() {
         return this.Gpu;
     }
 
     /**
-     * Set 节点上的总 GPU 卡数
-     * @param Gpu 节点上的总 GPU 卡数
+     * Set 节点上的总 GPU 卡数，QuotaType为 exact 时表示指定规格的GPU卡数。
+     * @param Gpu 节点上的总 GPU 卡数，QuotaType为 exact 时表示指定规格的GPU卡数。
      */
     public void setGpu(Float Gpu) {
         this.Gpu = Gpu;
@@ -215,16 +215,16 @@ public class SuperNodeResource extends AbstractModel {
     }
 
     /**
-     * Get 置放群组 ID 
-     * @return DisasterRecoverGroupId 置放群组 ID
+     * Get 置放群组 ID，QuotaType为 exact 时有效，表示购买的精确配额需满足置放群组。可通过 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810) 接口返回值中的DisasterRecoverGroupId获取。 
+     * @return DisasterRecoverGroupId 置放群组 ID，QuotaType为 exact 时有效，表示购买的精确配额需满足置放群组。可通过 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810) 接口返回值中的DisasterRecoverGroupId获取。
      */
     public String getDisasterRecoverGroupId() {
         return this.DisasterRecoverGroupId;
     }
 
     /**
-     * Set 置放群组 ID
-     * @param DisasterRecoverGroupId 置放群组 ID
+     * Set 置放群组 ID，QuotaType为 exact 时有效，表示购买的精确配额需满足置放群组。可通过 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810) 接口返回值中的DisasterRecoverGroupId获取。
+     * @param DisasterRecoverGroupId 置放群组 ID，QuotaType为 exact 时有效，表示购买的精确配额需满足置放群组。可通过 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810) 接口返回值中的DisasterRecoverGroupId获取。
      */
     public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
         this.DisasterRecoverGroupId = DisasterRecoverGroupId;

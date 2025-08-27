@@ -1097,7 +1097,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *删除复制组
+     *本接口（RemoveReplicationGroup）用于删除复制组。
      * @param req RemoveReplicationGroupRequest
      * @return RemoveReplicationGroupResponse
      * @throws TencentCloudSDKException

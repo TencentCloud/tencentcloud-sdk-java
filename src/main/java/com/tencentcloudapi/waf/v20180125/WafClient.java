@@ -171,6 +171,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
+     * @param req CreateExportRequest
+     * @return CreateExportResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExportResponse CreateExport(CreateExportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateExport", CreateExportResponse.class);
+    }
+
+    /**
      *clb-waf中添加防护域名
      * @param req CreateHostRequest
      * @return CreateHostResponse
@@ -333,6 +344,17 @@ public class WafClient extends AbstractClient{
     public DeleteDomainWhiteRulesResponse DeleteDomainWhiteRules(DeleteDomainWhiteRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDomainWhiteRules", DeleteDomainWhiteRulesResponse.class);
+    }
+
+    /**
+     *本接口用于删除日志下载任务
+     * @param req DeleteExportRequest
+     * @return DeleteExportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteExportResponse DeleteExport(DeleteExportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteExport", DeleteExportResponse.class);
     }
 
     /**
@@ -776,6 +798,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *本接口用于获取日志下载任务列表
+     * @param req DescribeExportsRequest
+     * @return DescribeExportsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExportsResponse DescribeExports(DescribeExportsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExports", DescribeExportsResponse.class);
+    }
+
+    /**
      *获取发现域名列表接口
      * @param req DescribeFindDomainListRequest
      * @return DescribeFindDomainListResponse
@@ -872,6 +905,17 @@ public class WafClient extends AbstractClient{
     public DescribeIpHitItemsResponse DescribeIpHitItems(DescribeIpHitItemsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIpHitItems", DescribeIpHitItemsResponse.class);
+    }
+
+    /**
+     *本接口用于构建日志数量直方图
+     * @param req DescribeLogHistogramRequest
+     * @return DescribeLogHistogramResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogHistogramResponse DescribeLogHistogram(DescribeLogHistogramRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogHistogram", DescribeLogHistogramResponse.class);
     }
 
     /**
@@ -1070,6 +1114,17 @@ public class WafClient extends AbstractClient{
     public DescribeTopAttackDomainResponse DescribeTopAttackDomain(DescribeTopAttackDomainRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTopAttackDomain", DescribeTopAttackDomainResponse.class);
+    }
+
+    /**
+     *本接口用于获取日志主题列表，支持分页
+     * @param req DescribeTopicsRequest
+     * @return DescribeTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicsResponse DescribeTopics(DescribeTopicsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopics", DescribeTopicsResponse.class);
     }
 
     /**
@@ -1898,6 +1953,20 @@ public class WafClient extends AbstractClient{
     public SearchAttackLogResponse SearchAttackLog(SearchAttackLogRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchAttackLog", SearchAttackLogResponse.class);
+    }
+
+    /**
+     *本接口用于检索分析日志，使用该接口时请注意如下事项：
+1. 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
+2. 检索语法建议使用CQL语法规则，请使用SyntaxRule参数，将值设置为1。
+3. API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
+     * @param req SearchLogRequest
+     * @return SearchLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchLogResponse SearchLog(SearchLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchLog", SearchLogResponse.class);
     }
 
     /**

@@ -87,6 +87,13 @@ public class EnvBaseInfo extends AbstractModel {
     private String SubnetIds;
 
     /**
+    * 回收标志，为空则表示正常，recycle表示已回收
+    */
+    @SerializedName("Recycle")
+    @Expose
+    private String Recycle;
+
+    /**
      * Get 环境Id 
      * @return EnvId 环境Id
      */
@@ -230,6 +237,22 @@ public class EnvBaseInfo extends AbstractModel {
         this.SubnetIds = SubnetIds;
     }
 
+    /**
+     * Get 回收标志，为空则表示正常，recycle表示已回收 
+     * @return Recycle 回收标志，为空则表示正常，recycle表示已回收
+     */
+    public String getRecycle() {
+        return this.Recycle;
+    }
+
+    /**
+     * Set 回收标志，为空则表示正常，recycle表示已回收
+     * @param Recycle 回收标志，为空则表示正常，recycle表示已回收
+     */
+    public void setRecycle(String Recycle) {
+        this.Recycle = Recycle;
+    }
+
     public EnvBaseInfo() {
     }
 
@@ -265,6 +288,9 @@ public class EnvBaseInfo extends AbstractModel {
         if (source.SubnetIds != null) {
             this.SubnetIds = new String(source.SubnetIds);
         }
+        if (source.Recycle != null) {
+            this.Recycle = new String(source.Recycle);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class EnvBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
         this.setParamSimple(map, prefix + "SubnetIds", this.SubnetIds);
+        this.setParamSimple(map, prefix + "Recycle", this.Recycle);
 
     }
 }

@@ -143,6 +143,14 @@ public class AppInfo extends AbstractModel {
     private String [] PermissionIds;
 
     /**
+    * 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Creator")
+    @Expose
+    private String Creator;
+
+    /**
      * Get 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
@@ -438,6 +446,26 @@ public class AppInfo extends AbstractModel {
         this.PermissionIds = PermissionIds;
     }
 
+    /**
+     * Get 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Creator 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreator() {
+        return this.Creator;
+    }
+
+    /**
+     * Set 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Creator 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreator(String Creator) {
+        this.Creator = Creator;
+    }
+
     public AppInfo() {
     }
 
@@ -494,6 +522,9 @@ public class AppInfo extends AbstractModel {
                 this.PermissionIds[i] = new String(source.PermissionIds[i]);
             }
         }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
+        }
     }
 
 
@@ -516,6 +547,7 @@ public class AppInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Pattern", this.Pattern);
         this.setParamSimple(map, prefix + "ThoughtModelAliasName", this.ThoughtModelAliasName);
         this.setParamArraySimple(map, prefix + "PermissionIds.", this.PermissionIds);
+        this.setParamSimple(map, prefix + "Creator", this.Creator);
 
     }
 }

@@ -434,6 +434,29 @@ public class Cluster extends AbstractModel {
     private HadoopYarnItem [] Yarns;
 
     /**
+    * 0 单可用区 1多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeploymentMode")
+    @Expose
+    private Long DeploymentMode;
+
+    /**
+    * 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlaveZones")
+    @Expose
+    private SlaveZone [] SlaveZones;
+
+    /**
+    * 集群的日志cos存储
+    */
+    @SerializedName("LogCOSBucket")
+    @Expose
+    private String LogCOSBucket;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -1425,6 +1448,62 @@ public class Cluster extends AbstractModel {
         this.Yarns = Yarns;
     }
 
+    /**
+     * Get 0 单可用区 1多可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeploymentMode 0 单可用区 1多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeploymentMode() {
+        return this.DeploymentMode;
+    }
+
+    /**
+     * Set 0 单可用区 1多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeploymentMode 0 单可用区 1多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeploymentMode(Long DeploymentMode) {
+        this.DeploymentMode = DeploymentMode;
+    }
+
+    /**
+     * Get 备可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlaveZones 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SlaveZone [] getSlaveZones() {
+        return this.SlaveZones;
+    }
+
+    /**
+     * Set 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlaveZones 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlaveZones(SlaveZone [] SlaveZones) {
+        this.SlaveZones = SlaveZones;
+    }
+
+    /**
+     * Get 集群的日志cos存储 
+     * @return LogCOSBucket 集群的日志cos存储
+     */
+    public String getLogCOSBucket() {
+        return this.LogCOSBucket;
+    }
+
+    /**
+     * Set 集群的日志cos存储
+     * @param LogCOSBucket 集群的日志cos存储
+     */
+    public void setLogCOSBucket(String LogCOSBucket) {
+        this.LogCOSBucket = LogCOSBucket;
+    }
+
     public Cluster() {
     }
 
@@ -1616,6 +1695,18 @@ public class Cluster extends AbstractModel {
                 this.Yarns[i] = new HadoopYarnItem(source.Yarns[i]);
             }
         }
+        if (source.DeploymentMode != null) {
+            this.DeploymentMode = new Long(source.DeploymentMode);
+        }
+        if (source.SlaveZones != null) {
+            this.SlaveZones = new SlaveZone[source.SlaveZones.length];
+            for (int i = 0; i < source.SlaveZones.length; i++) {
+                this.SlaveZones[i] = new SlaveZone(source.SlaveZones[i]);
+            }
+        }
+        if (source.LogCOSBucket != null) {
+            this.LogCOSBucket = new String(source.LogCOSBucket);
+        }
     }
 
 
@@ -1677,6 +1768,9 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "RunningMem", this.RunningMem);
         this.setParamObj(map, prefix + "Setats.", this.Setats);
         this.setParamArrayObj(map, prefix + "Yarns.", this.Yarns);
+        this.setParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
+        this.setParamArrayObj(map, prefix + "SlaveZones.", this.SlaveZones);
+        this.setParamSimple(map, prefix + "LogCOSBucket", this.LogCOSBucket);
 
     }
 }

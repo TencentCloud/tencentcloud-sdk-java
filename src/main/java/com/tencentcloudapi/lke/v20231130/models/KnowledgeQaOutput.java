@@ -80,6 +80,14 @@ public class KnowledgeQaOutput extends AbstractModel {
     private Boolean UseRecommended;
 
     /**
+    * 推荐问模式，0.结合知识库&对话历史推荐问题Prompt(默认) 1.仅结合知识库输出推荐问的prompt
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecommendedPromptMode")
+    @Expose
+    private Long RecommendedPromptMode;
+
+    /**
      * Get 输出方式 1：流式 2：非流式
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Method 输出方式 1：流式 2：非流式
@@ -219,6 +227,26 @@ public class KnowledgeQaOutput extends AbstractModel {
         this.UseRecommended = UseRecommended;
     }
 
+    /**
+     * Get 推荐问模式，0.结合知识库&对话历史推荐问题Prompt(默认) 1.仅结合知识库输出推荐问的prompt
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecommendedPromptMode 推荐问模式，0.结合知识库&对话历史推荐问题Prompt(默认) 1.仅结合知识库输出推荐问的prompt
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRecommendedPromptMode() {
+        return this.RecommendedPromptMode;
+    }
+
+    /**
+     * Set 推荐问模式，0.结合知识库&对话历史推荐问题Prompt(默认) 1.仅结合知识库输出推荐问的prompt
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecommendedPromptMode 推荐问模式，0.结合知识库&对话历史推荐问题Prompt(默认) 1.仅结合知识库输出推荐问的prompt
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecommendedPromptMode(Long RecommendedPromptMode) {
+        this.RecommendedPromptMode = RecommendedPromptMode;
+    }
+
     public KnowledgeQaOutput() {
     }
 
@@ -251,6 +279,9 @@ public class KnowledgeQaOutput extends AbstractModel {
         if (source.UseRecommended != null) {
             this.UseRecommended = new Boolean(source.UseRecommended);
         }
+        if (source.RecommendedPromptMode != null) {
+            this.RecommendedPromptMode = new Long(source.RecommendedPromptMode);
+        }
     }
 
 
@@ -265,6 +296,7 @@ public class KnowledgeQaOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "UseQuestionClarify", this.UseQuestionClarify);
         this.setParamArraySimple(map, prefix + "QuestionClarifyKeywords.", this.QuestionClarifyKeywords);
         this.setParamSimple(map, prefix + "UseRecommended", this.UseRecommended);
+        this.setParamSimple(map, prefix + "RecommendedPromptMode", this.RecommendedPromptMode);
 
     }
 }

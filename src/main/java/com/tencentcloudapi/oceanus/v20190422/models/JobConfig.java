@@ -332,6 +332,13 @@ public class JobConfig extends AbstractModel {
     private Long CheckpointTimeoutSecond;
 
     /**
+    * checkpoint 间隔时间
+    */
+    @SerializedName("CheckpointIntervalSecond")
+    @Expose
+    private Long CheckpointIntervalSecond;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -1095,6 +1102,22 @@ public class JobConfig extends AbstractModel {
         this.CheckpointTimeoutSecond = CheckpointTimeoutSecond;
     }
 
+    /**
+     * Get checkpoint 间隔时间 
+     * @return CheckpointIntervalSecond checkpoint 间隔时间
+     */
+    public Long getCheckpointIntervalSecond() {
+        return this.CheckpointIntervalSecond;
+    }
+
+    /**
+     * Set checkpoint 间隔时间
+     * @param CheckpointIntervalSecond checkpoint 间隔时间
+     */
+    public void setCheckpointIntervalSecond(Long CheckpointIntervalSecond) {
+        this.CheckpointIntervalSecond = CheckpointIntervalSecond;
+    }
+
     public JobConfig() {
     }
 
@@ -1229,6 +1252,9 @@ public class JobConfig extends AbstractModel {
         if (source.CheckpointTimeoutSecond != null) {
             this.CheckpointTimeoutSecond = new Long(source.CheckpointTimeoutSecond);
         }
+        if (source.CheckpointIntervalSecond != null) {
+            this.CheckpointIntervalSecond = new Long(source.CheckpointIntervalSecond);
+        }
     }
 
 
@@ -1275,6 +1301,7 @@ public class JobConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
         this.setParamObj(map, prefix + "JobConfigItem.", this.JobConfigItem);
         this.setParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
+        this.setParamSimple(map, prefix + "CheckpointIntervalSecond", this.CheckpointIntervalSecond);
 
     }
 }

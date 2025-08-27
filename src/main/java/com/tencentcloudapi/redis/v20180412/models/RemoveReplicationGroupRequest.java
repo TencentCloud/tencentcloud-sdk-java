@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RemoveReplicationGroupRequest extends AbstractModel {
 
     /**
-    * 复制组ID
+    * 复制组ID。请登录 [Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication) 页面获取复制组 ID。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get 复制组ID 
-     * @return GroupId 复制组ID
+     * Get 复制组ID。请登录 [Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication) 页面获取复制组 ID。 
+     * @return GroupId 复制组ID。请登录 [Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication) 页面获取复制组 ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 复制组ID
-     * @param GroupId 复制组ID
+     * Set 复制组ID。请登录 [Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication) 页面获取复制组 ID。
+     * @param GroupId 复制组ID。请登录 [Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication) 页面获取复制组 ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

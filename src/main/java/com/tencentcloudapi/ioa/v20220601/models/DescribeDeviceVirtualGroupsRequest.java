@@ -38,7 +38,7 @@ public class DescribeDeviceVirtualGroupsRequest extends AbstractModel {
     private Condition Condition;
 
     /**
-    * 必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+    * 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
     */
     @SerializedName("OsType")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeDeviceVirtualGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0） 
-     * @return OsType 必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+     * Get 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0） 
+     * @return OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
-     * @param OsType 必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+     * Set 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+     * @param OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;
