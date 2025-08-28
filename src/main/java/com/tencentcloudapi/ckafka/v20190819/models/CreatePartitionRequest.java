@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreatePartitionRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id，可通过DescribeInstances接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名称
+    * 主题名称，可通过DescribeTopic接口获取。
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 主题分区个数
+    * 主题分区个数，传入参数为修改后的分区数，而不是增加的分区数，因此传入参数需要大于当前主题分区个数。
     */
     @SerializedName("PartitionNum")
     @Expose
     private Long PartitionNum;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id，可通过DescribeInstances接口获取。 
+     * @return InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名称 
-     * @return TopicName 主题名称
+     * Get 主题名称，可通过DescribeTopic接口获取。 
+     * @return TopicName 主题名称，可通过DescribeTopic接口获取。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称
-     * @param TopicName 主题名称
+     * Set 主题名称，可通过DescribeTopic接口获取。
+     * @param TopicName 主题名称，可通过DescribeTopic接口获取。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 主题分区个数 
-     * @return PartitionNum 主题分区个数
+     * Get 主题分区个数，传入参数为修改后的分区数，而不是增加的分区数，因此传入参数需要大于当前主题分区个数。 
+     * @return PartitionNum 主题分区个数，传入参数为修改后的分区数，而不是增加的分区数，因此传入参数需要大于当前主题分区个数。
      */
     public Long getPartitionNum() {
         return this.PartitionNum;
     }
 
     /**
-     * Set 主题分区个数
-     * @param PartitionNum 主题分区个数
+     * Set 主题分区个数，传入参数为修改后的分区数，而不是增加的分区数，因此传入参数需要大于当前主题分区个数。
+     * @param PartitionNum 主题分区个数，传入参数为修改后的分区数，而不是增加的分区数，因此传入参数需要大于当前主题分区个数。
      */
     public void setPartitionNum(Long PartitionNum) {
         this.PartitionNum = PartitionNum;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeACLRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id，可通过DescribeInstances接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeACLRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 个数限制
+    * 个数限制，默认值为50，最大值为50。
     */
     @SerializedName("Limit")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeACLRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id，可通过DescribeInstances接口获取。 
+     * @return InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -130,16 +130,16 @@ public class DescribeACLRequest extends AbstractModel {
     }
 
     /**
-     * Get 个数限制 
-     * @return Limit 个数限制
+     * Get 个数限制，默认值为50，最大值为50。 
+     * @return Limit 个数限制，默认值为50，最大值为50。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 个数限制
-     * @param Limit 个数限制
+     * Set 个数限制，默认值为50，最大值为50。
+     * @param Limit 个数限制，默认值为50，最大值为50。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

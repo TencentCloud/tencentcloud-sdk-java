@@ -53,7 +53,7 @@ public class CreateDeviceIdentityRequest extends AbstractModel {
     private String PrimaryKey;
 
     /**
-    * 次要签名key，不传则油系统自动生成，需要base64编码。
+    * 次要签名key，不传则由系统自动生成，需要base64编码。
     */
     @SerializedName("SecondaryKey")
     @Expose
@@ -135,16 +135,16 @@ public class CreateDeviceIdentityRequest extends AbstractModel {
     }
 
     /**
-     * Get 次要签名key，不传则油系统自动生成，需要base64编码。 
-     * @return SecondaryKey 次要签名key，不传则油系统自动生成，需要base64编码。
+     * Get 次要签名key，不传则由系统自动生成，需要base64编码。 
+     * @return SecondaryKey 次要签名key，不传则由系统自动生成，需要base64编码。
      */
     public String getSecondaryKey() {
         return this.SecondaryKey;
     }
 
     /**
-     * Set 次要签名key，不传则油系统自动生成，需要base64编码。
-     * @param SecondaryKey 次要签名key，不传则油系统自动生成，需要base64编码。
+     * Set 次要签名key，不传则由系统自动生成，需要base64编码。
+     * @param SecondaryKey 次要签名key，不传则由系统自动生成，需要base64编码。
      */
     public void setSecondaryKey(String SecondaryKey) {
         this.SecondaryKey = SecondaryKey;

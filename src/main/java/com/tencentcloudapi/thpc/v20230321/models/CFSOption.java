@@ -38,10 +38,10 @@ public class CFSOption extends AbstractModel {
     private String RemotePath;
 
     /**
-    * 文件系统协议类型，默认值NFS 3.0。
-<li>NFS 3.0。
-<li>NFS 4.0。
-<li>TURBO。
+    * 文件系统协议类型。
+<li>NFS 3.0</li>
+<li>NFS 4.0</li>
+<li>TURBO</li>
     */
     @SerializedName("Protocol")
     @Expose
@@ -56,7 +56,6 @@ public class CFSOption extends AbstractModel {
 
     /**
     * 文件系统挂载挂载命令参数选项。
-
 - NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
 - NFS 4.0默认值：vers=4.0,noresvport
 - TURBO默认值：user_xattr
@@ -64,6 +63,13 @@ public class CFSOption extends AbstractModel {
     @SerializedName("MountOption")
     @Expose
     private String MountOption;
+
+    /**
+    * 文件系统ID    文件系统ID通过调用接口[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)获取。
+    */
+    @SerializedName("FileSystemId")
+    @Expose
+    private String FileSystemId;
 
     /**
      * Get 文件系统本地挂载路径。 
@@ -98,28 +104,28 @@ public class CFSOption extends AbstractModel {
     }
 
     /**
-     * Get 文件系统协议类型，默认值NFS 3.0。
-<li>NFS 3.0。
-<li>NFS 4.0。
-<li>TURBO。 
-     * @return Protocol 文件系统协议类型，默认值NFS 3.0。
-<li>NFS 3.0。
-<li>NFS 4.0。
-<li>TURBO。
+     * Get 文件系统协议类型。
+<li>NFS 3.0</li>
+<li>NFS 4.0</li>
+<li>TURBO</li> 
+     * @return Protocol 文件系统协议类型。
+<li>NFS 3.0</li>
+<li>NFS 4.0</li>
+<li>TURBO</li>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 文件系统协议类型，默认值NFS 3.0。
-<li>NFS 3.0。
-<li>NFS 4.0。
-<li>TURBO。
-     * @param Protocol 文件系统协议类型，默认值NFS 3.0。
-<li>NFS 3.0。
-<li>NFS 4.0。
-<li>TURBO。
+     * Set 文件系统协议类型。
+<li>NFS 3.0</li>
+<li>NFS 4.0</li>
+<li>TURBO</li>
+     * @param Protocol 文件系统协议类型。
+<li>NFS 3.0</li>
+<li>NFS 4.0</li>
+<li>TURBO</li>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -143,12 +149,10 @@ public class CFSOption extends AbstractModel {
 
     /**
      * Get 文件系统挂载挂载命令参数选项。
-
 - NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
 - NFS 4.0默认值：vers=4.0,noresvport
 - TURBO默认值：user_xattr 
      * @return MountOption 文件系统挂载挂载命令参数选项。
-
 - NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
 - NFS 4.0默认值：vers=4.0,noresvport
 - TURBO默认值：user_xattr
@@ -159,18 +163,32 @@ public class CFSOption extends AbstractModel {
 
     /**
      * Set 文件系统挂载挂载命令参数选项。
-
 - NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
 - NFS 4.0默认值：vers=4.0,noresvport
 - TURBO默认值：user_xattr
      * @param MountOption 文件系统挂载挂载命令参数选项。
-
 - NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
 - NFS 4.0默认值：vers=4.0,noresvport
 - TURBO默认值：user_xattr
      */
     public void setMountOption(String MountOption) {
         this.MountOption = MountOption;
+    }
+
+    /**
+     * Get 文件系统ID    文件系统ID通过调用接口[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)获取。 
+     * @return FileSystemId 文件系统ID    文件系统ID通过调用接口[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)获取。
+     */
+    public String getFileSystemId() {
+        return this.FileSystemId;
+    }
+
+    /**
+     * Set 文件系统ID    文件系统ID通过调用接口[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)获取。
+     * @param FileSystemId 文件系统ID    文件系统ID通过调用接口[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)获取。
+     */
+    public void setFileSystemId(String FileSystemId) {
+        this.FileSystemId = FileSystemId;
     }
 
     public CFSOption() {
@@ -196,6 +214,9 @@ public class CFSOption extends AbstractModel {
         if (source.MountOption != null) {
             this.MountOption = new String(source.MountOption);
         }
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
     }
 
 
@@ -208,6 +229,7 @@ public class CFSOption extends AbstractModel {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamSimple(map, prefix + "MountOption", this.MountOption);
+        this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
 
     }
 }

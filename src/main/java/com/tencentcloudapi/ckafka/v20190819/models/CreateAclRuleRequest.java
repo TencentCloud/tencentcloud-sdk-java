@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAclRuleRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id，可通过DescribeInstances接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,14 +59,14 @@ public class CreateAclRuleRequest extends AbstractModel {
     private AclRuleInfo [] RuleList;
 
     /**
-    * 表示前缀匹配的前缀的值
+    * 表示前缀匹配的前缀的值 (当PatternType取值为PREFIXED时，此参数必填)
     */
     @SerializedName("Pattern")
     @Expose
     private String Pattern;
 
     /**
-    * 预设ACL规则是否应用到新增的topic中
+    * 预设ACL规则是否应用到新增的topic中。默认为0，表示否。取值为1时表示是。
     */
     @SerializedName("IsApplied")
     @Expose
@@ -80,16 +80,16 @@ public class CreateAclRuleRequest extends AbstractModel {
     private String Comment;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id，可通过DescribeInstances接口获取。 
+     * @return InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -160,32 +160,32 @@ public class CreateAclRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 表示前缀匹配的前缀的值 
-     * @return Pattern 表示前缀匹配的前缀的值
+     * Get 表示前缀匹配的前缀的值 (当PatternType取值为PREFIXED时，此参数必填) 
+     * @return Pattern 表示前缀匹配的前缀的值 (当PatternType取值为PREFIXED时，此参数必填)
      */
     public String getPattern() {
         return this.Pattern;
     }
 
     /**
-     * Set 表示前缀匹配的前缀的值
-     * @param Pattern 表示前缀匹配的前缀的值
+     * Set 表示前缀匹配的前缀的值 (当PatternType取值为PREFIXED时，此参数必填)
+     * @param Pattern 表示前缀匹配的前缀的值 (当PatternType取值为PREFIXED时，此参数必填)
      */
     public void setPattern(String Pattern) {
         this.Pattern = Pattern;
     }
 
     /**
-     * Get 预设ACL规则是否应用到新增的topic中 
-     * @return IsApplied 预设ACL规则是否应用到新增的topic中
+     * Get 预设ACL规则是否应用到新增的topic中。默认为0，表示否。取值为1时表示是。 
+     * @return IsApplied 预设ACL规则是否应用到新增的topic中。默认为0，表示否。取值为1时表示是。
      */
     public Long getIsApplied() {
         return this.IsApplied;
     }
 
     /**
-     * Set 预设ACL规则是否应用到新增的topic中
-     * @param IsApplied 预设ACL规则是否应用到新增的topic中
+     * Set 预设ACL规则是否应用到新增的topic中。默认为0，表示否。取值为1时表示是。
+     * @param IsApplied 预设ACL规则是否应用到新增的topic中。默认为0，表示否。取值为1时表示是。
      */
     public void setIsApplied(Long IsApplied) {
         this.IsApplied = IsApplied;

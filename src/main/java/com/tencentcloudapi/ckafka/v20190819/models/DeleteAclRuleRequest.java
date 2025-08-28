@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteAclRuleRequest extends AbstractModel {
 
     /**
-    * 实例id信息
+    * 实例id信息，可通过DescribeInstances接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * acl规则名称
+    * acl规则名称，可通过DescribeAclRule接口获取。
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-     * Get 实例id信息 
-     * @return InstanceId 实例id信息
+     * Get 实例id信息，可通过DescribeInstances接口获取。 
+     * @return InstanceId 实例id信息，可通过DescribeInstances接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id信息
-     * @param InstanceId 实例id信息
+     * Set 实例id信息，可通过DescribeInstances接口获取。
+     * @param InstanceId 实例id信息，可通过DescribeInstances接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get acl规则名称 
-     * @return RuleName acl规则名称
+     * Get acl规则名称，可通过DescribeAclRule接口获取。 
+     * @return RuleName acl规则名称，可通过DescribeAclRule接口获取。
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set acl规则名称
-     * @param RuleName acl规则名称
+     * Set acl规则名称，可通过DescribeAclRule接口获取。
+     * @param RuleName acl规则名称，可通过DescribeAclRule接口获取。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

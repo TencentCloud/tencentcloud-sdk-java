@@ -45,6 +45,13 @@ public class AndroidInstanceUploadFile extends AbstractModel {
     private String DestinationDirectory;
 
     /**
+    * 目标文件名
+    */
+    @SerializedName("DestinationFileName")
+    @Expose
+    private String DestinationFileName;
+
+    /**
      * Get 安卓实例 ID 
      * @return AndroidInstanceId 安卓实例 ID
      */
@@ -92,6 +99,22 @@ public class AndroidInstanceUploadFile extends AbstractModel {
         this.DestinationDirectory = DestinationDirectory;
     }
 
+    /**
+     * Get 目标文件名 
+     * @return DestinationFileName 目标文件名
+     */
+    public String getDestinationFileName() {
+        return this.DestinationFileName;
+    }
+
+    /**
+     * Set 目标文件名
+     * @param DestinationFileName 目标文件名
+     */
+    public void setDestinationFileName(String DestinationFileName) {
+        this.DestinationFileName = DestinationFileName;
+    }
+
     public AndroidInstanceUploadFile() {
     }
 
@@ -109,6 +132,9 @@ public class AndroidInstanceUploadFile extends AbstractModel {
         if (source.DestinationDirectory != null) {
             this.DestinationDirectory = new String(source.DestinationDirectory);
         }
+        if (source.DestinationFileName != null) {
+            this.DestinationFileName = new String(source.DestinationFileName);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class AndroidInstanceUploadFile extends AbstractModel {
         this.setParamSimple(map, prefix + "AndroidInstanceId", this.AndroidInstanceId);
         this.setParamSimple(map, prefix + "FileURL", this.FileURL);
         this.setParamSimple(map, prefix + "DestinationDirectory", this.DestinationDirectory);
+        this.setParamSimple(map, prefix + "DestinationFileName", this.DestinationFileName);
 
     }
 }

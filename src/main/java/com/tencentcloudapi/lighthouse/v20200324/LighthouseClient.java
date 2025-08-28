@@ -243,6 +243,18 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateMcpServer）用于创建MCP Server。
+- 本接口为异步接口，请求发送成功后会返回一个 McpServerId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeMcpServers 接口查询。
+     * @param req CreateMcpServerRequest
+     * @return CreateMcpServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMcpServerResponse CreateMcpServer(CreateMcpServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMcpServer", CreateMcpServerResponse.class);
+    }
+
+    /**
      *本接口 (DeleteBlueprints) 用于删除镜像。可删除的镜像应满足如下条件：
 1、删除镜像接口需要镜像状态为NORMAL（正常）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败），其他状态下的镜像不支持删除操作。镜像状态，可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintState获取。
 2、仅支持删除自定义镜像。
@@ -714,6 +726,17 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口（DescribeMcpServers）用于查询MCP Server列表。
+     * @param req DescribeMcpServersRequest
+     * @return DescribeMcpServersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMcpServersResponse DescribeMcpServers(DescribeMcpServersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMcpServers", DescribeMcpServersResponse.class);
+    }
+
+    /**
      *本接口（DescribeModifyInstanceBundles）用于查询实例可变更套餐列表。
      * @param req DescribeModifyInstanceBundlesRequest
      * @return DescribeModifyInstanceBundlesResponse
@@ -1120,6 +1143,18 @@ CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
     }
 
     /**
+     *本接口（ModifyMcpServer）用于修改实例的MCP Server信息。
+- 本接口为异步接口，API返回时修改操作并未立即完成。MCP Server的修改结果可以通过调用 DescribeMcpServers 接口查询。
+     * @param req ModifyMcpServerRequest
+     * @return ModifyMcpServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMcpServerResponse ModifyMcpServer(ModifyMcpServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMcpServer", ModifyMcpServerResponse.class);
+    }
+
+    /**
      *本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
 <li>“快照名称”仅为方便用户自己管理之用。</li>
      * @param req ModifySnapshotAttributeRequest
@@ -1156,6 +1191,19 @@ CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
     public RemoveDockerContainersResponse RemoveDockerContainers(RemoveDockerContainersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RemoveDockerContainers", RemoveDockerContainersResponse.class);
+    }
+
+    /**
+     *本接口（RemoveMcpServers）用于删除MCP Server。
+- 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+- 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果，如无法查询到，代表删除成功。
+     * @param req RemoveMcpServersRequest
+     * @return RemoveMcpServersResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveMcpServersResponse RemoveMcpServers(RemoveMcpServersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveMcpServers", RemoveMcpServersResponse.class);
     }
 
     /**
@@ -1299,6 +1347,19 @@ CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
     }
 
     /**
+     *本接口（RestartMcpServers）用于重启实例中的MCP Server。
+- 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+- 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果。
+     * @param req RestartMcpServersRequest
+     * @return RestartMcpServersResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartMcpServersResponse RestartMcpServers(RestartMcpServersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestartMcpServers", RestartMcpServersResponse.class);
+    }
+
+    /**
      *创建并运行多个Docker容器，之后可以通过返回的ActivityIds调用<a href="https://cloud.tencent.com/document/product/1207/95476" target="_blank">DescribeDockerActivities</a>接口查询创建情况。
      * @param req RunDockerContainersRequest
      * @return RunDockerContainersResponse
@@ -1350,6 +1411,19 @@ CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
     }
 
     /**
+     *本接口（StartMcpServers）用于开启实例中的MCP Server。
+- 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+- 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果。
+     * @param req StartMcpServersRequest
+     * @return StartMcpServersResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartMcpServersResponse StartMcpServers(StartMcpServersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartMcpServers", StartMcpServersResponse.class);
+    }
+
+    /**
      *停止实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询停止情况。
      * @param req StopDockerContainersRequest
      * @return StopDockerContainersResponse
@@ -1373,6 +1447,19 @@ CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
     public StopInstancesResponse StopInstances(StopInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopInstances", StopInstancesResponse.class);
+    }
+
+    /**
+     *本接口（StopMcpServers）用于关闭实例中的MCP Server。
+- 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+- 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果。
+     * @param req StopMcpServersRequest
+     * @return StopMcpServersResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopMcpServersResponse StopMcpServers(StopMcpServersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopMcpServers", StopMcpServersResponse.class);
     }
 
     /**

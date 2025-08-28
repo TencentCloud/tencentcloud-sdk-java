@@ -31,7 +31,7 @@ public class TopicPartitionDO extends AbstractModel {
     private Long Partition;
 
     /**
-    * Leader 运行状态
+    * Leader 运行状态，0表示正常运行
     */
     @SerializedName("LeaderStatus")
     @Expose
@@ -68,16 +68,16 @@ public class TopicPartitionDO extends AbstractModel {
     }
 
     /**
-     * Get Leader 运行状态 
-     * @return LeaderStatus Leader 运行状态
+     * Get Leader 运行状态，0表示正常运行 
+     * @return LeaderStatus Leader 运行状态，0表示正常运行
      */
     public Long getLeaderStatus() {
         return this.LeaderStatus;
     }
 
     /**
-     * Set Leader 运行状态
-     * @param LeaderStatus Leader 运行状态
+     * Set Leader 运行状态，0表示正常运行
+     * @param LeaderStatus Leader 运行状态，0表示正常运行
      */
     public void setLeaderStatus(Long LeaderStatus) {
         this.LeaderStatus = LeaderStatus;

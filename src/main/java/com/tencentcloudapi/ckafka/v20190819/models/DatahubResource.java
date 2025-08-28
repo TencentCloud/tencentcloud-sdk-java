@@ -24,7 +24,36 @@ import java.util.HashMap;
 public class DatahubResource extends AbstractModel {
 
     /**
-    * 资源类型
+    * 资源类型  type类型如下: 
+KAFKA,
+EB_ES,
+EB_COS,
+EB_CLS,
+EB_,
+MONGODB,
+HTTP,
+TDW,
+ES,
+CLICKHOUSE,
+DTS,
+CLS,
+COS,
+TOPIC,
+MYSQL,
+MQTT,
+MYSQL_DATA,
+DORIS,
+POSTGRESQL,
+TDSQL_C_POSTGRESQL,
+TDSQL_POSTGRESQL,
+WAREHOUSE_POSTGRESQL,
+TDSQL_C_MYSQL,
+MARIADB,
+SQLSERVER,
+CTSDB,
+SCF
+
+
     */
     @SerializedName("Type")
     @Expose
@@ -167,16 +196,132 @@ public class DatahubResource extends AbstractModel {
     private MqttParam MqttParam;
 
     /**
-     * Get 资源类型 
-     * @return Type 资源类型
+     * Get 资源类型  type类型如下: 
+KAFKA,
+EB_ES,
+EB_COS,
+EB_CLS,
+EB_,
+MONGODB,
+HTTP,
+TDW,
+ES,
+CLICKHOUSE,
+DTS,
+CLS,
+COS,
+TOPIC,
+MYSQL,
+MQTT,
+MYSQL_DATA,
+DORIS,
+POSTGRESQL,
+TDSQL_C_POSTGRESQL,
+TDSQL_POSTGRESQL,
+WAREHOUSE_POSTGRESQL,
+TDSQL_C_MYSQL,
+MARIADB,
+SQLSERVER,
+CTSDB,
+SCF
+
+ 
+     * @return Type 资源类型  type类型如下: 
+KAFKA,
+EB_ES,
+EB_COS,
+EB_CLS,
+EB_,
+MONGODB,
+HTTP,
+TDW,
+ES,
+CLICKHOUSE,
+DTS,
+CLS,
+COS,
+TOPIC,
+MYSQL,
+MQTT,
+MYSQL_DATA,
+DORIS,
+POSTGRESQL,
+TDSQL_C_POSTGRESQL,
+TDSQL_POSTGRESQL,
+WAREHOUSE_POSTGRESQL,
+TDSQL_C_MYSQL,
+MARIADB,
+SQLSERVER,
+CTSDB,
+SCF
+
+
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 资源类型
-     * @param Type 资源类型
+     * Set 资源类型  type类型如下: 
+KAFKA,
+EB_ES,
+EB_COS,
+EB_CLS,
+EB_,
+MONGODB,
+HTTP,
+TDW,
+ES,
+CLICKHOUSE,
+DTS,
+CLS,
+COS,
+TOPIC,
+MYSQL,
+MQTT,
+MYSQL_DATA,
+DORIS,
+POSTGRESQL,
+TDSQL_C_POSTGRESQL,
+TDSQL_POSTGRESQL,
+WAREHOUSE_POSTGRESQL,
+TDSQL_C_MYSQL,
+MARIADB,
+SQLSERVER,
+CTSDB,
+SCF
+
+
+     * @param Type 资源类型  type类型如下: 
+KAFKA,
+EB_ES,
+EB_COS,
+EB_CLS,
+EB_,
+MONGODB,
+HTTP,
+TDW,
+ES,
+CLICKHOUSE,
+DTS,
+CLS,
+COS,
+TOPIC,
+MYSQL,
+MQTT,
+MYSQL_DATA,
+DORIS,
+POSTGRESQL,
+TDSQL_C_POSTGRESQL,
+TDSQL_POSTGRESQL,
+WAREHOUSE_POSTGRESQL,
+TDSQL_C_MYSQL,
+MARIADB,
+SQLSERVER,
+CTSDB,
+SCF
+
+
      */
     public void setType(String Type) {
         this.Type = Type;

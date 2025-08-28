@@ -53,6 +53,7 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
 
     /**
     * 实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
+
     */
     @SerializedName("InquiryDiskParam")
     @Expose
@@ -74,6 +75,9 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
 
     /**
     * 购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
+分区上限 最大值: 40000,步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+
     */
     @SerializedName("Partition")
     @Expose
@@ -101,7 +105,7 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
     private String BillType;
 
     /**
-    * 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填)
+    * 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填),取值为3的倍数
     */
     @SerializedName("PublicNetworkParam")
     @Expose
@@ -179,8 +183,10 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填) 
+     * Get 实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
+ 
      * @return InquiryDiskParam 实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
+
      */
     public InquiryDiskParam getInquiryDiskParam() {
         return this.InquiryDiskParam;
@@ -188,7 +194,9 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
 
     /**
      * Set 实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
+
      * @param InquiryDiskParam 实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
+
      */
     public void setInquiryDiskParam(InquiryDiskParam InquiryDiskParam) {
         this.InquiryDiskParam = InquiryDiskParam;
@@ -227,8 +235,14 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get 购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填) 
+     * Get 购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
+分区上限 最大值: 40000,步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+ 
      * @return Partition 购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
+分区上限 最大值: 40000,步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+
      */
     public Long getPartition() {
         return this.Partition;
@@ -236,7 +250,13 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
 
     /**
      * Set 购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
+分区上限 最大值: 40000,步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+
      * @param Partition 购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
+分区上限 最大值: 40000,步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
@@ -291,16 +311,16 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填) 
-     * @return PublicNetworkParam 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填)
+     * Get 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填),取值为3的倍数 
+     * @return PublicNetworkParam 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填),取值为3的倍数
      */
     public InquiryPublicNetworkParam getPublicNetworkParam() {
         return this.PublicNetworkParam;
     }
 
     /**
-     * Set 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填)
-     * @param PublicNetworkParam 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填)
+     * Set 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填),取值为3的倍数
+     * @param PublicNetworkParam 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填),取值为3的倍数
      */
     public void setPublicNetworkParam(InquiryPublicNetworkParam PublicNetworkParam) {
         this.PublicNetworkParam = PublicNetworkParam;

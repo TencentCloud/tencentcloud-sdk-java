@@ -31,7 +31,7 @@ public class CvmAndIpInfo extends AbstractModel {
     private String CkafkaInstanceId;
 
     /**
-    * CVM实例ID
+    * CVM实例ID(ins-test )或POD IP(10.0.0.30)  
     */
     @SerializedName("InstanceId")
     @Expose
@@ -61,16 +61,16 @@ public class CvmAndIpInfo extends AbstractModel {
     }
 
     /**
-     * Get CVM实例ID 
-     * @return InstanceId CVM实例ID
+     * Get CVM实例ID(ins-test )或POD IP(10.0.0.30)   
+     * @return InstanceId CVM实例ID(ins-test )或POD IP(10.0.0.30)  
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set CVM实例ID
-     * @param InstanceId CVM实例ID
+     * Set CVM实例ID(ins-test )或POD IP(10.0.0.30)  
+     * @param InstanceId CVM实例ID(ins-test )或POD IP(10.0.0.30)  
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

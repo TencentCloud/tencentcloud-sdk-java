@@ -52,14 +52,14 @@ public class TopicMessageHeapRanking extends AbstractModel {
     private Long ReplicaNum;
 
     /**
-    * Topic 流量
+    * Topic 流量，单位为MB。
     */
     @SerializedName("TopicTraffic")
     @Expose
     private String TopicTraffic;
 
     /**
-    * topic消息堆积/占用磁盘
+    * topic消息堆积/占用磁盘，单位为Bytes。
     */
     @SerializedName("MessageHeap")
     @Expose
@@ -130,32 +130,32 @@ public class TopicMessageHeapRanking extends AbstractModel {
     }
 
     /**
-     * Get Topic 流量 
-     * @return TopicTraffic Topic 流量
+     * Get Topic 流量，单位为MB。 
+     * @return TopicTraffic Topic 流量，单位为MB。
      */
     public String getTopicTraffic() {
         return this.TopicTraffic;
     }
 
     /**
-     * Set Topic 流量
-     * @param TopicTraffic Topic 流量
+     * Set Topic 流量，单位为MB。
+     * @param TopicTraffic Topic 流量，单位为MB。
      */
     public void setTopicTraffic(String TopicTraffic) {
         this.TopicTraffic = TopicTraffic;
     }
 
     /**
-     * Get topic消息堆积/占用磁盘 
-     * @return MessageHeap topic消息堆积/占用磁盘
+     * Get topic消息堆积/占用磁盘，单位为Bytes。 
+     * @return MessageHeap topic消息堆积/占用磁盘，单位为Bytes。
      */
     public Long getMessageHeap() {
         return this.MessageHeap;
     }
 
     /**
-     * Set topic消息堆积/占用磁盘
-     * @param MessageHeap topic消息堆积/占用磁盘
+     * Set topic消息堆积/占用磁盘，单位为Bytes。
+     * @param MessageHeap topic消息堆积/占用磁盘，单位为Bytes。
      */
     public void setMessageHeap(Long MessageHeap) {
         this.MessageHeap = MessageHeap;

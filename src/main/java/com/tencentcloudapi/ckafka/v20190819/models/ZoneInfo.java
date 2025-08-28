@@ -59,7 +59,7 @@ public class ZoneInfo extends AbstractModel {
     private String ZoneName;
 
     /**
-    * 可用区状态
+    * 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
     */
     @SerializedName("ZoneStatus")
     @Expose
@@ -174,16 +174,16 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Get 可用区状态 
-     * @return ZoneStatus 可用区状态
+     * Get 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准 
+     * @return ZoneStatus 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
      */
     public Long getZoneStatus() {
         return this.ZoneStatus;
     }
 
     /**
-     * Set 可用区状态
-     * @param ZoneStatus 可用区状态
+     * Set 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
+     * @param ZoneStatus 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
      */
     public void setZoneStatus(Long ZoneStatus) {
         this.ZoneStatus = ZoneStatus;

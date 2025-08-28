@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateTopicIpWhiteListRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id，可通过DescribeInstances接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名称
+    * 主题名称，可通过DescribeTopic接口获取
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * ip白名单列表
+    * ip白名单列表，最大值为512，即最大允许传入512个ip。
     */
     @SerializedName("IpWhiteList")
     @Expose
     private String [] IpWhiteList;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id，可通过DescribeInstances接口获取。 
+     * @return InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名称 
-     * @return TopicName 主题名称
+     * Get 主题名称，可通过DescribeTopic接口获取 
+     * @return TopicName 主题名称，可通过DescribeTopic接口获取
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称
-     * @param TopicName 主题名称
+     * Set 主题名称，可通过DescribeTopic接口获取
+     * @param TopicName 主题名称，可通过DescribeTopic接口获取
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get ip白名单列表 
-     * @return IpWhiteList ip白名单列表
+     * Get ip白名单列表，最大值为512，即最大允许传入512个ip。 
+     * @return IpWhiteList ip白名单列表，最大值为512，即最大允许传入512个ip。
      */
     public String [] getIpWhiteList() {
         return this.IpWhiteList;
     }
 
     /**
-     * Set ip白名单列表
-     * @param IpWhiteList ip白名单列表
+     * Set ip白名单列表，最大值为512，即最大允许传入512个ip。
+     * @param IpWhiteList ip白名单列表，最大值为512，即最大允许传入512个ip。
      */
     public void setIpWhiteList(String [] IpWhiteList) {
         this.IpWhiteList = IpWhiteList;

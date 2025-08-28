@@ -48,7 +48,7 @@ public class ClientAttester extends AbstractModel {
 
     /**
     * 认证方法。取值有：
-<li>TC-RCE: 使用全栈式风控引擎进行认证；</li>
+<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
 <li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
     */
     @SerializedName("AttesterSource")
@@ -139,10 +139,10 @@ public class ClientAttester extends AbstractModel {
 
     /**
      * Get 认证方法。取值有：
-<li>TC-RCE: 使用全栈式风控引擎进行认证；</li>
+<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
 <li>TC-CAPTCHA: 使用天御验证码进行认证。</li> 
      * @return AttesterSource 认证方法。取值有：
-<li>TC-RCE: 使用全栈式风控引擎进行认证；</li>
+<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
 <li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
      */
     public String getAttesterSource() {
@@ -151,10 +151,10 @@ public class ClientAttester extends AbstractModel {
 
     /**
      * Set 认证方法。取值有：
-<li>TC-RCE: 使用全栈式风控引擎进行认证；</li>
+<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
 <li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
      * @param AttesterSource 认证方法。取值有：
-<li>TC-RCE: 使用全栈式风控引擎进行认证；</li>
+<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
 <li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
      */
     public void setAttesterSource(String AttesterSource) {

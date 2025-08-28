@@ -31,7 +31,7 @@ public class DescribeClustersRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-    * 排序字段，例如创建时间
+    * 排序字段，目前仅支持使用“创建时间”
     */
     @SerializedName("OrderBy")
     @Expose
@@ -89,16 +89,16 @@ public class DescribeClustersRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段，例如创建时间 
-     * @return OrderBy 排序字段，例如创建时间
+     * Get 排序字段，目前仅支持使用“创建时间” 
+     * @return OrderBy 排序字段，目前仅支持使用“创建时间”
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序字段，例如创建时间
-     * @param OrderBy 排序字段，例如创建时间
+     * Set 排序字段，目前仅支持使用“创建时间”
+     * @param OrderBy 排序字段，目前仅支持使用“创建时间”
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

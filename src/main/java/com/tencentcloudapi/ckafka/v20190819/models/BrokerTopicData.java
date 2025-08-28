@@ -38,7 +38,7 @@ public class BrokerTopicData extends AbstractModel {
     private String TopicId;
 
     /**
-    * 主题占用Broker 容量大小
+    * 主题占用Broker 容量大小，单位为Bytes。
     */
     @SerializedName("DataSize")
     @Expose
@@ -77,16 +77,16 @@ public class BrokerTopicData extends AbstractModel {
     }
 
     /**
-     * Get 主题占用Broker 容量大小 
-     * @return DataSize 主题占用Broker 容量大小
+     * Get 主题占用Broker 容量大小，单位为Bytes。 
+     * @return DataSize 主题占用Broker 容量大小，单位为Bytes。
      */
     public Long getDataSize() {
         return this.DataSize;
     }
 
     /**
-     * Set 主题占用Broker 容量大小
-     * @param DataSize 主题占用Broker 容量大小
+     * Set 主题占用Broker 容量大小，单位为Bytes。
+     * @param DataSize 主题占用Broker 容量大小，单位为Bytes。
      */
     public void setDataSize(Long DataSize) {
         this.DataSize = DataSize;

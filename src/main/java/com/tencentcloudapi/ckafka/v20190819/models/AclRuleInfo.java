@@ -31,21 +31,21 @@ public class AclRuleInfo extends AbstractModel {
     private String Operation;
 
     /**
-    * 权限类型，(Deny，Allow)
+    * 权限类型，Deny：拒绝，Allow：允许。
     */
     @SerializedName("PermissionType")
     @Expose
     private String PermissionType;
 
     /**
-    * 默认为\*，表示任何host都可以访问，当前ckafka不支持host为\* 和 ip网段
+    * 表示任何host都可以访问
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
+    * 用户，User:*表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
     */
     @SerializedName("Principal")
     @Expose
@@ -68,48 +68,48 @@ public class AclRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 权限类型，(Deny，Allow) 
-     * @return PermissionType 权限类型，(Deny，Allow)
+     * Get 权限类型，Deny：拒绝，Allow：允许。 
+     * @return PermissionType 权限类型，Deny：拒绝，Allow：允许。
      */
     public String getPermissionType() {
         return this.PermissionType;
     }
 
     /**
-     * Set 权限类型，(Deny，Allow)
-     * @param PermissionType 权限类型，(Deny，Allow)
+     * Set 权限类型，Deny：拒绝，Allow：允许。
+     * @param PermissionType 权限类型，Deny：拒绝，Allow：允许。
      */
     public void setPermissionType(String PermissionType) {
         this.PermissionType = PermissionType;
     }
 
     /**
-     * Get 默认为\*，表示任何host都可以访问，当前ckafka不支持host为\* 和 ip网段 
-     * @return Host 默认为\*，表示任何host都可以访问，当前ckafka不支持host为\* 和 ip网段
+     * Get 表示任何host都可以访问 
+     * @return Host 表示任何host都可以访问
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 默认为\*，表示任何host都可以访问，当前ckafka不支持host为\* 和 ip网段
-     * @param Host 默认为\*，表示任何host都可以访问，当前ckafka不支持host为\* 和 ip网段
+     * Set 表示任何host都可以访问
+     * @param Host 表示任何host都可以访问
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。 
-     * @return Principal 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
+     * Get 用户，User:*表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。 
+     * @return Principal 用户，User:*表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
      */
     public String getPrincipal() {
         return this.Principal;
     }
 
     /**
-     * Set 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
-     * @param Principal 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
+     * Set 用户，User:*表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
+     * @param Principal 用户，User:*表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
      */
     public void setPrincipal(String Principal) {
         this.Principal = Principal;

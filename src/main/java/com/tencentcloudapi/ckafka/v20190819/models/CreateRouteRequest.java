@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class CreateRouteRequest extends AbstractModel {
 
     /**
-    * 实例唯一id
+    * ckafka集群实例id,可通过DescribeInstances接口获取
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 路由网络类型(3:vpc路由;7:内部支撑路由)
+    * 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
     */
     @SerializedName("VipType")
     @Expose
     private Long VipType;
 
     /**
-    * vpc网络Id
+    * vpc网络Id,当vipType为3时必填
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * vpc子网id
+    * vpc子网id,当vipType为3时必填
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl
+    * 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl,默认为0
     */
     @SerializedName("AccessType")
     @Expose
     private Long AccessType;
 
     /**
-    * 是否需要权限管理
+    * 是否需要权限管理,该字段已废弃
     */
     @SerializedName("AuthFlag")
     @Expose
@@ -73,7 +73,7 @@ public class CreateRouteRequest extends AbstractModel {
     private Long CallerAppid;
 
     /**
-    * 公网带宽
+    * 公网带宽,公网路由必传,且必选时3的倍数,无默认值
     */
     @SerializedName("PublicNetwork")
     @Expose
@@ -87,96 +87,96 @@ public class CreateRouteRequest extends AbstractModel {
     private String Ip;
 
     /**
-     * Get 实例唯一id 
-     * @return InstanceId 实例唯一id
+     * Get ckafka集群实例id,可通过DescribeInstances接口获取 
+     * @return InstanceId ckafka集群实例id,可通过DescribeInstances接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例唯一id
-     * @param InstanceId 实例唯一id
+     * Set ckafka集群实例id,可通过DescribeInstances接口获取
+     * @param InstanceId ckafka集群实例id,可通过DescribeInstances接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 路由网络类型(3:vpc路由;7:内部支撑路由) 
-     * @return VipType 路由网络类型(3:vpc路由;7:内部支撑路由)
+     * Get 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由) 
+     * @return VipType 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
      */
     public Long getVipType() {
         return this.VipType;
     }
 
     /**
-     * Set 路由网络类型(3:vpc路由;7:内部支撑路由)
-     * @param VipType 路由网络类型(3:vpc路由;7:内部支撑路由)
+     * Set 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
+     * @param VipType 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
      */
     public void setVipType(Long VipType) {
         this.VipType = VipType;
     }
 
     /**
-     * Get vpc网络Id 
-     * @return VpcId vpc网络Id
+     * Get vpc网络Id,当vipType为3时必填 
+     * @return VpcId vpc网络Id,当vipType为3时必填
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc网络Id
-     * @param VpcId vpc网络Id
+     * Set vpc网络Id,当vipType为3时必填
+     * @param VpcId vpc网络Id,当vipType为3时必填
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get vpc子网id 
-     * @return SubnetId vpc子网id
+     * Get vpc子网id,当vipType为3时必填 
+     * @return SubnetId vpc子网id,当vipType为3时必填
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set vpc子网id
-     * @param SubnetId vpc子网id
+     * Set vpc子网id,当vipType为3时必填
+     * @param SubnetId vpc子网id,当vipType为3时必填
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl 
-     * @return AccessType 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl
+     * Get 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl,默认为0 
+     * @return AccessType 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl,默认为0
      */
     public Long getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl
-     * @param AccessType 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl
+     * Set 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl,默认为0
+     * @param AccessType 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl,默认为0
      */
     public void setAccessType(Long AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get 是否需要权限管理 
-     * @return AuthFlag 是否需要权限管理
+     * Get 是否需要权限管理,该字段已废弃 
+     * @return AuthFlag 是否需要权限管理,该字段已废弃
      */
     public Long getAuthFlag() {
         return this.AuthFlag;
     }
 
     /**
-     * Set 是否需要权限管理
-     * @param AuthFlag 是否需要权限管理
+     * Set 是否需要权限管理,该字段已废弃
+     * @param AuthFlag 是否需要权限管理,该字段已废弃
      */
     public void setAuthFlag(Long AuthFlag) {
         this.AuthFlag = AuthFlag;
@@ -199,16 +199,16 @@ public class CreateRouteRequest extends AbstractModel {
     }
 
     /**
-     * Get 公网带宽 
-     * @return PublicNetwork 公网带宽
+     * Get 公网带宽,公网路由必传,且必选时3的倍数,无默认值 
+     * @return PublicNetwork 公网带宽,公网路由必传,且必选时3的倍数,无默认值
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set 公网带宽
-     * @param PublicNetwork 公网带宽
+     * Set 公网带宽,公网路由必传,且必选时3的倍数,无默认值
+     * @param PublicNetwork 公网带宽,公网路由必传,且必选时3的倍数,无默认值
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;

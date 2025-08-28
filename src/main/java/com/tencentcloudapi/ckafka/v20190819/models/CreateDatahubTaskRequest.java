@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDatahubTaskRequest extends AbstractModel {
 
     /**
-    * 任务名称
+    * 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
     */
     @SerializedName("TaskName")
     @Expose
@@ -101,16 +101,16 @@ public class CreateDatahubTaskRequest extends AbstractModel {
     private String Description;
 
     /**
-     * Get 任务名称 
-     * @return TaskName 任务名称
+     * Get 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含) 
+     * @return TaskName 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名称
-     * @param TaskName 任务名称
+     * Set 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
+     * @param TaskName 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;

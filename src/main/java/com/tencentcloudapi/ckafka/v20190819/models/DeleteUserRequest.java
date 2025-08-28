@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteUserRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id，可通过DescribeInstances接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户名称
+    * 用户名称，可通过DescribeUser接口获取。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id，可通过DescribeInstances接口获取。 
+     * @return InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户名称 
-     * @return Name 用户名称
+     * Get 用户名称，可通过DescribeUser接口获取。 
+     * @return Name 用户名称，可通过DescribeUser接口获取。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 用户名称
-     * @param Name 用户名称
+     * Set 用户名称，可通过DescribeUser接口获取。
+     * @param Name 用户名称，可通过DescribeUser接口获取。
      */
     public void setName(String Name) {
         this.Name = Name;

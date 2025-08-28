@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteGroupRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id，可通过DescribeInstances接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 消费分组
+    * 消费组名称，可通过DescribeConsumerGroup接口获取。
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id，可通过DescribeInstances接口获取。 
+     * @return InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 消费分组 
-     * @return Group 消费分组
+     * Get 消费组名称，可通过DescribeConsumerGroup接口获取。 
+     * @return Group 消费组名称，可通过DescribeConsumerGroup接口获取。
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 消费分组
-     * @param Group 消费分组
+     * Set 消费组名称，可通过DescribeConsumerGroup接口获取。
+     * @param Group 消费组名称，可通过DescribeConsumerGroup接口获取。
      */
     public void setGroup(String Group) {
         this.Group = Group;

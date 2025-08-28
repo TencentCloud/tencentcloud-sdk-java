@@ -52,7 +52,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private String Type;
 
     /**
-    * 连接源的状态
+    * 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
     */
     @SerializedName("Status")
     @Expose
@@ -248,16 +248,16 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get 连接源的状态 
-     * @return Status 连接源的状态
+     * Get 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常) 
+     * @return Status 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 连接源的状态
-     * @param Status 连接源的状态
+     * Set 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
+     * @param Status 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DeleteRouteRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id,可通过DescribeInstances接口获取
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 路由id
+    * 路由id,可通过DescribeRoute接口获取
     */
     @SerializedName("RouteId")
     @Expose
@@ -45,39 +45,39 @@ public class DeleteRouteRequest extends AbstractModel {
     private Long CallerAppid;
 
     /**
-    * 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
+    * 设置定时删除路由时间,仅类型为公网路由支持定时删除,可选择未来的24小时的任意时间
     */
     @SerializedName("DeleteRouteTime")
     @Expose
     private String DeleteRouteTime;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id,可通过DescribeInstances接口获取 
+     * @return InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @param InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 路由id 
-     * @return RouteId 路由id
+     * Get 路由id,可通过DescribeRoute接口获取 
+     * @return RouteId 路由id,可通过DescribeRoute接口获取
      */
     public Long getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set 路由id
-     * @param RouteId 路由id
+     * Set 路由id,可通过DescribeRoute接口获取
+     * @param RouteId 路由id,可通过DescribeRoute接口获取
      */
     public void setRouteId(Long RouteId) {
         this.RouteId = RouteId;
@@ -100,16 +100,16 @@ public class DeleteRouteRequest extends AbstractModel {
     }
 
     /**
-     * Get 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!! 
-     * @return DeleteRouteTime 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
+     * Get 设置定时删除路由时间,仅类型为公网路由支持定时删除,可选择未来的24小时的任意时间 
+     * @return DeleteRouteTime 设置定时删除路由时间,仅类型为公网路由支持定时删除,可选择未来的24小时的任意时间
      */
     public String getDeleteRouteTime() {
         return this.DeleteRouteTime;
     }
 
     /**
-     * Set 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
-     * @param DeleteRouteTime 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
+     * Set 设置定时删除路由时间,仅类型为公网路由支持定时删除,可选择未来的24小时的任意时间
+     * @param DeleteRouteTime 设置定时删除路由时间,仅类型为公网路由支持定时删除,可选择未来的24小时的任意时间
      */
     public void setDeleteRouteTime(String DeleteRouteTime) {
         this.DeleteRouteTime = DeleteRouteTime;

@@ -303,7 +303,7 @@ public class ClusterV2 extends AbstractModel {
     private String KuberneteNativeType;
 
     /**
-    * native secret
+    * Kubernetes 密钥
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KuberneteNativeSecret")
@@ -1021,9 +1021,9 @@ public class ClusterV2 extends AbstractModel {
     }
 
     /**
-     * Get native secret
+     * Get Kubernetes 密钥
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KuberneteNativeSecret native secret
+     * @return KuberneteNativeSecret Kubernetes 密钥
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKuberneteNativeSecret() {
@@ -1031,9 +1031,9 @@ public class ClusterV2 extends AbstractModel {
     }
 
     /**
-     * Set native secret
+     * Set Kubernetes 密钥
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KuberneteNativeSecret native secret
+     * @param KuberneteNativeSecret Kubernetes 密钥
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKuberneteNativeSecret(String KuberneteNativeSecret) {

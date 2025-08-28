@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyRoutineMaintenanceTaskRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * ckafka集群实例id,可通过DescribeInstances接口获取
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 自动化运维类别
+    * 自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH
     */
     @SerializedName("MaintenanceType")
     @Expose
@@ -87,7 +87,7 @@ public class ModifyRoutineMaintenanceTaskRequest extends AbstractModel {
     private String ExtraConfig;
 
     /**
-    * 任务状态
+    * 任务状态,0 开启,1 关闭
     */
     @SerializedName("Status")
     @Expose
@@ -101,32 +101,32 @@ public class ModifyRoutineMaintenanceTaskRequest extends AbstractModel {
     private String Week;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get ckafka集群实例id,可通过DescribeInstances接口获取 
+     * @return InstanceId ckafka集群实例id,可通过DescribeInstances接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set ckafka集群实例id,可通过DescribeInstances接口获取
+     * @param InstanceId ckafka集群实例id,可通过DescribeInstances接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 自动化运维类别 
-     * @return MaintenanceType 自动化运维类别
+     * Get 自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH 
+     * @return MaintenanceType 自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH
      */
     public String getMaintenanceType() {
         return this.MaintenanceType;
     }
 
     /**
-     * Set 自动化运维类别
-     * @param MaintenanceType 自动化运维类别
+     * Set 自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH
+     * @param MaintenanceType 自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH
      */
     public void setMaintenanceType(String MaintenanceType) {
         this.MaintenanceType = MaintenanceType;
@@ -245,16 +245,16 @@ public class ModifyRoutineMaintenanceTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务状态 
-     * @return Status 任务状态
+     * Get 任务状态,0 开启,1 关闭 
+     * @return Status 任务状态,0 开启,1 关闭
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态
-     * @param Status 任务状态
+     * Set 任务状态,0 开启,1 关闭
+     * @param Status 任务状态,0 开启,1 关闭
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyInstanceAttributesRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id,可通过DescribeInstances接口获取
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
+    * 实例日志的最长保留时间，单位分钟，最大90天，最小为1min
     */
     @SerializedName("MsgRetentionTime")
     @Expose
@@ -87,7 +87,7 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     private Long MaxMessageByte;
 
     /**
-    * 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+    * 是否允许未同步的副本选为 leader: 1 开启  0 关闭
     */
     @SerializedName("UncleanLeaderElectionEnable")
     @Expose
@@ -101,32 +101,32 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     private Long DeleteProtectionEnable;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id,可通过DescribeInstances接口获取 
+     * @return InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @param InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略 
-     * @return MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
+     * Get 实例日志的最长保留时间，单位分钟，最大90天，最小为1min 
+     * @return MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大90天，最小为1min
      */
     public Long getMsgRetentionTime() {
         return this.MsgRetentionTime;
     }
 
     /**
-     * Set 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
-     * @param MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
+     * Set 实例日志的最长保留时间，单位分钟，最大90天，最小为1min
+     * @param MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大90天，最小为1min
      */
     public void setMsgRetentionTime(Long MsgRetentionTime) {
         this.MsgRetentionTime = MsgRetentionTime;
@@ -249,16 +249,16 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭 
-     * @return UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+     * Get 是否允许未同步的副本选为 leader: 1 开启  0 关闭 
+     * @return UncleanLeaderElectionEnable 是否允许未同步的副本选为 leader: 1 开启  0 关闭
      */
     public Long getUncleanLeaderElectionEnable() {
         return this.UncleanLeaderElectionEnable;
     }
 
     /**
-     * Set 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
-     * @param UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+     * Set 是否允许未同步的副本选为 leader: 1 开启  0 关闭
+     * @param UncleanLeaderElectionEnable 是否允许未同步的副本选为 leader: 1 开启  0 关闭
      */
     public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;

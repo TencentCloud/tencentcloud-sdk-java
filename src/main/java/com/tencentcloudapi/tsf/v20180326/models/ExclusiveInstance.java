@@ -31,7 +31,7 @@ public class ExclusiveInstance extends AbstractModel {
     private String CenterType;
 
     /**
-    * 实例id，通过北极星控制台获取
+    * 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,14 +52,14 @@ public class ExclusiveInstance extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 实例地域id，通过北极星控制台获取
+    * 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * 实例命名空间ID，通过北极星控制台获取
+    * 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
     */
     @SerializedName("InstanceNamespaceId")
     @Expose
@@ -82,16 +82,16 @@ public class ExclusiveInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例id，通过北极星控制台获取 
-     * @return InstanceId 实例id，通过北极星控制台获取
+     * Get 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取 
+     * @return InstanceId 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id，通过北极星控制台获取
-     * @param InstanceId 实例id，通过北极星控制台获取
+     * Set 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * @param InstanceId 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -130,32 +130,32 @@ public class ExclusiveInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例地域id，通过北极星控制台获取 
-     * @return RegionId 实例地域id，通过北极星控制台获取
+     * Get 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取 
+     * @return RegionId 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 实例地域id，通过北极星控制台获取
-     * @param RegionId 实例地域id，通过北极星控制台获取
+     * Set 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * @param RegionId 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 实例命名空间ID，通过北极星控制台获取 
-     * @return InstanceNamespaceId 实例命名空间ID，通过北极星控制台获取
+     * Get 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取 
+     * @return InstanceNamespaceId 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      */
     public String getInstanceNamespaceId() {
         return this.InstanceNamespaceId;
     }
 
     /**
-     * Set 实例命名空间ID，通过北极星控制台获取
-     * @param InstanceNamespaceId 实例命名空间ID，通过北极星控制台获取
+     * Set 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * @param InstanceNamespaceId 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      */
     public void setInstanceNamespaceId(String InstanceNamespaceId) {
         this.InstanceNamespaceId = InstanceNamespaceId;

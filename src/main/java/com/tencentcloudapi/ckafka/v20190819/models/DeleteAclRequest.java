@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteAclRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id，可通过DescribeInstances接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -66,23 +66,23 @@ public class DeleteAclRequest extends AbstractModel {
     private String Host;
 
     /**
-    * 用户列表，默认为*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
+    * 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
     */
     @SerializedName("Principal")
     @Expose
     private String Principal;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id，可通过DescribeInstances接口获取。 
+     * @return InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -169,16 +169,16 @@ public class DeleteAclRequest extends AbstractModel {
     }
 
     /**
-     * Get 用户列表，默认为*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户 
-     * @return Principal 用户列表，默认为*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
+     * Get 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户 
+     * @return Principal 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
      */
     public String getPrincipal() {
         return this.Principal;
     }
 
     /**
-     * Set 用户列表，默认为*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
-     * @param Principal 用户列表，默认为*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
+     * Set 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
+     * @param Principal 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户
      */
     public void setPrincipal(String Principal) {
         this.Principal = Principal;

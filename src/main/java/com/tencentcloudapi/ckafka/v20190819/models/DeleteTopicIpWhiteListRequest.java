@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DeleteTopicIpWhiteListRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id，可通过DescribeInstances接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名
+    * 主题名，可通过DescribeTopic接口获取。
     */
     @SerializedName("TopicName")
     @Expose
@@ -45,32 +45,32 @@ public class DeleteTopicIpWhiteListRequest extends AbstractModel {
     private String [] IpWhiteList;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id，可通过DescribeInstances接口获取。 
+     * @return InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名 
-     * @return TopicName 主题名
+     * Get 主题名，可通过DescribeTopic接口获取。 
+     * @return TopicName 主题名，可通过DescribeTopic接口获取。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名
-     * @param TopicName 主题名
+     * Set 主题名，可通过DescribeTopic接口获取。
+     * @param TopicName 主题名，可通过DescribeTopic接口获取。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

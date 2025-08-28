@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAclRuleRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id，可通过DescribeInstances接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,30 +38,30 @@ public class DescribeAclRuleRequest extends AbstractModel {
     private String RuleName;
 
     /**
-    * ACL规则匹配类型
+    * ACL规则匹配类型 （PREFIXED：前缀匹配，PRESET：预设策略）
     */
     @SerializedName("PatternType")
     @Expose
     private String PatternType;
 
     /**
-    * 是否读取简略的ACL规则
+    * 是否读取简略的ACL规则，默认值为false，表示不读取简略的ACL规则。
     */
     @SerializedName("IsSimplified")
     @Expose
     private Boolean IsSimplified;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id，可通过DescribeInstances接口获取。 
+     * @return InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -84,32 +84,32 @@ public class DescribeAclRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get ACL规则匹配类型 
-     * @return PatternType ACL规则匹配类型
+     * Get ACL规则匹配类型 （PREFIXED：前缀匹配，PRESET：预设策略） 
+     * @return PatternType ACL规则匹配类型 （PREFIXED：前缀匹配，PRESET：预设策略）
      */
     public String getPatternType() {
         return this.PatternType;
     }
 
     /**
-     * Set ACL规则匹配类型
-     * @param PatternType ACL规则匹配类型
+     * Set ACL规则匹配类型 （PREFIXED：前缀匹配，PRESET：预设策略）
+     * @param PatternType ACL规则匹配类型 （PREFIXED：前缀匹配，PRESET：预设策略）
      */
     public void setPatternType(String PatternType) {
         this.PatternType = PatternType;
     }
 
     /**
-     * Get 是否读取简略的ACL规则 
-     * @return IsSimplified 是否读取简略的ACL规则
+     * Get 是否读取简略的ACL规则，默认值为false，表示不读取简略的ACL规则。 
+     * @return IsSimplified 是否读取简略的ACL规则，默认值为false，表示不读取简略的ACL规则。
      */
     public Boolean getIsSimplified() {
         return this.IsSimplified;
     }
 
     /**
-     * Set 是否读取简略的ACL规则
-     * @param IsSimplified 是否读取简略的ACL规则
+     * Set 是否读取简略的ACL规则，默认值为false，表示不读取简略的ACL规则。
+     * @param IsSimplified 是否读取简略的ACL规则，默认值为false，表示不读取简略的ACL规则。
      */
     public void setIsSimplified(Boolean IsSimplified) {
         this.IsSimplified = IsSimplified;

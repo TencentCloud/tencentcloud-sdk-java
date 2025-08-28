@@ -87,21 +87,35 @@ public class GroupPod extends AbstractModel {
     private String Runtime;
 
     /**
-    * 实例启动时的时间戳
+    * 实例启动时的时间戳，单位秒
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+    * 服务实例状态，枚举值为：
+- `Starting`：启动中
+- `Running`：运行中
+- `Stopping`：停止中
+- `Stopped`: 已停止
+- `StopFailed`: 停止失败
+- `Abnormal`: 异常
+- `Unknown`: 未知
     */
     @SerializedName("ServiceInstanceStatus")
     @Expose
     private String ServiceInstanceStatus;
 
     /**
-    * 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+    * 机器实例可使用状态，枚举值为：
+- `Starting`：启动中
+- `Running`：运行中
+- `Stopping`：停止中
+- `Stopped`: 已停止
+- `StopFailed`: 停止失败
+- `Abnormal`: 异常
+- `Unknown`: 未知
     */
     @SerializedName("InstanceAvailableStatus")
     @Expose
@@ -273,48 +287,104 @@ public class GroupPod extends AbstractModel {
     }
 
     /**
-     * Get 实例启动时的时间戳 
-     * @return CreatedAt 实例启动时的时间戳
+     * Get 实例启动时的时间戳，单位秒 
+     * @return CreatedAt 实例启动时的时间戳，单位秒
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 实例启动时的时间戳
-     * @param CreatedAt 实例启动时的时间戳
+     * Set 实例启动时的时间戳，单位秒
+     * @param CreatedAt 实例启动时的时间戳，单位秒
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown 
-     * @return ServiceInstanceStatus 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+     * Get 服务实例状态，枚举值为：
+- `Starting`：启动中
+- `Running`：运行中
+- `Stopping`：停止中
+- `Stopped`: 已停止
+- `StopFailed`: 停止失败
+- `Abnormal`: 异常
+- `Unknown`: 未知 
+     * @return ServiceInstanceStatus 服务实例状态，枚举值为：
+- `Starting`：启动中
+- `Running`：运行中
+- `Stopping`：停止中
+- `Stopped`: 已停止
+- `StopFailed`: 停止失败
+- `Abnormal`: 异常
+- `Unknown`: 未知
      */
     public String getServiceInstanceStatus() {
         return this.ServiceInstanceStatus;
     }
 
     /**
-     * Set 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
-     * @param ServiceInstanceStatus 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+     * Set 服务实例状态，枚举值为：
+- `Starting`：启动中
+- `Running`：运行中
+- `Stopping`：停止中
+- `Stopped`: 已停止
+- `StopFailed`: 停止失败
+- `Abnormal`: 异常
+- `Unknown`: 未知
+     * @param ServiceInstanceStatus 服务实例状态，枚举值为：
+- `Starting`：启动中
+- `Running`：运行中
+- `Stopping`：停止中
+- `Stopped`: 已停止
+- `StopFailed`: 停止失败
+- `Abnormal`: 异常
+- `Unknown`: 未知
      */
     public void setServiceInstanceStatus(String ServiceInstanceStatus) {
         this.ServiceInstanceStatus = ServiceInstanceStatus;
     }
 
     /**
-     * Get 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown 
-     * @return InstanceAvailableStatus 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+     * Get 机器实例可使用状态，枚举值为：
+- `Starting`：启动中
+- `Running`：运行中
+- `Stopping`：停止中
+- `Stopped`: 已停止
+- `StopFailed`: 停止失败
+- `Abnormal`: 异常
+- `Unknown`: 未知 
+     * @return InstanceAvailableStatus 机器实例可使用状态，枚举值为：
+- `Starting`：启动中
+- `Running`：运行中
+- `Stopping`：停止中
+- `Stopped`: 已停止
+- `StopFailed`: 停止失败
+- `Abnormal`: 异常
+- `Unknown`: 未知
      */
     public String getInstanceAvailableStatus() {
         return this.InstanceAvailableStatus;
     }
 
     /**
-     * Set 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
-     * @param InstanceAvailableStatus 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+     * Set 机器实例可使用状态，枚举值为：
+- `Starting`：启动中
+- `Running`：运行中
+- `Stopping`：停止中
+- `Stopped`: 已停止
+- `StopFailed`: 停止失败
+- `Abnormal`: 异常
+- `Unknown`: 未知
+     * @param InstanceAvailableStatus 机器实例可使用状态，枚举值为：
+- `Starting`：启动中
+- `Running`：运行中
+- `Stopping`：停止中
+- `Stopped`: 已停止
+- `StopFailed`: 停止失败
+- `Abnormal`: 异常
+- `Unknown`: 未知
      */
     public void setInstanceAvailableStatus(String InstanceAvailableStatus) {
         this.InstanceAvailableStatus = InstanceAvailableStatus;

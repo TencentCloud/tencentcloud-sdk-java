@@ -31,14 +31,14 @@ public class ModifyInstanceAttributesConfig extends AbstractModel {
     private Boolean AutoCreateTopicEnable;
 
     /**
-    * 可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3
+    * 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
     */
     @SerializedName("DefaultNumPartitions")
     @Expose
     private Long DefaultNumPartitions;
 
     /**
-    * 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
+    * 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
     */
     @SerializedName("DefaultReplicationFactor")
     @Expose
@@ -61,32 +61,32 @@ public class ModifyInstanceAttributesConfig extends AbstractModel {
     }
 
     /**
-     * Get 可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3 
-     * @return DefaultNumPartitions 可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3
+     * Get 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3 
+     * @return DefaultNumPartitions 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
      */
     public Long getDefaultNumPartitions() {
         return this.DefaultNumPartitions;
     }
 
     /**
-     * Set 可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3
-     * @param DefaultNumPartitions 可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3
+     * Set 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
+     * @param DefaultNumPartitions 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
      */
     public void setDefaultNumPartitions(Long DefaultNumPartitions) {
         this.DefaultNumPartitions = DefaultNumPartitions;
     }
 
     /**
-     * Get 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2 
-     * @return DefaultReplicationFactor 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
+     * Get 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2 
+     * @return DefaultReplicationFactor 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
      */
     public Long getDefaultReplicationFactor() {
         return this.DefaultReplicationFactor;
     }
 
     /**
-     * Set 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
-     * @param DefaultReplicationFactor 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
+     * Set 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
+     * @param DefaultReplicationFactor 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
      */
     public void setDefaultReplicationFactor(Long DefaultReplicationFactor) {
         this.DefaultReplicationFactor = DefaultReplicationFactor;
