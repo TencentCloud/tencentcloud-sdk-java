@@ -66,6 +66,13 @@ public class QuestionSplitOCRRequest extends AbstractModel {
     private Boolean EnableOnlyDetectBorder;
 
     /**
+    * false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+    */
+    @SerializedName("UseNewModel")
+    @Expose
+    private Boolean UseNewModel;
+
+    /**
      * Get 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
      * @return ImageUrl 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：需介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
@@ -161,6 +168,22 @@ public class QuestionSplitOCRRequest extends AbstractModel {
         this.EnableOnlyDetectBorder = EnableOnlyDetectBorder;
     }
 
+    /**
+     * Get false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中 
+     * @return UseNewModel false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+     */
+    public Boolean getUseNewModel() {
+        return this.UseNewModel;
+    }
+
+    /**
+     * Set false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+     * @param UseNewModel false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+     */
+    public void setUseNewModel(Boolean UseNewModel) {
+        this.UseNewModel = UseNewModel;
+    }
+
     public QuestionSplitOCRRequest() {
     }
 
@@ -187,6 +210,9 @@ public class QuestionSplitOCRRequest extends AbstractModel {
         if (source.EnableOnlyDetectBorder != null) {
             this.EnableOnlyDetectBorder = new Boolean(source.EnableOnlyDetectBorder);
         }
+        if (source.UseNewModel != null) {
+            this.UseNewModel = new Boolean(source.UseNewModel);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class QuestionSplitOCRRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         this.setParamSimple(map, prefix + "EnableImageCrop", this.EnableImageCrop);
         this.setParamSimple(map, prefix + "EnableOnlyDetectBorder", this.EnableOnlyDetectBorder);
+        this.setParamSimple(map, prefix + "UseNewModel", this.UseNewModel);
 
     }
 }

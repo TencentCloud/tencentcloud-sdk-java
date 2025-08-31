@@ -129,7 +129,7 @@ public class CreateContainGroupRequest extends AbstractModel {
     private String GroupResourceType;
 
     /**
-    * 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
+    * 分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
     */
     @SerializedName("SubnetId")
     @Expose
@@ -432,16 +432,16 @@ public class CreateContainGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取 
-     * @return SubnetId 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
+     * Get 分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取 
+     * @return SubnetId 分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
-     * @param SubnetId 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
+     * Set 分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
+     * @param SubnetId 分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

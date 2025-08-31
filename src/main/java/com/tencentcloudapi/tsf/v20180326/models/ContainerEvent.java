@@ -45,7 +45,7 @@ public class ContainerEvent extends AbstractModel {
     private String Type;
 
     /**
-    * Kubernetes 资源类型，典型取值有 Deployment、Pod、Service 等
+    * Kubernetes 资源类型，典型取值有 Deployment(部署资源)、Pod(容器组)、Service(服务资源) 等
     */
     @SerializedName("Kind")
     @Expose
@@ -128,16 +128,16 @@ public class ContainerEvent extends AbstractModel {
     }
 
     /**
-     * Get Kubernetes 资源类型，典型取值有 Deployment、Pod、Service 等 
-     * @return Kind Kubernetes 资源类型，典型取值有 Deployment、Pod、Service 等
+     * Get Kubernetes 资源类型，典型取值有 Deployment(部署资源)、Pod(容器组)、Service(服务资源) 等 
+     * @return Kind Kubernetes 资源类型，典型取值有 Deployment(部署资源)、Pod(容器组)、Service(服务资源) 等
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set Kubernetes 资源类型，典型取值有 Deployment、Pod、Service 等
-     * @param Kind Kubernetes 资源类型，典型取值有 Deployment、Pod、Service 等
+     * Set Kubernetes 资源类型，典型取值有 Deployment(部署资源)、Pod(容器组)、Service(服务资源) 等
+     * @param Kind Kubernetes 资源类型，典型取值有 Deployment(部署资源)、Pod(容器组)、Service(服务资源) 等
      */
     public void setKind(String Kind) {
         this.Kind = Kind;

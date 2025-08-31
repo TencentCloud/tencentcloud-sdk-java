@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeDeliveryConfigsRequest extends AbstractModel {
 
     /**
-    * 关键字
+    * 搜索关键字，可搜索日志投递配置项ID或日志投递配置项名称
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 偏移
+    * 偏移量，取值范围大于等于0，默认值为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 搜索条数
+    * 单页请求配置数量，取值范围[1, 50]，默认值为10
     */
     @SerializedName("Limit")
     @Expose
@@ -61,48 +61,48 @@ public class DescribeDeliveryConfigsRequest extends AbstractModel {
     private String [] ConfigIdList;
 
     /**
-     * Get 关键字 
-     * @return SearchWord 关键字
+     * Get 搜索关键字，可搜索日志投递配置项ID或日志投递配置项名称 
+     * @return SearchWord 搜索关键字，可搜索日志投递配置项ID或日志投递配置项名称
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 关键字
-     * @param SearchWord 关键字
+     * Set 搜索关键字，可搜索日志投递配置项ID或日志投递配置项名称
+     * @param SearchWord 搜索关键字，可搜索日志投递配置项ID或日志投递配置项名称
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 偏移 
-     * @return Offset 偏移
+     * Get 偏移量，取值范围大于等于0，默认值为0 
+     * @return Offset 偏移量，取值范围大于等于0，默认值为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移
-     * @param Offset 偏移
+     * Set 偏移量，取值范围大于等于0，默认值为0
+     * @param Offset 偏移量，取值范围大于等于0，默认值为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 搜索条数 
-     * @return Limit 搜索条数
+     * Get 单页请求配置数量，取值范围[1, 50]，默认值为10 
+     * @return Limit 单页请求配置数量，取值范围[1, 50]，默认值为10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 搜索条数
-     * @param Limit 搜索条数
+     * Set 单页请求配置数量，取值范围[1, 50]，默认值为10
+     * @param Limit 单页请求配置数量，取值范围[1, 50]，默认值为10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

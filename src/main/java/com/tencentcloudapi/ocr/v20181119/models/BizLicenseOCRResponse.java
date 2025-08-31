@@ -191,6 +191,13 @@ WARN_RESHOOT_CARD翻拍件告警
     private BusinessCertificateInfo [] BusinessCertificate;
 
     /**
+    * 重要提示字段
+    */
+    @SerializedName("Important")
+    @Expose
+    private String Important;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -590,6 +597,22 @@ WARN_RESHOOT_CARD翻拍件告警
     }
 
     /**
+     * Get 重要提示字段 
+     * @return Important 重要提示字段
+     */
+    public String getImportant() {
+        return this.Important;
+    }
+
+    /**
+     * Set 重要提示字段
+     * @param Important 重要提示字段
+     */
+    public void setImportant(String Important) {
+        this.Important = Important;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -691,6 +714,9 @@ WARN_RESHOOT_CARD翻拍件告警
                 this.BusinessCertificate[i] = new BusinessCertificateInfo(source.BusinessCertificate[i]);
             }
         }
+        if (source.Important != null) {
+            this.Important = new String(source.Important);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -724,6 +750,7 @@ WARN_RESHOOT_CARD翻拍件告警
         this.setParamSimple(map, prefix + "RegistrationAuthority", this.RegistrationAuthority);
         this.setParamSimple(map, prefix + "Electronic", this.Electronic);
         this.setParamArrayObj(map, prefix + "BusinessCertificate.", this.BusinessCertificate);
+        this.setParamSimple(map, prefix + "Important", this.Important);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

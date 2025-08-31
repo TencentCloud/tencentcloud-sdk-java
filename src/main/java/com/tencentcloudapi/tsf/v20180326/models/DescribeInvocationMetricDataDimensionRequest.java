@@ -38,14 +38,14 @@ public class DescribeInvocationMetricDataDimensionRequest extends AbstractModel 
     private String EndTime;
 
     /**
-    * 开始index
+    * 开始index，取值范围大于等于0，默认值为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页大小
+    * 单页请求配置数量，取值范围[1, 50]，默认值为10
     */
     @SerializedName("Limit")
     @Expose
@@ -105,32 +105,32 @@ public class DescribeInvocationMetricDataDimensionRequest extends AbstractModel 
     }
 
     /**
-     * Get 开始index 
-     * @return Offset 开始index
+     * Get 开始index，取值范围大于等于0，默认值为0 
+     * @return Offset 开始index，取值范围大于等于0，默认值为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 开始index
-     * @param Offset 开始index
+     * Set 开始index，取值范围大于等于0，默认值为0
+     * @param Offset 开始index，取值范围大于等于0，默认值为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页大小 
-     * @return Limit 分页大小
+     * Get 单页请求配置数量，取值范围[1, 50]，默认值为10 
+     * @return Limit 单页请求配置数量，取值范围[1, 50]，默认值为10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小
-     * @param Limit 分页大小
+     * Set 单页请求配置数量，取值范围[1, 50]，默认值为10
+     * @param Limit 单页请求配置数量，取值范围[1, 50]，默认值为10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

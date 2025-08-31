@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OrderInfo extends AbstractModel {
 
     /**
-    * 父帐号uin
+    * 父账号uin
     */
     @SerializedName("Uin")
     @Expose
@@ -66,16 +66,16 @@ public class OrderInfo extends AbstractModel {
     private String Updated;
 
     /**
-     * Get 父帐号uin 
-     * @return Uin 父帐号uin
+     * Get 父账号uin 
+     * @return Uin 父账号uin
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 父帐号uin
-     * @param Uin 父帐号uin
+     * Set 父账号uin
+     * @param Uin 父账号uin
      */
     public void setUin(String Uin) {
         this.Uin = Uin;

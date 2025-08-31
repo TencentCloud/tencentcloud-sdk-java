@@ -31,7 +31,7 @@ public class DescribeContainerEventsRequest extends AbstractModel {
     private String ResourceType;
 
     /**
-    * 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
+    * 部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -103,16 +103,16 @@ public class DescribeContainerEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd 
-     * @return ResourceId 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
+     * Get 部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。 
+     * @return ResourceId 部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
-     * @param ResourceId 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
+     * Set 部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
+     * @param ResourceId 部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

@@ -38,7 +38,7 @@ public class DescribeBusinessLogConfigsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 模糊匹配关键词
+    * 模糊匹配关键词，可搜索配置项ID或配置项名称
     */
     @SerializedName("SearchWord")
     @Expose
@@ -92,16 +92,16 @@ public class DescribeBusinessLogConfigsRequest extends AbstractModel {
     }
 
     /**
-     * Get 模糊匹配关键词 
-     * @return SearchWord 模糊匹配关键词
+     * Get 模糊匹配关键词，可搜索配置项ID或配置项名称 
+     * @return SearchWord 模糊匹配关键词，可搜索配置项ID或配置项名称
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 模糊匹配关键词
-     * @param SearchWord 模糊匹配关键词
+     * Set 模糊匹配关键词，可搜索配置项ID或配置项名称
+     * @param SearchWord 模糊匹配关键词，可搜索配置项ID或配置项名称
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;

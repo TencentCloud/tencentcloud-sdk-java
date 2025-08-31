@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * 过滤条件，name表示过滤字段，value表示过滤字段值。
+    * 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"ip","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- `id`：实例ID
+- ` name `：实例名
+- ` ip `：内网IP（可填wan_ip或lan_ip）
     */
     @SerializedName("Filters")
     @Expose
@@ -45,16 +50,36 @@ public class DescribeInstancesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 过滤条件，name表示过滤字段，value表示过滤字段值。 
-     * @return Filters 过滤条件，name表示过滤字段，value表示过滤字段值。
+     * Get 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"ip","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- `id`：实例ID
+- ` name `：实例名
+- ` ip `：内网IP（可填wan_ip或lan_ip） 
+     * @return Filters 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"ip","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- `id`：实例ID
+- ` name `：实例名
+- ` ip `：内网IP（可填wan_ip或lan_ip）
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，name表示过滤字段，value表示过滤字段值。
-     * @param Filters 过滤条件，name表示过滤字段，value表示过滤字段值。
+     * Set 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"ip","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- `id`：实例ID
+- ` name `：实例名
+- ` ip `：内网IP（可填wan_ip或lan_ip）
+     * @param Filters 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。
+参考：[{"Name":"ip","Values":["172.16.16.139"]}]
+filter name 取值范围：
+- `id`：实例ID
+- ` name `：实例名
+- ` ip `：内网IP（可填wan_ip或lan_ip）
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
