@@ -94,6 +94,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *创建行列权限
+     * @param req CreatePermissionRanksRequest
+     * @return CreatePermissionRanksResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePermissionRanksResponse CreatePermissionRanks(CreatePermissionRanksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePermissionRanks", CreatePermissionRanksResponse.class);
+    }
+
+    /**
      *创建项目
      * @param req CreateProjectRequest
      * @return CreateProjectResponse
@@ -190,6 +201,39 @@ public class BiClient extends AbstractClient{
     public DescribePageWidgetListResponse DescribePageWidgetList(DescribePageWidgetListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePageWidgetList", DescribePageWidgetListResponse.class);
+    }
+
+    /**
+     *根据角色或标签查询行列权限配置
+     * @param req DescribePermissionRanksInfoRequest
+     * @return DescribePermissionRanksInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePermissionRanksInfoResponse DescribePermissionRanksInfo(DescribePermissionRanksInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePermissionRanksInfo", DescribePermissionRanksInfoResponse.class);
+    }
+
+    /**
+     *行列权限项目内角色列表接口1
+     * @param req DescribePermissionRoleInfoRequest
+     * @return DescribePermissionRoleInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePermissionRoleInfoResponse DescribePermissionRoleInfo(DescribePermissionRoleInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePermissionRoleInfo", DescribePermissionRoleInfoResponse.class);
+    }
+
+    /**
+     *查询行列权限初始状态1
+     * @param req DescribePermissionStatusInfoRequest
+     * @return DescribePermissionStatusInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePermissionStatusInfoResponse DescribePermissionStatusInfo(DescribePermissionStatusInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePermissionStatusInfo", DescribePermissionStatusInfoResponse.class);
     }
 
     /**

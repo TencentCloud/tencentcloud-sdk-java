@@ -38,7 +38,8 @@ public class PreviewLogStatistic extends AbstractModel {
     private Long LineNum;
 
     /**
-    * 目标日志主题
+    * 目标日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
     */
     @SerializedName("DstTopicId")
     @Expose
@@ -102,16 +103,20 @@ public class PreviewLogStatistic extends AbstractModel {
     }
 
     /**
-     * Get 目标日志主题 
-     * @return DstTopicId 目标日志主题
+     * Get 目标日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
+     * @return DstTopicId 目标日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public String getDstTopicId() {
         return this.DstTopicId;
     }
 
     /**
-     * Set 目标日志主题
-     * @param DstTopicId 目标日志主题
+     * Set 目标日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param DstTopicId 目标日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public void setDstTopicId(String DstTopicId) {
         this.DstTopicId = DstTopicId;

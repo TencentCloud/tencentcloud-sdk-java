@@ -38,7 +38,7 @@ public class ModifyAlarmPolicyTasksRequest extends AbstractModel {
     private String PolicyId;
 
     /**
-    * 告警策略触发任务列表，空数据代表解绑
+    * 告警策略触发任务列表，空数据代表解绑示例值： { "Type": "AS", "TaskConfig": "{\"Region\":\"ap-guangzhou\",\"Group\":\"asg-0zhspjx\",\"Policy\":\"asp-ganig28\"}" }
     */
     @SerializedName("TriggerTasks")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyAlarmPolicyTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 告警策略触发任务列表，空数据代表解绑 
-     * @return TriggerTasks 告警策略触发任务列表，空数据代表解绑
+     * Get 告警策略触发任务列表，空数据代表解绑示例值： { "Type": "AS", "TaskConfig": "{\"Region\":\"ap-guangzhou\",\"Group\":\"asg-0zhspjx\",\"Policy\":\"asp-ganig28\"}" } 
+     * @return TriggerTasks 告警策略触发任务列表，空数据代表解绑示例值： { "Type": "AS", "TaskConfig": "{\"Region\":\"ap-guangzhou\",\"Group\":\"asg-0zhspjx\",\"Policy\":\"asp-ganig28\"}" }
      */
     public AlarmPolicyTriggerTask [] getTriggerTasks() {
         return this.TriggerTasks;
     }
 
     /**
-     * Set 告警策略触发任务列表，空数据代表解绑
-     * @param TriggerTasks 告警策略触发任务列表，空数据代表解绑
+     * Set 告警策略触发任务列表，空数据代表解绑示例值： { "Type": "AS", "TaskConfig": "{\"Region\":\"ap-guangzhou\",\"Group\":\"asg-0zhspjx\",\"Policy\":\"asp-ganig28\"}" }
+     * @param TriggerTasks 告警策略触发任务列表，空数据代表解绑示例值： { "Type": "AS", "TaskConfig": "{\"Region\":\"ap-guangzhou\",\"Group\":\"asg-0zhspjx\",\"Policy\":\"asp-ganig28\"}" }
      */
     public void setTriggerTasks(AlarmPolicyTriggerTask [] TriggerTasks) {
         this.TriggerTasks = TriggerTasks;

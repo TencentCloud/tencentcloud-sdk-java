@@ -40,7 +40,7 @@ public class InstanceReturnable extends AbstractModel {
     /**
     * 实例退还失败错误码。取值:
 0: 可以退还
-1: 资源已退货。如为退货后续费资源，请于购买6小时后操作
+1: 资源已退货。
 2: 资源已到期
 3: 资源购买超过5天不支持退款
 4: 非预付费资源不支持退款
@@ -96,7 +96,7 @@ public class InstanceReturnable extends AbstractModel {
     /**
      * Get 实例退还失败错误码。取值:
 0: 可以退还
-1: 资源已退货。如为退货后续费资源，请于购买6小时后操作
+1: 资源已退货。
 2: 资源已到期
 3: 资源购买超过5天不支持退款
 4: 非预付费资源不支持退款
@@ -107,7 +107,7 @@ public class InstanceReturnable extends AbstractModel {
 12: 根据业务侧产品规定，该资源不允许退款 
      * @return ReturnFailCode 实例退还失败错误码。取值:
 0: 可以退还
-1: 资源已退货。如为退货后续费资源，请于购买6小时后操作
+1: 资源已退货。
 2: 资源已到期
 3: 资源购买超过5天不支持退款
 4: 非预付费资源不支持退款
@@ -124,7 +124,7 @@ public class InstanceReturnable extends AbstractModel {
     /**
      * Set 实例退还失败错误码。取值:
 0: 可以退还
-1: 资源已退货。如为退货后续费资源，请于购买6小时后操作
+1: 资源已退货。
 2: 资源已到期
 3: 资源购买超过5天不支持退款
 4: 非预付费资源不支持退款
@@ -135,7 +135,7 @@ public class InstanceReturnable extends AbstractModel {
 12: 根据业务侧产品规定，该资源不允许退款
      * @param ReturnFailCode 实例退还失败错误码。取值:
 0: 可以退还
-1: 资源已退货。如为退货后续费资源，请于购买6小时后操作
+1: 资源已退货。
 2: 资源已到期
 3: 资源购买超过5天不支持退款
 4: 非预付费资源不支持退款
