@@ -39,6 +39,14 @@ public class Value extends AbstractModel {
     private Polygon Coord;
 
     /**
+    * 页数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PageIndex")
+    @Expose
+    private String PageIndex;
+
+    /**
      * Get 自动识别的字段内容 
      * @return AutoContent 自动识别的字段内容
      */
@@ -74,6 +82,26 @@ public class Value extends AbstractModel {
         this.Coord = Coord;
     }
 
+    /**
+     * Get 页数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PageIndex 页数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPageIndex() {
+        return this.PageIndex;
+    }
+
+    /**
+     * Set 页数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PageIndex 页数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPageIndex(String PageIndex) {
+        this.PageIndex = PageIndex;
+    }
+
     public Value() {
     }
 
@@ -88,6 +116,9 @@ public class Value extends AbstractModel {
         if (source.Coord != null) {
             this.Coord = new Polygon(source.Coord);
         }
+        if (source.PageIndex != null) {
+            this.PageIndex = new String(source.PageIndex);
+        }
     }
 
 
@@ -97,6 +128,7 @@ public class Value extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoContent", this.AutoContent);
         this.setParamObj(map, prefix + "Coord.", this.Coord);
+        this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
 
     }
 }
