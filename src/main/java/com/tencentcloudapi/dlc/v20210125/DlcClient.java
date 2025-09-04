@@ -536,6 +536,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建TIceberg表
+     * @param req CreateTcIcebergTableRequest
+     * @return CreateTcIcebergTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTcIcebergTableResponse CreateTcIcebergTable(CreateTcIcebergTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTcIcebergTable", CreateTcIcebergTableResponse.class);
+    }
+
+    /**
      *创建用户
      * @param req CreateUserRequest
      * @return CreateUserResponse

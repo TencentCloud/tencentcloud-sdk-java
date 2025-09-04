@@ -33,6 +33,7 @@ public class DataTransformResouceInfo extends AbstractModel {
 
     /**
     * 别名
+限制：不能包含字符 |。
     */
     @SerializedName("Alias")
     @Expose
@@ -59,8 +60,10 @@ public class DataTransformResouceInfo extends AbstractModel {
     }
 
     /**
-     * Get 别名 
+     * Get 别名
+限制：不能包含字符 |。 
      * @return Alias 别名
+限制：不能包含字符 |。
      */
     public String getAlias() {
         return this.Alias;
@@ -68,7 +71,9 @@ public class DataTransformResouceInfo extends AbstractModel {
 
     /**
      * Set 别名
+限制：不能包含字符 |。
      * @param Alias 别名
+限制：不能包含字符 |。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

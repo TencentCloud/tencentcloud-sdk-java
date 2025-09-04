@@ -44,13 +44,14 @@ public class SliceParams extends AbstractModel {
 
     /**
     * 音频切片时长，默认15s 示例值：15
+取值范围15-60s
     */
     @SerializedName("SliceAudio")
     @Expose
     private Long SliceAudio;
 
     /**
-    * 视频截帧间隔时长，默认5s， 示例值：5
+    * 视频截帧间隔时长，默认5s， 示例值：5 取值范围5-60s
     */
     @SerializedName("SliceVideo")
     @Expose
@@ -123,8 +124,10 @@ public class SliceParams extends AbstractModel {
     }
 
     /**
-     * Get 音频切片时长，默认15s 示例值：15 
+     * Get 音频切片时长，默认15s 示例值：15
+取值范围15-60s 
      * @return SliceAudio 音频切片时长，默认15s 示例值：15
+取值范围15-60s
      */
     public Long getSliceAudio() {
         return this.SliceAudio;
@@ -132,23 +135,25 @@ public class SliceParams extends AbstractModel {
 
     /**
      * Set 音频切片时长，默认15s 示例值：15
+取值范围15-60s
      * @param SliceAudio 音频切片时长，默认15s 示例值：15
+取值范围15-60s
      */
     public void setSliceAudio(Long SliceAudio) {
         this.SliceAudio = SliceAudio;
     }
 
     /**
-     * Get 视频截帧间隔时长，默认5s， 示例值：5 
-     * @return SliceVideo 视频截帧间隔时长，默认5s， 示例值：5
+     * Get 视频截帧间隔时长，默认5s， 示例值：5 取值范围5-60s 
+     * @return SliceVideo 视频截帧间隔时长，默认5s， 示例值：5 取值范围5-60s
      */
     public Long getSliceVideo() {
         return this.SliceVideo;
     }
 
     /**
-     * Set 视频截帧间隔时长，默认5s， 示例值：5
-     * @param SliceVideo 视频截帧间隔时长，默认5s， 示例值：5
+     * Set 视频截帧间隔时长，默认5s， 示例值：5 取值范围5-60s
+     * @param SliceVideo 视频截帧间隔时长，默认5s， 示例值：5 取值范围5-60s
      */
     public void setSliceVideo(Long SliceVideo) {
         this.SliceVideo = SliceVideo;
