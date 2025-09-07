@@ -76,6 +76,15 @@ public class IntentionVerifyData extends AbstractModel {
     private String AsrResultSimilarity;
 
     /**
+    * 意愿确认环节中录制的音频（base64）。
+- 若不存在则为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IntentionVerifyAudio")
+    @Expose
+    private String IntentionVerifyAudio;
+
+    /**
      * Get 意愿确认环节中录制的视频（base64）。
 - 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -215,6 +224,30 @@ public class IntentionVerifyData extends AbstractModel {
         this.AsrResultSimilarity = AsrResultSimilarity;
     }
 
+    /**
+     * Get 意愿确认环节中录制的音频（base64）。
+- 若不存在则为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IntentionVerifyAudio 意愿确认环节中录制的音频（base64）。
+- 若不存在则为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIntentionVerifyAudio() {
+        return this.IntentionVerifyAudio;
+    }
+
+    /**
+     * Set 意愿确认环节中录制的音频（base64）。
+- 若不存在则为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntentionVerifyAudio 意愿确认环节中录制的音频（base64）。
+- 若不存在则为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntentionVerifyAudio(String IntentionVerifyAudio) {
+        this.IntentionVerifyAudio = IntentionVerifyAudio;
+    }
+
     public IntentionVerifyData() {
     }
 
@@ -241,6 +274,9 @@ public class IntentionVerifyData extends AbstractModel {
         if (source.AsrResultSimilarity != null) {
             this.AsrResultSimilarity = new String(source.AsrResultSimilarity);
         }
+        if (source.IntentionVerifyAudio != null) {
+            this.IntentionVerifyAudio = new String(source.IntentionVerifyAudio);
+        }
     }
 
 
@@ -254,6 +290,7 @@ public class IntentionVerifyData extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "IntentionVerifyBestFrame", this.IntentionVerifyBestFrame);
         this.setParamSimple(map, prefix + "AsrResultSimilarity", this.AsrResultSimilarity);
+        this.setParamSimple(map, prefix + "IntentionVerifyAudio", this.IntentionVerifyAudio);
 
     }
 }

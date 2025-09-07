@@ -105,6 +105,28 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *聚合的软件详情
+     * @param req DescribeAggrSoftDetailRequest
+     * @return DescribeAggrSoftDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAggrSoftDetailResponse DescribeAggrSoftDetail(DescribeAggrSoftDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAggrSoftDetail", DescribeAggrSoftDetailResponse.class);
+    }
+
+    /**
+     *聚合软件的已安装终端列表
+     * @param req DescribeAggrSoftDeviceListRequest
+     * @return DescribeAggrSoftDeviceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAggrSoftDeviceListResponse DescribeAggrSoftDeviceList(DescribeAggrSoftDeviceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAggrSoftDeviceList", DescribeAggrSoftDeviceListResponse.class);
+    }
+
+    /**
      *webservice查询文件检测结果
      * @param req DescribeDLPFileDetectResultRequest
      * @return DescribeDLPFileDetectResultResponse
@@ -124,6 +146,17 @@ public class IoaClient extends AbstractClient{
     public DescribeDeviceChildGroupsResponse DescribeDeviceChildGroups(DescribeDeviceChildGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDeviceChildGroups", DescribeDeviceChildGroupsResponse.class);
+    }
+
+    /**
+     *基于软件查看终端详情列表,私有化调用path为：capi/Software/DescribeDeviceDetailList
+     * @param req DescribeDeviceDetailListRequest
+     * @return DescribeDeviceDetailListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceDetailListResponse DescribeDeviceDetailList(DescribeDeviceDetailListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceDetailList", DescribeDeviceDetailListResponse.class);
     }
 
     /**
@@ -223,6 +256,17 @@ public class IoaClient extends AbstractClient{
     public DescribeVirtualDevicesResponse DescribeVirtualDevices(DescribeVirtualDevicesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVirtualDevices", DescribeVirtualDevicesResponse.class);
+    }
+
+    /**
+     *导出基于指定终端查看软件信息详情列表查询,私有化调用path为：capi/Software/ExportSoftwareInformationList
+     * @param req ExportSoftwareInformationListRequest
+     * @return ExportSoftwareInformationListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportSoftwareInformationListResponse ExportSoftwareInformationList(ExportSoftwareInformationListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportSoftwareInformationList", ExportSoftwareInformationListResponse.class);
     }
 
     /**
