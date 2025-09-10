@@ -45,6 +45,13 @@ public class GetCOSURLRequest extends AbstractModel {
     private Long FileSize;
 
     /**
+    * 模块类型or固件类型
+    */
+    @SerializedName("FwType")
+    @Expose
+    private String FwType;
+
+    /**
      * Get 产品ID 
      * @return ProductID 产品ID
      */
@@ -92,6 +99,22 @@ public class GetCOSURLRequest extends AbstractModel {
         this.FileSize = FileSize;
     }
 
+    /**
+     * Get 模块类型or固件类型 
+     * @return FwType 模块类型or固件类型
+     */
+    public String getFwType() {
+        return this.FwType;
+    }
+
+    /**
+     * Set 模块类型or固件类型
+     * @param FwType 模块类型or固件类型
+     */
+    public void setFwType(String FwType) {
+        this.FwType = FwType;
+    }
+
     public GetCOSURLRequest() {
     }
 
@@ -109,6 +132,9 @@ public class GetCOSURLRequest extends AbstractModel {
         if (source.FileSize != null) {
             this.FileSize = new Long(source.FileSize);
         }
+        if (source.FwType != null) {
+            this.FwType = new String(source.FwType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class GetCOSURLRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductID", this.ProductID);
         this.setParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
+        this.setParamSimple(map, prefix + "FwType", this.FwType);
 
     }
 }

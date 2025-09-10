@@ -203,6 +203,13 @@ public class CallRecord extends AbstractModel {
     private SourceIPVpcInfo [] VpcInfo;
 
     /**
+    * 调用请求客户端列表
+    */
+    @SerializedName("ReqClient")
+    @Expose
+    private String [] ReqClient;
+
+    /**
      * Get 调用记录ID 
      * @return CallID 调用记录ID
      */
@@ -618,6 +625,22 @@ public class CallRecord extends AbstractModel {
         this.VpcInfo = VpcInfo;
     }
 
+    /**
+     * Get 调用请求客户端列表 
+     * @return ReqClient 调用请求客户端列表
+     */
+    public String [] getReqClient() {
+        return this.ReqClient;
+    }
+
+    /**
+     * Set 调用请求客户端列表
+     * @param ReqClient 调用请求客户端列表
+     */
+    public void setReqClient(String [] ReqClient) {
+        this.ReqClient = ReqClient;
+    }
+
     public CallRecord() {
     }
 
@@ -707,6 +730,12 @@ public class CallRecord extends AbstractModel {
                 this.VpcInfo[i] = new SourceIPVpcInfo(source.VpcInfo[i]);
             }
         }
+        if (source.ReqClient != null) {
+            this.ReqClient = new String[source.ReqClient.length];
+            for (int i = 0; i < source.ReqClient.length; i++) {
+                this.ReqClient[i] = new String(source.ReqClient[i]);
+            }
+        }
     }
 
 
@@ -739,6 +768,7 @@ public class CallRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "ShowStatus", this.ShowStatus);
         this.setParamSimple(map, prefix + "ISP", this.ISP);
         this.setParamArrayObj(map, prefix + "VpcInfo.", this.VpcInfo);
+        this.setParamArraySimple(map, prefix + "ReqClient.", this.ReqClient);
 
     }
 }

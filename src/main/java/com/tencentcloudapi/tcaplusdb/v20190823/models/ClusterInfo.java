@@ -234,6 +234,20 @@ public class ClusterInfo extends AbstractModel {
     private Long RestProxyStatus;
 
     /**
+    * 该集群shard总数
+    */
+    @SerializedName("ShardTotalNum")
+    @Expose
+    private Long ShardTotalNum;
+
+    /**
+    * 已使用的shard总数
+    */
+    @SerializedName("ShardUsedNum")
+    @Expose
+    private Long ShardUsedNum;
+
+    /**
      * Get 集群名称 
      * @return ClusterName 集群名称
      */
@@ -713,6 +727,38 @@ public class ClusterInfo extends AbstractModel {
         this.RestProxyStatus = RestProxyStatus;
     }
 
+    /**
+     * Get 该集群shard总数 
+     * @return ShardTotalNum 该集群shard总数
+     */
+    public Long getShardTotalNum() {
+        return this.ShardTotalNum;
+    }
+
+    /**
+     * Set 该集群shard总数
+     * @param ShardTotalNum 该集群shard总数
+     */
+    public void setShardTotalNum(Long ShardTotalNum) {
+        this.ShardTotalNum = ShardTotalNum;
+    }
+
+    /**
+     * Get 已使用的shard总数 
+     * @return ShardUsedNum 已使用的shard总数
+     */
+    public Long getShardUsedNum() {
+        return this.ShardUsedNum;
+    }
+
+    /**
+     * Set 已使用的shard总数
+     * @param ShardUsedNum 已使用的shard总数
+     */
+    public void setShardUsedNum(Long ShardUsedNum) {
+        this.ShardUsedNum = ShardUsedNum;
+    }
+
     public ClusterInfo() {
     }
 
@@ -820,6 +866,12 @@ public class ClusterInfo extends AbstractModel {
         if (source.RestProxyStatus != null) {
             this.RestProxyStatus = new Long(source.RestProxyStatus);
         }
+        if (source.ShardTotalNum != null) {
+            this.ShardTotalNum = new Long(source.ShardTotalNum);
+        }
+        if (source.ShardUsedNum != null) {
+            this.ShardUsedNum = new Long(source.ShardUsedNum);
+        }
     }
 
 
@@ -857,6 +909,8 @@ public class ClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UlogBackupExpireDay", this.UlogBackupExpireDay);
         this.setParamSimple(map, prefix + "IsReadOnlyUlogBackupExpireDay", this.IsReadOnlyUlogBackupExpireDay);
         this.setParamSimple(map, prefix + "RestProxyStatus", this.RestProxyStatus);
+        this.setParamSimple(map, prefix + "ShardTotalNum", this.ShardTotalNum);
+        this.setParamSimple(map, prefix + "ShardUsedNum", this.ShardUsedNum);
 
     }
 }

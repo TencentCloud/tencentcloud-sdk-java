@@ -38,6 +38,13 @@ public class DescribeFirmwareRequest extends AbstractModel {
     private String FirmwareVersion;
 
     /**
+    * 固件模块
+    */
+    @SerializedName("FwType")
+    @Expose
+    private String FwType;
+
+    /**
      * Get 产品ID 
      * @return ProductID 产品ID
      */
@@ -69,6 +76,22 @@ public class DescribeFirmwareRequest extends AbstractModel {
         this.FirmwareVersion = FirmwareVersion;
     }
 
+    /**
+     * Get 固件模块 
+     * @return FwType 固件模块
+     */
+    public String getFwType() {
+        return this.FwType;
+    }
+
+    /**
+     * Set 固件模块
+     * @param FwType 固件模块
+     */
+    public void setFwType(String FwType) {
+        this.FwType = FwType;
+    }
+
     public DescribeFirmwareRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeFirmwareRequest extends AbstractModel {
         if (source.FirmwareVersion != null) {
             this.FirmwareVersion = new String(source.FirmwareVersion);
         }
+        if (source.FwType != null) {
+            this.FwType = new String(source.FwType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeFirmwareRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductID", this.ProductID);
         this.setParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
+        this.setParamSimple(map, prefix + "FwType", this.FwType);
 
     }
 }

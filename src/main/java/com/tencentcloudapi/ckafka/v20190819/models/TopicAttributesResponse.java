@@ -31,7 +31,7 @@ public class TopicAttributesResponse extends AbstractModel {
     private String TopicId;
 
     /**
-    * 创建时间
+    * 创建时间的秒级时间戳
     */
     @SerializedName("CreateTime")
     @Expose
@@ -124,16 +124,16 @@ public class TopicAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间的秒级时间戳 
+     * @return CreateTime 创建时间的秒级时间戳
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间的秒级时间戳
+     * @param CreateTime 创建时间的秒级时间戳
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;

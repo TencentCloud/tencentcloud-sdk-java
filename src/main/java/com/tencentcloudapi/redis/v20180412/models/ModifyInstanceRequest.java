@@ -28,6 +28,7 @@ public class ModifyInstanceRequest extends AbstractModel {
 - rename：表示实例重命名。
 - modifyProject：修改实例所属项目。
 - modifyAutoRenew：修改实例续费标记。
+- modifyDeleteProtectionSwitch：修改实例删除保护。
     */
     @SerializedName("Operation")
     @Expose
@@ -65,6 +66,13 @@ public class ModifyInstanceRequest extends AbstractModel {
     private Long [] AutoRenews;
 
     /**
+    * 删除保护开关。- 0：默认状态，指关闭。- 1：开关打开。
+    */
+    @SerializedName("DeleteProtectionSwitches")
+    @Expose
+    private Long [] DeleteProtectionSwitches;
+
+    /**
     * 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
     */
     @SerializedName("InstanceId")
@@ -89,11 +97,13 @@ public class ModifyInstanceRequest extends AbstractModel {
      * Get 修改实例操作。如填写：
 - rename：表示实例重命名。
 - modifyProject：修改实例所属项目。
-- modifyAutoRenew：修改实例续费标记。 
+- modifyAutoRenew：修改实例续费标记。
+- modifyDeleteProtectionSwitch：修改实例删除保护。 
      * @return Operation 修改实例操作。如填写：
 - rename：表示实例重命名。
 - modifyProject：修改实例所属项目。
 - modifyAutoRenew：修改实例续费标记。
+- modifyDeleteProtectionSwitch：修改实例删除保护。
      */
     public String getOperation() {
         return this.Operation;
@@ -104,10 +114,12 @@ public class ModifyInstanceRequest extends AbstractModel {
 - rename：表示实例重命名。
 - modifyProject：修改实例所属项目。
 - modifyAutoRenew：修改实例续费标记。
+- modifyDeleteProtectionSwitch：修改实例删除保护。
      * @param Operation 修改实例操作。如填写：
 - rename：表示实例重命名。
 - modifyProject：修改实例所属项目。
 - modifyAutoRenew：修改实例续费标记。
+- modifyDeleteProtectionSwitch：修改实例删除保护。
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -187,6 +199,22 @@ public class ModifyInstanceRequest extends AbstractModel {
      */
     public void setAutoRenews(Long [] AutoRenews) {
         this.AutoRenews = AutoRenews;
+    }
+
+    /**
+     * Get 删除保护开关。- 0：默认状态，指关闭。- 1：开关打开。 
+     * @return DeleteProtectionSwitches 删除保护开关。- 0：默认状态，指关闭。- 1：开关打开。
+     */
+    public Long [] getDeleteProtectionSwitches() {
+        return this.DeleteProtectionSwitches;
+    }
+
+    /**
+     * Set 删除保护开关。- 0：默认状态，指关闭。- 1：开关打开。
+     * @param DeleteProtectionSwitches 删除保护开关。- 0：默认状态，指关闭。- 1：开关打开。
+     */
+    public void setDeleteProtectionSwitches(Long [] DeleteProtectionSwitches) {
+        this.DeleteProtectionSwitches = DeleteProtectionSwitches;
     }
 
     /**
@@ -281,6 +309,12 @@ public class ModifyInstanceRequest extends AbstractModel {
                 this.AutoRenews[i] = new Long(source.AutoRenews[i]);
             }
         }
+        if (source.DeleteProtectionSwitches != null) {
+            this.DeleteProtectionSwitches = new Long[source.DeleteProtectionSwitches.length];
+            for (int i = 0; i < source.DeleteProtectionSwitches.length; i++) {
+                this.DeleteProtectionSwitches[i] = new Long(source.DeleteProtectionSwitches[i]);
+            }
+        }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
@@ -302,6 +336,7 @@ public class ModifyInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "InstanceNames.", this.InstanceNames);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "AutoRenews.", this.AutoRenews);
+        this.setParamArraySimple(map, prefix + "DeleteProtectionSwitches.", this.DeleteProtectionSwitches);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);

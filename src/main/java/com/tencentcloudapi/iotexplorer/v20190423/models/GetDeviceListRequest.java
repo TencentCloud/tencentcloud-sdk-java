@@ -52,6 +52,13 @@ public class GetDeviceListRequest extends AbstractModel {
     private String FirmwareVersion;
 
     /**
+    * 固件类型
+    */
+    @SerializedName("FwType")
+    @Expose
+    private String FwType;
+
+    /**
     * 需要过滤的设备名称
     */
     @SerializedName("DeviceName")
@@ -137,6 +144,22 @@ public class GetDeviceListRequest extends AbstractModel {
     }
 
     /**
+     * Get 固件类型 
+     * @return FwType 固件类型
+     */
+    public String getFwType() {
+        return this.FwType;
+    }
+
+    /**
+     * Set 固件类型
+     * @param FwType 固件类型
+     */
+    public void setFwType(String FwType) {
+        this.FwType = FwType;
+    }
+
+    /**
      * Get 需要过滤的设备名称 
      * @return DeviceName 需要过滤的设备名称
      */
@@ -204,6 +227,9 @@ public class GetDeviceListRequest extends AbstractModel {
         if (source.FirmwareVersion != null) {
             this.FirmwareVersion = new String(source.FirmwareVersion);
         }
+        if (source.FwType != null) {
+            this.FwType = new String(source.FwType);
+        }
         if (source.DeviceName != null) {
             this.DeviceName = new String(source.DeviceName);
         }
@@ -227,6 +253,7 @@ public class GetDeviceListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
+        this.setParamSimple(map, prefix + "FwType", this.FwType);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

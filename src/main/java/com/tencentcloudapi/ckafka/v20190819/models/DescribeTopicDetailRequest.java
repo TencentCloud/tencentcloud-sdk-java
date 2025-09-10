@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopicDetailRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id，可通过DescribeInstances接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 返回数量，不填则默认 10，最大值20，取值要大于0
+    * 返回数量，不填则默认 20，取值要大于0
     */
     @SerializedName("Limit")
     @Expose
@@ -59,14 +59,14 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     private String AclRuleName;
 
     /**
-    * 根据特定的属性排序(目前支持PartitionNum/CreateTime)
+    * 根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 0-顺序、1-倒序
+    * 0-顺序、1-倒序，默认值为0。
     */
     @SerializedName("OrderType")
     @Expose
@@ -80,16 +80,16 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id，可通过DescribeInstances接口获取。 
+     * @return InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -128,16 +128,16 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回数量，不填则默认 10，最大值20，取值要大于0 
-     * @return Limit 返回数量，不填则默认 10，最大值20，取值要大于0
+     * Get 返回数量，不填则默认 20，取值要大于0 
+     * @return Limit 返回数量，不填则默认 20，取值要大于0
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，不填则默认 10，最大值20，取值要大于0
-     * @param Limit 返回数量，不填则默认 10，最大值20，取值要大于0
+     * Set 返回数量，不填则默认 20，取值要大于0
+     * @param Limit 返回数量，不填则默认 20，取值要大于0
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -160,32 +160,32 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 根据特定的属性排序(目前支持PartitionNum/CreateTime) 
-     * @return OrderBy 根据特定的属性排序(目前支持PartitionNum/CreateTime)
+     * Get 根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。 
+     * @return OrderBy 根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 根据特定的属性排序(目前支持PartitionNum/CreateTime)
-     * @param OrderBy 根据特定的属性排序(目前支持PartitionNum/CreateTime)
+     * Set 根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。
+     * @param OrderBy 根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 0-顺序、1-倒序 
-     * @return OrderType 0-顺序、1-倒序
+     * Get 0-顺序、1-倒序，默认值为0。 
+     * @return OrderType 0-顺序、1-倒序，默认值为0。
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 0-顺序、1-倒序
-     * @param OrderType 0-顺序、1-倒序
+     * Set 0-顺序、1-倒序，默认值为0。
+     * @param OrderType 0-顺序、1-倒序，默认值为0。
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;

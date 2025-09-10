@@ -80,7 +80,7 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     private Long MaxMessageBytes;
 
     /**
-    * Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
+    * Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
     */
     @SerializedName("SegmentMs")
     @Expose
@@ -278,16 +278,16 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get Segment 分片滚动的时长，单位：ms，当前最小为300000ms。 
-     * @return SegmentMs Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
+     * Get Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。 
+     * @return SegmentMs Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
      */
     public Long getSegmentMs() {
         return this.SegmentMs;
     }
 
     /**
-     * Set Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
-     * @param SegmentMs Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
+     * Set Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
+     * @param SegmentMs Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
      */
     public void setSegmentMs(Long SegmentMs) {
         this.SegmentMs = SegmentMs;

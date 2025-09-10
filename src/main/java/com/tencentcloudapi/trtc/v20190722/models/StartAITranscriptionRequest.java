@@ -68,6 +68,13 @@ TranscriptionMode为0时，需要保证一个房间内只发起一个任务，�
     private RecognizeConfig RecognizeConfig;
 
     /**
+    * 翻译相关配置
+    */
+    @SerializedName("TranslationConfig")
+    @Expose
+    private TranslationConfig TranslationConfig;
+
+    /**
      * Get TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和开启转录任务的房间使用的SdkAppId相同。 
      * @return SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和开启转录任务的房间使用的SdkAppId相同。
      */
@@ -171,6 +178,22 @@ TranscriptionMode为0时，需要保证一个房间内只发起一个任务，�
         this.RecognizeConfig = RecognizeConfig;
     }
 
+    /**
+     * Get 翻译相关配置 
+     * @return TranslationConfig 翻译相关配置
+     */
+    public TranslationConfig getTranslationConfig() {
+        return this.TranslationConfig;
+    }
+
+    /**
+     * Set 翻译相关配置
+     * @param TranslationConfig 翻译相关配置
+     */
+    public void setTranslationConfig(TranslationConfig TranslationConfig) {
+        this.TranslationConfig = TranslationConfig;
+    }
+
     public StartAITranscriptionRequest() {
     }
 
@@ -197,6 +220,9 @@ TranscriptionMode为0时，需要保证一个房间内只发起一个任务，�
         if (source.RecognizeConfig != null) {
             this.RecognizeConfig = new RecognizeConfig(source.RecognizeConfig);
         }
+        if (source.TranslationConfig != null) {
+            this.TranslationConfig = new TranslationConfig(source.TranslationConfig);
+        }
     }
 
 
@@ -210,6 +236,7 @@ TranscriptionMode为0时，需要保证一个房间内只发起一个任务，�
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
         this.setParamObj(map, prefix + "RecognizeConfig.", this.RecognizeConfig);
+        this.setParamObj(map, prefix + "TranslationConfig.", this.TranslationConfig);
 
     }
 }

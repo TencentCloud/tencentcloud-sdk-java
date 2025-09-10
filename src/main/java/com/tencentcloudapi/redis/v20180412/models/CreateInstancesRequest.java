@@ -241,6 +241,13 @@ public class CreateInstancesRequest extends AbstractModel {
     private String [] AlarmPolicyList;
 
     /**
+    * 是否加密密码
+    */
+    @SerializedName("EncryptPassword")
+    @Expose
+    private Boolean EncryptPassword;
+
+    /**
      * Get 实例类型。
 <ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。</li>说明：CKV 版本当前有存量用户使用，暂时保留。</ul> 
      * @return TypeId 实例类型。
@@ -796,6 +803,22 @@ public class CreateInstancesRequest extends AbstractModel {
         this.AlarmPolicyList = AlarmPolicyList;
     }
 
+    /**
+     * Get 是否加密密码 
+     * @return EncryptPassword 是否加密密码
+     */
+    public Boolean getEncryptPassword() {
+        return this.EncryptPassword;
+    }
+
+    /**
+     * Set 是否加密密码
+     * @param EncryptPassword 是否加密密码
+     */
+    public void setEncryptPassword(Boolean EncryptPassword) {
+        this.EncryptPassword = EncryptPassword;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -894,6 +917,9 @@ public class CreateInstancesRequest extends AbstractModel {
                 this.AlarmPolicyList[i] = new String(source.AlarmPolicyList[i]);
             }
         }
+        if (source.EncryptPassword != null) {
+            this.EncryptPassword = new Boolean(source.EncryptPassword);
+        }
     }
 
 
@@ -927,6 +953,7 @@ public class CreateInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
         this.setParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
         this.setParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
+        this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
 
     }
 }

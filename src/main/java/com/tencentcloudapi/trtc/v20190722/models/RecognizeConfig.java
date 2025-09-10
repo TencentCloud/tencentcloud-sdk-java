@@ -133,6 +133,13 @@ public class RecognizeConfig extends AbstractModel {
     private Long VadSilenceTime;
 
     /**
+    * vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+    */
+    @SerializedName("VadLevel")
+    @Expose
+    private Long VadLevel;
+
+    /**
      * Get 
 语音转文字支持识别的语言，默认是"zh" 中文
 
@@ -504,6 +511,22 @@ public class RecognizeConfig extends AbstractModel {
         this.VadSilenceTime = VadSilenceTime;
     }
 
+    /**
+     * Get vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。 
+     * @return VadLevel vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+     */
+    public Long getVadLevel() {
+        return this.VadLevel;
+    }
+
+    /**
+     * Set vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+     * @param VadLevel vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+     */
+    public void setVadLevel(Long VadLevel) {
+        this.VadLevel = VadLevel;
+    }
+
     public RecognizeConfig() {
     }
 
@@ -533,6 +556,9 @@ public class RecognizeConfig extends AbstractModel {
         if (source.VadSilenceTime != null) {
             this.VadSilenceTime = new Long(source.VadSilenceTime);
         }
+        if (source.VadLevel != null) {
+            this.VadLevel = new Long(source.VadLevel);
+        }
     }
 
 
@@ -546,6 +572,7 @@ public class RecognizeConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "TranslationLanguage", this.TranslationLanguage);
         this.setParamSimple(map, prefix + "HotWordList", this.HotWordList);
         this.setParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
+        this.setParamSimple(map, prefix + "VadLevel", this.VadLevel);
 
     }
 }

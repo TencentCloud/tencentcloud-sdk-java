@@ -31,37 +31,39 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 子账号名称，如果要修改主账号，填 root。
+    * 指定需修改的账号。
+- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
+- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * 子账号密码。
+    * 指定所修改账号访问的密码。
     */
     @SerializedName("AccountPassword")
     @Expose
     private String AccountPassword;
 
     /**
-    * 子账号描述信息
+    * 账号描述信息
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 账号读写路由策略。
-- master：表示主节点。
-- replication：表示从节点。
+    * 指定所修改账号读写请求路由的策略。
+- master：表示读写请求路由至主节点。
+- replication：表示读写请求路由至从节点。
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * 子账号读写策略。
+    * 指定所修改账号的读写权限。
 - r：只读。
 - w：只写。
 - rw：读写。
@@ -71,13 +73,20 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     private String Privilege;
 
     /**
-    * 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
-- true：将主账号切换为免密账号。
-- false：不切换。
+    * 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
+- true：默认账号（root）设置为免密账号。
+- false：默认账号（root）不设置为免密账号。
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
+
+    /**
+    * 指定所修改的账号是否加密密码
+    */
+    @SerializedName("EncryptPassword")
+    @Expose
+    private Boolean EncryptPassword;
 
     /**
      * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
@@ -96,83 +105,91 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get 子账号名称，如果要修改主账号，填 root。 
-     * @return AccountName 子账号名称，如果要修改主账号，填 root。
+     * Get 指定需修改的账号。
+- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
+- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。 
+     * @return AccountName 指定需修改的账号。
+- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
+- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 子账号名称，如果要修改主账号，填 root。
-     * @param AccountName 子账号名称，如果要修改主账号，填 root。
+     * Set 指定需修改的账号。
+- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
+- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
+     * @param AccountName 指定需修改的账号。
+- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
+- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 子账号密码。 
-     * @return AccountPassword 子账号密码。
+     * Get 指定所修改账号访问的密码。 
+     * @return AccountPassword 指定所修改账号访问的密码。
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set 子账号密码。
-     * @param AccountPassword 子账号密码。
+     * Set 指定所修改账号访问的密码。
+     * @param AccountPassword 指定所修改账号访问的密码。
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
     }
 
     /**
-     * Get 子账号描述信息 
-     * @return Remark 子账号描述信息
+     * Get 账号描述信息 
+     * @return Remark 账号描述信息
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 子账号描述信息
-     * @param Remark 子账号描述信息
+     * Set 账号描述信息
+     * @param Remark 账号描述信息
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 账号读写路由策略。
-- master：表示主节点。
-- replication：表示从节点。 
-     * @return ReadonlyPolicy 账号读写路由策略。
-- master：表示主节点。
-- replication：表示从节点。
+     * Get 指定所修改账号读写请求路由的策略。
+- master：表示读写请求路由至主节点。
+- replication：表示读写请求路由至从节点。 
+     * @return ReadonlyPolicy 指定所修改账号读写请求路由的策略。
+- master：表示读写请求路由至主节点。
+- replication：表示读写请求路由至从节点。
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set 账号读写路由策略。
-- master：表示主节点。
-- replication：表示从节点。
-     * @param ReadonlyPolicy 账号读写路由策略。
-- master：表示主节点。
-- replication：表示从节点。
+     * Set 指定所修改账号读写请求路由的策略。
+- master：表示读写请求路由至主节点。
+- replication：表示读写请求路由至从节点。
+     * @param ReadonlyPolicy 指定所修改账号读写请求路由的策略。
+- master：表示读写请求路由至主节点。
+- replication：表示读写请求路由至从节点。
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get 子账号读写策略。
+     * Get 指定所修改账号的读写权限。
 - r：只读。
 - w：只写。
 - rw：读写。 
-     * @return Privilege 子账号读写策略。
+     * @return Privilege 指定所修改账号的读写权限。
 - r：只读。
 - w：只写。
 - rw：读写。
@@ -182,11 +199,11 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Set 子账号读写策略。
+     * Set 指定所修改账号的读写权限。
 - r：只读。
 - w：只写。
 - rw：读写。
-     * @param Privilege 子账号读写策略。
+     * @param Privilege 指定所修改账号的读写权限。
 - r：只读。
 - w：只写。
 - rw：读写。
@@ -196,27 +213,43 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
-- true：将主账号切换为免密账号。
-- false：不切换。 
-     * @return NoAuth 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
-- true：将主账号切换为免密账号。
-- false：不切换。
+     * Get 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
+- true：默认账号（root）设置为免密账号。
+- false：默认账号（root）不设置为免密账号。 
+     * @return NoAuth 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
+- true：默认账号（root）设置为免密账号。
+- false：默认账号（root）不设置为免密账号。
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
-- true：将主账号切换为免密账号。
-- false：不切换。
-     * @param NoAuth 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
-- true：将主账号切换为免密账号。
-- false：不切换。
+     * Set 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
+- true：默认账号（root）设置为免密账号。
+- false：默认账号（root）不设置为免密账号。
+     * @param NoAuth 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
+- true：默认账号（root）设置为免密账号。
+- false：默认账号（root）不设置为免密账号。
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
+    }
+
+    /**
+     * Get 指定所修改的账号是否加密密码 
+     * @return EncryptPassword 指定所修改的账号是否加密密码
+     */
+    public Boolean getEncryptPassword() {
+        return this.EncryptPassword;
+    }
+
+    /**
+     * Set 指定所修改的账号是否加密密码
+     * @param EncryptPassword 指定所修改的账号是否加密密码
+     */
+    public void setEncryptPassword(Boolean EncryptPassword) {
+        this.EncryptPassword = EncryptPassword;
     }
 
     public ModifyInstanceAccountRequest() {
@@ -251,6 +284,9 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
         if (source.NoAuth != null) {
             this.NoAuth = new Boolean(source.NoAuth);
         }
+        if (source.EncryptPassword != null) {
+            this.EncryptPassword = new Boolean(source.EncryptPassword);
+        }
     }
 
 
@@ -265,6 +301,7 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
         this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
+        this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
 
     }
 }

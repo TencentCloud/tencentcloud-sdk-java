@@ -108,6 +108,13 @@ public class UserInfo extends AbstractModel {
     private String [] FreeNs;
 
     /**
+    * 用户是否允许任何人转移域名到本账号
+    */
+    @SerializedName("AllowTransferIn")
+    @Expose
+    private Boolean AllowTransferIn;
+
+    /**
      * Get 用户昵称 
      * @return Nick 用户昵称
      */
@@ -299,6 +306,22 @@ public class UserInfo extends AbstractModel {
         this.FreeNs = FreeNs;
     }
 
+    /**
+     * Get 用户是否允许任何人转移域名到本账号 
+     * @return AllowTransferIn 用户是否允许任何人转移域名到本账号
+     */
+    public Boolean getAllowTransferIn() {
+        return this.AllowTransferIn;
+    }
+
+    /**
+     * Set 用户是否允许任何人转移域名到本账号
+     * @param AllowTransferIn 用户是否允许任何人转移域名到本账号
+     */
+    public void setAllowTransferIn(Boolean AllowTransferIn) {
+        this.AllowTransferIn = AllowTransferIn;
+    }
+
     public UserInfo() {
     }
 
@@ -346,6 +369,9 @@ public class UserInfo extends AbstractModel {
                 this.FreeNs[i] = new String(source.FreeNs[i]);
             }
         }
+        if (source.AllowTransferIn != null) {
+            this.AllowTransferIn = new Boolean(source.AllowTransferIn);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class UserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "WechatBinded", this.WechatBinded);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamArraySimple(map, prefix + "FreeNs.", this.FreeNs);
+        this.setParamSimple(map, prefix + "AllowTransferIn", this.AllowTransferIn);
 
     }
 }

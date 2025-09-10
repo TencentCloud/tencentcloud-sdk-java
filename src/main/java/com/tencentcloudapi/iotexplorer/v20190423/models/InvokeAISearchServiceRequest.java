@@ -101,6 +101,34 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
     private String TimeZone;
 
     /**
+    * 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+    */
+    @SerializedName("SearchMode")
+    @Expose
+    private Long SearchMode;
+
+    /**
+    * 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+    */
+    @SerializedName("VectorSearchRadius")
+    @Expose
+    private Float VectorSearchRadius;
+
+    /**
+    * 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+    */
+    @SerializedName("VectorSearchTopK")
+    @Expose
+    private Long VectorSearchTopK;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -300,6 +328,70 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         this.TimeZone = TimeZone;
     }
 
+    /**
+     * Get 取值为1表示高级搜索，取值为2表示简单搜索，默认为1 
+     * @return SearchMode 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+     */
+    public Long getSearchMode() {
+        return this.SearchMode;
+    }
+
+    /**
+     * Set 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+     * @param SearchMode 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+     */
+    public void setSearchMode(Long SearchMode) {
+        this.SearchMode = SearchMode;
+    }
+
+    /**
+     * Get 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50 
+     * @return Limit 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+     * @param Limit 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5 
+     * @return VectorSearchRadius 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+     */
+    public Float getVectorSearchRadius() {
+        return this.VectorSearchRadius;
+    }
+
+    /**
+     * Set 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+     * @param VectorSearchRadius 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+     */
+    public void setVectorSearchRadius(Float VectorSearchRadius) {
+        this.VectorSearchRadius = VectorSearchRadius;
+    }
+
+    /**
+     * Get 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100 
+     * @return VectorSearchTopK 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+     */
+    public Long getVectorSearchTopK() {
+        return this.VectorSearchTopK;
+    }
+
+    /**
+     * Set 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+     * @param VectorSearchTopK 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+     */
+    public void setVectorSearchTopK(Long VectorSearchTopK) {
+        this.VectorSearchTopK = VectorSearchTopK;
+    }
+
     public InvokeAISearchServiceRequest() {
     }
 
@@ -335,6 +427,18 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         if (source.TimeZone != null) {
             this.TimeZone = new String(source.TimeZone);
         }
+        if (source.SearchMode != null) {
+            this.SearchMode = new Long(source.SearchMode);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.VectorSearchRadius != null) {
+            this.VectorSearchRadius = new Float(source.VectorSearchRadius);
+        }
+        if (source.VectorSearchTopK != null) {
+            this.VectorSearchTopK = new Long(source.VectorSearchTopK);
+        }
     }
 
 
@@ -351,6 +455,10 @@ public class InvokeAISearchServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTimeMs", this.StartTimeMs);
         this.setParamSimple(map, prefix + "EndTimeMs", this.EndTimeMs);
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "SearchMode", this.SearchMode);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "VectorSearchRadius", this.VectorSearchRadius);
+        this.setParamSimple(map, prefix + "VectorSearchTopK", this.VectorSearchTopK);
 
     }
 }

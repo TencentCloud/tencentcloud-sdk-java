@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateParamTemplateRequest extends AbstractModel {
 
     /**
-    * 参数模板名称。
+    * 参数模板名称。字符长度要求为[2,64]。
     */
     @SerializedName("Name")
     @Expose
@@ -39,7 +39,6 @@ public class CreateParamTemplateRequest extends AbstractModel {
 
     /**
     * 产品类型。
-- 2：Redis 2.8 内存版（标准架构）。
 - 6：Redis 4.0 内存版（标准架构）。
 - 7：Redis 4.0 内存版（集群架构）。
 - 8：Redis 5.0 内存版（标准架构）。
@@ -68,16 +67,16 @@ public class CreateParamTemplateRequest extends AbstractModel {
     private InstanceParam [] ParamList;
 
     /**
-     * Get 参数模板名称。 
-     * @return Name 参数模板名称。
+     * Get 参数模板名称。字符长度要求为[2,64]。 
+     * @return Name 参数模板名称。字符长度要求为[2,64]。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 参数模板名称。
-     * @param Name 参数模板名称。
+     * Set 参数模板名称。字符长度要求为[2,64]。
+     * @param Name 参数模板名称。字符长度要求为[2,64]。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -101,7 +100,6 @@ public class CreateParamTemplateRequest extends AbstractModel {
 
     /**
      * Get 产品类型。
-- 2：Redis 2.8 内存版（标准架构）。
 - 6：Redis 4.0 内存版（标准架构）。
 - 7：Redis 4.0 内存版（集群架构）。
 - 8：Redis 5.0 内存版（标准架构）。
@@ -111,7 +109,6 @@ public class CreateParamTemplateRequest extends AbstractModel {
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。 
      * @return ProductType 产品类型。
-- 2：Redis 2.8 内存版（标准架构）。
 - 6：Redis 4.0 内存版（标准架构）。
 - 7：Redis 4.0 内存版（集群架构）。
 - 8：Redis 5.0 内存版（标准架构）。
@@ -127,7 +124,6 @@ public class CreateParamTemplateRequest extends AbstractModel {
 
     /**
      * Set 产品类型。
-- 2：Redis 2.8 内存版（标准架构）。
 - 6：Redis 4.0 内存版（标准架构）。
 - 7：Redis 4.0 内存版（集群架构）。
 - 8：Redis 5.0 内存版（标准架构）。
@@ -137,7 +133,6 @@ public class CreateParamTemplateRequest extends AbstractModel {
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
      * @param ProductType 产品类型。
-- 2：Redis 2.8 内存版（标准架构）。
 - 6：Redis 4.0 内存版（标准架构）。
 - 7：Redis 4.0 内存版（集群架构）。
 - 8：Redis 5.0 内存版（标准架构）。

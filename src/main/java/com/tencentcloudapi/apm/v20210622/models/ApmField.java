@@ -75,6 +75,13 @@ public class ApmField extends AbstractModel {
     private String NameCN;
 
     /**
+    * 指标英文名
+    */
+    @SerializedName("NameEN")
+    @Expose
+    private String NameEN;
+
+    /**
      * Get 指标名 
      * @return Key 指标名
      */
@@ -194,6 +201,22 @@ public class ApmField extends AbstractModel {
         this.NameCN = NameCN;
     }
 
+    /**
+     * Get 指标英文名 
+     * @return NameEN 指标英文名
+     */
+    public String getNameEN() {
+        return this.NameEN;
+    }
+
+    /**
+     * Set 指标英文名
+     * @param NameEN 指标英文名
+     */
+    public void setNameEN(String NameEN) {
+        this.NameEN = NameEN;
+    }
+
     public ApmField() {
     }
 
@@ -229,6 +252,9 @@ public class ApmField extends AbstractModel {
         if (source.NameCN != null) {
             this.NameCN = new String(source.NameCN);
         }
+        if (source.NameEN != null) {
+            this.NameEN = new String(source.NameEN);
+        }
     }
 
 
@@ -243,6 +269,7 @@ public class ApmField extends AbstractModel {
         this.setParamArrayObj(map, prefix + "LastPeriodValue.", this.LastPeriodValue);
         this.setParamSimple(map, prefix + "CompareVal", this.CompareVal);
         this.setParamSimple(map, prefix + "NameCN", this.NameCN);
+        this.setParamSimple(map, prefix + "NameEN", this.NameEN);
 
     }
 }

@@ -32,6 +32,7 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
 
     /**
     * 附加带宽，大于0，单位MB。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -41,6 +42,7 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
     * 单分片的总连接数。
 - 未开启副本只读时，下限为10000，上限为40000。
 - 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
     */
     @SerializedName("ClientLimit")
     @Expose
@@ -63,8 +65,10 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 附加带宽，大于0，单位MB。 
+     * Get 附加带宽，大于0，单位MB。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。 
      * @return Bandwidth 附加带宽，大于0，单位MB。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
      */
     public Long getBandwidth() {
         return this.Bandwidth;
@@ -72,7 +76,9 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
 
     /**
      * Set 附加带宽，大于0，单位MB。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
      * @param Bandwidth 附加带宽，大于0，单位MB。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
@@ -81,10 +87,12 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
     /**
      * Get 单分片的总连接数。
 - 未开启副本只读时，下限为10000，上限为40000。
-- 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。 
+- 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。 
      * @return ClientLimit 单分片的总连接数。
 - 未开启副本只读时，下限为10000，上限为40000。
 - 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
      */
     public Long getClientLimit() {
         return this.ClientLimit;
@@ -94,9 +102,11 @@ public class ModifyConnectionConfigRequest extends AbstractModel {
      * Set 单分片的总连接数。
 - 未开启副本只读时，下限为10000，上限为40000。
 - 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
      * @param ClientLimit 单分片的总连接数。
 - 未开启副本只读时，下限为10000，上限为40000。
 - 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
      */
     public void setClientLimit(Long ClientLimit) {
         this.ClientLimit = ClientLimit;

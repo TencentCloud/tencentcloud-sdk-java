@@ -38,6 +38,13 @@ public class PublishFirmwareUpdateMessageRequest extends AbstractModel {
     private String DeviceName;
 
     /**
+    * 固件类型
+    */
+    @SerializedName("FwType")
+    @Expose
+    private String FwType;
+
+    /**
      * Get 产品 ID。 
      * @return ProductID 产品 ID。
      */
@@ -69,6 +76,22 @@ public class PublishFirmwareUpdateMessageRequest extends AbstractModel {
         this.DeviceName = DeviceName;
     }
 
+    /**
+     * Get 固件类型 
+     * @return FwType 固件类型
+     */
+    public String getFwType() {
+        return this.FwType;
+    }
+
+    /**
+     * Set 固件类型
+     * @param FwType 固件类型
+     */
+    public void setFwType(String FwType) {
+        this.FwType = FwType;
+    }
+
     public PublishFirmwareUpdateMessageRequest() {
     }
 
@@ -83,6 +106,9 @@ public class PublishFirmwareUpdateMessageRequest extends AbstractModel {
         if (source.DeviceName != null) {
             this.DeviceName = new String(source.DeviceName);
         }
+        if (source.FwType != null) {
+            this.FwType = new String(source.FwType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class PublishFirmwareUpdateMessageRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductID", this.ProductID);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "FwType", this.FwType);
 
     }
 }

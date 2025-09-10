@@ -61,19 +61,26 @@ public class CreateInstanceAccountRequest extends AbstractModel {
 
     /**
     * 账户读写权限，支持选择只读与读写权限。
-- r：只读
-- rw: 读写权限
+- r：只读。
+- rw: 读写。
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * 子账号描述信息，长度[0,64] 字节，支持中文。
+    * 账号备注描述信息，长度为[0,64] 字节，支持中文。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
+
+    /**
+    * 是否加密密码
+    */
+    @SerializedName("EncryptPassword")
+    @Expose
+    private Boolean EncryptPassword;
 
     /**
      * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
@@ -173,11 +180,11 @@ public class CreateInstanceAccountRequest extends AbstractModel {
 
     /**
      * Get 账户读写权限，支持选择只读与读写权限。
-- r：只读
-- rw: 读写权限 
+- r：只读。
+- rw: 读写。 
      * @return Privilege 账户读写权限，支持选择只读与读写权限。
-- r：只读
-- rw: 读写权限
+- r：只读。
+- rw: 读写。
      */
     public String getPrivilege() {
         return this.Privilege;
@@ -185,30 +192,46 @@ public class CreateInstanceAccountRequest extends AbstractModel {
 
     /**
      * Set 账户读写权限，支持选择只读与读写权限。
-- r：只读
-- rw: 读写权限
+- r：只读。
+- rw: 读写。
      * @param Privilege 账户读写权限，支持选择只读与读写权限。
-- r：只读
-- rw: 读写权限
+- r：只读。
+- rw: 读写。
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get 子账号描述信息，长度[0,64] 字节，支持中文。 
-     * @return Remark 子账号描述信息，长度[0,64] 字节，支持中文。
+     * Get 账号备注描述信息，长度为[0,64] 字节，支持中文。 
+     * @return Remark 账号备注描述信息，长度为[0,64] 字节，支持中文。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 子账号描述信息，长度[0,64] 字节，支持中文。
-     * @param Remark 子账号描述信息，长度[0,64] 字节，支持中文。
+     * Set 账号备注描述信息，长度为[0,64] 字节，支持中文。
+     * @param Remark 账号备注描述信息，长度为[0,64] 字节，支持中文。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get 是否加密密码 
+     * @return EncryptPassword 是否加密密码
+     */
+    public Boolean getEncryptPassword() {
+        return this.EncryptPassword;
+    }
+
+    /**
+     * Set 是否加密密码
+     * @param EncryptPassword 是否加密密码
+     */
+    public void setEncryptPassword(Boolean EncryptPassword) {
+        this.EncryptPassword = EncryptPassword;
     }
 
     public CreateInstanceAccountRequest() {
@@ -240,6 +263,9 @@ public class CreateInstanceAccountRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.EncryptPassword != null) {
+            this.EncryptPassword = new Boolean(source.EncryptPassword);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class CreateInstanceAccountRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
 
     }
 }

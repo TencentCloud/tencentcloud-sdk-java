@@ -52,7 +52,7 @@ public class ListReleaseItem extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 发布状态
+    * 发布状态，1：待发布，2：发布中，3：发布成功，5：发布失败
     */
     @SerializedName("Status")
     @Expose
@@ -151,16 +151,16 @@ public class ListReleaseItem extends AbstractModel {
     }
 
     /**
-     * Get 发布状态 
-     * @return Status 发布状态
+     * Get 发布状态，1：待发布，2：发布中，3：发布成功，5：发布失败 
+     * @return Status 发布状态，1：待发布，2：发布中，3：发布成功，5：发布失败
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 发布状态
-     * @param Status 发布状态
+     * Set 发布状态，1：待发布，2：发布中，3：发布成功，5：发布失败
+     * @param Status 发布状态，1：待发布，2：发布中，3：发布成功，5：发布失败
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Config extends AbstractModel {
 
     /**
-    * 消息保留时间
+    * 消息保留时间，单位ms。
     */
     @SerializedName("Retention")
     @Expose
@@ -48,7 +48,7 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     private String CleanUpPolicy;
 
     /**
-    * Segment 分片滚动的时长
+    * Segment 分片滚动的时长，单位ms。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentMs")
@@ -64,7 +64,7 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     private Long UncleanLeaderElectionEnable;
 
     /**
-    * Segment 分片滚动的字节数
+    * Segment 分片滚动的字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentBytes")
@@ -72,7 +72,7 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     private Long SegmentBytes;
 
     /**
-    * 最大消息字节数
+    * 最大消息字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMessageBytes")
@@ -80,7 +80,7 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     private Long MaxMessageBytes;
 
     /**
-    * 消息保留文件大小
+    * 消息保留文件大小，单位Bytes
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetentionBytes")
@@ -88,7 +88,7 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     private Long RetentionBytes;
 
     /**
-    * 消息保存的时间类型
+    * 消息保存的时间类型，CreateTime表示生产者创建这条消息的时间;LogAppendTime表示broker接收到消息的时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogMsgTimestampType")
@@ -96,16 +96,16 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     private String LogMsgTimestampType;
 
     /**
-     * Get 消息保留时间 
-     * @return Retention 消息保留时间
+     * Get 消息保留时间，单位ms。 
+     * @return Retention 消息保留时间，单位ms。
      */
     public Long getRetention() {
         return this.Retention;
     }
 
     /**
-     * Set 消息保留时间
-     * @param Retention 消息保留时间
+     * Set 消息保留时间，单位ms。
+     * @param Retention 消息保留时间，单位ms。
      */
     public void setRetention(Long Retention) {
         this.Retention = Retention;
@@ -156,9 +156,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     }
 
     /**
-     * Get Segment 分片滚动的时长
+     * Get Segment 分片滚动的时长，单位ms。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SegmentMs Segment 分片滚动的时长
+     * @return SegmentMs Segment 分片滚动的时长，单位ms。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSegmentMs() {
@@ -166,9 +166,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     }
 
     /**
-     * Set Segment 分片滚动的时长
+     * Set Segment 分片滚动的时长，单位ms。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SegmentMs Segment 分片滚动的时长
+     * @param SegmentMs Segment 分片滚动的时长，单位ms。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentMs(Long SegmentMs) {
@@ -196,9 +196,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     }
 
     /**
-     * Get Segment 分片滚动的字节数
+     * Get Segment 分片滚动的字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SegmentBytes Segment 分片滚动的字节数
+     * @return SegmentBytes Segment 分片滚动的字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSegmentBytes() {
@@ -206,9 +206,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     }
 
     /**
-     * Set Segment 分片滚动的字节数
+     * Set Segment 分片滚动的字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SegmentBytes Segment 分片滚动的字节数
+     * @param SegmentBytes Segment 分片滚动的字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentBytes(Long SegmentBytes) {
@@ -216,9 +216,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     }
 
     /**
-     * Get 最大消息字节数
+     * Get 最大消息字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxMessageBytes 最大消息字节数
+     * @return MaxMessageBytes 最大消息字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMessageBytes() {
@@ -226,9 +226,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     }
 
     /**
-     * Set 最大消息字节数
+     * Set 最大消息字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxMessageBytes 最大消息字节数
+     * @param MaxMessageBytes 最大消息字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
@@ -236,9 +236,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     }
 
     /**
-     * Get 消息保留文件大小
+     * Get 消息保留文件大小，单位Bytes
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetentionBytes 消息保留文件大小
+     * @return RetentionBytes 消息保留文件大小，单位Bytes
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetentionBytes() {
@@ -246,9 +246,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     }
 
     /**
-     * Set 消息保留文件大小
+     * Set 消息保留文件大小，单位Bytes
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetentionBytes 消息保留文件大小
+     * @param RetentionBytes 消息保留文件大小，单位Bytes
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetentionBytes(Long RetentionBytes) {
@@ -256,9 +256,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     }
 
     /**
-     * Get 消息保存的时间类型
+     * Get 消息保存的时间类型，CreateTime表示生产者创建这条消息的时间;LogAppendTime表示broker接收到消息的时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogMsgTimestampType 消息保存的时间类型
+     * @return LogMsgTimestampType 消息保存的时间类型，CreateTime表示生产者创建这条消息的时间;LogAppendTime表示broker接收到消息的时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogMsgTimestampType() {
@@ -266,9 +266,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     }
 
     /**
-     * Set 消息保存的时间类型
+     * Set 消息保存的时间类型，CreateTime表示生产者创建这条消息的时间;LogAppendTime表示broker接收到消息的时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogMsgTimestampType 消息保存的时间类型
+     * @param LogMsgTimestampType 消息保存的时间类型，CreateTime表示生产者创建这条消息的时间;LogAppendTime表示broker接收到消息的时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogMsgTimestampType(String LogMsgTimestampType) {

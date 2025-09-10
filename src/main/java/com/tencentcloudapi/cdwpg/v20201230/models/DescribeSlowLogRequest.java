@@ -87,6 +87,20 @@ public class DescribeSlowLogRequest extends AbstractModel {
     private Float Duration;
 
     /**
+    * 执行用户
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
+    * query 语句
+    */
+    @SerializedName("QueryString")
+    @Expose
+    private String QueryString;
+
+    /**
      * Get 集群实例ID 
      * @return InstanceId 集群实例ID
      */
@@ -230,6 +244,38 @@ public class DescribeSlowLogRequest extends AbstractModel {
         this.Duration = Duration;
     }
 
+    /**
+     * Get 执行用户 
+     * @return UserName 执行用户
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set 执行用户
+     * @param UserName 执行用户
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    /**
+     * Get query 语句 
+     * @return QueryString query 语句
+     */
+    public String getQueryString() {
+        return this.QueryString;
+    }
+
+    /**
+     * Set query 语句
+     * @param QueryString query 语句
+     */
+    public void setQueryString(String QueryString) {
+        this.QueryString = QueryString;
+    }
+
     public DescribeSlowLogRequest() {
     }
 
@@ -265,6 +311,12 @@ public class DescribeSlowLogRequest extends AbstractModel {
         if (source.Duration != null) {
             this.Duration = new Float(source.Duration);
         }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.QueryString != null) {
+            this.QueryString = new String(source.QueryString);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class DescribeSlowLogRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "QueryString", this.QueryString);
 
     }
 }

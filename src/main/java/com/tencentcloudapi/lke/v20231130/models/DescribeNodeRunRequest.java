@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeNodeRunRequest extends AbstractModel {
 
     /**
+    * 应用ID
+    */
+    @SerializedName("AppBizId")
+    @Expose
+    private String AppBizId;
+
+    /**
     * 节点运行实例ID
     */
     @SerializedName("NodeRunId")
     @Expose
     private String NodeRunId;
+
+    /**
+     * Get 应用ID 
+     * @return AppBizId 应用ID
+     */
+    public String getAppBizId() {
+        return this.AppBizId;
+    }
+
+    /**
+     * Set 应用ID
+     * @param AppBizId 应用ID
+     */
+    public void setAppBizId(String AppBizId) {
+        this.AppBizId = AppBizId;
+    }
 
     /**
      * Get 节点运行实例ID 
@@ -54,6 +77,9 @@ public class DescribeNodeRunRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeNodeRunRequest(DescribeNodeRunRequest source) {
+        if (source.AppBizId != null) {
+            this.AppBizId = new String(source.AppBizId);
+        }
         if (source.NodeRunId != null) {
             this.NodeRunId = new String(source.NodeRunId);
         }
@@ -64,6 +90,7 @@ public class DescribeNodeRunRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AppBizId", this.AppBizId);
         this.setParamSimple(map, prefix + "NodeRunId", this.NodeRunId);
 
     }

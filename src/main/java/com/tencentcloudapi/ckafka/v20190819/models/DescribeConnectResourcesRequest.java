@@ -31,7 +31,7 @@ public class DescribeConnectResourcesRequest extends AbstractModel {
     private String Type;
 
     /**
-    * 连接源名称的关键字查询
+    * 连接源名称的关键字查询,支持模糊匹配
     */
     @SerializedName("SearchWord")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeConnectResourcesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100
+    * 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
     */
     @SerializedName("Limit")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeConnectResourcesRequest extends AbstractModel {
     }
 
     /**
-     * Get 连接源名称的关键字查询 
-     * @return SearchWord 连接源名称的关键字查询
+     * Get 连接源名称的关键字查询,支持模糊匹配 
+     * @return SearchWord 连接源名称的关键字查询,支持模糊匹配
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 连接源名称的关键字查询
-     * @param SearchWord 连接源名称的关键字查询
+     * Set 连接源名称的关键字查询,支持模糊匹配
+     * @param SearchWord 连接源名称的关键字查询,支持模糊匹配
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
@@ -107,16 +107,16 @@ public class DescribeConnectResourcesRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100 
-     * @return Limit 返回数量，默认为20，最大值为100
+     * Get 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000) 
+     * @return Limit 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100
-     * @param Limit 返回数量，默认为20，最大值为100
+     * Set 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
+     * @param Limit 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

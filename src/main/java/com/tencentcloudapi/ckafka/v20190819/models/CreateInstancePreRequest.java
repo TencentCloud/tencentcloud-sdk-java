@@ -38,7 +38,7 @@ public class CreateInstancePreRequest extends AbstractModel {
     private Long ZoneId;
 
     /**
-    * 预付费购买时长，例如 "1m",就是一个月
+    * 预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m
     */
     @SerializedName("Period")
     @Expose
@@ -210,16 +210,16 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get 预付费购买时长，例如 "1m",就是一个月 
-     * @return Period 预付费购买时长，例如 "1m",就是一个月
+     * Get 预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m 
+     * @return Period 预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m
      */
     public String getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 预付费购买时长，例如 "1m",就是一个月
-     * @param Period 预付费购买时长，例如 "1m",就是一个月
+     * Set 预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m
+     * @param Period 预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m
      */
     public void setPeriod(String Period) {
         this.Period = Period;

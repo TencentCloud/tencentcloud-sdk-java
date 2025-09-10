@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RestoreInstanceRequest extends AbstractModel {
 
     /**
-    * 待操作的实例ID，可通过 DescribeInstances 接口返回值中的 InstanceId 获取。
+    * 待操作的实例ID，可通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口返回值中的 InstanceId 获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
+    * 备份ID，可通过 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 接口返回的参数 RedisBackupSet 获取。
     */
     @SerializedName("BackupId")
     @Expose
@@ -45,32 +45,32 @@ public class RestoreInstanceRequest extends AbstractModel {
     private String Password;
 
     /**
-     * Get 待操作的实例ID，可通过 DescribeInstances 接口返回值中的 InstanceId 获取。 
-     * @return InstanceId 待操作的实例ID，可通过 DescribeInstances 接口返回值中的 InstanceId 获取。
+     * Get 待操作的实例ID，可通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口返回值中的 InstanceId 获取。 
+     * @return InstanceId 待操作的实例ID，可通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口返回值中的 InstanceId 获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 待操作的实例ID，可通过 DescribeInstances 接口返回值中的 InstanceId 获取。
-     * @param InstanceId 待操作的实例ID，可通过 DescribeInstances 接口返回值中的 InstanceId 获取。
+     * Set 待操作的实例ID，可通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口返回值中的 InstanceId 获取。
+     * @param InstanceId 待操作的实例ID，可通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口返回值中的 InstanceId 获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取 
-     * @return BackupId 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
+     * Get 备份ID，可通过 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 接口返回的参数 RedisBackupSet 获取。 
+     * @return BackupId 备份ID，可通过 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 接口返回的参数 RedisBackupSet 获取。
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
-     * @param BackupId 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
+     * Set 备份ID，可通过 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 接口返回的参数 RedisBackupSet 获取。
+     * @param BackupId 备份ID，可通过 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 接口返回的参数 RedisBackupSet 获取。
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;

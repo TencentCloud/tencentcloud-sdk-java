@@ -395,6 +395,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *断开安卓实例
+     * @param req DisconnectAndroidInstanceRequest
+     * @return DisconnectAndroidInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisconnectAndroidInstanceResponse DisconnectAndroidInstance(DisconnectAndroidInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisconnectAndroidInstance", DisconnectAndroidInstanceResponse.class);
+    }
+
+    /**
      *将一个文件批量分发到多个实例，一次接口调用触发一次文件分发，一次文件分发只会从公网下载一次，然后文件会走内网分发到实例列表中的实例。
      * @param req DistributeFileToAndroidInstancesRequest
      * @return DistributeFileToAndroidInstancesResponse

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ModifyGroupOffsetsRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id,可通过DescribeInstances接口获取
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 消费分组名称
+    * 消费分组名称,可通过DescribeConsumerGroup接口获取
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * 重置offset的策略，入参含义 0. 对齐shift-by参数，代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset)，代表把offset移动到指定的offset位置
+    * 重置offset的策略,入参含义 0. 对齐shift-by参数,代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset),代表把offset移动到指定的offset位置
     */
     @SerializedName("Strategy")
     @Expose
     private Long Strategy;
 
     /**
-    * 需要重置的主题名列表， 不填表示全部
+    * 需要重置的主题名列表
     */
     @SerializedName("Topics")
     @Expose
@@ -59,7 +59,7 @@ public class ModifyGroupOffsetsRequest extends AbstractModel {
     private Long Shift;
 
     /**
-    * 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的时，如果指定的时间不存在消息，则获取最末尾的offset。
+    * 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的是，如果指定的时间不存在消息，则获取最末尾的offset。
     */
     @SerializedName("ShiftTimestamp")
     @Expose
@@ -80,64 +80,64 @@ public class ModifyGroupOffsetsRequest extends AbstractModel {
     private Long [] Partitions;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id,可通过DescribeInstances接口获取 
+     * @return InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @param InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 消费分组名称 
-     * @return Group 消费分组名称
+     * Get 消费分组名称,可通过DescribeConsumerGroup接口获取 
+     * @return Group 消费分组名称,可通过DescribeConsumerGroup接口获取
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 消费分组名称
-     * @param Group 消费分组名称
+     * Set 消费分组名称,可通过DescribeConsumerGroup接口获取
+     * @param Group 消费分组名称,可通过DescribeConsumerGroup接口获取
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get 重置offset的策略，入参含义 0. 对齐shift-by参数，代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset)，代表把offset移动到指定的offset位置 
-     * @return Strategy 重置offset的策略，入参含义 0. 对齐shift-by参数，代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset)，代表把offset移动到指定的offset位置
+     * Get 重置offset的策略,入参含义 0. 对齐shift-by参数,代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset),代表把offset移动到指定的offset位置 
+     * @return Strategy 重置offset的策略,入参含义 0. 对齐shift-by参数,代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset),代表把offset移动到指定的offset位置
      */
     public Long getStrategy() {
         return this.Strategy;
     }
 
     /**
-     * Set 重置offset的策略，入参含义 0. 对齐shift-by参数，代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset)，代表把offset移动到指定的offset位置
-     * @param Strategy 重置offset的策略，入参含义 0. 对齐shift-by参数，代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset)，代表把offset移动到指定的offset位置
+     * Set 重置offset的策略,入参含义 0. 对齐shift-by参数,代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset),代表把offset移动到指定的offset位置
+     * @param Strategy 重置offset的策略,入参含义 0. 对齐shift-by参数,代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset),代表把offset移动到指定的offset位置
      */
     public void setStrategy(Long Strategy) {
         this.Strategy = Strategy;
     }
 
     /**
-     * Get 需要重置的主题名列表， 不填表示全部 
-     * @return Topics 需要重置的主题名列表， 不填表示全部
+     * Get 需要重置的主题名列表 
+     * @return Topics 需要重置的主题名列表
      */
     public String [] getTopics() {
         return this.Topics;
     }
 
     /**
-     * Set 需要重置的主题名列表， 不填表示全部
-     * @param Topics 需要重置的主题名列表， 不填表示全部
+     * Set 需要重置的主题名列表
+     * @param Topics 需要重置的主题名列表
      */
     public void setTopics(String [] Topics) {
         this.Topics = Topics;
@@ -160,16 +160,16 @@ public class ModifyGroupOffsetsRequest extends AbstractModel {
     }
 
     /**
-     * Get 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的时，如果指定的时间不存在消息，则获取最末尾的offset。 
-     * @return ShiftTimestamp 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的时，如果指定的时间不存在消息，则获取最末尾的offset。
+     * Get 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的是，如果指定的时间不存在消息，则获取最末尾的offset。 
+     * @return ShiftTimestamp 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的是，如果指定的时间不存在消息，则获取最末尾的offset。
      */
     public Long getShiftTimestamp() {
         return this.ShiftTimestamp;
     }
 
     /**
-     * Set 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的时，如果指定的时间不存在消息，则获取最末尾的offset。
-     * @param ShiftTimestamp 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的时，如果指定的时间不存在消息，则获取最末尾的offset。
+     * Set 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的是，如果指定的时间不存在消息，则获取最末尾的offset。
+     * @param ShiftTimestamp 单位ms。当strategy为1时，必须包含该字段，其中-2表示重置offset到最开始的位置，-1表示重置到最新的位置(相当于清空)，其它值则代表指定的时间，会获取topic中指定时间的offset然后进行重置，需要注意的是，如果指定的时间不存在消息，则获取最末尾的offset。
      */
     public void setShiftTimestamp(Long ShiftTimestamp) {
         this.ShiftTimestamp = ShiftTimestamp;

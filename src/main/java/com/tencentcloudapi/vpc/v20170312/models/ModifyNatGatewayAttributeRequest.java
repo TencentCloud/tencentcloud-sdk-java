@@ -59,6 +59,13 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
+    * NAT实例是否开启删除保护
+    */
+    @SerializedName("DeletionProtectionEnabled")
+    @Expose
+    private Boolean DeletionProtectionEnabled;
+
+    /**
      * Get NAT网关的ID，形如：`nat-df45454`。 
      * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
@@ -138,6 +145,22 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get NAT实例是否开启删除保护 
+     * @return DeletionProtectionEnabled NAT实例是否开启删除保护
+     */
+    public Boolean getDeletionProtectionEnabled() {
+        return this.DeletionProtectionEnabled;
+    }
+
+    /**
+     * Set NAT实例是否开启删除保护
+     * @param DeletionProtectionEnabled NAT实例是否开启删除保护
+     */
+    public void setDeletionProtectionEnabled(Boolean DeletionProtectionEnabled) {
+        this.DeletionProtectionEnabled = DeletionProtectionEnabled;
+    }
+
     public ModifyNatGatewayAttributeRequest() {
     }
 
@@ -164,6 +187,9 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.DeletionProtectionEnabled != null) {
+            this.DeletionProtectionEnabled = new Boolean(source.DeletionProtectionEnabled);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamSimple(map, prefix + "ModifySecurityGroup", this.ModifySecurityGroup);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
 
     }
 }

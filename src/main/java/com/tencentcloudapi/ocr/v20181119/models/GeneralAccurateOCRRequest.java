@@ -45,7 +45,7 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
     private Boolean IsWords;
 
     /**
-    * 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关
+    * 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
     */
     @SerializedName("EnableDetectSplit")
     @Expose
@@ -73,7 +73,7 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
     private Boolean EnableDetectText;
 
     /**
-    * 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景 
+    * 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景，注：仅ConfigID配置为OCR时支持
     */
     @SerializedName("ConfigID")
     @Expose
@@ -128,16 +128,16 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关 
-     * @return EnableDetectSplit 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关
+     * Get 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。 
+     * @return EnableDetectSplit 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
      */
     public Boolean getEnableDetectSplit() {
         return this.EnableDetectSplit;
     }
 
     /**
-     * Set 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关
-     * @param EnableDetectSplit 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关
+     * Set 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
+     * @param EnableDetectSplit 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
      */
     public void setEnableDetectSplit(Boolean EnableDetectSplit) {
         this.EnableDetectSplit = EnableDetectSplit;
@@ -192,16 +192,16 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
     }
 
     /**
-     * Get 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景  
-     * @return ConfigID 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景 
+     * Get 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景，注：仅ConfigID配置为OCR时支持 
+     * @return ConfigID 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景，注：仅ConfigID配置为OCR时支持
      */
     public String getConfigID() {
         return this.ConfigID;
     }
 
     /**
-     * Set 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景 
-     * @param ConfigID 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景 
+     * Set 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景，注：仅ConfigID配置为OCR时支持
+     * @param ConfigID 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景，注：仅ConfigID配置为OCR时支持
      */
     public void setConfigID(String ConfigID) {
         this.ConfigID = ConfigID;

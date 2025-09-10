@@ -87,6 +87,13 @@ public class CheckLDAPConnectionRequest extends AbstractModel {
     private String DomainId;
 
     /**
+    * 用户名称映射属性
+    */
+    @SerializedName("AttributeUserName")
+    @Expose
+    private String AttributeUserName;
+
+    /**
      * Get 是否开启LDAP认证，必须为true 
      * @return Enable 是否开启LDAP认证，必须为true
      */
@@ -230,6 +237,22 @@ public class CheckLDAPConnectionRequest extends AbstractModel {
         this.DomainId = DomainId;
     }
 
+    /**
+     * Get 用户名称映射属性 
+     * @return AttributeUserName 用户名称映射属性
+     */
+    public String getAttributeUserName() {
+        return this.AttributeUserName;
+    }
+
+    /**
+     * Set 用户名称映射属性
+     * @param AttributeUserName 用户名称映射属性
+     */
+    public void setAttributeUserName(String AttributeUserName) {
+        this.AttributeUserName = AttributeUserName;
+    }
+
     public CheckLDAPConnectionRequest() {
     }
 
@@ -265,6 +288,9 @@ public class CheckLDAPConnectionRequest extends AbstractModel {
         if (source.DomainId != null) {
             this.DomainId = new String(source.DomainId);
         }
+        if (source.AttributeUserName != null) {
+            this.AttributeUserName = new String(source.AttributeUserName);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class CheckLDAPConnectionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
         this.setParamSimple(map, prefix + "IpBackup", this.IpBackup);
         this.setParamSimple(map, prefix + "DomainId", this.DomainId);
+        this.setParamSimple(map, prefix + "AttributeUserName", this.AttributeUserName);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDLPFileDetectResultRequest extends AbstractModel {
 
     /**
-    * 管理域实例ID，用于CAM管理域权限分配
+    * 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
     */
     @SerializedName("DomainInstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDLPFileDetectResultRequest extends AbstractModel {
     private String QueryID;
 
     /**
-     * Get 管理域实例ID，用于CAM管理域权限分配 
-     * @return DomainInstanceId 管理域实例ID，用于CAM管理域权限分配
+     * Get 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。 
+     * @return DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
      */
     public String getDomainInstanceId() {
         return this.DomainInstanceId;
     }
 
     /**
-     * Set 管理域实例ID，用于CAM管理域权限分配
-     * @param DomainInstanceId 管理域实例ID，用于CAM管理域权限分配
+     * Set 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @param DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
      */
     public void setDomainInstanceId(String DomainInstanceId) {
         this.DomainInstanceId = DomainInstanceId;

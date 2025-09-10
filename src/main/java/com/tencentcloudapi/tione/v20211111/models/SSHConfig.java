@@ -64,6 +64,14 @@ public class SSHConfig extends AbstractModel {
     private Boolean IsAddressChanged;
 
     /**
+    * POD访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodSSHInfo")
+    @Expose
+    private PodSSHInfo PodSSHInfo;
+
+    /**
      * Get 是否开启ssh
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Enable 是否开启ssh
@@ -163,6 +171,26 @@ public class SSHConfig extends AbstractModel {
         this.IsAddressChanged = IsAddressChanged;
     }
 
+    /**
+     * Get POD访问信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodSSHInfo POD访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PodSSHInfo getPodSSHInfo() {
+        return this.PodSSHInfo;
+    }
+
+    /**
+     * Set POD访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodSSHInfo POD访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPodSSHInfo(PodSSHInfo PodSSHInfo) {
+        this.PodSSHInfo = PodSSHInfo;
+    }
+
     public SSHConfig() {
     }
 
@@ -186,6 +214,9 @@ public class SSHConfig extends AbstractModel {
         if (source.IsAddressChanged != null) {
             this.IsAddressChanged = new Boolean(source.IsAddressChanged);
         }
+        if (source.PodSSHInfo != null) {
+            this.PodSSHInfo = new PodSSHInfo(source.PodSSHInfo);
+        }
     }
 
 
@@ -198,6 +229,7 @@ public class SSHConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "LoginCommand", this.LoginCommand);
         this.setParamSimple(map, prefix + "IsAddressChanged", this.IsAddressChanged);
+        this.setParamObj(map, prefix + "PodSSHInfo.", this.PodSSHInfo);
 
     }
 }

@@ -180,6 +180,13 @@ public class NatGateway extends AbstractModel {
     private String DedicatedClusterId;
 
     /**
+    * NAT实例是否开启删除保护
+    */
+    @SerializedName("DeletionProtectionEnabled")
+    @Expose
+    private Boolean DeletionProtectionEnabled;
+
+    /**
      * Get NAT网关的ID。 
      * @return NatGatewayId NAT网关的ID。
      */
@@ -539,6 +546,22 @@ public class NatGateway extends AbstractModel {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
+    /**
+     * Get NAT实例是否开启删除保护 
+     * @return DeletionProtectionEnabled NAT实例是否开启删除保护
+     */
+    public Boolean getDeletionProtectionEnabled() {
+        return this.DeletionProtectionEnabled;
+    }
+
+    /**
+     * Set NAT实例是否开启删除保护
+     * @param DeletionProtectionEnabled NAT实例是否开启删除保护
+     */
+    public void setDeletionProtectionEnabled(Boolean DeletionProtectionEnabled) {
+        this.DeletionProtectionEnabled = DeletionProtectionEnabled;
+    }
+
     public NatGateway() {
     }
 
@@ -631,6 +654,9 @@ public class NatGateway extends AbstractModel {
         if (source.DedicatedClusterId != null) {
             this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
+        if (source.DeletionProtectionEnabled != null) {
+            this.DeletionProtectionEnabled = new Boolean(source.DeletionProtectionEnabled);
+        }
     }
 
 
@@ -660,6 +686,7 @@ public class NatGateway extends AbstractModel {
         this.setParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
         this.setParamSimple(map, prefix + "SmartScheduleMode", this.SmartScheduleMode);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
 
     }
 }

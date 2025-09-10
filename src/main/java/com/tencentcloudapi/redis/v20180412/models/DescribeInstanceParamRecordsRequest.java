@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeInstanceParamRecordsRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * 实例 ID 。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 分页大小
+    * 分页大小。默认为100，最大值为 200。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，取Limit整数倍
+    * 偏移量，取Limit整数倍，默认值为0。计算公式：offset=limit*(页码-1)。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 实例 ID 。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID 。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 实例 ID 。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID 。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 分页大小 
-     * @return Limit 分页大小
+     * Get 分页大小。默认为100，最大值为 200。 
+     * @return Limit 分页大小。默认为100，最大值为 200。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小
-     * @param Limit 分页大小
+     * Set 分页大小。默认为100，最大值为 200。
+     * @param Limit 分页大小。默认为100，最大值为 200。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，取Limit整数倍 
-     * @return Offset 偏移量，取Limit整数倍
+     * Get 偏移量，取Limit整数倍，默认值为0。计算公式：offset=limit*(页码-1)。 
+     * @return Offset 偏移量，取Limit整数倍，默认值为0。计算公式：offset=limit*(页码-1)。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，取Limit整数倍
-     * @param Offset 偏移量，取Limit整数倍
+     * Set 偏移量，取Limit整数倍，默认值为0。计算公式：offset=limit*(页码-1)。
+     * @param Offset 偏移量，取Limit整数倍，默认值为0。计算公式：offset=limit*(页码-1)。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

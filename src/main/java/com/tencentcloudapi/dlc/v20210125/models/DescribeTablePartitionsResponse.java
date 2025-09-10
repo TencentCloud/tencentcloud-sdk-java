@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeTablePartitionsResponse extends AbstractModel {
 
     /**
+    * 分区信息值
+    */
+    @SerializedName("MixedPartitions")
+    @Expose
+    private MixedTablePartitions MixedPartitions;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 分区信息值 
+     * @return MixedPartitions 分区信息值
+     */
+    public MixedTablePartitions getMixedPartitions() {
+        return this.MixedPartitions;
+    }
+
+    /**
+     * Set 分区信息值
+     * @param MixedPartitions 分区信息值
+     */
+    public void setMixedPartitions(MixedTablePartitions MixedPartitions) {
+        this.MixedPartitions = MixedPartitions;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeTablePartitionsResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeTablePartitionsResponse(DescribeTablePartitionsResponse source) {
+        if (source.MixedPartitions != null) {
+            this.MixedPartitions = new MixedTablePartitions(source.MixedPartitions);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeTablePartitionsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "MixedPartitions.", this.MixedPartitions);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

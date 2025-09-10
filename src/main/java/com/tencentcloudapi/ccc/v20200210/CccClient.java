@@ -577,6 +577,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *获取通话详情
+     * @param req DescribeSessionDetailRequest
+     * @return DescribeSessionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSessionDetailResponse DescribeSessionDetail(DescribeSessionDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSessionDetail", DescribeSessionDetailResponse.class);
+    }
+
+    /**
      *获取技能组信息列表
      * @param req DescribeSkillGroupInfoListRequest
      * @return DescribeSkillGroupInfoListResponse
@@ -596,6 +607,17 @@ public class CccClient extends AbstractClient{
     public DescribeStaffInfoListResponse DescribeStaffInfoList(DescribeStaffInfoListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeStaffInfoList", DescribeStaffInfoListResponse.class);
+    }
+
+    /**
+     *查询座席状态历史
+     * @param req DescribeStaffStatusHistoryRequest
+     * @return DescribeStaffStatusHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStaffStatusHistoryResponse DescribeStaffStatusHistory(DescribeStaffStatusHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStaffStatusHistory", DescribeStaffStatusHistoryResponse.class);
     }
 
     /**

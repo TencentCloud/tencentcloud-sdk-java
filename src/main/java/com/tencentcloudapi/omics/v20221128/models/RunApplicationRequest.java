@@ -138,6 +138,34 @@ public class RunApplicationRequest extends AbstractModel {
     private String [] VolumeIds;
 
     /**
+    * 是否开启结果通知。
+    */
+    @SerializedName("ResultNotification")
+    @Expose
+    private Boolean ResultNotification;
+
+    /**
+    * 是否开启超时通知。
+    */
+    @SerializedName("TimeoutNotification")
+    @Expose
+    private Boolean TimeoutNotification;
+
+    /**
+    * 任务超时通知时间（单位：分钟），支持5到2880分钟。
+    */
+    @SerializedName("TimeoutNotificationMinutes")
+    @Expose
+    private Long TimeoutNotificationMinutes;
+
+    /**
+    * 接受通知邮件地址列表。
+    */
+    @SerializedName("EmailForNotification")
+    @Expose
+    private String [] EmailForNotification;
+
+    /**
      * Get 应用ID。 
      * @return ApplicationId 应用ID。
      */
@@ -401,6 +429,70 @@ public class RunApplicationRequest extends AbstractModel {
         this.VolumeIds = VolumeIds;
     }
 
+    /**
+     * Get 是否开启结果通知。 
+     * @return ResultNotification 是否开启结果通知。
+     */
+    public Boolean getResultNotification() {
+        return this.ResultNotification;
+    }
+
+    /**
+     * Set 是否开启结果通知。
+     * @param ResultNotification 是否开启结果通知。
+     */
+    public void setResultNotification(Boolean ResultNotification) {
+        this.ResultNotification = ResultNotification;
+    }
+
+    /**
+     * Get 是否开启超时通知。 
+     * @return TimeoutNotification 是否开启超时通知。
+     */
+    public Boolean getTimeoutNotification() {
+        return this.TimeoutNotification;
+    }
+
+    /**
+     * Set 是否开启超时通知。
+     * @param TimeoutNotification 是否开启超时通知。
+     */
+    public void setTimeoutNotification(Boolean TimeoutNotification) {
+        this.TimeoutNotification = TimeoutNotification;
+    }
+
+    /**
+     * Get 任务超时通知时间（单位：分钟），支持5到2880分钟。 
+     * @return TimeoutNotificationMinutes 任务超时通知时间（单位：分钟），支持5到2880分钟。
+     */
+    public Long getTimeoutNotificationMinutes() {
+        return this.TimeoutNotificationMinutes;
+    }
+
+    /**
+     * Set 任务超时通知时间（单位：分钟），支持5到2880分钟。
+     * @param TimeoutNotificationMinutes 任务超时通知时间（单位：分钟），支持5到2880分钟。
+     */
+    public void setTimeoutNotificationMinutes(Long TimeoutNotificationMinutes) {
+        this.TimeoutNotificationMinutes = TimeoutNotificationMinutes;
+    }
+
+    /**
+     * Get 接受通知邮件地址列表。 
+     * @return EmailForNotification 接受通知邮件地址列表。
+     */
+    public String [] getEmailForNotification() {
+        return this.EmailForNotification;
+    }
+
+    /**
+     * Set 接受通知邮件地址列表。
+     * @param EmailForNotification 接受通知邮件地址列表。
+     */
+    public void setEmailForNotification(String [] EmailForNotification) {
+        this.EmailForNotification = EmailForNotification;
+    }
+
     public RunApplicationRequest() {
     }
 
@@ -463,6 +555,21 @@ public class RunApplicationRequest extends AbstractModel {
                 this.VolumeIds[i] = new String(source.VolumeIds[i]);
             }
         }
+        if (source.ResultNotification != null) {
+            this.ResultNotification = new Boolean(source.ResultNotification);
+        }
+        if (source.TimeoutNotification != null) {
+            this.TimeoutNotification = new Boolean(source.TimeoutNotification);
+        }
+        if (source.TimeoutNotificationMinutes != null) {
+            this.TimeoutNotificationMinutes = new Long(source.TimeoutNotificationMinutes);
+        }
+        if (source.EmailForNotification != null) {
+            this.EmailForNotification = new String[source.EmailForNotification.length];
+            for (int i = 0; i < source.EmailForNotification.length; i++) {
+                this.EmailForNotification[i] = new String(source.EmailForNotification[i]);
+            }
+        }
     }
 
 
@@ -486,6 +593,10 @@ public class RunApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkDir", this.WorkDir);
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
         this.setParamArraySimple(map, prefix + "VolumeIds.", this.VolumeIds);
+        this.setParamSimple(map, prefix + "ResultNotification", this.ResultNotification);
+        this.setParamSimple(map, prefix + "TimeoutNotification", this.TimeoutNotification);
+        this.setParamSimple(map, prefix + "TimeoutNotificationMinutes", this.TimeoutNotificationMinutes);
+        this.setParamArraySimple(map, prefix + "EmailForNotification.", this.EmailForNotification);
 
     }
 }

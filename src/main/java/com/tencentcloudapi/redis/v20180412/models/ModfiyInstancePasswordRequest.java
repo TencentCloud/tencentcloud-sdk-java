@@ -48,6 +48,13 @@ public class ModfiyInstancePasswordRequest extends AbstractModel {
     private String Password;
 
     /**
+    * 是否加密密码
+    */
+    @SerializedName("EncryptPassword")
+    @Expose
+    private Boolean EncryptPassword;
+
+    /**
      * Get 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
      * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
@@ -107,6 +114,22 @@ public class ModfiyInstancePasswordRequest extends AbstractModel {
         this.Password = Password;
     }
 
+    /**
+     * Get 是否加密密码 
+     * @return EncryptPassword 是否加密密码
+     */
+    public Boolean getEncryptPassword() {
+        return this.EncryptPassword;
+    }
+
+    /**
+     * Set 是否加密密码
+     * @param EncryptPassword 是否加密密码
+     */
+    public void setEncryptPassword(Boolean EncryptPassword) {
+        this.EncryptPassword = EncryptPassword;
+    }
+
     public ModfiyInstancePasswordRequest() {
     }
 
@@ -124,6 +147,9 @@ public class ModfiyInstancePasswordRequest extends AbstractModel {
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.EncryptPassword != null) {
+            this.EncryptPassword = new Boolean(source.EncryptPassword);
+        }
     }
 
 
@@ -134,6 +160,7 @@ public class ModfiyInstancePasswordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "OldPassword", this.OldPassword);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
 
     }
 }

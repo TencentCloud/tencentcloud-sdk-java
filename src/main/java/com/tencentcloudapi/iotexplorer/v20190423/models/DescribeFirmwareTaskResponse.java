@@ -94,6 +94,62 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
     private String CreatorNickName;
 
     /**
+    * 延迟时间
+    */
+    @SerializedName("DelayTime")
+    @Expose
+    private Long DelayTime;
+
+    /**
+    * 超时时间
+    */
+    @SerializedName("TimeoutInterval")
+    @Expose
+    private Long TimeoutInterval;
+
+    /**
+    * 静默升级or用户确认升级
+    */
+    @SerializedName("UpgradeMethod")
+    @Expose
+    private Long UpgradeMethod;
+
+    /**
+    * 最大重试次数
+    */
+    @SerializedName("MaxRetryNum")
+    @Expose
+    private Long MaxRetryNum;
+
+    /**
+    * 固件类型
+    */
+    @SerializedName("FwType")
+    @Expose
+    private String FwType;
+
+    /**
+    * 重试间隔时间单位min
+    */
+    @SerializedName("RetryInterval")
+    @Expose
+    private Long RetryInterval;
+
+    /**
+    * 是否覆盖任务
+    */
+    @SerializedName("OverrideMode")
+    @Expose
+    private Long OverrideMode;
+
+    /**
+    * 用户自定义消息
+    */
+    @SerializedName("TaskUserDefine")
+    @Expose
+    private String TaskUserDefine;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -261,6 +317,134 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get 延迟时间 
+     * @return DelayTime 延迟时间
+     */
+    public Long getDelayTime() {
+        return this.DelayTime;
+    }
+
+    /**
+     * Set 延迟时间
+     * @param DelayTime 延迟时间
+     */
+    public void setDelayTime(Long DelayTime) {
+        this.DelayTime = DelayTime;
+    }
+
+    /**
+     * Get 超时时间 
+     * @return TimeoutInterval 超时时间
+     */
+    public Long getTimeoutInterval() {
+        return this.TimeoutInterval;
+    }
+
+    /**
+     * Set 超时时间
+     * @param TimeoutInterval 超时时间
+     */
+    public void setTimeoutInterval(Long TimeoutInterval) {
+        this.TimeoutInterval = TimeoutInterval;
+    }
+
+    /**
+     * Get 静默升级or用户确认升级 
+     * @return UpgradeMethod 静默升级or用户确认升级
+     */
+    public Long getUpgradeMethod() {
+        return this.UpgradeMethod;
+    }
+
+    /**
+     * Set 静默升级or用户确认升级
+     * @param UpgradeMethod 静默升级or用户确认升级
+     */
+    public void setUpgradeMethod(Long UpgradeMethod) {
+        this.UpgradeMethod = UpgradeMethod;
+    }
+
+    /**
+     * Get 最大重试次数 
+     * @return MaxRetryNum 最大重试次数
+     */
+    public Long getMaxRetryNum() {
+        return this.MaxRetryNum;
+    }
+
+    /**
+     * Set 最大重试次数
+     * @param MaxRetryNum 最大重试次数
+     */
+    public void setMaxRetryNum(Long MaxRetryNum) {
+        this.MaxRetryNum = MaxRetryNum;
+    }
+
+    /**
+     * Get 固件类型 
+     * @return FwType 固件类型
+     */
+    public String getFwType() {
+        return this.FwType;
+    }
+
+    /**
+     * Set 固件类型
+     * @param FwType 固件类型
+     */
+    public void setFwType(String FwType) {
+        this.FwType = FwType;
+    }
+
+    /**
+     * Get 重试间隔时间单位min 
+     * @return RetryInterval 重试间隔时间单位min
+     */
+    public Long getRetryInterval() {
+        return this.RetryInterval;
+    }
+
+    /**
+     * Set 重试间隔时间单位min
+     * @param RetryInterval 重试间隔时间单位min
+     */
+    public void setRetryInterval(Long RetryInterval) {
+        this.RetryInterval = RetryInterval;
+    }
+
+    /**
+     * Get 是否覆盖任务 
+     * @return OverrideMode 是否覆盖任务
+     */
+    public Long getOverrideMode() {
+        return this.OverrideMode;
+    }
+
+    /**
+     * Set 是否覆盖任务
+     * @param OverrideMode 是否覆盖任务
+     */
+    public void setOverrideMode(Long OverrideMode) {
+        this.OverrideMode = OverrideMode;
+    }
+
+    /**
+     * Get 用户自定义消息 
+     * @return TaskUserDefine 用户自定义消息
+     */
+    public String getTaskUserDefine() {
+        return this.TaskUserDefine;
+    }
+
+    /**
+     * Set 用户自定义消息
+     * @param TaskUserDefine 用户自定义消息
+     */
+    public void setTaskUserDefine(String TaskUserDefine) {
+        this.TaskUserDefine = TaskUserDefine;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -314,6 +498,30 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
         if (source.CreatorNickName != null) {
             this.CreatorNickName = new String(source.CreatorNickName);
         }
+        if (source.DelayTime != null) {
+            this.DelayTime = new Long(source.DelayTime);
+        }
+        if (source.TimeoutInterval != null) {
+            this.TimeoutInterval = new Long(source.TimeoutInterval);
+        }
+        if (source.UpgradeMethod != null) {
+            this.UpgradeMethod = new Long(source.UpgradeMethod);
+        }
+        if (source.MaxRetryNum != null) {
+            this.MaxRetryNum = new Long(source.MaxRetryNum);
+        }
+        if (source.FwType != null) {
+            this.FwType = new String(source.FwType);
+        }
+        if (source.RetryInterval != null) {
+            this.RetryInterval = new Long(source.RetryInterval);
+        }
+        if (source.OverrideMode != null) {
+            this.OverrideMode = new Long(source.OverrideMode);
+        }
+        if (source.TaskUserDefine != null) {
+            this.TaskUserDefine = new String(source.TaskUserDefine);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -334,6 +542,14 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "OriginalVersion", this.OriginalVersion);
         this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
         this.setParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
+        this.setParamSimple(map, prefix + "DelayTime", this.DelayTime);
+        this.setParamSimple(map, prefix + "TimeoutInterval", this.TimeoutInterval);
+        this.setParamSimple(map, prefix + "UpgradeMethod", this.UpgradeMethod);
+        this.setParamSimple(map, prefix + "MaxRetryNum", this.MaxRetryNum);
+        this.setParamSimple(map, prefix + "FwType", this.FwType);
+        this.setParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
+        this.setParamSimple(map, prefix + "OverrideMode", this.OverrideMode);
+        this.setParamSimple(map, prefix + "TaskUserDefine", this.TaskUserDefine);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

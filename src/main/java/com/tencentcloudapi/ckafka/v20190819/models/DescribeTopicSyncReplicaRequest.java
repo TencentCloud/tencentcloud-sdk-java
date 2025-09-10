@@ -45,7 +45,7 @@ public class DescribeTopicSyncReplicaRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 返回数量，不填则默认10，最大值20。
+    * 返回数量，默认值为20，必须大于0。
     */
     @SerializedName("Limit")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeTopicSyncReplicaRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回数量，不填则默认10，最大值20。 
-     * @return Limit 返回数量，不填则默认10，最大值20。
+     * Get 返回数量，默认值为20，必须大于0。 
+     * @return Limit 返回数量，默认值为20，必须大于0。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，不填则默认10，最大值20。
-     * @param Limit 返回数量，不填则默认10，最大值20。
+     * Set 返回数量，默认值为20，必须大于0。
+     * @param Limit 返回数量，默认值为20，必须大于0。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

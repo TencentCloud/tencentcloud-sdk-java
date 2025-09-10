@@ -162,6 +162,27 @@ public class AccessKeyAlarm extends AbstractModel {
     private String [] LeakEvidence;
 
     /**
+    * 是否支持编辑信任账号
+    */
+    @SerializedName("IsSupportEditWhiteAccount")
+    @Expose
+    private Boolean IsSupportEditWhiteAccount;
+
+    /**
+    * 告警证据
+    */
+    @SerializedName("Evidence")
+    @Expose
+    private String Evidence;
+
+    /**
+    * 告警规则标识
+    */
+    @SerializedName("RuleKey")
+    @Expose
+    private String RuleKey;
+
+    /**
      * Get 告警名称 
      * @return Name 告警名称
      */
@@ -485,6 +506,54 @@ public class AccessKeyAlarm extends AbstractModel {
         this.LeakEvidence = LeakEvidence;
     }
 
+    /**
+     * Get 是否支持编辑信任账号 
+     * @return IsSupportEditWhiteAccount 是否支持编辑信任账号
+     */
+    public Boolean getIsSupportEditWhiteAccount() {
+        return this.IsSupportEditWhiteAccount;
+    }
+
+    /**
+     * Set 是否支持编辑信任账号
+     * @param IsSupportEditWhiteAccount 是否支持编辑信任账号
+     */
+    public void setIsSupportEditWhiteAccount(Boolean IsSupportEditWhiteAccount) {
+        this.IsSupportEditWhiteAccount = IsSupportEditWhiteAccount;
+    }
+
+    /**
+     * Get 告警证据 
+     * @return Evidence 告警证据
+     */
+    public String getEvidence() {
+        return this.Evidence;
+    }
+
+    /**
+     * Set 告警证据
+     * @param Evidence 告警证据
+     */
+    public void setEvidence(String Evidence) {
+        this.Evidence = Evidence;
+    }
+
+    /**
+     * Get 告警规则标识 
+     * @return RuleKey 告警规则标识
+     */
+    public String getRuleKey() {
+        return this.RuleKey;
+    }
+
+    /**
+     * Set 告警规则标识
+     * @param RuleKey 告警规则标识
+     */
+    public void setRuleKey(String RuleKey) {
+        this.RuleKey = RuleKey;
+    }
+
     public AccessKeyAlarm() {
     }
 
@@ -556,6 +625,15 @@ public class AccessKeyAlarm extends AbstractModel {
                 this.LeakEvidence[i] = new String(source.LeakEvidence[i]);
             }
         }
+        if (source.IsSupportEditWhiteAccount != null) {
+            this.IsSupportEditWhiteAccount = new Boolean(source.IsSupportEditWhiteAccount);
+        }
+        if (source.Evidence != null) {
+            this.Evidence = new String(source.Evidence);
+        }
+        if (source.RuleKey != null) {
+            this.RuleKey = new String(source.RuleKey);
+        }
     }
 
 
@@ -582,6 +660,9 @@ public class AccessKeyAlarm extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "AppID", this.AppID);
         this.setParamArraySimple(map, prefix + "LeakEvidence.", this.LeakEvidence);
+        this.setParamSimple(map, prefix + "IsSupportEditWhiteAccount", this.IsSupportEditWhiteAccount);
+        this.setParamSimple(map, prefix + "Evidence", this.Evidence);
+        this.setParamSimple(map, prefix + "RuleKey", this.RuleKey);
 
     }
 }

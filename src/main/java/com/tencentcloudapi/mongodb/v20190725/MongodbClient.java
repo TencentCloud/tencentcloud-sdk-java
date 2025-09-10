@@ -595,6 +595,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口（SetDBInstanceDeletionProtection）用于设置实例销毁保护
+     * @param req SetDBInstanceDeletionProtectionRequest
+     * @return SetDBInstanceDeletionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetDBInstanceDeletionProtectionResponse SetDBInstanceDeletionProtection(SetDBInstanceDeletionProtectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetDBInstanceDeletionProtection", SetDBInstanceDeletionProtectionResponse.class);
+    }
+
+    /**
      *本接口（SetInstanceMaintenance ） 用于设置实例维护时间窗。
      * @param req SetInstanceMaintenanceRequest
      * @return SetInstanceMaintenanceResponse

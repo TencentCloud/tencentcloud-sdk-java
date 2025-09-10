@@ -60,6 +60,7 @@ public class AgentPluginInfo extends AbstractModel {
 
     /**
     * 是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableRoleAuth")
     @Expose
@@ -160,8 +161,10 @@ public class AgentPluginInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否使用一键授权 
+     * Get 是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EnableRoleAuth 是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableRoleAuth() {
         return this.EnableRoleAuth;
@@ -169,7 +172,9 @@ public class AgentPluginInfo extends AbstractModel {
 
     /**
      * Set 是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableRoleAuth 是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableRoleAuth(Boolean EnableRoleAuth) {
         this.EnableRoleAuth = EnableRoleAuth;

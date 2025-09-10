@@ -38,7 +38,7 @@ public class InstanceSet extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+    * 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
 
     */
     @SerializedName("Appid")
@@ -461,6 +461,13 @@ public class InstanceSet extends AbstractModel {
     private String BackupMode;
 
     /**
+    * 删除保护开关，0关闭，1开启
+    */
+    @SerializedName("DeleteProtectionSwitch")
+    @Expose
+    private Long DeleteProtectionSwitch;
+
+    /**
      * Get 实例名称。 
      * @return InstanceName 实例名称。
      */
@@ -493,9 +500,9 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
-     * Get 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+     * Get 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
  
-     * @return Appid 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+     * @return Appid 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
 
      */
     public Long getAppid() {
@@ -503,9 +510,9 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
-     * Set 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+     * Set 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
 
-     * @param Appid 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+     * @param Appid 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
 
      */
     public void setAppid(Long Appid) {
@@ -1492,6 +1499,22 @@ public class InstanceSet extends AbstractModel {
         this.BackupMode = BackupMode;
     }
 
+    /**
+     * Get 删除保护开关，0关闭，1开启 
+     * @return DeleteProtectionSwitch 删除保护开关，0关闭，1开启
+     */
+    public Long getDeleteProtectionSwitch() {
+        return this.DeleteProtectionSwitch;
+    }
+
+    /**
+     * Set 删除保护开关，0关闭，1开启
+     * @param DeleteProtectionSwitch 删除保护开关，0关闭，1开启
+     */
+    public void setDeleteProtectionSwitch(Long DeleteProtectionSwitch) {
+        this.DeleteProtectionSwitch = DeleteProtectionSwitch;
+    }
+
     public InstanceSet() {
     }
 
@@ -1692,6 +1715,9 @@ public class InstanceSet extends AbstractModel {
         if (source.BackupMode != null) {
             this.BackupMode = new String(source.BackupMode);
         }
+        if (source.DeleteProtectionSwitch != null) {
+            this.DeleteProtectionSwitch = new Long(source.DeleteProtectionSwitch);
+        }
     }
 
 
@@ -1759,6 +1785,7 @@ public class InstanceSet extends AbstractModel {
         this.setParamSimple(map, prefix + "UpgradeProxyVersion", this.UpgradeProxyVersion);
         this.setParamSimple(map, prefix + "UpgradeRedisVersion", this.UpgradeRedisVersion);
         this.setParamSimple(map, prefix + "BackupMode", this.BackupMode);
+        this.setParamSimple(map, prefix + "DeleteProtectionSwitch", this.DeleteProtectionSwitch);
 
     }
 }

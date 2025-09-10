@@ -220,11 +220,11 @@ public class RunGroup extends AbstractModel {
     private String ErrorMessage;
 
     /**
-    * 运行结果通知方式。
+    * 任务批次通知。
     */
-    @SerializedName("ResultNotify")
+    @SerializedName("Notification")
     @Expose
-    private String ResultNotify;
+    private RunGroupNotification Notification;
 
     /**
     * 创建时间。
@@ -253,6 +253,13 @@ public class RunGroup extends AbstractModel {
     @SerializedName("CreatorId")
     @Expose
     private String CreatorId;
+
+    /**
+    * 运行结果通知方式。
+    */
+    @SerializedName("ResultNotify")
+    @Expose
+    private String ResultNotify;
 
     /**
      * Get 任务批次ID。 
@@ -715,19 +722,19 @@ public class RunGroup extends AbstractModel {
     }
 
     /**
-     * Get 运行结果通知方式。 
-     * @return ResultNotify 运行结果通知方式。
+     * Get 任务批次通知。 
+     * @return Notification 任务批次通知。
      */
-    public String getResultNotify() {
-        return this.ResultNotify;
+    public RunGroupNotification getNotification() {
+        return this.Notification;
     }
 
     /**
-     * Set 运行结果通知方式。
-     * @param ResultNotify 运行结果通知方式。
+     * Set 任务批次通知。
+     * @param Notification 任务批次通知。
      */
-    public void setResultNotify(String ResultNotify) {
-        this.ResultNotify = ResultNotify;
+    public void setNotification(RunGroupNotification Notification) {
+        this.Notification = Notification;
     }
 
     /**
@@ -792,6 +799,22 @@ public class RunGroup extends AbstractModel {
      */
     public void setCreatorId(String CreatorId) {
         this.CreatorId = CreatorId;
+    }
+
+    /**
+     * Get 运行结果通知方式。 
+     * @return ResultNotify 运行结果通知方式。
+     */
+    public String getResultNotify() {
+        return this.ResultNotify;
+    }
+
+    /**
+     * Set 运行结果通知方式。
+     * @param ResultNotify 运行结果通知方式。
+     */
+    public void setResultNotify(String ResultNotify) {
+        this.ResultNotify = ResultNotify;
     }
 
     public RunGroup() {
@@ -889,8 +912,8 @@ public class RunGroup extends AbstractModel {
         if (source.ErrorMessage != null) {
             this.ErrorMessage = new String(source.ErrorMessage);
         }
-        if (source.ResultNotify != null) {
-            this.ResultNotify = new String(source.ResultNotify);
+        if (source.Notification != null) {
+            this.Notification = new RunGroupNotification(source.Notification);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
@@ -903,6 +926,9 @@ public class RunGroup extends AbstractModel {
         }
         if (source.CreatorId != null) {
             this.CreatorId = new String(source.CreatorId);
+        }
+        if (source.ResultNotify != null) {
+            this.ResultNotify = new String(source.ResultNotify);
         }
     }
 
@@ -938,11 +964,12 @@ public class RunGroup extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RunStatusCounts.", this.RunStatusCounts);
         this.setParamObj(map, prefix + "ExecutionTime.", this.ExecutionTime);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
-        this.setParamSimple(map, prefix + "ResultNotify", this.ResultNotify);
+        this.setParamObj(map, prefix + "Notification.", this.Notification);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatorId", this.CreatorId);
+        this.setParamSimple(map, prefix + "ResultNotify", this.ResultNotify);
 
     }
 }

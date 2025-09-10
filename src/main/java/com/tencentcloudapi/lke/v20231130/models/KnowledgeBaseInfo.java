@@ -100,6 +100,13 @@ public class KnowledgeBaseInfo extends AbstractModel {
     private Long [] ProcessingFlags;
 
     /**
+    * 知识库拥有者的名字
+    */
+    @SerializedName("OwnerStaffName")
+    @Expose
+    private String OwnerStaffName;
+
+    /**
      * Get 共享知识库业务ID 
      * @return KnowledgeBizId 共享知识库业务ID
      */
@@ -283,6 +290,22 @@ public class KnowledgeBaseInfo extends AbstractModel {
         this.ProcessingFlags = ProcessingFlags;
     }
 
+    /**
+     * Get 知识库拥有者的名字 
+     * @return OwnerStaffName 知识库拥有者的名字
+     */
+    public String getOwnerStaffName() {
+        return this.OwnerStaffName;
+    }
+
+    /**
+     * Set 知识库拥有者的名字
+     * @param OwnerStaffName 知识库拥有者的名字
+     */
+    public void setOwnerStaffName(String OwnerStaffName) {
+        this.OwnerStaffName = OwnerStaffName;
+    }
+
     public KnowledgeBaseInfo() {
     }
 
@@ -324,6 +347,9 @@ public class KnowledgeBaseInfo extends AbstractModel {
                 this.ProcessingFlags[i] = new Long(source.ProcessingFlags[i]);
             }
         }
+        if (source.OwnerStaffName != null) {
+            this.OwnerStaffName = new String(source.OwnerStaffName);
+        }
     }
 
 
@@ -341,6 +367,7 @@ public class KnowledgeBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "OwnerStaffId", this.OwnerStaffId);
         this.setParamSimple(map, prefix + "DocTotal", this.DocTotal);
         this.setParamArraySimple(map, prefix + "ProcessingFlags.", this.ProcessingFlags);
+        this.setParamSimple(map, prefix + "OwnerStaffName", this.OwnerStaffName);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTopicRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * 实例Id，可通过DescribeInstances接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -73,42 +73,42 @@ public class CreateTopicRequest extends AbstractModel {
     private String CleanUpPolicy;
 
     /**
-    * 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+    * 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * 默认为1
+    * 最小同步副本数，默认为1
     */
     @SerializedName("MinInsyncReplicas")
     @Expose
     private Long MinInsyncReplicas;
 
     /**
-    * 是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
+    * 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
     */
     @SerializedName("UncleanLeaderElectionEnable")
     @Expose
     private Long UncleanLeaderElectionEnable;
 
     /**
-    * 可选参数。消息保留时间，单位ms，当前最小值为60000ms
+    * 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
     */
     @SerializedName("RetentionMs")
     @Expose
     private Long RetentionMs;
 
     /**
-    * Segment分片滚动的时长，单位ms，当前最小为3600000ms
+    * Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
     */
     @SerializedName("SegmentMs")
     @Expose
     private Long SegmentMs;
 
     /**
-    * 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
+    * 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
     */
     @SerializedName("MaxMessageBytes")
     @Expose
@@ -129,7 +129,7 @@ public class CreateTopicRequest extends AbstractModel {
     private String AclRuleName;
 
     /**
-    * 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+    * 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
     */
     @SerializedName("RetentionBytes")
     @Expose
@@ -143,16 +143,16 @@ public class CreateTopicRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 实例Id，可通过DescribeInstances接口获取。 
+     * @return InstanceId 实例Id，可通过DescribeInstances接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 实例Id，可通过DescribeInstances接口获取。
+     * @param InstanceId 实例Id，可通过DescribeInstances接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -255,96 +255,96 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
-     * @return Note 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Get 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-) 
+     * @return Note 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param Note 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Set 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @param Note 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get 默认为1 
-     * @return MinInsyncReplicas 默认为1
+     * Get 最小同步副本数，默认为1 
+     * @return MinInsyncReplicas 最小同步副本数，默认为1
      */
     public Long getMinInsyncReplicas() {
         return this.MinInsyncReplicas;
     }
 
     /**
-     * Set 默认为1
-     * @param MinInsyncReplicas 默认为1
+     * Set 最小同步副本数，默认为1
+     * @param MinInsyncReplicas 最小同步副本数，默认为1
      */
     public void setMinInsyncReplicas(Long MinInsyncReplicas) {
         this.MinInsyncReplicas = MinInsyncReplicas;
     }
 
     /**
-     * Get 是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许 
-     * @return UncleanLeaderElectionEnable 是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
+     * Get 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许 
+     * @return UncleanLeaderElectionEnable 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
      */
     public Long getUncleanLeaderElectionEnable() {
         return this.UncleanLeaderElectionEnable;
     }
 
     /**
-     * Set 是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
-     * @param UncleanLeaderElectionEnable 是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
+     * Set 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
+     * @param UncleanLeaderElectionEnable 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
      */
     public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
     }
 
     /**
-     * Get 可选参数。消息保留时间，单位ms，当前最小值为60000ms 
-     * @return RetentionMs 可选参数。消息保留时间，单位ms，当前最小值为60000ms
+     * Get 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。 
+     * @return RetentionMs 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set 可选参数。消息保留时间，单位ms，当前最小值为60000ms
-     * @param RetentionMs 可选参数。消息保留时间，单位ms，当前最小值为60000ms
+     * Set 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
+     * @param RetentionMs 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
     }
 
     /**
-     * Get Segment分片滚动的时长，单位ms，当前最小为3600000ms 
-     * @return SegmentMs Segment分片滚动的时长，单位ms，当前最小为3600000ms
+     * Get Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。 
+     * @return SegmentMs Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
      */
     public Long getSegmentMs() {
         return this.SegmentMs;
     }
 
     /**
-     * Set Segment分片滚动的时长，单位ms，当前最小为3600000ms
-     * @param SegmentMs Segment分片滚动的时长，单位ms，当前最小为3600000ms
+     * Set Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
+     * @param SegmentMs Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
      */
     public void setSegmentMs(Long SegmentMs) {
         this.SegmentMs = SegmentMs;
     }
 
     /**
-     * Get 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB） 
-     * @return MaxMessageBytes 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
+     * Get 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB） 
+     * @return MaxMessageBytes 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
      */
     public Long getMaxMessageBytes() {
         return this.MaxMessageBytes;
     }
 
     /**
-     * Set 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
-     * @param MaxMessageBytes 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
+     * Set 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
+     * @param MaxMessageBytes 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
         this.MaxMessageBytes = MaxMessageBytes;
@@ -383,16 +383,16 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B 
-     * @return RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     * Get 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。 
+     * @return RetentionBytes 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
      */
     public Long getRetentionBytes() {
         return this.RetentionBytes;
     }
 
     /**
-     * Set 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
-     * @param RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     * Set 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
+     * @param RetentionBytes 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
      */
     public void setRetentionBytes(Long RetentionBytes) {
         this.RetentionBytes = RetentionBytes;

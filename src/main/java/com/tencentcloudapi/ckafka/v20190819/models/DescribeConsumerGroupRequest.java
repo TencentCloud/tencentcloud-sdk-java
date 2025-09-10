@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeConsumerGroupRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * ckafka集群实例Id,通过DescribeInstances接口获取
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 可选，用户需要查询的group名称。
+    * 用户需要查询的group名称。
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 可选，用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
+    * 用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 本次返回个数限制，最大支持50
+    * 返回消费组的限制数量，最大支持50
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移位置
+    * 消费组列表的起始偏移量
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get ckafka集群实例Id,通过DescribeInstances接口获取 
+     * @return InstanceId ckafka集群实例Id,通过DescribeInstances接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set ckafka集群实例Id,通过DescribeInstances接口获取
+     * @param InstanceId ckafka集群实例Id,通过DescribeInstances接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 可选，用户需要查询的group名称。 
-     * @return GroupName 可选，用户需要查询的group名称。
+     * Get 用户需要查询的group名称。 
+     * @return GroupName 用户需要查询的group名称。
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 可选，用户需要查询的group名称。
-     * @param GroupName 可选，用户需要查询的group名称。
+     * Set 用户需要查询的group名称。
+     * @param GroupName 用户需要查询的group名称。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 可选，用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。 
-     * @return TopicName 可选，用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
+     * Get 用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。 
+     * @return TopicName 用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 可选，用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
-     * @param TopicName 可选，用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
+     * Set 用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
+     * @param TopicName 用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 本次返回个数限制，最大支持50 
-     * @return Limit 本次返回个数限制，最大支持50
+     * Get 返回消费组的限制数量，最大支持50 
+     * @return Limit 返回消费组的限制数量，最大支持50
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 本次返回个数限制，最大支持50
-     * @param Limit 本次返回个数限制，最大支持50
+     * Set 返回消费组的限制数量，最大支持50
+     * @param Limit 返回消费组的限制数量，最大支持50
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移位置 
-     * @return Offset 偏移位置
+     * Get 消费组列表的起始偏移量 
+     * @return Offset 消费组列表的起始偏移量
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移位置
-     * @param Offset 偏移位置
+     * Set 消费组列表的起始偏移量
+     * @param Offset 消费组列表的起始偏移量
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -31,8 +31,7 @@ public class AKInfo extends AbstractModel {
     private Long ID;
 
     /**
-    * ak具体值\n
-临时密钥时返回临时密钥
+    * ak具体值 临时密钥时返回临时密钥
     */
     @SerializedName("Name")
     @Expose
@@ -69,20 +68,16 @@ public class AKInfo extends AbstractModel {
     }
 
     /**
-     * Get ak具体值\n
-临时密钥时返回临时密钥 
-     * @return Name ak具体值\n
-临时密钥时返回临时密钥
+     * Get ak具体值 临时密钥时返回临时密钥 
+     * @return Name ak具体值 临时密钥时返回临时密钥
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set ak具体值\n
-临时密钥时返回临时密钥
-     * @param Name ak具体值\n
-临时密钥时返回临时密钥
+     * Set ak具体值 临时密钥时返回临时密钥
+     * @param Name ak具体值 临时密钥时返回临时密钥
      */
     public void setName(String Name) {
         this.Name = Name;

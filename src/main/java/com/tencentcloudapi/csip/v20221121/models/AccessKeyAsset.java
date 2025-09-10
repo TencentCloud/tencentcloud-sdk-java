@@ -137,6 +137,7 @@ public class AccessKeyAsset extends AbstractModel {
     * AK状态 
 0:禁用
 1:已启用
+2:已删除(已在cam侧删除，安全中心仍然存留之前的记录)
     */
     @SerializedName("Status")
     @Expose
@@ -413,10 +414,12 @@ public class AccessKeyAsset extends AbstractModel {
     /**
      * Get AK状态 
 0:禁用
-1:已启用 
+1:已启用
+2:已删除(已在cam侧删除，安全中心仍然存留之前的记录) 
      * @return Status AK状态 
 0:禁用
 1:已启用
+2:已删除(已在cam侧删除，安全中心仍然存留之前的记录)
      */
     public Long getStatus() {
         return this.Status;
@@ -426,9 +429,11 @@ public class AccessKeyAsset extends AbstractModel {
      * Set AK状态 
 0:禁用
 1:已启用
+2:已删除(已在cam侧删除，安全中心仍然存留之前的记录)
      * @param Status AK状态 
 0:禁用
 1:已启用
+2:已删除(已在cam侧删除，安全中心仍然存留之前的记录)
      */
     public void setStatus(Long Status) {
         this.Status = Status;

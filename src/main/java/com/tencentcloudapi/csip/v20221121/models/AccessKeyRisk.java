@@ -171,6 +171,13 @@ public class AccessKeyRisk extends AbstractModel {
     private Long AppID;
 
     /**
+    * 对应风险的查询参数
+    */
+    @SerializedName("QueryParam")
+    @Expose
+    private String QueryParam;
+
+    /**
      * Get 风险名称 
      * @return Name 风险名称
      */
@@ -518,6 +525,22 @@ public class AccessKeyRisk extends AbstractModel {
         this.AppID = AppID;
     }
 
+    /**
+     * Get 对应风险的查询参数 
+     * @return QueryParam 对应风险的查询参数
+     */
+    public String getQueryParam() {
+        return this.QueryParam;
+    }
+
+    /**
+     * Set 对应风险的查询参数
+     * @param QueryParam 对应风险的查询参数
+     */
+    public void setQueryParam(String QueryParam) {
+        this.QueryParam = QueryParam;
+    }
+
     public AccessKeyRisk() {
     }
 
@@ -589,6 +612,9 @@ public class AccessKeyRisk extends AbstractModel {
         if (source.AppID != null) {
             this.AppID = new Long(source.AppID);
         }
+        if (source.QueryParam != null) {
+            this.QueryParam = new String(source.QueryParam);
+        }
     }
 
 
@@ -616,6 +642,7 @@ public class AccessKeyRisk extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
         this.setParamSimple(map, prefix + "AppID", this.AppID);
+        this.setParamSimple(map, prefix + "QueryParam", this.QueryParam);
 
     }
 }

@@ -25,6 +25,7 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
 
     /**
     * 要修改的安全组ID列表，一个或者多个安全组 ID 组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -38,8 +39,10 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-     * Get 要修改的安全组ID列表，一个或者多个安全组 ID 组成的数组。 
+     * Get 要修改的安全组ID列表，一个或者多个安全组 ID 组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。 
      * @return SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组 ID 组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
@@ -47,7 +50,9 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
 
     /**
      * Set 要修改的安全组ID列表，一个或者多个安全组 ID 组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      * @param SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组 ID 组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
