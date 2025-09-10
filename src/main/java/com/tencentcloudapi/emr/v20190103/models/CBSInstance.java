@@ -144,6 +144,20 @@ public class CBSInstance extends AbstractModel {
     private String UnderwriteExpiredTime;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
+    * 云硬盘额外性能值，单位：MB/s
+    */
+    @SerializedName("ThroughputPerformance")
+    @Expose
+    private Long ThroughputPerformance;
+
+    /**
      * Get 云硬盘ID 
      * @return DiskId 云硬盘ID
      */
@@ -419,6 +433,38 @@ public class CBSInstance extends AbstractModel {
         this.UnderwriteExpiredTime = UnderwriteExpiredTime;
     }
 
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 云硬盘额外性能值，单位：MB/s 
+     * @return ThroughputPerformance 云硬盘额外性能值，单位：MB/s
+     */
+    public Long getThroughputPerformance() {
+        return this.ThroughputPerformance;
+    }
+
+    /**
+     * Set 云硬盘额外性能值，单位：MB/s
+     * @param ThroughputPerformance 云硬盘额外性能值，单位：MB/s
+     */
+    public void setThroughputPerformance(Long ThroughputPerformance) {
+        this.ThroughputPerformance = ThroughputPerformance;
+    }
+
     public CBSInstance() {
     }
 
@@ -481,6 +527,15 @@ public class CBSInstance extends AbstractModel {
         if (source.UnderwriteExpiredTime != null) {
             this.UnderwriteExpiredTime = new String(source.UnderwriteExpiredTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
+        if (source.ThroughputPerformance != null) {
+            this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
     }
 
 
@@ -505,6 +560,8 @@ public class CBSInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "Shareable", this.Shareable);
         this.setParamSimple(map, prefix + "EmrResourceId", this.EmrResourceId);
         this.setParamSimple(map, prefix + "UnderwriteExpiredTime", this.UnderwriteExpiredTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
 
     }
 }

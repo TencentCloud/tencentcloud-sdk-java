@@ -48,7 +48,7 @@ public class DescribePermissionRanksInfoResponse extends AbstractModel {
     private String Extra;
 
     /**
-    * 1
+    * 无
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -123,9 +123,9 @@ public class DescribePermissionRanksInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 1
+     * Get 无
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 1
+     * @return Data 无
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RankInfo getData() {
@@ -133,9 +133,9 @@ public class DescribePermissionRanksInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 1
+     * Set 无
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 1
+     * @param Data 无
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(RankInfo Data) {

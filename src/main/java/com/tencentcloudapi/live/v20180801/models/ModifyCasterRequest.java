@@ -38,8 +38,7 @@ public class ModifyCasterRequest extends AbstractModel {
     private String CasterName;
 
     /**
-    * 导播台的描述
-最大允许长度256
+    * 导播台的描述，最大允许长度256
     */
     @SerializedName("Description")
     @Expose
@@ -187,20 +186,16 @@ public class ModifyCasterRequest extends AbstractModel {
     }
 
     /**
-     * Get 导播台的描述
-最大允许长度256 
-     * @return Description 导播台的描述
-最大允许长度256
+     * Get 导播台的描述，最大允许长度256 
+     * @return Description 导播台的描述，最大允许长度256
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 导播台的描述
-最大允许长度256
-     * @param Description 导播台的描述
-最大允许长度256
+     * Set 导播台的描述，最大允许长度256
+     * @param Description 导播台的描述，最大允许长度256
      */
     public void setDescription(String Description) {
         this.Description = Description;

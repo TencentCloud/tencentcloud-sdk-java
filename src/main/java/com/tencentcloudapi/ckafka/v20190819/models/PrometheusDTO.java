@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PrometheusDTO extends AbstractModel {
 
     /**
-    * export类型（jmx_export\node_export）
+    * export类型（JmxExport\NodeExport）
     */
     @SerializedName("Type")
     @Expose
@@ -66,16 +66,16 @@ public class PrometheusDTO extends AbstractModel {
     private String SubnetId;
 
     /**
-     * Get export类型（jmx_export\node_export） 
-     * @return Type export类型（jmx_export\node_export）
+     * Get export类型（JmxExport\NodeExport） 
+     * @return Type export类型（JmxExport\NodeExport）
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set export类型（jmx_export\node_export）
-     * @param Type export类型（jmx_export\node_export）
+     * Set export类型（JmxExport\NodeExport）
+     * @param Type export类型（JmxExport\NodeExport）
      */
     public void setType(String Type) {
         this.Type = Type;

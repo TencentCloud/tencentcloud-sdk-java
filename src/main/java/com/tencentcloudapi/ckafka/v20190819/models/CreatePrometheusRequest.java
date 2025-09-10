@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class CreatePrometheusRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id,可通过DescribeInstances接口获取
+    * ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 私有网络Id
+    * 私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
+
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网Id
+    * 子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get ckafka集群实例Id,可通过DescribeInstances接口获取 
-     * @return InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * Get ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取 
+     * @return InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id,可通过DescribeInstances接口获取
-     * @param InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * Set ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 私有网络Id 
-     * @return VpcId 私有网络Id
+     * Get 私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
+ 
+     * @return VpcId 私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
+
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络Id
-     * @param VpcId 私有网络Id
+     * Set 私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
+
+     * @param VpcId 私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
+
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网Id 
-     * @return SubnetId 子网Id
+     * Get 子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取 
+     * @return SubnetId 子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网Id
-     * @param SubnetId 子网Id
+     * Set 子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取
+     * @param SubnetId 子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

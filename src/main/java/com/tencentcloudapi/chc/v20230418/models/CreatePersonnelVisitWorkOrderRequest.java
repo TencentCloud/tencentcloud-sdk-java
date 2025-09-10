@@ -73,6 +73,13 @@ public class CreatePersonnelVisitWorkOrderRequest extends AbstractModel {
     private String VisitRemark;
 
     /**
+    * 到访人员车辆信息
+    */
+    @SerializedName("CarSet")
+    @Expose
+    private PersonnelVisitCar [] CarSet;
+
+    /**
      * Get 到访人员信息 
      * @return PersonnelSet 到访人员信息
      */
@@ -184,6 +191,22 @@ public class CreatePersonnelVisitWorkOrderRequest extends AbstractModel {
         this.VisitRemark = VisitRemark;
     }
 
+    /**
+     * Get 到访人员车辆信息 
+     * @return CarSet 到访人员车辆信息
+     */
+    public PersonnelVisitCar [] getCarSet() {
+        return this.CarSet;
+    }
+
+    /**
+     * Set 到访人员车辆信息
+     * @param CarSet 到访人员车辆信息
+     */
+    public void setCarSet(PersonnelVisitCar [] CarSet) {
+        this.CarSet = CarSet;
+    }
+
     public CreatePersonnelVisitWorkOrderRequest() {
     }
 
@@ -222,6 +245,12 @@ public class CreatePersonnelVisitWorkOrderRequest extends AbstractModel {
         if (source.VisitRemark != null) {
             this.VisitRemark = new String(source.VisitRemark);
         }
+        if (source.CarSet != null) {
+            this.CarSet = new PersonnelVisitCar[source.CarSet.length];
+            for (int i = 0; i < source.CarSet.length; i++) {
+                this.CarSet[i] = new PersonnelVisitCar(source.CarSet[i]);
+            }
+        }
     }
 
 
@@ -236,6 +265,7 @@ public class CreatePersonnelVisitWorkOrderRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnterEndTime", this.EnterEndTime);
         this.setParamArraySimple(map, prefix + "VisitReason.", this.VisitReason);
         this.setParamSimple(map, prefix + "VisitRemark", this.VisitRemark);
+        this.setParamArrayObj(map, prefix + "CarSet.", this.CarSet);
 
     }
 }

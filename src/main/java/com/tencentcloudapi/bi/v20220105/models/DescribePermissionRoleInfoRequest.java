@@ -31,7 +31,7 @@ public class DescribePermissionRoleInfoRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 页数
+    * 页数 
     */
     @SerializedName("PageNo")
     @Expose
@@ -68,16 +68,16 @@ public class DescribePermissionRoleInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 页数 
-     * @return PageNo 页数
+     * Get 页数  
+     * @return PageNo 页数 
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set 页数
-     * @param PageNo 页数
+     * Set 页数 
+     * @param PageNo 页数 
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;

@@ -92,6 +92,13 @@ BYOC：一机一证
     private String X509Mode;
 
     /**
+    * 单客户端消息收发限速单位 条/秒
+    */
+    @SerializedName("MessageRate")
+    @Expose
+    private Long MessageRate;
+
+    /**
      * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
      * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
@@ -263,6 +270,22 @@ BYOC：一机一证
         this.X509Mode = X509Mode;
     }
 
+    /**
+     * Get 单客户端消息收发限速单位 条/秒 
+     * @return MessageRate 单客户端消息收发限速单位 条/秒
+     */
+    public Long getMessageRate() {
+        return this.MessageRate;
+    }
+
+    /**
+     * Set 单客户端消息收发限速单位 条/秒
+     * @param MessageRate 单客户端消息收发限速单位 条/秒
+     */
+    public void setMessageRate(Long MessageRate) {
+        this.MessageRate = MessageRate;
+    }
+
     public ModifyInstanceRequest() {
     }
 
@@ -298,6 +321,9 @@ BYOC：一机一证
         if (source.X509Mode != null) {
             this.X509Mode = new String(source.X509Mode);
         }
+        if (source.MessageRate != null) {
+            this.MessageRate = new Long(source.MessageRate);
+        }
     }
 
 
@@ -314,6 +340,7 @@ BYOC：一机一证
         this.setParamSimple(map, prefix + "AuthorizationPolicy", this.AuthorizationPolicy);
         this.setParamSimple(map, prefix + "UseDefaultServerCert", this.UseDefaultServerCert);
         this.setParamSimple(map, prefix + "X509Mode", this.X509Mode);
+        this.setParamSimple(map, prefix + "MessageRate", this.MessageRate);
 
     }
 }

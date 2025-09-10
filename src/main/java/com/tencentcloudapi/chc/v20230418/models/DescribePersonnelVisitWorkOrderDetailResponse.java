@@ -59,6 +59,13 @@ public class DescribePersonnelVisitWorkOrderDetailResponse extends AbstractModel
     private String RejectReason;
 
     /**
+    * 到访人员车辆信息
+    */
+    @SerializedName("CarSet")
+    @Expose
+    private PersonnelVisitCar [] CarSet;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +153,22 @@ public class DescribePersonnelVisitWorkOrderDetailResponse extends AbstractModel
     }
 
     /**
+     * Get 到访人员车辆信息 
+     * @return CarSet 到访人员车辆信息
+     */
+    public PersonnelVisitCar [] getCarSet() {
+        return this.CarSet;
+    }
+
+    /**
+     * Set 到访人员车辆信息
+     * @param CarSet 到访人员车辆信息
+     */
+    public void setCarSet(PersonnelVisitCar [] CarSet) {
+        this.CarSet = CarSet;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -190,6 +213,12 @@ public class DescribePersonnelVisitWorkOrderDetailResponse extends AbstractModel
         if (source.RejectReason != null) {
             this.RejectReason = new String(source.RejectReason);
         }
+        if (source.CarSet != null) {
+            this.CarSet = new PersonnelVisitCar[source.CarSet.length];
+            for (int i = 0; i < source.CarSet.length; i++) {
+                this.CarSet[i] = new PersonnelVisitCar(source.CarSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -205,6 +234,7 @@ public class DescribePersonnelVisitWorkOrderDetailResponse extends AbstractModel
         this.setParamArrayObj(map, prefix + "PersonnelSet.", this.PersonnelSet);
         this.setParamSimple(map, prefix + "OrderStatus", this.OrderStatus);
         this.setParamSimple(map, prefix + "RejectReason", this.RejectReason);
+        this.setParamArrayObj(map, prefix + "CarSet.", this.CarSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

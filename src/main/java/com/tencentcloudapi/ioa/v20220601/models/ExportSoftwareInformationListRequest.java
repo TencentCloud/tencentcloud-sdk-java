@@ -39,6 +39,13 @@ public class ExportSoftwareInformationListRequest extends AbstractModel {
     private Condition Condition;
 
     /**
+    * 系统类型0:win 2:mac
+    */
+    @SerializedName("OsType")
+    @Expose
+    private Long OsType;
+
+    /**
      * Get 终端唯一标识Mid 
      * @return Mid 终端唯一标识Mid
      */
@@ -74,6 +81,22 @@ public class ExportSoftwareInformationListRequest extends AbstractModel {
         this.Condition = Condition;
     }
 
+    /**
+     * Get 系统类型0:win 2:mac 
+     * @return OsType 系统类型0:win 2:mac
+     */
+    public Long getOsType() {
+        return this.OsType;
+    }
+
+    /**
+     * Set 系统类型0:win 2:mac
+     * @param OsType 系统类型0:win 2:mac
+     */
+    public void setOsType(Long OsType) {
+        this.OsType = OsType;
+    }
+
     public ExportSoftwareInformationListRequest() {
     }
 
@@ -88,6 +111,9 @@ public class ExportSoftwareInformationListRequest extends AbstractModel {
         if (source.Condition != null) {
             this.Condition = new Condition(source.Condition);
         }
+        if (source.OsType != null) {
+            this.OsType = new Long(source.OsType);
+        }
     }
 
 
@@ -97,6 +123,7 @@ public class ExportSoftwareInformationListRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Mid", this.Mid);
         this.setParamObj(map, prefix + "Condition.", this.Condition);
+        this.setParamSimple(map, prefix + "OsType", this.OsType);
 
     }
 }

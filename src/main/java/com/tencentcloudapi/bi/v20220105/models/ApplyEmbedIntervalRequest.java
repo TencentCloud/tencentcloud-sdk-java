@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApplyEmbedIntervalRequest extends AbstractModel {
 
     /**
-    * 分享项目id，必选
+    * 分享项目id
     */
     @SerializedName("ProjectId")
     @Expose
@@ -69,16 +69,16 @@ project，ChatBI嵌出时
     private String Scope;
 
     /**
-     * Get 分享项目id，必选 
-     * @return ProjectId 分享项目id，必选
+     * Get 分享项目id 
+     * @return ProjectId 分享项目id
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 分享项目id，必选
-     * @param ProjectId 分享项目id，必选
+     * Set 分享项目id
+     * @param ProjectId 分享项目id
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

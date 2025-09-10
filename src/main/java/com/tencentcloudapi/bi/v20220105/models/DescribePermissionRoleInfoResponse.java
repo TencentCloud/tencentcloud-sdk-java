@@ -48,7 +48,7 @@ public class DescribePermissionRoleInfoResponse extends AbstractModel {
     private String Msg;
 
     /**
-    * 112
+    * 112 
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
@@ -123,9 +123,9 @@ public class DescribePermissionRoleInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 112
+     * Get 112 
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extra 112
+     * @return Extra 112 
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
@@ -133,9 +133,9 @@ public class DescribePermissionRoleInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 112
+     * Set 112 
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extra 112
+     * @param Extra 112 
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {

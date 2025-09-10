@@ -40,6 +40,20 @@ public class GetEmbeddingRequest extends AbstractModel {
     private String [] Inputs;
 
     /**
+    * 说明：文本向量化的类型，为使得检索任务有更好的检索效果，建议区分查询文本（query）和文档文本（document）类型, 聚类、分类等对称任务可以不用特殊指定，采用系统默认值document即可。
+    */
+    @SerializedName("TextType")
+    @Expose
+    private String TextType;
+
+    /**
+    * 说明：自定义任务指令词，当且仅当TextType=query时，生效
+    */
+    @SerializedName("Instruction")
+    @Expose
+    private String Instruction;
+
+    /**
      * Get 说明：选择生成向量的模型
 备注：仅一个模型可选 
      * @return Model 说明：选择生成向量的模型
@@ -79,6 +93,38 @@ public class GetEmbeddingRequest extends AbstractModel {
         this.Inputs = Inputs;
     }
 
+    /**
+     * Get 说明：文本向量化的类型，为使得检索任务有更好的检索效果，建议区分查询文本（query）和文档文本（document）类型, 聚类、分类等对称任务可以不用特殊指定，采用系统默认值document即可。 
+     * @return TextType 说明：文本向量化的类型，为使得检索任务有更好的检索效果，建议区分查询文本（query）和文档文本（document）类型, 聚类、分类等对称任务可以不用特殊指定，采用系统默认值document即可。
+     */
+    public String getTextType() {
+        return this.TextType;
+    }
+
+    /**
+     * Set 说明：文本向量化的类型，为使得检索任务有更好的检索效果，建议区分查询文本（query）和文档文本（document）类型, 聚类、分类等对称任务可以不用特殊指定，采用系统默认值document即可。
+     * @param TextType 说明：文本向量化的类型，为使得检索任务有更好的检索效果，建议区分查询文本（query）和文档文本（document）类型, 聚类、分类等对称任务可以不用特殊指定，采用系统默认值document即可。
+     */
+    public void setTextType(String TextType) {
+        this.TextType = TextType;
+    }
+
+    /**
+     * Get 说明：自定义任务指令词，当且仅当TextType=query时，生效 
+     * @return Instruction 说明：自定义任务指令词，当且仅当TextType=query时，生效
+     */
+    public String getInstruction() {
+        return this.Instruction;
+    }
+
+    /**
+     * Set 说明：自定义任务指令词，当且仅当TextType=query时，生效
+     * @param Instruction 说明：自定义任务指令词，当且仅当TextType=query时，生效
+     */
+    public void setInstruction(String Instruction) {
+        this.Instruction = Instruction;
+    }
+
     public GetEmbeddingRequest() {
     }
 
@@ -96,6 +142,12 @@ public class GetEmbeddingRequest extends AbstractModel {
                 this.Inputs[i] = new String(source.Inputs[i]);
             }
         }
+        if (source.TextType != null) {
+            this.TextType = new String(source.TextType);
+        }
+        if (source.Instruction != null) {
+            this.Instruction = new String(source.Instruction);
+        }
     }
 
 
@@ -105,6 +157,8 @@ public class GetEmbeddingRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamArraySimple(map, prefix + "Inputs.", this.Inputs);
+        this.setParamSimple(map, prefix + "TextType", this.TextType);
+        this.setParamSimple(map, prefix + "Instruction", this.Instruction);
 
     }
 }

@@ -66,7 +66,7 @@ public class AlarmInfo extends AbstractModel {
     private Long AlarmPeriod;
 
     /**
-    * 关联的告警通知模板列表。
+    * 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
     */
     @SerializedName("AlarmNoticeIds")
     @Expose
@@ -173,6 +173,13 @@ Condition互斥。
     private MultiCondition [] MultiConditions;
 
     /**
+    * 云监控通知渠道相关信息，和AlarmNoticeIds互斥
+    */
+    @SerializedName("MonitorNotice")
+    @Expose
+    private MonitorNotice MonitorNotice;
+
+    /**
      * Get 告警策略名称。 
      * @return Name 告警策略名称。
      */
@@ -269,16 +276,16 @@ Condition互斥。
     }
 
     /**
-     * Get 关联的告警通知模板列表。 
-     * @return AlarmNoticeIds 关联的告警通知模板列表。
+     * Get 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥 
+     * @return AlarmNoticeIds 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
      */
     public String [] getAlarmNoticeIds() {
         return this.AlarmNoticeIds;
     }
 
     /**
-     * Set 关联的告警通知模板列表。
-     * @param AlarmNoticeIds 关联的告警通知模板列表。
+     * Set 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
+     * @param AlarmNoticeIds 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
      */
     public void setAlarmNoticeIds(String [] AlarmNoticeIds) {
         this.AlarmNoticeIds = AlarmNoticeIds;
@@ -516,6 +523,22 @@ Condition互斥。
         this.MultiConditions = MultiConditions;
     }
 
+    /**
+     * Get 云监控通知渠道相关信息，和AlarmNoticeIds互斥 
+     * @return MonitorNotice 云监控通知渠道相关信息，和AlarmNoticeIds互斥
+     */
+    public MonitorNotice getMonitorNotice() {
+        return this.MonitorNotice;
+    }
+
+    /**
+     * Set 云监控通知渠道相关信息，和AlarmNoticeIds互斥
+     * @param MonitorNotice 云监控通知渠道相关信息，和AlarmNoticeIds互斥
+     */
+    public void setMonitorNotice(MonitorNotice MonitorNotice) {
+        this.MonitorNotice = MonitorNotice;
+    }
+
     public AlarmInfo() {
     }
 
@@ -608,6 +631,9 @@ Condition互斥。
                 this.MultiConditions[i] = new MultiCondition(source.MultiConditions[i]);
             }
         }
+        if (source.MonitorNotice != null) {
+            this.MonitorNotice = new MonitorNotice(source.MonitorNotice);
+        }
     }
 
 
@@ -636,6 +662,7 @@ Condition互斥。
         this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
         this.setParamArrayObj(map, prefix + "Classifications.", this.Classifications);
         this.setParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
+        this.setParamObj(map, prefix + "MonitorNotice.", this.MonitorNotice);
 
     }
 }

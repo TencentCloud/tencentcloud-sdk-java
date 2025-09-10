@@ -246,6 +246,20 @@ API：通过API手动注册
     private Long ServerCertLimit;
 
     /**
+    * topic前缀最大层级
+    */
+    @SerializedName("TopicPrefixSlashLimit")
+    @Expose
+    private Long TopicPrefixSlashLimit;
+
+    /**
+    * 单客户端发送消息限速，单位 条/秒
+    */
+    @SerializedName("MessageRate")
+    @Expose
+    private Long MessageRate;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -769,6 +783,38 @@ API：通过API手动注册
     }
 
     /**
+     * Get topic前缀最大层级 
+     * @return TopicPrefixSlashLimit topic前缀最大层级
+     */
+    public Long getTopicPrefixSlashLimit() {
+        return this.TopicPrefixSlashLimit;
+    }
+
+    /**
+     * Set topic前缀最大层级
+     * @param TopicPrefixSlashLimit topic前缀最大层级
+     */
+    public void setTopicPrefixSlashLimit(Long TopicPrefixSlashLimit) {
+        this.TopicPrefixSlashLimit = TopicPrefixSlashLimit;
+    }
+
+    /**
+     * Get 单客户端发送消息限速，单位 条/秒 
+     * @return MessageRate 单客户端发送消息限速，单位 条/秒
+     */
+    public Long getMessageRate() {
+        return this.MessageRate;
+    }
+
+    /**
+     * Set 单客户端发送消息限速，单位 条/秒
+     * @param MessageRate 单客户端发送消息限速，单位 条/秒
+     */
+    public void setMessageRate(Long MessageRate) {
+        this.MessageRate = MessageRate;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -885,6 +931,12 @@ API：通过API手动注册
         if (source.ServerCertLimit != null) {
             this.ServerCertLimit = new Long(source.ServerCertLimit);
         }
+        if (source.TopicPrefixSlashLimit != null) {
+            this.TopicPrefixSlashLimit = new Long(source.TopicPrefixSlashLimit);
+        }
+        if (source.MessageRate != null) {
+            this.MessageRate = new Long(source.MessageRate);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -926,6 +978,8 @@ API：通过API手动注册
         this.setParamSimple(map, prefix + "UseDefaultServerCert", this.UseDefaultServerCert);
         this.setParamSimple(map, prefix + "TrustedCaLimit", this.TrustedCaLimit);
         this.setParamSimple(map, prefix + "ServerCertLimit", this.ServerCertLimit);
+        this.setParamSimple(map, prefix + "TopicPrefixSlashLimit", this.TopicPrefixSlashLimit);
+        this.setParamSimple(map, prefix + "MessageRate", this.MessageRate);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

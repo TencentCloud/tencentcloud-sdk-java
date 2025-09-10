@@ -31,6 +31,20 @@ public class StopInstancesRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
+    * 关机类型。
+取值范围： 
+
+- SOFT：表示软关机
+- HARD：表示硬关机 
+- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+
+默认取值：SOFT_FIRST
+    */
+    @SerializedName("StopType")
+    @Expose
+    private String StopType;
+
+    /**
      * Get 实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 
      * @return InstanceIds 实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
      */
@@ -44,6 +58,50 @@ public class StopInstancesRequest extends AbstractModel {
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get 关机类型。
+取值范围： 
+
+- SOFT：表示软关机
+- HARD：表示硬关机 
+- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+
+默认取值：SOFT_FIRST 
+     * @return StopType 关机类型。
+取值范围： 
+
+- SOFT：表示软关机
+- HARD：表示硬关机 
+- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+
+默认取值：SOFT_FIRST
+     */
+    public String getStopType() {
+        return this.StopType;
+    }
+
+    /**
+     * Set 关机类型。
+取值范围： 
+
+- SOFT：表示软关机
+- HARD：表示硬关机 
+- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+
+默认取值：SOFT_FIRST
+     * @param StopType 关机类型。
+取值范围： 
+
+- SOFT：表示软关机
+- HARD：表示硬关机 
+- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+
+默认取值：SOFT_FIRST
+     */
+    public void setStopType(String StopType) {
+        this.StopType = StopType;
     }
 
     public StopInstancesRequest() {
@@ -60,6 +118,9 @@ public class StopInstancesRequest extends AbstractModel {
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.StopType != null) {
+            this.StopType = new String(source.StopType);
+        }
     }
 
 
@@ -68,6 +129,7 @@ public class StopInstancesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "StopType", this.StopType);
 
     }
 }

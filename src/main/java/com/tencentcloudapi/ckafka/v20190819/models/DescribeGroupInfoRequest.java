@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeGroupInfoRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id,可通过DescribeInstances接口获取
+    * ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Kafka 消费分组列表,可通过DescribeConsumerGroup接口获取
+    * Kafka 消费分组列表,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
     */
     @SerializedName("GroupList")
     @Expose
     private String [] GroupList;
 
     /**
-     * Get ckafka集群实例Id,可通过DescribeInstances接口获取 
-     * @return InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * Get ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取 
+     * @return InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id,可通过DescribeInstances接口获取
-     * @param InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * Set ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Kafka 消费分组列表,可通过DescribeConsumerGroup接口获取 
-     * @return GroupList Kafka 消费分组列表,可通过DescribeConsumerGroup接口获取
+     * Get Kafka 消费分组列表,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取 
+     * @return GroupList Kafka 消费分组列表,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
      */
     public String [] getGroupList() {
         return this.GroupList;
     }
 
     /**
-     * Set Kafka 消费分组列表,可通过DescribeConsumerGroup接口获取
-     * @param GroupList Kafka 消费分组列表,可通过DescribeConsumerGroup接口获取
+     * Set Kafka 消费分组列表,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
+     * @param GroupList Kafka 消费分组列表,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
      */
     public void setGroupList(String [] GroupList) {
         this.GroupList = GroupList;

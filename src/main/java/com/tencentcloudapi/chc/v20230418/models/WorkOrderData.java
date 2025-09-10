@@ -73,6 +73,13 @@ public class WorkOrderData extends AbstractModel {
     private String FinishTime;
 
     /**
+    * 工单关联的dcops单号
+    */
+    @SerializedName("TicketId")
+    @Expose
+    private String TicketId;
+
+    /**
      * Get 工单号 
      * @return WorkOrderId 工单号
      */
@@ -184,6 +191,22 @@ public class WorkOrderData extends AbstractModel {
         this.FinishTime = FinishTime;
     }
 
+    /**
+     * Get 工单关联的dcops单号 
+     * @return TicketId 工单关联的dcops单号
+     */
+    public String getTicketId() {
+        return this.TicketId;
+    }
+
+    /**
+     * Set 工单关联的dcops单号
+     * @param TicketId 工单关联的dcops单号
+     */
+    public void setTicketId(String TicketId) {
+        this.TicketId = TicketId;
+    }
+
     public WorkOrderData() {
     }
 
@@ -213,6 +236,9 @@ public class WorkOrderData extends AbstractModel {
         if (source.FinishTime != null) {
             this.FinishTime = new String(source.FinishTime);
         }
+        if (source.TicketId != null) {
+            this.TicketId = new String(source.TicketId);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class WorkOrderData extends AbstractModel {
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
+        this.setParamSimple(map, prefix + "TicketId", this.TicketId);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteAclRuleRequest extends AbstractModel {
 
     /**
-    * 实例id信息，可通过DescribeInstances接口获取。
+    * 实例id信息，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteAclRuleRequest extends AbstractModel {
     private String RuleName;
 
     /**
-     * Get 实例id信息，可通过DescribeInstances接口获取。 
-     * @return InstanceId 实例id信息，可通过DescribeInstances接口获取。
+     * Get 实例id信息，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取 
+     * @return InstanceId 实例id信息，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id信息，可通过DescribeInstances接口获取。
-     * @param InstanceId 实例id信息，可通过DescribeInstances接口获取。
+     * Set 实例id信息，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param InstanceId 实例id信息，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

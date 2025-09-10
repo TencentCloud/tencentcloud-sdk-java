@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BatchCreateAclRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id，可通过DescribeInstances接口获取。
+    * ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,30 +38,30 @@ public class BatchCreateAclRequest extends AbstractModel {
     private Long ResourceType;
 
     /**
-    * 资源列表数组，可通过DescribeTopic接口获取。
+    * 资源列表数组，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取。
     */
     @SerializedName("ResourceNames")
     @Expose
     private String [] ResourceNames;
 
     /**
-    * 设置的ACL规则列表，可通过DescribeAclRule接口获取。
+    * 设置的ACL规则列表，可通过[DescribeAclRule](https://cloud.tencent.com/document/product/597/89217)接口获取。
     */
     @SerializedName("RuleList")
     @Expose
     private AclRuleInfo [] RuleList;
 
     /**
-     * Get ckafka集群实例Id，可通过DescribeInstances接口获取。 
-     * @return InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * Get ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取 
+     * @return InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id，可通过DescribeInstances接口获取。
-     * @param InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * Set ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -84,32 +84,32 @@ public class BatchCreateAclRequest extends AbstractModel {
     }
 
     /**
-     * Get 资源列表数组，可通过DescribeTopic接口获取。 
-     * @return ResourceNames 资源列表数组，可通过DescribeTopic接口获取。
+     * Get 资源列表数组，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取。 
+     * @return ResourceNames 资源列表数组，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取。
      */
     public String [] getResourceNames() {
         return this.ResourceNames;
     }
 
     /**
-     * Set 资源列表数组，可通过DescribeTopic接口获取。
-     * @param ResourceNames 资源列表数组，可通过DescribeTopic接口获取。
+     * Set 资源列表数组，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取。
+     * @param ResourceNames 资源列表数组，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取。
      */
     public void setResourceNames(String [] ResourceNames) {
         this.ResourceNames = ResourceNames;
     }
 
     /**
-     * Get 设置的ACL规则列表，可通过DescribeAclRule接口获取。 
-     * @return RuleList 设置的ACL规则列表，可通过DescribeAclRule接口获取。
+     * Get 设置的ACL规则列表，可通过[DescribeAclRule](https://cloud.tencent.com/document/product/597/89217)接口获取。 
+     * @return RuleList 设置的ACL规则列表，可通过[DescribeAclRule](https://cloud.tencent.com/document/product/597/89217)接口获取。
      */
     public AclRuleInfo [] getRuleList() {
         return this.RuleList;
     }
 
     /**
-     * Set 设置的ACL规则列表，可通过DescribeAclRule接口获取。
-     * @param RuleList 设置的ACL规则列表，可通过DescribeAclRule接口获取。
+     * Set 设置的ACL规则列表，可通过[DescribeAclRule](https://cloud.tencent.com/document/product/597/89217)接口获取。
+     * @param RuleList 设置的ACL规则列表，可通过[DescribeAclRule](https://cloud.tencent.com/document/product/597/89217)接口获取。
      */
     public void setRuleList(AclRuleInfo [] RuleList) {
         this.RuleList = RuleList;

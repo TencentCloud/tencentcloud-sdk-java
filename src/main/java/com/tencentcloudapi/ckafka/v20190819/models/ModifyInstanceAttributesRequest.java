@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceAttributesRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id,可通过DescribeInstances接口获取
+    * ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
     */
     @SerializedName("InstanceId")
     @Expose
@@ -101,16 +101,16 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     private Long DeleteProtectionEnable;
 
     /**
-     * Get ckafka集群实例Id,可通过DescribeInstances接口获取 
-     * @return InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * Get ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取 
+     * @return InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id,可通过DescribeInstances接口获取
-     * @param InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * Set ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

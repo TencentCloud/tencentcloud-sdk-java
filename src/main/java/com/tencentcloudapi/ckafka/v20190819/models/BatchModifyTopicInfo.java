@@ -80,14 +80,14 @@ public class BatchModifyTopicInfo extends AbstractModel {
     private Long RetentionMs;
 
     /**
-    * topic维度的消息保留大小，范围1 MB到1024 GB
+    * topic维度的消息保留大小，单位为Byte，范围1 GB到1024 GB。
     */
     @SerializedName("RetentionBytes")
     @Expose
     private Long RetentionBytes;
 
     /**
-    * Segment分片滚动的时长（毫秒），范围1 到90 天
+    * Segment分片滚动的时长（毫秒），范围1 天到90 天
     */
     @SerializedName("SegmentMs")
     @Expose
@@ -236,32 +236,32 @@ public class BatchModifyTopicInfo extends AbstractModel {
     }
 
     /**
-     * Get topic维度的消息保留大小，范围1 MB到1024 GB 
-     * @return RetentionBytes topic维度的消息保留大小，范围1 MB到1024 GB
+     * Get topic维度的消息保留大小，单位为Byte，范围1 GB到1024 GB。 
+     * @return RetentionBytes topic维度的消息保留大小，单位为Byte，范围1 GB到1024 GB。
      */
     public Long getRetentionBytes() {
         return this.RetentionBytes;
     }
 
     /**
-     * Set topic维度的消息保留大小，范围1 MB到1024 GB
-     * @param RetentionBytes topic维度的消息保留大小，范围1 MB到1024 GB
+     * Set topic维度的消息保留大小，单位为Byte，范围1 GB到1024 GB。
+     * @param RetentionBytes topic维度的消息保留大小，单位为Byte，范围1 GB到1024 GB。
      */
     public void setRetentionBytes(Long RetentionBytes) {
         this.RetentionBytes = RetentionBytes;
     }
 
     /**
-     * Get Segment分片滚动的时长（毫秒），范围1 到90 天 
-     * @return SegmentMs Segment分片滚动的时长（毫秒），范围1 到90 天
+     * Get Segment分片滚动的时长（毫秒），范围1 天到90 天 
+     * @return SegmentMs Segment分片滚动的时长（毫秒），范围1 天到90 天
      */
     public Long getSegmentMs() {
         return this.SegmentMs;
     }
 
     /**
-     * Set Segment分片滚动的时长（毫秒），范围1 到90 天
-     * @param SegmentMs Segment分片滚动的时长（毫秒），范围1 到90 天
+     * Set Segment分片滚动的时长（毫秒），范围1 天到90 天
+     * @param SegmentMs Segment分片滚动的时长（毫秒），范围1 天到90 天
      */
     public void setSegmentMs(Long SegmentMs) {
         this.SegmentMs = SegmentMs;

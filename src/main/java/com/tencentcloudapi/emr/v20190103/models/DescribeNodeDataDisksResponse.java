@@ -46,6 +46,13 @@ public class DescribeNodeDataDisksResponse extends AbstractModel {
     private Long MaxSize;
 
     /**
+    * 云硬盘最大额外性能值
+    */
+    @SerializedName("MaxThroughputPerformance")
+    @Expose
+    private Long MaxThroughputPerformance;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -105,6 +112,22 @@ public class DescribeNodeDataDisksResponse extends AbstractModel {
     }
 
     /**
+     * Get 云硬盘最大额外性能值 
+     * @return MaxThroughputPerformance 云硬盘最大额外性能值
+     */
+    public Long getMaxThroughputPerformance() {
+        return this.MaxThroughputPerformance;
+    }
+
+    /**
+     * Set 云硬盘最大额外性能值
+     * @param MaxThroughputPerformance 云硬盘最大额外性能值
+     */
+    public void setMaxThroughputPerformance(Long MaxThroughputPerformance) {
+        this.MaxThroughputPerformance = MaxThroughputPerformance;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -140,6 +163,9 @@ public class DescribeNodeDataDisksResponse extends AbstractModel {
         if (source.MaxSize != null) {
             this.MaxSize = new Long(source.MaxSize);
         }
+        if (source.MaxThroughputPerformance != null) {
+            this.MaxThroughputPerformance = new Long(source.MaxThroughputPerformance);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -153,6 +179,7 @@ public class DescribeNodeDataDisksResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "CBSList.", this.CBSList);
         this.setParamSimple(map, prefix + "MaxSize", this.MaxSize);
+        this.setParamSimple(map, prefix + "MaxThroughputPerformance", this.MaxThroughputPerformance);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

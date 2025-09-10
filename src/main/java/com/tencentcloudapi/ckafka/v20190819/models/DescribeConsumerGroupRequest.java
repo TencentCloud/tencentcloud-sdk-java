@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeConsumerGroupRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id,通过DescribeInstances接口获取
+    * ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeConsumerGroupRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get ckafka集群实例Id,通过DescribeInstances接口获取 
-     * @return InstanceId ckafka集群实例Id,通过DescribeInstances接口获取
+     * Get ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取 
+     * @return InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id,通过DescribeInstances接口获取
-     * @param InstanceId ckafka集群实例Id,通过DescribeInstances接口获取
+     * Set ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

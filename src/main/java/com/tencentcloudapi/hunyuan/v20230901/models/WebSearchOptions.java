@@ -45,6 +45,20 @@ public class WebSearchOptions extends AbstractModel {
     private Boolean Processes;
 
     /**
+    * 是否开启图文混排
+    */
+    @SerializedName("EnableImage")
+    @Expose
+    private Boolean EnableImage;
+
+    /**
+    * 是否开启音乐
+    */
+    @SerializedName("EnableMusic")
+    @Expose
+    private Boolean EnableMusic;
+
+    /**
      * Get 表示用户注入的知识信息 
      * @return Knowledge 表示用户注入的知识信息
      */
@@ -92,6 +106,38 @@ public class WebSearchOptions extends AbstractModel {
         this.Processes = Processes;
     }
 
+    /**
+     * Get 是否开启图文混排 
+     * @return EnableImage 是否开启图文混排
+     */
+    public Boolean getEnableImage() {
+        return this.EnableImage;
+    }
+
+    /**
+     * Set 是否开启图文混排
+     * @param EnableImage 是否开启图文混排
+     */
+    public void setEnableImage(Boolean EnableImage) {
+        this.EnableImage = EnableImage;
+    }
+
+    /**
+     * Get 是否开启音乐 
+     * @return EnableMusic 是否开启音乐
+     */
+    public Boolean getEnableMusic() {
+        return this.EnableMusic;
+    }
+
+    /**
+     * Set 是否开启音乐
+     * @param EnableMusic 是否开启音乐
+     */
+    public void setEnableMusic(Boolean EnableMusic) {
+        this.EnableMusic = EnableMusic;
+    }
+
     public WebSearchOptions() {
     }
 
@@ -112,6 +158,12 @@ public class WebSearchOptions extends AbstractModel {
         if (source.Processes != null) {
             this.Processes = new Boolean(source.Processes);
         }
+        if (source.EnableImage != null) {
+            this.EnableImage = new Boolean(source.EnableImage);
+        }
+        if (source.EnableMusic != null) {
+            this.EnableMusic = new Boolean(source.EnableMusic);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class WebSearchOptions extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Knowledge.", this.Knowledge);
         this.setParamObj(map, prefix + "UserLocation.", this.UserLocation);
         this.setParamSimple(map, prefix + "Processes", this.Processes);
+        this.setParamSimple(map, prefix + "EnableImage", this.EnableImage);
+        this.setParamSimple(map, prefix + "EnableMusic", this.EnableMusic);
 
     }
 }

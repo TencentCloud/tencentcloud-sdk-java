@@ -155,6 +155,20 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
     private MultiZoneSetting [] MultiZoneSettings;
 
     /**
+    * 数据库版本
+    */
+    @SerializedName("DefaultMetaVersion")
+    @Expose
+    private String DefaultMetaVersion;
+
+    /**
+    * 0:不开通审计；1:开通审计
+    */
+    @SerializedName("NeedCdbAudit")
+    @Expose
+    private Long NeedCdbAudit;
+
+    /**
      * Get 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -474,6 +488,38 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
         this.MultiZoneSettings = MultiZoneSettings;
     }
 
+    /**
+     * Get 数据库版本 
+     * @return DefaultMetaVersion 数据库版本
+     */
+    public String getDefaultMetaVersion() {
+        return this.DefaultMetaVersion;
+    }
+
+    /**
+     * Set 数据库版本
+     * @param DefaultMetaVersion 数据库版本
+     */
+    public void setDefaultMetaVersion(String DefaultMetaVersion) {
+        this.DefaultMetaVersion = DefaultMetaVersion;
+    }
+
+    /**
+     * Get 0:不开通审计；1:开通审计 
+     * @return NeedCdbAudit 0:不开通审计；1:开通审计
+     */
+    public Long getNeedCdbAudit() {
+        return this.NeedCdbAudit;
+    }
+
+    /**
+     * Set 0:不开通审计；1:开通审计
+     * @param NeedCdbAudit 0:不开通审计；1:开通审计
+     */
+    public void setNeedCdbAudit(Long NeedCdbAudit) {
+        this.NeedCdbAudit = NeedCdbAudit;
+    }
+
     public InquiryPriceCreateInstanceRequest() {
     }
 
@@ -542,6 +588,12 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
                 this.MultiZoneSettings[i] = new MultiZoneSetting(source.MultiZoneSettings[i]);
             }
         }
+        if (source.DefaultMetaVersion != null) {
+            this.DefaultMetaVersion = new String(source.DefaultMetaVersion);
+        }
+        if (source.NeedCdbAudit != null) {
+            this.NeedCdbAudit = new Long(source.NeedCdbAudit);
+        }
     }
 
 
@@ -566,6 +618,8 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
         this.setParamSimple(map, prefix + "VersionID", this.VersionID);
         this.setParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
+        this.setParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
+        this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
 
     }
 }

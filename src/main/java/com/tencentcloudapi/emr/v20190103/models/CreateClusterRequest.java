@@ -204,6 +204,20 @@ public class CreateClusterRequest extends AbstractModel {
     private String LoadBalancerId;
 
     /**
+    * 数据库版本：mysql8/tdsql8/mysql5
+    */
+    @SerializedName("DefaultMetaVersion")
+    @Expose
+    private String DefaultMetaVersion;
+
+    /**
+    * 是否开通数据库审计
+    */
+    @SerializedName("NeedCdbAudit")
+    @Expose
+    private Long NeedCdbAudit;
+
+    /**
      * Get EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338) 
      * @return ProductVersion EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
      */
@@ -647,6 +661,38 @@ public class CreateClusterRequest extends AbstractModel {
         this.LoadBalancerId = LoadBalancerId;
     }
 
+    /**
+     * Get 数据库版本：mysql8/tdsql8/mysql5 
+     * @return DefaultMetaVersion 数据库版本：mysql8/tdsql8/mysql5
+     */
+    public String getDefaultMetaVersion() {
+        return this.DefaultMetaVersion;
+    }
+
+    /**
+     * Set 数据库版本：mysql8/tdsql8/mysql5
+     * @param DefaultMetaVersion 数据库版本：mysql8/tdsql8/mysql5
+     */
+    public void setDefaultMetaVersion(String DefaultMetaVersion) {
+        this.DefaultMetaVersion = DefaultMetaVersion;
+    }
+
+    /**
+     * Get 是否开通数据库审计 
+     * @return NeedCdbAudit 是否开通数据库审计
+     */
+    public Long getNeedCdbAudit() {
+        return this.NeedCdbAudit;
+    }
+
+    /**
+     * Set 是否开通数据库审计
+     * @param NeedCdbAudit 是否开通数据库审计
+     */
+    public void setNeedCdbAudit(Long NeedCdbAudit) {
+        this.NeedCdbAudit = NeedCdbAudit;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -745,6 +791,12 @@ public class CreateClusterRequest extends AbstractModel {
         if (source.LoadBalancerId != null) {
             this.LoadBalancerId = new String(source.LoadBalancerId);
         }
+        if (source.DefaultMetaVersion != null) {
+            this.DefaultMetaVersion = new String(source.DefaultMetaVersion);
+        }
+        if (source.NeedCdbAudit != null) {
+            this.NeedCdbAudit = new Long(source.NeedCdbAudit);
+        }
     }
 
 
@@ -775,6 +827,8 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+        this.setParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
+        this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FetchDatahubMessageByOffsetRequest extends AbstractModel {
 
     /**
-    * 弹性topic名称，可通过DescribeDatahubTopics接口获取。
+    * 弹性topic名称，可通过[DescribeDatahubTopics](https://cloud.tencent.com/document/product/597/86863)接口获取
     */
     @SerializedName("Name")
     @Expose
@@ -45,16 +45,16 @@ public class FetchDatahubMessageByOffsetRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get 弹性topic名称，可通过DescribeDatahubTopics接口获取。 
-     * @return Name 弹性topic名称，可通过DescribeDatahubTopics接口获取。
+     * Get 弹性topic名称，可通过[DescribeDatahubTopics](https://cloud.tencent.com/document/product/597/86863)接口获取 
+     * @return Name 弹性topic名称，可通过[DescribeDatahubTopics](https://cloud.tencent.com/document/product/597/86863)接口获取
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 弹性topic名称，可通过DescribeDatahubTopics接口获取。
-     * @param Name 弹性topic名称，可通过DescribeDatahubTopics接口获取。
+     * Set 弹性topic名称，可通过[DescribeDatahubTopics](https://cloud.tencent.com/document/product/597/86863)接口获取
+     * @param Name 弹性topic名称，可通过[DescribeDatahubTopics](https://cloud.tencent.com/document/product/597/86863)接口获取
      */
     public void setName(String Name) {
         this.Name = Name;

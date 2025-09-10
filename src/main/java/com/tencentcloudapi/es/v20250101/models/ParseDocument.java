@@ -24,12 +24,20 @@ import java.util.HashMap;
 public class ParseDocument extends AbstractModel {
 
     /**
-    * 文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
+    * 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M
     */
     @SerializedName("FileType")
     @Expose
@@ -46,6 +54,7 @@ public class ParseDocument extends AbstractModel {
     * 文件的 base64 值，携带 MineType前缀信息。编码后的后的文件不超过 10M。
 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过3秒。
 支持的图片像素：单边介于20-10000px之间。
+文件的 FileUrl、FileContent必须提供一个，如果都提供只使用 FileUrl。
     */
     @SerializedName("FileContent")
     @Expose
@@ -73,36 +82,68 @@ public class ParseDocument extends AbstractModel {
     private Long FileEndPageNumber;
 
     /**
-     * Get 文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M 
-     * @return FileType 文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
+     * Get 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M 
+     * @return FileType 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
-     * @param FileType 文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
+     * Set 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M
+     * @param FileType 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
@@ -127,10 +168,12 @@ public class ParseDocument extends AbstractModel {
     /**
      * Get 文件的 base64 值，携带 MineType前缀信息。编码后的后的文件不超过 10M。
 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过3秒。
-支持的图片像素：单边介于20-10000px之间。 
+支持的图片像素：单边介于20-10000px之间。
+文件的 FileUrl、FileContent必须提供一个，如果都提供只使用 FileUrl。 
      * @return FileContent 文件的 base64 值，携带 MineType前缀信息。编码后的后的文件不超过 10M。
 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过3秒。
 支持的图片像素：单边介于20-10000px之间。
+文件的 FileUrl、FileContent必须提供一个，如果都提供只使用 FileUrl。
      */
     public String getFileContent() {
         return this.FileContent;
@@ -140,9 +183,11 @@ public class ParseDocument extends AbstractModel {
      * Set 文件的 base64 值，携带 MineType前缀信息。编码后的后的文件不超过 10M。
 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过3秒。
 支持的图片像素：单边介于20-10000px之间。
+文件的 FileUrl、FileContent必须提供一个，如果都提供只使用 FileUrl。
      * @param FileContent 文件的 base64 值，携带 MineType前缀信息。编码后的后的文件不超过 10M。
 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过3秒。
 支持的图片像素：单边介于20-10000px之间。
+文件的 FileUrl、FileContent必须提供一个，如果都提供只使用 FileUrl。
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;

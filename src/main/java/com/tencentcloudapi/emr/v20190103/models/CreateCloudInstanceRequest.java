@@ -81,8 +81,8 @@ public class CreateCloudInstanceRequest extends AbstractModel {
     private Long ProductId;
 
     /**
-    * 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6----fae36063280
-示例值：a9a90aa6----fae36063280
+    * 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
+示例值：a9a90aa6fae36063280
     */
     @SerializedName("ClientToken")
     @Expose
@@ -127,7 +127,7 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
     private Tag [] Tags;
 
     /**
-    * 登陆密码，LoginSettings中的Password字段
+    * 登录密码，LoginSettings中的Password字段
     */
     @SerializedName("LoginSettings")
     @Expose
@@ -146,6 +146,20 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
+
+    /**
+    * 数据库版本
+    */
+    @SerializedName("DefaultMetaVersion")
+    @Expose
+    private String DefaultMetaVersion;
+
+    /**
+    * 是否开通审计
+    */
+    @SerializedName("NeedCdbAudit")
+    @Expose
+    private Long NeedCdbAudit;
 
     /**
      * Get 实例名称。
@@ -292,20 +306,20 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
     }
 
     /**
-     * Get 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6----fae36063280
-示例值：a9a90aa6----fae36063280 
-     * @return ClientToken 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6----fae36063280
-示例值：a9a90aa6----fae36063280
+     * Get 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
+示例值：a9a90aa6fae36063280 
+     * @return ClientToken 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
+示例值：a9a90aa6fae36063280
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6----fae36063280
-示例值：a9a90aa6----fae36063280
-     * @param ClientToken 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6----fae36063280
-示例值：a9a90aa6----fae36063280
+     * Set 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
+示例值：a9a90aa6fae36063280
+     * @param ClientToken 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
+示例值：a9a90aa6fae36063280
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
@@ -404,16 +418,16 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
     }
 
     /**
-     * Get 登陆密码，LoginSettings中的Password字段 
-     * @return LoginSettings 登陆密码，LoginSettings中的Password字段
+     * Get 登录密码，LoginSettings中的Password字段 
+     * @return LoginSettings 登录密码，LoginSettings中的Password字段
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set 登陆密码，LoginSettings中的Password字段
-     * @param LoginSettings 登陆密码，LoginSettings中的Password字段
+     * Set 登录密码，LoginSettings中的Password字段
+     * @param LoginSettings 登录密码，LoginSettings中的Password字段
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
@@ -449,6 +463,38 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get 数据库版本 
+     * @return DefaultMetaVersion 数据库版本
+     */
+    public String getDefaultMetaVersion() {
+        return this.DefaultMetaVersion;
+    }
+
+    /**
+     * Set 数据库版本
+     * @param DefaultMetaVersion 数据库版本
+     */
+    public void setDefaultMetaVersion(String DefaultMetaVersion) {
+        this.DefaultMetaVersion = DefaultMetaVersion;
+    }
+
+    /**
+     * Get 是否开通审计 
+     * @return NeedCdbAudit 是否开通审计
+     */
+    public Long getNeedCdbAudit() {
+        return this.NeedCdbAudit;
+    }
+
+    /**
+     * Set 是否开通审计
+     * @param NeedCdbAudit 是否开通审计
+     */
+    public void setNeedCdbAudit(Long NeedCdbAudit) {
+        this.NeedCdbAudit = NeedCdbAudit;
     }
 
     public CreateCloudInstanceRequest() {
@@ -519,6 +565,12 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
         if (source.ZoneId != null) {
             this.ZoneId = new Long(source.ZoneId);
         }
+        if (source.DefaultMetaVersion != null) {
+            this.DefaultMetaVersion = new String(source.DefaultMetaVersion);
+        }
+        if (source.NeedCdbAudit != null) {
+            this.NeedCdbAudit = new Long(source.NeedCdbAudit);
+        }
     }
 
 
@@ -542,6 +594,8 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
+        this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
 
     }
 }

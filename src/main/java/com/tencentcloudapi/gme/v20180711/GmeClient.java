@@ -39,6 +39,17 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *提供服务端控制机器人的功能
+     * @param req ControlAIConversationRequest
+     * @return ControlAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ControlAIConversationResponse ControlAIConversation(ControlAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ControlAIConversation", ControlAIConversationResponse.class);
+    }
+
+    /**
      *目前该功能底层能力已不具备，不对外提供，目前需要下线，走预下线流程。
 
 用于创建年龄语音识别任务的接口，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
@@ -125,6 +136,28 @@ public class GmeClient extends AbstractClient{
     public DeleteScanUserResponse DeleteScanUser(DeleteScanUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteScanUser", DeleteScanUserResponse.class);
+    }
+
+    /**
+     *传入声纹ID，删除之前注册的声纹信息
+     * @param req DeleteVoicePrintRequest
+     * @return DeleteVoicePrintResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVoicePrintResponse DeleteVoicePrint(DeleteVoicePrintRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVoicePrint", DeleteVoicePrintResponse.class);
+    }
+
+    /**
+     *查询AI对话任务状态。
+     * @param req DescribeAIConversationRequest
+     * @return DescribeAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIConversationResponse DescribeAIConversation(DescribeAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIConversation", DescribeAIConversationResponse.class);
     }
 
     /**
@@ -241,6 +274,17 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *查询先前注册的声纹信息
+     * @param req DescribeVoicePrintRequest
+     * @return DescribeVoicePrintResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVoicePrintResponse DescribeVoicePrint(DescribeVoicePrintRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVoicePrint", DescribeVoicePrintResponse.class);
+    }
+
+    /**
      *查询语音消息转文本热句模型列表
      * @param req GetCustomizationListRequest
      * @return GetCustomizationListResponse
@@ -306,6 +350,17 @@ public class GmeClient extends AbstractClient{
     public ModifyUserMicStatusResponse ModifyUserMicStatus(ModifyUserMicStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserMicStatus", ModifyUserMicStatusResponse.class);
+    }
+
+    /**
+     *传入音频base64串，注册声纹信息，返回声纹ID
+     * @param req RegisterVoicePrintRequest
+     * @return RegisterVoicePrintResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterVoicePrintResponse RegisterVoicePrint(RegisterVoicePrintRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RegisterVoicePrint", RegisterVoicePrintResponse.class);
     }
 
     /**
@@ -455,6 +510,19 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *启动AI对话任务，AI通道机器人进入GME房间，与房间内指定的成员进行AI对话，适用于智能客服，AI口语教师等场景
+
+GME AI对话功能内置语音转文本能力，同时提供通道服务，即客户可灵活指定第三方AI模型（LLM）服务和文本转音频（TTS)服务，更多[功能说明](https://cloud.tencent.com/document/product/647/108901)。
+     * @param req StartAIConversationRequest
+     * @return StartAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartAIConversationResponse StartAIConversation(StartAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartAIConversation", StartAIConversationResponse.class);
+    }
+
+    /**
      *开启录制
      * @param req StartRecordRequest
      * @return StartRecordResponse
@@ -463,6 +531,17 @@ public class GmeClient extends AbstractClient{
     public StartRecordResponse StartRecord(StartRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartRecord", StartRecordResponse.class);
+    }
+
+    /**
+     *停止AI对话任务
+     * @param req StopAIConversationRequest
+     * @return StopAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopAIConversationResponse StopAIConversation(StopAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopAIConversation", StopAIConversationResponse.class);
     }
 
     /**
@@ -475,6 +554,17 @@ public class GmeClient extends AbstractClient{
     public StopRecordResponse StopRecord(StopRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopRecord", StopRecordResponse.class);
+    }
+
+    /**
+     *更新AIConversation参数
+     * @param req UpdateAIConversationRequest
+     * @return UpdateAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAIConversationResponse UpdateAIConversation(UpdateAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAIConversation", UpdateAIConversationResponse.class);
     }
 
     /**
@@ -498,6 +588,17 @@ public class GmeClient extends AbstractClient{
     public UpdateScanUsersResponse UpdateScanUsers(UpdateScanUsersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateScanUsers", UpdateScanUsersResponse.class);
+    }
+
+    /**
+     *传入声纹ID以及对应音频信息，更新对应声纹信息
+     * @param req UpdateVoicePrintRequest
+     * @return UpdateVoicePrintResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateVoicePrintResponse UpdateVoicePrint(UpdateVoicePrintRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateVoicePrint", UpdateVoicePrintResponse.class);
     }
 
 }

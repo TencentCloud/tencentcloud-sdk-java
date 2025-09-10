@@ -80,6 +80,34 @@ public class DisplayAsset extends AbstractModel {
     private DisplayToolCommon DisplayToolCommon;
 
     /**
+    * 端口数据
+    */
+    @SerializedName("Ports")
+    @Expose
+    private String Ports;
+
+    /**
+    * 服务数据
+    */
+    @SerializedName("Services")
+    @Expose
+    private String Services;
+
+    /**
+    * 域名数据
+    */
+    @SerializedName("Domains")
+    @Expose
+    private String Domains;
+
+    /**
+    * 端口和服务最近更新时间
+    */
+    @SerializedName("LastModify")
+    @Expose
+    private String LastModify;
+
+    /**
      * Get 主机资产Id 
      * @return Id 主机资产Id
      */
@@ -207,6 +235,70 @@ public class DisplayAsset extends AbstractModel {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
+    /**
+     * Get 端口数据 
+     * @return Ports 端口数据
+     */
+    public String getPorts() {
+        return this.Ports;
+    }
+
+    /**
+     * Set 端口数据
+     * @param Ports 端口数据
+     */
+    public void setPorts(String Ports) {
+        this.Ports = Ports;
+    }
+
+    /**
+     * Get 服务数据 
+     * @return Services 服务数据
+     */
+    public String getServices() {
+        return this.Services;
+    }
+
+    /**
+     * Set 服务数据
+     * @param Services 服务数据
+     */
+    public void setServices(String Services) {
+        this.Services = Services;
+    }
+
+    /**
+     * Get 域名数据 
+     * @return Domains 域名数据
+     */
+    public String getDomains() {
+        return this.Domains;
+    }
+
+    /**
+     * Set 域名数据
+     * @param Domains 域名数据
+     */
+    public void setDomains(String Domains) {
+        this.Domains = Domains;
+    }
+
+    /**
+     * Get 端口和服务最近更新时间 
+     * @return LastModify 端口和服务最近更新时间
+     */
+    public String getLastModify() {
+        return this.LastModify;
+    }
+
+    /**
+     * Set 端口和服务最近更新时间
+     * @param LastModify 端口和服务最近更新时间
+     */
+    public void setLastModify(String LastModify) {
+        this.LastModify = LastModify;
+    }
+
     public DisplayAsset() {
     }
 
@@ -239,6 +331,18 @@ public class DisplayAsset extends AbstractModel {
         if (source.DisplayToolCommon != null) {
             this.DisplayToolCommon = new DisplayToolCommon(source.DisplayToolCommon);
         }
+        if (source.Ports != null) {
+            this.Ports = new String(source.Ports);
+        }
+        if (source.Services != null) {
+            this.Services = new String(source.Services);
+        }
+        if (source.Domains != null) {
+            this.Domains = new String(source.Domains);
+        }
+        if (source.LastModify != null) {
+            this.LastModify = new String(source.LastModify);
+        }
     }
 
 
@@ -254,6 +358,10 @@ public class DisplayAsset extends AbstractModel {
         this.setParamSimple(map, prefix + "City", this.City);
         this.setParamSimple(map, prefix + "Isp", this.Isp);
         this.setParamObj(map, prefix + "DisplayToolCommon.", this.DisplayToolCommon);
+        this.setParamSimple(map, prefix + "Ports", this.Ports);
+        this.setParamSimple(map, prefix + "Services", this.Services);
+        this.setParamSimple(map, prefix + "Domains", this.Domains);
+        this.setParamSimple(map, prefix + "LastModify", this.LastModify);
 
     }
 }

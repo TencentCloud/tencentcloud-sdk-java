@@ -251,6 +251,20 @@ REJECTED:拒绝
     private Long ShareOrNot;
 
     /**
+    * 接入点名称
+    */
+    @SerializedName("AccessPointName")
+    @Expose
+    private String AccessPointName;
+
+    /**
+    * 接入点ID
+    */
+    @SerializedName("AccessPointId")
+    @Expose
+    private String AccessPointId;
+
+    /**
      * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
@@ -786,6 +800,38 @@ REJECTED:拒绝
         this.ShareOrNot = ShareOrNot;
     }
 
+    /**
+     * Get 接入点名称 
+     * @return AccessPointName 接入点名称
+     */
+    public String getAccessPointName() {
+        return this.AccessPointName;
+    }
+
+    /**
+     * Set 接入点名称
+     * @param AccessPointName 接入点名称
+     */
+    public void setAccessPointName(String AccessPointName) {
+        this.AccessPointName = AccessPointName;
+    }
+
+    /**
+     * Get 接入点ID 
+     * @return AccessPointId 接入点ID
+     */
+    public String getAccessPointId() {
+        return this.AccessPointId;
+    }
+
+    /**
+     * Set 接入点ID
+     * @param AccessPointId 接入点ID
+     */
+    public void setAccessPointId(String AccessPointId) {
+        this.AccessPointId = AccessPointId;
+    }
+
     public DirectConnectTunnel() {
     }
 
@@ -893,6 +939,12 @@ REJECTED:拒绝
         if (source.ShareOrNot != null) {
             this.ShareOrNot = new Long(source.ShareOrNot);
         }
+        if (source.AccessPointName != null) {
+            this.AccessPointName = new String(source.AccessPointName);
+        }
+        if (source.AccessPointId != null) {
+            this.AccessPointId = new String(source.AccessPointId);
+        }
     }
 
 
@@ -931,6 +983,8 @@ REJECTED:拒绝
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
         this.setParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
         this.setParamSimple(map, prefix + "ShareOrNot", this.ShareOrNot);
+        this.setParamSimple(map, prefix + "AccessPointName", this.AccessPointName);
+        this.setParamSimple(map, prefix + "AccessPointId", this.AccessPointId);
 
     }
 }

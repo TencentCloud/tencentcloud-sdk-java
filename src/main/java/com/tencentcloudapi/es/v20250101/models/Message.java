@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Message extends AbstractModel {
 
     /**
-    * 角色, ‘system', ‘user'，'assistant'或者'tool', 在message中, 除了system，其他必须是user与assistant交替(一问一答) 
+    * 角色，可选值包括 system、user、assistant、 tool。
     */
     @SerializedName("Role")
     @Expose
@@ -38,16 +38,30 @@ public class Message extends AbstractModel {
     private String Content;
 
     /**
-     * Get 角色, ‘system', ‘user'，'assistant'或者'tool', 在message中, 除了system，其他必须是user与assistant交替(一问一答)  
-     * @return Role 角色, ‘system', ‘user'，'assistant'或者'tool', 在message中, 除了system，其他必须是user与assistant交替(一问一答) 
+    * 当role为tool时传入，标识具体的函数调用
+    */
+    @SerializedName("ToolCallId")
+    @Expose
+    private String ToolCallId;
+
+    /**
+    * 模型生成的工具调用
+    */
+    @SerializedName("ToolCalls")
+    @Expose
+    private ToolCall [] ToolCalls;
+
+    /**
+     * Get 角色，可选值包括 system、user、assistant、 tool。 
+     * @return Role 角色，可选值包括 system、user、assistant、 tool。
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 角色, ‘system', ‘user'，'assistant'或者'tool', 在message中, 除了system，其他必须是user与assistant交替(一问一答) 
-     * @param Role 角色, ‘system', ‘user'，'assistant'或者'tool', 在message中, 除了system，其他必须是user与assistant交替(一问一答) 
+     * Set 角色，可选值包括 system、user、assistant、 tool。
+     * @param Role 角色，可选值包括 system、user、assistant、 tool。
      */
     public void setRole(String Role) {
         this.Role = Role;
@@ -69,6 +83,38 @@ public class Message extends AbstractModel {
         this.Content = Content;
     }
 
+    /**
+     * Get 当role为tool时传入，标识具体的函数调用 
+     * @return ToolCallId 当role为tool时传入，标识具体的函数调用
+     */
+    public String getToolCallId() {
+        return this.ToolCallId;
+    }
+
+    /**
+     * Set 当role为tool时传入，标识具体的函数调用
+     * @param ToolCallId 当role为tool时传入，标识具体的函数调用
+     */
+    public void setToolCallId(String ToolCallId) {
+        this.ToolCallId = ToolCallId;
+    }
+
+    /**
+     * Get 模型生成的工具调用 
+     * @return ToolCalls 模型生成的工具调用
+     */
+    public ToolCall [] getToolCalls() {
+        return this.ToolCalls;
+    }
+
+    /**
+     * Set 模型生成的工具调用
+     * @param ToolCalls 模型生成的工具调用
+     */
+    public void setToolCalls(ToolCall [] ToolCalls) {
+        this.ToolCalls = ToolCalls;
+    }
+
     public Message() {
     }
 
@@ -83,6 +129,15 @@ public class Message extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.ToolCallId != null) {
+            this.ToolCallId = new String(source.ToolCallId);
+        }
+        if (source.ToolCalls != null) {
+            this.ToolCalls = new ToolCall[source.ToolCalls.length];
+            for (int i = 0; i < source.ToolCalls.length; i++) {
+                this.ToolCalls[i] = new ToolCall(source.ToolCalls[i]);
+            }
+        }
     }
 
 
@@ -92,6 +147,8 @@ public class Message extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "ToolCallId", this.ToolCallId);
+        this.setParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
 
     }
 }

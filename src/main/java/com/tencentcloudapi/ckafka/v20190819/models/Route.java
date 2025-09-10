@@ -102,6 +102,14 @@ public class Route extends AbstractModel {
     private String VpcId;
 
     /**
+    * 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Note")
+    @Expose
+    private String Note;
+
+    /**
      * Get 实例接入方式
 0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
 1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
@@ -293,6 +301,26 @@ public class Route extends AbstractModel {
         this.VpcId = VpcId;
     }
 
+    /**
+     * Get 备注信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Note 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNote() {
+        return this.Note;
+    }
+
+    /**
+     * Set 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Note 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNote(String Note) {
+        this.Note = Note;
+    }
+
     public Route() {
     }
 
@@ -337,6 +365,9 @@ public class Route extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
     }
 
 
@@ -354,6 +385,7 @@ public class Route extends AbstractModel {
         this.setParamSimple(map, prefix + "Subnet", this.Subnet);
         this.setParamArrayObj(map, prefix + "BrokerVipList.", this.BrokerVipList);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "Note", this.Note);
 
     }
 }

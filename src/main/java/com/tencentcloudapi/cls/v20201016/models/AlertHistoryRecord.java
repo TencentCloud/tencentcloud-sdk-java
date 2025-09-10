@@ -137,6 +137,13 @@ public class AlertHistoryRecord extends AbstractModel {
     private Long MonitorObjectType;
 
     /**
+    * 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+    */
+    @SerializedName("SendType")
+    @Expose
+    private Long SendType;
+
+    /**
      * Get 告警历史ID 
      * @return RecordId 告警历史ID
      */
@@ -396,6 +403,22 @@ public class AlertHistoryRecord extends AbstractModel {
         this.MonitorObjectType = MonitorObjectType;
     }
 
+    /**
+     * Get 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道 
+     * @return SendType 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+     */
+    public Long getSendType() {
+        return this.SendType;
+    }
+
+    /**
+     * Set 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+     * @param SendType 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+     */
+    public void setSendType(Long SendType) {
+        this.SendType = SendType;
+    }
+
     public AlertHistoryRecord() {
     }
 
@@ -458,6 +481,9 @@ public class AlertHistoryRecord extends AbstractModel {
         if (source.MonitorObjectType != null) {
             this.MonitorObjectType = new Long(source.MonitorObjectType);
         }
+        if (source.SendType != null) {
+            this.SendType = new Long(source.SendType);
+        }
     }
 
 
@@ -481,6 +507,7 @@ public class AlertHistoryRecord extends AbstractModel {
         this.setParamArrayObj(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
         this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
         this.setParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
+        this.setParamSimple(map, prefix + "SendType", this.SendType);
 
     }
 }

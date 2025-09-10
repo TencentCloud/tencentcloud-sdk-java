@@ -137,6 +137,20 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel {
     private Boolean FlowNameAppendScannerInfo;
 
     /**
+    * 签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName
+    */
+    @SerializedName("QrCodeName")
+    @Expose
+    private String QrCodeName;
+
+    /**
+    * 签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。
+    */
+    @SerializedName("QrCodeExpiredOn")
+    @Expose
+    private Long QrCodeExpiredOn;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -221,7 +235,9 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel {
 一旦超过二维码的有效期限，该二维码将自动失效。 
      * @return QrEffectiveDay 二维码的有效期限，默认为7天，最高设定不得超过90天。
 一旦超过二维码的有效期限，该二维码将自动失效。
+     * @deprecated
      */
+    @Deprecated
     public Long getQrEffectiveDay() {
         return this.QrEffectiveDay;
     }
@@ -231,7 +247,9 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel {
 一旦超过二维码的有效期限，该二维码将自动失效。
      * @param QrEffectiveDay 二维码的有效期限，默认为7天，最高设定不得超过90天。
 一旦超过二维码的有效期限，该二维码将自动失效。
+     * @deprecated
      */
+    @Deprecated
     public void setQrEffectiveDay(Long QrEffectiveDay) {
         this.QrEffectiveDay = QrEffectiveDay;
     }
@@ -428,6 +446,38 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel {
         this.FlowNameAppendScannerInfo = FlowNameAppendScannerInfo;
     }
 
+    /**
+     * Get 签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName 
+     * @return QrCodeName 签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName
+     */
+    public String getQrCodeName() {
+        return this.QrCodeName;
+    }
+
+    /**
+     * Set 签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName
+     * @param QrCodeName 签署二维码的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成,会在生成的二维码图片上展示，若为空，则使用FlowName
+     */
+    public void setQrCodeName(String QrCodeName) {
+        this.QrCodeName = QrCodeName;
+    }
+
+    /**
+     * Get 签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。 
+     * @return QrCodeExpiredOn 签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。
+     */
+    public Long getQrCodeExpiredOn() {
+        return this.QrCodeExpiredOn;
+    }
+
+    /**
+     * Set 签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。
+     * @param QrCodeExpiredOn 签署二维码截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为签署二维码创建后的7天时截止，最长可设置为签署二维码创建后的365天时截止。
+     */
+    public void setQrCodeExpiredOn(Long QrCodeExpiredOn) {
+        this.QrCodeExpiredOn = QrCodeExpiredOn;
+    }
+
     public CreateMultiFlowSignQRCodeRequest() {
     }
 
@@ -484,6 +534,12 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel {
         if (source.FlowNameAppendScannerInfo != null) {
             this.FlowNameAppendScannerInfo = new Boolean(source.FlowNameAppendScannerInfo);
         }
+        if (source.QrCodeName != null) {
+            this.QrCodeName = new String(source.QrCodeName);
+        }
+        if (source.QrCodeExpiredOn != null) {
+            this.QrCodeExpiredOn = new Long(source.QrCodeExpiredOn);
+        }
     }
 
 
@@ -505,6 +561,8 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ApproverComponentLimitTypes.", this.ApproverComponentLimitTypes);
         this.setParamSimple(map, prefix + "ForbidPersonalMultipleSign", this.ForbidPersonalMultipleSign);
         this.setParamSimple(map, prefix + "FlowNameAppendScannerInfo", this.FlowNameAppendScannerInfo);
+        this.setParamSimple(map, prefix + "QrCodeName", this.QrCodeName);
+        this.setParamSimple(map, prefix + "QrCodeExpiredOn", this.QrCodeExpiredOn);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRouteRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例id,可通过DescribeInstances接口获取
+    * ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
     */
     @SerializedName("InstanceId")
     @Expose
@@ -77,7 +77,7 @@ vipType=1,支持1,3
     private Long CallerAppid;
 
     /**
-    * 公网带宽,公网路由必传,且必选时3的倍数,无默认值
+    * 公网带宽,公网路由必传,且是3的倍数,无默认值
     */
     @SerializedName("PublicNetwork")
     @Expose
@@ -91,16 +91,23 @@ vipType=1,支持1,3
     private String Ip;
 
     /**
-     * Get ckafka集群实例id,可通过DescribeInstances接口获取 
-     * @return InstanceId ckafka集群实例id,可通过DescribeInstances接口获取
+    * 备注信息
+    */
+    @SerializedName("Note")
+    @Expose
+    private String Note;
+
+    /**
+     * Get ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取 
+     * @return InstanceId ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例id,可通过DescribeInstances接口获取
-     * @param InstanceId ckafka集群实例id,可通过DescribeInstances接口获取
+     * Set ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param InstanceId ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -219,16 +226,16 @@ vipType=1,支持1,3
     }
 
     /**
-     * Get 公网带宽,公网路由必传,且必选时3的倍数,无默认值 
-     * @return PublicNetwork 公网带宽,公网路由必传,且必选时3的倍数,无默认值
+     * Get 公网带宽,公网路由必传,且是3的倍数,无默认值 
+     * @return PublicNetwork 公网带宽,公网路由必传,且是3的倍数,无默认值
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set 公网带宽,公网路由必传,且必选时3的倍数,无默认值
-     * @param PublicNetwork 公网带宽,公网路由必传,且必选时3的倍数,无默认值
+     * Set 公网带宽,公网路由必传,且是3的倍数,无默认值
+     * @param PublicNetwork 公网带宽,公网路由必传,且是3的倍数,无默认值
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
@@ -248,6 +255,22 @@ vipType=1,支持1,3
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
+    }
+
+    /**
+     * Get 备注信息 
+     * @return Note 备注信息
+     */
+    public String getNote() {
+        return this.Note;
+    }
+
+    /**
+     * Set 备注信息
+     * @param Note 备注信息
+     */
+    public void setNote(String Note) {
+        this.Note = Note;
     }
 
     public CreateRouteRequest() {
@@ -285,6 +308,9 @@ vipType=1,支持1,3
         if (source.Ip != null) {
             this.Ip = new String(source.Ip);
         }
+        if (source.Note != null) {
+            this.Note = new String(source.Note);
+        }
     }
 
 
@@ -301,6 +327,7 @@ vipType=1,支持1,3
         this.setParamSimple(map, prefix + "CallerAppid", this.CallerAppid);
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
+        this.setParamSimple(map, prefix + "Note", this.Note);
 
     }
 }

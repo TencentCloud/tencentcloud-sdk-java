@@ -45,6 +45,17 @@ public class MiniAppCreateFlowOption extends AbstractModel {
     private Long FlowDisplayType;
 
     /**
+    * 小程序集成发起，是否禁止发起时修改合同内容
+<ul>
+<li>false：默认值，不禁止发起时修改合同内容</li>
+<li>true：禁止发起时修改合同内容</li>
+</ul>
+    */
+    @SerializedName("ForbidEditFlow")
+    @Expose
+    private Boolean ForbidEditFlow;
+
+    /**
      * Get 到期提醒日（linux时间戳） 精确到天 
      * @return RemindedOn 到期提醒日（linux时间戳） 精确到天
      */
@@ -92,6 +103,38 @@ public class MiniAppCreateFlowOption extends AbstractModel {
         this.FlowDisplayType = FlowDisplayType;
     }
 
+    /**
+     * Get 小程序集成发起，是否禁止发起时修改合同内容
+<ul>
+<li>false：默认值，不禁止发起时修改合同内容</li>
+<li>true：禁止发起时修改合同内容</li>
+</ul> 
+     * @return ForbidEditFlow 小程序集成发起，是否禁止发起时修改合同内容
+<ul>
+<li>false：默认值，不禁止发起时修改合同内容</li>
+<li>true：禁止发起时修改合同内容</li>
+</ul>
+     */
+    public Boolean getForbidEditFlow() {
+        return this.ForbidEditFlow;
+    }
+
+    /**
+     * Set 小程序集成发起，是否禁止发起时修改合同内容
+<ul>
+<li>false：默认值，不禁止发起时修改合同内容</li>
+<li>true：禁止发起时修改合同内容</li>
+</ul>
+     * @param ForbidEditFlow 小程序集成发起，是否禁止发起时修改合同内容
+<ul>
+<li>false：默认值，不禁止发起时修改合同内容</li>
+<li>true：禁止发起时修改合同内容</li>
+</ul>
+     */
+    public void setForbidEditFlow(Boolean ForbidEditFlow) {
+        this.ForbidEditFlow = ForbidEditFlow;
+    }
+
     public MiniAppCreateFlowOption() {
     }
 
@@ -109,6 +152,9 @@ public class MiniAppCreateFlowOption extends AbstractModel {
         if (source.FlowDisplayType != null) {
             this.FlowDisplayType = new Long(source.FlowDisplayType);
         }
+        if (source.ForbidEditFlow != null) {
+            this.ForbidEditFlow = new Boolean(source.ForbidEditFlow);
+        }
     }
 
 
@@ -119,6 +165,7 @@ public class MiniAppCreateFlowOption extends AbstractModel {
         this.setParamSimple(map, prefix + "RemindedOn", this.RemindedOn);
         this.setParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
         this.setParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
+        this.setParamSimple(map, prefix + "ForbidEditFlow", this.ForbidEditFlow);
 
     }
 }

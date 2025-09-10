@@ -611,7 +611,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeInstance）用于在用户账户下获取消息队列 CKafka 实例列表
+     *本接口（DescribeInstances）用于在用户账户下获取消息队列 CKafka 实例列表
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
      * @throws TencentCloudSDKException

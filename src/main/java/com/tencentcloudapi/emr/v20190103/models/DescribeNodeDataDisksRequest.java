@@ -66,6 +66,14 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
     private Long Offset;
 
     /**
+    * 场景值：
+ModifyDiskExtraPerformance ：调整数据盘额外性能
+    */
+    @SerializedName("Scene")
+    @Expose
+    private String Scene;
+
+    /**
      * Get EMR集群实例ID 
      * @return InstanceId EMR集群实例ID
      */
@@ -161,6 +169,26 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get 场景值：
+ModifyDiskExtraPerformance ：调整数据盘额外性能 
+     * @return Scene 场景值：
+ModifyDiskExtraPerformance ：调整数据盘额外性能
+     */
+    public String getScene() {
+        return this.Scene;
+    }
+
+    /**
+     * Set 场景值：
+ModifyDiskExtraPerformance ：调整数据盘额外性能
+     * @param Scene 场景值：
+ModifyDiskExtraPerformance ：调整数据盘额外性能
+     */
+    public void setScene(String Scene) {
+        this.Scene = Scene;
+    }
+
     public DescribeNodeDataDisksRequest() {
     }
 
@@ -193,6 +221,9 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Scene != null) {
+            this.Scene = new String(source.Scene);
+        }
     }
 
 
@@ -206,6 +237,7 @@ public class DescribeNodeDataDisksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InnerSearch", this.InnerSearch);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Scene", this.Scene);
 
     }
 }

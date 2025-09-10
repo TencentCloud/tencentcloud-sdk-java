@@ -52,7 +52,7 @@ public class DescribeDatahubTopicResp extends AbstractModel {
     private Long PartitionNum;
 
     /**
-    * 过期时间
+    * 过期时间，单位ms
     */
     @SerializedName("RetentionMs")
     @Expose
@@ -158,16 +158,16 @@ public class DescribeDatahubTopicResp extends AbstractModel {
     }
 
     /**
-     * Get 过期时间 
-     * @return RetentionMs 过期时间
+     * Get 过期时间，单位ms 
+     * @return RetentionMs 过期时间，单位ms
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set 过期时间
-     * @param RetentionMs 过期时间
+     * Set 过期时间，单位ms
+     * @param RetentionMs 过期时间，单位ms
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;

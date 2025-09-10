@@ -94,7 +94,7 @@ public class ZoneResponse extends AbstractModel {
     private String Physical;
 
     /**
-    * 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+    * 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
     */
     @SerializedName("PublicNetwork")
     @Expose
@@ -113,13 +113,6 @@ public class ZoneResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-    * 版本
-    */
-    @SerializedName("Version")
-    @Expose
-    private String Version;
 
     /**
     * 分页offset
@@ -303,16 +296,16 @@ public class ZoneResponse extends AbstractModel {
     }
 
     /**
-     * Get 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写 
-     * @return PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+     * Get 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义 
+     * @return PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
      */
     public String getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-     * @param PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+     * Set 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
+     * @param PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
      */
     public void setPublicNetwork(String PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
@@ -348,22 +341,6 @@ public class ZoneResponse extends AbstractModel {
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
-    }
-
-    /**
-     * Get 版本 
-     * @return Version 版本
-     */
-    public String getVersion() {
-        return this.Version;
-    }
-
-    /**
-     * Set 版本
-     * @param Version 版本
-     */
-    public void setVersion(String Version) {
-        this.Version = Version;
     }
 
     /**
@@ -467,9 +444,6 @@ public class ZoneResponse extends AbstractModel {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
-        if (source.Version != null) {
-            this.Version = new String(source.Version);
-        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -499,7 +473,6 @@ public class ZoneResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         this.setParamSimple(map, prefix + "PublicNetworkLimit", this.PublicNetworkLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
-        this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ForceCheckTag", this.ForceCheckTag);

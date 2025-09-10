@@ -24,25 +24,25 @@ import java.util.HashMap;
 public class CreatePostPaidInstanceRequest extends AbstractModel {
 
     /**
-    * 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
+    * 私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-    */
-    @SerializedName("InstanceName")
-    @Expose
-    private String InstanceName;
-
-    /**
-    * 子网id。创建实例默认接入点所在的子网对应的子网 id
+    * 子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
+
+    /**
+    * ckafka集群实例名称，是一个长度不超过128的任意字符。
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
 
     /**
     * 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
@@ -66,7 +66,7 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     private Long ClusterId;
 
     /**
-    * 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
+    * 实例版本。目前支持当前支持"2.4.1", "2.4.2","2.8.1", "3.2.3"，默认取值"2.4.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
     */
     @SerializedName("KafkaVersion")
     @Expose
@@ -87,35 +87,35 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     private String DiskType;
 
     /**
-    * 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
+    * 实例内网峰值带宽，默认值为40。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格，可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/11745
     */
     @SerializedName("BandWidth")
     @Expose
     private Long BandWidth;
 
     /**
-    * 实例硬盘大小，需要满足当前实例的计费规格
+    * 实例硬盘大小，默认取值为500，步长设置为100。需要满足当前实例的计费规格，可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122562
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 实例最大分区数量，需要满足当前实例的计费规格
+    * 实例最大分区数量，需要满足当前实例的计费规格。默认值为800，步长为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122563
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-    * 实例最大 topic 数量，需要满足当前实例的计费规格
+    * 实例最大 topic 数量，需要满足当前实例的计费规格。默认值为800，步长设置为100。
     */
     @SerializedName("TopicNum")
     @Expose
     private Long TopicNum;
 
     /**
-    * 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
+    * 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id。ZoneId、ZoneIds不能同时为空，可通过[DescribeCkafkaZone](https://cloud.tencent.com/document/product/597/55246)接口获取。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -129,7 +129,7 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     private Boolean MultiZoneFlag;
 
     /**
-    * 当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中
+    * 当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中。ZoneId、ZoneIds不能同时为空，可通过[DescribeCkafkaZone](https://cloud.tencent.com/document/product/597/55246)接口获取。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -164,51 +164,51 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     private Long ElasticBandwidthSwitch;
 
     /**
-     * Get 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId 
-     * @return VpcId 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
+     * Get 私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取 
+     * @return VpcId 私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
-     * @param VpcId 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
+     * Set 私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
+     * @param VpcId 私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
-     * @return InstanceName ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     */
-    public String getInstanceName() {
-        return this.InstanceName;
-    }
-
-    /**
-     * Set ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param InstanceName ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     */
-    public void setInstanceName(String InstanceName) {
-        this.InstanceName = InstanceName;
-    }
-
-    /**
-     * Get 子网id。创建实例默认接入点所在的子网对应的子网 id 
-     * @return SubnetId 子网id。创建实例默认接入点所在的子网对应的子网 id
+     * Get 子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取 
+     * @return SubnetId 子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网id。创建实例默认接入点所在的子网对应的子网 id
-     * @param SubnetId 子网id。创建实例默认接入点所在的子网对应的子网 id
+     * Set 子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取
+     * @param SubnetId 子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get ckafka集群实例名称，是一个长度不超过128的任意字符。 
+     * @return InstanceName ckafka集群实例名称，是一个长度不超过128的任意字符。
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set ckafka集群实例名称，是一个长度不超过128的任意字符。
+     * @param InstanceName ckafka集群实例名称，是一个长度不超过128的任意字符。
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
     }
 
     /**
@@ -260,16 +260,16 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。 
-     * @return KafkaVersion 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
+     * Get 实例版本。目前支持当前支持"2.4.1", "2.4.2","2.8.1", "3.2.3"，默认取值"2.4.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。 
+     * @return KafkaVersion 实例版本。目前支持当前支持"2.4.1", "2.4.2","2.8.1", "3.2.3"，默认取值"2.4.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
-     * @param KafkaVersion 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
+     * Set 实例版本。目前支持当前支持"2.4.1", "2.4.2","2.8.1", "3.2.3"，默认取值"2.4.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
+     * @param KafkaVersion 实例版本。目前支持当前支持"2.4.1", "2.4.2","2.8.1", "3.2.3"，默认取值"2.4.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;
@@ -308,80 +308,80 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。 
-     * @return BandWidth 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
+     * Get 实例内网峰值带宽，默认值为40。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格，可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/11745 
+     * @return BandWidth 实例内网峰值带宽，默认值为40。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格，可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/11745
      */
     public Long getBandWidth() {
         return this.BandWidth;
     }
 
     /**
-     * Set 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
-     * @param BandWidth 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
+     * Set 实例内网峰值带宽，默认值为40。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格，可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/11745
+     * @param BandWidth 实例内网峰值带宽，默认值为40。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格，可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/11745
      */
     public void setBandWidth(Long BandWidth) {
         this.BandWidth = BandWidth;
     }
 
     /**
-     * Get 实例硬盘大小，需要满足当前实例的计费规格 
-     * @return DiskSize 实例硬盘大小，需要满足当前实例的计费规格
+     * Get 实例硬盘大小，默认取值为500，步长设置为100。需要满足当前实例的计费规格，可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122562 
+     * @return DiskSize 实例硬盘大小，默认取值为500，步长设置为100。需要满足当前实例的计费规格，可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122562
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 实例硬盘大小，需要满足当前实例的计费规格
-     * @param DiskSize 实例硬盘大小，需要满足当前实例的计费规格
+     * Set 实例硬盘大小，默认取值为500，步长设置为100。需要满足当前实例的计费规格，可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122562
+     * @param DiskSize 实例硬盘大小，默认取值为500，步长设置为100。需要满足当前实例的计费规格，可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122562
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 实例最大分区数量，需要满足当前实例的计费规格 
-     * @return Partition 实例最大分区数量，需要满足当前实例的计费规格
+     * Get 实例最大分区数量，需要满足当前实例的计费规格。默认值为800，步长为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122563 
+     * @return Partition 实例最大分区数量，需要满足当前实例的计费规格。默认值为800，步长为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122563
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set 实例最大分区数量，需要满足当前实例的计费规格
-     * @param Partition 实例最大分区数量，需要满足当前实例的计费规格
+     * Set 实例最大分区数量，需要满足当前实例的计费规格。默认值为800，步长为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122563
+     * @param Partition 实例最大分区数量，需要满足当前实例的计费规格。默认值为800，步长为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122563
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get 实例最大 topic 数量，需要满足当前实例的计费规格 
-     * @return TopicNum 实例最大 topic 数量，需要满足当前实例的计费规格
+     * Get 实例最大 topic 数量，需要满足当前实例的计费规格。默认值为800，步长设置为100。 
+     * @return TopicNum 实例最大 topic 数量，需要满足当前实例的计费规格。默认值为800，步长设置为100。
      */
     public Long getTopicNum() {
         return this.TopicNum;
     }
 
     /**
-     * Set 实例最大 topic 数量，需要满足当前实例的计费规格
-     * @param TopicNum 实例最大 topic 数量，需要满足当前实例的计费规格
+     * Set 实例最大 topic 数量，需要满足当前实例的计费规格。默认值为800，步长设置为100。
+     * @param TopicNum 实例最大 topic 数量，需要满足当前实例的计费规格。默认值为800，步长设置为100。
      */
     public void setTopicNum(Long TopicNum) {
         this.TopicNum = TopicNum;
     }
 
     /**
-     * Get 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id 
-     * @return ZoneId 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
+     * Get 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id。ZoneId、ZoneIds不能同时为空，可通过[DescribeCkafkaZone](https://cloud.tencent.com/document/product/597/55246)接口获取。 
+     * @return ZoneId 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id。ZoneId、ZoneIds不能同时为空，可通过[DescribeCkafkaZone](https://cloud.tencent.com/document/product/597/55246)接口获取。
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
-     * @param ZoneId 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
+     * Set 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id。ZoneId、ZoneIds不能同时为空，可通过[DescribeCkafkaZone](https://cloud.tencent.com/document/product/597/55246)接口获取。
+     * @param ZoneId 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id。ZoneId、ZoneIds不能同时为空，可通过[DescribeCkafkaZone](https://cloud.tencent.com/document/product/597/55246)接口获取。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
@@ -404,16 +404,16 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中 
-     * @return ZoneIds 当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中
+     * Get 当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中。ZoneId、ZoneIds不能同时为空，可通过[DescribeCkafkaZone](https://cloud.tencent.com/document/product/597/55246)接口获取。 
+     * @return ZoneIds 当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中。ZoneId、ZoneIds不能同时为空，可通过[DescribeCkafkaZone](https://cloud.tencent.com/document/product/597/55246)接口获取。
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中
-     * @param ZoneIds 当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中
+     * Set 当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中。ZoneId、ZoneIds不能同时为空，可通过[DescribeCkafkaZone](https://cloud.tencent.com/document/product/597/55246)接口获取。
+     * @param ZoneIds 当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中。ZoneId、ZoneIds不能同时为空，可通过[DescribeCkafkaZone](https://cloud.tencent.com/document/product/597/55246)接口获取。
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
@@ -494,11 +494,11 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
-        if (source.InstanceName != null) {
-            this.InstanceName = new String(source.InstanceName);
-        }
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
         }
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
@@ -565,8 +565,8 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
-        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "MsgRetentionTime", this.MsgRetentionTime);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

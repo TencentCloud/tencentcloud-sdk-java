@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyPasswordRequest extends AbstractModel {
 
     /**
-    * 实例Id，可通过DescribeInstances接口获取。
+    * 实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户名称，可通过DescribeUser接口获取。
+    * 用户名称，可通过[DescribeUser](https://cloud.tencent.com/document/product/597/40855)接口获取。
     */
     @SerializedName("Name")
     @Expose
@@ -52,32 +52,32 @@ public class ModifyPasswordRequest extends AbstractModel {
     private String PasswordNew;
 
     /**
-     * Get 实例Id，可通过DescribeInstances接口获取。 
-     * @return InstanceId 实例Id，可通过DescribeInstances接口获取。
+     * Get 实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取 
+     * @return InstanceId 实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id，可通过DescribeInstances接口获取。
-     * @param InstanceId 实例Id，可通过DescribeInstances接口获取。
+     * Set 实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param InstanceId 实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户名称，可通过DescribeUser接口获取。 
-     * @return Name 用户名称，可通过DescribeUser接口获取。
+     * Get 用户名称，可通过[DescribeUser](https://cloud.tencent.com/document/product/597/40855)接口获取。 
+     * @return Name 用户名称，可通过[DescribeUser](https://cloud.tencent.com/document/product/597/40855)接口获取。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 用户名称，可通过DescribeUser接口获取。
-     * @param Name 用户名称，可通过DescribeUser接口获取。
+     * Set 用户名称，可通过[DescribeUser](https://cloud.tencent.com/document/product/597/40855)接口获取。
+     * @param Name 用户名称，可通过[DescribeUser](https://cloud.tencent.com/document/product/597/40855)接口获取。
      */
     public void setName(String Name) {
         this.Name = Name;

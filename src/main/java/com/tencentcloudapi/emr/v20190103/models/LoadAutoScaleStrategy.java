@@ -108,6 +108,13 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     private Long GraceDownTime;
 
     /**
+    * 是否开启任务保护
+    */
+    @SerializedName("GraceDownProtectFlag")
+    @Expose
+    private Boolean GraceDownProtectFlag;
+
+    /**
     * 绑定标签列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -379,6 +386,22 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     }
 
     /**
+     * Get 是否开启任务保护 
+     * @return GraceDownProtectFlag 是否开启任务保护
+     */
+    public Boolean getGraceDownProtectFlag() {
+        return this.GraceDownProtectFlag;
+    }
+
+    /**
+     * Set 是否开启任务保护
+     * @param GraceDownProtectFlag 是否开启任务保护
+     */
+    public void setGraceDownProtectFlag(Boolean GraceDownProtectFlag) {
+        this.GraceDownProtectFlag = GraceDownProtectFlag;
+    }
+
+    /**
      * Get 绑定标签列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tags 绑定标签列表
@@ -618,6 +641,9 @@ public class LoadAutoScaleStrategy extends AbstractModel {
         if (source.GraceDownTime != null) {
             this.GraceDownTime = new Long(source.GraceDownTime);
         }
+        if (source.GraceDownProtectFlag != null) {
+            this.GraceDownProtectFlag = new Boolean(source.GraceDownProtectFlag);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -679,6 +705,7 @@ public class LoadAutoScaleStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "PeriodValid", this.PeriodValid);
         this.setParamSimple(map, prefix + "GraceDownFlag", this.GraceDownFlag);
         this.setParamSimple(map, prefix + "GraceDownTime", this.GraceDownTime);
+        this.setParamSimple(map, prefix + "GraceDownProtectFlag", this.GraceDownProtectFlag);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ConfigGroupAssigned", this.ConfigGroupAssigned);
         this.setParamSimple(map, prefix + "MeasureMethod", this.MeasureMethod);

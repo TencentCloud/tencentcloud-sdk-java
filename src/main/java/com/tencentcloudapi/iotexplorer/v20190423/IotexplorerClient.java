@@ -50,6 +50,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *本接口（BatchUpdateFirmware）用于批量更新设备固件
+     * @param req BatchUpdateFirmwareRequest
+     * @return BatchUpdateFirmwareResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchUpdateFirmwareResponse BatchUpdateFirmware(BatchUpdateFirmwareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchUpdateFirmware", BatchUpdateFirmwareResponse.class);
+    }
+
+    /**
      *绑定云存用户
      * @param req BindCloudStorageUserRequest
      * @return BindCloudStorageUserResponse
@@ -283,6 +294,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateOtaModule）用于新建OTA模块
+     * @param req CreateOtaModuleRequest
+     * @return CreateOtaModuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOtaModuleResponse CreateOtaModule(CreateOtaModuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOtaModule", CreateOtaModuleResponse.class);
+    }
+
+    /**
      *创建围栏。
      * @param req CreatePositionFenceRequest
      * @return CreatePositionFenceResponse
@@ -445,6 +467,17 @@ public class IotexplorerClient extends AbstractClient{
     public DeleteLoRaGatewayResponse DeleteLoRaGateway(DeleteLoRaGatewayRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteLoRaGateway", DeleteLoRaGatewayResponse.class);
+    }
+
+    /**
+     *本接口（DeleteOtaModule）用于删除OTA模块
+     * @param req DeleteOtaModuleRequest
+     * @return DeleteOtaModuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOtaModuleResponse DeleteOtaModule(DeleteOtaModuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOtaModule", DeleteOtaModuleResponse.class);
     }
 
     /**
@@ -909,6 +942,28 @@ public class IotexplorerClient extends AbstractClient{
     public DescribeFirmwareTaskResponse DescribeFirmwareTask(DescribeFirmwareTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeFirmwareTask", DescribeFirmwareTaskResponse.class);
+    }
+
+    /**
+     *查询固件升级任务的设备列表
+     * @param req DescribeFirmwareTaskDevicesRequest
+     * @return DescribeFirmwareTaskDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirmwareTaskDevicesResponse DescribeFirmwareTaskDevices(DescribeFirmwareTaskDevicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFirmwareTaskDevices", DescribeFirmwareTaskDevicesResponse.class);
+    }
+
+    /**
+     *搜索固件升级任务列表
+     * @param req DescribeFirmwareTasksRequest
+     * @return DescribeFirmwareTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirmwareTasksResponse DescribeFirmwareTasks(DescribeFirmwareTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFirmwareTasks", DescribeFirmwareTasksResponse.class);
     }
 
     /**
@@ -1506,6 +1561,28 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *本接口（ListOtaModules）用于获取OTA模块列表
+     * @param req ListOtaModulesRequest
+     * @return ListOtaModulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListOtaModulesResponse ListOtaModules(ListOtaModulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListOtaModules", ListOtaModulesResponse.class);
+    }
+
+    /**
+     *本接口（ListProductOtaModules）用于获取产品OTA模块列表
+     * @param req ListProductOtaModulesRequest
+     * @return ListProductOtaModulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListProductOtaModulesResponse ListProductOtaModules(ListProductOtaModulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListProductOtaModules", ListProductOtaModulesResponse.class);
+    }
+
+    /**
      *本接口（ListTopicPolicy）用于获取Topic列表
      * @param req ListTopicPolicyRequest
      * @return ListTopicPolicyResponse
@@ -1947,6 +2024,17 @@ public class IotexplorerClient extends AbstractClient{
     public UpdateFirmwareResponse UpdateFirmware(UpdateFirmwareRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateFirmware", UpdateFirmwareResponse.class);
+    }
+
+    /**
+     *本接口（UpdateOtaModule）用于修改OTA模块
+     * @param req UpdateOtaModuleRequest
+     * @return UpdateOtaModuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOtaModuleResponse UpdateOtaModule(UpdateOtaModuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOtaModule", UpdateOtaModuleResponse.class);
     }
 
     /**

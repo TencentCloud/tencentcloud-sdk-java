@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyGroupOffsetsRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id,可通过DescribeInstances接口获取
+    * ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 消费分组名称,可通过DescribeConsumerGroup接口获取
+    * 消费分组名称,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
     */
     @SerializedName("Group")
     @Expose
@@ -80,32 +80,32 @@ public class ModifyGroupOffsetsRequest extends AbstractModel {
     private Long [] Partitions;
 
     /**
-     * Get ckafka集群实例Id,可通过DescribeInstances接口获取 
-     * @return InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * Get ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取 
+     * @return InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id,可通过DescribeInstances接口获取
-     * @param InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * Set ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 消费分组名称,可通过DescribeConsumerGroup接口获取 
-     * @return Group 消费分组名称,可通过DescribeConsumerGroup接口获取
+     * Get 消费分组名称,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取 
+     * @return Group 消费分组名称,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 消费分组名称,可通过DescribeConsumerGroup接口获取
-     * @param Group 消费分组名称,可通过DescribeConsumerGroup接口获取
+     * Set 消费分组名称,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
+     * @param Group 消费分组名称,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
      */
     public void setGroup(String Group) {
         this.Group = Group;

@@ -171,6 +171,17 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *用于查询文档处理任务。文档处理领域里常见的通用Agent 如抽取、比对之类的，目前我们提供的抽取，但未来可以根据实际情况和客户需求扩展。
+     * @param req DescribeExtractDocAgentJobRequest
+     * @return DescribeExtractDocAgentJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExtractDocAgentJobResponse DescribeExtractDocAgentJob(DescribeExtractDocAgentJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExtractDocAgentJob", DescribeExtractDocAgentJobResponse.class);
+    }
+
+    /**
      *本接口支持驾驶证主页和副页所有字段的自动定位与识别，重点字段的识别准确度达到99%以上。
 
 驾驶证主页：包括证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限、发证单位
@@ -1488,6 +1499,17 @@ public class OcrClient extends AbstractClient{
     public SmartStructuralOCRResponse SmartStructuralOCR(SmartStructuralOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SmartStructuralOCR", SmartStructuralOCRResponse.class);
+    }
+
+    /**
+     *文档处理领域里常见的通用Agent 如抽取、比对之类的，目前我们提供的抽取，但未来可以根据实际情况和客户需求扩展。
+     * @param req SubmitExtractDocAgentJobRequest
+     * @return SubmitExtractDocAgentJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitExtractDocAgentJobResponse SubmitExtractDocAgentJob(SubmitExtractDocAgentJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitExtractDocAgentJob", SubmitExtractDocAgentJobResponse.class);
     }
 
     /**

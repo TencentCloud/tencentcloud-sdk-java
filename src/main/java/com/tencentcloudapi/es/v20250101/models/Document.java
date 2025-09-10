@@ -24,12 +24,20 @@ import java.util.HashMap;
 public class Document extends AbstractModel {
 
     /**
-    * 文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
+    * 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M
     */
     @SerializedName("FileType")
     @Expose
@@ -73,36 +81,68 @@ public class Document extends AbstractModel {
     private Long FileEndPageNumber;
 
     /**
-     * Get 文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M 
-     * @return FileType 文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
+     * Get 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M 
+     * @return FileType 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
-     * @param FileType 文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
+     * Set 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M
+     * @param FileType 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

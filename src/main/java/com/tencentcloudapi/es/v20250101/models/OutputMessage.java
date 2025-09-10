@@ -45,6 +45,13 @@ public class OutputMessage extends AbstractModel {
     private String ReasoningContent;
 
     /**
+    * 模型生成的工具调用
+    */
+    @SerializedName("ToolCalls")
+    @Expose
+    private ToolCall [] ToolCalls;
+
+    /**
      * Get 角色 
      * @return Role 角色
      */
@@ -92,6 +99,22 @@ public class OutputMessage extends AbstractModel {
         this.ReasoningContent = ReasoningContent;
     }
 
+    /**
+     * Get 模型生成的工具调用 
+     * @return ToolCalls 模型生成的工具调用
+     */
+    public ToolCall [] getToolCalls() {
+        return this.ToolCalls;
+    }
+
+    /**
+     * Set 模型生成的工具调用
+     * @param ToolCalls 模型生成的工具调用
+     */
+    public void setToolCalls(ToolCall [] ToolCalls) {
+        this.ToolCalls = ToolCalls;
+    }
+
     public OutputMessage() {
     }
 
@@ -109,6 +132,12 @@ public class OutputMessage extends AbstractModel {
         if (source.ReasoningContent != null) {
             this.ReasoningContent = new String(source.ReasoningContent);
         }
+        if (source.ToolCalls != null) {
+            this.ToolCalls = new ToolCall[source.ToolCalls.length];
+            for (int i = 0; i < source.ToolCalls.length; i++) {
+                this.ToolCalls[i] = new ToolCall(source.ToolCalls[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class OutputMessage extends AbstractModel {
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "ReasoningContent", this.ReasoningContent);
+        this.setParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
 
     }
 }

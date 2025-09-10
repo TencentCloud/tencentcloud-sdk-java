@@ -308,6 +308,20 @@ Hadoop-Hbase
     private String LoadBalancerId;
 
     /**
+    * 数据库类型：mysql8/tdsql8
+    */
+    @SerializedName("DefaultMetaVersion")
+    @Expose
+    private String DefaultMetaVersion;
+
+    /**
+    * 是否开通审计：0:不开通,1:开通
+    */
+    @SerializedName("NeedCdbAudit")
+    @Expose
+    private Long NeedCdbAudit;
+
+    /**
      * Get 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 51:表示STARROCKS-V1.4.0
 54:表示STARROCKS-V2.0.0
@@ -1023,6 +1037,38 @@ Hadoop-Hbase
         this.LoadBalancerId = LoadBalancerId;
     }
 
+    /**
+     * Get 数据库类型：mysql8/tdsql8 
+     * @return DefaultMetaVersion 数据库类型：mysql8/tdsql8
+     */
+    public String getDefaultMetaVersion() {
+        return this.DefaultMetaVersion;
+    }
+
+    /**
+     * Set 数据库类型：mysql8/tdsql8
+     * @param DefaultMetaVersion 数据库类型：mysql8/tdsql8
+     */
+    public void setDefaultMetaVersion(String DefaultMetaVersion) {
+        this.DefaultMetaVersion = DefaultMetaVersion;
+    }
+
+    /**
+     * Get 是否开通审计：0:不开通,1:开通 
+     * @return NeedCdbAudit 是否开通审计：0:不开通,1:开通
+     */
+    public Long getNeedCdbAudit() {
+        return this.NeedCdbAudit;
+    }
+
+    /**
+     * Set 是否开通审计：0:不开通,1:开通
+     * @param NeedCdbAudit 是否开通审计：0:不开通,1:开通
+     */
+    public void setNeedCdbAudit(Long NeedCdbAudit) {
+        this.NeedCdbAudit = NeedCdbAudit;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -1157,6 +1203,12 @@ Hadoop-Hbase
         if (source.LoadBalancerId != null) {
             this.LoadBalancerId = new String(source.LoadBalancerId);
         }
+        if (source.DefaultMetaVersion != null) {
+            this.DefaultMetaVersion = new String(source.DefaultMetaVersion);
+        }
+        if (source.NeedCdbAudit != null) {
+            this.NeedCdbAudit = new Long(source.NeedCdbAudit);
+        }
     }
 
 
@@ -1199,6 +1251,8 @@ Hadoop-Hbase
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+        this.setParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
+        this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
 
     }
 }

@@ -69,7 +69,7 @@ public class SearchProRequest extends AbstractModel {
     private Long Cnt;
 
     /**
-    * Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+    * Industry=gov/news/acad，对应党政机关、权威媒体、学术（英文），**仅限尊享版使用**
     */
     @SerializedName("Industry")
     @Expose
@@ -184,16 +184,16 @@ public class SearchProRequest extends AbstractModel {
     }
 
     /**
-     * Get Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用** 
-     * @return Industry Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+     * Get Industry=gov/news/acad，对应党政机关、权威媒体、学术（英文），**仅限尊享版使用** 
+     * @return Industry Industry=gov/news/acad，对应党政机关、权威媒体、学术（英文），**仅限尊享版使用**
      */
     public String getIndustry() {
         return this.Industry;
     }
 
     /**
-     * Set Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
-     * @param Industry Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+     * Set Industry=gov/news/acad，对应党政机关、权威媒体、学术（英文），**仅限尊享版使用**
+     * @param Industry Industry=gov/news/acad，对应党政机关、权威媒体、学术（英文），**仅限尊享版使用**
      */
     public void setIndustry(String Industry) {
         this.Industry = Industry;
