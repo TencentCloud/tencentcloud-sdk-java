@@ -123,7 +123,12 @@ public abstract class AbstractClient {
         this.endpoint = endpoint;
         this.service = endpoint.split("\\.")[0];
         this.region = region;
-        this.path = "/";
+        int pathIdx = endpoint.indexOf('/');
+        if (pathIdx >= 0) {
+            this.path = endpoint.substring(pathIdx);
+        } else {
+            this.path = "/";
+        }
         this.sdkVersion = AbstractClient.SDK_VERSION;
         this.apiVersion = version;
         this.gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
@@ -212,7 +217,7 @@ public abstract class AbstractClient {
         byte[] requestPayload = jsonPayload.getBytes(StandardCharsets.UTF_8);
         String authorization = this.getAuthorization(headers, requestPayload);
         headers.put("Authorization", authorization);
-        String url = this.profile.getHttpProfile().getProtocol() + this.getEndpoint() + this.path;
+        String url = this.profile.getHttpProfile().getProtocol() + this.getEndpoint();
         return this.getResponseBody(url, headers, requestPayload);
     }
 
@@ -233,7 +238,7 @@ public abstract class AbstractClient {
         headers.put("Content-Type", "application/octet-stream; charset=utf-8");
         String authorization = this.getAuthorization(headers, body);
         headers.put("Authorization", authorization);
-        String url = this.profile.getHttpProfile().getProtocol() + this.getEndpoint() + this.path;
+        String url = this.profile.getHttpProfile().getProtocol() + this.getEndpoint();
         return this.getResponseBody(url, headers, body);
     }
 
@@ -249,7 +254,7 @@ public abstract class AbstractClient {
         headers.put("X-TC-Version", this.apiVersion);
         headers.put("X-TC-Region", this.getRegion());
         headers.put("X-TC-RequestClient", SDK_VERSION);
-        headers.put("Host", this.getEndpoint());
+        headers.put("Host", this.getHost());
         String token = this.credential.getToken();
         if (token != null && !token.isEmpty()) {
             headers.put("X-TC-Token", token);
@@ -273,7 +278,7 @@ public abstract class AbstractClient {
      */
     private String getAuthorization(HashMap<String, String> headers, byte[] body)
             throws TencentCloudSDKException {
-        String endpoint = this.getEndpoint();
+        String host = this.getHost();
         // always use post tc3-hmac-sha256 signature process
         // okhttp always set charset even we don't specify it,
         // to ensure signature be correct, we have to set it here as well.
@@ -281,7 +286,7 @@ public abstract class AbstractClient {
         byte[] requestPayload = body;
         String canonicalUri = "/";
         String canonicalQueryString = "";
-        String canonicalHeaders = "content-type:" + contentType + "\nhost:" + endpoint + "\n";
+        String canonicalHeaders = "content-type:" + contentType + "\nhost:" + host + "\n";
         String signedHeaders = "content-type;host";
 
         String hashedRequestPayload = "";
@@ -307,7 +312,7 @@ public abstract class AbstractClient {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
         String date = sdf.format(new Date(Long.valueOf(timestamp + "000")));
-        String service = endpoint.split("\\.")[0];
+        String service = host.split("\\.")[0];
         String credentialScope = date + "/" + service + "/" + "tc3_request";
         String hashedCanonicalRequest =
                 Sign.sha256Hex(canonicalRequest.getBytes(StandardCharsets.UTF_8));
@@ -713,18 +718,27 @@ public abstract class AbstractClient {
             throws TencentCloudSDKException, IOException {
         HashMap<String, String> param = new HashMap<String, String>();
         request.toMap(param, "");
-        String strParam = this.formatRequestData(action, param);
+        String strParam = this.formatRequestData(action, request, param);
         String reqMethod = this.profile.getHttpProfile().getReqMethod();
         String protocol = this.profile.getHttpProfile().getProtocol();
-        String url = protocol + endpoint + this.path;
+        String url = protocol + endpoint;
         String apigwEndpoint = this.profile.getHttpProfile().getApigwEndpoint();
         if (null != apigwEndpoint) {
             url = protocol + apigwEndpoint;
         }
+
+        Builder headers = new Headers.Builder();
+        if (null != request.GetHeader()) {
+            for (Map.Entry<String, String> entry : request.GetHeader().entrySet()) {
+                headers.add(entry.getKey(), entry.getValue());
+            }
+        }
         if (reqMethod.equals(HttpProfile.REQ_GET)) {
-            return this.httpConnection.getRequest(url + "?" + strParam);
+            return this.httpConnection.getRequest(url + "?" + strParam, headers.build());
         } else if (reqMethod.equals(HttpProfile.REQ_POST)) {
-            return this.httpConnection.postRequest(url, strParam);
+            headers.add("X-TC-RequestClient", SDK_VERSION);
+            headers.add("Content-Type", "application/x-www-form-urlencoded");
+            return this.httpConnection.postRequest(url, strParam, headers.build());
         } else {
             throw new TencentCloudSDKException("Method only support (GET, POST)");
         }
@@ -770,9 +784,14 @@ public abstract class AbstractClient {
             contentType = "application/json; charset=utf-8";
         }
         // Construct the canonical request for signature calculation.
+        String host = this.getHost();
+        if (request.GetHeader().containsKey("Host")) {
+            host = request.GetHeader().get("Host");
+            request.GetHeader().remove("Host");
+        }
         String canonicalUri = "/";
         String canonicalQueryString = this.getCanonicalQueryString(params, httpRequestMethod);
-        String canonicalHeaders = "content-type:" + contentType + "\nhost:" + endpoint + "\n";
+        String canonicalHeaders = "content-type:" + contentType + "\nhost:" + host + "\n";
         String signedHeaders = "content-type;host";
 
         String hashedRequestPayload = "";
@@ -798,7 +817,7 @@ public abstract class AbstractClient {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
         String date = sdf.format(new Date(Long.valueOf(timestamp + "000")));
-        String service = endpoint.split("\\.")[0];
+        String service = host.split("\\.")[0];
         String credentialScope = date + "/" + service + "/" + "tc3_request";
         String hashedCanonicalRequest =
                 Sign.sha256Hex(canonicalRequest.getBytes(StandardCharsets.UTF_8));
@@ -831,7 +850,7 @@ public abstract class AbstractClient {
         }
         Builder hb = new Headers.Builder();
         hb.add("Content-Type", contentType)
-                .add("Host", endpoint)
+                .add("Host", host)
                 .add("Authorization", authorization)
                 .add("X-TC-Action", action)
                 .add("X-TC-Timestamp", timestamp)
@@ -857,7 +876,7 @@ public abstract class AbstractClient {
         }
 
         String protocol = this.profile.getHttpProfile().getProtocol();
-        String url = protocol + endpoint + this.path;
+        String url = protocol + endpoint;
         String apigwEndpoint = this.profile.getHttpProfile().getApigwEndpoint();
         if (null != apigwEndpoint) {
             url = protocol + apigwEndpoint;
@@ -954,7 +973,7 @@ public abstract class AbstractClient {
      * @return The formatted string for signing.
      * @throws TencentCloudSDKException If UTF-8 encoding is not supported.
      */
-    private String formatRequestData(String action, Map<String, String> param)
+    private String formatRequestData(String action, AbstractModel request, Map<String, String> param)
             throws TencentCloudSDKException {
         param.put("Action", action);
         param.put("RequestClient", this.sdkVersion);
@@ -983,14 +1002,17 @@ public abstract class AbstractClient {
             param.put("Language", this.profile.getLanguage().getValue());
         }
 
-        String endpoint = this.getEndpoint();
+        String host = this.getHost();
+        if (request.GetHeader().containsKey("Host")) {
+            host = request.GetHeader().get("Host");
+        }
 
         // Generate the string to be signed.
         String sigInParam =
                 Sign.makeSignPlainText(
                         new TreeMap<String, String>(param),
                         this.profile.getHttpProfile().getReqMethod(),
-                        endpoint,
+                        host,
                         this.path);
         // Generate the signature.
         String sigOutParam =
@@ -1046,6 +1068,15 @@ public abstract class AbstractClient {
             // use this.getService() from overrided subclass will be better
             return this.service + "." + this.profile.getHttpProfile().getRootDomain();
         }
+    }
+
+    private String getHost() {
+        String endpoint = getEndpoint();
+        int pathIdx = endpoint.indexOf('/');
+        if (pathIdx < 0) {
+            pathIdx = endpoint.length();
+        }
+        return endpoint.substring(0, pathIdx);
     }
 
     /**
