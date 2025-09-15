@@ -39,12 +39,25 @@ public class DescribeCloudStorageAIServiceRequest extends AbstractModel {
 
     /**
     * 云存 AI 服务类型。可选值：
-- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
+
+    /**
+    * 通道 ID
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
+    * 用户 ID
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
 
     /**
      * Get 产品 ID 
@@ -80,10 +93,8 @@ public class DescribeCloudStorageAIServiceRequest extends AbstractModel {
 
     /**
      * Get 云存 AI 服务类型。可选值：
-- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩 
      * @return ServiceType 云存 AI 服务类型。可选值：
-- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public String getServiceType() {
@@ -92,14 +103,44 @@ public class DescribeCloudStorageAIServiceRequest extends AbstractModel {
 
     /**
      * Set 云存 AI 服务类型。可选值：
-- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      * @param ServiceType 云存 AI 服务类型。可选值：
-- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
+    }
+
+    /**
+     * Get 通道 ID 
+     * @return ChannelId 通道 ID
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道 ID
+     * @param ChannelId 通道 ID
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
+    /**
+     * Get 用户 ID 
+     * @return UserId 用户 ID
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 用户 ID
+     * @param UserId 用户 ID
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
     }
 
     public DescribeCloudStorageAIServiceRequest() {
@@ -119,6 +160,12 @@ public class DescribeCloudStorageAIServiceRequest extends AbstractModel {
         if (source.ServiceType != null) {
             this.ServiceType = new String(source.ServiceType);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -129,6 +176,8 @@ public class DescribeCloudStorageAIServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

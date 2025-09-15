@@ -94,7 +94,7 @@ public class ConfigureSyncJobRequest extends AbstractModel {
     private Endpoint SrcInfo;
 
     /**
-    * 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
+    * 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
     */
     @SerializedName("SrcInfos")
     @Expose
@@ -115,7 +115,7 @@ public class ConfigureSyncJobRequest extends AbstractModel {
     private Endpoint DstInfo;
 
     /**
-    * 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
+    * 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
     */
     @SerializedName("DstInfos")
     @Expose
@@ -303,16 +303,16 @@ public class ConfigureSyncJobRequest extends AbstractModel {
     }
 
     /**
-     * Get 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。 
-     * @return SrcInfos 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
+     * Get 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。 
+     * @return SrcInfos 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
      */
     public SyncDBEndpointInfos getSrcInfos() {
         return this.SrcInfos;
     }
 
     /**
-     * Set 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
-     * @param SrcInfos 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
+     * Set 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
+     * @param SrcInfos 源端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
      */
     public void setSrcInfos(SyncDBEndpointInfos SrcInfos) {
         this.SrcInfos = SrcInfos;
@@ -351,16 +351,16 @@ public class ConfigureSyncJobRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。 
-     * @return DstInfos 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
+     * Get 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。 
+     * @return DstInfos 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
      */
     public SyncDBEndpointInfos getDstInfos() {
         return this.DstInfos;
     }
 
     /**
-     * Set 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
-     * @param DstInfos 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等。
+     * Set 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
+     * @param DstInfos 目标端信息，分布式类型数据库配置使用，且SrcNodeType传cluster。例如分布式数据库tdsqlmysql等，mongodb使用此参数透传。
      */
     public void setDstInfos(SyncDBEndpointInfos DstInfos) {
         this.DstInfos = DstInfos;

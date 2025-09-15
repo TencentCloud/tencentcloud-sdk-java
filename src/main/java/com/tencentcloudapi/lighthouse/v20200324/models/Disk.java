@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class Disk extends AbstractModel {
 
     /**
-    * 磁盘ID
+    * 云硬盘ID。
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * 实例ID
+    * 实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 可用区
+    * 可用区。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 磁盘名称
+    * 云硬盘名称。
     */
     @SerializedName("DiskName")
     @Expose
     private String DiskName;
 
     /**
-    * 磁盘类型
+    * 云硬盘类型。
 枚举值：
 <li> SYSTEM_DISK: 系统盘 </li>
 <li> DATA_DISK: 数据盘 </li>
@@ -63,7 +63,7 @@ public class Disk extends AbstractModel {
     private String DiskUsage;
 
     /**
-    * 磁盘介质类型
+    * 云硬盘介质类型。
 枚举值:
 <li> CLOUD_BASIC: 普通云硬盘 </li>
 <li> CLOUD_PREMIUM: 高性能云硬盘 </li>
@@ -74,7 +74,7 @@ public class Disk extends AbstractModel {
     private String DiskType;
 
     /**
-    * 磁盘付费类型
+    * 云硬盘付费类型。
 <li> PREPAID: 预付费 </li>
 <li> POSTPAID_BY_HOUR: 按小时后付费 </li>
     */
@@ -83,21 +83,21 @@ public class Disk extends AbstractModel {
     private String DiskChargeType;
 
     /**
-    * 磁盘大小, 单位GB
+    * 云硬盘大小, 单位GB。
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 续费标识
+    * 续费标识。
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * 磁盘状态，取值范围：
+    * 云硬盘状态，取值范围：
 <li>PENDING：创建中。 </li>
 <li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
@@ -114,35 +114,35 @@ public class Disk extends AbstractModel {
     private String DiskState;
 
     /**
-    * 磁盘挂载状态
+    * 云硬盘挂载状态。
     */
     @SerializedName("Attached")
     @Expose
     private Boolean Attached;
 
     /**
-    * 是否随实例释放
+    * 是否随实例释放。
     */
     @SerializedName("DeleteWithInstance")
     @Expose
     private Boolean DeleteWithInstance;
 
     /**
-    * 上一次操作
+    * 上一次操作。
     */
     @SerializedName("LatestOperation")
     @Expose
     private String LatestOperation;
 
     /**
-    * 上一次操作状态
+    * 上一次操作状态。
     */
     @SerializedName("LatestOperationState")
     @Expose
     private String LatestOperationState;
 
     /**
-    * 上一次请求ID
+    * 上一次请求ID。
     */
     @SerializedName("LatestOperationRequestId")
     @Expose
@@ -190,76 +190,76 @@ public class Disk extends AbstractModel {
     private Long DiskBackupQuota;
 
     /**
-     * Get 磁盘ID 
-     * @return DiskId 磁盘ID
+     * Get 云硬盘ID。 
+     * @return DiskId 云硬盘ID。
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 磁盘ID
-     * @param DiskId 磁盘ID
+     * Set 云硬盘ID。
+     * @param DiskId 云硬盘ID。
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例ID。 
+     * @return InstanceId 实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID。
+     * @param InstanceId 实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get 可用区。 
+     * @return Zone 可用区。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set 可用区。
+     * @param Zone 可用区。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 磁盘名称 
-     * @return DiskName 磁盘名称
+     * Get 云硬盘名称。 
+     * @return DiskName 云硬盘名称。
      */
     public String getDiskName() {
         return this.DiskName;
     }
 
     /**
-     * Set 磁盘名称
-     * @param DiskName 磁盘名称
+     * Set 云硬盘名称。
+     * @param DiskName 云硬盘名称。
      */
     public void setDiskName(String DiskName) {
         this.DiskName = DiskName;
     }
 
     /**
-     * Get 磁盘类型
+     * Get 云硬盘类型。
 枚举值：
 <li> SYSTEM_DISK: 系统盘 </li>
 <li> DATA_DISK: 数据盘 </li>
  
-     * @return DiskUsage 磁盘类型
+     * @return DiskUsage 云硬盘类型。
 枚举值：
 <li> SYSTEM_DISK: 系统盘 </li>
 <li> DATA_DISK: 数据盘 </li>
@@ -270,12 +270,12 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Set 磁盘类型
+     * Set 云硬盘类型。
 枚举值：
 <li> SYSTEM_DISK: 系统盘 </li>
 <li> DATA_DISK: 数据盘 </li>
 
-     * @param DiskUsage 磁盘类型
+     * @param DiskUsage 云硬盘类型。
 枚举值：
 <li> SYSTEM_DISK: 系统盘 </li>
 <li> DATA_DISK: 数据盘 </li>
@@ -286,12 +286,12 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 磁盘介质类型
+     * Get 云硬盘介质类型。
 枚举值:
 <li> CLOUD_BASIC: 普通云硬盘 </li>
 <li> CLOUD_PREMIUM: 高性能云硬盘 </li>
 <li> CLOUD_SSD: SSD云硬盘 </li> 
-     * @return DiskType 磁盘介质类型
+     * @return DiskType 云硬盘介质类型。
 枚举值:
 <li> CLOUD_BASIC: 普通云硬盘 </li>
 <li> CLOUD_PREMIUM: 高性能云硬盘 </li>
@@ -302,12 +302,12 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Set 磁盘介质类型
+     * Set 云硬盘介质类型。
 枚举值:
 <li> CLOUD_BASIC: 普通云硬盘 </li>
 <li> CLOUD_PREMIUM: 高性能云硬盘 </li>
 <li> CLOUD_SSD: SSD云硬盘 </li>
-     * @param DiskType 磁盘介质类型
+     * @param DiskType 云硬盘介质类型。
 枚举值:
 <li> CLOUD_BASIC: 普通云硬盘 </li>
 <li> CLOUD_PREMIUM: 高性能云硬盘 </li>
@@ -318,10 +318,10 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 磁盘付费类型
+     * Get 云硬盘付费类型。
 <li> PREPAID: 预付费 </li>
 <li> POSTPAID_BY_HOUR: 按小时后付费 </li> 
-     * @return DiskChargeType 磁盘付费类型
+     * @return DiskChargeType 云硬盘付费类型。
 <li> PREPAID: 预付费 </li>
 <li> POSTPAID_BY_HOUR: 按小时后付费 </li>
      */
@@ -330,10 +330,10 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Set 磁盘付费类型
+     * Set 云硬盘付费类型。
 <li> PREPAID: 预付费 </li>
 <li> POSTPAID_BY_HOUR: 按小时后付费 </li>
-     * @param DiskChargeType 磁盘付费类型
+     * @param DiskChargeType 云硬盘付费类型。
 <li> PREPAID: 预付费 </li>
 <li> POSTPAID_BY_HOUR: 按小时后付费 </li>
      */
@@ -342,39 +342,39 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 磁盘大小, 单位GB 
-     * @return DiskSize 磁盘大小, 单位GB
+     * Get 云硬盘大小, 单位GB。 
+     * @return DiskSize 云硬盘大小, 单位GB。
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 磁盘大小, 单位GB
-     * @param DiskSize 磁盘大小, 单位GB
+     * Set 云硬盘大小, 单位GB。
+     * @param DiskSize 云硬盘大小, 单位GB。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 续费标识 
-     * @return RenewFlag 续费标识
+     * Get 续费标识。 
+     * @return RenewFlag 续费标识。
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 续费标识
-     * @param RenewFlag 续费标识
+     * Set 续费标识。
+     * @param RenewFlag 续费标识。
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 磁盘状态，取值范围：
+     * Get 云硬盘状态，取值范围：
 <li>PENDING：创建中。 </li>
 <li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
@@ -385,7 +385,7 @@ public class Disk extends AbstractModel {
 <li>TERMINATING：销毁中。</li>
 <li> DELETING：删除中。</li>
 <li> FREEZING：冻结中。</li> 
-     * @return DiskState 磁盘状态，取值范围：
+     * @return DiskState 云硬盘状态，取值范围：
 <li>PENDING：创建中。 </li>
 <li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
@@ -402,7 +402,7 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Set 磁盘状态，取值范围：
+     * Set 云硬盘状态，取值范围：
 <li>PENDING：创建中。 </li>
 <li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
@@ -413,7 +413,7 @@ public class Disk extends AbstractModel {
 <li>TERMINATING：销毁中。</li>
 <li> DELETING：删除中。</li>
 <li> FREEZING：冻结中。</li>
-     * @param DiskState 磁盘状态，取值范围：
+     * @param DiskState 云硬盘状态，取值范围：
 <li>PENDING：创建中。 </li>
 <li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
@@ -430,80 +430,80 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 磁盘挂载状态 
-     * @return Attached 磁盘挂载状态
+     * Get 云硬盘挂载状态。 
+     * @return Attached 云硬盘挂载状态。
      */
     public Boolean getAttached() {
         return this.Attached;
     }
 
     /**
-     * Set 磁盘挂载状态
-     * @param Attached 磁盘挂载状态
+     * Set 云硬盘挂载状态。
+     * @param Attached 云硬盘挂载状态。
      */
     public void setAttached(Boolean Attached) {
         this.Attached = Attached;
     }
 
     /**
-     * Get 是否随实例释放 
-     * @return DeleteWithInstance 是否随实例释放
+     * Get 是否随实例释放。 
+     * @return DeleteWithInstance 是否随实例释放。
      */
     public Boolean getDeleteWithInstance() {
         return this.DeleteWithInstance;
     }
 
     /**
-     * Set 是否随实例释放
-     * @param DeleteWithInstance 是否随实例释放
+     * Set 是否随实例释放。
+     * @param DeleteWithInstance 是否随实例释放。
      */
     public void setDeleteWithInstance(Boolean DeleteWithInstance) {
         this.DeleteWithInstance = DeleteWithInstance;
     }
 
     /**
-     * Get 上一次操作 
-     * @return LatestOperation 上一次操作
+     * Get 上一次操作。 
+     * @return LatestOperation 上一次操作。
      */
     public String getLatestOperation() {
         return this.LatestOperation;
     }
 
     /**
-     * Set 上一次操作
-     * @param LatestOperation 上一次操作
+     * Set 上一次操作。
+     * @param LatestOperation 上一次操作。
      */
     public void setLatestOperation(String LatestOperation) {
         this.LatestOperation = LatestOperation;
     }
 
     /**
-     * Get 上一次操作状态 
-     * @return LatestOperationState 上一次操作状态
+     * Get 上一次操作状态。 
+     * @return LatestOperationState 上一次操作状态。
      */
     public String getLatestOperationState() {
         return this.LatestOperationState;
     }
 
     /**
-     * Set 上一次操作状态
-     * @param LatestOperationState 上一次操作状态
+     * Set 上一次操作状态。
+     * @param LatestOperationState 上一次操作状态。
      */
     public void setLatestOperationState(String LatestOperationState) {
         this.LatestOperationState = LatestOperationState;
     }
 
     /**
-     * Get 上一次请求ID 
-     * @return LatestOperationRequestId 上一次请求ID
+     * Get 上一次请求ID。 
+     * @return LatestOperationRequestId 上一次请求ID。
      */
     public String getLatestOperationRequestId() {
         return this.LatestOperationRequestId;
     }
 
     /**
-     * Set 上一次请求ID
-     * @param LatestOperationRequestId 上一次请求ID
+     * Set 上一次请求ID。
+     * @param LatestOperationRequestId 上一次请求ID。
      */
     public void setLatestOperationRequestId(String LatestOperationRequestId) {
         this.LatestOperationRequestId = LatestOperationRequestId;

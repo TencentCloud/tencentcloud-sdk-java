@@ -114,6 +114,14 @@ public class WorkflowTask extends AbstractModel {
     private SmartSubtitlesResult [] SmartSubtitlesTaskResult;
 
     /**
+    * 智能擦除任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SmartEraseTaskResult")
+    @Expose
+    private SmartEraseTaskResult SmartEraseTaskResult;
+
+    /**
      * Get 媒体处理任务 ID。 
      * @return TaskId 媒体处理任务 ID。
      */
@@ -329,6 +337,26 @@ public class WorkflowTask extends AbstractModel {
         this.SmartSubtitlesTaskResult = SmartSubtitlesTaskResult;
     }
 
+    /**
+     * Get 智能擦除任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SmartEraseTaskResult 智能擦除任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SmartEraseTaskResult getSmartEraseTaskResult() {
+        return this.SmartEraseTaskResult;
+    }
+
+    /**
+     * Set 智能擦除任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartEraseTaskResult 智能擦除任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSmartEraseTaskResult(SmartEraseTaskResult SmartEraseTaskResult) {
+        this.SmartEraseTaskResult = SmartEraseTaskResult;
+    }
+
     public WorkflowTask() {
     }
 
@@ -388,6 +416,9 @@ public class WorkflowTask extends AbstractModel {
                 this.SmartSubtitlesTaskResult[i] = new SmartSubtitlesResult(source.SmartSubtitlesTaskResult[i]);
             }
         }
+        if (source.SmartEraseTaskResult != null) {
+            this.SmartEraseTaskResult = new SmartEraseTaskResult(source.SmartEraseTaskResult);
+        }
     }
 
 
@@ -407,6 +438,7 @@ public class WorkflowTask extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
         this.setParamObj(map, prefix + "AiQualityControlTaskResult.", this.AiQualityControlTaskResult);
         this.setParamArrayObj(map, prefix + "SmartSubtitlesTaskResult.", this.SmartSubtitlesTaskResult);
+        this.setParamObj(map, prefix + "SmartEraseTaskResult.", this.SmartEraseTaskResult);
 
     }
 }

@@ -56,6 +56,13 @@ public class ImageTaskInput extends AbstractModel {
     private BlindWatermarkConfig BlindWatermarkConfig;
 
     /**
+    * 美颜配置。
+    */
+    @SerializedName("BeautyConfig")
+    @Expose
+    private BeautyConfig BeautyConfig;
+
+    /**
      * Get 图片编码配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EncodeConfig 图片编码配置。
@@ -135,6 +142,22 @@ public class ImageTaskInput extends AbstractModel {
         this.BlindWatermarkConfig = BlindWatermarkConfig;
     }
 
+    /**
+     * Get 美颜配置。 
+     * @return BeautyConfig 美颜配置。
+     */
+    public BeautyConfig getBeautyConfig() {
+        return this.BeautyConfig;
+    }
+
+    /**
+     * Set 美颜配置。
+     * @param BeautyConfig 美颜配置。
+     */
+    public void setBeautyConfig(BeautyConfig BeautyConfig) {
+        this.BeautyConfig = BeautyConfig;
+    }
+
     public ImageTaskInput() {
     }
 
@@ -155,6 +178,9 @@ public class ImageTaskInput extends AbstractModel {
         if (source.BlindWatermarkConfig != null) {
             this.BlindWatermarkConfig = new BlindWatermarkConfig(source.BlindWatermarkConfig);
         }
+        if (source.BeautyConfig != null) {
+            this.BeautyConfig = new BeautyConfig(source.BeautyConfig);
+        }
     }
 
 
@@ -166,6 +192,7 @@ public class ImageTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         this.setParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
         this.setParamObj(map, prefix + "BlindWatermarkConfig.", this.BlindWatermarkConfig);
+        this.setParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
 
     }
 }

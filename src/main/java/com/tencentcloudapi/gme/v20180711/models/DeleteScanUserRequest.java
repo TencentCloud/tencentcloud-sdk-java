@@ -39,8 +39,7 @@ public class DeleteScanUserRequest extends AbstractModel {
     private Long UserId;
 
     /**
-    * 需要删除送检的用户号。示例："1234"
-(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+    * 需要删除送检的用户号，长度不超过1024字符。示例："1234"(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
     */
     @SerializedName("UserIdString")
     @Expose
@@ -83,20 +82,16 @@ public class DeleteScanUserRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要删除送检的用户号。示例："1234"
-(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准) 
-     * @return UserIdString 需要删除送检的用户号。示例："1234"
-(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+     * Get 需要删除送检的用户号，长度不超过1024字符。示例："1234"(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准) 
+     * @return UserIdString 需要删除送检的用户号，长度不超过1024字符。示例："1234"(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
      */
     public String getUserIdString() {
         return this.UserIdString;
     }
 
     /**
-     * Set 需要删除送检的用户号。示例："1234"
-(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
-     * @param UserIdString 需要删除送检的用户号。示例："1234"
-(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+     * Set 需要删除送检的用户号，长度不超过1024字符。示例："1234"(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+     * @param UserIdString 需要删除送检的用户号，长度不超过1024字符。示例："1234"(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
      */
     public void setUserIdString(String UserIdString) {
         this.UserIdString = UserIdString;

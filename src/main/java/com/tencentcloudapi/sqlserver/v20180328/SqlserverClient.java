@@ -1337,7 +1337,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口(ModifyDatabaseShrinkDMF)用于收缩数据库mdf(Shrink mdf)。
+     *本接口（ModifyDatabaseShrinkMDF）用于收缩数据库 mdf（Shrink mdf）。
      * @param req ModifyDatabaseShrinkMDFRequest
      * @return ModifyDatabaseShrinkMDFResponse
      * @throws TencentCloudSDKException

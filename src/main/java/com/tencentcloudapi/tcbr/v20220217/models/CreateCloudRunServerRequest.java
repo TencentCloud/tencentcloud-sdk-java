@@ -59,6 +59,13 @@ public class CreateCloudRunServerRequest extends AbstractModel {
     private DiffConfigItem [] Items;
 
     /**
+    * vpc 信息
+    */
+    @SerializedName("VpcInfo")
+    @Expose
+    private CreateVpcInfo VpcInfo;
+
+    /**
      * Get 环境Id 
      * @return EnvId 环境Id
      */
@@ -138,6 +145,22 @@ public class CreateCloudRunServerRequest extends AbstractModel {
         this.Items = Items;
     }
 
+    /**
+     * Get vpc 信息 
+     * @return VpcInfo vpc 信息
+     */
+    public CreateVpcInfo getVpcInfo() {
+        return this.VpcInfo;
+    }
+
+    /**
+     * Set vpc 信息
+     * @param VpcInfo vpc 信息
+     */
+    public void setVpcInfo(CreateVpcInfo VpcInfo) {
+        this.VpcInfo = VpcInfo;
+    }
+
     public CreateCloudRunServerRequest() {
     }
 
@@ -164,6 +187,9 @@ public class CreateCloudRunServerRequest extends AbstractModel {
                 this.Items[i] = new DiffConfigItem(source.Items[i]);
             }
         }
+        if (source.VpcInfo != null) {
+            this.VpcInfo = new CreateVpcInfo(source.VpcInfo);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class CreateCloudRunServerRequest extends AbstractModel {
         this.setParamObj(map, prefix + "DeployInfo.", this.DeployInfo);
         this.setParamObj(map, prefix + "ServerConfig.", this.ServerConfig);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
 
     }
 }

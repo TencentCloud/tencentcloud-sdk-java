@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SaleInfo extends AbstractModel {
 
     /**
-    * 手动设置的flag标志
+    * 手动设置的flag标志，true表示售罄，false表示可售。
     */
     @SerializedName("Flag")
     @Expose
@@ -52,16 +52,16 @@ public class SaleInfo extends AbstractModel {
     private Boolean SoldOut;
 
     /**
-     * Get 手动设置的flag标志 
-     * @return Flag 手动设置的flag标志
+     * Get 手动设置的flag标志，true表示售罄，false表示可售。 
+     * @return Flag 手动设置的flag标志，true表示售罄，false表示可售。
      */
     public Boolean getFlag() {
         return this.Flag;
     }
 
     /**
-     * Set 手动设置的flag标志
-     * @param Flag 手动设置的flag标志
+     * Set 手动设置的flag标志，true表示售罄，false表示可售。
+     * @param Flag 手动设置的flag标志，true表示售罄，false表示可售。
      */
     public void setFlag(Boolean Flag) {
         this.Flag = Flag;

@@ -120,6 +120,14 @@ public class ActivityResItem extends AbstractModel {
     private ScheduleSmartSubtitleTaskResult SmartSubtitlesTask;
 
     /**
+    * 智能擦除任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SmartEraseTask")
+    @Expose
+    private SmartEraseTaskResult SmartEraseTask;
+
+    /**
      * Get 转码任务输出
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranscodeTask 转码任务输出
@@ -359,6 +367,26 @@ public class ActivityResItem extends AbstractModel {
         this.SmartSubtitlesTask = SmartSubtitlesTask;
     }
 
+    /**
+     * Get 智能擦除任务输出
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SmartEraseTask 智能擦除任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SmartEraseTaskResult getSmartEraseTask() {
+        return this.SmartEraseTask;
+    }
+
+    /**
+     * Set 智能擦除任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartEraseTask 智能擦除任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSmartEraseTask(SmartEraseTaskResult SmartEraseTask) {
+        this.SmartEraseTask = SmartEraseTask;
+    }
+
     public ActivityResItem() {
     }
 
@@ -403,6 +431,9 @@ public class ActivityResItem extends AbstractModel {
         if (source.SmartSubtitlesTask != null) {
             this.SmartSubtitlesTask = new ScheduleSmartSubtitleTaskResult(source.SmartSubtitlesTask);
         }
+        if (source.SmartEraseTask != null) {
+            this.SmartEraseTask = new SmartEraseTaskResult(source.SmartEraseTask);
+        }
     }
 
 
@@ -422,6 +453,7 @@ public class ActivityResItem extends AbstractModel {
         this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
         this.setParamObj(map, prefix + "ExecRuleTask.", this.ExecRuleTask);
         this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
+        this.setParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
 
     }
 }

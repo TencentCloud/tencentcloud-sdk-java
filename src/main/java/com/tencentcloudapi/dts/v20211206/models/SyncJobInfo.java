@@ -137,7 +137,7 @@ public class SyncJobInfo extends AbstractModel {
     private String SrcNodeType;
 
     /**
-    * 源端信息，多节点数据库使用
+    * 源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
     */
     @SerializedName("SrcInfos")
     @Expose
@@ -179,7 +179,7 @@ public class SyncJobInfo extends AbstractModel {
     private String DstNodeType;
 
     /**
-    * 目标端信息，多节点数据库使用
+    * 目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
     */
     @SerializedName("DstInfos")
     @Expose
@@ -537,16 +537,16 @@ public class SyncJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 源端信息，多节点数据库使用 
-     * @return SrcInfos 源端信息，多节点数据库使用
+     * Get 源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。 
+     * @return SrcInfos 源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
      */
     public SyncDBEndpointInfos getSrcInfos() {
         return this.SrcInfos;
     }
 
     /**
-     * Set 源端信息，多节点数据库使用
-     * @param SrcInfos 源端信息，多节点数据库使用
+     * Set 源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
+     * @param SrcInfos 源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
      */
     public void setSrcInfos(SyncDBEndpointInfos SrcInfos) {
         this.SrcInfos = SrcInfos;
@@ -633,16 +633,16 @@ public class SyncJobInfo extends AbstractModel {
     }
 
     /**
-     * Get 目标端信息，多节点数据库使用 
-     * @return DstInfos 目标端信息，多节点数据库使用
+     * Get 目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。 
+     * @return DstInfos 目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
      */
     public SyncDBEndpointInfos getDstInfos() {
         return this.DstInfos;
     }
 
     /**
-     * Set 目标端信息，多节点数据库使用
-     * @param DstInfos 目标端信息，多节点数据库使用
+     * Set 目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
+     * @param DstInfos 目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
      */
     public void setDstInfos(SyncDBEndpointInfos DstInfos) {
         this.DstInfos = DstInfos;

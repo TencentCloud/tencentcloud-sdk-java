@@ -45,7 +45,7 @@ public class ZoneInfo extends AbstractModel {
     private Long AppId;
 
     /**
-    * 标识
+    * 可用区是否售罄标识，true表示已售罄，false表示未售罄。
     */
     @SerializedName("Flag")
     @Expose
@@ -142,16 +142,16 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Get 标识 
-     * @return Flag 标识
+     * Get 可用区是否售罄标识，true表示已售罄，false表示未售罄。 
+     * @return Flag 可用区是否售罄标识，true表示已售罄，false表示未售罄。
      */
     public Boolean getFlag() {
         return this.Flag;
     }
 
     /**
-     * Set 标识
-     * @param Flag 标识
+     * Set 可用区是否售罄标识，true表示已售罄，false表示未售罄。
+     * @param Flag 可用区是否售罄标识，true表示已售罄，false表示未售罄。
      */
     public void setFlag(Boolean Flag) {
         this.Flag = Flag;

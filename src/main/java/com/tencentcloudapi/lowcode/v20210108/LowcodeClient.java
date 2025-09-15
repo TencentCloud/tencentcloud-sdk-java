@@ -105,6 +105,17 @@ public class LowcodeClient extends AbstractClient{
     }
 
     /**
+     *分页获取当前用户的应用列表
+     * @param req DescribeAppsRequest
+     * @return DescribeAppsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppsResponse DescribeApps(DescribeAppsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApps", DescribeAppsResponse.class);
+    }
+
+    /**
      *获取数据源详情列表
      * @param req DescribeDataSourceListRequest
      * @return DescribeDataSourceListResponse
@@ -146,6 +157,28 @@ public class LowcodeClient extends AbstractClient{
     public DescribeKnowledgeSetListResponse DescribeKnowledgeSetList(DescribeKnowledgeSetListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeKnowledgeSetList", DescribeKnowledgeSetListResponse.class);
+    }
+
+    /**
+     *获取角色关联的用户列表
+     * @param req DescribeRelatedUsersRequest
+     * @return DescribeRelatedUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRelatedUsersResponse DescribeRelatedUsers(DescribeRelatedUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRelatedUsers", DescribeRelatedUsersResponse.class);
+    }
+
+    /**
+     *查询资源关联的角色列表
+     * @param req DescribeResourceRoleListRequest
+     * @return DescribeResourceRoleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceRoleListResponse DescribeResourceRoleList(DescribeResourceRoleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceRoleList", DescribeResourceRoleListResponse.class);
     }
 
     /**

@@ -31,7 +31,7 @@ public class InquiryPublicNetworkParam extends AbstractModel {
     private String PublicNetworkChargeType;
 
     /**
-    * 公网带宽, 单位MB
+    * 公网带宽, 单位MB 取值需是0，或是3的倍数
     */
     @SerializedName("PublicNetworkMonthly")
     @Expose
@@ -54,16 +54,16 @@ public class InquiryPublicNetworkParam extends AbstractModel {
     }
 
     /**
-     * Get 公网带宽, 单位MB 
-     * @return PublicNetworkMonthly 公网带宽, 单位MB
+     * Get 公网带宽, 单位MB 取值需是0，或是3的倍数 
+     * @return PublicNetworkMonthly 公网带宽, 单位MB 取值需是0，或是3的倍数
      */
     public Long getPublicNetworkMonthly() {
         return this.PublicNetworkMonthly;
     }
 
     /**
-     * Set 公网带宽, 单位MB
-     * @param PublicNetworkMonthly 公网带宽, 单位MB
+     * Set 公网带宽, 单位MB 取值需是0，或是3的倍数
+     * @param PublicNetworkMonthly 公网带宽, 单位MB 取值需是0，或是3的倍数
      */
     public void setPublicNetworkMonthly(Long PublicNetworkMonthly) {
         this.PublicNetworkMonthly = PublicNetworkMonthly;

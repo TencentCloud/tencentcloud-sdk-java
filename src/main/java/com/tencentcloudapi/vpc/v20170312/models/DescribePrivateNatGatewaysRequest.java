@@ -31,11 +31,7 @@ public class DescribePrivateNatGatewaysRequest extends AbstractModel {
     private String [] NatGatewayIds;
 
     /**
-    * 过滤条件。
-<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li>
-<li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li>
-<li>VpcId - String - 私网网关所在`VpcId`。</li>
-<li>TagKey - Tag数组 - 私网网关标签键值对数组</li>
+    * 过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -86,32 +82,16 @@ public class DescribePrivateNatGatewaysRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件。
-<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li>
-<li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li>
-<li>VpcId - String - 私网网关所在`VpcId`。</li>
-<li>TagKey - Tag数组 - 私网网关标签键值对数组</li> 
-     * @return Filters 过滤条件。
-<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li>
-<li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li>
-<li>VpcId - String - 私网网关所在`VpcId`。</li>
-<li>TagKey - Tag数组 - 私网网关标签键值对数组</li>
+     * Get 过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li> 
+     * @return Filters 过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件。
-<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li>
-<li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li>
-<li>VpcId - String - 私网网关所在`VpcId`。</li>
-<li>TagKey - Tag数组 - 私网网关标签键值对数组</li>
-     * @param Filters 过滤条件。
-<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li>
-<li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li>
-<li>VpcId - String - 私网网关所在`VpcId`。</li>
-<li>TagKey - Tag数组 - 私网网关标签键值对数组</li>
+     * Set 过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li>
+     * @param Filters 过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

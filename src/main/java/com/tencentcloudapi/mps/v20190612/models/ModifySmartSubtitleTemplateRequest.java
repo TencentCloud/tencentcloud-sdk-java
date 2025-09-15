@@ -78,6 +78,8 @@ hi：印地语
 fr：法语
 de：德语
 zh_dialect：中文方言
+zh_en: 中英
+prime_zh: 中英方言
     */
     @SerializedName("VideoSrcLanguage")
     @Expose
@@ -86,6 +88,7 @@ zh_dialect：中文方言
     /**
     * 智能字幕文件格式
  vtt: WebVTT 格式
+srt: SRT格式
 不填或填空：不生成字幕文件
     */
     @SerializedName("SubtitleFormat")
@@ -239,7 +242,9 @@ es：西班牙语
 hi：印地语
 fr：法语
 de：德语
-zh_dialect：中文方言 
+zh_dialect：中文方言
+zh_en: 中英
+prime_zh: 中英方言 
      * @return VideoSrcLanguage 智能字幕视频源语言
 当前支持以下语言：
 zh：简体中文
@@ -262,6 +267,8 @@ hi：印地语
 fr：法语
 de：德语
 zh_dialect：中文方言
+zh_en: 中英
+prime_zh: 中英方言
      */
     public String getVideoSrcLanguage() {
         return this.VideoSrcLanguage;
@@ -290,6 +297,8 @@ hi：印地语
 fr：法语
 de：德语
 zh_dialect：中文方言
+zh_en: 中英
+prime_zh: 中英方言
      * @param VideoSrcLanguage 智能字幕视频源语言
 当前支持以下语言：
 zh：简体中文
@@ -312,6 +321,8 @@ hi：印地语
 fr：法语
 de：德语
 zh_dialect：中文方言
+zh_en: 中英
+prime_zh: 中英方言
      */
     public void setVideoSrcLanguage(String VideoSrcLanguage) {
         this.VideoSrcLanguage = VideoSrcLanguage;
@@ -320,9 +331,11 @@ zh_dialect：中文方言
     /**
      * Get 智能字幕文件格式
  vtt: WebVTT 格式
+srt: SRT格式
 不填或填空：不生成字幕文件 
      * @return SubtitleFormat 智能字幕文件格式
  vtt: WebVTT 格式
+srt: SRT格式
 不填或填空：不生成字幕文件
      */
     public String getSubtitleFormat() {
@@ -332,9 +345,11 @@ zh_dialect：中文方言
     /**
      * Set 智能字幕文件格式
  vtt: WebVTT 格式
+srt: SRT格式
 不填或填空：不生成字幕文件
      * @param SubtitleFormat 智能字幕文件格式
  vtt: WebVTT 格式
+srt: SRT格式
 不填或填空：不生成字幕文件
      */
     public void setSubtitleFormat(String SubtitleFormat) {

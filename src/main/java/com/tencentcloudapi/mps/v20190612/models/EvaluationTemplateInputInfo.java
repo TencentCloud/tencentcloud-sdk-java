@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EvaluationTemplateInputInfo extends AbstractModel {
 
     /**
-    * 转码模版的 ID。
+    * 转码模板的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Definition")
@@ -32,9 +32,9 @@ public class EvaluationTemplateInputInfo extends AbstractModel {
     private Long Definition;
 
     /**
-     * Get 转码模版的 ID。
+     * Get 转码模板的 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Definition 转码模版的 ID。
+     * @return Definition 转码模板的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefinition() {
@@ -42,9 +42,9 @@ public class EvaluationTemplateInputInfo extends AbstractModel {
     }
 
     /**
-     * Set 转码模版的 ID。
+     * Set 转码模板的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Definition 转码模版的 ID。
+     * @param Definition 转码模板的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefinition(Long Definition) {

@@ -74,7 +74,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private String SegmentObjectName;
 
     /**
-    * 要插入的字幕文件。
+    * 外挂字幕功能，指定要插入的字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddOnSubtitles")
@@ -83,6 +83,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
 
     /**
     * Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DrmInfo")
     @Expose
@@ -98,7 +99,7 @@ PureAudio：纯音频类型
     private String DefinitionType;
 
     /**
-    * 字幕参数
+    * 硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubtitleTemplate")
@@ -241,9 +242,9 @@ PureAudio：纯音频类型
     }
 
     /**
-     * Get 要插入的字幕文件。
+     * Get 外挂字幕功能，指定要插入的字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AddOnSubtitles 要插入的字幕文件。
+     * @return AddOnSubtitles 外挂字幕功能，指定要插入的字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AddOnSubtitle [] getAddOnSubtitles() {
@@ -251,9 +252,9 @@ PureAudio：纯音频类型
     }
 
     /**
-     * Set 要插入的字幕文件。
+     * Set 外挂字幕功能，指定要插入的字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AddOnSubtitles 要插入的字幕文件。
+     * @param AddOnSubtitles 外挂字幕功能，指定要插入的字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
@@ -261,8 +262,10 @@ PureAudio：纯音频类型
     }
 
     /**
-     * Get Drm信息。 
+     * Get Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DrmInfo Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public DrmInfo getDrmInfo() {
         return this.DrmInfo;
@@ -270,7 +273,9 @@ PureAudio：纯音频类型
 
     /**
      * Set Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DrmInfo Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDrmInfo(DrmInfo DrmInfo) {
         this.DrmInfo = DrmInfo;
@@ -301,9 +306,9 @@ PureAudio：纯音频类型
     }
 
     /**
-     * Get 字幕参数
+     * Get 硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubtitleTemplate 字幕参数
+     * @return SubtitleTemplate 硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubtitleTemplate getSubtitleTemplate() {
@@ -311,9 +316,9 @@ PureAudio：纯音频类型
     }
 
     /**
-     * Set 字幕参数
+     * Set 硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubtitleTemplate 字幕参数
+     * @param SubtitleTemplate 硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {

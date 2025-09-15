@@ -103,6 +103,13 @@ public class ProcessMediaRequest extends AbstractModel {
     private SmartSubtitlesTaskInput SmartSubtitlesTask;
 
     /**
+    * 智能擦除类型任务参数
+    */
+    @SerializedName("SmartEraseTask")
+    @Expose
+    private SmartEraseTaskInput SmartEraseTask;
+
+    /**
     * 任务的事件通知信息，不填代表不获取事件通知。
     */
     @SerializedName("TaskNotifyConfig")
@@ -353,6 +360,22 @@ public class ProcessMediaRequest extends AbstractModel {
     }
 
     /**
+     * Get 智能擦除类型任务参数 
+     * @return SmartEraseTask 智能擦除类型任务参数
+     */
+    public SmartEraseTaskInput getSmartEraseTask() {
+        return this.SmartEraseTask;
+    }
+
+    /**
+     * Set 智能擦除类型任务参数
+     * @param SmartEraseTask 智能擦除类型任务参数
+     */
+    public void setSmartEraseTask(SmartEraseTaskInput SmartEraseTask) {
+        this.SmartEraseTask = SmartEraseTask;
+    }
+
+    /**
      * Get 任务的事件通知信息，不填代表不获取事件通知。 
      * @return TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
@@ -522,6 +545,9 @@ public class ProcessMediaRequest extends AbstractModel {
         if (source.SmartSubtitlesTask != null) {
             this.SmartSubtitlesTask = new SmartSubtitlesTaskInput(source.SmartSubtitlesTask);
         }
+        if (source.SmartEraseTask != null) {
+            this.SmartEraseTask = new SmartEraseTaskInput(source.SmartEraseTask);
+        }
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
@@ -560,6 +586,7 @@ public class ProcessMediaRequest extends AbstractModel {
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
         this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
+        this.setParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

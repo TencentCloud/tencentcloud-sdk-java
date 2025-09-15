@@ -151,6 +151,20 @@ public class ProxyAddress extends AbstractModel {
     private Boolean AutoLoadBalance;
 
     /**
+    * 是否把libra当作ro节点
+    */
+    @SerializedName("ApNodeAsRoNode")
+    @Expose
+    private Boolean ApNodeAsRoNode;
+
+    /**
+    * libra节点故障，是否转发给其他节点
+    */
+    @SerializedName("ApQueryToOtherNode")
+    @Expose
+    private Boolean ApQueryToOtherNode;
+
+    /**
      * Get 代理组地址ID 
      * @return ProxyAddressId 代理组地址ID
      */
@@ -442,6 +456,38 @@ public class ProxyAddress extends AbstractModel {
         this.AutoLoadBalance = AutoLoadBalance;
     }
 
+    /**
+     * Get 是否把libra当作ro节点 
+     * @return ApNodeAsRoNode 是否把libra当作ro节点
+     */
+    public Boolean getApNodeAsRoNode() {
+        return this.ApNodeAsRoNode;
+    }
+
+    /**
+     * Set 是否把libra当作ro节点
+     * @param ApNodeAsRoNode 是否把libra当作ro节点
+     */
+    public void setApNodeAsRoNode(Boolean ApNodeAsRoNode) {
+        this.ApNodeAsRoNode = ApNodeAsRoNode;
+    }
+
+    /**
+     * Get libra节点故障，是否转发给其他节点 
+     * @return ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     */
+    public Boolean getApQueryToOtherNode() {
+        return this.ApQueryToOtherNode;
+    }
+
+    /**
+     * Set libra节点故障，是否转发给其他节点
+     * @param ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     */
+    public void setApQueryToOtherNode(Boolean ApQueryToOtherNode) {
+        this.ApQueryToOtherNode = ApQueryToOtherNode;
+    }
+
     public ProxyAddress() {
     }
 
@@ -507,6 +553,12 @@ public class ProxyAddress extends AbstractModel {
         if (source.AutoLoadBalance != null) {
             this.AutoLoadBalance = new Boolean(source.AutoLoadBalance);
         }
+        if (source.ApNodeAsRoNode != null) {
+            this.ApNodeAsRoNode = new Boolean(source.ApNodeAsRoNode);
+        }
+        if (source.ApQueryToOtherNode != null) {
+            this.ApQueryToOtherNode = new Boolean(source.ApQueryToOtherNode);
+        }
     }
 
 
@@ -532,6 +584,8 @@ public class ProxyAddress extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
         this.setParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
+        this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+        this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInformationExtractionTaskResponse extends AbstractModel {
 
     /**
-    * 信息提取任务结果
+    * 合同信息提取字段信息
     */
     @SerializedName("Fields")
     @Expose
@@ -55,6 +55,13 @@ public class DescribeInformationExtractionTaskResponse extends AbstractModel {
     private String Url;
 
     /**
+    * 合同信息提取结果信息
+    */
+    @SerializedName("Results")
+    @Expose
+    private ExtractionTaskResult [] Results;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -62,16 +69,16 @@ public class DescribeInformationExtractionTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 信息提取任务结果 
-     * @return Fields 信息提取任务结果
+     * Get 合同信息提取字段信息 
+     * @return Fields 合同信息提取字段信息
      */
     public ExtractionField [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set 信息提取任务结果
-     * @param Fields 信息提取任务结果
+     * Set 合同信息提取字段信息
+     * @param Fields 合同信息提取字段信息
      */
     public void setFields(ExtractionField [] Fields) {
         this.Fields = Fields;
@@ -150,6 +157,22 @@ public class DescribeInformationExtractionTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get 合同信息提取结果信息 
+     * @return Results 合同信息提取结果信息
+     */
+    public ExtractionTaskResult [] getResults() {
+        return this.Results;
+    }
+
+    /**
+     * Set 合同信息提取结果信息
+     * @param Results 合同信息提取结果信息
+     */
+    public void setResults(ExtractionTaskResult [] Results) {
+        this.Results = Results;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -185,6 +208,12 @@ public class DescribeInformationExtractionTaskResponse extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Results != null) {
+            this.Results = new ExtractionTaskResult[source.Results.length];
+            for (int i = 0; i < source.Results.length; i++) {
+                this.Results[i] = new ExtractionTaskResult(source.Results[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -198,6 +227,7 @@ public class DescribeInformationExtractionTaskResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Fields.", this.Fields);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamArrayObj(map, prefix + "Results.", this.Results);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

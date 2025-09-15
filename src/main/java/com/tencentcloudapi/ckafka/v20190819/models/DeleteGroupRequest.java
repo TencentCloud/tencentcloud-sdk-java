@@ -31,7 +31,7 @@ public class DeleteGroupRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 消费组名称，可通过DescribeConsumerGroup接口获取。
+    * 消费组名称，可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取。
     */
     @SerializedName("Group")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 消费组名称，可通过DescribeConsumerGroup接口获取。 
-     * @return Group 消费组名称，可通过DescribeConsumerGroup接口获取。
+     * Get 消费组名称，可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取。 
+     * @return Group 消费组名称，可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取。
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 消费组名称，可通过DescribeConsumerGroup接口获取。
-     * @param Group 消费组名称，可通过DescribeConsumerGroup接口获取。
+     * Set 消费组名称，可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取。
+     * @param Group 消费组名称，可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取。
      */
     public void setGroup(String Group) {
         this.Group = Group;

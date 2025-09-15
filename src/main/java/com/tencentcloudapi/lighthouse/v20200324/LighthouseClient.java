@@ -726,6 +726,17 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口（DescribeMcpServerTemplates）用于查询MCP Server模板列表。
+     * @param req DescribeMcpServerTemplatesRequest
+     * @return DescribeMcpServerTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMcpServerTemplatesResponse DescribeMcpServerTemplates(DescribeMcpServerTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMcpServerTemplates", DescribeMcpServerTemplatesResponse.class);
+    }
+
+    /**
      *本接口（DescribeMcpServers）用于查询MCP Server列表。
      * @param req DescribeMcpServersRequest
      * @return DescribeMcpServersResponse
@@ -989,7 +1000,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
     /**
      *本接口(ModifyDisksBackupQuota)用于调整云硬盘备份点配额。
-该操作目前仅支持云硬盘类型为数据盘且状态是ATTACHED（已挂载）或 UNATTACHED（待挂载）的云硬盘。
+该操作目前仅支持状态是ATTACHED（已挂载）或 UNATTACHED（待挂载）的云硬盘。
 支持批量操作。每次批量请求云硬盘数量上限为15个。
      * @param req ModifyDisksBackupQuotaRequest
      * @return ModifyDisksBackupQuotaResponse

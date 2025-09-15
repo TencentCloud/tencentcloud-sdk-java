@@ -66,6 +66,13 @@ public class CreatePrivateNatGatewayRequest extends AbstractModel {
     private String CcnId;
 
     /**
+    * 私网NAT实例是否开启删除保护
+    */
+    @SerializedName("DeletionProtectionEnabled")
+    @Expose
+    private Boolean DeletionProtectionEnabled;
+
+    /**
      * Get 私网网关名称 
      * @return NatGatewayName 私网网关名称
      */
@@ -161,6 +168,22 @@ public class CreatePrivateNatGatewayRequest extends AbstractModel {
         this.CcnId = CcnId;
     }
 
+    /**
+     * Get 私网NAT实例是否开启删除保护 
+     * @return DeletionProtectionEnabled 私网NAT实例是否开启删除保护
+     */
+    public Boolean getDeletionProtectionEnabled() {
+        return this.DeletionProtectionEnabled;
+    }
+
+    /**
+     * Set 私网NAT实例是否开启删除保护
+     * @param DeletionProtectionEnabled 私网NAT实例是否开启删除保护
+     */
+    public void setDeletionProtectionEnabled(Boolean DeletionProtectionEnabled) {
+        this.DeletionProtectionEnabled = DeletionProtectionEnabled;
+    }
+
     public CreatePrivateNatGatewayRequest() {
     }
 
@@ -190,6 +213,9 @@ public class CreatePrivateNatGatewayRequest extends AbstractModel {
         if (source.CcnId != null) {
             this.CcnId = new String(source.CcnId);
         }
+        if (source.DeletionProtectionEnabled != null) {
+            this.DeletionProtectionEnabled = new Boolean(source.DeletionProtectionEnabled);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class CreatePrivateNatGatewayRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "VpcType", this.VpcType);
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);
+        this.setParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
 
     }
 }

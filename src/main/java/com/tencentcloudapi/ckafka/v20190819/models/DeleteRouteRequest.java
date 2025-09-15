@@ -31,7 +31,7 @@ public class DeleteRouteRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 路由id,可通过DescribeRoute接口获取
+    * 路由id,可通过[DescribeRoute](https://cloud.tencent.com/document/product/597/45484)接口获取
     */
     @SerializedName("RouteId")
     @Expose
@@ -68,16 +68,16 @@ public class DeleteRouteRequest extends AbstractModel {
     }
 
     /**
-     * Get 路由id,可通过DescribeRoute接口获取 
-     * @return RouteId 路由id,可通过DescribeRoute接口获取
+     * Get 路由id,可通过[DescribeRoute](https://cloud.tencent.com/document/product/597/45484)接口获取 
+     * @return RouteId 路由id,可通过[DescribeRoute](https://cloud.tencent.com/document/product/597/45484)接口获取
      */
     public Long getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set 路由id,可通过DescribeRoute接口获取
-     * @param RouteId 路由id,可通过DescribeRoute接口获取
+     * Set 路由id,可通过[DescribeRoute](https://cloud.tencent.com/document/product/597/45484)接口获取
+     * @param RouteId 路由id,可通过[DescribeRoute](https://cloud.tencent.com/document/product/597/45484)接口获取
      */
     public void setRouteId(Long RouteId) {
         this.RouteId = RouteId;

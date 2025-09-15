@@ -31,7 +31,7 @@ public class ModifyDisksBackupQuotaRequest extends AbstractModel {
     private String [] DiskIds;
 
     /**
-    * 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须不小于已存在的备份点数量。
+    * 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须大于等于已存在的备份点数量。
     */
     @SerializedName("DiskBackupQuota")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyDisksBackupQuotaRequest extends AbstractModel {
     }
 
     /**
-     * Get 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须不小于已存在的备份点数量。 
-     * @return DiskBackupQuota 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须不小于已存在的备份点数量。
+     * Get 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须大于等于已存在的备份点数量。 
+     * @return DiskBackupQuota 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须大于等于已存在的备份点数量。
      */
     public Long getDiskBackupQuota() {
         return this.DiskBackupQuota;
     }
 
     /**
-     * Set 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须不小于已存在的备份点数量。
-     * @param DiskBackupQuota 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须不小于已存在的备份点数量。
+     * Set 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须大于等于已存在的备份点数量。
+     * @param DiskBackupQuota 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须大于等于已存在的备份点数量。
      */
     public void setDiskBackupQuota(Long DiskBackupQuota) {
         this.DiskBackupQuota = DiskBackupQuota;

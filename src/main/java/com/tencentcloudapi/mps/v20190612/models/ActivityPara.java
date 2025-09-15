@@ -120,6 +120,14 @@ public class ActivityPara extends AbstractModel {
     private SmartSubtitlesTaskInput SmartSubtitlesTask;
 
     /**
+    * 智能擦除任务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SmartEraseTask")
+    @Expose
+    private SmartEraseTaskInput SmartEraseTask;
+
+    /**
      * Get 视频转码任务
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranscodeTask 视频转码任务
@@ -359,6 +367,26 @@ public class ActivityPara extends AbstractModel {
         this.SmartSubtitlesTask = SmartSubtitlesTask;
     }
 
+    /**
+     * Get 智能擦除任务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SmartEraseTask 智能擦除任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SmartEraseTaskInput getSmartEraseTask() {
+        return this.SmartEraseTask;
+    }
+
+    /**
+     * Set 智能擦除任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartEraseTask 智能擦除任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSmartEraseTask(SmartEraseTaskInput SmartEraseTask) {
+        this.SmartEraseTask = SmartEraseTask;
+    }
+
     public ActivityPara() {
     }
 
@@ -403,6 +431,9 @@ public class ActivityPara extends AbstractModel {
         if (source.SmartSubtitlesTask != null) {
             this.SmartSubtitlesTask = new SmartSubtitlesTaskInput(source.SmartSubtitlesTask);
         }
+        if (source.SmartEraseTask != null) {
+            this.SmartEraseTask = new SmartEraseTaskInput(source.SmartEraseTask);
+        }
     }
 
 
@@ -422,6 +453,7 @@ public class ActivityPara extends AbstractModel {
         this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
         this.setParamObj(map, prefix + "ExecRulesTask.", this.ExecRulesTask);
         this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
+        this.setParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
 
     }
 }

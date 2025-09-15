@@ -125,6 +125,20 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
     private String AccessMode;
 
     /**
+    * 是否将libra节点当作普通RO节点
+    */
+    @SerializedName("ApNodeAsRoNode")
+    @Expose
+    private String ApNodeAsRoNode;
+
+    /**
+    * libra节点故障，是否转发给其他节点
+    */
+    @SerializedName("ApQueryToOtherNode")
+    @Expose
+    private String ApQueryToOtherNode;
+
+    /**
      * Get 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。 
      * @return ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
@@ -360,6 +374,38 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
         this.AccessMode = AccessMode;
     }
 
+    /**
+     * Get 是否将libra节点当作普通RO节点 
+     * @return ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     */
+    public String getApNodeAsRoNode() {
+        return this.ApNodeAsRoNode;
+    }
+
+    /**
+     * Set 是否将libra节点当作普通RO节点
+     * @param ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     */
+    public void setApNodeAsRoNode(String ApNodeAsRoNode) {
+        this.ApNodeAsRoNode = ApNodeAsRoNode;
+    }
+
+    /**
+     * Get libra节点故障，是否转发给其他节点 
+     * @return ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     */
+    public String getApQueryToOtherNode() {
+        return this.ApQueryToOtherNode;
+    }
+
+    /**
+     * Set libra节点故障，是否转发给其他节点
+     * @param ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     */
+    public void setApQueryToOtherNode(String ApQueryToOtherNode) {
+        this.ApQueryToOtherNode = ApQueryToOtherNode;
+    }
+
     public AdjustCdbProxyAddressRequest() {
     }
 
@@ -413,6 +459,12 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
         if (source.AccessMode != null) {
             this.AccessMode = new String(source.AccessMode);
         }
+        if (source.ApNodeAsRoNode != null) {
+            this.ApNodeAsRoNode = new String(source.ApNodeAsRoNode);
+        }
+        if (source.ApQueryToOtherNode != null) {
+            this.ApQueryToOtherNode = new String(source.ApQueryToOtherNode);
+        }
     }
 
 
@@ -434,6 +486,8 @@ public class AdjustCdbProxyAddressRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
         this.setParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
+        this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+        this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
 
     }
 }

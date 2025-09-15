@@ -25,10 +25,16 @@ public class QualityControlItemConfig extends AbstractModel {
 
     /**
     * 质检项名称。质检项取值如下：
-<li>LowEvaluation：无参考打分</li>
+<li>LowEvaluation：视频无参考评分（MOS）</li>
+<li>AudioEvaluation：音频无参考评分（MOS）</li>
 <li>Mosaic：马赛克检测</li>
 <li>CrashScreen：花屏检测</li>
 <li>Blur：模糊检测</li>
+<li>Jitter：抖动检测</li>
+<li>Noise：噪点检测</li>
+<li>QRCode：二维码检测</li>
+<li>BarCode：条形码检测</li>
+<li>AppletCode：小程序码检测</li>
 <li>BlackWhiteEdge：黑白边检测</li>
 <li>SolidColorScreen：纯色屏检测</li>
 <li>LowLighting：低光照</li>
@@ -36,11 +42,7 @@ public class QualityControlItemConfig extends AbstractModel {
 <li>NoVoice：静音检测</li>
 <li>LowVoice：低音检测</li>
 <li>HighVoice：爆音检测</li>
-<li>Jitter：抖动检测</li>
-<li>Noise：噪点检测</li>
-<li>QRCode：二维码检测</li>
-<li>BarCode：条形码检测</li>
-<li>AppletCode：小程序码检测</li>
+<li>AudioNoise：音频噪声检测</li>
 <li>VideoResolutionChanged：视频分辨率变化</li>
 <li>AudioSampleRateChanged：音频采样率变化</li>
 <li>AudioChannelsChanged：音频通道数变化</li>
@@ -138,10 +140,16 @@ public class QualityControlItemConfig extends AbstractModel {
 
     /**
      * Get 质检项名称。质检项取值如下：
-<li>LowEvaluation：无参考打分</li>
+<li>LowEvaluation：视频无参考评分（MOS）</li>
+<li>AudioEvaluation：音频无参考评分（MOS）</li>
 <li>Mosaic：马赛克检测</li>
 <li>CrashScreen：花屏检测</li>
 <li>Blur：模糊检测</li>
+<li>Jitter：抖动检测</li>
+<li>Noise：噪点检测</li>
+<li>QRCode：二维码检测</li>
+<li>BarCode：条形码检测</li>
+<li>AppletCode：小程序码检测</li>
 <li>BlackWhiteEdge：黑白边检测</li>
 <li>SolidColorScreen：纯色屏检测</li>
 <li>LowLighting：低光照</li>
@@ -149,11 +157,7 @@ public class QualityControlItemConfig extends AbstractModel {
 <li>NoVoice：静音检测</li>
 <li>LowVoice：低音检测</li>
 <li>HighVoice：爆音检测</li>
-<li>Jitter：抖动检测</li>
-<li>Noise：噪点检测</li>
-<li>QRCode：二维码检测</li>
-<li>BarCode：条形码检测</li>
-<li>AppletCode：小程序码检测</li>
+<li>AudioNoise：音频噪声检测</li>
 <li>VideoResolutionChanged：视频分辨率变化</li>
 <li>AudioSampleRateChanged：音频采样率变化</li>
 <li>AudioChannelsChanged：音频通道数变化</li>
@@ -201,10 +205,16 @@ public class QualityControlItemConfig extends AbstractModel {
 <li>HLSMediaSegmentsDTSJitterDeviation：切片间DTS跳变且没有EXT-X-DISCONTINUITY</li>
 <li>TimecodeTrackExist：MP4存在tmcd轨道</li> 
      * @return Type 质检项名称。质检项取值如下：
-<li>LowEvaluation：无参考打分</li>
+<li>LowEvaluation：视频无参考评分（MOS）</li>
+<li>AudioEvaluation：音频无参考评分（MOS）</li>
 <li>Mosaic：马赛克检测</li>
 <li>CrashScreen：花屏检测</li>
 <li>Blur：模糊检测</li>
+<li>Jitter：抖动检测</li>
+<li>Noise：噪点检测</li>
+<li>QRCode：二维码检测</li>
+<li>BarCode：条形码检测</li>
+<li>AppletCode：小程序码检测</li>
 <li>BlackWhiteEdge：黑白边检测</li>
 <li>SolidColorScreen：纯色屏检测</li>
 <li>LowLighting：低光照</li>
@@ -212,11 +222,7 @@ public class QualityControlItemConfig extends AbstractModel {
 <li>NoVoice：静音检测</li>
 <li>LowVoice：低音检测</li>
 <li>HighVoice：爆音检测</li>
-<li>Jitter：抖动检测</li>
-<li>Noise：噪点检测</li>
-<li>QRCode：二维码检测</li>
-<li>BarCode：条形码检测</li>
-<li>AppletCode：小程序码检测</li>
+<li>AudioNoise：音频噪声检测</li>
 <li>VideoResolutionChanged：视频分辨率变化</li>
 <li>AudioSampleRateChanged：音频采样率变化</li>
 <li>AudioChannelsChanged：音频通道数变化</li>
@@ -270,10 +276,16 @@ public class QualityControlItemConfig extends AbstractModel {
 
     /**
      * Set 质检项名称。质检项取值如下：
-<li>LowEvaluation：无参考打分</li>
+<li>LowEvaluation：视频无参考评分（MOS）</li>
+<li>AudioEvaluation：音频无参考评分（MOS）</li>
 <li>Mosaic：马赛克检测</li>
 <li>CrashScreen：花屏检测</li>
 <li>Blur：模糊检测</li>
+<li>Jitter：抖动检测</li>
+<li>Noise：噪点检测</li>
+<li>QRCode：二维码检测</li>
+<li>BarCode：条形码检测</li>
+<li>AppletCode：小程序码检测</li>
 <li>BlackWhiteEdge：黑白边检测</li>
 <li>SolidColorScreen：纯色屏检测</li>
 <li>LowLighting：低光照</li>
@@ -281,11 +293,7 @@ public class QualityControlItemConfig extends AbstractModel {
 <li>NoVoice：静音检测</li>
 <li>LowVoice：低音检测</li>
 <li>HighVoice：爆音检测</li>
-<li>Jitter：抖动检测</li>
-<li>Noise：噪点检测</li>
-<li>QRCode：二维码检测</li>
-<li>BarCode：条形码检测</li>
-<li>AppletCode：小程序码检测</li>
+<li>AudioNoise：音频噪声检测</li>
 <li>VideoResolutionChanged：视频分辨率变化</li>
 <li>AudioSampleRateChanged：音频采样率变化</li>
 <li>AudioChannelsChanged：音频通道数变化</li>
@@ -333,10 +341,16 @@ public class QualityControlItemConfig extends AbstractModel {
 <li>HLSMediaSegmentsDTSJitterDeviation：切片间DTS跳变且没有EXT-X-DISCONTINUITY</li>
 <li>TimecodeTrackExist：MP4存在tmcd轨道</li>
      * @param Type 质检项名称。质检项取值如下：
-<li>LowEvaluation：无参考打分</li>
+<li>LowEvaluation：视频无参考评分（MOS）</li>
+<li>AudioEvaluation：音频无参考评分（MOS）</li>
 <li>Mosaic：马赛克检测</li>
 <li>CrashScreen：花屏检测</li>
 <li>Blur：模糊检测</li>
+<li>Jitter：抖动检测</li>
+<li>Noise：噪点检测</li>
+<li>QRCode：二维码检测</li>
+<li>BarCode：条形码检测</li>
+<li>AppletCode：小程序码检测</li>
 <li>BlackWhiteEdge：黑白边检测</li>
 <li>SolidColorScreen：纯色屏检测</li>
 <li>LowLighting：低光照</li>
@@ -344,11 +358,7 @@ public class QualityControlItemConfig extends AbstractModel {
 <li>NoVoice：静音检测</li>
 <li>LowVoice：低音检测</li>
 <li>HighVoice：爆音检测</li>
-<li>Jitter：抖动检测</li>
-<li>Noise：噪点检测</li>
-<li>QRCode：二维码检测</li>
-<li>BarCode：条形码检测</li>
-<li>AppletCode：小程序码检测</li>
+<li>AudioNoise：音频噪声检测</li>
 <li>VideoResolutionChanged：视频分辨率变化</li>
 <li>AudioSampleRateChanged：音频采样率变化</li>
 <li>AudioChannelsChanged：音频通道数变化</li>

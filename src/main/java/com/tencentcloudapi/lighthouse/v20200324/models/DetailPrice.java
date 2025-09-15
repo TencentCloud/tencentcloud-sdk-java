@@ -26,35 +26,37 @@ public class DetailPrice extends AbstractModel {
     /**
     * 描述计费项目名称，目前取值
 <li>"DiskSpace"代表云硬盘空间收费项。</li>
-<li>"DiskBackupQuota"代表云硬盘备份点配额收费项。</li>
+<li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li>
+<li>"Instance"代表实例收费项。</li>
+<li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
     */
     @SerializedName("PriceName")
     @Expose
     private String PriceName;
 
     /**
-    * 云硬盘计费项维度单价。
+    * 计费项维度单价。
     */
     @SerializedName("OriginUnitPrice")
     @Expose
     private Float OriginUnitPrice;
 
     /**
-    * 云硬盘计费项维度总价。
+    * 计费项维度总价。
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * 云硬盘在计费项维度折扣。
+    * 计费项维度折扣。
     */
     @SerializedName("Discount")
     @Expose
     private Float Discount;
 
     /**
-    * 云硬盘在计费项维度折后总价。
+    * 计费项维度折后总价。
     */
     @SerializedName("DiscountPrice")
     @Expose
@@ -63,10 +65,14 @@ public class DetailPrice extends AbstractModel {
     /**
      * Get 描述计费项目名称，目前取值
 <li>"DiskSpace"代表云硬盘空间收费项。</li>
-<li>"DiskBackupQuota"代表云硬盘备份点配额收费项。</li> 
+<li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li>
+<li>"Instance"代表实例收费项。</li>
+<li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li> 
      * @return PriceName 描述计费项目名称，目前取值
 <li>"DiskSpace"代表云硬盘空间收费项。</li>
-<li>"DiskBackupQuota"代表云硬盘备份点配额收费项。</li>
+<li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li>
+<li>"Instance"代表实例收费项。</li>
+<li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
      */
     public String getPriceName() {
         return this.PriceName;
@@ -75,74 +81,78 @@ public class DetailPrice extends AbstractModel {
     /**
      * Set 描述计费项目名称，目前取值
 <li>"DiskSpace"代表云硬盘空间收费项。</li>
-<li>"DiskBackupQuota"代表云硬盘备份点配额收费项。</li>
+<li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li>
+<li>"Instance"代表实例收费项。</li>
+<li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
      * @param PriceName 描述计费项目名称，目前取值
 <li>"DiskSpace"代表云硬盘空间收费项。</li>
-<li>"DiskBackupQuota"代表云硬盘备份点配额收费项。</li>
+<li>"DiskBackupQuota"代表数据盘备份点配额收费项。</li>
+<li>"Instance"代表实例收费项。</li>
+<li>"SystemDiskBackupQuota"代表系统盘备份点配额收费项。</li>
      */
     public void setPriceName(String PriceName) {
         this.PriceName = PriceName;
     }
 
     /**
-     * Get 云硬盘计费项维度单价。 
-     * @return OriginUnitPrice 云硬盘计费项维度单价。
+     * Get 计费项维度单价。 
+     * @return OriginUnitPrice 计费项维度单价。
      */
     public Float getOriginUnitPrice() {
         return this.OriginUnitPrice;
     }
 
     /**
-     * Set 云硬盘计费项维度单价。
-     * @param OriginUnitPrice 云硬盘计费项维度单价。
+     * Set 计费项维度单价。
+     * @param OriginUnitPrice 计费项维度单价。
      */
     public void setOriginUnitPrice(Float OriginUnitPrice) {
         this.OriginUnitPrice = OriginUnitPrice;
     }
 
     /**
-     * Get 云硬盘计费项维度总价。 
-     * @return OriginalPrice 云硬盘计费项维度总价。
+     * Get 计费项维度总价。 
+     * @return OriginalPrice 计费项维度总价。
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 云硬盘计费项维度总价。
-     * @param OriginalPrice 云硬盘计费项维度总价。
+     * Set 计费项维度总价。
+     * @param OriginalPrice 计费项维度总价。
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 云硬盘在计费项维度折扣。 
-     * @return Discount 云硬盘在计费项维度折扣。
+     * Get 计费项维度折扣。 
+     * @return Discount 计费项维度折扣。
      */
     public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set 云硬盘在计费项维度折扣。
-     * @param Discount 云硬盘在计费项维度折扣。
+     * Set 计费项维度折扣。
+     * @param Discount 计费项维度折扣。
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get 云硬盘在计费项维度折后总价。 
-     * @return DiscountPrice 云硬盘在计费项维度折后总价。
+     * Get 计费项维度折后总价。 
+     * @return DiscountPrice 计费项维度折后总价。
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set 云硬盘在计费项维度折后总价。
-     * @param DiscountPrice 云硬盘在计费项维度折后总价。
+     * Set 计费项维度折后总价。
+     * @param DiscountPrice 计费项维度折后总价。
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;

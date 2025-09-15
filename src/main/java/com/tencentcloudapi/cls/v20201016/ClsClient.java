@@ -783,6 +783,28 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *获取Kafka协议消费组详情
+     * @param req DescribeKafkaConsumerGroupDetailRequest
+     * @return DescribeKafkaConsumerGroupDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaConsumerGroupDetailResponse DescribeKafkaConsumerGroupDetail(DescribeKafkaConsumerGroupDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKafkaConsumerGroupDetail", DescribeKafkaConsumerGroupDetailResponse.class);
+    }
+
+    /**
+     *获取Kafka协议消费组信息列表
+     * @param req DescribeKafkaConsumerGroupListRequest
+     * @return DescribeKafkaConsumerGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaConsumerGroupListResponse DescribeKafkaConsumerGroupList(DescribeKafkaConsumerGroupListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKafkaConsumerGroupList", DescribeKafkaConsumerGroupListResponse.class);
+    }
+
+    /**
      *本接口用于获取Kafka数据订阅任务
      * @param req DescribeKafkaRechargesRequest
      * @return DescribeKafkaRechargesResponse
@@ -1100,6 +1122,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyKafkaConsumerResponse ModifyKafkaConsumer(ModifyKafkaConsumerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyKafkaConsumer", ModifyKafkaConsumerResponse.class);
+    }
+
+    /**
+     *修改Kafka协议消费组点位
+     * @param req ModifyKafkaConsumerGroupOffsetRequest
+     * @return ModifyKafkaConsumerGroupOffsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyKafkaConsumerGroupOffsetResponse ModifyKafkaConsumerGroupOffset(ModifyKafkaConsumerGroupOffsetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyKafkaConsumerGroupOffset", ModifyKafkaConsumerGroupOffsetResponse.class);
     }
 
     /**

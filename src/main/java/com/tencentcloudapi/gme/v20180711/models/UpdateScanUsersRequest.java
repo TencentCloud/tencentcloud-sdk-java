@@ -31,14 +31,14 @@ public class UpdateScanUsersRequest extends AbstractModel {
     private Long BizId;
 
     /**
-    * 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
+    * 需要送检的所有用户号。多个用户号之间用","分隔，长度不超过1024字符。示例："0001,0002,0003"
     */
     @SerializedName("UserIdString")
     @Expose
     private String UserIdString;
 
     /**
-    * 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
+    * 符合此正则表达式规则的用户号将被送检，最大不能超过10个。示例：["^6.*"] 表示所有以6开头的用户号将被送检
     */
     @SerializedName("UserIdRegex")
     @Expose
@@ -61,32 +61,32 @@ public class UpdateScanUsersRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003" 
-     * @return UserIdString 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
+     * Get 需要送检的所有用户号。多个用户号之间用","分隔，长度不超过1024字符。示例："0001,0002,0003" 
+     * @return UserIdString 需要送检的所有用户号。多个用户号之间用","分隔，长度不超过1024字符。示例："0001,0002,0003"
      */
     public String getUserIdString() {
         return this.UserIdString;
     }
 
     /**
-     * Set 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
-     * @param UserIdString 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
+     * Set 需要送检的所有用户号。多个用户号之间用","分隔，长度不超过1024字符。示例："0001,0002,0003"
+     * @param UserIdString 需要送检的所有用户号。多个用户号之间用","分隔，长度不超过1024字符。示例："0001,0002,0003"
      */
     public void setUserIdString(String UserIdString) {
         this.UserIdString = UserIdString;
     }
 
     /**
-     * Get 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检 
-     * @return UserIdRegex 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
+     * Get 符合此正则表达式规则的用户号将被送检，最大不能超过10个。示例：["^6.*"] 表示所有以6开头的用户号将被送检 
+     * @return UserIdRegex 符合此正则表达式规则的用户号将被送检，最大不能超过10个。示例：["^6.*"] 表示所有以6开头的用户号将被送检
      */
     public String [] getUserIdRegex() {
         return this.UserIdRegex;
     }
 
     /**
-     * Set 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
-     * @param UserIdRegex 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
+     * Set 符合此正则表达式规则的用户号将被送检，最大不能超过10个。示例：["^6.*"] 表示所有以6开头的用户号将被送检
+     * @param UserIdRegex 符合此正则表达式规则的用户号将被送检，最大不能超过10个。示例：["^6.*"] 表示所有以6开头的用户号将被送检
      */
     public void setUserIdRegex(String [] UserIdRegex) {
         this.UserIdRegex = UserIdRegex;

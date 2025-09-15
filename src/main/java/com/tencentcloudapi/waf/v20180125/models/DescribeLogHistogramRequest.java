@@ -38,7 +38,7 @@ public class DescribeLogHistogramRequest extends AbstractModel {
     private Long To;
 
     /**
-    * 查询语句
+    * 查询语句，进行base64编码
     */
     @SerializedName("Query")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeLogHistogramRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询语句 
-     * @return Query 查询语句
+     * Get 查询语句，进行base64编码 
+     * @return Query 查询语句，进行base64编码
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询语句
-     * @param Query 查询语句
+     * Set 查询语句，进行base64编码
+     * @param Query 查询语句，进行base64编码
      */
     public void setQuery(String Query) {
         this.Query = Query;

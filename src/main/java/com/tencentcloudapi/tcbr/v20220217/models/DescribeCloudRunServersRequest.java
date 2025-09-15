@@ -61,6 +61,13 @@ public class DescribeCloudRunServersRequest extends AbstractModel {
     private String ServerType;
 
     /**
+    * vpcId
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
      * Get 环境Id 
      * @return EnvId 环境Id
      */
@@ -148,6 +155,22 @@ public class DescribeCloudRunServersRequest extends AbstractModel {
         this.ServerType = ServerType;
     }
 
+    /**
+     * Get vpcId 
+     * @return VpcId vpcId
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set vpcId
+     * @param VpcId vpcId
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
     public DescribeCloudRunServersRequest() {
     }
 
@@ -171,6 +194,9 @@ public class DescribeCloudRunServersRequest extends AbstractModel {
         if (source.ServerType != null) {
             this.ServerType = new String(source.ServerType);
         }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
     }
 
 
@@ -183,6 +209,7 @@ public class DescribeCloudRunServersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "ServerName", this.ServerName);
         this.setParamSimple(map, prefix + "ServerType", this.ServerType);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }
 }

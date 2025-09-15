@@ -104,9 +104,10 @@ public class CreateTopicRequest extends AbstractModel {
     private Long HotPeriod;
 
     /**
-    * 主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+    * 主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
 - 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- APPID可在https://console.cloud.tencent.com/developer页面查询
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一
     */
     @SerializedName("TopicId")
     @Expose
@@ -328,24 +329,28 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+     * Get 主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
 - 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- APPID可在https://console.cloud.tencent.com/developer页面查询 
-     * @return TopicId 主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一 
+     * @return TopicId 主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
 - 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- APPID可在https://console.cloud.tencent.com/developer页面查询
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+     * Set 主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
 - 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- APPID可在https://console.cloud.tencent.com/developer页面查询
-     * @param TopicId 主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一
+     * @param TopicId 主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
 - 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- APPID可在https://console.cloud.tencent.com/developer页面查询
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

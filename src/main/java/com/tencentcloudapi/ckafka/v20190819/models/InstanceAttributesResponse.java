@@ -206,7 +206,11 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long Cvm;
 
     /**
-    * 类型
+    * 实例类型  枚举列表: 
+profession  :专业版    
+standards2  :标准版
+premium   :高级版
+serverless  :serverless版
     */
     @SerializedName("InstanceType")
     @Expose
@@ -241,7 +245,7 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long PublicNetwork;
 
     /**
-    * 时间
+    * 该字段已废弃,无实际含义
     */
     @SerializedName("DeleteRouteTimestamp")
     @Expose
@@ -269,14 +273,20 @@ public class InstanceAttributesResponse extends AbstractModel {
     private DynamicDiskConfig DynamicDiskConfig;
 
     /**
-    * 实例计费类型
+    * 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 集群类型
+    * 集群类型  
+CLOUD_IDC IDC集群
+CLOUD_CVM_SHARE CVM共享集群
+CLOUD_CVM_YUNTI 云梯CVM集群
+CLOUD_CVM    CVM集群
+CLOUD_CDC CDC集群
+CLOUD_EKS_TSE EKS集群
     */
     @SerializedName("ClusterType")
     @Expose
@@ -297,7 +307,7 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long ElasticFloatBandwidth;
 
     /**
-    * ssl自定义证书id
+    * ssl自定义证书id  仅自定义证书实例集群返回
     */
     @SerializedName("CustomCertId")
     @Expose
@@ -734,16 +744,32 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get 类型 
-     * @return InstanceType 类型
+     * Get 实例类型  枚举列表: 
+profession  :专业版    
+standards2  :标准版
+premium   :高级版
+serverless  :serverless版 
+     * @return InstanceType 实例类型  枚举列表: 
+profession  :专业版    
+standards2  :标准版
+premium   :高级版
+serverless  :serverless版
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 类型
-     * @param InstanceType 类型
+     * Set 实例类型  枚举列表: 
+profession  :专业版    
+standards2  :标准版
+premium   :高级版
+serverless  :serverless版
+     * @param InstanceType 实例类型  枚举列表: 
+profession  :专业版    
+standards2  :标准版
+premium   :高级版
+serverless  :serverless版
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -814,16 +840,16 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get 时间 
-     * @return DeleteRouteTimestamp 时间
+     * Get 该字段已废弃,无实际含义 
+     * @return DeleteRouteTimestamp 该字段已废弃,无实际含义
      */
     public String getDeleteRouteTimestamp() {
         return this.DeleteRouteTimestamp;
     }
 
     /**
-     * Set 时间
-     * @param DeleteRouteTimestamp 时间
+     * Set 该字段已废弃,无实际含义
+     * @param DeleteRouteTimestamp 该字段已废弃,无实际含义
      */
     public void setDeleteRouteTimestamp(String DeleteRouteTimestamp) {
         this.DeleteRouteTimestamp = DeleteRouteTimestamp;
@@ -878,32 +904,56 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例计费类型 
-     * @return InstanceChargeType 实例计费类型
+     * Get 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月 
+     * @return InstanceChargeType 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费类型
-     * @param InstanceChargeType 实例计费类型
+     * Set 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
+     * @param InstanceChargeType 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 集群类型 
-     * @return ClusterType 集群类型
+     * Get 集群类型  
+CLOUD_IDC IDC集群
+CLOUD_CVM_SHARE CVM共享集群
+CLOUD_CVM_YUNTI 云梯CVM集群
+CLOUD_CVM    CVM集群
+CLOUD_CDC CDC集群
+CLOUD_EKS_TSE EKS集群 
+     * @return ClusterType 集群类型  
+CLOUD_IDC IDC集群
+CLOUD_CVM_SHARE CVM共享集群
+CLOUD_CVM_YUNTI 云梯CVM集群
+CLOUD_CVM    CVM集群
+CLOUD_CDC CDC集群
+CLOUD_EKS_TSE EKS集群
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型
-     * @param ClusterType 集群类型
+     * Set 集群类型  
+CLOUD_IDC IDC集群
+CLOUD_CVM_SHARE CVM共享集群
+CLOUD_CVM_YUNTI 云梯CVM集群
+CLOUD_CVM    CVM集群
+CLOUD_CDC CDC集群
+CLOUD_EKS_TSE EKS集群
+     * @param ClusterType 集群类型  
+CLOUD_IDC IDC集群
+CLOUD_CVM_SHARE CVM共享集群
+CLOUD_CVM_YUNTI 云梯CVM集群
+CLOUD_CVM    CVM集群
+CLOUD_CDC CDC集群
+CLOUD_EKS_TSE EKS集群
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
@@ -942,16 +992,16 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get ssl自定义证书id 
-     * @return CustomCertId ssl自定义证书id
+     * Get ssl自定义证书id  仅自定义证书实例集群返回 
+     * @return CustomCertId ssl自定义证书id  仅自定义证书实例集群返回
      */
     public String getCustomCertId() {
         return this.CustomCertId;
     }
 
     /**
-     * Set ssl自定义证书id
-     * @param CustomCertId ssl自定义证书id
+     * Set ssl自定义证书id  仅自定义证书实例集群返回
+     * @param CustomCertId ssl自定义证书id  仅自定义证书实例集群返回
      */
     public void setCustomCertId(String CustomCertId) {
         this.CustomCertId = CustomCertId;

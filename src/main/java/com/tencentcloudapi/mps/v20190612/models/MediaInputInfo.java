@@ -28,6 +28,7 @@ public class MediaInputInfo extends AbstractModel {
 <li> COS：COS源</li>
 <li> URL：URL源</li>
 <li> AWS-S3：AWS 源，目前只支持转码任务 </li>
+<li> VOD：点播专业版 </li>
     */
     @SerializedName("Type")
     @Expose
@@ -57,14 +58,24 @@ public class MediaInputInfo extends AbstractModel {
     private S3InputInfo S3InputInfo;
 
     /**
+    * 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VODInputInfo")
+    @Expose
+    private VODInputInfo VODInputInfo;
+
+    /**
      * Get 输入来源对象的类型，支持：
 <li> COS：COS源</li>
 <li> URL：URL源</li>
-<li> AWS-S3：AWS 源，目前只支持转码任务 </li> 
+<li> AWS-S3：AWS 源，目前只支持转码任务 </li>
+<li> VOD：点播专业版 </li> 
      * @return Type 输入来源对象的类型，支持：
 <li> COS：COS源</li>
 <li> URL：URL源</li>
 <li> AWS-S3：AWS 源，目前只支持转码任务 </li>
+<li> VOD：点播专业版 </li>
      */
     public String getType() {
         return this.Type;
@@ -75,10 +86,12 @@ public class MediaInputInfo extends AbstractModel {
 <li> COS：COS源</li>
 <li> URL：URL源</li>
 <li> AWS-S3：AWS 源，目前只支持转码任务 </li>
+<li> VOD：点播专业版 </li>
      * @param Type 输入来源对象的类型，支持：
 <li> COS：COS源</li>
 <li> URL：URL源</li>
 <li> AWS-S3：AWS 源，目前只支持转码任务 </li>
+<li> VOD：点播专业版 </li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -140,6 +153,26 @@ public class MediaInputInfo extends AbstractModel {
         this.S3InputInfo = S3InputInfo;
     }
 
+    /**
+     * Get 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VODInputInfo 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VODInputInfo getVODInputInfo() {
+        return this.VODInputInfo;
+    }
+
+    /**
+     * Set 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VODInputInfo 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVODInputInfo(VODInputInfo VODInputInfo) {
+        this.VODInputInfo = VODInputInfo;
+    }
+
     public MediaInputInfo() {
     }
 
@@ -160,6 +193,9 @@ public class MediaInputInfo extends AbstractModel {
         if (source.S3InputInfo != null) {
             this.S3InputInfo = new S3InputInfo(source.S3InputInfo);
         }
+        if (source.VODInputInfo != null) {
+            this.VODInputInfo = new VODInputInfo(source.VODInputInfo);
+        }
     }
 
 
@@ -171,6 +207,7 @@ public class MediaInputInfo extends AbstractModel {
         this.setParamObj(map, prefix + "CosInputInfo.", this.CosInputInfo);
         this.setParamObj(map, prefix + "UrlInputInfo.", this.UrlInputInfo);
         this.setParamObj(map, prefix + "S3InputInfo.", this.S3InputInfo);
+        this.setParamObj(map, prefix + "VODInputInfo.", this.VODInputInfo);
 
     }
 }

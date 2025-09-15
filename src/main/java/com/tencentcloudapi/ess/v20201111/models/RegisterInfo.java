@@ -46,6 +46,13 @@ public class RegisterInfo extends AbstractModel {
     private String UnifiedSocialCreditCode;
 
     /**
+    * 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。
+    */
+    @SerializedName("OrganizationAddress")
+    @Expose
+    private String OrganizationAddress;
+
+    /**
     * 指定企业认证的授权方式 支持多选:
 
 <ul>
@@ -123,6 +130,22 @@ public class RegisterInfo extends AbstractModel {
      */
     public void setUnifiedSocialCreditCode(String UnifiedSocialCreditCode) {
         this.UnifiedSocialCreditCode = UnifiedSocialCreditCode;
+    }
+
+    /**
+     * Get 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。 
+     * @return OrganizationAddress 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。
+     */
+    public String getOrganizationAddress() {
+        return this.OrganizationAddress;
+    }
+
+    /**
+     * Set 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。
+     * @param OrganizationAddress 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。
+     */
+    public void setOrganizationAddress(String OrganizationAddress) {
+        this.OrganizationAddress = OrganizationAddress;
     }
 
     /**
@@ -218,6 +241,9 @@ public class RegisterInfo extends AbstractModel {
         if (source.UnifiedSocialCreditCode != null) {
             this.UnifiedSocialCreditCode = new String(source.UnifiedSocialCreditCode);
         }
+        if (source.OrganizationAddress != null) {
+            this.OrganizationAddress = new String(source.OrganizationAddress);
+        }
         if (source.AuthorizationTypes != null) {
             this.AuthorizationTypes = new Long[source.AuthorizationTypes.length];
             for (int i = 0; i < source.AuthorizationTypes.length; i++) {
@@ -237,6 +263,7 @@ public class RegisterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LegalName", this.LegalName);
         this.setParamSimple(map, prefix + "Uscc", this.Uscc);
         this.setParamSimple(map, prefix + "UnifiedSocialCreditCode", this.UnifiedSocialCreditCode);
+        this.setParamSimple(map, prefix + "OrganizationAddress", this.OrganizationAddress);
         this.setParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
         this.setParamSimple(map, prefix + "AuthorizationType", this.AuthorizationType);
 

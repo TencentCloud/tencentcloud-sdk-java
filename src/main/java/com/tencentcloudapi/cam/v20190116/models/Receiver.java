@@ -95,6 +95,13 @@ public class Receiver extends AbstractModel {
     private Long Uin;
 
     /**
+    * 国家代码
+    */
+    @SerializedName("CountryCode")
+    @Expose
+    private String CountryCode;
+
+    /**
      * Get id 
      * @return Uid id
      */
@@ -258,6 +265,22 @@ public class Receiver extends AbstractModel {
         this.Uin = Uin;
     }
 
+    /**
+     * Get 国家代码 
+     * @return CountryCode 国家代码
+     */
+    public String getCountryCode() {
+        return this.CountryCode;
+    }
+
+    /**
+     * Set 国家代码
+     * @param CountryCode 国家代码
+     */
+    public void setCountryCode(String CountryCode) {
+        this.CountryCode = CountryCode;
+    }
+
     public Receiver() {
     }
 
@@ -296,6 +319,9 @@ public class Receiver extends AbstractModel {
         if (source.Uin != null) {
             this.Uin = new Long(source.Uin);
         }
+        if (source.CountryCode != null) {
+            this.CountryCode = new String(source.CountryCode);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class Receiver extends AbstractModel {
         this.setParamSimple(map, prefix + "IsReceiverOwner", this.IsReceiverOwner);
         this.setParamSimple(map, prefix + "WechatFlag", this.WechatFlag);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
 
     }
 }

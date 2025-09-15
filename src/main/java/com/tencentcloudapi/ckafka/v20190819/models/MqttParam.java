@@ -31,7 +31,7 @@ public class MqttParam extends AbstractModel {
     private String Topics;
 
     /**
-    * MQTT clean-session
+    * 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
     */
     @SerializedName("CleanSession")
     @Expose
@@ -124,16 +124,16 @@ public class MqttParam extends AbstractModel {
     }
 
     /**
-     * Get MQTT clean-session 
-     * @return CleanSession MQTT clean-session
+     * Get 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。 
+     * @return CleanSession 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
      */
     public Boolean getCleanSession() {
         return this.CleanSession;
     }
 
     /**
-     * Set MQTT clean-session
-     * @param CleanSession MQTT clean-session
+     * Set 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
+     * @param CleanSession 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
      */
     public void setCleanSession(Boolean CleanSession) {
         this.CleanSession = CleanSession;

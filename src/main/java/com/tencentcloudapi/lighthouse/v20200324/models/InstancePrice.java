@@ -59,6 +59,13 @@ public class InstancePrice extends AbstractModel {
     private String Currency;
 
     /**
+    * 计费项目明细。
+    */
+    @SerializedName("DetailPrices")
+    @Expose
+    private DetailPrice [] DetailPrices;
+
+    /**
      * Get 套餐单价原价。 
      * @return OriginalBundlePrice 套餐单价原价。
      */
@@ -138,6 +145,22 @@ public class InstancePrice extends AbstractModel {
         this.Currency = Currency;
     }
 
+    /**
+     * Get 计费项目明细。 
+     * @return DetailPrices 计费项目明细。
+     */
+    public DetailPrice [] getDetailPrices() {
+        return this.DetailPrices;
+    }
+
+    /**
+     * Set 计费项目明细。
+     * @param DetailPrices 计费项目明细。
+     */
+    public void setDetailPrices(DetailPrice [] DetailPrices) {
+        this.DetailPrices = DetailPrices;
+    }
+
     public InstancePrice() {
     }
 
@@ -161,6 +184,12 @@ public class InstancePrice extends AbstractModel {
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
         }
+        if (source.DetailPrices != null) {
+            this.DetailPrices = new DetailPrice[source.DetailPrices.length];
+            for (int i = 0; i < source.DetailPrices.length; i++) {
+                this.DetailPrices[i] = new DetailPrice(source.DetailPrices[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class InstancePrice extends AbstractModel {
         this.setParamSimple(map, prefix + "Discount", this.Discount);
         this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamArrayObj(map, prefix + "DetailPrices.", this.DetailPrices);
 
     }
 }

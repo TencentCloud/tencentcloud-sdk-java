@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KafkaOption extends AbstractModel {
 
     /**
-    * 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json
+    * 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
     */
     @SerializedName("DataType")
     @Expose
@@ -52,16 +52,16 @@ public class KafkaOption extends AbstractModel {
     private TopicRule [] TopicRules;
 
     /**
-     * Get 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json 
-     * @return DataType 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json
+     * Get 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium 
+     * @return DataType 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
      */
     public String getDataType() {
         return this.DataType;
     }
 
     /**
-     * Set 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json
-     * @param DataType 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json
+     * Set 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
+     * @param DataType 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
      */
     public void setDataType(String DataType) {
         this.DataType = DataType;

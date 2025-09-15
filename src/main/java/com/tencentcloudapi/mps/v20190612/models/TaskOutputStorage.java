@@ -27,6 +27,7 @@ public class TaskOutputStorage extends AbstractModel {
     * 媒体处理输出对象存储位置的类型，支持：
 <li>COS：COS存储</li>
 <li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
+<li> VOD：点播专业版 </li>
     */
     @SerializedName("Type")
     @Expose
@@ -49,12 +50,22 @@ public class TaskOutputStorage extends AbstractModel {
     private S3OutputStorage S3OutputStorage;
 
     /**
+    * 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VODOutputStorage")
+    @Expose
+    private VODOutputStorage VODOutputStorage;
+
+    /**
      * Get 媒体处理输出对象存储位置的类型，支持：
 <li>COS：COS存储</li>
-<li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li> 
+<li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
+<li> VOD：点播专业版 </li> 
      * @return Type 媒体处理输出对象存储位置的类型，支持：
 <li>COS：COS存储</li>
 <li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
+<li> VOD：点播专业版 </li>
      */
     public String getType() {
         return this.Type;
@@ -64,9 +75,11 @@ public class TaskOutputStorage extends AbstractModel {
      * Set 媒体处理输出对象存储位置的类型，支持：
 <li>COS：COS存储</li>
 <li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
+<li> VOD：点播专业版 </li>
      * @param Type 媒体处理输出对象存储位置的类型，支持：
 <li>COS：COS存储</li>
 <li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
+<li> VOD：点播专业版 </li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -112,6 +125,26 @@ public class TaskOutputStorage extends AbstractModel {
         this.S3OutputStorage = S3OutputStorage;
     }
 
+    /**
+     * Get 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VODOutputStorage 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VODOutputStorage getVODOutputStorage() {
+        return this.VODOutputStorage;
+    }
+
+    /**
+     * Set 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VODOutputStorage 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVODOutputStorage(VODOutputStorage VODOutputStorage) {
+        this.VODOutputStorage = VODOutputStorage;
+    }
+
     public TaskOutputStorage() {
     }
 
@@ -129,6 +162,9 @@ public class TaskOutputStorage extends AbstractModel {
         if (source.S3OutputStorage != null) {
             this.S3OutputStorage = new S3OutputStorage(source.S3OutputStorage);
         }
+        if (source.VODOutputStorage != null) {
+            this.VODOutputStorage = new VODOutputStorage(source.VODOutputStorage);
+        }
     }
 
 
@@ -139,6 +175,7 @@ public class TaskOutputStorage extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "CosOutputStorage.", this.CosOutputStorage);
         this.setParamObj(map, prefix + "S3OutputStorage.", this.S3OutputStorage);
+        this.setParamObj(map, prefix + "VODOutputStorage.", this.VODOutputStorage);
 
     }
 }

@@ -297,6 +297,14 @@ public class ApproverInfo extends AbstractModel {
     private String [] SignEndpoints;
 
     /**
+    * 快速注册相关信息
+
+    */
+    @SerializedName("RegisterInfo")
+    @Expose
+    private RegisterInfo RegisterInfo;
+
+    /**
      * Get 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 **0**：企业
 **1**：个人
@@ -1100,6 +1108,26 @@ public class ApproverInfo extends AbstractModel {
         this.SignEndpoints = SignEndpoints;
     }
 
+    /**
+     * Get 快速注册相关信息
+ 
+     * @return RegisterInfo 快速注册相关信息
+
+     */
+    public RegisterInfo getRegisterInfo() {
+        return this.RegisterInfo;
+    }
+
+    /**
+     * Set 快速注册相关信息
+
+     * @param RegisterInfo 快速注册相关信息
+
+     */
+    public void setRegisterInfo(RegisterInfo RegisterInfo) {
+        this.RegisterInfo = RegisterInfo;
+    }
+
     public ApproverInfo() {
     }
 
@@ -1201,6 +1229,9 @@ public class ApproverInfo extends AbstractModel {
                 this.SignEndpoints[i] = new String(source.SignEndpoints[i]);
             }
         }
+        if (source.RegisterInfo != null) {
+            this.RegisterInfo = new RegisterInfo(source.RegisterInfo);
+        }
     }
 
 
@@ -1232,6 +1263,7 @@ public class ApproverInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
         this.setParamArraySimple(map, prefix + "SignEndpoints.", this.SignEndpoints);
+        this.setParamObj(map, prefix + "RegisterInfo.", this.RegisterInfo);
 
     }
 }

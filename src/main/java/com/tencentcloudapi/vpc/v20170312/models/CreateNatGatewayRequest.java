@@ -45,7 +45,7 @@ public class CreateNatGatewayRequest extends AbstractModel {
     private Long InternetMaxBandwidthOut;
 
     /**
-    * NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
+    * NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为1000000。 当NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
     */
     @SerializedName("MaxConcurrentConnection")
     @Expose
@@ -115,6 +115,13 @@ public class CreateNatGatewayRequest extends AbstractModel {
     private Long NatProductVersion;
 
     /**
+    * NAT实例是否开启删除保护
+    */
+    @SerializedName("DeletionProtectionEnabled")
+    @Expose
+    private Boolean DeletionProtectionEnabled;
+
+    /**
      * Get NAT网关名称 
      * @return NatGatewayName NAT网关名称
      */
@@ -163,16 +170,16 @@ public class CreateNatGatewayRequest extends AbstractModel {
     }
 
     /**
-     * Get NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。 
-     * @return MaxConcurrentConnection NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
+     * Get NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为1000000。 当NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。 
+     * @return MaxConcurrentConnection NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为1000000。 当NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
      */
     public Long getMaxConcurrentConnection() {
         return this.MaxConcurrentConnection;
     }
 
     /**
-     * Set NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
-     * @param MaxConcurrentConnection NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
+     * Set NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为1000000。 当NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
+     * @param MaxConcurrentConnection NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为1000000。 当NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
      */
     public void setMaxConcurrentConnection(Long MaxConcurrentConnection) {
         this.MaxConcurrentConnection = MaxConcurrentConnection;
@@ -326,6 +333,22 @@ public class CreateNatGatewayRequest extends AbstractModel {
         this.NatProductVersion = NatProductVersion;
     }
 
+    /**
+     * Get NAT实例是否开启删除保护 
+     * @return DeletionProtectionEnabled NAT实例是否开启删除保护
+     */
+    public Boolean getDeletionProtectionEnabled() {
+        return this.DeletionProtectionEnabled;
+    }
+
+    /**
+     * Set NAT实例是否开启删除保护
+     * @param DeletionProtectionEnabled NAT实例是否开启删除保护
+     */
+    public void setDeletionProtectionEnabled(Boolean DeletionProtectionEnabled) {
+        this.DeletionProtectionEnabled = DeletionProtectionEnabled;
+    }
+
     public CreateNatGatewayRequest() {
     }
 
@@ -379,6 +402,9 @@ public class CreateNatGatewayRequest extends AbstractModel {
         if (source.NatProductVersion != null) {
             this.NatProductVersion = new Long(source.NatProductVersion);
         }
+        if (source.DeletionProtectionEnabled != null) {
+            this.DeletionProtectionEnabled = new Boolean(source.DeletionProtectionEnabled);
+        }
     }
 
 
@@ -399,6 +425,7 @@ public class CreateNatGatewayRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicIpAddressesBandwidthOut", this.PublicIpAddressesBandwidthOut);
         this.setParamSimple(map, prefix + "PublicIpFromSameZone", this.PublicIpFromSameZone);
         this.setParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
+        this.setParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
 
     }
 }

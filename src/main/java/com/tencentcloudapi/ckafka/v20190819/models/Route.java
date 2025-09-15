@@ -110,6 +110,14 @@ public class Route extends AbstractModel {
     private String Note;
 
     /**
+    * 路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 实例接入方式
 0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
 1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
@@ -321,6 +329,26 @@ public class Route extends AbstractModel {
         this.Note = Note;
     }
 
+    /**
+     * Get 路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 路由的状态。1: 创建中，2: 创建成功，3: 创建失败，4: 删除中，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public Route() {
     }
 
@@ -368,6 +396,9 @@ public class Route extends AbstractModel {
         if (source.Note != null) {
             this.Note = new String(source.Note);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -386,6 +417,7 @@ public class Route extends AbstractModel {
         this.setParamArrayObj(map, prefix + "BrokerVipList.", this.BrokerVipList);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Note", this.Note);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

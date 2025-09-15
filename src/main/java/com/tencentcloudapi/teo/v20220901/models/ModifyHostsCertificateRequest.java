@@ -73,6 +73,13 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
     private MutualTLS ClientCertInfo;
 
     /**
+    * 用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
+    */
+    @SerializedName("UpstreamCertInfo")
+    @Expose
+    private UpstreamCertInfo UpstreamCertInfo;
+
+    /**
      * Get 站点 ID。 
      * @return ZoneId 站点 ID。
      */
@@ -200,6 +207,22 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
         this.ClientCertInfo = ClientCertInfo;
     }
 
+    /**
+     * Get 用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。 
+     * @return UpstreamCertInfo 用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
+     */
+    public UpstreamCertInfo getUpstreamCertInfo() {
+        return this.UpstreamCertInfo;
+    }
+
+    /**
+     * Set 用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
+     * @param UpstreamCertInfo 用于配置 EO 节点回源时携带的证书，用于回源双向认证握手，默认关闭，不填写表示保持原有配置。该配置当前为白名单内测中，如需使用，请[联系我们](https://cloud.tencent.com/online-service)。
+     */
+    public void setUpstreamCertInfo(UpstreamCertInfo UpstreamCertInfo) {
+        this.UpstreamCertInfo = UpstreamCertInfo;
+    }
+
     public ModifyHostsCertificateRequest() {
     }
 
@@ -232,6 +255,9 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
         if (source.ClientCertInfo != null) {
             this.ClientCertInfo = new MutualTLS(source.ClientCertInfo);
         }
+        if (source.UpstreamCertInfo != null) {
+            this.UpstreamCertInfo = new UpstreamCertInfo(source.UpstreamCertInfo);
+        }
     }
 
 
@@ -245,6 +271,7 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ServerCertInfo.", this.ServerCertInfo);
         this.setParamSimple(map, prefix + "ApplyType", this.ApplyType);
         this.setParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
+        this.setParamObj(map, prefix + "UpstreamCertInfo.", this.UpstreamCertInfo);
 
     }
 }

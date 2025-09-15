@@ -1445,6 +1445,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口用以查询七层域名业务的回源时序数据。
+     * @param req DescribeTimingL7OriginPullDataRequest
+     * @return DescribeTimingL7OriginPullDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimingL7OriginPullDataResponse DescribeTimingL7OriginPullData(DescribeTimingL7OriginPullDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTimingL7OriginPullData", DescribeTimingL7OriginPullDataResponse.class);
+    }
+
+    /**
      *本接口用于查询七层域名业务按照指定维度的 topN 数据。
 注意：
 1. 本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。

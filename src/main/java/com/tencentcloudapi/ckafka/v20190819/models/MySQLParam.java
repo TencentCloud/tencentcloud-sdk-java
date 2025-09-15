@@ -214,7 +214,7 @@ public class MySQLParam extends AbstractModel {
     private String DateTimeZone;
 
     /**
-    * 自建
+    * 是否为自建集群
     */
     @SerializedName("SelfBuilt")
     @Expose
@@ -657,16 +657,16 @@ public class MySQLParam extends AbstractModel {
     }
 
     /**
-     * Get 自建 
-     * @return SelfBuilt 自建
+     * Get 是否为自建集群 
+     * @return SelfBuilt 是否为自建集群
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
     }
 
     /**
-     * Set 自建
-     * @param SelfBuilt 自建
+     * Set 是否为自建集群
+     * @param SelfBuilt 是否为自建集群
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;

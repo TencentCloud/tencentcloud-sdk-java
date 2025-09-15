@@ -39,6 +39,13 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
     private String SubtitlePath;
 
     /**
+    * 字幕文件存储位置。
+    */
+    @SerializedName("OutputStorage")
+    @Expose
+    private TaskOutputStorage OutputStorage;
+
+    /**
      * Get 语音全文识别片段列表。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SegmentSet 语音全文识别片段列表。
@@ -74,6 +81,22 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
         this.SubtitlePath = SubtitlePath;
     }
 
+    /**
+     * Get 字幕文件存储位置。 
+     * @return OutputStorage 字幕文件存储位置。
+     */
+    public TaskOutputStorage getOutputStorage() {
+        return this.OutputStorage;
+    }
+
+    /**
+     * Set 字幕文件存储位置。
+     * @param OutputStorage 字幕文件存储位置。
+     */
+    public void setOutputStorage(TaskOutputStorage OutputStorage) {
+        this.OutputStorage = OutputStorage;
+    }
+
     public SmartSubtitleTaskAsrFullTextResultOutput() {
     }
 
@@ -91,6 +114,9 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
         if (source.SubtitlePath != null) {
             this.SubtitlePath = new String(source.SubtitlePath);
         }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
     }
 
 
@@ -100,6 +126,7 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
+        this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 
     }
 }

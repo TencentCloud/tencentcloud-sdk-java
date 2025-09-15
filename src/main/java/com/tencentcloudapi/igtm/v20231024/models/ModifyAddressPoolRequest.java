@@ -45,14 +45,14 @@ public class ModifyAddressPoolRequest extends AbstractModel {
     private String TrafficStrategy;
 
     /**
-    * 监控器id
+    * 监控器id，当监控器已关联策略时，此字段必传
     */
     @SerializedName("MonitorId")
     @Expose
     private Long MonitorId;
 
     /**
-    * 地址列表
+    * 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
     */
     @SerializedName("AddressSet")
     @Expose
@@ -107,32 +107,32 @@ public class ModifyAddressPoolRequest extends AbstractModel {
     }
 
     /**
-     * Get 监控器id 
-     * @return MonitorId 监控器id
+     * Get 监控器id，当监控器已关联策略时，此字段必传 
+     * @return MonitorId 监控器id，当监控器已关联策略时，此字段必传
      */
     public Long getMonitorId() {
         return this.MonitorId;
     }
 
     /**
-     * Set 监控器id
-     * @param MonitorId 监控器id
+     * Set 监控器id，当监控器已关联策略时，此字段必传
+     * @param MonitorId 监控器id，当监控器已关联策略时，此字段必传
      */
     public void setMonitorId(Long MonitorId) {
         this.MonitorId = MonitorId;
     }
 
     /**
-     * Get 地址列表 
-     * @return AddressSet 地址列表
+     * Get 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。 
+     * @return AddressSet 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
      */
     public Address [] getAddressSet() {
         return this.AddressSet;
     }
 
     /**
-     * Set 地址列表
-     * @param AddressSet 地址列表
+     * Set 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
+     * @param AddressSet 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
      */
     public void setAddressSet(Address [] AddressSet) {
         this.AddressSet = AddressSet;

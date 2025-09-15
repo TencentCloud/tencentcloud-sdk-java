@@ -73,6 +73,27 @@ public class ChatCompletionsRequest extends AbstractModel {
     private OnlineSearchOptions OnlineSearchOptions;
 
     /**
+    * 可调用的工具列表，当前支持模型：hunyuan-turbo, deepseek-v3。
+    */
+    @SerializedName("Tools")
+    @Expose
+    private Tool [] Tools;
+
+    /**
+    * 工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、deepseek-v3 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
+    */
+    @SerializedName("ToolChoice")
+    @Expose
+    private String ToolChoice;
+
+    /**
+    * 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+    */
+    @SerializedName("CustomTool")
+    @Expose
+    private Tool CustomTool;
+
+    /**
      * Get 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。 
      * @return Messages 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
      */
@@ -184,6 +205,54 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.OnlineSearchOptions = OnlineSearchOptions;
     }
 
+    /**
+     * Get 可调用的工具列表，当前支持模型：hunyuan-turbo, deepseek-v3。 
+     * @return Tools 可调用的工具列表，当前支持模型：hunyuan-turbo, deepseek-v3。
+     */
+    public Tool [] getTools() {
+        return this.Tools;
+    }
+
+    /**
+     * Set 可调用的工具列表，当前支持模型：hunyuan-turbo, deepseek-v3。
+     * @param Tools 可调用的工具列表，当前支持模型：hunyuan-turbo, deepseek-v3。
+     */
+    public void setTools(Tool [] Tools) {
+        this.Tools = Tools;
+    }
+
+    /**
+     * Get 工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、deepseek-v3 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto 
+     * @return ToolChoice 工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、deepseek-v3 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
+     */
+    public String getToolChoice() {
+        return this.ToolChoice;
+    }
+
+    /**
+     * Set 工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、deepseek-v3 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
+     * @param ToolChoice 工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、deepseek-v3 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
+     */
+    public void setToolChoice(String ToolChoice) {
+        this.ToolChoice = ToolChoice;
+    }
+
+    /**
+     * Get 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填 
+     * @return CustomTool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+     */
+    public Tool getCustomTool() {
+        return this.CustomTool;
+    }
+
+    /**
+     * Set 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+     * @param CustomTool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+     */
+    public void setCustomTool(Tool CustomTool) {
+        this.CustomTool = CustomTool;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -216,6 +285,18 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.OnlineSearchOptions != null) {
             this.OnlineSearchOptions = new OnlineSearchOptions(source.OnlineSearchOptions);
         }
+        if (source.Tools != null) {
+            this.Tools = new Tool[source.Tools.length];
+            for (int i = 0; i < source.Tools.length; i++) {
+                this.Tools[i] = new Tool(source.Tools[i]);
+            }
+        }
+        if (source.ToolChoice != null) {
+            this.ToolChoice = new String(source.ToolChoice);
+        }
+        if (source.CustomTool != null) {
+            this.CustomTool = new Tool(source.CustomTool);
+        }
     }
 
 
@@ -230,6 +311,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);
         this.setParamSimple(map, prefix + "OnlineSearch", this.OnlineSearch);
         this.setParamObj(map, prefix + "OnlineSearchOptions.", this.OnlineSearchOptions);
+        this.setParamArrayObj(map, prefix + "Tools.", this.Tools);
+        this.setParamSimple(map, prefix + "ToolChoice", this.ToolChoice);
+        this.setParamObj(map, prefix + "CustomTool.", this.CustomTool);
 
     }
 }
