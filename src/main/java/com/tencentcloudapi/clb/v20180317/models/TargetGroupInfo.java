@@ -162,6 +162,13 @@ public class TargetGroupInfo extends AbstractModel {
     private Long SessionExpireTime;
 
     /**
+    * IP版本。
+    */
+    @SerializedName("IpVersion")
+    @Expose
+    private String IpVersion;
+
+    /**
      * Get 目标组ID 
      * @return TargetGroupId 目标组ID
      */
@@ -497,6 +504,22 @@ public class TargetGroupInfo extends AbstractModel {
         this.SessionExpireTime = SessionExpireTime;
     }
 
+    /**
+     * Get IP版本。 
+     * @return IpVersion IP版本。
+     */
+    public String getIpVersion() {
+        return this.IpVersion;
+    }
+
+    /**
+     * Set IP版本。
+     * @param IpVersion IP版本。
+     */
+    public void setIpVersion(String IpVersion) {
+        this.IpVersion = IpVersion;
+    }
+
     public TargetGroupInfo() {
     }
 
@@ -565,6 +588,9 @@ public class TargetGroupInfo extends AbstractModel {
         if (source.SessionExpireTime != null) {
             this.SessionExpireTime = new Long(source.SessionExpireTime);
         }
+        if (source.IpVersion != null) {
+            this.IpVersion = new String(source.IpVersion);
+        }
     }
 
 
@@ -590,6 +616,7 @@ public class TargetGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FullListenSwitch", this.FullListenSwitch);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
+        this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
 
     }
 }

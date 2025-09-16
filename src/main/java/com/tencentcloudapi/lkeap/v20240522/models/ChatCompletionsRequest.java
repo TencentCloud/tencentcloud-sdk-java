@@ -71,6 +71,13 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean EnableSearch;
 
     /**
+    * 思维链开关，本参数仅在deepseek v3.1时生效
+    */
+    @SerializedName("Thinking")
+    @Expose
+    private Thinking Thinking;
+
+    /**
      * Get 模型名称 
      * @return Model 模型名称
      */
@@ -186,6 +193,22 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.EnableSearch = EnableSearch;
     }
 
+    /**
+     * Get 思维链开关，本参数仅在deepseek v3.1时生效 
+     * @return Thinking 思维链开关，本参数仅在deepseek v3.1时生效
+     */
+    public Thinking getThinking() {
+        return this.Thinking;
+    }
+
+    /**
+     * Set 思维链开关，本参数仅在deepseek v3.1时生效
+     * @param Thinking 思维链开关，本参数仅在deepseek v3.1时生效
+     */
+    public void setThinking(Thinking Thinking) {
+        this.Thinking = Thinking;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -215,6 +238,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.EnableSearch != null) {
             this.EnableSearch = new Boolean(source.EnableSearch);
         }
+        if (source.Thinking != null) {
+            this.Thinking = new Thinking(source.Thinking);
+        }
     }
 
 
@@ -228,6 +254,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);
         this.setParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
         this.setParamSimple(map, prefix + "EnableSearch", this.EnableSearch);
+        this.setParamObj(map, prefix + "Thinking.", this.Thinking);
 
     }
 }

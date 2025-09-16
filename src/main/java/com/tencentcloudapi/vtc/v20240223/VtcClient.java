@@ -39,7 +39,7 @@ public class VtcClient extends AbstractClient{
     }
 
     /**
-     *确认视频翻译结果
+     *确认视频转译结果
      * @param req ConfirmVideoTranslateJobRequest
      * @return ConfirmVideoTranslateJobResponse
      * @throws TencentCloudSDKException

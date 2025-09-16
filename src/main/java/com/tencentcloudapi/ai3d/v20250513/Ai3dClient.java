@@ -65,6 +65,18 @@ public class Ai3dClient extends AbstractClient{
     /**
      *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req QueryHunyuanTo3DRapidJobRequest
+     * @return QueryHunyuanTo3DRapidJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryHunyuanTo3DRapidJobResponse QueryHunyuanTo3DRapidJob(QueryHunyuanTo3DRapidJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryHunyuanTo3DRapidJob", QueryHunyuanTo3DRapidJobResponse.class);
+    }
+
+    /**
+     *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
      * @param req SubmitHunyuanTo3DJobRequest
      * @return SubmitHunyuanTo3DJobResponse
      * @throws TencentCloudSDKException
@@ -84,6 +96,18 @@ public class Ai3dClient extends AbstractClient{
     public SubmitHunyuanTo3DProJobResponse SubmitHunyuanTo3DProJob(SubmitHunyuanTo3DProJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitHunyuanTo3DProJob", SubmitHunyuanTo3DProJobResponse.class);
+    }
+
+    /**
+     *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req SubmitHunyuanTo3DRapidJobRequest
+     * @return SubmitHunyuanTo3DRapidJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHunyuanTo3DRapidJobResponse SubmitHunyuanTo3DRapidJob(SubmitHunyuanTo3DRapidJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHunyuanTo3DRapidJob", SubmitHunyuanTo3DRapidJobResponse.class);
     }
 
 }

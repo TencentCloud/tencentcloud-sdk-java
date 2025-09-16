@@ -53,7 +53,7 @@ public class ExtractDocMultiRequest extends AbstractModel {
 
     /**
     * true：仅输出自定义字段
-flase：输出默认字段+自定义字段
+false：输出默认字段+自定义字段
 默认true
     */
     @SerializedName("ItemNamesShowMode")
@@ -192,10 +192,10 @@ en时，添加的key为英语
 
     /**
      * Get true：仅输出自定义字段
-flase：输出默认字段+自定义字段
+false：输出默认字段+自定义字段
 默认true 
      * @return ItemNamesShowMode true：仅输出自定义字段
-flase：输出默认字段+自定义字段
+false：输出默认字段+自定义字段
 默认true
      */
     public Boolean getItemNamesShowMode() {
@@ -204,10 +204,10 @@ flase：输出默认字段+自定义字段
 
     /**
      * Set true：仅输出自定义字段
-flase：输出默认字段+自定义字段
+false：输出默认字段+自定义字段
 默认true
      * @param ItemNamesShowMode true：仅输出自定义字段
-flase：输出默认字段+自定义字段
+false：输出默认字段+自定义字段
 默认true
      */
     public void setItemNamesShowMode(Boolean ItemNamesShowMode) {

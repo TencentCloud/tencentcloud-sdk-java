@@ -406,6 +406,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *分发安卓实例镜像至宿主机
+     * @param req DistributeAndroidInstanceImageToHostsRequest
+     * @return DistributeAndroidInstanceImageToHostsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DistributeAndroidInstanceImageToHostsResponse DistributeAndroidInstanceImageToHosts(DistributeAndroidInstanceImageToHostsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DistributeAndroidInstanceImageToHosts", DistributeAndroidInstanceImageToHostsResponse.class);
+    }
+
+    /**
      *将一个文件批量分发到多个实例，一次接口调用触发一次文件分发，一次文件分发只会从公网下载一次，然后文件会走内网分发到实例列表中的实例。
      * @param req DistributeFileToAndroidInstancesRequest
      * @return DistributeFileToAndroidInstancesResponse

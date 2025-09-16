@@ -160,6 +160,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *批量IP黑白名单新增接口
+     * @param req CreateBatchIpAccessControlRequest
+     * @return CreateBatchIpAccessControlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBatchIpAccessControlResponse CreateBatchIpAccessControl(CreateBatchIpAccessControlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBatchIpAccessControl", CreateBatchIpAccessControlResponse.class);
+    }
+
+    /**
      *计费资源购买、续费下单接口
      * @param req CreateDealsRequest
      * @return CreateDealsResponse
@@ -289,6 +300,17 @@ public class WafClient extends AbstractClient{
     public DeleteAttackWhiteRuleResponse DeleteAttackWhiteRule(DeleteAttackWhiteRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAttackWhiteRule", DeleteAttackWhiteRuleResponse.class);
+    }
+
+    /**
+     *批量黑白名单删除接口
+     * @param req DeleteBatchIpAccessControlRequest
+     * @return DeleteBatchIpAccessControlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBatchIpAccessControlResponse DeleteBatchIpAccessControl(DeleteBatchIpAccessControlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBatchIpAccessControl", DeleteBatchIpAccessControlResponse.class);
     }
 
     /**
@@ -1468,6 +1490,17 @@ public class WafClient extends AbstractClient{
     public ModifyAttackWhiteRuleResponse ModifyAttackWhiteRule(ModifyAttackWhiteRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAttackWhiteRule", ModifyAttackWhiteRuleResponse.class);
+    }
+
+    /**
+     *批量IP黑白名单新增接口
+     * @param req ModifyBatchIpAccessControlRequest
+     * @return ModifyBatchIpAccessControlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBatchIpAccessControlResponse ModifyBatchIpAccessControl(ModifyBatchIpAccessControlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBatchIpAccessControl", ModifyBatchIpAccessControlResponse.class);
     }
 
     /**

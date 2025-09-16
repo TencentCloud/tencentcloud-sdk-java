@@ -118,6 +118,13 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private Long SessionExpireTime;
 
     /**
+    * IP版本类型。
+    */
+    @SerializedName("IpVersion")
+    @Expose
+    private String IpVersion;
+
+    /**
      * Get 目标组名称，限定50个字符 
      * @return TargetGroupName 目标组名称，限定50个字符
      */
@@ -337,6 +344,22 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.SessionExpireTime = SessionExpireTime;
     }
 
+    /**
+     * Get IP版本类型。 
+     * @return IpVersion IP版本类型。
+     */
+    public String getIpVersion() {
+        return this.IpVersion;
+    }
+
+    /**
+     * Set IP版本类型。
+     * @param IpVersion IP版本类型。
+     */
+    public void setIpVersion(String IpVersion) {
+        this.IpVersion = IpVersion;
+    }
+
     public CreateTargetGroupRequest() {
     }
 
@@ -390,6 +413,9 @@ public class CreateTargetGroupRequest extends AbstractModel {
         if (source.SessionExpireTime != null) {
             this.SessionExpireTime = new Long(source.SessionExpireTime);
         }
+        if (source.IpVersion != null) {
+            this.IpVersion = new String(source.IpVersion);
+        }
     }
 
 
@@ -410,6 +436,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FullListenSwitch", this.FullListenSwitch);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
+        this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
 
     }
 }
