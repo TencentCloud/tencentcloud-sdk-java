@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeSecondLevelBackupInfoResponse extends AbstractModel {
 
     /**
-    * 备份记录ID 
+    * 备份记录ID。
     */
     @SerializedName("BackupId")
     @Expose
     private String BackupId;
 
     /**
-    * 备份时间戳
+    * 备份时间戳。
     */
     @SerializedName("BackupTimestamp")
     @Expose
     private Long BackupTimestamp;
 
     /**
-    * 备份不存在的时间戳范围
+    * 备份不存在的时间戳范围。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MissingTimestamps")
@@ -46,7 +46,7 @@ public class DescribeSecondLevelBackupInfoResponse extends AbstractModel {
     private SecondLevelBackupMissingTimestamps [] MissingTimestamps;
 
     /**
-    * 实例开启秒级备份的时间戳
+    * 实例开启秒级备份的时间戳。
     */
     @SerializedName("StartTimestamp")
     @Expose
@@ -60,41 +60,41 @@ public class DescribeSecondLevelBackupInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 备份记录ID  
-     * @return BackupId 备份记录ID 
+     * Get 备份记录ID。 
+     * @return BackupId 备份记录ID。
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 备份记录ID 
-     * @param BackupId 备份记录ID 
+     * Set 备份记录ID。
+     * @param BackupId 备份记录ID。
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get 备份时间戳 
-     * @return BackupTimestamp 备份时间戳
+     * Get 备份时间戳。 
+     * @return BackupTimestamp 备份时间戳。
      */
     public Long getBackupTimestamp() {
         return this.BackupTimestamp;
     }
 
     /**
-     * Set 备份时间戳
-     * @param BackupTimestamp 备份时间戳
+     * Set 备份时间戳。
+     * @param BackupTimestamp 备份时间戳。
      */
     public void setBackupTimestamp(Long BackupTimestamp) {
         this.BackupTimestamp = BackupTimestamp;
     }
 
     /**
-     * Get 备份不存在的时间戳范围
+     * Get 备份不存在的时间戳范围。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MissingTimestamps 备份不存在的时间戳范围
+     * @return MissingTimestamps 备份不存在的时间戳范围。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecondLevelBackupMissingTimestamps [] getMissingTimestamps() {
@@ -102,9 +102,9 @@ public class DescribeSecondLevelBackupInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 备份不存在的时间戳范围
+     * Set 备份不存在的时间戳范围。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MissingTimestamps 备份不存在的时间戳范围
+     * @param MissingTimestamps 备份不存在的时间戳范围。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMissingTimestamps(SecondLevelBackupMissingTimestamps [] MissingTimestamps) {
@@ -112,16 +112,16 @@ public class DescribeSecondLevelBackupInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例开启秒级备份的时间戳 
-     * @return StartTimestamp 实例开启秒级备份的时间戳
+     * Get 实例开启秒级备份的时间戳。 
+     * @return StartTimestamp 实例开启秒级备份的时间戳。
      */
     public Long getStartTimestamp() {
         return this.StartTimestamp;
     }
 
     /**
-     * Set 实例开启秒级备份的时间戳
-     * @param StartTimestamp 实例开启秒级备份的时间戳
+     * Set 实例开启秒级备份的时间戳。
+     * @param StartTimestamp 实例开启秒级备份的时间戳。
      */
     public void setStartTimestamp(Long StartTimestamp) {
         this.StartTimestamp = StartTimestamp;

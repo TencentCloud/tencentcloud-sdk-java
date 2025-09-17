@@ -27,10 +27,8 @@ public class BeautyFilterItemConfig extends AbstractModel {
     * 类型名称。取值如下：
 
 <li>Dongjing：东京</li>
-<li>QingJiaopian：轻胶片</li>
+<li>Qingjiaopian：轻胶片</li>
 <li>Meiwei：美味</li>
-
-
     */
     @SerializedName("Type")
     @Expose
@@ -47,7 +45,7 @@ public class BeautyFilterItemConfig extends AbstractModel {
     private String Switch;
 
     /**
-    * 效果强度，值范围：[0, 100]。
+    * 效果强度，值范围：[-100, 100]。
     */
     @SerializedName("Value")
     @Expose
@@ -57,17 +55,13 @@ public class BeautyFilterItemConfig extends AbstractModel {
      * Get 类型名称。取值如下：
 
 <li>Dongjing：东京</li>
-<li>QingJiaopian：轻胶片</li>
-<li>Meiwei：美味</li>
-
- 
+<li>Qingjiaopian：轻胶片</li>
+<li>Meiwei：美味</li> 
      * @return Type 类型名称。取值如下：
 
 <li>Dongjing：东京</li>
-<li>QingJiaopian：轻胶片</li>
+<li>Qingjiaopian：轻胶片</li>
 <li>Meiwei：美味</li>
-
-
      */
     public String getType() {
         return this.Type;
@@ -77,17 +71,13 @@ public class BeautyFilterItemConfig extends AbstractModel {
      * Set 类型名称。取值如下：
 
 <li>Dongjing：东京</li>
-<li>QingJiaopian：轻胶片</li>
+<li>Qingjiaopian：轻胶片</li>
 <li>Meiwei：美味</li>
-
-
      * @param Type 类型名称。取值如下：
 
 <li>Dongjing：东京</li>
-<li>QingJiaopian：轻胶片</li>
+<li>Qingjiaopian：轻胶片</li>
 <li>Meiwei：美味</li>
-
-
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -122,16 +112,16 @@ public class BeautyFilterItemConfig extends AbstractModel {
     }
 
     /**
-     * Get 效果强度，值范围：[0, 100]。 
-     * @return Value 效果强度，值范围：[0, 100]。
+     * Get 效果强度，值范围：[-100, 100]。 
+     * @return Value 效果强度，值范围：[-100, 100]。
      */
     public Long getValue() {
         return this.Value;
     }
 
     /**
-     * Set 效果强度，值范围：[0, 100]。
-     * @param Value 效果强度，值范围：[0, 100]。
+     * Set 效果强度，值范围：[-100, 100]。
+     * @param Value 效果强度，值范围：[-100, 100]。
      */
     public void setValue(Long Value) {
         this.Value = Value;

@@ -45,14 +45,18 @@ public class DescribeInstanceEventsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 输出每页显示事件的数量，默认：10，最大100。
+    * 输出每页显示事件的数量。
+- 默认值：10。
+- 取值范围：[1,100]。
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。默认：1。
+    * 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。
+- 默认值：1。
+- 取值范围：大于0 的正整数。
     */
     @SerializedName("PageNo")
     @Expose
@@ -136,32 +140,48 @@ public class DescribeInstanceEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get 输出每页显示事件的数量，默认：10，最大100。 
-     * @return PageSize 输出每页显示事件的数量，默认：10，最大100。
+     * Get 输出每页显示事件的数量。
+- 默认值：10。
+- 取值范围：[1,100]。 
+     * @return PageSize 输出每页显示事件的数量。
+- 默认值：10。
+- 取值范围：[1,100]。
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 输出每页显示事件的数量，默认：10，最大100。
-     * @param PageSize 输出每页显示事件的数量，默认：10，最大100。
+     * Set 输出每页显示事件的数量。
+- 默认值：10。
+- 取值范围：[1,100]。
+     * @param PageSize 输出每页显示事件的数量。
+- 默认值：10。
+- 取值范围：[1,100]。
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。默认：1。 
-     * @return PageNo 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。默认：1。
+     * Get 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。
+- 默认值：1。
+- 取值范围：大于0 的正整数。 
+     * @return PageNo 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。
+- 默认值：1。
+- 取值范围：大于0 的正整数。
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。默认：1。
-     * @param PageNo 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。默认：1。
+     * Set 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。
+- 默认值：1。
+- 取值范围：大于0 的正整数。
+     * @param PageNo 配置查询事件的输出页码，即支持根据PageNo（页码）与 PageSize （每页输出数量）查询某一页的事件。
+- 默认值：1。
+- 取值范围：大于0 的正整数。
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;

@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class DescribeSecondLevelBackupInfoRequest extends AbstractModel {
 
     /**
-    * 指定实例 ID。例如：crs-xjhsdj****。请登录Redis控制台在实例列表复制实例 ID。
+    * 指定实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 秒级备份时间戳，7天内
+    * 秒级备份时间戳。
+- 设置范围：支持7天内任意秒级时间点。
+-  时间戳格式：Unix 时间戳。
     */
     @SerializedName("BackupTimestamp")
     @Expose
     private Long BackupTimestamp;
 
     /**
-     * Get 指定实例 ID。例如：crs-xjhsdj****。请登录Redis控制台在实例列表复制实例 ID。 
-     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录Redis控制台在实例列表复制实例 ID。
+     * Get 指定实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 指定实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 指定实例 ID。例如：crs-xjhsdj****。请登录Redis控制台在实例列表复制实例 ID。
-     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录Redis控制台在实例列表复制实例 ID。
+     * Set 指定实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 指定实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 秒级备份时间戳，7天内 
-     * @return BackupTimestamp 秒级备份时间戳，7天内
+     * Get 秒级备份时间戳。
+- 设置范围：支持7天内任意秒级时间点。
+-  时间戳格式：Unix 时间戳。 
+     * @return BackupTimestamp 秒级备份时间戳。
+- 设置范围：支持7天内任意秒级时间点。
+-  时间戳格式：Unix 时间戳。
      */
     public Long getBackupTimestamp() {
         return this.BackupTimestamp;
     }
 
     /**
-     * Set 秒级备份时间戳，7天内
-     * @param BackupTimestamp 秒级备份时间戳，7天内
+     * Set 秒级备份时间戳。
+- 设置范围：支持7天内任意秒级时间点。
+-  时间戳格式：Unix 时间戳。
+     * @param BackupTimestamp 秒级备份时间戳。
+- 设置范围：支持7天内任意秒级时间点。
+-  时间戳格式：Unix 时间戳。
      */
     public void setBackupTimestamp(Long BackupTimestamp) {
         this.BackupTimestamp = BackupTimestamp;

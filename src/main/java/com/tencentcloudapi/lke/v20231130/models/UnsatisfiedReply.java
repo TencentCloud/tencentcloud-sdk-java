@@ -48,7 +48,7 @@ public class UnsatisfiedReply extends AbstractModel {
     private String Question;
 
     /**
-    * 应用回复
+    * 问题回复
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Answer")
@@ -62,6 +62,35 @@ public class UnsatisfiedReply extends AbstractModel {
     @SerializedName("Reasons")
     @Expose
     private String [] Reasons;
+
+    /**
+    * 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 创建时间，秒级时间戳
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 更新时间,秒级时间戳
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+    * 操作人
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
 
     /**
      * Get 不满意回复ID
@@ -124,9 +153,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Get 应用回复
+     * Get 问题回复
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Answer 应用回复
+     * @return Answer 问题回复
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAnswer() {
@@ -134,9 +163,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Set 应用回复
+     * Set 问题回复
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Answer 应用回复
+     * @param Answer 问题回复
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnswer(String Answer) {
@@ -161,6 +190,74 @@ public class UnsatisfiedReply extends AbstractModel {
      */
     public void setReasons(String [] Reasons) {
         this.Reasons = Reasons;
+    }
+
+    /**
+     * Get 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 创建时间，秒级时间戳 
+     * @return CreateTime 创建时间，秒级时间戳
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间，秒级时间戳
+     * @param CreateTime 创建时间，秒级时间戳
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 更新时间,秒级时间戳 
+     * @return UpdateTime 更新时间,秒级时间戳
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 更新时间,秒级时间戳
+     * @param UpdateTime 更新时间,秒级时间戳
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get 操作人 
+     * @return Operator 操作人
+     */
+    public String getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作人
+     * @param Operator 操作人
+     */
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
     }
 
     public UnsatisfiedReply() {
@@ -189,6 +286,18 @@ public class UnsatisfiedReply extends AbstractModel {
                 this.Reasons[i] = new String(source.Reasons[i]);
             }
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
     }
 
 
@@ -201,6 +310,10 @@ public class UnsatisfiedReply extends AbstractModel {
         this.setParamSimple(map, prefix + "Question", this.Question);
         this.setParamSimple(map, prefix + "Answer", this.Answer);
         this.setParamArraySimple(map, prefix + "Reasons.", this.Reasons);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
 
     }
 }

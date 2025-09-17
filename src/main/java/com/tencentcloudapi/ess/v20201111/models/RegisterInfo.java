@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RegisterInfo extends AbstractModel {
 
     /**
-    * <font color="red">字段不再使用</font>，法人姓名
+    * 法人姓名
     */
     @SerializedName("LegalName")
     @Expose
@@ -39,7 +39,7 @@ public class RegisterInfo extends AbstractModel {
     private String Uscc;
 
     /**
-    * <font color="red">字段不再使用</font>，社会统一信用代码
+    * 社会统一信用代码
     */
     @SerializedName("UnifiedSocialCreditCode")
     @Expose
@@ -77,16 +77,16 @@ public class RegisterInfo extends AbstractModel {
     private Long AuthorizationType;
 
     /**
-     * Get <font color="red">字段不再使用</font>，法人姓名 
-     * @return LegalName <font color="red">字段不再使用</font>，法人姓名
+     * Get 法人姓名 
+     * @return LegalName 法人姓名
      */
     public String getLegalName() {
         return this.LegalName;
     }
 
     /**
-     * Set <font color="red">字段不再使用</font>，法人姓名
-     * @param LegalName <font color="red">字段不再使用</font>，法人姓名
+     * Set 法人姓名
+     * @param LegalName 法人姓名
      */
     public void setLegalName(String LegalName) {
         this.LegalName = LegalName;
@@ -117,16 +117,16 @@ public class RegisterInfo extends AbstractModel {
     }
 
     /**
-     * Get <font color="red">字段不再使用</font>，社会统一信用代码 
-     * @return UnifiedSocialCreditCode <font color="red">字段不再使用</font>，社会统一信用代码
+     * Get 社会统一信用代码 
+     * @return UnifiedSocialCreditCode 社会统一信用代码
      */
     public String getUnifiedSocialCreditCode() {
         return this.UnifiedSocialCreditCode;
     }
 
     /**
-     * Set <font color="red">字段不再使用</font>，社会统一信用代码
-     * @param UnifiedSocialCreditCode <font color="red">字段不再使用</font>，社会统一信用代码
+     * Set 社会统一信用代码
+     * @param UnifiedSocialCreditCode 社会统一信用代码
      */
     public void setUnifiedSocialCreditCode(String UnifiedSocialCreditCode) {
         this.UnifiedSocialCreditCode = UnifiedSocialCreditCode;

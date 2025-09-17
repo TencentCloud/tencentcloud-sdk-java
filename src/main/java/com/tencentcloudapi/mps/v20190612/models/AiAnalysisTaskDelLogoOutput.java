@@ -60,6 +60,22 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     private SubtitlePosition SubtitlePos;
 
     /**
+    * 音色克隆后的视频文件地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VoiceClonedVideo")
+    @Expose
+    private String VoiceClonedVideo;
+
+    /**
+    * 音色克隆的标注文件地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VoiceClonedMarkFile")
+    @Expose
+    private String VoiceClonedMarkFile;
+
+    /**
      * Get 擦除后文件的路径。 
      * @return Path 擦除后文件的路径。
      */
@@ -143,6 +159,46 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         this.SubtitlePos = SubtitlePos;
     }
 
+    /**
+     * Get 音色克隆后的视频文件地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VoiceClonedVideo 音色克隆后的视频文件地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVoiceClonedVideo() {
+        return this.VoiceClonedVideo;
+    }
+
+    /**
+     * Set 音色克隆后的视频文件地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VoiceClonedVideo 音色克隆后的视频文件地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVoiceClonedVideo(String VoiceClonedVideo) {
+        this.VoiceClonedVideo = VoiceClonedVideo;
+    }
+
+    /**
+     * Get 音色克隆的标注文件地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VoiceClonedMarkFile 音色克隆的标注文件地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVoiceClonedMarkFile() {
+        return this.VoiceClonedMarkFile;
+    }
+
+    /**
+     * Set 音色克隆的标注文件地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VoiceClonedMarkFile 音色克隆的标注文件地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVoiceClonedMarkFile(String VoiceClonedMarkFile) {
+        this.VoiceClonedMarkFile = VoiceClonedMarkFile;
+    }
+
     public AiAnalysisTaskDelLogoOutput() {
     }
 
@@ -166,6 +222,12 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         if (source.SubtitlePos != null) {
             this.SubtitlePos = new SubtitlePosition(source.SubtitlePos);
         }
+        if (source.VoiceClonedVideo != null) {
+            this.VoiceClonedVideo = new String(source.VoiceClonedVideo);
+        }
+        if (source.VoiceClonedMarkFile != null) {
+            this.VoiceClonedMarkFile = new String(source.VoiceClonedMarkFile);
+        }
     }
 
 
@@ -178,6 +240,8 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "OriginSubtitlePath", this.OriginSubtitlePath);
         this.setParamSimple(map, prefix + "TranslateSubtitlePath", this.TranslateSubtitlePath);
         this.setParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
+        this.setParamSimple(map, prefix + "VoiceClonedVideo", this.VoiceClonedVideo);
+        this.setParamSimple(map, prefix + "VoiceClonedMarkFile", this.VoiceClonedMarkFile);
 
     }
 }

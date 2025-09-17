@@ -1508,7 +1508,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
      *本接口（CreateModifyAdminAuthorizationUrl）用于重新上传超管授权书。
 
 注意:
-1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!授权书审核结果回调](https://qian.tencent.com/developers/partner/callback_types_staffs#%E5%9B%9B-%E6%8E%88%E6%9D%83%E4%B9%A6%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到
+1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!授权书失效回调](https://qian.tencent.com/developers/partner/callback_types_staffs#%E5%9B%9B-%E6%8E%88%E6%9D%83%E4%B9%A6%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到
      * @param req CreateModifyAdminAuthorizationUrlRequest
      * @return CreateModifyAdminAuthorizationUrlResponse
      * @throws TencentCloudSDKException

@@ -710,7 +710,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询实例秒级备份信息
+     *本接口（DescribeSecondLevelBackupInfo）用于查询实例秒级备份信息。
      * @param req DescribeSecondLevelBackupInfoRequest
      * @return DescribeSecondLevelBackupInfoResponse
      * @throws TencentCloudSDKException

@@ -32,6 +32,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Highlight：智能精彩集锦</li>
 <li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
+<li>Dubbing：智能译制</li>
     */
     @SerializedName("Type")
     @Expose
@@ -118,6 +119,14 @@ public class AiAnalysisResult extends AbstractModel {
     private AiAnalysisTaskHorizontalToVerticalResult HorizontalToVerticalTask;
 
     /**
+    * 视频内容分析译制任务的查询结果，当任务类型为 Dubbing 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DubbingTask")
+    @Expose
+    private AiAnalysisTaskDubbingResult DubbingTask;
+
+    /**
      * Get 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -125,7 +134,8 @@ public class AiAnalysisResult extends AbstractModel {
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
 <li>DeLogo：智能擦除</li>
-<li>Description：大模型摘要</li> 
+<li>Description：大模型摘要</li>
+<li>Dubbing：智能译制</li> 
      * @return Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -134,6 +144,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Highlight：智能精彩集锦</li>
 <li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
+<li>Dubbing：智能译制</li>
      */
     public String getType() {
         return this.Type;
@@ -148,6 +159,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Highlight：智能精彩集锦</li>
 <li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
+<li>Dubbing：智能译制</li>
      * @param Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -156,6 +168,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Highlight：智能精彩集锦</li>
 <li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
+<li>Dubbing：智能译制</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -361,6 +374,26 @@ public class AiAnalysisResult extends AbstractModel {
         this.HorizontalToVerticalTask = HorizontalToVerticalTask;
     }
 
+    /**
+     * Get 视频内容分析译制任务的查询结果，当任务类型为 Dubbing 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DubbingTask 视频内容分析译制任务的查询结果，当任务类型为 Dubbing 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskDubbingResult getDubbingTask() {
+        return this.DubbingTask;
+    }
+
+    /**
+     * Set 视频内容分析译制任务的查询结果，当任务类型为 Dubbing 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DubbingTask 视频内容分析译制任务的查询结果，当任务类型为 Dubbing 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDubbingTask(AiAnalysisTaskDubbingResult DubbingTask) {
+        this.DubbingTask = DubbingTask;
+    }
+
     public AiAnalysisResult() {
     }
 
@@ -402,6 +435,9 @@ public class AiAnalysisResult extends AbstractModel {
         if (source.HorizontalToVerticalTask != null) {
             this.HorizontalToVerticalTask = new AiAnalysisTaskHorizontalToVerticalResult(source.HorizontalToVerticalTask);
         }
+        if (source.DubbingTask != null) {
+            this.DubbingTask = new AiAnalysisTaskDubbingResult(source.DubbingTask);
+        }
     }
 
 
@@ -420,6 +456,7 @@ public class AiAnalysisResult extends AbstractModel {
         this.setParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
         this.setParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
         this.setParamObj(map, prefix + "HorizontalToVerticalTask.", this.HorizontalToVerticalTask);
+        this.setParamObj(map, prefix + "DubbingTask.", this.DubbingTask);
 
     }
 }

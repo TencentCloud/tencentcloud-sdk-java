@@ -43,7 +43,7 @@ public class RejectedQuestion extends AbstractModel {
     private String Question;
 
     /**
-    * 状态
+    * 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -59,7 +59,7 @@ public class RejectedQuestion extends AbstractModel {
     private String StatusDesc;
 
     /**
-    * 更新时间
+    * 更新时间, 秒级时间戳
 
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -84,6 +84,14 @@ public class RejectedQuestion extends AbstractModel {
     @SerializedName("IsAllowDelete")
     @Expose
     private Boolean IsAllowDelete;
+
+    /**
+    * 操作人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
 
     /**
      * Get 拒答问题ID
@@ -138,9 +146,9 @@ public class RejectedQuestion extends AbstractModel {
     }
 
     /**
-     * Get 状态
+     * Get 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -148,9 +156,9 @@ public class RejectedQuestion extends AbstractModel {
     }
 
     /**
-     * Set 状态
+     * Set 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -178,10 +186,10 @@ public class RejectedQuestion extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get 更新时间, 秒级时间戳
 
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime 更新时间, 秒级时间戳
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -190,10 +198,10 @@ public class RejectedQuestion extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set 更新时间, 秒级时间戳
 
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime 更新时间, 秒级时间戳
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -249,6 +257,26 @@ public class RejectedQuestion extends AbstractModel {
         this.IsAllowDelete = IsAllowDelete;
     }
 
+    /**
+     * Get 操作人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Operator 操作人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Operator 操作人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
+    }
+
     public RejectedQuestion() {
     }
 
@@ -278,6 +306,9 @@ public class RejectedQuestion extends AbstractModel {
         if (source.IsAllowDelete != null) {
             this.IsAllowDelete = new Boolean(source.IsAllowDelete);
         }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
     }
 
 
@@ -292,6 +323,7 @@ public class RejectedQuestion extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "IsAllowEdit", this.IsAllowEdit);
         this.setParamSimple(map, prefix + "IsAllowDelete", this.IsAllowDelete);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
 
     }
 }

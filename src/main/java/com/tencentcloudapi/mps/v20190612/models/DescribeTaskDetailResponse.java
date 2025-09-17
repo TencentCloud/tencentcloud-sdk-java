@@ -86,6 +86,13 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private LiveStreamProcessTask LiveStreamProcessTask;
 
     /**
+    * 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+    */
+    @SerializedName("ExtractBlindWatermarkTask")
+    @Expose
+    private ExtractBlindWatermarkTask ExtractBlindWatermarkTask;
+
+    /**
     * 任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -297,6 +304,22 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。 
+     * @return ExtractBlindWatermarkTask 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+     */
+    public ExtractBlindWatermarkTask getExtractBlindWatermarkTask() {
+        return this.ExtractBlindWatermarkTask;
+    }
+
+    /**
+     * Set 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+     * @param ExtractBlindWatermarkTask 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+     */
+    public void setExtractBlindWatermarkTask(ExtractBlindWatermarkTask ExtractBlindWatermarkTask) {
+        this.ExtractBlindWatermarkTask = ExtractBlindWatermarkTask;
+    }
+
+    /**
      * Get 任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskNotifyConfig 任务的事件通知信息。
@@ -468,6 +491,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         if (source.LiveStreamProcessTask != null) {
             this.LiveStreamProcessTask = new LiveStreamProcessTask(source.LiveStreamProcessTask);
         }
+        if (source.ExtractBlindWatermarkTask != null) {
+            this.ExtractBlindWatermarkTask = new ExtractBlindWatermarkTask(source.ExtractBlindWatermarkTask);
+        }
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
@@ -507,6 +533,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         this.setParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
         this.setParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
         this.setParamObj(map, prefix + "LiveStreamProcessTask.", this.LiveStreamProcessTask);
+        this.setParamObj(map, prefix + "ExtractBlindWatermarkTask.", this.ExtractBlindWatermarkTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

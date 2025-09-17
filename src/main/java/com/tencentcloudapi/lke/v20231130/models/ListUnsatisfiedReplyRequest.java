@@ -73,6 +73,13 @@ public class ListUnsatisfiedReplyRequest extends AbstractModel {
     private String [] Reasons;
 
     /**
+    * 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -184,6 +191,22 @@ public class ListUnsatisfiedReplyRequest extends AbstractModel {
         this.Reasons = Reasons;
     }
 
+    /**
+     * Get 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】 
+     * @return Status 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
+     * @param Status 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public ListUnsatisfiedReplyRequest() {
     }
 
@@ -216,6 +239,9 @@ public class ListUnsatisfiedReplyRequest extends AbstractModel {
                 this.Reasons[i] = new String(source.Reasons[i]);
             }
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class ListUnsatisfiedReplyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamArraySimple(map, prefix + "Reasons.", this.Reasons);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }
