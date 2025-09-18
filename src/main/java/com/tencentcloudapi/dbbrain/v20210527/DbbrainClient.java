@@ -468,6 +468,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *获取指定时间段内的健康得分趋势
+     * @param req DescribeHealthScoreTimeSeriesRequest
+     * @return DescribeHealthScoreTimeSeriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHealthScoreTimeSeriesResponse DescribeHealthScoreTimeSeries(DescribeHealthScoreTimeSeriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHealthScoreTimeSeries", DescribeHealthScoreTimeSeriesResponse.class);
+    }
+
+    /**
      *查询某张表的慢查模板概览，这个接口是对用户点击对应的推荐索引后，展示慢日志用的
      * @param req DescribeIndexRecommendAggregationSlowLogsRequest
      * @return DescribeIndexRecommendAggregationSlowLogsResponse
@@ -619,6 +630,17 @@ public class DbbrainClient extends AbstractClient{
     public DescribeRedisTopBigKeysResponse DescribeRedisTopBigKeys(DescribeRedisTopBigKeysRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRedisTopBigKeys", DescribeRedisTopBigKeysResponse.class);
+    }
+
+    /**
+     *获取指定时间段内Redis 访问命令 cost top N
+     * @param req DescribeRedisTopCostCommandsRequest
+     * @return DescribeRedisTopCostCommandsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisTopCostCommandsResponse DescribeRedisTopCostCommands(DescribeRedisTopCostCommandsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedisTopCostCommands", DescribeRedisTopCostCommandsResponse.class);
     }
 
     /**

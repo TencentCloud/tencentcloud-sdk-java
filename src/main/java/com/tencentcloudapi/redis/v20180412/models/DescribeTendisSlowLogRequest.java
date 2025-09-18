@@ -45,21 +45,21 @@ public class DescribeTendisSlowLogRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 慢查询阈值（毫秒）
+    * 慢查询阈值，取值为大于0的正整数，单位：毫秒。
     */
     @SerializedName("MinQueryTime")
     @Expose
     private Long MinQueryTime;
 
     /**
-    * 页面大小：默认20，最大100。
+    * 页面大小。默认为20，最小为1，最大为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+    * 分页偏移量。默认为0，取值为 Limit 整数倍，计算公式：offset=limit*(页码-1)。
     */
     @SerializedName("Offset")
     @Expose
@@ -114,48 +114,48 @@ public class DescribeTendisSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 慢查询阈值（毫秒） 
-     * @return MinQueryTime 慢查询阈值（毫秒）
+     * Get 慢查询阈值，取值为大于0的正整数，单位：毫秒。 
+     * @return MinQueryTime 慢查询阈值，取值为大于0的正整数，单位：毫秒。
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set 慢查询阈值（毫秒）
-     * @param MinQueryTime 慢查询阈值（毫秒）
+     * Set 慢查询阈值，取值为大于0的正整数，单位：毫秒。
+     * @param MinQueryTime 慢查询阈值，取值为大于0的正整数，单位：毫秒。
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;
     }
 
     /**
-     * Get 页面大小：默认20，最大100。 
-     * @return Limit 页面大小：默认20，最大100。
+     * Get 页面大小。默认为20，最小为1，最大为100。 
+     * @return Limit 页面大小。默认为20，最小为1，最大为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 页面大小：默认20，最大100。
-     * @param Limit 页面大小：默认20，最大100。
+     * Set 页面大小。默认为20，最小为1，最大为100。
+     * @param Limit 页面大小。默认为20，最小为1，最大为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。 
-     * @return Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * Get 分页偏移量。默认为0，取值为 Limit 整数倍，计算公式：offset=limit*(页码-1)。 
+     * @return Offset 分页偏移量。默认为0，取值为 Limit 整数倍，计算公式：offset=limit*(页码-1)。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
-     * @param Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * Set 分页偏移量。默认为0，取值为 Limit 整数倍，计算公式：offset=limit*(页码-1)。
+     * @param Offset 分页偏移量。默认为0，取值为 Limit 整数倍，计算公式：offset=limit*(页码-1)。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -31,14 +31,14 @@ public class UpgradeProxyVersionRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 当前 Proxy 版本。
+    * 当前 Proxy 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例当前 Proxy 版本。
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
     private String CurrentProxyVersion;
 
     /**
-    * 可升级的 Redis 版本。
+    * 可升级的 Redis 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例可升级的 Redis 版本。
     */
     @SerializedName("UpgradeProxyVersion")
     @Expose
@@ -70,32 +70,32 @@ public class UpgradeProxyVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get 当前 Proxy 版本。 
-     * @return CurrentProxyVersion 当前 Proxy 版本。
+     * Get 当前 Proxy 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例当前 Proxy 版本。 
+     * @return CurrentProxyVersion 当前 Proxy 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例当前 Proxy 版本。
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
     }
 
     /**
-     * Set 当前 Proxy 版本。
-     * @param CurrentProxyVersion 当前 Proxy 版本。
+     * Set 当前 Proxy 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例当前 Proxy 版本。
+     * @param CurrentProxyVersion 当前 Proxy 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例当前 Proxy 版本。
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;
     }
 
     /**
-     * Get 可升级的 Redis 版本。 
-     * @return UpgradeProxyVersion 可升级的 Redis 版本。
+     * Get 可升级的 Redis 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例可升级的 Redis 版本。 
+     * @return UpgradeProxyVersion 可升级的 Redis 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例可升级的 Redis 版本。
      */
     public String getUpgradeProxyVersion() {
         return this.UpgradeProxyVersion;
     }
 
     /**
-     * Set 可升级的 Redis 版本。
-     * @param UpgradeProxyVersion 可升级的 Redis 版本。
+     * Set 可升级的 Redis 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例可升级的 Redis 版本。
+     * @param UpgradeProxyVersion 可升级的 Redis 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例可升级的 Redis 版本。
      */
     public void setUpgradeProxyVersion(String UpgradeProxyVersion) {
         this.UpgradeProxyVersion = UpgradeProxyVersion;

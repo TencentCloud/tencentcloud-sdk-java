@@ -281,6 +281,13 @@ public class DescribeRoomResponse extends AbstractModel {
     private String [] Guests;
 
     /**
+    * 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+    */
+    @SerializedName("RecordMerge")
+    @Expose
+    private Long RecordMerge;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -896,6 +903,22 @@ public class DescribeRoomResponse extends AbstractModel {
     }
 
     /**
+     * Get 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效 
+     * @return RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     */
+    public Long getRecordMerge() {
+        return this.RecordMerge;
+    }
+
+    /**
+     * Set 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     * @param RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     */
+    public void setRecordMerge(Long RecordMerge) {
+        this.RecordMerge = RecordMerge;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1030,6 +1053,9 @@ public class DescribeRoomResponse extends AbstractModel {
                 this.Guests[i] = new String(source.Guests[i]);
             }
         }
+        if (source.RecordMerge != null) {
+            this.RecordMerge = new Long(source.RecordMerge);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1075,6 +1101,7 @@ public class DescribeRoomResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
         this.setParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
         this.setParamArraySimple(map, prefix + "Guests.", this.Guests);
+        this.setParamSimple(map, prefix + "RecordMerge", this.RecordMerge);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

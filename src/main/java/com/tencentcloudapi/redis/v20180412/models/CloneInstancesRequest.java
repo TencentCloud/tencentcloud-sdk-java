@@ -61,7 +61,7 @@ public class CloneInstancesRequest extends AbstractModel {
     private Long Period;
 
     /**
-    * 安全组ID。请登录控制台，在<b>安全组</b>页面获取安全组 ID 信息。
+    * 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
     */
     @SerializedName("SecurityGroupIdList")
     @Expose
@@ -265,16 +265,16 @@ public class CloneInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 安全组ID。请登录控制台，在<b>安全组</b>页面获取安全组 ID 信息。 
-     * @return SecurityGroupIdList 安全组ID。请登录控制台，在<b>安全组</b>页面获取安全组 ID 信息。
+     * Get 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。 
+     * @return SecurityGroupIdList 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
      */
     public String [] getSecurityGroupIdList() {
         return this.SecurityGroupIdList;
     }
 
     /**
-     * Set 安全组ID。请登录控制台，在<b>安全组</b>页面获取安全组 ID 信息。
-     * @param SecurityGroupIdList 安全组ID。请登录控制台，在<b>安全组</b>页面获取安全组 ID 信息。
+     * Set 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
+     * @param SecurityGroupIdList 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
      */
     public void setSecurityGroupIdList(String [] SecurityGroupIdList) {
         this.SecurityGroupIdList = SecurityGroupIdList;

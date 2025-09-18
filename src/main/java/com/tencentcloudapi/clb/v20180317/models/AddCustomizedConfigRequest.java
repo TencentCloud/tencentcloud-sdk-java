@@ -45,6 +45,13 @@ public class AddCustomizedConfigRequest extends AbstractModel {
     private String ConfigContent;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
      * Get 配置名字 
      * @return ConfigName 配置名字
      */
@@ -92,6 +99,22 @@ public class AddCustomizedConfigRequest extends AbstractModel {
         this.ConfigContent = ConfigContent;
     }
 
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AddCustomizedConfigRequest() {
     }
 
@@ -109,6 +132,12 @@ public class AddCustomizedConfigRequest extends AbstractModel {
         if (source.ConfigContent != null) {
             this.ConfigContent = new String(source.ConfigContent);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class AddCustomizedConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ConfigName", this.ConfigName);
         this.setParamSimple(map, prefix + "ConfigType", this.ConfigType);
         this.setParamSimple(map, prefix + "ConfigContent", this.ConfigContent);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

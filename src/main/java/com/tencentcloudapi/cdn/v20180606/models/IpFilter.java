@@ -53,7 +53,7 @@ blacklist：黑名单
     private String [] Filters;
 
     /**
-    * IP 黑白名单分路径配置，白名单功能。黑白名单 IP 总数不能超过 1000 个。
+    * IP 黑白名单分路径配置。黑白名单 IP 总数不能超过 1000 个。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterRules")
@@ -149,9 +149,9 @@ blacklist：黑名单
     }
 
     /**
-     * Get IP 黑白名单分路径配置，白名单功能。黑白名单 IP 总数不能超过 1000 个。
+     * Get IP 黑白名单分路径配置。黑白名单 IP 总数不能超过 1000 个。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FilterRules IP 黑白名单分路径配置，白名单功能。黑白名单 IP 总数不能超过 1000 个。
+     * @return FilterRules IP 黑白名单分路径配置。黑白名单 IP 总数不能超过 1000 个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpFilterPathRule [] getFilterRules() {
@@ -159,9 +159,9 @@ blacklist：黑名单
     }
 
     /**
-     * Set IP 黑白名单分路径配置，白名单功能。黑白名单 IP 总数不能超过 1000 个。
+     * Set IP 黑白名单分路径配置。黑白名单 IP 总数不能超过 1000 个。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FilterRules IP 黑白名单分路径配置，白名单功能。黑白名单 IP 总数不能超过 1000 个。
+     * @param FilterRules IP 黑白名单分路径配置。黑白名单 IP 总数不能超过 1000 个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterRules(IpFilterPathRule [] FilterRules) {

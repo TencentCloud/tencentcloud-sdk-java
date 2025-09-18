@@ -52,6 +52,13 @@ public class AddCLSTopicDomainsRequest extends AbstractModel {
     private String Channel;
 
     /**
+    * 是否继承域名标签, 默认保留上一次更改的值
+    */
+    @SerializedName("InheritDomainTags")
+    @Expose
+    private Boolean InheritDomainTags;
+
+    /**
      * Get 日志集ID 
      * @return LogsetId 日志集ID
      */
@@ -115,6 +122,22 @@ public class AddCLSTopicDomainsRequest extends AbstractModel {
         this.Channel = Channel;
     }
 
+    /**
+     * Get 是否继承域名标签, 默认保留上一次更改的值 
+     * @return InheritDomainTags 是否继承域名标签, 默认保留上一次更改的值
+     */
+    public Boolean getInheritDomainTags() {
+        return this.InheritDomainTags;
+    }
+
+    /**
+     * Set 是否继承域名标签, 默认保留上一次更改的值
+     * @param InheritDomainTags 是否继承域名标签, 默认保留上一次更改的值
+     */
+    public void setInheritDomainTags(Boolean InheritDomainTags) {
+        this.InheritDomainTags = InheritDomainTags;
+    }
+
     public AddCLSTopicDomainsRequest() {
     }
 
@@ -138,6 +161,9 @@ public class AddCLSTopicDomainsRequest extends AbstractModel {
         if (source.Channel != null) {
             this.Channel = new String(source.Channel);
         }
+        if (source.InheritDomainTags != null) {
+            this.InheritDomainTags = new Boolean(source.InheritDomainTags);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class AddCLSTopicDomainsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamArrayObj(map, prefix + "DomainAreaConfigs.", this.DomainAreaConfigs);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "InheritDomainTags", this.InheritDomainTags);
 
     }
 }

@@ -165,7 +165,7 @@ GooseFSx：GooseFSx存储
     private Tag [] Tags;
 
     /**
-    * 数据配置，只支持WEDATA_HDFS存储类型
+    * 数据存储挂载配置
     */
     @SerializedName("DataConfigs")
     @Expose
@@ -536,16 +536,16 @@ GooseFSx：GooseFSx存储
     }
 
     /**
-     * Get 数据配置，只支持WEDATA_HDFS存储类型 
-     * @return DataConfigs 数据配置，只支持WEDATA_HDFS存储类型
+     * Get 数据存储挂载配置 
+     * @return DataConfigs 数据存储挂载配置
      */
     public DataConfig [] getDataConfigs() {
         return this.DataConfigs;
     }
 
     /**
-     * Set 数据配置，只支持WEDATA_HDFS存储类型
-     * @param DataConfigs 数据配置，只支持WEDATA_HDFS存储类型
+     * Set 数据存储挂载配置
+     * @param DataConfigs 数据存储挂载配置
      */
     public void setDataConfigs(DataConfig [] DataConfigs) {
         this.DataConfigs = DataConfigs;

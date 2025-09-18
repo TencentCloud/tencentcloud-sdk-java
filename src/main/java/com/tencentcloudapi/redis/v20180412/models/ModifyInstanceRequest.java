@@ -42,7 +42,7 @@ public class ModifyInstanceRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * 实例的新名称。
+    * 实例的新名称。名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-。
     */
     @SerializedName("InstanceNames")
     @Expose
@@ -142,16 +142,16 @@ public class ModifyInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例的新名称。 
-     * @return InstanceNames 实例的新名称。
+     * Get 实例的新名称。名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-。 
+     * @return InstanceNames 实例的新名称。名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-。
      */
     public String [] getInstanceNames() {
         return this.InstanceNames;
     }
 
     /**
-     * Set 实例的新名称。
-     * @param InstanceNames 实例的新名称。
+     * Set 实例的新名称。名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-。
+     * @param InstanceNames 实例的新名称。名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-。
      */
     public void setInstanceNames(String [] InstanceNames) {
         this.InstanceNames = InstanceNames;

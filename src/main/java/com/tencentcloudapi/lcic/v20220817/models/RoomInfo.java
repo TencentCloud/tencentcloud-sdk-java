@@ -251,6 +251,13 @@ public class RoomInfo extends AbstractModel {
     private String [] Guests;
 
     /**
+    * 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+    */
+    @SerializedName("RecordMerge")
+    @Expose
+    private Long RecordMerge;
+
+    /**
      * Get 房间名称。 
      * @return Name 房间名称。
      */
@@ -782,6 +789,22 @@ public class RoomInfo extends AbstractModel {
         this.Guests = Guests;
     }
 
+    /**
+     * Get 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效 
+     * @return RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     */
+    public Long getRecordMerge() {
+        return this.RecordMerge;
+    }
+
+    /**
+     * Set 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     * @param RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     */
+    public void setRecordMerge(Long RecordMerge) {
+        this.RecordMerge = RecordMerge;
+    }
+
     public RoomInfo() {
     }
 
@@ -892,6 +915,9 @@ public class RoomInfo extends AbstractModel {
                 this.Guests[i] = new String(source.Guests[i]);
             }
         }
+        if (source.RecordMerge != null) {
+            this.RecordMerge = new Long(source.RecordMerge);
+        }
     }
 
 
@@ -931,6 +957,7 @@ public class RoomInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
         this.setParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
         this.setParamArraySimple(map, prefix + "Guests.", this.Guests);
+        this.setParamSimple(map, prefix + "RecordMerge", this.RecordMerge);
 
     }
 }

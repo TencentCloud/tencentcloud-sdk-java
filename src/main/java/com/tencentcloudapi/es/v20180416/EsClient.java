@@ -425,6 +425,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *查询IP溯源日志原始数据
+     * @param req ExportIpTraceLogRequest
+     * @return ExportIpTraceLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportIpTraceLogResponse ExportIpTraceLog(ExportIpTraceLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportIpTraceLog", ExportIpTraceLogResponse.class);
+    }
+
+    /**
      *查看智能运维配置
      * @param req GetDiagnoseSettingsRequest
      * @return GetDiagnoseSettingsResponse

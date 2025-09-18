@@ -46,21 +46,21 @@ public class DescribeSlowLogRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 慢查询平均执行时间阈值，单位：毫秒。
+    * 慢查询平均执行时间阈值。取值为大于0 的正整数。单位：毫秒。
     */
     @SerializedName("MinQueryTime")
     @Expose
     private Long MinQueryTime;
 
     /**
-    * 每个页面展示的慢查询条数，默认值为20，最大100。
+    * 每个页面展示的慢查询条数，默认值为20，最小值为1，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+    * 慢查询条数的偏移量。默认为0。取Limit整数倍。计算公式：offset=limit*(页码-1)。
     */
     @SerializedName("Offset")
     @Expose
@@ -128,48 +128,48 @@ public class DescribeSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 慢查询平均执行时间阈值，单位：毫秒。 
-     * @return MinQueryTime 慢查询平均执行时间阈值，单位：毫秒。
+     * Get 慢查询平均执行时间阈值。取值为大于0 的正整数。单位：毫秒。 
+     * @return MinQueryTime 慢查询平均执行时间阈值。取值为大于0 的正整数。单位：毫秒。
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set 慢查询平均执行时间阈值，单位：毫秒。
-     * @param MinQueryTime 慢查询平均执行时间阈值，单位：毫秒。
+     * Set 慢查询平均执行时间阈值。取值为大于0 的正整数。单位：毫秒。
+     * @param MinQueryTime 慢查询平均执行时间阈值。取值为大于0 的正整数。单位：毫秒。
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;
     }
 
     /**
-     * Get 每个页面展示的慢查询条数，默认值为20，最大100。 
-     * @return Limit 每个页面展示的慢查询条数，默认值为20，最大100。
+     * Get 每个页面展示的慢查询条数，默认值为20，最小值为1，最大值为100。 
+     * @return Limit 每个页面展示的慢查询条数，默认值为20，最小值为1，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每个页面展示的慢查询条数，默认值为20，最大100。
-     * @param Limit 每个页面展示的慢查询条数，默认值为20，最大100。
+     * Set 每个页面展示的慢查询条数，默认值为20，最小值为1，最大值为100。
+     * @param Limit 每个页面展示的慢查询条数，默认值为20，最小值为1，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。 
-     * @return Offset 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * Get 慢查询条数的偏移量。默认为0。取Limit整数倍。计算公式：offset=limit*(页码-1)。 
+     * @return Offset 慢查询条数的偏移量。默认为0。取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
-     * @param Offset 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * Set 慢查询条数的偏移量。默认为0。取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @param Offset 慢查询条数的偏移量。默认为0。取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

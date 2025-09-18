@@ -73,6 +73,13 @@ public class ListClsTopicDomainsResponse extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 是否继承域名标签
+    */
+    @SerializedName("InheritDomainTags")
+    @Expose
+    private Boolean InheritDomainTags;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -192,6 +199,22 @@ public class ListClsTopicDomainsResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否继承域名标签 
+     * @return InheritDomainTags 是否继承域名标签
+     */
+    public Boolean getInheritDomainTags() {
+        return this.InheritDomainTags;
+    }
+
+    /**
+     * Set 是否继承域名标签
+     * @param InheritDomainTags 是否继承域名标签
+     */
+    public void setInheritDomainTags(Boolean InheritDomainTags) {
+        this.InheritDomainTags = InheritDomainTags;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -239,6 +262,9 @@ public class ListClsTopicDomainsResponse extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.InheritDomainTags != null) {
+            this.InheritDomainTags = new Boolean(source.InheritDomainTags);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -256,6 +282,7 @@ public class ListClsTopicDomainsResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DomainAreaConfigs.", this.DomainAreaConfigs);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "InheritDomainTags", this.InheritDomainTags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

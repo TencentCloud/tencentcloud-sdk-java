@@ -134,6 +134,13 @@ public class InvocationTask extends AbstractModel {
     private String InvocationSource;
 
     /**
+    * 执行的命令的名称。
+    */
+    @SerializedName("CommandName")
+    @Expose
+    private String CommandName;
+
+    /**
      * Get 执行活动ID。 
      * @return InvocationId 执行活动ID。
      */
@@ -417,6 +424,22 @@ public class InvocationTask extends AbstractModel {
         this.InvocationSource = InvocationSource;
     }
 
+    /**
+     * Get 执行的命令的名称。 
+     * @return CommandName 执行的命令的名称。
+     */
+    public String getCommandName() {
+        return this.CommandName;
+    }
+
+    /**
+     * Set 执行的命令的名称。
+     * @param CommandName 执行的命令的名称。
+     */
+    public void setCommandName(String CommandName) {
+        this.CommandName = CommandName;
+    }
+
     public InvocationTask() {
     }
 
@@ -464,6 +487,9 @@ public class InvocationTask extends AbstractModel {
         if (source.InvocationSource != null) {
             this.InvocationSource = new String(source.InvocationSource);
         }
+        if (source.CommandName != null) {
+            this.CommandName = new String(source.CommandName);
+        }
     }
 
 
@@ -484,6 +510,7 @@ public class InvocationTask extends AbstractModel {
         this.setParamObj(map, prefix + "CommandDocument.", this.CommandDocument);
         this.setParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
         this.setParamSimple(map, prefix + "InvocationSource", this.InvocationSource);
+        this.setParamSimple(map, prefix + "CommandName", this.CommandName);
 
     }
 }

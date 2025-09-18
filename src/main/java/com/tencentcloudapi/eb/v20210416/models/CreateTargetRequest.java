@@ -61,6 +61,27 @@ es类型示例:
     private String RuleId;
 
     /**
+    * 批量投递最长等待时间
+    */
+    @SerializedName("BatchTimeout")
+    @Expose
+    private Long BatchTimeout;
+
+    /**
+    * 批量投递最大事件条数
+    */
+    @SerializedName("BatchEventCount")
+    @Expose
+    private Long BatchEventCount;
+
+    /**
+    * 开启批量投递使能
+    */
+    @SerializedName("EnableBatchDelivery")
+    @Expose
+    private Boolean EnableBatchDelivery;
+
+    /**
      * Get 事件集ID 
      * @return EventBusId 事件集ID
      */
@@ -160,6 +181,54 @@ es类型示例:
         this.RuleId = RuleId;
     }
 
+    /**
+     * Get 批量投递最长等待时间 
+     * @return BatchTimeout 批量投递最长等待时间
+     */
+    public Long getBatchTimeout() {
+        return this.BatchTimeout;
+    }
+
+    /**
+     * Set 批量投递最长等待时间
+     * @param BatchTimeout 批量投递最长等待时间
+     */
+    public void setBatchTimeout(Long BatchTimeout) {
+        this.BatchTimeout = BatchTimeout;
+    }
+
+    /**
+     * Get 批量投递最大事件条数 
+     * @return BatchEventCount 批量投递最大事件条数
+     */
+    public Long getBatchEventCount() {
+        return this.BatchEventCount;
+    }
+
+    /**
+     * Set 批量投递最大事件条数
+     * @param BatchEventCount 批量投递最大事件条数
+     */
+    public void setBatchEventCount(Long BatchEventCount) {
+        this.BatchEventCount = BatchEventCount;
+    }
+
+    /**
+     * Get 开启批量投递使能 
+     * @return EnableBatchDelivery 开启批量投递使能
+     */
+    public Boolean getEnableBatchDelivery() {
+        return this.EnableBatchDelivery;
+    }
+
+    /**
+     * Set 开启批量投递使能
+     * @param EnableBatchDelivery 开启批量投递使能
+     */
+    public void setEnableBatchDelivery(Boolean EnableBatchDelivery) {
+        this.EnableBatchDelivery = EnableBatchDelivery;
+    }
+
     public CreateTargetRequest() {
     }
 
@@ -180,6 +249,15 @@ es类型示例:
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
         }
+        if (source.BatchTimeout != null) {
+            this.BatchTimeout = new Long(source.BatchTimeout);
+        }
+        if (source.BatchEventCount != null) {
+            this.BatchEventCount = new Long(source.BatchEventCount);
+        }
+        if (source.EnableBatchDelivery != null) {
+            this.EnableBatchDelivery = new Boolean(source.EnableBatchDelivery);
+        }
     }
 
 
@@ -191,6 +269,9 @@ es类型示例:
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "TargetDescription.", this.TargetDescription);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "BatchTimeout", this.BatchTimeout);
+        this.setParamSimple(map, prefix + "BatchEventCount", this.BatchEventCount);
+        this.setParamSimple(map, prefix + "EnableBatchDelivery", this.EnableBatchDelivery);
 
     }
 }

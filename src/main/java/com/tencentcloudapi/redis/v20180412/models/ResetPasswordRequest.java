@@ -31,7 +31,10 @@ public class ResetPasswordRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
+    * 重置的密码。若切换为免密实例时，可不配置该参数。
+- 长度8-32位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a- z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
     */
     @SerializedName("Password")
     @Expose
@@ -39,15 +42,17 @@ public class ResetPasswordRequest extends AbstractModel {
 
     /**
     * 是否切换免密实例。
-- false：切换为非免密码实例。
-- true：切换为免密码实例。默认 false。
+- false：切换为非免密码实例。默认 false。
+- true：切换为免密码实例。
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
 
     /**
-    * 是否加密密码
+    * 是否加密密码。
+- false：非加密密码。默认 false。
+- true：加密密码。
     */
     @SerializedName("EncryptPassword")
     @Expose
@@ -70,16 +75,28 @@ public class ResetPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。 
-     * @return Password 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
+     * Get 重置的密码。若切换为免密实例时，可不配置该参数。
+- 长度8-32位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a- z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。 
+     * @return Password 重置的密码。若切换为免密实例时，可不配置该参数。
+- 长度8-32位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a- z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
-     * @param Password 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
+     * Set 重置的密码。若切换为免密实例时，可不配置该参数。
+- 长度8-32位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a- z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
+     * @param Password 重置的密码。若切换为免密实例时，可不配置该参数。
+- 长度8-32位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a- z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -87,11 +104,11 @@ public class ResetPasswordRequest extends AbstractModel {
 
     /**
      * Get 是否切换免密实例。
-- false：切换为非免密码实例。
-- true：切换为免密码实例。默认 false。 
+- false：切换为非免密码实例。默认 false。
+- true：切换为免密码实例。 
      * @return NoAuth 是否切换免密实例。
-- false：切换为非免密码实例。
-- true：切换为免密码实例。默认 false。
+- false：切换为非免密码实例。默认 false。
+- true：切换为免密码实例。
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
@@ -99,27 +116,35 @@ public class ResetPasswordRequest extends AbstractModel {
 
     /**
      * Set 是否切换免密实例。
-- false：切换为非免密码实例。
-- true：切换为免密码实例。默认 false。
+- false：切换为非免密码实例。默认 false。
+- true：切换为免密码实例。
      * @param NoAuth 是否切换免密实例。
-- false：切换为非免密码实例。
-- true：切换为免密码实例。默认 false。
+- false：切换为非免密码实例。默认 false。
+- true：切换为免密码实例。
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
     }
 
     /**
-     * Get 是否加密密码 
-     * @return EncryptPassword 是否加密密码
+     * Get 是否加密密码。
+- false：非加密密码。默认 false。
+- true：加密密码。 
+     * @return EncryptPassword 是否加密密码。
+- false：非加密密码。默认 false。
+- true：加密密码。
      */
     public Boolean getEncryptPassword() {
         return this.EncryptPassword;
     }
 
     /**
-     * Set 是否加密密码
-     * @param EncryptPassword 是否加密密码
+     * Set 是否加密密码。
+- false：非加密密码。默认 false。
+- true：加密密码。
+     * @param EncryptPassword 是否加密密码。
+- false：非加密密码。默认 false。
+- true：加密密码。
      */
     public void setEncryptPassword(Boolean EncryptPassword) {
         this.EncryptPassword = EncryptPassword;

@@ -50,6 +50,13 @@ Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_
     private DspaDataSourceMngFilter [] Filters;
 
     /**
+    * Tag键值过滤
+    */
+    @SerializedName("TagFilter")
+    @Expose
+    private Tag [] TagFilter;
+
+    /**
     * 展示模式。
 
 目前只有两个值的处理逻辑：
@@ -131,6 +138,22 @@ Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_
     }
 
     /**
+     * Get Tag键值过滤 
+     * @return TagFilter Tag键值过滤
+     */
+    public Tag [] getTagFilter() {
+        return this.TagFilter;
+    }
+
+    /**
+     * Set Tag键值过滤
+     * @param TagFilter Tag键值过滤
+     */
+    public void setTagFilter(Tag [] TagFilter) {
+        this.TagFilter = TagFilter;
+    }
+
+    /**
      * Get 展示模式。
 
 目前只有两个值的处理逻辑：
@@ -190,6 +213,12 @@ Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_
                 this.Filters[i] = new DspaDataSourceMngFilter(source.Filters[i]);
             }
         }
+        if (source.TagFilter != null) {
+            this.TagFilter = new Tag[source.TagFilter.length];
+            for (int i = 0; i < source.TagFilter.length; i++) {
+                this.TagFilter[i] = new Tag(source.TagFilter[i]);
+            }
+        }
         if (source.ListMode != null) {
             this.ListMode = new String(source.ListMode);
         }
@@ -203,6 +232,7 @@ Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArrayObj(map, prefix + "TagFilter.", this.TagFilter);
         this.setParamSimple(map, prefix + "ListMode", this.ListMode);
 
     }

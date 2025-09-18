@@ -61,7 +61,7 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *你创建一个Agent
+     *创建一个Agent
      * @param req CreateAgentRequest
      * @return CreateAgentResponse
      * @throws TencentCloudSDKException
@@ -764,6 +764,17 @@ public class LkeClient extends AbstractClient{
     public ListAttributeLabelResponse ListAttributeLabel(ListAttributeLabelRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListAttributeLabel", ListAttributeLabelResponse.class);
+    }
+
+    /**
+     *获取发布渠道列表
+     * @param req ListChannelRequest
+     * @return ListChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListChannelResponse ListChannel(ListChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListChannel", ListChannelResponse.class);
     }
 
     /**

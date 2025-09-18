@@ -239,6 +239,20 @@ video 纯视频
     private Long SubtitlesTranscription;
 
     /**
+    * 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+    */
+    @SerializedName("Guests")
+    @Expose
+    private String [] Guests;
+
+    /**
+    * 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+    */
+    @SerializedName("RecordMerge")
+    @Expose
+    private Long RecordMerge;
+
+    /**
      * Get 房间ID。 
      * @return RoomId 房间ID。
      */
@@ -766,6 +780,38 @@ video 纯视频
         this.SubtitlesTranscription = SubtitlesTranscription;
     }
 
+    /**
+     * Get 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效 
+     * @return Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     */
+    public String [] getGuests() {
+        return this.Guests;
+    }
+
+    /**
+     * Set 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     * @param Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     */
+    public void setGuests(String [] Guests) {
+        this.Guests = Guests;
+    }
+
+    /**
+     * Get 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效 
+     * @return RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     */
+    public Long getRecordMerge() {
+        return this.RecordMerge;
+    }
+
+    /**
+     * Set 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     * @param RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     */
+    public void setRecordMerge(Long RecordMerge) {
+        this.RecordMerge = RecordMerge;
+    }
+
     public ModifyRoomRequest() {
     }
 
@@ -861,6 +907,15 @@ video 纯视频
         if (source.SubtitlesTranscription != null) {
             this.SubtitlesTranscription = new Long(source.SubtitlesTranscription);
         }
+        if (source.Guests != null) {
+            this.Guests = new String[source.Guests.length];
+            for (int i = 0; i < source.Guests.length; i++) {
+                this.Guests[i] = new String(source.Guests[i]);
+            }
+        }
+        if (source.RecordMerge != null) {
+            this.RecordMerge = new Long(source.RecordMerge);
+        }
     }
 
 
@@ -896,6 +951,8 @@ video 纯视频
         this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
         this.setParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
         this.setParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
+        this.setParamArraySimple(map, prefix + "Guests.", this.Guests);
+        this.setParamSimple(map, prefix + "RecordMerge", this.RecordMerge);
 
     }
 }

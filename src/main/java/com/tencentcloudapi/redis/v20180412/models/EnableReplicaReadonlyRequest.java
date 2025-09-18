@@ -33,8 +33,7 @@ public class EnableReplicaReadonlyRequest extends AbstractModel {
     /**
     * 只读路由策略。
 - master：表示只读路由至主节点。
-- replication：表示只读路由至从节点。
-- 默认策略：表示写主节点，读从节点。
+- replication：表示只读路由至从节点。默认值为：replication。
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
@@ -59,12 +58,10 @@ public class EnableReplicaReadonlyRequest extends AbstractModel {
     /**
      * Get 只读路由策略。
 - master：表示只读路由至主节点。
-- replication：表示只读路由至从节点。
-- 默认策略：表示写主节点，读从节点。 
+- replication：表示只读路由至从节点。默认值为：replication。 
      * @return ReadonlyPolicy 只读路由策略。
 - master：表示只读路由至主节点。
-- replication：表示只读路由至从节点。
-- 默认策略：表示写主节点，读从节点。
+- replication：表示只读路由至从节点。默认值为：replication。
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
@@ -73,12 +70,10 @@ public class EnableReplicaReadonlyRequest extends AbstractModel {
     /**
      * Set 只读路由策略。
 - master：表示只读路由至主节点。
-- replication：表示只读路由至从节点。
-- 默认策略：表示写主节点，读从节点。
+- replication：表示只读路由至从节点。默认值为：replication。
      * @param ReadonlyPolicy 只读路由策略。
 - master：表示只读路由至主节点。
-- replication：表示只读路由至从节点。
-- 默认策略：表示写主节点，读从节点。
+- replication：表示只读路由至从节点。默认值为：replication。
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;

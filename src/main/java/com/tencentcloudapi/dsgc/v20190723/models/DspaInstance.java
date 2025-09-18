@@ -152,6 +152,13 @@ public class DspaInstance extends AbstractModel {
     private Long InsTotalQuota;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get DSPA实例ID。 
      * @return DspaId DSPA实例ID。
      */
@@ -447,6 +454,22 @@ public class DspaInstance extends AbstractModel {
         this.InsTotalQuota = InsTotalQuota;
     }
 
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DspaInstance() {
     }
 
@@ -509,6 +532,12 @@ public class DspaInstance extends AbstractModel {
         if (source.InsTotalQuota != null) {
             this.InsTotalQuota = new Long(source.InsTotalQuota);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -534,6 +563,7 @@ public class DspaInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "Channel", this.Channel);
         this.setParamSimple(map, prefix + "InsAuthCount", this.InsAuthCount);
         this.setParamSimple(map, prefix + "InsTotalQuota", this.InsTotalQuota);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

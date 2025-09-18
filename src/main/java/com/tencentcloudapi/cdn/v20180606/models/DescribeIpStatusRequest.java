@@ -41,10 +41,7 @@ last：表示回源层节点
     private String Layer;
 
     /**
-    * 查询区域：
-mainland: 国内节点
-overseas: 海外节点
-global: 全球节点
+    * 查询区域：mainland: 中国境内节点overseas: 海外节点global: 全球节点
     */
     @SerializedName("Area")
     @Expose
@@ -116,28 +113,16 @@ last：表示回源层节点
     }
 
     /**
-     * Get 查询区域：
-mainland: 国内节点
-overseas: 海外节点
-global: 全球节点 
-     * @return Area 查询区域：
-mainland: 国内节点
-overseas: 海外节点
-global: 全球节点
+     * Get 查询区域：mainland: 中国境内节点overseas: 海外节点global: 全球节点 
+     * @return Area 查询区域：mainland: 中国境内节点overseas: 海外节点global: 全球节点
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 查询区域：
-mainland: 国内节点
-overseas: 海外节点
-global: 全球节点
-     * @param Area 查询区域：
-mainland: 国内节点
-overseas: 海外节点
-global: 全球节点
+     * Set 查询区域：mainland: 中国境内节点overseas: 海外节点global: 全球节点
+     * @param Area 查询区域：mainland: 中国境内节点overseas: 海外节点global: 全球节点
      */
     public void setArea(String Area) {
         this.Area = Area;

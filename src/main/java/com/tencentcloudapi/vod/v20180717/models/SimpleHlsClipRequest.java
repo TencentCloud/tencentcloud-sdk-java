@@ -66,7 +66,7 @@ public class SimpleHlsClipRequest extends AbstractModel {
     private String ExpireTime;
 
     /**
-    * 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 且 Precision 为 Rough 时有效。
+    * 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
     */
     @SerializedName("Procedure")
     @Expose
@@ -96,14 +96,14 @@ public class SimpleHlsClipRequest extends AbstractModel {
     private String SessionContext;
 
     /**
-    * 裁剪精度，取值有：<li>Rough: 粗略裁剪，最小剪辑精度是单个 ts 分片；</li><li>Precise: 精确裁剪，做到按照剪辑时间点的毫秒级精确剪辑。</li> 默认取值 Rough。
+    * 该字段已废弃。
     */
     @SerializedName("Precision")
     @Expose
     private String Precision;
 
     /**
-    * 输出视频类型，取值有：<li>hls: 输出 hls 文件；</li><li>mp4：输出 mp4 文件，MP4 文件的大小不超过5G，时长小于2小时。仅当 Precision 选择 Precise 且 IsPersistence  选择0时有效，即只有非固化的精确剪辑时支持输出 MP4。</li>默认取值 hls。
+    * 输出视频类型，取值有：<li>hls: 输出 hls 文件。</li>默认取值 hls。
     */
     @SerializedName("OutputMediaType")
     @Expose
@@ -213,16 +213,16 @@ public class SimpleHlsClipRequest extends AbstractModel {
     }
 
     /**
-     * Get 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 且 Precision 为 Rough 时有效。 
-     * @return Procedure 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 且 Precision 为 Rough 时有效。
+     * Get 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。 
+     * @return Procedure 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
      */
     public String getProcedure() {
         return this.Procedure;
     }
 
     /**
-     * Set 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 且 Precision 为 Rough 时有效。
-     * @param Procedure 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 且 Precision 为 Rough 时有效。
+     * Set 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
+     * @param Procedure 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
      */
     public void setProcedure(String Procedure) {
         this.Procedure = Procedure;
@@ -285,32 +285,32 @@ public class SimpleHlsClipRequest extends AbstractModel {
     }
 
     /**
-     * Get 裁剪精度，取值有：<li>Rough: 粗略裁剪，最小剪辑精度是单个 ts 分片；</li><li>Precise: 精确裁剪，做到按照剪辑时间点的毫秒级精确剪辑。</li> 默认取值 Rough。 
-     * @return Precision 裁剪精度，取值有：<li>Rough: 粗略裁剪，最小剪辑精度是单个 ts 分片；</li><li>Precise: 精确裁剪，做到按照剪辑时间点的毫秒级精确剪辑。</li> 默认取值 Rough。
+     * Get 该字段已废弃。 
+     * @return Precision 该字段已废弃。
      */
     public String getPrecision() {
         return this.Precision;
     }
 
     /**
-     * Set 裁剪精度，取值有：<li>Rough: 粗略裁剪，最小剪辑精度是单个 ts 分片；</li><li>Precise: 精确裁剪，做到按照剪辑时间点的毫秒级精确剪辑。</li> 默认取值 Rough。
-     * @param Precision 裁剪精度，取值有：<li>Rough: 粗略裁剪，最小剪辑精度是单个 ts 分片；</li><li>Precise: 精确裁剪，做到按照剪辑时间点的毫秒级精确剪辑。</li> 默认取值 Rough。
+     * Set 该字段已废弃。
+     * @param Precision 该字段已废弃。
      */
     public void setPrecision(String Precision) {
         this.Precision = Precision;
     }
 
     /**
-     * Get 输出视频类型，取值有：<li>hls: 输出 hls 文件；</li><li>mp4：输出 mp4 文件，MP4 文件的大小不超过5G，时长小于2小时。仅当 Precision 选择 Precise 且 IsPersistence  选择0时有效，即只有非固化的精确剪辑时支持输出 MP4。</li>默认取值 hls。 
-     * @return OutputMediaType 输出视频类型，取值有：<li>hls: 输出 hls 文件；</li><li>mp4：输出 mp4 文件，MP4 文件的大小不超过5G，时长小于2小时。仅当 Precision 选择 Precise 且 IsPersistence  选择0时有效，即只有非固化的精确剪辑时支持输出 MP4。</li>默认取值 hls。
+     * Get 输出视频类型，取值有：<li>hls: 输出 hls 文件。</li>默认取值 hls。 
+     * @return OutputMediaType 输出视频类型，取值有：<li>hls: 输出 hls 文件。</li>默认取值 hls。
      */
     public String getOutputMediaType() {
         return this.OutputMediaType;
     }
 
     /**
-     * Set 输出视频类型，取值有：<li>hls: 输出 hls 文件；</li><li>mp4：输出 mp4 文件，MP4 文件的大小不超过5G，时长小于2小时。仅当 Precision 选择 Precise 且 IsPersistence  选择0时有效，即只有非固化的精确剪辑时支持输出 MP4。</li>默认取值 hls。
-     * @param OutputMediaType 输出视频类型，取值有：<li>hls: 输出 hls 文件；</li><li>mp4：输出 mp4 文件，MP4 文件的大小不超过5G，时长小于2小时。仅当 Precision 选择 Precise 且 IsPersistence  选择0时有效，即只有非固化的精确剪辑时支持输出 MP4。</li>默认取值 hls。
+     * Set 输出视频类型，取值有：<li>hls: 输出 hls 文件。</li>默认取值 hls。
+     * @param OutputMediaType 输出视频类型，取值有：<li>hls: 输出 hls 文件。</li>默认取值 hls。
      */
     public void setOutputMediaType(String OutputMediaType) {
         this.OutputMediaType = OutputMediaType;

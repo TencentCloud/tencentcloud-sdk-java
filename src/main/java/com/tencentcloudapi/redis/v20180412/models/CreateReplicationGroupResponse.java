@@ -31,6 +31,13 @@ public class CreateReplicationGroupResponse extends AbstractModel {
     private Long TaskId;
 
     /**
+    * 复制组string型id
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class CreateReplicationGroupResponse extends AbstractModel {
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 复制组string型id 
+     * @return GroupId 复制组string型id
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 复制组string型id
+     * @param GroupId 复制组string型id
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     /**
@@ -80,6 +103,9 @@ public class CreateReplicationGroupResponse extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class CreateReplicationGroupResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

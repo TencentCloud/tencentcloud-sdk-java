@@ -59,6 +59,20 @@ public class InstanceProxySlowlogDetail extends AbstractModel {
     private String ExecuteTime;
 
     /**
+    * 收客户端请求时长(ms)
+    */
+    @SerializedName("RecvClientEnd")
+    @Expose
+    private Long RecvClientEnd;
+
+    /**
+    * 发送客户端请求时长(ms)
+    */
+    @SerializedName("SendClientEnd")
+    @Expose
+    private Long SendClientEnd;
+
+    /**
      * Get 慢查询耗时时长。单位：毫秒。 
      * @return Duration 慢查询耗时时长。单位：毫秒。
      */
@@ -138,6 +152,38 @@ public class InstanceProxySlowlogDetail extends AbstractModel {
         this.ExecuteTime = ExecuteTime;
     }
 
+    /**
+     * Get 收客户端请求时长(ms) 
+     * @return RecvClientEnd 收客户端请求时长(ms)
+     */
+    public Long getRecvClientEnd() {
+        return this.RecvClientEnd;
+    }
+
+    /**
+     * Set 收客户端请求时长(ms)
+     * @param RecvClientEnd 收客户端请求时长(ms)
+     */
+    public void setRecvClientEnd(Long RecvClientEnd) {
+        this.RecvClientEnd = RecvClientEnd;
+    }
+
+    /**
+     * Get 发送客户端请求时长(ms) 
+     * @return SendClientEnd 发送客户端请求时长(ms)
+     */
+    public Long getSendClientEnd() {
+        return this.SendClientEnd;
+    }
+
+    /**
+     * Set 发送客户端请求时长(ms)
+     * @param SendClientEnd 发送客户端请求时长(ms)
+     */
+    public void setSendClientEnd(Long SendClientEnd) {
+        this.SendClientEnd = SendClientEnd;
+    }
+
     public InstanceProxySlowlogDetail() {
     }
 
@@ -161,6 +207,12 @@ public class InstanceProxySlowlogDetail extends AbstractModel {
         if (source.ExecuteTime != null) {
             this.ExecuteTime = new String(source.ExecuteTime);
         }
+        if (source.RecvClientEnd != null) {
+            this.RecvClientEnd = new Long(source.RecvClientEnd);
+        }
+        if (source.SendClientEnd != null) {
+            this.SendClientEnd = new Long(source.SendClientEnd);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class InstanceProxySlowlogDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "CommandLine", this.CommandLine);
         this.setParamSimple(map, prefix + "ExecuteTime", this.ExecuteTime);
+        this.setParamSimple(map, prefix + "RecvClientEnd", this.RecvClientEnd);
+        this.setParamSimple(map, prefix + "SendClientEnd", this.SendClientEnd);
 
     }
 }

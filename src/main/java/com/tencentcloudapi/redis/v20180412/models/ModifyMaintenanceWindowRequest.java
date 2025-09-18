@@ -39,6 +39,7 @@ public class ModifyMaintenanceWindowRequest extends AbstractModel {
 
     /**
     * 维护时间窗结束时间，如：19:00。
+**说明：**维护时间窗时长，当前支持：30分钟、1小时、1.5小时、2小时、3小时。
     */
     @SerializedName("EndTime")
     @Expose
@@ -77,8 +78,10 @@ public class ModifyMaintenanceWindowRequest extends AbstractModel {
     }
 
     /**
-     * Get 维护时间窗结束时间，如：19:00。 
+     * Get 维护时间窗结束时间，如：19:00。
+**说明：**维护时间窗时长，当前支持：30分钟、1小时、1.5小时、2小时、3小时。 
      * @return EndTime 维护时间窗结束时间，如：19:00。
+**说明：**维护时间窗时长，当前支持：30分钟、1小时、1.5小时、2小时、3小时。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -86,7 +89,9 @@ public class ModifyMaintenanceWindowRequest extends AbstractModel {
 
     /**
      * Set 维护时间窗结束时间，如：19:00。
+**说明：**维护时间窗时长，当前支持：30分钟、1小时、1.5小时、2小时、3小时。
      * @param EndTime 维护时间窗结束时间，如：19:00。
+**说明：**维护时间窗时长，当前支持：30分钟、1小时、1.5小时、2小时、3小时。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

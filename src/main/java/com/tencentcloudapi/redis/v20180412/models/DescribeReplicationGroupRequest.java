@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeReplicationGroupRequest extends AbstractModel {
 
     /**
-    * 每页输出实例列表的大小，参数默认值20。
+    * 每页输出实例列表的大小。取值为大于0 的正整数，默认为20。
     */
     @SerializedName("Limit")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeReplicationGroupRequest extends AbstractModel {
     private String SearchKey;
 
     /**
-     * Get 每页输出实例列表的大小，参数默认值20。 
-     * @return Limit 每页输出实例列表的大小，参数默认值20。
+     * Get 每页输出实例列表的大小。取值为大于0 的正整数，默认为20。 
+     * @return Limit 每页输出实例列表的大小。取值为大于0 的正整数，默认为20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页输出实例列表的大小，参数默认值20。
-     * @param Limit 每页输出实例列表的大小，参数默认值20。
+     * Set 每页输出实例列表的大小。取值为大于0 的正整数，默认为20。
+     * @param Limit 每页输出实例列表的大小。取值为大于0 的正整数，默认为20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

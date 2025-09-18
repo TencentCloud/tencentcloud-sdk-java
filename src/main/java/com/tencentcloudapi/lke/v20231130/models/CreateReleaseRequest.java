@@ -38,7 +38,7 @@ public class CreateReleaseRequest extends AbstractModel {
     private String Desc;
 
     /**
-    * 渠道业务ID
+    * 渠道业务ID，从ListChannel接口的响应字段ChannelId获取
     */
     @SerializedName("ChannelBizIds")
     @Expose
@@ -77,16 +77,16 @@ public class CreateReleaseRequest extends AbstractModel {
     }
 
     /**
-     * Get 渠道业务ID 
-     * @return ChannelBizIds 渠道业务ID
+     * Get 渠道业务ID，从ListChannel接口的响应字段ChannelId获取 
+     * @return ChannelBizIds 渠道业务ID，从ListChannel接口的响应字段ChannelId获取
      */
     public String [] getChannelBizIds() {
         return this.ChannelBizIds;
     }
 
     /**
-     * Set 渠道业务ID
-     * @param ChannelBizIds 渠道业务ID
+     * Set 渠道业务ID，从ListChannel接口的响应字段ChannelId获取
+     * @param ChannelBizIds 渠道业务ID，从ListChannel接口的响应字段ChannelId获取
      */
     public void setChannelBizIds(String [] ChannelBizIds) {
         this.ChannelBizIds = ChannelBizIds;

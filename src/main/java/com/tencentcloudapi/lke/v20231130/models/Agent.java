@@ -45,7 +45,7 @@ public class Agent extends AbstractModel {
     private String Name;
 
     /**
-    * 插件图标url
+    * Agent图标url
     */
     @SerializedName("IconUrl")
     @Expose
@@ -115,6 +115,13 @@ public class Agent extends AbstractModel {
     private Long AgentMode;
 
     /**
+    * 高级设置
+    */
+    @SerializedName("AdvancedConfig")
+    @Expose
+    private AgentAdvancedConfig AdvancedConfig;
+
+    /**
      * Get AgentID 
      * @return AgentId AgentID
      */
@@ -163,16 +170,16 @@ public class Agent extends AbstractModel {
     }
 
     /**
-     * Get 插件图标url 
-     * @return IconUrl 插件图标url
+     * Get Agent图标url 
+     * @return IconUrl Agent图标url
      */
     public String getIconUrl() {
         return this.IconUrl;
     }
 
     /**
-     * Set 插件图标url
-     * @param IconUrl 插件图标url
+     * Set Agent图标url
+     * @param IconUrl Agent图标url
      */
     public void setIconUrl(String IconUrl) {
         this.IconUrl = IconUrl;
@@ -322,6 +329,22 @@ public class Agent extends AbstractModel {
         this.AgentMode = AgentMode;
     }
 
+    /**
+     * Get 高级设置 
+     * @return AdvancedConfig 高级设置
+     */
+    public AgentAdvancedConfig getAdvancedConfig() {
+        return this.AdvancedConfig;
+    }
+
+    /**
+     * Set 高级设置
+     * @param AdvancedConfig 高级设置
+     */
+    public void setAdvancedConfig(AgentAdvancedConfig AdvancedConfig) {
+        this.AdvancedConfig = AdvancedConfig;
+    }
+
     public Agent() {
     }
 
@@ -378,6 +401,9 @@ public class Agent extends AbstractModel {
         if (source.AgentMode != null) {
             this.AgentMode = new Long(source.AgentMode);
         }
+        if (source.AdvancedConfig != null) {
+            this.AdvancedConfig = new AgentAdvancedConfig(source.AdvancedConfig);
+        }
     }
 
 
@@ -398,6 +424,7 @@ public class Agent extends AbstractModel {
         this.setParamSimple(map, prefix + "IsStartingAgent", this.IsStartingAgent);
         this.setParamSimple(map, prefix + "AgentType", this.AgentType);
         this.setParamSimple(map, prefix + "AgentMode", this.AgentMode);
+        this.setParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
 
     }
 }

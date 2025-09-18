@@ -24,61 +24,61 @@ import java.util.HashMap;
 public class DescribeInstanceSupportFeatureRequest extends AbstractModel {
 
     /**
-    * 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
-示例值：crs-asdasdas
+    * 指定实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 功能特性名称
-- read-local-node-only 就近接入功能
-- multi-account 多账号功能
+    * 支持查询的功能特性如下所示。
+- read-local-node-only：就近接入。
+- multi-account：多账号管理。
+- auto-failback：故障恢复场景，主节点是否开启自动回切。
     */
     @SerializedName("FeatureName")
     @Expose
     private String FeatureName;
 
     /**
-     * Get 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
-示例值：crs-asdasdas 
-     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
-示例值：crs-asdasdas
+     * Get 指定实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。 
+     * @return InstanceId 指定实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
-示例值：crs-asdasdas
-     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
-示例值：crs-asdasdas
+     * Set 指定实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
+     * @param InstanceId 指定实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 功能特性名称
-- read-local-node-only 就近接入功能
-- multi-account 多账号功能 
-     * @return FeatureName 功能特性名称
-- read-local-node-only 就近接入功能
-- multi-account 多账号功能
+     * Get 支持查询的功能特性如下所示。
+- read-local-node-only：就近接入。
+- multi-account：多账号管理。
+- auto-failback：故障恢复场景，主节点是否开启自动回切。 
+     * @return FeatureName 支持查询的功能特性如下所示。
+- read-local-node-only：就近接入。
+- multi-account：多账号管理。
+- auto-failback：故障恢复场景，主节点是否开启自动回切。
      */
     public String getFeatureName() {
         return this.FeatureName;
     }
 
     /**
-     * Set 功能特性名称
-- read-local-node-only 就近接入功能
-- multi-account 多账号功能
-     * @param FeatureName 功能特性名称
-- read-local-node-only 就近接入功能
-- multi-account 多账号功能
+     * Set 支持查询的功能特性如下所示。
+- read-local-node-only：就近接入。
+- multi-account：多账号管理。
+- auto-failback：故障恢复场景，主节点是否开启自动回切。
+     * @param FeatureName 支持查询的功能特性如下所示。
+- read-local-node-only：就近接入。
+- multi-account：多账号管理。
+- auto-failback：故障恢复场景，主节点是否开启自动回切。
      */
     public void setFeatureName(String FeatureName) {
         this.FeatureName = FeatureName;

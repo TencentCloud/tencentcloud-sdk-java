@@ -39,6 +39,17 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *查询资源名是否重复
+     * @param req CheckConnectorNameRequest
+     * @return CheckConnectorNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckConnectorNameResponse CheckConnectorName(CheckConnectorNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckConnectorName", CheckConnectorNameResponse.class);
+    }
+
+    /**
      *检查快照是否可用
      * @param req CheckSavepointRequest
      * @return CheckSavepointResponse
@@ -58,6 +69,17 @@ public class OceanusClient extends AbstractClient{
     public CopyJobsResponse CopyJobs(CopyJobsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CopyJobs", CopyJobsResponse.class);
+    }
+
+    /**
+     *创建Connector
+     * @param req CreateConnectorRequest
+     * @return CreateConnectorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConnectorResponse CreateConnector(CreateConnectorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateConnector", CreateConnectorResponse.class);
     }
 
     /**
@@ -391,6 +413,17 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *修改Connector
+     * @param req ModifyConnectorRequest
+     * @return ModifyConnectorResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConnectorResponse ModifyConnector(ModifyConnectorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConnector", ModifyConnectorResponse.class);
+    }
+
+    /**
      *自定义树状结构页面拖拽文件夹
      * @param req ModifyFolderRequest
      * @return ModifyFolderResponse
@@ -429,6 +462,17 @@ public class OceanusClient extends AbstractClient{
     public ModifyWorkSpaceResponse ModifyWorkSpace(ModifyWorkSpaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyWorkSpace", ModifyWorkSpaceResponse.class);
+    }
+
+    /**
+     *解析用户上传connector
+     * @param req ParseConnectorRequest
+     * @return ParseConnectorResponse
+     * @throws TencentCloudSDKException
+     */
+    public ParseConnectorResponse ParseConnector(ParseConnectorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ParseConnector", ParseConnectorResponse.class);
     }
 
     /**

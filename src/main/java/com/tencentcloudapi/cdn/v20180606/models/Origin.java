@@ -114,7 +114,6 @@ ip：IP 列表作为源站
 以下备源源站类型尚未全量支持，需要申请试用：
 ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
-ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -450,7 +449,6 @@ ip：IP 列表作为源站
 以下备源源站类型尚未全量支持，需要申请试用：
 ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
-ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BackupOriginType 备源站类型
@@ -461,7 +459,6 @@ ip：IP 列表作为源站
 以下备源源站类型尚未全量支持，需要申请试用：
 ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
-ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -478,7 +475,6 @@ ip：IP 列表作为源站
 以下备源源站类型尚未全量支持，需要申请试用：
 ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
-ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupOriginType 备源站类型
@@ -489,7 +485,6 @@ ip：IP 列表作为源站
 以下备源源站类型尚未全量支持，需要申请试用：
 ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
-ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。
      */

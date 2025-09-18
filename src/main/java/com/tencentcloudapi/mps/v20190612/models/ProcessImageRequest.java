@@ -45,6 +45,20 @@ public class ProcessImageRequest extends AbstractModel {
     private String OutputDir;
 
     /**
+    * 输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}.{format}。
+    */
+    @SerializedName("OutputPath")
+    @Expose
+    private String OutputPath;
+
+    /**
     * 图片处理参数。
     */
     @SerializedName("ImageTask")
@@ -100,6 +114,50 @@ public class ProcessImageRequest extends AbstractModel {
     }
 
     /**
+     * Get 输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}.{format}。 
+     * @return OutputPath 输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}.{format}。
+     */
+    public String getOutputPath() {
+        return this.OutputPath;
+    }
+
+    /**
+     * Set 输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}.{format}。
+     * @param OutputPath 输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}.{format}。
+     */
+    public void setOutputPath(String OutputPath) {
+        this.OutputPath = OutputPath;
+    }
+
+    /**
      * Get 图片处理参数。 
      * @return ImageTask 图片处理参数。
      */
@@ -132,6 +190,9 @@ public class ProcessImageRequest extends AbstractModel {
         if (source.OutputDir != null) {
             this.OutputDir = new String(source.OutputDir);
         }
+        if (source.OutputPath != null) {
+            this.OutputPath = new String(source.OutputPath);
+        }
         if (source.ImageTask != null) {
             this.ImageTask = new ImageTaskInput(source.ImageTask);
         }
@@ -145,6 +206,7 @@ public class ProcessImageRequest extends AbstractModel {
         this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputDir", this.OutputDir);
+        this.setParamSimple(map, prefix + "OutputPath", this.OutputPath);
         this.setParamObj(map, prefix + "ImageTask.", this.ImageTask);
 
     }
