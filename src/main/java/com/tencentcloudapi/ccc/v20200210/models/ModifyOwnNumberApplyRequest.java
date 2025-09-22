@@ -52,6 +52,20 @@ public class ModifyOwnNumberApplyRequest extends AbstractModel {
     private String Prefix;
 
     /**
+    * 国内长途手机前缀码
+    */
+    @SerializedName("MobileNddPrefix")
+    @Expose
+    private String MobileNddPrefix;
+
+    /**
+    * 同市固话去掉区号
+    */
+    @SerializedName("LocalNumberTrimAC")
+    @Expose
+    private Boolean LocalNumberTrimAC;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -115,6 +129,38 @@ public class ModifyOwnNumberApplyRequest extends AbstractModel {
         this.Prefix = Prefix;
     }
 
+    /**
+     * Get 国内长途手机前缀码 
+     * @return MobileNddPrefix 国内长途手机前缀码
+     */
+    public String getMobileNddPrefix() {
+        return this.MobileNddPrefix;
+    }
+
+    /**
+     * Set 国内长途手机前缀码
+     * @param MobileNddPrefix 国内长途手机前缀码
+     */
+    public void setMobileNddPrefix(String MobileNddPrefix) {
+        this.MobileNddPrefix = MobileNddPrefix;
+    }
+
+    /**
+     * Get 同市固话去掉区号 
+     * @return LocalNumberTrimAC 同市固话去掉区号
+     */
+    public Boolean getLocalNumberTrimAC() {
+        return this.LocalNumberTrimAC;
+    }
+
+    /**
+     * Set 同市固话去掉区号
+     * @param LocalNumberTrimAC 同市固话去掉区号
+     */
+    public void setLocalNumberTrimAC(Boolean LocalNumberTrimAC) {
+        this.LocalNumberTrimAC = LocalNumberTrimAC;
+    }
+
     public ModifyOwnNumberApplyRequest() {
     }
 
@@ -138,6 +184,12 @@ public class ModifyOwnNumberApplyRequest extends AbstractModel {
         if (source.Prefix != null) {
             this.Prefix = new String(source.Prefix);
         }
+        if (source.MobileNddPrefix != null) {
+            this.MobileNddPrefix = new String(source.MobileNddPrefix);
+        }
+        if (source.LocalNumberTrimAC != null) {
+            this.LocalNumberTrimAC = new Boolean(source.LocalNumberTrimAC);
+        }
     }
 
 
@@ -149,6 +201,8 @@ public class ModifyOwnNumberApplyRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DetailList.", this.DetailList);
         this.setParamSimple(map, prefix + "ApplyId", this.ApplyId);
         this.setParamSimple(map, prefix + "Prefix", this.Prefix);
+        this.setParamSimple(map, prefix + "MobileNddPrefix", this.MobileNddPrefix);
+        this.setParamSimple(map, prefix + "LocalNumberTrimAC", this.LocalNumberTrimAC);
 
     }
 }

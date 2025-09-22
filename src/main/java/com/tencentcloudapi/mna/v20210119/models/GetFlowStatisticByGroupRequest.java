@@ -73,6 +73,13 @@ public class GetFlowStatisticByGroupRequest extends AbstractModel {
     private Long GatewayType;
 
     /**
+    * 应用ID, 查询分组流量时无需使用。 查询应用流量时该字段为应用ID，GroupId 填写 "-1"
+    */
+    @SerializedName("MpApplicationId")
+    @Expose
+    private String MpApplicationId;
+
+    /**
      * Get 分组ID 
      * @return GroupId 分组ID
      */
@@ -184,6 +191,22 @@ public class GetFlowStatisticByGroupRequest extends AbstractModel {
         this.GatewayType = GatewayType;
     }
 
+    /**
+     * Get 应用ID, 查询分组流量时无需使用。 查询应用流量时该字段为应用ID，GroupId 填写 "-1" 
+     * @return MpApplicationId 应用ID, 查询分组流量时无需使用。 查询应用流量时该字段为应用ID，GroupId 填写 "-1"
+     */
+    public String getMpApplicationId() {
+        return this.MpApplicationId;
+    }
+
+    /**
+     * Set 应用ID, 查询分组流量时无需使用。 查询应用流量时该字段为应用ID，GroupId 填写 "-1"
+     * @param MpApplicationId 应用ID, 查询分组流量时无需使用。 查询应用流量时该字段为应用ID，GroupId 填写 "-1"
+     */
+    public void setMpApplicationId(String MpApplicationId) {
+        this.MpApplicationId = MpApplicationId;
+    }
+
     public GetFlowStatisticByGroupRequest() {
     }
 
@@ -213,6 +236,9 @@ public class GetFlowStatisticByGroupRequest extends AbstractModel {
         if (source.GatewayType != null) {
             this.GatewayType = new Long(source.GatewayType);
         }
+        if (source.MpApplicationId != null) {
+            this.MpApplicationId = new String(source.MpApplicationId);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class GetFlowStatisticByGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeGranularity", this.TimeGranularity);
         this.setParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
         this.setParamSimple(map, prefix + "GatewayType", this.GatewayType);
+        this.setParamSimple(map, prefix + "MpApplicationId", this.MpApplicationId);
 
     }
 }

@@ -52,7 +52,7 @@ public class Ai3dClient extends AbstractClient{
 
     /**
      *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
-默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+默认提供3个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
      * @param req QueryHunyuanTo3DProJobRequest
      * @return QueryHunyuanTo3DProJobResponse
      * @throws TencentCloudSDKException
@@ -64,7 +64,7 @@ public class Ai3dClient extends AbstractClient{
 
     /**
      *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
-默认提供3个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
      * @param req QueryHunyuanTo3DRapidJobRequest
      * @return QueryHunyuanTo3DRapidJobResponse
      * @throws TencentCloudSDKException
@@ -88,7 +88,7 @@ public class Ai3dClient extends AbstractClient{
 
     /**
      *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
-默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+默认提供3个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
      * @param req SubmitHunyuanTo3DProJobRequest
      * @return SubmitHunyuanTo3DProJobResponse
      * @throws TencentCloudSDKException
@@ -100,7 +100,7 @@ public class Ai3dClient extends AbstractClient{
 
     /**
      *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
-默认提供3个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
      * @param req SubmitHunyuanTo3DRapidJobRequest
      * @return SubmitHunyuanTo3DRapidJobResponse
      * @throws TencentCloudSDKException

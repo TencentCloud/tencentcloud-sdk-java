@@ -204,6 +204,20 @@ public class ModelInfo extends AbstractModel {
     private String ProviderType;
 
     /**
+    * 是否关闭模型超参
+    */
+    @SerializedName("IsCloseModelParams")
+    @Expose
+    private Boolean IsCloseModelParams;
+
+    /**
+    * 是否支持深度思考
+    */
+    @SerializedName("IsDeepThinking")
+    @Expose
+    private Boolean IsDeepThinking;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelName 模型名称
@@ -635,6 +649,38 @@ public class ModelInfo extends AbstractModel {
         this.ProviderType = ProviderType;
     }
 
+    /**
+     * Get 是否关闭模型超参 
+     * @return IsCloseModelParams 是否关闭模型超参
+     */
+    public Boolean getIsCloseModelParams() {
+        return this.IsCloseModelParams;
+    }
+
+    /**
+     * Set 是否关闭模型超参
+     * @param IsCloseModelParams 是否关闭模型超参
+     */
+    public void setIsCloseModelParams(Boolean IsCloseModelParams) {
+        this.IsCloseModelParams = IsCloseModelParams;
+    }
+
+    /**
+     * Get 是否支持深度思考 
+     * @return IsDeepThinking 是否支持深度思考
+     */
+    public Boolean getIsDeepThinking() {
+        return this.IsDeepThinking;
+    }
+
+    /**
+     * Set 是否支持深度思考
+     * @param IsDeepThinking 是否支持深度思考
+     */
+    public void setIsDeepThinking(Boolean IsDeepThinking) {
+        this.IsDeepThinking = IsDeepThinking;
+    }
+
     public ModelInfo() {
     }
 
@@ -721,6 +767,12 @@ public class ModelInfo extends AbstractModel {
         if (source.ProviderType != null) {
             this.ProviderType = new String(source.ProviderType);
         }
+        if (source.IsCloseModelParams != null) {
+            this.IsCloseModelParams = new Boolean(source.IsCloseModelParams);
+        }
+        if (source.IsDeepThinking != null) {
+            this.IsDeepThinking = new Boolean(source.IsDeepThinking);
+        }
     }
 
 
@@ -752,6 +804,8 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ProviderName", this.ProviderName);
         this.setParamSimple(map, prefix + "ProviderAliasName", this.ProviderAliasName);
         this.setParamSimple(map, prefix + "ProviderType", this.ProviderType);
+        this.setParamSimple(map, prefix + "IsCloseModelParams", this.IsCloseModelParams);
+        this.setParamSimple(map, prefix + "IsDeepThinking", this.IsDeepThinking);
 
     }
 }

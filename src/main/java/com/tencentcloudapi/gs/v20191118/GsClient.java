@@ -39,6 +39,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *备份安卓实例。该接口需要联系我们开通内网存储才能使用。
+     * @param req BackUpAndroidInstanceRequest
+     * @return BackUpAndroidInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public BackUpAndroidInstanceResponse BackUpAndroidInstance(BackUpAndroidInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BackUpAndroidInstance", BackUpAndroidInstanceResponse.class);
+    }
+
+    /**
      *备份云手机数据到指定存储，支持 COS 和兼容 AWS S3 协议的对象存储服务。如果是备份到 COS 时，会使用公网流量，授权 COS bucket 请在控制台中操作。
      * @param req BackUpAndroidInstanceToStorageRequest
      * @return BackUpAndroidInstanceToStorageResponse
@@ -252,6 +263,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *批量删除安卓实例备份
+     * @param req DeleteAndroidInstanceBackupsRequest
+     * @return DeleteAndroidInstanceBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAndroidInstanceBackupsResponse DeleteAndroidInstanceBackups(DeleteAndroidInstanceBackupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAndroidInstanceBackups", DeleteAndroidInstanceBackupsResponse.class);
+    }
+
+    /**
      *删除安卓实例镜像
      * @param req DeleteAndroidInstanceImagesRequest
      * @return DeleteAndroidInstanceImagesResponse
@@ -293,6 +315,17 @@ public class GsClient extends AbstractClient{
     public DescribeAndroidInstanceAppsResponse DescribeAndroidInstanceApps(DescribeAndroidInstanceAppsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAndroidInstanceApps", DescribeAndroidInstanceAppsResponse.class);
+    }
+
+    /**
+     *查询安卓实例备份列表
+     * @param req DescribeAndroidInstanceBackupsRequest
+     * @return DescribeAndroidInstanceBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAndroidInstanceBackupsResponse DescribeAndroidInstanceBackups(DescribeAndroidInstanceBackupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAndroidInstanceBackups", DescribeAndroidInstanceBackupsResponse.class);
     }
 
     /**
@@ -681,6 +714,17 @@ public class GsClient extends AbstractClient{
     public RestartAndroidInstancesAppResponse RestartAndroidInstancesApp(RestartAndroidInstancesAppRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RestartAndroidInstancesApp", RestartAndroidInstancesAppResponse.class);
+    }
+
+    /**
+     *还原安卓实例。该接口需要联系我们开通内网存储才能使用。
+     * @param req RestoreAndroidInstanceRequest
+     * @return RestoreAndroidInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestoreAndroidInstanceResponse RestoreAndroidInstance(RestoreAndroidInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestoreAndroidInstance", RestoreAndroidInstanceResponse.class);
     }
 
     /**

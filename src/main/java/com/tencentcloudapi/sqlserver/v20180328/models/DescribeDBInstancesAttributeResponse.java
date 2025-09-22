@@ -143,6 +143,14 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
     private Long IsSupportSA;
 
     /**
+    * 慢SQL阈值，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlowLogThreshold")
+    @Expose
+    private Long SlowLogThreshold;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -422,6 +430,26 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
     }
 
     /**
+     * Get 慢SQL阈值，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlowLogThreshold 慢SQL阈值，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSlowLogThreshold() {
+        return this.SlowLogThreshold;
+    }
+
+    /**
+     * Set 慢SQL阈值，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlowLogThreshold 慢SQL阈值，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlowLogThreshold(Long SlowLogThreshold) {
+        this.SlowLogThreshold = SlowLogThreshold;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -502,6 +530,9 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
         if (source.IsSupportSA != null) {
             this.IsSupportSA = new Long(source.IsSupportSA);
         }
+        if (source.SlowLogThreshold != null) {
+            this.SlowLogThreshold = new Long(source.SlowLogThreshold);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -529,6 +560,7 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDiskEncryptFlag", this.IsDiskEncryptFlag);
         this.setParamSimple(map, prefix + "IsSafetyLimited", this.IsSafetyLimited);
         this.setParamSimple(map, prefix + "IsSupportSA", this.IsSupportSA);
+        this.setParamSimple(map, prefix + "SlowLogThreshold", this.SlowLogThreshold);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

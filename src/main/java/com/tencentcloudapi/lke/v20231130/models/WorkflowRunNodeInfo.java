@@ -104,6 +104,14 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     private StatisticInfo [] StatisticInfos;
 
     /**
+    * 错误代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailCode")
+    @Expose
+    private String FailCode;
+
+    /**
      * Get 节点ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NodeId 节点ID
@@ -303,6 +311,26 @@ public class WorkflowRunNodeInfo extends AbstractModel {
         this.StatisticInfos = StatisticInfos;
     }
 
+    /**
+     * Get 错误代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailCode 错误代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFailCode() {
+        return this.FailCode;
+    }
+
+    /**
+     * Set 错误代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailCode 错误代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailCode(String FailCode) {
+        this.FailCode = FailCode;
+    }
+
     public WorkflowRunNodeInfo() {
     }
 
@@ -344,6 +372,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
                 this.StatisticInfos[i] = new StatisticInfo(source.StatisticInfos[i]);
             }
         }
+        if (source.FailCode != null) {
+            this.FailCode = new String(source.FailCode);
+        }
     }
 
 
@@ -361,6 +392,7 @@ public class WorkflowRunNodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FailMessage", this.FailMessage);
         this.setParamSimple(map, prefix + "CostMilliSeconds", this.CostMilliSeconds);
         this.setParamArrayObj(map, prefix + "StatisticInfos.", this.StatisticInfos);
+        this.setParamSimple(map, prefix + "FailCode", this.FailCode);
 
     }
 }

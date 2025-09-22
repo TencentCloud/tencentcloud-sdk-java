@@ -66,7 +66,7 @@ public class ListAppRequest extends AbstractModel {
     private String AgentType;
 
     /**
-    * 应用状态 1:未上线 2：运行中
+    * 应用状态 1:未上线   2：运行中
     */
     @SerializedName("AppStatus")
     @Expose
@@ -169,16 +169,16 @@ public class ListAppRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用状态 1:未上线 2：运行中 
-     * @return AppStatus 应用状态 1:未上线 2：运行中
+     * Get 应用状态 1:未上线   2：运行中 
+     * @return AppStatus 应用状态 1:未上线   2：运行中
      */
     public String getAppStatus() {
         return this.AppStatus;
     }
 
     /**
-     * Set 应用状态 1:未上线 2：运行中
-     * @param AppStatus 应用状态 1:未上线 2：运行中
+     * Set 应用状态 1:未上线   2：运行中
+     * @param AppStatus 应用状态 1:未上线   2：运行中
      */
     public void setAppStatus(String AppStatus) {
         this.AppStatus = AppStatus;

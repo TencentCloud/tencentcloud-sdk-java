@@ -59,6 +59,13 @@ public class OwnNumberApplyDetailItem extends AbstractModel {
     private String OutboundCalleeFormat;
 
     /**
+    * 运营商号码
+    */
+    @SerializedName("CarrierPhoneNumber")
+    @Expose
+    private String CarrierPhoneNumber;
+
+    /**
      * Get 号码类型：0-呼入|1-呼出|2-呼入呼出 
      * @return CallType 号码类型：0-呼入|1-呼出|2-呼入呼出
      */
@@ -138,6 +145,22 @@ public class OwnNumberApplyDetailItem extends AbstractModel {
         this.OutboundCalleeFormat = OutboundCalleeFormat;
     }
 
+    /**
+     * Get 运营商号码 
+     * @return CarrierPhoneNumber 运营商号码
+     */
+    public String getCarrierPhoneNumber() {
+        return this.CarrierPhoneNumber;
+    }
+
+    /**
+     * Set 运营商号码
+     * @param CarrierPhoneNumber 运营商号码
+     */
+    public void setCarrierPhoneNumber(String CarrierPhoneNumber) {
+        this.CarrierPhoneNumber = CarrierPhoneNumber;
+    }
+
     public OwnNumberApplyDetailItem() {
     }
 
@@ -161,6 +184,9 @@ public class OwnNumberApplyDetailItem extends AbstractModel {
         if (source.OutboundCalleeFormat != null) {
             this.OutboundCalleeFormat = new String(source.OutboundCalleeFormat);
         }
+        if (source.CarrierPhoneNumber != null) {
+            this.CarrierPhoneNumber = new String(source.CarrierPhoneNumber);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class OwnNumberApplyDetailItem extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxCallCount", this.MaxCallCount);
         this.setParamSimple(map, prefix + "MaxCallPSec", this.MaxCallPSec);
         this.setParamSimple(map, prefix + "OutboundCalleeFormat", this.OutboundCalleeFormat);
+        this.setParamSimple(map, prefix + "CarrierPhoneNumber", this.CarrierPhoneNumber);
 
     }
 }

@@ -41,6 +41,7 @@ public class ControlAIConversationRequest extends AbstractModel {
     * 控制命令，目前支持命令如下：
 
 - ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+- InvokeLLM，服务端发送文本给大模型，触发对话
     */
     @SerializedName("Command")
     @Expose
@@ -52,6 +53,13 @@ public class ControlAIConversationRequest extends AbstractModel {
     @SerializedName("ServerPushText")
     @Expose
     private ServerPushText ServerPushText;
+
+    /**
+    * 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+    */
+    @SerializedName("InvokeLLM")
+    @Expose
+    private InvokeLLM InvokeLLM;
 
     /**
      * Get 会话 ID 
@@ -88,10 +96,12 @@ public class ControlAIConversationRequest extends AbstractModel {
     /**
      * Get 控制命令，目前支持命令如下：
 
-- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本 
+- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+- InvokeLLM，服务端发送文本给大模型，触发对话 
      * @return Command 控制命令，目前支持命令如下：
 
 - ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+- InvokeLLM，服务端发送文本给大模型，触发对话
      */
     public String getCommand() {
         return this.Command;
@@ -101,9 +111,11 @@ public class ControlAIConversationRequest extends AbstractModel {
      * Set 控制命令，目前支持命令如下：
 
 - ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+- InvokeLLM，服务端发送文本给大模型，触发对话
      * @param Command 控制命令，目前支持命令如下：
 
 - ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本
+- InvokeLLM，服务端发送文本给大模型，触发对话
      */
     public void setCommand(String Command) {
         this.Command = Command;
@@ -123,6 +135,22 @@ public class ControlAIConversationRequest extends AbstractModel {
      */
     public void setServerPushText(ServerPushText ServerPushText) {
         this.ServerPushText = ServerPushText;
+    }
+
+    /**
+     * Get 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1" 
+     * @return InvokeLLM 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+     */
+    public InvokeLLM getInvokeLLM() {
+        return this.InvokeLLM;
+    }
+
+    /**
+     * Set 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+     * @param InvokeLLM 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+     */
+    public void setInvokeLLM(InvokeLLM InvokeLLM) {
+        this.InvokeLLM = InvokeLLM;
     }
 
     public ControlAIConversationRequest() {
@@ -145,6 +173,9 @@ public class ControlAIConversationRequest extends AbstractModel {
         if (source.ServerPushText != null) {
             this.ServerPushText = new ServerPushText(source.ServerPushText);
         }
+        if (source.InvokeLLM != null) {
+            this.InvokeLLM = new InvokeLLM(source.InvokeLLM);
+        }
     }
 
 
@@ -156,6 +187,7 @@ public class ControlAIConversationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamObj(map, prefix + "ServerPushText.", this.ServerPushText);
+        this.setParamObj(map, prefix + "InvokeLLM.", this.InvokeLLM);
 
     }
 }

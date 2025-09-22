@@ -1,0 +1,71 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.wedata.v20250806.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CreateAlarmRuleData extends AbstractModel {
+
+    /**
+    * 告警规则唯一id
+    */
+    @SerializedName("AlarmRuleId")
+    @Expose
+    private String AlarmRuleId;
+
+    /**
+     * Get 告警规则唯一id 
+     * @return AlarmRuleId 告警规则唯一id
+     */
+    public String getAlarmRuleId() {
+        return this.AlarmRuleId;
+    }
+
+    /**
+     * Set 告警规则唯一id
+     * @param AlarmRuleId 告警规则唯一id
+     */
+    public void setAlarmRuleId(String AlarmRuleId) {
+        this.AlarmRuleId = AlarmRuleId;
+    }
+
+    public CreateAlarmRuleData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateAlarmRuleData(CreateAlarmRuleData source) {
+        if (source.AlarmRuleId != null) {
+            this.AlarmRuleId = new String(source.AlarmRuleId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AlarmRuleId", this.AlarmRuleId);
+
+    }
+}
+

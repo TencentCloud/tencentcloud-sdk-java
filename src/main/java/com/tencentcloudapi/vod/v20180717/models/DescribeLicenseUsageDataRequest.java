@@ -40,7 +40,6 @@ public class DescribeLicenseUsageDataRequest extends AbstractModel {
     /**
     * License 类型，默认为 CommercialDRMLicense 。目前支持的 License 类型包括：
 <li> CommercialDRMLicense: 商业级 DRM License</li>
-<li> JITEncryptionDRMLicense: 即时加密 DRM License</li>
     */
     @SerializedName("LicenseType")
     @Expose
@@ -87,11 +86,9 @@ public class DescribeLicenseUsageDataRequest extends AbstractModel {
 
     /**
      * Get License 类型，默认为 CommercialDRMLicense 。目前支持的 License 类型包括：
-<li> CommercialDRMLicense: 商业级 DRM License</li>
-<li> JITEncryptionDRMLicense: 即时加密 DRM License</li> 
+<li> CommercialDRMLicense: 商业级 DRM License</li> 
      * @return LicenseType License 类型，默认为 CommercialDRMLicense 。目前支持的 License 类型包括：
 <li> CommercialDRMLicense: 商业级 DRM License</li>
-<li> JITEncryptionDRMLicense: 即时加密 DRM License</li>
      */
     public String getLicenseType() {
         return this.LicenseType;
@@ -100,10 +97,8 @@ public class DescribeLicenseUsageDataRequest extends AbstractModel {
     /**
      * Set License 类型，默认为 CommercialDRMLicense 。目前支持的 License 类型包括：
 <li> CommercialDRMLicense: 商业级 DRM License</li>
-<li> JITEncryptionDRMLicense: 即时加密 DRM License</li>
      * @param LicenseType License 类型，默认为 CommercialDRMLicense 。目前支持的 License 类型包括：
 <li> CommercialDRMLicense: 商业级 DRM License</li>
-<li> JITEncryptionDRMLicense: 即时加密 DRM License</li>
      */
     public void setLicenseType(String LicenseType) {
         this.LicenseType = LicenseType;

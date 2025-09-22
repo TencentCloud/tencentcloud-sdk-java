@@ -225,6 +225,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
     private Boolean DisableApiTermination;
 
     /**
+    * 实例是否开启巨型帧，取值范围：<br><li/> true：表示实例开启巨型帧，只有支持巨型帧的机型可设置为true。<br><li/>false：表示实例关闭巨型帧，只有支持巨型帧的机型可设置为false。<br> 支持巨型帧的实例规格： [实例规格](https://cloud.tencent.com/document/product/213/11518)
+    */
+    @SerializedName("EnableJumboFrame")
+    @Expose
+    private Boolean EnableJumboFrame;
+
+    /**
     * 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
 **注：内测中**。
     */
@@ -712,6 +719,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
     }
 
     /**
+     * Get 实例是否开启巨型帧，取值范围：<br><li/> true：表示实例开启巨型帧，只有支持巨型帧的机型可设置为true。<br><li/>false：表示实例关闭巨型帧，只有支持巨型帧的机型可设置为false。<br> 支持巨型帧的实例规格： [实例规格](https://cloud.tencent.com/document/product/213/11518) 
+     * @return EnableJumboFrame 实例是否开启巨型帧，取值范围：<br><li/> true：表示实例开启巨型帧，只有支持巨型帧的机型可设置为true。<br><li/>false：表示实例关闭巨型帧，只有支持巨型帧的机型可设置为false。<br> 支持巨型帧的实例规格： [实例规格](https://cloud.tencent.com/document/product/213/11518)
+     */
+    public Boolean getEnableJumboFrame() {
+        return this.EnableJumboFrame;
+    }
+
+    /**
+     * Set 实例是否开启巨型帧，取值范围：<br><li/> true：表示实例开启巨型帧，只有支持巨型帧的机型可设置为true。<br><li/>false：表示实例关闭巨型帧，只有支持巨型帧的机型可设置为false。<br> 支持巨型帧的实例规格： [实例规格](https://cloud.tencent.com/document/product/213/11518)
+     * @param EnableJumboFrame 实例是否开启巨型帧，取值范围：<br><li/> true：表示实例开启巨型帧，只有支持巨型帧的机型可设置为true。<br><li/>false：表示实例关闭巨型帧，只有支持巨型帧的机型可设置为false。<br> 支持巨型帧的实例规格： [实例规格](https://cloud.tencent.com/document/product/213/11518)
+     */
+    public void setEnableJumboFrame(Boolean EnableJumboFrame) {
+        this.EnableJumboFrame = EnableJumboFrame;
+    }
+
+    /**
      * Get 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
 **注：内测中**。 
      * @return Metadata 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
@@ -867,6 +890,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
         if (source.DisableApiTermination != null) {
             this.DisableApiTermination = new Boolean(source.DisableApiTermination);
         }
+        if (source.EnableJumboFrame != null) {
+            this.EnableJumboFrame = new Boolean(source.EnableJumboFrame);
+        }
         if (source.Metadata != null) {
             this.Metadata = new Metadata(source.Metadata);
         }
@@ -908,6 +934,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+        this.setParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
         this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamSimple(map, prefix + "TemplateDataModifyAction", this.TemplateDataModifyAction);
 

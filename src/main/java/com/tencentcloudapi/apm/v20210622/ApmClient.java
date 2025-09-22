@@ -83,6 +83,17 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *获取 APM 应用指标列表
+     * @param req DescribeApmServiceMetricRequest
+     * @return DescribeApmServiceMetricResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmServiceMetricResponse DescribeApmServiceMetric(DescribeApmServiceMetricRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmServiceMetric", DescribeApmServiceMetricResponse.class);
+    }
+
+    /**
      *查询应用配置信息
      * @param req DescribeGeneralApmApplicationConfigRequest
      * @return DescribeGeneralApmApplicationConfigResponse

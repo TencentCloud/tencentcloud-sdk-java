@@ -32,7 +32,6 @@ public class ImageRepositoryResult extends AbstractModel {
 
     /**
     * 镜像服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Server")
     @Expose
@@ -62,10 +61,8 @@ public class ImageRepositoryResult extends AbstractModel {
     }
 
     /**
-     * Get 镜像服务器地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像服务器地址 
      * @return Server 镜像服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServer() {
         return this.Server;
@@ -73,9 +70,7 @@ public class ImageRepositoryResult extends AbstractModel {
 
     /**
      * Set 镜像服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Server 镜像服务器地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServer(String Server) {
         this.Server = Server;

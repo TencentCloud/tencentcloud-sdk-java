@@ -97,6 +97,16 @@ public class RunInstancesRequest extends AbstractModel {
     private Long InstanceCount;
 
     /**
+    * 指定创建实例的最小数量，取值范围为不大于InstanceCount的正整数。
+指定最小数量时，承诺最少创建MinCount台实例，并尽量创建InstanceCount台实例。
+库存不足以满足最小数量时，API 会返回库存不足最小数量的错误信息。
+仅对支持部分发货的账号、区域和计费模式（包年包月、按量计费、竞价实例、按量包销）生效。
+    */
+    @SerializedName("MinCount")
+    @Expose
+    private Long MinCount;
+
+    /**
     * 实例显示名称。<br><li>不指定实例显示名称则默认显示‘未命名’。</li><li>购买多台实例，如果指定模式串`{R:x}`，表示生成数字`[x, x+n-1]`，其中`n`表示购买实例的数量，例如`server_{R:3}`，购买1台时，实例显示名称为`server_3`；购买2台时，实例显示名称分别为`server_3`，`server_4`。支持指定多个模式串`{R:x}`。</li><li>购买多台实例，如果不指定模式串，则在实例显示名称添加后缀`1、2...n`，其中`n`表示购买实例的数量，例如`server_`，购买2台时，实例显示名称分别为`server_1`，`server_2`。</li><li>最多支持128个字符（包含模式串）。</li>
     */
     @SerializedName("InstanceName")
@@ -419,6 +429,34 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
+    }
+
+    /**
+     * Get 指定创建实例的最小数量，取值范围为不大于InstanceCount的正整数。
+指定最小数量时，承诺最少创建MinCount台实例，并尽量创建InstanceCount台实例。
+库存不足以满足最小数量时，API 会返回库存不足最小数量的错误信息。
+仅对支持部分发货的账号、区域和计费模式（包年包月、按量计费、竞价实例、按量包销）生效。 
+     * @return MinCount 指定创建实例的最小数量，取值范围为不大于InstanceCount的正整数。
+指定最小数量时，承诺最少创建MinCount台实例，并尽量创建InstanceCount台实例。
+库存不足以满足最小数量时，API 会返回库存不足最小数量的错误信息。
+仅对支持部分发货的账号、区域和计费模式（包年包月、按量计费、竞价实例、按量包销）生效。
+     */
+    public Long getMinCount() {
+        return this.MinCount;
+    }
+
+    /**
+     * Set 指定创建实例的最小数量，取值范围为不大于InstanceCount的正整数。
+指定最小数量时，承诺最少创建MinCount台实例，并尽量创建InstanceCount台实例。
+库存不足以满足最小数量时，API 会返回库存不足最小数量的错误信息。
+仅对支持部分发货的账号、区域和计费模式（包年包月、按量计费、竞价实例、按量包销）生效。
+     * @param MinCount 指定创建实例的最小数量，取值范围为不大于InstanceCount的正整数。
+指定最小数量时，承诺最少创建MinCount台实例，并尽量创建InstanceCount台实例。
+库存不足以满足最小数量时，API 会返回库存不足最小数量的错误信息。
+仅对支持部分发货的账号、区域和计费模式（包年包月、按量计费、竞价实例、按量包销）生效。
+     */
+    public void setMinCount(Long MinCount) {
+        this.MinCount = MinCount;
     }
 
     /**
@@ -822,6 +860,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.InstanceCount != null) {
             this.InstanceCount = new Long(source.InstanceCount);
         }
+        if (source.MinCount != null) {
+            this.MinCount = new Long(source.MinCount);
+        }
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
         }
@@ -914,6 +955,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamObj(map, prefix + "VirtualPrivateCloud.", this.VirtualPrivateCloud);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+        this.setParamSimple(map, prefix + "MinCount", this.MinCount);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);

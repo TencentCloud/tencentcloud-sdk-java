@@ -72,6 +72,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *创建预算信息
+     * @param req CreateBudgetRequest
+     * @return CreateBudgetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBudgetResponse CreateBudget(CreateBudgetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBudget", CreateBudgetResponse.class);
+    }
+
+    /**
      *创建归集规则
      * @param req CreateGatherRuleRequest
      * @return CreateGatherRuleResponse
@@ -113,6 +124,17 @@ public class BillingClient extends AbstractClient{
     public DeleteAllocationUnitResponse DeleteAllocationUnit(DeleteAllocationUnitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAllocationUnit", DeleteAllocationUnitResponse.class);
+    }
+
+    /**
+     *依据预算ID删除对应预算项目
+     * @param req DeleteBudgetRequest
+     * @return DeleteBudgetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBudgetResponse DeleteBudget(DeleteBudgetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBudget", DeleteBudgetResponse.class);
     }
 
     /**
@@ -439,6 +461,39 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *获取预算详细信息
+     * @param req DescribeBudgetRequest
+     * @return DescribeBudgetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBudgetResponse DescribeBudget(DescribeBudgetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBudget", DescribeBudgetResponse.class);
+    }
+
+    /**
+     *查询预算修改记录
+     * @param req DescribeBudgetOperationLogRequest
+     * @return DescribeBudgetOperationLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBudgetOperationLogResponse DescribeBudgetOperationLog(DescribeBudgetOperationLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBudgetOperationLog", DescribeBudgetOperationLogResponse.class);
+    }
+
+    /**
+     *返回预算提醒记录，包括预算周期、检测时间、提醒时间、提醒类型、提醒内容
+     * @param req DescribeBudgetRemindRecordListRequest
+     * @return DescribeBudgetRemindRecordListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBudgetRemindRecordListResponse DescribeBudgetRemindRecordList(DescribeBudgetRemindRecordListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBudgetRemindRecordList", DescribeBudgetRemindRecordListResponse.class);
+    }
+
+    /**
      *查询消耗明细
 
 注意事项：
@@ -637,6 +692,17 @@ public class BillingClient extends AbstractClient{
     public ModifyAllocationUnitResponse ModifyAllocationUnit(ModifyAllocationUnitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAllocationUnit", ModifyAllocationUnitResponse.class);
+    }
+
+    /**
+     *更新预算信息
+     * @param req ModifyBudgetRequest
+     * @return ModifyBudgetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBudgetResponse ModifyBudget(ModifyBudgetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBudget", ModifyBudgetResponse.class);
     }
 
     /**

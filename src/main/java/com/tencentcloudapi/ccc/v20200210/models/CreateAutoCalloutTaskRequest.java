@@ -87,14 +87,14 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     private Long Tries;
 
     /**
-    * 自定义变量（仅高级版支持）
+    * 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
     */
     @SerializedName("Variables")
     @Expose
     private Variable [] Variables;
 
     /**
-    * UUI
+    * 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
     */
     @SerializedName("UUI")
     @Expose
@@ -273,32 +273,32 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 自定义变量（仅高级版支持） 
-     * @return Variables 自定义变量（仅高级版支持）
+     * Get 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处 
+     * @return Variables 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
      */
     public Variable [] getVariables() {
         return this.Variables;
     }
 
     /**
-     * Set 自定义变量（仅高级版支持）
-     * @param Variables 自定义变量（仅高级版支持）
+     * Set 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
+     * @param Variables 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
      */
     public void setVariables(Variable [] Variables) {
         this.Variables = Variables;
     }
 
     /**
-     * Get UUI 
-     * @return UUI UUI
+     * Get 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处 
+     * @return UUI 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
      */
     public String getUUI() {
         return this.UUI;
     }
 
     /**
-     * Set UUI
-     * @param UUI UUI
+     * Set 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
+     * @param UUI 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
      */
     public void setUUI(String UUI) {
         this.UUI = UUI;
