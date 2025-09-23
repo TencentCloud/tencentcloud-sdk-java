@@ -38,7 +38,7 @@ public class CreateBlockIgnoreRuleNewRequest extends AbstractModel {
     private Long RuleType;
 
     /**
-    * 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+    * 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
     */
     @SerializedName("CoverDuplicate")
     @Expose
@@ -77,16 +77,16 @@ public class CreateBlockIgnoreRuleNewRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据 
-     * @return CoverDuplicate 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+     * Get 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据 
+     * @return CoverDuplicate 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
      */
     public Long getCoverDuplicate() {
         return this.CoverDuplicate;
     }
 
     /**
-     * Set 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
-     * @param CoverDuplicate 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+     * Set 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
+     * @param CoverDuplicate 删除白名单冲突地址并继续添加/删除封禁列表冲突地址并继续添加；表示是否覆盖重复数据，1为覆盖，非1不覆盖，跳过重复数据
      */
     public void setCoverDuplicate(Long CoverDuplicate) {
         this.CoverDuplicate = CoverDuplicate;

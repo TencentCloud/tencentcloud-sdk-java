@@ -64,6 +64,20 @@ public class StorageHistogram extends AbstractModel {
     private String Time;
 
     /**
+    * NDR流量日志存储量，单位B
+    */
+    @SerializedName("NDRNetflowSize")
+    @Expose
+    private Long NDRNetflowSize;
+
+    /**
+    * NDR风险日志存储量，单位B
+    */
+    @SerializedName("NDRRiskSize")
+    @Expose
+    private Long NDRRiskSize;
+
+    /**
      * Get 访问控制日志存储量，单位B
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AclSize 访问控制日志存储量，单位B
@@ -163,6 +177,38 @@ public class StorageHistogram extends AbstractModel {
         this.Time = Time;
     }
 
+    /**
+     * Get NDR流量日志存储量，单位B 
+     * @return NDRNetflowSize NDR流量日志存储量，单位B
+     */
+    public Long getNDRNetflowSize() {
+        return this.NDRNetflowSize;
+    }
+
+    /**
+     * Set NDR流量日志存储量，单位B
+     * @param NDRNetflowSize NDR流量日志存储量，单位B
+     */
+    public void setNDRNetflowSize(Long NDRNetflowSize) {
+        this.NDRNetflowSize = NDRNetflowSize;
+    }
+
+    /**
+     * Get NDR风险日志存储量，单位B 
+     * @return NDRRiskSize NDR风险日志存储量，单位B
+     */
+    public Long getNDRRiskSize() {
+        return this.NDRRiskSize;
+    }
+
+    /**
+     * Set NDR风险日志存储量，单位B
+     * @param NDRRiskSize NDR风险日志存储量，单位B
+     */
+    public void setNDRRiskSize(Long NDRRiskSize) {
+        this.NDRRiskSize = NDRRiskSize;
+    }
+
     public StorageHistogram() {
     }
 
@@ -186,6 +232,12 @@ public class StorageHistogram extends AbstractModel {
         if (source.Time != null) {
             this.Time = new String(source.Time);
         }
+        if (source.NDRNetflowSize != null) {
+            this.NDRNetflowSize = new Long(source.NDRNetflowSize);
+        }
+        if (source.NDRRiskSize != null) {
+            this.NDRRiskSize = new Long(source.NDRRiskSize);
+        }
     }
 
 
@@ -198,6 +250,8 @@ public class StorageHistogram extends AbstractModel {
         this.setParamSimple(map, prefix + "NetFlowSize", this.NetFlowSize);
         this.setParamSimple(map, prefix + "OperateSize", this.OperateSize);
         this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamSimple(map, prefix + "NDRNetflowSize", this.NDRNetflowSize);
+        this.setParamSimple(map, prefix + "NDRRiskSize", this.NDRRiskSize);
 
     }
 }

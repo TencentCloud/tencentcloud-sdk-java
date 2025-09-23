@@ -279,6 +279,20 @@ ANY:表示所有
     private SgDnsParseCount DnsParseCount;
 
     /**
+    * 规则创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 规则最近更新时间
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 排序 
      * @return OrderIndex 排序
      */
@@ -926,6 +940,38 @@ ANY:表示所有
         this.DnsParseCount = DnsParseCount;
     }
 
+    /**
+     * Get 规则创建时间 
+     * @return CreateTime 规则创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 规则创建时间
+     * @param CreateTime 规则创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 规则最近更新时间 
+     * @return UpdateTime 规则最近更新时间
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 规则最近更新时间
+     * @param UpdateTime 规则最近更新时间
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public EnterpriseSecurityGroupRuleRuleInfo() {
     }
 
@@ -1030,6 +1076,12 @@ ANY:表示所有
         if (source.DnsParseCount != null) {
             this.DnsParseCount = new SgDnsParseCount(source.DnsParseCount);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -1068,6 +1120,8 @@ ANY:表示所有
         this.setParamArrayObj(map, prefix + "BetaList.", this.BetaList);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamObj(map, prefix + "DnsParseCount.", this.DnsParseCount);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

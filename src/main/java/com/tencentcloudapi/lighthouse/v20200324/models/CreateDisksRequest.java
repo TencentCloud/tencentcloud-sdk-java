@@ -87,6 +87,13 @@ public class CreateDisksRequest extends AbstractModel {
     private AutoMountConfiguration AutoMountConfiguration;
 
     /**
+    * 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 可用区。可通过[DescribeZones](https://cloud.tencent.com/document/product/1207/57513)返回值中的Zone获取。 
      * @return Zone 可用区。可通过[DescribeZones](https://cloud.tencent.com/document/product/1207/57513)返回值中的Zone获取。
      */
@@ -230,6 +237,22 @@ public class CreateDisksRequest extends AbstractModel {
         this.AutoMountConfiguration = AutoMountConfiguration;
     }
 
+    /**
+     * Get 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。 
+     * @return Tags 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+     * @param Tags 标签键和标签值。 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。 如果标签不存在会为您自动创建标签。 数组最多支持10个元素。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateDisksRequest() {
     }
 
@@ -265,6 +288,12 @@ public class CreateDisksRequest extends AbstractModel {
         if (source.AutoMountConfiguration != null) {
             this.AutoMountConfiguration = new AutoMountConfiguration(source.AutoMountConfiguration);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -281,6 +310,7 @@ public class CreateDisksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

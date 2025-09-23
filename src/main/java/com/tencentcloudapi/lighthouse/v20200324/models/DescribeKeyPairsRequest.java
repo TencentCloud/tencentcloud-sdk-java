@@ -52,6 +52,12 @@ public class DescribeKeyPairsRequest extends AbstractModel {
 <li>key-name</li>按照【密钥对名称】进行过滤（支持模糊匹配）。
 类型：String
 必选：否
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
     */
     @SerializedName("Filters")
@@ -114,6 +120,12 @@ public class DescribeKeyPairsRequest extends AbstractModel {
 <li>key-name</li>按照【密钥对名称】进行过滤（支持模糊匹配）。
 类型：String
 必选：否
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。 
      * @return Filters 过滤器列表。
 <li>key-id</li>按照【密钥对ID】进行过滤。
@@ -122,6 +134,12 @@ public class DescribeKeyPairsRequest extends AbstractModel {
 <li>key-name</li>按照【密钥对名称】进行过滤（支持模糊匹配）。
 类型：String
 必选：否
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
      */
     public Filter [] getFilters() {
@@ -136,6 +154,12 @@ public class DescribeKeyPairsRequest extends AbstractModel {
 <li>key-name</li>按照【密钥对名称】进行过滤（支持模糊匹配）。
 类型：String
 必选：否
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
      * @param Filters 过滤器列表。
 <li>key-id</li>按照【密钥对ID】进行过滤。
@@ -144,6 +168,12 @@ public class DescribeKeyPairsRequest extends AbstractModel {
 <li>key-name</li>按照【密钥对名称】进行过滤（支持模糊匹配）。
 类型：String
 必选：否
+<li>tag-key</li>
+按照【标签键】进行过滤。 类型：String 必选：否
+<li>tag-value</li>
+按照【标签值】进行过滤。 类型：String 必选：否
+<li>tag:tag-key</li>
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
      */
     public void setFilters(Filter [] Filters) {

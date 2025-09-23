@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceBackupModeRequest extends AbstractModel {
 
     /**
-    * 实例的ID，长度在12-36之间。
+    * 实例的ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -32,24 +32,24 @@ public class ModifyInstanceBackupModeRequest extends AbstractModel {
 
     /**
     * 备份模式：
-- SecondLevelBackup   秒级备份
-- NormalLevelBackup    普通备份
+- SecondLevelBackup   秒级备份。
+- NormalLevelBackup    普通备份。
     */
     @SerializedName("BackupMode")
     @Expose
     private String BackupMode;
 
     /**
-     * Get 实例的ID，长度在12-36之间。 
-     * @return InstanceId 实例的ID，长度在12-36之间。
+     * Get 实例的ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 实例的ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例的ID，长度在12-36之间。
-     * @param InstanceId 实例的ID，长度在12-36之间。
+     * Set 实例的ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 实例的ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -57,11 +57,11 @@ public class ModifyInstanceBackupModeRequest extends AbstractModel {
 
     /**
      * Get 备份模式：
-- SecondLevelBackup   秒级备份
-- NormalLevelBackup    普通备份 
+- SecondLevelBackup   秒级备份。
+- NormalLevelBackup    普通备份。 
      * @return BackupMode 备份模式：
-- SecondLevelBackup   秒级备份
-- NormalLevelBackup    普通备份
+- SecondLevelBackup   秒级备份。
+- NormalLevelBackup    普通备份。
      */
     public String getBackupMode() {
         return this.BackupMode;
@@ -69,11 +69,11 @@ public class ModifyInstanceBackupModeRequest extends AbstractModel {
 
     /**
      * Set 备份模式：
-- SecondLevelBackup   秒级备份
-- NormalLevelBackup    普通备份
+- SecondLevelBackup   秒级备份。
+- NormalLevelBackup    普通备份。
      * @param BackupMode 备份模式：
-- SecondLevelBackup   秒级备份
-- NormalLevelBackup    普通备份
+- SecondLevelBackup   秒级备份。
+- NormalLevelBackup    普通备份。
      */
     public void setBackupMode(String BackupMode) {
         this.BackupMode = BackupMode;

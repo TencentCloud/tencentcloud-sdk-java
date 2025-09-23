@@ -280,6 +280,29 @@ serverless  :serverless版
     private String InstanceChargeType;
 
     /**
+    * 是否开启弹性带宽白名单   
+1:已开启弹性带宽白名单;
+0:未开启弹性带宽白名单;
+    */
+    @SerializedName("ElasticBandwidthSwitch")
+    @Expose
+    private Long ElasticBandwidthSwitch;
+
+    /**
+    * 弹性带宽开通状态
+1:未开启弹性带宽;
+16: 开启弹性带宽中;
+32:开启弹性带宽成功;
+33:关闭弹性带宽中;
+34:关闭弹性带宽成功;
+64:开启弹性带宽失败;
+65:关闭弹性带宽失败;
+    */
+    @SerializedName("ElasticBandwidthOpenStatus")
+    @Expose
+    private Long ElasticBandwidthOpenStatus;
+
+    /**
     * 集群类型  
 CLOUD_IDC IDC集群
 CLOUD_CVM_SHARE CVM共享集群
@@ -920,6 +943,74 @@ serverless  :serverless版
     }
 
     /**
+     * Get 是否开启弹性带宽白名单   
+1:已开启弹性带宽白名单;
+0:未开启弹性带宽白名单; 
+     * @return ElasticBandwidthSwitch 是否开启弹性带宽白名单   
+1:已开启弹性带宽白名单;
+0:未开启弹性带宽白名单;
+     */
+    public Long getElasticBandwidthSwitch() {
+        return this.ElasticBandwidthSwitch;
+    }
+
+    /**
+     * Set 是否开启弹性带宽白名单   
+1:已开启弹性带宽白名单;
+0:未开启弹性带宽白名单;
+     * @param ElasticBandwidthSwitch 是否开启弹性带宽白名单   
+1:已开启弹性带宽白名单;
+0:未开启弹性带宽白名单;
+     */
+    public void setElasticBandwidthSwitch(Long ElasticBandwidthSwitch) {
+        this.ElasticBandwidthSwitch = ElasticBandwidthSwitch;
+    }
+
+    /**
+     * Get 弹性带宽开通状态
+1:未开启弹性带宽;
+16: 开启弹性带宽中;
+32:开启弹性带宽成功;
+33:关闭弹性带宽中;
+34:关闭弹性带宽成功;
+64:开启弹性带宽失败;
+65:关闭弹性带宽失败; 
+     * @return ElasticBandwidthOpenStatus 弹性带宽开通状态
+1:未开启弹性带宽;
+16: 开启弹性带宽中;
+32:开启弹性带宽成功;
+33:关闭弹性带宽中;
+34:关闭弹性带宽成功;
+64:开启弹性带宽失败;
+65:关闭弹性带宽失败;
+     */
+    public Long getElasticBandwidthOpenStatus() {
+        return this.ElasticBandwidthOpenStatus;
+    }
+
+    /**
+     * Set 弹性带宽开通状态
+1:未开启弹性带宽;
+16: 开启弹性带宽中;
+32:开启弹性带宽成功;
+33:关闭弹性带宽中;
+34:关闭弹性带宽成功;
+64:开启弹性带宽失败;
+65:关闭弹性带宽失败;
+     * @param ElasticBandwidthOpenStatus 弹性带宽开通状态
+1:未开启弹性带宽;
+16: 开启弹性带宽中;
+32:开启弹性带宽成功;
+33:关闭弹性带宽中;
+34:关闭弹性带宽成功;
+64:开启弹性带宽失败;
+65:关闭弹性带宽失败;
+     */
+    public void setElasticBandwidthOpenStatus(Long ElasticBandwidthOpenStatus) {
+        this.ElasticBandwidthOpenStatus = ElasticBandwidthOpenStatus;
+    }
+
+    /**
      * Get 集群类型  
 CLOUD_IDC IDC集群
 CLOUD_CVM_SHARE CVM共享集群
@@ -1167,6 +1258,12 @@ CLOUD_EKS_TSE EKS集群
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
+        if (source.ElasticBandwidthSwitch != null) {
+            this.ElasticBandwidthSwitch = new Long(source.ElasticBandwidthSwitch);
+        }
+        if (source.ElasticBandwidthOpenStatus != null) {
+            this.ElasticBandwidthOpenStatus = new Long(source.ElasticBandwidthOpenStatus);
+        }
         if (source.ClusterType != null) {
             this.ClusterType = new String(source.ClusterType);
         }
@@ -1228,6 +1325,8 @@ CLOUD_EKS_TSE EKS集群
         this.setParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
         this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
+        this.setParamSimple(map, prefix + "ElasticBandwidthOpenStatus", this.ElasticBandwidthOpenStatus);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "FreePartitionNumber", this.FreePartitionNumber);
         this.setParamSimple(map, prefix + "ElasticFloatBandwidth", this.ElasticFloatBandwidth);

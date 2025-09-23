@@ -122,6 +122,27 @@ public class DescribeLogStorageStatisticResponse extends AbstractModel {
     private Long ArrearsStopWriting;
 
     /**
+    * NDR流量日志存储量，单位B
+    */
+    @SerializedName("NDRNetFlowSize")
+    @Expose
+    private Long NDRNetFlowSize;
+
+    /**
+    * NDR风险日志存储量，单位B
+    */
+    @SerializedName("NDRRiskSize")
+    @Expose
+    private Long NDRRiskSize;
+
+    /**
+    * NDR日志存储天数
+    */
+    @SerializedName("NDRStorageDay")
+    @Expose
+    private Long NDRStorageDay;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -353,6 +374,54 @@ public class DescribeLogStorageStatisticResponse extends AbstractModel {
     }
 
     /**
+     * Get NDR流量日志存储量，单位B 
+     * @return NDRNetFlowSize NDR流量日志存储量，单位B
+     */
+    public Long getNDRNetFlowSize() {
+        return this.NDRNetFlowSize;
+    }
+
+    /**
+     * Set NDR流量日志存储量，单位B
+     * @param NDRNetFlowSize NDR流量日志存储量，单位B
+     */
+    public void setNDRNetFlowSize(Long NDRNetFlowSize) {
+        this.NDRNetFlowSize = NDRNetFlowSize;
+    }
+
+    /**
+     * Get NDR风险日志存储量，单位B 
+     * @return NDRRiskSize NDR风险日志存储量，单位B
+     */
+    public Long getNDRRiskSize() {
+        return this.NDRRiskSize;
+    }
+
+    /**
+     * Set NDR风险日志存储量，单位B
+     * @param NDRRiskSize NDR风险日志存储量，单位B
+     */
+    public void setNDRRiskSize(Long NDRRiskSize) {
+        this.NDRRiskSize = NDRRiskSize;
+    }
+
+    /**
+     * Get NDR日志存储天数 
+     * @return NDRStorageDay NDR日志存储天数
+     */
+    public Long getNDRStorageDay() {
+        return this.NDRStorageDay;
+    }
+
+    /**
+     * Set NDR日志存储天数
+     * @param NDRStorageDay NDR日志存储天数
+     */
+    public void setNDRStorageDay(Long NDRStorageDay) {
+        this.NDRStorageDay = NDRStorageDay;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -421,6 +490,15 @@ public class DescribeLogStorageStatisticResponse extends AbstractModel {
         if (source.ArrearsStopWriting != null) {
             this.ArrearsStopWriting = new Long(source.ArrearsStopWriting);
         }
+        if (source.NDRNetFlowSize != null) {
+            this.NDRNetFlowSize = new Long(source.NDRNetFlowSize);
+        }
+        if (source.NDRRiskSize != null) {
+            this.NDRRiskSize = new Long(source.NDRRiskSize);
+        }
+        if (source.NDRStorageDay != null) {
+            this.NDRStorageDay = new Long(source.NDRStorageDay);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -445,6 +523,9 @@ public class DescribeLogStorageStatisticResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TimeHistogram.", this.TimeHistogram);
         this.setParamObj(map, prefix + "TimeHistogramShow.", this.TimeHistogramShow);
         this.setParamSimple(map, prefix + "ArrearsStopWriting", this.ArrearsStopWriting);
+        this.setParamSimple(map, prefix + "NDRNetFlowSize", this.NDRNetFlowSize);
+        this.setParamSimple(map, prefix + "NDRRiskSize", this.NDRRiskSize);
+        this.setParamSimple(map, prefix + "NDRStorageDay", this.NDRStorageDay);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

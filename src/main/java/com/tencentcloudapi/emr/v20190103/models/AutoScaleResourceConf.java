@@ -115,6 +115,13 @@ public class AutoScaleResourceConf extends AbstractModel {
     private String YarnNodeLabel;
 
     /**
+    * 对应的计算组
+    */
+    @SerializedName("WarehouseName")
+    @Expose
+    private String WarehouseName;
+
+    /**
     * 伸缩组状态
     */
     @SerializedName("GroupStatus")
@@ -137,6 +144,7 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
     * 伸缩组更多设置
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraAdvanceAttrs")
     @Expose
@@ -351,6 +359,22 @@ public class AutoScaleResourceConf extends AbstractModel {
     }
 
     /**
+     * Get 对应的计算组 
+     * @return WarehouseName 对应的计算组
+     */
+    public String getWarehouseName() {
+        return this.WarehouseName;
+    }
+
+    /**
+     * Set 对应的计算组
+     * @param WarehouseName 对应的计算组
+     */
+    public void setWarehouseName(String WarehouseName) {
+        this.WarehouseName = WarehouseName;
+    }
+
+    /**
      * Get 伸缩组状态 
      * @return GroupStatus 伸缩组状态
      */
@@ -399,8 +423,10 @@ public class AutoScaleResourceConf extends AbstractModel {
     }
 
     /**
-     * Get 伸缩组更多设置 
+     * Get 伸缩组更多设置
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExtraAdvanceAttrs 伸缩组更多设置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AutoScaleGroupAdvanceAttrs getExtraAdvanceAttrs() {
         return this.ExtraAdvanceAttrs;
@@ -408,7 +434,9 @@ public class AutoScaleResourceConf extends AbstractModel {
 
     /**
      * Set 伸缩组更多设置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraAdvanceAttrs 伸缩组更多设置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraAdvanceAttrs(AutoScaleGroupAdvanceAttrs ExtraAdvanceAttrs) {
         this.ExtraAdvanceAttrs = ExtraAdvanceAttrs;
@@ -461,6 +489,9 @@ public class AutoScaleResourceConf extends AbstractModel {
         if (source.YarnNodeLabel != null) {
             this.YarnNodeLabel = new String(source.YarnNodeLabel);
         }
+        if (source.WarehouseName != null) {
+            this.WarehouseName = new String(source.WarehouseName);
+        }
         if (source.GroupStatus != null) {
             this.GroupStatus = new Long(source.GroupStatus);
         }
@@ -493,6 +524,7 @@ public class AutoScaleResourceConf extends AbstractModel {
         this.setParamSimple(map, prefix + "ChangeToPod", this.ChangeToPod);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
+        this.setParamSimple(map, prefix + "WarehouseName", this.WarehouseName);
         this.setParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
         this.setParamSimple(map, prefix + "Parallel", this.Parallel);
         this.setParamSimple(map, prefix + "EnableMNode", this.EnableMNode);

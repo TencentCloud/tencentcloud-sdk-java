@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstanceBackupModeResponse extends AbstractModel {
+public class DescribeSubscribedTopicPolicyResponse extends AbstractModel {
 
     /**
-    * 任务 ID。
+    * 已订阅Topic信息
     */
-    @SerializedName("TaskId")
+    @SerializedName("Topics")
     @Expose
-    private Long TaskId;
+    private SubscribedTopicItem [] Topics;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class ModifyInstanceBackupModeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务 ID。 
-     * @return TaskId 任务 ID。
+     * Get 已订阅Topic信息 
+     * @return Topics 已订阅Topic信息
      */
-    public Long getTaskId() {
-        return this.TaskId;
+    public SubscribedTopicItem [] getTopics() {
+        return this.Topics;
     }
 
     /**
-     * Set 任务 ID。
-     * @param TaskId 任务 ID。
+     * Set 已订阅Topic信息
+     * @param Topics 已订阅Topic信息
      */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
+    public void setTopics(SubscribedTopicItem [] Topics) {
+        this.Topics = Topics;
     }
 
     /**
@@ -69,16 +69,19 @@ public class ModifyInstanceBackupModeResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ModifyInstanceBackupModeResponse() {
+    public DescribeSubscribedTopicPolicyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyInstanceBackupModeResponse(ModifyInstanceBackupModeResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
+    public DescribeSubscribedTopicPolicyResponse(DescribeSubscribedTopicPolicyResponse source) {
+        if (source.Topics != null) {
+            this.Topics = new SubscribedTopicItem[source.Topics.length];
+            for (int i = 0; i < source.Topics.length; i++) {
+                this.Topics[i] = new SubscribedTopicItem(source.Topics[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +93,7 @@ public class ModifyInstanceBackupModeResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "Topics.", this.Topics);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

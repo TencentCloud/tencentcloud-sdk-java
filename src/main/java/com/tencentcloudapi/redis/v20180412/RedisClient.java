@@ -325,7 +325,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeInstanceAccount）用于查看实例子账号信息。
+     *本接口（DescribeInstanceAccount）用于查看实例账号信息。
      * @param req DescribeInstanceAccountRequest
      * @return DescribeInstanceAccountResponse
      * @throws TencentCloudSDKException
@@ -965,7 +965,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *修改实例的备份模式
+     *本接口（ModifyInstanceBackupMode）用于修改实例的备份模式。
      * @param req ModifyInstanceBackupModeRequest
      * @return ModifyInstanceBackupModeResponse
      * @throws TencentCloudSDKException

@@ -245,6 +245,13 @@ public class ScaleOutInstanceRequest extends AbstractModel {
     private NodeMark NodeMarks;
 
     /**
+    * 扩容指定计算组
+    */
+    @SerializedName("WarehouseName")
+    @Expose
+    private String WarehouseName;
+
+    /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -768,6 +775,22 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         this.NodeMarks = NodeMarks;
     }
 
+    /**
+     * Get 扩容指定计算组 
+     * @return WarehouseName 扩容指定计算组
+     */
+    public String getWarehouseName() {
+        return this.WarehouseName;
+    }
+
+    /**
+     * Set 扩容指定计算组
+     * @param WarehouseName 扩容指定计算组
+     */
+    public void setWarehouseName(String WarehouseName) {
+        this.WarehouseName = WarehouseName;
+    }
+
     public ScaleOutInstanceRequest() {
     }
 
@@ -884,6 +907,9 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         if (source.NodeMarks != null) {
             this.NodeMarks = new NodeMark(source.NodeMarks);
         }
+        if (source.WarehouseName != null) {
+            this.WarehouseName = new String(source.WarehouseName);
+        }
     }
 
 
@@ -921,6 +947,7 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
         this.setParamObj(map, prefix + "ComputeResourceAdvanceParams.", this.ComputeResourceAdvanceParams);
         this.setParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
+        this.setParamSimple(map, prefix + "WarehouseName", this.WarehouseName);
 
     }
 }

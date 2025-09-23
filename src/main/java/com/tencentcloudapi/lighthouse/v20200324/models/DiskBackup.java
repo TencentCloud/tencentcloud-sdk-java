@@ -106,6 +106,13 @@ public class DiskBackup extends AbstractModel {
     private String CreatedTime;
 
     /**
+    * 云硬盘备份点绑定的标签列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 云硬盘备份点ID。 
      * @return DiskBackupId 云硬盘备份点ID。
      */
@@ -301,6 +308,22 @@ public class DiskBackup extends AbstractModel {
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get 云硬盘备份点绑定的标签列表。 
+     * @return Tags 云硬盘备份点绑定的标签列表。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 云硬盘备份点绑定的标签列表。
+     * @param Tags 云硬盘备份点绑定的标签列表。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DiskBackup() {
     }
 
@@ -342,6 +365,12 @@ public class DiskBackup extends AbstractModel {
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -360,6 +389,7 @@ public class DiskBackup extends AbstractModel {
         this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
         this.setParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

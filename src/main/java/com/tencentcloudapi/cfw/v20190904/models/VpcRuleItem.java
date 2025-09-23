@@ -220,6 +220,20 @@ log：观察
     private Long Invalid;
 
     /**
+    * 规则创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 规则最近更新时间
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 访问源示例：
 net：IP/CIDR(192.168.0.2) 
      * @return SourceContent 访问源示例：
@@ -703,6 +717,38 @@ log：观察
         this.Invalid = Invalid;
     }
 
+    /**
+     * Get 规则创建时间 
+     * @return CreateTime 规则创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 规则创建时间
+     * @param CreateTime 规则创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 规则最近更新时间 
+     * @return UpdateTime 规则最近更新时间
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 规则最近更新时间
+     * @param UpdateTime 规则最近更新时间
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public VpcRuleItem() {
     }
 
@@ -789,6 +835,12 @@ log：观察
         if (source.Invalid != null) {
             this.Invalid = new Long(source.Invalid);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -821,6 +873,8 @@ log：观察
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
         this.setParamSimple(map, prefix + "Invalid", this.Invalid);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

@@ -1143,6 +1143,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeSubscribedTopicPolicy）用于获取设备已订阅Topic列表
+     * @param req DescribeSubscribedTopicPolicyRequest
+     * @return DescribeSubscribedTopicPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubscribedTopicPolicyResponse DescribeSubscribedTopicPolicy(DescribeSubscribedTopicPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSubscribedTopicPolicy", DescribeSubscribedTopicPolicyResponse.class);
+    }
+
+    /**
      *拉取 TWeSee 配置
      * @param req DescribeTWeSeeConfigRequest
      * @return DescribeTWeSeeConfigResponse

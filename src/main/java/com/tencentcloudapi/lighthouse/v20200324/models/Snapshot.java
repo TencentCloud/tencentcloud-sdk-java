@@ -109,6 +109,13 @@ public class Snapshot extends AbstractModel {
     private String CreatedTime;
 
     /**
+    * 快照绑定的标签列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 快照 ID。 
      * @return SnapshotId 快照 ID。
      */
@@ -316,6 +323,22 @@ public class Snapshot extends AbstractModel {
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get 快照绑定的标签列表。 
+     * @return Tags 快照绑定的标签列表。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 快照绑定的标签列表。
+     * @param Tags 快照绑定的标签列表。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Snapshot() {
     }
 
@@ -357,6 +380,12 @@ public class Snapshot extends AbstractModel {
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -375,6 +404,7 @@ public class Snapshot extends AbstractModel {
         this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
         this.setParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

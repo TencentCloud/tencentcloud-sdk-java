@@ -177,6 +177,13 @@ public class ScaleOutClusterRequest extends AbstractModel {
     private NodeMark NodeMarks;
 
     /**
+    * 扩容指定计算组名称
+    */
+    @SerializedName("WarehouseName")
+    @Expose
+    private String WarehouseName;
+
+    /**
      * Get 节点计费模式。取值范围：
 <li>PREPAID：预付费，即包年包月。</li>
 <li>POSTPAID_BY_HOUR：按小时后付费。</li>
@@ -536,6 +543,22 @@ public class ScaleOutClusterRequest extends AbstractModel {
         this.NodeMarks = NodeMarks;
     }
 
+    /**
+     * Get 扩容指定计算组名称 
+     * @return WarehouseName 扩容指定计算组名称
+     */
+    public String getWarehouseName() {
+        return this.WarehouseName;
+    }
+
+    /**
+     * Set 扩容指定计算组名称
+     * @param WarehouseName 扩容指定计算组名称
+     */
+    public void setWarehouseName(String WarehouseName) {
+        this.WarehouseName = WarehouseName;
+    }
+
     public ScaleOutClusterRequest() {
     }
 
@@ -625,6 +648,9 @@ public class ScaleOutClusterRequest extends AbstractModel {
         if (source.NodeMarks != null) {
             this.NodeMarks = new NodeMark(source.NodeMarks);
         }
+        if (source.WarehouseName != null) {
+            this.WarehouseName = new String(source.WarehouseName);
+        }
     }
 
 
@@ -653,6 +679,7 @@ public class ScaleOutClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArrayObj(map, prefix + "ScaleOutServiceConfGroupsInfo.", this.ScaleOutServiceConfGroupsInfo);
         this.setParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
+        this.setParamSimple(map, prefix + "WarehouseName", this.WarehouseName);
 
     }
 }

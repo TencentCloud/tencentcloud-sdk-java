@@ -270,6 +270,20 @@ public class DescAcItem extends AbstractModel {
     private String CityKey;
 
     /**
+    * 规则创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 规则最近更新时间
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 访问源 
      * @return SourceContent 访问源
      */
@@ -833,6 +847,38 @@ public class DescAcItem extends AbstractModel {
         this.CityKey = CityKey;
     }
 
+    /**
+     * Get 规则创建时间 
+     * @return CreateTime 规则创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 规则创建时间
+     * @param CreateTime 规则创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 规则最近更新时间 
+     * @return UpdateTime 规则最近更新时间
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 规则最近更新时间
+     * @param UpdateTime 规则最近更新时间
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public DescAcItem() {
     }
 
@@ -949,6 +995,12 @@ public class DescAcItem extends AbstractModel {
         if (source.CityKey != null) {
             this.CityKey = new String(source.CityKey);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -991,6 +1043,8 @@ public class DescAcItem extends AbstractModel {
         this.setParamSimple(map, prefix + "LastHitTime", this.LastHitTime);
         this.setParamSimple(map, prefix + "CountryKey", this.CountryKey);
         this.setParamSimple(map, prefix + "CityKey", this.CityKey);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

@@ -25,14 +25,17 @@ public class AutoScaleGroupAdvanceAttrs extends AbstractModel {
 
     /**
     * 计算资源高级设置
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComputeResourceAdvanceParams")
     @Expose
     private ComputeResourceAdvanceParams ComputeResourceAdvanceParams;
 
     /**
-     * Get 计算资源高级设置 
+     * Get 计算资源高级设置
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ComputeResourceAdvanceParams 计算资源高级设置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComputeResourceAdvanceParams getComputeResourceAdvanceParams() {
         return this.ComputeResourceAdvanceParams;
@@ -40,7 +43,9 @@ public class AutoScaleGroupAdvanceAttrs extends AbstractModel {
 
     /**
      * Set 计算资源高级设置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ComputeResourceAdvanceParams 计算资源高级设置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams ComputeResourceAdvanceParams) {
         this.ComputeResourceAdvanceParams = ComputeResourceAdvanceParams;

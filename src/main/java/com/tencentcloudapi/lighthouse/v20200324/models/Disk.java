@@ -190,6 +190,13 @@ public class Disk extends AbstractModel {
     private Long DiskBackupQuota;
 
     /**
+    * 云硬盘绑定的标签列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 云硬盘ID。 
      * @return DiskId 云硬盘ID。
      */
@@ -613,6 +620,22 @@ public class Disk extends AbstractModel {
         this.DiskBackupQuota = DiskBackupQuota;
     }
 
+    /**
+     * Get 云硬盘绑定的标签列表。 
+     * @return Tags 云硬盘绑定的标签列表。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 云硬盘绑定的标签列表。
+     * @param Tags 云硬盘绑定的标签列表。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Disk() {
     }
 
@@ -681,6 +704,12 @@ public class Disk extends AbstractModel {
         if (source.DiskBackupQuota != null) {
             this.DiskBackupQuota = new Long(source.DiskBackupQuota);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -708,6 +737,7 @@ public class Disk extends AbstractModel {
         this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
         this.setParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
         this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

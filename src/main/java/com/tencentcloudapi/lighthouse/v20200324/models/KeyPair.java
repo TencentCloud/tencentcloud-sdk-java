@@ -68,6 +68,13 @@ public class KeyPair extends AbstractModel {
     private String PrivateKey;
 
     /**
+    * 密钥对绑定的标签列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 密钥对 ID ，是密钥对的唯一标识。 
      * @return KeyId 密钥对 ID ，是密钥对的唯一标识。
      */
@@ -171,6 +178,22 @@ public class KeyPair extends AbstractModel {
         this.PrivateKey = PrivateKey;
     }
 
+    /**
+     * Get 密钥对绑定的标签列表。 
+     * @return Tags 密钥对绑定的标签列表。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 密钥对绑定的标签列表。
+     * @param Tags 密钥对绑定的标签列表。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public KeyPair() {
     }
 
@@ -200,6 +223,12 @@ public class KeyPair extends AbstractModel {
         if (source.PrivateKey != null) {
             this.PrivateKey = new String(source.PrivateKey);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -213,6 +242,7 @@ public class KeyPair extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AssociatedInstanceIds.", this.AssociatedInstanceIds);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

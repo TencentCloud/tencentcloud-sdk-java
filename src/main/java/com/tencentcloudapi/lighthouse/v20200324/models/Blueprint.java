@@ -177,6 +177,13 @@ NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（�
     private Boolean BlueprintShared;
 
     /**
+    * 镜像绑定的标签列表。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 镜像 ID  ，是 Blueprint 的唯一标识。 
      * @return BlueprintId 镜像 ID  ，是 Blueprint 的唯一标识。
      */
@@ -536,6 +543,22 @@ NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（�
         this.BlueprintShared = BlueprintShared;
     }
 
+    /**
+     * Get 镜像绑定的标签列表。 
+     * @return Tags 镜像绑定的标签列表。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 镜像绑定的标签列表。
+     * @param Tags 镜像绑定的标签列表。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Blueprint() {
     }
 
@@ -610,6 +633,12 @@ NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（�
         if (source.BlueprintShared != null) {
             this.BlueprintShared = new Boolean(source.BlueprintShared);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -638,6 +667,7 @@ NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（�
         this.setParamArraySimple(map, prefix + "SceneIdSet.", this.SceneIdSet);
         this.setParamSimple(map, prefix + "DockerVersion", this.DockerVersion);
         this.setParamSimple(map, prefix + "BlueprintShared", this.BlueprintShared);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

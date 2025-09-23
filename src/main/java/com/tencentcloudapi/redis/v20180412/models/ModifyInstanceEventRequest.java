@@ -31,7 +31,7 @@ public class ModifyInstanceEventRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 事件 ID。请通过 DescribeInstanceEvents 获取需修改的事件 ID。
+    * 事件 ID。请通过 [DescribeInstanceEvents](https://cloud.tencent.com/document/product/239/104779) 获取需修改的事件 ID。
     */
     @SerializedName("EventId")
     @Expose
@@ -84,16 +84,16 @@ public class ModifyInstanceEventRequest extends AbstractModel {
     }
 
     /**
-     * Get 事件 ID。请通过 DescribeInstanceEvents 获取需修改的事件 ID。 
-     * @return EventId 事件 ID。请通过 DescribeInstanceEvents 获取需修改的事件 ID。
+     * Get 事件 ID。请通过 [DescribeInstanceEvents](https://cloud.tencent.com/document/product/239/104779) 获取需修改的事件 ID。 
+     * @return EventId 事件 ID。请通过 [DescribeInstanceEvents](https://cloud.tencent.com/document/product/239/104779) 获取需修改的事件 ID。
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件 ID。请通过 DescribeInstanceEvents 获取需修改的事件 ID。
-     * @param EventId 事件 ID。请通过 DescribeInstanceEvents 获取需修改的事件 ID。
+     * Set 事件 ID。请通过 [DescribeInstanceEvents](https://cloud.tencent.com/document/product/239/104779) 获取需修改的事件 ID。
+     * @param EventId 事件 ID。请通过 [DescribeInstanceEvents](https://cloud.tencent.com/document/product/239/104779) 获取需修改的事件 ID。
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;

@@ -45,7 +45,7 @@ public class TemplateUserFlowType extends AbstractModel {
     private String Description;
 
     /**
-    * 每个合同类型绑定的模版数量
+    * 每个合同类型绑定的模板数量
     */
     @SerializedName("TemplateNum")
     @Expose
@@ -100,16 +100,16 @@ public class TemplateUserFlowType extends AbstractModel {
     }
 
     /**
-     * Get 每个合同类型绑定的模版数量 
-     * @return TemplateNum 每个合同类型绑定的模版数量
+     * Get 每个合同类型绑定的模板数量 
+     * @return TemplateNum 每个合同类型绑定的模板数量
      */
     public Long getTemplateNum() {
         return this.TemplateNum;
     }
 
     /**
-     * Set 每个合同类型绑定的模版数量
-     * @param TemplateNum 每个合同类型绑定的模版数量
+     * Set 每个合同类型绑定的模板数量
+     * @param TemplateNum 每个合同类型绑定的模板数量
      */
     public void setTemplateNum(Long TemplateNum) {
         this.TemplateNum = TemplateNum;
