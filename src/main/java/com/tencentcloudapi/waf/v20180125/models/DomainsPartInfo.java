@@ -280,6 +280,13 @@ https：使用https协议回源
     private Long CipherTemplate;
 
     /**
+    * WAF与源站的连接超时，默认10s。
+    */
+    @SerializedName("ProxyConnectTimeout")
+    @Expose
+    private Long ProxyConnectTimeout;
+
+    /**
     * WAF与源站的读超时时间，默认300s。
     */
     @SerializedName("ProxyReadTimeout")
@@ -447,6 +454,13 @@ https：使用https协议回源
     @SerializedName("UseCase")
     @Expose
     private Long UseCase;
+
+    /**
+    * gzip开关。0：关闭 1：默认值，打开。
+    */
+    @SerializedName("Gzip")
+    @Expose
+    private Long Gzip;
 
     /**
      * Get 域名 
@@ -1105,6 +1119,22 @@ https：使用https协议回源
     }
 
     /**
+     * Get WAF与源站的连接超时，默认10s。 
+     * @return ProxyConnectTimeout WAF与源站的连接超时，默认10s。
+     */
+    public Long getProxyConnectTimeout() {
+        return this.ProxyConnectTimeout;
+    }
+
+    /**
+     * Set WAF与源站的连接超时，默认10s。
+     * @param ProxyConnectTimeout WAF与源站的连接超时，默认10s。
+     */
+    public void setProxyConnectTimeout(Long ProxyConnectTimeout) {
+        this.ProxyConnectTimeout = ProxyConnectTimeout;
+    }
+
+    /**
      * Get WAF与源站的读超时时间，默认300s。 
      * @return ProxyReadTimeout WAF与源站的读超时时间，默认300s。
      */
@@ -1504,6 +1534,22 @@ https：使用https协议回源
         this.UseCase = UseCase;
     }
 
+    /**
+     * Get gzip开关。0：关闭 1：默认值，打开。 
+     * @return Gzip gzip开关。0：关闭 1：默认值，打开。
+     */
+    public Long getGzip() {
+        return this.Gzip;
+    }
+
+    /**
+     * Set gzip开关。0：关闭 1：默认值，打开。
+     * @param Gzip gzip开关。0：关闭 1：默认值，打开。
+     */
+    public void setGzip(Long Gzip) {
+        this.Gzip = Gzip;
+    }
+
     public DomainsPartInfo() {
     }
 
@@ -1614,6 +1660,9 @@ https：使用https协议回源
         if (source.CipherTemplate != null) {
             this.CipherTemplate = new Long(source.CipherTemplate);
         }
+        if (source.ProxyConnectTimeout != null) {
+            this.ProxyConnectTimeout = new Long(source.ProxyConnectTimeout);
+        }
         if (source.ProxyReadTimeout != null) {
             this.ProxyReadTimeout = new Long(source.ProxyReadTimeout);
         }
@@ -1695,6 +1744,9 @@ https：使用https协议回源
         if (source.UseCase != null) {
             this.UseCase = new Long(source.UseCase);
         }
+        if (source.Gzip != null) {
+            this.Gzip = new Long(source.Gzip);
+        }
     }
 
 
@@ -1733,6 +1785,7 @@ https：使用https协议回源
         this.setParamSimple(map, prefix + "TLSVersion", this.TLSVersion);
         this.setParamArraySimple(map, prefix + "Ciphers.", this.Ciphers);
         this.setParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
+        this.setParamSimple(map, prefix + "ProxyConnectTimeout", this.ProxyConnectTimeout);
         this.setParamSimple(map, prefix + "ProxyReadTimeout", this.ProxyReadTimeout);
         this.setParamSimple(map, prefix + "ProxySendTimeout", this.ProxySendTimeout);
         this.setParamSimple(map, prefix + "SniType", this.SniType);
@@ -1756,6 +1809,7 @@ https：使用https协议回源
         this.setParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
         this.setParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
         this.setParamSimple(map, prefix + "UseCase", this.UseCase);
+        this.setParamSimple(map, prefix + "Gzip", this.Gzip);
 
     }
 }

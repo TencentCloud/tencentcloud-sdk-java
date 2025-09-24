@@ -41,7 +41,7 @@ public class SpekeDrm extends AbstractModel {
     private String KeyServerUrl;
 
     /**
-    * 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
+    * 加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
     */
     @SerializedName("Vector")
     @Expose
@@ -112,16 +112,16 @@ preset1：每个子流使用不同的key加密；
     }
 
     /**
-     * Get 加密初始化向量(32字节字符串)，该字段内容为用户自定义。 
-     * @return Vector 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
+     * Get 加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。 
+     * @return Vector 加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
      */
     public String getVector() {
         return this.Vector;
     }
 
     /**
-     * Set 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
-     * @param Vector 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
+     * Set 加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
+     * @param Vector 加密初始化向量(十六进制32字节字符串)，该字段内容为用户自定义。
      */
     public void setVector(String Vector) {
         this.Vector = Vector;

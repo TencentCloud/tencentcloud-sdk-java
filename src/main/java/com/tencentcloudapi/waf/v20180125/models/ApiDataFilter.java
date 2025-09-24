@@ -45,6 +45,13 @@ public class ApiDataFilter extends AbstractModel {
     private String Value;
 
     /**
+    * 风险等级
+    */
+    @SerializedName("ValueList")
+    @Expose
+    private String [] ValueList;
+
+    /**
      * Get 数据标签，是否活跃，功能场景 
      * @return Entity 数据标签，是否活跃，功能场景
      */
@@ -92,6 +99,22 @@ public class ApiDataFilter extends AbstractModel {
         this.Value = Value;
     }
 
+    /**
+     * Get 风险等级 
+     * @return ValueList 风险等级
+     */
+    public String [] getValueList() {
+        return this.ValueList;
+    }
+
+    /**
+     * Set 风险等级
+     * @param ValueList 风险等级
+     */
+    public void setValueList(String [] ValueList) {
+        this.ValueList = ValueList;
+    }
+
     public ApiDataFilter() {
     }
 
@@ -109,6 +132,12 @@ public class ApiDataFilter extends AbstractModel {
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.ValueList != null) {
+            this.ValueList = new String[source.ValueList.length];
+            for (int i = 0; i < source.ValueList.length; i++) {
+                this.ValueList[i] = new String(source.ValueList[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class ApiDataFilter extends AbstractModel {
         this.setParamSimple(map, prefix + "Entity", this.Entity);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamArraySimple(map, prefix + "ValueList.", this.ValueList);
 
     }
 }

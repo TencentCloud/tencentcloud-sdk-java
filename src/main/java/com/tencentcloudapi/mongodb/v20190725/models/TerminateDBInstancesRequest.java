@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class TerminateDBInstancesRequest extends AbstractModel {
 
     /**
-    * 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
+    * 指定预隔离实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制预隔离实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 指定预隔离实例ID。格式如：cmgo-p8vnipr5。 
-     * @return InstanceId 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
+     * Get 指定预隔离实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制预隔离实例 ID。 
+     * @return InstanceId 指定预隔离实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制预隔离实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
-     * @param InstanceId 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
+     * Set 指定预隔离实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制预隔离实例 ID。
+     * @param InstanceId 指定预隔离实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制预隔离实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

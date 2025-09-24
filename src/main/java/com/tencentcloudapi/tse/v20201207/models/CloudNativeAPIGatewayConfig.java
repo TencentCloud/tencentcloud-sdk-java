@@ -179,6 +179,13 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
     private Boolean IPV6FullChain;
 
     /**
+    * 负载均衡个性化配置内容
+    */
+    @SerializedName("CustomizedConfigContent")
+    @Expose
+    private String CustomizedConfigContent;
+
+    /**
      * Get 控制台类型。 
      * @return ConsoleType 控制台类型。
      */
@@ -534,6 +541,22 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
         this.IPV6FullChain = IPV6FullChain;
     }
 
+    /**
+     * Get 负载均衡个性化配置内容 
+     * @return CustomizedConfigContent 负载均衡个性化配置内容
+     */
+    public String getCustomizedConfigContent() {
+        return this.CustomizedConfigContent;
+    }
+
+    /**
+     * Set 负载均衡个性化配置内容
+     * @param CustomizedConfigContent 负载均衡个性化配置内容
+     */
+    public void setCustomizedConfigContent(String CustomizedConfigContent) {
+        this.CustomizedConfigContent = CustomizedConfigContent;
+    }
+
     public CloudNativeAPIGatewayConfig() {
     }
 
@@ -608,6 +631,9 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
         if (source.IPV6FullChain != null) {
             this.IPV6FullChain = new Boolean(source.IPV6FullChain);
         }
+        if (source.CustomizedConfigContent != null) {
+            this.CustomizedConfigContent = new String(source.CustomizedConfigContent);
+        }
     }
 
 
@@ -637,6 +663,7 @@ public class CloudNativeAPIGatewayConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "SlaveZoneName", this.SlaveZoneName);
         this.setParamSimple(map, prefix + "NetworkId", this.NetworkId);
         this.setParamSimple(map, prefix + "IPV6FullChain", this.IPV6FullChain);
+        this.setParamSimple(map, prefix + "CustomizedConfigContent", this.CustomizedConfigContent);
 
     }
 }

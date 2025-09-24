@@ -143,6 +143,13 @@ public class AddCustomRuleRequest extends AbstractModel {
     private String LogicalOp;
 
     /**
+    * 按照动作灰度的比例，默认是100
+    */
+    @SerializedName("ActionRatio")
+    @Expose
+    private Long ActionRatio;
+
+    /**
      * Get 规则名称 
      * @return Name 规则名称
      */
@@ -418,6 +425,22 @@ public class AddCustomRuleRequest extends AbstractModel {
         this.LogicalOp = LogicalOp;
     }
 
+    /**
+     * Get 按照动作灰度的比例，默认是100 
+     * @return ActionRatio 按照动作灰度的比例，默认是100
+     */
+    public Long getActionRatio() {
+        return this.ActionRatio;
+    }
+
+    /**
+     * Set 按照动作灰度的比例，默认是100
+     * @param ActionRatio 按照动作灰度的比例，默认是100
+     */
+    public void setActionRatio(Long ActionRatio) {
+        this.ActionRatio = ActionRatio;
+    }
+
     public AddCustomRuleRequest() {
     }
 
@@ -480,6 +503,9 @@ public class AddCustomRuleRequest extends AbstractModel {
         if (source.LogicalOp != null) {
             this.LogicalOp = new String(source.LogicalOp);
         }
+        if (source.ActionRatio != null) {
+            this.ActionRatio = new Long(source.ActionRatio);
+        }
     }
 
 
@@ -504,6 +530,7 @@ public class AddCustomRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "PageId", this.PageId);
         this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
+        this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
 
     }
 }

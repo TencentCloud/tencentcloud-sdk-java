@@ -69,6 +69,21 @@ public class ModifyNetworkBasicInfoRequest extends AbstractModel {
     private String Description;
 
     /**
+    * 负载均衡的规格类型，支持：
+- 不传为共享型。
+- clb.c2.medium：标准型规格
+- clb.c3.small：高阶型1规格
+- clb.c3.medium：高阶型2规格
+- clb.c4.small：超强型1规格
+- clb.c4.medium：超强型2规格
+- clb.c4.large：超强型3规格
+- clb.c4.xlarge：超强型4规格
+    */
+    @SerializedName("SlaType")
+    @Expose
+    private String SlaType;
+
+    /**
      * Get 云原生API网关实例ID。 
      * @return GatewayId 云原生API网关实例ID。
      */
@@ -176,6 +191,54 @@ public class ModifyNetworkBasicInfoRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 负载均衡的规格类型，支持：
+- 不传为共享型。
+- clb.c2.medium：标准型规格
+- clb.c3.small：高阶型1规格
+- clb.c3.medium：高阶型2规格
+- clb.c4.small：超强型1规格
+- clb.c4.medium：超强型2规格
+- clb.c4.large：超强型3规格
+- clb.c4.xlarge：超强型4规格 
+     * @return SlaType 负载均衡的规格类型，支持：
+- 不传为共享型。
+- clb.c2.medium：标准型规格
+- clb.c3.small：高阶型1规格
+- clb.c3.medium：高阶型2规格
+- clb.c4.small：超强型1规格
+- clb.c4.medium：超强型2规格
+- clb.c4.large：超强型3规格
+- clb.c4.xlarge：超强型4规格
+     */
+    public String getSlaType() {
+        return this.SlaType;
+    }
+
+    /**
+     * Set 负载均衡的规格类型，支持：
+- 不传为共享型。
+- clb.c2.medium：标准型规格
+- clb.c3.small：高阶型1规格
+- clb.c3.medium：高阶型2规格
+- clb.c4.small：超强型1规格
+- clb.c4.medium：超强型2规格
+- clb.c4.large：超强型3规格
+- clb.c4.xlarge：超强型4规格
+     * @param SlaType 负载均衡的规格类型，支持：
+- 不传为共享型。
+- clb.c2.medium：标准型规格
+- clb.c3.small：高阶型1规格
+- clb.c3.medium：高阶型2规格
+- clb.c4.small：超强型1规格
+- clb.c4.medium：超强型2规格
+- clb.c4.large：超强型3规格
+- clb.c4.xlarge：超强型4规格
+     */
+    public void setSlaType(String SlaType) {
+        this.SlaType = SlaType;
+    }
+
     public ModifyNetworkBasicInfoRequest() {
     }
 
@@ -202,6 +265,9 @@ public class ModifyNetworkBasicInfoRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.SlaType != null) {
+            this.SlaType = new String(source.SlaType);
+        }
     }
 
 
@@ -215,6 +281,7 @@ public class ModifyNetworkBasicInfoRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "SlaType", this.SlaType);
 
     }
 }

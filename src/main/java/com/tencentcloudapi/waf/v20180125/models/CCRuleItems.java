@@ -101,7 +101,7 @@ public class CCRuleItems extends AbstractModel {
     private Long TsVersion;
 
     /**
-    * 规则详情
+    * key为匹配字段；args为base64编码后的参数，等于号前为匹配参数，等于号后为匹配内容；match为逻辑符号；encodeflag为参数内容是否编码
     */
     @SerializedName("Options")
     @Expose
@@ -155,6 +155,20 @@ public class CCRuleItems extends AbstractModel {
     @SerializedName("LogicalOp")
     @Expose
     private String LogicalOp;
+
+    /**
+    * 页面ID
+    */
+    @SerializedName("PageId")
+    @Expose
+    private String PageId;
+
+    /**
+    * 动作灰度比例，默认值100
+    */
+    @SerializedName("ActionRatio")
+    @Expose
+    private Long ActionRatio;
 
     /**
      * Get 名字 
@@ -333,16 +347,16 @@ public class CCRuleItems extends AbstractModel {
     }
 
     /**
-     * Get 规则详情 
-     * @return Options 规则详情
+     * Get key为匹配字段；args为base64编码后的参数，等于号前为匹配参数，等于号后为匹配内容；match为逻辑符号；encodeflag为参数内容是否编码 
+     * @return Options key为匹配字段；args为base64编码后的参数，等于号前为匹配参数，等于号后为匹配内容；match为逻辑符号；encodeflag为参数内容是否编码
      */
     public String getOptions() {
         return this.Options;
     }
 
     /**
-     * Set 规则详情
-     * @param Options 规则详情
+     * Set key为匹配字段；args为base64编码后的参数，等于号前为匹配参数，等于号后为匹配内容；match为逻辑符号；encodeflag为参数内容是否编码
+     * @param Options key为匹配字段；args为base64编码后的参数，等于号前为匹配参数，等于号后为匹配内容；match为逻辑符号；encodeflag为参数内容是否编码
      */
     public void setOptions(String Options) {
         this.Options = Options;
@@ -460,6 +474,38 @@ public class CCRuleItems extends AbstractModel {
         this.LogicalOp = LogicalOp;
     }
 
+    /**
+     * Get 页面ID 
+     * @return PageId 页面ID
+     */
+    public String getPageId() {
+        return this.PageId;
+    }
+
+    /**
+     * Set 页面ID
+     * @param PageId 页面ID
+     */
+    public void setPageId(String PageId) {
+        this.PageId = PageId;
+    }
+
+    /**
+     * Get 动作灰度比例，默认值100 
+     * @return ActionRatio 动作灰度比例，默认值100
+     */
+    public Long getActionRatio() {
+        return this.ActionRatio;
+    }
+
+    /**
+     * Set 动作灰度比例，默认值100
+     * @param ActionRatio 动作灰度比例，默认值100
+     */
+    public void setActionRatio(Long ActionRatio) {
+        this.ActionRatio = ActionRatio;
+    }
+
     public CCRuleItems() {
     }
 
@@ -528,6 +574,12 @@ public class CCRuleItems extends AbstractModel {
         if (source.LogicalOp != null) {
             this.LogicalOp = new String(source.LogicalOp);
         }
+        if (source.PageId != null) {
+            this.PageId = new String(source.PageId);
+        }
+        if (source.ActionRatio != null) {
+            this.ActionRatio = new Long(source.ActionRatio);
+        }
     }
 
 
@@ -554,6 +606,8 @@ public class CCRuleItems extends AbstractModel {
         this.setParamSimple(map, prefix + "LimitMethod", this.LimitMethod);
         this.setParamSimple(map, prefix + "CelRule", this.CelRule);
         this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
+        this.setParamSimple(map, prefix + "PageId", this.PageId);
+        this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
 
     }
 }

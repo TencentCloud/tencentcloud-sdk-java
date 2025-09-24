@@ -178,6 +178,20 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private String LogicalOp;
 
     /**
+    * 页面ID
+    */
+    @SerializedName("PageId")
+    @Expose
+    private String PageId;
+
+    /**
+    * 动作灰度比例，默认值100
+    */
+    @SerializedName("ActionRatio")
+    @Expose
+    private Long ActionRatio;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -529,6 +543,38 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.LogicalOp = LogicalOp;
     }
 
+    /**
+     * Get 页面ID 
+     * @return PageId 页面ID
+     */
+    public String getPageId() {
+        return this.PageId;
+    }
+
+    /**
+     * Set 页面ID
+     * @param PageId 页面ID
+     */
+    public void setPageId(String PageId) {
+        this.PageId = PageId;
+    }
+
+    /**
+     * Get 动作灰度比例，默认值100 
+     * @return ActionRatio 动作灰度比例，默认值100
+     */
+    public Long getActionRatio() {
+        return this.ActionRatio;
+    }
+
+    /**
+     * Set 动作灰度比例，默认值100
+     * @param ActionRatio 动作灰度比例，默认值100
+     */
+    public void setActionRatio(Long ActionRatio) {
+        this.ActionRatio = ActionRatio;
+    }
+
     public UpsertCCRuleRequest() {
     }
 
@@ -606,6 +652,12 @@ public class UpsertCCRuleRequest extends AbstractModel {
         if (source.LogicalOp != null) {
             this.LogicalOp = new String(source.LogicalOp);
         }
+        if (source.PageId != null) {
+            this.PageId = new String(source.PageId);
+        }
+        if (source.ActionRatio != null) {
+            this.ActionRatio = new Long(source.ActionRatio);
+        }
     }
 
 
@@ -635,6 +687,8 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LimitMethod", this.LimitMethod);
         this.setParamSimple(map, prefix + "CelRule", this.CelRule);
         this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
+        this.setParamSimple(map, prefix + "PageId", this.PageId);
+        this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
 
     }
 }

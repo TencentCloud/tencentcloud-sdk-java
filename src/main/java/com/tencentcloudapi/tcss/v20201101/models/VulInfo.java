@@ -143,6 +143,20 @@ public class VulInfo extends AbstractModel {
     private Long DefendedCount;
 
     /**
+    * 漏洞对应机器的应用防护开启数量
+    */
+    @SerializedName("RaspOpenNodeCount")
+    @Expose
+    private Long RaspOpenNodeCount;
+
+    /**
+    * 漏洞对应机器的应用防护关闭数量
+    */
+    @SerializedName("RaspClosedNodeCount")
+    @Expose
+    private Long RaspClosedNodeCount;
+
+    /**
      * Get 漏洞名称 
      * @return Name 漏洞名称
      */
@@ -414,6 +428,38 @@ public class VulInfo extends AbstractModel {
         this.DefendedCount = DefendedCount;
     }
 
+    /**
+     * Get 漏洞对应机器的应用防护开启数量 
+     * @return RaspOpenNodeCount 漏洞对应机器的应用防护开启数量
+     */
+    public Long getRaspOpenNodeCount() {
+        return this.RaspOpenNodeCount;
+    }
+
+    /**
+     * Set 漏洞对应机器的应用防护开启数量
+     * @param RaspOpenNodeCount 漏洞对应机器的应用防护开启数量
+     */
+    public void setRaspOpenNodeCount(Long RaspOpenNodeCount) {
+        this.RaspOpenNodeCount = RaspOpenNodeCount;
+    }
+
+    /**
+     * Get 漏洞对应机器的应用防护关闭数量 
+     * @return RaspClosedNodeCount 漏洞对应机器的应用防护关闭数量
+     */
+    public Long getRaspClosedNodeCount() {
+        return this.RaspClosedNodeCount;
+    }
+
+    /**
+     * Set 漏洞对应机器的应用防护关闭数量
+     * @param RaspClosedNodeCount 漏洞对应机器的应用防护关闭数量
+     */
+    public void setRaspClosedNodeCount(Long RaspClosedNodeCount) {
+        this.RaspClosedNodeCount = RaspClosedNodeCount;
+    }
+
     public VulInfo() {
     }
 
@@ -476,6 +522,12 @@ public class VulInfo extends AbstractModel {
         if (source.DefendedCount != null) {
             this.DefendedCount = new Long(source.DefendedCount);
         }
+        if (source.RaspOpenNodeCount != null) {
+            this.RaspOpenNodeCount = new Long(source.RaspOpenNodeCount);
+        }
+        if (source.RaspClosedNodeCount != null) {
+            this.RaspClosedNodeCount = new Long(source.RaspClosedNodeCount);
+        }
     }
 
 
@@ -500,6 +552,8 @@ public class VulInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DefenceScope", this.DefenceScope);
         this.setParamSimple(map, prefix + "DefenceHostCount", this.DefenceHostCount);
         this.setParamSimple(map, prefix + "DefendedCount", this.DefendedCount);
+        this.setParamSimple(map, prefix + "RaspOpenNodeCount", this.RaspOpenNodeCount);
+        this.setParamSimple(map, prefix + "RaspClosedNodeCount", this.RaspClosedNodeCount);
 
     }
 }

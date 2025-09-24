@@ -60,7 +60,7 @@ public class LoadBalancerPackageNew extends AbstractModel {
 
     /**
     * 地区
-"多伦多": "ca",
+    "多伦多": "ca",
     "广州": "gz",
     "成都": "cd",
     "福州": "fzec",
@@ -87,7 +87,8 @@ public class LoadBalancerPackageNew extends AbstractModel {
     "首尔": "kr",
     "上海": "sh",
     "新加坡": "sg",
-    "清远": "qy"
+    "清远": "qy",
+    "雅加达": "jkt"
     */
     @SerializedName("Region")
     @Expose
@@ -217,7 +218,7 @@ public class LoadBalancerPackageNew extends AbstractModel {
 
     /**
      * Get 地区
-"多伦多": "ca",
+    "多伦多": "ca",
     "广州": "gz",
     "成都": "cd",
     "福州": "fzec",
@@ -244,9 +245,10 @@ public class LoadBalancerPackageNew extends AbstractModel {
     "首尔": "kr",
     "上海": "sh",
     "新加坡": "sg",
-    "清远": "qy" 
+    "清远": "qy",
+    "雅加达": "jkt" 
      * @return Region 地区
-"多伦多": "ca",
+    "多伦多": "ca",
     "广州": "gz",
     "成都": "cd",
     "福州": "fzec",
@@ -273,7 +275,8 @@ public class LoadBalancerPackageNew extends AbstractModel {
     "首尔": "kr",
     "上海": "sh",
     "新加坡": "sg",
-    "清远": "qy"
+    "清远": "qy",
+    "雅加达": "jkt"
      */
     public String getRegion() {
         return this.Region;
@@ -281,7 +284,7 @@ public class LoadBalancerPackageNew extends AbstractModel {
 
     /**
      * Set 地区
-"多伦多": "ca",
+    "多伦多": "ca",
     "广州": "gz",
     "成都": "cd",
     "福州": "fzec",
@@ -308,9 +311,10 @@ public class LoadBalancerPackageNew extends AbstractModel {
     "首尔": "kr",
     "上海": "sh",
     "新加坡": "sg",
-    "清远": "qy"
+    "清远": "qy",
+    "雅加达": "jkt"
      * @param Region 地区
-"多伦多": "ca",
+    "多伦多": "ca",
     "广州": "gz",
     "成都": "cd",
     "福州": "fzec",
@@ -337,7 +341,8 @@ public class LoadBalancerPackageNew extends AbstractModel {
     "首尔": "kr",
     "上海": "sh",
     "新加坡": "sg",
-    "清远": "qy"
+    "清远": "qy",
+    "雅加达": "jkt"
      */
     public void setRegion(String Region) {
         this.Region = Region;

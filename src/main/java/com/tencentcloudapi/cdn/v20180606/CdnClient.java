@@ -462,18 +462,6 @@ DescribeDiagnoseReport 用于获取指定报告id的内容。
     }
 
     /**
-     *### <font color=red>**该接口已废弃** </font><br>
-DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，中国境内访问会直接返回 403。
-     * @param req DisableCachesRequest
-     * @return DisableCachesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DisableCachesResponse DisableCaches(DisableCachesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DisableCaches", DisableCachesResponse.class);
-    }
-
-    /**
      *DisableClsLogTopic 用于停止日志主题投递。注意：停止后，所有绑定该日志主题域名的日志将不再继续投递至该主题，已经投递的日志将会继续保留。生效时间约为 5~15 分钟。
 
      * @param req DisableClsLogTopicRequest
@@ -497,18 +485,6 @@ DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，中�
     }
 
     /**
-     *### <font color=red>**该接口已废弃** </font><br>
-EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。
-     * @param req EnableCachesRequest
-     * @return EnableCachesResponse
-     * @throws TencentCloudSDKException
-     */
-    public EnableCachesResponse EnableCaches(EnableCachesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "EnableCaches", EnableCachesResponse.class);
-    }
-
-    /**
      *EnableClsLogTopic 用于启动日志主题投递。注意：启动后，所有绑定该日志主题域名的日志将继续投递至该主题。生效时间约为 5~15 分钟。
      * @param req EnableClsLogTopicRequest
      * @return EnableClsLogTopicResponse
@@ -517,20 +493,6 @@ EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时
     public EnableClsLogTopicResponse EnableClsLogTopic(EnableClsLogTopicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnableClsLogTopic", EnableClsLogTopicResponse.class);
-    }
-
-    /**
-     *以上诊断报告, 域名版本管理相关接口功能均废弃,  已确认现网0调用, 申请预下线,(预下线不会影响调用, 只会在接口中添加提示信息, 正式下线仍需人工确认)
-
-### <font color=red>**该接口已废弃** </font><br>
-GetDisableRecords 用于查询资源禁用历史，及 URL 当前状态。
-     * @param req GetDisableRecordsRequest
-     * @return GetDisableRecordsResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDisableRecordsResponse GetDisableRecords(GetDisableRecordsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetDisableRecords", GetDisableRecordsResponse.class);
     }
 
     /**

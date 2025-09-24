@@ -52,6 +52,13 @@ public class ModifyTWeTalkProductConfigRequest extends AbstractModel {
     private Long VoiceType;
 
     /**
+    * 复刻音色
+    */
+    @SerializedName("FastVoiceType")
+    @Expose
+    private String FastVoiceType;
+
+    /**
     * 支持的语言，zh-中文；en-英文；默认zh
     */
     @SerializedName("TargetLanguage")
@@ -123,6 +130,22 @@ public class ModifyTWeTalkProductConfigRequest extends AbstractModel {
     }
 
     /**
+     * Get 复刻音色 
+     * @return FastVoiceType 复刻音色
+     */
+    public String getFastVoiceType() {
+        return this.FastVoiceType;
+    }
+
+    /**
+     * Set 复刻音色
+     * @param FastVoiceType 复刻音色
+     */
+    public void setFastVoiceType(String FastVoiceType) {
+        this.FastVoiceType = FastVoiceType;
+    }
+
+    /**
      * Get 支持的语言，zh-中文；en-英文；默认zh 
      * @return TargetLanguage 支持的语言，zh-中文；en-英文；默认zh
      */
@@ -158,6 +181,9 @@ public class ModifyTWeTalkProductConfigRequest extends AbstractModel {
         if (source.VoiceType != null) {
             this.VoiceType = new Long(source.VoiceType);
         }
+        if (source.FastVoiceType != null) {
+            this.FastVoiceType = new String(source.FastVoiceType);
+        }
         if (source.TargetLanguage != null) {
             this.TargetLanguage = new String(source.TargetLanguage);
         }
@@ -172,6 +198,7 @@ public class ModifyTWeTalkProductConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SystemPrompt", this.SystemPrompt);
         this.setParamSimple(map, prefix + "GreetingMessage", this.GreetingMessage);
         this.setParamSimple(map, prefix + "VoiceType", this.VoiceType);
+        this.setParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
         this.setParamSimple(map, prefix + "TargetLanguage", this.TargetLanguage);
 
     }

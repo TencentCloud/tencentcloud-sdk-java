@@ -61,17 +61,6 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *创建一个Agent
-     * @param req CreateAgentRequest
-     * @return CreateAgentResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateAgentResponse CreateAgent(CreateAgentRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateAgent", CreateAgentResponse.class);
-    }
-
-    /**
      *创建知识引擎应用。
      * @param req CreateAppRequest
      * @return CreateAppResponse
@@ -962,17 +951,6 @@ public class LkeClient extends AbstractClient{
     public ListWorkflowRunsResponse ListWorkflowRuns(ListWorkflowRunsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListWorkflowRuns", ListWorkflowRunsResponse.class);
-    }
-
-    /**
-     *修改Agent信息
-     * @param req ModifyAgentRequest
-     * @return ModifyAgentResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyAgentResponse ModifyAgent(ModifyAgentRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyAgent", ModifyAgentResponse.class);
     }
 
     /**

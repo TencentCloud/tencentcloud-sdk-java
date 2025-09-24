@@ -86,6 +86,13 @@ public class MultiPathGateway extends AbstractModel {
     private MultiPathGatewayLine [] Lines;
 
     /**
+    * 网关回源 IP 列表发生了变化是否需要重新确认，取值有：<li>true：回源 IP 列表发生了变化，需要确认；</li><li>false：回源 IP 列表未发生变化，无需确认。</li>
+    */
+    @SerializedName("NeedConfirm")
+    @Expose
+    private String NeedConfirm;
+
+    /**
      * Get 网关 ID。 
      * @return GatewayId 网关 ID。
      */
@@ -237,6 +244,22 @@ public class MultiPathGateway extends AbstractModel {
         this.Lines = Lines;
     }
 
+    /**
+     * Get 网关回源 IP 列表发生了变化是否需要重新确认，取值有：<li>true：回源 IP 列表发生了变化，需要确认；</li><li>false：回源 IP 列表未发生变化，无需确认。</li> 
+     * @return NeedConfirm 网关回源 IP 列表发生了变化是否需要重新确认，取值有：<li>true：回源 IP 列表发生了变化，需要确认；</li><li>false：回源 IP 列表未发生变化，无需确认。</li>
+     */
+    public String getNeedConfirm() {
+        return this.NeedConfirm;
+    }
+
+    /**
+     * Set 网关回源 IP 列表发生了变化是否需要重新确认，取值有：<li>true：回源 IP 列表发生了变化，需要确认；</li><li>false：回源 IP 列表未发生变化，无需确认。</li>
+     * @param NeedConfirm 网关回源 IP 列表发生了变化是否需要重新确认，取值有：<li>true：回源 IP 列表发生了变化，需要确认；</li><li>false：回源 IP 列表未发生变化，无需确认。</li>
+     */
+    public void setNeedConfirm(String NeedConfirm) {
+        this.NeedConfirm = NeedConfirm;
+    }
+
     public MultiPathGateway() {
     }
 
@@ -272,6 +295,9 @@ public class MultiPathGateway extends AbstractModel {
                 this.Lines[i] = new MultiPathGatewayLine(source.Lines[i]);
             }
         }
+        if (source.NeedConfirm != null) {
+            this.NeedConfirm = new String(source.NeedConfirm);
+        }
     }
 
 
@@ -287,6 +313,7 @@ public class MultiPathGateway extends AbstractModel {
         this.setParamSimple(map, prefix + "GatewayIP", this.GatewayIP);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamArrayObj(map, prefix + "Lines.", this.Lines);
+        this.setParamSimple(map, prefix + "NeedConfirm", this.NeedConfirm);
 
     }
 }

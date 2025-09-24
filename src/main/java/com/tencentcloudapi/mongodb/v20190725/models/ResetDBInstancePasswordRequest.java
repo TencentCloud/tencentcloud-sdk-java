@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class ResetDBInstancePasswordRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * 指定实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例账号名
+    * 指定需修改密码的账号名称。可通过接口 [DescribeAccountUsers](https://cloud.tencent.com/document/product/240/80800) 获取账号列表，复制需修改密码的账号。
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 新密码，新密码长度不能少于8位
+    * 指定账户的新密码。密码复杂度要求：
+- 8-32个字符长度。
+- 至少包含字母、数字和字符（!@#%^\*()\_）中的两种。
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 指定实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 指定实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 指定实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 指定实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例账号名 
-     * @return UserName 实例账号名
+     * Get 指定需修改密码的账号名称。可通过接口 [DescribeAccountUsers](https://cloud.tencent.com/document/product/240/80800) 获取账号列表，复制需修改密码的账号。 
+     * @return UserName 指定需修改密码的账号名称。可通过接口 [DescribeAccountUsers](https://cloud.tencent.com/document/product/240/80800) 获取账号列表，复制需修改密码的账号。
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 实例账号名
-     * @param UserName 实例账号名
+     * Set 指定需修改密码的账号名称。可通过接口 [DescribeAccountUsers](https://cloud.tencent.com/document/product/240/80800) 获取账号列表，复制需修改密码的账号。
+     * @param UserName 指定需修改密码的账号名称。可通过接口 [DescribeAccountUsers](https://cloud.tencent.com/document/product/240/80800) 获取账号列表，复制需修改密码的账号。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 新密码，新密码长度不能少于8位 
-     * @return Password 新密码，新密码长度不能少于8位
+     * Get 指定账户的新密码。密码复杂度要求：
+- 8-32个字符长度。
+- 至少包含字母、数字和字符（!@#%^\*()\_）中的两种。 
+     * @return Password 指定账户的新密码。密码复杂度要求：
+- 8-32个字符长度。
+- 至少包含字母、数字和字符（!@#%^\*()\_）中的两种。
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 新密码，新密码长度不能少于8位
-     * @param Password 新密码，新密码长度不能少于8位
+     * Set 指定账户的新密码。密码复杂度要求：
+- 8-32个字符长度。
+- 至少包含字母、数字和字符（!@#%^\*()\_）中的两种。
+     * @param Password 指定账户的新密码。密码复杂度要求：
+- 8-32个字符长度。
+- 至少包含字母、数字和字符（!@#%^\*()\_）中的两种。
      */
     public void setPassword(String Password) {
         this.Password = Password;

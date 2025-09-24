@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ClientConnection extends AbstractModel {
 
     /**
-    * 连接的客户端IP
+    * 连接的客户端 IP。
     */
     @SerializedName("IP")
     @Expose
     private String IP;
 
     /**
-    * 对应客户端IP的连接数
+    * 对应客户端 IP 的连接数。
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 是否为内部ip
+    * 是否为内部 IP。
     */
     @SerializedName("InternalService")
     @Expose
     private Boolean InternalService;
 
     /**
-     * Get 连接的客户端IP 
-     * @return IP 连接的客户端IP
+     * Get 连接的客户端 IP。 
+     * @return IP 连接的客户端 IP。
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * Set 连接的客户端IP
-     * @param IP 连接的客户端IP
+     * Set 连接的客户端 IP。
+     * @param IP 连接的客户端 IP。
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get 对应客户端IP的连接数 
-     * @return Count 对应客户端IP的连接数
+     * Get 对应客户端 IP 的连接数。 
+     * @return Count 对应客户端 IP 的连接数。
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 对应客户端IP的连接数
-     * @param Count 对应客户端IP的连接数
+     * Set 对应客户端 IP 的连接数。
+     * @param Count 对应客户端 IP 的连接数。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 是否为内部ip 
-     * @return InternalService 是否为内部ip
+     * Get 是否为内部 IP。 
+     * @return InternalService 是否为内部 IP。
      */
     public Boolean getInternalService() {
         return this.InternalService;
     }
 
     /**
-     * Set 是否为内部ip
-     * @param InternalService 是否为内部ip
+     * Set 是否为内部 IP。
+     * @param InternalService 是否为内部 IP。
      */
     public void setInternalService(Boolean InternalService) {
         this.InternalService = InternalService;

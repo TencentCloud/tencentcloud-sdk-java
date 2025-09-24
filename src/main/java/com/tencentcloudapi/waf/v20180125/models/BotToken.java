@@ -94,6 +94,13 @@ public class BotToken extends AbstractModel {
     private Long Priority;
 
     /**
+    * token有效性配置信息
+    */
+    @SerializedName("TokenValidation")
+    @Expose
+    private TokenValidation TokenValidation;
+
+    /**
      * Get 会话名称 
      * @return Name 会话名称
      */
@@ -253,6 +260,22 @@ public class BotToken extends AbstractModel {
         this.Priority = Priority;
     }
 
+    /**
+     * Get token有效性配置信息 
+     * @return TokenValidation token有效性配置信息
+     */
+    public TokenValidation getTokenValidation() {
+        return this.TokenValidation;
+    }
+
+    /**
+     * Set token有效性配置信息
+     * @param TokenValidation token有效性配置信息
+     */
+    public void setTokenValidation(TokenValidation TokenValidation) {
+        this.TokenValidation = TokenValidation;
+    }
+
     public BotToken() {
     }
 
@@ -294,6 +317,9 @@ public class BotToken extends AbstractModel {
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
         }
+        if (source.TokenValidation != null) {
+            this.TokenValidation = new TokenValidation(source.TokenValidation);
+        }
     }
 
 
@@ -311,6 +337,7 @@ public class BotToken extends AbstractModel {
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
         this.setParamArraySimple(map, prefix + "Scene.", this.Scene);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamObj(map, prefix + "TokenValidation.", this.TokenValidation);
 
     }
 }

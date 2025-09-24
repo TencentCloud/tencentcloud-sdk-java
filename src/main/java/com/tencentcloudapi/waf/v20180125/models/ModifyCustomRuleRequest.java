@@ -139,6 +139,13 @@ public class ModifyCustomRuleRequest extends AbstractModel {
     private String LogicalOp;
 
     /**
+    * 规则生效比例
+    */
+    @SerializedName("ActionRatio")
+    @Expose
+    private Long ActionRatio;
+
+    /**
      * Get 编辑的域名 
      * @return Domain 编辑的域名
      */
@@ -410,6 +417,22 @@ public class ModifyCustomRuleRequest extends AbstractModel {
         this.LogicalOp = LogicalOp;
     }
 
+    /**
+     * Get 规则生效比例 
+     * @return ActionRatio 规则生效比例
+     */
+    public Long getActionRatio() {
+        return this.ActionRatio;
+    }
+
+    /**
+     * Set 规则生效比例
+     * @param ActionRatio 规则生效比例
+     */
+    public void setActionRatio(Long ActionRatio) {
+        this.ActionRatio = ActionRatio;
+    }
+
     public ModifyCustomRuleRequest() {
     }
 
@@ -469,6 +492,9 @@ public class ModifyCustomRuleRequest extends AbstractModel {
         if (source.LogicalOp != null) {
             this.LogicalOp = new String(source.LogicalOp);
         }
+        if (source.ActionRatio != null) {
+            this.ActionRatio = new Long(source.ActionRatio);
+        }
     }
 
 
@@ -492,6 +518,7 @@ public class ModifyCustomRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "PageId", this.PageId);
         this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
+        this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
 
     }
 }

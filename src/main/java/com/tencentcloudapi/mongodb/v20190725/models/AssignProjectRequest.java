@@ -31,7 +31,7 @@ public class AssignProjectRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的项目管理中复制项目 ID。
+    * 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的[项目管理](https://console.cloud.tencent.com/project)中复制项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -54,16 +54,16 @@ public class AssignProjectRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的项目管理中复制项目 ID。 
-     * @return ProjectId 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的项目管理中复制项目 ID。
+     * Get 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的[项目管理](https://console.cloud.tencent.com/project)中复制项目 ID。 
+     * @return ProjectId 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的[项目管理](https://console.cloud.tencent.com/project)中复制项目 ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的项目管理中复制项目 ID。
-     * @param ProjectId 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的项目管理中复制项目 ID。
+     * Set 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的[项目管理](https://console.cloud.tencent.com/project)中复制项目 ID。
+     * @param ProjectId 项目ID，用户已创建项目的唯一ID。请在控制台账号中心的[项目管理](https://console.cloud.tencent.com/project)中复制项目 ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

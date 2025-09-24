@@ -24,115 +24,135 @@ import java.util.HashMap;
 public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
 
     /**
-    * 实例 ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同。
+    * 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 变更配置后实例内存大小，单位：GB。
+    * 变更配置后实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 变更配置后实例磁盘大小，单位：GB。
+    * 变更配置后实例磁盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * 实例节点数。默认为不变更节点数，暂不支持变更。
+    * 实例节点数量。请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 副本集实例，指变更配置后实例的主从节点数量。
+- 分片集群实例，指变更配置后实例每一个分片的主从节点数。
+**说明**：切勿同时发起调整节点数、调整分片数、调整节点规格的任务。
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * 实例分片数。默认为不变更分片数，暂不支持变更。
+    * 分片集群实例，指变更配置后实例的分片数量。取值范围：[2,36] 。
+**说明**：变更后的分片数量不能小于当前现有的数量。切勿同时发起调整节点数、调整分片数与调整节点规格的任务。
     */
     @SerializedName("ReplicateSetNum")
     @Expose
     private Long ReplicateSetNum;
 
     /**
-     * Get 实例 ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同。 
-     * @return InstanceId 实例 ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同。
+     * Get 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceId 实例 ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同。
+     * Set 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 变更配置后实例内存大小，单位：GB。 
-     * @return Memory 变更配置后实例内存大小，单位：GB。
+     * Get 变更配置后实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 
+     * @return Memory 变更配置后实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 变更配置后实例内存大小，单位：GB。
-     * @param Memory 变更配置后实例内存大小，单位：GB。
+     * Set 变更配置后实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * @param Memory 变更配置后实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 变更配置后实例磁盘大小，单位：GB。 
-     * @return Volume 变更配置后实例磁盘大小，单位：GB。
+     * Get 变更配置后实例磁盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 
+     * @return Volume 变更配置后实例磁盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 变更配置后实例磁盘大小，单位：GB。
-     * @param Volume 变更配置后实例磁盘大小，单位：GB。
+     * Set 变更配置后实例磁盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * @param Volume 变更配置后实例磁盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get 实例节点数。默认为不变更节点数，暂不支持变更。 
-     * @return NodeNum 实例节点数。默认为不变更节点数，暂不支持变更。
+     * Get 实例节点数量。请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 副本集实例，指变更配置后实例的主从节点数量。
+- 分片集群实例，指变更配置后实例每一个分片的主从节点数。
+**说明**：切勿同时发起调整节点数、调整分片数、调整节点规格的任务。 
+     * @return NodeNum 实例节点数量。请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 副本集实例，指变更配置后实例的主从节点数量。
+- 分片集群实例，指变更配置后实例每一个分片的主从节点数。
+**说明**：切勿同时发起调整节点数、调整分片数、调整节点规格的任务。
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set 实例节点数。默认为不变更节点数，暂不支持变更。
-     * @param NodeNum 实例节点数。默认为不变更节点数，暂不支持变更。
+     * Set 实例节点数量。请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 副本集实例，指变更配置后实例的主从节点数量。
+- 分片集群实例，指变更配置后实例每一个分片的主从节点数。
+**说明**：切勿同时发起调整节点数、调整分片数、调整节点规格的任务。
+     * @param NodeNum 实例节点数量。请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 副本集实例，指变更配置后实例的主从节点数量。
+- 分片集群实例，指变更配置后实例每一个分片的主从节点数。
+**说明**：切勿同时发起调整节点数、调整分片数、调整节点规格的任务。
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get 实例分片数。默认为不变更分片数，暂不支持变更。 
-     * @return ReplicateSetNum 实例分片数。默认为不变更分片数，暂不支持变更。
+     * Get 分片集群实例，指变更配置后实例的分片数量。取值范围：[2,36] 。
+**说明**：变更后的分片数量不能小于当前现有的数量。切勿同时发起调整节点数、调整分片数与调整节点规格的任务。 
+     * @return ReplicateSetNum 分片集群实例，指变更配置后实例的分片数量。取值范围：[2,36] 。
+**说明**：变更后的分片数量不能小于当前现有的数量。切勿同时发起调整节点数、调整分片数与调整节点规格的任务。
      */
     public Long getReplicateSetNum() {
         return this.ReplicateSetNum;
     }
 
     /**
-     * Set 实例分片数。默认为不变更分片数，暂不支持变更。
-     * @param ReplicateSetNum 实例分片数。默认为不变更分片数，暂不支持变更。
+     * Set 分片集群实例，指变更配置后实例的分片数量。取值范围：[2,36] 。
+**说明**：变更后的分片数量不能小于当前现有的数量。切勿同时发起调整节点数、调整分片数与调整节点规格的任务。
+     * @param ReplicateSetNum 分片集群实例，指变更配置后实例的分片数量。取值范围：[2,36] 。
+**说明**：变更后的分片数量不能小于当前现有的数量。切勿同时发起调整节点数、调整分片数与调整节点规格的任务。
      */
     public void setReplicateSetNum(Long ReplicateSetNum) {
         this.ReplicateSetNum = ReplicateSetNum;

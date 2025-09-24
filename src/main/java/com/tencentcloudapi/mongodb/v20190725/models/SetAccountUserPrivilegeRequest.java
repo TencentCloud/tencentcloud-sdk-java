@@ -31,7 +31,7 @@ public class SetAccountUserPrivilegeRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 设置账号名称。
+    * 设置访问实例的账号名称。设置要求为：字母开头的1-64个字符，只可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“_”与短划线“-”。
     */
     @SerializedName("UserName")
     @Expose
@@ -61,16 +61,16 @@ public class SetAccountUserPrivilegeRequest extends AbstractModel {
     }
 
     /**
-     * Get 设置账号名称。 
-     * @return UserName 设置账号名称。
+     * Get 设置访问实例的账号名称。设置要求为：字母开头的1-64个字符，只可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“_”与短划线“-”。 
+     * @return UserName 设置访问实例的账号名称。设置要求为：字母开头的1-64个字符，只可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“_”与短划线“-”。
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 设置账号名称。
-     * @param UserName 设置账号名称。
+     * Set 设置访问实例的账号名称。设置要求为：字母开头的1-64个字符，只可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“_”与短划线“-”。
+     * @param UserName 设置访问实例的账号名称。设置要求为：字母开头的1-64个字符，只可输入[A,Z]、[a,z]、[1,9]范围的字符以及下划线“_”与短划线“-”。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

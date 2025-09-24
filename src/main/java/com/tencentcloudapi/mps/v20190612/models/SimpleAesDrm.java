@@ -32,7 +32,7 @@ public class SimpleAesDrm extends AbstractModel {
     private String Uri;
 
     /**
-    * 加密key(32字节字符串)。
+    * 加密key(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
@@ -40,7 +40,7 @@ public class SimpleAesDrm extends AbstractModel {
     private String Key;
 
     /**
-    * 加密初始化向量(32字节字符串)。
+    * 加密初始化向量(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vector")
@@ -68,9 +68,9 @@ public class SimpleAesDrm extends AbstractModel {
     }
 
     /**
-     * Get 加密key(32字节字符串)。
+     * Get 加密key(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key 加密key(32字节字符串)。
+     * @return Key 加密key(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
@@ -78,9 +78,9 @@ public class SimpleAesDrm extends AbstractModel {
     }
 
     /**
-     * Set 加密key(32字节字符串)。
+     * Set 加密key(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key 加密key(32字节字符串)。
+     * @param Key 加密key(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
@@ -88,9 +88,9 @@ public class SimpleAesDrm extends AbstractModel {
     }
 
     /**
-     * Get 加密初始化向量(32字节字符串)。
+     * Get 加密初始化向量(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vector 加密初始化向量(32字节字符串)。
+     * @return Vector 加密初始化向量(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVector() {
@@ -98,9 +98,9 @@ public class SimpleAesDrm extends AbstractModel {
     }
 
     /**
-     * Set 加密初始化向量(32字节字符串)。
+     * Set 加密初始化向量(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vector 加密初始化向量(32字节字符串)。
+     * @param Vector 加密初始化向量(十六进制32字节字符串)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVector(String Vector) {

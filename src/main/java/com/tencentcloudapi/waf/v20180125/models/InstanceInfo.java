@@ -356,6 +356,35 @@ public class InstanceInfo extends AbstractModel {
     private NetworkConfig NetworkConfig;
 
     /**
+    * RCE设备安全信息包
+    */
+    @SerializedName("RCEPkg")
+    @Expose
+    private RCEPkg RCEPkg;
+
+    /**
+    * 超量策略。0：超量沙箱
+1：超量限流
+    */
+    @SerializedName("ExceedPolicy")
+    @Expose
+    private Long ExceedPolicy;
+
+    /**
+    * 大模型安全信息包
+    */
+    @SerializedName("LLMPkg")
+    @Expose
+    private LLMPkg LLMPkg;
+
+    /**
+    * 弹性资源Id
+    */
+    @SerializedName("ElasticResourceId")
+    @Expose
+    private String ElasticResourceId;
+
+    /**
      * Get 实例唯一ID 
      * @return InstanceId 实例唯一ID
      */
@@ -1131,6 +1160,74 @@ public class InstanceInfo extends AbstractModel {
         this.NetworkConfig = NetworkConfig;
     }
 
+    /**
+     * Get RCE设备安全信息包 
+     * @return RCEPkg RCE设备安全信息包
+     */
+    public RCEPkg getRCEPkg() {
+        return this.RCEPkg;
+    }
+
+    /**
+     * Set RCE设备安全信息包
+     * @param RCEPkg RCE设备安全信息包
+     */
+    public void setRCEPkg(RCEPkg RCEPkg) {
+        this.RCEPkg = RCEPkg;
+    }
+
+    /**
+     * Get 超量策略。0：超量沙箱
+1：超量限流 
+     * @return ExceedPolicy 超量策略。0：超量沙箱
+1：超量限流
+     */
+    public Long getExceedPolicy() {
+        return this.ExceedPolicy;
+    }
+
+    /**
+     * Set 超量策略。0：超量沙箱
+1：超量限流
+     * @param ExceedPolicy 超量策略。0：超量沙箱
+1：超量限流
+     */
+    public void setExceedPolicy(Long ExceedPolicy) {
+        this.ExceedPolicy = ExceedPolicy;
+    }
+
+    /**
+     * Get 大模型安全信息包 
+     * @return LLMPkg 大模型安全信息包
+     */
+    public LLMPkg getLLMPkg() {
+        return this.LLMPkg;
+    }
+
+    /**
+     * Set 大模型安全信息包
+     * @param LLMPkg 大模型安全信息包
+     */
+    public void setLLMPkg(LLMPkg LLMPkg) {
+        this.LLMPkg = LLMPkg;
+    }
+
+    /**
+     * Get 弹性资源Id 
+     * @return ElasticResourceId 弹性资源Id
+     */
+    public String getElasticResourceId() {
+        return this.ElasticResourceId;
+    }
+
+    /**
+     * Set 弹性资源Id
+     * @param ElasticResourceId 弹性资源Id
+     */
+    public void setElasticResourceId(String ElasticResourceId) {
+        this.ElasticResourceId = ElasticResourceId;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1277,6 +1374,18 @@ public class InstanceInfo extends AbstractModel {
         if (source.NetworkConfig != null) {
             this.NetworkConfig = new NetworkConfig(source.NetworkConfig);
         }
+        if (source.RCEPkg != null) {
+            this.RCEPkg = new RCEPkg(source.RCEPkg);
+        }
+        if (source.ExceedPolicy != null) {
+            this.ExceedPolicy = new Long(source.ExceedPolicy);
+        }
+        if (source.LLMPkg != null) {
+            this.LLMPkg = new LLMPkg(source.LLMPkg);
+        }
+        if (source.ElasticResourceId != null) {
+            this.ElasticResourceId = new String(source.ElasticResourceId);
+        }
     }
 
 
@@ -1330,6 +1439,10 @@ public class InstanceInfo extends AbstractModel {
         this.setParamObj(map, prefix + "MajorEventsProPkg.", this.MajorEventsProPkg);
         this.setParamSimple(map, prefix + "BasicFlag", this.BasicFlag);
         this.setParamObj(map, prefix + "NetworkConfig.", this.NetworkConfig);
+        this.setParamObj(map, prefix + "RCEPkg.", this.RCEPkg);
+        this.setParamSimple(map, prefix + "ExceedPolicy", this.ExceedPolicy);
+        this.setParamObj(map, prefix + "LLMPkg.", this.LLMPkg);
+        this.setParamSimple(map, prefix + "ElasticResourceId", this.ElasticResourceId);
 
     }
 }

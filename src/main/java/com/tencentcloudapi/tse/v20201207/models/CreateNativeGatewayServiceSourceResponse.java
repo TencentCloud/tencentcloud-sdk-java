@@ -31,6 +31,13 @@ public class CreateNativeGatewayServiceSourceResponse extends AbstractModel {
     private Boolean Result;
 
     /**
+    * 服务来源ID
+    */
+    @SerializedName("SourceID")
+    @Expose
+    private String SourceID;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class CreateNativeGatewayServiceSourceResponse extends AbstractModel {
      */
     public void setResult(Boolean Result) {
         this.Result = Result;
+    }
+
+    /**
+     * Get 服务来源ID 
+     * @return SourceID 服务来源ID
+     */
+    public String getSourceID() {
+        return this.SourceID;
+    }
+
+    /**
+     * Set 服务来源ID
+     * @param SourceID 服务来源ID
+     */
+    public void setSourceID(String SourceID) {
+        this.SourceID = SourceID;
     }
 
     /**
@@ -80,6 +103,9 @@ public class CreateNativeGatewayServiceSourceResponse extends AbstractModel {
         if (source.Result != null) {
             this.Result = new Boolean(source.Result);
         }
+        if (source.SourceID != null) {
+            this.SourceID = new String(source.SourceID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class CreateNativeGatewayServiceSourceResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "SourceID", this.SourceID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

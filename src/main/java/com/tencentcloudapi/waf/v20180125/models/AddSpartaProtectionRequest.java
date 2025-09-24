@@ -108,6 +108,44 @@ UpstreamProtocol：与Protocol相同
     private String InstanceID;
 
     /**
+    * 必填项，是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转
+    */
+    @SerializedName("HttpsRewrite")
+    @Expose
+    private Long HttpsRewrite;
+
+    /**
+    * 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启
+    */
+    @SerializedName("IsHttp2")
+    @Expose
+    private Long IsHttp2;
+
+    /**
+    * 必填项，是否开启主动健康检测。
+0：不开启
+1：开启
+    */
+    @SerializedName("ActiveCheck")
+    @Expose
+    private Long ActiveCheck;
+
+    /**
+    * 必填项，加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
+    */
+    @SerializedName("CipherTemplate")
+    @Expose
+    private Long CipherTemplate;
+
+    /**
     * CertType为1时，需要填充此参数，表示自有证书的证书链
     */
     @SerializedName("Cert")
@@ -173,15 +211,6 @@ https：使用https协议回源
     private String [] GrayAreas;
 
     /**
-    * 必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
-    */
-    @SerializedName("HttpsRewrite")
-    @Expose
-    private Long HttpsRewrite;
-
-    /**
     * 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
     */
     @SerializedName("UpstreamDomain")
@@ -194,15 +223,6 @@ https：使用https协议回源
     @SerializedName("SrcList")
     @Expose
     private String [] SrcList;
-
-    /**
-    * 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
-    */
-    @SerializedName("IsHttp2")
-    @Expose
-    private Long IsHttp2;
 
     /**
     * WAF实例类型。
@@ -229,15 +249,6 @@ cdn-waf：CDN上的Web防护能力
     private Long [] Weights;
 
     /**
-    * 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
-    */
-    @SerializedName("ActiveCheck")
-    @Expose
-    private Long ActiveCheck;
-
-    /**
     * TLS版本信息
     */
     @SerializedName("TLSVersion")
@@ -245,22 +256,18 @@ cdn-waf：CDN上的Web防护能力
     private Long TLSVersion;
 
     /**
-    * 必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
-    */
-    @SerializedName("CipherTemplate")
-    @Expose
-    private Long CipherTemplate;
-
-    /**
     * 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
     */
     @SerializedName("Ciphers")
     @Expose
     private Long [] Ciphers;
+
+    /**
+    * WAF与源站的连接超时，默认10s。
+    */
+    @SerializedName("ProxyConnectTimeout")
+    @Expose
+    private Long ProxyConnectTimeout;
 
     /**
     * WAF与源站的读超时时间，默认300s。
@@ -398,6 +405,13 @@ cdn-waf：CDN上的Web防护能力
     @SerializedName("UseCase")
     @Expose
     private Long UseCase;
+
+    /**
+    * gzip开关。0：关闭 1：默认值，打开。
+    */
+    @SerializedName("Gzip")
+    @Expose
+    private Long Gzip;
 
     /**
      * Get 需要防护的域名 
@@ -628,6 +642,110 @@ UpstreamProtocol：与Protocol相同
     }
 
     /**
+     * Get 必填项，是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转 
+     * @return HttpsRewrite 必填项，是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转
+     */
+    public Long getHttpsRewrite() {
+        return this.HttpsRewrite;
+    }
+
+    /**
+     * Set 必填项，是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转
+     * @param HttpsRewrite 必填项，是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转
+     */
+    public void setHttpsRewrite(Long HttpsRewrite) {
+        this.HttpsRewrite = HttpsRewrite;
+    }
+
+    /**
+     * Get 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启 
+     * @return IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启
+     */
+    public Long getIsHttp2() {
+        return this.IsHttp2;
+    }
+
+    /**
+     * Set 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启
+     * @param IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启
+     */
+    public void setIsHttp2(Long IsHttp2) {
+        this.IsHttp2 = IsHttp2;
+    }
+
+    /**
+     * Get 必填项，是否开启主动健康检测。
+0：不开启
+1：开启 
+     * @return ActiveCheck 必填项，是否开启主动健康检测。
+0：不开启
+1：开启
+     */
+    public Long getActiveCheck() {
+        return this.ActiveCheck;
+    }
+
+    /**
+     * Set 必填项，是否开启主动健康检测。
+0：不开启
+1：开启
+     * @param ActiveCheck 必填项，是否开启主动健康检测。
+0：不开启
+1：开启
+     */
+    public void setActiveCheck(Long ActiveCheck) {
+        this.ActiveCheck = ActiveCheck;
+    }
+
+    /**
+     * Get 必填项，加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板 
+     * @return CipherTemplate 必填项，加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
+     */
+    public Long getCipherTemplate() {
+        return this.CipherTemplate;
+    }
+
+    /**
+     * Set 必填项，加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
+     * @param CipherTemplate 必填项，加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
+     */
+    public void setCipherTemplate(Long CipherTemplate) {
+        this.CipherTemplate = CipherTemplate;
+    }
+
+    /**
      * Get CertType为1时，需要填充此参数，表示自有证书的证书链 
      * @return Cert CertType为1时，需要填充此参数，表示自有证书的证书链
      */
@@ -792,30 +910,6 @@ https：使用https协议回源
     }
 
     /**
-     * Get 必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转 
-     * @return HttpsRewrite 必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
-     */
-    public Long getHttpsRewrite() {
-        return this.HttpsRewrite;
-    }
-
-    /**
-     * Set 必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
-     * @param HttpsRewrite 必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
-     */
-    public void setHttpsRewrite(Long HttpsRewrite) {
-        this.HttpsRewrite = HttpsRewrite;
-    }
-
-    /**
      * Get 域名回源时的回源域名。UpstreamType为1时，需要填充此字段 
      * @return UpstreamDomain 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
      */
@@ -845,30 +939,6 @@ https：使用https协议回源
      */
     public void setSrcList(String [] SrcList) {
         this.SrcList = SrcList;
-    }
-
-    /**
-     * Get 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启 
-     * @return IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
-     */
-    public Long getIsHttp2() {
-        return this.IsHttp2;
-    }
-
-    /**
-     * Set 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
-     * @param IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
-     */
-    public void setIsHttp2(Long IsHttp2) {
-        this.IsHttp2 = IsHttp2;
     }
 
     /**
@@ -940,30 +1010,6 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Get 必填项，是否开启主动健康检测。
-0：不开启
-1：开启 
-     * @return ActiveCheck 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
-     */
-    public Long getActiveCheck() {
-        return this.ActiveCheck;
-    }
-
-    /**
-     * Set 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
-     * @param ActiveCheck 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
-     */
-    public void setActiveCheck(Long ActiveCheck) {
-        this.ActiveCheck = ActiveCheck;
-    }
-
-    /**
      * Get TLS版本信息 
      * @return TLSVersion TLS版本信息
      */
@@ -980,38 +1026,6 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Get 必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板 
-     * @return CipherTemplate 必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
-     */
-    public Long getCipherTemplate() {
-        return this.CipherTemplate;
-    }
-
-    /**
-     * Set 必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
-     * @param CipherTemplate 必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
-     */
-    public void setCipherTemplate(Long CipherTemplate) {
-        this.CipherTemplate = CipherTemplate;
-    }
-
-    /**
      * Get 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。 
      * @return Ciphers 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
      */
@@ -1025,6 +1039,22 @@ cdn-waf：CDN上的Web防护能力
      */
     public void setCiphers(Long [] Ciphers) {
         this.Ciphers = Ciphers;
+    }
+
+    /**
+     * Get WAF与源站的连接超时，默认10s。 
+     * @return ProxyConnectTimeout WAF与源站的连接超时，默认10s。
+     */
+    public Long getProxyConnectTimeout() {
+        return this.ProxyConnectTimeout;
+    }
+
+    /**
+     * Set WAF与源站的连接超时，默认10s。
+     * @param ProxyConnectTimeout WAF与源站的连接超时，默认10s。
+     */
+    public void setProxyConnectTimeout(Long ProxyConnectTimeout) {
+        this.ProxyConnectTimeout = ProxyConnectTimeout;
     }
 
     /**
@@ -1347,6 +1377,22 @@ cdn-waf：CDN上的Web防护能力
         this.UseCase = UseCase;
     }
 
+    /**
+     * Get gzip开关。0：关闭 1：默认值，打开。 
+     * @return Gzip gzip开关。0：关闭 1：默认值，打开。
+     */
+    public Long getGzip() {
+        return this.Gzip;
+    }
+
+    /**
+     * Set gzip开关。0：关闭 1：默认值，打开。
+     * @param Gzip gzip开关。0：关闭 1：默认值，打开。
+     */
+    public void setGzip(Long Gzip) {
+        this.Gzip = Gzip;
+    }
+
     public AddSpartaProtectionRequest() {
     }
 
@@ -1385,6 +1431,18 @@ cdn-waf：CDN上的Web防护能力
         if (source.InstanceID != null) {
             this.InstanceID = new String(source.InstanceID);
         }
+        if (source.HttpsRewrite != null) {
+            this.HttpsRewrite = new Long(source.HttpsRewrite);
+        }
+        if (source.IsHttp2 != null) {
+            this.IsHttp2 = new Long(source.IsHttp2);
+        }
+        if (source.ActiveCheck != null) {
+            this.ActiveCheck = new Long(source.ActiveCheck);
+        }
+        if (source.CipherTemplate != null) {
+            this.CipherTemplate = new Long(source.CipherTemplate);
+        }
         if (source.Cert != null) {
             this.Cert = new String(source.Cert);
         }
@@ -1418,9 +1476,6 @@ cdn-waf：CDN上的Web防护能力
                 this.GrayAreas[i] = new String(source.GrayAreas[i]);
             }
         }
-        if (source.HttpsRewrite != null) {
-            this.HttpsRewrite = new Long(source.HttpsRewrite);
-        }
         if (source.UpstreamDomain != null) {
             this.UpstreamDomain = new String(source.UpstreamDomain);
         }
@@ -1429,9 +1484,6 @@ cdn-waf：CDN上的Web防护能力
             for (int i = 0; i < source.SrcList.length; i++) {
                 this.SrcList[i] = new String(source.SrcList[i]);
             }
-        }
-        if (source.IsHttp2 != null) {
-            this.IsHttp2 = new Long(source.IsHttp2);
         }
         if (source.Edition != null) {
             this.Edition = new String(source.Edition);
@@ -1445,20 +1497,17 @@ cdn-waf：CDN上的Web防护能力
                 this.Weights[i] = new Long(source.Weights[i]);
             }
         }
-        if (source.ActiveCheck != null) {
-            this.ActiveCheck = new Long(source.ActiveCheck);
-        }
         if (source.TLSVersion != null) {
             this.TLSVersion = new Long(source.TLSVersion);
-        }
-        if (source.CipherTemplate != null) {
-            this.CipherTemplate = new Long(source.CipherTemplate);
         }
         if (source.Ciphers != null) {
             this.Ciphers = new Long[source.Ciphers.length];
             for (int i = 0; i < source.Ciphers.length; i++) {
                 this.Ciphers[i] = new Long(source.Ciphers[i]);
             }
+        }
+        if (source.ProxyConnectTimeout != null) {
+            this.ProxyConnectTimeout = new Long(source.ProxyConnectTimeout);
         }
         if (source.ProxyReadTimeout != null) {
             this.ProxyReadTimeout = new Long(source.ProxyReadTimeout);
@@ -1520,6 +1569,9 @@ cdn-waf：CDN上的Web防护能力
         if (source.UseCase != null) {
             this.UseCase = new Long(source.UseCase);
         }
+        if (source.Gzip != null) {
+            this.Gzip = new Long(source.Gzip);
+        }
     }
 
 
@@ -1536,6 +1588,10 @@ cdn-waf：CDN上的Web防护能力
         this.setParamArrayObj(map, prefix + "Ports.", this.Ports);
         this.setParamSimple(map, prefix + "IsKeepAlive", this.IsKeepAlive);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamSimple(map, prefix + "HttpsRewrite", this.HttpsRewrite);
+        this.setParamSimple(map, prefix + "IsHttp2", this.IsHttp2);
+        this.setParamSimple(map, prefix + "ActiveCheck", this.ActiveCheck);
+        this.setParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
         this.setParamSimple(map, prefix + "Cert", this.Cert);
         this.setParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
         this.setParamSimple(map, prefix + "SSLId", this.SSLId);
@@ -1545,17 +1601,14 @@ cdn-waf：CDN上的Web防护能力
         this.setParamSimple(map, prefix + "HttpsUpstreamPort", this.HttpsUpstreamPort);
         this.setParamSimple(map, prefix + "IsGray", this.IsGray);
         this.setParamArraySimple(map, prefix + "GrayAreas.", this.GrayAreas);
-        this.setParamSimple(map, prefix + "HttpsRewrite", this.HttpsRewrite);
         this.setParamSimple(map, prefix + "UpstreamDomain", this.UpstreamDomain);
         this.setParamArraySimple(map, prefix + "SrcList.", this.SrcList);
-        this.setParamSimple(map, prefix + "IsHttp2", this.IsHttp2);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "Anycast", this.Anycast);
         this.setParamArraySimple(map, prefix + "Weights.", this.Weights);
-        this.setParamSimple(map, prefix + "ActiveCheck", this.ActiveCheck);
         this.setParamSimple(map, prefix + "TLSVersion", this.TLSVersion);
-        this.setParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
         this.setParamArraySimple(map, prefix + "Ciphers.", this.Ciphers);
+        this.setParamSimple(map, prefix + "ProxyConnectTimeout", this.ProxyConnectTimeout);
         this.setParamSimple(map, prefix + "ProxyReadTimeout", this.ProxyReadTimeout);
         this.setParamSimple(map, prefix + "ProxySendTimeout", this.ProxySendTimeout);
         this.setParamSimple(map, prefix + "SniType", this.SniType);
@@ -1575,6 +1628,7 @@ cdn-waf：CDN上的Web防护能力
         this.setParamSimple(map, prefix + "UpstreamPolicy", this.UpstreamPolicy);
         this.setParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
         this.setParamSimple(map, prefix + "UseCase", this.UseCase);
+        this.setParamSimple(map, prefix + "Gzip", this.Gzip);
 
     }
 }

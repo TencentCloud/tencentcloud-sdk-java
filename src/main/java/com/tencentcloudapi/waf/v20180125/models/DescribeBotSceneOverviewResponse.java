@@ -59,6 +59,13 @@ public class DescribeBotSceneOverviewResponse extends AbstractModel {
     private Long CustomRuleNums;
 
     /**
+    * 图灵盾开关状态
+    */
+    @SerializedName("TldStatus")
+    @Expose
+    private Boolean TldStatus;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +153,22 @@ public class DescribeBotSceneOverviewResponse extends AbstractModel {
     }
 
     /**
+     * Get 图灵盾开关状态 
+     * @return TldStatus 图灵盾开关状态
+     */
+    public Boolean getTldStatus() {
+        return this.TldStatus;
+    }
+
+    /**
+     * Set 图灵盾开关状态
+     * @param TldStatus 图灵盾开关状态
+     */
+    public void setTldStatus(Boolean TldStatus) {
+        this.TldStatus = TldStatus;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -184,6 +207,9 @@ public class DescribeBotSceneOverviewResponse extends AbstractModel {
         if (source.CustomRuleNums != null) {
             this.CustomRuleNums = new Long(source.CustomRuleNums);
         }
+        if (source.TldStatus != null) {
+            this.TldStatus = new Boolean(source.TldStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -199,6 +225,7 @@ public class DescribeBotSceneOverviewResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ValidSceneCount", this.ValidSceneCount);
         this.setParamObj(map, prefix + "CurrentGlobalScene.", this.CurrentGlobalScene);
         this.setParamSimple(map, prefix + "CustomRuleNums", this.CustomRuleNums);
+        this.setParamSimple(map, prefix + "TldStatus", this.TldStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

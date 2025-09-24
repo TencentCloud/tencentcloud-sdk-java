@@ -31,18 +31,18 @@ public class DeleteSpartaProtectionRequest extends AbstractModel {
     private String [] Domains;
 
     /**
-    * 实例类型
-    */
-    @SerializedName("Edition")
-    @Expose
-    private String Edition;
-
-    /**
     * 必填项。域名所属实例ID
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
+
+    /**
+    * 实例类型
+    */
+    @SerializedName("Edition")
+    @Expose
+    private String Edition;
 
     /**
      * Get 域名列表 
@@ -61,22 +61,6 @@ public class DeleteSpartaProtectionRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例类型 
-     * @return Edition 实例类型
-     */
-    public String getEdition() {
-        return this.Edition;
-    }
-
-    /**
-     * Set 实例类型
-     * @param Edition 实例类型
-     */
-    public void setEdition(String Edition) {
-        this.Edition = Edition;
-    }
-
-    /**
      * Get 必填项。域名所属实例ID 
      * @return InstanceID 必填项。域名所属实例ID
      */
@@ -90,6 +74,22 @@ public class DeleteSpartaProtectionRequest extends AbstractModel {
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
+    }
+
+    /**
+     * Get 实例类型 
+     * @return Edition 实例类型
+     */
+    public String getEdition() {
+        return this.Edition;
+    }
+
+    /**
+     * Set 实例类型
+     * @param Edition 实例类型
+     */
+    public void setEdition(String Edition) {
+        this.Edition = Edition;
     }
 
     public DeleteSpartaProtectionRequest() {
@@ -106,11 +106,11 @@ public class DeleteSpartaProtectionRequest extends AbstractModel {
                 this.Domains[i] = new String(source.Domains[i]);
             }
         }
-        if (source.Edition != null) {
-            this.Edition = new String(source.Edition);
-        }
         if (source.InstanceID != null) {
             this.InstanceID = new String(source.InstanceID);
+        }
+        if (source.Edition != null) {
+            this.Edition = new String(source.Edition);
         }
     }
 
@@ -120,8 +120,8 @@ public class DeleteSpartaProtectionRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
-        this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamSimple(map, prefix + "Edition", this.Edition);
 
     }
 }

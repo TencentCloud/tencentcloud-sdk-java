@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class Auth extends AbstractModel {
 
     /**
-    * 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+    * 当前账号具有的权限信息。
+- 0：无权限。
+- 1：只读。
+- 3：读写。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mask")
@@ -33,7 +36,8 @@ public class Auth extends AbstractModel {
 
     /**
     * 指具有当前账号权限的数据库名。
-<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+- \* ：表示所有数据库。
+- db.name：表示特定 name 的数据库。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NameSpace")
@@ -41,9 +45,15 @@ public class Auth extends AbstractModel {
     private String NameSpace;
 
     /**
-     * Get 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+     * Get 当前账号具有的权限信息。
+- 0：无权限。
+- 1：只读。
+- 3：读写。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mask 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+     * @return Mask 当前账号具有的权限信息。
+- 0：无权限。
+- 1：只读。
+- 3：读写。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMask() {
@@ -51,9 +61,15 @@ public class Auth extends AbstractModel {
     }
 
     /**
-     * Set 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+     * Set 当前账号具有的权限信息。
+- 0：无权限。
+- 1：只读。
+- 3：读写。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mask 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+     * @param Mask 当前账号具有的权限信息。
+- 0：无权限。
+- 1：只读。
+- 3：读写。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMask(Long Mask) {
@@ -62,10 +78,12 @@ public class Auth extends AbstractModel {
 
     /**
      * Get 指具有当前账号权限的数据库名。
-<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+- \* ：表示所有数据库。
+- db.name：表示特定 name 的数据库。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NameSpace 指具有当前账号权限的数据库名。
-<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+- \* ：表示所有数据库。
+- db.name：表示特定 name 的数据库。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNameSpace() {
@@ -74,10 +92,12 @@ public class Auth extends AbstractModel {
 
     /**
      * Set 指具有当前账号权限的数据库名。
-<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+- \* ：表示所有数据库。
+- db.name：表示特定 name 的数据库。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NameSpace 指具有当前账号权限的数据库名。
-<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+- \* ：表示所有数据库。
+- db.name：表示特定 name 的数据库。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNameSpace(String NameSpace) {

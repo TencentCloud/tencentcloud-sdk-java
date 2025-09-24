@@ -265,6 +265,8 @@ public class InstanceSet extends AbstractModel {
 
     /**
     * 从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。
     */
     @SerializedName("SlaveReadWeight")
     @Expose
@@ -1048,8 +1050,12 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
-     * Get 从节点读取权重。 
+     * Get 从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。 
      * @return SlaveReadWeight 从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。
      */
     public Long getSlaveReadWeight() {
         return this.SlaveReadWeight;
@@ -1057,7 +1063,11 @@ public class InstanceSet extends AbstractModel {
 
     /**
      * Set 从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。
      * @param SlaveReadWeight 从节点读取权重。
+- 0：表示关闭副本只读。
+- 100：表示开启副本只读。
      */
     public void setSlaveReadWeight(Long SlaveReadWeight) {
         this.SlaveReadWeight = SlaveReadWeight;

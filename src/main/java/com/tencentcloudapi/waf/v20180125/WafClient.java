@@ -1603,7 +1603,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *更改某一条规则
+     *修改域名规则白名单
      * @param req ModifyDomainWhiteRuleRequest
      * @return ModifyDomainWhiteRuleResponse
      * @throws TencentCloudSDKException

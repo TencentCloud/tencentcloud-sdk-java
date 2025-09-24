@@ -171,6 +171,13 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
     private String LogicalOp;
 
     /**
+    * 规则灰度的比例，默认是100，不灰度
+    */
+    @SerializedName("ActionRatio")
+    @Expose
+    private Long ActionRatio;
+
+    /**
      * Get 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验 
      * @return ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      */
@@ -506,6 +513,22 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         this.LogicalOp = LogicalOp;
     }
 
+    /**
+     * Get 规则灰度的比例，默认是100，不灰度 
+     * @return ActionRatio 规则灰度的比例，默认是100，不灰度
+     */
+    public Long getActionRatio() {
+        return this.ActionRatio;
+    }
+
+    /**
+     * Set 规则灰度的比例，默认是100，不灰度
+     * @param ActionRatio 规则灰度的比例，默认是100，不灰度
+     */
+    public void setActionRatio(Long ActionRatio) {
+        this.ActionRatio = ActionRatio;
+    }
+
     public DescribeCustomRulesRspRuleListItem() {
     }
 
@@ -580,6 +603,9 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         if (source.LogicalOp != null) {
             this.LogicalOp = new String(source.LogicalOp);
         }
+        if (source.ActionRatio != null) {
+            this.ActionRatio = new Long(source.ActionRatio);
+        }
     }
 
 
@@ -608,6 +634,7 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "PageId", this.PageId);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
+        this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResetDBInstancePasswordResponse extends AbstractModel {
 
     /**
-    * 异步请求Id，用户查询该流程的运行状态
+    * 任务请求 ID。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class ResetDBInstancePasswordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步请求Id，用户查询该流程的运行状态 
-     * @return AsyncRequestId 异步请求Id，用户查询该流程的运行状态
+     * Get 任务请求 ID。 
+     * @return AsyncRequestId 任务请求 ID。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 异步请求Id，用户查询该流程的运行状态
-     * @param AsyncRequestId 异步请求Id，用户查询该流程的运行状态
+     * Set 任务请求 ID。
+     * @param AsyncRequestId 任务请求 ID。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

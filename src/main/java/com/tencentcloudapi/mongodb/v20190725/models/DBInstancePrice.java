@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DBInstancePrice extends AbstractModel {
 
     /**
-    * 单价
+    * 实例单价。单位：元。
     */
     @SerializedName("UnitPrice")
     @Expose
     private Float UnitPrice;
 
     /**
-    * 原价
+    * 实例原价。单位：元。
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * 折扣价
+    * 实例折扣价。单位：元。
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-     * Get 单价 
-     * @return UnitPrice 单价
+     * Get 实例单价。单位：元。 
+     * @return UnitPrice 实例单价。单位：元。
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set 单价
-     * @param UnitPrice 单价
+     * Set 实例单价。单位：元。
+     * @param UnitPrice 实例单价。单位：元。
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get 原价 
-     * @return OriginalPrice 原价
+     * Get 实例原价。单位：元。 
+     * @return OriginalPrice 实例原价。单位：元。
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 原价
-     * @param OriginalPrice 原价
+     * Set 实例原价。单位：元。
+     * @param OriginalPrice 实例原价。单位：元。
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 折扣价 
-     * @return DiscountPrice 折扣价
+     * Get 实例折扣价。单位：元。 
+     * @return DiscountPrice 实例折扣价。单位：元。
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set 折扣价
-     * @param DiscountPrice 折扣价
+     * Set 实例折扣价。单位：元。
+     * @param DiscountPrice 实例折扣价。单位：元。
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;

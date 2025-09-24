@@ -45,6 +45,13 @@ public class DescribeNativeGatewayServiceSourcesRequest extends AbstractModel {
     private Long Offset;
 
     /**
+    * 服务来源ID
+    */
+    @SerializedName("SourceID")
+    @Expose
+    private String SourceID;
+
+    /**
     * 服务来源实例名称，模糊搜索
     */
     @SerializedName("SourceName")
@@ -118,6 +125,22 @@ public class DescribeNativeGatewayServiceSourcesRequest extends AbstractModel {
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get 服务来源ID 
+     * @return SourceID 服务来源ID
+     */
+    public String getSourceID() {
+        return this.SourceID;
+    }
+
+    /**
+     * Set 服务来源ID
+     * @param SourceID 服务来源ID
+     */
+    public void setSourceID(String SourceID) {
+        this.SourceID = SourceID;
     }
 
     /**
@@ -201,6 +224,9 @@ public class DescribeNativeGatewayServiceSourcesRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.SourceID != null) {
+            this.SourceID = new String(source.SourceID);
+        }
         if (source.SourceName != null) {
             this.SourceName = new String(source.SourceName);
         }
@@ -226,6 +252,7 @@ public class DescribeNativeGatewayServiceSourcesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GatewayID", this.GatewayID);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "SourceID", this.SourceID);
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
         this.setParamArraySimple(map, prefix + "SourceTypes.", this.SourceTypes);
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);

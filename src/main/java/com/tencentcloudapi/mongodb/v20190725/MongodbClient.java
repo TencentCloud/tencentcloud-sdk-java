@@ -551,7 +551,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *修改实例用户的密码
+     *本接口（ResetDBInstancePassword）用于重置实例访问密码。
      * @param req ResetDBInstancePasswordRequest
      * @return ResetDBInstancePasswordResponse
      * @throws TencentCloudSDKException

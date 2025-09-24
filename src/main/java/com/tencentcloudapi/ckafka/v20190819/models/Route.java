@@ -42,7 +42,7 @@ public class Route extends AbstractModel {
     private Long RouteId;
 
     /**
-    * vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
+    * 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
     */
     @SerializedName("VipType")
     @Expose
@@ -166,16 +166,16 @@ public class Route extends AbstractModel {
     }
 
     /**
-     * Get vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境） 
-     * @return VipType vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
+     * Get 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由) 
+     * @return VipType 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
      */
     public Long getVipType() {
         return this.VipType;
     }
 
     /**
-     * Set vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
-     * @param VipType vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(idc 环境) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(cvm 环境）
+     * Set 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
+     * @param VipType 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
      */
     public void setVipType(Long VipType) {
         this.VipType = VipType;

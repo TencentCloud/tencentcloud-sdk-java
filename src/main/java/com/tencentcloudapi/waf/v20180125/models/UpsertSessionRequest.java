@@ -94,6 +94,13 @@ public class UpsertSessionRequest extends AbstractModel {
     private Long SessionID;
 
     /**
+    * 精准匹配时配置的key
+    */
+    @SerializedName("Key")
+    @Expose
+    private String Key;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -253,6 +260,22 @@ public class UpsertSessionRequest extends AbstractModel {
         this.SessionID = SessionID;
     }
 
+    /**
+     * Get 精准匹配时配置的key 
+     * @return Key 精准匹配时配置的key
+     */
+    public String getKey() {
+        return this.Key;
+    }
+
+    /**
+     * Set 精准匹配时配置的key
+     * @param Key 精准匹配时配置的key
+     */
+    public void setKey(String Key) {
+        this.Key = Key;
+    }
+
     public UpsertSessionRequest() {
     }
 
@@ -291,6 +314,9 @@ public class UpsertSessionRequest extends AbstractModel {
         if (source.SessionID != null) {
             this.SessionID = new Long(source.SessionID);
         }
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class UpsertSessionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "SessionName", this.SessionName);
         this.setParamSimple(map, prefix + "SessionID", this.SessionID);
+        this.setParamSimple(map, prefix + "Key", this.Key);
 
     }
 }

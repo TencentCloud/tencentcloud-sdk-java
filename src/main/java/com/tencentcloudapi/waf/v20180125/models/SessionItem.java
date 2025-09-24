@@ -101,6 +101,13 @@ public class SessionItem extends AbstractModel {
     private Long [] RelatedRuleID;
 
     /**
+    * 精准匹配时，配置的key
+    */
+    @SerializedName("Key")
+    @Expose
+    private String Key;
+
+    /**
      * Get 匹配类型 
      * @return Category 匹配类型
      */
@@ -276,6 +283,22 @@ public class SessionItem extends AbstractModel {
         this.RelatedRuleID = RelatedRuleID;
     }
 
+    /**
+     * Get 精准匹配时，配置的key 
+     * @return Key 精准匹配时，配置的key
+     */
+    public String getKey() {
+        return this.Key;
+    }
+
+    /**
+     * Set 精准匹配时，配置的key
+     * @param Key 精准匹配时，配置的key
+     */
+    public void setKey(String Key) {
+        this.Key = Key;
+    }
+
     public SessionItem() {
     }
 
@@ -320,6 +343,9 @@ public class SessionItem extends AbstractModel {
                 this.RelatedRuleID[i] = new Long(source.RelatedRuleID[i]);
             }
         }
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class SessionItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionName", this.SessionName);
         this.setParamSimple(map, prefix + "SessionInUsed", this.SessionInUsed);
         this.setParamArraySimple(map, prefix + "RelatedRuleID.", this.RelatedRuleID);
+        this.setParamSimple(map, prefix + "Key", this.Key);
 
     }
 }

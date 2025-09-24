@@ -244,6 +244,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *创建自定义智能擦除模板
+     * @param req CreateSmartEraseTemplateRequest
+     * @return CreateSmartEraseTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSmartEraseTemplateResponse CreateSmartEraseTemplate(CreateSmartEraseTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSmartEraseTemplate", CreateSmartEraseTemplateResponse.class);
+    }
+
+    /**
      *创建自定义智能字幕模板
      * @param req CreateSmartSubtitleTemplateRequest
      * @return CreateSmartSubtitleTemplateResponse
@@ -530,6 +541,17 @@ public class MpsClient extends AbstractClient{
     public DeleteScheduleResponse DeleteSchedule(DeleteScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSchedule", DeleteScheduleResponse.class);
+    }
+
+    /**
+     *删除用户自定义智能擦除模板。
+     * @param req DeleteSmartEraseTemplateRequest
+     * @return DeleteSmartEraseTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSmartEraseTemplateResponse DeleteSmartEraseTemplate(DeleteSmartEraseTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSmartEraseTemplate", DeleteSmartEraseTemplateResponse.class);
     }
 
     /**
@@ -827,6 +849,17 @@ public class MpsClient extends AbstractClient{
     public DescribeSchedulesResponse DescribeSchedules(DescribeSchedulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSchedules", DescribeSchedulesResponse.class);
+    }
+
+    /**
+     *根据智能擦除模板唯一标识，获取智能擦除模板详情列表。返回结果包含符合条件的所有用户自定义智能擦除模板及系统预置智能擦除模板
+     * @param req DescribeSmartEraseTemplatesRequest
+     * @return DescribeSmartEraseTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSmartEraseTemplatesResponse DescribeSmartEraseTemplates(DescribeSmartEraseTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSmartEraseTemplates", DescribeSmartEraseTemplatesResponse.class);
     }
 
     /**
@@ -1316,6 +1349,17 @@ public class MpsClient extends AbstractClient{
     public ModifyScheduleResponse ModifySchedule(ModifyScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySchedule", ModifyScheduleResponse.class);
+    }
+
+    /**
+     *修改用户自定义智能擦除模板。
+     * @param req ModifySmartEraseTemplateRequest
+     * @return ModifySmartEraseTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySmartEraseTemplateResponse ModifySmartEraseTemplate(ModifySmartEraseTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySmartEraseTemplate", ModifySmartEraseTemplateResponse.class);
     }
 
     /**

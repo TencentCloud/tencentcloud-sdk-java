@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lke.v20231130.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAgentResponse extends AbstractModel {
+public class CreateSmartEraseTemplateResponse extends AbstractModel {
 
     /**
-    * 修改的AgentId
+    * 智能擦除模板唯一标识
     */
-    @SerializedName("AgentId")
+    @SerializedName("Definition")
     @Expose
-    private String AgentId;
+    private Long Definition;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class ModifyAgentResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 修改的AgentId 
-     * @return AgentId 修改的AgentId
+     * Get 智能擦除模板唯一标识 
+     * @return Definition 智能擦除模板唯一标识
      */
-    public String getAgentId() {
-        return this.AgentId;
+    public Long getDefinition() {
+        return this.Definition;
     }
 
     /**
-     * Set 修改的AgentId
-     * @param AgentId 修改的AgentId
+     * Set 智能擦除模板唯一标识
+     * @param Definition 智能擦除模板唯一标识
      */
-    public void setAgentId(String AgentId) {
-        this.AgentId = AgentId;
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
     }
 
     /**
@@ -69,16 +69,16 @@ public class ModifyAgentResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ModifyAgentResponse() {
+    public CreateSmartEraseTemplateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyAgentResponse(ModifyAgentResponse source) {
-        if (source.AgentId != null) {
-            this.AgentId = new String(source.AgentId);
+    public CreateSmartEraseTemplateResponse(CreateSmartEraseTemplateResponse source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class ModifyAgentResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AgentId", this.AgentId);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

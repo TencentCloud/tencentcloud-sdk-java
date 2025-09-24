@@ -25,6 +25,7 @@ public class ModifyRoomRequest extends AbstractModel {
 
     /**
     * 房间ID。
+字符数不超过256
     */
     @SerializedName("RoomId")
     @Expose
@@ -232,7 +233,9 @@ video 纯视频
     private Long WhiteBoardSnapshotMode;
 
     /**
-    * 字幕转写功能开关：0关闭，1开启，默认关闭
+    * 字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
     */
     @SerializedName("SubtitlesTranscription")
     @Expose
@@ -253,8 +256,10 @@ video 纯视频
     private Long RecordMerge;
 
     /**
-     * Get 房间ID。 
+     * Get 房间ID。
+字符数不超过256 
      * @return RoomId 房间ID。
+字符数不超过256
      */
     public Long getRoomId() {
         return this.RoomId;
@@ -262,7 +267,9 @@ video 纯视频
 
     /**
      * Set 房间ID。
+字符数不超过256
      * @param RoomId 房间ID。
+字符数不超过256
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;
@@ -765,16 +772,24 @@ video 纯视频
     }
 
     /**
-     * Get 字幕转写功能开关：0关闭，1开启，默认关闭 
-     * @return SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     * Get 字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止 
+     * @return SubtitlesTranscription 字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
      */
     public Long getSubtitlesTranscription() {
         return this.SubtitlesTranscription;
     }
 
     /**
-     * Set 字幕转写功能开关：0关闭，1开启，默认关闭
-     * @param SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     * Set 字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
+     * @param SubtitlesTranscription 字幕转写功能开关。可以有以下取值：
+0 不开启字幕转写功能（默认值）
+1 自动转写模式：上课自动开启，下课自动停止
      */
     public void setSubtitlesTranscription(Long SubtitlesTranscription) {
         this.SubtitlesTranscription = SubtitlesTranscription;
