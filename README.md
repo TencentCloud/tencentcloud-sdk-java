@@ -57,7 +57,7 @@
 ```
 
 ## 通过源码包安装
-1. 前往 [Github 仓库](https://github.com/tencentcloud/tencentcloud-sdk-java) 或者 [Gitee 仓库](https://gitee.com/tencentcloud/tencentcloud-sdk-java) 下载源码压缩包；
+1. 前往 [CNB](https://cnb.cool/tencent/cloud/api/sdk/tencentcloud-sdk-java)、[Github](https://github.com/tencentcloud/tencentcloud-sdk-java) 或者 [Gitee](https://gitee.com/tencentcloud/tencentcloud-sdk-java) 下载源码压缩包；
 2. 解压源码包到您项目合适的位置；
 3. 需要将vendor目录下的jar包放在java的可找到的路径中；
 4. 引用方法可参考示例。
