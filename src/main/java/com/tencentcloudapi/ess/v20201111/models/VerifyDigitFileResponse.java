@@ -38,7 +38,7 @@ public class VerifyDigitFileResponse extends AbstractModel {
     private Long VerifyResult;
 
     /**
-    * 验签序列号, 为11为数组组成的字符串
+    * 验签序列号, 为11位数字组成的字符串
     */
     @SerializedName("VerifySerialNo")
     @Expose
@@ -91,16 +91,16 @@ public class VerifyDigitFileResponse extends AbstractModel {
     }
 
     /**
-     * Get 验签序列号, 为11为数组组成的字符串 
-     * @return VerifySerialNo 验签序列号, 为11为数组组成的字符串
+     * Get 验签序列号, 为11位数字组成的字符串 
+     * @return VerifySerialNo 验签序列号, 为11位数字组成的字符串
      */
     public String getVerifySerialNo() {
         return this.VerifySerialNo;
     }
 
     /**
-     * Set 验签序列号, 为11为数组组成的字符串
-     * @param VerifySerialNo 验签序列号, 为11为数组组成的字符串
+     * Set 验签序列号, 为11位数字组成的字符串
+     * @param VerifySerialNo 验签序列号, 为11位数字组成的字符串
      */
     public void setVerifySerialNo(String VerifySerialNo) {
         this.VerifySerialNo = VerifySerialNo;

@@ -47,6 +47,13 @@ public class TranslationConfig extends AbstractModel {
     private TTSConfig TTSConfig;
 
     /**
+    * 翻译术语集合
+    */
+    @SerializedName("Terminology")
+    @Expose
+    private Terminology [] Terminology;
+
+    /**
      * Get 翻译的目标语言，目标语种列表（ISO 639-1）
  
      * @return TargetLanguages 翻译的目标语言，目标语种列表（ISO 639-1）
@@ -102,6 +109,22 @@ public class TranslationConfig extends AbstractModel {
         this.TTSConfig = TTSConfig;
     }
 
+    /**
+     * Get 翻译术语集合 
+     * @return Terminology 翻译术语集合
+     */
+    public Terminology [] getTerminology() {
+        return this.Terminology;
+    }
+
+    /**
+     * Set 翻译术语集合
+     * @param Terminology 翻译术语集合
+     */
+    public void setTerminology(Terminology [] Terminology) {
+        this.Terminology = Terminology;
+    }
+
     public TranslationConfig() {
     }
 
@@ -122,6 +145,12 @@ public class TranslationConfig extends AbstractModel {
         if (source.TTSConfig != null) {
             this.TTSConfig = new TTSConfig(source.TTSConfig);
         }
+        if (source.Terminology != null) {
+            this.Terminology = new Terminology[source.Terminology.length];
+            for (int i = 0; i < source.Terminology.length; i++) {
+                this.Terminology[i] = new Terminology(source.Terminology[i]);
+            }
+        }
     }
 
 
@@ -132,6 +161,7 @@ public class TranslationConfig extends AbstractModel {
         this.setParamArraySimple(map, prefix + "TargetLanguages.", this.TargetLanguages);
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamObj(map, prefix + "TTSConfig.", this.TTSConfig);
+        this.setParamArrayObj(map, prefix + "Terminology.", this.Terminology);
 
     }
 }

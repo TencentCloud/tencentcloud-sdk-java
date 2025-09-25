@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class GetEmbeddingRequest extends AbstractModel {
 
     /**
-    * 说明：选择生成向量的模型
-备注：仅一个模型可选
+    * 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
     */
     @SerializedName("Model")
     @Expose
@@ -54,20 +53,16 @@ public class GetEmbeddingRequest extends AbstractModel {
     private String Instruction;
 
     /**
-     * Get 说明：选择生成向量的模型
-备注：仅一个模型可选 
-     * @return Model 说明：选择生成向量的模型
-备注：仅一个模型可选
+     * Get 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2] 
+     * @return Model 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 说明：选择生成向量的模型
-备注：仅一个模型可选
-     * @param Model 说明：选择生成向量的模型
-备注：仅一个模型可选
+     * Set 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
+     * @param Model 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
      */
     public void setModel(String Model) {
         this.Model = Model;

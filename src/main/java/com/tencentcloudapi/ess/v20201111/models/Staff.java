@@ -39,7 +39,7 @@ public class Staff extends AbstractModel {
     private String DisplayName;
 
     /**
-    * 用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+    * 用户手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
     */
     @SerializedName("Mobile")
     @Expose
@@ -169,16 +169,16 @@ public class Staff extends AbstractModel {
     }
 
     /**
-     * Get 用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 
-     * @return Mobile 用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * Get 用户手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 
+     * @return Mobile 用户手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
-     * @param Mobile 用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * Set 用户手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
+     * @param Mobile 用户手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;

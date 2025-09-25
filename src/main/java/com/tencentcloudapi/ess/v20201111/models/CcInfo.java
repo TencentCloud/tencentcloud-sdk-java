@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CcInfo extends AbstractModel {
 
     /**
-    * 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+    * 被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
     */
     @SerializedName("Mobile")
@@ -67,9 +67,9 @@ public class CcInfo extends AbstractModel {
     private String NotifyType;
 
     /**
-     * Get 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * Get 被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。 
-     * @return Mobile 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * @return Mobile 被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
      */
     public String getMobile() {
@@ -77,9 +77,9 @@ public class CcInfo extends AbstractModel {
     }
 
     /**
-     * Set 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * Set 被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
-     * @param Mobile 被抄送方手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * @param Mobile 被抄送方手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
      */
     public void setMobile(String Mobile) {

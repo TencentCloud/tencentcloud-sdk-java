@@ -94,7 +94,7 @@ public class DescribeGroupsRequest extends AbstractModel {
     private String Status;
 
     /**
-    * 无
+    * 部署组ID列表
     */
     @SerializedName("GroupIdList")
     @Expose
@@ -261,16 +261,16 @@ public class DescribeGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return GroupIdList 无
+     * Get 部署组ID列表 
+     * @return GroupIdList 部署组ID列表
      */
     public String [] getGroupIdList() {
         return this.GroupIdList;
     }
 
     /**
-     * Set 无
-     * @param GroupIdList 无
+     * Set 部署组ID列表
+     * @param GroupIdList 部署组ID列表
      */
     public void setGroupIdList(String [] GroupIdList) {
         this.GroupIdList = GroupIdList;

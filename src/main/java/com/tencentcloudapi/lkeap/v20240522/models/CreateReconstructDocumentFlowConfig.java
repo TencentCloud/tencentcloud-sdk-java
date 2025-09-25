@@ -39,8 +39,10 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
+4：返回全文MD + 每一页的MD
+5: 返回全文md，每一页ocr原始json，每一页md
 默认值为0
+
     */
     @SerializedName("ResultType")
     @Expose
@@ -87,15 +89,19 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
-默认值为0 
+4：返回全文MD + 每一页的MD
+5: 返回全文md，每一页ocr原始json，每一页md
+默认值为0
+ 
      * @return ResultType 智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
+4：返回全文MD + 每一页的MD
+5: 返回全文md，每一页ocr原始json，每一页md
 默认值为0
+
      */
     public String getResultType() {
         return this.ResultType;
@@ -107,15 +113,19 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
+4：返回全文MD + 每一页的MD
+5: 返回全文md，每一页ocr原始json，每一页md
 默认值为0
+
      * @param ResultType 智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
 2：只返回每一页的MD，
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
+4：返回全文MD + 每一页的MD
+5: 返回全文md，每一页ocr原始json，每一页md
 默认值为0
+
      */
     public void setResultType(String ResultType) {
         this.ResultType = ResultType;

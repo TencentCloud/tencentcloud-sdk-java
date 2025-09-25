@@ -15,6 +15,9 @@ public enum TsfErrorCode {
      /* TSF应用性能管理调用tsf-dcfg模块失败 */
      FAILEDOPERATION_CALLTSFDCFGFAILED("FailedOperation.CallTsfDcfgFailed"),
      
+     /* TSF云API调用申请角色临时凭证调用请求失败 */
+     FAILEDOPERATION_CAMROLEREQUESTERROR("FailedOperation.CamRoleRequestError"),
+     
      /* 调用CDI状态接口失败 */
      FAILEDOPERATION_CDISTATUSFAILED("FailedOperation.CdiStatusFailed"),
      

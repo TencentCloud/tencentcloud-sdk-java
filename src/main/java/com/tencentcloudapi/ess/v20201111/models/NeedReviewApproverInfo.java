@@ -40,7 +40,7 @@ public class NeedReviewApproverInfo extends AbstractModel {
     private String ApproverName;
 
     /**
-    * 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
+    * 签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
     */
     @SerializedName("ApproverMobile")
     @Expose
@@ -121,16 +121,16 @@ public class NeedReviewApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。 
-     * @return ApproverMobile 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
+     * Get 签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。 
+     * @return ApproverMobile 签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
      */
     public String getApproverMobile() {
         return this.ApproverMobile;
     }
 
     /**
-     * Set 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
-     * @param ApproverMobile 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
+     * Set 签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
+     * @param ApproverMobile 签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。 请确认手机号所有方为此合同签署方。
      */
     public void setApproverMobile(String ApproverMobile) {
         this.ApproverMobile = ApproverMobile;

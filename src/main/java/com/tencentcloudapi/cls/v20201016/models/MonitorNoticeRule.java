@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class MonitorNoticeRule extends AbstractModel {
 
     /**
-    * 云监控通知模版ID
+    * 腾讯云可观测平台通知模板 ID
     */
     @SerializedName("NoticeId")
     @Expose
     private String NoticeId;
 
     /**
-    * 云监控内容模版ID，不传默认内容模版
+    * 腾讯云可观测平台内容模板ID，不传默认内容模板
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContentTmplId")
@@ -46,25 +46,25 @@ public class MonitorNoticeRule extends AbstractModel {
     private Long [] AlarmLevels;
 
     /**
-     * Get 云监控通知模版ID 
-     * @return NoticeId 云监控通知模版ID
+     * Get 腾讯云可观测平台通知模板 ID 
+     * @return NoticeId 腾讯云可观测平台通知模板 ID
      */
     public String getNoticeId() {
         return this.NoticeId;
     }
 
     /**
-     * Set 云监控通知模版ID
-     * @param NoticeId 云监控通知模版ID
+     * Set 腾讯云可观测平台通知模板 ID
+     * @param NoticeId 腾讯云可观测平台通知模板 ID
      */
     public void setNoticeId(String NoticeId) {
         this.NoticeId = NoticeId;
     }
 
     /**
-     * Get 云监控内容模版ID，不传默认内容模版
+     * Get 腾讯云可观测平台内容模板ID，不传默认内容模板
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContentTmplId 云监控内容模版ID，不传默认内容模版
+     * @return ContentTmplId 腾讯云可观测平台内容模板ID，不传默认内容模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContentTmplId() {
@@ -72,9 +72,9 @@ public class MonitorNoticeRule extends AbstractModel {
     }
 
     /**
-     * Set 云监控内容模版ID，不传默认内容模版
+     * Set 腾讯云可观测平台内容模板ID，不传默认内容模板
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContentTmplId 云监控内容模版ID，不传默认内容模版
+     * @param ContentTmplId 腾讯云可观测平台内容模板ID，不传默认内容模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContentTmplId(String ContentTmplId) {

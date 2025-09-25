@@ -108,38 +108,28 @@ UpstreamProtocol：与Protocol相同
     private String InstanceID;
 
     /**
-    * 必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
+    * 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
     */
     @SerializedName("HttpsRewrite")
     @Expose
     private Long HttpsRewrite;
 
     /**
-    * 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
+    * 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
     */
     @SerializedName("IsHttp2")
     @Expose
     private Long IsHttp2;
 
     /**
-    * 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
+    * 是否开启主动健康检测。0：不开启1：开启
     */
     @SerializedName("ActiveCheck")
     @Expose
     private Long ActiveCheck;
 
     /**
-    * 必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
+    * 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
     */
     @SerializedName("CipherTemplate")
     @Expose
@@ -642,104 +632,64 @@ UpstreamProtocol：与Protocol相同
     }
 
     /**
-     * Get 必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转 
-     * @return HttpsRewrite 必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
+     * Get 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转 
+     * @return HttpsRewrite 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
      */
     public Long getHttpsRewrite() {
         return this.HttpsRewrite;
     }
 
     /**
-     * Set 必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
-     * @param HttpsRewrite 必填项，是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
+     * Set 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
+     * @param HttpsRewrite 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
      */
     public void setHttpsRewrite(Long HttpsRewrite) {
         this.HttpsRewrite = HttpsRewrite;
     }
 
     /**
-     * Get 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启 
-     * @return IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
+     * Get 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启 
+     * @return IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
      */
     public Long getIsHttp2() {
         return this.IsHttp2;
     }
 
     /**
-     * Set 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
-     * @param IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
+     * Set 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
+     * @param IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
      */
     public void setIsHttp2(Long IsHttp2) {
         this.IsHttp2 = IsHttp2;
     }
 
     /**
-     * Get 必填项，是否开启主动健康检测。
-0：不开启
-1：开启 
-     * @return ActiveCheck 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
+     * Get 是否开启主动健康检测。0：不开启1：开启 
+     * @return ActiveCheck 是否开启主动健康检测。0：不开启1：开启
      */
     public Long getActiveCheck() {
         return this.ActiveCheck;
     }
 
     /**
-     * Set 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
-     * @param ActiveCheck 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
+     * Set 是否开启主动健康检测。0：不开启1：开启
+     * @param ActiveCheck 是否开启主动健康检测。0：不开启1：开启
      */
     public void setActiveCheck(Long ActiveCheck) {
         this.ActiveCheck = ActiveCheck;
     }
 
     /**
-     * Get 必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板 
-     * @return CipherTemplate 必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
+     * Get 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板 
+     * @return CipherTemplate 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
      */
     public Long getCipherTemplate() {
         return this.CipherTemplate;
     }
 
     /**
-     * Set 必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
-     * @param CipherTemplate 必填项，加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
+     * Set 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
+     * @param CipherTemplate 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
      */
     public void setCipherTemplate(Long CipherTemplate) {
         this.CipherTemplate = CipherTemplate;

@@ -25,7 +25,6 @@ public class ModifyRoomRequest extends AbstractModel {
 
     /**
     * 房间ID。
-字符数不超过256
     */
     @SerializedName("RoomId")
     @Expose
@@ -61,6 +60,7 @@ public class ModifyRoomRequest extends AbstractModel {
 
     /**
     * 房间名称。
+字符数不超过256
     */
     @SerializedName("Name")
     @Expose
@@ -256,10 +256,8 @@ video 纯视频
     private Long RecordMerge;
 
     /**
-     * Get 房间ID。
-字符数不超过256 
+     * Get 房间ID。 
      * @return RoomId 房间ID。
-字符数不超过256
      */
     public Long getRoomId() {
         return this.RoomId;
@@ -267,9 +265,7 @@ video 纯视频
 
     /**
      * Set 房间ID。
-字符数不超过256
      * @param RoomId 房间ID。
-字符数不超过256
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;
@@ -340,8 +336,10 @@ video 纯视频
     }
 
     /**
-     * Get 房间名称。 
+     * Get 房间名称。
+字符数不超过256 
      * @return Name 房间名称。
+字符数不超过256
      */
     public String getName() {
         return this.Name;
@@ -349,7 +347,9 @@ video 纯视频
 
     /**
      * Set 房间名称。
+字符数不超过256
      * @param Name 房间名称。
+字符数不超过256
      */
     public void setName(String Name) {
         this.Name = Name;

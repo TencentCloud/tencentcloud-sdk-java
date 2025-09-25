@@ -37,10 +37,10 @@ public class CreateSplitDocumentFlowConfig extends AbstractModel {
     * 智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD，
+2：只返回每一页的MD；
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
+4：返回全文MD + 每一页的MD；
+5：返回全文md，每一页ocr原始json，每一页md。
 
 
     */
@@ -68,6 +68,31 @@ public class CreateSplitDocumentFlowConfig extends AbstractModel {
     @SerializedName("IgnoreFailedPage")
     @Expose
     private Boolean IgnoreFailedPage;
+
+    /**
+    * 智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD；
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD；
+5：返回全文md，每一页ocr原始json，每一页md。
+
+
+    */
+    @SerializedName("SplitResultType")
+    @Expose
+    private String SplitResultType;
+
+    /**
+    * Markdown文件中表格返回的形式
+0，表格以MD形式返回
+1，表格以HTML形式返回
+默认为
+    */
+    @SerializedName("SplitTableResultType")
+    @Expose
+    private String SplitTableResultType;
 
     /**
      * Get Markdown文件中表格返回的形式
@@ -105,19 +130,19 @@ public class CreateSplitDocumentFlowConfig extends AbstractModel {
      * Get 智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD，
+2：只返回每一页的MD；
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
+4：返回全文MD + 每一页的MD；
+5：返回全文md，每一页ocr原始json，每一页md。
 
  
      * @return ResultType 智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD，
+2：只返回每一页的MD；
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
+4：返回全文MD + 每一页的MD；
+5：返回全文md，每一页ocr原始json，每一页md。
 
 
      * @deprecated
@@ -131,19 +156,19 @@ public class CreateSplitDocumentFlowConfig extends AbstractModel {
      * Set 智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD，
+2：只返回每一页的MD；
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
+4：返回全文MD + 每一页的MD；
+5：返回全文md，每一页ocr原始json，每一页md。
 
 
      * @param ResultType 智能文档解析返回结果的格式
 0：只返回全文MD；
 1：只返回每一页的OCR原始Json；
-2：只返回每一页的MD，
+2：只返回每一页的MD；
 3：返回全文MD + 每一页的OCR原始Json；
-4：返回全文MD + 每一页的MD，
-默认值为3（返回全文MD + 每一页的OCR原始Json）
+4：返回全文MD + 每一页的MD；
+5：返回全文md，每一页ocr原始json，每一页md。
 
 
      * @deprecated
@@ -201,6 +226,82 @@ public class CreateSplitDocumentFlowConfig extends AbstractModel {
         this.IgnoreFailedPage = IgnoreFailedPage;
     }
 
+    /**
+     * Get 智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD；
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD；
+5：返回全文md，每一页ocr原始json，每一页md。
+
+ 
+     * @return SplitResultType 智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD；
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD；
+5：返回全文md，每一页ocr原始json，每一页md。
+
+
+     */
+    public String getSplitResultType() {
+        return this.SplitResultType;
+    }
+
+    /**
+     * Set 智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD；
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD；
+5：返回全文md，每一页ocr原始json，每一页md。
+
+
+     * @param SplitResultType 智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD；
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD；
+5：返回全文md，每一页ocr原始json，每一页md。
+
+
+     */
+    public void setSplitResultType(String SplitResultType) {
+        this.SplitResultType = SplitResultType;
+    }
+
+    /**
+     * Get Markdown文件中表格返回的形式
+0，表格以MD形式返回
+1，表格以HTML形式返回
+默认为 
+     * @return SplitTableResultType Markdown文件中表格返回的形式
+0，表格以MD形式返回
+1，表格以HTML形式返回
+默认为
+     */
+    public String getSplitTableResultType() {
+        return this.SplitTableResultType;
+    }
+
+    /**
+     * Set Markdown文件中表格返回的形式
+0，表格以MD形式返回
+1，表格以HTML形式返回
+默认为
+     * @param SplitTableResultType Markdown文件中表格返回的形式
+0，表格以MD形式返回
+1，表格以HTML形式返回
+默认为
+     */
+    public void setSplitTableResultType(String SplitTableResultType) {
+        this.SplitTableResultType = SplitTableResultType;
+    }
+
     public CreateSplitDocumentFlowConfig() {
     }
 
@@ -224,6 +325,12 @@ public class CreateSplitDocumentFlowConfig extends AbstractModel {
         if (source.IgnoreFailedPage != null) {
             this.IgnoreFailedPage = new Boolean(source.IgnoreFailedPage);
         }
+        if (source.SplitResultType != null) {
+            this.SplitResultType = new String(source.SplitResultType);
+        }
+        if (source.SplitTableResultType != null) {
+            this.SplitTableResultType = new String(source.SplitTableResultType);
+        }
     }
 
 
@@ -236,6 +343,8 @@ public class CreateSplitDocumentFlowConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableMllm", this.EnableMllm);
         this.setParamSimple(map, prefix + "MaxChunkSize", this.MaxChunkSize);
         this.setParamSimple(map, prefix + "IgnoreFailedPage", this.IgnoreFailedPage);
+        this.setParamSimple(map, prefix + "SplitResultType", this.SplitResultType);
+        this.setParamSimple(map, prefix + "SplitTableResultType", this.SplitTableResultType);
 
     }
 }
