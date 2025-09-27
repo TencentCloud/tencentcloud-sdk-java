@@ -208,6 +208,41 @@ public class CreateStandardEngineResourceGroupRequest extends AbstractModel {
     private Long SparkSize;
 
     /**
+    * GPUDriver规格
+    */
+    @SerializedName("DriverGPUSpec")
+    @Expose
+    private Long DriverGPUSpec;
+
+    /**
+    * GPUExecutor规格
+    */
+    @SerializedName("ExecutorGPUSpec")
+    @Expose
+    private Long ExecutorGPUSpec;
+
+    /**
+    * GPU上限
+    */
+    @SerializedName("GPULimitSize")
+    @Expose
+    private Long GPULimitSize;
+
+    /**
+    * GPU规格
+    */
+    @SerializedName("GPUSize")
+    @Expose
+    private Long GPUSize;
+
+    /**
+    * Pod GPU规格上限
+    */
+    @SerializedName("PythonGPUSpec")
+    @Expose
+    private Long PythonGPUSpec;
+
+    /**
      * Get 标准引擎资源组名称 
      * @return EngineResourceGroupName 标准引擎资源组名称
      */
@@ -631,6 +666,86 @@ public class CreateStandardEngineResourceGroupRequest extends AbstractModel {
         this.SparkSize = SparkSize;
     }
 
+    /**
+     * Get GPUDriver规格 
+     * @return DriverGPUSpec GPUDriver规格
+     */
+    public Long getDriverGPUSpec() {
+        return this.DriverGPUSpec;
+    }
+
+    /**
+     * Set GPUDriver规格
+     * @param DriverGPUSpec GPUDriver规格
+     */
+    public void setDriverGPUSpec(Long DriverGPUSpec) {
+        this.DriverGPUSpec = DriverGPUSpec;
+    }
+
+    /**
+     * Get GPUExecutor规格 
+     * @return ExecutorGPUSpec GPUExecutor规格
+     */
+    public Long getExecutorGPUSpec() {
+        return this.ExecutorGPUSpec;
+    }
+
+    /**
+     * Set GPUExecutor规格
+     * @param ExecutorGPUSpec GPUExecutor规格
+     */
+    public void setExecutorGPUSpec(Long ExecutorGPUSpec) {
+        this.ExecutorGPUSpec = ExecutorGPUSpec;
+    }
+
+    /**
+     * Get GPU上限 
+     * @return GPULimitSize GPU上限
+     */
+    public Long getGPULimitSize() {
+        return this.GPULimitSize;
+    }
+
+    /**
+     * Set GPU上限
+     * @param GPULimitSize GPU上限
+     */
+    public void setGPULimitSize(Long GPULimitSize) {
+        this.GPULimitSize = GPULimitSize;
+    }
+
+    /**
+     * Get GPU规格 
+     * @return GPUSize GPU规格
+     */
+    public Long getGPUSize() {
+        return this.GPUSize;
+    }
+
+    /**
+     * Set GPU规格
+     * @param GPUSize GPU规格
+     */
+    public void setGPUSize(Long GPUSize) {
+        this.GPUSize = GPUSize;
+    }
+
+    /**
+     * Get Pod GPU规格上限 
+     * @return PythonGPUSpec Pod GPU规格上限
+     */
+    public Long getPythonGPUSpec() {
+        return this.PythonGPUSpec;
+    }
+
+    /**
+     * Set Pod GPU规格上限
+     * @param PythonGPUSpec Pod GPU规格上限
+     */
+    public void setPythonGPUSpec(Long PythonGPUSpec) {
+        this.PythonGPUSpec = PythonGPUSpec;
+    }
+
     public CreateStandardEngineResourceGroupRequest() {
     }
 
@@ -726,6 +841,21 @@ public class CreateStandardEngineResourceGroupRequest extends AbstractModel {
         if (source.SparkSize != null) {
             this.SparkSize = new Long(source.SparkSize);
         }
+        if (source.DriverGPUSpec != null) {
+            this.DriverGPUSpec = new Long(source.DriverGPUSpec);
+        }
+        if (source.ExecutorGPUSpec != null) {
+            this.ExecutorGPUSpec = new Long(source.ExecutorGPUSpec);
+        }
+        if (source.GPULimitSize != null) {
+            this.GPULimitSize = new Long(source.GPULimitSize);
+        }
+        if (source.GPUSize != null) {
+            this.GPUSize = new Long(source.GPUSize);
+        }
+        if (source.PythonGPUSpec != null) {
+            this.PythonGPUSpec = new Long(source.PythonGPUSpec);
+        }
     }
 
 
@@ -759,6 +889,11 @@ public class CreateStandardEngineResourceGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PythonCuSpec", this.PythonCuSpec);
         this.setParamSimple(map, prefix + "SparkSpecMode", this.SparkSpecMode);
         this.setParamSimple(map, prefix + "SparkSize", this.SparkSize);
+        this.setParamSimple(map, prefix + "DriverGPUSpec", this.DriverGPUSpec);
+        this.setParamSimple(map, prefix + "ExecutorGPUSpec", this.ExecutorGPUSpec);
+        this.setParamSimple(map, prefix + "GPULimitSize", this.GPULimitSize);
+        this.setParamSimple(map, prefix + "GPUSize", this.GPUSize);
+        this.setParamSimple(map, prefix + "PythonGPUSpec", this.PythonGPUSpec);
 
     }
 }

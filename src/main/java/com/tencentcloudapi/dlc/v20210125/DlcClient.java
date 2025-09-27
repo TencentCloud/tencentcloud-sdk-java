@@ -1306,6 +1306,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *返回任务洞察资源用量
+     * @param req DescribeTaskResourceUsageRequest
+     * @return DescribeTaskResourceUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskResourceUsageResponse DescribeTaskResourceUsage(DescribeTaskResourceUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskResourceUsage", DescribeTaskResourceUsageResponse.class);
+    }
+
+    /**
      *查询任务结果，仅支持30天以内的任务查询结果，且返回数据大小超过近50M会进行截断。
      * @param req DescribeTaskResultRequest
      * @return DescribeTaskResultResponse

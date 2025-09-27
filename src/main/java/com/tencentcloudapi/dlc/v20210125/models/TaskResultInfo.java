@@ -165,6 +165,13 @@ public class TaskResultInfo extends AbstractModel {
     private Float QueryResultTime;
 
     /**
+    * base64 编码结果集
+    */
+    @SerializedName("ResultSetEncode")
+    @Expose
+    private String ResultSetEncode;
+
+    /**
      * Get 任务唯一ID 
      * @return TaskId 任务唯一ID
      */
@@ -488,6 +495,22 @@ public class TaskResultInfo extends AbstractModel {
         this.QueryResultTime = QueryResultTime;
     }
 
+    /**
+     * Get base64 编码结果集 
+     * @return ResultSetEncode base64 编码结果集
+     */
+    public String getResultSetEncode() {
+        return this.ResultSetEncode;
+    }
+
+    /**
+     * Set base64 编码结果集
+     * @param ResultSetEncode base64 编码结果集
+     */
+    public void setResultSetEncode(String ResultSetEncode) {
+        this.ResultSetEncode = ResultSetEncode;
+    }
+
     public TaskResultInfo() {
     }
 
@@ -559,6 +582,9 @@ public class TaskResultInfo extends AbstractModel {
         if (source.QueryResultTime != null) {
             this.QueryResultTime = new Float(source.QueryResultTime);
         }
+        if (source.ResultSetEncode != null) {
+            this.ResultSetEncode = new String(source.ResultSetEncode);
+        }
     }
 
 
@@ -586,6 +612,7 @@ public class TaskResultInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DisplayFormat", this.DisplayFormat);
         this.setParamSimple(map, prefix + "TotalTime", this.TotalTime);
         this.setParamSimple(map, prefix + "QueryResultTime", this.QueryResultTime);
+        this.setParamSimple(map, prefix + "ResultSetEncode", this.ResultSetEncode);
 
     }
 }

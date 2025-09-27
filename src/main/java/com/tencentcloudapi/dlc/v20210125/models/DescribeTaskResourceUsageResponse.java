@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDataMaskStrategyResponse extends AbstractModel {
+public class DescribeTaskResourceUsageResponse extends AbstractModel {
 
     /**
-    * 策略id
+    * core 用量信息
     */
-    @SerializedName("StrategyId")
+    @SerializedName("CoreInfo")
     @Expose
-    private String StrategyId;
+    private CoreInfo CoreInfo;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class CreateDataMaskStrategyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略id 
-     * @return StrategyId 策略id
+     * Get core 用量信息 
+     * @return CoreInfo core 用量信息
      */
-    public String getStrategyId() {
-        return this.StrategyId;
+    public CoreInfo getCoreInfo() {
+        return this.CoreInfo;
     }
 
     /**
-     * Set 策略id
-     * @param StrategyId 策略id
+     * Set core 用量信息
+     * @param CoreInfo core 用量信息
      */
-    public void setStrategyId(String StrategyId) {
-        this.StrategyId = StrategyId;
+    public void setCoreInfo(CoreInfo CoreInfo) {
+        this.CoreInfo = CoreInfo;
     }
 
     /**
@@ -69,16 +69,16 @@ public class CreateDataMaskStrategyResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateDataMaskStrategyResponse() {
+    public DescribeTaskResourceUsageResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDataMaskStrategyResponse(CreateDataMaskStrategyResponse source) {
-        if (source.StrategyId != null) {
-            this.StrategyId = new String(source.StrategyId);
+    public DescribeTaskResourceUsageResponse(DescribeTaskResourceUsageResponse source) {
+        if (source.CoreInfo != null) {
+            this.CoreInfo = new CoreInfo(source.CoreInfo);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class CreateDataMaskStrategyResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "StrategyId", this.StrategyId);
+        this.setParamObj(map, prefix + "CoreInfo.", this.CoreInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
