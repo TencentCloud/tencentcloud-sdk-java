@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class IsolateSubscribeRequest extends AbstractModel {
 
     /**
-    * 订阅实例ID
+    * 订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
     */
     @SerializedName("SubscribeId")
     @Expose
     private String SubscribeId;
 
     /**
-     * Get 订阅实例ID 
-     * @return SubscribeId 订阅实例ID
+     * Get 订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。 
+     * @return SubscribeId 订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      */
     public String getSubscribeId() {
         return this.SubscribeId;
     }
 
     /**
-     * Set 订阅实例ID
-     * @param SubscribeId 订阅实例ID
+     * Set 订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+     * @param SubscribeId 订阅实例ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      */
     public void setSubscribeId(String SubscribeId) {
         this.SubscribeId = SubscribeId;

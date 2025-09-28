@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SlowLogItem extends AbstractModel {
 
     /**
-    * 慢日志
+    * 慢日志详情。
     */
     @SerializedName("Log")
     @Expose
     private String Log;
 
     /**
-    * 节点名称
+    * 节点名称。
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * queryHash
+    * 查询哈希值。
     */
     @SerializedName("QueryHash")
     @Expose
     private String QueryHash;
 
     /**
-     * Get 慢日志 
-     * @return Log 慢日志
+     * Get 慢日志详情。 
+     * @return Log 慢日志详情。
      */
     public String getLog() {
         return this.Log;
     }
 
     /**
-     * Set 慢日志
-     * @param Log 慢日志
+     * Set 慢日志详情。
+     * @param Log 慢日志详情。
      */
     public void setLog(String Log) {
         this.Log = Log;
     }
 
     /**
-     * Get 节点名称 
-     * @return NodeName 节点名称
+     * Get 节点名称。 
+     * @return NodeName 节点名称。
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 节点名称
-     * @param NodeName 节点名称
+     * Set 节点名称。
+     * @param NodeName 节点名称。
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get queryHash 
-     * @return QueryHash queryHash
+     * Get 查询哈希值。 
+     * @return QueryHash 查询哈希值。
      */
     public String getQueryHash() {
         return this.QueryHash;
     }
 
     /**
-     * Set queryHash
-     * @param QueryHash queryHash
+     * Set 查询哈希值。
+     * @param QueryHash 查询哈希值。
      */
     public void setQueryHash(String QueryHash) {
         this.QueryHash = QueryHash;

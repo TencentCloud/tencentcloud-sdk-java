@@ -31,7 +31,7 @@ public class ModifyUserAutonomyProfileRequest extends AbstractModel {
     private String ProfileType;
 
     /**
-    * 实列ID。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -68,16 +68,16 @@ public class ModifyUserAutonomyProfileRequest extends AbstractModel {
     }
 
     /**
-     * Get 实列ID。 
-     * @return InstanceId 实列ID。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实列ID。
-     * @param InstanceId 实列ID。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -59,14 +59,24 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 模板适配实例版本。
+    * 模板适配的实例版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersion")
     @Expose
     private String MongoVersion;
 
     /**
-    * 模板适配集群类型，副本集或分片。。
+    * 模板适配集群类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -167,32 +177,72 @@ public class DescribeDBInstanceParamTplDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 模板适配实例版本。 
-     * @return MongoVersion 模板适配实例版本。
+     * Get 模板适配的实例版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。 
+     * @return MongoVersion 模板适配的实例版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set 模板适配实例版本。
-     * @param MongoVersion 模板适配实例版本。
+     * Set 模板适配的实例版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+     * @param MongoVersion 模板适配的实例版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
     }
 
     /**
-     * Get 模板适配集群类型，副本集或分片。。 
-     * @return ClusterType 模板适配集群类型，副本集或分片。。
+     * Get 模板适配集群类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。 
+     * @return ClusterType 模板适配集群类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 模板适配集群类型，副本集或分片。。
-     * @param ClusterType 模板适配集群类型，副本集或分片。。
+     * Set 模板适配集群类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
+     * @param ClusterType 模板适配集群类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

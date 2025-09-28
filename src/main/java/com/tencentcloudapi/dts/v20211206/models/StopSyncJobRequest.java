@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class StopSyncJobRequest extends AbstractModel {
 
     /**
-    * 同步任务id
+    * 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-     * Get 同步任务id 
-     * @return JobId 同步任务id
+     * Get 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ 
+     * @return JobId 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 同步任务id
-     * @param JobId 同步任务id
+     * Set 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+     * @param JobId 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

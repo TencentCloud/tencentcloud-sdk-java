@@ -38,21 +38,21 @@ public class CreateAuditLogFileRequest extends AbstractModel {
     private String NodeRequestType;
 
     /**
-    * 实例 ID 。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间，如“2019-09-10 12:13:14”。	
+    * 开始时间，如“2025-03-17T00:00:00+00:00”。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 截止时间，如“2019-09-11 10:13:14”。
+    * 结束时间，如“2025-03-17T01:00:00+00:00”。
     */
     @SerializedName("EndTime")
     @Expose
@@ -98,48 +98,48 @@ public class CreateAuditLogFileRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例 ID 。 
-     * @return InstanceId 实例 ID 。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID 。
-     * @param InstanceId 实例 ID 。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间，如“2019-09-10 12:13:14”。	 
-     * @return StartTime 开始时间，如“2019-09-10 12:13:14”。	
+     * Get 开始时间，如“2025-03-17T00:00:00+00:00”。 
+     * @return StartTime 开始时间，如“2025-03-17T00:00:00+00:00”。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，如“2019-09-10 12:13:14”。	
-     * @param StartTime 开始时间，如“2019-09-10 12:13:14”。	
+     * Set 开始时间，如“2025-03-17T00:00:00+00:00”。
+     * @param StartTime 开始时间，如“2025-03-17T00:00:00+00:00”。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 截止时间，如“2019-09-11 10:13:14”。 
-     * @return EndTime 截止时间，如“2019-09-11 10:13:14”。
+     * Get 结束时间，如“2025-03-17T01:00:00+00:00”。 
+     * @return EndTime 结束时间，如“2025-03-17T01:00:00+00:00”。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 截止时间，如“2019-09-11 10:13:14”。
-     * @param EndTime 截止时间，如“2019-09-11 10:13:14”。
+     * Set 结束时间，如“2025-03-17T01:00:00+00:00”。
+     * @param EndTime 结束时间，如“2025-03-17T01:00:00+00:00”。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

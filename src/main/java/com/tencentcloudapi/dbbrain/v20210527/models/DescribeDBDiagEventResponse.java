@@ -31,7 +31,7 @@ public class DescribeDBDiagEventResponse extends AbstractModel {
     private String DiagItem;
 
     /**
-    * 诊断类型。
+    * 诊断类型。支持值包括"高危账号","自增键耗尽","连接性检查","CPU利用率","死锁","全表扫描","高并发/压力请求","预编译语句过多","内存利用率","Metadata lock","磁盘超限","内存超限","只读锁","只读实例剔除","行锁","活跃会话","慢SQL","数据库快照","磁盘空间利用率","执行计划变化","主从切换","Table open cache命中率低","大表","事务未提交","事务导致复制延迟"等。
     */
     @SerializedName("DiagType")
     @Expose
@@ -73,7 +73,7 @@ public class DescribeDBDiagEventResponse extends AbstractModel {
     private Long Severity;
 
     /**
-    * 开始时间
+    * 开始时间。格式: "yyyy-MM-dd HH:mm:ss"
     */
     @SerializedName("StartTime")
     @Expose
@@ -94,7 +94,7 @@ public class DescribeDBDiagEventResponse extends AbstractModel {
     private String Metric;
 
     /**
-    * 结束时间。
+    * 结束时间。格式: "yyyy-MM-dd HH:mm:ss"
     */
     @SerializedName("EndTime")
     @Expose
@@ -124,16 +124,16 @@ public class DescribeDBDiagEventResponse extends AbstractModel {
     }
 
     /**
-     * Get 诊断类型。 
-     * @return DiagType 诊断类型。
+     * Get 诊断类型。支持值包括"高危账号","自增键耗尽","连接性检查","CPU利用率","死锁","全表扫描","高并发/压力请求","预编译语句过多","内存利用率","Metadata lock","磁盘超限","内存超限","只读锁","只读实例剔除","行锁","活跃会话","慢SQL","数据库快照","磁盘空间利用率","执行计划变化","主从切换","Table open cache命中率低","大表","事务未提交","事务导致复制延迟"等。 
+     * @return DiagType 诊断类型。支持值包括"高危账号","自增键耗尽","连接性检查","CPU利用率","死锁","全表扫描","高并发/压力请求","预编译语句过多","内存利用率","Metadata lock","磁盘超限","内存超限","只读锁","只读实例剔除","行锁","活跃会话","慢SQL","数据库快照","磁盘空间利用率","执行计划变化","主从切换","Table open cache命中率低","大表","事务未提交","事务导致复制延迟"等。
      */
     public String getDiagType() {
         return this.DiagType;
     }
 
     /**
-     * Set 诊断类型。
-     * @param DiagType 诊断类型。
+     * Set 诊断类型。支持值包括"高危账号","自增键耗尽","连接性检查","CPU利用率","死锁","全表扫描","高并发/压力请求","预编译语句过多","内存利用率","Metadata lock","磁盘超限","内存超限","只读锁","只读实例剔除","行锁","活跃会话","慢SQL","数据库快照","磁盘空间利用率","执行计划变化","主从切换","Table open cache命中率低","大表","事务未提交","事务导致复制延迟"等。
+     * @param DiagType 诊断类型。支持值包括"高危账号","自增键耗尽","连接性检查","CPU利用率","死锁","全表扫描","高并发/压力请求","预编译语句过多","内存利用率","Metadata lock","磁盘超限","内存超限","只读锁","只读实例剔除","行锁","活跃会话","慢SQL","数据库快照","磁盘空间利用率","执行计划变化","主从切换","Table open cache命中率低","大表","事务未提交","事务导致复制延迟"等。
      */
     public void setDiagType(String DiagType) {
         this.DiagType = DiagType;
@@ -220,16 +220,16 @@ public class DescribeDBDiagEventResponse extends AbstractModel {
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间。格式: "yyyy-MM-dd HH:mm:ss" 
+     * @return StartTime 开始时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间。格式: "yyyy-MM-dd HH:mm:ss"
+     * @param StartTime 开始时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -268,16 +268,16 @@ public class DescribeDBDiagEventResponse extends AbstractModel {
     }
 
     /**
-     * Get 结束时间。 
-     * @return EndTime 结束时间。
+     * Get 结束时间。格式: "yyyy-MM-dd HH:mm:ss" 
+     * @return EndTime 结束时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。
-     * @param EndTime 结束时间。
+     * Set 结束时间。格式: "yyyy-MM-dd HH:mm:ss"
+     * @param EndTime 结束时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBDiagEventRequest extends AbstractModel {
 
     /**
-    * 实例 ID 。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
+    * 事件 ID 。通过“获取实例诊断历史[DescribeDBDiagHistory](https://cloud.tencent.com/document/product/1130/39559) ”获取。
     */
     @SerializedName("EventId")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDBDiagEventRequest extends AbstractModel {
     private String Product;
 
     /**
-     * Get 实例 ID 。 
-     * @return InstanceId 实例 ID 。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID 。
-     * @param InstanceId 实例 ID 。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。 
-     * @return EventId 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
+     * Get 事件 ID 。通过“获取实例诊断历史[DescribeDBDiagHistory](https://cloud.tencent.com/document/product/1130/39559) ”获取。 
+     * @return EventId 事件 ID 。通过“获取实例诊断历史[DescribeDBDiagHistory](https://cloud.tencent.com/document/product/1130/39559) ”获取。
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
-     * @param EventId 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
+     * Set 事件 ID 。通过“获取实例诊断历史[DescribeDBDiagHistory](https://cloud.tencent.com/document/product/1130/39559) ”获取。
+     * @param EventId 事件 ID 。通过“获取实例诊断历史[DescribeDBDiagHistory](https://cloud.tencent.com/document/product/1130/39559) ”获取。
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;

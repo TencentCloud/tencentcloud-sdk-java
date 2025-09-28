@@ -38,7 +38,7 @@ public class CreateMailProfileRequest extends AbstractModel {
     private String ProfileLevel;
 
     /**
-    * 配置名称，需要保持唯一性，数据库巡检邮件配置名称自拟；定期生成邮件配置命名格式："scheduler_" + {instanceId}，如"schduler_cdb-test"。
+    * 配置名称，需要保持唯一性，数据库巡检邮件配置名称自拟；定期生成邮件配置命名格式："scheduler_" + {instanceId}，如"scheduler_cdb-test"。
     */
     @SerializedName("ProfileName")
     @Expose
@@ -52,14 +52,14 @@ public class CreateMailProfileRequest extends AbstractModel {
     private String ProfileType;
 
     /**
-    * 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
+    * 配置绑定的实例ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
     */
     @SerializedName("BindInstanceIds")
     @Expose
@@ -98,16 +98,16 @@ public class CreateMailProfileRequest extends AbstractModel {
     }
 
     /**
-     * Get 配置名称，需要保持唯一性，数据库巡检邮件配置名称自拟；定期生成邮件配置命名格式："scheduler_" + {instanceId}，如"schduler_cdb-test"。 
-     * @return ProfileName 配置名称，需要保持唯一性，数据库巡检邮件配置名称自拟；定期生成邮件配置命名格式："scheduler_" + {instanceId}，如"schduler_cdb-test"。
+     * Get 配置名称，需要保持唯一性，数据库巡检邮件配置名称自拟；定期生成邮件配置命名格式："scheduler_" + {instanceId}，如"scheduler_cdb-test"。 
+     * @return ProfileName 配置名称，需要保持唯一性，数据库巡检邮件配置名称自拟；定期生成邮件配置命名格式："scheduler_" + {instanceId}，如"scheduler_cdb-test"。
      */
     public String getProfileName() {
         return this.ProfileName;
     }
 
     /**
-     * Set 配置名称，需要保持唯一性，数据库巡检邮件配置名称自拟；定期生成邮件配置命名格式："scheduler_" + {instanceId}，如"schduler_cdb-test"。
-     * @param ProfileName 配置名称，需要保持唯一性，数据库巡检邮件配置名称自拟；定期生成邮件配置命名格式："scheduler_" + {instanceId}，如"schduler_cdb-test"。
+     * Set 配置名称，需要保持唯一性，数据库巡检邮件配置名称自拟；定期生成邮件配置命名格式："scheduler_" + {instanceId}，如"scheduler_cdb-test"。
+     * @param ProfileName 配置名称，需要保持唯一性，数据库巡检邮件配置名称自拟；定期生成邮件配置命名格式："scheduler_" + {instanceId}，如"scheduler_cdb-test"。
      */
     public void setProfileName(String ProfileName) {
         this.ProfileName = ProfileName;
@@ -130,32 +130,32 @@ public class CreateMailProfileRequest extends AbstractModel {
     }
 
     /**
-     * Get 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。 
-     * @return Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。 
+     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
-     * @param Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
+     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。 
-     * @return BindInstanceIds 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
+     * Get 配置绑定的实例ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。 
+     * @return BindInstanceIds 配置绑定的实例ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
      */
     public String [] getBindInstanceIds() {
         return this.BindInstanceIds;
     }
 
     /**
-     * Set 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
-     * @param BindInstanceIds 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
+     * Set 配置绑定的实例ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
+     * @param BindInstanceIds 配置绑定的实例ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
      */
     public void setBindInstanceIds(String [] BindInstanceIds) {
         this.BindInstanceIds = BindInstanceIds;

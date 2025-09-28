@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBBackupsResponse extends AbstractModel {
 
     /**
-    * 备份列表
+    * 备份列表。
     */
     @SerializedName("BackupList")
     @Expose
     private BackupInfo [] BackupList;
 
     /**
-    * 备份总数
+    * 备份总数。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDBBackupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 备份列表 
-     * @return BackupList 备份列表
+     * Get 备份列表。 
+     * @return BackupList 备份列表。
      */
     public BackupInfo [] getBackupList() {
         return this.BackupList;
     }
 
     /**
-     * Set 备份列表
-     * @param BackupList 备份列表
+     * Set 备份列表。
+     * @param BackupList 备份列表。
      */
     public void setBackupList(BackupInfo [] BackupList) {
         this.BackupList = BackupList;
     }
 
     /**
-     * Get 备份总数 
-     * @return TotalCount 备份总数
+     * Get 备份总数。 
+     * @return TotalCount 备份总数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 备份总数
-     * @param TotalCount 备份总数
+     * Set 备份总数。
+     * @param TotalCount 备份总数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

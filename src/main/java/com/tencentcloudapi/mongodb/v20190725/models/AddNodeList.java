@@ -34,7 +34,7 @@ public class AddNodeList extends AbstractModel {
     private String Role;
 
     /**
-    * 节点所对应的可用区。
+    * 节点所对应的可用区。当前支持的可用区，请参见[地域和可用区](https://cloud.tencent.com/document/product/240/3637)。
 - 单可用区，所有节点在同一可用区。
 - 多可用区：当前标准规格是三可用区分布，主从节点不在同一可用区，需注意配置新增节点对应的可用区，且新增后必须满足任意2个可用区节点数大于第3个可用区原则。
     */
@@ -71,10 +71,10 @@ public class AddNodeList extends AbstractModel {
     }
 
     /**
-     * Get 节点所对应的可用区。
+     * Get 节点所对应的可用区。当前支持的可用区，请参见[地域和可用区](https://cloud.tencent.com/document/product/240/3637)。
 - 单可用区，所有节点在同一可用区。
 - 多可用区：当前标准规格是三可用区分布，主从节点不在同一可用区，需注意配置新增节点对应的可用区，且新增后必须满足任意2个可用区节点数大于第3个可用区原则。 
-     * @return Zone 节点所对应的可用区。
+     * @return Zone 节点所对应的可用区。当前支持的可用区，请参见[地域和可用区](https://cloud.tencent.com/document/product/240/3637)。
 - 单可用区，所有节点在同一可用区。
 - 多可用区：当前标准规格是三可用区分布，主从节点不在同一可用区，需注意配置新增节点对应的可用区，且新增后必须满足任意2个可用区节点数大于第3个可用区原则。
      */
@@ -83,10 +83,10 @@ public class AddNodeList extends AbstractModel {
     }
 
     /**
-     * Set 节点所对应的可用区。
+     * Set 节点所对应的可用区。当前支持的可用区，请参见[地域和可用区](https://cloud.tencent.com/document/product/240/3637)。
 - 单可用区，所有节点在同一可用区。
 - 多可用区：当前标准规格是三可用区分布，主从节点不在同一可用区，需注意配置新增节点对应的可用区，且新增后必须满足任意2个可用区节点数大于第3个可用区原则。
-     * @param Zone 节点所对应的可用区。
+     * @param Zone 节点所对应的可用区。当前支持的可用区，请参见[地域和可用区](https://cloud.tencent.com/document/product/240/3637)。
 - 单可用区，所有节点在同一可用区。
 - 多可用区：当前标准规格是三可用区分布，主从节点不在同一可用区，需注意配置新增节点对应的可用区，且新增后必须满足任意2个可用区节点数大于第3个可用区原则。
      */

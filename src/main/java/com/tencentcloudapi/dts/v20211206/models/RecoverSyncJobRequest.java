@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class RecoverSyncJobRequest extends AbstractModel {
 
     /**
-    * 同步实例id（即标识一个同步作业），形如sync-werwfs23
+    * 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-     * Get 同步实例id（即标识一个同步作业），形如sync-werwfs23 
-     * @return JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23
+     * Get 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ 
+     * @return JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 同步实例id（即标识一个同步作业），形如sync-werwfs23
-     * @param JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23
+     * Set 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+     * @param JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

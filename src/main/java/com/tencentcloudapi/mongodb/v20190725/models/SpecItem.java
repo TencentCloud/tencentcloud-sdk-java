@@ -25,16 +25,9 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
-- 节点类型，如下所示。
-  - mongo：Mongod 节点。
- - mongos：Mongos 节点。
- - cfgstr：Configserver 节点。
-- 规格类型，如下所示。
- - HIO10G：通用高HIO万兆型。
- - HCD：云盘版类型。
-- 内存规格，如下所示：
- - 支持4、8、16、32、64、128、240、512。
- - 单位g：表示GB。128g则表示128GB。
+- 节点类型：**mongo**，指 Mongod 节点；**mongos**，指 Mongos 节点；**cfgstr**，指 Configserver 节点。
+- 规格类型：**HIO10G**，指通用高HIO万兆型；**HCD**：指云盘版类型。
+- 内存规格：支持4、8、16、32、64、128、240、512。单位g：表示GB。128g 则表示128GB。
     */
     @SerializedName("SpecCode")
     @Expose
@@ -100,12 +93,12 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 实例存储引擎版本信息。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersionCode")
     @Expose
@@ -119,8 +112,7 @@ public class SpecItem extends AbstractModel {
     private Long MongoVersionValue;
 
     /**
-    * 实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
-
+    * 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
     */
     @SerializedName("Version")
     @Expose
@@ -195,27 +187,13 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Get 规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
-- 节点类型，如下所示。
-  - mongo：Mongod 节点。
- - mongos：Mongos 节点。
- - cfgstr：Configserver 节点。
-- 规格类型，如下所示。
- - HIO10G：通用高HIO万兆型。
- - HCD：云盘版类型。
-- 内存规格，如下所示：
- - 支持4、8、16、32、64、128、240、512。
- - 单位g：表示GB。128g则表示128GB。 
+- 节点类型：**mongo**，指 Mongod 节点；**mongos**，指 Mongos 节点；**cfgstr**，指 Configserver 节点。
+- 规格类型：**HIO10G**，指通用高HIO万兆型；**HCD**：指云盘版类型。
+- 内存规格：支持4、8、16、32、64、128、240、512。单位g：表示GB。128g 则表示128GB。 
      * @return SpecCode 规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
-- 节点类型，如下所示。
-  - mongo：Mongod 节点。
- - mongos：Mongos 节点。
- - cfgstr：Configserver 节点。
-- 规格类型，如下所示。
- - HIO10G：通用高HIO万兆型。
- - HCD：云盘版类型。
-- 内存规格，如下所示：
- - 支持4、8、16、32、64、128、240、512。
- - 单位g：表示GB。128g则表示128GB。
+- 节点类型：**mongo**，指 Mongod 节点；**mongos**，指 Mongos 节点；**cfgstr**，指 Configserver 节点。
+- 规格类型：**HIO10G**，指通用高HIO万兆型；**HCD**：指云盘版类型。
+- 内存规格：支持4、8、16、32、64、128、240、512。单位g：表示GB。128g 则表示128GB。
      */
     public String getSpecCode() {
         return this.SpecCode;
@@ -223,27 +201,13 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
-- 节点类型，如下所示。
-  - mongo：Mongod 节点。
- - mongos：Mongos 节点。
- - cfgstr：Configserver 节点。
-- 规格类型，如下所示。
- - HIO10G：通用高HIO万兆型。
- - HCD：云盘版类型。
-- 内存规格，如下所示：
- - 支持4、8、16、32、64、128、240、512。
- - 单位g：表示GB。128g则表示128GB。
+- 节点类型：**mongo**，指 Mongod 节点；**mongos**，指 Mongos 节点；**cfgstr**，指 Configserver 节点。
+- 规格类型：**HIO10G**，指通用高HIO万兆型；**HCD**：指云盘版类型。
+- 内存规格：支持4、8、16、32、64、128、240、512。单位g：表示GB。128g 则表示128GB。
      * @param SpecCode 规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
-- 节点类型，如下所示。
-  - mongo：Mongod 节点。
- - mongos：Mongos 节点。
- - cfgstr：Configserver 节点。
-- 规格类型，如下所示。
- - HIO10G：通用高HIO万兆型。
- - HCD：云盘版类型。
-- 内存规格，如下所示：
- - 支持4、8、16、32、64、128、240、512。
- - 单位g：表示GB。128g则表示128GB。
+- 节点类型：**mongo**，指 Mongod 节点；**mongos**，指 Mongos 节点；**cfgstr**，指 Configserver 节点。
+- 规格类型：**HIO10G**，指通用高HIO万兆型；**HCD**：指云盘版类型。
+- 内存规格：支持4、8、16、32、64、128、240、512。单位g：表示GB。128g 则表示128GB。
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
@@ -387,19 +351,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Get 实例存储引擎版本信息。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
-- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
-- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
-- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
-- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
-- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。 
-     * @return MongoVersionCode 实例存储引擎版本信息。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。 
+     * @return MongoVersionCode 实例存储引擎版本信息。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public String getMongoVersionCode() {
         return this.MongoVersionCode;
@@ -407,19 +371,19 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 实例存储引擎版本信息。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      * @param MongoVersionCode 实例存储引擎版本信息。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersionCode(String MongoVersionCode) {
         this.MongoVersionCode = MongoVersionCode;
@@ -442,20 +406,16 @@ public class SpecItem extends AbstractModel {
     }
 
     /**
-     * Get 实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
- 
-     * @return Version 实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
-
+     * Get 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。 
+     * @return Version 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
-
-     * @param Version 实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
-
+     * Set 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
+     * @param Version 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
      */
     public void setVersion(String Version) {
         this.Version = Version;

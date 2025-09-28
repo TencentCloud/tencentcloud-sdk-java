@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBInstanceNodePropertyRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+    * 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 节点ID。
+    * 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
     */
     @SerializedName("NodeIds")
     @Expose
@@ -39,14 +39,17 @@ public class DescribeDBInstanceNodePropertyRequest extends AbstractModel {
 
     /**
     * 节点角色。可选值包括：
-<ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
     */
     @SerializedName("Roles")
     @Expose
     private String [] Roles;
 
     /**
-    * 该参数指定节点是否为Hidden节点，默认为false。
+    * 该参数指定节点是否为 Hidden 节点，默认为 false。
     */
     @SerializedName("OnlyHidden")
     @Expose
@@ -61,7 +64,8 @@ public class DescribeDBInstanceNodePropertyRequest extends AbstractModel {
 
     /**
     * 该参数指定节点投票权。
-<ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+- 1：具有投票权。
+- 0：无投票权。
     */
     @SerializedName("Votes")
     @Expose
@@ -75,32 +79,32 @@ public class DescribeDBInstanceNodePropertyRequest extends AbstractModel {
     private NodeTag [] Tags;
 
     /**
-     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。 
-     * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+     * Get 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+     * Set 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 节点ID。 
-     * @return NodeIds 节点ID。
+     * Get 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。 
+     * @return NodeIds 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
      */
     public String [] getNodeIds() {
         return this.NodeIds;
     }
 
     /**
-     * Set 节点ID。
-     * @param NodeIds 节点ID。
+     * Set 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
+     * @param NodeIds 节点 ID。请登录 [MongoDB 控制台的节点管理](https://console.cloud.tencent.com/mongodb)复制节点 ID。
      */
     public void setNodeIds(String [] NodeIds) {
         this.NodeIds = NodeIds;
@@ -108,9 +112,15 @@ public class DescribeDBInstanceNodePropertyRequest extends AbstractModel {
 
     /**
      * Get 节点角色。可选值包括：
-<ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul> 
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。 
      * @return Roles 节点角色。可选值包括：
-<ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
      */
     public String [] getRoles() {
         return this.Roles;
@@ -118,25 +128,31 @@ public class DescribeDBInstanceNodePropertyRequest extends AbstractModel {
 
     /**
      * Set 节点角色。可选值包括：
-<ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
      * @param Roles 节点角色。可选值包括：
-<ul><li>PRIMARY：主节点。</li><li>SECONDARY：从节点。</li><li>READONLY：只读节点。</li><li>ARBITER：仲裁节点。</li></ul>
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
      */
     public void setRoles(String [] Roles) {
         this.Roles = Roles;
     }
 
     /**
-     * Get 该参数指定节点是否为Hidden节点，默认为false。 
-     * @return OnlyHidden 该参数指定节点是否为Hidden节点，默认为false。
+     * Get 该参数指定节点是否为 Hidden 节点，默认为 false。 
+     * @return OnlyHidden 该参数指定节点是否为 Hidden 节点，默认为 false。
      */
     public Boolean getOnlyHidden() {
         return this.OnlyHidden;
     }
 
     /**
-     * Set 该参数指定节点是否为Hidden节点，默认为false。
-     * @param OnlyHidden 该参数指定节点是否为Hidden节点，默认为false。
+     * Set 该参数指定节点是否为 Hidden 节点，默认为 false。
+     * @param OnlyHidden 该参数指定节点是否为 Hidden 节点，默认为 false。
      */
     public void setOnlyHidden(Boolean OnlyHidden) {
         this.OnlyHidden = OnlyHidden;
@@ -160,9 +176,11 @@ public class DescribeDBInstanceNodePropertyRequest extends AbstractModel {
 
     /**
      * Get 该参数指定节点投票权。
-<ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul> 
+- 1：具有投票权。
+- 0：无投票权。 
      * @return Votes 该参数指定节点投票权。
-<ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+- 1：具有投票权。
+- 0：无投票权。
      */
     public Long getVotes() {
         return this.Votes;
@@ -170,9 +188,11 @@ public class DescribeDBInstanceNodePropertyRequest extends AbstractModel {
 
     /**
      * Set 该参数指定节点投票权。
-<ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+- 1：具有投票权。
+- 0：无投票权。
      * @param Votes 该参数指定节点投票权。
-<ul><li>1：具有投票权。</li><li>0：无投票权。</li></ul>
+- 1：具有投票权。
+- 0：无投票权。
      */
     public void setVotes(Long Votes) {
         this.Votes = Votes;

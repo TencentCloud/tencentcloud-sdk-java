@@ -31,7 +31,7 @@ public class MonitorMetricSeriesData extends AbstractModel {
     private MonitorMetric [] Series;
 
     /**
-    * 监控指标对应的时间戳。
+    * 监控指标对应的时间戳。（精度：秒）
     */
     @SerializedName("Timestamp")
     @Expose
@@ -54,16 +54,16 @@ public class MonitorMetricSeriesData extends AbstractModel {
     }
 
     /**
-     * Get 监控指标对应的时间戳。 
-     * @return Timestamp 监控指标对应的时间戳。
+     * Get 监控指标对应的时间戳。（精度：秒） 
+     * @return Timestamp 监控指标对应的时间戳。（精度：秒）
      */
     public Long [] getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 监控指标对应的时间戳。
-     * @param Timestamp 监控指标对应的时间戳。
+     * Set 监控指标对应的时间戳。（精度：秒）
+     * @param Timestamp 监控指标对应的时间戳。（精度：秒）
      */
     public void setTimestamp(Long [] Timestamp) {
         this.Timestamp = Timestamp;

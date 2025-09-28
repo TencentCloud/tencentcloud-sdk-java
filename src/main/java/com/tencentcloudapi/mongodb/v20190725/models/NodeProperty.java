@@ -52,35 +52,49 @@ public class NodeProperty extends AbstractModel {
     private String WanServiceAddress;
 
     /**
-    * 角色。
+    * 节点角色。
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-    * 是否为Hidden节点
+    * 节点是否为 Hidden 节点。
+- true：Hidden 节点。
+- false：非 Hidden 节点。
     */
     @SerializedName("Hidden")
     @Expose
     private Boolean Hidden;
 
     /**
-    * 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
+    * 节点状态。
+- NORMAL：正常运行中。
+- STARTUP：正在启动。
+- STARTUP2：正在启动，处理中间数据。
+- RECOVERING：恢复中，暂不可用。
+- DOWN：已掉线。
+- UNKNOWN：未知状态。
+- ROLLBACK：回滚中。
+- REMOVED：已移除。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 主从延迟，单位秒。
+    * 主从同步延迟时间，单位：秒。
     */
     @SerializedName("SlaveDelay")
     @Expose
     private Long SlaveDelay;
 
     /**
-    * 节点优先级。
+    * 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
     */
     @SerializedName("Priority")
     @Expose
@@ -88,6 +102,8 @@ public class NodeProperty extends AbstractModel {
 
     /**
     * 节点投票权。
+- 1：具有投票权。
+- 0：无投票权。
     */
     @SerializedName("Votes")
     @Expose
@@ -95,13 +111,14 @@ public class NodeProperty extends AbstractModel {
 
     /**
     * 节点标签。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
     private NodeTag [] Tags;
 
     /**
-    * 副本集Id。
+    * 副本集 ID。
     */
     @SerializedName("ReplicateSetId")
     @Expose
@@ -172,88 +189,148 @@ public class NodeProperty extends AbstractModel {
     }
 
     /**
-     * Get 角色。 
-     * @return Role 角色。
+     * Get 节点角色。
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。 
+     * @return Role 节点角色。
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 角色。
-     * @param Role 角色。
+     * Set 节点角色。
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
+     * @param Role 节点角色。
+- PRIMARY：主节点。
+- SECONDARY：从节点。
+- READONLY：只读节点。
+- ARBITER：仲裁节点。
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get 是否为Hidden节点 
-     * @return Hidden 是否为Hidden节点
+     * Get 节点是否为 Hidden 节点。
+- true：Hidden 节点。
+- false：非 Hidden 节点。 
+     * @return Hidden 节点是否为 Hidden 节点。
+- true：Hidden 节点。
+- false：非 Hidden 节点。
      */
     public Boolean getHidden() {
         return this.Hidden;
     }
 
     /**
-     * Set 是否为Hidden节点
-     * @param Hidden 是否为Hidden节点
+     * Set 节点是否为 Hidden 节点。
+- true：Hidden 节点。
+- false：非 Hidden 节点。
+     * @param Hidden 节点是否为 Hidden 节点。
+- true：Hidden 节点。
+- false：非 Hidden 节点。
      */
     public void setHidden(Boolean Hidden) {
         this.Hidden = Hidden;
     }
 
     /**
-     * Get 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。 
-     * @return Status 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
+     * Get 节点状态。
+- NORMAL：正常运行中。
+- STARTUP：正在启动。
+- STARTUP2：正在启动，处理中间数据。
+- RECOVERING：恢复中，暂不可用。
+- DOWN：已掉线。
+- UNKNOWN：未知状态。
+- ROLLBACK：回滚中。
+- REMOVED：已移除。 
+     * @return Status 节点状态。
+- NORMAL：正常运行中。
+- STARTUP：正在启动。
+- STARTUP2：正在启动，处理中间数据。
+- RECOVERING：恢复中，暂不可用。
+- DOWN：已掉线。
+- UNKNOWN：未知状态。
+- ROLLBACK：回滚中。
+- REMOVED：已移除。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
-     * @param Status 节点状态，包括：ORMAL/STARTUP/RECOVERING/STARTUP2/UNKNOWN/DOWN/ROLLBACK/REMOVED等。
+     * Set 节点状态。
+- NORMAL：正常运行中。
+- STARTUP：正在启动。
+- STARTUP2：正在启动，处理中间数据。
+- RECOVERING：恢复中，暂不可用。
+- DOWN：已掉线。
+- UNKNOWN：未知状态。
+- ROLLBACK：回滚中。
+- REMOVED：已移除。
+     * @param Status 节点状态。
+- NORMAL：正常运行中。
+- STARTUP：正在启动。
+- STARTUP2：正在启动，处理中间数据。
+- RECOVERING：恢复中，暂不可用。
+- DOWN：已掉线。
+- UNKNOWN：未知状态。
+- ROLLBACK：回滚中。
+- REMOVED：已移除。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 主从延迟，单位秒。 
-     * @return SlaveDelay 主从延迟，单位秒。
+     * Get 主从同步延迟时间，单位：秒。 
+     * @return SlaveDelay 主从同步延迟时间，单位：秒。
      */
     public Long getSlaveDelay() {
         return this.SlaveDelay;
     }
 
     /**
-     * Set 主从延迟，单位秒。
-     * @param SlaveDelay 主从延迟，单位秒。
+     * Set 主从同步延迟时间，单位：秒。
+     * @param SlaveDelay 主从同步延迟时间，单位：秒。
      */
     public void setSlaveDelay(Long SlaveDelay) {
         this.SlaveDelay = SlaveDelay;
     }
 
     /**
-     * Get 节点优先级。 
-     * @return Priority 节点优先级。
+     * Get 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。 
+     * @return Priority 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 节点优先级。
-     * @param Priority 节点优先级。
+     * Set 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
+     * @param Priority 节点优先级。其取值范围为[0,100]，数值越高，优先级越高。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 节点投票权。 
+     * Get 节点投票权。
+- 1：具有投票权。
+- 0：无投票权。 
      * @return Votes 节点投票权。
+- 1：具有投票权。
+- 0：无投票权。
      */
     public Long getVotes() {
         return this.Votes;
@@ -261,15 +338,21 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 节点投票权。
+- 1：具有投票权。
+- 0：无投票权。
      * @param Votes 节点投票权。
+- 1：具有投票权。
+- 0：无投票权。
      */
     public void setVotes(Long Votes) {
         this.Votes = Votes;
     }
 
     /**
-     * Get 节点标签。 
+     * Get 节点标签。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tags 节点标签。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeTag [] getTags() {
         return this.Tags;
@@ -277,23 +360,25 @@ public class NodeProperty extends AbstractModel {
 
     /**
      * Set 节点标签。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 节点标签。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(NodeTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 副本集Id。 
-     * @return ReplicateSetId 副本集Id。
+     * Get 副本集 ID。 
+     * @return ReplicateSetId 副本集 ID。
      */
     public String getReplicateSetId() {
         return this.ReplicateSetId;
     }
 
     /**
-     * Set 副本集Id。
-     * @param ReplicateSetId 副本集Id。
+     * Set 副本集 ID。
+     * @param ReplicateSetId 副本集 ID。
      */
     public void setReplicateSetId(String ReplicateSetId) {
         this.ReplicateSetId = ReplicateSetId;

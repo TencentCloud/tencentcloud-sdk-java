@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSpecInfoResponse extends AbstractModel {
 
     /**
-    * 实例售卖规格信息列表
+    * 实例售卖规格信息列表。
     */
     @SerializedName("SpecInfoList")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeSpecInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例售卖规格信息列表 
-     * @return SpecInfoList 实例售卖规格信息列表
+     * Get 实例售卖规格信息列表。 
+     * @return SpecInfoList 实例售卖规格信息列表。
      */
     public SpecificationInfo [] getSpecInfoList() {
         return this.SpecInfoList;
     }
 
     /**
-     * Set 实例售卖规格信息列表
-     * @param SpecInfoList 实例售卖规格信息列表
+     * Set 实例售卖规格信息列表。
+     * @param SpecInfoList 实例售卖规格信息列表。
      */
     public void setSpecInfoList(SpecificationInfo [] SpecInfoList) {
         this.SpecInfoList = SpecInfoList;

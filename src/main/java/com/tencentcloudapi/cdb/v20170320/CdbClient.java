@@ -1505,6 +1505,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *该接口（ModifyDBInstanceModes）用于更改云数据库的模式。
+     * @param req ModifyDBInstanceModesRequest
+     * @return ModifyDBInstanceModesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceModesResponse ModifyDBInstanceModes(ModifyDBInstanceModesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceModes", ModifyDBInstanceModesResponse.class);
+    }
+
+    /**
      *本接口(ModifyDBInstanceName)用于修改云数据库实例的名称。
      * @param req ModifyDBInstanceNameRequest
      * @return ModifyDBInstanceNameResponse

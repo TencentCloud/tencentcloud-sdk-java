@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSlowLogQueryTimeStatsRequest extends AbstractModel {
 
     /**
-    * 实例 ID 。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间，如“2019-09-10 12:13:14”。
+    * 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
     */
     @SerializedName("StartTime")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeSlowLogQueryTimeStatsRequest extends AbstractModel {
     private String InstanceProxyId;
 
     /**
-    * 实列节点ID。
+    * 实例节点ID。
     */
     @SerializedName("InstanceNodeId")
     @Expose
@@ -67,38 +67,41 @@ public class DescribeSlowLogQueryTimeStatsRequest extends AbstractModel {
 
     /**
     * 查询类型，目前支持值：mongod，mongos。
+其中：
+mongod - MongoDB的数据存储节点
+mongos - MongoDB的路由节点
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 实例 ID 。 
-     * @return InstanceId 实例 ID 。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID 。
-     * @param InstanceId 实例 ID 。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间，如“2019-09-10 12:13:14”。 
-     * @return StartTime 开始时间，如“2019-09-10 12:13:14”。
+     * Get 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。 
+     * @return StartTime 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，如“2019-09-10 12:13:14”。
-     * @param StartTime 开始时间，如“2019-09-10 12:13:14”。
+     * Set 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
+     * @param StartTime 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -153,24 +156,30 @@ public class DescribeSlowLogQueryTimeStatsRequest extends AbstractModel {
     }
 
     /**
-     * Get 实列节点ID。 
-     * @return InstanceNodeId 实列节点ID。
+     * Get 实例节点ID。 
+     * @return InstanceNodeId 实例节点ID。
      */
     public String getInstanceNodeId() {
         return this.InstanceNodeId;
     }
 
     /**
-     * Set 实列节点ID。
-     * @param InstanceNodeId 实列节点ID。
+     * Set 实例节点ID。
+     * @param InstanceNodeId 实例节点ID。
      */
     public void setInstanceNodeId(String InstanceNodeId) {
         this.InstanceNodeId = InstanceNodeId;
     }
 
     /**
-     * Get 查询类型，目前支持值：mongod，mongos。 
+     * Get 查询类型，目前支持值：mongod，mongos。
+其中：
+mongod - MongoDB的数据存储节点
+mongos - MongoDB的路由节点 
      * @return Type 查询类型，目前支持值：mongod，mongos。
+其中：
+mongod - MongoDB的数据存储节点
+mongos - MongoDB的路由节点
      */
     public String getType() {
         return this.Type;
@@ -178,7 +187,13 @@ public class DescribeSlowLogQueryTimeStatsRequest extends AbstractModel {
 
     /**
      * Set 查询类型，目前支持值：mongod，mongos。
+其中：
+mongod - MongoDB的数据存储节点
+mongos - MongoDB的路由节点
      * @param Type 查询类型，目前支持值：mongod，mongos。
+其中：
+mongod - MongoDB的数据存储节点
+mongos - MongoDB的路由节点
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -31,7 +31,7 @@ public class DescribeIndexRecommendAggregationSlowLogsRequest extends AbstractMo
     private String Product;
 
     /**
-    * 实例ID。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeIndexRecommendAggregationSlowLogsRequest extends AbstractMo
     private String Collection;
 
     /**
-    * 签名。这个值是DescribelndexRecommendInfo接口返回
+    * 签名。这个值是 [DescribeIndexRecommendInfo](https://cloud.tencent.com/document/product/1130/98911) 接口返回
     */
     @SerializedName("Signs")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeIndexRecommendAggregationSlowLogsRequest extends AbstractMo
     }
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -123,16 +123,16 @@ public class DescribeIndexRecommendAggregationSlowLogsRequest extends AbstractMo
     }
 
     /**
-     * Get 签名。这个值是DescribelndexRecommendInfo接口返回 
-     * @return Signs 签名。这个值是DescribelndexRecommendInfo接口返回
+     * Get 签名。这个值是 [DescribeIndexRecommendInfo](https://cloud.tencent.com/document/product/1130/98911) 接口返回 
+     * @return Signs 签名。这个值是 [DescribeIndexRecommendInfo](https://cloud.tencent.com/document/product/1130/98911) 接口返回
      */
     public String [] getSigns() {
         return this.Signs;
     }
 
     /**
-     * Set 签名。这个值是DescribelndexRecommendInfo接口返回
-     * @param Signs 签名。这个值是DescribelndexRecommendInfo接口返回
+     * Set 签名。这个值是 [DescribeIndexRecommendInfo](https://cloud.tencent.com/document/product/1130/98911) 接口返回
+     * @param Signs 签名。这个值是 [DescribeIndexRecommendInfo](https://cloud.tencent.com/document/product/1130/98911) 接口返回
      */
     public void setSigns(String [] Signs) {
         this.Signs = Signs;

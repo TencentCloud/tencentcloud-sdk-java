@@ -73,7 +73,8 @@ public class InstanceBasicInfo extends AbstractModel {
     private Long Cpu;
 
     /**
-    * 实例部署模式。
+    * 实例部署模式，取值包括"CUSTOM", "EXCLUSIVE", "CUSTOMER_AGENT", "CUSTOMER_DIRECT",
+"CLOUD_NATIVE_CLUSTER_EXCLUSIVE", "CLOUD_NATIVE_CLUSTER"。
     */
     @SerializedName("DeployMode")
     @Expose
@@ -241,16 +242,20 @@ public class InstanceBasicInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例部署模式。 
-     * @return DeployMode 实例部署模式。
+     * Get 实例部署模式，取值包括"CUSTOM", "EXCLUSIVE", "CUSTOMER_AGENT", "CUSTOMER_DIRECT",
+"CLOUD_NATIVE_CLUSTER_EXCLUSIVE", "CLOUD_NATIVE_CLUSTER"。 
+     * @return DeployMode 实例部署模式，取值包括"CUSTOM", "EXCLUSIVE", "CUSTOMER_AGENT", "CUSTOMER_DIRECT",
+"CLOUD_NATIVE_CLUSTER_EXCLUSIVE", "CLOUD_NATIVE_CLUSTER"。
      */
     public String getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set 实例部署模式。
-     * @param DeployMode 实例部署模式。
+     * Set 实例部署模式，取值包括"CUSTOM", "EXCLUSIVE", "CUSTOMER_AGENT", "CUSTOMER_DIRECT",
+"CLOUD_NATIVE_CLUSTER_EXCLUSIVE", "CLOUD_NATIVE_CLUSTER"。
+     * @param DeployMode 实例部署模式，取值包括"CUSTOM", "EXCLUSIVE", "CUSTOMER_AGENT", "CUSTOMER_DIRECT",
+"CLOUD_NATIVE_CLUSTER_EXCLUSIVE", "CLOUD_NATIVE_CLUSTER"。
      */
     public void setDeployMode(String DeployMode) {
         this.DeployMode = DeployMode;

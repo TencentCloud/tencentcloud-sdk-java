@@ -45,14 +45,14 @@ public class DescribeSqlTemplateResponse extends AbstractModel {
     private String SqlType;
 
     /**
-    * SQL模版内容。
+    * SQL模板内容。
     */
     @SerializedName("SqlTemplate")
     @Expose
     private String SqlTemplate;
 
     /**
-    * SQL模版ID。
+    * SQL模板ID。
     */
     @SerializedName("SqlId")
     @Expose
@@ -114,32 +114,32 @@ public class DescribeSqlTemplateResponse extends AbstractModel {
     }
 
     /**
-     * Get SQL模版内容。 
-     * @return SqlTemplate SQL模版内容。
+     * Get SQL模板内容。 
+     * @return SqlTemplate SQL模板内容。
      */
     public String getSqlTemplate() {
         return this.SqlTemplate;
     }
 
     /**
-     * Set SQL模版内容。
-     * @param SqlTemplate SQL模版内容。
+     * Set SQL模板内容。
+     * @param SqlTemplate SQL模板内容。
      */
     public void setSqlTemplate(String SqlTemplate) {
         this.SqlTemplate = SqlTemplate;
     }
 
     /**
-     * Get SQL模版ID。 
-     * @return SqlId SQL模版ID。
+     * Get SQL模板ID。 
+     * @return SqlId SQL模板ID。
      */
     public Long getSqlId() {
         return this.SqlId;
     }
 
     /**
-     * Set SQL模版ID。
-     * @param SqlId SQL模版ID。
+     * Set SQL模板ID。
+     * @param SqlId SQL模板ID。
      */
     public void setSqlId(Long SqlId) {
         this.SqlId = SqlId;

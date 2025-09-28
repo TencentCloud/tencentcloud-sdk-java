@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeDBDiagReportTasksRequest extends AbstractModel {
 
     /**
-    * 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+    * 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+    * 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 实例ID数组，用于筛选指定实例的任务列表。
+    * 实例ID数组，用于筛选指定实例的任务列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -87,48 +87,48 @@ public class DescribeDBDiagReportTasksRequest extends AbstractModel {
     private String Product;
 
     /**
-     * Get 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。 
-     * @return StartTime 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+     * Get 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。 
+     * @return StartTime 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
-     * @param StartTime 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+     * Set 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
+     * @param StartTime 第一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。 
-     * @return EndTime 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+     * Get 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。 
+     * @return EndTime 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
-     * @param EndTime 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10 12:13:14。
+     * Set 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
+     * @param EndTime 最后一个任务的开始时间，用于范围查询，时间格式如：2019-09-10T12:13:14+08:00。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 实例ID数组，用于筛选指定实例的任务列表。 
-     * @return InstanceIds 实例ID数组，用于筛选指定实例的任务列表。
+     * Get 实例ID数组，用于筛选指定实例的任务列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceIds 实例ID数组，用于筛选指定实例的任务列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID数组，用于筛选指定实例的任务列表。
-     * @param InstanceIds 实例ID数组，用于筛选指定实例的任务列表。
+     * Set 实例ID数组，用于筛选指定实例的任务列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceIds 实例ID数组，用于筛选指定实例的任务列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

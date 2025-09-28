@@ -52,6 +52,27 @@ public class StaffStatus extends AbstractModel {
     private String SessionId;
 
     /**
+    * 小休原因
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
+    * 座席邮箱
+    */
+    @SerializedName("StaffEmail")
+    @Expose
+    private String StaffEmail;
+
+    /**
+    * 座席工号
+    */
+    @SerializedName("StaffNo")
+    @Expose
+    private String StaffNo;
+
+    /**
      * Get 查询使用的游标，分页场景使用 
      * @return Cursor 查询使用的游标，分页场景使用
      */
@@ -115,6 +136,54 @@ public class StaffStatus extends AbstractModel {
         this.SessionId = SessionId;
     }
 
+    /**
+     * Get 小休原因 
+     * @return Reason 小休原因
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set 小休原因
+     * @param Reason 小休原因
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
+    /**
+     * Get 座席邮箱 
+     * @return StaffEmail 座席邮箱
+     */
+    public String getStaffEmail() {
+        return this.StaffEmail;
+    }
+
+    /**
+     * Set 座席邮箱
+     * @param StaffEmail 座席邮箱
+     */
+    public void setStaffEmail(String StaffEmail) {
+        this.StaffEmail = StaffEmail;
+    }
+
+    /**
+     * Get 座席工号 
+     * @return StaffNo 座席工号
+     */
+    public String getStaffNo() {
+        return this.StaffNo;
+    }
+
+    /**
+     * Set 座席工号
+     * @param StaffNo 座席工号
+     */
+    public void setStaffNo(String StaffNo) {
+        this.StaffNo = StaffNo;
+    }
+
     public StaffStatus() {
     }
 
@@ -135,6 +204,15 @@ public class StaffStatus extends AbstractModel {
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+        if (source.StaffEmail != null) {
+            this.StaffEmail = new String(source.StaffEmail);
+        }
+        if (source.StaffNo != null) {
+            this.StaffNo = new String(source.StaffNo);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class StaffStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamSimple(map, prefix + "StaffEmail", this.StaffEmail);
+        this.setParamSimple(map, prefix + "StaffNo", this.StaffNo);
 
     }
 }

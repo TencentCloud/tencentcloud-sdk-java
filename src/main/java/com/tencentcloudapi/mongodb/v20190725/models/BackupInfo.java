@@ -31,81 +31,98 @@ public class BackupInfo extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 备份方式，0-自动备份，1-手动备份
+    * 备份方式。
+- 0：自动备份。
+- 1：手动备份。
     */
     @SerializedName("BackupType")
     @Expose
     private Long BackupType;
 
     /**
-    * 备份名称
+    * 备份文件名称。
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-    * 备份备注
+    * 备份任务备注信息。
     */
     @SerializedName("BackupDesc")
     @Expose
     private String BackupDesc;
 
     /**
-    * 备份文件大小，单位KB
+    * 备份文件大小，单位：KB。
     */
     @SerializedName("BackupSize")
     @Expose
     private Long BackupSize;
 
     /**
-    * 备份开始时间
+    * 备份开始时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 备份结束时间
+    * 备份结束时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 备份状态，1-备份中，2-备份成功
+    * 备份状态。
+- 1：备份中。
+- 2：备份成功。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 备份方法，0-逻辑备份，1-物理备份
+    * 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明:**
+- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+- 实例开通存储加密，则备份方式不能为物理备份。
     */
     @SerializedName("BackupMethod")
     @Expose
     private Long BackupMethod;
 
     /**
-    * 备份记录id
+    * 备份记录 ID。
     */
     @SerializedName("BackId")
     @Expose
     private Long BackId;
 
     /**
-    * 备份删除时间
+    * 备份删除时间。
     */
     @SerializedName("DeleteTime")
     @Expose
     private String DeleteTime;
 
     /**
-    * 异地备份地域
+    * 异地备份地域。
     */
     @SerializedName("BackupRegion")
     @Expose
     private String BackupRegion;
+
+    /**
+    * 备份支持的回档时间。
+    */
+    @SerializedName("RestoreTime")
+    @Expose
+    private String RestoreTime;
 
     /**
      * Get 实例ID。 
@@ -124,179 +141,235 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 备份方式，0-自动备份，1-手动备份 
-     * @return BackupType 备份方式，0-自动备份，1-手动备份
+     * Get 备份方式。
+- 0：自动备份。
+- 1：手动备份。 
+     * @return BackupType 备份方式。
+- 0：自动备份。
+- 1：手动备份。
      */
     public Long getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 备份方式，0-自动备份，1-手动备份
-     * @param BackupType 备份方式，0-自动备份，1-手动备份
+     * Set 备份方式。
+- 0：自动备份。
+- 1：手动备份。
+     * @param BackupType 备份方式。
+- 0：自动备份。
+- 1：手动备份。
      */
     public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get 备份名称 
-     * @return BackupName 备份名称
+     * Get 备份文件名称。 
+     * @return BackupName 备份文件名称。
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set 备份名称
-     * @param BackupName 备份名称
+     * Set 备份文件名称。
+     * @param BackupName 备份文件名称。
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
     }
 
     /**
-     * Get 备份备注 
-     * @return BackupDesc 备份备注
+     * Get 备份任务备注信息。 
+     * @return BackupDesc 备份任务备注信息。
      */
     public String getBackupDesc() {
         return this.BackupDesc;
     }
 
     /**
-     * Set 备份备注
-     * @param BackupDesc 备份备注
+     * Set 备份任务备注信息。
+     * @param BackupDesc 备份任务备注信息。
      */
     public void setBackupDesc(String BackupDesc) {
         this.BackupDesc = BackupDesc;
     }
 
     /**
-     * Get 备份文件大小，单位KB 
-     * @return BackupSize 备份文件大小，单位KB
+     * Get 备份文件大小，单位：KB。 
+     * @return BackupSize 备份文件大小，单位：KB。
      */
     public Long getBackupSize() {
         return this.BackupSize;
     }
 
     /**
-     * Set 备份文件大小，单位KB
-     * @param BackupSize 备份文件大小，单位KB
+     * Set 备份文件大小，单位：KB。
+     * @param BackupSize 备份文件大小，单位：KB。
      */
     public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
     }
 
     /**
-     * Get 备份开始时间 
-     * @return StartTime 备份开始时间
+     * Get 备份开始时间。 
+     * @return StartTime 备份开始时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 备份开始时间
-     * @param StartTime 备份开始时间
+     * Set 备份开始时间。
+     * @param StartTime 备份开始时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 备份结束时间 
-     * @return EndTime 备份结束时间
+     * Get 备份结束时间。 
+     * @return EndTime 备份结束时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 备份结束时间
-     * @param EndTime 备份结束时间
+     * Set 备份结束时间。
+     * @param EndTime 备份结束时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 备份状态，1-备份中，2-备份成功 
-     * @return Status 备份状态，1-备份中，2-备份成功
+     * Get 备份状态。
+- 1：备份中。
+- 2：备份成功。 
+     * @return Status 备份状态。
+- 1：备份中。
+- 2：备份成功。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 备份状态，1-备份中，2-备份成功
-     * @param Status 备份状态，1-备份中，2-备份成功
+     * Set 备份状态。
+- 1：备份中。
+- 2：备份成功。
+     * @param Status 备份状态。
+- 1：备份中。
+- 2：备份成功。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 备份方法，0-逻辑备份，1-物理备份 
-     * @return BackupMethod 备份方法，0-逻辑备份，1-物理备份
+     * Get 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明:**
+- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+- 实例开通存储加密，则备份方式不能为物理备份。 
+     * @return BackupMethod 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明:**
+- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+- 实例开通存储加密，则备份方式不能为物理备份。
      */
     public Long getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set 备份方法，0-逻辑备份，1-物理备份
-     * @param BackupMethod 备份方法，0-逻辑备份，1-物理备份
+     * Set 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明:**
+- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+- 实例开通存储加密，则备份方式不能为物理备份。
+     * @param BackupMethod 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明:**
+- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+- 实例开通存储加密，则备份方式不能为物理备份。
      */
     public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get 备份记录id 
-     * @return BackId 备份记录id
+     * Get 备份记录 ID。 
+     * @return BackId 备份记录 ID。
      */
     public Long getBackId() {
         return this.BackId;
     }
 
     /**
-     * Set 备份记录id
-     * @param BackId 备份记录id
+     * Set 备份记录 ID。
+     * @param BackId 备份记录 ID。
      */
     public void setBackId(Long BackId) {
         this.BackId = BackId;
     }
 
     /**
-     * Get 备份删除时间 
-     * @return DeleteTime 备份删除时间
+     * Get 备份删除时间。 
+     * @return DeleteTime 备份删除时间。
      */
     public String getDeleteTime() {
         return this.DeleteTime;
     }
 
     /**
-     * Set 备份删除时间
-     * @param DeleteTime 备份删除时间
+     * Set 备份删除时间。
+     * @param DeleteTime 备份删除时间。
      */
     public void setDeleteTime(String DeleteTime) {
         this.DeleteTime = DeleteTime;
     }
 
     /**
-     * Get 异地备份地域 
-     * @return BackupRegion 异地备份地域
+     * Get 异地备份地域。 
+     * @return BackupRegion 异地备份地域。
      */
     public String getBackupRegion() {
         return this.BackupRegion;
     }
 
     /**
-     * Set 异地备份地域
-     * @param BackupRegion 异地备份地域
+     * Set 异地备份地域。
+     * @param BackupRegion 异地备份地域。
      */
     public void setBackupRegion(String BackupRegion) {
         this.BackupRegion = BackupRegion;
+    }
+
+    /**
+     * Get 备份支持的回档时间。 
+     * @return RestoreTime 备份支持的回档时间。
+     */
+    public String getRestoreTime() {
+        return this.RestoreTime;
+    }
+
+    /**
+     * Set 备份支持的回档时间。
+     * @param RestoreTime 备份支持的回档时间。
+     */
+    public void setRestoreTime(String RestoreTime) {
+        this.RestoreTime = RestoreTime;
     }
 
     public BackupInfo() {
@@ -343,6 +416,9 @@ public class BackupInfo extends AbstractModel {
         if (source.BackupRegion != null) {
             this.BackupRegion = new String(source.BackupRegion);
         }
+        if (source.RestoreTime != null) {
+            this.RestoreTime = new String(source.RestoreTime);
+        }
     }
 
 
@@ -362,6 +438,7 @@ public class BackupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BackId", this.BackId);
         this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
         this.setParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
+        this.setParamSimple(map, prefix + "RestoreTime", this.RestoreTime);
 
     }
 }

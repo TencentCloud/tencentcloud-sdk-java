@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateAgentSwitchRequest extends AbstractModel {
 
     /**
-    * Agent标识。
+    * Agent标识。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("AgentId")
     @Expose
@@ -45,16 +45,16 @@ public class UpdateAgentSwitchRequest extends AbstractModel {
     private String Product;
 
     /**
-     * Get Agent标识。 
-     * @return AgentId Agent标识。
+     * Get Agent标识。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return AgentId Agent标识。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set Agent标识。
-     * @param AgentId Agent标识。
+     * Set Agent标识。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param AgentId Agent标识。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;

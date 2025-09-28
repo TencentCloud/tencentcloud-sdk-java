@@ -59,14 +59,14 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
     private String ModelName;
 
     /**
-    * 开始时间戳, 单位为秒
+    * 开始时间戳, 单位为秒(废弃)
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间戳, 单位为秒
+    * 结束时间戳, 单位为秒(废弃)
     */
     @SerializedName("EndTime")
     @Expose
@@ -99,6 +99,20 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
     @SerializedName("SpaceId")
     @Expose
     private String SpaceId;
+
+    /**
+    * 开始时间戳, 单位为秒
+    */
+    @SerializedName("StatStartTime")
+    @Expose
+    private Long StatStartTime;
+
+    /**
+    * 结束时间戳, 单位为秒
+    */
+    @SerializedName("StatEndTime")
+    @Expose
+    private Long StatEndTime;
 
     /**
      * Get uin 
@@ -181,32 +195,32 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
     }
 
     /**
-     * Get 开始时间戳, 单位为秒 
-     * @return StartTime 开始时间戳, 单位为秒
+     * Get 开始时间戳, 单位为秒(废弃) 
+     * @return StartTime 开始时间戳, 单位为秒(废弃)
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间戳, 单位为秒
-     * @param StartTime 开始时间戳, 单位为秒
+     * Set 开始时间戳, 单位为秒(废弃)
+     * @param StartTime 开始时间戳, 单位为秒(废弃)
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间戳, 单位为秒 
-     * @return EndTime 结束时间戳, 单位为秒
+     * Get 结束时间戳, 单位为秒(废弃) 
+     * @return EndTime 结束时间戳, 单位为秒(废弃)
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间戳, 单位为秒
-     * @param EndTime 结束时间戳, 单位为秒
+     * Set 结束时间戳, 单位为秒(废弃)
+     * @param EndTime 结束时间戳, 单位为秒(废弃)
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -276,6 +290,38 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
         this.SpaceId = SpaceId;
     }
 
+    /**
+     * Get 开始时间戳, 单位为秒 
+     * @return StatStartTime 开始时间戳, 单位为秒
+     */
+    public Long getStatStartTime() {
+        return this.StatStartTime;
+    }
+
+    /**
+     * Set 开始时间戳, 单位为秒
+     * @param StatStartTime 开始时间戳, 单位为秒
+     */
+    public void setStatStartTime(Long StatStartTime) {
+        this.StatStartTime = StatStartTime;
+    }
+
+    /**
+     * Get 结束时间戳, 单位为秒 
+     * @return StatEndTime 结束时间戳, 单位为秒
+     */
+    public Long getStatEndTime() {
+        return this.StatEndTime;
+    }
+
+    /**
+     * Set 结束时间戳, 单位为秒
+     * @param StatEndTime 结束时间戳, 单位为秒
+     */
+    public void setStatEndTime(Long StatEndTime) {
+        this.StatEndTime = StatEndTime;
+    }
+
     public DescribeCallStatsGraphRequest() {
     }
 
@@ -326,6 +372,12 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
         if (source.SpaceId != null) {
             this.SpaceId = new String(source.SpaceId);
         }
+        if (source.StatStartTime != null) {
+            this.StatStartTime = new Long(source.StatStartTime);
+        }
+        if (source.StatEndTime != null) {
+            this.StatEndTime = new Long(source.StatEndTime);
+        }
     }
 
 
@@ -344,6 +396,8 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
         this.setParamSimple(map, prefix + "AppType", this.AppType);
         this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
+        this.setParamSimple(map, prefix + "StatStartTime", this.StatStartTime);
+        this.setParamSimple(map, prefix + "StatEndTime", this.StatEndTime);
 
     }
 }

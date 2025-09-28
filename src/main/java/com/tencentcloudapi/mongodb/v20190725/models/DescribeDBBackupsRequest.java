@@ -24,14 +24,20 @@ import java.util.HashMap;
 public class DescribeDBBackupsRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+    * 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+    * 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
     */
     @SerializedName("BackupMethod")
     @Expose
@@ -52,32 +58,56 @@ public class DescribeDBBackupsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
-     * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。 
-     * @return BackupMethod 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+     * Get 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。 
+     * @return BackupMethod 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      */
     public Long getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
-     * @param BackupMethod 备份方式，当前支持：0-逻辑备份，1-物理备份，2-所有备份。默认为逻辑备份。
+     * Set 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
+     * @param BackupMethod 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      */
     public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;

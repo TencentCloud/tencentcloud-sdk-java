@@ -130,6 +130,13 @@ public class CreateSealByImageRequest extends AbstractModel {
     private String SealDescription;
 
     /**
+    * 个性化配置字段，默认不传。
+    */
+    @SerializedName("Options")
+    @Expose
+    private Option [] Options;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -425,6 +432,22 @@ public class CreateSealByImageRequest extends AbstractModel {
         this.SealDescription = SealDescription;
     }
 
+    /**
+     * Get 个性化配置字段，默认不传。 
+     * @return Options 个性化配置字段，默认不传。
+     */
+    public Option [] getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set 个性化配置字段，默认不传。
+     * @param Options 个性化配置字段，默认不传。
+     */
+    public void setOptions(Option [] Options) {
+        this.Options = Options;
+    }
+
     public CreateSealByImageRequest() {
     }
 
@@ -466,6 +489,12 @@ public class CreateSealByImageRequest extends AbstractModel {
         if (source.SealDescription != null) {
             this.SealDescription = new String(source.SealDescription);
         }
+        if (source.Options != null) {
+            this.Options = new Option[source.Options.length];
+            for (int i = 0; i < source.Options.length; i++) {
+                this.Options[i] = new Option(source.Options[i]);
+            }
+        }
     }
 
 
@@ -484,6 +513,7 @@ public class CreateSealByImageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SealSize", this.SealSize);
         this.setParamSimple(map, prefix + "TaxIdentifyCode", this.TaxIdentifyCode);
         this.setParamSimple(map, prefix + "SealDescription", this.SealDescription);
+        this.setParamArrayObj(map, prefix + "Options.", this.Options);
 
     }
 }

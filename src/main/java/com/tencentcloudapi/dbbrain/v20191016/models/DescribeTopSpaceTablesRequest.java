@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopSpaceTablesRequest extends AbstractModel {
 
     /**
-    * 实例 ID 。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -39,6 +39,13 @@ public class DescribeTopSpaceTablesRequest extends AbstractModel {
 
     /**
     * 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
+DataLength       - 数据长度  
+IndexLength      - 索引长度  
+TotalLength      - 总长度  
+DataFree         - 空闲空间  
+FragRatio        - 碎片率  
+TableRows        - 表行数  
+PhysicalFileSize - 物理文件大小
     */
     @SerializedName("SortBy")
     @Expose
@@ -52,16 +59,16 @@ public class DescribeTopSpaceTablesRequest extends AbstractModel {
     private String Product;
 
     /**
-     * Get 实例 ID 。 
-     * @return InstanceId 实例 ID 。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID 。
-     * @param InstanceId 实例 ID 。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -84,8 +91,22 @@ public class DescribeTopSpaceTablesRequest extends AbstractModel {
     }
 
     /**
-     * Get 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。 
+     * Get 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
+DataLength       - 数据长度  
+IndexLength      - 索引长度  
+TotalLength      - 总长度  
+DataFree         - 空闲空间  
+FragRatio        - 碎片率  
+TableRows        - 表行数  
+PhysicalFileSize - 物理文件大小 
      * @return SortBy 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
+DataLength       - 数据长度  
+IndexLength      - 索引长度  
+TotalLength      - 总长度  
+DataFree         - 空闲空间  
+FragRatio        - 碎片率  
+TableRows        - 表行数  
+PhysicalFileSize - 物理文件大小
      */
     public String getSortBy() {
         return this.SortBy;
@@ -93,7 +114,21 @@ public class DescribeTopSpaceTablesRequest extends AbstractModel {
 
     /**
      * Set 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
+DataLength       - 数据长度  
+IndexLength      - 索引长度  
+TotalLength      - 总长度  
+DataFree         - 空闲空间  
+FragRatio        - 碎片率  
+TableRows        - 表行数  
+PhysicalFileSize - 物理文件大小
      * @param SortBy 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize（仅云数据库 MySQL实例支持），云数据库 MySQL实例默认为 PhysicalFileSize，其他产品实例默认为TotalLength。
+DataLength       - 数据长度  
+IndexLength      - 索引长度  
+TotalLength      - 总长度  
+DataFree         - 空闲空间  
+FragRatio        - 碎片率  
+TableRows        - 表行数  
+PhysicalFileSize - 物理文件大小
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;

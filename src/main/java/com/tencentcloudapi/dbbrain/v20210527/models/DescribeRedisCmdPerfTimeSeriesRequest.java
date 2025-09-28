@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRedisCmdPerfTimeSeriesRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,30 +59,36 @@ public class DescribeRedisCmdPerfTimeSeriesRequest extends AbstractModel {
     private String [] CommandList;
 
     /**
-    * 监控指标，以逗号分隔
+    * 监控指标，包括：qps,latency_p99,latency_avg,latency_max，以逗号分隔
+其中：
+qps          - 每秒查询率  
+latency_p99  - 99分位延迟  
+latency_avg  - 平均延迟  
+latency_max  - 最大延迟  
+
     */
     @SerializedName("Metric")
     @Expose
     private String Metric;
 
     /**
-    * 监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
+    * Period，监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -153,32 +159,56 @@ public class DescribeRedisCmdPerfTimeSeriesRequest extends AbstractModel {
     }
 
     /**
-     * Get 监控指标，以逗号分隔 
-     * @return Metric 监控指标，以逗号分隔
+     * Get 监控指标，包括：qps,latency_p99,latency_avg,latency_max，以逗号分隔
+其中：
+qps          - 每秒查询率  
+latency_p99  - 99分位延迟  
+latency_avg  - 平均延迟  
+latency_max  - 最大延迟  
+ 
+     * @return Metric 监控指标，包括：qps,latency_p99,latency_avg,latency_max，以逗号分隔
+其中：
+qps          - 每秒查询率  
+latency_p99  - 99分位延迟  
+latency_avg  - 平均延迟  
+latency_max  - 最大延迟  
+
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set 监控指标，以逗号分隔
-     * @param Metric 监控指标，以逗号分隔
+     * Set 监控指标，包括：qps,latency_p99,latency_avg,latency_max，以逗号分隔
+其中：
+qps          - 每秒查询率  
+latency_p99  - 99分位延迟  
+latency_avg  - 平均延迟  
+latency_max  - 最大延迟  
+
+     * @param Metric 监控指标，包括：qps,latency_p99,latency_avg,latency_max，以逗号分隔
+其中：
+qps          - 每秒查询率  
+latency_p99  - 99分位延迟  
+latency_avg  - 平均延迟  
+latency_max  - 最大延迟  
+
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
     }
 
     /**
-     * Get 监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值 
-     * @return Period 监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
+     * Get Period，监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值 
+     * @return Period Period，监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
-     * @param Period 监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
+     * Set Period，监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
+     * @param Period Period，监控指标时间粒度，单位秒，若不提供则根据开始时间和结束时间取默认值
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBAutonomyActionsRequest extends AbstractModel {
 
     /**
-    * 事件ID。
+    * 事件ID。可通过 [DescribeDBDiagHistory](https://cloud.tencent.com/document/product/1130/39559) 接口获取。
     */
     @SerializedName("EventId")
     @Expose
     private Long EventId;
 
     /**
-    * 实列ID。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDBAutonomyActionsRequest extends AbstractModel {
     private String Product;
 
     /**
-     * Get 事件ID。 
-     * @return EventId 事件ID。
+     * Get 事件ID。可通过 [DescribeDBDiagHistory](https://cloud.tencent.com/document/product/1130/39559) 接口获取。 
+     * @return EventId 事件ID。可通过 [DescribeDBDiagHistory](https://cloud.tencent.com/document/product/1130/39559) 接口获取。
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 事件ID。
-     * @param EventId 事件ID。
+     * Set 事件ID。可通过 [DescribeDBDiagHistory](https://cloud.tencent.com/document/product/1130/39559) 接口获取。
+     * @param EventId 事件ID。可通过 [DescribeDBDiagHistory](https://cloud.tencent.com/document/product/1130/39559) 接口获取。
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 实列ID。 
-     * @return InstanceId 实列ID。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实列ID。
-     * @param InstanceId 实列ID。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

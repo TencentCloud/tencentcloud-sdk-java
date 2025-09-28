@@ -38,7 +38,7 @@ public class RegionInstance extends AbstractModel {
     private Long RegionId;
 
     /**
-    * 地域状态
+    * 地域状态\n- alluser: 所有用户可见
     */
     @SerializedName("Status")
     @Expose
@@ -98,16 +98,16 @@ public class RegionInstance extends AbstractModel {
     }
 
     /**
-     * Get 地域状态 
-     * @return Status 地域状态
+     * Get 地域状态\n- alluser: 所有用户可见 
+     * @return Status 地域状态\n- alluser: 所有用户可见
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 地域状态
-     * @param Status 地域状态
+     * Set 地域状态\n- alluser: 所有用户可见
+     * @param Status 地域状态\n- alluser: 所有用户可见
      */
     public void setStatus(String Status) {
         this.Status = Status;

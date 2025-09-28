@@ -60,6 +60,8 @@ public class BackupStorageLocation extends AbstractModel {
 
     /**
     * 存储仓库状态
+- Available: 可用
+- Unavailable: 不可用
     */
     @SerializedName("State")
     @Expose
@@ -160,8 +162,12 @@ public class BackupStorageLocation extends AbstractModel {
     }
 
     /**
-     * Get 存储仓库状态 
+     * Get 存储仓库状态
+- Available: 可用
+- Unavailable: 不可用 
      * @return State 存储仓库状态
+- Available: 可用
+- Unavailable: 不可用
      */
     public String getState() {
         return this.State;
@@ -169,7 +175,11 @@ public class BackupStorageLocation extends AbstractModel {
 
     /**
      * Set 存储仓库状态
+- Available: 可用
+- Unavailable: 不可用
      * @param State 存储仓库状态
+- Available: 可用
+- Unavailable: 不可用
      */
     public void setState(String State) {
         this.State = State;

@@ -24,184 +24,194 @@ import java.util.HashMap;
 public class SecurityGroupBound extends AbstractModel {
 
     /**
-    * 执行规则。ACCEPT或DROP
+    * 执行策略。
+- ACCEPT：允许，放行该端口相应的访问请求。
+- DROP：拒绝，直接丢弃数据包，不返回任何回应信息。
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * ip段。
+    * 访问数据库的入站 IP 或 IP 段。
     */
     @SerializedName("CidrIp")
     @Expose
     private String CidrIp;
 
     /**
-    * 端口范围
+    * 访问数据库的端口。
     */
     @SerializedName("PortRange")
     @Expose
     private String PortRange;
 
     /**
-    * 传输层协议。tcp，udp或ALL
+    * 传输层协议：tcp。
     */
     @SerializedName("IpProtocol")
     @Expose
     private String IpProtocol;
 
     /**
-    * 安全组id代表的地址集合
+    * 安全组 ID。
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 地址组id代表的地址集合
+    * IP 地址或 IP 地址组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/ip)获取参数模板 IP 地址详情。
     */
     @SerializedName("AddressModule")
     @Expose
     private String AddressModule;
 
     /**
-    * 服务组id代表的协议和端口集合
+    * 协议端口或协议端口组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/protoport)获取参数模板协议端口详情。
     */
     @SerializedName("ServiceModule")
     @Expose
     private String ServiceModule;
 
     /**
-    * 描述
+    * 安全组描述信息。
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-     * Get 执行规则。ACCEPT或DROP 
-     * @return Action 执行规则。ACCEPT或DROP
+     * Get 执行策略。
+- ACCEPT：允许，放行该端口相应的访问请求。
+- DROP：拒绝，直接丢弃数据包，不返回任何回应信息。 
+     * @return Action 执行策略。
+- ACCEPT：允许，放行该端口相应的访问请求。
+- DROP：拒绝，直接丢弃数据包，不返回任何回应信息。
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 执行规则。ACCEPT或DROP
-     * @param Action 执行规则。ACCEPT或DROP
+     * Set 执行策略。
+- ACCEPT：允许，放行该端口相应的访问请求。
+- DROP：拒绝，直接丢弃数据包，不返回任何回应信息。
+     * @param Action 执行策略。
+- ACCEPT：允许，放行该端口相应的访问请求。
+- DROP：拒绝，直接丢弃数据包，不返回任何回应信息。
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get ip段。 
-     * @return CidrIp ip段。
+     * Get 访问数据库的入站 IP 或 IP 段。 
+     * @return CidrIp 访问数据库的入站 IP 或 IP 段。
      */
     public String getCidrIp() {
         return this.CidrIp;
     }
 
     /**
-     * Set ip段。
-     * @param CidrIp ip段。
+     * Set 访问数据库的入站 IP 或 IP 段。
+     * @param CidrIp 访问数据库的入站 IP 或 IP 段。
      */
     public void setCidrIp(String CidrIp) {
         this.CidrIp = CidrIp;
     }
 
     /**
-     * Get 端口范围 
-     * @return PortRange 端口范围
+     * Get 访问数据库的端口。 
+     * @return PortRange 访问数据库的端口。
      */
     public String getPortRange() {
         return this.PortRange;
     }
 
     /**
-     * Set 端口范围
-     * @param PortRange 端口范围
+     * Set 访问数据库的端口。
+     * @param PortRange 访问数据库的端口。
      */
     public void setPortRange(String PortRange) {
         this.PortRange = PortRange;
     }
 
     /**
-     * Get 传输层协议。tcp，udp或ALL 
-     * @return IpProtocol 传输层协议。tcp，udp或ALL
+     * Get 传输层协议：tcp。 
+     * @return IpProtocol 传输层协议：tcp。
      */
     public String getIpProtocol() {
         return this.IpProtocol;
     }
 
     /**
-     * Set 传输层协议。tcp，udp或ALL
-     * @param IpProtocol 传输层协议。tcp，udp或ALL
+     * Set 传输层协议：tcp。
+     * @param IpProtocol 传输层协议：tcp。
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;
     }
 
     /**
-     * Get 安全组id代表的地址集合 
-     * @return Id 安全组id代表的地址集合
+     * Get 安全组 ID。 
+     * @return Id 安全组 ID。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 安全组id代表的地址集合
-     * @param Id 安全组id代表的地址集合
+     * Set 安全组 ID。
+     * @param Id 安全组 ID。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 地址组id代表的地址集合 
-     * @return AddressModule 地址组id代表的地址集合
+     * Get IP 地址或 IP 地址组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/ip)获取参数模板 IP 地址详情。 
+     * @return AddressModule IP 地址或 IP 地址组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/ip)获取参数模板 IP 地址详情。
      */
     public String getAddressModule() {
         return this.AddressModule;
     }
 
     /**
-     * Set 地址组id代表的地址集合
-     * @param AddressModule 地址组id代表的地址集合
+     * Set IP 地址或 IP 地址组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/ip)获取参数模板 IP 地址详情。
+     * @param AddressModule IP 地址或 IP 地址组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/ip)获取参数模板 IP 地址详情。
      */
     public void setAddressModule(String AddressModule) {
         this.AddressModule = AddressModule;
     }
 
     /**
-     * Get 服务组id代表的协议和端口集合 
-     * @return ServiceModule 服务组id代表的协议和端口集合
+     * Get 协议端口或协议端口组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/protoport)获取参数模板协议端口详情。 
+     * @return ServiceModule 协议端口或协议端口组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/protoport)获取参数模板协议端口详情。
      */
     public String getServiceModule() {
         return this.ServiceModule;
     }
 
     /**
-     * Set 服务组id代表的协议和端口集合
-     * @param ServiceModule 服务组id代表的协议和端口集合
+     * Set 协议端口或协议端口组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/protoport)获取参数模板协议端口详情。
+     * @param ServiceModule 协议端口或协议端口组参数模板 ID。请登录[参数模板控制台](https://console.cloud.tencent.com/vpc/template/protoport)获取参数模板协议端口详情。
      */
     public void setServiceModule(String ServiceModule) {
         this.ServiceModule = ServiceModule;
     }
 
     /**
-     * Get 描述 
-     * @return Desc 描述
+     * Get 安全组描述信息。 
+     * @return Desc 安全组描述信息。
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 描述
-     * @param Desc 描述
+     * Set 安全组描述信息。
+     * @param Desc 安全组描述信息。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;

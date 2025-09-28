@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KillMySqlThreadsRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,7 +38,8 @@ public class KillMySqlThreadsRequest extends AbstractModel {
     private String Stage;
 
     /**
-    * 需要kill的sql会话ID列表，此参数用于Prepare阶段。
+    * 需要kill的sql会话ID列表，通过接口[查询实时线程列表](https://cloud.tencent.com/document/product/1130/57824)
+此参数用于Prepare阶段。
     */
     @SerializedName("Threads")
     @Expose
@@ -66,16 +67,16 @@ public class KillMySqlThreadsRequest extends AbstractModel {
     private Boolean RecordHistory;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -98,16 +99,20 @@ public class KillMySqlThreadsRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要kill的sql会话ID列表，此参数用于Prepare阶段。 
-     * @return Threads 需要kill的sql会话ID列表，此参数用于Prepare阶段。
+     * Get 需要kill的sql会话ID列表，通过接口[查询实时线程列表](https://cloud.tencent.com/document/product/1130/57824)
+此参数用于Prepare阶段。 
+     * @return Threads 需要kill的sql会话ID列表，通过接口[查询实时线程列表](https://cloud.tencent.com/document/product/1130/57824)
+此参数用于Prepare阶段。
      */
     public Long [] getThreads() {
         return this.Threads;
     }
 
     /**
-     * Set 需要kill的sql会话ID列表，此参数用于Prepare阶段。
-     * @param Threads 需要kill的sql会话ID列表，此参数用于Prepare阶段。
+     * Set 需要kill的sql会话ID列表，通过接口[查询实时线程列表](https://cloud.tencent.com/document/product/1130/57824)
+此参数用于Prepare阶段。
+     * @param Threads 需要kill的sql会话ID列表，通过接口[查询实时线程列表](https://cloud.tencent.com/document/product/1130/57824)
+此参数用于Prepare阶段。
      */
     public void setThreads(Long [] Threads) {
         this.Threads = Threads;

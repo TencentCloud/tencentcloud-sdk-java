@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FlashbackDatabase extends AbstractModel {
 
     /**
-    * 按key回档源数据所在库
+    * 按 Key 闪回目标数据所在库。
     */
     @SerializedName("DBName")
     @Expose
     private String DBName;
 
     /**
-    * 按key回档的集群数组
+    * 按 Key 闪回的数据库集合。
     */
     @SerializedName("Collections")
     @Expose
     private FlashbackCollection [] Collections;
 
     /**
-     * Get 按key回档源数据所在库 
-     * @return DBName 按key回档源数据所在库
+     * Get 按 Key 闪回目标数据所在库。 
+     * @return DBName 按 Key 闪回目标数据所在库。
      */
     public String getDBName() {
         return this.DBName;
     }
 
     /**
-     * Set 按key回档源数据所在库
-     * @param DBName 按key回档源数据所在库
+     * Set 按 Key 闪回目标数据所在库。
+     * @param DBName 按 Key 闪回目标数据所在库。
      */
     public void setDBName(String DBName) {
         this.DBName = DBName;
     }
 
     /**
-     * Get 按key回档的集群数组 
-     * @return Collections 按key回档的集群数组
+     * Get 按 Key 闪回的数据库集合。 
+     * @return Collections 按 Key 闪回的数据库集合。
      */
     public FlashbackCollection [] getCollections() {
         return this.Collections;
     }
 
     /**
-     * Set 按key回档的集群数组
-     * @param Collections 按key回档的集群数组
+     * Set 按 Key 闪回的数据库集合。
+     * @param Collections 按 Key 闪回的数据库集合。
      */
     public void setCollections(FlashbackCollection [] Collections) {
         this.Collections = Collections;

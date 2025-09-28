@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class FlashbackCollection extends AbstractModel {
 
     /**
-    * 按key回档指定的集合名
+    * 指定按 Key 闪回源数据库集合名。
     */
     @SerializedName("CollectionName")
     @Expose
     private String CollectionName;
 
     /**
-    * 按key回档到的目标集合名
+    * 指定按 Key 闪回目标数据库集合名。
     */
     @SerializedName("TargetResultCollectionName")
     @Expose
     private String TargetResultCollectionName;
 
     /**
-    * 上传到cos的文件的value所对应的key值
+    * 指定用于过滤按 Key 闪回的 Key（键）。
     */
     @SerializedName("FilterKey")
     @Expose
     private String FilterKey;
 
     /**
-    * 用于按key回档过滤的键值对
+    * 指定用于按 Key 闪回的键值对。数组元素最大限制为 50000。
     */
     @SerializedName("KeyValues")
     @Expose
     private FBKeyValue [] KeyValues;
 
     /**
-     * Get 按key回档指定的集合名 
-     * @return CollectionName 按key回档指定的集合名
+     * Get 指定按 Key 闪回源数据库集合名。 
+     * @return CollectionName 指定按 Key 闪回源数据库集合名。
      */
     public String getCollectionName() {
         return this.CollectionName;
     }
 
     /**
-     * Set 按key回档指定的集合名
-     * @param CollectionName 按key回档指定的集合名
+     * Set 指定按 Key 闪回源数据库集合名。
+     * @param CollectionName 指定按 Key 闪回源数据库集合名。
      */
     public void setCollectionName(String CollectionName) {
         this.CollectionName = CollectionName;
     }
 
     /**
-     * Get 按key回档到的目标集合名 
-     * @return TargetResultCollectionName 按key回档到的目标集合名
+     * Get 指定按 Key 闪回目标数据库集合名。 
+     * @return TargetResultCollectionName 指定按 Key 闪回目标数据库集合名。
      */
     public String getTargetResultCollectionName() {
         return this.TargetResultCollectionName;
     }
 
     /**
-     * Set 按key回档到的目标集合名
-     * @param TargetResultCollectionName 按key回档到的目标集合名
+     * Set 指定按 Key 闪回目标数据库集合名。
+     * @param TargetResultCollectionName 指定按 Key 闪回目标数据库集合名。
      */
     public void setTargetResultCollectionName(String TargetResultCollectionName) {
         this.TargetResultCollectionName = TargetResultCollectionName;
     }
 
     /**
-     * Get 上传到cos的文件的value所对应的key值 
-     * @return FilterKey 上传到cos的文件的value所对应的key值
+     * Get 指定用于过滤按 Key 闪回的 Key（键）。 
+     * @return FilterKey 指定用于过滤按 Key 闪回的 Key（键）。
      */
     public String getFilterKey() {
         return this.FilterKey;
     }
 
     /**
-     * Set 上传到cos的文件的value所对应的key值
-     * @param FilterKey 上传到cos的文件的value所对应的key值
+     * Set 指定用于过滤按 Key 闪回的 Key（键）。
+     * @param FilterKey 指定用于过滤按 Key 闪回的 Key（键）。
      */
     public void setFilterKey(String FilterKey) {
         this.FilterKey = FilterKey;
     }
 
     /**
-     * Get 用于按key回档过滤的键值对 
-     * @return KeyValues 用于按key回档过滤的键值对
+     * Get 指定用于按 Key 闪回的键值对。数组元素最大限制为 50000。 
+     * @return KeyValues 指定用于按 Key 闪回的键值对。数组元素最大限制为 50000。
      */
     public FBKeyValue [] getKeyValues() {
         return this.KeyValues;
     }
 
     /**
-     * Set 用于按key回档过滤的键值对
-     * @param KeyValues 用于按key回档过滤的键值对
+     * Set 指定用于按 Key 闪回的键值对。数组元素最大限制为 50000。
+     * @param KeyValues 指定用于按 Key 闪回的键值对。数组元素最大限制为 50000。
      */
     public void setKeyValues(FBKeyValue [] KeyValues) {
         this.KeyValues = KeyValues;

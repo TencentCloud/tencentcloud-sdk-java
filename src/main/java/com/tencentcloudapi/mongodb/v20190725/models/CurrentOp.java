@@ -45,7 +45,15 @@ public class CurrentOp extends AbstractModel {
     private String Query;
 
     /**
-    * 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
+    * 操作类型。
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
     */
     @SerializedName("Op")
     @Expose
@@ -73,7 +81,9 @@ public class CurrentOp extends AbstractModel {
     private String Operation;
 
     /**
-    * 筛选条件，节点状态，可能的取值为：Primary、Secondary。
+    * 节点角色。
+- primary：主节点。
+- secondary：从节点。
     */
     @SerializedName("State")
     @Expose
@@ -142,16 +152,48 @@ public class CurrentOp extends AbstractModel {
     }
 
     /**
-     * Get 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。 
-     * @return Op 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
+     * Get 操作类型。
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。 
+     * @return Op 操作类型。
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
      */
     public String getOp() {
         return this.Op;
     }
 
     /**
-     * Set 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
-     * @param Op 操作类型，可能的取值：aggregate、count、delete、distinct、find、findAndModify、getMore、insert、mapReduce、update和command。
+     * Set 操作类型。
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
+     * @param Op 操作类型。
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
      */
     public void setOp(String Op) {
         this.Op = Op;
@@ -206,16 +248,24 @@ public class CurrentOp extends AbstractModel {
     }
 
     /**
-     * Get 筛选条件，节点状态，可能的取值为：Primary、Secondary。 
-     * @return State 筛选条件，节点状态，可能的取值为：Primary、Secondary。
+     * Get 节点角色。
+- primary：主节点。
+- secondary：从节点。 
+     * @return State 节点角色。
+- primary：主节点。
+- secondary：从节点。
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 筛选条件，节点状态，可能的取值为：Primary、Secondary。
-     * @param State 筛选条件，节点状态，可能的取值为：Primary、Secondary。
+     * Set 节点角色。
+- primary：主节点。
+- secondary：从节点。
+     * @param State 节点角色。
+- primary：主节点。
+- secondary：从节点。
      */
     public void setState(String State) {
         this.State = State;

@@ -73,6 +73,13 @@ public class DescribeModuleStatusResponse extends AbstractModel {
     private Long RateLimit;
 
     /**
+    * gzip 开关
+    */
+    @SerializedName("GzipAnalysis")
+    @Expose
+    private Long GzipAnalysis;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -192,6 +199,22 @@ public class DescribeModuleStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get gzip 开关 
+     * @return GzipAnalysis gzip 开关
+     */
+    public Long getGzipAnalysis() {
+        return this.GzipAnalysis;
+    }
+
+    /**
+     * Set gzip 开关
+     * @param GzipAnalysis gzip 开关
+     */
+    public void setGzipAnalysis(Long GzipAnalysis) {
+        this.GzipAnalysis = GzipAnalysis;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -236,6 +259,9 @@ public class DescribeModuleStatusResponse extends AbstractModel {
         if (source.RateLimit != null) {
             this.RateLimit = new Long(source.RateLimit);
         }
+        if (source.GzipAnalysis != null) {
+            this.GzipAnalysis = new Long(source.GzipAnalysis);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -253,6 +279,7 @@ public class DescribeModuleStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
         this.setParamSimple(map, prefix + "ApiProtection", this.ApiProtection);
         this.setParamSimple(map, prefix + "RateLimit", this.RateLimit);
+        this.setParamSimple(map, prefix + "GzipAnalysis", this.GzipAnalysis);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

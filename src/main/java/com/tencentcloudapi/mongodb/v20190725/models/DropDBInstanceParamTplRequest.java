@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DropDBInstanceParamTplRequest extends AbstractModel {
 
     /**
-    * 参数模板 ID。
+    * 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
     */
     @SerializedName("TplId")
     @Expose
     private String TplId;
 
     /**
-     * Get 参数模板 ID。 
-     * @return TplId 参数模板 ID。
+     * Get 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。 
+     * @return TplId 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
      */
     public String getTplId() {
         return this.TplId;
     }
 
     /**
-     * Set 参数模板 ID。
-     * @param TplId 参数模板 ID。
+     * Set 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
+     * @param TplId 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
      */
     public void setTplId(String TplId) {
         this.TplId = TplId;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeSpecInfoRequest extends AbstractModel {
 
     /**
-    * 待查询可用区
+    * 待查询可用区。当前支持的可用区，请参见[地域与可用区](https://cloud.tencent.com/document/product/240/3637)。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get 待查询可用区 
-     * @return Zone 待查询可用区
+     * Get 待查询可用区。当前支持的可用区，请参见[地域与可用区](https://cloud.tencent.com/document/product/240/3637)。 
+     * @return Zone 待查询可用区。当前支持的可用区，请参见[地域与可用区](https://cloud.tencent.com/document/product/240/3637)。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 待查询可用区
-     * @param Zone 待查询可用区
+     * Set 待查询可用区。当前支持的可用区，请参见[地域与可用区](https://cloud.tencent.com/document/product/240/3637)。
+     * @param Zone 待查询可用区。当前支持的可用区，请参见[地域与可用区](https://cloud.tencent.com/document/product/240/3637)。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class DeleteConsumerGroupRequest extends AbstractModel {
 
     /**
-    * 数据订阅实例的 ID
+    * 数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
     */
     @SerializedName("SubscribeId")
     @Expose
@@ -32,7 +33,7 @@ public class DeleteConsumerGroupRequest extends AbstractModel {
 
     /**
     * 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。
-请务必保证消费组名称正确。
+请务必保证消费组名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
     */
     @SerializedName("ConsumerGroupName")
     @Expose
@@ -40,23 +41,27 @@ public class DeleteConsumerGroupRequest extends AbstractModel {
 
     /**
     * 账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}。
-请务必保证账户名称正确。
+请务必保证账户名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-     * Get 数据订阅实例的 ID 
-     * @return SubscribeId 数据订阅实例的 ID
+     * Get 数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+ 
+     * @return SubscribeId 数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
      */
     public String getSubscribeId() {
         return this.SubscribeId;
     }
 
     /**
-     * Set 数据订阅实例的 ID
-     * @param SubscribeId 数据订阅实例的 ID
+     * Set 数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
+     * @param SubscribeId 数据订阅实例的 ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
      */
     public void setSubscribeId(String SubscribeId) {
         this.SubscribeId = SubscribeId;
@@ -64,9 +69,9 @@ public class DeleteConsumerGroupRequest extends AbstractModel {
 
     /**
      * Get 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。
-请务必保证消费组名称正确。 
+请务必保证消费组名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。 
      * @return ConsumerGroupName 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。
-请务必保证消费组名称正确。
+请务必保证消费组名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
      */
     public String getConsumerGroupName() {
         return this.ConsumerGroupName;
@@ -74,9 +79,9 @@ public class DeleteConsumerGroupRequest extends AbstractModel {
 
     /**
      * Set 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。
-请务必保证消费组名称正确。
+请务必保证消费组名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
      * @param ConsumerGroupName 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}。
-请务必保证消费组名称正确。
+请务必保证消费组名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
      */
     public void setConsumerGroupName(String ConsumerGroupName) {
         this.ConsumerGroupName = ConsumerGroupName;
@@ -84,9 +89,9 @@ public class DeleteConsumerGroupRequest extends AbstractModel {
 
     /**
      * Get 账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}。
-请务必保证账户名称正确。 
+请务必保证账户名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。 
      * @return AccountName 账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}。
-请务必保证账户名称正确。
+请务必保证账户名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
      */
     public String getAccountName() {
         return this.AccountName;
@@ -94,9 +99,9 @@ public class DeleteConsumerGroupRequest extends AbstractModel {
 
     /**
      * Set 账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}。
-请务必保证账户名称正确。
+请务必保证账户名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
      * @param AccountName 账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}。
-请务必保证账户名称正确。
+请务必保证账户名称正确。可通过[DescribeConsumerGroups](https://cloud.tencent.com/document/product/571/102947)接口获取。
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDetailedSlowLogsResponse extends AbstractModel {
 
     /**
-    * 满足条件的慢日志数量
+    * 满足条件的慢日志数量。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 慢日志详情
+    * 慢日志详情。
     */
     @SerializedName("DetailedSlowLogs")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDetailedSlowLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 满足条件的慢日志数量 
-     * @return TotalCount 满足条件的慢日志数量
+     * Get 满足条件的慢日志数量。 
+     * @return TotalCount 满足条件的慢日志数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 满足条件的慢日志数量
-     * @param TotalCount 满足条件的慢日志数量
+     * Set 满足条件的慢日志数量。
+     * @param TotalCount 满足条件的慢日志数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 慢日志详情 
-     * @return DetailedSlowLogs 慢日志详情
+     * Get 慢日志详情。 
+     * @return DetailedSlowLogs 慢日志详情。
      */
     public SlowLogItem [] getDetailedSlowLogs() {
         return this.DetailedSlowLogs;
     }
 
     /**
-     * Set 慢日志详情
-     * @param DetailedSlowLogs 慢日志详情
+     * Set 慢日志详情。
+     * @param DetailedSlowLogs 慢日志详情。
      */
     public void setDetailedSlowLogs(SlowLogItem [] DetailedSlowLogs) {
         this.DetailedSlowLogs = DetailedSlowLogs;

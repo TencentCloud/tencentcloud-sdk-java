@@ -32,6 +32,7 @@ public class Process extends AbstractModel {
 
     /**
     * 访问来源，IP 地址和端口号。
+格式：IP:Port
     */
     @SerializedName("Address")
     @Expose
@@ -96,8 +97,10 @@ public class Process extends AbstractModel {
     }
 
     /**
-     * Get 访问来源，IP 地址和端口号。 
+     * Get 访问来源，IP 地址和端口号。
+格式：IP:Port 
      * @return Address 访问来源，IP 地址和端口号。
+格式：IP:Port
      */
     public String getAddress() {
         return this.Address;
@@ -105,7 +108,9 @@ public class Process extends AbstractModel {
 
     /**
      * Set 访问来源，IP 地址和端口号。
+格式：IP:Port
      * @param Address 访问来源，IP 地址和端口号。
+格式：IP:Port
      */
     public void setAddress(String Address) {
         this.Address = Address;

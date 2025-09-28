@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceParamTplRequest extends AbstractModel {
 
     /**
-    * 待修改的参数模板 ID，示例：tpl-jglr91vew。
+    * 待修改的参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
     */
     @SerializedName("TplId")
     @Expose
@@ -52,16 +52,16 @@ public class ModifyDBInstanceParamTplRequest extends AbstractModel {
     private ParamType [] Params;
 
     /**
-     * Get 待修改的参数模板 ID，示例：tpl-jglr91vew。 
-     * @return TplId 待修改的参数模板 ID，示例：tpl-jglr91vew。
+     * Get 待修改的参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。 
+     * @return TplId 待修改的参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
      */
     public String getTplId() {
         return this.TplId;
     }
 
     /**
-     * Set 待修改的参数模板 ID，示例：tpl-jglr91vew。
-     * @param TplId 待修改的参数模板 ID，示例：tpl-jglr91vew。
+     * Set 待修改的参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
+     * @param TplId 待修改的参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
      */
     public void setTplId(String TplId) {
         this.TplId = TplId;

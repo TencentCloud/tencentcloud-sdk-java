@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMySqlProcessListRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,14 +59,14 @@ public class DescribeMySqlProcessListRequest extends AbstractModel {
     private String DB;
 
     /**
-    * 线程的操作状态，用于筛选线程列表。
+    * 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 线程的执行类型，用于筛选线程列表。
+    * 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
     */
     @SerializedName("Command")
     @Expose
@@ -108,16 +108,16 @@ public class DescribeMySqlProcessListRequest extends AbstractModel {
     private StatDimension [] StatDimensions;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -188,32 +188,32 @@ public class DescribeMySqlProcessListRequest extends AbstractModel {
     }
 
     /**
-     * Get 线程的操作状态，用于筛选线程列表。 
-     * @return State 线程的操作状态，用于筛选线程列表。
+     * Get 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等 
+     * @return State 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 线程的操作状态，用于筛选线程列表。
-     * @param State 线程的操作状态，用于筛选线程列表。
+     * Set 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
+     * @param State 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 线程的执行类型，用于筛选线程列表。 
-     * @return Command 线程的执行类型，用于筛选线程列表。
+     * Get 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等 
+     * @return Command 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set 线程的执行类型，用于筛选线程列表。
-     * @param Command 线程的执行类型，用于筛选线程列表。
+     * Set 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
+     * @param Command 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
      */
     public void setCommand(String Command) {
         this.Command = Command;

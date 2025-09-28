@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RestartNodesResponse extends AbstractModel {
 
     /**
-    * 流程Id。
+    * 流程 ID。
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class RestartNodesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 流程Id。 
-     * @return FlowId 流程Id。
+     * Get 流程 ID。 
+     * @return FlowId 流程 ID。
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 流程Id。
-     * @param FlowId 流程Id。
+     * Set 流程 ID。
+     * @param FlowId 流程 ID。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

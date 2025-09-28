@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class RestartNodesRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+    * 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 节点Id。
+    * 需要重启的节点 ID 列表。
+- 支持重启的节点类型包含：mongod节点、只读节点、mongos节点。
+- 节点 ID，请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在**节点管理**页面复制，或者通过 [DescribeDBInstanceNodeProperty ](https://cloud.tencent.com/document/product/240/82022)接口获取。
     */
     @SerializedName("NodeIds")
     @Expose
     private String [] NodeIds;
 
     /**
-     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。 
-     * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+     * Get 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+     * Set 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 节点Id。 
-     * @return NodeIds 节点Id。
+     * Get 需要重启的节点 ID 列表。
+- 支持重启的节点类型包含：mongod节点、只读节点、mongos节点。
+- 节点 ID，请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在**节点管理**页面复制，或者通过 [DescribeDBInstanceNodeProperty ](https://cloud.tencent.com/document/product/240/82022)接口获取。 
+     * @return NodeIds 需要重启的节点 ID 列表。
+- 支持重启的节点类型包含：mongod节点、只读节点、mongos节点。
+- 节点 ID，请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在**节点管理**页面复制，或者通过 [DescribeDBInstanceNodeProperty ](https://cloud.tencent.com/document/product/240/82022)接口获取。
      */
     public String [] getNodeIds() {
         return this.NodeIds;
     }
 
     /**
-     * Set 节点Id。
-     * @param NodeIds 节点Id。
+     * Set 需要重启的节点 ID 列表。
+- 支持重启的节点类型包含：mongod节点、只读节点、mongos节点。
+- 节点 ID，请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在**节点管理**页面复制，或者通过 [DescribeDBInstanceNodeProperty ](https://cloud.tencent.com/document/product/240/82022)接口获取。
+     * @param NodeIds 需要重启的节点 ID 列表。
+- 支持重启的节点类型包含：mongod节点、只读节点、mongos节点。
+- 节点 ID，请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在**节点管理**页面复制，或者通过 [DescribeDBInstanceNodeProperty ](https://cloud.tencent.com/document/product/240/82022)接口获取。
      */
     public void setNodeIds(String [] NodeIds) {
         this.NodeIds = NodeIds;

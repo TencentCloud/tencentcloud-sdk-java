@@ -38,7 +38,7 @@ public class MailConfiguration extends AbstractModel {
     private String [] Region;
 
     /**
-    * 发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。
+    * 包含的健康等级，包括值：HEALTH-健康，SUB_HEALTH-亚健康，RISK-风险，HIGH_RISK-高危。
     */
     @SerializedName("HealthStatus")
     @Expose
@@ -91,16 +91,16 @@ public class MailConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。 
-     * @return HealthStatus 发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。
+     * Get 包含的健康等级，包括值：HEALTH-健康，SUB_HEALTH-亚健康，RISK-风险，HIGH_RISK-高危。 
+     * @return HealthStatus 包含的健康等级，包括值：HEALTH-健康，SUB_HEALTH-亚健康，RISK-风险，HIGH_RISK-高危。
      */
     public String [] getHealthStatus() {
         return this.HealthStatus;
     }
 
     /**
-     * Set 发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。
-     * @param HealthStatus 发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。
+     * Set 包含的健康等级，包括值：HEALTH-健康，SUB_HEALTH-亚健康，RISK-风险，HIGH_RISK-高危。
+     * @param HealthStatus 包含的健康等级，包括值：HEALTH-健康，SUB_HEALTH-亚健康，RISK-风险，HIGH_RISK-高危。
      */
     public void setHealthStatus(String [] HealthStatus) {
         this.HealthStatus = HealthStatus;

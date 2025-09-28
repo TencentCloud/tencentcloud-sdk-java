@@ -87,7 +87,7 @@ public class AlarmProfileList extends AbstractModel {
     private ReceiveInfo [] ReceiveInfo;
 
     /**
-    * 更新时间
+    * 更新时间，格式: "yyyy-MM-dd HH:mm:ss"
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -266,16 +266,16 @@ public class AlarmProfileList extends AbstractModel {
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get 更新时间，格式: "yyyy-MM-dd HH:mm:ss" 
+     * @return UpdateTime 更新时间，格式: "yyyy-MM-dd HH:mm:ss"
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set 更新时间，格式: "yyyy-MM-dd HH:mm:ss"
+     * @param UpdateTime 更新时间，格式: "yyyy-MM-dd HH:mm:ss"
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

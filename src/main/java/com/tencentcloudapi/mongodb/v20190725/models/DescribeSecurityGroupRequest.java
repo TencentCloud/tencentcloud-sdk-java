@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeSecurityGroupRequest extends AbstractModel {
 
     /**
-    * 实例 ID。例如：cmgo-p8vn****。
+    * 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 实例 ID。例如：cmgo-p8vn****。 
-     * @return InstanceId 实例 ID。例如：cmgo-p8vn****。
+     * Get 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。例如：cmgo-p8vn****。
-     * @param InstanceId 实例 ID。例如：cmgo-p8vn****。
+     * Set 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

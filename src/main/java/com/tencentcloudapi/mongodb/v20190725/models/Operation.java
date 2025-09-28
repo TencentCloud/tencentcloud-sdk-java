@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class Operation extends AbstractModel {
 
     /**
-    * 操作所在的分片名
+    * 操作所在的分片名称。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询分片名称。
     */
     @SerializedName("ReplicaSetName")
     @Expose
     private String ReplicaSetName;
 
     /**
-    * 操作所在的节点名
+    * 操作所在的节点名。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询节点名称。
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * 操作序号
+    * 操作序号。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询操作序号。
     */
     @SerializedName("OpId")
     @Expose
     private Long OpId;
 
     /**
-     * Get 操作所在的分片名 
-     * @return ReplicaSetName 操作所在的分片名
+     * Get 操作所在的分片名称。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询分片名称。 
+     * @return ReplicaSetName 操作所在的分片名称。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询分片名称。
      */
     public String getReplicaSetName() {
         return this.ReplicaSetName;
     }
 
     /**
-     * Set 操作所在的分片名
-     * @param ReplicaSetName 操作所在的分片名
+     * Set 操作所在的分片名称。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询分片名称。
+     * @param ReplicaSetName 操作所在的分片名称。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询分片名称。
      */
     public void setReplicaSetName(String ReplicaSetName) {
         this.ReplicaSetName = ReplicaSetName;
     }
 
     /**
-     * Get 操作所在的节点名 
-     * @return NodeName 操作所在的节点名
+     * Get 操作所在的节点名。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询节点名称。 
+     * @return NodeName 操作所在的节点名。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询节点名称。
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 操作所在的节点名
-     * @param NodeName 操作所在的节点名
+     * Set 操作所在的节点名。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询节点名称。
+     * @param NodeName 操作所在的节点名。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询节点名称。
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 操作序号 
-     * @return OpId 操作序号
+     * Get 操作序号。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询操作序号。 
+     * @return OpId 操作序号。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询操作序号。
      */
     public Long getOpId() {
         return this.OpId;
     }
 
     /**
-     * Set 操作序号
-     * @param OpId 操作序号
+     * Set 操作序号。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询操作序号。
+     * @param OpId 操作序号。请通过接口 [DescribeCurrentOp](https://cloud.tencent.com/document/product/240/48120) 查询操作序号。
      */
     public void setOpId(Long OpId) {
         this.OpId = OpId;

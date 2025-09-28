@@ -31,7 +31,7 @@ public class ReadWriteNode extends AbstractModel {
     private String Zone;
 
     /**
-    * 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+    * 升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
     */
     @SerializedName("NodeId")
     @Expose
@@ -54,16 +54,16 @@ public class ReadWriteNode extends AbstractModel {
     }
 
     /**
-     * Get 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。 
-     * @return NodeId 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+     * Get 升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。 
+     * @return NodeId 升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
-     * @param NodeId 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+     * Set 升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
+     * @param NodeId 升级云盘版实例时，如果要调整只读节点可用区，需要指定节点 ID。
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;

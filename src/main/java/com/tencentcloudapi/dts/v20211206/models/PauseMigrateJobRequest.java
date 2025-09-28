@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class PauseMigrateJobRequest extends AbstractModel {
 
     /**
-    * 数据迁移任务ID
+    * 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-     * Get 数据迁移任务ID 
-     * @return JobId 数据迁移任务ID
+     * Get 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ 
+     * @return JobId 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 数据迁移任务ID
-     * @param JobId 数据迁移任务ID
+     * Set 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+     * @param JobId 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

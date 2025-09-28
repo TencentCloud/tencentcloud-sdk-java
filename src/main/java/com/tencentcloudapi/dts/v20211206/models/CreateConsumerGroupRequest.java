@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class CreateConsumerGroupRequest extends AbstractModel {
 
     /**
-    * 订阅实例id
+    * 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
     */
     @SerializedName("SubscribeId")
     @Expose
@@ -59,16 +60,20 @@ public class CreateConsumerGroupRequest extends AbstractModel {
     private String Description;
 
     /**
-     * Get 订阅实例id 
-     * @return SubscribeId 订阅实例id
+     * Get 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+ 
+     * @return SubscribeId 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
      */
     public String getSubscribeId() {
         return this.SubscribeId;
     }
 
     /**
-     * Set 订阅实例id
-     * @param SubscribeId 订阅实例id
+     * Set 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
+     * @param SubscribeId 订阅实例id，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+
      */
     public void setSubscribeId(String SubscribeId) {
         this.SubscribeId = SubscribeId;

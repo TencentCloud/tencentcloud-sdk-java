@@ -25,6 +25,10 @@ public class DescribeEncryptionStatusResponse extends AbstractModel {
 
     /**
     * 加密状态
+- Opening: 开启中
+- Opened: 已开启
+- Closing: 关闭中
+- Closed: 已关闭
     */
     @SerializedName("Status")
     @Expose
@@ -45,8 +49,16 @@ public class DescribeEncryptionStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 加密状态 
+     * Get 加密状态
+- Opening: 开启中
+- Opened: 已开启
+- Closing: 关闭中
+- Closed: 已关闭 
      * @return Status 加密状态
+- Opening: 开启中
+- Opened: 已开启
+- Closing: 关闭中
+- Closed: 已关闭
      */
     public String getStatus() {
         return this.Status;
@@ -54,7 +66,15 @@ public class DescribeEncryptionStatusResponse extends AbstractModel {
 
     /**
      * Set 加密状态
+- Opening: 开启中
+- Opened: 已开启
+- Closing: 关闭中
+- Closed: 已关闭
      * @param Status 加密状态
+- Opening: 开启中
+- Opened: 已开启
+- Closing: 关闭中
+- Closed: 已关闭
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -31,7 +31,7 @@ public class ModifyDiagDBInstanceConfRequest extends AbstractModel {
     private InstanceConfs InstanceConfs;
 
     /**
-    * 生效实例地域，取值为"All"，代表全地域。
+    * 生效实例地域，固定为"All"，代表全地域。
     */
     @SerializedName("Regions")
     @Expose
@@ -46,6 +46,7 @@ public class ModifyDiagDBInstanceConfRequest extends AbstractModel {
 
     /**
     * 指定更改巡检状态的实例ID。
+可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -68,16 +69,16 @@ public class ModifyDiagDBInstanceConfRequest extends AbstractModel {
     }
 
     /**
-     * Get 生效实例地域，取值为"All"，代表全地域。 
-     * @return Regions 生效实例地域，取值为"All"，代表全地域。
+     * Get 生效实例地域，固定为"All"，代表全地域。 
+     * @return Regions 生效实例地域，固定为"All"，代表全地域。
      */
     public String getRegions() {
         return this.Regions;
     }
 
     /**
-     * Set 生效实例地域，取值为"All"，代表全地域。
-     * @param Regions 生效实例地域，取值为"All"，代表全地域。
+     * Set 生效实例地域，固定为"All"，代表全地域。
+     * @param Regions 生效实例地域，固定为"All"，代表全地域。
      */
     public void setRegions(String Regions) {
         this.Regions = Regions;
@@ -100,8 +101,10 @@ public class ModifyDiagDBInstanceConfRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定更改巡检状态的实例ID。 
+     * Get 指定更改巡检状态的实例ID。
+可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
      * @return InstanceIds 指定更改巡检状态的实例ID。
+可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -109,7 +112,9 @@ public class ModifyDiagDBInstanceConfRequest extends AbstractModel {
 
     /**
      * Set 指定更改巡检状态的实例ID。
+可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param InstanceIds 指定更改巡检状态的实例ID。
+可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

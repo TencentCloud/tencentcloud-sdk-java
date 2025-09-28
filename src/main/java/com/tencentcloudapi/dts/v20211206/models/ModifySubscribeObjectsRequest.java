@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifySubscribeObjectsRequest extends AbstractModel {
 
     /**
-    * 数据订阅实例的ID
+    * 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
     */
     @SerializedName("SubscribeId")
     @Expose
@@ -38,7 +38,7 @@ public class ModifySubscribeObjectsRequest extends AbstractModel {
     private Long SubscribeObjectType;
 
     /**
-    * 修改后的订阅数据库表信息。会覆盖原来的订阅对象，所以除非 SubscribeObjectType = 0或2，否则改字段必填。
+    * 修改后的订阅数据库表信息。会覆盖原来的订阅对象，所以除非 SubscribeObjectType = 0或2，否则该字段必填。
     */
     @SerializedName("Objects")
     @Expose
@@ -68,16 +68,16 @@ public class ModifySubscribeObjectsRequest extends AbstractModel {
     private PipelineInfo [] PipelineInfo;
 
     /**
-     * Get 数据订阅实例的ID 
-     * @return SubscribeId 数据订阅实例的ID
+     * Get 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。 
+     * @return SubscribeId 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      */
     public String getSubscribeId() {
         return this.SubscribeId;
     }
 
     /**
-     * Set 数据订阅实例的ID
-     * @param SubscribeId 数据订阅实例的ID
+     * Set 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
+     * @param SubscribeId 数据订阅实例的ID，可通过[DescribeSubscribeJobs](https://cloud.tencent.com/document/product/571/102943)接口获取。
      */
     public void setSubscribeId(String SubscribeId) {
         this.SubscribeId = SubscribeId;
@@ -100,16 +100,16 @@ public class ModifySubscribeObjectsRequest extends AbstractModel {
     }
 
     /**
-     * Get 修改后的订阅数据库表信息。会覆盖原来的订阅对象，所以除非 SubscribeObjectType = 0或2，否则改字段必填。 
-     * @return Objects 修改后的订阅数据库表信息。会覆盖原来的订阅对象，所以除非 SubscribeObjectType = 0或2，否则改字段必填。
+     * Get 修改后的订阅数据库表信息。会覆盖原来的订阅对象，所以除非 SubscribeObjectType = 0或2，否则该字段必填。 
+     * @return Objects 修改后的订阅数据库表信息。会覆盖原来的订阅对象，所以除非 SubscribeObjectType = 0或2，否则该字段必填。
      */
     public ModifiedSubscribeObject [] getObjects() {
         return this.Objects;
     }
 
     /**
-     * Set 修改后的订阅数据库表信息。会覆盖原来的订阅对象，所以除非 SubscribeObjectType = 0或2，否则改字段必填。
-     * @param Objects 修改后的订阅数据库表信息。会覆盖原来的订阅对象，所以除非 SubscribeObjectType = 0或2，否则改字段必填。
+     * Set 修改后的订阅数据库表信息。会覆盖原来的订阅对象，所以除非 SubscribeObjectType = 0或2，否则该字段必填。
+     * @param Objects 修改后的订阅数据库表信息。会覆盖原来的订阅对象，所以除非 SubscribeObjectType = 0或2，否则该字段必填。
      */
     public void setObjects(ModifiedSubscribeObject [] Objects) {
         this.Objects = Objects;

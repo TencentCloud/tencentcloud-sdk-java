@@ -24,14 +24,20 @@ import java.util.HashMap;
 public class CreateSqlFilterRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * SQL类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+    * SQL语句的类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+其中：
+SELECT   - 查询  
+UPDATE   - 更新  
+DELETE   - 删除  
+INSERT   - 插入  
+REPLACE  - 替换
     */
     @SerializedName("SqlType")
     @Expose
@@ -59,7 +65,7 @@ public class CreateSqlFilterRequest extends AbstractModel {
     private Long Duration;
 
     /**
-    * 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+    * 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
     */
     @SerializedName("SessionToken")
     @Expose
@@ -73,32 +79,56 @@ public class CreateSqlFilterRequest extends AbstractModel {
     private String Product;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get SQL类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。 
-     * @return SqlType SQL类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+     * Get SQL语句的类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+其中：
+SELECT   - 查询  
+UPDATE   - 更新  
+DELETE   - 删除  
+INSERT   - 插入  
+REPLACE  - 替换 
+     * @return SqlType SQL语句的类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+其中：
+SELECT   - 查询  
+UPDATE   - 更新  
+DELETE   - 删除  
+INSERT   - 插入  
+REPLACE  - 替换
      */
     public String getSqlType() {
         return this.SqlType;
     }
 
     /**
-     * Set SQL类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
-     * @param SqlType SQL类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+     * Set SQL语句的类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+其中：
+SELECT   - 查询  
+UPDATE   - 更新  
+DELETE   - 删除  
+INSERT   - 插入  
+REPLACE  - 替换
+     * @param SqlType SQL语句的类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
+其中：
+SELECT   - 查询  
+UPDATE   - 更新  
+DELETE   - 删除  
+INSERT   - 插入  
+REPLACE  - 替换
      */
     public void setSqlType(String SqlType) {
         this.SqlType = SqlType;
@@ -153,16 +183,16 @@ public class CreateSqlFilterRequest extends AbstractModel {
     }
 
     /**
-     * Get 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。 
-     * @return SessionToken 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     * Get 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。 
+     * @return SessionToken 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
      */
     public String getSessionToken() {
         return this.SessionToken;
     }
 
     /**
-     * Set 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
-     * @param SessionToken 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     * Set 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     * @param SessionToken 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
      */
     public void setSessionToken(String SessionToken) {
         this.SessionToken = SessionToken;

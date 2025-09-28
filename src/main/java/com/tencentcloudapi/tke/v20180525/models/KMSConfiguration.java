@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KMSConfiguration extends AbstractModel {
 
     /**
-    * kms id
+    * kms id，可以在密钥管理控制台获取
     */
     @SerializedName("KeyId")
     @Expose
@@ -38,16 +38,16 @@ public class KMSConfiguration extends AbstractModel {
     private String KmsRegion;
 
     /**
-     * Get kms id 
-     * @return KeyId kms id
+     * Get kms id，可以在密钥管理控制台获取 
+     * @return KeyId kms id，可以在密钥管理控制台获取
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set kms id
-     * @param KeyId kms id
+     * Set kms id，可以在密钥管理控制台获取
+     * @param KeyId kms id，可以在密钥管理控制台获取
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;

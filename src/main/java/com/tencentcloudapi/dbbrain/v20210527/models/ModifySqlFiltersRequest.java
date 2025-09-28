@@ -24,28 +24,29 @@ import java.util.HashMap;
 public class ModifySqlFiltersRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * SQL限流任务ID列表。
+    * SQL限流任务ID列表。可通过接口[查询实例SQL限流任务列表
+](https://cloud.tencent.com/document/product/1130/72831)获得。
     */
     @SerializedName("FilterIds")
     @Expose
     private Long [] FilterIds;
 
     /**
-    * 限流任务状态，取值支持TERMINATED - 终止。
+    * 限流任务状态，仅支持传参TERMINATED - 终止。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+    * 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
     */
     @SerializedName("SessionToken")
     @Expose
@@ -59,64 +60,68 @@ public class ModifySqlFiltersRequest extends AbstractModel {
     private String Product;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get SQL限流任务ID列表。 
-     * @return FilterIds SQL限流任务ID列表。
+     * Get SQL限流任务ID列表。可通过接口[查询实例SQL限流任务列表
+](https://cloud.tencent.com/document/product/1130/72831)获得。 
+     * @return FilterIds SQL限流任务ID列表。可通过接口[查询实例SQL限流任务列表
+](https://cloud.tencent.com/document/product/1130/72831)获得。
      */
     public Long [] getFilterIds() {
         return this.FilterIds;
     }
 
     /**
-     * Set SQL限流任务ID列表。
-     * @param FilterIds SQL限流任务ID列表。
+     * Set SQL限流任务ID列表。可通过接口[查询实例SQL限流任务列表
+](https://cloud.tencent.com/document/product/1130/72831)获得。
+     * @param FilterIds SQL限流任务ID列表。可通过接口[查询实例SQL限流任务列表
+](https://cloud.tencent.com/document/product/1130/72831)获得。
      */
     public void setFilterIds(Long [] FilterIds) {
         this.FilterIds = FilterIds;
     }
 
     /**
-     * Get 限流任务状态，取值支持TERMINATED - 终止。 
-     * @return Status 限流任务状态，取值支持TERMINATED - 终止。
+     * Get 限流任务状态，仅支持传参TERMINATED - 终止。 
+     * @return Status 限流任务状态，仅支持传参TERMINATED - 终止。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 限流任务状态，取值支持TERMINATED - 终止。
-     * @param Status 限流任务状态，取值支持TERMINATED - 终止。
+     * Set 限流任务状态，仅支持传参TERMINATED - 终止。
+     * @param Status 限流任务状态，仅支持传参TERMINATED - 终止。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。 
-     * @return SessionToken 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     * Get 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。 
+     * @return SessionToken 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
      */
     public String getSessionToken() {
         return this.SessionToken;
     }
 
     /**
-     * Set 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
-     * @param SessionToken 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     * Set 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     * @param SessionToken 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
      */
     public void setSessionToken(String SessionToken) {
         this.SessionToken = SessionToken;

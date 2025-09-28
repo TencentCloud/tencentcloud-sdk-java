@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteParamTemplateRequest extends AbstractModel {
 
     /**
-    * 参数模板 ID。
+    * 参数模板 ID。请登录 [Redis 控制台的参数模版](https://console.cloud.tencent.com/redis/templates)页面获取模版 ID。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get 参数模板 ID。 
-     * @return TemplateId 参数模板 ID。
+     * Get 参数模板 ID。请登录 [Redis 控制台的参数模版](https://console.cloud.tencent.com/redis/templates)页面获取模版 ID。 
+     * @return TemplateId 参数模板 ID。请登录 [Redis 控制台的参数模版](https://console.cloud.tencent.com/redis/templates)页面获取模版 ID。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 参数模板 ID。
-     * @param TemplateId 参数模板 ID。
+     * Set 参数模板 ID。请登录 [Redis 控制台的参数模版](https://console.cloud.tencent.com/redis/templates)页面获取模版 ID。
+     * @param TemplateId 参数模板 ID。请登录 [Redis 控制台的参数模版](https://console.cloud.tencent.com/redis/templates)页面获取模版 ID。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

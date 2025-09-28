@@ -31,22 +31,21 @@ public class DescribeAlarmTemplateRequest extends AbstractModel {
     private String TemplateNameRegexp;
 
     /**
-    * 返回限制长度
+    * 返回限制长度，最大值: 50，默认值: 50
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏置
+    * 偏置，最大值: 无限制，默认值: 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * mysql -  mysql
-cynosdb -  tdsql-c
+    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL
     */
     @SerializedName("Product")
     @Expose
@@ -69,52 +68,48 @@ cynosdb -  tdsql-c
     }
 
     /**
-     * Get 返回限制长度 
-     * @return Limit 返回限制长度
+     * Get 返回限制长度，最大值: 50，默认值: 50 
+     * @return Limit 返回限制长度，最大值: 50，默认值: 50
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回限制长度
-     * @param Limit 返回限制长度
+     * Set 返回限制长度，最大值: 50，默认值: 50
+     * @param Limit 返回限制长度，最大值: 50，默认值: 50
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏置 
-     * @return Offset 偏置
+     * Get 偏置，最大值: 无限制，默认值: 0 
+     * @return Offset 偏置，最大值: 无限制，默认值: 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏置
-     * @param Offset 偏置
+     * Set 偏置，最大值: 无限制，默认值: 0
+     * @param Offset 偏置，最大值: 无限制，默认值: 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get mysql -  mysql
-cynosdb -  tdsql-c 
-     * @return Product mysql -  mysql
-cynosdb -  tdsql-c
+     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL 
+     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set mysql -  mysql
-cynosdb -  tdsql-c
-     * @param Product mysql -  mysql
-cynosdb -  tdsql-c
+     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL
+     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL
      */
     public void setProduct(String Product) {
         this.Product = Product;

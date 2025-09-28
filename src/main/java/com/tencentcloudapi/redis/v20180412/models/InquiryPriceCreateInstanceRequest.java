@@ -72,21 +72,24 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private Long BillingMode;
 
     /**
-    * 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+    * 实例所属的可用区 ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
+    * 实例分片数量。
+- 标准架构需要配置分片数量为1。
+- 集群架构分片数量支持设置为1、3、5、8、12、16、24、32、40、48、64、80、96、128。
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * 实例副本数量。2.8 标准架构无需配置副本数量。
+    * 实例副本数量。取值范围为：1、2、3、4、5。
     */
     @SerializedName("RedisReplicasNum")
     @Expose
@@ -103,6 +106,7 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 
     /**
     * 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
     */
     @SerializedName("ZoneName")
     @Expose
@@ -251,48 +255,60 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     }
 
     /**
-     * Get 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。 
-     * @return ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     * Get 实例所属的可用区 ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。 
+     * @return ZoneId 实例所属的可用区 ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     * @param ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     * Set 实例所属的可用区 ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
+     * @param ZoneId 实例所属的可用区 ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。 
-     * @return RedisShardNum 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
+     * Get 实例分片数量。
+- 标准架构需要配置分片数量为1。
+- 集群架构分片数量支持设置为1、3、5、8、12、16、24、32、40、48、64、80、96、128。 
+     * @return RedisShardNum 实例分片数量。
+- 标准架构需要配置分片数量为1。
+- 集群架构分片数量支持设置为1、3、5、8、12、16、24、32、40、48、64、80、96、128。
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
-     * @param RedisShardNum 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
+     * Set 实例分片数量。
+- 标准架构需要配置分片数量为1。
+- 集群架构分片数量支持设置为1、3、5、8、12、16、24、32、40、48、64、80、96、128。
+     * @param RedisShardNum 实例分片数量。
+- 标准架构需要配置分片数量为1。
+- 集群架构分片数量支持设置为1、3、5、8、12、16、24、32、40、48、64、80、96、128。
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get 实例副本数量。2.8 标准架构无需配置副本数量。 
-     * @return RedisReplicasNum 实例副本数量。2.8 标准架构无需配置副本数量。
+     * Get 实例副本数量。取值范围为：1、2、3、4、5。 
+     * @return RedisReplicasNum 实例副本数量。取值范围为：1、2、3、4、5。
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set 实例副本数量。2.8 标准架构无需配置副本数量。
-     * @param RedisReplicasNum 实例副本数量。2.8 标准架构无需配置副本数量。
+     * Set 实例副本数量。取值范围为：1、2、3、4、5。
+     * @param RedisReplicasNum 实例副本数量。取值范围为：1、2、3、4、5。
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
@@ -323,8 +339,10 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     }
 
     /**
-     * Get 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。 
+     * Get 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。 
      * @return ZoneName 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
      */
     public String getZoneName() {
         return this.ZoneName;
@@ -332,7 +350,9 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 
     /**
      * Set 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
      * @param ZoneName 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+**说明**：请在 **ZoneId** 与 **ZoneName** 中至少指定一个参数。
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;

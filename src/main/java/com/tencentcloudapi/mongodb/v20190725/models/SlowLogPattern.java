@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class SlowLogPattern extends AbstractModel {
 
     /**
-    * 慢日志模式
+    * 慢日志输出格式：库名.表名.命令。
     */
     @SerializedName("Pattern")
     @Expose
     private String Pattern;
 
     /**
-    * queryHash
+    * 记录慢日志时所带的queryHash 值，标识一类查询。
     */
     @SerializedName("QueryHash")
     @Expose
     private String QueryHash;
 
     /**
-    * 最大执行时间
+    * 最大执行时间。单位：毫秒。
     */
     @SerializedName("MaxTime")
     @Expose
     private Long MaxTime;
 
     /**
-    * 平均执行时间
+    * 平均执行时间。单位：毫秒。
     */
     @SerializedName("AverageTime")
     @Expose
     private Long AverageTime;
 
     /**
-    * 该模式慢日志条数
+    * 慢日志条数。
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-     * Get 慢日志模式 
-     * @return Pattern 慢日志模式
+     * Get 慢日志输出格式：库名.表名.命令。 
+     * @return Pattern 慢日志输出格式：库名.表名.命令。
      */
     public String getPattern() {
         return this.Pattern;
     }
 
     /**
-     * Set 慢日志模式
-     * @param Pattern 慢日志模式
+     * Set 慢日志输出格式：库名.表名.命令。
+     * @param Pattern 慢日志输出格式：库名.表名.命令。
      */
     public void setPattern(String Pattern) {
         this.Pattern = Pattern;
     }
 
     /**
-     * Get queryHash 
-     * @return QueryHash queryHash
+     * Get 记录慢日志时所带的queryHash 值，标识一类查询。 
+     * @return QueryHash 记录慢日志时所带的queryHash 值，标识一类查询。
      */
     public String getQueryHash() {
         return this.QueryHash;
     }
 
     /**
-     * Set queryHash
-     * @param QueryHash queryHash
+     * Set 记录慢日志时所带的queryHash 值，标识一类查询。
+     * @param QueryHash 记录慢日志时所带的queryHash 值，标识一类查询。
      */
     public void setQueryHash(String QueryHash) {
         this.QueryHash = QueryHash;
     }
 
     /**
-     * Get 最大执行时间 
-     * @return MaxTime 最大执行时间
+     * Get 最大执行时间。单位：毫秒。 
+     * @return MaxTime 最大执行时间。单位：毫秒。
      */
     public Long getMaxTime() {
         return this.MaxTime;
     }
 
     /**
-     * Set 最大执行时间
-     * @param MaxTime 最大执行时间
+     * Set 最大执行时间。单位：毫秒。
+     * @param MaxTime 最大执行时间。单位：毫秒。
      */
     public void setMaxTime(Long MaxTime) {
         this.MaxTime = MaxTime;
     }
 
     /**
-     * Get 平均执行时间 
-     * @return AverageTime 平均执行时间
+     * Get 平均执行时间。单位：毫秒。 
+     * @return AverageTime 平均执行时间。单位：毫秒。
      */
     public Long getAverageTime() {
         return this.AverageTime;
     }
 
     /**
-     * Set 平均执行时间
-     * @param AverageTime 平均执行时间
+     * Set 平均执行时间。单位：毫秒。
+     * @param AverageTime 平均执行时间。单位：毫秒。
      */
     public void setAverageTime(Long AverageTime) {
         this.AverageTime = AverageTime;
     }
 
     /**
-     * Get 该模式慢日志条数 
-     * @return Total 该模式慢日志条数
+     * Get 慢日志条数。 
+     * @return Total 慢日志条数。
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 该模式慢日志条数
-     * @param Total 该模式慢日志条数
+     * Set 慢日志条数。
+     * @param Total 慢日志条数。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

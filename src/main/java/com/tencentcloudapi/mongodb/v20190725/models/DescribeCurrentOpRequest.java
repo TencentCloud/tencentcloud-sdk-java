@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCurrentOpRequest extends AbstractModel {
 
     /**
-    * 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+    * 指定要查询的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -47,7 +47,15 @@ public class DescribeCurrentOpRequest extends AbstractModel {
     private Long MillisecondRunning;
 
     /**
-    * 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
+    * 设置查询筛选条件为操作任务类型。取值包括：
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
     */
     @SerializedName("Op")
     @Expose
@@ -70,44 +78,46 @@ public class DescribeCurrentOpRequest extends AbstractModel {
     private String State;
 
     /**
-    * 单次请求返回的数量，默认值为100，取值范围为[0,100]
+    * 单次请求返回的数量，默认值为100，取值范围为[0,100]。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认值为0，取值范围为[0,10000]
+    * 偏移量，默认值为0，取值范围为[0,10000]。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回结果集排序的字段，目前支持："MicrosecsRunning"/"microsecsrunning"，默认为升序排序
+    * 返回结果集排序的字段，目前支持按照 MicrosecsRunning（操作任务已执行的时间）排序。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 返回结果集排序方式，可能的取值："ASC"/"asc"或"DESC"/"desc"
+    * 返回结果集排序方式。
+- ASC：升序。默认为 ASC，按照升序排序。
+- DESC：降序。
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-     * Get 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
-     * @return InstanceId 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * Get 指定要查询的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 指定要查询的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-     * @param InstanceId 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * Set 指定要查询的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 指定要查询的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -154,16 +164,48 @@ public class DescribeCurrentOpRequest extends AbstractModel {
     }
 
     /**
-     * Get 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。 
-     * @return Op 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
+     * Get 设置查询筛选条件为操作任务类型。取值包括：
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。 
+     * @return Op 设置查询筛选条件为操作任务类型。取值包括：
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
      */
     public String getOp() {
         return this.Op;
     }
 
     /**
-     * Set 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
-     * @param Op 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
+     * Set 设置查询筛选条件为操作任务类型。取值包括：
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
+     * @param Op 设置查询筛选条件为操作任务类型。取值包括：
+- none：特殊状态，空闲连接或内部任务等。
+- update：更新数据。
+- insert：插入操作。
+- query：查询操作。
+- command：命令操作。
+- getmore：获取更多数据。
+- remove：删除操作。
+- killcursors：释放查询游标的操作。
      */
     public void setOp(String Op) {
         this.Op = Op;
@@ -210,64 +252,72 @@ public class DescribeCurrentOpRequest extends AbstractModel {
     }
 
     /**
-     * Get 单次请求返回的数量，默认值为100，取值范围为[0,100] 
-     * @return Limit 单次请求返回的数量，默认值为100，取值范围为[0,100]
+     * Get 单次请求返回的数量，默认值为100，取值范围为[0,100]。 
+     * @return Limit 单次请求返回的数量，默认值为100，取值范围为[0,100]。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次请求返回的数量，默认值为100，取值范围为[0,100]
-     * @param Limit 单次请求返回的数量，默认值为100，取值范围为[0,100]
+     * Set 单次请求返回的数量，默认值为100，取值范围为[0,100]。
+     * @param Limit 单次请求返回的数量，默认值为100，取值范围为[0,100]。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认值为0，取值范围为[0,10000] 
-     * @return Offset 偏移量，默认值为0，取值范围为[0,10000]
+     * Get 偏移量，默认值为0，取值范围为[0,10000]。 
+     * @return Offset 偏移量，默认值为0，取值范围为[0,10000]。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认值为0，取值范围为[0,10000]
-     * @param Offset 偏移量，默认值为0，取值范围为[0,10000]
+     * Set 偏移量，默认值为0，取值范围为[0,10000]。
+     * @param Offset 偏移量，默认值为0，取值范围为[0,10000]。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回结果集排序的字段，目前支持："MicrosecsRunning"/"microsecsrunning"，默认为升序排序 
-     * @return OrderBy 返回结果集排序的字段，目前支持："MicrosecsRunning"/"microsecsrunning"，默认为升序排序
+     * Get 返回结果集排序的字段，目前支持按照 MicrosecsRunning（操作任务已执行的时间）排序。 
+     * @return OrderBy 返回结果集排序的字段，目前支持按照 MicrosecsRunning（操作任务已执行的时间）排序。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 返回结果集排序的字段，目前支持："MicrosecsRunning"/"microsecsrunning"，默认为升序排序
-     * @param OrderBy 返回结果集排序的字段，目前支持："MicrosecsRunning"/"microsecsrunning"，默认为升序排序
+     * Set 返回结果集排序的字段，目前支持按照 MicrosecsRunning（操作任务已执行的时间）排序。
+     * @param OrderBy 返回结果集排序的字段，目前支持按照 MicrosecsRunning（操作任务已执行的时间）排序。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 返回结果集排序方式，可能的取值："ASC"/"asc"或"DESC"/"desc" 
-     * @return OrderByType 返回结果集排序方式，可能的取值："ASC"/"asc"或"DESC"/"desc"
+     * Get 返回结果集排序方式。
+- ASC：升序。默认为 ASC，按照升序排序。
+- DESC：降序。 
+     * @return OrderByType 返回结果集排序方式。
+- ASC：升序。默认为 ASC，按照升序排序。
+- DESC：降序。
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 返回结果集排序方式，可能的取值："ASC"/"asc"或"DESC"/"desc"
-     * @param OrderByType 返回结果集排序方式，可能的取值："ASC"/"asc"或"DESC"/"desc"
+     * Set 返回结果集排序方式。
+- ASC：升序。默认为 ASC，按照升序排序。
+- DESC：降序。
+     * @param OrderByType 返回结果集排序方式。
+- ASC：升序。默认为 ASC，按照升序排序。
+- DESC：降序。
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

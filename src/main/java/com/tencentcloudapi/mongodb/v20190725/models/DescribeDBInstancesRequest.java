@@ -24,28 +24,41 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel {
 
     /**
-    * 实例 ID 列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+    * 实例 ID 列表。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 指定查询的实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>3：只读实例。</li><li>4：灾备实例。</li></ul>
+    * 指定查询的实例类型。取值范围如下：
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：查询同时包括正式实例、只读实例与灾备实例。
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * 指定所查询实例的集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：副本集与分片实例。</li></ul>
+    * 指定所查询实例的集群类型，取值范围如下：
+- 0：副本集实例。
+- 1：分片实例。
+- -1：副本集与分片实例。
     */
     @SerializedName("ClusterType")
     @Expose
     private Long ClusterType;
 
     /**
-    * 指定所查询实例的当前状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程处理中，例如：变更规格、参数修改等。</li><li>2：实例正常运行中。</li><li>-2：实例已过期。</li></ul>
+    * 指定所查询实例的当前状态，取值范围如下所示：
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
     */
     @SerializedName("Status")
     @Expose
@@ -70,14 +83,17 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 指定所查询实例的付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
+    * 指定所查询实例的付费类型。
+- 0：查询按量计费实例。
+- 1：查询包年包月实例。
+- -1：查询按量计费与包年包月实例。
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 单次请求返回的数量。默认值为20，取值范围为[1,100]。
+    * 单次请求返回的数量。默认值为20，取值范围为(1,100]。
     */
     @SerializedName("Limit")
     @Expose
@@ -128,64 +144,116 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private TagInfo [] Tags;
 
     /**
-     * Get 实例 ID 列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
-     * @return InstanceIds 实例 ID 列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * Get 实例 ID 列表。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceIds 实例 ID 列表。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例 ID 列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-     * @param InstanceIds 实例 ID 列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * Set 实例 ID 列表。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceIds 实例 ID 列表。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 指定查询的实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>3：只读实例。</li><li>4：灾备实例。</li></ul> 
-     * @return InstanceType 指定查询的实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>3：只读实例。</li><li>4：灾备实例。</li></ul>
+     * Get 指定查询的实例类型。取值范围如下：
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：查询同时包括正式实例、只读实例与灾备实例。 
+     * @return InstanceType 指定查询的实例类型。取值范围如下：
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：查询同时包括正式实例、只读实例与灾备实例。
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 指定查询的实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>3：只读实例。</li><li>4：灾备实例。</li></ul>
-     * @param InstanceType 指定查询的实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>3：只读实例。</li><li>4：灾备实例。</li></ul>
+     * Set 指定查询的实例类型。取值范围如下：
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：查询同时包括正式实例、只读实例与灾备实例。
+     * @param InstanceType 指定查询的实例类型。取值范围如下：
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：查询同时包括正式实例、只读实例与灾备实例。
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 指定所查询实例的集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：副本集与分片实例。</li></ul> 
-     * @return ClusterType 指定所查询实例的集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：副本集与分片实例。</li></ul>
+     * Get 指定所查询实例的集群类型，取值范围如下：
+- 0：副本集实例。
+- 1：分片实例。
+- -1：副本集与分片实例。 
+     * @return ClusterType 指定所查询实例的集群类型，取值范围如下：
+- 0：副本集实例。
+- 1：分片实例。
+- -1：副本集与分片实例。
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 指定所查询实例的集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：副本集与分片实例。</li></ul>
-     * @param ClusterType 指定所查询实例的集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：副本集与分片实例。</li></ul>
+     * Set 指定所查询实例的集群类型，取值范围如下：
+- 0：副本集实例。
+- 1：分片实例。
+- -1：副本集与分片实例。
+     * @param ClusterType 指定所查询实例的集群类型，取值范围如下：
+- 0：副本集实例。
+- 1：分片实例。
+- -1：副本集与分片实例。
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 指定所查询实例的当前状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程处理中，例如：变更规格、参数修改等。</li><li>2：实例正常运行中。</li><li>-2：实例已过期。</li></ul> 
-     * @return Status 指定所查询实例的当前状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程处理中，例如：变更规格、参数修改等。</li><li>2：实例正常运行中。</li><li>-2：实例已过期。</li></ul>
+     * Get 指定所查询实例的当前状态，取值范围如下所示：
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。 
+     * @return Status 指定所查询实例的当前状态，取值范围如下所示：
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 指定所查询实例的当前状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程处理中，例如：变更规格、参数修改等。</li><li>2：实例正常运行中。</li><li>-2：实例已过期。</li></ul>
-     * @param Status 指定所查询实例的当前状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程处理中，例如：变更规格、参数修改等。</li><li>2：实例正常运行中。</li><li>-2：实例已过期。</li></ul>
+     * Set 指定所查询实例的当前状态，取值范围如下所示：
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
+     * @param Status 指定所查询实例的当前状态，取值范围如下所示：
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
@@ -240,32 +308,44 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定所查询实例的付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul> 
-     * @return PayMode 指定所查询实例的付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
+     * Get 指定所查询实例的付费类型。
+- 0：查询按量计费实例。
+- 1：查询包年包月实例。
+- -1：查询按量计费与包年包月实例。 
+     * @return PayMode 指定所查询实例的付费类型。
+- 0：查询按量计费实例。
+- 1：查询包年包月实例。
+- -1：查询按量计费与包年包月实例。
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 指定所查询实例的付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
-     * @param PayMode 指定所查询实例的付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
+     * Set 指定所查询实例的付费类型。
+- 0：查询按量计费实例。
+- 1：查询包年包月实例。
+- -1：查询按量计费与包年包月实例。
+     * @param PayMode 指定所查询实例的付费类型。
+- 0：查询按量计费实例。
+- 1：查询包年包月实例。
+- -1：查询按量计费与包年包月实例。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 单次请求返回的数量。默认值为20，取值范围为[1,100]。 
-     * @return Limit 单次请求返回的数量。默认值为20，取值范围为[1,100]。
+     * Get 单次请求返回的数量。默认值为20，取值范围为(1,100]。 
+     * @return Limit 单次请求返回的数量。默认值为20，取值范围为(1,100]。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次请求返回的数量。默认值为20，取值范围为[1,100]。
-     * @param Limit 单次请求返回的数量。默认值为20，取值范围为[1,100]。
+     * Set 单次请求返回的数量。默认值为20，取值范围为(1,100]。
+     * @param Limit 单次请求返回的数量。默认值为20，取值范围为(1,100]。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

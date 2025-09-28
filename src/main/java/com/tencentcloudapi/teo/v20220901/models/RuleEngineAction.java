@@ -195,6 +195,14 @@ public class RuleEngineAction extends AbstractModel {
     private ForceRedirectHTTPSParameters ForceRedirectHTTPSParameters;
 
     /**
+    * 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginPullProtocolParameters")
+    @Expose
+    private OriginPullProtocolParameters OriginPullProtocolParameters;
+
+    /**
     * 智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -345,6 +353,13 @@ public class RuleEngineAction extends AbstractModel {
     @SerializedName("VaryParameters")
     @Expose
     private VaryParameters VaryParameters;
+
+    /**
+    * 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+    */
+    @SerializedName("ContentCompressionParameters")
+    @Expose
+    private ContentCompressionParameters ContentCompressionParameters;
 
     /**
      * Get 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
@@ -827,6 +842,26 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
+     * Get 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginPullProtocolParameters 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OriginPullProtocolParameters getOriginPullProtocolParameters() {
+        return this.OriginPullProtocolParameters;
+    }
+
+    /**
+     * Set 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginPullProtocolParameters 回源 HTTPS 配置参数，当 Name 取值为 OriginPullProtocol 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginPullProtocolParameters(OriginPullProtocolParameters OriginPullProtocolParameters) {
+        this.OriginPullProtocolParameters = OriginPullProtocolParameters;
+    }
+
+    /**
      * Get 智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CompressionParameters 智能压缩配置，当 Name 取值为 Compression 时，该参数必填。
@@ -1206,6 +1241,22 @@ public class RuleEngineAction extends AbstractModel {
         this.VaryParameters = VaryParameters;
     }
 
+    /**
+     * Get 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。 
+     * @return ContentCompressionParameters 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     */
+    public ContentCompressionParameters getContentCompressionParameters() {
+        return this.ContentCompressionParameters;
+    }
+
+    /**
+     * Set 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     * @param ContentCompressionParameters 内容压缩配置参数，当 Name 取值为 ContentCompression 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     */
+    public void setContentCompressionParameters(ContentCompressionParameters ContentCompressionParameters) {
+        this.ContentCompressionParameters = ContentCompressionParameters;
+    }
+
     public RuleEngineAction() {
     }
 
@@ -1265,6 +1316,9 @@ public class RuleEngineAction extends AbstractModel {
         if (source.ForceRedirectHTTPSParameters != null) {
             this.ForceRedirectHTTPSParameters = new ForceRedirectHTTPSParameters(source.ForceRedirectHTTPSParameters);
         }
+        if (source.OriginPullProtocolParameters != null) {
+            this.OriginPullProtocolParameters = new OriginPullProtocolParameters(source.OriginPullProtocolParameters);
+        }
         if (source.CompressionParameters != null) {
             this.CompressionParameters = new CompressionParameters(source.CompressionParameters);
         }
@@ -1322,6 +1376,9 @@ public class RuleEngineAction extends AbstractModel {
         if (source.VaryParameters != null) {
             this.VaryParameters = new VaryParameters(source.VaryParameters);
         }
+        if (source.ContentCompressionParameters != null) {
+            this.ContentCompressionParameters = new ContentCompressionParameters(source.ContentCompressionParameters);
+        }
     }
 
 
@@ -1346,6 +1403,7 @@ public class RuleEngineAction extends AbstractModel {
         this.setParamObj(map, prefix + "UpstreamHTTP2Parameters.", this.UpstreamHTTP2Parameters);
         this.setParamObj(map, prefix + "HostHeaderParameters.", this.HostHeaderParameters);
         this.setParamObj(map, prefix + "ForceRedirectHTTPSParameters.", this.ForceRedirectHTTPSParameters);
+        this.setParamObj(map, prefix + "OriginPullProtocolParameters.", this.OriginPullProtocolParameters);
         this.setParamObj(map, prefix + "CompressionParameters.", this.CompressionParameters);
         this.setParamObj(map, prefix + "HSTSParameters.", this.HSTSParameters);
         this.setParamObj(map, prefix + "ClientIPHeaderParameters.", this.ClientIPHeaderParameters);
@@ -1365,6 +1423,7 @@ public class RuleEngineAction extends AbstractModel {
         this.setParamObj(map, prefix + "ResponseSpeedLimitParameters.", this.ResponseSpeedLimitParameters);
         this.setParamObj(map, prefix + "SetContentIdentifierParameters.", this.SetContentIdentifierParameters);
         this.setParamObj(map, prefix + "VaryParameters.", this.VaryParameters);
+        this.setParamObj(map, prefix + "ContentCompressionParameters.", this.ContentCompressionParameters);
 
     }
 }

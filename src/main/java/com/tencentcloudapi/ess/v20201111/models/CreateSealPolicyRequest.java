@@ -77,6 +77,13 @@ public class CreateSealPolicyRequest extends AbstractModel {
     private Agent Agent;
 
     /**
+    * 个性化配置字段，默认不传。
+    */
+    @SerializedName("Options")
+    @Expose
+    private Option [] Options;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -204,6 +211,22 @@ public class CreateSealPolicyRequest extends AbstractModel {
         this.Agent = Agent;
     }
 
+    /**
+     * Get 个性化配置字段，默认不传。 
+     * @return Options 个性化配置字段，默认不传。
+     */
+    public Option [] getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set 个性化配置字段，默认不传。
+     * @param Options 个性化配置字段，默认不传。
+     */
+    public void setOptions(Option [] Options) {
+        this.Options = Options;
+    }
+
     public CreateSealPolicyRequest() {
     }
 
@@ -239,6 +262,12 @@ public class CreateSealPolicyRequest extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.Options != null) {
+            this.Options = new Option[source.Options.length];
+            for (int i = 0; i < source.Options.length; i++) {
+                this.Options[i] = new Option(source.Options[i]);
+            }
+        }
     }
 
 
@@ -253,6 +282,7 @@ public class CreateSealPolicyRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamArrayObj(map, prefix + "Options.", this.Options);
 
     }
 }

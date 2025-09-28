@@ -54,6 +54,13 @@ public class OperateSealsRequest extends AbstractModel {
     private String [] SealIds;
 
     /**
+    * 个性化配置字段，默认不传。
+    */
+    @SerializedName("Options")
+    @Expose
+    private Option [] Options;
+
+    /**
      * Get 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。 
      * @return Operator 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
@@ -125,6 +132,22 @@ public class OperateSealsRequest extends AbstractModel {
         this.SealIds = SealIds;
     }
 
+    /**
+     * Get 个性化配置字段，默认不传。 
+     * @return Options 个性化配置字段，默认不传。
+     */
+    public Option [] getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set 个性化配置字段，默认不传。
+     * @param Options 个性化配置字段，默认不传。
+     */
+    public void setOptions(Option [] Options) {
+        this.Options = Options;
+    }
+
     public OperateSealsRequest() {
     }
 
@@ -148,6 +171,12 @@ public class OperateSealsRequest extends AbstractModel {
                 this.SealIds[i] = new String(source.SealIds[i]);
             }
         }
+        if (source.Options != null) {
+            this.Options = new Option[source.Options.length];
+            for (int i = 0; i < source.Options.length; i++) {
+                this.Options[i] = new Option(source.Options[i]);
+            }
+        }
     }
 
 
@@ -159,6 +188,7 @@ public class OperateSealsRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "Act", this.Act);
         this.setParamArraySimple(map, prefix + "SealIds.", this.SealIds);
+        this.setParamArrayObj(map, prefix + "Options.", this.Options);
 
     }
 }

@@ -34,6 +34,10 @@ public class CreateBackupDBInstanceRequest extends AbstractModel {
     * 设置备份方式。
 - 0：逻辑备份。
 - 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
     */
     @SerializedName("BackupMethod")
     @Expose
@@ -65,10 +69,18 @@ public class CreateBackupDBInstanceRequest extends AbstractModel {
     /**
      * Get 设置备份方式。
 - 0：逻辑备份。
-- 1：物理备份。 
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。 
      * @return BackupMethod 设置备份方式。
 - 0：逻辑备份。
 - 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      */
     public Long getBackupMethod() {
         return this.BackupMethod;
@@ -78,9 +90,17 @@ public class CreateBackupDBInstanceRequest extends AbstractModel {
      * Set 设置备份方式。
 - 0：逻辑备份。
 - 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      * @param BackupMethod 设置备份方式。
 - 0：逻辑备份。
 - 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      */
     public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;

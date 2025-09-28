@@ -24,138 +24,198 @@ import java.util.HashMap;
 public class ParamTpl extends AbstractModel {
 
     /**
-    * 参数模板名称
+    * 参数模板名称。
     */
     @SerializedName("TplName")
     @Expose
     private String TplName;
 
     /**
-    * 参数模板ID
+    * 参数模板 ID。
     */
     @SerializedName("TplId")
     @Expose
     private String TplId;
 
     /**
-    * 适用数据库版本
+    * 参数模板适用的数据库版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersion")
     @Expose
     private String MongoVersion;
 
     /**
-    * 适用数据库类型
+    * 参数模板适用的数据库类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 参数模板描述
+    * 参数模板描述。
     */
     @SerializedName("TplDesc")
     @Expose
     private String TplDesc;
 
     /**
-    * 模板类型，包括DEFAULT（默认模板）及CUSTOMIZE（定制模板）两种类型
+    * 模板类型。
+- DEFAULT：系统默认模板。
+- CUSTOMIZE：自定义模板。
     */
     @SerializedName("TplType")
     @Expose
     private String TplType;
 
     /**
-     * Get 参数模板名称 
-     * @return TplName 参数模板名称
+     * Get 参数模板名称。 
+     * @return TplName 参数模板名称。
      */
     public String getTplName() {
         return this.TplName;
     }
 
     /**
-     * Set 参数模板名称
-     * @param TplName 参数模板名称
+     * Set 参数模板名称。
+     * @param TplName 参数模板名称。
      */
     public void setTplName(String TplName) {
         this.TplName = TplName;
     }
 
     /**
-     * Get 参数模板ID 
-     * @return TplId 参数模板ID
+     * Get 参数模板 ID。 
+     * @return TplId 参数模板 ID。
      */
     public String getTplId() {
         return this.TplId;
     }
 
     /**
-     * Set 参数模板ID
-     * @param TplId 参数模板ID
+     * Set 参数模板 ID。
+     * @param TplId 参数模板 ID。
      */
     public void setTplId(String TplId) {
         this.TplId = TplId;
     }
 
     /**
-     * Get 适用数据库版本 
-     * @return MongoVersion 适用数据库版本
+     * Get 参数模板适用的数据库版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。 
+     * @return MongoVersion 参数模板适用的数据库版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set 适用数据库版本
-     * @param MongoVersion 适用数据库版本
+     * Set 参数模板适用的数据库版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+     * @param MongoVersion 参数模板适用的数据库版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
     }
 
     /**
-     * Get 适用数据库类型 
-     * @return ClusterType 适用数据库类型
+     * Get 参数模板适用的数据库类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。 
+     * @return ClusterType 参数模板适用的数据库类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 适用数据库类型
-     * @param ClusterType 适用数据库类型
+     * Set 参数模板适用的数据库类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
+     * @param ClusterType 参数模板适用的数据库类型。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 参数模板描述 
-     * @return TplDesc 参数模板描述
+     * Get 参数模板描述。 
+     * @return TplDesc 参数模板描述。
      */
     public String getTplDesc() {
         return this.TplDesc;
     }
 
     /**
-     * Set 参数模板描述
-     * @param TplDesc 参数模板描述
+     * Set 参数模板描述。
+     * @param TplDesc 参数模板描述。
      */
     public void setTplDesc(String TplDesc) {
         this.TplDesc = TplDesc;
     }
 
     /**
-     * Get 模板类型，包括DEFAULT（默认模板）及CUSTOMIZE（定制模板）两种类型 
-     * @return TplType 模板类型，包括DEFAULT（默认模板）及CUSTOMIZE（定制模板）两种类型
+     * Get 模板类型。
+- DEFAULT：系统默认模板。
+- CUSTOMIZE：自定义模板。 
+     * @return TplType 模板类型。
+- DEFAULT：系统默认模板。
+- CUSTOMIZE：自定义模板。
      */
     public String getTplType() {
         return this.TplType;
     }
 
     /**
-     * Set 模板类型，包括DEFAULT（默认模板）及CUSTOMIZE（定制模板）两种类型
-     * @param TplType 模板类型，包括DEFAULT（默认模板）及CUSTOMIZE（定制模板）两种类型
+     * Set 模板类型。
+- DEFAULT：系统默认模板。
+- CUSTOMIZE：自定义模板。
+     * @param TplType 模板类型。
+- DEFAULT：系统默认模板。
+- CUSTOMIZE：自定义模板。
      */
     public void setTplType(String TplType) {
         this.TplType = TplType;

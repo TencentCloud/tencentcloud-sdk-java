@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class DescribeDBInstanceDealRequest extends AbstractModel {
 
     /**
-    * 订单ID，通过CreateDBInstance等接口返回
+    * 订单 ID。
+- 按量计费实例，请通过 [CreateDBInstanceHour](https://cloud.tencent.com/document/product/240/38570) 接口输出的参数**DealId**获取。。
+- 包年包月计费实例，请通过 [CreateDBInstance](https://cloud.tencent.com/document/product/240/38571) 接口输出的参数**DealId**获取。
     */
     @SerializedName("DealId")
     @Expose
     private String DealId;
 
     /**
-     * Get 订单ID，通过CreateDBInstance等接口返回 
-     * @return DealId 订单ID，通过CreateDBInstance等接口返回
+     * Get 订单 ID。
+- 按量计费实例，请通过 [CreateDBInstanceHour](https://cloud.tencent.com/document/product/240/38570) 接口输出的参数**DealId**获取。。
+- 包年包月计费实例，请通过 [CreateDBInstance](https://cloud.tencent.com/document/product/240/38571) 接口输出的参数**DealId**获取。 
+     * @return DealId 订单 ID。
+- 按量计费实例，请通过 [CreateDBInstanceHour](https://cloud.tencent.com/document/product/240/38570) 接口输出的参数**DealId**获取。。
+- 包年包月计费实例，请通过 [CreateDBInstance](https://cloud.tencent.com/document/product/240/38571) 接口输出的参数**DealId**获取。
      */
     public String getDealId() {
         return this.DealId;
     }
 
     /**
-     * Set 订单ID，通过CreateDBInstance等接口返回
-     * @param DealId 订单ID，通过CreateDBInstance等接口返回
+     * Set 订单 ID。
+- 按量计费实例，请通过 [CreateDBInstanceHour](https://cloud.tencent.com/document/product/240/38570) 接口输出的参数**DealId**获取。。
+- 包年包月计费实例，请通过 [CreateDBInstance](https://cloud.tencent.com/document/product/240/38571) 接口输出的参数**DealId**获取。
+     * @param DealId 订单 ID。
+- 按量计费实例，请通过 [CreateDBInstanceHour](https://cloud.tencent.com/document/product/240/38570) 接口输出的参数**DealId**获取。。
+- 包年包月计费实例，请通过 [CreateDBInstance](https://cloud.tencent.com/document/product/240/38571) 接口输出的参数**DealId**获取。
      */
     public void setDealId(String DealId) {
         this.DealId = DealId;

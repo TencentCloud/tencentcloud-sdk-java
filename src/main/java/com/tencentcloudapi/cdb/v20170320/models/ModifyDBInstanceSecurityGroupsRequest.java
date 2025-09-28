@@ -46,7 +46,7 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     private Boolean ForReadonlyInstance;
 
     /**
-    * 变更集群版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+    * 变更云盘版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
     */
     @SerializedName("OpResourceId")
     @Expose
@@ -105,16 +105,16 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 变更集群版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。 
-     * @return OpResourceId 变更集群版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+     * Get 变更云盘版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。 
+     * @return OpResourceId 变更云盘版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
      */
     public String getOpResourceId() {
         return this.OpResourceId;
     }
 
     /**
-     * Set 变更集群版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
-     * @param OpResourceId 变更集群版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+     * Set 变更云盘版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+     * @param OpResourceId 变更云盘版实例只读组时，InstanceId 传实例 ID，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
      */
     public void setOpResourceId(String OpResourceId) {
         this.OpResourceId = OpResourceId;

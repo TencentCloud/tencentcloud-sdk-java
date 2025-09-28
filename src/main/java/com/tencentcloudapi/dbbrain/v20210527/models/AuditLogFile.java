@@ -76,14 +76,14 @@ public class AuditLogFile extends AbstractModel {
     private String ErrMsg;
 
     /**
-    * 文件生成进度。
+    * 文件生成进度。（单位：%）
     */
     @SerializedName("Progress")
     @Expose
     private Float Progress;
 
     /**
-    * 文件生成成功时间。
+    * 文件生成成功时间。格式: "yyyy-MM-dd HH:mm:ss"
     */
     @SerializedName("FinishTime")
     @Expose
@@ -214,32 +214,32 @@ public class AuditLogFile extends AbstractModel {
     }
 
     /**
-     * Get 文件生成进度。 
-     * @return Progress 文件生成进度。
+     * Get 文件生成进度。（单位：%） 
+     * @return Progress 文件生成进度。（单位：%）
      */
     public Float getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 文件生成进度。
-     * @param Progress 文件生成进度。
+     * Set 文件生成进度。（单位：%）
+     * @param Progress 文件生成进度。（单位：%）
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 文件生成成功时间。 
-     * @return FinishTime 文件生成成功时间。
+     * Get 文件生成成功时间。格式: "yyyy-MM-dd HH:mm:ss" 
+     * @return FinishTime 文件生成成功时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 文件生成成功时间。
-     * @param FinishTime 文件生成成功时间。
+     * Set 文件生成成功时间。格式: "yyyy-MM-dd HH:mm:ss"
+     * @param FinishTime 文件生成成功时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

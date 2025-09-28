@@ -80,6 +80,13 @@ public class ModifyModuleStatusRequest extends AbstractModel {
     private Long RateLimit;
 
     /**
+    * gzip 开关
+    */
+    @SerializedName("GzipAnalysis")
+    @Expose
+    private Long GzipAnalysis;
+
+    /**
      * Get 需要设置的domain 
      * @return Domain 需要设置的domain
      */
@@ -207,6 +214,22 @@ public class ModifyModuleStatusRequest extends AbstractModel {
         this.RateLimit = RateLimit;
     }
 
+    /**
+     * Get gzip 开关 
+     * @return GzipAnalysis gzip 开关
+     */
+    public Long getGzipAnalysis() {
+        return this.GzipAnalysis;
+    }
+
+    /**
+     * Set gzip 开关
+     * @param GzipAnalysis gzip 开关
+     */
+    public void setGzipAnalysis(Long GzipAnalysis) {
+        this.GzipAnalysis = GzipAnalysis;
+    }
+
     public ModifyModuleStatusRequest() {
     }
 
@@ -239,6 +262,9 @@ public class ModifyModuleStatusRequest extends AbstractModel {
         if (source.RateLimit != null) {
             this.RateLimit = new Long(source.RateLimit);
         }
+        if (source.GzipAnalysis != null) {
+            this.GzipAnalysis = new Long(source.GzipAnalysis);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class ModifyModuleStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AntiTamper", this.AntiTamper);
         this.setParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
         this.setParamSimple(map, prefix + "RateLimit", this.RateLimit);
+        this.setParamSimple(map, prefix + "GzipAnalysis", this.GzipAnalysis);
 
     }
 }

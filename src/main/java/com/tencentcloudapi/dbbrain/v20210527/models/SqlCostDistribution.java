@@ -45,7 +45,7 @@ public class SqlCostDistribution extends AbstractModel {
     private Float To;
 
     /**
-    * 耗时占比。
+    * 耗时占比。单位（%）
     */
     @SerializedName("Ratio")
     @Expose
@@ -100,16 +100,16 @@ public class SqlCostDistribution extends AbstractModel {
     }
 
     /**
-     * Get 耗时占比。 
-     * @return Ratio 耗时占比。
+     * Get 耗时占比。单位（%） 
+     * @return Ratio 耗时占比。单位（%）
      */
     public Float getRatio() {
         return this.Ratio;
     }
 
     /**
-     * Set 耗时占比。
-     * @param Ratio 耗时占比。
+     * Set 耗时占比。单位（%）
+     * @param Ratio 耗时占比。单位（%）
      */
     public void setRatio(Float Ratio) {
         this.Ratio = Ratio;

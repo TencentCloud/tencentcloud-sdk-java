@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBAutonomyActionRequest extends AbstractModel {
 
     /**
-    * 自治任务ID。
+    * 自治任务ID。可通过 [DescribeDBAutonomyActions](https://cloud.tencent.com/document/product/1130/116974) 接口获取。
     */
     @SerializedName("ActionId")
     @Expose
     private Long ActionId;
 
     /**
-    * 实列ID。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDBAutonomyActionRequest extends AbstractModel {
     private String Product;
 
     /**
-     * Get 自治任务ID。 
-     * @return ActionId 自治任务ID。
+     * Get 自治任务ID。可通过 [DescribeDBAutonomyActions](https://cloud.tencent.com/document/product/1130/116974) 接口获取。 
+     * @return ActionId 自治任务ID。可通过 [DescribeDBAutonomyActions](https://cloud.tencent.com/document/product/1130/116974) 接口获取。
      */
     public Long getActionId() {
         return this.ActionId;
     }
 
     /**
-     * Set 自治任务ID。
-     * @param ActionId 自治任务ID。
+     * Set 自治任务ID。可通过 [DescribeDBAutonomyActions](https://cloud.tencent.com/document/product/1130/116974) 接口获取。
+     * @param ActionId 自治任务ID。可通过 [DescribeDBAutonomyActions](https://cloud.tencent.com/document/product/1130/116974) 接口获取。
      */
     public void setActionId(Long ActionId) {
         this.ActionId = ActionId;
     }
 
     /**
-     * Get 实列ID。 
-     * @return InstanceId 实列ID。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实列ID。
-     * @param InstanceId 实列ID。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

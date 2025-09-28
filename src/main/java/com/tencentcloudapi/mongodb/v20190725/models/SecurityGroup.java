@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class SecurityGroup extends AbstractModel {
 
     /**
-    * 所属项目id
+    * 所属项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 创建时间
+    * 安全组创建时间。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 入站规则
+    * 安全组入站规则。
     */
     @SerializedName("Inbound")
     @Expose
     private SecurityGroupBound [] Inbound;
 
     /**
-    * 出站规则
+    * 安全组出站规则。
     */
     @SerializedName("Outbound")
     @Expose
     private SecurityGroupBound [] Outbound;
 
     /**
-    * 安全组id
+    * 安全组 ID。
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * 安全组名称
+    * 安全组名称。
     */
     @SerializedName("SecurityGroupName")
     @Expose
     private String SecurityGroupName;
 
     /**
-    * 安全组备注
+    * 安全组备注信息。
     */
     @SerializedName("SecurityGroupRemark")
     @Expose
     private String SecurityGroupRemark;
 
     /**
-     * Get 所属项目id 
-     * @return ProjectId 所属项目id
+     * Get 所属项目 ID。 
+     * @return ProjectId 所属项目 ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 所属项目id
-     * @param ProjectId 所属项目id
+     * Set 所属项目 ID。
+     * @param ProjectId 所属项目 ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 安全组创建时间。 
+     * @return CreateTime 安全组创建时间。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 安全组创建时间。
+     * @param CreateTime 安全组创建时间。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 入站规则 
-     * @return Inbound 入站规则
+     * Get 安全组入站规则。 
+     * @return Inbound 安全组入站规则。
      */
     public SecurityGroupBound [] getInbound() {
         return this.Inbound;
     }
 
     /**
-     * Set 入站规则
-     * @param Inbound 入站规则
+     * Set 安全组入站规则。
+     * @param Inbound 安全组入站规则。
      */
     public void setInbound(SecurityGroupBound [] Inbound) {
         this.Inbound = Inbound;
     }
 
     /**
-     * Get 出站规则 
-     * @return Outbound 出站规则
+     * Get 安全组出站规则。 
+     * @return Outbound 安全组出站规则。
      */
     public SecurityGroupBound [] getOutbound() {
         return this.Outbound;
     }
 
     /**
-     * Set 出站规则
-     * @param Outbound 出站规则
+     * Set 安全组出站规则。
+     * @param Outbound 安全组出站规则。
      */
     public void setOutbound(SecurityGroupBound [] Outbound) {
         this.Outbound = Outbound;
     }
 
     /**
-     * Get 安全组id 
-     * @return SecurityGroupId 安全组id
+     * Get 安全组 ID。 
+     * @return SecurityGroupId 安全组 ID。
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组id
-     * @param SecurityGroupId 安全组id
+     * Set 安全组 ID。
+     * @param SecurityGroupId 安全组 ID。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get 安全组名称 
-     * @return SecurityGroupName 安全组名称
+     * Get 安全组名称。 
+     * @return SecurityGroupName 安全组名称。
      */
     public String getSecurityGroupName() {
         return this.SecurityGroupName;
     }
 
     /**
-     * Set 安全组名称
-     * @param SecurityGroupName 安全组名称
+     * Set 安全组名称。
+     * @param SecurityGroupName 安全组名称。
      */
     public void setSecurityGroupName(String SecurityGroupName) {
         this.SecurityGroupName = SecurityGroupName;
     }
 
     /**
-     * Get 安全组备注 
-     * @return SecurityGroupRemark 安全组备注
+     * Get 安全组备注信息。 
+     * @return SecurityGroupRemark 安全组备注信息。
      */
     public String getSecurityGroupRemark() {
         return this.SecurityGroupRemark;
     }
 
     /**
-     * Set 安全组备注
-     * @param SecurityGroupRemark 安全组备注
+     * Set 安全组备注信息。
+     * @param SecurityGroupRemark 安全组备注信息。
      */
     public void setSecurityGroupRemark(String SecurityGroupRemark) {
         this.SecurityGroupRemark = SecurityGroupRemark;

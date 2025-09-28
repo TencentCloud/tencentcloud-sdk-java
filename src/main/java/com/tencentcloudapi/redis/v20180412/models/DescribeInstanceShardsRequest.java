@@ -31,9 +31,9 @@ public class DescribeInstanceShardsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 是否过滤掉从节信息。
+    * 指定是否过滤掉从节信息。
 - true；过滤从节点。
-- false：不过滤。
+- false：不过滤。默认为 false。
     */
     @SerializedName("FilterSlave")
     @Expose
@@ -56,24 +56,24 @@ public class DescribeInstanceShardsRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否过滤掉从节信息。
+     * Get 指定是否过滤掉从节信息。
 - true；过滤从节点。
-- false：不过滤。 
-     * @return FilterSlave 是否过滤掉从节信息。
+- false：不过滤。默认为 false。 
+     * @return FilterSlave 指定是否过滤掉从节信息。
 - true；过滤从节点。
-- false：不过滤。
+- false：不过滤。默认为 false。
      */
     public Boolean getFilterSlave() {
         return this.FilterSlave;
     }
 
     /**
-     * Set 是否过滤掉从节信息。
+     * Set 指定是否过滤掉从节信息。
 - true；过滤从节点。
-- false：不过滤。
-     * @param FilterSlave 是否过滤掉从节信息。
+- false：不过滤。默认为 false。
+     * @param FilterSlave 指定是否过滤掉从节信息。
 - true；过滤从节点。
-- false：不过滤。
+- false：不过滤。默认为 false。
      */
     public void setFilterSlave(Boolean FilterSlave) {
         this.FilterSlave = FilterSlave;

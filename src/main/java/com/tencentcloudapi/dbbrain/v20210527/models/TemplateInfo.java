@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TemplateInfo extends AbstractModel {
 
     /**
-    * 模板id
+    * 模板id,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 模板名
+    * 模板名,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-     * Get 模板id 
-     * @return TemplateId 模板id
+     * Get 模板id,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。 
+     * @return TemplateId 模板id,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板id
-     * @param TemplateId 模板id
+     * Set 模板id,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
+     * @param TemplateId 模板id,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模板名 
-     * @return TemplateName 模板名
+     * Get 模板名,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。 
+     * @return TemplateName 模板名,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名
-     * @param TemplateName 模板名
+     * Set 模板名,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
+     * @param TemplateName 模板名,通过接口[通知模板查询](https://cloud.tencent.com/document/product/1130/97726)获得。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;

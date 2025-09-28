@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class CreateDBDiagReportUrlRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+示例值：cdb-dctw4edd
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 健康报告相应的任务ID，可通过DescribeDBDiagReportTasks查询。
+    * 健康报告相应的任务ID，可通过[DescribeDBDiagReportTasks](https://cloud.tencent.com/document/product/1130/54873)查询。
     */
     @SerializedName("AsyncRequestId")
     @Expose
     private Long AsyncRequestId;
 
     /**
-    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+示例值：cdb-dctw4edd 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+示例值：cdb-dctw4edd
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+示例值：cdb-dctw4edd
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+示例值：cdb-dctw4edd
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 健康报告相应的任务ID，可通过DescribeDBDiagReportTasks查询。 
-     * @return AsyncRequestId 健康报告相应的任务ID，可通过DescribeDBDiagReportTasks查询。
+     * Get 健康报告相应的任务ID，可通过[DescribeDBDiagReportTasks](https://cloud.tencent.com/document/product/1130/54873)查询。 
+     * @return AsyncRequestId 健康报告相应的任务ID，可通过[DescribeDBDiagReportTasks](https://cloud.tencent.com/document/product/1130/54873)查询。
      */
     public Long getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 健康报告相应的任务ID，可通过DescribeDBDiagReportTasks查询。
-     * @param AsyncRequestId 健康报告相应的任务ID，可通过DescribeDBDiagReportTasks查询。
+     * Set 健康报告相应的任务ID，可通过[DescribeDBDiagReportTasks](https://cloud.tencent.com/document/product/1130/54873)查询。
+     * @param AsyncRequestId 健康报告相应的任务ID，可通过[DescribeDBDiagReportTasks](https://cloud.tencent.com/document/product/1130/54873)查询。
      */
     public void setAsyncRequestId(Long AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;
     }
 
     /**
-     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。 
-     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。 
+     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
-     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
+     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，"mariadb" - 云数据库 MariaDB，"dcdb" - 云数据库 TDSQL MySQL，默认为"mysql"。
      */
     public void setProduct(String Product) {
         this.Product = Product;

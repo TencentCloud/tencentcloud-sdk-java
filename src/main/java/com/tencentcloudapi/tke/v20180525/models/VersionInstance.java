@@ -38,7 +38,7 @@ public class VersionInstance extends AbstractModel {
     private String Version;
 
     /**
-    * Remark
+    * 备注
     */
     @SerializedName("Remark")
     @Expose
@@ -77,16 +77,16 @@ public class VersionInstance extends AbstractModel {
     }
 
     /**
-     * Get Remark 
-     * @return Remark Remark
+     * Get 备注 
+     * @return Remark 备注
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remark
-     * @param Remark Remark
+     * Set 备注
+     * @param Remark 备注
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

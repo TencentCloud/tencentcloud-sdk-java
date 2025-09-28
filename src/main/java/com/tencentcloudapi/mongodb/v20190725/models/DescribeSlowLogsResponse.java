@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSlowLogsResponse extends AbstractModel {
 
     /**
-    * 慢日志总数
+    * 慢日志总数。
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 慢日志详情
+    * 慢日志详情。
     */
     @SerializedName("SlowLogs")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSlowLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 慢日志总数 
-     * @return Count 慢日志总数
+     * Get 慢日志总数。 
+     * @return Count 慢日志总数。
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 慢日志总数
-     * @param Count 慢日志总数
+     * Set 慢日志总数。
+     * @param Count 慢日志总数。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 慢日志详情 
-     * @return SlowLogs 慢日志详情
+     * Get 慢日志详情。 
+     * @return SlowLogs 慢日志详情。
      */
     public String [] getSlowLogs() {
         return this.SlowLogs;
     }
 
     /**
-     * Set 慢日志详情
-     * @param SlowLogs 慢日志详情
+     * Set 慢日志详情。
+     * @param SlowLogs 慢日志详情。
      */
     public void setSlowLogs(String [] SlowLogs) {
         this.SlowLogs = SlowLogs;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FBKeyValue extends AbstractModel {
 
     /**
-    * 用于按key回档过滤的key
+    * 指定按 Key 闪回的目标 Key （键） 。
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 用于按key回档过滤的value
+    * 指定按 Key 闪回的目标 Key 所对应的 Value（值）。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 用于按key回档过滤的key 
-     * @return Key 用于按key回档过滤的key
+     * Get 指定按 Key 闪回的目标 Key （键） 。 
+     * @return Key 指定按 Key 闪回的目标 Key （键） 。
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 用于按key回档过滤的key
-     * @param Key 用于按key回档过滤的key
+     * Set 指定按 Key 闪回的目标 Key （键） 。
+     * @param Key 指定按 Key 闪回的目标 Key （键） 。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 用于按key回档过滤的value 
-     * @return Value 用于按key回档过滤的value
+     * Get 指定按 Key 闪回的目标 Key 所对应的 Value（值）。 
+     * @return Value 指定按 Key 闪回的目标 Key 所对应的 Value（值）。
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 用于按key回档过滤的value
-     * @param Value 用于按key回档过滤的value
+     * Set 指定按 Key 闪回的目标 Key 所对应的 Value（值）。
+     * @param Value 指定按 Key 闪回的目标 Key 所对应的 Value（值）。
      */
     public void setValue(String Value) {
         this.Value = Value;

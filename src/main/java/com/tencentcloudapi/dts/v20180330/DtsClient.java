@@ -53,7 +53,6 @@ public class DtsClient extends AbstractClient{
      *本接口（CompleteMigrateJob）用于完成数据迁移任务。
 选择采用增量迁移方式的任务, 需要在迁移进度进入准备完成阶段后, 调用本接口, 停止迁移增量数据。
 通过DescribeMigrateJobs接口查询到任务的状态为准备完成（status=8）时，此时可以调用本接口完成迁移任务。
-
      * @param req CompleteMigrateJobRequest
      * @return CompleteMigrateJobResponse
      * @throws TencentCloudSDKException
@@ -274,7 +273,7 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
-     *本接口（StartMigrationJob）用于启动迁移任务。非定时迁移任务会在调用后立即开始迁移，定时任务则会开始倒计时。
+     *本接口（StartMigrateJob）用于启动迁移任务。非定时迁移任务会在调用后立即开始迁移，定时任务则会开始倒计时。
 调用此接口前，请务必先使用CreateMigrateCheckJob校验数据迁移任务，并通过DescribeMigrateJobs接口查询到任务状态为校验通过（status=4）时，才能启动数据迁移任务。
      * @param req StartMigrateJobRequest
      * @return StartMigrateJobResponse

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateBackupDownloadTaskResponse extends AbstractModel {
 
     /**
-    * 下载任务状态
+    * 下载任务状态。
     */
     @SerializedName("Tasks")
     @Expose
@@ -38,16 +38,16 @@ public class CreateBackupDownloadTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 下载任务状态 
-     * @return Tasks 下载任务状态
+     * Get 下载任务状态。 
+     * @return Tasks 下载任务状态。
      */
     public BackupDownloadTaskStatus [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 下载任务状态
-     * @param Tasks 下载任务状态
+     * Set 下载任务状态。
+     * @param Tasks 下载任务状态。
      */
     public void setTasks(BackupDownloadTaskStatus [] Tasks) {
         this.Tasks = Tasks;

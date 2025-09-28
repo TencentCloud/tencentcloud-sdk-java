@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class KillOpsRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+    * 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 待终止的操作
+    * 待终止的操作。
     */
     @SerializedName("Operations")
     @Expose
     private Operation [] Operations;
 
     /**
-     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
-     * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 待终止的操作 
-     * @return Operations 待终止的操作
+     * Get 待终止的操作。 
+     * @return Operations 待终止的操作。
      */
     public Operation [] getOperations() {
         return this.Operations;
     }
 
     /**
-     * Set 待终止的操作
-     * @param Operations 待终止的操作
+     * Set 待终止的操作。
+     * @param Operations 待终止的操作。
      */
     public void setOperations(Operation [] Operations) {
         this.Operations = Operations;

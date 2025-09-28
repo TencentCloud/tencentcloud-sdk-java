@@ -24,35 +24,48 @@ import java.util.HashMap;
 public class DescribeDBInstanceDealResponse extends AbstractModel {
 
     /**
-    * 订单状态，1：未支付，2：已支付，3：发货中，4：发货成功，5：发货失败，6：退款，7：订单关闭，8：超时未支付关闭。
+    * 订单状态。
+- 1：未支付。
+- 2：已支付。
+- 3：发货中。
+- 4：发货成功。
+- 5：发货失败。
+- 6：退款。
+- 7：订单关闭。
+- 8：超时未支付关闭。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 订单原价。
+    * 订单原价。单位：元。
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * 订单折扣价格。
+    * 订单折扣价格。单位：元。
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-    * 订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
+    * 订单操作行为。
+- purchase：新购。
+- renew：续费。
+- upgrade：升配.
+- downgrade：降配.
+- refund：退货退款。
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * 当前订单的资源Id。
+    * 当前订单的实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -66,80 +79,132 @@ public class DescribeDBInstanceDealResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单状态，1：未支付，2：已支付，3：发货中，4：发货成功，5：发货失败，6：退款，7：订单关闭，8：超时未支付关闭。 
-     * @return Status 订单状态，1：未支付，2：已支付，3：发货中，4：发货成功，5：发货失败，6：退款，7：订单关闭，8：超时未支付关闭。
+     * Get 订单状态。
+- 1：未支付。
+- 2：已支付。
+- 3：发货中。
+- 4：发货成功。
+- 5：发货失败。
+- 6：退款。
+- 7：订单关闭。
+- 8：超时未支付关闭。 
+     * @return Status 订单状态。
+- 1：未支付。
+- 2：已支付。
+- 3：发货中。
+- 4：发货成功。
+- 5：发货失败。
+- 6：退款。
+- 7：订单关闭。
+- 8：超时未支付关闭。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 订单状态，1：未支付，2：已支付，3：发货中，4：发货成功，5：发货失败，6：退款，7：订单关闭，8：超时未支付关闭。
-     * @param Status 订单状态，1：未支付，2：已支付，3：发货中，4：发货成功，5：发货失败，6：退款，7：订单关闭，8：超时未支付关闭。
+     * Set 订单状态。
+- 1：未支付。
+- 2：已支付。
+- 3：发货中。
+- 4：发货成功。
+- 5：发货失败。
+- 6：退款。
+- 7：订单关闭。
+- 8：超时未支付关闭。
+     * @param Status 订单状态。
+- 1：未支付。
+- 2：已支付。
+- 3：发货中。
+- 4：发货成功。
+- 5：发货失败。
+- 6：退款。
+- 7：订单关闭。
+- 8：超时未支付关闭。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 订单原价。 
-     * @return OriginalPrice 订单原价。
+     * Get 订单原价。单位：元。 
+     * @return OriginalPrice 订单原价。单位：元。
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 订单原价。
-     * @param OriginalPrice 订单原价。
+     * Set 订单原价。单位：元。
+     * @param OriginalPrice 订单原价。单位：元。
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 订单折扣价格。 
-     * @return DiscountPrice 订单折扣价格。
+     * Get 订单折扣价格。单位：元。 
+     * @return DiscountPrice 订单折扣价格。单位：元。
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set 订单折扣价格。
-     * @param DiscountPrice 订单折扣价格。
+     * Set 订单折扣价格。单位：元。
+     * @param DiscountPrice 订单折扣价格。单位：元。
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get 订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。 
-     * @return Action 订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
+     * Get 订单操作行为。
+- purchase：新购。
+- renew：续费。
+- upgrade：升配.
+- downgrade：降配.
+- refund：退货退款。 
+     * @return Action 订单操作行为。
+- purchase：新购。
+- renew：续费。
+- upgrade：升配.
+- downgrade：降配.
+- refund：退货退款。
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
-     * @param Action 订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
+     * Set 订单操作行为。
+- purchase：新购。
+- renew：续费。
+- upgrade：升配.
+- downgrade：降配.
+- refund：退货退款。
+     * @param Action 订单操作行为。
+- purchase：新购。
+- renew：续费。
+- upgrade：升配.
+- downgrade：降配.
+- refund：退货退款。
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 当前订单的资源Id。 
-     * @return InstanceId 当前订单的资源Id。
+     * Get 当前订单的实例 ID。 
+     * @return InstanceId 当前订单的实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 当前订单的资源Id。
-     * @param InstanceId 当前订单的资源Id。
+     * Set 当前订单的实例 ID。
+     * @param InstanceId 当前订单的实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

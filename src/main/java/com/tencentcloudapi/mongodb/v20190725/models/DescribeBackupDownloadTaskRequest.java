@@ -24,207 +24,252 @@ import java.util.HashMap;
 public class DescribeBackupDownloadTaskRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+    * 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 备份文件名，用来过滤指定文件的下载任务
+    * 指定备份文件名，用于过滤指定文件的下载任务。请通过接口 [DescribeDBBackups](https://cloud.tencent.com/document/product/240/38574) 获取备份文件名。
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-    * 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
+    * 指定查询时间范围内的任务，StartTime 指定开始时间。若不指定开始时间，则默认不限制开始时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
+    * 指定查询时间范围内的任务，EndTime 指定截止时间。若不指定截止时间，则默认不限制截止时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 此次查询返回的条数，取值范围为1-100，默认为20
+    * 此次查询返回的条数，取值范围为1-100，默认为20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 指定此次查询返回的页数，默认为0
+    * 指定此次查询返回的页数，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 排序字段，取值为createTime，finishTime两种，默认为createTime
+    * 排序字段。
+- createTime：按照备份下载任务的创建时间排序。默认为 createTime。
+- finishTime：按照备份下载任务的完成时间排序。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序方式，取值为asc，desc两种，默认desc
+    * 排序方式。
+- asc：升序排列。
+- desc：降序排列。默认为 desc。
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
+    * 指定任务状态，用于过滤下载任务。若不配置该参数，则返回所有状态类型的任务。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
-     * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 备份文件名，用来过滤指定文件的下载任务 
-     * @return BackupName 备份文件名，用来过滤指定文件的下载任务
+     * Get 指定备份文件名，用于过滤指定文件的下载任务。请通过接口 [DescribeDBBackups](https://cloud.tencent.com/document/product/240/38574) 获取备份文件名。 
+     * @return BackupName 指定备份文件名，用于过滤指定文件的下载任务。请通过接口 [DescribeDBBackups](https://cloud.tencent.com/document/product/240/38574) 获取备份文件名。
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set 备份文件名，用来过滤指定文件的下载任务
-     * @param BackupName 备份文件名，用来过滤指定文件的下载任务
+     * Set 指定备份文件名，用于过滤指定文件的下载任务。请通过接口 [DescribeDBBackups](https://cloud.tencent.com/document/product/240/38574) 获取备份文件名。
+     * @param BackupName 指定备份文件名，用于过滤指定文件的下载任务。请通过接口 [DescribeDBBackups](https://cloud.tencent.com/document/product/240/38574) 获取备份文件名。
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
     }
 
     /**
-     * Get 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间 
-     * @return StartTime 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
+     * Get 指定查询时间范围内的任务，StartTime 指定开始时间。若不指定开始时间，则默认不限制开始时间。 
+     * @return StartTime 指定查询时间范围内的任务，StartTime 指定开始时间。若不指定开始时间，则默认不限制开始时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
-     * @param StartTime 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
+     * Set 指定查询时间范围内的任务，StartTime 指定开始时间。若不指定开始时间，则默认不限制开始时间。
+     * @param StartTime 指定查询时间范围内的任务，StartTime 指定开始时间。若不指定开始时间，则默认不限制开始时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间 
-     * @return EndTime 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
+     * Get 指定查询时间范围内的任务，EndTime 指定截止时间。若不指定截止时间，则默认不限制截止时间。 
+     * @return EndTime 指定查询时间范围内的任务，EndTime 指定截止时间。若不指定截止时间，则默认不限制截止时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
-     * @param EndTime 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
+     * Set 指定查询时间范围内的任务，EndTime 指定截止时间。若不指定截止时间，则默认不限制截止时间。
+     * @param EndTime 指定查询时间范围内的任务，EndTime 指定截止时间。若不指定截止时间，则默认不限制截止时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 此次查询返回的条数，取值范围为1-100，默认为20 
-     * @return Limit 此次查询返回的条数，取值范围为1-100，默认为20
+     * Get 此次查询返回的条数，取值范围为1-100，默认为20。 
+     * @return Limit 此次查询返回的条数，取值范围为1-100，默认为20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 此次查询返回的条数，取值范围为1-100，默认为20
-     * @param Limit 此次查询返回的条数，取值范围为1-100，默认为20
+     * Set 此次查询返回的条数，取值范围为1-100，默认为20。
+     * @param Limit 此次查询返回的条数，取值范围为1-100，默认为20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 指定此次查询返回的页数，默认为0 
-     * @return Offset 指定此次查询返回的页数，默认为0
+     * Get 指定此次查询返回的页数，默认为0。 
+     * @return Offset 指定此次查询返回的页数，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 指定此次查询返回的页数，默认为0
-     * @param Offset 指定此次查询返回的页数，默认为0
+     * Set 指定此次查询返回的页数，默认为0。
+     * @param Offset 指定此次查询返回的页数，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 排序字段，取值为createTime，finishTime两种，默认为createTime 
-     * @return OrderBy 排序字段，取值为createTime，finishTime两种，默认为createTime
+     * Get 排序字段。
+- createTime：按照备份下载任务的创建时间排序。默认为 createTime。
+- finishTime：按照备份下载任务的完成时间排序。 
+     * @return OrderBy 排序字段。
+- createTime：按照备份下载任务的创建时间排序。默认为 createTime。
+- finishTime：按照备份下载任务的完成时间排序。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序字段，取值为createTime，finishTime两种，默认为createTime
-     * @param OrderBy 排序字段，取值为createTime，finishTime两种，默认为createTime
+     * Set 排序字段。
+- createTime：按照备份下载任务的创建时间排序。默认为 createTime。
+- finishTime：按照备份下载任务的完成时间排序。
+     * @param OrderBy 排序字段。
+- createTime：按照备份下载任务的创建时间排序。默认为 createTime。
+- finishTime：按照备份下载任务的完成时间排序。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序方式，取值为asc，desc两种，默认desc 
-     * @return OrderByType 排序方式，取值为asc，desc两种，默认desc
+     * Get 排序方式。
+- asc：升序排列。
+- desc：降序排列。默认为 desc。 
+     * @return OrderByType 排序方式。
+- asc：升序排列。
+- desc：降序排列。默认为 desc。
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 排序方式，取值为asc，desc两种，默认desc
-     * @param OrderByType 排序方式，取值为asc，desc两种，默认desc
+     * Set 排序方式。
+- asc：升序排列。
+- desc：降序排列。默认为 desc。
+     * @param OrderByType 排序方式。
+- asc：升序排列。
+- desc：降序排列。默认为 desc。
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型 
-     * @return Status 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
+     * Get 指定任务状态，用于过滤下载任务。若不配置该参数，则返回所有状态类型的任务。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。 
+     * @return Status 指定任务状态，用于过滤下载任务。若不配置该参数，则返回所有状态类型的任务。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
-     * @param Status 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
+     * Set 指定任务状态，用于过滤下载任务。若不配置该参数，则返回所有状态类型的任务。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
+     * @param Status 指定任务状态，用于过滤下载任务。若不配置该参数，则返回所有状态类型的任务。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;

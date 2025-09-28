@@ -24,276 +24,311 @@ import java.util.HashMap;
 public class DescribeDetailedSlowLogsRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 待查询慢日志的开始时间
+    * 指定查询慢日志的开始时间。- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 待慢日志的结束时间
+    * 指定查询慢日志的结束时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 过滤执行时间大于此值的慢日志，单位ms，默认值100
+    * 指定慢日志查询阈值，即查询执行时间大于此值的慢日志。单位：ms，默认值：100。
     */
     @SerializedName("ExecTime")
     @Expose
     private Long ExecTime;
 
     /**
-    * 过滤慢日志的命令类型
+    * 指定查询慢日志的命令类型。
     */
     @SerializedName("Commands")
     @Expose
     private String [] Commands;
 
     /**
-    * 全文搜索关键字，多个关键字间为或关系
+    * 全文搜索关键字，多个关键字间为或关系。
     */
     @SerializedName("Texts")
     @Expose
     private String [] Texts;
 
     /**
-    * 根据节点名过滤
+    * 指定查询慢日志的节点名称。请通过接口 [DescribeDBInstanceNodeProperty](https://cloud.tencent.com/document/product/240/82022) 查询节点名称。
     */
     @SerializedName("NodeNames")
     @Expose
     private String [] NodeNames;
 
     /**
-    * 根据queryHash过滤
+    * 指定查询 queryHash 值。
     */
     @SerializedName("QueryHash")
     @Expose
     private String [] QueryHash;
 
     /**
-    * 分页偏移量
+    * 分页偏移量。默认值：0。取值范围：[0,100]。
+
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回条数
+    * 返回条数。默认值：20。取值范围：[0,10000]
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 排序条件，只支持StartTime(按慢日志生成时间)和ExecTime(慢日志执行时间)
+    * 指定慢日志排序条件。
+- StartTime：按照慢日志生成时间排序。
+- ExecTime：按照慢日志执行时间排序。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序。desc倒排，asc正排
+    * 指定排序方式。
+- desc：倒序。
+- asc：顺序。
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 待查询慢日志的开始时间 
-     * @return StartTime 待查询慢日志的开始时间
+     * Get 指定查询慢日志的开始时间。- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。 
+     * @return StartTime 指定查询慢日志的开始时间。- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 待查询慢日志的开始时间
-     * @param StartTime 待查询慢日志的开始时间
+     * Set 指定查询慢日志的开始时间。- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * @param StartTime 指定查询慢日志的开始时间。- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 待慢日志的结束时间 
-     * @return EndTime 待慢日志的结束时间
+     * Get 指定查询慢日志的结束时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。 
+     * @return EndTime 指定查询慢日志的结束时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 待慢日志的结束时间
-     * @param EndTime 待慢日志的结束时间
+     * Set 指定查询慢日志的结束时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * @param EndTime 指定查询慢日志的结束时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 过滤执行时间大于此值的慢日志，单位ms，默认值100 
-     * @return ExecTime 过滤执行时间大于此值的慢日志，单位ms，默认值100
+     * Get 指定慢日志查询阈值，即查询执行时间大于此值的慢日志。单位：ms，默认值：100。 
+     * @return ExecTime 指定慢日志查询阈值，即查询执行时间大于此值的慢日志。单位：ms，默认值：100。
      */
     public Long getExecTime() {
         return this.ExecTime;
     }
 
     /**
-     * Set 过滤执行时间大于此值的慢日志，单位ms，默认值100
-     * @param ExecTime 过滤执行时间大于此值的慢日志，单位ms，默认值100
+     * Set 指定慢日志查询阈值，即查询执行时间大于此值的慢日志。单位：ms，默认值：100。
+     * @param ExecTime 指定慢日志查询阈值，即查询执行时间大于此值的慢日志。单位：ms，默认值：100。
      */
     public void setExecTime(Long ExecTime) {
         this.ExecTime = ExecTime;
     }
 
     /**
-     * Get 过滤慢日志的命令类型 
-     * @return Commands 过滤慢日志的命令类型
+     * Get 指定查询慢日志的命令类型。 
+     * @return Commands 指定查询慢日志的命令类型。
      */
     public String [] getCommands() {
         return this.Commands;
     }
 
     /**
-     * Set 过滤慢日志的命令类型
-     * @param Commands 过滤慢日志的命令类型
+     * Set 指定查询慢日志的命令类型。
+     * @param Commands 指定查询慢日志的命令类型。
      */
     public void setCommands(String [] Commands) {
         this.Commands = Commands;
     }
 
     /**
-     * Get 全文搜索关键字，多个关键字间为或关系 
-     * @return Texts 全文搜索关键字，多个关键字间为或关系
+     * Get 全文搜索关键字，多个关键字间为或关系。 
+     * @return Texts 全文搜索关键字，多个关键字间为或关系。
      */
     public String [] getTexts() {
         return this.Texts;
     }
 
     /**
-     * Set 全文搜索关键字，多个关键字间为或关系
-     * @param Texts 全文搜索关键字，多个关键字间为或关系
+     * Set 全文搜索关键字，多个关键字间为或关系。
+     * @param Texts 全文搜索关键字，多个关键字间为或关系。
      */
     public void setTexts(String [] Texts) {
         this.Texts = Texts;
     }
 
     /**
-     * Get 根据节点名过滤 
-     * @return NodeNames 根据节点名过滤
+     * Get 指定查询慢日志的节点名称。请通过接口 [DescribeDBInstanceNodeProperty](https://cloud.tencent.com/document/product/240/82022) 查询节点名称。 
+     * @return NodeNames 指定查询慢日志的节点名称。请通过接口 [DescribeDBInstanceNodeProperty](https://cloud.tencent.com/document/product/240/82022) 查询节点名称。
      */
     public String [] getNodeNames() {
         return this.NodeNames;
     }
 
     /**
-     * Set 根据节点名过滤
-     * @param NodeNames 根据节点名过滤
+     * Set 指定查询慢日志的节点名称。请通过接口 [DescribeDBInstanceNodeProperty](https://cloud.tencent.com/document/product/240/82022) 查询节点名称。
+     * @param NodeNames 指定查询慢日志的节点名称。请通过接口 [DescribeDBInstanceNodeProperty](https://cloud.tencent.com/document/product/240/82022) 查询节点名称。
      */
     public void setNodeNames(String [] NodeNames) {
         this.NodeNames = NodeNames;
     }
 
     /**
-     * Get 根据queryHash过滤 
-     * @return QueryHash 根据queryHash过滤
+     * Get 指定查询 queryHash 值。 
+     * @return QueryHash 指定查询 queryHash 值。
      */
     public String [] getQueryHash() {
         return this.QueryHash;
     }
 
     /**
-     * Set 根据queryHash过滤
-     * @param QueryHash 根据queryHash过滤
+     * Set 指定查询 queryHash 值。
+     * @param QueryHash 指定查询 queryHash 值。
      */
     public void setQueryHash(String [] QueryHash) {
         this.QueryHash = QueryHash;
     }
 
     /**
-     * Get 分页偏移量 
-     * @return Offset 分页偏移量
+     * Get 分页偏移量。默认值：0。取值范围：[0,100]。
+ 
+     * @return Offset 分页偏移量。默认值：0。取值范围：[0,100]。
+
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量
-     * @param Offset 分页偏移量
+     * Set 分页偏移量。默认值：0。取值范围：[0,100]。
+
+     * @param Offset 分页偏移量。默认值：0。取值范围：[0,100]。
+
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回条数 
-     * @return Limit 返回条数
+     * Get 返回条数。默认值：20。取值范围：[0,10000] 
+     * @return Limit 返回条数。默认值：20。取值范围：[0,10000]
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回条数
-     * @param Limit 返回条数
+     * Set 返回条数。默认值：20。取值范围：[0,10000]
+     * @param Limit 返回条数。默认值：20。取值范围：[0,10000]
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 排序条件，只支持StartTime(按慢日志生成时间)和ExecTime(慢日志执行时间) 
-     * @return OrderBy 排序条件，只支持StartTime(按慢日志生成时间)和ExecTime(慢日志执行时间)
+     * Get 指定慢日志排序条件。
+- StartTime：按照慢日志生成时间排序。
+- ExecTime：按照慢日志执行时间排序。 
+     * @return OrderBy 指定慢日志排序条件。
+- StartTime：按照慢日志生成时间排序。
+- ExecTime：按照慢日志执行时间排序。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序条件，只支持StartTime(按慢日志生成时间)和ExecTime(慢日志执行时间)
-     * @param OrderBy 排序条件，只支持StartTime(按慢日志生成时间)和ExecTime(慢日志执行时间)
+     * Set 指定慢日志排序条件。
+- StartTime：按照慢日志生成时间排序。
+- ExecTime：按照慢日志执行时间排序。
+     * @param OrderBy 指定慢日志排序条件。
+- StartTime：按照慢日志生成时间排序。
+- ExecTime：按照慢日志执行时间排序。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序。desc倒排，asc正排 
-     * @return OrderByType 排序。desc倒排，asc正排
+     * Get 指定排序方式。
+- desc：倒序。
+- asc：顺序。 
+     * @return OrderByType 指定排序方式。
+- desc：倒序。
+- asc：顺序。
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 排序。desc倒排，asc正排
-     * @param OrderByType 排序。desc倒排，asc正排
+     * Set 指定排序方式。
+- desc：倒序。
+- asc：顺序。
+     * @param OrderByType 指定排序方式。
+- desc：倒序。
+- asc：顺序。
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

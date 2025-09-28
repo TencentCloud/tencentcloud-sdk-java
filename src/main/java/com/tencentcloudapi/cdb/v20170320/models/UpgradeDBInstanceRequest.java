@@ -147,7 +147,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
     private String RoTransType;
 
     /**
-    * 集群版节点拓扑配置。
+    * 云盘版节点拓扑配置。
     */
     @SerializedName("ClusterTopology")
     @Expose
@@ -462,16 +462,16 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群版节点拓扑配置。 
-     * @return ClusterTopology 集群版节点拓扑配置。
+     * Get 云盘版节点拓扑配置。 
+     * @return ClusterTopology 云盘版节点拓扑配置。
      */
     public ClusterTopology getClusterTopology() {
         return this.ClusterTopology;
     }
 
     /**
-     * Set 集群版节点拓扑配置。
-     * @param ClusterTopology 集群版节点拓扑配置。
+     * Set 云盘版节点拓扑配置。
+     * @param ClusterTopology 云盘版节点拓扑配置。
      */
     public void setClusterTopology(ClusterTopology ClusterTopology) {
         this.ClusterTopology = ClusterTopology;

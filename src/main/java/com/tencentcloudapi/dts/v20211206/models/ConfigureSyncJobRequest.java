@@ -24,21 +24,22 @@ import java.util.HashMap;
 public class ConfigureSyncJobRequest extends AbstractModel {
 
     /**
-    * 同步实例id（即标识一个同步作业），形如sync-werwfs23
+    * 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
+    * 源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
     */
     @SerializedName("SrcAccessType")
     @Expose
     private String SrcAccessType;
 
     /**
-    * 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
+    * 目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
     */
     @SerializedName("DstAccessType")
     @Expose
@@ -143,48 +144,52 @@ public class ConfigureSyncJobRequest extends AbstractModel {
     private Long AutoRetryTimeRangeMinutes;
 
     /**
-     * Get 同步实例id（即标识一个同步作业），形如sync-werwfs23 
-     * @return JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23
+     * Get 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ 
+     * @return JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 同步实例id（即标识一个同步作业），形如sync-werwfs23
-     * @param JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23
+     * Set 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+     * @param JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路 
-     * @return SrcAccessType 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
+     * Get 源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路 
+     * @return SrcAccessType 源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
      */
     public String getSrcAccessType() {
         return this.SrcAccessType;
     }
 
     /**
-     * Set 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
-     * @param SrcAccessType 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
+     * Set 源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
+     * @param SrcAccessType 源端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云),注意具体可选值依赖当前链路
      */
     public void setSrcAccessType(String SrcAccessType) {
         this.SrcAccessType = SrcAccessType;
     }
 
     /**
-     * Get 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路 
-     * @return DstAccessType 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
+     * Get 目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路 
+     * @return DstAccessType 目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
      */
     public String getDstAccessType() {
         return this.DstAccessType;
     }
 
     /**
-     * Set 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
-     * @param DstAccessType 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
+     * Set 目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
+     * @param DstAccessType 目标端接入类型，cdb(云数据库)、cvm(云服务器自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、ckafka(CKafka实例),注意具体可选值依赖当前链路
      */
     public void setDstAccessType(String DstAccessType) {
         this.DstAccessType = DstAccessType;

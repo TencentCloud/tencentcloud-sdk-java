@@ -24,107 +24,137 @@ import java.util.HashMap;
 public class DescribeDBInstanceParamTplRequest extends AbstractModel {
 
     /**
-    * 参数模板 ID 查询条件。
+    * 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
     */
     @SerializedName("TplIds")
     @Expose
     private String [] TplIds;
 
     /**
-    * 模板名称，查询条件。
+    * 指定查询的模板名称。
     */
     @SerializedName("TplNames")
     @Expose
     private String [] TplNames;
 
     /**
-    * 根据版本号查询参数模板，具体支持的售卖版本，请参见[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询云数据库的售卖规格的返回结果。参数与版本对应关系如下所示：
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
-- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+    * 指定所需查询的参数模板的数据库版本号。具体支持的版本信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersion")
     @Expose
     private String [] MongoVersion;
 
     /**
-    * 根据模板类型查询参数模板，支持DEFAULT（默认模板）和CUSTOMIZE（自定义模板）两种。
+    * 指定查询的模板类型。
+- DEFAULT：系统默认模板。
+- CUSTOMIZE：自定义模板。
     */
     @SerializedName("TplType")
     @Expose
     private String TplType;
 
     /**
-     * Get 参数模板 ID 查询条件。 
-     * @return TplIds 参数模板 ID 查询条件。
+     * Get 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。 
+     * @return TplIds 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
      */
     public String [] getTplIds() {
         return this.TplIds;
     }
 
     /**
-     * Set 参数模板 ID 查询条件。
-     * @param TplIds 参数模板 ID 查询条件。
+     * Set 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
+     * @param TplIds 参数模板 ID。请通过接口 [DescribeDBInstanceParamTpl](https://cloud.tencent.com/document/product/240/109155) 获取模板 ID。
      */
     public void setTplIds(String [] TplIds) {
         this.TplIds = TplIds;
     }
 
     /**
-     * Get 模板名称，查询条件。 
-     * @return TplNames 模板名称，查询条件。
+     * Get 指定查询的模板名称。 
+     * @return TplNames 指定查询的模板名称。
      */
     public String [] getTplNames() {
         return this.TplNames;
     }
 
     /**
-     * Set 模板名称，查询条件。
-     * @param TplNames 模板名称，查询条件。
+     * Set 指定查询的模板名称。
+     * @param TplNames 指定查询的模板名称。
      */
     public void setTplNames(String [] TplNames) {
         this.TplNames = TplNames;
     }
 
     /**
-     * Get 根据版本号查询参数模板，具体支持的售卖版本，请参见[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询云数据库的售卖规格的返回结果。参数与版本对应关系如下所示：
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
-- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
-- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。 
-     * @return MongoVersion 根据版本号查询参数模板，具体支持的售卖版本，请参见[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询云数据库的售卖规格的返回结果。参数与版本对应关系如下所示：
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
-- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+     * Get 指定所需查询的参数模板的数据库版本号。具体支持的版本信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。 
+     * @return MongoVersion 指定所需查询的参数模板的数据库版本号。具体支持的版本信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public String [] getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set 根据版本号查询参数模板，具体支持的售卖版本，请参见[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询云数据库的售卖规格的返回结果。参数与版本对应关系如下所示：
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
-- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+     * Set 指定所需查询的参数模板的数据库版本号。具体支持的版本信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
-     * @param MongoVersion 根据版本号查询参数模板，具体支持的售卖版本，请参见[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询云数据库的售卖规格的返回结果。参数与版本对应关系如下所示：
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
-- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+     * @param MongoVersion 指定所需查询的参数模板的数据库版本号。具体支持的版本信息，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersion(String [] MongoVersion) {
         this.MongoVersion = MongoVersion;
     }
 
     /**
-     * Get 根据模板类型查询参数模板，支持DEFAULT（默认模板）和CUSTOMIZE（自定义模板）两种。 
-     * @return TplType 根据模板类型查询参数模板，支持DEFAULT（默认模板）和CUSTOMIZE（自定义模板）两种。
+     * Get 指定查询的模板类型。
+- DEFAULT：系统默认模板。
+- CUSTOMIZE：自定义模板。 
+     * @return TplType 指定查询的模板类型。
+- DEFAULT：系统默认模板。
+- CUSTOMIZE：自定义模板。
      */
     public String getTplType() {
         return this.TplType;
     }
 
     /**
-     * Set 根据模板类型查询参数模板，支持DEFAULT（默认模板）和CUSTOMIZE（自定义模板）两种。
-     * @param TplType 根据模板类型查询参数模板，支持DEFAULT（默认模板）和CUSTOMIZE（自定义模板）两种。
+     * Set 指定查询的模板类型。
+- DEFAULT：系统默认模板。
+- CUSTOMIZE：自定义模板。
+     * @param TplType 指定查询的模板类型。
+- DEFAULT：系统默认模板。
+- CUSTOMIZE：自定义模板。
      */
     public void setTplType(String TplType) {
         this.TplType = TplType;

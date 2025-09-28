@@ -24,92 +24,102 @@ import java.util.HashMap;
 public class SpecificationInfo extends AbstractModel {
 
     /**
-    * 地域信息
+    * 地域信息。
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 可用区信息
+    * 可用区信息。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 售卖规格信息
+    * 售卖规格信息。
     */
     @SerializedName("SpecItems")
     @Expose
     private SpecItem [] SpecItems;
 
     /**
-    * 是否支持跨可用区部署 1-支持，0-不支持
+    * 是否支持跨可用区部署。
+- 1：支持。
+- 0：不支持。
     */
     @SerializedName("SupportMultiAZ")
     @Expose
     private Long SupportMultiAZ;
 
     /**
-     * Get 地域信息 
-     * @return Region 地域信息
+     * Get 地域信息。 
+     * @return Region 地域信息。
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域信息
-     * @param Region 地域信息
+     * Set 地域信息。
+     * @param Region 地域信息。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区信息 
-     * @return Zone 可用区信息
+     * Get 可用区信息。 
+     * @return Zone 可用区信息。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区信息
-     * @param Zone 可用区信息
+     * Set 可用区信息。
+     * @param Zone 可用区信息。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 售卖规格信息 
-     * @return SpecItems 售卖规格信息
+     * Get 售卖规格信息。 
+     * @return SpecItems 售卖规格信息。
      */
     public SpecItem [] getSpecItems() {
         return this.SpecItems;
     }
 
     /**
-     * Set 售卖规格信息
-     * @param SpecItems 售卖规格信息
+     * Set 售卖规格信息。
+     * @param SpecItems 售卖规格信息。
      */
     public void setSpecItems(SpecItem [] SpecItems) {
         this.SpecItems = SpecItems;
     }
 
     /**
-     * Get 是否支持跨可用区部署 1-支持，0-不支持 
-     * @return SupportMultiAZ 是否支持跨可用区部署 1-支持，0-不支持
+     * Get 是否支持跨可用区部署。
+- 1：支持。
+- 0：不支持。 
+     * @return SupportMultiAZ 是否支持跨可用区部署。
+- 1：支持。
+- 0：不支持。
      */
     public Long getSupportMultiAZ() {
         return this.SupportMultiAZ;
     }
 
     /**
-     * Set 是否支持跨可用区部署 1-支持，0-不支持
-     * @param SupportMultiAZ 是否支持跨可用区部署 1-支持，0-不支持
+     * Set 是否支持跨可用区部署。
+- 1：支持。
+- 0：不支持。
+     * @param SupportMultiAZ 是否支持跨可用区部署。
+- 1：支持。
+- 0：不支持。
      */
     public void setSupportMultiAZ(Long SupportMultiAZ) {
         this.SupportMultiAZ = SupportMultiAZ;

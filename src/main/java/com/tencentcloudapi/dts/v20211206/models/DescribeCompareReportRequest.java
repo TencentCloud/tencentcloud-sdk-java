@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCompareReportRequest extends AbstractModel {
 
     /**
-    * 迁移任务 Id
+    * 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 校验任务 Id
+    * 校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
     */
     @SerializedName("CompareTaskId")
     @Expose
@@ -94,32 +94,32 @@ public class DescribeCompareReportRequest extends AbstractModel {
     private String SkippedTable;
 
     /**
-     * Get 迁移任务 Id 
-     * @return JobId 迁移任务 Id
+     * Get 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。 
+     * @return JobId 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 迁移任务 Id
-     * @param JobId 迁移任务 Id
+     * Set 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+     * @param JobId 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 校验任务 Id 
-     * @return CompareTaskId 校验任务 Id
+     * Get 校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。 
+     * @return CompareTaskId 校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
      */
     public String getCompareTaskId() {
         return this.CompareTaskId;
     }
 
     /**
-     * Set 校验任务 Id
-     * @param CompareTaskId 校验任务 Id
+     * Set 校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+     * @param CompareTaskId 校验任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
      */
     public void setCompareTaskId(String CompareTaskId) {
         this.CompareTaskId = CompareTaskId;

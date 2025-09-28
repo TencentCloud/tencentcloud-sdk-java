@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyAlarmPolicyRequest extends AbstractModel {
 
     /**
-    * 类型
+    * 策略类型，固定值：instance， instance-代表实例类型策略
     */
     @SerializedName("ApplyType")
     @Expose
     private String ApplyType;
 
     /**
-    * 开启策略
+    * 策略是否开启，0-代表开启，1-代表关闭
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 列表
+    * 实例id列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -53,21 +53,21 @@ Instance-关联实例列表的实例
     private String NewProfileLevel;
 
     /**
-    * 新策略名
+    * 新策略名，包含中文英文数字，长度在60个字符以内，不能以“_”开头。
     */
     @SerializedName("NewProfileName")
     @Expose
     private String NewProfileName;
 
     /**
-    * 旧策略名
+    * 旧策略名，包含中文英文数字，长度在60个字符以内，不能以“_”开头。
     */
     @SerializedName("ProfileName")
     @Expose
     private String ProfileName;
 
     /**
-    * 策略类型
+    * 策略类型，固定值：alarm_policy
     */
     @SerializedName("ProfileType")
     @Expose
@@ -97,62 +97,62 @@ Instance-关联实例列表的实例
     /**
     * 快速规则  支持包括fatal-致命, critical-严重,
 warning-告警,
-information-通知
+information-通知，与Rules互斥
     */
     @SerializedName("QuickRule")
     @Expose
     private String QuickRule;
 
     /**
-    * 自定义规则
+    * 自定义规则，与QuickRule互斥。
     */
     @SerializedName("Rules")
     @Expose
     private AlarmsRules [] Rules;
 
     /**
-     * Get 类型 
-     * @return ApplyType 类型
+     * Get 策略类型，固定值：instance， instance-代表实例类型策略 
+     * @return ApplyType 策略类型，固定值：instance， instance-代表实例类型策略
      */
     public String getApplyType() {
         return this.ApplyType;
     }
 
     /**
-     * Set 类型
-     * @param ApplyType 类型
+     * Set 策略类型，固定值：instance， instance-代表实例类型策略
+     * @param ApplyType 策略类型，固定值：instance， instance-代表实例类型策略
      */
     public void setApplyType(String ApplyType) {
         this.ApplyType = ApplyType;
     }
 
     /**
-     * Get 开启策略 
-     * @return Enable 开启策略
+     * Get 策略是否开启，0-代表开启，1-代表关闭 
+     * @return Enable 策略是否开启，0-代表开启，1-代表关闭
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 开启策略
-     * @param Enable 开启策略
+     * Set 策略是否开启，0-代表开启，1-代表关闭
+     * @param Enable 策略是否开启，0-代表开启，1-代表关闭
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 列表 
-     * @return InstanceIds 列表
+     * Get 实例id列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceIds 实例id列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public InstanceID [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 列表
-     * @param InstanceIds 列表
+     * Set 实例id列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceIds 实例id列表，可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceIds(InstanceID [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -179,48 +179,48 @@ Instance-关联实例列表的实例
     }
 
     /**
-     * Get 新策略名 
-     * @return NewProfileName 新策略名
+     * Get 新策略名，包含中文英文数字，长度在60个字符以内，不能以“_”开头。 
+     * @return NewProfileName 新策略名，包含中文英文数字，长度在60个字符以内，不能以“_”开头。
      */
     public String getNewProfileName() {
         return this.NewProfileName;
     }
 
     /**
-     * Set 新策略名
-     * @param NewProfileName 新策略名
+     * Set 新策略名，包含中文英文数字，长度在60个字符以内，不能以“_”开头。
+     * @param NewProfileName 新策略名，包含中文英文数字，长度在60个字符以内，不能以“_”开头。
      */
     public void setNewProfileName(String NewProfileName) {
         this.NewProfileName = NewProfileName;
     }
 
     /**
-     * Get 旧策略名 
-     * @return ProfileName 旧策略名
+     * Get 旧策略名，包含中文英文数字，长度在60个字符以内，不能以“_”开头。 
+     * @return ProfileName 旧策略名，包含中文英文数字，长度在60个字符以内，不能以“_”开头。
      */
     public String getProfileName() {
         return this.ProfileName;
     }
 
     /**
-     * Set 旧策略名
-     * @param ProfileName 旧策略名
+     * Set 旧策略名，包含中文英文数字，长度在60个字符以内，不能以“_”开头。
+     * @param ProfileName 旧策略名，包含中文英文数字，长度在60个字符以内，不能以“_”开头。
      */
     public void setProfileName(String ProfileName) {
         this.ProfileName = ProfileName;
     }
 
     /**
-     * Get 策略类型 
-     * @return ProfileType 策略类型
+     * Get 策略类型，固定值：alarm_policy 
+     * @return ProfileType 策略类型，固定值：alarm_policy
      */
     public String getProfileType() {
         return this.ProfileType;
     }
 
     /**
-     * Set 策略类型
-     * @param ProfileType 策略类型
+     * Set 策略类型，固定值：alarm_policy
+     * @param ProfileType 策略类型，固定值：alarm_policy
      */
     public void setProfileType(String ProfileType) {
         this.ProfileType = ProfileType;
@@ -277,10 +277,10 @@ Instance-关联实例列表的实例
     /**
      * Get 快速规则  支持包括fatal-致命, critical-严重,
 warning-告警,
-information-通知 
+information-通知，与Rules互斥 
      * @return QuickRule 快速规则  支持包括fatal-致命, critical-严重,
 warning-告警,
-information-通知
+information-通知，与Rules互斥
      */
     public String getQuickRule() {
         return this.QuickRule;
@@ -289,26 +289,26 @@ information-通知
     /**
      * Set 快速规则  支持包括fatal-致命, critical-严重,
 warning-告警,
-information-通知
+information-通知，与Rules互斥
      * @param QuickRule 快速规则  支持包括fatal-致命, critical-严重,
 warning-告警,
-information-通知
+information-通知，与Rules互斥
      */
     public void setQuickRule(String QuickRule) {
         this.QuickRule = QuickRule;
     }
 
     /**
-     * Get 自定义规则 
-     * @return Rules 自定义规则
+     * Get 自定义规则，与QuickRule互斥。 
+     * @return Rules 自定义规则，与QuickRule互斥。
      */
     public AlarmsRules [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 自定义规则
-     * @param Rules 自定义规则
+     * Set 自定义规则，与QuickRule互斥。
+     * @param Rules 自定义规则，与QuickRule互斥。
      */
     public void setRules(AlarmsRules [] Rules) {
         this.Rules = Rules;

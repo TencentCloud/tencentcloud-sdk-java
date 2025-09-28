@@ -83,7 +83,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
+     *本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可通过接口查询 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/35767) 获取。
      * @param req CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -150,7 +150,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *查询备份下载任务信息
+     *本接口（DescribeBackupDownloadTask）用于查询备份下载任务信息。
      * @param req DescribeBackupDownloadTaskRequest
      * @return DescribeBackupDownloadTaskResponse
      * @throws TencentCloudSDKException
@@ -284,7 +284,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *查询实例慢日志详情
+     *本接口（DescribeDetailedSlowLogs）用于查询实例慢日志详情。
      * @param req DescribeDetailedSlowLogsRequest
      * @return DescribeDetailedSlowLogsResponse
      * @throws TencentCloudSDKException
@@ -339,7 +339,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeSpecInfo)用于查询实例的售卖规格。
+     *本接口（DescribeSpecInfo）用于查询实例的售卖规格。
      * @param req DescribeSpecInfoRequest
      * @return DescribeSpecInfoResponse
      * @throws TencentCloudSDKException
@@ -440,7 +440,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口(IsolateDBInstance)用于隔离MongoDB云数据库按量计费实例。隔离后实例保留在回收站中，不能再写入数据。隔离一定时间后，实例会彻底删除，回收站保存时间请参考按量计费的服务条款。在隔离中的按量计费实例无法恢复，请谨慎操作。
+     *本接口（IsolateDBInstance）用于隔离 MongoDB 云数据库按量计费实例。隔离后实例保留在回收站中，不能再写入数据。隔离一定时间后，实例会彻底删除，回收站保存时间请参考按量计费的服务条款。已删除的按量计费实例无法恢复，请谨慎操作。
      * @param req IsolateDBInstanceRequest
      * @return IsolateDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -451,7 +451,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口(KillOps)用于终止MongoDB云数据库实例上执行的特定操作。
+     *本接口（KillOps）用于终止 MongoDB 云数据库实例上执行的特定操作。
      * @param req KillOpsRequest
      * @return KillOpsResponse
      * @throws TencentCloudSDKException
@@ -496,7 +496,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口（ModifyDBInstanceSpec）用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
+     *本接口（ModifyDBInstanceSpec）用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)）获取。
      * @param req ModifyDBInstanceSpecRequest
      * @return ModifyDBInstanceSpecResponse
      * @throws TencentCloudSDKException
@@ -562,7 +562,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口用于重启数据库节点。
+     *本接口（RestartNodes）用于批量重启数据库节点。
      * @param req RestartNodesRequest
      * @return RestartNodesResponse
      * @throws TencentCloudSDKException

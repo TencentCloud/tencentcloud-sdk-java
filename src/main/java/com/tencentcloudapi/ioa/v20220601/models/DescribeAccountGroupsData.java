@@ -164,6 +164,13 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private String LatestSyncTime;
 
     /**
+    * 分组名称数组
+    */
+    @SerializedName("NamePathArr")
+    @Expose
+    private String [] NamePathArr;
+
+    /**
      * Get 账号分组名全路径，点分格式 
      * @return NamePath 账号分组名全路径，点分格式
      */
@@ -483,6 +490,22 @@ public class DescribeAccountGroupsData extends AbstractModel {
         this.LatestSyncTime = LatestSyncTime;
     }
 
+    /**
+     * Get 分组名称数组 
+     * @return NamePathArr 分组名称数组
+     */
+    public String [] getNamePathArr() {
+        return this.NamePathArr;
+    }
+
+    /**
+     * Set 分组名称数组
+     * @param NamePathArr 分组名称数组
+     */
+    public void setNamePathArr(String [] NamePathArr) {
+        this.NamePathArr = NamePathArr;
+    }
+
     public DescribeAccountGroupsData() {
     }
 
@@ -554,6 +577,12 @@ public class DescribeAccountGroupsData extends AbstractModel {
         if (source.LatestSyncTime != null) {
             this.LatestSyncTime = new String(source.LatestSyncTime);
         }
+        if (source.NamePathArr != null) {
+            this.NamePathArr = new String[source.NamePathArr.length];
+            for (int i = 0; i < source.NamePathArr.length; i++) {
+                this.NamePathArr[i] = new String(source.NamePathArr[i]);
+            }
+        }
     }
 
 
@@ -581,6 +610,7 @@ public class DescribeAccountGroupsData extends AbstractModel {
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "LatestSyncResult", this.LatestSyncResult);
         this.setParamSimple(map, prefix + "LatestSyncTime", this.LatestSyncTime);
+        this.setParamArraySimple(map, prefix + "NamePathArr.", this.NamePathArr);
 
     }
 }

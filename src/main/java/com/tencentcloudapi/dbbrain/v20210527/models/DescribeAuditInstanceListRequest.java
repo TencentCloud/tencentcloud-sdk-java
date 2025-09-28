@@ -31,7 +31,7 @@ public class DescribeAuditInstanceListRequest extends AbstractModel {
     private String Product;
 
     /**
-    * 与Product保持一致。如："dcdb" ,"mariadb"。
+    * NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
     */
     @SerializedName("NodeRequestType")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeAuditInstanceListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 查询实例的搜索条件。
+    * 查询实例的搜索条件。Name包括：InstanceId， InstanceName。
     */
     @SerializedName("Filters")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeAuditInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get 与Product保持一致。如："dcdb" ,"mariadb"。 
-     * @return NodeRequestType 与Product保持一致。如："dcdb" ,"mariadb"。
+     * Get NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。 
+     * @return NodeRequestType NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
      */
     public String getNodeRequestType() {
         return this.NodeRequestType;
     }
 
     /**
-     * Set 与Product保持一致。如："dcdb" ,"mariadb"。
-     * @param NodeRequestType 与Product保持一致。如："dcdb" ,"mariadb"。
+     * Set NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
+     * @param NodeRequestType NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
      */
     public void setNodeRequestType(String NodeRequestType) {
         this.NodeRequestType = NodeRequestType;
@@ -146,16 +146,16 @@ public class DescribeAuditInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询实例的搜索条件。 
-     * @return Filters 查询实例的搜索条件。
+     * Get 查询实例的搜索条件。Name包括：InstanceId， InstanceName。 
+     * @return Filters 查询实例的搜索条件。Name包括：InstanceId， InstanceName。
      */
     public AuditInstanceFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询实例的搜索条件。
-     * @param Filters 查询实例的搜索条件。
+     * Set 查询实例的搜索条件。Name包括：InstanceId， InstanceName。
+     * @param Filters 查询实例的搜索条件。Name包括：InstanceId， InstanceName。
      */
     public void setFilters(AuditInstanceFilter [] Filters) {
         this.Filters = Filters;

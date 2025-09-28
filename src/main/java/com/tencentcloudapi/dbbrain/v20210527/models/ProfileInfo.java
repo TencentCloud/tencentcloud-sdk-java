@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProfileInfo extends AbstractModel {
 
     /**
-    * 语言, 如"zh"。
+    * 语言类型, 包含“zh”-中文，“en”-英文。
     */
     @SerializedName("Language")
     @Expose
@@ -38,16 +38,16 @@ public class ProfileInfo extends AbstractModel {
     private MailConfiguration MailConfiguration;
 
     /**
-     * Get 语言, 如"zh"。 
-     * @return Language 语言, 如"zh"。
+     * Get 语言类型, 包含“zh”-中文，“en”-英文。 
+     * @return Language 语言类型, 包含“zh”-中文，“en”-英文。
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set 语言, 如"zh"。
-     * @param Language 语言, 如"zh"。
+     * Set 语言类型, 包含“zh”-中文，“en”-英文。
+     * @param Language 语言类型, 包含“zh”-中文，“en”-英文。
      */
     public void setLanguage(String Language) {
         this.Language = Language;

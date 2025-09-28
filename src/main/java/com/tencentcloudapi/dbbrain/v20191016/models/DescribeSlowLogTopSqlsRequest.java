@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSlowLogTopSqlsRequest extends AbstractModel {
 
     /**
-    * 实例 ID 。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -46,6 +46,13 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel {
 
     /**
     * 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+其中：
+QueryTime    - 查询耗时  
+ExecTimes    - 执行次数  
+RowsSent     - 返回行数  
+LockTime     - 锁等待时间  
+RowsExamined - 扫描行数  
+
     */
     @SerializedName("SortBy")
     @Expose
@@ -87,16 +94,16 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel {
     private String Product;
 
     /**
-     * Get 实例 ID 。 
-     * @return InstanceId 实例 ID 。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID 。
-     * @param InstanceId 实例 ID 。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -135,8 +142,22 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。 
+     * Get 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+其中：
+QueryTime    - 查询耗时  
+ExecTimes    - 执行次数  
+RowsSent     - 返回行数  
+LockTime     - 锁等待时间  
+RowsExamined - 扫描行数  
+ 
      * @return SortBy 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+其中：
+QueryTime    - 查询耗时  
+ExecTimes    - 执行次数  
+RowsSent     - 返回行数  
+LockTime     - 锁等待时间  
+RowsExamined - 扫描行数  
+
      */
     public String getSortBy() {
         return this.SortBy;
@@ -144,7 +165,21 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel {
 
     /**
      * Set 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+其中：
+QueryTime    - 查询耗时  
+ExecTimes    - 执行次数  
+RowsSent     - 返回行数  
+LockTime     - 锁等待时间  
+RowsExamined - 扫描行数  
+
      * @param SortBy 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+其中：
+QueryTime    - 查询耗时  
+ExecTimes    - 执行次数  
+RowsSent     - 返回行数  
+LockTime     - 锁等待时间  
+RowsExamined - 扫描行数  
+
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;

@@ -512,6 +512,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *获取指定时间段内Redis 访问命令 cost top N
+     * @param req DescribeMetricTopProxiesRequest
+     * @return DescribeMetricTopProxiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMetricTopProxiesResponse DescribeMetricTopProxies(DescribeMetricTopProxiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMetricTopProxies", DescribeMetricTopProxiesResponse.class);
+    }
+
+    /**
      *查询关系型数据库的实时线程列表。
      * @param req DescribeMySqlProcessListRequest
      * @return DescribeMySqlProcessListResponse

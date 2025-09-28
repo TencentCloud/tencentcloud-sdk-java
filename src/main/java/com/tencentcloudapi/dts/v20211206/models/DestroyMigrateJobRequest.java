@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DestroyMigrateJobRequest extends AbstractModel {
 
     /**
-    * 任务id
+    * 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-     * Get 任务id 
-     * @return JobId 任务id
+     * Get 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ 
+     * @return JobId 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务id
-     * @param JobId 任务id
+     * Set 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+     * @param JobId 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class AutonomyUserProfileInfo extends AbstractModel {
 
     /**
-    * 是否开启自治。
+    * 是否开启自治。枚举值：true，false。
+其中：
+true - 开启
+false - 关闭
     */
     @SerializedName("Enabled")
     @Expose
@@ -59,16 +62,28 @@ public class AutonomyUserProfileInfo extends AbstractModel {
     private String [] EnabledItems;
 
     /**
-     * Get 是否开启自治。 
-     * @return Enabled 是否开启自治。
+     * Get 是否开启自治。枚举值：true，false。
+其中：
+true - 开启
+false - 关闭 
+     * @return Enabled 是否开启自治。枚举值：true，false。
+其中：
+true - 开启
+false - 关闭
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 是否开启自治。
-     * @param Enabled 是否开启自治。
+     * Set 是否开启自治。枚举值：true，false。
+其中：
+true - 开启
+false - 关闭
+     * @param Enabled 是否开启自治。枚举值：true，false。
+其中：
+true - 开启
+false - 关闭
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;

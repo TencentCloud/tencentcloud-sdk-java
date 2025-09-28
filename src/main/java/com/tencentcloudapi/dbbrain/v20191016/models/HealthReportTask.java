@@ -45,21 +45,21 @@ public class HealthReportTask extends AbstractModel {
     private Long Progress;
 
     /**
-    * 任务创建时间。
+    * 任务创建时间，格式: "yyyy-MM-dd HH:mm:ss"。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 任务开始执行时间。
+    * 任务开始执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 任务完成执行时间。
+    * 任务完成执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
     */
     @SerializedName("EndTime")
     @Expose
@@ -128,48 +128,48 @@ public class HealthReportTask extends AbstractModel {
     }
 
     /**
-     * Get 任务创建时间。 
-     * @return CreateTime 任务创建时间。
+     * Get 任务创建时间，格式: "yyyy-MM-dd HH:mm:ss"。 
+     * @return CreateTime 任务创建时间，格式: "yyyy-MM-dd HH:mm:ss"。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 任务创建时间。
-     * @param CreateTime 任务创建时间。
+     * Set 任务创建时间，格式: "yyyy-MM-dd HH:mm:ss"。
+     * @param CreateTime 任务创建时间，格式: "yyyy-MM-dd HH:mm:ss"。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 任务开始执行时间。 
-     * @return StartTime 任务开始执行时间。
+     * Get 任务开始执行时间，格式: "yyyy-MM-dd HH:mm:ss"。 
+     * @return StartTime 任务开始执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 任务开始执行时间。
-     * @param StartTime 任务开始执行时间。
+     * Set 任务开始执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
+     * @param StartTime 任务开始执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务完成执行时间。 
-     * @return EndTime 任务完成执行时间。
+     * Get 任务完成执行时间，格式: "yyyy-MM-dd HH:mm:ss"。 
+     * @return EndTime 任务完成执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 任务完成执行时间。
-     * @param EndTime 任务完成执行时间。
+     * Set 任务完成执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
+     * @param EndTime 任务完成执行时间，格式: "yyyy-MM-dd HH:mm:ss"。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

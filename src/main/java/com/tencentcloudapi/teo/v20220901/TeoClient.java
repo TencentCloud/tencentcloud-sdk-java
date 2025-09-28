@@ -83,6 +83,17 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *本接口用于多通道安全加速网关回源 IP 网段发生变更时，确认已将最新回源 IP 网段更新至源站防火墙。
+     * @param req ConfirmMultiPathGatewayOriginACLRequest
+     * @return ConfirmMultiPathGatewayOriginACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConfirmMultiPathGatewayOriginACLResponse ConfirmMultiPathGatewayOriginACL(ConfirmMultiPathGatewayOriginACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ConfirmMultiPathGatewayOriginACL", ConfirmMultiPathGatewayOriginACLResponse.class);
+    }
+
+    /**
      *本接口用于回源 IP 网段发生变更时，确认已将最新回源 IP 网段更新至源站防火墙。确认已更新至最新的回源 IP 网段后，相关变更通知将会停止推送。
      * @param req ConfirmOriginACLUpdateRequest
      * @return ConfirmOriginACLUpdateResponse
@@ -1150,6 +1161,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口用于查询多通道安全加速网关实例与回源 IP 网段的绑定关系，以及回源 IP 网段详情。若 MultiPathGatewayNextOriginACL 字段有返回值，则需要将最新的回源 IP 网段同步到源站防火墙配置中。
+     * @param req DescribeMultiPathGatewayOriginACLRequest
+     * @return DescribeMultiPathGatewayOriginACLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMultiPathGatewayOriginACLResponse DescribeMultiPathGatewayOriginACL(DescribeMultiPathGatewayOriginACLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMultiPathGatewayOriginACL", DescribeMultiPathGatewayOriginACLResponse.class);
+    }
+
+    /**
      *通过本接口查询用户创建的多通道安全加速网关（云上网关）的可用地域列表。
      * @param req DescribeMultiPathGatewayRegionsRequest
      * @return DescribeMultiPathGatewayRegionsResponse
@@ -1971,6 +1993,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyMultiPathGatewaySecretKeyResponse ModifyMultiPathGatewaySecretKey(ModifyMultiPathGatewaySecretKeyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMultiPathGatewaySecretKey", ModifyMultiPathGatewaySecretKeyResponse.class);
+    }
+
+    /**
+     *更新多通道安全网关状态。
+     * @param req ModifyMultiPathGatewayStatusRequest
+     * @return ModifyMultiPathGatewayStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMultiPathGatewayStatusResponse ModifyMultiPathGatewayStatus(ModifyMultiPathGatewayStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMultiPathGatewayStatus", ModifyMultiPathGatewayStatusResponse.class);
     }
 
     /**

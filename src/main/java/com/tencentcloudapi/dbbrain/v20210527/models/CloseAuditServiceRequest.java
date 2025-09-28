@@ -31,14 +31,14 @@ public class CloseAuditServiceRequest extends AbstractModel {
     private String Product;
 
     /**
-    * 与Product保持一致。如："dcdb" ,"mariadb"。
+    * NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
     */
     @SerializedName("NodeRequestType")
     @Expose
     private String NodeRequestType;
 
     /**
-    * 实例Id。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -61,32 +61,32 @@ public class CloseAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 与Product保持一致。如："dcdb" ,"mariadb"。 
-     * @return NodeRequestType 与Product保持一致。如："dcdb" ,"mariadb"。
+     * Get NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。 
+     * @return NodeRequestType NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
      */
     public String getNodeRequestType() {
         return this.NodeRequestType;
     }
 
     /**
-     * Set 与Product保持一致。如："dcdb" ,"mariadb"。
-     * @param NodeRequestType 与Product保持一致。如："dcdb" ,"mariadb"。
+     * Set NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
+     * @param NodeRequestType NodeRequestType主要标识数据库产品类型，与Product保持一致。如："dcdb" ,"mariadb"。
      */
     public void setNodeRequestType(String NodeRequestType) {
         this.NodeRequestType = NodeRequestType;
     }
 
     /**
-     * Get 实例Id。 
-     * @return InstanceId 实例Id。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id。
-     * @param InstanceId 实例Id。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

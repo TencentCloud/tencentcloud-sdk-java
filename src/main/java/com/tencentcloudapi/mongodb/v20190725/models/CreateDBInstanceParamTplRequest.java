@@ -31,15 +31,24 @@ public class CreateDBInstanceParamTplRequest extends AbstractModel {
     private String TplName;
 
     /**
-    * 版本号，该参数模板支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是：MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。当MirrorTplId为空时，该字段必填。
+    * 参数模板版本号。当**MirrorTplId**为空时，该字段必填。参数模板支持的售卖版本，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/35767) 获取。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersion")
     @Expose
     private String MongoVersion;
 
     /**
-    * 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点
-当MirrorTplId为空时，该字段必填。
+    * 实例类型。当 MirrorTplId 为空值时，该参数必填。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -53,14 +62,15 @@ public class CreateDBInstanceParamTplRequest extends AbstractModel {
     private String TplDesc;
 
     /**
-    * 模板参数，若为空，则以系统默认模板作为新版本参数。
+    * 模板参数，若不配置该参数，则以系统默认模板作为新版本参数。
     */
     @SerializedName("Params")
     @Expose
     private ParamType [] Params;
 
     /**
-    * 镜像模板ID，若该字段不为空，则以该模板为镜像，克隆出一个新的模板。注意：MirrorTplId不为空时，MongoVersion及ClusterType将以MirrorTpl模板的版本及实例类型为准。
+    * 镜像模板 ID。若指定镜像模板，则以该模板为镜像，克隆出一个新的模板。
+**注意**：MirrorTplId 不为空值时，MongoVersion 及 ClusterType 将以 MirrorTpl 模板的版本及实例类型为准。
     */
     @SerializedName("MirrorTplId")
     @Expose
@@ -83,36 +93,72 @@ public class CreateDBInstanceParamTplRequest extends AbstractModel {
     }
 
     /**
-     * Get 版本号，该参数模板支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是：MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。当MirrorTplId为空时，该字段必填。 
-     * @return MongoVersion 版本号，该参数模板支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是：MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。当MirrorTplId为空时，该字段必填。
+     * Get 参数模板版本号。当**MirrorTplId**为空时，该字段必填。参数模板支持的售卖版本，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/35767) 获取。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。 
+     * @return MongoVersion 参数模板版本号。当**MirrorTplId**为空时，该字段必填。参数模板支持的售卖版本，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/35767) 获取。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set 版本号，该参数模板支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是：MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。当MirrorTplId为空时，该字段必填。
-     * @param MongoVersion 版本号，该参数模板支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是：MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。当MirrorTplId为空时，该字段必填。
+     * Set 参数模板版本号。当**MirrorTplId**为空时，该字段必填。参数模板支持的售卖版本，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/35767) 获取。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+     * @param MongoVersion 参数模板版本号。当**MirrorTplId**为空时，该字段必填。参数模板支持的售卖版本，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/35767) 获取。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
     }
 
     /**
-     * Get 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点
-当MirrorTplId为空时，该字段必填。 
-     * @return ClusterType 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点
-当MirrorTplId为空时，该字段必填。
+     * Get 实例类型。当 MirrorTplId 为空值时，该参数必填。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。 
+     * @return ClusterType 实例类型。当 MirrorTplId 为空值时，该参数必填。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点
-当MirrorTplId为空时，该字段必填。
-     * @param ClusterType 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点
-当MirrorTplId为空时，该字段必填。
+     * Set 实例类型。当 MirrorTplId 为空值时，该参数必填。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
+     * @param ClusterType 实例类型。当 MirrorTplId 为空值时，该参数必填。
+- REPLSET：副本集实例。
+- SHARD：分片实例。
+- STANDALONE：单节点实例。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
@@ -135,32 +181,36 @@ public class CreateDBInstanceParamTplRequest extends AbstractModel {
     }
 
     /**
-     * Get 模板参数，若为空，则以系统默认模板作为新版本参数。 
-     * @return Params 模板参数，若为空，则以系统默认模板作为新版本参数。
+     * Get 模板参数，若不配置该参数，则以系统默认模板作为新版本参数。 
+     * @return Params 模板参数，若不配置该参数，则以系统默认模板作为新版本参数。
      */
     public ParamType [] getParams() {
         return this.Params;
     }
 
     /**
-     * Set 模板参数，若为空，则以系统默认模板作为新版本参数。
-     * @param Params 模板参数，若为空，则以系统默认模板作为新版本参数。
+     * Set 模板参数，若不配置该参数，则以系统默认模板作为新版本参数。
+     * @param Params 模板参数，若不配置该参数，则以系统默认模板作为新版本参数。
      */
     public void setParams(ParamType [] Params) {
         this.Params = Params;
     }
 
     /**
-     * Get 镜像模板ID，若该字段不为空，则以该模板为镜像，克隆出一个新的模板。注意：MirrorTplId不为空时，MongoVersion及ClusterType将以MirrorTpl模板的版本及实例类型为准。 
-     * @return MirrorTplId 镜像模板ID，若该字段不为空，则以该模板为镜像，克隆出一个新的模板。注意：MirrorTplId不为空时，MongoVersion及ClusterType将以MirrorTpl模板的版本及实例类型为准。
+     * Get 镜像模板 ID。若指定镜像模板，则以该模板为镜像，克隆出一个新的模板。
+**注意**：MirrorTplId 不为空值时，MongoVersion 及 ClusterType 将以 MirrorTpl 模板的版本及实例类型为准。 
+     * @return MirrorTplId 镜像模板 ID。若指定镜像模板，则以该模板为镜像，克隆出一个新的模板。
+**注意**：MirrorTplId 不为空值时，MongoVersion 及 ClusterType 将以 MirrorTpl 模板的版本及实例类型为准。
      */
     public String getMirrorTplId() {
         return this.MirrorTplId;
     }
 
     /**
-     * Set 镜像模板ID，若该字段不为空，则以该模板为镜像，克隆出一个新的模板。注意：MirrorTplId不为空时，MongoVersion及ClusterType将以MirrorTpl模板的版本及实例类型为准。
-     * @param MirrorTplId 镜像模板ID，若该字段不为空，则以该模板为镜像，克隆出一个新的模板。注意：MirrorTplId不为空时，MongoVersion及ClusterType将以MirrorTpl模板的版本及实例类型为准。
+     * Set 镜像模板 ID。若指定镜像模板，则以该模板为镜像，克隆出一个新的模板。
+**注意**：MirrorTplId 不为空值时，MongoVersion 及 ClusterType 将以 MirrorTpl 模板的版本及实例类型为准。
+     * @param MirrorTplId 镜像模板 ID。若指定镜像模板，则以该模板为镜像，克隆出一个新的模板。
+**注意**：MirrorTplId 不为空值时，MongoVersion 及 ClusterType 将以 MirrorTpl 模板的版本及实例类型为准。
      */
     public void setMirrorTplId(String MirrorTplId) {
         this.MirrorTplId = MirrorTplId;

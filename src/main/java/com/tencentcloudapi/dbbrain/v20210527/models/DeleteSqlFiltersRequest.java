@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DeleteSqlFiltersRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 限流任务ID列表。
+    * 限流任务ID列表。通过接口[创建实例SQL限流任务](https://cloud.tencent.com/document/product/1130/72835)获得。
     */
     @SerializedName("FilterIds")
     @Expose
     private Long [] FilterIds;
 
     /**
-    * 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+    * 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
     */
     @SerializedName("SessionToken")
     @Expose
@@ -52,48 +52,48 @@ public class DeleteSqlFiltersRequest extends AbstractModel {
     private String Product;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 限流任务ID列表。 
-     * @return FilterIds 限流任务ID列表。
+     * Get 限流任务ID列表。通过接口[创建实例SQL限流任务](https://cloud.tencent.com/document/product/1130/72835)获得。 
+     * @return FilterIds 限流任务ID列表。通过接口[创建实例SQL限流任务](https://cloud.tencent.com/document/product/1130/72835)获得。
      */
     public Long [] getFilterIds() {
         return this.FilterIds;
     }
 
     /**
-     * Set 限流任务ID列表。
-     * @param FilterIds 限流任务ID列表。
+     * Set 限流任务ID列表。通过接口[创建实例SQL限流任务](https://cloud.tencent.com/document/product/1130/72835)获得。
+     * @param FilterIds 限流任务ID列表。通过接口[创建实例SQL限流任务](https://cloud.tencent.com/document/product/1130/72835)获得。
      */
     public void setFilterIds(Long [] FilterIds) {
         this.FilterIds = FilterIds;
     }
 
     /**
-     * Get 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。 
-     * @return SessionToken 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     * Get 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。 
+     * @return SessionToken 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
      */
     public String getSessionToken() {
         return this.SessionToken;
     }
 
     /**
-     * Set 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
-     * @param SessionToken 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     * Set 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     * @param SessionToken 通过 [VerifyUserAccount](https://cloud.tencent.com/document/product/1130/72828) 获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
      */
     public void setSessionToken(String SessionToken) {
         this.SessionToken = SessionToken;

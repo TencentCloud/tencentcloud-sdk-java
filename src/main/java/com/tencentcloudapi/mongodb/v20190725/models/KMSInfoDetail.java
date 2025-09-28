@@ -46,6 +46,8 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
     * 密钥状态。
+- Enabled：开启。
+- Disabled：不开启。
     */
     @SerializedName("Status")
     @Expose
@@ -121,8 +123,12 @@ public class KMSInfoDetail extends AbstractModel {
     }
 
     /**
-     * Get 密钥状态。 
+     * Get 密钥状态。
+- Enabled：开启。
+- Disabled：不开启。 
      * @return Status 密钥状态。
+- Enabled：开启。
+- Disabled：不开启。
      */
     public String getStatus() {
         return this.Status;
@@ -130,7 +136,11 @@ public class KMSInfoDetail extends AbstractModel {
 
     /**
      * Set 密钥状态。
+- Enabled：开启。
+- Disabled：不开启。
      * @param Status 密钥状态。
+- Enabled：开启。
+- Disabled：不开启。
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBDiagHistoryRequest extends AbstractModel {
 
     /**
-    * 实例 ID 。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间，如“2019-09-10 12:13:14”。
+    * 开始时间，如“2019-09-10 12:13:14”。结束时间与开始时间的间隔最大可为2天。
     */
     @SerializedName("StartTime")
     @Expose
@@ -52,32 +52,32 @@ public class DescribeDBDiagHistoryRequest extends AbstractModel {
     private String Product;
 
     /**
-     * Get 实例 ID 。 
-     * @return InstanceId 实例 ID 。
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID 。
-     * @param InstanceId 实例 ID 。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间，如“2019-09-10 12:13:14”。 
-     * @return StartTime 开始时间，如“2019-09-10 12:13:14”。
+     * Get 开始时间，如“2019-09-10 12:13:14”。结束时间与开始时间的间隔最大可为2天。 
+     * @return StartTime 开始时间，如“2019-09-10 12:13:14”。结束时间与开始时间的间隔最大可为2天。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，如“2019-09-10 12:13:14”。
-     * @param StartTime 开始时间，如“2019-09-10 12:13:14”。
+     * Set 开始时间，如“2019-09-10 12:13:14”。结束时间与开始时间的间隔最大可为2天。
+     * @param StartTime 开始时间，如“2019-09-10 12:13:14”。结束时间与开始时间的间隔最大可为2天。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;

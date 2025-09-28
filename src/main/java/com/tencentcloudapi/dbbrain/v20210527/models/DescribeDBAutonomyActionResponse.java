@@ -52,28 +52,28 @@ public class DescribeDBAutonomyActionResponse extends AbstractModel {
     private String Type;
 
     /**
-    * 自治任务触发时间。
+    * 自治任务触发时间。格式: "yyyy-MM-dd HH:mm:ss"
     */
     @SerializedName("TriggerTime")
     @Expose
     private String TriggerTime;
 
     /**
-    * 自治任务创建时间。
+    * 自治任务创建时间。格式: "yyyy-MM-dd HH:mm:ss"
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 自治任务更新时间。
+    * 自治任务更新时间。格式: "yyyy-MM-dd HH:mm:ss"
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 自治任务完成时间。
+    * 自治任务完成时间。格式: "yyyy-MM-dd HH:mm:ss"
     */
     @SerializedName("FinishTime")
     @Expose
@@ -95,6 +95,12 @@ public class DescribeDBAutonomyActionResponse extends AbstractModel {
 
     /**
     * 自治任务状态：支持 RUNNING，FINISHED，TERMINATED，CANCELLED
+其中：
+RUNNING    - 运行中  
+FINISHED   - 已完成  
+TERMINATED - 已终止  
+CANCELLED  - 已取消  
+
     */
     @SerializedName("Status")
     @Expose
@@ -179,64 +185,64 @@ public class DescribeDBAutonomyActionResponse extends AbstractModel {
     }
 
     /**
-     * Get 自治任务触发时间。 
-     * @return TriggerTime 自治任务触发时间。
+     * Get 自治任务触发时间。格式: "yyyy-MM-dd HH:mm:ss" 
+     * @return TriggerTime 自治任务触发时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public String getTriggerTime() {
         return this.TriggerTime;
     }
 
     /**
-     * Set 自治任务触发时间。
-     * @param TriggerTime 自治任务触发时间。
+     * Set 自治任务触发时间。格式: "yyyy-MM-dd HH:mm:ss"
+     * @param TriggerTime 自治任务触发时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public void setTriggerTime(String TriggerTime) {
         this.TriggerTime = TriggerTime;
     }
 
     /**
-     * Get 自治任务创建时间。 
-     * @return CreateTime 自治任务创建时间。
+     * Get 自治任务创建时间。格式: "yyyy-MM-dd HH:mm:ss" 
+     * @return CreateTime 自治任务创建时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 自治任务创建时间。
-     * @param CreateTime 自治任务创建时间。
+     * Set 自治任务创建时间。格式: "yyyy-MM-dd HH:mm:ss"
+     * @param CreateTime 自治任务创建时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 自治任务更新时间。 
-     * @return UpdateTime 自治任务更新时间。
+     * Get 自治任务更新时间。格式: "yyyy-MM-dd HH:mm:ss" 
+     * @return UpdateTime 自治任务更新时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 自治任务更新时间。
-     * @param UpdateTime 自治任务更新时间。
+     * Set 自治任务更新时间。格式: "yyyy-MM-dd HH:mm:ss"
+     * @param UpdateTime 自治任务更新时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 自治任务完成时间。 
-     * @return FinishTime 自治任务完成时间。
+     * Get 自治任务完成时间。格式: "yyyy-MM-dd HH:mm:ss" 
+     * @return FinishTime 自治任务完成时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 自治任务完成时间。
-     * @param FinishTime 自治任务完成时间。
+     * Set 自治任务完成时间。格式: "yyyy-MM-dd HH:mm:ss"
+     * @param FinishTime 自治任务完成时间。格式: "yyyy-MM-dd HH:mm:ss"
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
@@ -275,8 +281,20 @@ public class DescribeDBAutonomyActionResponse extends AbstractModel {
     }
 
     /**
-     * Get 自治任务状态：支持 RUNNING，FINISHED，TERMINATED，CANCELLED 
+     * Get 自治任务状态：支持 RUNNING，FINISHED，TERMINATED，CANCELLED
+其中：
+RUNNING    - 运行中  
+FINISHED   - 已完成  
+TERMINATED - 已终止  
+CANCELLED  - 已取消  
+ 
      * @return Status 自治任务状态：支持 RUNNING，FINISHED，TERMINATED，CANCELLED
+其中：
+RUNNING    - 运行中  
+FINISHED   - 已完成  
+TERMINATED - 已终止  
+CANCELLED  - 已取消  
+
      */
     public String getStatus() {
         return this.Status;
@@ -284,7 +302,19 @@ public class DescribeDBAutonomyActionResponse extends AbstractModel {
 
     /**
      * Set 自治任务状态：支持 RUNNING，FINISHED，TERMINATED，CANCELLED
+其中：
+RUNNING    - 运行中  
+FINISHED   - 已完成  
+TERMINATED - 已终止  
+CANCELLED  - 已取消  
+
      * @param Status 自治任务状态：支持 RUNNING，FINISHED，TERMINATED，CANCELLED
+其中：
+RUNNING    - 运行中  
+FINISHED   - 已完成  
+TERMINATED - 已终止  
+CANCELLED  - 已取消  
+
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -31,7 +31,7 @@ public class ReceiveInfo extends AbstractModel {
     private Long [] ReceiveGroup;
 
     /**
-    * 最后接收时间
+    * 最后接收时间，格式: "HH:mm:ss"
     */
     @SerializedName("EndReceiveTime")
     @Expose
@@ -52,7 +52,7 @@ public class ReceiveInfo extends AbstractModel {
     private Long [] SendChannel;
 
     /**
-    * 开始时间
+    * 开始时间，格式: "HH:mm:ss"
     */
     @SerializedName("StartReceiveTime")
     @Expose
@@ -82,16 +82,16 @@ public class ReceiveInfo extends AbstractModel {
     }
 
     /**
-     * Get 最后接收时间 
-     * @return EndReceiveTime 最后接收时间
+     * Get 最后接收时间，格式: "HH:mm:ss" 
+     * @return EndReceiveTime 最后接收时间，格式: "HH:mm:ss"
      */
     public String getEndReceiveTime() {
         return this.EndReceiveTime;
     }
 
     /**
-     * Set 最后接收时间
-     * @param EndReceiveTime 最后接收时间
+     * Set 最后接收时间，格式: "HH:mm:ss"
+     * @param EndReceiveTime 最后接收时间，格式: "HH:mm:ss"
      */
     public void setEndReceiveTime(String EndReceiveTime) {
         this.EndReceiveTime = EndReceiveTime;
@@ -130,16 +130,16 @@ public class ReceiveInfo extends AbstractModel {
     }
 
     /**
-     * Get 开始时间 
-     * @return StartReceiveTime 开始时间
+     * Get 开始时间，格式: "HH:mm:ss" 
+     * @return StartReceiveTime 开始时间，格式: "HH:mm:ss"
      */
     public String getStartReceiveTime() {
         return this.StartReceiveTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartReceiveTime 开始时间
+     * Set 开始时间，格式: "HH:mm:ss"
+     * @param StartReceiveTime 开始时间，格式: "HH:mm:ss"
      */
     public void setStartReceiveTime(String StartReceiveTime) {
         this.StartReceiveTime = StartReceiveTime;

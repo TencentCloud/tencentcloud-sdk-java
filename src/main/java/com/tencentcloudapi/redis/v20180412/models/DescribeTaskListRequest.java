@@ -31,7 +31,7 @@ public class DescribeTaskListRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 实例名称。
+    * 实例名称。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例名称。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeTaskListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+    * 分页偏移量。取值需为 Limit 的整数倍：offset=limit*(页码-1)，默认值为0。
     */
     @SerializedName("Offset")
     @Expose
@@ -184,16 +184,16 @@ public class DescribeTaskListRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例名称。 
-     * @return InstanceName 实例名称。
+     * Get 实例名称。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例名称。 
+     * @return InstanceName 实例名称。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例名称。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称。
-     * @param InstanceName 实例名称。
+     * Set 实例名称。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例名称。
+     * @param InstanceName 实例名称。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例名称。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -216,16 +216,16 @@ public class DescribeTaskListRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。 
-     * @return Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * Get 分页偏移量。取值需为 Limit 的整数倍：offset=limit*(页码-1)，默认值为0。 
+     * @return Offset 分页偏移量。取值需为 Limit 的整数倍：offset=limit*(页码-1)，默认值为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
-     * @param Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * Set 分页偏移量。取值需为 Limit 的整数倍：offset=limit*(页码-1)，默认值为0。
+     * @param Offset 分页偏移量。取值需为 Limit 的整数倍：offset=limit*(页码-1)，默认值为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

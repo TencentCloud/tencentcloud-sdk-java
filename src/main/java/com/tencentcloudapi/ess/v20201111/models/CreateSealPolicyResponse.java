@@ -32,6 +32,20 @@ public class CreateSealPolicyResponse extends AbstractModel {
     private String [] UserIds;
 
     /**
+    * 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+    */
+    @SerializedName("SealOperatorVerifyPath")
+    @Expose
+    private String SealOperatorVerifyPath;
+
+    /**
+    * 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+    */
+    @SerializedName("SealOperatorVerifyQrcodeUrl")
+    @Expose
+    private String SealOperatorVerifyQrcodeUrl;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +70,38 @@ public class CreateSealPolicyResponse extends AbstractModel {
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
+    }
+
+    /**
+     * Get 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。 
+     * @return SealOperatorVerifyPath 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+     */
+    public String getSealOperatorVerifyPath() {
+        return this.SealOperatorVerifyPath;
+    }
+
+    /**
+     * Set 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+     * @param SealOperatorVerifyPath 人脸验证操作人链接，用法可以参考"[跳转电子签小程序配置](https://qian.tencent.com/developers/company/openwxminiprogram/)"，默认为空。
+     */
+    public void setSealOperatorVerifyPath(String SealOperatorVerifyPath) {
+        this.SealOperatorVerifyPath = SealOperatorVerifyPath;
+    }
+
+    /**
+     * Get 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。 
+     * @return SealOperatorVerifyQrcodeUrl 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+     */
+    public String getSealOperatorVerifyQrcodeUrl() {
+        return this.SealOperatorVerifyQrcodeUrl;
+    }
+
+    /**
+     * Set 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+     * @param SealOperatorVerifyQrcodeUrl 人脸验证操作人二维码链接，扫码后会跳转到腾讯电子签小程序进行人脸验证，默认为空。
+     */
+    public void setSealOperatorVerifyQrcodeUrl(String SealOperatorVerifyQrcodeUrl) {
+        this.SealOperatorVerifyQrcodeUrl = SealOperatorVerifyQrcodeUrl;
     }
 
     /**
@@ -88,6 +134,12 @@ public class CreateSealPolicyResponse extends AbstractModel {
                 this.UserIds[i] = new String(source.UserIds[i]);
             }
         }
+        if (source.SealOperatorVerifyPath != null) {
+            this.SealOperatorVerifyPath = new String(source.SealOperatorVerifyPath);
+        }
+        if (source.SealOperatorVerifyQrcodeUrl != null) {
+            this.SealOperatorVerifyQrcodeUrl = new String(source.SealOperatorVerifyQrcodeUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -99,6 +151,8 @@ public class CreateSealPolicyResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
+        this.setParamSimple(map, prefix + "SealOperatorVerifyPath", this.SealOperatorVerifyPath);
+        this.setParamSimple(map, prefix + "SealOperatorVerifyQrcodeUrl", this.SealOperatorVerifyQrcodeUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

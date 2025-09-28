@@ -186,6 +186,9 @@ public enum TkeErrorCode {
      /* 节点池查询失败 */
      FAILEDOPERATION_NODEPOOLQUERYFAILED("FailedOperation.NodePoolQueryFailed"),
      
+     /* 您提交的操作被拒绝，请检查您的操作是否正确 */
+     FAILEDOPERATION_OPERATIONFORBIDDEN("FailedOperation.OperationForbidden"),
+     
      /* 镜像OS不支持。 */
      FAILEDOPERATION_OSNOTSUPPORT("FailedOperation.OsNotSupport"),
      

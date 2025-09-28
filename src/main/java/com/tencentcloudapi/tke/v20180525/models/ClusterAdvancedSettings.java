@@ -142,7 +142,10 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     private String KubeProxyMode;
 
     /**
-    * 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
+    * 集群网络类型，默认为GR。
+- GR: 全局路由
+- VPC-CNI: VPC-CNI模式
+- CiliumOverlay: CiliumOverlay模式
     */
     @SerializedName("NetworkType")
     @Expose
@@ -457,16 +460,28 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     }
 
     /**
-     * Get 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。 
-     * @return NetworkType 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
+     * Get 集群网络类型，默认为GR。
+- GR: 全局路由
+- VPC-CNI: VPC-CNI模式
+- CiliumOverlay: CiliumOverlay模式 
+     * @return NetworkType 集群网络类型，默认为GR。
+- GR: 全局路由
+- VPC-CNI: VPC-CNI模式
+- CiliumOverlay: CiliumOverlay模式
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
-     * @param NetworkType 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
+     * Set 集群网络类型，默认为GR。
+- GR: 全局路由
+- VPC-CNI: VPC-CNI模式
+- CiliumOverlay: CiliumOverlay模式
+     * @param NetworkType 集群网络类型，默认为GR。
+- GR: 全局路由
+- VPC-CNI: VPC-CNI模式
+- CiliumOverlay: CiliumOverlay模式
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;

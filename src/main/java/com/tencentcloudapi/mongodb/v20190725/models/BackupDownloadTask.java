@@ -24,70 +24,81 @@ import java.util.HashMap;
 public class BackupDownloadTask extends AbstractModel {
 
     /**
-    * 任务创建时间
+    * 任务创建时间。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 备份文件名
+    * 备份文件名。
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-    * 分片名称
+    * 分片名称。
     */
     @SerializedName("ReplicaSetId")
     @Expose
     private String ReplicaSetId;
 
     /**
-    * 备份数据大小，单位为字节
+    * 备份数据大小，单位：字节。
     */
     @SerializedName("BackupSize")
     @Expose
     private Long BackupSize;
 
     /**
-    * 任务状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+    * 任务状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 任务进度百分比
+    * 任务进度百分比。
     */
     @SerializedName("Percent")
     @Expose
     private Long Percent;
 
     /**
-    * 耗时，单位为秒
+    * 耗时，单位为秒。
     */
     @SerializedName("TimeSpend")
     @Expose
     private Long TimeSpend;
 
     /**
-    * 备份数据下载链接
+    * 备份数据下载链接。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 备份文件备份类型，0-逻辑备份，1-物理备份
+    * 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
     */
     @SerializedName("BackupMethod")
     @Expose
     private Long BackupMethod;
 
     /**
-    * 发起备份时指定的备注信息
+    * 发起备份时指定的备注信息。
     */
     @SerializedName("BackupDesc")
     @Expose
@@ -108,160 +119,204 @@ public class BackupDownloadTask extends AbstractModel {
     private String Bucket;
 
     /**
-     * Get 任务创建时间 
-     * @return CreateTime 任务创建时间
+     * Get 任务创建时间。 
+     * @return CreateTime 任务创建时间。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 任务创建时间
-     * @param CreateTime 任务创建时间
+     * Set 任务创建时间。
+     * @param CreateTime 任务创建时间。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 备份文件名 
-     * @return BackupName 备份文件名
+     * Get 备份文件名。 
+     * @return BackupName 备份文件名。
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set 备份文件名
-     * @param BackupName 备份文件名
+     * Set 备份文件名。
+     * @param BackupName 备份文件名。
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
     }
 
     /**
-     * Get 分片名称 
-     * @return ReplicaSetId 分片名称
+     * Get 分片名称。 
+     * @return ReplicaSetId 分片名称。
      */
     public String getReplicaSetId() {
         return this.ReplicaSetId;
     }
 
     /**
-     * Set 分片名称
-     * @param ReplicaSetId 分片名称
+     * Set 分片名称。
+     * @param ReplicaSetId 分片名称。
      */
     public void setReplicaSetId(String ReplicaSetId) {
         this.ReplicaSetId = ReplicaSetId;
     }
 
     /**
-     * Get 备份数据大小，单位为字节 
-     * @return BackupSize 备份数据大小，单位为字节
+     * Get 备份数据大小，单位：字节。 
+     * @return BackupSize 备份数据大小，单位：字节。
      */
     public Long getBackupSize() {
         return this.BackupSize;
     }
 
     /**
-     * Set 备份数据大小，单位为字节
-     * @param BackupSize 备份数据大小，单位为字节
+     * Set 备份数据大小，单位：字节。
+     * @param BackupSize 备份数据大小，单位：字节。
      */
     public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
     }
 
     /**
-     * Get 任务状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试 
-     * @return Status 任务状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+     * Get 任务状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。 
+     * @return Status 任务状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
-     * @param Status 任务状态。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+     * Set 任务状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
+     * @param Status 任务状态。
+- 0：等待执行。
+- 1：正在下载。
+- 2：下载完成。
+- 3：下载失败。
+- 4：等待重试。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务进度百分比 
-     * @return Percent 任务进度百分比
+     * Get 任务进度百分比。 
+     * @return Percent 任务进度百分比。
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set 任务进度百分比
-     * @param Percent 任务进度百分比
+     * Set 任务进度百分比。
+     * @param Percent 任务进度百分比。
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get 耗时，单位为秒 
-     * @return TimeSpend 耗时，单位为秒
+     * Get 耗时，单位为秒。 
+     * @return TimeSpend 耗时，单位为秒。
      */
     public Long getTimeSpend() {
         return this.TimeSpend;
     }
 
     /**
-     * Set 耗时，单位为秒
-     * @param TimeSpend 耗时，单位为秒
+     * Set 耗时，单位为秒。
+     * @param TimeSpend 耗时，单位为秒。
      */
     public void setTimeSpend(Long TimeSpend) {
         this.TimeSpend = TimeSpend;
     }
 
     /**
-     * Get 备份数据下载链接 
-     * @return Url 备份数据下载链接
+     * Get 备份数据下载链接。 
+     * @return Url 备份数据下载链接。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 备份数据下载链接
-     * @param Url 备份数据下载链接
+     * Set 备份数据下载链接。
+     * @param Url 备份数据下载链接。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 备份文件备份类型，0-逻辑备份，1-物理备份 
-     * @return BackupMethod 备份文件备份类型，0-逻辑备份，1-物理备份
+     * Get 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。 
+     * @return BackupMethod 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      */
     public Long getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set 备份文件备份类型，0-逻辑备份，1-物理备份
-     * @param BackupMethod 备份文件备份类型，0-逻辑备份，1-物理备份
+     * Set 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
+     * @param BackupMethod 备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+- 3：快照备份。
+**说明**:
+1. 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
+2. 实例开通存储加密，则备份方式不能为物理备份。
      */
     public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get 发起备份时指定的备注信息 
-     * @return BackupDesc 发起备份时指定的备注信息
+     * Get 发起备份时指定的备注信息。 
+     * @return BackupDesc 发起备份时指定的备注信息。
      */
     public String getBackupDesc() {
         return this.BackupDesc;
     }
 
     /**
-     * Set 发起备份时指定的备注信息
-     * @param BackupDesc 发起备份时指定的备注信息
+     * Set 发起备份时指定的备注信息。
+     * @param BackupDesc 发起备份时指定的备注信息。
      */
     public void setBackupDesc(String BackupDesc) {
         this.BackupDesc = BackupDesc;

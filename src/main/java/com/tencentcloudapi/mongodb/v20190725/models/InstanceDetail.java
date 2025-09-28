@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceDetail extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,21 +38,25 @@ public class InstanceDetail extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 付费类型，可能的返回值：1-包年包月；0-按量计费
+    * 付费类型。
+- 1：包年包月。
+- 0：按量计费。
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 项目ID。
+    * 项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 集群类型，可能的返回值：0-副本集实例，1-分片实例。
+    * 集群类型。
+- 0：副本集实例。
+- 1：分片实例。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -73,7 +77,9 @@ public class InstanceDetail extends AbstractModel {
     private String Zone;
 
     /**
-    * 网络类型，可能的返回值：0-基础网络，1-私有网络
+    * 网络类型。
+- 0：基础网络。
+- 1：私有网络。
     */
     @SerializedName("NetType")
     @Expose
@@ -94,7 +100,12 @@ public class InstanceDetail extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
+    * 实例状态。
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
     */
     @SerializedName("Status")
     @Expose
@@ -129,28 +140,35 @@ public class InstanceDetail extends AbstractModel {
     private String DeadLine;
 
     /**
-    * 实例版本信息。
+    * 实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersion")
     @Expose
     private String MongoVersion;
 
     /**
-    * 实例内存规格，单位为MB。
+    * 实例内存规格，单位：MB。
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例磁盘规格，单位为MB。
+    * 实例磁盘规格，单位：MB。
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * 实例CPU核心数。
+    * 实例 CPU 核心数。
     */
     @SerializedName("CpuNum")
     @Expose
@@ -158,6 +176,8 @@ public class InstanceDetail extends AbstractModel {
 
     /**
     * 实例机器类型。
+- HIO10G：通用高 HIO 万兆型。
+- HCD：云盘版类型。
     */
     @SerializedName("MachineType")
     @Expose
@@ -178,14 +198,17 @@ public class InstanceDetail extends AbstractModel {
     private Long ReplicationSetNum;
 
     /**
-    * 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
+    * 实例自动续费标志。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 已用容量，单位MB。
+    * 已用容量，单位：MB。
     */
     @SerializedName("UsedVolume")
     @Expose
@@ -262,28 +285,33 @@ public class InstanceDetail extends AbstractModel {
     private Long ClusterVer;
 
     /**
-    * 协议信息，可能的返回值：1-mongodb，2-dynamodb。
+    * 协议信息：mongodb。
     */
     @SerializedName("Protocol")
     @Expose
     private Long Protocol;
 
     /**
-    * 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
+    * 实例类型。
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：同时包括正式实例、只读实例与灾备实例。
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * 实例状态描述
+    * 实例状态描述。
     */
     @SerializedName("InstanceStatusDesc")
     @Expose
     private String InstanceStatusDesc;
 
     /**
-    * 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+    * 实例对应的物理实例 ID。回档并替换过的实例有不同的 InstanceId 和 RealInstanceId，从 barad 获取监控数据等场景下需要用物理 ID 获取。
     */
     @SerializedName("RealInstanceId")
     @Expose
@@ -297,21 +325,21 @@ public class InstanceDetail extends AbstractModel {
     private String [] ZoneList;
 
     /**
-    * mongos节点个数。
+    * mongos 节点个数。
     */
     @SerializedName("MongosNodeNum")
     @Expose
     private Long MongosNodeNum;
 
     /**
-    * mongos节点内存。
+    * mongos 节点内存。单位：MB。
     */
     @SerializedName("MongosMemory")
     @Expose
     private Long MongosMemory;
 
     /**
-    * mongos节点CPU核数。
+    * mongos 节点 CPU 核数。
     */
     @SerializedName("MongosCpuNum")
     @Expose
@@ -325,21 +353,21 @@ public class InstanceDetail extends AbstractModel {
     private Long ConfigServerNodeNum;
 
     /**
-    * Config Server节点内存。
+    * Config Server节点内存。单位：MB。
     */
     @SerializedName("ConfigServerMemory")
     @Expose
     private Long ConfigServerMemory;
 
     /**
-    * Config Server节点磁盘大小。
+    * Config Server节点磁盘大小。单位：MB。
     */
     @SerializedName("ConfigServerVolume")
     @Expose
     private Long ConfigServerVolume;
 
     /**
-    * Config Server节点CPU核数。
+    * Config Server 节点 CPU 核数。
     */
     @SerializedName("ConfigServerCpuNum")
     @Expose
@@ -353,16 +381,16 @@ public class InstanceDetail extends AbstractModel {
     private Long ReadonlyNodeNum;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -385,48 +413,64 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 付费类型，可能的返回值：1-包年包月；0-按量计费 
-     * @return PayMode 付费类型，可能的返回值：1-包年包月；0-按量计费
+     * Get 付费类型。
+- 1：包年包月。
+- 0：按量计费。 
+     * @return PayMode 付费类型。
+- 1：包年包月。
+- 0：按量计费。
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费类型，可能的返回值：1-包年包月；0-按量计费
-     * @param PayMode 付费类型，可能的返回值：1-包年包月；0-按量计费
+     * Set 付费类型。
+- 1：包年包月。
+- 0：按量计费。
+     * @param PayMode 付费类型。
+- 1：包年包月。
+- 0：按量计费。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 项目ID。 
-     * @return ProjectId 项目ID。
+     * Get 项目 ID。 
+     * @return ProjectId 项目 ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID。
-     * @param ProjectId 项目ID。
+     * Set 项目 ID。
+     * @param ProjectId 项目 ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 集群类型，可能的返回值：0-副本集实例，1-分片实例。 
-     * @return ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例。
+     * Get 集群类型。
+- 0：副本集实例。
+- 1：分片实例。 
+     * @return ClusterType 集群类型。
+- 0：副本集实例。
+- 1：分片实例。
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型，可能的返回值：0-副本集实例，1-分片实例。
-     * @param ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例。
+     * Set 集群类型。
+- 0：副本集实例。
+- 1：分片实例。
+     * @param ClusterType 集群类型。
+- 0：副本集实例。
+- 1：分片实例。
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
@@ -465,16 +509,24 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 网络类型，可能的返回值：0-基础网络，1-私有网络 
-     * @return NetType 网络类型，可能的返回值：0-基础网络，1-私有网络
+     * Get 网络类型。
+- 0：基础网络。
+- 1：私有网络。 
+     * @return NetType 网络类型。
+- 0：基础网络。
+- 1：私有网络。
      */
     public Long getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型，可能的返回值：0-基础网络，1-私有网络
-     * @param NetType 网络类型，可能的返回值：0-基础网络，1-私有网络
+     * Set 网络类型。
+- 0：基础网络。
+- 1：私有网络。
+     * @param NetType 网络类型。
+- 0：基础网络。
+- 1：私有网络。
      */
     public void setNetType(Long NetType) {
         this.NetType = NetType;
@@ -513,16 +565,36 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。 
-     * @return Status 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
+     * Get 实例状态。
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。 
+     * @return Status 实例状态。
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
-     * @param Status 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
+     * Set 实例状态。
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
+     * @param Status 实例状态。
+- 0：待初始化。
+- 1：流程处理中，例如：变更规格、参数修改等。
+- 2：实例正常运行中。
+- -2：已隔离（包年包月）。
+- -3：已隔离（按量计费）。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -593,72 +665,104 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例版本信息。 
-     * @return MongoVersion 实例版本信息。
+     * Get 实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。 
+     * @return MongoVersion 实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set 实例版本信息。
-     * @param MongoVersion 实例版本信息。
+     * Set 实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+     * @param MongoVersion 实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
     }
 
     /**
-     * Get 实例内存规格，单位为MB。 
-     * @return Memory 实例内存规格，单位为MB。
+     * Get 实例内存规格，单位：MB。 
+     * @return Memory 实例内存规格，单位：MB。
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例内存规格，单位为MB。
-     * @param Memory 实例内存规格，单位为MB。
+     * Set 实例内存规格，单位：MB。
+     * @param Memory 实例内存规格，单位：MB。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例磁盘规格，单位为MB。 
-     * @return Volume 实例磁盘规格，单位为MB。
+     * Get 实例磁盘规格，单位：MB。 
+     * @return Volume 实例磁盘规格，单位：MB。
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 实例磁盘规格，单位为MB。
-     * @param Volume 实例磁盘规格，单位为MB。
+     * Set 实例磁盘规格，单位：MB。
+     * @param Volume 实例磁盘规格，单位：MB。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get 实例CPU核心数。 
-     * @return CpuNum 实例CPU核心数。
+     * Get 实例 CPU 核心数。 
+     * @return CpuNum 实例 CPU 核心数。
      */
     public Long getCpuNum() {
         return this.CpuNum;
     }
 
     /**
-     * Set 实例CPU核心数。
-     * @param CpuNum 实例CPU核心数。
+     * Set 实例 CPU 核心数。
+     * @param CpuNum 实例 CPU 核心数。
      */
     public void setCpuNum(Long CpuNum) {
         this.CpuNum = CpuNum;
     }
 
     /**
-     * Get 实例机器类型。 
+     * Get 实例机器类型。
+- HIO10G：通用高 HIO 万兆型。
+- HCD：云盘版类型。 
      * @return MachineType 实例机器类型。
+- HIO10G：通用高 HIO 万兆型。
+- HCD：云盘版类型。
      */
     public String getMachineType() {
         return this.MachineType;
@@ -666,7 +770,11 @@ public class InstanceDetail extends AbstractModel {
 
     /**
      * Set 实例机器类型。
+- HIO10G：通用高 HIO 万兆型。
+- HCD：云盘版类型。
      * @param MachineType 实例机器类型。
+- HIO10G：通用高 HIO 万兆型。
+- HCD：云盘版类型。
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
@@ -705,32 +813,44 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。 
-     * @return AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
+     * Get 实例自动续费标志。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。 
+     * @return AutoRenewFlag 实例自动续费标志。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
-     * @param AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
+     * Set 实例自动续费标志。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。
+     * @param AutoRenewFlag 实例自动续费标志。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 已用容量，单位MB。 
-     * @return UsedVolume 已用容量，单位MB。
+     * Get 已用容量，单位：MB。 
+     * @return UsedVolume 已用容量，单位：MB。
      */
     public Long getUsedVolume() {
         return this.UsedVolume;
     }
 
     /**
-     * Set 已用容量，单位MB。
-     * @param UsedVolume 已用容量，单位MB。
+     * Set 已用容量，单位：MB。
+     * @param UsedVolume 已用容量，单位：MB。
      */
     public void setUsedVolume(Long UsedVolume) {
         this.UsedVolume = UsedVolume;
@@ -897,64 +1017,84 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 协议信息，可能的返回值：1-mongodb，2-dynamodb。 
-     * @return Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb。
+     * Get 协议信息：mongodb。 
+     * @return Protocol 协议信息：mongodb。
      */
     public Long getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议信息，可能的返回值：1-mongodb，2-dynamodb。
-     * @param Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb。
+     * Set 协议信息：mongodb。
+     * @param Protocol 协议信息：mongodb。
      */
     public void setProtocol(Long Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例 
-     * @return InstanceType 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
+     * Get 实例类型。
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：同时包括正式实例、只读实例与灾备实例。 
+     * @return InstanceType 实例类型。
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：同时包括正式实例、只读实例与灾备实例。
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
-     * @param InstanceType 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
+     * Set 实例类型。
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：同时包括正式实例、只读实例与灾备实例。
+     * @param InstanceType 实例类型。
+- 0：所有实例。
+- 1：正式实例。
+- 2：临时实例
+- 3：只读实例。
+- -1：同时包括正式实例、只读实例与灾备实例。
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例状态描述 
-     * @return InstanceStatusDesc 实例状态描述
+     * Get 实例状态描述。 
+     * @return InstanceStatusDesc 实例状态描述。
      */
     public String getInstanceStatusDesc() {
         return this.InstanceStatusDesc;
     }
 
     /**
-     * Set 实例状态描述
-     * @param InstanceStatusDesc 实例状态描述
+     * Set 实例状态描述。
+     * @param InstanceStatusDesc 实例状态描述。
      */
     public void setInstanceStatusDesc(String InstanceStatusDesc) {
         this.InstanceStatusDesc = InstanceStatusDesc;
     }
 
     /**
-     * Get 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取 
-     * @return RealInstanceId 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+     * Get 实例对应的物理实例 ID。回档并替换过的实例有不同的 InstanceId 和 RealInstanceId，从 barad 获取监控数据等场景下需要用物理 ID 获取。 
+     * @return RealInstanceId 实例对应的物理实例 ID。回档并替换过的实例有不同的 InstanceId 和 RealInstanceId，从 barad 获取监控数据等场景下需要用物理 ID 获取。
      */
     public String getRealInstanceId() {
         return this.RealInstanceId;
     }
 
     /**
-     * Set 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
-     * @param RealInstanceId 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+     * Set 实例对应的物理实例 ID。回档并替换过的实例有不同的 InstanceId 和 RealInstanceId，从 barad 获取监控数据等场景下需要用物理 ID 获取。
+     * @param RealInstanceId 实例对应的物理实例 ID。回档并替换过的实例有不同的 InstanceId 和 RealInstanceId，从 barad 获取监控数据等场景下需要用物理 ID 获取。
      */
     public void setRealInstanceId(String RealInstanceId) {
         this.RealInstanceId = RealInstanceId;
@@ -977,48 +1117,48 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get mongos节点个数。 
-     * @return MongosNodeNum mongos节点个数。
+     * Get mongos 节点个数。 
+     * @return MongosNodeNum mongos 节点个数。
      */
     public Long getMongosNodeNum() {
         return this.MongosNodeNum;
     }
 
     /**
-     * Set mongos节点个数。
-     * @param MongosNodeNum mongos节点个数。
+     * Set mongos 节点个数。
+     * @param MongosNodeNum mongos 节点个数。
      */
     public void setMongosNodeNum(Long MongosNodeNum) {
         this.MongosNodeNum = MongosNodeNum;
     }
 
     /**
-     * Get mongos节点内存。 
-     * @return MongosMemory mongos节点内存。
+     * Get mongos 节点内存。单位：MB。 
+     * @return MongosMemory mongos 节点内存。单位：MB。
      */
     public Long getMongosMemory() {
         return this.MongosMemory;
     }
 
     /**
-     * Set mongos节点内存。
-     * @param MongosMemory mongos节点内存。
+     * Set mongos 节点内存。单位：MB。
+     * @param MongosMemory mongos 节点内存。单位：MB。
      */
     public void setMongosMemory(Long MongosMemory) {
         this.MongosMemory = MongosMemory;
     }
 
     /**
-     * Get mongos节点CPU核数。 
-     * @return MongosCpuNum mongos节点CPU核数。
+     * Get mongos 节点 CPU 核数。 
+     * @return MongosCpuNum mongos 节点 CPU 核数。
      */
     public Long getMongosCpuNum() {
         return this.MongosCpuNum;
     }
 
     /**
-     * Set mongos节点CPU核数。
-     * @param MongosCpuNum mongos节点CPU核数。
+     * Set mongos 节点 CPU 核数。
+     * @param MongosCpuNum mongos 节点 CPU 核数。
      */
     public void setMongosCpuNum(Long MongosCpuNum) {
         this.MongosCpuNum = MongosCpuNum;
@@ -1041,48 +1181,48 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get Config Server节点内存。 
-     * @return ConfigServerMemory Config Server节点内存。
+     * Get Config Server节点内存。单位：MB。 
+     * @return ConfigServerMemory Config Server节点内存。单位：MB。
      */
     public Long getConfigServerMemory() {
         return this.ConfigServerMemory;
     }
 
     /**
-     * Set Config Server节点内存。
-     * @param ConfigServerMemory Config Server节点内存。
+     * Set Config Server节点内存。单位：MB。
+     * @param ConfigServerMemory Config Server节点内存。单位：MB。
      */
     public void setConfigServerMemory(Long ConfigServerMemory) {
         this.ConfigServerMemory = ConfigServerMemory;
     }
 
     /**
-     * Get Config Server节点磁盘大小。 
-     * @return ConfigServerVolume Config Server节点磁盘大小。
+     * Get Config Server节点磁盘大小。单位：MB。 
+     * @return ConfigServerVolume Config Server节点磁盘大小。单位：MB。
      */
     public Long getConfigServerVolume() {
         return this.ConfigServerVolume;
     }
 
     /**
-     * Set Config Server节点磁盘大小。
-     * @param ConfigServerVolume Config Server节点磁盘大小。
+     * Set Config Server节点磁盘大小。单位：MB。
+     * @param ConfigServerVolume Config Server节点磁盘大小。单位：MB。
      */
     public void setConfigServerVolume(Long ConfigServerVolume) {
         this.ConfigServerVolume = ConfigServerVolume;
     }
 
     /**
-     * Get Config Server节点CPU核数。 
-     * @return ConfigServerCpuNum Config Server节点CPU核数。
+     * Get Config Server 节点 CPU 核数。 
+     * @return ConfigServerCpuNum Config Server 节点 CPU 核数。
      */
     public Long getConfigServerCpuNum() {
         return this.ConfigServerCpuNum;
     }
 
     /**
-     * Set Config Server节点CPU核数。
-     * @param ConfigServerCpuNum Config Server节点CPU核数。
+     * Set Config Server 节点 CPU 核数。
+     * @param ConfigServerCpuNum Config Server 节点 CPU 核数。
      */
     public void setConfigServerCpuNum(Long ConfigServerCpuNum) {
         this.ConfigServerCpuNum = ConfigServerCpuNum;

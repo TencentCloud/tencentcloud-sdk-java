@@ -24,21 +24,25 @@ import java.util.HashMap;
 public class DescribeSlowLogsRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+    * 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+    * 慢日志起始时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+    * 慢日志终止时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
     */
     @SerializedName("EndTime")
     @Expose
@@ -73,48 +77,64 @@ public class DescribeSlowLogsRequest extends AbstractModel {
     private String Format;
 
     /**
-     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
-     * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。 
-     * @return StartTime 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * Get 慢日志起始时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。 
+     * @return StartTime 慢日志起始时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
-     * @param StartTime 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * Set 慢日志起始时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * @param StartTime 慢日志起始时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。 
-     * @return EndTime 慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * Get 慢日志终止时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。 
+     * @return EndTime 慢日志终止时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
-     * @param EndTime 慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * Set 慢日志终止时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * @param EndTime 慢日志终止时间。
+- 格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。
+- 查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

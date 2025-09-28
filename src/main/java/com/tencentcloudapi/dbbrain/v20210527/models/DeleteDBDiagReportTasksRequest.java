@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DeleteDBDiagReportTasksRequest extends AbstractModel {
 
     /**
-    * 需要删除的任务id列表
+    * 需要删除的任务id列表。可通过[查询健康报告生成任务列表](https://cloud.tencent.com/document/product/1130/57805)获取
     */
     @SerializedName("AsyncRequestIds")
     @Expose
     private Long [] AsyncRequestIds;
 
     /**
-    * 实例ID
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"dbbrain-mysql" - 自建 MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-     * Get 需要删除的任务id列表 
-     * @return AsyncRequestIds 需要删除的任务id列表
+     * Get 需要删除的任务id列表。可通过[查询健康报告生成任务列表](https://cloud.tencent.com/document/product/1130/57805)获取 
+     * @return AsyncRequestIds 需要删除的任务id列表。可通过[查询健康报告生成任务列表](https://cloud.tencent.com/document/product/1130/57805)获取
      */
     public Long [] getAsyncRequestIds() {
         return this.AsyncRequestIds;
     }
 
     /**
-     * Set 需要删除的任务id列表
-     * @param AsyncRequestIds 需要删除的任务id列表
+     * Set 需要删除的任务id列表。可通过[查询健康报告生成任务列表](https://cloud.tencent.com/document/product/1130/57805)获取
+     * @param AsyncRequestIds 需要删除的任务id列表。可通过[查询健康报告生成任务列表](https://cloud.tencent.com/document/product/1130/57805)获取
      */
     public void setAsyncRequestIds(Long [] AsyncRequestIds) {
         this.AsyncRequestIds = AsyncRequestIds;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。 
-     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"dbbrain-mysql" - 自建 MySQL，"redis" - 云数据库 Redis，默认为"mysql"。 
+     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"dbbrain-mysql" - 自建 MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
-     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"dbbrain-mysql" - 自建 MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，"dbbrain-mysql" - 自建 MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
      */
     public void setProduct(String Product) {
         this.Product = Product;
