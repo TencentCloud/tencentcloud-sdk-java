@@ -6,7 +6,9 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -16,7 +18,39 @@ import java.lang.reflect.Modifier;
 
 public class STSCredentialTest {
 
-    class MyInterceptor implements Interceptor {
+    private final OIDCRoleProviderTest.MyInterceptor interceptor = new OIDCRoleProviderTest.MyInterceptor();
+    private Object oldClient;
+
+    @Before
+    public void setUp() throws NoSuchFieldException, IllegalAccessException {
+        OkHttpClient okClient = new OkHttpClient.Builder()
+                .addInterceptor(interceptor)
+                .build();
+
+        Field field = HttpConnection.class.getDeclaredField("clientSingleton");
+        field.setAccessible(true);
+
+        Field modifiersField = Field.class.getDeclaredField("modifiers");
+        modifiersField.setAccessible(true);
+        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+
+        oldClient = field.get(null);
+        field.set(null, okClient);
+    }
+
+    @After
+    public void teardown() throws NoSuchFieldException, IllegalAccessException {
+        Field field = HttpConnection.class.getDeclaredField("clientSingleton");
+        field.setAccessible(true);
+
+        Field modifiersField = Field.class.getDeclaredField("modifiers");
+        modifiersField.setAccessible(true);
+        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+
+        field.set(null, oldClient);
+    }
+
+    static class MyInterceptor implements Interceptor {
 
         private String realHost;
 
@@ -37,25 +71,11 @@ public class STSCredentialTest {
         String expectedHost = "sts.tencentcloudapi.com";
 
         STSCredential cred = new STSCredential(
-            "test-secret-id",
-            "test-secret-key",
-            "test-role-arn",
-            "test-role-session-name"
+                "test-secret-id",
+                "test-secret-key",
+                "test-role-arn",
+                "test-role-session-name"
         );
-
-        MyInterceptor interceptor = new MyInterceptor();
-        OkHttpClient okClient = new OkHttpClient.Builder()
-                .addInterceptor(interceptor)
-                .build();
-
-        Field field = HttpConnection.class.getDeclaredField("clientSingleton");
-        field.setAccessible(true);
-
-        Field modifiersField = Field.class.getDeclaredField("modifiers");
-        modifiersField.setAccessible(true);
-        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
-
-        field.set(null, okClient);
 
         cred.getToken();
 
@@ -67,26 +87,12 @@ public class STSCredentialTest {
         String expectedHost = "sts.internal.tencentcloudapi.com";
 
         STSCredential cred = new STSCredential(
-            "test-secret-id",
-            "test-secret-key",
-            "test-role-arn",
-            "test-role-session-name",
-            "sts.internal.tencentcloudapi.com"
+                "test-secret-id",
+                "test-secret-key",
+                "test-role-arn",
+                "test-role-session-name",
+                expectedHost
         );
-
-        MyInterceptor interceptor = new MyInterceptor();
-        OkHttpClient okClient = new OkHttpClient.Builder()
-                .addInterceptor(interceptor)
-                .build();
-
-        Field field = HttpConnection.class.getDeclaredField("clientSingleton");
-        field.setAccessible(true);
-
-        Field modifiersField = Field.class.getDeclaredField("modifiers");
-        modifiersField.setAccessible(true);
-        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
-
-        field.set(null, okClient);
 
         cred.getToken();
 
