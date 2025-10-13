@@ -73,6 +73,20 @@ public class CreateCasInput extends AbstractModel {
     private String ArRegion;
 
     /**
+    * IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+    */
+    @SerializedName("IdcPointType")
+    @Expose
+    private String IdcPointType;
+
+    /**
+    * 运营商链路是否有保护
+    */
+    @SerializedName("BIapLinkProtected")
+    @Expose
+    private Boolean BIapLinkProtected;
+
+    /**
      * Get 敏捷上云名称 
      * @return Name 敏捷上云名称
      */
@@ -184,6 +198,38 @@ public class CreateCasInput extends AbstractModel {
         this.ArRegion = ArRegion;
     }
 
+    /**
+     * Get IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方 
+     * @return IdcPointType IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+     */
+    public String getIdcPointType() {
+        return this.IdcPointType;
+    }
+
+    /**
+     * Set IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+     * @param IdcPointType IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+     */
+    public void setIdcPointType(String IdcPointType) {
+        this.IdcPointType = IdcPointType;
+    }
+
+    /**
+     * Get 运营商链路是否有保护 
+     * @return BIapLinkProtected 运营商链路是否有保护
+     */
+    public Boolean getBIapLinkProtected() {
+        return this.BIapLinkProtected;
+    }
+
+    /**
+     * Set 运营商链路是否有保护
+     * @param BIapLinkProtected 运营商链路是否有保护
+     */
+    public void setBIapLinkProtected(Boolean BIapLinkProtected) {
+        this.BIapLinkProtected = BIapLinkProtected;
+    }
+
     public CreateCasInput() {
     }
 
@@ -213,6 +259,12 @@ public class CreateCasInput extends AbstractModel {
         if (source.ArRegion != null) {
             this.ArRegion = new String(source.ArRegion);
         }
+        if (source.IdcPointType != null) {
+            this.IdcPointType = new String(source.IdcPointType);
+        }
+        if (source.BIapLinkProtected != null) {
+            this.BIapLinkProtected = new Boolean(source.BIapLinkProtected);
+        }
     }
 
 
@@ -227,6 +279,8 @@ public class CreateCasInput extends AbstractModel {
         this.setParamSimple(map, prefix + "Telephone", this.Telephone);
         this.setParamSimple(map, prefix + "Remarks", this.Remarks);
         this.setParamSimple(map, prefix + "ArRegion", this.ArRegion);
+        this.setParamSimple(map, prefix + "IdcPointType", this.IdcPointType);
+        this.setParamSimple(map, prefix + "BIapLinkProtected", this.BIapLinkProtected);
 
     }
 }

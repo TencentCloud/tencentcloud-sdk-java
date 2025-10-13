@@ -24,11 +24,21 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel {
 
     /**
-    * 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+    * 任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * 任务结束时子任务是否有失败。
+    */
+    @SerializedName("SubTaskHasFailed")
+    @Expose
+    private Boolean SubTaskHasFailed;
 
     /**
     * 返回记录条数，默认值：10，最大值：100。
@@ -59,19 +69,47 @@ public class DescribeTasksRequest extends AbstractModel {
     private String EndTime;
 
     /**
-     * Get 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。 
-     * @return Status 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * Get 任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。 
+     * @return Status 任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
-     * @param Status 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * Set 任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。
+     * @param Status 任务状态过滤条件，可选值：
+- WAITING（等待中）
+- PROCESSING（处理中）
+- FINISH（已完成）。
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 任务结束时子任务是否有失败。 
+     * @return SubTaskHasFailed 任务结束时子任务是否有失败。
+     */
+    public Boolean getSubTaskHasFailed() {
+        return this.SubTaskHasFailed;
+    }
+
+    /**
+     * Set 任务结束时子任务是否有失败。
+     * @param SubTaskHasFailed 任务结束时子任务是否有失败。
+     */
+    public void setSubTaskHasFailed(Boolean SubTaskHasFailed) {
+        this.SubTaskHasFailed = SubTaskHasFailed;
     }
 
     /**
@@ -149,6 +187,9 @@ public class DescribeTasksRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.SubTaskHasFailed != null) {
+            this.SubTaskHasFailed = new Boolean(source.SubTaskHasFailed);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -169,6 +210,7 @@ public class DescribeTasksRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "SubTaskHasFailed", this.SubTaskHasFailed);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

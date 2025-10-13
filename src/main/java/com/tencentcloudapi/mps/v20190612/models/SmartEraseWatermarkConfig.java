@@ -51,7 +51,7 @@ public class SmartEraseWatermarkConfig extends AbstractModel {
     /**
     * 自动擦除自定义区域。
 对选定区域，利用AI模型自动检测其中存在的擦除目标并擦除。
-注意，当擦除方式为custom时，此参数将不会生效。
+注意，当擦除方式为custom时，此参数将不会生效。修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
     */
     @SerializedName("AutoAreas")
     @Expose
@@ -60,6 +60,7 @@ public class SmartEraseWatermarkConfig extends AbstractModel {
     /**
     * 指定擦除自定义区域。
 对选定区域，在选定时间段内不进行检测识别直接进行擦除。
+注意：修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
     */
     @SerializedName("CustomAreas")
     @Expose
@@ -144,10 +145,10 @@ public class SmartEraseWatermarkConfig extends AbstractModel {
     /**
      * Get 自动擦除自定义区域。
 对选定区域，利用AI模型自动检测其中存在的擦除目标并擦除。
-注意，当擦除方式为custom时，此参数将不会生效。 
+注意，当擦除方式为custom时，此参数将不会生效。修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。 
      * @return AutoAreas 自动擦除自定义区域。
 对选定区域，利用AI模型自动检测其中存在的擦除目标并擦除。
-注意，当擦除方式为custom时，此参数将不会生效。
+注意，当擦除方式为custom时，此参数将不会生效。修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
      */
     public EraseArea [] getAutoAreas() {
         return this.AutoAreas;
@@ -156,10 +157,10 @@ public class SmartEraseWatermarkConfig extends AbstractModel {
     /**
      * Set 自动擦除自定义区域。
 对选定区域，利用AI模型自动检测其中存在的擦除目标并擦除。
-注意，当擦除方式为custom时，此参数将不会生效。
+注意，当擦除方式为custom时，此参数将不会生效。修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
      * @param AutoAreas 自动擦除自定义区域。
 对选定区域，利用AI模型自动检测其中存在的擦除目标并擦除。
-注意，当擦除方式为custom时，此参数将不会生效。
+注意，当擦除方式为custom时，此参数将不会生效。修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
      */
     public void setAutoAreas(EraseArea [] AutoAreas) {
         this.AutoAreas = AutoAreas;
@@ -167,9 +168,11 @@ public class SmartEraseWatermarkConfig extends AbstractModel {
 
     /**
      * Get 指定擦除自定义区域。
-对选定区域，在选定时间段内不进行检测识别直接进行擦除。 
+对选定区域，在选定时间段内不进行检测识别直接进行擦除。
+注意：修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。 
      * @return CustomAreas 指定擦除自定义区域。
 对选定区域，在选定时间段内不进行检测识别直接进行擦除。
+注意：修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
      */
     public EraseTimeArea [] getCustomAreas() {
         return this.CustomAreas;
@@ -178,8 +181,10 @@ public class SmartEraseWatermarkConfig extends AbstractModel {
     /**
      * Set 指定擦除自定义区域。
 对选定区域，在选定时间段内不进行检测识别直接进行擦除。
+注意：修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
      * @param CustomAreas 指定擦除自定义区域。
 对选定区域，在选定时间段内不进行检测识别直接进行擦除。
+注意：修改模板时，清除区域请传入[]，不传时将保持模板区域信息不变。
      */
     public void setCustomAreas(EraseTimeArea [] CustomAreas) {
         this.CustomAreas = CustomAreas;

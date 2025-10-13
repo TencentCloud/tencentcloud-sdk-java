@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class ListWorkflowRunsRequest extends AbstractModel {
 
     /**
-    * 运行环境。0: 测试环境； 1: 正式环境
-    */
-    @SerializedName("RunEnv")
-    @Expose
-    private Long RunEnv;
-
-    /**
     * 应用ID
     */
     @SerializedName("AppBizId")
@@ -38,18 +31,25 @@ public class ListWorkflowRunsRequest extends AbstractModel {
     private String AppBizId;
 
     /**
-    * 页码
-    */
-    @SerializedName("Page")
-    @Expose
-    private Long Page;
-
-    /**
     * 每页数量
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
+
+    /**
+    * 运行环境。0: 测试环境； 1: 正式环境
+    */
+    @SerializedName("RunEnv")
+    @Expose
+    private Long RunEnv;
+
+    /**
+    * 页码
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
 
     /**
     * 登录用户主账号(集成商模式必填)
@@ -64,22 +64,6 @@ public class ListWorkflowRunsRequest extends AbstractModel {
     @SerializedName("LoginSubAccountUin")
     @Expose
     private String LoginSubAccountUin;
-
-    /**
-     * Get 运行环境。0: 测试环境； 1: 正式环境 
-     * @return RunEnv 运行环境。0: 测试环境； 1: 正式环境
-     */
-    public Long getRunEnv() {
-        return this.RunEnv;
-    }
-
-    /**
-     * Set 运行环境。0: 测试环境； 1: 正式环境
-     * @param RunEnv 运行环境。0: 测试环境； 1: 正式环境
-     */
-    public void setRunEnv(Long RunEnv) {
-        this.RunEnv = RunEnv;
-    }
 
     /**
      * Get 应用ID 
@@ -98,22 +82,6 @@ public class ListWorkflowRunsRequest extends AbstractModel {
     }
 
     /**
-     * Get 页码 
-     * @return Page 页码
-     */
-    public Long getPage() {
-        return this.Page;
-    }
-
-    /**
-     * Set 页码
-     * @param Page 页码
-     */
-    public void setPage(Long Page) {
-        this.Page = Page;
-    }
-
-    /**
      * Get 每页数量 
      * @return PageSize 每页数量
      */
@@ -127,6 +95,38 @@ public class ListWorkflowRunsRequest extends AbstractModel {
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
+    }
+
+    /**
+     * Get 运行环境。0: 测试环境； 1: 正式环境 
+     * @return RunEnv 运行环境。0: 测试环境； 1: 正式环境
+     */
+    public Long getRunEnv() {
+        return this.RunEnv;
+    }
+
+    /**
+     * Set 运行环境。0: 测试环境； 1: 正式环境
+     * @param RunEnv 运行环境。0: 测试环境； 1: 正式环境
+     */
+    public void setRunEnv(Long RunEnv) {
+        this.RunEnv = RunEnv;
+    }
+
+    /**
+     * Get 页码 
+     * @return Page 页码
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 页码
+     * @param Page 页码
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
     }
 
     /**
@@ -169,17 +169,17 @@ public class ListWorkflowRunsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListWorkflowRunsRequest(ListWorkflowRunsRequest source) {
-        if (source.RunEnv != null) {
-            this.RunEnv = new Long(source.RunEnv);
-        }
         if (source.AppBizId != null) {
             this.AppBizId = new String(source.AppBizId);
         }
-        if (source.Page != null) {
-            this.Page = new Long(source.Page);
-        }
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
+        }
+        if (source.RunEnv != null) {
+            this.RunEnv = new Long(source.RunEnv);
+        }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
         }
         if (source.LoginUin != null) {
             this.LoginUin = new String(source.LoginUin);
@@ -194,10 +194,10 @@ public class ListWorkflowRunsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RunEnv", this.RunEnv);
         this.setParamSimple(map, prefix + "AppBizId", this.AppBizId);
-        this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "RunEnv", this.RunEnv);
+        this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "LoginUin", this.LoginUin);
         this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
 

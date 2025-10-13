@@ -31,7 +31,7 @@ public class BatchCreateRoomRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
-    * 创建课堂ID列表
+    * 批量创建课堂的配置信息
     */
     @SerializedName("RoomInfos")
     @Expose
@@ -54,16 +54,16 @@ public class BatchCreateRoomRequest extends AbstractModel {
     }
 
     /**
-     * Get 创建课堂ID列表 
-     * @return RoomInfos 创建课堂ID列表
+     * Get 批量创建课堂的配置信息 
+     * @return RoomInfos 批量创建课堂的配置信息
      */
     public RoomInfo [] getRoomInfos() {
         return this.RoomInfos;
     }
 
     /**
-     * Set 创建课堂ID列表
-     * @param RoomInfos 创建课堂ID列表
+     * Set 批量创建课堂的配置信息
+     * @param RoomInfos 批量创建课堂的配置信息
      */
     public void setRoomInfos(RoomInfo [] RoomInfos) {
         this.RoomInfos = RoomInfos;

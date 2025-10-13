@@ -31,11 +31,18 @@ public class RetryDocParseRequest extends AbstractModel {
     private String BotBizId;
 
     /**
-    * 文档ID
+    * 废弃
     */
     @SerializedName("DocBizId")
     @Expose
     private String DocBizId;
+
+    /**
+    * 集合最大上限50个，DocBizIds有值使用DocBizIds，为空时则使用DocBizId(兼容废弃字段)
+    */
+    @SerializedName("DocBizIds")
+    @Expose
+    private String [] DocBizIds;
 
     /**
      * Get 应用ID 
@@ -54,19 +61,35 @@ public class RetryDocParseRequest extends AbstractModel {
     }
 
     /**
-     * Get 文档ID 
-     * @return DocBizId 文档ID
+     * Get 废弃 
+     * @return DocBizId 废弃
      */
     public String getDocBizId() {
         return this.DocBizId;
     }
 
     /**
-     * Set 文档ID
-     * @param DocBizId 文档ID
+     * Set 废弃
+     * @param DocBizId 废弃
      */
     public void setDocBizId(String DocBizId) {
         this.DocBizId = DocBizId;
+    }
+
+    /**
+     * Get 集合最大上限50个，DocBizIds有值使用DocBizIds，为空时则使用DocBizId(兼容废弃字段) 
+     * @return DocBizIds 集合最大上限50个，DocBizIds有值使用DocBizIds，为空时则使用DocBizId(兼容废弃字段)
+     */
+    public String [] getDocBizIds() {
+        return this.DocBizIds;
+    }
+
+    /**
+     * Set 集合最大上限50个，DocBizIds有值使用DocBizIds，为空时则使用DocBizId(兼容废弃字段)
+     * @param DocBizIds 集合最大上限50个，DocBizIds有值使用DocBizIds，为空时则使用DocBizId(兼容废弃字段)
+     */
+    public void setDocBizIds(String [] DocBizIds) {
+        this.DocBizIds = DocBizIds;
     }
 
     public RetryDocParseRequest() {
@@ -83,6 +106,12 @@ public class RetryDocParseRequest extends AbstractModel {
         if (source.DocBizId != null) {
             this.DocBizId = new String(source.DocBizId);
         }
+        if (source.DocBizIds != null) {
+            this.DocBizIds = new String[source.DocBizIds.length];
+            for (int i = 0; i < source.DocBizIds.length; i++) {
+                this.DocBizIds[i] = new String(source.DocBizIds[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class RetryDocParseRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BotBizId", this.BotBizId);
         this.setParamSimple(map, prefix + "DocBizId", this.DocBizId);
+        this.setParamArraySimple(map, prefix + "DocBizIds.", this.DocBizIds);
 
     }
 }

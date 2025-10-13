@@ -62,9 +62,7 @@ public class DetectEnvAndSoundQualityRequest extends AbstractModel {
     private Long SampleRate;
 
     /**
-    * 复刻类型。
-0 - 轻量版声音复刻（默认）;
-5 - 一句话声音复刻。
+    * 复刻类型。5 - 一句话声音复刻。
     */
     @SerializedName("TaskType")
     @Expose
@@ -163,24 +161,16 @@ public class DetectEnvAndSoundQualityRequest extends AbstractModel {
     }
 
     /**
-     * Get 复刻类型。
-0 - 轻量版声音复刻（默认）;
-5 - 一句话声音复刻。 
-     * @return TaskType 复刻类型。
-0 - 轻量版声音复刻（默认）;
-5 - 一句话声音复刻。
+     * Get 复刻类型。5 - 一句话声音复刻。 
+     * @return TaskType 复刻类型。5 - 一句话声音复刻。
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 复刻类型。
-0 - 轻量版声音复刻（默认）;
-5 - 一句话声音复刻。
-     * @param TaskType 复刻类型。
-0 - 轻量版声音复刻（默认）;
-5 - 一句话声音复刻。
+     * Set 复刻类型。5 - 一句话声音复刻。
+     * @param TaskType 复刻类型。5 - 一句话声音复刻。
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;

@@ -45,7 +45,7 @@ public class VoiceTypeInfo extends AbstractModel {
     private Long VoiceGender;
 
     /**
-    * 复刻类型: 0-轻量版复刻 1-基础版复刻
+    * 复刻类型: 1-基础版复刻
     */
     @SerializedName("TaskType")
     @Expose
@@ -138,16 +138,16 @@ public class VoiceTypeInfo extends AbstractModel {
     }
 
     /**
-     * Get 复刻类型: 0-轻量版复刻 1-基础版复刻 
-     * @return TaskType 复刻类型: 0-轻量版复刻 1-基础版复刻
+     * Get 复刻类型: 1-基础版复刻 
+     * @return TaskType 复刻类型: 1-基础版复刻
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 复刻类型: 0-轻量版复刻 1-基础版复刻
-     * @param TaskType 复刻类型: 0-轻量版复刻 1-基础版复刻
+     * Set 复刻类型: 1-基础版复刻
+     * @param TaskType 复刻类型: 1-基础版复刻
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;

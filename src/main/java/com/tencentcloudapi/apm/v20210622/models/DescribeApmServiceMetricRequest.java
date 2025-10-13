@@ -73,7 +73,7 @@ public class DescribeApmServiceMetricRequest extends AbstractModel {
     private Boolean Demo;
 
     /**
-    * 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，比如："warning,error"
+    * 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，例如："warning,error"
     */
     @SerializedName("ServiceStatus")
     @Expose
@@ -220,16 +220,16 @@ public class DescribeApmServiceMetricRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，比如："warning,error" 
-     * @return ServiceStatus 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，比如："warning,error"
+     * Get 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，例如："warning,error" 
+     * @return ServiceStatus 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，例如："warning,error"
      */
     public String getServiceStatus() {
         return this.ServiceStatus;
     }
 
     /**
-     * Set 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，比如："warning,error"
-     * @param ServiceStatus 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，比如："warning,error"
+     * Set 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，例如："warning,error"
+     * @param ServiceStatus 应用状态筛选，可枚举的值为：health、warning、error。如果选中多个状态用逗号隔开，例如："warning,error"
      */
     public void setServiceStatus(String ServiceStatus) {
         this.ServiceStatus = ServiceStatus;

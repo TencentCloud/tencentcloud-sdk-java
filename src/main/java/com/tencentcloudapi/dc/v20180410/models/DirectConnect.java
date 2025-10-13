@@ -186,6 +186,13 @@ public class DirectConnect extends AbstractModel {
     private String FaultReportContactNumber;
 
     /**
+    * 报障联系邮箱。
+    */
+    @SerializedName("FaultReportContactEmail")
+    @Expose
+    private String FaultReportContactEmail;
+
+    /**
     * 标签键值对
     */
     @SerializedName("TagSet")
@@ -675,6 +682,22 @@ public class DirectConnect extends AbstractModel {
     }
 
     /**
+     * Get 报障联系邮箱。 
+     * @return FaultReportContactEmail 报障联系邮箱。
+     */
+    public String getFaultReportContactEmail() {
+        return this.FaultReportContactEmail;
+    }
+
+    /**
+     * Set 报障联系邮箱。
+     * @param FaultReportContactEmail 报障联系邮箱。
+     */
+    public void setFaultReportContactEmail(String FaultReportContactEmail) {
+        this.FaultReportContactEmail = FaultReportContactEmail;
+    }
+
+    /**
      * Get 标签键值对 
      * @return TagSet 标签键值对
      */
@@ -988,6 +1011,9 @@ public class DirectConnect extends AbstractModel {
         if (source.FaultReportContactNumber != null) {
             this.FaultReportContactNumber = new String(source.FaultReportContactNumber);
         }
+        if (source.FaultReportContactEmail != null) {
+            this.FaultReportContactEmail = new String(source.FaultReportContactEmail);
+        }
         if (source.TagSet != null) {
             this.TagSet = new Tag[source.TagSet.length];
             for (int i = 0; i < source.TagSet.length; i++) {
@@ -1065,6 +1091,7 @@ public class DirectConnect extends AbstractModel {
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+        this.setParamSimple(map, prefix + "FaultReportContactEmail", this.FaultReportContactEmail);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
         this.setParamSimple(map, prefix + "IdcCity", this.IdcCity);

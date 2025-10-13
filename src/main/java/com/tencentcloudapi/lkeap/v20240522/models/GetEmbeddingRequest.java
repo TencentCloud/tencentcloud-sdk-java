@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetEmbeddingRequest extends AbstractModel {
 
     /**
-    * 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
+    * 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2,youtu-embedding-llm-v1]
     */
     @SerializedName("Model")
     @Expose
@@ -53,16 +53,16 @@ public class GetEmbeddingRequest extends AbstractModel {
     private String Instruction;
 
     /**
-     * Get 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2] 
-     * @return Model 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
+     * Get 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2,youtu-embedding-llm-v1] 
+     * @return Model 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2,youtu-embedding-llm-v1]
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
-     * @param Model 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2]
+     * Set 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2,youtu-embedding-llm-v1]
+     * @param Model 说明：选择生成向量的模型备注：可选[lke-text-embedding-v1,lke-text-embedding-v2,youtu-embedding-llm-v1]
      */
     public void setModel(String Model) {
         this.Model = Model;

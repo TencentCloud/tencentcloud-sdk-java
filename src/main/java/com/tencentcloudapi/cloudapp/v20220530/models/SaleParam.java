@@ -39,6 +39,20 @@ public class SaleParam extends AbstractModel {
     private String ParamKeyName;
 
     /**
+    * 参数 Id
+    */
+    @SerializedName("ParamId")
+    @Expose
+    private String ParamId;
+
+    /**
+    * 参数值 Id
+    */
+    @SerializedName("ParamValueId")
+    @Expose
+    private String ParamValueId;
+
+    /**
     * 售卖参数值，当ParamType=Quant时，该值有可能为Null
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -61,6 +75,27 @@ public class SaleParam extends AbstractModel {
     @SerializedName("ParamType")
     @Expose
     private String ParamType;
+
+    /**
+    * 模块ID
+    */
+    @SerializedName("ModuleId")
+    @Expose
+    private String ModuleId;
+
+    /**
+    * 模块key
+    */
+    @SerializedName("ModuleKey")
+    @Expose
+    private String ModuleKey;
+
+    /**
+    * 模块名称
+    */
+    @SerializedName("ModuleName")
+    @Expose
+    private String ModuleName;
 
     /**
      * Get 售卖参数标识 
@@ -96,6 +131,38 @@ public class SaleParam extends AbstractModel {
      */
     public void setParamKeyName(String ParamKeyName) {
         this.ParamKeyName = ParamKeyName;
+    }
+
+    /**
+     * Get 参数 Id 
+     * @return ParamId 参数 Id
+     */
+    public String getParamId() {
+        return this.ParamId;
+    }
+
+    /**
+     * Set 参数 Id
+     * @param ParamId 参数 Id
+     */
+    public void setParamId(String ParamId) {
+        this.ParamId = ParamId;
+    }
+
+    /**
+     * Get 参数值 Id 
+     * @return ParamValueId 参数值 Id
+     */
+    public String getParamValueId() {
+        return this.ParamValueId;
+    }
+
+    /**
+     * Set 参数值 Id
+     * @param ParamValueId 参数值 Id
+     */
+    public void setParamValueId(String ParamValueId) {
+        this.ParamValueId = ParamValueId;
     }
 
     /**
@@ -158,6 +225,54 @@ public class SaleParam extends AbstractModel {
         this.ParamType = ParamType;
     }
 
+    /**
+     * Get 模块ID 
+     * @return ModuleId 模块ID
+     */
+    public String getModuleId() {
+        return this.ModuleId;
+    }
+
+    /**
+     * Set 模块ID
+     * @param ModuleId 模块ID
+     */
+    public void setModuleId(String ModuleId) {
+        this.ModuleId = ModuleId;
+    }
+
+    /**
+     * Get 模块key 
+     * @return ModuleKey 模块key
+     */
+    public String getModuleKey() {
+        return this.ModuleKey;
+    }
+
+    /**
+     * Set 模块key
+     * @param ModuleKey 模块key
+     */
+    public void setModuleKey(String ModuleKey) {
+        this.ModuleKey = ModuleKey;
+    }
+
+    /**
+     * Get 模块名称 
+     * @return ModuleName 模块名称
+     */
+    public String getModuleName() {
+        return this.ModuleName;
+    }
+
+    /**
+     * Set 模块名称
+     * @param ModuleName 模块名称
+     */
+    public void setModuleName(String ModuleName) {
+        this.ModuleName = ModuleName;
+    }
+
     public SaleParam() {
     }
 
@@ -172,6 +287,12 @@ public class SaleParam extends AbstractModel {
         if (source.ParamKeyName != null) {
             this.ParamKeyName = new String(source.ParamKeyName);
         }
+        if (source.ParamId != null) {
+            this.ParamId = new String(source.ParamId);
+        }
+        if (source.ParamValueId != null) {
+            this.ParamValueId = new String(source.ParamValueId);
+        }
         if (source.ParamValue != null) {
             this.ParamValue = new String(source.ParamValue);
         }
@@ -180,6 +301,15 @@ public class SaleParam extends AbstractModel {
         }
         if (source.ParamType != null) {
             this.ParamType = new String(source.ParamType);
+        }
+        if (source.ModuleId != null) {
+            this.ModuleId = new String(source.ModuleId);
+        }
+        if (source.ModuleKey != null) {
+            this.ModuleKey = new String(source.ModuleKey);
+        }
+        if (source.ModuleName != null) {
+            this.ModuleName = new String(source.ModuleName);
         }
     }
 
@@ -190,9 +320,14 @@ public class SaleParam extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ParamKey", this.ParamKey);
         this.setParamSimple(map, prefix + "ParamKeyName", this.ParamKeyName);
+        this.setParamSimple(map, prefix + "ParamId", this.ParamId);
+        this.setParamSimple(map, prefix + "ParamValueId", this.ParamValueId);
         this.setParamSimple(map, prefix + "ParamValue", this.ParamValue);
         this.setParamSimple(map, prefix + "ParamValueName", this.ParamValueName);
         this.setParamSimple(map, prefix + "ParamType", this.ParamType);
+        this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
+        this.setParamSimple(map, prefix + "ModuleKey", this.ModuleKey);
+        this.setParamSimple(map, prefix + "ModuleName", this.ModuleName);
 
     }
 }

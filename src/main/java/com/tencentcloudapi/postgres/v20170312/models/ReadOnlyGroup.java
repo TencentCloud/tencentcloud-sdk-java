@@ -59,28 +59,28 @@ public class ReadOnlyGroup extends AbstractModel {
     private Long MinDelayEliminateReserve;
 
     /**
-    * 延迟空间大小阈值
+    * 延迟空间大小阈值。单位MB。
     */
     @SerializedName("MaxReplayLatency")
     @Expose
     private Long MaxReplayLatency;
 
     /**
-    * 延迟大小开关
+    * 延迟大小开关。0 - 关闭； 1 - 开启。
     */
     @SerializedName("ReplayLatencyEliminate")
     @Expose
     private Long ReplayLatencyEliminate;
 
     /**
-    * 延迟时间大小阈值
+    * 延迟时间大小阈值，单位：秒。
     */
     @SerializedName("MaxReplayLag")
     @Expose
     private Float MaxReplayLag;
 
     /**
-    * 延迟时间开关
+    * 延迟时间开关。0 - 关闭； 1 - 开启。
     */
     @SerializedName("ReplayLagEliminate")
     @Expose
@@ -115,7 +115,7 @@ public class ReadOnlyGroup extends AbstractModel {
     private String Zone;
 
     /**
-    * 状态
+    * 状态。枚举值：creating、ok、modifying、deleting、deleted
     */
     @SerializedName("Status")
     @Expose
@@ -231,64 +231,64 @@ public class ReadOnlyGroup extends AbstractModel {
     }
 
     /**
-     * Get 延迟空间大小阈值 
-     * @return MaxReplayLatency 延迟空间大小阈值
+     * Get 延迟空间大小阈值。单位MB。 
+     * @return MaxReplayLatency 延迟空间大小阈值。单位MB。
      */
     public Long getMaxReplayLatency() {
         return this.MaxReplayLatency;
     }
 
     /**
-     * Set 延迟空间大小阈值
-     * @param MaxReplayLatency 延迟空间大小阈值
+     * Set 延迟空间大小阈值。单位MB。
+     * @param MaxReplayLatency 延迟空间大小阈值。单位MB。
      */
     public void setMaxReplayLatency(Long MaxReplayLatency) {
         this.MaxReplayLatency = MaxReplayLatency;
     }
 
     /**
-     * Get 延迟大小开关 
-     * @return ReplayLatencyEliminate 延迟大小开关
+     * Get 延迟大小开关。0 - 关闭； 1 - 开启。 
+     * @return ReplayLatencyEliminate 延迟大小开关。0 - 关闭； 1 - 开启。
      */
     public Long getReplayLatencyEliminate() {
         return this.ReplayLatencyEliminate;
     }
 
     /**
-     * Set 延迟大小开关
-     * @param ReplayLatencyEliminate 延迟大小开关
+     * Set 延迟大小开关。0 - 关闭； 1 - 开启。
+     * @param ReplayLatencyEliminate 延迟大小开关。0 - 关闭； 1 - 开启。
      */
     public void setReplayLatencyEliminate(Long ReplayLatencyEliminate) {
         this.ReplayLatencyEliminate = ReplayLatencyEliminate;
     }
 
     /**
-     * Get 延迟时间大小阈值 
-     * @return MaxReplayLag 延迟时间大小阈值
+     * Get 延迟时间大小阈值，单位：秒。 
+     * @return MaxReplayLag 延迟时间大小阈值，单位：秒。
      */
     public Float getMaxReplayLag() {
         return this.MaxReplayLag;
     }
 
     /**
-     * Set 延迟时间大小阈值
-     * @param MaxReplayLag 延迟时间大小阈值
+     * Set 延迟时间大小阈值，单位：秒。
+     * @param MaxReplayLag 延迟时间大小阈值，单位：秒。
      */
     public void setMaxReplayLag(Float MaxReplayLag) {
         this.MaxReplayLag = MaxReplayLag;
     }
 
     /**
-     * Get 延迟时间开关 
-     * @return ReplayLagEliminate 延迟时间开关
+     * Get 延迟时间开关。0 - 关闭； 1 - 开启。 
+     * @return ReplayLagEliminate 延迟时间开关。0 - 关闭； 1 - 开启。
      */
     public Long getReplayLagEliminate() {
         return this.ReplayLagEliminate;
     }
 
     /**
-     * Set 延迟时间开关
-     * @param ReplayLagEliminate 延迟时间开关
+     * Set 延迟时间开关。0 - 关闭； 1 - 开启。
+     * @param ReplayLagEliminate 延迟时间开关。0 - 关闭； 1 - 开启。
      */
     public void setReplayLagEliminate(Long ReplayLagEliminate) {
         this.ReplayLagEliminate = ReplayLagEliminate;
@@ -359,16 +359,16 @@ public class ReadOnlyGroup extends AbstractModel {
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get 状态。枚举值：creating、ok、modifying、deleting、deleted 
+     * @return Status 状态。枚举值：creating、ok、modifying、deleting、deleted
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set 状态。枚举值：creating、ok、modifying、deleting、deleted
+     * @param Status 状态。枚举值：creating、ok、modifying、deleting、deleted
      */
     public void setStatus(String Status) {
         this.Status = Status;

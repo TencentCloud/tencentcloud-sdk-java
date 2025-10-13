@@ -60,6 +60,48 @@ public class KafkaConnectParam extends AbstractModel {
     private String Region;
 
     /**
+    * 网络类型：PUBLIC公网；VPC
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
+    * vpcId，NetworkType=VPC时必传
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * vip，NetworkType=VPC时必传
+    */
+    @SerializedName("ServiceVip")
+    @Expose
+    private String ServiceVip;
+
+    /**
+    * 端口，NetworkType=VPC时必传
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
+
+    /**
+    * 跨云同步下需要客户传递唯一Id标志一组资源
+    */
+    @SerializedName("CrossNetResourceUniqueId")
+    @Expose
+    private String CrossNetResourceUniqueId;
+
+    /**
+    * 跨云子网ID
+    */
+    @SerializedName("CrossNetVpcSubNetId")
+    @Expose
+    private String CrossNetVpcSubNetId;
+
+    /**
      * Get Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id 
      * @return Resource Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
      */
@@ -143,6 +185,102 @@ public class KafkaConnectParam extends AbstractModel {
         this.Region = Region;
     }
 
+    /**
+     * Get 网络类型：PUBLIC公网；VPC 
+     * @return NetworkType 网络类型：PUBLIC公网；VPC
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set 网络类型：PUBLIC公网；VPC
+     * @param NetworkType 网络类型：PUBLIC公网；VPC
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
+    /**
+     * Get vpcId，NetworkType=VPC时必传 
+     * @return UniqVpcId vpcId，NetworkType=VPC时必传
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set vpcId，NetworkType=VPC时必传
+     * @param UniqVpcId vpcId，NetworkType=VPC时必传
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get vip，NetworkType=VPC时必传 
+     * @return ServiceVip vip，NetworkType=VPC时必传
+     */
+    public String getServiceVip() {
+        return this.ServiceVip;
+    }
+
+    /**
+     * Set vip，NetworkType=VPC时必传
+     * @param ServiceVip vip，NetworkType=VPC时必传
+     */
+    public void setServiceVip(String ServiceVip) {
+        this.ServiceVip = ServiceVip;
+    }
+
+    /**
+     * Get 端口，NetworkType=VPC时必传 
+     * @return Port 端口，NetworkType=VPC时必传
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set 端口，NetworkType=VPC时必传
+     * @param Port 端口，NetworkType=VPC时必传
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
+    }
+
+    /**
+     * Get 跨云同步下需要客户传递唯一Id标志一组资源 
+     * @return CrossNetResourceUniqueId 跨云同步下需要客户传递唯一Id标志一组资源
+     */
+    public String getCrossNetResourceUniqueId() {
+        return this.CrossNetResourceUniqueId;
+    }
+
+    /**
+     * Set 跨云同步下需要客户传递唯一Id标志一组资源
+     * @param CrossNetResourceUniqueId 跨云同步下需要客户传递唯一Id标志一组资源
+     */
+    public void setCrossNetResourceUniqueId(String CrossNetResourceUniqueId) {
+        this.CrossNetResourceUniqueId = CrossNetResourceUniqueId;
+    }
+
+    /**
+     * Get 跨云子网ID 
+     * @return CrossNetVpcSubNetId 跨云子网ID
+     */
+    public String getCrossNetVpcSubNetId() {
+        return this.CrossNetVpcSubNetId;
+    }
+
+    /**
+     * Set 跨云子网ID
+     * @param CrossNetVpcSubNetId 跨云子网ID
+     */
+    public void setCrossNetVpcSubNetId(String CrossNetVpcSubNetId) {
+        this.CrossNetVpcSubNetId = CrossNetVpcSubNetId;
+    }
+
     public KafkaConnectParam() {
     }
 
@@ -166,6 +304,24 @@ public class KafkaConnectParam extends AbstractModel {
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.ServiceVip != null) {
+            this.ServiceVip = new String(source.ServiceVip);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.CrossNetResourceUniqueId != null) {
+            this.CrossNetResourceUniqueId = new String(source.CrossNetResourceUniqueId);
+        }
+        if (source.CrossNetVpcSubNetId != null) {
+            this.CrossNetVpcSubNetId = new String(source.CrossNetVpcSubNetId);
+        }
     }
 
 
@@ -178,6 +334,12 @@ public class KafkaConnectParam extends AbstractModel {
         this.setParamSimple(map, prefix + "IsUpdate", this.IsUpdate);
         this.setParamSimple(map, prefix + "BrokerAddress", this.BrokerAddress);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "ServiceVip", this.ServiceVip);
+        this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "CrossNetResourceUniqueId", this.CrossNetResourceUniqueId);
+        this.setParamSimple(map, prefix + "CrossNetVpcSubNetId", this.CrossNetVpcSubNetId);
 
     }
 }

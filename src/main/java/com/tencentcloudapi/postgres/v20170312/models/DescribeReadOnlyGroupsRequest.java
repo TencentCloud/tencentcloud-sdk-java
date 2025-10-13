@@ -27,13 +27,14 @@ public class DescribeReadOnlyGroupsRequest extends AbstractModel {
     * 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-master-instance-id：按照主实例过滤，类型为string。
 read-only-group-id：按照只读组ID过滤，类型为string。
+注：该参数的过滤条件中，db-master-instance-id为必须指定项。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 查询每一页的条数，默认为10
+    * 查询每一页的条数，默认为10，最大值99。
     */
     @SerializedName("PageSize")
     @Expose
@@ -47,14 +48,14 @@ read-only-group-id：按照只读组ID过滤，类型为string。
     private Long PageNumber;
 
     /**
-    * 查询排序依据，目前支持:ROGroupId,CreateTime,Name
+    * 查询排序依据，目前支持:ROGroupId,CreateTime,Name。默认值CreateTime
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 查询排序依据类型，目前支持:desc,asc
+    * 查询排序依据类型，目前支持:desc,asc。默认值asc。
     */
     @SerializedName("OrderByType")
     @Expose
@@ -63,10 +64,12 @@ read-only-group-id：按照只读组ID过滤，类型为string。
     /**
      * Get 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-master-instance-id：按照主实例过滤，类型为string。
-read-only-group-id：按照只读组ID过滤，类型为string。 
+read-only-group-id：按照只读组ID过滤，类型为string。
+注：该参数的过滤条件中，db-master-instance-id为必须指定项。 
      * @return Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-master-instance-id：按照主实例过滤，类型为string。
 read-only-group-id：按照只读组ID过滤，类型为string。
+注：该参数的过滤条件中，db-master-instance-id为必须指定项。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -76,25 +79,27 @@ read-only-group-id：按照只读组ID过滤，类型为string。
      * Set 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-master-instance-id：按照主实例过滤，类型为string。
 read-only-group-id：按照只读组ID过滤，类型为string。
+注：该参数的过滤条件中，db-master-instance-id为必须指定项。
      * @param Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-master-instance-id：按照主实例过滤，类型为string。
 read-only-group-id：按照只读组ID过滤，类型为string。
+注：该参数的过滤条件中，db-master-instance-id为必须指定项。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 查询每一页的条数，默认为10 
-     * @return PageSize 查询每一页的条数，默认为10
+     * Get 查询每一页的条数，默认为10，最大值99。 
+     * @return PageSize 查询每一页的条数，默认为10，最大值99。
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 查询每一页的条数，默认为10
-     * @param PageSize 查询每一页的条数，默认为10
+     * Set 查询每一页的条数，默认为10，最大值99。
+     * @param PageSize 查询每一页的条数，默认为10，最大值99。
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -117,32 +122,32 @@ read-only-group-id：按照只读组ID过滤，类型为string。
     }
 
     /**
-     * Get 查询排序依据，目前支持:ROGroupId,CreateTime,Name 
-     * @return OrderBy 查询排序依据，目前支持:ROGroupId,CreateTime,Name
+     * Get 查询排序依据，目前支持:ROGroupId,CreateTime,Name。默认值CreateTime 
+     * @return OrderBy 查询排序依据，目前支持:ROGroupId,CreateTime,Name。默认值CreateTime
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 查询排序依据，目前支持:ROGroupId,CreateTime,Name
-     * @param OrderBy 查询排序依据，目前支持:ROGroupId,CreateTime,Name
+     * Set 查询排序依据，目前支持:ROGroupId,CreateTime,Name。默认值CreateTime
+     * @param OrderBy 查询排序依据，目前支持:ROGroupId,CreateTime,Name。默认值CreateTime
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 查询排序依据类型，目前支持:desc,asc 
-     * @return OrderByType 查询排序依据类型，目前支持:desc,asc
+     * Get 查询排序依据类型，目前支持:desc,asc。默认值asc。 
+     * @return OrderByType 查询排序依据类型，目前支持:desc,asc。默认值asc。
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 查询排序依据类型，目前支持:desc,asc
-     * @param OrderByType 查询排序依据类型，目前支持:desc,asc
+     * Set 查询排序依据类型，目前支持:desc,asc。默认值asc。
+     * @param OrderByType 查询排序依据类型，目前支持:desc,asc。默认值asc。
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

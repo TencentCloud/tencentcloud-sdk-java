@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class FlashBackDBInstanceRequest extends AbstractModel {
 
     /**
-    * 开启按 Key 回档的实例 ID。
+    * 开启按 Key 回档的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制需开启按 Key 回档的实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 源数据想恢复到的时间。
+    * 指定数据回档的具体时间点，即将数据恢复到指定时间点的状态。
     */
     @SerializedName("TargetFlashbackTime")
     @Expose
     private String TargetFlashbackTime;
 
     /**
-    * 源数据所在的库表信息。
+    * 指定回档数据的目标库表。
     */
     @SerializedName("TargetDatabases")
     @Expose
     private FlashbackDatabase [] TargetDatabases;
 
     /**
-    * 数据最终写入的实例 ID。
+    * 数据回档的目标实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制目标实例 ID。
     */
     @SerializedName("TargetInstanceId")
     @Expose
     private String TargetInstanceId;
 
     /**
-     * Get 开启按 Key 回档的实例 ID。 
-     * @return InstanceId 开启按 Key 回档的实例 ID。
+     * Get 开启按 Key 回档的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制需开启按 Key 回档的实例 ID。 
+     * @return InstanceId 开启按 Key 回档的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制需开启按 Key 回档的实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 开启按 Key 回档的实例 ID。
-     * @param InstanceId 开启按 Key 回档的实例 ID。
+     * Set 开启按 Key 回档的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制需开启按 Key 回档的实例 ID。
+     * @param InstanceId 开启按 Key 回档的实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制需开启按 Key 回档的实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 源数据想恢复到的时间。 
-     * @return TargetFlashbackTime 源数据想恢复到的时间。
+     * Get 指定数据回档的具体时间点，即将数据恢复到指定时间点的状态。 
+     * @return TargetFlashbackTime 指定数据回档的具体时间点，即将数据恢复到指定时间点的状态。
      */
     public String getTargetFlashbackTime() {
         return this.TargetFlashbackTime;
     }
 
     /**
-     * Set 源数据想恢复到的时间。
-     * @param TargetFlashbackTime 源数据想恢复到的时间。
+     * Set 指定数据回档的具体时间点，即将数据恢复到指定时间点的状态。
+     * @param TargetFlashbackTime 指定数据回档的具体时间点，即将数据恢复到指定时间点的状态。
      */
     public void setTargetFlashbackTime(String TargetFlashbackTime) {
         this.TargetFlashbackTime = TargetFlashbackTime;
     }
 
     /**
-     * Get 源数据所在的库表信息。 
-     * @return TargetDatabases 源数据所在的库表信息。
+     * Get 指定回档数据的目标库表。 
+     * @return TargetDatabases 指定回档数据的目标库表。
      */
     public FlashbackDatabase [] getTargetDatabases() {
         return this.TargetDatabases;
     }
 
     /**
-     * Set 源数据所在的库表信息。
-     * @param TargetDatabases 源数据所在的库表信息。
+     * Set 指定回档数据的目标库表。
+     * @param TargetDatabases 指定回档数据的目标库表。
      */
     public void setTargetDatabases(FlashbackDatabase [] TargetDatabases) {
         this.TargetDatabases = TargetDatabases;
     }
 
     /**
-     * Get 数据最终写入的实例 ID。 
-     * @return TargetInstanceId 数据最终写入的实例 ID。
+     * Get 数据回档的目标实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制目标实例 ID。 
+     * @return TargetInstanceId 数据回档的目标实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制目标实例 ID。
      */
     public String getTargetInstanceId() {
         return this.TargetInstanceId;
     }
 
     /**
-     * Set 数据最终写入的实例 ID。
-     * @param TargetInstanceId 数据最终写入的实例 ID。
+     * Set 数据回档的目标实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制目标实例 ID。
+     * @param TargetInstanceId 数据回档的目标实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制目标实例 ID。
      */
     public void setTargetInstanceId(String TargetInstanceId) {
         this.TargetInstanceId = TargetInstanceId;

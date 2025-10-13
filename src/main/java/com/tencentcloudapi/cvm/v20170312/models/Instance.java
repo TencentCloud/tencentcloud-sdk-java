@@ -321,6 +321,13 @@ public class Instance extends AbstractModel {
     private String LatestOperationErrorMsg;
 
     /**
+    * 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private Metadata Metadata;
+
+    /**
     * 实例绑定的公网IPv6地址。
     */
     @SerializedName("PublicIPv6Addresses")
@@ -1024,6 +1031,22 @@ public class Instance extends AbstractModel {
     }
 
     /**
+     * Get 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。 
+     * @return Metadata 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
+     */
+    public Metadata getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
+     * @param Metadata 自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。**注：内测中**。
+     */
+    public void setMetadata(Metadata Metadata) {
+        this.Metadata = Metadata;
+    }
+
+    /**
      * Get 实例绑定的公网IPv6地址。 
      * @return PublicIPv6Addresses 实例绑定的公网IPv6地址。
      */
@@ -1191,6 +1214,9 @@ public class Instance extends AbstractModel {
         if (source.LatestOperationErrorMsg != null) {
             this.LatestOperationErrorMsg = new String(source.LatestOperationErrorMsg);
         }
+        if (source.Metadata != null) {
+            this.Metadata = new Metadata(source.Metadata);
+        }
         if (source.PublicIPv6Addresses != null) {
             this.PublicIPv6Addresses = new String[source.PublicIPv6Addresses.length];
             for (int i = 0; i < source.PublicIPv6Addresses.length; i++) {
@@ -1245,6 +1271,7 @@ public class Instance extends AbstractModel {
         this.setParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
         this.setParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
         this.setParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
+        this.setParamObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
 
     }

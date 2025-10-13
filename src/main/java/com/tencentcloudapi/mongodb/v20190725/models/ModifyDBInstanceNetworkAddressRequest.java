@@ -42,14 +42,14 @@ public class ModifyDBInstanceNetworkAddressRequest extends AbstractModel {
     private Long OldIpExpiredTime;
 
     /**
-    * 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
+    * 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
     */
     @SerializedName("NewUniqVpcId")
     @Expose
     private String NewUniqVpcId;
 
     /**
-    * 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
+    * 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
     */
     @SerializedName("NewUniqSubnetId")
     @Expose
@@ -111,32 +111,32 @@ public class ModifyDBInstanceNetworkAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。 
-     * @return NewUniqVpcId 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
+     * Get 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。 
+     * @return NewUniqVpcId 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
      */
     public String getNewUniqVpcId() {
         return this.NewUniqVpcId;
     }
 
     /**
-     * Set 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
-     * @param NewUniqVpcId 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
+     * Set 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
+     * @param NewUniqVpcId 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络 ID。
      */
     public void setNewUniqVpcId(String NewUniqVpcId) {
         this.NewUniqVpcId = NewUniqVpcId;
     }
 
     /**
-     * Get 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。 
-     * @return NewUniqSubnetId 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
+     * Get 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。 
+     * @return NewUniqSubnetId 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
      */
     public String getNewUniqSubnetId() {
         return this.NewUniqSubnetId;
     }
 
     /**
-     * Set 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
-     * @param NewUniqSubnetId 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
+     * Set 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
+     * @param NewUniqSubnetId 切换后私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。请通过接口 [DescribeDBInstances](https://cloud.tencent.com/document/product/240/38568) 获取私有网络的子网 ID。
      */
     public void setNewUniqSubnetId(String NewUniqSubnetId) {
         this.NewUniqSubnetId = NewUniqSubnetId;

@@ -327,6 +327,13 @@ mssql_compatible引擎：
     private Long SupportIpv6;
 
     /**
+    * 实例已经弹性扩容的cpu核数
+    */
+    @SerializedName("ExpandedCpu")
+    @Expose
+    private Long ExpandedCpu;
+
+    /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。 
      * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。
      */
@@ -1070,6 +1077,22 @@ mssql_compatible引擎：
         this.SupportIpv6 = SupportIpv6;
     }
 
+    /**
+     * Get 实例已经弹性扩容的cpu核数 
+     * @return ExpandedCpu 实例已经弹性扩容的cpu核数
+     */
+    public Long getExpandedCpu() {
+        return this.ExpandedCpu;
+    }
+
+    /**
+     * Set 实例已经弹性扩容的cpu核数
+     * @param ExpandedCpu 实例已经弹性扩容的cpu核数
+     */
+    public void setExpandedCpu(Long ExpandedCpu) {
+        this.ExpandedCpu = ExpandedCpu;
+    }
+
     public DBInstance() {
     }
 
@@ -1207,6 +1230,9 @@ mssql_compatible引擎：
         if (source.SupportIpv6 != null) {
             this.SupportIpv6 = new Long(source.SupportIpv6);
         }
+        if (source.ExpandedCpu != null) {
+            this.ExpandedCpu = new Long(source.ExpandedCpu);
+        }
     }
 
 
@@ -1253,6 +1279,7 @@ mssql_compatible引擎：
         this.setParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
         this.setParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
         this.setParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
+        this.setParamSimple(map, prefix + "ExpandedCpu", this.ExpandedCpu);
 
     }
 }

@@ -144,6 +144,41 @@ public class InstanceDbAuditStatus extends AbstractModel {
     private String [] RuleTemplateIds;
 
     /**
+    * 限免状态
+    */
+    @SerializedName("TrialStatus")
+    @Expose
+    private String TrialStatus;
+
+    /**
+    * 限免开启时间
+    */
+    @SerializedName("TrialStartTime")
+    @Expose
+    private Long TrialStartTime;
+
+    /**
+    * 限免持续时间
+    */
+    @SerializedName("TrialDuration")
+    @Expose
+    private Long TrialDuration;
+
+    /**
+    * 限免关闭时间
+    */
+    @SerializedName("TrialCloseTime")
+    @Expose
+    private Long TrialCloseTime;
+
+    /**
+    * 限免期查询日志时长
+    */
+    @SerializedName("TrialDescribeLogHours")
+    @Expose
+    private Long TrialDescribeLogHours;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -443,6 +478,86 @@ public class InstanceDbAuditStatus extends AbstractModel {
         this.RuleTemplateIds = RuleTemplateIds;
     }
 
+    /**
+     * Get 限免状态 
+     * @return TrialStatus 限免状态
+     */
+    public String getTrialStatus() {
+        return this.TrialStatus;
+    }
+
+    /**
+     * Set 限免状态
+     * @param TrialStatus 限免状态
+     */
+    public void setTrialStatus(String TrialStatus) {
+        this.TrialStatus = TrialStatus;
+    }
+
+    /**
+     * Get 限免开启时间 
+     * @return TrialStartTime 限免开启时间
+     */
+    public Long getTrialStartTime() {
+        return this.TrialStartTime;
+    }
+
+    /**
+     * Set 限免开启时间
+     * @param TrialStartTime 限免开启时间
+     */
+    public void setTrialStartTime(Long TrialStartTime) {
+        this.TrialStartTime = TrialStartTime;
+    }
+
+    /**
+     * Get 限免持续时间 
+     * @return TrialDuration 限免持续时间
+     */
+    public Long getTrialDuration() {
+        return this.TrialDuration;
+    }
+
+    /**
+     * Set 限免持续时间
+     * @param TrialDuration 限免持续时间
+     */
+    public void setTrialDuration(Long TrialDuration) {
+        this.TrialDuration = TrialDuration;
+    }
+
+    /**
+     * Get 限免关闭时间 
+     * @return TrialCloseTime 限免关闭时间
+     */
+    public Long getTrialCloseTime() {
+        return this.TrialCloseTime;
+    }
+
+    /**
+     * Set 限免关闭时间
+     * @param TrialCloseTime 限免关闭时间
+     */
+    public void setTrialCloseTime(Long TrialCloseTime) {
+        this.TrialCloseTime = TrialCloseTime;
+    }
+
+    /**
+     * Get 限免期查询日志时长 
+     * @return TrialDescribeLogHours 限免期查询日志时长
+     */
+    public Long getTrialDescribeLogHours() {
+        return this.TrialDescribeLogHours;
+    }
+
+    /**
+     * Set 限免期查询日志时长
+     * @param TrialDescribeLogHours 限免期查询日志时长
+     */
+    public void setTrialDescribeLogHours(Long TrialDescribeLogHours) {
+        this.TrialDescribeLogHours = TrialDescribeLogHours;
+    }
+
     public InstanceDbAuditStatus() {
     }
 
@@ -499,6 +614,21 @@ public class InstanceDbAuditStatus extends AbstractModel {
                 this.RuleTemplateIds[i] = new String(source.RuleTemplateIds[i]);
             }
         }
+        if (source.TrialStatus != null) {
+            this.TrialStatus = new String(source.TrialStatus);
+        }
+        if (source.TrialStartTime != null) {
+            this.TrialStartTime = new Long(source.TrialStartTime);
+        }
+        if (source.TrialDuration != null) {
+            this.TrialDuration = new Long(source.TrialDuration);
+        }
+        if (source.TrialCloseTime != null) {
+            this.TrialCloseTime = new Long(source.TrialCloseTime);
+        }
+        if (source.TrialDescribeLogHours != null) {
+            this.TrialDescribeLogHours = new Long(source.TrialDescribeLogHours);
+        }
     }
 
 
@@ -521,6 +651,11 @@ public class InstanceDbAuditStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "RealStorage", this.RealStorage);
         this.setParamSimple(map, prefix + "OldRule", this.OldRule);
         this.setParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
+        this.setParamSimple(map, prefix + "TrialStatus", this.TrialStatus);
+        this.setParamSimple(map, prefix + "TrialStartTime", this.TrialStartTime);
+        this.setParamSimple(map, prefix + "TrialDuration", this.TrialDuration);
+        this.setParamSimple(map, prefix + "TrialCloseTime", this.TrialCloseTime);
+        this.setParamSimple(map, prefix + "TrialDescribeLogHours", this.TrialDescribeLogHours);
 
     }
 }

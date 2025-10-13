@@ -39,6 +39,13 @@ public class ViewImage extends AbstractModel {
     private String ViewImageUrl;
 
     /**
+    * 图片base64地址
+    */
+    @SerializedName("ViewImageBase64")
+    @Expose
+    private String ViewImageBase64;
+
+    /**
      * Get 视角类型。
 取值：back、left、right 
      * @return ViewType 视角类型。
@@ -74,6 +81,22 @@ public class ViewImage extends AbstractModel {
         this.ViewImageUrl = ViewImageUrl;
     }
 
+    /**
+     * Get 图片base64地址 
+     * @return ViewImageBase64 图片base64地址
+     */
+    public String getViewImageBase64() {
+        return this.ViewImageBase64;
+    }
+
+    /**
+     * Set 图片base64地址
+     * @param ViewImageBase64 图片base64地址
+     */
+    public void setViewImageBase64(String ViewImageBase64) {
+        this.ViewImageBase64 = ViewImageBase64;
+    }
+
     public ViewImage() {
     }
 
@@ -88,6 +111,9 @@ public class ViewImage extends AbstractModel {
         if (source.ViewImageUrl != null) {
             this.ViewImageUrl = new String(source.ViewImageUrl);
         }
+        if (source.ViewImageBase64 != null) {
+            this.ViewImageBase64 = new String(source.ViewImageBase64);
+        }
     }
 
 
@@ -97,6 +123,7 @@ public class ViewImage extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ViewType", this.ViewType);
         this.setParamSimple(map, prefix + "ViewImageUrl", this.ViewImageUrl);
+        this.setParamSimple(map, prefix + "ViewImageBase64", this.ViewImageBase64);
 
     }
 }

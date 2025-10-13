@@ -25,7 +25,6 @@ public class GetTrainingTextRequest extends AbstractModel {
 
     /**
     * 复刻类型。
-0 - 轻量版声音复刻（默认）;
 5 - 一句话声音复刻。
     */
     @SerializedName("TaskType")
@@ -53,10 +52,8 @@ public class GetTrainingTextRequest extends AbstractModel {
 
     /**
      * Get 复刻类型。
-0 - 轻量版声音复刻（默认）;
 5 - 一句话声音复刻。 
      * @return TaskType 复刻类型。
-0 - 轻量版声音复刻（默认）;
 5 - 一句话声音复刻。
      */
     public Long getTaskType() {
@@ -65,10 +62,8 @@ public class GetTrainingTextRequest extends AbstractModel {
 
     /**
      * Set 复刻类型。
-0 - 轻量版声音复刻（默认）;
 5 - 一句话声音复刻。
      * @param TaskType 复刻类型。
-0 - 轻量版声音复刻（默认）;
 5 - 一句话声音复刻。
      */
     public void setTaskType(Long TaskType) {

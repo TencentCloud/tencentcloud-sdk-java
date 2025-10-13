@@ -52,6 +52,22 @@ public class AddOnSubtitle extends AbstractModel {
     private String SubtitleName;
 
     /**
+    * 字幕输出格式。取值{"WebVTT","TTML"}。
+默认值："WebVTT"
+    */
+    @SerializedName("OutputFormat")
+    @Expose
+    private String OutputFormat;
+
+    /**
+    * 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
+默认值：false
+    */
+    @SerializedName("DefaultTrack")
+    @Expose
+    private Boolean DefaultTrack;
+
+    /**
      * Get 插入形式，可选值：
 <li>subtitle-stream：插入字幕轨道</li>
 <li>close-caption-708：CEA-708字幕编码到SEI帧</li>
@@ -127,6 +143,46 @@ public class AddOnSubtitle extends AbstractModel {
         this.SubtitleName = SubtitleName;
     }
 
+    /**
+     * Get 字幕输出格式。取值{"WebVTT","TTML"}。
+默认值："WebVTT" 
+     * @return OutputFormat 字幕输出格式。取值{"WebVTT","TTML"}。
+默认值："WebVTT"
+     */
+    public String getOutputFormat() {
+        return this.OutputFormat;
+    }
+
+    /**
+     * Set 字幕输出格式。取值{"WebVTT","TTML"}。
+默认值："WebVTT"
+     * @param OutputFormat 字幕输出格式。取值{"WebVTT","TTML"}。
+默认值："WebVTT"
+     */
+    public void setOutputFormat(String OutputFormat) {
+        this.OutputFormat = OutputFormat;
+    }
+
+    /**
+     * Get 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
+默认值：false 
+     * @return DefaultTrack 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
+默认值：false
+     */
+    public Boolean getDefaultTrack() {
+        return this.DefaultTrack;
+    }
+
+    /**
+     * Set 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
+默认值：false
+     * @param DefaultTrack 默认字幕轨道。为true时指定当前字幕为默认字幕轨道，最多可指定1条默认字幕轨道。
+默认值：false
+     */
+    public void setDefaultTrack(Boolean DefaultTrack) {
+        this.DefaultTrack = DefaultTrack;
+    }
+
     public AddOnSubtitle() {
     }
 
@@ -144,6 +200,12 @@ public class AddOnSubtitle extends AbstractModel {
         if (source.SubtitleName != null) {
             this.SubtitleName = new String(source.SubtitleName);
         }
+        if (source.OutputFormat != null) {
+            this.OutputFormat = new String(source.OutputFormat);
+        }
+        if (source.DefaultTrack != null) {
+            this.DefaultTrack = new Boolean(source.DefaultTrack);
+        }
     }
 
 
@@ -154,6 +216,8 @@ public class AddOnSubtitle extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "Subtitle.", this.Subtitle);
         this.setParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
+        this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+        this.setParamSimple(map, prefix + "DefaultTrack", this.DefaultTrack);
 
     }
 }

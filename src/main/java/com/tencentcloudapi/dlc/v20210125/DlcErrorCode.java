@@ -39,9 +39,6 @@ public enum DlcErrorCode {
      /* 重复的标签键。 */
      FAILEDOPERATION_DUPLICATETAGKEY("FailedOperation.DuplicateTagKey"),
      
-     /* 当前已有资源组正在使用该配置项，无法一键删除（一键删除会导致引擎重启）您可前往资源组列表页点击详情删除 */
-     FAILEDOPERATION_FAILEDOPERATIONCODE_NETWORKCONNECTIONINUSED("FailedOperation.FailedOperationCode_NetworkConnectionInUsed"),
-     
      /* 扣费失败。 */
      FAILEDOPERATION_FEEDEDUCTIONFAILED("FailedOperation.FeeDeductionFailed"),
      
@@ -89,6 +86,9 @@ public enum DlcErrorCode {
      
      /* The  datasource vpc has been bound to the engine */
      FAILEDOPERATION_NETWORKCONNECTIONEXIST("FailedOperation.NetworkConnectionExist"),
+     
+     /* 当前已有资源组正在使用该配置项，无法一键删除（一键删除会导致引擎重启）您可前往资源组列表页点击详情删除 */
+     FAILEDOPERATION_NETWORKCONNECTIONINUSED("FailedOperation.NetworkConnectionInUsed"),
      
      /* 没有操作权限。 */
      FAILEDOPERATION_NOPERMISSION("FailedOperation.NoPermission"),
@@ -353,6 +353,9 @@ public enum DlcErrorCode {
      
      /* 无效的Offset值。 */
      INVALIDPARAMETER_INVALIDOFFSET("InvalidParameter.InvalidOffset"),
+     
+     /* 列上执行的操作与该列的数据类型不兼容 */
+     INVALIDPARAMETER_INVALIDPARAMETER_COLUMNTYPENOTCOMPATIBLE("InvalidParameter.InvalidParameter_ColumnTypeNotCompatible"),
      
      /* 排序列不合法 */
      INVALIDPARAMETER_INVALIDPARAMETER_SQLTASKANALYSISSORTBYTYPENOTMATCH("InvalidParameter.InvalidParameter_SQLTaskAnalysisSortByTypeNotMatch"),

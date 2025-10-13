@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyDBInstanceSecurityGroupRequest extends AbstractModel {
 
     /**
-    * 实例 ID。例如：cmgo-7pje****。
+    * 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+    * 目标安全组 ID。请登录[安全组控制台页面](https://console.cloud.tencent.com/vpc/security-group)复制目标安全组 ID。
 **注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
     */
     @SerializedName("SecurityGroupIds")
@@ -39,25 +39,25 @@ public class ModifyDBInstanceSecurityGroupRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-     * Get 实例 ID。例如：cmgo-7pje****。 
-     * @return InstanceId 实例 ID。例如：cmgo-7pje****。
+     * Get 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。例如：cmgo-7pje****。
-     * @param InstanceId 实例 ID。例如：cmgo-7pje****。
+     * Set 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+     * Get 目标安全组 ID。请登录[安全组控制台页面](https://console.cloud.tencent.com/vpc/security-group)复制目标安全组 ID。
 **注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。 
-     * @return SecurityGroupIds 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+     * @return SecurityGroupIds 目标安全组 ID。请登录[安全组控制台页面](https://console.cloud.tencent.com/vpc/security-group)复制目标安全组 ID。
 **注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public String [] getSecurityGroupIds() {
@@ -65,9 +65,9 @@ public class ModifyDBInstanceSecurityGroupRequest extends AbstractModel {
     }
 
     /**
-     * Set 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+     * Set 目标安全组 ID。请登录[安全组控制台页面](https://console.cloud.tencent.com/vpc/security-group)复制目标安全组 ID。
 **注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
-     * @param SecurityGroupIds 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+     * @param SecurityGroupIds 目标安全组 ID。请登录[安全组控制台页面](https://console.cloud.tencent.com/vpc/security-group)复制目标安全组 ID。
 **注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {

@@ -88,6 +88,13 @@ public class KnowledgeQaOutput extends AbstractModel {
     private Long RecommendedPromptMode;
 
     /**
+    * 输入框按钮配置
+    */
+    @SerializedName("InputBoxConfig")
+    @Expose
+    private InputBoxConfig InputBoxConfig;
+
+    /**
      * Get 输出方式 1：流式 2：非流式
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Method 输出方式 1：流式 2：非流式
@@ -247,6 +254,22 @@ public class KnowledgeQaOutput extends AbstractModel {
         this.RecommendedPromptMode = RecommendedPromptMode;
     }
 
+    /**
+     * Get 输入框按钮配置 
+     * @return InputBoxConfig 输入框按钮配置
+     */
+    public InputBoxConfig getInputBoxConfig() {
+        return this.InputBoxConfig;
+    }
+
+    /**
+     * Set 输入框按钮配置
+     * @param InputBoxConfig 输入框按钮配置
+     */
+    public void setInputBoxConfig(InputBoxConfig InputBoxConfig) {
+        this.InputBoxConfig = InputBoxConfig;
+    }
+
     public KnowledgeQaOutput() {
     }
 
@@ -282,6 +305,9 @@ public class KnowledgeQaOutput extends AbstractModel {
         if (source.RecommendedPromptMode != null) {
             this.RecommendedPromptMode = new Long(source.RecommendedPromptMode);
         }
+        if (source.InputBoxConfig != null) {
+            this.InputBoxConfig = new InputBoxConfig(source.InputBoxConfig);
+        }
     }
 
 
@@ -297,6 +323,7 @@ public class KnowledgeQaOutput extends AbstractModel {
         this.setParamArraySimple(map, prefix + "QuestionClarifyKeywords.", this.QuestionClarifyKeywords);
         this.setParamSimple(map, prefix + "UseRecommended", this.UseRecommended);
         this.setParamSimple(map, prefix + "RecommendedPromptMode", this.RecommendedPromptMode);
+        this.setParamObj(map, prefix + "InputBoxConfig.", this.InputBoxConfig);
 
     }
 }

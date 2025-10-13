@@ -157,6 +157,13 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel {
     private String CustomerIPv6Address;
 
     /**
+    * 互联IP重分布状态
+    */
+    @SerializedName("ImportDirectRoute")
+    @Expose
+    private Boolean ImportDirectRoute;
+
+    /**
      * Get 专用通道ID。 
      * @return DirectConnectTunnelId 专用通道ID。
      */
@@ -460,6 +467,22 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel {
         this.CustomerIPv6Address = CustomerIPv6Address;
     }
 
+    /**
+     * Get 互联IP重分布状态 
+     * @return ImportDirectRoute 互联IP重分布状态
+     */
+    public Boolean getImportDirectRoute() {
+        return this.ImportDirectRoute;
+    }
+
+    /**
+     * Set 互联IP重分布状态
+     * @param ImportDirectRoute 互联IP重分布状态
+     */
+    public void setImportDirectRoute(Boolean ImportDirectRoute) {
+        this.ImportDirectRoute = ImportDirectRoute;
+    }
+
     public ModifyDirectConnectTunnelExtraRequest() {
     }
 
@@ -528,6 +551,9 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel {
         if (source.CustomerIPv6Address != null) {
             this.CustomerIPv6Address = new String(source.CustomerIPv6Address);
         }
+        if (source.ImportDirectRoute != null) {
+            this.ImportDirectRoute = new Boolean(source.ImportDirectRoute);
+        }
     }
 
 
@@ -554,6 +580,7 @@ public class ModifyDirectConnectTunnelExtraRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TencentIPv6Address", this.TencentIPv6Address);
         this.setParamSimple(map, prefix + "TencentBackupIPv6Address", this.TencentBackupIPv6Address);
         this.setParamSimple(map, prefix + "CustomerIPv6Address", this.CustomerIPv6Address);
+        this.setParamSimple(map, prefix + "ImportDirectRoute", this.ImportDirectRoute);
 
     }
 }

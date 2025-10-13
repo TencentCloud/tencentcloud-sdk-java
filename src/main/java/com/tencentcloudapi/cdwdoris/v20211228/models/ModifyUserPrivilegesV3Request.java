@@ -73,6 +73,13 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
     private String DefaultComputeGroup;
 
     /**
+    * 0: 灵活场景 1: 固定场景
+    */
+    @SerializedName("ComputeGroupType")
+    @Expose
+    private Long ComputeGroupType;
+
+    /**
      * Get 集群id 
      * @return InstanceId 集群id
      */
@@ -184,6 +191,22 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
         this.DefaultComputeGroup = DefaultComputeGroup;
     }
 
+    /**
+     * Get 0: 灵活场景 1: 固定场景 
+     * @return ComputeGroupType 0: 灵活场景 1: 固定场景
+     */
+    public Long getComputeGroupType() {
+        return this.ComputeGroupType;
+    }
+
+    /**
+     * Set 0: 灵活场景 1: 固定场景
+     * @param ComputeGroupType 0: 灵活场景 1: 固定场景
+     */
+    public void setComputeGroupType(Long ComputeGroupType) {
+        this.ComputeGroupType = ComputeGroupType;
+    }
+
     public ModifyUserPrivilegesV3Request() {
     }
 
@@ -216,6 +239,9 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
         if (source.DefaultComputeGroup != null) {
             this.DefaultComputeGroup = new String(source.DefaultComputeGroup);
         }
+        if (source.ComputeGroupType != null) {
+            this.ComputeGroupType = new Long(source.ComputeGroupType);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
         this.setParamArraySimple(map, prefix + "UpdateComputeGroups.", this.UpdateComputeGroups);
         this.setParamSimple(map, prefix + "DefaultComputeGroup", this.DefaultComputeGroup);
+        this.setParamSimple(map, prefix + "ComputeGroupType", this.ComputeGroupType);
 
     }
 }

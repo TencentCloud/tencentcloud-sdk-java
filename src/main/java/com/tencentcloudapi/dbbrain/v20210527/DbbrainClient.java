@@ -512,7 +512,7 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
-     *获取指定时间段内Redis 访问命令 cost top N
+     *获取指定时间段内Redis Proxy 指标
      * @param req DescribeMetricTopProxiesRequest
      * @return DescribeMetricTopProxiesResponse
      * @throws TencentCloudSDKException

@@ -25,8 +25,8 @@ public class DescribeDBInstanceHAConfigResponse extends AbstractModel {
 
     /**
     * 主从同步方式：
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
     */
     @SerializedName("SyncMode")
     @Expose
@@ -34,8 +34,8 @@ public class DescribeDBInstanceHAConfigResponse extends AbstractModel {
 
     /**
     * 高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte
-<li>参数范围：[1073741824, 322122547200]
+<li>单位：byte</li>
+<li>参数范围：[1073741824, 322122547200]</li>
     */
     @SerializedName("MaxStandbyLatency")
     @Expose
@@ -43,8 +43,8 @@ public class DescribeDBInstanceHAConfigResponse extends AbstractModel {
 
     /**
     * 高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s
-<li>参数范围：[5, 10]
+<li>单位：s</li>
+<li>参数范围：[5, 10]</li>
     */
     @SerializedName("MaxStandbyLag")
     @Expose
@@ -81,11 +81,11 @@ public class DescribeDBInstanceHAConfigResponse extends AbstractModel {
 
     /**
      * Get 主从同步方式：
-<li>Semi-sync：半同步
-<li>Async：异步 
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li> 
      * @return SyncMode 主从同步方式：
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
      */
     public String getSyncMode() {
         return this.SyncMode;
@@ -93,11 +93,11 @@ public class DescribeDBInstanceHAConfigResponse extends AbstractModel {
 
     /**
      * Set 主从同步方式：
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
      * @param SyncMode 主从同步方式：
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
      */
     public void setSyncMode(String SyncMode) {
         this.SyncMode = SyncMode;
@@ -105,11 +105,11 @@ public class DescribeDBInstanceHAConfigResponse extends AbstractModel {
 
     /**
      * Get 高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte
-<li>参数范围：[1073741824, 322122547200] 
+<li>单位：byte</li>
+<li>参数范围：[1073741824, 322122547200]</li> 
      * @return MaxStandbyLatency 高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte
-<li>参数范围：[1073741824, 322122547200]
+<li>单位：byte</li>
+<li>参数范围：[1073741824, 322122547200]</li>
      */
     public Long getMaxStandbyLatency() {
         return this.MaxStandbyLatency;
@@ -117,11 +117,11 @@ public class DescribeDBInstanceHAConfigResponse extends AbstractModel {
 
     /**
      * Set 高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte
-<li>参数范围：[1073741824, 322122547200]
+<li>单位：byte</li>
+<li>参数范围：[1073741824, 322122547200]</li>
      * @param MaxStandbyLatency 高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte
-<li>参数范围：[1073741824, 322122547200]
+<li>单位：byte</li>
+<li>参数范围：[1073741824, 322122547200]</li>
      */
     public void setMaxStandbyLatency(Long MaxStandbyLatency) {
         this.MaxStandbyLatency = MaxStandbyLatency;
@@ -129,11 +129,11 @@ public class DescribeDBInstanceHAConfigResponse extends AbstractModel {
 
     /**
      * Get 高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s
-<li>参数范围：[5, 10] 
+<li>单位：s</li>
+<li>参数范围：[5, 10]</li> 
      * @return MaxStandbyLag 高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s
-<li>参数范围：[5, 10]
+<li>单位：s</li>
+<li>参数范围：[5, 10]</li>
      */
     public Long getMaxStandbyLag() {
         return this.MaxStandbyLag;
@@ -141,11 +141,11 @@ public class DescribeDBInstanceHAConfigResponse extends AbstractModel {
 
     /**
      * Set 高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s
-<li>参数范围：[5, 10]
+<li>单位：s</li>
+<li>参数范围：[5, 10]</li>
      * @param MaxStandbyLag 高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s
-<li>参数范围：[5, 10]
+<li>单位：s</li>
+<li>参数范围：[5, 10]</li>
      */
     public void setMaxStandbyLag(Long MaxStandbyLag) {
         this.MaxStandbyLag = MaxStandbyLag;

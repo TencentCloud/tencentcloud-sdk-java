@@ -89,6 +89,14 @@ public class ParseNotificationResponse extends AbstractModel {
     private String Sign;
 
     /**
+    * 批量处理任务信息，仅当 EventType 为 BatchTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BatchTaskEvent")
+    @Expose
+    private BatchSubTaskResult BatchTaskEvent;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -260,6 +268,26 @@ public class ParseNotificationResponse extends AbstractModel {
     }
 
     /**
+     * Get 批量处理任务信息，仅当 EventType 为 BatchTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BatchTaskEvent 批量处理任务信息，仅当 EventType 为 BatchTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BatchSubTaskResult getBatchTaskEvent() {
+        return this.BatchTaskEvent;
+    }
+
+    /**
+     * Set 批量处理任务信息，仅当 EventType 为 BatchTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BatchTaskEvent 批量处理任务信息，仅当 EventType 为 BatchTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBatchTaskEvent(BatchSubTaskResult BatchTaskEvent) {
+        this.BatchTaskEvent = BatchTaskEvent;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -307,6 +335,9 @@ public class ParseNotificationResponse extends AbstractModel {
         if (source.Sign != null) {
             this.Sign = new String(source.Sign);
         }
+        if (source.BatchTaskEvent != null) {
+            this.BatchTaskEvent = new BatchSubTaskResult(source.BatchTaskEvent);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -325,6 +356,7 @@ public class ParseNotificationResponse extends AbstractModel {
         this.setParamObj(map, prefix + "ScheduleTaskEvent.", this.ScheduleTaskEvent);
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
         this.setParamSimple(map, prefix + "Sign", this.Sign);
+        this.setParamObj(map, prefix + "BatchTaskEvent.", this.BatchTaskEvent);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -338,6 +338,17 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *创建集群接入
+     * @param req CreateClusterAccessRequest
+     * @return CreateClusterAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterAccessResponse CreateClusterAccess(CreateClusterAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateClusterAccess", CreateClusterAccessResponse.class);
+    }
+
+    /**
      *创建集群检查任务，用户检查用户的集群相关风险项
      * @param req CreateClusterCheckTaskRequest
      * @return CreateClusterCheckTaskResponse
@@ -3275,6 +3286,17 @@ public class TcssClient extends AbstractClient{
     public ModifyContainerNetStatusResponse ModifyContainerNetStatus(ModifyContainerNetStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyContainerNetStatus", ModifyContainerNetStatusResponse.class);
+    }
+
+    /**
+     *修改防护状态
+     * @param req ModifyDefendStatusRequest
+     * @return ModifyDefendStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDefendStatusResponse ModifyDefendStatus(ModifyDefendStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDefendStatus", ModifyDefendStatusResponse.class);
     }
 
     /**

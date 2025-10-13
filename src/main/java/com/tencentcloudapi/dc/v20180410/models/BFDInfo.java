@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class BFDInfo extends AbstractModel {
 
     /**
+    * 使能BFD多跳，0:未开启，2-255:BFD跳数
+    */
+    @SerializedName("EnableBfdMultiHop")
+    @Expose
+    private Long EnableBfdMultiHop;
+
+    /**
     * 健康检查次数
     */
     @SerializedName("ProbeFailedTimes")
@@ -36,6 +43,22 @@ public class BFDInfo extends AbstractModel {
     @SerializedName("Interval")
     @Expose
     private Long Interval;
+
+    /**
+     * Get 使能BFD多跳，0:未开启，2-255:BFD跳数 
+     * @return EnableBfdMultiHop 使能BFD多跳，0:未开启，2-255:BFD跳数
+     */
+    public Long getEnableBfdMultiHop() {
+        return this.EnableBfdMultiHop;
+    }
+
+    /**
+     * Set 使能BFD多跳，0:未开启，2-255:BFD跳数
+     * @param EnableBfdMultiHop 使能BFD多跳，0:未开启，2-255:BFD跳数
+     */
+    public void setEnableBfdMultiHop(Long EnableBfdMultiHop) {
+        this.EnableBfdMultiHop = EnableBfdMultiHop;
+    }
 
     /**
      * Get 健康检查次数 
@@ -77,6 +100,9 @@ public class BFDInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BFDInfo(BFDInfo source) {
+        if (source.EnableBfdMultiHop != null) {
+            this.EnableBfdMultiHop = new Long(source.EnableBfdMultiHop);
+        }
         if (source.ProbeFailedTimes != null) {
             this.ProbeFailedTimes = new Long(source.ProbeFailedTimes);
         }
@@ -90,6 +116,7 @@ public class BFDInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EnableBfdMultiHop", this.EnableBfdMultiHop);
         this.setParamSimple(map, prefix + "ProbeFailedTimes", this.ProbeFailedTimes);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
 

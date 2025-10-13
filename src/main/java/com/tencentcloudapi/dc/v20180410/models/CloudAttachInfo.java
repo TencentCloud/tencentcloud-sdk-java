@@ -173,6 +173,27 @@ cross-region：跨地域
     private String ArRegion;
 
     /**
+    * 运营商代码
+    */
+    @SerializedName("IapCode")
+    @Expose
+    private String IapCode;
+
+    /**
+    * IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+    */
+    @SerializedName("IdcPointType")
+    @Expose
+    private String IdcPointType;
+
+    /**
+    * 运营商链路是否有保护
+    */
+    @SerializedName("BIapLinkProtected")
+    @Expose
+    private Boolean BIapLinkProtected;
+
+    /**
      * Get 敏捷上云实例id 
      * @return InstanceId 敏捷上云实例id
      */
@@ -528,6 +549,54 @@ cross-region：跨地域
         this.ArRegion = ArRegion;
     }
 
+    /**
+     * Get 运营商代码 
+     * @return IapCode 运营商代码
+     */
+    public String getIapCode() {
+        return this.IapCode;
+    }
+
+    /**
+     * Set 运营商代码
+     * @param IapCode 运营商代码
+     */
+    public void setIapCode(String IapCode) {
+        this.IapCode = IapCode;
+    }
+
+    /**
+     * Get IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方 
+     * @return IdcPointType IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+     */
+    public String getIdcPointType() {
+        return this.IdcPointType;
+    }
+
+    /**
+     * Set IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+     * @param IdcPointType IDC侧类型。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+     */
+    public void setIdcPointType(String IdcPointType) {
+        this.IdcPointType = IdcPointType;
+    }
+
+    /**
+     * Get 运营商链路是否有保护 
+     * @return BIapLinkProtected 运营商链路是否有保护
+     */
+    public Boolean getBIapLinkProtected() {
+        return this.BIapLinkProtected;
+    }
+
+    /**
+     * Set 运营商链路是否有保护
+     * @param BIapLinkProtected 运营商链路是否有保护
+     */
+    public void setBIapLinkProtected(Boolean BIapLinkProtected) {
+        this.BIapLinkProtected = BIapLinkProtected;
+    }
+
     public CloudAttachInfo() {
     }
 
@@ -596,6 +665,15 @@ cross-region：跨地域
         if (source.ArRegion != null) {
             this.ArRegion = new String(source.ArRegion);
         }
+        if (source.IapCode != null) {
+            this.IapCode = new String(source.IapCode);
+        }
+        if (source.IdcPointType != null) {
+            this.IdcPointType = new String(source.IdcPointType);
+        }
+        if (source.BIapLinkProtected != null) {
+            this.BIapLinkProtected = new Boolean(source.BIapLinkProtected);
+        }
     }
 
 
@@ -623,6 +701,9 @@ cross-region：跨地域
         this.setParamSimple(map, prefix + "CloudAttachServiceGatewaysSupport", this.CloudAttachServiceGatewaysSupport);
         this.setParamSimple(map, prefix + "BUpdateBandwidth", this.BUpdateBandwidth);
         this.setParamSimple(map, prefix + "ArRegion", this.ArRegion);
+        this.setParamSimple(map, prefix + "IapCode", this.IapCode);
+        this.setParamSimple(map, prefix + "IdcPointType", this.IdcPointType);
+        this.setParamSimple(map, prefix + "BIapLinkProtected", this.BIapLinkProtected);
 
     }
 }

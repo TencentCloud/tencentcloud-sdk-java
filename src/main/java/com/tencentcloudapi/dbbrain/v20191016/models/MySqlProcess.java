@@ -80,6 +80,14 @@ public class MySqlProcess extends AbstractModel {
     private String Info;
 
     /**
+    * sql类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SqlType")
+    @Expose
+    private String SqlType;
+
+    /**
      * Get 线程ID。 
      * @return ID 线程ID。
      */
@@ -207,6 +215,26 @@ public class MySqlProcess extends AbstractModel {
         this.Info = Info;
     }
 
+    /**
+     * Get sql类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SqlType sql类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSqlType() {
+        return this.SqlType;
+    }
+
+    /**
+     * Set sql类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SqlType sql类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSqlType(String SqlType) {
+        this.SqlType = SqlType;
+    }
+
     public MySqlProcess() {
     }
 
@@ -239,6 +267,9 @@ public class MySqlProcess extends AbstractModel {
         if (source.Info != null) {
             this.Info = new String(source.Info);
         }
+        if (source.SqlType != null) {
+            this.SqlType = new String(source.SqlType);
+        }
     }
 
 
@@ -254,6 +285,7 @@ public class MySqlProcess extends AbstractModel {
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "Info", this.Info);
+        this.setParamSimple(map, prefix + "SqlType", this.SqlType);
 
     }
 }

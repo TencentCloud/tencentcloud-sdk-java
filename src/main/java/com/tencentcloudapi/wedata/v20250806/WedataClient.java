@@ -39,6 +39,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *关联项目集群
+     * @param req AddCalcEnginesToProjectRequest
+     * @return AddCalcEnginesToProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCalcEnginesToProjectResponse AddCalcEnginesToProject(AddCalcEnginesToProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddCalcEnginesToProject", AddCalcEnginesToProjectResponse.class);
+    }
+
+    /**
+     *该接口用于将指定执行资源组绑定到项目
+     * @param req AssociateResourceGroupToProjectRequest
+     * @return AssociateResourceGroupToProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateResourceGroupToProjectResponse AssociateResourceGroupToProject(AssociateResourceGroupToProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateResourceGroupToProject", AssociateResourceGroupToProjectResponse.class);
+    }
+
+    /**
      *新建代码文件
      * @param req CreateCodeFileRequest
      * @return CreateCodeFileResponse
@@ -72,6 +94,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *该接口用于在指定项目中创建数据源
+     * @param req CreateDataSourceRequest
+     * @return CreateDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataSourceResponse CreateDataSource(CreateDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDataSource", CreateDataSourceResponse.class);
+    }
+
+    /**
      *设置告警规则
      * @param req CreateOpsAlarmRuleRequest
      * @return CreateOpsAlarmRuleResponse
@@ -80,6 +113,28 @@ public class WedataClient extends AbstractClient{
     public CreateOpsAlarmRuleResponse CreateOpsAlarmRule(CreateOpsAlarmRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateOpsAlarmRule", CreateOpsAlarmRuleResponse.class);
+    }
+
+    /**
+     *创建项目，创建时包含集群信息
+     * @param req CreateProjectRequest
+     * @return CreateProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProject", CreateProjectResponse.class);
+    }
+
+    /**
+     *添加项目用户角色
+     * @param req CreateProjectMemberRequest
+     * @return CreateProjectMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProjectMemberResponse CreateProjectMember(CreateProjectMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProjectMember", CreateProjectMemberResponse.class);
     }
 
     /**
@@ -102,6 +157,17 @@ public class WedataClient extends AbstractClient{
     public CreateResourceFolderResponse CreateResourceFolder(CreateResourceFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateResourceFolder", CreateResourceFolderResponse.class);
+    }
+
+    /**
+     *该接口用于购买资源
+     * @param req CreateResourceGroupRequest
+     * @return CreateResourceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateResourceGroupResponse CreateResourceGroup(CreateResourceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateResourceGroup", CreateResourceGroupResponse.class);
     }
 
     /**
@@ -182,6 +248,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *该接口用于删除数据源
+     * @param req DeleteDataSourceRequest
+     * @return DeleteDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataSourceResponse DeleteDataSource(DeleteDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDataSource", DeleteDataSourceResponse.class);
+    }
+
+    /**
+     *RegisterLineage
+     * @param req DeleteLineageRequest
+     * @return DeleteLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLineageResponse DeleteLineage(DeleteLineageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLineage", DeleteLineageResponse.class);
+    }
+
+    /**
      *删除告警规则
      * @param req DeleteOpsAlarmRuleRequest
      * @return DeleteOpsAlarmRuleResponse
@@ -190,6 +278,17 @@ public class WedataClient extends AbstractClient{
     public DeleteOpsAlarmRuleResponse DeleteOpsAlarmRule(DeleteOpsAlarmRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteOpsAlarmRule", DeleteOpsAlarmRuleResponse.class);
+    }
+
+    /**
+     *删除项目用户
+     * @param req DeleteProjectMemberRequest
+     * @return DeleteProjectMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProjectMemberResponse DeleteProjectMember(DeleteProjectMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProjectMember", DeleteProjectMemberResponse.class);
     }
 
     /**
@@ -212,6 +311,17 @@ public class WedataClient extends AbstractClient{
     public DeleteResourceFolderResponse DeleteResourceFolder(DeleteResourceFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteResourceFolder", DeleteResourceFolderResponse.class);
+    }
+
+    /**
+     *该接口用于销毁资源
+     * @param req DeleteResourceGroupRequest
+     * @return DeleteResourceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteResourceGroupResponse DeleteResourceGroup(DeleteResourceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteResourceGroup", DeleteResourceGroupResponse.class);
     }
 
     /**
@@ -270,6 +380,39 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *禁用项目
+     * @param req DisableProjectRequest
+     * @return DisableProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableProjectResponse DisableProject(DisableProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableProject", DisableProjectResponse.class);
+    }
+
+    /**
+     *该接口用于将指定执行资源组解除与项目的绑定
+     * @param req DissociateResourceGroupFromProjectRequest
+     * @return DissociateResourceGroupFromProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DissociateResourceGroupFromProjectResponse DissociateResourceGroupFromProject(DissociateResourceGroupFromProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DissociateResourceGroupFromProject", DissociateResourceGroupFromProjectResponse.class);
+    }
+
+    /**
+     *启用项目
+     * @param req EnableProjectRequest
+     * @return EnableProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableProjectResponse EnableProject(EnableProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableProject", EnableProjectResponse.class);
+    }
+
+    /**
      *查询告警信息详情
      * @param req GetAlarmMessageRequest
      * @return GetAlarmMessageResponse
@@ -289,6 +432,28 @@ public class WedataClient extends AbstractClient{
     public GetCodeFileResponse GetCodeFile(GetCodeFileRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetCodeFile", GetCodeFileResponse.class);
+    }
+
+    /**
+     *该接口用于查看指定数据源的详细信息
+     * @param req GetDataSourceRequest
+     * @return GetDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDataSourceResponse GetDataSource(GetDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDataSource", GetDataSourceResponse.class);
+    }
+
+    /**
+     *数据源关联任务详情
+     * @param req GetDataSourceRelatedTasksRequest
+     * @return GetDataSourceRelatedTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDataSourceRelatedTasksResponse GetDataSourceRelatedTasks(GetDataSourceRelatedTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDataSourceRelatedTasks", GetDataSourceRelatedTasksResponse.class);
     }
 
     /**
@@ -347,6 +512,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取项目信息
+     * @param req GetProjectRequest
+     * @return GetProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetProjectResponse GetProject(GetProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetProject", GetProjectResponse.class);
+    }
+
+    /**
      *获取资源文件详情
      * @param req GetResourceFileRequest
      * @return GetResourceFileResponse
@@ -358,6 +534,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *该接口用于查看指定执行资源组的监控指标
+     * @param req GetResourceGroupMetricsRequest
+     * @return GetResourceGroupMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetResourceGroupMetricsResponse GetResourceGroupMetrics(GetResourceGroupMetricsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetResourceGroupMetrics", GetResourceGroupMetricsResponse.class);
+    }
+
+    /**
      *查询脚本详情
      * @param req GetSQLScriptRequest
      * @return GetSQLScriptResponse
@@ -366,6 +553,28 @@ public class WedataClient extends AbstractClient{
     public GetSQLScriptResponse GetSQLScript(GetSQLScriptRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetSQLScript", GetSQLScriptResponse.class);
+    }
+
+    /**
+     *查询表详情
+     * @param req GetTableRequest
+     * @return GetTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTableResponse GetTable(GetTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTable", GetTableResponse.class);
+    }
+
+    /**
+     *查询表所有字段列表
+     * @param req GetTableColumnsRequest
+     * @return GetTableColumnsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTableColumnsResponse GetTableColumns(GetTableColumnsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTableColumns", GetTableColumnsResponse.class);
     }
 
     /**
@@ -435,6 +644,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *修改项目用户角色
+     * @param req GrantMemberProjectRoleRequest
+     * @return GrantMemberProjectRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public GrantMemberProjectRoleResponse GrantMemberProjectRole(GrantMemberProjectRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GrantMemberProjectRole", GrantMemberProjectRoleResponse.class);
+    }
+
+    /**
      *实例批量终止操作-异步操作
      * @param req KillTaskInstancesAsyncRequest
      * @return KillTaskInstancesAsyncResponse
@@ -457,6 +677,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取资产目录信息
+     * @param req ListCatalogRequest
+     * @return ListCatalogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListCatalogResponse ListCatalog(ListCatalogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListCatalog", ListCatalogResponse.class);
+    }
+
+    /**
      *获取文件夹内容
      * @param req ListCodeFolderContentsRequest
      * @return ListCodeFolderContentsResponse
@@ -468,6 +699,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取表字段血缘信息
+     * @param req ListColumnLineageRequest
+     * @return ListColumnLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListColumnLineageResponse ListColumnLineage(ListColumnLineageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListColumnLineage", ListColumnLineageResponse.class);
+    }
+
+    /**
      *获取单次补录的所有实例详情
      * @param req ListDataBackfillInstancesRequest
      * @return ListDataBackfillInstancesResponse
@@ -476,6 +718,28 @@ public class WedataClient extends AbstractClient{
     public ListDataBackfillInstancesResponse ListDataBackfillInstances(ListDataBackfillInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListDataBackfillInstances", ListDataBackfillInstancesResponse.class);
+    }
+
+    /**
+     *该接口用于查询指定项目中的数据源列表
+     * @param req ListDataSourcesRequest
+     * @return ListDataSourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDataSourcesResponse ListDataSources(ListDataSourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDataSources", ListDataSourcesResponse.class);
+    }
+
+    /**
+     *获取资产数据库信息
+     * @param req ListDatabaseRequest
+     * @return ListDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDatabaseResponse ListDatabase(ListDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDatabase", ListDatabaseResponse.class);
     }
 
     /**
@@ -512,6 +776,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取资产血缘信息
+     * @param req ListLineageRequest
+     * @return ListLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLineageResponse ListLineage(ListLineageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListLineage", ListLineageResponse.class);
+    }
+
+    /**
      *查询告警规则列表
      * @param req ListOpsAlarmRulesRequest
      * @return ListOpsAlarmRulesResponse
@@ -545,6 +820,50 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取资产血缘信息
+     * @param req ListProcessLineageRequest
+     * @return ListProcessLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListProcessLineageResponse ListProcessLineage(ListProcessLineageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListProcessLineage", ListProcessLineageResponse.class);
+    }
+
+    /**
+     *获取项目下的用户，分页返回
+     * @param req ListProjectMembersRequest
+     * @return ListProjectMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListProjectMembersResponse ListProjectMembers(ListProjectMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListProjectMembers", ListProjectMembersResponse.class);
+    }
+
+    /**
+     *获取角色列表信息
+     * @param req ListProjectRolesRequest
+     * @return ListProjectRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListProjectRolesResponse ListProjectRoles(ListProjectRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListProjectRoles", ListProjectRolesResponse.class);
+    }
+
+    /**
+     *租户全局范围的项目列表，与用户查看范围无关.
+     * @param req ListProjectsRequest
+     * @return ListProjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListProjectsResponse ListProjects(ListProjectsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListProjects", ListProjectsResponse.class);
+    }
+
+    /**
      *获取资源文件列表
      * @param req ListResourceFilesRequest
      * @return ListResourceFilesResponse
@@ -567,6 +886,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *该接口用于查询执行资源组列表
+     * @param req ListResourceGroupsRequest
+     * @return ListResourceGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListResourceGroupsResponse ListResourceGroups(ListResourceGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListResourceGroups", ListResourceGroupsResponse.class);
+    }
+
+    /**
      *查询数据探索文件夹树，包括文件夹下的脚本
      * @param req ListSQLFolderContentsRequest
      * @return ListSQLFolderContentsResponse
@@ -586,6 +916,28 @@ public class WedataClient extends AbstractClient{
     public ListSQLScriptRunsResponse ListSQLScriptRuns(ListSQLScriptRunsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListSQLScriptRuns", ListSQLScriptRunsResponse.class);
+    }
+
+    /**
+     *获取资产数据库Schema信息
+     * @param req ListSchemaRequest
+     * @return ListSchemaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSchemaResponse ListSchema(ListSchemaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListSchema", ListSchemaResponse.class);
+    }
+
+    /**
+     *获取资产表信息
+     * @param req ListTableRequest
+     * @return ListTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTableResponse ListTable(ListTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTable", ListTableResponse.class);
     }
 
     /**
@@ -630,6 +982,17 @@ public class WedataClient extends AbstractClient{
     public ListTasksResponse ListTasks(ListTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListTasks", ListTasksResponse.class);
+    }
+
+    /**
+     *获取所有主账号角色列表
+     * @param req ListTenantRolesRequest
+     * @return ListTenantRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTenantRolesResponse ListTenantRoles(ListTenantRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTenantRoles", ListTenantRolesResponse.class);
     }
 
     /**
@@ -696,6 +1059,28 @@ public class WedataClient extends AbstractClient{
     public PauseOpsTasksAsyncResponse PauseOpsTasksAsync(PauseOpsTasksAsyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "PauseOpsTasksAsync", PauseOpsTasksAsyncResponse.class);
+    }
+
+    /**
+     *RegisterLineage
+     * @param req RegisterLineageRequest
+     * @return RegisterLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterLineageResponse RegisterLineage(RegisterLineageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RegisterLineage", RegisterLineageResponse.class);
+    }
+
+    /**
+     *删除项目用户角色
+     * @param req RemoveMemberProjectRoleRequest
+     * @return RemoveMemberProjectRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveMemberProjectRoleResponse RemoveMemberProjectRole(RemoveMemberProjectRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveMemberProjectRole", RemoveMemberProjectRoleResponse.class);
     }
 
     /**
@@ -787,6 +1172,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *该接口用于更新数据源
+     * @param req UpdateDataSourceRequest
+     * @return UpdateDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDataSourceResponse UpdateDataSource(UpdateDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDataSource", UpdateDataSourceResponse.class);
+    }
+
+    /**
      *修改告警规则
      * @param req UpdateOpsAlarmRuleRequest
      * @return UpdateOpsAlarmRuleResponse
@@ -809,6 +1205,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *修改项目基础信息。
+     * @param req UpdateProjectRequest
+     * @return UpdateProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProjectResponse UpdateProject(UpdateProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateProject", UpdateProjectResponse.class);
+    }
+
+    /**
      *更新资源文件
      * @param req UpdateResourceFileRequest
      * @return UpdateResourceFileResponse
@@ -820,7 +1227,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *创建资源文件文件夹
+     *更新资源文件夹
      * @param req UpdateResourceFolderRequest
      * @return UpdateResourceFolderResponse
      * @throws TencentCloudSDKException
@@ -828,6 +1235,17 @@ public class WedataClient extends AbstractClient{
     public UpdateResourceFolderResponse UpdateResourceFolder(UpdateResourceFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateResourceFolder", UpdateResourceFolderResponse.class);
+    }
+
+    /**
+     *该接口用于变配/续费资源
+     * @param req UpdateResourceGroupRequest
+     * @return UpdateResourceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateResourceGroupResponse UpdateResourceGroup(UpdateResourceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateResourceGroup", UpdateResourceGroupResponse.class);
     }
 
     /**

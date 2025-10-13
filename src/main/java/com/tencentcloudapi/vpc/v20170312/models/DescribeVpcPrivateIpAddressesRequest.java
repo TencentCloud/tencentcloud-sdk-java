@@ -31,7 +31,7 @@ public class DescribeVpcPrivateIpAddressesRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+    * 内网`IP`地址列表，批量查询单次请求最多支持`100`个。
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeVpcPrivateIpAddressesRequest extends AbstractModel {
     }
 
     /**
-     * Get 内网`IP`地址列表，批量查询单次请求最多支持`10`个。 
-     * @return PrivateIpAddresses 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+     * Get 内网`IP`地址列表，批量查询单次请求最多支持`100`个。 
+     * @return PrivateIpAddresses 内网`IP`地址列表，批量查询单次请求最多支持`100`个。
      */
     public String [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
     }
 
     /**
-     * Set 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
-     * @param PrivateIpAddresses 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+     * Set 内网`IP`地址列表，批量查询单次请求最多支持`100`个。
+     * @param PrivateIpAddresses 内网`IP`地址列表，批量查询单次请求最多支持`100`个。
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;

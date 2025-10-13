@@ -45,6 +45,9 @@ public enum OcrErrorCode {
      /* 照片未检测到名片。 */
      FAILEDOPERATION_IMAGENOBUSINESSCARD("FailedOperation.ImageNoBusinessCard"),
      
+     /* 图片中未检测到手写体 */
+     FAILEDOPERATION_IMAGENOHANDWRITE("FailedOperation.ImageNoHandWrite"),
+     
      /* 图片中未检测到第二代身份证或临时身份证。 */
      FAILEDOPERATION_IMAGENOIDCARD("FailedOperation.ImageNoIdCard"),
      

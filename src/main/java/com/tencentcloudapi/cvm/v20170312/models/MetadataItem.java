@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class MetadataItem extends AbstractModel {
 
     /**
-    * 自定义metadata键，需符合正则 ^[a-zA-Z0-9_-]+$，长度 ≤128 字节（大小写敏感）；
-
+    * 自定义metadata键，由大写字母（A-Z）、小写字母（a-z）、数字（0-9）、下划线（_）或连字符（-）组成，大小上限为128 字节。
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 自定义metadata值，支持任意数据（含二进制），大小 ≤256 KB（大小写敏感）；
+    * 自定义metadata值，大小上限为256 KB。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 自定义metadata键，需符合正则 ^[a-zA-Z0-9_-]+$，长度 ≤128 字节（大小写敏感）；
- 
-     * @return Key 自定义metadata键，需符合正则 ^[a-zA-Z0-9_-]+$，长度 ≤128 字节（大小写敏感）；
-
+     * Get 自定义metadata键，由大写字母（A-Z）、小写字母（a-z）、数字（0-9）、下划线（_）或连字符（-）组成，大小上限为128 字节。 
+     * @return Key 自定义metadata键，由大写字母（A-Z）、小写字母（a-z）、数字（0-9）、下划线（_）或连字符（-）组成，大小上限为128 字节。
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 自定义metadata键，需符合正则 ^[a-zA-Z0-9_-]+$，长度 ≤128 字节（大小写敏感）；
-
-     * @param Key 自定义metadata键，需符合正则 ^[a-zA-Z0-9_-]+$，长度 ≤128 字节（大小写敏感）；
-
+     * Set 自定义metadata键，由大写字母（A-Z）、小写字母（a-z）、数字（0-9）、下划线（_）或连字符（-）组成，大小上限为128 字节。
+     * @param Key 自定义metadata键，由大写字母（A-Z）、小写字母（a-z）、数字（0-9）、下划线（_）或连字符（-）组成，大小上限为128 字节。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 自定义metadata值，支持任意数据（含二进制），大小 ≤256 KB（大小写敏感）； 
-     * @return Value 自定义metadata值，支持任意数据（含二进制），大小 ≤256 KB（大小写敏感）；
+     * Get 自定义metadata值，大小上限为256 KB。 
+     * @return Value 自定义metadata值，大小上限为256 KB。
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 自定义metadata值，支持任意数据（含二进制），大小 ≤256 KB（大小写敏感）；
-     * @param Value 自定义metadata值，支持任意数据（含二进制），大小 ≤256 KB（大小写敏感）；
+     * Set 自定义metadata值，大小上限为256 KB。
+     * @param Value 自定义metadata值，大小上限为256 KB。
      */
     public void setValue(String Value) {
         this.Value = Value;

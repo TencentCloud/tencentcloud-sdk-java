@@ -38,6 +38,13 @@ public class ModifyPrivateNatGatewayAttributeRequest extends AbstractModel {
     private String NatGatewayName;
 
     /**
+    * 私网NAT实例是否开启删除保护
+    */
+    @SerializedName("DeletionProtectionEnabled")
+    @Expose
+    private Boolean DeletionProtectionEnabled;
+
+    /**
      * Get 私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。 
      * @return NatGatewayId 私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。
      */
@@ -69,6 +76,22 @@ public class ModifyPrivateNatGatewayAttributeRequest extends AbstractModel {
         this.NatGatewayName = NatGatewayName;
     }
 
+    /**
+     * Get 私网NAT实例是否开启删除保护 
+     * @return DeletionProtectionEnabled 私网NAT实例是否开启删除保护
+     */
+    public Boolean getDeletionProtectionEnabled() {
+        return this.DeletionProtectionEnabled;
+    }
+
+    /**
+     * Set 私网NAT实例是否开启删除保护
+     * @param DeletionProtectionEnabled 私网NAT实例是否开启删除保护
+     */
+    public void setDeletionProtectionEnabled(Boolean DeletionProtectionEnabled) {
+        this.DeletionProtectionEnabled = DeletionProtectionEnabled;
+    }
+
     public ModifyPrivateNatGatewayAttributeRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ModifyPrivateNatGatewayAttributeRequest extends AbstractModel {
         if (source.NatGatewayName != null) {
             this.NatGatewayName = new String(source.NatGatewayName);
         }
+        if (source.DeletionProtectionEnabled != null) {
+            this.DeletionProtectionEnabled = new Boolean(source.DeletionProtectionEnabled);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyPrivateNatGatewayAttributeRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
         this.setParamSimple(map, prefix + "NatGatewayName", this.NatGatewayName);
+        this.setParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
 
     }
 }

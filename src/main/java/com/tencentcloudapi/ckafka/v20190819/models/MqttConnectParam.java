@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class MqttConnectParam extends AbstractModel {
 
     /**
+    * MQTT的连接port
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
+
+    /**
     * MQTT连接源的用户名
     */
     @SerializedName("UserName")
@@ -43,6 +50,13 @@ public class MqttConnectParam extends AbstractModel {
     @SerializedName("Resource")
     @Expose
     private String Resource;
+
+    /**
+    * MQTT的连接ip
+    */
+    @SerializedName("ServiceVip")
+    @Expose
+    private String ServiceVip;
 
     /**
     * MQTT Instance vpc-id
@@ -71,6 +85,29 @@ public class MqttConnectParam extends AbstractModel {
     @SerializedName("Region")
     @Expose
     private String Region;
+
+    /**
+    * IP
+    */
+    @SerializedName("Ip")
+    @Expose
+    private String Ip;
+
+    /**
+     * Get MQTT的连接port 
+     * @return Port MQTT的连接port
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set MQTT的连接port
+     * @param Port MQTT的连接port
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
+    }
 
     /**
      * Get MQTT连接源的用户名 
@@ -118,6 +155,22 @@ public class MqttConnectParam extends AbstractModel {
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
+    }
+
+    /**
+     * Get MQTT的连接ip 
+     * @return ServiceVip MQTT的连接ip
+     */
+    public String getServiceVip() {
+        return this.ServiceVip;
+    }
+
+    /**
+     * Set MQTT的连接ip
+     * @param ServiceVip MQTT的连接ip
+     */
+    public void setServiceVip(String ServiceVip) {
+        this.ServiceVip = ServiceVip;
     }
 
     /**
@@ -184,6 +237,22 @@ public class MqttConnectParam extends AbstractModel {
         this.Region = Region;
     }
 
+    /**
+     * Get IP 
+     * @return Ip IP
+     */
+    public String getIp() {
+        return this.Ip;
+    }
+
+    /**
+     * Set IP
+     * @param Ip IP
+     */
+    public void setIp(String Ip) {
+        this.Ip = Ip;
+    }
+
     public MqttConnectParam() {
     }
 
@@ -192,6 +261,9 @@ public class MqttConnectParam extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public MqttConnectParam(MqttConnectParam source) {
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
         if (source.UserName != null) {
             this.UserName = new String(source.UserName);
         }
@@ -200,6 +272,9 @@ public class MqttConnectParam extends AbstractModel {
         }
         if (source.Resource != null) {
             this.Resource = new String(source.Resource);
+        }
+        if (source.ServiceVip != null) {
+            this.ServiceVip = new String(source.ServiceVip);
         }
         if (source.UniqVpcId != null) {
             this.UniqVpcId = new String(source.UniqVpcId);
@@ -213,6 +288,9 @@ public class MqttConnectParam extends AbstractModel {
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
     }
 
 
@@ -220,13 +298,16 @@ public class MqttConnectParam extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "Resource", this.Resource);
+        this.setParamSimple(map, prefix + "ServiceVip", this.ServiceVip);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "SelfBuilt", this.SelfBuilt);
         this.setParamSimple(map, prefix + "IsUpdate", this.IsUpdate);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Ip", this.Ip);
 
     }
 }

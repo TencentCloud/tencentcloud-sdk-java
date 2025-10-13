@@ -76,7 +76,7 @@ back：后视图；
 
     /**
     * 生成3D模型的面数，默认值为500000。
-可支持生成面数范围，参考值：40000-500000。
+可支持生成面数范围，参考值：40000-1500000。
     */
     @SerializedName("FaceCount")
     @Expose
@@ -92,6 +92,17 @@ Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl
     @SerializedName("GenerateType")
     @Expose
     private String GenerateType;
+
+    /**
+    * 该参数仅在GenerateType中选择LowPoly模式可生效。
+
+多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
+triangle: 三角形面。
+quadrilateral: 四边形面与三角形面混合生成。
+    */
+    @SerializedName("PolygonType")
+    @Expose
+    private String PolygonType;
 
     /**
      * Get 文生3D，3D内容的描述，中文正向提示词。
@@ -239,9 +250,9 @@ back：后视图；
 
     /**
      * Get 生成3D模型的面数，默认值为500000。
-可支持生成面数范围，参考值：40000-500000。 
+可支持生成面数范围，参考值：40000-1500000。 
      * @return FaceCount 生成3D模型的面数，默认值为500000。
-可支持生成面数范围，参考值：40000-500000。
+可支持生成面数范围，参考值：40000-1500000。
      */
     public Long getFaceCount() {
         return this.FaceCount;
@@ -249,9 +260,9 @@ back：后视图；
 
     /**
      * Set 生成3D模型的面数，默认值为500000。
-可支持生成面数范围，参考值：40000-500000。
+可支持生成面数范围，参考值：40000-1500000。
      * @param FaceCount 生成3D模型的面数，默认值为500000。
-可支持生成面数范围，参考值：40000-500000。
+可支持生成面数范围，参考值：40000-1500000。
      */
     public void setFaceCount(Long FaceCount) {
         this.FaceCount = FaceCount;
@@ -289,6 +300,38 @@ Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl
         this.GenerateType = GenerateType;
     }
 
+    /**
+     * Get 该参数仅在GenerateType中选择LowPoly模式可生效。
+
+多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
+triangle: 三角形面。
+quadrilateral: 四边形面与三角形面混合生成。 
+     * @return PolygonType 该参数仅在GenerateType中选择LowPoly模式可生效。
+
+多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
+triangle: 三角形面。
+quadrilateral: 四边形面与三角形面混合生成。
+     */
+    public String getPolygonType() {
+        return this.PolygonType;
+    }
+
+    /**
+     * Set 该参数仅在GenerateType中选择LowPoly模式可生效。
+
+多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
+triangle: 三角形面。
+quadrilateral: 四边形面与三角形面混合生成。
+     * @param PolygonType 该参数仅在GenerateType中选择LowPoly模式可生效。
+
+多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
+triangle: 三角形面。
+quadrilateral: 四边形面与三角形面混合生成。
+     */
+    public void setPolygonType(String PolygonType) {
+        this.PolygonType = PolygonType;
+    }
+
     public SubmitHunyuanTo3DProJobRequest() {
     }
 
@@ -321,6 +364,9 @@ Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl
         if (source.GenerateType != null) {
             this.GenerateType = new String(source.GenerateType);
         }
+        if (source.PolygonType != null) {
+            this.PolygonType = new String(source.PolygonType);
+        }
     }
 
 
@@ -335,6 +381,7 @@ Sketch：可输入草图或线稿图生成模型，此模式下prompt和ImageUrl
         this.setParamSimple(map, prefix + "EnablePBR", this.EnablePBR);
         this.setParamSimple(map, prefix + "FaceCount", this.FaceCount);
         this.setParamSimple(map, prefix + "GenerateType", this.GenerateType);
+        this.setParamSimple(map, prefix + "PolygonType", this.PolygonType);
 
     }
 }

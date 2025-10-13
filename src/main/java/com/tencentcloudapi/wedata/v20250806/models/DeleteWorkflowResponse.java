@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteWorkflowResponse extends AbstractModel {
 
     /**
-    * 返回删除成功的工作流任务个数、失败个数、任务总数
+    * 是否删除成功
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteWorkflowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回删除成功的工作流任务个数、失败个数、任务总数 
-     * @return Data 返回删除成功的工作流任务个数、失败个数、任务总数
+     * Get 是否删除成功 
+     * @return Data 是否删除成功
      */
     public DeleteWorkflowResult getData() {
         return this.Data;
     }
 
     /**
-     * Set 返回删除成功的工作流任务个数、失败个数、任务总数
-     * @param Data 返回删除成功的工作流任务个数、失败个数、任务总数
+     * Set 是否删除成功
+     * @param Data 是否删除成功
      */
     public void setData(DeleteWorkflowResult Data) {
         this.Data = Data;

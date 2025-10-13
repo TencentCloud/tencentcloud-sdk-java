@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class CreateWorkflowRunRequest extends AbstractModel {
 
     /**
-    * 运行环境。0: 测试环境； 1: 正式环境
-    */
-    @SerializedName("RunEnv")
-    @Expose
-    private Long RunEnv;
-
-    /**
     * 应用ID
     */
     @SerializedName("AppBizId")
     @Expose
     private String AppBizId;
+
+    /**
+    * 运行环境。0: 测试环境； 1: 正式环境
+    */
+    @SerializedName("RunEnv")
+    @Expose
+    private Long RunEnv;
 
     /**
     * 用户输入的内容
@@ -52,22 +52,6 @@ public class CreateWorkflowRunRequest extends AbstractModel {
     private CustomVariable [] CustomVariables;
 
     /**
-     * Get 运行环境。0: 测试环境； 1: 正式环境 
-     * @return RunEnv 运行环境。0: 测试环境； 1: 正式环境
-     */
-    public Long getRunEnv() {
-        return this.RunEnv;
-    }
-
-    /**
-     * Set 运行环境。0: 测试环境； 1: 正式环境
-     * @param RunEnv 运行环境。0: 测试环境； 1: 正式环境
-     */
-    public void setRunEnv(Long RunEnv) {
-        this.RunEnv = RunEnv;
-    }
-
-    /**
      * Get 应用ID 
      * @return AppBizId 应用ID
      */
@@ -81,6 +65,22 @@ public class CreateWorkflowRunRequest extends AbstractModel {
      */
     public void setAppBizId(String AppBizId) {
         this.AppBizId = AppBizId;
+    }
+
+    /**
+     * Get 运行环境。0: 测试环境； 1: 正式环境 
+     * @return RunEnv 运行环境。0: 测试环境； 1: 正式环境
+     */
+    public Long getRunEnv() {
+        return this.RunEnv;
+    }
+
+    /**
+     * Set 运行环境。0: 测试环境； 1: 正式环境
+     * @param RunEnv 运行环境。0: 测试环境； 1: 正式环境
+     */
+    public void setRunEnv(Long RunEnv) {
+        this.RunEnv = RunEnv;
     }
 
     /**
@@ -123,11 +123,11 @@ public class CreateWorkflowRunRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateWorkflowRunRequest(CreateWorkflowRunRequest source) {
-        if (source.RunEnv != null) {
-            this.RunEnv = new Long(source.RunEnv);
-        }
         if (source.AppBizId != null) {
             this.AppBizId = new String(source.AppBizId);
+        }
+        if (source.RunEnv != null) {
+            this.RunEnv = new Long(source.RunEnv);
         }
         if (source.Query != null) {
             this.Query = new String(source.Query);
@@ -145,8 +145,8 @@ public class CreateWorkflowRunRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RunEnv", this.RunEnv);
         this.setParamSimple(map, prefix + "AppBizId", this.AppBizId);
+        this.setParamSimple(map, prefix + "RunEnv", this.RunEnv);
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamArrayObj(map, prefix + "CustomVariables.", this.CustomVariables);
 

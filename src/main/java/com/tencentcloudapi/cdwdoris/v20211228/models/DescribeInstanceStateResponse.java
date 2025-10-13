@@ -24,7 +24,11 @@ import java.util.HashMap;
 public class DescribeInstanceStateResponse extends AbstractModel {
 
     /**
-    * 集群状态，例如：Serving
+    * 集群状态 
+ Init  创建中 
+Serving   运行中 
+Isolated   已隔离 
+Changing  变更中
     */
     @SerializedName("InstanceState")
     @Expose
@@ -87,16 +91,32 @@ public class DescribeInstanceStateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群状态，例如：Serving 
-     * @return InstanceState 集群状态，例如：Serving
+     * Get 集群状态 
+ Init  创建中 
+Serving   运行中 
+Isolated   已隔离 
+Changing  变更中 
+     * @return InstanceState 集群状态 
+ Init  创建中 
+Serving   运行中 
+Isolated   已隔离 
+Changing  变更中
      */
     public String getInstanceState() {
         return this.InstanceState;
     }
 
     /**
-     * Set 集群状态，例如：Serving
-     * @param InstanceState 集群状态，例如：Serving
+     * Set 集群状态 
+ Init  创建中 
+Serving   运行中 
+Isolated   已隔离 
+Changing  变更中
+     * @param InstanceState 集群状态 
+ Init  创建中 
+Serving   运行中 
+Isolated   已隔离 
+Changing  变更中
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;

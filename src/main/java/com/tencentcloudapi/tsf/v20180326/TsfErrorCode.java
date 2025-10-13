@@ -180,9 +180,6 @@ public enum TsfErrorCode {
      /* 全链路灰度规则启用失败。 */
      FAILEDOPERATION_LANERULEENABLECONSULFAILED("FailedOperation.LaneRuleEnableConsulFailed"),
      
-     /* 该灰度规则生效中,请关闭后删除 */
-     FAILEDOPERATION_LANERULEENABLEDRULEDELETEFAILED("FailedOperation.LaneRuleEnabledRuleDeleteFailed"),
-     
      /* 用户全链路灰度规则最大100条。 */
      FAILEDOPERATION_LANERULEMAXLIMIT("FailedOperation.LaneRuleMaxLimit"),
      
@@ -950,6 +947,9 @@ public enum TsfErrorCode {
      
      /* 泳道备注不能超过200个字符。 */
      INVALIDPARAMETERVALUE_LANEINFOREMARKTOOLONG("InvalidParameterValue.LaneInfoRemarkTooLong"),
+     
+     /* 该灰度规则生效中,请关闭后删除 */
+     INVALIDPARAMETERVALUE_LANERULEENABLEDRULEDELETEFAILED("InvalidParameterValue.LaneRuleEnabledRuleDeleteFailed"),
      
      /* 全链路灰度规则ID错误 */
      INVALIDPARAMETERVALUE_LANERULEIDINVALID("InvalidParameterValue.LaneRuleIdInvalid"),

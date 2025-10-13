@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceInfo extends AbstractModel {
 
     /**
-    * 集群实例ID, "cdw-xxxx" 字符串类型
+    * 集群实例ID, "cdwdoris-xxxx" 字符串类型
     */
     @SerializedName("InstanceId")
     @Expose
@@ -39,9 +39,10 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
+Init  创建中
+Serving   运行中
+Isolated   已隔离
+Changing  变更中
     */
     @SerializedName("Status")
     @Expose
@@ -156,7 +157,7 @@ Modify 集群变更中；
     private Long RegionId;
 
     /**
-    * 可用区说明，例如 "广州二区"
+    * 可用区说明，例如 "广州三区"
     */
     @SerializedName("ZoneDesc")
     @Expose
@@ -417,16 +418,30 @@ Modify 集群变更中；
     private Boolean IsMasterNonVM;
 
     /**
-     * Get 集群实例ID, "cdw-xxxx" 字符串类型 
-     * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
+    * Cos容量包大小
+    */
+    @SerializedName("CosPkgCapacity")
+    @Expose
+    private Long CosPkgCapacity;
+
+    /**
+    * 集群是否使用托管桶
+    */
+    @SerializedName("UseManagedBucket")
+    @Expose
+    private Boolean UseManagedBucket;
+
+    /**
+     * Get 集群实例ID, "cdwdoris-xxxx" 字符串类型 
+     * @return InstanceId 集群实例ID, "cdwdoris-xxxx" 字符串类型
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例ID, "cdw-xxxx" 字符串类型
-     * @param InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
+     * Set 集群实例ID, "cdwdoris-xxxx" 字符串类型
+     * @param InstanceId 集群实例ID, "cdwdoris-xxxx" 字符串类型
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -450,13 +465,15 @@ Modify 集群变更中；
 
     /**
      * Get 状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中； 
+Init  创建中
+Serving   运行中
+Isolated   已隔离
+Changing  变更中 
      * @return Status 状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
+Init  创建中
+Serving   运行中
+Isolated   已隔离
+Changing  变更中
      */
     public String getStatus() {
         return this.Status;
@@ -464,13 +481,15 @@ Modify 集群变更中；
 
     /**
      * Set 状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
+Init  创建中
+Serving   运行中
+Isolated   已隔离
+Changing  变更中
      * @param Status 状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
+Init  创建中
+Serving   运行中
+Isolated   已隔离
+Changing  变更中
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -729,16 +748,16 @@ Modify 集群变更中；
     }
 
     /**
-     * Get 可用区说明，例如 "广州二区" 
-     * @return ZoneDesc 可用区说明，例如 "广州二区"
+     * Get 可用区说明，例如 "广州三区" 
+     * @return ZoneDesc 可用区说明，例如 "广州三区"
      */
     public String getZoneDesc() {
         return this.ZoneDesc;
     }
 
     /**
-     * Set 可用区说明，例如 "广州二区"
-     * @param ZoneDesc 可用区说明，例如 "广州二区"
+     * Set 可用区说明，例如 "广州三区"
+     * @param ZoneDesc 可用区说明，例如 "广州三区"
      */
     public void setZoneDesc(String ZoneDesc) {
         this.ZoneDesc = ZoneDesc;
@@ -1332,6 +1351,38 @@ Modify 集群变更中；
         this.IsMasterNonVM = IsMasterNonVM;
     }
 
+    /**
+     * Get Cos容量包大小 
+     * @return CosPkgCapacity Cos容量包大小
+     */
+    public Long getCosPkgCapacity() {
+        return this.CosPkgCapacity;
+    }
+
+    /**
+     * Set Cos容量包大小
+     * @param CosPkgCapacity Cos容量包大小
+     */
+    public void setCosPkgCapacity(Long CosPkgCapacity) {
+        this.CosPkgCapacity = CosPkgCapacity;
+    }
+
+    /**
+     * Get 集群是否使用托管桶 
+     * @return UseManagedBucket 集群是否使用托管桶
+     */
+    public Boolean getUseManagedBucket() {
+        return this.UseManagedBucket;
+    }
+
+    /**
+     * Set 集群是否使用托管桶
+     * @param UseManagedBucket 集群是否使用托管桶
+     */
+    public void setUseManagedBucket(Boolean UseManagedBucket) {
+        this.UseManagedBucket = UseManagedBucket;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1514,6 +1565,12 @@ Modify 集群变更中；
         if (source.IsMasterNonVM != null) {
             this.IsMasterNonVM = new Boolean(source.IsMasterNonVM);
         }
+        if (source.CosPkgCapacity != null) {
+            this.CosPkgCapacity = new Long(source.CosPkgCapacity);
+        }
+        if (source.UseManagedBucket != null) {
+            this.UseManagedBucket = new Boolean(source.UseManagedBucket);
+        }
     }
 
 
@@ -1576,6 +1633,8 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "ComputeGroupCount", this.ComputeGroupCount);
         this.setParamSimple(map, prefix + "CosStorageSize", this.CosStorageSize);
         this.setParamSimple(map, prefix + "IsMasterNonVM", this.IsMasterNonVM);
+        this.setParamSimple(map, prefix + "CosPkgCapacity", this.CosPkgCapacity);
+        this.setParamSimple(map, prefix + "UseManagedBucket", this.UseManagedBucket);
 
     }
 }

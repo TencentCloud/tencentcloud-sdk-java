@@ -1826,6 +1826,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeAddressTemplateGroupInstances）用于查询参数模板IP地址组口关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+     * @param req DescribeAddressTemplateGroupInstancesRequest
+     * @return DescribeAddressTemplateGroupInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAddressTemplateGroupInstancesResponse DescribeAddressTemplateGroupInstances(DescribeAddressTemplateGroupInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAddressTemplateGroupInstances", DescribeAddressTemplateGroupInstancesResponse.class);
+    }
+
+    /**
      *本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合。
      * @param req DescribeAddressTemplateGroupsRequest
      * @return DescribeAddressTemplateGroupsResponse
@@ -1834,6 +1845,17 @@ public class VpcClient extends AbstractClient{
     public DescribeAddressTemplateGroupsResponse DescribeAddressTemplateGroups(DescribeAddressTemplateGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAddressTemplateGroups", DescribeAddressTemplateGroupsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeAddressTemplateInstances）用于查询参数模板IP地址关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+     * @param req DescribeAddressTemplateInstancesRequest
+     * @return DescribeAddressTemplateInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAddressTemplateInstancesResponse DescribeAddressTemplateInstances(DescribeAddressTemplateInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAddressTemplateInstances", DescribeAddressTemplateInstancesResponse.class);
     }
 
     /**
@@ -2670,6 +2692,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeServiceTemplateGroupInstances）用于查询参数模板协议端口组关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+     * @param req DescribeServiceTemplateGroupInstancesRequest
+     * @return DescribeServiceTemplateGroupInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceTemplateGroupInstancesResponse DescribeServiceTemplateGroupInstances(DescribeServiceTemplateGroupInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServiceTemplateGroupInstances", DescribeServiceTemplateGroupInstancesResponse.class);
+    }
+
+    /**
      *本接口（DescribeServiceTemplateGroups）用于查询协议端口模板集合。
      * @param req DescribeServiceTemplateGroupsRequest
      * @return DescribeServiceTemplateGroupsResponse
@@ -2678,6 +2711,17 @@ public class VpcClient extends AbstractClient{
     public DescribeServiceTemplateGroupsResponse DescribeServiceTemplateGroups(DescribeServiceTemplateGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeServiceTemplateGroups", DescribeServiceTemplateGroupsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeServiceTemplateInstances）用于查询参数模板协议端口关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
+     * @param req DescribeServiceTemplateInstancesRequest
+     * @return DescribeServiceTemplateInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceTemplateInstancesResponse DescribeServiceTemplateInstances(DescribeServiceTemplateInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServiceTemplateInstances", DescribeServiceTemplateInstancesResponse.class);
     }
 
     /**

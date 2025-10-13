@@ -114,6 +114,9 @@ public enum HaiErrorCode {
      /* 高性能应用服务相关角色获取失败，无法完成操作 */
      UNAUTHORIZEDOPERATION_GETROLEERROR("UnauthorizedOperation.GetRoleError"),
      
+     /* token不正确 */
+     UNAUTHORIZEDOPERATION_INVALIDTOKEN("UnauthorizedOperation.InvalidToken"),
+     
      /* 用户账号的网络类型是传统型，不允许使用HAI */
      UNAUTHORIZEDOPERATION_UNAUTHORIZEDNETWORKUSER("UnauthorizedOperation.UnauthorizedNetworkUser"),
      

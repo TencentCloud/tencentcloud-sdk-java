@@ -6,6 +6,9 @@ public enum WedataErrorCode {
      /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
+     /* 当前操作的资源状态不合法。 */
+     FAILEDOPERATION_EXECUTORCLUSTERSTATUSERROR("FailedOperation.ExecutorClusterStatusError"),
+     
      /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
@@ -17,6 +20,15 @@ public enum WedataErrorCode {
      
      /* Missing Servlet Request Parameter */
      INVALIDPARAMETER_MISSINGREQUESTPARAMETER("InvalidParameter.MissingRequestParameter"),
+     
+     /* 已超过系统安全配额。 */
+     INVALIDPARAMETER_QUOTAEXCEEDERROR("InvalidParameter.QuotaExceedError"),
+     
+     /* 项目名重复。 */
+     INVALIDPARAMETER_WORKSPACENAMEDUPLICATION("InvalidParameter.WorkspaceNameDuplication"),
+     
+     /* 工作空间不存在。 */
+     INVALIDPARAMETER_WORKSPACENOTEXIST("InvalidParameter.WorkspaceNotExist"),
      
      /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
@@ -36,11 +48,17 @@ public enum WedataErrorCode {
      /* 操作被拒绝。 */
      OPERATIONDENIED("OperationDenied"),
      
+     /* 用户不在白名单。 */
+     OPERATIONDENIED_USERNOTINWHITELISTERROR("OperationDenied.UserNotInWhitelistError"),
+     
      /* 资源被占用。 */
      RESOURCEINUSE("ResourceInUse"),
      
      /* 资源不存在。 */
-     RESOURCENOTFOUND("ResourceNotFound");
+     RESOURCENOTFOUND("ResourceNotFound"),
+     
+     /* 未授权操作。 */
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation");
      
     private String value;
     private WedataErrorCode (String value){

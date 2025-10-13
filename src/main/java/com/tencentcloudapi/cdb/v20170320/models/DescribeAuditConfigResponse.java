@@ -45,6 +45,13 @@ public class DescribeAuditConfigResponse extends AbstractModel {
     private String IsClosing;
 
     /**
+    * 是否正在开启审计。目前支持的值包括："false"-否，"true"-是
+    */
+    @SerializedName("IsOpening")
+    @Expose
+    private String IsOpening;
+
+    /**
     * 审计服务开通时间。
     */
     @SerializedName("CreateTime")
@@ -107,6 +114,22 @@ public class DescribeAuditConfigResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否正在开启审计。目前支持的值包括："false"-否，"true"-是 
+     * @return IsOpening 是否正在开启审计。目前支持的值包括："false"-否，"true"-是
+     */
+    public String getIsOpening() {
+        return this.IsOpening;
+    }
+
+    /**
+     * Set 是否正在开启审计。目前支持的值包括："false"-否，"true"-是
+     * @param IsOpening 是否正在开启审计。目前支持的值包括："false"-否，"true"-是
+     */
+    public void setIsOpening(String IsOpening) {
+        this.IsOpening = IsOpening;
+    }
+
+    /**
      * Get 审计服务开通时间。 
      * @return CreateTime 审计服务开通时间。
      */
@@ -155,6 +178,9 @@ public class DescribeAuditConfigResponse extends AbstractModel {
         if (source.IsClosing != null) {
             this.IsClosing = new String(source.IsClosing);
         }
+        if (source.IsOpening != null) {
+            this.IsOpening = new String(source.IsOpening);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -171,6 +197,7 @@ public class DescribeAuditConfigResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "LogExpireDay", this.LogExpireDay);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamSimple(map, prefix + "IsClosing", this.IsClosing);
+        this.setParamSimple(map, prefix + "IsOpening", this.IsOpening);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

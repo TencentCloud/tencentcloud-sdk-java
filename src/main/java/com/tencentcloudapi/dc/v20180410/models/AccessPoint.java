@@ -122,6 +122,20 @@ public class AccessPoint extends AbstractModel {
     private Boolean IsMacSec;
 
     /**
+    * 版本号
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * 接入点业务类型，枚举值：NORMAL-标准接入点，CDZ：EZ/CDZ接入点，COOPERATIVE-合作POP
+    */
+    @SerializedName("AccessPointServiceType")
+    @Expose
+    private String AccessPointServiceType;
+
+    /**
      * Get 接入点的名称。 
      * @return AccessPointName 接入点的名称。
      */
@@ -345,6 +359,38 @@ public class AccessPoint extends AbstractModel {
         this.IsMacSec = IsMacSec;
     }
 
+    /**
+     * Get 版本号 
+     * @return Version 版本号
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 版本号
+     * @param Version 版本号
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get 接入点业务类型，枚举值：NORMAL-标准接入点，CDZ：EZ/CDZ接入点，COOPERATIVE-合作POP 
+     * @return AccessPointServiceType 接入点业务类型，枚举值：NORMAL-标准接入点，CDZ：EZ/CDZ接入点，COOPERATIVE-合作POP
+     */
+    public String getAccessPointServiceType() {
+        return this.AccessPointServiceType;
+    }
+
+    /**
+     * Set 接入点业务类型，枚举值：NORMAL-标准接入点，CDZ：EZ/CDZ接入点，COOPERATIVE-合作POP
+     * @param AccessPointServiceType 接入点业务类型，枚举值：NORMAL-标准接入点，CDZ：EZ/CDZ接入点，COOPERATIVE-合作POP
+     */
+    public void setAccessPointServiceType(String AccessPointServiceType) {
+        this.AccessPointServiceType = AccessPointServiceType;
+    }
+
     public AccessPoint() {
     }
 
@@ -404,6 +450,12 @@ public class AccessPoint extends AbstractModel {
         if (source.IsMacSec != null) {
             this.IsMacSec = new Boolean(source.IsMacSec);
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.AccessPointServiceType != null) {
+            this.AccessPointServiceType = new String(source.AccessPointServiceType);
+        }
     }
 
 
@@ -425,6 +477,8 @@ public class AccessPoint extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AvailablePortInfo.", this.AvailablePortInfo);
         this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "IsMacSec", this.IsMacSec);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "AccessPointServiceType", this.AccessPointServiceType);
 
     }
 }
