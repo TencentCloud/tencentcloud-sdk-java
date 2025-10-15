@@ -74,6 +74,13 @@ public class ChannelCreateOrganizationBatchSignUrlRequest extends AbstractModel 
     private String FlowGroupId;
 
     /**
+    * 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+    */
+    @SerializedName("CanBatchReject")
+    @Expose
+    private Boolean CanBatchReject;
+
+    /**
      * Get 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。 
      * @return Agent 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
@@ -201,6 +208,22 @@ public class ChannelCreateOrganizationBatchSignUrlRequest extends AbstractModel 
         this.FlowGroupId = FlowGroupId;
     }
 
+    /**
+     * Get 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。` 
+     * @return CanBatchReject 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+     */
+    public Boolean getCanBatchReject() {
+        return this.CanBatchReject;
+    }
+
+    /**
+     * Set 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+     * @param CanBatchReject 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+     */
+    public void setCanBatchReject(Boolean CanBatchReject) {
+        this.CanBatchReject = CanBatchReject;
+    }
+
     public ChannelCreateOrganizationBatchSignUrlRequest() {
     }
 
@@ -230,6 +253,9 @@ public class ChannelCreateOrganizationBatchSignUrlRequest extends AbstractModel 
         if (source.FlowGroupId != null) {
             this.FlowGroupId = new String(source.FlowGroupId);
         }
+        if (source.CanBatchReject != null) {
+            this.CanBatchReject = new Boolean(source.CanBatchReject);
+        }
     }
 
 
@@ -243,6 +269,7 @@ public class ChannelCreateOrganizationBatchSignUrlRequest extends AbstractModel 
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
+        this.setParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
 
     }
 }

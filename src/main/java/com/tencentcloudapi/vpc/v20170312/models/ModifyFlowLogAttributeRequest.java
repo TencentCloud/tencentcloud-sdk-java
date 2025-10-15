@@ -52,6 +52,13 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel {
     private String FlowLogDescription;
 
     /**
+    * 流日志采集周期，只支持CCN类型流日志。 取值范围（单位s）：60， 300， 600。
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
      * Get 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。 
      * @return FlowLogId 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
      */
@@ -115,6 +122,22 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel {
         this.FlowLogDescription = FlowLogDescription;
     }
 
+    /**
+     * Get 流日志采集周期，只支持CCN类型流日志。 取值范围（单位s）：60， 300， 600。 
+     * @return Period 流日志采集周期，只支持CCN类型流日志。 取值范围（单位s）：60， 300， 600。
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 流日志采集周期，只支持CCN类型流日志。 取值范围（单位s）：60， 300， 600。
+     * @param Period 流日志采集周期，只支持CCN类型流日志。 取值范围（单位s）：60， 300， 600。
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
     public ModifyFlowLogAttributeRequest() {
     }
 
@@ -135,6 +158,9 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel {
         if (source.FlowLogDescription != null) {
             this.FlowLogDescription = new String(source.FlowLogDescription);
         }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FlowLogName", this.FlowLogName);
         this.setParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

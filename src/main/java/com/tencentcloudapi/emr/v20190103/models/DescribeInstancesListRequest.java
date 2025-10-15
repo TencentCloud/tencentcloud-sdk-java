@@ -67,6 +67,13 @@ public class DescribeInstancesListRequest extends AbstractModel {
     private Filters [] Filters;
 
     /**
+    * 默认0为普通集群，2为tke集群
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private Long ClusterType;
+
+    /**
      * Get 集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li> 
      * @return DisplayStrategy 集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
      */
@@ -166,6 +173,22 @@ public class DescribeInstancesListRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get 默认0为普通集群，2为tke集群 
+     * @return ClusterType 默认0为普通集群，2为tke集群
+     */
+    public Long getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 默认0为普通集群，2为tke集群
+     * @param ClusterType 默认0为普通集群，2为tke集群
+     */
+    public void setClusterType(Long ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
     public DescribeInstancesListRequest() {
     }
 
@@ -195,6 +218,9 @@ public class DescribeInstancesListRequest extends AbstractModel {
                 this.Filters[i] = new Filters(source.Filters[i]);
             }
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new Long(source.ClusterType);
+        }
     }
 
 
@@ -208,6 +234,7 @@ public class DescribeInstancesListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
         this.setParamSimple(map, prefix + "Asc", this.Asc);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

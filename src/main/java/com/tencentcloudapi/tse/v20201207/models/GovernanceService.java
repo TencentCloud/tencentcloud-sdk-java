@@ -157,6 +157,20 @@ public class GovernanceService extends AbstractModel {
     private Boolean SyncToGlobalRegistry;
 
     /**
+    * 隔离实例数
+    */
+    @SerializedName("IsolateInstanceCount")
+    @Expose
+    private Long IsolateInstanceCount;
+
+    /**
+    * 服务健康状态
+    */
+    @SerializedName("ServiceStatus")
+    @Expose
+    private Long ServiceStatus;
+
+    /**
      * Get 服务名称。 
      * @return Name 服务名称。
      */
@@ -460,6 +474,38 @@ public class GovernanceService extends AbstractModel {
         this.SyncToGlobalRegistry = SyncToGlobalRegistry;
     }
 
+    /**
+     * Get 隔离实例数 
+     * @return IsolateInstanceCount 隔离实例数
+     */
+    public Long getIsolateInstanceCount() {
+        return this.IsolateInstanceCount;
+    }
+
+    /**
+     * Set 隔离实例数
+     * @param IsolateInstanceCount 隔离实例数
+     */
+    public void setIsolateInstanceCount(Long IsolateInstanceCount) {
+        this.IsolateInstanceCount = IsolateInstanceCount;
+    }
+
+    /**
+     * Get 服务健康状态 
+     * @return ServiceStatus 服务健康状态
+     */
+    public Long getServiceStatus() {
+        return this.ServiceStatus;
+    }
+
+    /**
+     * Set 服务健康状态
+     * @param ServiceStatus 服务健康状态
+     */
+    public void setServiceStatus(Long ServiceStatus) {
+        this.ServiceStatus = ServiceStatus;
+    }
+
     public GovernanceService() {
     }
 
@@ -543,6 +589,12 @@ public class GovernanceService extends AbstractModel {
         if (source.SyncToGlobalRegistry != null) {
             this.SyncToGlobalRegistry = new Boolean(source.SyncToGlobalRegistry);
         }
+        if (source.IsolateInstanceCount != null) {
+            this.IsolateInstanceCount = new Long(source.IsolateInstanceCount);
+        }
+        if (source.ServiceStatus != null) {
+            this.ServiceStatus = new Long(source.ServiceStatus);
+        }
     }
 
 
@@ -569,6 +621,8 @@ public class GovernanceService extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ExportTo.", this.ExportTo);
         this.setParamSimple(map, prefix + "Revision", this.Revision);
         this.setParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
+        this.setParamSimple(map, prefix + "IsolateInstanceCount", this.IsolateInstanceCount);
+        this.setParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
 
     }
 }

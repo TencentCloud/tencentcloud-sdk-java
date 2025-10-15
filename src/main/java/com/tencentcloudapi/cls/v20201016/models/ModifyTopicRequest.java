@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class ModifyTopicRequest extends AbstractModel {
 
     /**
-    * 日志主题ID
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * 主题ID
+- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 日志主题名称
+    * 主题名称
 输入限制：
 - 不能为空字符串
 - 不能包含字符'|'
@@ -43,7 +43,7 @@ public class ModifyTopicRequest extends AbstractModel {
     private String TopicName;
 
     /**
-    * 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。
+    * 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
     */
     @SerializedName("Tags")
     @Expose
@@ -65,7 +65,7 @@ public class ModifyTopicRequest extends AbstractModel {
     private Boolean AutoSplit;
 
     /**
-    * 若开启最大分裂，该主题能够能够允许的最大分区数；
+    * 若开启最大分裂，该主题能够允许的最大分区数；
 默认为50；必须为正数
     */
     @SerializedName("MaxSplitPartitions")
@@ -80,15 +80,16 @@ public class ModifyTopicRequest extends AbstractModel {
     private Long Period;
 
     /**
-    * 日志主题描述
+    * 主题描述
     */
     @SerializedName("Describes")
     @Expose
     private String Describes;
 
     /**
-    * 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+    * 0：日志主题关闭日志沉降。
+非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效，指标主题不支持该配置。
     */
     @SerializedName("HotPeriod")
     @Expose
@@ -103,14 +104,14 @@ public class ModifyTopicRequest extends AbstractModel {
     private Boolean IsWebTracking;
 
     /**
-    * 日志主题扩展信息
+    * 主题扩展信息
     */
     @SerializedName("Extends")
     @Expose
     private TopicExtendInfo Extends;
 
     /**
-    * 日志主题分区数量。
+    * 主题分区数量。
 默认为1；
 取值范围及约束：
 - 当输入值<=0，系统自动调整为1。
@@ -130,32 +131,32 @@ public class ModifyTopicRequest extends AbstractModel {
     private String CancelTopicAsyncTaskID;
 
     /**
-     * Get 日志主题ID
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
-     * @return TopicId 日志主题ID
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Get 主题ID
+- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。 
+     * @return TopicId 主题ID
+- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param TopicId 日志主题ID
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Set 主题ID
+- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+     * @param TopicId 主题ID
+- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志主题名称
+     * Get 主题名称
 输入限制：
 - 不能为空字符串
 - 不能包含字符'|'
 - 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"] 
-     * @return TopicName 日志主题名称
+     * @return TopicName 主题名称
 输入限制：
 - 不能为空字符串
 - 不能包含字符'|'
@@ -166,12 +167,12 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Set 日志主题名称
+     * Set 主题名称
 输入限制：
 - 不能为空字符串
 - 不能包含字符'|'
 - 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
-     * @param TopicName 日志主题名称
+     * @param TopicName 主题名称
 输入限制：
 - 不能为空字符串
 - 不能包含字符'|'
@@ -182,16 +183,16 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。 
-     * @return Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。
+     * Get 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。 
+     * @return Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。
-     * @param Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。
+     * Set 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
+     * @param Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，并且不能有重复的键值对。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -234,9 +235,9 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 若开启最大分裂，该主题能够能够允许的最大分区数；
+     * Get 若开启最大分裂，该主题能够允许的最大分区数；
 默认为50；必须为正数 
-     * @return MaxSplitPartitions 若开启最大分裂，该主题能够能够允许的最大分区数；
+     * @return MaxSplitPartitions 若开启最大分裂，该主题能够允许的最大分区数；
 默认为50；必须为正数
      */
     public Long getMaxSplitPartitions() {
@@ -244,9 +245,9 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Set 若开启最大分裂，该主题能够能够允许的最大分区数；
+     * Set 若开启最大分裂，该主题能够允许的最大分区数；
 默认为50；必须为正数
-     * @param MaxSplitPartitions 若开启最大分裂，该主题能够能够允许的最大分区数；
+     * @param MaxSplitPartitions 若开启最大分裂，该主题能够允许的最大分区数；
 默认为50；必须为正数
      */
     public void setMaxSplitPartitions(Long MaxSplitPartitions) {
@@ -270,36 +271,40 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志主题描述 
-     * @return Describes 日志主题描述
+     * Get 主题描述 
+     * @return Describes 主题描述
      */
     public String getDescribes() {
         return this.Describes;
     }
 
     /**
-     * Set 日志主题描述
-     * @param Describes 日志主题描述
+     * Set 主题描述
+     * @param Describes 主题描述
      */
     public void setDescribes(String Describes) {
         this.Describes = Describes;
     }
 
     /**
-     * Get 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效 
-     * @return HotPeriod 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+     * Get 0：日志主题关闭日志沉降。
+非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效，指标主题不支持该配置。 
+     * @return HotPeriod 0：日志主题关闭日志沉降。
+非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效，指标主题不支持该配置。
      */
     public Long getHotPeriod() {
         return this.HotPeriod;
     }
 
     /**
-     * Set 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
-     * @param HotPeriod 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+     * Set 0：日志主题关闭日志沉降。
+非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效，指标主题不支持该配置。
+     * @param HotPeriod 0：日志主题关闭日志沉降。
+非0：日志主题开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效，指标主题不支持该配置。
      */
     public void setHotPeriod(Long HotPeriod) {
         this.HotPeriod = HotPeriod;
@@ -326,29 +331,29 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志主题扩展信息 
-     * @return Extends 日志主题扩展信息
+     * Get 主题扩展信息 
+     * @return Extends 主题扩展信息
      */
     public TopicExtendInfo getExtends() {
         return this.Extends;
     }
 
     /**
-     * Set 日志主题扩展信息
-     * @param Extends 日志主题扩展信息
+     * Set 主题扩展信息
+     * @param Extends 主题扩展信息
      */
     public void setExtends(TopicExtendInfo Extends) {
         this.Extends = Extends;
     }
 
     /**
-     * Get 日志主题分区数量。
+     * Get 主题分区数量。
 默认为1；
 取值范围及约束：
 - 当输入值<=0，系统自动调整为1。
 - 如果未传MaxSplitPartitions，需要PartitionCount<=50；
 - 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions； 
-     * @return PartitionCount 日志主题分区数量。
+     * @return PartitionCount 主题分区数量。
 默认为1；
 取值范围及约束：
 - 当输入值<=0，系统自动调整为1。
@@ -360,13 +365,13 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
-     * Set 日志主题分区数量。
+     * Set 主题分区数量。
 默认为1；
 取值范围及约束：
 - 当输入值<=0，系统自动调整为1。
 - 如果未传MaxSplitPartitions，需要PartitionCount<=50；
 - 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
-     * @param PartitionCount 日志主题分区数量。
+     * @param PartitionCount 主题分区数量。
 默认为1；
 取值范围及约束：
 - 当输入值<=0，系统自动调整为1。

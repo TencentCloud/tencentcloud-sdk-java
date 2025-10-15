@@ -105,6 +105,14 @@ public class CodeFolderNode extends AbstractModel {
     private CodeFolderNode [] Children;
 
     /**
+    * 父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentFolderPath")
+    @Expose
+    private String ParentFolderPath;
+
+    /**
      * Get 唯一标识 
      * @return Id 唯一标识
      */
@@ -296,6 +304,26 @@ public class CodeFolderNode extends AbstractModel {
         this.Children = Children;
     }
 
+    /**
+     * Get 父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentFolderPath 父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentFolderPath() {
+        return this.ParentFolderPath;
+    }
+
+    /**
+     * Set 父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentFolderPath 父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentFolderPath(String ParentFolderPath) {
+        this.ParentFolderPath = ParentFolderPath;
+    }
+
     public CodeFolderNode() {
     }
 
@@ -340,6 +368,9 @@ public class CodeFolderNode extends AbstractModel {
                 this.Children[i] = new CodeFolderNode(source.Children[i]);
             }
         }
+        if (source.ParentFolderPath != null) {
+            this.ParentFolderPath = new String(source.ParentFolderPath);
+        }
     }
 
 
@@ -358,6 +389,7 @@ public class CodeFolderNode extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateUserUin", this.CreateUserUin);
         this.setParamSimple(map, prefix + "NodePermission", this.NodePermission);
         this.setParamArrayObj(map, prefix + "Children.", this.Children);
+        this.setParamSimple(map, prefix + "ParentFolderPath", this.ParentFolderPath);
 
     }
 }

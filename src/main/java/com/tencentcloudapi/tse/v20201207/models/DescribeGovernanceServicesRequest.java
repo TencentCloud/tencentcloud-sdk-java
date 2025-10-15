@@ -101,6 +101,13 @@ public class DescribeGovernanceServicesRequest extends AbstractModel {
     private String SyncToGlobalRegistry;
 
     /**
+    * 过滤筛选条件
+    */
+    @SerializedName("StatusFilter")
+    @Expose
+    private Filter [] StatusFilter;
+
+    /**
      * Get 按照服务名过滤，精确匹配。 
      * @return Name 按照服务名过滤，精确匹配。
      */
@@ -276,6 +283,22 @@ public class DescribeGovernanceServicesRequest extends AbstractModel {
         this.SyncToGlobalRegistry = SyncToGlobalRegistry;
     }
 
+    /**
+     * Get 过滤筛选条件 
+     * @return StatusFilter 过滤筛选条件
+     */
+    public Filter [] getStatusFilter() {
+        return this.StatusFilter;
+    }
+
+    /**
+     * Set 过滤筛选条件
+     * @param StatusFilter 过滤筛选条件
+     */
+    public void setStatusFilter(Filter [] StatusFilter) {
+        this.StatusFilter = StatusFilter;
+    }
+
     public DescribeGovernanceServicesRequest() {
     }
 
@@ -320,6 +343,12 @@ public class DescribeGovernanceServicesRequest extends AbstractModel {
         if (source.SyncToGlobalRegistry != null) {
             this.SyncToGlobalRegistry = new String(source.SyncToGlobalRegistry);
         }
+        if (source.StatusFilter != null) {
+            this.StatusFilter = new Filter[source.StatusFilter.length];
+            for (int i = 0; i < source.StatusFilter.length; i++) {
+                this.StatusFilter[i] = new Filter(source.StatusFilter[i]);
+            }
+        }
     }
 
 
@@ -338,6 +367,7 @@ public class DescribeGovernanceServicesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "OnlyExistHealthyInstance", this.OnlyExistHealthyInstance);
         this.setParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
+        this.setParamArrayObj(map, prefix + "StatusFilter.", this.StatusFilter);
 
     }
 }

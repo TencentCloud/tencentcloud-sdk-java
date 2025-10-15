@@ -1198,6 +1198,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *获取实例采集速率信息
+     * @param req DescribePrometheusScrapeStatisticsRequest
+     * @return DescribePrometheusScrapeStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusScrapeStatisticsResponse DescribePrometheusScrapeStatistics(DescribePrometheusScrapeStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrometheusScrapeStatistics", DescribePrometheusScrapeStatisticsResponse.class);
+    }
+
+    /**
      *获取targets信息，在过滤条件中指定job名称时返回targets详情，否则仅返回数量
      * @param req DescribePrometheusTargetsTMPRequest
      * @return DescribePrometheusTargetsTMPResponse

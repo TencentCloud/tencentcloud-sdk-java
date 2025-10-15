@@ -52,14 +52,14 @@ public class MySqlProcess extends AbstractModel {
     private String DB;
 
     /**
-    * 线程的操作状态。
+    * 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 线程的执行类型。
+    * 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
     */
     @SerializedName("Command")
     @Expose
@@ -78,6 +78,14 @@ public class MySqlProcess extends AbstractModel {
     @SerializedName("Info")
     @Expose
     private String Info;
+
+    /**
+    * sql类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SqlType")
+    @Expose
+    private String SqlType;
 
     /**
      * Get 线程ID。 
@@ -144,32 +152,32 @@ public class MySqlProcess extends AbstractModel {
     }
 
     /**
-     * Get 线程的操作状态。 
-     * @return State 线程的操作状态。
+     * Get 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。 
+     * @return State 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 线程的操作状态。
-     * @param State 线程的操作状态。
+     * Set 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
+     * @param State 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 线程的执行类型。 
-     * @return Command 线程的执行类型。
+     * Get 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。 
+     * @return Command 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set 线程的执行类型。
-     * @param Command 线程的执行类型。
+     * Set 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
+     * @param Command 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
      */
     public void setCommand(String Command) {
         this.Command = Command;
@@ -207,6 +215,26 @@ public class MySqlProcess extends AbstractModel {
         this.Info = Info;
     }
 
+    /**
+     * Get sql类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SqlType sql类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSqlType() {
+        return this.SqlType;
+    }
+
+    /**
+     * Set sql类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SqlType sql类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSqlType(String SqlType) {
+        this.SqlType = SqlType;
+    }
+
     public MySqlProcess() {
     }
 
@@ -239,6 +267,9 @@ public class MySqlProcess extends AbstractModel {
         if (source.Info != null) {
             this.Info = new String(source.Info);
         }
+        if (source.SqlType != null) {
+            this.SqlType = new String(source.SqlType);
+        }
     }
 
 
@@ -254,6 +285,7 @@ public class MySqlProcess extends AbstractModel {
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "Info", this.Info);
+        this.setParamSimple(map, prefix + "SqlType", this.SqlType);
 
     }
 }

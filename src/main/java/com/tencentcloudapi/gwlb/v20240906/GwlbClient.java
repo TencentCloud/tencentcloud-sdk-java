@@ -120,6 +120,17 @@ public class GwlbClient extends AbstractClient{
     }
 
     /**
+     *查询用户在当前地域支持可用区列表
+     * @param req DescribeGatewayLoadBalancersResourcesRequest
+     * @return DescribeGatewayLoadBalancersResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatewayLoadBalancersResourcesResponse DescribeGatewayLoadBalancersResources(DescribeGatewayLoadBalancersResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGatewayLoadBalancersResources", DescribeGatewayLoadBalancersResourcesResponse.class);
+    }
+
+    /**
      *查询目标组后端服务状态。目前仅支持网关负载均衡类型的目标组支持查询后端服务状态。
      * @param req DescribeTargetGroupInstanceStatusRequest
      * @return DescribeTargetGroupInstanceStatusResponse

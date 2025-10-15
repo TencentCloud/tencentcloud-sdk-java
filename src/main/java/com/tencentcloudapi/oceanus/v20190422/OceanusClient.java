@@ -138,6 +138,17 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *创建变量 
+     * @param req CreateVariableRequest
+     * @return CreateVariableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVariableResponse CreateVariable(CreateVariableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVariable", CreateVariableResponse.class);
+    }
+
+    /**
      *创建工作空间
      * @param req CreateWorkSpaceRequest
      * @return CreateWorkSpaceResponse
@@ -377,6 +388,17 @@ public class OceanusClient extends AbstractClient{
     public DescribeTreeResourcesResponse DescribeTreeResources(DescribeTreeResourcesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTreeResources", DescribeTreeResourcesResponse.class);
+    }
+
+    /**
+     *变量列表展示
+     * @param req DescribeVariablesRequest
+     * @return DescribeVariablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVariablesResponse DescribeVariables(DescribeVariablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVariables", DescribeVariablesResponse.class);
     }
 
     /**

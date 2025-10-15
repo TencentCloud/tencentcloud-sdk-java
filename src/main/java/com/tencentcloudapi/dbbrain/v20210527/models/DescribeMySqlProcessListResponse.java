@@ -31,7 +31,7 @@ public class DescribeMySqlProcessListResponse extends AbstractModel {
     private MySqlProcess [] ProcessList;
 
     /**
-    * sql会话统计信息。
+    * sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
     */
     @SerializedName("Statistics")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeMySqlProcessListResponse extends AbstractModel {
     }
 
     /**
-     * Get sql会话统计信息。 
-     * @return Statistics sql会话统计信息。
+     * Get sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。 
+     * @return Statistics sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
      */
     public StatisticInfo [] getStatistics() {
         return this.Statistics;
     }
 
     /**
-     * Set sql会话统计信息。
-     * @param Statistics sql会话统计信息。
+     * Set sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
+     * @param Statistics sql会话统计信息。如果请求参数中包含StatDimensions，该参数则可能返回，否则不返回。
      */
     public void setStatistics(StatisticInfo [] Statistics) {
         this.Statistics = Statistics;

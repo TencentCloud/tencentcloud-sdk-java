@@ -112,6 +112,14 @@ public class CodeFile extends AbstractModel {
     private String Path;
 
     /**
+    * 父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentFolderPath")
+    @Expose
+    private String ParentFolderPath;
+
+    /**
      * Get 脚本ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CodeFileId 脚本ID
@@ -331,6 +339,26 @@ public class CodeFile extends AbstractModel {
         this.Path = Path;
     }
 
+    /**
+     * Get 父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentFolderPath 父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentFolderPath() {
+        return this.ParentFolderPath;
+    }
+
+    /**
+     * Set 父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentFolderPath 父文件夹路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentFolderPath(String ParentFolderPath) {
+        this.ParentFolderPath = ParentFolderPath;
+    }
+
     public CodeFile() {
     }
 
@@ -372,6 +400,9 @@ public class CodeFile extends AbstractModel {
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
+        if (source.ParentFolderPath != null) {
+            this.ParentFolderPath = new String(source.ParentFolderPath);
+        }
     }
 
 
@@ -390,6 +421,7 @@ public class CodeFile extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "AccessScope", this.AccessScope);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "ParentFolderPath", this.ParentFolderPath);
 
     }
 }

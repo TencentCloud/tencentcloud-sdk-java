@@ -45,7 +45,13 @@ public class Addon extends AbstractModel {
     private String RawValues;
 
     /**
-    * addon的状态
+    * addon的状态：
+- Installing：安装中
+- Upgrading：升级中
+- Terminating：删除中
+- Succeeded：安装/升级成功
+- InstallFailed：安装失败
+- UpgradFailed：升级失败
     */
     @SerializedName("Phase")
     @Expose
@@ -114,16 +120,40 @@ public class Addon extends AbstractModel {
     }
 
     /**
-     * Get addon的状态 
-     * @return Phase addon的状态
+     * Get addon的状态：
+- Installing：安装中
+- Upgrading：升级中
+- Terminating：删除中
+- Succeeded：安装/升级成功
+- InstallFailed：安装失败
+- UpgradFailed：升级失败 
+     * @return Phase addon的状态：
+- Installing：安装中
+- Upgrading：升级中
+- Terminating：删除中
+- Succeeded：安装/升级成功
+- InstallFailed：安装失败
+- UpgradFailed：升级失败
      */
     public String getPhase() {
         return this.Phase;
     }
 
     /**
-     * Set addon的状态
-     * @param Phase addon的状态
+     * Set addon的状态：
+- Installing：安装中
+- Upgrading：升级中
+- Terminating：删除中
+- Succeeded：安装/升级成功
+- InstallFailed：安装失败
+- UpgradFailed：升级失败
+     * @param Phase addon的状态：
+- Installing：安装中
+- Upgrading：升级中
+- Terminating：删除中
+- Succeeded：安装/升级成功
+- InstallFailed：安装失败
+- UpgradFailed：升级失败
      */
     public void setPhase(String Phase) {
         this.Phase = Phase;

@@ -32,7 +32,7 @@ public class CreateTopicRequest extends AbstractModel {
     private String LogsetId;
 
     /**
-    * 日志主题名称
+    * 主题名称
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
@@ -44,14 +44,14 @@ public class CreateTopicRequest extends AbstractModel {
     private String TopicName;
 
     /**
-    * 日志主题分区个数。默认创建1个，最大支持创建10个分区。
+    * 主题分区个数。默认创建1个，最大支持创建10个分区。
     */
     @SerializedName("PartitionCount")
     @Expose
     private Long PartitionCount;
 
     /**
-    * 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
+    * 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
     */
     @SerializedName("Tags")
     @Expose
@@ -72,7 +72,7 @@ public class CreateTopicRequest extends AbstractModel {
     private Long MaxSplitPartitions;
 
     /**
-    * 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
+    * 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。
     */
     @SerializedName("StorageType")
     @Expose
@@ -80,28 +80,38 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
     * 存储时间，单位天。
-- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+- 日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
+- 日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+- 指标主题：支持1至3600天，值为3640时代表永久保存。
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 日志主题描述
+    * 主题描述
     */
     @SerializedName("Describes")
     @Expose
     private String Describes;
 
     /**
-    * 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效。
+    * 0：日志主题关闭日志沉降。
+非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效，指标主题不支持该配置。
     */
     @SerializedName("HotPeriod")
     @Expose
     private Long HotPeriod;
+
+    /**
+    * 主题类型
+- 0:日志主题，默认值
+- 1:指标主题
+    */
+    @SerializedName("BizType")
+    @Expose
+    private Long BizType;
 
     /**
     * 主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
@@ -115,14 +125,14 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
     * 免鉴权开关。 false：关闭； true：开启。默认为false。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。指标主题不支持该配置。
     */
     @SerializedName("IsWebTracking")
     @Expose
     private Boolean IsWebTracking;
 
     /**
-    * 日志主题扩展信息
+    * 主题扩展信息
     */
     @SerializedName("Extends")
     @Expose
@@ -149,13 +159,13 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志主题名称
+     * Get 主题名称
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
 - 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
  
-     * @return TopicName 日志主题名称
+     * @return TopicName 主题名称
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
@@ -167,13 +177,13 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Set 日志主题名称
+     * Set 主题名称
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
 - 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
 
-     * @param TopicName 日志主题名称
+     * @param TopicName 主题名称
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
@@ -185,32 +195,32 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志主题分区个数。默认创建1个，最大支持创建10个分区。 
-     * @return PartitionCount 日志主题分区个数。默认创建1个，最大支持创建10个分区。
+     * Get 主题分区个数。默认创建1个，最大支持创建10个分区。 
+     * @return PartitionCount 主题分区个数。默认创建1个，最大支持创建10个分区。
      */
     public Long getPartitionCount() {
         return this.PartitionCount;
     }
 
     /**
-     * Set 日志主题分区个数。默认创建1个，最大支持创建10个分区。
-     * @param PartitionCount 日志主题分区个数。默认创建1个，最大支持创建10个分区。
+     * Set 主题分区个数。默认创建1个，最大支持创建10个分区。
+     * @param PartitionCount 主题分区个数。默认创建1个，最大支持创建10个分区。
      */
     public void setPartitionCount(Long PartitionCount) {
         this.PartitionCount = PartitionCount;
     }
 
     /**
-     * Get 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。 
-     * @return Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
+     * Get 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。 
+     * @return Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
-     * @param Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
+     * Set 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
+     * @param Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -249,16 +259,16 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。 
-     * @return StorageType 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
+     * Get 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。 
+     * @return StorageType 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
-     * @param StorageType 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
+     * Set 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。
+     * @param StorageType 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。指标主题不支持该配置。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
@@ -266,11 +276,13 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
      * Get 存储时间，单位天。
-- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。 
+- 日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
+- 日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+- 指标主题：支持1至3600天，值为3640时代表永久保存。 
      * @return Period 存储时间，单位天。
-- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+- 日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
+- 日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+- 指标主题：支持1至3600天，值为3640时代表永久保存。
      */
     public Long getPeriod() {
         return this.Period;
@@ -278,54 +290,80 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
      * Set 存储时间，单位天。
-- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+- 日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
+- 日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+- 指标主题：支持1至3600天，值为3640时代表永久保存。
      * @param Period 存储时间，单位天。
-- 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
-- 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+- 日志主题：日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
+- 日志主题：日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
+- 指标主题：支持1至3600天，值为3640时代表永久保存。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 日志主题描述 
-     * @return Describes 日志主题描述
+     * Get 主题描述 
+     * @return Describes 主题描述
      */
     public String getDescribes() {
         return this.Describes;
     }
 
     /**
-     * Set 日志主题描述
-     * @param Describes 日志主题描述
+     * Set 主题描述
+     * @param Describes 主题描述
      */
     public void setDescribes(String Describes) {
         this.Describes = Describes;
     }
 
     /**
-     * Get 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效。 
-     * @return HotPeriod 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效。
+     * Get 0：日志主题关闭日志沉降。
+非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效，指标主题不支持该配置。 
+     * @return HotPeriod 0：日志主题关闭日志沉降。
+非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效，指标主题不支持该配置。
      */
     public Long getHotPeriod() {
         return this.HotPeriod;
     }
 
     /**
-     * Set 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效。
-     * @param HotPeriod 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
-仅在StorageType为 hot 时生效。
+     * Set 0：日志主题关闭日志沉降。
+非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效，指标主题不支持该配置。
+     * @param HotPeriod 0：日志主题关闭日志沉降。
+非0：日志主题开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效，指标主题不支持该配置。
      */
     public void setHotPeriod(Long HotPeriod) {
         this.HotPeriod = HotPeriod;
+    }
+
+    /**
+     * Get 主题类型
+- 0:日志主题，默认值
+- 1:指标主题 
+     * @return BizType 主题类型
+- 0:日志主题，默认值
+- 1:指标主题
+     */
+    public Long getBizType() {
+        return this.BizType;
+    }
+
+    /**
+     * Set 主题类型
+- 0:日志主题，默认值
+- 1:指标主题
+     * @param BizType 主题类型
+- 0:日志主题，默认值
+- 1:指标主题
+     */
+    public void setBizType(Long BizType) {
+        this.BizType = BizType;
     }
 
     /**
@@ -358,9 +396,9 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
      * Get 免鉴权开关。 false：关闭； true：开启。默认为false。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。 
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。指标主题不支持该配置。 
      * @return IsWebTracking 免鉴权开关。 false：关闭； true：开启。默认为false。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。指标主题不支持该配置。
      */
     public Boolean getIsWebTracking() {
         return this.IsWebTracking;
@@ -368,25 +406,25 @@ public class CreateTopicRequest extends AbstractModel {
 
     /**
      * Set 免鉴权开关。 false：关闭； true：开启。默认为false。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。指标主题不支持该配置。
      * @param IsWebTracking 免鉴权开关。 false：关闭； true：开启。默认为false。
-开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。指标主题不支持该配置。
      */
     public void setIsWebTracking(Boolean IsWebTracking) {
         this.IsWebTracking = IsWebTracking;
     }
 
     /**
-     * Get 日志主题扩展信息 
-     * @return Extends 日志主题扩展信息
+     * Get 主题扩展信息 
+     * @return Extends 主题扩展信息
      */
     public TopicExtendInfo getExtends() {
         return this.Extends;
     }
 
     /**
-     * Set 日志主题扩展信息
-     * @param Extends 日志主题扩展信息
+     * Set 主题扩展信息
+     * @param Extends 主题扩展信息
      */
     public void setExtends(TopicExtendInfo Extends) {
         this.Extends = Extends;
@@ -433,6 +471,9 @@ public class CreateTopicRequest extends AbstractModel {
         if (source.HotPeriod != null) {
             this.HotPeriod = new Long(source.HotPeriod);
         }
+        if (source.BizType != null) {
+            this.BizType = new Long(source.BizType);
+        }
         if (source.TopicId != null) {
             this.TopicId = new String(source.TopicId);
         }
@@ -459,6 +500,7 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+        this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         this.setParamObj(map, prefix + "Extends.", this.Extends);

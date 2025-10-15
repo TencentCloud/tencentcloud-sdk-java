@@ -321,7 +321,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于创建日志主题。
+     *本接口用于创建日志或指标主题。
      * @param req CreateTopicRequest
      * @return CreateTopicResponse
      * @throws TencentCloudSDKException
@@ -574,7 +574,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于删除日志主题。
+     *本接口用于删除日志或指标主题。
      * @param req DeleteTopicRequest
      * @return DeleteTopicResponse
      * @throws TencentCloudSDKException
@@ -938,7 +938,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
-     *本接口用于获取日志主题列表，支持分页
+     *本接口用于获取日志或指标主题列表，支持分页
      * @param req DescribeTopicsRequest
      * @return DescribeTopicsResponse
      * @throws TencentCloudSDKException
@@ -1203,7 +1203,7 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
-     *本接口用于修改日志主题。
+     *本接口用于修改日志或指标主题。
      * @param req ModifyTopicRequest
      * @return ModifyTopicResponse
      * @throws TencentCloudSDKException

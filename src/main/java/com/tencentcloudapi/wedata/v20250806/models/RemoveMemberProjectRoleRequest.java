@@ -38,11 +38,15 @@ public class RemoveMemberProjectRoleRequest extends AbstractModel {
     private String UserUin;
 
     /**
-    * 角色id
+    * 角色id列表，目前支持的项目角色有
+- 308335260274237440 (项目管理员)
+- 308335260676890624 (数据工程师)
+- 308335260844662784 (运维工程师)
+- 308335260945326080 (普通成员)
     */
-    @SerializedName("RoleId")
+    @SerializedName("RoleIds")
     @Expose
-    private String RoleId;
+    private String [] RoleIds;
 
     /**
      * Get 项目id 
@@ -77,19 +81,35 @@ public class RemoveMemberProjectRoleRequest extends AbstractModel {
     }
 
     /**
-     * Get 角色id 
-     * @return RoleId 角色id
+     * Get 角色id列表，目前支持的项目角色有
+- 308335260274237440 (项目管理员)
+- 308335260676890624 (数据工程师)
+- 308335260844662784 (运维工程师)
+- 308335260945326080 (普通成员) 
+     * @return RoleIds 角色id列表，目前支持的项目角色有
+- 308335260274237440 (项目管理员)
+- 308335260676890624 (数据工程师)
+- 308335260844662784 (运维工程师)
+- 308335260945326080 (普通成员)
      */
-    public String getRoleId() {
-        return this.RoleId;
+    public String [] getRoleIds() {
+        return this.RoleIds;
     }
 
     /**
-     * Set 角色id
-     * @param RoleId 角色id
+     * Set 角色id列表，目前支持的项目角色有
+- 308335260274237440 (项目管理员)
+- 308335260676890624 (数据工程师)
+- 308335260844662784 (运维工程师)
+- 308335260945326080 (普通成员)
+     * @param RoleIds 角色id列表，目前支持的项目角色有
+- 308335260274237440 (项目管理员)
+- 308335260676890624 (数据工程师)
+- 308335260844662784 (运维工程师)
+- 308335260945326080 (普通成员)
      */
-    public void setRoleId(String RoleId) {
-        this.RoleId = RoleId;
+    public void setRoleIds(String [] RoleIds) {
+        this.RoleIds = RoleIds;
     }
 
     public RemoveMemberProjectRoleRequest() {
@@ -106,8 +126,11 @@ public class RemoveMemberProjectRoleRequest extends AbstractModel {
         if (source.UserUin != null) {
             this.UserUin = new String(source.UserUin);
         }
-        if (source.RoleId != null) {
-            this.RoleId = new String(source.RoleId);
+        if (source.RoleIds != null) {
+            this.RoleIds = new String[source.RoleIds.length];
+            for (int i = 0; i < source.RoleIds.length; i++) {
+                this.RoleIds[i] = new String(source.RoleIds[i]);
+            }
         }
     }
 
@@ -118,7 +141,7 @@ public class RemoveMemberProjectRoleRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "UserUin", this.UserUin);
-        this.setParamSimple(map, prefix + "RoleId", this.RoleId);
+        this.setParamArraySimple(map, prefix + "RoleIds.", this.RoleIds);
 
     }
 }

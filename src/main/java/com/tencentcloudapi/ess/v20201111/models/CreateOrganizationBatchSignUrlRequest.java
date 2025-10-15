@@ -97,6 +97,13 @@ UserId必须是传入合同（FlowId）中的签署人。
     private String FlowGroupId;
 
     /**
+    * 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+    */
+    @SerializedName("CanBatchReject")
+    @Expose
+    private Boolean CanBatchReject;
+
+    /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -292,6 +299,22 @@ UserId必须是传入合同（FlowId）中的签署人。
         this.FlowGroupId = FlowGroupId;
     }
 
+    /**
+     * Get 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。` 
+     * @return CanBatchReject 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+     */
+    public Boolean getCanBatchReject() {
+        return this.CanBatchReject;
+    }
+
+    /**
+     * Set 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+     * @param CanBatchReject 是否允许此链接中签署方批量拒签。 <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>注：`当前合同组不支持批量拒签功能。请对合同组中的每个子合同逐一执行拒签操作，以达到拒签整个合同组的效果。`
+     */
+    public void setCanBatchReject(Boolean CanBatchReject) {
+        this.CanBatchReject = CanBatchReject;
+    }
+
     public CreateOrganizationBatchSignUrlRequest() {
     }
 
@@ -330,6 +353,9 @@ UserId必须是传入合同（FlowId）中的签署人。
         if (source.FlowGroupId != null) {
             this.FlowGroupId = new String(source.FlowGroupId);
         }
+        if (source.CanBatchReject != null) {
+            this.CanBatchReject = new Boolean(source.CanBatchReject);
+        }
     }
 
 
@@ -345,6 +371,7 @@ UserId必须是传入合同（FlowId）中的签署人。
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamArraySimple(map, prefix + "RecipientIds.", this.RecipientIds);
         this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
+        this.setParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
 
     }
 }

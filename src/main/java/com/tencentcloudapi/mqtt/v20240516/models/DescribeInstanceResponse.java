@@ -260,6 +260,13 @@ API：通过API手动注册
     private Long MessageRate;
 
     /**
+    * 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
+    */
+    @SerializedName("TransportLayerSecurity")
+    @Expose
+    private String TransportLayerSecurity;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -815,6 +822,22 @@ API：通过API手动注册
     }
 
     /**
+     * Get 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1 
+     * @return TransportLayerSecurity 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
+     */
+    public String getTransportLayerSecurity() {
+        return this.TransportLayerSecurity;
+    }
+
+    /**
+     * Set 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
+     * @param TransportLayerSecurity 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
+     */
+    public void setTransportLayerSecurity(String TransportLayerSecurity) {
+        this.TransportLayerSecurity = TransportLayerSecurity;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -937,6 +960,9 @@ API：通过API手动注册
         if (source.MessageRate != null) {
             this.MessageRate = new Long(source.MessageRate);
         }
+        if (source.TransportLayerSecurity != null) {
+            this.TransportLayerSecurity = new String(source.TransportLayerSecurity);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -980,6 +1006,7 @@ API：通过API手动注册
         this.setParamSimple(map, prefix + "ServerCertLimit", this.ServerCertLimit);
         this.setParamSimple(map, prefix + "TopicPrefixSlashLimit", this.TopicPrefixSlashLimit);
         this.setParamSimple(map, prefix + "MessageRate", this.MessageRate);
+        this.setParamSimple(map, prefix + "TransportLayerSecurity", this.TransportLayerSecurity);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTopicResponse extends AbstractModel {
 
     /**
-    * 日志主题ID
+    * 主题ID
     */
     @SerializedName("TopicId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTopicResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get 主题ID 
+     * @return TopicId 主题ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set 主题ID
+     * @param TopicId 主题ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

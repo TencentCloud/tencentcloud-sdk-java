@@ -435,6 +435,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取sql文件夹详情
+     * @param req GetCodeFolderRequest
+     * @return GetCodeFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCodeFolderResponse GetCodeFolder(GetCodeFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetCodeFolder", GetCodeFolderResponse.class);
+    }
+
+    /**
+     *获取补录计划详情
+     * @param req GetDataBackfillPlanRequest
+     * @return GetDataBackfillPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDataBackfillPlanResponse GetDataBackfillPlan(GetDataBackfillPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDataBackfillPlan", GetDataBackfillPlanResponse.class);
+    }
+
+    /**
      *该接口用于查看指定数据源的详细信息
      * @param req GetDataSourceRequest
      * @return GetDataSourceResponse
@@ -542,6 +564,17 @@ public class WedataClient extends AbstractClient{
     public GetResourceGroupMetricsResponse GetResourceGroupMetrics(GetResourceGroupMetricsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetResourceGroupMetrics", GetResourceGroupMetricsResponse.class);
+    }
+
+    /**
+     *获取sql文件夹详情
+     * @param req GetSQLFolderRequest
+     * @return GetSQLFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSQLFolderResponse GetSQLFolder(GetSQLFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetSQLFolder", GetSQLFolderResponse.class);
     }
 
     /**
@@ -1114,6 +1147,17 @@ public class WedataClient extends AbstractClient{
     public SetSuccessTaskInstancesAsyncResponse SetSuccessTaskInstancesAsync(SetSuccessTaskInstancesAsyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetSuccessTaskInstancesAsync", SetSuccessTaskInstancesAsyncResponse.class);
+    }
+
+    /**
+     *异步批量启动任务
+     * @param req StartOpsTasksRequest
+     * @return StartOpsTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartOpsTasksResponse StartOpsTasks(StartOpsTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartOpsTasks", StartOpsTasksResponse.class);
     }
 
     /**

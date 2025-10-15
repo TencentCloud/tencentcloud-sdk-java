@@ -66,6 +66,13 @@ public class DifferenceData extends AbstractModel {
     private String DstItem;
 
     /**
+    * 创建时间
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private String CreatedAt;
+
+    /**
     * 更新时间
     */
     @SerializedName("UpdatedAt")
@@ -169,6 +176,22 @@ public class DifferenceData extends AbstractModel {
     }
 
     /**
+     * Get 创建时间 
+     * @return CreatedAt 创建时间
+     */
+    public String getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreatedAt 创建时间
+     */
+    public void setCreatedAt(String CreatedAt) {
+        this.CreatedAt = CreatedAt;
+    }
+
+    /**
      * Get 更新时间 
      * @return UpdatedAt 更新时间
      */
@@ -210,6 +233,9 @@ public class DifferenceData extends AbstractModel {
         if (source.DstItem != null) {
             this.DstItem = new String(source.DstItem);
         }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
         if (source.UpdatedAt != null) {
             this.UpdatedAt = new String(source.UpdatedAt);
         }
@@ -226,6 +252,7 @@ public class DifferenceData extends AbstractModel {
         this.setParamSimple(map, prefix + "DstChunk", this.DstChunk);
         this.setParamSimple(map, prefix + "SrcItem", this.SrcItem);
         this.setParamSimple(map, prefix + "DstItem", this.DstItem);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
 
     }

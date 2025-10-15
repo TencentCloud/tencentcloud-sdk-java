@@ -43,11 +43,47 @@ public class AccelerationDomain extends AbstractModel {
 <li>process：部署中；</li>
 <li>offline：已停用；</li>
 <li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点；</li>
+<li>init：未生效，待激活站点。</li>
     */
     @SerializedName("DomainStatus")
     @Expose
     private String DomainStatus;
+
+    /**
+    * CNAME 地址。
+    */
+    @SerializedName("Cname")
+    @Expose
+    private String Cname;
+
+    /**
+    * IPv6 状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPv6Status")
+    @Expose
+    private String IPv6Status;
+
+    /**
+    * 加速域名归属权验证状态，取值有： 
+<li>pending：待验证；</li>
+<li>finished：已完成验证。</li>	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IdentificationStatus")
+    @Expose
+    private String IdentificationStatus;
+
+    /**
+    * 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnershipVerification")
+    @Expose
+    private OwnershipVerification OwnershipVerification;
 
     /**
     * 源站信息。
@@ -59,9 +95,9 @@ public class AccelerationDomain extends AbstractModel {
 
     /**
     * 回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP协议回源；</li>
+<li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginProtocol")
@@ -69,15 +105,7 @@ public class AccelerationDomain extends AbstractModel {
     private String OriginProtocol;
 
     /**
-    * 域名证书信息
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Certificate")
-    @Expose
-    private AccelerationDomainCertificate Certificate;
-
-    /**
-    * HTTP回源端口。
+    * HTTP 回源端口。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpOriginPort")
@@ -85,7 +113,7 @@ public class AccelerationDomain extends AbstractModel {
     private Long HttpOriginPort;
 
     /**
-    * HTTPS回源端口。
+    * HTTPS 回源端口。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpsOriginPort")
@@ -93,30 +121,12 @@ public class AccelerationDomain extends AbstractModel {
     private Long HttpsOriginPort;
 
     /**
-    * IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+    * 加速域名证书信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("IPv6Status")
+    @SerializedName("Certificate")
     @Expose
-    private String IPv6Status;
-
-    /**
-    * CNAME 地址。
-    */
-    @SerializedName("Cname")
-    @Expose
-    private String Cname;
-
-    /**
-    * 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("IdentificationStatus")
-    @Expose
-    private String IdentificationStatus;
+    private AccelerationDomainCertificate Certificate;
 
     /**
     * 创建时间。
@@ -131,14 +141,6 @@ public class AccelerationDomain extends AbstractModel {
     @SerializedName("ModifiedOn")
     @Expose
     private String ModifiedOn;
-
-    /**
-    * 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("OwnershipVerification")
-    @Expose
-    private OwnershipVerification OwnershipVerification;
 
     /**
      * Get 站点 ID。 
@@ -178,13 +180,13 @@ public class AccelerationDomain extends AbstractModel {
 <li>process：部署中；</li>
 <li>offline：已停用；</li>
 <li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点；</li> 
+<li>init：未生效，待激活站点。</li> 
      * @return DomainStatus 加速域名状态，取值有：
 <li>online：已生效；</li>
 <li>process：部署中；</li>
 <li>offline：已停用；</li>
 <li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点；</li>
+<li>init：未生效，待激活站点。</li>
      */
     public String getDomainStatus() {
         return this.DomainStatus;
@@ -196,16 +198,112 @@ public class AccelerationDomain extends AbstractModel {
 <li>process：部署中；</li>
 <li>offline：已停用；</li>
 <li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点；</li>
+<li>init：未生效，待激活站点。</li>
      * @param DomainStatus 加速域名状态，取值有：
 <li>online：已生效；</li>
 <li>process：部署中；</li>
 <li>offline：已停用；</li>
 <li>forbidden：已封禁；</li>
-<li>init：未生效，待激活站点；</li>
+<li>init：未生效，待激活站点。</li>
      */
     public void setDomainStatus(String DomainStatus) {
         this.DomainStatus = DomainStatus;
+    }
+
+    /**
+     * Get CNAME 地址。 
+     * @return Cname CNAME 地址。
+     */
+    public String getCname() {
+        return this.Cname;
+    }
+
+    /**
+     * Set CNAME 地址。
+     * @param Cname CNAME 地址。
+     */
+    public void setCname(String Cname) {
+        this.Cname = Cname;
+    }
+
+    /**
+     * Get IPv6 状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPv6Status IPv6 状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIPv6Status() {
+        return this.IPv6Status;
+    }
+
+    /**
+     * Set IPv6 状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPv6Status IPv6 状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPv6Status(String IPv6Status) {
+        this.IPv6Status = IPv6Status;
+    }
+
+    /**
+     * Get 加速域名归属权验证状态，取值有： 
+<li>pending：待验证；</li>
+<li>finished：已完成验证。</li>	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IdentificationStatus 加速域名归属权验证状态，取值有： 
+<li>pending：待验证；</li>
+<li>finished：已完成验证。</li>	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIdentificationStatus() {
+        return this.IdentificationStatus;
+    }
+
+    /**
+     * Set 加速域名归属权验证状态，取值有： 
+<li>pending：待验证；</li>
+<li>finished：已完成验证。</li>	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IdentificationStatus 加速域名归属权验证状态，取值有： 
+<li>pending：待验证；</li>
+<li>finished：已完成验证。</li>	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIdentificationStatus(String IdentificationStatus) {
+        this.IdentificationStatus = IdentificationStatus;
+    }
+
+    /**
+     * Get 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnershipVerification 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OwnershipVerification getOwnershipVerification() {
+        return this.OwnershipVerification;
+    }
+
+    /**
+     * Set 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnershipVerification 加速域名需进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
+        this.OwnershipVerification = OwnershipVerification;
     }
 
     /**
@@ -230,14 +328,14 @@ public class AccelerationDomain extends AbstractModel {
 
     /**
      * Get 回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP协议回源；</li>
+<li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OriginProtocol 回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP协议回源；</li>
+<li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginProtocol() {
@@ -246,14 +344,14 @@ public class AccelerationDomain extends AbstractModel {
 
     /**
      * Set 回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP协议回源；</li>
+<li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginProtocol 回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP协议回源；</li>
+<li>HTTPS：HTTPS协议回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginProtocol(String OriginProtocol) {
@@ -261,29 +359,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Get 域名证书信息
+     * Get HTTP 回源端口。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Certificate 域名证书信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public AccelerationDomainCertificate getCertificate() {
-        return this.Certificate;
-    }
-
-    /**
-     * Set 域名证书信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Certificate 域名证书信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCertificate(AccelerationDomainCertificate Certificate) {
-        this.Certificate = Certificate;
-    }
-
-    /**
-     * Get HTTP回源端口。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpOriginPort HTTP回源端口。
+     * @return HttpOriginPort HTTP 回源端口。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHttpOriginPort() {
@@ -291,9 +369,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Set HTTP回源端口。
+     * Set HTTP 回源端口。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpOriginPort HTTP回源端口。
+     * @param HttpOriginPort HTTP 回源端口。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpOriginPort(Long HttpOriginPort) {
@@ -301,9 +379,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Get HTTPS回源端口。
+     * Get HTTPS 回源端口。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpsOriginPort HTTPS回源端口。
+     * @return HttpsOriginPort HTTPS 回源端口。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHttpsOriginPort() {
@@ -311,9 +389,9 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Set HTTPS回源端口。
+     * Set HTTPS 回源端口。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpsOriginPort HTTPS回源端口。
+     * @param HttpsOriginPort HTTPS 回源端口。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpsOriginPort(Long HttpsOriginPort) {
@@ -321,71 +399,23 @@ public class AccelerationDomain extends AbstractModel {
     }
 
     /**
-     * Get IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+     * Get 加速域名证书信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IPv6Status IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+     * @return Certificate 加速域名证书信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getIPv6Status() {
-        return this.IPv6Status;
+    public AccelerationDomainCertificate getCertificate() {
+        return this.Certificate;
     }
 
     /**
-     * Set IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+     * Set 加速域名证书信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IPv6Status IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
-<li>on：开启状态；</li>
-<li>off：关闭状态。</li>
+     * @param Certificate 加速域名证书信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIPv6Status(String IPv6Status) {
-        this.IPv6Status = IPv6Status;
-    }
-
-    /**
-     * Get CNAME 地址。 
-     * @return Cname CNAME 地址。
-     */
-    public String getCname() {
-        return this.Cname;
-    }
-
-    /**
-     * Set CNAME 地址。
-     * @param Cname CNAME 地址。
-     */
-    public void setCname(String Cname) {
-        this.Cname = Cname;
-    }
-
-    /**
-     * Get 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdentificationStatus 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getIdentificationStatus() {
-        return this.IdentificationStatus;
-    }
-
-    /**
-     * Set 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdentificationStatus 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setIdentificationStatus(String IdentificationStatus) {
-        this.IdentificationStatus = IdentificationStatus;
+    public void setCertificate(AccelerationDomainCertificate Certificate) {
+        this.Certificate = Certificate;
     }
 
     /**
@@ -420,26 +450,6 @@ public class AccelerationDomain extends AbstractModel {
         this.ModifiedOn = ModifiedOn;
     }
 
-    /**
-     * Get 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnershipVerification 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public OwnershipVerification getOwnershipVerification() {
-        return this.OwnershipVerification;
-    }
-
-    /**
-     * Set 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnershipVerification 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
-        this.OwnershipVerification = OwnershipVerification;
-    }
-
     public AccelerationDomain() {
     }
 
@@ -457,14 +467,23 @@ public class AccelerationDomain extends AbstractModel {
         if (source.DomainStatus != null) {
             this.DomainStatus = new String(source.DomainStatus);
         }
+        if (source.Cname != null) {
+            this.Cname = new String(source.Cname);
+        }
+        if (source.IPv6Status != null) {
+            this.IPv6Status = new String(source.IPv6Status);
+        }
+        if (source.IdentificationStatus != null) {
+            this.IdentificationStatus = new String(source.IdentificationStatus);
+        }
+        if (source.OwnershipVerification != null) {
+            this.OwnershipVerification = new OwnershipVerification(source.OwnershipVerification);
+        }
         if (source.OriginDetail != null) {
             this.OriginDetail = new OriginDetail(source.OriginDetail);
         }
         if (source.OriginProtocol != null) {
             this.OriginProtocol = new String(source.OriginProtocol);
-        }
-        if (source.Certificate != null) {
-            this.Certificate = new AccelerationDomainCertificate(source.Certificate);
         }
         if (source.HttpOriginPort != null) {
             this.HttpOriginPort = new Long(source.HttpOriginPort);
@@ -472,23 +491,14 @@ public class AccelerationDomain extends AbstractModel {
         if (source.HttpsOriginPort != null) {
             this.HttpsOriginPort = new Long(source.HttpsOriginPort);
         }
-        if (source.IPv6Status != null) {
-            this.IPv6Status = new String(source.IPv6Status);
-        }
-        if (source.Cname != null) {
-            this.Cname = new String(source.Cname);
-        }
-        if (source.IdentificationStatus != null) {
-            this.IdentificationStatus = new String(source.IdentificationStatus);
+        if (source.Certificate != null) {
+            this.Certificate = new AccelerationDomainCertificate(source.Certificate);
         }
         if (source.CreatedOn != null) {
             this.CreatedOn = new String(source.CreatedOn);
         }
         if (source.ModifiedOn != null) {
             this.ModifiedOn = new String(source.ModifiedOn);
-        }
-        if (source.OwnershipVerification != null) {
-            this.OwnershipVerification = new OwnershipVerification(source.OwnershipVerification);
         }
     }
 
@@ -500,17 +510,17 @@ public class AccelerationDomain extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
+        this.setParamSimple(map, prefix + "Cname", this.Cname);
+        this.setParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
+        this.setParamSimple(map, prefix + "IdentificationStatus", this.IdentificationStatus);
+        this.setParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
         this.setParamObj(map, prefix + "OriginDetail.", this.OriginDetail);
         this.setParamSimple(map, prefix + "OriginProtocol", this.OriginProtocol);
-        this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "HttpOriginPort", this.HttpOriginPort);
         this.setParamSimple(map, prefix + "HttpsOriginPort", this.HttpsOriginPort);
-        this.setParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
-        this.setParamSimple(map, prefix + "Cname", this.Cname);
-        this.setParamSimple(map, prefix + "IdentificationStatus", this.IdentificationStatus);
+        this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
-        this.setParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
 
     }
 }

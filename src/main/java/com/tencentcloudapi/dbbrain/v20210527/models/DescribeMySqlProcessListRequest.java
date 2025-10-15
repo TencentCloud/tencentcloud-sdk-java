@@ -59,14 +59,14 @@ public class DescribeMySqlProcessListRequest extends AbstractModel {
     private String DB;
 
     /**
-    * 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
+    * 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
+    * 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
     */
     @SerializedName("Command")
     @Expose
@@ -94,7 +94,9 @@ public class DescribeMySqlProcessListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
+
+
     */
     @SerializedName("Product")
     @Expose
@@ -188,32 +190,32 @@ public class DescribeMySqlProcessListRequest extends AbstractModel {
     }
 
     /**
-     * Get 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等 
-     * @return State 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
+     * Get 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。 
+     * @return State 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
-     * @param State 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
+     * Set 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
+     * @param State 线程的操作状态。包含以下枚举值：Sending data​-线程正在处理查询结果， ​Sorting result​-线程正在对查询结果进行排序​，Creating tmp table​-线程正在创建临时表，Altering table​-线程正在执行表结构变更，Updating-线程执行更新中。
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等 
-     * @return Command 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
+     * Get 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。 
+     * @return Command 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
-     * @param Command 线程的操作状态，用于筛选线程列表。包含以下值：Sending data，Updating, Opening tables 等
+     * Set 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
+     * @param Command 线程的执行类型。包含以下枚举值：Sleep-线程处于空闲状态，Query-线程正在执行一个查询，Connect-从服务器连接到主服务器，Execute-线程正在执行预处理语句。
      */
     public void setCommand(String Command) {
         this.Command = Command;
@@ -268,16 +270,24 @@ public class DescribeMySqlProcessListRequest extends AbstractModel {
     }
 
     /**
-     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。 
-     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
+
+ 
+     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
+
+
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
-     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
+
+
+     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"mariadb"-mariadb;"cynosdb"-TDSQL-C for MySQL ;"dcdb"-TDSQL MySQL 默认为"mysql"。
+
+
      */
     public void setProduct(String Product) {
         this.Product = Product;

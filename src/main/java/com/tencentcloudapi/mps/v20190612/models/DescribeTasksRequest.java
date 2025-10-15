@@ -34,7 +34,9 @@ public class DescribeTasksRequest extends AbstractModel {
     private String Status;
 
     /**
-    * 任务结束时子任务是否有失败。
+    * 任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li>
     */
     @SerializedName("SubTaskHasFailed")
     @Expose
@@ -97,16 +99,24 @@ public class DescribeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务结束时子任务是否有失败。 
-     * @return SubTaskHasFailed 任务结束时子任务是否有失败。
+     * Get 任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li> 
+     * @return SubTaskHasFailed 任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li>
      */
     public Boolean getSubTaskHasFailed() {
         return this.SubTaskHasFailed;
     }
 
     /**
-     * Set 任务结束时子任务是否有失败。
-     * @param SubTaskHasFailed 任务结束时子任务是否有失败。
+     * Set 任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li>
+     * @param SubTaskHasFailed 任务结束时子任务是否有失败。如果不传则忽略。
+<li>false: 过滤子任务没有失败的任务；</li>
+<li>true: 过滤子任务有失败的任务。</li>
      */
     public void setSubTaskHasFailed(Boolean SubTaskHasFailed) {
         this.SubTaskHasFailed = SubTaskHasFailed;

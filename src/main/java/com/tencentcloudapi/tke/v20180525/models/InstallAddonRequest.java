@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InstallAddonRequest extends AbstractModel {
 
     /**
-    * 集群ID（仅支持标准tke集群）
+    * 集群ID（仅支持标准tke集群），请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * addon名称
+    * addon名称，请从容器服务控制台进入集群详情页后，在组件管理页面中获取。
     */
     @SerializedName("AddonName")
     @Expose
@@ -52,39 +52,39 @@ public class InstallAddonRequest extends AbstractModel {
     private String RawValues;
 
     /**
-    * 是否仅做安装检查，设置为true时仅做检查，不会安装组件
+    * 是否仅做安装检查，设置为true时仅做检查，不会安装组件。默认值为 false。
     */
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
 
     /**
-     * Get 集群ID（仅支持标准tke集群） 
-     * @return ClusterId 集群ID（仅支持标准tke集群）
+     * Get 集群ID（仅支持标准tke集群），请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。 
+     * @return ClusterId 集群ID（仅支持标准tke集群），请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID（仅支持标准tke集群）
-     * @param ClusterId 集群ID（仅支持标准tke集群）
+     * Set 集群ID（仅支持标准tke集群），请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
+     * @param ClusterId 集群ID（仅支持标准tke集群），请从容器服务控制台集群列表中获取（https://console.cloud.tencent.com/tke2/cluster）。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get addon名称 
-     * @return AddonName addon名称
+     * Get addon名称，请从容器服务控制台进入集群详情页后，在组件管理页面中获取。 
+     * @return AddonName addon名称，请从容器服务控制台进入集群详情页后，在组件管理页面中获取。
      */
     public String getAddonName() {
         return this.AddonName;
     }
 
     /**
-     * Set addon名称
-     * @param AddonName addon名称
+     * Set addon名称，请从容器服务控制台进入集群详情页后，在组件管理页面中获取。
+     * @param AddonName addon名称，请从容器服务控制台进入集群详情页后，在组件管理页面中获取。
      */
     public void setAddonName(String AddonName) {
         this.AddonName = AddonName;
@@ -123,16 +123,16 @@ public class InstallAddonRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否仅做安装检查，设置为true时仅做检查，不会安装组件 
-     * @return DryRun 是否仅做安装检查，设置为true时仅做检查，不会安装组件
+     * Get 是否仅做安装检查，设置为true时仅做检查，不会安装组件。默认值为 false。 
+     * @return DryRun 是否仅做安装检查，设置为true时仅做检查，不会安装组件。默认值为 false。
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 是否仅做安装检查，设置为true时仅做检查，不会安装组件
-     * @param DryRun 是否仅做安装检查，设置为true时仅做检查，不会安装组件
+     * Set 是否仅做安装检查，设置为true时仅做检查，不会安装组件。默认值为 false。
+     * @param DryRun 是否仅做安装检查，设置为true时仅做检查，不会安装组件。默认值为 false。
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;

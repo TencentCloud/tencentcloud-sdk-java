@@ -31,13 +31,6 @@ public class VoiceCloneRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
-    * TTS的API密钥
-    */
-    @SerializedName("APIKey")
-    @Expose
-    private String APIKey;
-
-    /**
     * 声音克隆的名称, 只允许使用数字、字母、下划线，不能超过36位
     */
     @SerializedName("VoiceName")
@@ -50,6 +43,13 @@ public class VoiceCloneRequest extends AbstractModel {
     @SerializedName("PromptAudio")
     @Expose
     private String PromptAudio;
+
+    /**
+    * TTS的API密钥
+    */
+    @SerializedName("APIKey")
+    @Expose
+    private String APIKey;
 
     /**
     * 声音克隆的参考文本，为参考音频对应的文字。
@@ -72,22 +72,6 @@ public class VoiceCloneRequest extends AbstractModel {
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
-    }
-
-    /**
-     * Get TTS的API密钥 
-     * @return APIKey TTS的API密钥
-     */
-    public String getAPIKey() {
-        return this.APIKey;
-    }
-
-    /**
-     * Set TTS的API密钥
-     * @param APIKey TTS的API密钥
-     */
-    public void setAPIKey(String APIKey) {
-        this.APIKey = APIKey;
     }
 
     /**
@@ -123,6 +107,22 @@ public class VoiceCloneRequest extends AbstractModel {
     }
 
     /**
+     * Get TTS的API密钥 
+     * @return APIKey TTS的API密钥
+     */
+    public String getAPIKey() {
+        return this.APIKey;
+    }
+
+    /**
+     * Set TTS的API密钥
+     * @param APIKey TTS的API密钥
+     */
+    public void setAPIKey(String APIKey) {
+        this.APIKey = APIKey;
+    }
+
+    /**
      * Get 声音克隆的参考文本，为参考音频对应的文字。 
      * @return PromptText 声音克隆的参考文本，为参考音频对应的文字。
      */
@@ -149,14 +149,14 @@ public class VoiceCloneRequest extends AbstractModel {
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
         }
-        if (source.APIKey != null) {
-            this.APIKey = new String(source.APIKey);
-        }
         if (source.VoiceName != null) {
             this.VoiceName = new String(source.VoiceName);
         }
         if (source.PromptAudio != null) {
             this.PromptAudio = new String(source.PromptAudio);
+        }
+        if (source.APIKey != null) {
+            this.APIKey = new String(source.APIKey);
         }
         if (source.PromptText != null) {
             this.PromptText = new String(source.PromptText);
@@ -169,9 +169,9 @@ public class VoiceCloneRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-        this.setParamSimple(map, prefix + "APIKey", this.APIKey);
         this.setParamSimple(map, prefix + "VoiceName", this.VoiceName);
         this.setParamSimple(map, prefix + "PromptAudio", this.PromptAudio);
+        this.setParamSimple(map, prefix + "APIKey", this.APIKey);
         this.setParamSimple(map, prefix + "PromptText", this.PromptText);
 
     }
