@@ -114,6 +114,13 @@ public class DescribeContractComparisonTaskResponse extends AbstractModel {
     private Long CreateTime;
 
     /**
+    * 对比差异详情，请求参数ShowDetail为true时返回。
+    */
+    @SerializedName("ComparisonDetail")
+    @Expose
+    private ComparisonDetail [] ComparisonDetail;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -337,6 +344,22 @@ public class DescribeContractComparisonTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get 对比差异详情，请求参数ShowDetail为true时返回。 
+     * @return ComparisonDetail 对比差异详情，请求参数ShowDetail为true时返回。
+     */
+    public ComparisonDetail [] getComparisonDetail() {
+        return this.ComparisonDetail;
+    }
+
+    /**
+     * Set 对比差异详情，请求参数ShowDetail为true时返回。
+     * @param ComparisonDetail 对比差异详情，请求参数ShowDetail为true时返回。
+     */
+    public void setComparisonDetail(ComparisonDetail [] ComparisonDetail) {
+        this.ComparisonDetail = ComparisonDetail;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -396,6 +419,12 @@ public class DescribeContractComparisonTaskResponse extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.ComparisonDetail != null) {
+            this.ComparisonDetail = new ComparisonDetail[source.ComparisonDetail.length];
+            for (int i = 0; i < source.ComparisonDetail.length; i++) {
+                this.ComparisonDetail[i] = new ComparisonDetail(source.ComparisonDetail[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -418,6 +447,7 @@ public class DescribeContractComparisonTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "DeleteDiffCount", this.DeleteDiffCount);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamArrayObj(map, prefix + "ComparisonDetail.", this.ComparisonDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

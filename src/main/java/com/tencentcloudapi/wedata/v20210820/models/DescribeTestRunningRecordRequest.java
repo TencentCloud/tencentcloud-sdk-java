@@ -73,6 +73,20 @@ public class DescribeTestRunningRecordRequest extends AbstractModel {
     private Long [] RecordIdList;
 
     /**
+    * 分页大小
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+    * 分页索引
+    */
+    @SerializedName("PageIndex")
+    @Expose
+    private Long PageIndex;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -184,6 +198,38 @@ public class DescribeTestRunningRecordRequest extends AbstractModel {
         this.RecordIdList = RecordIdList;
     }
 
+    /**
+     * Get 分页大小 
+     * @return PageSize 分页大小
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set 分页大小
+     * @param PageSize 分页大小
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
+     * Get 分页索引 
+     * @return PageIndex 分页索引
+     */
+    public Long getPageIndex() {
+        return this.PageIndex;
+    }
+
+    /**
+     * Set 分页索引
+     * @param PageIndex 分页索引
+     */
+    public void setPageIndex(Long PageIndex) {
+        this.PageIndex = PageIndex;
+    }
+
     public DescribeTestRunningRecordRequest() {
     }
 
@@ -216,6 +262,12 @@ public class DescribeTestRunningRecordRequest extends AbstractModel {
                 this.RecordIdList[i] = new Long(source.RecordIdList[i]);
             }
         }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.PageIndex != null) {
+            this.PageIndex = new Long(source.PageIndex);
+        }
     }
 
 
@@ -230,6 +282,8 @@ public class DescribeTestRunningRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "RecordIdList.", this.RecordIdList);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
 
     }
 }

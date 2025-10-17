@@ -220,6 +220,13 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
+    * 根据任务优先级筛选
+    */
+    @SerializedName("RunPriorityList")
+    @Expose
+    private Long [] RunPriorityList;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -667,6 +674,22 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
+    /**
+     * Get 根据任务优先级筛选 
+     * @return RunPriorityList 根据任务优先级筛选
+     */
+    public Long [] getRunPriorityList() {
+        return this.RunPriorityList;
+    }
+
+    /**
+     * Set 根据任务优先级筛选
+     * @param RunPriorityList 根据任务优先级筛选
+     */
+    public void setRunPriorityList(Long [] RunPriorityList) {
+        this.RunPriorityList = RunPriorityList;
+    }
+
     public DescribeOperateOpsTasksRequest() {
     }
 
@@ -771,6 +794,12 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.RunPriorityList != null) {
+            this.RunPriorityList = new Long[source.RunPriorityList.length];
+            for (int i = 0; i < source.RunPriorityList.length; i++) {
+                this.RunPriorityList[i] = new Long(source.RunPriorityList[i]);
+            }
+        }
     }
 
 
@@ -806,6 +835,7 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamArraySimple(map, prefix + "BlackTaskIdList.", this.BlackTaskIdList);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamArraySimple(map, prefix + "RunPriorityList.", this.RunPriorityList);
 
     }
 }

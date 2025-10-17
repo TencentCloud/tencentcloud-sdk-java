@@ -40,6 +40,14 @@ public class SqlExpression extends AbstractModel {
     private String [] ParamExpressions;
 
     /**
+    * 新增模型检测类系统模板sql中占位符集合
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SystemTemplateExpressions")
+    @Expose
+    private String [] SystemTemplateExpressions;
+
+    /**
      * Get sql表达式表名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableExpressions sql表达式表名
@@ -79,6 +87,26 @@ public class SqlExpression extends AbstractModel {
         this.ParamExpressions = ParamExpressions;
     }
 
+    /**
+     * Get 新增模型检测类系统模板sql中占位符集合
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SystemTemplateExpressions 新增模型检测类系统模板sql中占位符集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSystemTemplateExpressions() {
+        return this.SystemTemplateExpressions;
+    }
+
+    /**
+     * Set 新增模型检测类系统模板sql中占位符集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SystemTemplateExpressions 新增模型检测类系统模板sql中占位符集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSystemTemplateExpressions(String [] SystemTemplateExpressions) {
+        this.SystemTemplateExpressions = SystemTemplateExpressions;
+    }
+
     public SqlExpression() {
     }
 
@@ -99,6 +127,12 @@ public class SqlExpression extends AbstractModel {
                 this.ParamExpressions[i] = new String(source.ParamExpressions[i]);
             }
         }
+        if (source.SystemTemplateExpressions != null) {
+            this.SystemTemplateExpressions = new String[source.SystemTemplateExpressions.length];
+            for (int i = 0; i < source.SystemTemplateExpressions.length; i++) {
+                this.SystemTemplateExpressions[i] = new String(source.SystemTemplateExpressions[i]);
+            }
+        }
     }
 
 
@@ -108,6 +142,7 @@ public class SqlExpression extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TableExpressions.", this.TableExpressions);
         this.setParamArraySimple(map, prefix + "ParamExpressions.", this.ParamExpressions);
+        this.setParamArraySimple(map, prefix + "SystemTemplateExpressions.", this.SystemTemplateExpressions);
 
     }
 }

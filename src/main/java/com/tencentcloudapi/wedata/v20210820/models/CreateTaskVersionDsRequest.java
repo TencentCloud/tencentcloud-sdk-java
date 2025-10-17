@@ -80,6 +80,13 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
     private Boolean EnableCheckTaskCycleLink;
 
     /**
+    * 是否需要补录中间实例
+    */
+    @SerializedName("EnableMakeUp")
+    @Expose
+    private Boolean EnableMakeUp;
+
+    /**
      * Get 任务id 
      * @return Task 任务id
      */
@@ -207,6 +214,22 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
         this.EnableCheckTaskCycleLink = EnableCheckTaskCycleLink;
     }
 
+    /**
+     * Get 是否需要补录中间实例 
+     * @return EnableMakeUp 是否需要补录中间实例
+     */
+    public Boolean getEnableMakeUp() {
+        return this.EnableMakeUp;
+    }
+
+    /**
+     * Set 是否需要补录中间实例
+     * @param EnableMakeUp 是否需要补录中间实例
+     */
+    public void setEnableMakeUp(Boolean EnableMakeUp) {
+        this.EnableMakeUp = EnableMakeUp;
+    }
+
     public CreateTaskVersionDsRequest() {
     }
 
@@ -239,6 +262,9 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
         if (source.EnableCheckTaskCycleLink != null) {
             this.EnableCheckTaskCycleLink = new Boolean(source.EnableCheckTaskCycleLink);
         }
+        if (source.EnableMakeUp != null) {
+            this.EnableMakeUp = new Boolean(source.EnableMakeUp);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CreateTaskVersionDsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AlarmWays", this.AlarmWays);
         this.setParamSimple(map, prefix + "AlarmRecipientTypes", this.AlarmRecipientTypes);
         this.setParamSimple(map, prefix + "EnableCheckTaskCycleLink", this.EnableCheckTaskCycleLink);
+        this.setParamSimple(map, prefix + "EnableMakeUp", this.EnableMakeUp);
 
     }
 }

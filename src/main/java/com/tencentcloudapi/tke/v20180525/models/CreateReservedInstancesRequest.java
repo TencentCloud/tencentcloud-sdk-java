@@ -59,6 +59,14 @@ public class CreateReservedInstancesRequest extends AbstractModel {
     private String ClientToken;
 
     /**
+    * 是否只预检此次请求。
+true：只预检，不会创建实例。默认值为：false。
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * Get 预留券实例规格。 
      * @return ReservedInstanceSpec 预留券实例规格。
      */
@@ -138,6 +146,26 @@ public class CreateReservedInstancesRequest extends AbstractModel {
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get 是否只预检此次请求。
+true：只预检，不会创建实例。默认值为：false。 
+     * @return DryRun 是否只预检此次请求。
+true：只预检，不会创建实例。默认值为：false。
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set 是否只预检此次请求。
+true：只预检，不会创建实例。默认值为：false。
+     * @param DryRun 是否只预检此次请求。
+true：只预检，不会创建实例。默认值为：false。
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
     public CreateReservedInstancesRequest() {
     }
 
@@ -161,6 +189,9 @@ public class CreateReservedInstancesRequest extends AbstractModel {
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -173,6 +204,7 @@ public class CreateReservedInstancesRequest extends AbstractModel {
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

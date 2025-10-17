@@ -861,12 +861,12 @@ CI/CD工程生成的bundle唯一标识
     private String BundleId;
 
     /**
-    * Bundle名称
+    * bundle信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("BundleName")
+    @SerializedName("BundleInfo")
     @Expose
-    private String BundleName;
+    private String BundleInfo;
 
     /**
      * Get 任务ID
@@ -2993,23 +2993,23 @@ CI/CD工程生成的bundle唯一标识
     }
 
     /**
-     * Get Bundle名称
+     * Get bundle信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BundleName Bundle名称
+     * @return BundleInfo bundle信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getBundleName() {
-        return this.BundleName;
+    public String getBundleInfo() {
+        return this.BundleInfo;
     }
 
     /**
-     * Set Bundle名称
+     * Set bundle信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BundleName Bundle名称
+     * @param BundleInfo bundle信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBundleName(String BundleName) {
-        this.BundleName = BundleName;
+    public void setBundleInfo(String BundleInfo) {
+        this.BundleInfo = BundleInfo;
     }
 
     public TaskDsDTO() {
@@ -3353,8 +3353,8 @@ CI/CD工程生成的bundle唯一标识
         if (source.BundleId != null) {
             this.BundleId = new String(source.BundleId);
         }
-        if (source.BundleName != null) {
-            this.BundleName = new String(source.BundleName);
+        if (source.BundleInfo != null) {
+            this.BundleInfo = new String(source.BundleInfo);
         }
     }
 
@@ -3465,7 +3465,7 @@ CI/CD工程生成的bundle唯一标识
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
         this.setParamSimple(map, prefix + "BundleId", this.BundleId);
-        this.setParamSimple(map, prefix + "BundleName", this.BundleName);
+        this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
 
     }
 }

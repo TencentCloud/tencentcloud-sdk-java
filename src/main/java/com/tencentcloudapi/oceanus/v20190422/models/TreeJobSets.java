@@ -97,6 +97,13 @@ public class TreeJobSets extends AbstractModel {
     private String DecodeSqlCode;
 
     /**
+    * 发布版本配置id
+    */
+    @SerializedName("PublishedJobConfigId")
+    @Expose
+    private Long PublishedJobConfigId;
+
+    /**
      * Get 作业Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 作业Id
@@ -280,6 +287,22 @@ public class TreeJobSets extends AbstractModel {
         this.DecodeSqlCode = DecodeSqlCode;
     }
 
+    /**
+     * Get 发布版本配置id 
+     * @return PublishedJobConfigId 发布版本配置id
+     */
+    public Long getPublishedJobConfigId() {
+        return this.PublishedJobConfigId;
+    }
+
+    /**
+     * Set 发布版本配置id
+     * @param PublishedJobConfigId 发布版本配置id
+     */
+    public void setPublishedJobConfigId(Long PublishedJobConfigId) {
+        this.PublishedJobConfigId = PublishedJobConfigId;
+    }
+
     public TreeJobSets() {
     }
 
@@ -315,6 +338,9 @@ public class TreeJobSets extends AbstractModel {
         if (source.DecodeSqlCode != null) {
             this.DecodeSqlCode = new String(source.DecodeSqlCode);
         }
+        if (source.PublishedJobConfigId != null) {
+            this.PublishedJobConfigId = new Long(source.PublishedJobConfigId);
+        }
     }
 
 
@@ -331,6 +357,7 @@ public class TreeJobSets extends AbstractModel {
         this.setParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
         this.setParamSimple(map, prefix + "RunningMem", this.RunningMem);
         this.setParamSimple(map, prefix + "DecodeSqlCode", this.DecodeSqlCode);
+        this.setParamSimple(map, prefix + "PublishedJobConfigId", this.PublishedJobConfigId);
 
     }
 }

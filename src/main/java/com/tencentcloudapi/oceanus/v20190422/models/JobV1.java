@@ -160,12 +160,19 @@ public class JobV1 extends AbstractModel {
     private String ClusterName;
 
     /**
-    * 最新配置版本号
+    * 最新配置版本号，包括已经删除的版本
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestJobConfigVersion")
     @Expose
     private Long LatestJobConfigVersion;
+
+    /**
+    * 最新的版本号，不包括已经删除的版本号
+    */
+    @SerializedName("LatestValidJobConfigVersion")
+    @Expose
+    private Long LatestValidJobConfigVersion;
 
     /**
     * 已发布的配置版本
@@ -342,6 +349,13 @@ public class JobV1 extends AbstractModel {
     @SerializedName("ContinueAlarm")
     @Expose
     private Long ContinueAlarm;
+
+    /**
+    * 作业重启次数
+    */
+    @SerializedName("RestartCount")
+    @Expose
+    private Long RestartCount;
 
     /**
      * Get 作业ID
@@ -684,9 +698,9 @@ public class JobV1 extends AbstractModel {
     }
 
     /**
-     * Get 最新配置版本号
+     * Get 最新配置版本号，包括已经删除的版本
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestJobConfigVersion 最新配置版本号
+     * @return LatestJobConfigVersion 最新配置版本号，包括已经删除的版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLatestJobConfigVersion() {
@@ -694,13 +708,29 @@ public class JobV1 extends AbstractModel {
     }
 
     /**
-     * Set 最新配置版本号
+     * Set 最新配置版本号，包括已经删除的版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestJobConfigVersion 最新配置版本号
+     * @param LatestJobConfigVersion 最新配置版本号，包括已经删除的版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestJobConfigVersion(Long LatestJobConfigVersion) {
         this.LatestJobConfigVersion = LatestJobConfigVersion;
+    }
+
+    /**
+     * Get 最新的版本号，不包括已经删除的版本号 
+     * @return LatestValidJobConfigVersion 最新的版本号，不包括已经删除的版本号
+     */
+    public Long getLatestValidJobConfigVersion() {
+        return this.LatestValidJobConfigVersion;
+    }
+
+    /**
+     * Set 最新的版本号，不包括已经删除的版本号
+     * @param LatestValidJobConfigVersion 最新的版本号，不包括已经删除的版本号
+     */
+    public void setLatestValidJobConfigVersion(Long LatestValidJobConfigVersion) {
+        this.LatestValidJobConfigVersion = LatestValidJobConfigVersion;
     }
 
     /**
@@ -1143,6 +1173,22 @@ public class JobV1 extends AbstractModel {
         this.ContinueAlarm = ContinueAlarm;
     }
 
+    /**
+     * Get 作业重启次数 
+     * @return RestartCount 作业重启次数
+     */
+    public Long getRestartCount() {
+        return this.RestartCount;
+    }
+
+    /**
+     * Set 作业重启次数
+     * @param RestartCount 作业重启次数
+     */
+    public void setRestartCount(Long RestartCount) {
+        this.RestartCount = RestartCount;
+    }
+
     public JobV1() {
     }
 
@@ -1204,6 +1250,9 @@ public class JobV1 extends AbstractModel {
         }
         if (source.LatestJobConfigVersion != null) {
             this.LatestJobConfigVersion = new Long(source.LatestJobConfigVersion);
+        }
+        if (source.LatestValidJobConfigVersion != null) {
+            this.LatestValidJobConfigVersion = new Long(source.LatestValidJobConfigVersion);
         }
         if (source.PublishedJobConfigVersion != null) {
             this.PublishedJobConfigVersion = new Long(source.PublishedJobConfigVersion);
@@ -1274,6 +1323,9 @@ public class JobV1 extends AbstractModel {
         if (source.ContinueAlarm != null) {
             this.ContinueAlarm = new Long(source.ContinueAlarm);
         }
+        if (source.RestartCount != null) {
+            this.RestartCount = new Long(source.RestartCount);
+        }
     }
 
 
@@ -1299,6 +1351,7 @@ public class JobV1 extends AbstractModel {
         this.setParamSimple(map, prefix + "LastOpResult", this.LastOpResult);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "LatestJobConfigVersion", this.LatestJobConfigVersion);
+        this.setParamSimple(map, prefix + "LatestValidJobConfigVersion", this.LatestValidJobConfigVersion);
         this.setParamSimple(map, prefix + "PublishedJobConfigVersion", this.PublishedJobConfigVersion);
         this.setParamSimple(map, prefix + "RunningCuNum", this.RunningCuNum);
         this.setParamSimple(map, prefix + "CuMem", this.CuMem);
@@ -1321,6 +1374,7 @@ public class JobV1 extends AbstractModel {
         this.setParamSimple(map, prefix + "OpenJobDefaultAlarm", this.OpenJobDefaultAlarm);
         this.setParamSimple(map, prefix + "ProgressDesc", this.ProgressDesc);
         this.setParamSimple(map, prefix + "ContinueAlarm", this.ContinueAlarm);
+        this.setParamSimple(map, prefix + "RestartCount", this.RestartCount);
 
     }
 }

@@ -165,6 +165,13 @@ public class DescribeEventCasesRequest extends AbstractModel {
     private String SortType;
 
     /**
+    * 有效次数
+    */
+    @SerializedName("ConsumeCount")
+    @Expose
+    private String ConsumeCount;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -512,6 +519,22 @@ public class DescribeEventCasesRequest extends AbstractModel {
         this.SortType = SortType;
     }
 
+    /**
+     * Get 有效次数 
+     * @return ConsumeCount 有效次数
+     */
+    public String getConsumeCount() {
+        return this.ConsumeCount;
+    }
+
+    /**
+     * Set 有效次数
+     * @param ConsumeCount 有效次数
+     */
+    public void setConsumeCount(String ConsumeCount) {
+        this.ConsumeCount = ConsumeCount;
+    }
+
     public DescribeEventCasesRequest() {
     }
 
@@ -577,6 +600,9 @@ public class DescribeEventCasesRequest extends AbstractModel {
         if (source.SortType != null) {
             this.SortType = new String(source.SortType);
         }
+        if (source.ConsumeCount != null) {
+            this.ConsumeCount = new String(source.ConsumeCount);
+        }
     }
 
 
@@ -603,6 +629,7 @@ public class DescribeEventCasesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeToLive", this.TimeToLive);
         this.setParamSimple(map, prefix + "SortItem", this.SortItem);
         this.setParamSimple(map, prefix + "SortType", this.SortType);
+        this.setParamSimple(map, prefix + "ConsumeCount", this.ConsumeCount);
 
     }
 }

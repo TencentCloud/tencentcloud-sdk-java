@@ -38,6 +38,13 @@ public class DescribeWorkflowCanvasInfoRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 请求来源，WEB 前端；CLIENT 客户端
+    */
+    @SerializedName("RequestFromSource")
+    @Expose
+    private String RequestFromSource;
+
+    /**
      * Get 工作流id 
      * @return WorkflowId 工作流id
      */
@@ -69,6 +76,22 @@ public class DescribeWorkflowCanvasInfoRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 请求来源，WEB 前端；CLIENT 客户端 
+     * @return RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public String getRequestFromSource() {
+        return this.RequestFromSource;
+    }
+
+    /**
+     * Set 请求来源，WEB 前端；CLIENT 客户端
+     * @param RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public void setRequestFromSource(String RequestFromSource) {
+        this.RequestFromSource = RequestFromSource;
+    }
+
     public DescribeWorkflowCanvasInfoRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeWorkflowCanvasInfoRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.RequestFromSource != null) {
+            this.RequestFromSource = new String(source.RequestFromSource);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeWorkflowCanvasInfoRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
 
     }
 }

@@ -432,6 +432,30 @@ public class Rule extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceName")
+    @Expose
+    private String DatasourceName;
+
+    /**
+    * 数据库名称 
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatabaseName")
+    @Expose
+    private String DatabaseName;
+
+    /**
+    * 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailMsg")
+    @Expose
+    private String FailMsg;
+
+    /**
      * Get 规则ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId 规则ID
@@ -1451,6 +1475,66 @@ public class Rule extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceName() {
+        return this.DatasourceName;
+    }
+
+    /**
+     * Set 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceName(String DatasourceName) {
+        this.DatasourceName = DatasourceName;
+    }
+
+    /**
+     * Get 数据库名称 
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatabaseName 数据库名称 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatabaseName() {
+        return this.DatabaseName;
+    }
+
+    /**
+     * Set 数据库名称 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatabaseName 数据库名称 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatabaseName(String DatabaseName) {
+        this.DatabaseName = DatabaseName;
+    }
+
+    /**
+     * Get 失败原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailMsg 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFailMsg() {
+        return this.FailMsg;
+    }
+
+    /**
+     * Set 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailMsg 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailMsg(String FailMsg) {
+        this.FailMsg = FailMsg;
+    }
+
     public Rule() {
     }
 
@@ -1615,6 +1699,15 @@ public class Rule extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.DatasourceName != null) {
+            this.DatasourceName = new String(source.DatasourceName);
+        }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.FailMsg != null) {
+            this.FailMsg = new String(source.FailMsg);
+        }
     }
 
 
@@ -1673,6 +1766,9 @@ public class Rule extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
+        this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "FailMsg", this.FailMsg);
 
     }
 }

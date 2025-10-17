@@ -59,6 +59,20 @@ public class TalkConversationConfigInfo extends AbstractModel {
     private Boolean EmotionEnabled;
 
     /**
+    * 是否启用语义vad
+    */
+    @SerializedName("SemanticVADEnabled")
+    @Expose
+    private Boolean SemanticVADEnabled;
+
+    /**
+    * 是否启用噪声过滤
+    */
+    @SerializedName("NoiseFilterEnabled")
+    @Expose
+    private Boolean NoiseFilterEnabled;
+
+    /**
      * Get 会话超时（秒） 
      * @return SessionTimeout 会话超时（秒）
      */
@@ -138,6 +152,38 @@ public class TalkConversationConfigInfo extends AbstractModel {
         this.EmotionEnabled = EmotionEnabled;
     }
 
+    /**
+     * Get 是否启用语义vad 
+     * @return SemanticVADEnabled 是否启用语义vad
+     */
+    public Boolean getSemanticVADEnabled() {
+        return this.SemanticVADEnabled;
+    }
+
+    /**
+     * Set 是否启用语义vad
+     * @param SemanticVADEnabled 是否启用语义vad
+     */
+    public void setSemanticVADEnabled(Boolean SemanticVADEnabled) {
+        this.SemanticVADEnabled = SemanticVADEnabled;
+    }
+
+    /**
+     * Get 是否启用噪声过滤 
+     * @return NoiseFilterEnabled 是否启用噪声过滤
+     */
+    public Boolean getNoiseFilterEnabled() {
+        return this.NoiseFilterEnabled;
+    }
+
+    /**
+     * Set 是否启用噪声过滤
+     * @param NoiseFilterEnabled 是否启用噪声过滤
+     */
+    public void setNoiseFilterEnabled(Boolean NoiseFilterEnabled) {
+        this.NoiseFilterEnabled = NoiseFilterEnabled;
+    }
+
     public TalkConversationConfigInfo() {
     }
 
@@ -161,6 +207,12 @@ public class TalkConversationConfigInfo extends AbstractModel {
         if (source.EmotionEnabled != null) {
             this.EmotionEnabled = new Boolean(source.EmotionEnabled);
         }
+        if (source.SemanticVADEnabled != null) {
+            this.SemanticVADEnabled = new Boolean(source.SemanticVADEnabled);
+        }
+        if (source.NoiseFilterEnabled != null) {
+            this.NoiseFilterEnabled = new Boolean(source.NoiseFilterEnabled);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class TalkConversationConfigInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxContextTokens", this.MaxContextTokens);
         this.setParamObj(map, prefix + "IdleDetection.", this.IdleDetection);
         this.setParamSimple(map, prefix + "EmotionEnabled", this.EmotionEnabled);
+        this.setParamSimple(map, prefix + "SemanticVADEnabled", this.SemanticVADEnabled);
+        this.setParamSimple(map, prefix + "NoiseFilterEnabled", this.NoiseFilterEnabled);
 
     }
 }

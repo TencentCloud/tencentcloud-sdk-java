@@ -59,6 +59,13 @@ public class CreateHiveTableRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 数据库类型
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * 责任人
     */
     @SerializedName("Incharge")
@@ -174,6 +181,22 @@ public class CreateHiveTableRequest extends AbstractModel {
     }
 
     /**
+     * Get 数据库类型 
+     * @return Type 数据库类型
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 数据库类型
+     * @param Type 数据库类型
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * Get 责任人 
      * @return Incharge 责任人
      */
@@ -276,6 +299,9 @@ public class CreateHiveTableRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.Incharge != null) {
             this.Incharge = new String(source.Incharge);
         }
@@ -303,6 +329,7 @@ public class CreateHiveTableRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DDLSql", this.DDLSql);
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Incharge", this.Incharge);
         this.setParamSimple(map, prefix + "DataOptimizationResource", this.DataOptimizationResource);
         this.setParamSimple(map, prefix + "SmartOptimizerWritten", this.SmartOptimizerWritten);

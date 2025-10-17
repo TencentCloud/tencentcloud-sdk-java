@@ -248,6 +248,30 @@ public class DatabaseMeta extends AbstractModel {
     private String DatabaseGuid;
 
     /**
+    * 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
+    * Owner的账户信息：账号信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnerAccount")
+    @Expose
+    private Long OwnerAccount;
+
+    /**
+    * 操作权限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperateOption")
+    @Expose
+    private OperateOption OperateOption;
+
+    /**
      * Get 项目Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目Id
@@ -807,6 +831,66 @@ public class DatabaseMeta extends AbstractModel {
         this.DatabaseGuid = DatabaseGuid;
     }
 
+    /**
+     * Get 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Environment 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Environment 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
+    /**
+     * Get Owner的账户信息：账号信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnerAccount Owner的账户信息：账号信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOwnerAccount() {
+        return this.OwnerAccount;
+    }
+
+    /**
+     * Set Owner的账户信息：账号信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnerAccount Owner的账户信息：账号信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnerAccount(Long OwnerAccount) {
+        this.OwnerAccount = OwnerAccount;
+    }
+
+    /**
+     * Get 操作权限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperateOption 操作权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OperateOption getOperateOption() {
+        return this.OperateOption;
+    }
+
+    /**
+     * Set 操作权限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperateOption 操作权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperateOption(OperateOption OperateOption) {
+        this.OperateOption = OperateOption;
+    }
+
     public DatabaseMeta() {
     }
 
@@ -902,6 +986,15 @@ public class DatabaseMeta extends AbstractModel {
         if (source.DatabaseGuid != null) {
             this.DatabaseGuid = new String(source.DatabaseGuid);
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
+        if (source.OwnerAccount != null) {
+            this.OwnerAccount = new Long(source.OwnerAccount);
+        }
+        if (source.OperateOption != null) {
+            this.OperateOption = new OperateOption(source.OperateOption);
+        }
     }
 
 
@@ -937,6 +1030,9 @@ public class DatabaseMeta extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifiedTimeByTables", this.ModifiedTimeByTables);
         this.setParamSimple(map, prefix + "LastAccessTimeByTables", this.LastAccessTimeByTables);
         this.setParamSimple(map, prefix + "DatabaseGuid", this.DatabaseGuid);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
+        this.setParamSimple(map, prefix + "OwnerAccount", this.OwnerAccount);
+        this.setParamObj(map, prefix + "OperateOption.", this.OperateOption);
 
     }
 }

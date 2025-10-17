@@ -169,6 +169,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
     * 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleGroupName")
     @Expose
@@ -176,6 +177,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
     * 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseName")
     @Expose
@@ -183,6 +185,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
     * schema名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaName")
     @Expose
@@ -190,6 +193,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
     * 表名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
@@ -197,6 +201,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
     * 数据源id
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatasourceId")
     @Expose
@@ -204,6 +209,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
     * 任务描述
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -216,6 +222,22 @@ public class RuleGroupExecStrategy extends AbstractModel {
     @SerializedName("ScheduleTimeZone")
     @Expose
     private String ScheduleTimeZone;
+
+    /**
+    * 任务监控参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupConfig")
+    @Expose
+    private RuleGroupConfig GroupConfig;
+
+    /**
+    * 引擎参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineParam")
+    @Expose
+    private String EngineParam;
 
     /**
      * Get 规则组Id
@@ -578,8 +600,10 @@ public class RuleGroupExecStrategy extends AbstractModel {
     }
 
     /**
-     * Get 任务名称 
+     * Get 任务名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupName 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleGroupName() {
         return this.RuleGroupName;
@@ -587,15 +611,19 @@ public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
      * Set 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleGroupName 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleGroupName(String RuleGroupName) {
         this.RuleGroupName = RuleGroupName;
     }
 
     /**
-     * Get 数据库名称 
+     * Get 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseName 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseName() {
         return this.DatabaseName;
@@ -603,15 +631,19 @@ public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
      * Set 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabaseName 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get schema名称 
+     * Get schema名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SchemaName schema名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaName() {
         return this.SchemaName;
@@ -619,15 +651,19 @@ public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
      * Set schema名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemaName schema名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 表名称 
+     * Get 表名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -635,15 +671,19 @@ public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
      * Set 表名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 数据源id 
+     * Get 数据源id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatasourceId 数据源id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatasourceId() {
         return this.DatasourceId;
@@ -651,15 +691,19 @@ public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
      * Set 数据源id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DatasourceId 数据源id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatasourceId(String DatasourceId) {
         this.DatasourceId = DatasourceId;
     }
 
     /**
-     * Get 任务描述 
+     * Get 任务描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description 任务描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -667,7 +711,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
 
     /**
      * Set 任务描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 任务描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -691,6 +737,46 @@ public class RuleGroupExecStrategy extends AbstractModel {
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
         this.ScheduleTimeZone = ScheduleTimeZone;
+    }
+
+    /**
+     * Get 任务监控参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupConfig 任务监控参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RuleGroupConfig getGroupConfig() {
+        return this.GroupConfig;
+    }
+
+    /**
+     * Set 任务监控参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupConfig 任务监控参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupConfig(RuleGroupConfig GroupConfig) {
+        this.GroupConfig = GroupConfig;
+    }
+
+    /**
+     * Get 引擎参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineParam 引擎参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineParam() {
+        return this.EngineParam;
+    }
+
+    /**
+     * Set 引擎参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineParam 引擎参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineParam(String EngineParam) {
+        this.EngineParam = EngineParam;
     }
 
     public RuleGroupExecStrategy() {
@@ -782,6 +868,12 @@ public class RuleGroupExecStrategy extends AbstractModel {
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.GroupConfig != null) {
+            this.GroupConfig = new RuleGroupConfig(source.GroupConfig);
+        }
+        if (source.EngineParam != null) {
+            this.EngineParam = new String(source.EngineParam);
+        }
     }
 
 
@@ -814,6 +906,8 @@ public class RuleGroupExecStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamObj(map, prefix + "GroupConfig.", this.GroupConfig);
+        this.setParamSimple(map, prefix + "EngineParam", this.EngineParam);
 
     }
 }

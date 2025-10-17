@@ -48,6 +48,14 @@ public class FieldConfig extends AbstractModel {
     private String FieldDataType;
 
     /**
+    * 字段值变量信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValueConfig")
+    @Expose
+    private ColumnValueConfig ValueConfig;
+
+    /**
      * Get 字段key
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FieldKey 字段key
@@ -107,6 +115,26 @@ public class FieldConfig extends AbstractModel {
         this.FieldDataType = FieldDataType;
     }
 
+    /**
+     * Get 字段值变量信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValueConfig 字段值变量信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ColumnValueConfig getValueConfig() {
+        return this.ValueConfig;
+    }
+
+    /**
+     * Set 字段值变量信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValueConfig 字段值变量信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValueConfig(ColumnValueConfig ValueConfig) {
+        this.ValueConfig = ValueConfig;
+    }
+
     public FieldConfig() {
     }
 
@@ -124,6 +152,9 @@ public class FieldConfig extends AbstractModel {
         if (source.FieldDataType != null) {
             this.FieldDataType = new String(source.FieldDataType);
         }
+        if (source.ValueConfig != null) {
+            this.ValueConfig = new ColumnValueConfig(source.ValueConfig);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class FieldConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "FieldKey", this.FieldKey);
         this.setParamSimple(map, prefix + "FieldValue", this.FieldValue);
         this.setParamSimple(map, prefix + "FieldDataType", this.FieldDataType);
+        this.setParamObj(map, prefix + "ValueConfig.", this.ValueConfig);
 
     }
 }

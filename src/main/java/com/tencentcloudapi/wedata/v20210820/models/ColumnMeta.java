@@ -128,6 +128,14 @@ public class ColumnMeta extends AbstractModel {
     private String InfluxCategory;
 
     /**
+    * 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Specification")
+    @Expose
+    private String Specification;
+
+    /**
      * Get 字段英文名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NameEn 字段英文名称
@@ -387,6 +395,26 @@ public class ColumnMeta extends AbstractModel {
         this.InfluxCategory = InfluxCategory;
     }
 
+    /**
+     * Get 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Specification 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSpecification() {
+        return this.Specification;
+    }
+
+    /**
+     * Set 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Specification 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpecification(String Specification) {
+        this.Specification = Specification;
+    }
+
     public ColumnMeta() {
     }
 
@@ -437,6 +465,9 @@ public class ColumnMeta extends AbstractModel {
         if (source.InfluxCategory != null) {
             this.InfluxCategory = new String(source.InfluxCategory);
         }
+        if (source.Specification != null) {
+            this.Specification = new String(source.Specification);
+        }
     }
 
 
@@ -457,6 +488,7 @@ public class ColumnMeta extends AbstractModel {
         this.setParamSimple(map, prefix + "LevelName", this.LevelName);
         this.setParamSimple(map, prefix + "LevelRank", this.LevelRank);
         this.setParamSimple(map, prefix + "InfluxCategory", this.InfluxCategory);
+        this.setParamSimple(map, prefix + "Specification", this.Specification);
 
     }
 }

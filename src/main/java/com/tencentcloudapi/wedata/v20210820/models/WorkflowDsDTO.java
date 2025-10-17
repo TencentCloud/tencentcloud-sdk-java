@@ -155,6 +155,22 @@ public class WorkflowDsDTO extends AbstractModel {
     private String UpdateUserId;
 
     /**
+    * BundleId CI/CD工程生成的bundle唯一标识	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BundleId")
+    @Expose
+    private String BundleId;
+
+    /**
+    * BundleId信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BundleInfo")
+    @Expose
+    private String BundleInfo;
+
+    /**
      * Get 工作流ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowId 工作流ID
@@ -486,6 +502,46 @@ public class WorkflowDsDTO extends AbstractModel {
         this.UpdateUserId = UpdateUserId;
     }
 
+    /**
+     * Get BundleId CI/CD工程生成的bundle唯一标识	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BundleId BundleId CI/CD工程生成的bundle唯一标识	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBundleId() {
+        return this.BundleId;
+    }
+
+    /**
+     * Set BundleId CI/CD工程生成的bundle唯一标识	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BundleId BundleId CI/CD工程生成的bundle唯一标识	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBundleId(String BundleId) {
+        this.BundleId = BundleId;
+    }
+
+    /**
+     * Get BundleId信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BundleInfo BundleId信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBundleInfo() {
+        return this.BundleInfo;
+    }
+
+    /**
+     * Set BundleId信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BundleInfo BundleId信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBundleInfo(String BundleInfo) {
+        this.BundleInfo = BundleInfo;
+    }
+
     public WorkflowDsDTO() {
     }
 
@@ -551,6 +607,12 @@ public class WorkflowDsDTO extends AbstractModel {
         if (source.UpdateUserId != null) {
             this.UpdateUserId = new String(source.UpdateUserId);
         }
+        if (source.BundleId != null) {
+            this.BundleId = new String(source.BundleId);
+        }
+        if (source.BundleInfo != null) {
+            this.BundleInfo = new String(source.BundleInfo);
+        }
     }
 
 
@@ -574,6 +636,8 @@ public class WorkflowDsDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
         this.setParamSimple(map, prefix + "UpdateUser", this.UpdateUser);
         this.setParamSimple(map, prefix + "UpdateUserId", this.UpdateUserId);
+        this.setParamSimple(map, prefix + "BundleId", this.BundleId);
+        this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
 
     }
 }

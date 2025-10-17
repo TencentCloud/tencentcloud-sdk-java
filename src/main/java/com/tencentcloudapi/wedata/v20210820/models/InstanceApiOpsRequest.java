@@ -269,6 +269,20 @@ public class InstanceApiOpsRequest extends AbstractModel {
     private String ScheduleTimeTo;
 
     /**
+    * 任务优先级过滤实例列表
+    */
+    @SerializedName("RunPriorityList")
+    @Expose
+    private Long [] RunPriorityList;
+
+    /**
+    * 实例调度周期筛选
+    */
+    @SerializedName("InstanceCycleType")
+    @Expose
+    private String [] InstanceCycleType;
+
+    /**
      * Get 单个查询条件 
      * @return Instance 单个查询条件
      */
@@ -828,6 +842,38 @@ public class InstanceApiOpsRequest extends AbstractModel {
         this.ScheduleTimeTo = ScheduleTimeTo;
     }
 
+    /**
+     * Get 任务优先级过滤实例列表 
+     * @return RunPriorityList 任务优先级过滤实例列表
+     */
+    public Long [] getRunPriorityList() {
+        return this.RunPriorityList;
+    }
+
+    /**
+     * Set 任务优先级过滤实例列表
+     * @param RunPriorityList 任务优先级过滤实例列表
+     */
+    public void setRunPriorityList(Long [] RunPriorityList) {
+        this.RunPriorityList = RunPriorityList;
+    }
+
+    /**
+     * Get 实例调度周期筛选 
+     * @return InstanceCycleType 实例调度周期筛选
+     */
+    public String [] getInstanceCycleType() {
+        return this.InstanceCycleType;
+    }
+
+    /**
+     * Set 实例调度周期筛选
+     * @param InstanceCycleType 实例调度周期筛选
+     */
+    public void setInstanceCycleType(String [] InstanceCycleType) {
+        this.InstanceCycleType = InstanceCycleType;
+    }
+
     public InstanceApiOpsRequest() {
     }
 
@@ -977,6 +1023,18 @@ public class InstanceApiOpsRequest extends AbstractModel {
         if (source.ScheduleTimeTo != null) {
             this.ScheduleTimeTo = new String(source.ScheduleTimeTo);
         }
+        if (source.RunPriorityList != null) {
+            this.RunPriorityList = new Long[source.RunPriorityList.length];
+            for (int i = 0; i < source.RunPriorityList.length; i++) {
+                this.RunPriorityList[i] = new Long(source.RunPriorityList[i]);
+            }
+        }
+        if (source.InstanceCycleType != null) {
+            this.InstanceCycleType = new String[source.InstanceCycleType.length];
+            for (int i = 0; i < source.InstanceCycleType.length; i++) {
+                this.InstanceCycleType[i] = new String(source.InstanceCycleType[i]);
+            }
+        }
     }
 
 
@@ -1019,6 +1077,8 @@ public class InstanceApiOpsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         this.setParamSimple(map, prefix + "ScheduleTimeFrom", this.ScheduleTimeFrom);
         this.setParamSimple(map, prefix + "ScheduleTimeTo", this.ScheduleTimeTo);
+        this.setParamArraySimple(map, prefix + "RunPriorityList.", this.RunPriorityList);
+        this.setParamArraySimple(map, prefix + "InstanceCycleType.", this.InstanceCycleType);
 
     }
 }

@@ -33,9 +33,9 @@ public class CreateProjectMemberRequest extends AbstractModel {
     /**
     * 用户id
     */
-    @SerializedName("UseUins")
+    @SerializedName("UserUins")
     @Expose
-    private String [] UseUins;
+    private String [] UserUins;
 
     /**
     * 角色id
@@ -62,18 +62,18 @@ public class CreateProjectMemberRequest extends AbstractModel {
 
     /**
      * Get 用户id 
-     * @return UseUins 用户id
+     * @return UserUins 用户id
      */
-    public String [] getUseUins() {
-        return this.UseUins;
+    public String [] getUserUins() {
+        return this.UserUins;
     }
 
     /**
      * Set 用户id
-     * @param UseUins 用户id
+     * @param UserUins 用户id
      */
-    public void setUseUins(String [] UseUins) {
-        this.UseUins = UseUins;
+    public void setUserUins(String [] UserUins) {
+        this.UserUins = UserUins;
     }
 
     /**
@@ -103,10 +103,10 @@ public class CreateProjectMemberRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
-        if (source.UseUins != null) {
-            this.UseUins = new String[source.UseUins.length];
-            for (int i = 0; i < source.UseUins.length; i++) {
-                this.UseUins[i] = new String(source.UseUins[i]);
+        if (source.UserUins != null) {
+            this.UserUins = new String[source.UserUins.length];
+            for (int i = 0; i < source.UserUins.length; i++) {
+                this.UserUins[i] = new String(source.UserUins[i]);
             }
         }
         if (source.RoleIds != null) {
@@ -123,7 +123,7 @@ public class CreateProjectMemberRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamArraySimple(map, prefix + "UseUins.", this.UseUins);
+        this.setParamArraySimple(map, prefix + "UserUins.", this.UserUins);
         this.setParamArraySimple(map, prefix + "RoleIds.", this.RoleIds);
 
     }

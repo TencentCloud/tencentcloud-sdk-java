@@ -24,7 +24,13 @@ import java.util.HashMap;
 public class CdbSellType extends AbstractModel {
 
     /**
-    * 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
+    * 售卖实例名称。
+Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
+CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
+TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
+CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
+ECONOMICAL：表示经济型。
     */
     @SerializedName("TypeName")
     @Expose
@@ -45,16 +51,40 @@ public class CdbSellType extends AbstractModel {
     private Long [] ConfigIds;
 
     /**
-     * Get 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。 
-     * @return TypeName 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
+     * Get 售卖实例名称。
+Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
+CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
+TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
+CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
+ECONOMICAL：表示经济型。 
+     * @return TypeName 售卖实例名称。
+Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
+CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
+TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
+CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
+ECONOMICAL：表示经济型。
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
-     * @param TypeName 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
+     * Set 售卖实例名称。
+Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
+CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
+TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
+CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
+ECONOMICAL：表示经济型。
+     * @param TypeName 售卖实例名称。
+Z3：是高可用类型，对应规格中的 DeviceType，包含 UNIVERSAL，EXCLUSIVE。
+CVM：是基础版类型，对应规格中的 DeviceType 是 BASIC（已下线）。
+TKE：是基础版v2类型，对应规格中的 DeviceType 是 BASIC_V2。
+CLOUD_NATIVE_CLUSTER：表示云盘版标准型。
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE：表示云盘版加强型。
+ECONOMICAL：表示经济型。
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;

@@ -135,6 +135,9 @@ public enum WedataErrorCode {
      /* 操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
+     /* 任务不在同一时区 */
+     UNSUPPORTEDOPERATION_FAILEDCHECKTASKDEPENDENCETIMEZONE("UnsupportedOperation.FailedCheckTaskDependenceTimeZone"),
+     
      /* 请先配置不少于一个规则。 */
      UNSUPPORTEDOPERATION_NORULEINRULEGROUP("UnsupportedOperation.NoRuleInRuleGroup");
      

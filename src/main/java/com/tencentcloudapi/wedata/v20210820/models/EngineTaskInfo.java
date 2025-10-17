@@ -43,9 +43,9 @@ public class EngineTaskInfo extends AbstractModel {
     * 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("EngineExeTimes")
+    @SerializedName("EngineExeTimeCost")
     @Expose
-    private Long EngineExeTimes;
+    private Float EngineExeTimeCost;
 
     /**
     * cu消耗
@@ -56,7 +56,7 @@ public class EngineTaskInfo extends AbstractModel {
     private Long CuConsume;
 
     /**
-    * 资源消耗
+    * 该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceUsage")
@@ -64,7 +64,8 @@ public class EngineTaskInfo extends AbstractModel {
     private Long ResourceUsage;
 
     /**
-    * 引擎名
+    * 引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineName")
@@ -271,21 +272,21 @@ public class EngineTaskInfo extends AbstractModel {
     /**
      * Get 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineExeTimes 引擎执行总时间
+     * @return EngineExeTimeCost 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getEngineExeTimes() {
-        return this.EngineExeTimes;
+    public Float getEngineExeTimeCost() {
+        return this.EngineExeTimeCost;
     }
 
     /**
      * Set 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineExeTimes 引擎执行总时间
+     * @param EngineExeTimeCost 引擎执行总时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setEngineExeTimes(Long EngineExeTimes) {
-        this.EngineExeTimes = EngineExeTimes;
+    public void setEngineExeTimeCost(Float EngineExeTimeCost) {
+        this.EngineExeTimeCost = EngineExeTimeCost;
     }
 
     /**
@@ -309,9 +310,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 资源消耗
+     * Get 该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceUsage 资源消耗
+     * @return ResourceUsage 该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceUsage() {
@@ -319,9 +320,9 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 资源消耗
+     * Set 该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceUsage 资源消耗
+     * @param ResourceUsage 该值表示任务预设资源，sql任务不需要预设资源，该值为-1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceUsage(Long ResourceUsage) {
@@ -329,9 +330,11 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 引擎名
+     * Get 引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineName 引擎名
+     * @return EngineName 引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineName() {
@@ -339,9 +342,11 @@ public class EngineTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 引擎名
+     * Set 引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineName 引擎名
+     * @param EngineName 引擎名。在wedata侧若获取不到引擎名，则是wedata侧生成dlc标识，与dlc侧的引擎名存在不一致的情况
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineName(String EngineName) {
@@ -762,8 +767,8 @@ public class EngineTaskInfo extends AbstractModel {
         if (source.EngineExeTime != null) {
             this.EngineExeTime = new String(source.EngineExeTime);
         }
-        if (source.EngineExeTimes != null) {
-            this.EngineExeTimes = new Long(source.EngineExeTimes);
+        if (source.EngineExeTimeCost != null) {
+            this.EngineExeTimeCost = new Float(source.EngineExeTimeCost);
         }
         if (source.CuConsume != null) {
             this.CuConsume = new Long(source.CuConsume);
@@ -840,7 +845,7 @@ public class EngineTaskInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EngineSubmitTime", this.EngineSubmitTime);
         this.setParamSimple(map, prefix + "EngineExeTime", this.EngineExeTime);
-        this.setParamSimple(map, prefix + "EngineExeTimes", this.EngineExeTimes);
+        this.setParamSimple(map, prefix + "EngineExeTimeCost", this.EngineExeTimeCost);
         this.setParamSimple(map, prefix + "CuConsume", this.CuConsume);
         this.setParamSimple(map, prefix + "ResourceUsage", this.ResourceUsage);
         this.setParamSimple(map, prefix + "EngineName", this.EngineName);

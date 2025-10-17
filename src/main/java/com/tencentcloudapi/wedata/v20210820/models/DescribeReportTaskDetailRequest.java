@@ -24,34 +24,11 @@ import java.util.HashMap;
 public class DescribeReportTaskDetailRequest extends AbstractModel {
 
     /**
-    * 租户id
-    */
-    @SerializedName("TenantId")
-    @Expose
-    private String TenantId;
-
-    /**
     * 引擎任务id
     */
     @SerializedName("EngineTaskId")
     @Expose
     private String EngineTaskId;
-
-    /**
-     * Get 租户id 
-     * @return TenantId 租户id
-     */
-    public String getTenantId() {
-        return this.TenantId;
-    }
-
-    /**
-     * Set 租户id
-     * @param TenantId 租户id
-     */
-    public void setTenantId(String TenantId) {
-        this.TenantId = TenantId;
-    }
 
     /**
      * Get 引擎任务id 
@@ -77,9 +54,6 @@ public class DescribeReportTaskDetailRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeReportTaskDetailRequest(DescribeReportTaskDetailRequest source) {
-        if (source.TenantId != null) {
-            this.TenantId = new String(source.TenantId);
-        }
         if (source.EngineTaskId != null) {
             this.EngineTaskId = new String(source.EngineTaskId);
         }
@@ -90,7 +64,6 @@ public class DescribeReportTaskDetailRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TenantId", this.TenantId);
         this.setParamSimple(map, prefix + "EngineTaskId", this.EngineTaskId);
 
     }

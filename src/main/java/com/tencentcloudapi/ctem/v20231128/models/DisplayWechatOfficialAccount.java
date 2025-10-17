@@ -73,6 +73,13 @@ public class DisplayWechatOfficialAccount extends AbstractModel {
     private String Description;
 
     /**
+    * 认证主体
+    */
+    @SerializedName("RecordSubject")
+    @Expose
+    private String RecordSubject;
+
+    /**
      * Get 主键ID 
      * @return Id 主键ID
      */
@@ -184,6 +191,22 @@ public class DisplayWechatOfficialAccount extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 认证主体 
+     * @return RecordSubject 认证主体
+     */
+    public String getRecordSubject() {
+        return this.RecordSubject;
+    }
+
+    /**
+     * Set 认证主体
+     * @param RecordSubject 认证主体
+     */
+    public void setRecordSubject(String RecordSubject) {
+        this.RecordSubject = RecordSubject;
+    }
+
     public DisplayWechatOfficialAccount() {
     }
 
@@ -213,6 +236,9 @@ public class DisplayWechatOfficialAccount extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.RecordSubject != null) {
+            this.RecordSubject = new String(source.RecordSubject);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class DisplayWechatOfficialAccount extends AbstractModel {
         this.setParamSimple(map, prefix + "AccountId", this.AccountId);
         this.setParamSimple(map, prefix + "QrCode", this.QrCode);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "RecordSubject", this.RecordSubject);
 
     }
 }

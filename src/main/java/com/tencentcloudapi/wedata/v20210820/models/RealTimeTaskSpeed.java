@@ -38,6 +38,20 @@ public class RealTimeTaskSpeed extends AbstractModel {
     private BytesSpeed [] BytesSpeedList;
 
     /**
+    * 日志条数速度
+    */
+    @SerializedName("RecordsLogSpeed")
+    @Expose
+    private RecordsSpeed [] RecordsLogSpeed;
+
+    /**
+    * 日志大小速度
+    */
+    @SerializedName("BytesLogSpeed")
+    @Expose
+    private BytesSpeed [] BytesLogSpeed;
+
+    /**
      * Get 同步速度条/s列表 
      * @return RecordsSpeedList 同步速度条/s列表
      */
@@ -69,6 +83,38 @@ public class RealTimeTaskSpeed extends AbstractModel {
         this.BytesSpeedList = BytesSpeedList;
     }
 
+    /**
+     * Get 日志条数速度 
+     * @return RecordsLogSpeed 日志条数速度
+     */
+    public RecordsSpeed [] getRecordsLogSpeed() {
+        return this.RecordsLogSpeed;
+    }
+
+    /**
+     * Set 日志条数速度
+     * @param RecordsLogSpeed 日志条数速度
+     */
+    public void setRecordsLogSpeed(RecordsSpeed [] RecordsLogSpeed) {
+        this.RecordsLogSpeed = RecordsLogSpeed;
+    }
+
+    /**
+     * Get 日志大小速度 
+     * @return BytesLogSpeed 日志大小速度
+     */
+    public BytesSpeed [] getBytesLogSpeed() {
+        return this.BytesLogSpeed;
+    }
+
+    /**
+     * Set 日志大小速度
+     * @param BytesLogSpeed 日志大小速度
+     */
+    public void setBytesLogSpeed(BytesSpeed [] BytesLogSpeed) {
+        this.BytesLogSpeed = BytesLogSpeed;
+    }
+
     public RealTimeTaskSpeed() {
     }
 
@@ -89,6 +135,18 @@ public class RealTimeTaskSpeed extends AbstractModel {
                 this.BytesSpeedList[i] = new BytesSpeed(source.BytesSpeedList[i]);
             }
         }
+        if (source.RecordsLogSpeed != null) {
+            this.RecordsLogSpeed = new RecordsSpeed[source.RecordsLogSpeed.length];
+            for (int i = 0; i < source.RecordsLogSpeed.length; i++) {
+                this.RecordsLogSpeed[i] = new RecordsSpeed(source.RecordsLogSpeed[i]);
+            }
+        }
+        if (source.BytesLogSpeed != null) {
+            this.BytesLogSpeed = new BytesSpeed[source.BytesLogSpeed.length];
+            for (int i = 0; i < source.BytesLogSpeed.length; i++) {
+                this.BytesLogSpeed[i] = new BytesSpeed(source.BytesLogSpeed[i]);
+            }
+        }
     }
 
 
@@ -98,6 +156,8 @@ public class RealTimeTaskSpeed extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "RecordsSpeedList.", this.RecordsSpeedList);
         this.setParamArrayObj(map, prefix + "BytesSpeedList.", this.BytesSpeedList);
+        this.setParamArrayObj(map, prefix + "RecordsLogSpeed.", this.RecordsLogSpeed);
+        this.setParamArrayObj(map, prefix + "BytesLogSpeed.", this.BytesLogSpeed);
 
     }
 }

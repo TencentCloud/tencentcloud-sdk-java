@@ -32,6 +32,22 @@ public class DescribeTestRunningRecordResponse extends AbstractModel {
     private TestRunningRecord [] Data;
 
     /**
+    * 总页数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalPages")
+    @Expose
+    private Long TotalPages;
+
+    /**
+    * 总条数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalItems")
+    @Expose
+    private Long TotalItems;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +72,46 @@ public class DescribeTestRunningRecordResponse extends AbstractModel {
      */
     public void setData(TestRunningRecord [] Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get 总页数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalPages 总页数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalPages() {
+        return this.TotalPages;
+    }
+
+    /**
+     * Set 总页数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalPages 总页数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalPages(Long TotalPages) {
+        this.TotalPages = TotalPages;
+    }
+
+    /**
+     * Get 总条数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalItems 总条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalItems() {
+        return this.TotalItems;
+    }
+
+    /**
+     * Set 总条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalItems 总条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalItems(Long TotalItems) {
+        this.TotalItems = TotalItems;
     }
 
     /**
@@ -88,6 +144,12 @@ public class DescribeTestRunningRecordResponse extends AbstractModel {
                 this.Data[i] = new TestRunningRecord(source.Data[i]);
             }
         }
+        if (source.TotalPages != null) {
+            this.TotalPages = new Long(source.TotalPages);
+        }
+        if (source.TotalItems != null) {
+            this.TotalItems = new Long(source.TotalItems);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -99,6 +161,8 @@ public class DescribeTestRunningRecordResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "TotalPages", this.TotalPages);
+        this.setParamSimple(map, prefix + "TotalItems", this.TotalItems);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

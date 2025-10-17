@@ -39,6 +39,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *创建文件鉴定任务，私有化调用path为：capi/DlpOpenApi/CreateDLPFileDetectTask
+     * @param req CreateDLPFileDetectTaskRequest
+     * @return CreateDLPFileDetectTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDLPFileDetectTaskResponse CreateDLPFileDetectTask(CreateDLPFileDetectTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDLPFileDetectTask", CreateDLPFileDetectTaskResponse.class);
+    }
+
+    /**
      *提交送检任务
      * @param req CreateDLPFileDetectionTaskRequest
      * @return CreateDLPFileDetectionTaskResponse
@@ -127,6 +138,28 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *查询边缘节点分组，私有化调用path为：capi/Connectors/DescribeDLPEdgeNodeGroups
+     * @param req DescribeDLPEdgeNodeGroupsRequest
+     * @return DescribeDLPEdgeNodeGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDLPEdgeNodeGroupsResponse DescribeDLPEdgeNodeGroups(DescribeDLPEdgeNodeGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDLPEdgeNodeGroups", DescribeDLPEdgeNodeGroupsResponse.class);
+    }
+
+    /**
+     *查询边缘节点列表，私有化调用path为：capi/DlpOpenApi/DescribeDLPEdgeNodes
+     * @param req DescribeDLPEdgeNodesRequest
+     * @return DescribeDLPEdgeNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDLPEdgeNodesResponse DescribeDLPEdgeNodes(DescribeDLPEdgeNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDLPEdgeNodes", DescribeDLPEdgeNodesResponse.class);
+    }
+
+    /**
      *webservice查询文件检测结果
      * @param req DescribeDLPFileDetectResultRequest
      * @return DescribeDLPFileDetectResultResponse
@@ -135,6 +168,17 @@ public class IoaClient extends AbstractClient{
     public DescribeDLPFileDetectResultResponse DescribeDLPFileDetectResult(DescribeDLPFileDetectResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDLPFileDetectResult", DescribeDLPFileDetectResultResponse.class);
+    }
+
+    /**
+     *查询文件鉴定任务结果
+     * @param req DescribeDLPFileDetectTaskResultRequest
+     * @return DescribeDLPFileDetectTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDLPFileDetectTaskResultResponse DescribeDLPFileDetectTaskResult(DescribeDLPFileDetectTaskResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDLPFileDetectTaskResult", DescribeDLPFileDetectTaskResultResponse.class);
     }
 
     /**

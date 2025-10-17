@@ -543,6 +543,20 @@ public class InstanceOpsDto extends AbstractModel {
     private String AllowRedoType;
 
     /**
+    * 实例生命周期
+    */
+    @SerializedName("InstanceCycleType")
+    @Expose
+    private String InstanceCycleType;
+
+    /**
+    * 实例执行计划描述
+    */
+    @SerializedName("InstanceSchedulerDesc")
+    @Expose
+    private String InstanceSchedulerDesc;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -1838,6 +1852,38 @@ public class InstanceOpsDto extends AbstractModel {
         this.AllowRedoType = AllowRedoType;
     }
 
+    /**
+     * Get 实例生命周期 
+     * @return InstanceCycleType 实例生命周期
+     */
+    public String getInstanceCycleType() {
+        return this.InstanceCycleType;
+    }
+
+    /**
+     * Set 实例生命周期
+     * @param InstanceCycleType 实例生命周期
+     */
+    public void setInstanceCycleType(String InstanceCycleType) {
+        this.InstanceCycleType = InstanceCycleType;
+    }
+
+    /**
+     * Get 实例执行计划描述 
+     * @return InstanceSchedulerDesc 实例执行计划描述
+     */
+    public String getInstanceSchedulerDesc() {
+        return this.InstanceSchedulerDesc;
+    }
+
+    /**
+     * Set 实例执行计划描述
+     * @param InstanceSchedulerDesc 实例执行计划描述
+     */
+    public void setInstanceSchedulerDesc(String InstanceSchedulerDesc) {
+        this.InstanceSchedulerDesc = InstanceSchedulerDesc;
+    }
+
     public InstanceOpsDto() {
     }
 
@@ -2050,6 +2096,12 @@ public class InstanceOpsDto extends AbstractModel {
         if (source.AllowRedoType != null) {
             this.AllowRedoType = new String(source.AllowRedoType);
         }
+        if (source.InstanceCycleType != null) {
+            this.InstanceCycleType = new String(source.InstanceCycleType);
+        }
+        if (source.InstanceSchedulerDesc != null) {
+            this.InstanceSchedulerDesc = new String(source.InstanceSchedulerDesc);
+        }
     }
 
 
@@ -2122,6 +2174,8 @@ public class InstanceOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "ConcurrentStrategy", this.ConcurrentStrategy);
         this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
         this.setParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
+        this.setParamSimple(map, prefix + "InstanceCycleType", this.InstanceCycleType);
+        this.setParamSimple(map, prefix + "InstanceSchedulerDesc", this.InstanceSchedulerDesc);
 
     }
 }

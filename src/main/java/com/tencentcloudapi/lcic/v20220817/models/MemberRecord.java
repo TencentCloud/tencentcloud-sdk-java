@@ -159,7 +159,7 @@ public class MemberRecord extends AbstractModel {
     private String [] SubGroupId;
 
     /**
-    * 用户的上台状态
+    * 本堂课用户是否上过台。0 否；1 是
     */
     @SerializedName("Stage")
     @Expose
@@ -485,16 +485,16 @@ public class MemberRecord extends AbstractModel {
     }
 
     /**
-     * Get 用户的上台状态 
-     * @return Stage 用户的上台状态
+     * Get 本堂课用户是否上过台。0 否；1 是 
+     * @return Stage 本堂课用户是否上过台。0 否；1 是
      */
     public Long getStage() {
         return this.Stage;
     }
 
     /**
-     * Set 用户的上台状态
-     * @param Stage 用户的上台状态
+     * Set 本堂课用户是否上过台。0 否；1 是
+     * @param Stage 本堂课用户是否上过台。0 否；1 是
      */
     public void setStage(Long Stage) {
         this.Stage = Stage;

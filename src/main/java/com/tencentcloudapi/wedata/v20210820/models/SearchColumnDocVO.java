@@ -128,6 +128,14 @@ public class SearchColumnDocVO extends AbstractModel {
     private String ModifiedTime;
 
     /**
+    * 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Specification")
+    @Expose
+    private String Specification;
+
+    /**
      * Get 字段名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 字段名称
@@ -387,6 +395,26 @@ public class SearchColumnDocVO extends AbstractModel {
         this.ModifiedTime = ModifiedTime;
     }
 
+    /**
+     * Get 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Specification 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSpecification() {
+        return this.Specification;
+    }
+
+    /**
+     * Set 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Specification 字段使用说明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpecification(String Specification) {
+        this.Specification = Specification;
+    }
+
     public SearchColumnDocVO() {
     }
 
@@ -434,6 +462,9 @@ public class SearchColumnDocVO extends AbstractModel {
         if (source.ModifiedTime != null) {
             this.ModifiedTime = new String(source.ModifiedTime);
         }
+        if (source.Specification != null) {
+            this.Specification = new String(source.Specification);
+        }
     }
 
 
@@ -454,6 +485,7 @@ public class SearchColumnDocVO extends AbstractModel {
         this.setParamSimple(map, prefix + "ColumnKey", this.ColumnKey);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+        this.setParamSimple(map, prefix + "Specification", this.Specification);
 
     }
 }

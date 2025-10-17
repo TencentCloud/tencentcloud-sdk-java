@@ -32,7 +32,7 @@ public class KVPair extends AbstractModel {
     private String K;
 
     /**
-    * 值
+    * 值，请勿传SQL(请求会被视为攻击接口)，如果有需要，请将SQL进行Base64转码并解码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("V")
@@ -60,9 +60,9 @@ public class KVPair extends AbstractModel {
     }
 
     /**
-     * Get 值
+     * Get 值，请勿传SQL(请求会被视为攻击接口)，如果有需要，请将SQL进行Base64转码并解码。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return V 值
+     * @return V 值，请勿传SQL(请求会被视为攻击接口)，如果有需要，请将SQL进行Base64转码并解码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getV() {
@@ -70,9 +70,9 @@ public class KVPair extends AbstractModel {
     }
 
     /**
-     * Set 值
+     * Set 值，请勿传SQL(请求会被视为攻击接口)，如果有需要，请将SQL进行Base64转码并解码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param V 值
+     * @param V 值，请勿传SQL(请求会被视为攻击接口)，如果有需要，请将SQL进行Base64转码并解码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setV(String V) {

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DiskTypeConfigItem extends AbstractModel {
 
     /**
-    * 磁盘对应的实例类型。仅支持单节点基础型和集群版。
+    * 磁盘对应的实例类型。仅支持单节点（云盘）和云盘版。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -38,16 +38,16 @@ public class DiskTypeConfigItem extends AbstractModel {
     private String [] DiskType;
 
     /**
-     * Get 磁盘对应的实例类型。仅支持单节点基础型和集群版。 
-     * @return DeviceType 磁盘对应的实例类型。仅支持单节点基础型和集群版。
+     * Get 磁盘对应的实例类型。仅支持单节点（云盘）和云盘版。 
+     * @return DeviceType 磁盘对应的实例类型。仅支持单节点（云盘）和云盘版。
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 磁盘对应的实例类型。仅支持单节点基础型和集群版。
-     * @param DeviceType 磁盘对应的实例类型。仅支持单节点基础型和集群版。
+     * Set 磁盘对应的实例类型。仅支持单节点（云盘）和云盘版。
+     * @param DeviceType 磁盘对应的实例类型。仅支持单节点（云盘）和云盘版。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

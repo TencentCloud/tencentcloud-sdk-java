@@ -753,6 +753,14 @@ no：任务无需满足自依赖
     private String AllowRedoType;
 
     /**
+    * 负责人Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnerId")
+    @Expose
+    private String OwnerId;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -2576,6 +2584,26 @@ no：任务无需满足自依赖
         this.AllowRedoType = AllowRedoType;
     }
 
+    /**
+     * Get 负责人Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnerId 负责人Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOwnerId() {
+        return this.OwnerId;
+    }
+
+    /**
+     * Set 负责人Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnerId 负责人Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnerId(String OwnerId) {
+        this.OwnerId = OwnerId;
+    }
+
     public TaskOpsDto() {
     }
 
@@ -2863,6 +2891,9 @@ no：任务无需满足自依赖
         if (source.AllowRedoType != null) {
             this.AllowRedoType = new String(source.AllowRedoType);
         }
+        if (source.OwnerId != null) {
+            this.OwnerId = new String(source.OwnerId);
+        }
     }
 
 
@@ -2961,6 +2992,7 @@ no：任务无需满足自依赖
         this.setParamArrayObj(map, prefix + "NewParentTaskInfos.", this.NewParentTaskInfos);
         this.setParamSimple(map, prefix + "SelfWorkFlowDependType", this.SelfWorkFlowDependType);
         this.setParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
+        this.setParamSimple(map, prefix + "OwnerId", this.OwnerId);
 
     }
 }

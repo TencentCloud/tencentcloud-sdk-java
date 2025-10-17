@@ -257,6 +257,7 @@ public class RuleGroup extends AbstractModel {
 
     /**
     * 监控创建人
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUserName")
     @Expose
@@ -843,8 +844,10 @@ public class RuleGroup extends AbstractModel {
     }
 
     /**
-     * Get 监控创建人 
+     * Get 监控创建人
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateUserName 监控创建人
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateUserName() {
         return this.CreateUserName;
@@ -852,7 +855,9 @@ public class RuleGroup extends AbstractModel {
 
     /**
      * Set 监控创建人
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateUserName 监控创建人
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUserName(String CreateUserName) {
         this.CreateUserName = CreateUserName;

@@ -144,6 +144,14 @@ public class TestRunningRecord extends AbstractModel {
     private String BucketName;
 
     /**
+    * 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorMessage")
+    @Expose
+    private String ErrorMessage;
+
+    /**
      * Get 开始时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTime 开始时间
@@ -443,6 +451,26 @@ public class TestRunningRecord extends AbstractModel {
         this.BucketName = BucketName;
     }
 
+    /**
+     * Get 错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorMessage 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrorMessage() {
+        return this.ErrorMessage;
+    }
+
+    /**
+     * Set 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorMessage 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
+    }
+
     public TestRunningRecord() {
     }
 
@@ -499,6 +527,9 @@ public class TestRunningRecord extends AbstractModel {
         if (source.BucketName != null) {
             this.BucketName = new String(source.BucketName);
         }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
+        }
     }
 
 
@@ -521,6 +552,7 @@ public class TestRunningRecord extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SubRecordList.", this.SubRecordList);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "BucketName", this.BucketName);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
 
     }
 }

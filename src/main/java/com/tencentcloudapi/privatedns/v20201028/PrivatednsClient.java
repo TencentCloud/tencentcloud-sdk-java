@@ -50,6 +50,39 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *创建终端节点
+     * @param req CreateExtendEndpointRequest
+     * @return CreateExtendEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExtendEndpointResponse CreateExtendEndpoint(CreateExtendEndpointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateExtendEndpoint", CreateExtendEndpointResponse.class);
+    }
+
+    /**
+     *创建自定义转发规则
+     * @param req CreateForwardRuleRequest
+     * @return CreateForwardRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateForwardRuleResponse CreateForwardRule(CreateForwardRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateForwardRule", CreateForwardRuleResponse.class);
+    }
+
+    /**
+     *删除入站终端节点
+     * @param req CreateInboundEndpointRequest
+     * @return CreateInboundEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInboundEndpointResponse CreateInboundEndpoint(CreateInboundEndpointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInboundEndpoint", CreateInboundEndpointResponse.class);
+    }
+
+    /**
      *跨账号关联VPC时绑定其他账号
      * @param req CreatePrivateDNSAccountRequest
      * @return CreatePrivateDNSAccountResponse
@@ -80,6 +113,39 @@ public class PrivatednsClient extends AbstractClient{
     public CreatePrivateZoneRecordResponse CreatePrivateZoneRecord(CreatePrivateZoneRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreatePrivateZoneRecord", CreatePrivateZoneRecordResponse.class);
+    }
+
+    /**
+     *删除终端节点
+     * @param req DeleteEndPointRequest
+     * @return DeleteEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEndPointResponse DeleteEndPoint(DeleteEndPointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteEndPoint", DeleteEndPointResponse.class);
+    }
+
+    /**
+     *删除转发规则并停止转发
+     * @param req DeleteForwardRuleRequest
+     * @return DeleteForwardRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteForwardRuleResponse DeleteForwardRule(DeleteForwardRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteForwardRule", DeleteForwardRuleResponse.class);
+    }
+
+    /**
+     *删除入站终端节点
+     * @param req DeleteInboundEndpointRequest
+     * @return DeleteInboundEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInboundEndpointResponse DeleteInboundEndpoint(DeleteInboundEndpointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteInboundEndpoint", DeleteInboundEndpointResponse.class);
     }
 
     /**
@@ -157,6 +223,39 @@ public class PrivatednsClient extends AbstractClient{
     public DescribeDashboardResponse DescribeDashboard(DescribeDashboardRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDashboard", DescribeDashboardResponse.class);
+    }
+
+    /**
+     *获取终端节点列表
+     * @param req DescribeExtendEndpointListRequest
+     * @return DescribeExtendEndpointListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExtendEndpointListResponse DescribeExtendEndpointList(DescribeExtendEndpointListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExtendEndpointList", DescribeExtendEndpointListResponse.class);
+    }
+
+    /**
+     *查询转发规则列表
+     * @param req DescribeForwardRuleListRequest
+     * @return DescribeForwardRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeForwardRuleListResponse DescribeForwardRuleList(DescribeForwardRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeForwardRuleList", DescribeForwardRuleListResponse.class);
+    }
+
+    /**
+     *获取入站终端节点列表
+     * @param req DescribeInboundEndpointListRequest
+     * @return DescribeInboundEndpointListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInboundEndpointListResponse DescribeInboundEndpointList(DescribeInboundEndpointListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInboundEndpointList", DescribeInboundEndpointListResponse.class);
     }
 
     /**
@@ -245,6 +344,28 @@ public class PrivatednsClient extends AbstractClient{
     public DescribeRequestDataResponse DescribeRequestData(DescribeRequestDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRequestData", DescribeRequestDataResponse.class);
+    }
+
+    /**
+     *修改转发规则
+     * @param req ModifyForwardRuleRequest
+     * @return ModifyForwardRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyForwardRuleResponse ModifyForwardRule(ModifyForwardRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyForwardRule", ModifyForwardRuleResponse.class);
+    }
+
+    /**
+     *删除入站终端节点
+     * @param req ModifyInboundEndpointRequest
+     * @return ModifyInboundEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInboundEndpointResponse ModifyInboundEndpoint(ModifyInboundEndpointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInboundEndpoint", ModifyInboundEndpointResponse.class);
     }
 
     /**

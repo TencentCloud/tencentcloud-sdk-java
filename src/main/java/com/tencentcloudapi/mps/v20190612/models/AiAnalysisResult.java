@@ -34,6 +34,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Description：大模型摘要</li>
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li>
     */
     @SerializedName("Type")
     @Expose
@@ -136,6 +137,14 @@ public class AiAnalysisResult extends AbstractModel {
     private AiAnalysisTaskVideoRemakeResult VideoRemakeTask;
 
     /**
+    * 视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VideoComprehensionTask")
+    @Expose
+    private AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask;
+
+    /**
      * Get 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -145,7 +154,8 @@ public class AiAnalysisResult extends AbstractModel {
 <li>DeLogo：智能擦除</li>
 <li>Description：大模型摘要</li>
 <li>Dubbing：智能译制</li>
-<li>VideoRemake: 视频去重</li> 
+<li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li> 
      * @return Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -156,6 +166,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Description：大模型摘要</li>
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li>
      */
     public String getType() {
         return this.Type;
@@ -172,6 +183,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Description：大模型摘要</li>
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li>
      * @param Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -182,6 +194,7 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Description：大模型摘要</li>
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
+<li>VideoComprehension: 视频（音频）理解</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -427,6 +440,26 @@ public class AiAnalysisResult extends AbstractModel {
         this.VideoRemakeTask = VideoRemakeTask;
     }
 
+    /**
+     * Get 视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VideoComprehensionTask 视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskVideoComprehensionResult getVideoComprehensionTask() {
+        return this.VideoComprehensionTask;
+    }
+
+    /**
+     * Set 视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VideoComprehensionTask 视频（音频）理解任务的查询结果，当任务类型为 VideoComprehension 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVideoComprehensionTask(AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask) {
+        this.VideoComprehensionTask = VideoComprehensionTask;
+    }
+
     public AiAnalysisResult() {
     }
 
@@ -474,6 +507,9 @@ public class AiAnalysisResult extends AbstractModel {
         if (source.VideoRemakeTask != null) {
             this.VideoRemakeTask = new AiAnalysisTaskVideoRemakeResult(source.VideoRemakeTask);
         }
+        if (source.VideoComprehensionTask != null) {
+            this.VideoComprehensionTask = new AiAnalysisTaskVideoComprehensionResult(source.VideoComprehensionTask);
+        }
     }
 
 
@@ -494,6 +530,7 @@ public class AiAnalysisResult extends AbstractModel {
         this.setParamObj(map, prefix + "HorizontalToVerticalTask.", this.HorizontalToVerticalTask);
         this.setParamObj(map, prefix + "DubbingTask.", this.DubbingTask);
         this.setParamObj(map, prefix + "VideoRemakeTask.", this.VideoRemakeTask);
+        this.setParamObj(map, prefix + "VideoComprehensionTask.", this.VideoComprehensionTask);
 
     }
 }

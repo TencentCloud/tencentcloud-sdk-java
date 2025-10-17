@@ -31,42 +31,48 @@ public class DescribeScheduleInstancesRequest extends AbstractModel {
     private String RequestFromSource;
 
     /**
-    * 实例列表
+    * 【已废弃参数，新用户接入无需关注】
+实例列表过滤条件
     */
     @SerializedName("Instances")
     @Expose
     private InstanceOpsDto [] Instances;
 
     /**
-    * 检查父任务类型, true: 检查父任务; false: 不检查父任务 
+    * 【已废弃参数，新用户接入无需关注】
+检查父任务类型,  true: 检查父任务类型;  false: 不检查父任务类型
     */
     @SerializedName("CheckFather")
     @Expose
     private Boolean CheckFather;
 
     /**
-    * 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+    * 【已废弃参数，新用户接入无需关注】
+重跑类型, 1: 仅重跑当前实例; 2: 重跑当前实例及其子实例; 3: 仅重跑子实例
     */
     @SerializedName("RerunType")
     @Expose
     private String RerunType;
 
     /**
-    * 实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
+    * 【已废弃参数，新用户接入无需关注】
+实例依赖方式, 1: 任务自依赖; 2: 任务上游依赖; 3: 自依赖及其上游依赖 
     */
     @SerializedName("DependentWay")
     @Expose
     private String DependentWay;
 
     /**
-    * 重跑忽略事件监听与否 
+    * 【已废弃参数，新用户接入无需关注】
+重跑时是否忽略事件监听
     */
     @SerializedName("SkipEventListening")
     @Expose
     private Boolean SkipEventListening;
 
     /**
-    * 下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
+    * 【已废弃参数，新用户接入无需关注】
+下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
     */
     @SerializedName("SonInstanceType")
     @Expose
@@ -80,84 +86,95 @@ public class DescribeScheduleInstancesRequest extends AbstractModel {
     private InstanceApiOpsRequest SearchCondition;
 
     /**
-    * 访问类型
+    * 【已废弃参数，新用户接入无需关注】
+访问类型
     */
     @SerializedName("OptType")
     @Expose
     private String OptType;
 
     /**
-    * 操作者名称
+    * 【已废弃参数，新用户接入无需关注】
+操作者名称
     */
     @SerializedName("OperatorName")
     @Expose
     private String OperatorName;
 
     /**
-    * 操作者id
+    * 【已废弃参数，新用户接入无需关注】
+操作者id
     */
     @SerializedName("OperatorId")
     @Expose
     private String OperatorId;
 
     /**
-    * 项目id
+    * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 项目标志
+    * 【必要参数】
+项目ID
     */
     @SerializedName("ProjectIdent")
     @Expose
     private String ProjectIdent;
 
     /**
-    * 项目名称
+    * 【已废弃参数，新用户接入无需关注】
+项目名称
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * 索引页码
+    * 【必要参数】
+分页查询开始页页码，默认值为 1
     */
     @SerializedName("PageIndex")
     @Expose
     private Long PageIndex;
 
     /**
-    * 页面大小
+    * 【必要参数】
+分页查询每页返回的结果行数，默认值为 10
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 数据总数
+    * 【已废弃参数，新用户接入无需关注】
+数据总数
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 基础请求信息
+    * 【已废弃参数，新用户接入无需关注】
+基础请求信息
     */
     @SerializedName("RequestBaseInfo")
     @Expose
     private ProjectBaseInfoOpsRequest RequestBaseInfo;
 
     /**
-    * 是否计算总数
+    * 【已废弃参数，新用户接入无需关注】
+是否计算总数
     */
     @SerializedName("IsCount")
     @Expose
     private Boolean IsCount;
 
     /**
-    * 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+    * 【已废弃参数，新用户接入无需关注】
+项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
     */
     @SerializedName("ProjectIds")
     @Expose
@@ -180,96 +197,120 @@ public class DescribeScheduleInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例列表 
-     * @return Instances 实例列表
+     * Get 【已废弃参数，新用户接入无需关注】
+实例列表过滤条件 
+     * @return Instances 【已废弃参数，新用户接入无需关注】
+实例列表过滤条件
      */
     public InstanceOpsDto [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set 实例列表
-     * @param Instances 实例列表
+     * Set 【已废弃参数，新用户接入无需关注】
+实例列表过滤条件
+     * @param Instances 【已废弃参数，新用户接入无需关注】
+实例列表过滤条件
      */
     public void setInstances(InstanceOpsDto [] Instances) {
         this.Instances = Instances;
     }
 
     /**
-     * Get 检查父任务类型, true: 检查父任务; false: 不检查父任务  
-     * @return CheckFather 检查父任务类型, true: 检查父任务; false: 不检查父任务 
+     * Get 【已废弃参数，新用户接入无需关注】
+检查父任务类型,  true: 检查父任务类型;  false: 不检查父任务类型 
+     * @return CheckFather 【已废弃参数，新用户接入无需关注】
+检查父任务类型,  true: 检查父任务类型;  false: 不检查父任务类型
      */
     public Boolean getCheckFather() {
         return this.CheckFather;
     }
 
     /**
-     * Set 检查父任务类型, true: 检查父任务; false: 不检查父任务 
-     * @param CheckFather 检查父任务类型, true: 检查父任务; false: 不检查父任务 
+     * Set 【已废弃参数，新用户接入无需关注】
+检查父任务类型,  true: 检查父任务类型;  false: 不检查父任务类型
+     * @param CheckFather 【已废弃参数，新用户接入无需关注】
+检查父任务类型,  true: 检查父任务类型;  false: 不检查父任务类型
      */
     public void setCheckFather(Boolean CheckFather) {
         this.CheckFather = CheckFather;
     }
 
     /**
-     * Get 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子  
-     * @return RerunType 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+     * Get 【已废弃参数，新用户接入无需关注】
+重跑类型, 1: 仅重跑当前实例; 2: 重跑当前实例及其子实例; 3: 仅重跑子实例 
+     * @return RerunType 【已废弃参数，新用户接入无需关注】
+重跑类型, 1: 仅重跑当前实例; 2: 重跑当前实例及其子实例; 3: 仅重跑子实例
      */
     public String getRerunType() {
         return this.RerunType;
     }
 
     /**
-     * Set 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
-     * @param RerunType 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+     * Set 【已废弃参数，新用户接入无需关注】
+重跑类型, 1: 仅重跑当前实例; 2: 重跑当前实例及其子实例; 3: 仅重跑子实例
+     * @param RerunType 【已废弃参数，新用户接入无需关注】
+重跑类型, 1: 仅重跑当前实例; 2: 重跑当前实例及其子实例; 3: 仅重跑子实例
      */
     public void setRerunType(String RerunType) {
         this.RerunType = RerunType;
     }
 
     /**
-     * Get 实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖  
-     * @return DependentWay 实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
+     * Get 【已废弃参数，新用户接入无需关注】
+实例依赖方式, 1: 任务自依赖; 2: 任务上游依赖; 3: 自依赖及其上游依赖  
+     * @return DependentWay 【已废弃参数，新用户接入无需关注】
+实例依赖方式, 1: 任务自依赖; 2: 任务上游依赖; 3: 自依赖及其上游依赖 
      */
     public String getDependentWay() {
         return this.DependentWay;
     }
 
     /**
-     * Set 实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
-     * @param DependentWay 实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
+     * Set 【已废弃参数，新用户接入无需关注】
+实例依赖方式, 1: 任务自依赖; 2: 任务上游依赖; 3: 自依赖及其上游依赖 
+     * @param DependentWay 【已废弃参数，新用户接入无需关注】
+实例依赖方式, 1: 任务自依赖; 2: 任务上游依赖; 3: 自依赖及其上游依赖 
      */
     public void setDependentWay(String DependentWay) {
         this.DependentWay = DependentWay;
     }
 
     /**
-     * Get 重跑忽略事件监听与否  
-     * @return SkipEventListening 重跑忽略事件监听与否 
+     * Get 【已废弃参数，新用户接入无需关注】
+重跑时是否忽略事件监听 
+     * @return SkipEventListening 【已废弃参数，新用户接入无需关注】
+重跑时是否忽略事件监听
      */
     public Boolean getSkipEventListening() {
         return this.SkipEventListening;
     }
 
     /**
-     * Set 重跑忽略事件监听与否 
-     * @param SkipEventListening 重跑忽略事件监听与否 
+     * Set 【已废弃参数，新用户接入无需关注】
+重跑时是否忽略事件监听
+     * @param SkipEventListening 【已废弃参数，新用户接入无需关注】
+重跑时是否忽略事件监听
      */
     public void setSkipEventListening(Boolean SkipEventListening) {
         this.SkipEventListening = SkipEventListening;
     }
 
     /**
-     * Get 下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目 
-     * @return SonInstanceType 下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
+     * Get 【已废弃参数，新用户接入无需关注】
+下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目 
+     * @return SonInstanceType 【已废弃参数，新用户接入无需关注】
+下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
      */
     public String getSonInstanceType() {
         return this.SonInstanceType;
     }
 
     /**
-     * Set 下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
-     * @param SonInstanceType 下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
+     * Set 【已废弃参数，新用户接入无需关注】
+下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
+     * @param SonInstanceType 【已废弃参数，新用户接入无需关注】
+下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
      */
     public void setSonInstanceType(String SonInstanceType) {
         this.SonInstanceType = SonInstanceType;
@@ -292,192 +333,236 @@ public class DescribeScheduleInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 访问类型 
-     * @return OptType 访问类型
+     * Get 【已废弃参数，新用户接入无需关注】
+访问类型 
+     * @return OptType 【已废弃参数，新用户接入无需关注】
+访问类型
      */
     public String getOptType() {
         return this.OptType;
     }
 
     /**
-     * Set 访问类型
-     * @param OptType 访问类型
+     * Set 【已废弃参数，新用户接入无需关注】
+访问类型
+     * @param OptType 【已废弃参数，新用户接入无需关注】
+访问类型
      */
     public void setOptType(String OptType) {
         this.OptType = OptType;
     }
 
     /**
-     * Get 操作者名称 
-     * @return OperatorName 操作者名称
+     * Get 【已废弃参数，新用户接入无需关注】
+操作者名称 
+     * @return OperatorName 【已废弃参数，新用户接入无需关注】
+操作者名称
      */
     public String getOperatorName() {
         return this.OperatorName;
     }
 
     /**
-     * Set 操作者名称
-     * @param OperatorName 操作者名称
+     * Set 【已废弃参数，新用户接入无需关注】
+操作者名称
+     * @param OperatorName 【已废弃参数，新用户接入无需关注】
+操作者名称
      */
     public void setOperatorName(String OperatorName) {
         this.OperatorName = OperatorName;
     }
 
     /**
-     * Get 操作者id 
-     * @return OperatorId 操作者id
+     * Get 【已废弃参数，新用户接入无需关注】
+操作者id 
+     * @return OperatorId 【已废弃参数，新用户接入无需关注】
+操作者id
      */
     public String getOperatorId() {
         return this.OperatorId;
     }
 
     /**
-     * Set 操作者id
-     * @param OperatorId 操作者id
+     * Set 【已废弃参数，新用户接入无需关注】
+操作者id
+     * @param OperatorId 【已废弃参数，新用户接入无需关注】
+操作者id
      */
     public void setOperatorId(String OperatorId) {
         this.OperatorId = OperatorId;
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectId 项目id
+     * Get 项目ID 
+     * @return ProjectId 项目ID
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectId 项目id
+     * Set 项目ID
+     * @param ProjectId 项目ID
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 项目标志 
-     * @return ProjectIdent 项目标志
+     * Get 【必要参数】
+项目ID 
+     * @return ProjectIdent 【必要参数】
+项目ID
      */
     public String getProjectIdent() {
         return this.ProjectIdent;
     }
 
     /**
-     * Set 项目标志
-     * @param ProjectIdent 项目标志
+     * Set 【必要参数】
+项目ID
+     * @param ProjectIdent 【必要参数】
+项目ID
      */
     public void setProjectIdent(String ProjectIdent) {
         this.ProjectIdent = ProjectIdent;
     }
 
     /**
-     * Get 项目名称 
-     * @return ProjectName 项目名称
+     * Get 【已废弃参数，新用户接入无需关注】
+项目名称 
+     * @return ProjectName 【已废弃参数，新用户接入无需关注】
+项目名称
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set 项目名称
-     * @param ProjectName 项目名称
+     * Set 【已废弃参数，新用户接入无需关注】
+项目名称
+     * @param ProjectName 【已废弃参数，新用户接入无需关注】
+项目名称
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get 索引页码 
-     * @return PageIndex 索引页码
+     * Get 【必要参数】
+分页查询开始页页码，默认值为 1 
+     * @return PageIndex 【必要参数】
+分页查询开始页页码，默认值为 1
      */
     public Long getPageIndex() {
         return this.PageIndex;
     }
 
     /**
-     * Set 索引页码
-     * @param PageIndex 索引页码
+     * Set 【必要参数】
+分页查询开始页页码，默认值为 1
+     * @param PageIndex 【必要参数】
+分页查询开始页页码，默认值为 1
      */
     public void setPageIndex(Long PageIndex) {
         this.PageIndex = PageIndex;
     }
 
     /**
-     * Get 页面大小 
-     * @return PageSize 页面大小
+     * Get 【必要参数】
+分页查询每页返回的结果行数，默认值为 10 
+     * @return PageSize 【必要参数】
+分页查询每页返回的结果行数，默认值为 10
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 页面大小
-     * @param PageSize 页面大小
+     * Set 【必要参数】
+分页查询每页返回的结果行数，默认值为 10
+     * @param PageSize 【必要参数】
+分页查询每页返回的结果行数，默认值为 10
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 数据总数 
-     * @return Count 数据总数
+     * Get 【已废弃参数，新用户接入无需关注】
+数据总数 
+     * @return Count 【已废弃参数，新用户接入无需关注】
+数据总数
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 数据总数
-     * @param Count 数据总数
+     * Set 【已废弃参数，新用户接入无需关注】
+数据总数
+     * @param Count 【已废弃参数，新用户接入无需关注】
+数据总数
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 基础请求信息 
-     * @return RequestBaseInfo 基础请求信息
+     * Get 【已废弃参数，新用户接入无需关注】
+基础请求信息 
+     * @return RequestBaseInfo 【已废弃参数，新用户接入无需关注】
+基础请求信息
      */
     public ProjectBaseInfoOpsRequest getRequestBaseInfo() {
         return this.RequestBaseInfo;
     }
 
     /**
-     * Set 基础请求信息
-     * @param RequestBaseInfo 基础请求信息
+     * Set 【已废弃参数，新用户接入无需关注】
+基础请求信息
+     * @param RequestBaseInfo 【已废弃参数，新用户接入无需关注】
+基础请求信息
      */
     public void setRequestBaseInfo(ProjectBaseInfoOpsRequest RequestBaseInfo) {
         this.RequestBaseInfo = RequestBaseInfo;
     }
 
     /**
-     * Get 是否计算总数 
-     * @return IsCount 是否计算总数
+     * Get 【已废弃参数，新用户接入无需关注】
+是否计算总数 
+     * @return IsCount 【已废弃参数，新用户接入无需关注】
+是否计算总数
      */
     public Boolean getIsCount() {
         return this.IsCount;
     }
 
     /**
-     * Set 是否计算总数
-     * @param IsCount 是否计算总数
+     * Set 【已废弃参数，新用户接入无需关注】
+是否计算总数
+     * @param IsCount 【已废弃参数，新用户接入无需关注】
+是否计算总数
      */
     public void setIsCount(Boolean IsCount) {
         this.IsCount = IsCount;
     }
 
     /**
-     * Get 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错 
-     * @return ProjectIds 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+     * Get 【已废弃参数，新用户接入无需关注】
+项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错 
+     * @return ProjectIds 【已废弃参数，新用户接入无需关注】
+项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
      */
     public String [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
-     * @param ProjectIds 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+     * Set 【已废弃参数，新用户接入无需关注】
+项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+     * @param ProjectIds 【已废弃参数，新用户接入无需关注】
+项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
      */
     public void setProjectIds(String [] ProjectIds) {
         this.ProjectIds = ProjectIds;

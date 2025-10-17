@@ -178,14 +178,14 @@ public class CdbZoneSellConf extends AbstractModel {
     private String [] EngineType;
 
     /**
-    * 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+    * 云盘版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
     */
     @SerializedName("CloudNativeClusterStatus")
     @Expose
     private Long CloudNativeClusterStatus;
 
     /**
-    * 集群版或者单节点基础型支持的磁盘类型。
+    * 云盘版或者单节点基础型支持的磁盘类型。
     */
     @SerializedName("DiskTypeConf")
     @Expose
@@ -544,32 +544,32 @@ public class CdbZoneSellConf extends AbstractModel {
     }
 
     /**
-     * Get 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示 
-     * @return CloudNativeClusterStatus 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+     * Get 云盘版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示 
+     * @return CloudNativeClusterStatus 云盘版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
      */
     public Long getCloudNativeClusterStatus() {
         return this.CloudNativeClusterStatus;
     }
 
     /**
-     * Set 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
-     * @param CloudNativeClusterStatus 集群版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+     * Set 云盘版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
+     * @param CloudNativeClusterStatus 云盘版实例在当前可用区的售卖状态。可能的返回值为：1-上线；3-停售；4-不展示
      */
     public void setCloudNativeClusterStatus(Long CloudNativeClusterStatus) {
         this.CloudNativeClusterStatus = CloudNativeClusterStatus;
     }
 
     /**
-     * Get 集群版或者单节点基础型支持的磁盘类型。 
-     * @return DiskTypeConf 集群版或者单节点基础型支持的磁盘类型。
+     * Get 云盘版或者单节点基础型支持的磁盘类型。 
+     * @return DiskTypeConf 云盘版或者单节点基础型支持的磁盘类型。
      */
     public DiskTypeConfigItem [] getDiskTypeConf() {
         return this.DiskTypeConf;
     }
 
     /**
-     * Set 集群版或者单节点基础型支持的磁盘类型。
-     * @param DiskTypeConf 集群版或者单节点基础型支持的磁盘类型。
+     * Set 云盘版或者单节点基础型支持的磁盘类型。
+     * @param DiskTypeConf 云盘版或者单节点基础型支持的磁盘类型。
      */
     public void setDiskTypeConf(DiskTypeConfigItem [] DiskTypeConf) {
         this.DiskTypeConf = DiskTypeConf;

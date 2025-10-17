@@ -104,7 +104,7 @@ public class TaskInfoVo extends AbstractModel {
     private String EngineType;
 
     /**
-    * 引擎名称
+    * 引擎名称。在wedata侧若获取不到引擎名，则是wedata侧自动生成的标识，与集群侧的引擎名有可能不一致
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineName")
@@ -120,7 +120,8 @@ public class TaskInfoVo extends AbstractModel {
     private String EngineSubType;
 
     /**
-    * 引擎taskId
+    * 引擎taskId，集成任务部分会使用资源组的资源运行任务，没有提交到引擎侧，所以没有引擎侧id
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineTaskId")
@@ -166,6 +167,14 @@ public class TaskInfoVo extends AbstractModel {
     @SerializedName("ProductSource")
     @Expose
     private String ProductSource;
+
+    /**
+    * 集成任务的任务类型，表明是读端还是写端，可选择READ、WRITE
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IntegrationType")
+    @Expose
+    private String IntegrationType;
 
     /**
      * Get 租户id
@@ -368,9 +377,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 引擎名称
+     * Get 引擎名称。在wedata侧若获取不到引擎名，则是wedata侧自动生成的标识，与集群侧的引擎名有可能不一致
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineName 引擎名称
+     * @return EngineName 引擎名称。在wedata侧若获取不到引擎名，则是wedata侧自动生成的标识，与集群侧的引擎名有可能不一致
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineName() {
@@ -378,9 +387,9 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 引擎名称
+     * Set 引擎名称。在wedata侧若获取不到引擎名，则是wedata侧自动生成的标识，与集群侧的引擎名有可能不一致
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineName 引擎名称
+     * @param EngineName 引擎名称。在wedata侧若获取不到引擎名，则是wedata侧自动生成的标识，与集群侧的引擎名有可能不一致
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineName(String EngineName) {
@@ -408,9 +417,11 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Get 引擎taskId
+     * Get 引擎taskId，集成任务部分会使用资源组的资源运行任务，没有提交到引擎侧，所以没有引擎侧id
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EngineTaskId 引擎taskId
+     * @return EngineTaskId 引擎taskId，集成任务部分会使用资源组的资源运行任务，没有提交到引擎侧，所以没有引擎侧id
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineTaskId() {
@@ -418,9 +429,11 @@ public class TaskInfoVo extends AbstractModel {
     }
 
     /**
-     * Set 引擎taskId
+     * Set 引擎taskId，集成任务部分会使用资源组的资源运行任务，没有提交到引擎侧，所以没有引擎侧id
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EngineTaskId 引擎taskId
+     * @param EngineTaskId 引擎taskId，集成任务部分会使用资源组的资源运行任务，没有提交到引擎侧，所以没有引擎侧id
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineTaskId(String EngineTaskId) {
@@ -527,6 +540,26 @@ public class TaskInfoVo extends AbstractModel {
         this.ProductSource = ProductSource;
     }
 
+    /**
+     * Get 集成任务的任务类型，表明是读端还是写端，可选择READ、WRITE
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IntegrationType 集成任务的任务类型，表明是读端还是写端，可选择READ、WRITE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIntegrationType() {
+        return this.IntegrationType;
+    }
+
+    /**
+     * Set 集成任务的任务类型，表明是读端还是写端，可选择READ、WRITE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntegrationType 集成任务的任务类型，表明是读端还是写端，可选择READ、WRITE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntegrationType(String IntegrationType) {
+        this.IntegrationType = IntegrationType;
+    }
+
     public TaskInfoVo() {
     }
 
@@ -589,6 +622,9 @@ public class TaskInfoVo extends AbstractModel {
         if (source.ProductSource != null) {
             this.ProductSource = new String(source.ProductSource);
         }
+        if (source.IntegrationType != null) {
+            this.IntegrationType = new String(source.IntegrationType);
+        }
     }
 
 
@@ -614,6 +650,7 @@ public class TaskInfoVo extends AbstractModel {
         this.setParamSimple(map, prefix + "EngineExeStartTime", this.EngineExeStartTime);
         this.setParamSimple(map, prefix + "EngineExeEndTime", this.EngineExeEndTime);
         this.setParamSimple(map, prefix + "ProductSource", this.ProductSource);
+        this.setParamSimple(map, prefix + "IntegrationType", this.IntegrationType);
 
     }
 }

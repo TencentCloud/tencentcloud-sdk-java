@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListResourceGroupsRequest extends AbstractModel {
 
     /**
-    * 执行资源组类型，不能为空
+    * 执行资源组类型
 
 - Schedule --- 调度资源组
 - Integration --- 集成资源组
@@ -70,12 +70,12 @@ public class ListResourceGroupsRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-     * Get 执行资源组类型，不能为空
+     * Get 执行资源组类型
 
 - Schedule --- 调度资源组
 - Integration --- 集成资源组
 - DataService -- 数据服务资源组 
-     * @return Type 执行资源组类型，不能为空
+     * @return Type 执行资源组类型
 
 - Schedule --- 调度资源组
 - Integration --- 集成资源组
@@ -86,12 +86,12 @@ public class ListResourceGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Set 执行资源组类型，不能为空
+     * Set 执行资源组类型
 
 - Schedule --- 调度资源组
 - Integration --- 集成资源组
 - DataService -- 数据服务资源组
-     * @param Type 执行资源组类型，不能为空
+     * @param Type 执行资源组类型
 
 - Schedule --- 调度资源组
 - Integration --- 集成资源组

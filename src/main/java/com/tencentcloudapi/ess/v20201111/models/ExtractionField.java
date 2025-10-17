@@ -49,8 +49,7 @@ public class ExtractionField extends AbstractModel {
     * 用于描述字段信息。
 
 注意：
-1、`如果Type值为OPTION时，需要在字段描述中填写选项值，用,分隔`
-2、描述字段不能超过100个字符
+1、描述字段不能超过100个字符
     */
     @SerializedName("Description")
     @Expose
@@ -62,6 +61,13 @@ public class ExtractionField extends AbstractModel {
     @SerializedName("Values")
     @Expose
     private String [] Values;
+
+    /**
+    * 当字段类型`Type`为OPTION时为必输项，输入选项值
+    */
+    @SerializedName("ChoiceList")
+    @Expose
+    private String [] ChoiceList;
 
     /**
      * Get 用于合同智能提取的字段名称。
@@ -131,13 +137,11 @@ public class ExtractionField extends AbstractModel {
      * Get 用于描述字段信息。
 
 注意：
-1、`如果Type值为OPTION时，需要在字段描述中填写选项值，用,分隔`
-2、描述字段不能超过100个字符 
+1、描述字段不能超过100个字符 
      * @return Description 用于描述字段信息。
 
 注意：
-1、`如果Type值为OPTION时，需要在字段描述中填写选项值，用,分隔`
-2、描述字段不能超过100个字符
+1、描述字段不能超过100个字符
      */
     public String getDescription() {
         return this.Description;
@@ -147,13 +151,11 @@ public class ExtractionField extends AbstractModel {
      * Set 用于描述字段信息。
 
 注意：
-1、`如果Type值为OPTION时，需要在字段描述中填写选项值，用,分隔`
-2、描述字段不能超过100个字符
+1、描述字段不能超过100个字符
      * @param Description 用于描述字段信息。
 
 注意：
-1、`如果Type值为OPTION时，需要在字段描述中填写选项值，用,分隔`
-2、描述字段不能超过100个字符
+1、描述字段不能超过100个字符
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -173,6 +175,22 @@ public class ExtractionField extends AbstractModel {
      */
     public void setValues(String [] Values) {
         this.Values = Values;
+    }
+
+    /**
+     * Get 当字段类型`Type`为OPTION时为必输项，输入选项值 
+     * @return ChoiceList 当字段类型`Type`为OPTION时为必输项，输入选项值
+     */
+    public String [] getChoiceList() {
+        return this.ChoiceList;
+    }
+
+    /**
+     * Set 当字段类型`Type`为OPTION时为必输项，输入选项值
+     * @param ChoiceList 当字段类型`Type`为OPTION时为必输项，输入选项值
+     */
+    public void setChoiceList(String [] ChoiceList) {
+        this.ChoiceList = ChoiceList;
     }
 
     public ExtractionField() {
@@ -198,6 +216,12 @@ public class ExtractionField extends AbstractModel {
                 this.Values[i] = new String(source.Values[i]);
             }
         }
+        if (source.ChoiceList != null) {
+            this.ChoiceList = new String[source.ChoiceList.length];
+            for (int i = 0; i < source.ChoiceList.length; i++) {
+                this.ChoiceList[i] = new String(source.ChoiceList[i]);
+            }
+        }
     }
 
 
@@ -209,6 +233,7 @@ public class ExtractionField extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArraySimple(map, prefix + "Values.", this.Values);
+        this.setParamArraySimple(map, prefix + "ChoiceList.", this.ChoiceList);
 
     }
 }

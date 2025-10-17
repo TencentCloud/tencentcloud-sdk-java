@@ -66,6 +66,13 @@ public class BatchCreateTaskVersionAsyncRequest extends AbstractModel {
     private Boolean NeedCheckParentSubmitted;
 
     /**
+    * 是否需要补录中间实例
+    */
+    @SerializedName("EnableMakeUp")
+    @Expose
+    private Boolean EnableMakeUp;
+
+    /**
      * Get 任务信息 
      * @return Tasks 任务信息
      */
@@ -161,6 +168,22 @@ public class BatchCreateTaskVersionAsyncRequest extends AbstractModel {
         this.NeedCheckParentSubmitted = NeedCheckParentSubmitted;
     }
 
+    /**
+     * Get 是否需要补录中间实例 
+     * @return EnableMakeUp 是否需要补录中间实例
+     */
+    public Boolean getEnableMakeUp() {
+        return this.EnableMakeUp;
+    }
+
+    /**
+     * Set 是否需要补录中间实例
+     * @param EnableMakeUp 是否需要补录中间实例
+     */
+    public void setEnableMakeUp(Boolean EnableMakeUp) {
+        this.EnableMakeUp = EnableMakeUp;
+    }
+
     public BatchCreateTaskVersionAsyncRequest() {
     }
 
@@ -190,6 +213,9 @@ public class BatchCreateTaskVersionAsyncRequest extends AbstractModel {
         if (source.NeedCheckParentSubmitted != null) {
             this.NeedCheckParentSubmitted = new Boolean(source.NeedCheckParentSubmitted);
         }
+        if (source.EnableMakeUp != null) {
+            this.EnableMakeUp = new Boolean(source.EnableMakeUp);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class BatchCreateTaskVersionAsyncRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AlarmWays", this.AlarmWays);
         this.setParamSimple(map, prefix + "AlarmRecipientTypes", this.AlarmRecipientTypes);
         this.setParamSimple(map, prefix + "NeedCheckParentSubmitted", this.NeedCheckParentSubmitted);
+        this.setParamSimple(map, prefix + "EnableMakeUp", this.EnableMakeUp);
 
     }
 }

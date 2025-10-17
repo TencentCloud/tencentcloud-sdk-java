@@ -73,6 +73,20 @@ public class DisplayWechatApplet extends AbstractModel {
     private String Description;
 
     /**
+    * 认证主体
+    */
+    @SerializedName("RecordSubject")
+    @Expose
+    private String RecordSubject;
+
+    /**
+    * 账号Appid
+    */
+    @SerializedName("AccountAppid")
+    @Expose
+    private String AccountAppid;
+
+    /**
      * Get 主键ID 
      * @return Id 主键ID
      */
@@ -184,6 +198,38 @@ public class DisplayWechatApplet extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 认证主体 
+     * @return RecordSubject 认证主体
+     */
+    public String getRecordSubject() {
+        return this.RecordSubject;
+    }
+
+    /**
+     * Set 认证主体
+     * @param RecordSubject 认证主体
+     */
+    public void setRecordSubject(String RecordSubject) {
+        this.RecordSubject = RecordSubject;
+    }
+
+    /**
+     * Get 账号Appid 
+     * @return AccountAppid 账号Appid
+     */
+    public String getAccountAppid() {
+        return this.AccountAppid;
+    }
+
+    /**
+     * Set 账号Appid
+     * @param AccountAppid 账号Appid
+     */
+    public void setAccountAppid(String AccountAppid) {
+        this.AccountAppid = AccountAppid;
+    }
+
     public DisplayWechatApplet() {
     }
 
@@ -213,6 +259,12 @@ public class DisplayWechatApplet extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.RecordSubject != null) {
+            this.RecordSubject = new String(source.RecordSubject);
+        }
+        if (source.AccountAppid != null) {
+            this.AccountAppid = new String(source.AccountAppid);
+        }
     }
 
 
@@ -227,6 +279,8 @@ public class DisplayWechatApplet extends AbstractModel {
         this.setParamSimple(map, prefix + "AccountId", this.AccountId);
         this.setParamSimple(map, prefix + "QrCode", this.QrCode);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "RecordSubject", this.RecordSubject);
+        this.setParamSimple(map, prefix + "AccountAppid", this.AccountAppid);
 
     }
 }

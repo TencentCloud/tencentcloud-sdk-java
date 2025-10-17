@@ -52,6 +52,14 @@ public class TagVoteSum extends AbstractModel {
     private String TagName;
 
     /**
+    * 标签描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagDesc")
+    @Expose
+    private String TagDesc;
+
+    /**
      * Get 标签id 
      * @return TagId 标签id
      */
@@ -115,6 +123,26 @@ public class TagVoteSum extends AbstractModel {
         this.TagName = TagName;
     }
 
+    /**
+     * Get 标签描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagDesc 标签描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTagDesc() {
+        return this.TagDesc;
+    }
+
+    /**
+     * Set 标签描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagDesc 标签描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagDesc(String TagDesc) {
+        this.TagDesc = TagDesc;
+    }
+
     public TagVoteSum() {
     }
 
@@ -135,6 +163,9 @@ public class TagVoteSum extends AbstractModel {
         if (source.TagName != null) {
             this.TagName = new String(source.TagName);
         }
+        if (source.TagDesc != null) {
+            this.TagDesc = new String(source.TagDesc);
+        }
     }
 
 
@@ -146,6 +177,7 @@ public class TagVoteSum extends AbstractModel {
         this.setParamSimple(map, prefix + "VoteSum", this.VoteSum);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "TagName", this.TagName);
+        this.setParamSimple(map, prefix + "TagDesc", this.TagDesc);
 
     }
 }

@@ -339,7 +339,11 @@ public class InstanceInfo extends AbstractModel {
     private Long MaxDelayTime;
 
     /**
-    * 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
+    * 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
+说明：
+1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
+2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
+3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
     */
     @SerializedName("DiskType")
     @Expose
@@ -353,7 +357,7 @@ public class InstanceInfo extends AbstractModel {
     private Long ExpandCpu;
 
     /**
-    * 实例集群版节点信息
+    * 云盘版实例节点信息
     */
     @SerializedName("ClusterInfo")
     @Expose
@@ -372,6 +376,13 @@ public class InstanceInfo extends AbstractModel {
     @SerializedName("DeviceBandwidth")
     @Expose
     private Long DeviceBandwidth;
+
+    /**
+    * 实例销毁保护状态，on表示开启保护，否则为关闭保护
+    */
+    @SerializedName("DestroyProtect")
+    @Expose
+    private String DestroyProtect;
 
     /**
      * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
@@ -1094,16 +1105,32 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘 
-     * @return DiskType 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
+     * Get 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
+说明：
+1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
+2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
+3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。 
+     * @return DiskType 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
+说明：
+1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
+2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
+3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
-     * @param DiskType 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
+     * Set 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
+说明：
+1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
+2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
+3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
+     * @param DiskType 实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。
+说明：
+1. 若返回："DiskType": "CLOUD_HSSD"，则表示该实例磁盘类型为增强型 SSD 云硬盘。
+2. 若返回："DiskType": "CLOUD_SSD"，则表示该实例磁盘类型为 SSD 云硬盘。
+3. 若返回："DiskType": ""，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -1126,16 +1153,16 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例集群版节点信息 
-     * @return ClusterInfo 实例集群版节点信息
+     * Get 云盘版实例节点信息 
+     * @return ClusterInfo 云盘版实例节点信息
      */
     public ClusterInfo [] getClusterInfo() {
         return this.ClusterInfo;
     }
 
     /**
-     * Set 实例集群版节点信息
-     * @param ClusterInfo 实例集群版节点信息
+     * Set 云盘版实例节点信息
+     * @param ClusterInfo 云盘版实例节点信息
      */
     public void setClusterInfo(ClusterInfo [] ClusterInfo) {
         this.ClusterInfo = ClusterInfo;
@@ -1171,6 +1198,22 @@ public class InstanceInfo extends AbstractModel {
      */
     public void setDeviceBandwidth(Long DeviceBandwidth) {
         this.DeviceBandwidth = DeviceBandwidth;
+    }
+
+    /**
+     * Get 实例销毁保护状态，on表示开启保护，否则为关闭保护 
+     * @return DestroyProtect 实例销毁保护状态，on表示开启保护，否则为关闭保护
+     */
+    public String getDestroyProtect() {
+        return this.DestroyProtect;
+    }
+
+    /**
+     * Set 实例销毁保护状态，on表示开启保护，否则为关闭保护
+     * @param DestroyProtect 实例销毁保护状态，on表示开启保护，否则为关闭保护
+     */
+    public void setDestroyProtect(String DestroyProtect) {
+        this.DestroyProtect = DestroyProtect;
     }
 
     public InstanceInfo() {
@@ -1346,6 +1389,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.DeviceBandwidth != null) {
             this.DeviceBandwidth = new Long(source.DeviceBandwidth);
         }
+        if (source.DestroyProtect != null) {
+            this.DestroyProtect = new String(source.DestroyProtect);
+        }
     }
 
 
@@ -1403,6 +1449,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
         this.setParamArrayObj(map, prefix + "AnalysisNodeInfos.", this.AnalysisNodeInfos);
         this.setParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
+        this.setParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
 
     }
 }

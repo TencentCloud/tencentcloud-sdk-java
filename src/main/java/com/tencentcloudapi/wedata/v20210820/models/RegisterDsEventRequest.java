@@ -94,6 +94,13 @@ public class RegisterDsEventRequest extends AbstractModel {
     private String DimensionFormat;
 
     /**
+    * 事件消费有效次数
+    */
+    @SerializedName("ValidConsumeCount")
+    @Expose
+    private Long ValidConsumeCount;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -265,6 +272,22 @@ public class RegisterDsEventRequest extends AbstractModel {
         this.DimensionFormat = DimensionFormat;
     }
 
+    /**
+     * Get 事件消费有效次数 
+     * @return ValidConsumeCount 事件消费有效次数
+     */
+    public Long getValidConsumeCount() {
+        return this.ValidConsumeCount;
+    }
+
+    /**
+     * Set 事件消费有效次数
+     * @param ValidConsumeCount 事件消费有效次数
+     */
+    public void setValidConsumeCount(Long ValidConsumeCount) {
+        this.ValidConsumeCount = ValidConsumeCount;
+    }
+
     public RegisterDsEventRequest() {
     }
 
@@ -303,6 +326,9 @@ public class RegisterDsEventRequest extends AbstractModel {
         if (source.DimensionFormat != null) {
             this.DimensionFormat = new String(source.DimensionFormat);
         }
+        if (source.ValidConsumeCount != null) {
+            this.ValidConsumeCount = new Long(source.ValidConsumeCount);
+        }
     }
 
 
@@ -320,6 +346,7 @@ public class RegisterDsEventRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EventType", this.EventType);
         this.setParamSimple(map, prefix + "EventBroadcastType", this.EventBroadcastType);
         this.setParamSimple(map, prefix + "DimensionFormat", this.DimensionFormat);
+        this.setParamSimple(map, prefix + "ValidConsumeCount", this.ValidConsumeCount);
 
     }
 }

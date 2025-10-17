@@ -136,6 +136,38 @@ public class EventDsDto extends AbstractModel {
     private String ProjectName;
 
     /**
+    * 事件消费有效次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValidConsumeCount")
+    @Expose
+    private Long ValidConsumeCount;
+
+    /**
+    * 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
+
+    /**
+    * bundleId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BundleId")
+    @Expose
+    private String BundleId;
+
+    /**
+    * bundle信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BundleInfo")
+    @Expose
+    private String BundleInfo;
+
+    /**
      * Get 事件名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 事件名称
@@ -415,6 +447,86 @@ public class EventDsDto extends AbstractModel {
         this.ProjectName = ProjectName;
     }
 
+    /**
+     * Get 事件消费有效次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValidConsumeCount 事件消费有效次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getValidConsumeCount() {
+        return this.ValidConsumeCount;
+    }
+
+    /**
+     * Set 事件消费有效次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValidConsumeCount 事件消费有效次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValidConsumeCount(Long ValidConsumeCount) {
+        this.ValidConsumeCount = ValidConsumeCount;
+    }
+
+    /**
+     * Get 事件id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EventId 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EventId 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
+    }
+
+    /**
+     * Get bundleId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BundleId bundleId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBundleId() {
+        return this.BundleId;
+    }
+
+    /**
+     * Set bundleId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BundleId bundleId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBundleId(String BundleId) {
+        this.BundleId = BundleId;
+    }
+
+    /**
+     * Get bundle信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BundleInfo bundle信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBundleInfo() {
+        return this.BundleInfo;
+    }
+
+    /**
+     * Set bundle信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BundleInfo bundle信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBundleInfo(String BundleInfo) {
+        this.BundleInfo = BundleInfo;
+    }
+
     public EventDsDto() {
     }
 
@@ -468,6 +580,18 @@ public class EventDsDto extends AbstractModel {
         if (source.ProjectName != null) {
             this.ProjectName = new String(source.ProjectName);
         }
+        if (source.ValidConsumeCount != null) {
+            this.ValidConsumeCount = new Long(source.ValidConsumeCount);
+        }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
+        if (source.BundleId != null) {
+            this.BundleId = new String(source.BundleId);
+        }
+        if (source.BundleInfo != null) {
+            this.BundleInfo = new String(source.BundleInfo);
+        }
     }
 
 
@@ -489,6 +613,10 @@ public class EventDsDto extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Listeners.", this.Listeners);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
+        this.setParamSimple(map, prefix + "ValidConsumeCount", this.ValidConsumeCount);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
+        this.setParamSimple(map, prefix + "BundleId", this.BundleId);
+        this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
 
     }
 }

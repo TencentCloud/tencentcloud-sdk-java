@@ -57,10 +57,19 @@ public class ProdSchedulerTask extends AbstractModel {
 
     /**
     * 生产任务类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
+
+    /**
+    * 时区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleTimeZone")
+    @Expose
+    private String ScheduleTimeZone;
 
     /**
      * Get 生产调度任务工作流ID
@@ -143,8 +152,10 @@ public class ProdSchedulerTask extends AbstractModel {
     }
 
     /**
-     * Get 生产任务类型 
+     * Get 生产任务类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskType 生产任务类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskType() {
         return this.TaskType;
@@ -152,10 +163,32 @@ public class ProdSchedulerTask extends AbstractModel {
 
     /**
      * Set 生产任务类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskType 生产任务类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
+    }
+
+    /**
+     * Get 时区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleTimeZone 时区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduleTimeZone() {
+        return this.ScheduleTimeZone;
+    }
+
+    /**
+     * Set 时区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleTimeZone 时区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleTimeZone(String ScheduleTimeZone) {
+        this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
     public ProdSchedulerTask() {
@@ -181,6 +214,9 @@ public class ProdSchedulerTask extends AbstractModel {
         if (source.TaskType != null) {
             this.TaskType = new String(source.TaskType);
         }
+        if (source.ScheduleTimeZone != null) {
+            this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
+        }
     }
 
 
@@ -193,6 +229,7 @@ public class ProdSchedulerTask extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "CycleType", this.CycleType);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
 
     }
 }

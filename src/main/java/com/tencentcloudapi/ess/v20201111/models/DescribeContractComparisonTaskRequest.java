@@ -39,6 +39,14 @@ public class DescribeContractComparisonTaskRequest extends AbstractModel {
     private String TaskId;
 
     /**
+    * 是否返回详细的对比结果。为 true时，响应中将包含详细的对比信息，如相似度、文本差异具体内容等；为 false时，仅返回任务基本状态信息。
+注：`详细结果数据量可能较大，请按需开启。`
+    */
+    @SerializedName("ShowDetail")
+    @Expose
+    private Boolean ShowDetail;
+
+    /**
      * Get 执行合同审查任务的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行合同审查任务的员工信息。
@@ -74,6 +82,26 @@ public class DescribeContractComparisonTaskRequest extends AbstractModel {
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 是否返回详细的对比结果。为 true时，响应中将包含详细的对比信息，如相似度、文本差异具体内容等；为 false时，仅返回任务基本状态信息。
+注：`详细结果数据量可能较大，请按需开启。` 
+     * @return ShowDetail 是否返回详细的对比结果。为 true时，响应中将包含详细的对比信息，如相似度、文本差异具体内容等；为 false时，仅返回任务基本状态信息。
+注：`详细结果数据量可能较大，请按需开启。`
+     */
+    public Boolean getShowDetail() {
+        return this.ShowDetail;
+    }
+
+    /**
+     * Set 是否返回详细的对比结果。为 true时，响应中将包含详细的对比信息，如相似度、文本差异具体内容等；为 false时，仅返回任务基本状态信息。
+注：`详细结果数据量可能较大，请按需开启。`
+     * @param ShowDetail 是否返回详细的对比结果。为 true时，响应中将包含详细的对比信息，如相似度、文本差异具体内容等；为 false时，仅返回任务基本状态信息。
+注：`详细结果数据量可能较大，请按需开启。`
+     */
+    public void setShowDetail(Boolean ShowDetail) {
+        this.ShowDetail = ShowDetail;
+    }
+
     public DescribeContractComparisonTaskRequest() {
     }
 
@@ -88,6 +116,9 @@ public class DescribeContractComparisonTaskRequest extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.ShowDetail != null) {
+            this.ShowDetail = new Boolean(source.ShowDetail);
+        }
     }
 
 
@@ -97,6 +128,7 @@ public class DescribeContractComparisonTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "ShowDetail", this.ShowDetail);
 
     }
 }

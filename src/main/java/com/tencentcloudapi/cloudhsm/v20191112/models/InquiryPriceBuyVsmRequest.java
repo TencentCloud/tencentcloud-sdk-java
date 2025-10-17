@@ -52,13 +52,6 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel {
     private String TimeUnit;
 
     /**
-    * 货币类型，默认为CNY
-    */
-    @SerializedName("Currency")
-    @Expose
-    private String Currency;
-
-    /**
     * 默认为CREATE，可选RENEW
     */
     @SerializedName("Type")
@@ -71,6 +64,13 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel {
     @SerializedName("HsmType")
     @Expose
     private String HsmType;
+
+    /**
+    * 货币类型，默认为CNY
+    */
+    @SerializedName("Currency")
+    @Expose
+    private String Currency;
 
     /**
      * Get 需购买实例的数量 
@@ -137,22 +137,6 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel {
     }
 
     /**
-     * Get 货币类型，默认为CNY 
-     * @return Currency 货币类型，默认为CNY
-     */
-    public String getCurrency() {
-        return this.Currency;
-    }
-
-    /**
-     * Set 货币类型，默认为CNY
-     * @param Currency 货币类型，默认为CNY
-     */
-    public void setCurrency(String Currency) {
-        this.Currency = Currency;
-    }
-
-    /**
      * Get 默认为CREATE，可选RENEW 
      * @return Type 默认为CREATE，可选RENEW
      */
@@ -184,6 +168,22 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel {
         this.HsmType = HsmType;
     }
 
+    /**
+     * Get 货币类型，默认为CNY 
+     * @return Currency 货币类型，默认为CNY
+     */
+    public String getCurrency() {
+        return this.Currency;
+    }
+
+    /**
+     * Set 货币类型，默认为CNY
+     * @param Currency 货币类型，默认为CNY
+     */
+    public void setCurrency(String Currency) {
+        this.Currency = Currency;
+    }
+
     public InquiryPriceBuyVsmRequest() {
     }
 
@@ -204,14 +204,14 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel {
         if (source.TimeUnit != null) {
             this.TimeUnit = new String(source.TimeUnit);
         }
-        if (source.Currency != null) {
-            this.Currency = new String(source.Currency);
-        }
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
         if (source.HsmType != null) {
             this.HsmType = new String(source.HsmType);
+        }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
         }
     }
 
@@ -224,9 +224,9 @@ public class InquiryPriceBuyVsmRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
-        this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "HsmType", this.HsmType);
+        this.setParamSimple(map, prefix + "Currency", this.Currency);
 
     }
 }

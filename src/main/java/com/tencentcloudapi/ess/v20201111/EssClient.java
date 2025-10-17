@@ -292,6 +292,18 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（CreateContractComparisonTask）用于创建合同对比任务。
+适用场景：对比两份合同中字段（如：金额、日期、甲方名称等）的内容差异。
+     * @param req CreateContractComparisonTaskRequest
+     * @return CreateContractComparisonTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateContractComparisonTaskResponse CreateContractComparisonTask(CreateContractComparisonTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateContractComparisonTask", CreateContractComparisonTaskResponse.class);
+    }
+
+    /**
      *接口（CreateContractDiffTaskWebUrl）用于创建合同对比的可嵌入web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
 注：本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
 
@@ -2103,6 +2115,17 @@ public class EssClient extends AbstractClient{
     public DisableUserAutoSignResponse DisableUserAutoSign(DisableUserAutoSignRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DisableUserAutoSign", DisableUserAutoSignResponse.class);
+    }
+
+    /**
+     *本接口（ExportContractComparisonTask）用于导出指定的合同对比任务的结果文件。任务完成后，用户可根据不同的使用场景，选择导出可视化对比报告（PDF）或结构化差异明细（EXCEL）。
+     * @param req ExportContractComparisonTaskRequest
+     * @return ExportContractComparisonTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportContractComparisonTaskResponse ExportContractComparisonTask(ExportContractComparisonTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportContractComparisonTask", ExportContractComparisonTaskResponse.class);
     }
 
     /**

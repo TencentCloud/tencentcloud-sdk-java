@@ -46,7 +46,7 @@ public class GetEmbeddingRequest extends AbstractModel {
     private String TextType;
 
     /**
-    * 说明：自定义任务指令词，当且仅当TextType=query时，生效
+    * 说明：自定义任务指令词，当且仅当TextType=query且Model为youtu-embedding-llm-v1时，生效
     */
     @SerializedName("Instruction")
     @Expose
@@ -105,16 +105,16 @@ public class GetEmbeddingRequest extends AbstractModel {
     }
 
     /**
-     * Get 说明：自定义任务指令词，当且仅当TextType=query时，生效 
-     * @return Instruction 说明：自定义任务指令词，当且仅当TextType=query时，生效
+     * Get 说明：自定义任务指令词，当且仅当TextType=query且Model为youtu-embedding-llm-v1时，生效 
+     * @return Instruction 说明：自定义任务指令词，当且仅当TextType=query且Model为youtu-embedding-llm-v1时，生效
      */
     public String getInstruction() {
         return this.Instruction;
     }
 
     /**
-     * Set 说明：自定义任务指令词，当且仅当TextType=query时，生效
-     * @param Instruction 说明：自定义任务指令词，当且仅当TextType=query时，生效
+     * Set 说明：自定义任务指令词，当且仅当TextType=query且Model为youtu-embedding-llm-v1时，生效
+     * @param Instruction 说明：自定义任务指令词，当且仅当TextType=query且Model为youtu-embedding-llm-v1时，生效
      */
     public void setInstruction(String Instruction) {
         this.Instruction = Instruction;
