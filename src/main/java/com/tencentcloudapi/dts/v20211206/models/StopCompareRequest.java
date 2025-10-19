@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class StopCompareRequest extends AbstractModel {
 
     /**
-    * 迁移任务 Id
+    * 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
+    * 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
     */
     @SerializedName("CompareTaskId")
     @Expose
     private String CompareTaskId;
 
     /**
-    * 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
+    * 是否强制停止。默认值为false，表示不强制停止；如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
     */
     @SerializedName("ForceStop")
     @Expose
     private Boolean ForceStop;
 
     /**
-     * Get 迁移任务 Id 
-     * @return JobId 迁移任务 Id
+     * Get 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ 
+     * @return JobId 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 迁移任务 Id
-     * @param JobId 迁移任务 Id
+     * Set 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+     * @param JobId 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9 
-     * @return CompareTaskId 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
+     * Get 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ 
+     * @return CompareTaskId 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public String getCompareTaskId() {
         return this.CompareTaskId;
     }
 
     /**
-     * Set 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
-     * @param CompareTaskId 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
+     * Set 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+     * @param CompareTaskId 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public void setCompareTaskId(String CompareTaskId) {
         this.CompareTaskId = CompareTaskId;
     }
 
     /**
-     * Get 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果 
-     * @return ForceStop 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
+     * Get 是否强制停止。默认值为false，表示不强制停止；如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果 
+     * @return ForceStop 是否强制停止。默认值为false，表示不强制停止；如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
      */
     public Boolean getForceStop() {
         return this.ForceStop;
     }
 
     /**
-     * Set 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
-     * @param ForceStop 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
+     * Set 是否强制停止。默认值为false，表示不强制停止；如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
+     * @param ForceStop 是否强制停止。默认值为false，表示不强制停止；如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
      */
     public void setForceStop(Boolean ForceStop) {
         this.ForceStop = ForceStop;

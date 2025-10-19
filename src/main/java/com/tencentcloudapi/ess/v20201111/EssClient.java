@@ -903,6 +903,21 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（CreateInformationExtractionWebUrl）用来创建合同信息提取web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+
+注: 
+1. pdf、word格式限制大小为10M以下
+2. pdg、jpeg、jpg格式限制大小为5M以下
+     * @param req CreateInformationExtractionWebUrlRequest
+     * @return CreateInformationExtractionWebUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInformationExtractionWebUrlResponse CreateInformationExtractionWebUrl(CreateInformationExtractionWebUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInformationExtractionWebUrl", CreateInformationExtractionWebUrlResponse.class);
+    }
+
+    /**
      *此接口（CreateIntegrationDepartment）用于创建企业的部门信息，支持绑定客户系统部门ID。
      * @param req CreateIntegrationDepartmentRequest
      * @return CreateIntegrationDepartmentResponse
@@ -1898,6 +1913,17 @@ public class EssClient extends AbstractClient{
     public DescribeInformationExtractionTaskResponse DescribeInformationExtractionTask(DescribeInformationExtractionTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInformationExtractionTask", DescribeInformationExtractionTaskResponse.class);
+    }
+
+    /**
+     *此接口（DescribeInformationExtractionWebUrl）用来获取合同信息提取web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+     * @param req DescribeInformationExtractionWebUrlRequest
+     * @return DescribeInformationExtractionWebUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInformationExtractionWebUrlResponse DescribeInformationExtractionWebUrl(DescribeInformationExtractionWebUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInformationExtractionWebUrl", DescribeInformationExtractionWebUrlResponse.class);
     }
 
     /**

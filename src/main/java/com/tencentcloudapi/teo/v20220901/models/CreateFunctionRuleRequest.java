@@ -38,11 +38,36 @@ public class CreateFunctionRuleRequest extends AbstractModel {
     private FunctionRuleCondition [] FunctionRuleConditions;
 
     /**
-    * 函数 ID，命中触发规则条件后执行的函数。
+    * 函数选择配置类型：
+<li> direct：直接指定执行函数；</li>
+<li> weight：基于权重比选择函数；</li>
+<li> region：基于客户端 IP 的国家/地区选择函数。</li>
+不填时默认为 direct 。
+    */
+    @SerializedName("TriggerType")
+    @Expose
+    private String TriggerType;
+
+    /**
+    * 指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。
     */
     @SerializedName("FunctionId")
     @Expose
     private String FunctionId;
+
+    /**
+    * 基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中至少包含一项 Regions 为 Default 的配置。
+    */
+    @SerializedName("RegionMappingSelections")
+    @Expose
+    private FunctionRegionSelection [] RegionMappingSelections;
+
+    /**
+    * 基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。
+    */
+    @SerializedName("WeightedSelections")
+    @Expose
+    private FunctionWeightedSelection [] WeightedSelections;
 
     /**
     * 规则描述，最大支持 60 个字符。
@@ -84,19 +109,83 @@ public class CreateFunctionRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 函数 ID，命中触发规则条件后执行的函数。 
-     * @return FunctionId 函数 ID，命中触发规则条件后执行的函数。
+     * Get 函数选择配置类型：
+<li> direct：直接指定执行函数；</li>
+<li> weight：基于权重比选择函数；</li>
+<li> region：基于客户端 IP 的国家/地区选择函数。</li>
+不填时默认为 direct 。 
+     * @return TriggerType 函数选择配置类型：
+<li> direct：直接指定执行函数；</li>
+<li> weight：基于权重比选择函数；</li>
+<li> region：基于客户端 IP 的国家/地区选择函数。</li>
+不填时默认为 direct 。
+     */
+    public String getTriggerType() {
+        return this.TriggerType;
+    }
+
+    /**
+     * Set 函数选择配置类型：
+<li> direct：直接指定执行函数；</li>
+<li> weight：基于权重比选择函数；</li>
+<li> region：基于客户端 IP 的国家/地区选择函数。</li>
+不填时默认为 direct 。
+     * @param TriggerType 函数选择配置类型：
+<li> direct：直接指定执行函数；</li>
+<li> weight：基于权重比选择函数；</li>
+<li> region：基于客户端 IP 的国家/地区选择函数。</li>
+不填时默认为 direct 。
+     */
+    public void setTriggerType(String TriggerType) {
+        this.TriggerType = TriggerType;
+    }
+
+    /**
+     * Get 指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。 
+     * @return FunctionId 指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。
      */
     public String getFunctionId() {
         return this.FunctionId;
     }
 
     /**
-     * Set 函数 ID，命中触发规则条件后执行的函数。
-     * @param FunctionId 函数 ID，命中触发规则条件后执行的函数。
+     * Set 指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。
+     * @param FunctionId 指定执行的函数 ID。当 TriggerType 为 direct 或 TriggerType 不填时生效。
      */
     public void setFunctionId(String FunctionId) {
         this.FunctionId = FunctionId;
+    }
+
+    /**
+     * Get 基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中至少包含一项 Regions 为 Default 的配置。 
+     * @return RegionMappingSelections 基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中至少包含一项 Regions 为 Default 的配置。
+     */
+    public FunctionRegionSelection [] getRegionMappingSelections() {
+        return this.RegionMappingSelections;
+    }
+
+    /**
+     * Set 基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中至少包含一项 Regions 为 Default 的配置。
+     * @param RegionMappingSelections 基于客户端 IP 国家/地区的函数选择配置，当 TriggerType 为 region 时生效且 RegionMappingSelections 必填。RegionMappingSelections 中至少包含一项 Regions 为 Default 的配置。
+     */
+    public void setRegionMappingSelections(FunctionRegionSelection [] RegionMappingSelections) {
+        this.RegionMappingSelections = RegionMappingSelections;
+    }
+
+    /**
+     * Get 基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。 
+     * @return WeightedSelections 基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。
+     */
+    public FunctionWeightedSelection [] getWeightedSelections() {
+        return this.WeightedSelections;
+    }
+
+    /**
+     * Set 基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。
+     * @param WeightedSelections 基于权重的函数选择配置，当 TriggerType 为 weight 时生效且 WeightedSelections 必填。WeightedSelections 中的所有权重之和需要为100。
+     */
+    public void setWeightedSelections(FunctionWeightedSelection [] WeightedSelections) {
+        this.WeightedSelections = WeightedSelections;
     }
 
     /**
@@ -132,8 +221,23 @@ public class CreateFunctionRuleRequest extends AbstractModel {
                 this.FunctionRuleConditions[i] = new FunctionRuleCondition(source.FunctionRuleConditions[i]);
             }
         }
+        if (source.TriggerType != null) {
+            this.TriggerType = new String(source.TriggerType);
+        }
         if (source.FunctionId != null) {
             this.FunctionId = new String(source.FunctionId);
+        }
+        if (source.RegionMappingSelections != null) {
+            this.RegionMappingSelections = new FunctionRegionSelection[source.RegionMappingSelections.length];
+            for (int i = 0; i < source.RegionMappingSelections.length; i++) {
+                this.RegionMappingSelections[i] = new FunctionRegionSelection(source.RegionMappingSelections[i]);
+            }
+        }
+        if (source.WeightedSelections != null) {
+            this.WeightedSelections = new FunctionWeightedSelection[source.WeightedSelections.length];
+            for (int i = 0; i < source.WeightedSelections.length; i++) {
+                this.WeightedSelections[i] = new FunctionWeightedSelection(source.WeightedSelections[i]);
+            }
         }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
@@ -147,7 +251,10 @@ public class CreateFunctionRuleRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArrayObj(map, prefix + "FunctionRuleConditions.", this.FunctionRuleConditions);
+        this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
         this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
+        this.setParamArrayObj(map, prefix + "RegionMappingSelections.", this.RegionMappingSelections);
+        this.setParamArrayObj(map, prefix + "WeightedSelections.", this.WeightedSelections);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }

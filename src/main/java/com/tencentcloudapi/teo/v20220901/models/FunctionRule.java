@@ -38,25 +38,43 @@ public class FunctionRule extends AbstractModel {
     private FunctionRuleCondition [] FunctionRuleConditions;
 
     /**
-    * 函数 ID，命中触发规则条件后执行的函数。
+    * 函数选择配置类型：
+<li> direct：直接指定执行函数；</li>
+<li> weight：基于权重比选择函数；</li>
+<li> region：基于客户端 IP 的国家/地区选择函数。</li>
+
+    */
+    @SerializedName("TriggerType")
+    @Expose
+    private String TriggerType;
+
+    /**
+    * 指定执行的函数 ID。当 TriggerType 为 direct 时有效。
     */
     @SerializedName("FunctionId")
     @Expose
     private String FunctionId;
 
     /**
-    * 规则描述。
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
-
-    /**
-    * 函数名称。
+    * 指定执行的函数名称。
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
+
+    /**
+    * 基于客户端 IP 国家/地区的函数选择配置。
+    */
+    @SerializedName("RegionMappingSelections")
+    @Expose
+    private FunctionRegionSelection [] RegionMappingSelections;
+
+    /**
+    * 基于权重的函数选择配置。
+    */
+    @SerializedName("WeightedSelections")
+    @Expose
+    private FunctionWeightedSelection [] WeightedSelections;
 
     /**
     * 函数触发规则优先级，数值越大，优先级越高。
@@ -64,6 +82,13 @@ public class FunctionRule extends AbstractModel {
     @SerializedName("Priority")
     @Expose
     private Long Priority;
+
+    /**
+    * 规则描述。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
 
     /**
     * 创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
@@ -112,51 +137,99 @@ public class FunctionRule extends AbstractModel {
     }
 
     /**
-     * Get 函数 ID，命中触发规则条件后执行的函数。 
-     * @return FunctionId 函数 ID，命中触发规则条件后执行的函数。
+     * Get 函数选择配置类型：
+<li> direct：直接指定执行函数；</li>
+<li> weight：基于权重比选择函数；</li>
+<li> region：基于客户端 IP 的国家/地区选择函数。</li>
+ 
+     * @return TriggerType 函数选择配置类型：
+<li> direct：直接指定执行函数；</li>
+<li> weight：基于权重比选择函数；</li>
+<li> region：基于客户端 IP 的国家/地区选择函数。</li>
+
+     */
+    public String getTriggerType() {
+        return this.TriggerType;
+    }
+
+    /**
+     * Set 函数选择配置类型：
+<li> direct：直接指定执行函数；</li>
+<li> weight：基于权重比选择函数；</li>
+<li> region：基于客户端 IP 的国家/地区选择函数。</li>
+
+     * @param TriggerType 函数选择配置类型：
+<li> direct：直接指定执行函数；</li>
+<li> weight：基于权重比选择函数；</li>
+<li> region：基于客户端 IP 的国家/地区选择函数。</li>
+
+     */
+    public void setTriggerType(String TriggerType) {
+        this.TriggerType = TriggerType;
+    }
+
+    /**
+     * Get 指定执行的函数 ID。当 TriggerType 为 direct 时有效。 
+     * @return FunctionId 指定执行的函数 ID。当 TriggerType 为 direct 时有效。
      */
     public String getFunctionId() {
         return this.FunctionId;
     }
 
     /**
-     * Set 函数 ID，命中触发规则条件后执行的函数。
-     * @param FunctionId 函数 ID，命中触发规则条件后执行的函数。
+     * Set 指定执行的函数 ID。当 TriggerType 为 direct 时有效。
+     * @param FunctionId 指定执行的函数 ID。当 TriggerType 为 direct 时有效。
      */
     public void setFunctionId(String FunctionId) {
         this.FunctionId = FunctionId;
     }
 
     /**
-     * Get 规则描述。 
-     * @return Remark 规则描述。
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set 规则描述。
-     * @param Remark 规则描述。
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
-    }
-
-    /**
-     * Get 函数名称。 
-     * @return FunctionName 函数名称。
+     * Get 指定执行的函数名称。 
+     * @return FunctionName 指定执行的函数名称。
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set 函数名称。
-     * @param FunctionName 函数名称。
+     * Set 指定执行的函数名称。
+     * @param FunctionName 指定执行的函数名称。
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
+    }
+
+    /**
+     * Get 基于客户端 IP 国家/地区的函数选择配置。 
+     * @return RegionMappingSelections 基于客户端 IP 国家/地区的函数选择配置。
+     */
+    public FunctionRegionSelection [] getRegionMappingSelections() {
+        return this.RegionMappingSelections;
+    }
+
+    /**
+     * Set 基于客户端 IP 国家/地区的函数选择配置。
+     * @param RegionMappingSelections 基于客户端 IP 国家/地区的函数选择配置。
+     */
+    public void setRegionMappingSelections(FunctionRegionSelection [] RegionMappingSelections) {
+        this.RegionMappingSelections = RegionMappingSelections;
+    }
+
+    /**
+     * Get 基于权重的函数选择配置。 
+     * @return WeightedSelections 基于权重的函数选择配置。
+     */
+    public FunctionWeightedSelection [] getWeightedSelections() {
+        return this.WeightedSelections;
+    }
+
+    /**
+     * Set 基于权重的函数选择配置。
+     * @param WeightedSelections 基于权重的函数选择配置。
+     */
+    public void setWeightedSelections(FunctionWeightedSelection [] WeightedSelections) {
+        this.WeightedSelections = WeightedSelections;
     }
 
     /**
@@ -173,6 +246,22 @@ public class FunctionRule extends AbstractModel {
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
+    }
+
+    /**
+     * Get 规则描述。 
+     * @return Remark 规则描述。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 规则描述。
+     * @param Remark 规则描述。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
     }
 
     /**
@@ -224,17 +313,32 @@ public class FunctionRule extends AbstractModel {
                 this.FunctionRuleConditions[i] = new FunctionRuleCondition(source.FunctionRuleConditions[i]);
             }
         }
+        if (source.TriggerType != null) {
+            this.TriggerType = new String(source.TriggerType);
+        }
         if (source.FunctionId != null) {
             this.FunctionId = new String(source.FunctionId);
-        }
-        if (source.Remark != null) {
-            this.Remark = new String(source.Remark);
         }
         if (source.FunctionName != null) {
             this.FunctionName = new String(source.FunctionName);
         }
+        if (source.RegionMappingSelections != null) {
+            this.RegionMappingSelections = new FunctionRegionSelection[source.RegionMappingSelections.length];
+            for (int i = 0; i < source.RegionMappingSelections.length; i++) {
+                this.RegionMappingSelections[i] = new FunctionRegionSelection(source.RegionMappingSelections[i]);
+            }
+        }
+        if (source.WeightedSelections != null) {
+            this.WeightedSelections = new FunctionWeightedSelection[source.WeightedSelections.length];
+            for (int i = 0; i < source.WeightedSelections.length; i++) {
+                this.WeightedSelections[i] = new FunctionWeightedSelection(source.WeightedSelections[i]);
+            }
+        }
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
@@ -251,10 +355,13 @@ public class FunctionRule extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArrayObj(map, prefix + "FunctionRuleConditions.", this.FunctionRuleConditions);
+        this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
         this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
+        this.setParamArrayObj(map, prefix + "RegionMappingSelections.", this.RegionMappingSelections);
+        this.setParamArrayObj(map, prefix + "WeightedSelections.", this.WeightedSelections);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

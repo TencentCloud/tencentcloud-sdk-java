@@ -46,6 +46,13 @@ public class ExtractDocBasicResponse extends AbstractModel {
     private WordItem [] WordList;
 
     /**
+    * 全部印章信息
+    */
+    @SerializedName("SealInfos")
+    @Expose
+    private SealInfo [] SealInfos;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -105,6 +112,22 @@ public class ExtractDocBasicResponse extends AbstractModel {
     }
 
     /**
+     * Get 全部印章信息 
+     * @return SealInfos 全部印章信息
+     */
+    public SealInfo [] getSealInfos() {
+        return this.SealInfos;
+    }
+
+    /**
+     * Set 全部印章信息
+     * @param SealInfos 全部印章信息
+     */
+    public void setSealInfos(SealInfo [] SealInfos) {
+        this.SealInfos = SealInfos;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -143,6 +166,12 @@ public class ExtractDocBasicResponse extends AbstractModel {
                 this.WordList[i] = new WordItem(source.WordList[i]);
             }
         }
+        if (source.SealInfos != null) {
+            this.SealInfos = new SealInfo[source.SealInfos.length];
+            for (int i = 0; i < source.SealInfos.length; i++) {
+                this.SealInfos[i] = new SealInfo(source.SealInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -156,6 +185,7 @@ public class ExtractDocBasicResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamArrayObj(map, prefix + "StructuralList.", this.StructuralList);
         this.setParamArrayObj(map, prefix + "WordList.", this.WordList);
+        this.setParamArrayObj(map, prefix + "SealInfos.", this.SealInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

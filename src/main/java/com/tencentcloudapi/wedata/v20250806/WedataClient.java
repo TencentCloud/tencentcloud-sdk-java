@@ -611,7 +611,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *创建任务接口
+     *获取任务详情接口
      * @param req GetTaskRequest
      * @return GetTaskResponse
      * @throws TencentCloudSDKException
@@ -1315,7 +1315,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *创建任务接口
+     *更新任务接口
      * @param req UpdateTaskRequest
      * @return UpdateTaskResponse
      * @throws TencentCloudSDKException
@@ -1337,7 +1337,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *创建文件夹
+     *更新工作流文件夹
      * @param req UpdateWorkflowFolderRequest
      * @return UpdateWorkflowFolderResponse
      * @throws TencentCloudSDKException

@@ -39,6 +39,13 @@ public class SmartEraseTaskInput extends AbstractModel {
     private RawSmartEraseParameter RawParameter;
 
     /**
+    * 智能擦除自定义参数，当 Definition 不填 0 时有效。 当填写了该结构中的部分擦除参数时，将使用填写的参数覆盖智能擦除模板中的参数。 该参数用于高度定制场景，建议您仅使用 Definition 指定智能擦除参数。
+    */
+    @SerializedName("OverrideParameter")
+    @Expose
+    private OverrideEraseParameter OverrideParameter;
+
+    /**
     * 文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -95,6 +102,22 @@ public class SmartEraseTaskInput extends AbstractModel {
      */
     public void setRawParameter(RawSmartEraseParameter RawParameter) {
         this.RawParameter = RawParameter;
+    }
+
+    /**
+     * Get 智能擦除自定义参数，当 Definition 不填 0 时有效。 当填写了该结构中的部分擦除参数时，将使用填写的参数覆盖智能擦除模板中的参数。 该参数用于高度定制场景，建议您仅使用 Definition 指定智能擦除参数。 
+     * @return OverrideParameter 智能擦除自定义参数，当 Definition 不填 0 时有效。 当填写了该结构中的部分擦除参数时，将使用填写的参数覆盖智能擦除模板中的参数。 该参数用于高度定制场景，建议您仅使用 Definition 指定智能擦除参数。
+     */
+    public OverrideEraseParameter getOverrideParameter() {
+        return this.OverrideParameter;
+    }
+
+    /**
+     * Set 智能擦除自定义参数，当 Definition 不填 0 时有效。 当填写了该结构中的部分擦除参数时，将使用填写的参数覆盖智能擦除模板中的参数。 该参数用于高度定制场景，建议您仅使用 Definition 指定智能擦除参数。
+     * @param OverrideParameter 智能擦除自定义参数，当 Definition 不填 0 时有效。 当填写了该结构中的部分擦除参数时，将使用填写的参数覆盖智能擦除模板中的参数。 该参数用于高度定制场景，建议您仅使用 Definition 指定智能擦除参数。
+     */
+    public void setOverrideParameter(OverrideEraseParameter OverrideParameter) {
+        this.OverrideParameter = OverrideParameter;
     }
 
     /**
@@ -179,6 +202,9 @@ public class SmartEraseTaskInput extends AbstractModel {
         if (source.RawParameter != null) {
             this.RawParameter = new RawSmartEraseParameter(source.RawParameter);
         }
+        if (source.OverrideParameter != null) {
+            this.OverrideParameter = new OverrideEraseParameter(source.OverrideParameter);
+        }
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
@@ -194,6 +220,7 @@ public class SmartEraseTaskInput extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
+        this.setParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
 
