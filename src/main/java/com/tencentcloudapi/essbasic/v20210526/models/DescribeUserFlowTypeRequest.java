@@ -31,18 +31,14 @@ public class DescribeUserFlowTypeRequest extends AbstractModel {
     private Agent Agent;
 
     /**
-    * 搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。 <ul><li><strong>模板的用户合同类型</strong>：<strong>Key</strong>设置为 <code>user-flow-type-id</code> ，<strong>Values</strong>为您想要查询的用户模版类型id列表。</li></ul>	
+    * 搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。 <ul><li><strong>模板的用户合同类型</strong>：<strong>Key</strong>设置为 <code>user-flow-type-id</code> ，<strong>Values</strong>为您想要查询的用户模板类型id列表。</li></ul>	
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 查询绑定了模版的用户合同类型
-<ul>
-<li>false（默认值），查询用户合同类型</li>
-<li>true，查询绑定了模版的用户合同类型</li>
-</ul>
+    * 查询绑定了模板的用户合同类型<ul><li>false（默认值），查询用户合同类型</li><li>true，查询绑定了模板的用户合同类型</li></ul>
     */
     @SerializedName("QueryBindTemplate")
     @Expose
@@ -65,48 +61,32 @@ public class DescribeUserFlowTypeRequest extends AbstractModel {
     }
 
     /**
-     * Get 搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。 <ul><li><strong>模板的用户合同类型</strong>：<strong>Key</strong>设置为 <code>user-flow-type-id</code> ，<strong>Values</strong>为您想要查询的用户模版类型id列表。</li></ul>	 
-     * @return Filters 搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。 <ul><li><strong>模板的用户合同类型</strong>：<strong>Key</strong>设置为 <code>user-flow-type-id</code> ，<strong>Values</strong>为您想要查询的用户模版类型id列表。</li></ul>	
+     * Get 搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。 <ul><li><strong>模板的用户合同类型</strong>：<strong>Key</strong>设置为 <code>user-flow-type-id</code> ，<strong>Values</strong>为您想要查询的用户模板类型id列表。</li></ul>	 
+     * @return Filters 搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。 <ul><li><strong>模板的用户合同类型</strong>：<strong>Key</strong>设置为 <code>user-flow-type-id</code> ，<strong>Values</strong>为您想要查询的用户模板类型id列表。</li></ul>	
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。 <ul><li><strong>模板的用户合同类型</strong>：<strong>Key</strong>设置为 <code>user-flow-type-id</code> ，<strong>Values</strong>为您想要查询的用户模版类型id列表。</li></ul>	
-     * @param Filters 搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。 <ul><li><strong>模板的用户合同类型</strong>：<strong>Key</strong>设置为 <code>user-flow-type-id</code> ，<strong>Values</strong>为您想要查询的用户模版类型id列表。</li></ul>	
+     * Set 搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。 <ul><li><strong>模板的用户合同类型</strong>：<strong>Key</strong>设置为 <code>user-flow-type-id</code> ，<strong>Values</strong>为您想要查询的用户模板类型id列表。</li></ul>	
+     * @param Filters 搜索过滤的条件，本字段允许您通过指定模板 ID 或模板名称来进行查询。 <ul><li><strong>模板的用户合同类型</strong>：<strong>Key</strong>设置为 <code>user-flow-type-id</code> ，<strong>Values</strong>为您想要查询的用户模板类型id列表。</li></ul>	
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 查询绑定了模版的用户合同类型
-<ul>
-<li>false（默认值），查询用户合同类型</li>
-<li>true，查询绑定了模版的用户合同类型</li>
-</ul> 
-     * @return QueryBindTemplate 查询绑定了模版的用户合同类型
-<ul>
-<li>false（默认值），查询用户合同类型</li>
-<li>true，查询绑定了模版的用户合同类型</li>
-</ul>
+     * Get 查询绑定了模板的用户合同类型<ul><li>false（默认值），查询用户合同类型</li><li>true，查询绑定了模板的用户合同类型</li></ul> 
+     * @return QueryBindTemplate 查询绑定了模板的用户合同类型<ul><li>false（默认值），查询用户合同类型</li><li>true，查询绑定了模板的用户合同类型</li></ul>
      */
     public Boolean getQueryBindTemplate() {
         return this.QueryBindTemplate;
     }
 
     /**
-     * Set 查询绑定了模版的用户合同类型
-<ul>
-<li>false（默认值），查询用户合同类型</li>
-<li>true，查询绑定了模版的用户合同类型</li>
-</ul>
-     * @param QueryBindTemplate 查询绑定了模版的用户合同类型
-<ul>
-<li>false（默认值），查询用户合同类型</li>
-<li>true，查询绑定了模版的用户合同类型</li>
-</ul>
+     * Set 查询绑定了模板的用户合同类型<ul><li>false（默认值），查询用户合同类型</li><li>true，查询绑定了模板的用户合同类型</li></ul>
+     * @param QueryBindTemplate 查询绑定了模板的用户合同类型<ul><li>false（默认值），查询用户合同类型</li><li>true，查询绑定了模板的用户合同类型</li></ul>
      */
     public void setQueryBindTemplate(Boolean QueryBindTemplate) {
         this.QueryBindTemplate = QueryBindTemplate;

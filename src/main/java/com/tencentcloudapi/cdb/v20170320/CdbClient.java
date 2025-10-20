@@ -1023,6 +1023,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *该接口（DescribeInstancePasswordComplexity）用于查询实例的密码复杂度参数列表。
+     * @param req DescribeInstancePasswordComplexityRequest
+     * @return DescribeInstancePasswordComplexityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancePasswordComplexityResponse DescribeInstancePasswordComplexity(DescribeInstancePasswordComplexityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstancePasswordComplexity", DescribeInstancePasswordComplexityResponse.class);
+    }
+
+    /**
      *该接口（DescribeInstanceUpgradeCheckJob）查询实例版本升级校验任务。
      * @param req DescribeInstanceUpgradeCheckJobRequest
      * @return DescribeInstanceUpgradeCheckJobResponse

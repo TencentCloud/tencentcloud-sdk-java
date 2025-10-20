@@ -45,6 +45,13 @@ public class BindNumberCallInInterfaceRequest extends AbstractModel {
     private Interface CallInInterface;
 
     /**
+    * 绑定号码类型: inner: 内线号码 | number: 正常线路号码
+    */
+    @SerializedName("NumberType")
+    @Expose
+    private String NumberType;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -92,6 +99,22 @@ public class BindNumberCallInInterfaceRequest extends AbstractModel {
         this.CallInInterface = CallInInterface;
     }
 
+    /**
+     * Get 绑定号码类型: inner: 内线号码 | number: 正常线路号码 
+     * @return NumberType 绑定号码类型: inner: 内线号码 | number: 正常线路号码
+     */
+    public String getNumberType() {
+        return this.NumberType;
+    }
+
+    /**
+     * Set 绑定号码类型: inner: 内线号码 | number: 正常线路号码
+     * @param NumberType 绑定号码类型: inner: 内线号码 | number: 正常线路号码
+     */
+    public void setNumberType(String NumberType) {
+        this.NumberType = NumberType;
+    }
+
     public BindNumberCallInInterfaceRequest() {
     }
 
@@ -109,6 +132,9 @@ public class BindNumberCallInInterfaceRequest extends AbstractModel {
         if (source.CallInInterface != null) {
             this.CallInInterface = new Interface(source.CallInInterface);
         }
+        if (source.NumberType != null) {
+            this.NumberType = new String(source.NumberType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class BindNumberCallInInterfaceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "Number", this.Number);
         this.setParamObj(map, prefix + "CallInInterface.", this.CallInInterface);
+        this.setParamSimple(map, prefix + "NumberType", this.NumberType);
 
     }
 }

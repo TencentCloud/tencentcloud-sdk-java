@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncBlueprintResponse extends AbstractModel {
+public class DescribeInstancePasswordComplexityResponse extends AbstractModel {
 
     /**
-    * 目标地域镜像信息。
+    * 实例的参数总数
     */
-    @SerializedName("DestinationRegionBlueprintSet")
+    @SerializedName("TotalCount")
     @Expose
-    private DestinationRegionBlueprint [] DestinationRegionBlueprintSet;
+    private Long TotalCount;
+
+    /**
+    * 参数详情
+    */
+    @SerializedName("Items")
+    @Expose
+    private ParameterDetail [] Items;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class SyncBlueprintResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 目标地域镜像信息。 
-     * @return DestinationRegionBlueprintSet 目标地域镜像信息。
+     * Get 实例的参数总数 
+     * @return TotalCount 实例的参数总数
      */
-    public DestinationRegionBlueprint [] getDestinationRegionBlueprintSet() {
-        return this.DestinationRegionBlueprintSet;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 目标地域镜像信息。
-     * @param DestinationRegionBlueprintSet 目标地域镜像信息。
+     * Set 实例的参数总数
+     * @param TotalCount 实例的参数总数
      */
-    public void setDestinationRegionBlueprintSet(DestinationRegionBlueprint [] DestinationRegionBlueprintSet) {
-        this.DestinationRegionBlueprintSet = DestinationRegionBlueprintSet;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 参数详情 
+     * @return Items 参数详情
+     */
+    public ParameterDetail [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set 参数详情
+     * @param Items 参数详情
+     */
+    public void setItems(ParameterDetail [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -69,18 +92,21 @@ public class SyncBlueprintResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public SyncBlueprintResponse() {
+    public DescribeInstancePasswordComplexityResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SyncBlueprintResponse(SyncBlueprintResponse source) {
-        if (source.DestinationRegionBlueprintSet != null) {
-            this.DestinationRegionBlueprintSet = new DestinationRegionBlueprint[source.DestinationRegionBlueprintSet.length];
-            for (int i = 0; i < source.DestinationRegionBlueprintSet.length; i++) {
-                this.DestinationRegionBlueprintSet[i] = new DestinationRegionBlueprint(source.DestinationRegionBlueprintSet[i]);
+    public DescribeInstancePasswordComplexityResponse(DescribeInstancePasswordComplexityResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Items != null) {
+            this.Items = new ParameterDetail[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new ParameterDetail(source.Items[i]);
             }
         }
         if (source.RequestId != null) {
@@ -93,7 +119,8 @@ public class SyncBlueprintResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DestinationRegionBlueprintSet.", this.DestinationRegionBlueprintSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

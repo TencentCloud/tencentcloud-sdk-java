@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.ioa.v20220601.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncBlueprintResponse extends AbstractModel {
+public class ExportDeviceDownloadTaskResponse extends AbstractModel {
 
     /**
-    * 目标地域镜像信息。
+    * 业务响应数据
     */
-    @SerializedName("DestinationRegionBlueprintSet")
+    @SerializedName("Data")
     @Expose
-    private DestinationRegionBlueprint [] DestinationRegionBlueprintSet;
+    private DeviceDownloadTask Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class SyncBlueprintResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 目标地域镜像信息。 
-     * @return DestinationRegionBlueprintSet 目标地域镜像信息。
+     * Get 业务响应数据 
+     * @return Data 业务响应数据
      */
-    public DestinationRegionBlueprint [] getDestinationRegionBlueprintSet() {
-        return this.DestinationRegionBlueprintSet;
+    public DeviceDownloadTask getData() {
+        return this.Data;
     }
 
     /**
-     * Set 目标地域镜像信息。
-     * @param DestinationRegionBlueprintSet 目标地域镜像信息。
+     * Set 业务响应数据
+     * @param Data 业务响应数据
      */
-    public void setDestinationRegionBlueprintSet(DestinationRegionBlueprint [] DestinationRegionBlueprintSet) {
-        this.DestinationRegionBlueprintSet = DestinationRegionBlueprintSet;
+    public void setData(DeviceDownloadTask Data) {
+        this.Data = Data;
     }
 
     /**
@@ -69,19 +69,16 @@ public class SyncBlueprintResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public SyncBlueprintResponse() {
+    public ExportDeviceDownloadTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SyncBlueprintResponse(SyncBlueprintResponse source) {
-        if (source.DestinationRegionBlueprintSet != null) {
-            this.DestinationRegionBlueprintSet = new DestinationRegionBlueprint[source.DestinationRegionBlueprintSet.length];
-            for (int i = 0; i < source.DestinationRegionBlueprintSet.length; i++) {
-                this.DestinationRegionBlueprintSet[i] = new DestinationRegionBlueprint(source.DestinationRegionBlueprintSet[i]);
-            }
+    public ExportDeviceDownloadTaskResponse(ExportDeviceDownloadTaskResponse source) {
+        if (source.Data != null) {
+            this.Data = new DeviceDownloadTask(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -93,7 +90,7 @@ public class SyncBlueprintResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DestinationRegionBlueprintSet.", this.DestinationRegionBlueprintSet);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

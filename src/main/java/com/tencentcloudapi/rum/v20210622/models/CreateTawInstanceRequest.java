@@ -108,6 +108,20 @@ public class CreateTawInstanceRequest extends AbstractModel {
     private Long InstanceType;
 
     /**
+    * 自动续费类型
+    */
+    @SerializedName("AutoRenewalType")
+    @Expose
+    private Long AutoRenewalType;
+
+    /**
+    * 自动续费阈值
+    */
+    @SerializedName("AutoRenewalThreshold")
+    @Expose
+    private Long AutoRenewalThreshold;
+
+    /**
      * Get 片区Id，(至少大于0) 
      * @return AreaId 片区Id，(至少大于0)
      */
@@ -299,6 +313,38 @@ public class CreateTawInstanceRequest extends AbstractModel {
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get 自动续费类型 
+     * @return AutoRenewalType 自动续费类型
+     */
+    public Long getAutoRenewalType() {
+        return this.AutoRenewalType;
+    }
+
+    /**
+     * Set 自动续费类型
+     * @param AutoRenewalType 自动续费类型
+     */
+    public void setAutoRenewalType(Long AutoRenewalType) {
+        this.AutoRenewalType = AutoRenewalType;
+    }
+
+    /**
+     * Get 自动续费阈值 
+     * @return AutoRenewalThreshold 自动续费阈值
+     */
+    public Long getAutoRenewalThreshold() {
+        return this.AutoRenewalThreshold;
+    }
+
+    /**
+     * Set 自动续费阈值
+     * @param AutoRenewalThreshold 自动续费阈值
+     */
+    public void setAutoRenewalThreshold(Long AutoRenewalThreshold) {
+        this.AutoRenewalThreshold = AutoRenewalThreshold;
+    }
+
     public CreateTawInstanceRequest() {
     }
 
@@ -346,6 +392,12 @@ public class CreateTawInstanceRequest extends AbstractModel {
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
         }
+        if (source.AutoRenewalType != null) {
+            this.AutoRenewalType = new Long(source.AutoRenewalType);
+        }
+        if (source.AutoRenewalThreshold != null) {
+            this.AutoRenewalThreshold = new Long(source.AutoRenewalThreshold);
+        }
     }
 
 
@@ -365,6 +417,8 @@ public class CreateTawInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourcePackageType", this.ResourcePackageType);
         this.setParamSimple(map, prefix + "ResourcePackageNum", this.ResourcePackageNum);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "AutoRenewalType", this.AutoRenewalType);
+        this.setParamSimple(map, prefix + "AutoRenewalThreshold", this.AutoRenewalThreshold);
 
     }
 }

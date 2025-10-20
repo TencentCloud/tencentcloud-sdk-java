@@ -78,6 +78,13 @@ public class AlarmRuleDetail extends AbstractModel {
     private ReconciliationStrategyInfo [] ReconciliationExtInfo;
 
     /**
+    * 监控对象的白名单配置
+    */
+    @SerializedName("MonitorWhiteTasks")
+    @Expose
+    private MonitorWhiteTask [] MonitorWhiteTasks;
+
+    /**
      * Get 失败触发时机 
 
 1 – 首次失败触发
@@ -221,6 +228,22 @@ public class AlarmRuleDetail extends AbstractModel {
         this.ReconciliationExtInfo = ReconciliationExtInfo;
     }
 
+    /**
+     * Get 监控对象的白名单配置 
+     * @return MonitorWhiteTasks 监控对象的白名单配置
+     */
+    public MonitorWhiteTask [] getMonitorWhiteTasks() {
+        return this.MonitorWhiteTasks;
+    }
+
+    /**
+     * Set 监控对象的白名单配置
+     * @param MonitorWhiteTasks 监控对象的白名单配置
+     */
+    public void setMonitorWhiteTasks(MonitorWhiteTask [] MonitorWhiteTasks) {
+        this.MonitorWhiteTasks = MonitorWhiteTasks;
+    }
+
     public AlarmRuleDetail() {
     }
 
@@ -259,6 +282,12 @@ public class AlarmRuleDetail extends AbstractModel {
                 this.ReconciliationExtInfo[i] = new ReconciliationStrategyInfo(source.ReconciliationExtInfo[i]);
             }
         }
+        if (source.MonitorWhiteTasks != null) {
+            this.MonitorWhiteTasks = new MonitorWhiteTask[source.MonitorWhiteTasks.length];
+            for (int i = 0; i < source.MonitorWhiteTasks.length; i++) {
+                this.MonitorWhiteTasks[i] = new MonitorWhiteTask(source.MonitorWhiteTasks[i]);
+            }
+        }
     }
 
 
@@ -272,6 +301,7 @@ public class AlarmRuleDetail extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DataBackfillOrRerunTimeOutExtInfo.", this.DataBackfillOrRerunTimeOutExtInfo);
         this.setParamArrayObj(map, prefix + "ProjectInstanceStatisticsAlarmInfoList.", this.ProjectInstanceStatisticsAlarmInfoList);
         this.setParamArrayObj(map, prefix + "ReconciliationExtInfo.", this.ReconciliationExtInfo);
+        this.setParamArrayObj(map, prefix + "MonitorWhiteTasks.", this.MonitorWhiteTasks);
 
     }
 }

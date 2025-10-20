@@ -95,7 +95,7 @@ public class RuleInfo extends AbstractModel {
 
     /**
     * 源站的服务状态，0表示异常，1表示正常。
-未开启健康检查时，该状态始终未正常。
+未开启健康检查时，该状态始终为正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
     */
     @SerializedName("BindStatus")
@@ -132,6 +132,13 @@ public class RuleInfo extends AbstractModel {
     @SerializedName("ForcedRedirect")
     @Expose
     private String ForcedRedirect;
+
+    /**
+    * 七层转发规则的回源协议类型
+    */
+    @SerializedName("ForwardProtocol")
+    @Expose
+    private String ForwardProtocol;
 
     /**
      * Get 规则信息 
@@ -295,10 +302,10 @@ public class RuleInfo extends AbstractModel {
 
     /**
      * Get 源站的服务状态，0表示异常，1表示正常。
-未开启健康检查时，该状态始终未正常。
+未开启健康检查时，该状态始终为正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。 
      * @return BindStatus 源站的服务状态，0表示异常，1表示正常。
-未开启健康检查时，该状态始终未正常。
+未开启健康检查时，该状态始终为正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
      */
     public Long getBindStatus() {
@@ -307,10 +314,10 @@ public class RuleInfo extends AbstractModel {
 
     /**
      * Set 源站的服务状态，0表示异常，1表示正常。
-未开启健康检查时，该状态始终未正常。
+未开启健康检查时，该状态始终为正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
      * @param BindStatus 源站的服务状态，0表示异常，1表示正常。
-未开启健康检查时，该状态始终未正常。
+未开启健康检查时，该状态始终为正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
      */
     public void setBindStatus(Long BindStatus) {
@@ -393,6 +400,22 @@ public class RuleInfo extends AbstractModel {
         this.ForcedRedirect = ForcedRedirect;
     }
 
+    /**
+     * Get 七层转发规则的回源协议类型 
+     * @return ForwardProtocol 七层转发规则的回源协议类型
+     */
+    public String getForwardProtocol() {
+        return this.ForwardProtocol;
+    }
+
+    /**
+     * Set 七层转发规则的回源协议类型
+     * @param ForwardProtocol 七层转发规则的回源协议类型
+     */
+    public void setForwardProtocol(String ForwardProtocol) {
+        this.ForwardProtocol = ForwardProtocol;
+    }
+
     public RuleInfo() {
     }
 
@@ -449,6 +472,9 @@ public class RuleInfo extends AbstractModel {
         if (source.ForcedRedirect != null) {
             this.ForcedRedirect = new String(source.ForcedRedirect);
         }
+        if (source.ForwardProtocol != null) {
+            this.ForwardProtocol = new String(source.ForwardProtocol);
+        }
     }
 
 
@@ -471,6 +497,7 @@ public class RuleInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
         this.setParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
         this.setParamSimple(map, prefix + "ForcedRedirect", this.ForcedRedirect);
+        this.setParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
 
     }
 }

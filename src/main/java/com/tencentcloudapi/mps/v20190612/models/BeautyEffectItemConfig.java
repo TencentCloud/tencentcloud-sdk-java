@@ -25,8 +25,12 @@ public class BeautyEffectItemConfig extends AbstractModel {
 
     /**
     * 类型名称。取值如下：
-
 <li>Whiten：美白</li>
+<li>BlackAlpha1：美黑</li>
+<li>BlackAlpha2：较强美黑</li>
+<li>FoundationAlpha2：美白-粉白</li>
+<li>Clear：清晰度</li>
+<li>Sharpen：锐化</li>
 <li>Smooth：磨皮</li>
 <li>BeautyThinFace：瘦脸</li>
 <li>NatureFace：自然脸型</li>
@@ -36,9 +40,11 @@ public class BeautyEffectItemConfig extends AbstractModel {
 <li>RemoveEyeBags：祛眼袋</li>
 <li>ThinNose：瘦鼻</li>
 <li>RemoveLawLine：祛法令纹</li>
+<li>CheekboneThin：瘦颧骨</li>
+<li>FaceFeatureLipsLut：口红</li>
 <li>ToothWhiten：牙齿美白</li>
-
-
+<li>FaceFeatureSoftlight：柔光</li>
+<li>Makeup：美妆</li>
     */
     @SerializedName("Type")
     @Expose
@@ -62,9 +68,27 @@ public class BeautyEffectItemConfig extends AbstractModel {
     private Long Value;
 
     /**
+    * 附加资源路径。
+    */
+    @SerializedName("ResourcePath")
+    @Expose
+    private String ResourcePath;
+
+    /**
+    * 自定义参数。
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
      * Get 类型名称。取值如下：
-
 <li>Whiten：美白</li>
+<li>BlackAlpha1：美黑</li>
+<li>BlackAlpha2：较强美黑</li>
+<li>FoundationAlpha2：美白-粉白</li>
+<li>Clear：清晰度</li>
+<li>Sharpen：锐化</li>
 <li>Smooth：磨皮</li>
 <li>BeautyThinFace：瘦脸</li>
 <li>NatureFace：自然脸型</li>
@@ -74,12 +98,18 @@ public class BeautyEffectItemConfig extends AbstractModel {
 <li>RemoveEyeBags：祛眼袋</li>
 <li>ThinNose：瘦鼻</li>
 <li>RemoveLawLine：祛法令纹</li>
+<li>CheekboneThin：瘦颧骨</li>
+<li>FaceFeatureLipsLut：口红</li>
 <li>ToothWhiten：牙齿美白</li>
-
- 
+<li>FaceFeatureSoftlight：柔光</li>
+<li>Makeup：美妆</li> 
      * @return Type 类型名称。取值如下：
-
 <li>Whiten：美白</li>
+<li>BlackAlpha1：美黑</li>
+<li>BlackAlpha2：较强美黑</li>
+<li>FoundationAlpha2：美白-粉白</li>
+<li>Clear：清晰度</li>
+<li>Sharpen：锐化</li>
 <li>Smooth：磨皮</li>
 <li>BeautyThinFace：瘦脸</li>
 <li>NatureFace：自然脸型</li>
@@ -89,9 +119,11 @@ public class BeautyEffectItemConfig extends AbstractModel {
 <li>RemoveEyeBags：祛眼袋</li>
 <li>ThinNose：瘦鼻</li>
 <li>RemoveLawLine：祛法令纹</li>
+<li>CheekboneThin：瘦颧骨</li>
+<li>FaceFeatureLipsLut：口红</li>
 <li>ToothWhiten：牙齿美白</li>
-
-
+<li>FaceFeatureSoftlight：柔光</li>
+<li>Makeup：美妆</li>
      */
     public String getType() {
         return this.Type;
@@ -99,8 +131,12 @@ public class BeautyEffectItemConfig extends AbstractModel {
 
     /**
      * Set 类型名称。取值如下：
-
 <li>Whiten：美白</li>
+<li>BlackAlpha1：美黑</li>
+<li>BlackAlpha2：较强美黑</li>
+<li>FoundationAlpha2：美白-粉白</li>
+<li>Clear：清晰度</li>
+<li>Sharpen：锐化</li>
 <li>Smooth：磨皮</li>
 <li>BeautyThinFace：瘦脸</li>
 <li>NatureFace：自然脸型</li>
@@ -110,12 +146,18 @@ public class BeautyEffectItemConfig extends AbstractModel {
 <li>RemoveEyeBags：祛眼袋</li>
 <li>ThinNose：瘦鼻</li>
 <li>RemoveLawLine：祛法令纹</li>
+<li>CheekboneThin：瘦颧骨</li>
+<li>FaceFeatureLipsLut：口红</li>
 <li>ToothWhiten：牙齿美白</li>
-
-
+<li>FaceFeatureSoftlight：柔光</li>
+<li>Makeup：美妆</li>
      * @param Type 类型名称。取值如下：
-
 <li>Whiten：美白</li>
+<li>BlackAlpha1：美黑</li>
+<li>BlackAlpha2：较强美黑</li>
+<li>FoundationAlpha2：美白-粉白</li>
+<li>Clear：清晰度</li>
+<li>Sharpen：锐化</li>
 <li>Smooth：磨皮</li>
 <li>BeautyThinFace：瘦脸</li>
 <li>NatureFace：自然脸型</li>
@@ -125,9 +167,11 @@ public class BeautyEffectItemConfig extends AbstractModel {
 <li>RemoveEyeBags：祛眼袋</li>
 <li>ThinNose：瘦鼻</li>
 <li>RemoveLawLine：祛法令纹</li>
+<li>CheekboneThin：瘦颧骨</li>
+<li>FaceFeatureLipsLut：口红</li>
 <li>ToothWhiten：牙齿美白</li>
-
-
+<li>FaceFeatureSoftlight：柔光</li>
+<li>Makeup：美妆</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -177,6 +221,38 @@ public class BeautyEffectItemConfig extends AbstractModel {
         this.Value = Value;
     }
 
+    /**
+     * Get 附加资源路径。 
+     * @return ResourcePath 附加资源路径。
+     */
+    public String getResourcePath() {
+        return this.ResourcePath;
+    }
+
+    /**
+     * Set 附加资源路径。
+     * @param ResourcePath 附加资源路径。
+     */
+    public void setResourcePath(String ResourcePath) {
+        this.ResourcePath = ResourcePath;
+    }
+
+    /**
+     * Get 自定义参数。 
+     * @return ExtInfo 自定义参数。
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set 自定义参数。
+     * @param ExtInfo 自定义参数。
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
     public BeautyEffectItemConfig() {
     }
 
@@ -194,6 +270,12 @@ public class BeautyEffectItemConfig extends AbstractModel {
         if (source.Value != null) {
             this.Value = new Long(source.Value);
         }
+        if (source.ResourcePath != null) {
+            this.ResourcePath = new String(source.ResourcePath);
+        }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
     }
 
 
@@ -204,6 +286,8 @@ public class BeautyEffectItemConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "ResourcePath", this.ResourcePath);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }
 }

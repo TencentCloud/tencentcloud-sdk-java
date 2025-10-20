@@ -883,6 +883,39 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *创建VPC路由接收策略，包括名字，描述和策略条目。
+     * @param req CreateRoutePolicyRequest
+     * @return CreateRoutePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoutePolicyResponse CreateRoutePolicy(CreateRoutePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRoutePolicy", CreateRoutePolicyResponse.class);
+    }
+
+    /**
+     *本接口（CreateRoutePolicyAssociations）用于创建路由接收策略绑定(路由策略实例和路由表实例的绑定关系以及绑定优先级)。
+     * @param req CreateRoutePolicyAssociationsRequest
+     * @return CreateRoutePolicyAssociationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoutePolicyAssociationsResponse CreateRoutePolicyAssociations(CreateRoutePolicyAssociationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRoutePolicyAssociations", CreateRoutePolicyAssociationsResponse.class);
+    }
+
+    /**
+     *本接口（CreateRoutePolicyEntries）用于创建路由接收策略条目。
+     * @param req CreateRoutePolicyEntriesRequest
+     * @return CreateRoutePolicyEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoutePolicyEntriesResponse CreateRoutePolicyEntries(CreateRoutePolicyEntriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRoutePolicyEntries", CreateRoutePolicyEntriesResponse.class);
+    }
+
+    /**
      *本接口(CreateRouteTable)用于创建路由表。
 * 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
 * 创建路由表同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
@@ -1546,6 +1579,39 @@ public class VpcClient extends AbstractClient{
     public DeleteReserveIpAddressesResponse DeleteReserveIpAddresses(DeleteReserveIpAddressesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteReserveIpAddresses", DeleteReserveIpAddressesResponse.class);
+    }
+
+    /**
+     *本接口（DeleteRoutePolicy）用于删除路由接收策略和条目。
+     * @param req DeleteRoutePolicyRequest
+     * @return DeleteRoutePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoutePolicyResponse DeleteRoutePolicy(DeleteRoutePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRoutePolicy", DeleteRoutePolicyResponse.class);
+    }
+
+    /**
+     *本接口(DeleteRoutePolicyAssociations)用于删除路由接收策略绑定（路由接收策略对象和路由表的绑定关系）。
+     * @param req DeleteRoutePolicyAssociationsRequest
+     * @return DeleteRoutePolicyAssociationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoutePolicyAssociationsResponse DeleteRoutePolicyAssociations(DeleteRoutePolicyAssociationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRoutePolicyAssociations", DeleteRoutePolicyAssociationsResponse.class);
+    }
+
+    /**
+     *本接口(DeleteRoutePolicyEntries)用于删除路由接收策略条目。
+     * @param req DeleteRoutePolicyEntriesRequest
+     * @return DeleteRoutePolicyEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoutePolicyEntriesResponse DeleteRoutePolicyEntries(DeleteRoutePolicyEntriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRoutePolicyEntries", DeleteRoutePolicyEntriesResponse.class);
     }
 
     /**
@@ -2590,6 +2656,17 @@ public class VpcClient extends AbstractClient{
     public DescribeRouteListResponse DescribeRouteList(DescribeRouteListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRouteList", DescribeRouteListResponse.class);
+    }
+
+    /**
+     *本接口（DescribeRoutePolicyEntries）用于查询路由接收策略条目列表。
+     * @param req DescribeRoutePolicyEntriesRequest
+     * @return DescribeRoutePolicyEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoutePolicyEntriesResponse DescribeRoutePolicyEntries(DescribeRoutePolicyEntriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRoutePolicyEntries", DescribeRoutePolicyEntriesResponse.class);
     }
 
     /**
@@ -4172,6 +4249,17 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（ModifyRoutePolicyAttribute）用于修改路由接收策略属性属性。
+     * @param req ModifyRoutePolicyAttributeRequest
+     * @return ModifyRoutePolicyAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoutePolicyAttributeResponse ModifyRoutePolicyAttribute(ModifyRoutePolicyAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRoutePolicyAttribute", ModifyRoutePolicyAttributeResponse.class);
+    }
+
+    /**
      *本接口（ModifyRouteTableAttribute）用于修改路由表（RouteTable）属性。
      * @param req ModifyRouteTableAttributeRequest
      * @return ModifyRouteTableAttributeResponse
@@ -4644,6 +4732,28 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（ReplaceRoutePolicyAssociations）根据路由接收策略实例ID（RoutePolicyId）和路由表实例ID（RouteTableId）修改绑定优先级（Priority），支持批量修改。
+     * @param req ReplaceRoutePolicyAssociationsRequest
+     * @return ReplaceRoutePolicyAssociationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceRoutePolicyAssociationsResponse ReplaceRoutePolicyAssociations(ReplaceRoutePolicyAssociationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplaceRoutePolicyAssociations", ReplaceRoutePolicyAssociationsResponse.class);
+    }
+
+    /**
+     *本接口（ReplaceRoutePolicyEntries）根据路由接收策略规则ID（RoutePolicyEntryId）修改指定的路由策略条目（RoutePolicyEntry），支持批量修改。
+     * @param req ReplaceRoutePolicyEntriesRequest
+     * @return ReplaceRoutePolicyEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceRoutePolicyEntriesResponse ReplaceRoutePolicyEntries(ReplaceRoutePolicyEntriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplaceRoutePolicyEntries", ReplaceRoutePolicyEntriesResponse.class);
+    }
+
+    /**
      *本接口（ReplaceRouteTableAssociation）用于修改子网（Subnet）关联的路由表（RouteTable）。
 * 一个子网只能关联一个路由表。
      * @param req ReplaceRouteTableAssociationRequest
@@ -4721,6 +4831,28 @@ LimitTypes取值范围：
     public ResetNatGatewayConnectionResponse ResetNatGatewayConnection(ResetNatGatewayConnectionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetNatGatewayConnection", ResetNatGatewayConnectionResponse.class);
+    }
+
+    /**
+     *本接口（ResetRoutePolicyAssociations）用于对某个路由表实例已经绑定的路由策略实例解除绑定关系，并重新设置新的绑定路由策略及优先级。<br />
+     * @param req ResetRoutePolicyAssociationsRequest
+     * @return ResetRoutePolicyAssociationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetRoutePolicyAssociationsResponse ResetRoutePolicyAssociations(ResetRoutePolicyAssociationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetRoutePolicyAssociations", ResetRoutePolicyAssociationsResponse.class);
+    }
+
+    /**
+     *本接口（ResetRoutePolicyEntries）根据路由接收策略规则ID（RoutePolicyId）重置指定的路由接收策略条目（RoutePolicyEntry），支持批量修改。
+     * @param req ResetRoutePolicyEntriesRequest
+     * @return ResetRoutePolicyEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetRoutePolicyEntriesResponse ResetRoutePolicyEntries(ResetRoutePolicyEntriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetRoutePolicyEntries", ResetRoutePolicyEntriesResponse.class);
     }
 
     /**

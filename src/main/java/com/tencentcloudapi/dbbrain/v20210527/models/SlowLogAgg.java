@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SlowLogAgg extends AbstractModel {
 
     /**
-    * 命令模版。
+    * 命令模板。
     */
     @SerializedName("Cmd")
     @Expose
@@ -45,51 +45,51 @@ public class SlowLogAgg extends AbstractModel {
     private Long ExecTimes;
 
     /**
-    * 总耗时。
+    * 总耗时。单位：s
     */
     @SerializedName("QueryTime")
     @Expose
     private Float QueryTime;
 
     /**
-    * 平均执行时间。
+    * 平均执行时间。单位：s
     */
     @SerializedName("QueryTimeAvg")
     @Expose
     private Float QueryTimeAvg;
 
     /**
-    * 最大执行时间。
+    * 最大执行时间。单位：s
     */
     @SerializedName("QueryTimeMax")
     @Expose
     private Float QueryTimeMax;
 
     /**
-    * 最小执行时间。
+    * 最小执行时间。单位：s
     */
     @SerializedName("QueryTimeMin")
     @Expose
     private Float QueryTimeMin;
 
     /**
-    * 总耗时占比
+    * 总耗时占比。单位：%
     */
     @SerializedName("QueryTimeRatio")
     @Expose
     private Float QueryTimeRatio;
 
     /**
-     * Get 命令模版。 
-     * @return Cmd 命令模版。
+     * Get 命令模板。 
+     * @return Cmd 命令模板。
      */
     public String getCmd() {
         return this.Cmd;
     }
 
     /**
-     * Set 命令模版。
-     * @param Cmd 命令模版。
+     * Set 命令模板。
+     * @param Cmd 命令模板。
      */
     public void setCmd(String Cmd) {
         this.Cmd = Cmd;
@@ -128,80 +128,80 @@ public class SlowLogAgg extends AbstractModel {
     }
 
     /**
-     * Get 总耗时。 
-     * @return QueryTime 总耗时。
+     * Get 总耗时。单位：s 
+     * @return QueryTime 总耗时。单位：s
      */
     public Float getQueryTime() {
         return this.QueryTime;
     }
 
     /**
-     * Set 总耗时。
-     * @param QueryTime 总耗时。
+     * Set 总耗时。单位：s
+     * @param QueryTime 总耗时。单位：s
      */
     public void setQueryTime(Float QueryTime) {
         this.QueryTime = QueryTime;
     }
 
     /**
-     * Get 平均执行时间。 
-     * @return QueryTimeAvg 平均执行时间。
+     * Get 平均执行时间。单位：s 
+     * @return QueryTimeAvg 平均执行时间。单位：s
      */
     public Float getQueryTimeAvg() {
         return this.QueryTimeAvg;
     }
 
     /**
-     * Set 平均执行时间。
-     * @param QueryTimeAvg 平均执行时间。
+     * Set 平均执行时间。单位：s
+     * @param QueryTimeAvg 平均执行时间。单位：s
      */
     public void setQueryTimeAvg(Float QueryTimeAvg) {
         this.QueryTimeAvg = QueryTimeAvg;
     }
 
     /**
-     * Get 最大执行时间。 
-     * @return QueryTimeMax 最大执行时间。
+     * Get 最大执行时间。单位：s 
+     * @return QueryTimeMax 最大执行时间。单位：s
      */
     public Float getQueryTimeMax() {
         return this.QueryTimeMax;
     }
 
     /**
-     * Set 最大执行时间。
-     * @param QueryTimeMax 最大执行时间。
+     * Set 最大执行时间。单位：s
+     * @param QueryTimeMax 最大执行时间。单位：s
      */
     public void setQueryTimeMax(Float QueryTimeMax) {
         this.QueryTimeMax = QueryTimeMax;
     }
 
     /**
-     * Get 最小执行时间。 
-     * @return QueryTimeMin 最小执行时间。
+     * Get 最小执行时间。单位：s 
+     * @return QueryTimeMin 最小执行时间。单位：s
      */
     public Float getQueryTimeMin() {
         return this.QueryTimeMin;
     }
 
     /**
-     * Set 最小执行时间。
-     * @param QueryTimeMin 最小执行时间。
+     * Set 最小执行时间。单位：s
+     * @param QueryTimeMin 最小执行时间。单位：s
      */
     public void setQueryTimeMin(Float QueryTimeMin) {
         this.QueryTimeMin = QueryTimeMin;
     }
 
     /**
-     * Get 总耗时占比 
-     * @return QueryTimeRatio 总耗时占比
+     * Get 总耗时占比。单位：% 
+     * @return QueryTimeRatio 总耗时占比。单位：%
      */
     public Float getQueryTimeRatio() {
         return this.QueryTimeRatio;
     }
 
     /**
-     * Set 总耗时占比
-     * @param QueryTimeRatio 总耗时占比
+     * Set 总耗时占比。单位：%
+     * @param QueryTimeRatio 总耗时占比。单位：%
      */
     public void setQueryTimeRatio(Float QueryTimeRatio) {
         this.QueryTimeRatio = QueryTimeRatio;

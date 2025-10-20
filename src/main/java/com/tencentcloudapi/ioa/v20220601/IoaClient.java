@@ -303,6 +303,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *创建终端导出任务，私有化调用path为：capi/Assets/Device/ExportDeviceDownloadTask
+     * @param req ExportDeviceDownloadTaskRequest
+     * @return ExportDeviceDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportDeviceDownloadTaskResponse ExportDeviceDownloadTask(ExportDeviceDownloadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportDeviceDownloadTask", ExportDeviceDownloadTaskResponse.class);
+    }
+
+    /**
      *导出基于指定终端查看软件信息详情列表查询,私有化调用path为：capi/Software/ExportSoftwareInformationList
      * @param req ExportSoftwareInformationListRequest
      * @return ExportSoftwareInformationListResponse

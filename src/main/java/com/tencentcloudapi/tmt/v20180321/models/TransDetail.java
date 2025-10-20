@@ -66,6 +66,13 @@ public class TransDetail extends AbstractModel {
     private Long SpamCode;
 
     /**
+    * 段落文本旋转信息，只在valid为true时表示坐标有效
+    */
+    @SerializedName("RotateParagraphRect")
+    @Expose
+    private RotateParagraphRect RotateParagraphRect;
+
+    /**
      * Get 当前行的原文本 
      * @return SourceLineText 当前行的原文本
      */
@@ -161,6 +168,22 @@ public class TransDetail extends AbstractModel {
         this.SpamCode = SpamCode;
     }
 
+    /**
+     * Get 段落文本旋转信息，只在valid为true时表示坐标有效 
+     * @return RotateParagraphRect 段落文本旋转信息，只在valid为true时表示坐标有效
+     */
+    public RotateParagraphRect getRotateParagraphRect() {
+        return this.RotateParagraphRect;
+    }
+
+    /**
+     * Set 段落文本旋转信息，只在valid为true时表示坐标有效
+     * @param RotateParagraphRect 段落文本旋转信息，只在valid为true时表示坐标有效
+     */
+    public void setRotateParagraphRect(RotateParagraphRect RotateParagraphRect) {
+        this.RotateParagraphRect = RotateParagraphRect;
+    }
+
     public TransDetail() {
     }
 
@@ -187,6 +210,9 @@ public class TransDetail extends AbstractModel {
         if (source.SpamCode != null) {
             this.SpamCode = new Long(source.SpamCode);
         }
+        if (source.RotateParagraphRect != null) {
+            this.RotateParagraphRect = new RotateParagraphRect(source.RotateParagraphRect);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class TransDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "LinesCount", this.LinesCount);
         this.setParamSimple(map, prefix + "LineHeight", this.LineHeight);
         this.setParamSimple(map, prefix + "SpamCode", this.SpamCode);
+        this.setParamObj(map, prefix + "RotateParagraphRect.", this.RotateParagraphRect);
 
     }
 }

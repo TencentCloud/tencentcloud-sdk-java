@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncBlueprintResponse extends AbstractModel {
+public class DescribeRoutePolicyEntriesResponse extends AbstractModel {
 
     /**
-    * 目标地域镜像信息。
+    * 路由接收策略条目列表。
     */
-    @SerializedName("DestinationRegionBlueprintSet")
+    @SerializedName("RoutePolicyEntrySet")
     @Expose
-    private DestinationRegionBlueprint [] DestinationRegionBlueprintSet;
+    private RoutePolicyEntry [] RoutePolicyEntrySet;
+
+    /**
+    * 符合条件的实例数量。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class SyncBlueprintResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 目标地域镜像信息。 
-     * @return DestinationRegionBlueprintSet 目标地域镜像信息。
+     * Get 路由接收策略条目列表。 
+     * @return RoutePolicyEntrySet 路由接收策略条目列表。
      */
-    public DestinationRegionBlueprint [] getDestinationRegionBlueprintSet() {
-        return this.DestinationRegionBlueprintSet;
+    public RoutePolicyEntry [] getRoutePolicyEntrySet() {
+        return this.RoutePolicyEntrySet;
     }
 
     /**
-     * Set 目标地域镜像信息。
-     * @param DestinationRegionBlueprintSet 目标地域镜像信息。
+     * Set 路由接收策略条目列表。
+     * @param RoutePolicyEntrySet 路由接收策略条目列表。
      */
-    public void setDestinationRegionBlueprintSet(DestinationRegionBlueprint [] DestinationRegionBlueprintSet) {
-        this.DestinationRegionBlueprintSet = DestinationRegionBlueprintSet;
+    public void setRoutePolicyEntrySet(RoutePolicyEntry [] RoutePolicyEntrySet) {
+        this.RoutePolicyEntrySet = RoutePolicyEntrySet;
+    }
+
+    /**
+     * Get 符合条件的实例数量。 
+     * @return TotalCount 符合条件的实例数量。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 符合条件的实例数量。
+     * @param TotalCount 符合条件的实例数量。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -69,19 +92,22 @@ public class SyncBlueprintResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public SyncBlueprintResponse() {
+    public DescribeRoutePolicyEntriesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SyncBlueprintResponse(SyncBlueprintResponse source) {
-        if (source.DestinationRegionBlueprintSet != null) {
-            this.DestinationRegionBlueprintSet = new DestinationRegionBlueprint[source.DestinationRegionBlueprintSet.length];
-            for (int i = 0; i < source.DestinationRegionBlueprintSet.length; i++) {
-                this.DestinationRegionBlueprintSet[i] = new DestinationRegionBlueprint(source.DestinationRegionBlueprintSet[i]);
+    public DescribeRoutePolicyEntriesResponse(DescribeRoutePolicyEntriesResponse source) {
+        if (source.RoutePolicyEntrySet != null) {
+            this.RoutePolicyEntrySet = new RoutePolicyEntry[source.RoutePolicyEntrySet.length];
+            for (int i = 0; i < source.RoutePolicyEntrySet.length; i++) {
+                this.RoutePolicyEntrySet[i] = new RoutePolicyEntry(source.RoutePolicyEntrySet[i]);
             }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -93,7 +119,8 @@ public class SyncBlueprintResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DestinationRegionBlueprintSet.", this.DestinationRegionBlueprintSet);
+        this.setParamArrayObj(map, prefix + "RoutePolicyEntrySet.", this.RoutePolicyEntrySet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
