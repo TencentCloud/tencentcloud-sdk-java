@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribePrometheusScrapeStatisticsRequest extends AbstractModel {
 
     /**
+    * 实例ID列表
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
     * job 类型
     */
     @SerializedName("JobType")
     @Expose
     private String JobType;
+
+    /**
+     * Get 实例ID列表 
+     * @return InstanceIds 实例ID列表
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set 实例ID列表
+     * @param InstanceIds 实例ID列表
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
 
     /**
      * Get job 类型 
@@ -54,6 +77,12 @@ public class DescribePrometheusScrapeStatisticsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePrometheusScrapeStatisticsRequest(DescribePrometheusScrapeStatisticsRequest source) {
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
         if (source.JobType != null) {
             this.JobType = new String(source.JobType);
         }
@@ -64,6 +93,7 @@ public class DescribePrometheusScrapeStatisticsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "JobType", this.JobType);
 
     }

@@ -31,14 +31,14 @@ public class ConflictHandleOption extends AbstractModel {
     private String ConditionColumn;
 
     /**
-    * 条件覆盖操作
+    * 条件覆盖操作，目前仅支持>
     */
     @SerializedName("ConditionOperator")
     @Expose
     private String ConditionOperator;
 
     /**
-    * 条件覆盖优先级处理
+    * 条件覆盖优先级处理，支持类型有>,<,=
     */
     @SerializedName("ConditionOrderInSrcAndDst")
     @Expose
@@ -61,32 +61,32 @@ public class ConflictHandleOption extends AbstractModel {
     }
 
     /**
-     * Get 条件覆盖操作 
-     * @return ConditionOperator 条件覆盖操作
+     * Get 条件覆盖操作，目前仅支持> 
+     * @return ConditionOperator 条件覆盖操作，目前仅支持>
      */
     public String getConditionOperator() {
         return this.ConditionOperator;
     }
 
     /**
-     * Set 条件覆盖操作
-     * @param ConditionOperator 条件覆盖操作
+     * Set 条件覆盖操作，目前仅支持>
+     * @param ConditionOperator 条件覆盖操作，目前仅支持>
      */
     public void setConditionOperator(String ConditionOperator) {
         this.ConditionOperator = ConditionOperator;
     }
 
     /**
-     * Get 条件覆盖优先级处理 
-     * @return ConditionOrderInSrcAndDst 条件覆盖优先级处理
+     * Get 条件覆盖优先级处理，支持类型有>,<,= 
+     * @return ConditionOrderInSrcAndDst 条件覆盖优先级处理，支持类型有>,<,=
      */
     public String getConditionOrderInSrcAndDst() {
         return this.ConditionOrderInSrcAndDst;
     }
 
     /**
-     * Set 条件覆盖优先级处理
-     * @param ConditionOrderInSrcAndDst 条件覆盖优先级处理
+     * Set 条件覆盖优先级处理，支持类型有>,<,=
+     * @param ConditionOrderInSrcAndDst 条件覆盖优先级处理，支持类型有>,<,=
      */
     public void setConditionOrderInSrcAndDst(String ConditionOrderInSrcAndDst) {
         this.ConditionOrderInSrcAndDst = ConditionOrderInSrcAndDst;

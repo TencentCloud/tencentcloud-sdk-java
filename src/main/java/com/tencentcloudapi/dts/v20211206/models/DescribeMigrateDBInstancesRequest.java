@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMigrateDBInstancesRequest extends AbstractModel {
 
     /**
-    * 数据库类型，如mysql,redis等
+    * 数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
     */
     @SerializedName("DatabaseType")
     @Expose
@@ -38,14 +38,14 @@ public class DescribeMigrateDBInstancesRequest extends AbstractModel {
     private String MigrateRole;
 
     /**
-    * 云数据库实例ID
+    * 云数据库实例ID，可通过对应业务实例列表获取实例信息。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 云数据库名称
+    * 云数据库名称，可通过对应业务实例列表获取实例信息。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -94,16 +94,16 @@ public class DescribeMigrateDBInstancesRequest extends AbstractModel {
     private String TmpToken;
 
     /**
-     * Get 数据库类型，如mysql,redis等 
-     * @return DatabaseType 数据库类型，如mysql,redis等
+     * Get 数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。 
+     * @return DatabaseType 数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
      */
     public String getDatabaseType() {
         return this.DatabaseType;
     }
 
     /**
-     * Set 数据库类型，如mysql,redis等
-     * @param DatabaseType 数据库类型，如mysql,redis等
+     * Set 数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
+     * @param DatabaseType 数据库类型，如mysql,percona,mariadb,tdsqlmysql,mariadb,postgresql,cynosdbmysql,redis,tendis,keewidb,tdstore,mongodb,clickhouse,sqlserver等。
      */
     public void setDatabaseType(String DatabaseType) {
         this.DatabaseType = DatabaseType;
@@ -126,32 +126,32 @@ public class DescribeMigrateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 云数据库实例ID 
-     * @return InstanceId 云数据库实例ID
+     * Get 云数据库实例ID，可通过对应业务实例列表获取实例信息。 
+     * @return InstanceId 云数据库实例ID，可通过对应业务实例列表获取实例信息。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 云数据库实例ID
-     * @param InstanceId 云数据库实例ID
+     * Set 云数据库实例ID，可通过对应业务实例列表获取实例信息。
+     * @param InstanceId 云数据库实例ID，可通过对应业务实例列表获取实例信息。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 云数据库名称 
-     * @return InstanceName 云数据库名称
+     * Get 云数据库名称，可通过对应业务实例列表获取实例信息。 
+     * @return InstanceName 云数据库名称，可通过对应业务实例列表获取实例信息。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 云数据库名称
-     * @param InstanceName 云数据库名称
+     * Set 云数据库名称，可通过对应业务实例列表获取实例信息。
+     * @param InstanceName 云数据库名称，可通过对应业务实例列表获取实例信息。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

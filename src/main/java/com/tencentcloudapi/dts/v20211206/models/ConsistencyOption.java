@@ -31,6 +31,28 @@ public class ConsistencyOption extends AbstractModel {
     private String Mode;
 
     /**
+    * 校验对象选择。枚举值：sameAsMigrate-与迁移同步任务相同、custom-用户自定义，搭配Objects操作
+    */
+    @SerializedName("ObjectMode")
+    @Expose
+    private String ObjectMode;
+
+    /**
+    * 校验对象
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Objects")
+    @Expose
+    private DatabaseTableObject Objects;
+
+    /**
+    * 校验配置
+    */
+    @SerializedName("Options")
+    @Expose
+    private CompareOptions Options;
+
+    /**
      * Get 一致性检测类型: full(全量检测迁移对象)、noCheck(不检测)、notConfigured(未配置) 
      * @return Mode 一致性检测类型: full(全量检测迁移对象)、noCheck(不检测)、notConfigured(未配置)
      */
@@ -46,6 +68,58 @@ public class ConsistencyOption extends AbstractModel {
         this.Mode = Mode;
     }
 
+    /**
+     * Get 校验对象选择。枚举值：sameAsMigrate-与迁移同步任务相同、custom-用户自定义，搭配Objects操作 
+     * @return ObjectMode 校验对象选择。枚举值：sameAsMigrate-与迁移同步任务相同、custom-用户自定义，搭配Objects操作
+     */
+    public String getObjectMode() {
+        return this.ObjectMode;
+    }
+
+    /**
+     * Set 校验对象选择。枚举值：sameAsMigrate-与迁移同步任务相同、custom-用户自定义，搭配Objects操作
+     * @param ObjectMode 校验对象选择。枚举值：sameAsMigrate-与迁移同步任务相同、custom-用户自定义，搭配Objects操作
+     */
+    public void setObjectMode(String ObjectMode) {
+        this.ObjectMode = ObjectMode;
+    }
+
+    /**
+     * Get 校验对象
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Objects 校验对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DatabaseTableObject getObjects() {
+        return this.Objects;
+    }
+
+    /**
+     * Set 校验对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Objects 校验对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setObjects(DatabaseTableObject Objects) {
+        this.Objects = Objects;
+    }
+
+    /**
+     * Get 校验配置 
+     * @return Options 校验配置
+     */
+    public CompareOptions getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set 校验配置
+     * @param Options 校验配置
+     */
+    public void setOptions(CompareOptions Options) {
+        this.Options = Options;
+    }
+
     public ConsistencyOption() {
     }
 
@@ -57,6 +131,15 @@ public class ConsistencyOption extends AbstractModel {
         if (source.Mode != null) {
             this.Mode = new String(source.Mode);
         }
+        if (source.ObjectMode != null) {
+            this.ObjectMode = new String(source.ObjectMode);
+        }
+        if (source.Objects != null) {
+            this.Objects = new DatabaseTableObject(source.Objects);
+        }
+        if (source.Options != null) {
+            this.Options = new CompareOptions(source.Options);
+        }
     }
 
 
@@ -65,6 +148,9 @@ public class ConsistencyOption extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "ObjectMode", this.ObjectMode);
+        this.setParamObj(map, prefix + "Objects.", this.Objects);
+        this.setParamObj(map, prefix + "Options.", this.Options);
 
     }
 }

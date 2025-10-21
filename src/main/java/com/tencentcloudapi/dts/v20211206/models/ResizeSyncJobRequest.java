@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class ResizeSyncJobRequest extends AbstractModel {
 
     /**
-    * 同步任务id
+    * 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 任务规格
+    * 任务规格，可选值包括micro,small,medium,large
     */
     @SerializedName("NewInstanceClass")
     @Expose
     private String NewInstanceClass;
 
     /**
-     * Get 同步任务id 
-     * @return JobId 同步任务id
+     * Get 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ 
+     * @return JobId 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 同步任务id
-     * @param JobId 同步任务id
+     * Set 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+     * @param JobId 同步任务id，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 任务规格 
-     * @return NewInstanceClass 任务规格
+     * Get 任务规格，可选值包括micro,small,medium,large 
+     * @return NewInstanceClass 任务规格，可选值包括micro,small,medium,large
      */
     public String getNewInstanceClass() {
         return this.NewInstanceClass;
     }
 
     /**
-     * Set 任务规格
-     * @param NewInstanceClass 任务规格
+     * Set 任务规格，可选值包括micro,small,medium,large
+     * @param NewInstanceClass 任务规格，可选值包括micro,small,medium,large
      */
     public void setNewInstanceClass(String NewInstanceClass) {
         this.NewInstanceClass = NewInstanceClass;

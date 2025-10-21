@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class SkipSyncCheckItemRequest extends AbstractModel {
 
     /**
-    * 任务id，如：sync-4ddgid2
+    * 任务id，如：sync-4ddgid2，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
     */
     @SerializedName("JobId")
     @Expose
@@ -38,16 +39,20 @@ public class SkipSyncCheckItemRequest extends AbstractModel {
     private String [] StepIds;
 
     /**
-     * Get 任务id，如：sync-4ddgid2 
-     * @return JobId 任务id，如：sync-4ddgid2
+     * Get 任务id，如：sync-4ddgid2，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ 
+     * @return JobId 任务id，如：sync-4ddgid2，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务id，如：sync-4ddgid2
-     * @param JobId 任务id，如：sync-4ddgid2
+     * Set 任务id，如：sync-4ddgid2，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+     * @param JobId 任务id，如：sync-4ddgid2，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

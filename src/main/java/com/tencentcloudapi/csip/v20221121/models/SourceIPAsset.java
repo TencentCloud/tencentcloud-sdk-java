@@ -60,6 +60,7 @@ public class SourceIPAsset extends AbstractModel {
 
     /**
     * 调用方式
+-1:未统计
 0:控制台调用
 1:API
     */
@@ -149,6 +150,21 @@ public class SourceIPAsset extends AbstractModel {
     private String ISP;
 
     /**
+    * 账号外vpc信息
+    */
+    @SerializedName("VpcInfo")
+    @Expose
+    private SourceIPVpcInfo [] VpcInfo;
+
+    /**
+    * 云类型
+0为腾讯云
+    */
+    @SerializedName("CloudType")
+    @Expose
+    private Long CloudType;
+
+    /**
      * Get 源IP id 
      * @return ID 源IP id
      */
@@ -230,9 +246,11 @@ public class SourceIPAsset extends AbstractModel {
 
     /**
      * Get 调用方式
+-1:未统计
 0:控制台调用
 1:API 
      * @return EventType 调用方式
+-1:未统计
 0:控制台调用
 1:API
      */
@@ -242,9 +260,11 @@ public class SourceIPAsset extends AbstractModel {
 
     /**
      * Set 调用方式
+-1:未统计
 0:控制台调用
 1:API
      * @param EventType 调用方式
+-1:未统计
 0:控制台调用
 1:API
      */
@@ -444,6 +464,42 @@ public class SourceIPAsset extends AbstractModel {
         this.ISP = ISP;
     }
 
+    /**
+     * Get 账号外vpc信息 
+     * @return VpcInfo 账号外vpc信息
+     */
+    public SourceIPVpcInfo [] getVpcInfo() {
+        return this.VpcInfo;
+    }
+
+    /**
+     * Set 账号外vpc信息
+     * @param VpcInfo 账号外vpc信息
+     */
+    public void setVpcInfo(SourceIPVpcInfo [] VpcInfo) {
+        this.VpcInfo = VpcInfo;
+    }
+
+    /**
+     * Get 云类型
+0为腾讯云 
+     * @return CloudType 云类型
+0为腾讯云
+     */
+    public Long getCloudType() {
+        return this.CloudType;
+    }
+
+    /**
+     * Set 云类型
+0为腾讯云
+     * @param CloudType 云类型
+0为腾讯云
+     */
+    public void setCloudType(Long CloudType) {
+        this.CloudType = CloudType;
+    }
+
     public SourceIPAsset() {
     }
 
@@ -509,6 +565,15 @@ public class SourceIPAsset extends AbstractModel {
         if (source.ISP != null) {
             this.ISP = new String(source.ISP);
         }
+        if (source.VpcInfo != null) {
+            this.VpcInfo = new SourceIPVpcInfo[source.VpcInfo.length];
+            for (int i = 0; i < source.VpcInfo.length; i++) {
+                this.VpcInfo[i] = new SourceIPVpcInfo(source.VpcInfo[i]);
+            }
+        }
+        if (source.CloudType != null) {
+            this.CloudType = new Long(source.CloudType);
+        }
     }
 
 
@@ -533,6 +598,8 @@ public class SourceIPAsset extends AbstractModel {
         this.setParamSimple(map, prefix + "Nickname", this.Nickname);
         this.setParamSimple(map, prefix + "ShowStatus", this.ShowStatus);
         this.setParamSimple(map, prefix + "ISP", this.ISP);
+        this.setParamArrayObj(map, prefix + "VpcInfo.", this.VpcInfo);
+        this.setParamSimple(map, prefix + "CloudType", this.CloudType);
 
     }
 }

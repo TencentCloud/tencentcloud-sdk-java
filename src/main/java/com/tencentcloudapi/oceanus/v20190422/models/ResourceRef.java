@@ -31,7 +31,7 @@ public class ResourceRef extends AbstractModel {
     private String ResourceId;
 
     /**
-    * 资源版本ID，-1表示使用最新版本
+    * 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
     */
     @SerializedName("Version")
     @Expose
@@ -61,16 +61,16 @@ public class ResourceRef extends AbstractModel {
     }
 
     /**
-     * Get 资源版本ID，-1表示使用最新版本 
-     * @return Version 资源版本ID，-1表示使用最新版本
+     * Get 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件 
+     * @return Version 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
      */
     public Long getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 资源版本ID，-1表示使用最新版本
-     * @param Version 资源版本ID，-1表示使用最新版本
+     * Set 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
+     * @param Version 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
      */
     public void setVersion(Long Version) {
         this.Version = Version;

@@ -136,6 +136,13 @@ public class TaskListItem extends AbstractModel {
     private String ArchName;
 
     /**
+    * 来源
+    */
+    @SerializedName("TaskSource")
+    @Expose
+    private Long TaskSource;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -391,6 +398,22 @@ public class TaskListItem extends AbstractModel {
         this.ArchName = ArchName;
     }
 
+    /**
+     * Get 来源 
+     * @return TaskSource 来源
+     */
+    public Long getTaskSource() {
+        return this.TaskSource;
+    }
+
+    /**
+     * Set 来源
+     * @param TaskSource 来源
+     */
+    public void setTaskSource(Long TaskSource) {
+        this.TaskSource = TaskSource;
+    }
+
     public TaskListItem() {
     }
 
@@ -447,6 +470,9 @@ public class TaskListItem extends AbstractModel {
         if (source.ArchName != null) {
             this.ArchName = new String(source.ArchName);
         }
+        if (source.TaskSource != null) {
+            this.TaskSource = new Long(source.TaskSource);
+        }
     }
 
 
@@ -470,6 +496,7 @@ public class TaskListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskStatusType", this.TaskStatusType);
         this.setParamSimple(map, prefix + "ArchId", this.ArchId);
         this.setParamSimple(map, prefix + "ArchName", this.ArchName);
+        this.setParamSimple(map, prefix + "TaskSource", this.TaskSource);
 
     }
 }

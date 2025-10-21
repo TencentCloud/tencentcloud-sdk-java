@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ModifyMigrateRuntimeAttributeRequest extends AbstractModel {
 
     /**
-    * 迁移任务id，如：dts-2rgv0f09
+    * 迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
     */
     @SerializedName("JobId")
     @Expose
@@ -38,16 +39,20 @@ public class ModifyMigrateRuntimeAttributeRequest extends AbstractModel {
     private KeyValuePairOption [] OtherOptions;
 
     /**
-     * Get 迁移任务id，如：dts-2rgv0f09 
-     * @return JobId 迁移任务id，如：dts-2rgv0f09
+     * Get 迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ 
+     * @return JobId 迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 迁移任务id，如：dts-2rgv0f09
-     * @param JobId 迁移任务id，如：dts-2rgv0f09
+     * Set 迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+     * @param JobId 迁移任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

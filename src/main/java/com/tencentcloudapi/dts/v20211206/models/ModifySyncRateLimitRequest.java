@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifySyncRateLimitRequest extends AbstractModel {
 
     /**
-    * 迁移任务ID
+    * 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
     */
     @SerializedName("JobId")
     @Expose
@@ -38,7 +38,7 @@ public class ModifySyncRateLimitRequest extends AbstractModel {
     private Long DumpThread;
 
     /**
-    * 同步任务全量导出的 Rps 限制、需要大于 0
+    * 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
     */
     @SerializedName("DumpRps")
     @Expose
@@ -66,16 +66,16 @@ public class ModifySyncRateLimitRequest extends AbstractModel {
     private Long LoadRps;
 
     /**
-     * Get 迁移任务ID 
-     * @return JobId 迁移任务ID
+     * Get 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。 
+     * @return JobId 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 迁移任务ID
-     * @param JobId 迁移任务ID
+     * Set 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+     * @param JobId 同步任务ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
@@ -98,16 +98,16 @@ public class ModifySyncRateLimitRequest extends AbstractModel {
     }
 
     /**
-     * Get 同步任务全量导出的 Rps 限制、需要大于 0 
-     * @return DumpRps 同步任务全量导出的 Rps 限制、需要大于 0
+     * Get 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000 
+     * @return DumpRps 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
      */
     public Long getDumpRps() {
         return this.DumpRps;
     }
 
     /**
-     * Set 同步任务全量导出的 Rps 限制、需要大于 0
-     * @param DumpRps 同步任务全量导出的 Rps 限制、需要大于 0
+     * Set 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
+     * @param DumpRps 同步任务全量导出的 Rps 限制、需要大于 0;对于mongodb最大值为20000，其他数据库最大值为50000000
      */
     public void setDumpRps(Long DumpRps) {
         this.DumpRps = DumpRps;

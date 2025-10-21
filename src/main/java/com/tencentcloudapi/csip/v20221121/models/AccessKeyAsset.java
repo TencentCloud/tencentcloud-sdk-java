@@ -152,6 +152,13 @@ public class AccessKeyAsset extends AbstractModel {
     private Long CheckStatus;
 
     /**
+    * 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+    */
+    @SerializedName("CloudType")
+    @Expose
+    private Long CloudType;
+
+    /**
      * Get AK 的id 
      * @return ID AK 的id
      */
@@ -459,6 +466,22 @@ public class AccessKeyAsset extends AbstractModel {
         this.CheckStatus = CheckStatus;
     }
 
+    /**
+     * Get 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云 
+     * @return CloudType 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+     */
+    public Long getCloudType() {
+        return this.CloudType;
+    }
+
+    /**
+     * Set 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+     * @param CloudType 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+     */
+    public void setCloudType(Long CloudType) {
+        this.CloudType = CloudType;
+    }
+
     public AccessKeyAsset() {
     }
 
@@ -524,6 +547,9 @@ public class AccessKeyAsset extends AbstractModel {
         if (source.CheckStatus != null) {
             this.CheckStatus = new Long(source.CheckStatus);
         }
+        if (source.CloudType != null) {
+            this.CloudType = new Long(source.CloudType);
+        }
     }
 
 
@@ -548,6 +574,7 @@ public class AccessKeyAsset extends AbstractModel {
         this.setParamSimple(map, prefix + "LastAccessTime", this.LastAccessTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
+        this.setParamSimple(map, prefix + "CloudType", this.CloudType);
 
     }
 }

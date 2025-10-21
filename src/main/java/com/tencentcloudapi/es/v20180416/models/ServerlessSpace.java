@@ -179,6 +179,20 @@ public class ServerlessSpace extends AbstractModel {
     private TagInfo [] TagList;
 
     /**
+    * 是否开启mcp服务
+    */
+    @SerializedName("EnableMcpAccess")
+    @Expose
+    private Long EnableMcpAccess;
+
+    /**
+    * mcp的访问地址
+    */
+    @SerializedName("McpAccess")
+    @Expose
+    private String McpAccess;
+
+    /**
      * Get Serverless索引空间ID 
      * @return SpaceId Serverless索引空间ID
      */
@@ -558,6 +572,38 @@ public class ServerlessSpace extends AbstractModel {
         this.TagList = TagList;
     }
 
+    /**
+     * Get 是否开启mcp服务 
+     * @return EnableMcpAccess 是否开启mcp服务
+     */
+    public Long getEnableMcpAccess() {
+        return this.EnableMcpAccess;
+    }
+
+    /**
+     * Set 是否开启mcp服务
+     * @param EnableMcpAccess 是否开启mcp服务
+     */
+    public void setEnableMcpAccess(Long EnableMcpAccess) {
+        this.EnableMcpAccess = EnableMcpAccess;
+    }
+
+    /**
+     * Get mcp的访问地址 
+     * @return McpAccess mcp的访问地址
+     */
+    public String getMcpAccess() {
+        return this.McpAccess;
+    }
+
+    /**
+     * Set mcp的访问地址
+     * @param McpAccess mcp的访问地址
+     */
+    public void setMcpAccess(String McpAccess) {
+        this.McpAccess = McpAccess;
+    }
+
     public ServerlessSpace() {
     }
 
@@ -632,6 +678,12 @@ public class ServerlessSpace extends AbstractModel {
                 this.TagList[i] = new TagInfo(source.TagList[i]);
             }
         }
+        if (source.EnableMcpAccess != null) {
+            this.EnableMcpAccess = new Long(source.EnableMcpAccess);
+        }
+        if (source.McpAccess != null) {
+            this.McpAccess = new String(source.McpAccess);
+        }
     }
 
 
@@ -659,6 +711,8 @@ public class ServerlessSpace extends AbstractModel {
         this.setParamSimple(map, prefix + "KibanaLanguage", this.KibanaLanguage);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "EnableMcpAccess", this.EnableMcpAccess);
+        this.setParamSimple(map, prefix + "McpAccess", this.McpAccess);
 
     }
 }

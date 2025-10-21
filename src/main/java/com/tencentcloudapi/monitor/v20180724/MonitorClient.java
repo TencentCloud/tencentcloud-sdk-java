@@ -1275,6 +1275,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *查询安装的 Agent 列表
+     * @param req DescribeRemoteWritesRequest
+     * @return DescribeRemoteWritesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRemoteWritesResponse DescribeRemoteWrites(DescribeRemoteWritesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRemoteWrites", DescribeRemoteWritesResponse.class);
+    }
+
+    /**
      *列出当前grafana实例的所有授权账号
      * @param req DescribeSSOAccountRequest
      * @return DescribeSSOAccountResponse

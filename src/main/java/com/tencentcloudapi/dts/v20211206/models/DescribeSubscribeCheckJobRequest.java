@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeSubscribeCheckJobRequest extends AbstractModel {
 
     /**
-    * 数据订阅实例的 ID
+    * 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
     */
     @SerializedName("SubscribeId")
     @Expose
     private String SubscribeId;
 
     /**
-     * Get 数据订阅实例的 ID 
-     * @return SubscribeId 数据订阅实例的 ID
+     * Get 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。 
+     * @return SubscribeId 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      */
     public String getSubscribeId() {
         return this.SubscribeId;
     }
 
     /**
-     * Set 数据订阅实例的 ID
-     * @param SubscribeId 数据订阅实例的 ID
+     * Set 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+     * @param SubscribeId 数据订阅实例的 ID，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
      */
     public void setSubscribeId(String SubscribeId) {
         this.SubscribeId = SubscribeId;

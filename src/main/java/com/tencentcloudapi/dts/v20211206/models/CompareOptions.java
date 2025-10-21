@@ -45,6 +45,34 @@ public class CompareOptions extends AbstractModel {
     private Long ThreadCount;
 
     /**
+    * 对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+    */
+    @SerializedName("CompareMode")
+    @Expose
+    private String [] CompareMode;
+
+    /**
+    * 复检次数
+    */
+    @SerializedName("ReCheckTime")
+    @Expose
+    private Long ReCheckTime;
+
+    /**
+    * 复检时间间隔，单位为分钟，取值 1-60
+    */
+    @SerializedName("ReCheckInterval")
+    @Expose
+    private Long ReCheckInterval;
+
+    /**
      * Get 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck 
      * @return Method 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
      */
@@ -92,6 +120,70 @@ public class CompareOptions extends AbstractModel {
         this.ThreadCount = ThreadCount;
     }
 
+    /**
+     * Get 对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。 
+     * @return Type 对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。
+     * @param Type 对比类型：builtin（内置校验）、independent（独立校验）。默认为builtin，mongodb及redis链路不支持独立校验。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持)  
+     * @return CompareMode 校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+     */
+    public String [] getCompareMode() {
+        return this.CompareMode;
+    }
+
+    /**
+     * Set 校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+     * @param CompareMode 校验类型，枚举值：structureCheck-结构校验(目前仅postgresql支持)、full-全量校验、increment-增量校验(如果勾选了增量校验，Method只能选dataCheck)、advanceObject-数据库信息校验(目前仅mongodb支持) 
+     */
+    public void setCompareMode(String [] CompareMode) {
+        this.CompareMode = CompareMode;
+    }
+
+    /**
+     * Get 复检次数 
+     * @return ReCheckTime 复检次数
+     */
+    public Long getReCheckTime() {
+        return this.ReCheckTime;
+    }
+
+    /**
+     * Set 复检次数
+     * @param ReCheckTime 复检次数
+     */
+    public void setReCheckTime(Long ReCheckTime) {
+        this.ReCheckTime = ReCheckTime;
+    }
+
+    /**
+     * Get 复检时间间隔，单位为分钟，取值 1-60 
+     * @return ReCheckInterval 复检时间间隔，单位为分钟，取值 1-60
+     */
+    public Long getReCheckInterval() {
+        return this.ReCheckInterval;
+    }
+
+    /**
+     * Set 复检时间间隔，单位为分钟，取值 1-60
+     * @param ReCheckInterval 复检时间间隔，单位为分钟，取值 1-60
+     */
+    public void setReCheckInterval(Long ReCheckInterval) {
+        this.ReCheckInterval = ReCheckInterval;
+    }
+
     public CompareOptions() {
     }
 
@@ -109,6 +201,21 @@ public class CompareOptions extends AbstractModel {
         if (source.ThreadCount != null) {
             this.ThreadCount = new Long(source.ThreadCount);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CompareMode != null) {
+            this.CompareMode = new String[source.CompareMode.length];
+            for (int i = 0; i < source.CompareMode.length; i++) {
+                this.CompareMode[i] = new String(source.CompareMode[i]);
+            }
+        }
+        if (source.ReCheckTime != null) {
+            this.ReCheckTime = new Long(source.ReCheckTime);
+        }
+        if (source.ReCheckInterval != null) {
+            this.ReCheckInterval = new Long(source.ReCheckInterval);
+        }
     }
 
 
@@ -119,6 +226,10 @@ public class CompareOptions extends AbstractModel {
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "ThreadCount", this.ThreadCount);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArraySimple(map, prefix + "CompareMode.", this.CompareMode);
+        this.setParamSimple(map, prefix + "ReCheckTime", this.ReCheckTime);
+        this.setParamSimple(map, prefix + "ReCheckInterval", this.ReCheckInterval);
 
     }
 }

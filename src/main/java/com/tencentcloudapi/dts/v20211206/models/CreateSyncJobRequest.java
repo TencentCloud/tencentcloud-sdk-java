@@ -59,7 +59,7 @@ public class CreateSyncJobRequest extends AbstractModel {
     private String DstRegion;
 
     /**
-    * 同步任务规格，Standard:标准版
+    * 同步任务规格，Standard:标准版，目前仅支持Standard规格。
     */
     @SerializedName("Specification")
     @Expose
@@ -195,16 +195,16 @@ public class CreateSyncJobRequest extends AbstractModel {
     }
 
     /**
-     * Get 同步任务规格，Standard:标准版 
-     * @return Specification 同步任务规格，Standard:标准版
+     * Get 同步任务规格，Standard:标准版，目前仅支持Standard规格。 
+     * @return Specification 同步任务规格，Standard:标准版，目前仅支持Standard规格。
      */
     public String getSpecification() {
         return this.Specification;
     }
 
     /**
-     * Set 同步任务规格，Standard:标准版
-     * @param Specification 同步任务规格，Standard:标准版
+     * Set 同步任务规格，Standard:标准版，目前仅支持Standard规格。
+     * @param Specification 同步任务规格，Standard:标准版，目前仅支持Standard规格。
      */
     public void setSpecification(String Specification) {
         this.Specification = Specification;

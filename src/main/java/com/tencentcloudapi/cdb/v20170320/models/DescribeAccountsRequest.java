@@ -52,6 +52,20 @@ public class DescribeAccountsRequest extends AbstractModel {
     private String AccountRegexp;
 
     /**
+    * 默认无排序，支持：ASC、DESC、asc、desc
+    */
+    @SerializedName("SortBy")
+    @Expose
+    private String SortBy;
+
+    /**
+    * 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -115,6 +129,38 @@ public class DescribeAccountsRequest extends AbstractModel {
         this.AccountRegexp = AccountRegexp;
     }
 
+    /**
+     * Get 默认无排序，支持：ASC、DESC、asc、desc 
+     * @return SortBy 默认无排序，支持：ASC、DESC、asc、desc
+     */
+    public String getSortBy() {
+        return this.SortBy;
+    }
+
+    /**
+     * Set 默认无排序，支持：ASC、DESC、asc、desc
+     * @param SortBy 默认无排序，支持：ASC、DESC、asc、desc
+     */
+    public void setSortBy(String SortBy) {
+        this.SortBy = SortBy;
+    }
+
+    /**
+     * Get 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间) 
+     * @return OrderBy 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
+     * @param OrderBy 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
     public DescribeAccountsRequest() {
     }
 
@@ -135,6 +181,12 @@ public class DescribeAccountsRequest extends AbstractModel {
         if (source.AccountRegexp != null) {
             this.AccountRegexp = new String(source.AccountRegexp);
         }
+        if (source.SortBy != null) {
+            this.SortBy = new String(source.SortBy);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class DescribeAccountsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "AccountRegexp", this.AccountRegexp);
+        this.setParamSimple(map, prefix + "SortBy", this.SortBy);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
 
     }
 }

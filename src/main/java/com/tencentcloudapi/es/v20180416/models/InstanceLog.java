@@ -59,6 +59,27 @@ public class InstanceLog extends AbstractModel {
     private String NodeID;
 
     /**
+    * 慢日志索引名
+    */
+    @SerializedName("IndexName")
+    @Expose
+    private String IndexName;
+
+    /**
+    * 慢日志索引分片
+    */
+    @SerializedName("Shard")
+    @Expose
+    private String Shard;
+
+    /**
+    * 慢日志索引查询耗时
+    */
+    @SerializedName("QueryCost")
+    @Expose
+    private String QueryCost;
+
+    /**
      * Get 日志时间 
      * @return Time 日志时间
      */
@@ -138,6 +159,54 @@ public class InstanceLog extends AbstractModel {
         this.NodeID = NodeID;
     }
 
+    /**
+     * Get 慢日志索引名 
+     * @return IndexName 慢日志索引名
+     */
+    public String getIndexName() {
+        return this.IndexName;
+    }
+
+    /**
+     * Set 慢日志索引名
+     * @param IndexName 慢日志索引名
+     */
+    public void setIndexName(String IndexName) {
+        this.IndexName = IndexName;
+    }
+
+    /**
+     * Get 慢日志索引分片 
+     * @return Shard 慢日志索引分片
+     */
+    public String getShard() {
+        return this.Shard;
+    }
+
+    /**
+     * Set 慢日志索引分片
+     * @param Shard 慢日志索引分片
+     */
+    public void setShard(String Shard) {
+        this.Shard = Shard;
+    }
+
+    /**
+     * Get 慢日志索引查询耗时 
+     * @return QueryCost 慢日志索引查询耗时
+     */
+    public String getQueryCost() {
+        return this.QueryCost;
+    }
+
+    /**
+     * Set 慢日志索引查询耗时
+     * @param QueryCost 慢日志索引查询耗时
+     */
+    public void setQueryCost(String QueryCost) {
+        this.QueryCost = QueryCost;
+    }
+
     public InstanceLog() {
     }
 
@@ -161,6 +230,15 @@ public class InstanceLog extends AbstractModel {
         if (source.NodeID != null) {
             this.NodeID = new String(source.NodeID);
         }
+        if (source.IndexName != null) {
+            this.IndexName = new String(source.IndexName);
+        }
+        if (source.Shard != null) {
+            this.Shard = new String(source.Shard);
+        }
+        if (source.QueryCost != null) {
+            this.QueryCost = new String(source.QueryCost);
+        }
     }
 
 
@@ -173,6 +251,9 @@ public class InstanceLog extends AbstractModel {
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "IndexName", this.IndexName);
+        this.setParamSimple(map, prefix + "Shard", this.Shard);
+        this.setParamSimple(map, prefix + "QueryCost", this.QueryCost);
 
     }
 }

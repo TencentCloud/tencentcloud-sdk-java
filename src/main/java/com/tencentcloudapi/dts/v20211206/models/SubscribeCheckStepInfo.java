@@ -45,7 +45,7 @@ public class SubscribeCheckStepInfo extends AbstractModel {
     private Long StepNo;
 
     /**
-    * 当前步骤状态，可能值为 notStarted,running,finished,failed
+    * 当前步骤状态，可能值为 notStarted-未开始，running-运行中，finished-已完成，failed-失败，unknown-未知
     */
     @SerializedName("Status")
     @Expose
@@ -121,16 +121,16 @@ public class SubscribeCheckStepInfo extends AbstractModel {
     }
 
     /**
-     * Get 当前步骤状态，可能值为 notStarted,running,finished,failed 
-     * @return Status 当前步骤状态，可能值为 notStarted,running,finished,failed
+     * Get 当前步骤状态，可能值为 notStarted-未开始，running-运行中，finished-已完成，failed-失败，unknown-未知 
+     * @return Status 当前步骤状态，可能值为 notStarted-未开始，running-运行中，finished-已完成，failed-失败，unknown-未知
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 当前步骤状态，可能值为 notStarted,running,finished,failed
-     * @param Status 当前步骤状态，可能值为 notStarted,running,finished,failed
+     * Set 当前步骤状态，可能值为 notStarted-未开始，running-运行中，finished-已完成，failed-失败，unknown-未知
+     * @param Status 当前步骤状态，可能值为 notStarted-未开始，running-运行中，finished-已完成，failed-失败，unknown-未知
      */
     public void setStatus(String Status) {
         this.Status = Status;

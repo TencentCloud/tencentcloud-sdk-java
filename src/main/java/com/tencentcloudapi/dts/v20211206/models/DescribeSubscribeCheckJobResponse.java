@@ -38,7 +38,7 @@ public class DescribeSubscribeCheckJobResponse extends AbstractModel {
     private String Message;
 
     /**
-    * 任务运行状态，可能值为 running,failed,success
+    * 任务运行状态，可能值为 running(运行中),failed(失败),success(成功),unknown(未知状态)。
     */
     @SerializedName("Status")
     @Expose
@@ -112,16 +112,16 @@ public class DescribeSubscribeCheckJobResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务运行状态，可能值为 running,failed,success 
-     * @return Status 任务运行状态，可能值为 running,failed,success
+     * Get 任务运行状态，可能值为 running(运行中),failed(失败),success(成功),unknown(未知状态)。 
+     * @return Status 任务运行状态，可能值为 running(运行中),failed(失败),success(成功),unknown(未知状态)。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务运行状态，可能值为 running,failed,success
-     * @param Status 任务运行状态，可能值为 running,failed,success
+     * Set 任务运行状态，可能值为 running(运行中),failed(失败),success(成功),unknown(未知状态)。
+     * @param Status 任务运行状态，可能值为 running(运行中),failed(失败),success(成功),unknown(未知状态)。
      */
     public void setStatus(String Status) {
         this.Status = Status;

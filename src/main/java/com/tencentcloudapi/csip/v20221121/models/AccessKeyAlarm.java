@@ -183,6 +183,13 @@ public class AccessKeyAlarm extends AbstractModel {
     private String RuleKey;
 
     /**
+    * 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+    */
+    @SerializedName("CloudType")
+    @Expose
+    private Long CloudType;
+
+    /**
      * Get 告警名称 
      * @return Name 告警名称
      */
@@ -554,6 +561,22 @@ public class AccessKeyAlarm extends AbstractModel {
         this.RuleKey = RuleKey;
     }
 
+    /**
+     * Get 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云 
+     * @return CloudType 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+     */
+    public Long getCloudType() {
+        return this.CloudType;
+    }
+
+    /**
+     * Set 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+     * @param CloudType 云厂商类型 0:腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云
+     */
+    public void setCloudType(Long CloudType) {
+        this.CloudType = CloudType;
+    }
+
     public AccessKeyAlarm() {
     }
 
@@ -634,6 +657,9 @@ public class AccessKeyAlarm extends AbstractModel {
         if (source.RuleKey != null) {
             this.RuleKey = new String(source.RuleKey);
         }
+        if (source.CloudType != null) {
+            this.CloudType = new Long(source.CloudType);
+        }
     }
 
 
@@ -663,6 +689,7 @@ public class AccessKeyAlarm extends AbstractModel {
         this.setParamSimple(map, prefix + "IsSupportEditWhiteAccount", this.IsSupportEditWhiteAccount);
         this.setParamSimple(map, prefix + "Evidence", this.Evidence);
         this.setParamSimple(map, prefix + "RuleKey", this.RuleKey);
+        this.setParamSimple(map, prefix + "CloudType", this.CloudType);
 
     }
 }

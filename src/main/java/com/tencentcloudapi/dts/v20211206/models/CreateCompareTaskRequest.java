@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class CreateCompareTaskRequest extends AbstractModel {
 
     /**
-    * 任务 Id
+    * 任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
     */
     @SerializedName("JobId")
     @Expose
@@ -59,16 +60,20 @@ public class CreateCompareTaskRequest extends AbstractModel {
     private CompareOptions Options;
 
     /**
-     * Get 任务 Id 
-     * @return JobId 任务 Id
+     * Get 任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ 
+     * @return JobId 任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务 Id
-     * @param JobId 任务 Id
+     * Set 任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
+     * @param JobId 任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,46 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IsolateMigrateJobRequest extends AbstractModel {
+public class WriteDestination extends AbstractModel {
 
     /**
-    * 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
+    * 存储标识
     */
-    @SerializedName("JobId")
+    @SerializedName("Destination")
     @Expose
-    private String JobId;
+    private String Destination;
 
     /**
-     * Get 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
- 
-     * @return JobId 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
+     * Get 存储标识 
+     * @return Destination 存储标识
      */
-    public String getJobId() {
-        return this.JobId;
+    public String getDestination() {
+        return this.Destination;
     }
 
     /**
-     * Set 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
-     * @param JobId 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
+     * Set 存储标识
+     * @param Destination 存储标识
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setDestination(String Destination) {
+        this.Destination = Destination;
     }
 
-    public IsolateMigrateJobRequest() {
+    public WriteDestination() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public IsolateMigrateJobRequest(IsolateMigrateJobRequest source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
+    public WriteDestination(WriteDestination source) {
+        if (source.Destination != null) {
+            this.Destination = new String(source.Destination);
         }
     }
 
@@ -69,7 +64,7 @@ public class IsolateMigrateJobRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "Destination", this.Destination);
 
     }
 }

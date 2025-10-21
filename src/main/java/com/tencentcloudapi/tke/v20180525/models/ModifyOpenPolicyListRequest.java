@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyOpenPolicyListRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID，请从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyOpenPolicyListRequest extends AbstractModel {
     private String Category;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID，请从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。 
+     * @return ClusterId 集群ID，请从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID，请从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
+     * @param ClusterId 集群ID，请从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

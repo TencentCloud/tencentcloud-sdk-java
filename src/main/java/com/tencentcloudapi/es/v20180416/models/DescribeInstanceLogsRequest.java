@@ -86,6 +86,41 @@ public class DescribeInstanceLogsRequest extends AbstractModel {
     private Long OrderByType;
 
     /**
+    * 日志级别
+    */
+    @SerializedName("LogLevels")
+    @Expose
+    private String [] LogLevels;
+
+    /**
+    * 节点ID
+    */
+    @SerializedName("NodeIds")
+    @Expose
+    private String [] NodeIds;
+
+    /**
+    * 慢日志索引名
+    */
+    @SerializedName("IndexName")
+    @Expose
+    private String IndexName;
+
+    /**
+    * 慢日志索引分片
+    */
+    @SerializedName("ShardId")
+    @Expose
+    private String ShardId;
+
+    /**
+    * 慢日志查询耗时
+    */
+    @SerializedName("QueryCost")
+    @Expose
+    private Long QueryCost;
+
+    /**
      * Get 集群实例ID 
      * @return InstanceId 集群实例ID
      */
@@ -237,6 +272,86 @@ public class DescribeInstanceLogsRequest extends AbstractModel {
         this.OrderByType = OrderByType;
     }
 
+    /**
+     * Get 日志级别 
+     * @return LogLevels 日志级别
+     */
+    public String [] getLogLevels() {
+        return this.LogLevels;
+    }
+
+    /**
+     * Set 日志级别
+     * @param LogLevels 日志级别
+     */
+    public void setLogLevels(String [] LogLevels) {
+        this.LogLevels = LogLevels;
+    }
+
+    /**
+     * Get 节点ID 
+     * @return NodeIds 节点ID
+     */
+    public String [] getNodeIds() {
+        return this.NodeIds;
+    }
+
+    /**
+     * Set 节点ID
+     * @param NodeIds 节点ID
+     */
+    public void setNodeIds(String [] NodeIds) {
+        this.NodeIds = NodeIds;
+    }
+
+    /**
+     * Get 慢日志索引名 
+     * @return IndexName 慢日志索引名
+     */
+    public String getIndexName() {
+        return this.IndexName;
+    }
+
+    /**
+     * Set 慢日志索引名
+     * @param IndexName 慢日志索引名
+     */
+    public void setIndexName(String IndexName) {
+        this.IndexName = IndexName;
+    }
+
+    /**
+     * Get 慢日志索引分片 
+     * @return ShardId 慢日志索引分片
+     */
+    public String getShardId() {
+        return this.ShardId;
+    }
+
+    /**
+     * Set 慢日志索引分片
+     * @param ShardId 慢日志索引分片
+     */
+    public void setShardId(String ShardId) {
+        this.ShardId = ShardId;
+    }
+
+    /**
+     * Get 慢日志查询耗时 
+     * @return QueryCost 慢日志查询耗时
+     */
+    public Long getQueryCost() {
+        return this.QueryCost;
+    }
+
+    /**
+     * Set 慢日志查询耗时
+     * @param QueryCost 慢日志查询耗时
+     */
+    public void setQueryCost(Long QueryCost) {
+        this.QueryCost = QueryCost;
+    }
+
     public DescribeInstanceLogsRequest() {
     }
 
@@ -269,6 +384,27 @@ public class DescribeInstanceLogsRequest extends AbstractModel {
         if (source.OrderByType != null) {
             this.OrderByType = new Long(source.OrderByType);
         }
+        if (source.LogLevels != null) {
+            this.LogLevels = new String[source.LogLevels.length];
+            for (int i = 0; i < source.LogLevels.length; i++) {
+                this.LogLevels[i] = new String(source.LogLevels[i]);
+            }
+        }
+        if (source.NodeIds != null) {
+            this.NodeIds = new String[source.NodeIds.length];
+            for (int i = 0; i < source.NodeIds.length; i++) {
+                this.NodeIds[i] = new String(source.NodeIds[i]);
+            }
+        }
+        if (source.IndexName != null) {
+            this.IndexName = new String(source.IndexName);
+        }
+        if (source.ShardId != null) {
+            this.ShardId = new String(source.ShardId);
+        }
+        if (source.QueryCost != null) {
+            this.QueryCost = new Long(source.QueryCost);
+        }
     }
 
 
@@ -284,6 +420,11 @@ public class DescribeInstanceLogsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
+        this.setParamArraySimple(map, prefix + "LogLevels.", this.LogLevels);
+        this.setParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
+        this.setParamSimple(map, prefix + "IndexName", this.IndexName);
+        this.setParamSimple(map, prefix + "ShardId", this.ShardId);
+        this.setParamSimple(map, prefix + "QueryCost", this.QueryCost);
 
     }
 }

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class OnlineDDL extends AbstractModel {
 
     /**
-    * 状态
+    * 状态，ON-启用，OFF-不启用。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get 状态，ON-启用，OFF-不启用。 
+     * @return Status 状态，ON-启用，OFF-不启用。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set 状态，ON-启用，OFF-不启用。
+     * @param Status 状态，ON-启用，OFF-不启用。
      */
     public void setStatus(String Status) {
         this.Status = Status;

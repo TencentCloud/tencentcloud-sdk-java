@@ -24,14 +24,15 @@ import java.util.HashMap;
 public class DescribeSyncJobsRequest extends AbstractModel {
 
     /**
-    * 同步任务id，如sync-werwfs23
+    * 同步任务id，如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 同步任务id列表，如sync-werwfs23
+    * 同步任务id列表，如["sync-n3gh7md9"]
     */
     @SerializedName("JobIds")
     @Expose
@@ -45,7 +46,7 @@ public class DescribeSyncJobsRequest extends AbstractModel {
     private String JobName;
 
     /**
-    * 排序字段，可以取值为CreateTime
+    * 排序字段，目前仅支持CreateTime字段排序
     */
     @SerializedName("Order")
     @Expose
@@ -73,7 +74,7 @@ public class DescribeSyncJobsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 状态集合，如Initialized,CheckPass,Running,ResumableErr,Stopped
+    * 状态集合，如Initialized(初始化),CheckPass(校验通过),Running(运行中),ResumableErr(恢复中),Stopped(已结束)
     */
     @SerializedName("Status")
     @Expose
@@ -87,7 +88,7 @@ public class DescribeSyncJobsRequest extends AbstractModel {
     private String RunMode;
 
     /**
-    * 任务类型，如mysql2mysql：msyql同步到mysql
+    * 任务类型，如mysql2mysql：msyql同步到mysql;可取值有mysql2mysql、mysql2kafka、tdsqlmysql2kafka、tdsqlmysql2tdsqlmysql、tdsqlmysql2mysql、mysql2tdsqlmysql、mysql2mariadb、mariadb2mariadb、mariadb2kafka、cynosdbmysql2kafka、cynosdbmysql2cynosdbmysql、cynosdbmysql2mysql、mysql2cynosdbmysql、mariadb2tdsqlmysql、tdsqlmysql2cynosdbmysql、cynosdbmysql2tdsqlmysql、tdstore2mysql、tdstore2percona、tdstore2mariadb、tdstore2cynosdbmysql、cynosdbmysql2mariadb、mariadb2cynosdbmysql、tdsqlmysql2mariadb、mariadb2mysql、percona2mariadb、postgresql2postgresql、tdstore2tdsqlmysql、mongodb2mongodb
     */
     @SerializedName("JobType")
     @Expose
@@ -122,32 +123,36 @@ public class DescribeSyncJobsRequest extends AbstractModel {
     private String DstInfoPattern;
 
     /**
-     * Get 同步任务id，如sync-werwfs23 
-     * @return JobId 同步任务id，如sync-werwfs23
+     * Get 同步任务id，如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+ 
+     * @return JobId 同步任务id，如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 同步任务id，如sync-werwfs23
-     * @param JobId 同步任务id，如sync-werwfs23
+     * Set 同步任务id，如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
+     * @param JobId 同步任务id，如sync-werwfs23，可通过[DescribeSyncJobs](https://cloud.tencent.com/document/product/571/82103)接口获取。
+
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 同步任务id列表，如sync-werwfs23 
-     * @return JobIds 同步任务id列表，如sync-werwfs23
+     * Get 同步任务id列表，如["sync-n3gh7md9"] 
+     * @return JobIds 同步任务id列表，如["sync-n3gh7md9"]
      */
     public String [] getJobIds() {
         return this.JobIds;
     }
 
     /**
-     * Set 同步任务id列表，如sync-werwfs23
-     * @param JobIds 同步任务id列表，如sync-werwfs23
+     * Set 同步任务id列表，如["sync-n3gh7md9"]
+     * @param JobIds 同步任务id列表，如["sync-n3gh7md9"]
      */
     public void setJobIds(String [] JobIds) {
         this.JobIds = JobIds;
@@ -170,16 +175,16 @@ public class DescribeSyncJobsRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段，可以取值为CreateTime 
-     * @return Order 排序字段，可以取值为CreateTime
+     * Get 排序字段，目前仅支持CreateTime字段排序 
+     * @return Order 排序字段，目前仅支持CreateTime字段排序
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序字段，可以取值为CreateTime
-     * @param Order 排序字段，可以取值为CreateTime
+     * Set 排序字段，目前仅支持CreateTime字段排序
+     * @param Order 排序字段，目前仅支持CreateTime字段排序
      */
     public void setOrder(String Order) {
         this.Order = Order;
@@ -234,16 +239,16 @@ public class DescribeSyncJobsRequest extends AbstractModel {
     }
 
     /**
-     * Get 状态集合，如Initialized,CheckPass,Running,ResumableErr,Stopped 
-     * @return Status 状态集合，如Initialized,CheckPass,Running,ResumableErr,Stopped
+     * Get 状态集合，如Initialized(初始化),CheckPass(校验通过),Running(运行中),ResumableErr(恢复中),Stopped(已结束) 
+     * @return Status 状态集合，如Initialized(初始化),CheckPass(校验通过),Running(运行中),ResumableErr(恢复中),Stopped(已结束)
      */
     public String [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态集合，如Initialized,CheckPass,Running,ResumableErr,Stopped
-     * @param Status 状态集合，如Initialized,CheckPass,Running,ResumableErr,Stopped
+     * Set 状态集合，如Initialized(初始化),CheckPass(校验通过),Running(运行中),ResumableErr(恢复中),Stopped(已结束)
+     * @param Status 状态集合，如Initialized(初始化),CheckPass(校验通过),Running(运行中),ResumableErr(恢复中),Stopped(已结束)
      */
     public void setStatus(String [] Status) {
         this.Status = Status;
@@ -266,16 +271,16 @@ public class DescribeSyncJobsRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务类型，如mysql2mysql：msyql同步到mysql 
-     * @return JobType 任务类型，如mysql2mysql：msyql同步到mysql
+     * Get 任务类型，如mysql2mysql：msyql同步到mysql;可取值有mysql2mysql、mysql2kafka、tdsqlmysql2kafka、tdsqlmysql2tdsqlmysql、tdsqlmysql2mysql、mysql2tdsqlmysql、mysql2mariadb、mariadb2mariadb、mariadb2kafka、cynosdbmysql2kafka、cynosdbmysql2cynosdbmysql、cynosdbmysql2mysql、mysql2cynosdbmysql、mariadb2tdsqlmysql、tdsqlmysql2cynosdbmysql、cynosdbmysql2tdsqlmysql、tdstore2mysql、tdstore2percona、tdstore2mariadb、tdstore2cynosdbmysql、cynosdbmysql2mariadb、mariadb2cynosdbmysql、tdsqlmysql2mariadb、mariadb2mysql、percona2mariadb、postgresql2postgresql、tdstore2tdsqlmysql、mongodb2mongodb 
+     * @return JobType 任务类型，如mysql2mysql：msyql同步到mysql;可取值有mysql2mysql、mysql2kafka、tdsqlmysql2kafka、tdsqlmysql2tdsqlmysql、tdsqlmysql2mysql、mysql2tdsqlmysql、mysql2mariadb、mariadb2mariadb、mariadb2kafka、cynosdbmysql2kafka、cynosdbmysql2cynosdbmysql、cynosdbmysql2mysql、mysql2cynosdbmysql、mariadb2tdsqlmysql、tdsqlmysql2cynosdbmysql、cynosdbmysql2tdsqlmysql、tdstore2mysql、tdstore2percona、tdstore2mariadb、tdstore2cynosdbmysql、cynosdbmysql2mariadb、mariadb2cynosdbmysql、tdsqlmysql2mariadb、mariadb2mysql、percona2mariadb、postgresql2postgresql、tdstore2tdsqlmysql、mongodb2mongodb
      */
     public String getJobType() {
         return this.JobType;
     }
 
     /**
-     * Set 任务类型，如mysql2mysql：msyql同步到mysql
-     * @param JobType 任务类型，如mysql2mysql：msyql同步到mysql
+     * Set 任务类型，如mysql2mysql：msyql同步到mysql;可取值有mysql2mysql、mysql2kafka、tdsqlmysql2kafka、tdsqlmysql2tdsqlmysql、tdsqlmysql2mysql、mysql2tdsqlmysql、mysql2mariadb、mariadb2mariadb、mariadb2kafka、cynosdbmysql2kafka、cynosdbmysql2cynosdbmysql、cynosdbmysql2mysql、mysql2cynosdbmysql、mariadb2tdsqlmysql、tdsqlmysql2cynosdbmysql、cynosdbmysql2tdsqlmysql、tdstore2mysql、tdstore2percona、tdstore2mariadb、tdstore2cynosdbmysql、cynosdbmysql2mariadb、mariadb2cynosdbmysql、tdsqlmysql2mariadb、mariadb2mysql、percona2mariadb、postgresql2postgresql、tdstore2tdsqlmysql、mongodb2mongodb
+     * @param JobType 任务类型，如mysql2mysql：msyql同步到mysql;可取值有mysql2mysql、mysql2kafka、tdsqlmysql2kafka、tdsqlmysql2tdsqlmysql、tdsqlmysql2mysql、mysql2tdsqlmysql、mysql2mariadb、mariadb2mariadb、mariadb2kafka、cynosdbmysql2kafka、cynosdbmysql2cynosdbmysql、cynosdbmysql2mysql、mysql2cynosdbmysql、mariadb2tdsqlmysql、tdsqlmysql2cynosdbmysql、cynosdbmysql2tdsqlmysql、tdstore2mysql、tdstore2percona、tdstore2mariadb、tdstore2cynosdbmysql、cynosdbmysql2mariadb、mariadb2cynosdbmysql、tdsqlmysql2mariadb、mariadb2mysql、percona2mariadb、postgresql2postgresql、tdstore2tdsqlmysql、mongodb2mongodb
      */
     public void setJobType(String JobType) {
         this.JobType = JobType;
