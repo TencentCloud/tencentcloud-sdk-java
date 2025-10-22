@@ -31,14 +31,14 @@ public class ResourceRef extends AbstractModel {
     private String ResourceId;
 
     /**
-    * 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
+    * 资源版本
     */
     @SerializedName("Version")
     @Expose
     private Long Version;
 
     /**
-    * 引用资源类型，例如主资源设置为1，代表main class所在的jar包
+    * 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
     */
     @SerializedName("Type")
     @Expose
@@ -61,32 +61,32 @@ public class ResourceRef extends AbstractModel {
     }
 
     /**
-     * Get 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件 
-     * @return Version 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
+     * Get 资源版本 
+     * @return Version 资源版本
      */
     public Long getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
-     * @param Version 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
+     * Set 资源版本
+     * @param Version 资源版本
      */
     public void setVersion(Long Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 引用资源类型，例如主资源设置为1，代表main class所在的jar包 
-     * @return Type 引用资源类型，例如主资源设置为1，代表main class所在的jar包
+     * Get 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件 
+     * @return Type 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 引用资源类型，例如主资源设置为1，代表main class所在的jar包
-     * @param Type 引用资源类型，例如主资源设置为1，代表main class所在的jar包
+     * Set 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
+     * @param Type 0-引用 JAR 程序包，1-主程序包，2-引用配置文件，3-Python程序包，4-Python数据文件
      */
     public void setType(Long Type) {
         this.Type = Type;

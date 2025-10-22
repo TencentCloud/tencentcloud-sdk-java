@@ -451,6 +451,13 @@ public class DeployContainerApplicationRequest extends AbstractModel {
     private Long Partition;
 
     /**
+    * 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+    */
+    @SerializedName("IncrementalDeployment")
+    @Expose
+    private Boolean IncrementalDeployment;
+
+    /**
      * Get 应用ID 
      * @return ApplicationId 应用ID
      */
@@ -1426,6 +1433,22 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         this.Partition = Partition;
     }
 
+    /**
+     * Get 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数 
+     * @return IncrementalDeployment 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+     */
+    public Boolean getIncrementalDeployment() {
+        return this.IncrementalDeployment;
+    }
+
+    /**
+     * Set 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+     * @param IncrementalDeployment 是否是增量部署，增量部署只运行增量覆盖一级参数，不支持对一级参数中的子参数进行增量更新，例如更新VolumeMountInfoList时必须传入VolumeMountInfoList更新后的全量参数
+     */
+    public void setIncrementalDeployment(Boolean IncrementalDeployment) {
+        this.IncrementalDeployment = IncrementalDeployment;
+    }
+
     public DeployContainerApplicationRequest() {
     }
 
@@ -1641,6 +1664,9 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         if (source.Partition != null) {
             this.Partition = new Long(source.Partition);
         }
+        if (source.IncrementalDeployment != null) {
+            this.IncrementalDeployment = new Boolean(source.IncrementalDeployment);
+        }
     }
 
 
@@ -1709,6 +1735,7 @@ public class DeployContainerApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StaticIpEnabled", this.StaticIpEnabled);
         this.setParamSimple(map, prefix + "PodManagementPolicyType", this.PodManagementPolicyType);
         this.setParamSimple(map, prefix + "Partition", this.Partition);
+        this.setParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
 
     }
 }

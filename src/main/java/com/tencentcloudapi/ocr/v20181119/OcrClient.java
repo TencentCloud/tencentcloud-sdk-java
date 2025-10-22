@@ -936,6 +936,19 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *试卷切题（仅检测）可将整页练习册、试卷或教辅中的题目进行自动切题，返回试题边框和题目元素的坐标位置。
+
+默认接口请求频率限制：2次/秒。
+     * @param req QuestionSplitLayoutOCRRequest
+     * @return QuestionSplitLayoutOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public QuestionSplitLayoutOCRResponse QuestionSplitLayoutOCR(QuestionSplitLayoutOCRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QuestionSplitLayoutOCR", QuestionSplitLayoutOCRResponse.class);
+    }
+
+    /**
      *试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。
 
 默认接口请求频率限制：2次/秒。

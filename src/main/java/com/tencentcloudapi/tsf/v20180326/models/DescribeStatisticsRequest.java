@@ -139,6 +139,13 @@ public class DescribeStatisticsRequest extends AbstractModel {
     private String ConfigCenterInstanceId;
 
     /**
+    * 服务过滤
+    */
+    @SerializedName("ServiceFilter")
+    @Expose
+    private String ServiceFilter;
+
+    /**
      * Get 统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型 
      * @return Type 统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型
      */
@@ -406,6 +413,22 @@ public class DescribeStatisticsRequest extends AbstractModel {
         this.ConfigCenterInstanceId = ConfigCenterInstanceId;
     }
 
+    /**
+     * Get 服务过滤 
+     * @return ServiceFilter 服务过滤
+     */
+    public String getServiceFilter() {
+        return this.ServiceFilter;
+    }
+
+    /**
+     * Set 服务过滤
+     * @param ServiceFilter 服务过滤
+     */
+    public void setServiceFilter(String ServiceFilter) {
+        this.ServiceFilter = ServiceFilter;
+    }
+
     public DescribeStatisticsRequest() {
     }
 
@@ -468,6 +491,9 @@ public class DescribeStatisticsRequest extends AbstractModel {
         if (source.ConfigCenterInstanceId != null) {
             this.ConfigCenterInstanceId = new String(source.ConfigCenterInstanceId);
         }
+        if (source.ServiceFilter != null) {
+            this.ServiceFilter = new String(source.ServiceFilter);
+        }
     }
 
 
@@ -491,6 +517,7 @@ public class DescribeStatisticsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DbName", this.DbName);
         this.setParamArraySimple(map, prefix + "NamespaceIdList.", this.NamespaceIdList);
         this.setParamSimple(map, prefix + "ConfigCenterInstanceId", this.ConfigCenterInstanceId);
+        this.setParamSimple(map, prefix + "ServiceFilter", this.ServiceFilter);
 
     }
 }

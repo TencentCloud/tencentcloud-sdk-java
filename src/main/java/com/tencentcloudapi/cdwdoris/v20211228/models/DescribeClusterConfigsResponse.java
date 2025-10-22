@@ -52,6 +52,13 @@ public class DescribeClusterConfigsResponse extends AbstractModel {
     private Boolean HasCN;
 
     /**
+    * 实例已经存在的jar包列表
+    */
+    @SerializedName("ExistingJarConfList")
+    @Expose
+    private ClusterConfigsInfoFromEMR [] ExistingJarConfList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +130,22 @@ public class DescribeClusterConfigsResponse extends AbstractModel {
     }
 
     /**
+     * Get 实例已经存在的jar包列表 
+     * @return ExistingJarConfList 实例已经存在的jar包列表
+     */
+    public ClusterConfigsInfoFromEMR [] getExistingJarConfList() {
+        return this.ExistingJarConfList;
+    }
+
+    /**
+     * Set 实例已经存在的jar包列表
+     * @param ExistingJarConfList 实例已经存在的jar包列表
+     */
+    public void setExistingJarConfList(ClusterConfigsInfoFromEMR [] ExistingJarConfList) {
+        this.ExistingJarConfList = ExistingJarConfList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -161,6 +184,12 @@ public class DescribeClusterConfigsResponse extends AbstractModel {
         if (source.HasCN != null) {
             this.HasCN = new Boolean(source.HasCN);
         }
+        if (source.ExistingJarConfList != null) {
+            this.ExistingJarConfList = new ClusterConfigsInfoFromEMR[source.ExistingJarConfList.length];
+            for (int i = 0; i < source.ExistingJarConfList.length; i++) {
+                this.ExistingJarConfList[i] = new ClusterConfigsInfoFromEMR(source.ExistingJarConfList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -175,6 +204,7 @@ public class DescribeClusterConfigsResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "BuildVersion", this.BuildVersion);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "HasCN", this.HasCN);
+        this.setParamArrayObj(map, prefix + "ExistingJarConfList.", this.ExistingJarConfList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

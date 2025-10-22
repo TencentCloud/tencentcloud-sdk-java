@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeZonesResponse extends AbstractModel {
+public class QuestionSplitLayoutOCRResponse extends AbstractModel {
 
     /**
-    * 符合条件的站点个数。
+    * 检测到的文本信息
     */
-    @SerializedName("TotalCount")
+    @SerializedName("QuestionInfo")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 站点列表详情。
-    */
-    @SerializedName("Zones")
-    @Expose
-    private Zone [] Zones;
+    private QuestionInfo [] QuestionInfo;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class DescribeZonesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的站点个数。 
-     * @return TotalCount 符合条件的站点个数。
+     * Get 检测到的文本信息 
+     * @return QuestionInfo 检测到的文本信息
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public QuestionInfo [] getQuestionInfo() {
+        return this.QuestionInfo;
     }
 
     /**
-     * Set 符合条件的站点个数。
-     * @param TotalCount 符合条件的站点个数。
+     * Set 检测到的文本信息
+     * @param QuestionInfo 检测到的文本信息
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 站点列表详情。 
-     * @return Zones 站点列表详情。
-     */
-    public Zone [] getZones() {
-        return this.Zones;
-    }
-
-    /**
-     * Set 站点列表详情。
-     * @param Zones 站点列表详情。
-     */
-    public void setZones(Zone [] Zones) {
-        this.Zones = Zones;
+    public void setQuestionInfo(QuestionInfo [] QuestionInfo) {
+        this.QuestionInfo = QuestionInfo;
     }
 
     /**
@@ -92,21 +69,18 @@ public class DescribeZonesResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeZonesResponse() {
+    public QuestionSplitLayoutOCRResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeZonesResponse(DescribeZonesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Zones != null) {
-            this.Zones = new Zone[source.Zones.length];
-            for (int i = 0; i < source.Zones.length; i++) {
-                this.Zones[i] = new Zone(source.Zones[i]);
+    public QuestionSplitLayoutOCRResponse(QuestionSplitLayoutOCRResponse source) {
+        if (source.QuestionInfo != null) {
+            this.QuestionInfo = new QuestionInfo[source.QuestionInfo.length];
+            for (int i = 0; i < source.QuestionInfo.length; i++) {
+                this.QuestionInfo[i] = new QuestionInfo(source.QuestionInfo[i]);
             }
         }
         if (source.RequestId != null) {
@@ -119,8 +93,7 @@ public class DescribeZonesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Zones.", this.Zones);
+        this.setParamArrayObj(map, prefix + "QuestionInfo.", this.QuestionInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

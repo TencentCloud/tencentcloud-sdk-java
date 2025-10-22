@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class SetExternalSAMLIdentityProviderResponse extends AbstractModel {
 
     /**
+    * 证书ID。
+    */
+    @SerializedName("CertificateIds")
+    @Expose
+    private String [] CertificateIds;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 证书ID。 
+     * @return CertificateIds 证书ID。
+     */
+    public String [] getCertificateIds() {
+        return this.CertificateIds;
+    }
+
+    /**
+     * Set 证书ID。
+     * @param CertificateIds 证书ID。
+     */
+    public void setCertificateIds(String [] CertificateIds) {
+        this.CertificateIds = CertificateIds;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,12 @@ public class SetExternalSAMLIdentityProviderResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SetExternalSAMLIdentityProviderResponse(SetExternalSAMLIdentityProviderResponse source) {
+        if (source.CertificateIds != null) {
+            this.CertificateIds = new String[source.CertificateIds.length];
+            for (int i = 0; i < source.CertificateIds.length; i++) {
+                this.CertificateIds[i] = new String(source.CertificateIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class SetExternalSAMLIdentityProviderResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "CertificateIds.", this.CertificateIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -39,6 +39,28 @@ public class TmsClient extends AbstractClient{
     }
 
     /**
+     *创建金融大模型审校任务
+     * @param req CreateFinancialLLMTaskRequest
+     * @return CreateFinancialLLMTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFinancialLLMTaskResponse CreateFinancialLLMTask(CreateFinancialLLMTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFinancialLLMTask", CreateFinancialLLMTaskResponse.class);
+    }
+
+    /**
+     *获取金融大模型审校任务结果
+     * @param req GetFinancialLLMTaskResultRequest
+     * @return GetFinancialLLMTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFinancialLLMTaskResultResponse GetFinancialLLMTaskResult(GetFinancialLLMTaskResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetFinancialLLMTaskResult", GetFinancialLLMTaskResultResponse.class);
+    }
+
+    /**
      *本接口（Text Moderation）用于提交文本内容进行智能审核任务。使用前请您使用腾讯云主账号登录控制台 [开通文本内容安全服务](https://console.cloud.tencent.com/cms) 并调整好对应的业务配置。
 
 ### 接口使用说明

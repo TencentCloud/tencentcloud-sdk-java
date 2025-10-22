@@ -61,6 +61,17 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *查询图生视频通用能力任务接口
+     * @param req DescribeImageToVideoGeneralJobRequest
+     * @return DescribeImageToVideoGeneralJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageToVideoGeneralJobResponse DescribeImageToVideoGeneralJob(DescribeImageToVideoGeneralJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageToVideoGeneralJob", DescribeImageToVideoGeneralJobResponse.class);
+    }
+
+    /**
      *用于查询图片唱演任务。
 支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
      * @param req DescribePortraitSingJobRequest
@@ -103,6 +114,17 @@ public class VclmClient extends AbstractClient{
     public SubmitImageAnimateJobResponse SubmitImageAnimateJob(SubmitImageAnimateJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitImageAnimateJob", SubmitImageAnimateJobResponse.class);
+    }
+
+    /**
+     *图生视频通用能力接口
+     * @param req SubmitImageToVideoGeneralJobRequest
+     * @return SubmitImageToVideoGeneralJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitImageToVideoGeneralJobResponse SubmitImageToVideoGeneralJob(SubmitImageToVideoGeneralJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitImageToVideoGeneralJob", SubmitImageToVideoGeneralJobResponse.class);
     }
 
     /**

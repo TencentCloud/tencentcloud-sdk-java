@@ -31,6 +31,7 @@ public class SecurityAction extends AbstractModel {
 <li>Disabled：未启用，不启用指定规则；</li>
 <li>Allow：允许访问，但延迟处理请求；</li>
 <li>Challenge：挑战，响应挑战内容；</li>
+<li>Trans：放行，允许请求直接访问站点资源；</li>
 <li>BlockIP：待废弃，IP 封禁；</li>
 <li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
 <li>JSChallenge：待废弃，JavaScript 挑战；</li>
@@ -90,6 +91,7 @@ public class SecurityAction extends AbstractModel {
 <li>Disabled：未启用，不启用指定规则；</li>
 <li>Allow：允许访问，但延迟处理请求；</li>
 <li>Challenge：挑战，响应挑战内容；</li>
+<li>Trans：放行，允许请求直接访问站点资源；</li>
 <li>BlockIP：待废弃，IP 封禁；</li>
 <li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
 <li>JSChallenge：待废弃，JavaScript 挑战；</li>
@@ -101,6 +103,7 @@ public class SecurityAction extends AbstractModel {
 <li>Disabled：未启用，不启用指定规则；</li>
 <li>Allow：允许访问，但延迟处理请求；</li>
 <li>Challenge：挑战，响应挑战内容；</li>
+<li>Trans：放行，允许请求直接访问站点资源；</li>
 <li>BlockIP：待废弃，IP 封禁；</li>
 <li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
 <li>JSChallenge：待废弃，JavaScript 挑战；</li>
@@ -118,6 +121,7 @@ public class SecurityAction extends AbstractModel {
 <li>Disabled：未启用，不启用指定规则；</li>
 <li>Allow：允许访问，但延迟处理请求；</li>
 <li>Challenge：挑战，响应挑战内容；</li>
+<li>Trans：放行，允许请求直接访问站点资源；</li>
 <li>BlockIP：待废弃，IP 封禁；</li>
 <li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
 <li>JSChallenge：待废弃，JavaScript 挑战；</li>
@@ -129,6 +133,7 @@ public class SecurityAction extends AbstractModel {
 <li>Disabled：未启用，不启用指定规则；</li>
 <li>Allow：允许访问，但延迟处理请求；</li>
 <li>Challenge：挑战，响应挑战内容；</li>
+<li>Trans：放行，允许请求直接访问站点资源；</li>
 <li>BlockIP：待废弃，IP 封禁；</li>
 <li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
 <li>JSChallenge：待废弃，JavaScript 挑战；</li>

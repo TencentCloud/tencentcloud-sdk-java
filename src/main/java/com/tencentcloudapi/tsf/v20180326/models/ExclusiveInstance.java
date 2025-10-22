@@ -66,6 +66,30 @@ public class ExclusiveInstance extends AbstractModel {
     private String InstanceNamespaceId;
 
     /**
+    * 部署组Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+    * 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private Long UpdateTime;
+
+    /**
      * Get 配置中心类型[注册中心Registration、配置中心Configuration] 
      * @return CenterType 配置中心类型[注册中心Registration、配置中心Configuration]
      */
@@ -161,6 +185,66 @@ public class ExclusiveInstance extends AbstractModel {
         this.InstanceNamespaceId = InstanceNamespaceId;
     }
 
+    /**
+     * Get 部署组Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupId 部署组Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 部署组Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupId 部署组Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(Long UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public ExclusiveInstance() {
     }
 
@@ -187,6 +271,15 @@ public class ExclusiveInstance extends AbstractModel {
         if (source.InstanceNamespaceId != null) {
             this.InstanceNamespaceId = new String(source.InstanceNamespaceId);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
     }
 
 
@@ -200,6 +293,9 @@ public class ExclusiveInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "InstanceNamespaceId", this.InstanceNamespaceId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

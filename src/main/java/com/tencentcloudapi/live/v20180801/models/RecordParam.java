@@ -37,6 +37,7 @@ FLV、MP4取值范围： 60-43200， AAC取值范围： 60-7200 。
     * 录制存储时长。
 单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
+注：此参数只对录制到VOD有效。
     */
     @SerializedName("StorageTime")
     @Expose
@@ -163,10 +164,12 @@ FLV、MP4取值范围： 60-43200， AAC取值范围： 60-7200 。
     /**
      * Get 录制存储时长。
 单位秒，取值范围： 0 - 1500天。
-0：表示永久存储。 
+0：表示永久存储。
+注：此参数只对录制到VOD有效。 
      * @return StorageTime 录制存储时长。
 单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
+注：此参数只对录制到VOD有效。
      */
     public Long getStorageTime() {
         return this.StorageTime;
@@ -176,9 +179,11 @@ FLV、MP4取值范围： 60-43200， AAC取值范围： 60-7200 。
      * Set 录制存储时长。
 单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
+注：此参数只对录制到VOD有效。
      * @param StorageTime 录制存储时长。
 单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
+注：此参数只对录制到VOD有效。
      */
     public void setStorageTime(Long StorageTime) {
         this.StorageTime = StorageTime;
