@@ -31,7 +31,7 @@ public class CreateFlowLogRequest extends AbstractModel {
     private String FlowLogName;
 
     /**
-    * 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。
+    * 流日志所属资源类型，NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择CCN，DCG时，请通过工单加入白名单。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -102,6 +102,13 @@ public class CreateFlowLogRequest extends AbstractModel {
     private String CloudLogRegion;
 
     /**
+    * 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
      * Get 流日志实例名称。长度为不超过60个字符。 
      * @return FlowLogName 流日志实例名称。长度为不超过60个字符。
      */
@@ -118,16 +125,16 @@ public class CreateFlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。 
-     * @return ResourceType 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。
+     * Get 流日志所属资源类型，NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择CCN，DCG时，请通过工单加入白名单。 
+     * @return ResourceType 流日志所属资源类型，NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择CCN，DCG时，请通过工单加入白名单。
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。
-     * @param ResourceType 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。
+     * Set 流日志所属资源类型，NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择CCN，DCG时，请通过工单加入白名单。
+     * @param ResourceType 流日志所属资源类型，NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择CCN，DCG时，请通过工单加入白名单。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -281,6 +288,22 @@ public class CreateFlowLogRequest extends AbstractModel {
         this.CloudLogRegion = CloudLogRegion;
     }
 
+    /**
+     * Get 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。 
+     * @return Period 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+     * @param Period 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
     public CreateFlowLogRequest() {
     }
 
@@ -325,6 +348,9 @@ public class CreateFlowLogRequest extends AbstractModel {
         if (source.CloudLogRegion != null) {
             this.CloudLogRegion = new String(source.CloudLogRegion);
         }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
     }
 
 
@@ -343,6 +369,7 @@ public class CreateFlowLogRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
         this.setParamSimple(map, prefix + "CloudLogRegion", this.CloudLogRegion);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

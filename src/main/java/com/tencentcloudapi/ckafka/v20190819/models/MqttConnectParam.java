@@ -74,6 +74,7 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
     * 是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUpdate")
     @Expose
@@ -206,8 +207,10 @@ public class MqttConnectParam extends AbstractModel {
     }
 
     /**
-     * Get 是否更新到关联的Dip任务 
+     * Get 是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsUpdate 是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUpdate() {
         return this.IsUpdate;
@@ -215,7 +218,9 @@ public class MqttConnectParam extends AbstractModel {
 
     /**
      * Set 是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUpdate 是否更新到关联的Dip任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUpdate(Boolean IsUpdate) {
         this.IsUpdate = IsUpdate;

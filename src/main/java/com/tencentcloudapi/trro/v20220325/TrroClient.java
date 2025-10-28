@@ -259,6 +259,17 @@ public class TrroClient extends AbstractClient{
     }
 
     /**
+     *查询该时间段、对应项目、设备的不同分辨率的通话时长流水，流水以日期（天）为单位
+     * @param req GetDurationDetailsRequest
+     * @return GetDurationDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDurationDetailsResponse GetDurationDetails(GetDurationDetailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDurationDetails", GetDurationDetailsResponse.class);
+    }
+
+    /**
      *统计license类型数量
      * @param req GetLicenseStatRequest
      * @return GetLicenseStatResponse
@@ -278,6 +289,17 @@ public class TrroClient extends AbstractClient{
     public GetLicensesResponse GetLicenses(GetLicensesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetLicenses", GetLicensesResponse.class);
+    }
+
+    /**
+     *查询该时间段、对应项目、设备的不同分辨率的通话时长汇总
+     * @param req GetTotalDurationRequest
+     * @return GetTotalDurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTotalDurationResponse GetTotalDuration(GetTotalDurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTotalDuration", GetTotalDurationResponse.class);
     }
 
     /**

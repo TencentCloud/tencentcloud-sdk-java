@@ -66,6 +66,14 @@ public class Storage extends AbstractModel {
     private String StorageAppId;
 
     /**
+    * 是否压缩。
+1:压缩  2:不压缩
+    */
+    @SerializedName("Compress")
+    @Expose
+    private Long Compress;
+
+    /**
      * Get 存储类型（目前支持 cos、cls） 
      * @return StorageType 存储类型（目前支持 cos、cls）
      */
@@ -161,6 +169,26 @@ public class Storage extends AbstractModel {
         this.StorageAppId = StorageAppId;
     }
 
+    /**
+     * Get 是否压缩。
+1:压缩  2:不压缩 
+     * @return Compress 是否压缩。
+1:压缩  2:不压缩
+     */
+    public Long getCompress() {
+        return this.Compress;
+    }
+
+    /**
+     * Set 是否压缩。
+1:压缩  2:不压缩
+     * @param Compress 是否压缩。
+1:压缩  2:不压缩
+     */
+    public void setCompress(Long Compress) {
+        this.Compress = Compress;
+    }
+
     public Storage() {
     }
 
@@ -187,6 +215,9 @@ public class Storage extends AbstractModel {
         if (source.StorageAppId != null) {
             this.StorageAppId = new String(source.StorageAppId);
         }
+        if (source.Compress != null) {
+            this.Compress = new Long(source.Compress);
+        }
     }
 
 
@@ -200,6 +231,7 @@ public class Storage extends AbstractModel {
         this.setParamSimple(map, prefix + "StoragePrefix", this.StoragePrefix);
         this.setParamSimple(map, prefix + "StorageAccountId", this.StorageAccountId);
         this.setParamSimple(map, prefix + "StorageAppId", this.StorageAppId);
+        this.setParamSimple(map, prefix + "Compress", this.Compress);
 
     }
 }

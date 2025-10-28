@@ -25,7 +25,19 @@ public class CreateInstancesRequest extends AbstractModel {
 
     /**
     * 实例类型。
-<ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。</li>说明：CKV 版本当前有存量用户使用，暂时保留。</ul>
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
+- 200：Memcached 1.6 内存版（集群架构）。
+**说明**：CKV 版本当前有存量用户使用，暂时保留。
     */
     @SerializedName("TypeId")
     @Expose
@@ -140,7 +152,7 @@ public class CreateInstancesRequest extends AbstractModel {
 
     /**
     * 实例副本数量。
-- Redis 内存版 4.0、5.0、6.2 标准架构和集群架构支持副本数量范围为[1,5]。
+- Redis 内存版 4.0、5.0、6.2、7.0 标准架构和集群架构支持副本数量范围为[1,5]。
 - Redis 2.8标准版、CKV标准版只支持1副本。
     */
     @SerializedName("RedisReplicasNum")
@@ -224,7 +236,10 @@ public class CreateInstancesRequest extends AbstractModel {
     private String ProductVersion;
 
     /**
-    * 独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
+    * 独享集群 ID。
+
+- 当 **ProductVersion** 设置为 **cdc** 时，该参数必须设置。
+- 请通过接口[ DescribeRedisClusters](https://cloud.tencent.com/document/product/239/109628) 获取集群 ID。
     */
     @SerializedName("RedisClusterId")
     @Expose
@@ -249,9 +264,33 @@ public class CreateInstancesRequest extends AbstractModel {
 
     /**
      * Get 实例类型。
-<ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。</li>说明：CKV 版本当前有存量用户使用，暂时保留。</ul> 
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
+- 200：Memcached 1.6 内存版（集群架构）。
+**说明**：CKV 版本当前有存量用户使用，暂时保留。 
      * @return TypeId 实例类型。
-<ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。</li>说明：CKV 版本当前有存量用户使用，暂时保留。</ul>
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
+- 200：Memcached 1.6 内存版（集群架构）。
+**说明**：CKV 版本当前有存量用户使用，暂时保留。
      */
     public Long getTypeId() {
         return this.TypeId;
@@ -259,9 +298,33 @@ public class CreateInstancesRequest extends AbstractModel {
 
     /**
      * Set 实例类型。
-<ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。</li>说明：CKV 版本当前有存量用户使用，暂时保留。</ul>
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
+- 200：Memcached 1.6 内存版（集群架构）。
+**说明**：CKV 版本当前有存量用户使用，暂时保留。
      * @param TypeId 实例类型。
-<ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。</li>说明：CKV 版本当前有存量用户使用，暂时保留。</ul>
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
+- 200：Memcached 1.6 内存版（集群架构）。
+**说明**：CKV 版本当前有存量用户使用，暂时保留。
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
@@ -541,10 +604,10 @@ public class CreateInstancesRequest extends AbstractModel {
 
     /**
      * Get 实例副本数量。
-- Redis 内存版 4.0、5.0、6.2 标准架构和集群架构支持副本数量范围为[1,5]。
+- Redis 内存版 4.0、5.0、6.2、7.0 标准架构和集群架构支持副本数量范围为[1,5]。
 - Redis 2.8标准版、CKV标准版只支持1副本。 
      * @return RedisReplicasNum 实例副本数量。
-- Redis 内存版 4.0、5.0、6.2 标准架构和集群架构支持副本数量范围为[1,5]。
+- Redis 内存版 4.0、5.0、6.2、7.0 标准架构和集群架构支持副本数量范围为[1,5]。
 - Redis 2.8标准版、CKV标准版只支持1副本。
      */
     public Long getRedisReplicasNum() {
@@ -553,10 +616,10 @@ public class CreateInstancesRequest extends AbstractModel {
 
     /**
      * Set 实例副本数量。
-- Redis 内存版 4.0、5.0、6.2 标准架构和集群架构支持副本数量范围为[1,5]。
+- Redis 内存版 4.0、5.0、6.2、7.0 标准架构和集群架构支持副本数量范围为[1,5]。
 - Redis 2.8标准版、CKV标准版只支持1副本。
      * @param RedisReplicasNum 实例副本数量。
-- Redis 内存版 4.0、5.0、6.2 标准架构和集群架构支持副本数量范围为[1,5]。
+- Redis 内存版 4.0、5.0、6.2、7.0 标准架构和集群架构支持副本数量范围为[1,5]。
 - Redis 2.8标准版、CKV标准版只支持1副本。
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
@@ -760,16 +823,28 @@ public class CreateInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。 
-     * @return RedisClusterId 独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
+     * Get 独享集群 ID。
+
+- 当 **ProductVersion** 设置为 **cdc** 时，该参数必须设置。
+- 请通过接口[ DescribeRedisClusters](https://cloud.tencent.com/document/product/239/109628) 获取集群 ID。 
+     * @return RedisClusterId 独享集群 ID。
+
+- 当 **ProductVersion** 设置为 **cdc** 时，该参数必须设置。
+- 请通过接口[ DescribeRedisClusters](https://cloud.tencent.com/document/product/239/109628) 获取集群 ID。
      */
     public String getRedisClusterId() {
         return this.RedisClusterId;
     }
 
     /**
-     * Set 独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
-     * @param RedisClusterId 独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
+     * Set 独享集群 ID。
+
+- 当 **ProductVersion** 设置为 **cdc** 时，该参数必须设置。
+- 请通过接口[ DescribeRedisClusters](https://cloud.tencent.com/document/product/239/109628) 获取集群 ID。
+     * @param RedisClusterId 独享集群 ID。
+
+- 当 **ProductVersion** 设置为 **cdc** 时，该参数必须设置。
+- 请通过接口[ DescribeRedisClusters](https://cloud.tencent.com/document/product/239/109628) 获取集群 ID。
      */
     public void setRedisClusterId(String RedisClusterId) {
         this.RedisClusterId = RedisClusterId;

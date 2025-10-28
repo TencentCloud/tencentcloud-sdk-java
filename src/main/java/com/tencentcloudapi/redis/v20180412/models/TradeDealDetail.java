@@ -110,7 +110,9 @@ public class TradeDealDetail extends AbstractModel {
     /**
      * Get 订单号ID，调用云API时使用此ID 
      * @return DealId 订单号ID，调用云API时使用此ID
+     * @deprecated
      */
+    @Deprecated
     public String getDealId() {
         return this.DealId;
     }
@@ -118,7 +120,9 @@ public class TradeDealDetail extends AbstractModel {
     /**
      * Set 订单号ID，调用云API时使用此ID
      * @param DealId 订单号ID，调用云API时使用此ID
+     * @deprecated
      */
+    @Deprecated
     public void setDealId(String DealId) {
         this.DealId = DealId;
     }

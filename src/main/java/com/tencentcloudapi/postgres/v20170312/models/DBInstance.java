@@ -334,6 +334,15 @@ mssql_compatible引擎：
     private Long ExpandedCpu;
 
     /**
+    * 实例是否开启删除保护，取值如下：
+- true：开启删除保护
+- false：关闭删除保护
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。 
      * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。
      */
@@ -1093,6 +1102,30 @@ mssql_compatible引擎：
         this.ExpandedCpu = ExpandedCpu;
     }
 
+    /**
+     * Get 实例是否开启删除保护，取值如下：
+- true：开启删除保护
+- false：关闭删除保护 
+     * @return DeletionProtection 实例是否开启删除保护，取值如下：
+- true：开启删除保护
+- false：关闭删除保护
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 实例是否开启删除保护，取值如下：
+- true：开启删除保护
+- false：关闭删除保护
+     * @param DeletionProtection 实例是否开启删除保护，取值如下：
+- true：开启删除保护
+- false：关闭删除保护
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public DBInstance() {
     }
 
@@ -1233,6 +1266,9 @@ mssql_compatible引擎：
         if (source.ExpandedCpu != null) {
             this.ExpandedCpu = new Long(source.ExpandedCpu);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -1280,6 +1316,7 @@ mssql_compatible引擎：
         this.setParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
         this.setParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
         this.setParamSimple(map, prefix + "ExpandedCpu", this.ExpandedCpu);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

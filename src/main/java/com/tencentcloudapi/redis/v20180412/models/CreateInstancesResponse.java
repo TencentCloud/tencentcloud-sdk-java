@@ -38,6 +38,13 @@ public class CreateInstancesResponse extends AbstractModel {
     private String [] InstanceIds;
 
     /**
+    * 订单号。
+    */
+    @SerializedName("DealName")
+    @Expose
+    private String DealName;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -47,7 +54,9 @@ public class CreateInstancesResponse extends AbstractModel {
     /**
      * Get 交易的ID。 
      * @return DealId 交易的ID。
+     * @deprecated
      */
+    @Deprecated
     public String getDealId() {
         return this.DealId;
     }
@@ -55,7 +64,9 @@ public class CreateInstancesResponse extends AbstractModel {
     /**
      * Set 交易的ID。
      * @param DealId 交易的ID。
+     * @deprecated
      */
+    @Deprecated
     public void setDealId(String DealId) {
         this.DealId = DealId;
     }
@@ -74,6 +85,22 @@ public class CreateInstancesResponse extends AbstractModel {
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get 订单号。 
+     * @return DealName 订单号。
+     */
+    public String getDealName() {
+        return this.DealName;
+    }
+
+    /**
+     * Set 订单号。
+     * @param DealName 订单号。
+     */
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
     }
 
     /**
@@ -109,6 +136,9 @@ public class CreateInstancesResponse extends AbstractModel {
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +151,7 @@ public class CreateInstancesResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealId", this.DealId);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

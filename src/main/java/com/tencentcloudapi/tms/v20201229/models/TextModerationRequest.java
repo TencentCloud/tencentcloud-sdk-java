@@ -74,6 +74,13 @@ public class TextModerationRequest extends AbstractModel {
     private String Type;
 
     /**
+    * 流式审核策略维度下的唯一会话ID
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
      * Get 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密 
      * @return Content 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密
      */
@@ -189,6 +196,22 @@ public class TextModerationRequest extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get 流式审核策略维度下的唯一会话ID 
+     * @return SessionId 流式审核策略维度下的唯一会话ID
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 流式审核策略维度下的唯一会话ID
+     * @param SessionId 流式审核策略维度下的唯一会话ID
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
     public TextModerationRequest() {
     }
 
@@ -218,6 +241,9 @@ public class TextModerationRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
     }
 
 
@@ -232,6 +258,7 @@ public class TextModerationRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Device.", this.Device);
         this.setParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
 
     }
 }

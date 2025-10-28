@@ -26,9 +26,9 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     /**
     * 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string
-db-instance-name：按照实例名过滤，类型为string
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照实例付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，prepaid - 预付费；postpaid - 后付费。类型为string
 db-tag-key：按照标签键过滤，类型为string
 db-private-ip： 按照实例私有网络IP过滤，类型为string
 db-public-address： 按照实例外网地址过滤，类型为string
@@ -39,7 +39,7 @@ db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string
     private Filter [] Filters;
 
     /**
-    * 每页显示数量，取值范围为1-100，默认为返回10条。
+    * 每页显示数量，取值范围为0-100，传入0时，取默认配置。默认为返回10条。
     */
     @SerializedName("Limit")
     @Expose
@@ -53,14 +53,14 @@ db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string
     private Long Offset;
 
     /**
-    * 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
+    * 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime。默认值：CreateTime。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序方式，包括升序：asc、降序：desc。
+    * 排序方式，包括升序：asc、降序：desc。默认值：asc。
     */
     @SerializedName("OrderByType")
     @Expose
@@ -69,18 +69,18 @@ db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string
     /**
      * Get 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string
-db-instance-name：按照实例名过滤，类型为string
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照实例付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，prepaid - 预付费；postpaid - 后付费。类型为string
 db-tag-key：按照标签键过滤，类型为string
 db-private-ip： 按照实例私有网络IP过滤，类型为string
 db-public-address： 按照实例外网地址过滤，类型为string
 db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string 
      * @return Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string
-db-instance-name：按照实例名过滤，类型为string
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照实例付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，prepaid - 预付费；postpaid - 后付费。类型为string
 db-tag-key：按照标签键过滤，类型为string
 db-private-ip： 按照实例私有网络IP过滤，类型为string
 db-public-address： 按照实例外网地址过滤，类型为string
@@ -93,18 +93,18 @@ db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string
     /**
      * Set 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string
-db-instance-name：按照实例名过滤，类型为string
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照实例付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，prepaid - 预付费；postpaid - 后付费。类型为string
 db-tag-key：按照标签键过滤，类型为string
 db-private-ip： 按照实例私有网络IP过滤，类型为string
 db-public-address： 按照实例外网地址过滤，类型为string
 db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string
      * @param Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string
-db-instance-name：按照实例名过滤，类型为string
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照实例付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，prepaid - 预付费；postpaid - 后付费。类型为string
 db-tag-key：按照标签键过滤，类型为string
 db-private-ip： 按照实例私有网络IP过滤，类型为string
 db-public-address： 按照实例外网地址过滤，类型为string
@@ -115,16 +115,16 @@ db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string
     }
 
     /**
-     * Get 每页显示数量，取值范围为1-100，默认为返回10条。 
-     * @return Limit 每页显示数量，取值范围为1-100，默认为返回10条。
+     * Get 每页显示数量，取值范围为0-100，传入0时，取默认配置。默认为返回10条。 
+     * @return Limit 每页显示数量，取值范围为0-100，传入0时，取默认配置。默认为返回10条。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页显示数量，取值范围为1-100，默认为返回10条。
-     * @param Limit 每页显示数量，取值范围为1-100，默认为返回10条。
+     * Set 每页显示数量，取值范围为0-100，传入0时，取默认配置。默认为返回10条。
+     * @param Limit 每页显示数量，取值范围为0-100，传入0时，取默认配置。默认为返回10条。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -147,32 +147,32 @@ db-dedicated-cluster-id: 按照私有集群Id过滤，类型为string
     }
 
     /**
-     * Get 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime 
-     * @return OrderBy 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
+     * Get 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime。默认值：CreateTime。 
+     * @return OrderBy 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime。默认值：CreateTime。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
-     * @param OrderBy 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
+     * Set 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime。默认值：CreateTime。
+     * @param OrderBy 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime。默认值：CreateTime。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序方式，包括升序：asc、降序：desc。 
-     * @return OrderByType 排序方式，包括升序：asc、降序：desc。
+     * Get 排序方式，包括升序：asc、降序：desc。默认值：asc。 
+     * @return OrderByType 排序方式，包括升序：asc、降序：desc。默认值：asc。
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 排序方式，包括升序：asc、降序：desc。
-     * @param OrderByType 排序方式，包括升序：asc、降序：desc。
+     * Set 排序方式，包括升序：asc、降序：desc。默认值：asc。
+     * @param OrderByType 排序方式，包括升序：asc、降序：desc。默认值：asc。
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

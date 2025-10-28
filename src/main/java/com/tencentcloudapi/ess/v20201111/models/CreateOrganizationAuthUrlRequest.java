@@ -71,7 +71,9 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
     private String LegalName;
 
     /**
-    * 认证完成跳回的链接，最长500个字符
+    * <font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+
     */
     @SerializedName("AutoJumpUrl")
     @Expose
@@ -247,6 +249,18 @@ p.s. 仅在对公打款不为空时有效
     private Boolean BankAccountNumberSame;
 
     /**
+    * 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+    */
+    @SerializedName("JumpEvents")
+    @Expose
+    private JumpEvent [] JumpEvents;
+
+    /**
      * Get 操作人信息 
      * @return Operator 操作人信息
      */
@@ -375,16 +389,24 @@ p.s. 仅在对公打款不为空时有效
     }
 
     /**
-     * Get 认证完成跳回的链接，最长500个字符 
-     * @return AutoJumpUrl 认证完成跳回的链接，最长500个字符
+     * Get <font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+ 
+     * @return AutoJumpUrl <font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+
      */
     public String getAutoJumpUrl() {
         return this.AutoJumpUrl;
     }
 
     /**
-     * Set 认证完成跳回的链接，最长500个字符
-     * @param AutoJumpUrl 认证完成跳回的链接，最长500个字符
+     * Set <font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+
+     * @param AutoJumpUrl <font color="red">即将废弃</font>，入参请使用JumpEvents。
+认证完成跳回的链接，最长500个字符。
+
      */
     public void setAutoJumpUrl(String AutoJumpUrl) {
         this.AutoJumpUrl = AutoJumpUrl;
@@ -850,6 +872,42 @@ p.s. 仅在对公打款不为空时有效
         this.BankAccountNumberSame = BankAccountNumberSame;
     }
 
+    /**
+     * Get 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。 
+     * @return JumpEvents 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+     */
+    public JumpEvent [] getJumpEvents() {
+        return this.JumpEvents;
+    }
+
+    /**
+     * Set 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+     * @param JumpEvents 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.
+Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 
+
+p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+     */
+    public void setJumpEvents(JumpEvent [] JumpEvents) {
+        this.JumpEvents = JumpEvents;
+    }
+
     public CreateOrganizationAuthUrlRequest() {
     }
 
@@ -939,6 +997,12 @@ p.s. 仅在对公打款不为空时有效
         if (source.BankAccountNumberSame != null) {
             this.BankAccountNumberSame = new Boolean(source.BankAccountNumberSame);
         }
+        if (source.JumpEvents != null) {
+            this.JumpEvents = new JumpEvent[source.JumpEvents.length];
+            for (int i = 0; i < source.JumpEvents.length; i++) {
+                this.JumpEvents[i] = new JumpEvent(source.JumpEvents[i]);
+            }
+        }
     }
 
 
@@ -970,6 +1034,7 @@ p.s. 仅在对公打款不为空时有效
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
         this.setParamSimple(map, prefix + "BankAccountNumberSame", this.BankAccountNumberSame);
+        this.setParamArrayObj(map, prefix + "JumpEvents.", this.JumpEvents);
 
     }
 }

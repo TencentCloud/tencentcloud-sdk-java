@@ -66,11 +66,28 @@ public class AccountInfo extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 账号类型
+    * 账号密码最近一次修改时间。
+
+此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00
+同时仅通过云API或者管控控制台修改密码，才会更新该字段。
+    */
+    @SerializedName("PasswordUpdateTime")
+    @Expose
+    private String PasswordUpdateTime;
+
+    /**
+    * 账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。
     */
     @SerializedName("UserType")
     @Expose
     private String UserType;
+
+    /**
+    * 用户账号是否启用CAM验证
+    */
+    @SerializedName("OpenCam")
+    @Expose
+    private Boolean OpenCam;
 
     /**
      * Get 实例ID，形如postgres-lnp6j617 
@@ -169,19 +186,63 @@ public class AccountInfo extends AbstractModel {
     }
 
     /**
-     * Get 账号类型 
-     * @return UserType 账号类型
+     * Get 账号密码最近一次修改时间。
+
+此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00
+同时仅通过云API或者管控控制台修改密码，才会更新该字段。 
+     * @return PasswordUpdateTime 账号密码最近一次修改时间。
+
+此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00
+同时仅通过云API或者管控控制台修改密码，才会更新该字段。
+     */
+    public String getPasswordUpdateTime() {
+        return this.PasswordUpdateTime;
+    }
+
+    /**
+     * Set 账号密码最近一次修改时间。
+
+此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00
+同时仅通过云API或者管控控制台修改密码，才会更新该字段。
+     * @param PasswordUpdateTime 账号密码最近一次修改时间。
+
+此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00
+同时仅通过云API或者管控控制台修改密码，才会更新该字段。
+     */
+    public void setPasswordUpdateTime(String PasswordUpdateTime) {
+        this.PasswordUpdateTime = PasswordUpdateTime;
+    }
+
+    /**
+     * Get 账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。 
+     * @return UserType 账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。
      */
     public String getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 账号类型
-     * @param UserType 账号类型
+     * Set 账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。
+     * @param UserType 账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。
      */
     public void setUserType(String UserType) {
         this.UserType = UserType;
+    }
+
+    /**
+     * Get 用户账号是否启用CAM验证 
+     * @return OpenCam 用户账号是否启用CAM验证
+     */
+    public Boolean getOpenCam() {
+        return this.OpenCam;
+    }
+
+    /**
+     * Set 用户账号是否启用CAM验证
+     * @param OpenCam 用户账号是否启用CAM验证
+     */
+    public void setOpenCam(Boolean OpenCam) {
+        this.OpenCam = OpenCam;
     }
 
     public AccountInfo() {
@@ -210,8 +271,14 @@ public class AccountInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.PasswordUpdateTime != null) {
+            this.PasswordUpdateTime = new String(source.PasswordUpdateTime);
+        }
         if (source.UserType != null) {
             this.UserType = new String(source.UserType);
+        }
+        if (source.OpenCam != null) {
+            this.OpenCam = new Boolean(source.OpenCam);
         }
     }
 
@@ -226,7 +293,9 @@ public class AccountInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "PasswordUpdateTime", this.PasswordUpdateTime);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "OpenCam", this.OpenCam);
 
     }
 }

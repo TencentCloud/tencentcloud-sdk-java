@@ -262,6 +262,20 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel {
     private Long Id;
 
     /**
+    * 解决方案
+    */
+    @SerializedName("Solution")
+    @Expose
+    private String Solution;
+
+    /**
+    * 原因
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -817,6 +831,38 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 解决方案 
+     * @return Solution 解决方案
+     */
+    public String getSolution() {
+        return this.Solution;
+    }
+
+    /**
+     * Set 解决方案
+     * @param Solution 解决方案
+     */
+    public void setSolution(String Solution) {
+        this.Solution = Solution;
+    }
+
+    /**
+     * Get 原因 
+     * @return Reason 原因
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set 原因
+     * @param Reason 原因
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -942,6 +988,12 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel {
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
+        if (source.Solution != null) {
+            this.Solution = new String(source.Solution);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -986,6 +1038,8 @@ public class DescribeAssetImageRegistryDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageCreateTime", this.ImageCreateTime);
         this.setParamSimple(map, prefix + "SensitiveInfoCnt", this.SensitiveInfoCnt);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Solution", this.Solution);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

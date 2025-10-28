@@ -84,7 +84,9 @@ public class AddressTemplateItem extends AbstractModel {
     /**
      * Get IP模板名称，废弃字段。 
      * @return AddressTemplateName IP模板名称，废弃字段。
+     * @deprecated
      */
+    @Deprecated
     public String getAddressTemplateName() {
         return this.AddressTemplateName;
     }
@@ -92,7 +94,9 @@ public class AddressTemplateItem extends AbstractModel {
     /**
      * Set IP模板名称，废弃字段。
      * @param AddressTemplateName IP模板名称，废弃字段。
+     * @deprecated
      */
+    @Deprecated
     public void setAddressTemplateName(String AddressTemplateName) {
         this.AddressTemplateName = AddressTemplateName;
     }
@@ -100,7 +104,9 @@ public class AddressTemplateItem extends AbstractModel {
     /**
      * Get 废弃字段。 
      * @return From 废弃字段。
+     * @deprecated
      */
+    @Deprecated
     public String getFrom() {
         return this.From;
     }
@@ -108,7 +114,9 @@ public class AddressTemplateItem extends AbstractModel {
     /**
      * Set 废弃字段。
      * @param From 废弃字段。
+     * @deprecated
      */
+    @Deprecated
     public void setFrom(String From) {
         this.From = From;
     }
@@ -116,7 +124,9 @@ public class AddressTemplateItem extends AbstractModel {
     /**
      * Get 废弃字段 
      * @return To 废弃字段
+     * @deprecated
      */
+    @Deprecated
     public String getTo() {
         return this.To;
     }
@@ -124,7 +134,9 @@ public class AddressTemplateItem extends AbstractModel {
     /**
      * Set 废弃字段
      * @param To 废弃字段
+     * @deprecated
      */
+    @Deprecated
     public void setTo(String To) {
         this.To = To;
     }

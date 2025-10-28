@@ -31,14 +31,14 @@ public class EnableEventPersistenceRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * cls服务的logsetID
+    * cls服务的logsetID，通过cls接口或者控制台获取
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * cls服务的topicID
+    * cls服务的topicID，通过cls接口或者控制台获取
     */
     @SerializedName("TopicId")
     @Expose
@@ -68,32 +68,32 @@ public class EnableEventPersistenceRequest extends AbstractModel {
     }
 
     /**
-     * Get cls服务的logsetID 
-     * @return LogsetId cls服务的logsetID
+     * Get cls服务的logsetID，通过cls接口或者控制台获取 
+     * @return LogsetId cls服务的logsetID，通过cls接口或者控制台获取
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set cls服务的logsetID
-     * @param LogsetId cls服务的logsetID
+     * Set cls服务的logsetID，通过cls接口或者控制台获取
+     * @param LogsetId cls服务的logsetID，通过cls接口或者控制台获取
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get cls服务的topicID 
-     * @return TopicId cls服务的topicID
+     * Get cls服务的topicID，通过cls接口或者控制台获取 
+     * @return TopicId cls服务的topicID，通过cls接口或者控制台获取
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set cls服务的topicID
-     * @param TopicId cls服务的topicID
+     * Set cls服务的topicID，通过cls接口或者控制台获取
+     * @param TopicId cls服务的topicID，通过cls接口或者控制台获取
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

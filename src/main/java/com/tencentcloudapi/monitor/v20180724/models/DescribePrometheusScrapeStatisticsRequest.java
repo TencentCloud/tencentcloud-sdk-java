@@ -31,11 +31,25 @@ public class DescribePrometheusScrapeStatisticsRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
+    * 集群ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * job 类型
     */
     @SerializedName("JobType")
     @Expose
     private String JobType;
+
+    /**
+    * job 过滤，不写就是全部 job
+    */
+    @SerializedName("Job")
+    @Expose
+    private String Job;
 
     /**
      * Get 实例ID列表 
@@ -54,6 +68,22 @@ public class DescribePrometheusScrapeStatisticsRequest extends AbstractModel {
     }
 
     /**
+     * Get 集群ID 
+     * @return ClusterId 集群ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群ID
+     * @param ClusterId 集群ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
      * Get job 类型 
      * @return JobType job 类型
      */
@@ -67,6 +97,22 @@ public class DescribePrometheusScrapeStatisticsRequest extends AbstractModel {
      */
     public void setJobType(String JobType) {
         this.JobType = JobType;
+    }
+
+    /**
+     * Get job 过滤，不写就是全部 job 
+     * @return Job job 过滤，不写就是全部 job
+     */
+    public String getJob() {
+        return this.Job;
+    }
+
+    /**
+     * Set job 过滤，不写就是全部 job
+     * @param Job job 过滤，不写就是全部 job
+     */
+    public void setJob(String Job) {
+        this.Job = Job;
     }
 
     public DescribePrometheusScrapeStatisticsRequest() {
@@ -83,8 +129,14 @@ public class DescribePrometheusScrapeStatisticsRequest extends AbstractModel {
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.JobType != null) {
             this.JobType = new String(source.JobType);
+        }
+        if (source.Job != null) {
+            this.Job = new String(source.Job);
         }
     }
 
@@ -94,7 +146,9 @@ public class DescribePrometheusScrapeStatisticsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamSimple(map, prefix + "Job", this.Job);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FlowLog extends AbstractModel {
 
     /**
-    * 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+    * 私有网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
     */
     @SerializedName("VpcId")
     @Expose
@@ -45,7 +45,7 @@ public class FlowLog extends AbstractModel {
     private String FlowLogName;
 
     /**
-    * 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+    * 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转换），DCG（专线网关）。
     */
     @SerializedName("ResourceType")
     @Expose
@@ -129,16 +129,23 @@ public class FlowLog extends AbstractModel {
     private String CloudLogRegion;
 
     /**
-     * Get 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。 
-     * @return VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+    * 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
+     * Get 私有网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。 
+     * @return VpcId 私有网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
-     * @param VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+     * Set 私有网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+     * @param VpcId 私有网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -177,16 +184,16 @@ public class FlowLog extends AbstractModel {
     }
 
     /**
-     * Get 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。 
-     * @return ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+     * Get 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转换），DCG（专线网关）。 
+     * @return ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转换），DCG（专线网关）。
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
-     * @param ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+     * Set 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转换），DCG（专线网关）。
+     * @param ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转换），DCG（专线网关）。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -368,6 +375,22 @@ public class FlowLog extends AbstractModel {
         this.CloudLogRegion = CloudLogRegion;
     }
 
+    /**
+     * Get 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。 
+     * @return Period 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+     * @param Period 流日志采集周期，只支持CCN类型流日志。取值范围（单位s）：60， 300， 600。
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
     public FlowLog() {
     }
 
@@ -424,6 +447,9 @@ public class FlowLog extends AbstractModel {
         if (source.CloudLogRegion != null) {
             this.CloudLogRegion = new String(source.CloudLogRegion);
         }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
     }
 
 
@@ -446,6 +472,7 @@ public class FlowLog extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
         this.setParamSimple(map, prefix + "CloudLogRegion", this.CloudLogRegion);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

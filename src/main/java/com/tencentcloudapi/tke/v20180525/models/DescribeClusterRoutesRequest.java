@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClusterRoutesRequest extends AbstractModel {
 
     /**
-    * 路由表名称。
+    * 路由表名称。与集群 ID 一致，可以到[集群控制台](https://console.cloud.tencent.com/tke2)进行复制。
     */
     @SerializedName("RouteTableName")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeClusterRoutesRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get 路由表名称。 
-     * @return RouteTableName 路由表名称。
+     * Get 路由表名称。与集群 ID 一致，可以到[集群控制台](https://console.cloud.tencent.com/tke2)进行复制。 
+     * @return RouteTableName 路由表名称。与集群 ID 一致，可以到[集群控制台](https://console.cloud.tencent.com/tke2)进行复制。
      */
     public String getRouteTableName() {
         return this.RouteTableName;
     }
 
     /**
-     * Set 路由表名称。
-     * @param RouteTableName 路由表名称。
+     * Set 路由表名称。与集群 ID 一致，可以到[集群控制台](https://console.cloud.tencent.com/tke2)进行复制。
+     * @param RouteTableName 路由表名称。与集群 ID 一致，可以到[集群控制台](https://console.cloud.tencent.com/tke2)进行复制。
      */
     public void setRouteTableName(String RouteTableName) {
         this.RouteTableName = RouteTableName;

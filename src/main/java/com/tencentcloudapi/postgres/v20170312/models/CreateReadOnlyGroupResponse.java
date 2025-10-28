@@ -31,11 +31,18 @@ public class CreateReadOnlyGroupResponse extends AbstractModel {
     private String ReadOnlyGroupId;
 
     /**
-    * 流程ID
+    * 流程ID，FlowId等同于TaskId
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
+
+    /**
+    * 任务ID
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -61,19 +68,35 @@ public class CreateReadOnlyGroupResponse extends AbstractModel {
     }
 
     /**
-     * Get 流程ID 
-     * @return FlowId 流程ID
+     * Get 流程ID，FlowId等同于TaskId 
+     * @return FlowId 流程ID，FlowId等同于TaskId
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 流程ID
-     * @param FlowId 流程ID
+     * Set 流程ID，FlowId等同于TaskId
+     * @param FlowId 流程ID，FlowId等同于TaskId
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
+    }
+
+    /**
+     * Get 任务ID 
+     * @return TaskId 任务ID
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务ID
+     * @param TaskId 任务ID
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -106,6 +129,9 @@ public class CreateReadOnlyGroupResponse extends AbstractModel {
         if (source.FlowId != null) {
             this.FlowId = new Long(source.FlowId);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +144,7 @@ public class CreateReadOnlyGroupResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReadOnlyGroupId", this.ReadOnlyGroupId);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

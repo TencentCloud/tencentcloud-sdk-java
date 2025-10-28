@@ -31,6 +31,13 @@ public class RenewInstanceResponse extends AbstractModel {
     private String DealId;
 
     /**
+    * 订单号。
+    */
+    @SerializedName("DealName")
+    @Expose
+    private String DealName;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -40,7 +47,9 @@ public class RenewInstanceResponse extends AbstractModel {
     /**
      * Get 交易ID。 
      * @return DealId 交易ID。
+     * @deprecated
      */
+    @Deprecated
     public String getDealId() {
         return this.DealId;
     }
@@ -48,9 +57,27 @@ public class RenewInstanceResponse extends AbstractModel {
     /**
      * Set 交易ID。
      * @param DealId 交易ID。
+     * @deprecated
      */
+    @Deprecated
     public void setDealId(String DealId) {
         this.DealId = DealId;
+    }
+
+    /**
+     * Get 订单号。 
+     * @return DealName 订单号。
+     */
+    public String getDealName() {
+        return this.DealName;
+    }
+
+    /**
+     * Set 订单号。
+     * @param DealName 订单号。
+     */
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
     }
 
     /**
@@ -80,6 +107,9 @@ public class RenewInstanceResponse extends AbstractModel {
         if (source.DealId != null) {
             this.DealId = new String(source.DealId);
         }
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +121,7 @@ public class RenewInstanceResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealId", this.DealId);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -52,6 +52,15 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
     private String InstanceNameSuffix;
 
     /**
+    * 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
+
+假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+    */
+    @SerializedName("InstanceNameDelimiter")
+    @Expose
+    private String InstanceNameDelimiter;
+
+    /**
      * Get 云服务器的实例名。字符长度为[2, 108]。 
      * @return InstanceName 云服务器的实例名。字符长度为[2, 108]。
      */
@@ -127,6 +136,30 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
         this.InstanceNameSuffix = InstanceNameSuffix;
     }
 
+    /**
+     * Get 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
+
+假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。 
+     * @return InstanceNameDelimiter 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
+
+假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+     */
+    public String getInstanceNameDelimiter() {
+        return this.InstanceNameDelimiter;
+    }
+
+    /**
+     * Set 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
+
+假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+     * @param InstanceNameDelimiter 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
+
+假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+     */
+    public void setInstanceNameDelimiter(String InstanceNameDelimiter) {
+        this.InstanceNameDelimiter = InstanceNameDelimiter;
+    }
+
     public InstanceNameSettings() {
     }
 
@@ -144,6 +177,9 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
         if (source.InstanceNameSuffix != null) {
             this.InstanceNameSuffix = new String(source.InstanceNameSuffix);
         }
+        if (source.InstanceNameDelimiter != null) {
+            this.InstanceNameDelimiter = new String(source.InstanceNameDelimiter);
+        }
     }
 
 
@@ -154,6 +190,7 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "InstanceNameStyle", this.InstanceNameStyle);
         this.setParamSimple(map, prefix + "InstanceNameSuffix", this.InstanceNameSuffix);
+        this.setParamSimple(map, prefix + "InstanceNameDelimiter", this.InstanceNameDelimiter);
 
     }
 }

@@ -109,6 +109,13 @@ name
     private Long TotalSpecMax;
 
     /**
+    * 状态，STARTING、RUNNING、TERMINATED
+    */
+    @SerializedName("State")
+    @Expose
+    private String State;
+
+    /**
      * Get spark session id 
      * @return SparkSessionId spark session id
      */
@@ -304,6 +311,22 @@ name
         this.TotalSpecMax = TotalSpecMax;
     }
 
+    /**
+     * Get 状态，STARTING、RUNNING、TERMINATED 
+     * @return State 状态，STARTING、RUNNING、TERMINATED
+     */
+    public String getState() {
+        return this.State;
+    }
+
+    /**
+     * Set 状态，STARTING、RUNNING、TERMINATED
+     * @param State 状态，STARTING、RUNNING、TERMINATED
+     */
+    public void setState(String State) {
+        this.State = State;
+    }
+
     public SparkSessionInfo() {
     }
 
@@ -348,6 +371,9 @@ name
         if (source.TotalSpecMax != null) {
             this.TotalSpecMax = new Long(source.TotalSpecMax);
         }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
     }
 
 
@@ -367,6 +393,7 @@ name
         this.setParamSimple(map, prefix + "ExecutorNumMax", this.ExecutorNumMax);
         this.setParamSimple(map, prefix + "TotalSpecMin", this.TotalSpecMin);
         this.setParamSimple(map, prefix + "TotalSpecMax", this.TotalSpecMax);
+        this.setParamSimple(map, prefix + "State", this.State);
 
     }
 }

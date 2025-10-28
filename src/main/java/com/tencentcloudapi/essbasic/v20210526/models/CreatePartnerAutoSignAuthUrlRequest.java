@@ -62,7 +62,7 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     * 是否给平台应用授权
 
 <ul>
-<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationId</code>和<code>AuthorizedOrganizationName</code>。</li>
+<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationIds</code>和<code>AuthorizedOrganizationNames</code>。</li>
 <li><strong>false</strong>: （默认）表示否，不是授权平台应用。</li>
 </ul>
 
@@ -89,13 +89,27 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     /**
     * 在处理授权关系时，授权的方向
 <ul>
-<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
-<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【授权方】的企业名称，即提供授权的企业。</li>
+<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
+<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【授权方】的企业名称，即提供授权的企业。此场景下不支持批量</li>
 </ul>
     */
     @SerializedName("AuthToMe")
     @Expose
     private Boolean AuthToMe;
+
+    /**
+    * 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationNames二选一传入，最大支持50个，注：`被授权企业必须和当前企业在同一应用号下`
+    */
+    @SerializedName("AuthorizedOrganizationIds")
+    @Expose
+    private String [] AuthorizedOrganizationIds;
+
+    /**
+    * 被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationIds二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。注: 1. 如果名称中包含英文括号()，请使用中文括号（）代替。2. 被授权企业必须和当前企业在同一应用号下 3. 数组最大长度50
+    */
+    @SerializedName("AuthorizedOrganizationNames")
+    @Expose
+    private String [] AuthorizedOrganizationNames;
 
     /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
@@ -152,7 +166,9 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
      * @return AuthorizedOrganizationId 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationName二选一传入。
 
 注：`被授权企业必须和当前企业在同一应用号下`
+     * @deprecated
      */
+    @Deprecated
     public String getAuthorizedOrganizationId() {
         return this.AuthorizedOrganizationId;
     }
@@ -164,7 +180,9 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
      * @param AuthorizedOrganizationId 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationName二选一传入。
 
 注：`被授权企业必须和当前企业在同一应用号下`
+     * @deprecated
      */
+    @Deprecated
     public void setAuthorizedOrganizationId(String AuthorizedOrganizationId) {
         this.AuthorizedOrganizationId = AuthorizedOrganizationId;
     }
@@ -180,7 +198,9 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
 注: 
 1. 如果名称中包含英文括号()，请使用中文括号（）代替。
 2. 被授权企业必须和当前企业在同一应用号下
+     * @deprecated
      */
+    @Deprecated
     public String getAuthorizedOrganizationName() {
         return this.AuthorizedOrganizationName;
     }
@@ -196,7 +216,9 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
 注: 
 1. 如果名称中包含英文括号()，请使用中文括号（）代替。
 2. 被授权企业必须和当前企业在同一应用号下
+     * @deprecated
      */
+    @Deprecated
     public void setAuthorizedOrganizationName(String AuthorizedOrganizationName) {
         this.AuthorizedOrganizationName = AuthorizedOrganizationName;
     }
@@ -205,7 +227,7 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
      * Get 是否给平台应用授权
 
 <ul>
-<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationId</code>和<code>AuthorizedOrganizationName</code>。</li>
+<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationIds</code>和<code>AuthorizedOrganizationNames</code>。</li>
 <li><strong>false</strong>: （默认）表示否，不是授权平台应用。</li>
 </ul>
 
@@ -213,7 +235,7 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
      * @return PlatformAppAuthorization 是否给平台应用授权
 
 <ul>
-<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationId</code>和<code>AuthorizedOrganizationName</code>。</li>
+<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationIds</code>和<code>AuthorizedOrganizationNames</code>。</li>
 <li><strong>false</strong>: （默认）表示否，不是授权平台应用。</li>
 </ul>
 
@@ -227,7 +249,7 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
      * Set 是否给平台应用授权
 
 <ul>
-<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationId</code>和<code>AuthorizedOrganizationName</code>。</li>
+<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationIds</code>和<code>AuthorizedOrganizationNames</code>。</li>
 <li><strong>false</strong>: （默认）表示否，不是授权平台应用。</li>
 </ul>
 
@@ -235,7 +257,7 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
      * @param PlatformAppAuthorization 是否给平台应用授权
 
 <ul>
-<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationId</code>和<code>AuthorizedOrganizationName</code>。</li>
+<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationIds</code>和<code>AuthorizedOrganizationNames</code>。</li>
 <li><strong>false</strong>: （默认）表示否，不是授权平台应用。</li>
 </ul>
 
@@ -292,13 +314,13 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     /**
      * Get 在处理授权关系时，授权的方向
 <ul>
-<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
-<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【授权方】的企业名称，即提供授权的企业。</li>
+<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
+<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【授权方】的企业名称，即提供授权的企业。此场景下不支持批量</li>
 </ul> 
      * @return AuthToMe 在处理授权关系时，授权的方向
 <ul>
-<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
-<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【授权方】的企业名称，即提供授权的企业。</li>
+<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
+<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【授权方】的企业名称，即提供授权的企业。此场景下不支持批量</li>
 </ul>
      */
     public Boolean getAuthToMe() {
@@ -308,17 +330,49 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     /**
      * Set 在处理授权关系时，授权的方向
 <ul>
-<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
-<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【授权方】的企业名称，即提供授权的企业。</li>
+<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
+<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【授权方】的企业名称，即提供授权的企业。此场景下不支持批量</li>
 </ul>
      * @param AuthToMe 在处理授权关系时，授权的方向
 <ul>
-<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
-<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【授权方】的企业名称，即提供授权的企业。</li>
+<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
+<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationNames</code> 代表的是【授权方】的企业名称，即提供授权的企业。此场景下不支持批量</li>
 </ul>
      */
     public void setAuthToMe(Boolean AuthToMe) {
         this.AuthToMe = AuthToMe;
+    }
+
+    /**
+     * Get 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationNames二选一传入，最大支持50个，注：`被授权企业必须和当前企业在同一应用号下` 
+     * @return AuthorizedOrganizationIds 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationNames二选一传入，最大支持50个，注：`被授权企业必须和当前企业在同一应用号下`
+     */
+    public String [] getAuthorizedOrganizationIds() {
+        return this.AuthorizedOrganizationIds;
+    }
+
+    /**
+     * Set 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationNames二选一传入，最大支持50个，注：`被授权企业必须和当前企业在同一应用号下`
+     * @param AuthorizedOrganizationIds 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationNames二选一传入，最大支持50个，注：`被授权企业必须和当前企业在同一应用号下`
+     */
+    public void setAuthorizedOrganizationIds(String [] AuthorizedOrganizationIds) {
+        this.AuthorizedOrganizationIds = AuthorizedOrganizationIds;
+    }
+
+    /**
+     * Get 被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationIds二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。注: 1. 如果名称中包含英文括号()，请使用中文括号（）代替。2. 被授权企业必须和当前企业在同一应用号下 3. 数组最大长度50 
+     * @return AuthorizedOrganizationNames 被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationIds二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。注: 1. 如果名称中包含英文括号()，请使用中文括号（）代替。2. 被授权企业必须和当前企业在同一应用号下 3. 数组最大长度50
+     */
+    public String [] getAuthorizedOrganizationNames() {
+        return this.AuthorizedOrganizationNames;
+    }
+
+    /**
+     * Set 被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationIds二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。注: 1. 如果名称中包含英文括号()，请使用中文括号（）代替。2. 被授权企业必须和当前企业在同一应用号下 3. 数组最大长度50
+     * @param AuthorizedOrganizationNames 被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationIds二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。注: 1. 如果名称中包含英文括号()，请使用中文括号（）代替。2. 被授权企业必须和当前企业在同一应用号下 3. 数组最大长度50
+     */
+    public void setAuthorizedOrganizationNames(String [] AuthorizedOrganizationNames) {
+        this.AuthorizedOrganizationNames = AuthorizedOrganizationNames;
     }
 
     public CreatePartnerAutoSignAuthUrlRequest() {
@@ -350,6 +404,18 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
         if (source.AuthToMe != null) {
             this.AuthToMe = new Boolean(source.AuthToMe);
         }
+        if (source.AuthorizedOrganizationIds != null) {
+            this.AuthorizedOrganizationIds = new String[source.AuthorizedOrganizationIds.length];
+            for (int i = 0; i < source.AuthorizedOrganizationIds.length; i++) {
+                this.AuthorizedOrganizationIds[i] = new String(source.AuthorizedOrganizationIds[i]);
+            }
+        }
+        if (source.AuthorizedOrganizationNames != null) {
+            this.AuthorizedOrganizationNames = new String[source.AuthorizedOrganizationNames.length];
+            for (int i = 0; i < source.AuthorizedOrganizationNames.length; i++) {
+                this.AuthorizedOrganizationNames[i] = new String(source.AuthorizedOrganizationNames[i]);
+            }
+        }
     }
 
 
@@ -363,6 +429,8 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PlatformAppAuthorization", this.PlatformAppAuthorization);
         this.setParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
         this.setParamSimple(map, prefix + "AuthToMe", this.AuthToMe);
+        this.setParamArraySimple(map, prefix + "AuthorizedOrganizationIds.", this.AuthorizedOrganizationIds);
+        this.setParamArraySimple(map, prefix + "AuthorizedOrganizationNames.", this.AuthorizedOrganizationNames);
 
     }
 }

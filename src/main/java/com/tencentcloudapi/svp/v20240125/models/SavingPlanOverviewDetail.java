@@ -52,7 +52,7 @@ public class SavingPlanOverviewDetail extends AbstractModel {
     private String EndTime;
 
     /**
-    * 状态
+    * 1 生效 2 失效 3 作废
     */
     @SerializedName("Status")
     @Expose
@@ -73,7 +73,7 @@ public class SavingPlanOverviewDetail extends AbstractModel {
     private String [] Region;
 
     /**
-    * 支付类型
+    * 1 全预付 2 部分预付 3 全不预付
     */
     @SerializedName("PayType")
     @Expose
@@ -85,6 +85,14 @@ public class SavingPlanOverviewDetail extends AbstractModel {
     @SerializedName("BuyTime")
     @Expose
     private String BuyTime;
+
+    /**
+    * 承诺金额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PromiseAmount")
+    @Expose
+    private String PromiseAmount;
 
     /**
      * Get 节省计划类型 
@@ -151,16 +159,16 @@ public class SavingPlanOverviewDetail extends AbstractModel {
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get 1 生效 2 失效 3 作废 
+     * @return Status 1 生效 2 失效 3 作废
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set 1 生效 2 失效 3 作废
+     * @param Status 1 生效 2 失效 3 作废
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -199,16 +207,16 @@ public class SavingPlanOverviewDetail extends AbstractModel {
     }
 
     /**
-     * Get 支付类型 
-     * @return PayType 支付类型
+     * Get 1 全预付 2 部分预付 3 全不预付 
+     * @return PayType 1 全预付 2 部分预付 3 全不预付
      */
     public Long getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set 支付类型
-     * @param PayType 支付类型
+     * Set 1 全预付 2 部分预付 3 全不预付
+     * @param PayType 1 全预付 2 部分预付 3 全不预付
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;
@@ -228,6 +236,26 @@ public class SavingPlanOverviewDetail extends AbstractModel {
      */
     public void setBuyTime(String BuyTime) {
         this.BuyTime = BuyTime;
+    }
+
+    /**
+     * Get 承诺金额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PromiseAmount 承诺金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPromiseAmount() {
+        return this.PromiseAmount;
+    }
+
+    /**
+     * Set 承诺金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PromiseAmount 承诺金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPromiseAmount(String PromiseAmount) {
+        this.PromiseAmount = PromiseAmount;
     }
 
     public SavingPlanOverviewDetail() {
@@ -268,6 +296,9 @@ public class SavingPlanOverviewDetail extends AbstractModel {
         if (source.BuyTime != null) {
             this.BuyTime = new String(source.BuyTime);
         }
+        if (source.PromiseAmount != null) {
+            this.PromiseAmount = new String(source.PromiseAmount);
+        }
     }
 
 
@@ -284,6 +315,7 @@ public class SavingPlanOverviewDetail extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Region.", this.Region);
         this.setParamSimple(map, prefix + "PayType", this.PayType);
         this.setParamSimple(map, prefix + "BuyTime", this.BuyTime);
+        this.setParamSimple(map, prefix + "PromiseAmount", this.PromiseAmount);
 
     }
 }

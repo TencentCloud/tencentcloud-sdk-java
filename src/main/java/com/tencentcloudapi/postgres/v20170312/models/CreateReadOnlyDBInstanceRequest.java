@@ -53,7 +53,7 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     private Long Storage;
 
     /**
-    * 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
+    * 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -187,6 +187,13 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     private String DedicatedClusterId;
 
     /**
+    * 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get 实例所属主可用区， 如：ap-guangzhou-3；
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。 
      * @return Zone 实例所属主可用区， 如：ap-guangzhou-3；
@@ -255,16 +262,16 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。 
-     * @return InstanceCount 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
+     * Get 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。 
+     * @return InstanceCount 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
-     * @param InstanceCount 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
+     * Set 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
+     * @param InstanceCount 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
@@ -590,6 +597,22 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
+    /**
+     * Get 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。 
+     * @return DeletionProtection 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     * @param DeletionProtection 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public CreateReadOnlyDBInstanceRequest() {
     }
 
@@ -667,6 +690,9 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
         if (source.DedicatedClusterId != null) {
             this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -695,6 +721,7 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

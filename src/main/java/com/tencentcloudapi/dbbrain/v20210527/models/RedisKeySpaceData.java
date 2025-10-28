@@ -38,7 +38,7 @@ public class RedisKeySpaceData extends AbstractModel {
     private String Type;
 
     /**
-    * key编码方式。
+    * key编码方式。包括 int、string、linkedlist、hashtable、skiplist、zipmap、ziplist、intset、quicklist、listpack。
     */
     @SerializedName("Encoding")
     @Expose
@@ -87,6 +87,13 @@ public class RedisKeySpaceData extends AbstractModel {
     private String ShardId;
 
     /**
+    * key所属数据库编号。
+    */
+    @SerializedName("Db")
+    @Expose
+    private Long Db;
+
+    /**
      * Get key名。 
      * @return Key key名。
      */
@@ -119,16 +126,16 @@ public class RedisKeySpaceData extends AbstractModel {
     }
 
     /**
-     * Get key编码方式。 
-     * @return Encoding key编码方式。
+     * Get key编码方式。包括 int、string、linkedlist、hashtable、skiplist、zipmap、ziplist、intset、quicklist、listpack。 
+     * @return Encoding key编码方式。包括 int、string、linkedlist、hashtable、skiplist、zipmap、ziplist、intset、quicklist、listpack。
      */
     public String getEncoding() {
         return this.Encoding;
     }
 
     /**
-     * Set key编码方式。
-     * @param Encoding key编码方式。
+     * Set key编码方式。包括 int、string、linkedlist、hashtable、skiplist、zipmap、ziplist、intset、quicklist、listpack。
+     * @param Encoding key编码方式。包括 int、string、linkedlist、hashtable、skiplist、zipmap、ziplist、intset、quicklist、listpack。
      */
     public void setEncoding(String Encoding) {
         this.Encoding = Encoding;
@@ -230,6 +237,22 @@ public class RedisKeySpaceData extends AbstractModel {
         this.ShardId = ShardId;
     }
 
+    /**
+     * Get key所属数据库编号。 
+     * @return Db key所属数据库编号。
+     */
+    public Long getDb() {
+        return this.Db;
+    }
+
+    /**
+     * Set key所属数据库编号。
+     * @param Db key所属数据库编号。
+     */
+    public void setDb(Long Db) {
+        this.Db = Db;
+    }
+
     public RedisKeySpaceData() {
     }
 
@@ -265,6 +288,9 @@ public class RedisKeySpaceData extends AbstractModel {
         if (source.ShardId != null) {
             this.ShardId = new String(source.ShardId);
         }
+        if (source.Db != null) {
+            this.Db = new Long(source.Db);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class RedisKeySpaceData extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxElementSize", this.MaxElementSize);
         this.setParamSimple(map, prefix + "AveElementSize", this.AveElementSize);
         this.setParamSimple(map, prefix + "ShardId", this.ShardId);
+        this.setParamSimple(map, prefix + "Db", this.Db);
 
     }
 }

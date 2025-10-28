@@ -31,14 +31,14 @@ public class EnableClusterAuditRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * CLS日志集ID
+    * CLS日志集ID，可以通过cls接口或者控制台获取
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * CLS日志主题ID
+    * CLS日志主题ID，可以通过cls接口或者控制台获取
     */
     @SerializedName("TopicId")
     @Expose
@@ -68,32 +68,32 @@ public class EnableClusterAuditRequest extends AbstractModel {
     }
 
     /**
-     * Get CLS日志集ID 
-     * @return LogsetId CLS日志集ID
+     * Get CLS日志集ID，可以通过cls接口或者控制台获取 
+     * @return LogsetId CLS日志集ID，可以通过cls接口或者控制台获取
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set CLS日志集ID
-     * @param LogsetId CLS日志集ID
+     * Set CLS日志集ID，可以通过cls接口或者控制台获取
+     * @param LogsetId CLS日志集ID，可以通过cls接口或者控制台获取
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get CLS日志主题ID 
-     * @return TopicId CLS日志主题ID
+     * Get CLS日志主题ID，可以通过cls接口或者控制台获取 
+     * @return TopicId CLS日志主题ID，可以通过cls接口或者控制台获取
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set CLS日志主题ID
-     * @param TopicId CLS日志主题ID
+     * Set CLS日志主题ID，可以通过cls接口或者控制台获取
+     * @param TopicId CLS日志主题ID，可以通过cls接口或者控制台获取
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

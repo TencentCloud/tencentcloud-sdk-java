@@ -119,6 +119,13 @@ public class TextModerationResponse extends AbstractModel {
     private String HitType;
 
     /**
+    * 流式审核策略维度下的唯一会话ID
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -350,6 +357,22 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
+     * Get 流式审核策略维度下的唯一会话ID 
+     * @return SessionId 流式审核策略维度下的唯一会话ID
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 流式审核策略维度下的唯一会话ID
+     * @param SessionId 流式审核策略维度下的唯一会话ID
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -421,6 +444,9 @@ public class TextModerationResponse extends AbstractModel {
         if (source.HitType != null) {
             this.HitType = new String(source.HitType);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -444,6 +470,7 @@ public class TextModerationResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ContextText", this.ContextText);
         this.setParamObj(map, prefix + "SentimentAnalysis.", this.SentimentAnalysis);
         this.setParamSimple(map, prefix + "HitType", this.HitType);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -45,6 +45,13 @@ public class CreateReadOnlyDBInstanceResponse extends AbstractModel {
     private String [] DBInstanceIdSet;
 
     /**
+    * 入参有BillingParameters值时，出参才有值，值为商品下单的参数。
+    */
+    @SerializedName("BillingParameters")
+    @Expose
+    private String BillingParameters;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class CreateReadOnlyDBInstanceResponse extends AbstractModel {
     }
 
     /**
+     * Get 入参有BillingParameters值时，出参才有值，值为商品下单的参数。 
+     * @return BillingParameters 入参有BillingParameters值时，出参才有值，值为商品下单的参数。
+     */
+    public String getBillingParameters() {
+        return this.BillingParameters;
+    }
+
+    /**
+     * Set 入参有BillingParameters值时，出参才有值，值为商品下单的参数。
+     * @param BillingParameters 入参有BillingParameters值时，出参才有值，值为商品下单的参数。
+     */
+    public void setBillingParameters(String BillingParameters) {
+        this.BillingParameters = BillingParameters;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -138,6 +161,9 @@ public class CreateReadOnlyDBInstanceResponse extends AbstractModel {
                 this.DBInstanceIdSet[i] = new String(source.DBInstanceIdSet[i]);
             }
         }
+        if (source.BillingParameters != null) {
+            this.BillingParameters = new String(source.BillingParameters);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -151,6 +177,7 @@ public class CreateReadOnlyDBInstanceResponse extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
         this.setParamSimple(map, prefix + "BillId", this.BillId);
         this.setParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);
+        this.setParamSimple(map, prefix + "BillingParameters", this.BillingParameters);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

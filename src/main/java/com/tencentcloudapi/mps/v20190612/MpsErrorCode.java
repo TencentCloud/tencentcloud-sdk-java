@@ -282,6 +282,9 @@ public enum MpsErrorCode {
      /* 参数值错误：物体库参数非法。 */
      INVALIDPARAMETERVALUE_OBJECTLIBRARY("InvalidParameterValue.ObjectLibrary"),
      
+     /* 参数值错误：OcrSwitch 参数取值非法。 */
+     INVALIDPARAMETERVALUE_OCRSWITCH("InvalidParameterValue.OcrSwitch"),
+     
      /* 参数值错误：人脸图片格式错误。 */
      INVALIDPARAMETERVALUE_PICFORMATERROR("InvalidParameterValue.PicFormatError"),
      
@@ -386,6 +389,9 @@ public enum MpsErrorCode {
      
      /* 擦除模板字幕擦除翻译目标语种错误 */
      INVALIDPARAMETERVALUE_TRANSDSTLANG("InvalidParameterValue.TransDstLang"),
+     
+     /* 参数值错误：TransSwitch 参数取值非法。 */
+     INVALIDPARAMETERVALUE_TRANSSWITCH("InvalidParameterValue.TransSwitch"),
      
      /* 参数值错误：翻译目标语言 */
      INVALIDPARAMETERVALUE_TRANSLATEDSTLANGUAGE("InvalidParameterValue.TranslateDstLanguage"),

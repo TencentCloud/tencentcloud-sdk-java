@@ -52,7 +52,7 @@ public class Events extends AbstractModel {
     private String EventType;
 
     /**
-    * 事件记录状态，1-成功，2-失败
+    * 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
     */
     @SerializedName("Status")
     @Expose
@@ -66,7 +66,7 @@ public class Events extends AbstractModel {
     private String StartTime;
 
     /**
-    * 扩展文件生成开始时间
+    * 扩展文件最后更新时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -151,16 +151,16 @@ public class Events extends AbstractModel {
     }
 
     /**
-     * Get 事件记录状态，1-成功，2-失败 
-     * @return Status 事件记录状态，1-成功，2-失败
+     * Get 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中 
+     * @return Status 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 事件记录状态，1-成功，2-失败
-     * @param Status 事件记录状态，1-成功，2-失败
+     * Set 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
+     * @param Status 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -183,16 +183,16 @@ public class Events extends AbstractModel {
     }
 
     /**
-     * Get 扩展文件生成开始时间 
-     * @return EndTime 扩展文件生成开始时间
+     * Get 扩展文件最后更新时间 
+     * @return EndTime 扩展文件最后更新时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 扩展文件生成开始时间
-     * @param EndTime 扩展文件生成开始时间
+     * Set 扩展文件最后更新时间
+     * @param EndTime 扩展文件最后更新时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

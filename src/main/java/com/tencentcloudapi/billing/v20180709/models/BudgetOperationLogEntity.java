@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class BudgetOperationLogEntity extends AbstractModel {
 
     /**
-    * Uin
+    * 支付者Uin
     */
     @SerializedName("PayerUin")
     @Expose
     private Long PayerUin;
 
     /**
-    * 主用户Uin
+    * 使用者Uin
 
     */
     @SerializedName("OwnerUin")
@@ -60,7 +60,7 @@ public class BudgetOperationLogEntity extends AbstractModel {
     private String BillMonth;
 
     /**
-    * 修改类型：ADD(新增)、UPDATE(更新)
+    * 修改类型：ADD(新增)、UPDATE(更新)、DELETE(删除)
     */
     @SerializedName("Action")
     @Expose
@@ -88,7 +88,7 @@ public class BudgetOperationLogEntity extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 修改渠道：官网修改/API修改
+    * 修改渠道：CONSOLE/API
     */
     @SerializedName("OperationChannel")
     @Expose
@@ -102,25 +102,25 @@ public class BudgetOperationLogEntity extends AbstractModel {
     private String BudgetId;
 
     /**
-     * Get Uin 
-     * @return PayerUin Uin
+     * Get 支付者Uin 
+     * @return PayerUin 支付者Uin
      */
     public Long getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set Uin
-     * @param PayerUin Uin
+     * Set 支付者Uin
+     * @param PayerUin 支付者Uin
      */
     public void setPayerUin(Long PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 主用户Uin
+     * Get 使用者Uin
  
-     * @return OwnerUin 主用户Uin
+     * @return OwnerUin 使用者Uin
 
      */
     public Long getOwnerUin() {
@@ -128,9 +128,9 @@ public class BudgetOperationLogEntity extends AbstractModel {
     }
 
     /**
-     * Set 主用户Uin
+     * Set 使用者Uin
 
-     * @param OwnerUin 主用户Uin
+     * @param OwnerUin 使用者Uin
 
      */
     public void setOwnerUin(Long OwnerUin) {
@@ -186,16 +186,16 @@ public class BudgetOperationLogEntity extends AbstractModel {
     }
 
     /**
-     * Get 修改类型：ADD(新增)、UPDATE(更新) 
-     * @return Action 修改类型：ADD(新增)、UPDATE(更新)
+     * Get 修改类型：ADD(新增)、UPDATE(更新)、DELETE(删除) 
+     * @return Action 修改类型：ADD(新增)、UPDATE(更新)、DELETE(删除)
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 修改类型：ADD(新增)、UPDATE(更新)
-     * @param Action 修改类型：ADD(新增)、UPDATE(更新)
+     * Set 修改类型：ADD(新增)、UPDATE(更新)、DELETE(删除)
+     * @param Action 修改类型：ADD(新增)、UPDATE(更新)、DELETE(删除)
      */
     public void setAction(String Action) {
         this.Action = Action;
@@ -250,16 +250,16 @@ public class BudgetOperationLogEntity extends AbstractModel {
     }
 
     /**
-     * Get 修改渠道：官网修改/API修改 
-     * @return OperationChannel 修改渠道：官网修改/API修改
+     * Get 修改渠道：CONSOLE/API 
+     * @return OperationChannel 修改渠道：CONSOLE/API
      */
     public String getOperationChannel() {
         return this.OperationChannel;
     }
 
     /**
-     * Set 修改渠道：官网修改/API修改
-     * @param OperationChannel 修改渠道：官网修改/API修改
+     * Set 修改渠道：CONSOLE/API
+     * @param OperationChannel 修改渠道：CONSOLE/API
      */
     public void setOperationChannel(String OperationChannel) {
         this.OperationChannel = OperationChannel;

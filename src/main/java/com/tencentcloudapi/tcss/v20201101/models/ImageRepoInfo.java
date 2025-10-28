@@ -332,6 +332,20 @@ public class ImageRepoInfo extends AbstractModel {
     private Boolean RecommendedFix;
 
     /**
+    * 解决方案
+    */
+    @SerializedName("Solution")
+    @Expose
+    private String Solution;
+
+    /**
+    * 原因
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
      * Get 镜像Digest 
      * @return ImageDigest 镜像Digest
      */
@@ -1039,6 +1053,38 @@ public class ImageRepoInfo extends AbstractModel {
         this.RecommendedFix = RecommendedFix;
     }
 
+    /**
+     * Get 解决方案 
+     * @return Solution 解决方案
+     */
+    public String getSolution() {
+        return this.Solution;
+    }
+
+    /**
+     * Set 解决方案
+     * @param Solution 解决方案
+     */
+    public void setSolution(String Solution) {
+        this.Solution = Solution;
+    }
+
+    /**
+     * Get 原因 
+     * @return Reason 原因
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set 原因
+     * @param Reason 原因
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
     public ImageRepoInfo() {
     }
 
@@ -1179,6 +1225,12 @@ public class ImageRepoInfo extends AbstractModel {
         if (source.RecommendedFix != null) {
             this.RecommendedFix = new Boolean(source.RecommendedFix);
         }
+        if (source.Solution != null) {
+            this.Solution = new String(source.Solution);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
     }
 
 
@@ -1230,6 +1282,8 @@ public class ImageRepoInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "HasNeedFixVul", this.HasNeedFixVul);
         this.setParamSimple(map, prefix + "SensitiveInfoCnt", this.SensitiveInfoCnt);
         this.setParamSimple(map, prefix + "RecommendedFix", this.RecommendedFix);
+        this.setParamSimple(map, prefix + "Solution", this.Solution);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }

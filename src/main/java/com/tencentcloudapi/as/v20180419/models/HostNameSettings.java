@@ -58,6 +58,17 @@ HostNameSettings的该入参非必选，未选时不设置主机名后缀。
     private String HostNameSuffix;
 
     /**
+    * 云服务器的主机名分隔符。
+默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
+通过分割符连接多段。
+
+假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
+    */
+    @SerializedName("HostNameDelimiter")
+    @Expose
+    private String HostNameDelimiter;
+
+    /**
      * Get 云服务器的主机名。
 <li> 点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。</li> 
 <li> 不支持 Windows 实例。</li> 
@@ -157,6 +168,38 @@ HostNameSettings的该入参非必选，未选时不设置主机名后缀。
         this.HostNameSuffix = HostNameSuffix;
     }
 
+    /**
+     * Get 云服务器的主机名分隔符。
+默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
+通过分割符连接多段。
+
+假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。 
+     * @return HostNameDelimiter 云服务器的主机名分隔符。
+默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
+通过分割符连接多段。
+
+假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
+     */
+    public String getHostNameDelimiter() {
+        return this.HostNameDelimiter;
+    }
+
+    /**
+     * Set 云服务器的主机名分隔符。
+默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
+通过分割符连接多段。
+
+假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
+     * @param HostNameDelimiter 云服务器的主机名分隔符。
+默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为主机名的分隔符。如果不设置，则默认采用点号（.）分隔符。
+通过分割符连接多段。
+
+假设原主机名为“product-as-host”，分隔符HostNameDelimiter为“-”，设置主机名后缀"suffix"，那么最终主机名为“product-as-host-suffix”。
+     */
+    public void setHostNameDelimiter(String HostNameDelimiter) {
+        this.HostNameDelimiter = HostNameDelimiter;
+    }
+
     public HostNameSettings() {
     }
 
@@ -174,6 +217,9 @@ HostNameSettings的该入参非必选，未选时不设置主机名后缀。
         if (source.HostNameSuffix != null) {
             this.HostNameSuffix = new String(source.HostNameSuffix);
         }
+        if (source.HostNameDelimiter != null) {
+            this.HostNameDelimiter = new String(source.HostNameDelimiter);
+        }
     }
 
 
@@ -184,6 +230,7 @@ HostNameSettings的该入参非必选，未选时不设置主机名后缀。
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "HostNameStyle", this.HostNameStyle);
         this.setParamSimple(map, prefix + "HostNameSuffix", this.HostNameSuffix);
+        this.setParamSimple(map, prefix + "HostNameDelimiter", this.HostNameDelimiter);
 
     }
 }

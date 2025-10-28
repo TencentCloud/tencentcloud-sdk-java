@@ -102,6 +102,13 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
     private DrZoneInfo [] DrZones;
 
     /**
+    * 是否自动升级数据库的兼容性级别，默认0。0-否，1-是
+    */
+    @SerializedName("UpgradeCompatLevel")
+    @Expose
+    private Long UpgradeCompatLevel;
+
+    /**
      * Get 实例ID，形如mssql-j8kv137v 
      * @return InstanceId 实例ID，形如mssql-j8kv137v
      */
@@ -281,6 +288,22 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.DrZones = DrZones;
     }
 
+    /**
+     * Get 是否自动升级数据库的兼容性级别，默认0。0-否，1-是 
+     * @return UpgradeCompatLevel 是否自动升级数据库的兼容性级别，默认0。0-否，1-是
+     */
+    public Long getUpgradeCompatLevel() {
+        return this.UpgradeCompatLevel;
+    }
+
+    /**
+     * Set 是否自动升级数据库的兼容性级别，默认0。0-否，1-是
+     * @param UpgradeCompatLevel 是否自动升级数据库的兼容性级别，默认0。0-否，1-是
+     */
+    public void setUpgradeCompatLevel(Long UpgradeCompatLevel) {
+        this.UpgradeCompatLevel = UpgradeCompatLevel;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -328,6 +351,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
                 this.DrZones[i] = new DrZoneInfo(source.DrZones[i]);
             }
         }
+        if (source.UpgradeCompatLevel != null) {
+            this.UpgradeCompatLevel = new Long(source.UpgradeCompatLevel);
+        }
     }
 
 
@@ -346,6 +372,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MultiZones", this.MultiZones);
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
         this.setParamArrayObj(map, prefix + "DrZones.", this.DrZones);
+        this.setParamSimple(map, prefix + "UpgradeCompatLevel", this.UpgradeCompatLevel);
 
     }
 }

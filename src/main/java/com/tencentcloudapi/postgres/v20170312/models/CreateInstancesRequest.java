@@ -293,6 +293,13 @@ mssql_compatible引擎：
     private Long NeedSupportIpv6;
 
     /**
+    * 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get 实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。 
      * @return Zone 实例所属主可用区， 如：ap-guangzhou-3；若需要支持多可用区，在DBNodeSet.N字段中进行添加主可用区和备可用区信息；
@@ -996,6 +1003,22 @@ mssql_compatible引擎：
         this.NeedSupportIpv6 = NeedSupportIpv6;
     }
 
+    /**
+     * Get 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。 
+     * @return DeletionProtection 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     * @param DeletionProtection 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -1109,6 +1132,9 @@ mssql_compatible引擎：
         if (source.NeedSupportIpv6 != null) {
             this.NeedSupportIpv6 = new Long(source.NeedSupportIpv6);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -1147,6 +1173,7 @@ mssql_compatible引擎：
         this.setParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
         this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
         this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

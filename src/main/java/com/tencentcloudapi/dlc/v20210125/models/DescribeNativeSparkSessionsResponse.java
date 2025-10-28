@@ -31,6 +31,20 @@ public class DescribeNativeSparkSessionsResponse extends AbstractModel {
     private SparkSessionInfo [] SparkSessionsList;
 
     /**
+    * 资源组总规格
+    */
+    @SerializedName("TotalSpec")
+    @Expose
+    private Long TotalSpec;
+
+    /**
+    * 资源组当前可用规格
+    */
+    @SerializedName("TotalAvailable")
+    @Expose
+    private Long TotalAvailable;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +65,38 @@ public class DescribeNativeSparkSessionsResponse extends AbstractModel {
      */
     public void setSparkSessionsList(SparkSessionInfo [] SparkSessionsList) {
         this.SparkSessionsList = SparkSessionsList;
+    }
+
+    /**
+     * Get 资源组总规格 
+     * @return TotalSpec 资源组总规格
+     */
+    public Long getTotalSpec() {
+        return this.TotalSpec;
+    }
+
+    /**
+     * Set 资源组总规格
+     * @param TotalSpec 资源组总规格
+     */
+    public void setTotalSpec(Long TotalSpec) {
+        this.TotalSpec = TotalSpec;
+    }
+
+    /**
+     * Get 资源组当前可用规格 
+     * @return TotalAvailable 资源组当前可用规格
+     */
+    public Long getTotalAvailable() {
+        return this.TotalAvailable;
+    }
+
+    /**
+     * Set 资源组当前可用规格
+     * @param TotalAvailable 资源组当前可用规格
+     */
+    public void setTotalAvailable(Long TotalAvailable) {
+        this.TotalAvailable = TotalAvailable;
     }
 
     /**
@@ -83,6 +129,12 @@ public class DescribeNativeSparkSessionsResponse extends AbstractModel {
                 this.SparkSessionsList[i] = new SparkSessionInfo(source.SparkSessionsList[i]);
             }
         }
+        if (source.TotalSpec != null) {
+            this.TotalSpec = new Long(source.TotalSpec);
+        }
+        if (source.TotalAvailable != null) {
+            this.TotalAvailable = new Long(source.TotalAvailable);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +146,8 @@ public class DescribeNativeSparkSessionsResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SparkSessionsList.", this.SparkSessionsList);
+        this.setParamSimple(map, prefix + "TotalSpec", this.TotalSpec);
+        this.setParamSimple(map, prefix + "TotalAvailable", this.TotalAvailable);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

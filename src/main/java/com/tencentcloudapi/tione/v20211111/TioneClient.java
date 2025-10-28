@@ -64,6 +64,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *创建任务式建模训练任务，Notebook，在线服务和批量预测任务日志下载任务API
+     * @param req CreateExportRequest
+     * @return CreateExportResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExportResponse CreateExport(CreateExportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateExport", CreateExportResponse.class);
+    }
+
+    /**
      *用于创建、发布一个新的模型服务
      * @param req CreateModelServiceRequest
      * @return CreateModelServiceResponse
@@ -138,6 +149,17 @@ https://cloud.tencent.com/document/product/1278/85305
     public DeleteDatasetResponse DeleteDataset(DeleteDatasetRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDataset", DeleteDatasetResponse.class);
+    }
+
+    /**
+     *删除任务式建模训练任务，Notebook，在线服务和批量预测任务日志导出任务API
+     * @param req DeleteExportRequest
+     * @return DeleteExportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteExportResponse DeleteExport(DeleteExportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteExport", DeleteExportResponse.class);
     }
 
     /**
@@ -303,6 +325,17 @@ https://cloud.tencent.com/document/product/1278/85305
     public DescribeEventsResponse DescribeEvents(DescribeEventsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEvents", DescribeEventsResponse.class);
+    }
+
+    /**
+     *查看任务式建模训练任务，Notebook，在线服务和批量预测任务日志下载任务状态API
+     * @param req DescribeExportRequest
+     * @return DescribeExportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExportResponse DescribeExport(DescribeExportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExport", DescribeExportResponse.class);
     }
 
     /**

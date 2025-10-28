@@ -24,26 +24,53 @@ import java.util.HashMap;
 public class DescribeInstanceDealDetailRequest extends AbstractModel {
 
     /**
-    * 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+    * 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
     */
     @SerializedName("DealIds")
     @Expose
     private String [] DealIds;
 
     /**
-     * Get 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10 
-     * @return DealIds 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+    * 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealName。数组最大长度限制为10
+    */
+    @SerializedName("DealName")
+    @Expose
+    private String DealName;
+
+    /**
+     * Get 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10 
+     * @return DealIds 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+     * @deprecated
      */
+    @Deprecated
     public String [] getDealIds() {
         return this.DealIds;
     }
 
     /**
-     * Set 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
-     * @param DealIds 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+     * Set 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+     * @param DealIds 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。数组最大长度限制为10
+     * @deprecated
      */
+    @Deprecated
     public void setDealIds(String [] DealIds) {
         this.DealIds = DealIds;
+    }
+
+    /**
+     * Get 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealName。数组最大长度限制为10 
+     * @return DealName 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealName。数组最大长度限制为10
+     */
+    public String getDealName() {
+        return this.DealName;
+    }
+
+    /**
+     * Set 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealName。数组最大长度限制为10
+     * @param DealName 订单号，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealName。数组最大长度限制为10
+     */
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
     }
 
     public DescribeInstanceDealDetailRequest() {
@@ -60,6 +87,9 @@ public class DescribeInstanceDealDetailRequest extends AbstractModel {
                 this.DealIds[i] = new String(source.DealIds[i]);
             }
         }
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
     }
 
 
@@ -68,6 +98,7 @@ public class DescribeInstanceDealDetailRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DealIds.", this.DealIds);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
 
     }
 }

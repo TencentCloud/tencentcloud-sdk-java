@@ -2725,6 +2725,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeSecurityGroupExpandedPolicies）用于查看参数模板展开后的安全组规则。本接口会通过缓存降低请求后端服务的调用次数，因此拉取结果会存在延迟（缓存超时时间为1分钟）。
+     * @param req DescribeSecurityGroupExpandedPoliciesRequest
+     * @return DescribeSecurityGroupExpandedPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityGroupExpandedPoliciesResponse DescribeSecurityGroupExpandedPolicies(DescribeSecurityGroupExpandedPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecurityGroupExpandedPolicies", DescribeSecurityGroupExpandedPoliciesResponse.class);
+    }
+
+    /**
      *本接口(DescribeSecurityGroupLimits)用于查询用户安全组配额。
      * @param req DescribeSecurityGroupLimitsRequest
      * @return DescribeSecurityGroupLimitsResponse

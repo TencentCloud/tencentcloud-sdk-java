@@ -164,6 +164,20 @@ public class DbNormalDetail extends AbstractModel {
     private String IsFullTextEnabled;
 
     /**
+    * 是否是可用性组 0：否 1：是
+    */
+    @SerializedName("IsAvailabilityGroups")
+    @Expose
+    private String IsAvailabilityGroups;
+
+    /**
+    * AG组数据库同步状态
+    */
+    @SerializedName("AGSyncState")
+    @Expose
+    private String AGSyncState;
+
+    /**
      * Get 是否已订阅 0：否 1：是 
      * @return IsSubscribed 是否已订阅 0：否 1：是
      */
@@ -487,6 +501,38 @@ public class DbNormalDetail extends AbstractModel {
         this.IsFullTextEnabled = IsFullTextEnabled;
     }
 
+    /**
+     * Get 是否是可用性组 0：否 1：是 
+     * @return IsAvailabilityGroups 是否是可用性组 0：否 1：是
+     */
+    public String getIsAvailabilityGroups() {
+        return this.IsAvailabilityGroups;
+    }
+
+    /**
+     * Set 是否是可用性组 0：否 1：是
+     * @param IsAvailabilityGroups 是否是可用性组 0：否 1：是
+     */
+    public void setIsAvailabilityGroups(String IsAvailabilityGroups) {
+        this.IsAvailabilityGroups = IsAvailabilityGroups;
+    }
+
+    /**
+     * Get AG组数据库同步状态 
+     * @return AGSyncState AG组数据库同步状态
+     */
+    public String getAGSyncState() {
+        return this.AGSyncState;
+    }
+
+    /**
+     * Set AG组数据库同步状态
+     * @param AGSyncState AG组数据库同步状态
+     */
+    public void setAGSyncState(String AGSyncState) {
+        this.AGSyncState = AGSyncState;
+    }
+
     public DbNormalDetail() {
     }
 
@@ -555,6 +601,12 @@ public class DbNormalDetail extends AbstractModel {
         if (source.IsFullTextEnabled != null) {
             this.IsFullTextEnabled = new String(source.IsFullTextEnabled);
         }
+        if (source.IsAvailabilityGroups != null) {
+            this.IsAvailabilityGroups = new String(source.IsAvailabilityGroups);
+        }
+        if (source.AGSyncState != null) {
+            this.AGSyncState = new String(source.AGSyncState);
+        }
     }
 
 
@@ -582,6 +634,8 @@ public class DbNormalDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "UserAccessDesc", this.UserAccessDesc);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "IsFullTextEnabled", this.IsFullTextEnabled);
+        this.setParamSimple(map, prefix + "IsAvailabilityGroups", this.IsAvailabilityGroups);
+        this.setParamSimple(map, prefix + "AGSyncState", this.AGSyncState);
 
     }
 }

@@ -371,6 +371,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *开通 TWeSee 后付费服务
+     * @param req CreateTWeSeeServiceRequest
+     * @return CreateTWeSeeServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTWeSeeServiceResponse CreateTWeSeeService(CreateTWeSeeServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTWeSeeService", CreateTWeSeeServiceResponse.class);
+    }
+
+    /**
      *用于配置TWeTalk服务连接产品配置信息。
      * @param req CreateTWeTalkProductConfigRequest
      * @return CreateTWeTalkProductConfigResponse
@@ -2090,6 +2101,17 @@ public class IotexplorerClient extends AbstractClient{
     public UpdateOtaModuleResponse UpdateOtaModule(UpdateOtaModuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateOtaModule", UpdateOtaModuleResponse.class);
+    }
+
+    /**
+     *本接口（UpdateOtaTask）当固件升级大任务处于没有在全部成功的状态时，可修改为取消状态，取消部分或全部设备的升级;或其它允许的可修改的状态。
+     * @param req UpdateOtaTaskStatusRequest
+     * @return UpdateOtaTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOtaTaskStatusResponse UpdateOtaTaskStatus(UpdateOtaTaskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOtaTaskStatus", UpdateOtaTaskStatusResponse.class);
     }
 
     /**

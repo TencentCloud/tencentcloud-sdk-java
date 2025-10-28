@@ -53,7 +53,7 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel {
     private Long AutoBackupType;
 
     /**
-    * 全量备份文件保存天数。单位：天。
+    * 全量备份文件保存天数。 仅支持设置为 7，单位：天。如需更长天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
     */
     @SerializedName("BackupStorageDays")
     @Expose
@@ -128,16 +128,16 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 全量备份文件保存天数。单位：天。 
-     * @return BackupStorageDays 全量备份文件保存天数。单位：天。
+     * Get 全量备份文件保存天数。 仅支持设置为 7，单位：天。如需更长天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。 
+     * @return BackupStorageDays 全量备份文件保存天数。 仅支持设置为 7，单位：天。如需更长天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
      */
     public Long getBackupStorageDays() {
         return this.BackupStorageDays;
     }
 
     /**
-     * Set 全量备份文件保存天数。单位：天。
-     * @param BackupStorageDays 全量备份文件保存天数。单位：天。
+     * Set 全量备份文件保存天数。 仅支持设置为 7，单位：天。如需更长天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+     * @param BackupStorageDays 全量备份文件保存天数。 仅支持设置为 7，单位：天。如需更长天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
      */
     public void setBackupStorageDays(Long BackupStorageDays) {
         this.BackupStorageDays = BackupStorageDays;

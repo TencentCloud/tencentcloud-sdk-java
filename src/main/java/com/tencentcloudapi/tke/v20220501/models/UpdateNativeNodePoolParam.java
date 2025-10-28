@@ -146,6 +146,13 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
     private Long Replicas;
 
     /**
+    * 是否更新存量节点
+    */
+    @SerializedName("UpdateExistedNode")
+    @Expose
+    private Boolean UpdateExistedNode;
+
+    /**
     * 数据盘列表
     */
     @SerializedName("DataDisks")
@@ -451,6 +458,22 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
     }
 
     /**
+     * Get 是否更新存量节点 
+     * @return UpdateExistedNode 是否更新存量节点
+     */
+    public Boolean getUpdateExistedNode() {
+        return this.UpdateExistedNode;
+    }
+
+    /**
+     * Set 是否更新存量节点
+     * @param UpdateExistedNode 是否更新存量节点
+     */
+    public void setUpdateExistedNode(Boolean UpdateExistedNode) {
+        this.UpdateExistedNode = UpdateExistedNode;
+    }
+
+    /**
      * Get 数据盘列表 
      * @return DataDisks 数据盘列表
      */
@@ -569,6 +592,9 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
         if (source.Replicas != null) {
             this.Replicas = new Long(source.Replicas);
         }
+        if (source.UpdateExistedNode != null) {
+            this.UpdateExistedNode = new Boolean(source.UpdateExistedNode);
+        }
         if (source.DataDisks != null) {
             this.DataDisks = new DataDisk[source.DataDisks.length];
             for (int i = 0; i < source.DataDisks.length; i++) {
@@ -611,6 +637,7 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableAutoscaling", this.EnableAutoscaling);
         this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
         this.setParamSimple(map, prefix + "Replicas", this.Replicas);
+        this.setParamSimple(map, prefix + "UpdateExistedNode", this.UpdateExistedNode);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         this.setParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddVpcCniSubnetsRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群 ID，请[登录控制台](https://console.cloud.tencent.com/tke2/cluster)在集群列表复制ID
     */
     @SerializedName("ClusterId")
     @Expose
@@ -52,16 +52,16 @@ public class AddVpcCniSubnetsRequest extends AbstractModel {
     private Boolean SkipAddingNonMasqueradeCIDRs;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群 ID，请[登录控制台](https://console.cloud.tencent.com/tke2/cluster)在集群列表复制ID 
+     * @return ClusterId 集群 ID，请[登录控制台](https://console.cloud.tencent.com/tke2/cluster)在集群列表复制ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群 ID，请[登录控制台](https://console.cloud.tencent.com/tke2/cluster)在集群列表复制ID
+     * @param ClusterId 集群 ID，请[登录控制台](https://console.cloud.tencent.com/tke2/cluster)在集群列表复制ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

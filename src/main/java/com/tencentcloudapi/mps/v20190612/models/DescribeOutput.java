@@ -183,6 +183,13 @@ public class DescribeOutput extends AbstractModel {
     private StreamUrlDetail [] StreamUrls;
 
     /**
+    * 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+    */
+    @SerializedName("StreamSelector")
+    @Expose
+    private StreamSelector StreamSelector;
+
+    /**
      * Get 输出Id。 
      * @return OutputId 输出Id。
      */
@@ -537,7 +544,9 @@ public class DescribeOutput extends AbstractModel {
     /**
      * Get 对于含有多个音/视频轨的流，可以指定需要使用的轨道 
      * @return PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @deprecated
      */
+    @Deprecated
     public PidSelector getPidSelector() {
         return this.PidSelector;
     }
@@ -545,7 +554,9 @@ public class DescribeOutput extends AbstractModel {
     /**
      * Set 对于含有多个音/视频轨的流，可以指定需要使用的轨道
      * @param PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @deprecated
      */
+    @Deprecated
     public void setPidSelector(PidSelector PidSelector) {
         this.PidSelector = PidSelector;
     }
@@ -564,6 +575,22 @@ public class DescribeOutput extends AbstractModel {
      */
     public void setStreamUrls(StreamUrlDetail [] StreamUrls) {
         this.StreamUrls = StreamUrls;
+    }
+
+    /**
+     * Get 对于含有多个音/视频轨的流，可以指定需要使用的轨道 
+     * @return StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     */
+    public StreamSelector getStreamSelector() {
+        return this.StreamSelector;
+    }
+
+    /**
+     * Set 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @param StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     */
+    public void setStreamSelector(StreamSelector StreamSelector) {
+        this.StreamSelector = StreamSelector;
     }
 
     public DescribeOutput() {
@@ -652,6 +679,9 @@ public class DescribeOutput extends AbstractModel {
                 this.StreamUrls[i] = new StreamUrlDetail(source.StreamUrls[i]);
             }
         }
+        if (source.StreamSelector != null) {
+            this.StreamSelector = new StreamSelector(source.StreamSelector);
+        }
     }
 
 
@@ -680,6 +710,7 @@ public class DescribeOutput extends AbstractModel {
         this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
         this.setParamObj(map, prefix + "PidSelector.", this.PidSelector);
         this.setParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
+        this.setParamObj(map, prefix + "StreamSelector.", this.StreamSelector);
 
     }
 }

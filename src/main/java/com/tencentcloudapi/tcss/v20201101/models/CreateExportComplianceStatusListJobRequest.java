@@ -52,6 +52,13 @@ public class CreateExportComplianceStatusListJobRequest extends AbstractModel {
     private Long [] IdList;
 
     /**
+    * 筛选
+    */
+    @SerializedName("Filters")
+    @Expose
+    private RunTimeFilters [] Filters;
+
+    /**
      * Get 要导出信息的资产类型 
      * @return AssetType 要导出信息的资产类型
      */
@@ -115,6 +122,22 @@ public class CreateExportComplianceStatusListJobRequest extends AbstractModel {
         this.IdList = IdList;
     }
 
+    /**
+     * Get 筛选 
+     * @return Filters 筛选
+     */
+    public RunTimeFilters [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 筛选
+     * @param Filters 筛选
+     */
+    public void setFilters(RunTimeFilters [] Filters) {
+        this.Filters = Filters;
+    }
+
     public CreateExportComplianceStatusListJobRequest() {
     }
 
@@ -138,6 +161,12 @@ public class CreateExportComplianceStatusListJobRequest extends AbstractModel {
                 this.IdList[i] = new Long(source.IdList[i]);
             }
         }
+        if (source.Filters != null) {
+            this.Filters = new RunTimeFilters[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new RunTimeFilters(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class CreateExportComplianceStatusListJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExportByAsset", this.ExportByAsset);
         this.setParamSimple(map, prefix + "ExportAll", this.ExportAll);
         this.setParamArraySimple(map, prefix + "IdList.", this.IdList);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

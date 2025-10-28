@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeResourcesByTagsRequest extends AbstractModel {
 
     /**
-    * 标签过滤数组
+    * 标签过滤数组，数量最多6个
     */
     @SerializedName("TagFilters")
     @Expose
@@ -80,16 +80,16 @@ public class DescribeResourcesByTagsRequest extends AbstractModel {
     private String ServiceType;
 
     /**
-     * Get 标签过滤数组 
-     * @return TagFilters 标签过滤数组
+     * Get 标签过滤数组，数量最多6个 
+     * @return TagFilters 标签过滤数组，数量最多6个
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 标签过滤数组
-     * @param TagFilters 标签过滤数组
+     * Set 标签过滤数组，数量最多6个
+     * @param TagFilters 标签过滤数组，数量最多6个
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;

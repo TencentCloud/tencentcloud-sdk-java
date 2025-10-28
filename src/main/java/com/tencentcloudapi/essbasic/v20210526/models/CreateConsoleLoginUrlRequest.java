@@ -131,7 +131,8 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     private String Endpoint;
 
     /**
-    * 触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
+    * <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
     */
     @SerializedName("AutoJumpBackEvent")
@@ -158,7 +159,8 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     private String ProxyOperatorIdCardNumber;
 
     /**
-    * 认证完成跳转链接。
+    * <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+认证完成跳转链接。
 注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
     */
     @SerializedName("AutoJumpUrl")
@@ -242,6 +244,15 @@ p.s.
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
+
+    /**
+    * 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+    */
+    @SerializedName("JumpEvents")
+    @Expose
+    private JumpEvent [] JumpEvents;
 
     /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
@@ -564,9 +575,11 @@ p.s.
     }
 
     /**
-     * Get 触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
+     * Get <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul> 
-     * @return AutoJumpBackEvent 触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
+     * @return AutoJumpBackEvent <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
      */
     public String getAutoJumpBackEvent() {
@@ -574,9 +587,11 @@ p.s.
     }
 
     /**
-     * Set 触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
+     * Set <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
-     * @param AutoJumpBackEvent 触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
+     * @param AutoJumpBackEvent <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
      */
     public void setAutoJumpBackEvent(String AutoJumpBackEvent) {
@@ -636,9 +651,11 @@ p.s.
     }
 
     /**
-     * Get 认证完成跳转链接。
+     * Get <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+认证完成跳转链接。
 注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。 
-     * @return AutoJumpUrl 认证完成跳转链接。
+     * @return AutoJumpUrl <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+认证完成跳转链接。
 注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
      */
     public String getAutoJumpUrl() {
@@ -646,9 +663,11 @@ p.s.
     }
 
     /**
-     * Set 认证完成跳转链接。
+     * Set <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+认证完成跳转链接。
 注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
-     * @param AutoJumpUrl 认证完成跳转链接。
+     * @param AutoJumpUrl <font color="red">已废弃</font> 请使用 JumpEvents 参数，进行替换。
+认证完成跳转链接。
 注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
      */
     public void setAutoJumpUrl(String AutoJumpUrl) {
@@ -863,6 +882,30 @@ p.s.
         this.Operator = Operator;
     }
 
+    /**
+     * Get 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。 
+     * @return JumpEvents 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+     */
+    public JumpEvent [] getJumpEvents() {
+        return this.JumpEvents;
+    }
+
+    /**
+     * Set 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+     * @param JumpEvents 跳转事件，其中包括认证期间收录，授权书审核，企业认证的回跳事件。
+p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </font>
+如果 Endpoint 是 H5 类型，请参考文档跳转电子签H5 p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，仅会进行回跳。
+     */
+    public void setJumpEvents(JumpEvent [] JumpEvents) {
+        this.JumpEvents = JumpEvents;
+    }
+
     public CreateConsoleLoginUrlRequest() {
     }
 
@@ -943,6 +986,12 @@ p.s.
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.JumpEvents != null) {
+            this.JumpEvents = new JumpEvent[source.JumpEvents.length];
+            for (int i = 0; i < source.JumpEvents.length; i++) {
+                this.JumpEvents[i] = new JumpEvent(source.JumpEvents[i]);
+            }
+        }
     }
 
 
@@ -972,6 +1021,7 @@ p.s.
         this.setParamObj(map, prefix + "OrganizationAuthorizationOptions.", this.OrganizationAuthorizationOptions);
         this.setParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamArrayObj(map, prefix + "JumpEvents.", this.JumpEvents);
 
     }
 }

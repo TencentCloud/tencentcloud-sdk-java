@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAccountsRequest extends AbstractModel {
 
     /**
-    * 实例ID，形如postgres-6fego161
+    * 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -46,6 +46,7 @@ public class DescribeAccountsRequest extends AbstractModel {
 
     /**
     * 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
+默认值：createTime
     */
     @SerializedName("OrderBy")
     @Expose
@@ -53,22 +54,23 @@ public class DescribeAccountsRequest extends AbstractModel {
 
     /**
     * 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
+默认值：desc
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-     * Get 实例ID，形如postgres-6fego161 
-     * @return DBInstanceId 实例ID，形如postgres-6fego161
+     * Get 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如postgres-6fego161
-     * @param DBInstanceId 实例ID，形如postgres-6fego161
+     * Set 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -107,8 +109,10 @@ public class DescribeAccountsRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。 
+     * Get 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
+默认值：createTime 
      * @return OrderBy 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
+默认值：createTime
      */
     public String getOrderBy() {
         return this.OrderBy;
@@ -116,15 +120,19 @@ public class DescribeAccountsRequest extends AbstractModel {
 
     /**
      * Set 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
+默认值：createTime
      * @param OrderBy 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
+默认值：createTime
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序 
+     * Get 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
+默认值：desc 
      * @return OrderByType 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
+默认值：desc
      */
     public String getOrderByType() {
         return this.OrderByType;
@@ -132,7 +140,9 @@ public class DescribeAccountsRequest extends AbstractModel {
 
     /**
      * Set 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
+默认值：desc
      * @param OrderByType 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
+默认值：desc
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

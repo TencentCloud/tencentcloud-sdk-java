@@ -25,6 +25,7 @@ public class RouteTableConflict extends AbstractModel {
 
     /**
     * 路由表类型。
+枚举值：CcsCluster、Vpc、VpcRouteTable、CcsClusterRouteTable
     */
     @SerializedName("RouteTableType")
     @Expose
@@ -52,8 +53,10 @@ public class RouteTableConflict extends AbstractModel {
     private String RouteTableId;
 
     /**
-     * Get 路由表类型。 
+     * Get 路由表类型。
+枚举值：CcsCluster、Vpc、VpcRouteTable、CcsClusterRouteTable 
      * @return RouteTableType 路由表类型。
+枚举值：CcsCluster、Vpc、VpcRouteTable、CcsClusterRouteTable
      */
     public String getRouteTableType() {
         return this.RouteTableType;
@@ -61,7 +64,9 @@ public class RouteTableConflict extends AbstractModel {
 
     /**
      * Set 路由表类型。
+枚举值：CcsCluster、Vpc、VpcRouteTable、CcsClusterRouteTable
      * @param RouteTableType 路由表类型。
+枚举值：CcsCluster、Vpc、VpcRouteTable、CcsClusterRouteTable
      */
     public void setRouteTableType(String RouteTableType) {
         this.RouteTableType = RouteTableType;

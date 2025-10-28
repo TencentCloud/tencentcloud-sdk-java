@@ -47,7 +47,9 @@ public class ConflictItem extends AbstractModel {
     /**
      * Get 冲突资源的ID。已废弃 
      * @return ConfilctId 冲突资源的ID。已废弃
+     * @deprecated
      */
+    @Deprecated
     public String getConfilctId() {
         return this.ConfilctId;
     }
@@ -55,7 +57,9 @@ public class ConflictItem extends AbstractModel {
     /**
      * Set 冲突资源的ID。已废弃
      * @param ConfilctId 冲突资源的ID。已废弃
+     * @deprecated
      */
+    @Deprecated
     public void setConfilctId(String ConfilctId) {
         this.ConfilctId = ConfilctId;
     }

@@ -31,7 +31,7 @@ public class DescribeRouteTableConflictsRequest extends AbstractModel {
     private String RouteTableCidrBlock;
 
     /**
-    * 路由表绑定的VPC
+    * 路由表绑定的VPC，请到 [VPC 控制台](https://console.cloud.tencent.com/vpc/vpc)复制 VPC ID
     */
     @SerializedName("VpcId")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeRouteTableConflictsRequest extends AbstractModel {
     }
 
     /**
-     * Get 路由表绑定的VPC 
-     * @return VpcId 路由表绑定的VPC
+     * Get 路由表绑定的VPC，请到 [VPC 控制台](https://console.cloud.tencent.com/vpc/vpc)复制 VPC ID 
+     * @return VpcId 路由表绑定的VPC，请到 [VPC 控制台](https://console.cloud.tencent.com/vpc/vpc)复制 VPC ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 路由表绑定的VPC
-     * @param VpcId 路由表绑定的VPC
+     * Set 路由表绑定的VPC，请到 [VPC 控制台](https://console.cloud.tencent.com/vpc/vpc)复制 VPC ID
+     * @param VpcId 路由表绑定的VPC，请到 [VPC 控制台](https://console.cloud.tencent.com/vpc/vpc)复制 VPC ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

@@ -33,7 +33,7 @@ public class MaxAge extends AbstractModel {
     private String FollowOrigin;
 
     /**
-    * MaxAge 时间设置，单位秒，最大365天。
+    * MaxAge 时间设置，单位为秒，取值：0～315360000。
 注意：时间为0，即不缓存。
     */
     @SerializedName("MaxAgeTime")
@@ -65,9 +65,9 @@ public class MaxAge extends AbstractModel {
     }
 
     /**
-     * Get MaxAge 时间设置，单位秒，最大365天。
+     * Get MaxAge 时间设置，单位为秒，取值：0～315360000。
 注意：时间为0，即不缓存。 
-     * @return MaxAgeTime MaxAge 时间设置，单位秒，最大365天。
+     * @return MaxAgeTime MaxAge 时间设置，单位为秒，取值：0～315360000。
 注意：时间为0，即不缓存。
      */
     public Long getMaxAgeTime() {
@@ -75,9 +75,9 @@ public class MaxAge extends AbstractModel {
     }
 
     /**
-     * Set MaxAge 时间设置，单位秒，最大365天。
+     * Set MaxAge 时间设置，单位为秒，取值：0～315360000。
 注意：时间为0，即不缓存。
-     * @param MaxAgeTime MaxAge 时间设置，单位秒，最大365天。
+     * @param MaxAgeTime MaxAge 时间设置，单位为秒，取值：0～315360000。
 注意：时间为0，即不缓存。
      */
     public void setMaxAgeTime(Long MaxAgeTime) {

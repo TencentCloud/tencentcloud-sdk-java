@@ -45,7 +45,7 @@ public class CreateCLSLogConfigRequest extends AbstractModel {
     private String LogsetId;
 
     /**
-    * 当前集群类型支持tke、eks
+    * 当前集群类型支持tke（标准集群）、eks（serverless集群）
     */
     @SerializedName("ClusterType")
     @Expose
@@ -100,16 +100,16 @@ public class CreateCLSLogConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 当前集群类型支持tke、eks 
-     * @return ClusterType 当前集群类型支持tke、eks
+     * Get 当前集群类型支持tke（标准集群）、eks（serverless集群） 
+     * @return ClusterType 当前集群类型支持tke（标准集群）、eks（serverless集群）
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 当前集群类型支持tke、eks
-     * @param ClusterType 当前集群类型支持tke、eks
+     * Set 当前集群类型支持tke（标准集群）、eks（serverless集群）
+     * @param ClusterType 当前集群类型支持tke（标准集群）、eks（serverless集群）
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

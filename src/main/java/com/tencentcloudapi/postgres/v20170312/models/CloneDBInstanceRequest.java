@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
-    * 克隆的源实例ID。
+    * 克隆的源实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -38,7 +38,7 @@ public class CloneDBInstanceRequest extends AbstractModel {
     private String SpecCode;
 
     /**
-    * 实例容量大小，单位：GB。
+    * 实例磁盘容量大小，设置步长限制为10。单位：GB。
     */
     @SerializedName("Storage")
     @Expose
@@ -56,7 +56,8 @@ public class CloneDBInstanceRequest extends AbstractModel {
     private Long Period;
 
     /**
-    * 续费标记：
+    * 续费标记。仅当计费模式为预付费时生效。
+枚举值：
 
 - 0：手动续费
 - 1：自动续费
@@ -82,7 +83,7 @@ public class CloneDBInstanceRequest extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+    * 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"源实例名-Copy"。
     */
     @SerializedName("Name")
     @Expose
@@ -101,7 +102,7 @@ public class CloneDBInstanceRequest extends AbstractModel {
     private String InstanceChargeType;
 
     /**
-    * 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+    * 实例所属安全组。该参数可以通过调用[DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808)的返回值中的SecurityGroupId字段来获取。若不指定该参数，则绑定默认安全组。
 
     */
     @SerializedName("SecurityGroupIds")
@@ -109,7 +110,7 @@ public class CloneDBInstanceRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-    * 项目ID。
+    * 项目ID。默认值为0，表示所属默认项目。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -123,7 +124,7 @@ public class CloneDBInstanceRequest extends AbstractModel {
     private Tag [] TagList;
 
     /**
-    * 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+    * 实例节点部署信息，必须填写主备节点可用区。支持多可用区部署时需要指定每个节点的部署可用区信息。
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
     */
     @SerializedName("DBNodeSet")
@@ -157,14 +158,14 @@ public class CloneDBInstanceRequest extends AbstractModel {
     private Long ActivityId;
 
     /**
-    * 基础备份集ID。
+    * 基础备份集ID。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。
     */
     @SerializedName("BackupSetId")
     @Expose
     private String BackupSetId;
 
     /**
-    * 恢复时间点。
+    * 恢复时间点。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。
     */
     @SerializedName("RecoveryTargetTime")
     @Expose
@@ -182,16 +183,23 @@ public class CloneDBInstanceRequest extends AbstractModel {
     private String SyncMode;
 
     /**
-     * Get 克隆的源实例ID。 
-     * @return DBInstanceId 克隆的源实例ID。
+    * 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
+     * Get 克隆的源实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
+     * @return DBInstanceId 克隆的源实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 克隆的源实例ID。
-     * @param DBInstanceId 克隆的源实例ID。
+     * Set 克隆的源实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param DBInstanceId 克隆的源实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -214,16 +222,16 @@ public class CloneDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例容量大小，单位：GB。 
-     * @return Storage 实例容量大小，单位：GB。
+     * Get 实例磁盘容量大小，设置步长限制为10。单位：GB。 
+     * @return Storage 实例磁盘容量大小，设置步长限制为10。单位：GB。
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 实例容量大小，单位：GB。
-     * @param Storage 实例容量大小，单位：GB。
+     * Set 实例磁盘容量大小，设置步长限制为10。单位：GB。
+     * @param Storage 实例磁盘容量大小，设置步长限制为10。单位：GB。
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -262,13 +270,15 @@ public class CloneDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 续费标记：
+     * Get 续费标记。仅当计费模式为预付费时生效。
+枚举值：
 
 - 0：手动续费
 - 1：自动续费
 
 默认值：0 
-     * @return AutoRenewFlag 续费标记：
+     * @return AutoRenewFlag 续费标记。仅当计费模式为预付费时生效。
+枚举值：
 
 - 0：手动续费
 - 1：自动续费
@@ -280,13 +290,15 @@ public class CloneDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Set 续费标记：
+     * Set 续费标记。仅当计费模式为预付费时生效。
+枚举值：
 
 - 0：手动续费
 - 1：自动续费
 
 默认值：0
-     * @param AutoRenewFlag 续费标记：
+     * @param AutoRenewFlag 续费标记。仅当计费模式为预付费时生效。
+枚举值：
 
 - 0：手动续费
 - 1：自动续费
@@ -330,16 +342,16 @@ public class CloneDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。 
-     * @return Name 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+     * Get 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"源实例名-Copy"。 
+     * @return Name 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"源实例名-Copy"。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
-     * @param Name 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+     * Set 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"源实例名-Copy"。
+     * @param Name 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"源实例名-Copy"。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -382,9 +394,9 @@ public class CloneDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+     * Get 实例所属安全组。该参数可以通过调用[DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808)的返回值中的SecurityGroupId字段来获取。若不指定该参数，则绑定默认安全组。
  
-     * @return SecurityGroupIds 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+     * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用[DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808)的返回值中的SecurityGroupId字段来获取。若不指定该参数，则绑定默认安全组。
 
      */
     public String [] getSecurityGroupIds() {
@@ -392,9 +404,9 @@ public class CloneDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Set 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+     * Set 实例所属安全组。该参数可以通过调用[DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808)的返回值中的SecurityGroupId字段来获取。若不指定该参数，则绑定默认安全组。
 
-     * @param SecurityGroupIds 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+     * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用[DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808)的返回值中的SecurityGroupId字段来获取。若不指定该参数，则绑定默认安全组。
 
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -402,16 +414,16 @@ public class CloneDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目ID。 
-     * @return ProjectId 项目ID。
+     * Get 项目ID。默认值为0，表示所属默认项目。 
+     * @return ProjectId 项目ID。默认值为0，表示所属默认项目。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID。
-     * @param ProjectId 项目ID。
+     * Set 项目ID。默认值为0，表示所属默认项目。
+     * @param ProjectId 项目ID。默认值为0，表示所属默认项目。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -434,9 +446,9 @@ public class CloneDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+     * Get 实例节点部署信息，必须填写主备节点可用区。支持多可用区部署时需要指定每个节点的部署可用区信息。
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。 
-     * @return DBNodeSet 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+     * @return DBNodeSet 实例节点部署信息，必须填写主备节点可用区。支持多可用区部署时需要指定每个节点的部署可用区信息。
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
      */
     public DBNode [] getDBNodeSet() {
@@ -444,9 +456,9 @@ public class CloneDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Set 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+     * Set 实例节点部署信息，必须填写主备节点可用区。支持多可用区部署时需要指定每个节点的部署可用区信息。
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
-     * @param DBNodeSet 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+     * @param DBNodeSet 实例节点部署信息，必须填写主备节点可用区。支持多可用区部署时需要指定每个节点的部署可用区信息。
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
      */
     public void setDBNodeSet(DBNode [] DBNodeSet) {
@@ -522,32 +534,32 @@ public class CloneDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 基础备份集ID。 
-     * @return BackupSetId 基础备份集ID。
+     * Get 基础备份集ID。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。 
+     * @return BackupSetId 基础备份集ID。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。
      */
     public String getBackupSetId() {
         return this.BackupSetId;
     }
 
     /**
-     * Set 基础备份集ID。
-     * @param BackupSetId 基础备份集ID。
+     * Set 基础备份集ID。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。
+     * @param BackupSetId 基础备份集ID。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。
      */
     public void setBackupSetId(String BackupSetId) {
         this.BackupSetId = BackupSetId;
     }
 
     /**
-     * Get 恢复时间点。 
-     * @return RecoveryTargetTime 恢复时间点。
+     * Get 恢复时间点。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。 
+     * @return RecoveryTargetTime 恢复时间点。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。
      */
     public String getRecoveryTargetTime() {
         return this.RecoveryTargetTime;
     }
 
     /**
-     * Set 恢复时间点。
-     * @param RecoveryTargetTime 恢复时间点。
+     * Set 恢复时间点。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。
+     * @param RecoveryTargetTime 恢复时间点。参数BackupSetId、RecoveryTargetTime两者必须填写一项，且不能同时填写。
      */
     public void setRecoveryTargetTime(String RecoveryTargetTime) {
         this.RecoveryTargetTime = RecoveryTargetTime;
@@ -583,6 +595,22 @@ public class CloneDBInstanceRequest extends AbstractModel {
      */
     public void setSyncMode(String SyncMode) {
         this.SyncMode = SyncMode;
+    }
+
+    /**
+     * Get 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。 
+     * @return DeletionProtection 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     * @param DeletionProtection 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
     }
 
     public CloneDBInstanceRequest() {
@@ -659,6 +687,9 @@ public class CloneDBInstanceRequest extends AbstractModel {
         if (source.SyncMode != null) {
             this.SyncMode = new String(source.SyncMode);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -685,6 +716,7 @@ public class CloneDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupSetId", this.BackupSetId);
         this.setParamSimple(map, prefix + "RecoveryTargetTime", this.RecoveryTargetTime);
         this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

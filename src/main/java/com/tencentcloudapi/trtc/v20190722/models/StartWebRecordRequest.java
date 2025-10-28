@@ -24,20 +24,11 @@ import java.util.HashMap;
 public class StartWebRecordRequest extends AbstractModel {
 
     /**
-    * 需要录制的网页URL
-
+    * 【必填】需要录制的网页URL
     */
     @SerializedName("RecordUrl")
     @Expose
     private String RecordUrl;
-
-    /**
-    * 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
-
-    */
-    @SerializedName("MaxDurationLimit")
-    @Expose
-    private Long MaxDurationLimit;
 
     /**
     * 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储；输出文件的存储格式仅支持hls或mp4
@@ -47,18 +38,25 @@ public class StartWebRecordRequest extends AbstractModel {
     private StorageParams StorageParams;
 
     /**
-    * 页面录制视频参数
-    */
-    @SerializedName("WebRecordVideoParams")
-    @Expose
-    private WebRecordVideoParams WebRecordVideoParams;
-
-    /**
     * 【必填】TRTC的SdkAppId
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
+
+    /**
+    * 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+    */
+    @SerializedName("MaxDurationLimit")
+    @Expose
+    private Long MaxDurationLimit;
+
+    /**
+    * 页面录制视频参数
+    */
+    @SerializedName("WebRecordVideoParams")
+    @Expose
+    private WebRecordVideoParams WebRecordVideoParams;
 
     /**
     * 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
@@ -90,43 +88,19 @@ public class StartWebRecordRequest extends AbstractModel {
     private EmulateMobileParams EmulateMobileParams;
 
     /**
-     * Get 需要录制的网页URL
- 
-     * @return RecordUrl 需要录制的网页URL
-
+     * Get 【必填】需要录制的网页URL 
+     * @return RecordUrl 【必填】需要录制的网页URL
      */
     public String getRecordUrl() {
         return this.RecordUrl;
     }
 
     /**
-     * Set 需要录制的网页URL
-
-     * @param RecordUrl 需要录制的网页URL
-
+     * Set 【必填】需要录制的网页URL
+     * @param RecordUrl 【必填】需要录制的网页URL
      */
     public void setRecordUrl(String RecordUrl) {
         this.RecordUrl = RecordUrl;
-    }
-
-    /**
-     * Get 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
- 
-     * @return MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
-
-     */
-    public Long getMaxDurationLimit() {
-        return this.MaxDurationLimit;
-    }
-
-    /**
-     * Set 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
-
-     * @param MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
-
-     */
-    public void setMaxDurationLimit(Long MaxDurationLimit) {
-        this.MaxDurationLimit = MaxDurationLimit;
     }
 
     /**
@@ -146,22 +120,6 @@ public class StartWebRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 页面录制视频参数 
-     * @return WebRecordVideoParams 页面录制视频参数
-     */
-    public WebRecordVideoParams getWebRecordVideoParams() {
-        return this.WebRecordVideoParams;
-    }
-
-    /**
-     * Set 页面录制视频参数
-     * @param WebRecordVideoParams 页面录制视频参数
-     */
-    public void setWebRecordVideoParams(WebRecordVideoParams WebRecordVideoParams) {
-        this.WebRecordVideoParams = WebRecordVideoParams;
-    }
-
-    /**
      * Get 【必填】TRTC的SdkAppId 
      * @return SdkAppId 【必填】TRTC的SdkAppId
      */
@@ -175,6 +133,38 @@ public class StartWebRecordRequest extends AbstractModel {
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时) 
+     * @return MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+     */
+    public Long getMaxDurationLimit() {
+        return this.MaxDurationLimit;
+    }
+
+    /**
+     * Set 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+     * @param MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 86400], 默认 86400s(24 小时)
+     */
+    public void setMaxDurationLimit(Long MaxDurationLimit) {
+        this.MaxDurationLimit = MaxDurationLimit;
+    }
+
+    /**
+     * Get 页面录制视频参数 
+     * @return WebRecordVideoParams 页面录制视频参数
+     */
+    public WebRecordVideoParams getWebRecordVideoParams() {
+        return this.WebRecordVideoParams;
+    }
+
+    /**
+     * Set 页面录制视频参数
+     * @param WebRecordVideoParams 页面录制视频参数
+     */
+    public void setWebRecordVideoParams(WebRecordVideoParams WebRecordVideoParams) {
+        this.WebRecordVideoParams = WebRecordVideoParams;
     }
 
     /**
@@ -256,17 +246,17 @@ public class StartWebRecordRequest extends AbstractModel {
         if (source.RecordUrl != null) {
             this.RecordUrl = new String(source.RecordUrl);
         }
-        if (source.MaxDurationLimit != null) {
-            this.MaxDurationLimit = new Long(source.MaxDurationLimit);
-        }
         if (source.StorageParams != null) {
             this.StorageParams = new StorageParams(source.StorageParams);
         }
-        if (source.WebRecordVideoParams != null) {
-            this.WebRecordVideoParams = new WebRecordVideoParams(source.WebRecordVideoParams);
-        }
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.MaxDurationLimit != null) {
+            this.MaxDurationLimit = new Long(source.MaxDurationLimit);
+        }
+        if (source.WebRecordVideoParams != null) {
+            this.WebRecordVideoParams = new WebRecordVideoParams(source.WebRecordVideoParams);
         }
         if (source.RecordId != null) {
             this.RecordId = new String(source.RecordId);
@@ -291,10 +281,10 @@ public class StartWebRecordRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
-        this.setParamSimple(map, prefix + "MaxDurationLimit", this.MaxDurationLimit);
         this.setParamObj(map, prefix + "StorageParams.", this.StorageParams);
-        this.setParamObj(map, prefix + "WebRecordVideoParams.", this.WebRecordVideoParams);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "MaxDurationLimit", this.MaxDurationLimit);
+        this.setParamObj(map, prefix + "WebRecordVideoParams.", this.WebRecordVideoParams);
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
         this.setParamSimple(map, prefix + "ReadyTimeout", this.ReadyTimeout);

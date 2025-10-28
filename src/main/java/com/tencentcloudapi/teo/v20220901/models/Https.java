@@ -44,8 +44,8 @@ public class Https extends AbstractModel {
     /**
     * Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
-<li>TLSV1.1：TLSv1.1版本；</li>
-<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.1：TLSv1.1版本；</li>
+<li>TLSv1.2：TLSv1.2版本；</li>
 <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
     */
     @SerializedName("TlsVersion")
@@ -138,13 +138,13 @@ public class Https extends AbstractModel {
     /**
      * Get Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
-<li>TLSV1.1：TLSv1.1版本；</li>
-<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.1：TLSv1.1版本；</li>
+<li>TLSv1.2：TLSv1.2版本；</li>
 <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。 
      * @return TlsVersion Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
-<li>TLSV1.1：TLSv1.1版本；</li>
-<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.1：TLSv1.1版本；</li>
+<li>TLSv1.2：TLSv1.2版本；</li>
 <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
      */
     public String [] getTlsVersion() {
@@ -154,13 +154,13 @@ public class Https extends AbstractModel {
     /**
      * Set Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
-<li>TLSV1.1：TLSv1.1版本；</li>
-<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.1：TLSv1.1版本；</li>
+<li>TLSv1.2：TLSv1.2版本；</li>
 <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
      * @param TlsVersion Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
-<li>TLSV1.1：TLSv1.1版本；</li>
-<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.1：TLSv1.1版本；</li>
+<li>TLSv1.2：TLSv1.2版本；</li>
 <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
      */
     public void setTlsVersion(String [] TlsVersion) {

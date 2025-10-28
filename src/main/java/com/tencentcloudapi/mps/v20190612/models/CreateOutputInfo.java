@@ -123,11 +123,18 @@ public class CreateOutputInfo extends AbstractModel {
     private CreateOutputRistSettings RISTSettings;
 
     /**
-    * 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+    * 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
     */
     @SerializedName("PidSelector")
     @Expose
     private PidSelector PidSelector;
+
+    /**
+    * 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+    */
+    @SerializedName("StreamSelector")
+    @Expose
+    private StreamSelector StreamSelector;
 
     /**
      * Get 输出的名称。 
@@ -358,19 +365,39 @@ public class CreateOutputInfo extends AbstractModel {
     }
 
     /**
-     * Get 对于含有多个音/视频轨的流，可以指定需要使用的轨道 
-     * @return PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * Get 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个 
+     * @return PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+     * @deprecated
      */
+    @Deprecated
     public PidSelector getPidSelector() {
         return this.PidSelector;
     }
 
     /**
-     * Set 对于含有多个音/视频轨的流，可以指定需要使用的轨道
-     * @param PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * Set 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+     * @param PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+     * @deprecated
      */
+    @Deprecated
     public void setPidSelector(PidSelector PidSelector) {
         this.PidSelector = PidSelector;
+    }
+
+    /**
+     * Get 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个 
+     * @return StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+     */
+    public StreamSelector getStreamSelector() {
+        return this.StreamSelector;
+    }
+
+    /**
+     * Set 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+     * @param StreamSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道。PidSelector 与 TrackSelector 只能存在一个
+     */
+    public void setStreamSelector(StreamSelector StreamSelector) {
+        this.StreamSelector = StreamSelector;
     }
 
     public CreateOutputInfo() {
@@ -435,6 +462,9 @@ public class CreateOutputInfo extends AbstractModel {
         if (source.PidSelector != null) {
             this.PidSelector = new PidSelector(source.PidSelector);
         }
+        if (source.StreamSelector != null) {
+            this.StreamSelector = new StreamSelector(source.StreamSelector);
+        }
     }
 
 
@@ -457,6 +487,7 @@ public class CreateOutputInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
         this.setParamObj(map, prefix + "PidSelector.", this.PidSelector);
+        this.setParamObj(map, prefix + "StreamSelector.", this.StreamSelector);
 
     }
 }
