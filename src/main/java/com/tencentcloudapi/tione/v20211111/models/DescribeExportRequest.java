@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeExportRequest extends AbstractModel {
 
+    /**
+    * 日志下载任务的ID
+    */
+    @SerializedName("ExportId")
+    @Expose
+    private String ExportId;
+
+    /**
+     * Get 日志下载任务的ID 
+     * @return ExportId 日志下载任务的ID
+     */
+    public String getExportId() {
+        return this.ExportId;
+    }
+
+    /**
+     * Set 日志下载任务的ID
+     * @param ExportId 日志下载任务的ID
+     */
+    public void setExportId(String ExportId) {
+        this.ExportId = ExportId;
+    }
+
     public DescribeExportRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeExportRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeExportRequest(DescribeExportRequest source) {
+        if (source.ExportId != null) {
+            this.ExportId = new String(source.ExportId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeExportRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ExportId", this.ExportId);
 
     }
 }

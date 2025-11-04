@@ -66,6 +66,13 @@ public class CreateVpcRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+    */
+    @SerializedName("EnableRouteVpcPublish")
+    @Expose
+    private Boolean EnableRouteVpcPublish;
+
+    /**
      * Get vpc名称，最大长度不能超过60个字节。 
      * @return VpcName vpc名称，最大长度不能超过60个字节。
      */
@@ -161,6 +168,22 @@ public class CreateVpcRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单 
+     * @return EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     */
+    public Boolean getEnableRouteVpcPublish() {
+        return this.EnableRouteVpcPublish;
+    }
+
+    /**
+     * Set vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     * @param EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     */
+    public void setEnableRouteVpcPublish(Boolean EnableRouteVpcPublish) {
+        this.EnableRouteVpcPublish = EnableRouteVpcPublish;
+    }
+
     public CreateVpcRequest() {
     }
 
@@ -193,6 +216,9 @@ public class CreateVpcRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.EnableRouteVpcPublish != null) {
+            this.EnableRouteVpcPublish = new Boolean(source.EnableRouteVpcPublish);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class CreateVpcRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
 
     }
 }

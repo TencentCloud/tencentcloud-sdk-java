@@ -46,6 +46,20 @@ public class SmartSubtitleTaskTransTextResultOutput extends AbstractModel {
     private TaskOutputStorage OutputStorage;
 
     /**
+    * 字幕文件地址
+    */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
+
+    /**
+    * 多语言翻译时返回翻译结果。	
+    */
+    @SerializedName("SubtitleResults")
+    @Expose
+    private SubtitleTransResultItem [] SubtitleResults;
+
+    /**
      * Get 翻译片段列表。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SegmentSet 翻译片段列表。
@@ -97,6 +111,38 @@ public class SmartSubtitleTaskTransTextResultOutput extends AbstractModel {
         this.OutputStorage = OutputStorage;
     }
 
+    /**
+     * Get 字幕文件地址 
+     * @return Path 字幕文件地址
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set 字幕文件地址
+     * @param Path 字幕文件地址
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
+    }
+
+    /**
+     * Get 多语言翻译时返回翻译结果。	 
+     * @return SubtitleResults 多语言翻译时返回翻译结果。	
+     */
+    public SubtitleTransResultItem [] getSubtitleResults() {
+        return this.SubtitleResults;
+    }
+
+    /**
+     * Set 多语言翻译时返回翻译结果。	
+     * @param SubtitleResults 多语言翻译时返回翻译结果。	
+     */
+    public void setSubtitleResults(SubtitleTransResultItem [] SubtitleResults) {
+        this.SubtitleResults = SubtitleResults;
+    }
+
     public SmartSubtitleTaskTransTextResultOutput() {
     }
 
@@ -117,6 +163,15 @@ public class SmartSubtitleTaskTransTextResultOutput extends AbstractModel {
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.SubtitleResults != null) {
+            this.SubtitleResults = new SubtitleTransResultItem[source.SubtitleResults.length];
+            for (int i = 0; i < source.SubtitleResults.length; i++) {
+                this.SubtitleResults[i] = new SubtitleTransResultItem(source.SubtitleResults[i]);
+            }
+        }
     }
 
 
@@ -127,6 +182,8 @@ public class SmartSubtitleTaskTransTextResultOutput extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+        this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamArrayObj(map, prefix + "SubtitleResults.", this.SubtitleResults);
 
     }
 }

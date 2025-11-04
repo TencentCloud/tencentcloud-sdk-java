@@ -31,21 +31,21 @@ public class DescribeResourceUsageResponse extends AbstractModel {
     private ResourceUsage CRDUsage;
 
     /**
-    * Pod使用量
+    * Pod使用量，单位：个数
     */
     @SerializedName("PodUsage")
     @Expose
     private Long PodUsage;
 
     /**
-    * ReplicaSet使用量
+    * ReplicaSet使用量，单位：个数
     */
     @SerializedName("RSUsage")
     @Expose
     private Long RSUsage;
 
     /**
-    * ConfigMap使用量
+    * ConfigMap使用量，单位：个数
     */
     @SerializedName("ConfigMapUsage")
     @Expose
@@ -82,48 +82,48 @@ public class DescribeResourceUsageResponse extends AbstractModel {
     }
 
     /**
-     * Get Pod使用量 
-     * @return PodUsage Pod使用量
+     * Get Pod使用量，单位：个数 
+     * @return PodUsage Pod使用量，单位：个数
      */
     public Long getPodUsage() {
         return this.PodUsage;
     }
 
     /**
-     * Set Pod使用量
-     * @param PodUsage Pod使用量
+     * Set Pod使用量，单位：个数
+     * @param PodUsage Pod使用量，单位：个数
      */
     public void setPodUsage(Long PodUsage) {
         this.PodUsage = PodUsage;
     }
 
     /**
-     * Get ReplicaSet使用量 
-     * @return RSUsage ReplicaSet使用量
+     * Get ReplicaSet使用量，单位：个数 
+     * @return RSUsage ReplicaSet使用量，单位：个数
      */
     public Long getRSUsage() {
         return this.RSUsage;
     }
 
     /**
-     * Set ReplicaSet使用量
-     * @param RSUsage ReplicaSet使用量
+     * Set ReplicaSet使用量，单位：个数
+     * @param RSUsage ReplicaSet使用量，单位：个数
      */
     public void setRSUsage(Long RSUsage) {
         this.RSUsage = RSUsage;
     }
 
     /**
-     * Get ConfigMap使用量 
-     * @return ConfigMapUsage ConfigMap使用量
+     * Get ConfigMap使用量，单位：个数 
+     * @return ConfigMapUsage ConfigMap使用量，单位：个数
      */
     public Long getConfigMapUsage() {
         return this.ConfigMapUsage;
     }
 
     /**
-     * Set ConfigMap使用量
-     * @param ConfigMapUsage ConfigMap使用量
+     * Set ConfigMap使用量，单位：个数
+     * @param ConfigMapUsage ConfigMap使用量，单位：个数
      */
     public void setConfigMapUsage(Long ConfigMapUsage) {
         this.ConfigMapUsage = ConfigMapUsage;

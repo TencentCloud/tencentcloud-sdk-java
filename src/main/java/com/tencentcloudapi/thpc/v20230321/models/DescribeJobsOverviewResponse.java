@@ -24,11 +24,80 @@ import java.util.HashMap;
 public class DescribeJobsOverviewResponse extends AbstractModel {
 
     /**
+    * 作业任务数量
+    */
+    @SerializedName("JobTotal")
+    @Expose
+    private Long JobTotal;
+
+    /**
+    * 排队中的作业任务数量
+    */
+    @SerializedName("QueuingJobTotal")
+    @Expose
+    private Long QueuingJobTotal;
+
+    /**
+    * 运行中的作业数量
+    */
+    @SerializedName("RunningJobTotal")
+    @Expose
+    private Long RunningJobTotal;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 作业任务数量 
+     * @return JobTotal 作业任务数量
+     */
+    public Long getJobTotal() {
+        return this.JobTotal;
+    }
+
+    /**
+     * Set 作业任务数量
+     * @param JobTotal 作业任务数量
+     */
+    public void setJobTotal(Long JobTotal) {
+        this.JobTotal = JobTotal;
+    }
+
+    /**
+     * Get 排队中的作业任务数量 
+     * @return QueuingJobTotal 排队中的作业任务数量
+     */
+    public Long getQueuingJobTotal() {
+        return this.QueuingJobTotal;
+    }
+
+    /**
+     * Set 排队中的作业任务数量
+     * @param QueuingJobTotal 排队中的作业任务数量
+     */
+    public void setQueuingJobTotal(Long QueuingJobTotal) {
+        this.QueuingJobTotal = QueuingJobTotal;
+    }
+
+    /**
+     * Get 运行中的作业数量 
+     * @return RunningJobTotal 运行中的作业数量
+     */
+    public Long getRunningJobTotal() {
+        return this.RunningJobTotal;
+    }
+
+    /**
+     * Set 运行中的作业数量
+     * @param RunningJobTotal 运行中的作业数量
+     */
+    public void setRunningJobTotal(Long RunningJobTotal) {
+        this.RunningJobTotal = RunningJobTotal;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +123,15 @@ public class DescribeJobsOverviewResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeJobsOverviewResponse(DescribeJobsOverviewResponse source) {
+        if (source.JobTotal != null) {
+            this.JobTotal = new Long(source.JobTotal);
+        }
+        if (source.QueuingJobTotal != null) {
+            this.QueuingJobTotal = new Long(source.QueuingJobTotal);
+        }
+        if (source.RunningJobTotal != null) {
+            this.RunningJobTotal = new Long(source.RunningJobTotal);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +142,9 @@ public class DescribeJobsOverviewResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "JobTotal", this.JobTotal);
+        this.setParamSimple(map, prefix + "QueuingJobTotal", this.QueuingJobTotal);
+        this.setParamSimple(map, prefix + "RunningJobTotal", this.RunningJobTotal);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

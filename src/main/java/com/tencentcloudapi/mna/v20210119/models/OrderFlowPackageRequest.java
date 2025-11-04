@@ -57,7 +57,7 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     private Boolean AutoRenewFlag;
 
     /**
-    * 区域标识，0：国内，1：国外
+    * 区域标识，0：中国境内，1：中国境外
     */
     @SerializedName("PackageRegion")
     @Expose
@@ -183,16 +183,16 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     }
 
     /**
-     * Get 区域标识，0：国内，1：国外 
-     * @return PackageRegion 区域标识，0：国内，1：国外
+     * Get 区域标识，0：中国境内，1：中国境外 
+     * @return PackageRegion 区域标识，0：中国境内，1：中国境外
      */
     public Long getPackageRegion() {
         return this.PackageRegion;
     }
 
     /**
-     * Set 区域标识，0：国内，1：国外
-     * @param PackageRegion 区域标识，0：国内，1：国外
+     * Set 区域标识，0：中国境内，1：中国境外
+     * @param PackageRegion 区域标识，0：中国境内，1：中国境外
      */
     public void setPackageRegion(Long PackageRegion) {
         this.PackageRegion = PackageRegion;

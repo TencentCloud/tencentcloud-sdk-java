@@ -53,7 +53,7 @@ public class DescribeClustersRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 集群类型，例如：MANAGED_CLUSTER
+    * 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
     */
     @SerializedName("ClusterType")
     @Expose
@@ -128,16 +128,16 @@ public class DescribeClustersRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群类型，例如：MANAGED_CLUSTER 
-     * @return ClusterType 集群类型，例如：MANAGED_CLUSTER
+     * Get 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。 
+     * @return ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型，例如：MANAGED_CLUSTER
-     * @param ClusterType 集群类型，例如：MANAGED_CLUSTER
+     * Set 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+     * @param ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

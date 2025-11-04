@@ -66,7 +66,8 @@ public class PullSmsSendStatus extends AbstractModel {
     private String SerialNo;
 
     /**
-    * 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
+    * 实际是否收到的短信接收状态，SUCCESS（下发成功）、FAIL（下发失败）。
+注：仅当运营商有返回短信接收状态时回包中才会有状态数据。
     */
     @SerializedName("ReportStatus")
     @Expose
@@ -176,16 +177,20 @@ public class PullSmsSendStatus extends AbstractModel {
     }
 
     /**
-     * Get 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。 
-     * @return ReportStatus 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
+     * Get 实际是否收到的短信接收状态，SUCCESS（下发成功）、FAIL（下发失败）。
+注：仅当运营商有返回短信接收状态时回包中才会有状态数据。 
+     * @return ReportStatus 实际是否收到的短信接收状态，SUCCESS（下发成功）、FAIL（下发失败）。
+注：仅当运营商有返回短信接收状态时回包中才会有状态数据。
      */
     public String getReportStatus() {
         return this.ReportStatus;
     }
 
     /**
-     * Set 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
-     * @param ReportStatus 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
+     * Set 实际是否收到的短信接收状态，SUCCESS（下发成功）、FAIL（下发失败）。
+注：仅当运营商有返回短信接收状态时回包中才会有状态数据。
+     * @param ReportStatus 实际是否收到的短信接收状态，SUCCESS（下发成功）、FAIL（下发失败）。
+注：仅当运营商有返回短信接收状态时回包中才会有状态数据。
      */
     public void setReportStatus(String ReportStatus) {
         this.ReportStatus = ReportStatus;

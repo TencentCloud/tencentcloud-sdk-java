@@ -31,7 +31,7 @@ public class SourceIpTranslationNatRule extends AbstractModel {
     private String ResourceId;
 
     /**
-    * 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
+    * 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED，分别表示子网、网卡、自定义网段
     */
     @SerializedName("ResourceType")
     @Expose
@@ -103,16 +103,16 @@ public class SourceIpTranslationNatRule extends AbstractModel {
     }
 
     /**
-     * Get 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED 
-     * @return ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
+     * Get 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED，分别表示子网、网卡、自定义网段 
+     * @return ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED，分别表示子网、网卡、自定义网段
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
-     * @param ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
+     * Set 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED，分别表示子网、网卡、自定义网段
+     * @param ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED，分别表示子网、网卡、自定义网段
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

@@ -168,6 +168,41 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
     private String DataCompressMode;
 
     /**
+    * 重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。
+    */
+    @SerializedName("RescheduleTargetZeroWeight")
+    @Expose
+    private Boolean RescheduleTargetZeroWeight;
+
+    /**
+    * 重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。 
+    */
+    @SerializedName("RescheduleUnhealthy")
+    @Expose
+    private Boolean RescheduleUnhealthy;
+
+    /**
+    * 重新调度功能，扩容后端服务开关，打开此开关，后端服务器增加或者减少时触发重新调度。仅TCP/UDP监听器支持。
+    */
+    @SerializedName("RescheduleExpandTarget")
+    @Expose
+    private Boolean RescheduleExpandTarget;
+
+    /**
+    * 重新调度触发开始时间，取值0~3600s。仅TCP/UDP监听器支持。
+    */
+    @SerializedName("RescheduleStartTime")
+    @Expose
+    private Long RescheduleStartTime;
+
+    /**
+    * 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。
+    */
+    @SerializedName("RescheduleInterval")
+    @Expose
+    private Long RescheduleInterval;
+
+    /**
      * Get 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。 
      * @return LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      */
@@ -515,6 +550,86 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
         this.DataCompressMode = DataCompressMode;
     }
 
+    /**
+     * Get 重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。 
+     * @return RescheduleTargetZeroWeight 重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。
+     */
+    public Boolean getRescheduleTargetZeroWeight() {
+        return this.RescheduleTargetZeroWeight;
+    }
+
+    /**
+     * Set 重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。
+     * @param RescheduleTargetZeroWeight 重新调度功能，权重调为0开关，打开此开关，后端服务器权重调为0时触发重新调度。仅TCP/UDP监听器支持。
+     */
+    public void setRescheduleTargetZeroWeight(Boolean RescheduleTargetZeroWeight) {
+        this.RescheduleTargetZeroWeight = RescheduleTargetZeroWeight;
+    }
+
+    /**
+     * Get 重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。  
+     * @return RescheduleUnhealthy 重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。 
+     */
+    public Boolean getRescheduleUnhealthy() {
+        return this.RescheduleUnhealthy;
+    }
+
+    /**
+     * Set 重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。 
+     * @param RescheduleUnhealthy 重新调度功能，健康检查异常开关，打开此开关，后端服务器健康检查异常时触发重新调度。仅TCP/UDP监听器支持。 
+     */
+    public void setRescheduleUnhealthy(Boolean RescheduleUnhealthy) {
+        this.RescheduleUnhealthy = RescheduleUnhealthy;
+    }
+
+    /**
+     * Get 重新调度功能，扩容后端服务开关，打开此开关，后端服务器增加或者减少时触发重新调度。仅TCP/UDP监听器支持。 
+     * @return RescheduleExpandTarget 重新调度功能，扩容后端服务开关，打开此开关，后端服务器增加或者减少时触发重新调度。仅TCP/UDP监听器支持。
+     */
+    public Boolean getRescheduleExpandTarget() {
+        return this.RescheduleExpandTarget;
+    }
+
+    /**
+     * Set 重新调度功能，扩容后端服务开关，打开此开关，后端服务器增加或者减少时触发重新调度。仅TCP/UDP监听器支持。
+     * @param RescheduleExpandTarget 重新调度功能，扩容后端服务开关，打开此开关，后端服务器增加或者减少时触发重新调度。仅TCP/UDP监听器支持。
+     */
+    public void setRescheduleExpandTarget(Boolean RescheduleExpandTarget) {
+        this.RescheduleExpandTarget = RescheduleExpandTarget;
+    }
+
+    /**
+     * Get 重新调度触发开始时间，取值0~3600s。仅TCP/UDP监听器支持。 
+     * @return RescheduleStartTime 重新调度触发开始时间，取值0~3600s。仅TCP/UDP监听器支持。
+     */
+    public Long getRescheduleStartTime() {
+        return this.RescheduleStartTime;
+    }
+
+    /**
+     * Set 重新调度触发开始时间，取值0~3600s。仅TCP/UDP监听器支持。
+     * @param RescheduleStartTime 重新调度触发开始时间，取值0~3600s。仅TCP/UDP监听器支持。
+     */
+    public void setRescheduleStartTime(Long RescheduleStartTime) {
+        this.RescheduleStartTime = RescheduleStartTime;
+    }
+
+    /**
+     * Get 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。 
+     * @return RescheduleInterval 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。
+     */
+    public Long getRescheduleInterval() {
+        return this.RescheduleInterval;
+    }
+
+    /**
+     * Set 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。
+     * @param RescheduleInterval 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。
+     */
+    public void setRescheduleInterval(Long RescheduleInterval) {
+        this.RescheduleInterval = RescheduleInterval;
+    }
+
     public ModifyListenerRequest() {
     }
 
@@ -580,6 +695,21 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
         if (source.DataCompressMode != null) {
             this.DataCompressMode = new String(source.DataCompressMode);
         }
+        if (source.RescheduleTargetZeroWeight != null) {
+            this.RescheduleTargetZeroWeight = new Boolean(source.RescheduleTargetZeroWeight);
+        }
+        if (source.RescheduleUnhealthy != null) {
+            this.RescheduleUnhealthy = new Boolean(source.RescheduleUnhealthy);
+        }
+        if (source.RescheduleExpandTarget != null) {
+            this.RescheduleExpandTarget = new Boolean(source.RescheduleExpandTarget);
+        }
+        if (source.RescheduleStartTime != null) {
+            this.RescheduleStartTime = new Long(source.RescheduleStartTime);
+        }
+        if (source.RescheduleInterval != null) {
+            this.RescheduleInterval = new Long(source.RescheduleInterval);
+        }
     }
 
 
@@ -606,6 +736,11 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
         this.setParamSimple(map, prefix + "ProxyProtocol", this.ProxyProtocol);
         this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
         this.setParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
+        this.setParamSimple(map, prefix + "RescheduleTargetZeroWeight", this.RescheduleTargetZeroWeight);
+        this.setParamSimple(map, prefix + "RescheduleUnhealthy", this.RescheduleUnhealthy);
+        this.setParamSimple(map, prefix + "RescheduleExpandTarget", this.RescheduleExpandTarget);
+        this.setParamSimple(map, prefix + "RescheduleStartTime", this.RescheduleStartTime);
+        this.setParamSimple(map, prefix + "RescheduleInterval", this.RescheduleInterval);
 
     }
 }

@@ -123,6 +123,13 @@ public class Environment extends AbstractModel {
     private String CreationTime;
 
     /**
+    * 运行时配置。
+    */
+    @SerializedName("RuntimeConfig")
+    @Expose
+    private EnvironmentRuntimeConfig RuntimeConfig;
+
+    /**
      * Get 环境ID。 
      * @return EnvironmentId 环境ID。
      */
@@ -362,6 +369,22 @@ public class Environment extends AbstractModel {
         this.CreationTime = CreationTime;
     }
 
+    /**
+     * Get 运行时配置。 
+     * @return RuntimeConfig 运行时配置。
+     */
+    public EnvironmentRuntimeConfig getRuntimeConfig() {
+        return this.RuntimeConfig;
+    }
+
+    /**
+     * Set 运行时配置。
+     * @param RuntimeConfig 运行时配置。
+     */
+    public void setRuntimeConfig(EnvironmentRuntimeConfig RuntimeConfig) {
+        this.RuntimeConfig = RuntimeConfig;
+    }
+
     public Environment() {
     }
 
@@ -409,6 +432,9 @@ public class Environment extends AbstractModel {
         if (source.CreationTime != null) {
             this.CreationTime = new String(source.CreationTime);
         }
+        if (source.RuntimeConfig != null) {
+            this.RuntimeConfig = new EnvironmentRuntimeConfig(source.RuntimeConfig);
+        }
     }
 
 
@@ -429,6 +455,7 @@ public class Environment extends AbstractModel {
         this.setParamObj(map, prefix + "ResourceIds.", this.ResourceIds);
         this.setParamSimple(map, prefix + "LastWorkflowUuid", this.LastWorkflowUuid);
         this.setParamSimple(map, prefix + "CreationTime", this.CreationTime);
+        this.setParamObj(map, prefix + "RuntimeConfig.", this.RuntimeConfig);
 
     }
 }

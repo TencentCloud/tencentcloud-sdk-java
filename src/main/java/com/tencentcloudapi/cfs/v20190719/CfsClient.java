@@ -270,18 +270,6 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
-     *本接口（DeleteMountTarget）用于删除挂载点
-说明：2022年6月1日之后创建的CFS文件系统删除时无需单独调用删除挂载点操作，此API仅适用老版本的CFS实例。
-     * @param req DeleteMountTargetRequest
-     * @return DeleteMountTargetResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteMountTargetResponse DeleteMountTarget(DeleteMountTargetRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteMountTarget", DeleteMountTargetResponse.class);
-    }
-
-    /**
      *指定条件删除文件系统配额（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
      * @param req DeleteUserQuotaRequest
      * @return DeleteUserQuotaResponse

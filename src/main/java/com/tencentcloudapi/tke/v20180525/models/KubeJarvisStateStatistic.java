@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class KubeJarvisStateStatistic extends AbstractModel {
 
     /**
-    * 诊断结果的健康水平
+    * 诊断结果的健康水平，健康水平取值：
+serious：高风险
+risk：中风险
+warn：低风险
+good：健康
+failed：诊断流程异常
     */
     @SerializedName("HealthyLevel")
     @Expose
@@ -38,16 +43,36 @@ public class KubeJarvisStateStatistic extends AbstractModel {
     private Long Count;
 
     /**
-     * Get 诊断结果的健康水平 
-     * @return HealthyLevel 诊断结果的健康水平
+     * Get 诊断结果的健康水平，健康水平取值：
+serious：高风险
+risk：中风险
+warn：低风险
+good：健康
+failed：诊断流程异常 
+     * @return HealthyLevel 诊断结果的健康水平，健康水平取值：
+serious：高风险
+risk：中风险
+warn：低风险
+good：健康
+failed：诊断流程异常
      */
     public String getHealthyLevel() {
         return this.HealthyLevel;
     }
 
     /**
-     * Set 诊断结果的健康水平
-     * @param HealthyLevel 诊断结果的健康水平
+     * Set 诊断结果的健康水平，健康水平取值：
+serious：高风险
+risk：中风险
+warn：低风险
+good：健康
+failed：诊断流程异常
+     * @param HealthyLevel 诊断结果的健康水平，健康水平取值：
+serious：高风险
+risk：中风险
+warn：低风险
+good：健康
+failed：诊断流程异常
      */
     public void setHealthyLevel(String HealthyLevel) {
         this.HealthyLevel = HealthyLevel;

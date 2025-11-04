@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GetClusterLevelPriceRequest extends AbstractModel {
 
     /**
-    * 集群规格，托管集群询价
+    * 集群规格，托管集群询价，集群等级：L20、L50、L100、L200、L500、L1000、L3000、L5000
     */
     @SerializedName("ClusterLevel")
     @Expose
     private String ClusterLevel;
 
     /**
-     * Get 集群规格，托管集群询价 
-     * @return ClusterLevel 集群规格，托管集群询价
+     * Get 集群规格，托管集群询价，集群等级：L20、L50、L100、L200、L500、L1000、L3000、L5000 
+     * @return ClusterLevel 集群规格，托管集群询价，集群等级：L20、L50、L100、L200、L500、L1000、L3000、L5000
      */
     public String getClusterLevel() {
         return this.ClusterLevel;
     }
 
     /**
-     * Set 集群规格，托管集群询价
-     * @param ClusterLevel 集群规格，托管集群询价
+     * Set 集群规格，托管集群询价，集群等级：L20、L50、L100、L200、L500、L1000、L3000、L5000
+     * @param ClusterLevel 集群规格，托管集群询价，集群等级：L20、L50、L100、L200、L500、L1000、L3000、L5000
      */
     public void setClusterLevel(String ClusterLevel) {
         this.ClusterLevel = ClusterLevel;

@@ -87,6 +87,13 @@ public class UpdateLogstashInstanceRequest extends AbstractModel {
     private OperationDurationUpdated OperationDuration;
 
     /**
+    * 多可用区部署
+    */
+    @SerializedName("MultiZoneInfo")
+    @Expose
+    private ZoneDetail [] MultiZoneInfo;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -230,6 +237,22 @@ public class UpdateLogstashInstanceRequest extends AbstractModel {
         this.OperationDuration = OperationDuration;
     }
 
+    /**
+     * Get 多可用区部署 
+     * @return MultiZoneInfo 多可用区部署
+     */
+    public ZoneDetail [] getMultiZoneInfo() {
+        return this.MultiZoneInfo;
+    }
+
+    /**
+     * Set 多可用区部署
+     * @param MultiZoneInfo 多可用区部署
+     */
+    public void setMultiZoneInfo(ZoneDetail [] MultiZoneInfo) {
+        this.MultiZoneInfo = MultiZoneInfo;
+    }
+
     public UpdateLogstashInstanceRequest() {
     }
 
@@ -268,6 +291,12 @@ public class UpdateLogstashInstanceRequest extends AbstractModel {
         if (source.OperationDuration != null) {
             this.OperationDuration = new OperationDurationUpdated(source.OperationDuration);
         }
+        if (source.MultiZoneInfo != null) {
+            this.MultiZoneInfo = new ZoneDetail[source.MultiZoneInfo.length];
+            for (int i = 0; i < source.MultiZoneInfo.length; i++) {
+                this.MultiZoneInfo[i] = new ZoneDetail(source.MultiZoneInfo[i]);
+            }
+        }
     }
 
 
@@ -284,6 +313,7 @@ public class UpdateLogstashInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+        this.setParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
 
     }
 }

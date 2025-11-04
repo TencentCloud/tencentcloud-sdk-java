@@ -111,7 +111,7 @@ public class ClusterAsGroupOption extends AbstractModel {
     private Long MaxTotalUnreadyPercentage;
 
     /**
-    * 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+    * 表示未准备就绪的节点在有资格进行缩减之前应该停留多少分钟
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaleDownUnreadyTime")
@@ -119,7 +119,7 @@ public class ClusterAsGroupOption extends AbstractModel {
     private Long ScaleDownUnreadyTime;
 
     /**
-    * CA删除未在Kubernetes中注册的节点之前等待的时间
+    * CA删除未在Kubernetes中注册的节点之前等待的分钟数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnregisteredNodeRemovalTime")
@@ -343,9 +343,9 @@ public class ClusterAsGroupOption extends AbstractModel {
     }
 
     /**
-     * Get 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+     * Get 表示未准备就绪的节点在有资格进行缩减之前应该停留多少分钟
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScaleDownUnreadyTime 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+     * @return ScaleDownUnreadyTime 表示未准备就绪的节点在有资格进行缩减之前应该停留多少分钟
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScaleDownUnreadyTime() {
@@ -353,9 +353,9 @@ public class ClusterAsGroupOption extends AbstractModel {
     }
 
     /**
-     * Set 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+     * Set 表示未准备就绪的节点在有资格进行缩减之前应该停留多少分钟
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScaleDownUnreadyTime 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+     * @param ScaleDownUnreadyTime 表示未准备就绪的节点在有资格进行缩减之前应该停留多少分钟
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaleDownUnreadyTime(Long ScaleDownUnreadyTime) {
@@ -363,9 +363,9 @@ public class ClusterAsGroupOption extends AbstractModel {
     }
 
     /**
-     * Get CA删除未在Kubernetes中注册的节点之前等待的时间
+     * Get CA删除未在Kubernetes中注册的节点之前等待的分钟数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UnregisteredNodeRemovalTime CA删除未在Kubernetes中注册的节点之前等待的时间
+     * @return UnregisteredNodeRemovalTime CA删除未在Kubernetes中注册的节点之前等待的分钟数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUnregisteredNodeRemovalTime() {
@@ -373,9 +373,9 @@ public class ClusterAsGroupOption extends AbstractModel {
     }
 
     /**
-     * Set CA删除未在Kubernetes中注册的节点之前等待的时间
+     * Set CA删除未在Kubernetes中注册的节点之前等待的分钟数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UnregisteredNodeRemovalTime CA删除未在Kubernetes中注册的节点之前等待的时间
+     * @param UnregisteredNodeRemovalTime CA删除未在Kubernetes中注册的节点之前等待的分钟数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnregisteredNodeRemovalTime(Long UnregisteredNodeRemovalTime) {

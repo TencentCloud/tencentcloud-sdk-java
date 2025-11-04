@@ -31,28 +31,28 @@ public class PrivateNatDestinationIpPortTranslationNatRule extends AbstractModel
     private String Protocol;
 
     /**
-    * 原端口
+    * 映射前端口
     */
     @SerializedName("OriginalPort")
     @Expose
     private Long OriginalPort;
 
     /**
-    * 原IP
+    * 映射前IP
     */
     @SerializedName("OriginalIp")
     @Expose
     private String OriginalIp;
 
     /**
-    * 映射端口
+    * 映射后端口
     */
     @SerializedName("TranslationPort")
     @Expose
     private Long TranslationPort;
 
     /**
-    * 映射IP
+    * 映射后IP
     */
     @SerializedName("TranslationIp")
     @Expose
@@ -96,64 +96,64 @@ public class PrivateNatDestinationIpPortTranslationNatRule extends AbstractModel
     }
 
     /**
-     * Get 原端口 
-     * @return OriginalPort 原端口
+     * Get 映射前端口 
+     * @return OriginalPort 映射前端口
      */
     public Long getOriginalPort() {
         return this.OriginalPort;
     }
 
     /**
-     * Set 原端口
-     * @param OriginalPort 原端口
+     * Set 映射前端口
+     * @param OriginalPort 映射前端口
      */
     public void setOriginalPort(Long OriginalPort) {
         this.OriginalPort = OriginalPort;
     }
 
     /**
-     * Get 原IP 
-     * @return OriginalIp 原IP
+     * Get 映射前IP 
+     * @return OriginalIp 映射前IP
      */
     public String getOriginalIp() {
         return this.OriginalIp;
     }
 
     /**
-     * Set 原IP
-     * @param OriginalIp 原IP
+     * Set 映射前IP
+     * @param OriginalIp 映射前IP
      */
     public void setOriginalIp(String OriginalIp) {
         this.OriginalIp = OriginalIp;
     }
 
     /**
-     * Get 映射端口 
-     * @return TranslationPort 映射端口
+     * Get 映射后端口 
+     * @return TranslationPort 映射后端口
      */
     public Long getTranslationPort() {
         return this.TranslationPort;
     }
 
     /**
-     * Set 映射端口
-     * @param TranslationPort 映射端口
+     * Set 映射后端口
+     * @param TranslationPort 映射后端口
      */
     public void setTranslationPort(Long TranslationPort) {
         this.TranslationPort = TranslationPort;
     }
 
     /**
-     * Get 映射IP 
-     * @return TranslationIp 映射IP
+     * Get 映射后IP 
+     * @return TranslationIp 映射后IP
      */
     public String getTranslationIp() {
         return this.TranslationIp;
     }
 
     /**
-     * Set 映射IP
-     * @param TranslationIp 映射IP
+     * Set 映射后IP
+     * @param TranslationIp 映射后IP
      */
     public void setTranslationIp(String TranslationIp) {
         this.TranslationIp = TranslationIp;

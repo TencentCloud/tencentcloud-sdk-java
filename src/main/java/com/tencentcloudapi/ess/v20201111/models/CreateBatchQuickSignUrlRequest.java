@@ -140,6 +140,13 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
     private Intention Intention;
 
     /**
+    * 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+    */
+    @SerializedName("VideoVerifyTimesLimit")
+    @Expose
+    private Long VideoVerifyTimesLimit;
+
+    /**
     * 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
 
 注: `若参与方为企业员工时，暂不支持对参与方信息进行缓存`
@@ -499,6 +506,22 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
     }
 
     /**
+     * Get 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。 
+     * @return VideoVerifyTimesLimit 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+     */
+    public Long getVideoVerifyTimesLimit() {
+        return this.VideoVerifyTimesLimit;
+    }
+
+    /**
+     * Set 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+     * @param VideoVerifyTimesLimit 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+     */
+    public void setVideoVerifyTimesLimit(Long VideoVerifyTimesLimit) {
+        this.VideoVerifyTimesLimit = VideoVerifyTimesLimit;
+    }
+
+    /**
      * Get 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
 
 注: `若参与方为企业员工时，暂不支持对参与方信息进行缓存` 
@@ -620,6 +643,9 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         if (source.Intention != null) {
             this.Intention = new Intention(source.Intention);
         }
+        if (source.VideoVerifyTimesLimit != null) {
+            this.VideoVerifyTimesLimit = new Long(source.VideoVerifyTimesLimit);
+        }
         if (source.CacheApproverInfo != null) {
             this.CacheApproverInfo = new Boolean(source.CacheApproverInfo);
         }
@@ -647,6 +673,7 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
         this.setParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
         this.setParamObj(map, prefix + "Intention.", this.Intention);
+        this.setParamSimple(map, prefix + "VideoVerifyTimesLimit", this.VideoVerifyTimesLimit);
         this.setParamSimple(map, prefix + "CacheApproverInfo", this.CacheApproverInfo);
         this.setParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
         this.setParamObj(map, prefix + "PresetApproverInfo.", this.PresetApproverInfo);

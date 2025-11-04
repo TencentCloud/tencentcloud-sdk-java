@@ -30,6 +30,9 @@ public enum MongodbErrorCode {
      /* appId校验失败。 */
      INTERNALERROR_CHECKAPPIDFAILED("InternalError.CheckAppIdFailed"),
      
+     /* 内部数据存储异常。 */
+     INTERNALERROR_DBOPERATEERROR("InternalError.DBOperateError"),
+     
      /* 实例查询失败。 */
      INTERNALERROR_FINDINSTANCEFAILED("InternalError.FindInstanceFailed"),
      

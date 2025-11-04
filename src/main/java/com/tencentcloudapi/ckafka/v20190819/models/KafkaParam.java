@@ -165,6 +165,20 @@ public class KafkaParam extends AbstractModel {
     private String TopicRegularExpression;
 
     /**
+    * Topic 前缀
+    */
+    @SerializedName("Prefix")
+    @Expose
+    private String Prefix;
+
+    /**
+    * Topic前缀分隔符
+    */
+    @SerializedName("Separator")
+    @Expose
+    private String Separator;
+
+    /**
      * Get 是否为自建集群 
      * @return SelfBuilt 是否为自建集群
      */
@@ -500,6 +514,38 @@ public class KafkaParam extends AbstractModel {
         this.TopicRegularExpression = TopicRegularExpression;
     }
 
+    /**
+     * Get Topic 前缀 
+     * @return Prefix Topic 前缀
+     */
+    public String getPrefix() {
+        return this.Prefix;
+    }
+
+    /**
+     * Set Topic 前缀
+     * @param Prefix Topic 前缀
+     */
+    public void setPrefix(String Prefix) {
+        this.Prefix = Prefix;
+    }
+
+    /**
+     * Get Topic前缀分隔符 
+     * @return Separator Topic前缀分隔符
+     */
+    public String getSeparator() {
+        return this.Separator;
+    }
+
+    /**
+     * Set Topic前缀分隔符
+     * @param Separator Topic前缀分隔符
+     */
+    public void setSeparator(String Separator) {
+        this.Separator = Separator;
+    }
+
     public KafkaParam() {
     }
 
@@ -568,6 +614,12 @@ public class KafkaParam extends AbstractModel {
         if (source.TopicRegularExpression != null) {
             this.TopicRegularExpression = new String(source.TopicRegularExpression);
         }
+        if (source.Prefix != null) {
+            this.Prefix = new String(source.Prefix);
+        }
+        if (source.Separator != null) {
+            this.Separator = new String(source.Separator);
+        }
     }
 
 
@@ -594,6 +646,8 @@ public class KafkaParam extends AbstractModel {
         this.setParamSimple(map, prefix + "ConnectorSyncType", this.ConnectorSyncType);
         this.setParamSimple(map, prefix + "KeepPartition", this.KeepPartition);
         this.setParamSimple(map, prefix + "TopicRegularExpression", this.TopicRegularExpression);
+        this.setParamSimple(map, prefix + "Prefix", this.Prefix);
+        this.setParamSimple(map, prefix + "Separator", this.Separator);
 
     }
 }

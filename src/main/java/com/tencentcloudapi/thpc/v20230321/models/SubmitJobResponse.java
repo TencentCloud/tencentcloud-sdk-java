@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class SubmitJobResponse extends AbstractModel {
 
     /**
+    * 作业任务ID
+    */
+    @SerializedName("JobId")
+    @Expose
+    private String JobId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 作业任务ID 
+     * @return JobId 作业任务ID
+     */
+    public String getJobId() {
+        return this.JobId;
+    }
+
+    /**
+     * Set 作业任务ID
+     * @param JobId 作业任务ID
+     */
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class SubmitJobResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SubmitJobResponse(SubmitJobResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class SubmitJobResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

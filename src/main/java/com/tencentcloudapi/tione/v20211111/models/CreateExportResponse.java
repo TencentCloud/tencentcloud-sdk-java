@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreateExportResponse extends AbstractModel {
 
     /**
+    * 日志下载任务的ID
+    */
+    @SerializedName("ExportId")
+    @Expose
+    private String ExportId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 日志下载任务的ID 
+     * @return ExportId 日志下载任务的ID
+     */
+    public String getExportId() {
+        return this.ExportId;
+    }
+
+    /**
+     * Set 日志下载任务的ID
+     * @param ExportId 日志下载任务的ID
+     */
+    public void setExportId(String ExportId) {
+        this.ExportId = ExportId;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class CreateExportResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateExportResponse(CreateExportResponse source) {
+        if (source.ExportId != null) {
+            this.ExportId = new String(source.ExportId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class CreateExportResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ExportId", this.ExportId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

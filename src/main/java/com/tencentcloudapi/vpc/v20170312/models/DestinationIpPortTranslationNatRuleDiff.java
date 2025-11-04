@@ -31,28 +31,28 @@ public class DestinationIpPortTranslationNatRuleDiff extends AbstractModel {
     private String Protocol;
 
     /**
-    * 源端口
+    * 映射前端口
     */
     @SerializedName("OriginalPort")
     @Expose
     private Long OriginalPort;
 
     /**
-    * 源IP
+    * 映射前IP
     */
     @SerializedName("OriginalIp")
     @Expose
     private String OriginalIp;
 
     /**
-    * 目的端口
+    * 映射后端口
     */
     @SerializedName("TranslationPort")
     @Expose
     private Long TranslationPort;
 
     /**
-    * 目的IP
+    * 映射后IP
     */
     @SerializedName("TranslationIp")
     @Expose
@@ -66,28 +66,28 @@ public class DestinationIpPortTranslationNatRuleDiff extends AbstractModel {
     private String OldProtocol;
 
     /**
-    * 旧源端口
+    * 旧映射前端口
     */
     @SerializedName("OldOriginalPort")
     @Expose
     private Long OldOriginalPort;
 
     /**
-    * 旧源IP
+    * 旧映射前IP
     */
     @SerializedName("OldOriginalIp")
     @Expose
     private String OldOriginalIp;
 
     /**
-    * 旧目的端口
+    * 旧映射后端口
     */
     @SerializedName("OldTranslationPort")
     @Expose
     private Long OldTranslationPort;
 
     /**
-    * 旧目的IP
+    * 旧映射后IP
     */
     @SerializedName("OldTranslationIp")
     @Expose
@@ -117,64 +117,64 @@ public class DestinationIpPortTranslationNatRuleDiff extends AbstractModel {
     }
 
     /**
-     * Get 源端口 
-     * @return OriginalPort 源端口
+     * Get 映射前端口 
+     * @return OriginalPort 映射前端口
      */
     public Long getOriginalPort() {
         return this.OriginalPort;
     }
 
     /**
-     * Set 源端口
-     * @param OriginalPort 源端口
+     * Set 映射前端口
+     * @param OriginalPort 映射前端口
      */
     public void setOriginalPort(Long OriginalPort) {
         this.OriginalPort = OriginalPort;
     }
 
     /**
-     * Get 源IP 
-     * @return OriginalIp 源IP
+     * Get 映射前IP 
+     * @return OriginalIp 映射前IP
      */
     public String getOriginalIp() {
         return this.OriginalIp;
     }
 
     /**
-     * Set 源IP
-     * @param OriginalIp 源IP
+     * Set 映射前IP
+     * @param OriginalIp 映射前IP
      */
     public void setOriginalIp(String OriginalIp) {
         this.OriginalIp = OriginalIp;
     }
 
     /**
-     * Get 目的端口 
-     * @return TranslationPort 目的端口
+     * Get 映射后端口 
+     * @return TranslationPort 映射后端口
      */
     public Long getTranslationPort() {
         return this.TranslationPort;
     }
 
     /**
-     * Set 目的端口
-     * @param TranslationPort 目的端口
+     * Set 映射后端口
+     * @param TranslationPort 映射后端口
      */
     public void setTranslationPort(Long TranslationPort) {
         this.TranslationPort = TranslationPort;
     }
 
     /**
-     * Get 目的IP 
-     * @return TranslationIp 目的IP
+     * Get 映射后IP 
+     * @return TranslationIp 映射后IP
      */
     public String getTranslationIp() {
         return this.TranslationIp;
     }
 
     /**
-     * Set 目的IP
-     * @param TranslationIp 目的IP
+     * Set 映射后IP
+     * @param TranslationIp 映射后IP
      */
     public void setTranslationIp(String TranslationIp) {
         this.TranslationIp = TranslationIp;
@@ -197,64 +197,64 @@ public class DestinationIpPortTranslationNatRuleDiff extends AbstractModel {
     }
 
     /**
-     * Get 旧源端口 
-     * @return OldOriginalPort 旧源端口
+     * Get 旧映射前端口 
+     * @return OldOriginalPort 旧映射前端口
      */
     public Long getOldOriginalPort() {
         return this.OldOriginalPort;
     }
 
     /**
-     * Set 旧源端口
-     * @param OldOriginalPort 旧源端口
+     * Set 旧映射前端口
+     * @param OldOriginalPort 旧映射前端口
      */
     public void setOldOriginalPort(Long OldOriginalPort) {
         this.OldOriginalPort = OldOriginalPort;
     }
 
     /**
-     * Get 旧源IP 
-     * @return OldOriginalIp 旧源IP
+     * Get 旧映射前IP 
+     * @return OldOriginalIp 旧映射前IP
      */
     public String getOldOriginalIp() {
         return this.OldOriginalIp;
     }
 
     /**
-     * Set 旧源IP
-     * @param OldOriginalIp 旧源IP
+     * Set 旧映射前IP
+     * @param OldOriginalIp 旧映射前IP
      */
     public void setOldOriginalIp(String OldOriginalIp) {
         this.OldOriginalIp = OldOriginalIp;
     }
 
     /**
-     * Get 旧目的端口 
-     * @return OldTranslationPort 旧目的端口
+     * Get 旧映射后端口 
+     * @return OldTranslationPort 旧映射后端口
      */
     public Long getOldTranslationPort() {
         return this.OldTranslationPort;
     }
 
     /**
-     * Set 旧目的端口
-     * @param OldTranslationPort 旧目的端口
+     * Set 旧映射后端口
+     * @param OldTranslationPort 旧映射后端口
      */
     public void setOldTranslationPort(Long OldTranslationPort) {
         this.OldTranslationPort = OldTranslationPort;
     }
 
     /**
-     * Get 旧目的IP 
-     * @return OldTranslationIp 旧目的IP
+     * Get 旧映射后IP 
+     * @return OldTranslationIp 旧映射后IP
      */
     public String getOldTranslationIp() {
         return this.OldTranslationIp;
     }
 
     /**
-     * Set 旧目的IP
-     * @param OldTranslationIp 旧目的IP
+     * Set 旧映射后IP
+     * @param OldTranslationIp 旧映射后IP
      */
     public void setOldTranslationIp(String OldTranslationIp) {
         this.OldTranslationIp = OldTranslationIp;

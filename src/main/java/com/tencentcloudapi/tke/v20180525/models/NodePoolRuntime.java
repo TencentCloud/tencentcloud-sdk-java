@@ -31,21 +31,21 @@ public class NodePoolRuntime extends AbstractModel {
     private String NodePoolId;
 
     /**
-    * 运行时类型
+    * 运行时类型，参考：https://cloud.tencent.com/document/api/457/105241
     */
     @SerializedName("RuntimeType")
     @Expose
     private String RuntimeType;
 
     /**
-    * 运行时版本
+    * 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
     */
     @SerializedName("RuntimeVersion")
     @Expose
     private String RuntimeVersion;
 
     /**
-    * 节点池名称
+    * 节点池名称，限制 255 字符
     */
     @SerializedName("NodePoolName")
     @Expose
@@ -68,48 +68,48 @@ public class NodePoolRuntime extends AbstractModel {
     }
 
     /**
-     * Get 运行时类型 
-     * @return RuntimeType 运行时类型
+     * Get 运行时类型，参考：https://cloud.tencent.com/document/api/457/105241 
+     * @return RuntimeType 运行时类型，参考：https://cloud.tencent.com/document/api/457/105241
      */
     public String getRuntimeType() {
         return this.RuntimeType;
     }
 
     /**
-     * Set 运行时类型
-     * @param RuntimeType 运行时类型
+     * Set 运行时类型，参考：https://cloud.tencent.com/document/api/457/105241
+     * @param RuntimeType 运行时类型，参考：https://cloud.tencent.com/document/api/457/105241
      */
     public void setRuntimeType(String RuntimeType) {
         this.RuntimeType = RuntimeType;
     }
 
     /**
-     * Get 运行时版本 
-     * @return RuntimeVersion 运行时版本
+     * Get 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241 
+     * @return RuntimeVersion 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
      */
     public String getRuntimeVersion() {
         return this.RuntimeVersion;
     }
 
     /**
-     * Set 运行时版本
-     * @param RuntimeVersion 运行时版本
+     * Set 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
+     * @param RuntimeVersion 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
      */
     public void setRuntimeVersion(String RuntimeVersion) {
         this.RuntimeVersion = RuntimeVersion;
     }
 
     /**
-     * Get 节点池名称 
-     * @return NodePoolName 节点池名称
+     * Get 节点池名称，限制 255 字符 
+     * @return NodePoolName 节点池名称，限制 255 字符
      */
     public String getNodePoolName() {
         return this.NodePoolName;
     }
 
     /**
-     * Set 节点池名称
-     * @param NodePoolName 节点池名称
+     * Set 节点池名称，限制 255 字符
+     * @param NodePoolName 节点池名称，限制 255 字符
      */
     public void setNodePoolName(String NodePoolName) {
         this.NodePoolName = NodePoolName;

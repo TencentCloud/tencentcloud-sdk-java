@@ -975,6 +975,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *暂停Dip任务
+     * @param req PauseDatahubTaskRequest
+     * @return PauseDatahubTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseDatahubTaskResponse PauseDatahubTask(PauseDatahubTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PauseDatahubTask", PauseDatahubTaskResponse.class);
+    }
+
+    /**
      *续费Ckafka实例, 目前只支持国内站包年包月实例续费
      * @param req RenewCkafkaInstanceRequest
      * @return RenewCkafkaInstanceResponse
@@ -983,6 +994,28 @@ public class CkafkaClient extends AbstractClient{
     public RenewCkafkaInstanceResponse RenewCkafkaInstance(RenewCkafkaInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RenewCkafkaInstance", RenewCkafkaInstanceResponse.class);
+    }
+
+    /**
+     *Datahub任务异常时，重启Datahub任务
+     * @param req RestartDatahubTaskRequest
+     * @return RestartDatahubTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartDatahubTaskResponse RestartDatahubTask(RestartDatahubTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestartDatahubTask", RestartDatahubTaskResponse.class);
+    }
+
+    /**
+     *恢复Dip任务
+     * @param req ResumeDatahubTaskRequest
+     * @return ResumeDatahubTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeDatahubTaskResponse ResumeDatahubTask(ResumeDatahubTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResumeDatahubTask", ResumeDatahubTaskResponse.class);
     }
 
     /**

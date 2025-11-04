@@ -25,6 +25,7 @@ public class SendSmsResponse extends AbstractModel {
 
     /**
     * 短信发送状态。
+注：可参考 <a href="#4.-.E7.A4.BA.E4.BE.8B">示例</a> ，包含短信发送成功和发送失败的输出示例。
     */
     @SerializedName("SendStatusSet")
     @Expose
@@ -38,8 +39,10 @@ public class SendSmsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 短信发送状态。 
+     * Get 短信发送状态。
+注：可参考 <a href="#4.-.E7.A4.BA.E4.BE.8B">示例</a> ，包含短信发送成功和发送失败的输出示例。 
      * @return SendStatusSet 短信发送状态。
+注：可参考 <a href="#4.-.E7.A4.BA.E4.BE.8B">示例</a> ，包含短信发送成功和发送失败的输出示例。
      */
     public SendStatus [] getSendStatusSet() {
         return this.SendStatusSet;
@@ -47,7 +50,9 @@ public class SendSmsResponse extends AbstractModel {
 
     /**
      * Set 短信发送状态。
+注：可参考 <a href="#4.-.E7.A4.BA.E4.BE.8B">示例</a> ，包含短信发送成功和发送失败的输出示例。
      * @param SendStatusSet 短信发送状态。
+注：可参考 <a href="#4.-.E7.A4.BA.E4.BE.8B">示例</a> ，包含短信发送成功和发送失败的输出示例。
      */
     public void setSendStatusSet(SendStatus [] SendStatusSet) {
         this.SendStatusSet = SendStatusSet;

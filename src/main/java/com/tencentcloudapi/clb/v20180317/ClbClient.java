@@ -39,28 +39,6 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *新增个性化配置，准备下线，请使用SetCustomizedConfigForLoadBalancer。
-     * @param req AddCustomizedConfigRequest
-     * @return AddCustomizedConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public AddCustomizedConfigResponse AddCustomizedConfig(AddCustomizedConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "AddCustomizedConfig", AddCustomizedConfigResponse.class);
-    }
-
-    /**
-     *关联配置到server或location，根据配置类型关联到server或location。准备下线，请使用SetCustomizedConfigForLoadBalancer。
-     * @param req AssociateCustomizedConfigRequest
-     * @return AssociateCustomizedConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public AssociateCustomizedConfigResponse AssociateCustomizedConfig(AssociateCustomizedConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "AssociateCustomizedConfig", AssociateCustomizedConfigResponse.class);
-    }
-
-    /**
      *本接口(AssociateTargetGroups)用来将目标组绑定到负载均衡的监听器（四层协议）或转发规则（七层协议）上。
 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用  [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)  接口查询本次任务是否成功。
 限制说明：
@@ -243,17 +221,6 @@ BGP带宽包必须传带宽包id
     public CreateTopicResponse CreateTopic(CreateTopicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateTopic", CreateTopicResponse.class);
-    }
-
-    /**
-     *删除个性化配置，准备下线，请使用SetCustomizedConfigForLoadBalancer。
-     * @param req DeleteCustomizedConfigRequest
-     * @return DeleteCustomizedConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteCustomizedConfigResponse DeleteCustomizedConfig(DeleteCustomizedConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteCustomizedConfig", DeleteCustomizedConfigResponse.class);
     }
 
     /**
@@ -727,17 +694,6 @@ BGP带宽包必须传带宽包id
     }
 
     /**
-     *去关联个性化配置，准备下线，请使用SetCustomizedConfigForLoadBalancer。
-     * @param req DisassociateCustomizedConfigRequest
-     * @return DisassociateCustomizedConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DisassociateCustomizedConfigResponse DisassociateCustomizedConfig(DisassociateCustomizedConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DisassociateCustomizedConfig", DisassociateCustomizedConfigResponse.class);
-    }
-
-    /**
      *解除规则的目标组关联关系。
 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
 当解绑七层转发规则时，LocationId 为必填项。
@@ -828,17 +784,6 @@ BGP带宽包必须传带宽包id
     public ModifyBlockIPListResponse ModifyBlockIPList(ModifyBlockIPListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyBlockIPList", ModifyBlockIPListResponse.class);
-    }
-
-    /**
-     *修改个性化配置。如果配置已经绑定clb、server或location，同时更新。准备下线，请使用SetCustomizedConfigForLoadBalancer。
-     * @param req ModifyCustomizedConfigRequest
-     * @return ModifyCustomizedConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyCustomizedConfigResponse ModifyCustomizedConfig(ModifyCustomizedConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyCustomizedConfig", ModifyCustomizedConfigResponse.class);
     }
 
     /**

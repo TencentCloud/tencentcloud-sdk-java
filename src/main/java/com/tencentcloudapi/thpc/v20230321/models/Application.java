@@ -71,6 +71,18 @@ public class Application extends AbstractModel {
     private String JobType;
 
     /**
+    * 表示所选训练框架，支持可选参数
+ 
+- PyTorch：表示提交PyTorch训练作业
+- Custom：表示用户自定义作业
+
+默认参数为：Custom
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private String TaskType;
+
+    /**
      * Get 待执行脚本命令。 
      * @return Commands 待执行脚本命令。
      */
@@ -163,7 +175,9 @@ public class Application extends AbstractModel {
 - Custom：表示用户自定义作业
 
 默认参数为：Custom
+     * @deprecated
      */
+    @Deprecated
     public String getJobType() {
         return this.JobType;
     }
@@ -181,9 +195,47 @@ public class Application extends AbstractModel {
 - Custom：表示用户自定义作业
 
 默认参数为：Custom
+     * @deprecated
      */
+    @Deprecated
     public void setJobType(String JobType) {
         this.JobType = JobType;
+    }
+
+    /**
+     * Get 表示所选训练框架，支持可选参数
+ 
+- PyTorch：表示提交PyTorch训练作业
+- Custom：表示用户自定义作业
+
+默认参数为：Custom 
+     * @return TaskType 表示所选训练框架，支持可选参数
+ 
+- PyTorch：表示提交PyTorch训练作业
+- Custom：表示用户自定义作业
+
+默认参数为：Custom
+     */
+    public String getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 表示所选训练框架，支持可选参数
+ 
+- PyTorch：表示提交PyTorch训练作业
+- Custom：表示用户自定义作业
+
+默认参数为：Custom
+     * @param TaskType 表示所选训练框架，支持可选参数
+ 
+- PyTorch：表示提交PyTorch训练作业
+- Custom：表示用户自定义作业
+
+默认参数为：Custom
+     */
+    public void setTaskType(String TaskType) {
+        this.TaskType = TaskType;
     }
 
     public Application() {
@@ -221,6 +273,9 @@ public class Application extends AbstractModel {
         if (source.JobType != null) {
             this.JobType = new String(source.JobType);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
     }
 
 
@@ -234,6 +289,7 @@ public class Application extends AbstractModel {
         this.setParamObj(map, prefix + "Docker.", this.Docker);
         this.setParamObj(map, prefix + "OutputRedirect.", this.OutputRedirect);
         this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
 
     }
 }

@@ -32,6 +32,13 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
     private SmartSubtitleTaskAsrFullTextSegmentItem [] SegmentSet;
 
     /**
+    * 字幕文件路径
+    */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
+
+    /**
     * 字幕文件地址。
     */
     @SerializedName("SubtitlePath")
@@ -63,6 +70,22 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
      */
     public void setSegmentSet(SmartSubtitleTaskAsrFullTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
+    }
+
+    /**
+     * Get 字幕文件路径 
+     * @return Path 字幕文件路径
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set 字幕文件路径
+     * @param Path 字幕文件路径
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
     }
 
     /**
@@ -111,6 +134,9 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
                 this.SegmentSet[i] = new SmartSubtitleTaskAsrFullTextSegmentItem(source.SegmentSet[i]);
             }
         }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
         if (source.SubtitlePath != null) {
             this.SubtitlePath = new String(source.SubtitlePath);
         }
@@ -125,6 +151,7 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+        this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 

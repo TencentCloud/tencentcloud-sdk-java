@@ -248,6 +248,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateClusters）用于新购集群。
+     * @param req CreateIntegrateClusterRequest
+     * @return CreateIntegrateClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIntegrateClusterResponse CreateIntegrateCluster(CreateIntegrateClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIntegrateCluster", CreateIntegrateClusterResponse.class);
+    }
+
+    /**
      *本接口（CreateParamTemplate）用于创建参数模板。
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
@@ -809,6 +820,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeIntegrateTask）用于查询集群任务。
+     * @param req DescribeIntegrateTaskRequest
+     * @return DescribeIntegrateTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIntegrateTaskResponse DescribeIntegrateTask(DescribeIntegrateTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIntegrateTask", DescribeIntegrateTaskResponse.class);
+    }
+
+    /**
      *本接口（DescribeIsolatedInstances）用于查询回收站实例列表。
      * @param req DescribeIsolatedInstancesRequest
      * @return DescribeIsolatedInstancesResponse
@@ -1103,6 +1125,17 @@ public class CynosdbClient extends AbstractClient{
     public InquirePriceModifyResponse InquirePriceModify(InquirePriceModifyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InquirePriceModify", InquirePriceModifyResponse.class);
+    }
+
+    /**
+     *此接口（InquirePriceMultiSpec）用于批量询价
+     * @param req InquirePriceMultiSpecRequest
+     * @return InquirePriceMultiSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceMultiSpecResponse InquirePriceMultiSpec(InquirePriceMultiSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePriceMultiSpec", InquirePriceMultiSpecResponse.class);
     }
 
     /**

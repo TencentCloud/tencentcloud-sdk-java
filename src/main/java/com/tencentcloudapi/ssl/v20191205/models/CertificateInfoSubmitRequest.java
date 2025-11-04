@@ -336,6 +336,13 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
     private String SignAlgo;
 
     /**
+    * 是否使用交叉根证书
+    */
+    @SerializedName("UseCrossSignRoot")
+    @Expose
+    private Boolean UseCrossSignRoot;
+
+    /**
      * Get 待提交资料的付费证书 ID。	 
      * @return CertId 待提交资料的付费证书 ID。	
      */
@@ -1091,6 +1098,22 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
         this.SignAlgo = SignAlgo;
     }
 
+    /**
+     * Get 是否使用交叉根证书 
+     * @return UseCrossSignRoot 是否使用交叉根证书
+     */
+    public Boolean getUseCrossSignRoot() {
+        return this.UseCrossSignRoot;
+    }
+
+    /**
+     * Set 是否使用交叉根证书
+     * @param UseCrossSignRoot 是否使用交叉根证书
+     */
+    public void setUseCrossSignRoot(Boolean UseCrossSignRoot) {
+        this.UseCrossSignRoot = UseCrossSignRoot;
+    }
+
     public CertificateInfoSubmitRequest() {
     }
 
@@ -1225,6 +1248,9 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
         if (source.SignAlgo != null) {
             this.SignAlgo = new String(source.SignAlgo);
         }
+        if (source.UseCrossSignRoot != null) {
+            this.UseCrossSignRoot = new Boolean(source.UseCrossSignRoot);
+        }
     }
 
 
@@ -1273,6 +1299,7 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CaType", this.CaType);
         this.setParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
+        this.setParamSimple(map, prefix + "UseCrossSignRoot", this.UseCrossSignRoot);
 
     }
 }

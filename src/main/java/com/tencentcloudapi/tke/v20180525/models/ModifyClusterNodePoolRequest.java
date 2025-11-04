@@ -38,7 +38,7 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
     private String NodePoolId;
 
     /**
-    * 名称
+    * 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
     */
     @SerializedName("Name")
     @Expose
@@ -196,16 +196,16 @@ public class ModifyClusterNodePoolRequest extends AbstractModel {
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾 
+     * @return Name 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
+     * @param Name 名称，最长63个字符，只能包含小写字母、数字及分隔符“_”，且必须以小写字母开头，数字或小写字母结尾
      */
     public void setName(String Name) {
         this.Name = Name;

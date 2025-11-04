@@ -115,6 +115,13 @@ public class Vpc extends AbstractModel {
     private AssistantCidr [] AssistantCidrSet;
 
     /**
+    * vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+    */
+    @SerializedName("EnableRouteVpcPublish")
+    @Expose
+    private Boolean EnableRouteVpcPublish;
+
+    /**
     * 返回多运营商IPv6 Cidr Block
     */
     @SerializedName("Ipv6CidrBlockSet")
@@ -330,6 +337,22 @@ public class Vpc extends AbstractModel {
     }
 
     /**
+     * Get vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单 
+     * @return EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     */
+    public Boolean getEnableRouteVpcPublish() {
+        return this.EnableRouteVpcPublish;
+    }
+
+    /**
+     * Set vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     * @param EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     */
+    public void setEnableRouteVpcPublish(Boolean EnableRouteVpcPublish) {
+        this.EnableRouteVpcPublish = EnableRouteVpcPublish;
+    }
+
+    /**
      * Get 返回多运营商IPv6 Cidr Block 
      * @return Ipv6CidrBlockSet 返回多运营商IPv6 Cidr Block
      */
@@ -401,6 +424,9 @@ public class Vpc extends AbstractModel {
                 this.AssistantCidrSet[i] = new AssistantCidr(source.AssistantCidrSet[i]);
             }
         }
+        if (source.EnableRouteVpcPublish != null) {
+            this.EnableRouteVpcPublish = new Boolean(source.EnableRouteVpcPublish);
+        }
         if (source.Ipv6CidrBlockSet != null) {
             this.Ipv6CidrBlockSet = new ISPIPv6CidrBlock[source.Ipv6CidrBlockSet.length];
             for (int i = 0; i < source.Ipv6CidrBlockSet.length; i++) {
@@ -427,6 +453,7 @@ public class Vpc extends AbstractModel {
         this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArrayObj(map, prefix + "AssistantCidrSet.", this.AssistantCidrSet);
+        this.setParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
         this.setParamArrayObj(map, prefix + "Ipv6CidrBlockSet.", this.Ipv6CidrBlockSet);
 
     }

@@ -38,7 +38,7 @@ public class ModifyNodePoolInstanceTypesRequest extends AbstractModel {
     private String NodePoolId;
 
     /**
-    * 机型列表，主实例机型不支持修改
+    * 机型列表，参考 https://cloud.tencent.com/document/product/213/11518，主实例机型不支持修改
     */
     @SerializedName("InstanceTypes")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyNodePoolInstanceTypesRequest extends AbstractModel {
     }
 
     /**
-     * Get 机型列表，主实例机型不支持修改 
-     * @return InstanceTypes 机型列表，主实例机型不支持修改
+     * Get 机型列表，参考 https://cloud.tencent.com/document/product/213/11518，主实例机型不支持修改 
+     * @return InstanceTypes 机型列表，参考 https://cloud.tencent.com/document/product/213/11518，主实例机型不支持修改
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set 机型列表，主实例机型不支持修改
-     * @param InstanceTypes 机型列表，主实例机型不支持修改
+     * Set 机型列表，参考 https://cloud.tencent.com/document/product/213/11518，主实例机型不支持修改
+     * @param InstanceTypes 机型列表，参考 https://cloud.tencent.com/document/product/213/11518，主实例机型不支持修改
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;

@@ -59,6 +59,20 @@ public class CompareDetailInfo extends AbstractModel {
     private DifferenceRowDetail DifferenceRow;
 
     /**
+    * 表结构不一致详情，pg用
+    */
+    @SerializedName("DifferenceSchema")
+    @Expose
+    private DifferenceSchemaDetail DifferenceSchema;
+
+    /**
+    * 对象owner不一致详情，pg用
+    */
+    @SerializedName("DifferenceOwner")
+    @Expose
+    private DifferenceOwnerDetail DifferenceOwner;
+
+    /**
      * Get 数据不一致的表详情 
      * @return Difference 数据不一致的表详情
      */
@@ -138,6 +152,38 @@ public class CompareDetailInfo extends AbstractModel {
         this.DifferenceRow = DifferenceRow;
     }
 
+    /**
+     * Get 表结构不一致详情，pg用 
+     * @return DifferenceSchema 表结构不一致详情，pg用
+     */
+    public DifferenceSchemaDetail getDifferenceSchema() {
+        return this.DifferenceSchema;
+    }
+
+    /**
+     * Set 表结构不一致详情，pg用
+     * @param DifferenceSchema 表结构不一致详情，pg用
+     */
+    public void setDifferenceSchema(DifferenceSchemaDetail DifferenceSchema) {
+        this.DifferenceSchema = DifferenceSchema;
+    }
+
+    /**
+     * Get 对象owner不一致详情，pg用 
+     * @return DifferenceOwner 对象owner不一致详情，pg用
+     */
+    public DifferenceOwnerDetail getDifferenceOwner() {
+        return this.DifferenceOwner;
+    }
+
+    /**
+     * Set 对象owner不一致详情，pg用
+     * @param DifferenceOwner 对象owner不一致详情，pg用
+     */
+    public void setDifferenceOwner(DifferenceOwnerDetail DifferenceOwner) {
+        this.DifferenceOwner = DifferenceOwner;
+    }
+
     public CompareDetailInfo() {
     }
 
@@ -161,6 +207,12 @@ public class CompareDetailInfo extends AbstractModel {
         if (source.DifferenceRow != null) {
             this.DifferenceRow = new DifferenceRowDetail(source.DifferenceRow);
         }
+        if (source.DifferenceSchema != null) {
+            this.DifferenceSchema = new DifferenceSchemaDetail(source.DifferenceSchema);
+        }
+        if (source.DifferenceOwner != null) {
+            this.DifferenceOwner = new DifferenceOwnerDetail(source.DifferenceOwner);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class CompareDetailInfo extends AbstractModel {
         this.setParamObj(map, prefix + "DifferenceAdvancedObjects.", this.DifferenceAdvancedObjects);
         this.setParamObj(map, prefix + "DifferenceData.", this.DifferenceData);
         this.setParamObj(map, prefix + "DifferenceRow.", this.DifferenceRow);
+        this.setParamObj(map, prefix + "DifferenceSchema.", this.DifferenceSchema);
+        this.setParamObj(map, prefix + "DifferenceOwner.", this.DifferenceOwner);
 
     }
 }

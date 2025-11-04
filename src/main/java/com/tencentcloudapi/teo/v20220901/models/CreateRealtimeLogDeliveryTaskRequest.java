@@ -42,6 +42,7 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
 <li>cls: 推送到腾讯云 CLS；</li>
 <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
 <li>s3：推送到 AWS S3 兼容存储桶地址；</li>
+<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -114,7 +115,7 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     /**
     * 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
 <li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
     */
     @SerializedName("LogFormat")
     @Expose
@@ -177,11 +178,13 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
      * Get 实时日志投递任务类型，取值有：
 <li>cls: 推送到腾讯云 CLS；</li>
 <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
-<li>s3：推送到 AWS S3 兼容存储桶地址；</li> 
+<li>s3：推送到 AWS S3 兼容存储桶地址；</li>
+<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li> 
      * @return TaskType 实时日志投递任务类型，取值有：
 <li>cls: 推送到腾讯云 CLS；</li>
 <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
 <li>s3：推送到 AWS S3 兼容存储桶地址；</li>
+<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -192,10 +195,12 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
 <li>cls: 推送到腾讯云 CLS；</li>
 <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
 <li>s3：推送到 AWS S3 兼容存储桶地址；</li>
+<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li>
      * @param TaskType 实时日志投递任务类型，取值有：
 <li>cls: 推送到腾讯云 CLS；</li>
 <li>custom_endpoint：推送到自定义 HTTP(S) 地址；</li>
 <li>s3：推送到 AWS S3 兼容存储桶地址；</li>
+<li>log_analysis：推送到 EdgeOne 日志分析，该任务类型仅支持“站点加速日志”这一数据投递类型。</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -376,10 +381,10 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     /**
      * Get 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
 <li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。 
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。 
      * @return LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
 <li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
      */
     public LogFormat getLogFormat() {
         return this.LogFormat;
@@ -388,10 +393,10 @@ public class CreateRealtimeLogDeliveryTaskRequest extends AbstractModel {
     /**
      * Set 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
 <li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
      * @param LogFormat 日志投递的输出格式。不填表示为默认格式，默认格式逻辑如下：
 <li>当 TaskType 取值为 custom_endpoint 时，默认格式为多个 JSON 对象组成的数组，每个 JSON 对象为一条日志；</li>
-<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
+<li>当 TaskType 取值为 s3 时，默认格式为 JSON Lines；</li>特别地，当 TaskType 取值为 cls 或 log_analysis 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
      */
     public void setLogFormat(LogFormat LogFormat) {
         this.LogFormat = LogFormat;

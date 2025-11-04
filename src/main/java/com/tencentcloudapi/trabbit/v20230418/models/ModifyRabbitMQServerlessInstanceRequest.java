@@ -59,6 +59,20 @@ public class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel {
     private Float SendReceiveRatio;
 
     /**
+    * 是否删除所有标签，默认为false
+    */
+    @SerializedName("DeleteAllTags")
+    @Expose
+    private Boolean DeleteAllTags;
+
+    /**
+    * 修改的实例标签列表
+    */
+    @SerializedName("InstanceTags")
+    @Expose
+    private RabbitMQServerlessTag [] InstanceTags;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -138,6 +152,38 @@ public class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel {
         this.SendReceiveRatio = SendReceiveRatio;
     }
 
+    /**
+     * Get 是否删除所有标签，默认为false 
+     * @return DeleteAllTags 是否删除所有标签，默认为false
+     */
+    public Boolean getDeleteAllTags() {
+        return this.DeleteAllTags;
+    }
+
+    /**
+     * Set 是否删除所有标签，默认为false
+     * @param DeleteAllTags 是否删除所有标签，默认为false
+     */
+    public void setDeleteAllTags(Boolean DeleteAllTags) {
+        this.DeleteAllTags = DeleteAllTags;
+    }
+
+    /**
+     * Get 修改的实例标签列表 
+     * @return InstanceTags 修改的实例标签列表
+     */
+    public RabbitMQServerlessTag [] getInstanceTags() {
+        return this.InstanceTags;
+    }
+
+    /**
+     * Set 修改的实例标签列表
+     * @param InstanceTags 修改的实例标签列表
+     */
+    public void setInstanceTags(RabbitMQServerlessTag [] InstanceTags) {
+        this.InstanceTags = InstanceTags;
+    }
+
     public ModifyRabbitMQServerlessInstanceRequest() {
     }
 
@@ -161,6 +207,15 @@ public class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel {
         if (source.SendReceiveRatio != null) {
             this.SendReceiveRatio = new Float(source.SendReceiveRatio);
         }
+        if (source.DeleteAllTags != null) {
+            this.DeleteAllTags = new Boolean(source.DeleteAllTags);
+        }
+        if (source.InstanceTags != null) {
+            this.InstanceTags = new RabbitMQServerlessTag[source.InstanceTags.length];
+            for (int i = 0; i < source.InstanceTags.length; i++) {
+                this.InstanceTags[i] = new RabbitMQServerlessTag(source.InstanceTags[i]);
+            }
+        }
     }
 
 
@@ -173,6 +228,8 @@ public class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
         this.setParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+        this.setParamSimple(map, prefix + "DeleteAllTags", this.DeleteAllTags);
+        this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
 
     }
 }

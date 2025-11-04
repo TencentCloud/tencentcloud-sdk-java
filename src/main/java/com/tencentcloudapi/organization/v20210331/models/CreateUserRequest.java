@@ -87,6 +87,13 @@ public class CreateUserRequest extends AbstractModel {
     private String UserType;
 
     /**
+    * 是否需要重置密码： true: 需要重置  false: 不需要重置密码。 默认false
+    */
+    @SerializedName("NeedResetPassword")
+    @Expose
+    private Boolean NeedResetPassword;
+
+    /**
      * Get 空间 ID。 
      * @return ZoneId 空间 ID。
      */
@@ -230,6 +237,22 @@ public class CreateUserRequest extends AbstractModel {
         this.UserType = UserType;
     }
 
+    /**
+     * Get 是否需要重置密码： true: 需要重置  false: 不需要重置密码。 默认false 
+     * @return NeedResetPassword 是否需要重置密码： true: 需要重置  false: 不需要重置密码。 默认false
+     */
+    public Boolean getNeedResetPassword() {
+        return this.NeedResetPassword;
+    }
+
+    /**
+     * Set 是否需要重置密码： true: 需要重置  false: 不需要重置密码。 默认false
+     * @param NeedResetPassword 是否需要重置密码： true: 需要重置  false: 不需要重置密码。 默认false
+     */
+    public void setNeedResetPassword(Boolean NeedResetPassword) {
+        this.NeedResetPassword = NeedResetPassword;
+    }
+
     public CreateUserRequest() {
     }
 
@@ -265,6 +288,9 @@ public class CreateUserRequest extends AbstractModel {
         if (source.UserType != null) {
             this.UserType = new String(source.UserType);
         }
+        if (source.NeedResetPassword != null) {
+            this.NeedResetPassword = new Boolean(source.NeedResetPassword);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class CreateUserRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamSimple(map, prefix + "UserStatus", this.UserStatus);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "NeedResetPassword", this.NeedResetPassword);
 
     }
 }

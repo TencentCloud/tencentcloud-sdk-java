@@ -117,6 +117,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *创建日志下载任务
+     * @param req CreateLogDownloadTaskRequest
+     * @return CreateLogDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLogDownloadTaskResponse CreateLogDownloadTask(CreateLogDownloadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLogDownloadTask", CreateLogDownloadTaskResponse.class);
+    }
+
+    /**
      *本接口（DeleteAccountUser）用于删除实例的自定义账号。
      * @param req DeleteAccountUserRequest
      * @return DeleteAccountUserResponse
@@ -125,6 +136,17 @@ public class MongodbClient extends AbstractClient{
     public DeleteAccountUserResponse DeleteAccountUser(DeleteAccountUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAccountUser", DeleteAccountUserResponse.class);
+    }
+
+    /**
+     *删除日志下载任务
+     * @param req DeleteLogDownloadTaskRequest
+     * @return DeleteLogDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLogDownloadTaskResponse DeleteLogDownloadTask(DeleteLogDownloadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLogDownloadTask", DeleteLogDownloadTaskResponse.class);
     }
 
     /**
@@ -303,6 +325,28 @@ public class MongodbClient extends AbstractClient{
     public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceParams", DescribeInstanceParamsResponse.class);
+    }
+
+    /**
+     *日志下载任务查询
+     * @param req DescribeLogDownloadTasksRequest
+     * @return DescribeLogDownloadTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogDownloadTasksResponse DescribeLogDownloadTasks(DescribeLogDownloadTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogDownloadTasks", DescribeLogDownloadTasksResponse.class);
+    }
+
+    /**
+     *该接口（DescribeMongodbLogs）用于查询运行日志。
+     * @param req DescribeMongodbLogsRequest
+     * @return DescribeMongodbLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMongodbLogsResponse DescribeMongodbLogs(DescribeMongodbLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMongodbLogs", DescribeMongodbLogsResponse.class);
     }
 
     /**
@@ -625,6 +669,28 @@ public class MongodbClient extends AbstractClient{
     public TerminateDBInstancesResponse TerminateDBInstances(TerminateDBInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TerminateDBInstances", TerminateDBInstancesResponse.class);
+    }
+
+    /**
+     *本接口(UpgradeDBInstanceKernelVersion)用于升级数据库实例内核版本。
+     * @param req UpgradeDBInstanceKernelVersionRequest
+     * @return UpgradeDBInstanceKernelVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeDBInstanceKernelVersion", UpgradeDBInstanceKernelVersionResponse.class);
+    }
+
+    /**
+     *本接口用于跨版本升级数据库内核。当前仅支持3.6版本升级为4.0版本、4.0版本升级为4.2版本、4.2版本升级为4.4版本及4.4版本升级为5.0版本。
+     * @param req UpgradeDbInstanceVersionRequest
+     * @return UpgradeDbInstanceVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDbInstanceVersionResponse UpgradeDbInstanceVersion(UpgradeDbInstanceVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeDbInstanceVersion", UpgradeDbInstanceVersionResponse.class);
     }
 
 }

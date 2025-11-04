@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class DescribeInstanceSpecBandwidthResponse extends AbstractModel {
 
     /**
+    * 基础带宽。
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
+    * 链接限制。
+    */
+    @SerializedName("ClientLimit")
+    @Expose
+    private Long ClientLimit;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 基础带宽。 
+     * @return Bandwidth 基础带宽。
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set 基础带宽。
+     * @param Bandwidth 基础带宽。
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
+     * Get 链接限制。 
+     * @return ClientLimit 链接限制。
+     */
+    public Long getClientLimit() {
+        return this.ClientLimit;
+    }
+
+    /**
+     * Set 链接限制。
+     * @param ClientLimit 链接限制。
+     */
+    public void setClientLimit(Long ClientLimit) {
+        this.ClientLimit = ClientLimit;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,12 @@ public class DescribeInstanceSpecBandwidthResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeInstanceSpecBandwidthResponse(DescribeInstanceSpecBandwidthResponse source) {
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.ClientLimit != null) {
+            this.ClientLimit = new Long(source.ClientLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +116,8 @@ public class DescribeInstanceSpecBandwidthResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "ClientLimit", this.ClientLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

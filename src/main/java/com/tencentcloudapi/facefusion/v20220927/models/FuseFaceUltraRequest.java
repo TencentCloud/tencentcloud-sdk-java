@@ -95,6 +95,7 @@ public class FuseFaceUltraRequest extends AbstractModel {
 3：影视级场景，高分辨率，画面偏自然。
 4：影视级场景，高分辦率，高人脸相似度，画面偏自然，可用于证件照等场景。
 5：影视级场景，高分辨率，对闭眼和遮挡更友好。
+6：影视级场景，高分辨率，极高人脸相似度，可用于电商照片、证件照、文旅照片等场景。
     */
     @SerializedName("SwapModelType")
     @Expose
@@ -279,7 +280,8 @@ public class FuseFaceUltraRequest extends AbstractModel {
 2：影视级场景，画面偏自然。
 3：影视级场景，高分辨率，画面偏自然。
 4：影视级场景，高分辦率，高人脸相似度，画面偏自然，可用于证件照等场景。
-5：影视级场景，高分辨率，对闭眼和遮挡更友好。 
+5：影视级场景，高分辨率，对闭眼和遮挡更友好。
+6：影视级场景，高分辨率，极高人脸相似度，可用于电商照片、证件照、文旅照片等场景。 
      * @return SwapModelType 融合模型类型参数：默认为1。
 图片人脸融合（专业版）针对不同场景，提供多种模型供选择。如您的产品是泛娱乐场景，推荐使用1；如您主要用于影像场景，推荐使用4、5。其他模型类型也可以结合您的产品使用场景进行选择，也许会有意想不到的效果
 1：默认泛娱乐场景，画面偏锐。
@@ -287,6 +289,7 @@ public class FuseFaceUltraRequest extends AbstractModel {
 3：影视级场景，高分辨率，画面偏自然。
 4：影视级场景，高分辦率，高人脸相似度，画面偏自然，可用于证件照等场景。
 5：影视级场景，高分辨率，对闭眼和遮挡更友好。
+6：影视级场景，高分辨率，极高人脸相似度，可用于电商照片、证件照、文旅照片等场景。
      */
     public Long getSwapModelType() {
         return this.SwapModelType;
@@ -300,6 +303,7 @@ public class FuseFaceUltraRequest extends AbstractModel {
 3：影视级场景，高分辨率，画面偏自然。
 4：影视级场景，高分辦率，高人脸相似度，画面偏自然，可用于证件照等场景。
 5：影视级场景，高分辨率，对闭眼和遮挡更友好。
+6：影视级场景，高分辨率，极高人脸相似度，可用于电商照片、证件照、文旅照片等场景。
      * @param SwapModelType 融合模型类型参数：默认为1。
 图片人脸融合（专业版）针对不同场景，提供多种模型供选择。如您的产品是泛娱乐场景，推荐使用1；如您主要用于影像场景，推荐使用4、5。其他模型类型也可以结合您的产品使用场景进行选择，也许会有意想不到的效果
 1：默认泛娱乐场景，画面偏锐。
@@ -307,6 +311,7 @@ public class FuseFaceUltraRequest extends AbstractModel {
 3：影视级场景，高分辨率，画面偏自然。
 4：影视级场景，高分辦率，高人脸相似度，画面偏自然，可用于证件照等场景。
 5：影视级场景，高分辨率，对闭眼和遮挡更友好。
+6：影视级场景，高分辨率，极高人脸相似度，可用于电商照片、证件照、文旅照片等场景。
      */
     public void setSwapModelType(Long SwapModelType) {
         this.SwapModelType = SwapModelType;

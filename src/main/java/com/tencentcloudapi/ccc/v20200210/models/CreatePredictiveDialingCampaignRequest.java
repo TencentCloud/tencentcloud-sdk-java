@@ -73,7 +73,7 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
     private Long Priority;
 
     /**
-    * 预期呼损率，百分比，5 - 50
+    * 预期呼损率，百分比，0 - 50
     */
     @SerializedName("ExpectedAbandonRate")
     @Expose
@@ -262,16 +262,16 @@ public class CreatePredictiveDialingCampaignRequest extends AbstractModel {
     }
 
     /**
-     * Get 预期呼损率，百分比，5 - 50 
-     * @return ExpectedAbandonRate 预期呼损率，百分比，5 - 50
+     * Get 预期呼损率，百分比，0 - 50 
+     * @return ExpectedAbandonRate 预期呼损率，百分比，0 - 50
      */
     public Long getExpectedAbandonRate() {
         return this.ExpectedAbandonRate;
     }
 
     /**
-     * Set 预期呼损率，百分比，5 - 50
-     * @param ExpectedAbandonRate 预期呼损率，百分比，5 - 50
+     * Set 预期呼损率，百分比，0 - 50
+     * @param ExpectedAbandonRate 预期呼损率，百分比，0 - 50
      */
     public void setExpectedAbandonRate(Long ExpectedAbandonRate) {
         this.ExpectedAbandonRate = ExpectedAbandonRate;

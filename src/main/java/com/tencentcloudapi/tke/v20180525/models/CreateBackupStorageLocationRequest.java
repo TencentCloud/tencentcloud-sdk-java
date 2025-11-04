@@ -31,14 +31,14 @@ public class CreateBackupStorageLocationRequest extends AbstractModel {
     private String StorageRegion;
 
     /**
-    * 对象存储桶名称，如果是COS必须是tke-backup前缀开头
+    * 对象存储桶名称，如果是COS必须是tke-backup前缀开头，字符长度是19
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * 备份仓库名称
+    * 备份仓库名称，字符长度为63
     */
     @SerializedName("Name")
     @Expose
@@ -75,32 +75,32 @@ public class CreateBackupStorageLocationRequest extends AbstractModel {
     }
 
     /**
-     * Get 对象存储桶名称，如果是COS必须是tke-backup前缀开头 
-     * @return Bucket 对象存储桶名称，如果是COS必须是tke-backup前缀开头
+     * Get 对象存储桶名称，如果是COS必须是tke-backup前缀开头，字符长度是19 
+     * @return Bucket 对象存储桶名称，如果是COS必须是tke-backup前缀开头，字符长度是19
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set 对象存储桶名称，如果是COS必须是tke-backup前缀开头
-     * @param Bucket 对象存储桶名称，如果是COS必须是tke-backup前缀开头
+     * Set 对象存储桶名称，如果是COS必须是tke-backup前缀开头，字符长度是19
+     * @param Bucket 对象存储桶名称，如果是COS必须是tke-backup前缀开头，字符长度是19
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get 备份仓库名称 
-     * @return Name 备份仓库名称
+     * Get 备份仓库名称，字符长度为63 
+     * @return Name 备份仓库名称，字符长度为63
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 备份仓库名称
-     * @param Name 备份仓库名称
+     * Set 备份仓库名称，字符长度为63
+     * @param Name 备份仓库名称，字符长度为63
      */
     public void setName(String Name) {
         this.Name = Name;

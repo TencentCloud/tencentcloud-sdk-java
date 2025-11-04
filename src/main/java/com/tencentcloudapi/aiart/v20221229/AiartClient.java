@@ -147,6 +147,18 @@ AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任
     }
 
     /**
+     *混元生图接口，基于混元大模型，根据输入的文本描述快速生成图片。
+默认提供0个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req QueryTextToImageJobRequest
+     * @return QueryTextToImageJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryTextToImageJobResponse QueryTextToImageJob(QueryTextToImageJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryTextToImageJob", QueryTextToImageJobResponse.class);
+    }
+
+    /**
      *本接口已迁移至腾讯混元大模型-混元生图，即将停止此处维护，可切换至 [混元生图 API](https://cloud.tencent.com/document/product/1729/105970) 继续使用。
 文生图（高级版）接口基于高级版文生图大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
 提交任务：输入文本等，提交一个文生图（高级版）异步任务，获得任务 ID。
@@ -263,6 +275,18 @@ AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任
     public SubmitMemeJobResponse SubmitMemeJob(SubmitMemeJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitMemeJob", SubmitMemeJobResponse.class);
+    }
+
+    /**
+     *混元生图接口，基于混元大模型，根据输入的文本描述快速生成图片。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req SubmitTextToImageJobRequest
+     * @return SubmitTextToImageJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitTextToImageJobResponse SubmitTextToImageJob(SubmitTextToImageJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitTextToImageJob", SubmitTextToImageJobResponse.class);
     }
 
     /**

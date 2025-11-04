@@ -31,21 +31,21 @@ public class ModifyClusterRuntimeConfigRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 当需要修改运行时版本是根据另外的K8S版本获取时，需填写。例如升级校验有冲突后修改场景
+    * 运行时版本需依据指定的Kubernetes版本进行设置。典型情况为，在升级过程中因版本冲突而需要调整运行时版本时。
     */
     @SerializedName("DstK8SVersion")
     @Expose
     private String DstK8SVersion;
 
     /**
-    * 需要修改集群运行时时填写
+    * 需要修改集群运行时填写
     */
     @SerializedName("ClusterRuntimeConfig")
     @Expose
     private RuntimeConfig ClusterRuntimeConfig;
 
     /**
-    * 需要修改节点池运行时时，填需要修改的部分
+    * 需要修改节点池运行时，填需要修改的部分
     */
     @SerializedName("NodePoolRuntimeConfig")
     @Expose
@@ -68,48 +68,48 @@ public class ModifyClusterRuntimeConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 当需要修改运行时版本是根据另外的K8S版本获取时，需填写。例如升级校验有冲突后修改场景 
-     * @return DstK8SVersion 当需要修改运行时版本是根据另外的K8S版本获取时，需填写。例如升级校验有冲突后修改场景
+     * Get 运行时版本需依据指定的Kubernetes版本进行设置。典型情况为，在升级过程中因版本冲突而需要调整运行时版本时。 
+     * @return DstK8SVersion 运行时版本需依据指定的Kubernetes版本进行设置。典型情况为，在升级过程中因版本冲突而需要调整运行时版本时。
      */
     public String getDstK8SVersion() {
         return this.DstK8SVersion;
     }
 
     /**
-     * Set 当需要修改运行时版本是根据另外的K8S版本获取时，需填写。例如升级校验有冲突后修改场景
-     * @param DstK8SVersion 当需要修改运行时版本是根据另外的K8S版本获取时，需填写。例如升级校验有冲突后修改场景
+     * Set 运行时版本需依据指定的Kubernetes版本进行设置。典型情况为，在升级过程中因版本冲突而需要调整运行时版本时。
+     * @param DstK8SVersion 运行时版本需依据指定的Kubernetes版本进行设置。典型情况为，在升级过程中因版本冲突而需要调整运行时版本时。
      */
     public void setDstK8SVersion(String DstK8SVersion) {
         this.DstK8SVersion = DstK8SVersion;
     }
 
     /**
-     * Get 需要修改集群运行时时填写 
-     * @return ClusterRuntimeConfig 需要修改集群运行时时填写
+     * Get 需要修改集群运行时填写 
+     * @return ClusterRuntimeConfig 需要修改集群运行时填写
      */
     public RuntimeConfig getClusterRuntimeConfig() {
         return this.ClusterRuntimeConfig;
     }
 
     /**
-     * Set 需要修改集群运行时时填写
-     * @param ClusterRuntimeConfig 需要修改集群运行时时填写
+     * Set 需要修改集群运行时填写
+     * @param ClusterRuntimeConfig 需要修改集群运行时填写
      */
     public void setClusterRuntimeConfig(RuntimeConfig ClusterRuntimeConfig) {
         this.ClusterRuntimeConfig = ClusterRuntimeConfig;
     }
 
     /**
-     * Get 需要修改节点池运行时时，填需要修改的部分 
-     * @return NodePoolRuntimeConfig 需要修改节点池运行时时，填需要修改的部分
+     * Get 需要修改节点池运行时，填需要修改的部分 
+     * @return NodePoolRuntimeConfig 需要修改节点池运行时，填需要修改的部分
      */
     public NodePoolRuntime [] getNodePoolRuntimeConfig() {
         return this.NodePoolRuntimeConfig;
     }
 
     /**
-     * Set 需要修改节点池运行时时，填需要修改的部分
-     * @param NodePoolRuntimeConfig 需要修改节点池运行时时，填需要修改的部分
+     * Set 需要修改节点池运行时，填需要修改的部分
+     * @param NodePoolRuntimeConfig 需要修改节点池运行时，填需要修改的部分
      */
     public void setNodePoolRuntimeConfig(NodePoolRuntime [] NodePoolRuntimeConfig) {
         this.NodePoolRuntimeConfig = NodePoolRuntimeConfig;

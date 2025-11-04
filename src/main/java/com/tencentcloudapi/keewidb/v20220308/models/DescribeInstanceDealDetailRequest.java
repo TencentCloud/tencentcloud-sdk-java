@@ -31,9 +31,18 @@ public class DescribeInstanceDealDetailRequest extends AbstractModel {
     private String [] DealIds;
 
     /**
+    * 订单号，订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealName。
+    */
+    @SerializedName("DealName")
+    @Expose
+    private String DealName;
+
+    /**
      * Get 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealId。 
      * @return DealIds 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealId。
+     * @deprecated
      */
+    @Deprecated
     public String [] getDealIds() {
         return this.DealIds;
     }
@@ -41,9 +50,27 @@ public class DescribeInstanceDealDetailRequest extends AbstractModel {
     /**
      * Set 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealId。
      * @param DealIds 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealId。
+     * @deprecated
      */
+    @Deprecated
     public void setDealIds(String [] DealIds) {
         this.DealIds = DealIds;
+    }
+
+    /**
+     * Get 订单号，订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealName。 
+     * @return DealName 订单号，订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealName。
+     */
+    public String getDealName() {
+        return this.DealName;
+    }
+
+    /**
+     * Set 订单号，订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealName。
+     * @param DealName 订单号，订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/1520/86207) 的输出参数DealName。
+     */
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
     }
 
     public DescribeInstanceDealDetailRequest() {
@@ -60,6 +87,9 @@ public class DescribeInstanceDealDetailRequest extends AbstractModel {
                 this.DealIds[i] = new String(source.DealIds[i]);
             }
         }
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
     }
 
 
@@ -68,6 +98,7 @@ public class DescribeInstanceDealDetailRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DealIds.", this.DealIds);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
 
     }
 }

@@ -136,6 +136,16 @@ public class ClusterOverview extends AbstractModel {
     private String ClusterType;
 
     /**
+    * 集群销毁保护开关状态，当前支持参数：
+
+- ON: 集群销毁保护打开
+- OFF: 集群销毁保护关闭
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private String DeletionProtection;
+
+    /**
      * Get 集群ID。 
      * @return ClusterId 集群ID。
      */
@@ -391,6 +401,34 @@ public class ClusterOverview extends AbstractModel {
         this.ClusterType = ClusterType;
     }
 
+    /**
+     * Get 集群销毁保护开关状态，当前支持参数：
+
+- ON: 集群销毁保护打开
+- OFF: 集群销毁保护关闭 
+     * @return DeletionProtection 集群销毁保护开关状态，当前支持参数：
+
+- ON: 集群销毁保护打开
+- OFF: 集群销毁保护关闭
+     */
+    public String getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 集群销毁保护开关状态，当前支持参数：
+
+- ON: 集群销毁保护打开
+- OFF: 集群销毁保护关闭
+     * @param DeletionProtection 集群销毁保护开关状态，当前支持参数：
+
+- ON: 集群销毁保护打开
+- OFF: 集群销毁保护关闭
+     */
+    public void setDeletionProtection(String DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public ClusterOverview() {
     }
 
@@ -456,6 +494,9 @@ public class ClusterOverview extends AbstractModel {
         if (source.ClusterType != null) {
             this.ClusterType = new String(source.ClusterType);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new String(source.DeletionProtection);
+        }
     }
 
 
@@ -479,6 +520,7 @@ public class ClusterOverview extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoScalingType", this.AutoScalingType);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

@@ -44,6 +44,10 @@ public class DrmInfo extends AbstractModel {
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
 
+- widevine+fairplay:
+ 只能用于HLS，切片格式只能是mp4
+ 可以使用切片模式或singfile模式
+
     */
     @SerializedName("Type")
     @Expose
@@ -84,6 +88,10 @@ public class DrmInfo extends AbstractModel {
 可以用于HLS和DASH，切片格式只能是mp4
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
+
+- widevine+fairplay:
+ 只能用于HLS，切片格式只能是mp4
+ 可以使用切片模式或singfile模式
  
      * @return Type 加密类型：
 
@@ -104,6 +112,10 @@ public class DrmInfo extends AbstractModel {
 可以用于HLS和DASH，切片格式只能是mp4
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
+
+- widevine+fairplay:
+ 只能用于HLS，切片格式只能是mp4
+ 可以使用切片模式或singfile模式
 
      */
     public String getType() {
@@ -131,6 +143,10 @@ public class DrmInfo extends AbstractModel {
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
 
+- widevine+fairplay:
+ 只能用于HLS，切片格式只能是mp4
+ 可以使用切片模式或singfile模式
+
      * @param Type 加密类型：
 
 - simpleaes
@@ -150,6 +166,10 @@ public class DrmInfo extends AbstractModel {
 可以用于HLS和DASH，切片格式只能是mp4
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
+
+- widevine+fairplay:
+ 只能用于HLS，切片格式只能是mp4
+ 可以使用切片模式或singfile模式
 
      */
     public void setType(String Type) {

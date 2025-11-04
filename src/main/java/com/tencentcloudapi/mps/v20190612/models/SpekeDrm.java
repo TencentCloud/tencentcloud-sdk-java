@@ -25,7 +25,9 @@ public class SpekeDrm extends AbstractModel {
 
     /**
     * 资源标记，该字段内容为用户自定义；
-支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
+支持1-128个字符的数字、字母、下划线(`_`)、中划线(-)。
+该字段对应Speke请求中的cid字段。
+注：不同DRM厂商对该字段的限制有所区别（如：华曦达不支持该字段带`_`），具体规则请与DRM厂商进行确认。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -49,8 +51,9 @@ public class SpekeDrm extends AbstractModel {
 
     /**
     * 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
+加密方式选择WideVine+FairPlay时，仅支持cbcs
 
-cbcs：PlayReady，Widevine，FairPlay 支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
 cenc：PlayReady，Widevine支持；
     */
     @SerializedName("EncryptionMethod")
@@ -69,9 +72,13 @@ preset1：每个子流使用不同的key加密；
 
     /**
      * Get 资源标记，该字段内容为用户自定义；
-支持1-128个字符的数字、字母、下划线(_)、中划线(-)。 
+支持1-128个字符的数字、字母、下划线(`_`)、中划线(-)。
+该字段对应Speke请求中的cid字段。
+注：不同DRM厂商对该字段的限制有所区别（如：华曦达不支持该字段带`_`），具体规则请与DRM厂商进行确认。 
      * @return ResourceId 资源标记，该字段内容为用户自定义；
-支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
+支持1-128个字符的数字、字母、下划线(`_`)、中划线(-)。
+该字段对应Speke请求中的cid字段。
+注：不同DRM厂商对该字段的限制有所区别（如：华曦达不支持该字段带`_`），具体规则请与DRM厂商进行确认。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -79,9 +86,13 @@ preset1：每个子流使用不同的key加密；
 
     /**
      * Set 资源标记，该字段内容为用户自定义；
-支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
+支持1-128个字符的数字、字母、下划线(`_`)、中划线(-)。
+该字段对应Speke请求中的cid字段。
+注：不同DRM厂商对该字段的限制有所区别（如：华曦达不支持该字段带`_`），具体规则请与DRM厂商进行确认。
      * @param ResourceId 资源标记，该字段内容为用户自定义；
-支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
+支持1-128个字符的数字、字母、下划线(`_`)、中划线(-)。
+该字段对应Speke请求中的cid字段。
+注：不同DRM厂商对该字段的限制有所区别（如：华曦达不支持该字段带`_`），具体规则请与DRM厂商进行确认。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
@@ -129,12 +140,14 @@ preset1：每个子流使用不同的key加密；
 
     /**
      * Get 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
+加密方式选择WideVine+FairPlay时，仅支持cbcs
 
-cbcs：PlayReady，Widevine，FairPlay 支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
 cenc：PlayReady，Widevine支持； 
      * @return EncryptionMethod 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
+加密方式选择WideVine+FairPlay时，仅支持cbcs
 
-cbcs：PlayReady，Widevine，FairPlay 支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
 cenc：PlayReady，Widevine支持；
      */
     public String getEncryptionMethod() {
@@ -143,12 +156,14 @@ cenc：PlayReady，Widevine支持；
 
     /**
      * Set 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
+加密方式选择WideVine+FairPlay时，仅支持cbcs
 
-cbcs：PlayReady，Widevine，FairPlay 支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
 cenc：PlayReady，Widevine支持；
      * @param EncryptionMethod 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
+加密方式选择WideVine+FairPlay时，仅支持cbcs
 
-cbcs：PlayReady，Widevine，FairPlay 支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
 cenc：PlayReady，Widevine支持；
      */
     public void setEncryptionMethod(String EncryptionMethod) {

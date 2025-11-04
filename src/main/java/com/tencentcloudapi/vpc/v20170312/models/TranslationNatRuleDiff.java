@@ -31,18 +31,25 @@ public class TranslationNatRuleDiff extends AbstractModel {
     private String TranslationDirection;
 
     /**
-    * 转发规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
+    * 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层、四层。
     */
     @SerializedName("TranslationType")
     @Expose
     private String TranslationType;
 
     /**
-    * 转发规则映射`IP`,当转发规则类型为四层时为`IP`池
+    * 转发规则映射后`IP`,当转发规则类型为四层时为`IP`池
     */
     @SerializedName("TranslationIp")
     @Expose
     private String TranslationIp;
+
+    /**
+    * 旧转发规则映射后`IP`,当转发规则类型为四层时为`IP`池
+    */
+    @SerializedName("OldTranslationIp")
+    @Expose
+    private String OldTranslationIp;
 
     /**
     * 转发规则描述。
@@ -52,21 +59,14 @@ public class TranslationNatRuleDiff extends AbstractModel {
     private String Description;
 
     /**
-    * 旧转发规则映射`IP`,当转发规则类型为四层时为`IP`池
-    */
-    @SerializedName("OldTranslationIp")
-    @Expose
-    private String OldTranslationIp;
-
-    /**
-    * 新转发规则源`IP`,当转发规则类型为三层时有效
+    * 新转发规则映射前`IP`,当转发规则类型为三层时有效
     */
     @SerializedName("OriginalIp")
     @Expose
     private String OriginalIp;
 
     /**
-    * 旧转发规则源`IP`,当转发规则类型为三层时有效
+    * 旧转发规则映射前`IP`,当转发规则类型为三层时有效
     */
     @SerializedName("OldOriginalIp")
     @Expose
@@ -89,35 +89,51 @@ public class TranslationNatRuleDiff extends AbstractModel {
     }
 
     /**
-     * Get 转发规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。 
-     * @return TranslationType 转发规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
+     * Get 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层、四层。 
+     * @return TranslationType 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层、四层。
      */
     public String getTranslationType() {
         return this.TranslationType;
     }
 
     /**
-     * Set 转发规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
-     * @param TranslationType 转发规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
+     * Set 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层、四层。
+     * @param TranslationType 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层、四层。
      */
     public void setTranslationType(String TranslationType) {
         this.TranslationType = TranslationType;
     }
 
     /**
-     * Get 转发规则映射`IP`,当转发规则类型为四层时为`IP`池 
-     * @return TranslationIp 转发规则映射`IP`,当转发规则类型为四层时为`IP`池
+     * Get 转发规则映射后`IP`,当转发规则类型为四层时为`IP`池 
+     * @return TranslationIp 转发规则映射后`IP`,当转发规则类型为四层时为`IP`池
      */
     public String getTranslationIp() {
         return this.TranslationIp;
     }
 
     /**
-     * Set 转发规则映射`IP`,当转发规则类型为四层时为`IP`池
-     * @param TranslationIp 转发规则映射`IP`,当转发规则类型为四层时为`IP`池
+     * Set 转发规则映射后`IP`,当转发规则类型为四层时为`IP`池
+     * @param TranslationIp 转发规则映射后`IP`,当转发规则类型为四层时为`IP`池
      */
     public void setTranslationIp(String TranslationIp) {
         this.TranslationIp = TranslationIp;
+    }
+
+    /**
+     * Get 旧转发规则映射后`IP`,当转发规则类型为四层时为`IP`池 
+     * @return OldTranslationIp 旧转发规则映射后`IP`,当转发规则类型为四层时为`IP`池
+     */
+    public String getOldTranslationIp() {
+        return this.OldTranslationIp;
+    }
+
+    /**
+     * Set 旧转发规则映射后`IP`,当转发规则类型为四层时为`IP`池
+     * @param OldTranslationIp 旧转发规则映射后`IP`,当转发规则类型为四层时为`IP`池
+     */
+    public void setOldTranslationIp(String OldTranslationIp) {
+        this.OldTranslationIp = OldTranslationIp;
     }
 
     /**
@@ -137,48 +153,32 @@ public class TranslationNatRuleDiff extends AbstractModel {
     }
 
     /**
-     * Get 旧转发规则映射`IP`,当转发规则类型为四层时为`IP`池 
-     * @return OldTranslationIp 旧转发规则映射`IP`,当转发规则类型为四层时为`IP`池
-     */
-    public String getOldTranslationIp() {
-        return this.OldTranslationIp;
-    }
-
-    /**
-     * Set 旧转发规则映射`IP`,当转发规则类型为四层时为`IP`池
-     * @param OldTranslationIp 旧转发规则映射`IP`,当转发规则类型为四层时为`IP`池
-     */
-    public void setOldTranslationIp(String OldTranslationIp) {
-        this.OldTranslationIp = OldTranslationIp;
-    }
-
-    /**
-     * Get 新转发规则源`IP`,当转发规则类型为三层时有效 
-     * @return OriginalIp 新转发规则源`IP`,当转发规则类型为三层时有效
+     * Get 新转发规则映射前`IP`,当转发规则类型为三层时有效 
+     * @return OriginalIp 新转发规则映射前`IP`,当转发规则类型为三层时有效
      */
     public String getOriginalIp() {
         return this.OriginalIp;
     }
 
     /**
-     * Set 新转发规则源`IP`,当转发规则类型为三层时有效
-     * @param OriginalIp 新转发规则源`IP`,当转发规则类型为三层时有效
+     * Set 新转发规则映射前`IP`,当转发规则类型为三层时有效
+     * @param OriginalIp 新转发规则映射前`IP`,当转发规则类型为三层时有效
      */
     public void setOriginalIp(String OriginalIp) {
         this.OriginalIp = OriginalIp;
     }
 
     /**
-     * Get 旧转发规则源`IP`,当转发规则类型为三层时有效 
-     * @return OldOriginalIp 旧转发规则源`IP`,当转发规则类型为三层时有效
+     * Get 旧转发规则映射前`IP`,当转发规则类型为三层时有效 
+     * @return OldOriginalIp 旧转发规则映射前`IP`,当转发规则类型为三层时有效
      */
     public String getOldOriginalIp() {
         return this.OldOriginalIp;
     }
 
     /**
-     * Set 旧转发规则源`IP`,当转发规则类型为三层时有效
-     * @param OldOriginalIp 旧转发规则源`IP`,当转发规则类型为三层时有效
+     * Set 旧转发规则映射前`IP`,当转发规则类型为三层时有效
+     * @param OldOriginalIp 旧转发规则映射前`IP`,当转发规则类型为三层时有效
      */
     public void setOldOriginalIp(String OldOriginalIp) {
         this.OldOriginalIp = OldOriginalIp;
@@ -201,11 +201,11 @@ public class TranslationNatRuleDiff extends AbstractModel {
         if (source.TranslationIp != null) {
             this.TranslationIp = new String(source.TranslationIp);
         }
-        if (source.Description != null) {
-            this.Description = new String(source.Description);
-        }
         if (source.OldTranslationIp != null) {
             this.OldTranslationIp = new String(source.OldTranslationIp);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
         }
         if (source.OriginalIp != null) {
             this.OriginalIp = new String(source.OriginalIp);
@@ -223,8 +223,8 @@ public class TranslationNatRuleDiff extends AbstractModel {
         this.setParamSimple(map, prefix + "TranslationDirection", this.TranslationDirection);
         this.setParamSimple(map, prefix + "TranslationType", this.TranslationType);
         this.setParamSimple(map, prefix + "TranslationIp", this.TranslationIp);
-        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "OldTranslationIp", this.OldTranslationIp);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "OriginalIp", this.OriginalIp);
         this.setParamSimple(map, prefix + "OldOriginalIp", this.OldOriginalIp);
 

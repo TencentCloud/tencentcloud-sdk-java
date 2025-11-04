@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RuntimeConfig extends AbstractModel {
 
     /**
-    * 运行时类型
+    * 运行时类型，支持的类型有 docker、containerd
     */
     @SerializedName("RuntimeType")
     @Expose
     private String RuntimeType;
 
     /**
-    * 运行时版本
+    * 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
     */
     @SerializedName("RuntimeVersion")
     @Expose
     private String RuntimeVersion;
 
     /**
-     * Get 运行时类型 
-     * @return RuntimeType 运行时类型
+     * Get 运行时类型，支持的类型有 docker、containerd 
+     * @return RuntimeType 运行时类型，支持的类型有 docker、containerd
      */
     public String getRuntimeType() {
         return this.RuntimeType;
     }
 
     /**
-     * Set 运行时类型
-     * @param RuntimeType 运行时类型
+     * Set 运行时类型，支持的类型有 docker、containerd
+     * @param RuntimeType 运行时类型，支持的类型有 docker、containerd
      */
     public void setRuntimeType(String RuntimeType) {
         this.RuntimeType = RuntimeType;
     }
 
     /**
-     * Get 运行时版本 
-     * @return RuntimeVersion 运行时版本
+     * Get 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241 
+     * @return RuntimeVersion 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
      */
     public String getRuntimeVersion() {
         return this.RuntimeVersion;
     }
 
     /**
-     * Set 运行时版本
-     * @param RuntimeVersion 运行时版本
+     * Set 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
+     * @param RuntimeVersion 运行时版本，参考：https://cloud.tencent.com/document/api/457/105241
      */
     public void setRuntimeVersion(String RuntimeVersion) {
         this.RuntimeVersion = RuntimeVersion;

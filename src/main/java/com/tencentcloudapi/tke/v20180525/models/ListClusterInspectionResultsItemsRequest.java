@@ -25,6 +25,9 @@ public class ListClusterInspectionResultsItemsRequest extends AbstractModel {
 
     /**
     * 目标集群ID
+
+取值可参考：
+[查询TKE集群列表](https://cloud.tencent.com/document/api/457/31862)
     */
     @SerializedName("ClusterId")
     @Expose
@@ -45,8 +48,14 @@ public class ListClusterInspectionResultsItemsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-     * Get 目标集群ID 
+     * Get 目标集群ID
+
+取值可参考：
+[查询TKE集群列表](https://cloud.tencent.com/document/api/457/31862) 
      * @return ClusterId 目标集群ID
+
+取值可参考：
+[查询TKE集群列表](https://cloud.tencent.com/document/api/457/31862)
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -54,7 +63,13 @@ public class ListClusterInspectionResultsItemsRequest extends AbstractModel {
 
     /**
      * Set 目标集群ID
+
+取值可参考：
+[查询TKE集群列表](https://cloud.tencent.com/document/api/457/31862)
      * @param ClusterId 目标集群ID
+
+取值可参考：
+[查询TKE集群列表](https://cloud.tencent.com/document/api/457/31862)
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

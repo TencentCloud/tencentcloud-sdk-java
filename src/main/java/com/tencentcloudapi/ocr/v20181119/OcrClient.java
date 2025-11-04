@@ -729,22 +729,6 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *不再维护，功能已切到其它接口
-
-<b>因技术原因，本接口将不再迭代升级。文档抽取(基础版)可支持此类证书的识别抽取，效果、功能更强并将持续迭代优化，建议使用<a href="https://cloud.tencent.com/document/product/866/119452">文档抽取（基础版）</a>。</b>
-本接口支持事业单位法人证书关键字段识别，包括注册号、有效期、住所、名称、法定代表人等。
-
-默认接口请求频率限制：5次/秒。
-     * @param req InstitutionOCRRequest
-     * @return InstitutionOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public InstitutionOCRResponse InstitutionOCR(InstitutionOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "InstitutionOCR", InstitutionOCRResponse.class);
-    }
-
-    /**
      *本接口支持病案首页、费用清单、结算单、医疗发票四种保险理赔单据的文本识别和结构化输出。
 
 默认接口请求频率限制：1次/秒。
@@ -849,22 +833,6 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *不再维护，功能已切到其它接口
-
-<b>因技术原因，本接口将不再迭代升级。文档抽取(基础版)可支持此类证书的识别抽取，效果、功能更强并将持续迭代优化，建议使用<a href="https://cloud.tencent.com/document/product/866/119452">文档抽取（基础版）</a>。</b>
-本接口支持组织机构代码证关键字段的识别，包括代码、有效期、地址、机构名称等。
-
-默认接口请求频率限制：5次/秒。
-     * @param req OrgCodeCertOCRRequest
-     * @return OrgCodeCertOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public OrgCodeCertOCRResponse OrgCodeCertOCR(OrgCodeCertOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "OrgCodeCertOCR", OrgCodeCertOCRResponse.class);
-    }
-
-    /**
      *<b>此接口为护照识别（中国大陆地区护照）的旧版本服务，不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/37657">护照识别（多国多地区护照）</a>。</b>
 
 本接口支持中国大陆地区护照个人资料页多个字段的检测与识别。已支持字段包括英文姓名、中文姓名、国家码、护照号、出生地、出生日期、国籍英文、性别英文、有效期、签发地点英文、签发日期、持证人签名、护照机读码（MRZ码）等。
@@ -890,23 +858,6 @@ public class OcrClient extends AbstractClient{
     public PermitOCRResponse PermitOCR(PermitOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "PermitOCR", PermitOCRResponse.class);
-    }
-
-    /**
-     *不再维护，功能已切到其它接口
-
-<b>因技术原因，本接口将不再迭代升级。文档抽取(基础版)可支持此类证书的识别抽取，效果、功能更强并将持续迭代优化，建议使用<a href="https://cloud.tencent.com/document/product/866/119452">文档抽取（基础版）</a>。</b>
-本接口支持房产证关键字段的识别，包括房地产权利人、共有情况、登记时间、规划用途、房屋性质、房屋坐落等。
-目前接口对合肥、成都、佛山三个城市的房产证版式识别较好。
-
-默认接口请求频率限制：5次/秒。
-     * @param req PropOwnerCertOCRRequest
-     * @return PropOwnerCertOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public PropOwnerCertOCRResponse PropOwnerCertOCR(PropOwnerCertOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "PropOwnerCertOCR", PropOwnerCertOCRResponse.class);
     }
 
     /**
@@ -1047,20 +998,6 @@ public class OcrClient extends AbstractClient{
     public RecognizeEncryptedIDCardOCRResponse RecognizeEncryptedIDCardOCR(RecognizeEncryptedIDCardOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RecognizeEncryptedIDCardOCR", RecognizeEncryptedIDCardOCRResponse.class);
-    }
-
-    /**
-     *不再维护，功能已切到其它接口
-
-<b>因技术原因，本接口将不再迭代升级。有效身份证件识别（鉴伪版）可支持此类证件的识别，并包含质量和PS告警，效果、功能更强并将持续迭代优化，建议使用<a href="https://cloud.tencent.com/document/product/866/112345">有效身份证件识别（鉴伪版）</a>。</b>
-外国人永久居留身份证识别
-     * @param req RecognizeForeignPermanentResidentIdCardRequest
-     * @return RecognizeForeignPermanentResidentIdCardResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeForeignPermanentResidentIdCardResponse RecognizeForeignPermanentResidentIdCard(RecognizeForeignPermanentResidentIdCardRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizeForeignPermanentResidentIdCard", RecognizeForeignPermanentResidentIdCardResponse.class);
     }
 
     /**
@@ -1299,20 +1236,6 @@ public class OcrClient extends AbstractClient{
     public RecognizeGeneralInvoiceResponse RecognizeGeneralInvoice(RecognizeGeneralInvoiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RecognizeGeneralInvoice", RecognizeGeneralInvoiceResponse.class);
-    }
-
-    /**
-     *不再维护，功能已切到其它接口
-
-<b>因技术原因，本接口将不再迭代升级。通用卡证鉴伪可支持更多告警类型，效果、功能更强并将持续迭代优化，建议使用<a href="https://cloud.tencent.com/document/product/866/115916">通用卡证鉴伪</a>。</b>
-本接口支持多种类型证件有效性检测告警，包括卡证复印件告警、卡证翻拍告警等功能。可以应用于各种证件信息有效性校验场景，例如银行开户、用户注册等场景。
-     * @param req RecognizeGeneralTextImageWarnRequest
-     * @return RecognizeGeneralTextImageWarnResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeGeneralTextImageWarnResponse RecognizeGeneralTextImageWarn(RecognizeGeneralTextImageWarnRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizeGeneralTextImageWarn", RecognizeGeneralTextImageWarnResponse.class);
     }
 
     /**

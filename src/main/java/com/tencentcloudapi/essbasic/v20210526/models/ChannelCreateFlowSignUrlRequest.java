@@ -67,6 +67,13 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel {
     private FlowApproverInfo [] FlowApproverInfos;
 
     /**
+    * 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+    */
+    @SerializedName("VideoVerifyTimesLimit")
+    @Expose
+    private Long VideoVerifyTimesLimit;
+
+    /**
     * 用户信息，暂未开放
     */
     @SerializedName("Operator")
@@ -237,6 +244,22 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel {
     }
 
     /**
+     * Get 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。 
+     * @return VideoVerifyTimesLimit 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+     */
+    public Long getVideoVerifyTimesLimit() {
+        return this.VideoVerifyTimesLimit;
+    }
+
+    /**
+     * Set 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+     * @param VideoVerifyTimesLimit 用于指定进入视频签署的限制次数，次数取值范围：1 - 10，不设置则默认为5次，仅视频签署时生效。
+     */
+    public void setVideoVerifyTimesLimit(Long VideoVerifyTimesLimit) {
+        this.VideoVerifyTimesLimit = VideoVerifyTimesLimit;
+    }
+
+    /**
      * Get 用户信息，暂未开放 
      * @return Operator 用户信息，暂未开放
      * @deprecated
@@ -352,6 +375,9 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel {
                 this.FlowApproverInfos[i] = new FlowApproverInfo(source.FlowApproverInfos[i]);
             }
         }
+        if (source.VideoVerifyTimesLimit != null) {
+            this.VideoVerifyTimesLimit = new Long(source.VideoVerifyTimesLimit);
+        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
@@ -374,6 +400,7 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
+        this.setParamSimple(map, prefix + "VideoVerifyTimesLimit", this.VideoVerifyTimesLimit);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);

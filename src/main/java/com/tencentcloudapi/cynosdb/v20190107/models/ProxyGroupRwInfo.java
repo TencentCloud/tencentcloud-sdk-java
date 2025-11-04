@@ -94,6 +94,20 @@ public class ProxyGroupRwInfo extends AbstractModel {
     private String AccessMode;
 
     /**
+    * 是否将libra节点当作普通RO节点
+    */
+    @SerializedName("ApNodeAsRoNode")
+    @Expose
+    private Boolean ApNodeAsRoNode;
+
+    /**
+    * libra节点故障，是否转发给其他节点
+    */
+    @SerializedName("ApQueryToOtherNode")
+    @Expose
+    private Boolean ApQueryToOtherNode;
+
+    /**
      * Get 一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性 
      * @return ConsistencyType 一致性类型 eventual-最终一致性,global-全局一致性,session-会话一致性
      */
@@ -253,6 +267,38 @@ public class ProxyGroupRwInfo extends AbstractModel {
         this.AccessMode = AccessMode;
     }
 
+    /**
+     * Get 是否将libra节点当作普通RO节点 
+     * @return ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     */
+    public Boolean getApNodeAsRoNode() {
+        return this.ApNodeAsRoNode;
+    }
+
+    /**
+     * Set 是否将libra节点当作普通RO节点
+     * @param ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     */
+    public void setApNodeAsRoNode(Boolean ApNodeAsRoNode) {
+        this.ApNodeAsRoNode = ApNodeAsRoNode;
+    }
+
+    /**
+     * Get libra节点故障，是否转发给其他节点 
+     * @return ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     */
+    public Boolean getApQueryToOtherNode() {
+        return this.ApQueryToOtherNode;
+    }
+
+    /**
+     * Set libra节点故障，是否转发给其他节点
+     * @param ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     */
+    public void setApQueryToOtherNode(Boolean ApQueryToOtherNode) {
+        this.ApQueryToOtherNode = ApQueryToOtherNode;
+    }
+
     public ProxyGroupRwInfo() {
     }
 
@@ -294,6 +340,12 @@ public class ProxyGroupRwInfo extends AbstractModel {
         if (source.AccessMode != null) {
             this.AccessMode = new String(source.AccessMode);
         }
+        if (source.ApNodeAsRoNode != null) {
+            this.ApNodeAsRoNode = new Boolean(source.ApNodeAsRoNode);
+        }
+        if (source.ApQueryToOtherNode != null) {
+            this.ApQueryToOtherNode = new Boolean(source.ApQueryToOtherNode);
+        }
     }
 
 
@@ -311,6 +363,8 @@ public class ProxyGroupRwInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RwType", this.RwType);
         this.setParamSimple(map, prefix + "TransSplit", this.TransSplit);
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
+        this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+        this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
 
     }
 }

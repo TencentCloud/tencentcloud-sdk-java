@@ -138,6 +138,20 @@ SessionConnectionPool
     private Long ConnectionPoolTimeOut;
 
     /**
+    * 是否将libra节点当作普通RO节点
+    */
+    @SerializedName("ApNodeAsRoNode")
+    @Expose
+    private Boolean ApNodeAsRoNode;
+
+    /**
+    * libra节点故障，是否转发给其他节点
+    */
+    @SerializedName("ApQueryToOtherNode")
+    @Expose
+    private Boolean ApQueryToOtherNode;
+
+    /**
      * Get 集群ID，例如cynosdbmysql-asd123 
      * @return ClusterId 集群ID，例如cynosdbmysql-asd123
      */
@@ -413,6 +427,38 @@ SessionConnectionPool
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
     }
 
+    /**
+     * Get 是否将libra节点当作普通RO节点 
+     * @return ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     */
+    public Boolean getApNodeAsRoNode() {
+        return this.ApNodeAsRoNode;
+    }
+
+    /**
+     * Set 是否将libra节点当作普通RO节点
+     * @param ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     */
+    public void setApNodeAsRoNode(Boolean ApNodeAsRoNode) {
+        this.ApNodeAsRoNode = ApNodeAsRoNode;
+    }
+
+    /**
+     * Get libra节点故障，是否转发给其他节点 
+     * @return ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     */
+    public Boolean getApQueryToOtherNode() {
+        return this.ApQueryToOtherNode;
+    }
+
+    /**
+     * Set libra节点故障，是否转发给其他节点
+     * @param ApQueryToOtherNode libra节点故障，是否转发给其他节点
+     */
+    public void setApQueryToOtherNode(Boolean ApQueryToOtherNode) {
+        this.ApQueryToOtherNode = ApQueryToOtherNode;
+    }
+
     public ModifyProxyRwSplitRequest() {
     }
 
@@ -469,6 +515,12 @@ SessionConnectionPool
         if (source.ConnectionPoolTimeOut != null) {
             this.ConnectionPoolTimeOut = new Long(source.ConnectionPoolTimeOut);
         }
+        if (source.ApNodeAsRoNode != null) {
+            this.ApNodeAsRoNode = new Boolean(source.ApNodeAsRoNode);
+        }
+        if (source.ApQueryToOtherNode != null) {
+            this.ApQueryToOtherNode = new Boolean(source.ApQueryToOtherNode);
+        }
     }
 
 
@@ -491,6 +543,8 @@ SessionConnectionPool
         this.setParamSimple(map, prefix + "OpenConnectionPool", this.OpenConnectionPool);
         this.setParamSimple(map, prefix + "ConnectionPoolType", this.ConnectionPoolType);
         this.setParamSimple(map, prefix + "ConnectionPoolTimeOut", this.ConnectionPoolTimeOut);
+        this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+        this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
 
     }
 }

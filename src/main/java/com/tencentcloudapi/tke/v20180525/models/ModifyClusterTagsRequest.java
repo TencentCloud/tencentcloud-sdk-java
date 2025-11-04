@@ -31,7 +31,8 @@ public class ModifyClusterTagsRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 集群标签
+    * 集群标签:
+[{"TagKey":"env","TagValue":"dev"}]}]
     */
     @SerializedName("Tags")
     @Expose
@@ -61,16 +62,20 @@ public class ModifyClusterTagsRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群标签 
-     * @return Tags 集群标签
+     * Get 集群标签:
+[{"TagKey":"env","TagValue":"dev"}]}] 
+     * @return Tags 集群标签:
+[{"TagKey":"env","TagValue":"dev"}]}]
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 集群标签
-     * @param Tags 集群标签
+     * Set 集群标签:
+[{"TagKey":"env","TagValue":"dev"}]}]
+     * @param Tags 集群标签:
+[{"TagKey":"env","TagValue":"dev"}]}]
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

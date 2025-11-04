@@ -172,6 +172,13 @@ public class RabbitMQServerlessInstance extends AbstractModel {
     private String ServerlessExt;
 
     /**
+    * 实例标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private RabbitMQServerlessTag [] Tags;
+
+    /**
      * Get 实例Id 
      * @return InstanceId 实例Id
      */
@@ -511,6 +518,22 @@ public class RabbitMQServerlessInstance extends AbstractModel {
         this.ServerlessExt = ServerlessExt;
     }
 
+    /**
+     * Get 实例标签列表 
+     * @return Tags 实例标签列表
+     */
+    public RabbitMQServerlessTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 实例标签列表
+     * @param Tags 实例标签列表
+     */
+    public void setTags(RabbitMQServerlessTag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public RabbitMQServerlessInstance() {
     }
 
@@ -585,6 +608,12 @@ public class RabbitMQServerlessInstance extends AbstractModel {
         if (source.ServerlessExt != null) {
             this.ServerlessExt = new String(source.ServerlessExt);
         }
+        if (source.Tags != null) {
+            this.Tags = new RabbitMQServerlessTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new RabbitMQServerlessTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -613,6 +642,7 @@ public class RabbitMQServerlessInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
         this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
         this.setParamSimple(map, prefix + "ServerlessExt", this.ServerlessExt);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

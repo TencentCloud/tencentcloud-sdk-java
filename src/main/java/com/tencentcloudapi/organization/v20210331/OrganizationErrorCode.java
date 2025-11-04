@@ -399,6 +399,12 @@ public enum OrganizationErrorCode {
      /* 该x509证书已经存在了。 */
      FAILEDOPERATION_X509CERTIFICATEALREADYEXIST("FailedOperation.X509CertificateAlreadyExist"),
      
+     /* x509证书数量超出限制 */
+     FAILEDOPERATION_X509CERTIFICATELIMITEXCEEDED("FailedOperation.X509CertificateLimitExceeded"),
+     
+     /* 需要最少一个x509证书 */
+     FAILEDOPERATION_X509CERTIFICATEMINIMUMREQUIRED("FailedOperation.X509CertificateMinimumRequired"),
+     
      /* X509证书解析失败。 */
      FAILEDOPERATION_X509CERTIFICATEPARSINGFAILED("FailedOperation.X509CertificateParsingFailed"),
      
@@ -605,6 +611,9 @@ public enum OrganizationErrorCode {
      
      /* SCIM密钥状态错误 */
      INVALIDPARAMETER_USERSCIMCREDENTIALSTATUSERROR("InvalidParameter.UserScimCredentialStatusError"),
+     
+     /* 用户类型错误。 */
+     INVALIDPARAMETER_USERTYPEERROR("InvalidParameter.UserTypeError"),
      
      /* 用户名已经存在 */
      INVALIDPARAMETER_USERNAMEALREADYEXISTS("InvalidParameter.UsernameAlreadyExists"),

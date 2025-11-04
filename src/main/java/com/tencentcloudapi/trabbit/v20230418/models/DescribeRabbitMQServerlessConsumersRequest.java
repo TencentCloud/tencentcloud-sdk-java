@@ -66,6 +66,13 @@ public class DescribeRabbitMQServerlessConsumersRequest extends AbstractModel {
     private String SearchWord;
 
     /**
+    * channelId
+    */
+    @SerializedName("Channel")
+    @Expose
+    private String Channel;
+
+    /**
      * Get 实例Id 
      * @return InstanceId 实例Id
      */
@@ -161,6 +168,22 @@ public class DescribeRabbitMQServerlessConsumersRequest extends AbstractModel {
         this.SearchWord = SearchWord;
     }
 
+    /**
+     * Get channelId 
+     * @return Channel channelId
+     */
+    public String getChannel() {
+        return this.Channel;
+    }
+
+    /**
+     * Set channelId
+     * @param Channel channelId
+     */
+    public void setChannel(String Channel) {
+        this.Channel = Channel;
+    }
+
     public DescribeRabbitMQServerlessConsumersRequest() {
     }
 
@@ -187,6 +210,9 @@ public class DescribeRabbitMQServerlessConsumersRequest extends AbstractModel {
         if (source.SearchWord != null) {
             this.SearchWord = new String(source.SearchWord);
         }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DescribeRabbitMQServerlessConsumersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
+        this.setParamSimple(map, prefix + "Channel", this.Channel);
 
     }
 }

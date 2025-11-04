@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CreatePrivateDNSAccountRequest extends AbstractModel {
 
     /**
-    * 私有域解析账号
+    * 私有域解析账号，该账号不能与主账号一致且需要子账号授权
     */
     @SerializedName("Account")
     @Expose
     private PrivateDNSAccount Account;
 
     /**
-     * Get 私有域解析账号 
-     * @return Account 私有域解析账号
+     * Get 私有域解析账号，该账号不能与主账号一致且需要子账号授权 
+     * @return Account 私有域解析账号，该账号不能与主账号一致且需要子账号授权
      */
     public PrivateDNSAccount getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 私有域解析账号
-     * @param Account 私有域解析账号
+     * Set 私有域解析账号，该账号不能与主账号一致且需要子账号授权
+     * @param Account 私有域解析账号，该账号不能与主账号一致且需要子账号授权
      */
     public void setAccount(PrivateDNSAccount Account) {
         this.Account = Account;

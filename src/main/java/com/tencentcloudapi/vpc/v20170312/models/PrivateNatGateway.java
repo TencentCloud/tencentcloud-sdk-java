@@ -80,7 +80,7 @@ public class PrivateNatGateway extends AbstractModel {
     private String [] DirectConnectGatewayIds;
 
     /**
-    * 私网网关类型
+    * 私网网关类型。可选类型："DCG","VPC","CCN"，分别对应专线网关、私有网络、云联网。
     */
     @SerializedName("NatType")
     @Expose
@@ -243,16 +243,16 @@ public class PrivateNatGateway extends AbstractModel {
     }
 
     /**
-     * Get 私网网关类型 
-     * @return NatType 私网网关类型
+     * Get 私网网关类型。可选类型："DCG","VPC","CCN"，分别对应专线网关、私有网络、云联网。 
+     * @return NatType 私网网关类型。可选类型："DCG","VPC","CCN"，分别对应专线网关、私有网络、云联网。
      */
     public String getNatType() {
         return this.NatType;
     }
 
     /**
-     * Set 私网网关类型
-     * @param NatType 私网网关类型
+     * Set 私网网关类型。可选类型："DCG","VPC","CCN"，分别对应专线网关、私有网络、云联网。
+     * @param NatType 私网网关类型。可选类型："DCG","VPC","CCN"，分别对应专线网关、私有网络、云联网。
      */
     public void setNatType(String NatType) {
         this.NatType = NatType;

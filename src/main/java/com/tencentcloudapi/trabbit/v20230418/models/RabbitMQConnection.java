@@ -73,6 +73,41 @@ public class RabbitMQConnection extends AbstractModel {
     private Long Channels;
 
     /**
+    * 入流量大小，单位 bytes
+    */
+    @SerializedName("IncomingBytes")
+    @Expose
+    private Float IncomingBytes;
+
+    /**
+    * 出流量大小，单位bytes
+    */
+    @SerializedName("OutgoingBytes")
+    @Expose
+    private Float OutgoingBytes;
+
+    /**
+    * 心跳间隔时间，默认60s
+    */
+    @SerializedName("Heartbeat")
+    @Expose
+    private Long Heartbeat;
+
+    /**
+    * 一个链接最大的channel数，默认1024
+    */
+    @SerializedName("MaxChannel")
+    @Expose
+    private Long MaxChannel;
+
+    /**
+    * 空闲时间点
+    */
+    @SerializedName("IdleSince")
+    @Expose
+    private String IdleSince;
+
+    /**
      * Get 连接名称 
      * @return ConnectionName 连接名称
      */
@@ -184,6 +219,86 @@ public class RabbitMQConnection extends AbstractModel {
         this.Channels = Channels;
     }
 
+    /**
+     * Get 入流量大小，单位 bytes 
+     * @return IncomingBytes 入流量大小，单位 bytes
+     */
+    public Float getIncomingBytes() {
+        return this.IncomingBytes;
+    }
+
+    /**
+     * Set 入流量大小，单位 bytes
+     * @param IncomingBytes 入流量大小，单位 bytes
+     */
+    public void setIncomingBytes(Float IncomingBytes) {
+        this.IncomingBytes = IncomingBytes;
+    }
+
+    /**
+     * Get 出流量大小，单位bytes 
+     * @return OutgoingBytes 出流量大小，单位bytes
+     */
+    public Float getOutgoingBytes() {
+        return this.OutgoingBytes;
+    }
+
+    /**
+     * Set 出流量大小，单位bytes
+     * @param OutgoingBytes 出流量大小，单位bytes
+     */
+    public void setOutgoingBytes(Float OutgoingBytes) {
+        this.OutgoingBytes = OutgoingBytes;
+    }
+
+    /**
+     * Get 心跳间隔时间，默认60s 
+     * @return Heartbeat 心跳间隔时间，默认60s
+     */
+    public Long getHeartbeat() {
+        return this.Heartbeat;
+    }
+
+    /**
+     * Set 心跳间隔时间，默认60s
+     * @param Heartbeat 心跳间隔时间，默认60s
+     */
+    public void setHeartbeat(Long Heartbeat) {
+        this.Heartbeat = Heartbeat;
+    }
+
+    /**
+     * Get 一个链接最大的channel数，默认1024 
+     * @return MaxChannel 一个链接最大的channel数，默认1024
+     */
+    public Long getMaxChannel() {
+        return this.MaxChannel;
+    }
+
+    /**
+     * Set 一个链接最大的channel数，默认1024
+     * @param MaxChannel 一个链接最大的channel数，默认1024
+     */
+    public void setMaxChannel(Long MaxChannel) {
+        this.MaxChannel = MaxChannel;
+    }
+
+    /**
+     * Get 空闲时间点 
+     * @return IdleSince 空闲时间点
+     */
+    public String getIdleSince() {
+        return this.IdleSince;
+    }
+
+    /**
+     * Set 空闲时间点
+     * @param IdleSince 空闲时间点
+     */
+    public void setIdleSince(String IdleSince) {
+        this.IdleSince = IdleSince;
+    }
+
     public RabbitMQConnection() {
     }
 
@@ -213,6 +328,21 @@ public class RabbitMQConnection extends AbstractModel {
         if (source.Channels != null) {
             this.Channels = new Long(source.Channels);
         }
+        if (source.IncomingBytes != null) {
+            this.IncomingBytes = new Float(source.IncomingBytes);
+        }
+        if (source.OutgoingBytes != null) {
+            this.OutgoingBytes = new Float(source.OutgoingBytes);
+        }
+        if (source.Heartbeat != null) {
+            this.Heartbeat = new Long(source.Heartbeat);
+        }
+        if (source.MaxChannel != null) {
+            this.MaxChannel = new Long(source.MaxChannel);
+        }
+        if (source.IdleSince != null) {
+            this.IdleSince = new String(source.IdleSince);
+        }
     }
 
 
@@ -227,6 +357,11 @@ public class RabbitMQConnection extends AbstractModel {
         this.setParamSimple(map, prefix + "SSL", this.SSL);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Channels", this.Channels);
+        this.setParamSimple(map, prefix + "IncomingBytes", this.IncomingBytes);
+        this.setParamSimple(map, prefix + "OutgoingBytes", this.OutgoingBytes);
+        this.setParamSimple(map, prefix + "Heartbeat", this.Heartbeat);
+        this.setParamSimple(map, prefix + "MaxChannel", this.MaxChannel);
+        this.setParamSimple(map, prefix + "IdleSince", this.IdleSince);
 
     }
 }

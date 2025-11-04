@@ -38,6 +38,13 @@ public class CkafkaTargetParams extends AbstractModel {
     private RetryPolicy RetryPolicy;
 
     /**
+    * 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
+    */
+    @SerializedName("EventDeliveryFormat")
+    @Expose
+    private String EventDeliveryFormat;
+
+    /**
      * Get 要投递到的ckafka topic 
      * @return TopicName 要投递到的ckafka topic
      */
@@ -69,6 +76,22 @@ public class CkafkaTargetParams extends AbstractModel {
         this.RetryPolicy = RetryPolicy;
     }
 
+    /**
+     * Get 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容) 
+     * @return EventDeliveryFormat 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
+     */
+    public String getEventDeliveryFormat() {
+        return this.EventDeliveryFormat;
+    }
+
+    /**
+     * Set 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
+     * @param EventDeliveryFormat 事件投递kafka时的协议格式；目前只支持两种格式：1.CloudEvent(完整的cloudevent消息协议)2.CloudEventDataKey(cloudevent协议中的data字段内容)
+     */
+    public void setEventDeliveryFormat(String EventDeliveryFormat) {
+        this.EventDeliveryFormat = EventDeliveryFormat;
+    }
+
     public CkafkaTargetParams() {
     }
 
@@ -83,6 +106,9 @@ public class CkafkaTargetParams extends AbstractModel {
         if (source.RetryPolicy != null) {
             this.RetryPolicy = new RetryPolicy(source.RetryPolicy);
         }
+        if (source.EventDeliveryFormat != null) {
+            this.EventDeliveryFormat = new String(source.EventDeliveryFormat);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CkafkaTargetParams extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
+        this.setParamSimple(map, prefix + "EventDeliveryFormat", this.EventDeliveryFormat);
 
     }
 }

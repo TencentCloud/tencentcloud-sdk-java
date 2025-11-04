@@ -45,6 +45,13 @@ public class ModifyUserManagerPwdRequest extends AbstractModel {
     private String PassWord;
 
     /**
+    * 是否同步密码
+    */
+    @SerializedName("SyncPwd")
+    @Expose
+    private Boolean SyncPwd;
+
+    /**
      * Get 集群实例ID 
      * @return InstanceId 集群实例ID
      */
@@ -92,6 +99,22 @@ public class ModifyUserManagerPwdRequest extends AbstractModel {
         this.PassWord = PassWord;
     }
 
+    /**
+     * Get 是否同步密码 
+     * @return SyncPwd 是否同步密码
+     */
+    public Boolean getSyncPwd() {
+        return this.SyncPwd;
+    }
+
+    /**
+     * Set 是否同步密码
+     * @param SyncPwd 是否同步密码
+     */
+    public void setSyncPwd(Boolean SyncPwd) {
+        this.SyncPwd = SyncPwd;
+    }
+
     public ModifyUserManagerPwdRequest() {
     }
 
@@ -109,6 +132,9 @@ public class ModifyUserManagerPwdRequest extends AbstractModel {
         if (source.PassWord != null) {
             this.PassWord = new String(source.PassWord);
         }
+        if (source.SyncPwd != null) {
+            this.SyncPwd = new Boolean(source.SyncPwd);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ModifyUserManagerPwdRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
+        this.setParamSimple(map, prefix + "SyncPwd", this.SyncPwd);
 
     }
 }

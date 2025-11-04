@@ -450,6 +450,13 @@ null：用户上传证书（没有套餐类型），
     private String CertType;
 
     /**
+    * 是否使用交叉根
+    */
+    @SerializedName("UseCrossSignRoot")
+    @Expose
+    private Boolean UseCrossSignRoot;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1633,6 +1640,22 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
+     * Get 是否使用交叉根 
+     * @return UseCrossSignRoot 是否使用交叉根
+     */
+    public Boolean getUseCrossSignRoot() {
+        return this.UseCrossSignRoot;
+    }
+
+    /**
+     * Set 是否使用交叉根
+     * @param UseCrossSignRoot 是否使用交叉根
+     */
+    public void setUseCrossSignRoot(Boolean UseCrossSignRoot) {
+        this.UseCrossSignRoot = UseCrossSignRoot;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1800,6 +1823,9 @@ null：用户上传证书（没有套餐类型），
         if (source.CertType != null) {
             this.CertType = new String(source.CertType);
         }
+        if (source.UseCrossSignRoot != null) {
+            this.UseCrossSignRoot = new Boolean(source.UseCrossSignRoot);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1854,6 +1880,7 @@ null：用户上传证书（没有套餐类型），
         this.setParamArrayObj(map, prefix + "CertChainInfo.", this.CertChainInfo);
         this.setParamSimple(map, prefix + "DomainType", this.DomainType);
         this.setParamSimple(map, prefix + "CertType", this.CertType);
+        this.setParamSimple(map, prefix + "UseCrossSignRoot", this.UseCrossSignRoot);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -144,14 +144,14 @@ public class Cluster extends AbstractModel {
     private String CreatedTime;
 
     /**
-    * 删除保护开关
+    * 集群删除保护开关，打开：true，关闭：false
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-    * 集群是否开启第三方节点支持
+    * 集群是否开启第三方节点支持，开启：true，关闭：false
     */
     @SerializedName("EnableExternalNode")
     @Expose
@@ -165,14 +165,14 @@ public class Cluster extends AbstractModel {
     private String ClusterLevel;
 
     /**
-    * 自动变配集群等级，针对托管集群生效
+    * 自动变配集群等级，针对托管集群生效。开启：true，关闭：false
     */
     @SerializedName("AutoUpgradeClusterLevel")
     @Expose
     private Boolean AutoUpgradeClusterLevel;
 
     /**
-    * 是否开启QGPU共享
+    * 是否开启QGPU共享，开启：true，关闭：false
     */
     @SerializedName("QGPUShareEnable")
     @Expose
@@ -476,32 +476,32 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 删除保护开关 
-     * @return DeletionProtection 删除保护开关
+     * Get 集群删除保护开关，打开：true，关闭：false 
+     * @return DeletionProtection 集群删除保护开关，打开：true，关闭：false
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 删除保护开关
-     * @param DeletionProtection 删除保护开关
+     * Set 集群删除保护开关，打开：true，关闭：false
+     * @param DeletionProtection 集群删除保护开关，打开：true，关闭：false
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
     }
 
     /**
-     * Get 集群是否开启第三方节点支持 
-     * @return EnableExternalNode 集群是否开启第三方节点支持
+     * Get 集群是否开启第三方节点支持，开启：true，关闭：false 
+     * @return EnableExternalNode 集群是否开启第三方节点支持，开启：true，关闭：false
      */
     public Boolean getEnableExternalNode() {
         return this.EnableExternalNode;
     }
 
     /**
-     * Set 集群是否开启第三方节点支持
-     * @param EnableExternalNode 集群是否开启第三方节点支持
+     * Set 集群是否开启第三方节点支持，开启：true，关闭：false
+     * @param EnableExternalNode 集群是否开启第三方节点支持，开启：true，关闭：false
      */
     public void setEnableExternalNode(Boolean EnableExternalNode) {
         this.EnableExternalNode = EnableExternalNode;
@@ -524,32 +524,32 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 自动变配集群等级，针对托管集群生效 
-     * @return AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
+     * Get 自动变配集群等级，针对托管集群生效。开启：true，关闭：false 
+     * @return AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效。开启：true，关闭：false
      */
     public Boolean getAutoUpgradeClusterLevel() {
         return this.AutoUpgradeClusterLevel;
     }
 
     /**
-     * Set 自动变配集群等级，针对托管集群生效
-     * @param AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
+     * Set 自动变配集群等级，针对托管集群生效。开启：true，关闭：false
+     * @param AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效。开启：true，关闭：false
      */
     public void setAutoUpgradeClusterLevel(Boolean AutoUpgradeClusterLevel) {
         this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
     }
 
     /**
-     * Get 是否开启QGPU共享 
-     * @return QGPUShareEnable 是否开启QGPU共享
+     * Get 是否开启QGPU共享，开启：true，关闭：false 
+     * @return QGPUShareEnable 是否开启QGPU共享，开启：true，关闭：false
      */
     public Boolean getQGPUShareEnable() {
         return this.QGPUShareEnable;
     }
 
     /**
-     * Set 是否开启QGPU共享
-     * @param QGPUShareEnable 是否开启QGPU共享
+     * Set 是否开启QGPU共享，开启：true，关闭：false
+     * @param QGPUShareEnable 是否开启QGPU共享，开启：true，关闭：false
      */
     public void setQGPUShareEnable(Boolean QGPUShareEnable) {
         this.QGPUShareEnable = QGPUShareEnable;

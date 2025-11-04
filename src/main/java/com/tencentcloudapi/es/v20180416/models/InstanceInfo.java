@@ -759,6 +759,13 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Boolean IsCdzLite;
 
     /**
+    * 集群内网tcp地址
+    */
+    @SerializedName("EsPrivateTcpUrl")
+    @Expose
+    private String EsPrivateTcpUrl;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -2546,6 +2553,22 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.IsCdzLite = IsCdzLite;
     }
 
+    /**
+     * Get 集群内网tcp地址 
+     * @return EsPrivateTcpUrl 集群内网tcp地址
+     */
+    public String getEsPrivateTcpUrl() {
+        return this.EsPrivateTcpUrl;
+    }
+
+    /**
+     * Set 集群内网tcp地址
+     * @param EsPrivateTcpUrl 集群内网tcp地址
+     */
+    public void setEsPrivateTcpUrl(String EsPrivateTcpUrl) {
+        this.EsPrivateTcpUrl = EsPrivateTcpUrl;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2863,6 +2886,9 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.IsCdzLite != null) {
             this.IsCdzLite = new Boolean(source.IsCdzLite);
         }
+        if (source.EsPrivateTcpUrl != null) {
+            this.EsPrivateTcpUrl = new String(source.EsPrivateTcpUrl);
+        }
     }
 
 
@@ -2966,6 +2992,7 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
         this.setParamSimple(map, prefix + "ShowKibanaIpPort", this.ShowKibanaIpPort);
         this.setParamSimple(map, prefix + "IsCdzLite", this.IsCdzLite);
+        this.setParamSimple(map, prefix + "EsPrivateTcpUrl", this.EsPrivateTcpUrl);
 
     }
 }

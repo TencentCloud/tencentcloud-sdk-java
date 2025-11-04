@@ -31,11 +31,11 @@ public class OnlineTaxiItinerary extends AbstractModel {
     private String Title;
 
     /**
-    * 识别出的字段名称(关键字)
+    * 识别出的字段名称
     */
     @SerializedName("Content")
     @Expose
-    private OtherInvoiceItem [] Content;
+    private OnlineTaxiItineraryInfo [] Content;
 
     /**
      * Get 发票名称 
@@ -54,18 +54,18 @@ public class OnlineTaxiItinerary extends AbstractModel {
     }
 
     /**
-     * Get 识别出的字段名称(关键字) 
-     * @return Content 识别出的字段名称(关键字)
+     * Get 识别出的字段名称 
+     * @return Content 识别出的字段名称
      */
-    public OtherInvoiceItem [] getContent() {
+    public OnlineTaxiItineraryInfo [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set 识别出的字段名称(关键字)
-     * @param Content 识别出的字段名称(关键字)
+     * Set 识别出的字段名称
+     * @param Content 识别出的字段名称
      */
-    public void setContent(OtherInvoiceItem [] Content) {
+    public void setContent(OnlineTaxiItineraryInfo [] Content) {
         this.Content = Content;
     }
 
@@ -81,9 +81,9 @@ public class OnlineTaxiItinerary extends AbstractModel {
             this.Title = new String(source.Title);
         }
         if (source.Content != null) {
-            this.Content = new OtherInvoiceItem[source.Content.length];
+            this.Content = new OnlineTaxiItineraryInfo[source.Content.length];
             for (int i = 0; i < source.Content.length; i++) {
-                this.Content[i] = new OtherInvoiceItem(source.Content[i]);
+                this.Content[i] = new OnlineTaxiItineraryInfo(source.Content[i]);
             }
         }
     }

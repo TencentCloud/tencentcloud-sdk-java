@@ -130,7 +130,7 @@ public class CreateFlowOption extends AbstractModel {
     private Boolean ForbidEditApprover;
 
     /**
-    *   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+    *   禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
 
     */
     @SerializedName("ForbidEditFlowProperties")
@@ -230,6 +230,60 @@ public class CreateFlowOption extends AbstractModel {
     @SerializedName("ForbidEditWatermark")
     @Expose
     private Boolean ForbidEditWatermark;
+
+    /**
+    * 隐藏操作指引: 具体的控件类型如下
+
+<ul><li>1 : 操作指引入口</li>
+<li>2 : 操作文档</li>
+<li>3 : 操作视频</li>
+</ul>
+注：仅对新版页面生效
+    */
+    @SerializedName("HideOperationInstructions")
+    @Expose
+    private Long [] HideOperationInstructions;
+
+    /**
+    * 隐藏操作步骤: 具体的控件类型如下
+
+<ul><li>1 : 选择文件及签署方</li>
+<li>2 : 补充文件内容</li>
+<li>4 : 发起前合同信息与设置确认</li>
+</ul>
+注：仅对新版页面生效
+    */
+    @SerializedName("HideOperationSteps")
+    @Expose
+    private Long [] HideOperationSteps;
+
+    /**
+    * 本企业简称，注：仅对新版页面生效
+    */
+    @SerializedName("SelfName")
+    @Expose
+    private String SelfName;
+
+    /**
+    * 发起后签署码隐藏，默认false，注：仅对新版页面生效
+    */
+    @SerializedName("HideSignCodeAfterStart")
+    @Expose
+    private Boolean HideSignCodeAfterStart;
+
+    /**
+    * 发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>	
+    */
+    @SerializedName("PreviewAfterStart")
+    @Expose
+    private Boolean PreviewAfterStart;
+
+    /**
+    * 发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	
+    */
+    @SerializedName("SignAfterStart")
+    @Expose
+    private Boolean SignAfterStart;
 
     /**
      * Get 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
@@ -524,9 +578,9 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
-     * Get   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+     * Get   禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
  
-     * @return ForbidEditFlowProperties   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+     * @return ForbidEditFlowProperties   禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
 
      */
     public Boolean getForbidEditFlowProperties() {
@@ -534,9 +588,9 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
-     * Set   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+     * Set   禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
 
-     * @param ForbidEditFlowProperties   禁止设置设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
+     * @param ForbidEditFlowProperties   禁止设置签署流程属性 (顺序、合同签署认证方式等)，若为true则在发起流程的可嵌入页面隐藏签署流程设置面板
 
      */
     public void setForbidEditFlowProperties(Boolean ForbidEditFlowProperties) {
@@ -859,6 +913,154 @@ public class CreateFlowOption extends AbstractModel {
         this.ForbidEditWatermark = ForbidEditWatermark;
     }
 
+    /**
+     * Get 隐藏操作指引: 具体的控件类型如下
+
+<ul><li>1 : 操作指引入口</li>
+<li>2 : 操作文档</li>
+<li>3 : 操作视频</li>
+</ul>
+注：仅对新版页面生效 
+     * @return HideOperationInstructions 隐藏操作指引: 具体的控件类型如下
+
+<ul><li>1 : 操作指引入口</li>
+<li>2 : 操作文档</li>
+<li>3 : 操作视频</li>
+</ul>
+注：仅对新版页面生效
+     * @deprecated
+     */
+    @Deprecated
+    public Long [] getHideOperationInstructions() {
+        return this.HideOperationInstructions;
+    }
+
+    /**
+     * Set 隐藏操作指引: 具体的控件类型如下
+
+<ul><li>1 : 操作指引入口</li>
+<li>2 : 操作文档</li>
+<li>3 : 操作视频</li>
+</ul>
+注：仅对新版页面生效
+     * @param HideOperationInstructions 隐藏操作指引: 具体的控件类型如下
+
+<ul><li>1 : 操作指引入口</li>
+<li>2 : 操作文档</li>
+<li>3 : 操作视频</li>
+</ul>
+注：仅对新版页面生效
+     * @deprecated
+     */
+    @Deprecated
+    public void setHideOperationInstructions(Long [] HideOperationInstructions) {
+        this.HideOperationInstructions = HideOperationInstructions;
+    }
+
+    /**
+     * Get 隐藏操作步骤: 具体的控件类型如下
+
+<ul><li>1 : 选择文件及签署方</li>
+<li>2 : 补充文件内容</li>
+<li>4 : 发起前合同信息与设置确认</li>
+</ul>
+注：仅对新版页面生效 
+     * @return HideOperationSteps 隐藏操作步骤: 具体的控件类型如下
+
+<ul><li>1 : 选择文件及签署方</li>
+<li>2 : 补充文件内容</li>
+<li>4 : 发起前合同信息与设置确认</li>
+</ul>
+注：仅对新版页面生效
+     */
+    public Long [] getHideOperationSteps() {
+        return this.HideOperationSteps;
+    }
+
+    /**
+     * Set 隐藏操作步骤: 具体的控件类型如下
+
+<ul><li>1 : 选择文件及签署方</li>
+<li>2 : 补充文件内容</li>
+<li>4 : 发起前合同信息与设置确认</li>
+</ul>
+注：仅对新版页面生效
+     * @param HideOperationSteps 隐藏操作步骤: 具体的控件类型如下
+
+<ul><li>1 : 选择文件及签署方</li>
+<li>2 : 补充文件内容</li>
+<li>4 : 发起前合同信息与设置确认</li>
+</ul>
+注：仅对新版页面生效
+     */
+    public void setHideOperationSteps(Long [] HideOperationSteps) {
+        this.HideOperationSteps = HideOperationSteps;
+    }
+
+    /**
+     * Get 本企业简称，注：仅对新版页面生效 
+     * @return SelfName 本企业简称，注：仅对新版页面生效
+     */
+    public String getSelfName() {
+        return this.SelfName;
+    }
+
+    /**
+     * Set 本企业简称，注：仅对新版页面生效
+     * @param SelfName 本企业简称，注：仅对新版页面生效
+     */
+    public void setSelfName(String SelfName) {
+        this.SelfName = SelfName;
+    }
+
+    /**
+     * Get 发起后签署码隐藏，默认false，注：仅对新版页面生效 
+     * @return HideSignCodeAfterStart 发起后签署码隐藏，默认false，注：仅对新版页面生效
+     */
+    public Boolean getHideSignCodeAfterStart() {
+        return this.HideSignCodeAfterStart;
+    }
+
+    /**
+     * Set 发起后签署码隐藏，默认false，注：仅对新版页面生效
+     * @param HideSignCodeAfterStart 发起后签署码隐藏，默认false，注：仅对新版页面生效
+     */
+    public void setHideSignCodeAfterStart(Boolean HideSignCodeAfterStart) {
+        this.HideSignCodeAfterStart = HideSignCodeAfterStart;
+    }
+
+    /**
+     * Get 发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>	 
+     * @return PreviewAfterStart 发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>	
+     */
+    public Boolean getPreviewAfterStart() {
+        return this.PreviewAfterStart;
+    }
+
+    /**
+     * Set 发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>	
+     * @param PreviewAfterStart 发起成功后是否预览合同 <ul><li>（默认） false -否</li> <li> true - 展示预览按钮</li></ul>	
+     */
+    public void setPreviewAfterStart(Boolean PreviewAfterStart) {
+        this.PreviewAfterStart = PreviewAfterStart;
+    }
+
+    /**
+     * Get 发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	 
+     * @return SignAfterStart 发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	
+     */
+    public Boolean getSignAfterStart() {
+        return this.SignAfterStart;
+    }
+
+    /**
+     * Set 发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	
+     * @param SignAfterStart 发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul>	
+     */
+    public void setSignAfterStart(Boolean SignAfterStart) {
+        this.SignAfterStart = SignAfterStart;
+    }
+
     public CreateFlowOption() {
     }
 
@@ -927,6 +1129,30 @@ public class CreateFlowOption extends AbstractModel {
         if (source.ForbidEditWatermark != null) {
             this.ForbidEditWatermark = new Boolean(source.ForbidEditWatermark);
         }
+        if (source.HideOperationInstructions != null) {
+            this.HideOperationInstructions = new Long[source.HideOperationInstructions.length];
+            for (int i = 0; i < source.HideOperationInstructions.length; i++) {
+                this.HideOperationInstructions[i] = new Long(source.HideOperationInstructions[i]);
+            }
+        }
+        if (source.HideOperationSteps != null) {
+            this.HideOperationSteps = new Long[source.HideOperationSteps.length];
+            for (int i = 0; i < source.HideOperationSteps.length; i++) {
+                this.HideOperationSteps[i] = new Long(source.HideOperationSteps[i]);
+            }
+        }
+        if (source.SelfName != null) {
+            this.SelfName = new String(source.SelfName);
+        }
+        if (source.HideSignCodeAfterStart != null) {
+            this.HideSignCodeAfterStart = new Boolean(source.HideSignCodeAfterStart);
+        }
+        if (source.PreviewAfterStart != null) {
+            this.PreviewAfterStart = new Boolean(source.PreviewAfterStart);
+        }
+        if (source.SignAfterStart != null) {
+            this.SignAfterStart = new Boolean(source.SignAfterStart);
+        }
     }
 
 
@@ -951,6 +1177,12 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResultPageConfig.", this.ResultPageConfig);
         this.setParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
         this.setParamSimple(map, prefix + "ForbidEditWatermark", this.ForbidEditWatermark);
+        this.setParamArraySimple(map, prefix + "HideOperationInstructions.", this.HideOperationInstructions);
+        this.setParamArraySimple(map, prefix + "HideOperationSteps.", this.HideOperationSteps);
+        this.setParamSimple(map, prefix + "SelfName", this.SelfName);
+        this.setParamSimple(map, prefix + "HideSignCodeAfterStart", this.HideSignCodeAfterStart);
+        this.setParamSimple(map, prefix + "PreviewAfterStart", this.PreviewAfterStart);
+        this.setParamSimple(map, prefix + "SignAfterStart", this.SignAfterStart);
 
     }
 }

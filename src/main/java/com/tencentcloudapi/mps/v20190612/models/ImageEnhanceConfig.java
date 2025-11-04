@@ -32,6 +32,13 @@ public class ImageEnhanceConfig extends AbstractModel {
     private SuperResolutionConfig SuperResolution;
 
     /**
+    * 高级超分配置。
+    */
+    @SerializedName("AdvancedSuperResolutionConfig")
+    @Expose
+    private AdvancedSuperResolutionConfig AdvancedSuperResolutionConfig;
+
+    /**
     * 降噪配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -97,6 +104,22 @@ public class ImageEnhanceConfig extends AbstractModel {
      */
     public void setSuperResolution(SuperResolutionConfig SuperResolution) {
         this.SuperResolution = SuperResolution;
+    }
+
+    /**
+     * Get 高级超分配置。 
+     * @return AdvancedSuperResolutionConfig 高级超分配置。
+     */
+    public AdvancedSuperResolutionConfig getAdvancedSuperResolutionConfig() {
+        return this.AdvancedSuperResolutionConfig;
+    }
+
+    /**
+     * Set 高级超分配置。
+     * @param AdvancedSuperResolutionConfig 高级超分配置。
+     */
+    public void setAdvancedSuperResolutionConfig(AdvancedSuperResolutionConfig AdvancedSuperResolutionConfig) {
+        this.AdvancedSuperResolutionConfig = AdvancedSuperResolutionConfig;
     }
 
     /**
@@ -230,6 +253,9 @@ public class ImageEnhanceConfig extends AbstractModel {
         if (source.SuperResolution != null) {
             this.SuperResolution = new SuperResolutionConfig(source.SuperResolution);
         }
+        if (source.AdvancedSuperResolutionConfig != null) {
+            this.AdvancedSuperResolutionConfig = new AdvancedSuperResolutionConfig(source.AdvancedSuperResolutionConfig);
+        }
         if (source.Denoise != null) {
             this.Denoise = new ImageDenoiseConfig(source.Denoise);
         }
@@ -256,6 +282,7 @@ public class ImageEnhanceConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "SuperResolution.", this.SuperResolution);
+        this.setParamObj(map, prefix + "AdvancedSuperResolutionConfig.", this.AdvancedSuperResolutionConfig);
         this.setParamObj(map, prefix + "Denoise.", this.Denoise);
         this.setParamObj(map, prefix + "ImageQualityEnhance.", this.ImageQualityEnhance);
         this.setParamObj(map, prefix + "ColorEnhance.", this.ColorEnhance);

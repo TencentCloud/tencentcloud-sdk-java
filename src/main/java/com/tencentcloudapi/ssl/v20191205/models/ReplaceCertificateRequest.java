@@ -88,6 +88,13 @@ public class ReplaceCertificateRequest extends AbstractModel {
     private String SignAlgo;
 
     /**
+    * 是否使用交叉根证书，默认为true
+    */
+    @SerializedName("UseCrossSignRoot")
+    @Expose
+    private Boolean UseCrossSignRoot;
+
+    /**
      * Get 证书 ID。 
      * @return CertificateId 证书 ID。
      */
@@ -235,6 +242,22 @@ public class ReplaceCertificateRequest extends AbstractModel {
         this.SignAlgo = SignAlgo;
     }
 
+    /**
+     * Get 是否使用交叉根证书，默认为true 
+     * @return UseCrossSignRoot 是否使用交叉根证书，默认为true
+     */
+    public Boolean getUseCrossSignRoot() {
+        return this.UseCrossSignRoot;
+    }
+
+    /**
+     * Set 是否使用交叉根证书，默认为true
+     * @param UseCrossSignRoot 是否使用交叉根证书，默认为true
+     */
+    public void setUseCrossSignRoot(Boolean UseCrossSignRoot) {
+        this.UseCrossSignRoot = UseCrossSignRoot;
+    }
+
     public ReplaceCertificateRequest() {
     }
 
@@ -270,6 +293,9 @@ public class ReplaceCertificateRequest extends AbstractModel {
         if (source.SignAlgo != null) {
             this.SignAlgo = new String(source.SignAlgo);
         }
+        if (source.UseCrossSignRoot != null) {
+            this.UseCrossSignRoot = new Boolean(source.UseCrossSignRoot);
+        }
     }
 
 
@@ -286,6 +312,7 @@ public class ReplaceCertificateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CertCSREncryptAlgo", this.CertCSREncryptAlgo);
         this.setParamSimple(map, prefix + "CertCSRKeyParameter", this.CertCSRKeyParameter);
         this.setParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
+        this.setParamSimple(map, prefix + "UseCrossSignRoot", this.UseCrossSignRoot);
 
     }
 }

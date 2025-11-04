@@ -31,14 +31,14 @@ public class TranslationNatRuleInput extends AbstractModel {
     private String TranslationDirection;
 
     /**
-    * 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
+    * 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层、四层。
     */
     @SerializedName("TranslationType")
     @Expose
     private String TranslationType;
 
     /**
-    * 转换`IP`,当转换规则类型为四层时为`IP`池。
+    * 映射后`IP`,当转换规则类型为四层时为`IP`池。
     */
     @SerializedName("TranslationIp")
     @Expose
@@ -52,7 +52,7 @@ public class TranslationNatRuleInput extends AbstractModel {
     private String Description;
 
     /**
-    * 源`IP`,当转换规则类型为三层时有效。
+    * 映射前`IP`,当转换规则类型为三层时有效。
     */
     @SerializedName("OriginalIp")
     @Expose
@@ -75,32 +75,32 @@ public class TranslationNatRuleInput extends AbstractModel {
     }
 
     /**
-     * Get 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。 
-     * @return TranslationType 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
+     * Get 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层、四层。 
+     * @return TranslationType 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层、四层。
      */
     public String getTranslationType() {
         return this.TranslationType;
     }
 
     /**
-     * Set 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
-     * @param TranslationType 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
+     * Set 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层、四层。
+     * @param TranslationType 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。分别对应三层、四层。
      */
     public void setTranslationType(String TranslationType) {
         this.TranslationType = TranslationType;
     }
 
     /**
-     * Get 转换`IP`,当转换规则类型为四层时为`IP`池。 
-     * @return TranslationIp 转换`IP`,当转换规则类型为四层时为`IP`池。
+     * Get 映射后`IP`,当转换规则类型为四层时为`IP`池。 
+     * @return TranslationIp 映射后`IP`,当转换规则类型为四层时为`IP`池。
      */
     public String getTranslationIp() {
         return this.TranslationIp;
     }
 
     /**
-     * Set 转换`IP`,当转换规则类型为四层时为`IP`池。
-     * @param TranslationIp 转换`IP`,当转换规则类型为四层时为`IP`池。
+     * Set 映射后`IP`,当转换规则类型为四层时为`IP`池。
+     * @param TranslationIp 映射后`IP`,当转换规则类型为四层时为`IP`池。
      */
     public void setTranslationIp(String TranslationIp) {
         this.TranslationIp = TranslationIp;
@@ -123,16 +123,16 @@ public class TranslationNatRuleInput extends AbstractModel {
     }
 
     /**
-     * Get 源`IP`,当转换规则类型为三层时有效。 
-     * @return OriginalIp 源`IP`,当转换规则类型为三层时有效。
+     * Get 映射前`IP`,当转换规则类型为三层时有效。 
+     * @return OriginalIp 映射前`IP`,当转换规则类型为三层时有效。
      */
     public String getOriginalIp() {
         return this.OriginalIp;
     }
 
     /**
-     * Set 源`IP`,当转换规则类型为三层时有效。
-     * @param OriginalIp 源`IP`,当转换规则类型为三层时有效。
+     * Set 映射前`IP`,当转换规则类型为三层时有效。
+     * @param OriginalIp 映射前`IP`,当转换规则类型为三层时有效。
      */
     public void setOriginalIp(String OriginalIp) {
         this.OriginalIp = OriginalIp;

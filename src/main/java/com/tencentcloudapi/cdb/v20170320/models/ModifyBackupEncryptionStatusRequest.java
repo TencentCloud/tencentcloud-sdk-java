@@ -38,6 +38,13 @@ public class ModifyBackupEncryptionStatusRequest extends AbstractModel {
     private String EncryptionStatus;
 
     /**
+    * 设置实例新增的自动日志备份文件默认加密状态。可选值为 on或者off。
+    */
+    @SerializedName("BinlogEncryptionStatus")
+    @Expose
+    private String BinlogEncryptionStatus;
+
+    /**
      * Get 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -69,6 +76,22 @@ public class ModifyBackupEncryptionStatusRequest extends AbstractModel {
         this.EncryptionStatus = EncryptionStatus;
     }
 
+    /**
+     * Get 设置实例新增的自动日志备份文件默认加密状态。可选值为 on或者off。 
+     * @return BinlogEncryptionStatus 设置实例新增的自动日志备份文件默认加密状态。可选值为 on或者off。
+     */
+    public String getBinlogEncryptionStatus() {
+        return this.BinlogEncryptionStatus;
+    }
+
+    /**
+     * Set 设置实例新增的自动日志备份文件默认加密状态。可选值为 on或者off。
+     * @param BinlogEncryptionStatus 设置实例新增的自动日志备份文件默认加密状态。可选值为 on或者off。
+     */
+    public void setBinlogEncryptionStatus(String BinlogEncryptionStatus) {
+        this.BinlogEncryptionStatus = BinlogEncryptionStatus;
+    }
+
     public ModifyBackupEncryptionStatusRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ModifyBackupEncryptionStatusRequest extends AbstractModel {
         if (source.EncryptionStatus != null) {
             this.EncryptionStatus = new String(source.EncryptionStatus);
         }
+        if (source.BinlogEncryptionStatus != null) {
+            this.BinlogEncryptionStatus = new String(source.BinlogEncryptionStatus);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyBackupEncryptionStatusRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "EncryptionStatus", this.EncryptionStatus);
+        this.setParamSimple(map, prefix + "BinlogEncryptionStatus", this.BinlogEncryptionStatus);
 
     }
 }

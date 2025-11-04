@@ -38,6 +38,55 @@ public class RabbitMQConsumersListInfo extends AbstractModel {
     private String ConsumerTag;
 
     /**
+    * 消费目标队列
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
+    * 是否需要消费者手动 ack
+    */
+    @SerializedName("AckRequired")
+    @Expose
+    private Boolean AckRequired;
+
+    /**
+    * 消费者 qos 值
+    */
+    @SerializedName("PrefetchCount")
+    @Expose
+    private Long PrefetchCount;
+
+    /**
+    * 消费者状态
+    */
+    @SerializedName("Active")
+    @Expose
+    private String Active;
+
+    /**
+    * 最后一次投递消息时间
+    */
+    @SerializedName("LastDeliveredTime")
+    @Expose
+    private String LastDeliveredTime;
+
+    /**
+    * 消费者未确认消息数
+    */
+    @SerializedName("UnAckMsgCount")
+    @Expose
+    private Long UnAckMsgCount;
+
+    /**
+    * consumer 所属的 channel 
+    */
+    @SerializedName("ChannelName")
+    @Expose
+    private String ChannelName;
+
+    /**
      * Get 客户端Ip 
      * @return ClientIp 客户端Ip
      */
@@ -69,6 +118,118 @@ public class RabbitMQConsumersListInfo extends AbstractModel {
         this.ConsumerTag = ConsumerTag;
     }
 
+    /**
+     * Get 消费目标队列 
+     * @return QueueName 消费目标队列
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set 消费目标队列
+     * @param QueueName 消费目标队列
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
+    }
+
+    /**
+     * Get 是否需要消费者手动 ack 
+     * @return AckRequired 是否需要消费者手动 ack
+     */
+    public Boolean getAckRequired() {
+        return this.AckRequired;
+    }
+
+    /**
+     * Set 是否需要消费者手动 ack
+     * @param AckRequired 是否需要消费者手动 ack
+     */
+    public void setAckRequired(Boolean AckRequired) {
+        this.AckRequired = AckRequired;
+    }
+
+    /**
+     * Get 消费者 qos 值 
+     * @return PrefetchCount 消费者 qos 值
+     */
+    public Long getPrefetchCount() {
+        return this.PrefetchCount;
+    }
+
+    /**
+     * Set 消费者 qos 值
+     * @param PrefetchCount 消费者 qos 值
+     */
+    public void setPrefetchCount(Long PrefetchCount) {
+        this.PrefetchCount = PrefetchCount;
+    }
+
+    /**
+     * Get 消费者状态 
+     * @return Active 消费者状态
+     */
+    public String getActive() {
+        return this.Active;
+    }
+
+    /**
+     * Set 消费者状态
+     * @param Active 消费者状态
+     */
+    public void setActive(String Active) {
+        this.Active = Active;
+    }
+
+    /**
+     * Get 最后一次投递消息时间 
+     * @return LastDeliveredTime 最后一次投递消息时间
+     */
+    public String getLastDeliveredTime() {
+        return this.LastDeliveredTime;
+    }
+
+    /**
+     * Set 最后一次投递消息时间
+     * @param LastDeliveredTime 最后一次投递消息时间
+     */
+    public void setLastDeliveredTime(String LastDeliveredTime) {
+        this.LastDeliveredTime = LastDeliveredTime;
+    }
+
+    /**
+     * Get 消费者未确认消息数 
+     * @return UnAckMsgCount 消费者未确认消息数
+     */
+    public Long getUnAckMsgCount() {
+        return this.UnAckMsgCount;
+    }
+
+    /**
+     * Set 消费者未确认消息数
+     * @param UnAckMsgCount 消费者未确认消息数
+     */
+    public void setUnAckMsgCount(Long UnAckMsgCount) {
+        this.UnAckMsgCount = UnAckMsgCount;
+    }
+
+    /**
+     * Get consumer 所属的 channel  
+     * @return ChannelName consumer 所属的 channel 
+     */
+    public String getChannelName() {
+        return this.ChannelName;
+    }
+
+    /**
+     * Set consumer 所属的 channel 
+     * @param ChannelName consumer 所属的 channel 
+     */
+    public void setChannelName(String ChannelName) {
+        this.ChannelName = ChannelName;
+    }
+
     public RabbitMQConsumersListInfo() {
     }
 
@@ -83,6 +244,27 @@ public class RabbitMQConsumersListInfo extends AbstractModel {
         if (source.ConsumerTag != null) {
             this.ConsumerTag = new String(source.ConsumerTag);
         }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.AckRequired != null) {
+            this.AckRequired = new Boolean(source.AckRequired);
+        }
+        if (source.PrefetchCount != null) {
+            this.PrefetchCount = new Long(source.PrefetchCount);
+        }
+        if (source.Active != null) {
+            this.Active = new String(source.Active);
+        }
+        if (source.LastDeliveredTime != null) {
+            this.LastDeliveredTime = new String(source.LastDeliveredTime);
+        }
+        if (source.UnAckMsgCount != null) {
+            this.UnAckMsgCount = new Long(source.UnAckMsgCount);
+        }
+        if (source.ChannelName != null) {
+            this.ChannelName = new String(source.ChannelName);
+        }
     }
 
 
@@ -92,6 +274,13 @@ public class RabbitMQConsumersListInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClientIp", this.ClientIp);
         this.setParamSimple(map, prefix + "ConsumerTag", this.ConsumerTag);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamSimple(map, prefix + "AckRequired", this.AckRequired);
+        this.setParamSimple(map, prefix + "PrefetchCount", this.PrefetchCount);
+        this.setParamSimple(map, prefix + "Active", this.Active);
+        this.setParamSimple(map, prefix + "LastDeliveredTime", this.LastDeliveredTime);
+        this.setParamSimple(map, prefix + "UnAckMsgCount", this.UnAckMsgCount);
+        this.setParamSimple(map, prefix + "ChannelName", this.ChannelName);
 
     }
 }

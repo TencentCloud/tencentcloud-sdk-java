@@ -213,6 +213,13 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Long TraceTime;
 
     /**
+    * 实例标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private RabbitMQServerlessTag [] Tags;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -644,6 +651,22 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.TraceTime = TraceTime;
     }
 
+    /**
+     * Get 实例标签列表 
+     * @return Tags 实例标签列表
+     */
+    public RabbitMQServerlessTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 实例标签列表
+     * @param Tags 实例标签列表
+     */
+    public void setTags(RabbitMQServerlessTag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public RabbitMQClusterInfo() {
     }
 
@@ -739,6 +762,12 @@ public class RabbitMQClusterInfo extends AbstractModel {
         if (source.TraceTime != null) {
             this.TraceTime = new Long(source.TraceTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new RabbitMQServerlessTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new RabbitMQServerlessTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -773,6 +802,7 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MessageRetainTime", this.MessageRetainTime);
         this.setParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
         this.setParamSimple(map, prefix + "TraceTime", this.TraceTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

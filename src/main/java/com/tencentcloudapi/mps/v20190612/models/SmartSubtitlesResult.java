@@ -24,9 +24,10 @@ import java.util.HashMap;
 public class SmartSubtitlesResult extends AbstractModel {
 
     /**
-    * 任务的类型，取值范围： 
-<li>AsrFullTextRecognition：语音全文识别，</li> 
-<li>TransTextRecognition：语音翻译。</li>
+    * 任务的类型，取值范围：
+- AsrFullTextRecognition：语音全文识别
+- TransTextRecognition：语音翻译
+- PureSubtitleTrans:   纯字幕翻译
     */
     @SerializedName("Type")
     @Expose
@@ -52,24 +53,36 @@ TransTextRecognition 时有效。
     private SmartSubtitleTaskTransTextResult TransTextTask;
 
     /**
-     * Get 任务的类型，取值范围： 
-<li>AsrFullTextRecognition：语音全文识别，</li> 
-<li>TransTextRecognition：语音翻译。</li> 
-     * @return Type 任务的类型，取值范围： 
-<li>AsrFullTextRecognition：语音全文识别，</li> 
-<li>TransTextRecognition：语音翻译。</li>
+    * 当翻译类型为：PureSubtitleTrans 是返回纯字幕文件翻译结果。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PureSubtitleTransTask")
+    @Expose
+    private PureSubtitleTransResult PureSubtitleTransTask;
+
+    /**
+     * Get 任务的类型，取值范围：
+- AsrFullTextRecognition：语音全文识别
+- TransTextRecognition：语音翻译
+- PureSubtitleTrans:   纯字幕翻译 
+     * @return Type 任务的类型，取值范围：
+- AsrFullTextRecognition：语音全文识别
+- TransTextRecognition：语音翻译
+- PureSubtitleTrans:   纯字幕翻译
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 任务的类型，取值范围： 
-<li>AsrFullTextRecognition：语音全文识别，</li> 
-<li>TransTextRecognition：语音翻译。</li>
-     * @param Type 任务的类型，取值范围： 
-<li>AsrFullTextRecognition：语音全文识别，</li> 
-<li>TransTextRecognition：语音翻译。</li>
+     * Set 任务的类型，取值范围：
+- AsrFullTextRecognition：语音全文识别
+- TransTextRecognition：语音翻译
+- PureSubtitleTrans:   纯字幕翻译
+     * @param Type 任务的类型，取值范围：
+- AsrFullTextRecognition：语音全文识别
+- TransTextRecognition：语音翻译
+- PureSubtitleTrans:   纯字幕翻译
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -127,6 +140,26 @@ TransTextRecognition 时有效。
         this.TransTextTask = TransTextTask;
     }
 
+    /**
+     * Get 当翻译类型为：PureSubtitleTrans 是返回纯字幕文件翻译结果。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PureSubtitleTransTask 当翻译类型为：PureSubtitleTrans 是返回纯字幕文件翻译结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PureSubtitleTransResult getPureSubtitleTransTask() {
+        return this.PureSubtitleTransTask;
+    }
+
+    /**
+     * Set 当翻译类型为：PureSubtitleTrans 是返回纯字幕文件翻译结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PureSubtitleTransTask 当翻译类型为：PureSubtitleTrans 是返回纯字幕文件翻译结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPureSubtitleTransTask(PureSubtitleTransResult PureSubtitleTransTask) {
+        this.PureSubtitleTransTask = PureSubtitleTransTask;
+    }
+
     public SmartSubtitlesResult() {
     }
 
@@ -144,6 +177,9 @@ TransTextRecognition 时有效。
         if (source.TransTextTask != null) {
             this.TransTextTask = new SmartSubtitleTaskTransTextResult(source.TransTextTask);
         }
+        if (source.PureSubtitleTransTask != null) {
+            this.PureSubtitleTransTask = new PureSubtitleTransResult(source.PureSubtitleTransTask);
+        }
     }
 
 
@@ -154,6 +190,7 @@ TransTextRecognition 时有效。
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
         this.setParamObj(map, prefix + "TransTextTask.", this.TransTextTask);
+        this.setParamObj(map, prefix + "PureSubtitleTransTask.", this.PureSubtitleTransTask);
 
     }
 }

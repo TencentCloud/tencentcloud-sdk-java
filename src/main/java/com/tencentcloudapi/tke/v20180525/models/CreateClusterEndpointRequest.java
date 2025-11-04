@@ -31,7 +31,8 @@ public class CreateClusterEndpointRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)
+    * 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)。获取方式：https://cloud.tencent.com/document/product/215/15784
+
     */
     @SerializedName("SubnetId")
     @Expose
@@ -52,7 +53,7 @@ public class CreateClusterEndpointRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）
+    * 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）。获取方式：https://cloud.tencent.com/document/api/215/15808
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -94,16 +95,20 @@ BandwidthPackageId含义：带宽包ID，指定此参数时，网络计费方式
     }
 
     /**
-     * Get 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网) 
-     * @return SubnetId 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)
+     * Get 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)。获取方式：https://cloud.tencent.com/document/product/215/15784
+ 
+     * @return SubnetId 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)。获取方式：https://cloud.tencent.com/document/product/215/15784
+
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)
-     * @param SubnetId 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)
+     * Set 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)。获取方式：https://cloud.tencent.com/document/product/215/15784
+
+     * @param SubnetId 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)。获取方式：https://cloud.tencent.com/document/product/215/15784
+
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -142,16 +147,16 @@ BandwidthPackageId含义：带宽包ID，指定此参数时，网络计费方式
     }
 
     /**
-     * Get 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传） 
-     * @return SecurityGroup 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）
+     * Get 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）。获取方式：https://cloud.tencent.com/document/api/215/15808 
+     * @return SecurityGroup 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）。获取方式：https://cloud.tencent.com/document/api/215/15808
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）
-     * @param SecurityGroup 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）
+     * Set 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）。获取方式：https://cloud.tencent.com/document/api/215/15808
+     * @param SecurityGroup 使用的安全组，只有外网访问需要传递（开启外网访问且不使用已有clb时必传）。获取方式：https://cloud.tencent.com/document/api/215/15808
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;

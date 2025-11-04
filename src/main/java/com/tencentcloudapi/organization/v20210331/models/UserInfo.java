@@ -115,6 +115,13 @@ public class UserInfo extends AbstractModel {
     private String Password;
 
     /**
+    * 下次登录是否需要重置密码， true: 需要重置密码， false：不需要重置密码
+    */
+    @SerializedName("NeedResetPassword")
+    @Expose
+    private Boolean NeedResetPassword;
+
+    /**
      * Get 查询username。 
      * @return UserName 查询username。
      */
@@ -322,6 +329,22 @@ public class UserInfo extends AbstractModel {
         this.Password = Password;
     }
 
+    /**
+     * Get 下次登录是否需要重置密码， true: 需要重置密码， false：不需要重置密码 
+     * @return NeedResetPassword 下次登录是否需要重置密码， true: 需要重置密码， false：不需要重置密码
+     */
+    public Boolean getNeedResetPassword() {
+        return this.NeedResetPassword;
+    }
+
+    /**
+     * Set 下次登录是否需要重置密码， true: 需要重置密码， false：不需要重置密码
+     * @param NeedResetPassword 下次登录是否需要重置密码， true: 需要重置密码， false：不需要重置密码
+     */
+    public void setNeedResetPassword(Boolean NeedResetPassword) {
+        this.NeedResetPassword = NeedResetPassword;
+    }
+
     public UserInfo() {
     }
 
@@ -369,6 +392,9 @@ public class UserInfo extends AbstractModel {
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.NeedResetPassword != null) {
+            this.NeedResetPassword = new Boolean(source.NeedResetPassword);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class UserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "IsSelected", this.IsSelected);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "NeedResetPassword", this.NeedResetPassword);
 
     }
 }

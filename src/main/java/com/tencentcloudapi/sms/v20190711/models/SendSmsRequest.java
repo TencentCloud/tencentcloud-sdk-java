@@ -74,7 +74,8 @@ public class SendSmsRequest extends AbstractModel {
     private String SessionContext;
 
     /**
-    * 国内短信无senderid，无需填写该项；若需开通国际/港澳台短信senderid，请联系smshelper。
+    * 国际/港澳台短信 Sender ID。可参考 [Sender ID 说明](https://cloud.tencent.com/document/product/382/102831)。
+注：国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
     */
     @SerializedName("SenderId")
     @Expose
@@ -197,16 +198,20 @@ public class SendSmsRequest extends AbstractModel {
     }
 
     /**
-     * Get 国内短信无senderid，无需填写该项；若需开通国际/港澳台短信senderid，请联系smshelper。 
-     * @return SenderId 国内短信无senderid，无需填写该项；若需开通国际/港澳台短信senderid，请联系smshelper。
+     * Get 国际/港澳台短信 Sender ID。可参考 [Sender ID 说明](https://cloud.tencent.com/document/product/382/102831)。
+注：国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。 
+     * @return SenderId 国际/港澳台短信 Sender ID。可参考 [Sender ID 说明](https://cloud.tencent.com/document/product/382/102831)。
+注：国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
      */
     public String getSenderId() {
         return this.SenderId;
     }
 
     /**
-     * Set 国内短信无senderid，无需填写该项；若需开通国际/港澳台短信senderid，请联系smshelper。
-     * @param SenderId 国内短信无senderid，无需填写该项；若需开通国际/港澳台短信senderid，请联系smshelper。
+     * Set 国际/港澳台短信 Sender ID。可参考 [Sender ID 说明](https://cloud.tencent.com/document/product/382/102831)。
+注：国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
+     * @param SenderId 国际/港澳台短信 Sender ID。可参考 [Sender ID 说明](https://cloud.tencent.com/document/product/382/102831)。
+注：国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
      */
     public void setSenderId(String SenderId) {
         this.SenderId = SenderId;

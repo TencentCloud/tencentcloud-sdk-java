@@ -38,6 +38,20 @@ public class KubeJarvisStateInspectionResultsItem extends AbstractModel {
     private KubeJarvisStateStatistic [] Statistics;
 
     /**
+    * 诊断数据开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 诊断数据结束时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
      * Get 巡检结果名称 
      * @return Name 巡检结果名称
      */
@@ -69,6 +83,38 @@ public class KubeJarvisStateInspectionResultsItem extends AbstractModel {
         this.Statistics = Statistics;
     }
 
+    /**
+     * Get 诊断数据开始时间 
+     * @return StartTime 诊断数据开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 诊断数据开始时间
+     * @param StartTime 诊断数据开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 诊断数据结束时间 
+     * @return EndTime 诊断数据结束时间
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 诊断数据结束时间
+     * @param EndTime 诊断数据结束时间
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public KubeJarvisStateInspectionResultsItem() {
     }
 
@@ -86,6 +132,12 @@ public class KubeJarvisStateInspectionResultsItem extends AbstractModel {
                 this.Statistics[i] = new KubeJarvisStateStatistic(source.Statistics[i]);
             }
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -95,6 +147,8 @@ public class KubeJarvisStateInspectionResultsItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "Statistics.", this.Statistics);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

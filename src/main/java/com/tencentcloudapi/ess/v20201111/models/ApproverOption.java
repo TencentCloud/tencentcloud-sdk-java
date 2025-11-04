@@ -58,7 +58,7 @@ public class ApproverOption extends AbstractModel {
 
 
 注：
-1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关`
 2. 此参数在嵌入式场景下无效。
     */
     @SerializedName("FillType")
@@ -171,7 +171,7 @@ public class ApproverOption extends AbstractModel {
 
 
 注：
-1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关`
 2. 此参数在嵌入式场景下无效。 
      * @return FillType 签署人信息补充类型，默认无需补充。
 
@@ -180,7 +180,7 @@ public class ApproverOption extends AbstractModel {
 
 
 注：
-1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关`
 2. 此参数在嵌入式场景下无效。
      */
     public Long getFillType() {
@@ -195,7 +195,7 @@ public class ApproverOption extends AbstractModel {
 
 
 注：
-1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关`
 2. 此参数在嵌入式场景下无效。
      * @param FillType 签署人信息补充类型，默认无需补充。
 
@@ -204,7 +204,7 @@ public class ApproverOption extends AbstractModel {
 
 
 注：
-1. `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
+1. `使用动态签署人能力前，需登录腾讯电子签控制台打开服务开关`
 2. 此参数在嵌入式场景下无效。
      */
     public void setFillType(Long FillType) {

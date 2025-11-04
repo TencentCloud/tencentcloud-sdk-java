@@ -59,6 +59,13 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
     private String DomainName;
 
     /**
+    * vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+    */
+    @SerializedName("EnableRouteVpcPublish")
+    @Expose
+    private Boolean EnableRouteVpcPublish;
+
+    /**
     * 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
     */
     @SerializedName("EnableCdcPublish")
@@ -146,6 +153,22 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
     }
 
     /**
+     * Get vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单 
+     * @return EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     */
+    public Boolean getEnableRouteVpcPublish() {
+        return this.EnableRouteVpcPublish;
+    }
+
+    /**
+     * Set vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     * @param EnableRouteVpcPublish vpc关联云联网时路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时,请通过工单加入白名单
+     */
+    public void setEnableRouteVpcPublish(Boolean EnableRouteVpcPublish) {
+        this.EnableRouteVpcPublish = EnableRouteVpcPublish;
+    }
+
+    /**
      * Get 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。 
      * @return EnableCdcPublish 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
      */
@@ -187,6 +210,9 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
         }
+        if (source.EnableRouteVpcPublish != null) {
+            this.EnableRouteVpcPublish = new Boolean(source.EnableRouteVpcPublish);
+        }
         if (source.EnableCdcPublish != null) {
             this.EnableCdcPublish = new Boolean(source.EnableCdcPublish);
         }
@@ -202,6 +228,7 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableMulticast", this.EnableMulticast);
         this.setParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
         this.setParamSimple(map, prefix + "EnableCdcPublish", this.EnableCdcPublish);
 
     }

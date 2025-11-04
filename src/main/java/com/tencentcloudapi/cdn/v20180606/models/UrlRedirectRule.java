@@ -61,6 +61,14 @@ public class UrlRedirectRule extends AbstractModel {
     private Boolean FullMatch;
 
     /**
+    * pattern是否支持正则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Regex")
+    @Expose
+    private Boolean Regex;
+
+    /**
      * Get 重定向状态码，301 | 302 
      * @return RedirectStatusCode 重定向状态码，301 | 302
      */
@@ -148,6 +156,26 @@ public class UrlRedirectRule extends AbstractModel {
         this.FullMatch = FullMatch;
     }
 
+    /**
+     * Get pattern是否支持正则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Regex pattern是否支持正则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getRegex() {
+        return this.Regex;
+    }
+
+    /**
+     * Set pattern是否支持正则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Regex pattern是否支持正则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegex(Boolean Regex) {
+        this.Regex = Regex;
+    }
+
     public UrlRedirectRule() {
     }
 
@@ -171,6 +199,9 @@ public class UrlRedirectRule extends AbstractModel {
         if (source.FullMatch != null) {
             this.FullMatch = new Boolean(source.FullMatch);
         }
+        if (source.Regex != null) {
+            this.Regex = new Boolean(source.Regex);
+        }
     }
 
 
@@ -183,6 +214,7 @@ public class UrlRedirectRule extends AbstractModel {
         this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         this.setParamSimple(map, prefix + "RedirectHost", this.RedirectHost);
         this.setParamSimple(map, prefix + "FullMatch", this.FullMatch);
+        this.setParamSimple(map, prefix + "Regex", this.Regex);
 
     }
 }

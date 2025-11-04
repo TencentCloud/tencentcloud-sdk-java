@@ -33,7 +33,7 @@ public class PostMaxSize extends AbstractModel {
     private String Switch;
 
     /**
-    * 最大限制，取值在1MB和500MB之间。单位字节。
+    * 最大限制，该字段仅在 Switch 为 on 时生效，取值在 1MB 和 800MB 之间，单位字节。
     */
     @SerializedName("MaxSize")
     @Expose
@@ -64,16 +64,16 @@ public class PostMaxSize extends AbstractModel {
     }
 
     /**
-     * Get 最大限制，取值在1MB和500MB之间。单位字节。 
-     * @return MaxSize 最大限制，取值在1MB和500MB之间。单位字节。
+     * Get 最大限制，该字段仅在 Switch 为 on 时生效，取值在 1MB 和 800MB 之间，单位字节。 
+     * @return MaxSize 最大限制，该字段仅在 Switch 为 on 时生效，取值在 1MB 和 800MB 之间，单位字节。
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 最大限制，取值在1MB和500MB之间。单位字节。
-     * @param MaxSize 最大限制，取值在1MB和500MB之间。单位字节。
+     * Set 最大限制，该字段仅在 Switch 为 on 时生效，取值在 1MB 和 800MB 之间，单位字节。
+     * @param MaxSize 最大限制，该字段仅在 Switch 为 on 时生效，取值在 1MB 和 800MB 之间，单位字节。
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

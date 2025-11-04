@@ -52,6 +52,27 @@ public class ModifyRabbitMQServerlessQueueRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * MessageTTL参数单位ms,classic类型专用	
+    */
+    @SerializedName("MessageTTL")
+    @Expose
+    private Long MessageTTL;
+
+    /**
+    * DeadLetterExchange参数。可将过期或被拒绝的消息投往指定的死信 exchange。
+    */
+    @SerializedName("DeadLetterExchange")
+    @Expose
+    private String DeadLetterExchange;
+
+    /**
+    * DeadLetterRoutingKey参数。只能包含字母、数字、"."、"-"，"@"，"_"
+    */
+    @SerializedName("DeadLetterRoutingKey")
+    @Expose
+    private String DeadLetterRoutingKey;
+
+    /**
      * Get 实例Id 
      * @return InstanceId 实例Id
      */
@@ -115,6 +136,54 @@ public class ModifyRabbitMQServerlessQueueRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get MessageTTL参数单位ms,classic类型专用	 
+     * @return MessageTTL MessageTTL参数单位ms,classic类型专用	
+     */
+    public Long getMessageTTL() {
+        return this.MessageTTL;
+    }
+
+    /**
+     * Set MessageTTL参数单位ms,classic类型专用	
+     * @param MessageTTL MessageTTL参数单位ms,classic类型专用	
+     */
+    public void setMessageTTL(Long MessageTTL) {
+        this.MessageTTL = MessageTTL;
+    }
+
+    /**
+     * Get DeadLetterExchange参数。可将过期或被拒绝的消息投往指定的死信 exchange。 
+     * @return DeadLetterExchange DeadLetterExchange参数。可将过期或被拒绝的消息投往指定的死信 exchange。
+     */
+    public String getDeadLetterExchange() {
+        return this.DeadLetterExchange;
+    }
+
+    /**
+     * Set DeadLetterExchange参数。可将过期或被拒绝的消息投往指定的死信 exchange。
+     * @param DeadLetterExchange DeadLetterExchange参数。可将过期或被拒绝的消息投往指定的死信 exchange。
+     */
+    public void setDeadLetterExchange(String DeadLetterExchange) {
+        this.DeadLetterExchange = DeadLetterExchange;
+    }
+
+    /**
+     * Get DeadLetterRoutingKey参数。只能包含字母、数字、"."、"-"，"@"，"_" 
+     * @return DeadLetterRoutingKey DeadLetterRoutingKey参数。只能包含字母、数字、"."、"-"，"@"，"_"
+     */
+    public String getDeadLetterRoutingKey() {
+        return this.DeadLetterRoutingKey;
+    }
+
+    /**
+     * Set DeadLetterRoutingKey参数。只能包含字母、数字、"."、"-"，"@"，"_"
+     * @param DeadLetterRoutingKey DeadLetterRoutingKey参数。只能包含字母、数字、"."、"-"，"@"，"_"
+     */
+    public void setDeadLetterRoutingKey(String DeadLetterRoutingKey) {
+        this.DeadLetterRoutingKey = DeadLetterRoutingKey;
+    }
+
     public ModifyRabbitMQServerlessQueueRequest() {
     }
 
@@ -135,6 +204,15 @@ public class ModifyRabbitMQServerlessQueueRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.MessageTTL != null) {
+            this.MessageTTL = new Long(source.MessageTTL);
+        }
+        if (source.DeadLetterExchange != null) {
+            this.DeadLetterExchange = new String(source.DeadLetterExchange);
+        }
+        if (source.DeadLetterRoutingKey != null) {
+            this.DeadLetterRoutingKey = new String(source.DeadLetterRoutingKey);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class ModifyRabbitMQServerlessQueueRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "MessageTTL", this.MessageTTL);
+        this.setParamSimple(map, prefix + "DeadLetterExchange", this.DeadLetterExchange);
+        this.setParamSimple(map, prefix + "DeadLetterRoutingKey", this.DeadLetterRoutingKey);
 
     }
 }

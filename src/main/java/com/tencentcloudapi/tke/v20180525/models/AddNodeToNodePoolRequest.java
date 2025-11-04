@@ -38,7 +38,7 @@ public class AddNodeToNodePoolRequest extends AbstractModel {
     private String NodePoolId;
 
     /**
-    * 节点id
+    * 节点id，获取参考 https://cloud.tencent.com/document/product/213/15728
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -77,16 +77,16 @@ public class AddNodeToNodePoolRequest extends AbstractModel {
     }
 
     /**
-     * Get 节点id 
-     * @return InstanceIds 节点id
+     * Get 节点id，获取参考 https://cloud.tencent.com/document/product/213/15728 
+     * @return InstanceIds 节点id，获取参考 https://cloud.tencent.com/document/product/213/15728
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 节点id
-     * @param InstanceIds 节点id
+     * Set 节点id，获取参考 https://cloud.tencent.com/document/product/213/15728
+     * @param InstanceIds 节点id，获取参考 https://cloud.tencent.com/document/product/213/15728
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

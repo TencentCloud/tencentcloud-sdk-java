@@ -38,7 +38,7 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 集群名称
+    * 集群名称,字符长度50
     */
     @SerializedName("ClusterName")
     @Expose
@@ -52,7 +52,7 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
     private String ClusterDesc;
 
     /**
-    * 集群等级
+    * 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
     */
     @SerializedName("ClusterLevel")
     @Expose
@@ -112,16 +112,16 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get 集群名称,字符长度50 
+     * @return ClusterName 集群名称,字符长度50
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set 集群名称,字符长度50
+     * @param ClusterName 集群名称,字符长度50
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
@@ -144,16 +144,16 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群等级 
-     * @return ClusterLevel 集群等级
+     * Get 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000 
+     * @return ClusterLevel 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
      */
     public String getClusterLevel() {
         return this.ClusterLevel;
     }
 
     /**
-     * Set 集群等级
-     * @param ClusterLevel 集群等级
+     * Set 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
+     * @param ClusterLevel 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
      */
     public void setClusterLevel(String ClusterLevel) {
         this.ClusterLevel = ClusterLevel;

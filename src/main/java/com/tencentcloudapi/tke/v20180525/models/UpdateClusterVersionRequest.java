@@ -45,14 +45,14 @@ public class UpdateClusterVersionRequest extends AbstractModel {
     private ClusterExtraArgs ExtraArgs;
 
     /**
-    * 可容忍的最大不可用pod数目
+    * 可容忍的最大不可用pod数目。默认0
     */
     @SerializedName("MaxNotReadyPercent")
     @Expose
     private Float MaxNotReadyPercent;
 
     /**
-    * 是否跳过预检查阶段
+    * 是否跳过预检查阶段，默认false
     */
     @SerializedName("SkipPreCheck")
     @Expose
@@ -107,32 +107,32 @@ public class UpdateClusterVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get 可容忍的最大不可用pod数目 
-     * @return MaxNotReadyPercent 可容忍的最大不可用pod数目
+     * Get 可容忍的最大不可用pod数目。默认0 
+     * @return MaxNotReadyPercent 可容忍的最大不可用pod数目。默认0
      */
     public Float getMaxNotReadyPercent() {
         return this.MaxNotReadyPercent;
     }
 
     /**
-     * Set 可容忍的最大不可用pod数目
-     * @param MaxNotReadyPercent 可容忍的最大不可用pod数目
+     * Set 可容忍的最大不可用pod数目。默认0
+     * @param MaxNotReadyPercent 可容忍的最大不可用pod数目。默认0
      */
     public void setMaxNotReadyPercent(Float MaxNotReadyPercent) {
         this.MaxNotReadyPercent = MaxNotReadyPercent;
     }
 
     /**
-     * Get 是否跳过预检查阶段 
-     * @return SkipPreCheck 是否跳过预检查阶段
+     * Get 是否跳过预检查阶段，默认false 
+     * @return SkipPreCheck 是否跳过预检查阶段，默认false
      */
     public Boolean getSkipPreCheck() {
         return this.SkipPreCheck;
     }
 
     /**
-     * Set 是否跳过预检查阶段
-     * @param SkipPreCheck 是否跳过预检查阶段
+     * Set 是否跳过预检查阶段，默认false
+     * @param SkipPreCheck 是否跳过预检查阶段，默认false
      */
     public void setSkipPreCheck(Boolean SkipPreCheck) {
         this.SkipPreCheck = SkipPreCheck;

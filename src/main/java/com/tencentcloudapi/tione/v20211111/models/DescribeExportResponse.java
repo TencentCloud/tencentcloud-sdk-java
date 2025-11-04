@@ -24,6 +24,34 @@ import java.util.HashMap;
 public class DescribeExportResponse extends AbstractModel {
 
     /**
+    * 日志下载任务的ID
+    */
+    @SerializedName("ExportId")
+    @Expose
+    private String ExportId;
+
+    /**
+    * 日志下载文件名
+    */
+    @SerializedName("FileName")
+    @Expose
+    private String FileName;
+
+    /**
+    * 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+    */
+    @SerializedName("CosPath")
+    @Expose
+    private String CosPath;
+
+    /**
+    * 下载任务创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
     * 日志文件大小
     */
     @SerializedName("FileSize")
@@ -43,6 +71,70 @@ public class DescribeExportResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 日志下载任务的ID 
+     * @return ExportId 日志下载任务的ID
+     */
+    public String getExportId() {
+        return this.ExportId;
+    }
+
+    /**
+     * Set 日志下载任务的ID
+     * @param ExportId 日志下载任务的ID
+     */
+    public void setExportId(String ExportId) {
+        this.ExportId = ExportId;
+    }
+
+    /**
+     * Get 日志下载文件名 
+     * @return FileName 日志下载文件名
+     */
+    public String getFileName() {
+        return this.FileName;
+    }
+
+    /**
+     * Set 日志下载文件名
+     * @param FileName 日志下载文件名
+     */
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
+    }
+
+    /**
+     * Get 日志导出路径,有效期一个小时，请尽快使用该路径下载。 
+     * @return CosPath 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+     */
+    public String getCosPath() {
+        return this.CosPath;
+    }
+
+    /**
+     * Set 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+     * @param CosPath 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+     */
+    public void setCosPath(String CosPath) {
+        this.CosPath = CosPath;
+    }
+
+    /**
+     * Get 下载任务创建时间 
+     * @return CreateTime 下载任务创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 下载任务创建时间
+     * @param CreateTime 下载任务创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
 
     /**
      * Get 日志文件大小 
@@ -100,6 +192,18 @@ public class DescribeExportResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeExportResponse(DescribeExportResponse source) {
+        if (source.ExportId != null) {
+            this.ExportId = new String(source.ExportId);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.CosPath != null) {
+            this.CosPath = new String(source.CosPath);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
         if (source.FileSize != null) {
             this.FileSize = new String(source.FileSize);
         }
@@ -116,6 +220,10 @@ public class DescribeExportResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ExportId", this.ExportId);
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
+        this.setParamSimple(map, prefix + "CosPath", this.CosPath);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ResourceUsage extends AbstractModel {
 
     /**
-    * 资源类型
+    * 资源类型，参考k8s 官方资源
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 资源使用量
+    * 资源使用量，单位：个数
     */
     @SerializedName("Usage")
     @Expose
@@ -45,32 +45,32 @@ public class ResourceUsage extends AbstractModel {
     private ResourceUsageDetail [] Details;
 
     /**
-     * Get 资源类型 
-     * @return Name 资源类型
+     * Get 资源类型，参考k8s 官方资源 
+     * @return Name 资源类型，参考k8s 官方资源
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 资源类型
-     * @param Name 资源类型
+     * Set 资源类型，参考k8s 官方资源
+     * @param Name 资源类型，参考k8s 官方资源
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 资源使用量 
-     * @return Usage 资源使用量
+     * Get 资源使用量，单位：个数 
+     * @return Usage 资源使用量，单位：个数
      */
     public Long getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set 资源使用量
-     * @param Usage 资源使用量
+     * Set 资源使用量，单位：个数
+     * @param Usage 资源使用量，单位：个数
      */
     public void setUsage(Long Usage) {
         this.Usage = Usage;

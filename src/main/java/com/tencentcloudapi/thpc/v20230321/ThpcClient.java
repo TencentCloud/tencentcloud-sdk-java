@@ -299,6 +299,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *修改集群删除保护状态
+     * @param req ModifyClusterDeletionProtectionRequest
+     * @return ModifyClusterDeletionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterDeletionProtectionResponse ModifyClusterDeletionProtection(ModifyClusterDeletionProtectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterDeletionProtection", ModifyClusterDeletionProtectionResponse.class);
+    }
+
+    /**
      *本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
      * @param req ModifyInitNodeScriptsRequest
      * @return ModifyInitNodeScriptsResponse

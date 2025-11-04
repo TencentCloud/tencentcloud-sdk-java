@@ -53,7 +53,7 @@ base-基础版本，common-通用版本，enterprise-企业版本
     private String PackageVersion;
 
     /**
-    * 资源包大小，计算资源单位：万个；存储资源：GB
+    * 资源包大小，计算资源单位：个；存储资源：GB
     */
     @SerializedName("PackageSpec")
     @Expose
@@ -149,16 +149,16 @@ base-基础版本，common-通用版本，enterprise-企业版本
     }
 
     /**
-     * Get 资源包大小，计算资源单位：万个；存储资源：GB 
-     * @return PackageSpec 资源包大小，计算资源单位：万个；存储资源：GB
+     * Get 资源包大小，计算资源单位：个；存储资源：GB 
+     * @return PackageSpec 资源包大小，计算资源单位：个；存储资源：GB
      */
     public Float getPackageSpec() {
         return this.PackageSpec;
     }
 
     /**
-     * Set 资源包大小，计算资源单位：万个；存储资源：GB
-     * @param PackageSpec 资源包大小，计算资源单位：万个；存储资源：GB
+     * Set 资源包大小，计算资源单位：个；存储资源：GB
+     * @param PackageSpec 资源包大小，计算资源单位：个；存储资源：GB
      */
     public void setPackageSpec(Float PackageSpec) {
         this.PackageSpec = PackageSpec;

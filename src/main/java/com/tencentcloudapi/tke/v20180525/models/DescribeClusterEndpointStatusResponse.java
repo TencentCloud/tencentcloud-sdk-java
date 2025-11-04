@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClusterEndpointStatusResponse extends AbstractModel {
 
     /**
-    * 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
+    * 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启，CreateFailed 开启失败）
     */
     @SerializedName("Status")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启） 
-     * @return Status 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
+     * Get 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启，CreateFailed 开启失败） 
+     * @return Status 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启，CreateFailed 开启失败）
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
-     * @param Status 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
+     * Set 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启，CreateFailed 开启失败）
+     * @param Status 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启，CreateFailed 开启失败）
      */
     public void setStatus(String Status) {
         this.Status = Status;

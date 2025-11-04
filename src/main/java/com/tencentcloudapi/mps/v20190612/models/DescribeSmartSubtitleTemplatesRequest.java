@@ -61,6 +61,15 @@ public class DescribeSmartSubtitleTemplatesRequest extends AbstractModel {
     private String Name;
 
     /**
+    * 字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
+    */
+    @SerializedName("ProcessType")
+    @Expose
+    private Long ProcessType;
+
+    /**
      * Get 智能字幕模板唯一标识过滤条件，数组长度限制：100。 
      * @return Definitions 智能字幕模板唯一标识过滤条件，数组长度限制：100。
      */
@@ -148,6 +157,30 @@ public class DescribeSmartSubtitleTemplatesRequest extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get 字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译 
+     * @return ProcessType 字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
+     */
+    public Long getProcessType() {
+        return this.ProcessType;
+    }
+
+    /**
+     * Set 字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
+     * @param ProcessType 字幕处理类型：
+- 0：ASR识别字幕
+- 1：纯字幕翻译
+     */
+    public void setProcessType(Long ProcessType) {
+        this.ProcessType = ProcessType;
+    }
+
     public DescribeSmartSubtitleTemplatesRequest() {
     }
 
@@ -174,6 +207,9 @@ public class DescribeSmartSubtitleTemplatesRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.ProcessType != null) {
+            this.ProcessType = new Long(source.ProcessType);
+        }
     }
 
 
@@ -186,6 +222,7 @@ public class DescribeSmartSubtitleTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
 
     }
 }
