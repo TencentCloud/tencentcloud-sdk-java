@@ -130,6 +130,13 @@ public class RuleInput extends AbstractModel {
     private MultiCertInfo MultiCertInfo;
 
     /**
+    * 自定义cookie名
+    */
+    @SerializedName("CookieName")
+    @Expose
+    private String CookieName;
+
+    /**
      * Get 转发规则的路径。长度限制为：1~200。 
      * @return Url 转发规则的路径。长度限制为：1~200。
      */
@@ -373,6 +380,22 @@ public class RuleInput extends AbstractModel {
         this.MultiCertInfo = MultiCertInfo;
     }
 
+    /**
+     * Get 自定义cookie名 
+     * @return CookieName 自定义cookie名
+     */
+    public String getCookieName() {
+        return this.CookieName;
+    }
+
+    /**
+     * Set 自定义cookie名
+     * @param CookieName 自定义cookie名
+     */
+    public void setCookieName(String CookieName) {
+        this.CookieName = CookieName;
+    }
+
     public RuleInput() {
     }
 
@@ -429,6 +452,9 @@ public class RuleInput extends AbstractModel {
         if (source.MultiCertInfo != null) {
             this.MultiCertInfo = new MultiCertInfo(source.MultiCertInfo);
         }
+        if (source.CookieName != null) {
+            this.CookieName = new String(source.CookieName);
+        }
     }
 
 
@@ -451,6 +477,7 @@ public class RuleInput extends AbstractModel {
         this.setParamSimple(map, prefix + "Quic", this.Quic);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
+        this.setParamSimple(map, prefix + "CookieName", this.CookieName);
 
     }
 }

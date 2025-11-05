@@ -108,7 +108,7 @@ public class CreateWorkspacesRequest extends AbstractModel {
     private String SpaceName;
 
     /**
-    * 工作空间登陆设置
+    * 工作空间登录设置
     */
     @SerializedName("LoginSettings")
     @Expose
@@ -370,16 +370,16 @@ public class CreateWorkspacesRequest extends AbstractModel {
     }
 
     /**
-     * Get 工作空间登陆设置 
-     * @return LoginSettings 工作空间登陆设置
+     * Get 工作空间登录设置 
+     * @return LoginSettings 工作空间登录设置
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set 工作空间登陆设置
-     * @param LoginSettings 工作空间登陆设置
+     * Set 工作空间登录设置
+     * @param LoginSettings 工作空间登录设置
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;

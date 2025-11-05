@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeClusterInstancesRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
     */
     @SerializedName("ClusterId")
     @Expose
@@ -51,7 +51,8 @@ major 大版本原地升级
     private String UpgradeType;
 
     /**
-    * 需要升级的节点列表
+    * 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
+](https://cloud.tencent.com/document/api/457/50366) 获取
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -65,7 +66,7 @@ major 大版本原地升级
     private UpgradeNodeResetParam ResetParam;
 
     /**
-    * 是否忽略节点升级前检查
+    * 是否忽略节点升级前检查，默认值 false
     */
     @SerializedName("SkipPreCheck")
     @Expose
@@ -86,16 +87,16 @@ major 大版本原地升级
     private Boolean UpgradeRunTime;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ） 
+     * @return ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+     * @param ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -158,16 +159,20 @@ major 大版本原地升级
     }
 
     /**
-     * Get 需要升级的节点列表 
-     * @return InstanceIds 需要升级的节点列表
+     * Get 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
+](https://cloud.tencent.com/document/api/457/50366) 获取 
+     * @return InstanceIds 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
+](https://cloud.tencent.com/document/api/457/50366) 获取
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 需要升级的节点列表
-     * @param InstanceIds 需要升级的节点列表
+     * Set 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
+](https://cloud.tencent.com/document/api/457/50366) 获取
+     * @param InstanceIds 需要升级的节点列表，可以通过控制台或 [查询待升级节点接口
+](https://cloud.tencent.com/document/api/457/50366) 获取
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -190,16 +195,16 @@ major 大版本原地升级
     }
 
     /**
-     * Get 是否忽略节点升级前检查 
-     * @return SkipPreCheck 是否忽略节点升级前检查
+     * Get 是否忽略节点升级前检查，默认值 false 
+     * @return SkipPreCheck 是否忽略节点升级前检查，默认值 false
      */
     public Boolean getSkipPreCheck() {
         return this.SkipPreCheck;
     }
 
     /**
-     * Set 是否忽略节点升级前检查
-     * @param SkipPreCheck 是否忽略节点升级前检查
+     * Set 是否忽略节点升级前检查，默认值 false
+     * @param SkipPreCheck 是否忽略节点升级前检查，默认值 false
      */
     public void setSkipPreCheck(Boolean SkipPreCheck) {
         this.SkipPreCheck = SkipPreCheck;

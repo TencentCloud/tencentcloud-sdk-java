@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClusterInstancesRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
     */
     @SerializedName("ClusterId")
     @Expose
@@ -45,14 +45,20 @@ public class DescribeClusterInstancesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
+    * 需要获取的节点实例 ID 列表。如果为空，表示拉取集群下所有节点实例。普通节点用 CVM ID（如 ins-1cghhuuu ），原生节点用节点池内机器 ID （如 np-1ade4uid-0a2dc ）。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+    * 节点角色，默认为WORKER类型
+
+- WOKRER 集群内常规计算节点
+- MASTER 独立集群控制面组件节点
+- ETCD 独立集群 etcd 存储节点
+- MASTER_ETCD 独立集群控制面、etcd 共同部署的 master 节点
+
     */
     @SerializedName("InstanceRole")
     @Expose
@@ -66,16 +72,16 @@ public class DescribeClusterInstancesRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ） 
+     * @return ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+     * @param ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -114,32 +120,56 @@ public class DescribeClusterInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。 
-     * @return InstanceIds 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
+     * Get 需要获取的节点实例 ID 列表。如果为空，表示拉取集群下所有节点实例。普通节点用 CVM ID（如 ins-1cghhuuu ），原生节点用节点池内机器 ID （如 np-1ade4uid-0a2dc ）。 
+     * @return InstanceIds 需要获取的节点实例 ID 列表。如果为空，表示拉取集群下所有节点实例。普通节点用 CVM ID（如 ins-1cghhuuu ），原生节点用节点池内机器 ID （如 np-1ade4uid-0a2dc ）。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
-     * @param InstanceIds 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
+     * Set 需要获取的节点实例 ID 列表。如果为空，表示拉取集群下所有节点实例。普通节点用 CVM ID（如 ins-1cghhuuu ），原生节点用节点池内机器 ID （如 np-1ade4uid-0a2dc ）。
+     * @param InstanceIds 需要获取的节点实例 ID 列表。如果为空，表示拉取集群下所有节点实例。普通节点用 CVM ID（如 ins-1cghhuuu ），原生节点用节点池内机器 ID （如 np-1ade4uid-0a2dc ）。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。 
-     * @return InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+     * Get 节点角色，默认为WORKER类型
+
+- WOKRER 集群内常规计算节点
+- MASTER 独立集群控制面组件节点
+- ETCD 独立集群 etcd 存储节点
+- MASTER_ETCD 独立集群控制面、etcd 共同部署的 master 节点
+ 
+     * @return InstanceRole 节点角色，默认为WORKER类型
+
+- WOKRER 集群内常规计算节点
+- MASTER 独立集群控制面组件节点
+- ETCD 独立集群 etcd 存储节点
+- MASTER_ETCD 独立集群控制面、etcd 共同部署的 master 节点
+
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * Set 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
-     * @param InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+     * Set 节点角色，默认为WORKER类型
+
+- WOKRER 集群内常规计算节点
+- MASTER 独立集群控制面组件节点
+- ETCD 独立集群 etcd 存储节点
+- MASTER_ETCD 独立集群控制面、etcd 共同部署的 master 节点
+
+     * @param InstanceRole 节点角色，默认为WORKER类型
+
+- WOKRER 集群内常规计算节点
+- MASTER 独立集群控制面组件节点
+- ETCD 独立集群 etcd 存储节点
+- MASTER_ETCD 独立集群控制面、etcd 共同部署的 master 节点
+
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;

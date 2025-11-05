@@ -52,7 +52,7 @@ public class DescribeCpuExpandHistoryRequest extends AbstractModel {
     private Long StartTime;
 
     /**
-    * 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
+    * 查询的结束时间，默认为当前时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
     */
     @SerializedName("EndTime")
     @Expose
@@ -66,7 +66,7 @@ public class DescribeCpuExpandHistoryRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 分页入参
+    * 分页入参，默认20
     */
     @SerializedName("Limit")
     @Expose
@@ -137,16 +137,16 @@ public class DescribeCpuExpandHistoryRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。 
-     * @return EndTime 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
+     * Get 查询的结束时间，默认为当前时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。 
+     * @return EndTime 查询的结束时间，默认为当前时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
-     * @param EndTime 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
+     * Set 查询的结束时间，默认为当前时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
+     * @param EndTime 查询的结束时间，默认为当前时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
@@ -169,16 +169,16 @@ public class DescribeCpuExpandHistoryRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页入参 
-     * @return Limit 分页入参
+     * Get 分页入参，默认20 
+     * @return Limit 分页入参，默认20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页入参
-     * @param Limit 分页入参
+     * Set 分页入参，默认20
+     * @param Limit 分页入参，默认20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

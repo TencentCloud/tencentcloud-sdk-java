@@ -173,7 +173,7 @@ Condition互斥。
     private MultiCondition [] MultiConditions;
 
     /**
-    * 云监控通知渠道相关信息，和AlarmNoticeIds互斥
+    * 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
     */
     @SerializedName("MonitorNotice")
     @Expose
@@ -524,16 +524,16 @@ Condition互斥。
     }
 
     /**
-     * Get 云监控通知渠道相关信息，和AlarmNoticeIds互斥 
-     * @return MonitorNotice 云监控通知渠道相关信息，和AlarmNoticeIds互斥
+     * Get 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥 
+     * @return MonitorNotice 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
      */
     public MonitorNotice getMonitorNotice() {
         return this.MonitorNotice;
     }
 
     /**
-     * Set 云监控通知渠道相关信息，和AlarmNoticeIds互斥
-     * @param MonitorNotice 云监控通知渠道相关信息，和AlarmNoticeIds互斥
+     * Set 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
+     * @param MonitorNotice 腾讯云可观测平台通知渠道相关信息，和AlarmNoticeIds互斥
      */
     public void setMonitorNotice(MonitorNotice MonitorNotice) {
         this.MonitorNotice = MonitorNotice;

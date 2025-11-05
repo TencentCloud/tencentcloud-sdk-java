@@ -31,7 +31,7 @@ public class DomainInfo extends AbstractModel {
     private Long DomainId;
 
     /**
-    * 域名状态
+    * 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
     */
     @SerializedName("Status")
     @Expose
@@ -59,7 +59,7 @@ public class DomainInfo extends AbstractModel {
     private String IsMark;
 
     /**
-    * TTL(DNS记录缓存时间)
+    * TTL(DNS记录缓存时间)，单位：秒
     */
     @SerializedName("TTL")
     @Expose
@@ -87,7 +87,7 @@ public class DomainInfo extends AbstractModel {
     private String Punycode;
 
     /**
-    * 域名DNS状态
+    * 域名DNS状态，错误：dnserror，正常：空字符串
     */
     @SerializedName("DnsStatus")
     @Expose
@@ -275,16 +275,16 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名状态 
-     * @return Status 域名状态
+     * Get 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM 
+     * @return Status 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 域名状态
-     * @param Status 域名状态
+     * Set 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
+     * @param Status 域名状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -339,16 +339,16 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get TTL(DNS记录缓存时间) 
-     * @return TTL TTL(DNS记录缓存时间)
+     * Get TTL(DNS记录缓存时间)，单位：秒 
+     * @return TTL TTL(DNS记录缓存时间)，单位：秒
      */
     public Long getTTL() {
         return this.TTL;
     }
 
     /**
-     * Set TTL(DNS记录缓存时间)
-     * @param TTL TTL(DNS记录缓存时间)
+     * Set TTL(DNS记录缓存时间)，单位：秒
+     * @param TTL TTL(DNS记录缓存时间)，单位：秒
      */
     public void setTTL(Long TTL) {
         this.TTL = TTL;
@@ -403,16 +403,16 @@ public class DomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名DNS状态 
-     * @return DnsStatus 域名DNS状态
+     * Get 域名DNS状态，错误：dnserror，正常：空字符串 
+     * @return DnsStatus 域名DNS状态，错误：dnserror，正常：空字符串
      */
     public String getDnsStatus() {
         return this.DnsStatus;
     }
 
     /**
-     * Set 域名DNS状态
-     * @param DnsStatus 域名DNS状态
+     * Set 域名DNS状态，错误：dnserror，正常：空字符串
+     * @param DnsStatus 域名DNS状态，错误：dnserror，正常：空字符串
      */
     public void setDnsStatus(String DnsStatus) {
         this.DnsStatus = DnsStatus;

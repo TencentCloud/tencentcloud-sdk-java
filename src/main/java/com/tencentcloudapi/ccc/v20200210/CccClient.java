@@ -333,6 +333,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *获取智能体列表
+     * @param req DescribeAIAgentInfoListRequest
+     * @return DescribeAIAgentInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIAgentInfoListResponse DescribeAIAgentInfoList(DescribeAIAgentInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIAgentInfoList", DescribeAIAgentInfoListResponse.class);
+    }
+
+    /**
      *获取 AI 会话分析结果
      * @param req DescribeAIAnalysisResultRequest
      * @return DescribeAIAnalysisResultResponse

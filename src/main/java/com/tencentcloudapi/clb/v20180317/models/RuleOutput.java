@@ -196,6 +196,13 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
     private OAuth OAuth;
 
     /**
+    * 自定义cookie名。
+    */
+    @SerializedName("CookieName")
+    @Expose
+    private String CookieName;
+
+    /**
      * Get 转发规则的 ID 
      * @return LocationId 转发规则的 ID
      */
@@ -595,6 +602,22 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
         this.OAuth = OAuth;
     }
 
+    /**
+     * Get 自定义cookie名。 
+     * @return CookieName 自定义cookie名。
+     */
+    public String getCookieName() {
+        return this.CookieName;
+    }
+
+    /**
+     * Set 自定义cookie名。
+     * @param CookieName 自定义cookie名。
+     */
+    public void setCookieName(String CookieName) {
+        this.CookieName = CookieName;
+    }
+
     public RuleOutput() {
     }
 
@@ -681,6 +704,9 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
         if (source.OAuth != null) {
             this.OAuth = new OAuth(source.OAuth);
         }
+        if (source.CookieName != null) {
+            this.CookieName = new String(source.CookieName);
+        }
     }
 
 
@@ -712,6 +738,7 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
         this.setParamObj(map, prefix + "OAuth.", this.OAuth);
+        this.setParamSimple(map, prefix + "CookieName", this.CookieName);
 
     }
 }

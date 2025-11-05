@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DeleteClusterInstancesRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 主机InstanceId列表
+    * 主机 InstanceId 列表
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -52,32 +52,39 @@ public class DeleteClusterInstancesRequest extends AbstractModel {
     private Boolean ForceDelete;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+    */
+    @SerializedName("ResourceDeleteOptions")
+    @Expose
+    private ResourceDeleteOption [] ResourceDeleteOptions;
+
+    /**
+     * Get 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ） 
+     * @return ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+     * @param ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 主机InstanceId列表 
-     * @return InstanceIds 主机InstanceId列表
+     * Get 主机 InstanceId 列表 
+     * @return InstanceIds 主机 InstanceId 列表
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 主机InstanceId列表
-     * @param InstanceIds 主机InstanceId列表
+     * Set 主机 InstanceId 列表
+     * @param InstanceIds 主机 InstanceId 列表
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -115,6 +122,22 @@ public class DeleteClusterInstancesRequest extends AbstractModel {
         this.ForceDelete = ForceDelete;
     }
 
+    /**
+     * Get 集群删除时资源的删除策略，目前支持CBS（默认保留CBS） 
+     * @return ResourceDeleteOptions 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+     */
+    public ResourceDeleteOption [] getResourceDeleteOptions() {
+        return this.ResourceDeleteOptions;
+    }
+
+    /**
+     * Set 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+     * @param ResourceDeleteOptions 集群删除时资源的删除策略，目前支持CBS（默认保留CBS）
+     */
+    public void setResourceDeleteOptions(ResourceDeleteOption [] ResourceDeleteOptions) {
+        this.ResourceDeleteOptions = ResourceDeleteOptions;
+    }
+
     public DeleteClusterInstancesRequest() {
     }
 
@@ -138,6 +161,12 @@ public class DeleteClusterInstancesRequest extends AbstractModel {
         if (source.ForceDelete != null) {
             this.ForceDelete = new Boolean(source.ForceDelete);
         }
+        if (source.ResourceDeleteOptions != null) {
+            this.ResourceDeleteOptions = new ResourceDeleteOption[source.ResourceDeleteOptions.length];
+            for (int i = 0; i < source.ResourceDeleteOptions.length; i++) {
+                this.ResourceDeleteOptions[i] = new ResourceDeleteOption(source.ResourceDeleteOptions[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class DeleteClusterInstancesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "InstanceDeleteMode", this.InstanceDeleteMode);
         this.setParamSimple(map, prefix + "ForceDelete", this.ForceDelete);
+        this.setParamArrayObj(map, prefix + "ResourceDeleteOptions.", this.ResourceDeleteOptions);
 
     }
 }

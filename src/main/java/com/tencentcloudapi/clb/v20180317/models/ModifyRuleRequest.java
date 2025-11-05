@@ -103,6 +103,13 @@ public class ModifyRuleRequest extends AbstractModel {
     private OAuth OAuth;
 
     /**
+    * 自定义cookie名
+    */
+    @SerializedName("CookieName")
+    @Expose
+    private String CookieName;
+
+    /**
      * Get 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。 
      * @return LoadBalancerId 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
@@ -286,6 +293,22 @@ public class ModifyRuleRequest extends AbstractModel {
         this.OAuth = OAuth;
     }
 
+    /**
+     * Get 自定义cookie名 
+     * @return CookieName 自定义cookie名
+     */
+    public String getCookieName() {
+        return this.CookieName;
+    }
+
+    /**
+     * Set 自定义cookie名
+     * @param CookieName 自定义cookie名
+     */
+    public void setCookieName(String CookieName) {
+        this.CookieName = CookieName;
+    }
+
     public ModifyRuleRequest() {
     }
 
@@ -327,6 +350,9 @@ public class ModifyRuleRequest extends AbstractModel {
         if (source.OAuth != null) {
             this.OAuth = new OAuth(source.OAuth);
         }
+        if (source.CookieName != null) {
+            this.CookieName = new String(source.CookieName);
+        }
     }
 
 
@@ -345,6 +371,7 @@ public class ModifyRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         this.setParamObj(map, prefix + "OAuth.", this.OAuth);
+        this.setParamSimple(map, prefix + "CookieName", this.CookieName);
 
     }
 }

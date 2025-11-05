@@ -3718,6 +3718,17 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *卸载集群容器安全
+     * @param req UninstallClusterContainerSecurityRequest
+     * @return UninstallClusterContainerSecurityResponse
+     * @throws TencentCloudSDKException
+     */
+    public UninstallClusterContainerSecurityResponse UninstallClusterContainerSecurity(UninstallClusterContainerSecurityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UninstallClusterContainerSecurity", UninstallClusterContainerSecurityResponse.class);
+    }
+
+    /**
      *容器网络创建网络策略更新并发布任务
      * @param req UpdateAndPublishNetworkFirewallPolicyDetailRequest
      * @return UpdateAndPublishNetworkFirewallPolicyDetailResponse

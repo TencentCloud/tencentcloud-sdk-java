@@ -87,6 +87,13 @@ public class CreateInvokerRequest extends AbstractModel {
     private ScheduleSettings ScheduleSettings;
 
     /**
+    * 为命令关联的标签，列表长度不超过10
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 执行器名称。长度不超过 120 字符。 
      * @return Name 执行器名称。长度不超过 120 字符。
      */
@@ -254,6 +261,22 @@ public class CreateInvokerRequest extends AbstractModel {
         this.ScheduleSettings = ScheduleSettings;
     }
 
+    /**
+     * Get 为命令关联的标签，列表长度不超过10 
+     * @return Tags 为命令关联的标签，列表长度不超过10
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 为命令关联的标签，列表长度不超过10
+     * @param Tags 为命令关联的标签，列表长度不超过10
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateInvokerRequest() {
     }
 
@@ -286,6 +309,12 @@ public class CreateInvokerRequest extends AbstractModel {
         if (source.ScheduleSettings != null) {
             this.ScheduleSettings = new ScheduleSettings(source.ScheduleSettings);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -300,6 +329,7 @@ public class CreateInvokerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Parameters", this.Parameters);
         this.setParamObj(map, prefix + "ScheduleSettings.", this.ScheduleSettings);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

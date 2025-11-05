@@ -59,6 +59,41 @@ public class ModifyDataFlowRequest extends AbstractModel {
     private String SecretKey;
 
     /**
+    * KafkaConsumer 消费时使用的Topic参数
+    */
+    @SerializedName("UserKafkaTopic")
+    @Expose
+    private String UserKafkaTopic;
+
+    /**
+    * 服务地址
+    */
+    @SerializedName("ServerAddr")
+    @Expose
+    private String ServerAddr;
+
+    /**
+    * name
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
+    * Kafka消费用户密码
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
+    * 元数据增量更新开关；1开启，0关闭
+    */
+    @SerializedName("AutoRefresh")
+    @Expose
+    private Long AutoRefresh;
+
+    /**
      * Get 数据流动管理 ID ，通过查询数据流动接口获取 
      * @return DataFlowId 数据流动管理 ID ，通过查询数据流动接口获取
      */
@@ -138,6 +173,86 @@ public class ModifyDataFlowRequest extends AbstractModel {
         this.SecretKey = SecretKey;
     }
 
+    /**
+     * Get KafkaConsumer 消费时使用的Topic参数 
+     * @return UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
+     */
+    public String getUserKafkaTopic() {
+        return this.UserKafkaTopic;
+    }
+
+    /**
+     * Set KafkaConsumer 消费时使用的Topic参数
+     * @param UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
+     */
+    public void setUserKafkaTopic(String UserKafkaTopic) {
+        this.UserKafkaTopic = UserKafkaTopic;
+    }
+
+    /**
+     * Get 服务地址 
+     * @return ServerAddr 服务地址
+     */
+    public String getServerAddr() {
+        return this.ServerAddr;
+    }
+
+    /**
+     * Set 服务地址
+     * @param ServerAddr 服务地址
+     */
+    public void setServerAddr(String ServerAddr) {
+        this.ServerAddr = ServerAddr;
+    }
+
+    /**
+     * Get name 
+     * @return UserName name
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set name
+     * @param UserName name
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    /**
+     * Get Kafka消费用户密码 
+     * @return Password Kafka消费用户密码
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set Kafka消费用户密码
+     * @param Password Kafka消费用户密码
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    /**
+     * Get 元数据增量更新开关；1开启，0关闭 
+     * @return AutoRefresh 元数据增量更新开关；1开启，0关闭
+     */
+    public Long getAutoRefresh() {
+        return this.AutoRefresh;
+    }
+
+    /**
+     * Set 元数据增量更新开关；1开启，0关闭
+     * @param AutoRefresh 元数据增量更新开关；1开启，0关闭
+     */
+    public void setAutoRefresh(Long AutoRefresh) {
+        this.AutoRefresh = AutoRefresh;
+    }
+
     public ModifyDataFlowRequest() {
     }
 
@@ -161,6 +276,21 @@ public class ModifyDataFlowRequest extends AbstractModel {
         if (source.SecretKey != null) {
             this.SecretKey = new String(source.SecretKey);
         }
+        if (source.UserKafkaTopic != null) {
+            this.UserKafkaTopic = new String(source.UserKafkaTopic);
+        }
+        if (source.ServerAddr != null) {
+            this.ServerAddr = new String(source.ServerAddr);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.AutoRefresh != null) {
+            this.AutoRefresh = new Long(source.AutoRefresh);
+        }
     }
 
 
@@ -173,6 +303,11 @@ public class ModifyDataFlowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataFlowName", this.DataFlowName);
         this.setParamSimple(map, prefix + "SecretId", this.SecretId);
         this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
+        this.setParamSimple(map, prefix + "UserKafkaTopic", this.UserKafkaTopic);
+        this.setParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "AutoRefresh", this.AutoRefresh);
 
     }
 }

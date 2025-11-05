@@ -31,7 +31,7 @@ public class RemoveInstancesRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 云主机 ID 列表
+    * 云主机 ID 列表，调用[DescribeInstances](https://cloud.tencent.com/document/api/649/72342)查询已有的云主机列表
     */
     @SerializedName("InstanceIdList")
     @Expose
@@ -54,16 +54,16 @@ public class RemoveInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 云主机 ID 列表 
-     * @return InstanceIdList 云主机 ID 列表
+     * Get 云主机 ID 列表，调用[DescribeInstances](https://cloud.tencent.com/document/api/649/72342)查询已有的云主机列表 
+     * @return InstanceIdList 云主机 ID 列表，调用[DescribeInstances](https://cloud.tencent.com/document/api/649/72342)查询已有的云主机列表
      */
     public String [] getInstanceIdList() {
         return this.InstanceIdList;
     }
 
     /**
-     * Set 云主机 ID 列表
-     * @param InstanceIdList 云主机 ID 列表
+     * Set 云主机 ID 列表，调用[DescribeInstances](https://cloud.tencent.com/document/api/649/72342)查询已有的云主机列表
+     * @param InstanceIdList 云主机 ID 列表，调用[DescribeInstances](https://cloud.tencent.com/document/api/649/72342)查询已有的云主机列表
      */
     public void setInstanceIdList(String [] InstanceIdList) {
         this.InstanceIdList = InstanceIdList;

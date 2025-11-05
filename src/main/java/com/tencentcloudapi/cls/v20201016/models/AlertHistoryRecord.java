@@ -137,7 +137,7 @@ public class AlertHistoryRecord extends AbstractModel {
     private Long MonitorObjectType;
 
     /**
-    * 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+    * 通知渠道类型，0默认代表cls内部通知渠道，1代表腾讯云可观测平台通知渠道
     */
     @SerializedName("SendType")
     @Expose
@@ -404,16 +404,16 @@ public class AlertHistoryRecord extends AbstractModel {
     }
 
     /**
-     * Get 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道 
-     * @return SendType 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+     * Get 通知渠道类型，0默认代表cls内部通知渠道，1代表腾讯云可观测平台通知渠道 
+     * @return SendType 通知渠道类型，0默认代表cls内部通知渠道，1代表腾讯云可观测平台通知渠道
      */
     public Long getSendType() {
         return this.SendType;
     }
 
     /**
-     * Set 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
-     * @param SendType 通知渠道类型，0默认代表cls内部通知渠道，1代表云监控通知渠道
+     * Set 通知渠道类型，0默认代表cls内部通知渠道，1代表腾讯云可观测平台通知渠道
+     * @param SendType 通知渠道类型，0默认代表cls内部通知渠道，1代表腾讯云可观测平台通知渠道
      */
     public void setSendType(Long SendType) {
         this.SendType = SendType;

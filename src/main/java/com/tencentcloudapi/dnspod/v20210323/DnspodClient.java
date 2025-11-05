@@ -73,8 +73,6 @@ public class DnspodClient extends AbstractClient{
 
     /**
      *添加域名
-
-备注：该接口不支持添加子域名。
      * @param req CreateDomainRequest
      * @return CreateDomainResponse
      * @throws TencentCloudSDKException
@@ -788,6 +786,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *批量修改域名CNAME加速状态
+     * @param req ModifyDomainCNAMESpeedupStatusBatchRequest
+     * @return ModifyDomainCNAMESpeedupStatusBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDomainCNAMESpeedupStatusBatchResponse ModifyDomainCNAMESpeedupStatusBatch(ModifyDomainCNAMESpeedupStatusBatchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDomainCNAMESpeedupStatusBatch", ModifyDomainCNAMESpeedupStatusBatchResponse.class);
+    }
+
+    /**
      *修改域名的自定义线路
      * @param req ModifyDomainCustomLineRequest
      * @return ModifyDomainCustomLineResponse
@@ -818,6 +827,17 @@ public class DnspodClient extends AbstractClient{
     public ModifyDomainOwnerResponse ModifyDomainOwner(ModifyDomainOwnerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDomainOwner", ModifyDomainOwnerResponse.class);
+    }
+
+    /**
+     *批量修改域名递归解析加速状态
+     * @param req ModifyDomainRecursiveStatusBatchRequest
+     * @return ModifyDomainRecursiveStatusBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDomainRecursiveStatusBatchResponse ModifyDomainRecursiveStatusBatch(ModifyDomainRecursiveStatusBatchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDomainRecursiveStatusBatch", ModifyDomainRecursiveStatusBatchResponse.class);
     }
 
     /**

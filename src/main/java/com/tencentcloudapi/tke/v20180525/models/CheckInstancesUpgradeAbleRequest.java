@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CheckInstancesUpgradeAbleRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
     */
     @SerializedName("ClusterId")
     @Expose
@@ -45,37 +45,42 @@ public class CheckInstancesUpgradeAbleRequest extends AbstractModel {
     private String UpgradeType;
 
     /**
-    * 分页Offset
+    * 偏移量，默认为0。关于 Offset 的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页Limit
+    * 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤
+    * 过滤条件列表，Name 可选值为ip、instanceId、hostname、label
+
+- Name 为 ip 时，Value 为待查询节点 ip
+- Name 为 hostname 时，Value 为待查询节点名称
+- Name 为 label 时，Value 为待查询 K8S 节点 label
+- Name 为 instanceId 时，Value 为 待查询节点 id
     */
     @SerializedName("Filter")
     @Expose
     private Filter [] Filter;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ） 
+     * @return ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
+     * @param ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -114,48 +119,68 @@ public class CheckInstancesUpgradeAbleRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页Offset 
-     * @return Offset 分页Offset
+     * Get 偏移量，默认为0。关于 Offset 的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。 
+     * @return Offset 偏移量，默认为0。关于 Offset 的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页Offset
-     * @param Offset 分页Offset
+     * Set 偏移量，默认为0。关于 Offset 的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @param Offset 偏移量，默认为0。关于 Offset 的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页Limit 
-     * @return Limit 分页Limit
+     * Get 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。 
+     * @return Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页Limit
-     * @param Limit 分页Limit
+     * Set 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @param Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤 
-     * @return Filter 过滤
+     * Get 过滤条件列表，Name 可选值为ip、instanceId、hostname、label
+
+- Name 为 ip 时，Value 为待查询节点 ip
+- Name 为 hostname 时，Value 为待查询节点名称
+- Name 为 label 时，Value 为待查询 K8S 节点 label
+- Name 为 instanceId 时，Value 为 待查询节点 id 
+     * @return Filter 过滤条件列表，Name 可选值为ip、instanceId、hostname、label
+
+- Name 为 ip 时，Value 为待查询节点 ip
+- Name 为 hostname 时，Value 为待查询节点名称
+- Name 为 label 时，Value 为待查询 K8S 节点 label
+- Name 为 instanceId 时，Value 为 待查询节点 id
      */
     public Filter [] getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 过滤
-     * @param Filter 过滤
+     * Set 过滤条件列表，Name 可选值为ip、instanceId、hostname、label
+
+- Name 为 ip 时，Value 为待查询节点 ip
+- Name 为 hostname 时，Value 为待查询节点名称
+- Name 为 label 时，Value 为待查询 K8S 节点 label
+- Name 为 instanceId 时，Value 为 待查询节点 id
+     * @param Filter 过滤条件列表，Name 可选值为ip、instanceId、hostname、label
+
+- Name 为 ip 时，Value 为待查询节点 ip
+- Name 为 hostname 时，Value 为待查询节点名称
+- Name 为 label 时，Value 为待查询 K8S 节点 label
+- Name 为 instanceId 时，Value 为 待查询节点 id
      */
     public void setFilter(Filter [] Filter) {
         this.Filter = Filter;

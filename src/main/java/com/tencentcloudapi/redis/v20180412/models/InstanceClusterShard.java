@@ -98,6 +98,20 @@ public class InstanceClusterShard extends AbstractModel {
     private Long Connected;
 
     /**
+    * 可用区信息。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * 节点组 ID。
+    */
+    @SerializedName("ReplicasNodeId")
+    @Expose
+    private Long ReplicasNodeId;
+
+    /**
      * Get 分片节点名称。 
      * @return ShardName 分片节点名称。
      */
@@ -273,6 +287,38 @@ public class InstanceClusterShard extends AbstractModel {
         this.Connected = Connected;
     }
 
+    /**
+     * Get 可用区信息。 
+     * @return ZoneId 可用区信息。
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 可用区信息。
+     * @param ZoneId 可用区信息。
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get 节点组 ID。 
+     * @return ReplicasNodeId 节点组 ID。
+     */
+    public Long getReplicasNodeId() {
+        return this.ReplicasNodeId;
+    }
+
+    /**
+     * Set 节点组 ID。
+     * @param ReplicasNodeId 节点组 ID。
+     */
+    public void setReplicasNodeId(Long ReplicasNodeId) {
+        this.ReplicasNodeId = ReplicasNodeId;
+    }
+
     public InstanceClusterShard() {
     }
 
@@ -311,6 +357,12 @@ public class InstanceClusterShard extends AbstractModel {
         if (source.Connected != null) {
             this.Connected = new Long(source.Connected);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.ReplicasNodeId != null) {
+            this.ReplicasNodeId = new Long(source.ReplicasNodeId);
+        }
     }
 
 
@@ -328,6 +380,8 @@ public class InstanceClusterShard extends AbstractModel {
         this.setParamSimple(map, prefix + "Runid", this.Runid);
         this.setParamSimple(map, prefix + "RunId", this.RunId);
         this.setParamSimple(map, prefix + "Connected", this.Connected);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "ReplicasNodeId", this.ReplicasNodeId);
 
     }
 }

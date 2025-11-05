@@ -45,7 +45,7 @@ public class UserInfo extends AbstractModel {
     private String Email;
 
     /**
-    * 账号状态：”enabled”: 正常；”disabled”: 被封禁
+    * 账号状态: "enabled": 正常; "disabled": 被封禁
     */
     @SerializedName("Status")
     @Expose
@@ -59,14 +59,14 @@ public class UserInfo extends AbstractModel {
     private String Telephone;
 
     /**
-    * 邮箱是否通过验证：”yes”: 通过；”no”: 未通过
+    * 邮箱是否通过验证："yes": 通过; "no": 未通过
     */
     @SerializedName("EmailVerified")
     @Expose
     private String EmailVerified;
 
     /**
-    * 手机是否通过验证：”yes”: 通过；”no”: 未通过
+    * 手机是否通过验证："yes": 通过； "no": 未通过
     */
     @SerializedName("TelephoneVerified")
     @Expose
@@ -87,7 +87,7 @@ public class UserInfo extends AbstractModel {
     private String RealName;
 
     /**
-    * 是否绑定微信：”yes”: 通过；”no”: 未通过
+    * 是否绑定微信： "yes": 通过； "no": 未通过
     */
     @SerializedName("WechatBinded")
     @Expose
@@ -163,16 +163,16 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 账号状态：”enabled”: 正常；”disabled”: 被封禁 
-     * @return Status 账号状态：”enabled”: 正常；”disabled”: 被封禁
+     * Get 账号状态: "enabled": 正常; "disabled": 被封禁 
+     * @return Status 账号状态: "enabled": 正常; "disabled": 被封禁
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 账号状态：”enabled”: 正常；”disabled”: 被封禁
-     * @param Status 账号状态：”enabled”: 正常；”disabled”: 被封禁
+     * Set 账号状态: "enabled": 正常; "disabled": 被封禁
+     * @param Status 账号状态: "enabled": 正常; "disabled": 被封禁
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -195,32 +195,32 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 邮箱是否通过验证：”yes”: 通过；”no”: 未通过 
-     * @return EmailVerified 邮箱是否通过验证：”yes”: 通过；”no”: 未通过
+     * Get 邮箱是否通过验证："yes": 通过; "no": 未通过 
+     * @return EmailVerified 邮箱是否通过验证："yes": 通过; "no": 未通过
      */
     public String getEmailVerified() {
         return this.EmailVerified;
     }
 
     /**
-     * Set 邮箱是否通过验证：”yes”: 通过；”no”: 未通过
-     * @param EmailVerified 邮箱是否通过验证：”yes”: 通过；”no”: 未通过
+     * Set 邮箱是否通过验证："yes": 通过; "no": 未通过
+     * @param EmailVerified 邮箱是否通过验证："yes": 通过; "no": 未通过
      */
     public void setEmailVerified(String EmailVerified) {
         this.EmailVerified = EmailVerified;
     }
 
     /**
-     * Get 手机是否通过验证：”yes”: 通过；”no”: 未通过 
-     * @return TelephoneVerified 手机是否通过验证：”yes”: 通过；”no”: 未通过
+     * Get 手机是否通过验证："yes": 通过； "no": 未通过 
+     * @return TelephoneVerified 手机是否通过验证："yes": 通过； "no": 未通过
      */
     public String getTelephoneVerified() {
         return this.TelephoneVerified;
     }
 
     /**
-     * Set 手机是否通过验证：”yes”: 通过；”no”: 未通过
-     * @param TelephoneVerified 手机是否通过验证：”yes”: 通过；”no”: 未通过
+     * Set 手机是否通过验证："yes": 通过； "no": 未通过
+     * @param TelephoneVerified 手机是否通过验证："yes": 通过； "no": 未通过
      */
     public void setTelephoneVerified(String TelephoneVerified) {
         this.TelephoneVerified = TelephoneVerified;
@@ -259,16 +259,16 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否绑定微信：”yes”: 通过；”no”: 未通过 
-     * @return WechatBinded 是否绑定微信：”yes”: 通过；”no”: 未通过
+     * Get 是否绑定微信： "yes": 通过； "no": 未通过 
+     * @return WechatBinded 是否绑定微信： "yes": 通过； "no": 未通过
      */
     public String getWechatBinded() {
         return this.WechatBinded;
     }
 
     /**
-     * Set 是否绑定微信：”yes”: 通过；”no”: 未通过
-     * @param WechatBinded 是否绑定微信：”yes”: 通过；”no”: 未通过
+     * Set 是否绑定微信： "yes": 通过； "no": 未通过
+     * @param WechatBinded 是否绑定微信： "yes": 通过； "no": 未通过
      */
     public void setWechatBinded(String WechatBinded) {
         this.WechatBinded = WechatBinded;

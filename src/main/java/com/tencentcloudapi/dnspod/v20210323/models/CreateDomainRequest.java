@@ -38,7 +38,7 @@ public class CreateDomainRequest extends AbstractModel {
     private Long GroupId;
 
     /**
-    * 是否星标域名，”yes”、”no” 分别代表是和否。
+    * 是否星标域名，"yes"、"no" 分别代表是和否。
     */
     @SerializedName("IsMark")
     @Expose
@@ -91,16 +91,16 @@ public class CreateDomainRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否星标域名，”yes”、”no” 分别代表是和否。 
-     * @return IsMark 是否星标域名，”yes”、”no” 分别代表是和否。
+     * Get 是否星标域名，"yes"、"no" 分别代表是和否。 
+     * @return IsMark 是否星标域名，"yes"、"no" 分别代表是和否。
      */
     public String getIsMark() {
         return this.IsMark;
     }
 
     /**
-     * Set 是否星标域名，”yes”、”no” 分别代表是和否。
-     * @param IsMark 是否星标域名，”yes”、”no” 分别代表是和否。
+     * Set 是否星标域名，"yes"、"no" 分别代表是和否。
+     * @param IsMark 是否星标域名，"yes"、"no" 分别代表是和否。
      */
     public void setIsMark(String IsMark) {
         this.IsMark = IsMark;

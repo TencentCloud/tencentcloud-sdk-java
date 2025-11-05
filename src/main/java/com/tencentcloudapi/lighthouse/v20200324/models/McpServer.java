@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class McpServer extends AbstractModel {
 
     /**
-    * MCP Server ID。
+    * MCP Server ID
     */
     @SerializedName("McpServerId")
     @Expose
@@ -38,7 +38,10 @@ public class McpServer extends AbstractModel {
     private String Name;
 
     /**
-    * MCP Server类型。枚举值：PUBLIC_PACKAGE，公共包安装；AGENT_GENERATED，AI生成。
+    * MCP Server类型。枚举值如下：
+
+<li>PUBLIC_PACKAGE：公共包安装</li>
+<li>AGENT_GENERATED：AI生成</li>
     */
     @SerializedName("McpServerType")
     @Expose
@@ -61,23 +64,23 @@ public class McpServer extends AbstractModel {
     /**
     * MCP Server状态。枚举值如下：
 
-PENDING：表示创建中
-LAUNCH_FAILED：表示创建失败
-RUNNING：表示运行中
-STOPPED：表示关闭
-STARTING：表示开启中
-STOPPING：表示关闭中
-RESTARTING：表示重启中
-REMOVING：表示删除中
-UNKNOWN：表示未知
-ENV_ERROR：表示环境错误
+<li>PENDING：表示创建中</li>
+<li>LAUNCH_FAILED：表示创建失败</li>
+<li>RUNNING：表示运行中</li>
+<li>STOPPED：表示关闭</li>
+<li>STARTING：表示开启中</li>
+<li>STOPPING：表示关闭中</li>
+<li>RESTARTING：表示重启中</li>
+<li>REMOVING：表示删除中</li>
+<li>UNKNOWN：表示未知</li>
+<li>ENV_ERROR：表示环境错误</li>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * MCP Server访问地址。
+    * MCP Server访问地址。传输类型 TransportType 为 STREAMABLE_HTTP 时以 /mcp结尾，为 SSE 时以 /sse结尾。
     */
     @SerializedName("ServerUrl")
     @Expose
@@ -121,16 +124,26 @@ ENV_ERROR：表示环境错误
     private McpServerEnv [] EnvSet;
 
     /**
-     * Get MCP Server ID。 
-     * @return McpServerId MCP Server ID。
+    * 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+    */
+    @SerializedName("TransportType")
+    @Expose
+    private String TransportType;
+
+    /**
+     * Get MCP Server ID 
+     * @return McpServerId MCP Server ID
      */
     public String getMcpServerId() {
         return this.McpServerId;
     }
 
     /**
-     * Set MCP Server ID。
-     * @param McpServerId MCP Server ID。
+     * Set MCP Server ID
+     * @param McpServerId MCP Server ID
      */
     public void setMcpServerId(String McpServerId) {
         this.McpServerId = McpServerId;
@@ -153,16 +166,28 @@ ENV_ERROR：表示环境错误
     }
 
     /**
-     * Get MCP Server类型。枚举值：PUBLIC_PACKAGE，公共包安装；AGENT_GENERATED，AI生成。 
-     * @return McpServerType MCP Server类型。枚举值：PUBLIC_PACKAGE，公共包安装；AGENT_GENERATED，AI生成。
+     * Get MCP Server类型。枚举值如下：
+
+<li>PUBLIC_PACKAGE：公共包安装</li>
+<li>AGENT_GENERATED：AI生成</li> 
+     * @return McpServerType MCP Server类型。枚举值如下：
+
+<li>PUBLIC_PACKAGE：公共包安装</li>
+<li>AGENT_GENERATED：AI生成</li>
      */
     public String getMcpServerType() {
         return this.McpServerType;
     }
 
     /**
-     * Set MCP Server类型。枚举值：PUBLIC_PACKAGE，公共包安装；AGENT_GENERATED，AI生成。
-     * @param McpServerType MCP Server类型。枚举值：PUBLIC_PACKAGE，公共包安装；AGENT_GENERATED，AI生成。
+     * Set MCP Server类型。枚举值如下：
+
+<li>PUBLIC_PACKAGE：公共包安装</li>
+<li>AGENT_GENERATED：AI生成</li>
+     * @param McpServerType MCP Server类型。枚举值如下：
+
+<li>PUBLIC_PACKAGE：公共包安装</li>
+<li>AGENT_GENERATED：AI生成</li>
      */
     public void setMcpServerType(String McpServerType) {
         this.McpServerType = McpServerType;
@@ -203,28 +228,28 @@ ENV_ERROR：表示环境错误
     /**
      * Get MCP Server状态。枚举值如下：
 
-PENDING：表示创建中
-LAUNCH_FAILED：表示创建失败
-RUNNING：表示运行中
-STOPPED：表示关闭
-STARTING：表示开启中
-STOPPING：表示关闭中
-RESTARTING：表示重启中
-REMOVING：表示删除中
-UNKNOWN：表示未知
-ENV_ERROR：表示环境错误 
+<li>PENDING：表示创建中</li>
+<li>LAUNCH_FAILED：表示创建失败</li>
+<li>RUNNING：表示运行中</li>
+<li>STOPPED：表示关闭</li>
+<li>STARTING：表示开启中</li>
+<li>STOPPING：表示关闭中</li>
+<li>RESTARTING：表示重启中</li>
+<li>REMOVING：表示删除中</li>
+<li>UNKNOWN：表示未知</li>
+<li>ENV_ERROR：表示环境错误</li> 
      * @return State MCP Server状态。枚举值如下：
 
-PENDING：表示创建中
-LAUNCH_FAILED：表示创建失败
-RUNNING：表示运行中
-STOPPED：表示关闭
-STARTING：表示开启中
-STOPPING：表示关闭中
-RESTARTING：表示重启中
-REMOVING：表示删除中
-UNKNOWN：表示未知
-ENV_ERROR：表示环境错误
+<li>PENDING：表示创建中</li>
+<li>LAUNCH_FAILED：表示创建失败</li>
+<li>RUNNING：表示运行中</li>
+<li>STOPPED：表示关闭</li>
+<li>STARTING：表示开启中</li>
+<li>STOPPING：表示关闭中</li>
+<li>RESTARTING：表示重启中</li>
+<li>REMOVING：表示删除中</li>
+<li>UNKNOWN：表示未知</li>
+<li>ENV_ERROR：表示环境错误</li>
      */
     public String getState() {
         return this.State;
@@ -233,44 +258,44 @@ ENV_ERROR：表示环境错误
     /**
      * Set MCP Server状态。枚举值如下：
 
-PENDING：表示创建中
-LAUNCH_FAILED：表示创建失败
-RUNNING：表示运行中
-STOPPED：表示关闭
-STARTING：表示开启中
-STOPPING：表示关闭中
-RESTARTING：表示重启中
-REMOVING：表示删除中
-UNKNOWN：表示未知
-ENV_ERROR：表示环境错误
+<li>PENDING：表示创建中</li>
+<li>LAUNCH_FAILED：表示创建失败</li>
+<li>RUNNING：表示运行中</li>
+<li>STOPPED：表示关闭</li>
+<li>STARTING：表示开启中</li>
+<li>STOPPING：表示关闭中</li>
+<li>RESTARTING：表示重启中</li>
+<li>REMOVING：表示删除中</li>
+<li>UNKNOWN：表示未知</li>
+<li>ENV_ERROR：表示环境错误</li>
      * @param State MCP Server状态。枚举值如下：
 
-PENDING：表示创建中
-LAUNCH_FAILED：表示创建失败
-RUNNING：表示运行中
-STOPPED：表示关闭
-STARTING：表示开启中
-STOPPING：表示关闭中
-RESTARTING：表示重启中
-REMOVING：表示删除中
-UNKNOWN：表示未知
-ENV_ERROR：表示环境错误
+<li>PENDING：表示创建中</li>
+<li>LAUNCH_FAILED：表示创建失败</li>
+<li>RUNNING：表示运行中</li>
+<li>STOPPED：表示关闭</li>
+<li>STARTING：表示开启中</li>
+<li>STOPPING：表示关闭中</li>
+<li>RESTARTING：表示重启中</li>
+<li>REMOVING：表示删除中</li>
+<li>UNKNOWN：表示未知</li>
+<li>ENV_ERROR：表示环境错误</li>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get MCP Server访问地址。 
-     * @return ServerUrl MCP Server访问地址。
+     * Get MCP Server访问地址。传输类型 TransportType 为 STREAMABLE_HTTP 时以 /mcp结尾，为 SSE 时以 /sse结尾。 
+     * @return ServerUrl MCP Server访问地址。传输类型 TransportType 为 STREAMABLE_HTTP 时以 /mcp结尾，为 SSE 时以 /sse结尾。
      */
     public String getServerUrl() {
         return this.ServerUrl;
     }
 
     /**
-     * Set MCP Server访问地址。
-     * @param ServerUrl MCP Server访问地址。
+     * Set MCP Server访问地址。传输类型 TransportType 为 STREAMABLE_HTTP 时以 /mcp结尾，为 SSE 时以 /sse结尾。
+     * @param ServerUrl MCP Server访问地址。传输类型 TransportType 为 STREAMABLE_HTTP 时以 /mcp结尾，为 SSE 时以 /sse结尾。
      */
     public void setServerUrl(String ServerUrl) {
         this.ServerUrl = ServerUrl;
@@ -364,6 +389,34 @@ ENV_ERROR：表示环境错误
         this.EnvSet = EnvSet;
     }
 
+    /**
+     * Get 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li> 
+     * @return TransportType 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+     */
+    public String getTransportType() {
+        return this.TransportType;
+    }
+
+    /**
+     * Set 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+     * @param TransportType 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+     */
+    public void setTransportType(String TransportType) {
+        this.TransportType = TransportType;
+    }
+
     public McpServer() {
     }
 
@@ -411,6 +464,9 @@ ENV_ERROR：表示环境错误
                 this.EnvSet[i] = new McpServerEnv(source.EnvSet[i]);
             }
         }
+        if (source.TransportType != null) {
+            this.TransportType = new String(source.TransportType);
+        }
     }
 
 
@@ -430,6 +486,7 @@ ENV_ERROR：表示环境错误
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamArrayObj(map, prefix + "EnvSet.", this.EnvSet);
+        this.setParamSimple(map, prefix + "TransportType", this.TransportType);
 
     }
 }

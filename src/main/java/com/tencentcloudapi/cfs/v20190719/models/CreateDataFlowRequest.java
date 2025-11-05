@@ -80,6 +80,41 @@ public class CreateDataFlowRequest extends AbstractModel {
     private String DataFlowName;
 
     /**
+    *  0：不开启自动更新  1：开启自动更新
+    */
+    @SerializedName("AutoRefresh")
+    @Expose
+    private Long AutoRefresh;
+
+    /**
+    * KafkaConsumer 消费时使用的Topic参数
+    */
+    @SerializedName("UserKafkaTopic")
+    @Expose
+    private String UserKafkaTopic;
+
+    /**
+    * 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
+    */
+    @SerializedName("ServerAddr")
+    @Expose
+    private String ServerAddr;
+
+    /**
+    * Kafka消费用户名.示例值：name
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
+    * Kafka消费用户密码。默认${SecretId}#${SecretKey}。
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
      * Get 文件系统 ID ，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取 
      * @return FileSystemId 文件系统 ID ，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
      */
@@ -207,6 +242,86 @@ public class CreateDataFlowRequest extends AbstractModel {
         this.DataFlowName = DataFlowName;
     }
 
+    /**
+     * Get  0：不开启自动更新  1：开启自动更新 
+     * @return AutoRefresh  0：不开启自动更新  1：开启自动更新
+     */
+    public Long getAutoRefresh() {
+        return this.AutoRefresh;
+    }
+
+    /**
+     * Set  0：不开启自动更新  1：开启自动更新
+     * @param AutoRefresh  0：不开启自动更新  1：开启自动更新
+     */
+    public void setAutoRefresh(Long AutoRefresh) {
+        this.AutoRefresh = AutoRefresh;
+    }
+
+    /**
+     * Get KafkaConsumer 消费时使用的Topic参数 
+     * @return UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
+     */
+    public String getUserKafkaTopic() {
+        return this.UserKafkaTopic;
+    }
+
+    /**
+     * Set KafkaConsumer 消费时使用的Topic参数
+     * @param UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
+     */
+    public void setUserKafkaTopic(String UserKafkaTopic) {
+        this.UserKafkaTopic = UserKafkaTopic;
+    }
+
+    /**
+     * Get 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095 
+     * @return ServerAddr 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
+     */
+    public String getServerAddr() {
+        return this.ServerAddr;
+    }
+
+    /**
+     * Set 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
+     * @param ServerAddr 	服务地址 示例值：kafkaconsumer-ap-beijing.cls.tencentyun.com:9095
+     */
+    public void setServerAddr(String ServerAddr) {
+        this.ServerAddr = ServerAddr;
+    }
+
+    /**
+     * Get Kafka消费用户名.示例值：name 
+     * @return UserName Kafka消费用户名.示例值：name
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set Kafka消费用户名.示例值：name
+     * @param UserName Kafka消费用户名.示例值：name
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    /**
+     * Get Kafka消费用户密码。默认${SecretId}#${SecretKey}。 
+     * @return Password Kafka消费用户密码。默认${SecretId}#${SecretKey}。
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set Kafka消费用户密码。默认${SecretId}#${SecretKey}。
+     * @param Password Kafka消费用户密码。默认${SecretId}#${SecretKey}。
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
     public CreateDataFlowRequest() {
     }
 
@@ -239,6 +354,21 @@ public class CreateDataFlowRequest extends AbstractModel {
         if (source.DataFlowName != null) {
             this.DataFlowName = new String(source.DataFlowName);
         }
+        if (source.AutoRefresh != null) {
+            this.AutoRefresh = new Long(source.AutoRefresh);
+        }
+        if (source.UserKafkaTopic != null) {
+            this.UserKafkaTopic = new String(source.UserKafkaTopic);
+        }
+        if (source.ServerAddr != null) {
+            this.ServerAddr = new String(source.ServerAddr);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
     }
 
 
@@ -254,6 +384,11 @@ public class CreateDataFlowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SecretId", this.SecretId);
         this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
         this.setParamSimple(map, prefix + "DataFlowName", this.DataFlowName);
+        this.setParamSimple(map, prefix + "AutoRefresh", this.AutoRefresh);
+        this.setParamSimple(map, prefix + "UserKafkaTopic", this.UserKafkaTopic);
+        this.setParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "Password", this.Password);
 
     }
 }

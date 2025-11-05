@@ -66,14 +66,14 @@ public class ModifyTXTRecordRequest extends AbstractModel {
     private String SubDomain;
 
     /**
-    * 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+    * 线路的 ID，通过 API 记录线路获得，字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
     */
     @SerializedName("RecordLineId")
     @Expose
     private String RecordLineId;
 
     /**
-    * TTL，范围1-604800，不同等级域名最小值不同。
+    * TTL，范围1-604800，不同等级域名最小值不同。单位：秒
     */
     @SerializedName("TTL")
     @Expose
@@ -190,32 +190,32 @@ public class ModifyTXTRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。 
-     * @return RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * Get 线路的 ID，通过 API 记录线路获得，字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。 
+     * @return RecordLineId 线路的 ID，通过 API 记录线路获得，字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      */
     public String getRecordLineId() {
         return this.RecordLineId;
     }
 
     /**
-     * Set 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
-     * @param RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * Set 线路的 ID，通过 API 记录线路获得，字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @param RecordLineId 线路的 ID，通过 API 记录线路获得，字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      */
     public void setRecordLineId(String RecordLineId) {
         this.RecordLineId = RecordLineId;
     }
 
     /**
-     * Get TTL，范围1-604800，不同等级域名最小值不同。 
-     * @return TTL TTL，范围1-604800，不同等级域名最小值不同。
+     * Get TTL，范围1-604800，不同等级域名最小值不同。单位：秒 
+     * @return TTL TTL，范围1-604800，不同等级域名最小值不同。单位：秒
      */
     public Long getTTL() {
         return this.TTL;
     }
 
     /**
-     * Set TTL，范围1-604800，不同等级域名最小值不同。
-     * @param TTL TTL，范围1-604800，不同等级域名最小值不同。
+     * Set TTL，范围1-604800，不同等级域名最小值不同。单位：秒
+     * @param TTL TTL，范围1-604800，不同等级域名最小值不同。单位：秒
      */
     public void setTTL(Long TTL) {
         this.TTL = TTL;

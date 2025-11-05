@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeLifecycleDataTaskRequest extends AbstractModel {
 
     /**
-    * 开始时间
+    * 开始时间。须早于 EndTime ，仅支持查询最近3个月内的任务数据。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间。须晚于 StartTime ，仅支持查询最近3个月内的任务数据。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 	任务ID
+    * 任务ID
     */
     @SerializedName("TaskId")
     @Expose
@@ -66,48 +66,55 @@ public class DescribeLifecycleDataTaskRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+    * 文件系统版本；v3.1: pcfs/hifs v4.0:Turbo
+    */
+    @SerializedName("CfsVersion")
+    @Expose
+    private String CfsVersion;
+
+    /**
+     * Get 开始时间。须早于 EndTime ，仅支持查询最近3个月内的任务数据。 
+     * @return StartTime 开始时间。须早于 EndTime ，仅支持查询最近3个月内的任务数据。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间。须早于 EndTime ，仅支持查询最近3个月内的任务数据。
+     * @param StartTime 开始时间。须早于 EndTime ，仅支持查询最近3个月内的任务数据。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间。须晚于 StartTime ，仅支持查询最近3个月内的任务数据。 
+     * @return EndTime 结束时间。须晚于 StartTime ，仅支持查询最近3个月内的任务数据。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间。须晚于 StartTime ，仅支持查询最近3个月内的任务数据。
+     * @param EndTime 结束时间。须晚于 StartTime ，仅支持查询最近3个月内的任务数据。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 	任务ID 
-     * @return TaskId 	任务ID
+     * Get 任务ID 
+     * @return TaskId 任务ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 	任务ID
-     * @param TaskId 	任务ID
+     * Set 任务ID
+     * @param TaskId 任务ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -161,6 +168,22 @@ public class DescribeLifecycleDataTaskRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get 文件系统版本；v3.1: pcfs/hifs v4.0:Turbo 
+     * @return CfsVersion 文件系统版本；v3.1: pcfs/hifs v4.0:Turbo
+     */
+    public String getCfsVersion() {
+        return this.CfsVersion;
+    }
+
+    /**
+     * Set 文件系统版本；v3.1: pcfs/hifs v4.0:Turbo
+     * @param CfsVersion 文件系统版本；v3.1: pcfs/hifs v4.0:Turbo
+     */
+    public void setCfsVersion(String CfsVersion) {
+        this.CfsVersion = CfsVersion;
+    }
+
     public DescribeLifecycleDataTaskRequest() {
     }
 
@@ -190,6 +213,9 @@ public class DescribeLifecycleDataTaskRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.CfsVersion != null) {
+            this.CfsVersion = new String(source.CfsVersion);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class DescribeLifecycleDataTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "CfsVersion", this.CfsVersion);
 
     }
 }

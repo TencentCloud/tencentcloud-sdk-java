@@ -59,6 +59,16 @@ public class CreateMcpServerRequest extends AbstractModel {
     private McpServerEnv [] Envs;
 
     /**
+    * 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式。未传传输类型字段时，默认创建此类型的MCP Server</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+    */
+    @SerializedName("TransportType")
+    @Expose
+    private String TransportType;
+
+    /**
      * Get 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 
      * @return InstanceId 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
      */
@@ -138,6 +148,34 @@ public class CreateMcpServerRequest extends AbstractModel {
         this.Envs = Envs;
     }
 
+    /**
+     * Get 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式。未传传输类型字段时，默认创建此类型的MCP Server</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li> 
+     * @return TransportType 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式。未传传输类型字段时，默认创建此类型的MCP Server</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+     */
+    public String getTransportType() {
+        return this.TransportType;
+    }
+
+    /**
+     * Set 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式。未传传输类型字段时，默认创建此类型的MCP Server</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+     * @param TransportType 传输类型。枚举值如下：
+
+<li>STREAMABLE_HTTP：HTTP协议的流式传输方式。未传传输类型字段时，默认创建此类型的MCP Server</li>
+<li>SSE：Server-Sent Events，服务器发送事件</li>
+     */
+    public void setTransportType(String TransportType) {
+        this.TransportType = TransportType;
+    }
+
     public CreateMcpServerRequest() {
     }
 
@@ -164,6 +202,9 @@ public class CreateMcpServerRequest extends AbstractModel {
                 this.Envs[i] = new McpServerEnv(source.Envs[i]);
             }
         }
+        if (source.TransportType != null) {
+            this.TransportType = new String(source.TransportType);
+        }
     }
 
 
@@ -176,6 +217,7 @@ public class CreateMcpServerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "Envs.", this.Envs);
+        this.setParamSimple(map, prefix + "TransportType", this.TransportType);
 
     }
 }
