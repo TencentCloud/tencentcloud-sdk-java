@@ -139,6 +139,13 @@ public class CreateTopicRequest extends AbstractModel {
     private TopicExtendInfo Extends;
 
     /**
+    * 开启记录公网来源ip和服务端接收时间
+    */
+    @SerializedName("IsSourceFrom")
+    @Expose
+    private Boolean IsSourceFrom;
+
+    /**
      * Get 日志集ID
 - 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。 
      * @return LogsetId 日志集ID
@@ -430,6 +437,22 @@ public class CreateTopicRequest extends AbstractModel {
         this.Extends = Extends;
     }
 
+    /**
+     * Get 开启记录公网来源ip和服务端接收时间 
+     * @return IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     */
+    public Boolean getIsSourceFrom() {
+        return this.IsSourceFrom;
+    }
+
+    /**
+     * Set 开启记录公网来源ip和服务端接收时间
+     * @param IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     */
+    public void setIsSourceFrom(Boolean IsSourceFrom) {
+        this.IsSourceFrom = IsSourceFrom;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -483,6 +506,9 @@ public class CreateTopicRequest extends AbstractModel {
         if (source.Extends != null) {
             this.Extends = new TopicExtendInfo(source.Extends);
         }
+        if (source.IsSourceFrom != null) {
+            this.IsSourceFrom = new Boolean(source.IsSourceFrom);
+        }
     }
 
 
@@ -504,6 +530,7 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         this.setParamObj(map, prefix + "Extends.", this.Extends);
+        this.setParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
 
     }
 }

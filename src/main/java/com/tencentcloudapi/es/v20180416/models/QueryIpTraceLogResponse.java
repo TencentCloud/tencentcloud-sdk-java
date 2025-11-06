@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,36 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel {
+public class QueryIpTraceLogResponse extends AbstractModel {
 
     /**
-    * 加密秘钥id
+    * 总数
     */
-    @SerializedName("KeyId")
+    @SerializedName("Total")
     @Expose
-    private String KeyId;
+    private Long Total;
 
     /**
-    * 加密秘钥地域
-
+    * IP溯源日志列表
     */
-    @SerializedName("KeyRegion")
+    @SerializedName("IpTraceLogList")
     @Expose
-    private String KeyRegion;
-
-    /**
-    * 秘钥类型
-    */
-    @SerializedName("KeyType")
-    @Expose
-    private String KeyType;
-
-    /**
-    * 是否已经开启全局加密
-    */
-    @SerializedName("IsOpenGlobalEncryption")
-    @Expose
-    private Boolean IsOpenGlobalEncryption;
+    private IpTraceLogEntry [] IpTraceLogList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -60,71 +45,35 @@ public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 加密秘钥id 
-     * @return KeyId 加密秘钥id
+     * Get 总数 
+     * @return Total 总数
      */
-    public String getKeyId() {
-        return this.KeyId;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 加密秘钥id
-     * @param KeyId 加密秘钥id
+     * Set 总数
+     * @param Total 总数
      */
-    public void setKeyId(String KeyId) {
-        this.KeyId = KeyId;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
-     * Get 加密秘钥地域
- 
-     * @return KeyRegion 加密秘钥地域
-
+     * Get IP溯源日志列表 
+     * @return IpTraceLogList IP溯源日志列表
      */
-    public String getKeyRegion() {
-        return this.KeyRegion;
+    public IpTraceLogEntry [] getIpTraceLogList() {
+        return this.IpTraceLogList;
     }
 
     /**
-     * Set 加密秘钥地域
-
-     * @param KeyRegion 加密秘钥地域
-
+     * Set IP溯源日志列表
+     * @param IpTraceLogList IP溯源日志列表
      */
-    public void setKeyRegion(String KeyRegion) {
-        this.KeyRegion = KeyRegion;
-    }
-
-    /**
-     * Get 秘钥类型 
-     * @return KeyType 秘钥类型
-     */
-    public String getKeyType() {
-        return this.KeyType;
-    }
-
-    /**
-     * Set 秘钥类型
-     * @param KeyType 秘钥类型
-     */
-    public void setKeyType(String KeyType) {
-        this.KeyType = KeyType;
-    }
-
-    /**
-     * Get 是否已经开启全局加密 
-     * @return IsOpenGlobalEncryption 是否已经开启全局加密
-     */
-    public Boolean getIsOpenGlobalEncryption() {
-        return this.IsOpenGlobalEncryption;
-    }
-
-    /**
-     * Set 是否已经开启全局加密
-     * @param IsOpenGlobalEncryption 是否已经开启全局加密
-     */
-    public void setIsOpenGlobalEncryption(Boolean IsOpenGlobalEncryption) {
-        this.IsOpenGlobalEncryption = IsOpenGlobalEncryption;
+    public void setIpTraceLogList(IpTraceLogEntry [] IpTraceLogList) {
+        this.IpTraceLogList = IpTraceLogList;
     }
 
     /**
@@ -143,25 +92,22 @@ public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel
         this.RequestId = RequestId;
     }
 
-    public DescribeClusterTransparentEncryptInfoResponse() {
+    public QueryIpTraceLogResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClusterTransparentEncryptInfoResponse(DescribeClusterTransparentEncryptInfoResponse source) {
-        if (source.KeyId != null) {
-            this.KeyId = new String(source.KeyId);
+    public QueryIpTraceLogResponse(QueryIpTraceLogResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
-        if (source.KeyRegion != null) {
-            this.KeyRegion = new String(source.KeyRegion);
-        }
-        if (source.KeyType != null) {
-            this.KeyType = new String(source.KeyType);
-        }
-        if (source.IsOpenGlobalEncryption != null) {
-            this.IsOpenGlobalEncryption = new Boolean(source.IsOpenGlobalEncryption);
+        if (source.IpTraceLogList != null) {
+            this.IpTraceLogList = new IpTraceLogEntry[source.IpTraceLogList.length];
+            for (int i = 0; i < source.IpTraceLogList.length; i++) {
+                this.IpTraceLogList[i] = new IpTraceLogEntry(source.IpTraceLogList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -173,10 +119,8 @@ public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
-        this.setParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
-        this.setParamSimple(map, prefix + "KeyType", this.KeyType);
-        this.setParamSimple(map, prefix + "IsOpenGlobalEncryption", this.IsOpenGlobalEncryption);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "IpTraceLogList.", this.IpTraceLogList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

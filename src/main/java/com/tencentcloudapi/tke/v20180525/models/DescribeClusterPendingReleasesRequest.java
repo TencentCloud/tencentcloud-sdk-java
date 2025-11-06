@@ -45,7 +45,7 @@ public class DescribeClusterPendingReleasesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 集群类型
+    * 集群类型，支持传入tke（标准集群），eks（Serverless集群)，external（注册集群）
     */
     @SerializedName("ClusterType")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeClusterPendingReleasesRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群类型 
-     * @return ClusterType 集群类型
+     * Get 集群类型，支持传入tke（标准集群），eks（Serverless集群)，external（注册集群） 
+     * @return ClusterType 集群类型，支持传入tke（标准集群），eks（Serverless集群)，external（注册集群）
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型
-     * @param ClusterType 集群类型
+     * Set 集群类型，支持传入tke（标准集群），eks（Serverless集群)，external（注册集群）
+     * @param ClusterType 集群类型，支持传入tke（标准集群），eks（Serverless集群)，external（注册集群）
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

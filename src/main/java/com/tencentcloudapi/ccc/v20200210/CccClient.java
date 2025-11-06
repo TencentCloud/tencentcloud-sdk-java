@@ -830,6 +830,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *设置 staff 状态
+     * @param req SetStaffStatusRequest
+     * @return SetStaffStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetStaffStatusResponse SetStaffStatus(SetStaffStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetStaffStatus", SetStaffStatusResponse.class);
+    }
+
+    /**
      *停止自动外呼任务
      * @param req StopAutoCalloutTaskRequest
      * @return StopAutoCalloutTaskResponse

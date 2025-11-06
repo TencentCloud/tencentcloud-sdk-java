@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,36 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel {
+public class ApplyFreeCertificateResponse extends AbstractModel {
 
     /**
-    * 加密秘钥id
+    * 当 VerificationMethod 为 dns_challenge 时，域名申请免费证书的相关验证信息。
     */
-    @SerializedName("KeyId")
+    @SerializedName("DnsVerification")
     @Expose
-    private String KeyId;
+    private DnsVerification DnsVerification;
 
     /**
-    * 加密秘钥地域
-
+    * 当 VerificationMethod 为 http_challenge 时，域名申请免费证书的相关验证信息。
     */
-    @SerializedName("KeyRegion")
+    @SerializedName("FileVerification")
     @Expose
-    private String KeyRegion;
-
-    /**
-    * 秘钥类型
-    */
-    @SerializedName("KeyType")
-    @Expose
-    private String KeyType;
-
-    /**
-    * 是否已经开启全局加密
-    */
-    @SerializedName("IsOpenGlobalEncryption")
-    @Expose
-    private Boolean IsOpenGlobalEncryption;
+    private FileVerification FileVerification;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -60,71 +45,35 @@ public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 加密秘钥id 
-     * @return KeyId 加密秘钥id
+     * Get 当 VerificationMethod 为 dns_challenge 时，域名申请免费证书的相关验证信息。 
+     * @return DnsVerification 当 VerificationMethod 为 dns_challenge 时，域名申请免费证书的相关验证信息。
      */
-    public String getKeyId() {
-        return this.KeyId;
+    public DnsVerification getDnsVerification() {
+        return this.DnsVerification;
     }
 
     /**
-     * Set 加密秘钥id
-     * @param KeyId 加密秘钥id
+     * Set 当 VerificationMethod 为 dns_challenge 时，域名申请免费证书的相关验证信息。
+     * @param DnsVerification 当 VerificationMethod 为 dns_challenge 时，域名申请免费证书的相关验证信息。
      */
-    public void setKeyId(String KeyId) {
-        this.KeyId = KeyId;
+    public void setDnsVerification(DnsVerification DnsVerification) {
+        this.DnsVerification = DnsVerification;
     }
 
     /**
-     * Get 加密秘钥地域
- 
-     * @return KeyRegion 加密秘钥地域
-
+     * Get 当 VerificationMethod 为 http_challenge 时，域名申请免费证书的相关验证信息。 
+     * @return FileVerification 当 VerificationMethod 为 http_challenge 时，域名申请免费证书的相关验证信息。
      */
-    public String getKeyRegion() {
-        return this.KeyRegion;
+    public FileVerification getFileVerification() {
+        return this.FileVerification;
     }
 
     /**
-     * Set 加密秘钥地域
-
-     * @param KeyRegion 加密秘钥地域
-
+     * Set 当 VerificationMethod 为 http_challenge 时，域名申请免费证书的相关验证信息。
+     * @param FileVerification 当 VerificationMethod 为 http_challenge 时，域名申请免费证书的相关验证信息。
      */
-    public void setKeyRegion(String KeyRegion) {
-        this.KeyRegion = KeyRegion;
-    }
-
-    /**
-     * Get 秘钥类型 
-     * @return KeyType 秘钥类型
-     */
-    public String getKeyType() {
-        return this.KeyType;
-    }
-
-    /**
-     * Set 秘钥类型
-     * @param KeyType 秘钥类型
-     */
-    public void setKeyType(String KeyType) {
-        this.KeyType = KeyType;
-    }
-
-    /**
-     * Get 是否已经开启全局加密 
-     * @return IsOpenGlobalEncryption 是否已经开启全局加密
-     */
-    public Boolean getIsOpenGlobalEncryption() {
-        return this.IsOpenGlobalEncryption;
-    }
-
-    /**
-     * Set 是否已经开启全局加密
-     * @param IsOpenGlobalEncryption 是否已经开启全局加密
-     */
-    public void setIsOpenGlobalEncryption(Boolean IsOpenGlobalEncryption) {
-        this.IsOpenGlobalEncryption = IsOpenGlobalEncryption;
+    public void setFileVerification(FileVerification FileVerification) {
+        this.FileVerification = FileVerification;
     }
 
     /**
@@ -143,25 +92,19 @@ public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel
         this.RequestId = RequestId;
     }
 
-    public DescribeClusterTransparentEncryptInfoResponse() {
+    public ApplyFreeCertificateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClusterTransparentEncryptInfoResponse(DescribeClusterTransparentEncryptInfoResponse source) {
-        if (source.KeyId != null) {
-            this.KeyId = new String(source.KeyId);
+    public ApplyFreeCertificateResponse(ApplyFreeCertificateResponse source) {
+        if (source.DnsVerification != null) {
+            this.DnsVerification = new DnsVerification(source.DnsVerification);
         }
-        if (source.KeyRegion != null) {
-            this.KeyRegion = new String(source.KeyRegion);
-        }
-        if (source.KeyType != null) {
-            this.KeyType = new String(source.KeyType);
-        }
-        if (source.IsOpenGlobalEncryption != null) {
-            this.IsOpenGlobalEncryption = new Boolean(source.IsOpenGlobalEncryption);
+        if (source.FileVerification != null) {
+            this.FileVerification = new FileVerification(source.FileVerification);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -173,10 +116,8 @@ public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
-        this.setParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
-        this.setParamSimple(map, prefix + "KeyType", this.KeyType);
-        this.setParamSimple(map, prefix + "IsOpenGlobalEncryption", this.IsOpenGlobalEncryption);
+        this.setParamObj(map, prefix + "DnsVerification.", this.DnsVerification);
+        this.setParamObj(map, prefix + "FileVerification.", this.FileVerification);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

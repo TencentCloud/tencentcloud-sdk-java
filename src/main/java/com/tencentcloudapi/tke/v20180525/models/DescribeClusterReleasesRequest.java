@@ -31,21 +31,21 @@ public class DescribeClusterReleasesRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 每页数量限制
+    * 每页数量限制，默认值为20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 页偏移量
+    * 页偏移量，默认值为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 集群类型, 目前支持传入 tke, eks, tkeedge, external 
+    * 集群类型，传入 tke(标准集群)，eks(Serverless集群)，external(注册集群）
     */
     @SerializedName("ClusterType")
     @Expose
@@ -89,48 +89,48 @@ public class DescribeClusterReleasesRequest extends AbstractModel {
     }
 
     /**
-     * Get 每页数量限制 
-     * @return Limit 每页数量限制
+     * Get 每页数量限制，默认值为20 
+     * @return Limit 每页数量限制，默认值为20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数量限制
-     * @param Limit 每页数量限制
+     * Set 每页数量限制，默认值为20
+     * @param Limit 每页数量限制，默认值为20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 页偏移量 
-     * @return Offset 页偏移量
+     * Get 页偏移量，默认值为0 
+     * @return Offset 页偏移量，默认值为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 页偏移量
-     * @param Offset 页偏移量
+     * Set 页偏移量，默认值为0
+     * @param Offset 页偏移量，默认值为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 集群类型, 目前支持传入 tke, eks, tkeedge, external  
-     * @return ClusterType 集群类型, 目前支持传入 tke, eks, tkeedge, external 
+     * Get 集群类型，传入 tke(标准集群)，eks(Serverless集群)，external(注册集群） 
+     * @return ClusterType 集群类型，传入 tke(标准集群)，eks(Serverless集群)，external(注册集群）
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型, 目前支持传入 tke, eks, tkeedge, external 
-     * @param ClusterType 集群类型, 目前支持传入 tke, eks, tkeedge, external 
+     * Set 集群类型，传入 tke(标准集群)，eks(Serverless集群)，external(注册集群）
+     * @param ClusterType 集群类型，传入 tke(标准集群)，eks(Serverless集群)，external(注册集群）
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

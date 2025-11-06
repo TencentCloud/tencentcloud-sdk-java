@@ -31,7 +31,7 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
+    * 实例组 ID，可通过 [DescribeClusterInstanceGroups](https://cloud.tencent.com/document/product/1003/103934) 接口查询。
     */
     @SerializedName("InstanceGroupId")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例组ID（InstanceId与InstanceGroupId必须任选一个传入） 
-     * @return InstanceGroupId 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
+     * Get 实例组 ID，可通过 [DescribeClusterInstanceGroups](https://cloud.tencent.com/document/product/1003/103934) 接口查询。 
+     * @return InstanceGroupId 实例组 ID，可通过 [DescribeClusterInstanceGroups](https://cloud.tencent.com/document/product/1003/103934) 接口查询。
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
-     * @param InstanceGroupId 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
+     * Set 实例组 ID，可通过 [DescribeClusterInstanceGroups](https://cloud.tencent.com/document/product/1003/103934) 接口查询。
+     * @param InstanceGroupId 实例组 ID，可通过 [DescribeClusterInstanceGroups](https://cloud.tencent.com/document/product/1003/103934) 接口查询。
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;

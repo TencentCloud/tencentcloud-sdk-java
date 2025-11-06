@@ -90,6 +90,52 @@ deleting：删除中
     private String FileSystemId;
 
     /**
+    * 0：不开启自动更新
+
+1：开启自动更新
+    */
+    @SerializedName("AutoRefresh")
+    @Expose
+    private Long AutoRefresh;
+
+    /**
+    * KafkaConsumer 消费时使用的Topic参数
+    */
+    @SerializedName("UserKafkaTopic")
+    @Expose
+    private String UserKafkaTopic;
+
+    /**
+    * 服务地址
+    */
+    @SerializedName("ServerAddr")
+    @Expose
+    private String ServerAddr;
+
+    /**
+    * Kafka消费用户名
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
+    * 自动刷新的状态，available：已生效
+pending：配置中
+unavailable：失效
+    */
+    @SerializedName("AutoRefreshStatus")
+    @Expose
+    private String AutoRefreshStatus;
+
+    /**
+    * 自动刷新开启时间
+    */
+    @SerializedName("AutoRefreshTime")
+    @Expose
+    private String AutoRefreshTime;
+
+    /**
      * Get 数据流动管理 ID 
      * @return DataFlowId 数据流动管理 ID
      */
@@ -245,6 +291,118 @@ deleting：删除中
         this.FileSystemId = FileSystemId;
     }
 
+    /**
+     * Get 0：不开启自动更新
+
+1：开启自动更新 
+     * @return AutoRefresh 0：不开启自动更新
+
+1：开启自动更新
+     */
+    public Long getAutoRefresh() {
+        return this.AutoRefresh;
+    }
+
+    /**
+     * Set 0：不开启自动更新
+
+1：开启自动更新
+     * @param AutoRefresh 0：不开启自动更新
+
+1：开启自动更新
+     */
+    public void setAutoRefresh(Long AutoRefresh) {
+        this.AutoRefresh = AutoRefresh;
+    }
+
+    /**
+     * Get KafkaConsumer 消费时使用的Topic参数 
+     * @return UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
+     */
+    public String getUserKafkaTopic() {
+        return this.UserKafkaTopic;
+    }
+
+    /**
+     * Set KafkaConsumer 消费时使用的Topic参数
+     * @param UserKafkaTopic KafkaConsumer 消费时使用的Topic参数
+     */
+    public void setUserKafkaTopic(String UserKafkaTopic) {
+        this.UserKafkaTopic = UserKafkaTopic;
+    }
+
+    /**
+     * Get 服务地址 
+     * @return ServerAddr 服务地址
+     */
+    public String getServerAddr() {
+        return this.ServerAddr;
+    }
+
+    /**
+     * Set 服务地址
+     * @param ServerAddr 服务地址
+     */
+    public void setServerAddr(String ServerAddr) {
+        this.ServerAddr = ServerAddr;
+    }
+
+    /**
+     * Get Kafka消费用户名 
+     * @return UserName Kafka消费用户名
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set Kafka消费用户名
+     * @param UserName Kafka消费用户名
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    /**
+     * Get 自动刷新的状态，available：已生效
+pending：配置中
+unavailable：失效 
+     * @return AutoRefreshStatus 自动刷新的状态，available：已生效
+pending：配置中
+unavailable：失效
+     */
+    public String getAutoRefreshStatus() {
+        return this.AutoRefreshStatus;
+    }
+
+    /**
+     * Set 自动刷新的状态，available：已生效
+pending：配置中
+unavailable：失效
+     * @param AutoRefreshStatus 自动刷新的状态，available：已生效
+pending：配置中
+unavailable：失效
+     */
+    public void setAutoRefreshStatus(String AutoRefreshStatus) {
+        this.AutoRefreshStatus = AutoRefreshStatus;
+    }
+
+    /**
+     * Get 自动刷新开启时间 
+     * @return AutoRefreshTime 自动刷新开启时间
+     */
+    public String getAutoRefreshTime() {
+        return this.AutoRefreshTime;
+    }
+
+    /**
+     * Set 自动刷新开启时间
+     * @param AutoRefreshTime 自动刷新开启时间
+     */
+    public void setAutoRefreshTime(String AutoRefreshTime) {
+        this.AutoRefreshTime = AutoRefreshTime;
+    }
+
     public DataFlowInfo() {
     }
 
@@ -280,6 +438,24 @@ deleting：删除中
         if (source.FileSystemId != null) {
             this.FileSystemId = new String(source.FileSystemId);
         }
+        if (source.AutoRefresh != null) {
+            this.AutoRefresh = new Long(source.AutoRefresh);
+        }
+        if (source.UserKafkaTopic != null) {
+            this.UserKafkaTopic = new String(source.UserKafkaTopic);
+        }
+        if (source.ServerAddr != null) {
+            this.ServerAddr = new String(source.ServerAddr);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.AutoRefreshStatus != null) {
+            this.AutoRefreshStatus = new String(source.AutoRefreshStatus);
+        }
+        if (source.AutoRefreshTime != null) {
+            this.AutoRefreshTime = new String(source.AutoRefreshTime);
+        }
     }
 
 
@@ -296,6 +472,12 @@ deleting：删除中
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreationTime", this.CreationTime);
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+        this.setParamSimple(map, prefix + "AutoRefresh", this.AutoRefresh);
+        this.setParamSimple(map, prefix + "UserKafkaTopic", this.UserKafkaTopic);
+        this.setParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "AutoRefreshStatus", this.AutoRefreshStatus);
+        this.setParamSimple(map, prefix + "AutoRefreshTime", this.AutoRefreshTime);
 
     }
 }

@@ -31,6 +31,27 @@ public class Voice extends AbstractModel {
     private String VoiceId;
 
     /**
+    * 语速，范围 0.5-2.0，默认 1.0
+    */
+    @SerializedName("Speed")
+    @Expose
+    private Float Speed;
+
+    /**
+    * (0, 10]   默认值1.0 
+    */
+    @SerializedName("Volume")
+    @Expose
+    private Float Volume;
+
+    /**
+    * 取值[-12,12],默认0
+    */
+    @SerializedName("Pitch")
+    @Expose
+    private Long Pitch;
+
+    /**
      * Get TTS的声音的ID 
      * @return VoiceId TTS的声音的ID
      */
@@ -46,6 +67,54 @@ public class Voice extends AbstractModel {
         this.VoiceId = VoiceId;
     }
 
+    /**
+     * Get 语速，范围 0.5-2.0，默认 1.0 
+     * @return Speed 语速，范围 0.5-2.0，默认 1.0
+     */
+    public Float getSpeed() {
+        return this.Speed;
+    }
+
+    /**
+     * Set 语速，范围 0.5-2.0，默认 1.0
+     * @param Speed 语速，范围 0.5-2.0，默认 1.0
+     */
+    public void setSpeed(Float Speed) {
+        this.Speed = Speed;
+    }
+
+    /**
+     * Get (0, 10]   默认值1.0  
+     * @return Volume (0, 10]   默认值1.0 
+     */
+    public Float getVolume() {
+        return this.Volume;
+    }
+
+    /**
+     * Set (0, 10]   默认值1.0 
+     * @param Volume (0, 10]   默认值1.0 
+     */
+    public void setVolume(Float Volume) {
+        this.Volume = Volume;
+    }
+
+    /**
+     * Get 取值[-12,12],默认0 
+     * @return Pitch 取值[-12,12],默认0
+     */
+    public Long getPitch() {
+        return this.Pitch;
+    }
+
+    /**
+     * Set 取值[-12,12],默认0
+     * @param Pitch 取值[-12,12],默认0
+     */
+    public void setPitch(Long Pitch) {
+        this.Pitch = Pitch;
+    }
+
     public Voice() {
     }
 
@@ -57,6 +126,15 @@ public class Voice extends AbstractModel {
         if (source.VoiceId != null) {
             this.VoiceId = new String(source.VoiceId);
         }
+        if (source.Speed != null) {
+            this.Speed = new Float(source.Speed);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Float(source.Volume);
+        }
+        if (source.Pitch != null) {
+            this.Pitch = new Long(source.Pitch);
+        }
     }
 
 
@@ -65,6 +143,9 @@ public class Voice extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
+        this.setParamSimple(map, prefix + "Speed", this.Speed);
+        this.setParamSimple(map, prefix + "Volume", this.Volume);
+        this.setParamSimple(map, prefix + "Pitch", this.Pitch);
 
     }
 }

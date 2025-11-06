@@ -31,21 +31,21 @@ public class CreateClusterReleaseRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 应用名称
+    * 应用名称，最长63个字符，只能包含小写字母、数字及分隔符“-”，且必须以小写字母开头，数字或小写字母结尾
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 应用命名空间
+    * 应用命名空间，从集群详情命名空间获取
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 制品名称或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz
+    * 制品名称(从应用市场获取)或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz
     */
     @SerializedName("Chart")
     @Expose
@@ -124,48 +124,48 @@ public class CreateClusterReleaseRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用名称 
-     * @return Name 应用名称
+     * Get 应用名称，最长63个字符，只能包含小写字母、数字及分隔符“-”，且必须以小写字母开头，数字或小写字母结尾 
+     * @return Name 应用名称，最长63个字符，只能包含小写字母、数字及分隔符“-”，且必须以小写字母开头，数字或小写字母结尾
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 应用名称
-     * @param Name 应用名称
+     * Set 应用名称，最长63个字符，只能包含小写字母、数字及分隔符“-”，且必须以小写字母开头，数字或小写字母结尾
+     * @param Name 应用名称，最长63个字符，只能包含小写字母、数字及分隔符“-”，且必须以小写字母开头，数字或小写字母结尾
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 应用命名空间 
-     * @return Namespace 应用命名空间
+     * Get 应用命名空间，从集群详情命名空间获取 
+     * @return Namespace 应用命名空间，从集群详情命名空间获取
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 应用命名空间
-     * @param Namespace 应用命名空间
+     * Set 应用命名空间，从集群详情命名空间获取
+     * @param Namespace 应用命名空间，从集群详情命名空间获取
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 制品名称或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz 
-     * @return Chart 制品名称或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz
+     * Get 制品名称(从应用市场获取)或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz 
+     * @return Chart 制品名称(从应用市场获取)或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz
      */
     public String getChart() {
         return this.Chart;
     }
 
     /**
-     * Set 制品名称或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz
-     * @param Chart 制品名称或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz
+     * Set 制品名称(从应用市场获取)或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz
+     * @param Chart 制品名称(从应用市场获取)或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz
      */
     public void setChart(String Chart) {
         this.Chart = Chart;

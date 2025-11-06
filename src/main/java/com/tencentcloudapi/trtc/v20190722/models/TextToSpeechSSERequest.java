@@ -59,6 +59,20 @@ public class TextToSpeechSSERequest extends AbstractModel {
     private String APIKey;
 
     /**
+    * TTS的模型：flow_01_turbo，flow_01_ex
+    */
+    @SerializedName("Model")
+    @Expose
+    private String Model;
+
+    /**
+    * 语言参数，默认为空， 参考： (ISO 639-1) 
+    */
+    @SerializedName("Language")
+    @Expose
+    private String Language;
+
+    /**
      * Get 需要转语音的文字内容，长度范围：[1, 255] 
      * @return Text 需要转语音的文字内容，长度范围：[1, 255]
      */
@@ -138,6 +152,38 @@ public class TextToSpeechSSERequest extends AbstractModel {
         this.APIKey = APIKey;
     }
 
+    /**
+     * Get TTS的模型：flow_01_turbo，flow_01_ex 
+     * @return Model TTS的模型：flow_01_turbo，flow_01_ex
+     */
+    public String getModel() {
+        return this.Model;
+    }
+
+    /**
+     * Set TTS的模型：flow_01_turbo，flow_01_ex
+     * @param Model TTS的模型：flow_01_turbo，flow_01_ex
+     */
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
+
+    /**
+     * Get 语言参数，默认为空， 参考： (ISO 639-1)  
+     * @return Language 语言参数，默认为空， 参考： (ISO 639-1) 
+     */
+    public String getLanguage() {
+        return this.Language;
+    }
+
+    /**
+     * Set 语言参数，默认为空， 参考： (ISO 639-1) 
+     * @param Language 语言参数，默认为空， 参考： (ISO 639-1) 
+     */
+    public void setLanguage(String Language) {
+        this.Language = Language;
+    }
+
     public TextToSpeechSSERequest() {
     }
 
@@ -161,6 +207,12 @@ public class TextToSpeechSSERequest extends AbstractModel {
         if (source.APIKey != null) {
             this.APIKey = new String(source.APIKey);
         }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
+        if (source.Language != null) {
+            this.Language = new String(source.Language);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class TextToSpeechSSERequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamObj(map, prefix + "AudioFormat.", this.AudioFormat);
         this.setParamSimple(map, prefix + "APIKey", this.APIKey);
+        this.setParamSimple(map, prefix + "Model", this.Model);
+        this.setParamSimple(map, prefix + "Language", this.Language);
 
     }
 }

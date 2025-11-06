@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class LifecycleRule extends AbstractModel {
 
     /**
-    * 数据转储后的存储类型
+    * 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 数据转储文件类型
+    * 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * 数据转储行为
+    * 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * 数据转储触发时间
+    * 数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Interval")
@@ -53,7 +53,7 @@ public class LifecycleRule extends AbstractModel {
     private String Interval;
 
     /**
-    * 数据转储文件最大规格
+    * 数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileMaxSize")
@@ -61,7 +61,7 @@ public class LifecycleRule extends AbstractModel {
     private String FileMaxSize;
 
     /**
-    * 数据转储文件最小规格
+    * 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileMinSize")
@@ -69,57 +69,57 @@ public class LifecycleRule extends AbstractModel {
     private String FileMinSize;
 
     /**
-     * Get 数据转储后的存储类型 
-     * @return StorageType 数据转储后的存储类型
+     * Get 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。 
+     * @return StorageType 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 数据转储后的存储类型
-     * @param StorageType 数据转储后的存储类型
+     * Set 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
+     * @param StorageType 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 数据转储文件类型 
-     * @return FileType 数据转储文件类型
+     * Get 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。 
+     * @return FileType 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 数据转储文件类型
-     * @param FileType 数据转储文件类型
+     * Set 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
+     * @param FileType 数据转储文件类型。其中，BIG_FILE：超大文件；STD_FILE：普通文件；SMALL_FILE：小文件；ALL：所有文件。
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 数据转储行为 
-     * @return Action 数据转储行为
+     * Get 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。 
+     * @return Action 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 数据转储行为
-     * @param Action 数据转储行为
+     * Set 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
+     * @param Action 数据转储行为。其中，Archive：沉降；Noarchive：不沉降。
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 数据转储触发时间
+     * Get 数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Interval 数据转储触发时间
+     * @return Interval 数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInterval() {
@@ -127,9 +127,9 @@ public class LifecycleRule extends AbstractModel {
     }
 
     /**
-     * Set 数据转储触发时间
+     * Set 数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Interval 数据转储触发时间
+     * @param Interval 数据转储触发时间。由“DEFAULT_ATIME_”与“数字”组成，单位为天。当 Action 为 Noarchive，请保持为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterval(String Interval) {
@@ -137,9 +137,9 @@ public class LifecycleRule extends AbstractModel {
     }
 
     /**
-     * Get 数据转储文件最大规格
+     * Get 数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileMaxSize 数据转储文件最大规格
+     * @return FileMaxSize 数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileMaxSize() {
@@ -147,9 +147,9 @@ public class LifecycleRule extends AbstractModel {
     }
 
     /**
-     * Set 数据转储文件最大规格
+     * Set 数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileMaxSize 数据转储文件最大规格
+     * @param FileMaxSize 数据转储文件最大规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileMaxSize(String FileMaxSize) {
@@ -157,9 +157,9 @@ public class LifecycleRule extends AbstractModel {
     }
 
     /**
-     * Get 数据转储文件最小规格
+     * Get 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileMinSize 数据转储文件最小规格
+     * @return FileMinSize 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileMinSize() {
@@ -167,9 +167,9 @@ public class LifecycleRule extends AbstractModel {
     }
 
     /**
-     * Set 数据转储文件最小规格
+     * Set 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileMinSize 数据转储文件最小规格
+     * @param FileMinSize 数据转储文件最小规格。其数值需使用“数字+单位”格式进行表示，单位支持K（KiB）、M（MiB）、G（GiB）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileMinSize(String FileMinSize) {

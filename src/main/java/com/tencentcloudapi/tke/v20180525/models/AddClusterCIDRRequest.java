@@ -38,7 +38,7 @@ public class AddClusterCIDRRequest extends AbstractModel {
     private String [] ClusterCIDRs;
 
     /**
-    * 是否忽略ClusterCIDR与VPC路由表的冲突
+    * 是否忽略ClusterCIDR与VPC路由表的冲突，默认false，为true时忽略冲突
     */
     @SerializedName("IgnoreClusterCIDRConflict")
     @Expose
@@ -77,16 +77,16 @@ public class AddClusterCIDRRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否忽略ClusterCIDR与VPC路由表的冲突 
-     * @return IgnoreClusterCIDRConflict 是否忽略ClusterCIDR与VPC路由表的冲突
+     * Get 是否忽略ClusterCIDR与VPC路由表的冲突，默认false，为true时忽略冲突 
+     * @return IgnoreClusterCIDRConflict 是否忽略ClusterCIDR与VPC路由表的冲突，默认false，为true时忽略冲突
      */
     public Boolean getIgnoreClusterCIDRConflict() {
         return this.IgnoreClusterCIDRConflict;
     }
 
     /**
-     * Set 是否忽略ClusterCIDR与VPC路由表的冲突
-     * @param IgnoreClusterCIDRConflict 是否忽略ClusterCIDR与VPC路由表的冲突
+     * Set 是否忽略ClusterCIDR与VPC路由表的冲突，默认false，为true时忽略冲突
+     * @param IgnoreClusterCIDRConflict 是否忽略ClusterCIDR与VPC路由表的冲突，默认false，为true时忽略冲突
      */
     public void setIgnoreClusterCIDRConflict(Boolean IgnoreClusterCIDRConflict) {
         this.IgnoreClusterCIDRConflict = IgnoreClusterCIDRConflict;

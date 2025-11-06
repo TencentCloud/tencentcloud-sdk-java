@@ -447,6 +447,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *查询IP溯源状态
+     * @param req GetIpTraceStatusRequest
+     * @return GetIpTraceStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetIpTraceStatusResponse GetIpTraceStatus(GetIpTraceStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetIpTraceStatus", GetIpTraceStatusResponse.class);
+    }
+
+    /**
      *获取接收客户端请求的节点类型
      * @param req GetRequestTargetNodeTypesRequest
      * @return GetRequestTargetNodeTypesResponse
@@ -488,6 +499,17 @@ public class EsClient extends AbstractClient{
     public ModifyEsVipSecurityGroupResponse ModifyEsVipSecurityGroup(ModifyEsVipSecurityGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyEsVipSecurityGroup", ModifyEsVipSecurityGroupResponse.class);
+    }
+
+    /**
+     *查询IP溯源日志
+     * @param req QueryIpTraceLogRequest
+     * @return QueryIpTraceLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryIpTraceLogResponse QueryIpTraceLog(QueryIpTraceLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryIpTraceLog", QueryIpTraceLogResponse.class);
     }
 
     /**
@@ -627,6 +649,17 @@ public class EsClient extends AbstractClient{
     public UpdateInstanceResponse UpdateInstance(UpdateInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateInstance", UpdateInstanceResponse.class);
+    }
+
+    /**
+     *更新ES集群IP溯源状态
+     * @param req UpdateIpTraceStatusRequest
+     * @return UpdateIpTraceStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateIpTraceStatusResponse UpdateIpTraceStatus(UpdateIpTraceStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateIpTraceStatus", UpdateIpTraceStatusResponse.class);
     }
 
     /**

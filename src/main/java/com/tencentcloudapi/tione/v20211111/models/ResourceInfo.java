@@ -75,6 +75,14 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
     private GpuDetail [] RealGpuDetailSet;
 
     /**
+    * 是否开启rdma
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableRDMA")
+    @Expose
+    private Boolean EnableRDMA;
+
+    /**
      * Get 处理器资源, 单位为1/1000核
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Cpu 处理器资源, 单位为1/1000核
@@ -206,6 +214,26 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
         this.RealGpuDetailSet = RealGpuDetailSet;
     }
 
+    /**
+     * Get 是否开启rdma
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableRDMA 是否开启rdma
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableRDMA() {
+        return this.EnableRDMA;
+    }
+
+    /**
+     * Set 是否开启rdma
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableRDMA 是否开启rdma
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableRDMA(Boolean EnableRDMA) {
+        this.EnableRDMA = EnableRDMA;
+    }
+
     public ResourceInfo() {
     }
 
@@ -235,6 +263,9 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
                 this.RealGpuDetailSet[i] = new GpuDetail(source.RealGpuDetailSet[i]);
             }
         }
+        if (source.EnableRDMA != null) {
+            this.EnableRDMA = new Boolean(source.EnableRDMA);
+        }
     }
 
 
@@ -248,6 +279,7 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
         this.setParamSimple(map, prefix + "GpuType", this.GpuType);
         this.setParamSimple(map, prefix + "RealGpu", this.RealGpu);
         this.setParamArrayObj(map, prefix + "RealGpuDetailSet.", this.RealGpuDetailSet);
+        this.setParamSimple(map, prefix + "EnableRDMA", this.EnableRDMA);
 
     }
 }

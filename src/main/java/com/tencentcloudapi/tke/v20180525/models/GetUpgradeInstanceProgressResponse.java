@@ -39,12 +39,15 @@ public class GetUpgradeInstanceProgressResponse extends AbstractModel {
 
     /**
     * 升级任务生命周期
+
+pending 还未开始
 process 运行中
 paused 已停止
 pauing 正在停止
 done  已完成
 timeout 已超时
 aborted 已取消
+
     */
     @SerializedName("LifeState")
     @Expose
@@ -105,19 +108,25 @@ aborted 已取消
 
     /**
      * Get 升级任务生命周期
-process 运行中
-paused 已停止
-pauing 正在停止
-done  已完成
-timeout 已超时
-aborted 已取消 
-     * @return LifeState 升级任务生命周期
+
+pending 还未开始
 process 运行中
 paused 已停止
 pauing 正在停止
 done  已完成
 timeout 已超时
 aborted 已取消
+ 
+     * @return LifeState 升级任务生命周期
+
+pending 还未开始
+process 运行中
+paused 已停止
+pauing 正在停止
+done  已完成
+timeout 已超时
+aborted 已取消
+
      */
     public String getLifeState() {
         return this.LifeState;
@@ -125,19 +134,25 @@ aborted 已取消
 
     /**
      * Set 升级任务生命周期
+
+pending 还未开始
 process 运行中
 paused 已停止
 pauing 正在停止
 done  已完成
 timeout 已超时
 aborted 已取消
+
      * @param LifeState 升级任务生命周期
+
+pending 还未开始
 process 运行中
 paused 已停止
 pauing 正在停止
 done  已完成
 timeout 已超时
 aborted 已取消
+
      */
     public void setLifeState(String LifeState) {
         this.LifeState = LifeState;

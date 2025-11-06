@@ -31,6 +31,13 @@ public class TTSConfig extends AbstractModel {
     private String VoiceId;
 
     /**
+    * TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex]
+    */
+    @SerializedName("Model")
+    @Expose
+    private String Model;
+
+    /**
      * Get 音色ID 
      * @return VoiceId 音色ID
      */
@@ -46,6 +53,22 @@ public class TTSConfig extends AbstractModel {
         this.VoiceId = VoiceId;
     }
 
+    /**
+     * Get TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex] 
+     * @return Model TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex]
+     */
+    public String getModel() {
+        return this.Model;
+    }
+
+    /**
+     * Set TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex]
+     * @param Model TTS 的模型，默认是：flow_01_turbo, 可选: [ flow_01_turbo, flow_01_ex]
+     */
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
+
     public TTSConfig() {
     }
 
@@ -57,6 +80,9 @@ public class TTSConfig extends AbstractModel {
         if (source.VoiceId != null) {
             this.VoiceId = new String(source.VoiceId);
         }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class TTSConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
+        this.setParamSimple(map, prefix + "Model", this.Model);
 
     }
 }

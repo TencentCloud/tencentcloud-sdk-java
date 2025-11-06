@@ -59,7 +59,17 @@ public class PendingRelease extends AbstractModel {
     private String Namespace;
 
     /**
-    * 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
+    * 应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中
     */
     @SerializedName("Status")
     @Expose
@@ -153,16 +163,56 @@ public class PendingRelease extends AbstractModel {
     }
 
     /**
-     * Get 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback) 
-     * @return Status 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
+     * Get 应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中 
+     * @return Status 应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
-     * @param Status 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
+     * Set 应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中
+     * @param Status 应用状态，参考 Helm 发布状态。
+可选值及其释义如下：
+• ​​unknown​​: 状态未知
+• ​​deployed​​: 已成功部署
+• ​​uninstalled​​: 已卸载
+• ​​superseded​​: 已被新版本替代
+• ​​failed​​: 部署失败
+• ​​uninstalling​​: 正在卸载中
+• ​​pending-install​​: 等待安装/安装进行中
+• ​​pending-upgrade​​: 等待升级/升级进行中
+• ​​pending-rollback​​: 等待回滚/回滚进行中
      */
     public void setStatus(String Status) {
         this.Status = Status;

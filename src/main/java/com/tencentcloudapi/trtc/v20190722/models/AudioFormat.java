@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class AudioFormat extends AbstractModel {
 
     /**
-    * 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
+    * 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-     * Get 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。 
-     * @return Format 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
+    * 采样率，默认24000， 可选16000, 24000 
+    */
+    @SerializedName("SampleRate")
+    @Expose
+    private Long SampleRate;
+
+    /**
+     * Get 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav] 
+     * @return Format 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
-     * @param Format 生成的音频格式，默认pcm，目前支持的格式列表：[pcm]。
+     * Set 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
+     * @param Format 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
      */
     public void setFormat(String Format) {
         this.Format = Format;
+    }
+
+    /**
+     * Get 采样率，默认24000， 可选16000, 24000  
+     * @return SampleRate 采样率，默认24000， 可选16000, 24000 
+     */
+    public Long getSampleRate() {
+        return this.SampleRate;
+    }
+
+    /**
+     * Set 采样率，默认24000， 可选16000, 24000 
+     * @param SampleRate 采样率，默认24000， 可选16000, 24000 
+     */
+    public void setSampleRate(Long SampleRate) {
+        this.SampleRate = SampleRate;
     }
 
     public AudioFormat() {
@@ -57,6 +80,9 @@ public class AudioFormat extends AbstractModel {
         if (source.Format != null) {
             this.Format = new String(source.Format);
         }
+        if (source.SampleRate != null) {
+            this.SampleRate = new Long(source.SampleRate);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class AudioFormat extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
 
     }
 }
