@@ -120,7 +120,9 @@ public class CreateClustersRequest extends AbstractModel {
     private Long Port;
 
     /**
-    * 计费模式，按量计费：0，包年包月：1。默认按量计费。
+    * 计费模式，支持值为0和1，默认值为0。
+取值为0，表示按量计费。
+取值为1，表示包年包月。
     */
     @SerializedName("PayMode")
     @Expose
@@ -589,16 +591,24 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 计费模式，按量计费：0，包年包月：1。默认按量计费。 
-     * @return PayMode 计费模式，按量计费：0，包年包月：1。默认按量计费。
+     * Get 计费模式，支持值为0和1，默认值为0。
+取值为0，表示按量计费。
+取值为1，表示包年包月。 
+     * @return PayMode 计费模式，支持值为0和1，默认值为0。
+取值为0，表示按量计费。
+取值为1，表示包年包月。
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式，按量计费：0，包年包月：1。默认按量计费。
-     * @param PayMode 计费模式，按量计费：0，包年包月：1。默认按量计费。
+     * Set 计费模式，支持值为0和1，默认值为0。
+取值为0，表示按量计费。
+取值为1，表示包年包月。
+     * @param PayMode 计费模式，支持值为0和1，默认值为0。
+取值为0，表示按量计费。
+取值为1，表示包年包月。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;

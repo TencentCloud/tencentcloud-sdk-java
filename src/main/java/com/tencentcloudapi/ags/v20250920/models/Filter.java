@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.ags.v20250920.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,99 +21,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryParamFilter extends AbstractModel {
+public class Filter extends AbstractModel {
 
     /**
-    * 搜索字段，目前支持：ProxyGroupId
+    * 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
     */
-    @SerializedName("Names")
+    @SerializedName("Name")
     @Expose
-    private String [] Names;
+    private String Name;
 
     /**
-    * 搜索字符串
+    * 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * 是否精确匹配
-    */
-    @SerializedName("ExactMatch")
-    @Expose
-    private Boolean ExactMatch;
-
-    /**
-     * Get 搜索字段，目前支持：ProxyGroupId 
-     * @return Names 搜索字段，目前支持：ProxyGroupId
+     * Get 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。 
+     * @return Name 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
      */
-    public String [] getNames() {
-        return this.Names;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 搜索字段，目前支持：ProxyGroupId
-     * @param Names 搜索字段，目前支持：ProxyGroupId
+     * Set 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * @param Name 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
      */
-    public void setNames(String [] Names) {
-        this.Names = Names;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get 搜索字符串 
-     * @return Values 搜索字符串
+     * Get 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。 
+     * @return Values 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 搜索字符串
-     * @param Values 搜索字符串
+     * Set 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+     * @param Values 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
-    /**
-     * Get 是否精确匹配 
-     * @return ExactMatch 是否精确匹配
-     */
-    public Boolean getExactMatch() {
-        return this.ExactMatch;
-    }
-
-    /**
-     * Set 是否精确匹配
-     * @param ExactMatch 是否精确匹配
-     */
-    public void setExactMatch(Boolean ExactMatch) {
-        this.ExactMatch = ExactMatch;
-    }
-
-    public QueryParamFilter() {
+    public Filter() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryParamFilter(QueryParamFilter source) {
-        if (source.Names != null) {
-            this.Names = new String[source.Names.length];
-            for (int i = 0; i < source.Names.length; i++) {
-                this.Names[i] = new String(source.Names[i]);
-            }
+    public Filter(Filter source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
         if (source.Values != null) {
             this.Values = new String[source.Values.length];
             for (int i = 0; i < source.Values.length; i++) {
                 this.Values[i] = new String(source.Values[i]);
             }
-        }
-        if (source.ExactMatch != null) {
-            this.ExactMatch = new Boolean(source.ExactMatch);
         }
     }
 
@@ -122,9 +93,8 @@ public class QueryParamFilter extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Names.", this.Names);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArraySimple(map, prefix + "Values.", this.Values);
-        this.setParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
 
     }
 }
