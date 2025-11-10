@@ -101,6 +101,20 @@ public class DisplayConfig extends AbstractModel {
     private String Suggestion;
 
     /**
+    * 是否为云资产
+    */
+    @SerializedName("IsCloudAsset")
+    @Expose
+    private Long IsCloudAsset;
+
+    /**
+    * 云资产状态，-1为下线
+    */
+    @SerializedName("CloudAssetStatus")
+    @Expose
+    private Long CloudAssetStatus;
+
+    /**
      * Get 主键Id 
      * @return Id 主键Id
      */
@@ -276,6 +290,38 @@ public class DisplayConfig extends AbstractModel {
         this.Suggestion = Suggestion;
     }
 
+    /**
+     * Get 是否为云资产 
+     * @return IsCloudAsset 是否为云资产
+     */
+    public Long getIsCloudAsset() {
+        return this.IsCloudAsset;
+    }
+
+    /**
+     * Set 是否为云资产
+     * @param IsCloudAsset 是否为云资产
+     */
+    public void setIsCloudAsset(Long IsCloudAsset) {
+        this.IsCloudAsset = IsCloudAsset;
+    }
+
+    /**
+     * Get 云资产状态，-1为下线 
+     * @return CloudAssetStatus 云资产状态，-1为下线
+     */
+    public Long getCloudAssetStatus() {
+        return this.CloudAssetStatus;
+    }
+
+    /**
+     * Set 云资产状态，-1为下线
+     * @param CloudAssetStatus 云资产状态，-1为下线
+     */
+    public void setCloudAssetStatus(Long CloudAssetStatus) {
+        this.CloudAssetStatus = CloudAssetStatus;
+    }
+
     public DisplayConfig() {
     }
 
@@ -317,6 +363,12 @@ public class DisplayConfig extends AbstractModel {
         if (source.Suggestion != null) {
             this.Suggestion = new String(source.Suggestion);
         }
+        if (source.IsCloudAsset != null) {
+            this.IsCloudAsset = new Long(source.IsCloudAsset);
+        }
+        if (source.CloudAssetStatus != null) {
+            this.CloudAssetStatus = new Long(source.CloudAssetStatus);
+        }
     }
 
 
@@ -335,6 +387,8 @@ public class DisplayConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "AIAnalysis", this.AIAnalysis);
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
+        this.setParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
+        this.setParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
 
     }
 }

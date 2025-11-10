@@ -122,6 +122,13 @@ public class DescribeSubDomainsRequest extends AbstractModel {
     private Boolean Ignored;
 
     /**
+    * 是否只查询离线子域名
+    */
+    @SerializedName("OnlyOffline")
+    @Expose
+    private Boolean OnlyOffline;
+
+    /**
      * Get 企业ID列表，可多选 
      * @return CustomerIdList 企业ID列表，可多选
      */
@@ -345,6 +352,22 @@ public class DescribeSubDomainsRequest extends AbstractModel {
         this.Ignored = Ignored;
     }
 
+    /**
+     * Get 是否只查询离线子域名 
+     * @return OnlyOffline 是否只查询离线子域名
+     */
+    public Boolean getOnlyOffline() {
+        return this.OnlyOffline;
+    }
+
+    /**
+     * Set 是否只查询离线子域名
+     * @param OnlyOffline 是否只查询离线子域名
+     */
+    public void setOnlyOffline(Boolean OnlyOffline) {
+        this.OnlyOffline = OnlyOffline;
+    }
+
     public DescribeSubDomainsRequest() {
     }
 
@@ -404,6 +427,9 @@ public class DescribeSubDomainsRequest extends AbstractModel {
         if (source.Ignored != null) {
             this.Ignored = new Boolean(source.Ignored);
         }
+        if (source.OnlyOffline != null) {
+            this.OnlyOffline = new Boolean(source.OnlyOffline);
+        }
     }
 
 
@@ -425,6 +451,7 @@ public class DescribeSubDomainsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateAtEnd", this.UpdateAtEnd);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Ignored", this.Ignored);
+        this.setParamSimple(map, prefix + "OnlyOffline", this.OnlyOffline);
 
     }
 }

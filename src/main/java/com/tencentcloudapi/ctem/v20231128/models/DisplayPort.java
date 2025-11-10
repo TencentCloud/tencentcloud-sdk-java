@@ -101,6 +101,27 @@ public class DisplayPort extends AbstractModel {
     private String Status;
 
     /**
+    * 是否为云资产：0-非云资产 1-是云资产
+    */
+    @SerializedName("IsCloudAsset")
+    @Expose
+    private Long IsCloudAsset;
+
+    /**
+    * 云资产是否下线：-1-已下线 0-正常
+    */
+    @SerializedName("CloudAssetStatus")
+    @Expose
+    private Long CloudAssetStatus;
+
+    /**
+    * 域名解析状态 1:异常 0:正常
+    */
+    @SerializedName("AnalysisState")
+    @Expose
+    private Long AnalysisState;
+
+    /**
      * Get 主键ID 
      * @return Id 主键ID
      */
@@ -276,6 +297,54 @@ public class DisplayPort extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 是否为云资产：0-非云资产 1-是云资产 
+     * @return IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     */
+    public Long getIsCloudAsset() {
+        return this.IsCloudAsset;
+    }
+
+    /**
+     * Set 是否为云资产：0-非云资产 1-是云资产
+     * @param IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     */
+    public void setIsCloudAsset(Long IsCloudAsset) {
+        this.IsCloudAsset = IsCloudAsset;
+    }
+
+    /**
+     * Get 云资产是否下线：-1-已下线 0-正常 
+     * @return CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     */
+    public Long getCloudAssetStatus() {
+        return this.CloudAssetStatus;
+    }
+
+    /**
+     * Set 云资产是否下线：-1-已下线 0-正常
+     * @param CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     */
+    public void setCloudAssetStatus(Long CloudAssetStatus) {
+        this.CloudAssetStatus = CloudAssetStatus;
+    }
+
+    /**
+     * Get 域名解析状态 1:异常 0:正常 
+     * @return AnalysisState 域名解析状态 1:异常 0:正常
+     */
+    public Long getAnalysisState() {
+        return this.AnalysisState;
+    }
+
+    /**
+     * Set 域名解析状态 1:异常 0:正常
+     * @param AnalysisState 域名解析状态 1:异常 0:正常
+     */
+    public void setAnalysisState(Long AnalysisState) {
+        this.AnalysisState = AnalysisState;
+    }
+
     public DisplayPort() {
     }
 
@@ -317,6 +386,15 @@ public class DisplayPort extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.IsCloudAsset != null) {
+            this.IsCloudAsset = new Long(source.IsCloudAsset);
+        }
+        if (source.CloudAssetStatus != null) {
+            this.CloudAssetStatus = new Long(source.CloudAssetStatus);
+        }
+        if (source.AnalysisState != null) {
+            this.AnalysisState = new Long(source.AnalysisState);
+        }
     }
 
 
@@ -335,6 +413,9 @@ public class DisplayPort extends AbstractModel {
         this.setParamSimple(map, prefix + "Banner", this.Banner);
         this.setParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
+        this.setParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
+        this.setParamSimple(map, prefix + "AnalysisState", this.AnalysisState);
 
     }
 }

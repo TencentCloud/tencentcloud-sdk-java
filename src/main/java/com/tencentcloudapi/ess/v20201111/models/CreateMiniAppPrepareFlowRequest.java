@@ -139,6 +139,22 @@ public class CreateMiniAppPrepareFlowRequest extends AbstractModel {
     private String UserData;
 
     /**
+    * 生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
+
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li>
+<li> **4** :合同签署页面更多操作的查看合同基本信息按钮</li>
+<li> **5** :合同签署页面更多操作的撤销按钮</li></ul>
+
+注:  `字段为数组, 可以传值隐藏多个按钮`
+    */
+    @SerializedName("Hides")
+    @Expose
+    private Long [] Hides;
+
+    /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -442,6 +458,58 @@ public class CreateMiniAppPrepareFlowRequest extends AbstractModel {
         this.UserData = UserData;
     }
 
+    /**
+     * Get 生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
+
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li>
+<li> **4** :合同签署页面更多操作的查看合同基本信息按钮</li>
+<li> **5** :合同签署页面更多操作的撤销按钮</li></ul>
+
+注:  `字段为数组, 可以传值隐藏多个按钮` 
+     * @return Hides 生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
+
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li>
+<li> **4** :合同签署页面更多操作的查看合同基本信息按钮</li>
+<li> **5** :合同签署页面更多操作的撤销按钮</li></ul>
+
+注:  `字段为数组, 可以传值隐藏多个按钮`
+     */
+    public Long [] getHides() {
+        return this.Hides;
+    }
+
+    /**
+     * Set 生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
+
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li>
+<li> **4** :合同签署页面更多操作的查看合同基本信息按钮</li>
+<li> **5** :合同签署页面更多操作的撤销按钮</li></ul>
+
+注:  `字段为数组, 可以传值隐藏多个按钮`
+     * @param Hides 生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
+
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li>
+<li> **4** :合同签署页面更多操作的查看合同基本信息按钮</li>
+<li> **5** :合同签署页面更多操作的撤销按钮</li></ul>
+
+注:  `字段为数组, 可以传值隐藏多个按钮`
+     */
+    public void setHides(Long [] Hides) {
+        this.Hides = Hides;
+    }
+
     public CreateMiniAppPrepareFlowRequest() {
     }
 
@@ -495,6 +563,12 @@ public class CreateMiniAppPrepareFlowRequest extends AbstractModel {
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
+        if (source.Hides != null) {
+            this.Hides = new Long[source.Hides.length];
+            for (int i = 0; i < source.Hides.length; i++) {
+                this.Hides[i] = new Long(source.Hides[i]);
+            }
+        }
     }
 
 
@@ -515,6 +589,7 @@ public class CreateMiniAppPrepareFlowRequest extends AbstractModel {
         this.setParamObj(map, prefix + "FlowOption.", this.FlowOption);
         this.setParamObj(map, prefix + "PageOption.", this.PageOption);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamArraySimple(map, prefix + "Hides.", this.Hides);
 
     }
 }

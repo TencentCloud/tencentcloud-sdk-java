@@ -59,6 +59,20 @@ public class DisplaySensitiveInfo extends AbstractModel {
     private DisplayToolCommon DisplayToolCommon;
 
     /**
+    * 是否为云资产：0-非云资产 1-是云资产
+    */
+    @SerializedName("IsCloudAsset")
+    @Expose
+    private Long IsCloudAsset;
+
+    /**
+    * 云资产是否下线：-1-已下线 0-正常
+    */
+    @SerializedName("CloudAssetStatus")
+    @Expose
+    private Long CloudAssetStatus;
+
+    /**
      * Get 主键Id 
      * @return Id 主键Id
      */
@@ -138,6 +152,38 @@ public class DisplaySensitiveInfo extends AbstractModel {
         this.DisplayToolCommon = DisplayToolCommon;
     }
 
+    /**
+     * Get 是否为云资产：0-非云资产 1-是云资产 
+     * @return IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     */
+    public Long getIsCloudAsset() {
+        return this.IsCloudAsset;
+    }
+
+    /**
+     * Set 是否为云资产：0-非云资产 1-是云资产
+     * @param IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     */
+    public void setIsCloudAsset(Long IsCloudAsset) {
+        this.IsCloudAsset = IsCloudAsset;
+    }
+
+    /**
+     * Get 云资产是否下线：-1-已下线 0-正常 
+     * @return CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     */
+    public Long getCloudAssetStatus() {
+        return this.CloudAssetStatus;
+    }
+
+    /**
+     * Set 云资产是否下线：-1-已下线 0-正常
+     * @param CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     */
+    public void setCloudAssetStatus(Long CloudAssetStatus) {
+        this.CloudAssetStatus = CloudAssetStatus;
+    }
+
     public DisplaySensitiveInfo() {
     }
 
@@ -161,6 +207,12 @@ public class DisplaySensitiveInfo extends AbstractModel {
         if (source.DisplayToolCommon != null) {
             this.DisplayToolCommon = new DisplayToolCommon(source.DisplayToolCommon);
         }
+        if (source.IsCloudAsset != null) {
+            this.IsCloudAsset = new Long(source.IsCloudAsset);
+        }
+        if (source.CloudAssetStatus != null) {
+            this.CloudAssetStatus = new Long(source.CloudAssetStatus);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class DisplaySensitiveInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamObj(map, prefix + "DisplayToolCommon.", this.DisplayToolCommon);
+        this.setParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
+        this.setParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
 
     }
 }

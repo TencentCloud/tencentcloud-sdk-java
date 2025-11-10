@@ -52,6 +52,13 @@ public class CreateStreamLinkFlowRequest extends AbstractModel {
     private String EventId;
 
     /**
+    * 流的输出组。
+    */
+    @SerializedName("OutputGroup")
+    @Expose
+    private CreateOutputInfo OutputGroup;
+
+    /**
      * Get 流名称。 
      * @return FlowName 流名称。
      */
@@ -115,6 +122,22 @@ public class CreateStreamLinkFlowRequest extends AbstractModel {
         this.EventId = EventId;
     }
 
+    /**
+     * Get 流的输出组。 
+     * @return OutputGroup 流的输出组。
+     */
+    public CreateOutputInfo getOutputGroup() {
+        return this.OutputGroup;
+    }
+
+    /**
+     * Set 流的输出组。
+     * @param OutputGroup 流的输出组。
+     */
+    public void setOutputGroup(CreateOutputInfo OutputGroup) {
+        this.OutputGroup = OutputGroup;
+    }
+
     public CreateStreamLinkFlowRequest() {
     }
 
@@ -138,6 +161,9 @@ public class CreateStreamLinkFlowRequest extends AbstractModel {
         if (source.EventId != null) {
             this.EventId = new String(source.EventId);
         }
+        if (source.OutputGroup != null) {
+            this.OutputGroup = new CreateOutputInfo(source.OutputGroup);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class CreateStreamLinkFlowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
         this.setParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
+        this.setParamObj(map, prefix + "OutputGroup.", this.OutputGroup);
 
     }
 }

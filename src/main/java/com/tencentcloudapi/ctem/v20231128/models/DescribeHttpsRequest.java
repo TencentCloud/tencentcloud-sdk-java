@@ -136,6 +136,13 @@ public class DescribeHttpsRequest extends AbstractModel {
     private Boolean HasExpirationRisk;
 
     /**
+    * 是否只查询离线网站
+    */
+    @SerializedName("OnlyOffline")
+    @Expose
+    private Boolean OnlyOffline;
+
+    /**
      * Get 企业ID列表，可多选 
      * @return CustomerIdList 企业ID列表，可多选
      */
@@ -391,6 +398,22 @@ public class DescribeHttpsRequest extends AbstractModel {
         this.HasExpirationRisk = HasExpirationRisk;
     }
 
+    /**
+     * Get 是否只查询离线网站 
+     * @return OnlyOffline 是否只查询离线网站
+     */
+    public Boolean getOnlyOffline() {
+        return this.OnlyOffline;
+    }
+
+    /**
+     * Set 是否只查询离线网站
+     * @param OnlyOffline 是否只查询离线网站
+     */
+    public void setOnlyOffline(Boolean OnlyOffline) {
+        this.OnlyOffline = OnlyOffline;
+    }
+
     public DescribeHttpsRequest() {
     }
 
@@ -456,6 +479,9 @@ public class DescribeHttpsRequest extends AbstractModel {
         if (source.HasExpirationRisk != null) {
             this.HasExpirationRisk = new Boolean(source.HasExpirationRisk);
         }
+        if (source.OnlyOffline != null) {
+            this.OnlyOffline = new Boolean(source.OnlyOffline);
+        }
     }
 
 
@@ -479,6 +505,7 @@ public class DescribeHttpsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Ignored", this.Ignored);
         this.setParamSimple(map, prefix + "IsShowChange", this.IsShowChange);
         this.setParamSimple(map, prefix + "HasExpirationRisk", this.HasExpirationRisk);
+        this.setParamSimple(map, prefix + "OnlyOffline", this.OnlyOffline);
 
     }
 }

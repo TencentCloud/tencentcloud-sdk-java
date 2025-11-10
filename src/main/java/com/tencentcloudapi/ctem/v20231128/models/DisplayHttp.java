@@ -123,6 +123,48 @@ public class DisplayHttp extends AbstractModel {
     private Boolean IsChange;
 
     /**
+    * 是否为云资产：0-非云资产 1-是云资产
+    */
+    @SerializedName("IsCloudAsset")
+    @Expose
+    private Long IsCloudAsset;
+
+    /**
+    * 云资产是否下线：-1-已下线 0-正常
+    */
+    @SerializedName("CloudAssetStatus")
+    @Expose
+    private Long CloudAssetStatus;
+
+    /**
+    * 可用率（百分比）
+    */
+    @SerializedName("AvailabilityRate")
+    @Expose
+    private Long AvailabilityRate;
+
+    /**
+    * 可用状态 1:异常 0:正常
+    */
+    @SerializedName("AvailabilityState")
+    @Expose
+    private Long AvailabilityState;
+
+    /**
+    * 平均响应时间：单位ms
+    */
+    @SerializedName("ResponseTime")
+    @Expose
+    private Long ResponseTime;
+
+    /**
+    * 域名解析状态 1:异常 0:正常
+    */
+    @SerializedName("AnalysisState")
+    @Expose
+    private Long AnalysisState;
+
+    /**
      * Get 主键ID 
      * @return Id 主键ID
      */
@@ -350,6 +392,102 @@ public class DisplayHttp extends AbstractModel {
         this.IsChange = IsChange;
     }
 
+    /**
+     * Get 是否为云资产：0-非云资产 1-是云资产 
+     * @return IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     */
+    public Long getIsCloudAsset() {
+        return this.IsCloudAsset;
+    }
+
+    /**
+     * Set 是否为云资产：0-非云资产 1-是云资产
+     * @param IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     */
+    public void setIsCloudAsset(Long IsCloudAsset) {
+        this.IsCloudAsset = IsCloudAsset;
+    }
+
+    /**
+     * Get 云资产是否下线：-1-已下线 0-正常 
+     * @return CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     */
+    public Long getCloudAssetStatus() {
+        return this.CloudAssetStatus;
+    }
+
+    /**
+     * Set 云资产是否下线：-1-已下线 0-正常
+     * @param CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     */
+    public void setCloudAssetStatus(Long CloudAssetStatus) {
+        this.CloudAssetStatus = CloudAssetStatus;
+    }
+
+    /**
+     * Get 可用率（百分比） 
+     * @return AvailabilityRate 可用率（百分比）
+     */
+    public Long getAvailabilityRate() {
+        return this.AvailabilityRate;
+    }
+
+    /**
+     * Set 可用率（百分比）
+     * @param AvailabilityRate 可用率（百分比）
+     */
+    public void setAvailabilityRate(Long AvailabilityRate) {
+        this.AvailabilityRate = AvailabilityRate;
+    }
+
+    /**
+     * Get 可用状态 1:异常 0:正常 
+     * @return AvailabilityState 可用状态 1:异常 0:正常
+     */
+    public Long getAvailabilityState() {
+        return this.AvailabilityState;
+    }
+
+    /**
+     * Set 可用状态 1:异常 0:正常
+     * @param AvailabilityState 可用状态 1:异常 0:正常
+     */
+    public void setAvailabilityState(Long AvailabilityState) {
+        this.AvailabilityState = AvailabilityState;
+    }
+
+    /**
+     * Get 平均响应时间：单位ms 
+     * @return ResponseTime 平均响应时间：单位ms
+     */
+    public Long getResponseTime() {
+        return this.ResponseTime;
+    }
+
+    /**
+     * Set 平均响应时间：单位ms
+     * @param ResponseTime 平均响应时间：单位ms
+     */
+    public void setResponseTime(Long ResponseTime) {
+        this.ResponseTime = ResponseTime;
+    }
+
+    /**
+     * Get 域名解析状态 1:异常 0:正常 
+     * @return AnalysisState 域名解析状态 1:异常 0:正常
+     */
+    public Long getAnalysisState() {
+        return this.AnalysisState;
+    }
+
+    /**
+     * Set 域名解析状态 1:异常 0:正常
+     * @param AnalysisState 域名解析状态 1:异常 0:正常
+     */
+    public void setAnalysisState(Long AnalysisState) {
+        this.AnalysisState = AnalysisState;
+    }
+
     public DisplayHttp() {
     }
 
@@ -400,6 +538,24 @@ public class DisplayHttp extends AbstractModel {
         if (source.IsChange != null) {
             this.IsChange = new Boolean(source.IsChange);
         }
+        if (source.IsCloudAsset != null) {
+            this.IsCloudAsset = new Long(source.IsCloudAsset);
+        }
+        if (source.CloudAssetStatus != null) {
+            this.CloudAssetStatus = new Long(source.CloudAssetStatus);
+        }
+        if (source.AvailabilityRate != null) {
+            this.AvailabilityRate = new Long(source.AvailabilityRate);
+        }
+        if (source.AvailabilityState != null) {
+            this.AvailabilityState = new Long(source.AvailabilityState);
+        }
+        if (source.ResponseTime != null) {
+            this.ResponseTime = new Long(source.ResponseTime);
+        }
+        if (source.AnalysisState != null) {
+            this.AnalysisState = new Long(source.AnalysisState);
+        }
     }
 
 
@@ -421,6 +577,12 @@ public class DisplayHttp extends AbstractModel {
         this.setParamSimple(map, prefix + "Ssl", this.Ssl);
         this.setParamSimple(map, prefix + "SslExpiredTime", this.SslExpiredTime);
         this.setParamSimple(map, prefix + "IsChange", this.IsChange);
+        this.setParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
+        this.setParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
+        this.setParamSimple(map, prefix + "AvailabilityRate", this.AvailabilityRate);
+        this.setParamSimple(map, prefix + "AvailabilityState", this.AvailabilityState);
+        this.setParamSimple(map, prefix + "ResponseTime", this.ResponseTime);
+        this.setParamSimple(map, prefix + "AnalysisState", this.AnalysisState);
 
     }
 }

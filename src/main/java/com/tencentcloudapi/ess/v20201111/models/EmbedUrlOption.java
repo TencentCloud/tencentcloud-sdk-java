@@ -44,7 +44,7 @@ public class EmbedUrlOption extends AbstractModel {
     private Boolean ShowTemplateComponent;
 
     /**
-    * 跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+    * 跳过上传文件，默认为false(展示上传文件页)![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
 - false: 展示上传文件页
 - true: 不展示上传文件页
  
@@ -54,6 +54,20 @@ public class EmbedUrlOption extends AbstractModel {
     @SerializedName("SkipUploadFile")
     @Expose
     private Boolean SkipUploadFile;
+
+    /**
+    * 隐藏下载文件按钮，默认为false(展示下载文件按钮)
+
+- false: 展示下载文件按钮
+- true: 不展示下载文件按钮
+
+ 
+
+注意: 此参数仅针对**EmbedType=PREVIEW_FLOW_DETAIL(查看合同详情)**有效
+    */
+    @SerializedName("SkipDownloadFile")
+    @Expose
+    private Boolean SkipDownloadFile;
 
     /**
     * 是否禁止编辑（展示）水印控件属性
@@ -136,13 +150,13 @@ public class EmbedUrlOption extends AbstractModel {
     }
 
     /**
-     * Get 跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+     * Get 跳过上传文件，默认为false(展示上传文件页)![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
 - false: 展示上传文件页
 - true: 不展示上传文件页
  
 
 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**， 
-     * @return SkipUploadFile 跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+     * @return SkipUploadFile 跳过上传文件，默认为false(展示上传文件页)![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
 - false: 展示上传文件页
 - true: 不展示上传文件页
  
@@ -154,13 +168,13 @@ public class EmbedUrlOption extends AbstractModel {
     }
 
     /**
-     * Set 跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+     * Set 跳过上传文件，默认为false(展示上传文件页)![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
 - false: 展示上传文件页
 - true: 不展示上传文件页
  
 
 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**，
-     * @param SkipUploadFile 跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+     * @param SkipUploadFile 跳过上传文件，默认为false(展示上传文件页)![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
 - false: 展示上传文件页
 - true: 不展示上传文件页
  
@@ -169,6 +183,50 @@ public class EmbedUrlOption extends AbstractModel {
      */
     public void setSkipUploadFile(Boolean SkipUploadFile) {
         this.SkipUploadFile = SkipUploadFile;
+    }
+
+    /**
+     * Get 隐藏下载文件按钮，默认为false(展示下载文件按钮)
+
+- false: 展示下载文件按钮
+- true: 不展示下载文件按钮
+
+ 
+
+注意: 此参数仅针对**EmbedType=PREVIEW_FLOW_DETAIL(查看合同详情)**有效 
+     * @return SkipDownloadFile 隐藏下载文件按钮，默认为false(展示下载文件按钮)
+
+- false: 展示下载文件按钮
+- true: 不展示下载文件按钮
+
+ 
+
+注意: 此参数仅针对**EmbedType=PREVIEW_FLOW_DETAIL(查看合同详情)**有效
+     */
+    public Boolean getSkipDownloadFile() {
+        return this.SkipDownloadFile;
+    }
+
+    /**
+     * Set 隐藏下载文件按钮，默认为false(展示下载文件按钮)
+
+- false: 展示下载文件按钮
+- true: 不展示下载文件按钮
+
+ 
+
+注意: 此参数仅针对**EmbedType=PREVIEW_FLOW_DETAIL(查看合同详情)**有效
+     * @param SkipDownloadFile 隐藏下载文件按钮，默认为false(展示下载文件按钮)
+
+- false: 展示下载文件按钮
+- true: 不展示下载文件按钮
+
+ 
+
+注意: 此参数仅针对**EmbedType=PREVIEW_FLOW_DETAIL(查看合同详情)**有效
+     */
+    public void setSkipDownloadFile(Boolean SkipDownloadFile) {
+        this.SkipDownloadFile = SkipDownloadFile;
     }
 
     /**
@@ -248,6 +306,9 @@ public class EmbedUrlOption extends AbstractModel {
         if (source.SkipUploadFile != null) {
             this.SkipUploadFile = new Boolean(source.SkipUploadFile);
         }
+        if (source.SkipDownloadFile != null) {
+            this.SkipDownloadFile = new Boolean(source.SkipDownloadFile);
+        }
         if (source.ForbidEditWatermark != null) {
             this.ForbidEditWatermark = new Boolean(source.ForbidEditWatermark);
         }
@@ -267,6 +328,7 @@ public class EmbedUrlOption extends AbstractModel {
         this.setParamSimple(map, prefix + "ShowFlowDetailComponent", this.ShowFlowDetailComponent);
         this.setParamSimple(map, prefix + "ShowTemplateComponent", this.ShowTemplateComponent);
         this.setParamSimple(map, prefix + "SkipUploadFile", this.SkipUploadFile);
+        this.setParamSimple(map, prefix + "SkipDownloadFile", this.SkipDownloadFile);
         this.setParamSimple(map, prefix + "ForbidEditWatermark", this.ForbidEditWatermark);
         this.setParamSimple(map, prefix + "SealDescription", this.SealDescription);
         this.setParamSimple(map, prefix + "ForbidEditSealDescription", this.ForbidEditSealDescription);

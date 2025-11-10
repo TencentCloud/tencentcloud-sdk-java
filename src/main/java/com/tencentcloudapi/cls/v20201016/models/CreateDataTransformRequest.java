@@ -102,6 +102,20 @@ public class CreateDataTransformRequest extends AbstractModel {
     private Long DataTransformType;
 
     /**
+    * 保留失败日志状态，1:不保留(默认)，2:保留。
+    */
+    @SerializedName("KeepFailureLog")
+    @Expose
+    private Long KeepFailureLog;
+
+    /**
+    * 失败日志的字段名称
+    */
+    @SerializedName("FailureLogKey")
+    @Expose
+    private String FailureLogKey;
+
+    /**
      * Get 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。 
      * @return FuncType 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。
      */
@@ -305,6 +319,38 @@ public class CreateDataTransformRequest extends AbstractModel {
         this.DataTransformType = DataTransformType;
     }
 
+    /**
+     * Get 保留失败日志状态，1:不保留(默认)，2:保留。 
+     * @return KeepFailureLog 保留失败日志状态，1:不保留(默认)，2:保留。
+     */
+    public Long getKeepFailureLog() {
+        return this.KeepFailureLog;
+    }
+
+    /**
+     * Set 保留失败日志状态，1:不保留(默认)，2:保留。
+     * @param KeepFailureLog 保留失败日志状态，1:不保留(默认)，2:保留。
+     */
+    public void setKeepFailureLog(Long KeepFailureLog) {
+        this.KeepFailureLog = KeepFailureLog;
+    }
+
+    /**
+     * Get 失败日志的字段名称 
+     * @return FailureLogKey 失败日志的字段名称
+     */
+    public String getFailureLogKey() {
+        return this.FailureLogKey;
+    }
+
+    /**
+     * Set 失败日志的字段名称
+     * @param FailureLogKey 失败日志的字段名称
+     */
+    public void setFailureLogKey(String FailureLogKey) {
+        this.FailureLogKey = FailureLogKey;
+    }
+
     public CreateDataTransformRequest() {
     }
 
@@ -346,6 +392,12 @@ public class CreateDataTransformRequest extends AbstractModel {
         if (source.DataTransformType != null) {
             this.DataTransformType = new Long(source.DataTransformType);
         }
+        if (source.KeepFailureLog != null) {
+            this.KeepFailureLog = new Long(source.KeepFailureLog);
+        }
+        if (source.FailureLogKey != null) {
+            this.FailureLogKey = new String(source.FailureLogKey);
+        }
     }
 
 
@@ -362,6 +414,8 @@ public class CreateDataTransformRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
         this.setParamArrayObj(map, prefix + "PreviewLogStatistics.", this.PreviewLogStatistics);
         this.setParamSimple(map, prefix + "DataTransformType", this.DataTransformType);
+        this.setParamSimple(map, prefix + "KeepFailureLog", this.KeepFailureLog);
+        this.setParamSimple(map, prefix + "FailureLogKey", this.FailureLogKey);
 
     }
 }

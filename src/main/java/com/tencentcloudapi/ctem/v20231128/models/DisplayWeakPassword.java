@@ -80,7 +80,7 @@ public class DisplayWeakPassword extends AbstractModel {
     private String Password;
 
     /**
-    * 是否蜜罐
+    * 是否为蜜罐
     */
     @SerializedName("IsHoneypot")
     @Expose
@@ -106,6 +106,20 @@ public class DisplayWeakPassword extends AbstractModel {
     @SerializedName("LastCheckTime")
     @Expose
     private String LastCheckTime;
+
+    /**
+    * 是否为云资产：0-非云资产 1-是云资产
+    */
+    @SerializedName("IsCloudAsset")
+    @Expose
+    private Long IsCloudAsset;
+
+    /**
+    * 云资产是否下线：-1-已下线 0-正常
+    */
+    @SerializedName("CloudAssetStatus")
+    @Expose
+    private Long CloudAssetStatus;
 
     /**
      * Get 主键ID 
@@ -236,16 +250,16 @@ public class DisplayWeakPassword extends AbstractModel {
     }
 
     /**
-     * Get 是否蜜罐 
-     * @return IsHoneypot 是否蜜罐
+     * Get 是否为蜜罐 
+     * @return IsHoneypot 是否为蜜罐
      */
     public Boolean getIsHoneypot() {
         return this.IsHoneypot;
     }
 
     /**
-     * Set 是否蜜罐
-     * @param IsHoneypot 是否蜜罐
+     * Set 是否为蜜罐
+     * @param IsHoneypot 是否为蜜罐
      */
     public void setIsHoneypot(Boolean IsHoneypot) {
         this.IsHoneypot = IsHoneypot;
@@ -299,6 +313,38 @@ public class DisplayWeakPassword extends AbstractModel {
         this.LastCheckTime = LastCheckTime;
     }
 
+    /**
+     * Get 是否为云资产：0-非云资产 1-是云资产 
+     * @return IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     */
+    public Long getIsCloudAsset() {
+        return this.IsCloudAsset;
+    }
+
+    /**
+     * Set 是否为云资产：0-非云资产 1-是云资产
+     * @param IsCloudAsset 是否为云资产：0-非云资产 1-是云资产
+     */
+    public void setIsCloudAsset(Long IsCloudAsset) {
+        this.IsCloudAsset = IsCloudAsset;
+    }
+
+    /**
+     * Get 云资产是否下线：-1-已下线 0-正常 
+     * @return CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     */
+    public Long getCloudAssetStatus() {
+        return this.CloudAssetStatus;
+    }
+
+    /**
+     * Set 云资产是否下线：-1-已下线 0-正常
+     * @param CloudAssetStatus 云资产是否下线：-1-已下线 0-正常
+     */
+    public void setCloudAssetStatus(Long CloudAssetStatus) {
+        this.CloudAssetStatus = CloudAssetStatus;
+    }
+
     public DisplayWeakPassword() {
     }
 
@@ -343,6 +389,12 @@ public class DisplayWeakPassword extends AbstractModel {
         if (source.LastCheckTime != null) {
             this.LastCheckTime = new String(source.LastCheckTime);
         }
+        if (source.IsCloudAsset != null) {
+            this.IsCloudAsset = new Long(source.IsCloudAsset);
+        }
+        if (source.CloudAssetStatus != null) {
+            this.CloudAssetStatus = new Long(source.CloudAssetStatus);
+        }
     }
 
 
@@ -362,6 +414,8 @@ public class DisplayWeakPassword extends AbstractModel {
         this.setParamSimple(map, prefix + "ScreenshotUrl", this.ScreenshotUrl);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
+        this.setParamSimple(map, prefix + "IsCloudAsset", this.IsCloudAsset);
+        this.setParamSimple(map, prefix + "CloudAssetStatus", this.CloudAssetStatus);
 
     }
 }
