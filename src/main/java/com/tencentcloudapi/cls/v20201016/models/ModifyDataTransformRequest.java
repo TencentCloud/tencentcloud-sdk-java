@@ -71,11 +71,46 @@ public class ModifyDataTransformRequest extends AbstractModel {
     private DataTransformResouceInfo [] DstResources;
 
     /**
+    * 超限之后是否丢弃日志数据
+    */
+    @SerializedName("BackupGiveUpData")
+    @Expose
+    private Boolean BackupGiveUpData;
+
+    /**
     * 是否开启投递服务日志。1关闭，2开启
     */
     @SerializedName("HasServicesLog")
     @Expose
     private Long HasServicesLog;
+
+    /**
+    * 保留失败日志状态。 1:不保留，2:保留
+    */
+    @SerializedName("KeepFailureLog")
+    @Expose
+    private Long KeepFailureLog;
+
+    /**
+    * 失败日志的字段名称
+    */
+    @SerializedName("FailureLogKey")
+    @Expose
+    private String FailureLogKey;
+
+    /**
+    * 外部数据源信息
+    */
+    @SerializedName("DataTransformSqlDataSources")
+    @Expose
+    private DataTransformSqlDataSource [] DataTransformSqlDataSources;
+
+    /**
+    * 设置的环境变量
+    */
+    @SerializedName("EnvInfos")
+    @Expose
+    private EnvInfo [] EnvInfos;
 
     /**
      * Get 数据加工任务ID
@@ -206,6 +241,22 @@ public class ModifyDataTransformRequest extends AbstractModel {
     }
 
     /**
+     * Get 超限之后是否丢弃日志数据 
+     * @return BackupGiveUpData 超限之后是否丢弃日志数据
+     */
+    public Boolean getBackupGiveUpData() {
+        return this.BackupGiveUpData;
+    }
+
+    /**
+     * Set 超限之后是否丢弃日志数据
+     * @param BackupGiveUpData 超限之后是否丢弃日志数据
+     */
+    public void setBackupGiveUpData(Boolean BackupGiveUpData) {
+        this.BackupGiveUpData = BackupGiveUpData;
+    }
+
+    /**
      * Get 是否开启投递服务日志。1关闭，2开启 
      * @return HasServicesLog 是否开启投递服务日志。1关闭，2开启
      */
@@ -219,6 +270,70 @@ public class ModifyDataTransformRequest extends AbstractModel {
      */
     public void setHasServicesLog(Long HasServicesLog) {
         this.HasServicesLog = HasServicesLog;
+    }
+
+    /**
+     * Get 保留失败日志状态。 1:不保留，2:保留 
+     * @return KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
+     */
+    public Long getKeepFailureLog() {
+        return this.KeepFailureLog;
+    }
+
+    /**
+     * Set 保留失败日志状态。 1:不保留，2:保留
+     * @param KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
+     */
+    public void setKeepFailureLog(Long KeepFailureLog) {
+        this.KeepFailureLog = KeepFailureLog;
+    }
+
+    /**
+     * Get 失败日志的字段名称 
+     * @return FailureLogKey 失败日志的字段名称
+     */
+    public String getFailureLogKey() {
+        return this.FailureLogKey;
+    }
+
+    /**
+     * Set 失败日志的字段名称
+     * @param FailureLogKey 失败日志的字段名称
+     */
+    public void setFailureLogKey(String FailureLogKey) {
+        this.FailureLogKey = FailureLogKey;
+    }
+
+    /**
+     * Get 外部数据源信息 
+     * @return DataTransformSqlDataSources 外部数据源信息
+     */
+    public DataTransformSqlDataSource [] getDataTransformSqlDataSources() {
+        return this.DataTransformSqlDataSources;
+    }
+
+    /**
+     * Set 外部数据源信息
+     * @param DataTransformSqlDataSources 外部数据源信息
+     */
+    public void setDataTransformSqlDataSources(DataTransformSqlDataSource [] DataTransformSqlDataSources) {
+        this.DataTransformSqlDataSources = DataTransformSqlDataSources;
+    }
+
+    /**
+     * Get 设置的环境变量 
+     * @return EnvInfos 设置的环境变量
+     */
+    public EnvInfo [] getEnvInfos() {
+        return this.EnvInfos;
+    }
+
+    /**
+     * Set 设置的环境变量
+     * @param EnvInfos 设置的环境变量
+     */
+    public void setEnvInfos(EnvInfo [] EnvInfos) {
+        this.EnvInfos = EnvInfos;
     }
 
     public ModifyDataTransformRequest() {
@@ -247,8 +362,29 @@ public class ModifyDataTransformRequest extends AbstractModel {
                 this.DstResources[i] = new DataTransformResouceInfo(source.DstResources[i]);
             }
         }
+        if (source.BackupGiveUpData != null) {
+            this.BackupGiveUpData = new Boolean(source.BackupGiveUpData);
+        }
         if (source.HasServicesLog != null) {
             this.HasServicesLog = new Long(source.HasServicesLog);
+        }
+        if (source.KeepFailureLog != null) {
+            this.KeepFailureLog = new Long(source.KeepFailureLog);
+        }
+        if (source.FailureLogKey != null) {
+            this.FailureLogKey = new String(source.FailureLogKey);
+        }
+        if (source.DataTransformSqlDataSources != null) {
+            this.DataTransformSqlDataSources = new DataTransformSqlDataSource[source.DataTransformSqlDataSources.length];
+            for (int i = 0; i < source.DataTransformSqlDataSources.length; i++) {
+                this.DataTransformSqlDataSources[i] = new DataTransformSqlDataSource(source.DataTransformSqlDataSources[i]);
+            }
+        }
+        if (source.EnvInfos != null) {
+            this.EnvInfos = new EnvInfo[source.EnvInfos.length];
+            for (int i = 0; i < source.EnvInfos.length; i++) {
+                this.EnvInfos[i] = new EnvInfo(source.EnvInfos[i]);
+            }
         }
     }
 
@@ -262,7 +398,12 @@ public class ModifyDataTransformRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EtlContent", this.EtlContent);
         this.setParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
         this.setParamArrayObj(map, prefix + "DstResources.", this.DstResources);
+        this.setParamSimple(map, prefix + "BackupGiveUpData", this.BackupGiveUpData);
         this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "KeepFailureLog", this.KeepFailureLog);
+        this.setParamSimple(map, prefix + "FailureLogKey", this.FailureLogKey);
+        this.setParamArrayObj(map, prefix + "DataTransformSqlDataSources.", this.DataTransformSqlDataSources);
+        this.setParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
 
     }
 }

@@ -360,6 +360,20 @@ public class DeviceDetail extends AbstractModel {
     private Long AccountGroupId;
 
     /**
+    * 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+    */
+    @SerializedName("ScreenRecordingPermission")
+    @Expose
+    private Long ScreenRecordingPermission;
+
+    /**
+    * 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
+    */
+    @SerializedName("DiskAccessPermission")
+    @Expose
+    private Long DiskAccessPermission;
+
+    /**
     * 终端备注名
     */
     @SerializedName("RemarkName")
@@ -1135,6 +1149,38 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
+     * Get 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启 
+     * @return ScreenRecordingPermission 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+     */
+    public Long getScreenRecordingPermission() {
+        return this.ScreenRecordingPermission;
+    }
+
+    /**
+     * Set 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+     * @param ScreenRecordingPermission 是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启
+     */
+    public void setScreenRecordingPermission(Long ScreenRecordingPermission) {
+        this.ScreenRecordingPermission = ScreenRecordingPermission;
+    }
+
+    /**
+     * Get 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启 
+     * @return DiskAccessPermission 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
+     */
+    public Long getDiskAccessPermission() {
+        return this.DiskAccessPermission;
+    }
+
+    /**
+     * Set 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
+     * @param DiskAccessPermission 是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启
+     */
+    public void setDiskAccessPermission(Long DiskAccessPermission) {
+        this.DiskAccessPermission = DiskAccessPermission;
+    }
+
+    /**
      * Get 终端备注名 
      * @return RemarkName 终端备注名
      */
@@ -1305,6 +1351,12 @@ public class DeviceDetail extends AbstractModel {
         if (source.AccountGroupId != null) {
             this.AccountGroupId = new Long(source.AccountGroupId);
         }
+        if (source.ScreenRecordingPermission != null) {
+            this.ScreenRecordingPermission = new Long(source.ScreenRecordingPermission);
+        }
+        if (source.DiskAccessPermission != null) {
+            this.DiskAccessPermission = new Long(source.DiskAccessPermission);
+        }
         if (source.RemarkName != null) {
             this.RemarkName = new String(source.RemarkName);
         }
@@ -1363,6 +1415,8 @@ public class DeviceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "AccountGroupName", this.AccountGroupName);
         this.setParamSimple(map, prefix + "AccountName", this.AccountName);
         this.setParamSimple(map, prefix + "AccountGroupId", this.AccountGroupId);
+        this.setParamSimple(map, prefix + "ScreenRecordingPermission", this.ScreenRecordingPermission);
+        this.setParamSimple(map, prefix + "DiskAccessPermission", this.DiskAccessPermission);
         this.setParamSimple(map, prefix + "RemarkName", this.RemarkName);
 
     }

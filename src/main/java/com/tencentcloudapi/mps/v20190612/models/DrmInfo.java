@@ -44,10 +44,14 @@ public class DrmInfo extends AbstractModel {
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
 
-- widevine+fairplay:
+- widevine+fairplay，playready+fairplay，widevine+playready+fairplay:
  只能用于HLS，切片格式只能是mp4
  可以使用切片模式或singfile模式
 
+- widevine+playready:
+ 可用于HLS、MPEG-DASH，切片格式只能是mp4
+ HLS格式时，可以使用切片模式或singfile模式
+ MPEG-DASH时，只能使用singlefile模式
     */
     @SerializedName("Type")
     @Expose
@@ -89,10 +93,14 @@ public class DrmInfo extends AbstractModel {
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
 
-- widevine+fairplay:
+- widevine+fairplay，playready+fairplay，widevine+playready+fairplay:
  只能用于HLS，切片格式只能是mp4
  可以使用切片模式或singfile模式
- 
+
+- widevine+playready:
+ 可用于HLS、MPEG-DASH，切片格式只能是mp4
+ HLS格式时，可以使用切片模式或singfile模式
+ MPEG-DASH时，只能使用singlefile模式 
      * @return Type 加密类型：
 
 - simpleaes
@@ -113,10 +121,14 @@ public class DrmInfo extends AbstractModel {
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
 
-- widevine+fairplay:
+- widevine+fairplay，playready+fairplay，widevine+playready+fairplay:
  只能用于HLS，切片格式只能是mp4
  可以使用切片模式或singfile模式
 
+- widevine+playready:
+ 可用于HLS、MPEG-DASH，切片格式只能是mp4
+ HLS格式时，可以使用切片模式或singfile模式
+ MPEG-DASH时，只能使用singlefile模式
      */
     public String getType() {
         return this.Type;
@@ -143,10 +155,14 @@ public class DrmInfo extends AbstractModel {
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
 
-- widevine+fairplay:
+- widevine+fairplay，playready+fairplay，widevine+playready+fairplay:
  只能用于HLS，切片格式只能是mp4
  可以使用切片模式或singfile模式
 
+- widevine+playready:
+ 可用于HLS、MPEG-DASH，切片格式只能是mp4
+ HLS格式时，可以使用切片模式或singfile模式
+ MPEG-DASH时，只能使用singlefile模式
      * @param Type 加密类型：
 
 - simpleaes
@@ -167,10 +183,14 @@ public class DrmInfo extends AbstractModel {
 输出HLS：可以使用切片模式或singlefile模式
 输出DASH：只能singlefile模式
 
-- widevine+fairplay:
+- widevine+fairplay，playready+fairplay，widevine+playready+fairplay:
  只能用于HLS，切片格式只能是mp4
  可以使用切片模式或singfile模式
 
+- widevine+playready:
+ 可用于HLS、MPEG-DASH，切片格式只能是mp4
+ HLS格式时，可以使用切片模式或singfile模式
+ MPEG-DASH时，只能使用singlefile模式
      */
     public void setType(String Type) {
         this.Type = Type;

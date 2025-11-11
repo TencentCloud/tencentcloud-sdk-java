@@ -50,11 +50,13 @@ public class SpekeDrm extends AbstractModel {
     private String Vector;
 
     /**
-    * 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
-加密方式选择WideVine+FairPlay时，仅支持cbcs
+    * 加密方式，FairPlay 默认cbcs
+加密方式，PlayReady，Widevine 默认cenc
+加密方式，WideVine+FairPlay，Playready+Fairplay，Widevine+Playready+Fairplay默认cbcs
+加密方式，Widevine+Playready默认cenc
 
-cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
-cenc：PlayReady，Widevine支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay，Widevine+Playready，Playready+Fairplay，Widevine+Playready+Fairplay支持；
+cenc：PlayReady，Widevine，Widevine+Playready支持；
     */
     @SerializedName("EncryptionMethod")
     @Expose
@@ -139,32 +141,40 @@ preset1：每个子流使用不同的key加密；
     }
 
     /**
-     * Get 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
-加密方式选择WideVine+FairPlay时，仅支持cbcs
+     * Get 加密方式，FairPlay 默认cbcs
+加密方式，PlayReady，Widevine 默认cenc
+加密方式，WideVine+FairPlay，Playready+Fairplay，Widevine+Playready+Fairplay默认cbcs
+加密方式，Widevine+Playready默认cenc
 
-cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
-cenc：PlayReady，Widevine支持； 
-     * @return EncryptionMethod 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
-加密方式选择WideVine+FairPlay时，仅支持cbcs
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay，Widevine+Playready，Playready+Fairplay，Widevine+Playready+Fairplay支持；
+cenc：PlayReady，Widevine，Widevine+Playready支持； 
+     * @return EncryptionMethod 加密方式，FairPlay 默认cbcs
+加密方式，PlayReady，Widevine 默认cenc
+加密方式，WideVine+FairPlay，Playready+Fairplay，Widevine+Playready+Fairplay默认cbcs
+加密方式，Widevine+Playready默认cenc
 
-cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
-cenc：PlayReady，Widevine支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay，Widevine+Playready，Playready+Fairplay，Widevine+Playready+Fairplay支持；
+cenc：PlayReady，Widevine，Widevine+Playready支持；
      */
     public String getEncryptionMethod() {
         return this.EncryptionMethod;
     }
 
     /**
-     * Set 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
-加密方式选择WideVine+FairPlay时，仅支持cbcs
+     * Set 加密方式，FairPlay 默认cbcs
+加密方式，PlayReady，Widevine 默认cenc
+加密方式，WideVine+FairPlay，Playready+Fairplay，Widevine+Playready+Fairplay默认cbcs
+加密方式，Widevine+Playready默认cenc
 
-cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
-cenc：PlayReady，Widevine支持；
-     * @param EncryptionMethod 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
-加密方式选择WideVine+FairPlay时，仅支持cbcs
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay，Widevine+Playready，Playready+Fairplay，Widevine+Playready+Fairplay支持；
+cenc：PlayReady，Widevine，Widevine+Playready支持；
+     * @param EncryptionMethod 加密方式，FairPlay 默认cbcs
+加密方式，PlayReady，Widevine 默认cenc
+加密方式，WideVine+FairPlay，Playready+Fairplay，Widevine+Playready+Fairplay默认cbcs
+加密方式，Widevine+Playready默认cenc
 
-cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay 支持；
-cenc：PlayReady，Widevine支持；
+cbcs：PlayReady，Widevine，FairPlay，WideVine+FairPlay，Widevine+Playready，Playready+Fairplay，Widevine+Playready+Fairplay支持；
+cenc：PlayReady，Widevine，Widevine+Playready支持；
      */
     public void setEncryptionMethod(String EncryptionMethod) {
         this.EncryptionMethod = EncryptionMethod;

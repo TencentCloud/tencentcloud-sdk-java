@@ -39,7 +39,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
-注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。且要求输入源为全景视频（带多视角）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Codec")
@@ -363,7 +363,7 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
-注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。且要求输入源为全景视频（带多视角）。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Codec 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
@@ -380,7 +380,7 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
-注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。且要求输入源为全景视频（带多视角）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodec() {
@@ -403,7 +403,7 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
-注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。且要求输入源为全景视频（带多视角）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Codec 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
@@ -420,7 +420,7 @@ low_compress：画质优先：优先保证画质，压缩出来的文件体积�
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
-注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。且要求输入源为全景视频（带多视角）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodec(String Codec) {

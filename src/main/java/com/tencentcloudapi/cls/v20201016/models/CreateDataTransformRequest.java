@@ -95,6 +95,23 @@ public class CreateDataTransformRequest extends AbstractModel {
     private PreviewLogStatistic [] PreviewLogStatistics;
 
     /**
+    * 当FuncType为2时，动态创建的日志集、日志主题的个数超出产品规格限制是否丢弃数据， 默认为false。
+
+false：创建兜底日志集、日志主题并将日志写入兜底主题；
+true：丢弃日志数据。
+    */
+    @SerializedName("BackupGiveUpData")
+    @Expose
+    private Boolean BackupGiveUpData;
+
+    /**
+    * 是否开启投递服务日志。1：关闭，2：开启。
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
     * 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
     */
     @SerializedName("DataTransformType")
@@ -114,6 +131,46 @@ public class CreateDataTransformRequest extends AbstractModel {
     @SerializedName("FailureLogKey")
     @Expose
     private String FailureLogKey;
+
+    /**
+    * 指定加工数据的开始时间, 秒级时间戳。
+ - 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+    */
+    @SerializedName("ProcessFromTimestamp")
+    @Expose
+    private Long ProcessFromTimestamp;
+
+    /**
+    * 指定加工数据的结束时间，秒级时间戳。
+
+-  不可指定未来的时间
+-  不填则表示持续执行
+    */
+    @SerializedName("ProcessToTimestamp")
+    @Expose
+    private Long ProcessToTimestamp;
+
+    /**
+    * 对已经创建的并且使用了关联外部数据库能力的任务预览（TaskType 为 1 或 2）时，该值必传
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+    * 关联的数据源信息
+    */
+    @SerializedName("DataTransformSqlDataSources")
+    @Expose
+    private DataTransformSqlDataSource [] DataTransformSqlDataSources;
+
+    /**
+    * 设置的环境变量
+    */
+    @SerializedName("EnvInfos")
+    @Expose
+    private EnvInfo [] EnvInfos;
 
     /**
      * Get 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。 
@@ -304,6 +361,50 @@ public class CreateDataTransformRequest extends AbstractModel {
     }
 
     /**
+     * Get 当FuncType为2时，动态创建的日志集、日志主题的个数超出产品规格限制是否丢弃数据， 默认为false。
+
+false：创建兜底日志集、日志主题并将日志写入兜底主题；
+true：丢弃日志数据。 
+     * @return BackupGiveUpData 当FuncType为2时，动态创建的日志集、日志主题的个数超出产品规格限制是否丢弃数据， 默认为false。
+
+false：创建兜底日志集、日志主题并将日志写入兜底主题；
+true：丢弃日志数据。
+     */
+    public Boolean getBackupGiveUpData() {
+        return this.BackupGiveUpData;
+    }
+
+    /**
+     * Set 当FuncType为2时，动态创建的日志集、日志主题的个数超出产品规格限制是否丢弃数据， 默认为false。
+
+false：创建兜底日志集、日志主题并将日志写入兜底主题；
+true：丢弃日志数据。
+     * @param BackupGiveUpData 当FuncType为2时，动态创建的日志集、日志主题的个数超出产品规格限制是否丢弃数据， 默认为false。
+
+false：创建兜底日志集、日志主题并将日志写入兜底主题；
+true：丢弃日志数据。
+     */
+    public void setBackupGiveUpData(Boolean BackupGiveUpData) {
+        this.BackupGiveUpData = BackupGiveUpData;
+    }
+
+    /**
+     * Get 是否开启投递服务日志。1：关闭，2：开启。 
+     * @return HasServicesLog 是否开启投递服务日志。1：关闭，2：开启。
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set 是否开启投递服务日志。1：关闭，2：开启。
+     * @param HasServicesLog 是否开启投递服务日志。1：关闭，2：开启。
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
+    }
+
+    /**
      * Get 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。 
      * @return DataTransformType 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
      */
@@ -351,6 +452,106 @@ public class CreateDataTransformRequest extends AbstractModel {
         this.FailureLogKey = FailureLogKey;
     }
 
+    /**
+     * Get 指定加工数据的开始时间, 秒级时间戳。
+ - 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。 
+     * @return ProcessFromTimestamp 指定加工数据的开始时间, 秒级时间戳。
+ - 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+     */
+    public Long getProcessFromTimestamp() {
+        return this.ProcessFromTimestamp;
+    }
+
+    /**
+     * Set 指定加工数据的开始时间, 秒级时间戳。
+ - 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+     * @param ProcessFromTimestamp 指定加工数据的开始时间, 秒级时间戳。
+ - 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+     */
+    public void setProcessFromTimestamp(Long ProcessFromTimestamp) {
+        this.ProcessFromTimestamp = ProcessFromTimestamp;
+    }
+
+    /**
+     * Get 指定加工数据的结束时间，秒级时间戳。
+
+-  不可指定未来的时间
+-  不填则表示持续执行 
+     * @return ProcessToTimestamp 指定加工数据的结束时间，秒级时间戳。
+
+-  不可指定未来的时间
+-  不填则表示持续执行
+     */
+    public Long getProcessToTimestamp() {
+        return this.ProcessToTimestamp;
+    }
+
+    /**
+     * Set 指定加工数据的结束时间，秒级时间戳。
+
+-  不可指定未来的时间
+-  不填则表示持续执行
+     * @param ProcessToTimestamp 指定加工数据的结束时间，秒级时间戳。
+
+-  不可指定未来的时间
+-  不填则表示持续执行
+     */
+    public void setProcessToTimestamp(Long ProcessToTimestamp) {
+        this.ProcessToTimestamp = ProcessToTimestamp;
+    }
+
+    /**
+     * Get 对已经创建的并且使用了关联外部数据库能力的任务预览（TaskType 为 1 或 2）时，该值必传
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。 
+     * @return TaskId 对已经创建的并且使用了关联外部数据库能力的任务预览（TaskType 为 1 或 2）时，该值必传
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 对已经创建的并且使用了关联外部数据库能力的任务预览（TaskType 为 1 或 2）时，该值必传
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+     * @param TaskId 对已经创建的并且使用了关联外部数据库能力的任务预览（TaskType 为 1 或 2）时，该值必传
+数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 关联的数据源信息 
+     * @return DataTransformSqlDataSources 关联的数据源信息
+     */
+    public DataTransformSqlDataSource [] getDataTransformSqlDataSources() {
+        return this.DataTransformSqlDataSources;
+    }
+
+    /**
+     * Set 关联的数据源信息
+     * @param DataTransformSqlDataSources 关联的数据源信息
+     */
+    public void setDataTransformSqlDataSources(DataTransformSqlDataSource [] DataTransformSqlDataSources) {
+        this.DataTransformSqlDataSources = DataTransformSqlDataSources;
+    }
+
+    /**
+     * Get 设置的环境变量 
+     * @return EnvInfos 设置的环境变量
+     */
+    public EnvInfo [] getEnvInfos() {
+        return this.EnvInfos;
+    }
+
+    /**
+     * Set 设置的环境变量
+     * @param EnvInfos 设置的环境变量
+     */
+    public void setEnvInfos(EnvInfo [] EnvInfos) {
+        this.EnvInfos = EnvInfos;
+    }
+
     public CreateDataTransformRequest() {
     }
 
@@ -389,6 +590,12 @@ public class CreateDataTransformRequest extends AbstractModel {
                 this.PreviewLogStatistics[i] = new PreviewLogStatistic(source.PreviewLogStatistics[i]);
             }
         }
+        if (source.BackupGiveUpData != null) {
+            this.BackupGiveUpData = new Boolean(source.BackupGiveUpData);
+        }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
         if (source.DataTransformType != null) {
             this.DataTransformType = new Long(source.DataTransformType);
         }
@@ -397,6 +604,27 @@ public class CreateDataTransformRequest extends AbstractModel {
         }
         if (source.FailureLogKey != null) {
             this.FailureLogKey = new String(source.FailureLogKey);
+        }
+        if (source.ProcessFromTimestamp != null) {
+            this.ProcessFromTimestamp = new Long(source.ProcessFromTimestamp);
+        }
+        if (source.ProcessToTimestamp != null) {
+            this.ProcessToTimestamp = new Long(source.ProcessToTimestamp);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.DataTransformSqlDataSources != null) {
+            this.DataTransformSqlDataSources = new DataTransformSqlDataSource[source.DataTransformSqlDataSources.length];
+            for (int i = 0; i < source.DataTransformSqlDataSources.length; i++) {
+                this.DataTransformSqlDataSources[i] = new DataTransformSqlDataSource(source.DataTransformSqlDataSources[i]);
+            }
+        }
+        if (source.EnvInfos != null) {
+            this.EnvInfos = new EnvInfo[source.EnvInfos.length];
+            for (int i = 0; i < source.EnvInfos.length; i++) {
+                this.EnvInfos[i] = new EnvInfo(source.EnvInfos[i]);
+            }
         }
     }
 
@@ -413,9 +641,16 @@ public class CreateDataTransformRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DstResources.", this.DstResources);
         this.setParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
         this.setParamArrayObj(map, prefix + "PreviewLogStatistics.", this.PreviewLogStatistics);
+        this.setParamSimple(map, prefix + "BackupGiveUpData", this.BackupGiveUpData);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
         this.setParamSimple(map, prefix + "DataTransformType", this.DataTransformType);
         this.setParamSimple(map, prefix + "KeepFailureLog", this.KeepFailureLog);
         this.setParamSimple(map, prefix + "FailureLogKey", this.FailureLogKey);
+        this.setParamSimple(map, prefix + "ProcessFromTimestamp", this.ProcessFromTimestamp);
+        this.setParamSimple(map, prefix + "ProcessToTimestamp", this.ProcessToTimestamp);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "DataTransformSqlDataSources.", this.DataTransformSqlDataSources);
+        this.setParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
 
     }
 }

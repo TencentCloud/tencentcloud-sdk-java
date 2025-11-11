@@ -52,6 +52,13 @@ public class NodeSpecDisk extends AbstractModel {
     private Long DefaultDiskSize;
 
     /**
+    * 是否为特殊的数据盘，如：单副本盘
+    */
+    @SerializedName("IsSpecialDisk")
+    @Expose
+    private Boolean IsSpecialDisk;
+
+    /**
      * Get 数量 
      * @return Count 数量
      */
@@ -115,6 +122,22 @@ public class NodeSpecDisk extends AbstractModel {
         this.DefaultDiskSize = DefaultDiskSize;
     }
 
+    /**
+     * Get 是否为特殊的数据盘，如：单副本盘 
+     * @return IsSpecialDisk 是否为特殊的数据盘，如：单副本盘
+     */
+    public Boolean getIsSpecialDisk() {
+        return this.IsSpecialDisk;
+    }
+
+    /**
+     * Set 是否为特殊的数据盘，如：单副本盘
+     * @param IsSpecialDisk 是否为特殊的数据盘，如：单副本盘
+     */
+    public void setIsSpecialDisk(Boolean IsSpecialDisk) {
+        this.IsSpecialDisk = IsSpecialDisk;
+    }
+
     public NodeSpecDisk() {
     }
 
@@ -135,6 +158,9 @@ public class NodeSpecDisk extends AbstractModel {
         if (source.DefaultDiskSize != null) {
             this.DefaultDiskSize = new Long(source.DefaultDiskSize);
         }
+        if (source.IsSpecialDisk != null) {
+            this.IsSpecialDisk = new Boolean(source.IsSpecialDisk);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class NodeSpecDisk extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DefaultDiskSize", this.DefaultDiskSize);
+        this.setParamSimple(map, prefix + "IsSpecialDisk", this.IsSpecialDisk);
 
     }
 }

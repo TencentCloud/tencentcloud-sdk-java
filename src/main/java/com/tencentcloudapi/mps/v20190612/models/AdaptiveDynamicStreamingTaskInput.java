@@ -114,6 +114,14 @@ PureAudio：纯音频类型
     private String StdExtInfo;
 
     /**
+    * 指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差<=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeyPTSList")
+    @Expose
+    private Long [] KeyPTSList;
+
+    /**
      * Get 转自适应码流模板 ID。 
      * @return Definition 转自适应码流模板 ID。
      */
@@ -341,6 +349,26 @@ PureAudio：纯音频类型
         this.StdExtInfo = StdExtInfo;
     }
 
+    /**
+     * Get 指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差<=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeyPTSList 指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差<=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getKeyPTSList() {
+        return this.KeyPTSList;
+    }
+
+    /**
+     * Set 指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差<=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeyPTSList 指定pts时间的帧设为关键帧，并切片。单位毫秒（允许相对偏差<=1ms）。当同时指定gop和切片时长时，会共同作用。注意需开启RawPts，保持帧率随源，并确保传入的pts时间在源中是有对应帧的。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeyPTSList(Long [] KeyPTSList) {
+        this.KeyPTSList = KeyPTSList;
+    }
+
     public AdaptiveDynamicStreamingTaskInput() {
     }
 
@@ -388,6 +416,12 @@ PureAudio：纯音频类型
         if (source.StdExtInfo != null) {
             this.StdExtInfo = new String(source.StdExtInfo);
         }
+        if (source.KeyPTSList != null) {
+            this.KeyPTSList = new Long[source.KeyPTSList.length];
+            for (int i = 0; i < source.KeyPTSList.length; i++) {
+                this.KeyPTSList[i] = new Long(source.KeyPTSList[i]);
+            }
+        }
     }
 
 
@@ -406,6 +440,7 @@ PureAudio：纯音频类型
         this.setParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
         this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
         this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
+        this.setParamArraySimple(map, prefix + "KeyPTSList.", this.KeyPTSList);
 
     }
 }

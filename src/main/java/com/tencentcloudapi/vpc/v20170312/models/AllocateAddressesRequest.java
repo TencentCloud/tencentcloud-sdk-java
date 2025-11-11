@@ -170,6 +170,18 @@ AnycastEIP是否用于绑定负载均衡。
     private String ClientToken;
 
     /**
+    * 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
+    */
+    @SerializedName("IPChargeType")
+    @Expose
+    private String IPChargeType;
+
+    /**
      * Get EIP数量。可申请的数量限制参考：[EIP 配额限制](https://cloud.tencent.com/document/product/1199/41648)。默认值：1。 
      * @return AddressCount EIP数量。可申请的数量限制参考：[EIP 配额限制](https://cloud.tencent.com/document/product/1199/41648)。默认值：1。
      */
@@ -553,6 +565,42 @@ AnycastEIP是否用于绑定负载均衡。
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul> 
+     * @return IPChargeType 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
+     */
+    public String getIPChargeType() {
+        return this.IPChargeType;
+    }
+
+    /**
+     * Set 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
+     * @param IPChargeType 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
+     */
+    public void setIPChargeType(String IPChargeType) {
+        this.IPChargeType = IPChargeType;
+    }
+
     public AllocateAddressesRequest() {
     }
 
@@ -618,6 +666,9 @@ AnycastEIP是否用于绑定负载均衡。
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.IPChargeType != null) {
+            this.IPChargeType = new String(source.IPChargeType);
+        }
     }
 
 
@@ -642,6 +693,7 @@ AnycastEIP是否用于绑定负载均衡。
         this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "IPChargeType", this.IPChargeType);
 
     }
 }

@@ -67,6 +67,18 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
     private String AddressType;
 
     /**
+    * 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
+    */
+    @SerializedName("IPChargeType")
+    @Expose
+    private String IPChargeType;
+
+    /**
      * Get EIP计费方式。
 <ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
@@ -190,6 +202,42 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
         this.AddressType = AddressType;
     }
 
+    /**
+     * Get 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul> 
+     * @return IPChargeType 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
+     */
+    public String getIPChargeType() {
+        return this.IPChargeType;
+    }
+
+    /**
+     * Set 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
+     * @param IPChargeType 原生EIP IP资源的计费方式。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
+<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
+<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
+</ul></li>
+</ul>
+     */
+    public void setIPChargeType(String IPChargeType) {
+        this.IPChargeType = IPChargeType;
+    }
+
     public InquiryPriceAllocateAddressesRequest() {
     }
 
@@ -210,6 +258,9 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
         if (source.AddressType != null) {
             this.AddressType = new String(source.AddressType);
         }
+        if (source.IPChargeType != null) {
+            this.IPChargeType = new String(source.IPChargeType);
+        }
     }
 
 
@@ -221,6 +272,7 @@ public class InquiryPriceAllocateAddressesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamObj(map, prefix + "AddressChargePrepaid.", this.AddressChargePrepaid);
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
+        this.setParamSimple(map, prefix + "IPChargeType", this.IPChargeType);
 
     }
 }

@@ -38,6 +38,22 @@ public class CreateAndroidInstancesAccessTokenRequest extends AbstractModel {
     private String ExpirationDuration;
 
     /**
+    * 模式。
+STANDARD：默认值，标准模式
+ACCELERATED：加速模式，该模式需要开通加速服务才能生效
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+    * 用户 IP。在加速模式下，该字段必填。
+    */
+    @SerializedName("UserIP")
+    @Expose
+    private String UserIP;
+
+    /**
      * Get 实例 ID 列表。每次请求的实例的上限为 500。 
      * @return AndroidInstanceIds 实例 ID 列表。每次请求的实例的上限为 500。
      */
@@ -69,6 +85,46 @@ public class CreateAndroidInstancesAccessTokenRequest extends AbstractModel {
         this.ExpirationDuration = ExpirationDuration;
     }
 
+    /**
+     * Get 模式。
+STANDARD：默认值，标准模式
+ACCELERATED：加速模式，该模式需要开通加速服务才能生效 
+     * @return Mode 模式。
+STANDARD：默认值，标准模式
+ACCELERATED：加速模式，该模式需要开通加速服务才能生效
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 模式。
+STANDARD：默认值，标准模式
+ACCELERATED：加速模式，该模式需要开通加速服务才能生效
+     * @param Mode 模式。
+STANDARD：默认值，标准模式
+ACCELERATED：加速模式，该模式需要开通加速服务才能生效
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get 用户 IP。在加速模式下，该字段必填。 
+     * @return UserIP 用户 IP。在加速模式下，该字段必填。
+     */
+    public String getUserIP() {
+        return this.UserIP;
+    }
+
+    /**
+     * Set 用户 IP。在加速模式下，该字段必填。
+     * @param UserIP 用户 IP。在加速模式下，该字段必填。
+     */
+    public void setUserIP(String UserIP) {
+        this.UserIP = UserIP;
+    }
+
     public CreateAndroidInstancesAccessTokenRequest() {
     }
 
@@ -86,6 +142,12 @@ public class CreateAndroidInstancesAccessTokenRequest extends AbstractModel {
         if (source.ExpirationDuration != null) {
             this.ExpirationDuration = new String(source.ExpirationDuration);
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.UserIP != null) {
+            this.UserIP = new String(source.UserIP);
+        }
     }
 
 
@@ -95,6 +157,8 @@ public class CreateAndroidInstancesAccessTokenRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
         this.setParamSimple(map, prefix + "ExpirationDuration", this.ExpirationDuration);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "UserIP", this.UserIP);
 
     }
 }
