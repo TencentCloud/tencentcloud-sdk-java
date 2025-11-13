@@ -195,7 +195,7 @@ public class Listener extends AbstractModel {
     private Long IdleConnectTimeout;
 
     /**
-    * 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+    * 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。触发重新调度后，长连接将会在设置的调度时间内断开并完成重新分配。
     */
     @SerializedName("RescheduleInterval")
     @Expose
@@ -207,6 +207,13 @@ public class Listener extends AbstractModel {
     @SerializedName("DataCompressMode")
     @Expose
     private String DataCompressMode;
+
+    /**
+    * 重新调度启动时间，配置了重新调度启动时间后，会在启动时间到达时触发重新调度。
+    */
+    @SerializedName("RescheduleStartTime")
+    @Expose
+    private Long RescheduleStartTime;
 
     /**
      * Get 负载均衡监听器 ID 
@@ -617,16 +624,16 @@ public class Listener extends AbstractModel {
     }
 
     /**
-     * Get 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配 
-     * @return RescheduleInterval 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+     * Get 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。触发重新调度后，长连接将会在设置的调度时间内断开并完成重新分配。 
+     * @return RescheduleInterval 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。触发重新调度后，长连接将会在设置的调度时间内断开并完成重新分配。
      */
     public Long getRescheduleInterval() {
         return this.RescheduleInterval;
     }
 
     /**
-     * Set 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
-     * @param RescheduleInterval 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+     * Set 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。触发重新调度后，长连接将会在设置的调度时间内断开并完成重新分配。
+     * @param RescheduleInterval 重新调度触发持续时间，取值0~3600s。仅TCP/UDP监听器支持。触发重新调度后，长连接将会在设置的调度时间内断开并完成重新分配。
      */
     public void setRescheduleInterval(Long RescheduleInterval) {
         this.RescheduleInterval = RescheduleInterval;
@@ -646,6 +653,22 @@ public class Listener extends AbstractModel {
      */
     public void setDataCompressMode(String DataCompressMode) {
         this.DataCompressMode = DataCompressMode;
+    }
+
+    /**
+     * Get 重新调度启动时间，配置了重新调度启动时间后，会在启动时间到达时触发重新调度。 
+     * @return RescheduleStartTime 重新调度启动时间，配置了重新调度启动时间后，会在启动时间到达时触发重新调度。
+     */
+    public Long getRescheduleStartTime() {
+        return this.RescheduleStartTime;
+    }
+
+    /**
+     * Set 重新调度启动时间，配置了重新调度启动时间后，会在启动时间到达时触发重新调度。
+     * @param RescheduleStartTime 重新调度启动时间，配置了重新调度启动时间后，会在启动时间到达时触发重新调度。
+     */
+    public void setRescheduleStartTime(Long RescheduleStartTime) {
+        this.RescheduleStartTime = RescheduleStartTime;
     }
 
     public Listener() {
@@ -740,6 +763,9 @@ public class Listener extends AbstractModel {
         if (source.DataCompressMode != null) {
             this.DataCompressMode = new String(source.DataCompressMode);
         }
+        if (source.RescheduleStartTime != null) {
+            this.RescheduleStartTime = new Long(source.RescheduleStartTime);
+        }
     }
 
 
@@ -772,6 +798,7 @@ public class Listener extends AbstractModel {
         this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
         this.setParamSimple(map, prefix + "RescheduleInterval", this.RescheduleInterval);
         this.setParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
+        this.setParamSimple(map, prefix + "RescheduleStartTime", this.RescheduleStartTime);
 
     }
 }

@@ -1,0 +1,98 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tke.v20180525.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class ModifyClusterExtraArgsRequest extends AbstractModel {
+
+    /**
+    * 目标集群ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 集群自定义参数
+    */
+    @SerializedName("ClusterExtraArgs")
+    @Expose
+    private ClusterExtraArgs ClusterExtraArgs;
+
+    /**
+     * Get 目标集群ID 
+     * @return ClusterId 目标集群ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 目标集群ID
+     * @param ClusterId 目标集群ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 集群自定义参数 
+     * @return ClusterExtraArgs 集群自定义参数
+     */
+    public ClusterExtraArgs getClusterExtraArgs() {
+        return this.ClusterExtraArgs;
+    }
+
+    /**
+     * Set 集群自定义参数
+     * @param ClusterExtraArgs 集群自定义参数
+     */
+    public void setClusterExtraArgs(ClusterExtraArgs ClusterExtraArgs) {
+        this.ClusterExtraArgs = ClusterExtraArgs;
+    }
+
+    public ModifyClusterExtraArgsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyClusterExtraArgsRequest(ModifyClusterExtraArgsRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterExtraArgs != null) {
+            this.ClusterExtraArgs = new ClusterExtraArgs(source.ClusterExtraArgs);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamObj(map, prefix + "ClusterExtraArgs.", this.ClusterExtraArgs);
+
+    }
+}
+

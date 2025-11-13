@@ -31,7 +31,7 @@ public class CreateVideoModerationTaskRequest extends AbstractModel {
     private String BizType;
 
     /**
-    * 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频）
+    * 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频），VIDEO_AIGC（AI生成检测）
     */
     @SerializedName("Type")
     @Expose
@@ -89,16 +89,16 @@ public class CreateVideoModerationTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频） 
-     * @return Type 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频）
+     * Get 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频），VIDEO_AIGC（AI生成检测） 
+     * @return Type 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频），VIDEO_AIGC（AI生成检测）
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频）
-     * @param Type 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频）
+     * Set 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频），VIDEO_AIGC（AI生成检测）
+     * @param Type 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频），VIDEO_AIGC（AI生成检测）
      */
     public void setType(String Type) {
         this.Type = Type;

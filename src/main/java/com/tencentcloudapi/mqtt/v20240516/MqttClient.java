@@ -533,6 +533,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *踢出客户端
+     * @param req KickOutClientRequest
+     * @return KickOutClientResponse
+     * @throws TencentCloudSDKException
+     */
+    public KickOutClientResponse KickOutClient(KickOutClientRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "KickOutClient", KickOutClientResponse.class);
+    }
+
+    /**
      *修改策略规则，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)
      * @param req ModifyAuthorizationPolicyRequest
      * @return ModifyAuthorizationPolicyResponse

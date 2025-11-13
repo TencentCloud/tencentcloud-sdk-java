@@ -886,6 +886,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询集群可用的自定义参数
+     * @param req DescribeClusterAvailableExtraArgsRequest
+     * @return DescribeClusterAvailableExtraArgsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterAvailableExtraArgsResponse DescribeClusterAvailableExtraArgs(DescribeClusterAvailableExtraArgsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterAvailableExtraArgs", DescribeClusterAvailableExtraArgsResponse.class);
+    }
+
+    /**
      *获取指定子账户在RBAC授权模式中对应kube-apiserver客户端证书的CommonName字段，如果没有客户端证书，将会签发一个，此接口有最大传入子账户数量上限，当前为50
      * @param req DescribeClusterCommonNamesRequest
      * @return DescribeClusterCommonNamesResponse
@@ -1810,6 +1821,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询任务相关信息，只会查询对应任务类型的最新的一条任务状态
+     * @param req DescribeTasksRequest
+     * @return DescribeTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
+    }
+
+    /**
      *获取集群版本信息
      * @param req DescribeVersionsRequest
      * @return DescribeVersionsResponse
@@ -2115,6 +2137,28 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterEndpointSPResponse ModifyClusterEndpointSP(ModifyClusterEndpointSPRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterEndpointSP", ModifyClusterEndpointSPResponse.class);
+    }
+
+    /**
+     *更新集群自定义参数，只支持托管集群
+     * @param req ModifyClusterExtraArgsRequest
+     * @return ModifyClusterExtraArgsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterExtraArgsResponse ModifyClusterExtraArgs(ModifyClusterExtraArgsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterExtraArgs", ModifyClusterExtraArgsResponse.class);
+    }
+
+    /**
+     *暂停或者取消集群更新参数任务
+     * @param req ModifyClusterExtraArgsTaskStateRequest
+     * @return ModifyClusterExtraArgsTaskStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterExtraArgsTaskStateResponse ModifyClusterExtraArgsTaskState(ModifyClusterExtraArgsTaskStateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterExtraArgsTaskState", ModifyClusterExtraArgsTaskStateResponse.class);
     }
 
     /**

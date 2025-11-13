@@ -228,6 +228,9 @@ public enum TkeErrorCode {
      /* 询价错误。 */
      FAILEDOPERATION_TRADECOMMON("FailedOperation.TradeCommon"),
      
+     /* 账户余额不足 */
+     FAILEDOPERATION_TRADEINSUFFICIENTBALANCE("FailedOperation.TradeInsufficientBalance"),
+     
      /* 不可预知的错误。 */
      FAILEDOPERATION_UNEXPECTEDERROR("FailedOperation.UnexpectedError"),
      
