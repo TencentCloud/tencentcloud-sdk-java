@@ -66,6 +66,13 @@ public class Device extends AbstractModel {
     private String ApCode;
 
     /**
+    * 地域名称
+    */
+    @SerializedName("ApName")
+    @Expose
+    private String ApName;
+
+    /**
     * 操作系统名称
     */
     @SerializedName("OsName")
@@ -213,6 +220,41 @@ public class Device extends AbstractModel {
     private Long TotalPodCount;
 
     /**
+    * 云账号id
+    */
+    @SerializedName("CloudAccountId")
+    @Expose
+    private Long CloudAccountId;
+
+    /**
+    * 云账号名称
+    */
+    @SerializedName("CloudAccountName")
+    @Expose
+    private String CloudAccountName;
+
+    /**
+    * 云厂商类型1-腾讯云，2-阿里云
+    */
+    @SerializedName("ProviderType")
+    @Expose
+    private Long ProviderType;
+
+    /**
+    * 云厂商名称
+    */
+    @SerializedName("ProviderName")
+    @Expose
+    private String ProviderName;
+
+    /**
+    * 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+    */
+    @SerializedName("SyncCloudDeviceStatus")
+    @Expose
+    private Long SyncCloudDeviceStatus;
+
+    /**
      * Get 资产ID 
      * @return Id 资产ID
      */
@@ -306,6 +348,22 @@ public class Device extends AbstractModel {
      */
     public void setApCode(String ApCode) {
         this.ApCode = ApCode;
+    }
+
+    /**
+     * Get 地域名称 
+     * @return ApName 地域名称
+     */
+    public String getApName() {
+        return this.ApName;
+    }
+
+    /**
+     * Set 地域名称
+     * @param ApName 地域名称
+     */
+    public void setApName(String ApName) {
+        this.ApName = ApName;
     }
 
     /**
@@ -644,6 +702,86 @@ public class Device extends AbstractModel {
         this.TotalPodCount = TotalPodCount;
     }
 
+    /**
+     * Get 云账号id 
+     * @return CloudAccountId 云账号id
+     */
+    public Long getCloudAccountId() {
+        return this.CloudAccountId;
+    }
+
+    /**
+     * Set 云账号id
+     * @param CloudAccountId 云账号id
+     */
+    public void setCloudAccountId(Long CloudAccountId) {
+        this.CloudAccountId = CloudAccountId;
+    }
+
+    /**
+     * Get 云账号名称 
+     * @return CloudAccountName 云账号名称
+     */
+    public String getCloudAccountName() {
+        return this.CloudAccountName;
+    }
+
+    /**
+     * Set 云账号名称
+     * @param CloudAccountName 云账号名称
+     */
+    public void setCloudAccountName(String CloudAccountName) {
+        this.CloudAccountName = CloudAccountName;
+    }
+
+    /**
+     * Get 云厂商类型1-腾讯云，2-阿里云 
+     * @return ProviderType 云厂商类型1-腾讯云，2-阿里云
+     */
+    public Long getProviderType() {
+        return this.ProviderType;
+    }
+
+    /**
+     * Set 云厂商类型1-腾讯云，2-阿里云
+     * @param ProviderType 云厂商类型1-腾讯云，2-阿里云
+     */
+    public void setProviderType(Long ProviderType) {
+        this.ProviderType = ProviderType;
+    }
+
+    /**
+     * Get 云厂商名称 
+     * @return ProviderName 云厂商名称
+     */
+    public String getProviderName() {
+        return this.ProviderName;
+    }
+
+    /**
+     * Set 云厂商名称
+     * @param ProviderName 云厂商名称
+     */
+    public void setProviderName(String ProviderName) {
+        this.ProviderName = ProviderName;
+    }
+
+    /**
+     * Get 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期 
+     * @return SyncCloudDeviceStatus 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     */
+    public Long getSyncCloudDeviceStatus() {
+        return this.SyncCloudDeviceStatus;
+    }
+
+    /**
+     * Set 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     * @param SyncCloudDeviceStatus 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     */
+    public void setSyncCloudDeviceStatus(Long SyncCloudDeviceStatus) {
+        this.SyncCloudDeviceStatus = SyncCloudDeviceStatus;
+    }
+
     public Device() {
     }
 
@@ -669,6 +807,9 @@ public class Device extends AbstractModel {
         }
         if (source.ApCode != null) {
             this.ApCode = new String(source.ApCode);
+        }
+        if (source.ApName != null) {
+            this.ApName = new String(source.ApName);
         }
         if (source.OsName != null) {
             this.OsName = new String(source.OsName);
@@ -739,6 +880,21 @@ public class Device extends AbstractModel {
         if (source.TotalPodCount != null) {
             this.TotalPodCount = new Long(source.TotalPodCount);
         }
+        if (source.CloudAccountId != null) {
+            this.CloudAccountId = new Long(source.CloudAccountId);
+        }
+        if (source.CloudAccountName != null) {
+            this.CloudAccountName = new String(source.CloudAccountName);
+        }
+        if (source.ProviderType != null) {
+            this.ProviderType = new Long(source.ProviderType);
+        }
+        if (source.ProviderName != null) {
+            this.ProviderName = new String(source.ProviderName);
+        }
+        if (source.SyncCloudDeviceStatus != null) {
+            this.SyncCloudDeviceStatus = new Long(source.SyncCloudDeviceStatus);
+        }
     }
 
 
@@ -752,6 +908,7 @@ public class Device extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
         this.setParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
         this.setParamSimple(map, prefix + "ApCode", this.ApCode);
+        this.setParamSimple(map, prefix + "ApName", this.ApName);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "Kind", this.Kind);
         this.setParamSimple(map, prefix + "Port", this.Port);
@@ -773,6 +930,11 @@ public class Device extends AbstractModel {
         this.setParamSimple(map, prefix + "Workload", this.Workload);
         this.setParamSimple(map, prefix + "SyncPodCount", this.SyncPodCount);
         this.setParamSimple(map, prefix + "TotalPodCount", this.TotalPodCount);
+        this.setParamSimple(map, prefix + "CloudAccountId", this.CloudAccountId);
+        this.setParamSimple(map, prefix + "CloudAccountName", this.CloudAccountName);
+        this.setParamSimple(map, prefix + "ProviderType", this.ProviderType);
+        this.setParamSimple(map, prefix + "ProviderName", this.ProviderName);
+        this.setParamSimple(map, prefix + "SyncCloudDeviceStatus", this.SyncCloudDeviceStatus);
 
     }
 }

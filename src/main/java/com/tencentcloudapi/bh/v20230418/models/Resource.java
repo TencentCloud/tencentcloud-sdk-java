@@ -304,6 +304,13 @@ public class Resource extends AbstractModel {
     private String IntranetVpcCidr;
 
     /**
+    * 堡垒机内网ip自定义域名
+    */
+    @SerializedName("DomainName")
+    @Expose
+    private String DomainName;
+
+    /**
     * 是否共享clb，true-共享clb，false-独享clb
     */
     @SerializedName("ShareClb")
@@ -1028,6 +1035,22 @@ public class Resource extends AbstractModel {
     }
 
     /**
+     * Get 堡垒机内网ip自定义域名 
+     * @return DomainName 堡垒机内网ip自定义域名
+     */
+    public String getDomainName() {
+        return this.DomainName;
+    }
+
+    /**
+     * Set 堡垒机内网ip自定义域名
+     * @param DomainName 堡垒机内网ip自定义域名
+     */
+    public void setDomainName(String DomainName) {
+        this.DomainName = DomainName;
+    }
+
+    /**
      * Get 是否共享clb，true-共享clb，false-独享clb 
      * @return ShareClb 是否共享clb，true-共享clb，false-独享clb
      */
@@ -1362,6 +1385,9 @@ public class Resource extends AbstractModel {
         if (source.IntranetVpcCidr != null) {
             this.IntranetVpcCidr = new String(source.IntranetVpcCidr);
         }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
         if (source.ShareClb != null) {
             this.ShareClb = new Boolean(source.ShareClb);
         }
@@ -1445,6 +1471,7 @@ public class Resource extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IntranetPrivateIpSet.", this.IntranetPrivateIpSet);
         this.setParamSimple(map, prefix + "IntranetVpcId", this.IntranetVpcId);
         this.setParamSimple(map, prefix + "IntranetVpcCidr", this.IntranetVpcCidr);
+        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "ShareClb", this.ShareClb);
         this.setParamSimple(map, prefix + "OpenClbId", this.OpenClbId);
         this.setParamSimple(map, prefix + "LbVipIsp", this.LbVipIsp);

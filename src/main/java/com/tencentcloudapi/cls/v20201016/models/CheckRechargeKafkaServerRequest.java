@@ -63,6 +63,13 @@ KafkaType为1时，ServerAddr必填
     private KafkaProtocolInfo Protocol;
 
     /**
+    * 用户kafka拓展信息
+    */
+    @SerializedName("UserKafkaMeta")
+    @Expose
+    private UserKafkaMeta UserKafkaMeta;
+
+    /**
      * Get 导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。 
      * @return KafkaType 导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。
      */
@@ -158,6 +165,22 @@ KafkaType为1时，ServerAddr必填
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get 用户kafka拓展信息 
+     * @return UserKafkaMeta 用户kafka拓展信息
+     */
+    public UserKafkaMeta getUserKafkaMeta() {
+        return this.UserKafkaMeta;
+    }
+
+    /**
+     * Set 用户kafka拓展信息
+     * @param UserKafkaMeta 用户kafka拓展信息
+     */
+    public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
+        this.UserKafkaMeta = UserKafkaMeta;
+    }
+
     public CheckRechargeKafkaServerRequest() {
     }
 
@@ -181,6 +204,9 @@ KafkaType为1时，ServerAddr必填
         if (source.Protocol != null) {
             this.Protocol = new KafkaProtocolInfo(source.Protocol);
         }
+        if (source.UserKafkaMeta != null) {
+            this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
+        }
     }
 
 
@@ -193,6 +219,7 @@ KafkaType为1时，ServerAddr必填
         this.setParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
         this.setParamSimple(map, prefix + "IsEncryptionAddr", this.IsEncryptionAddr);
         this.setParamObj(map, prefix + "Protocol.", this.Protocol);
+        this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }
 }

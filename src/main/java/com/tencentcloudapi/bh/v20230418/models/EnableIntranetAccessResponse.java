@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ai3d.v20250513.models;
+package com.tencentcloudapi.bh.v20230418.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitHunyuanTo3DJobResponse extends AbstractModel {
-
-    /**
-    * 任务ID（有效期24小时）
-    */
-    @SerializedName("JobId")
-    @Expose
-    private String JobId;
+public class EnableIntranetAccessResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class SubmitHunyuanTo3DJobResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 任务ID（有效期24小时） 
-     * @return JobId 任务ID（有效期24小时）
-     */
-    public String getJobId() {
-        return this.JobId;
-    }
-
-    /**
-     * Set 任务ID（有效期24小时）
-     * @param JobId 任务ID（有效期24小时）
-     */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,17 +46,14 @@ public class SubmitHunyuanTo3DJobResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public SubmitHunyuanTo3DJobResponse() {
+    public EnableIntranetAccessResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SubmitHunyuanTo3DJobResponse(SubmitHunyuanTo3DJobResponse source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
-        }
+    public EnableIntranetAccessResponse(EnableIntranetAccessResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,7 +64,6 @@ public class SubmitHunyuanTo3DJobResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

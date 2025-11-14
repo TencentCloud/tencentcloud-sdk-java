@@ -66,6 +66,13 @@ public class SearchFileBySidRequest extends AbstractModel {
     private Long AuditAction;
 
     /**
+    * 1-已执行，  2-被阻断
+    */
+    @SerializedName("AuditActionSet")
+    @Expose
+    private Long [] AuditActionSet;
+
+    /**
     * 以Protocol和Method为条件查询
     */
     @SerializedName("TypeFilters")
@@ -169,6 +176,22 @@ public class SearchFileBySidRequest extends AbstractModel {
     }
 
     /**
+     * Get 1-已执行，  2-被阻断 
+     * @return AuditActionSet 1-已执行，  2-被阻断
+     */
+    public Long [] getAuditActionSet() {
+        return this.AuditActionSet;
+    }
+
+    /**
+     * Set 1-已执行，  2-被阻断
+     * @param AuditActionSet 1-已执行，  2-被阻断
+     */
+    public void setAuditActionSet(Long [] AuditActionSet) {
+        this.AuditActionSet = AuditActionSet;
+    }
+
+    /**
      * Get 以Protocol和Method为条件查询 
      * @return TypeFilters 以Protocol和Method为条件查询
      */
@@ -210,6 +233,12 @@ public class SearchFileBySidRequest extends AbstractModel {
         if (source.AuditAction != null) {
             this.AuditAction = new Long(source.AuditAction);
         }
+        if (source.AuditActionSet != null) {
+            this.AuditActionSet = new Long[source.AuditActionSet.length];
+            for (int i = 0; i < source.AuditActionSet.length; i++) {
+                this.AuditActionSet[i] = new Long(source.AuditActionSet[i]);
+            }
+        }
         if (source.TypeFilters != null) {
             this.TypeFilters = new SearchFileTypeFilter[source.TypeFilters.length];
             for (int i = 0; i < source.TypeFilters.length; i++) {
@@ -229,6 +258,7 @@ public class SearchFileBySidRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "AuditAction", this.AuditAction);
+        this.setParamArraySimple(map, prefix + "AuditActionSet.", this.AuditActionSet);
         this.setParamArrayObj(map, prefix + "TypeFilters.", this.TypeFilters);
 
     }

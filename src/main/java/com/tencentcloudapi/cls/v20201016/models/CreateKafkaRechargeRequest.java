@@ -106,6 +106,13 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     private String ConsumerGroupName;
 
     /**
+    * 用户kafka拓展信息
+    */
+    @SerializedName("UserKafkaMeta")
+    @Expose
+    private UserKafkaMeta UserKafkaMeta;
+
+    /**
      * Get 导入CLS目标TopicId。
 - 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
 - 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。 
@@ -301,6 +308,22 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
         this.ConsumerGroupName = ConsumerGroupName;
     }
 
+    /**
+     * Get 用户kafka拓展信息 
+     * @return UserKafkaMeta 用户kafka拓展信息
+     */
+    public UserKafkaMeta getUserKafkaMeta() {
+        return this.UserKafkaMeta;
+    }
+
+    /**
+     * Set 用户kafka拓展信息
+     * @param UserKafkaMeta 用户kafka拓展信息
+     */
+    public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
+        this.UserKafkaMeta = UserKafkaMeta;
+    }
+
     public CreateKafkaRechargeRequest() {
     }
 
@@ -342,6 +365,9 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
         if (source.ConsumerGroupName != null) {
             this.ConsumerGroupName = new String(source.ConsumerGroupName);
         }
+        if (source.UserKafkaMeta != null) {
+            this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
+        }
     }
 
 
@@ -360,6 +386,7 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
         this.setParamSimple(map, prefix + "IsEncryptionAddr", this.IsEncryptionAddr);
         this.setParamObj(map, prefix + "Protocol.", this.Protocol);
         this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
+        this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }
 }

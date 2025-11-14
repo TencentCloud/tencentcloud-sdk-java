@@ -99,6 +99,13 @@ public class CreateConfigRequest extends AbstractModel {
     private String AdvancedConfig;
 
     /**
+    * 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+    */
+    @SerializedName("InputType")
+    @Expose
+    private String InputType;
+
+    /**
      * Get 采集配置名称
 - 名称种不得包含特殊字符｜
 - 名称最长255字符，超过截断 
@@ -302,6 +309,22 @@ public class CreateConfigRequest extends AbstractModel {
         this.AdvancedConfig = AdvancedConfig;
     }
 
+    /**
+     * Get 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file 
+     * @return InputType 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+     */
+    public String getInputType() {
+        return this.InputType;
+    }
+
+    /**
+     * Set 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+     * @param InputType 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+     */
+    public void setInputType(String InputType) {
+        this.InputType = InputType;
+    }
+
     public CreateConfigRequest() {
     }
 
@@ -337,6 +360,9 @@ public class CreateConfigRequest extends AbstractModel {
         if (source.AdvancedConfig != null) {
             this.AdvancedConfig = new String(source.AdvancedConfig);
         }
+        if (source.InputType != null) {
+            this.InputType = new String(source.InputType);
+        }
     }
 
 
@@ -352,6 +378,7 @@ public class CreateConfigRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ExcludePaths.", this.ExcludePaths);
         this.setParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
         this.setParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
+        this.setParamSimple(map, prefix + "InputType", this.InputType);
 
     }
 }

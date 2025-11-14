@@ -32,6 +32,14 @@ public class BiddingSuccessfulResult extends AbstractModel {
     private String PayEndTime;
 
     /**
+    * 交割时间
+格式:YYYY-MM-DD HH:mm:ss
+    */
+    @SerializedName("ModifyOwnerEndTime")
+    @Expose
+    private String ModifyOwnerEndTime;
+
+    /**
      * Get 支付结束时间
 格式:YYYY-MM-DD HH:mm:ss 
      * @return PayEndTime 支付结束时间
@@ -51,6 +59,26 @@ public class BiddingSuccessfulResult extends AbstractModel {
         this.PayEndTime = PayEndTime;
     }
 
+    /**
+     * Get 交割时间
+格式:YYYY-MM-DD HH:mm:ss 
+     * @return ModifyOwnerEndTime 交割时间
+格式:YYYY-MM-DD HH:mm:ss
+     */
+    public String getModifyOwnerEndTime() {
+        return this.ModifyOwnerEndTime;
+    }
+
+    /**
+     * Set 交割时间
+格式:YYYY-MM-DD HH:mm:ss
+     * @param ModifyOwnerEndTime 交割时间
+格式:YYYY-MM-DD HH:mm:ss
+     */
+    public void setModifyOwnerEndTime(String ModifyOwnerEndTime) {
+        this.ModifyOwnerEndTime = ModifyOwnerEndTime;
+    }
+
     public BiddingSuccessfulResult() {
     }
 
@@ -62,6 +90,9 @@ public class BiddingSuccessfulResult extends AbstractModel {
         if (source.PayEndTime != null) {
             this.PayEndTime = new String(source.PayEndTime);
         }
+        if (source.ModifyOwnerEndTime != null) {
+            this.ModifyOwnerEndTime = new String(source.ModifyOwnerEndTime);
+        }
     }
 
 
@@ -70,6 +101,7 @@ public class BiddingSuccessfulResult extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PayEndTime", this.PayEndTime);
+        this.setParamSimple(map, prefix + "ModifyOwnerEndTime", this.ModifyOwnerEndTime);
 
     }
 }

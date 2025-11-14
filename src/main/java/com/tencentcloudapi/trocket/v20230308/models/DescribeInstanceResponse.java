@@ -266,6 +266,22 @@ PLATINUM 铂金版
     private Long [] ZoneIds;
 
     /**
+    * proxy节点数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeCount")
+    @Expose
+    private Long NodeCount;
+
+    /**
+    * proxy调度详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneScheduledList")
+    @Expose
+    private ZoneScheduledItem [] ZoneScheduledList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -869,6 +885,46 @@ PLATINUM 铂金版
     }
 
     /**
+     * Get proxy节点数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeCount proxy节点数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNodeCount() {
+        return this.NodeCount;
+    }
+
+    /**
+     * Set proxy节点数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeCount proxy节点数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeCount(Long NodeCount) {
+        this.NodeCount = NodeCount;
+    }
+
+    /**
+     * Get proxy调度详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneScheduledList proxy调度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ZoneScheduledItem [] getZoneScheduledList() {
+        return this.ZoneScheduledList;
+    }
+
+    /**
+     * Set proxy调度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneScheduledList proxy调度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneScheduledList(ZoneScheduledItem [] ZoneScheduledList) {
+        this.ZoneScheduledList = ZoneScheduledList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -994,6 +1050,15 @@ PLATINUM 铂金版
                 this.ZoneIds[i] = new Long(source.ZoneIds[i]);
             }
         }
+        if (source.NodeCount != null) {
+            this.NodeCount = new Long(source.NodeCount);
+        }
+        if (source.ZoneScheduledList != null) {
+            this.ZoneScheduledList = new ZoneScheduledItem[source.ZoneScheduledList.length];
+            for (int i = 0; i < source.ZoneScheduledList.length; i++) {
+                this.ZoneScheduledList[i] = new ZoneScheduledItem(source.ZoneScheduledList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1035,6 +1100,8 @@ PLATINUM 铂金版
         this.setParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
         this.setParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamArrayObj(map, prefix + "ZoneScheduledList.", this.ZoneScheduledList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

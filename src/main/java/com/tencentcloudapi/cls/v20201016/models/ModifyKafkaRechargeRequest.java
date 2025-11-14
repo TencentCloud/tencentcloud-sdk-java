@@ -115,6 +115,13 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
     private Long StatusControl;
 
     /**
+    * 用户kafka拓展信息
+    */
+    @SerializedName("UserKafkaMeta")
+    @Expose
+    private UserKafkaMeta UserKafkaMeta;
+
+    /**
      * Get 导入配置Id。
 - 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
 - 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。 
@@ -334,6 +341,22 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
         this.StatusControl = StatusControl;
     }
 
+    /**
+     * Get 用户kafka拓展信息 
+     * @return UserKafkaMeta 用户kafka拓展信息
+     */
+    public UserKafkaMeta getUserKafkaMeta() {
+        return this.UserKafkaMeta;
+    }
+
+    /**
+     * Set 用户kafka拓展信息
+     * @param UserKafkaMeta 用户kafka拓展信息
+     */
+    public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
+        this.UserKafkaMeta = UserKafkaMeta;
+    }
+
     public ModifyKafkaRechargeRequest() {
     }
 
@@ -378,6 +401,9 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
         if (source.StatusControl != null) {
             this.StatusControl = new Long(source.StatusControl);
         }
+        if (source.UserKafkaMeta != null) {
+            this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
+        }
     }
 
 
@@ -397,6 +423,7 @@ public class ModifyKafkaRechargeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
         this.setParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
         this.setParamSimple(map, prefix + "StatusControl", this.StatusControl);
+        this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }
 }

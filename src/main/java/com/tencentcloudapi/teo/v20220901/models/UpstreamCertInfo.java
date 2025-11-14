@@ -31,6 +31,13 @@ public class UpstreamCertInfo extends AbstractModel {
     private MutualTLS UpstreamMutualTLS;
 
     /**
+    * 在源站证书校验场景下，该字段为 EO 节点回源时用于验证的 CA 证书，部署在 EO 节点，用于 EO 节点对服务端证书进行认证。在作为入参使用时，不填写表示保持原有配置。
+    */
+    @SerializedName("UpstreamCertificateVerify")
+    @Expose
+    private OriginCertificateVerify UpstreamCertificateVerify;
+
+    /**
      * Get 在回源双向认证场景下，该字段为 EO 节点回源时携带的证书（包含公钥、私钥即可），部署在 EO 节点，用于源站对 EO 节点进行认证。在作为入参使用时，不填写表示保持原有配置。 
      * @return UpstreamMutualTLS 在回源双向认证场景下，该字段为 EO 节点回源时携带的证书（包含公钥、私钥即可），部署在 EO 节点，用于源站对 EO 节点进行认证。在作为入参使用时，不填写表示保持原有配置。
      */
@@ -46,6 +53,22 @@ public class UpstreamCertInfo extends AbstractModel {
         this.UpstreamMutualTLS = UpstreamMutualTLS;
     }
 
+    /**
+     * Get 在源站证书校验场景下，该字段为 EO 节点回源时用于验证的 CA 证书，部署在 EO 节点，用于 EO 节点对服务端证书进行认证。在作为入参使用时，不填写表示保持原有配置。 
+     * @return UpstreamCertificateVerify 在源站证书校验场景下，该字段为 EO 节点回源时用于验证的 CA 证书，部署在 EO 节点，用于 EO 节点对服务端证书进行认证。在作为入参使用时，不填写表示保持原有配置。
+     */
+    public OriginCertificateVerify getUpstreamCertificateVerify() {
+        return this.UpstreamCertificateVerify;
+    }
+
+    /**
+     * Set 在源站证书校验场景下，该字段为 EO 节点回源时用于验证的 CA 证书，部署在 EO 节点，用于 EO 节点对服务端证书进行认证。在作为入参使用时，不填写表示保持原有配置。
+     * @param UpstreamCertificateVerify 在源站证书校验场景下，该字段为 EO 节点回源时用于验证的 CA 证书，部署在 EO 节点，用于 EO 节点对服务端证书进行认证。在作为入参使用时，不填写表示保持原有配置。
+     */
+    public void setUpstreamCertificateVerify(OriginCertificateVerify UpstreamCertificateVerify) {
+        this.UpstreamCertificateVerify = UpstreamCertificateVerify;
+    }
+
     public UpstreamCertInfo() {
     }
 
@@ -57,6 +80,9 @@ public class UpstreamCertInfo extends AbstractModel {
         if (source.UpstreamMutualTLS != null) {
             this.UpstreamMutualTLS = new MutualTLS(source.UpstreamMutualTLS);
         }
+        if (source.UpstreamCertificateVerify != null) {
+            this.UpstreamCertificateVerify = new OriginCertificateVerify(source.UpstreamCertificateVerify);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class UpstreamCertInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "UpstreamMutualTLS.", this.UpstreamMutualTLS);
+        this.setParamObj(map, prefix + "UpstreamCertificateVerify.", this.UpstreamCertificateVerify);
 
     }
 }

@@ -99,6 +99,14 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
     private Long Status;
 
     /**
+    * 交割时间
+格式:YYYY-MM-DD HH:mm:ss
+    */
+    @SerializedName("ModifyOwnerEndTime")
+    @Expose
+    private String ModifyOwnerEndTime;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -286,6 +294,26 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 交割时间
+格式:YYYY-MM-DD HH:mm:ss 
+     * @return ModifyOwnerEndTime 交割时间
+格式:YYYY-MM-DD HH:mm:ss
+     */
+    public String getModifyOwnerEndTime() {
+        return this.ModifyOwnerEndTime;
+    }
+
+    /**
+     * Set 交割时间
+格式:YYYY-MM-DD HH:mm:ss
+     * @param ModifyOwnerEndTime 交割时间
+格式:YYYY-MM-DD HH:mm:ss
+     */
+    public void setModifyOwnerEndTime(String ModifyOwnerEndTime) {
+        this.ModifyOwnerEndTime = ModifyOwnerEndTime;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -339,6 +367,9 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.ModifyOwnerEndTime != null) {
+            this.ModifyOwnerEndTime = new String(source.ModifyOwnerEndTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -359,6 +390,7 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "BiddingBondRefund", this.BiddingBondRefund);
         this.setParamSimple(map, prefix + "BiddingBondPrice", this.BiddingBondPrice);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ModifyOwnerEndTime", this.ModifyOwnerEndTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

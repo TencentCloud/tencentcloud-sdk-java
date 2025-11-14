@@ -174,6 +174,13 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel {
     private String [] AlarmTypes;
 
     /**
+    * 是否已屏蔽
+    */
+    @SerializedName("ShieldStatus")
+    @Expose
+    private String [] ShieldStatus;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -521,6 +528,22 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel {
         this.AlarmTypes = AlarmTypes;
     }
 
+    /**
+     * Get 是否已屏蔽 
+     * @return ShieldStatus 是否已屏蔽
+     */
+    public String [] getShieldStatus() {
+        return this.ShieldStatus;
+    }
+
+    /**
+     * Set 是否已屏蔽
+     * @param ShieldStatus 是否已屏蔽
+     */
+    public void setShieldStatus(String [] ShieldStatus) {
+        this.ShieldStatus = ShieldStatus;
+    }
+
     public DescribeAlarmHistoriesRequest() {
     }
 
@@ -628,6 +651,12 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel {
                 this.AlarmTypes[i] = new String(source.AlarmTypes[i]);
             }
         }
+        if (source.ShieldStatus != null) {
+            this.ShieldStatus = new String[source.ShieldStatus.length];
+            for (int i = 0; i < source.ShieldStatus.length; i++) {
+                this.ShieldStatus[i] = new String(source.ShieldStatus[i]);
+            }
+        }
     }
 
 
@@ -656,6 +685,7 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AlarmLevels.", this.AlarmLevels);
         this.setParamArraySimple(map, prefix + "ConvergenceHistoryIDs.", this.ConvergenceHistoryIDs);
         this.setParamArraySimple(map, prefix + "AlarmTypes.", this.AlarmTypes);
+        this.setParamArraySimple(map, prefix + "ShieldStatus.", this.ShieldStatus);
 
     }
 }

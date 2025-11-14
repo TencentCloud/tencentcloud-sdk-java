@@ -66,11 +66,25 @@ public class DescribeOperationEventRequest extends AbstractModel {
     private Long Kind;
 
     /**
+    * 操作类型，参考DescribeOperationType返回结果
+    */
+    @SerializedName("KindSet")
+    @Expose
+    private Long [] KindSet;
+
+    /**
     * 操作结果，1-成功，2-失败
     */
     @SerializedName("Result")
     @Expose
     private Long Result;
+
+    /**
+    * 操作结果，1-成功，2-失败
+    */
+    @SerializedName("ResultSet")
+    @Expose
+    private Long [] ResultSet;
 
     /**
     * 分页偏移位置，默认值为0
@@ -183,6 +197,22 @@ public class DescribeOperationEventRequest extends AbstractModel {
     }
 
     /**
+     * Get 操作类型，参考DescribeOperationType返回结果 
+     * @return KindSet 操作类型，参考DescribeOperationType返回结果
+     */
+    public Long [] getKindSet() {
+        return this.KindSet;
+    }
+
+    /**
+     * Set 操作类型，参考DescribeOperationType返回结果
+     * @param KindSet 操作类型，参考DescribeOperationType返回结果
+     */
+    public void setKindSet(Long [] KindSet) {
+        this.KindSet = KindSet;
+    }
+
+    /**
      * Get 操作结果，1-成功，2-失败 
      * @return Result 操作结果，1-成功，2-失败
      */
@@ -196,6 +226,22 @@ public class DescribeOperationEventRequest extends AbstractModel {
      */
     public void setResult(Long Result) {
         this.Result = Result;
+    }
+
+    /**
+     * Get 操作结果，1-成功，2-失败 
+     * @return ResultSet 操作结果，1-成功，2-失败
+     */
+    public Long [] getResultSet() {
+        return this.ResultSet;
+    }
+
+    /**
+     * Set 操作结果，1-成功，2-失败
+     * @param ResultSet 操作结果，1-成功，2-失败
+     */
+    public void setResultSet(Long [] ResultSet) {
+        this.ResultSet = ResultSet;
     }
 
     /**
@@ -256,8 +302,20 @@ public class DescribeOperationEventRequest extends AbstractModel {
         if (source.Kind != null) {
             this.Kind = new Long(source.Kind);
         }
+        if (source.KindSet != null) {
+            this.KindSet = new Long[source.KindSet.length];
+            for (int i = 0; i < source.KindSet.length; i++) {
+                this.KindSet[i] = new Long(source.KindSet[i]);
+            }
+        }
         if (source.Result != null) {
             this.Result = new Long(source.Result);
+        }
+        if (source.ResultSet != null) {
+            this.ResultSet = new Long[source.ResultSet.length];
+            for (int i = 0; i < source.ResultSet.length; i++) {
+                this.ResultSet[i] = new Long(source.ResultSet[i]);
+            }
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
@@ -278,7 +336,9 @@ public class DescribeOperationEventRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "SourceIp", this.SourceIp);
         this.setParamSimple(map, prefix + "Kind", this.Kind);
+        this.setParamArraySimple(map, prefix + "KindSet.", this.KindSet);
         this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamArraySimple(map, prefix + "ResultSet.", this.ResultSet);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

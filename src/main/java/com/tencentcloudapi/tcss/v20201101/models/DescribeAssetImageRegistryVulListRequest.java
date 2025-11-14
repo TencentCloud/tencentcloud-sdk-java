@@ -54,7 +54,7 @@ public class DescribeAssetImageRegistryVulListRequest extends AbstractModel {
     private ImageInfo ImageInfo;
 
     /**
-    * 必填参数，镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取
+    * 镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取
     */
     @SerializedName("Id")
     @Expose
@@ -133,16 +133,16 @@ public class DescribeAssetImageRegistryVulListRequest extends AbstractModel {
     }
 
     /**
-     * Get 必填参数，镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取 
-     * @return Id 必填参数，镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取
+     * Get 镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取 
+     * @return Id 镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 必填参数，镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取
-     * @param Id 必填参数，镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取
+     * Set 镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取
+     * @param Id 镜像唯一ID，可通过DescribeAssetImageRegistryList接口获取
      */
     public void setId(Long Id) {
         this.Id = Id;

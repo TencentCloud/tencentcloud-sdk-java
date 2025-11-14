@@ -45,6 +45,13 @@ public class DescribeBillSummaryRequest extends AbstractModel {
     private String [] TagKey;
 
     /**
+    * 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+    */
+    @SerializedName("OperateUin")
+    @Expose
+    private String OperateUin;
+
+    /**
      * Get 账单月份，格式为2023-04 
      * @return Month 账单月份，格式为2023-04
      */
@@ -92,6 +99,22 @@ public class DescribeBillSummaryRequest extends AbstractModel {
         this.TagKey = TagKey;
     }
 
+    /**
+     * Get 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ） 
+     * @return OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     */
+    public String getOperateUin() {
+        return this.OperateUin;
+    }
+
+    /**
+     * Set 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     * @param OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     */
+    public void setOperateUin(String OperateUin) {
+        this.OperateUin = OperateUin;
+    }
+
     public DescribeBillSummaryRequest() {
     }
 
@@ -112,6 +135,9 @@ public class DescribeBillSummaryRequest extends AbstractModel {
                 this.TagKey[i] = new String(source.TagKey[i]);
             }
         }
+        if (source.OperateUin != null) {
+            this.OperateUin = new String(source.OperateUin);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DescribeBillSummaryRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Month", this.Month);
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
         this.setParamArraySimple(map, prefix + "TagKey.", this.TagKey);
+        this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
 
     }
 }

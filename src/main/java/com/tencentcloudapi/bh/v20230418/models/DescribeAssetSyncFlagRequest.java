@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ai3d.v20250513.models;
+package com.tencentcloudapi.bh.v20230418.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,42 +21,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryHunyuanTo3DJobRequest extends AbstractModel {
+public class DescribeAssetSyncFlagRequest extends AbstractModel {
 
-    /**
-    * 任务ID。
-    */
-    @SerializedName("JobId")
-    @Expose
-    private String JobId;
-
-    /**
-     * Get 任务ID。 
-     * @return JobId 任务ID。
-     */
-    public String getJobId() {
-        return this.JobId;
-    }
-
-    /**
-     * Set 任务ID。
-     * @param JobId 任务ID。
-     */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
-    }
-
-    public QueryHunyuanTo3DJobRequest() {
+    public DescribeAssetSyncFlagRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryHunyuanTo3DJobRequest(QueryHunyuanTo3DJobRequest source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
-        }
+    public DescribeAssetSyncFlagRequest(DescribeAssetSyncFlagRequest source) {
     }
 
 
@@ -64,7 +38,6 @@ public class QueryHunyuanTo3DJobRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }

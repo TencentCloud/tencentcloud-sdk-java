@@ -250,6 +250,27 @@ public class Acl extends AbstractModel {
     private AppAsset [] AppAssetSet;
 
     /**
+    * 权限类型 0-默认普通权限 1-工单权限,2-权限工单权限
+    */
+    @SerializedName("AclType")
+    @Expose
+    private Long AclType;
+
+    /**
+    * 权限所属工单id
+    */
+    @SerializedName("TicketId")
+    @Expose
+    private String TicketId;
+
+    /**
+    * 权限所属工单名称
+    */
+    @SerializedName("TicketName")
+    @Expose
+    private String TicketName;
+
+    /**
      * Get 访问权限ID 
      * @return Id 访问权限ID
      */
@@ -769,6 +790,54 @@ public class Acl extends AbstractModel {
         this.AppAssetSet = AppAssetSet;
     }
 
+    /**
+     * Get 权限类型 0-默认普通权限 1-工单权限,2-权限工单权限 
+     * @return AclType 权限类型 0-默认普通权限 1-工单权限,2-权限工单权限
+     */
+    public Long getAclType() {
+        return this.AclType;
+    }
+
+    /**
+     * Set 权限类型 0-默认普通权限 1-工单权限,2-权限工单权限
+     * @param AclType 权限类型 0-默认普通权限 1-工单权限,2-权限工单权限
+     */
+    public void setAclType(Long AclType) {
+        this.AclType = AclType;
+    }
+
+    /**
+     * Get 权限所属工单id 
+     * @return TicketId 权限所属工单id
+     */
+    public String getTicketId() {
+        return this.TicketId;
+    }
+
+    /**
+     * Set 权限所属工单id
+     * @param TicketId 权限所属工单id
+     */
+    public void setTicketId(String TicketId) {
+        this.TicketId = TicketId;
+    }
+
+    /**
+     * Get 权限所属工单名称 
+     * @return TicketName 权限所属工单名称
+     */
+    public String getTicketName() {
+        return this.TicketName;
+    }
+
+    /**
+     * Set 权限所属工单名称
+     * @param TicketName 权限所属工单名称
+     */
+    public void setTicketName(String TicketName) {
+        this.TicketName = TicketName;
+    }
+
     public Acl() {
     }
 
@@ -900,6 +969,15 @@ public class Acl extends AbstractModel {
                 this.AppAssetSet[i] = new AppAsset(source.AppAssetSet[i]);
             }
         }
+        if (source.AclType != null) {
+            this.AclType = new Long(source.AclType);
+        }
+        if (source.TicketId != null) {
+            this.TicketId = new String(source.TicketId);
+        }
+        if (source.TicketName != null) {
+            this.TicketName = new String(source.TicketName);
+        }
     }
 
 
@@ -939,6 +1017,9 @@ public class Acl extends AbstractModel {
         this.setParamArraySimple(map, prefix + "WhiteCmds.", this.WhiteCmds);
         this.setParamSimple(map, prefix + "AllowKeyboardLogger", this.AllowKeyboardLogger);
         this.setParamArrayObj(map, prefix + "AppAssetSet.", this.AppAssetSet);
+        this.setParamSimple(map, prefix + "AclType", this.AclType);
+        this.setParamSimple(map, prefix + "TicketId", this.TicketId);
+        this.setParamSimple(map, prefix + "TicketName", this.TicketName);
 
     }
 }

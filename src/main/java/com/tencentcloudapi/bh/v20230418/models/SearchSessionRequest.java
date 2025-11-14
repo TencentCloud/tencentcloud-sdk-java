@@ -115,6 +115,13 @@ public class SearchSessionRequest extends AbstractModel {
     private Long Status;
 
     /**
+    * 状态，1为活跃，2为结束，3为强制离线
+    */
+    @SerializedName("StatusSet")
+    @Expose
+    private Long [] StatusSet;
+
+    /**
     * 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
     */
     @SerializedName("Id")
@@ -141,6 +148,13 @@ public class SearchSessionRequest extends AbstractModel {
     @SerializedName("DeviceKind")
     @Expose
     private String DeviceKind;
+
+    /**
+    * 资产类型 Linux, EKS,TKE
+    */
+    @SerializedName("DeviceKindSet")
+    @Expose
+    private String [] DeviceKindSet;
 
     /**
      * Get 内部Ip 
@@ -351,6 +365,22 @@ public class SearchSessionRequest extends AbstractModel {
     }
 
     /**
+     * Get 状态，1为活跃，2为结束，3为强制离线 
+     * @return StatusSet 状态，1为活跃，2为结束，3为强制离线
+     */
+    public Long [] getStatusSet() {
+        return this.StatusSet;
+    }
+
+    /**
+     * Set 状态，1为活跃，2为结束，3为强制离线
+     * @param StatusSet 状态，1为活跃，2为结束，3为强制离线
+     */
+    public void setStatusSet(Long [] StatusSet) {
+        this.StatusSet = StatusSet;
+    }
+
+    /**
      * Get 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话 
      * @return Id 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
      */
@@ -414,6 +444,22 @@ public class SearchSessionRequest extends AbstractModel {
         this.DeviceKind = DeviceKind;
     }
 
+    /**
+     * Get 资产类型 Linux, EKS,TKE 
+     * @return DeviceKindSet 资产类型 Linux, EKS,TKE
+     */
+    public String [] getDeviceKindSet() {
+        return this.DeviceKindSet;
+    }
+
+    /**
+     * Set 资产类型 Linux, EKS,TKE
+     * @param DeviceKindSet 资产类型 Linux, EKS,TKE
+     */
+    public void setDeviceKindSet(String [] DeviceKindSet) {
+        this.DeviceKindSet = DeviceKindSet;
+    }
+
     public SearchSessionRequest() {
     }
 
@@ -461,6 +507,12 @@ public class SearchSessionRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.StatusSet != null) {
+            this.StatusSet = new Long[source.StatusSet.length];
+            for (int i = 0; i < source.StatusSet.length; i++) {
+                this.StatusSet[i] = new Long(source.StatusSet[i]);
+            }
+        }
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
@@ -475,6 +527,12 @@ public class SearchSessionRequest extends AbstractModel {
         }
         if (source.DeviceKind != null) {
             this.DeviceKind = new String(source.DeviceKind);
+        }
+        if (source.DeviceKindSet != null) {
+            this.DeviceKindSet = new String[source.DeviceKindSet.length];
+            for (int i = 0; i < source.DeviceKindSet.length; i++) {
+                this.DeviceKindSet[i] = new String(source.DeviceKindSet[i]);
+            }
         }
     }
 
@@ -496,10 +554,12 @@ public class SearchSessionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RealName", this.RealName);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamArraySimple(map, prefix + "AppAssetKindSet.", this.AppAssetKindSet);
         this.setParamSimple(map, prefix + "AppAssetUrl", this.AppAssetUrl);
         this.setParamSimple(map, prefix + "DeviceKind", this.DeviceKind);
+        this.setParamArraySimple(map, prefix + "DeviceKindSet.", this.DeviceKindSet);
 
     }
 }

@@ -87,6 +87,13 @@ public class DescribeAclsRequest extends AbstractModel {
     private Long Status;
 
     /**
+    * 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+    */
+    @SerializedName("StatusSet")
+    @Expose
+    private Long [] StatusSet;
+
+    /**
     * 部门ID，用于过滤属于某个部门的访问权限
     */
     @SerializedName("DepartmentId")
@@ -252,6 +259,22 @@ public class DescribeAclsRequest extends AbstractModel {
     }
 
     /**
+     * Get 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期 
+     * @return StatusSet 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+     */
+    public Long [] getStatusSet() {
+        return this.StatusSet;
+    }
+
+    /**
+     * Set 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+     * @param StatusSet 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+     */
+    public void setStatusSet(Long [] StatusSet) {
+        this.StatusSet = StatusSet;
+    }
+
+    /**
      * Get 部门ID，用于过滤属于某个部门的访问权限 
      * @return DepartmentId 部门ID，用于过滤属于某个部门的访问权限
      */
@@ -346,6 +369,12 @@ public class DescribeAclsRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.StatusSet != null) {
+            this.StatusSet = new Long[source.StatusSet.length];
+            for (int i = 0; i < source.StatusSet.length; i++) {
+                this.StatusSet[i] = new Long(source.StatusSet[i]);
+            }
+        }
         if (source.DepartmentId != null) {
             this.DepartmentId = new String(source.DepartmentId);
         }
@@ -374,6 +403,7 @@ public class DescribeAclsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
         this.setParamArraySimple(map, prefix + "AuthorizedAppAssetIdSet.", this.AuthorizedAppAssetIdSet);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         this.setParamSimple(map, prefix + "ExactAccount", this.ExactAccount);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

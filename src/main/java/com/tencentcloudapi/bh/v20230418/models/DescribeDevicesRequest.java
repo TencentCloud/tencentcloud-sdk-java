@@ -108,6 +108,27 @@ public class DescribeDevicesRequest extends AbstractModel {
     private String DepartmentId;
 
     /**
+    * 资产所属云账号id
+    */
+    @SerializedName("AccountIdSet")
+    @Expose
+    private Long [] AccountIdSet;
+
+    /**
+    * 云厂商类型，1-腾讯云，2-阿里云
+    */
+    @SerializedName("ProviderTypeSet")
+    @Expose
+    private Long [] ProviderTypeSet;
+
+    /**
+    * 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+    */
+    @SerializedName("CloudDeviceStatusSet")
+    @Expose
+    private Long [] CloudDeviceStatusSet;
+
+    /**
     * 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
     */
     @SerializedName("TagFilters")
@@ -315,6 +336,54 @@ BindingStatus 绑定状态
     }
 
     /**
+     * Get 资产所属云账号id 
+     * @return AccountIdSet 资产所属云账号id
+     */
+    public Long [] getAccountIdSet() {
+        return this.AccountIdSet;
+    }
+
+    /**
+     * Set 资产所属云账号id
+     * @param AccountIdSet 资产所属云账号id
+     */
+    public void setAccountIdSet(Long [] AccountIdSet) {
+        this.AccountIdSet = AccountIdSet;
+    }
+
+    /**
+     * Get 云厂商类型，1-腾讯云，2-阿里云 
+     * @return ProviderTypeSet 云厂商类型，1-腾讯云，2-阿里云
+     */
+    public Long [] getProviderTypeSet() {
+        return this.ProviderTypeSet;
+    }
+
+    /**
+     * Set 云厂商类型，1-腾讯云，2-阿里云
+     * @param ProviderTypeSet 云厂商类型，1-腾讯云，2-阿里云
+     */
+    public void setProviderTypeSet(Long [] ProviderTypeSet) {
+        this.ProviderTypeSet = ProviderTypeSet;
+    }
+
+    /**
+     * Get 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期 
+     * @return CloudDeviceStatusSet 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     */
+    public Long [] getCloudDeviceStatusSet() {
+        return this.CloudDeviceStatusSet;
+    }
+
+    /**
+     * Set 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     * @param CloudDeviceStatusSet 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     */
+    public void setCloudDeviceStatusSet(Long [] CloudDeviceStatusSet) {
+        this.CloudDeviceStatusSet = CloudDeviceStatusSet;
+    }
+
+    /**
      * Get 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系 
      * @return TagFilters 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
      */
@@ -409,6 +478,24 @@ BindingStatus 绑定状态
         if (source.DepartmentId != null) {
             this.DepartmentId = new String(source.DepartmentId);
         }
+        if (source.AccountIdSet != null) {
+            this.AccountIdSet = new Long[source.AccountIdSet.length];
+            for (int i = 0; i < source.AccountIdSet.length; i++) {
+                this.AccountIdSet[i] = new Long(source.AccountIdSet[i]);
+            }
+        }
+        if (source.ProviderTypeSet != null) {
+            this.ProviderTypeSet = new Long[source.ProviderTypeSet.length];
+            for (int i = 0; i < source.ProviderTypeSet.length; i++) {
+                this.ProviderTypeSet[i] = new Long(source.ProviderTypeSet[i]);
+            }
+        }
+        if (source.CloudDeviceStatusSet != null) {
+            this.CloudDeviceStatusSet = new Long[source.CloudDeviceStatusSet.length];
+            for (int i = 0; i < source.CloudDeviceStatusSet.length; i++) {
+                this.CloudDeviceStatusSet[i] = new Long(source.CloudDeviceStatusSet[i]);
+            }
+        }
         if (source.TagFilters != null) {
             this.TagFilters = new TagFilter[source.TagFilters.length];
             for (int i = 0; i < source.TagFilters.length; i++) {
@@ -440,6 +527,9 @@ BindingStatus 绑定状态
         this.setParamArraySimple(map, prefix + "KindSet.", this.KindSet);
         this.setParamSimple(map, prefix + "ManagedAccount", this.ManagedAccount);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+        this.setParamArraySimple(map, prefix + "AccountIdSet.", this.AccountIdSet);
+        this.setParamArraySimple(map, prefix + "ProviderTypeSet.", this.ProviderTypeSet);
+        this.setParamArraySimple(map, prefix + "CloudDeviceStatusSet.", this.CloudDeviceStatusSet);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 

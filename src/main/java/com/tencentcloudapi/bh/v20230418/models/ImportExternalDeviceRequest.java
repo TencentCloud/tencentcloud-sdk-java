@@ -31,6 +31,13 @@ public class ImportExternalDeviceRequest extends AbstractModel {
     private ExternalDevice [] DeviceSet;
 
     /**
+    *  资产所属云账号id
+    */
+    @SerializedName("AccountId")
+    @Expose
+    private Long AccountId;
+
+    /**
      * Get 资产参数列表 
      * @return DeviceSet 资产参数列表
      */
@@ -44,6 +51,22 @@ public class ImportExternalDeviceRequest extends AbstractModel {
      */
     public void setDeviceSet(ExternalDevice [] DeviceSet) {
         this.DeviceSet = DeviceSet;
+    }
+
+    /**
+     * Get  资产所属云账号id 
+     * @return AccountId  资产所属云账号id
+     */
+    public Long getAccountId() {
+        return this.AccountId;
+    }
+
+    /**
+     * Set  资产所属云账号id
+     * @param AccountId  资产所属云账号id
+     */
+    public void setAccountId(Long AccountId) {
+        this.AccountId = AccountId;
     }
 
     public ImportExternalDeviceRequest() {
@@ -60,6 +83,9 @@ public class ImportExternalDeviceRequest extends AbstractModel {
                 this.DeviceSet[i] = new ExternalDevice(source.DeviceSet[i]);
             }
         }
+        if (source.AccountId != null) {
+            this.AccountId = new Long(source.AccountId);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class ImportExternalDeviceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DeviceSet.", this.DeviceSet);
+        this.setParamSimple(map, prefix + "AccountId", this.AccountId);
 
     }
 }

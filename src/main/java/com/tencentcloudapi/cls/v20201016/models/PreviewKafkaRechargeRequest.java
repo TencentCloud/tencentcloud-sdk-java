@@ -101,6 +101,13 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
+    * 用户kafka拓展信息
+    */
+    @SerializedName("UserKafkaMeta")
+    @Expose
+    private UserKafkaMeta UserKafkaMeta;
+
+    /**
      * Get 预览类型，1：源数据预览；2：导出结果预览。 
      * @return PreviewType 预览类型，1：源数据预览；2：导出结果预览。
      */
@@ -288,6 +295,22 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
         this.LogRechargeRule = LogRechargeRule;
     }
 
+    /**
+     * Get 用户kafka拓展信息 
+     * @return UserKafkaMeta 用户kafka拓展信息
+     */
+    public UserKafkaMeta getUserKafkaMeta() {
+        return this.UserKafkaMeta;
+    }
+
+    /**
+     * Set 用户kafka拓展信息
+     * @param UserKafkaMeta 用户kafka拓展信息
+     */
+    public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
+        this.UserKafkaMeta = UserKafkaMeta;
+    }
+
     public PreviewKafkaRechargeRequest() {
     }
 
@@ -326,6 +349,9 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
         if (source.LogRechargeRule != null) {
             this.LogRechargeRule = new LogRechargeRuleInfo(source.LogRechargeRule);
         }
+        if (source.UserKafkaMeta != null) {
+            this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
+        }
     }
 
 
@@ -343,6 +369,7 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
         this.setParamObj(map, prefix + "Protocol.", this.Protocol);
         this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
         this.setParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
+        this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }
 }

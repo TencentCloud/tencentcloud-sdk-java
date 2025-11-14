@@ -106,12 +106,19 @@ public class ConsumeGroupItem extends AbstractModel {
     private Long SubscribeTopicNum;
 
     /**
-    * 1753153590
+    * 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
+
+    /**
+    * 绑定的标签列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
 
     /**
      * Get 实例ID 
@@ -310,9 +317,9 @@ public class ConsumeGroupItem extends AbstractModel {
     }
 
     /**
-     * Get 1753153590
+     * Get 创建时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 1753153590
+     * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
@@ -320,13 +327,29 @@ public class ConsumeGroupItem extends AbstractModel {
     }
 
     /**
-     * Set 1753153590
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 1753153590
+     * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 绑定的标签列表 
+     * @return TagList 绑定的标签列表
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 绑定的标签列表
+     * @param TagList 绑定的标签列表
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
     }
 
     public ConsumeGroupItem() {
@@ -373,6 +396,12 @@ public class ConsumeGroupItem extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -392,6 +421,7 @@ public class ConsumeGroupItem extends AbstractModel {
         this.setParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
         this.setParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

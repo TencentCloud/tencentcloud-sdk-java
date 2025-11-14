@@ -66,11 +66,25 @@ public class DescribeLoginEventRequest extends AbstractModel {
     private Long Entry;
 
     /**
+    * 登录入口：1-字符界面,2-图形界面，3-web页面, 4-API
+    */
+    @SerializedName("EntrySet")
+    @Expose
+    private Long [] EntrySet;
+
+    /**
     * 操作结果，1-成功，2-失败
     */
     @SerializedName("Result")
     @Expose
     private Long Result;
+
+    /**
+    * 操作结果，1-成功，2-失败
+    */
+    @SerializedName("ResultSet")
+    @Expose
+    private Long [] ResultSet;
 
     /**
     * 分页偏移位置，默认值为0
@@ -183,6 +197,22 @@ public class DescribeLoginEventRequest extends AbstractModel {
     }
 
     /**
+     * Get 登录入口：1-字符界面,2-图形界面，3-web页面, 4-API 
+     * @return EntrySet 登录入口：1-字符界面,2-图形界面，3-web页面, 4-API
+     */
+    public Long [] getEntrySet() {
+        return this.EntrySet;
+    }
+
+    /**
+     * Set 登录入口：1-字符界面,2-图形界面，3-web页面, 4-API
+     * @param EntrySet 登录入口：1-字符界面,2-图形界面，3-web页面, 4-API
+     */
+    public void setEntrySet(Long [] EntrySet) {
+        this.EntrySet = EntrySet;
+    }
+
+    /**
      * Get 操作结果，1-成功，2-失败 
      * @return Result 操作结果，1-成功，2-失败
      */
@@ -196,6 +226,22 @@ public class DescribeLoginEventRequest extends AbstractModel {
      */
     public void setResult(Long Result) {
         this.Result = Result;
+    }
+
+    /**
+     * Get 操作结果，1-成功，2-失败 
+     * @return ResultSet 操作结果，1-成功，2-失败
+     */
+    public Long [] getResultSet() {
+        return this.ResultSet;
+    }
+
+    /**
+     * Set 操作结果，1-成功，2-失败
+     * @param ResultSet 操作结果，1-成功，2-失败
+     */
+    public void setResultSet(Long [] ResultSet) {
+        this.ResultSet = ResultSet;
     }
 
     /**
@@ -256,8 +302,20 @@ public class DescribeLoginEventRequest extends AbstractModel {
         if (source.Entry != null) {
             this.Entry = new Long(source.Entry);
         }
+        if (source.EntrySet != null) {
+            this.EntrySet = new Long[source.EntrySet.length];
+            for (int i = 0; i < source.EntrySet.length; i++) {
+                this.EntrySet[i] = new Long(source.EntrySet[i]);
+            }
+        }
         if (source.Result != null) {
             this.Result = new Long(source.Result);
+        }
+        if (source.ResultSet != null) {
+            this.ResultSet = new Long[source.ResultSet.length];
+            for (int i = 0; i < source.ResultSet.length; i++) {
+                this.ResultSet[i] = new Long(source.ResultSet[i]);
+            }
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
@@ -278,7 +336,9 @@ public class DescribeLoginEventRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "SourceIp", this.SourceIp);
         this.setParamSimple(map, prefix + "Entry", this.Entry);
+        this.setParamArraySimple(map, prefix + "EntrySet.", this.EntrySet);
         this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamArraySimple(map, prefix + "ResultSet.", this.ResultSet);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

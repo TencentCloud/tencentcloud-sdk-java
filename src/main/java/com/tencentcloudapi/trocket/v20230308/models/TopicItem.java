@@ -102,6 +102,13 @@ TRANSACTION:事务消息
     private Long MsgTTL;
 
     /**
+    * 绑定的标签列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -293,6 +300,22 @@ TRANSACTION:事务消息
         this.MsgTTL = MsgTTL;
     }
 
+    /**
+     * Get 绑定的标签列表 
+     * @return TagList 绑定的标签列表
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 绑定的标签列表
+     * @param TagList 绑定的标签列表
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public TopicItem() {
     }
 
@@ -331,6 +354,12 @@ TRANSACTION:事务消息
         if (source.MsgTTL != null) {
             this.MsgTTL = new Long(source.MsgTTL);
         }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -348,6 +377,7 @@ TRANSACTION:事务消息
         this.setParamSimple(map, prefix + "TopicV4", this.TopicV4);
         this.setParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

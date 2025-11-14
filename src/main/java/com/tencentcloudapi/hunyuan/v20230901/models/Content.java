@@ -27,7 +27,7 @@ public class Content extends AbstractModel {
     * 内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url"]
+参数值可选范围：[text", "image_url","video_url"]
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -52,15 +52,31 @@ public class Content extends AbstractModel {
     private ImageUrl ImageUrl;
 
     /**
+    * 当type为video_url时使用，标识具体的视频链接内容
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VideoUrl")
+    @Expose
+    private VideoUrl VideoUrl;
+
+    /**
+    * 当type为video_frames时使用，标识具体的视频内图像帧内容
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VideoFrames")
+    @Expose
+    private VideoFrames VideoFrames;
+
+    /**
      * Get 内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url"]
+参数值可选范围：[text", "image_url","video_url"]
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url"]
+参数值可选范围：[text", "image_url","video_url"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -71,12 +87,12 @@ public class Content extends AbstractModel {
      * Set 内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url"]
+参数值可选范围：[text", "image_url","video_url"]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url"]
+参数值可选范围：[text", "image_url","video_url"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -127,6 +143,46 @@ public class Content extends AbstractModel {
         this.ImageUrl = ImageUrl;
     }
 
+    /**
+     * Get 当type为video_url时使用，标识具体的视频链接内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VideoUrl 当type为video_url时使用，标识具体的视频链接内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VideoUrl getVideoUrl() {
+        return this.VideoUrl;
+    }
+
+    /**
+     * Set 当type为video_url时使用，标识具体的视频链接内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VideoUrl 当type为video_url时使用，标识具体的视频链接内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVideoUrl(VideoUrl VideoUrl) {
+        this.VideoUrl = VideoUrl;
+    }
+
+    /**
+     * Get 当type为video_frames时使用，标识具体的视频内图像帧内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VideoFrames 当type为video_frames时使用，标识具体的视频内图像帧内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VideoFrames getVideoFrames() {
+        return this.VideoFrames;
+    }
+
+    /**
+     * Set 当type为video_frames时使用，标识具体的视频内图像帧内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VideoFrames 当type为video_frames时使用，标识具体的视频内图像帧内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVideoFrames(VideoFrames VideoFrames) {
+        this.VideoFrames = VideoFrames;
+    }
+
     public Content() {
     }
 
@@ -144,6 +200,12 @@ public class Content extends AbstractModel {
         if (source.ImageUrl != null) {
             this.ImageUrl = new ImageUrl(source.ImageUrl);
         }
+        if (source.VideoUrl != null) {
+            this.VideoUrl = new VideoUrl(source.VideoUrl);
+        }
+        if (source.VideoFrames != null) {
+            this.VideoFrames = new VideoFrames(source.VideoFrames);
+        }
     }
 
 
@@ -154,6 +216,8 @@ public class Content extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamObj(map, prefix + "ImageUrl.", this.ImageUrl);
+        this.setParamObj(map, prefix + "VideoUrl.", this.VideoUrl);
+        this.setParamObj(map, prefix + "VideoFrames.", this.VideoFrames);
 
     }
 }

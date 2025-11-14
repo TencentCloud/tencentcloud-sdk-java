@@ -2051,6 +2051,17 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *更新部署组泳道信息
+     * @param req ModifyGroupLaneRequest
+     * @return ModifyGroupLaneResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGroupLaneResponse ModifyGroupLane(ModifyGroupLaneRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGroupLane", ModifyGroupLaneResponse.class);
+    }
+
+    /**
      *更新泳道配置信息
      * @param req ModifyLaneRequest
      * @return ModifyLaneResponse

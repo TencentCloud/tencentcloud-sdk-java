@@ -259,6 +259,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建或编辑云原生网关访问控制
+     * @param req CreateOrModifyCloudNativeAPIGatewayIPRestrictionRequest
+     * @return CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse CreateOrModifyCloudNativeAPIGatewayIPRestriction(CreateOrModifyCloudNativeAPIGatewayIPRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrModifyCloudNativeAPIGatewayIPRestriction", CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse.class);
+    }
+
+    /**
      *创建或更新配置文件并发布配置
      * @param req CreateOrUpdateConfigFileAndReleaseRequest
      * @return CreateOrUpdateConfigFileAndReleaseResponse
@@ -322,6 +333,17 @@ public class TseClient extends AbstractClient{
     public DeleteCloudNativeAPIGatewayCertificateResponse DeleteCloudNativeAPIGatewayCertificate(DeleteCloudNativeAPIGatewayCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudNativeAPIGatewayCertificate", DeleteCloudNativeAPIGatewayCertificateResponse.class);
+    }
+
+    /**
+     *删除云原生网关访问控制
+     * @param req DeleteCloudNativeAPIGatewayIPRestrictionRequest
+     * @return DeleteCloudNativeAPIGatewayIPRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewayIPRestrictionResponse DeleteCloudNativeAPIGatewayIPRestriction(DeleteCloudNativeAPIGatewayIPRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudNativeAPIGatewayIPRestriction", DeleteCloudNativeAPIGatewayIPRestrictionResponse.class);
     }
 
     /**
@@ -597,6 +619,17 @@ public class TseClient extends AbstractClient{
     public DescribeCloudNativeAPIGatewayConfigResponse DescribeCloudNativeAPIGatewayConfig(DescribeCloudNativeAPIGatewayConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudNativeAPIGatewayConfig", DescribeCloudNativeAPIGatewayConfigResponse.class);
+    }
+
+    /**
+     *查询云原生网关访问控制
+     * @param req DescribeCloudNativeAPIGatewayIPRestrictionRequest
+     * @return DescribeCloudNativeAPIGatewayIPRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayIPRestrictionResponse DescribeCloudNativeAPIGatewayIPRestriction(DescribeCloudNativeAPIGatewayIPRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayIPRestriction", DescribeCloudNativeAPIGatewayIPRestrictionResponse.class);
     }
 
     /**

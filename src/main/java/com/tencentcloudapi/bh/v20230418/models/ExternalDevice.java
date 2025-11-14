@@ -87,6 +87,48 @@ public class ExternalDevice extends AbstractModel {
     private String SSLCertName;
 
     /**
+    * 资产实例id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 资产所属地域
+    */
+    @SerializedName("ApCode")
+    @Expose
+    private String ApCode;
+
+    /**
+    * 地域名称
+    */
+    @SerializedName("ApName")
+    @Expose
+    private String ApName;
+
+    /**
+    * 资产所属VPC
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 资产所属子网
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+    * 公网IP
+    */
+    @SerializedName("PublicIp")
+    @Expose
+    private String PublicIp;
+
+    /**
      * Get 操作系统名称，只能是Linux、Windows或MySQL 
      * @return OsName 操作系统名称，只能是Linux、Windows或MySQL
      */
@@ -230,6 +272,102 @@ public class ExternalDevice extends AbstractModel {
         this.SSLCertName = SSLCertName;
     }
 
+    /**
+     * Get 资产实例id 
+     * @return InstanceId 资产实例id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 资产实例id
+     * @param InstanceId 资产实例id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 资产所属地域 
+     * @return ApCode 资产所属地域
+     */
+    public String getApCode() {
+        return this.ApCode;
+    }
+
+    /**
+     * Set 资产所属地域
+     * @param ApCode 资产所属地域
+     */
+    public void setApCode(String ApCode) {
+        this.ApCode = ApCode;
+    }
+
+    /**
+     * Get 地域名称 
+     * @return ApName 地域名称
+     */
+    public String getApName() {
+        return this.ApName;
+    }
+
+    /**
+     * Set 地域名称
+     * @param ApName 地域名称
+     */
+    public void setApName(String ApName) {
+        this.ApName = ApName;
+    }
+
+    /**
+     * Get 资产所属VPC 
+     * @return VpcId 资产所属VPC
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 资产所属VPC
+     * @param VpcId 资产所属VPC
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 资产所属子网 
+     * @return SubnetId 资产所属子网
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 资产所属子网
+     * @param SubnetId 资产所属子网
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get 公网IP 
+     * @return PublicIp 公网IP
+     */
+    public String getPublicIp() {
+        return this.PublicIp;
+    }
+
+    /**
+     * Set 公网IP
+     * @param PublicIp 公网IP
+     */
+    public void setPublicIp(String PublicIp) {
+        this.PublicIp = PublicIp;
+    }
+
     public ExternalDevice() {
     }
 
@@ -268,6 +406,24 @@ public class ExternalDevice extends AbstractModel {
         if (source.SSLCertName != null) {
             this.SSLCertName = new String(source.SSLCertName);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ApCode != null) {
+            this.ApCode = new String(source.ApCode);
+        }
+        if (source.ApName != null) {
+            this.ApName = new String(source.ApName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.PublicIp != null) {
+            this.PublicIp = new String(source.PublicIp);
+        }
     }
 
 
@@ -284,6 +440,12 @@ public class ExternalDevice extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
         this.setParamSimple(map, prefix + "SSLCert", this.SSLCert);
         this.setParamSimple(map, prefix + "SSLCertName", this.SSLCertName);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ApCode", this.ApCode);
+        this.setParamSimple(map, prefix + "ApName", this.ApName);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
 
     }
 }

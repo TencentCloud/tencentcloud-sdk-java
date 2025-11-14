@@ -129,6 +129,13 @@ public class KafkaRechargeInfo extends AbstractModel {
     private LogRechargeRuleInfo LogRechargeRule;
 
     /**
+    * 用户kafka拓展信息
+    */
+    @SerializedName("UserKafkaMeta")
+    @Expose
+    private UserKafkaMeta UserKafkaMeta;
+
+    /**
      * Get Kafka数据订阅配置的ID。 
      * @return Id Kafka数据订阅配置的ID。
      */
@@ -368,6 +375,22 @@ public class KafkaRechargeInfo extends AbstractModel {
         this.LogRechargeRule = LogRechargeRule;
     }
 
+    /**
+     * Get 用户kafka拓展信息 
+     * @return UserKafkaMeta 用户kafka拓展信息
+     */
+    public UserKafkaMeta getUserKafkaMeta() {
+        return this.UserKafkaMeta;
+    }
+
+    /**
+     * Set 用户kafka拓展信息
+     * @param UserKafkaMeta 用户kafka拓展信息
+     */
+    public void setUserKafkaMeta(UserKafkaMeta UserKafkaMeta) {
+        this.UserKafkaMeta = UserKafkaMeta;
+    }
+
     public KafkaRechargeInfo() {
     }
 
@@ -421,6 +444,9 @@ public class KafkaRechargeInfo extends AbstractModel {
         if (source.LogRechargeRule != null) {
             this.LogRechargeRule = new LogRechargeRuleInfo(source.LogRechargeRule);
         }
+        if (source.UserKafkaMeta != null) {
+            this.UserKafkaMeta = new UserKafkaMeta(source.UserKafkaMeta);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class KafkaRechargeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
+        this.setParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
 
     }
 }

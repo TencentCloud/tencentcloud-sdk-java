@@ -402,6 +402,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *查询资产自动同步开关
+     * @param req DescribeAssetSyncFlagRequest
+     * @return DescribeAssetSyncFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetSyncFlagResponse DescribeAssetSyncFlag(DescribeAssetSyncFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssetSyncFlag", DescribeAssetSyncFlagResponse.class);
+    }
+
+    /**
      *查询资产同步状态
      * @param req DescribeAssetSyncStatusRequest
      * @return DescribeAssetSyncStatusResponse
@@ -556,6 +567,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *查询安全配置信息
+     * @param req DescribeSecuritySettingRequest
+     * @return DescribeSecuritySettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecuritySettingResponse DescribeSecuritySetting(DescribeSecuritySettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecuritySetting", DescribeSecuritySettingResponse.class);
+    }
+
+    /**
      *查询用户组成员列表
      * @param req DescribeUserGroupMembersRequest
      * @return DescribeUserGroupMembersResponse
@@ -589,6 +611,50 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *关闭公网访问堡垒机
+     * @param req DisableExternalAccessRequest
+     * @return DisableExternalAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableExternalAccessResponse DisableExternalAccess(DisableExternalAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableExternalAccess", DisableExternalAccessResponse.class);
+    }
+
+    /**
+     *关闭内网访问
+     * @param req DisableIntranetAccessRequest
+     * @return DisableIntranetAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableIntranetAccessResponse DisableIntranetAccess(DisableIntranetAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableIntranetAccess", DisableIntranetAccessResponse.class);
+    }
+
+    /**
+     *开启公网访问堡垒机
+     * @param req EnableExternalAccessRequest
+     * @return EnableExternalAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableExternalAccessResponse EnableExternalAccess(EnableExternalAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableExternalAccess", EnableExternalAccessResponse.class);
+    }
+
+    /**
+     *开通内网访问
+     * @param req EnableIntranetAccessRequest
+     * @return EnableIntranetAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableIntranetAccessResponse EnableIntranetAccess(EnableIntranetAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableIntranetAccess", EnableIntranetAccessResponse.class);
+    }
+
+    /**
      *导入外部资产信息
      * @param req ImportExternalDeviceRequest
      * @return ImportExternalDeviceResponse
@@ -600,6 +666,39 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *修改访问白名单自动添加IP状态：开启或关闭自动添加IP
+     * @param req ModifyAccessWhiteListAutoStatusRequest
+     * @return ModifyAccessWhiteListAutoStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccessWhiteListAutoStatusResponse ModifyAccessWhiteListAutoStatus(ModifyAccessWhiteListAutoStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAccessWhiteListAutoStatus", ModifyAccessWhiteListAutoStatusResponse.class);
+    }
+
+    /**
+     *修改访问白名单规则
+     * @param req ModifyAccessWhiteListRuleRequest
+     * @return ModifyAccessWhiteListRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccessWhiteListRuleResponse ModifyAccessWhiteListRule(ModifyAccessWhiteListRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAccessWhiteListRule", ModifyAccessWhiteListRuleResponse.class);
+    }
+
+    /**
+     *修改访问白名单状态：开启或关闭放开全部来源IP。
+     * @param req ModifyAccessWhiteListStatusRequest
+     * @return ModifyAccessWhiteListStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccessWhiteListStatusResponse ModifyAccessWhiteListStatus(ModifyAccessWhiteListStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAccessWhiteListStatus", ModifyAccessWhiteListStatusResponse.class);
+    }
+
+    /**
      *修改访问权限
      * @param req ModifyAclRequest
      * @return ModifyAclResponse
@@ -608,6 +707,28 @@ public class BhClient extends AbstractClient{
     public ModifyAclResponse ModifyAcl(ModifyAclRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAcl", ModifyAclResponse.class);
+    }
+
+    /**
+     *修改资产自动同步开关
+     * @param req ModifyAssetSyncFlagRequest
+     * @return ModifyAssetSyncFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAssetSyncFlagResponse ModifyAssetSyncFlag(ModifyAssetSyncFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAssetSyncFlag", ModifyAssetSyncFlagResponse.class);
+    }
+
+    /**
+     *修改认证方式配置信息
+     * @param req ModifyAuthModeSettingRequest
+     * @return ModifyAuthModeSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuthModeSettingResponse ModifyAuthModeSetting(ModifyAuthModeSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuthModeSetting", ModifyAuthModeSettingResponse.class);
     }
 
     /**
@@ -685,6 +806,17 @@ public class BhClient extends AbstractClient{
     public ModifyOperationTaskResponse ModifyOperationTask(ModifyOperationTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyOperationTask", ModifyOperationTaskResponse.class);
+    }
+
+    /**
+     *修改运维资产连接重连次数
+     * @param req ModifyReconnectionSettingRequest
+     * @return ModifyReconnectionSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReconnectionSettingResponse ModifyReconnectionSetting(ModifyReconnectionSettingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyReconnectionSetting", ModifyReconnectionSettingResponse.class);
     }
 
     /**

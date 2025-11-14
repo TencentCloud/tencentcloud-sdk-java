@@ -105,6 +105,9 @@ public enum TeoErrorCode {
      /* 回源客户端证书已过期，暂不支持下发过期证书。 */
      FAILEDOPERATION_UPSTREAMCLIENTCERTIFICATEHASEXPIRED("FailedOperation.UpstreamClientCertificateHasExpired"),
      
+     /* 源站 CA 证书已过期，暂不支持下发过期证书。 */
+     FAILEDOPERATION_UPSTREAMVERIFYCUSTOMCACERTIFICATEHASEXPIRED("FailedOperation.UpstreamVerifyCustomCACertificateHasExpired"),
+     
      /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
@@ -750,6 +753,12 @@ public enum TeoErrorCode {
      /* 无效的回源客户端证书配置。 */
      INVALIDPARAMETER_UPSTREAMCLIENTCERTCHECKERROR("InvalidParameter.UpstreamClientCertCheckError"),
      
+     /* 无效的源站证书校验配置。 */
+     INVALIDPARAMETER_UPSTREAMVERIFYCERTCHECKERROR("InvalidParameter.UpstreamVerifyCertCheckError"),
+     
+     /* 无效的源站证书校验配置，证书内容为空。 */
+     INVALIDPARAMETER_UPSTREAMVERIFYCUSTOMCACERTNOINFO("InvalidParameter.UpstreamVerifyCustomCACertNoInfo"),
+     
      /* 站点已被绑定。 */
      INVALIDPARAMETER_ZONEHASBEENBOUND("InvalidParameter.ZoneHasBeenBound"),
      
@@ -777,6 +786,9 @@ public enum TeoErrorCode {
      /* 别称域名暂不支持配置回源双向认证。 */
      INVALIDPARAMETERVALUE_ALIASDOMAINNOTSUPPORTUPSTREAMMTLS("InvalidParameterValue.AliasDomainNotSupportUpstreamMTLS"),
      
+     /* 别称域名暂不支持配置源站证书校验。 */
+     INVALIDPARAMETERVALUE_ALIASDOMAINNOTSUPPORTUPSTREAMVERIFY("InvalidParameterValue.AliasDomainNotSupportUpstreamVerify"),
+     
      /* 边缘双向认证配置中的客户端证书必须是CA证书。 */
      INVALIDPARAMETERVALUE_CERTIFICATEVERIFYCLIENTMUSTCA("InvalidParameterValue.CertificateVerifyClientMustCa"),
      
@@ -791,6 +803,15 @@ public enum TeoErrorCode {
      
      /* 回源双向认证配置至少需要配置一本证书。 */
      INVALIDPARAMETERVALUE_CERTIFICATEVERIFYUPSTREAMCLIENTNEEDCERT("InvalidParameterValue.CertificateVerifyUpstreamClientNeedCert"),
+     
+     /* 源站证书校验的证书类型不正确，仅支持 CA 证书。 */
+     INVALIDPARAMETERVALUE_CERTIFICATEVERIFYUPSTREAMVERIFYCUSTOMCAMUSTCA("InvalidParameterValue.CertificateVerifyUpstreamVerifyCustomCAMustCA"),
+     
+     /* 当前源站证书校验的证书仅支持 RSA或 ECC 算法证书，暂不支持国密 SM2 算法证书。 */
+     INVALIDPARAMETERVALUE_CERTIFICATEVERIFYUPSTREAMVERIFYCUSTOMCAMUSTRSAORECC("InvalidParameterValue.CertificateVerifyUpstreamVerifyCustomCAMustRSAorECC"),
+     
+     /* 源站证书校验配置至少需要配置一本证书。 */
+     INVALIDPARAMETERVALUE_CERTIFICATEVERIFYUPSTREAMVERIFYCUSTOMCANEEDCERT("InvalidParameterValue.CertificateVerifyUpstreamVerifyCustomCANeedCert"),
      
      /* 边缘双向认证配置中的客户端 CA 证书最多允许配置20本。 */
      INVALIDPARAMETERVALUE_CLIENTCERTINFOQUOTALIMIT("InvalidParameterValue.ClientCertInfoQuotaLimit"),
@@ -864,6 +885,9 @@ public enum TeoErrorCode {
      /* 值不在指定范围。 */
      INVALIDPARAMETERVALUE_NOTWITHINRANGE("InvalidParameterValue.NotWithinRange"),
      
+     /* OC互转开启不支持开启源站证书校验 */
+     INVALIDPARAMETERVALUE_OCDIRECTORIGINDOMAINNOTSUPPORTUPSTREAMVERIFY("InvalidParameterValue.OCDirectOriginDomainNotSupportUpstreamVerify"),
+     
      /* 指定的源站组不存在。 */
      INVALIDPARAMETERVALUE_ORIGINGROUPNOTEXISTS("InvalidParameterValue.OriginGroupNotExists"),
      
@@ -899,6 +923,9 @@ public enum TeoErrorCode {
      
      /* 回源双向认证配置中的客户端证书最多允许配置1本。 */
      INVALIDPARAMETERVALUE_UPSTREAMCLIENTCERTINFOQUOTALIMIT("InvalidParameterValue.UpstreamClientCertInfoQuotaLimit"),
+     
+     /* 源站证书校验配置中的 CA 证书最多允许配置1本。 */
+     INVALIDPARAMETERVALUE_UPSTREAMVERIFYCUSTOMCACERTINFOQUOTALIMIT("InvalidParameterValue.UpstreamVerifyCustomCACertInfoQuotaLimit"),
      
      /* 站点名称格式不正确，请输入正确的域名格式。 */
      INVALIDPARAMETERVALUE_ZONENAMEINVALID("InvalidParameterValue.ZoneNameInvalid"),
@@ -1034,6 +1061,9 @@ public enum TeoErrorCode {
      
      /* 待变更域名回源双向认证证书不一致，请确认变更域名证书一致后重试。 */
      OPERATIONDENIED_HOSTSUPSTREAMCERTIFICATEINCONSISTENCY("OperationDenied.HostsUpstreamCertificateInconsistency"),
+     
+     /* 待变更域名源站证书校验配置不一致，请确认变更域名配置一致后重试。 */
+     OPERATIONDENIED_HOSTSUPSTREAMCERTIFICATEVERIFYINCONSISTENCY("OperationDenied.HostsUpstreamCertificateVerifyInconsistency"),
      
      /* 开启高防时必须保证安全是开启状态。 */
      OPERATIONDENIED_INVALIDADVANCEDDEFENSESECURITYTYPE("OperationDenied.InvalidAdvancedDefenseSecurityType"),

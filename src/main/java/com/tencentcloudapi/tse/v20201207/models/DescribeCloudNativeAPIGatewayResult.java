@@ -209,6 +209,14 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
     private Boolean DeleteProtect;
 
     /**
+    * 表示可以升级的版本号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AvailableVersions")
+    @Expose
+    private String [] AvailableVersions;
+
+    /**
      * Get 云原生API网关ID。 
      * @return GatewayId 云原生API网关ID。
      */
@@ -636,6 +644,26 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         this.DeleteProtect = DeleteProtect;
     }
 
+    /**
+     * Get 表示可以升级的版本号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AvailableVersions 表示可以升级的版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAvailableVersions() {
+        return this.AvailableVersions;
+    }
+
+    /**
+     * Set 表示可以升级的版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AvailableVersions 表示可以升级的版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAvailableVersions(String [] AvailableVersions) {
+        this.AvailableVersions = AvailableVersions;
+    }
+
     public DescribeCloudNativeAPIGatewayResult() {
     }
 
@@ -728,6 +756,12 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         if (source.DeleteProtect != null) {
             this.DeleteProtect = new Boolean(source.DeleteProtect);
         }
+        if (source.AvailableVersions != null) {
+            this.AvailableVersions = new String[source.AvailableVersions.length];
+            for (int i = 0; i < source.AvailableVersions.length; i++) {
+                this.AvailableVersions[i] = new String(source.AvailableVersions[i]);
+            }
+        }
     }
 
 
@@ -761,6 +795,7 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         this.setParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
         this.setParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
         this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
+        this.setParamArraySimple(map, prefix + "AvailableVersions.", this.AvailableVersions);
 
     }
 }

@@ -213,6 +213,22 @@ DELETING，删除中
     private Boolean EnableDeletionProtection;
 
     /**
+    * 实例创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+    * 弹性TPS开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScaledTpsEnabled")
+    @Expose
+    private Boolean ScaledTpsEnabled;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -692,6 +708,46 @@ DELETING，删除中
         this.EnableDeletionProtection = EnableDeletionProtection;
     }
 
+    /**
+     * Get 实例创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 实例创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 实例创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 实例创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 弹性TPS开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScaledTpsEnabled 弹性TPS开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getScaledTpsEnabled() {
+        return this.ScaledTpsEnabled;
+    }
+
+    /**
+     * Set 弹性TPS开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScaledTpsEnabled 弹性TPS开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScaledTpsEnabled(Boolean ScaledTpsEnabled) {
+        this.ScaledTpsEnabled = ScaledTpsEnabled;
+    }
+
     public FusionInstanceItem() {
     }
 
@@ -775,6 +831,12 @@ DELETING，删除中
         if (source.EnableDeletionProtection != null) {
             this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.ScaledTpsEnabled != null) {
+            this.ScaledTpsEnabled = new Boolean(source.ScaledTpsEnabled);
+        }
     }
 
 
@@ -805,6 +867,8 @@ DELETING，删除中
         this.setParamSimple(map, prefix + "DestroyTime", this.DestroyTime);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ScaledTpsEnabled", this.ScaledTpsEnabled);
 
     }
 }

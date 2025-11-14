@@ -203,7 +203,7 @@ public class LogRechargeRuleInfo extends AbstractModel {
     private String [] Metadata;
 
     /**
-    * 日志Key列表，RechargeType为full_regex_log时必填
+    * 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
     */
     @SerializedName("Keys")
     @Expose
@@ -215,6 +215,14 @@ public class LogRechargeRuleInfo extends AbstractModel {
     @SerializedName("ParseArray")
     @Expose
     private Boolean ParseArray;
+
+    /**
+    * 分隔符解析模式-分隔符
+当解析格式为分隔符提取时，该字段必填
+    */
+    @SerializedName("Delimiter")
+    @Expose
+    private String Delimiter;
 
     /**
      * Get 导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则 
@@ -777,16 +785,16 @@ public class LogRechargeRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志Key列表，RechargeType为full_regex_log时必填 
-     * @return Keys 日志Key列表，RechargeType为full_regex_log时必填
+     * Get 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填 
+     * @return Keys 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
      */
     public String [] getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set 日志Key列表，RechargeType为full_regex_log时必填
-     * @param Keys 日志Key列表，RechargeType为full_regex_log时必填
+     * Set 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
+     * @param Keys 日志Key列表，RechargeType为full_regex_log、delimiter_log时必填
      */
     public void setKeys(String [] Keys) {
         this.Keys = Keys;
@@ -806,6 +814,26 @@ public class LogRechargeRuleInfo extends AbstractModel {
      */
     public void setParseArray(Boolean ParseArray) {
         this.ParseArray = ParseArray;
+    }
+
+    /**
+     * Get 分隔符解析模式-分隔符
+当解析格式为分隔符提取时，该字段必填 
+     * @return Delimiter 分隔符解析模式-分隔符
+当解析格式为分隔符提取时，该字段必填
+     */
+    public String getDelimiter() {
+        return this.Delimiter;
+    }
+
+    /**
+     * Set 分隔符解析模式-分隔符
+当解析格式为分隔符提取时，该字段必填
+     * @param Delimiter 分隔符解析模式-分隔符
+当解析格式为分隔符提取时，该字段必填
+     */
+    public void setDelimiter(String Delimiter) {
+        this.Delimiter = Delimiter;
     }
 
     public LogRechargeRuleInfo() {
@@ -867,6 +895,9 @@ public class LogRechargeRuleInfo extends AbstractModel {
         if (source.ParseArray != null) {
             this.ParseArray = new Boolean(source.ParseArray);
         }
+        if (source.Delimiter != null) {
+            this.Delimiter = new String(source.Delimiter);
+        }
     }
 
 
@@ -889,6 +920,7 @@ public class LogRechargeRuleInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Metadata.", this.Metadata);
         this.setParamArraySimple(map, prefix + "Keys.", this.Keys);
         this.setParamSimple(map, prefix + "ParseArray", this.ParseArray);
+        this.setParamSimple(map, prefix + "Delimiter", this.Delimiter);
 
     }
 }
